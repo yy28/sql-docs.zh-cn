@@ -1,5 +1,5 @@
 ---
-title: 设置图表上轴标签的格式（报表生成器和 SSRS）| Microsoft Docs
+title: 设置图表上轴标签的格式（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0838e5d0ea9c592a52408956b75ee651bcc542a4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575630"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079913"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
   基于坐标的图表类型（柱形图、条形图、面积图、点状图、折线图和范围图）有两个用于分类和显示数据关系的轴。 不同类型的格式设置将应用于每个轴。  

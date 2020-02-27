@@ -10,13 +10,13 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
-ms.date: 11/04/2019
-ms.openlocfilehash: 6ff730a55a52319082d4af9021d698bf696ec0be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.date: 02/19/2020
+ms.openlocfilehash: 8be225915b657b4c3bcd8a141c6ebc4c3e6440c4
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76037124"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507557"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -52,7 +52,7 @@ SSMS 18.4 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 
 18.4 是对 18.3.1 的更新，添加了以下新项并修复了以下 bug。
 
-## <a name="whats-new-in-184"></a>18.4 的新增功能
+### <a name="whats-new-in-184"></a>18.4 的新增功能
 
 | 新建项 | 详细信息 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -71,23 +71,23 @@ SSMS 18.4 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 输出以提高建议的可读性。 |
 | XEvent 探查器 | 向 XEvent 探查器会话添加了 error_reported 事件  。 |
 
-## <a name="bug-fixes-in-184"></a>18.4 中的 bug 修复
+### <a name="bug-fixes-in-184"></a>18.4 中的 bug 修复
 
 | 新项 | 详细信息 |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Analysis Services | 修复了多维数据库的 DAX 脚本编辑器未在 IntelliSense 中显示表的问题。 |
 | Analysis Services | 使用 DAX 分析程序转换为引擎字符串。 这适用于国际分隔符、十进制和空白。 |
-| Always Encrypted | 修复了声明验证  不区分大小写  的问题。 |
-| Always Encrypted | 修复了错误/警告报告未正常工作的问题。 |
+| Always Encrypted | 修复了声明验证不区分大小写的问题   。 |
+| Always Encrypted | 修复了错误/警告报告未正常运行的问题。 |
 | 复制数据库向导 | 修复了此对话框呈现中的各种截断和布局问题。 |
 | 常规 SSMS | 修复了一个长期未解决的问题，即当还指定了 SQL 文件时，SSMS 不遵从在命令行中传递的连接信息。 |
 | 常规 SSMS | 修复了尝试在“复制筛选器”对象上显示安全对象时 SSMS 中的故障。 |
 | 常规 SSMS | 通过让 SSMS 查看凭据缓存，减轻了 -P 命令行选项的删除：如果找到所需凭据，则会使用它建立连接。 |
 | 导入平面文件 | 修复了导入平面文件  功能未正确处理文本限定符的问题。 |
 | “对象资源管理器” | 修复了在对象资源管理器中删除 Azure SQL 数据库会显示错误消息的问题。 |
-| 查询结果 | 修复了在 SSMS 18.3.1 中引入的一个问题，即网格会稍微绘制得窄一点，并在每列中最长的字符串末尾显示 ...  。 |
+| 查询结果 | 修复了在 SSMS 18.3.1 中引入的一个问题，即网格会稍微绘制得窄一点，并在每列中最长的字符串末尾显示“...”  。 |
 | 复制工具 | 修复了在尝试编辑 SQL 代理作业时导致应用程序引发错误（“无法加载文件或程序集...”）的问题。 |
-| SMO/脚本 | 修复了其排序规则是 Japanese_BIN2 的 SQL DW 的“编写表脚本为...”  未正常工作时的问题。|
+| SMO/脚本 | 修复了其排序规则是 Japanese_BIN2 的 SQL DW 的“编写表脚本为...”  无法正常运行的问题。|
 | SMO/脚本 | 修复了 ScriptAlter() 在服务器上结束语句执行的问题。|
 | SQL 代理 | 修复了代理操作员 UI 在操作员名称在 UI 中进行了更改时不更新名称，也不会对它编写脚本的问题。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647)。|
 
@@ -101,9 +101,20 @@ SSMS 18.4 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 
 ## <a name="previous-ssms-releases"></a>SSMS 的早期版本
 
-通过单击以下部分中的标题链接，下载 SSMS 的早期版本：
+通过选择相关部分中的下载链接下载以前的 SSMS 版本。
 
-## <a name="download-ssms-1831"></a>![下载](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+| SSMS 版本 | 生成号 | 发布日期 |
+|--------------|--------------|-------------------|
+| [18.3.1](#1831) | 15.0.18183.0 | 2019 年 10 月 2日 |
+| [18.2](#182) | 15.0.18142.0 | 2019 年 7 月 25 日 |
+| [18.1](#181) | 15.0.18131.0 | 2019 年 6 月 11 日 |
+| [18.0](#180) | 15.0.18118.0 | 2019 年 4 月 24 日 |
+| [17.9.1](#1791) | 14.0.17289.0 | 2018 年 11 月 21 日 |
+| [16.5.3](#1653) | 13.0.16106.4 | 2017 年 1 月 30 日 |
+
+### <a name="1831"></a>18.3.1
+
+![下载](../ssdt/media/download.png) [下载 SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 版本号：18.3.1  
 生成号：15.0.18183.0  
@@ -113,7 +124,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 18.3.1 是对 18.2 的更新，添加了以下新项并修复了以下 bug。
 
-## <a name="whats-new-in-1831"></a>18.3 1 的新增功能
+#### <a name="whats-new-in-1831"></a>18.3 1 的新增功能
 
 | 新建项 | 详细信息 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -127,7 +138,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 Azure SQL 数据库托管实例的支持。 |
 | SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 的默认视图，将结果作为表格显示。 |
 
-## <a name="bug-fixes-in-1831"></a>18.3.1 中的 bug 修复
+#### <a name="bug-fixes-in-1831"></a>18.3.1 中的 bug 修复
 
 | 新项 | 详细信息 |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -149,7 +160,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 | 查询存储 UI | 修复了在“跟踪查询”视图中选择“执行计数”指标时 Y 轴无法缩放的问题   。 |
 | 漏洞评估 | 禁用了 Azure SQL DB 的清除和批准基线。|
 
-### <a name="known-issues-1831"></a>已知问题 (18.3.1)
+#### <a name="known-issues-1831"></a>已知问题 (18.3.1)
 
 - 无法从计算机 B 修改通过在计算机 A 上运行的 SSMS 创建的数据库关系图（SSMS 崩溃）。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 
@@ -157,7 +168,9 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 可参考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 了解其他已知问题，并向产品团队提供反馈。
 
-## <a name="download-ssms-182"></a>![下载](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+### <a name="182"></a>18.2
+
+![下载](../ssdt/media/download.png) [下载 SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 版本号：18.2  
 生成号：15.0.18142.0  
@@ -165,7 +178,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 18.2 是对 18.1 的更新，添加了以下新项并修复了以下 bug。
 
-## <a name="whats-new-in-182"></a>18.2 的新增功能
+### <a name="whats-new-in-182"></a>18.2 的新增功能
 
 |  新项  |  详细信息  |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -174,12 +187,12 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | 添加了 IntelliSense 支持。 |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | 可以在数据库引擎内启用优化，有助于提高索引中高并发插入的吞吐量。 此选项旨在用于易发生最后一页插入争用的索引，常见于有顺序键（如标识列、序列或日期/时间列）的索引。 有关更多详细信息，请参阅 [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys)。 |
 | 查询执行或结果 | 在消息中添加了一个完成时间，以跟踪给定查询执行完毕的时间  。 |
-| 查询执行或结果 | 允许显示更多数据（结果转换为文本）以及将其存储在单元中（结果转换为网格）。 对于这两种情况，SSMS 当前最多支持 2 百万个字符（之前分别为 25.6 万和 6.4 万）。 这还解决了用户无法从网格单元中获取超过 43680 个字符的问题。 |
+| 查询执行或结果 | 允许显示更多数据（结果转换为文本）以及将其存储在单元中（结果转换为网格）。 对于这两种情况，SSMS 当前最多支持 200 万个字符（之前分别为 25.6 万和 6.4 万）。 这还解决了用户无法从网格单元中获取超过 43680 个字符的问题。 |
 | 显示计划 | 在启用了[内联标量 UDF 特性](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) (ContainsInlineScalarTsqludfs) 的情况下，在 QueryPlan 中添加了新的属性。 |
 | SMO | 添加了对 SQL 评估 API  的支持。 有关详细信息，请参阅 [SQL 评估 API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview)。 |
 |  |  |
 
-## <a name="bug-fixes-in-182"></a>18.2 中的 bug 修复
+#### <a name="bug-fixes-in-182"></a>18.2 中的 bug 修复
 
 |  新项  |  详细信息  |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -194,7 +207,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 | 常规 SSMS | 在连接对话框中，将“Azure Active Directory - 含 MFA 支持的通用身份验证”替换为了“Azure Active Directory - 含 MFA 的通用身份验证”（功能相同，但希望能够减少混淆）   。 |
 | 常规 SSMS | 更新了 SSMS，使其在创建 Azure SQL 数据库时使用正确的默认值。 |
 | 常规 SSMS | 修复了当服务器为 [SQL Linux 容器](../linux/quickstart-install-connect-docker.md)时，用户无法从[注册服务器](register-servers/register-servers.md)中的节点启动 PowerShell 的问题  。 |
-| 导入平面文件 | 修复了从 SSMS 18.0 升级到 18.1 后，“导入平面文件”无法正常工作的问题  。 请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37912636) |
+| 导入平面文件 | 修复了从 SSMS 18.0 升级到 18.1 后，“导入平面文件”无法正常运行的问题  。 请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37912636) |
 | 导入平面文件 | 修复了标头包含 Unicode 字符的 .csv 文件中“导入平面文件向导报告重复或无效的列”的问题  。 |
 | “对象资源管理器” | 修复了在连接到 SQL Express 时，某些菜单项（例如 SQL Server“导入和导出向导”）缺失或禁用的问题  。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37500016)。 |
 | “对象资源管理器” | 修复了将对象从对象资源管理器拖动到编辑器时导致 SSMS 故障的问题。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37887988)。 |
@@ -215,7 +228,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 |**SSMS 安装程序**| **缓解了 SSMS 安装程序错误地阻止安装 SSMS 报告不匹配语言的问题。在某些异常情况下（例如中止的安装程序或错误地卸载以前的 SSMS 版本），这可能是一个问题。有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37483594/)** 。 |
 | XEvent 探查器 | 修复了关闭查看器时出现的故障。 |
 
-### <a name="known-issues-182"></a>已知问题 (18.2)
+#### <a name="known-issues-182"></a>已知问题 (18.2)
 
 - 无从在计算机 B 中修改从在计算机 A 上运行的 SSMS 创建的数据库关系图（这会导致 SSMS 出现故障）。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 
@@ -227,17 +240,19 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 - 不管登录名的实际默认语言设置如何，SQL 登录名的默认语言在“登录属性”对话框中都可能显示为阿拉伯语。 若要查看给定登录名的实际默认语言，请使用 T-SQL 从 master.sys.server_principles 选择登录名的 default_language_name   。
 
-## <a name="download-ssms-181"></a>![下载](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
+### <a name="181"></a>18.1
+
+![下载](../ssdt/media/download.png) [下载 SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - 版本号：18.1  
 - 生成号：15.0.18131.0  
-- 发行日期：2019 年 6 月 11 日  
+- 发行日期：2019 年 6 月 11 日
 
 [中文（简体）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
 18.1 是对 18.0 的一个小更新，修复了以下新项和 bug。
 
-## <a name="whats-new-in-181"></a>18.1 的新增功能
+#### <a name="whats-new-in-181"></a>18.1 的新增功能
 
 | 新建项| 详细信息|
 | :-------| :------|
@@ -245,7 +260,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 | SSBDIAGNOSE.EXE |SQL Server 诊断（命令行工具）已添加回 SSMS 包。|
 | Integration Services (SSIS) | 支持 Azure 中的计划 SSIS 包，该包位于 Azure 中的 SSIS 目录或系统文件中。 启动新建计划对话框中有三个项，新计划...  右键单击 Azure 中 SSIS 目录中的 SSIS 包时会显示菜单项，“在 Azure 中安排执行 SSIS 包”菜单项，位于“工具”菜单项下的“迁移到 Migrate”菜单项下，以及右键单击 Azure SQL 数据库托管实例中的 SQL Server 代理下的作业文件夹时显示的“在 Azure 中安排执行 SSIS”    。|
 
-## <a name="bug-fixes-in-181"></a>18.1 中的 bug 修复
+#### <a name="bug-fixes-in-181"></a>18.1 中的 bug 修复
 
 | 新项 | 详细信息 |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -287,7 +302,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 | XEvent UI | 在 XEvents 列表中添加了“Package”列，以区分具有相同名称的事件。 |
 | XEvent UI | 向 XEventUI 添加了缺少的“EXTERNAL LIBRARY”类类型映射。 |
 
-### <a name="known-issues-181"></a>已知问题 (18.1)
+#### <a name="known-issues-181"></a>已知问题 (18.1)
 
 - 用户在将对象资源管理器中的表对象拖动到查询编辑器时可能收到错误。 我们已注意到此问题并计划在下一版本中提供修补程序。
 
@@ -297,7 +312,9 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 - 无法从计算机 B 修改通过在计算机 A 上运行的 SSMS 创建的数据库关系图（SSMS 崩溃）。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 
-## <a name="download-ssms-180"></a>![下载](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+### <a name="180"></a>18.0
+
+![下载](../ssdt/media/download.png) [下载 SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - 版本号：18.0  
 - 生成号：15.0.18118.0  
@@ -305,7 +322,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 [中文（简体）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804)| [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404)| [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409)| [法语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c)| [德语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407)| [意大利语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410)| [日语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411)| [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412)| [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416)| [俄语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419)| [西班牙语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
 
-### <a name="whats-new-in-180"></a>18.0 的新增功能
+#### <a name="whats-new-in-180"></a>18.0 的新增功能
 
 | 新建项| 详细信息|
 | :-------| :------|
@@ -379,7 +396,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 |SMO| 在 SMO 对象（“PropertyMissing”）上添加了新事件以帮助应用程序作者更快地检测 SMO 性能问题。|
 |SMO| 公开了 Configuration 对象上新的 DefaultBackupChecksum 属性，该属性映射到“备份校验和默认值”服务器配置。|
 |SMO| 公开了 Server 对象上新的 ProductUpdateLevel 属性，该属性映射到正在使用的 SQL 版本（例如 CU12 和 RTM）的服务级别上。|
-|SMO| 公开了 Database 对象上新的 LastGoodCheckDbTime 属性，该属性映射到“lastgoodcheckdbtime”数据库属性上。 如果该属性不可用，则将返回默认值“1900/1/1 凌晨 12:00:00”。|
+|SMO| 公开了 Database 对象上新的 LastGoodCheckDbTime 属性，该属性映射到“lastgoodcheckdbtime”数据库属性上。 如果该属性不可用，则返回默认值“1900/1/1 凌晨 12:00:00”。|
 |SMO|将 RegSrvr.xml 文件（注册服务器配置文件）的位置移动到了“%AppData%\Microsoft\SQL Server Management Studio”（未进行版本控制，因此可以跨 SSMS 版本共享）。|
 |SMO|添加了“云见证”作为新的仲裁类型，以及作为新的资源类型。|
 |SMO|在 SMO 和 SSMS 中添加了对“边缘约束”的支持。|
@@ -391,7 +408,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 |漏洞评估|添加了新的导出功能，以将漏洞评估扫描结果导出为 Excel。|
 |XEvent 查看器|XEvent 查看器：启用了显示计划窗口以获取更多 XEvent。|
 
-### <a name="bug-fixes-in-180"></a>18.0 中的 bug 修复
+#### <a name="bug-fixes-in-180"></a>18.0 中的 bug 修复
 
 | 新建项| 详细信息|
 | :-------| :------|
@@ -410,7 +427,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 |常规 SSMS|修复了在高 DPI 监视器上未正确呈现“新 XEvent 会话向导 UI”表单的问题。|
 |常规 SSMS|修复了尝试导入 bacpac 文件的问题。|
 |常规 SSMS|修复了尝试显示数据库 (FILEGROWTH > 2048 GB) 属性时引发算术溢出错误的问题。|
-|常规 SSMS|解决了性能仪表板报表报告在子报表中找不到的 PAGELATCH 和 PAGEIOLATCH 等待的问题。|
+|常规 SSMS|解决了性能仪表板报表报告在子报表中找不到 PAGELATCH 和 PAGEIOLATCH 等待的问题。|
 |常规 SSMS|另一轮修复，通过在正确的监视器中打开对话框，使 SSMS 能更好地识别多监视器。|
 |Analysis Services (AS)|修复了 AS Xevent UI 的“高级设置”被剪辑的问题。|
 |Analysis Services (AS)|修复了 DAX 分析引发“找不到文件”异常这一问题。|
@@ -457,12 +474,12 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 |平面文件导入向导|修复了浮点  数据类型输入为 null  问题。|
 |平面文件导入向导|修复了导入向导无法处理负十进制值的问题。|
 |平面文件导入向导|修复了向导无法从单列 CSV 文件导入的问题。|
-|平面文件导入向导|将在 SSMS 17.9 中提供] 修复了已存在目标表时平面文件导入不允许更改目标表的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)。 |
+|平面文件导入向导|修复了已存在目标表时平面文件导入不允许更改目标表的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)。 |
 |帮助查看器|改进了有关使用联机/脱机模式的逻辑（仍然有一些问题需要解决）。|
 |帮助查看器|修复了使用联机/脱机设置的“查看帮助”。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791)。 |
 |高可用性和灾难恢复 (HADR)<BR> 可用性组 (AG)|修复了“故障转移可用性组”向导中角色始终显示为“正在解析”的问题。|
 |高可用性和灾难恢复 (HADR)<BR> 可用性组 (AG)|修复了 SSMS 在“可用性组仪表板”中显示的警告遭截断的问题。|
-|Integration Services (IS)|修复了同一台计算机上安装有 SQL Server 2019 和 SSMS 18.0 时部署向导将无法连接到 SQL Server 的 SxS 问题。|
+|Integration Services (IS)|修复了同一台计算机上安装有 SQL Server 2019 和 SSMS 18.0 时部署向导无法连接到 SQL Server 的 SxS 问题。|
 |Integration Services (IS)|修复了在设计维护计划时，不能编辑维护计划任务的问题。|
 |Integration Services (IS)|修复了重命名部署下的项目时部署向导卡住的问题。|
 |Integration Services (IS)|启用了 Azure-SSIS IR 计划功能中的环境设置。|
@@ -535,7 +552,7 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 |XEvent 探查器|修复了连接到 96 核 SQL Server 时无法启动 XEvent 探查器的问题。|
 |XEvent 查看器|修复了使用“扩展事件工具栏选项”对事件分组时 XEvent 查看器出现故障的问题。|
 
-### <a name="deprecated-and-removed-features-in-180"></a>18.0 中已弃用和已删除的功能
+#### <a name="deprecated-and-removed-features-in-180"></a>18.0 中已弃用和已删除的功能
 
 已弃用/已删除的功能
 - T-SQL 调试程序
@@ -550,15 +567,15 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 - Configuration Manager 工具：
   - SQL Server 配置管理器和报表服务器配置管理器不再是 SSMS 安装程序的一部分。
 - DMF 标准策略
-  - 策略不再随 SSMS 安装。 它们将移动到 Git。 用户将能够参与并下载/安装它们，如果他们需要。
+  - 策略不再随 SSMS 安装。 已将它们迁移到 Git。 如果用户需要策略，则能够参与并下载/安装它们。
 - SSMS 命令行选项 - P 已删除
   - 出于安全考虑，已删除命令行上指定明文密码的选项。
 - 删除了生成脚本并发布到 Web 服务的功能
   - 从 SSMS UI 中删除了此已弃用的功能。
 - 在对象资源管理器中删除了“维护 > 旧版”节点。
-  - 无法再访问真正陈旧的“数据库维护计划”和“SQL Mail”节点。 新式“数据库邮件”和“维护计划”节点将继续按照常工作。
+  - 将不再能够访问陈旧的“数据库维护计划”和“SQL Mail”节点。 新式“数据库邮件”和“维护计划”节点继续照常工作。
 
-### <a name="known-issues-180"></a>已知问题 (18.0)
+#### <a name="known-issues-180"></a>已知问题 (18.0)
 
 - 安装版本 18.0 时可能会遇到以下问题：无法运行 SQL Server Management Studio。 如果遇到此问题，请按照 [SSMS2018 - 已安装，但不运行](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run)一文中的步骤进行操作。
 
@@ -566,13 +583,17 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 - 在多个查询窗口之间切换时会出现重绘问题。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此问题的解决方法是在“工具”>“选项”下禁用硬件加速。
 
-## <a name="download-ssms-1791"></a>![下载](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+### <a name="1791"></a>17.9.1
 
-- 版本号：17.9.1<br>
-- 生成号：14.0.17289.0<br>
+![下载](../ssdt/media/download.png) [下载 SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- 版本号：17.9.1  
+- 生成号：14.0.17289.0  
 - 发行日期：2018 年 11 月 21 日
 
 17.9.1 是对 17.9 的一个小更新，修复了以下 bug：
+
+#### <a name="bug-fixes-in-1791"></a>17.9.1 中的 bug 修复
 
 - 修复了在使用带有 SQL 查询编辑器的“Azure Active Directory - 通用且具有 MFA 支持”身份验证时，用户可能会遇到关闭连接并在每次查询调用时重新打开连接的问题。 此类关闭连接的副作用包括意外删除全局临时表，有时还会向连接提供新的 SPID。
 - 修复了长期未解决的问题，即还原计划无法查找还原计划，或在某些情况下生成低效的还原计划。
@@ -583,12 +604,41 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 
 [中文（简体）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [法语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [德语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [意大利语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [日语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [俄语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [西班牙语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-## <a name="download-ssms-1653"></a>![下载](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
-公开发布 | 版本号：13.0.16106.4
+#### <a name="uninstall-and-reinstall-ssms-17x"></a>卸载并重装 SSMS 17.x
+
+如果安装 SSMS 时遇到问题，并且标准的卸载和重装无法解决问题，可以先尝试下[修复](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell。 如果修复 Visual Studio 2015 IsoShell 不能解决此问题，可以尝试下面的步骤来解决许多偶然的问题：
+
+1. 像卸载任意应用程序那样卸载 SSMS（使用“应用和功能”、“程序和功能”，具体取决于 Windows 版本）   。
+
+2. 通过提升的 cmd 提示符卸载 Visual Studio 2015 IsoShell  ：
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
+
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3. 像卸载任何应用程序那样卸载 Microsoft Visual C++ 2015 可再发行组件。 如果计算机上有 x86 和 x64，则卸载它们。
+
+4. 通过提升的 cmd 提示符重装 Visual Studio 2015 IsoShell  ：  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
+
+    ```vs_isoshell.exe /PromptRestart```
+
+5. 重装 SSMS。
+
+6. 如果当前不是最新版本的话，则升级到[最新版本的 Visual C++ 2015 可再发行组件](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。
+
+### <a name="1653"></a>16.5.3
+
+![下载](../ssdt/media/download.png) [下载 SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+
+- 版本号：16.5.3  
+- 生成号：13.0.16106.4  
+- 发行日期：2017 年 1 月 30 日
 
 [中文（简体）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [英语（美国）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [法语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [德语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [意大利语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [日语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [朝鲜语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [俄语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [西班牙语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
-此版本已解决以下问题：
+#### <a name="bug-fixes-in-1653"></a>16.5.3 中的 bug 修复
 
 * 修复了 SSMS 16.5.2 中引入的问题，即当表具有多个稀疏列时，导致“表”节点扩展。
 
@@ -613,30 +663,6 @@ SSMS 18.3.1 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的�
 * SSMS 偶尔在活动监视器中引发异常和崩溃。 [连接 ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * SSMS 2016 崩溃，显示错误“由于在 IP 71AF8579 (71AE0000) 的 .NET 运行时出现内部错误，进程终止，退出代码 80131506”
-
-## <a name="uninstall-and-reinstall-ssms-17x"></a>卸载并重装 SSMS 17.x
-
-如果安装 SSMS 时遇到问题，并且标准的卸载和重装无法解决问题，可以先尝试下[修复](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell。 如果修复 Visual Studio 2015 IsoShell 不能解决此问题，可以尝试下面的步骤来解决许多偶然的问题：
-
-1. 像卸载任意应用程序那样卸载 SSMS（使用“应用和功能”、“程序和功能”，具体取决于 Windows 版本）   。
-
-2. 通过提升的 cmd 提示符卸载 Visual Studio 2015 IsoShell  ：
-
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
-
-    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
-
-3. 像卸载任何应用程序那样卸载 Microsoft Visual C++ 2015 可再发行组件。 如果计算机上有 x86 和 x64，则卸载它们。
-
-4. 通过提升的 cmd 提示符重装 Visual Studio 2015 IsoShell  ：  
-
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
-
-    ```vs_isoshell.exe /PromptRestart```
-
-5. 重装 SSMS。
-
-6. 如果当前不是最新版本的话，则升级到[最新版本的 Visual C++ 2015 可再发行组件](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。
 
 ## <a name="additional-downloads"></a>其他下载
 

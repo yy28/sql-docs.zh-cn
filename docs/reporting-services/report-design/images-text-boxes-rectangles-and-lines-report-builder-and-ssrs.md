@@ -1,5 +1,5 @@
 ---
-title: 图像、文本框、矩形和线条（报表生成器和 SSRS）| Microsoft Docs
+title: 图像、文本框、矩形和线条（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c27c732f04d661d210e089948416d10e3274b9d5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a57bef0be8819674142526d62ec824078ded04e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580241"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082059"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>图像、文本框、矩形和线条（报表生成器和 SSRS）
   除了如表、矩阵和图表这样的数据区域外， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表还可以使用如图像、文本框和矩形等其他报表项增添视觉吸引力、突出显示关键信息或提供相关信息。 您可以更改报表项的格式设置。 例如，可以添加边框或填充、更改初始可见性或方向，或指定报表项的准确大小和位置。  

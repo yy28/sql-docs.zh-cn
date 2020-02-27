@@ -1,5 +1,5 @@
 ---
-title: Var 函数（报表生成器和 SSRS）| Microsoft Docs
+title: Var 函数（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2fba0fc4720e10fc2c90dcdecf783bd01f849fd8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c8fc31dec4f6e4cfc289c5d01ab03c9ecbbd5a7d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576749"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081096"
 ---
 # <a name="report-builder-functions---var-function"></a>报表生成器函数 - Var 函数
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的方差。  

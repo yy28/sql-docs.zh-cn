@@ -1,5 +1,5 @@
 ---
-title: 在图表中添加或删除边距（报表生成器和 SSRS）| Microsoft Docs
+title: 在图表中添加或删除边距（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5736524ba0a57b31a832797fdb9a09c88d321a0b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1a5b9d749cbeab7164bd1ca06d0fc8192561931c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581941"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081539"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>在图表中添加或删除边距（报表生成器和 SSRS）
 对于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的柱形图和散点图，图表会自动在 x 轴结尾处添加侧边距。 在条形图中，图表会自动在 y 轴结尾处添加侧边距。 在所有其他图表类型中，图表都不会添加侧边距。 您无法更改该边距的大小。  

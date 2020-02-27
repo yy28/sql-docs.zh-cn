@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 支持矩阵 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f3c44f9f133d95a821cac7a1a97fe0c8ca60252
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027896"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004521"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支持矩阵
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "69027896"
   本页包含 Microsoft SQL Server JDBC 驱动程序的支持矩阵和支持生命周期策略。  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Microsoft JDBC Driver 支持生命周期矩阵和策略  
- Microsoft 支持生命周期 (MSL) 策略提供了与 Microsoft 产品的支持生命周期有关的可预测透明信息。 自驱动程序发布之日起，JDBC Driver 3.0 版、4.x 版、6.x 版和 7.x 版就具有五年的主流支持。 主流支持在 Microsoft 支持生命周期网站上定义。  
+ Microsoft 支持生命周期 (MSL) 策略提供了与 Microsoft 产品的支持生命周期有关的可预测透明信息。 自驱动程序发布之日起，JDBC Driver 3.0 版、4.x 版、6.x 版、7.x 版和 8.x 版就具有五年的主流支持。 主流支持在 Microsoft 支持生命周期网站上定义。  
   
  Microsoft JDBC 驱动程序不提供扩展和自定义支持选项。  
     
@@ -32,6 +32,7 @@ ms.locfileid: "69027896"
   
 |驱动程序名称|驱动程序包版本|适用的 JAR|主要支持结束日期|
 |-|-|-|-|  
+|Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.0.jre13.jar<br> mssql-jdbc-8.2.0.jre11.jar<br> mssql-jdbc-8.2.0.jre8.jar|2025 年 1 月 31 日|
 |Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2024 年 8 月 2 日|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|2024 年 4 月 16 日|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31 日|  
@@ -39,12 +40,12 @@ ms.locfileid: "69027896"
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30 日|    
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14 日|    
 |Microsoft SQL Server JDBC 驱动程序 4.2|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020 年 8 月 24 日|  
-|Microsoft SQL Server JDBC 驱动程序 4.1|4.1|sqljdbc41.jar|2019 年 12 月 12 日|  
   
  以下 Microsoft JDBC 驱动程序不再受到支持。  
  
 |驱动程序名称|驱动程序包版本|主要支持结束日期|  
 |-|-|-|
+|Microsoft SQL Server JDBC 驱动程序 4.1|4.1|2019 年 12 月 12 日| 
 |Microsoft JDBC Driver 4.0 for SQL Server|4.0|2017 年 3 月 6 日|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|2015 年 4 月 23 日|  
 |Microsoft SQL Server JDBC 驱动程序 2.0|2.0|2012 年 12 月 31 日|  
@@ -57,6 +58,7 @@ ms.locfileid: "69027896"
   
 |驱动程序版本|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL 数据库|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
+|8.2|N|N|Y|Y|Y|Y|Y|Y|Y|
 |7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
 |7.2|N|Y|Y|Y|Y|Y|Y|Y|N| 
 |7.0|N|Y|Y|Y|Y|Y|Y|Y|N| 
@@ -88,6 +90,7 @@ ms.locfileid: "69027896"
   
 |JDBC 驱动程序版本|JRE 版本|JDBC API 版本| 
 |-|-|-|  
+|8.2|1.8、11、13|4.2、4.3（部分）|
 |7.4|1.8、11、12|4.2、4.3（部分）|
 |7.2|1.8、11|4.2、4.3（部分）|
 |7.0|1.8、10|4.2、4.3（部分）|
@@ -108,8 +111,7 @@ ms.locfileid: "69027896"
 ## <a name="supported-operating-systems"></a>支持的操作系统  
  Microsoft JDBC 驱动程序可在任何支持使用 Java 虚拟机 (JVM) 的操作系统上工作。 一些常用的平台包括 Windows 10、Windows 8.1、Windows 8、Windows 7、Windows Server 2008 R2、Windows Vista、Linux、Unix、AIX、MacOS 等。  
   
- JDBC 产品团队在 Windows、Sun Solaris、SUSE Linux 和 RedHat Linux 上测试了驱动程序。  所有平台都提供客户支持，但我们可能会要求你在 Windows 等平台上重现问题。  
-  
+ JDBC 产品团队在 Windows、Sun Solaris、SUSE Linux、Ubuntu Linux、CentOS Linux 和 macOS 上测试了驱动程序。
 ## <a name="application-server-support"></a>应用程序服务器支持  
  针对各种应用程序服务器对 Microsoft SQL Server JDBC 驱动程序进行了测试。  请咨询应用程序服务器供应商了解有关与其产品兼容的驱动程序版本的其他详细信息。
  

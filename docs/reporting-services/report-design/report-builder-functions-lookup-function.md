@@ -1,5 +1,5 @@
 ---
-title: Lookup 函数（报表生成器和 SSRS）| Microsoft Docs
+title: Lookup 函数（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 333c75f3ca10d1ed6ecd738a3dc76a32a53305c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8ca2ef5b2c605d2eb1ca73d05e897919869a435f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579575"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081232"
 ---
 # <a name="report-builder-functions---lookup-function"></a>报表生成器函数 - Lookup 函数
   从包含名称/值对的数据集返回指定名称的第一个匹配值。  

@@ -1,5 +1,5 @@
 ---
-title: 表达式参考（报表生成器和 SSRS）| Microsoft Docs
+title: 表达式参考（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35bcbd777ac703ad0db2bf6693a1987ef8e124d4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1e7f44eef3fe86685bee473a5e985aad36d21c6d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576371"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080227"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>表达式引用（报表生成器和 SSRS）
   报表表达式支持对内置函数和内置集合的多种形式的引用。 表达式必须具有有效的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语法，然后才能发布或处理报表。  

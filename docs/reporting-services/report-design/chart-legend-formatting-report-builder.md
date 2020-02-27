@@ -1,5 +1,5 @@
 ---
-title: 设置图表上图例的格式（报表生成器和 SSRS）| Microsoft Docs
+title: 设置图表上图例的格式（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3306bc4f093a3f05c3caf37d212a8e585ac201c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4b2babeb60f6208761be04e85889206f9ba407e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581667"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080559"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>图表图例 - 设置格式（报表生成器）
   图表图例包含对图表中每个类别的说明。 图例始终包含一个或多个图例项，每个图例项包含一个表示序列的彩色框以及一个描述该序列的文本字符串，如下图所示。  

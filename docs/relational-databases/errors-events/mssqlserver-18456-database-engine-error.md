@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68137085"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146309"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,7 @@ ms.locfileid: "68137085"
 |12|登录是有效的登录，但服务器访问失败。|  
 |18|必须更改密码。|  
 |38、46|找不到用户请求的数据库。|
+|58| 将 SQL Server 设置为仅使用 Windows 身份验证，而客户端尝试使用 SQL 身份验证登录时。 另一个原因是 SID 不匹配。|
 |102 - 111|AAD 失败。|
 |122 - 124|由于用户名或密码为空导致的失败。|
 |126|用户请求的数据库不存在。|

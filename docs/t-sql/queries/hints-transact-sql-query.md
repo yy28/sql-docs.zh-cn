@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002332"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144196"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ ms.locfileid: "75002332"
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 强制查询优化器不因统计信息变化而重新编译查询。 指定 KEEPFIXED PLAN 可确保仅当更改基础表的架构或对这些表运行 sp_recompile  时才重新编译查询。  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，以及更高版本。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本开始）  
   
 防止查询使用非聚集内存优化列存储索引。 如果查询包含避免使用列存储索引的查询提示，而又包含支持使用列存储索引的索引提示，那么这两个提示相互冲突，导致查询返回错误。  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 指示查询优化器在编译和优化查询时，对所有本地变量使用统计数据，而不是初始值。 此优化包括使用强制参数化创建的参数。  
   
 如果在同一查询提示中使用 OPTIMIZE FOR @variable_name = _literal\_constant_ 和 OPTIMIZE FOR UNKNOWN，查询优化器会使用为特定值指定的 _literal\_constant_。 查询优化器会对其余变量值使用 UNKNOWN。 这些值仅用于查询优化期间，而不会用于查询执行期间。  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 指定在编译查询时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器应用于查询的参数化规则。  
   
@@ -249,6 +250,11 @@ PARAMETERIZATION { SIMPLE | FORCED }
 > 有关详细信息，请参阅[使用计划指南指定查询参数化行为](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。
   
 SIMPLE 用于指示查询优化器尝试进行简单参数化。 FORCED 用于指示查询优化器尝试进行强制参数化。 有关详细信息，请参阅[查询处理体系结构指南中的强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)和[查询处理体系结构指南中的简单参数化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。  
+
+QUERYTRACEON trace_flag    
+使用此选项可以仅在单查询编译期间启用影响计划的跟踪标志。 与其他查询级别选项类似，你可以将选项与计划指南一起使用，以匹配从任何会话中执行的查询文本，并在编译此查询时自动应用影响计划的跟踪标志。 只有“更多信息”部分的表和[跟踪标志](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)中记录的查询优化器跟踪标志才支持 QUERYTRACEON 选项。 但是，如果使用了不支持的跟踪标志号，此选项将不会返回任何错误或警告。 如果指定的跟踪标志不是影响查询执行计划的跟踪标志，则将以无提示方式忽略该选项。
+
+如果 QUERYTRACEON trace_flag_number 与不同的跟踪标志号一起复制，则可在 OPTION 子句中指定多个跟踪标志。
 
 RECOMPILE  
 指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为查询生成新的临时计划，并在查询完成执行后立即放弃该计划。 如果在未指定 RECOMPILE 提示的情况下运行同一查询，生成的查询计划不会替换缓存中存储的计划。 如果未指定 RECOMPILE，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将缓存查询计划并重新使用它们。 编译查询计划时，RECOMPILE 查询提示使用查询中任何本地变量的当前值。 如果查询在存储过程内，当前值会传递给任意参数。  
@@ -599,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>M. 使用 QUERYTRACEON HINT  
+ 以下示例使用 QUERYTRACEON 查询提示。 该示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。 可以使用以下查询，为特定查询启用跟踪标志 4199 控制的所有影响计划的修补程序：
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ 还可以使用多个跟踪标志，如以下查询中所示：
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>另请参阅  
 [提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

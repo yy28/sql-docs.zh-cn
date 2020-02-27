@@ -1,5 +1,5 @@
 ---
-title: 打印报表 (SSRS) | Microsoft Docs
+title: 打印报表 | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4dd9fc438ba1ec30a85119ceef6d5e1503a5ea1f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581159"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082492"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>打印报表 - Reporting Services (SSRS)
   在将报表保存到报表服务器之后，可以通过 Web 门户或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
@@ -44,7 +44,7 @@ ms.locfileid: "65581159"
  介绍如何打印已导出到其他应用程序的报表。  
   
  [打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
- 提供有关如何打印报表、如何控制页边距以及如何为硬分页呈现器（PDF、图像或打印）将呈现的报表指定纸张大小的分步说明。  
+ 分步介绍了如何打印报表、如何控制页边距，以及如何为硬分页呈现器呈现的报表指定纸张大小：PDF、Image 或 Print。  
   
 ## <a name="see-also"></a>另请参阅  
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

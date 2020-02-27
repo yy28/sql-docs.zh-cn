@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235195"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256660"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要副本到主要副本读/写连接重定向（Always On 可用性组）
 
@@ -46,7 +46,7 @@ ms.locfileid: "75235195"
 为使次要副本重定向读/写连接请求：
 * 次要副本必须处于联机状态。 
 * 副本规范 `PRIMARY_ROLE` 必须包含 `READ_WRITE_ROUTING_URL`。
-* 连接字符串必须将 `ApplicationIntent` 定义为 `ReadWrite`，这是默认设置。
+* 连接字符串必须为 `ReadWrite`，方法是将 `ApplicationIntent` 定义为 `ReadWrite` 或不设置 `ApplicationIntent` 并让默认值 (`ReadWrite`) 生效。
 
 ## <a name="set-read_write_routing_url-option"></a>设置 READ_WRITE_ROUTING_URL 选项
 

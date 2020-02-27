@@ -1,7 +1,7 @@
 ---
 title: 使用 Kerberos 集成身份验证连接到 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cfa4c91dc0d4d40f8cf903301acb2433dcaf6f7a
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69026194"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004640"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 集成身份验证连接到 SQL Server
 
@@ -37,13 +37,13 @@ ms.locfileid: "69026194"
 
 ## <a name="remarks"></a>备注
 
-在 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 之前，应用程序可通过使用 integratedSecurity  连接属性并引用 sqljdbc_auth.dll  来指定集成身份验证（使用 Kerberos 或 NTLM，视可用情况而定），如[生成连接 URL](../../connect/jdbc/building-the-connection-url.md) 中所述。
+在 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 之前，应用程序可通过使用 integratedSecurity 连接属性并引用 mssql-jdbc_auth-\<version>-\<arch>.dll 来指定集成身份验证（使用 Kerberos 或 NTLM，视可用情况而定），如[生成连接 URL](../../connect/jdbc/building-the-connection-url.md) 中所述   。
 
 从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，应用程序可使用 authenticationScheme 连接属性指示它希望通过纯 Java Kerberos 实现连接到使用 Kerberos 集成身份验证的数据库  ：
 
 - 如果要选择使用 Krb5LoginModule  的集成身份验证，仍然必须指定 integratedSecurity=true  连接属性。 然后，还可以指定 authenticationScheme=JavaKerberos  连接属性。
 
-- 若要继续通过 sqljdbc_auth.dll  使用集成身份验证，只需指定 integratedSecurity=true  连接属性（或者可以选择使用 authenticationScheme=NativeAuthentication  ）。
+- 若要继续通过 mssql-jdbc_auth-\<version>-\<arch>.dll  使用集成身份验证，只需指定 integratedSecurity=true  连接属性（或者可以选择使用 authenticationScheme=NativeAuthentication  ）。
 
 - 如果指定 authenticationScheme=JavaKerberos  但未同时指定 integratedSecurity=true  ，则驱动程序将忽略 authenticationScheme  连接属性，并希望在连接字符串中找到用户名和密码凭据。
 

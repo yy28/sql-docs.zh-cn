@@ -1,5 +1,5 @@
 ---
-title: 添加、更改或删除地图或地图层（报表生成器和 SSRS）| Microsoft Docs
+title: 添加、更改或删除地图或地图层（报表生成器）| Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32b0e633aa95ab2d9e4eadea822d10dbfe47d8d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582081"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080649"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当你向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  

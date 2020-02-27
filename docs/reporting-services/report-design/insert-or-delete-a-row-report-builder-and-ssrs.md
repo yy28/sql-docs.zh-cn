@@ -1,5 +1,5 @@
 ---
-title: 插入或删除行（报表生成器和 SSRS）| Microsoft Docs
+title: 插入或删除行（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b20b95586e387484d536ad8005c6f57c1de4698
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6bdec71e808d577a764d2b0cc3fa99fc9cd522fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580162"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082016"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或删除行（报表生成器和 SSRS）
 可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的 Tablix 数据区域中添加或删除行。 Tablix 数据区域可以是一个表、矩阵或列表。 下面的过程不适用于图表和仪表数据区域。  

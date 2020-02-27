@@ -1,7 +1,7 @@
 ---
 title: 了解 Java EE 支持 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c120df0f29e9d4debc0061a13363fc99d8c44c37
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027263"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004593"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支持
 
@@ -38,7 +38,9 @@ ms.locfileid: "69027263"
 对于 JDBC Driver 7.2，驱动程序包含在 mssql-jdbc-7.2.2.jre8.jar  或 mssql-jdbc-7.2.2.jre11.jar  中。
 
 对于 JDBC Driver 7.4，驱动程序包含在 mssql-jdbc-7.4.1.jre8.jar  、mssql-jdbc-7.4.1.jre11.jar  或 mssql-jdbc-7.4.1.jre12.jar  中。
-  
+
+对于 JDBC Driver 8.2，驱动程序包含在 mssql-jdbc-8.2.0.jre8.jar  、mssql-jdbc-8.2.0.jre11.jar  或 mssql-jdbc-8.2.0.jre13.jar  中。
+
 只要你使用 JDBC DriverManager 类加载驱动程序，只要你在任何驱动程序配置中指定驱动程序的类名，就会使用此类名。 例如，配置 Java EE 应用程序服务器内的数据源可能要求输入驱动程序类名称。  
   
 ## <a name="data-sources"></a>数据源

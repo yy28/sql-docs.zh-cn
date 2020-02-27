@@ -1,5 +1,5 @@
 ---
-title: 聚合函数参考（报表生成器和 SSRS）| Microsoft Docs
+title: 聚合函数参考（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243f895c22621c3f83fab38a5bab47d1f7b7b490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893760"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081316"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>报表生成器函数 - 聚合函数参考
   若要在报表中包含聚合值，您可以在表达式中使用内置聚合函数。 数值字段的默认聚合函数是 SUM。 您可以编辑表达式，并使用其他内置聚合函数或指定不同的作用域。 作用域标识要用于计算的一组数据。  

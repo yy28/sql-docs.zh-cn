@@ -5,16 +5,16 @@ description: 本文介绍 SQL Server 大数据群集的最新更新和已知问�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba9d87d4985655b314faf391eaffb8f28ba35519
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721614"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256895"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -50,7 +50,7 @@ ms.locfileid: "75721614"
 
 |平台|支持的版本|
 |---------|---------|
-|`azdata`|必须与服务器具有相同的次要版本（与 SQL Server 主实例相同）。<br/>运行 `azdata –-version` 以验证该版本。 目前，此版本为 `15.0.2070`。|
+|`azdata`|必须与服务器具有相同的次要版本（与 SQL Server 主实例相同）。<br/><br/>运行 `azdata –-version` 以验证该版本。<br/><br/>从 SQL Server 2019 CU2 开始，此版本为 `15.0.4013`。|
 |Azure Data Studio|获取 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新内部版本。|
 
 ## <a name="release-history"></a>版本历史记录
@@ -59,12 +59,21 @@ ms.locfileid: "75721614"
 
 | 发布               | 版本       | 发布日期 |
 |-----------------------|---------------|--------------|
+| [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>如何安装更新
 
 若要安装更新，请参阅[如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
+
+## <a id="cu2"></a> CU2（2020 年 2 月）
+
+SQL Server 2019 的累积更新 2 (CU2) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4003.23。
+
+|包版本 | 映像标记 |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
 ## <a id="cu1"></a> CU1（2020 年 1 月）
 

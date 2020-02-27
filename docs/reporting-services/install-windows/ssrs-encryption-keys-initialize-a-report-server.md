@@ -1,5 +1,5 @@
 ---
-title: 初始化报表服务器（SSRS 配置管理器）| Microsoft Docs
+title: 初始化报表服务器 (Configuration Manager) | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fdb68c0e61d5b48db3a997af0315e7cabf302f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593547"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080827"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS 加密密钥 - 初始化报表服务器
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，已初始化的服务器是指可以在报表服务器数据库中加密和解密数据的服务器。 初始化是一项必需的报表服务器操作。 初始化在报表服务器服务第一次启动时发生。 在将报表服务器联接到现有部署，或在恢复进程中手动重新创建密钥时也需要进行初始化。 有关使用加密密钥的方法和原因的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)和[存储加密的报表服务器数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "73593547"
 >  还可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序以编程的方式初始化报表服务器。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>如何确认报表服务器初始化  
- 要确认报表服务器初始化，请通过在命令窗口中键入 https://**servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令\<** 。 如果发生 **RSReportServerNotActivated** 错误，则表示初始化失败。  
+ 要确认报表服务器初始化，请通过在命令窗口中键入 https://\<servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令  。 如果发生 **RSReportServerNotActivated** 错误，则表示初始化失败。  
   
 ## <a name="see-also"></a>另请参阅
 [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

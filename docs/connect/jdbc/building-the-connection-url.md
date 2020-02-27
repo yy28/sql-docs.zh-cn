@@ -1,7 +1,7 @@
 ---
 title: 生成连接 URL | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028455"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004532"
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -92,18 +92,18 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 >  大括号内的空白为原义字符，不能删除。  
   
 ##  <a name="Connectingintegrated"></a> 在 Windows 上通过集成身份验证进行连接  
- JDBC 驱动程序支持通过 integratedSecurity 连接字符串属性在 Windows 操作系统上使用“类型 2”集成身份验证。 若要使用集成身份验证，请将 sqljdbc_auth.dll 文件复制计算机中 Windows 系统路径下的 JDBC 驱动程序安装目录中。  
+ JDBC 驱动程序支持通过 integratedSecurity 连接字符串属性在 Windows 操作系统上使用“类型 2”集成身份验证。 若要使用集成身份验证，请将 mssql-jdbc_auth-\<version>-\<arch>.dll 文件复制计算机中 Windows 系统路径下的 JDBC 驱动程序安装目录中。  
   
- sqljdbc_auth.dll 文件的安装位置如下：  
+ mssql-jdbc_auth-\<version>-\<arch>.dll 文件的安装位置如下：  
   
  \<安装目录  >\sqljdbc_\<版本  >\\<语言  >\auth\  
   
  有关 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的任何操作系统，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) 以了解 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中新增的一个功能，该功能允许应用程序使用集成身份验证和类型 4 Kerberos 来连接数据库。  
   
 > [!NOTE]  
->  如果您运行 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 sqljdbc_auth.dll 文件，即使操作系统是 x64 版本也不例外。 如果您在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 sqljdbc_auth.dll 文件。  
+>  如果运行的是 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 mssql-jdbc_auth-\<version>-\<arch>.dll 文件，即使操作系统是 x64 版本也不例外。 如果在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 mssql-jdbc_auth-\<version>-\<arch>.dll 文件。  
   
- 也可以设置 java.library.path 系统属性来指定 sqljdbc_auth.dll 的目录。 例如，如果 JDBC 驱动程序安装在默认目录中，您可以在 Java 应用程序启动时使用以下虚拟机 (VM) 参数来指定 DLL 的位置：  
+ 也可以设置 java.library.path 系统属性来指定 mssql-jdbc_auth-\<version>-\<arch>.dll 的目录。 例如，如果 JDBC 驱动程序安装在默认目录中，您可以在 Java 应用程序启动时使用以下虚拟机 (VM) 参数来指定 DLL 的位置：  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

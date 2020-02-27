@@ -1,5 +1,5 @@
 ---
-title: 转换数据源（报表生成器和 SSRS）| Microsoft Docs
+title: 转换数据源（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad8b75d75b5f9c4bc5b606c4e103c318e23398ed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 05aee467c3e69c115bedfa498a546a4e1664ba71
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190858"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081748"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>转换数据源（报表生成器和 SSRS）
   “报表数据”窗格中的每个数据源都是嵌入且特定于报表的，或者是共享的。 在报表生成器中，共享数据源将指向报表服务器或 SharePoint 站点上的已发布共享数据源。 在报表设计器中，共享数据源将指向解决方案资源管理器中 **“共享数据源”** 文件夹下的某一共享数据源。  

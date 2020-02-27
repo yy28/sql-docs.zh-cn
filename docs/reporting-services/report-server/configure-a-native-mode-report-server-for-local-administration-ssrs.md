@@ -1,5 +1,5 @@
 ---
-title: 配置本机模式报表服务器进行本地管理 (SSRS) | Microsoft Docs
+title: 为本地管理配置本机模式报表服务器 | Microsoft Docs
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403267"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080895"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
   如果您想要在本地管理报表服务器实例，则将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器部署到以下操作系统之一要求更多的赋值步骤。 本主题说明如何配置报表服务器以进行本地管理。 如果尚未安装或配置报表服务器，请参阅[从安装向导安装 SQL Server（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)和[管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  

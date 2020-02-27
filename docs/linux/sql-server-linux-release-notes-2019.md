@@ -3,16 +3,16 @@ title: Linux 上的 SQL Server 2019 的发行说明
 description: 本文包含 Linux 上运行的 SQL Server 2019 的发行说明和支持功能。 发行说明适用于最新版本和几个以前的版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/08/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: f54ffd2753225b0241f7a7d25cd1f11457778ef3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 95289a3c4ad263e2c3ef063e54984a4481cf6109
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831984"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256770"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的发行说明
 
@@ -45,6 +45,7 @@ ms.locfileid: "76831984"
 
 | 发布                   | 版本       | 发布日期 |
 |---------------------------|---------------|--------------|
+| [CU2](#cu2)               | 15.0.4013.40  | 2020-02-13   |
 | [CU1](#cu1)               | 15.0.4003.23  | 2020-01-07   |
 | [GA](#ga)                 | 15.0.2000.5   | 2019-11-04   |
 | [候选发布](#rc)  | 15.0.1900.25  | 2019-08-21   |
@@ -61,6 +62,23 @@ ms.locfileid: "76831984"
 - [在 Linux 上安装 SQL Server 2019 机器学习服务 R 和 Python 支持](sql-server-linux-setup-machine-learning.md)
 - [安装 PolyBase 包](../relational-databases/polybase/polybase-linux-setup.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
+
+## <a id="cu2"></a> CU2（2020 年 2 月）
+
+这是 SQL Server 2019 (15.x) 的累积更新 2 (CU2) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4013.40。 有关此版本中的修补程序和改进的信息，请参阅 <https://support.microsoft.com/help/4536075>
+
+### <a name="package-details"></a>包详细信息
+
+对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+
+> [!NOTE]
+> 从 CU1 开始，Red Hat 的脱机包安装链接指向 RHEL 8 包。 如需 RHEL 7 包，请参阅下载路径 <https://packages.microsoft.com/rhel/7/mssql-server-2019/>。
+
+| 程序包 | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 15.0.4013.40-8 | [引擎 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4013.40-8.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4013.40-8.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4013.40-8.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4013.40-8.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4013.40-8.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4013.40-8.x86_64.rpm)|
+| SLES RPM 包 | 15.0.4013.40-8 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4013.40-8.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4013.40-8.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4013.40-8.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4013.40-8.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4013.40-8.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4013.40-8.x86_64.rpm)|
+| Ubuntu 16.04 Debian 包 | 15.0.4013.40-8 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4013.40-8_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4013.40-8_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4013.40-8_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4013.40-8_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4013.40-8_amd64.deb)</br>[PolyBase RPM 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4013.40-8_amd64.deb)|
 
 ## <a id="cu1"></a> CU1 （2020 年 1 月）
 
@@ -188,9 +206,9 @@ ms.locfileid: "76831984"
 #### <a name="network-file-system-nfs"></a>网络文件系统 (NFS)
 如果在生产中使用网络文件系统 (NFS) 远程共享，请注意以下支持要求  ：
 
-- 使用 NFS 版本 4.2 或更高版本  。 较早版本的 NFS 不支持现代文件系统常用的必需功能，例如 fallocate 和稀疏文件创建。
+- 使用 NFS 版本 4.2 或更高版本  。 较早版本的 NFS 不支持现代文件系统常用的必需功能，例如 `fallocate` 和稀疏文件创建。
 - 仅在 NFS 装载上查找 /var/opt/mssql 目录  。 不支持其他文件，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系统二进制文件。
-- 安装远程共享时，请确保 NFS 客户端使用“nolock”选项。
+- 安装远程共享时，请确保 NFS 客户端使用 `nolock` 选项。
 
 ### <a name="localization"></a>本地化
 

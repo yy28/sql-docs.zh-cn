@@ -1,5 +1,5 @@
 ---
-title: 添加分页符（报表生成器和 SSRS）| Microsoft Docs
+title: 添加分页符（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ca618e82e9eed6a0cb43582b8aa1feff33d67626
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39b0e385b533ecc479f99244488d13ae77a8b87f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574805"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080698"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>添加分页符（报表生成器和 SSRS）
   您可以向数据区域内的矩形、数据区域或组添加分页符，以控制每个页面中的信息量。 添加分页符能够提高已发布报表的性能，因为在您查看报表时，系统只需处理每个页面中的项。 如果整个报表位于一个页面中，则您只能在所有项都得到处理后才能查看报表。  

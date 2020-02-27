@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 652d37ec9f19ccc91e1e0d472cb98d734b65df52
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412817"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125284"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  在此查询中，Order 表的行是使用聚集索引检索的。 **Hash Match** 物理运算符现在用于 **Inner Join**。 Order 的聚集索引不是按 CustomerID 排序的，因此 **Merge Join** 需要一个排序运算符，这会影响性能。 请注意 **Hash Match** 运算符的相对开销 (75%) 和上一示例中 **Merge Join** 运算符的开销 (46%) 之间的比较。 优化器在上一示例中也考虑了 **Hash Match** 运算符，但结论是 **Merge Join** 运算符可以提供更好的性能。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于磁盘的表的查询处理  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于磁盘的表的查询处理  
  下图显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中针对即席查询的查询处理流程：  
   
  ![SQL Server 查询处理管道。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server 查询处理管道。")  
@@ -119,7 +119,7 @@ SQL Server 查询处理管道。
 
  对于第一个示例查询，执行引擎从 Access Methods 请求 Customer 聚集索引中的行和 Order 非聚集索引中的行。 Access Methods 遍历 B 树索引结构以检索请求的行。 在本例中检索所有行，因为计划需要全部索引扫描。  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>使用解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问内存优化表  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>使用解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问内存优化表  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 即席批处理和存储过程也称为解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 解释型是指这样一个事实，即对于查询计划中的每个运算符，查询计划都由查询执行引擎进行解释。 执行引擎读取运算符及其参数并执行运算。  
   
  解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可用于访问内存优化表和基于磁盘的表。 下图举例说明对解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问内存优化表的查询处理：  
@@ -225,7 +225,7 @@ END
   
  本机编译存储过程的调用如下所述：  
   
-1.  用户发出一条 **EXEC**_usp_myproc_ 语句。  
+1.  用户发出一条“EXEC usp_myproc”语句   。  
   
 2.  分析器提取名称和存储过程参数。  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76706270"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363233"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -381,7 +381,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密钥（尤其是当应用程序在 Azure 中托管时）。 适用于 Linux、macOS 和 Windows 上的 SQL Server 的 ODBC 驱动程序包含用于 Azure 密钥保管库的内置列主密钥存储提供程序。 有关为 Azure 密钥保管库设置 Always Encrypted 的详细信息，请参阅 [Azure 密钥保管库 - 分步说明](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、[密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)以及[在 Azure 密钥保管库中创建列主密钥](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)。
 
 > [!NOTE]
-> ODBC 驱动程序不支持使用 Active Directory 联合身份验证服务进行 AKV 身份验证。 如果对 AKV 使用的是 Azure Active Directory 身份验证，并且 Active Directory 配置包括联合服务，则身份验证可能会失败。
+> ODBC 驱动程序仅支持对 Azure Active Directory 直接进行 AKV 身份验证。 如果对 AKV 使用的是 Azure Active Directory 身份验证，并且 Active Directory 配置要求针对 Active Directory 联合服务终结点进行身份验证，则身份验证可能会失败。
 > 对于 Linux 和 macOS 上的驱动程序版本 17.2 以及更高版本，需要提供 `libcurl` 才能使用此提供程序，但这不是显式依赖项，因为对驱动程序执行的其他操作不需要它。 如果遇到有关 `libcurl` 的错误，请确保它已安装。
 
 驱动程序支持使用下列凭据类型对 Azure 密钥保管库进行身份验证：

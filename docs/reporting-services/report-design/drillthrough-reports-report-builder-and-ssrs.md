@@ -1,5 +1,5 @@
 ---
-title: 钻取报表（报表生成器和 SSRS）| Microsoft Docs
+title: 钻取报表（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ccc5c2950baf10cad0e7f9495b446286576b27bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 117b3cb90970c03c836964d47d91c37f0e65a294
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579348"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080456"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>钻取报表（报表生成器和 SSRS）
   钻取报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 例如，在此图中，销售额汇总报表列出了销售订单和总额。 当用户单击该汇总列表中的某个订单编号后，便会打开另一个包含此订单详细信息的报表。  

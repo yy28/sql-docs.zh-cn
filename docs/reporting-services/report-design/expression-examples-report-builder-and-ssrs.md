@@ -1,5 +1,5 @@
 ---
-title: 表达式示例（报表生成器和 SSRS）| Microsoft Docs
+title: 表达式示例（报表生成器）| Microsoft Docs
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68661345"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080337"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
 表达式通常在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中使用，以控制报表的内容和外观。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写，可以使用内置函数、自定义代码、报表变量和组变量以及用户定义的变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和可以包括的引用类型的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)和[添加表达式（报表生成器和 SSRS）](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
@@ -95,7 +95,7 @@ ms.locfileid: "68661345"
     =Today()  
     ```  
   
--   使用 DateInterval 函数拉取某日期的特定部分。 以下是一些有效的 DateInterval 参数：
+-   使用 DateInterval 函数拉取某日期的特定部分  。 以下是一些有效的 DateInterval 参数  ：
 
     -   DateInterval.Second
     -   DateInterval.Minute
@@ -208,7 +208,7 @@ ms.locfileid: "68661345"
   
      如果文本框仅包含日期或数字，则应使用文本框的 Format 属性来应用格式设置，而不应在文本框中使用 **Format** 函数。  
   
--   Right、Len 和 InStr 函数对于返回子字符串十分有用，例如将 DOMAIN\\username 剪裁为用户名。 下面的表达式从名为 User 的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
+-   Right、Len 和 InStr 函数对于返回子字符串十分有用，例如将 DOMAIN\\username 剪裁为用户名      。 下面的表达式从名为 User  的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -233,7 +233,7 @@ ms.locfileid: "68661345"
   
     ```  
   
--   若要基于单个参数提供日期范围，可使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 中的 Regex 函数对更改现有字符串的格式很有用，例如设置电话号码格式。 以下表达式使用 **Replace** 函数将字段中的十位电话号码格式从“nnn-nnn-nnnn”更改为“(nnn) nnn-nnnn”：  
+-   若要基于单个参数提供日期范围，可使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 中的 Regex  函数对更改现有字符串的格式很有用，例如设置电话号码格式。 以下表达式使用 **Replace** 函数将字段中的十位电话号码格式从“nnn  -nnn  -nnnn  ”更改为“(nnn  ) nnn  -nnnn  ”：  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  

@@ -12,12 +12,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7912e3048021255da0340f19f5d449d1c13a6c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9314afbfa0cdcb917edd8942157c87e7db605b9d
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245287"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544943"
 ---
 # <a name="accelerated-database-recovery"></a>加速数据库恢复
 
@@ -92,6 +92,10 @@ ADR 恢复过程与当前恢复过程具有相同的三个阶段。 下图说明
 - **撤消阶段**
 
    使用 ADR，撤消阶段几乎即时完成 - 通过使用 sLog 撤消非版本控制操作以及通过具有逻辑还原的持久版本存储 (PVS) 执行行级别基于版本的撤消。
+
+还可以观看此 8 分钟的视频，了解加速数据库恢复
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="adr-recovery-components"></a>ADR 恢复组件
 

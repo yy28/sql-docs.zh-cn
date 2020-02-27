@@ -1,5 +1,5 @@
 ---
-title: 设置文本框中文本的格式（报表生成器和 SSRS）| Microsoft Docs
+title: 设置文本框中文本的格式（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f50e170276a67e819524e5c9e255ac6801a4091c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f7448ee783e1e4a747942ef774a9106de09487fe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576020"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079957"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>设置文本框中文本的格式（报表生成器和 SSRS）
   可以单独设置文本框中任何一部分文本的格式，并在一个文本框中混合使用占位符文本和静态文本。 这种混合格式并添加占位符文本的功能可使您能够为报表中的文本创建邮件合并或模板。 使用占位符可以单独定义任何表达式并设置其格式。  

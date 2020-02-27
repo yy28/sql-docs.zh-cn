@@ -1,7 +1,7 @@
 ---
 title: 使用 Azure Active Directory 身份验证进行连接 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7019efd6e1071624eb3e89873918fb9eb2775833
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028124"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004650"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 
@@ -30,7 +30,7 @@ Microsoft JDBC Driver for SQL Server 中支持 Azure Active Directory 身份验�
     * **ActiveDirectoryMSI**
         * 自驱动程序版本 v7.2  起受支持，`authentication=ActiveDirectoryMSI` 可用于从已启用“标识”支持的 Azure 资源内部连接到 Azure SQL 数据库/数据仓库。 （可选）还可以在 Connection/DataSource 属性中指定 msiClientId  （与此身份验证模式一起），其中必须包含用于获取建立连接所需的 accessToken  的托管服务标识的客户端 ID。
     * **ActiveDirectoryIntegrated**
-        * 自驱动程序版本 v6.0  起受支持，`authentication=ActiveDirectoryIntegrated` 可用于使用集成身份验证连接到 Azure SQL 数据库/数据仓库。 必须将本地 Active Directory 联合身份验证服务 (ADFS) 与云中的 Azure Active Directory 联合，才能使用此身份验证模式。 设置后，连接方法有两种，一种是将本机库“sqljdbc_auth.dll”添加到 Windows OS 上的应用程序类路径，另一种是设置用于提供跨平台身份验证支持的 Kerberos 票证。 登录域加入计算机后，可以访问 Azure SQL DB/DW，而不会看到系统提示输入凭据。
+        * 自驱动程序版本 v6.0  起受支持，`authentication=ActiveDirectoryIntegrated` 可用于使用集成身份验证连接到 Azure SQL 数据库/数据仓库。 必须将本地 Active Directory 联合身份验证服务 (ADFS) 与云中的 Azure Active Directory 联合，才能使用此身份验证模式。 设置后，连接方法有两种，一种是将本机库“mssql-jdbc_auth-\<version>-\<arch>.dll”添加到 Windows OS 上的应用程序类路径，另一种是设置用于提供跨平台身份验证支持的 Kerberos 票证。 登录域加入计算机后，可以访问 Azure SQL DB/DW，而不会看到系统提示输入凭据。
     * **ActiveDirectoryPassword**
         * 自驱动程序版本 v6.0  起受支持，`authentication=ActiveDirectoryPassword` 可用于使用 Azure AD 主体名称和密码连接到 Azure SQL 数据库/数据仓库。
     * **SqlPassword**
@@ -107,7 +107,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>使用 ActiveDirectoryIntegrated 身份验证模式进行连接
 自版本 6.4 起，Microsoft JDBC 驱动程序开始支持在多个平台（Windows、Linux 和 macOS）上使用 Kerberos 票证进行 ActiveDirectoryIntegrated 身份验证。
-有关详细信息，请参阅[在 Windows、Linux 和 Mac 上设置 Kerberos 票证](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)。 或者，在 Windows 上，sqljdbc_auth.dll 也可用于通过 JDBC 驱动程序进行 ActiveDirectoryIntegrated 身份验证。
+有关详细信息，请参阅[在 Windows、Linux 和 Mac 上设置 Kerberos 票证](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)。 或者，在 Windows 上，mssql-jdbc_auth-\<version>-\<arch>.dll 也可用于通过 JDBC 驱动程序进行 ActiveDirectoryIntegrated 身份验证。
 
 > [!NOTE]
 >  如果使用的是旧版驱动程序，请查看这一[链接](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)，以了解使用此身份验证模式所必需的相应依赖项。 
@@ -281,7 +281,7 @@ You have successfully logged on as: <your user name>
     6. 不需要登录 URL。 只需提供任何内容: "https://mytokentest" 。
     7. 单击底部的“创建”。
     9. 在 Azure 门户中，单击应用程序的“设置”选项卡，然后打开“属性”选项卡。
-    10. 查找“应用程序 ID”（亦称为“客户端 ID”）值，并将它复制到一边，稍后在配置应用程序时需要用到此值（例如，1846943b-ad04-4808-aa13-4702d908b5c1）。 请参阅以下快照。
+    10. 查找“应用程序 ID”（亦称为“客户端 ID”）值，并将它复制到一边，稍后在配置应用程序时需要用到此值（例如 1846943b-ad04-4808-aa13-4702d908b5c1）。 请参阅以下快照。
     11. 在“密钥”部分下，创建密钥，具体方法为填写“名称”字段，选择密钥期限，然后保存配置（将“值”字段留空）。 保存后，“值”字段应该会自动填充，复制生成的值。 这是客户端密码。
     12. 在左侧面板中，单击“Azure Active Directory”。 在“应用注册”下，查找“终结点”选项卡。复制“OATH 2.0 令牌终结点”下的 URL（此为 STS URL）。
     

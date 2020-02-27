@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721649"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173624"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
@@ -35,7 +35,7 @@ ms.locfileid: "75721649"
 | **数据虚拟化扩展** | 是 | 提供数据虚拟化向导的 Azure Data Studio 的扩展。 | [安装](../azure-data-studio/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | 针对 AKS | 用于管理 Azure 服务的新式命令行接口。 与 AKS 大数据群集部署配合使用（[详细信息](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)）。 | [安装](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 可选 | 用于查询 SQL Server 的新式命令行接口（[详细信息](https://github.com/dbcli/mssql-cli/blob/master/README.rst)）。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | 针对某些脚本 | 用于查询 SQL Server 的旧式命令行工具（[详细信息](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)）。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | 针对某些脚本 | 用于查询 SQL Server 的旧式命令行工具（[详细信息](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)）。 安装 SQLCMD 包前，你可能需要安装 Microsoft ODBC Driver 11 for SQL Server。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | 针对某些脚本 | 使用 URL 传输数据的命令行工具。 | [Windows](https://curl.haxx.se/windows/) \| Linux：安装 curl 包 |
 
 <sup>1</sup> 必须使用 `kubectl` 版本 1.13 或更高版本。 此外，`kubectl` 的版本应该加或减 Kubernetes 群集的一个次要版本。 要在 `kubectl` 客户端上安装特定版本，请参阅[通过 curl 安装 `kubectl` 二进制文件](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)（在 Windows 10 上，使用 cmd.exe 而不是 Windows PowerShell 来运行 curl）。

@@ -9,12 +9,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253116"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074415"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的安全性概念
 
@@ -66,6 +66,10 @@ ms.locfileid: "75253116"
 客户端与外部终结点之间的通信加密以及群集内部组件之间的通信加密使用证书通过 TLS/SSL 获得保护。
 
 所有 SQL Server 到 SQL Server 的通信（例如与数据池通信的 SQL 主实例）则通过 SQL 登录获得保护。
+
+> [!IMPORTANT]
+>  大数据群集使用 etcd 来存储凭据。 最佳做法是确保将 Kubernetes 群集配置为在静态时使用 etcd 加密。 默认情况下，etcd 中存储的机密是未加密的。 Kubernetes 文档提供有关此管理任务的详细信息： https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 和 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ 。
+
 
 ## <a name="basic-administrator-login"></a>基本管理员登录名
 

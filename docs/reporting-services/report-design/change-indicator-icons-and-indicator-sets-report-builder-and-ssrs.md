@@ -1,5 +1,5 @@
 ---
-title: 更改指示器图标和指示器集（报表生成器和 SSRS）| Microsoft Docs
+title: 更改指示器图标和指示器集（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a73198264f13725b7c7050b5344c2af3df4ada8f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b93ba65ddda79ef44585c748ee2c465c1b9a25f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581720"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081856"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>更改指示器图标和指示器集（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为分页报表提供的预先配置指示器集并非总是能够高效地描绘你的数据以及适合于传递的报表。 本主题提供的过程介绍如何更改指示器图标的外观，以及如何更改指示器集以便包括不同的指示器图标或者更多或更少的指示器图标。  

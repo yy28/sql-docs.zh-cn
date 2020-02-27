@@ -1,5 +1,5 @@
 ---
-title: Oracle 连接类型（SSRS、Power BI 报表服务器和报表生成器）| Microsoft Docs
+title: Oracle 连接类型（报表生成器和 Power BI 报表服务器）| Microsoft Docs
 ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6918d240a6da7f961899d1a4cb71996bbec9ec6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c2e9ee78c6a033443b960ba972b74be2a1e6aebd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259395"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081745"
 ---
-# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle 连接类型（SSRS、Power BI 报表服务器和报表生成器）
+# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Oracle 连接类型（报表生成器和 Power BI 报表服务器）| Microsoft Docs
 
 若要在报表中使用来自 Oracle 数据库的数据，你必须拥有一个基于 Oracle 类型的报表数据源的数据集。 此内置数据源类型直接使用 Oracle Data Provider，并且需要 Oracle 客户端软件组件。 本文介绍如何下载和安装 Reporting Services、Power BI 报表服务器和报表生成器的驱动程序。
 

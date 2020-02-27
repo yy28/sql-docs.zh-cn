@@ -1,5 +1,5 @@
 ---
-title: 创建一个递归层次结构组（报表生成器和 SSRS）| Microsoft Docs
+title: 创建一个递归层次结构组（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a506442cca08dfa40cb3665571662a477ef5345
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581558"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080546"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>创建一个递归层次结构组（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，递归层次结构组可组织来自包含多个层次结构级别的单个报表数据集的数据。例如，表示组织层次结构中的经理－雇员关系的报告结构。  
@@ -48,7 +48,7 @@ ms.locfileid: "65581558"
     > [!NOTE]  
     >  如果看不到“属性”窗格，请单击“视图”选项卡上的“属性”。    
   
-2.  在“属性”窗格中，展开“填充”节点，再单击“左”，然后从下拉列表中选择“**表达式…>”**  **\<** 。  
+2.  在“属性”窗格中，展开“填充”节点，再单击“左”，然后从下拉列表中选择“\<表达式…>”    。  
   
 3.  在“表达式”窗格中，键入以下表达式：  
   

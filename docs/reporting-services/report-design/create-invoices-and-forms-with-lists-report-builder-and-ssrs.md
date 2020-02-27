@@ -1,5 +1,5 @@
 ---
-title: 创建带列表的发票和表单（报表生成器和 SSRS）| Microsoft Docs
+title: 创建带列表的发票和表单（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ce4867fdbaff2ff83f2c7e36d450e6c3b0f07471
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581509"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078592"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>创建带列表的发票和表单（报表生成器和 SSRS）
   列表数据区域重复 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表数据集中的每一个组或行。 可以使用列表创建自由格式的报表或表单（如发票），或与其他数据区域结合使用。 可以定义包含任意数量的报表项的列表。 可以使用以下项嵌套列表  

@@ -1,5 +1,5 @@
 ---
-title: 报表服务器数据库（SSRS 本机模式）| Microsoft Docs
+title: 报表服务器数据库（本机模式）| Microsoft Docs
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a7e49888ddeb4d0666a8b46849560c63c4ac22f5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 71207cc3476374c457ab72aa03e54215b38330ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66826889"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078015"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>报表服务器数据库（SSRS 本机模式）
   报表服务器是一种无状态服务器，它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 来存储元数据和对象定义。 为了将永久数据存储与临时存储要求分开，本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装使用两个数据库。 这两个数据库一起创建，并按名称绑定。 默认情况下，数据库名称分别为 ReportServer  和 ReportServerTempDB  。  

@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f7a1e8d3d6341da5812bb44726c5bf8186d3b19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831946"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054839"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>服务器属性高级页 - Power BI 报表服务器和 Reporting Services
 
@@ -140,6 +140,9 @@ ms.locfileid: "76831946"
 
 ### <a name="enablepowerbireportexportdata"></a>EnablePowerBIReportExportData 
 （仅适用于 Power BI 报表服务器）启用从 Power BI 视觉对象导出 Power BI 报表服务器数据。 值为 True 和 False。  默认值为 True。 
+
+### <a name="enablepowerbireportexportunderlyingdata"></a>EnablePowerBIReportExportUnderlyingData 
+（仅 Power BI 报表服务器）指示客户能否从 Power BI 报表服务器上的 Power BI 视觉对象中导出基础数据。 值为 True 表示已启用该功能。
 
 ### <a name="enableremoteerrors"></a>EnableRemoteErrors
 包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 **true** 和 **false**。 默认值是 **false**秒。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  

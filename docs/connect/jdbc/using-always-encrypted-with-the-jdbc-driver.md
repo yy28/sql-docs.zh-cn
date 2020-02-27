@@ -1,7 +1,7 @@
 ---
 title: 结合使用 JDBC 驱动程序和 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2020
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae119c85877768f7a3356a139c5aaf3f70dc6f8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75681708"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004605"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -147,7 +147,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 虽然本文中的其他密钥存储提供程序可在该驱动程序支持的所有平台上使用，但 JDBC 驱动程序的 SQLServerColumnEncryptionCertificateStoreProvider 实现只能在 Windows 操作系统上使用。 它依赖于驱动程序包中提供的 sqljdbc_auth.dll。 若要使用此提供程序，请将 sqljdbc_auth.dll 文件复制计算机中 Windows 系统路径下的 JDBC 驱动程序安装目录中。 也可以设置 java.library.path 系统属性来指定 sqljdbc_auth.dll 的目录。 如果您运行 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 sqljdbc_auth.dll 文件，即使操作系统是 x64 版本也不例外。 如果您在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 sqljdbc_auth.dll 文件。 例如，如果使用的是 32 位 JVM，并且 JDBC 驱动程序安装在默认目录中，可以在 Java 应用程序启动时使用以下虚拟机 (VM) 参数来指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 虽然本文中的其他密钥存储提供程序可在该驱动程序支持的所有平台上使用，但 JDBC 驱动程序的 SQLServerColumnEncryptionCertificateStoreProvider 实现只能在 Windows 操作系统上使用。 它依赖于驱动程序包中提供的 mssql-jdbc_auth-\<version>-\<arch>.dll。 若要使用此提供程序，请将 mssql-jdbc_auth-\<version>-\<arch>.dll 文件复制计算机中 Windows 系统路径下的 JDBC 驱动程序安装目录中。 也可以设置 java.library.path 系统属性来指定 mssql-jdbc_auth-\<version>-\<arch>.dll 的目录。 如果运行的是 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 mssql-jdbc_auth-\<version>-x86.dll 文件，即使操作系统是 x64 版本也不例外。 如果在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 mssql-jdbc_auth-\<version>-x64.dll 文件。 例如，如果使用的是 32 位 JVM，并且 JDBC 驱动程序安装在默认目录中，可以在 Java 应用程序启动时使用以下虚拟机 (VM) 参数来指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>使用 Java 密钥存储提供程序
 JDBC 驱动程序附带 Java 密钥存储的内置密钥存储提供程序实现。 如果 keyStoreAuthentication  连接字符串属性存在于连接字符串中，并且设置为“JavaKeyStorePassword”，则驱动程序将自动实例化并注册 Java 密钥存储的提供程序。 Java 密钥存储提供程序的名称是 MSSQL_JAVA_KEYSTORE。 还可以使用 SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API 查询此名称。 
@@ -177,7 +177,7 @@ SQLServerColumnEncryptionJavaKeyStoreProvider 可以与 JKS 或 PKCS12 密钥存
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
 ```
 
-此命令创建一个公钥，并将其包装在 x.509 自签名证书中，该证书存储在密钥存储 `keystore.jks` 及其关联的私钥中。 密钥存储中的此项由别名 `AlwaysEncryptedKey` 标识。
+此命令创建一个公钥，并将其包装在 X.509 自签名证书中，该证书存储在密钥存储 `keystore.jks` 及其关联的私钥中。 密钥存储中的此项由别名 `AlwaysEncryptedKey` 标识。
 
 下面是使用 PKCS12 存储类型的相同示例：
 

@@ -10,14 +10,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/06/2019
+ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f4aaea790cf1e308b0675792b110ed129a55ed97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76516258"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051667"
 ---
 # <a name="sql-tools-overview"></a>SQL 工具概述
 
@@ -47,13 +47,13 @@ ms.locfileid: "76516258"
 
 | 工具 | 说明 | 操作系统 |
 |:--|:--|:--|
+|[**bcp**](bcp-utility.md)|大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据     。| **Windows</br>macOS</br>Linux** |
 |[**mssql-cli（预览版）** ](mssql-cli.md)|**mssql-cli** 是一项用于查询 SQL Server 的交互式命令行工具。 此外，使用具有 IntelliSense、语法高亮等功能的命令行工具查询 SQL Server。 | **Windows</br>macOS</br>Linux** |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** 配置在 Linux 上运行的 SQL Server。 | **Linux** |
+|[**mssql-scripter（预览版）** ](https://github.com/Microsoft/mssql-scripter) | mssql-scripter  是 SQL Server 数据库的多平台命令行体验。 | **Windows</br>macOS</br>Linux** |
+| [**sqlcmd**](sqlcmd-utility.md) |可以在命令提示符下，使用 sqlcmd  实用工具输入 Transact-SQL 语句、系统过程和脚本文件。 | **Windows</br>macOS</br>Linux** |
 | [**sqlpackage**](sqlpackage.md) |sqlpackage  是一个命令行实用工具，可自动处理多个数据库开发任务。 |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| SQL Server PowerShell  提供了用于处理 SQL 的 cmdlet。 | **Windows</br>macOS</br>Linux** |
-| [**sqlcmd**](sqlcmd-utility.md) |可以在命令提示符下，使用 sqlcmd  实用工具输入 Transact-SQL 语句、系统过程和脚本文件。 | **Windows</br>macOS</br>Linux** |
-|[**bcp**](bcp-utility.md)|大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据     。| **Windows</br>macOS</br>Linux** |
-|[**mssql-scripter（预览版）** ](https://github.com/Microsoft/mssql-scripter) | mssql-scripter  是 SQL Server 数据库的多平台命令行体验。 | **Windows</br>macOS</br>Linux** |
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** 配置在 Linux 上运行的 SQL Server。 | **Linux** |
 
 ## <a name="migration-and-other-tools"></a>迁移和其他工具
 
@@ -62,9 +62,10 @@ ms.locfileid: "76516258"
 | 工具 | 说明 |
 |:--|:--|
 | **[配置管理器](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | 使用 SQL Server 配置管理器可以配置 SQL Server 服务和网络连接。 配置管理器在 Windows 上运行|
-| **[SQL Server 迁移助手](../ssma/sql-server-migration-assistant.md)** | 使用 SQL Server Migration Assistant 自动将数据库从 Microsoft Access、DB2、MySQL、Oracle 和 Sybase 迁移到 SQL Server。|
 | **[数据库实验助手](../dea/database-experimentation-assistant-overview.md)** | 使用数据库实验助手对给定工作负载的 SQL 目标版本进行评估。 |
+| **[数据迁移助手](../dma/dma-overview.md)** | 数据迁移助手工具可以检测可能会影响新版 SQL Server 或 Azure SQL 数据库中数据库功能的兼容性问题，有助于你升级到新式数据平台。 |
 | **[Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)** | Distributed Replay 功能可帮助你评估即将进行的 SQL Server 升级的影响。 还可以使用 Distributed Replay 来帮助评估硬件和操作系统升级以及 SQL Server 优化的影响。 |
 | **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | ssbdiagnose 实用工具可报告 Service Broker 会话或 Service Broker 服务配置中的问题。 |
+| **[SQL Server 迁移助手](../ssma/sql-server-migration-assistant.md)** | 使用 SQL Server Migration Assistant 自动将数据库从 Microsoft Access、DB2、MySQL、Oracle 和 Sybase 迁移到 SQL Server。|
 
-如果你正在寻找该页未提及的其他工具，请参阅 [SQL 命令提示实用工具](command-prompt-utility-reference-database-engine.md)。
+如果你正在寻找该页未提及的其他工具，请参阅 [SQL 命令提示实用工具](command-prompt-utility-reference-database-engine.md)和[下载 SQL Server 扩展功能和工具](download-sql-feature-packs.md)

@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910130"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558367"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -59,7 +59,7 @@ BULK INSERT
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -166,7 +166,7 @@ FIRE_TRIGGERS 指定将在批量导入操作期间执行目标表中定义的所
 
 如果没有指定 FIRE_TRIGGERS，将不执行任何插入触发器。
 
-FORMATFILE_DATASOURCE = 'data_source_name' 适用范围   ：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。
+FORMATFILE_DATA_SOURCE **=** 'data_source_name' **适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。
 命名的外部数据源，指向格式化文件（定义导入数据的架构）的 Azure Blob 存储位置。 外部数据源必须使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中添加的 `TYPE = BLOB_STORAGE` 选项创建。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
 KEEPIDENTITY 指定导入数据文件中的标识值用于标识列。 如果没有指定 KEEPIDENTITY，则此列的标识值可被验证但不能导入，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据创建表的过程中指定的种子值和增量值自动分配唯一值。 如果数据文件不包含该表或视图中标识列的值，请使用格式化文件指定在导入数据时跳过表或视图中的标识列；[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动为该列分配唯一的值。 有关详细信息，请参阅 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。
@@ -338,7 +338,9 @@ BULK INSERT 语句可在用户定义的事务内执行，以便将数据导入�
 
 ### <a name="permissions"></a>权限
 
-需要 INSERT 和 ADMINISTER BULK OPERATIONS 权限。 在 Azure SQL 数据库中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 权限。 另外，如果存在下列一种或多种情况，则还需要 ALTER TABLE 权限：
+需要 INSERT 和 ADMINISTER BULK OPERATIONS 权限。 在 Azure SQL 数据库中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 权限。 Linux 上的 SQL Server 不支持管理大容量操作权限或 bulkadmin 角色。 只有 `sysadmin` 才能对 Linux 上的 SQL Server 执行批量插入。 
+
+另外，如果存在下列一种或多种情况，则还需要 ALTER TABLE 权限：
 
 - 存在约束但未指定 CHECK_CONSTRAINTS 选项。
 

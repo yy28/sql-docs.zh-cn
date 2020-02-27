@@ -5,16 +5,16 @@ description: 了解如何将 SQL Server 大数据群集升级到新版本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75831838"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256860"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -76,7 +76,7 @@ ms.locfileid: "75831838"
 >最新的图像标记可以在 [SQL Server 2019 大数据群集发行说明](release-notes-big-data-cluster.md)中获得。
 
 >[!IMPORTANT]
->如果使用专用存储库来预提取用于部署或升级 BDC 的映像，请确保当前版本映像和目标版本映像位于专用存储库中。 这样，在必要时可以成功回退。 此外，如果在原始部署后更改了专用存储库的凭据，请在升级之前更新 Kubernetes 中的相应密钥。 不支持通过 DOCKER_PASSWORD 和 DOCKER_USERNAME 环境变量更新凭据。 使用 [kubectl 编辑密钥](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret)更新密钥。 不支持对当前版本和目标版本使用不同的专用存储库进行升级。
+>如果使用专用存储库来预提取用于部署或升级 BDC 的映像，请确保当前版本映像和目标版本映像位于专用存储库中。 这样，在必要时可以成功回退。 此外，如果在原始部署后更改了专用存储库的凭据，请更新相应的环境变量 DOCKER_PASSWORD 和 DOCKER_USERNAME。 不支持对当前版本和目标版本使用不同的专用存储库进行升级。
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>增加升级的超时时间值
 
@@ -93,7 +93,15 @@ ms.locfileid: "75831838"
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-若要增加升级的超时时间值，请编辑升级配置映射。 编辑升级配置映射：
+若要增加升级的超时时间，请在进行升级时使用 --controller-timeout 和 --component-timeout 参数指定较高的值   。 此选项仅自 SQL Server 2019 CU2 版本起开始提供。 例如：
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+--controller-timeout 指定等待控制器或控制器 db 完成升级所需的分钟数  。
+--component-timeout 指定升级的每个后续阶段必须完成的时间量  。
+
+若要增加低于 SQL Server 2019 CU2 版本的版本升级的超时时间值，请编辑升级配置映射。 编辑升级配置映射：
 
 运行以下命令：
 

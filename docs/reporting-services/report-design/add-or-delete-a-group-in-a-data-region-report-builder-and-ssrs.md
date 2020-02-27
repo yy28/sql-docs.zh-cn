@@ -1,5 +1,5 @@
 ---
-title: 在数据区域中添加或删除组（报表生成器和 SSRS）| Microsoft Docs
+title: 在数据区域中添加或删除组（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 004cb81902d921380eee21532626f141ca35b646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e559dc00246fb0b990c81de99c8036356a64034f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581930"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081576"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>在数据区域中添加或删除组（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，如果你希望在显示或计算时根据特定值或表达式集来组织数据，可向数据区域添加组。 组具有标识该组所包含的数据集数据的名称和表达式。 有关组的详细信息，请参阅 [了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  

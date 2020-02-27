@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: c5f0b10d0b2bbd953b14873e76b938ecfdce6fd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74993020"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250592"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -44,7 +44,29 @@ SqlPackage.exe 使用在命令行上指定的参数、属性和 SQLCMD 变量启
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
-  
+
+### <a name="usage-examples"></a>用法示例
+
+**使用带有 SQL 脚本输出的 .dacpac 文件生成数据库之间的比较结果**
+
+首先，创建包含最新数据库更改的 .dacpac 文件：
+
+```
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+ 
+创建包含数据库目标（没有更改）的 .dacpac 文件：
+
+ ```
+ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+
+创建一个 SQL 脚本，用于生成两个 .dacpac 文件之间的差异：
+
+```
+sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
+ ```
+
 ### <a name="help-for-the-extract-action"></a>有关 Extract 操作的帮助
 
 |参数|缩写|值|说明|
@@ -206,6 +228,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|指定在发布到数据库时，是将忽略还是将更新 T-SQL 语句之间的分号差异。|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新表选项方面的差异。|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新表分区选项方面的差异。  此选项仅适用于 Azure Synapse Analytics 数据仓库数据库。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新用户设置对象方面的差异。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|指定在发布到数据库时，是将忽略还是将更新空白方面的差异。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|指定在进行发布时，是将忽略还是将更新 CHECK 约束的 WITH NOCHECK 子句值方面的差异。|
@@ -433,6 +456,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|指定在发布到数据库时，是将忽略还是将更新 T-SQL 语句之间的分号差异。| 
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新表选项方面的差异。| 
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新表分区选项方面的差异。  此选项仅适用于 Azure Synapse Analytics 数据仓库数据库。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新用户设置对象方面的差异。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|指定在发布到数据库时，是将忽略还是将更新空白方面的差异。 |
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新 CHECK 约束的 WITH NOCHECK 子句值方面的差异。| 
@@ -597,6 +621,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|指定在发布到数据库时，是将忽略还是将更新 T-SQL 语句之间的分号差异。|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新表选项方面的差异。|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新表分区选项方面的差异。  此选项仅适用于 Azure Synapse Analytics 数据仓库数据库。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新用户设置对象方面的差异。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|指定在发布到数据库时，是将忽略还是将更新空白方面的差异。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|指定在进行发布时，是将忽略还是将更新 CHECK 约束的 WITH NOCHECK 子句值方面的差异。|

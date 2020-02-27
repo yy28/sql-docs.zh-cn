@@ -1,5 +1,5 @@
 ---
-title: 添加数据绑定图像（报表生成器和 SSRS）| Microsoft Docs
+title: 添加数据绑定图像（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e9ec6a57c73367439953a9172ec038439f0f92ac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1ab11e39d435a2a4f965c4a6cb5cf367ae2b4d84
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582256"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080759"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>添加数据绑定图像（报表生成器和 SSRS）
   报表可以包括对存储在数据库中的图像的引用。 此类图像称为“数据绑定图像”  。 例如，在产品列表中产品名称旁边显示的图片就是数据绑定图像。  

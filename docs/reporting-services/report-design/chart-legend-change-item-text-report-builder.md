@@ -1,5 +1,5 @@
 ---
-title: 更改图例项的文本（报表生成器和 SSRS）| Microsoft Docs
+title: 更改图例项的文本（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5f592abd3f634865a432b31d2aba4764187b0d86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581690"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078698"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>图表图例 - 更改项文本（报表生成器）
   在图表的“值”区域中放入一个字段时，会自动生成一个包含此字段名称的图例项。 对于除形状图以外的其他图表，每个图例项会连接到图表上的单个序列，而对于形状图，图例会连接到单个数据点而不是单个序列。  

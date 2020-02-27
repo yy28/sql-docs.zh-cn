@@ -1,5 +1,5 @@
 ---
-title: 导出到 CSV 文件（报表生成器和 SSRS）| Microsoft Docs
+title: 导出到 CSV 文件（报表生成器）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581210"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078374"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
   逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现分页报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。  

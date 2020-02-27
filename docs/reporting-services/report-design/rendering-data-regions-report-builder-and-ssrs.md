@@ -1,5 +1,5 @@
 ---
-title: 呈现数据区域（报表生成器和 SSRS）| Microsoft Docs
+title: 呈现数据区域（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 368b17a6ffe7355569a9d60509a9a2db61931fee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 06eb5ee05e045a2cb6e902030714ebb2f824becc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576433"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077015"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>呈现数据区域（报表生成器和 SSRS）
   除了适用于所有报表项的常规呈现行为外，数据区域还要遵循其他一些分页和呈现行为。 特定于数据区域的呈现规则包括数据区域如何增长，如何呈现特殊的单元（如角单元或标题单元）以及如何呈现从右向左读的数据区域。 本主题将介绍如何呈现数据区域的各个部分。  

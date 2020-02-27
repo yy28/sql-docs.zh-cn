@@ -1,5 +1,5 @@
 ---
-title: 指定序列的图表区域（报表生成器和 SSRS）| Microsoft Docs
+title: 指定序列的图表区域（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ef1e735b69e0547f7a9ca9a9d64bf9423a6068e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 32f16dd226167c180de81a456a6493f1c717b481
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578528"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080954"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，“图表”  为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个“图表区域”  。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的多个图表区的概念。  

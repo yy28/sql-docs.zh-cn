@@ -1,5 +1,5 @@
 ---
-title: 表、矩阵和列表（报表生成器和 SSRS）| Microsoft Docs
+title: 表、矩阵和列表（报表生成器）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -33,12 +33,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a326ce7ea6701b1fe55f76861bced6c3c86174d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574679"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080881"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>表、矩阵和列表（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中，表、矩阵和列表是在以行和列形式组织的单元中显示分页报表数据的数据区域  。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、矩阵和列表常常统称为 Tablix 数据区域  。  

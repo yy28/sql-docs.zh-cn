@@ -1,5 +1,5 @@
 ---
-title: 折线图（报表生成器和 SSRS）| Microsoft Docs
+title: 折线图（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 20e9e6626bbd08eebfe69a04f63ed882979b34d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b0e1308f7dfac834e6c50062a199403023088a59
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580161"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081968"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折线图（报表生成器和 SSRS）
   折线图将序列显示为一组由单个线条连接的点。 折线图用于表示在一段连续时间内发生的大量数据。 有关如何向折线图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

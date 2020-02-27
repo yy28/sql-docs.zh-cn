@@ -11,12 +11,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 76ffaac48e8af454e887fd4fd30540eed4c4b453
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910930"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173521"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>适用于 Windows 上 SQL Server 的 ODBC 的发行说明
 

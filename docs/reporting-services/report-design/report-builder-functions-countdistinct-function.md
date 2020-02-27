@@ -1,5 +1,5 @@
 ---
-title: CountDistinct 函数（报表生成器和 SSRS）| Microsoft Docs
+title: CountDistinct 函数（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e7e7f39553d538359395470fca995122a006659
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ff5931ea437a2b91bf2232472fbf5780153f38cb
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579617"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081281"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>报表生成器函数 - CountDistinct 函数
   返回在给定作用域上下文中计算的，由表达式指定的所有非重复的非 Null 值计数。  

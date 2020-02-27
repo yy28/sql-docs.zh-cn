@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
+ms.sourcegitcommit: acfdeacc80c112992c1201748e0b5c59a473032d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831765"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977541"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务在 Python 中创建预测模型并对其进行评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ ms.locfileid: "76831765"
 
 在本练习中，你了解了如何创建专用于不同任务的存储过程，其中每个存储过程都使用了系统存储过程 `sp_execute_external_script` 来启动 Python 进程。 Python 进程的输入作为参数传递到 `sp_execute_external`。 Python 脚本本身和 SQL Server 数据库中的数据变量都作为输入进行传递。
 
-通常，只应计划将 SSMS 与经过优化的 Python 代码结合使用，或与返回基于行的输出的简单 Python 代码结合使用。 SSMS 作为工具支持 T-SQL 等查询语言并返回平展行集。 如果代码生成散点图或直方图等可视化输出，则需要可以呈现图像的工具或最终用户应用程序。
+通常，只应计划将 SSMS 与经过优化的 Python 代码结合使用，或与返回基于行的输出的简单 Python 代码结合使用。 SSMS 作为工具支持 T-SQL 等查询语言并返回平展行集。 如果代码生成散点图或直方图等可视化输出，则需要可在存储过程之外呈现图像的独立工具或最终用户应用程序。
 
 对于一些习惯了编写完全包含型脚本（可处理各种操作）的 Python 开发人员而言，可能没必要将任务组织到独立的过程中。 但定型和评分的用例不同。 可通过分离任务，将每个任务置于不同的计划，并限定每个操作的权限范围。
 

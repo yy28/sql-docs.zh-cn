@@ -1,5 +1,5 @@
 ---
-title: 设置仪表上指针的格式（报表生成器和 SSRS）| Microsoft Docs
+title: 设置仪表指针的格式（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 541cc806804dc2095d7a33c33c449d6cf8768608
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575637"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079770"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上指针的格式（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表指针指示仪表的当前值。   

@@ -1,5 +1,5 @@
 ---
-title: 矩形和线条（报表生成器和 SSRS）| Microsoft Docs
+title: 矩形和线条（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 308091c5aeb62c396c380c89fcf82e04b9658ad9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8d4448fba4e9faf1c3d51bb6233723385d111230
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576657"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082337"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>矩形和线条（报表生成器和 SSRS）
   使用矩形和线条可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中创建各种视觉效果。 可在“开始”选项卡的“边框”部分设置这些报表项的显示属性，还可使用“属性”窗格设置其他属性。 可以为矩形添加类似背景色或图像、工具提示或书签这样的功能。  

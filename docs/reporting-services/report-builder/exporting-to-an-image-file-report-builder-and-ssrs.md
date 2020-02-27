@@ -1,5 +1,5 @@
 ---
-title: 导出到图像文件（报表生成器和 SSRS）| Microsoft Docs
+title: 导出到图像文件（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25b7f94d9e8fcb1fa7ae2c3034286515e51c7fdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2393769b4d6ca1676833b4e208e7f09dfcd444df
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581219"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081377"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>导出到图像文件（报表生成器和 SSRS）
   图像呈现扩展插件可以将分页报表呈现为位图或图元文件。 默认情况下，图像呈现扩展插件将生成报表的 TIFF 文件，您可以按多页形式查看此类文件。 客户端收到图像时，可以在图像查看器中显示图像，并可以打印图像。 本主题提供了特定于图像呈现器的信息并说明了呈现规则的例外情况。  
   
- 图像呈现扩展插件可以生成 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]支持的以下任意格式的文件：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。 对于 TIFF 格式，主输出流的文件名为 *ReportName*.tif。 对于其他按照每个文件一页的方式进行呈现的所有格式，文件名为 *ReportName_Page.ext* ，其中， *ext* 是所选格式的文件扩展名。 若要以另一种受图像支持的格式生成文件，请在 **OutputFormatDeviceInfo** 设置中指定上面列出的任意字符串。  
+ 图像呈现扩展插件可以采用 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] 支持的任何格式生成文件：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。 对于 TIFF 格式，主输出流的文件名为 *ReportName*.tif。 对于其他按照每个文件一页的方式进行呈现的所有格式，文件名为 *ReportName_Page.ext* ，其中， *ext* 是所选格式的文件扩展名。 若要以另一种受图像支持的格式生成文件，请在 **OutputFormatDeviceInfo** 设置中指定上面列出的任意字符串。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

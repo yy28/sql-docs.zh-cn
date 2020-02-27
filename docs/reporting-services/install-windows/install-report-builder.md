@@ -1,29 +1,35 @@
 ---
 title: 安装报表生成器 | Microsoft Docs
 description: 报表生成器是一个独立应用，由你或管理员安装到你的电脑上。
-ms.date: 01/03/2020
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70cf4c586f6fe38bd36ca99cd1ed36026969a446
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776440"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971387"
 ---
 # <a name="install-report-builder"></a>安装报表生成器
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一个独立应用，由你或管理员安装到你的电脑上。 可以从 Microsoft 下载中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点进行安装。  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一个独立应用，由你或管理员安装到你的电脑上。 可以从 Microsoft 下载中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点进行安装。  
 
 > [!NOTE]
-> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
-  
+> 想要查找 Power BI 报表生成器的安装信息？ 转到“下载中心”上的 [Microsoft Power BI 报表生成器](https://www.microsoft.com/download/details.aspx?id=58158)页面。 
+
  通常，由管理员安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、授予从 Web 门户下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的权限，以及管理文件夹与对报表、报表部件和保存到报表服务器的共享数据集的权限。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理的详细信息，请参阅 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
 ## <a name="install-ssrbnoversion-from--a--web-portal-or-sharepoint-library"></a>从 Web 门户或 SharePoint 库安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 
+
+> [!NOTE]
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
  可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。 有关信息，请参阅 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
 

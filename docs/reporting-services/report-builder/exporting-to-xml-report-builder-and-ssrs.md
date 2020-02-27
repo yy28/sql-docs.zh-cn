@@ -1,5 +1,5 @@
 ---
-title: 导出到 XML（报表生成器和 SSRS）| Microsoft Docs
+title: 导出到 XML（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580759"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079309"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>导出到 XML（报表生成器和 SSRS）
   XML 呈现扩展插件可以按 XML 格式返回分页报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。  

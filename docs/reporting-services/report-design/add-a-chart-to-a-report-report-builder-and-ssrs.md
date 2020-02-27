@@ -1,5 +1,5 @@
 ---
-title: 向报表添加图表（报表生成器和 SSRS）| Microsoft Docs
+title: 向报表添加图表（报表生成器）|Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: df6236249bc494eb5235439b273889a15b982582
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 986871918463e09fe0aec138c75487694faee258
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571631"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080797"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>向报表添加图表（报表生成器和 SSRS）
   如果要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中以可视化格式汇总数据，请使用图表数据区域。 为您要呈现的数据类型选择一种适当的图表类型非常重要。 这将影响数据以图表形式呈现时对数据进行解释的好坏程度。 有关详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
  将图表数据区域添加到报表中的最简单方式是运行新建图表向导。 该向导提供柱形图、折线图、饼图、条形图和面积图。 对于这些图表类型和其他图表类型，还可以手动添加图表。  
   
- 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击图表可以显示“图表数据”窗格，并且它具有三个区域（类别组、序列组和值）。  
+ 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击图表以显示“图表数据”窗格及其三个区域：“序列组”、“类别组”和“值”。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

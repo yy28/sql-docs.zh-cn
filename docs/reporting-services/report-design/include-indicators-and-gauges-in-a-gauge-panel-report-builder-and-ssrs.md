@@ -1,5 +1,5 @@
 ---
-title: 在仪表面板中包括指示器和仪表（报表生成器和 SSRS）| Microsoft Docs
+title: 在仪表面板中包括指示器和仪表（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3c53c5c034fcefb1da13c5830679863f9d7d9ae9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d9f5cf2619ea26c56f6511b829b5da524776602
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580201"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082040"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>在仪表面板中包括指示器和仪表（报表生成器和 SSRS）
   仪表面板是包含一个或多个仪表和指示器的顶级容器。 指示器可以嵌入在仪表中或在仪表面板放置于仪表旁。  

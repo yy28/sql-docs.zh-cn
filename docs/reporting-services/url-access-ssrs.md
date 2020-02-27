@@ -1,5 +1,5 @@
 ---
-title: URL 访问 (SSRS) | Microsoft Docs
+title: URL 访问 | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574251"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078936"
 ---
 # <a name="url-access-ssrs"></a>URL 访问 (SSRS)
   通过 SQL Server Reporting Services (SSRS) 中报表服务器的 URL 访问，您可以通过 URL 请求将命令发送到报表服务器。 例如，您可以自定义报表在本机模式报表服务器上或 SharePoint 库中的呈现。 您可能已经使用了一组特定的报表参数值查看了报表，或者可能正在查看报表中感兴趣的特定页。 您可以使用预定义的 URL 访问参数在 URL 中封装这些信息。 您可以通过为呈现格式嵌入参数，或者为报表查看器的外观嵌入参数，进一步自定义报表服务器处理报表的方式。 然后，您可以将此 URL 直接粘贴到电子邮件或网页中，让他人在浏览器中采用相同的方式访问您的报表。  
@@ -102,7 +102,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  与要使用的参数值相对应的 URL 文本。  
   
- **注意：** 有关可用 URL 访问参数的列表，请参阅 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)。 有关在 URL 中传递报表参数的示例，请参阅 [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)。  
+ **注意：** 有关可用 URL 访问参数的列表，请参阅 [URL 访问参数参考](../reporting-services/url-access-parameter-reference.md)。 有关在 URL 中传递报表参数的示例，请参阅 [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -1,7 +1,7 @@
 ---
 title: 部署 JDBC 驱动程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049837"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004678"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049837"
 >  有关部署 Java 应用程序的一般信息，请参阅 Java 网站。  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>在 Windows 系统中部署 JDBC 驱动程序  
- 在 Windows 操作系统上部署 JDBC 驱动程序时，必须使用安装包的可执行 zip 文件版本，其名称通常为 `sqljdbc_<version>_<language>.exe`。  
-  
- 若要无提示地运行可执行 zip 文件，必须在命令行上或批处理文件中使用 `/auto` 命令行选项，如下所示：  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  使用 `/auto` 选项时，执行的并不是真正的无提示安装，因为 WinZip 对话框仍会出现在用户屏幕上。 然而，您无需与其进行交互，解压缩操作完成后，它会立即关闭。  
-  
+ 在 Windows 操作系统上部署 JDBC 驱动程序时，必须解压已压缩的安装包，它的名称通常为 `sqljdbc_<version>_<language>.zip`。
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>在 UNIX 系统中部署驱动程序 
  在 UNIX 操作系统上部署 JDBC 驱动程序时，必须使用安装包的 gzip 文件版本，其名称通常为 `sqljdbc_<version>_<language>.tar.gz`。  
   
@@ -54,7 +47,7 @@ ms.locfileid: "73049837"
 
 ## <a name="legalities-of-driver-redistribution"></a>驱动程序重新分发的合法性
 
-JDBC 驱动程序版本 6.0、6.2、6.4 和 7.0 是可再发行版本。 查看许可协议中的“可分发代码”子句  。
+JDBC 驱动程序版本 6.0、6.2、6.4、7.0、7.2、7.4 和 8.2 是可再发行版本。 查看许可协议中的“可分发代码”子句  。
 
 JDBC 驱动程序版本 4.x 是旧的过时版本。 对 4.x 的支持已在 2018 年之前过期。
 

@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 48f3b3433d0ca2f4daf08048228989598c5cf36a
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71149932"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971436"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>什么是 SQL Server 2016 R Services？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,12 @@ R Services 使用扩展性框架在 SQL Server 中运行 R 脚本。 详细了�
 + 最常见的方法是使用 T-SQL 存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
 + 还可以使用首选的 R 客户端并编写将执行（称为“远程计算上下文”）推送到远程 SQL Server 的脚本  。 有关详细信息，请参阅如何[设置数据科学客户端 R 开发](../r/set-up-a-data-science-client.md)。
+
+<a name="version"></a>
+
+## <a name="r-version"></a>R 版本
+
+R 版本3.2.2 包含在 SQL Server 2016 R Services 中。 对于较新版本的 R，请使用[用于 SQL Server 2017 及更高版本的机器学习服务](../what-is-sql-server-machine-learning.md)。
 
 <a name="packages"></a>
 

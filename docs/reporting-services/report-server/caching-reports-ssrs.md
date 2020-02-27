@@ -1,5 +1,5 @@
 ---
-title: 缓存报表 (SSRS) | Microsoft Docs
+title: 缓存报表 | Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e94ed2c05d3c23585abde1f2452f491be089e84
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66175589"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082556"
 ---
 # <a name="caching-reports-ssrs"></a>缓存报表 (SSRS)
   报表服务器可以缓存已处理报表的副本，并在用户打开此报表时返回该副本。 对用户而言，可指示报表为缓存副本的唯一证据是报表的运行日期和时间。 如果日期或时间不是当前的日期或时间，并且报表不是快照，则说明该报表是从缓存中检索的。  

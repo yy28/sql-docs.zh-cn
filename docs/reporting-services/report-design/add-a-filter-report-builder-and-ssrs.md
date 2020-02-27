@@ -1,5 +1,5 @@
 ---
-title: 添加筛选器（报表生成器和 SSRS）| Microsoft Docs
+title: 添加筛选器（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574841"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080754"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>添加筛选器（报表生成器和 SSRS）
   如果您希望在计算或显示时包含或排除特定值，可向数据集、数据区域或组添加筛选器。 在运行时应用筛选器的顺序为：先对数据集，再对数据区域，最后对组，并按照组层次结构自上而下的顺序。 在表、矩阵或列表中，对行组、列组和相邻组分别应用各自的筛选器。 在图表中，对类别组和序列组分别应用各自的筛选器。  
@@ -31,7 +31,7 @@ ms.locfileid: "65574841"
   
 1.  在 **“设计”** 视图中打开报表。  
   
-2.  在设计图面上选择数据区域，然后右键单击“_data region>属性”\<_  。 对于仪表，选择 **“仪表面板属性”** 。 此时将打开“_data region>属性”\<_  对话框。  
+2.  在设计图面上选择数据区域，然后右键单击“\<data region>属性”   。 对于仪表，选择 **“仪表面板属性”** 。 此时将打开“\<data region>属性”   对话框。  
   
     > [!NOTE]  
     >  在 Tablix 数据区域上，右键单击角部单元格或行或列的控点，然后单击“Tablix 属性”  。  

@@ -1,5 +1,5 @@
 ---
-title: 显示页码或其他报表属性（报表生成器和 SSRS）| Microsoft Docs
+title: 显示页码或其他报表属性（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580885"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080488"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
   可以方便地向报表的页眉或页脚添加页码、报表标题、文件名和其他报表属性。 这些属性在“报表数据”窗格的“内置字段”文件夹中存储为字段：  
@@ -60,7 +60,7 @@ ms.locfileid: "65580885"
   
 1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”  。  
   
-     “为以下项设置表达式: 值”文本框包含表达式 =Globals!PageNumber  。  
+     “为以下项设置表达式: Value”  文本框包含表达式 =Globals!PageNumber。  
   
 2.  将光标放在 = 号后，然后键入 "Page " &  。  
   

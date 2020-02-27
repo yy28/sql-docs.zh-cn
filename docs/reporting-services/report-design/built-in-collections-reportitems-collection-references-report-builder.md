@@ -1,5 +1,5 @@
 ---
-title: ReportItems 集合引用（报表生成器和 SSRS）| Microsoft Docs
+title: ReportItems 集合参考（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24a50de92a2b182295abc926c98358fa56e2f379
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581768"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081887"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>内置集合 - ReportItems 集合引用（报表生成器）
   **ReportItems** 内置集合是来自报表项（如报表设计图面上的数据区域行或文本框）的文本框集合。 **ReportItems** 集合包括位于表头、表尾或表体的当前作用域中的文本框。 此集合在运行时由报表处理器和报表呈现器确定。 用户查看报表页面时，如果报表处理器连续组合报表数据和报表项布局元素，则当前作用域将随之变化。 可以使用 **ReportItems** 内置集合在每个页面中生成显示首项和尾项的字典样式页面页眉。  
@@ -22,7 +22,7 @@ ms.locfileid: "65581768"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>使用 ReportItems 值属性  
- **ReportItems** 集合内的项只有一个属性：Value。 **ReportItems** 项的值可用于显示或计算报表中其他字段的数据。 若要访问当前文本框的值，可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 内置全局 Me.Value 或仅使用 Value。 在报表函数（如 First）和聚合函数中使用完全限定语法。  
+ ReportItems  集合内的项只有一个属性：Value。 **ReportItems** 项的值可用于显示或计算报表中其他字段的数据。 若要访问当前文本框的值，可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 内置全局 Me.Value 或仅使用 Value。 在报表函数（如 First）和聚合函数中使用完全限定语法。  
   
  例如：  
   

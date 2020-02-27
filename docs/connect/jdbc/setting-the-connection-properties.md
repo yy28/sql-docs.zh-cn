@@ -1,7 +1,7 @@
 ---
 title: 设置连接属性 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e32a0fffd60fe34bf0431e6060846387ff079952
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 80c4e518f8aed48effded7573a8567600274ab2b
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027759"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004578"
 ---
 # <a name="setting-the-connection-properties"></a>设置连接属性
 
@@ -51,7 +51,7 @@ ms.locfileid: "69027759"
 | accessToken<br/><br/>String<br/><br/>Null | 借助此属性，可以使用访问令牌连接到 SQL 数据库。 无法使用连接 URL 设置 accessToken  。 |
 | applicationIntent<br/><br/>String<br/><br/>ReadWrite | 连接到服务器时声明应用程序工作负荷类型。 <br/><br/>可能的值为 ReadOnly 和 ReadWrite   。 <br/><br/>有关详细信息，请参阅 [JDBC 驱动程序对高可用性和灾难恢复的支持](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)。 |
 | applicationName<br/><br/>String<br/>[&lt;=128 char]<br/><br/>Null | 如果未提供名称，则使用应用程序名称或“[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]”。<br/><br/>用于在各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分析和日志记录工具中标识特定的应用程序。 |
-| 身份验证<br/><br/>String<br/><br/>NotSpecified | 自 Microsoft JDBC Driver 6.0 for SQL Server 起，此可选属性指明要使用哪个 SQL 身份验证方法进行连接。 可取值为 ActiveDirectoryIntegrated  、ActiveDirectoryPassword  、ActiveDirectoryMSI  、SqlPassword  和 NotSpecified  （默认值）。<br/><br/> 借助 ActiveDirectoryIntegrated  ，可以使用集成 Windows 身份验证连接到 SQL 数据库。<br/><br/> 借助 ActiveDirectoryPassword  ，可以使用 Azure AD 主体名称和密码连接到 SQL 数据库。<br/><br/> 借助 ActiveDirectoryMSI  ，可以使用托管服务标识 (MSI) 身份验证从 Azure 资源（例如 Azure 虚拟机、应用服务或函数应用）内部连接到 SQL 数据库。 <br><br>使用 ActiveDirectoryMSI  身份验证模式时，驱动程序支持以下两种类型的托管标识： <br> 1._系统分配的托管标识_：默认用于获取 accessToken  。 <br> 2._用户分配的托管标识_：用于获取 accessToken  ，前提是托管服务标识 (MSI) 的客户端 ID 与 msiClientId  连接属性一起指定。<br/><br/> 借助 SqlPassword  ，可以使用 userName  /user  和 password  属性连接到 SQL Server。<br/><br/> 如果不需要这些身份验证方法，请使用 NotSpecified  。<br/><br/> **重要提示：** 如果 authentication 设置为 ActiveDirectoryIntegrated，必须安装以下两个库：SQLJDBC_AUTH.DLL  （位于 JDBC 驱动程序包中）和用于 SQL Server 的 Azure Active Directory 身份验证库 (ADALSQL.DLL  )。可以从下载中心中的[用于 Microsoft SQL Server 的 Microsoft Active Directory 身份验证库](https://www.microsoft.com/download/details.aspx?id=48742)下载不同的语言版本（对于 x86 和 amd64）。 JDBC 驱动程序只支持 ADALSQL.DLL 版本 1.0.2028.318 及更高版本  。<br/><br/> **注意：** 如果身份验证属性设置为除 NotSpecified  以外的任何值，驱动程序默认使用安全套接字层 (SSL) 加密。<br/><br/> 若要了解如何配置 Azure Active Directory 身份验证，请访问[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 |
+| 身份验证<br/><br/>String<br/><br/>NotSpecified | 自 Microsoft JDBC Driver 6.0 for SQL Server 起，此可选属性指明要使用哪个 SQL 身份验证方法进行连接。 可取值为 ActiveDirectoryIntegrated  、ActiveDirectoryPassword  、ActiveDirectoryMSI  、SqlPassword  和 NotSpecified  （默认值）。<br/><br/> 借助 ActiveDirectoryIntegrated  ，可以使用集成 Windows 身份验证连接到 SQL 数据库。<br/><br/> 借助 ActiveDirectoryPassword  ，可以使用 Azure AD 主体名称和密码连接到 SQL 数据库。<br/><br/> 借助 ActiveDirectoryMSI  ，可以使用托管服务标识 (MSI) 身份验证从 Azure 资源（例如 Azure 虚拟机、应用服务或函数应用）内部连接到 SQL 数据库。 <br><br>使用 ActiveDirectoryMSI  身份验证模式时，驱动程序支持以下两种类型的托管标识： <br> 1._系统分配的托管标识_：默认用于获取 accessToken  。 <br> 2._用户分配的托管标识_：用于获取 accessToken  ，前提是托管服务标识 (MSI) 的客户端 ID 与 msiClientId  连接属性一起指定。<br/><br/> 借助 SqlPassword  ，可以使用 userName  /user  和 password  属性连接到 SQL Server。<br/><br/> 如果不需要这些身份验证方法，请使用 NotSpecified  。<br/><br/> **重要提示：** 如果将身份验证设置为 ActiveDirectoryIntegrated，则必须安装以下两个库：mssql-jdbc_auth-\<version>-\<arch>.dll  （在 JDBC 驱动程序包中可用）和用于 SQL Server 的 Azure Active Directory 身份验证库 (ADALSQL.DLL  )。可以从 [用于 Microsoft SQL Server 的 Microsoft Active Directory 身份验证库](https://www.microsoft.com/download/details.aspx?id=48742)的下载中心获取以不同语言提供的这两个库（对于 x86 和 amd64）。 JDBC 驱动程序只支持 ADALSQL.DLL 版本 1.0.2028.318 及更高版本  。<br/><br/> **注意：** 如果身份验证属性设置为除 NotSpecified  以外的任何值，驱动程序默认使用安全套接字层 (SSL) 加密。<br/><br/> 若要了解如何配置 Azure Active Directory 身份验证，请访问[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 |
 | authenticationScheme<br/><br/>String<br/><br/>NativeAuthentication | 指示您的应用程序要使用哪一种集成安全性。 可取值为 JavaKerberos  、NTLM  和 NativeAuthentication  （默认值）。<br/><br/> 使用 authenticationScheme=JavaKerberos  时，必须在 serverName  或 serverSpn  属性中指定完全限定的域名 (FQDN)。 否则，将出现错误（Kerberos 数据库中找不到服务器）。<br/><br/> 若要详细了解如何使用 authenticationScheme=JavaKerberos  ，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 <br/><br/> 使用 authenticationScheme=NTLM  时，必须在 domain  或 domainName  属性中指定使用 NTLM 进行身份验证的 Windows 域，并在 user  或 userName  和 password  属性中指定 Windows 凭据。 否则，就会出错（必须指定连接属性）。  |
 | cancelQueryTimeout<br/><br/>int<br/><br/>-1 | 自 Microsoft JDBC Driver 6.4 for SQL Server 起，此属性可用于取消连接上设置的 queryTimeout  。 如果与 SQL Server 的 TCP 连接遭静默删除，查询执行就会挂起，但不会抛出异常。 只有在连接上也设置了“queryTimeout”时，此属性才适用。 <br/><br/>驱动程序等待 cancelQueryTimeout   + queryTimeout  总秒数，以断开连接并关闭通道。 <br/><br/>此属性的默认值为 -1，行为是无限期等待。 |
 | columnEncryptionSetting<br/><br/>String<br/>["Enabled" &#124; "Disabled"]<br/><br/>已禁用 | 从 Microsoft JDBC Driver 6.0 for SQL Server 开始，设置为“已启用”以使用 Always Encrypted (AE) 功能。 启用 AE后，JDBC 驱动程序以透明方式加密和解密存储在 SQL Server 中的加密数据库中的敏感数据。<br/><br/> 若要详细了解 columnEncryptionSetting  ，请参阅[结合使用 Always Encrypted 和 JDBC 驱动程序](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。<br/><br/> **注意：** SQL Server 2016 或更高版本随附 Always Encrypted。 |
@@ -59,6 +59,8 @@ ms.locfileid: "69027759"
 | domainName,<br/>域<br/><br/>String<br/>Null | 要使用 NTLM 进行身份验证的 Windows 域。 |
 | disableStatementPooling<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | 指明否应使用语句池的标志。 |
 | enablePrepareOnFirst...<br/>PreparedStatementCall<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | _enablePrepareOnFirstPreparedStatementCall_<br/><br/> 设置为“true”可以启用创建准备的语句句柄，创建方法为在第一次执行准备的语句时调用 <code>sp_prepexec</code>。 <br/><br/>设置为“false”可以将第一次执行准备的语句更改为调用 <code>sp_executesql</code> 且不准备语句；发生第二次执行后，它随即调用 <code>sp_prepexec</code> 来设置准备的语句句柄。 |
+| enclaveAttestationUrl<br/><br/>String<br/><br/>Null | 从 Microsoft JDBC Driver 8.2 for SQL Server 开始，此可选属性指示要用于具有安全 Enclave 的 Always Encrypted 的证明服务终结点 URL。<br/><br/>有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)。 |
+| enclaveAttestationProtocol<br/><br/>String<br/><br/>Null | 从 Microsoft JDBC Driver 8.2 for SQL Server 开始，此可选属性指示用于具有安全 Enclave 的 Always Encrypted 的证明协议。 目前，此字段唯一支持的值是 HGS  。<br/><br/>有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)。 |
 | encrypt<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | 如果设置为“true”，则指定在服务器安装了证书的情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为在客户端与服务器之间发送的所有数据使用安全套接字层 (SSL) 加密。 默认值为“false”。<br/><br/> 自 Microsoft JDBC Driver 6.0 for SQL Server 起，新增连接设置“authentication”，它默认使用 SSL 加密。 <br/><br/>有关详细信息，请参阅“authentication”属性。 |
 | failoverPartner<br/><br/>String<br/><br/>Null | 在数据库镜像配置中使用的故障转移服务器名称。 与主服务器进行初始连接时若发生失败，则会使用此属性；建立初始连接后，将忽略此属性。 必须与 databaseName 属性结合使用。<br/><br/> **注意：** 驱动程序不支持在连接字符串的 failoverPartner 属性中指定故障转移伙伴实例的服务器实例端口号。 但是，支持在同一连接字符串中指定主体服务器实例的 serverName、instanceName 和 portNumber 属性以及故障转移伙伴实例的 failoverPartner 属性。<br/><br/> 如果在 Server 连接属性中指定虚拟机名称，则无法使用数据库镜像  。 有关详细信息，请参阅 [JDBC 驱动程序对高可用性和灾难恢复的支持](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) |
 | fips<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>“false” | 对于启用了 FIPS 的 JVM，此属性应为 true  。 |

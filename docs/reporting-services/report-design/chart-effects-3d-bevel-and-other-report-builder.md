@@ -1,5 +1,5 @@
 ---
-title: 图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）| Microsoft Docs
+title: 图表中的三维效果、凹凸效果和其他效果（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d6f854eff07947e16a929acec1c20011dcf0b4b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8a1c6dd7adfd9450ae56b9cc7718d454f5d68426
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581699"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082409"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>图表效果 - 三维效果、凹凸效果和其他效果（报表生成器）
   三维 (3D) 效果可以使 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的图表更具深度感并增强视觉效果。 例如，若要强调分离型饼图的某个特定切片，可以旋转并更改图表的透视，以便人们可以首先注意到该切片。 将三维效果应用于图表时，将会禁用所有渐变颜色和阴影类型。  

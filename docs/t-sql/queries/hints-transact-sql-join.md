@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18f91c30715dbf44058a204bd17f9ab1e6e393c6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67902015"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255981"
 ---
 # <a name="hints-transact-sql---join"></a>提示 (Transact-SQL) - 联接
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "67902015"
   
 ## <a name="arguments"></a>参数  
  LOOP | HASH | MERGE  
- 指定查询中的联接应使用循环、哈希或合并。 使用 LOOP |HASH | MERGE JOIN 在两个表之间强制执行特定联接。 不能同时将 LOOP 与 RIGHT（或 FULL）指定为联接类型。  
+ 指定查询中的联接应使用循环、哈希或合并。 使用 LOOP |HASH | MERGE JOIN 在两个表之间强制执行特定联接。 不能同时将 LOOP 与 RIGHT（或 FULL）指定为联接类型。 有关详细信息，请参阅[联接](../../relational-databases/performance/joins.md)。
   
  REMOTE  
  指定联接操作在右表处执行。 这在左表是本地表而右表是远程表的情况下很有用。 只在左表的行数少于右表行数时才能使用 REMOTE。  

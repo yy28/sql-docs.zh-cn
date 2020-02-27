@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831607"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256871"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -71,7 +71,7 @@ kubectl config view
 
 ## <a name="ensure-you-have-storage-configured"></a>确保已配置存储
 
-使大多数大数据群集部署具有永久存储。 此时，需要在在部署 BDC 之前制定计划，确定如何在 Kubernetes 群集上提供永久存储。
+大多数大数据群集部署应具有永久存储。 此时，需要在在部署 BDC 之前制定计划，确定如何在 Kubernetes 群集上提供永久存储。
 
 如果在 AKS 中进行部署，则无需进行任何存储设置。 AKS 通过动态预配提供内置的存储类。 可以在部署配置文件中自定义存储类（`default` 或 `managed-premium`）。 内置配置文件使用 `default` 存储类。 如果要在使用 `kubeadm` 部署的 Kubernetes 群集上进行部署，则需要确保有足够的存储来存储所需规模的群集，并对其进行配置以供使用。 如果想要自定义存储的使用方式，应该在继续操作之前执行此操作。 请参阅 [Kubernetes 上的 SQL Server 大数据群集的数据暂留](concept-data-persistence.md)。
 

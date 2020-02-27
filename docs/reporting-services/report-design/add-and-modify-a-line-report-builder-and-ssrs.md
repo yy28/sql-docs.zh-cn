@@ -1,5 +1,5 @@
 ---
-title: 添加和修改线条（报表生成器和 SSRS）| Microsoft Docs
+title: 添加和修改线条（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b58cb9cd7b4fcb13454b1a8d7cebcf380987fcbd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e188a075237c7cea2c05bb8bc0a5dd6f1496f39e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582097"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080634"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>添加和修改线条（报表生成器和 SSRS）
   如果希望图形元素分割报表的各部分，则可以在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中添加线条。 可以通过编辑线条属性（如颜色或样式）自定义线条的外观。 例如，您可能希望将公司颜色合并到报表中。    

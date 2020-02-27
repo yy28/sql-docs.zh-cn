@@ -1,5 +1,5 @@
 ---
-title: 添加矩形或容器（报表生成器和 SSRS）| Microsoft Docs
+title: 添加矩形或容器（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2079eeb5cb871b5006ac4b2c45b60e9c8a3a3c97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fc7cba2147dbcc781a5764173bbd09699ab74385
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574772"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080686"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>添加矩形或容器（报表生成器和 SSRS）
   如果希望使用图形元素分隔报表的各部分、强调某些报表区或为一个或多个报表项提供背景，则可向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中添加矩形。 矩形还可以用作容器，以控制数据区域在报表中的呈现方式。 可以通过编辑矩形属性（如背景和边框颜色）自定义矩形的外观。 有关使用矩形作为容器的详细信息，请参阅[矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)和[在矩阵和图表中显示相同数据（报表生成器）](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)。    
@@ -45,7 +45,7 @@ ms.locfileid: "65574772"
 2.  单击 **“边框”** 按钮旁的箭头以确定要更改矩形的哪些边。    
     
     > [!NOTE]    
-    >  如果将线条样式设置为“双线”并且线条宽度为 1 1/2 pt 或更窄，则在报表生成器、报表设计器或  **Web 门户中运行报表时，线条可能不会显示为双线**[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
+    >  如果将线条样式设置为“双线”并且线条宽度为 1 1/2 pt 或更窄，则在报表生成器、报表设计器或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中运行报表时，线条可能不会显示为双线  。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
     
 ## <a name="see-also"></a>另请参阅    
  [矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)     

@@ -1,5 +1,5 @@
 ---
-title: SQL Azure 连接类型 (SSRS) | Microsoft Docs
+title: SQL Azure 连接类型 | Microsoft Docs
 description: SQL Azure 连接数据扩展插件支持多值参数、服务器聚合，以及与连接字符串分开管理的凭据。
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244573"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081761"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
 

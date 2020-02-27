@@ -1,5 +1,5 @@
 ---
-title: 向报表添加代码 (SSRS) | Microsoft Docs
+title: 向报表添加代码 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d66cb9fa3fdb3bdee5eb0f4fefbc282a9841f9a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd2f5d60bacc29a5b7efcf1abb8c1d44429d93f6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582027"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081667"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>向报表添加代码 (SSRS)
   您可以在任何表达式中调用自己的自定义代码。 可以通过下列两种方式提供代码：  

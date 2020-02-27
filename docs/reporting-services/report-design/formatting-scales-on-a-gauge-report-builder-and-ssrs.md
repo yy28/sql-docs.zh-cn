@@ -1,5 +1,5 @@
 ---
-title: 设置仪表上刻度的格式（报表生成器和 SSRS）| Microsoft Docs
+title: 设置仪表上刻度的格式（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7044e079ddf6aa9ce322a742a78aa83059efca6c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580285"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079634"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上刻度的格式（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表刻度是仪表上显示的具有上限和下限的数字范围。 为了准确显示仪表指针指向的读数，仪表刻度通常包含仪表标签和刻度线。 仪表刻度通常与一个或多个仪表指针相关联。 同一个仪表中可以具有多个刻度。  

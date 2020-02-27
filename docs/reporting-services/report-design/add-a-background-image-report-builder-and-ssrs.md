@@ -1,5 +1,5 @@
 ---
-title: 添加背景图像（报表生成器和 SSRS）| Microsoft Docs
+title: 添加背景图像（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5472406acc011ea654ff4eb73bc25c73c0475e04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0c8b53c0e259a9a0c99ae1bd06cc9cab9cc14355
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575109"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081338"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>添加背景图像（报表生成器和 SSRS）
   您可以向报表项（如矩形、文本框、列表、矩阵、表和某些图表部件）或报表区域（如页眉、页脚或表体）添加背景图像。 在“属性”窗格中，可以为报表设计图面上显示 **BackgroundImage** 的任何所选项定义背景图像。 与其他图像相似，背景图像可以是指向报表服务器上的图像的 URL、数据集字段的图像，也可以是报表定义中嵌入的图像。 若要使用在报表中嵌入的图像，您必须首先向报表定义中添加该嵌入图像，然后才能向设计图面中添加该图像。  

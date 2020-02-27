@@ -1,5 +1,5 @@
 ---
-title: SAP NetWeaver BI 连接类型 (SSRS) | Microsoft Docs
+title: SAP NetWeaver BI 连接类型 | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31e191772d7c58d5dc1573f941d6744ffa08aefe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1c9edca5b50403f47b82cd2e69d51eb568c66f8a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190680"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081784"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 连接类型 (SSRS)
   若要在报表中包含来自 SAP NetWeaver® Business Intelligence 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].NET Framework Data Provider 1.0 的数据扩展插件。  

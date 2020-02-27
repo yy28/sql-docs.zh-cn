@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 创建适用于 SQL Server、Azure SQL 数据库、Azure Synapse Analytics 和 Analytics Platform System 的数据库语法
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 02/07/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: afca0210d61e23af7578e6805c5052c00c72f88a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2b809d3512c16a366f8f4add88cf8a0b091156d2
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952401"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074475"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -876,9 +876,9 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
-  | ( EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
+  | ( EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
   | SERVICE_OBJECTIVE =
-    { 'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+    { 'Basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -904,7 +904,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
-      { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+      { 'Basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -939,7 +939,7 @@ CATALOG_COLLATION 指定元数据目录的默认排序规则。 *DATABASE_DEFAUL
 
 EDITION 指定数据库的服务层。
 
-单一数据库/弹性池上的单一数据库和入池数据库。 可用的值包括：“basic”、“standard”、“premium”、“GeneralPurpose”、“BusinessCritical”和“Hyperscale”。
+单一数据库/弹性池上的单一数据库和入池数据库。 可用值有：'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical' 和 'Hyperscale'。
 
 MAXSIZE 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服务层）有效。下面是服务层支持的 MAXSIZE 值和默认值 (D)。
 
@@ -1204,7 +1204,7 @@ CREATE DATABASE db_copy
 下面的示例在数据库创建期间将目录排序规则设置为 DATABASE_DEFAULT，其会将目录排序规则设置为与数据库排序规则相同。
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'basic')
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
 ```
 
@@ -1370,7 +1370,7 @@ Azure Synapse 设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详�
 
 创建数据库后，无法更改数据库排序规则。
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+## <a name="examples-sssdwfull"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
 ### <a name="a-simple-example"></a>A. 简单示例
 创建数据仓库数据库的简单示例。 这将创建最小最大大小为 10240 GB、默认排序规则为 SQL_Latin1_General_CP1_CI_AS 且 最小计算功率为 DW100 的数据库。
@@ -1490,7 +1490,7 @@ GO
 
 成功执行此操作后，[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 和 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 元数据视图中将会显示该数据库的条目。
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="a-basic-database-creation-examples"></a>A. 基本数据库创建示例
 

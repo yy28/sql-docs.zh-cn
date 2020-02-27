@@ -1,5 +1,5 @@
 ---
-title: 创建递阶报表（报表生成器和 SSRS）| Microsoft Docs
+title: 创建递阶报表（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dca297ff55b9bd845e6fcb8379dcb7cc7147d32e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581541"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080606"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
 递阶报表是一种  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表，可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  

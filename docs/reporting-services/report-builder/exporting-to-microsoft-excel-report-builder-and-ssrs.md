@@ -1,5 +1,5 @@
 ---
-title: 导出到 Microsoft Excel（报表生成器和 SSRS）| Microsoft Docs
+title: 导出到 Microsoft Excel（报表生成器）| Microsoft Docs
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580776"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079585"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表呈现为 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 呈现扩展插件，Excel 中的列宽度更精确地反映了报表中的列宽度。  
@@ -124,7 +124,7 @@ ms.locfileid: "65580776"
 ## <a name="excel-renderer"></a>Excel 呈现器  
   
 ### <a name="current-xlsx-excel-file-renderer"></a>当前 (.xlsx) Excel 文件呈现器  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，默认 Excel 呈现器是与当前 (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 文件兼容的版本。 这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户和 SharePoint 列表中 “导出”菜单中的“Excel”选项。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，默认 Excel 呈现器是与当前 (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 文件兼容的版本。 这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户和 SharePoint 列表中 “导出”  菜单中的“Excel”  选项。  
   
  当你使用默认 Excel 呈现器而不是更早版本的 Excel 2003 (.xls) 呈现器时，请安装针对 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包，以便更早版本的 Excel 可打开导出的文件。  
   
@@ -242,13 +242,13 @@ ms.locfileid: "65580776"
 -   由于 Excel 的局限性，大纲的嵌套级别最多不能超过 7 级。  
   
 ### <a name="document-map"></a>文档结构图  
- 如果报表中存在任何文档结构图标签，则将呈现文档结构图。 文档结构图呈现为 Excel 的封面工作表，插在工作簿的第一个选项卡位置。 该工作表称为“文档结构图” 。  
+ 如果报表中存在任何文档结构图标签，则将呈现文档结构图。 文档结构图呈现为 Excel 的封面工作表，插在工作簿的第一个选项卡位置。 该工作表称为“文档结构图”  。  
   
  文档结构图中显示的文本由报表项或组的 DocumentMapLabel 属性决定。 文档结构图标签按它们在报表中出现的顺序列出，自第一列的第一行开始。 每个文档结构图标签单元的缩进深度级别数与报表中所出现的一样。 每个缩进级别是通过在后续列中放置一个标签来表示的。 Excel 最多可支持 256 个大纲嵌套级别。  
   
  文档结构图大纲呈现为可折叠的 Excel 大纲。 大纲结构与文档结构图的嵌套结构相匹配。 大纲的扩展和折叠状态从第二级开始。  
   
- 结构图的根节点是报表名称 \<reportname>.rdl，它是不可交互的。 文档结构图链接字体是宋体 (10pt)。  
+ 结构图的根节点是报表名称 \<reportname>.rdl，它是不可交互的  。 文档结构图链接字体是宋体 (10pt)。  
   
 ### <a name="drillthrough-links"></a>钻取链接  
  文本框中出现的钻取链接在用于呈现文本的单元格中呈现为 Excel 超链接。 图像和图表的钻取链接在呈现的图像上呈现为 Excel 超链接。 单击钻取链接时，将打开客户端的默认浏览器并导航到目标的 HTML 视图。  

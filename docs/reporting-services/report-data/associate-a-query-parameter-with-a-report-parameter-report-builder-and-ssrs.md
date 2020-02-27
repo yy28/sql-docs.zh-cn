@@ -1,5 +1,5 @@
 ---
-title: 将查询参数与报表参数相关联（报表生成器和 SSRS）| Microsoft Docs
+title: 将查询参数与报表参数相关联（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45161e43e405586bb441088b89fc24494eb928df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e9752c14ef2ba03cdb95ad8fe4430c4d4fa23db
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573238"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081434"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>将查询参数与报表参数相关联（报表生成器和 SSRS）
   在您定义包含查询变量的数据集查询时，将对查询命令进行分析。 对于每个查询变量，都会创建相应的数据集参数和报表参数。 数据集参数将指向报表参数。 这样可以使用户输入一个直接传递给查询的值。 每次您编辑查询命令时，都会发生相同的过程。  

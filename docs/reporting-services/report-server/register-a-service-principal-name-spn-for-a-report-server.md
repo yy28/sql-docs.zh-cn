@@ -1,6 +1,6 @@
 ---
 title: 为报表服务器注册服务主体名称 (SPN) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66500235"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256420"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>为报表服务器注册服务主体名称 (SPN)
   如果要在使用 Kerberos 协议进行相互身份验证的网络中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并且将报表服务器服务配置为以域用户帐户身份运行，则必须为报表服务器服务创建服务主体名称 (SPN)。  
@@ -23,28 +23,29 @@ ms.locfileid: "66500235"
   
  若要创建 SPN，可以使用 **SetSPN** 命令行实用工具。 有关详细信息，请参阅以下主题：  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx) 。  
+-   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) 。  
   
 -   [服务主体名称 (SPN) SetSPN 语法 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) 。  
   
  您必须具有域管理员身份，才能在域控制器上运行该实用工具。  
   
 ## <a name="syntax"></a>语法  
- 使用 SetSPN 实用工具为报表服务器创建 SPN 的命令语法类似如下所示：  
+
+使用 setspn 处理 SPN 时，必须以正确的格式输入 SPN。 SPN 的格式为 `<serviceclass>/host:<por>`。 使用 SetSPN 实用工具为报表服务器创建 SPN 的命令语法类似如下所示：  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
 ```  
   
  **SetSPN** 随 Windows Server 一起提供。 **-s** 参数在验证不存在重复项后添加一个 SPN。 **注意：-s** 从 Windows Server 2008 开始已在 Windows Server 中提供。  
   
  **HTTP** 为服务类。 报表服务器 Web 服务在 HTTP.SYS 中运行。 在为 HTTP 创建 SPN 时，将同时对在 HTTP.SYS（包括承载在 IIS 中的应用程序）中运行的位于同一台计算机上的所有 Web 应用程序授予基于该域用户帐户的票证。 如果这些服务在其他帐户下运行，则身份验证请求将失败。 为避免此问题，请务必将所有 HTTP 应用程序配置为在同一帐户下运行，或考虑为每个应用程序创建主机头，然后为每个主机头单独创建一个 SPN。 配置主机标头时，无论 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置如何都必须更改 DNS。  
   
- 为 \<computername> 和 *domainname> 指定的值可标识托管报表服务器的计算机的唯一网络地址*\<  。 此地址可以是本地主机名，或者完全限定的域名 (FQDN)。 如果只有一个域，可从命令行中省略 \<domainname>  。 \<domain-user-account  > 是报表服务器服务运行时所使用的用户帐户以及必须注册 SPN 的用户帐户。  
+ 为 \<computername> 和 \<domainname> 指定的值可标识托管报表服务器的计算机的唯一网络地址   。 此地址可以是本地主机名，或者完全限定的域名 (FQDN)。 如果只有一个域，可从命令行中省略 \<domainname>  。 \<domain-user-account  > 是报表服务器服务运行时所使用的用户帐户以及必须注册 SPN 的用户帐户。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>为域用户帐户注册 SPN  
   
-#### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>为以域用户身份运行的报表服务器服务注册 SPN  
+### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>为以域用户身份运行的报表服务器服务注册 SPN  
   
 1.  安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 并将报表服务器服务配置为以域用户帐户身份运行。 请注意，直到完成以下步骤之后，用户才能连接到报表服务器。  
   
@@ -55,10 +56,10 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 4.  复制以下命令，并用适用于您的网络的实际值替换占位符值。  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     例如： `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    例如： `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  运行命令。  
   

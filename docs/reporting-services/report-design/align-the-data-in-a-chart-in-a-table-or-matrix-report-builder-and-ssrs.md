@@ -1,5 +1,5 @@
 ---
-title: 在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）| Microsoft Docs
+title: 在表或矩阵中的图表中对齐数据（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d639e686251effc19e445a39c97860a3336c8ff2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6cb82188a6ded92fadf96385f193f504c29bf56
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581877"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081521"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）
   迷你图和数据条是小的简单图表，它们包含一些额外细节，可以传递很多信息。 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，选中此选项时，迷你图和数据条中的值将在表或矩阵的不同单元中对齐，即使缺少它们所基于的数据的值。  
@@ -26,7 +26,7 @@ ms.locfileid: "65581877"
   
 1.  向表或矩阵[添加迷你图或数据条](../../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md) 。  
   
-2. 单击迷你图或数据条，然后单击 **“水平轴属性”** 或 **“垂直轴属性”**。  
+2. 单击迷你图或数据条，然后单击 **“水平轴属性”** 或 **“垂直轴属性”** 。  
   
 2.  在 **“轴选项”** 选项卡上，选中 **“对齐轴”** 框，然后在下拉框中选择要对齐轴的组。  
   

@@ -1,5 +1,5 @@
 ---
-title: 更改单元中的项（报表生成器和 SSRS）| Microsoft Docs
+title: 更改单元中的项（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc13f82453349b16e4c9fc00b8f0f083652daa75
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e94201485577a2f70d8e459322a6d0475a65300d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581751"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081872"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>更改单元中的项（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，只有非容器项（例如文本框、线条或图像）才可以用新的报表项替换。 例如，可以将一个表拖到文本框中来用该表替换文本框。  

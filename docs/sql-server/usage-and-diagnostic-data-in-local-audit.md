@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558033"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256650"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用情况和诊断数据收集的本地审核 (CEIP)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75558033"
 
 Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和发送关于计算机或设备的信息。 这被称为“标准计算机信息”  。 [SQL Server 使用情况和诊断数据收集](usage-and-diagnostic-data-configuration-for-sql-server.md)的本地审核组件将服务收集的数据（表示将发送给 Microsoft 的数据（日志））写入指定文件夹。 本地审核的用途是，便于客户出于合规性、监管或隐私验证原因，查看 Microsoft 使用此功能收集的所有数据。  
 
-自 SQL Server 2016 CU2 起，可以在实例一级为 SQL Server 数据库引擎和 SQL Server Analysis Services (SSAS) 配置本地审核。 在 SQL Server 2016 CU4 和 SQL Server 2016 SP1 中，SQL Server Integration Services (SSIS) 也启用了本地审核。 在安装过程中安装的其他 SQL Server 组件，以及在安装后下载或安装的 SQL Server 工具没有使用情况和诊断数据收集的本地审核功能。
+对于 SQL Server 2016 CU2 和 CU3，本地审核可在实例级别针对 SQL Server 数据库引擎和 Analysis Services (SSAS) 进行配置。 对于 SQL Server 2016 CU4 和 2016 SP1 及更高版本，SQL Server Integration Services (SSIS) 也启用了本地审核。 在安装过程中安装的其他 SQL Server 组件，以及在安装后下载或安装的 SQL Server 工具没有使用情况和诊断数据收集的本地审核功能。
 
 ## <a name="remarks"></a>备注
 
@@ -42,7 +42,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 以下是在每个 SQL Server 实例上启用本地审核的先决条件： 
 
-1. 实例修补为 SQL Server 2016 RTM CU2 或更高版本。 对于 Integration Services，实例被修补为 SQL 2016 RTM CU4 或 SQL 2016 SP1
+1. 实例修补为 SQL Server 2016 RTM CU2 或更高版本。 对于 Integration Services，实例被修补为 SQL 2016 RTM CU4、SQL 2016 SP1 及更高版本。
 
 1. 用户必须是系统管理员，或是具有添加和修改注册表项、创建文件夹、管理文件夹安全性以及停止/启动 Windows 服务的访问权限的角色。  
 
@@ -320,7 +320,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 不会写入任何本地审核文件。
 
 **如果防火墙后面没有 Internet 连接/计算机，则会发生什么情况？**
-SQL Server 2016 使用情况和诊断数据不会发送给 Microsoft。 如果配置正确，则它仍会尝试写入本地审核日志。
+SQL Server 使用情况和诊断数据不会发送给 Microsoft。 如果配置正确，则它仍会尝试写入本地审核日志。
 
 **DBA 如何禁用本地审核？**
 删除 UserRequestedLocalAuditDirectory 注册表项。
@@ -333,7 +333,7 @@ DBA 需要自行管理该目录中文件的清理，以避免占用过多磁盘�
 
 **是否存在可以用于读取此 JSON 输出的客户端或工具？**
 可以使用记事本、Visual Studio 或选择的任何 JSON 读取器来读取输出。
-或者，可以按如下所示在 SQL Server 2016 实例中读取 JSON 文件并分析数据。 有关如何在 SQL Server 中读取 JSON 文件的更多详细信息，请访问 [使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 将 JSON 文件导入 SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)。
+或者，可以按如下所示在 SQL Server 实例中读取 JSON 文件并分析数据。 有关如何在 SQL Server 中读取 JSON 文件的更多详细信息，请访问 [使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 将 JSON 文件导入 SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

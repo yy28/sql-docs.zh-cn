@@ -1,5 +1,5 @@
 ---
-title: 筛选器公式示例（报表生成器和 SSRS）| Microsoft Docs
+title: 筛选器公式示例（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 37fc28cbcdbeaa261550f0490dccaf2a25c51cdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 23a76863222fdd58d769031020ac888966596146
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579068"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080131"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>筛选器公式示例（报表生成器和 SSRS）
   若要创建筛选器，必须指定一个或多个筛选器公式。 筛选器公式包括表达式、数据类型、运算符和值。 本主题提供了常用筛选器的示例。  

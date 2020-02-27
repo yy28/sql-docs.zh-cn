@@ -1,5 +1,5 @@
 ---
-title: Last 函数（报表生成器和 SSRS）| Microsoft Docs
+title: Last 函数（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f6a30101e4ee1472845d11dc1ab6b7cb3d70bc5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e1856df527f071c5366be84c8260d16ea92bf087
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579541"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081250"
 ---
 # <a name="report-builder-functions---last-function"></a>报表生成器函数 - Last 函数
   返回指定表达式的给定作用域中的最后一个值。  

@@ -1,5 +1,5 @@
 ---
-title: 设置图表上数据点的格式（报表生成器和 SSRS）| Microsoft Docs
+title: 设置图表上数据点的格式（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5fbcae6cbbadb8665086c65088c32513a632c34a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580339"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079935"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "65580339"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在图表上定位数据点标签  
  对于所有图表类型，右键单击图表并选择 **“显示数据标签”** 后可以显示数据点标签。 数据点标签的位置是根据图表类型指定的：  
   
--   在条形图中，可以使用 **BarLabelStyle** 自定义属性重新定位数据点标签。 有四个可能位置：外部、左侧、中间和右侧。 当条形标签样式设置为“外部”时，只要图表区放得下，标签就将定位到图条的外部。 如果标签在图表区内图条以外的区域放不下，则标签将定位到图条内。  
+-   在条形图中，可以使用 **BarLabelStyle** 自定义属性重新定位数据点标签。 有四个可能位置：Outside、Left、Center 和 Right。 当条形标签样式设置为“外部”时，只要图表区放得下，标签就将定位到图条的外部。 如果标签在图表区内图条以外的区域放不下，则标签将定位到图条内。  
   
 -   在饼图中，可以使用 **PieLabelStyle** 自定义属性重新定位数据点标签。 围绕饼图定位数据点标签时应考虑诸多注意事项，包括饼图的大小、饼图及其相应图例之间的可用空间和标签大小。 有关详细信息，请参阅 [在饼图外显示数据点标签（报表生成器和 SSRS）](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   

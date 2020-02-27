@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75320492"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256740"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "75320492"
  直到完成备份测试后，才会生成还原策略。 必须通过将数据库副本还原到测试系统，针对每个数据库的备份策略进行全面测试。 您必须对每种要使用的备份类型进行还原测试。 另外建议在还原备份后，通过数据库的 DBCC CHECKDB 执行数据库一致性检查，以验证备份媒体是否未损坏。 
 
 ### <a name="verify-media-stability-and-consistency"></a>验证媒体稳定性和一致性
-使用备份实用工具提供的验证选项（BACKUP T-SQL 命令、SQL Server 维护计划、备份软件或解决方案等）。 有关示例，请参阅 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 使用 BACKUP CHECKSUM 等高级功能来检测备份媒体本身的问题。 有关详细信息，[请参阅](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。
+使用备份实用工具提供的验证选项（BACKUP T-SQL 命令、SQL Server 维护计划、备份软件或解决方案等）。 有关示例，请参阅 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 使用 BACKUP CHECKSUM 等高级功能来检测备份媒体本身的问题。 有关详情，请参阅[在备份和还原期间可能的介质错误 (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
 
 ### <a name="document-backuprestore-strategy"></a>文档备份/还原策略 
 建议您将备份和还原过程记录下来并在运行手册中保留记录文档的副本。

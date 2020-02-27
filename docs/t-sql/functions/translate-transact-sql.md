@@ -16,12 +16,12 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 374e9c1ba9bd93900e8a6677984f5e0e63a7c454
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68098831"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173585"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
@@ -51,7 +51,9 @@ TRANSLATE ( inputString, characters, translations)
 
 如果字符和转换表达式长度不同，则 `TRANSLATE` 将返回错误   。 如果任何参数为 NULL，`TRANSLATE` 将返回 NULL。  
 
-`TRANSLATE` 函数行为类似于使用多个 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函数。 但是，`TRANSLATE` 不会多次替换字符。 这不同于多个 `REPLACE` 函数，因为每次使用都会替换所有相关字符。 
+`TRANSLATE` 函数行为类似于使用多个 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函数。 但是，`TRANSLATE` 不会在 `inputString` 中多次替换字符。 `characters` 参数中的单个值可以替换 `inputString` 中的多个字符。 
+
+这不同于多个 `REPLACE` 函数的行为，因为每个函数调用都将替换所有相关字符，即使以前的嵌套 `REPLACE` 函数调用已替换它们。 
 
 `TRANSLATE` 始终可以感知 SC 排序规则。
 

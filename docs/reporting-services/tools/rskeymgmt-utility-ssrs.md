@@ -1,5 +1,5 @@
 ---
-title: rskeymgmt 实用工具 (SSRS) | Microsoft Docs
+title: rskeymgmt 实用工具 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571476"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082155"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
   提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例  。  

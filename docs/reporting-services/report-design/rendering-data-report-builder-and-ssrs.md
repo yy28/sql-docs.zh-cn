@@ -1,5 +1,5 @@
 ---
-title: 呈现数据（报表生成器和 SSRS）| Microsoft Docs
+title: 呈现数据（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31eee586a5e825f3c2252e6e790d27263f04304d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e7645c285ed63ae241fe9df0f5dd468685e5f143
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576431"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077000"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>呈现数据（报表生成器和 SSRS）
   使用 HTML、MHTML、Word、Excel、PDF 或 Image 之类的布局呈现器时，数据和其组织保持不变。 当使用逗号分隔值 (CSV) 或 XML 之类的数据呈现器格式导出时，不会呈现任何可视布局元素。 呈现报表时，CSV 和 XML 会将某些规则应用到表体及其内容。 这些规则用于确定数据在这些格式中的呈现方式。  

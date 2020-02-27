@@ -1,5 +1,5 @@
 ---
-title: 报表设计器中的报表部件 (SSRS) | Microsoft Docs
+title: 报表设计器中的报表部件 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ec984cbb220bffecfae5a929ddad103780450285
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576787"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081060"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>报表设计器中的报表部件 (SSRS)
 

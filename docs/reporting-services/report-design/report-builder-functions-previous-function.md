@@ -1,5 +1,5 @@
 ---
-title: Previous 函数（报表生成器和 SSRS）| Microsoft Docs
+title: Previous 函数（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3a54bd68b1bac51581329224aa7e9405cee8e93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 882a098aaabcd4610fc6623e9741f7eeaa4f53ec
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577200"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081177"
 ---
 # <a name="report-builder-functions---previous-function"></a>报表生成器函数 - Previous 函数
   返回指定作用域内某项的前一个实例的值或该实例的指定聚合值。  
@@ -33,7 +33,7 @@ Previous(expression, scope)
  （**Variant** 或 **Binary**）用于标识数据和检索以前值的表达式，例如 `Fields!Fieldname.Value` 或 `Sum(Fields!Fieldname.Value)`。  
   
  *作用域*  
- (**String**) 可选。 组或数据区域的名称，也可以为 null（在  **中为“Nothing”** [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），它指定从中检索由表达式  指定的以前值的作用域。  
+ (**String**) 可选。 组或数据区域的名称，也可以为 null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为“Nothing”  ），它指定从中检索由表达式  指定的以前值的作用域。  
   
 ## <a name="return-type"></a>返回类型  
  返回 **Variant** 或 **Binary**。  

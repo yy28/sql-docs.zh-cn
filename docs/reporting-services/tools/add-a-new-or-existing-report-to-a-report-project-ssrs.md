@@ -1,5 +1,5 @@
 ---
-title: 向报表项目中添加新报表或现有报表 (SSRS) | Microsoft Docs
+title: 向报表项目中添加新报表或现有报表 | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d9afb31b4c2793e7196fda36280fed3d590a32cf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576804"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077891"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>向报表项目中添加新报表或现有报表 (SSRS)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你可以通过使用报表向导或通过将新的空白报表添加到项目中来添加新的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表。 也可以添加现有报表。 添加报表后，您可以看到项目 **“报表”** 文件夹下会列出该报表名称。  

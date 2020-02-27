@@ -1,5 +1,5 @@
 ---
-title: 对数据进行筛选、分组和排序（报表生成器和 SSRS）| Microsoft Docs
+title: 对数据进行筛选、分组和排序（报表生成器）| Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576528"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080167"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
   在报表中，可以使用表达式来帮助对报表数据进行控制、组织和排序。 默认情况下，当您创建数据集和设计报表布局时，报表项的属性会基于数据集字段、参数以及显示在“报表数据”窗格中的其他项自动设置为表达式。 您还可向表或矩阵单元添加交互式排序按钮，以便用户能够通过交互方式，更改组或组内的行的行排序顺序。  

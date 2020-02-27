@@ -1,5 +1,5 @@
 ---
-title: 为报表和共享数据集处理设置超时值 (SSRS) | Microsoft Docs
+title: 为报表和共享数据集处理设置超时值 | Microsoft Docs
 description: 在 Reporting Services 中，可以通过指定超时值来限制使用系统资源的方式。
 ms.date: 01/16/2020
 ms.prod: reporting-services
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5996c21b09a722a3cbeac41917bf83ca132feed2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259407"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082330"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>为报表和共享数据集处理设置超时值 (SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，可以通过指定超时值来限制使用系统资源的方式。 报表服务器支持两个超时值：  

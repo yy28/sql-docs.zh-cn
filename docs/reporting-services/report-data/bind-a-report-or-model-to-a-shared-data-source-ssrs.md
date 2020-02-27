@@ -1,5 +1,5 @@
 ---
-title: 将报表绑定到共享数据源 (SSRS) | Microsoft Docs
+title: 将报表绑定到共享数据源 | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e41ac864403dce2cad648790099496b53c4b6dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190898"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081418"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>将报表绑定到共享数据源 (SSRS)
   在某些情况下，例如将报表从测试服务器移到生产服务器时，最好将文件保存到本地计算机，然后将其上传到其他报表服务器。 将报表上传到新服务器时，需要将其重新绑定到存储在新报表服务器上的共享数据源。 如果不重新绑定报表，在从新报表服务器对其进行访问时，报表将无法正常工作。  

@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251202"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173607"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 大数据群集部署配置 Azure Kubernetes 服务
 
@@ -70,7 +70,13 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
    az account set --subscription <subscription id>
    ```
 
-1. 使用“az group create”命令创建资源组  。 以下示例在 `sqlbdcgroup` 位置创建名为 `westus2` 的资源组。
+1. 使用此命令来标识要在其中部署群集和资源的 Azure 区域：
+
+   ```azurecli
+   az account list-locations -o table
+   ```
+
+1. 使用“**az group create**”命令创建资源组。 以下示例在 `westus2` 位置创建名为 `sqlbdcgroup` 的资源组。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -132,7 +138,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
    --kubernetes-version <version number>
    ```
 
-   可通过更改 `--node-count <n>` 来增加或减少 Kubernetes 代理节点数，其中 `<n>` 为要使用的代理节点数。 其中不包括主 Kubernetes 节点，该节点由 AKS 在后台进行管理。 上一个示例出于评估目的仅使用单个节点。
+   可通过更改 `--node-count <n>` 来增加或减少 Kubernetes 代理节点数，其中 `<n>` 为要使用的代理节点数。 其中不包括主 Kubernetes 节点，该节点由 AKS 在后台进行管理。 上一个示例出于评估目的仅使用单个节点。 还可以更改 `--node-vm-size`，以选择符合工作负载要求的合适的虚拟机大小。 使用 `az vm list-sizes --location westus2 -o table` 命令可列出你所在地区的可用虚拟机大小。
 
    几分钟后，该命令完成并返回有关群集的 JSON 格式的信息。
 
@@ -161,6 +167,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
 
 - 请确保已安装[最新 Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)。
 - 使用另一个资源组和群集名称来测试上述步骤。
+- 请参阅详细的[有关 AKS 的故障排除文档](https://docs.microsoft.com/azure/aks/troubleshooting)。
 
 ## <a name="next-steps"></a>后续步骤
 

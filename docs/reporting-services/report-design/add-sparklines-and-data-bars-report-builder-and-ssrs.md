@@ -1,5 +1,5 @@
 ---
-title: 添加迷你图和数据条（报表生成器和 SSRS）| Microsoft Docs
+title: 添加迷你图和数据条（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8982b9fb6312f3d3c14b4a4e009a81b51c435914
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c33752294c7335dca86dd51d7d06478188c20548
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581901"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081528"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>添加迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是小的备用图，它包含一些额外细节，可以传递很多信息。 有关它们的详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  

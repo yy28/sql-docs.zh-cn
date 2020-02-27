@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906835"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179268"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -41,7 +41,7 @@ STRING_SPLIT 要求兼容性级别至少为 130。 级别低于 130 时，SQL Se
   
 ## <a name="syntax"></a>语法  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
@@ -62,6 +62,8 @@ STRING_SPLIT ( string , separator )
 STRING_SPLIT 输入包含分隔子字符串的字符串，并输入一个字符用作分隔符  。 STRING_SPLIT 输出其行包含子字符串的单列表。 输出列的名称为“value”  。
 
 输出行可以按任意顺序排列。 顺序不保证与输入字符串中的子字符串顺序匹配  。 可以通过在 SELECT 语句中使用 ORDER BY 子句覆盖最终排序顺序 (`ORDER BY value`)。
+
+0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 STRING_SPLIT 中  。
 
 当输入字符串包含两个或多个连续出现的分隔符字符时，将出现长度为零的空子字符串。 空子字符串的处理方式与普通子字符串相同。 可以通过使用 WHERE 子句筛选出包含空的子字符串的任何行 (`WHERE value <> ''`)。 如果输入字符串为 NULL，则 STRING_SPLIT 表值函数返回一个空表。  
 

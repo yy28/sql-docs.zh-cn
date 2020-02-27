@@ -9,17 +9,47 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 12/26/2019
-ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.date: 02/19/2020
+ms.openlocfilehash: 441679bbcf6d6a24e48233d4134d575ec526e0b2
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75521727"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479693"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="february-hotfix"></a>2 月（修补程序）
+
+2019 年 2 月 19 日 &nbsp; / &nbsp; 版本：1.15.1
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 修复 Bug #9149 显示活动连接 | [#9149](https://github.com/microsoft/azuredatastudio/issues/9149)  |
+| 修复 Bug #9061 显示或隐藏 SQL 窗格时编辑数据网格不会正确调整大小 | [#9061](https://github.com/microsoft/azuredatastudio/issues/9061)  |
+| &nbsp; | &nbsp; |
+
+## <a name="february-2020"></a>2020 年 2 月
+
+2019 年 2 月 13 日&nbsp; / &nbsp;版本：1.15.0 
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 新的 Azure 登录改进 | 增加了对 Azure 登录体验的改进，包括删除设备代码的复制/粘贴，以获得更流畅的连接体验。 |
+| Notebook 中的“查找”支持 | 用户现在可以在笔记本内使用 Ctrl + F。 笔记本中的“查找”支持可逐行搜索代码和文本单元。 |
+| 从版本 1.38 到 1.42 的 VS Code 合并 | 此版本包含对前 3 个 VS Code 版本中 VS Code 的更新。 [阅读其发行说明](https://code.visualstudio.com/updates/v1_42)以了解详细信息。 |
+| 修复了许多用户报告的[“白/空白屏幕”](https://github.com/microsoft/azuredatastudio/issues/8775)问题。 | |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22February+2020%22)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>已知问题
+- MacOS Catalina 上的用户需要右键单击 Azure Data Studio，然后单击“打开”。
 
 ## <a name="december-2019-hotfix"></a>2019 年 12 月（修补程序）
 

@@ -1,5 +1,5 @@
 ---
-title: 指定对数刻度（报表生成器和 SSRS）| Microsoft Docs
+title: 指定对数刻度（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3a3e94111a11380b86ec3127d7a1c9641f20b44
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 80ddb9e21a3bd61cf9f994cce3d5722ae5fcf3f6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65570817"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080927"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>指定对数刻度（报表生成器和 SSRS）
   如果数据按对数成比例，可能需要考虑在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的图表上使用对数刻度。 这样做可以使数据更容易管理，因而有助于改善图表的外观。 大多数对数刻度都以 10 为底数。  

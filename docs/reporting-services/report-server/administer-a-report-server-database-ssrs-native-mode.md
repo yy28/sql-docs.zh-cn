@@ -1,5 +1,5 @@
 ---
-title: 管理报表服务器数据库（SSRS 本机模式）| Microsoft Docs
+title: 管理报表服务器数据库（本机模式）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 63456df52690b25605bce4f279283f608644f553
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593767"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079109"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理报表服务器数据库（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库用作内部存储。 默认情况下，这两个数据库分别命名为 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 随报表服务器主数据库一同创建，用于存储临时数据、会话信息和缓存的报表。  

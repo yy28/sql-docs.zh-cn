@@ -1,5 +1,5 @@
 ---
-title: 指定轴间隔（报表生成器和 SSRS）| Microsoft Docs
+title: 指定轴间隔（报表生成器）| Microsoft Docs
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecee87ddf31314b8e54c98148ab0570db08a1caf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fecaea37ca01f7d005934c8b371d228bc0bb6b93
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578500"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080939"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
 了解如何设置 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的轴间隔，以更改图表中类别 (x) 轴上的标签数目和刻度线数目。

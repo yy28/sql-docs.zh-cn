@@ -1,5 +1,5 @@
 ---
-title: 设置图表格式（报表生成器和 SSRS）| Microsoft Docs
+title: 设置图表格式（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -49,12 +49,12 @@ f1_keywords:
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdbaff988ae0b433e12e3f65b64899b0c3e0b02a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4ffb31bd95cda34c064d4f49081c66228e25bbd5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575966"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079947"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>设置图表格式（报表生成器和 SSRS）
   为图表定义数据并且该图表按预期方式显示之后，您可添加格式设置以改善整体外观效果并突出显示关键数据点。 可以从“属性”对话框修改最常用的格式设置选项，此对话框在右键单击某图表元素以显示其快捷菜单时出现。 每个图表元素都有其相对应的对话框。 有关图表元素的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

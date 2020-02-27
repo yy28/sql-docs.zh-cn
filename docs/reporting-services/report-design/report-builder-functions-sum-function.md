@@ -1,5 +1,5 @@
 ---
-title: Sum 函数（报表生成器和 SSRS）| Microsoft Docs
+title: Sum 函数（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f2b86d4fe54943ccc3f4c0f06243b72af5779ce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b59a3ba46aaf01ce67b7691f84a560ccd64410fe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577221"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081130"
 ---
 # <a name="report-builder-functions---sum-function"></a>报表生成器函数 - Sum 函数
   返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的和。  

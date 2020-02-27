@@ -9,14 +9,14 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75720930"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173638"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
+# <a name="what-are-big-data-clusters-2019"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -71,12 +71,11 @@ SQL Server 大数据群集包括可缩放的 HDFS 存储池  。 这可用于存
 
 通过命令行工具、API、门户和动态管理视图的组合提供管理和监视。
 
-可以使用 Azure Data Studio 在大数据群集上执行各种任务。 这是由新的 SQL Server 2019 扩展启用的  。 此扩展提供：
-
+可以使用 [Azure Data Studio](../azure-data-studio/what-is.md) 在大数据群集上执行各种任务：
 - 用于常见管理任务的内置片段。
 - 浏览 HDFS、上传文件、预览文件和创建目录的能力。
 - 创建、打开和运行与 Jupyter 兼容的笔记本的能力。
-- 用于简化外部数据源的创建的数据虚拟化向导。
+- 用于简化外部数据源的创建的数据虚拟化向导（由数据虚拟化扩展启用  ）。
 
 ## <a id="architecture"></a>体系结构
 

@@ -1,5 +1,5 @@
 ---
-title: 页眉和页脚（报表生成器和 SSRS）| Microsoft Docs
+title: 页眉和页脚（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8a94f7bf5e149431135972e4911463c5f86ffaa5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576341"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082459"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>页眉和页脚（报表生成器和 SSRS）
   报表可以包含页眉和页脚，它们分别位于每一页的顶部和底部。 页眉和页脚可以包含静态文本、图像、线条、矩形、边框、背景色、背景图像和表达式。 表达式包含只具有一个数据集的报表的数据集字段引用，以及作为作用域包括的数据集的聚合函数调用。  

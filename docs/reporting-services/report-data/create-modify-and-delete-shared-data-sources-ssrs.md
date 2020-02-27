@@ -1,5 +1,5 @@
 ---
-title: 创建、修改和删除共享数据源 (SSRS) | Microsoft Docs
+title: 创建、修改和删除共享数据源 | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190868"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081825"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>创建、修改和删除共享数据源 (SSRS)
   共享数据源是一组可供在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上运行的多个报表、模型和数据驱动订阅引用的数据源连接属性。  共享数据源为随时间推移经常发生变化的数据源属性的管理提供了一种简单的方法。 如果用户帐户或密码发生更改，或者如果将数据库移到其他服务器，则可在一个位置对连接信息进行更新。  

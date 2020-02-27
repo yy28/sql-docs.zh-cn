@@ -1,5 +1,5 @@
 ---
-title: 通过添加带状线突出显示图表数据（报表生成器和 SSRS）| Microsoft Docs
+title: 通过添加带状线突出显示图表数据（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90ed2330ce7b4627798a5e548f2984886b80644d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9fd7c4ee0998f7f0386272130e56bab47303b31c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580256"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082095"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>通过添加条带线突出显示图表数据（报表生成器和 SSRS）
   条带线（或条带）是按固定或自定义间隔使图表背景带有阴影的水平或垂直区域。 可以使用条带线执行以下操作：  

@@ -1,5 +1,5 @@
 ---
-title: 添加、移动或删除文本框（报表生成器和 SSRS）| Microsoft Docs
+title: 添加、移动或删除文本框（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 09a8fd213f8bebd171a9e9fa2427345e677523a5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9bf0a50378979312991cf7cd149d838f4cbe2a3b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581958"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081596"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>添加、移动或删除文本框（报表生成器和 SSRS）
   文本框是 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中最常用的报表项。 您可以向表体添加文本框以显示诸如标题、参数选择、内置字段以及日期之类的信息。  

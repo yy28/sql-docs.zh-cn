@@ -1,5 +1,5 @@
 ---
-title: 饼图（报表生成器和 SSRS）| Microsoft Docs
+title: 饼图（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a623762a7424036ffe8b9b5b669be426480bbb4d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99988a882adff55308c9c7e3fe776cd49b7ce275
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582230"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082436"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>饼图（报表生成器和 SSRS）
   饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成了一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。 有关形状图的详细信息，请参阅[形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)。  

@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 的功能依赖项 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7abf0d389217535292260b6a5b055697eb4b19df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a5babb916ba9c8f2f4ca5a7855eb98c2f485fd17
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028094"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004611"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能依赖项
 
@@ -25,12 +25,14 @@ ms.locfileid: "69028094"
 
 ## <a name="compile-time"></a>编译时间
 
- - `com.microsoft.azure:azure-keyvault`：具有 Always Encrypted Azure Key Vault 功能的 Azure Key Vault 提供程序（可选）
- - `com.microsoft.azure:adal4j`：具有 Azure Active Directory 身份验证功能和 Azure Key Vault 功能的用于 Java 的 Azure Active Directory 库（可选）
- - `com.microsoft.rest:client-runtime`：具有 Azure Active Directory 身份验证功能和 Azure Key Vault 功能的用于 Java 的 Azure Active Directory 库（可选）
- - `org.antlr:antlr4-runtime`设置用户帐户 ：用于 useFmtOnly 的 ANTLR 4 Runtime 功能（可选）
+ - `com.microsoft.azure:azure-keyvault`：具有 Always Encrypted Azure Key Vault 功能的 Azure Key Vault 提供程序。 （可选）
+ - `com.microsoft.azure:adal4j`：具有 Azure Active Directory 身份验证功能和 Azure Key Vault 功能的用于 Java 的 Azure Active Directory 库。 （可选）
+ - `com.microsoft.rest:client-runtime`：具有 Azure Active Directory 身份验证功能和 Azure Key Vault 功能的用于 Java 的 Azure Active Directory 库。 （可选）
+ - `org.antlr:antlr4-runtime`设置用户帐户 ：具有 useFmtOnly 功能的 ANTLR 4 Runtime。 （可选）
  - `org.osgi:org.osgi.core`设置用户帐户 ：具有 OSGi Framework 支持的 OSGi Core 库。
  - `org.osgi:org.osgi.compendium`设置用户帐户 ：具有 OSGi Framework 支持的 OSGi Compendium 库。
+ - `com.google.code.gson`设置用户帐户 ：具有安全 Enclave 功能的 Always Encrypted 的 JSON 分析器。 （可选）
+ - `org.bouncycastle.bcprov-jdk15on`设置用户帐户 ：具有安全 Enclave 功能的 Always Encrypted 的 Bouncy Castle 提供程序（仅当使用 JAVA 8 时）。 （可选）
 
 ## <a name="test-time"></a>测试时间
 
@@ -42,7 +44,7 @@ ms.locfileid: "69028094"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.4.1.jre11</version>
+    <version>8.2.0.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -55,7 +57,7 @@ ms.locfileid: "69028094"
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.6.10</version>
+    <version>1.7.0</version>
 </dependency>
 ```
 
@@ -65,7 +67,7 @@ ms.locfileid: "69028094"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.4.1.jre11</version>
+    <version>8.2.0.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -78,13 +80,13 @@ ms.locfileid: "69028094"
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.6.10</version>
+    <version>1.7.0</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
 </dependency>
 ```
 
@@ -92,6 +94,7 @@ ms.locfileid: "69028094"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供程序：
 
+- JDBC 驱动程序版本 8.2.0 - 依赖项版本：Azure-Keyvault（版本 1.2.2）、Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.7.0) 及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
 - JDBC 驱动程序版本 7.4.1 - 依赖项版本：Azure-Keyvault（版本 1.2.1）、Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.6.10) 及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
 - JDBC 驱动程序版本 7.2.2 - 依赖项版本：Azure-Keyvault（版本 1.2.0）、Azure-Keyvault-Webkey（版本 1.2.0）、Adal4j（版本 1.6.3）、Client-Runtime-for-AutoRest (1.6.5) 及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
 - JDBC 驱动程序版本 7.0.0 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.6.0）及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
@@ -106,6 +109,7 @@ ms.locfileid: "69028094"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证：
 
+- JDBC 驱动程序版本 8.2.0 - 依赖项版本：Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.7.0) 及其依赖项。 在此版本的驱动程序中，“sqljdbc_auth”已被重命名为“mssql-jdbc_auth-\<version>-\<arch>.dll”。
 - JDBC 驱动程序版本 7.4.1 - 依赖项版本：Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.6.10) 及其依赖项
 - JDBC 驱动程序版本 7.2.2 - 依赖项版本：Adal4j（版本 1.6.3）、Client-Runtime-for-AutoRest (1.6.5) 及其依赖项
 - JDBC 驱动程序版本 7.0.0 - 依赖项版本：Adal4j（版本 1.6.0）及其依赖项
@@ -116,6 +120,8 @@ ms.locfileid: "69028094"
 从驱动程序版本 6.4.0 开始，应用程序不一定需要在 Windows 操作系统上使用 ADALSQL.DLL。 对于非 Windows 操作系统  ，驱动程序需要使用 Kerberos 票证才能进行 ActiveDirectoryIntegrated 身份验证。 有关如何使用 Kerberos 连接到 Active Directory 的详细信息，请参阅[在 Windows、Linux 和 Mac 上设置 Kerberos 票证](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)。
 
 对于 Windows 操作系统  ，驱动程序默认查找 sqljdbc_auth.dll，并且不需要 Kerberos 票证设置或 Azure 库依赖项。 如果 sqljdbc_auth.dll 不可用，驱动程序会查找用于在其他操作系统上对 Active Directory 进行身份验证的 Kerberos 票证。
+
+从驱动程序版本 8.2.0 开始，“sqljdbc_auth”将被重命名为“mssql-jdbc_auth-\<version>-\<arch>.dll”。 例如 “mssql-jdbc_auth-8.2.0.x64.dll”。
 
 可以获取使用此功能的[示例应用程序](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。
 

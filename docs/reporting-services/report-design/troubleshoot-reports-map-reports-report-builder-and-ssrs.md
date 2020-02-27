@@ -1,5 +1,5 @@
 ---
-title: 报表故障排除：地图报表（报表生成器和 SSRS）| Microsoft Docs
+title: 报表故障排除：映射报表（报表生成器）| Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594498"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080838"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当你向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  

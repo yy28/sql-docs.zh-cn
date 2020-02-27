@@ -1,5 +1,5 @@
 ---
-title: 参数集合引用（报表生成器和 SSRS）| Microsoft Docs
+title: Parameters 集合参考（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e2d6986e4bed1876854c0c78b596746be5dc758
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581795"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082188"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>内置集合 - 参数集合引用（报表生成器）
-  报表参数是可以在表达式中引用的内置集合之一。 通过在表达式中包含参数，您可以基于用户的选择来自定义报表的数据和外观。 表达式可用于提供 (Fx) 或 \<Expression> 选项的任何报表项属性或文本框属性。 表达式还可用于以其他方式控制报表的内容和外观。 有关详细信息，请参阅[表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
+  报表参数是可以在表达式中引用的内置集合之一。 通过在表达式中包含参数，您可以基于用户的选择来自定义报表的数据和外观。 表达式可用于提供 (Fx) 或 \<Expression> 选项的任何报表项属性或文本框属性   。 表达式还可用于以其他方式控制报表的内容和外观。 有关详细信息，请参阅[表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
   
  在运行时比较参数值和数据集字段值时，所比较的两个项的数据类型必须相同。 报表参数可以是下列类型之一：Boolean、DateTime、Integer、Float 或 Text（即基础数据类型 String）。 如有必要，您可能必须转换参数值的数据类型以与数据集值相匹配。 有关详细信息，请参阅 [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   

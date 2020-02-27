@@ -1,20 +1,20 @@
 ---
-title: 在 Active Directory 模式下部署 SQL Server 大数据群集
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: 在 Active Directory 模式下部署
+titleSuffix: SQL Server Big Data Cluster
 description: 了解如何在 Active Directory 域中升级 SQL Server 大数据群集。
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253111"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544872"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -164,23 +164,23 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命令将这些参数添加到 `control.json` 和 `bdc.json` 文件中。 以下所有示例都使用示例域 `contoso.local`。
 
-- `security.ouDistinguishedName`：组织单位 (OU) 的可分辨名称，其中将添加群集部署创建的所有 AD 帐户。 如果域名为 `contoso.local`，则 OU 可分辨名称为：`OU=BDC,DC=contoso,DC=local`。
+- `security.activeDirectory.ouDistinguishedName`：组织单位 (OU) 的可分辨名称，其中将添加群集部署创建的所有 AD 帐户。 如果域名为 `contoso.local`，则 OU 可分辨名称为：`OU=BDC,DC=contoso,DC=local`。
 
-- `security.dnsIpAddresses`：域控制器的 IP 地址列表
+- `security.activeDirectory.dnsIpAddresses`：域控制器的 IP 地址列表
 
-- `security.domainControllerFullyQualifiedDns`设置用户帐户 ：域控制器的 FQDN 列表。 FQDN 包含域控制器的计算机/主机名。 如果有多个域控制器，可以在此处提供列表。 示例： `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`设置用户帐户 ：域控制器的 FQDN 列表。 FQDN 包含域控制器的计算机/主机名。 如果有多个域控制器，可以在此处提供列表。 示例： `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm` 可选参数  ：大多数情况下，领域等同于域名。 对于领域不同于域名的情况，请使用此参数定义领域名称（例如 `CONTOSO.LOCAL`）。
+- `security.activeDirectory.realm` 可选参数  ：大多数情况下，领域等同于域名。 对于领域不同于域名的情况，请使用此参数定义领域名称（例如 `CONTOSO.LOCAL`）。
 
-- `security.domainDnsName`设置用户帐户 ：域的名称（例如 `contoso.local`）。
+- `security.activeDirectory.domainDnsName`设置用户帐户 ：域的名称（例如 `contoso.local`）。
 
-- `security.clusterAdmins`设置用户帐户 ：此参数采用一个 AD 组  。 此组的成员将在群集中获得管理员权限。 这意味着他们将在 SQL Server 中具有 sysadmin 权限、在 HDFS 中具有超级用户权限、在控制器中具有管理员权限。 **请注意，在部署开始之前，此组需要存在于 AD 中。另请注意，在 Active Directory 中不能将此组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
+- `security.activeDirectory.clusterAdmins`设置用户帐户 ：此参数采用一个 AD 组  。 此组的成员将在群集中获得管理员权限。 这意味着他们将在 SQL Server 中具有 sysadmin 权限、在 HDFS 中具有超级用户权限、在控制器中具有管理员权限。 **请注意，在部署开始之前，此组需要存在于 AD 中。另请注意，在 Active Directory 中不能将此组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
 
-- `security.clusterUsers`设置用户帐户 ：大数据群集中常规用户（无管理员权限）的 AD 组列表。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
+- `security.activeDirectory.clusterUsers`设置用户帐户 ：大数据群集中常规用户（无管理员权限）的 AD 组列表。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
 
-- `security.appOwners` 可选参数  ：有权创建、删除和运行任何应用程序的 AD 组列表。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
+- `security.activeDirectory.appOwners` 可选参数  ：有权创建、删除和运行任何应用程序的 AD 组列表。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
 
-- `security.appReaders` 可选参数：有权运行任何应用程序的 AD 组的列表  。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
+- `security.activeDirectory.appReaders` 可选参数：有权运行任何应用程序的 AD 组的列表  。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
 
 **如何查看 AD 组作用域：** 
 [单击此处获取说明](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以便查看 AD 组作用域以及确定其是否为 DomainLocal.
@@ -193,7 +193,22 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 要在 `control.json` 文件中设置上述参数，请使用以下 `azdata` 命令。 这些命令将替换配置并在部署之前提供你自己的值。
 
-下面的示例将替换部署配置中与 AD 相关的参数值。下面的域详细信息为示例值。
+ > [!IMPORTANT]
+ > 在 SQL Server 2019 CU2 版本中，部署配置文件中的安全配置部分的结构发生了明显的变化，并且所有 Active Directory 相关设置安全地位于 control.json 文件的 JSON 树的新 activeDirectory 中    。
+
+下面的示例基于使用 SQL Server 2019 CU2 的情况。 该实例演示了如何替换部署配置中与 AD 相关的参数值。下面的域详细信息为示例值。
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.dnsIpAddresses=[\"10.100.10.100\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainDnsName=contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+同样，在 SQL Server 2019 CU2 之前的版本中，你可以运行：
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"

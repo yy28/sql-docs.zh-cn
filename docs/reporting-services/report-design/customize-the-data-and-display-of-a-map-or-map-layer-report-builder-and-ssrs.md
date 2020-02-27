@@ -1,5 +1,5 @@
 ---
-title: 自定义的数据和显示的地图或地图层 （报表生成器和 SSRS） |Microsoft 文档
+title: 自定义地图或地图层的数据和显示（报表生成器） | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65572336"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080516"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
   在使用向导向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中添加地图或地图层之后，可能希望更改地图在报表中的显示方式。 可以考虑以下构思来进行改进：  
@@ -121,7 +121,7 @@ ms.locfileid: "65572336"
   
  组表达式指定如何为层上的每个地图元素聚合与空间数据具有一定关系的分析数据。 默认情况下，组表达式是为空间数据与分析数据之间的关系指定的一组匹配字段。 例如，对于显示某个国家或地区的城市位置和人口规模的气泡地图，匹配字段必须包括城市名称 [City] 和区域名称 [Region]，因为可能有多个城市具有相同的名称。 相应的组表达式包括两个字段：[City] 和 [Region]。  
   
- 有关详细信息，请参阅 [地图提示：如何将形状文件导入到 SQL Server 中并且聚合空间数据](https://go.microsoft.com/fwlink/?LinkID=214991)。  
+ 有关详细信息，请参阅[地图提示：如何将形状文件导入 SQL Server 并聚合空间数据](https://go.microsoft.com/fwlink/?LinkID=214991)。  
   
 ##  <a name="MapElements"></a> 更改层上地图元素的选项  
  地图元素是层上的点、线条或多边形，它们基于空间数据。 对于地图元素，可以设置以下选项。 这些选项适用于层上的所有地图元素，无论这些元素是否为嵌入的元素：  

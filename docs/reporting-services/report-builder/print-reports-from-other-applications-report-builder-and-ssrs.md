@@ -1,5 +1,5 @@
 ---
-title: 从其他应用程序打印报表（报表生成器和 SSRS）| Microsoft Docs
+title: 从其他应用程序打印报表（报表生成器）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aecaaf98504f9e6228da16b3379efaffcaaaf5a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5b187ce75c0b005cbc322bddaff847e78147ae0d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580691"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082497"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>从其他应用程序打印报表（报表生成器和 SSRS）
   通过报表生成器提供的导出选项，可以在其他应用程序中轻松查看报表。 **Export** 命令可以在报表工具栏上找到，当你在浏览器或基于 Web 的应用程序中打开报表时，该工具栏将显示在报表的顶部。 导出报表将会在其他应用程序中显示该报表（例如，将报表导出到 Excel 将会在 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]中打开该报表）。 出于打印目的，建议仅当相关应用程序具有您需要使用的特定打印功能时才导出报表。  

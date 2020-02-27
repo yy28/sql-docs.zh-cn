@@ -4,17 +4,17 @@ titleSuffix: ''
 description: 机器学习服务是 SQL Server 中一项支持使用关系数据运行 Python 和 R 脚本的功能。 可以使用开源包和框架，以及 Microsoft Python 和 R 包进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server 机器学习服务的基础知识。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/07/2019
+ms.date: 02/04/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cf2b6f61e01230c8657051388647e336d46ed71
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558282"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004565"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什么是 SQL Server 机器学习服务（Python 和 R）？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,19 @@ Python 和 R 的基本分发包含在机器学习服务中。 除了用于 Pytho
 
 + 还可以使用首选的 Python 或 R 客户端并编写将执行（称为“远程计算上下文”）推送到远程 SQL Server 的脚本  。 有关详细信息，请参阅如何为 [Python 开发](python/setup-python-client-tools-sql.md)和 [R 开发](r/set-up-a-data-science-client.md)设置数据科学客户端。
 
+<a name="versions"></a>
+
+## <a name="python-and-r-versions"></a>Python 和 R 版本
+
+机器学习服务中包含的 Python 和 R 版本取决于使用的 SQL Server 的版本。 
+
+| SQL Server 版本 | Python 版本 | R 版本 |
+|-|-|-|
+| SQL Server 2017 | 3.5.2 | 3.3.3 |
+| SQL Server 2019 | 3.7.3 | 3.5.2 |
+
+有关 SQL Server 2016 中的 R 版本，请参阅[“什么是 R 服务？”中的“R 版本”部分](r/sql-server-r-services.md#version)
+
 <a name="packages"></a>
 
 ## <a name="python-and-r-packages"></a>Python 和 R 包
@@ -95,11 +108,10 @@ Python 和 R 的基本分发包含在机器学习服务中。 除了用于 Pytho
 
 1. 编写你的第一个 Python 或 R 脚本
 
-    + 快速入门：[使用 SQL 创建并运行简单的 R 脚本](tutorials/quickstart-r-create-script.md)
-    + 快速入门：[在 R 中创建和定型预测模型](tutorials/quickstart-r-train-score-model.md)
+    + 快速入门：[运行简单的 Python 脚本](tutorials/quickstart-python-create-script.md)
+    + 快速入门：[运行简单的 R 脚本](tutorials/quickstart-r-create-script.md)
     + 教程：[在 T-SQL 中使用 Python](tutorials/sqldev-in-database-python-for-sql-developers.md)：探索数据、执行特征工程、定型和部署模型，并进行预测（五部分构成的系列）
     + 教程：[在 T-SQL 中使用 R](tutorials/sqldev-in-database-r-for-sql-developers.md)：探索数据、执行特征工程、定型和部署模型，并进行预测（五部分构成的系列）
-    + 教程：[在 R 工具中使用机器学习服务](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)：探索数据、创建图表和绘图、执行特征工程、定型和部署模型，并进行预测（六部分构成的系列）
 
 ## <a name="next-steps"></a>后续步骤
 

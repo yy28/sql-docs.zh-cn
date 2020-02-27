@@ -1,5 +1,5 @@
 ---
-title: RowNumber 函数（报表生成器和 SSRS）| Microsoft Docs
+title: RowNumber 函数（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e918a674b48eeb34fad7ea660b7e907fc9dcb44b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7af8523acb3bf531589a04268de1139d8bcefd35
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577191"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081171"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>报表生成器函数 - RowNumber 函数
   返回指定作用域内行数的运行计数。  

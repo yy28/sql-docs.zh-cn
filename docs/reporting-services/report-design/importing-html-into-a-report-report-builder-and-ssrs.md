@@ -1,5 +1,5 @@
 ---
-title: 将 HTML 导入报表（报表生成器和 SSRS）| Microsoft Docs
+title: 向报表导入 HTML（报表生成器）| Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e89fb3f197037d757916a60d246c158d43b565b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580224"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082051"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>将 HTML 导入报表（报表生成器和 SSRS）
   可以使用文本框向报表中插入从数据集字段中检索到的 HTML 格式的文本。 文本可以来自于其计算结果为正确格式的 HTML 的任何简单或复杂表达式。 格式化文本可以呈现为支持的所有输出格式，包括 PDF。  

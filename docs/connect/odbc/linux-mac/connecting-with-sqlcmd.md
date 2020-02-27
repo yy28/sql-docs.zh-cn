@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005910"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971438"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 进行连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -e 将输入脚本写入标准输出设备 (stdout)。
 
 - -E 使用可信连接（集成身份验证）。有关从 Linux 或 macOS 客户端建立使用集成身份验证的可信连接的详细信息，请参阅[使用集成身份验证](../../../connect/odbc/linux-mac/using-integrated-authentication.md)。
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 指定输入和输出代码页。 代码页页码是指定已安装的 Linux 代码页的数值。
+（自 17.5.1.1 起提供）
 
 - -h number_of_rows  指定要在列标题之间打印的行数  。  
   
@@ -159,8 +162,6 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 在当前版本中，以下选项不可用：  
 
 - -A 使用专用管理员连接 (DAC) 登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 有关如何建立专用管理员连接 (DAC) 的信息，请参阅[编程指南](../../../connect/odbc/linux-mac/programming-guidelines.md)。  
-  
-- -f code_page 指定输入和输出代码页  。  
   
 - -L 列出本地配置的服务器计算机和在网络上播发的服务器计算机的名称。  
   

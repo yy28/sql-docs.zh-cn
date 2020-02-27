@@ -1,5 +1,5 @@
 ---
-title: 在序列上显示工具提示（报表生成器和 SSRS）| Microsoft Docs
+title: 在序列上显示工具提示（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 247a1ddeec14c38f2cc29d2d57df663c1c2368df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 69804b41ccfafe3edf7be7aba719088d7212c2ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581266"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080985"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>在序列上显示工具提示（报表生成器和 SSRS）
   可以向图表的序列上的每个数据点添加工具提示，以显示与数据点有关的信息，例如，组名、数据点的值，或数据点相对于序列总计的百分比。 用户将鼠标悬停在呈现的分页报表中的数据点时，将看到此信息。  

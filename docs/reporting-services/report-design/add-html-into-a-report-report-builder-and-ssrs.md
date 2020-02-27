@@ -1,5 +1,5 @@
 ---
-title: 向报表添加 HTML（报表生成器和 SSRS）| Microsoft Docs
+title: 向报表添加 HTML（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bac4a5a9de3d4d70a33897eac5304980e7e41ad1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e18753c105eb63343bf57977f8ced3a0cf0fe9e6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581981"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081630"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>向报表添加 HTML（报表生成器和 SSRS）
   可以使用占位符从数据集中的字段导入 HTML 以在报表中使用。 默认情况下，占位符表示纯文本，因此需要将占位符的标记类型改为 HTML。 有关详细信息，请参阅[将 HTML 导入报表（报表生成器和 SSRS）](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)。  

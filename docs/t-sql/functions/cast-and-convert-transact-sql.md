@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761621"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440687"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -171,7 +171,7 @@ style
 隐式转换不需要规范 CAST 函数或 CONVERT 函数。 显示转换需要规范 CAST 函数或 CONVERT 函数。 以下图例显示了可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统提供的数据类型执行的所有显式和隐式数据类型转换。 这些包括 bigint、sql_variant 和 xml    。 不存在对 sql_variant 数据类型的赋值进行的隐式转换，但是存在转换为 sql_variant 的隐式转换   。
   
 > [!TIP]  
-> 可从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35834)将此图表下载为 PDF 文件。  
+> 可从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35834)将此图表下载为 PNG 文件。  
   
 ![数据类型转换表](../../t-sql/data-types/media/lrdatahd.png "数据类型转换表")
   
@@ -760,7 +760,7 @@ SELECT @notastring + '1'
 
 在此例中，字符串 `'1'` 可以转换为整数值 1，因而此 SELECT 语句会返回值 2。 当提供的数据类型为整数时，+ 运算符会成为加法运算符而不是字符串串联。
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>L. 使用 CAST 和 CONVERT  
 此示例检索标价的第一位是 `3` 的产品的名称，并将这些产品的 `ListPrice` 转换为 int  。它使用 `AdventureWorksDW2016` 数据库。

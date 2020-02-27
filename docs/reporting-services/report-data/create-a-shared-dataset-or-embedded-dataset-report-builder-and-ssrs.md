@@ -1,5 +1,5 @@
 ---
-title: 创建共享数据集或嵌入数据集（报表生成器和 SSRS）| Microsoft Docs
+title: 创建共享数据集或嵌入数据集（报表生成器）| Microsoft Docs
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9e401ab8fd48e6d1bbb487be3692897add2e225
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190876"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081408"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
 可在单个 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表中使用嵌入的数据集。 报表服务器上的共享数据集可由多个报表使用，移动和分页皆可。 若要创建数据集，需要具有嵌入或共享的数据源。  

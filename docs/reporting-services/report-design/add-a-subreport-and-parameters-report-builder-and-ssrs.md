@@ -1,5 +1,5 @@
 ---
-title: 添加子报表和参数（报表生成器和 SSRS）| Microsoft Docs
+title: 添加子报表和参数（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f50535bbf4cca1775e963a2733e19dcd4ec7497
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a74ef0a64fb7d1a77f3e336f98aeaa245c4458d8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582152"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080666"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>添加子报表和参数（报表生成器和 SSRS）
   当您希望创建作为多个相关报表的容器的主报表时，可以向报表添加子报表。 子报表是对另一个报表的引用。 若要通过数据值使报表相关联（例如，使多个报表显示同一客户的数据），必须设计参数化报表（例如，显示特定客户详细信息的报表）作为子报表。 向主报表添加子报表时，可以指定传递给子报表的参数。  

@@ -1,5 +1,5 @@
 ---
-title: 控制分页符、标题、列和行（报表生成器和 SSRS）| Microsoft Docs
+title: 控制分页符、标题、列和行（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 321f6949208bbf73a3f6750806812f8d08ceae46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2199d84efbf16b2f9a21ca48b523215749ffc488
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65572289"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082296"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>控制分页符、标题、列和行（报表生成器和 SSRS）
   分页符可将报表划分为单独的页，以便于查看和打印。 预览报表或将其导出为其他文件格式时，分页符可确定报表内容适合报表页的方式，以获得最佳查看效果。  

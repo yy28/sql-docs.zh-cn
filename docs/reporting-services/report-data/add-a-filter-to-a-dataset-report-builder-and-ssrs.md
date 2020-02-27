@@ -1,5 +1,5 @@
 ---
-title: 向数据集添加筛选器（报表生成器和 SSRS）| Microsoft Docs
+title: 向数据集添加筛选器（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c42f6cf00329129ea1137ecba4228a92f9665319
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 67fb8bd61f337c4de0476c8a3fdb8265202b0161
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571757"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081656"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>向数据集添加筛选器（报表生成器和 SSRS）
   向数据集添加筛选器可以在从外部数据源检索数据后限制报表中的数据。 在向数据集添加筛选器后，所有报表部件或数据区域将都只使用与筛选条件匹配的数据。  

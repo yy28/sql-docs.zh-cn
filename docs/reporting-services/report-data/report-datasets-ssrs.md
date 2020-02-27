@@ -1,5 +1,5 @@
 ---
-title: 报表数据集 (SSRS) | Microsoft Docs
+title: 报表数据集 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe6f27382bf81e245035f0f242134993845ca07a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190720"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081937"
 ---
 # <a name="report-datasets-ssrs"></a>报表数据集 (SSRS)
   若要向报表中添加数据，您需要创建数据集。 每个数据集都表示通过对数据源运行查询命令而获得的结果集。 结果集中的列是字段集合。 结果集中的行是数据。 数据集不包含实际数据。 数据集而是包含从数据源检索一组特定的数据所需的信息。  

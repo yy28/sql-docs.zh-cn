@@ -1,5 +1,5 @@
 ---
-title: 报表部件（报表生成器和 SSRS）| Microsoft Docs
+title: 报表部件（报表生成器）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3fbef30f8a5bf5658376a37144c8f770317d6981
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576714"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081107"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
    表、矩阵、图表和图像等报表项可以作为“报表部件”发布。 报表部件是单独发布到报表服务器上并且可以在其他分页报表中重复使用的分页报表项。 报表部件具有 .rsc 文件扩展名。  

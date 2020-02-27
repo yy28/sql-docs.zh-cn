@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 491d1e260206121b431276088ff5b34516b4d337
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929149"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173599"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -387,7 +387,7 @@ ms.locfileid: "76929149"
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|读取、执行和列出文件夹内容|  
 |启动板|%binn|读取和执行|
 ||ExtensiblilityData|完全控制|
-||Log\ExtensibiltityLog|完全控制|
+||Log\ExtensibilityLog|完全控制|
   
  \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例和具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例上处于禁用状态。  
   

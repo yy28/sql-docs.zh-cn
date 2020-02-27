@@ -14,14 +14,14 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73926041"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479727"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -38,11 +38,11 @@ LocalDB 安装将复制启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenovers
  >[!TIP]
  > 此外，还可将 LocalDB 作为 Visual Studio 的一部分安装。 在 Visual Studio 安装过程中，选择 .NET 桌面开发工作负载，其中包括 SQL Server Express LocalDB  。
 
-- 已经拥有 Azure 帐户？ [开始使用](https://azure.microsoft.com/services/virtual-machines/sql-server/)并启动装有 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虚拟机。
+- 已经拥有 Azure 帐户？ [开始使用](https://azure.microsoft.com/services/virtual-machines/sql-server/)并启动装有 SQL Server 的虚拟机。
 
 ## <a name="install-localdb"></a>安装 LocalDB
 
-通过安装向导或使用 SqlLocalDB.msi 程序安装 LocalDB。 LocalDB 是安装 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 时的一个选项。 
+通过安装向导或使用 SqlLocalDB.msi 程序安装 LocalDB。 LocalDB 是安装 SQL Server Express LocalDB 时的一个选项。 
  
 在安装过程中，在“功能选择/共享功能”  页上选择 LocalDB。 对于每个主要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本，只能存在一个 LocalDB 二进制文件的安装。 可以启动多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程，并且这些进程都将使用相同的二进制文件。 作为 LocalDB 启动的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例与 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 具有相同限制。
 
@@ -134,7 +134,7 @@ REM Gather information about the instance of LocalDB
 
 ## <a name="permissions"></a>权限
 
-[!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]LocalDB 的实例是用户为其使用而创建的实例。 计算机上的任何用户都可以使用 LocalDB 实例创建数据库，在用户配置文件下存储文件并使用凭据来运行进程。 默认情况下，对 LocalDB 实例的访问仅限于其所有者。 LocalDB 中包含的数据受到对数据库文件的文件系统访问的保护。 如果用户数据库文件存储于某一共享位置，则通过使用他们自己拥有的 LocalDB 实例对该位置具有文件系统访问权限的任何人都可以打开该数据库。 如果数据库文件处于某一受保护的位置，例如用户数据文件夹，则只有该用户以及有权访问该文件夹的任何管理员才能打开该数据库。 LocalDB 文件只能一次通过一个 LocalDB 实例来打开。
+SQL Server Express LocalDB 的实例是用户根据需要创建的实例。 计算机上的任何用户都可以使用 LocalDB 实例创建数据库，在用户配置文件下存储文件并使用凭据来运行进程。 默认情况下，对 LocalDB 实例的访问仅限于其所有者。 LocalDB 中包含的数据受到对数据库文件的文件系统访问的保护。 如果用户数据库文件存储于某一共享位置，则通过使用他们自己拥有的 LocalDB 实例对该位置具有文件系统访问权限的任何人都可以打开该数据库。 如果数据库文件处于某一受保护的位置，例如用户数据文件夹，则只有该用户以及有权访问该文件夹的任何管理员才能打开该数据库。 LocalDB 文件只能一次通过一个 LocalDB 实例来打开。
 
 >[!NOTE]
 >LocalDB 始终在用户安全上下文中运行；即 LocalDB 从不使用本地 Administrator 组的凭据来运行。 这意味着 LocalDB 实例使用的所有数据库文件必须可以通过拥有的用户的 Windows 帐户来访问，而不必考虑本地 Administrators 组中的成员资格。

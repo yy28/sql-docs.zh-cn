@@ -1,5 +1,5 @@
 ---
-title: 向 Tablix 数据区域添加数据（报表生成器和 SSRS）| Microsoft Docs
+title: 向 Tablix 数据区域添加数据（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 847e3f6e7e76041749b0588bff510caebed11817
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 316bb3980a52bef2c4c52b252b35a4641cede6ac
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581889"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081506"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>向 Tablix 数据区域添加数据（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，若要在表或矩阵中显示报表数据集中的数据，请在每个数据单元格中，指定要显示的数据集字段的名称。 可以显示详细信息数据或分组数据。 如果将组添加到表或矩阵中，则会自动添加组值和组数据的行和列。 然后，可以为数据添加小计和总计。  

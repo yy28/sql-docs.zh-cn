@@ -1,5 +1,5 @@
 ---
-title: StDev 函数（报表生成器和 SSRS）| Microsoft Docs
+title: StDev 函数（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6d6a9890f5115042290b4ea59486f13cec10976
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bbf17d4c642d3ccdb14f6a6f1f42212d6e9152a7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577208"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081150"
 ---
 # <a name="report-builder-functions---stdev-function"></a>报表生成器函数 - StDev 函数
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的标准偏差。  

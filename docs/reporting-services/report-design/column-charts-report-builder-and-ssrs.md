@@ -1,5 +1,5 @@
 ---
-title: 柱形图（报表生成器和 SSRS）| Microsoft Docs
+title: 柱形图（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 667f150ee0516b4f2ee63161509d6839b21e78e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 926c2613000423d4b0bb2acb16f81183ee470966
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581605"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082320"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>柱形图（报表生成器和 SSRS）
   柱形图将序列显示为一组按类别分组的垂直图条。 柱形图对于显示一段时间的数据变化或说明各项之间的比较来说十分有用。 平面柱形图与条形图关系密切，条形图将序列显示为多组水平图条，而范围柱形图将序列显示为多组具有不同起点和终点的垂直图条。 有关详细信息，请参阅 [条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) 和 [范围图（报表生成器和 SSRS）](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 从外部数据源中添加数据 (SSRS) | Microsoft Docs
+title: 从外部数据源中添加数据 | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +9,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: e96e72540810c42be9f8abd1d656fb2cec0e5d41
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190942"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081843"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>从外部数据源中添加数据 (SSRS)
   若要从外部数据源中检索数据，您需要使用数据连接。 数据连接信息通常由外部数据源的所有者提供，该所有者负责授予权限并指定要使用的凭据类型。 数据连接信息另存为报表数据源。 数据源类型指定要用于检索数据的数据扩展插件。  

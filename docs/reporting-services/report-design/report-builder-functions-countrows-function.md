@@ -1,5 +1,5 @@
 ---
-title: CountRows 函数（报表生成器和 SSRS）| Microsoft Docs
+title: CountRows 函数（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9295abe7d34ee0b799517137163d4581d8b34ce5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 735d2f05c8a7aec166f445ebc91879ab26c1d142
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579603"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081292"
 ---
 # <a name="report-builder-functions---countrows-function"></a>报表生成器函数 - CountRows 函数
   返回指定作用域内的行数，包括含有 Null 值的行。  

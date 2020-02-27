@@ -1,5 +1,5 @@
 ---
-title: 报表和组变量集合引用（报表生成器和 SSRS）| Microsoft Docs
+title: 报表和组变量集合参考（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581773"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081451"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>内置集合 - 报表和组变量引用（报表生成器）
   在报表的表达式中需要多次使用某个复杂计算时，您可能需要创建一个变量。 您可以创建一个报表变量或组变量。 变量名称在报表中必须是唯一的。  
@@ -41,7 +41,7 @@ ms.locfileid: "65581773"
   
 -   **只读使用** ：设置值一次以便为报表会话创建一个常量，例如创建一个时间戳。  
   
-     因为当用户在报表中翻页时，文本框中的表达式将按需计算，所以，如果用户通过使用“上一页”`Now()`**按钮向前和向后翻页，动态值（例如，包括返回时间的**  函数的表达式）可以返回不同的值。 通过将报表变量的值设置为表达式 `=Now()`，然后在表达式中添加变量，可确保整个报表处理过程中使用相同的值。  
+     因为当用户在报表中翻页时，文本框中的表达式将按需计算，所以，如果用户通过使用“上一页”  按钮向前和向后翻页，动态值（例如，包括返回时间的 `Now()` 函数的表达式）可以返回不同的值。 通过将报表变量的值设置为表达式 `=Now()`，然后在表达式中添加变量，可确保整个报表处理过程中使用相同的值。  
   
 -   **读写使用** ：设置值一次并在报表会话中序列化该值。 变量的读写选项提供了一个比在报表定义的代码块中使用静态变量更好的选择。  
   

@@ -16,19 +16,17 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d67efc13e326808b570fc33f054f922e74d5923e
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75720756"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478483"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 串联字符串表达式的值，并在其间放置分隔符值。 不能在字符串末尾添加分隔符。 
-
-在 SQL Server 2017 中引入。
  
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +45,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 串联期间，表达式被转换为 `NVARCHAR` 或 `VARCHAR` 类型。 非字符串类型被转换为 `NVARCHAR` 类型。
 
 separator   
-是 [ 或 ](../../t-sql/language-elements/expressions-transact-sql.md) 类型的`NVARCHAR`表达式`VARCHAR`，用作串联字符串的分隔符。 可以是文本或变量。 
+是 `NVARCHAR` 或 `VARCHAR` 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联字符串的分隔符。 可以是文本或变量。 
 
 <order_clause>   
 使用 `WITHIN GROUP` 子句有选择性地指定串联结果的顺序：
@@ -87,8 +85,10 @@ null 值会被忽略，且不会添加相应的分隔符。 若要为 null 值�
 
 下面的示例在一个结果单元格中生成姓名列表，并将其以回车符分隔。
 ```sql
-SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
-FROM Person.Person; 
+USE AdventureWorks2016
+GO
+SELECT STRING_AGG (CONVERT(nvarchar(max),FirstName), CHAR(13)) AS csv 
+FROM Person.Person;  
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
@@ -96,34 +96,43 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-结果中不返回 `NULL` 单元格中的 `name` 值。   
+结果中不返回 `name` 单元格中的 `NULL` 值。   
 
 > [!NOTE]  
->  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。   
+> 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。       
+> 默认情况下，“结果显示为文本”截断为 256 个字符。 若要增加此限制，请更改“每个列中显示的最大字符数”选项  。
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 生成使用逗号分隔且不带 NULL 值的姓名列表
 
 下面的示例在一个结果单元格中返回以逗号分隔的姓名，并使用“N/A”替换 null 值。  
 ```sql
-SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
+USE AdventureWorks2016
+GO
+SELECT STRING_AGG(CONVERT(nvarchar(max),ISNULL(FirstName,'N/A')), ',') AS csv 
 FROM Person.Person; 
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Csv | 
+> [!NOTE]
+> 将显示剪裁后的结果。
+
+|csv | 
 |--- |
-|John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
+|Syed,Catherine,Kim,Kim,Kim,Hazem,Sam,Humberto,Gustavo,Pilar,Pilar, ...|  
 
 ### <a name="c-generate-comma-separated-values"></a>C. 生成采用逗号分隔的值
 
 ```sql
-SELECT 
-STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
-  AS names 
+USE AdventureWorks2016
+GO
+SELECT STRING_AGG(CONVERT(nvarchar(max),CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')')), CHAR(13)) AS names 
 FROM Person.Person; 
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
+
+> [!NOTE]
+> 将显示剪裁后的结果。
 
 |姓名 |
 |--- |
@@ -153,42 +162,74 @@ GROUP BY a.articleId, title;
 |177 |狗继续比猫更受人喜爱 |民意调查,动物|
 
 > [!NOTE]
-> 如果 `GROUP BY` 函数不是 `STRING_AGG` 列表中的唯一项，则需要子句 `SELECT`。
+> 如果 `STRING_AGG` 函数不是 `SELECT` 列表中的唯一项，则需要子句 `GROUP BY`。
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 生成按城市分类的电子邮件列表
 
 下面的查询用于查找员工的电子邮件地址，并将结果按城市分类：
 
 ```sql
-SELECT town, STRING_AGG (email, ';') AS emails 
-FROM dbo.Employee 
-GROUP BY town; 
+USE AdventureWorks2016
+GO
+
+SELECT TOP 10 City, STRING_AGG(CONVERT(nvarchar(max), EmailAddress), ';') AS emails 
+FROM Person.BusinessEntityAddress AS BEA  
+INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
+INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 
+GROUP BY City;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
+> [!NOTE]
+> 将显示剪裁后的结果。
+
 |城市 |emails |
 |--- |--- |
-|Seattle |syed0@adventure-works.com;catherine0@adventure-works.com;kim2@adventure-works.com |
-|LA |sam1@adventure-works.com;hazem0@adventure-works.com |
+|Ballard|paige28@adventure-works.com;joshua24@adventure-works.com;javier12@adventure-works.com;...|
+|Baltimore|gilbert9@adventure-works.com|
+|Barstow|kristen4@adventure-works.com|
+|Basingstoke Hants|dale10@adventure-works.com;heidi9@adventure-works.com|
+|Baytown|kelvin15@adventure-works.com|
+|Beaverton|billy6@adventure-works.com;dalton35@adventure-works.com;lawrence1@adventure-works.com;...|
+|Bell Gardens|christy8@adventure-works.com
+|Bellevue|min0@adventure-works.com;gigi0@adventure-works.com;terry18@adventure-works.com;...|
+|Bellflower|philip0@adventure-works.com;emma34@adventure-works.com;jorge8@adventure-works.com;...|
+|Bellingham|christopher23@adventure-works.com;frederick7@adventure-works.com;omar0@adventure-works.com;...|
 
 可以直接使用在电子邮件列中返回的电子邮件向在某些特定城市工作的人们发送电子邮件。 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. 生成按城市分类并经过排序的电子邮件列表   
 与上一个示例类似，下面的查询用于查找员工的电子邮件地址，将结果按城市分类，并按字母顺序对电子邮件排序：   
+
 ```sql
-SELECT town, 
-    STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
-FROM dbo.Employee 
-GROUP BY town; 
+USE AdventureWorks2016
+GO
+
+SELECT TOP 10 City, STRING_AGG(CONVERT(nvarchar(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS emails 
+FROM Person.BusinessEntityAddress AS BEA  
+INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
+INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 
+GROUP BY City;
 ```
-   
+
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
+
+> [!NOTE]
+> 将显示剪裁后的结果。
 
 |城市 |emails |
 |--- |--- |
-|Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
-|LA |hazem0@adventure-works.com;sam1@adventure-works.com |
+|Barstow|kristen4@adventure-works.com
+|Basingstoke Hants|dale10@adventure-works.com;heidi9@adventure-works.com
+|Braintree|mindy20@adventure-works.com
+|Bell Gardens|christy8@adventure-works.com
+|Byron|louis37@adventure-works.com
+|Bordeaux|ranjit0@adventure-works.com
+|Carnation|don0@adventure-works.com;douglas0@adventure-works.com;george0@adventure-works.com;...|
+|Boulogne-Billancourt|allen12@adventure-works.com;bethany15@adventure-works.com;carl5@adventure-works.com;...|
+|Berkshire|barbara41@adventure-works.com;brenda4@adventure-works.com;carrie14@adventure-works.com;...|
+|Berks|adriana6@adventure-works.com;alisha13@adventure-works.com;arthur19@adventure-works.com;...|
 
 ## <a name="see-also"></a>另请参阅
  

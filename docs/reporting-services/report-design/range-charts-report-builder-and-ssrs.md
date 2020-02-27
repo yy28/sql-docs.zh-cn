@@ -1,5 +1,5 @@
 ---
-title: 全距图（报表生成器和 SSRS）| Microsoft Docs
+title: 范围图（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e28daac5af66601d8a48b4fc793d6e6c5d178ca0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3df3a377b466a84f325fbc5bee13f94bf9d08da7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576467"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082364"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>范围图（报表生成器和 SSRS）
   范围图类型用于显示一组数据点，其中每个数据点都由同一类别的多个值定义。 这些值通过由值轴度量的标记高度来表示。 类别标签显示在类别轴上。 平面范围图用于填充每个数据点的探顶值和探底值之间的区域。  

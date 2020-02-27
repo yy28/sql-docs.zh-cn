@@ -1,5 +1,5 @@
 ---
-title: 数据处理扩展插件和 .NET Framework 数据提供程序 (SSRS) | Microsoft Docs
+title: 数据处理扩展插件和 .NET Framework 数据提供程序 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 424dbb31ab96153dbf959c304456d8d1b2e4abd0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1be86b9522f0386fff2d1014c3d94c652411f029
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573107"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082573"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>数据处理扩展插件和 .NET Framework 数据访问接口 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装的组件，用于从特定类型的数据源检索数据，并提供支持报表设计和报表处理的额外功能。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中或第三方源提供的组件，第三方源支持可使你检索和修改来自特定类型的数据源数据的 <xref:System.Data> 接口。  

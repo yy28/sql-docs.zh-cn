@@ -1,7 +1,7 @@
 ---
 title: 使用 JDBC 驱动程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34478dfb61f59835ab6373849876cec26dc35984
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69025774"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004667"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驱动程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本部分提供使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 数据库建立简单连接的快速入门指导。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之前，必须首先在本地计算机或服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且必须在本地计算机上安装 JDBC 驱动程序。  
+本部分提供使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库建立简单连接的快速入门指导。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之前，必须首先在本地计算机或服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且必须在本地计算机上安装 JDBC 驱动程序。  
   
 ## <a name="choosing-the-right-jar-file"></a>选择正确的 JAR 文件
 
 Microsoft JDBC Driver 提供不同的 Jar，可对应用于首选的 Java Runtime Environment (JRE) 设置，如下所示：
+
+Microsoft JDBC Driver 8.2 for SQL Server 提供 mssql-jdbc-8.2.0.jre8.jar  、mssql-jdbc-8.2.0.jre11.jar  和 mssql-jdbc-8.2.0.jre13.jar  类库文件。
 
 Microsoft JDBC Driver 7.4 for SQL Server 提供 mssql-jdbc-7.4.1.jre8.jar  、mssql-jdbc-7.4.1.jre11.jar  和 mssql-jdbc-7.4.1.jre12.jar  类库文件。
 
@@ -59,7 +61,31 @@ Microsoft JDBC Driver jar 不是 Java SDK 的一部分，必须包含在用户�
 
 如果使用 JDBC Driver 7.4，请设置 classpath 以包括 mssql-jdbc-7.4.1.jre8.jar、  、mssql-jdbc-7.4.1.jre11.jar  或 mssql-jdbc-7.4.1.jre12.jar  。
 
+如果使用 JDBC Driver 8.2，请设置 classpath 以包括 mssql-jdbc-8.2.0.jre8.jar、  、mssql-jdbc-8.2.0.jre11.jar  或 mssql-jdbc-8.2.0.jre13.jar  。
+
 如果 classpath 缺少正确 Jar 文件的条目，应用程序将引发常见的 `Class not found` 异常。  
+
+### <a name="for-microsoft-jdbc-driver-82"></a>对于 Microsoft JDBC Driver 8.2
+
+mssql-jdbc-8.2.0.jre8.jar  、mssql-jdbc-8.2.0.jre11.jar  或 mssql-jdbc-8.2.0.jre13.jar  文件安装在以下位置：
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre13.jar
+```
+
+以下代码片段是用于 Windows 应用程序的 CLASSPATH 语句示例：
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.0.jre11.jar`
+
+以下代码片段是用于 Unix/Linux 应用程序的 CLASSPATH 语句示例：
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.0.jre11.jar`
+
+确保 CLASSPATH 语句仅包含一个 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 mssql-jdbc-8.2.0.jre8.jar  、mssql-jdbc-8.2.0.jre11.jar  或 mssql-jdbc-8.2.0.jre13.jar  。
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>对于 Microsoft JDBC Driver 7.4
 
@@ -227,7 +253,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 调用 DriverManager 类的 getConnection 方法时，会从已注册的 JDBC 驱动程序集中找到相应的驱动程序。 sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 文件包括“META-INF/services/java.sql.Driver”文件，其中包含 com.microsoft.sqlserver.jdbc.SQLServerDriver  作为注册驱动程序。 当前通过使用 Class.forName 方法加载驱动程序的现有应用程序将继续工作，无需进行修改。  
   
 > [!NOTE]  
-> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 有关 [ 支持的 JRE 版本列表，请参阅 ](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)JDBC 驱动程序的系统要求[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
+> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 有关 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的 JRE 版本列表，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
 
 若要详细了解如何与数据源连接，以及如何使用连接 URL，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md) 和[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   

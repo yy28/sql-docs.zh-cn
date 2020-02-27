@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2ce739f026afc8f61e490cb359b23b7f61c931ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75306680"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544937"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,8 +53,8 @@ ms.locfileid: "75306680"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>下载最新版本的 sqlcmd 实用工具
 
-**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0.x for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0.x for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 命令行工具为公开发行版 (GA)，但与 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的安装程序包一起发布。
 
@@ -67,11 +67,11 @@ ms.locfileid: "75306680"
 新版本的 SQLCMD 支持 Azure AD 身份验证，包括对 SQL 数据库、SQL 数据仓库和 Always Encrypted 功能的多重身份验证 (MFA) 支持。
 新 BCP 支持 Azure AD 身份验证，包括对 SQL 数据库和 SQL 数据仓库的多重身份验证 (MFA) 支持。
 
-**系统要求** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 此组件需要 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 和 [Microsoft ODBC Driver 17.3.1.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
+系统要求：Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 
+
+此组件要求安装 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 和 [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
  
 若要查看 SQLCMD 版本，请执行 `sqlcmd -?` 命令，并确认使用的是版本 15.0.1300.359 或更高版本。
-
-
 
 > [!NOTE]
 > 需要版本 13.1 或更高版本才支持 Always Encrypted (`-g`) 和 Azure Active Directory 身份验证 (`-G`)。 （你的计算机上可能已安装多个版本的 sqlcmd.exe。 请确保使用正确的版本。 若要确定版本，请执行 `sqlcmd -?`。）

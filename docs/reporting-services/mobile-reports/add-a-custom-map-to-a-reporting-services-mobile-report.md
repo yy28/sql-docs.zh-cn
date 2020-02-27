@@ -1,6 +1,6 @@
 ---
 title: 向 Reporting Services 移动报表添加自定义地图 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9410aac6b74fbb515010517a2fe0667f3c197802
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63141233"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971399"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>向 Reporting Services 移动报表添加自定义地图
 自定义地图需要两个文件：  
@@ -22,11 +22,11 @@ ms.locfileid: "63141233"
   
 阅读有关 [Reporting Services 移动报表中的自定义地图](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)的详细信息。  
   
-将两个文件存储在同一文件夹中。 两个文件的文件名必须匹配（例如 canada.shp 和 canada.dbf）。 元数据（DBF 文件）必须包含对地图填充数据时要使用的字段“NAME”，该字段的值为对应的形状名称（键）的值。   
+将两个文件存储在同一文件夹中。 两个文件的文件名必须匹配（例如 canada.shp 和 canada.dbf）。 元数据（DBF 文件）的第一列用于与对应的形状名称（键）的键值匹配，并在使用数据填充地图时使用。
   
 ## <a name="load-a-custom-map"></a>加载自定义地图  
   
-1. 在“布局”  选项卡中选择一个地图类型：“渐变式热图”  、“范围结束热图”  或“气泡图”  ，将其拖到设计图面，并将其大小调整为你所需的大小。  
+1. 在“布局”  选项卡上，选择地图类型：“渐变热度地图”  、“距离停止热度地图”  或“气泡图”  。将它拖到设计图面，并设置所需的大小。  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

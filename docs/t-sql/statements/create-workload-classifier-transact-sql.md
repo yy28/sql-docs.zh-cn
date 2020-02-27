@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831614"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429028"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -144,13 +144,13 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
 请考虑以下分类器配置。
 
 ```sql
-CREATE WORKLOAD CLASSIFIER classiferA WITH  
+CREATE WORKLOAD CLASSIFIER classifierA WITH  
 ( WORKLOAD_GROUP = 'wgDashboards'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = HIGH
  ,WLM_LABEL      = 'salereport' )
 
-CREATE WORKLOAD CLASSIFIER classiferB WITH  
+CREATE WORKLOAD CLASSIFIER classifierB WITH  
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
@@ -158,7 +158,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-两个分类器均配置了用户 `userloginA`。  如果 userloginA 在 UTC 时间下午 6 点到上午 7 点之间运行标签为 `salesreport` 的查询，则该请求会分类为具有“高”重要性的 wgDashboards 工作负荷组。  预期结果可能会是将请求分类为具有“低”重要性的 wgUserQueries 以用于非工作时间报告，但 WLM_LABEL 的权重高于 START_TIME/END_TIME。  ClassiferA 的权重为 80（用户 64，加上 WLM_LABEL 的 16）。  ClassifierB 的权重为 68（用户 64，加上 START_TIME/END_TIME 的 4）。  在这种情况下，可以将 WLM_LABEL 添加到 classiferB。
+两个分类器均配置了用户 `userloginA`。  如果 userloginA 在 UTC 时间下午 6 点到上午 7 点之间运行标签为 `salesreport` 的查询，则该请求会分类为具有“高”重要性的 wgDashboards 工作负荷组。  预期结果可能会是将请求分类为具有“低”重要性的 wgUserQueries 以用于非工作时间报告，但 WLM_LABEL 的权重高于 START_TIME/END_TIME。  classifierA 的权重为 80（用户 64，加上 WLM_LABEL 的 16）。  ClassifierB 的权重为 68（用户 64，加上 START_TIME/END_TIME 的 4）。  在这种情况下，可以将 WLM_LABEL 添加到 classifierB。
 
  有关详细信息，请参阅[工作负载权重](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting)。
 

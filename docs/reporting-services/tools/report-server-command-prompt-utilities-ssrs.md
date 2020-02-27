@@ -1,5 +1,5 @@
 ---
-title: 报表服务器命令提示实用工具 (SSRS) | Microsoft Docs
+title: 报表服务器命令提示实用工具 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94c21d86b1a89d8de30d0be558fcab008f49d044
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: db8be061664d720ba3be1a4f66ed05062bb1af21
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576280"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081919"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>报表服务器命令提示实用工具 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括几个可用于管理报表服务器的命令行实用工具。 安装报表服务器时将自动安装这些实用工具。  

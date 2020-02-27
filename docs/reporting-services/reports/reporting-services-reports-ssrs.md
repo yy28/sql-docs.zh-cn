@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 报表 (SSRS) | Microsoft Docs
+title: Reporting Services 报表 | Microsoft Docs
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190452"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082429"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表是基于 XML 的报表定义，其中包括报表数据和报表布局元素。 在客户端文件系统中，报表定义具有文件扩展名 .rdl。 在发布某一分页报表后，该报表将成为在报表服务器或 SharePoint 站点上存储的报表项。 分页报表是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供的基于服务器的报表平台的一部分。 你还可以 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  

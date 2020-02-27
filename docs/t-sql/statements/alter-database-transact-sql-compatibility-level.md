@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909647"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544892"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -307,6 +307,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |请参阅下面“示例”部分中的“示例 E”。|请参阅下面“示例”部分中的“示例 F”。|低|
 |ODBC 函数 {fn CONVERT()} 使用语言的默认日期格式。 对于有些语言，默认格式为 YDM，这会导致在将 CONVERT() 与要求使用 YMD 格式的其他函数（如 `{fn CURDATE()}`）结合使用时出现转换错误。|在转换为 ODBC 数据类型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP 时，ODBC 函数 `{fn CONVERT()}` 使用样式 121（一种独立于语言的 YMD 格式）。|低|
 |日期时间内部函数（如 DATEPART）不需要字符串输入值，即可成为有效的日期时间文字。 例如，`SELECT DATEPART (year, '2007/05-30')` 会编译成功。|日期时间内部函数（如 `DATEPART`）需要字符串输入值，才能成为有效的日期时间文字。 在使用无效的日期时间文字时，会返回错误 241。|低|
+|当参数为字符型类型时，将剪裁在 REPLACE 函数的第一个输入参数中指定的尾随空格。 例如，在语句 SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>' 中，值 'ABC ' 错误评估为 'ABC'。|尾随空格始终都将保留。 对于依赖函数以前的行为的应用程序，在为函数指定第一个输入参数时，请使用 RTRIM 函数。 例如，以下语法将重现 SQL Server 2005 行为，SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>'。|低|
 
 ## <a name="reserved-keywords"></a>保留关键字
 

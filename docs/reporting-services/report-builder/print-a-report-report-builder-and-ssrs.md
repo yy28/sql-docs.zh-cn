@@ -1,5 +1,5 @@
 ---
-title: 打印报表（报表生成器和 SSRS）| Microsoft Docs
+title: 打印报表（报表生成器）| Microsoft Docs
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67d9e057b7ed307377e59172948d56d92c45e7f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ec88487e55015edcea264e3530ad13f732ca5fc9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581181"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082520"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
   在将报表保存到报表服务器之后，可以通过浏览器、Reporting Services Web 门户或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
   
- 打印报表时，可以指定所用纸张的大小。 纸张的大小决定了报表的页数以及适合每一页的报表数据。 纸张的大小仅影响通过硬分页呈现器（PDF、Image 和 Print）呈现的报表。 设置纸张大小不影响其他呈现器。 有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
+ 打印报表时，可以指定所用纸张的大小。 纸张的大小决定了报表的页数以及适合每一页的报表数据。 纸张大小仅影响通过硬分页呈现器呈现的报表：PDF、Image 和 Print。 设置纸张大小不影响其他呈现器。 有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
  在 Reporting Services Web 门户中的“报表查看器”工具栏或报表设计器中的“预览”中，可以将报表导出到硬分页呈现器或单击“打印”按钮来打印报表的副本。 您可能需要设置纸张大小或其他页面设置属性。 使用 **“报表属性”** 对话框可以更改页面设置属性，包括纸张大小。  
   

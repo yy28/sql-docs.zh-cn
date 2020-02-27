@@ -1,5 +1,5 @@
 ---
-title: 极坐标图（报表生成器和 SSRS）| Microsoft Docs
+title: 极坐标图（报表生成器）| Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6641ab4cbb58ab628fb2524d72751fd042a49e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e07905447f53e27272710594fd140076fb813665
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576352"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082386"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>极坐标图（报表生成器和 SSRS）
   极坐标图将序列显示为一组位于 360 度圆上、按类别分组的点。 值通过由自圆心测量的点的长度来表示。 点离圆心的距离越远，其值越大。 类别标签显示在图表的周边上。 有关如何将数据添加到坐标图的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

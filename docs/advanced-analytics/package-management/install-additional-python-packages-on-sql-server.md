@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929901"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558311"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 Python 包
 
@@ -37,7 +37,7 @@ ms.locfileid: "76929901"
 
 ### <a name="other-considerations"></a>其他注意事项
 
-+ 包必须与 Python 3.5 兼容并在 Windows 上运行。
++ 包必须与你安装的 Python 版本兼容。 有关每个 SQL Server 版本中随附的 Python 版本的详细信息，请参阅[“什么是 SQL Server 机器学习服务（Python 和 R）？”中的 Python 和 R 版本](../what-is-sql-server-machine-learning.md#versions)
 
 + Python 包库位于 SQL Server 实例的“程序文件”文件夹中，默认情况下，在此文件夹中安装需要管理员权限。 有关详细信息，请参阅[包库位置](../package-management/python-package-information.md#default-python-library-location)。
 
@@ -64,7 +64,7 @@ ms.locfileid: "76929901"
 
    ```console
    pip install "pymssql<3.0"
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>在 SQL Server 上添加 Python 包
@@ -77,11 +77,11 @@ ms.locfileid: "76929901"
 
 1. 在客户端计算机上，打开 Python 或 Python 环境  。
 
-1. 使用以下命令安装 text-tools 包  。 将自己的 SQL Server 数据库连接信息替换进去（如果不使用 Windows 身份验证，请添加 `uid` 和 `pwd` 参数）。
+1. 使用以下命令安装 text-tools 包  。 请将相应部分替换为自己的 SQL Server 数据库连接信息。
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 

@@ -1,7 +1,7 @@
 ---
 title: 查询处理体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/24/2019
+ms.date: 02/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - row mode execution
 - batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909747"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77466168"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,11 +112,11 @@ GO
 
 从潜在的多个可能的计划中选择一个执行计划的过程称为“优化”。 查询优化器是 SQL 数据库系统的最重要组件之一。 虽然查询优化器在分析查询和选择计划时要使用一些开销，但当查询优化器选择了有效的执行计划时，这一开销将节省数倍。 例如，两家建筑公司可能拿到一所住宅的相同设计图。 如果一家公司开始时先花几天时间规划如何建造这所住宅，而另一家公司不做任何规划就开始施工，则花了时间规划项目的那家公司很可能首先完工。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器是基于成本的查询优化器。 就所使用的计算资源量而言，每个可能的执行计划都具有相关成本。 查询优化器必须分析可能的计划并选择一个预计成本最低的计划。 有些复杂的 `SELECT` 语句有成千上万个可能的执行计划。 在这些情况下，查询优化器不会分析所有的可能组合， 而是使用复杂的算法查找一个执行计划：其成本合理地接近最低可能成本。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器是基于成本的优化器。 就所使用的计算资源量而言，每个可能的执行计划都具有相关成本。 查询优化器必须分析可能的计划并选择一个预计成本最低的计划。 有些复杂的 `SELECT` 语句有成千上万个可能的执行计划。 在这些情况下，查询优化器不会分析所有的可能组合， 而是使用复杂的算法查找一个执行计划：其成本合理地接近最低可能成本。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器不只选择资源成本最低的执行计划，还选择能将结果最快地返回给用户且资源成本合理的计划。 例如，与串行处理查询相比，并行处理查询使用的资源一般更多但完成查询的速度更快。 因此如果不对服务器的负荷产生负面影响，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器将使用并行执行计划返回结果。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器在估计用于从表或索引中提取信息的不同方法所需的资源成本时，依赖于分发内容统计信息。 为列和索引保留分布统计信息，并保存有关基础数据的密度 <sup>1</sup> 的信息。 这些信息表明特定索引或列中的值的选择性。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 VIN 的密度比制造商低，所以 VIN 索引比制造商索引更具选择性。 如果索引统计信息不是当前的，则查询优化器可能无法对表的当前状态做出最佳选择。 有关密度的详细信息，请参阅 [统计信息](../relational-databases/statistics/statistics.md#density)。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器在估计用于从表或索引中提取信息的不同方法所需的资源成本时，依赖于分发内容统计信息。 为列和索引保留分布统计信息，并保存有关基础数据的密度 <sup>1</sup> 的信息。 这些信息表明特定索引或列中的值的选择性。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 因为 VIN 的密度比制造商低，所以 VIN 索引比制造商索引更具选择性。 如果索引统计信息不是当前的，则查询优化器可能无法对表的当前状态做出最佳选择。 有关密度的详细信息，请参阅 [统计信息](../relational-databases/statistics/statistics.md#density)。 
 
 <sup>1</sup> 密度定义数据中存在的唯一值的分布，或给定列的重复值平均数。 密度与值的选择性成反比，密度越小，值的选择性越大。
 
@@ -132,7 +132,7 @@ GO
 5. 关系引擎将存储引擎返回的数据处理成为结果集定义的格式，然后将结果集返回客户端。
 
 ### <a name="ConstantFolding"></a> 常量折叠和表达式计算 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会先计算一些常量表达式来提高查询性能。 这称为常量折叠。 常量是 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本，例如 3、“ABC”、“2005-12-31”、1.0e3 或 0x12345678。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会先计算一些常量表达式来提高查询性能。 这称为常量折叠。 常量是 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本，例如 `3`、`'ABC'`、`'2005-12-31'`、`1.0e3` 或 `0x12345678`。
 
 #### <a name="foldable-expressions"></a>可折叠表达式
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将常量折叠与下列类型的表达式配合使用：
@@ -203,11 +203,11 @@ GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
 BEGIN
-DECLARE @d2 datetime
-SET @d2 = @d+1
-SELECT COUNT(*)
-FROM Sales.SalesOrderHeader
-WHERE OrderDate > @d2
+  DECLARE @d2 datetime
+  SET @d2 = @d+1
+  SELECT COUNT(*)
+  FROM Sales.SalesOrderHeader
+  WHERE OrderDate > @d2
 END;
 ```
 
@@ -240,7 +240,7 @@ CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
 FROM HumanResources.Employee AS h 
 JOIN Person.Person AS p
-ON h.BusinessEntityID = p.BusinessEntityID;
+  ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
@@ -251,16 +251,16 @@ GO
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
 JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
-ON (soh.SalesPersonID = EmpN.BusinessEntityID)
+  ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.HumanResources.Employee AS e 
 JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
-ON soh.SalesPersonID = e.BusinessEntityID
+  ON soh.SalesPersonID = e.BusinessEntityID
 JOIN AdventureWorks2014.Person.Person AS p
-ON e.BusinessEntityID =p.BusinessEntityID
+  ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
@@ -328,7 +328,7 @@ WHERE TableA.ColZ = TableB.Colz;
   * `ARITHABORT`
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
-  * `NUMERIC_ROUNDABORT` 会话选项设置为 OFF。
+* `NUMERIC_ROUNDABORT` 会话选项设置为 OFF。
 * 查询优化器查找视图索引列与查询中的元素之间的匹配，例如： 
   * WHERE 子句中的搜索条件谓词
   * 联接操作
@@ -348,7 +348,6 @@ WHERE TableA.ColZ = TableB.Colz;
 查询优化器将 `FROM` 子句中引用的索引视图视为标准视图。 查询优化器在优化进程开始时将视图的定义展开至查询中。 然后，执行索引视图匹配。 可以将索引视图用于查询优化器选择的最终执行计划中，或该计划可以通过访问视图引用的基表来具体化视图中的必要数据。 查询优化器会选择成本最低的方式。
 
 #### <a name="using-hints-with-indexed-views"></a>将提示用于索引视图
-
 可以通过使用 `EXPAND VIEWS` 查询提示防止将视图索引用于查询，也可以使用 `NOEXPAND` 表提示强制将索引用于查询的 `FROM` 子句指定的索引视图。 但应该让查询优化器动态确定用于每个查询的最佳访问方法。 只在经测试证实 `EXPAND` 和 `NOEXPAND` 可显著提高性能的特定情形中使用它们。
 
 `EXPAND VIEWS` 选项指定对于整个查询，查询优化器不应使用任何视图索引。 
@@ -364,7 +363,6 @@ WHERE TableA.ColZ = TableB.Colz;
 索引视图定义中不允许有提示。 在 80 和更高的兼容模式中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在维护索引视图定义或执行使用索引视图的查询时将忽略索引视图定义内的提示。 尽管在 80 兼容模式中，在索引视图定义中使用提示不会生成语法错误，当仍忽略提示。
 
 ### <a name="resolving-distributed-partitioned-views"></a>解析分布式分区视图
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询处理器对分布式分区视图的性能进行优化。 分布式分区视图性能的最重要方面是尽量减少成员服务器之间传输的数据量。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 生成智能的动态计划，以便有效地利用分布式查询访问远程成员表中的数据： 
@@ -408,34 +406,66 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 有时，对即使没有参数化的查询，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 也生成这些类型的动态执行计划。 查询优化器可以参数化查询以便可以重新使用执行计划。 如果查询优化器参数化引用了分区视图的查询，则查询优化器不再假设所需行将来自指定的基表。 它将必须在执行计划中使用动态筛选。
 
 ## <a name="stored-procedure-and-trigger-execution"></a>存储过程和触发器执行
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 仅存储存储过程和触发器的源。 第一次执行存储过程或触发器时，源被编译为执行计划。 如果在执行计划从内存老化掉之前再次执行该存储过程或触发器，则关系引擎将检测现有计划并重新使用它。 如果该计划已从内存老化掉，将生成新的计划。 此进程类似于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对所有 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句采用的进程。 与动态 [!INCLUDE[tsql](../includes/tsql-md.md)] 的批处理相比，存储过程和触发器在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的主要性能优势是它们的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句始终相同。 因此，关系引擎能够轻松地将它们与任何现有执行计划相匹配。 可以轻松地重新使用存储过程和触发器计划。
 
 存储过程和触发器的执行计划与调用存储过程或激发触发器的批处理的执行计划是独立执行的。 这样就有更大的机会重用存储过程和触发器的执行计划。
 
 ## <a name="execution-plan-caching-and-reuse"></a>执行计划的缓存和重新使用
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一个用于存储执行计划和数据缓冲区的内存池。 池内分配给执行计划或数据缓冲区的百分比随系统状态动态波动。 内存池中用于存储执行计划的部分称为计划缓存。
+
+计划缓存为所有编译的计划提供了两个存储：
+-  “对象计划”缓存存储 (OBJCP)，用于与持久化对象（存储过程、函数和触发器）相关的计划  。
+-  “SQL 计划”缓存存储 (SQLCP)，用于与自动参数化、动态或已准备的查询相关的计划  。
+
+下面的查询提供了有关这两个缓存存储的内存使用情况的信息：
+
+```sql
+SELECT * FROM sys.dm_os_memory_clerks
+WHERE name LIKE '%plans%';
+```
+
+> [!NOTE]
+> 计划缓存有两个不用于存储计划的附加存储：     
+> -  “绑定树”缓存存储区 (PHDR)，用于在视图、约束和默认值的计划编译期间使用的数据结构  。 这些结构称为绑定树或 Algebrizer 树。      
+> -   “扩展存储过程”缓存存储 (XPROC)，用于预定义的系统过程（如使用 DLL 而非 Transact-SQL 语句定义的 `sp_executeSql` 或 `xp_cmdshell`）。 缓存的结构只包含在其中实现此过程的函数名称和 DLL 名称。      
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行计划包含下列主要组件： 
 
-- **查询执行计划**     
-  执行计划的主体是一个重入的只读数据结构，可由任意数量的用户使用。 这称为查询计划。 查询计划中不存储用户上下文。 内存中查询计划副本永远不超过两个：一个副本用于所有的串行执行，另一个用于所有的并行执行。 并行副本覆盖所有的并行执行，与并行执行的并行度无关。 
+- **已编译计划**（或查询计划）     
+  由编译过程生成的查询计划主要是由任意数量的用户使用的可重入的只读数据结构。 它存储有关以下内容的信息：
+  -  物理运算符，用于实现由逻辑运算符描述的操作。 
+  -  这些运算符的顺序，用于确定访问、筛选和聚合数据的顺序。 
+  -  流经操作符的预计行数。 
+  
+     > [!NOTE]
+     > 在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的较新版本中，还将存储有关用于[基数估算](../relational-databases/performance/cardinality-estimation-sql-server.md)的统计信息对象的信息。
+     
+  -  必须创建的支持对象，例如[工作表](#worktables)或 tempdb 中的工作文件。 
+  查询计划中不存储用户上下文或运行时信息。 内存中查询计划副本永远不超过两个：一个副本用于所有的串行执行，另一个用于所有的并行执行。 并行副本覆盖所有的并行执行，与并行执行的并行度无关。   
+  
 - **执行上下文**     
-  每个正在执行查询的用户都有一个包含其执行专用数据（如参数值）的数据结构。 此数据结构称为执行上下文。 执行上下文数据结构可以重新使用。 如果用户执行查询而其中的一个结构未使用，将会用新用户的上下文重新初始化该结构。 
+  每个正在执行查询的用户都有一个包含其执行专用数据（如参数值）的数据结构。 此数据结构称为执行上下文。 执行上下文数据结构会重新使用，但其内容不会。 如果其他用户执行相同的查询，则会为新用户重新初始化上下文数据结构。 
 
-![execution_context](../relational-databases/media/execution-context.gif)
-
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中执行任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句时，关系引擎将首先查看计划缓存，以确认是否存在用于同一 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的现有执行计划。 如果 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与先前根据缓存计划执行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的每个字符完全匹配，则该语句符合现有条件。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会重用使用找到的任何现有计划，从而节省重新编译 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的开销。 如果没有现有执行计划，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将为查询生成新的执行计划。
+  ![execution_context](../relational-databases/media/execution-context.gif)
 
 > [!NOTE]
-> 有些 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句未缓存，如在行存储上运行大容量操作语句或包含大于 8 KB 的字符串文字的语句。
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三个选项可用于显示执行计划：        
+> -  ***[估计的执行计划](../relational-databases/performance/display-the-estimated-execution-plan.md)***，这是编译的计划。        
+> -  ***[实际执行计划](../relational-databases/performance/display-an-actual-execution-plan.md)***，该计划与编译的计划及其执行上下文相同。 这包括在执行完成之后可用的运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。        
+> -  ***[实时查询统计信息](../relational-databases/performance/live-query-statistics.md)***，这与编译的计划及其执行上下文相同。 这包括执行过程中的运行时信息，每秒更新一次。 例如，运行时信息包括流经操作符的实际行数。       
+
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中执行任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句时，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 将首先查看计划缓存，以确认是否存在用于同一 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的现有执行计划。 如果 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与先前根据缓存计划执行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的每个字符完全匹配，则该语句符合现有条件。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会重用使用找到的任何现有计划，从而节省重新编译 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的开销。 如果没有执行计划，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将为查询生成新的执行计划。
+
+> [!NOTE]
+> 有些 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的执行计划未保留在计划缓存中，如在行存储上运行的大容量操作语句或包含大于 8 KB 的字符串文字的语句。 这些计划仅在执行查询时存在。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一个高效的算法，可查找用于任何特定 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的现有执行计划。 在大多数系统中，这种扫描所使用的最小资源比通过重新使用现有计划而不是编译每个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句所节省的资源要少。
 
-该算法将新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与缓存内现有的未用执行计划相匹配，并要求所有的对象引用完全限定。 例如，假定 `Person` 是用户执行以下 `SELECT` 语句的默认架构。 虽然在此示例中不需要 `Person` 表完全限定执行，但这意味着第二个语句与现有计划不匹配，但第三个语句匹配：
+该算法将新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与计划缓存内现有的未用执行计划相匹配，并要求完全限定所有对象引用。 例如，假定 `Person` 是用户执行以下 `SELECT` 语句的默认架构。 虽然在此示例中不需要 `Person` 表完全限定执行，但这意味着第二个语句与现有计划不匹配，但第三个语句匹配：
 
 ```sql
+USE AdventureWorks2014;
+GO
 SELECT * FROM Person;
 GO
 SELECT * FROM Person.Person;
@@ -444,8 +474,154 @@ SELECT * FROM Person.Person;
 GO
 ```
 
-### <a name="removing-execution-plans-from-the-plan-cache"></a>从计划缓存中删除执行计划
+对于给定的执行，更改以下任意 SET 选项都将影响重用计划的能力，因为 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 执行[恒定折叠](#ConstantFolding)并且这些选项会影响此类表达式的结果：
 
+|||   
+|-----------|------------|------------|    
+|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
+|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
+|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
+|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
+|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+
+### <a name="caching-multiple-plans-for-the-same-query"></a>为同一个查询缓存多个计划 
+查询和执行计划在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中是唯一可识别的，与指纹非常类似：
+-  “查询计划哈希”是在给定查询的执行计划上计算的二进制哈希值，用于唯一标识类似的执行计划  。 
+-  “查询哈希”是在查询的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本上计算出的二进制哈希值，用于唯一标识查询  。 
+
+可以使用“计划句柄”从计划缓存中检索已编译的计划  ，该句柄是仅当计划保留在缓存中时才保持不变的暂时性标识符。 计划句柄是派生自整个批处理的已编译计划的一个哈希值。 即使批处理中的一个或多个语句重新编译，编译计划的计划句柄仍保持不变。
+
+> [!NOTE]
+> 如果为批处理而不是单个语句编译了某个计划，则可以使用计划句柄和语句偏移来检索批处理中单个语句的计划。     
+> `sys.dm_exec_requests` DMV 包含每条记录的 `statement_start_offset` 和 `statement_end_offset` 列，它们表示当前正在执行的批处理或持久化对象的当前执行语句。 有关详细信息，请参阅 [sys.databases dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。       
+> `sys.dm_exec_query_stats` DMV 同样包含每条记录中的这些列，它们引用语句在批处理或持久对象中的位置。 有关详细信息，请参阅 [sys.databases dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)。     
+
+批处理的实际 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本存储在单独的内存空间中，该位置与计划缓存，即 SQL Manager 缓存 (SQLMGR) 的存储位置不同  。 使用 SQL 句柄  ，可以从 SQL Manager 缓存检索已编译计划的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本，这是一个暂时性标识符，仅当至少有一个引用它的计划保留在计划缓存中时，它才保持不变。 SQL 句柄是派生自整个批处理文本的哈希值，并且保证对于每个批处理都唯一。
+
+> [!NOTE]
+> 与已编译的计划一样，[!INCLUDE[tsql](../includes/tsql-md.md)] 文本会按批存储，包括注释。 SQL 句柄包含整个批处理文本的 MD5 哈希，并且保证对于每个批处理都唯一。
+
+以下查询提供了有关 SQL Manager 缓存的内存使用情况的信息：
+
+```sql
+SELECT * FROM sys.dm_os_memory_objects
+WHERE type = 'MEMOBJ_SQLMGR';
+```
+
+SQL 句柄和计划句柄之间存在 1:N 的关系。 如果已编译计划的缓存键不同，则会发生这种情况。 出现此情况的原因可能是，在两次执行相同批处理的 SET 选项中发生了更改。
+
+请思考以下存储过程：
+
+```sql
+USE WideWorldImporters;
+GO
+CREATE PROCEDURE usp_SalesByCustomer @CID int
+AS
+SELECT * FROM Sales.Customers
+WHERE CustomerID = @CID
+GO
+
+SET ANSI_DEFAULTS ON
+GO
+
+EXEC usp_SalesByCustomer 10
+GO
+```
+
+使用以下查询验证在计划缓存中可以找到的内容：
+
+```sql
+SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
+    qs.query_plan_hash, qs.query_hash,
+    qs.plan_handle, qs.sql_handle
+FROM sys.dm_exec_cached_plans AS cp
+CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
+CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
+INNER JOIN sys.dm_exec_query_stats AS qs ON qs.plan_handle = cp.plan_handle
+WHERE text LIKE '%usp_SalesByCustomer%'
+GO
+```
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+现在使用其他参数执行存储过程，但不要对执行上下文做出其他更改：
+
+```sql
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+再次验证可在计划缓存中找到的内容。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+请注意，`usecounts` 已增加到 2，这意味着相同的缓存计划以原方式重新使用，因为重用了执行上下文数据结构。 现在，请更改 `SET ANSI_DEFAULTS` 选项，并使用相同的参数执行存储过程。
+
+```sql
+SET ANSI_DEFAULTS OFF
+GO
+
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+再次验证可在计划缓存中找到的内容。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02B031F111CD01000001000000000000000000000000000000000000000000000000000000
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+请注意，`sys.dm_exec_cached_plans` DMV 输出中现在有两个条目：
+-  `usecounts` 列在第一条记录中显示值 `1`，该记录是使用 `SET ANSI_DEFAULTS OFF` 执行一次的计划。
+-  `usecounts` 列在第二条记录中显示值 `2`，该记录是使用 `SET ANSI_DEFAULTS ON` 执行的计划，因为它执行了两次。    
+-  不同的 `memory_object_address` 会引用计划缓存中不同的执行计划条目。 但是，这两个条目的 `sql_handle` 值相同，因为它们引用相同的批。 
+   -  将 `ANSI_DEFAULTS` 设置为 OFF 的执行具有新的 `plan_handle`，并且它可用于对具有一组相同的 SET 选项的调用。 新的计划句柄是必需的，因为由于 SET 选项已更改，执行上下文已重新初始化。 但这并不会触发重新编译：这两个条目引用相同的计划和查询，相同的 `query_plan_hash` 和 `query_hash` 值可证明。
+
+这实际上意味着，在缓存中有两个对应于同一个批处理的计划条目，并且它强调了有必要在重复执行相同的查询时，确保影响 SET 选项的计划缓存相同，以优化计划重用，并使计划缓存大小保持在所需的最小值。 
+
+> [!TIP]
+> 有一个常见的隐患，即不同的客户端可能具有不同的 SET 选项默认值。 例如，通过 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 建立的连接会自动将 `QUOTED_IDENTIFIER` 设置为 ON，而 SQLCMD 会将 `QUOTED_IDENTIFIER` 设置为 OFF。 从这两个客户端执行相同的查询将产生多个计划（如上面的示例中所述）。
+
+### <a name="removing-execution-plans-from-the-plan-cache"></a>从计划缓存中删除执行计划
 只要计划缓存中有足够的存储空间，执行计划就会保留在其中。 当存在内存不足的情况时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将使用基于开销的方法来确定从计划缓存中删除哪些执行计划。 要做出基于开销的决策，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将根据以下因素对每个执行计划增加和降低当前开销变量。
 
 当某个用户进程将执行计划插入缓存中时，该用户进程会将当前开销设置为等于原始查询编译开销；对于即席执行计划，该用户进程会将当前开销设置为零。 以后，用户进程每次引用执行计划时，都会将当前开销重置为原始编译开销；对于即席执行计划，用户进程会增加当前开销。 对于所有计划而言，当前开销的最大值就是原始编译开销。
@@ -503,14 +679,13 @@ GO
 
 > [!NOTE]
 > 在 xEvents 不可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 探查器 [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 跟踪事件同样可用于报告语句级重新编译。
-> 跟踪事件 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) 也报告语句级重新编译，并且此跟踪事件还可用于跟踪和调试重新编译。 SP:Recompile 仅针对存储过程和触发器生成，而 `SQL:StmtRecompile` 则针对存储过程、触发器、即席批处理、使用 `sp_executesql` 执行的批处理、预定义查询和动态 SQL 生成。
+> 跟踪事件 `SQL:StmtRecompile` 也报告语句级重新编译，并且此跟踪事件还可用于跟踪和调试重新编译。 `SP:Recompile` 仅针对存储过程和触发器生成，而 `SQL:StmtRecompile` 则针对存储过程、触发器、即席批查询、使用 `sp_executesql`执行的批处理、预定义查询和动态 SQL 生成。
 > `SP:Recompile` 和 `SQL:StmtRecompile` 的 EventSubClass 列都包含一个整数代码，用以指明重新编译的原因  。 [此处](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)对代码进行了说明。
 
 > [!NOTE]
 > 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `ON` 时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `OFF` 时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在低于 2005 版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
 
 ### <a name="PlanReuse"></a>参数和执行计划的重复使用
-
 使用参数（包括 ADO、OLE DB 和 ODBC 应用程序中的参数标记）有助于重用执行计划。 
 
 > [!WARNING] 
@@ -579,7 +754,6 @@ WHERE AddressID = 1 + 2;
 但根据简单参数化规则，可以将该查询参数化。 尝试强制参数化失败后，仍将接着尝试简单参数化。
 
 ### <a name="SimpleParam"></a>简单参数化
-
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，在 Transact-SQL 语句中使用参数或参数标记可以提高关系引擎将新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与现有的、以前编译的执行计划相匹配的能力。
 
 > [!WARNING] 
@@ -615,7 +789,6 @@ WHERE ProductSubcategoryID = 4;
 您也可以指定对单个查询以及其他在语法上等效，只有参数值不同的查询进行参数化。 
 
 ### <a name="ForcedParam"></a>强制参数化
-
 通过指定将数据库中的所有 `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 语句参数化，可以覆盖 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认简单参数化行为（但会受到某些限制）。 通过在 `PARAMETERIZATION` 语句中将 `FORCED` 选项设置为 `ALTER DATABASE` 可以启用强制参数化。 强制参数化通过降低查询编译和重新编译的频率，可以提高某些数据库的性能。 能够通过强制参数化受益的数据库通常是需要处理来自源（例如，销售点应用程序）的大量并发查询的数据库。
 
 当 `PARAMETERIZATION` 选项设置为 `FORCED`时， `SELECT`、 `INSERT`、 `UPDATE`或 `DELETE` 语句中出现的任何文本值（无论以什么形式提交）都将在查询编译期间转换为参数。 但下列查询构造中出现的文本例外： 
@@ -654,7 +827,6 @@ WHERE ProductSubcategoryID = 4;
 > 参数名称是任意的。 用户或应用程序不必拘泥于特定的命名顺序。 此外，以下内容可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和 Service Pack 升级版之间进行更改：参数名称、参数化文字的选择以及参数化文本中的间距。
 
 #### <a name="data-types-of-parameters"></a>参数数据类型
-
 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 参数化文本时，参数将转换为下列数据类型：
 
 * 其大小适合 int 数据类型的整数文本将参数化为 int。对于较大的整数文本，如果它是包含任意比较运算符（包括 <、\<=、=、!=、>、>=、!\<、!>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`）的谓词的组成部分，则将这些文本参数化为 numeric(38,0)。 如果它不是包含比较运算符的谓词的组成部分，则此类文本将参数化为数字，其精度仅够表示其大小，并且没有小数位。
@@ -666,7 +838,6 @@ WHERE ProductSubcategoryID = 4;
 * Money 类型的文本，将参数化为 money。
 
 #### <a name="ForcedParamGuide"></a>强制参数化使用指南
-
 当把 `PARAMETERIZATION` 选项设置为 FORCED 时考虑以下事项：
 
 * 强制参数化实际上是在对查询进行编译时将查询中的文本常量更改为参数。 因此，查询优化器可能会选择不太理想的查询计划。 尤其是查询优化器不太可能将查询与索引视图或计算列索引相匹配。 它还可能会选择对分区表和分布式分区视图执行的不太理想的查询计划。 强制参数化不能用于高度依赖索引视图和计算列索引的环境。 通常， `PARAMETERIZATION FORCED` 选项应仅供有经验的数据库管理员在确定这样做不会对性能产生负面影响之后使用。
@@ -681,7 +852,6 @@ WHERE ProductSubcategoryID = 4;
 > `PARAMETERIZATION` 选项设置为 `FORCED` 时，错误消息的报告可能与 `PARAMETERIZATION` 选项设置为 `SIMPLE` 时不一样：在强制参数化下可以报告多条错误消息，而在简单参数化下可能报告的消息条数较少，因此可能无法准确报告出现错误的行号。
 
 ### <a name="preparing-sql-statements"></a>准备 SQL 语句
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 关系引擎完全支持在执行 SQL 语句前准备 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。 如果应用程序需要多次执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，可以使用数据库 API 来执行下列操作： 
 
 * 准备一次语句。 这将 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句编译为执行计划。
@@ -734,7 +904,6 @@ WHERE ProductID = 63;
 > 对于使用 `RECOMPILE` 提示的查询，将探查参数值和局部变量的当前值。 探查的参数值和局部变量值在批处理中所处的位置刚好就在具有 `RECOMPILE` 提示的语句前面。 特别的是，对于参数，不会探查随批处理调用而出现的值。
 
 ## <a name="parallel-query-processing"></a>并行查询处理
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为具有多个微处理器 (CPU) 的计算机提供了并行查询，以优化查询执行和索引操作。 由于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用多个操作系统工作线程并行执行查询或索引操作，因此可以快速有效地完成操作。
 
 在查询优化过程中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将查找可能会受益于并行执行的查询或索引操作。 对于这些查询，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将交换运算符插入查询执行计划中，以便为查询的并行执行做准备。 交换运算符是在查询执行计划中提供进程管理、数据再分发和流控制的运算符。 交换运算符包含作为子类型的 `Distribute Streams`、 `Repartition Streams`和 `Gather Streams` 逻辑运算符，其中的一个或多个运算符会出现在并行查询的查询计划的显示计划输出中。 
@@ -766,23 +935,22 @@ WHERE ProductID = 63;
 * 查询包含无法并行运行的标量运算符或关系运算符。 某些运算符可能会导致查询计划的一部分以串行模式运行，或者导致整个计划以串行模式运行。
 
 ### <a name="DOP"></a>并行度
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 自动检测每个并行查询执行或索引数据定义语言 (DDL) 操作实例的最佳并行度。 此操作所依据的条件如下： 
 
 1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否运行在具有多个微处理器或 CPU 的计算机（例如对称多处理计算机，即 SMP）上。  
-  只有具有多个 CPU 的计算机才能使用并行查询。 
+   只有具有多个 CPU 的计算机才能使用并行查询。 
 
 2. 可用的工作线程是否足够。  
-  每个查询或索引操作均要求一定数量的工作线程才能执行。 执行并行计划比执行串行计划需要更多的工作线程，所需工作线程数会随着并行度的提高而增加。 无法满足特定并行度的并行计划的工作线程要求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将自动减少并行度或完全放弃指定的工作负荷上下文中的并行计划。 然后执行串行计划（一个工作线程）。 
+   每个查询或索引操作均要求一定数量的工作线程才能执行。 执行并行计划比执行串行计划需要更多的工作线程，所需工作线程数会随着并行度的提高而增加。 无法满足特定并行度的并行计划的工作线程要求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将自动减少并行度或完全放弃指定的工作负荷上下文中的并行计划。 然后执行串行计划（一个工作线程）。 
 
 3. 所执行的查询或索引操作的类型。  
-  创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 会将执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)进行比较。 如果适合性测试发现其他值更适合正在运行的工作负载，用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 更改默认值 5。 
+   创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 会将执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)进行比较。 如果适合性测试发现其他值更适合正在运行的工作负载，用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 更改默认值 5。 
 
 4. 待处理的行数是否足够。  
-  如果查询优化器确定行数太少，则不引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
+   如果查询优化器确定行数太少，则不引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
 
 5. 当前的分发内容统计信息是否可用。  
-  如果不能达到最高并行度，则在放弃并行计划之前会考虑较低的并行度。  
+   如果不能达到最高并行度，则在放弃并行计划之前会考虑较低的并行度。  
   例如，创建视图的聚集索引后，将无法评估分发内容统计信息，因为聚集索引仍不存在。 在此情况下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]无法为索引操作提供最高并行度。 不过，某些运算符（例如，排序和扫描）仍能从并行执行中获益。
 
 > [!NOTE]
@@ -795,7 +963,6 @@ WHERE ProductID = 63;
 并行执行计划可以填充静态和由键集驱动的游标。 然而，只有串行执行可以提供动态游标行为。 查询优化器始终为查询生成串行执行计划，这是动态游标的一部分。
 
 #### <a name="overriding-degrees-of-parallelism"></a>覆盖并行度
-
 可以使用[最大并行度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) 服务器配置选项（[!INCLUDE[ssSDS_md](../includes/sssds-md.md)] 上的 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)）来限制并行计划执行中使用的处理器数。 通过指定 MAXDOP 查询提示或 MAXDOP 索引选项，可以用单独查询和索引操作语句来覆盖最大并行度选项。 MAXDOP 提供对单独查询和索引操作的详细控制。 例如，可以使用 MAXDOP 选项来控制（增加或减少）联机索引操作的专用处理器数。 通过这种方式，您就可以在并发用户间平衡索引操作所使用的资源。 
 
 将“最大并行度”选项设置为 0 (默认值) 可使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在执行并行计划时使用所有可用的处理器（最多可达 64 台处理器）。 尽管 MAXDOP 选项设置为 0 时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将运行时目标设置为 64 个逻辑处理器，但如果需要，可以手动设置不同的值。 针对查询和索引将 MAXDOP 选项设置为 0 时，将允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在并行计划执行中针对给定的查询或索引使用所有可用的处理器（最多可达 64 个处理器）。 MAXDOP 并不是所有并行查询的强制值，而是所有符合并行性要求的查询的暂定目标值。 这意味着如果在运行时没有足够的可用工作线程，查询可能会以比 MAXDOP 服务器配置选项更低的并行度执行。
@@ -803,7 +970,6 @@ WHERE ProductID = 63;
 请参阅 [Microsoft 支持文章](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)，了解有关配置 MAXDOP 的最佳实践。
 
 ### <a name="parallel-query-example"></a>并行查询示例
-
 以下查询计算指定季度（自 2000 年 4 月 1 日开始）内下的订单数，其中至少有一个订单项的客户接收日期晚于提交日期。 该查询列出这类订单的计数，按每个订单的优先级分组并按优先级升序排序。 
 
 下例使用理论表名和列名。
@@ -913,7 +1079,6 @@ Index Seek 运算符上面的 parallelism 运算符正在使用 `O_ORDERKEY` 的
 个别 `CREATE TABLE` 或 `ALTER TABLE` 语句可以有多个要求创建索引的约束。 这些多个索引创建操作连续执行，但每个单独的索引创建操作可以是具有多个 CPU 的计算机上的并行操作。
 
 ## <a name="distributed-query-architecture"></a>分布式查询体系结构
-
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种方法在 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中引用异类 OLE DB 数据源：
 
 * 链接服务器名称  
@@ -1013,16 +1178,15 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="partitioned-attribute"></a>Partitioned 属性
 
-对已分区表或已分区索引执行某个运算符（例如 `Index Seek` ）时， `Partitioned` 属性将出现在编译时和运行时计划中并设置为 `True` (1)。 设为 `False` (0) 时将不会显示该属性。
+对已分区表或已分区索引执行某个运算符（例如 Index Seek ）时，`Partitioned` 属性将出现在编译时和运行时计划中并设置为 `True` (1)。 设为 `False` (0) 时将不会显示该属性。
 
 `Partitioned` 属性可以出现在以下物理和逻辑运算符中：  
-* `Table Scan`  
-* `Index Scan`  
-* `Index Seek`  
-* `Insert`  
-* `Update`  
-* `Delete`  
-* `Merge`  
+|||
+|--------|--------|
+|Table Scan|Index Scan|
+|Index Seek|插入|
+|更新|删除|
+|合并||
 
 如上图所示，该属性显示在包含其定义的运算符的属性中。 在 XML 显示计划输出中，该属性在包含其定义的运算符的 `Partitioned="1"` 节点中显示为 `RelOp` 。
 

@@ -1,5 +1,5 @@
 ---
-title: 添加外部图像（报表生成器和 SSRS）| Microsoft Docs
+title: 添加外部图像（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ac0bc269bfe0b7b443270fcc0eb6bdcc3e09a40
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 37c8cd4ae726484c36d1ec31b94312d9ff36dfa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582107"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080641"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>添加外部图像（报表生成器和 SSRS）
   外部图像可在本机模式或 SharePoint 集成模式下处于报表服务器上，或者可处于任何其他网站上。 当您在报表中包括外部图像时，必须验证图像是否存在以及报表读取器是否拥有访问图像的权限。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "65582107"
   
      对于在本机模式下的报表服务器上的图像，在“使用此图像”框中键入图像的相对路径，例如 ../images/image1.jpg  。  
   
-     对于 SharePoint 集成模式下报表服务器上的图像，或者任何其他网站上的图像，在“使用此图像”框中键入图像的完整 URL，例如 https://**SharePointservername>/** site>/Documents/images/image1.jpg\<\<。  
+     对于 SharePoint 集成模式下报表服务器上的图像，或者任何其他网站上的图像，在“使用此图像”框中键入图像的完整 URL，例如 https://\<SharePointservername>/\<site>/Documents/images/image1.jpg  。  
   
      有关详细信息，请参阅[指定外部项的路径（报表生成器和 SSRS）](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   

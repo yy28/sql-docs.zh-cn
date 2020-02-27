@@ -1,5 +1,5 @@
 ---
-title: 向报表添加书签（报表生成器和 SSRS）| Microsoft Docs
+title: 向报表添加书签（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 176d4318cad92d74fb7bfdeeadab5e9690843458
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e95f4fc90e35668270f9a126f284f0b9aef1f107
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582247"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080810"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>向报表添加书签（报表生成器和 SSRS）
   若要在报表中提供自定义目录或自定义内部导航链接，可以向报表中添加书签或书签链接。 通常情况下，如果要引导用户到报表中的某一位置，例如表、图表以及表或矩阵中显示的唯一组值，可以向该位置添加书签。 可以创建用作书签的字符串；或者，对于组而言，可以将书签设置为组表达式。  

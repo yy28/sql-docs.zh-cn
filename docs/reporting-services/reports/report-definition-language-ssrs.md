@@ -1,5 +1,5 @@
 ---
-title: 报表定义语言 (SSRS) | Microsoft Docs
+title: 报表定义语言 |Microsoft Docs
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25a6872cd74faae521f9687d20d54541ef1798a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cd2d8f74169c8adcbf2862b9dcf5a442d5691c81
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580001"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078020"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
   报表定义语言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义的 XML 表示形式。 报表定义包含报表的数据检索和布局信息。 RDL 由 XML 元素组成，这些元素符合为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建的 XML 语法。 通过访问报表定义文件中的代码程序集，可以添加您自己的自定义函数，以便控制报表项值、样式和格式。  
@@ -41,7 +41,7 @@ ms.locfileid: "65580001"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 架构定义  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义语言 (RDL) 文件使用 XML 架构定义 (XSD) 文件进行验证。 架构定义 RDL 元素可在 .rdl 文件中什么位置出现的规则。 元素包括其数据类型和基数，即允许的出现次数。 元素可以是简单的，也可以是复杂的。 简单元素没有子元素或属性。 复杂元素具有子元素以及可选具有属性。  
   
- 例如，此架构包含 RDL 元素 **ReportParameters**，它为复杂类型 **ReportParametersType**。 根据约定，元素的复杂类型是元素名称后跟单词 **Type**。 **ReportParameters** 元素可包含在 **报表** 元素（复杂类型）中，并可包含 **ReportParameter** 元素。 ReportParameterType 是一种简单类型，只能为下列某个值：Boolean、DateTime、Integer、Float 或 String。 有关 XML 架构数据类型的详细信息，请参阅 [XML Schema Part 2:Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)（XML 架构第 2 部分：数据类型第二版）。  
+ 例如，此架构包含 RDL 元素 **ReportParameters**，它为复杂类型 **ReportParametersType**。 根据约定，元素的复杂类型是元素名称后跟单词 **Type**。 **ReportParameters** 元素可包含在 **报表** 元素（复杂类型）中，并可包含 **ReportParameter** 元素。 ReportParameterType 是一种简单类型，只能为下列某个值  ：Boolean、DateTime、Integer、Float 或 String      。 有关 XML 架构数据类型的详细信息，请参阅 [XML Schema Part 2:Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)（XML 架构第 2 部分：数据类型第二版）。  
   
  可在 ReportDefinition.xsd 文件中找到 RDL XSD，该文件位于产品 CD-ROM 的 Extras 文件夹中。 此外，还可通过以下 URL 在报表服务器上获取：`https://servername/reportserver/reportdefinition.xsd`。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65580001"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供用于生成 RDL 文件的多种工具。 有关详细信息，请参阅 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
- 从应用程序生成 RDL 的一种最简便方式是使用 <xref:System.Xml> 命名空间和 <xref:System.Linq> 命名空间的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类。 尤其是可以使用 **XmlTextWriter** 类编写 RDL。 使用 **XmlTextWriter**，可以在任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应用程序中从头到尾生成完整的报表定义。 开发人员还可以通过添加具有自定义属性的自定义报表项来扩展 RDL。 有关 XmlTextWriter 类和 <xref:System.Xml> 命名空间的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发人员指南。 有关语言集成查询 (LINQ) 的详细信息，请在 MSDN 上搜索 "LINQ to XML"。  
+ 从应用程序生成 RDL 的一种最简便方式是使用 <xref:System.Xml> 命名空间和 <xref:System.Linq> 命名空间的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类。 尤其是可以使用 **XmlTextWriter** 类编写 RDL。 使用 **XmlTextWriter**，可以在任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应用程序中从头到尾生成完整的报表定义。 开发人员还可以通过添加具有自定义属性的自定义报表项来扩展 RDL。 有关 XmlTextWriter  类和 <xref:System.Xml> 命名空间的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发人员指南。 有关语言集成查询 (LINQ) 的详细信息，请在 MSDN 上搜索 "LINQ to XML"。  
   
  报表定义文件的标准文件扩展名为 .rdl。 还可以开发具有扩展名 .rdlc 的客户端报表定义文件。 两种扩展名的 MIME 类型都为 text/xml。 有关报表的详细信息，请参阅 [Reporting Services 报表 &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)。  
   

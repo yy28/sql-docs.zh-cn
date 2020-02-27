@@ -1,5 +1,5 @@
 ---
-title: 常用筛选器（报表生成器和 SSRS）| Microsoft Docs
+title: 常用筛选器（报表生成器）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0757982d8e1e758a771d7ccdf880c88576f980f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581582"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082306"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用筛选器（报表生成器和 SSRS）
   若要创建筛选器，必须指定一个或多个筛选器公式。 筛选器公式包括表达式、数据类型、运算符和值。 本主题提供了常用筛选器的示例。  

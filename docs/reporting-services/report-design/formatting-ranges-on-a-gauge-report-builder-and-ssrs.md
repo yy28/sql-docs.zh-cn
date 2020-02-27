@@ -1,5 +1,5 @@
 ---
-title: 设置仪表上范围的格式（报表生成器和 SSRS）| Microsoft Docs
+title: 设置仪表范围格式（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eebf7f66e968ec2c7c3d0dcca168eb79fbbc3797
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1540979cedf5fc77675e7bca3036ddd6524bcc8e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575593"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079650"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上范围的格式（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表范围是仪表刻度上的带区或区域，用于指示仪表上一段重要的值。 使用仪表范围，能以可见方式指示指针值何时进入某个值范围。 范围由开始值和结束值定义。  

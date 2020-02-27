@@ -1,5 +1,5 @@
 ---
-title: 地图向导和地图层向导（报表生成器和 SSRS）| Microsoft Docs
+title: 地图向导和地图层向导（报表生成器）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66499884"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078571"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  

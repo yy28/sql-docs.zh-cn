@@ -1,6 +1,6 @@
 ---
 title: 访问外部数据：ODBC 泛型类型 - PolyBase
-ms.date: 12/13/2019
+ms.date: 02/19/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,38 +9,40 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5017dc54a1e7858786413b2fcc164e4949f77646
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ddee333a437ca7250252fb3938ee248bb28269f3
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255421"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507571"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>配置 PolyBase 以访问 SQL Server 中的外部数据
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-借助 SQL Server 2019 中的 PolyBase，可通过 ODBC 连接器连接到兼容 ODBC 的数据源。 
+借助 SQL Server 2019 中的 PolyBase，可通过 ODBC 连接器连接到兼容 ODBC 的数据源。
+
+本文提供了一些使用 ODBC 驱动程序的示例。 请向 ODBC 提供程序获取具体的示例。 参考数据源的 ODBC 驱动程序文档来确定适当的连接字符串选项。 本文中的示例可能不适用于任何特定的 ODBC 驱动程序。
 
 ## <a name="prerequisites"></a>必备条件
 
-请注意，= 功能仅适用于 Windows 上的 SQL Server。 
+>[!NOTE]
+>此功能需要 Windows 上的 SQL Server。
 
-如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。
+* [PolyBase 安装](polybase-installation.md)。
 
- 在创建数据库范围凭据之前，必须先创建[主密钥](../../t-sql/statements/create-master-key-transact-sql.md)。 
+* 在创建数据库范围凭据之前，必须先创建[主密钥](../../t-sql/statements/create-master-key-transact-sql.md)。
 
-首先，在每个 PolyBase 节点上下载并安装要连接的数据源的 ODBC 驱动程序。 正确安装驱动程序后，从“ODBC 数据源管理器”查看和测试该驱动程序。
+## <a name="install-the-odbc-driver"></a>安装 ODBC 驱动程序
+
+首先，在每个 PolyBase 节点上下载并安装要连接的数据源的 ODBC 驱动程序。 正确安装驱动程序后，从“ODBC 数据源管理器”查看和测试该驱动程序  。
 
 ![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-> **重要说明！**
-> 
-> 为提高查询性能，请确保驱动程序已启用连接池。 可通过“ODBC 数据源管理器”完成此操作。
-> 
-> **注意**
-> 
-> 在下述步骤 3 中创建外部数据源时，需指定驱动程序的名称（上面圈出的示例）。
+在以上的示例中，驱动程序的名称用红圈圈出。 创建外部数据源时，请使用此名称。
+
+> [!IMPORTANT]
+> 若要提高查询性能，请启用连接池。 可通过“ODBC 数据源管理器”完成此操作  。
 
 ## <a name="create-an-external-table"></a>创建外部表
 
@@ -48,46 +50,60 @@ ms.locfileid: "75255421"
 
 此部分中使用了以下 Transact-SQL 命令：
 
-- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
-- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
+* [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. 创建数据库范围凭据以访问 ODBC 数据源。
 
     ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source. 
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
+    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    ```
+
+    例如，以下示例创建一个名为 `credential_name` 的凭据，具有一个 `username` 标识和一个复杂密码。
+
+    ```sql
+    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'BycA4ZjrE#*2W%!';
     ```
 
 1. 使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 创建外部数据源。
 
     ```sql
-    /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *CONNECTION_OPTIONS: Specify driver location
-    *  CREDENTIAL: the database scoped credential, created above.
-    */  
-    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    CREATE EXTERNAL DATA SOURCE <external_data_source_name>
     WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
     CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
     ServerNode = <name of server  address>:<Port>',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = credential_nam );
+    -- PUSHDOWN = [ON] | OFF,
+    CREDENTIAL = <credential_name> );
+    ```
+
+    以下的示例创建一个外部数据源：
+    * 命名为 `external_data_source_name`
+    * 位于 ODBC `SERVERNAME` 和端口 `4444`
+    * 与 `CData ODBC Driver For SAP 2015` 连接 - 这是在[安装 ODBC 驱动程序](#install-the-odbc-driver)下创建的驱动程序
+    * 在 `ServerNode` `sap_server_node` 端口 `5555` 上
+    * 配置进行下推到服务器的处理（`PUSHDOWN = ON`）
+    * 使用 `credential_name` 凭据
+
+    ```sql
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH ( LOCATION = odbc://SERVERNAME:4444,
+    CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
+    ServerNode = sap_server_node:5555',
+    PUSHDOWN = ON,
+    CREDENTIAL = credential_name );
     ```
 
 1. **可选：** 在外部表上创建统计信息。
 
-为了获得最佳查询性能，建议在外部表列上创建统计信息，尤其是用于联接、筛选和聚合的统计信息。
+    为了获得最佳查询性能，建议在外部表列上创建统计信息，尤其是用于联接、筛选和聚合的统计信息。
 
     ```sql
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
     ```
 
->[!IMPORTANT] 
->创建外部数据源后，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令在该数据源上创建可查询的表。 
+>[!IMPORTANT]
+>创建外部数据源后，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令在该数据源上创建可查询的表。
 
 ## <a name="next-steps"></a>后续步骤
 

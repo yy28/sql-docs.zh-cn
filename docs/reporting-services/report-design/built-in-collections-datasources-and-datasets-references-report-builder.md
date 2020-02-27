@@ -1,5 +1,5 @@
 ---
-title: DataSources 和 DataSets 集合引用（报表生成器和 SSRS）| Microsoft Docs
+title: DataSources 和 DataSets 集合参考（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 930dfe2773b72723c2b8dc8571272847bb0d62d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581809"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081460"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>内置集合 - 数据源和数据集引用（报表生成器）
   **DataSources** 集合表示在报表中使用的所有数据源。 同样， **DataSets** 集合表示报表中所有数据源的所有数据集。 使用 **“报表数据”** 窗格显示报表数据集的层次结构视图，报表数据集按照它们所引用的数据源组织。 如果这些集合中包含引用，则在预览报表时将不会看到值。 这些集合只有在将报表发布到报表服务器之后才可用。  

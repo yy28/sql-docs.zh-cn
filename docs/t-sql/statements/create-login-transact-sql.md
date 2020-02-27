@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7fe202e213f200dcf98a7f0479c29451d36b8a8f
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952352"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255971"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -406,7 +406,7 @@ FROM EXTERNAL PROVIDER </br>
 
 PASSWORD =  'password  ' 指定正在创建的 SQL 登录名的密码。 请使用强密码。 有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)和[密码策略](../../relational-databases/security/password-policy.md)。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。
 
-密码是区分大小写的。 密码应始终至少包含八个字符，并且不能超过 128 个字符。 密码可以包含 a-z、A-Z、0-9 和大多数非字母数字字符。 密码不能包含单引号或 login_name  。
+密码是区分大小写的。 密码应始终至少包含十个字符，并且不能超过 128 个字符。 密码可以包含 a-z、A-Z、0-9 和大多数非字母数字字符。 密码不能包含单引号或 login_name  。
 
 SID **=** *sid* 用于重新创建登录名。 仅适用于 SQL Server 身份验证登录名。 指定新 SQL Server 身份验证登录的 SID。 如果未使用此选项，SQL Server 将自动分配 SID。 SID 结构取决于 SQL Server 版本。 对于 SQL 数据库，这是包含 `0x01060000000000640000000000000000` 的 32 字节 (binary(32)) 文本以及表示 GUID 的 16 个字节  。 例如，`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
 

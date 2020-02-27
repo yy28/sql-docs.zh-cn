@@ -1,5 +1,5 @@
 ---
-title: 导出到 PDF 文件（报表生成器和 SSRS）| Microsoft Docs
+title: 导出到 PDF 文件（报表生成器）| Microsoft Docs
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff2c93000c1b5f0e9d01a3204858717640733228
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580790"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078266"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>导出到 PDF 文件（报表生成器和 SSRS）
   PDF 呈现扩展插件可将 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表呈现为可在 Adobe Acrobat 和其他支持 PDF 1.3 的第三方 PDF 查看器中打开的文件。 尽管 PDF 1.3 与 Adobe Acrobat 4.0 及更高版本兼容，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持 Adobe Acrobat 11.0 或更高版本。 呈现扩展插件不需要使用 Adobe 软件呈现报表。 不过，该插件需要使用 PDF 查看器（例如 Adobe Acrobat）才可查看或打印 PDF 格式的报表。  

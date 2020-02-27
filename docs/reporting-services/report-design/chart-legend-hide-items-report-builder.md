@@ -1,5 +1,5 @@
 ---
-title: 隐藏图表上的图例项（报表生成器和 SSRS）| Microsoft Docs
+title: 隐藏图表上的图例项（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b7c4982d60631f3549f521f8e65b6130e10cf39a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 784258433329832bbff3f8737086ef906eecfd64
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581632"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081328"
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>图表图例 - 隐藏项（报表生成器）
 默认情况下，添加到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的非形状图的任何序列将在图例中添加为图例项。 对于饼图、圆环图、漏斗图和棱锥图，添加到图表的任何序列将在图例中添加单个数据点。  

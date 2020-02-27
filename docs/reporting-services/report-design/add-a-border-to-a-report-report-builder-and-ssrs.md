@@ -1,5 +1,5 @@
 ---
-title: 向报表添加边框（报表生成器和 SSRS）| Microsoft Docs
+title: 向报表添加边框（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c319bf967cb11c775456c2b596424d8b7df515b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7790d44cc4160d7f61562cf470da43bb49a82cf2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574872"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080780"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>向报表添加边框（报表生成器和 SSRS）
   通过向表头、表尾和表体本身添加边框（而不是添加线条或矩形），可以为 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加边框。    
