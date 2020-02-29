@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 35f9cdfcc40d417a6aed19a3abe0e590061b2eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75256006"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180082"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 返回正在进行的请求的查询执行计划。 使用此 DMV 检索带有暂时性统计信息的显示计划 XML。 
 
@@ -66,7 +66,8 @@ sys.dm_exec_query_statistics_xml(session_id)
 由于**xml**数据类型中允许的嵌套级别数有限制，因此**dm_exec_query_statistics_xml**无法返回满足或超过128嵌套元素级别的查询计划。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这种情况将导致无法返回查询计划，并生成错误 6335。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 及更高版本中， **QUERY_PLAN**列返回 NULL。   
 
 ## <a name="permissions"></a>权限  
- 要求具有对服务器的 `VIEW SERVER STATE` 权限。  
+在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要对服务器的权限。  
+在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。
 
 ## <a name="examples"></a>示例  
   

@@ -19,39 +19,27 @@ ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05cc0d47053d8ddef0962c4aceee75e61b8b4b64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 150892098f15adc6601b7cfeec3b4afc2cb5b0ec
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211957"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176747"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>权限层次结构（数据库引擎）
-  
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 管理着可以通过权限进行保护的实体的分层集合。 这些实体称为“安全对象” **。 最主要的安全对象是服务器和数据库，但可以在更细化的级别设置各种权限。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过验证主体是否已被授予适当权限来控制主体对安全对象的操作。  
-  
- 下图显示了 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 权限层次结构之间的关系。  
-  
- ![数据库引擎权限层次结构的关系图](../../database-engine/media/wj-security-layers.gif "数据库引擎权限层次结构的关系图")  
-  
-## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
- 有关 pdf 格式的所有[!INCLUDE[ssDE](../../../includes/ssde-md.md)]权限的海报大小的图表，请[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)参阅。  
-  
-## <a name="working-with-permissions"></a>使用权限  
- 可以使用常见的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询 GRANT、DENY 和 REVOKE 来操作权限。 有关权限的信息，可以在 [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) 和 [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) 目录视图中看到。 也可以使用内置函数来查询权限信息。  
-  
-## <a name="see-also"></a>另请参阅  
- [保护 SQL Server](securing-sql-server.md)   
- [权限 &#40;数据库引擎&#41;](permissions-database-engine.md)   
- [安全对象](securables.md)   
- [主体（数据库引擎）](authentication-access/principals-database-engine.md)   
- [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)   
- [REVOKE &#40;Transact-sql&#41;](/sql/t-sql/statements/revoke-transact-sql)   
- [DENY &#40;Transact-sql&#41;](/sql/t-sql/statements/deny-transact-sql)   
- [HAS_PERMS_BY_NAME &#40;Transact-sql&#41;](/sql/t-sql/functions/has-perms-by-name-transact-sql)   
- [sys.fn_builtin_permissions (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql)   
- [sys. server_permissions &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql)   
- [sys.database_permissions (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
-  
-  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 管理着可以通过权限进行保护的实体的分层集合。 这些实体称为“安全对象”  。 最主要的安全对象是服务器和数据库，但可以在更细化的级别设置各种权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过验证主体是否已被授予适当权限来控制主体对安全对象的操作。
+
+ 下图显示了 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 权限层次结构之间的关系。
+
+ ![数据库引擎权限层次结构的关系图](../../database-engine/media/wj-security-layers.gif "数据库引擎权限层次结构的关系图")
+
+## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表
+ 有关 pdf 格式的所有[!INCLUDE[ssDE](../../../includes/ssde-md.md)]权限的海报大小的图表，请[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)参阅。
+
+## <a name="working-with-permissions"></a>使用权限
+ 可以使用常见的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询 GRANT、DENY 和 REVOKE 来操作权限。 有关权限的信息，可以在 [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) 和 [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) 目录视图中看到。 也可以使用内置函数来查询权限信息。
+
+## <a name="see-also"></a>另请参阅
+ [保护 SQL Server](securing-sql-server.md) [权限 &#40;数据库引擎&#41;](permissions-database-engine.md) [安全对象](securables.md)[主体 &#40;数据库引擎&#41;](authentication-access/principals-database-engine.md) [授予 &#40;transact-sql&#41;](/sql/t-sql/statements/grant-transact-sql) [REVOKE &#40;transact-sql&#41;](/sql/t-sql/statements/revoke-transact-sql) [DENY &#40;transact-sql&#41;](/sql/t-sql/statements/deny-transact-sql) [HAS_PERMS_BY_NAME](/sql/t-sql/functions/has-perms-by-name-transact-sql) [&#40;&#41;fn_builtin_permissions](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql) &#40;transact-sql&#41;sys. server_permissions &#40;&#41;database_permissions transact-sql &#40;[的](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) [&#41;。](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql)
+
+

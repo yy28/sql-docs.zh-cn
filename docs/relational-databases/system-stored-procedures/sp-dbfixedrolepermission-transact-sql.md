@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108158"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180109"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  显示固定数据库角色的权限。 **sp_dbfixedrolepermission**将在中返回[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]正确的信息。 该输出不反映对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现的权限层次结构的更改。 有关详细信息，请参阅[&#40;数据库引擎&#41;的权限](../../relational-databases/security/permissions-database-engine.md)。  
+  显示固定数据库角色的权限。 **sp_dbfixedrolepermission**将在中返回[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]正确的信息。 该输出不反映对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现的权限层次结构的更改。 有关详细信息，请参阅[数据库级角色](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)，其中显示固定数据库角色的列表及其相应权限。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  

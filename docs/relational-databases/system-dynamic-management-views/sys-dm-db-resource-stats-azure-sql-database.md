@@ -1,7 +1,7 @@
 ---
 title: sys. dm_db_resource_stats （Azure SQL Database） |Microsoft Docs
 ms.custom: ''
-ms.date: 05/21/2019
+ms.date: 02/27/2020
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245956"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175106"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ ms.locfileid: "75245956"
 |max_session_percent|**decimal （5，2）**|以数据库服务层限制的百分比表示的最大并发会话数。|  
 |dtu_limit|**int**|此数据库在此时间间隔内的当前最大数据库 DTU 设置。 对于使用基于 vCore 的模型的数据库，此列为 NULL。|
 |cpu_limit|**decimal （5，2）**|此数据库在此时间间隔内的 Vcore 的数目。 对于使用基于 DTU 的模型的数据库，此列为 NULL。|
-|avg_instance_cpu_percent|**decimal （5，2）**|SQL 数据库进程的平均 CPU 使用率（以百分比表示）。|
-|avg_instance_memory_percent|**decimal （5，2）**|作为 SQL DB 进程百分比的平均数据库内存使用率。|
+|avg_instance_cpu_percent|**decimal （5，2）**|承载数据库的 SQL Server 实例的平均 CPU 使用率（以操作系统度量）。 包括用户和内部工作负荷的 CPU 利用率。|
+|avg_instance_memory_percent|**decimal （5，2）**|承载数据库的 SQL Server 实例的平均内存使用率（以操作系统度量）。 包括用户和内部工作负荷的内存使用率。|
 |avg_login_rate_percent|**decimal （5，2）**|标识为仅供参考。 不支持。 不保证以后的兼容性。|
 |replica_role|**int**|表示当前副本的角色，其中0为主，1表示辅助副本，2表示转发器（异地辅助副本）。 与 ReadOnly 意向连接到所有可读辅助副本时，你会看到 "1"。 如果在未指定 ReadOnly 意向的情况下连接到异地辅助数据库，则应看到 "2" （连接到转发器）。|
 |||
   
 > [!TIP]  
->  有关这些限制和服务层的详细信息，请参阅 "[服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)" 和 "[服务层功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)" 主题。  
+> 有关这些限制和服务层的详细信息，请参阅主题[服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[手动优化 Azure SQL 数据库中的查询性能](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)以及[SQL 数据库资源限制和资源调控](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>权限
  此视图需要拥有 VIEW DATABASE STATE 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注
  **Dm_db_resource_stats sys.databases**返回的数据以所运行的服务层/性能级别所允许的最大限制的百分比表示。
  
- 如果已在最后 60 分钟内将数据库故障转移到另一台服务器，该视图将仅返回主数据库故障转移后此时间段内的数据。  
+ 如果数据库在过去60分钟内已故障转移到另一台服务器，则该视图将仅返回该故障转移后的时间数据。  
   
  若要在保持期较长的情况下更细化地查看此数据，请在**master**数据库中使用**sys. resource_stats**目录视图。 此视图每 5 分钟捕获一次数据，并将历史数据保留 14 天。  有关详细信息，请参阅[AZURE SQL 数据库&#41;&#40;resource_stats ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
   
@@ -101,8 +101,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [服务层功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
-  
-  
+ [resource_stats &#40;AZURE SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

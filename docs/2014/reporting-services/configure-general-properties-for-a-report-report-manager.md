@@ -13,50 +13,47 @@ ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cd0371497067f754166c33fb18022fe058cb88e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 23184e77efbe41eae3d4de434a30ff8f3a4847ff
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66109753"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177027"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>配置报表的常规属性（报表管理器）
-    
-### <a name="to-configure-general-report-properties"></a>配置常规报表属性  
   
-1.  启动 [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。  
-  
-2.  在报表管理器中，导航到 **“内容”** 页。 导航到要配置常规属性的报表，并打开该报表。  
-  
-3.  单击“属性”  选项卡。  
-  
-     或者，如果 "**内容**" 页在详细信息视图中，请单击属性页图标：  
-  
-     ![属性页图标](media/prop.gif "属性页图标")  
-  
-4.  将显示 "**常规**属性" 页，您可以按如下所示配置属性：  
-  
-    -   在 "**属性**" 部分中，可以修改报表名称和说明。  
-  
-    -   您可以选中 "**在列表视图中隐藏**" 复选框，以便在默认页面布局（列表视图）中打开页面时隐藏项。  
-  
-    -   在 "**报表定义**" 部分中，单击 "**编辑**" 以提取报表定义的副本。 在本地对报表定义所做的修改不保存在报表服务器上。  
-  
-         或者，若要从 .rdl 文件中更新报表定义，请单击 "**更新**"。  
-  
-        > [!NOTE]  
-        >  如果更新某一报表定义，则必须在更新完成后重置数据源设置。  
-  
-    -   使用 "**删除**" 或 "**移动**" 按钮删除或移动报表。  
-  
-    -   还可以创建链接报表。  
-  
-5.  完成报表的常规属性配置后，单击 "**应用**"。  
-  
-## <a name="see-also"></a>另请参阅  
- [报表管理器 &#40;移动或删除项&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- ["内容" 页 &#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [查找、查看和管理报表（报表生成器和 SSRS）](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [报表 &#40;报表管理器的 "常规属性" 页&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
-  
-  
+### <a name="to-configure-general-report-properties"></a>配置常规报表属性
+
+1.  启动 [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。
+
+2.  在报表管理器中，导航到 **“内容”** 页。 导航到要配置常规属性的报表，并打开该报表。
+
+3.  单击“属性”  选项卡。
+
+     或者，如果 "**内容**" 页在详细信息视图中，请单击属性页图标：
+
+     ![属性页图标](media/prop.gif "属性页图标")
+
+4.  将显示 "**常规**属性" 页，您可以按如下所示配置属性：
+
+    -   在 "**属性**" 部分中，可以修改报表名称和说明。
+
+    -   您可以选中 "**在列表视图中隐藏**" 复选框，以便在默认页面布局（列表视图）中打开页面时隐藏项。
+
+    -   在 "**报表定义**" 部分中，单击 "**编辑**" 以提取报表定义的副本。 在本地对报表定义所做的修改不保存在报表服务器上。
+
+         或者，若要从 .rdl 文件中更新报表定义，请单击 "**更新**"。
+
+        > [!NOTE]
+        >  如果更新某一报表定义，则必须在更新完成后重置数据源设置。
+
+    -   使用 "**删除**" 或 "**移动**" 按钮删除或移动报表。
+
+    -   还可以创建链接报表。
+
+5.  完成报表的常规属性配置后，单击 "**应用**"。
+
+## <a name="see-also"></a>另请参阅
+ [&#40;报表管理器&#41;内容 "页中移动或删除项](report-server/move-or-delete-an-item-report-manager.md) [&#40;报表管理器](../../2014/reporting-services/contents-page-report-manager.md)&#41;&#40;和 SSRS 报表生成器"[常规属性 "页，报表 &#41;&#40;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)报表管理器&#41;[查找、查看和管理报表](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+
+

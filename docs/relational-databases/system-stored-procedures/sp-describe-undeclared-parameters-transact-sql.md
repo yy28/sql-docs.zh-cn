@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1205572235b141709cd463476182d9b405446188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72908327"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180122"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
   返回一个结果集，其中包含有关在[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理中未声明的参数的元数据。 考虑在** \@tsql**批处理中使用但未在** \@params**中声明的每个参数。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 如果** \@tsql**输入批处理没有参数中** \@** 声明的参数，则该过程返回一个空结果集。  
   
@@ -40,7 +40,10 @@ sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
-  
+
+> [!Note] 
+> 若要在 Azure Synapse Analytics （以前称为 SQL DW）中使用此存储过程，数据库的兼容级别需要大于10。 
+
 ## <a name="arguments"></a>参数  
 `[ \@tsql = ] 'Transact-SQL\_batch'`一个或多[!INCLUDE[tsql](../../includes/tsql-md.md)]个语句。 *Transact-sql SQL_batch*可以是**nvarchar （**_n_**）** 或**nvarchar （max）**。  
   
@@ -222,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      在这种情况下，\@E （p） Col_Int \@+ p，TT\@（p）是**Int**。**** 为\@p 选择 int，因为它不生成隐式转换。 选择任何其他数据类型都会产生至少一次隐式转换。  
   
-2.  如果多种数据类型都产生次数最少的转换，则使用具有较高优先级的数据类型。 例如  
+2.  如果多种数据类型都产生次数最少的转换，则使用具有较高优先级的数据类型。 例如：  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
