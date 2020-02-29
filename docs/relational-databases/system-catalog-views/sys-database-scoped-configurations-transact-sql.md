@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
+ms.openlocfilehash: 372d3a1b5722b1a19e9560fe92f61e45b6744ace
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73240766"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180102"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations （Transact-sql）
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 每个配置占一行。 
 
@@ -35,9 +35,10 @@ ms.locfileid: "73240766"
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|配置选项的 ID。|
 |**路径名**|**nvarchar （60）**|配置选项的名称。 有关可能的配置的信息，请参阅[ALTER DATABASE 作用域配置 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|
-|**负值**|**sqlvariant**|为主副本的此配置选项设置的值。|
+|**value**|**sqlvariant**|为主副本的此配置选项设置的值。|
 |**value_for_secondary**|**sqlvariant**|为辅助副本的此配置选项设置的值。|
 |**is_value_default**|**bit** |指定设置的值是否为默认值。|
+|**dw_compatibility_level**|**int**|数据库的兼容级别。  默认值 = 0 （自动）|
 
 ## <a name="Permissions"></a> 权限
 
