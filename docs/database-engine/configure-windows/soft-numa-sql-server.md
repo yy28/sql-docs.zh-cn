@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68232821ac186aa63d113319373b8326dae987a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74165186"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903884"
 ---
 # <a name="soft-numa-sql-server"></a>软件 NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "74165186"
   
  大量使用 I/O 的实例 A 现在有两个 I/O 线程和一个惰性编写器线程。 执行大量占用处理器操作的实例 B 仅有一个 I/O 线程和一个惰性编写器线程。 可以向实例分配不同的内存量，但是与硬件 NUMA 不同，它们都从同一个操作系统内存块中接收内存，并且不具有从内存到处理器的关联。  
   
- 惰性编写器线程与物理 NUMA 内存节点的 SQLOS 视图有关。 因此，不管存在什么硬件，物理 NUMA 节点都将等于创建的惰性编写器线程数。 有关详细信息，请参阅[工作原理：Soft NUMA、I/O 完成线程、惰性编写器工作线程和内存节点](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)。  
+ 惰性编写器线程与物理 NUMA 内存节点的 SQLOS 视图有关。 因此，不管存在什么硬件，物理 NUMA 节点都将等于创建的惰性编写器线程数。 有关详细信息，请参阅[工作原理：Soft NUMA、I/O 完成线程、惰性编写器工作线程和内存节点](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers/ba-p/316044)。  
   
 > [!NOTE]
 > 升级 **的实例时，不复制** Soft-NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]注册表项。  

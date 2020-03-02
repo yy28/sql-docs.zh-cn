@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831393"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608391"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>使用 python 脚本在 Azure Kubernetes 服务 (AKS) 上部署 SQL Server 大数据群集
 
@@ -27,7 +27,7 @@ ms.locfileid: "76831393"
 
 此处使用的默认大数据群集部署包括一个 SQL Master 实例、一个计算池实例、两个数据池实例和两个存储池实例。 通过 AKS 默认存储类使用 Kubernetes 永久性卷来永久保存数据。 本教程中使用的默认配置适用于开发/测试环境。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - Azure 订阅。
 - [大数据工具](deploy-big-data-tools.md)：
@@ -82,7 +82,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **用户名** | 控制器用户的用户名（默认为“admin”）  。 |
 
    > [!IMPORTANT]
-   > 默认的“Standard_L8s”计算机大小可能在每个 Azure 区域都不可用  。 如果确实选择了不同的计算机大小，请确保可以跨群集中的节点连接的磁盘总数大于或等于 24。 群集中的每个永久性卷声明都需要附加磁盘。 目前，大数据群集需要 24 个永久性卷声明。 例如，[Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) 计算机大小支持 32 个附加磁盘，因此可以使用此计算机大小的单个节点评估大数据群集。
+   > 默认的“Standard_L8s”计算机大小可能在每个 Azure 区域都不可用  。 如果确实选择了不同的计算机大小，请确保可以跨群集中的节点连接的磁盘总数大于或等于 24。 群集中的每个永久性卷声明都需要附加磁盘。 目前，大数据群集需要 24 个永久性卷声明。 例如，[Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) 计算机大小支持 32 个附加磁盘，因此可以使用此计算机大小的单个节点评估大数据群集。
 
    > [!NOTE]
    > 在大数据群集部署期间，SQL Server `sa` 帐户处于禁用状态。 SQL Server 主实例中预配了一个新的 sysadmin 登录名，其名称与为“用户名”输入指定的名称相同，密码与“密码”输入相对应   。 相同的“用户名”和“密码”值用于预配控制器管理员用户   。 网关 (Knox) 仅支持 **root** 用户，密码与上面相同。

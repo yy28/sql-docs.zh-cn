@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8aefcae2c8e9c449061b18b4287968120dbae852
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544916"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634846"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 
@@ -228,13 +228,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     下面的示例使用 Azure AD 用户名和密码导出数据，其中用户和密码是 AAD 凭据。 该示例从 Azure 服务器 `aadserver.database.windows.net` 的数据库 `testdb` 导出表 `bcptest`，并将数据存储在文件 `c:\last\data1.dat` 中：
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     下面的示例使用 Azure AD 用户名和密码导入数据，其中用户和密码是 AAD 凭据。 该示例使用 Azure AD 用户/密码将数据从文件 `c:\last\data1.dat` 导入到 Azure 服务器 `aadserver.database.windows.net` 上的数据库 `testdb` 的表 `bcptest` 中：
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +244,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     下面的示例使用 Azure AD 集成帐户导出数据。 该示例使用 Azure 服务器 `aadserver.database.windows.net` 中的 Azure AD 集成身份验证从数据库 `testdb` 导出表 `bcptest`，并将数据存储在文件 `c:\last\data2.dat` 中：
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     以下示例使用 Azure AD 集成身份验证导入数据。该示例使用 Azure AD 集成身份验证，将数据从文件 `c:\last\data2.txt` 导入到 Azure 服务器 `aadserver.database.windows.net` 上的数据库 `testdb` 的表 `bcptest` 中：
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +266,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    交互模式需要手动输入密码，或者对于启用了多重身份验证的帐户，请完成配置的 MFA 身份验证方法。
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    如果 Azure AD 用户是使用 Windows 帐户的域联合用户，则命令行中所需的用户名包含其域帐户（例如 joe@contoso.com，见下文）：
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +448,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     
     若要确定 bcp 实用工具的所有版本的安装位置，请在命令提示符下键入以下内容：
     
-    ```cmd
+    ```console
     where bcp.exe
     ```
 
@@ -604,7 +604,7 @@ END
 
 在命令提示符处输入以下命令：
 
-```cmd
+```console
 bcp -v
 ```
   
@@ -616,7 +616,7 @@ bcp -v
 
   在命令提示符处输入以下命令：
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +638,7 @@ bcp -v
 
 在命令提示符处输入以下命令：\(系统将提示你输入密码。\)
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +650,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   在命令提示符处输入以下命令：
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +658,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 在命令提示符处输入以下命令：
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +670,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 在命令提示符处输入以下命令：
 
-```cmd
+```console
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +680,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 在命令提示符处输入以下命令：
 
-```cmd
+```console
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +690,7 @@ bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\
 
 在命令提示符处输入以下命令：
 
-```cmd
+```console
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +700,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 在命令提示符处输入以下命令：
 
-```cmd
+```console
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +722,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 在命令提示符处输入以下命令：
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

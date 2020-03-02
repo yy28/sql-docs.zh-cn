@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561d1d32cef9102200bcc3b0730c96afed06d91a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6b336404d3b69e31ffb6f1a2aa82ade04804eb9e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73727477"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78172128"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>在 SQL Server 中通过 R 进行数据浏览和预测性建模
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文介绍通过与 SQL Server 集成可以实现的数据科学过程的改进。
-
-适用对象：SQL Server 2016 R Services、SQL Server 2017 机器学习服务
 
 ## <a name="the-data-science-process"></a>数据科学过程
 
