@@ -27,9 +27,9 @@ ms.locfileid: "68042522"
 # <a name="spatial-types---geography"></a>空间类型 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  地理空间数据类型 geography 是作为  **中的 .NET 公共语言运行时 (CLR) 数据类型实现的**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类型表示圆形地球坐标系中的数据。 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+  地理空间数据类型 geography 是作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 .NET 公共语言运行时 (CLR) 数据类型实现的  。 此类型表示圆形地球坐标系中的数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geography 数据类型存储椭球体（圆形地球）数据，如 GPS 纬度和经度坐标  。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 geography 空间数据类型的一组方法  。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组  **扩展所定义的 geography 方法**[!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 geography 空间数据类型的一组方法  。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 扩展所定义的 geography 方法  。  
  
  geography 方法的容错可高达 1.0e-7 * extents  。 extents 表示 geography 对象的各点之间的近似最大距离  。
   
