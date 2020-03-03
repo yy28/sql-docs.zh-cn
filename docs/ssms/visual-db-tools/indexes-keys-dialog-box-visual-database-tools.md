@@ -93,9 +93,9 @@ ms.locfileid: "75224924"
 **忽略重复的键**  
 指定在大容量插入操作过程中插入具有与现有键值相同的键值的行时的行为。 如果选择：  
   
--   **Yes** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues a warning, ignores the offending incoming row, and tries to insert the remaining rows.  
+-   **是**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将发出警告，忽略有问题的传入行，并尝试插入剩余行。  
   
--   **No** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues an error message and rolls back the entire bulk insert operation.  
+-   **否**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将发出错误信息并回滚整个大容量插入操作。  
   
 **包含列**  
 显示一个用逗号分隔的列表，其中列出用于组成索引键的所有列的名称。 只能为非聚集索引指定子键列。 此属性对 XML 索引是隐藏的。  
@@ -116,6 +116,6 @@ ms.locfileid: "75224924"
 指定对此索引是否允许行级锁定。 允许或禁用行级锁定会影响数据库性能。 建议设置为“是”  。  
   
 ## <a name="see-also"></a>另请参阅  
-[Working with Constraints(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[Working with Keys(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[使用约束(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用密钥(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

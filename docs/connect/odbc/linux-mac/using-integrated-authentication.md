@@ -24,7 +24,7 @@ ms.locfileid: "68008699"
 
 macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持使用 Kerberos 集成身份验证的连接。 它支持 MIT Kerberos 密钥发行中心 (KDC)，并且可以与通用安全服务应用程序编程接口 (GSSAPI) 和 Kerberos v5 库一起使用。
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>使用集成身份验证从 ODBC 应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>使用集成身份验证从 ODBC 应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 可以启用 Kerberos 集成身份验证，方法是在 SQLDriverConnect 或 SQLConnect 的连接字符串中指定 Trusted_Connection=yes    。 例如：  
 
@@ -32,9 +32,9 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-使用 DSN 连接时，还可以向  **中的 DSN 条目添加 Trusted_Connection=yes**`odbc.ini`。
+使用 DSN 连接时，还可以向 `odbc.ini` 中的 DSN 条目添加 Trusted_Connection=yes  。
   
-`-E` 的 `sqlcmd` 选项和 `-T` 的 `bcp` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接**和**使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)[  ](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
+`sqlcmd` 的 `-E` 选项和 `bcp` 的 `-T` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)   。
 
 确保要连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的客户端主体已使用 Kerberos KDC 进行身份验证。
   
@@ -64,7 +64,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时需使用系统帐户，并且 Linux 上未提供相关功能来模拟安全上下文。 因此，需要更多信息来确定用户。
   
-To audit activities in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on behalf of users other than the system account, the application must use [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
+若要代表用户（而非系统帐户）审核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的活动，应用程序必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE AS  。  
   
 若要提高应用程序性能，应用程序可以将连接池与集成身份验证和审核结合使用。 但是，合并连接池、集成身份验证和审核会带来安全风险，因为 unixODBC 驱动程序管理器允许不同的用户重复使用已入池的连接。 有关详细信息，请参阅 [ODBC 连接池](http://www.unixodbc.org/doc/conn_pool.html)。  
 
@@ -87,14 +87,14 @@ To audit activities in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.m
 配置集成身份验证后，凭据将传递给链接服务器。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>集成身份验证和 sqlcmd
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `-E` 的 `sqlcmd` 选项。 确保运行 `sqlcmd` 的帐户与默认的 Kerberos 客户端主体相关联。
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `sqlcmd` 的 `-E` 选项。 确保运行 `sqlcmd` 的帐户与默认的 Kerberos 客户端主体相关联。
 
 ## <a name="integrated-authentication-and-bcp"></a>集成身份验证和 bcp
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `-T` 的 `bcp` 选项。 确保运行 `bcp` 的帐户与默认的 Kerberos 客户端主体相关联。 
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `bcp` 的 `-T` 选项。 确保运行 `bcp` 的帐户与默认的 Kerberos 客户端主体相关联。 
   
 将 `-T` 与 `-U` 或 `-P` 选项结合使用是错误的。
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 注册的 SPN 的受支持语法
+## <a name="supported-syntax-for-an-spn-registered-by-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 注册的 SPN 的受支持语法
 
 以下是 SPN 在连接字符串或连接属性中使用的语法：  
 
