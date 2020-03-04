@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252689"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608472"
 ---
 # <a name="alerts"></a>警报
 
@@ -104,6 +104,12 @@ ms.locfileid: "75252689"
   
     > [!NOTE]  
     > 性能数据被周期性地采样，这会在达到阈值与发出性能警报之间造成短暂的延迟（几秒钟）。  
+  
+    > [!NOTE]  
+    > 存储服务器名称的事件日志变量不得超过 32 个字符。 因此，如果主机名和实例名的总大小超过 32 个字符，可能会出现以下错误：
+    
+    警告，[466]，生成性能计数器警报时，无法复制服务器名称 LONGNAMESQLSERV\LONGINSTANCENAME。
+  
   
 ## <a name="selecting-a-wmi-event"></a>选择 WMI 事件  
 可以指定发出警报来响应特定的 WMI 事件。 若要选择 WMI 事件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”  或“警报属性”  对话框中的“常规”  页上定义下列内容：  

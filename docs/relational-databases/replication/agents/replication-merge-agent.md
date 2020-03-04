@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70846745"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705862"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -358,7 +359,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  指定合并代理是否在订阅服务器和备用发布服务器之间进行同步。 值为 **1** 表示它是备用发布服务器。 默认值为 **0**。  
-  
+ 
+ **-T** [**101|102**]  
+ 可实现更多合并代理附加功能的跟踪标志。 设置为值 101 可获取更多详细的日志记录信息，帮助确定合并复制同步过程的每个步骤所花费的时间  。 值 102 与跟踪标志 101 写入相同的统计信息，不同的是会将信息写入 <Distribution server>..msmerge_history 表   。 通过使用 `-output` 和 `-outputverboselevel` 参数，在使用跟踪标志 101 时启用合并代理日志记录。  例如，将以下参数添加到合并代理，然后重启代理：`-T 101, -output, -outputverboselevel`。 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  将订阅服务器上的更改上载到发布服务器时要在单个批次处理的生成数。 生成的定义是每个项目中属于一个逻辑组的更改。 可靠的通信链接的默认值为 **100**。 不可靠的通信链接的默认值为 **1**。  
   
@@ -394,7 +398,12 @@ replmerg [-?]
   
  若要启动合并代理，请从命令提示符下执行 **replmerg.exe** 。 有关信息，请参阅 [复制代理可执行文件](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>对合并代理性能进行故障排除 
  在连续模式下运行时，不删除当前会话的合并代理历史记录。 长期运行的代理可能导致合并历史记录表中包含大量条目，这会影响性能。 要解决此问题，请切换到计划模式，或继续使用连续模式但是创建一个专用作业来定期重新启动合并代理，或降低历史记录级别的详细程度以减少行数从而降低性能影响。  
+ 
+  在某些情况下，复制合并代理可能需要较长时间才能复制更改。 若要确定合并复制同步过程中花费时间最多的步骤，请结合使用跟踪标志 101 和合并代理日志记录。 为此，请对合并代理参数使用以下参数，然后重启代理：  <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+此外，如果必须将统计信息写入 <Distribution server>..msmerge_history 表，请使用跟踪标志 -T 102。
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  

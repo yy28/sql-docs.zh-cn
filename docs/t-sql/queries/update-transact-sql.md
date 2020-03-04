@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74687379"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176687"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -461,7 +461,7 @@ ID     Value
  UPDATE 语句总是在其修改的表上获取排他 (X) 锁并在事务完成之前持有该锁。 有了排他锁，其他事务都不可以修改数据。 您可以指定表提示，以便通过指定其他锁定方法来覆盖 UPDATE 语句的持续时间的这一默认行为，但只建议经验丰富的开发人员和数据库管理员将提示用作最后的手段来执行。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
 ## <a name="logging-behavior"></a>日志记录行为  
- UPDATE 语句将记入日志；但是，对使用 .WRITE 子句对较大值数据类型的部分更新进行最小日志记录  。 有关详细信息，请参阅上一节“数据类型”中的“更新大值数据类型”。  
+ UPDATE 语句将记入日志；但是，对使用 \.WRITE 子句对较大值数据类型的部分更新进行最小日志记录  。 有关详细信息，请参阅上一节“数据类型”中的“更新大值数据类型”。  
   
 ## <a name="security"></a>安全性  
   
@@ -1067,7 +1067,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="ad-using-a-simple-update-statement"></a>AD. 使用简单 UPDATE 语句  
  以下示例显示在未使用 WHERE 子句指定要更新的行时如何影响所有行。  

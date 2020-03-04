@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fd41b851ac7240ded3b0508f0bfd45fad0377c27
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75226737"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568070"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -50,7 +50,7 @@ ms.locfileid: "75226737"
 
 本文说明如何在 Azure SQL 数据仓库中使用 CREATE MATERIALIZED VIEW AS SELECT T-SQL 语句开发解决方案。 此外，本文还提供了代码示例。
 
-具体化视图将保留视图定义查询返回的数据，并自动随着基础表中的数据更改而更新。   它可以提高复杂查询的性能（通常指使用联接和聚合的查询），同时还提供简单的维护操作。   由于具体化视图具有执行计划自动匹配功能，因此无需在查询中引用它，优化器即会考虑将此视图作为替换项。  这样数据工程师即可以将具体化视图作为改进查询响应时间的机制来实现，而不必再更改查询。  
+具体化视图将保留视图定义查询返回的数据，并自动随着基础表中的数据更改而更新。   它可以提高复杂查询的性能（通常指使用联接和聚合的查询），同时还提供简单的维护操作。   由于具体化视图具有执行计划自动匹配功能，因此无需在查询中引用它，优化器即会考虑将此视图作为替换项。  通过使用这一功能，数据工程师可以将具体化视图作为改进查询响应时间的机制来实现，而不必再更改查询。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -108,20 +108,24 @@ select_statement
   
 ## <a name="remarks"></a>备注
 
-Azure 数据仓库的具体化视图与 SQL Server 的索引视图非常相似。  除了具体化视图支持聚合函数外，它与索引视图适用的限制几乎相同（请参阅[创建索引视图](/sql/relational-databases/views/create-indexed-views)了解详细信息）。   以下是关于具体化视图的其他注意事项。  
- 
+Azure 数据仓库中的具体化视图与 SQL Server 中的索引视图相似。  除了具体化视图支持聚合函数外，它与索引视图适用的限制几乎相同（请参阅[创建索引视图](/sql/relational-databases/views/create-indexed-views)了解详细信息）。   
+
 具体化视图仅支持 CLUSTERED COLUMNSTORE INDEX。 
 
 具体化视图无法引用其他视图。  
- 
-可以在已分区表上创建具体化视图。  具体化视图引用的表支持 SPLIT/MERGE 操作。  具体化视图引用的表不支持 SWITCH。 若尝试执行此操作，用户将看到错误 `Msg 106104, Level 16, State 1, Line 9`
+
+也无法在具有动态数据掩码 (DDM) 的表上创建具体化视图，即使 DDM 列不属于该具体化视图也是如此。  如果表列是活动具体化视图或禁用的具体化视图的一部分，则 DDM 无法添加到此列。  
+
+无法在启用了行级安全性的表上创建具体化视图。
+
+可以在已分区表上创建具体化视图。  具体化视图基表支持分区 SPLIT/MERGE，不支持分区 SWITCH。  
  
 具体化视图引用的表不支持 ALTER TABLE SWITCH。 请先禁用或删除具体化视图，然后再使用 ALTER TABLE SWITCH。 在以下应用场景中，需要向具体化视图添加新列，才能创建具体化视图：
 
 |场景|要添加到具体化视图的新列|注释|  
 |-----------------|---------------|-----------------|
 |具体化视图定义的 SELECT 列表缺少 COUNT_BIG()| COUNT_BIG (*) |通过具体化视图创建自动添加。  不需要任何用户操作。|
-|由用户在具体化视图定义的 SELECT 列表中指定 SUM(a)，其中“a”是可为 null 的表达式 |COUNT_BIG (a) |用户需要手动将表达式“a”添加到具体化视图定义中。|
+|由用户在具体化视图定义的 SELECT 列表中指定 SUM(a)，其中“a”是可为空的表达式 |COUNT_BIG (a) |用户需要手动将表达式“a”添加到具体化视图定义中。|
 |由用户在具体化视图定义的 SELECT 列表中指定 AVG(a)，其中“a”是表达式。|SUM(a), COUNT_BIG(a)|通过具体化视图创建自动添加。  不需要任何用户操作。|
 |由用户在具体化视图定义的 SELECT 列表中指定 STDEV(a)，其中“a”是表达式。|SUM(a), COUNT_BIG(a), SUM(square(a))|通过具体化视图创建自动添加。  不需要任何用户操作。 |
 | | | |

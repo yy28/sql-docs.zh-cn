@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249717"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575331"
 ---
 # <a name="using-table-valued-parameters"></a>使用表值参数
 
@@ -127,7 +127,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>将表值参数作为 SQLServerDataTable 对象传递  
 
-自 Microsoft JDBC Driver 6.0 for SQL Server 起，SQLServerDataTable 类开始表示关系数据的内存中表。 下面的示例展示了如何使用 SQLServerDataTable 对象从内存中数据构造表值参数。 此代码先创建 SQLServerDataTable 对象，定义它的架构，并使用数据填充表。 然后，此代码配置 SQLServerPreparedStatement，用于将此数据表作为表值参数传递到 SQL Server。  
+自 Microsoft JDBC Driver 6.0 for SQL Server 起，SQLServerDataTable 类开始表示关系数据的内存中表。 下面的示例展示了如何使用 SQLServerDataTable 对象从内存中数据构造表值参数。 首选，此代码创建 SQLServerDataTable 对象，定义它的架构，并使用数据填充表。 然后，此代码配置 SQLServerPreparedStatement，用于将此数据表作为表值参数传递到 SQL Server。  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -156,7 +156,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>将表值参数作为 ResultSet 对象传递  
 
-下面的示例展示了如何将 ResultSet 中的数据行流式传输到表值参数。 此代码先检索源表中的数据，创建 SQLServerDataTable 对象，定义它的架构，并使用数据填充表。 然后，此代码配置 SQLServerPreparedStatement，用于将此数据表作为表值参数传递到 SQL Server。  
+下面的示例展示了如何将 ResultSet 中的数据行流式传输到表值参数。 首先，代码从 SQLServerDataTable 对象中的源表中检索数据，定义它的架构，并使用数据填充表。 然后，此代码配置 SQLServerPreparedStatement，用于将此数据表作为表值参数传递到 SQL Server。  
 
 ```java
 /* Assumes connection is an active Connection object. */

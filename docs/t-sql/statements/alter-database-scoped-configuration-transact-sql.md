@@ -23,18 +23,21 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8dce4ae0ec739bad6df3ac064ca96d04e91dcf7
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
+ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558351"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180072"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-此语句在单个数据库级别启用多个数据库配置设置。  此语句可用于 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 以及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这些设置包括：
+此命令在单个数据库级别启用多个数据库配置设置  。 
+
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下设置： 
 
 - 清除过程缓存。
 - 根据最适合特定主数据库的情况，将 MAXDOP 参数设置为该数据库的任意值（1、2、…），为使用的所有辅助数据库（例如，针对报告查询）设置不同的值（例如 0）。
@@ -54,11 +57,16 @@ ms.locfileid: "77558351"
 - 在 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中启用或禁用最后一个实际执行计划的收集。
 - 指定暂停的可恢复索引操作在被 SQL Server 引擎自动中止之前暂停的分钟数。
 
+此设置仅在 Azure Synapse Analytics（以前称为 SQL DW）中可用。
+- 设置用户数据库的兼容性级别
+
 ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
 ```
+-- Syntax for SQL Server and Azure SQL Database
+
 ALTER DATABASE SCOPED CONFIGURATION
 {
     { [ FOR SECONDARY] SET <set_options>}
@@ -101,6 +109,21 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_INTERLEAVED_EXECUTION_TVF` 更改为 `INTERLEAVED_EXECUTION_TVF`
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 更改为 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 更改为 `BATCH_MODE_ADAPTIVE_JOINS`
+
+```
+-- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+
+ALTER DATABASE SCOPED CONFIGURATION
+{
+    SET <set_options>
+}
+[;]
+
+< set_options > ::=
+{
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+}
+```
 
 ## <a name="arguments"></a>参数
 
@@ -373,6 +396,18 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 允许你控制[行级别安全性](../../relational-databases/security/row-level-security.md) (RLS) 谓词是否影响整个用户查询的执行计划的基数。 如果 ISOLATE_SECURITY_POLICY_CARDINALITY 为 ON，则 RLS 谓词不会影响执行计划的基数。 例如，假设有一个包含一百万行和一个 RLS 谓词的表，该表将发出查询的特定用户的结果限制为 10 行。 将此数据库范围的配置设置为 OFF 时，此谓词的基数估计值为 10。 将此数据库范围的配置为 ON 时，查询优化将估计一百万行。 建议对大多数工作负载使用默认值。
+
+DW_COMPATIBILITY_LEVEL = {AUTO | 10 | 20 }  
+
+适用范围：  仅限 Azure Synapse Analytics（以前称为 SQL DW）
+
+将 Transact-SQL 和查询处理行为设置为与指定的数据库引擎版本兼容。  设置后，在该数据库上执行查询时，将仅使用兼容功能。  首次创建数据库时，其兼容性级别默认设置为 AUTO。  即使在数据库暂停/恢复、备份/还原操作之后，仍保留兼容性级别。 
+
+|兼容级别    |   注释|  
+|-----------------------|--------------|
+|**AUTO**| 默认。  其值等于最新支持的兼容性级别。|
+|**10**| 在引入兼容性级别支持之前，请练习 Transact-SQL 和查询处理行为。|
+|**20**| 第一种兼容性级别，包括封闭 Transact-SQL 和查询处理行为。 |
 
 ## <a name="Permissions"></a> 权限
 

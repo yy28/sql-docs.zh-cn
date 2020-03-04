@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466168"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903864"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,22 @@ GO
 - 仅包含常量的算术表达式，如 1+1、5/3*2。
 - 仅包含常量的逻辑表达式，如 1=1 和 1>2 AND 3>4。
 - 被 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 认为可折叠的内置函数包括 `CAST` 和 `CONVERT`。 通常，如果内部函数只与输入有关而与其他上下文信息（例如 SET 选项、语言设置、数据库选项和加密密钥）无关，则该内部函数是可折叠的。 不确定性函数是不可折叠的。 确定性内置函数是可折叠的，但也有例外情况。
+- CLR 用户定义类型的确定性方法和确定性的标量值 CLR 用户定义函数（从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始）。 有关详细信息，请参阅 [CLR 用户定义函数和方法的常量折叠](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。
 
 > [!NOTE] 
-> 使用大型对象类型时将出现例外。 如果折叠进程的输出类型是大型对象类型（text、image、nvarchar(max)、varchar(max) 或 varbinary(max)），则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不折叠该表达式。
+> 使用大型对象类型时将出现例外。 如果折叠进程的输出类型是大型对象类型（text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 或 XML），则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不折叠该表达式。
 
 #### <a name="nonfoldable-expressions"></a>不可折叠表达式
 所有其他表达式类型都是不可折叠的。 特别是下列类型的表达式是不可折叠的：
 - 非常量表达式，例如，结果取决于列值的表达式。
 - 结果取决于局部变量或参数的表达式，例如 @x。
 - 不确定性函数。
-- 用户定义函数（[!INCLUDE[tsql](../includes/tsql-md.md)] 和 CLR）。
+- 用户定义 [!INCLUDE[tsql](../includes/tsql-md.md)] 函数<sup>1</sup>。
 - 结果取决于语言设置的表达式。
 - 结果取决于 SET 选项的表达式。
 - 结果取决于服务器配置选项的表达式。
+
+<sup>1</sup> 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 之前，确定性标量值 CLR 用户定义函数和 CLR 用户定义类型的方法不可折叠。 
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>可折叠和不可折叠常量表达式示例
 请考虑下列查询：
@@ -912,21 +915,27 @@ WHERE ProductID = 63;
 > 某些构造禁止 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在整个执行计划或部分执行计划中利用并行度的功能。
 
 禁止并行度的构造包括：
->
-> - **标量 UDF**    
->   有关标量用户定义函数的详细信息，请参阅[创建用户定义函数](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)。 从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 开始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能够内联这些函数，并在查询处理期间解锁并行度的使用。 有关标量 UDF 内联的详细信息，请参阅 [SQL 数据库中的智能查询处理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。
-> - **远程查询**    
->   有关远程查询的详细信息，请参阅 [Showplan 逻辑运算符和物理运算符参考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。
-> - **动态游标**    
->   有关游标的详细信息，请参阅 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
-> - **递归查询**    
->   有关递归的详细信息，请参阅[定义和使用递归公用表表达式的准则](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的递归](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
-> - **表值函数 (TVF)**     
->   有关 TVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
-> - **TOP 关键字**    
->   有关详细信息，请参阅 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
+-   **标量 UDF**        
+    有关标量用户定义函数的详细信息，请参阅[创建用户定义函数](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)。 从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 开始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能够内联这些函数，并在查询处理期间解锁并行度的使用。 有关标量 UDF 内联的详细信息，请参阅 [SQL 数据库中的智能查询处理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。
+    
+-   **远程查询**        
+    有关远程查询的详细信息，请参阅 [Showplan 逻辑运算符和物理运算符参考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。
+    
+-   **动态游标**        
+    有关游标的详细信息，请参阅 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
+    
+-   **递归查询**        
+    有关递归的详细信息，请参阅[定义和使用递归公用表表达式的准则](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的递归](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
 
-插入交换运算符之后，结果便为并行查询执行计划。 并行查询执行计划可以使用多个工作线程。 非并行查询使用的串行执行计划仅使用一个工作线程来实现执行。 并行查询使用的实际工作线程数在查询计划执行初始化时确定，并由计划的复杂程度和并行度确定。 并行度确定要使用的最大 CPU 数；它并不表示要使用的工作线程数。 并行度的值在服务器级别设置，并可使用 sp_configure 系统存储过程进行修改。 通过指定 `MAXDOP` 查询提示或 `MAXDOP` 索引选项，可以针对单个查询语句或索引语句覆盖此值。 
+-   **表值函数 (TVF)**         
+    有关 TVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+    
+-   **TOP 关键字**        
+    有关详细信息，请参阅 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
+
+插入交换运算符之后，结果便为并行查询执行计划。 并行查询执行计划可以使用多个工作线程。 非并行（串行）查询使用的串行执行计划仅使用一个工作线程来实现执行。 并行查询使用的实际工作线程数在查询计划执行初始化时确定，并由计划的复杂程度和并行度确定。 
+
+并行度 (DOP) 确定要使用的最大 CPU 数；它并不表示要使用的工作线程数。 DOP 限制根据[任务](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)设置。 它不是按[请求](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)限制或按查询限制。 这意味着，在并行查询期间，单个请求可以生成多个任务，然后将它们分配给[计划程序](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 并行执行不同的任务时，可能会在任意给定的查询执行点同时使用超过 MAXDOP 指定数量的处理器。 有关详细信息，请参阅[线程和任务体系结构指南](../relational-databases/thread-and-task-architecture-guide.md)。
 
 如果下列情况之一为真，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器不会针对查询使用并行执行计划：
 
@@ -937,21 +946,15 @@ WHERE ProductID = 63;
 ### <a name="DOP"></a>并行度
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 自动检测每个并行查询执行或索引数据定义语言 (DDL) 操作实例的最佳并行度。 此操作所依据的条件如下： 
 
-1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否运行在具有多个微处理器或 CPU 的计算机（例如对称多处理计算机，即 SMP）上。  
-   只有具有多个 CPU 的计算机才能使用并行查询。 
+1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否运行在具有多个微处理器或 CPU 的计算机（例如对称多处理计算机，即 SMP）上  。 只有具有多个 CPU 的计算机才能使用并行查询。 
 
-2. 可用的工作线程是否足够。  
-   每个查询或索引操作均要求一定数量的工作线程才能执行。 执行并行计划比执行串行计划需要更多的工作线程，所需工作线程数会随着并行度的提高而增加。 无法满足特定并行度的并行计划的工作线程要求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将自动减少并行度或完全放弃指定的工作负荷上下文中的并行计划。 然后执行串行计划（一个工作线程）。 
+2. 可用的工作线程是否足够  。 每个查询或索引操作均要求一定数量的工作线程才能执行。 执行并行计划比执行串行计划需要更多的工作线程，所需工作线程数会随着并行度的提高而增加。 无法满足特定并行度的并行计划的工作线程要求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将自动减少并行度或完全放弃指定的工作负荷上下文中的并行计划。 然后执行串行计划（一个工作线程）。 
 
-3. 所执行的查询或索引操作的类型。  
-   创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 会将执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)进行比较。 如果适合性测试发现其他值更适合正在运行的工作负载，用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 更改默认值 5。 
+3. 所执行的查询或索引操作的类型  。 创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 会将执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)进行比较。 如果适合性测试发现其他值更适合正在运行的工作负载，用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 更改默认值 5。 
 
-4. 待处理的行数是否足够。  
-   如果查询优化器确定行数太少，则不引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
+4. 待处理的行数是否足够  。 如果查询优化器确定行数太少，则不引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
 
-5. 当前的分发内容统计信息是否可用。  
-   如果不能达到最高并行度，则在放弃并行计划之前会考虑较低的并行度。  
-  例如，创建视图的聚集索引后，将无法评估分发内容统计信息，因为聚集索引仍不存在。 在此情况下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]无法为索引操作提供最高并行度。 不过，某些运算符（例如，排序和扫描）仍能从并行执行中获益。
+5. 当前的分发内容统计信息是否可用  。 如果不能达到最高并行度，则在放弃并行计划之前会考虑较低的并行度。 例如，创建视图的聚集索引后，将无法评估分发内容统计信息，因为聚集索引仍不存在。 在此情况下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]无法为索引操作提供最高并行度。 不过，某些运算符（例如，排序和扫描）仍能从并行执行中获益。
 
 > [!NOTE]
 > 并行索引操作只能在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition、Developer Edition 和 Evaluation Edition 中使用。
@@ -963,11 +966,23 @@ WHERE ProductID = 63;
 并行执行计划可以填充静态和由键集驱动的游标。 然而，只有串行执行可以提供动态游标行为。 查询优化器始终为查询生成串行执行计划，这是动态游标的一部分。
 
 #### <a name="overriding-degrees-of-parallelism"></a>覆盖并行度
-可以使用[最大并行度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) 服务器配置选项（[!INCLUDE[ssSDS_md](../includes/sssds-md.md)] 上的 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)）来限制并行计划执行中使用的处理器数。 通过指定 MAXDOP 查询提示或 MAXDOP 索引选项，可以用单独查询和索引操作语句来覆盖最大并行度选项。 MAXDOP 提供对单独查询和索引操作的详细控制。 例如，可以使用 MAXDOP 选项来控制（增加或减少）联机索引操作的专用处理器数。 通过这种方式，您就可以在并发用户间平衡索引操作所使用的资源。 
+并行度设置并行计划执行中要使用的处理器数量。 此配置可以在不同级别设置：
+
+1.  服务器级别，使用最大并行度 (MAXDOP) [服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  。</br> **适用于：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+    > [!NOTE]
+    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] 介绍有关在安装过程中如何设置 MAXDOP 服务器配置的自动建议。 安装程序用户界面允许接受建议的设置或输入自己的值。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../sql-server/install/instance-configuration.md#maxdop)。
+
+2.  工作负载级别，请使用 MAX_DOP [Resource Governor 工作负载组配置选项](../t-sql/statements/create-workload-group-transact-sql.md)  。</br> **适用于：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+3.  数据库级别，请使用 MAXDOP [数据库范围的配置](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  。</br> 适用对象：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]  
+
+4.  查询或索引语句级别，使用 MAXDOP [查询提示](../t-sql/queries/hints-transact-sql-query.md) 或 MAXDOP 索引选项   。 例如，可以使用 MAXDOP 选项来控制（增加或减少）联机索引操作的专用处理器数。 通过这种方式，您就可以在并发用户间平衡索引操作所使用的资源。</br> 适用对象：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]  
 
 将“最大并行度”选项设置为 0 (默认值) 可使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在执行并行计划时使用所有可用的处理器（最多可达 64 台处理器）。 尽管 MAXDOP 选项设置为 0 时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将运行时目标设置为 64 个逻辑处理器，但如果需要，可以手动设置不同的值。 针对查询和索引将 MAXDOP 选项设置为 0 时，将允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在并行计划执行中针对给定的查询或索引使用所有可用的处理器（最多可达 64 个处理器）。 MAXDOP 并不是所有并行查询的强制值，而是所有符合并行性要求的查询的暂定目标值。 这意味着如果在运行时没有足够的可用工作线程，查询可能会以比 MAXDOP 服务器配置选项更低的并行度执行。
 
-请参阅 [Microsoft 支持文章](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)，了解有关配置 MAXDOP 的最佳实践。
+> [!TIP]
+> 有关配置 MAXDOP 的指南，请参阅本[文档页](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)。
 
 ### <a name="parallel-query-example"></a>并行查询示例
 以下查询计算指定季度（自 2000 年 4 月 1 日开始）内下的订单数，其中至少有一个订单项的客户接收日期晚于提交日期。 该查询列出这类订单的计数，按每个订单的优先级分组并按优先级升序排序。 

@@ -1,32 +1,62 @@
 ---
 title: 下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序 | Microsoft Docs
 description: 适用于 SQL Server 的 Microsoft OLE DB 驱动程序的下载地址
-ms.date: 10/15/2019
+ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dc0ee4de32be9cf146b4e185d5e973972dbc0fd2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a49f0ffe4de2f3242daf147ecb80dc950f8d8a9f
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72381835"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177397"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-## <a name="windows"></a>Windows
+OLE DB Driver for SQL Server 是独立的数据访问应用程序编程接口 (API)，用于 OLE DB。 Windows 上提供了 OLE DB Driver for SQL Server，并在一个动态链接库 (DLL) 中提供了 SQL OLE DB 驱动程序。
 
-以下版本的适用于 SQL Server 的 Microsoft OLE DB 驱动程序可供下载：
+## <a name="download"></a>下载
 
-- [适用于 SQL Server 的 Microsoft OLE DB 驱动程序 18.3.0](https://go.microsoft.com/fwlink/?linkid=871294)
+Microsoft OLE DB Driver 18.3 for SQL Server 是最新正式发行版 (GA)。 如果安装了 Microsoft OLE DB Driver 18 for SQL Server 的早期版本，安装 18.3 版会使其升级到 18.3 版。
+
+[![下载](../../ssdt/media/download.png)下载 Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)   
+[![下载](../../ssdt/media/download.png)下载 Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)   
+
+### <a name="version-information"></a>版本信息
+
+- 版本号：18.3.0
+- 发布日期：2019 年 10 月 15 日
+
+> [!Note]
+> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本](https://aka.ms/downloadmsoledbsqlusenglish)。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
+
+## <a name="available-languages"></a>可用语言
+
+可以安装以下语言的此版本 Microsoft OLE DB Driver for SQL Server：
+
+Microsoft OLE DB Driver 18.3 for SQL Server (x64)：  
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40a)
+
+Microsoft OLE DB Driver 18.3 for SQL Server (x86)：  
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40a)
+
+## <a name="release-notes"></a>发行说明
+
+有关此版本的详细信息，请参阅[发行说明](release-notes-for-oledb-driver-for-sql-server.md)。
+
+## <a name="previous-releases"></a>以前的版本
+
+[以前的 Microsoft OLE DB Driver for SQL Server 版本](release-notes-for-oledb-driver-for-sql-server.md#previous-releases)
 
 ## <a name="see-also"></a>另请参阅
 
 [Microsoft OLE DB Driver for SQL Server 发行说明](release-notes-for-oledb-driver-for-sql-server.md)  
 [适用于 SQL Server 的 OLE DB 驱动程序的系统要求](system-requirements-for-oledb-driver-for-sql-server.md)  
+[适用于 SQL Server 的 OLE DB 驱动程序的支持策略](applications\support-policies-for-oledb-driver-for-sql-server.md)  
 [何时使用适用于 SQL Server 的 OLE DB 驱动程序](when-to-use-oledb-driver-for-sql-server.md)  
 [安装适用于 SQL Server 的 OLE DB 驱动程序](applications/installing-oledb-driver-for-sql-server.md)

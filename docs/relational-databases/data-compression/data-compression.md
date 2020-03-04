@@ -23,12 +23,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3360957d62c6af05c6d650c0143f9f45fde3bd19
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68055448"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705869"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68055448"
 -   对于列存储表和列存储索引，可为每个分区配置存档压缩选项，且各个分区的存档压缩设置不必相同。  
   
 > [!NOTE]  
->  此外，还可以使用 GZIP 算法格式来压缩数据。 这是一个附加步骤，最适合压缩部分数据时归档旧数据以进行长期存储。 无法为使用 COMPRESS 函数压缩的数据创建索引。 有关详细信息，请参阅 [COMPRESS (Transact-SQL)](../../t-sql/functions/compress-transact-sql.md)。  
+> 此外，还可以使用 GZIP 算法格式来压缩数据。 这是一个附加步骤，最适合压缩部分数据时归档旧数据以进行长期存储。 无法为使用 `COMPRESS` 函数压缩的数据创建索引。 有关详细信息，请参阅 [COMPRESS (Transact-SQL)](../../t-sql/functions/compress-transact-sql.md)。  
   
 ## <a name="considerations-for-when-you-use-row-and-page-compression"></a>使用行压缩和页压缩时的注意事项  
  使用行压缩和页压缩时，应注意以下事项：  
@@ -57,7 +57,7 @@ ms.locfileid: "68055448"
 -   不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本都提供压缩功能。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
 -   压缩功能不可用于系统表。  
 -   通过压缩可在一页上存储更多的行，但不会更改表或索引的最大行大小。  
--   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，不能压缩具有 c1 列**char(8000)** 和 c2 列**char(53)** 的表，因为存在额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
+-   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，不能压缩具有 `c1 CHAR(8000)` 和 `c2 CHAR(53)` 列的表，因为存在额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
     -   固定长度类型的更新必须始终成功。  
     -   禁用数据压缩必须总是成功。 即使已压缩的行可以容纳在页面中（意味着它小于 8060 个字节）， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也不允许对哪些在未压缩时无法容纳在行中的更新。  
 -   当指定分区列表时，可以将各个分区的压缩类型设置为 ROW、PAGE 或 NONE。 如果未指定分区列表，将使用语句中指定的数据压缩属性来设置所有分区。 创建表或索引时，除非指定了其他压缩设置，否则数据压缩将设置为 NONE。 修改表时，除非指定了其他压缩设置，否则将保留现有压缩设置。  
@@ -66,8 +66,8 @@ ms.locfileid: "68055448"
 -   对堆创建聚集索引时，聚集索引会继承该堆的压缩状态，除非指定了另一压缩状态。  
 -   如果堆配置为页级压缩，则只有在以下情况下，页才会进行页级压缩：  
     -   在启用大容量优化的情况下大容量导入数据。  
-    -   数据是使用 INSERT INTO ...WITH (TABLOCK) 语法和表没有非聚集索引。  
-    -   表是通过执行带 PAGE 压缩选项的 ALTER TABLE ...REBUILD 语句重新生成的。  
+    -   数据是使用 `INSERT INTO ... WITH (TABLOCK)` 语法插入的，并且表没有非聚集索引。  
+    -   表是通过执行带 PAGE 压缩选项的 `ALTER TABLE ... REBUILD` 语句重新生成的。  
 -   通过 DML 操作被分配到堆中的新页面不会使用 PAGE 压缩，除非重新生成该堆。 重新生成堆的方法有：删除压缩然后重新应用压缩，或者创建聚集索引然后再删除聚集索引。  
 -   若要更改堆的压缩设置，要求对表重新生成所有非聚集索引，以便它们具有指向堆中的新行位置的指针。  
 -   可以联机或脱机启用或禁用 ROW 或 PAGE 压缩功能。 当执行联机操作时，对堆启用压缩功能是单线程的。  
@@ -78,11 +78,11 @@ ms.locfileid: "68055448"
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现 vardecimal 存储格式的表升级时保留该设置。 可以向具有 vardecimal 存储格式的表应用行压缩。 但是，因为行压缩是 vardecimal 存储格式的超集，所以不必保留 vardecimal 存储格式。 将 vardecimal 存储格式与行压缩一起使用时，十进制值不会进一步压缩。 可以向具有 vardecimal 存储格式的表应用页压缩；但是，vardecimal 存储格式列可能不会实现进一步的压缩。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 vardecimal 存储格式；但是，由于行级压缩可实现同样的目标，因此不推荐使用 vardecimal 存储格式。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 vardecimal 存储格式；但是，由于行级压缩可实现同样的目标，因此不推荐使用 vardecimal 存储格式。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用列存储和列存储存档压缩  
   
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
   
 ### <a name="basics"></a>基础  
  列存储表和索引始终使用列存储压缩进行存储。 您可以通过配置称作存档压缩的附加压缩，进一步减少列存储数据的大小。  为了执行存档压缩， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对数据运行 Microsoft XPRESS 压缩算法。 通过使用以下数据压缩类型添加或删除存档压缩：  
@@ -92,7 +92,8 @@ ms.locfileid: "68055448"
 若要添加存档压缩，请使用具有 REBUILD 选项且 DATA COMPRESSION = COLUMNSTORE_ARCHIVE 的 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 或者 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 。  
   
 #### <a name="examples"></a>示例：  
-```  
+
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;  
   
@@ -107,7 +108,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 #### <a name="examples"></a>示例：  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE) ;  
   
@@ -120,7 +121,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (2,4
   
 下一示例将数据压缩设置为对于某些分区是列存储，对于其他分区是列存储存档。  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = ALL WITH (  
     DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (4,5),  
@@ -142,33 +143,37 @@ REBUILD PARTITION = ALL WITH (
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>压缩对已分区表和已分区索引的影响  
  如果对已分区表和已分区索引使用数据压缩，则应注意以下事项：  
--   如果使用 ALTER PARTITION 语句拆分分区，则两个分区均继承原始分区的数据压缩属性。  
+-   如果使用 `ALTER PARTITION` 语句拆分分区，则两个分区均继承原始分区的数据压缩属性。  
 -   合并两个分区时，生成的分区将继承目标分区的数据压缩属性。  
 -   若要切换分区，该分区的数据压缩属性必须与表的压缩属性匹配。  
 -   可以使用两种语法变体来修改已分区表或已分区索引的压缩：  
     -   下面的语法仅重新生成被引用分区：  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  <option>)  
         ```  
+    
     -   下面的语法通过对未引用的任何分区使用现有压缩设置来重新生成整个表：  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = ALL   
         WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(<range>),  
         ... )  
         ```  
   
-     已分区索引使用 ALTER INDEX 遵循同样的原则。  
+     已分区索引使用 `ALTER INDEX` 遵循同样的原则。  
   
 -   删除聚集索引时，除非修改了分区方案，否则相应的堆分区将保留其数据压缩设置。 如果分区方案已更改，则所有分区都将重新生成为未压缩状态。 若要删除聚集索引并更改分区方案，需要执行下列步骤：  
      1. 删除聚集索引。  
-     2. 使用指定压缩选项的 ALTER TABLE ...REBUILD ... 选项来修改表。  
+     2. 使用指定压缩选项的 `ALTER TABLE ... REBUILD` 选项来修改表。  
   
      若要删除聚集索引，脱机操作的执行速度很快，因为只删除较高级别的聚集索引。 如果联机删除聚集索引，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须重新生成堆两次，一次针对步骤 1，一次针对步骤 2。  
   
 ## <a name="how-compression-affects-replication"></a>压缩对复制的影响 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。   
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。   
+
 如果将数据压缩与复制一起使用，则应注意以下事项：  
 -   当快照代理生成初始架构脚本时，新架构对表及其索引采用相同的压缩设置。 不能仅对表启用压缩，而不对索引启用压缩。  
 -   对于事务复制，项目架构选项决定了必须对哪些依赖对象和属性编写脚本。 有关详细信息，请参阅 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。  
@@ -186,7 +191,7 @@ REBUILD PARTITION = ALL WITH (
 |如果发布服务器上的所有分区均压缩，则压缩订阅服务器上的表，但不复制分区方案。|False|True|检查是否对所有分区均启用了压缩。<br /><br /> 在表级别对压缩编写脚本。|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>压缩对其他 SQL Server 组件的影响 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
    
  压缩发生在存储引擎中，数据以未压缩状态呈现给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他大部分组件。 这决定了其他组件上的压缩效果仅限于以下方面：  
 -   大容量导入和导出操作  

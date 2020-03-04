@@ -1,5 +1,5 @@
 ---
-title: SQL Server Integration Services (SSIS) Scale Out 通过 SQL Server 故障转移群集实例对高可用性的支持 | Microsoft Docs
+title: Scale Out 通过 SQL Server 故障转移群集实例对高可用性的支持 | Microsoft Docs
 description: 本文介绍如何通过 SQL Server 故障转移群集实例配置高可用性 SSIS Scale Out
 ms.custom: performance
 ms.date: 04/10/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68811196"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903794"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 通过 SQL Server 故障转移群集实例对高可用性的支持
 
@@ -25,7 +25,7 @@ ms.locfileid: "68811196"
 
 要使用 SQL Server 故障转移群集实例设置 Scale Out Master 端的高可用性，请执行以下步骤：
 
-## <a name="1-prerequisites"></a>1.必备条件
+## <a name="1-prerequisites"></a>1.先决条件
 设置 Windows 故障转移群集。 有关说明，请参阅博客文章[安装适用于 Windows Server 2012 的故障转移群集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)。 在所有群集节点上安装功能和工具。
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2.安装 SQL Server 故障转移群集

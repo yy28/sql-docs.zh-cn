@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76536643"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903814"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL)（预览版）
 
@@ -205,7 +205,7 @@ WITH
 
 - .gz - **GZIP**
 - .snappy - **Snappy**
-- .deflate - **DefaultCodec**
+- .deflate - **DefaultCodec**（仅限 Parquet 和 ORC）
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE* 适用于 CSV，它指定一个字符，该字符将用作 CSV 文件中的引号字符（字符串分隔符）。 如果未指定，根据 RFC 4180 标准中的定义，引号字符 (") 将用作引号字符。 FIELDQUOTE 的 UTF-8 不支持扩展的 ASCII 字符。

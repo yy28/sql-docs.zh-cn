@@ -1,10 +1,8 @@
 ---
 title: Analysis Services 处理任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e95fd78657a043683d04fa86fd66edd345e2f483
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298467"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634786"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
 
@@ -119,7 +117,8 @@ ms.locfileid: "71298467"
  **相关主题：** [Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **对象列表**  
- |properties|说明|  
+ 
+|properties|说明|  
 |--------------|-----------------|  
 |**Object Name**|列出指定对象的名称。|  
 |类型 |列出指定对象的类型。|  
@@ -138,7 +137,8 @@ ms.locfileid: "71298467"
  **相关主题：** [“影响分析”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **批设置摘要**  
- |properties|说明|  
+ 
+|properties|说明|  
 |--------------|-----------------|  
 |**处理顺序**|指定是按顺序处理对象还是按批处理对象；如果使用并行处理，则指定要并发处理的对象数。|  
 |**事务模式**|指定按顺序处理时的事务模式。|  
@@ -150,4 +150,3 @@ ms.locfileid: "71298467"
  更改处理选项以及对维度键中错误的处理方式。  
   
  **相关主题：** [“更改设置”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
-  

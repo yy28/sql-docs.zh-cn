@@ -1,7 +1,7 @@
 ---
 title: JDBC 驱动程序常见问题解答 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1055b9b0422073d7b9875c748dcfe889af053dc2
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004625"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903604"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -39,9 +39,9 @@ Microsoft JDBC Driver 8.2 支持 JDBC 4.2 和 4.3（部分）规范，并且安�
 
 | JAR                        | JDBC 规范            | 添加版本 |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.0.jre13.jar | JDBC 4.3（部分）和 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.0.jre11.jar | JDBC 4.3（部分）和 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3（部分）和 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3（部分）和 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.4 支持 JDBC 4.2 和 4.3（部分）规范，并且其安装包中包含以下三个 JAR 类库：
@@ -124,6 +124,7 @@ JDBC 驱动程序 6.0、6.2、6.4 和 7.0 是可再发行的。 查看许可协�
 | 非 Windows | 纯 Java Kerberos                    |
 | 非 Windows | SQL Server                            |
 | 非 Windows | Azure Active Directory 身份验证 |
+| 非 Windows | NTLM                                  |
 | Windows     | 纯 Java Kerberos                    |
 | Windows     | SQL Server                            |
 | Windows     | 具有 NTLM 备份的 Kerberos             |

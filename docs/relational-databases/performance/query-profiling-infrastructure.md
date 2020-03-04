@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257676"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705902"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 提供了访问查询执行计划的运行时信息的功能。 出现性能问题时，最重要的操作之一是准确了解正在执行的工作负载以及如何驱动使用资源。 为此，访问[实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)是很重要的。
 
@@ -119,9 +119,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>轻型查询执行统计信息分析基础结构 v3
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包括一个新修订的轻型分析版本，用于收集所有执行的行计数信息。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中已启用轻型分析，跟踪标志 7412 无效。 可以使用 LIGHTWEIGHT_QUERY_PROFILING [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;` 在数据库级别禁用轻量级分析。
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 包括一个新修订的轻型分析版本，用于收集所有执行的行计数信息。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上默认情况下启用轻量分析。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，跟踪标志 7412 不再有效。 可以使用 LIGHTWEIGHT_QUERY_PROFILING [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;` 在数据库级别禁用轻量级分析。
 
 引入了新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 以返回大多数查询的最后已知实际执行计划的等效项，称为“最后查询计划统计信息”  。 可以使用 LAST_QUERY_PLAN_STATS [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;` 在数据库级别启用最后查询计划统计信息。
 

@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 97f4ebef586d7e0deb77f753ff264120f97cef5a
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544906"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652936"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下载 SQL Server Data Tools (SSDT) for Visual Studio
 
@@ -32,13 +32,16 @@ SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Serv
 
 用于创建数据库项目的核心 SSDT 功能一直是 Visual Studio 不可或缺的部分。
 
-随着 Visual Studio 2019 发布，启用 Analysis Services、Integration Services 和 Reporting Services 项目所需的功能仅移至相应 Visual Studio (VSIX) 扩展中。 不再需要独立 SSDT 安装。
+随着 Visual Studio 2019 发布，启用 Analysis Services、Integration Services 和 Reporting Services 项目所需的功能仅移至相应 Visual Studio (VSIX) 扩展中。
+
+> [!NOTE]
+> 没有适用于 Visual Studio 2019 的 SSDT 独立安装程序。
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>使用 Visual Studio 2019 安装 SSDT
 
 如果已安装 [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)，则可以编辑工作负载列表，使其包括 SSDT。
 
-* 对于 SQL 数据库项目，请选择“数据存储和处理”  下的“SQL Server Data Tools”  。
+* 对于 SQL 数据库项目，请选择 **“数据存储和处理”** 下的 **“SQL Server Data Tools”** 。
 
    ![“数据存储和处理”工作负载](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
@@ -46,7 +49,7 @@ SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Serv
 
 如果尚未安装 Visual Studio 2019，可以下载并安装 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)。 
 
-* 对于 SQL 数据库项目，请在安装过程中的工作负载列表中的“数据存储和处理”下选择“SQL Server Data Tools”   。
+* 对于 SQL 数据库项目，请在安装过程中的工作负载列表中的 **“数据存储和处理”** 下选择 **“SQL Server Data Tools”** 。
 
 * 对于 Analysis Services、Integration Services 或 Reporting Services 项目，请从“工具”>“扩展和更新”  或从[市场](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)安装相应的[扩展](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)。
 

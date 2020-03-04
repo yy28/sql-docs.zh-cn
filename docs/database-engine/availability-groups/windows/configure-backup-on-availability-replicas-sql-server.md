@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 570ac300f8f522d0ea4acfb711d78bd7cfaf7ef2
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.openlocfilehash: f5aa9a2373d622e74b2964c7a6dc967a82ab4e36
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77146287"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177377"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>配置 AlwaysOn 可用性组的次要副本备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,9 @@ ms.locfileid: "77146287"
   
 ##  <a name="Prerequisites"></a>先决条件  
  您必须连接到承载主副本的服务器实例。  
+ 
+   > [!NOTE]
+   > 无需读取次要副本即可将备份卸载到该副本。 即使将 `Readable Secondary` 设置为 `no`，仍可在次要副本上成功进行备份。 
   
   
 ##  <a name="Permissions"></a> 权限  

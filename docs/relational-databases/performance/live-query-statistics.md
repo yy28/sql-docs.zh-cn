@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 82634dc8169fa266e6fb1c92ec9a14129e40e947
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983252"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180085"
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 能够查看活动查询的实时执行计划。 此实时查询计划作为控制流，能够实时了解从一个[查询计划操作员](../../relational-databases/showplan-logical-and-physical-operators-reference.md)到另一个操作员的查询执行过程。 实时查询计划显示总体查询进度和操作员级运行时执行统计信息（例如处理的行数、经过的时间、操作员进度等）。由于此数据是实时可用的，无需等待完成查询，因此这些执行统计信息对于调试查询性能问题非常有用。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 开始支持此功能，但它可以与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 配合使用。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 能够查看活动查询的实时执行计划。 此实时查询计划作为控制流，能够实时了解从一个[查询计划操作员](../../relational-databases/showplan-logical-and-physical-operators-reference.md)到另一个操作员的查询执行过程。 实时查询计划显示总体查询进度和操作员级运行时执行统计信息（例如处理的行数、经过的时间、操作员进度等）。由于此数据是实时可用的，无需等待完成查询，因此这些执行统计信息对于调试查询性能问题非常有用。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 开始支持此功能，但它可以与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 配合使用。  
 
 > [!NOTE]
 > 在内部，实时查询统计信息利用 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV。
   
-**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
 > [!WARNING]  
 > 此功能主要用于故障排除。 使用此功能会明显降低整体查询性能，尤其是在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
@@ -62,7 +62,9 @@ ms.locfileid: "73983252"
  必须启用统计信息配置文件基础结构，实时查询统计信息才能捕获查询进度的相关信息。 开销有可能较大，具体取决于使用的版本。 有关此开销的详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
   
 ## <a name="permissions"></a>权限  
- 需要数据库级别 `SHOWPLAN` 权限来填充“实时查询统计信息”结果页，需要服务器级别 `VIEW SERVER STATE` 权限来查看实时统计信息，还需要执行查询所需的所有权限  。  
+需要数据库级别 `SHOWPLAN` 权限才能填充“实时查询统计信息”结果页，还需要执行查询所需的所有权限  。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，需要服务器级别 `VIEW SERVER STATE` 权限才能查看实时统计信息。  
+对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层，需要数据库的 `VIEW DATABASE STATE` 权限才能查看实时统计信息。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 标准层和基本层上，需要“服务器管理员”或“Azure Active Directory 管理员”帐户才能查看实时统计信息   。
   
 ## <a name="see-also"></a>另请参阅  
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

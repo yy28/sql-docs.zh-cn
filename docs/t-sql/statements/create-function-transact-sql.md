@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 183edfbae4da98f12d9ed32b594e74b1932b6f1b
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982787"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705892"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ RETURNS return_data_type
  如果函数的参数有默认值，则调用该函数以检索默认值时，必须指定关键字 DEFAULT。 此行为与在存储过程中使用具有默认值的参数不同，在后一种情况下，不提供参数同样意味着使用默认值。 但在通过使用 EXECUTE 语句调用标量函数时，DEFAULT 关键字不是必需的。  
   
  READONLY  
- 指示不能在函数定义中更新或修改参数。 如果参数类型为用户定义的表类型，则应指定 READONLY。  
+ 指示不能在函数定义中更新或修改参数。 用户定义的表类型参数 (TVP) 需要 READONLY，而其他任何参数类型都不能使用 READONLY。
   
  return_data_type   
  标量用户定义函数的返回值。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）  。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）     。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为返回数据类型。  
@@ -810,7 +810,7 @@ GO
   
  有关如何创建 CLR 表值函数的示例，请参阅 [CLR 表值函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)。  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数的定义  
+### <a name="e-displaying-the-definition-of-tsql-user-defined-functions"></a>E. 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数的定义  
   
 ```sql  
 SELECT definition, type   

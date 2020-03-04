@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71127375"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608521"
 ---
 # <a name="tables"></a>表
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "71127375"
 
 #### <a name="ctp23"></a> 跨多个作用域使用临时表减少了对工作负荷的重新编译
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] 跨多个作用域使用临时表减少了对工作负载的重新编译。 在推出此功能之前，当引用带有数据操作语言 DML 语句（`SELECT`、`INSERT`、`UPDATE`、`DELETE`）的临时表时，如果此临时表由外部作用域批处理创建，则会导致每次执行时都会重新编译 DML 语句。 借助此改进，SQL Server 可执行其他轻量级检查来避免不必要的重新编译：
+在所有数据库兼容性级别下，[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] 跨多个作用域使用临时表减少了对工作负载的重新编译。 Azure SQL 数据库也在数据库兼容性级别 150 下针对所有部署模型启用了此功能。  在推出此功能之前，当引用带有数据操作语言 DML 语句（`SELECT`、`INSERT`、`UPDATE`、`DELETE`）的临时表时，如果此临时表由外部作用域批处理创建，则会导致每次执行时都会重新编译 DML 语句。 借助此改进，SQL Server 可执行其他轻量级检查来避免不必要的重新编译：
 
 - 检查在编译时用于创建临时表的外部作用域模块是否与用于连续执行的外部作用域模块相同。 
 - 跟踪在初始编译时所做的任何数据定义语言 (DDL) 更改，并将它们与连续执行的 DDL 操作进行比较。

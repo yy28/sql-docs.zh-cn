@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 637b56c7f64d35501be0efef30e8f2a055b5be4b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f47c034a720be5409d83868a7a61dd229ab70e24
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67971911"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600135"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  允许你指定要与输入和输出参数一起使用的要调用的存储过程名称。 此类还可以使用 ? = call( ?, ..) 语法检索返回状态值。  
+  允许你指定要与输入和输出参数一起使用的要调用的存储过程名称。 此类还可以使用 `? = call( ?, ..)` 语义检索返回状态值。  
   
  **包：** com.microsoft.sqlserver.jdbc  
   

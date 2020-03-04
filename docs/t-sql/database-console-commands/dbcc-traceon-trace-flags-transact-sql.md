@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 99e38f169b250a2a1ab6a81d8983a428f2334606
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: 058becae07f15857f0509cbbc90261b960bc4713
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558333"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705912"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
-跟踪标志用于设置特定服务器特征或更改特定行为。 例如，跟踪标志 3226 是一种常用的启动跟踪标志，可取消显示错误日志中的成功备份消息。 跟踪标志经常用于诊断性能问题或调试存储过程或复杂的计算机系统，但 Microsoft 支持部门还可能建议将它们用于解决会对特定工作负载产生负面影响的行为。  当按照指示使用时，所有记录的跟踪标志和 Microsoft 支持部门推荐的跟踪标志在生产环境中都完全受支持。  请注意，此列表中的跟踪标志在其特定用途方面可能会有一些其他注意事项，因此建议仔细查看此处和/或支持工程师提供的所有建议。 此外，与 SQL Server 中的任何配置更改一样，最好在部署标志之前在非生产环境中全面测试该标志。
+跟踪标志用于设置特定服务器特征或更改特定行为。 例如，跟踪标志 3226 是一种常用的启动跟踪标志，可取消显示错误日志中的成功备份消息。 跟踪标志经常用于诊断性能问题或调试存储过程或复杂的计算机系统，但 Microsoft 支持部门还可能建议将它们用于解决会对特定工作负载产生负面影响的行为。 当按照指示使用时，所有记录的跟踪标志和 Microsoft 支持部门推荐的跟踪标志在生产环境中都完全受支持。 请注意，此列表中的跟踪标志在其特定用途方面可能会有一些其他注意事项，因此建议仔细查看此处和/或支持工程师提供的所有建议。 此外，与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何配置更改一样，最好在部署标志之前在非生产环境中全面测试该标志。
 
 ## <a name="remarks"></a>备注  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，跟踪标志可以使用三个范围：查询、会话和全局。 查询跟踪标志在特定查询的上下文中处于活动状态。 会话跟踪标志对某个连接有效，且只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。 某些标志只能作为全局标志启用，而某些标志在全局或会话作用域都可以启用。  
@@ -54,7 +54,7 @@ ms.locfileid: "77558333"
 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的跟踪标志，并进行了说明。 
 
 > [!NOTE]
-> Azure SQL 数据库托管实例支持以下全局跟踪标志：460、2301、2389、2390、2453、2467、7471、8207、9389、1 0316 和 11024。 托管实例尚不支持会话跟踪标志。
+> Azure SQL 数据库托管实例支持以下全局跟踪标志：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 和 11024。 托管实例尚不支持会话跟踪标志。
  
 > [!NOTE]
 > 特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入了一些跟踪标志。 有关适用版本的详细信息，请参阅与特定跟踪标志关联的 Microsoft 支持文章。
@@ -64,8 +64,8 @@ ms.locfileid: "77558333"
   
 |跟踪标志|说明|  
 |---|---|
-|**101**|增加合并复制代理日志记录的详细程度。<br /><br />警告  ：跟踪标志 101 不应在生产环境中持续启用，而应只限于用于时间限制的故障排除。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2892633)。<br /><br />**作用域**：仅全局|
-|**102**|增加合并复制代理日志记录的详细程度，并将其定向到 \<Distribution server>..msmerge_history  表。<br /><br />警告  ：跟踪标志 102 不应在生产环境中持续启用，而应只限于用于时间限制的故障排除。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2892633)。<br /><br />**作用域**：仅全局|
+|**101**|增加合并复制代理日志记录的详细程度。<br /><br />**重要提示：** 在从命令提示符下执行 replmerg.exe 时，只能使用 -T 选项为[复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)启用跟踪标志 101   。<br /><br />警告  ：跟踪标志 101 不应在生产环境中持续启用，而应只限于用于时间限制的故障排除。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2892633)。<br /><br />**范围**：仅限复制合并代理|
+|**102**|增加合并复制代理日志记录的详细程度，并将其定向到 \<Distribution server>..msmerge_history  表。<br /><br />**重要提示：** 在从命令提示符下执行 replmerg.exe 时，只能使用 -T 选项为[复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)启用跟踪标志 102   。<br /><br />警告  ：跟踪标志 102 不应在生产环境中持续启用，而应只限于用于时间限制的故障排除。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2892633)。<br /><br />**范围**：仅限复制合并代理|
 |**139**| 当在兼容性级别较低的数据库上，针对特定数据类型分析兼容性级别 130 中引入的改进型精度和转换逻辑时，在 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) 和 [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) 等 DBCC 检查命令的作用域中强制执行正确的转换语义。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4010261)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高内部版本。<br /><br />警告  ：不应在生产环境中连续启用跟踪标志 139，该标志只能用于执行此 [Microsoft 支持文章](https://support.microsoft.com/help/4010261)中所述的数据库验证检查。 应在完成验证检查后立即禁用它。<br /><br />**作用域**：仅全局|
 |**174**|在 64 位系统上将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]计划缓存桶计数从 40,009 增加到 160,001。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3026083)。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：仅全局|
 |**176**|在为包含已计算分区依据列的表联机重新生成分区时，启用修复以解决错误。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3213683)和此 [Microsoft 支持文章](https://support.microsoft.com/kb/4541096)。<br /><br />**作用域**：全局或会话|
@@ -90,7 +90,7 @@ ms.locfileid: "77558333"
 |**1211**|基于内存不足或基于锁数禁用锁升级。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]不会将行锁或页锁升级到表锁。<br /><br />使用此跟踪标志可能会生成过多的锁，如果锁内存增长得足够大，则尝试为任何查询分配其他锁可能会失败。 这样会降低[!INCLUDE[ssDE](../../includes/ssde-md.md)]的性能，或因为内存不足而导致 1204 错误（无法分配锁资源）。<br /><br />如果同时设置了跟踪标志 1211 和 1224，则 1211 优先于 1224。 但是，由于在所有情况下（甚至在内存紧张的情况下）跟踪标志 1211 都禁止升级，因此建议改用 1224。 这有助于在使用多个锁时避免“锁不足”错误。<br /><br />有关如何解决 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的锁升级导致的阻塞问题的详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/323630)。<br /><br />**作用域**：全局或会话|  
 |**1222**|以不符合任何 XSD 架构的 XML 格式，返回参与死锁的锁的资源和类型，以及受影响的当前命令。<br /><br />**作用域**：仅全局|  
 |**1224**|基于锁数禁用锁升级。 但是，内存不足仍可激活锁升级。 如果锁对象使用的内存量超出下列条件之一，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将行锁或页锁升级为表（或分区）锁：<br /><ul><li>[!INCLUDE[ssDE](../../includes/ssde-md.md)]占用的 40% 的内存。 只有在 sp_configure 的 **locks** 参数设置为 0 时，这才适用。 <li>使用 sp_configure 的 locks 参数配置的锁内存的 40%  。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。</li></ul><br />如果同时设置了跟踪标志 1211 和 1224，则 1211 优先于 1224。 但是，由于在所有情况下（甚至在内存紧张的情况下）跟踪标志 1211 都禁止升级，因此建议使用 1224。 这有助于在使用多个锁时避免“锁不足”错误。<br /><br />**注意：** 也可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 语句的 LOCK_ESCALATION 选项控制到表级或 HoBT 级粒度的锁升级。<br /><br />有关如何解决 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的锁升级导致的阻塞问题的详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/323630)<br /><br />**作用域：** 全局或会话|
-|1229 |禁用所有锁定分区，而不管 CPU 数如何。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在服务器具有 16 个或更多 CPU 时启用锁定分区，以提高较大系统的可伸缩性特征。 有关锁定分区的详细信息，请参阅[事务锁定和行版本控制指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)。<br /><br />警告  ：转换分区时，跟踪标志 1229 会导致旋转锁争用和性能不佳或意外行为。<br /><br />**作用域**：仅全局|  
+|1229 |禁用所有锁定分区，而不管 CPU 数如何。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在服务器具有 16 个或更多 CPU 时启用锁定分区，以提高较大系统的可伸缩性特征。 有关锁定分区的详细信息，请参阅[事务锁定和行版本控制指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)。<br /><br />警告  ：跟踪标志 1229 可能导致旋转锁争用和性能下降。<br /><br />**作用域**：仅全局|  
 |**1236**|启用数据库锁分区。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2926217)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 开始，此行为由引擎控制，跟踪标志 1236 不再有效。<br /><br />**作用域**：仅全局|
 |**1237**|允许 ALTER PARTITION FUNCTION 语句遵从用户定义的当前会话死锁优先级，而不是成为默认情况下可能的死锁牺牲品。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4025261)。<br /><br />**注意：** 从 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 和数据库[兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 140 开始，该行为变成默认行为，跟踪标志 1237 不再有效。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
 |**1260**|禁用计划程序监视器转储。<br /><br />**作用域**：仅全局|   

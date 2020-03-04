@@ -23,12 +23,12 @@ ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 02/18/2020
-ms.openlocfilehash: 5004b46f878a5098e63fb3842569e826b21b764f
-ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
+ms.openlocfilehash: 8045c054d05a1e92eaf18f9aba852d9301f7ef60
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77520940"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652926"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -80,6 +80,30 @@ SQL Server Management Studio 18.4：
 ## <a name="previous-versions"></a>以前的版本
 
 本文仅适用于最新版本的 SSMS。 若要下载 SSMS 的早期版本，请访问 [SSMS 的早期版本](../ssms/release-notes-ssms.md#previous-ssms-releases)。
+
+## <a name="unattended-install"></a>无人参与安装
+
+还可以使用命令提示符脚本安装 SSMS。
+
+如果要在没有 GUI 提示的情况下在后台安装 SSMS，请执行以下步骤。
+
+1. 使用提升的权限启动命令提示符。
+
+2. 在命令提示符下键入以下命令。
+
+    ```console
+    start "" <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    ```
+
+    示例：
+
+    ```console
+    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    ```
+
+    你也可以传递 /Passive 而不是 /Quiet 来查看设置 UI   。
+
+3. 如果运行正常，根据示例，你可以在 %systemdrive%\SSMSto\Common7\IDE\Ssms.exe 中看到安装了 SSMS。 如果出现故障，可以检查返回的错误代码，并在 %TEMP%\SSMSSetup 处查看日志文件。
 
 ## <a name="supported-sql-offerings-ssms-184"></a>受支持的 SQL 产品/服务 (SSMS 18.4)
 

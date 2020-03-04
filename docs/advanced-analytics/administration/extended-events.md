@@ -3,18 +3,18 @@ title: 用扩展事件监视脚本
 description: 了解如何使用扩展事件来监视和疑难解答与 SQL Server 机器学习服务、SQL Server Launchpad 以及 Python 或 R 作业外部脚本有关的操作。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73727738"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200978"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用扩展事件监视 Python 和 R 脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    若要捕获与 Launchpad 相关的事件，请将 *.config* 文件放在 SQL Server 实例的 Binn 目录中。 在默认安装中，此目录为：
+    若要捕获与 Launchpad 相关的事件，请将 .xml 文件放在 SQL Server 实例的 Binn 目录中  。 在默认安装中，此目录为：
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn` 列中的一个值匹配。  
   
 + **BXLServer** 是使用外部脚本语言支持 SQL 可扩展性的附属进程，如 R 和 Python。 为每个外部语言实例启动单独的 BxlServer 实例。
   
-    若要捕获与 BXLServer 相关的事件，请将 .config  文件放在 R 或 Python 安装目录中。 在默认安装中，此目录为：
+    若要捕获与 BXLServer 相关的事件，请将 .xml 文件放在 R 或 Python 安装目录中  。 在默认安装中，此目录为：
      
     **R：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
 
@@ -145,7 +145,7 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
 </event_sessions>  
 ```
 
-+ 将 *.config* 文件放在 SQL Server 实例的 Binn 目录中。
++ 将 .xml 文件放在 SQL Server 实例的 Binn 目录中  。
 + 此文件必须命名为 `Launchpad.xevents.xml`。
 
 ### <a name="example-capturing-bxlserver-events"></a>示例：捕获 BXLServer 事件  
@@ -175,7 +175,7 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
 </event_sessions>  
 ```
 
-+ 将 *.config* 文件放在与 BXLServer 可执行文件相同的目录中。
++ 将 .xml 文件放在与 BXLServer 可执行文件相同的目录中  。
 + 此文件必须命名为 `bxlserver.xevents.xml`。
 
 ## <a name="next-steps"></a>后续步骤

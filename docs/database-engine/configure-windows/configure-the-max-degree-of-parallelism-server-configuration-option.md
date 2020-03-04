@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 47b9704591acd305a49ff315eb99314f14e87af1
-ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
+ms.openlocfilehash: 94f8c87e0b996be0b9485cbe5a43038e33420fe0
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259225"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568120"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +29,7 @@ ms.locfileid: "77259225"
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 SQL Server 中配置最大并行度 (MAXDOP) 服务器配置选项  。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在具有多个微处理器或 CPU 的计算机上运行时，它将为每个并行计划的执行检测并行度（即运行一个语句所使用的处理器数）。 您可以使用 **max degree of parallelism** 选项来限制并行计划执行时所用的处理器数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 考虑为查询、索引数据定义语言 (DDL) 操作、并行插入、联机更改列、并行统计信息集合以及静态的和由键集驱动的游标填充实施并行执行计划。
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 介绍有关在安装过程中如何设置 MAXDOP 的自动建议。 安装程序用户界面允许接受建议的设置或对其进行自定义。 有关详细信息，请参阅以下文章：
->  - [MaxDOP 已添加到 SQL 2019 安装程序](https://techcommunity.microsoft.com/t5/premier-field-engineering/maxdop-added-to-sql-2019-ctp3-0-setup/ba-p/780071)
->  - [SQL Server 2019 安装的 MAXDOP 和最大内存增强功能](https://www.mssqltips.com/sqlservertip/6211/sql-server-2019-installation-enhancements-for-maxdop-and-max-memory/)
->
+> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 介绍有关在安装过程中如何设置 MAXDOP 服务器配置的自动建议。 安装程序用户界面允许接受建议的设置或输入自己的值。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../../sql-server/install/instance-configuration.md#maxdop)。
 
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -107,7 +104,7 @@ ms.locfileid: "77259225"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max degree of parallelism` 选项的值配置为 `8`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max degree of parallelism` 选项的值配置为 `16`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

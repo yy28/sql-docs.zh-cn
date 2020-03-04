@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c323880153939b4f7229e5f04cf4b9a9ed16b99
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b52267870338065589de9bb54e5a332b923348fd
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253324"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568096"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步骤 4：使用 ADO.NET 弹性连接到 SQL
 
@@ -27,7 +27,7 @@ ms.locfileid: "75253324"
 - 上一篇文章：&nbsp;&nbsp;&nbsp;[步骤 3：使用 ADO.NET 连接到 SQL 的概念证明](step-3-connect-sql-ado-net.md)  
 
   
-本主题提供一个用于演示自定义重试逻辑的 C# 代码示例。 重试逻辑可提供可靠性。 重试逻辑旨在正常处理暂时错误或暂时性故障，在程序等待几秒并重试后，这种错误或故障往往会自行消失。  
+本主题提供一个用于演示自定义重试逻辑的 C# 代码示例。 重试逻辑可提供可靠性。 重试逻辑旨在正常处理暂时错误或暂时性故障，在程序等待几秒并重试后，这种错误或故障往往会自行消失  。  
   
 暂时性故障的原因包括：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75253324"
   
 1. 在[免费的 Visual Studio Community 版本](https://www.visualstudio.com/products/visual-studio-community-vs)中，基于 C# 控制台应用程序模板创建一个新项目。  
     - “文件”>“新建”>“项目”>“已安装”>“模板”> Visual C# > Windows >“经典桌面”>“控制台应用程序”  
-    - 将该项目命名为 RetryAdo2。  
+    - 将该项目命名为 RetryAdo2  。  
 2. 打开“解决方案资源管理器”窗格。  
     - 查看项目的名称。  
     - 查看 Program.cs 文件的名称。  
@@ -63,11 +63,11 @@ ms.locfileid: "75253324"
   
 ### <a name="step-2b-copy-and-paste-sample-code"></a>步骤 2.b：复制并粘贴示例代码  
   
-将此代码粘贴到你的 Program.cs 文件中。  
+将此代码粘贴到你的 Program.cs 文件中  。  
   
-然后，你必须编辑服务器名称、密码等字符串。 你可以在名为 GetSqlConnectionStringBuilder 的方法中找到这些字符串。  
+然后，你必须编辑服务器名称、密码等字符串。 你可以在名为 GetSqlConnectionStringBuilder 的方法中找到这些字符串  。  
   
-注意：服务器名称的连接字符串适用于 Azure SQL 数据库，因为它包括 tcp: 的四个字符前缀。 但你可以调整服务器字符串以连接到 Microsoft SQL Server。  
+注意：服务器名称的连接字符串适用于 Azure SQL 数据库，因为它包括 tcp:  的四个字符前缀。 但你可以调整服务器字符串以连接到 Microsoft SQL Server。  
   
   
 ```csharp
@@ -247,7 +247,7 @@ SELECT TOP 3
 ###  <a name="step-2c-run-the-program"></a>步骤 2.c：运行程序  
   
   
-RetryAdo2.exe 可执行文件未输入任何参数。 若要运行 .exe：  
+RetryAdo2.exe 可执行文件未输入任何参数  。 若要运行 .exe：  
   
 1. 打开一个控制台窗口，你已在其中编译了 RetryAdo2.exe 二进制文件。  
 2. 在没有输入参数的情况下运行 RetryAdo2.exe。  
@@ -271,10 +271,10 @@ filetable_updates_2105058535    2105058535
   
 代码示例包括以下内容：  
   
-- 第二个小类，名为 TestSqlException，其属性名为 Number 。  
+- 第二个小类，名为 TestSqlException  ，其属性名为 Number  。  
 - `//throw new TestSqlException(4060);`，可以取消注释。  
   
-如果取消注释 throw 语句并重新编译，则下一次运行 RetryAdo2.exe 的输出类似于下面的内容。  
+如果取消注释 throw 语句并重新编译，则下一次运行 RetryAdo2.exe 的  输出类似于下面的内容。  
   
 ```  
 [C:\VS15\RetryAdo2\RetryAdo2\bin\Debug\]  
@@ -308,9 +308,9 @@ ERROR: Unable to access the database!
   
 ###  <a name="step-2d-temporarily-misspell-the-server-name"></a>步骤 2.d：临时拼错服务器名称  
   
-1. 暂时将 40615 作为另一个错误号添加到 TransientErrorNumbers，然后重新编译。  
+1. 暂时将 40615 作为另一个错误号添加到 TransientErrorNumbers  ，然后重新编译。  
 2. 在 `new QC.SqlConnectionStringBuilder()` 行上设置一个断点。  
-3. 使用“编辑并继续”功能在下面几行故意拼错服务器名称。  
+3. 使用“编辑并继续”  功能在下面几行故意拼错服务器名称。  
     - 运行程序并返回到断点。  
     - 出现错误 40615。  
 4. 修复拼写错误。  

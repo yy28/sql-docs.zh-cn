@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a8b9d523f3c0edd3a642caba8efc2396267e141
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 13ab80fe810559105027070e15ca64c87ddc4161
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71291485"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903920"
 ---
-# <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用派生列转换派生列值
+# <a name="derive-column-values-with-the-derived-column-transformation"></a>使用派生列转换派生列值
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -48,7 +48,7 @@ ms.locfileid: "71291485"
     > [!NOTE]  
     >  如果表达式无效，表达式文本将突出显示，列上的工具提示将对错误进行说明。  
   
-7.  在“派生列”  列表中，选择“**作为新列添加>”\<** 以将表达式的计算结果写入新列，或选择一个现有列以用计算结果对其进行更新。  
+7.  在“派生列”  列表中，选择“\<作为新列添加>”  以将表达式的计算结果写入新列，或选择一个现有列以用计算结果对其进行更新。  
   
      如果选择使用新列， **“派生列转换编辑器”** 对话框将对表达式求值，并根据数据类型、长度、精度、小数位数和代码页为列指定数据类型。  
   

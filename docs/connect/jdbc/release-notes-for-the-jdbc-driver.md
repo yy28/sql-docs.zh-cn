@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 的发行说明 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6d55a856096a830172ced69f9fb28f66c11733e7
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 76607fbe96ef954ce90c7d24daf9a12b69a3fce6
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004549"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903734"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的发行说明
 
@@ -23,28 +23,28 @@ ms.locfileid: "77004549"
 
 本文列出了 Microsoft JDBC Driver for SQL Server  的版本。 对于每个发行版本，将对所做的更改进行命名和说明。
 
-## <a name="820"></a>8.2.0
+## <a name="821"></a>8.2.1
 
 ### <a name="compliance"></a>合规性
 
-2020 年 1 月 29 日
+2020 年 2 月 26 日
 
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
-| 下载 JDBC Driver 8.2 的最新更新。 | &bull;&nbsp;[Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub 上的 8.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 8.2 包中的 jar。<br/><br/>例如，8.2 包中的 mssql-jdbc-8.2.0.jre11.jar 文件应与 Java 11 配合使用。 |
+| 下载 JDBC Driver 8.2 的最新更新。 | &bull;&nbsp;[Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub，8.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 8.2 包中的 jar。<br/><br/>例如，8.2 包中的 mssql-jdbc-8.2.1.jre11.jar 文件应与 Java 11 配合使用。 |
 | 与 Java 开发工具包 (JDK) 版本 13.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.2 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 13.0 兼容。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-13"></a>支持 JDK 13
 
-除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.2.0 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 13.0 兼容。
+除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.2.1 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 13.0 兼容。
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 
 | Always Encrypted 更改 | 详细信息 |
 | :--------- | :------ |
-| Microsoft JDBC Driver 8.2.0 for SQL Server 现在支持具有安全 Enclave 的 Always Encrypted。 此处提供了更多详细信息：具有安全 Enclave 的 Always Encrypted。 |
+| Microsoft JDBC Driver 8.2.1 for SQL Server 现在支持具有安全 Enclave 的 Always Encrypted。 此处提供了更多详细信息：具有安全 Enclave 的 Always Encrypted。 |
 | 更多详细信息和示例代码。 | 请参阅[包含安全 Enclave 的 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -52,7 +52,7 @@ ms.locfileid: "77004549"
 
 | 临时数据类型更改 | 详细信息 |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.2.0 for SQL Server 提高了从 SQL Server 检索临时数据类型时的性能。 | 此更改通过尽可能避免使用 java.util.Calendar 来消除不必要的临时数据类型转换。 |
+| Microsoft JDBC Driver 8.2.1 for SQL Server 提高了从 SQL Server 检索临时数据类型时的性能。 | 此更改通过尽可能避免使用 java.util.Calendar 来消除不必要的临时数据类型转换。 |
 | 以下是已受此性能改进影响的临时数据类型的列表；格式为 SQL Server 数据类型，后跟相应的 Java 映射。 | date (java.sql.Date)、datetime (java.sql.Timestamp)、datetime2 (java.sql.Timestamp)、smalldatetime (java.sql.Timestamp) 和 time (java.sql.Time)。 |
 | &nbsp; | &nbsp; |
 
@@ -63,7 +63,7 @@ ms.locfileid: "77004549"
 
 | sqljdbc_auth.dll 更改 | 详细信息 |
 | :------------------- | :------ |
-| 从 Microsoft JDBC Driver 8.2.0 for SQL Server 开始，驱动程序依赖于 mssql-jdbc_auth-\<version>-\<arch>.dll（而不是 sqljdbc_auth.dll）来使用 Azure Active Directory 身份验证功能。 | &nbsp; |
+| 从 Microsoft JDBC Driver 8.2.1 for SQL Server 开始，驱动程序依赖于 mssql-jdbc_auth-\<version>-\<arch>.dll（而不是 sqljdbc_auth.dll）来使用 Azure Active Directory 身份验证功能。 | &nbsp; |
 | DLL 已被上传到 Maven 存储库，以便更轻松地进行访问。 | 请参阅[本页](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth)。 |
 | &nbsp; | &nbsp; |
 

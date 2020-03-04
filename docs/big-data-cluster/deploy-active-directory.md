@@ -5,16 +5,16 @@ description: 了解如何在 Active Directory 域中升级 SQL Server 大数据�
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544872"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200958"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -311,6 +311,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - 安全 AD 模式现在仅适用于 `kubeadm` 部署环境，而不适用于 AKS。 默认情况下，`kubeadm-prod` 部署配置文件包含安全部分。
 
-- 目前，每个域只能使用一个 BDC。 计划在将来的版本中对每个域启用多个 BDC。
+- 目前，每个域 (Active Directory) 只能使用一个 BDC。 计划在将来的版本中对每个域启用多个 BDC。
 
 - 无法将安全配置中指定的任何 AD 组的作用域设置为 DomainLocal。 可以按照[这些说明](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)来查看 AD 组的作用域。

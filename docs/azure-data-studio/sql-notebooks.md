@@ -10,17 +10,16 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957081"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575522"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何使用 Azure Data Studio 中的笔记本
 
 本文介绍如何启动 Azure Data Studio 中的笔记本体验，以及如何开始创作自己的笔记本。 还演示如何使用不同的内核编写笔记本。
-
 
 ## <a name="connect-to-sql-server"></a>连接到 SQL Server
 
@@ -37,14 +36,14 @@ ms.locfileid: "74957081"
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-3. 右键单击“SQL Server”连接，然后启动“新建笔记本”   。 
+2. 右键单击“SQL Server”连接，然后启动“新建笔记本”   。 
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-4. 打开命令面板（Ctrl+Shift+P），然后键入“New Notebook”   。 随即打开一个名为 `Notebook-1.ipynb` 的新文件。
+3. 打开命令面板（Ctrl+Shift+P），然后键入“New Notebook”   。 随即打开一个名为 `Notebook-1.ipynb` 的新文件。
 
 ## <a name="supported-kernels-and-attach-to-context"></a>支持的内核并附加到上下文
 
-在 Azure Data Studio 中笔记本安装本身支持 SQL 内核。 如果你是 SQL 开发人员，并且想要使用笔记本，那么你可以选择此内核。 
+在 Azure Data Studio 中笔记本安装本身支持 SQL 内核。 如果你是 SQL 开发人员，并且想要使用 Notebook，那么你可以选择此内核。
 
 SQL 内核还可用于连接到 PostgreSQL 服务器实例。 如果你是 PostgreSQL 开发人员，并且想要连接到 PostgreSQL 服务器，请在 Azure Data Studio 扩展商城中下载 [PostgreSQL 扩展](postgres-extension.md)  。
 
@@ -78,7 +77,7 @@ SQL 内核还可用于连接到 PostgreSQL 服务器实例。 如果你是 Postg
 
 ![image21](media/sql-notebooks/configure-python.png)
 
-安装成功后，在任务历史记录中将找到通知，以及在输出终端中运行的 Jupyter 后端服务器的位置。
+安装成功后，可以在任务历史记录中将找到通知，以及在输出终端中运行的 Jupyter 后端服务器的位置。
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
@@ -103,11 +102,11 @@ SQL 内核还可用于连接到 PostgreSQL 服务器实例。 如果你是 Postg
 
 ![image8](media/sql-notebooks/notebook-toolbar.png)
 
-单元格更改为编辑模式，现在键入 markdown，你将同时看到预览内容
+单元格更改为编辑模式，现在键入 markdown，你可以同时看到预览内容
 
 ![image9](media/sql-notebooks/notebook-markdown-cell.png)
 
-单击文本单元格外部将显示 markdown 文本。
+单击文本单元格外部即可显示 markdown 文本。
 
 ![image10](media/sql-notebooks/notebook-markdown-preview.png)
 
@@ -115,9 +114,9 @@ SQL 内核还可用于连接到 PostgreSQL 服务器实例。 如果你是 Postg
 
 在 Azure Data Studio 中打开的笔记本默认为“受信任”  。
 
-如果从其他源打开笔记本，它将在“不受信任”模式下打开，然后你可以将其设为“受信任”   。
+如果从其他源打开 Notebook，它会在“不受信任”模式下打开，然后你可以将其设为“受信任”   。
 
-### <a name="save"></a>保存 
+### <a name="save"></a>保存
 
 可以通过按 Ctrl+S 或单击“文件”菜单中的“保存文件”、“文件另存为...”和“保存所有文件”命令      以及在命令面板中输入 File: Save 命令可以保存笔记本。
 
@@ -154,29 +153,30 @@ SQL 内核还可用于连接到 PostgreSQL 服务器实例。 如果你是 Postg
 ![image16](media/sql-notebooks/local-python.png)
 
 ## <a name="manage-packages"></a>管理包
-我们为本地 Python 开发优化的一项功能是允许安装客户方案所需的包。 默认情况下，我们加入了 `pandas``numpy` 等常用包，但如果希望不包含某个包，请在笔记本单元格中编写以下代码： 
+
+我们为本地 Python 开发优化的一项功能是允许安装客户方案所需的包。 默认情况下，我们加入了 `pandas`、`numpy` 等常用包，但如果希望不包含某个包，请在笔记本单元格中编写以下代码：
 
 ```python
 import <package-name>
 ```
 
-当运行此命令时，将返回 `Module not found`。 如果包存在，则不会收到错误。
+当运行此命令时，将返回 `Module not found`。 如果包存在，你不会收到错误。
 
 如果返回 `Module not Found` 错误，则单击“管理包”以启动向导体验  。 
 
 ![image17](media/sql-notebooks/manage-packages.png)
 
-在此向导中，你将能够看到“已安装”的包  。 可以搜索列表以及每个包的关联版本。 如果需要“卸载”这些包中的任何一个，则可以单击其中一个包，然后单击“卸载所选程序包”选项   。
+在此向导中，你能够看到“已安装”的包  。 可以搜索列表以及每个包的关联版本。 如果需要卸载这些包中的任何一个，则可以单击其中一个包，然后单击“卸载所选包”选项  。
 
-还可以单击“新增”包以“搜索”特定包，然后选择相关版本并单击“安装”    。 默认情况下，选择最新版本的搜索包。 
+还可以单击“新增”包以“搜索”特定包，然后选择相关版本并单击“安装”    。 默认情况下，选择最新版本的搜索包。
 
-安装包后，应该可以在笔记本单元格中进行操作，然后键入以下命令：
+安装包后，你可以在 Notebook 单元格中进行操作，然后键入以下命令：
 
 ```python
 import <package-name>
 ```
 
-如果需要“卸载”这些包中的任何一个，则可以单击其中一个或多个包，然后单击“卸载所选包”选项   。
+如果需要卸载这些包中的任何一个，则可以单击其中一个或多个包，然后单击“卸载所选包”选项  。
 
 ## <a name="next-steps"></a>后续步骤
 
