@@ -1,24 +1,31 @@
 ---
 title: SSMA for SAP ASE 中的新增功能（SybaseToSQL） |Microsoft Docs
+authors: HJToland3;nahk-ivanov
 ms.custom: ''
-ms.date: 01/22/2020
+ms.date: 3/2/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-author: HJToland3
-ms.author: Shamikg
-ms.openlocfilehash: 752c099f985cc1695ab30e2d01241aea4c0c754c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.author: jtoland;alexiva
+ms.openlocfilehash: c2b167db0db7e82f0f37afbe165fcd75cf41204b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76516609"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256887"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 中的新增功能（SybaseToSQL）
 
 本文列出了每个版本中的 SAP ASE SQL Server 迁移助手（以前称为 SSMA）的更改。
+
+## <a name="ssma-v87"></a>SSMA v 8。7
+
+用于 SAP ASE 的 SSMA 的8.7 版本在图形用户界面中进行了细微的修复和性能改进。
+
+> [!IMPORTANT]
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v86"></a>SSMA v 8。6
 
@@ -29,7 +36,7 @@ ms.locfileid: "76516609"
 ![省略扩展属性设置](../sybase/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.Net 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v85"></a>SSMA 8。5
 
@@ -38,27 +45,27 @@ ms.locfileid: "76516609"
 此外，SSMA for SAP ASE 现在允许您隐藏系统表和视图（将它们从转换中排除）。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5，.Net 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
 SSMA for SAP ASE 的 v2.0 版本增强了目标修补程序，这些修补程序旨在解决辅助功能问题，并修复了与最大索引列（32而不是16）相关的 bug，以支持 SQL Server 2016 及更高版本。
 
 > [!IMPORTANT]
-> 使用 SSMA 版本7.4 到8.4，.Net 4.5.2 是必备组件。
+> 使用 SSMA 版本7.4 到8.4，.NET 4.5.2 是必备组件。
 
 ## <a name="ssma-v83"></a>SSMA v 8。3
 
 SSMA for SAP ASE 的 v 8.3 版本已通过旨在提高质量和转换指标的目标修补程序进行了增强。 此外，此版本的 SSMA for SAP ASE 提供以下修补程序：
 
 * 解决辅助功能问题
-* 在 SQL Server 中添加 "hierarchyid" 类型的基本支持
+* 为 SQL Server 中的`hierarchyid`类型添加基本支持
 
 ## <a name="ssma-v82"></a>SSMA
 
 SSMA for SAP ASE 的7.4 版已通过一组旨在提高质量和转换指标的目标修补程序进行了增强，并为以下方面提供了修复：
 
-* 数据迁移后已禁用的非聚集索引的问题。
+* 数据迁移后禁用的非聚集索引的问题。
 * 在无提示安装期间检测 .NET Framework。
 * 下载新版本时出现间歇性崩溃。
 
@@ -105,7 +112,7 @@ SSMA for SAP ASE 的 v 7.9 版本包含以下更改：
 
 SSMA for SAP ASE 的7.4 版版本包含以下更改：
 
-* 更改项目设置中突出显示的类型映射。
+* 更改**项目设置**中突出显示的类型映射。
 * 允许用户禁用遥测数据。
 
 ## <a name="ssma-v77"></a>SSMA v4。0
@@ -127,7 +134,7 @@ SSMA for SAP ASE 的版本7.6 版本包含以下更改：
 适用于 SAP ASE 的 SSMA （以前的 SSMA）的7.5 版本包含以下更改：
 
 * 确保为残障人士提供更好的辅助功能的多项改进。
-* 支持 CREATE 或 REPLACE 语法。
+* 支持`CREATE OR REPLACE`语法。
 
 ## <a name="ssma-v74"></a>SSMA 7。4
 
@@ -139,7 +146,7 @@ SSMA for SAP ASE 的版本7.6 版本包含以下更改：
 * 根据客户的反馈，改进了质量和转换指标。
 
   > [!IMPORTANT]
-  > .Net 4.5.2 是安装 SSMA 7.4 的必备组件。 此外，从7.4 版开始，32位版本的 SSMA 即将停止使用。  
+  > .NET 4.5.2 是安装 SSMA 7.4 的必备组件。 此外，从7.4 版开始，32位版本的 SSMA 即将停止使用。
 
 ## <a name="ssma-v73"></a>SSMA 7。3
 
@@ -173,135 +180,135 @@ SSMA for SAP ASE 的版本7.6 版本包含以下更改：
 
 ## <a name="may-2016"></a>2016 年 5 月
 
-Sybase 的 SSMA 2016 版包含以下更改：  
+Sybase 的 SSMA 2016 版包含以下更改：
 
 * 添加了对 SQL Server 2016 的支持。
-* 移除了 .Net 2.0 的安装程序检查。
-* 更新了从 .Net 3.5 到 .Net 4.0 的扩展包。
-* 修复了用于 SSMA 控制台的 "保存项目" 和 "打开项目" 命令。
-* 修复了 SSMA 控制台的 "securepassword" 命令。
+* 移除了 .NET 2.0 的安装程序检查。
+* 更新了从 .NET 3.5 到 .NET 4.0 的扩展包。
+* 修复`save-project`了`open-project`和用于 SSMA 控制台的命令。
+* 修复`securepassword`了 SSMA 控制台命令。
 * 修复了初始加载的对象计数。
 * 修复了全局设置中的 bug。
 
 ## <a name="march-2016"></a>2016 年 3 月
 
-用于 Sybase 的 SSMA 的2016年3月预览版本增加了对迁移到 SQL Server 2016 的支持。  
-  
+用于 Sybase 的 SSMA 的2016年3月预览版本增加了对迁移到 SQL Server 2016 的支持。
+
 ## <a name="january-2016"></a>2016 年 1 月
 
-用于 Sybase 的 SSMA 的2016年1月维护版本包含以下更改：  
-  
-* 向 SSMA 添加了 "查看日志" 菜单项（RFC 5706203）。  
+用于 Sybase 的 SSMA 的2016年1月维护版本包含以下更改：
+
+* 向 SSMA 添加了 "查看日志" 菜单项（RFC 5706203）。
 * 添加了遥测。
 
 ## <a name="july-2014"></a>2014 年 7 月
 
-SSMA 的2014年7月发行版本包含以下更改：  
-  
-* 改进了 Azure SQL DB 代码转换。  
-* 已将扩展包功能移到架构以支持 Azure SQL DB。  
-* 增加了针对具有超过10k 对象的数据库测试的性能改进。  
-* 添加了用于处理大量对象的 UI 改进。  
-* 添加了突出显示 "众所周知的" LOB 架构的功能（因此可以在转换时忽略它们）。  
-* 增加了转换速度改进。  
+SSMA 的2014年7月发行版本包含以下更改：
+
+* 改进了 Azure SQL DB 代码转换。
+* 已将扩展包功能移到架构以支持 Azure SQL DB。
+* 增加了针对具有超过10k 对象的数据库测试的性能改进。
+* 添加了用于处理大量对象的 UI 改进。
+* 添加了突出显示众所周知的 LOB 架构的功能（因此可以在转换时忽略它们）。
+* 增加了转换速度改进。
 * 添加了在 UI 中显示对象计数的功能。
-* 将报表大小减少25% 以上。  
-* 改进了未分析构造的错误消息。  
-  
+* 将报表大小减少25% 以上。
+* 改进了未分析构造的错误消息。
+
 ## <a name="april-2014"></a>2014 年 4 月
 
-用于 Sybase 的 SSMA 的2014年4月版本包含以下更改：  
-  
-* 添加了对 MS SQL Server 2014 的支持。  
-* 修复了有关转换到 Azure 的 bug。  
-* 修复了 IE 10 中不可见报表页的相关 bug。  
-  
+用于 Sybase 的 SSMA 的2014年4月版本包含以下更改：
+
+* 添加了对 MS SQL Server 2014 的支持。
+* 修复了有关转换到 Azure 的 bug。
+* 修复了 IE 10 中不可见报表页的相关 bug。
+
 ## <a name="january-2012"></a>2012 年 1 月
 
-用于 Sybase 的 SSMA 的2012年1月版包含以下更改：  
-  
+用于 Sybase 的 SSMA 的2012年1月版包含以下更改：
+
 * 添加了对回滚触发器转换的支持。
-* 提供了用于在同一@ROWCOUNT SET 语句@ERROR中转换 @ 和 @ 的修补程序。  
-  
+* 在同一`SET`语句中`@@ROWCOUNT`提供`@@ERROR`了用于转换和的修补程序。
+
 ## <a name="july-2011"></a>2011 年 7 月
 
-SSMA 2011 年7月发行版本在数据迁移过程中提供了改进的错误报告功能。  
-  
+SSMA 2011 年7月发行版本在数据迁移过程中提供了改进的错误报告功能。
+
 ## <a name="april-2011"></a>2011 年 4 月
 
-用于 Sybase 的 SSMA 的2011年4月版本包含以下更改：  
-  
-* 合并的 "SSMA for Sybase" 产品，支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" 和 Azure SQL。  
-* 添加了对连接和迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" 的支持。  
-* 添加了一项新功能，可将 Sybase 数据库转换和迁移到 Azure SQL。  
-* 增强了客户端数据迁移引擎，支持并行数据迁移。  
+用于 Sybase 的 SSMA 的2011年4月版本包含以下更改：
+
+* 合并的 "SSMA for Sybase" 产品，它[!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]支持[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]、 [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)]和 Azure SQL。
+* 添加了对连接和迁移到[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]的支持。
+* 添加了一项新功能，可将 Sybase 数据库转换和迁移到 Azure SQL。
+* 增强了客户端数据迁移引擎，支持并行数据迁移。
 * 通过简单和大容量日志恢复模式改进了数据迁移性能。
-* 添加了正确地将区分大小写的 Sybase 数据库转换和迁移到区分大小写的 SQL Server 的功能。  
-* 添加了对将 Sybase ASE 非 ANSI 联接 SQL Server 语句转换为 DELETE 和 UPDATE 语句的支持。  
-* 提供了使用 Sybase ASE ODBC 提供程序和 Sybase ASE ADO.Net 提供程序连接到 Sybase ASE 服务器的其他连接选项。
-* 删除了一个名为**SysDB**的独立数据库的依赖项，该数据库包含 Sybase 模拟函数（作为扩展包的一部分安装）。
-* 添加了在群集上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装适用于 Sybase 扩展包的 SSMA 的功能。
-* 添加了 SSMA 早期版本创建的项目的向后兼容性（4.0 和4.2）。  
-* 添加了一项功能，该功能能够安装 SSMA for Sybase v1.0 product （SxS）与较旧版本的 SSMA （v4.0 和4.2）。  
-  
+* 添加了正确地将区分大小写的 Sybase 数据库转换和迁移到区分大小写的 SQL Server 的功能。
+* 添加了对将 Sybase ASE 非 ANSI 联接 SQL Server 语句转换为 DELETE 和 UPDATE 语句的支持。
+* 提供了使用 Sybase ASE ODBC 提供程序和 Sybase ASE ADO.NET 提供程序连接到 Sybase ASE 服务器的其他连接选项。
+* 删除了名`SysDB`为的单独数据库的依赖项，该数据库包含 Sybase 模拟函数（作为扩展包的一部分安装）。
+* 添加了在群集上[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]安装适用于 Sybase 扩展包的 SSMA 的功能。
+* 添加了 SSMA 早期版本创建的项目的向后兼容性（4.0 和4.2）。
+* 添加了一项功能，该功能能够安装 SSMA for Sybase v1.0 product （SxS）与较旧版本的 SSMA （v4.0 和4.2）。
+
 ## <a name="july-2010"></a>2010 年 7 月
 
 添加了 Sybase 的 SSMA 2010 年7月发行版：
 
-* 支持迁移到 SQL Server 2008 R2。  
-* 用于执行命令行的新 SSMA 控制台应用程序。  
-* 支持使用服务器端和客户端数据迁移引擎进行数据迁移。  
-* 支持数据迁移中的 "自定义" SELECT 语句。  
-* 支持从 Sybase ASE 15.0.3 和15.5 进行迁移。  
-  
+* 支持迁移到 SQL Server 2008 R2。
+* 用于执行命令行的新 SSMA 控制台应用程序。
+* 支持使用服务器端和客户端数据迁移引擎进行数据迁移。
+* 支持数据迁移中的 "自定义" SELECT 语句。
+* 支持从 Sybase ASE 15.0.3 和15.5 进行迁移。
+
 ## <a name="june-2008"></a>2008年6月
 
-SSMA 的2008年6月发行版包含以下更改：  
-  
+SSMA 的2008年6月发行版包含以下更改：
+
 * 添加了 SSMA 测试器，该测试器自动测试数据库对象转换和 SSMA 进行的数据迁移。 完成所有 SSMA 迁移步骤后，使用 SSMA 测试人员验证转换后的对象是否以相同方式工作，并确保所有数据都已正确传输。
 * 添加了预 SQL 转换。 用户现在可以为要在转换中使用的每个源过程指定临时表（及其他对象）声明。
-* 增加了对象转换的改进：  
-  * 联接转换已修订。  
-  * 聚合和非聚合，无需按子句分组。  
-  * 带有 SELECT INTO 语句的 IDENTITY 函数。  
-  * 仅限数据锁定的群集约束和索引。  
-  * 通过 SELECT INTO 创建的临时表。  
-  * 临时表的约束/索引。  
-  * 支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新的 2008 datetime 类型。  
-  * Sybase 15.0 连接和数据类型支持。  
-  
+* 增加了对象转换的改进：
+  * 联接转换已修订。
+  * 聚合和非聚合，无需按子句分组。
+  * 带有`IDENTITY` `SELECT INTO`语句的函数。
+  * 仅限数据锁定的群集约束和索引。
+  * 创建的`SELECT INTO`临时表。
+  * 临时表的约束/索引。
+  * 支持[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]新的日期时间类型。
+  * Sybase 15.0 连接和数据类型支持。
+
 ## <a name="may-2007"></a>可能为2007
 
-添加了 Sybase 的 SSMA 2007 版：  
-  
-* 保存项目时能够更快地加载数据库内容。  
-* 在 SQL Server 格式的 SQL 模式下支持用户输入的注释。  
-* 对象转换的改进。  
+添加了 Sybase 的 SSMA 2007 版：
+
+* 保存项目时能够更快地加载数据库内容。
+* 在 SQL Server 格式的 SQL 模式下支持用户输入的注释。
+* 对象转换的改进。
 
 ## <a name="november-2006"></a>2006年11月
 
-用于 Sybase 的 SSMA 11 月2006版包含以下更改：  
-  
-* 添加了新的全局设置：  
-  * 您可以选择在编辑器窗口中显示行号。  
-  * 您可以将 SSMA 配置为提示替换重复的对象，或者在架构转换期间始终或从不替换重复的对象。  
-* 添加了新的转换选项，使你可以配置 SSMA 处理以下情况的方式：  
-  * 包含二进制字符串的强制转换或转换语句。  
-  * 检查相等表达式中是否存在 null 值。  
-  * 代理表。  
-  * RAISERROR 的用户消息错误号。  
-  * 包含未解析的标识符的 UPDATE 语句。  
-* 添加了新的迁移选项，使你可以指定 SSMA 应如何处理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期范围以外的日期。  
-* 在 " **SQL** " 选项卡上添加了**格式化的 SQL**设置，该设置将代码的格式设置为增强可读性。  
+用于 Sybase 的 SSMA 11 月2006版包含以下更改：
+
+* 添加了新的全局设置：
+  * 您可以选择在编辑器窗口中显示行号。
+  * 您可以将 SSMA 配置为提示替换重复的对象，或者在架构转换期间始终或从不替换重复的对象。
+* 添加了新的转换选项，使你可以配置 SSMA 处理以下情况的方式：
+  * 包含`CAST`二进制`CONVERT`字符串的或语句。
+  * 检查相等表达式中是否存在 null 值。
+  * 代理表。
+  * 的`RAISERROR`用户消息错误号。
+  * `UPDATE`包含未解析标识符的语句。
+* 添加了新的迁移选项，使你可以指定 SSMA 应如何处理[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]日期范围以外的日期。
+* 在 " **SQL** " 选项卡上添加了**格式化的 SQL**设置，该设置将代码的格式设置为增强可读性。
 * Bug 修复，其中包括：
-  * SSMA 现在转换 {SHARED ** |EXCLUSIVE} MODE 语句，方法是将 TABLOCK 或 TABLOCKX 提示添加到表的后续 SELECT 查询中。  
-  * 在字符表达式中使用二进制类型时，现在会添加必要的强制转换。  
-  * 内存和性能的改进。  
-  
+  * SSMA 现在通过`LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE`向表的后续`TABLOCK` `SELECT`查询`TABLOCKX`添加或提示来转换语句。
+  * 在字符表达式中使用二进制类型时，现在会添加必要的强制转换。
+  * 内存和性能的改进。
+
 ## <a name="july-2006"></a>2006年7月
 
-2006 年 7 月发布的用于 Sybase 的 SSMA 是初次发布。  
-  
+2006 年 7 月发布的用于 Sybase 的 SSMA 是初次发布。
+
 ## <a name="see-also"></a>另请参阅
 
 [入门用于 Sybase &#40;SybaseToSQL 的 SSMA&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

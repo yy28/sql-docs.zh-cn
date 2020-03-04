@@ -1426,7 +1426,7 @@
               href: relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
         - name: FileTable
           items:
-            - name: 必备条件
+            - name: 先决条件
               href: relational-databases/blob/enable-the-prerequisites-for-filetable.md
             - name: 创建、更改和删除
               href: relational-databases/blob/create-alter-and-drop-filetables.md
@@ -1598,7 +1598,7 @@
           href: relational-databases/stored-procedures/specify-parameters.md
         - name: 授予权限
           href: relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md
-        - name: parameters
+        - name: 参数
           href: relational-databases/stored-procedures/parameters.md
         - name: 属性
           href: relational-databases/stored-procedures/stored-procedure-properties-general-page.md
@@ -2696,7 +2696,7 @@
         - name: 命令
           href: relational-databases/native-client-ole-db-commands/commands.md
           items:
-            - name: parameters
+            - name: 参数
               href: relational-databases/native-client-ole-db-commands/command-parameters.md
             - name: 语法
               href: relational-databases/native-client-ole-db-commands/command-syntax.md
@@ -8521,7 +8521,7 @@
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
                     - name: 数据库引擎查询编辑器
-                      href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML 编辑器
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: 查询编辑器中的颜色编码

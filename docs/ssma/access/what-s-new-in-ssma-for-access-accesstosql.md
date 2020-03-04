@@ -1,24 +1,31 @@
 ---
 title: SSMA for Access （AccessToSQL）中的新增功能 |Microsoft Docs
+authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/22/2020
+ms.date: 3/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-author: HJToland3
-ms.author: Shamikg
-ms.openlocfilehash: 168fb9acca00ef6d58f540a635c2212d408cf3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.author: jtoland;alexiva
+ms.openlocfilehash: 1e32078022f6f9c4e9c2ef71f2a33df5c54b000d
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76516469"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256942"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access （AccessToSQL）中的新增功能
 
 本文列出了每个版本中的访问更改 SQL Server 迁移助手（SSMA）。
+
+## <a name="ssma-v87"></a>SSMA v 8。7
+
+用于访问的 SSMA 的8.7 版本已改进了查询中`IIF`函数的转换，以及图形用户界面中的小修复和性能改进。
+
+> [!IMPORTANT]
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v86"></a>SSMA v 8。6
 
@@ -29,30 +36,30 @@ ms.locfileid: "76516469"
 ![省略扩展属性设置](../access/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5 和更高版本，.Net 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v85"></a>SSMA 8。5
 
 通过对 SQL server 中的 JSON 功能进行 Azure Active Directory 身份验证和基本支持，以及旨在提高可用性和性能的目标修补程序集，增强了用于访问的 SSMA 的版本8.5。
 
-此外，SSMA for Access 现在支持转换多个标准函数（ISNULL、IIF 等）。
+此外，SSMA for Access 现在支持转换多个标准函数（`ISNULL`、 `IIF`等）。
 
 > [!IMPORTANT]
-> 对于 SSMA 的8.5，.Net 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
+> 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
 使用旨在解决辅助功能问题的目标修补程序，以及修复与最大索引列相关的错误（为32而不是16） SQL Server 2016 及更高版本，增强了用于访问的 SSMA 的 v2.0 版本。
 
 > [!IMPORTANT]
-> 对于 SSMA 版本7.4，8.4，.Net 4.5.2 是必备组件。
+> 对于 SSMA 版本7.4，8.4，.NET 4.5.2 是必备组件。
 
 ## <a name="ssma-v83"></a>SSMA v 8。3
 
 SSMA for Access 的 v 8.3 版本通过旨在提高质量和转换指标的目标修补程序进行了增强。 此外，此版本的 SSMA for Access 还提供了以下修补程序：
 
-* 解决辅助功能问题
-* 在 SQL Server 中添加 "hierarchyid" 类型的基本支持
+* 解决辅助功能问题。
+* 为 SQL Server 中的`hierarchyid`类型添加基本支持。
 
 ## <a name="ssma-v82"></a>SSMA
 
@@ -129,7 +136,7 @@ SSMA for Access 的 v 8.3 版本通过旨在提高质量和转换指标的目标
 * 根据客户的反馈，改进了质量和转换指标。
 
   > [!IMPORTANT]
-  > .Net 4.5.2 是安装 SSMA 7.4 的必备组件。 此外，从7.4 版开始，32位版本的 SSMA 已不再使用。
+  > .NET 4.5.2 是安装 SSMA 7.4 的必备组件。 此外，从7.4 版开始，32位版本的 SSMA 已不再使用。
 
 ## <a name="ssma-v73"></a>SSMA 7。3
 
@@ -162,108 +169,108 @@ SSMA for Access 的7.2 版本包含以下更改：
 
 ## <a name="may-2016"></a>2016 年 5 月
 
-Access 的 SSMA 2016 版本包含以下更改：  
-  
-* 添加了对 SQL Server 2016 的官方支持
-* 移除了 .Net 2.0 的安装程序检查。
-* 修复了用于 SSMA 控制台的 "保存项目" 和 "打开项目" 命令。
-* 修复了 SSMA 控制台的 "securepassword" 命令。
+Access 的 SSMA 2016 版本包含以下更改：
+
+* 添加了对 SQL Server 2016 的官方支持。
+* 移除了 .NET 2.0 的安装程序检查。
+* 修复`save-project`了`open-project`和用于 SSMA 控制台的命令。
+* 修复`securepassword`了 SSMA 控制台命令。
 * 修复了初始加载的对象计数。
 * 固定表数据加载以供访问的 UI 选项卡。
 * 修复了全局设置中的 bug。
 
 ## <a name="march-2016"></a>2016 年 3 月
 
-SSMA for Access 的2016年3月预览版增加了对迁移到 SQL Server 2016 的支持。  
+SSMA for Access 的2016年3月预览版增加了对迁移到 SQL Server 2016 的支持。
 
 ## <a name="january-2016"></a>2016 年 1 月
 
-用于访问的 SSMA 的2016年1月维护版本包含以下更改：  
-  
-* 修复了默认 GUID 字段的无效函数（RFC 3894811）。  
-* 修复了将记录导入到 SQL 数据库（Azure）时挂起（RFC 4919573）。  
-* 向 SSMA 添加了 "查看日志" 菜单项（RFC 5706203）。  
+用于访问的 SSMA 的2016年1月维护版本包含以下更改：
+
+* 修复了默认 GUID 字段的无效函数（RFC 3894811）。
+* 修复了将记录导入到 SQL 数据库（Azure）时挂起（RFC 4919573）。
+* 向 SSMA 添加了 "查看日志" 菜单项（RFC 5706203）。
 * 添加了遥测。
-  
+
 ## <a name="july-2014"></a>2014 年 7 月
 
-SSMA 的2014年7月发行版本包含以下更改：  
-  
-* 改进了 Azure SQL DB 代码转换。  
-* 已将扩展包功能移到架构以支持 Azure SQL DB。  
-* 针对具有超过10k 对象的数据库测试性能改进。  
-* 添加了用于处理大量对象的 UI 改进。  
-* 添加了对 "知名" LOB 架构的突出显示的支持（以便在转换时忽略它们）。  
+SSMA 的2014年7月发行版本包含以下更改：
+
+* 改进了 Azure SQL DB 代码转换。
+* 已将扩展包功能移到架构以支持 Azure SQL DB。
+* 针对具有超过10k 对象的数据库测试性能改进。
+* 添加了用于处理大量对象的 UI 改进。
+* 添加了对 "知名" LOB 架构的突出显示的支持（以便在转换时忽略它们）。
 * 增加了转换速度改进。
 * 添加了对在 UI 中显示对象计数的支持。
 * 将报表大小减少25% 以上。
-* 改进了未分析构造的错误消息。  
-  
+* 改进了未分析构造的错误消息。
+
 ## <a name="april-2014"></a>2014 年 4 月
 
-用于访问的 SSMA 2014 年4月版包含以下更改：  
-  
+用于访问的 SSMA 2014 年4月版包含以下更改：
+
 * 添加了对 MS SQL Server 2014 的支持。
-* 修复了与转换到 Azure 相关的 bug。  
-* 修复了与 IE 10 中不可见报表页相关的 bug。  
-  
+* 修复了与转换到 Azure 相关的 bug。
+* 修复了与 IE 10 中不可见报表页相关的 bug。
+
 ## <a name="january-2012"></a>2012 年 1 月
 
-用于访问的 SSMA 的2012年1月版本包含以下更改：  
-  
-* 提供了在迁移后不保留 MS Access 链接表的用户名和密码的选项。  
-* 将循环引用的层叠操作设置为 "无操作"。  
-* 提供了指示循环引用级联操作的正确消息已设置为 "无操作"。  
-  
+用于访问的 SSMA 的2012年1月版本包含以下更改：
+
+* 提供了在迁移后不保留 MS Access 链接表的用户名和密码的选项。
+* 将循环引用的层叠操作设置为 "无操作"。
+* 提供了指示循环引用级联操作的正确消息已设置为 "无操作"。
+
 ## <a name="july-2011"></a>2011 年 7 月
 
-2011年7月发布的 SSMA for Access 增加了数据迁移期间的错误报告功能。  
-  
+2011年7月发布的 SSMA for Access 增加了数据迁移期间的错误报告功能。
+
 ## <a name="april-2011"></a>2011 年 4 月
 
-用于访问的 SSMA 2011 年4月版包含以下更改：  
-  
-* 添加了 "SSMA for Access" 的单个可安装，该[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、"Denali" 和 Azure SQL。  
-* 添加了连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" 的功能。  
+用于访问的 SSMA 2011 年4月版包含以下更改：
+
+* 添加了 "SSMA for Access" 的单个可安装，它[!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]支持[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]、 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]和 Azure SQL。
+* 添加了连接的功能[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]。
 * 为实现向后兼容性而添加了用于访问控制台版本支持的 SSMA。 可以打开先前版本的 SSMA v 5.0 创建的项目。
-* 添加了一种功能，可将 SSMA v 5.0 产品并行（SxS）与较旧版本的 SSMA 产品一起安装。  
-  
+* 添加了一种功能，可将 SSMA v 5.0 产品并行（SxS）与较旧版本的 SSMA 产品一起安装。
+
 ## <a name="july-2010"></a>2010 年 7 月
 
-SSMA 的2010年7月发行版本包含以下更改：  
-  
+SSMA 的2010年7月发行版本包含以下更改：
+
 * 添加了对迁移到 SQL Server 2008 R2 和 Azure SQL 的支持。
-* 添加了与 SQL Server 和 Azure SQL 的安全连接。  
+* 添加了与 SQL Server 和 Azure SQL 的安全连接。
 * 添加了对 Access 2010 数据库的支持。
 * 添加了新的 SSMA 控制台应用程序，用于执行命令行。
-* 添加了对 SQL Server DateTime2 数据类型的支持。
-  
+* 添加了对 SQL Server `DateTime2`数据类型的支持。
+
 ## <a name="june-2008"></a>2008年6月
 
-2008年6月发布的 SSMA for Access 增加了对 Access 2007 数据库的支持。  
-  
+2008年6月发布的 SSMA for Access 增加了对 Access 2007 数据库的支持。
+
 ## <a name="may-2007"></a>可能为2007
 
-Access 的 SSMA 2007 版本包含以下更改：  
-  
-* 添加了对使用工作组策略的 Access 数据库的支持。  
-* 提供了从 SQL Server 元数据资源管理器中删除转换后的对象的功能。  
-* 在 SQL Server 格式的 SQL 模式下添加了对用户输入的注释的支持。  
-* 增加了对象转换的改进。  
-  
+Access 的 SSMA 2007 版本包含以下更改：
+
+* 添加了对使用工作组策略的 Access 数据库的支持。
+* 提供了从 SQL Server 元数据资源管理器中删除转换后的对象的功能。
+* 在 SQL Server 格式的 SQL 模式下添加了对用户输入的注释的支持。
+* 增加了对象转换的改进。
+
 ## <a name="november-2006"></a>2006年11月
 
-用于访问的 SSMA 11 月2006版包含以下更改：  
-  
-* 添加了新的数据库迁移向导，可引导您完成从访问到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的单个数据库的整个步骤。  
-* 添加了新的 "转换"、"加载" 和 "迁移" 命令，用于转换 Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库、将转换后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的对象加载到中，并在一个步骤中将数据迁移到全部。  
-* 改进的查询迁移。 查询迁移现在会将更多的选择查询转换为视图。 有关详细信息，请参阅[转换 Access 数据库对象](converting-access-database-objects-accesstosql.md)。  
-* 添加了在 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **表**" 选项卡上编辑表和索引属性的功能。  
+用于访问的 SSMA 11 月2006版包含以下更改：
+
+* 添加了新的数据库迁移向导，可引导您完成从访问到[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]的单个数据库的整个步骤。
+* 添加了新的 "转换"、"加载" 和 "迁移" 命令，用于转换 Access [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]数据库、将转换后[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]的对象加载到中，并在一个步骤中将数据迁移到全部。
+* 改进的查询迁移。 查询迁移现在会将更多的选择查询转换为视图。 有关详细信息，请参阅[转换 Access 数据库对象](converting-access-database-objects-accesstosql.md)。
+* 添加了在 " [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **表**" 选项卡上编辑表和索引属性的功能。
 * 添加了新的全局设置：
-  * 您可以选择在编辑器窗口中显示行号。  
-  * 您可以将 SSMA 配置为提示替换重复的对象，或者在架构转换期间始终或从不替换重复的对象。  
-* 添加了一个新的转换选项，该选项使你可以指定在复杂查询包含通配符时 SSMA 是否显示警告。  
-  
+  * 您可以选择在编辑器窗口中显示行号。
+  * 您可以将 SSMA 配置为提示替换重复的对象，或者在架构转换期间始终或从不替换重复的对象。
+* 添加了一个新的转换选项，该选项使你可以指定在复杂查询包含通配符时 SSMA 是否显示警告。
+
 ## <a name="july-2006"></a>2006年7月
 
 SSMA for Access 的2006年7月发行版是初始版本。

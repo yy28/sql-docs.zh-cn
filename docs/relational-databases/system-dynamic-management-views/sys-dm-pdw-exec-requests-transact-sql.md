@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 15d27881378a88c8f4ae6d65640be6218ecd3530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15049436b0d1769361ae1cfc47b52bfb503ba763
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632766"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256872"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests （Transact-sql）
 
@@ -44,10 +44,26 @@ ms.locfileid: "73632766"
 |group_name|**sysname** |对于利用资源的请求，group_name 是在其下运行请求的工作负荷组的名称。  如果请求不使用资源，则 group_name 为 null。</br>适用于：Azure SQL 数据仓库|
 |classifier_name |**sysname**|对于利用资源的请求，是用于分配资源和重要性的分类器的名称。||
 |resource_allocation_percentage|**decimal （5，2）**|分配给请求的资源的百分比。</br>适用于：Azure SQL 数据仓库|
-|result_set_cache|**bit**|详细说明已完成的查询是否是结果缓存命中（1）或不是（0）。 </br>适用于：Azure SQL 数据仓库|0、1|
+|result_set_cache|**bit**|详细说明已完成的查询是否使用了结果集缓存。  </br>适用于：Azure SQL 数据仓库| 1 = 结果集缓存命中 </br> 0 = 结果集缓存未命中 </br> 负值 = 未使用结果集缓存的原因。  有关详细信息，请参阅备注部分。|
 ||||
   
+## <a name="remarks"></a>备注 
  有关此视图保留的最大行的信息，请参阅[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题中的元数据部分。
+
+ Result_set_cache 是查询对结果集缓存的使用的位掩码。  此列可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)以下一个或多个值的产品：  
+  
+|值|说明|  
+|-----------|-----------------|  
+|**1**|结果集缓存命中|  
+|-**0x00**|结果集缓存未命中|  
+|-**0x01**|已对数据库禁用结果集缓存。|  
+|-**0x02**|在会话上禁用结果集缓存。 | 
+|-**0x04**|由于没有用于查询的数据源，因此已禁用结果集缓存。|  
+|-**0x08**|由于行级安全谓词，结果集缓存已禁用。|  
+|-**0x10**|由于在查询中使用了系统表、临时表或外部表，因此结果集缓存已禁用。|  
+|-**0x20**|由于查询包含运行时常量、用户定义函数或非确定性函数，因此禁用了结果集缓存。|  
+|-**0x40**|由于估计的结果集大小太大（> 1000000 行），结果集缓存被禁用。|  
+|-**0x80**|结果集缓存已禁用，因为结果集包含大小较大（>64kb）的行。|  
   
 ## <a name="permissions"></a>权限
 
