@@ -91,7 +91,7 @@ R_SERVER 使用 Intel 数学内核库 (MKL)。 对于涉及 MKL 的计算，如�
 
 如果安装最新版本的 Microsoft R Client，并使用它在远程计算上下文中的 SQL Server 上运行 R，则可能收到类似以下的错误：
 
-> *计算机上运行的 Microsoft R Client 版本为 9.x.x，与 8.x.x 版的 Microsoft R Server 不兼容。请下载并安装兼容版本。
+> *计算机上运行的 Microsoft R Client 版本为 9.x.x，与 8.x.x 版的 Microsoft R Server 不兼容。请下载并安装兼容版本*。
 
 SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配。 已删除 R Server 9.0.1 之后版本的限制。 但是，如果遇到此错误，请验证客户端和服务器使用的 R 库的版本，并根据需要更新客户端以匹配服务器版本。
 
@@ -129,7 +129,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 在 SQL Server 2016 计算上下文中运行 R 代码时，可能会看到以下错误：
 
-> *计算机上运行的 Microsoft R Client 版本为 9.0.0，与 8.0.3 版的 Microsoft R Server 不兼容。请下载并安装兼容版本。
+> *计算机上运行的 Microsoft R Client 版本为 9.0.0，与 8.0.3 版的 Microsoft R Server 不兼容。请下载并安装兼容版本*。
 
 如果以下两个语句之一为 true，则会显示此消息，
 
@@ -332,7 +332,7 @@ data <- RxSqlServerData(
 
     启用 FileTable 后，若要编写模型，可以使用 FileTable API 从 SQL 获取路径，然后从代码中将模型写入该位置。 如果需要读取模型，可以从 SQL 获取路径，然后使用脚本中的路径调用模型。 有关详细信息，请参阅[使用文件输入输出 API 访问 FileTable](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)。
 
-### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>7.在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 计算上下文中执行 R 代码时，请避免清除工作区
+### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-ssnoversion-compute-context"></a>7.在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 计算上下文中执行 R 代码时，请避免清除工作区
 
 如果在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 计算上下文中运行 R 代码时使用 R 命令清除对象的工作区，或者如果在使用 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 调用 R 脚本的过程中清除工作区，则可能收到如下错误：找不到工作区对象 revoScriptConnection 
 
