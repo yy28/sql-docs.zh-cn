@@ -8520,8 +8520,6 @@
                 - name: 查询和文本编辑器
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: 数据库引擎查询编辑器
-                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML 编辑器
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: 查询编辑器中的颜色编码
@@ -9023,6 +9021,8 @@
               items:
                 - name: 服务器连接的 F1 帮助 (SSMS)
                   href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+                - name: 数据库引擎查询编辑器
+                  href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: 连接到 Microsoft Azure 存储
                   href: ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: 从 SQL Server Management Studio 连接到任何 SQL Server 组件
