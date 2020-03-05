@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632790"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288985"
 ---
 # <a name="start-sql-server-management-studio"></a>启动 SQL Server Management Studio
   开始本教程之前，让我们先来了解一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
@@ -28,7 +28,7 @@ ms.locfileid: "73632790"
   
     > [!NOTE]  
     >  默认情况下不会安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用，则运行安装程序安装此程序。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]可以从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=7593)免费下载 Express，但其用户界面不同于本教程中所述的用户界面。  
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]可以从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=14630)免费下载 Express，但其用户界面不同于本教程中所述的用户界面。  
   
 2.  在“连接到服务器”对话框中，确认默认设置，再单击“连接”。******** 若要进行连接，"**服务器名称**" 框必须包含安装的计算机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名称。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]是命名实例，则 "**服务器名称**" 框还应包含格式\<为*computer_name*>\\<*instance_name*> 的实例名称。  
   

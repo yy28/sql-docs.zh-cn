@@ -10,19 +10,19 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632718"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280918"
 ---
 # <a name="lesson-1-creating-database-objects"></a>第 1 课：创建数据库对象
   本课将介绍如何创建数据库，在数据库中创建表，然后访问表中的数据并对其进行更改。 由于本课是对使用 [!INCLUDE[tsql](../includes/tsql-md.md)]的简介，因此它未使用或说明为这些语句提供的许多选项。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] 语句可以使用下列方法进行编写并提交到 [!INCLUDE[ssDE](../includes/ssde-md.md)] ：  
   
--   通过使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 本教程假定使用的是 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express（可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=7593)免费下载）。  
+-   通过使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 本教程假定使用的是 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express（可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=14630)免费下载）。  
   
 -   通过使用 [sqlcmd 实用工具](../tools/sqlcmd-utility.md)。  
   

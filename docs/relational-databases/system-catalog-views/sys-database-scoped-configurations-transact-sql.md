@@ -18,12 +18,12 @@ ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
-ms.openlocfilehash: 372d3a1b5722b1a19e9560fe92f61e45b6744ace
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180102"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288950"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations （Transact-sql）
 
@@ -38,7 +38,7 @@ ms.locfileid: "78180102"
 |**value**|**sqlvariant**|为主副本的此配置选项设置的值。|
 |**value_for_secondary**|**sqlvariant**|为辅助副本的此配置选项设置的值。|
 |**is_value_default**|**bit** |指定设置的值是否为默认值。|
-|**dw_compatibility_level**|**int**|数据库的兼容级别。  默认值 = 0 （自动）|
+|**dw_compatibility_level**|**int**|数据库的兼容级别（预览版）。  默认值 = 0 （自动）|
 
 ## <a name="Permissions"></a> 权限
 

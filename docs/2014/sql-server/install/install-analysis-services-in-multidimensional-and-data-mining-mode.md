@@ -16,12 +16,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 2353d2f623a5aa0e0f1f5c25710724f836093998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68890377"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280834"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>在多维和数据挖掘模式下安装 Analysis Services
   
@@ -70,7 +70,7 @@ ms.locfileid: "68890377"
   
  [确定 Analysis Services 实例的服务器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   
- [SQL Server 数据挖掘外接程序](https://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server 数据挖掘外接程序](https://www.microsoft.com/download/details.aspx?id=35578)  
   
  默认情况下，不会将示例数据库、示例代码和客户端应用程序外接程序作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 若要安装示例数据库和示例代码，请参阅 [CodePlex 网站](https://go.microsoft.com/fwlink/?LinkId=87843)。  
   
