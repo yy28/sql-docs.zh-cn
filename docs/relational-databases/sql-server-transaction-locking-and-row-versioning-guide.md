@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095681"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339665"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -258,7 +258,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持一定范围的并发控制。 用户通过为游标上的连接或并发选项选择事务隔离级别来指定并发控制的类型。 这些特性可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句或通过数据库应用程序编程接口（API，如 ADO、ADO.NET、OLE DB 和 ODBC）的属性和特性来定义。  
   
-#### <a name="isolation-levels-in-the-includessdenoversionincludesssdenoversion-mdmd"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中的隔离级别  
+#### <a name="isolation-levels-in-the-ssdenoversion"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中的隔离级别  
  事务指定一个隔离级别，该隔离级别定义一个事务必须与由其他事务进行的资源或数据更改相隔离的程度。 隔离级别从允许的并发副作用（例如，脏读或虚拟读取）的角度进行描述。  
   
  事务隔离级别控制：  
@@ -275,7 +275,7 @@ GO
   
  较低的隔离级别可以增强许多用户同时访问数据的能力，但也增加了用户可能遇到的并发副作用（例如脏读或丢失更新）的数量。 相反，较高的隔离级别减少了用户可能遇到的并发副作用的类型，但需要更多的系统资源，并增加了一个事务阻塞其他事务的可能性。 应平衡应用程序的数据完整性要求与每个隔离级别的开销，在此基础上选择相应的隔离级别。 最高隔离级别（可序列化）保证事务在每次重复读取操作时都能准确检索到相同的数据，但需要通过执行某种级别的锁定来完成此操作，而锁定可能会影响多用户系统中的其他用户。 最低隔离级别（未提交读）可以检索其他事务已经修改、但未提交的数据。 在未提交读中，所有并发副作用都可能发生，但因为没有读取锁定或版本控制，所以开销最少。  
   
-##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 隔离级别  
+##### <a name="ssdenoversion-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 隔离级别  
  ISO 标准定义了下列隔离级别，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]支持所有这些隔离级别：  
   
 |隔离级别|定义|  
