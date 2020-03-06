@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115267"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338384"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 
@@ -47,7 +47,7 @@ ms.locfileid: "68115267"
 > [!NOTE]
 > 在负载过重而内存不足的系统中，对于查询计划中带有合并联接、排序和位图的查询，如果无法获得位图所需的最小内存量，可以删除位图。 这会影响查询性能，并且如果排序过程无法容纳在内存中，就会增加 tempdb 数据库中工作表的使用量，从而导致 tempdb 增大。 若要解决此问题，可添加物理内存或优化查询以使用其他更迅速的查询计划。
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供最大内存量
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供最大内存量
 
 通过使用 AWE 和“锁定内存中的页”权限，可为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎提供下列内存量。 
 
@@ -72,7 +72,7 @@ ms.locfileid: "68115267"
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对内存管理的更改
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对内存管理的更改
 
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本（[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，使用五种不同的机制分配内存：
 -  单页分配器 (SPA)  ，它仅包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中小于或等于 8 KB 的内存分配。 “max server memory (MB)”和“min server memory (MB)”这两个配置选项确定 SPA 消耗的物理内存的限制   。 同时，缓冲池也是用于 SPA 的机制，并且还是最大的单页分配使用者。
@@ -107,7 +107,7 @@ ms.locfileid: "68115267"
 -  需要存储较大输入参数的跟踪操作。
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对“memory_to_reserve”的更改
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对“memory_to_reserve”的更改
 在早期版本的 SQL Server（[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存管理器保留了一部分进程虚拟地址空间 (VAS)，供多页分配器 (MPA)、CLR 分配器、用于 SQL Server 进程中的线程堆栈的内存分配以及直接 Windows 分配 (DWA) 使用     。 这一部分虚拟地址空间也称为“Mem-To-Leave”或“非缓冲池”区域。
 
 为这些分配保留的虚拟地址空间是由 _**memory\_to\_reserve**_ 配置选项确定的。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的默认值是 256 MB。 要替代该默认值，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -g 启动参数  。 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](../database-engine/configure-windows/database-engine-service-startup-options.md)的文档页  。
