@@ -35,14 +35,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70153826"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339012"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
-  本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单个服务器或多服务器维护计划。 维护计划向导创建[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
+  本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单个服务器或多服务器维护计划。 维护计划向导可创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
   
  **本主题内容**  
   

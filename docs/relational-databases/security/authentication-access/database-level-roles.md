@@ -39,11 +39,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68742842"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339445"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 
@@ -86,7 +86,7 @@ ms.locfileid: "68742842"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
+## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
 
 这些数据库角色仅存在于虚拟 master 数据库中。 他们的权限仅限于在 master 中执行的操作。 只能向这些角色添加 master 中的数据库用户。 无法向这些角色添加登录名，但可以基于登录名创建用户，然后向角色添加用户。 也可以向这些角色添加 master 中包含的数据库用户。 不过，如果向 master 中的 dbmanager  角色添加包含的数据库用户，这些用户无法用于新建数据库。
 

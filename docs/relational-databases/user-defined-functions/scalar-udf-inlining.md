@@ -16,11 +16,11 @@ author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75831770"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339175"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 

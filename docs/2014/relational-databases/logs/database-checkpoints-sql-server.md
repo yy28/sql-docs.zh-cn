@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206109"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339305"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
   本节提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检查点的概述。 *检查点*会创建一个已知的正常点， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]在意外关闭或崩溃后，可以从该点开始应用日志中包含的更改。  
@@ -74,8 +74,7 @@ ms.locfileid: "68206109"
 |>0|不适用。|间接检查点，其目标恢复时间由 TARGET_RECOVERY_TIME 设置确定，以秒为单位。|  
   
 ###  <a name="AutomaticChkpt"></a>自动检查点  
- 每当日志记录数达到其可以在[!INCLUDE[ssDE](../../includes/ssde-md.md)] `recovery interval`服务器配置选项指定的时间内处理的估计值时，将发生自动检查点。 在没有用户定义的目标恢复时间的每个数据库中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成自动检查点。 自动检查点的频率取决于`recovery interval` advanced server 配置选项，该选项指定给定的服务器实例在系统重新启动期间用于恢复数据库的最长时间。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库发出一个检查点命令。 自动检查点之间的时间间隔可以变化很大。 具有大量事务工作负荷的数据库的检查点生成频率将高于主要用于只读操作的数据库的检查点生成频率。  
+ 每当日志记录数达到其可以在[!INCLUDE[ssDE](../../includes/ssde-md.md)] `recovery interval`服务器配置选项指定的时间内处理的估计值时，将发生自动检查点。 在没有用户定义的目标恢复时间的每个数据库中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成自动检查点。 自动检查点的频率取决于`recovery interval` advanced server 配置选项，该选项指定给定的服务器实例在系统重新启动期间用于恢复数据库的最长时间。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库发出一个检查点命令。 自动检查点之间的时间间隔可以变化很大。 具有大量事务工作负荷的数据库的检查点生成频率将高于主要用于只读操作的数据库的检查点生成频率。  
   
  此外，在简单恢复模式下，如果日志填充 70％，则自动检查点还将排队。  
   

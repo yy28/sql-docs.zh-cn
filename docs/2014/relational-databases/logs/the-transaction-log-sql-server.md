@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63144613"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338271"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 必须定期截断事务日志以避免它被填满。 但是，一些因素可能延迟日志截断，因此监视日志大小很重要。 某些操作可以最小日志量进行记录以减少其对事务日志大小的影响。  

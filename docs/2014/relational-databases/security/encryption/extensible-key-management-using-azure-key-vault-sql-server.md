@@ -17,11 +17,11 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176737"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339040"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]连接器 for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault 允许[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]加密使用 Azure Key Vault 服务作为[可扩展密钥管理 &#40;EKM&#41;](extensible-key-management-ekm.md)提供程序，以保护其加密密钥。

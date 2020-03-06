@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798336"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339186"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>安装用于 SharePoint 2013 的 Reporting Services SharePoint 模式
   本主题中的过程将指导您完成以 SharePoint 模式在单台服务器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。 本主题还可用于更新现有安装的单独过程，例如创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。  
@@ -121,7 +121,7 @@ ms.locfileid: "72798336"
   
     -   **Reporting Services 用于 SharePoint 产品的外接程序**。  
   
-         ![注意](../../../2014/reporting-services/media/rs-fyinote.png "note")用于安装外接程序的安装向导选项是[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本的新版本。  
+         ![注意](../../../2014/reporting-services/media/rs-fyinote.png "备注")用于安装外接程序的安装向导选项是[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本的新版本。  
   
     -   如果您尚未安装 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可以选择 **“数据库引擎服务”** 和 **“管理工具 - 完整”** 以提供一个完整环境。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "72798336"
   
 12. 如果您已选择“数据库引擎服务”，请在 **“实例配置”** 页上接受 **MSSQLSERVER** 的默认实例，然后单击 **“下一步”**。  
   
-     ![注意](../../../2014/reporting-services/media/rs-fyinote.png "note")Reporting Services SharePoint 服务体系结构不基于之前的 Reporting Services 体系结构 SQL Server "实例"。  
+     ![注意](../../../2014/reporting-services/media/rs-fyinote.png "备注")Reporting Services SharePoint 服务体系结构不基于之前的 Reporting Services 体系结构 SQL Server "实例"。  
   
 13. 阅读 **“磁盘空间要求”** 页，然后单击 **“下一步”**。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "72798336"
   
 -   启用网站集的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 功能。  
   
- parameters  
+ 参数  
   
 -   更新服务代理的 **-Account** 。 该帐户在 SharePoint 场中必须是一个托管服务帐户。 有关详细信息，请参阅 SharePoint 主题 [规划 SharePoint 2013 中的管理和服务帐户](https://technet.microsoft.com/library/cc263445.aspx)。  
   

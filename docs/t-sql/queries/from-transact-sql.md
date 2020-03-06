@@ -35,11 +35,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73981973"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340329"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句以及 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -697,7 +697,7 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="n-using-the-inner-join-syntax"></a>N. 使用 INNER JOIN 语法  
  下面的示例返回 `FactInternetSales` 和 `DimProduct` 表（两个表中的联接键 `ProductKey` 相互匹配）中的 `SalesOrderNumber`、`ProductKey` 和 `EnglishProductName` 列。 `SalesOrderNumber` 和 `EnglishProductName` 列分别仅存在于一个表中，因此无需指定具有这些列的表别名（如下所示）；包含这些别名可提高可读性。 别名前的 AS 一词不是必需的，但为提高可读性和符合 ANSI 标准，建议使用该词  。  

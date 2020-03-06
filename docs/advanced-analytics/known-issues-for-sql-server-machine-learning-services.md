@@ -43,11 +43,11 @@ R_SERVER 使用 Intel 数学内核库 (MKL)。 对于涉及 MKL 的计算，如�
 3. 重启 R_SERVER。 在 SQL Server 上，可以重启 SQL Server Launchpad 服务。
 
 > [!NOTE]
-> 如果要在 Linux 上运行 SQL Server 2019，请在用户主目录中编辑或创建 .bash_profile，添加 `export MKL_CBWR="AUTO"` 行  。 通过在 bash 命令提示符处键入 `source .bash_profile` 来执行此文件。 通过在 R 命令提示符处键入 `Sys.getenv()` 来重启 R_SERVER。
+> 如果要在 Linux 上运行 SQL Server 2019，请在用户主目录中编辑或创建 *.bash_profile*，添加 `export MKL_CBWR="AUTO"` 行。 通过在 bash 命令提示符处键入 `source .bash_profile` 来执行此文件。 通过在 R 命令提示符处键入 `Sys.getenv()` 来重启 R_SERVER。
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2.R 脚本运行时错误（SQL Server 2017 CU5-CU7 回归）
 
-对于 SQL Server 2017，在累积更新 5 到 7 中，rlauncher.config 文件（其中临时目录文件路径包含空格）中存在回归  。 此回归在 CU8 中已更正。
+对于 SQL Server 2017，在累积更新 5 到 7 中，**rlauncher.config** 文件（其中临时目录文件路径包含空格）中存在回归。 此回归在 CU8 中已更正。
 
 运行 R 脚本时显示的错误包括以下消息：
 
@@ -59,7 +59,7 @@ R_SERVER 使用 Intel 数学内核库 (MKL)。 对于涉及 MKL 的计算，如�
 
 **解决方法**
 
-如果可以使用 CU8，则应用 CU8。 或者，通过在提升的命令提示符上使用卸载/安装来运行 registerrext，可以重新创建 rlauncher.config   。 
+如果可以使用 CU8，则应用 CU8。 或者，通过在提升的命令提示符上使用卸载/安装来运行 **registerrext**，可以重新创建 **rlauncher.config**。 
 
 ```cmd
 <SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /uninstall /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
@@ -91,7 +91,7 @@ R_SERVER 使用 Intel 数学内核库 (MKL)。 对于涉及 MKL 的计算，如�
 
 如果安装最新版本的 Microsoft R Client，并使用它在远程计算上下文中的 SQL Server 上运行 R，则可能收到类似以下的错误：
 
-> *计算机上运行的 Microsoft R Client 版本为 9.x.x，与 8.x.x 版的 Microsoft R Server 不兼容。请下载并安装兼容版本*。
+> 计算机上运行的 Microsoft R Client 版本为 9.x.x，与 8.x.x 版的 Microsoft R Server 不兼容。  请下载并安装兼容版本。
 
 SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配。 已删除 R Server 9.0.1 之后版本的限制。 但是，如果遇到此错误，请验证客户端和服务器使用的 R 库的版本，并根据需要更新客户端以匹配服务器版本。
 
@@ -101,7 +101,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 若要避免 R 包出现问题，还可以升级服务器上安装的 R 库版本，方法是将服务协议改为使用现代生命周期支持策略，如[下一节](#bkmk_sqlbindr)中所述。 执行此操作时，随 SQL Server 一起安装的 R 版本将按照用于更新机器学习服务器（以前称为 Microsoft R Server）的同一计划进行更新。
 
-**适用于：** R Server 9.0.0 版本或更早版本的 SQL Server 2016 R Services
+适用于：  R Server 9.0.0 版本或更早版本的 SQL Server 2016 R Services
 
 ### <a name="5-r-components-missing-from-cu3-setup"></a>5.CU3 安装中缺少的 R 组件
 
@@ -123,13 +123,13 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 此问题在发布版本中得以修复。 此外，此限制不适用于 R 组件。
 
-**适用于：** 具有 Python 的 SQL Server 2017
+适用于：  具有 Python 的 SQL Server 2017
 
 ### <a name="bkmk_sqlbindr"></a> 使用 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 从客户端连接到旧版 SQL Server R Services 时，出现版本不兼容的警告
 
 在 SQL Server 2016 计算上下文中运行 R 代码时，可能会看到以下错误：
 
-> *计算机上运行的 Microsoft R Client 版本为 9.0.0，与 8.0.3 版的 Microsoft R Server 不兼容。请下载并安装兼容版本*。
+> 计算机上运行的 Microsoft R Client 版本为 9.0.0，与 8.0.3 版的 Microsoft R Server 不兼容。  请下载并安装兼容版本。
 
 如果以下两个语句之一为 true，则会显示此消息，
 
@@ -138,7 +138,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 若要确保服务器和客户端使用的版本相同，你可能需要使用 Microsoft R Server 9.0 和更高版本支持的绑定来升级 SQL Server 2016 实例中的 R 组件  。 若要确定 R Services 版本是否支持升级，请参阅[升级使用 SqlBindR.exe 的 R Services 实例](install/upgrade-r-and-python.md)。
 
-**适用于：** R Server 9.0.0 版本或更早版本的 SQL Server 2016 R Services
+适用于：  R Server 9.0.0 版本或更早版本的 SQL Server 2016 R Services
 
 ### <a name="7-setup-for-sql-server-2016-service-releases-might-fail-to-install-newer-versions-of-r-components"></a>7.安装了 SQL Server 2016 Service Release 可能无法安装较新版本的 R 组件
 
@@ -150,7 +150,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 若要获取最新的安装程序，请参阅[在没有 Internet 连接的情况下安装机器学习组件](install/sql-ml-component-install-without-internet-access.md)。
 
-**适用于：** R Server 9.0.0 版本或更早版本的 SQL Server 2016 R Services
+适用于：  R Server 9.0.0 版本或更早版本的 SQL Server 2016 R Services
 
 ### <a name="8-launchpad-services-fails-to-start-if-the-version-is-different-from-the-r-version"></a>8.当版本与 R 版本不同时，无法启动 Launchpad 服务
 
@@ -178,7 +178,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 如果升级不可行，解决方法之一是使用 SQL 登录名运行可能需要嵌入式 ODBC 调用的远程 R 作业。
 
-**适用于：** SQL Server 2016 R Services Express Edition
+适用于：  SQL Server 2016 R Services Express Edition
 
 ### <a name="11-performance-limits-when-libraries-used-by-sql-server-are-called-from-other-tools"></a>11.从其他工具调用 SQL Server 使用的库时的性能限制
 
@@ -192,7 +192,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 使用 Visual Studio 或 SQL Server Data Tools 发布数据库项目时，如果任何主体具有特定于外部脚本执行的权限，则可能会出现类似以下错误：
 
-> *TSQL 模型：对数据库实施反向工程时检测到错误。未识别且未导入权限。*
+> TSQL 模型：对数据库实施反向工程时检测到错误。未识别且未导入权限。
 
 当前 DACPAC 模型不支持 R Services 或机器学习服务使用的权限，例如 GRANT ANY EXTERNAL SCRIPT 或 EXECUTE ANY EXTERNAL SCRIPT。 更高版本将会解决此问题。
 
@@ -204,7 +204,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 如果遇到资源限制，请检查当前的默认值。 如果 20% 不够，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的文档，了解如何更改此值。
 
-**适用于：** SQL Server 2016 R Services Enterprise Edition
+适用于：  SQL Server 2016 R Services Enterprise Edition
 
 
 ### <a name="14-error-when-using-sp_execute_external_script-without-libcso-on-linux"></a>14.在 Linux 上使用不具有 `libc++.so` 的 `sp_execute_external_script` 时出现的错误
@@ -236,7 +236,7 @@ Unable to communicate with the runtime for 'Java' script for request id: 9425784
 Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WARNING: PopulateLauncher failed: Library /opt/mssql-extensibility/lib/commonlauncher.so not loaded. Error: libc++.so.1: cannot open shared object file: No such file or directory
 ```
 
-**解决方法**
+解决方法 
 
 可以使用以下解决方法之一：
 
@@ -249,7 +249,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
    readabledirectories = /opt/mssql
    ```
 
-**适用于：** Linux 上的 SQL Server 2019
+适用于：  Linux 上的 SQL Server 2019
 
 ## <a name="r-script-execution-issues"></a>R 脚本执行问题
 
@@ -267,7 +267,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 如果已将 SQL Server 安装到默认位置，则不会发生此错误，因为所有 Windows 用户都有对 `Program Files` 文件夹的读取权限。
 
-在即将发布的 Service Release 中解决了这一问题。 解决方法之一是向 SQLRUserGroup 组提供对 `ExternalLibraries` 的所有父文件夹的读取访问权限  。
+在即将发布的 Service Release 中解决了这一问题。 解决方法之一是向 **SQLRUserGroup** 组提供对 `ExternalLibraries` 的所有父文件夹的读取访问权限。
 
 ### <a name="2-serialization-error-between-old-and-new-versions-of-revoscaler"></a>2.旧版和新版 RevoScaleR 之间的序列化错误
 
@@ -283,7 +283,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 换言之，将相同版本的 RevoScaleR 同时用于序列化和反序列化操作。
 
-### <a name="3-real-time-scoring-does-not-correctly-handle-the-_learningrate_-parameter-in-tree-and-forest-models"></a>3.实时评分无法正确处理树和林模型中的 learningRate 参数 
+### <a name="3-real-time-scoring-does-not-correctly-handle-the-_learningrate_-parameter-in-tree-and-forest-models"></a>3.实时评分无法正确处理树和林模型中的 _learningRate_ 参数
 
 如果使用决策树方法或决策林方法创建模型，并指定学习速率，则与使用 `rxPredict` 相比，使用 `sp_rxpredict` 或 SQL `PREDICT` 函数时可能会出现不一致的结果。
 
@@ -297,7 +297,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 此问题已在 SQL Server 2016 Service Pack 1 中解决。 我们建议升级到最高的 Service Release。
 
-**适用于：** SQL Server 2016 R Services RTM 版本
+适用于：  SQL Server 2016 R Services RTM 版本
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5.在 SQL Server 计算环境中读取数据时，无法更改列类型
 
@@ -314,7 +314,7 @@ data <- RxSqlServerData(
 
 解决方法之一是将 SQL 查询重新编写为使用 CAST 或 CONVERT，并通过使用正确的数据类型将数据呈现给 R。 一般情况下，与在 R 代码中更改数据相比，使用 SQL 处理数据可以获得更好的性能。
 
-**适用于：** SQL Server 2016 R Services
+适用于：  SQL Server 2016 R Services
 
 ### <a name="6-limits-on-size-of-serialized-models"></a>6.序列化模型大小限制
 
@@ -363,9 +363,9 @@ data <- RxSqlServerData(
 
 有关此问题的讨论以及其他提示，请参阅 [R Services 性能 - 数据优化](r/r-and-data-optimization-r-services.md)。
 
-### <a name="10-arguments-varstokeep-and-varstodrop-are-not-supported-for-sql-server-data-sources"></a>10.SQL Server 数据源不支持 varsToKeep 和 varsToDrop 参数  
+### <a name="10-arguments-varstokeep-and-varstodrop-are-not-supported-for-sql-server-data-sources"></a>10.SQL Server 数据源不支持 *varsToKeep* 和 *varsToDrop* 参数
 
-使用 rxDataStep 函数将结果写入到表时，使用 varsToKeep 和 varsToDrop 是将要包含或排除的列指定为操作的一部分的简便方法   。 但是，SQL Server 数据源不支持这些参数。
+使用 rxDataStep 函数将结果写入到表时，使用 *varsToKeep* 和 *varsToDrop* 是将要包含或排除的列指定为操作的一部分的简便方法。 但是，SQL Server 数据源不支持这些参数。
 
 ### <a name="11-limited-support-for-sql-data-types-in-sp_execute_external_script"></a>11.sp\_execute\_external\_script 中 SQL 数据类型的有限支持
 
@@ -381,11 +381,11 @@ SQL 中支持的数据类型并非全都可在 R 中使用。解决方法之一�
 
 ### <a name="13-only-one-value-of-type-raw-can-be-returned-from-sp_execute_external_script"></a>13.只能从 `sp_execute_external_script` 中返回一个 `raw` 类型的值
 
-从 R 返回二进制数据类型（R raw 数据类型）时，必须在输出数据框架中发送该值  。
+从 R 返回二进制数据类型（R **raw** 数据类型）时，必须在输出数据框架中发送该值。
 
-对于 raw 以外的数据类型，可以通过添加 OUTPUT 关键字来返回参数值和存储过程的结果  。 有关详细信息，请参阅[参数](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)。
+对于 **raw** 以外的数据类型，可以通过添加 OUTPUT 关键字来返回参数值和存储过程的结果。 有关详细信息，请参阅[参数](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)。
 
-如果要使用包含 raw 类型值的多个输出集，一种可能的解决方法是多次调用存储过程，或者使用 ODBC 将结果集发送回 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  。
+如果要使用包含 **raw** 类型值的多个输出集，一种可能的解决方法是多次调用存储过程，或者使用 ODBC 将结果集发送回 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 ### <a name="14-loss-of-precision"></a>14.精度损失
 
@@ -395,7 +395,7 @@ SQL 中支持的数据类型并非全都可在 R 中使用。解决方法之一�
 
 ### <a name="15-variable-scoping-error-when-you-use-the-transformfunc-parameter"></a>15.使用 transformFunc 参数时出现的变量范围错误
 
-若要在建模时转换数据，可以在函数（如 `rxLinmod` 或 `rxLogit`）中传递 transformFunc 参数  。 但是，嵌套的函数调用可能会导致 SQL Server 计算上下文中出现范围错误，即使调用能够在本地计算上下文中正常工作。
+若要在建模时转换数据，可以在函数（如 `rxLinmod` 或 `rxLogit`）中传递 *transformFunc* 参数。 但是，嵌套的函数调用可能会导致 SQL Server 计算上下文中出现范围错误，即使调用能够在本地计算上下文中正常工作。
 
 > 用于分析的示例数据集没有变量 
 
@@ -425,9 +425,9 @@ g <- function(y){
 
 ### <a name="16-data-import-and-manipulation-using-revoscaler"></a>16.使用 RevoScaleR 导入和操作数据
 
-从数据库读取 varchar 列时，会截掉空格  。 为了避免这种情况，请将字符串包含在非空格字符中。
+从数据库读取 **varchar** 列时，会截掉空格。 为了避免这种情况，请将字符串包含在非空格字符中。
 
-使用函数（如 `rxDataStep`）创建包含 varchar 列的数据库表时，将会根据数据样本估算列宽  。 如果宽度可能会变化，则可能需要将所有字符串填补到公共长度。
+使用函数（如 `rxDataStep`）创建包含 **varchar** 列的数据库表时，将会根据数据样本估算列宽。 如果宽度可能会变化，则可能需要将所有字符串填补到公共长度。
 
 使用 `rxImport` 或 `rxTextToXdf` 的重复调用来导入和追加行，并将多个输入文件合并为单个.xdf 文件时，不支持使用转换来更改变量的数据类型。
 
@@ -439,7 +439,7 @@ g <- function(y){
 
 如果你使用变量数极多（例如，超过 40,000 个）的数据集，在启动 R 时设置 `max-ppsize` 标志才能使用 `rxGetVarInfo` 等函数。 `max-ppsize` 标志指定指针保护堆栈的最大大小。
 
-如果你使用 R 控制台（例如，RGui.exe 或 RTerm.exe），可以通过键入以下命令，将 max-ppsize 的值设置为 500000  ：
+如果你使用 R 控制台（例如，RGui.exe 或 RTerm.exe），可以通过键入以下命令，将 _max-ppsize_ 的值设置为 500000：
 
 ```R
 R --max-ppsize=500000
@@ -509,11 +509,11 @@ go
 
 > 执行“sp_execute_external_script”时发生“R”脚本错误(HRESULT 0x800704d4)。 
 
-**解决方法**
+解决方法 
 
 请勿与长时间运行的查询并行运行库安装。 或在完成安装后重新运行长期查询。
 
-**适用于：** 仅限 Linux 和大数据群集上的 SQL Server 2019。
+适用于：  仅限 Linux 和大数据群集上的 SQL Server 2019。
 
 ## <a name="python-script-execution-issues"></a>Python 脚本执行问题
 
@@ -571,8 +571,8 @@ go
 从 SQL Server 2017 CU2 开始，即使 Python 代码成功运行，也可能出现以下消息：
 
 > 来自外部脚本的 STDERR 消息：
-> ~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger
-> SyntaxWarning：在全局声明之前使用 telemetry_state ** ** **
+>  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
+> SyntaxWarning：在全局声明之前使用 telemetry_state ** **
 
 此问题已在 SQL Server 2017 累积更新 3 (CU3) 中得以解决。 
 
@@ -580,17 +580,17 @@ go
 
 从 SQL Server 2017 累积更新 12 (CU12) 开始，将 Python 与 `sp_execute_external_script`结合使用时，不支持 WITH RESULT SETS 中的 numeric、decimal 和 money 数据类型。 可能会出现以下消息：
 
-> *[代码：39004，SQL 状态：S1000]  执行“sp_execute_external_script”时发生“Python”脚本错误(HRESULT 0x80004004)。*
+> [代码：39004，SQL 状态：S1000]  执行“sp_execute_external_script”时发生“Python”脚本错误(HRESULT 0x80004004)。
 >
-> *[代码：39019，SQL 状态：S1000]  发生外部脚本错误：*
+> [代码：39019，SQL 状态：S1000]  发生外部脚本错误：
 >
-> *SqlSatelliteCall 错误：输出架构中不支持的类型。支持的类型：bit、smallint、int、datetime、smallmoney、real 和 float。char 和 varchar 部分受支持。*
+> SqlSatelliteCall 错误：输出架构中不支持的类型。支持的类型：bit、smallint、int、datetime、smallmoney、real 和 float。char 和 varchar 部分受支持。
 
 此问题已在 SQL Server 2017 累积更新 14 (CU14) 中得以解决。
 
 ### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6.在 Linux 上使用 pip 安装 Python 包时出现的解释器错误 
 
-在 SQL Server 2019 上，如果尝试使用 pip  。 例如：
+在 SQL Server 2019 上，如果尝试使用 **pip**。 例如：
 
 ```bash
 /opt/mssql/mlservices/runtime/python/bin/pip -h
@@ -600,24 +600,24 @@ go
 
 > bash: /opt/mssql/mlservices/runtime/python/bin/pip: /opt/microsoft/mlserver/9.4.7/bin/python/python: 错误解释器：  无此文件或目录
 
-**解决方法**
+解决方法 
 
-从 [Python 包机构 (PyPA)](https://www.pypa.io) 安装 pip  ：
+从 [Python 包机构 (PyPA)](https://www.pypa.io) 安装 **pip**：
 
 ```bash
 wget 'https://bootstrap.pypa.io/get-pip.py' 
 /opt/mssql/mlservices/bin/python/python ./get-pip.py 
 ```
 
-**建议**
+建议 
 
 请参阅[使用 sqlmlutils 安装 Python 包](package-management/install-additional-python-packages-on-sql-server.md)。
 
-**适用于：** Linux 上的 SQL Server 2019
+适用于：  Linux 上的 SQL Server 2019
 
 ### <a name="7-unable-to-install-python-packages-using-pip-after-installing-sql-server-2019-on-windows"></a>7.在 Windows 上安装 SQL Server 2019 后，无法使用 pip 安装 Python 包
 
-在 Windows 上安装 SQL Server 2019 后，尝试从 DOS 命令行通过 pip 安装 Python 包将失败  。 例如：
+在 Windows 上安装 SQL Server 2019 后，尝试从 DOS 命令行通过 **pip** 安装 Python 包将失败。 例如：
 
 ```bash
 pip install quantfolio
@@ -629,7 +629,7 @@ pip install quantfolio
 
 这是 Anaconda 包特有的问题。 此问题将在即将发布的 Service Release 中得以解决。
 
-**解决方法**
+解决方法 
 
 复制以下文件：
 
@@ -644,7 +644,7 @@ pip install quantfolio
 
 然后打开新的 DOS 命令 shell 提示符。
 
-**适用于：** Windows 上的 SQL Server 2019
+适用于：  Windows 上的 SQL Server 2019
 
 ### <a name="8-error-when-using-sp_execute_external_script-without-libcaboso-on-linux"></a>8.在 Linux 上使用不具有 `libc++abo.so` 的 `sp_execute_external_script` 时出现的错误
 
@@ -679,7 +679,7 @@ RuntimeError: revoscalepy function failed.
 Total execution time: 00:01:00.387
 ```
 
-**解决方法**
+解决方法 
 
 运行以下命令：
 
@@ -687,7 +687,7 @@ Total execution time: 00:01:00.387
 sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 ```
 
-**适用于：** Linux 上的 SQL Server 2019
+适用于：  Linux 上的 SQL Server 2019
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 和 Microsoft R Open
 

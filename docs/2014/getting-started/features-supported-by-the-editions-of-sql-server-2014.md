@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176125"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339286"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各个版本支持的功能
 
@@ -169,7 +169,7 @@ ms.locfileid: "70176125"
 |分布式重播 - 客户端|是|否|是|是||||  
 |分布式重播 - 控制器|支持（Enterprise 版支持最多 16 个客户端、Developer 版仅支持 1 个客户端）|否|支持（仅支持 1 个客户端）|支持（仅支持 1 个客户端）||||  
 |SQL Profiler|是|是|是|否<sup>2</sup>|否<sup>2</sup>|否<sup>2</sup>|否<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理商|是|是|是|是||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理|是|是|是|是||||  
 |Microsoft System Center Operations Manager 管理包|是|是|是|是||||  
 |数据库优化顾问 (DTA)|是|是|是<sup>3</sup>|是<sup>3</sup>||||  
 |将[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库部署到 Azure VM 向导|是|是|是|是|是|是|是|  

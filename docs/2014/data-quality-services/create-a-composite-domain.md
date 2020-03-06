@@ -14,11 +14,11 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ad2a12ba8775fe2c35947bf8783f1bf359fca896
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65480946"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339050"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建复合域。 复合域由应用于单个数据字段的一个或多个单一域组成。 有关复合域的详细信息，请参阅[管理复合域](../../2014/data-quality-services/managing-a-composite-domain.md)。  

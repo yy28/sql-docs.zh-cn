@@ -14,11 +14,11 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65478822"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339145"
 ---
 # <a name="system-settings-master-data-services"></a>系统设置 (Master Data Services)
   对于与 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库相关联的所有 Web 应用程序和 Web 服务，您都可以配置系统设置。  

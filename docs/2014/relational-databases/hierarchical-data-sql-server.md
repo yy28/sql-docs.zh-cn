@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63065687"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339235"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
   内置`hierarchyid`数据类型使存储和查询层次结构数据变得更加容易。 `hierarchyid`针对表示树（这是最常见的分层数据类型）进行了优化。  

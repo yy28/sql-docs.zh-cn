@@ -11,11 +11,11 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728067"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338081"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -46,7 +46,7 @@ ms.locfileid: "73728067"
 - 在 Windows Server 2012 计算机上安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 时，可能必须配置 Internet Explorer 增强安全性以允许为 Web 应用程序站点编写脚本。 否则，浏览到服务器计算机上的站点将失败。
 - 在使用 Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果不具有所需版本的 Silverlight，则在导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示安装 Silverlight。 可以从**此处[安装 Silverlight 5](https://www.microsoft.com/silverlight/)**。
 
-## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 虚拟机上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>Azure 虚拟机上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 默认情况下，当你使用[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]已安装的创建 Azure 虚拟机时， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]还将安装。 
 
 下一步是安装 Internet 信息服务 (IIS)。 请参阅[安装和配置 IIS](#InstallIIS) 部分。 

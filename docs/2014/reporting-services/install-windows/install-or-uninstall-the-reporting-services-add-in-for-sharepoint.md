@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173596"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339287"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>安装或卸载用于 SharePoint 的 Reporting Services 外接程序（SharePoint 2010 和 SharePoint 2013）
   在 sharepoint 服务器上[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]运行用于 sharepoint 产品的安装包外接程序（rssharepoint.msi），以在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sharepoint 部署中启用功能。 这些功能包括 Power View、一个报表查看器 Web 部件、一个 URL 代理端点、一些内容类型和一些应用程序页，使用它们可以创建、查看及管理 SharePoint 站点上的报表、报表模型、数据源和其他报表服务器内容。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是在 SharePoint 模式下运行的报表服务器的必需组件。 可以从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导或通过从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能包下载 rsSharePoint.msi 来安装此外接程序。 有关外接程序和下载页的版本列表，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。

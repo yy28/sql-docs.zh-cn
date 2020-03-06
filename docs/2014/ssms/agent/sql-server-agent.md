@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68188832"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339090"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理是一种 Microsoft Windows 服务，可执行计划的管理任务， ** 这些任务[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在中称为 "作业"。  
@@ -84,9 +84,9 @@ ms.locfileid: "68188832"
   
  警报可以响应下列任一条件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能条件  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能条件  
   
 -   运行 SQL Server 代理的计算机上的 Microsoft Windows Management Instrumentation (WMI) 事件  
   
