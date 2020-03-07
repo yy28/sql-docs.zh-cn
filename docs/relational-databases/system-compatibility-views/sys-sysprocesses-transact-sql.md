@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74947149"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866365"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "74947149"
 |hostname|**nchar （128）**|工作站的名称。|  
 |program_name|**nchar （128）**|应用程序的名称。|  
 |hostprocess|**nchar （10）**|工作站进程 ID 号。|  
-|cmd|**nchar （26）**|当前正在执行的命令。|  
+|cmd|**nchar （52）**|当前正在执行的命令。|  
 |nt_domain|**nchar （128）**|客户端的 Windows 域（如果使用 Windows 身份验证）或可信连接的 Windows 域。|  
 |nt_username|**nchar （128）**|进程的 Windows 用户名（如果使用 Windows 身份验证）或可信连接的 Windows 用户名。|  
 |net_address|**nchar （12）**|为每个用户工作站上的网络适配器分配的唯一标识符。 当用户登录时，该标识符插入 net_address 列。|  

@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74564815"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338382"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "74564815"
   
 ## <a name="arguments"></a>参数  
  *expression_name*  
-是公用表表达式的有效标识符。 expression_name 须不同于在同一 WITH *common_table_expression> 子句中定义的任何其他公用表表达式的名称，但可以与基表或基视图的名称相同。* \<  在查询中对 expression_name 的任何引用都会使用公用表表达式，而不使用基对象。 
+是公用表表达式的有效标识符。 expression_name 须不同于在同一 WITH \<common_table_expression> 子句中定义的任何其他公用表表达式的名称，但可以与基表或基视图的名称相同。   在查询中对 expression_name 的任何引用都会使用公用表表达式，而不使用基对象。 
   
  column_name   
  在公用表表达式中指定列名。 在一个 CTE 定义中不允许出现重复的名称。 指定的列名数必须与 CTE_query_definition 结果集中列数相匹配。  只有在查询定义中为所有结果列都提供了不同的名称时，列名列表才是可选的。  
@@ -62,7 +62,7 @@ ms.locfileid: "74564815"
  *CTE_query_definition*  
  指定一个其结果集填充公用表表达式的 SELECT 语句。 除了 CTE 不能定义另一个 CTE 以外，CTE_query_definition 的 SELECT 语句必须满足与创建视图相同的要求。  有关详细信息，请参阅“注释”部分和 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
- 如果定义了多个 CTE_query_definition，则这些查询定义必须用下列一个集合运算符联接起来：UNION ALL、UNION、EXCEPT 或 INTERSECT。   
+ 如果定义了多个 CTE_query_definition，则这些查询定义必须用下列一个集合运算符联接起来  ：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
   
 ## <a name="remarks"></a>备注  
   
@@ -142,7 +142,7 @@ ms.locfileid: "74564815"
   
 -   CTE 递归部分中的分析和聚合函数适用于当前递归级别的集合而不适用于 CTE 集合。 `ROW_NUMBER` 之类的函数仅对当前递归级别传递给它们的数据子集执行运算，而不对传递给 CTE 的递归部分的整个数据集合执行运算。 有关详细信息，请参阅示例 K. 在随后的递归 CTE 中使用分析函数。  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中的公用表表达式的功能和限值  
+## <a name="features-and-limitations-of-common-table-expressions-in-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中的公用表表达式的功能和限值  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中 CTE 的当前实现具有以下功能和限值：  
   
 -   可以在 `SELECT` 语句中指定 CTE。  
@@ -171,7 +171,7 @@ ms.locfileid: "74564815"
   
 -   如果将 CTE 用在属于批处理的一部分的语句中，那么在它之前的语句必须以分号结尾。  
   
--   如果将 CTE 用于 `sp_prepare` 准备的语句中，则其与 PDW 中其他 `SELECT` 语句的行为相同。 但是，如果将 CTE 用作由 `sp_prepare` 准备的 CETAS 的一部分，则由于为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实现绑定时所使用的方式，其行为可能与 `sp_prepare` 和其他 PDW 语句不同。 如果引用 CTE 的 `SELECT` 使用 CTE 中不存在的错误列，则 `sp_prepare` 通过而不检测错误，但会在 `sp_execute` 期间引发此错误。  
+-   如果将 CTE 用于 `sp_prepare` 准备的语句中，则其与 PDW 中其他 `SELECT` 语句的行为相同。 但是，如果将 CTE 用作由 `sp_prepare` 准备的 CETAS 的一部分，则由于为 `sp_prepare` 实现绑定时所使用的方式，其行为可能与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他 PDW 语句不同。 如果引用 CTE 的 `SELECT` 使用 CTE 中不存在的错误列，则 `sp_prepare` 通过而不检测错误，但会在 `sp_execute` 期间引发此错误。  
   
 ## <a name="examples"></a>示例  
   
@@ -423,7 +423,7 @@ ORDER BY ComponentLevel, AssemblyID, ComponentID;
 ```  
   
 ### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>F. 在 UPDATE 语句中使用递归 CTE  
- 下例更新用于生成产品‘Road-550-W Yellow, 44’ `PerAssemblyQty` 的所有部件的 `(ProductAssemblyID``800` 值。 公用表表达式将返回用于生成 `ProductAssemblyID 800` 的部件和用于生成这些部件的组件等的层次结构列表。 只修改公用表表达式所返回的行。  
+ 下例更新用于生成产品‘Road-550-W Yellow, 44’ `(ProductAssemblyID``800` 的所有部件的 `PerAssemblyQty` 值。 公用表表达式将返回用于生成 `ProductAssemblyID 800` 的部件和用于生成这些部件的组件等的层次结构列表。 只修改公用表表达式所返回的行。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -568,7 +568,7 @@ Lvl  N
   
  `N` 为 CTE 递归部分的每次传递返回 1，这是因为只向 `ROWNUMBER` 传递了该递归级别的数据子集。 对于查询递归部分的每次迭代，只向 `ROWNUMBER` 传递了一行。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. 在 CTAS 语句中使用公用表表达式  
  下例创建一个新表，包括 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的每名销售代表每年的销售订单总数。  
