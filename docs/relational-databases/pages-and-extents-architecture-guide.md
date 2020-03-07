@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75325489"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338383"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "75325489"
 
 |页类型 | 目录 |
 |-------|-------|
-|data |当行中的文本设置为 ON 时，具有除 text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 和 xml 数据以外的所有数据的数据行。 |
+|数据 |当行中的文本设置为 ON 时，具有除 text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 和 xml 数据以外的所有数据的数据行。 |
 |索引 |索引条目。 |
 |Text/Image |大型对象数据类型：（text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 和 xml 数据） <br> 数据行超过 8 KB 时为可变长度数据类型列：（varchar、nvarchar、varbinary 和 sql_variant） |
 |Global Allocation Map、Shared Global Allocation Map |有关区是否分配的信息。 |
@@ -94,7 +94,7 @@ ms.locfileid: "75325489"
 > [!NOTE]
 > 一直到，并且包括 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，跟踪标志 1118 可用于将默认分配更改为始终使用统一区。 有关此跟踪标志的详细信息，请参阅 [DBCC TRACEON - 跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 >   
-> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 TempDB 自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `SET MIXED_PAGE_ALLOCATION` 的 `ALTER DATABASE` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 TempDB 自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
 
 ## <a name="managing-extent-allocations-and-free-space"></a>管理区分配和可用空间 
 
