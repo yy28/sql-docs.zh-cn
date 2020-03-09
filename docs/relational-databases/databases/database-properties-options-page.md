@@ -13,11 +13,11 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68049033"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338376"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68049033"
  通过从列表中进行选择来指定数据库的排序规则。 有关详细信息，请参阅 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)。  
   
  **恢复模式**  
- 指定下列模式之一来恢复数据库：“完整”  、“大容量日志”  或“简单”  。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
+ 指定下列模式之一来恢复数据库：**完整**、**大容量日志**或**简单**。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
  **兼容性级别**  
  指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关可能的值，请参阅 [ALTER DATABASE (Transact-SQL) 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 升级 SQL Server 数据库时，如果可能，保留该数据库的兼容性级别，或更改为新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的最低级别。 
@@ -131,7 +131,7 @@ ms.locfileid: "68049033"
  为与所选数据库相关联的 FILESTREAM 数据指定目录名称。  
   
  **FILESTREAM 非事务访问**  
- 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一： **OFF**、 **READ_ONLY**或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
+ 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一：**OFF**、**READ_ONLY** 或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>杂项  
 允许快照隔离   
