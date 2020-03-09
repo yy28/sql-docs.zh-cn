@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 35fc93a9ce6eb5b1709c6671adb21eb3030dea63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 22d27f9a80765aacdfab25c568e8e2635f1779cc
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247854"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897022"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>比较 GUID 和 uniqueidentifier 值
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 中的全局唯一标识符 (GUID) 数据类型由 `uniqueidentifier` 数据类型表示，该数据类型存储 16 字节的二进制值。 GUID 是一个二进制数，它主要用作一个标识符，此标识符必须在一个在多个站点上具有多台计算机的网络中是惟一的。 可以通过调用 Transact-SQL NEWID 函数来生成 GUID，并保证其在全球是唯一的。 有关详细信息，请参阅 [uniqueidentifier (Transact-SQL)](../../../t-sql/data-types/uniqueidentifier-transact-sql.md)。  
   

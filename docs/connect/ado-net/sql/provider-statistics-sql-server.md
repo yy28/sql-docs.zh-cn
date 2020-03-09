@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 837bb71e81ac2d2ead661915c332ad826c4f944f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251197"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896606"
 ---
 # <a name="provider-statistics-for-sql-server"></a>用于 SQL Server 的提供程序统计信息
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 从 .NET Framework 版本 2.0 和 .NET Core 版本 1.0 开始，Microsoft SqlClient Data Provider for SQL Server 支持运行时统计信息。 必须通过将 <xref:Microsoft.Data.SqlClient.SqlConnection> 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 属性设置为 `True` 来启用统计信息。 启用统计信息后，可以通过 <xref:Microsoft.Data.SqlClient.SqlConnection> 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法检索 <xref:System.Collections.IDictionary> 引用，以“即时快照”的方式查看统计信息。 可以将该列表枚举为一组名称/值对字典条目。 这些名称/值对是无序的。 随时都可以调用 <xref:Microsoft.Data.SqlClient.SqlConnection> 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> 方法来重置计数器。 如果尚未启用统计信息收集，则不会生成异常。 此外，如果在未首先调用 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 的情况下调用 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>，则检索的值是每个条目的初始值。 如果启用统计信息，请运行应用程序一段时间，然后禁用统计信息，检索到的值将反映收集的值，直到禁用统计信息为止。 收集的所有统计值都基于每个连接。  
   

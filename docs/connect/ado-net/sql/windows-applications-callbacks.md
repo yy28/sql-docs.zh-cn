@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253383"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896012"
 ---
 # <a name="windows-applications-using-callbacks"></a>使用回调的 Windows 应用程序
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 在大多数异步处理方案中，你希望启动数据库操作并继续运行其他进程，而无需等待数据库操作完成。 但是，许可场景需要在数据库操作结束后执行一些操作。 例如，在 Windows 应用程序中，你可能希望将长时间运行的操作委托给后台线程，同时允许用户界面线程保持响应。 但是，在数据库操作完成后，你需要使用结果来填充窗体。 这种类型的场景最好通过回调实现。  
   

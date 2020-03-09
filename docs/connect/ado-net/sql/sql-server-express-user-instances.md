@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b81b179657fc3564105a113712929ca8f3e10da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246972"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896245"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server Express Edition (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 Microsoft SqlClient 数据提供程序时该功能才可用。 用户实例是由父实例生成的 SQL Server Express 数据库引擎的单独实例。 用户实例允许非本地计算机管理员的用户附加并连接到 SQL Server Express 数据库。 每个实例在单个用户的安全上下文下运行，每个用户一个实例。  
   
@@ -34,7 +34,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) 支持用户实例功�
 >  对于已经在自己的计算机上具有管理员权限的用户，或在涉及多个数据库用户的场景中，不需要用户实例。  
   
 ## <a name="enabling-user-instances"></a>启用用户实例  
-若要生成用户实例，必须运行 SQL Server Express 父实例。 安装 SQL Server Express 后，默认情况下将启用用户实例，且对父实例执行 sp_configure 系统存储过程的系统管理员可以显式启用或禁用用户实例。  
+若要生成用户实例，必须运行 SQL Server Express 父实例。 安装 SQL Server Express 后，默认情况下将启用用户实例，且对父实例执行 sp_configure 系统存储过程的系统管理员可以显式启用或禁用用户实例  。  
   
 ```sql
 -- Enable user instances.  
@@ -116,13 +116,13 @@ private static void OpenSqlConnection()
 >  在 SQL Server 中运行的公共语言运行时 (CLR) 代码不支持用户实例。 如果在连接字符串中有 `User Instance=true` 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 上调用 `Open`，将引发 <xref:System.InvalidOperationException>。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>用户实例连接的生存期  
-与作为服务运行的 SQL Server 版本不同，SQL Server Express 实例无需手动启动和停止。 用户每次登录并连接到用户实例时，如果用户实例尚未运行，则启动该实例。 用户实例数据库设置了 `AutoClose` 选项，以便在一段非活动期后自动关闭数据库。 在实例的最后一个连接关闭后，启动的 sqlservr.exe 进程将在有限的超时期限内持续运行，因此，如果在超时过期之前打开另一个连接，无需重新启动。 如果在超时期限过期之前没有打开新连接，用户实例将自动关闭。 父实例的系统管理员可为用户实例设置超时期限的持续时间，方法为：使用 sp_configure 更改“用户实例超时”选项。 默认值为 60 分钟。  
+与作为服务运行的 SQL Server 版本不同，SQL Server Express 实例无需手动启动和停止。 用户每次登录并连接到用户实例时，如果用户实例尚未运行，则启动该实例。 用户实例数据库设置了 `AutoClose` 选项，以便在一段非活动期后自动关闭数据库。 在实例的最后一个连接关闭后，启动的 sqlservr.exe 进程将在有限的超时期限内持续运行，因此，如果在超时过期之前打开另一个连接，无需重新启动。 如果在超时期限过期之前没有打开新连接，用户实例将自动关闭。 父实例的系统管理员可为用户实例设置超时期限的持续时间，方法为：使用 sp_configure 更改“用户实例超时”选项   。 默认值为 60 分钟。  
   
 > [!NOTE]
 >  如果在值大于 0 的连接字符串中使用 `Min Pool Size`，连接池程序将始终保持几个打开的连接，并且用户实例不会自动关闭。  
   
 ## <a name="how-user-instances-work"></a>用户实例的工作方式  
-为每个用户首次生成用户实例时，系统会将 master 和 msdb 系统数据库从模板数据文件夹复制到用户的本地应用程序数据存储库目录下的某个路径中，供用户实例专用。 此路径通常为 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 启动用户实例时，tempdb、日志和跟踪文件也将被写入到此目录中。 为实例生成一个名称，该名称保证对每个用户都是唯一的。  
+为每个用户首次生成用户实例时，系统会将 master 和 msdb 系统数据库从模板数据文件夹复制到用户的本地应用程序数据存储库目录下的某个路径中，供用户实例专用   。 此路径通常为 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 启动用户实例时，tempdb、日志和跟踪文件也将被写入到此目录中  。 为实例生成一个名称，该名称保证对每个用户都是唯一的。  
   
 默认情况下，Windows Builtin\Users 组的所有成员都会被授予连接本地实例的权限，以及对 SQL Server 二进制文件的读取和执行权限。 在对承载用户实例的调用用户的凭据进行验证后，该用户将成为该实例上的 `sysadmin`。 仅为用户实例启用共享内存，这意味着只能在本地计算机上执行操作。  
   

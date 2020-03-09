@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 89bcaa6d6e92ccde2d1c151b493c26fe1279d89f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247680"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896643"
 ---
 # <a name="polling-in-console-applications"></a>在控制台应用程序中轮询
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 使用 ADO.NET 中的异步操作，可以在一个线程上启动耗时的数据库操作，同时在另一个线程上执行其他任务。 但在大多数情况下，最终会遇到这样的情况：在数据库操作完成之前，应用程序不应继续运行。 对于这种情况，一个有用的方法是轮询异步操作以确定操作是否已完成。  
   

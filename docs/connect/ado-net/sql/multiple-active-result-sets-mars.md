@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 60c27bd94162b4d6bf4d7370218e1fa7781e6491
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4475e4b8a71b4abcf4e1c2324a49e03a8bb64fbb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247698"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896674"
 ---
 # <a name="multiple-active-result-sets-mars"></a>多个活动的结果集 (MARS)
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 多重活动结果集 (MARS) 是一项可便于在一个连接上执行多个批处理的功能。 在旧版中，一次只能对一个连接执行一个批处理。 使用 MARS 执行多个批处理并不意味着同时执行操作。  
   

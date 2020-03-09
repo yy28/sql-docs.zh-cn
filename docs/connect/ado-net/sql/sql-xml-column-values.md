@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: aa02072e139c2446ae67086ef43668af4403890c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4fd63ceb329fd6e6f7768425a1ccf43afa27dd21
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244013"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896256"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 列值
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 支持 `xml` 数据类型，开发人员可以使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 类的标准行为检索包括此类型的结果集。 可以检索 `xml` 列（例如，检索到 <xref:Microsoft.Data.SqlClient.SqlDataReader> 中），就像检索任何列一样；但若要以 XML 格式处理列内容，必须使用 <xref:System.Xml.XmlReader>。  
   

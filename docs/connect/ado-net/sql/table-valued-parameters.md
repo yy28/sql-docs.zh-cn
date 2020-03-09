@@ -12,25 +12,25 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 29c7be3fbcb027d1789357d0ce823ac6b1c59f2a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75243982"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895957"
 ---
 # <a name="table-valued-parameters"></a>表值参数
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 表值参数提供了一将多行数据从客户端应用程序封送到 SQL Server 的种简单方法，而无需进行多次往返或特殊的服务器端逻辑来处理数据。 可使用表值参数来封装客户端应用程序中的数据行，并以单个参数化命令将数据发送到服务器。 传入数据行存储在随后可使用 Transact-SQL 进行操作的表变量中。  
   
 可以使用标准的 Transact-SQL SELECT 语句来访问表值参数中的列值。 表值参数为强类型，其结构会自动进行验证。 表值参数的大小仅受服务器内存的限制。  
   
 > [!NOTE]
->  不能在表值参数中返回数据。 表值参数仅供输入；不支持 OUTPUT 关键字。  
+>  不能在表值参数中返回数据。 表值参数仅限输入；不支持 OUTPUT 关键字。  
   
-有关表值参数的详细信息，请参阅以下资源。  
+若要详细了解表值参数，请参阅以下资源。  
   
 |资源|说明|  
 |--------------|-----------------|  
@@ -38,11 +38,11 @@ ms.locfileid: "75243982"
 |SQL Server 联机丛书中的[用户定义的表类型](https://go.microsoft.com/fwlink/?LinkId=98364)|说明用于声明表值参数的用户定义的表类型。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在早期版本的 SQL Server 中传递多个行  
-在 SQL Server 2008 中引入表值参数之前，用于将多行数据传递到存储过程或参数化 SQL 命令的选项受到限制。 开发人员可以从以下选项中进行选择，以便将多个行传递到服务器：  
+在 SQL Server 2008 中引入表值参数之前，用于将多行数据传递到存储过程或参数化 SQL 命令的选项受到限制。 开发人员可以选择下面的一种方法，将多行传递到服务器：  
   
-- 使用一系列单独的参数来表示数据的多个列和行中的值。 使用此方法可以传递的数据量取决于允许的参数数目。 SQL Server 过程最多可以有 2100 个参数。 需要使用服务器端逻辑将这些单独的值组合到一个表变量或临时表中进行处理。  
+- 使用一系列单独的参数来表示多列和多行数据中的值。 使用这种方法可以传递的数据量受到允许使用的参数数量限制。 SQL Server 过程最多可以有 2100 个参数。 必须使用服务器端逻辑，将这些单独的值汇编到表变量或临时表中以供处理。  
   
-- 将多个数据值捆绑为分隔字符串或 XML 文档，然后将这些文本值传递到过程或语句。 这就需要过程或语句包括可用于验证数据结构和解绑值的必需逻辑。  
+- 将多个数据值绑定到分隔字符串或 XML 文档，然后将这些文本值传递到过程或语句。 这就需要过程或语句包括可用于验证数据结构和解绑值的必需逻辑。  
   
 - 为影响多行的数据修改创建一系列单独的 SQL 语句，例如通过调用 <xref:Microsoft.Data.SqlClient.SqlDataAdapter> 的 `Update` 方法创建的语句。 可以将更改单独提交到服务器，也可以分批提交到服务器。 但是，即使分批提交包含多个语句，每个语句也会在服务器上单独执行。  
   
@@ -66,9 +66,9 @@ CREATE PROCEDURE usp_UpdateCategories
 ```  
   
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>使用表值参数修改数据 (transact-SQL)  
-通过执行单个语句，可以在影响多行的基于集的数据修改中使用表值参数。 例如，可以选择表值参数中的所有行并将其插入到数据库表中，也可以通过将表值参数联接到要更新的表来创建 update 语句。  
+通过执行单个语句，可以在影响多行的基于集的数据修改中使用表值参数。 例如，可以选择表值参数中的所有行并将它们插入数据库表，也可以通过将表值参数联接到要更新的表来创建更新语句。  
   
-下面的 Transact-SQL UPDATE 语句演示如何通过将表值参数联接到 Categories 表来使用它。 在 FROM 子句中将表值参数与 JOIN 一起使用时，还必须对其提供别名，在下面的示例中，表值参数的别名为“ec”：  
+下面的 Transact-SQL UPDATE 语句演示如何通过将表值参数联接到 Categories 表来使用它。 在 FROM 子句中结合使用表值参数和 JOIN 时，还必须对表值参数使用别名。如下所示，表值参数的别名为“ec”：  
   
 ```sql
 UPDATE dbo.Categories  
@@ -84,14 +84,14 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
   
-## <a name="limitations-of-table-valued-parameters"></a>表值参数的局限性  
+## <a name="limitations-of-table-valued-parameters"></a>表值参数的限制  
 表值参数存在几个限制：  
   
 - 无法将表值参数传递给 [CLR 用户定义的函数](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)。  
   
 - 只能将表值参数编制索引为支持 UNIQUE 或 PRIMARY KEY 约束。 SQL Server 不维护表值参数的统计信息。  
   
-- 在 Transact-SQL 代码中表值参数是只读的。 不能在表值参数的行中更新列值，也不能插入或删除行。 若要在表值参数中修改传递到存储过程或参数化语句的数据，必须将数据插入到临时表或表变量中。  
+- 在 Transact-SQL 代码中表值参数是只读的。 既不能更新表值参数行中的列值，也不能插入或删除行。 若要修改表值参数中传递到存储过程或参数化语句的数据，必须将数据插入临时表或表变量。  
   
 - 不能使用 ALTER TABLE 语句来修改表值参数的设计。  
   

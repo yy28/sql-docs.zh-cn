@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 90da0d1d42878fcbe65b1086663775d546751c80
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177357"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866222"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序发行说明
 
@@ -31,8 +31,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-![下载](../../ssdt/media/download.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2117515)  
-![下载](../../ssdt/media/download.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2117517)  
+![下载](../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![下载](../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2117517)  
 
 发布日期：2019 年 10 月
 
@@ -61,8 +61,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1823"></a>18.2.3
 
-![下载](../../ssdt/media/download.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2119554)  
-![下载](../../ssdt/media/download.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2119738)  
+![下载](../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![下载](../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2119738)  
 
 发布日期：2019 年 6 月
 
@@ -79,8 +79,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1822"></a>18.2.2
 
-![下载](../../ssdt/media/download.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2118512)  
-![下载](../../ssdt/media/download.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2118415)  
+![下载](../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![下载](../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2118415)  
 
 发布日期：2019 年 5 月
 
@@ -97,8 +97,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1821"></a>18.2.1
 
-![下载](../../ssdt/media/download.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2118511)  
-![下载](../../ssdt/media/download.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2118278)  
+![下载](../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![下载](../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2118278)  
 
 发布日期：2019 年 2 月
 
@@ -116,8 +116,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1810"></a>18.1.0
 
-![下载](../../ssdt/media/download.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2118506)  
-![下载](../../ssdt/media/download.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2118509)  
+![下载](../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![下载](../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2118509)  
 
 发布日期：2018 年 7 月
 
@@ -141,8 +141,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1802"></a>18.0.2
 
-![下载](../../ssdt/media/download.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2118504)  
-![下载](../../ssdt/media/download.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2118277)  
+![下载](../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![下载](../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2118277)  
 
 发布日期：2018 年 3月
 

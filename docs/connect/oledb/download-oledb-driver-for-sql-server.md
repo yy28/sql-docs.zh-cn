@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a49f0ffe4de2f3242daf147ecb80dc950f8d8a9f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: b7c0e54f4193fcb918a5b4b5a362e1bbd9fee646
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177397"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866457"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 
@@ -24,8 +24,8 @@ OLE DB Driver for SQL Server 是独立的数据访问应用程序编程接口 (A
 
 Microsoft OLE DB Driver 18.3 for SQL Server 是最新正式发行版 (GA)。 如果安装了 Microsoft OLE DB Driver 18 for SQL Server 的早期版本，安装 18.3 版会使其升级到 18.3 版。
 
-[![下载](../../ssdt/media/download.png)下载 Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)   
-[![下载](../../ssdt/media/download.png)下载 Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)   
 
 ### <a name="version-information"></a>版本信息
 

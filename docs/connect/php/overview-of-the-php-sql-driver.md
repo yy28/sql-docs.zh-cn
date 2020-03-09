@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25519d06df8b948d5cfc5d387029cf09beafc856
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: afa9863d955ef7f075ffd8c8c68844130bcfd9ca
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67936274"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866489"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 概述
 
@@ -29,7 +29,7 @@ ms.locfileid: "67936274"
   
 |主题|说明|  
 |---------|---------------|  
-| ![Download-DownArrow-Circled](../../ssdt/media/download.png)[下载 Driver for PHP for SQL Server 的具体步骤](download-drivers-php-sql-server.md) | 下载 Microsoft Drivers for PHP for SQL Server 的链接。 |
+| ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[下载 Driver for PHP for SQL Server 的具体步骤](download-drivers-php-sql-server.md) | 下载 Microsoft Drivers for PHP for SQL Server 的链接。 |
 |[Microsoft Drivers for PHP for SQL Server 发行说明](../../connect/php/release-notes-php-sql-driver.md)|列出版本 4.0、3.2、3.1、3.0 和 2.0 中的新增功能。|  
 |[Microsoft Drivers for PHP for SQL Server 的支持资源](../../connect/php/support-resources-for-the-php-sql-driver.md)|在开发使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的应用程序时，提供可能有用的资源的链接。|  
 |[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)|在运行本文档中的代码示例时，提供可能有用的信息。|  

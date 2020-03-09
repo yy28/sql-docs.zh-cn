@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6a003670c15ac95b6f0a5f70d0997c1c854b089e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90b11516e9fa8ed993792bfec2a77757249b696d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247824"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896978"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 检测更改
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 <xref:Microsoft.Data.SqlClient.SqlDependency> 对象可以与 <xref:Microsoft.Data.SqlClient.SqlCommand> 相关联，以便检测查询结果与最初检索到的结果不同的情况。 还可以为 `OnChange` 事件分配一个委托，该事件将在关联命令的结果变更时激发。 在执行命令之前，必须将 <xref:Microsoft.Data.SqlClient.SqlDependency> 与命令相关联。 <xref:Microsoft.Data.SqlClient.SqlDependency> 的 `HasChanges` 属性还可用于确定自第一次检索数据后，查询结果是否变更。
 

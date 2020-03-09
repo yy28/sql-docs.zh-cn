@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7a070d71b653b0afc9e94c898653432e7e388d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc2a921e3aec0068c11b2baab45c396d853a1a36
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250937"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897066"
 ---
 # <a name="asynchronous-operations"></a>异步操作
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 某些数据库操作（例如命令执行）可能需要大量的时间才能完成。 在这种情况下，单线程应用程序必须阻止其他操作，并等待该命令完成后才能继续执行自己的操作。 与此相反，通过将长时间运行的操作分配给后台线程，允许前台线程在操作过程中保持活动状态。 例如，在 Windows 应用程序中，将长时间运行的操作委托给后台线程允许用户界面线程在执行操作期间保持响应。  
   

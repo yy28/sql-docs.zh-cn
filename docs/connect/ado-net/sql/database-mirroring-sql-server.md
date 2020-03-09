@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 354b3ef1f0db45c64363d508d4bb055ee32d6416
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247833"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897002"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server 中的数据库镜像
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 通过 SQL Server 中的数据库镜像，可以在备用服务器上保留 SQL Server 数据库的副本（即镜像）。 镜像可确保始终存在数据的两个独立副本，从而提供高可用性和完整的数据冗余。 适用于 SQL Server 的 Microsoft SqlClient 提供程序对数据库镜像提供隐式支持，因此在为 SQL Server 数据库配置了镜像之后，开发人员不需要采取任何措施或编写任何代码。 此外，<xref:Microsoft.Data.SqlClient.SqlConnection> 对象还支持显式连接模式，即允许在 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> 中提供故障转移伙伴服务器的名称。  
   

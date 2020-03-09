@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 602dfe9c96c1e8713b90c607806dd09ed16a37b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e3e26a76522d1c1a99794076c5f152e6ec1e1f7d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247763"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896744"
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 FILESTREAM 存储属性可用于 varbinary(max) 列中存储的二进制 (BLOB) 数据。 在使用 FILESTREAM 之前，存储二进制数据需要经过特殊处理。 非结构化数据（例如文本文档、图像和视频）通常存储在数据库外部，因此难以管理。
 

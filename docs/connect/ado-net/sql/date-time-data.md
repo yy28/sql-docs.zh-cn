@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 95c250c0eff6d22bb5bc8b284503156d412d6a45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247808"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896988"
 ---
 # <a name="date-and-time-data"></a>日期和时间数据
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 2008 引入了新数据类型，用于处理日期和时间信息。 新数据类型包括独立的日期和时间类型，以及具有更大范围、精度且时区感知的扩展数据类型。 Microsoft SqlClient Data Provider for SQL Server (<xref:Microsoft.Data.SqlClient>) 完全支持 SQL Server 2008 数据库引擎的所有新功能。 必须安装 .NET Framework 3.5 SP1（或更高版本）或 .NET Core 1.0（或更高版本），才能结合使用这些新功能和 SqlClient。  
   
