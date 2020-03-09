@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b03a4fdc2d7a49cdd9896768fb7e7d989bc4d3d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253752"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261832"
 ---
 # <a name="navigate-code-and-text"></a>代码和文本定位
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "75253752"
 -   **Go To** 命令。  
   
 > [!NOTE]  
->  有关键盘快捷键的完整列表，请参阅 [SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
+>  有关键盘快捷键的完整列表，请参阅 [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
   
 ## <a name="navigating-with-bookmarks"></a>使用书签定位  
  若要在其他位置编辑文档，然后再返回初始位置，则请添加书签。 可以设置书签并使用键盘快捷键移至书签。 在书签窗口中查看书签。  

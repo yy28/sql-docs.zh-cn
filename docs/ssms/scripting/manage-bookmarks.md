@@ -13,12 +13,12 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3cbe866530d9c2dfe7db299ea913db8749e4709
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7879c6c7d07e7e0caeb075652b87b42fdf3ab66c
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253817"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261826"
 ---
 # <a name="manage-bookmarks"></a>管理书签
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,4 +93,4 @@ ms.locfileid: "75253817"
  清除或启用“书签”  窗口中所有书签的复选框。 请不要删除书签，否则会更改它们标记的代码行。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

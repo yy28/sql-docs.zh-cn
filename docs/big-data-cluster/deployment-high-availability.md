@@ -5,16 +5,16 @@ description: 了解如何部署高可用性 SQL Server 大数据群集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
-ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
+ms.openlocfilehash: a73259663f710cfc5df5dc40745ecda9fdbd8f13
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259207"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338101"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 大数据群集
 
@@ -32,7 +32,7 @@ ms.locfileid: "77259207"
 - 所有数据库都将自动添加到可用性组，包括所有用户和系统数据库（如 `master` 和 `msdb`）。 此功能提供跨可用性组副本的单系统视图。 其他模型数据库（`model_replicatedmaster` 和 `model_msdb`）用于设定系统数据库复制部分的种子。 如果直接连接到实例，除了这些数据库，还将看到 `containedag_master` 和 `containedag_msdb` 数据库。 `containedag` 数据库表示可用性组中的 `master` 和 `msdb`。
 
   > [!IMPORTANT]
-  > 使用 SQL Server 2019 CU1 版本时，只有通过 CREATE DATABASE 语句创建的数据库才会自动添加到可用性组中。 通过其他工作流（如还原）在实例上创建的数据库尚未添加到可用性组，大数据群集管理员则必须手动执行此操作。 有关说明，请参阅[连接到 SQL Server 实例](#instance-connect)部分。
+  > 使用 SQL Server 2019 CU1 版本时，只有通过 CREATE DATABASE 语句创建的数据库才会自动添加到可用性组中。 因其他工作流（如附加数据库）而在实例上创建的数据库尚未添加到可用性组，大数据群集管理员必须手动执行此操作。 有关说明，请参阅[连接到 SQL Server 实例](#instance-connect)部分。 在低于 SQL Server 2019 CU2 的版本中，因还原语句而创建的数据库具有相同行为，必须手动将数据库添加到包含的可用性组。
   >
 - Polybase 配置数据库不包括在可用性组中，因为它们包括特定于每个副本的实例级元数据。
 - 系统会自动预配外部终结点，以便与可用性组中的数据库建立连接。 此终结点 `master-svc-external` 扮演可用性组侦听器的角色。
@@ -129,12 +129,15 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> 连接到 SQL Server 实例
 
-对于某些操作（例如设置服务器级别配置或手动将数据库添加到可用性组），则必须连接到 SQL Server 实例。 `sp_configure`、`RESTORE DATABASE` 或任何可用性组 DDL 等操作都需要此类型的连接。 默认情况下，大数据群集不包括启用实例连接的终结点，因此必须手动公开此终结点。 
+对于某些操作（例如设置服务器级别配置或手动将数据库添加到可用性组），则必须连接到 SQL Server 实例。 在低于 SQL Server 2019 CU2 的版本中，诸如 `sp_configure`、`RESTORE DATABASE` 或任何可用性组 DDL 之类的操作都需要此类型的连接。 默认情况下，大数据群集不包括启用实例连接的终结点，因此必须手动公开此终结点。 
 
 > [!IMPORTANT]
 > 为连接 SQL Server 实例而公开的终结点仅支持 SQL 身份验证，即使在启用了 Active Directory 的群集中也是如此。 默认情况下，在大数据群集部署过程中，将禁用 `sa` 登录名，并根据在部署时为 `AZDATA_USERNAME` 和 `AZDATA_PASSWORD` 环境变量提供的值预配新的 `sysadmin` 登录名。
 
 下面的示例演示如何公开此终结点，然后将通过还原工作流创建的数据库添加到可用性组。 当希望使用 `sp_configure` 更改服务器配置时，可以参考与 SQL Server 主实例建立连接的类似说明。
+
+> [!NOTE]
+> 自 SQL Server 2019 CU2 起，因还原工作流而创建的数据库会自动添加到包含的可用性组。
 
 - 确定通过连接到 `sql-server-master` 终结点来托管主要副本的 Pod，并运行以下命令：
 
@@ -197,10 +200,10 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 大数据群集中 SQL Server 主实例的可用性组的已知问题和限制：
 
-- 除 `CREATE DATABASE`（如 `RESTORE DATABASE` 和 `CREATE DATABASE FROM SNAPSHOT`）之外，因工作流而创建的数据库不会自动添加到可用性组。 [连接到实例 ](#instance-connect)，并手动将数据库添加到可用性组。
+- 在低于 SQL Server 2019 CU2 的版本中，除 `CREATE DATABASE` 和 `RESTORE DATABASE`（如 `CREATE DATABASE FROM SNAPSHOT`）之外，因工作流而创建的数据库不会自动添加到可用性组。 [连接到实例 ](#instance-connect)，并手动将数据库添加到可用性组。
 - 某些操作（如通过 `sp_configure` 运行服务器配置设置）需要连接到 SQL Server 实例 `master` 数据库，而不是可用性组 `master`。 不能使用相应的主要终结点。 按照[说明](#instance-connect)公开终结点，然后连接到 SQL Server 实例并运行 `sp_configure`。 当手动公开终结点以连接到 SQL Server 实例 `master` 数据库时，只能使用 SQL 身份验证。
 - 部署大数据群集时，必须创建高可用性配置。 部署后，无法通过可用性组启用高可用性配置。
-- 虽然包含的 msdb 数据库包含在可用性组中，并且 SQL 代理作业在其中进行复制，但不会按计划触发作业。 解决方法是[连接到每个 SQL Server 实例](#instance-connect)，并在实例 msdb 中创建作业。
+- 虽然包含的 msdb 数据库包含在可用性组中，并且 SQL 代理作业在其中进行复制，但不会按计划触发作业。 解决方法是[连接到每个 SQL Server 实例](#instance-connect)，并在实例 msdb 中创建作业。 自 SQL Server 2019 CU2 起，只支持在主实例的每个副本中创建的作业。
 
 ## <a name="next-steps"></a>后续步骤
 

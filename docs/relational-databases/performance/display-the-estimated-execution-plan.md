@@ -20,12 +20,12 @@ ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d0d5930734bb48c0914300a735f81e3ca2ced38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 224b7023df4187702c14b41f17caad7c0b53b911
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67946861"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256857"
 ---
 # <a name="display-the-estimated-execution-plan"></a>显示估计的执行计划
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,3 +53,7 @@ ms.locfileid: "67946861"
  
 > [!NOTE] 
 > 或者，使用 [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-xml-transact-sql.md) 返回语句的执行信息，但不执行语句。 如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用，“结果”选项卡中将包含用于以图形格式打开执行计划的链接  。   
+  
+## <a name="see-also"></a>另请参阅  
+ [执行计划](../../relational-databases/performance/execution-plans.md)    
+ [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)  

@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741fce0949ce1a07f0f164c7f131579c220d4cfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d1c9bd306cf30ee0974aff2396946c131bfb824
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253811"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261856"
 ---
 # <a name="manage-code-formatting"></a>管理代码格式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "75253811"
 3.  若要将文本转换为小写，请按 Ctrl+Shift+L，或单击“编辑”  菜单的“高级”  子菜单上的“转换为小写”  。  
   
 > [!NOTE]  
->  有关键盘快捷键的完整列表，请参阅 [SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
+>  有关键盘快捷键的完整列表，请参阅 [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
   
 ## <a name="displaying-and-linking-to-urls"></a>显示和链接到 URL  
  可以在代码中创建并显示可单击的 URL。 默认情况下，URL：  

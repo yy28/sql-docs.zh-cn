@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 82634dc8169fa266e6fb1c92ec9a14129e40e947
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 03e19dd52f7ea996690eaf55bad9cdf9d5eccb6b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180085"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256925"
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,8 @@ ms.locfileid: "78180085"
 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层，需要数据库的 `VIEW DATABASE STATE` 权限才能查看实时统计信息。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 标准层和基本层上，需要“服务器管理员”或“Azure Active Directory 管理员”帐户才能查看实时统计信息   。
   
 ## <a name="see-also"></a>另请参阅  
+ [执行计划](../../relational-databases/performance/execution-plans.md)    
+ [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)    
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [打开活动监视器 (SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
