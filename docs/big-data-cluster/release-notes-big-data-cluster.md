@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 38a1e2381bb3b7730a06af09b807886e18a50d13
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256895"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78925036"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -69,7 +69,7 @@ ms.locfileid: "77256895"
 
 ## <a id="cu2"></a> CU2（2020 年 2 月）
 
-SQL Server 2019 的累积更新 2 (CU2) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4003.23。
+SQL Server 2019 的累积更新 2 (CU2) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4013.40。
 
 |包版本 | 映像标记 |
 |-----|-----|

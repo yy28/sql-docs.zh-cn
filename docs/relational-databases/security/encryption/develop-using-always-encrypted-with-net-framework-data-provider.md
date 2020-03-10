@@ -13,11 +13,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558036"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338198"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "75558036"
 
 始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了始终加密的驱动程序（例如用于 SQL Server 的 .NET Framework 数据提供程序）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此目标。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅[使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)和[使用具有安全 Enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置具有 Always Encrypted 的数据库，请按照 [Always Encrypted 入门](always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。
 - 确保在开发计算机上安装 .NET Framework 4.6.1 或更高版本。 有关详细信息，请参阅 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)。 还需确保将 .NET Framework 4.6 或更高版本配置为开发环境中的目标 .NET Framework 版本。 如果使用的是 Visual Studio，请参阅[如何：面向 .NET Framework 的某个版本](https://msdn.microsoft.com/library/bb398202.aspx)。 

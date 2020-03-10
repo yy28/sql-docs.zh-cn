@@ -14,11 +14,11 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307636"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340350"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>第 2 课：使用数据库引擎优化顾问
 
@@ -26,7 +26,7 @@ ms.locfileid: "75307636"
 
 通过数据库引擎优化顾问，您可以优化数据库、管理优化会话并查看优化建议。 对物理设计结构很熟悉的用户可使用此工具执行探索性数据库优化分析。 数据库优化初学者也可使用此工具为其优化的工作负荷找到最佳物理设计结构配置。 本课程为那些对于数据库引擎优化顾问图形用户界面陌生的数据库管理员和不太熟悉物理设计结构的系统管理员提供了基本练习。  
 
-## <a name="prerequisites"></a>必备条件 
+## <a name="prerequisites"></a>先决条件 
 
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
@@ -35,7 +35,7 @@ ms.locfileid: "75307636"
 - 下载 [AdventureWorks2017 示例数据库。](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
 
 
-此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)。
+此处提供在 SSMS 中还原数据库的说明：[还原数据库。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
   > 本教程适用于熟悉使用 SQL Server Management Studio 和基本数据库管理任务的用户。 

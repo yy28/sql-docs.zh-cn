@@ -10,11 +10,11 @@ ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77147420"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340559"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
@@ -22,7 +22,7 @@ ms.locfileid: "77147420"
 
 本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 Hadoop 中的外部数据。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。 这篇安装文章介绍了安装的先决条件。
 
