@@ -15,11 +15,11 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75493584"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338731"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "75493584"
 ### <a name="individual-transaction-recovery"></a>恢复个别的事务
 如果应用程序发出 `ROLLBACK` 语句，或者 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 检测到错误（例如失去与客户端的通信），就使用日志记录回滚未完成的事务所做的修改。 
 
-### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时恢复所有未完成的事务
+### <a name="recovery-of-all-incomplete-transactions-when-ssnoversion-is-started"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时恢复所有未完成的事务
 当服务器发生故障时，数据库可能处于这样的状态：还没有将某些修改从缓存写入数据文件，在数据文件内有未完成的事务所做的修改。 当启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，它对每个数据库执行恢复操作。 前滚日志中记录的、可能尚未写入数据文件的每个修改。 在事务日志中找到的每个未完成的事务都将回滚，以确保数据库的完整性。 有关详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>将还原的数据库、文件、文件组或页前滚至故障点
@@ -61,7 +61,7 @@ ms.locfileid: "75493584"
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>支持高可用性和灾难恢复解决方案
 备用服务器解决方案、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]数据库镜像和日志传送极大程度地依赖于事务日志。 
 
-在  **方案中，数据库的每个更新（主要副本）在数据库的完整且独立的副本（次要副本）中直接再现[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]** 。 主要副本直接将每个日志记录发送到次要副本，这可将传入日志记录应用到可用性组数据库，并不断前滚。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 方案中，数据库的每个更新（主要副本）在数据库的完整且独立的副本（次要副本）中直接再现  。 主要副本直接将每个日志记录发送到次要副本，这可将传入日志记录应用到可用性组数据库，并不断前滚。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
 在日志传送方案中，主服务器将主数据库的活动事务日志发送到一个或多个目标服务器  。 每个辅助服务器将该日志还原为其本地的辅助数据库。 有关详细信息，请参阅 [关于日志传送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。 
 
@@ -82,7 +82,7 @@ ms.locfileid: "75493584"
 ##  <a name="Truncation"></a> 事务日志截断  
 日志截断将释放日志文件的空间，以便由事务日志重新使用。 必须定期截断事务日志，防止占满分配的空间。 几个因素可能延迟日志截断，因此监视日志大小很重要。 某些操作可以最小日志量进行记录以减少其对事务日志大小的影响。  
  
-日志截断从 [ 数据库的逻辑事务日志中删除不活动的](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)虚拟日志文件 (VLF)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，释放逻辑日志中的空间以便物理事务日志重用这些空间。 如果事务日志从不截断，它最终将填满分配给物理日志文件的所有磁盘空间。  
+日志截断从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的逻辑事务日志中删除不活动的[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，释放逻辑日志中的空间以便物理事务日志重用这些空间。 如果事务日志从不截断，它最终将填满分配给物理日志文件的所有磁盘空间。  
   
 为了避免空间不足，除非由于某些原因延迟日志截断，否则将在以下事件后自动进行截断：  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75493584"
 > [!IMPORTANT]
 > 有关如何响应已满事务日志的信息，请参阅[解决事务日志已满的问题（SQL Server 错误 9002）](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
- 实际上，日志截断会由于多种原因发生延迟。 查询 **sys.databases** 目录视图的 **log_reuse_wait** 和 [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列，了解哪些因素（如果存在）阻止日志截断。 下表对这些列的值进行了说明。  
+ 实际上，日志截断会由于多种原因发生延迟。 查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图的 **log_reuse_wait** 和 **log_reuse_wait_desc** 列，了解哪些因素（如果存在）阻止日志截断。 下表对这些列的值进行了说明。  
   
 |log_reuse_wait 值|log_reuse_wait_desc 值|说明|  
 |----------------------------|----------------------------------|-----------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "75493584"
   
  下列操作在完整恢复模式下执行完整日志记录，而在简单和大容量日志恢复模式下按最小方式记录日志：  
   
--   批量导入操作（[bcp](../../tools/bcp-utility.md)、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)和 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+-   批量导入操作（[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 启用事务复制时，将完全记录 `BULK INSERT` 操作，即使处于大容量日志恢复模式下。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "75493584"
   
 启用事务复制时，将完全记录 `SELECT INTO` 操作，即使处于大容量日志恢复模式下。  
   
--   插入或追加新数据时，使用 `.WRITE`UPDATE[ 语句中的 ](../../t-sql/queries/update-transact-sql.md) 子句部分更新到大型值数据类型。 注意，在更新现有值时没有使用最小日志记录。 有关大型值数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
+-   插入或追加新数据时，使用 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句中的 `.WRITE` 子句部分更新到大型值数据类型。 注意，在更新现有值时没有使用最小日志记录。 有关大型值数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
 -   在[nUPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 语句。 注意，在更新现有值时没有使用最小日志记录。  
   
