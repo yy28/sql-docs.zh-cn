@@ -15,11 +15,11 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72278283"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340409"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "72278283"
   
 -   **IMPORT** - 用户可以将架构和数据导入到主机服务器上的新数据库中。  
   
- 数据库管理工具 SQL Server Management Studio、Azure 门户和 DACFx API 支持这两种功能。  
+ 数据库管理工具：SQL Server Management Studio、Azure 门户和 DACFx API 支持这两种功能。  
   
 ## <a name="permissions"></a>权限  
  用户必须是 **dbmanager** 角色的成员或分配了 **CREATE DATABASE** 权限才能创建数据库，包括通过部署 DAC 包来创建数据库。 用户必须是 **dbmanager** 角色的成员或分配了 **DROP DATABASE** 权限才能删除数据库。  

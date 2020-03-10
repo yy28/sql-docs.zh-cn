@@ -14,11 +14,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557435"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339596"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：使用 SSMS 的具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "75557435"
 - 如何创建基本环境，以便测试和评估具有安全 enclave 的 Always Encrypted。
 - 如何使用 SQL Server Management Studio (SSMS) 就地加密数据并就加密列发出各种查询。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要开始使用具有安全 enclave 的 Always Encrypted，需要至少两台计算机（可以是虚拟机）：
 

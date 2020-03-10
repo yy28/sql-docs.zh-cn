@@ -11,11 +11,11 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72908672"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340609"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -23,17 +23,17 @@ ms.locfileid: "72908672"
 
 若要安装 SQL Server 试用版，请转到 [SQL Server 评估](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)。 
    
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
    
 - 64 位 SQL Server 评估版。  
    
 - Microsoft .NET Framework 4.5。  
 
-- 最低内存：4 GB。 
+- 最小内存：4 GB。 
    
 - 最小硬盘空间：2 GB。
   
-- 建议：最小值为 16-GB RAM。
+- 建议：至少 16 GB 的 RAM。
    
 - 必须启用 TCP/IP 才能使 PolyBase 正常工作。 SQL Server 的所有版本均默认启用 TCP/IP，Developer 和 Express SQL Server 版本除外。 若要使 PolyBase 在 Developer 和 Express 版本上正常工作，必须启用 TCP/IP 连接。 请参阅[启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 

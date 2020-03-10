@@ -10,11 +10,11 @@ ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74308007"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339766"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>连接到 SQL Server 数据源（SQL Server 导入和导出向导）
 
@@ -34,7 +34,7 @@ ms.locfileid: "74308007"
 
 |必填信息|用于 SQL Server 的 .Net Framework 数据提供程序属性|
 |---|---|
-|Authentication|“集成安全性”默认为“NotSpecified”，也可选择其他身份验证模式  。 不支持“交互式 Active Directory 身份验证”。 |
+|身份验证|“集成安全性”默认为“NotSpecified”，也可选择其他身份验证模式  。 不支持“交互式 Active Directory 身份验证”。 |
 |服务器名称|**数据源**|
 |身份验证（登录）信息|“集成安全性”或“用户 ID”和“密码”   <br/>如果想查看服务器上的数据库的下拉列表，首先必须提供有效的登录信息。|
 |数据库名称|**初始目录**|
@@ -55,7 +55,7 @@ ms.locfileid: "74308007"
  输入源或目标提供程序的名称，或从下拉列表选择服务器。  
   
  **Integrated Security**  
- 使用 Windows 集成身份验证进行连接（建议），请指定 True  ；若要用  **身份验证进行连接，请指定 False**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果指定 **False**，则必须输入用户 ID 和密码。 默认值为 **False**。  
+ 使用 Windows 集成身份验证进行连接（建议），请指定 True  ；若要用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定 False  。 如果指定 **False**，则必须输入用户 ID 和密码。 默认值为 **False**。  
   
  **用户 ID**  
  如果正在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请输入用户名。  

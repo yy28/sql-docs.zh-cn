@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558312"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340479"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>为群集资源和服务配置部署设置
 
@@ -169,7 +169,7 @@ ms.locfileid: "75558312"
 
 要自定义集群部署配置文件，可以使用任何 JSON 格式编辑器，例如 VSCode。 若是出于自动化目的为这些编辑内容编写脚本，请使用 `azdata bdc config` 命令。 本文介绍如何通过修改部署配置文件来配置大数据群集部署。 它提供了为不同方案更改配置的示例。 有关如何在部署中使用配置文件的详细信息，请参阅[部署指南](deployment-guidance.md#configfile)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [安装 azdata](deploy-install-azdata.md)。
 

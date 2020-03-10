@@ -13,11 +13,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557830"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339503"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>创建并存储 Always Encrypted 的列主密钥
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -206,7 +206,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 CSP 必须支持要用于“始终加密”功能的 RSA 算法。
 
-Windows 包含以下基于软件的（不受 HSM 支持）支持 RSA 且可用于测试的 CSP：Microsoft 增强 RSA 和 AES 加密提供程序。
+Windows 包含以下基于软件的（不受 HSM 支持）CSP，它支持 RSA 且可用于测试：Microsoft 增强了 RSA 和 AES 加密提供程序。
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-capicsp"></a>使用 CAPI/CSP 在密钥存储中创建列主密钥
 

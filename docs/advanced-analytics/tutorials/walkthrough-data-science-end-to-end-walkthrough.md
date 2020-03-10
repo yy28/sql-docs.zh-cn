@@ -10,11 +10,11 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73723801"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339875"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教程：面向 R 数据科学家的 SQL 开发
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "73723801"
 
 本演练旨在向 R 开发人员介绍 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，因此会尽可能使用 R。 但这并不意味着 R 一定是每个任务的最佳工具。 在许多情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会提供更好的性能，特别是对于诸如数据聚合和特征工程这类任务。  这类任务可以特别受益于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的新功能，如内存优化的列存储索引。 我们会尽量在此过程中指出可能的优化。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 + [与 R 集成的 SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)或 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 

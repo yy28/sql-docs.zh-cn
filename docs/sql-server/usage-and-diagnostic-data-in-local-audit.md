@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256650"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339755"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用情况和诊断数据收集的本地审核 (CEIP)
 
@@ -38,7 +38,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 若要选择退出数据收集，请参阅[启用或禁用本地审核](#turning-local-audit-on-or-off)
 
-## <a name="prerequisites"></a>必备条件 
+## <a name="prerequisites"></a>先决条件 
 
 以下是在每个 SQL Server 实例上启用本地审核的先决条件： 
 
@@ -73,7 +73,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>为本地审核文件配置新文件夹。    
 
-新建文件夹（本地审核目录），以供本地审核将日志写入其中。 例如，数据库引擎默认实例的本地审核目录的完整路径是：C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\  。 
+新建文件夹（本地审核目录），以供本地审核将日志写入其中。 例如，数据库引擎默认实例的本地审核目录的完整路径是：*C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
  
   >[!NOTE] 
   >在 SQL Server 安装路径之外配置本地审核目录路径，以免审核功能和修补导致 SQL Server 出现潜在问题。
