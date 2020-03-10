@@ -11,11 +11,11 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74317958"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339855"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>规划主机保护者服务证明
 
@@ -93,7 +93,7 @@ TPM 证明需要安全启动，以确保 UEFI 加载了由 Microsoft 签名的�
 仍可以使用上面提到的许多安全功能（包括安全启动和 TPM 1.2 模块）来更好地保护整个 VBS 和操作系统。
 但是，由于 HGS 无法通过主机密钥证明验证计算机实际上是否启用了这些设置，因此客户端不保证主机确实使用了所有可用保护。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 ### <a name="hgs-server-prerequisites"></a>HGS 服务器先决条件
 
@@ -112,7 +112,7 @@ TPM 证明需要安全启动，以确保 UEFI 加载了由 Microsoft 签名的�
 
 在开始之前，请勿将 HGS 计算机加入域。
 
-### <a name="include-ssnoversion-mdincludesssnoversion-mdmd-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机先决条件
+### <a name="ssnoversion-md-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机先决条件
 
 运行 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的计算机必须满足[安装 SQL Server 的要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)和 [Hyper-V 硬件要求](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)。
 

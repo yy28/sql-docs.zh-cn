@@ -11,11 +11,11 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298630"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339669"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
 
@@ -80,7 +80,7 @@ ms.locfileid: "71298630"
 ###  <a name="BKMK_Change_Tables_CT"></a> 更改表 (_CT)  
  更改表是从镜像表创建的。 它们包含从 Oracle 数据库捕获的更改数据。 根据以下约定命名这些表：  
   
- [cdc].[**capture-instance>_CT]\<**  
+ [cdc].[\<capture-instance>_CT]   
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   
