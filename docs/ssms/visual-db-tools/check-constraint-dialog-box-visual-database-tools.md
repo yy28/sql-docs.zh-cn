@@ -13,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: df31dd31192d3aa877301c63ac425af6477dedd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cdcfe6cd4f0c48a6774b8e2518968b8c3d1997f2
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255534"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280931"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>“CHECK 约束”对话框 (Visual Database Tools)
 
@@ -44,7 +44,7 @@ ms.locfileid: "75255534"
 展开此项可显示“表达式”  属性字段。  
   
 **表达式**  
-显示选定的 CHECK 约束的表达式。 对于新约束，必须先输入表达式，然后才能退出此框。 您还可以编辑现有的 CHECK 约束。 有关详细信息，请参阅 [使用约束 (https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) 。  
+显示选定的 CHECK 约束的表达式。 对于新约束，必须先输入表达式，然后才能退出此框。 您还可以编辑现有的 CHECK 约束。 有关详细信息，请参阅[使用约束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)。  
   
 **标识类别**  
 展开此项可显示“名称”  和“说明”  的属性。  

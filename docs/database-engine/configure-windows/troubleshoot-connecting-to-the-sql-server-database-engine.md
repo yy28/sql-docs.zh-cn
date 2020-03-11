@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2394fc73483b78e5e90a4ccffa9ce45205dc237
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74542308"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866371"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,12 +160,12 @@ SQL Server 的默认实例不需要 SQL Server Browser 服务。
     - IPv4：`ping 192.168.1.101`
     - IPv6：`ping fe80::d51d:5ab5:6f09:8f48%11`
 
-1. 如果网络配置正确，`ping` 返回 `Reply from <IP address>`（后跟其他一些信息）。 如果 `ping` 返回 `Destination host unreachable` 或 `Request timed out`，表明 TCP/IP 配置不正确。 此时的错误可能表示客户端计算机、服务器计算机或某些网络相关设备（如路由器）出现了问题。 要排查网络问题，请参阅 [TCP/IP 问题的高级疑难解答](/windows/client-management/troubleshoot-tcpip)。
+1. 如果网络配置正确，`ping` 返回 `Reply from <IP address>`（后跟其他一些信息）。 如果 `ping` 返回 `Destination host unreachable` 或 `Request timed out`，表明 TCP/IP 配置不正确。 此时的错误可能表示客户端计算机、服务器计算机或某些网络相关设备（如路由器）出现了问题。 若要排查网络问题，请参阅 [TCP/IP 问题的高级疑难解答](/windows/client-management/troubleshoot-tcpip)。
 1. 接下来，如果使用 IP 地址成功进行了 ping 测试，请测试计算机名称能否解析为 TCP/IP 地址。 在客户端计算机上的命令提示符窗口中，键入 `ping` ，然后键入正在运行 SQL Server 的计算机的计算机名称。 例如： `ping newofficepc` 
 1. 如果对 IP 地址执行的 `ping` 操作成功，但对计算机执行的 `ping` 操作返回 `Destination host unreachable` 或 `Request timed out`，表明你在客户端计算机上缓存的名称解析信息可能较旧（过时）。 请键入 `ipconfig /flushdns` 以清除 DNS（动态名称解析）缓存。 然后再次使用名称 ping 计算机。 清除 DNS 缓存后，客户端计算机将检查服务器计算机的 IP 地址的最新相关信息。 
 1. 如果网络配置正确，`ping` 返回 `Reply from <IP address>`（后跟其他一些信息）。 如果可以按 IP 地址成功对服务器计算机执行 ping 操作，但在按计算机名称执行 ping 操作时看到 `Destination host unreachable.` 或 `Request timed out.` 等错误，表明名称解析配置不正确。 （有关详细信息，请参阅之前引用的 2006 年发布的[如何排查基本 TCP/IP 问题](https://support.microsoft.com/kb/169790)一文。）连接到 SQL Server 不需要成功的名称解析，但如果计算机名称无法解析为 IP 地址，则必须通过指定 IP 地址来建立连接。 稍后可以修复名称解析。
 
-## <a name = "openport"></a>在防火墙中打开端口
+## <a name="open-a-port-in-the-firewall"></a>在防火墙中开放端口
 
 默认情况下，Windows 防火墙处于开启状态，并且会阻止来自另一台计算机的连接。 若要从另一台计算机使用 TCP/IP 进行连接，则必须在 SQL Server 计算机上，将防火墙配置为允许连接到数据库引擎所使用的 TCP 端口。 默认实例默认侦听 TCP 端口 1433。 如果你有命名实例或更改了默认实例端口，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP 端口可能会侦听其他端口。 请参阅[获取 SQL Server 实例 TCP 端口](#getTCP)。
 

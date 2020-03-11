@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68809957"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288978"
 ---
 # <a name="row-level-security"></a>行级安全性
 
@@ -63,7 +63,7 @@ RLS 支持两种类型的安全谓词。
   
  筛选器和阻止谓词以及安全策略具有以下行为：  
   
-- 你可以定义与另一个表联接和/或调用函数的谓词函数。 如果使用 `SCHEMABINDING = ON`创建安全策略，则该联接或函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。 如果安全策略是使用 `SCHEMABINDING = OFF` 创建，用户必须对这些附加表和函数拥有 SELECT  或 EXECUTE  权限，才能查询目标表。
+- 你可以定义与另一个表联接和/或调用函数的谓词函数。 如果使用 `SCHEMABINDING = ON`（默认设置）创建安全策略，则该联接或函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。 如果安全策略是使用 `SCHEMABINDING = OFF` 创建的，用户必须对这些附加表和函数拥有 SELECT  权限，才能查询目标表。 如果谓词函数调用 CLR 标量值函数，则还需要 EXECUTE  权限。
   
 - 你可以针对已定义但禁用安全谓词的表发出查询。 筛选掉或阻止的任何行都不会受影响。  
   
@@ -121,7 +121,7 @@ RLS 支持两种类型的安全谓词。
   
 ## <a name="Best"></a> 最佳实践  
   
-- 强烈建议为 RLS 对象、谓词函数和安全策略单独创建架构。  
+- 强烈建议为 RLS 对象、谓词函数和安全策略单独创建架构。 这有助于将针对这些特殊对象所需的权限与目标表分开。 在多租户数据库中可能需要对不同策略和谓词函数进行额外的分隔，但具体标准各有不同。
   
 - **ALTER ANY SECURITY POLICY** 权限适用于高特权用户（如安全策略管理员）。 安全策略管理员不需要针对他们保护的表的 SELECT 权限  。  
   

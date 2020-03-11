@@ -13,19 +13,22 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72289341"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866106"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置和更改数据库排序规则。 如果未指定排序规则，则使用服务器排序规则。  
+  
+> [!IMPORTANT]
+> 在 Azure SQL 数据库中未明确禁止更改数据库排序规则。 但是，更改数据库排序规则将要求对数据库和其他用户或后台进程（例如正在进行备份的后台进程）的排他锁能够保留数据库锁并防止排序规则发生更改。 如果在后台进程访问数据库时对 Azure SQL 数据库执行了 `ALTER DATABASE COLLATE` 语句，该语句将失败。 如果收到锁超时错误，则需要重试该语句。 
  
 > [!NOTE]
-> 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 上创建数据库后，不能使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 更改排序规则。 只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行更改。
+> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，不能使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改排序规则。 只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行更改。
 
  **本主题内容**  
   
@@ -51,7 +54,7 @@ ms.locfileid: "72289341"
   
 -   如果指定的排序规则或者被引用的对象所使用的排序规则使用 Windows 不支持的代码页，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将显示错误。  
 
--   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 上创建数据库后，不能使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 更改排序规则。 只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行更改。
+-   在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，不能使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改排序规则。 只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行更改。
   
 ###  <a name="Recommendations"></a> 建议  
   
@@ -65,12 +68,12 @@ ms.locfileid: "72289341"
   
 -   **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**或 **ntext** 系统数据类型和基于这些系统数据类型的所有用户定义的数据类型均已更改为新的默认排序规则。  
   
-可以使用 `COLLATE`ALTER DATABASE[ 语句的 ](../../t-sql/statements/alter-database-transact-sql.md) 子句来更改在用户数据库中创建的任何新对象的排序规则。 使用此语句不能更改任何现有用户定义的表中列的排序规则  。 使用 `COLLATE`ALTER TABLE[ 的 ](../../t-sql/statements/alter-table-transact-sql.md) 子句可以更改这些列的排序规则。  
+可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 `COLLATE` 子句来更改在用户数据库中创建的任何新对象的排序规则。 使用此语句不能更改任何现有用户定义的表中列的排序规则  。 使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 `COLLATE` 子句可以更改这些列的排序规则。  
   
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
- 若要创建新数据库，需要 master 数据库中的 `CREATE DATABASE` 权限，或者需要 **或** 权限`CREATE ANY DATABASE``ALTER ANY DATABASE`。  
+ 若要创建新数据库，需要 master 数据库中的 `CREATE DATABASE` 权限，或者需要 `CREATE ANY DATABASE` 或 `ALTER ANY DATABASE` 权限  。  
   
  若要更改现有数据库的排序规则，需要数据库上的 `ALTER` 权限。  
   

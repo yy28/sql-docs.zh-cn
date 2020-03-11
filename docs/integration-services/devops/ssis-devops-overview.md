@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281865"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225918"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具（预览）
 
@@ -38,6 +38,8 @@ SSIS DevOps 工具包括 SSIS 生成任务和 SSIS 部署发布任务    。
 
 要生成的项目文件夹或文件的路径。 如果指定了文件夹路径，则 SSIS 生成任务将以递归方式搜索此文件夹下的所有 dtproj 文件并生成所有文件。
 
+项目路径不能为空  ，设置为 .  以便从存储库的根文件夹中生成。
+
 #### <a name="project-configuration"></a>项目配置
 
 要用于生成的项目配置的名称。 如果未提供，则默认为每个 dtproj 文件中第一个的定义项目配置。
@@ -50,9 +52,19 @@ SSIS DevOps 工具包括 SSIS 生成任务和 SSIS 部署发布任务    。
 
 - SSIS 生成任务依赖于 Visual Studio 和 SSIS 设计器，这对于生成代理是必需的。 因此，要在管道中运行 SSIS 生成任务，必须为 Microsoft 托管代理选择 vs2017-win2016，或在自托管代理上安装 Visual Studio 和 SSIS 设计器（VS2017 + SSDT2017 或 VS2019 + SSIS 项目扩展）  。
 
-- 要使用任何现成组件（包括 SSIS Azure 功能包和其他第三方组件）生成 SSIS 项目，必须在运行管道代理的计算机上安装这些现成组件。  对于 Microsoft 托管代理，用户可以添加 [PowerShell 脚本任务](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops)或[命令行脚本任务](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)，以便在执行 SSIS 生成任务之前下载和安装组件。
+- 要使用任何现成组件（包括 SSIS Azure 功能包和其他第三方组件）生成 SSIS 项目，必须在运行管道代理的计算机上安装这些现成组件。  对于 Microsoft 托管代理，用户可以添加 [PowerShell 脚本任务](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops)或[命令行脚本任务](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)，以便在执行 SSIS 生成任务之前下载和安装组件。 下面是用于安装 Azure 功能包的示例 PowerShell 脚本： 
+
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
 
 - SSIS 生成任务不支持 EncryptSensitiveWithPassword 和 EncryptAllWithPassword 保护级别   。 请确保基本代码中的所有 SSIS 项目都不使用这两个保护级别，否则，SSIS 生成任务在执行过程中将挂起和超时。
+
+- ConnectByProxy  是最近在 SSDT 中添加的新属性。 Microsoft 托管的代理上安装的 SSDT 未更新，因此，请使用自托管代理作为解决办法。
 
 ## <a name="ssis-deploy-task"></a>SSIS 部署任务
 
