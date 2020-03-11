@@ -12,12 +12,12 @@ ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
+ms.sourcegitcommit: 39d8d2d504d0ab70bac5ae3e981657e15dfb7bee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65483409"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78964372"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>创建模型管理员 (Master Data Services)
   在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当你希望某个组或用户对一个或多个模型中的所有对象具有 "**更新**" 权限时，可以创建模型管理员。  
@@ -25,7 +25,7 @@ ms.locfileid: "65483409"
 > [!TIP]  
 >  为了简化管理，请创建一个 Windows 组或本地组并将其配置为模型管理员。 然后，您可以从该组中添加和删除用户，而无需访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
