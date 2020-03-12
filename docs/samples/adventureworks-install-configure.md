@@ -1,5 +1,6 @@
 ---
 title: 安装和配置 AdventureWorks 示例数据库
+description: 按照以下说明下载并安装 SQL Server Management Studio 或 Azure SQL 数据库中的 AdventureWorks 示例数据库。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,19 +10,19 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 424d85e947769e8e78b828e5b46d3b384eb1b50a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74318994"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112323"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安装和配置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 AdventureWorks 下载链接和安装说明。 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 有关该示例的完整版本，请使用 SQL Server Evaluation/开发人员/企业版。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为获得最佳结果，请使用2016年6月版或更高版本。

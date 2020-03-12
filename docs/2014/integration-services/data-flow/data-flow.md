@@ -17,15 +17,15 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2ab14ac049e9081e82175512a0107af446a51f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a79ae8b1ac6e5685838082f048ae7244d45e756b
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67343873"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112204"
 ---
 # <a name="data-flow"></a>数据流
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]提供了三种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
   
 > [!NOTE]  
 >  在您使用自定义提供程序时，需要使用元数据列值更新 ProviderDescriptors.xml 文件。  
@@ -82,8 +82,7 @@ ms.locfileid: "67343873"
   
  常规输出引用外部列。 外部列是源中的列。 例如 **AdventureWorks** 数据库的 **Product** 表中的 **MadeFlag** 列是可以添加常规输出的外部列。 外部列的元数据包含诸如源列的名称、数据类型和长度等信息。  
   
- 源的错误输出包含与常规输出相同的列，此外，还包括提供有关错误信息的两个额外列。 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型不限制源可拥有的常规输出和错误输出的数目。 除脚本组件外， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的大多数源都具有一个常规输出，许多源具有一个错误输出。 对于自定义源，可以通过编码方式实现多个常规输出和错误输出。  
+ 源的错误输出包含与常规输出相同的列，此外，还包括提供有关错误信息的两个额外列。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型不限制源可拥有的常规输出和错误输出的数目。 除脚本组件外， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的大多数源都具有一个常规输出，许多源具有一个错误输出。 对于自定义源，可以通过编码方式实现多个常规输出和错误输出。  
   
  所有输出列都可用作数据流中下一个数据流组件的输入列。  
   
@@ -100,20 +99,16 @@ ms.locfileid: "67343873"
   
 |源|说明|  
 |------------|-----------------|  
-|Oracle 源|Oracle 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的源组件。 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
-|SAP BI 源|SAP BI 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的源组件。 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=16978)。|  
-|Teradata 源|Teradata 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata 的源组件。 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
+|Oracle 源|Oracle 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的源组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
+|SAP BI 源|SAP BI 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的源组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=44272)。|  
+|Teradata 源|Teradata 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata 的源组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
   
  有关如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
 ## <a name="transformations"></a>转换  
  转换的功能非常广泛。 转换可以执行如更新、汇总、清除、合并和分发数据等任务。 可以修改列中的值、查找表中的值、清理数据以及聚合列值。  
   
- 转换的输入和输出定义传入和传出数据的列。 根据对数据执行的操作，一些转换具有一个输入和多个输出，而其他转换具有多个输入和一个输出。 转换还可以包含错误输出，它们提供关于发生的错误以及失败的数据的信息，例如，无法转换为整数数据类型的字符串数据。 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型不限制转换可以包含的输入、常规输出和错误输出的数目。 您可以创建自定义转换，这些转换可实现多个输入、常规输出和错误输出的任意组合。  
+ 转换的输入和输出定义传入和传出数据的列。 根据对数据执行的操作，一些转换具有一个输入和多个输出，而其他转换具有多个输入和一个输出。 转换还可以包含错误输出，它们提供关于发生的错误以及失败的数据信息：例如，无法转换为整数数据类型的字符串数据。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型不限制转换可以包含的输入、常规输出和错误输出的数目。 您可以创建自定义转换，这些转换可实现多个输入、常规输出和错误输出的任意组合。  
   
  转换的输入被定义为一个或多个输入列。 某些 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 转换还可以引用外部列作为输入。 例如 OLE DB 命令转换的输入包含外部列。 输出列是转换添加到数据流的列。 常规输出和错误输出都包含输出列。 这些输出列转而充当数据流中下一个组件（其他转换或目标）的输入列。  
   
@@ -150,8 +145,7 @@ ms.locfileid: "67343873"
   
  许多目标还具有一个错误输出。 目标的错误输出包含输出列，该输出列通常包含向目标数据存储区写入数据时发生的错误信息。 错误的发生有许多不同的原因。 例如，列可能包含空值，而目标列不能设置为空值。  
   
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型不限制目标可包含的常规输入和错误输出的数目，因此，您可以创建具有多个输入和多个错误输出的自定义目标。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型不限制目标可包含的常规输入和错误输出的数目，因此，您可以创建具有多个输入和多个错误输出的自定义目标。  
   
  您也可以编写自定义目标。 有关详细信息，请参阅 [开发自定义数据流组件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 和 [开发特定类型的数据流组件](../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)。  
   
@@ -166,12 +160,9 @@ ms.locfileid: "67343873"
   
 |源|说明|  
 |------------|-----------------|  
-|Oracle 目标|Oracle 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目标组件。 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
-|SAP BI 目标|SAP BI 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目标组件。 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=16978)。|  
-|Teradata 目标|Teradata 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目标组件。 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
+|Oracle 目标|Oracle 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目标组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
+|SAP BI 目标|SAP BI 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目标组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=44272)。|  
+|Teradata 目标|Teradata 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目标组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
   
  有关如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
@@ -179,28 +170,26 @@ ms.locfileid: "67343873"
  许多数据流组件都连接到数据源，因此，必须将组件所需的连接管理器添加到包，然后才能正确配置组件。 可以在构造数据流时或开始构造数据流之前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](../create-connection-managers.md)。  
   
 ## <a name="external-metadata"></a>外部元数据  
- 使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器在包中创建数据流时，源和目标的元数据被复制到源和目标的外部列，充当架构的快照。 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 验证包时， [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器将此快照与源或目标的架构比较，并根据更改发布错误和警告。  
+ 使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器在包中创建数据流时，源和目标的元数据被复制到源和目标的外部列，充当架构的快照。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 验证包时， [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器将此快照与源或目标的架构比较，并根据更改发布错误和警告。  
   
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目提供脱机模式。 当您离线工作时，不会建立与包所使用的源或目标的连接，也不会更新外部列的元数据。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目提供脱机模式。 当您离线工作时，不会建立与包所使用的源或目标的连接，也不会更新外部列的元数据。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  
  源有输出，目标有输入，而转换既有输入，又有输出。 此外，可将许多数据流组件配置为使用错误输出。  
   
 ### <a name="inputs"></a>输入  
- 目标和转换具有输入。 输入包含一个或多个输入列，如果数据流组件已配置为使用外部列，则输入列可引用外部列。 输入可配置为监视和控制数据流，例如，可指定在出现错误时组件是应失败，忽略错误，还是将错误行重定向至错误输出。 还可为输入指派说明，或更新输入名称。 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输入进行配置。 有关 **“高级编辑器”** 的详细信息，请参阅 [Integration Services User Interface](../integration-services-user-interface.md)。  
+ 目标和转换具有输入。 输入包含一个或多个输入列，如果数据流组件已配置为使用外部列，则输入列可引用外部列。 输入可配置为监视和控制数据流：例如，可指定在出现错误时组件是应失败、忽略错误，还是将错误行重定向至错误输出。 还可为输入指派说明，或更新输入名称。 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输入进行配置。 有关 **“高级编辑器”** 的详细信息，请参阅 [Integration Services User Interface](../integration-services-user-interface.md)。  
   
-### <a name="outputs"></a>输出  
+### <a name="outputs"></a>Outputs  
  源和转换始终具有输出。 输出包含一个或多个输出列，如果数据流组件已配置为使用外部列，则输出列可引用外部列。 可对输出进行配置以提供对数据的下游处理有用的信息。 例如，可指示输出是否已排序。 还可为输出提供说明或更新输出名称。 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输出进行配置。  
   
 ### <a name="error-outputs"></a>错误输出  
- 源、目标和转换都可包含错误输出。 可使用 **“配置错误输出”** 对话框指定数据流组件响应每个输入中错误或列中错误的方式。 如果错误或数据截断在运行时发生，且将数据流组件配置为重定向行，则有错误的数据行将被发送到错误输出。 可以将错误输出连接到转换，这些转换应用其他转换或将数据定向到其他目标。 默认情况下，错误输出包含输出列和两个错误列： **ErrorCode** 和 **ErrorColumn**。 输出列包含失败行的数据， **ErrorCode** 提供错误代码，而 **ErrorColumn** 标识失败的列。  
+ 源、目标和转换都可包含错误输出。 可使用 **“配置错误输出”** 对话框指定数据流组件响应每个输入中错误或列中错误的方式。 如果错误或数据截断在运行时发生，且将数据流组件配置为重定向行，则有错误的数据行将被发送到错误输出。 可以将错误输出连接到转换，这些转换应用其他转换或将数据定向到其他目标。 默认情况下，错误输出包含输出列和两个错误列：ErrorCode 和 ErrorColumn   。 输出列包含失败行的数据， **ErrorCode** 提供错误代码，而 **ErrorColumn** 标识失败的列。  
   
  有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。  
   
 ### <a name="columns"></a>列  
- 输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]提供了三种不同的设置列属性的方法：以编程方式、使用组件特定的对话框或使用 "**高级编辑器**" 对话框。  
+ 输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”  对话框。  
   
 ## <a name="paths"></a>路径  
  路径连接数据流组件。 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，可以查看和修改路径属性，查看路径开始点的输出元数据，以及将数据查看器附加到路径。  

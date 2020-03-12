@@ -1,5 +1,6 @@
 ---
 title: 在 SQL 示例中生成数据 WideWorldImporters
+description: 使用这些 SQL 语句生成和导入 WideWorldImporters 示例数据库的当前日期的样本数据。
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74056284"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112313"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 数据生成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ WideWorldImportersDW 可以任意增加用于性能测试的数据大小。 例�
 
     Application.Configuration_PopulateLargeSaleTable
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
   `@EstimatedRowsFor2012`**bigint** （默认值为12000000）
 

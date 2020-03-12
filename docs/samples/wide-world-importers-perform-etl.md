@@ -1,5 +1,6 @@
 ---
 title: WideWorldImportersDW-ETL 工作流 |Microsoft Docs
+description: 将 ETL 包与 SQL Server Integration Services （SSIS）结合使用，以便定期将 WideWorldImporters 数据库中的数据迁移到 WideWorldImportersDW。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 000d12b97eb2eefbfcd9a6a73e02c0098b2afdbb
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067619"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112394"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68067619"
 
 接下来，一系列数据流任务加载每个维度。 然后，它们会加载每个事实。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - SQL Server 2016 （或更高版本），其中包含 WideWorldImporters 和 WideWorldImportersDW 数据库（在 SQL Server 的相同或不同的实例中）
 - SQL Server Management Studio

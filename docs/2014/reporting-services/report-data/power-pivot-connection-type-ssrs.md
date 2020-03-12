@@ -10,12 +10,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50ce060d270cf06a771136c581bf96fe1ec21eee
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200418"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112145"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint PowerPivot 库中发布的 PowerPivot 工作簿检索数据。  
@@ -25,7 +25,7 @@ ms.locfileid: "74200418"
 ## <a name="prerequisites"></a>必备条件  
  PowerPivot 数据源必须发布在 SharePoint 站点上的 PowerPivot 库中。  
   
- 为了支持从报表生成器到 PowerPivot 工作簿的连接，您在工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 PowerPivot for Excel 一起安装，但如果您使用的计算机没有此应用程序，则必须从[SQL Server 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=16978)下载和安装 ADOMD.NET。  
+ 为了支持从报表生成器到 PowerPivot 工作簿的连接，您在工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 PowerPivot for Excel 一起安装，但如果您使用的计算机没有此应用程序，则必须从[SQL Server 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=44272)下载和安装 ADOMD.NET。  
   
 ## <a name="data-source-type"></a>数据源类型  
  使用报表数据源类型： **Microsoft SQL Server Analysis Services**。  
@@ -63,7 +63,7 @@ ms.locfileid: "74200418"
 -   报表仅包含来自 PowerPivot 数据源的 PowerPivot 数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [Analysis Services MDX 查询设计器用户界面 &#40;报表生成器&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services MDX 查询设计器用户界面（报表生成器）](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

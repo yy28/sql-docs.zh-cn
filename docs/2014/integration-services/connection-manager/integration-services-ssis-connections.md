@@ -20,15 +20,15 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833772"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112169"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]包使用连接来执行不同的任务以及实现[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]功能： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
   
 -   连接到源和目标数据存储区（如文本、XML、Excel 工作簿和关系数据库），以提取和加载数据。  
   
@@ -46,16 +46,16 @@ ms.locfileid: "62833772"
   
 -   指定现有的文件和文件夹，或创建新的文件和文件夹，以便用于 Foreach 循环枚举器和任务。  
   
--   连接到消息队列、Windows Management Instrumentation (WMI)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)、Web 和邮件服务器。  
+-   连接到消息队列、Windows Management Instrumentation (WMI)、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)、Web 和邮件服务器。  
   
  为了创建这些连接， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用了连接管理器，如下一部分所述。  
   
 ## <a name="connection-managers"></a>连接管理器  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用连接管理器作为连接的逻辑表示形式。 在设计时，可设置连接管理器的属性，以描述当包运行时 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的物理连接。 例如，连接管理器包含在设计时设置的 `ConnectionString` 属性；在运行时，使用该连接字符串属性中的值创建物理连接。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用连接管理器作为连接的逻辑表示形式。 在设计时，可设置连接管理器的属性，以描述当包运行时 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的物理连接。 例如，连接管理器包含在设计时设置的 `ConnectionString` 属性；在运行时，使用该连接字符串属性中的值创建物理连接。  
   
  包可以使用一种连接管理器类型的多个实例，您可以在每个实例上设置这些属性。 在运行时，一种连接管理器类型的每个实例创建具有不同属性的连接。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供了不同类型的连接管理器，这些连接管理器使包能够连接到多种数据源和服务器：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了不同类型的连接管理器，从而使得包可以连接到多种数据源和服务器：  
   
 -   提供了内置连接管理器，在您安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]时安装程序将安装这些连接管理器。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62833772"
 |ORACLE|> server 连接到\<Oracle 版本信息。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
 |SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://go.microsoft.com/fwlink/?LinkId=262016)。|  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=30440)。|  
 |TERADATA|> server 连接到\<Teradata 版本信息。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
   

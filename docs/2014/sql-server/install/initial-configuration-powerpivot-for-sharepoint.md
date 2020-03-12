@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200438"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112214"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初始安装 (PowerPivot for SharePoint)
   使用本主题中的步骤可以配置 PowerPivot for SharePoint 的初始安装。 配置初始安装的最简单方法是使用 PowerPivot 配置工具。 该工具自动完成下述所有配置步骤。  
@@ -24,7 +24,7 @@ ms.locfileid: "74200438"
   
  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  必须已使用 SharePoint 安装程序中的“服务器场”安装选项安装了 SharePoint 服务器。 不支持使用内置数据库的独立 SharePoint 服务器。 有关详细信息，请参阅[在 SharePoint 2010 场中使用 SQL SERVER BI 功能的指南](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)。  
   
 > [!IMPORTANT]  
@@ -227,7 +227,7 @@ ms.locfileid: "74200438"
   
  安装该访问接口后，将允许在数据连接字符串中引用 MSOLAP.4 的工作簿在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 服务器上按预期方式工作。 安装 SQL Server 2008 R2 OLE DB 访问接口是升级在 PowerPivot for Excel 的早期版本中创建的工作簿的另一种方法。  
   
- 可以从[SQL Server 2008 R2 功能包 "页](https://www.microsoft.com/download/details.aspx?id=16978)下载提供程序。 查找 microsoft **® Analysis Services OLE DB Provider For microsoft® SQL Server® 2008 R2**，然后下载`SQLServer2008_ASOLEDB10.msi`安装程序的 x64 包。  
+ 可以从[SQL Server 2008 R2 功能包 "页](https://www.microsoft.com/download/details.aspx?id=44272)下载提供程序。 查找 microsoft **® Analysis Services OLE DB Provider For microsoft® SQL Server® 2008 R2**，然后下载`SQLServer2008_ASOLEDB10.msi`安装程序的 x64 包。  
   
  有关安装提供程序的详细信息，包括验证步骤，请参阅[在 SharePoint 服务器上安装 Analysis Services OLE DB Provider](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
   

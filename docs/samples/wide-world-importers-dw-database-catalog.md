@@ -1,5 +1,6 @@
 ---
 title: WideWorldImporters OLAP 数据库目录-SQL |Microsoft Docs
+description: 了解用于 WideWorldImportersDW 数据库中的数据仓库和分析处理的架构、表和存储过程。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104288"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112432"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 数据库目录
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

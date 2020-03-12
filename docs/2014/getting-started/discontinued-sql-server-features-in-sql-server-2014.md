@@ -10,23 +10,23 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637771"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112229"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中不再推荐使用的 SQL Server 功能
   本主题介绍升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 后不再可用的功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>
+## <a name="discontinued-features-in-sssql14"></a>
   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]
   
  
   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中没有停止使用的功能。  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>
+## <a name="discontinued-features-in-sssql11"></a>
   [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
   
   
@@ -46,7 +46,7 @@ ms.locfileid: "73637771"
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008 中已不再使用的功能  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL Server Express 安装中已不再使用的 SQL-DMO  
- 用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 SQL-DMO 已从 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] 中删除。 我们建议您尽快修改当前使用此功能的应用程序。 如果必须支持针对[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] EXPRESS 的 sql-dmo，请从[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=24793)安装功能包的向后兼容组件。 请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 进行新的开发工作。  
+ 用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 SQL-DMO 已从 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] 中删除。 我们建议您尽快修改当前使用此功能的应用程序。 如果必须支持针对[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] EXPRESS 的 sql-dmo，请从[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [Microsoft 下载中心](https://www.microsoft.com/download/)安装功能包的向后兼容组件。 请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 进行新的开发工作。  
   
 ### <a name="discontinued-option-for-web-assistant"></a>已不再使用的用于 Web 助手的选项  
  用于启用 Web 助手的 `sp_configure` 选项已从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中删除。 建议改用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 。  

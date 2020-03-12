@@ -10,12 +10,12 @@ ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f8dcec71f8b9c90df9f30aa5bfb972fef28fbcd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1146c612225c2f58dd501ce9cba658ca7ca6ba69
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200448"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112176"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>在 SharePoint 服务器上安装 Analysis Services OLE DB 访问接口
   Microsoft OLE DB Provider for Analysis Services (MSOLAP) 是客户端应用程序用来与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据进行交互的接口。 在包含 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]的 SharePoint 环境中，此访问接口用于处理对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求。  
@@ -113,7 +113,7 @@ ms.locfileid: "74200448"
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>使用 PowerPivot for SharePoint 安装包（Sppowerpivot.msi）安装 SQL Server 2012 OLE DB 提供程序  
  使用 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 安装包 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) **在 Excel Services 服务器上安装**OLE DB 访问接口。  
   
-#### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>从 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。  
+#### <a name="download-the-msolap5-provider-from-the-sssql11sp1-feature-pack"></a>从 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。  
   
 1.  浏览至 [Microsoft® SQL Server® 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "74200448"
   
 #### <a name="step-1-download-and-install-the-client-library"></a>步骤 1：下载并安装客户端库  
   
-1.  在 [SQL Server 2008 R2 功能包页](https://www.microsoft.com/download/details.aspx?id=16978)上，查找 Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2。  
+1.  在 [SQL Server 2008 R2 功能包页](https://www.microsoft.com/download/details.aspx?id=44272)上，查找 Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2。  
   
 2.  下载 `SQLServer2008_ASOLEDB10.msi` 安装程序的 x64 包。 尽管文件名包含 SQLServer2008，但它是用于 SQL Server 2008 R2 版本的访问接口的正确文件。  
   

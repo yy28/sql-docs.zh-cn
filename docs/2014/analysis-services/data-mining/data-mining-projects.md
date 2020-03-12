@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73705296"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112153"
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
   数据挖掘项目是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案的一部分。 在设计过程中，在此项目中创建的对象作为工作区数据库的一部分可用于测试和查询。 当您希望用户能够查询或浏览此项目中的对象时，必须将此项目部署到在多维模型中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
@@ -161,7 +161,7 @@ ms.locfileid: "73705296"
   
  这些可视化对象都是临时的，并且在退出与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的会话时关闭这些对象，而无需保存。 因此，如果您需要将这些可视化对象导出到其他应用程序以进行显示或进一步分析，请使用查看器界面的每一个工具栏或窗格中提供的 **“复制”** 命令。  
   
- Excel 数据挖掘外接插件还提供可用于以 Visio 关系图表示模型并使用 Visio 工具对关系图进行批注和修改的 Visio 模板。 有关详细信息，请参阅 [适用于 Microsoft Office 2007 的 Microsoft SQL Server 2008 SP2 数据挖掘外接程序](https://www.microsoft.com/download/details.aspx?id=7294)。
+ Excel 数据挖掘外接插件还提供可用于以 Visio 关系图表示模型并使用 Visio 工具对关系图进行批注和修改的 Visio 模板。 有关详细信息，请参阅 [适用于 Microsoft Office 2007 的 Microsoft SQL Server 2008 SP2 数据挖掘外接程序](https://www.microsoft.com/download/details.aspx?id=8569)。
   
 ###  <a name="bkmk_Validate"></a>测试和验证模型  
  创建模型之后，可以调查结果，并确定性能最佳的模型。  

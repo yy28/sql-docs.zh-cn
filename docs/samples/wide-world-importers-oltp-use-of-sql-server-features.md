@@ -1,5 +1,6 @@
 ---
 title: 使用 SQL Server 特性和功能 |Microsoft Docs
+description: 了解 SQL Server 特性和功能及其在 WideWorldImporters 示例数据库中的用法。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 69f0027041b4acf45a54d8d8d655bc8772417dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: abf7cff6bfcd1640f2115c2a7f097ba4fccb499d
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811541"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112417"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server 特性和功能的使用
 

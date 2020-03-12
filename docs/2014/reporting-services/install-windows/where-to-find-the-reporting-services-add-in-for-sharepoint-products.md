@@ -11,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d6a27c171fafc8480cbbcdb03c4683816ec30d4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637875"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112181"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>在何处查找用于 SharePoint 产品的 Reporting Services 外接程序
 
@@ -58,7 +58,7 @@ ms.locfileid: "73637875"
 ##  <a name="bkmk_sql2008sp2"></a>SQL Server 2008 SP2 Reporting Services 用于 SharePoint 2007 产品和技术的外接程序  
  Microsoft SQL Server 2008 SP2 Reporting Services 外接程序是 2008 外接程序的更新版本，它增加了对于将 2008 R2 报表服务器与 SharePoint 2007 产品相集成的支持。  
   
- 您可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心的 [Microsoft SQL Server 2008 SP2 Reporting Services Add-in for Microsoft SharePoint Technologies](https://www.microsoft.com/download/details.aspx?id=793)（用于 Microsoft SharePoint 技术的 Microsoft SQL Server 2008 SP2 Reporting Services 外接程序）获得此文件的最新版本。  
+ 您可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心的 [Microsoft SQL Server 2008 SP2 Reporting Services Add-in for Microsoft SharePoint Technologies](https://www.microsoft.com/download/details.aspx?id=43344)（用于 Microsoft SharePoint 技术的 Microsoft SQL Server 2008 SP2 Reporting Services 外接程序）获得此文件的最新版本。  
   
 ##  <a name="bkmk_sql2008"></a>SQL Server 2008 Reporting Services 用于 SharePoint 2007 产品和技术的外接程序  
  用于 Microsoft SharePoint 技术的 Microsoft SQL Server 2008 Reporting Services 外接程序提供用于在 Microsoft Windows SharePoint Services 3.0 或 Microsoft Office SharePoint Server 2007 部署中运行报表服务器的功能。  

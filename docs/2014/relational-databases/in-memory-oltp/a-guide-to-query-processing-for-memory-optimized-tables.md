@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811067"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112240"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
   内存中 OLTP 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中引入内存优化的表和本机编译的存储过程。 本文简单介绍针对内存优化表和本机编译存储过程的查询处理。  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- 为构造本文中所示的查询计划，这两个表是用来自 Northwind 示例数据库的示例数据填充的，你可以从 [SQL Server 2000 的 Northwind 和 pubs 示例数据库](https://www.microsoft.com/download/details.aspx?id=23654)下载相关数据库。  
+ 为构造本文中所示的查询计划，这两个表是用来自 Northwind 示例数据库的示例数据填充的，你可以从 [SQL Server 2000 的 Northwind 和 pubs 示例数据库](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)下载相关数据库。  
   
  考虑以下查询，这些查询联接 Customer 和 Order 表，并返回订单 ID 和相关客户信息：  
   
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  在此查询中，Order 表的行是使用聚集索引检索的。 
   `Hash Match` 物理运算符现在用于 `Inner Join`。 Order 的聚集索引不是按 CustomerID 排序的，因此 `Merge Join` 需要一个排序运算符，这会影响性能。 请注意 `Hash Match` 运算符的相对开销 (75%) 和上一示例中 `Merge Join` 运算符的开销 (46%)。 优化器在上一示例中也考虑了 `Hash Match` 运算符，但结论是 `Merge Join` 运算符可以提供更好的性能。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于磁盘的表的查询处理  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于磁盘的表的查询处理  
  下图显示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中针对即席查询的查询处理流程：  
   
  ![SQL Server 查询处理管道。](../../database-engine/media/hekaton-query-plan-3.gif "SQL Server 查询处理管道。")  
@@ -118,7 +118,7 @@ SQL Server 查询处理管道。
   
  对于第一个示例查询，执行引擎从 Access Methods 请求 Customer 聚集索引中的行和 Order 非聚集索引中的行。 Access Methods 遍历 B 树索引结构以检索请求的行。 在本例中检索所有行，因为计划需要全部索引扫描。  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>使用解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问内存优化表  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>使用解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问内存优化表  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 即席批处理和存储过程也称为解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 解释型是指这样一个事实，即对于查询计划中的每个运算符，查询计划都由查询执行引擎进行解释。 执行引擎读取运算符及其参数并执行运算。  
   
  解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可用于访问内存优化表和基于磁盘的表。 下图举例说明对解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问内存优化表的查询处理：  
@@ -235,7 +235,7 @@ END
   
 4.  DLL 中的机器代码将执行，结果会返回到客户端。  
   
- **参数嗅探**  
+ **参数截取**  
   
  解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程在首次执行时编译，而本机编译存储过程在创建时编译。 由于调用编译解释型存储过程时，优化器使用为此调用提供的参数值生成执行计划。 这种编译期间的参数用法称为参数截取。  
   

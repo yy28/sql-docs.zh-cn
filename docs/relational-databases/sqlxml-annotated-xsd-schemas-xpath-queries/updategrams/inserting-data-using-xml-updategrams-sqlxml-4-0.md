@@ -34,12 +34,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252502"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112266"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 插入数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "75252502"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，表名可以包括空格，例如 Northwind 数据库中的 Order Details 表。 但是，这在作为有效[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]标识符的 xml 字符中无效，但不能使用 "__xHHHH\_\_" 作为编码值对有效的 xml 标识符进行编码，其中 HHHH 代表最高有效位第一次的字符的四位十六进制 UCS-2 代码。  
   
 > [!NOTE]  
->  此示例使用 Northwind 数据库。 可以通过使用可从[Microsoft 网站](https://www.microsoft.com/download/details.aspx?id=23654)下载的 SQL 脚本来安装 Northwind 数据库。  
+>  此示例使用 Northwind 数据库。 可以通过使用可从[Microsoft 网站](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)下载的 SQL 脚本来安装 Northwind 数据库。  
   
  此外，元素名必须括在方括号 ([ ]) 内。 因为字符 [and] 在 XML 中无效，所以必须分别将它们编码为 _x005B\_和 _x005D\_。 （如果使用映射架构，可以提供不包含无效字符（如空格）的元素名。 映射架构会执行必要的映射；因此，无需对这些字符进行编码。）  
   

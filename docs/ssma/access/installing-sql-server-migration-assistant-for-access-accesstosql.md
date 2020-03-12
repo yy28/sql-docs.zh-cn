@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 80fc19b17ac1c01f0c57d828a3bc4821050f761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257890"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79111905"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安装访问 SQL Server 迁移助手（AccessToSQL）
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用基于 Windows Installer 的向导安装访问的迁移助手（SSMA）。 本主题提供了有关安装先决条件的信息、SSMA 的最新版本的链接，以及安装、授权、卸载和升级 SSMA 的说明。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 安装 SSMA 之前，请确保你的系统满足以下要求：  
   
 -   Windows 7 或更高版本，或者 Windows Server 2008 或更高版本。  
@@ -46,7 +46,7 @@ ms.locfileid: "75257890"
   
 -   Microsoft 数据访问对象（DAO）提供程序版本12.0 或14.0。 可以从 Microsoft Office 2010/2007 产品安装 DAO 提供程序，也可以从 Microsoft 网站下载。  
   
--   SQL Server 的本机访问客户端（SNAC）版本10.5 及更高版本，以便迁移到 SQL Azure。 你可以从[Microsoft® SQL Server® 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=16978)获取最新版本的 SNAC  
+-   SQL Server 的本机访问客户端（SNAC）版本10.5 及更高版本，以便迁移到 SQL Azure。 你可以从[Microsoft® SQL Server® 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=44272)获取最新版本的 SNAC  
   
 -   4 GB RAM （建议使用）。  
   

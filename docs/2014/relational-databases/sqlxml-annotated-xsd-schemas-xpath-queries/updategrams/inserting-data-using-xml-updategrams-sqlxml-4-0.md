@@ -33,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b06e98d5ef3dfc4ad8ab99e374e2d7b5539c98be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637906"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112190"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 插入数据 (SQLXML 4.0)
   当记录实例出现在** \<>** 块中但未出现在>块的** \<前面**时，updategram 指示插入操作。 在这种情况下，updategram 将** \<>** 块中的记录插入到数据库中。  
@@ -212,7 +212,7 @@ ms.locfileid: "73637906"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，表名可以包括空格，例如 Northwind 数据库中的 Order Details 表。 但是，这在作为有效[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]标识符的 xml 字符中无效，但不能使用 "__xHHHH\_\_" 作为编码值对有效的 xml 标识符进行编码，其中 HHHH 代表最高有效位第一次的字符的四位十六进制 UCS-2 代码。  
   
 > [!NOTE]  
->  此示例使用 Northwind 数据库。 可以通过使用可从[Microsoft 网站](https://www.microsoft.com/download/details.aspx?id=23654)下载的 SQL 脚本来安装 Northwind 数据库。  
+>  此示例使用 Northwind 数据库。 可以通过使用可从[Microsoft 网站](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)下载的 SQL 脚本来安装 Northwind 数据库。  
   
  此外，元素名必须括在方括号 ([ ]) 内。 因为字符 [and] 在 XML 中无效，所以必须分别将它们编码为 _x005B\_和 _x005D\_。 （如果使用映射架构，可以提供不包含无效字符（如空格）的元素名。 映射架构会执行必要的映射；因此，无需对这些字符进行编码。）  
   
