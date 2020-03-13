@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934558"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289115"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 手动强制计划不应永久强制，因为[!INCLUDE[ssde_md](../../includes/ssde_md.md)]应该能够应用最佳计划。 用户或 DBA 应最终使用`sp_query_store_unforce_plan`过程取消强制执行计划，并让我们[!INCLUDE[ssde_md](../../includes/ssde_md.md)]寻找最佳计划。 
 
 > [!TIP]
-> Alternativelly，使用**带有强制计划**查询存储视图的查询来查找和取消强制执行计划。
+> 或者，将**查询与 "强制计划**" 查询存储 "视图结合使用来查找和取消强制执行计划。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供在查询存储中监视性能和解决问题所需的所有必要的视图和过程。
 
@@ -188,5 +188,5 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
  [执行计划](../../relational-databases/performance/execution-plans.md)    
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [查询优化助手](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

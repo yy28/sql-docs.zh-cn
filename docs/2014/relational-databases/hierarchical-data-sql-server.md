@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339235"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289185"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
   内置`hierarchyid`数据类型使存储和查询层次结构数据变得更加容易。 `hierarchyid`针对表示树（这是最常见的分层数据类型）进行了优化。  
@@ -163,7 +163,7 @@ GO
   
      在广度优先索引中，一个节点的所有直属子级存储在一起。 因此，广度优先索引在响应有关直属子级的查询方面效率很高，“查找此经理直属的所有雇员”就属于这类查询。  
   
- 采用深度优先、广度优先还是结合使用这两种索引，以及将哪一种设为聚集键（如果有），取决于上述两种查询类型的相对重要性以及 SELECT 与DML 操作的相对重要性。 有关索引策略的详细示例，请参阅 [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
+ 采用深度优先、广度优先还是结合使用这两种索引，以及将哪一种设为聚集键（如果有），取决于上述两种查询类型的相对重要性以及 SELECT 与DML 操作的相对重要性。 有关索引策略的详细示例，请参阅[教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
   
   
 ### <a name="creating-indexes"></a>创建索引  
@@ -269,7 +269,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 相关任务  
   
 ###  <a name="migrating"></a> 从父/子迁移到 hierarchyid  
- 大多数树都使用父/子结构来表示。 从父/子结构迁移到使用`hierarchyid`的表的最简单方法是使用临时列或临时表来跟踪层次结构中每个级别的节点数。 有关迁移父/子表的示例，请参阅 [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
+ 大多数树都使用父/子结构来表示。 从父/子结构迁移到使用`hierarchyid`的表的最简单方法是使用临时列或临时表来跟踪层次结构中每个级别的节点数。 有关迁移父/子表的示例，请参阅[教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理树  
@@ -529,7 +529,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [hierarchyid 数据类型方法引用](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid (Transact-SQL)](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

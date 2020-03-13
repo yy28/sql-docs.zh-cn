@@ -18,11 +18,11 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305218"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289945"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar （6）**|队列的类型。 可能的值为 "**邮件**" 和 "**状态**"。|  
-|**长短**|**int**|指定队列中邮件项的数量。|  
+|**length**|**int**|指定队列中邮件项的数量。|  
 |**状态**|**nvarchar （64）**|监视器的状态。 可能的值为**非活动状态**（队列处于非活动状态）、已**通知**（队列已通知发生接收）和**RECEIVES_OCCURRING** （队列正在接收）。|  
 |**last_empty_rowset_time**|**型**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
 |**last_activated_time**|**型**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  

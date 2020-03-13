@@ -10,12 +10,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079575"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217122"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
   Analysis Services 动态管理视图 (DMV) 是公开与本地服务器操作和服务器运行状况有关信息的查询结构。 该查询结构是返回与 Analysis Services 实例有关的元数据和监视信息的架构行集的接口。  
@@ -112,7 +112,7 @@ ORDER BY TABLE_NAME ASC
 |[DBSCHEMA_TABLES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|返回当前数据库中所有表的列表。 您可以使用此列表来构造 DMV 查询。|  
 |[DISCOVER_CALC_DEPENDENCY 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|返回在某一模型中使用的与其他列和表有依赖关系的列和表的列表。|  
 |[DISCOVER_COMMAND_OBJECTS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|提供与引用的命令使用的对象有关的资源使用情况和活动信息。|  
-|[DISCOVER_COMMANDS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|提供有关当前正在执行的命令的资源使用情况和活动信息。|  
+|[DISCOVER_COMMANDS 行集](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|提供有关当前正在执行的命令的资源使用情况和活动信息。|  
 |[DISCOVER_CONNECTIONS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|提供与 Analysis Services 的打开的连接有关的资源使用情况和活动信息。|  
 |[DISCOVER_CSDL_METADATA 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|返回有关表格模型的信息。<br /><br /> 要求添加 SYSTEMRESTRICTSCHEMA 和附加的参数。|  
 |[DISCOVER_DB_CONNECTIONS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|提供与从 Analysis Services 到外部数据源（例如在处理或导入过程中）打开的连接有关的资源使用情况和活动信息。|  
@@ -159,9 +159,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_INPUT_DATASOURCES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|返回有关在当前数据库中定义的数据源对象的信息。|  
 |[MDSCHEMA_KPIS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|返回有关在当前数据库中定义的 KPI 的信息。|  
 |[MDSCHEMA_LEVELS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|返回有关在当前数据库中定义的层次结构内的级别的信息。|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|列出度量值组的维度。|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 行集](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|列出度量值组的维度。|  
 |[MDSCHEMA_MEASUREGROUPS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|返回当前连接中度量值组的列表。|  
-|[MDSCHEMA_MEASURES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|返回当前连接中度量值的列表。|  
+|[MDSCHEMA_MEASURES 行集](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|返回当前连接中度量值的列表。|  
 |[MDSCHEMA_MEMBERS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|返回在当前连接中按数据库、多维数据集和维度列出的所有成员的列表。|  
 |[MDSCHEMA_PROPERTIES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|返回每个属性的完全限定名，以及属性类型、数据类型和其他元数据。|  
 |[MDSCHEMA_SETS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|返回当前连接中定义的集合的列表。|  

@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339286"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289285"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各个版本支持的功能
 
@@ -89,7 +89,7 @@ ms.locfileid: "78339286"
   
  <sup>1</sup>使用基于服务器 + 客户端访问许可证（CAL）的许可（对新协议不可用）的 Enterprise Edition 最多只能为每个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例20个核心。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅[按版本 SQL Server 计算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
-##  <a name="High_availability"></a>高可用性  
+##  <a name="High_availability"></a> 高可用性  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -175,7 +175,7 @@ ms.locfileid: "78339286"
 |将[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库部署到 Azure VM 向导|是|是|是|是|是|是|是|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Azure 中的数据文件|是|是|是|是|是|是|是|  
   
- <sup></sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]使用[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition 和 Enterprise edition 分析2个 Web、with Tools 和 with Advanced Services。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]使用[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition 和 Enterprise edition 分析2个 Web、with Tools 和 with Advanced Services。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  <sup>3</sup>仅对 Standard edition 功能启用优化。  
   

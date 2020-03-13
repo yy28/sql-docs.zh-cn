@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339070"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289135"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的日志操作
   Analysis Services 实例会将服务器通知、错误和警告记录到 msmdsrv.ini 文件中-每个安装的实例一个。 管理员参考此日志，了解例程和异常事件等信息。 在最新版本中，已增强日志记录，能容纳更多信息。 日志记录现在包括产品版本和版本信息以及处理器、内存、连接性和阻止事件。 你可在 [日志记录改进](https://support.microsoft.com/kb/2965035)中查看整个更改列表。  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339110"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289525"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合并复制属性
 本主题说明如何为合并复制指定各种属性。 
@@ -64,7 +64,7 @@ ms.locfileid: "78339110"
 #### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>修改现有合并表项目以使其仅用于下载  
   
 1.  若要确定项目是否仅用于下载，请执行 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)。 记下结果集中该项目的 **upload_options** 值。    
-2.  如果步骤1中返回的值为**0**，则[执行 sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，为 " ** \@属性**" 指定值**subscriber_upload_options** ，将值**1**指定** \@给 force_invalidate_snapshot**和** \@force_reinit_subscription**，并将值1或**2**指定为** \@"value**" 的值，这与以下行为相对应： ****  
+2.  如果步骤1中返回的值为**0**，则[执行 sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，为 " ** \@属性**" 指定值**subscriber_upload_options** ，将值**1**指定** \@给 force_invalidate_snapshot**和** \@force_reinit_subscription**，并将值1或**2**指定为** \@"value**" 的值，这与以下行为相对应： **1**  
   
     -   **1** - 允许在订阅服务器上进行更改，但不会将它们上载到发布服务器。    
     -   **2** - 不允许在订阅服务器上进行更改。  

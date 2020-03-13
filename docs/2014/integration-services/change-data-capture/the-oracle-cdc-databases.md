@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338990"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289265"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
   一个 Oracle CDC 实例与在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上具有相同名称的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此数据库称为 Oracle CDC 数据库（或 CDC 数据库）。  
@@ -76,7 +76,7 @@ ms.locfileid: "78338990"
 ###  <a name="bkmk_change_tables_ct"></a> 更改表 (_CT)  
  更改表是从镜像表创建的。 它们包含从 Oracle 数据库捕获的更改数据。 根据以下约定命名这些表：  
   
- [cdc].[**capture-instance>_CT]\<**  
+ [cdc].[\<capture-instance>_CT]   
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "78338990"
   
 |名称|默认|Min|Max|静态|说明|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|跟踪|False|-|-|False|可用值：<br /><br /> **True**<br /><br /> **False**<br /><br /> **基于**<br /><br /> **关闭**|  
+|跟踪|False|-|-|False|可用值：<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|为某一事务分配的内存块的大小（一个事务可分配多个块）(KB)。 请参阅 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) 表中的 memory_limit 列。|  
 |target_max_batched_transactions|100|1|1000|True|可在 SQL Server CT 表更新中作为一个事务处理的 Oracle 事务的最大数目。|  
 |target_idle_lsn_update_interval|10|0|1|False|用于在捕获表没有任何活动时更新 **lsn_time_mapping** 表的时间间隔（秒）。|  

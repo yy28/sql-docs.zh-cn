@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339090"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289625"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理是一种 Microsoft Windows 服务，可执行计划的管理任务， ** 这些任务[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在中称为 "作业"。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理是一种 Microsoft Windows 服务，可执行计划的管理任务， *jobs*这些任务[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在中称为 "作业"。  
   
  **本主题内容**  
   

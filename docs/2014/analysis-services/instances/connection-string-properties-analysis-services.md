@@ -10,12 +10,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67046670"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217067"
 ---
 # <a name="connection-string-properties-analysis-services"></a>连接字符串属性 (Analysis Services)
   本主题介绍的是连接字符串属性，您可能需要在某个设计器或管理工具中设置这些属性，也可能在连接到并查询 Analysis Services 数据的客户端应用程序所生成的连接字符串中看到这些属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
@@ -50,8 +50,8 @@ ms.locfileid: "67046670"
   
 |properties|说明|示例|  
 |--------------|-----------------|-------------|  
-|`Data Source`或`DataSource`|指定服务器实例。 此属性对于所有连接都是必需的。 有效值包括服务器的网络名称或 IP 地址、local 或 localhost（对本地连接）、URL（如果针对 HTTP 或 HTTPS 访问配置了服务器）或本地多维数据集 (.cub) 文件的名称。|对于默认实例和端口 (TCP 2383) 为`Data source=AW-SRV01` 。<br /><br /> 对于命名实例 ($Finance) 和固定端口为`Data source=AW-SRV01$Finance:8081` 。<br /><br /> 对于采用默认实例和端口的完全限定的域名为`Data source=AW-SRV01.corp.Adventure-Works.com` 。<br /><br /> 对于服务器的 IP 地址为`Data source=172.16.254.1` ，它绕过 DNS 服务器查找，对于解决连接问题很有用。|  
-|`Initial Catalog`或`Catalog`|指定要连接到的 Analysis Services 数据库的名称。 该数据库必须部署在 Analysis Services 上，并且您必须有权连接到它。 此属性对于 AMO 连接是可选的，但是对于 ADOMD.NET 是必需的。|`Initial catalog=AdventureWorks2012`|  
+|`Data Source` 或 `DataSource`|指定服务器实例。 此属性对于所有连接都是必需的。 有效值包括服务器的网络名称或 IP 地址、local 或 localhost（对本地连接）、URL（如果针对 HTTP 或 HTTPS 访问配置了服务器）或本地多维数据集 (.cub) 文件的名称。|对于默认实例和端口 (TCP 2383) 为`Data source=AW-SRV01` 。<br /><br /> 对于命名实例 ($Finance) 和固定端口为`Data source=AW-SRV01$Finance:8081` 。<br /><br /> 对于采用默认实例和端口的完全限定的域名为`Data source=AW-SRV01.corp.Adventure-Works.com` 。<br /><br /> 对于服务器的 IP 地址为`Data source=172.16.254.1` ，它绕过 DNS 服务器查找，对于解决连接问题很有用。|  
+|`Initial Catalog` 或 `Catalog`|指定要连接到的 Analysis Services 数据库的名称。 该数据库必须部署在 Analysis Services 上，并且您必须有权连接到它。 此属性对于 AMO 连接是可选的，但是对于 ADOMD.NET 是必需的。|`Initial catalog=AdventureWorks2012`|  
 |`Provider`|有效值包括 MSOLAP 或 MSOLAP。\<版本>，其中\<版本> 为3、4或5。 在文件系统上，数据访问接口名称对于 SQL Server 2012 版本为 msolap110.dll，对于 SQL Server 2008 和 2008 R2 为 msolap100.dll，对于 SQL Server 2005 为 msolap90.dll。<br /><br /> 当前版本为 MSOLAP.5。 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据访问接口时才需要设置此属性，例如要连接到 SQL Server 2008 实例。<br /><br /> 数据访问接口对应于 SQL Server 的版本。 如果您的组织使用当前和以前版本的 Analysis Services，很可能需要指定在手动创建的连接字符串上使用哪个访问接口。 您可能还需要在缺少所需版本的计算机上下载并安装特定版本的数据访问接口。 可以从下载中心的“SQL Server 功能包”页上下载 OLE DB 访问接口。 转到 [Microsoft SQL Server 2012 功能包](https://go.microsoft.com/fwlink/?LinkId=296473) 以下载用于 SQL Server 2012 的 Analysis Services OLE DB 访问接口。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 PowerPivot 工作簿，有时需要在 SharePoint 服务器上手动安装。 要区分这些版本，您必须检查访问接口的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击 **“详细信息”**。 查看文件版本信息。 版本应包含10.50。\<SQL Server 2008 R2 的 buildnumber>。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 和 [用于 Analysis Services 连接的数据提供程序](data-providers-used-for-analysis-services-connections.md)。<br /><br /> MSOLAP SQL Server 2005 中发布。<br /><br /> 在 SQL Server 2008 中释放了 MSOLAP，并再次 SQL Server 2008 R2<br /><br /> SQL Server 2012 中发布了 MSOLAP 5|
   `Provider=MSOLAP.3` 用于需要 SQL Server 2005 版本的 Analysis Services OLE DB 访问接口的连接。|  
 |`Cube`|多维数据集名称或透视名称。 一个数据库可以包含多个多维数据集和透视。 可以使用多个目标时，在连接字符串上包括多维数据集或透视名称。|
@@ -71,7 +71,7 @@ ms.locfileid: "67046670"
 |`Integrated Security`|调用方的 Windows 标识用于连接到 Analysis Services。 有效值为空、SSPI 和 BASIC。<br /><br /> `Integrated Security`=`SSPI`是 TCP 连接的默认值，允许 NTLM、Kerberos 或匿名身份验证。 HTTP 连接的默认值为空。<br /><br /> 使用 `SSPI` 时，`ProtectionLevel` 必须设置为以下值之一：`Connect`、`PktIntegrity`、`PktPrivacy`。|  
 |`Persist Encrypted`|当客户端应用程序需要数据源对象以加密形式保存敏感身份验证信息（如密码）时设置此属性。 默认情况下，不保存身份验证信息。|  
 |`Persist Security Info`|有效值为 True 和 False。 设置为 True 时，在建立连接后可以从连接获取安全信息（如以前在连接字符串上指定的用户标识或密码）。 默认值为 False。|  
-|`ProtectionLevel`|确定连接上使用的安全级别。 有效值是：<br /><br /> `None`. 不进行身份验证的连接或匿名连接。 不对发送到服务器的数据进行身份验证。<br /><br /> `Connect`. 进行身份验证的连接。 仅当客户端与服务器建立关系时进行身份验证。<br /><br /> `PktIntegrity`. 加密的连接。 验证从客户端接收了所有数据并且数据在途中未更改。<br /><br /> `PktPrivacy`. 签名的加密，仅对于 XMLA 支持。 验证从客户端接收了所有数据并且数据在途中未更改，通过加密来保护数据的隐私。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)|  
+|`ProtectionLevel`|确定连接上使用的安全级别。 有效值是：<br /><br /> `None`. 不进行身份验证的连接或匿名连接。 不对发送到服务器的数据进行身份验证。<br /><br /> `Connect`. 进行身份验证的连接。 仅当客户端与服务器建立关系时进行身份验证。<br /><br /> `PktIntegrity`. 加密的连接。 验证从客户端接收了所有数据并且数据在途中未更改。<br /><br /> `PktPrivacy`. 签名的加密，仅对于 XMLA 支持。 验证从客户端接收了所有数据并且数据在途中未更改，通过加密来保护数据的隐私。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)|  
 |`Roles`|指定逗号分隔的预定义的角色列表，以使用该角色具有的权限连接到服务器或数据库。 如果忽略此属性，则使用所有角色且有效权限为所有角色的组合权限。 如果将属性设置为空值（例如 Roles = ' '），则客户端连接没有角色成员身份。<br /><br /> 管理员使用此属性通过角色具有的权限进行连接。 如果角色的权限不足，一些命令可能失败。|  
 |`SSPI`|显式指定将 `Integrated Security` 设置为 `SSPI` 时要将哪个安全包用于客户端身份验证。 SSPI 支持多个包，但是您可以使用此属性指定特定的包。 有效值为“协商”、Kerberos、NTLM 和“匿名用户”。 如果未设置此属性，则所有包可用于连接。|  
 |`Use Encryption for Data`|加密数据传输。 有效值为 True 和 False。|  
@@ -124,7 +124,7 @@ ms.locfileid: "67046670"
   
 -   调试模式  
   
--   模式  
+-   “模式”  
   
 -   SQLCompatibility  
   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338271"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289405"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 必须定期截断事务日志以避免它被填满。 但是，一些因素可能延迟日志截断，因此监视日志大小很重要。 某些操作可以最小日志量进行记录以减少其对事务日志大小的影响。  
@@ -82,7 +82,7 @@ ms.locfileid: "78338271"
 |1|CHECKPOINT|自上次日志截断之后，尚未生成检查点，或者日志头尚未跨一个虚拟日志文件移动。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因。 有关详细信息，请参阅[数据库检查点 (SQL Server)](database-checkpoints-sql-server.md)。|  
 |2|LOG_BACKUP|在截断事务日志前，需要进行日志备份。 （仅限完整恢复模式或大容量日志恢复模式）<br /><br /> 完成下一个日志备份后，一些日志空间可能变为可重复使用。|  
 |3|ACTIVE_BACKUP_OR_RESTORE|数据备份或还原正在进行（所有恢复模式）。<br /><br /> 如果数据备份阻止了日志截断，则取消备份操作可能有助于解决备份直接导致的此问题。|  
-|4|ACTIVE_TRANSACTION|事务处于活动状态（所有恢复模式）。<br /><br /> 一个长时间运行的事务可能存在于日志备份的开头。 在这种情况下，可能需要进行另一个日志备份才能释放空间。 请注意，长时间运行的事务将阻止所有恢复模式下的日志截断，包括简单恢复模式，在该模式下，事务日志通常在每个自动检查点上进行截断。<br /><br /> 延迟事务。 “延迟的事务 ** ”是有效的活动事务，因为某些资源不可用，其回滚受阻。 有关导致事务延迟的原因以及如何使它们摆脱延迟状态的信息，请参阅[延迟的事务 (SQL Server)](../backup-restore/deferred-transactions-sql-server.md)。 <br /><br />长时间运行的事务也可能会填满 tempdb 的事务日志。 Tempdb 由用户事务隐式用于内部对象，例如用于排序的工作表、用于哈希的工作文件、游标工作表，以及行版本控制。 即使用户事务只包括读取数据（选择查询），也可以在 "用户事务" 下创建和使用内部对象。 然后就会填充 tempdb 事务日志。|  
+|4|ACTIVE_TRANSACTION|事务处于活动状态（所有恢复模式）。<br /><br /> 一个长时间运行的事务可能存在于日志备份的开头。 在这种情况下，可能需要进行另一个日志备份才能释放空间。 请注意，长时间运行的事务将阻止所有恢复模式下的日志截断，包括简单恢复模式，在该模式下，事务日志通常在每个自动检查点上进行截断。<br /><br /> 延迟事务。 “延迟的事务  ”是有效的活动事务，因为某些资源不可用，其回滚受阻。 有关导致事务延迟的原因以及如何使它们摆脱延迟状态的信息，请参阅[延迟的事务 (SQL Server)](../backup-restore/deferred-transactions-sql-server.md)。 <br /><br />长时间运行的事务也可能会填满 tempdb 的事务日志。 Tempdb 由用户事务隐式用于内部对象，例如用于排序的工作表、用于哈希的工作文件、游标工作表，以及行版本控制。 即使用户事务只包括读取数据（选择查询），也可以在 "用户事务" 下创建和使用内部对象。 然后就会填充 tempdb 事务日志。|  
 |5|DATABASE_MIRRORING|数据库镜像暂停，或者在高性能模式下，镜像数据库明显滞后于主体数据库。 （仅限完整恢复模式）<br /><br /> 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。|  
 |6|复制|在事务复制过程中，与发布相关的事务仍未传递到分发数据库。 （仅限完整恢复模式）<br /><br /> 有关事务复制的信息，请参阅 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)。|  
 |7|DATABASE_SNAPSHOT_CREATION|正在创建数据库快照。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因，通常也是主要原因。|  
@@ -96,7 +96,7 @@ ms.locfileid: "78338271"
 |16|XTP_CHECKPOINT|当数据库具有内存优化的文件组时，可能不会截断事务日志，直至触发自动 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 检查点（每当发生 512 MB 的日志增长就会出现这种情况）。<br /><br /> 注意：若要在 512 MB 大小之前截断事务日志，请针对相关数据库手动触发检查点命令。|  
   
 ##  <a name="MinimallyLogged"></a>可按最小方式记录的操作  
- *最小日志记录*涉及只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志恢复模式下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
+ 最小日志记录  是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志恢复模式下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
 > [!NOTE]  
 >  内存优化表不支持最小日志记录。  
@@ -106,7 +106,7 @@ ms.locfileid: "78338271"
   
  下列操作在完整恢复模式下执行完整日志记录，而在简单和大容量日志恢复模式下按最小方式记录日志：  
   
--   批量导入操作（[bcp](../../tools/bcp-utility.md)、 [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)和 [INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+-   批量导入操作（[bcp](../../tools/bcp-utility.md)、[BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) 和 [INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
     > [!NOTE]  
     >  启用事务复制时，将完全记录 BULK INSERT 操作，即使处于大容量日志恢复模式下。  
@@ -125,9 +125,9 @@ ms.locfileid: "78338271"
   
 -   如果数据库设置为简单或大容量日志恢复模式，则无论是脱机还是联机执行操作，都会按最小方式记录一些索引 DDL 操作。 按最小方式记录的索引操作如下：  
   
-    -   [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql)操作（包括索引视图）。  
+    -   [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) 操作（包括索引视图）。  
   
-    -   [更改索引](/sql/t-sql/statements/alter-index-transact-sql)REBUILD 或 DBCC DBREINDEX 操作。  
+    -   [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql) REBUILD 或 DBCC DBREINDEX 操作。  
   
         > [!NOTE]  
         >  不推荐使用 DBCC DBREINDEX 语句，因此应该避免在新的应用程序中使用该语句。  
@@ -154,9 +154,9 @@ ms.locfileid: "78338271"
   
 ## <a name="see-also"></a>另请参阅  
  [控制事务持续性](control-transaction-durability.md)   
- [大容量导入中最小日志记录的先决条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [在大容量导入中按最小方式记录日志的前提条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [数据库检查点 SQL Server &#40;&#41;](database-checkpoints-sql-server.md)   
+ [数据库检查点 (SQL Server)](database-checkpoints-sql-server.md)   
  [查看或更改数据库的属性](../databases/view-or-change-the-properties-of-a-database.md)   
  [恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)  
   

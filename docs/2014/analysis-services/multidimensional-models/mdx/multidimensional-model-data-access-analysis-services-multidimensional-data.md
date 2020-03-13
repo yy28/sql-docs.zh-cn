@@ -20,12 +20,12 @@ ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e3db19179e74b20837f58602a236721debc18b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073839"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217151"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多维模型数据访问（Analysis Services - 多维数据）
   使用本主题中的信息可以了解如何使用编程方法、脚本或客户端应用程序（内置用于连接您网络上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器的支持）来访问 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据。  
@@ -89,7 +89,7 @@ ms.locfileid: "66073839"
 |接口|说明|  
 |---------------|-----------------|  
 |Analysis Services 管理对象 (AMO)|AMO 是在代码中管理 Analysis Services 实例和多维数据库的主要对象模型。 例如，SQL Server Management Studio 使用 AMO 支持服务器和数据库管理。 有关详细信息，请参阅[使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。|  
-|ADOMD.NET|ADOMD.NET 是在自定义应用程序中创建和访问多维数据的主要对象模型。 可以在托管客户端应用程序中使用 ADOMD.NET，以便使用通用 Microsoft .NET Framework 数据访问接口来检索 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 信息。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 和 [ADOMD.NET 客户端编程](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)。|  
+|ADOMD.NET|ADOMD.NET 是在自定义应用程序中创建和访问多维数据的主要对象模型。 可以在托管客户端应用程序中使用 ADOMD.NET，以便使用通用 Microsoft .NET Framework 数据访问接口来检索 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 信息。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 和 [ADOMD.NET 客户端编程](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)。|  
 |Analysis Services OLE DB 访问接口 (MSOLAP.dll)|您可以使用本机 OLE DB 访问接口以编程方式从非托管 API 访问 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 有关详细信息，请参阅 [Analysis Services OLE DB 提供程序访问接口（Analysis Services - 多维数据）](../../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)。|  
 |架构行集|架构行集表是一种数据结构，其中包含关于在服务器上部署的多维模型的描述性信息，以及关于服务器上当前活动的信息。 作为编程人员，您可以通过在客户端应用程序中查询架构行集表，来检查存储在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例上的元数据并且可以从该实例中检索支持和监视信息。 可以对以下编程接口使用架构行集：OLE DB、OLE DB for Analysis Services、OLE DB for Data Mining 或 XMLA。 有关详细信息，请参阅 [Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。<br /><br /> 下面的列表说明了使用架构行集的几种方法：<br /><br /> 在 SQL Server Management Studio 或自定义报表中运行 DMV 查询，使用 SQL 语法访问架构行集。 有关详细信息，请参阅[使用动态管理视图 (DMV) 监视 Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。<br /><br /> 编写可调用架构行集的 ADOMD.NET 代码。<br /><br /> 直接对 `Discover` 实例运行 XMLA [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 方法以检索架构行集信息。 有关详细信息，请参阅 [Discover 方法 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)。|  
 |XMLA|XMLA 是可供 Analysis Services 编程人员使用的最低级别的 API，而且是所有 Analysis Services 数据访问方法中最基本的通用访问方法。 XMLA 是业界标准的基于 SOAP 的 XML 协议，它支持通过 HTTP 连接对所有标准多维数据源进行通用数据访问。 它使用 SOAP 来表示针对多维数据的请求和响应。 如果您的应用程序运行在 Windows 之外的平台上，则可以使用 XMLA 访问运行在网络中的 Windows 服务器上的多维数据库。 有关详细信息，请参阅 [在 Analysis Services 中使用 XMLA 开发](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)。|  

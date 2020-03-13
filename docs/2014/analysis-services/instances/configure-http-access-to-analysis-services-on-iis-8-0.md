@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225402"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217080"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问
   此文章介绍了如何设置用于访问 Analysis Services 实例的 HTTP 端点。 你可以通过配置 MSMDPUMP.dll（一种在 Internet Information Services (IIS) 中运行的 ISAPI 扩展，可以在客户端应用程序和 Analysis Services 服务器之间抽送数据）实现对 HTTP 的访问。 在您的 BI 解决方案需要以下功能时，此方法可替代用于连接到 Analysis Services 的方法：  
@@ -52,7 +52,7 @@ ms.locfileid: "75225402"
   
 -   [测试配置](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a>叙述  
+##  <a name="bkmk_overview"></a> 概述  
  MSMDPUMP 是一个 ISAPI 扩展，可加载到 IIS 以及向本地或远程 Analysis Services 实例提供重定向。 配置此 ISAPI 扩展后，即创建 Analysis Services 实例的 HTTP 端点。  
   
  必须为每个 HTTP 端点都创建并配置一个虚拟目录。 对于要连接到的每个 Analysis Services 实例，每个端点都将需要自身的一组 MSMDPUMP 文件。 这组文件中有一个配置文件指定用于每个 HTTP 端点的 Analysis Services 实例的名称。  
@@ -293,7 +293,7 @@ ms.locfileid: "75225402"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- 有关以编程方式设置连接的详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)。  
+ 有关以编程方式设置连接的详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)。  
   
  作为最后一步，务必通过使用在将从其发起连接的网络环境中运行的客户端计算机，继续进行更严格的测试。  
   
