@@ -13,11 +13,11 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75254096"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288541"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自动种子设定初始化 AlwaysOn 可用性组的辅助副本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ WITH (
  GO
 ```
 
-在执行 `SEEDING_MODE` 语句期间在主要副本上设置 `CREATE AVAILABILITY GROUP` 不起作用，因为主要副本已包含数据库的主要读/写副本。 仅当另一个副本被设为主要副本并添加数据库时，才应用 `SEEDING_MODE`。 稍后可更改种子设定模式 - 请参阅[更改副本的种子设定模式](#change-the-seeding-mode-of-a-replica)。
+在执行 `CREATE AVAILABILITY GROUP` 语句期间在主要副本上设置 `SEEDING_MODE` 不起作用，因为主要副本已包含数据库的主要读/写副本。 仅当另一个副本被设为主要副本并添加数据库时，才应用 `SEEDING_MODE`。 稍后可更改种子设定模式 - 请参阅[更改副本的种子设定模式](#change-the-seeding-mode-of-a-replica)。
 
 在成为次要副本的实例上，一旦联接实例，SQL Server 日志中将添加以下消息：
 

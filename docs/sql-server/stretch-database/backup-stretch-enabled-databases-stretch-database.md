@@ -12,11 +12,11 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338261"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286301"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>备份已启用延伸的数据库 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "78338261"
   
 若要备份已启用延伸的 SQL Server 数据库，可以继续使用目前所用的 SQL Server 备份方法。 有关详细信息，请参阅 [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。
   
- 已启用延伸的 SQL Server 数据库备份只包含该备份运行时所处时间点的本地数据和符合迁移条件的数据。 （符合条件的数据是指尚未迁移，但会根据表的迁移设置迁移到 Azure 的数据。）这称为 **浅表** 备份，这种备份不会包括已迁移到 Azure 的数据。  
+ 已启用延伸的 SQL Server 数据库备份只包含该备份运行时所处时间点的本地数据和符合迁移条件的数据。 （符合条件的数据是指尚未迁移，但会根据表的迁移设置迁移到 Azure 的数据。）这称为**浅表**备份，这种备份不会包括已迁移到 Azure 的数据。  
   
 ## <a name="back-up-your-remote-azure-data"></a>备份远程 Azure 数据   
   

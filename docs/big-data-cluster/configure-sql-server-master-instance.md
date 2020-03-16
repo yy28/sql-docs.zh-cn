@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 205f849310ffe2f6139e76783ba7fa6ac315b214
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a124b3a82c75f3da5f7abbdec3b519c86ec7c1c5
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73532364"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090517"
 ---
-# <a name="configure-master-instance-of-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>配置 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的主实例
+# <a name="configure-master-instance-of-big-data-clusters-2019"></a>配置 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的主实例
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -43,7 +43,7 @@ ms.locfileid: "73532364"
    traceflag0 = 1204
    ```
 
-1. 将 `mssql-custom.conf` 文件复制到 `/var/opt/mssql` Pod 中的 `mssql-server` 容器中的 `master-0`。 将 `<namespaceName>` 替换为大数据群集名称。
+1. 将 `mssql-custom.conf` 文件复制到 `master-0` Pod 中的 `mssql-server` 容器中的 `/var/opt/mssql`。 将 `<namespaceName>` 替换为大数据群集名称。
 
    ```bash
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
@@ -52,7 +52,7 @@ ms.locfileid: "73532364"
 1. 重启 SQL Server 实例。  将 `<namespaceName>` 替换为大数据群集名称。
 
    ```bash
-   kubectl exec -it master-0  -c mssql-server -n <namespaceName>-- /bin/bash
+   kubectl exec -it master-0  -c mssql-server -n <namespaceName> -- /bin/bash
    supervisorctl restart mssql-server
    exit
    ```

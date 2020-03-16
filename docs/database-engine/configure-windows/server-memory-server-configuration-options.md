@@ -22,11 +22,11 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028742"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288351"
 ---
 # <a name="server-memory-configuration-options"></a>“服务器内存”配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "69028742"
 
 <sup>2</sup> 有关为当前主机中给定数量的关联 CPU 计算得出的默认工作线程数的信息，请参阅介绍如何[配置最大工作线程数服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文档页。
 
-## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 配置内存选项的方式  
+## <a name="how-to-configure-memory-options-using-ssmanstudiofull"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 配置内存选项的方式  
 使用“min server memory”  和“max server memory”  这两个服务器内存选项重新配置由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例管理的内存量 (MB)。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>配置固定内存量的过程（不推荐）  
@@ -105,7 +105,7 @@ ms.locfileid: "69028742"
   
 6.  在“本地安全策略设置”对话框中，添加有权运行 sqlservr.exe （[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动帐户）的帐户  。  
   
-## <a name="running-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>运行多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例  
+## <a name="running-multiple-instances-of-ssnoversion"></a>运行多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例  
  当运行多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，可以使用三种方法来管理内存：  
   
 -   使用“max server memory”控制内存使用量，[如上所述](#max_server_memory)  。 为每个实例建立最大设置，注意总的允许设置值不能大于计算机上的物理总内存。 可能需要为每个实例提供与预期的工作负荷或数据库大小成正比的内存。 这种方法的优势体现在：当启动新的进程或实例时，可以立即为这些进程或实例提供可用内存。 这种方法的缺点为：如果没有运行所有实例，则所有运行中的实例都无法使用剩余的可用内存。  

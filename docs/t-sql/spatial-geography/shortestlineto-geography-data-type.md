@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4832f28fbd07d85c9afaaf7874a51655b6922dc3
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68042604"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090584"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68042604"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>备注  
  该方法返回一个 LineString 实例，它包含的端点位于所比较的两个不相交 geography 实例的边界上   。 返回的 LineString 长度等于两个 geography 实例之间的最短距离   。 当两个 geography 实例彼此相交时，将返回空 LineString 实例   。  
@@ -70,5 +70,5 @@ ms.locfileid: "68042604"
   
 ## <a name="see-also"></a>另请参阅  
  [地理实例上的扩展方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+ [ShortestLineTo（geometry 数据类型）](../../t-sql/spatial-geometry/shortestlineto-geometry-data-type.md)  
   
