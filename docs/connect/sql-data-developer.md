@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893913"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198414"
 ---
 # <a name="sql-data-developer"></a>SQL 数据开发人员
 使用 Microsoft 的 SQL 数据平台，为 Web 服务器、企业服务器和云创建跨移动设备和桌面设备以数据为中心的解决方案。  
@@ -23,7 +23,7 @@ ms.locfileid: "68893913"
 ## <a name="sql-data-storage"></a>SQL 数据存储
 * [SQL Server 数据库引擎](../database-engine/configure-windows/sql-server-database-engine.md)：使用 SQL Server 数据库引擎，可以创建用于联机事务处理或联机分析处理数据的关系数据库。 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/)：使用 SQL Azure，可以将数据库迁移到云中 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876)：SQL Server Compact 用于为移动设备、桌面设备和 Web 客户端生成独立且偶尔连接的应用程序。
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709)：SQL Server Compact 用于为移动设备、桌面设备和 Web 客户端生成独立且偶尔连接的应用程序。
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)：在开发过程中使用 LocalDB，可以编写和测试 Transact-SQL 代码，而无需管理 SQL Server 的完整服务器实例。
 
 ## <a name="sql-data-tools"></a>SQL Data tools

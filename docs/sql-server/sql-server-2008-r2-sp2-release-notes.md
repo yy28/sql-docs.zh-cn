@@ -13,12 +13,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 61afc55e04f7cd317e11c7db527dc97fb80fc7be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9625b8f37d69a8360859c8fd17a207b696234b9f
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72904254"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112362"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "72904254"
 |仅 SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 的客户端和可管理性工具（包括 SQL Server 2008 R2 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2008 R2 SP2 的 32 位版|SQLServer2008R2SP2-KB2630458-x86-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251790)(#此处)）|  
 |SQL Server 2008 R2 Management Studio Express 或 SQL Server 2008 R2 SP1 Management Studio Express 的 32 位版|升级到 SQL Server 2008 R2 SP2 Management Studio Express 的 32 位版|SQLManagementStudio_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251791)(#此处)）|  
 |SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 的任何版本的 32 位版 **和** 客户端和可管理性工具（包括 SQL Server 2008 R2 RTM Management Studio）的 32 位版|将所有产品都升级到 SQL Server 2008 R2 SP2 的 32 位版|SQLServer2008R2SP2-KB2630458-x86-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251790)(#此处)）|  
-|[Microsoft SQL Server 2008 R2 RTM 功能包](https://www.microsoft.com/download/en/details.aspx?id=16978)(#microsoft-sql-server-2008-r2-rtm-功能包) 中一种或多种工具的 32 位版|将工具升级到 Microsoft SQL Server 2008 R2 SP2 功能包的 32 位版|[Microsoft SQL Server 2008 R2 SP2 功能包](https://go.microsoft.com/fwlink/?LinkId=251792)中的一个或多个文件|  
+|[Microsoft SQL Server 2008 R2 RTM 功能包](https://www.microsoft.com/download/details.aspx?id=44272)(#microsoft-sql-server-2008-r2-rtm-功能包) 中一种或多种工具的 32 位版|将工具升级到 Microsoft SQL Server 2008 R2 SP2 功能包的 32 位版|[Microsoft SQL Server 2008 R2 SP2 功能包](https://go.microsoft.com/fwlink/?LinkId=251792)中的一个或多个文件|  
 |没有安装 SQL Server 2008 R2 的 32 位版|安装 Server 2008 R2（包括 SP2）|转到 [SQL Server 2008 R2 SP2 – Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) 并按说明操作。|  
 |没有安装 SQL Server 2008 R2 Management Studio 的 32 位版|安装 SQL Server 2008 R2 Management Studio（包括 SP2）|SQLManagementStudio_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251791) (#此处)），以安装免费的 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
 |SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 的任何版本的 64 位版|升级到 SQL Server 2008 R2 SP2 的 64 位版|SQLServer2008R2SP2-KB2630458-x64-ENU or SQLServer2008R2SP2-KB2630455-IA64-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251790)(#此处)）|  
@@ -50,14 +50,14 @@ ms.locfileid: "72904254"
 |仅 SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 的客户端和可管理性工具（包括 SQL Server 2008 R2 Management Studio）的 64 位版|将客户端和可管理性工具升级到 SQL Server 2008 R2 SP2 的 64 位版|SQLServer2008R2SP2-KB2630458-x64-ENU.exe 或 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251790)(#此处)）|  
 |SQL Server 2008 R2 Management Studio Express 或 SQL Server 2008 R2 SP1 Management Studio Express 的 64 位版|升级到 SQL Server 2008 R2 SP2 Management Studio Express 的 64 位版|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251791)(#此处)）|  
 |SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 的任何版本的 64 位版 **和** 客户端和可管理性工具（包括 SQL Server 2008 R2 RTM Management Studio）的 64 位版|将所有产品都升级到 SQL Server 2008 R2 SP2 的 64 位版|SQLServer2008R2SP2-KB2630458-x64-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251790)(#此处)）|  
-|[Microsoft SQL Server 2008 R2 RTM 功能包](https://www.microsoft.com/download/en/details.aspx?id=16978)(#microsoft-sql-server-2008-r2-rtm-功能包) 中一种或多种工具的 64 位版|将工具升级到 Microsoft SQL Server 2008 R2 SP2 功能包的 64 位版|[Microsoft SQL Server 2008 R2 SP2 功能包](https://go.microsoft.com/fwlink/?LinkId=251792)中的一个或多个文件|  
+|[Microsoft SQL Server 2008 R2 RTM 功能包](https://www.microsoft.com/download/details.aspx?id=44272)(#microsoft-sql-server-2008-r2-rtm-功能包) 中一种或多种工具的 64 位版|将工具升级到 Microsoft SQL Server 2008 R2 SP2 功能包的 64 位版|[Microsoft SQL Server 2008 R2 SP2 功能包](https://go.microsoft.com/fwlink/?LinkId=251792)中的一个或多个文件|  
 |没有安装 SQL Server 2008 R2 的 64 位版|安装 Server 2008 R2（包括 SP2）|转到 [SQL Server 2008 R2 SP2 – Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) 并按说明操作。|  
 |没有安装 SQL Server 2008 R2 Management Studio 的 64 位版|安装 SQL Server 2008 R2 Management Studio（包括 SP2）|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251791) (#此处)），以安装免费的 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 如果另一进程锁定了 SQAGTRES.dll 可能会导致安装程序失败  
-**问题**：SQL Server 安装程序操作可能会失败并出现如下错误： `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 。根本原因是另一个进程锁定了 C:\Windows\system32\SQAGTRES.DLL 而安装程序无法更新它。  
+**问题**：SQL Server 安装程序操作可能失败，出现以下错误：`Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.`根本原因是另一进程锁定了 C:\Windows\system32\SQAGTRES.DLL，从而导致安装程序无法更新该文件。  
   
-**变通方法**：将 C:\Windows\system32\SQAGTRES.DLL 重命名为一个 C:\Windows\system32\SQAGTRES_old.DLL 这样的临时名称，然后选择安装程序错误信息上的“重试”选项。 这样，安装程序就可以继续运行了。 重新启动之后，您可以删除临时文件 C:\Windows\system32\SQAGTRES_old.DLL。  
+**解决方法**：将 C:\Windows\system32\SQAGTRES.DLL 重命名为临时名称，比如 C:\Windows\system32\SQAGTRES_old.DLL，然后在安装错误消息处选择重试选项。 这样，安装程序就可以继续运行了。 重新启动之后，您可以删除临时文件 C:\Windows\system32\SQAGTRES_old.DLL。  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 此 Service Pack 中已修复的已知问题  
 有关此 Service Pack 中已修复的 Bug 和已知问题的完整列表，请参阅此 [主知识库文章](https://support.microsoft.com/kb/2630455)。  

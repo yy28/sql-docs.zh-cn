@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68028628"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375554"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服务（数据库引擎和 SSAS）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68028628"
   
  在启动后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器将启动并使用 UDP 1434 端口。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器将读取注册表，识别计算机上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，并注明它们使用的端口和命名管道。 当一台服务器具有两个或多个网卡时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器会为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回其遇到的第一个已启用的端口。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器支持 ipv6 和 ipv4。  
   
- 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端请求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源时，客户端网络库将使用 1434 端口向服务器发送一条 UDP 消息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器将用请求的实例的 TCP/IP 端口或命名管道做出响应。 然后，客户端应用程序中的网络库将使用所需实例的端口或命名管道向服务器发送请求来完成连接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器不返回默认实例的端口信息。  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端请求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源时，客户端网络库将使用 1434 端口向服务器发送一条 UDP 消息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器将用请求的实例的 TCP/IP 端口或命名管道做出响应。 然后，客户端应用程序中的网络库将使用所需实例的端口或命名管道向服务器发送请求来完成连接。 
   
  有关启动和停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器服务的信息，请参阅 [启动、停止、暂停、继续、重启数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   

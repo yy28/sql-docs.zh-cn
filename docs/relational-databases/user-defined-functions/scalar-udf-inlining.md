@@ -16,11 +16,11 @@ author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339175"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287401"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -36,9 +36,9 @@ ms.locfileid: "78339175"
 
 - **迭代调用：** 以迭代方式调用 UDF，每个符合条件的元组一次。 由于函数调用，这会导致重复上下文切换的额外成本。 尤其是在其定义中执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的 UDF 会受到严重影响。
 
-- **缺乏成本计算：** 在优化期间，只有关系运算符会计算成本，而标量运算符则不计算成本。 在引入标量 UDF 之前，其他标量运算符通常很便宜并且不需要成本计算。 为标量运算添加的小 CPU 成本就足够了。 有些情况下实际成本很高，但仍然没有得到充分代表。
+- **缺乏成本计算：** 在优化期间，只有关系运算符会计算成本，标量运算符则不计算成本。 在引入标量 UDF 之前，其他标量运算符通常很便宜并且不需要成本计算。 为标量运算添加的小 CPU 成本就足够了。 有些情况下实际成本很高，但仍然没有得到充分代表。
 
-- **解释执行：** UDF 以一批语句进行计算，并按逐个语句执行。 编译每个语句本身，并缓存编译的计划。 尽管此缓存策略能够通过避免重新编译节省一些时间，但每个语句仍需单独执行。 不执行跨语句优化。
+- **解释型执行：** UDF 以一批语句的形式进行计算，并按逐个语句执行。 编译每个语句本身，并缓存编译的计划。 尽管此缓存策略能够通过避免重新编译节省一些时间，但每个语句仍需单独执行。 不执行跨语句优化。
 
 - **串行执行：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许在调用 UDF 的查询中进行查询内并行操作。 
 
@@ -137,12 +137,12 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 <a name="requirements"></a>如果满足所有以下条件，则标量 T-SQL UDF 可以内联：
 
 - UDF 使用以下构造编写：
-    - `DECLARE`，`SET`：变量声明和分配。
-    - `SELECT`：使用单个/多个变量赋值 SQL 查询<sup>1</sup>。
-    - `IF`/`ELSE`：分支与任意级别的嵌套。
-    - `RETURN`：单个或多个返回语句。
-    - `UDF`：嵌套/递归函数调用<sup>2</sup>。
-    - 其他：关系操作，例如 `EXISTS`，`ISNULL`。
+    - `DECLARE`、`SET`：变量声明和赋值。
+    - `SELECT`设置用户帐户 ：具有单个/多个变量赋值的 SQL 查询<sup>1</sup>。
+    - `IF`/`ELSE`：具有任意级别嵌套的分支。
+    - `RETURN`设置用户帐户 ：单个或多个返回语句。
+    - `UDF`设置用户帐户 ：嵌套/递归函数调用<sup>2</sup>。
+    - 其他：关系操作，例如 `EXISTS`、`ISNULL`。
 - UDF 不会调用任何与时间相关的内部函数（例如 `GETDATE()`）或具有副作用的函数<sup>3</sup>（例如 `NEWSEQUENTIALID()`）。
 - UDF使用 `EXECUTE AS CALLER` 子句（如果未指定 `EXECUTE AS` 子句，则为默认行为）。
 - UDF 不引用表变量或表值参数。
@@ -156,7 +156,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - UDF 不是配分函数。
 - UDF 不包含对公用表表达式 (CTE) 的引用
 
-<sup>1</sup> 带变量累计/聚合（例如 `SELECT`）的 `SELECT @val += col1 FROM table1` 不支持内联。
+<sup>1</sup> 带变量累计/聚合（例如 `SELECT @val += col1 FROM table1`）的 `SELECT` 不支持内联。
 
 <sup>2</sup> 递归 UDF 将仅内联到某个深度。
 

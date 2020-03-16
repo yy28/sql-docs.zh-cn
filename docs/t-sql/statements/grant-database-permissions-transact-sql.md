@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982216"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288191"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 数据库权限 (Transact-SQL)
 
@@ -73,23 +73,23 @@ Database_user  指定数据库用户。
 
 Database_role  指定数据库角色。
 
-Application_role*适用于：* 及更高版本、
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+Application_role
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
 指定应用程序角色。
 
-Database_user_mapped_to_Windows_User*适用于：* 及更高版本
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+Database_user_mapped_to_Windows_User
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本  
 
 指定映射到 Windows 用户的数据库用户。
 
-Database_user_mapped_to_Windows_Group*适用于：* 及更高版本
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+Database_user_mapped_to_Windows_Group
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本  
 
 指定映射到 Windows 组的数据库用户。
 
-Database_user_mapped_to_Windows_certificate*适用于：* 及更高版本
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+Database_user_mapped_to_Windows_certificate
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本  
 
 指定映射到证书的数据库用户。
 
@@ -109,7 +109,7 @@ Database_user_with_no_login  指定无相应服务器级主体的数据库用户
 
 |数据库权限|数据库权限隐含的权限|服务器权限隐含的权限|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTER DATABASE BULK OPERATIONS<br/>适用对象：  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>适用对象：[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  。|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -214,7 +214,7 @@ Database_user_with_no_login  指定无相应服务器级主体的数据库用户
 
 ### <a name="a-granting-permission-to-create-tables"></a>A. 授予创建表的权限
 
-以下示例授予用户 `CREATE TABLE` 对 `AdventureWorks` 数据库的 `MelanieK` 权限。
+以下示例授予用户 `MelanieK` 对 `AdventureWorks` 数据库的 `CREATE TABLE` 权限。
 
 ```sql
 USE AdventureWorks;
@@ -246,7 +246,7 @@ GO
 
 ### <a name="d-granting-control-permission-to-a-database-user"></a>D. 将 CONTROL 权限授予数据库用户
 
- 以下示例授予数据库用户 `CONTROL` 对 `AdventureWorks2012` 数据库的 `Sarah` 权限。 用户必须存在于数据库中，并且必须将上下文设置为数据库。
+ 以下示例授予数据库用户 `Sarah` 对 `AdventureWorks2012` 数据库的 `CONTROL` 权限。 用户必须存在于数据库中，并且必须将上下文设置为数据库。
 
 ```sql
 USE AdventureWorks2012;

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 6ff5c1c5944e1313d6c95cd35be288ad4d2154c8
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: a4103e22facbb717b6797b91d8b218cc6ce4b0b7
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340429"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288111"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -56,7 +56,7 @@ ms.locfileid: "78340429"
 
 ## <a name="manage-the-sql-server-service"></a>管理 SQL Server 服务
 
-以下部分说明如何启动、停止、重启 SQL Server 服务并检查其状态。 
+以下部分说明如何启动、停止、重启 SQL Server 服务并检查其状态。
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>在 Red Hat Enterprise Linux (RHEL) 和 Ubuntu 中管理 mssql-server 服务 
 

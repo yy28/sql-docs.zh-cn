@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73882396"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285981"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>使用 Azure Data Studio 连接到 SQL Server 大数据群集
 
@@ -21,7 +21,7 @@ ms.locfileid: "73882396"
 
 本文介绍如何从 Azure Data Studio 连接到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 已部署的 [SQL Server 2019 大数据群集](deployment-guidance.md)。
 - [SQL Server 2019 大数据工具](deploy-big-data-tools.md)：

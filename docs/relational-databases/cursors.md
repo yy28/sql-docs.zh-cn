@@ -1,7 +1,7 @@
 ---
 title: 游标 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2018
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: a053f49a6ab3b42e31c5b71c2d2d558ea3170440
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68140814"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112334"
 ---
 # <a name="cursors"></a>游标
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ API 游标支持 OLE DB 和 ODBC 中的 API 游标函数。 API 服务器游标�
   
 > [!NOTE]
 > 由于静态游标的结果集存储在“tempdb”中的一个工作表中，因此结果集中的行大小不能超过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表的最大行大小  。  
-> 有关详细信息，请参阅[查询处理体系结构指南中的工作表](../relational-databases/query-processing-architecture-guide.md#worktables)。 有关最大行大小的详细信息，请参阅 [SQL Server 最大容量规范](../sql-server/maximum-capacity-specifications-for-sql-server.md#Engine)。  
+> 有关详细信息，请参阅[查询处理体系结构指南中的工作表](../relational-databases/query-processing-architecture-guide.md#worktables)。 有关最大行大小的详细信息，请参阅 [SQL Server 最大容量规范](../sql-server/maximum-capacity-specifications-for-sql-server.md)。  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 称静态游标为不敏感游标。 一些数据库 API 将这类游标识别为快照游标。  
   

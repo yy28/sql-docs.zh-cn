@@ -10,12 +10,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e06daf1c4963df2706781ba222ef5efd07ab9249
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73632955"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112379"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "73632955"
 |仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP1 的 32 位版|SQLManagementStudio_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
 |SQL Server 2012 Management Studio Express 的 32 位版|升级到 SQL Server 2012 SP1 Management Studio Express 的 32 位版|SQLManagementStudio_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
 |SQL Server 2012 的任何版本的 32 位版 **和** 客户端和可管理性工具（包括 SQL Server 2012 RTM Management Studio）的 32 位版|将所有产品都升级到 SQL Server 2012 SP1 的 32 位版|SQLServer2012SP1-KB2674319-x86-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|[Microsoft SQL Server 2012 RTM 功能包](https://www.microsoft.com/download/details.aspx?id=16978)(#microsoft-sql-server-2012-rtm-功能包) 中一种或多种工具的 32 位版|将工具升级到 Microsoft SQL Server 2012 SP1 功能包的 32 位版|[Microsoft SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一个或多个文件|  
+|[Microsoft SQL Server 2012 RTM 功能包](https://www.microsoft.com/download/details.aspx?id=44272)(#microsoft-sql-server-2012-rtm-功能包) 中一种或多种工具的 32 位版|将工具升级到 Microsoft SQL Server 2012 SP1 功能包的 32 位版|[Microsoft SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一个或多个文件|  
 |没有安装 SQL Server 2012 的 32 位版|安装包括 SP1 的 32 位 Server 2012（预装了 SP1 的新实例）|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x86-ENU.box（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
 |没有安装 SQL Server 2012 Management Studio 的 32 位版|安装 32 位 SQL Server 2012 Management Studio（包括 SP1）|SQLManagementStudio_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=267905)(#此处)）|  
 |无 32 位版 SQL Server 2012 RTM Express|安装 32 位 SQL Server 2012 Express（包括 SP1）|SQLEXPR32_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=267905)(#此处)）|  
@@ -118,7 +118,7 @@ ms.locfileid: "73632955"
 |仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 R2 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP1 的 64 位版|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
 |SQL Server 2012 Management Studio Express 的 64 位版|升级到 SQL Server 2012 SP1 Management Studio Express 的 64 位版|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
 |SQL Server 2012 的任何版本的 64 位版 **和** 客户端和可管理性工具（包括 SQL Server 2012 RTM Management Studio）的 64 位版|将所有产品都升级到 SQL Server 2012 SP1 的 64 位版|SQLServer2012SP1-KB2674319-x64-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|[Microsoft SQL Server 2012 RTM 功能包](https://www.microsoft.com/download/en/details.aspx?id=16978)(#microsoft-sql-server-2012-rtm-功能包) 中一种或多种工具的 64 位版|将工具升级到 Microsoft SQL Server 2012 SP1 功能包的 64 位版|[Microsoft SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一个或多个文件|  
+|[Microsoft SQL Server 2012 RTM 功能包](https://www.microsoft.com/download/details.aspx?id=44272)(#microsoft-sql-server-2012-rtm-功能包) 中一种或多种工具的 64 位版|将工具升级到 Microsoft SQL Server 2012 SP1 功能包的 64 位版|[Microsoft SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一个或多个文件|  
 |没有安装 SQL Server 2012 的 64 位版|安装包括 SP1 的 64 位 Server 2012（预装了 SP1 的新实例）|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x64-ENU.box（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
 |没有安装 SQL Server 2012 Management Studio 的 64 位版|安装 64 位 SQL Server 2012 Management Studio（包括 SP1）|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
 |无 64 位版 SQL Server 2012 RTM Express|安装 64 位 SQL Server 2012 Express（包括 SP1）|SQLEXPR_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  

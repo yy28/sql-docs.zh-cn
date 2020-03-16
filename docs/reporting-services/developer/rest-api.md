@@ -1,6 +1,6 @@
 ---
 title: 使用 REST API 进行开发
-ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
+description: REST API 提供对 SQL Server 2017 Reporting Services 报表服务器目录中对象的编程访问。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -9,12 +9,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 48d3cea7dfb57ad771f512806fd0c95528566559
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75321816"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937668"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 进行开发
 
@@ -42,14 +42,14 @@ REST API 请求/响应对可分解为五个组件：
     * 所需的 [ HTTP 方法](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)（也称为操作或谓词），它告知该服务你请求的操作类型。 Reporting Services REST API 支持 DELETE、GET、HEAD、PUT、POST 和 PATCH 方法。
     * 指定的 URI 和 HTTP 方法所需的其他可选的标头字段。
 
-* 可选的 HTTP 请求消息正文字段，用于支持 URI 和 HTTP 操作。 例如，POST 操作包含作为复杂参数传递的 MIME 编码对象。 对于 POST 或 PUT 操作，还应在 `Content-type` 请求标头中指定正文的 MIME 编码类型。 某些服务要求使用特定的 MIME 类型，如 `application/json`。
+* 可选的 HTTP 请求消息正文字段，用于支持 URI 和 HTTP 操作  。 例如，POST 操作包含作为复杂参数传递的 MIME 编码对象。 对于 POST 或 PUT 操作，还应在 `Content-type` 请求标头中指定正文的 MIME 编码类型。 某些服务要求使用特定的 MIME 类型，如 `application/json`。
 
-* HTTP 响应消息标头字段：
+* HTTP 响应消息标头字段  ：
 
     * [HTTP 状态代码](http://www.w3.org/Protocols/HTTP/HTRESP.html)，包括从 2xx 成功代码到 4xx 或 5xx 错误代码在内的各种代码。 或者，可能返回服务定义的状态代码，如 API 文档中所指示。
     * 可选的其他标头字段，用于支持请求的响应，例如 `Content-type` 响应标头。
 
-* 可选的 HTTP 响应消息正文字段：
+* 可选的 HTTP 响应消息正文字段  ：
 
     * 在 HTTP 响应正文中返回 MIME 编码的响应对象，例如来自返回数据的 GET 方法的响应。 通常，这些对象以结构化格式（如 JSON 或 XML）返回，如 `Content-type` 响应标头所指示。
 

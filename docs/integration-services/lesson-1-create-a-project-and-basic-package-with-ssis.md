@@ -11,11 +11,11 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257075"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288131"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 课：使用 SSIS 创建项目和基本包
 
@@ -27,7 +27,7 @@ ms.locfileid: "75257075"
   
 在创建包之前，需要了解源数据和目标数据中使用的格式。 然后，就可定义将源数据映射到目标数据所需的转换。  
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 本教程依赖于 Microsoft SQL Server Data Tools、一组示例包和一个示例数据库。
 

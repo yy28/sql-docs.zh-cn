@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412517"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286661"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "74412517"
 支持以下查询构造：  
 
 CASE 表达式：CASE 可用于允许使用有效表达式的任意语句或子句。
-   - 适用对象：  [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
+   - 适用对象：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  。  
     从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，本机编译 T-SQL 模块已支持 CASE 语句。
 
 SELECT 子句：  
@@ -57,19 +57,19 @@ SELECT 子句：
 -   列名和别名（使用 AS 或 = 语法）。  
 
 -   标量子查询
-    - 适用对象：  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持标量子查询。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - 适用对象：  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 DISTINCT 运算符。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION 和 UNION ALL
-    - 适用对象：  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 UNION 和 UNION ALL 运算符。
 
 -   表分配  
@@ -81,11 +81,11 @@ FROM 子句：
 -   FROM \<本机编译的内联 TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。
-    - 适用对象：  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 JOINS。
 
 -   子查询 `[AS] table_alias`。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。 
-    - 适用对象：  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持子查询。
 
 WHERE 子句：  
@@ -94,7 +94,7 @@ WHERE 子句：
 
 -   AND、BETWEEN  
 -   OR、NOT、IN、EXISTS
-    - 适用对象：  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 OR/NOT/IN/EXISTS 运算符。
 
 
@@ -191,7 +191,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   按位运算符 ~、&、| 和 ^  
 
 -   APPLY 运算符
-    - 适用对象：  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 APPLY 运算符。
 
 ##  <a name="bfncsp"></a> 本机编译模块中的内置函数  
@@ -202,24 +202,24 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   日期函数：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字符串函数：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - 适用对象：  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
 
--   恒等函数：SCOPE_IDENTITY  
+-   标识函数：SCOPE_IDENTITY  
 
 -   NULL 函数：ISNULL  
 
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函数  
-    - 适用对象：  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 JSON 函数。
 
 -   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
 
 -   系统函数：@@rowcount。 本机编译存储过程中的语句会更新 @@rowcount，因此，可使用本机编译存储过程中的 @@rowcount 来确定受在该本机编译存储过程中执行的上条语句影响的行数。 但是，@@rowcount 在本机编译存储过程执行开始和结束时会重置为 0。  
 
--   安全函数 ︰IS_MEMBER({'group' | 'role'})、IS_ROLEMEMBER ('role' [, 'database_principal'])、IS_SRVROLEMEMBER ('role' [, 'login'])、ORIGINAL_LOGIN()、SESSION_USER、CURRENT_USER、SUSER_ID(['login'])、SUSER_SID(['login'] [, Param2])、SUSER_SNAME([server_user_sid])、SYSTEM_USER、SUSER_NAME、USER、USER_ID(['user'])、USER_NAME([id])、CONTEXT_INFO()。
+-   安全性函数：IS_MEMBER({'group' | 'role'})、IS_ROLEMEMBER ('role' [, 'database_principal'])、IS_SRVROLEMEMBER ('role' [, 'login'])、ORIGINAL_LOGIN()、SESSION_USER、CURRENT_USER、SUSER_ID(['login'])、SUSER_SID(['login'] [, Param2])、SUSER_SNAME([server_user_sid])、SYSTEM_USER、SUSER_NAME、USER、USER_ID(['user'])、USER_NAME([id])、CONTEXT_INFO()。
 
 -   可以嵌套本机模块的执行。
 
@@ -244,7 +244,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="los"></a>排序限制  
  可以在使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，[TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
 
- 如果查询同时使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 运算符和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：**消息 41398、级别 16、状态 1、程序 *\<procedureName>* 、行 *\<lineNumber>* ，TOP 运算符最多可返回 8192 行；已请求 *\<number>* 。**  
+ 如果查询同时使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 运算符和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：消息 41398、级别 16、状态 1、程序 \<procedureName>、行 \<lineNumber>，TOP 运算符最多可返回 8192 行；已请求 \<number>。     
 
  如果您没有 TOP 子句，则可以使用 ORDER BY 对任何数目的行进行排序。  
 
@@ -292,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **对返回行数的限制：** 有两种情形可减少可由 TOP 运算符返回的行数：  
+ **对返回的行数的限制：** 有两种情形可减少可由 TOP 运算符返回的行数：  
 
 -   在查询中使用 JOIN。  JOIN 对该限制的影响依赖于查询计划。  
 

@@ -19,11 +19,11 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71680966"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286821"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
 
@@ -65,7 +65,7 @@ ms.locfileid: "71680966"
   
 |Feature|说明|  
 |-------------|-----------------|  
-|parameters|参数指定包将使用的数据。 您可以分别使用包参数和项目参数将参数范围限定在包级别或项目级别。 参数可用于表达式或任务中。 在将项目部署到目录时，可为每个参数分配文字值，或者使用在设计时分配的默认值。 还可以引用环境变量来代替文字值。 在包执行时解析环境变量值。|  
+|参数|参数指定包将使用的数据。 您可以分别使用包参数和项目参数将参数范围限定在包级别或项目级别。 参数可用于表达式或任务中。 在将项目部署到目录时，可为每个参数分配文字值，或者使用在设计时分配的默认值。 还可以引用环境变量来代替文字值。 在包执行时解析环境变量值。|  
 |环境|环境是可由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目引用的变量的容器。 每个项目可以具有多个环境引用，但包执行的单个实例只能引用来自单个环境的变量。 环境允许您对分配给包的值进行组织。 例如，您可以具有名为“开发”、“测试”和“生产”的环境。|  
 |环境变量|环境变量定义可在包执行过程中赋给参数的文字值。 若要使用某一环境变量，请创建环境引用（在与具有参数的环境相对应的项目中），向该环境变量的名称分配某一参数值，并且在配置执行实例时指定相应的环境引用。|  
 |SSISDB 目录|所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象都在某一 SQL Server 实例上称作 SSISDB 目录的数据库中进行存储和管理。 通过该目录，您可以使用文件夹组织您的项目和环境。 每个 SQL Server 实例可具有一个目录。 每个目录中可具有零个或多个文件夹。 每个文件夹可具有零个或多个项目以及零个或多个环境。 该目录中的文件夹也可以用作针对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象的权限的边界。|  
