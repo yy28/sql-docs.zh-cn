@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096089"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79428148"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL 数据库中的图形处理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "74096089"
 
 ## <a name="what-is-a-graph-database"></a>什么是图形数据库？  
 图数据库是节点（或顶点）和边缘（或关系）的集合。 节点表示实体（例如，某个人或组织），边缘表示该实体连接的两个节点之间的关系（例如，爱好或朋友）。 节点和边缘都可能具有与其相关联的属性。 下面是使图形数据库独一无二的某些功能：  
--   边缘或关系是图形数据库中的第一类实体，可以带有关联的特性或属性。 
--   单个边缘可以灵活连接图形数据库中的多个节点。
--   可以轻松表达模式匹配和多跃点导航查询。
--   可以轻松表达传递闭包和多态查询。
+-    边缘或关系是图形数据库中的第一类实体，可以带有关联的特性或属性。 
+-    单个边缘可以灵活连接图形数据库中的多个节点。
+-    可以轻松表达模式匹配和多跃点导航查询。
+-    可以轻松表达传递闭包和多态查询。
 
 ## <a name="when-to-use-a-graph-database"></a>何时使用图形数据库
 
-不能使用关系数据库实现的目的也不能使用图形数据库来实现。 但是，图形数据库可以简化特定类型的查询。 此外，通过特定的优化，某些查询的性能可能更好。 可根据以下因素来确定是要选择图形数据库还是关系数据库：  
--   您的应用程序具有分层数据。 HierarchyID 数据类型可用于实现层次结构，但有一些限制。 例如，它不允许存储节点的多个父项。
--   您的应用程序具有复杂的多对多关系;随着应用程序的发展，会添加新的关系。
--   需要分析互联的数据和关系。
+关系数据库可以实现图形数据库的任何内容。 但是，图形数据库可以简化特定类型的查询。 此外，通过特定的优化，某些查询的性能可能更好。 选择关系数据库还是图形数据库取决于以下因素：  
+-    您的应用程序具有分层数据。 HierarchyID 数据类型可用于实现层次结构，但有一些限制。 例如，它不允许存储节点的多个父项。
+-    您的应用程序具有复杂的多对多关系;随着应用程序的发展，会添加新的关系。
+-    需要分析互联的数据和关系。
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>图形功能在中引入[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>图形功能在中引入[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 我们开始将图形扩展添加到 SQL Server，以便更轻松地存储和查询图形数据。 第一版中引入了以下功能。 
 
 
@@ -68,7 +68,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>完全集成在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引擎中 
+### <a name="fully-integrated-in-ssnoversion-engine"></a>完全集成在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引擎中 
 图扩展已完全集成到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引擎中。 使用相同的存储引擎、元数据、查询处理器等来存储和查询图形数据。 在单个查询中跨关系图和关系数据进行查询。 结合了图形功能和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列存储、HA、R services 等其他技术。SQL graph 数据库还支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中提供的所有安全性和符合性功能。
  
 ### <a name="tooling-and-ecosystem"></a>工具和生态系统

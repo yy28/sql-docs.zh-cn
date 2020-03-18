@@ -220,6 +220,10 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: 使用扩展的 Spark History Server
               href: big-data-cluster/spark-history-server.md
+        - name: 故障排除
+          items:
+            - name: Active Directory 部署
+              href: big-data-cluster/troubleshoot-active-directory.md
     - name: 参考
       items:
         - name: 部署参考

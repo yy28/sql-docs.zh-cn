@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340439"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287061"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改用户和工作区设置
 
@@ -28,9 +28,9 @@ ms.locfileid: "78340439"
 
 ## <a name="creating-user-and-workspace-settings"></a>创建用户和工作区设置
 
-菜单命令“文件” > “首选项” > “设置”（Mac 上为“Code”[代码] > “Preferences”[首选项] > “Settings”[设置]）提供用于配置用户和工作区设置的入口点 **** **** **** **** **** **** 。 你将获得默认设置的列表。 将想要更改的任何设置复制到相应的 `settings.json` 文件。 右侧选项卡允许在用户设置文件和工作区设置文件之间快速切换。
+菜单命令“文件” > “首选项” > “设置”（Mac 上为“Code”[代码] > “Preferences”[首选项] > “Settings”[设置]）提供用于配置用户和工作区设置的入口点       。 你将获得默认设置的列表。 将想要更改的任何设置复制到相应的 `settings.json` 文件。 右侧选项卡允许在用户设置文件和工作区设置文件之间快速切换。
 
-还可从“命令面板 **** ”（Ctrl+Shift+P **** ）（使用“首选项: **** 打开用户设置”和“首选项: **** 打开工作区设置”），或使用键盘快捷键（Ctrl+, **** ）打开用户和工作区设置。
+还可从“命令面板  ”（Ctrl+Shift+P  ）（使用“首选项:  打开用户设置”和“首选项:  打开工作区设置”），或使用键盘快捷键（Ctrl+,  ）打开用户和工作区设置。
 
 以下示例在编辑器中禁用行号，并将代码行配置为自动缩进。
 

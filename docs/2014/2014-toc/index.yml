@@ -3,18 +3,18 @@ title: SQL Server 2014 文档
 summary: 本地 Microsoft SQL Server 2014 是一个关系数据库。
 metadata:
   title: SQL Server 2014 主题
-  description: 选择你感兴趣的 SQL Server 2014 领域。
+  description: 选择你感兴趣的 SQL Server 2014 本地关系数据库部分或相关产品和服务部分。
   ms.prod: sql
   ms.topic: landing-page
   author: MightyPen
   ms.author: genemi
   ms.date: 11/25/2019
-  ms.openlocfilehash: 68632f82835836b9097e8547683b069771143e2d
-  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.openlocfilehash: 70af131ea185351e1034e1ec093094cce1369e4c
+  ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 01/31/2020
-  ms.locfileid: "75224402"
+  ms.lasthandoff: 03/12/2020
+  ms.locfileid: "79190515"
 landingContent:
 - title: 特别文章
   linkLists:
