@@ -20,12 +20,12 @@ ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362ccc5c85523b3d37cb792a42e8be4cd87d7510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c3dba46f4d0e2ecdebda13fe3fe9412219c2a755
+ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68109005"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448472"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68109005"
 |**is_expiration_checked**|**bit**|检查密码过期。|  
 |**password_hash**|**varbinary （256）**|SQL 登录密码的哈希。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。|  
   
- 有关此视图所继承的列的列表，请参阅[sys.databases&#41;server_principals &#40;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
+ 有关此视图所继承的列的列表，请参阅[sys.databases&#41;server_principals &#40;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。 列`owning_principal_id`和`is_fixed_role`不是继承自 server_principals。
   
 ## <a name="remarks"></a>备注  
  若要查看[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录名和 Windows 身份验证登录名，请参阅[transact-sql&#41;&#40;server_principals ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
