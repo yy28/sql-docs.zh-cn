@@ -10,12 +10,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75229401"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525458"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
   本文介绍 Microsoft SQL Server 2014 中用于多维模型的 Power View 功能，并为希望在组织中实现多维模型的 Power View 的 BI 专业人员和管理员提供重要信息。  
@@ -28,7 +28,7 @@ ms.locfileid: "75229401"
   
  ![多维模型体系结构的 Power View](../media/daxmd-architecture.gif "多维模型体系结构的 Power View")  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  **服务器要求**  
   
 -   在多维模式下运行的附带 Analysis Services 的 SQL Server 2014 Enterprise 版本或 Business Intelligence 版本。  
@@ -229,7 +229,7 @@ ms.locfileid: "75229401"
   
  返回的 CSDL out 文档将模型表示为命名空间，其中包含实体、关联和属性。  
   
- 有关表格模型的 CSDLBI 注释的详细信息，请参阅 MSDN 上的 [用于商业智能的 CSDL 注释技术参考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 和 [\[MS-CSDLBI\]：带商业智能注释的概念架构定义文件格式](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)。  
+ 有关表格模型的 CSDLBI 注释的详细信息，请参阅 MSDN 上的 [用于商业智能的 CSDL 注释技术参考](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl) 和 [\[MS-CSDLBI\]：带商业智能注释的概念架构定义文件格式](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)。  
   
 ## <a name="client-help-on-officecom"></a>Office.com 上的客户端帮助  
  Office.com 上提供以下文章来帮助用户了解多维模型对象在 Power View 中的显示方式以及如何创建示例报表：  

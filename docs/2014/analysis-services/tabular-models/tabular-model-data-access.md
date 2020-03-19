@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284847"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525468"
 ---
 # <a name="tabular-model-data-access"></a>表格模型数据访问
   Analysis Services 中的表格模型数据库可由用于检索多维模型中的数据或元数据的大多数相同的客户端、接口和语言访问。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "67284847"
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 用户界面中用于筛选数据、执行计算或聚合以及显示关联数据的后续操作由客户端控制且不能以编程方式来执行这些操作。  
   
  
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 客户端向模型发送的查询会作为 DAX 语句发出，您可以在模型上设置跟踪来进行监视。  客户端还向服务器发出了有关初始架构定义的请求，该定义将根据概念性架构定义语言 (CSDL) 呈现。 有关详细信息，请参阅 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 客户端向模型发送的查询会作为 DAX 语句发出，您可以在模型上设置跟踪来进行监视。  客户端还向服务器发出了有关初始架构定义的请求，该定义将根据概念性架构定义语言 (CSDL) 呈现。 有关详细信息，请参阅 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理承载表格模型的实例并查询这些实例中的元数据和数据。 可以处理模型或模型中的对象、创建和管理分区以及设置用于管理数据访问的安全性。 有关详情，请参阅以下主题：  
@@ -78,7 +78,7 @@ ms.locfileid: "67284847"
 ### <a name="csdl"></a>CSDL  
  虽然概念性架构定义语言本身并不是查询语言，但可使用它检索有关模型和模型元数据的信息，然后可使用这些信息来创建报告或创建针对模型的查询。  
   
- 有关如何在表格模型中使用 CSDL 的信息，请参阅 [用于商业智能的 CSDL 批注 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)。  
+ 有关如何在表格模型中使用 CSDL 的信息，请参阅 [用于商业智能的 CSDL 批注 (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)。  
   
 ## <a name="programmatic-interfaces"></a>编程接口  
  用于与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型进行交互的主要接口为架构行集、XMLA 以及由 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]提供的查询客户端和查询工具。  
@@ -94,7 +94,7 @@ ms.locfileid: "67284847"
   
  还可以直接从 Analysis Services 实例以基于 XML 的格式检索数据。 可以使用 DISCOVER_CSDL_METADATA 行集来检索表格模型的架构，也可以将 EXECUTE 或 DISCOVER 命令与现有 ASSL 元素、对象或属性一起使用。 有关详细信息，请参阅以下资源：  
   
--   [用于商业智能的 CSDL 批注 &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [用于商业智能的 CSDL 批注 &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>操作 Analysis Services 对象  
  可以使用 XMLA 命令或使用 AMO 来创建、修改、删除和处理表格模型及其对象（包括表、列、透视、度量值和分区）。 已同时更新 AMO 和 XMLA 以支持表格模型中用于增强报告和建模的其他属性。  
