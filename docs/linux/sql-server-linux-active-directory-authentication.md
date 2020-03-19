@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: be126095fc300820a60bd4b195d43ec7d2059072
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256671"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198374"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教程：对 Linux 上的 SQL Server 使用 Active Directory 身份验证
 
@@ -36,7 +36,7 @@ ms.locfileid: "77256671"
 > * 在 Transact-SQL 中创建基于 AD 的登录名
 > * 使用 AD 身份验证连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 在配置 AD 身份验证前，需要：
 
@@ -125,6 +125,7 @@ ms.locfileid: "77256671"
 
    > [!NOTE]
    > 以上命令允许使用 AES 和 RC4 加密密码进行 AD 身份验证。 RC4 是一个比较旧的加密密码，如果需要更高的安全性，可以选择仅使用 AES 加密密码创建 keytab 条目。
+   > 最后两个 `UserName` 条目必须为小写，否则权限身份验证可能会失败。
 
 1. 执行上述命令后，你将拥有一个名为 mssql.keytab 的 keytab 文件。 将该文件复制到 `/var/opt/mssql/secrets` 文件夹下的 SQL Server 计算机。
 

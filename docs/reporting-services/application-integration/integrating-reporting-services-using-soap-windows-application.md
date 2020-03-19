@@ -1,6 +1,6 @@
 ---
 title: 在 Windows 应用程序中使用 SOAP API
-description: 可以通过 Reporting Services SOAP API 访问报表服务器的完整功能。 通过编写对此 Web 服务进行调用的代码，在 Windows 应用程序中访问此服务。
+description: 可以使用 Reporting Services SOAP API 访问报表服务器的功能。 通过调用 Windows 应用中的 Web 服务来访问该服务。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2cd3fce2844fc815981f7e5ad4850236445f281
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 78bdfb5335f00df64e1ae3a98a6a34aa26f71881
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796988"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198190"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>使用 SOAP 集成 Reporting Services - Windowsb 应用程序
   可以通过 Reporting Services SOAP API 访问报表服务器的完整功能。 SOAP API 是一个 Web 服务，同样可以轻松地访问此服务以向自定义业务应用程序提供企业报表功能。 只需通过编写对此 Web 服务进行调用的代码，即可在 Windows 应用程序中访问此服务。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，可以生成一个代理类，该类公开此 Web 服务的属性和方法，并使你能够使用熟悉的基础结构和工具来生成建立在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技术之上的业务应用程序。  

@@ -1,7 +1,7 @@
 ---
 title: 跟踪标志 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 058becae07f15857f0509cbbc90261b960bc4713
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77705912"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288631"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -86,9 +86,9 @@ ms.locfileid: "77705912"
 |**902**|安装累积更新或 Service Pack 时不执行数据库升级脚本。 如果在脚本升级模式下遇到错误，建议联系 Microsoft SQL 客户服务和支持 (CSS) 获取进一步指导。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2163980)。<br /><br />警告  ：此跟踪标志用于在脚本升级模式下对失败更新进行故障排除，不支持在生产环境中连续运行该标志。 需要成功执行数据库升级脚本才能完整安装累积更新和 Service Pack。 不这样做可能会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例出现意外问题。<br /><br />**作用域**：仅全局|
 |**1117**|当文件组中的某个文件达到自动增长阈值时，文件组中的所有文件都会增长。 此跟踪标志将影响所有数据库，建议仅在每个数据库都可以安全地将文件组中的所有文件增大相同量时才使用。<br /><br />**注意：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 选项控制，跟踪标志 1117 不再有效。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。<br /><br />**作用域：** 仅全局|
 |**1118**|强制在统一区而不是混合区分配页，以减少 SGAM 页的争用。 创建新对象后，默认情况下，将从不同的盘区（混合区）分配前 8 页。 此后，如果需要更多的页，将从相同的片区（统一区）分配进行分配。 SGAM 页用于跟踪这些混合区，因此发生大量混合页分配时，可能会很快成为瓶颈。 创建新对象时，此跟踪标志从相同的片区分配所有 8 页，以最大限度降低扫描 SGAM 页的需求。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/328551)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由 ALTER DATABASE 的 SET MIXED_PAGE_ALLOCATION 选项控制，跟踪标志 1118 不再有效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br />**作用域：** 仅全局|  
-|**1204**|返回参与死锁的锁的资源和类型，以及受影响的当前命令。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/832524)。<br /><br />**作用域：** 仅全局|  
+|**1204**|返回参与死锁的锁的资源和类型，以及受影响的当前命令。 有关死锁的详细信息，请参阅[事务锁定和行版本控制指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)。<br /><br />**注意：** 避免在导致死锁的工作负载密集型系统上使用跟踪标志 1204。 有关检测死锁的其他方法的详细信息，请参阅[事务锁定和行版本控制指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlock_detection)。<br /><br />**作用域：** 仅全局|  
 |**1211**|基于内存不足或基于锁数禁用锁升级。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]不会将行锁或页锁升级到表锁。<br /><br />使用此跟踪标志可能会生成过多的锁，如果锁内存增长得足够大，则尝试为任何查询分配其他锁可能会失败。 这样会降低[!INCLUDE[ssDE](../../includes/ssde-md.md)]的性能，或因为内存不足而导致 1204 错误（无法分配锁资源）。<br /><br />如果同时设置了跟踪标志 1211 和 1224，则 1211 优先于 1224。 但是，由于在所有情况下（甚至在内存紧张的情况下）跟踪标志 1211 都禁止升级，因此建议改用 1224。 这有助于在使用多个锁时避免“锁不足”错误。<br /><br />有关如何解决 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的锁升级导致的阻塞问题的详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/323630)。<br /><br />**作用域**：全局或会话|  
-|**1222**|以不符合任何 XSD 架构的 XML 格式，返回参与死锁的锁的资源和类型，以及受影响的当前命令。<br /><br />**作用域**：仅全局|  
+|**1222**|以不符合任何 XSD 架构的 XML 格式，返回参与死锁的锁的资源和类型，以及受影响的当前命令。 有关死锁的详细信息，请参阅[事务锁定和行版本控制指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)。<br /><br />**注意：** 避免在导致死锁的工作负载密集型系统上使用跟踪标志 1222。 有关检测死锁的其他方法的详细信息，请参阅[事务锁定和行版本控制指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlock_detection)。<br /><br />**作用域**：仅全局|  
 |**1224**|基于锁数禁用锁升级。 但是，内存不足仍可激活锁升级。 如果锁对象使用的内存量超出下列条件之一，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将行锁或页锁升级为表（或分区）锁：<br /><ul><li>[!INCLUDE[ssDE](../../includes/ssde-md.md)]占用的 40% 的内存。 只有在 sp_configure 的 **locks** 参数设置为 0 时，这才适用。 <li>使用 sp_configure 的 locks 参数配置的锁内存的 40%  。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。</li></ul><br />如果同时设置了跟踪标志 1211 和 1224，则 1211 优先于 1224。 但是，由于在所有情况下（甚至在内存紧张的情况下）跟踪标志 1211 都禁止升级，因此建议使用 1224。 这有助于在使用多个锁时避免“锁不足”错误。<br /><br />**注意：** 也可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 语句的 LOCK_ESCALATION 选项控制到表级或 HoBT 级粒度的锁升级。<br /><br />有关如何解决 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的锁升级导致的阻塞问题的详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/323630)<br /><br />**作用域：** 全局或会话|
 |1229 |禁用所有锁定分区，而不管 CPU 数如何。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在服务器具有 16 个或更多 CPU 时启用锁定分区，以提高较大系统的可伸缩性特征。 有关锁定分区的详细信息，请参阅[事务锁定和行版本控制指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)。<br /><br />警告  ：跟踪标志 1229 可能导致旋转锁争用和性能下降。<br /><br />**作用域**：仅全局|  
 |**1236**|启用数据库锁分区。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2926217)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 开始，此行为由引擎控制，跟踪标志 1236 不再有效。<br /><br />**作用域**：仅全局|

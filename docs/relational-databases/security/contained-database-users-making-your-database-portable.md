@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b11a263953e0b58c4b3dc7072662b291f3d215ab
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557882"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375504"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使数据库可移植
 
@@ -54,7 +54,7 @@ ms.locfileid: "75557882"
 
  Windows 防火墙规则适用于所有连接，并且对登录名（传统模型连接）和包含的数据库用户具有相同影响。 有关 Windows 防火墙的详细信息，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火墙
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火墙
 
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 允许适用于服务器级别连接（登录名）和适用于数据库级别连接（包含的数据库用户）的单独防火墙规则。 连接到用户数据库时，会首先检查数据库防火墙规则。 如果没有允许访问数据库的规则，则检查服务器级别防火墙规则，这将需要对 SQL 数据库服务器 master 数据库的访问权限。 与包含的数据库用户相结合的数据库级别防火墙规则可以无需在连接过程中访问服务器的 master 数据库，从而提供改进的连接可伸缩性。  
   
@@ -74,6 +74,31 @@ ms.locfileid: "75557882"
 |传统模型|包含的数据库用户模型|  
 |-----------------------|-----------------------------------|  
 |要更改密码，在 master 数据库的上下文中：<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|要更改密码，在用户数据库的上下文中：<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
+
+### <a name="managed-instance"></a>托管实例
+
+在包含的数据库的上下文中，Azure SQL 数据库托管实例的行为类似于本地 SQL Server。 创建包含的用户时，请确保将数据库的上下文从主数据库更改为用户数据库。 此外，在设置包含选项时，不应与用户数据库建立活动连接。 
+
+例如： 
+
+```sql
+Use MASTER;
+GO 
+
+ALTER DATABASE Test
+SET containment=partial
+
+
+USE Test;  
+GO  
+CREATE USER Carlo  
+WITH PASSWORD='Enterpwdhere*'  
+
+
+SELECT containment_desc FROM sys.databases
+WHERE name='test'
+```
+
   
 ## <a name="remarks"></a>备注  
   

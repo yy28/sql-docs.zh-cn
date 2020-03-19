@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340689"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287681"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DDL 触发器是为了响应各种数据定义语言 (DDL) 事件而运行。 �
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>语法  
+## <a name="sql-server-syntax"></a>SQL Server 语法  
   
 ``` 
 -- SQL Server Syntax  
@@ -127,7 +127,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>语法  
+## <a name="azure-sql-database-syntax"></a>Azure SQL 数据库语法  
   
 ``` 
 -- Azure SQL Database Syntax   
@@ -215,7 +215,7 @@ INSTEAD OF
   
 最多可以对表或视图定义，每 INSERT、UPDATE 或 DELETE 语句一个 INSTEAD OF 触发器。 还可以对每个都有自己的 INSTEAD OF 触发器的视图定义视图。  
   
-无法对使用 WITH CHECK OPTION 的可更新视图定义 INSTEAD OF 触发器。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 这样做，便会在 INSTEAD OF 触发器添加到指定了 WITH CHECK OPTION 的可更新视图中时生成错误。 先使用 ALTER VIEW 删除此选项，再定义 INSTEAD OF 触发器。  
+无法对使用 WITH CHECK OPTION 的可更新视图定义 INSTEAD OF 触发器。 如果这样做，在将 INSTEAD OF 触发器添加到 WITH CHECK OPTION 指定的可更新视图中时，会导致错误。 先使用 ALTER VIEW 删除此选项，再定义 INSTEAD OF 触发器。  
   
 { [DELETE] [,] [INSERT] [,] [UPDATE] }  
 指定数据修改语句，用于在 DML 触发器尝试对此表或视图触发时激活触发器。 至少指定一个选项。 在触发器定义中使用这些选项的任意顺序组合。  

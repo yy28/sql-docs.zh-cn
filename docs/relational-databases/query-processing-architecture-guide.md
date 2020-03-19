@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903864"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288381"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可处理对各种数据存储体系结构（例如，本地表、已分区表和分布在多个服务器上的表）执行的查询。 下面的主题介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何处理查询并通过执行计划缓存来优化查询重用。
 
@@ -86,7 +86,7 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>优化 SELECT 语句
-`SELECT` 语句是非程序性的，它不规定数据库服务器应用于检索请求数据的确切步骤。 这意味着数据库服务器必须分析语句，以决定提取所请求数据的最有效方法。 这被称为“优化 `SELECT` 语句”。 处理此过程的组件称为“查询优化器”。 查询优化器的输入包括查询、数据库方案（表和索引的定义）以及数据库统计信息。 查询优化器的输出称为“查询执行计划”，有时也称为“查询计划”或直接称为“计划”。 本主题的后续各节将详细介绍查询计划的内容。
+`SELECT` 语句是非程序性的，它不规定数据库服务器应用于检索请求数据的确切步骤。 这意味着数据库服务器必须分析语句，以决定提取所请求数据的最有效方法。 这被称为“优化 `SELECT` 语句”。 处理此过程的组件称为“查询优化器”。 查询优化器的输入包括查询、数据库方案（表和索引的定义）以及数据库统计信息。 查询优化器的输出称为“查询执行计划”，有时也称为“查询计划”或为“执行计划”。 本主题的后续各节将详细介绍执行计划的内容。
 
 在优化单个 `SELECT` 语句期间查询优化器的输入和输出如下图中所示：
 
@@ -100,17 +100,19 @@ GO
 
 查询执行计划定义： 
 
-* 访问源表的顺序。  
-  数据库服务器一般可以按许多不同的序列访问基表以生成结果集。 例如，如果 `SELECT` 语句引用三个表，数据库服务器可以先访问 `TableA`，使用 `TableA` 中的数据从 `TableB`中提取匹配的行，然后使用 `TableB` 中的数据从 `TableC`中提取数据。 数据库服务器访问表的其他顺序包括：  
+- **访问源表的顺序。** 数据库服务器一般可以按许多不同的序列访问基表以生成结果集。 例如，如果 `SELECT` 语句引用三个表，数据库服务器可以先访问 `TableA`，使用 `TableA` 中的数据从 `TableB`中提取匹配的行，然后使用 `TableB` 中的数据从 `TableC`中提取数据。 数据库服务器访问表的其他顺序包括：  
   `TableC`、 `TableB`、 `TableA`或  
   `TableB`、 `TableA`、 `TableC`或  
   `TableB`、 `TableC`、 `TableA`或  
   `TableC`、`TableA`、`TableB`  
 
-* 从每个表析取数据的方法。  
+- **用于从每个表提取数据的方法。**  
   访问每个表中的数据一般也有不同的方法。 如果只需要有特定键值的几行，数据库服务器可以使用索引。 如果需要表中的所有行，数据库服务器则可以忽略索引并执行表扫描。 如果需要表中的所有行，而有一个索引的键列在 `ORDER BY`中，则执行索引扫描而非表扫描可能会省去对结果集的单独排序。 如果表很小，则对该表的几乎所有访问来说，表扫描可能都是最有效的方法。
+  
+- **用于计算的方法，以及如何对每个表中的数据进行筛选、聚合和排序的方法。**  
+  从表访问数据时，可以使用不同的方法对数据进行计算，例如，计算标量值，以及对查询文本中定义的数据进行聚合和排序（例如，使用 `GROUP BY` 或 `ORDER BY` 子句时），以及如何筛选数据（例如在使用 `WHERE` 或 `HAVING` 子句时）。
 
-从潜在的多个可能的计划中选择一个执行计划的过程称为“优化”。 查询优化器是 SQL 数据库系统的最重要组件之一。 虽然查询优化器在分析查询和选择计划时要使用一些开销，但当查询优化器选择了有效的执行计划时，这一开销将节省数倍。 例如，两家建筑公司可能拿到一所住宅的相同设计图。 如果一家公司开始时先花几天时间规划如何建造这所住宅，而另一家公司不做任何规划就开始施工，则花了时间规划项目的那家公司很可能首先完工。
+从潜在的多个可能的计划中选择一个执行计划的过程称为“优化”。 查询优化器是 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的最重要组件之一。 虽然查询优化器在分析查询和选择计划时要使用一些开销，但当查询优化器选择了有效的执行计划时，这一开销将节省数倍。 例如，两家建筑公司可能拿到一所住宅的相同设计图。 如果一家公司开始时先花几天时间规划如何建造这所住宅，而另一家公司不做任何规划就开始施工，则花了时间规划项目的那家公司很可能首先完工。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器是基于成本的优化器。 就所使用的计算资源量而言，每个可能的执行计划都具有相关成本。 查询优化器必须分析可能的计划并选择一个预计成本最低的计划。 有些复杂的 `SELECT` 语句有成千上万个可能的执行计划。 在这些情况下，查询优化器不会分析所有的可能组合， 而是使用复杂的算法查找一个执行计划：其成本合理地接近最低可能成本。
 
@@ -121,6 +123,12 @@ GO
 <sup>1</sup> 密度定义数据中存在的唯一值的分布，或给定列的重复值平均数。 密度与值的选择性成反比，密度越小，值的选择性越大。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器很重要，因为它可以使数据库服务器针对数据库内的更改情况进行动态调整，而无需程序员或数据库管理员输入。 这样程序员可以集中精力描述最终的查询结果。 他们可以相信每次运行语句时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器总能针对数据库的状态生成一个有效的执行计划。
+
+> [!NOTE]
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三个选项可用于显示执行计划：        
+> -  ***[估计的执行计划](../relational-databases/performance/display-the-estimated-execution-plan.md)***，该计划是已编译的计划，由查询优化器生成。        
+> -  ***[实际执行计划](../relational-databases/performance/display-an-actual-execution-plan.md)***，该计划与编译的计划及其执行上下文相同。 这包括在执行完成之后可用的运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。        
+> -  ***[实时查询统计信息](../relational-databases/performance/live-query-statistics.md)***，这与编译的计划及其执行上下文相同。 这包括执行过程中的运行时信息，每秒更新一次。 例如，运行时信息包括流经操作符的实际行数。       
 
 ### <a name="processing-a-select-statement"></a>处理 SELECT 语句
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 处理单个 SELECT 语句的基本步骤包括如下内容： 
@@ -450,12 +458,6 @@ WHERE name LIKE '%plans%';
   每个正在执行查询的用户都有一个包含其执行专用数据（如参数值）的数据结构。 此数据结构称为执行上下文。 执行上下文数据结构会重新使用，但其内容不会。 如果其他用户执行相同的查询，则会为新用户重新初始化上下文数据结构。 
 
   ![execution_context](../relational-databases/media/execution-context.gif)
-
-> [!NOTE]
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三个选项可用于显示执行计划：        
-> -  ***[估计的执行计划](../relational-databases/performance/display-the-estimated-execution-plan.md)***，这是编译的计划。        
-> -  ***[实际执行计划](../relational-databases/performance/display-an-actual-execution-plan.md)***，该计划与编译的计划及其执行上下文相同。 这包括在执行完成之后可用的运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。        
-> -  ***[实时查询统计信息](../relational-databases/performance/live-query-statistics.md)***，这与编译的计划及其执行上下文相同。 这包括执行过程中的运行时信息，每秒更新一次。 例如，运行时信息包括流经操作符的实际行数。       
 
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中执行任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句时，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 将首先查看计划缓存，以确认是否存在用于同一 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的现有执行计划。 如果 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与先前根据缓存计划执行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的每个字符完全匹配，则该语句符合现有条件。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会重用使用找到的任何现有计划，从而节省重新编译 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的开销。 如果没有执行计划，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将为查询生成新的执行计划。
 

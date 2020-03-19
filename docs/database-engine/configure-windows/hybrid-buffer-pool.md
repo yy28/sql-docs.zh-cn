@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: c7919232bcd2c84ea58ac2e8b9d23b48cc58ee60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831705"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112289"
 ---
 # <a name="hybrid-buffer-pool"></a>混合缓冲池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,14 +86,9 @@ SELECT * FROM
 sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
-以下示例返回两个表：
-
-- 第一个显示 SQL Server 实例的混合缓冲池系统配置的当前状态。
-- 第二个列出混合缓冲池 (`is_memory_optimized_enabled`) 的数据库和数据库级别设置。
+以下示例列出混合缓冲池 (`is_memory_optimized_enabled`) 的数据库和数据库级别设置。
 
 ```sql
-SELECT * FROM sys.configurations WHERE name = 'hybrid_buffer_pool';
-
 SELECT name, is_memory_optimized_enabled FROM sys.databases;
 ```
 
@@ -103,7 +98,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 使用大页面内存分配模型，该模型可通过[跟踪标志 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 启用。 跟踪标志 834 是一个启动跟踪标志。
 
-使用[大页面内存](./enable-the-lock-pages-in-memory-option-windows.md)分配模型要求在 Windows 上使用 内存中的锁定页面。
+使用大页面内存分配模型要求在 Windows 上使用[内存中的锁定页面](./enable-the-lock-pages-in-memory-option-windows.md)。
 
 文件大小应为 2 MB 的倍数（模数 2 MB 应等于零）。
 

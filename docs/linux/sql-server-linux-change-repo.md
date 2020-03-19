@@ -3,17 +3,17 @@ title: 配置适用于 SQL Server 2017 和 2019 的 Linux 存储库
 description: 检查并配置适用于 Linux 中 SQL Server 2019 和 SQL Server 2017 的源存储库。 源存储库会影响在安装和升级期间应用的 SQL Server 版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/07/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75776386"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198424"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置存储库以便安装和升级 Linux 上的 SQL Server
 
@@ -40,7 +40,7 @@ ms.locfileid: "75776386"
 
 | 存储库 | 名称 | 说明 |
 |---|---|---|
-| 2019  | mssql-server-2019  | SQL Server 2019 累积更新 (CU) 存储库。 |
+| **2019** | mssql-server-2019  | SQL Server 2019 累积更新 (CU) 存储库。 |
 | 2019 GDR  | mssql-server-2019-gdr  | SQL Server 2019 GDR 存储库仅用于关键更新。 |
 | 2019 预览版  | **mssql-server-preview** | SQL Server 2019 预览版和 RC 存储库。 |
 | 2017  | **mssql-server-2017** | SQL Server 2017 累积更新 (CU) 存储库。 |
@@ -157,11 +157,14 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-ubuntu"
 如有必要，删除旧的存储库。 基于之前配置的存储库类型，使用以下命令之一。
 
+> [!NOTE]
+> 自 SQL Server 2019 CU3 起，支持 Ubuntu 18.04。 如果使用的是 Ubuntu 16.04，请将以下路径更改为 `/ubuntu/16.04` 而不是 `/ubuntu/18.04`。
+
 | 存储库 | 要删除的命令 |
 |---|---|
 | **预览版 (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| 2019 CU  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
-| 2019 GDR  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| 2019 CU  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 xenial main'` | 
+| 2019 GDR  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr xenial main'` |
 | 2017 CU  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | 2017 GDR  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -204,6 +207,11 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-ubuntu"
 配置要用于 SQL Server 安装和升级的新存储库。
 
+> [!NOTE]
+> 自 SQL Server 2019 CU3 起，支持 Ubuntu 18.04。 以下用于 SQL Server 2019 的命令指向 Ubuntu 18.04 存储库。
+>
+> 如果使用的是 Ubuntu 16.04，请将以下路径更改为 `/ubuntu/16.04` 而不是 `/ubuntu/18.04`。
+
 1. 导入公共存储库 GPG 密钥。
 
    ```bash
@@ -214,8 +222,8 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
    | 存储库 | 版本 | Command |
    |---|---|---|
-   | 2019 CU  | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
-   | 2019 GDR  | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
+   | 2019 CU  | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"` |
+   | 2019 GDR  | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019-gdr.list)"` |
    | 2017 CU  | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | 2017 GDR  | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 

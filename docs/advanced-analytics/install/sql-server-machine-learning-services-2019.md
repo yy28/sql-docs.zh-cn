@@ -3,17 +3,17 @@ title: Windows 的隔离更改
 description: 本文介绍 Windows 上 SQL Server 2019 中机器学习服务的隔离机制的更改。 这些更改会影响 SQLRUserGroup、防火墙规则、文件权限和默示身份验证。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 03/05/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ad95817a7b1eb9afb8377b06d20a577eda49ea23
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69531041"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285911"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows 上的 SQL Server 2019：机器学习服务的隔离更改
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,26 @@ ms.locfileid: "69531041"
 > [!Note]
 > 如果需要网络调用，可以禁用 Windows 防火墙中的出站规则。
 
-## <a name="program-file-permissions"></a>程序文件权限
+<a name="file-permissions"></a>
+
+## <a name="file-permissions"></a>文件权限
+
+默认情况下，外部 Python 和 R 脚本只对其工作目录具有读取访问权限。 
+
+如果你的 Python 或 R 脚本需要访问任何其他目录，则需要向“NT Service\MSSQLLaunchpad”服务用户帐户和此目录上的“ALL APPLICATION PACKAGES”授予“读取和执行”和/或“写入”权限     。
+
+请按照以下步骤授予访问权限。
+
+1. 在“文件资源管理器”中，右键单击要用作工作目录的文件夹，然后选择“属性”  。
+1. 选择“安全性”并单击“编辑...”以更改权限   。
+1. 单击“添加...” 
+1. 请确保“从此位置”为本地计算机名称  。
+1. 在“输入要选择的对象名称”中输入“ALL APPLICATION PACKAGES”，单后单击“检查名称”    。 单击“确定”。 
+1. 在“允许”列下选择“读取和执行”   。
+1. 如果要授予写入权限，请在“允许”列下选择“写入”   。
+1. 单击两次“确定”。  
+
+### <a name="program-file-permissions"></a>程序文件权限
 
 与以前的版本一样，SQLRUserGroup 继续提供 SQL Server Binn、R_SERVICES 和 PYTHON_SERVICES 目录中的可执行文件的读取和执行权限     。 在此版本中，SQLRUserGroup 的唯一成员是 SQL Server Launchpad 服务帐户  。  当 Launchpad 服务启动 R 或 Python 执行环境时，该进程作为 Launchpad 服务运行。
 

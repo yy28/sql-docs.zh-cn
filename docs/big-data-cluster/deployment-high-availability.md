@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a73259663f710cfc5df5dc40745ecda9fdbd8f13
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338101"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286041"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 大数据群集
 
@@ -201,6 +201,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 大数据群集中 SQL Server 主实例的可用性组的已知问题和限制：
 
 - 在低于 SQL Server 2019 CU2 的版本中，除 `CREATE DATABASE` 和 `RESTORE DATABASE`（如 `CREATE DATABASE FROM SNAPSHOT`）之外，因工作流而创建的数据库不会自动添加到可用性组。 [连接到实例 ](#instance-connect)，并手动将数据库添加到可用性组。
+- 要从另一台服务器上创建的备份中成功还原启用了 TDE 的数据库，必须确保在 SQL Server 主实例以及所包含的 AG 主实例上都还原了[所需的证书](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。 有关如何备份和还原证书的示例，请参阅[此处](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/)。
 - 某些操作（如通过 `sp_configure` 运行服务器配置设置）需要连接到 SQL Server 实例 `master` 数据库，而不是可用性组 `master`。 不能使用相应的主要终结点。 按照[说明](#instance-connect)公开终结点，然后连接到 SQL Server 实例并运行 `sp_configure`。 当手动公开终结点以连接到 SQL Server 实例 `master` 数据库时，只能使用 SQL 身份验证。
 - 部署大数据群集时，必须创建高可用性配置。 部署后，无法通过可用性组启用高可用性配置。
 - 虽然包含的 msdb 数据库包含在可用性组中，并且 SQL 代理作业在其中进行复制，但不会按计划触发作业。 解决方法是[连接到每个 SQL Server 实例](#instance-connect)，并在实例 msdb 中创建作业。 自 SQL Server 2019 CU2 起，只支持在主实例的每个副本中创建的作业。

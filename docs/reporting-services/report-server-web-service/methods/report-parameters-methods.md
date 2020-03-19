@@ -1,5 +1,6 @@
 ---
 title: 报表参数方法 | Microsoft Docs
+description: 这些方法获取并设置项的参数属性并验证参数值、获取受支持的参数状态以及获取参数类型。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08fd75eadd21dd074a751d39c6423fd47d8af81f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e510bb9509d8c643eab4240f66af44c457e19a7f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284462"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198344"
 ---
 # <a name="report-parameters-methods"></a>报表参数方法
   可以使用这些方法来设置和检索报表的参数。  

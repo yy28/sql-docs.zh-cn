@@ -1,7 +1,7 @@
 ---
-title: 适用于 Windows 上 SQL Server 的 ODBC 的发行说明 | Microsoft Docs
+title: Windows 上的 ODBC Driver for SQL Server 发行说明
 ms.custom: ''
-ms.date: 02/27/2019
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 174ea00f9becf1445212c20137ea902f3892918e
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: 95d3002ff9dd32bc4070cfb541ebd54edbc70b7c
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896753"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090508"
 ---
-# <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>适用于 Windows 上 SQL Server 的 ODBC 的发行说明
+# <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver for SQL Server 发行说明
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -44,7 +44,19 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
-## <a name="1752-march-2020"></a>17.5.2，2020 年 3 月
+## <a name="1752"></a>17.5.2
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2120137)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120140)  
+
+版本号：17.5.2.1  
+发布日期：2019 年 3 月 6 日
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40a)  
+
+### <a name="features-added-in-1752"></a>17.5.2 中的新增功能
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
@@ -53,7 +65,23 @@ GeneMi (and CraigG).  2019/03/30.
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="175-january-2020"></a>17.5，2020 年 1 月
+## <a name="previous-releases"></a>以前的版本
+
+通过单击以下部分中的下载链接，下载 ODBC Driver 的早期版本：
+
+## <a name="175"></a>17.5
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2120248)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120353)  
+
+版本号：17.5.1.1  
+发布日期：2019 年 1 月 31 日
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x40a)  
+
+### <a name="features-added-in-175"></a>17.5 中的新增功能
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
@@ -61,17 +89,41 @@ GeneMi (and CraigG).  2019/03/30.
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="1742-october-2019"></a>2019 年 10 月 17.4.2 版
+## <a name="1742"></a>17.4.2
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2120354)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120249)  
+
+版本号：17.4.2.1  
+发布日期：2019 年 10 月
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x40a)  
+
+### <a name="features-added-in-1742"></a>17.4.2 中的新增功能
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
 | 支持其他 Azure Key Vault 终结点 | 请参阅[对 ODBC 驱动程序使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
 | 支持设置数据分类版本 | 请参阅[数据分类](../data-classification.md#bkmk-version)。 |
-| 在安装程序中添加 Azure Active Directory 身份验证库 (adal.dll) | 现已包含在基础驱动程序安装中，这会升级适用于 SQL Server 的 Microsoft Active Directory 身份验证库的现有安装，同时从 Windows 的已安装应用程序列表中将其删除。 |
+| 在安装程序中添加 Azure Active Directory 身份验证库 (adal.dll) | 现已包含在基础驱动程序安装中，ODBC 驱动程序将升级适用于 SQL Server 的 Microsoft Active Directory 身份验证库的现有安装，同时从 Windows 的已安装应用程序列表中将其删除。 |
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="174-july-2019"></a>17.4 版，2019 年 7 月
+## <a name="174"></a>17.4
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2120149)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120150)  
+
+版本号：17.4.1.1  
+发布日期：2019 年 7 月
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x40a)  
+
+### <a name="features-added-in-174"></a>17.4 中的新增功能
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
@@ -80,7 +132,19 @@ GeneMi (and CraigG).  2019/03/30.
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="173-february-2019"></a>17.3 版，2019 年 2 月
+## <a name="173"></a>17.3
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2120355)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120356)  
+
+版本号：17.3.1.1  
+发布日期：2019 年 2 月
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x40a)  
+
+### <a name="features-added-in-173"></a>17.3 中的新增功能
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
@@ -90,7 +154,19 @@ GeneMi (and CraigG).  2019/03/30.
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="172-july-2018"></a>17.2 版，2018 年 7 月
+## <a name="172"></a>17.2
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2120250)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120357)  
+
+版本号：17.2.0.1  
+发布日期：2018 年 7 月
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x40a)  
+
+### <a name="features-added-in-172"></a>17.2 中的新增功能
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
@@ -99,7 +175,19 @@ GeneMi (and CraigG).  2019/03/30.
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="171-march-2018"></a>17.1 版，2018 年 3 月
+## <a name="171"></a>17.1
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2120151)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120443)  
+
+版本号：17.1.0.1  
+发布日期：2018 年 3月
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x40a)  
+
+### <a name="features-added-in-171"></a>17.1 中的新增功能
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
@@ -108,13 +196,25 @@ GeneMi (and CraigG).  2019/03/30.
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="17-february-2018"></a>17 版，2018 年 2 月
+## <a name="170"></a>17.0
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2120444)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120152)  
+
+版本号：17.0.1.1  
+发布日期：2018 年 2 月
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x40a)  
+
+### <a name="features-added-in-170"></a>17.0 中的新增功能
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
 | 对 BCP API 的 Always Encrypted 支持。 | &nbsp; |
 | 新连接字符串属性 `UseFMTOnly`。 | 使驱动程序在需要临时表的特殊情况下使用旧的元数据。 |
-| 支持 Azure SQL 托管实例。 | 扩展的个人预览版。<br/><br/>请参阅下面的[使用托管实例（ODBC 版本 17）时的差异](#diffs-managed-instance-17)列表。 |
+| 支持 Azure SQL 托管实例。 | 请参阅下面的[使用托管实例（ODBC 版本 17）时的差异](#diffs-managed-instance-17)列表。 |
 | &nbsp; | &nbsp; |
 
 | 更改的依赖项 | 详细信息 |
@@ -124,7 +224,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 ### <a name="diffs-managed-instance-17"></a> 使用托管实例（ODBC 版本 17）时的差异
 
-此版本的 ODBC 包含对 Azure SQL 托管实例（扩展的个人预览版）的支持。 请参阅如下列出的使用托管实例时的差异列表。
+此版本的 ODBC 包含对 Azure SQL 托管实例的支持。 请参阅如下列出的使用托管实例时的差异列表。
 
 > [!NOTE]
 > 使用托管实例时存在许多差异：
@@ -142,6 +242,19 @@ GeneMi (and CraigG).  2019/03/30.
 
 ## <a name="131"></a>13.1
 
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2121020)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120923)  
+
+版本号：13.1  
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x40a)  
+
+[下载 Microsoft Command Line Utilities 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
+
+### <a name="features-added-in-131"></a>13.1 中的新增功能
+
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
 | ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 添加了对 [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 和 [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) 的支持。 | 连接到 Microsoft SQL Server 2016 或更高版本时即可使用这些新增支持。 |
@@ -150,12 +263,38 @@ GeneMi (and CraigG).  2019/03/30.
 
 ## <a name="13"></a>13
 
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2121118)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2120924)  
+
+版本号：13  
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x40a)  
+
+[下载 Microsoft Command Line Utilities 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)
+
+### <a name="features-added-in-13"></a>13 中的新增功能
+
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
 | 添加对 Microsoft SQL Server 2016 的支持。 | 保留 ODBC 驱动程序版本 11 的功能。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="11"></a>11
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2121206)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2121021)  
+
+版本号：11  
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x40a)  
+
+[下载 Microsoft Command Line Utilities 11 for SQL Server](https://www.microsoft.com/download/details.aspx?id=36433)  
+
+### <a name="features-added-in-11"></a>11 中的新增功能
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |

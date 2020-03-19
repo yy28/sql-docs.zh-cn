@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363233"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285841"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "77363233"
 
 有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>先决条件
 
 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置了始终加密的数据库，请按照 [始终加密入门](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。 尤其要注意的是，数据库应包含列主密钥 (CMK)、列加密密钥 (CEK) 和包含一个或多个使用该 CEK 加密的表的元数据定义。
 
@@ -390,12 +390,15 @@ Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密�
 
 - 客户端 ID/机密 - 使用此方法时，凭据是应用程序客户端 ID 及应用程序机密。
 
+- 托管标识 (17.5.2+) - 系统或用户分配；有关详细信息，请参阅 [Azure 资源的托管标识](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)。
+
 若要允许驱动程序将 AKV 存储的 CMK 用于列加密，请使用下列仅连接字符串关键字：
 
 |凭据类型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |用户名/密码| `KeyVaultPassword`|用户主体名称|密码|
 |客户端 ID/机密| `KeyVaultClientSecret`|客户端 ID|机密|
+|托管标识|`KeyVaultManagedIdentity`|对象 ID（可选，仅用于用户分配）|（未指定）|
 
 #### <a name="example-connection-strings"></a>连接字符串示例
 
@@ -413,7 +416,23 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**托管标识（系统分配）**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**托管标识（用户分配）**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 将 AKV 用于 CMK 存储无需其他 ODBC 应用程序更改。
+
+> [!NOTE]
+> 驱动程序包含它信任的 AKV 终结点的列表。 自驱动程序版本 17.5.2 起，此列表是可配置的：可将驱动程序或 DSN 的 ODBCINST.INI 或 ODBC.INI 注册表项 (Windows) 或 `odbcinst.ini` 或 `odbc.ini` 文件部分 (Linux/Mac) 中的 `AKVTrustedEndpoints` 属性设置为以分号分隔的列表。 在 DSN 中进行设置的优先级高于在驱动程序中设置。 如果该值以分号开头，则它将扩展默认列表；否则，它将替换默认列表。 默认列表（自 17.5 起）为 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`。
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
 

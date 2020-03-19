@@ -1,7 +1,7 @@
 ---
-title: Linux 和 macOS 上的 ODBC 发行说明 | Microsoft Docs
+title: Linux 和 macOS 上的 ODBC Driver for SQL Server 的发行说明
 ms.custom: ''
-ms.date: 06/30/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896759"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090498"
 ---
-# <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
+# <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -51,7 +51,7 @@ GeneMi.  2019/04/03.
 | :------------ | :------ |
 | SQL_COPT_SS_SPID 连接属性，用于在不往返服务器的情况下检索 SPID | 请参阅 [DSN 和连接字符串属性及关键字](../dsn-connection-string-attribute.md)。 |
 | 支持通过 Debian 和 Ubuntu 上的 `debconf` 指示 EULA 接受情况 | 请参阅[安装驱动程序](./installing-the-microsoft-odbc-driver-for-sql-server.md)。 |
-| 支持新分发。 | &bull; &nbsp; &nbsp; Alpine Linux（3.10、3.11）<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| 支持新分发。 | &bull; &nbsp; &nbsp; Alpine Linux（3.10、3.11）<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -66,7 +66,7 @@ GeneMi.  2019/04/03.
 
 **已知问题：**
 
-使用具有安全 Enclave 和 Azure Key Vault 的 Always Encrypted 时，奇数密钥路径长度可能导致 CMK 签名验证错误。 如果遇到此问题，请尝试通过重命名 AKV 键，将 keypath 的长度更改为一个字符。
+使用具有安全 Enclave 和 Azure Key Vault 的 Always Encrypted 时，奇数密钥路径长度可能导致 CMK 签名验证错误。 如果遇到此问题，请尝试通过重命名 AKV 键，将密钥路径的长度更改为一个字符。
 
 ## <a name="174-august-2019"></a>17.4，2019 年 8 月
 
@@ -82,7 +82,7 @@ GeneMi.  2019/04/03.
 
 | 新建项 | 详细信息 |
 | :------- | :------ |
-| 支持新分发。 | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| 支持新分发。 | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Azure Active Directory 托管服务标识（系统和用户分配）身份验证模式。 | 请参阅[结合使用 Azure Active Directory 和 ODBC Driver](../using-azure-active-directory.md)。 |
 | 能够针对 Always Encrypted 列流式传输输入参数。 | 有关详细信息，请参阅[使用 Always Encrypted 时的 ODBC 驱动程序限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)。 |
 | XA 分布式事务。 | 请参阅[使用 XA 事务](../use-xa-with-dtc.md)。<br/><br/>XA 是扩展体系结构 (eXtended Architecture) 的词首字母缩略词，它是执行访问多个服务器端数据存储系统的全局事务的标准  。 |
@@ -122,7 +122,7 @@ GeneMi.  2019/04/03.
 
 新连接字符串属性 UseFMTOnly 使驱动程序在需要临时表的特殊情况下使用旧的元数据。
 
-支持 Azure SQL 托管实例（扩展的个人预览版）。 
+支持 Azure SQL 托管实例。 
 > [!NOTE]
 > 使用托管实例时存在许多差异：
 > -   不支持 FILESTREAM 
@@ -140,7 +140,7 @@ GeneMi.  2019/04/03.
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 添加了对将 Always Encrypted 和 Azure Active Directory 与 Microsoft SQL Server 2016 一起使用的支持。
 
-**支持新分发**：在 macOS 上的 ODBC Driver 的第一个版本中支持 OS X 10.11 和 macOS 10.12。 现在还支持 Ubuntu 16.10、Red Hat 6、7 和 SUSE 12。 每个平台都有与平台相关的包（RPM 或 DEB），用于简化安装和配置。  有关安装说明，请参阅[安装 ODBC Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
+**支持新分发**：在 macOS 上的 ODBC Driver 的第一个版本中支持 OS X 10.11 和 macOS 10.12。 现在还支持 Ubuntu 16.10、Red Hat 6、7 和 SUSE 12。 每个平台都有与平台相关的包（RPM 或 DEB），用于简化安装和配置。 有关详细信息，请参阅 [Linux ](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 和 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) 的 ODBC 驱动程序安装说明。
 
 **unixODBC 驱动程序管理器 2.3.1 支持更改**：ODBC 驱动程序不再依赖于 unixODBC 驱动程序管理器的自定义打包（RedHat 6 除外），而是依赖于分发包管理器来解析分发程序库中的 UnixODBC 依赖项。
 

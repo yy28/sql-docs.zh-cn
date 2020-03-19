@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9a276d44cd67bf7d2d4befd24edefa6ebdf0759a
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68008791"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058783"
 ---
 # <a name="installing-the-driver-manager"></a>安装驱动程序管理器
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,10 @@ ms.locfileid: "68008791"
 > 在安装 unixODBC 驱动程序管理器之前，删除安装在计算机上的任何驱动程序管理器包。 安装 unixODBC 驱动程序管理器可能会导致现有驱动程序管理器出现故障。  
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-13-131-and-17"></a>为 Microsoft ODBC Driver 13、13.1 和 17 安装驱动程序管理器
-驱动程序管理器解析依赖项自动通过程序包管理系统中的说明安装 Microsoft ODBC Driver 13、 13.1 或在 Linux 或 macOS 上的 SQL Server 的 17 时[安装 Microsoft ODBC 驱动程序Linux 或 macOS 上的 SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。 
+如果按照以下文章中的说明操作，在 Linux 或 macOS 上为 SQL Server 安装 Microsoft ODBC 驱动程序 13、13.1 或 17 时，包管理系统会自动解析驱动程序管理器依赖性：
+
+- [安装 Linux 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [安装 macOS 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-11-for-sql-server"></a>为 Microsoft ODBC Driver 11 for SQL Server 安装驱动程序管理器  
 
@@ -57,7 +60,7 @@ ms.locfileid: "68008791"
 
 7.  该脚本停止运行后，按照屏幕上的说明来安装 unixODBC 驱动程序管理器。
 
-现在可以随时安装该驱动程序。 有关详细信息，请参阅[安装 Microsoft ODBC Driver for SQL Server Linux 和 macOS 上](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。  
+现在可以随时安装该驱动程序。 有关详细信息，请参阅 [Linux ](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 或 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) 的 ODBC 驱动程序安装说明。
 
 **手动安装**
 
@@ -81,11 +84,10 @@ ms.locfileid: "68008791"
   
 9. 在命令提示符下（作为根登录），执行以下命令：**make install**。  
 
-现在可以随时安装该驱动程序。 有关详细信息，请参阅[安装 Microsoft ODBC Driver for SQL Server Linux 和 macOS 上](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。  
+现在可以随时安装该驱动程序。 有关详细信息，请参阅 [Linux ](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 或 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) 的 ODBC 驱动程序安装说明。
   
 ## <a name="see-also"></a>另请参阅
-[在 Linux 和 macOS 上安装 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
-[此版本驱动程序中的已知问题](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-
-[发行说明](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [安装 Linux 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [安装 macOS 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [发行说明](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

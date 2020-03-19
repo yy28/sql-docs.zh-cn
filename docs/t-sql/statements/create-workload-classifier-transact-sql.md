@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/27/2020
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77429028"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112255"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -43,12 +43,12 @@ ms.locfileid: "77429028"
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    (   WORKLOAD_GROUP = ‘name’  
-    ,   MEMBERNAME = ‘security_account’ 
-[ [ , ] WLM_LABEL = ‘label’ ]  
-[ [ , ] WLM_CONTEXT = ‘context’ ]  
-[ [ , ] START_TIME = ‘HH:MM’ ]  
-[ [ , ] END_TIME = ‘HH:MM’ ]  
+    (   WORKLOAD_GROUP = 'name'  
+    ,   MEMBERNAME = 'security_account' 
+[ [ , ] WLM_LABEL = 'label' ]  
+[ [ , ] WLM_CONTEXT = 'context' ]  
+[ [ , ] START_TIME = 'HH:MM' ]  
+[ [ , ] END_TIME = 'HH:MM' ]  
   
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
@@ -64,8 +64,8 @@ WITH
 
  可用工作负荷组可在 [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) 目录视图中找到。
 
- *MEMBERNAME* ='security_account'*    
- 这是要添加到该角色的安全帐户。  Security_account 为 sysname，没有默认值。 Security_account 可以是数据库用户、数据库角色、Azure Active Directory 登录名或 Azure Active Directory 组。
+ *MEMBERNAME* =  *'security_account'*     
+ 用作分类依据的安全帐户。  Security_account 为 sysname，没有默认值。 Security_account 可以是数据库用户、数据库角色、Azure Active Directory 登录名或 Azure Active Directory 组。
  
  *WLM_LABEL*   
  指定可作为请求分类依据的标签值。  标签是类型为 nvarchar(255) 的可选参数。  使用请求中的 [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) 来匹配分类器配置。

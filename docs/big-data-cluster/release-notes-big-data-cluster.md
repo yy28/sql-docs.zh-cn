@@ -5,16 +5,16 @@ description: 本文介绍 SQL Server 大数据群集的最新更新和已知问�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 38a1e2381bb3b7730a06af09b807886e18a50d13
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78925036"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286221"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -50,7 +50,7 @@ ms.locfileid: "78925036"
 
 |平台|支持的版本|
 |---------|---------|
-|`azdata`|必须与服务器具有相同的次要版本（与 SQL Server 主实例相同）。<br/><br/>运行 `azdata –-version` 以验证该版本。<br/><br/>从 SQL Server 2019 CU2 开始，此版本为 `15.0.4013`。|
+|`azdata`|必须与服务器具有相同的次要版本（与 SQL Server 主实例相同）。<br/><br/>运行 `azdata –-version` 以验证该版本。<br/><br/>自 SQL Server 2019 CU3 起，此版本为 `15.0.4023`。|
 |Azure Data Studio|获取 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新内部版本。|
 
 ## <a name="release-history"></a>版本历史记录
@@ -59,6 +59,7 @@ ms.locfileid: "78925036"
 
 | 发布               | 版本       | 发布日期 |
 |-----------------------|---------------|--------------|
+| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
@@ -66,6 +67,21 @@ ms.locfileid: "78925036"
 ## <a name="how-to-install-updates"></a>如何安装更新
 
 若要安装更新，请参阅[如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
+
+## <a id="cu3"></a> CU3（2020 年三月）
+
+SQL Server 2019 的累积更新 3 (CU3) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4023.6。
+
+|包版本 | 映像标记 |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
+
+### <a name="resolved-issues"></a>已解决的问题
+
+SQL Server 2019 CU3 解决了以前版本中的以下问题。
+
+- [通过专用存储库进行部署](#deployment-with-private-repository)
+- [升级可能因超时而失败](#upgrade-may-fail-due-to-timeout)
 
 ## <a id="cu2"></a> CU2（2020 年 2 月）
 
@@ -97,6 +113,8 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
 
 ### <a name="deployment-with-private-repository"></a>通过专用存储库进行部署
 
+- **受影响的版本**：GDR1、CU1、CU2。 CU3 已解决。
+
 - **问题及其对客户的影响**：从专用存储库升级需要满足特定要求
 
 - **解决方法**：如果使用专用存储库来预提取用于部署或升级 BDC 的映像，请确保当前版本映像和目标版本映像位于专用存储库中。 这样，在必要时可以成功回退。 此外，如果在原始部署后更改了专用存储库的凭据，请在升级之前更新 Kubernetes 中的相应机密。 `azdata` 不支持通过 `AZDATA_PASSWORD` 和 `AZDATA_USERNAME` 环境变量来更新凭据。 使用 [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) 更新机密。 
@@ -104,6 +122,8 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
 不支持对当前版本和目标版本使用不同的存储库进行升级。
 
 ### <a name="upgrade-may-fail-due-to-timeout"></a>升级可能因超时而失败
+
+- **受影响的版本**：GDR1、CU1、CU2。 CU3 已解决。
 
 - **问题及其对客户的影响**：升级可能因超时而失败。
 
@@ -132,7 +152,7 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
       kubectl edit configmap controller-upgrade-configmap
       ```
 
-   2.   编辑以下字段：
+   2. 编辑以下字段：
 
        **`controllerUpgradeTimeoutInMinutes`** 指定等待控制器或控制器 db 完成升级所需的分钟数。 默认值为 5。 至少更新为 20。
 
@@ -140,7 +160,7 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
 
        **`componentUpgradeTimeoutInMinutes`** ：指定升级的每个后续阶段必须完成的时间量。  默认值为 30。 更新为 45。
 
-   3.   保存并退出
+   3. 保存并退出
 
    还有另一种方法可设置超时时间值，即使用下面的 python 脚本：
 

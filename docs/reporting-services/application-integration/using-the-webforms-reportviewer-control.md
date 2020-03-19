@@ -1,6 +1,6 @@
 ---
 title: 使用 WebForms ReportViewer 控件
-description: 若要查看部署到报表服务器的报表或在本地文件系统上存在的报表，您可以在 Web 应用程序中使用 WebForms ReportViewer 控件来呈现它们。
+description: 若要查看已部署到报表服务器的报表或位于本地文件系统上的报表，可以使用 WebForms ReportViewer 控件在 Web 应用程序中呈现这些报表。
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1271a159feaf20dd46d23c5fc3ff4a0cb2aa87be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4339aca9735937e8747968b0060ce8eb2a24f486
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796933"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198454"
 ---
 # <a name="use-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控件
   若要查看部署到报表服务器的报表或在本地文件系统上存在的报表，您可以在 Web 应用程序中使用 WebForms ReportViewer 控件来呈现它们。  

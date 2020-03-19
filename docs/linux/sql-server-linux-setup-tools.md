@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: 本文介绍如何在 Linux 上安装 SQL Server 工具。
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/07/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340419"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288781"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
@@ -94,7 +94,10 @@ ms.locfileid: "78340419"
 
 ## <a id="ubuntu"></a> 在 Ubuntu 16.04 上安装工具
 
-通过以下步骤在 Ubuntu 上安装 **mssql-tools**。 
+通过以下步骤在 Ubuntu 上安装 **mssql-tools**。
+
+> [!NOTE]
+> 从 SQL Server 2019 CU3 开始，支持 Ubuntu 18.04。 如果使用的是 Ubuntu 18.04，请将存储库路径从 `/ubuntu/16.04` 更改为 `/ubuntu/18.04`。
 
 1. 导入公共存储库 GPG 密钥。
 

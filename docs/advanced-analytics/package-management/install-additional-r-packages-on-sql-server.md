@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558375"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027938"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装新的 R 包
 
@@ -26,7 +26,7 @@ ms.locfileid: "77558375"
 > [!NOTE]
 > 不建议使用标准 R `install.packages` 命令在 SQL Server 上添加 R 包。 请改用本文中所述的 sqlmlutils  。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 在用于连接到 SQL Server 的客户端计算机上安装 [R](https://www.r-project.org) 和 [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)。 可以使用任何 R IDE 来运行脚本，但本文假定使用 RStudio。
 
@@ -108,7 +108,7 @@ RODBCext 包具备许多存在依赖关系的包，并且识别包的所有依�
     , @script = N'print(R.version)'
    ```
 
-1. 从 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 下载最新的 sqlmlutils zip 文件（请勿解压缩文件）  。 例如，将文件下载到 `c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 从 [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) 下载最新的 sqlmlutils zip 文件（请勿解压缩文件）  。 例如，将文件下载到 `c:\downloads\sqlmlutils_0.7.1.zip`。
 
 1. 将整个 RODBCext 存储库文件夹 (`c:\downloads\rodbcext`) 和 sqlmlutils zip 文件 (`c:\downloads\sqlmlutils_0.7.1.zip`) 复制到客户端计算机   。 例如，将它们复制到客户端计算机上的 `c:\temp\packages` 文件夹中。
 

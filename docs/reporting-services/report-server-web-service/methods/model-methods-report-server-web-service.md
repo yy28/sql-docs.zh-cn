@@ -1,5 +1,6 @@
 ---
 title: 模型方法 - 报表服务器 Web 服务 | Microsoft Docs
+description: 了解可用于在报表服务器 Web 服务中管理模型的这些方法。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: baecfdb1baef4fbfcc50f2e18e4e898325f31e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 73d4a0ee4c5db4059dfe5ceac908b92d41ab8a45
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284555"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198234"
 ---
 # <a name="model-methods---report-server-web-service"></a>模型方法 - 报表服务器 Web 服务
   可以使用这些方法来管理模型。  

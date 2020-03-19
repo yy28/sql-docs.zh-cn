@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 71fd26df641c1ac551dcc430c0fef555fc3c5df8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0c919ad9202c99c7b010b6aee9c921e76784eb24
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68037156"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027956"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>以最小配置启动 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,8 @@ ms.locfileid: "68037156"
 -   启动存储过程将不运行。  
 
 -   将以最小大小配置 `tempdb`。
+
+-   审核将处于禁用状态，但仍可发出审核 DDL。 实际上，-m 应该足以满足大多数需要 SQL Server 审核重新配置的情况  。 有关审核配置中的安全性的更多详细信息，请参阅 [SQL Server 中的审核](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security)。
   
  用最小配置启动服务器后，应更改相应的服务器选项值，然后停止并重新启动服务器。  
   

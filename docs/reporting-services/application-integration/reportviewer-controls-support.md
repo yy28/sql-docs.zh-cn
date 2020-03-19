@@ -1,6 +1,6 @@
 ---
 title: 对报表查看器控件版本的支持
-description: Microsoft Report Viewer 控件与遵循 Microsoft 现代支持生命周期策略的 SQL Server Reporting Services 和 Power BI 报表服务器兼容。
+description: Microsoft Report Viewer 控件与遵循新式支持生命周期策略的 SQL Server Reporting Services 和 Power BI 报表服务器兼容。
 author: maggiesMSFT
 ms.custom: ''
 ms.author: maggies
@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 01/09/2019
-ms.openlocfilehash: 66691267ecdd2814cc84b2bfe544acce1d17ae82
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 671aacd4855afe4d4d5d0a8012fe5565420ff3e2
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796872"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198484"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Report Viewer 当前分支版本支持
 

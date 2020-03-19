@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 0315f181aad5c61b7d9c5fe7d46f3d81b27c9758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76a6e99d06061ae581b753ce0edd96a5a82d0f95
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73589131"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946721"
 ---
 # <a name="sql-assessment-api"></a>SQL 评估 API
 
@@ -66,31 +66,31 @@ SqlServer 和 RegisteredServer 对象是可交换的，因此可以将任何对�
     Get-SqlInstance -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-2. 获取实例的所有数据库的可用检查列表。 此处，我们使用 Get-Item cmdlet 和 Windows Powershel SQL Server 提供程序实现的路径来获取数据库列表，然后通过管道将其传递给 Get-SqlDatabase cmdlet。
+2. 获取实例的所有数据库的可用检查列表。 此处，我们使用 Get-Item cmdlet 和 Windows PowerShell SQL Server 提供程序实现的路径来获取数据库列表，然后将其传送到 Get-SqlDatabase cmdlet。
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     此外，还可以使用 Get-SqlDatabase cmdlet 来执行相同的操作。
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-3. 获取实例的所有数据库的可用检查列表。 此处，我们使用 Get-Item cmdlet 和 Windows Powershel SQL Server 提供程序实现的路径来获取数据库列表，然后通过管道将其传递给 Get-SqlDatabase cmdlet。
+3. 获取实例的所有数据库的可用检查列表。 此处，我们使用 Get-Item cmdlet 和 Windows PowerShell SQL Server 提供程序实现的路径来获取数据库列表，然后将其传送到 Get-SqlDatabase cmdlet。
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     此外，还可以使用 Get-SqlDatabase cmdlet 来执行相同的操作。
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. 调用实例的评估，并将结果保存到 SQL 表。 在此示例中，我们通过管道将 Get-SqlInstance cmdlet 的输出传递到 Invoke-SqlAssessment cmdlet，并通过管道将其结果传递给 Write-SqlTableData cmdlet。 请注意，在此示例中，Invoke-Assessment cmdlet 与 `-FlattenOutput` 参数一起运行。 此参数使输出适用于 Write-SqlTableData cmdlet。 如果不使用该参数，后者将引发错误。
+4. 调用实例的评估，并将结果保存到 SQL 表。 在此示例中，我们通过管道将 Get-SqlInstance cmdlet 的输出传递到 Invoke-SqlAssessment cmdlet，并通过管道将其结果传递给 Write-SqlTableData cmdlet。 在此示例中，Invoke-Assessment cmdlet 与 `-FlattenOutput` 参数一起运行。 此参数使输出适用于 Write-SqlTableData cmdlet。 如果不使用该参数，后者将引发错误。
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
@@ -131,7 +131,7 @@ SqlServer 和 RegisteredServer 对象是可交换的，因此可以将任何对�
 通过将一个或多个 JSON 文件作为参数添加到 SQL 评估 API 调用中，可以将多个规则集组合在一起。 组织可能会编写这些文件，或从第三方获取这些文件。 例如，可以让你的 JSON 文件禁用 Microsoft 规则集中的特定规则，让行业专家提供的另一个 JSON 文件包含你认为对环境有用的规则，然后再让另一个 JSON 文件更改该 JSON 文件中的某些阈值。
 
 > [!IMPORTANT]  
->  我们强烈建议不要使用来自不受信任源的规则集，除非对其全面检查以确保它们安全。
+> 我们强烈建议不要使用来自不受信任源的规则集，除非对其全面检查以确保它们安全。
 
 ## <a name="next-steps"></a>后续步骤
 

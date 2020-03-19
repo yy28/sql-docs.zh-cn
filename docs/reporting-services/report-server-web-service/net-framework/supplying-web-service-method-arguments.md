@@ -1,5 +1,6 @@
 ---
 title: 提供 Web 服务方法参数 | Microsoft Docs
+description: 了解 Reporting Services 中的 Web 服务方法的参数，包括可选参数和复杂数据类型。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad5251471fe9be594bf0ffb09c13f5f9afc35990
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 112db971dd632b5114c8a05f9642b740335de03f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128951"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198544"
 ---
 # <a name="supplying-web-service-method-arguments"></a>提供 Web 服务方法参数
   报表服务器 Web 服务方法通过 HTTP 上的 SOAP 向位于指定 URL 处的服务发送请求。 此服务接收请求，对其进行处理，然后返回响应。 这些请求和响应采用 XML 文档形式。  

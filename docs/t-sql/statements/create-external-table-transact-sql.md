@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 86702d159d3cc658a3c2e9e31477cca80f1eb6cc
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831974"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112454"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -103,7 +103,7 @@ LOCATION = 'folder_or_filepath  ' 为 Hadoop 或 Azure blob 存储中的实际�
 
 如果将 LOCATION 指定为一个文件夹，则从外部表中进行选择的 PolyBase 查询会从该文件夹及其所有子文件夹中检索文件。 正如 Hadoop 一样，PolyBase 不返回隐藏文件夹。 它也不返回文件名以下划线 (_) 或句点 (.) 开头的文件。
 
-在此示例中，如果 LOCATION='/webdata/'，则 PolyBase 查询会从 mydata.txt 和 mydata2.txt 返回行。 它不返回 mydata3.txt，因为它是隐藏文件夹的子文件夹。 它不返回 _hidden.txt，因为它是隐藏文件。
+在此示例中，如果 LOCATION='/webdata/'，则 PolyBase 查询会从 mydata.txt 和 mydata2.txt 返回行。 它不返回 mydata3.txt，因为它是隐藏文件夹中的文件。 它不返回 _hidden.txt，因为它是隐藏文件。
 
 ![外部表的递归数据](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部表的递归数据")
 
@@ -881,7 +881,7 @@ SCHEMARESOLUTION 对象上的共享锁。
 
 ## <a name="examples"></a>示例
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>A. 将数据从 ADLS 导入 Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
+### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>A. 将数据从 ADLS 导入 Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
 
 ```sql
 

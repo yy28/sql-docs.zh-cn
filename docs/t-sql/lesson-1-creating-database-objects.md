@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280947"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198404"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 课：创建和查询数据库对象
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "78280947"
 
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
+如果没有 SQL Server 实例，请创建一个。 若要创建一个 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
 -  Windows：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 ## <a name="create-a-database"></a>创建数据库
-与许多 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句一样，CREATE DATABASE 语句具有一个必需参数：数据库的名称。 CREATE DATABASE 还具有许多可选参数，如希望放置数据库文件的磁盘位置。 在您执行不带可选参数的 CREATE DATABASE 时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用其中许多参数的默认值。 本教程使用的可选语法参数非常少。   
+与许多 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句一样，[`CREATE DATABASE`](statements/create-database-transact-sql.md) 语句具有一个必需参数：数据库的名称。` CREATE DATABASE` 还具有许多可选参数，如希望放置数据库文件的磁盘位置。 当你执行不带可选参数的 `CREATE DATABASE` 时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用其中许多参数的默认值。
 
 1.  在查询编辑器窗口中，键入以下代码，但不要执行它：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "78280947"
     GO  
     ```  
   
-2.  使用指针选择词语 `CREATE DATABASE`，再按 **F1**。 应该会打开 SQL Server 联机丛书中的 CREATE DATABASE 主题。 您可以使用此方法查找 CREATE DATABASE 以及在本教程中使用的其他语句的完整语法。  
+2.  使用指针选择词语 `CREATE DATABASE`，再按 **F1**。 应该会打开 SQL Server 联机丛书中的 `CREATE DATABASE` 主题。 你可以使用此方法查找 `CREATE DATABASE` 以及在本教程中使用的其他语句的完整语法。  
   
 3.  在查询编辑器中，按 **F5** 以执行语句并创建名为 `TestData`的数据库。  
   
@@ -63,6 +63,7 @@ ms.locfileid: "78280947"
 > 在单个批处理中提交多条语句时，可以用关键字 GO 分隔各语句。 当批处理只包含一条语句时，GO 是可选的。  
 
 ## <a name="create-a-table"></a>创建表
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 若要创建表，您必须提供该表的名称以及该表中每个列的名称和数据类型。 指出每个列中是否允许空值，也是一种很好的做法。 若要创建表时，必须具有 `CREATE TABLE` 权限，以及对包含该表的架构的 `ALTER SCHEMA` 权限。 [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) 固定数据库角色具有这些权限。  
@@ -76,6 +77,7 @@ ms.locfileid: "78280947"
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>将查询编辑器连接切换到 TestData 数据库  
+
 在查询编辑器窗口中，键入以下代码，并执行它以更改与 `TestData` 数据库的连接。  
   
   ```sql  
@@ -84,7 +86,8 @@ ms.locfileid: "78280947"
   ```  
   
 ### <a name="create-the-table"></a>创建表
-在查询编辑器窗口中，键入以下代码，并执行它以创建一个名为 `Products`的简单表。 该表中各列的名称为 `ProductID`、 `ProductName`、 `Price`和 `ProductDescription`。 `ProductID` 列是表的主键。 `int``varchar(25)`、 `money`和 `varchar(max)` 都是数据类型。 当插入或更改行时，只有 `Price` 和 `ProductionDescription` 列可以不包含数据。 此语句包含称为架构的可选元素 (`dbo.`)。 架构是拥有表的数据库对象。 如果您是管理员，则 `dbo` 是默认架构。 `dbo` 代表数据库所有者。  
+
+在查询编辑器窗口中，键入以下代码，并执行它以创建一个名为 `Products` 的表。 该表中各列的名称为 `ProductID`、 `ProductName`、 `Price`和 `ProductDescription`。 `ProductID` 列是表的主键。 `int``varchar(25)`、 `money`和 `varchar(max)` 都是数据类型。 当插入或更改行时，只有 `Price` 和 `ProductionDescription` 列可以不包含数据。 此语句包含称为架构的可选元素 (`dbo.`)。 架构是拥有表的数据库对象。 如果您是管理员，则 `dbo` 是默认架构。 `dbo` 代表数据库所有者。  
   
   ```sql  
   CREATE TABLE dbo.Products  
@@ -103,13 +106,13 @@ ms.locfileid: "78280947"
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
-|3000|3mm Bracket|.52||  
+|3000|3 mm Bracket|0.52||  
   
 基本语法为：INSERT、表名、列的列表、VALUES，然后是要插入的值的列表。 如果某行的前面有两个连字符，则指示该行为注释，编译器将忽略其文本。 在这种情况下，注释说明允许的语法变体。  
   
 ### <a name="insert-data-into-a-table"></a>将数据插入到表  
   
-1.  执行以下语句，将一行插入到在上一个任务中创建的 `Products` 表中。 基本语法如下：  
+1.  执行以下语句，将一行插入到在上一个任务中创建的 `Products` 表中。
   
    ```sql 
    -- Standard syntax  
@@ -117,7 +120,21 @@ ms.locfileid: "78280947"
        VALUES (1, 'Clamp', 12.48, 'Workbench clamp')  
    GO   
    ```  
-  
+
+   > [!NOTE]
+   > 如果插入成功，则继续执行下一步。
+   >
+   > 如果插入操作失败，则可能是因为 `Product` 表中已存在具有该产品 ID 的行。 若要继续，请删除表中的所有行并重复上一步。 [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) 删除表中的所有行。 
+   >
+   > 运行以下命令来删除表中的所有行：
+   > 
+   > ```sql
+   >TRUNCATE TABLE TestData.dbo.Products;
+   > GO
+   >```
+   >
+   > 截断表后，在此步骤中重复 `INSERT` 命令。
+
 2.  以下语句显示如何通过在字段列表（在圆括号中）中和值列表中均切换 `ProductID` 和 `ProductName` 的位置，更改提供参数的顺序。  
   
    ```sql  
@@ -141,7 +158,7 @@ ms.locfileid: "78280947"
    ```sql  
    -- Dropping the optional dbo and dropping the ProductDescription column  
    INSERT Products (ProductID, ProductName, Price)  
-       VALUES (3000, '3mm Bracket', .52)  
+       VALUES (3000, '3 mm Bracket', 0.52)  
    GO  
    ```  
   
@@ -169,7 +186,7 @@ ms.locfileid: "78280947"
   GO  
   ```  
   
-2.  您可以使用星号选择表中的所有列。 这通常用于即席查询中。 您应该在永久代码中提供列的列表，以便语句将返回预测列，即使稍后将新列添加到表中也是如此。  
+2.  你可以使用星号 (`*`) 选择表中的所有列。 星号用于临时查询。 在永久代码中，请提供列列表，使语句返回预测列，即使稍后会将新列添加到表中，也是如此。  
   
   ```sql  
   -- Returns all columns in the table  
@@ -224,7 +241,7 @@ ms.locfileid: "78280947"
   
 ### <a name="create-a-view"></a>创建视图  
   
-执行以下语句创建一个非常简单的视图，该视图执行 Select 语句，并将产品的名称和价格返回给用户。  
+执行以下语句创建一个视图，该视图执行 Select 语句，并将产品的名称和价格返回给用户。  
   
   ```sql  
   CREATE VIEW vw_Names  

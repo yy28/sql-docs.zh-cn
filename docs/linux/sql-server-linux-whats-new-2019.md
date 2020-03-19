@@ -3,22 +3,30 @@ title: Linux 上的 SQL Server 2019 的新增功能
 description: 本文重点介绍 Linux 上的 SQL Server 2019 的新增功能。
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/23/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5183efa51afd89ad82d0cdcb6448996429b81d28
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 48ca6446044860380a4456e49d75811805e3a889
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72890557"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198284"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的新增功能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文介绍了可用于在 Linux 上运行的 SQL Server 2019 的主要功能和服务。 有关包下载和已知问题，请参阅[发行说明](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15)。
+
+## <a name="ubuntu-1804-supported"></a>支持 Ubuntu 18.04
+
+自 SQL Server 2019 CU3 起，现在支持 Ubuntu 18.04。 查看[在 Ubuntu 上安装 SQL Server 并创建数据库](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15)快速入门。
+
+## <a name="rhel-8-supported"></a>支持 RHEL 8
+
+自 SQL Server 2019 CU1 起，现已支持 RHEL 8。 查看[在 Red Hat 上安装 SQL Server 并创建数据库](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15)快速入门。
 
 ## <a name="updates"></a>更新
 

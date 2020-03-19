@@ -1,5 +1,6 @@
 ---
 title: 计划方法 | Microsoft Docs
+description: 在 Reporting Services 中，这些方法创建和管理用于报表执行和传递的共享计划，以及缓存报表服务器使用的刷新计划。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 087e2111987de00b347c400ce7255cb7f9eee97e
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284436"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198334"
 ---
 # <a name="scheduling-methods"></a>计划方法
   可以使用这些方法来创建和管理用于报表执行和传递的共享计划，还可以使用这些方法来缓存报表服务器使用的刷新计划。  

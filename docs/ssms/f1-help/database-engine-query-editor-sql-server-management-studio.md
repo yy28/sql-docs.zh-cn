@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef5bdc57a5fb5f0a2cbeed6be3356aade1ba491
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335764"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198524"
 ---
 # <a name="ssms-query-editor"></a>SSMS 查询编辑器
 
@@ -164,7 +164,7 @@ ms.locfileid: "78335764"
 
 删除当前行开头处的任何注释运算符 (--)，以使该行成为一个活动的源语句。
 
-还可以通过选中 Ctrl + K 然后选择 Ctrl + U 注释掉一行。
+还可以通过选择 Ctrl + K 然后选择 Ctrl + U 来取消对某行的注释。
 
 ### <a name="decrease-indent-using-the-editor-toolbar"></a>使用编辑器工具栏减少缩进
 

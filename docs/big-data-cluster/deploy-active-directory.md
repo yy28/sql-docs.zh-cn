@@ -2,19 +2,19 @@
 title: 在 Active Directory 模式下部署
 titleSuffix: SQL Server Big Data Cluster
 description: 了解如何在 Active Directory 域中升级 SQL Server 大数据群集。
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200958"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190585"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -174,16 +174,27 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 
 - `security.activeDirectory.domainDnsName`设置用户帐户 ：域的名称（例如 `contoso.local`）。
 
-- `security.activeDirectory.clusterAdmins`设置用户帐户 ：此参数采用一个 AD 组  。 此组的成员将在群集中获得管理员权限。 这意味着他们将在 SQL Server 中具有 sysadmin 权限、在 HDFS 中具有超级用户权限、在控制器中具有管理员权限。 **请注意，在部署开始之前，此组需要存在于 AD 中。另请注意，在 Active Directory 中不能将此组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
+- `security.activeDirectory.clusterAdmins`设置用户帐户 ：此参数采用一个 AD 组。 AD 组范围必须为通用域或全球域。 此组的成员在群集中获得管理员权限。 这意味着他们在 SQL Server 中具有 `sysadmin` 权限、在 HDFS 中具有超级用户权限、在控制器中具有管理员权限。 
 
-- `security.activeDirectory.clusterUsers`设置用户帐户 ：大数据群集中常规用户（无管理员权限）的 AD 组列表。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
+  >[!IMPORTANT]
+  >部署开始之前，在 AD 中创建此组。 如果此 AD 组的范围为本地域，则部署失败。
 
-- `security.activeDirectory.appOwners` 可选参数  ：有权创建、删除和运行任何应用程序的 AD 组列表。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
+- `security.activeDirectory.clusterUsers`设置用户帐户 ：大数据群集中常规用户（无管理员权限）的 AD 组列表。 此列表可以包括范围设置为通用域或全球域的 AD 组。 它们不能是本地域组。
 
-- `security.activeDirectory.appReaders` 可选参数：有权运行任何应用程序的 AD 组的列表  。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
+  >[!IMPORTANT]
+  >部署开始之前，请在 AD 中创建这些组。 如果这些 AD 组中的任何一个范围为本地域，则部署失败。
 
-**如何查看 AD 组作用域：** 
-[单击此处获取说明](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以便查看 AD 组作用域以及确定其是否为 DomainLocal.
+- `security.activeDirectory.appOwners` 可选参数  ：有权创建、删除和运行任何应用程序的 AD 组列表。 此列表可以包括范围设置为通用域或全球域的 AD 组。 它们不能是本地域组。
+
+  >[!IMPORTANT]
+  >部署开始之前，请在 AD 中创建这些组。 如果这些 AD 组中的任何一个范围为本地域，则部署失败。
+
+- `security.activeDirectory.appReaders` 可选参数  ：有权运行任何应用程序的 AD 组的列表。 此列表可以包括范围设置为通用域或全球域的 AD 组。 它们不能是本地域组。
+
+  >[!IMPORTANT]
+  >部署开始之前，请在 AD 中创建这些组。 如果这些 AD 组中的任何一个范围为本地域，则部署失败。
+
+[检查 AD 组范围](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以确定它是否为 DomainLocal。
 
 如果尚未初始化部署配置文件，则可以运行此命令来获取配置的副本。
 

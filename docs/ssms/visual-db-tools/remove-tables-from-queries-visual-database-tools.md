@@ -16,19 +16,19 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 32c25c3ded07e84e436b69af5baac5634909998c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9955b61f8c04aa890c156234838816976f41a585
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255251"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198434"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>从查询中删除表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 可从查询中移除表或任何表值对象。  
   
 > [!NOTE]  
-> 移除表或表值对象不会从数据库中删除任何内容，该操作只会将表或表值对象从当前查询中移除。 若要详细了解如何从数据库中删除表，请参阅[操作说明：从数据库中删除表 https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec) 。  
+> 移除表或表值对象不会从数据库中删除任何内容，该操作只会将表或表值对象从当前查询中移除。 有关从数据库中删除表的详细信息，请参阅[如何：从数据库中删除表](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)。  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>移除表或表结构对象  
   
