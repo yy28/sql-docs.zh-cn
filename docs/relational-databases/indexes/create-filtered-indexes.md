@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908107"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
@@ -59,15 +59,15 @@ ms.locfileid: "72908107"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Design"></a> 设计注意事项  
+###  <a name="design-considerations"></a><a name="Design"></a> 设计注意事项  
   
 -   在列中只有少量相关值需要查询时，可以针对值的子集创建筛选索引。 例如，当列中的值大部分为 NULL 并且查询只从非 NULL 值中进行选择时，可以为非 NULL 数据行创建筛选索引。 由此得到的索引与对相同键列定义的全表非聚集索引相比，前者更小且维护开销更低。  
   
 -   表中含有异类数据行时，可以为一种或多种类别的数据创建筛选索引。 通过将查询范围缩小为表的特定区域，这可以提高针对这些数据行的查询性能。 此外，由此得到的索引与全表非聚集索引相比，前者更小且维护开销更低。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   不能对视图创建筛选索引。 但是，查询优化器可以从对视图中引用的表定义的筛选索引中获益。 对于从视图中选择数据的查询，如果查询结果正确，查询优化器会考虑对此查询使用筛选索引。
 
@@ -97,12 +97,12 @@ ms.locfileid: "72908107"
 
 - 在 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md) 语法中查看创建筛选索引所需的 SET 选项
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。 若要修改筛选索引表达式，请使用 CREATE INDEX WITH DROP_EXISTING。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>创建筛选索引  
   
@@ -126,7 +126,7 @@ ms.locfileid: "72908107"
   
 10. 单击“确定”。   
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>创建筛选索引  
   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71297740"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216890"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
 
@@ -58,7 +58,7 @@ ms.locfileid: "71297740"
   
 5.  将 **源组件** 从工具箱拖到“数据流设计器”，然后并将它配置为从数据源提取数据。   
   
-    1.  为了进行演练，请创建一个包含表 Employee的测试数据库 TestDB   。 创建包含三列： **ID**、 **FirstName** 和 **LastName**的表。  
+    1.  为了进行演练，请创建一个包含表 **Employee** 的测试数据库 **TestDB**。 创建包含三列： **ID**、 **FirstName** 和 **LastName**的表。  
   
     2.  将 **ID** 设为主键。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71297740"
   
          ![数据馈送发布向导 -“包设置”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "数据馈送发布向导 -“包设置”页")  
   
-    2.  单击“路径”字段旁边的“浏览”  ，浏览 SSIS 目录，选择要发布的 SSIS 包（例如：SSISDB  ->SSISPackagePublishing  ->Package.dtsx  ），然后单击“确定”  。  
+    2.  单击“路径”字段旁边的“浏览”  ，浏览 SSIS 目录，选择要发布的 SSIS 包（例如：**SSISDB**->**SSISPackagePublishing**->**Package.dtsx**），然后单击“确定”  。  
   
          ![数据馈送发布向导 - 浏览包](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "数据馈送发布向导 - 浏览包")  
   
@@ -164,7 +164,7 @@ ms.locfileid: "71297740"
   
 1.  启动 SQL Server Management Studio。  
   
-2.  展开“\<计算机名称>”、“数据库”、“\<你在向导中选择的数据库>”和“视图”     。  
+2.  展开“\<计算机名称>”、“数据库”、“**你在向导中选择的数据库>”和“视图”**  \<   。  
   
 3.  右键单击向导创建的“\<向导创建的视图>”，然后单击“选择前 1000 行”   。  
   
@@ -266,8 +266,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
 -   左右方括号（[ 和 ]）- 这些字符用于指示首部/尾部空格。 例如，“[ some spaces ]”表示字符串“ some spaces ”的首部和尾部各有一个空格。 如果在查询子句中使用这些字符本身，必须将其转义。 例如， \\[ 和 \\]。  
   
 -   正斜杠 (\\) - 查询子句中使用的每个 \ 必须使用转义符。 例如，查询子句中的 \\\ 将作为 \ 计算。  
-  
- 正斜杠 (\\) - 查询子句中使用的每个 \ 必须使用转义符。 例如，查询子句中的 \\\ 将作为 \ 计算。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流目标](../../integration-services/data-flow/data-streaming-destination.md)   

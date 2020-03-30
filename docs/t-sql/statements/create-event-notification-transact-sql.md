@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902810"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -82,7 +82,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  例如，创建了三个事件通知。 所有事件通知指定 FOR ALTER_TABLE、WITH FAN_IN、相同的 TO SERVICE 子句，并且使用相同的 SID 创建。 运行 ALTER TABLE 语句时，这三个事件通知创建的消息将合并为一条消息。 因此，目标服务只接收一条事件消息。  
   
  event_type   
- 导致执行事件通知的事件类型的名称。 event_type 可以为 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 事件类型、SQL 跟踪事件类型或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件类型  。 有关限定 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 事件类型的列表，请参阅 [DDL 事件](../../relational-databases/triggers/ddl-events.md)。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件类型为 QUEUE_ACTIVATION 和 BROKER_QUEUE_DISABLED。 有关详细信息，请参阅 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)。  
+ 导致执行事件通知的事件类型的名称。 event_type 可以为 *DDL 事件类型、SQL 跟踪事件类型或* 事件类型[!INCLUDE[tsql](../../includes/tsql-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]。 有关限定 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 事件类型的列表，请参阅 [DDL 事件](../../relational-databases/triggers/ddl-events.md)。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件类型为 QUEUE_ACTIVATION 和 BROKER_QUEUE_DISABLED。 有关详细信息，请参阅 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)。  
   
  event_group   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL 跟踪事件类型的预定义组的名称。 可在执行属于事件组的任何事件后激发事件通知。 有关 DDL 事件组、事件组包含的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 事件以及可定义事件组的作用域的列表，请参阅 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)。  
@@ -130,10 +130,10 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  在下面的示例 A 和 B 中，`TO SERVICE 'NotifyService'` 子句中的 GUID ('8140a771-3c4b-4479-8ac0-81008ab17984') 特定于设置相应示例的计算机。 对于该实例，它是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 GUID。  
 >   
->  若要复制和运行这些示例，需要将此 GUID 替换为您的计算机和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 GUID。 如上面的“参数”部分所述，可以通过查询 sys.databases 目录视图的 service_broker_guid 列获取 'broker\_instance\_specifier'    。  
+>  若要复制和运行这些示例，需要将此 GUID 替换为您的计算机和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 GUID。 如上面的“参数”部分所述，可以通过查询 sys.databases 目录视图的 service_broker_guid 列获取 'broker**instance**specifier' _\_\__  。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. 创建服务器范围的事件通知  
- 以下示例创建使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 设置目标服务时所需的对象。 该目标服务引用专用于事件通知的启动服务的消息类型和约定。 然后对该目标服务创建一个事件通知，只要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例发生 `Object_Created` 跟踪事件，便会发送一个通知。  
+ 以下示例创建使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 设置目标服务时所需的对象。 该目标服务引用专用于事件通知的启动服务的消息类型和约定。 然后对该目标服务创建一个事件通知，只要 `Object_Created` 实例发生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 跟踪事件，便会发送一个通知。  
   
 ```sql  
 --Create a queue to receive messages.  
@@ -160,7 +160,7 @@ TO SERVICE 'NotifyService',
 ```  
   
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. 创建以数据库为作用域的事件通知  
- 以下示例将在上例所涉及的同一目标服务上创建事件通知。 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库上发生 `ALTER_TABLE` 事件后会激发该事件通知。  
+ 以下示例将在上例所涉及的同一目标服务上创建事件通知。 在 `ALTER_TABLE` 示例数据库上发生 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 事件后会激发该事件通知。  
   
 ```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  

@@ -23,10 +23,10 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117071"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -93,17 +93,17 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- CREATION_DISPOSITION = CREATE_NEW   
+ CREATION_DISPOSITION  **CREATE_NEW=**  
  在可扩展的密钥管理设备上创建新密钥。  如果密钥已存在于设备上，该语句将失败，并显示错误。  
   
- CREATION_DISPOSITION = OPEN_EXISTING   
+ CREATION_DISPOSITION  **OPEN_EXISTING=**  
  将一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对称密钥映射到现有的可扩展密钥管理密钥。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，则此参数默认为 CREATE_NEW。  
   
  certificate_name   
  指定将用于对对称密钥进行加密的证书的名称。 该证书必须已存在于数据库中。  
   
  ' password '     
- 指定一个密码，从该密码派生出用来保护对称密钥的 TRIPLE_DES 密钥。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。 始终使用强密码。  
+ 指定一个密码，从该密码派生出用来保护对称密钥的 TRIPLE_DES 密钥。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 始终使用强密码。  
   
  *symmetric_key_name*  
  指定用于对要创建的密钥进行加密的对称密钥。 指定的密钥必须已存在于数据库中，并且必须打开。  
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 使用可扩展密钥管理 (EKM) 设备创建对称密钥  
- 下面的示例使用一个名为 `MySymKey` 的提供程序和一个密钥名称 `MyEKMProvider` 创建一个名为 `KeyForSensitiveData` 的对称密钥。 该示例向 `User1` 授权，并假定系统管理员已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了名为 `MyEKMProvider` 的提供程序。  
+ 下面的示例使用一个名为 `MySymKey` 的提供程序和一个密钥名称 `MyEKMProvider` 创建一个名为 `KeyForSensitiveData` 的对称密钥。 该示例向 `User1` 授权，并假定系统管理员已在 `MyEKMProvider` 中注册了名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的提供程序。  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  

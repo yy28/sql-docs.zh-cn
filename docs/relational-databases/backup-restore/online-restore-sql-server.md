@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908873"
 ---
 # <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "72908873"
     > [!NOTE]  
     >  或者，也可以在开始还原顺序前手动使文件脱机。 有关详细信息，请参阅本主题后面的“使数据库或文件脱机”。  
   
-##  <a name="taking_db_or_file_offline"></a> 使数据库或文件脱机  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> 使数据库或文件脱机  
  如果不想使用联机还原，则可以使用以下方法之一，在启动还原顺序之前使数据库脱机：  
   
 -   在任何恢复模式下，您都可以使用以下 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句使数据库脱机：  
@@ -95,7 +95,7 @@ ms.locfileid: "72908873"
   
 -   [示例：只读文件的联机还原（完整恢复模式）](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [还原文件和文件组 (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

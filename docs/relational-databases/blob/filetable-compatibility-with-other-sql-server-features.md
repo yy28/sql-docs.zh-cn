@@ -14,17 +14,17 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252704"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 与其他 SQL Server 功能的兼容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   说明 FileTable 如何与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他功能配合使用。  
   
-##  <a name="alwayson"></a> AlwaysOn 可用性组和 FileTable  
+##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> AlwaysOn 可用性组和 FileTable  
  在包含 FILESTREAM 或 FileTable 数据的数据库属于某一 AlwaysOn 可用性组时：  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]支持部分 FileTable 功能。 故障转移后，FileTable 数据在主副本上是可访问的，但是在可读辅助副本上不可访问。  
@@ -35,26 +35,26 @@ ms.locfileid: "75252704"
   
 -   通过文件系统 API 对 FILESTREAM 或 FileTable 数据进行的所有访问都应该使用 VNN，而非计算机名称。 有关详细信息，请参阅 [FILESTREAM 和 FileTable 与 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)。  
   
-##  <a name="OtherPartitioning"></a> 分区和 FileTable  
+##  <a name="partitioning-and-filetables"></a><a name="OtherPartitioning"></a> 分区和 FileTable  
  FileTable 不支持分区。 通过对多个 FILESTREAM 文件组的支持，在大多数方案中可以解决纯向上扩展问题，而不必使用分区（不像 SQL 2008 FILESTREAM）。  
   
-##  <a name="OtherRepl"></a> 复制和 FileTable  
+##  <a name="replication-and-filetables"></a><a name="OtherRepl"></a> 复制和 FileTable  
  FileTable 不支持复制和相关功能（包括事务性复制、合并复制、更改数据捕获和更改跟踪）。  
   
-##  <a name="OtherIsolation"></a> 事务语义和 FileTable  
+##  <a name="transaction-semantics-and-filetables"></a><a name="OtherIsolation"></a> 事务语义和 FileTable  
  **Windows 应用程序**  
  Windows 应用程序不理解数据库事务，因此 Windows 写操作不提供数据库事务的 ACID 属性。 因此事务性回滚和恢复不适用于 Windows 更新操作。  
   
  **Transact-SQL 应用程序**  
  对于应用于 FileTable 中的 FILESTREAM (file_stream) 列的 TSQL 应用程序，隔离语义与常规用户表中的 FILESTREAM 数据类型相同。  
   
-##  <a name="OtherQueryNot"></a> 查询通知和 FileTable  
+##  <a name="query-notifications-and-filetables"></a><a name="OtherQueryNot"></a> 查询通知和 FileTable  
  查询不能包含对 FileTable、WHERE 子句或查询的任何其他部分中的 FILESTREAM 列的引用。  
   
-##  <a name="OtherSelectInto"></a> SELECT INTO 和 FileTable  
+##  <a name="select-into-and-filetables"></a><a name="OtherSelectInto"></a> SELECT INTO 和 FileTable  
  FileTable 中的 SELECT INTO 语句将不在创建的目标表上传播 FileTable 语义（就像常规表中的 FILESTREAM 列一样）。 所有目标表列的行为就像常规列的行为一样。 没有任何 FileTable 语义与之关联。  
   
-##  <a name="OtherTriggers"></a> 触发器和 FileTable  
+##  <a name="triggers-and-filetables"></a><a name="OtherTriggers"></a> 触发器和 FileTable  
  **DDL（数据定义语言）触发器**  
  对于 DDL 触发器用于 FileTable 没有特别的注意事项。 对于 Create/Alter 数据库操作以及针对 FileTable 的 CREATE/ALTER TABLE 操作，普通 DDL 触发器将被激发。 触发器可以通过调用 EVENTDATA() 函数来检索包括 DDL 命令文本和其他信息的实际事件数据。 不添加新事件，也不更改现有 Eventdata 架构。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75252704"
   
 -   在恢复操作期间，Win32 句柄的异常终止（如通过管理员或数据库崩溃显式终止 Win32 句柄）将不执行用户触发器，即使 FILESTREAM 内容可能已被异常终止的 Win32 应用程序更改。  
   
-##  <a name="OtherViews"></a> 视图和 FileTable  
+##  <a name="views-and-filetables"></a><a name="OtherViews"></a> 视图和 FileTable  
  **视图**  
  可以像为任何其他表一样为 FileTable 创建视图。 但是对于为 FileTable 创建的视图有以下注意事项：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75252704"
  **索引视图**  
  当前索引视图不能包括 FILESTREAM 列或依赖 FILESTREAM 列的计算/持久计算列。 对于在 FileTable 上定义的视图也同样如此。  
   
-##  <a name="OtherSnapshots"></a> 快照隔离和 FileTable  
+##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> 快照隔离和 FileTable  
  已提交读快照隔离 (RCSI) 和快照隔离 (SI) 依赖是否具有可用于读取器的数据快照，甚至正在对数据进行更新时也是如此。 但是，FileTable 允许对文件流数据进行非事务性写访问。 因此，在包含 FileTable 的数据库中使用这些功能存在以下限制：  
   
 -   可以更改包含 FileTable 的数据库以启用 RCSI/SI。  
@@ -112,10 +112,10 @@ ms.locfileid: "75252704"
   
     -   无论数据库选项如何（READ_COMMITTED_SNAPSHOT 或 ALLOW_SNAPSHOT_ISOLATION），全文索引编制始终会成功。  
   
-##  <a name="readsec"></a> 可读辅助数据库  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a> 可读辅助数据库  
  有关快照的注意事项同样适用于可读辅助数据库，如上一节 [快照隔离和 FileTable](#OtherSnapshots)中所述。  
   
-##  <a name="CDB"></a> 包含的数据库和 FileTable  
+##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a> 包含的数据库和 FileTable  
  FileTable 功能所依赖的 FILESTREAM 功能要求在数据库外部的一些配置。 因此，使用 FILESTREAM 或 FileTable 的数据库并未被完全包含。  
   
  如果您想要使用包含的数据库的某些功能（例如包含的用户），则可以将数据库包含设置为 PARTIAL。 但在此情况下，您必须知道某些数据库设置未包含在数据库中，并且在数据库移动时不自动移动。  

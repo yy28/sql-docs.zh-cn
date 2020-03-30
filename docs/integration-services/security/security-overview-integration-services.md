@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287641"
 ---
 # <a name="security-overview-integration-services"></a>安全性概述 (Integration Services)
@@ -106,7 +106,7 @@ ms.locfileid: "79287641"
   
  有关详细信息，请参阅 [访问 Integration Services 服务](#service)。  
 
-## <a name="files"></a> 访问包使用的文件
+## <a name="access-to-files-used-by-packages"></a><a name="files"></a> 访问包使用的文件
   包保护级别不保护存储在包以外的文件。 这些文件包括下面的文件：  
   
 -   配置文件  
@@ -128,7 +128,7 @@ ms.locfileid: "79287641"
 ### <a name="log-files"></a>日志文件  
  写入文件系统的日志项也应使用访问控制列表 (ACL) 进行保护。 日志项也可存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中，受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全机制的保护。 日志项可能包含敏感信息。例如，如果包中包含构造 SQL 语句的执行 SQL 任务，而所构造的 SQL 语句又引用电话号码，则对应于该 SQL 语句的日志项就会包含电话号码。 SQL 语句还可能泄漏数据库中有关表和列名的私有信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
 
-## <a name="service"></a> 访问 Integration Services 服务
+## <a name="access-to-the-integration-services-service"></a><a name="service"></a> 访问 Integration Services 服务
   包保护级别可以限制允许谁来编辑和执行包。 需要其他保护来限制谁可以查看当前正在服务器上运行的包列表以及谁可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中停止当前正在执行的包。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务来列出正在运行的包。 Windows Administrators 组的成员可以查看和停止所有当前正在运行的包。 如果用户不属于 Administrators 组的成员，则只能查看和停止他们启动的包。  

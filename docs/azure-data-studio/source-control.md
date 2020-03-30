@@ -11,18 +11,18 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959280"
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中使用源代码管理
+#  <a name="using-source-control-in-name-sos"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中使用源代码管理
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 支持用于版本/源代码管理的 Git。
 
 
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的 Git 支持
+## <a name="git-support-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的 Git 支持
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 附带 Git 源控制管理器 (SCM)，但仍需要[安装 Git（版本 2.0.0 或更高版本）](https://git-scm.com/download)，然后才能使用这些功能。 
 

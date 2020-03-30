@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941033"
 ---
 # <a name="copy-only-backups"></a>仅复制备份
@@ -37,7 +37,7 @@ ms.locfileid: "76941033"
   
 - 仅复制日志备份（仅限于完整恢复模式和大容量日志恢复模式）  
 
-     仅复制日志备份保留当前日志存档点，因此，不影响常规日志备份的序列。 通常不必进行仅复制日志备份。 相反，您可以创建新的常规日志备份（使用 WITH NORECOVERY），然后将该备份与还原序列所需的任何以前的日志备份一起使用。 但是，仅复制日志备份有时可用于执行联机还原。 关于这方面的示例，请参阅[示例：读/写文件的联机还原（完整恢复模式）](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
+     仅复制日志备份保留当前日志存档点，因此，不影响常规日志备份的序列。 通常不必进行仅复制日志备份。 相反，您可以创建新的常规日志备份（使用 WITH NORECOVERY），然后将该备份与还原序列所需的任何以前的日志备份一起使用。 但是，仅复制日志备份有时可用于执行联机还原。 有关示例，请参阅[示例：读/写文件的联机还原（完整恢复模式）](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
 
      事务日志从不在仅复制备份后出现截断。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "76941033"
  您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell 创建仅复制备份。  
 
 ### <a name="examples"></a>示例  
-###  <a name="SSMSProcedure"></a> A. 使用 SQL Server Management Studio  
+###  <a name="a-using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> A. 使用 SQL Server Management Studio  
 在此示例中， `Sales` 数据库的仅复制备份将备份到磁盘的默认备份位置。
 
 1. 在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
@@ -61,7 +61,7 @@ ms.locfileid: "76941033"
 
 1. 单击“确定”。 
 
-###  <a name="TsqlProcedure"></a>B. “使用 Transact-SQL”  
+###  <a name="b-using-transact-sql"></a><a name="TsqlProcedure"></a>B. “使用 Transact-SQL”  
 此示例利用 COPY_ONLY 参数为 `Sales` 数据库创建仅复制备份。  同时还创建事务日志的仅复制备份。
 
 ```sql
@@ -78,13 +78,13 @@ WITH COPY_ONLY;
 > 使用 DIFFERENTIAL 选项指定时，COPY_ONLY 不起作用。  
 
   
-###  <a name="PowerShellProcedure"></a>C. 使用 PowerShell  
+###  <a name="c-using-powershell"></a><a name="PowerShellProcedure"></a>C. 使用 PowerShell  
 此示例利用 -CopyOnly 参数为 `Sales` 数据库创建仅复制备份。  
 ```powershell
 Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile 'E:\BAK\Sales_Copy.bak' -CopyOnly
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **创建完整备份或日志备份**  
   
 - [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

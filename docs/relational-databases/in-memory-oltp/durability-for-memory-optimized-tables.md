@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67942807"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
@@ -86,7 +86,7 @@ ms.locfileid: "67942807"
   
  后台线程使用合并策略计算所有关闭的 CFP，然后启动一个或多个合并请求以便验证 CFP 的资格。 这些合并请求由脱机检查点线程处理。 将定期进行对合并策略的评估，并且在关闭检查点时也会进行评估。  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合并策略  
+### <a name="ssnoversion-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合并策略  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实现以下合并策略：  
   
 -   在考虑已删除的行后，如果可以合并 2 个或多个连续 CFP，则计划进行合并，这样，最后生成的行可以适合于 1 个 CFP 的目标大小。 如上所述，数据和差异文件的目标大小与原始大小相对应。  

@@ -21,10 +21,10 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 914250b46e7608f3b0977a2b5c4d7218032989f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68011819"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>启用或禁用服务器网络协议
@@ -35,7 +35,7 @@ ms.locfileid: "68011819"
 >  在安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 过程中，为 BUILTIN\Users 组添加一个登录名。 这可以使计算机的所有通过身份验证的用户作为 public 角色成员访问 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例。 可以安全地删除 BUILTIN\Users 登录名，以限制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对具有单独登录名或为使用此登录名的其他 Windows 组成员的计算机用户的访问。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至 [!INCLUDE[sssql14](../../includes/sssql14-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据提供商在默认情况下仅支持 TLS 1.0 和 SSL 3.0。 如果通过更改操作系统 SChannel 层强制使用其他协议（如 TLS 1.1 或 TLS 1.2），与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接可能会失败，除非已安装相应的更新，将 TLS 1.1 和 1.2 的支持添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，<a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">此处</a>列出了这些更新。 从 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 开始，SQL Server 的所有发布版本均包括 TLS 1.2 支持，无需安全其他更新。
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssql14](../../includes/sssql14-md.md)] 数据提供商在默认情况下仅支持 TLS 1.0 和 SSL 3.0。 如果通过更改操作系统 SChannel 层强制使用其他协议（如 TLS 1.1 或 TLS 1.2），与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接可能会失败，除非已安装相应的更新，将 TLS 1.1 和 1.2 的支持添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，<a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">此处</a>列出了这些更新。 从 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 开始，SQL Server 的所有发布版本均包括 TLS 1.2 支持，无需安全其他更新。
   
  **本主题内容**  
   
@@ -45,21 +45,21 @@ ms.locfileid: "68011819"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   
 #### <a name="to-enable-a-server-network-protocol"></a>启用服务器网络协议  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在  配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
   
-2.  在控制台窗格中，单击“\<实例名称> 的协议”   。  
+2.  在控制台窗格中，单击“**实例名称> 的协议”** _\<_ 。  
   
 3.  在细节窗格中，右键单击要更改的协议，再单击“启用”  或“禁用”  。  
   
 4.  在控制台窗格中，单击“SQL Server 服务”。   
   
-5.  在细节窗格中，右键单击“SQL Server  (\<实例名称>  )”  ，然后单击“重启”  停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+5.  在细节窗格中，右键单击“SQL Server  (_实例名称>\<_ )”  ，然后单击“重启”  停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
-##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
+##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   
 #### <a name="to-enable-a-server-network-protocol-using-powershell"></a>使用 PowerShell 启用服务器网络协议  
   

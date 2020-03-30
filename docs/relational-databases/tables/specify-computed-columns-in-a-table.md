@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082557"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
@@ -40,22 +40,22 @@ ms.locfileid: "68082557"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 开始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前
 
-### <a name="Limitations"></a> 限制和局限
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 限制和局限
 
 - 计算列不能用作 DEFAULT 或 FOREIGN KEY 约束定义，也不能与 NOT NULL 约束定义一起使用。 但是，如果计算列值由具有确定性的表达式定义，并且索引列中允许使用计算结果的数据类型，则可将该列用作索引中的键列，或用作 PRIMARY KEY 或 UNIQUE 约束的一部分。 例如，如果表中包含整数列 a 和 b，则可以对计算列 a + b 创建索引。但不能对计算列 a+DATEPART(dd, GETDATE()) 创建索引，因为在以后的调用中，其值可能发生更改。
 - 计算列不能作为 INSERT 或 UPDATE 语句的目标。
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 权限
+#### <a name="permissions"></a><a name="Permissions"></a> 权限
 
 需要对表的 ALTER 权限。
 
-## <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
-### <a name="NewColumn"></a> 添加新的计算列
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> 添加新的计算列
 
 1. 在 **“对象资源管理器”** 中，展开要添加新计算列的表。 右键单击“列”  ，再选择“新建列”  。
 2. 输入列名并接受默认数据类型 (**nchar**(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通过将数据类型的优先顺序规则应用到在公式中指定的表达式，来确定计算列的数据类型。 例如，如果公式引用一个类型为 **money** 的列和一个类型为 **int**的列，则计算列的类型将为 **money** ，因为该数据类型具有较高优先顺序。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。
@@ -75,7 +75,7 @@ ms.locfileid: "68082557"
 2. 右键单击你要为其指定计算列公式的列，然后单击“删除”  。 单击“确定”。 
 3. 添加一个新列，然后按照前面的步骤添加新计算列以指定新计算列公式。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>创建表时添加计算列
 

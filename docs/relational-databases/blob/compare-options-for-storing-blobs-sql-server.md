@@ -11,10 +11,10 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085446"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比较用于存储 Blob 的选项 (SQL Server)
@@ -23,7 +23,7 @@ ms.locfileid: "68085446"
 
 讨论和比较用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储文件和文档的选项。
 
-## <a name="Expectations"></a> 在数据库中存储文件 - 好处和期望
+## <a name="storing-files-in-the-database---benefits-and-expectations"></a><a name="Expectations"></a> 在数据库中存储文件 - 好处和期望
 
 很大比例的企业数据本质上是非结构化的，通常作为文件和文档存储在文件系统中。 大多数此类数据由应用程序生成、管理和使用，应用程序通过 Windows API 访问这些文件。 企业通常将此类数据保存在文件系统中，同时将文件的相关元数据存储在关系数据库中。
 
@@ -40,15 +40,15 @@ ms.locfileid: "68085446"
 
 许多年以前，SQL Server 并未提供任何一种在关系数据库中存储非结构化数据的方法。 而如今却提供了许多存储非结构化数据的方法。
 
-## <a name="Filestream"></a> FILESTREAM
+## <a name="filestream"></a><a name="Filestream"></a> FILESTREAM
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已有 FILESTREAM 功能。 FILESTREAM 功能为作为文件存储在文件系统中的非结构化数据提供了高效的存储、管理和流式处理方法。 但是，FILESTREAM 解决方案要求自定义的编程，并且不满足上文所述的完全 Windows 应用程序兼容性的要求。
 
-## <a name="FileTables"></a> FileTable
+## <a name="filetables"></a><a name="FileTables"></a> FileTable
 
 FileTable 功能是在现有 FILESTREAM 功能的基础上生成的。 FileTable 功能使企业客户能够在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中存储非结构化文件数据和目录层次结构。 该功能解决了基于文件的数据的非事务性访问和 Windows 应用程序兼容性的需求。
 
-## <a name="CompareFileTable"></a> FILESTREAM 和 FileTable 的比较
+## <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> FILESTREAM 和 FileTable 的比较
 
 |Feature|文件服务器和数据库解决方案|FILESTREAM 解决方案|FileTable 解决方案|
 |:------|:--------------------------------|:------------------|:-----------------|
@@ -60,11 +60,11 @@ FileTable 功能是在现有 FILESTREAM 功能的基础上生成的。 FileTable
 |**Windows 应用程序兼容性**|是|否|**是**|
 |**对文件属性的关系访问**|否|否|**是**|
 
-## <a name="CompareRBS"></a> FILESTREAM 和远程 BLOB 存储区 (RBS) 的比较
+## <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> FILESTREAM 和远程 BLOB 存储区 (RBS) 的比较
 
 另一种用于存储非结构化数据的方法涉及远程 BLOB 存储 (RBS)。 有关详细信息，请参阅[远程 Blob 存储 (RBS) (SQL Server)](remote-blob-store-rbs-sql-server.md)。
 
-## <a name="more"></a> 详细信息
+## <a name="more-information"></a><a name="more"></a> 详细信息
 
 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)  

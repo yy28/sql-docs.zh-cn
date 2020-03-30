@@ -17,10 +17,10 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 94b495bf507dcbe67c305dbb69454bad943d2003
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014440"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>从可用性组中删除辅助数据库 (SQL Server)
@@ -28,15 +28,15 @@ ms.locfileid: "68014440"
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除辅助数据库。  
    
   
-##  <a name="Prerequisites"></a> 先决条件和限制  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 先决条件和限制  
   
 -   只有辅助副本支持该任务。 您必须连接到承载要从中删除数据库的辅助副本的服务器实例。  
   
  
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **从可用性组中删除辅助数据库**  
   
 1.  在对象资源管理器中，连接到承载您要从中删除一个或多个辅助数据库的辅助副本的服务器实例，然后展开服务器树。  
@@ -55,7 +55,7 @@ ms.locfileid: "68014440"
   
 6.  在 **“从可用性组删除数据库”** 对话框中，要删除所有列出的数据库，则单击 **“确定”** 。 如果您不想删除所有列出的数据库，请单击 **“取消”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **从可用性组中删除辅助数据库**  
   
 1.  连接到承载辅助副本的服务器实例。  
@@ -73,7 +73,7 @@ ms.locfileid: "68014440"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **从可用性组中删除辅助数据库**  
   
 1.  将目录 (**cd**) 更改为托管辅助副本的服务器实例。  
@@ -94,7 +94,7 @@ ms.locfileid: "68014440"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：从可用性组中删除辅助数据库之后  
+##  <a name="follow-up-after-removing-a-secondary-database-from-an-availability-group"></a><a name="FollowUp"></a> 跟进：从可用性组中删除辅助数据库之后  
  删除辅助数据库之后，它不再加入到可用性组中，有关删除的辅助数据库的所有信息都会被可用性组丢弃。 删除的辅助数据库处于 RESTORING 状态。  
   
 > [!TIP]  

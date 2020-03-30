@@ -15,10 +15,10 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235344"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>“选择初始数据同步”页（AlwaysOn 可用性组向导）
@@ -28,7 +28,7 @@ ms.locfileid: "75235344"
   
  可能的选项包括“自动种子设定”、“完整的数据库和日志备份”、“仅联接”或“跳过初始数据同步”     。 选择“自动种子设定”、“完整”、或“仅联接”之前，请确保环境符合先决条件    。  
     
-##  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   在初始数据同步过程中挂起主数据库的日志备份任务。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "75235344"
   
      如果必须高度保护您的备份操作和还原操作，建议您选择 **“仅加入”** 或 **“跳过初始数据同步”** 选项。  
   
-## <a name="Auto"></a>自动种子设定
+## <a name="automatic-seeding"></a><a name="Auto"></a>自动种子设定
  
  SQL Server 自动为此组中的每个数据库创建次要副本。 自动种子设定要求数据和日志文件路径在参与此组的每个 SQL Server 实例上均相同。 可在 [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 及更高版本中使用。 请参阅[自动初始化 AlwaysOn 可用性组](automatically-initialize-always-on-availability-group.md)。
 
-##  <a name="Full"></a>完整的数据库和日志备份 
+##  <a name="full-database-and-log-backup"></a><a name="Full"></a>完整的数据库和日志备份 
  对于每个主数据库，“完整的数据库和日志备份”选项将在一个工作流中执行以下若干操作：创建主数据库的完整备份和日志备份、通过在托管次要副本的每个服务器实例上还原这些备份来创建对应的辅助数据库，以及将每个辅助数据库联接到可用性组  。  
   
  仅当您的环境符合使用完全初始数据同步的以下先决条件且您希望该向导自动启动数据同步时，才选择此选项。  
@@ -75,18 +75,18 @@ ms.locfileid: "75235344"
 > [!IMPORTANT]  
 >  日志备份将是您的日志备份链的一部分。 适当地存储其备份文件。  
   
-##  <a name="Joinonly"></a> “仅加入”  
+##  <a name="join-only"></a><a name="Joinonly"></a> “仅加入”  
  仅当每个承载可用性组的辅助副本的服务器实例上已存在新的辅助数据库时，才选择此选项。 有关准备辅助数据库的信息，请参阅本主题后面的 [手动准备辅助数据库](#PrepareSecondaryDbs)。  
   
  如果您选择 **“仅加入”** ，则该向导将尝试将每个现有辅助数据库加入可用性组中。  
   
-## <a name="Skip"></a> “跳过初始数据同步”  
+## <a name="skip-initial-data-synchronization"></a><a name="Skip"></a> “跳过初始数据同步”  
  如果您希望自行执行每个主数据库的数据库备份和日志备份，并将它们还原到每个承载辅助副本的服务器实例，则选择此选项。 退出向导后，您需要加入每个辅助副本上的每个辅助数据库。  
   
 > [!NOTE]  
 >  有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="PrepareSecondaryDbs"></a> 手动准备辅助数据库  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a> 手动准备辅助数据库  
  若要独立于任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 向导准备辅助数据库，可以使用下列方法之一：  
   
 -   使用 RESTORE WITH NORECOVERY 手动还原主数据库的最新数据库备份，然后使用 RESTORE WITH NORECOVERY 还原各个后续日志备份。 如果主数据库和辅助数据库具有不同的文件路径，则必须使用 WITH MOVE 选项。 在每个承载可用性组的辅助副本的服务器实例上执行此还原序列。  您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 执行这些备份和还原操作。  
@@ -110,7 +110,7 @@ ms.locfileid: "75235344"
   
  或者，您也可以在运行向导前准备所有辅助数据库。 然后，在向导的 **“指定初始数据同步”** 页上，选择 **“仅加入”** 选项以便自动将新的辅助数据库加入该可用性组。  
   
-##  <a name="LaunchWiz"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 相关任务  
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
