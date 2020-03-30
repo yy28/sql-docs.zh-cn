@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：配置用于 Ruby 开发的开发环境 | Microsoft Docs
+title: 步骤 1：配置用于 Ruby 开发的开发环境 | Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38af92d3cb0354bc4b75131a349f6a1c26e90490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992459"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>步骤 1：配置用于 Ruby 开发的开发环境
@@ -31,7 +31,7 @@ ms.locfileid: "67992459"
 2.  **安装 Ruby**  
 下载安装程序后，请执行以下操作：  
 a. 双击文件，以启动安装程序。  
-b. 选择语言，并同意接受条款。  
+b.保留“数据库类型”设置，即设置为“共享”。 选择语言，并同意接受条款。  
 c.  在“安装设置”屏幕上，选中“将 Ruby 可执行文件添加到 PATH”和“将 .rb 和 .rbw 文件与此 Ruby 安装相关联”旁边的复选框。  
   
 3.  **下载 Ruby DevKit**  
@@ -40,7 +40,7 @@ c.  在“安装设置”屏幕上，选中“将 Ruby 可执行文件添加到 
 4.  **安装 Ruby DevKit**  
 下载完成后，请执行以下操作：  
 a. 双击文件。 系统会询问要从哪里提取文件。  
-b. 单击“...”按钮，然后选择“C:\DevKit”。 可能需要先单击“新建文件夹”来创建此文件夹。  
+b.保留“数据库类型”设置，即设置为“共享”。 单击“...”按钮，然后选择“C:\DevKit”。 可能需要先单击“新建文件夹”来创建此文件夹。  
 c. 依次单击“确定”和“提取”，以提取文件。  
   
 5. **打开 cmd.exe**  

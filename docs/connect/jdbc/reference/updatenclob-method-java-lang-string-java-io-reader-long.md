@@ -11,16 +11,16 @@ ms.assetid: ad5c8d9b-f8c8-4ddf-85c8-23420bba54ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a99434485ad244eec1f9cbb8ff4707e04f9d9907
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998896"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader-long"></a>updateNClob 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用具有指定字符数长度的指定 Reader 对象更新指定列。  
+  使用具有指定字符数长度的指定 Reader  对象更新指定列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,11 +32,11 @@ public void updateNClob(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>parameters  
- columnLabel  
+ columnLabel   
   
- 指示列标签的字符串。  
+ 指示列标签的字符串  。  
   
- reader  
+ reader   
   
  Reader 对象。  
   
@@ -50,7 +50,7 @@ public void updateNClob(java.lang.String columnLabel,
 ## <a name="remarks"></a>备注  
  此 updateNClob 方法是由 java.sql.ResultSet 接口中的 updateNClob 方法指定的。  
   
- 只有 nvarchar(max)、ntext 和 xml 列支持此方法。 在任何其他数据类型上使用此方法会引发异常。  
+ 只有 nvarchar(max)  、ntext  和 xml  列支持此方法。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateNClob 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

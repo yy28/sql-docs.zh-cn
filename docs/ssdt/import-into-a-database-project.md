@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246454"
 ---
 # <a name="import-into-a-database-project"></a>导入到数据库项目
@@ -37,7 +37,7 @@ ms.locfileid: "75246454"
   
 [导入加密的对象](#bkmk_import_encrypted)  
   
-## <a name="bkmk_import_source_db"></a>导入源：数据库或数据层应用程序 (*.dacpac)  
+## <a name="import-source-database-or-data-tier-application-dacpac"></a><a name="bkmk_import_source_db"></a>导入源：数据库或数据层应用程序 (*.dacpac)  
 仅当项目中没有定义任何架构对象时，才能从数据库或 .dacpac 文件导入架构。 这不包括 RefactorLog 或预先部署/后期部署脚本。  
   
 导入时，将使用 SSDT 用于新对象的组织默认值通过脚本将对象定义写入项目文件，这些默认值是：顶层对象的新文件、与父级相同的文件中定义的层次结构子级、适用的内联对象中定义的表/列约束。 如果获得每个对象的更具针对性的可见性和控制，请使用“架构比较”而非“导入”。  
@@ -48,7 +48,7 @@ ms.locfileid: "75246454"
   
 ![SSDT“导入时忽略”文件夹](../ssdt/media/ssdt-ignoredonimport.gif "SSDT“导入时忽略”文件夹")  
   
-## <a name="bkmk_import_source_script"></a>导入源：脚本 (*.sql)  
+## <a name="import-source-script-sql"></a><a name="bkmk_import_source_script"></a>导入源：脚本 (*.sql)  
 将添加项目中不  存在的导入源的所有对象，而对于导入源中项目已有  的所有对象将覆盖项目中的对象定义。  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ ms.locfileid: "75246454"
 “从脚本导入”过程将不包含预先部署/后期部署脚本、SQLCMD 变量或 RefactorLog 文件。 这些项以及在导入时检测到的任何其他不支持的构造将放入你项目中“脚本”  文件夹的 ScriptsIgnoredOnImport.sql  文件。  
   
  
-## <a name="bkmk_import_encrypted"></a>导入加密的对象  
+## <a name="import-encrypted-objects"></a><a name="bkmk_import_encrypted"></a>导入加密的对象  
 将加密的对象导入数据库项目时，无法始终从服务器检索对象定义的完整主体。 这样在处理此类对象时，导入行为可能不同。  
   
 无法检索完整主体定义时，将对对象页眉/页脚以及虚主体编写脚本。 如果源为活动的数据库或从数据库提取的 .dacpac，您导入或使用“架构比较”功能时可能遇到此行为。  

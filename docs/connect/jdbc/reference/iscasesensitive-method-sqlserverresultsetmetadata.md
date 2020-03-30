@@ -16,10 +16,10 @@ ms.assetid: 4db67eb7-7ff2-4fb8-8052-39f699de53ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf300da4bf6425028552d5507737cf2495bb402f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977765"
 ---
 # <a name="iscasesensitive-method-sqlserverresultsetmetadata"></a>isCaseSensitive 方法 (SQLServerResultSetMetaData)
@@ -37,10 +37,10 @@ public boolean isCaseSensitive(int column)
 #### <a name="parameters"></a>parameters  
  *column*  
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 如果列区分大小写，则为 true。 否则为 **false**。  
+ 如果列区分大小写，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

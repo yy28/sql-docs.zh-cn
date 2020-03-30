@@ -15,10 +15,10 @@ ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c6dc23b79346a3e163f896b3f85f120cc9ccc903
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257174"
 ---
 # <a name="name-not-found-dialog-box"></a>“找不到名称”对话框
@@ -38,6 +38,6 @@ ms.locfileid: "75257174"
 **输入对象名称**  
 包含未找到的对象的名称。 可以修改对象的名称，或者键入新的对象名称。  
   
-从选择中删除 <object name>     
+从选择中删除  *<object name>*   
 选中该选项可以关闭“找不到名称”对话框  ，并从“选择对象”  对话框中删除该项。  
   

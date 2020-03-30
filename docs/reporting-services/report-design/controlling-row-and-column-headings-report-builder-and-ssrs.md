@@ -10,10 +10,10 @@ ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245364"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>控制行标题和列标题（报表生成器和 SSRS）
@@ -45,7 +45,7 @@ ms.locfileid: "75245364"
   
  对于具有行组或列组区域的 tablix 数据区域，设置 tablix 数据区域的属性即可控制关联的行和列。 对于所有其他情况，则可通过在“属性”窗格中设置选定 tablix 成员的属性来控制行和列。 有关分步说明，请参阅[在多个页中显示行标题和列标题（报表生成器和 SSRS）](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)和[在滚动报表时保持标题可见（报表生成器和 SSRS）](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)。  
   
-##  <a name="Top"></a> 示例  
+##  <a name="examples"></a><a name="Top"></a> 示例  
  Tablix 数据区域最常见的示例包括：矩阵、没有组的表、具有行组和行组头的表以及具有行组但没有行组头的表。 若要控制如何重复或冻结表头，必须确定要控制的行或列是与行组区域中的组头关联，还是与列组区域中的组头关联。  
   
  以下部分提供有关 tablix 数据区域通用布局的示例：  
@@ -58,7 +58,7 @@ ms.locfileid: "75245364"
   
 -   [具有行组但没有行组区域的表](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> 矩阵  
+###  <a name="matrix"></a><a name="Matrix"></a> 矩阵  
  默认情况下，简单矩阵具有一个行组和一个列组。 下图显示的矩阵具有一个基于 Category 的行组和一个基于 Geography 的列组：  
   
  ![矩阵、Category 行和 Geography 列组](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "矩阵、Category 行和 Geography 列组")  
@@ -73,7 +73,7 @@ ms.locfileid: "75245364"
   
  [返回页首](#Top)  
   
-###  <a name="TableNoGroups"></a> 没有行组的表  
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a> 没有行组的表  
  默认情况下，没有组的简单表包含详细信息组。 下图所示的表显示了类别、订单号和销售数据：  
   
  ![“设计”窗格：包含一个静态行和一个动态行的表](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "“设计”窗格：包含一个静态行和一个动态行的表")  
@@ -94,7 +94,7 @@ ms.locfileid: "75245364"
   
  [返回页首](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> 具有行组和行组区域的表  
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a> 具有行组和行组区域的表  
  如果向简单表中添加行组，将向设计图面上的表添加一个行组区域。 下图显示的表具有一个基于 Category 的行组：  
   
  ![“设计”窗格：包含一个行组和详细信息的表](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "“设计”窗格：包含一个行组和详细信息的表")  
@@ -111,11 +111,11 @@ ms.locfileid: "75245364"
   
  ![“行组”窗格：包含静态成员的高级模式](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "“行组”窗格：包含静态成员的高级模式")  
   
- 列出的 tablix 成员包括：Static、(Static)、Category 和 (Details)。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
+ 列出的 tablix 成员包括： **Static**、(**Static**)、Category 和 (**Details**)。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
   
  [返回页首](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> 具有行组但没有行组区域的表  
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a> 具有行组但没有行组区域的表  
  在很多情况下，表可能具有行组但没有行组区域。 其中的两种情况为：  
   
 -   开始时表具有行组和行组区域，后来删除了行组区域的列。 仅删除列而不是组。 例如，您可能想将表格式控制为简单网格。  
@@ -138,7 +138,7 @@ ms.locfileid: "75245364"
   
  ![“行组”窗格：不含组标头的高级模式。](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "“行组”窗格：不含组标头的高级模式。")  
   
- 在“行组”窗格中，列出了以下 tablix 成员：(Static)、(Category)、(Static) 和 (Details)。 若要重复或冻结列标题，请选择上面的 (**Static**) tablix 成员，然后在“属性”窗格中设置属性。  
+ 在“行组”窗格中列出了以下 tablix 成员：(**Static**)、(Category)、(**Static**) 和 (**Details**)。 若要重复或冻结列标题，请选择上面的 (**Static**) tablix 成员，然后在“属性”窗格中设置属性。  
   
  [返回页首](#Top)  
   

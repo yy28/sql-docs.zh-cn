@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307048"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
@@ -30,10 +30,10 @@ ms.locfileid: "75307048"
   
 -   [重播配置文件](#ReplayConfig)  
   
-##  <a name="DReplayController"></a>控制器配置文件：DReplayController.config  
+##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> 控制器配置文件：DReplayController.config  
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播控制器服务启动时，它将从控制器配置文件 `DReplayController.config`加载日志记录级别。 此文件位于安装有分布式重播控制器服务的文件夹内：  
   
- \<控制器安装路径>\DReplayController.config   
+ **控制器安装路径>\DReplayController.config\<**  
   
  控制器配置文件指定的日志记录级别包括：  
   
@@ -51,10 +51,10 @@ ms.locfileid: "75307048"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a>客户端配置文件：DReplayClient.config  
+##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> 客户端配置文件：DReplayClient.config  
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播客户端服务启动时，它将从客户端配置文件 `DReplayClient.config`加载配置设置。 此文件位于每台客户端上安装有分布式重播客户端服务的文件夹内：  
   
- \<客户端安装路径>\DReplayClient.config   
+ **客户端安装路径>\DReplayClient.config\<**  
   
  客户端配置文件指定的设置包括：  
   
@@ -78,14 +78,14 @@ ms.locfileid: "75307048"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a>预处理配置文件：DReplay.exe.preprocess.config  
+##  <a name="preprocess-configuration-file-dreplayexepreprocessconfig"></a><a name="PreprocessConfig"></a> 预处理配置文件：DReplay.exe.preprocess.config  
  当您使用管理工具启动预处理阶段时，管理工具将从预处理配置文件 `DReplay.exe.preprocess.config` 加载预处理设置。  
   
  使用默认配置文件或使用管理工具的 **-c** 参数来指定修改过的预处理配置文件的位置。 有关使用管理工具的预处理选项的详细信息，请参阅[预处理选项（分布式重播管理工具）](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)。  
   
  默认情况下，预处理配置文件位于安装有管理工具的文件夹中：  
   
- \<管理工具安装路径>\DReplayAdmin\DReplay.exe.preprocess.config   
+ **管理工具安装路径>\DReplayAdmin\DReplay.exe.preprocess.config\<**  
   
  预处理配置设置在预处理配置文件的 `<PreprocessModifiers>` 元素的子级 XML 元素中指定。 这些设置包括：  
   
@@ -107,14 +107,14 @@ ms.locfileid: "75307048"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a>重播配置文件：DReplay.exe.replay.config  
+##  <a name="replay-configuration-file-dreplayexereplayconfig"></a><a name="ReplayConfig"></a> 重播配置文件：DReplay.exe.replay.config  
  当您使用管理工具启动事件重播阶段时，管理工具将从重播配置文件 `DReplay.exe.replay.config` 加载重播设置。  
   
  使用默认配置文件或使用管理工具的 **-c** 参数来指定修改过的重播配置文件的位置。 有关使用管理工具的重播选项的详细信息，请参阅[重播选项（分布式重播管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
   
  默认情况下，重播配置文件位于安装有管理工具的文件夹中：  
   
- \<管理工具安装路径>\DReplayAdmin\DReplay.exe.replay.config   
+ **管理工具安装路径>\DReplayAdmin\DReplay.exe.replay.config\<**  
   
  重播配置设置在重播配置文件的 `<ReplayOptions>` 和 `<OutputOptions>` 元素的子级 XML 元素中指定。  
   

@@ -16,10 +16,10 @@ ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 487d214dbdd6974442749dd0cff6ac24fe9d1977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979950"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>getServerName 方法 (SQLServerDataSource)
@@ -35,7 +35,7 @@ public java.lang.String getServerName()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个包含服务器名称的字符串；如果未设置值，则为 Null。  
+ 一个包含服务器名称的字符串；如果未设置值，则为 Null  。  
   
 ## <a name="remarks"></a>备注  
  服务器名称为正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的目标计算机的主机名。 如果未设置 getServerName 属性，getServerName 则将返回默认值 Null。  

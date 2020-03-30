@@ -16,10 +16,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246247"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
@@ -92,7 +92,7 @@ ms.locfileid: "75246247"
   
 6.  在“选择名称”  对话框中，单击“确定”  以接受默认名称“Diagram1”  。  
   
-7.  将显示“保存”  对话框和一条指出 `Table1` 将保存到数据库的消息。 单击 **“是”** 。  
+7.  将显示“保存”  对话框和一条指出 `Table1` 将保存到数据库的消息。 单击“是”  。  
   
 ## <a name="modifying-table-structure"></a>修改表结构  
 您可以添加检查约束，并在关系图设计器中建立表之间的关系。  

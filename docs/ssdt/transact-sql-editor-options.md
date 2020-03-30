@@ -28,10 +28,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256322"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 编辑器选项
@@ -42,7 +42,7 @@ ms.locfileid: "75256322"
   
 [查询结果](#QueryResults)  
   
-## <a name="QueryExecution"></a>查询执行  
+## <a name="query-execution"></a><a name="QueryExecution"></a>查询执行  
   
 |properties|说明|  
 |------------|---------------|  
@@ -68,9 +68,9 @@ ms.locfileid: "75256322"
 |**SET CURSOR_CLOSE_ON_COMMIT**|控制在提交事务时是否关闭游标。 有关详细信息，请参阅 [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)。|  
 |**SET ANSI_PADDING**|对列存储值长度小于列的定义大小的值以及在 **char**、 **varchar**、 **binary**和 **varbinary** 数据中含有尾随空格的列存储值的方式进行控制。 有关详细信息，请参阅 [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)。|  
 |**SET ANSI_WARNINGS**|为多个错误条件指定 SQL-92 标准行为。有关详细信息，请参阅 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)。|  
-|**SET ANSI_NULLS**|指定在与 null 值一起使用等于 (  =) 和不等于 (  <>) 比较运算符时采用符合 SQL-92 标准的行为。有关详细信息，请参阅 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
+|**SET ANSI_NULLS**|指定在与 null 值一起使用等于 ( **=** ) 和不等于 ( **<>** ) 比较运算符时采用符合 SQL-92 标准的行为。有关详细信息，请参阅 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
   
-## <a name="QueryResults"></a>查询结果  
+## <a name="query-results"></a><a name="QueryResults"></a>查询结果  
   
 |properties|说明|  
 |------------|---------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "75256322"
 |执行后放弃结果 |当屏幕显示接收到查询结果之后，通过放弃查询结果来释放内存。|  
 |在单独选项卡中显示结果 |在新文档窗口中显示结果集，而不是在查询文档窗口的底部显示。|  
 |执行查询后切换到“结果”选项卡 |自动将屏幕焦点设置到结果集。|  
-|检索的最多字符数 |非 XML 数据：<br /><br />输入一个介于 1 到 65535 之间的数字以指定每个单元中显示的最大字符数。 **注意：** 指定大量字符可能会导致结果集中显示的数据截断。 每个单元中显示的最大字符数取决于字号。 在返回较大的结果集时，如果此框中的值太大，可能会导致 SQL Server Management Studio 运行时内存不足，从而影响系统性能。<br /><br />XML 数据：<br /><br />选择 1 MB、2 MB 或 5 MB。 选择“无限制”将检索所有字符。|  
+|检索的最多字符数 |非 XML 数据：<br /><br />输入一个介于 1 到 65535 之间的数字以指定每个单元中显示的最大字符数。  注意：指定大量字符可能会导致结果集中显示的数据截断。 每个单元中显示的最大字符数取决于字号。 在返回较大的结果集时，如果此框中的值太大，可能会导致 SQL Server Management Studio 运行时内存不足，从而影响系统性能。<br /><br />XML 数据：<br /><br />选择 1 MB、2 MB 或 5 MB。 选择“无限制”将检索所有字符。|  
 | 输出格式|默认情况下，将在通过用空格分隔结果而得到的列中显示输出。 您还可以使用逗号、制表符或空格来分隔列。 选中 **“自定义分隔符”** 复选框，可以在 **“自定义分隔符”** 框中指定其他分隔字符。|  
 | 自定义分隔符|自行指定用于分隔列的字符。 只有在 **“输出格式”** 框中选中 **“自定义分隔符”** 复选框时，才可使用此选项。|  
 |在结果集中包括列标题 |如果不希望每列都带有列标题，请清除此复选框：|  

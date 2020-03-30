@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041293"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：向报表添加柱形图（报表生成器）
@@ -35,7 +35,7 @@ ms.locfileid: "63041293"
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Chart"></a>1.使用图表向导创建图表报表  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1.使用图表向导创建图表报表  
 在本部分中，使用图表向导创建嵌入数据集、选择共享数据源并创建柱形图。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "63041293"
   
 9. 单击“下一步”。   
   
-## <a name="ChartType"></a>2.选择图表类型  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2.选择图表类型  
 可从几种预定义的图表类型中进行选择，完成向导后可修改图表。  
   
 ### <a name="to-add-a-column-chart"></a>添加柱形图  
@@ -114,7 +114,7 @@ ms.locfileid: "63041293"
 
 请注意，图表不会在水平轴上显示每个类别的标签。 默认情况下，仅包括适合放在轴旁边的标签。 
   
-## <a name="Horizontal"></a>3.设置水平轴上的日期格式  
+## <a name="3-format-a-date-on-the-horizontal-axis"></a><a name="Horizontal"></a>3.设置水平轴上的日期格式  
 默认情况下，水平轴采用常用格式显示值，将自动调整为适合图表的大小。  
   
 1.  切换到报表设计视图。  
@@ -159,7 +159,7 @@ ms.locfileid: "63041293"
 
 ![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
-## <a name="Legend"></a>5.移动图例  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5.移动图例  
 系统会根据类别和序列数据自动创建图例。 可在柱形图的图表区域的下方移动图例。  
   
 1.  切换到报表设计视图。  
@@ -176,7 +176,7 @@ ms.locfileid: "63041293"
   
 6.  单击 **“运行”** 以预览报表。  
   
-## <a name="ChartTitle"></a>6.设置图表的标题  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6.设置图表的标题  
     
 1.  切换到报表设计视图。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63041293"
   
 3.  单击 **“运行”** 以预览报表。  
   
-## <a name="Vertical"></a>7.设置垂直轴的格式和标签  
+## <a name="7-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>7.设置垂直轴的格式和标签  
 默认情况下，垂直轴采用常用格式显示值，将自动调整为适合图表的大小。   
   
 1.  切换到报表设计视图。  
@@ -235,7 +235,7 @@ ms.locfileid: "63041293"
     
     现在，图表显示其所有标签。
   
-## <a name="Average"></a>9.添加带已计算序列的移动平均线  
+## <a name="9-add-a-moving-average-with-a-calculated-series"></a><a name="Average"></a>9.添加带已计算序列的移动平均线  
 
 移动平均值是序列中数据的平均值，它是根据一段时间内的数据计算的。 移动平均线可以确定趋势。
   
@@ -261,7 +261,7 @@ ms.locfileid: "63041293"
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
-## <a name="Title"></a>10.添加报表标题  
+## <a name="10-add-a-report-title"></a><a name="Title"></a>10.添加报表标题  
   
 1.  切换到报表设计视图。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "63041293"
   
 7.  单击 **“运行”** 以预览报表。  
   
-## <a name="Save"></a>11.保存报表  
+## <a name="11-save-the-report"></a><a name="Save"></a>11.保存报表  
   
 ### <a name="to-save-the-report"></a>保存报表  
   

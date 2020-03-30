@@ -10,10 +10,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74993415"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
@@ -46,13 +46,13 @@ ms.locfileid: "74993415"
 ## <a name="distributed-replay-concepts"></a>分布式重播概念  
  以下组件组成分布式重播环境：  
   
--   **Distributed Replay 管理工具**：一个控制台应用程序 DReplay.exe  , 可用来与分布式重播控制器进行通信。 使用管理工具可控制分布式的重播。  
+-   **分布式重播管理工具**：一个控制台应用程序 **DReplay.exe**, 可用来与分布式重播控制器进行通信。 使用管理工具可控制分布式的重播。  
   
--   **Distributed Replay 控制器**：运行名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Distributed Replay 控制器的 Windows 服务的一台计算机。 Distributed Replay 控制器协调分布式的重播客户端的操作。 在每个 Distributed Replay 环境中只能有一个控制器实例。  
+-   **分布式重播控制器**：运行名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播控制器的 Windows 服务的一台计算机。 Distributed Replay 控制器协调分布式的重播客户端的操作。 在每个 Distributed Replay 环境中只能有一个控制器实例。  
   
--   **Distributed Replay 客户端**：运行名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端的 Windows 服务的一台或多台计算机（物理或虚拟）。 多个 Distributed Replay 客户端一起来模拟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的工作负荷。 在每个 Distributed Replay 环境中可以有一个或多个客户端。  
+-   **分布式重播客户端**：运行名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播客户端的 Windows 服务的一台或多台计算机（物理或虚拟）。 多个 Distributed Replay 客户端一起来模拟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的工作负荷。 在每个 Distributed Replay 环境中可以有一个或多个客户端。  
   
--   **目标服务器**：Distributed Replay 客户端可用于重播跟踪数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 建议将目标服务器置于测试环境中。  
+-   **目标服务器**：分布式重播客户端可用于重播跟踪数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 建议将目标服务器置于测试环境中。  
   
  分布式重播管理工具、控制器和客户端可安装在不同计算机或同一计算机上。 一台计算机上只能运行分布式重播控制器或客户端服务的一个实例。  
   

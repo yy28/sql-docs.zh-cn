@@ -17,10 +17,10 @@ ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76939576"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
@@ -36,7 +36,7 @@ sqlsrv_field_metadata( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>parameters  
-$stmt  ：寻找字段元数据的语句资源。  
+*$stmt*：寻找字段元数据的语句资源。  
   
 ## <a name="return-value"></a>返回值  
 数组的 **array** 或 **false**。 数组由结果集中的每个字段的一个数组组成。 每个子数组具有下表中所述的键。 如果在检索字段元数据时出现错误，则返回 **false** 。  
@@ -128,11 +128,11 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>敏感度数据分类元数据
 
-版本 5.8.0 中引入了新选项 `DataClassification`，用户可以使用该选项通过 `sqlsrv_field_metadata`（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的[敏感度数据分类元数据](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)。
+版本 5.8.0 中引入了新选项 `DataClassification`，用户可以使用该选项通过 [（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)敏感度数据分类元数据`sqlsrv_field_metadata`。
 
 默认情况下，选项 `DataClassification` 为 `false`，但设置为 `true` 后，将使用敏感度数据分类元数据（如果存在）填充 `sqlsrv_field_metadata` 返回的数组。 
 
-以 Patients 表为例：
+以患者表为例：
 
 ```
 CREATE TABLE Patients 

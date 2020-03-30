@@ -11,10 +11,10 @@ ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7908655954c0f93bd697599ed0d6c809e97d080f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916364"
 ---
 # <a name="pdoquote"></a>PDO::quote
@@ -32,7 +32,7 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>parameters  
 $*string*：要用引号括起来的字符串。  
   
-$*parameter_type*：指示数据类型的可选（整数）符号。  默认值为 PDO::PARAM_STR。  
+$parameter_type：指示数据类型的可选（整数）符号  。  默认值为 PDO::PARAM_STR。  
 
 PHP 7.2 中引入了新的 PDO 常量，以添加对[绑定 Unicode 和非 Unicode 字符串](https://wiki.php.net/rfc/extended-string-types-for-pdo)的支持。 Unicode 字符串可以括在引号中，并使用 N 作为前缀（即 N'string' 而不是 'string'）。
 

@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896707"
 ---
 # <a name="large-udts"></a>大型 UDT
@@ -30,10 +30,10 @@ ms.locfileid: "78896707"
 有关用户定义类型的完整文档，请参阅 SQL Server 联机丛书中的 [CLR 用户定义类型](https://go.microsoft.com/fwlink/?LinkId=98366)。
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>使用 GetSchema 检索 UDT 架构  
-<xref:Microsoft.Data.SqlClient.SqlConnection> 的 <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> 方法在 <xref:System.Data.DataTable> 中返回数据库架构信息。
+<xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 方法在 <xref:System.Data.DataTable> 中返回数据库架构信息。
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT 的 GetSchemaTable 列值  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 方法返回描述列元数据的 <xref:System.Data.DataTable>。 下表描述了 SQL Server 2005 和 SQL Server 2008 之间大型 UDT 的列元数据的区别。  
+<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法返回描述列元数据的 <xref:System.Data.DataTable>。 下表描述了 SQL Server 2005 和 SQL Server 2008 之间大型 UDT 的列元数据的区别。  
   
 |SqlDataReader 列|SQL Server 2005|SQL Server 2008 和更高版本|  
 |--------------------------|---------------------|-------------------------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "78896707"
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 注意事项  
 <xref:Microsoft.Data.SqlClient.SqlDataReader> 在 SQL Server 2008 中已得到扩展，可支持检索大型 UDT 值。 <xref:Microsoft.Data.SqlClient.SqlDataReader> 处理多少 UDT 值取决于所使用的 SQL Server 版本以及连接字符串中指定的 `Type System Version`。 有关详细信息，请参阅 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
   
-将 `Type System Version` 设置为 SQL Server 2005 时，以下 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法将返回 <xref:System.Data.SqlTypes.SqlBinary>，而不是 UDT：  
+将 <xref:Microsoft.Data.SqlClient.SqlDataReader> 设置为 SQL Server 2005 时，以下 <xref:System.Data.SqlTypes.SqlBinary> 方法将返回 `Type System Version`，而不是 UDT：  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -62,7 +62,7 @@ ms.locfileid: "78896707"
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
-将 `Type System Version` 设置为 SQL Server 2005 时，以下方法将返回 `Byte[]` 的数组，而不是 UDT：  
+将 `Byte[]` 设置为 SQL Server 2005 时，以下方法将返回 `Type System Version` 的数组，而不是 UDT：  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValue%2A>  
   

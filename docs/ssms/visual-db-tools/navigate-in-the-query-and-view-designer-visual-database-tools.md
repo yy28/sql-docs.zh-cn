@@ -17,10 +17,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 5e78aa041929e5b804547db0ef773d40aea7d7c8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75224591"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查询和视图设计器中导航 (Visual Database Tools)
@@ -44,7 +44,7 @@ ms.locfileid: "75224591"
 |在表或表结构对象中的列之间移动|箭头键|要移动到的列|  
 |选择要输出的选定数据列|空格键或加号键|列名旁的复选框|  
 |从查询输出中移除选定的数据列|空格键或减号键|列名旁的复选框|  
-|从查询中移除选定的表、表结构对象或联接线|DELETE|右键单击，再选择“删除”|  
+|从查询中移除选定的表、表结构对象或联接线|DELETE|右键单击，再选择“删除” |  
   
 > [!NOTE]  
 > 如果选择了多个项，则按此键将影响所有选定的项。 按住 Ctrl 键并单击要选择的项，可以选择多个项。  
@@ -79,7 +79,7 @@ ms.locfileid: "75224591"
 有关详细信息，请参阅[“条件”窗格 (Visual Database Tools)](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)。  
   
 ## <a name="sql-pane"></a>SQL 窗格  
-在 SQL 窗格中工作时，可以使用标准 Windows 编辑键（例如 Ctrl + 箭头键）在字词之间移动游标，也可使用“编辑”菜单上的“剪切”、“复制”和“粘贴”命令。  
+在 SQL 窗格中工作时，可以使用标准 Windows 编辑键（例如 Ctrl + 箭头键）在字词之间移动游标，也可使用“编辑”  菜单上的“剪切”  、“复制”  和“粘贴”  命令。  
   
 > [!NOTE]  
 > 只能插入文本；没有替换模式。  

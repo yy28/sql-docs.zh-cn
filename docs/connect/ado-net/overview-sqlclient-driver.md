@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 0831e307ca0868cd80d92d22f6077070ca1730ea
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897095"
 ---
 # <a name="overview-of-the-sqlclient-driver"></a>SqlClient 驱动程序概述
@@ -31,7 +31,7 @@ ms.locfileid: "78897095"
 |主题|说明|  
 |-----------|-----------------|  
 |[Microsoft.Data.SqlClient 命名空间简介](introduction-microsoft-data-sqlclient-namespace.md)|Microsoft.Data.SqlClient 命名空间的简介页面。|  
-|[下载 SQL Server 的 Microsoft SqlClient 数据提供程序](download-microsoft-sqlclient-data-provider.md)|ADO.NET 和 Microsoft SqlClient Data Provider for SQL Server 的下载页。|  
+|[下载 SQL Server 的 Microsoft SqlClient 数据提供程序](download-microsoft-sqlclient-data-provider.md)|ADO.NET 和 Microsoft SqlClient Data Provider for SQL Server 的下载页面。|  
 |[SqlClient 驱动程序支持生命周期](sqlclient-driver-support-lifecycle.md)|包含产品支持生命周期信息的页面。|  
 |[查找 SqlClient 驱动程序的其他信息](find-additional-sqlclient-driver-information.md)|包含有关驱动程序的有用信息的页面。|  
 

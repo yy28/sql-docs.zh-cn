@@ -16,10 +16,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 41e8f5b262b5018bbbc847dc57c27204783e6f32
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245932"
 ---
 # <a name="create-a-job"></a>创建作业
@@ -46,9 +46,9 @@ ms.locfileid: "75245932"
   
     [SQL Server 管理对象](#SMOProcedure)  
   
-## <a name="BeforeYouBegin"></a>开始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
-### <a name="Restrictions"></a>限制和局限  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制和局限  
   
 -   若要创建作业，用户必须是某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色或 **sysadmin** 固定服务器角色的成员。 作业只能由其所有者或 **sysadmin** 角色的成员进行编辑。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的固定数据库角色的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75245932"
   
 -   本地作业是由本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理进行缓存的。 因此，任何修改都会隐式强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理重新缓存该作业。 由于直到调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_add_jobserver **时，** 代理才缓存作业，因此最后调用 **sp_add_jobserver** 将更为有效。  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
   
 -   您必须是系统管理员才可以更改作业的所有者。  
   
@@ -65,10 +65,10 @@ ms.locfileid: "75245932"
     > [!NOTE]  
     > 如果将作业所有权重新指派到的用户不是 **sysadmin** 固定服务器角色的成员，而执行作业的步骤需要代理帐户（例如， [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包执行），则请确保该用户可以访问该代理帐户，否则作业将失败。  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
-## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>创建 SQL Server 代理作业  
   
@@ -92,7 +92,7 @@ ms.locfileid: "75245932"
   
 10. 完成后，单击 **“确定”** 。  
   
-## <a name="TsqlProcedure"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>创建 SQL Server 代理作业  
   
@@ -143,7 +143,7 @@ ms.locfileid: "75245932"
   
 -   [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)  
   
-## <a name="SMOProcedure"></a>使用 SQL Server 管理对象  
+## <a name="using-sql-server-management-objects"></a><a name="SMOProcedure"></a>使用 SQL Server 管理对象  
 **创建 SQL Server 代理作业**  
   
 通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 **Job** 类的 **Create** 方法。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md)。  

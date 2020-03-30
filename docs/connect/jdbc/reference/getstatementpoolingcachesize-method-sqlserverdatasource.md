@@ -11,16 +11,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a90d00957310c64f908816198a47e4c3ba7293b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979509"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverdatasource"></a>getStatementPoolingCacheSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回“statementPoolingCacheSize”  连接属性的值。 返回此连接的预定义语句缓存的大小。 “0”表示未启用缓存。
+  返回“statementPoolingCacheSize”  连接属性的值。 返回此连接的准备的语句缓存的大小。 “0”表示未启用缓存。
   
 ## <a name="syntax"></a>语法  
   

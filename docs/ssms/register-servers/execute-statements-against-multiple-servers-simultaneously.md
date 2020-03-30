@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
 ms.openlocfilehash: 89e6e64f4e4dc5f3ae7c8f9adf1db3a392530989
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246561"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>同时对多个服务器执行语句
@@ -33,7 +33,7 @@ ms.locfileid: "75246561"
 > **注意！** 在执行以下过程之前，请先创建中央管理服务器和服务器组。 有关详细信息，请参阅[创建中央管理服务器和服务器组 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)。  
 
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  由于中央管理服务器维护的连接是在用户的上下文中通过使用 Windows 身份验证执行的，因此它们在各个已注册的服务器上的有效权限可能有所不同。 例如，用户可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 实例上 sysadmin 固定服务器角色的成员，但仅具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 实例的有限权限。  
   
  ## <a name="execute-statements-against-multiple-configuration-targets-simultaneously"></a>同时对多个配置目标执行语句  

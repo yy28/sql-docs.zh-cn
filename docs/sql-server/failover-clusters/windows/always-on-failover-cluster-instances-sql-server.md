@@ -21,10 +21,10 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230192"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 故障转移群集实例 (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "75230192"
   
 -   [相关主题](#RelatedTopics)  
   
-##  <a name="Benefits"></a> 故障转移群集实例的优点  
+##  <a name="benefits-of-a-failover-cluster-instance"></a><a name="Benefits"></a> 故障转移群集实例的优点  
  当服务器上出现硬件或软件故障时，连接到该服务器的应用程序或客户端将会停机。 在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例配置为 FCI（而非独立实例）时，该 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的高可用性受到 FCI 中提供的冗余节点的保护。 在 FCI 中，一次只能有一个节点拥有 WSFC 资源组。 在出现故障（硬件故障、操作系统故障、应用程序或服务故障）或进行计划的升级时，该资源组的所有权就会转移至另一个 WSFC 节点。 此过程对于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的客户端或应用程序是透明的，可以最大限度地缩短出现故障时应用程序或客户端的停机时间。 以下列出了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例提供的一些主要优点：  
   
 -   通过冗余提供实例级的保护  
@@ -77,10 +77,10 @@ ms.locfileid: "75230192"
   
 -   故障转移期间限制对资源的使用  
   
-##  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
  在生产环境中，我们建议将静态 IP 地址与故障转移群集实例的虚拟 IP 地址结合使用。  我们不建议在生产环境中使用 DHCP。 在停机情况下，如果 DHCP IP 租期已到，则它需要额外的时间重新注册与 DNS 名称关联的新 DHCP IP 地址。  
   
-##  <a name="Overview"></a> 故障转移群集实例概述  
+##  <a name="failover-cluster-instance-overview"></a><a name="Overview"></a> 故障转移群集实例概述  
  FCI 会在具有一个或多个 WSFC 节点的 WSFC 资源组中运行。 当 FCI 启动时，这些节点中的某个节点将获取该资源组的所有权并使其 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例处于联机状态。 此节点拥有的资源包括：  
   
 -   网络名称  
@@ -125,7 +125,7 @@ ms.locfileid: "75230192"
   
  有关详细信息，请参阅 [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
-##  <a name="FCIelements"></a> 故障转移群集实例的元素  
+##  <a name="elements-of-a-failover-cluster-instance"></a><a name="FCIelements"></a> 故障转移群集实例的元素  
  FCI 由一组物理服务器（节点）构成，这些服务器包含类似的硬件配置以及相同的软件配置，其中包括操作系统版本和修补程序级别，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本、修补程序级别、组件和实例名称。 相同的软件配置是确保 FCI 在节点间进行故障转移时能够正常运行所必需的。  
   
  WSFC 资源组  
@@ -143,7 +143,7 @@ ms.locfileid: "75230192"
  虚拟 IP  
  对于多子网 FCI，将为 FCI 中的每个子网分配一个虚拟 IP 地址。 在故障转移期间，将更新 DNS 服务器上的 VNN 以指向各自子网的虚拟 IP 地址。 在发生多子网故障转移后，应用程序和客户端可使用同一 VNN 连接到 FCI。  
   
-##  <a name="ConceptsAndTasks"></a> SQL Server 故障转移的概念和任务  
+##  <a name="sql-server-failover-concepts-and-tasks"></a><a name="ConceptsAndTasks"></a> SQL Server 故障转移的概念和任务  
   
 |概念和任务|主题|  
 |------------------------|-----------|  
@@ -151,13 +151,13 @@ ms.locfileid: "75230192"
 |介绍 FCI 管理和维护概念。|[故障转移群集实例管理和维护](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |介绍多子网配置和概念|[SQL Server 多子网群集 (SQL Server)](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)|  
   
-##  <a name="RelatedTopics"></a> 相关主题  
+##  <a name="related-topics"></a><a name="RelatedTopics"></a> 相关主题  
   
 |**主题说明**|**主题**|  
 |----------------------------|---------------|  
 |介绍如何安装新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI。|[创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |介绍如何升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 故障转移群集。|[升级 SQL Server 故障转移群集实例](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|介绍 Windows 故障转移群集的概念并提供指向 Windows 故障转移群集相关任务的链接|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]设置用户帐户 ：[故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2：[故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|介绍 Windows 故障转移群集的概念并提供指向 Windows 故障转移群集相关任务的链接|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2： [故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |介绍 FCI 中的节点和可用性组中的副本的概念区别以及有关使用 FCI 承载可用性组的副本的注意事项。|[故障转移群集和可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

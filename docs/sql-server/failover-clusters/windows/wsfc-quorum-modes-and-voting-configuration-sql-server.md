@@ -15,10 +15,10 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822173"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822173"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例 (FCI) 都利用 Windows Server 故障转移群集 (WSFC) 来作为平台技术。  WSFC 使用一种基于仲裁的方法来监视群集的整体运行状况，并且最大限度地提高节点级别的容错能力。 理解 WSFC 仲裁模式和节点投票配置对于 Always On 高可用性和灾难恢复解决方案的设计、操作和故障排除十分重要。  
   
   
-##  <a name="ClusterHealthDetectionbyQuorum"></a> 由仲裁进行的群集运行状况检测  
+##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> 由仲裁进行的群集运行状况检测  
  WSFC 群集中的每个节点都参与周期性信号通信，以便与其他节点共享该节点的运行状况。 未响应的节点被认为是处于故障状态。  
   
   “仲裁”节点集是 WSFC 群集中的大多数投票节点和见证服务器。  WSFC 群集的总体运行状况和状态是由定期“仲裁投票”确定的。  仲裁的存在意味着群集运行状况正常，且能提供节点级别的容错能力。  
@@ -36,9 +36,9 @@ ms.locfileid: "74822173"
 > [!IMPORTANT]  
 >  如果 WSFC 群集因为仲裁失败而被设为脱机，则需要手动干预以便将其重新联机。  
 >   
->  有关详细信息，请参阅：[通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
+>  有关详细信息，请参阅： [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
   
-##  <a name="QuorumModes"></a> 仲裁模式  
+##  <a name="quorum-modes"></a><a name="QuorumModes"></a> 仲裁模式  
   “仲裁模式”是在 WSFC 群集级别配置的，指示用于仲裁投票的方法。  故障转移群集管理器实用工具将会基于群集中的节点数来建议仲裁模式。  
   
  以下仲裁模式可用于确定构成投票仲裁的元素：  
@@ -56,7 +56,7 @@ ms.locfileid: "74822173"
 > [!TIP]  
 >  在将非对称存储配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时，如果您具有奇数数目的投票节点，则通常应该使用节点的大多数仲裁模式；如果您具有偶数数目的投票节点，则通常应该使用节点和文件共享的大多数仲裁模式。  
   
-##  <a name="VotingandNonVotingNodes"></a> 投票和非投票节点  
+##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> 投票和非投票节点  
  默认情况下，WSFC 群集中的每个节点都作为群集仲裁的成员包括；每个节点都具有用于确定群集整体运行状况的单个投票，并且每个节点都将持续尝试建立仲裁。   到目前为止对仲裁的论述已谨慎地将对群集运行状况进行投票的一组 WSFC 群集节点划分为“投票节点”。  
   
  在一个 WSFC 群集中没有单独的节点可以明确确定该群集作为一个整体是正常运行还是非正常运行。  在任意给定时刻，从各节点的角度来说，其他一些节点可能好像脱机，或者好像处于故障转移中，或者好像由于网络通信失败而无法响应。  仲裁投票的一个关键功能是确定 WSFC 群集中每个节点的明显表现出来的状态是否真的就是这些节点的实际状态。  
@@ -75,9 +75,9 @@ ms.locfileid: "74822173"
 > [!IMPORTANT]  
 >  为了使用 NodeWeight 设置，必须将以下修补程序应用到 WSFC 群集中的所有服务器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036)：该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中没有仲裁投票的群集节点  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
-##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 建议的仲裁投票调整  
+##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> 建议的仲裁投票调整  
  在启用或禁用某一给定 WSFC 节点的投票时，应遵循以下准则：  
   
 -   **默认为不投票。** 假定在没有明确理由的情况下每个节点都不应投票。  
@@ -104,13 +104,13 @@ ms.locfileid: "74822173"
 > 
 >  有关详细信息，请参阅：[sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)[sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)[sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) 和 [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [查看群集仲裁 NodeWeight 设置](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [配置群集仲裁 NodeWeight 设置](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

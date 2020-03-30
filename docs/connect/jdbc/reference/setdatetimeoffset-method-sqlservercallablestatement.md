@@ -11,10 +11,10 @@ ms.assetid: 9383e14d-c83e-43c5-980c-50a3e0bedc31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 264de7ac150aca7494a380fbbd4f5b490607c5c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974641"
 ---
 # <a name="setdatetimeoffset-method-sqlservercallablestatement"></a>setDateTimeOffset 方法 (SQLServerCallableStatement)
@@ -32,7 +32,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
 ```  
   
 #### <a name="parameters"></a>parameters  
- sCol  
+ sCol   
   
  列的名称。  
   
@@ -44,7 +44,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>备注  
- 可以使用 [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md) 检索 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
+ 可以使用 [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) 检索 [DateTimeOffset 类](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)值。  
   
  [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) 获取列的序号。  
   

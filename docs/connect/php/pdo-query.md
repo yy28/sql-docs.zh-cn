@@ -11,10 +11,10 @@ ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936200"
 ---
 # <a name="pdoquery"></a>PDO::query
@@ -30,9 +30,9 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ```  
   
 #### <a name="parameters"></a>parameters  
-$statement  ：要执行的 SQL 语句。  
+*$statement*：要执行的 SQL 语句。  
   
-$fetch_style  ：有关如何执行查询的说明（可选）。 有关更多详细信息，请参阅“备注”部分。PDO::query 中的  $fetch_style 可以替换为 PDO::fetch 中的 $fetch_style   。  
+$fetch_style：有关如何执行该查询的可选说明  。 有关更多详细信息，请参阅“备注”部分。PDO::query 中的  $fetch_style 可以替换为 PDO::fetch 中的 $fetch_style   。  
   
 ## <a name="return-value"></a>返回值  
 如果调用成功，PDO::query 将返回一个 PDOStatement 对象。 如果调用失败，PDO::query 将引发一个 PDOException 对象或者返回 False，具体取决于 PDO::ATTR_ERRMODE 的设置。  

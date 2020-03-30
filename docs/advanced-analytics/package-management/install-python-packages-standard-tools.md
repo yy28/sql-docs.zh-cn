@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 4e55f9ba41036a5bd0ee806b8b45ee1fde8dc49f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76542122"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>使用 Python 工具在 SQL Server 上安装包
@@ -58,7 +58,7 @@ ms.locfileid: "76542122"
 
 若要在未连接到 Internet 的服务器上安装 Python 包，必须先从连接到 Internet 的计算机下载 WHL 文件，再将此文件复制到服务器。
 
-例如，在连接到 Internet 的计算机上，可以先从站点 [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl) 下载文件 `cntk-2.1-cp35-cp35m-win_amd64.whl` ，再将此文件复制到 SQL Server 计算机上的本地文件夹。
+例如，在连接到 Internet 的计算机上，可以先从站点 `cntk-2.1-cp35-cp35m-win_amd64.whl`[https://cntk.ai/PythonWheel/CPU-Only 下载文件 ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，再将此文件复制到 SQL Server 计算机上的本地文件夹。
 
 > [!IMPORTANT]
 > 请务必获取 Windows 版本的包。 如果文件以 .gz 结尾，表明版本可能不正确。
@@ -80,10 +80,10 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
 
 ### <a name="install-the-package-using-pip"></a>使用 pip 安装包
 
-使用 pip  安装程序来安装新包。 可以在 `PYTHON_SERVICES` 文件夹的 `Scripts` 子文件夹中找到 `pip.exe`。 由于 SQL Server 安装程序没有将 `Scripts` 子文件夹添加到系统路径，因此你必须指定完整路径，也可以将 Scripts 文件夹添加到 Windows 中的 PATH 变量。
+使用 pip  安装程序来安装新包。 可以在 `pip.exe` 文件夹的 `Scripts` 子文件夹中找到 `PYTHON_SERVICES`。 由于 SQL Server 安装程序没有将 `Scripts` 子文件夹添加到系统路径，因此你必须指定完整路径，也可以将 Scripts 文件夹添加到 Windows 中的 PATH 变量。
 
 > [!NOTE]
-> 若要结合使用 Visual Studio 2017 或 Visual Studio 2015 与 Python 扩展，可以从“Python 环境”  窗口中运行 `pip install`。 单击“包”  ，然后在文本框中输入要安装的包的名称或位置。 无需键入 `pip install`；系统自动为你填充它。
+> 若要结合使用 Visual Studio 2017 或 Visual Studio 2015 与 Python 扩展，可以从“Python 环境”`pip install`**窗口中运行** 。 单击“包”  ，然后在文本框中输入要安装的包的名称或位置。 无需键入 `pip install`；系统自动为你填充它。
 
 + 如果计算机连接到 Internet，请提供包的名称：
 

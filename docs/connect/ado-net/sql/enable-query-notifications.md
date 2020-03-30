@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e587639f5323ea76c975e3a8c35d647a7eb3d891
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896974"
 ---
 # <a name="enabling-query-notifications"></a>启用查询通知
@@ -88,7 +88,7 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqldependency"></a>使用 SqlDependency  
 要使用 <xref:Microsoft.Data.SqlClient.SqlDependency>，必须对所使用的 SQL Server 数据库启用 Service Broker，并且用户必须具有接收通知的权限。 Service Broker 对象（如通知队列）是预定义的。  
   
-此外，<xref:Microsoft.Data.SqlClient.SqlDependency> 会自动启动一个工作线程以在通知发布到队列中时处理这些通知；它还会分析 Service Broker 消息，将此信息作为事件参数数据公开。 必须通过调用 `Start` 方法建立对数据库的依赖关系，从而初始化 <xref:Microsoft.Data.SqlClient.SqlDependency>。 这是一个静态方法，对于每个所需的数据库连接，在应用程序初始化期间仅需调用一次。 必须在应用程序终止时为执行的每个相关连接调用 `Stop` 方法。  
+此外，<xref:Microsoft.Data.SqlClient.SqlDependency> 会自动启动一个工作线程以在通知发布到队列中时处理这些通知；它还会分析 Service Broker 消息，将此信息作为事件参数数据公开。 必须通过调用 <xref:Microsoft.Data.SqlClient.SqlDependency> 方法建立对数据库的依赖关系，从而初始化 `Start`。 这是一个静态方法，对于每个所需的数据库连接，在应用程序初始化期间仅需调用一次。 必须在应用程序终止时为执行的每个相关连接调用 `Stop` 方法。  
   
 ### <a name="using-sqlnotificationrequest"></a>使用 SqlNotificationRequest  
 与此相反，<xref:Microsoft.Data.Sql.SqlNotificationRequest> 要求你自己实现整个侦听基础结构。 此外，必须定义队列所支持的所有支持 Service Broker 对象，例如队列、服务和消息类型。 如果你的应用程序需要特殊通知消息或通知行为，或者你的应用程序是较大的 Service Broker 应用程序的一部分，则此手动方法非常有用。  

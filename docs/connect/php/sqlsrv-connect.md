@@ -19,10 +19,10 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015039"
 ---
 # <a name="sqlsrv_connect"></a>sqlsrv_connect
@@ -42,15 +42,15 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
   
 从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定带有 `"(localdb)\instancename"`的 LocalDB 实例。 有关详细信息，请参阅[支持 LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。  
   
-同样从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定要连接到 AlwaysOn 可用性组的虚拟网络名称。 有关对 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持的详细信息，请参阅[对高可用性和灾难恢复的支持](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。  
+同样从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定要连接到 AlwaysOn 可用性组的虚拟网络名称。 有关对 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 支持的详细信息，请参阅[对高可用性和灾难恢复的支持](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。  
   
-*$connectionInfo* [可选]：包含连接属性的关联数组（例如，array("Database" => "AdventureWorks")）。 有关数组的受支持密钥的列表，请参阅 [Connection Options](../../connect/php/connection-options.md) 。  
+$connectionInfo [可选]：包含连接属性的关联数组（例如，array ("Database" => "AdventureWorks")）    。 有关数组的受支持密钥的列表，请参阅 [Connection Options](../../connect/php/connection-options.md) 。  
   
 ## <a name="return-value"></a>返回值  
 PHP 连接资源。 如果无法成功创建和打开连接，则返回 **false** 。  
   
 ## <a name="remarks"></a>备注  
-如果在可选的 *$connectionInfo* 参数中没有指定 *UID* 和 *PWD* 的值，将尝试使用 Windows 身份验证进行此连接。 有关连接到服务器的详细信息，请参阅[如何：使用 Windows 身份验证进行连接](../../connect/php/how-to-connect-using-windows-authentication.md)和[如何：使用 SQL Server 身份验证进行连接](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
+如果在可选的 *$connectionInfo* 参数中没有指定 *UID* 和 *PWD* 的值，将尝试使用 Windows 身份验证进行此连接。 有关连接到服务器的详细信息，请参阅 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 和 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
   
 ## <a name="example"></a>示例  
 以下示例使用 Windows 身份验证创建和打开连接。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://www.codeplex.com/SqlServerSamples) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  

@@ -1,6 +1,6 @@
 ---
 title: 教程适用的航空航班演示数据
-Description: 创建一个包含 R 和 Python 中的航空数据集的数据库。 此数据集用于 SQL Server 机器学习服务的 R 和 Python 教程。
+Description: 创建一个包含 R 和 Python 中的航空数据集的数据库。 本数据集用于 Microsoft SQL Server 机器学习服务的 R 和 Python 教程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74908907"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教程适用的航空航班到达演示数据

@@ -16,10 +16,10 @@ ms.assetid: c1de9804-1f27-4854-8985-3385fadcbebb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e0eee2cafe95e04ffd5c697667cac2701ee0b80
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953034"
 ---
 # <a name="getclob-method-javalangstring-sqlserverresultset"></a>getClob 方法 (java.lang.String) (SQLServerResultSet)
@@ -37,7 +37,7 @@ public java.sql.Clob getClob(java.lang.String colName)
 #### <a name="parameters"></a>parameters  
  *colName*  
   
- 一个包含列名的字符串。  
+ 一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  Clob 对象。  

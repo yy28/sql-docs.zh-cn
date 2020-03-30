@@ -11,10 +11,10 @@ ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee38cc22ec2834060396b696acb900eb8c7f8831
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866517"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
@@ -26,8 +26,8 @@ Microsoft Drivers for PHP for SQL Server 支持与 SQL Server for PHP 应用程�
 ## <a name="getting-started"></a>入门  
 * [步骤 1：配置用于 PHP 开发的开发环境](step-1-configure-development-environment-for-php-development.md)  
 * [步骤 2：创建用于 PHP 开发的数据库](step-2-create-a-sql-database-for-php-development.md)  
-* [步骤 3：使用 PHP 连接到 SQL 的概念证明](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [步骤 4：使用 PHP 弹性连接到 SQL](step-4-connect-resiliently-to-sql-with-php.md)  
+* [步骤 3：使用 PHP 连接到 SQL 的概念验证](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [步骤 4：使用 PHP 实现对 SQL 的弹性连接](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>文档  
 * [入门](getting-started-with-the-php-sql-driver.md)

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9c9e5cb32206a2a2b81970a43308058dc2ad1c52
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307094"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server 浏览器属性（“服务”选项卡）
@@ -53,7 +53,7 @@ ms.locfileid: "75307094"
   
 -   自动：计算机启动时，此服务将尝试启动。  
   
--   禁用：此服务无法启动。  
+-   已禁用：此服务无法启动。  
   
  **State**  
  指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  

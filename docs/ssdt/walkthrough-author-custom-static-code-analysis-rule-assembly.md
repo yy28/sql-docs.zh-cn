@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257032"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>有关创建适用于 SQL Server 的自定义静态代码分析规则程序集的演练
@@ -257,7 +257,7 @@ ms.locfileid: "75257032"
     |AvoidWaitForDelay_ProblemDescription|在 {0} 中找到 WAITFOR DELAY 语句。|  
     |AvoidWaitForDelay_RuleName|避免在存储过程、函数和触发器中使用 WaitFor Delay 语句。|  
     |CategorySamples|SamplesCategory|  
-    |CannotCreateResourceManager|无法从 {1} 创建 {0} 的 ResourceManager。|  
+    |CannotCreateResourceManager|无法从 {0} 创建 {1} 的 ResourceManager。|  
   
 7. 在“文件”  菜单上，单击“保存RuleResources.resx”  。  
   
@@ -530,7 +530,7 @@ ms.locfileid: "75257032"
   
 1. 启动 Visual Studio 的第二个会话。  
   
-2. 单击“文件” > “新建” > “项目”。     
+2. 单击“文件” **“新建”** “项目”。 >    >    
   
 3. 在“新建项目”  对话框内的“已安装模板”  列表中，展开“SQL Server”  节点，然后再单击“SQL Server 数据库项目”  。  
   

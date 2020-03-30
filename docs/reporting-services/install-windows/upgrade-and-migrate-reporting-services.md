@@ -12,10 +12,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68264993"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -26,14 +26,14 @@ ms.locfileid: "68264993"
  
 -   **升级：** 升级服务器和实例上当前安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 这通常称为“就地”升级。 对于从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器的一种模式升级到另一模式，不支持就地升级。 例如，不能将本机模式报表服务器升级到 SharePoint 模式报表服务器。 您可以将报表项从一个模式迁移到另一个模式。 有关详细信息，请参阅本文后面的“本机到 SharePoint 迁移”部分。  
   
--   **迁移**：安装并配置新 SharePoint 环境，并将报表项和资源复制到此新环境中，然后将此环境配置为使用现有内容。 迁移的较低级别形式是复制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库、配置文件，如果使用的是 SharePoint 模式，则还包括复制 SharePoint 内容数据库。  
+-   **迁移**：安装并配置一个新的 SharePoint 环境，并将报表项和资源复制到这个新环境中，然后对该环境进行配置以便使用现有内容。 迁移的较低级别形式是复制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库、配置文件，如果使用的是 SharePoint 模式，则还包括复制 SharePoint 内容数据库。  
     
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式
+> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式
 
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
    
-##  <a name="bkmk_known_issues"></a> 已知的升级问题和最佳做法  
+##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> 已知的升级问题和最佳做法  
  有关可以升级的受支持版本的详细列表，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
 > [!TIP]  
@@ -42,13 +42,13 @@ ms.locfileid: "68264993"
 >  -   [SQL Server 2016 发行说明](https://go.microsoft.com/fwlink/?LinkID=398124)。  
   
   
-##  <a name="bkmk_side_by_side"></a> 并行安装  
+##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> 并行安装  
  SQL Server Reporting Services 本机模式可与 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 本机模式部署并行安装。  
   
  不支持并行部署 SharePoint 模式下的 SQL Server Reporting Services 和任何先前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式组件。  
   
   
-##  <a name="bkmk_inplace_upgrade"></a> 就地升级  
+##  <a name="in-place-upgrade"></a><a name="bkmk_inplace_upgrade"></a> 就地升级  
  升级由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序完成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序可用于升级任意或所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 安装程序将检测现有实例并提示您进行升级。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供了升级选项，您可以将其作为命令行参数指定或在安装向导中指定。  
   
  运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序时，可以选择从以下版本之一升级，也可以安装运行现有并行安装的 SQL Server Reporting Services 的新实例：  
@@ -68,7 +68,7 @@ ms.locfileid: "68264993"
 * [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
   
   
-##  <a name="bkmk_upgrade_checklist"></a> 升级准备一览表  
+##  <a name="pre-upgrade-checklist"></a><a name="bkmk_upgrade_checklist"></a> 升级准备一览表  
  升级到 SQL Server Reporting Services 之前，查看以下内容：  
   
 -   检查相关要求，以确定硬件和软件是否可以支持 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。 有关详细信息，请参阅 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
@@ -83,7 +83,7 @@ ms.locfileid: "68264993"
   
 -   备份对 IIS 中现有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虚拟目录的任何自定义。  
   
--   删除无效的 SSL 证书。  这包括在升级 Reporting Services 前未计划更新的到期证书。  无效证书会导致升级失败，且如下所示的错误消息会写入 Reporting Services 日志文件：**Microsoft.ReportingServices.WmiProvider.WMIProviderException:未在网站上配置安全套接字层(SSL)证书。**  
+-   删除无效的 SSL 证书。  这包括在升级 Reporting Services 前未计划更新的到期证书。  无效证书将导致升级失败，且会将类似于以下的错误消息写入 Reporting Services 日志文件： **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site**。  
   
  在升级生产环境之前，务必在与生产环境具有相同配置的生产前环境中运行测试升级。  
   
@@ -100,8 +100,8 @@ ms.locfileid: "68264993"
 -   要将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SharePoint 2010 部署迁移到 SharePoint 2013/2016。 SharePoint 2013/2016 不支持从 SharePoint 2010 就地升级。 有关详细信息，请参阅[迁移 Reporting Services 安装（SharePoint 模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)。  
   
   
-##  <a name="bkmk_native_scenarios"></a> 本机模式升级和迁移方案  
- **升级：** 本机模式的就地升级与本主题前面列出的每个受支持版本的升级过程相同。 运行 SQL Server 安装向导或命令行安装。 在安装后，报表服务器数据库将自动升级到新的报表服务器数据库架构。 有关详细信息，参阅本主题中的 [就地升级](#bkmk_inplace_upgrade) 部分。  
+##  <a name="native-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_native_scenarios"></a> 本机模式升级和迁移方案  
+ **升级：** 针对本机模式的就地升级在过程上与本文前面列出的针对各支持版本的升级过程相同。 运行 SQL Server 安装向导或命令行安装。 在安装后，报表服务器数据库将自动升级到新的报表服务器数据库架构。 有关详细信息，参阅本主题中的 [就地升级](#bkmk_inplace_upgrade) 部分。  
   
  当选择了一个要升级的现有报表服务器实例时，升级过程即开始。  
   
@@ -129,10 +129,10 @@ ms.locfileid: "68264993"
   
 8.  安装程序合并配置文件中的设置。 添加新条目时，使用当前安装的配置文件作为基础。 不会删除过时的条目，但是在升级完成后，报表服务器不会再读取它们。 升级不会删除旧日志文件、过时的 RSWebApplication.config 文件或 IIS 中的虚拟目录设置。 升级不会删除 Report Designe、Management Studio 或其他客户端工具的旧版本。 如果不再需要它们，请确保在升级完成后删除这些文件和工具。  
   
- **迁移：** 将旧版本机模式安装迁移到 SQL Server Reporting Services 与本主题前面列出的每个受支持版本的迁移步骤相同。 有关详细信息，请参阅 [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+ 迁移：  对于本主题前面列出的所有支持的版本，将以前版本的本机模式安装迁移到 SQL Server Reporting Services 的步骤是相同的。 有关详细信息，请参阅 [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
   
-##  <a name="bkmk_native_scaleout"></a> 升级 Reporting Services 本机模式扩展部署  
+##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> 升级 Reporting Services 本机模式扩展部署  
  下面概述了如何升级扩展为多个报表服务器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式部署。 此过程需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署停机：  
   
 1.  备份报表服务器数据库和加密密钥。 有关详细信息，请参阅 [Reporting Services 的备份和还原操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)和[添加和删除横向扩展部署的加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。  
@@ -145,7 +145,7 @@ ms.locfileid: "68264993"
   
      对于每个服务器，重复升级和扩展步骤。  
   
-##  <a name="bkmk_sharePoint_scenarios"></a> SharePoint 模式升级和迁移方案  
+##  <a name="sharepoint-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_sharePoint_scenarios"></a> SharePoint 模式升级和迁移方案  
  以下各节介绍从指定版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式升级或迁移到 SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式时可能会遇到的问题和所需的基本步骤。  
   
  有两种升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署的安装组件。  
@@ -165,7 +165,7 @@ ms.locfileid: "68264993"
 ### <a name="sssql14-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 SQL Server Reporting Services  
  **起始环境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1、SharePoint 2010 或 SharePoint 2013。  
   
- **结束环境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
+ 结束环境：  SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
   
 -   **SharePoint 2013/2016：** SharePoint 2013/2016 不支持从 SharePoint 2010 就地升级。 但是支持 **数据库附加升级**  过程。
   
@@ -174,7 +174,7 @@ ms.locfileid: "68264993"
 ### <a name="sssql11-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 SQL Server Reporting Services  
  **起始环境：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]、SharePoint 2010。  
   
- **结束环境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
+ 结束环境：  SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
   
 -   **SharePoint 2013/2016：** SharePoint 2013/2016 不支持从 SharePoint 2010 就地升级。 但是支持 **数据库附加升级**  过程。
   
@@ -183,7 +183,7 @@ ms.locfileid: "68264993"
 ### <a name="sskilimanjaro-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 到 SQL Server Reporting Services  
  **起始环境：** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、SharePoint 2010。  
   
- **结束环境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。  
+ 结束环境：  SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。  
  
 -   **SharePoint 2013/2016：** SharePoint 2013/2016 不支持从 SharePoint 2010 就地升级。 但是支持 **数据库附加升级**  过程。
 
@@ -194,7 +194,7 @@ ms.locfileid: "68264993"
 -   运行 SQL Server Reporting Services 安装以升级每个“报表服务器”的 SharePoint 模式。 SQL Server 安装向导会安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务并创建新的服务应用程序。 
   
   
-##  <a name="bkmk_migration_considerations"></a> 迁移注意事项  
+##  <a name="considerations-for-a-migration"></a><a name="bkmk_migration_considerations"></a> 迁移注意事项  
  移动应用程序数据时，应注意下列事项和约束：  
   
 -   加密密钥的保护包括一个合并计算机标识的哈希。  
@@ -210,7 +210,7 @@ ms.locfileid: "68264993"
   
 -   SharePoint 模式：请参阅[管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的“密钥管理”部分  
   
--   本机模式：请参阅[备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-   本机模式：请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
 ### <a name="fixed-database-name"></a>固定数据库名称  
@@ -225,7 +225,7 @@ ms.locfileid: "68264993"
 -   如果仅有少量项，则可以将报表和共享数据源从报表设计器、模型设计器和报表生成器重新发布到新的报表服务器。 必须重新创建角色分配、订阅、共享计划、报表快照计划、对报表或其他项设置的自定义属性、模型项安全性以及对报表服务器设置的属性。 您将丢失报表历史记录和报表执行日志数据。  
   
   
-##  <a name="bkmk_additional_resources"></a> 其他资源  
+##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> 其他资源  
   
 > [!NOTE]  
 >  有关 SharePoint 数据库附加升级的详细信息，请参阅下列文章：  

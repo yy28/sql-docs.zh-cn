@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897027"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server 中的大容量复制操作
@@ -32,7 +32,7 @@ Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具
 - 事务中的大容量复制操作  
   
 > [!NOTE]
->  在使用 .NET Framework 1.1 版或更低版本时（不支持 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类），可以使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象执行 SQL Server Transact-SQL BULK INSERT 语句  。  
+>  在使用 .NET Framework 1.1 版或更低版本时（不支持 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类），可以使用  **对象执行 SQL Server Transact-SQL BULK INSERT 语句**<xref:Microsoft.Data.SqlClient.SqlCommand>。  
   
 ## <a name="in-this-section"></a>在本节中  
 [大容量复制示例设置](bulk-copy-example-setup.md)  
@@ -45,7 +45,7 @@ Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具
 介绍如何使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类在 SQL Server 的实例中执行多次大容量复制操作。  
   
 [事务和大容量复制操作](transaction-bulk-copy-operations.md)  
-介绍如何在事务中执行大容量复制操作，包括如何提交或回滚事务。  
+介绍了如何在事务中执行大容量复制操作，包括如何提交或回滚事务。  
   
 ## <a name="next-steps"></a>后续步骤
 - [SQL Server 和 ADO.NET](index.md)

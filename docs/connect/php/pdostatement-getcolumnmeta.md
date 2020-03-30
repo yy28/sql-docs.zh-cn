@@ -11,10 +11,10 @@ ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb7e9e37d568659a71917df66016f2333ed4be46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76918803"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
@@ -30,7 +30,7 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>parameters  
-*$conn*：（整数）要检索其元数据的列的从零开始的数。  
+ $conn：（整数）要检索其元数据的列的从零开始的数。  
   
 ## <a name="return-value"></a>返回值  
 包含列的元数据的关联阵列（键和值）。 有关数组中的字段的说明，请参阅“备注”部分。  
@@ -71,7 +71,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>敏感度数据分类元数据
 
-从版本 5.8.0 开始，用户可以使用新的语句属性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 通过 `PDOStatement::getColumnMeta`（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的[敏感度数据分类元数据](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)。
+从版本 5.8.0 开始，用户可以使用新的语句属性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 通过 [（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)敏感度数据分类元数据`PDOStatement::getColumnMeta`。
 
 请注意，默认情况下 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 属性为 `false`，但当设置为 `true` 时，将使用敏感度数据分类元数据（如果存在）填充上述数组字段 `flags`。 
 
@@ -93,7 +93,7 @@ ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confident
 ADD SENSITIVITY CLASSIFICATION TO [Patients].BirthDate WITH (LABEL = 'Confidential Personal Data', INFORMATION_TYPE = 'Birthdays')
 ```
 
-若要访问元数据，请在将 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 设置为 true 后使用 `PDOStatement::getColumnMeta`，如以下代码片段所示：
+若要访问元数据，请在将 `PDOStatement::getColumnMeta` 设置为 true 后使用 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`，如以下代码片段所示：
 
 ```
 $options = array(PDO::SQLSRV_ATTR_DATA_CLASSIFICATION => true);

@@ -12,10 +12,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 4cc7ac6000027b1471c29d4657260a2c0408d68e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246294"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
@@ -31,4 +31,4 @@ ms.locfileid: "75246294"
 |-------------------|-------------|  
 |描述数据库关系图工具。|[设计数据库关系图](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
 |描述可视化表设计工具。|[设计表](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
-|描述可视化查询设计器。|[有关设计查询和视图的操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 
+|描述可视化查询设计器。|[设计查询和查看操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 

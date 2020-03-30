@@ -16,10 +16,10 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 61647a4e0a654d478050268587b2b47fd79fc686
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78335746"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
@@ -76,9 +76,9 @@ ms.locfileid: "78335746"
 
     ![删除 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2017.png)
   
-1.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项  。 若要继续操作，请选择“下一步”  。  
+1.  在“选择实例”页上，使用下拉框指定要删除的 **实例，或者指定与仅删除** 共享功能和管理工具相对应的选项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要继续操作，请选择“下一步”  。  
   
-1.  在“选择功能”页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能  。  
+1.  在“选择功能”页上，指定要从指定的  **实例中删除的功能**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 1.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
  
@@ -97,9 +97,9 @@ ms.locfileid: "78335746"
 
     ![删除 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2012.png)
   
-1.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项  。 若要继续操作，请选择“下一步”  。  
+1.  在“选择实例”页上，使用下拉框指定要删除的 **实例，或者指定与仅删除** 共享功能和管理工具相对应的选项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要继续操作，请选择“下一步”  。  
   
-1.  在“选择功能”页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能  。  
+1.  在“选择功能”页上，指定要从指定的  **实例中删除的功能**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 1.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
  

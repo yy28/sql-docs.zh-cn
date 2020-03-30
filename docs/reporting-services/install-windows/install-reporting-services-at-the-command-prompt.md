@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7c4597a19b3fbcde0a5b4f6a82cb2398b6776128
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62513669"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示符处安装 Reporting Services 2016
@@ -23,10 +23,10 @@ ms.locfileid: "62513669"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持从 SQL Server 安装程序进行命令行安装。 本主题包含特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的若干命令行安装示例。 有关可用于所有 SQL Server 组件的命令行选项的完整说明，请参阅[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 本主题不介绍用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的命令行选项。 有关该外接程序的命令行安装的信息，请参阅 [使用安装文件 rsSharePoint.msi 安装外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)。
 
-##  <a name="bkmk_native_mode"></a> 本机模式 Reporting Services
+##  <a name="native-mode-reporting-services"></a><a name="bkmk_native_mode"></a> 本机模式 Reporting Services
 
 ### <a name="rsinstallmode-native-mode"></a>RSINSTALLMODE（本机模式）
- 用于安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的主要输入设置是 **/RSINSTALLMODE** 输入设置。 该设置有两个选项：DefaultNativeMode 和 FilesOnlyMode  
+ 用于安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的主要输入设置是 **/RSINSTALLMODE** 输入设置。 该设置具有两个选项： **DefaultNativeMode** 和 **FilesOnlyMode**  
   
  如果安装包括 SQL Server 数据库引擎，则默认 RSINSTALLMODE 为 DefaultNativeMode。如果安装不包括 SQL Server 数据库引擎，则默认 RSINSTALLMODE 为 FilesOnlyMode。如果选择了 DefaultNativeMode 但安装不包括 SQL Server 数据库引擎，则安装会自动将 RSINSTALLMODE 更改为 FilesOnlyMode。 有关输入设置的详细信息，请参阅 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。
 
@@ -46,10 +46,10 @@ ms.locfileid: "62513669"
 Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /UPDATEENABLED="False" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,Adv_SSMS,RS" /RSINSTALLMODE="DefaultNativeMode" /SQLSVCACCOUNT="[DOMAIN\ACCOUNT]" /SQLSVCPASSWORD="[PASSWORD]" /AGTSVCACCOUNT="[DOMAIN\ACCOUNT]" /AGTSVCPASSWORD="[PASSWORD]" /SQLSYSADMINACCOUNTS="[DOMAIN\ACCOUNT]"  
 ```  
   
-##  <a name="bkmk_sharepoint_mode"></a> SharePoint 模式 Reporting Services  
+##  <a name="sharepoint-mode-reporting-services"></a><a name="bkmk_sharepoint_mode"></a> SharePoint 模式 Reporting Services  
   
 ### <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE（SharePoint 模式）  
- 用于在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的输入设置是 **/RSSHPINSTALLMODE**。 该输入设置有一个选项：SharePointFilesOnlyMode。 此选项将安装 SharePoint 模式所需的所有文件，但以下安装需要进行配置。 使用 SharePoint 管理中心完成其他配置步骤。 有关详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。  
+ 用于在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的输入设置是 **/RSSHPINSTALLMODE**。 该输入设置具有一个选项：SharePointFilesOnlyMode。 此选项将安装 SharePoint 模式所需的所有文件，但以下安装需要进行配置。 使用 SharePoint 管理中心完成其他配置步骤。 有关详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。  
   
 ### <a name="examples-of-sharepoint-mode-installation"></a>SharePoint 模式安装示例  
  下面的示例将在 SharePoint 模式中安装 SQL Server 数据库引擎服务和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以及 SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序 (RS_SHPWFE)。  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651943"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>用于 SSRS 服务应用程序的设置订阅和警报
@@ -57,7 +57,7 @@ ms.locfileid: "62651943"
   
 5.  单击 **“确定”** 按钮。  
   
-##  <a name="bkmk_download"></a> 下载 Transact-SQL 脚本  
+##  <a name="to-download-the-transact-sql-script"></a><a name="bkmk_download"></a> 下载 Transact-SQL 脚本  
   
 1.  在 SharePoint 管理中心内，在 **“应用程序管理”** 组中单击 **“管理服务应用程序”**  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62651943"
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中加载 Transact-SQL 脚本  
   
-1.  要打开 SQL Server Management Studio，请在“开始”菜单上单击“[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”，然后单击“SQL Server Management Studio”   。  
+1.  要打开 SQL Server Management Studio，请在“开始”菜单上单击“ **”，然后单击“SQL Server Management Studio”** [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]  。  
   
 2.  在 **“连接到服务器”** 对话框中，设置以下选项：  
   

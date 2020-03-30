@@ -11,10 +11,10 @@ ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 118a473e3e1675b81b732eb76f0271bbbe9d2e15
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936015"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
@@ -30,9 +30,9 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>parameters  
-$*class_name*：一个可选的字符串，用于指定要创建的类的名称。 默认值为 stdClass。  
+$class_name  ：可选字符串，指定要创建的类的名称。 默认值为 stdClass。  
   
-$*ctor_args*：一个带有自定义类构造函数的参数的可选数组。  
+$ctor_args  ：包含自定义类构造函数的参数的可选数组。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则返回带有该类的实例的对象。 属性将映射到列。 如果失败，则返回 false。  

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b8caa58c178f68ebcf773fcef8f18509b85ad24a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74908748"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>SQL Server 机器学习服务的 Python 教程
@@ -33,7 +33,7 @@ ms.locfileid: "74908748"
 |-|-|
 | [使用线性回归预测雪橇租赁](python-ski-rental-linear-regression.md) | 使用 Python 和线性回归来预测滑雪租赁数量。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
 | [使用 k-means 聚类分析对客户进行分类](python-clustering-model.md) | 使用 Python 开发和部署 K-Means 群集模型，对客户进行分类。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
-| [使用 Revoscalepy 创建模型](use-python-revoscalepy-to-create-model.md) | 演示如何使用 SQL Server 作为计算上下文来运行远程 Python 客户端中的代码。 本教程使用 revoscalepy 库中的 rxLinMod 创建模型。 |
+| [使用 Revoscalepy 创建模型](use-python-revoscalepy-to-create-model.md) | 演示如何使用 SQL Server 作为计算上下文来运行远程 Python 客户端中的代码。 本教程使用 revoscalepy 库中的 rxLinMod 创建模型   。 |
 | [适用于 SQL 开发者的 Python 数据分析](sqldev-in-database-python-for-sql-developers.md) | 本端到端演练演示使用 T-SQL 构建完整的 Python 解决方案的过程。 |
 
 ## <a name="python-quickstarts"></a>Python 快速入门

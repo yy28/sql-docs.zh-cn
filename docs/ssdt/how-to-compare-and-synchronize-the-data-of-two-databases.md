@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241583"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>如何：比较和同步两个数据库的数据
@@ -41,7 +41,7 @@ ms.locfileid: "75241583"
 > [!NOTE]  
 > 还可以比较两个数据库的架构  或同一数据库的两个版本的架构。 有关详细信息，请参阅[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)。  
   
-## <a name="CompareDatabaseData"></a>比较数据库数据  
+## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>比较数据库数据  
   
 #### <a name="to-compare-data-by-using-the-new-data-comparison-wizard"></a>使用新建数据比较向导比较数据  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75241583"
   
     将指定的源数据库和目标数据库中的数据进行比较。 结果将显示在“数据比较”会话中。 有关如何查看结果或同步数据的详细信息，请参阅[查看数据差异](#ViewDifferences)和[同步数据库数据](#Synchronize)。  
   
-## <a name="ViewDifferences"></a>查看数据差异  
+## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>查看数据差异  
 在比较两个数据库中的数据后，“数据比较”将列出比较的每个数据库对象  及其状态。 还可以查看每个对象中的记录的结果（按状态分组）。 有关状态指定的详细信息，请参阅[将一个或多个表中的数据与引用数据库中的数据进行比较和同步](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)。  
   
 查看差异后，可以针对部分或全部不同的、缺少的或新的对象或记录更新目标以便与源匹配。 有关详细信息，请参阅[同步数据库数据](#Synchronize)。  
@@ -102,7 +102,7 @@ ms.locfileid: "75241583"
   
     -   若要查看某个特定对象内的记录的结果，请在主结果窗格中单击该对象，再单击“记录视图”窗格中的某个选项卡。 每个选项卡都将显示该对象内具有特定状态的所有记录：不同、只在源中、只在目标中以及相同。 数据按记录和列显示。  
   
-## <a name="Synchronize"></a>同步数据库数据  
+## <a name="synchronizing-database-data"></a><a name="Synchronize"></a>同步数据库数据  
 比较两个数据库中的数据后，可以通过更新目标的部分或全部来同步这些数据以与源匹配。 可以比较两种数据库对象中的数据：表和视图。  
   
 #### <a name="to-update-target-data-by-using-the-write-updates-command"></a>使用“写入更新”命令更新目标数据  

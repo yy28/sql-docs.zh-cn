@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63042939"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
@@ -25,12 +25,12 @@ ms.locfileid: "63042939"
   
 在一个步骤中，您可以故意犯某个错误，以便可以了解错误的成因。 然后，您可以纠正该错误以便实现预期效果。  
     
-完成本教程的估计时间：20 分钟。  
+完成本教程的预计学时：20 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="CreateReport"></a>创建具有数据源和数据集的一个空白报表  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>创建具有数据源和数据集的一个空白报表  
   
 ### <a name="to-create-a-blank-report"></a>创建空白报表  
   
@@ -46,15 +46,15 @@ ms.locfileid: "63042939"
   
 ### <a name="to-create-a-data-source"></a>创建数据源  
   
-1.  在“报表数据”窗格中，单击“新建” > “数据源”   。  
+1.  在“报表数据”窗格中，单击“新建” **“数据源”**  >   。  
 
     如果未出现“报表数据”窗格，请在“视图”选项卡上选中“报表数据”    。
   
-2.  在“名称”  框中键入：“TextDataSource”   
+2.  在“名称”框中，键入：TextDataSource    
   
 3.  单击 **“使用我的报表中嵌入的连接”** 。  
   
-4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”框中键入：`Data Source = <servername>`   
+4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”框中键入：  `Data Source = <servername>`  
   
     > [!NOTE]  
     > 表达式 `<servername>`（例如 Report001）指定安装了 SQL Server 数据库引擎实例的计算机。 本教程不需要具体数据；只需要与 SQL Server 数据库的连接。 如果你已经具有在“数据源连接”  下列出的某一数据源连接，则可以选择该连接并且转到下一过程“创建数据集”。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -63,11 +63,11 @@ ms.locfileid: "63042939"
   
 ### <a name="to-create-a-dataset"></a>创建数据集  
   
-1.  在“报表数据”窗格中，单击“新建” > “数据集”   。  
+1.  在“报表数据”窗格中，单击“新建” **“数据集”**  >   。  
   
 2.  确保数据源为 **TextDataSource**。  
   
-3.  在“名称”  框中键入：“TextDataset”  。  
+3.  在“名称”框中，键入：TextDataset   。  
   
 4.  确保已选择 **“文本”** 查询类型，然后单击 **“查询设计器”** 。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63042939"
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>向报表设计图面添加字段  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>向报表设计图面添加字段  
 如果您希望来自您的数据集的字段出现在报表中，则第一感可能是要将其直接拖到设计图面。 本练习指出为什么无法这样做以及相应替代步骤。  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>向报表添加字段（获得错误结果）  
@@ -174,12 +174,12 @@ ms.locfileid: "63042939"
   
 7.  选择列表框并按 Delete 键。  
   
-## <a name="AddTable"></a>向报表设计图面添加表  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>向报表设计图面添加表  
 创建此表是为了放置超链接和旋转后的文本。   
   
-1.  在“插入”选项卡上，转至“表” > “表向导”    。  
+1.  在“插入”选项卡上，转至“表” **“表向导”**   >   。  
   
-2.  在“新建表或矩阵”向导的“选择数据集”页上，单击“选择此报表中的现有数据集或共享数据集” > “TextDataset(在此报表中)” > “下一步”     。  
+2.  在“新建表或矩阵”向导的“选择数据集”页上，单击“选择此报表中的现有数据集或共享数据集” **“TextDataset(在此报表中)”** “下一步”   >    >   。  
   
 3.  在“排列字段”页上，将“Territory”、“LinkText”和“Product”字段拖到“行组”上，将“Sales”字段拖到“值”上，然后单击“下一步”         。  
 
@@ -197,7 +197,7 @@ ms.locfileid: "63042939"
   
 8.  单击 **“设计”** 返回设计视图。  
   
-9. 选择“LinkText”列中的“总计”单元格，然后按住 Shift 键并选择右侧的两个单元格：“Product”列中的空单元格和“Sales”列中的 `[Sum(Sales)]` 单元格     。  
+9. 选择“LinkText”列中的“总计”单元格，然后按住 Shift 键并选择右侧的两个单元格：“Product”列中的空单元格和“Sales”列中的  **单元格**   `[Sum(Sales)]`  。  
   
 11. 选中这三个单元格后，右键单击其中一个单元格，然后单击“删除行”  。  
 
@@ -209,7 +209,7 @@ ms.locfileid: "63042939"
     
     ![报表生成器格式一-总计](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>向报表添加超链接  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>向报表添加超链接  
 在本节中，您将向前一节中的表中的文本添加超链接。  
   
 1.  单击 **“设计”** 返回设计视图。  
@@ -234,7 +234,7 @@ ms.locfileid: "63042939"
   
 10. 单击某一链接。 如果计算机已连接到 Internet，则浏览器将打开到报表生成器的帮助主题。  
   
-## <a name="RotateText"></a>旋转报表中的文本  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>旋转报表中的文本  
 在本节中，您将旋转前一节的表中的某些文本。  
  
 1.  单击 **“设计”** 返回设计视图。  
@@ -260,7 +260,7 @@ ms.locfileid: "63042939"
 
 ![报表生成器格式旋转-270](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>设置货币格式  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>设置货币格式  
   
 1.  单击 **“设计”** 切换到设计视图。  
   
@@ -268,7 +268,7 @@ ms.locfileid: "63042939"
   
 3.  在“开始”选项卡上，转至“数字”组，然后单击“货币”按钮    。  
   
-4.  （可选）如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”    。  
+4.  （可选）如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” **“示例值”**   >   。  
 
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
   
@@ -280,7 +280,7 @@ ms.locfileid: "63042939"
 
 ![报表生成格式报告](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>使用 HTML 格式显示文本  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>使用 HTML 格式显示文本  
   
 1.  单击 **“设计”** 切换到设计视图。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "63042939"
   
 ![报表生成器格式 html](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>保存报表  
+## <a name="save-the-report"></a><a name="Save"></a>保存报表  
 您可以将报表保存到报表服务器、SharePoint 库或本地计算机。  
   
 在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  
@@ -339,7 +339,7 @@ ms.locfileid: "63042939"
   
 4.  在“名称”中，用选择的名称替换默认名称  。
 
-5.  单击“ **保存**”。  
+5.  单击“保存”  。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -351,11 +351,11 @@ ms.locfileid: "63042939"
   
 3.  在“名称”中，用选择的名称替换默认名称  。 
   
-4.  单击“ **保存**”。  
+4.  单击“保存”  。  
 
 ## <a name="next-steps"></a>后续步骤
 
-有许多方式可以在报表生成器中设置文本的格式。 [教程：生成自由格式报表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多示例。  
+有许多方式可以在报表生成器中设置文本的格式。 [教程：创建自由格式的报表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)中提供了更多示例。  
 
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
 [设置报表项的格式](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: aada983ac80116cce2001b5027b89b8824bd151f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307015"
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
@@ -33,7 +33,7 @@ ms.locfileid: "75307015"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播客户端服务帐户|可以是域用户帐户或本地用户帐户。 如果使用本地用户帐户，则控制器、客户端和目标 SQL Server 都必须在同一台计算机上运行。<br /><br /> **\*\* 安全说明 \*\*** 建议不要将该帐户设置为 Windows 本地管理员组的成员。|  
 |用于运行分布式重播管理工具的交互式用户帐户|可以是本地用户帐户或域用户帐户。 若要使用本地用户帐户，管理工具和控制器必须在同一台计算机上运行。|  
   
- **重要说明**：在你配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
+ **重要**：在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个帐户。 下面是支持的帐户的列表：  
   
 -   域用户帐户  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75307015"
   
  若要配置控制器 DCOM 权限，请按以下步骤执行操作：  
   
-1.  **打开 dcomcnfg.exe、组件服务管理单元**：这是用于配置 DCOM 权限的工具。  
+1.  **打开 dcomcnfg.exe（组件服务管理单元）** ：这是用于配置 DCOM 权限的工具。  
   
     1.  在控制器计算机上，单击 **“开始”** 。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "75307015"
   
     3.  按 Enter。  
   
-2.  **配置计算机范围内的 DCOM 权限**：为下表中列出的每个帐户授予相应的计算机范围的 DCOM 权限。 有关如何设置计算机范围的权限的详细信息，请参阅[清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
+2.  **配置计算机范围的 DCOM 权限**：为下表中列出的每个帐户授予相应的计算机范围的 DCOM 权限。 有关如何设置计算机范围的权限的详细信息，请参阅 [清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
-3.  **配置应用程序特定的 DCOM 权限**：为下表中列出的每个帐户授予相应的应用程序特定的 DCOM 权限。 控制器服务的 DCOM 应用程序名称为 **DReplayController**。 有关如何设置应用程序特定的权限的详细信息，请参阅[清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
+3.  **配置应用程序特定的 DCOM 权限**：为下表中列出的每个帐户授予相应的应用程序特定的 DCOM 权限。 控制器服务的 DCOM 应用程序名称为 **DReplayController**。 有关如何设置应用程序特定的权限的详细信息，请参阅 [清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
  下表介绍了管理工具交互式用户帐户和客户端服务帐户所需的 DCOM 权限：  
   

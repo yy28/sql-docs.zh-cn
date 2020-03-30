@@ -12,17 +12,17 @@ ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 53bb19934209ee501c76317e102e5b1fcae28c4d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306599"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 属性（“别名”选项卡）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“\<别名>属性”对话框中的“别名”页查看或指定别名连接字符串的元素。
+别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“**别名>属性”** **\<** 对话框中的“别名”  页查看或指定别名连接字符串的元素。
 
 ## <a name="options"></a>选项
 
@@ -34,7 +34,7 @@ ms.locfileid: "75306599"
 
 连接字符串的其他元素。 此框的名称随所选协议的不同而变化。 请参阅下列主题中的示例。  
 
-协议
+协议 
 
 连接所用的协议。
 

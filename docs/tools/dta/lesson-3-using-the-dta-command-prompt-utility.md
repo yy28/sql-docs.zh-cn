@@ -14,17 +14,17 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306973"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 课：使用 dta 命令提示实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 **dta** 命令提示实用工具除了包含数据库引擎优化顾问提供的功能之外，还包含其他功能。  
   
-通过数据库引擎优化顾问 XML 架构，您可以使用自己喜爱的 XML 工具创建实用工具的输入文件。 此架构在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时安装，可以在以下位置找到：C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd。  
+通过数据库引擎优化顾问 XML 架构，您可以使用自己喜爱的 XML 工具创建实用工具的输入文件。 该架构随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安装，可在 C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd 中找到。  
   
 数据库引擎优化顾问 XML 架构也可通过 [此 Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)在线获得。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "75306973"
 此处提供在 SSMS 中还原数据库的说明：[还原数据库。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > 本教程适用于熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
+  > 本教程适用于熟悉使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
 
 ## <a name="access-dta-command-prompt-utility-help-menu"></a>访问 DTA 命令提示实用工具的“帮助”菜单
   
@@ -93,7 +93,7 @@ ms.locfileid: "75306973"
 -   [数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md) 提供有关如何使用此工具执行任务的说明。 
 -   [dta 实用工具](../../tools/dta/dta-utility.md) 提供有关此命令提示实用工具的参考材料和可用于控制此实用工具的操作的可选 XML 文件。  
   
-若要返回到教程的起始位置，请参阅[教程：数据库引擎优化顾问](../../tools/dta/tutorial-database-engine-tuning-advisor.md)。  
+若要返回教程的起始位置，请参阅 [教程：数据库引擎优化顾问](../../tools/dta/tutorial-database-engine-tuning-advisor.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [数据库引擎教程](../../relational-databases/database-engine-tutorials.md)  

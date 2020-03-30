@@ -19,10 +19,10 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306964"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
@@ -81,7 +81,7 @@ number[minutes | hours | days | weeks | months]
  指定返回 **sqlmaint** 的语法关系图。 此参数必须单独使用。  
   
  **-S** _server_name_[ **\\** _instance\_name_]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的目标实例。 指定要连接到该服务器上 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的默认实例的 _server\_name_。 指定要连接到该服务器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的命名实例的 _server\_name_\\  _instance\_name_。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的目标实例。 指定要连接到该服务器上  _的默认实例的 \_server_name[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]。 指定要连接到该服务器上  _的命名实例的 \_server_name **\\** _\_instance_name[!INCLUDE[ssDE](../includes/ssde-md.md)]。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
   
  **-U** _login_ID_  
  指定连接服务器时使用的登录 ID。 如果未提供， **sqlmaint** 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证。 如果 *login_ID* 包含特殊字符，则必须用双引号 (") 引起来；否则，双引号为可选。  
@@ -89,7 +89,7 @@ number[minutes | hours | days | weeks | months]
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。  
   
- **-P** _password_  
+ -P  password   
  指定登录 ID 的密码。 仅在同时提供 **-U** 参数时有效。 如果 *password* 包含特殊字符，则必须用双引号引起来；否则，双引号为可选。  
   
 > [!IMPORTANT]  
@@ -130,7 +130,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  *sqlmaint* 访问远程服务器时， **html_file** 需要完整的 UNC 文件名。  
   
  **-DelHtmlRpt** \<*time_period*>  
- 指定报表文件创建后的时间间隔超出 \<*time_period*> 时，删除报表目录中的所有 HTML 报表。 **-DelHtmlRpt** 将查找名称符合由 *html_file* 参数生成的模式的文件。 如果 *html_file* 为 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，则 **-DelHtmlRpt** 将导致 **sqlmaint** 删除任何名称与 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式匹配的文件，以及早于指定 \<*time_period*> 的文件。  
+ 指定报表文件创建后的时间间隔超出 \<time_period> 时，删除报表目录中的所有 HTML 报表  。 **-DelHtmlRpt** 将查找名称符合由 *html_file* 参数生成的模式的文件。 如果 html_file 为 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，则 -DelHtmlRpt 将导致 sqlmaint 删除任何名称与 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint *.htm 模式匹配的文件，以及早于指定* time_period> 的文件   \*\<  。  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
  指定从 **-D**. 指定的数据库中删除未使用的空间。 该选项仅适用于定义为自动增长的数据库。 *Threshold_percent* 指定在 **sqlmaint** 可以尝试删除未使用数据空间之前数据库必须达到的大小 (MB)。 如果数据库小于 *threshold_percent*，则不采取任何操作。 *Free_percent* 指定数据库中必须保留的未使用空间的大小，以数据库最终大小的百分比表示。 例如，如果一个 200 MB 的数据库包含 100 MB 数据，则将 *free_percent* 指定为 10 将使数据库最终大小变为 110 MB。 请注意，如果数据库小于 *free_percent* 加上数据库中数据量的大小，则数据库不会扩展。 例如，如果 108 MB 的数据库有 100 MB 数据，则将 *free_percent* 指定为 10 不会将数据库扩展为 110 MB，而是仍保持为 108 MB。  
@@ -200,7 +200,7 @@ dbname_log_yyyymmddhhmm.BAK
  指定备份介质为磁盘。  
   
  **-DelBkUps**< *time_period* >  
- 对于磁盘备份，指定如果创建备份后的时间间隔超出了 \<*time_period*>，则删除备份目录中的所有备份文件。  
+ 对于磁盘备份，指定如果创建备份后的时间间隔超出了 \<time_period>，则删除备份目录中的所有备份文件  。  
   
  **-CrBkSubDir**  
  对于磁盘备份，指定在 [*backup_path*] 目录中创建子目录。如果同时指定了 **-UseDefDir** ，则在默认备份目录中创建子目录。 子目录的名称根据 **-D**中指定的数据库名称生成。 **-CrBkSubDir** 提供一种简单的方法将不同数据库的所有备份放置到单独的子目录中，而无需更改 *backup_path* 参数。  
@@ -212,7 +212,7 @@ dbname_log_yyyymmddhhmm.BAK
  指定备份介质为磁带。  
   
  **-BkUpOnlyIfClean**  
- 指定仅当指定的 **-Ck** 检查未发现数据问题时才进行备份。 维护操作的运行顺序与其在命令提示中出现的顺序相同。 如果还要指定 **-BkUpOnlyIfClean** 或指定无论检查报告问题与否都进行备份，则需在 **-BkUpDB**/ **-BkUpLog** 参数之前指定 **-CkDB**、 **-CkDBNoIdx**、 **-CkAl**、 **-CkAlNoIdx** **-CkTxtAl** 或 **-CkCat** 参数。  
+ 指定仅当指定的 **-Ck** 检查未发现数据问题时才进行备份。 维护操作的运行顺序与其在命令提示中出现的顺序相同。 如果还要指定 **-BkUpOnlyIfClean** 或指定无论检查报告问题与否都进行备份，则需在 **-BkUpDB**  -BkUpLog**参数之前指定**-CkDB **、** -CkDBNoIdx **、** -CkAl **、** -CkAlNoIdx/ **-CkTxtAl** 或 **-CkCat** 参数。  
   
  **-VrfyBackup**  
  指定备份完成时，对备份运行 RESTORE VERIFYONLY。  

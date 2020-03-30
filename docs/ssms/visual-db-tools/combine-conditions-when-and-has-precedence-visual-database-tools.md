@@ -18,10 +18,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 0f7ca7c3a99165d15b7d5ac38450a3eb7e49d3a3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241229"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>在 AND 优先时组合条件 (Visual Database Tools)
@@ -63,7 +63,7 @@ ms.locfileid: "75241229"
   
 ## <a name="see-also"></a>另请参阅
 
-[在 OR 优先时组合条件](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[在“条件”窗格中组合搜索条件的约定](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[“输入搜索值”的规则](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[在 OR 优先时合并条件](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[在“条件”窗格中合并搜索条件的约定](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[针对输入搜索值的规则](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
 [指定搜索条件](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

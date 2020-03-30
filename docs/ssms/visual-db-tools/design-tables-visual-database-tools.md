@@ -19,10 +19,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 42da7ce86560e77cc7757f8077b0c0aca8775d93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254682"
 ---
 # <a name="create-and-update-database-tables"></a>创建和更新数据库表
@@ -32,7 +32,7 @@ ms.locfileid: "75254682"
   
 ## <a name="create-a-table"></a>创建表  
   
-1. 右键单击数据库中的“表”节点，然后选择“新建” > “表”    ：  
+1. 右键单击数据库中的“表”节点，然后选择“新建” **“表”**   >   ：  
   
     ![新建表](../media/design-tables/new-table.png)
   

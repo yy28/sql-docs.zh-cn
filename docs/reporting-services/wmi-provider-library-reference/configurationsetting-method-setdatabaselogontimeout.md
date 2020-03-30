@@ -16,10 +16,10 @@ ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 58d8bd5514467585026608ada825bf805af4c092
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571664"
 ---
 # <a name="configurationsetting-method---setdatabaselogontimeout"></a>ConfigurationSetting 方法 - SetDatabaseLogonTimeout
@@ -48,7 +48,7 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

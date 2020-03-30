@@ -16,10 +16,10 @@ ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e875e7b9a3866ffcb165610c4225a63f28dfa4a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977272"
 ---
 # <a name="issearchable-method-sqlserverresultsetmetadata"></a>isSearchable 方法 (SQLServerResultSetMetaData)
@@ -37,10 +37,10 @@ public boolean isSearchable(int column)
 #### <a name="parameters"></a>parameters  
  *column*  
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 如果可以在 WHERE 子句中使用此列，则为 true。 否则为 **false**。  
+ 如果可以在 WHERE 子句中使用此列，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

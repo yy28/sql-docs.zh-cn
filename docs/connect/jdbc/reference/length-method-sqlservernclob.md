@@ -11,16 +11,16 @@ ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e32b559d43e44e75d4f87ecf99cfd871727c9934
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976848"
 ---
 # <a name="length-method-sqlservernclob"></a>length 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索 NClob 中的字符数。  
+  检索 NClob  中的字符数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,7 +30,7 @@ public long length()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 以字符数表示的 NClob 的长度。  
+ 以字符数表示的 NClob  的长度。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

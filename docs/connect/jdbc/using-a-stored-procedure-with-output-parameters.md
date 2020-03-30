@@ -11,10 +11,10 @@ ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026835"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用含输出参数的存储过程
@@ -23,14 +23,14 @@ ms.locfileid: "69026835"
 
 可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程是返回一个或多个 OUT 参数的存储过程，存储过程使用这些参数将数据返回到调用它的应用程序。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类，调用此类存储过程并处理其返回的数据。
 
-使用 JDBC 驱动程序调用此类存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 带有 OUT 参数的 `call` 转义序列的语法如下所示：
+使用 JDBC 驱动程序调用此类存储过程时，必须结合 `call`SQLServerConnection[ 类的 ](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)prepareCall[ 方法使用 ](../../connect/jdbc/reference/sqlserverconnection-class.md) SQL 转义序列。 带有 OUT 参数的 `call` 转义序列的语法如下所示：
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
 > 若要详细了解 SQL 转义序列，请参阅[使用 SQL 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
-构造 `call` 转义序列时，请使用 ?（问号）字符 来指定 OUT 参数。 此字符充当要从该存储过程返回的参数值的占位符。 要为 OUT 参数指定值，必须在运行存储过程前使用 SQLServerCallableStatement 类的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法指定各参数的数据类型。
+构造 `call` 转义序列时，请使用 ?（问号）字符 来指定 IN 参数。 此字符充当要从该存储过程返回的参数值的占位符。 要为 OUT 参数指定值，必须在运行存储过程前使用 SQLServerCallableStatement 类的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法指定各参数的数据类型。
 
 使用 registerOutParameter 方法为 OUT 参数指定的值必须是 java.sql.Types 所包含的 JDBC 数据类型之一，而它又被映射成本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一。 若要详细了解 JDBC 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，请参阅[了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。
 

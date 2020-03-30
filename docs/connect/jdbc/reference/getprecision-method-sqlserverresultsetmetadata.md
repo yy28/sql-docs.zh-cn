@@ -16,10 +16,10 @@ ms.assetid: de46c96e-6ad6-4946-883e-807123658500
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 332b230730d9f9bb53a8e06856d1f2d7308401fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980769"
 ---
 # <a name="getprecision-method-sqlserverresultsetmetadata"></a>getPrecision 方法 (SQLServerResultSetMetaData)
@@ -37,10 +37,10 @@ public int getPrecision(int column)
 #### <a name="parameters"></a>parameters  
  *column*  
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 指示列精度的 int。  
+ 指示列精度的 int  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

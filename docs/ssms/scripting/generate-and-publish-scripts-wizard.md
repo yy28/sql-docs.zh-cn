@@ -44,10 +44,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253905"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
@@ -61,17 +61,17 @@ ms.locfileid: "75253905"
 ## <a name="before-you-begin"></a>开始之前  
  源和目标数据库可以位于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例上。  
   
-###  <a name="PubHostSvc"></a> 发布到宿主服务  
+###  <a name="publishing-to-a-hosted-service"></a><a name="PubHostSvc"></a> 发布到宿主服务  
  除了创建脚本之外， **“生成和发布脚本向导”** 还可用于将数据库发布到特定类型的宿主 SQL Server Web 服务。 SQL Server Hosting Toolkit 将 Database Publishing Services 作为 CodePlex 上的共享源项目提供。 Database Publishing Services 项目可由 Web 宿主提供程序用来生成一组 Web 服务，使其客户可以轻松地将数据库部署到 Web 服务。 有关下载 SQL Server Hosting Toolkit 的详细信息，请参阅 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)（SQL Server 数据库发布服务）。  
   
  若要将一个数据库发布到 Web 宿主服务，请在该向导的 **“设置脚本编写选项”** 页上选择 **“发布到 Web 服务”** 。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  发布数据库的最小权限是原始数据库上 db_ddladmin 固定数据库角色中的成员身份。 将数据库脚本发布到位于宿主提供程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最小权限是目标数据库上 db_ddladmin 固定数据库角色中的成员身份。  
   
  用户还必须提供用户名和密码来访问他们的宿主提供程序帐户，才能使用该向导进行发布。 必须先在宿主提供程序中创建目标数据库，然后才能发布源数据库。 发布将覆盖该现有数据库中的对象。  
   
-##  <a name="GenPubScriptWiz"></a> 使用“生成和发布脚本向导”  
+##  <a name="using-the-generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> 使用“生成和发布脚本向导”  
  **生成和发布脚本**  
   
 1.  在 **对象资源管理器**中，展开包含要为其编写脚本的数据库的实例的节点。  
@@ -92,14 +92,14 @@ ms.locfileid: "75253905"
     -   [摘要页](#Summary)   
     -   [“保存或发布脚本”页](#SavePubScripts)  
   
-###  <a name="Introduction"></a> “简介”页  
+###  <a name="introduction-page"></a><a name="Introduction"></a> “简介”页  
  本页介绍用于生成或发布脚本的步骤。  
   
  **不再显示此页** - 下次启动“生成和发布脚本向导”  时跳过此页。  
   
   ![“简介”页](media/generate-and-publish-scripts-wizard/intro.png)
   
-###  <a name="ChooseObjects"></a> “选择对象”页  
+###  <a name="choose-objects-page"></a><a name="ChooseObjects"></a> “选择对象”页  
  使用此页可选择要包含在该向导生成的脚本中的对象。 在以下向导页中，您可以选择将这些脚本保存到您选择的位置，或者使用它们将数据库对象和数据发布到安装了 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)的远程 Web 宿主提供程序。  
   
  **编写整个数据库的脚本选项** - 单击此项可为数据库中的所有对象生成脚本并且为数据库本身包括一个脚本。 
@@ -116,7 +116,7 @@ ms.locfileid: "75253905"
 
    ![特定位置脚本编写](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
-###  <a name="SetScriptOpt"></a> “设置脚本编写选项”页  
+###  <a name="set-scripting-options-page"></a><a name="SetScriptOpt"></a> “设置脚本编写选项”页  
  使用此页可以指定您是否希望向导将脚本保存到您选择的位置或者是否要使用它们将数据库对象发布到远程 Web 宿主提供程序。 若要发布，您必须有权访问通过使用 Database Publishing Services Web 服务安装的 Web 服务。  
   
  **选项** - 如果您希望向导将脚本保存到您选择的位置，则选择 **“将脚本保存到特定位置”** 。 您以后可以对数据库引擎的实例或者对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]运行这些脚本。 如果您希望向导将数据库对象发布到远程 Web 宿主提供程序，请选择 **“发布到 Web 服务”** 。  
@@ -141,7 +141,7 @@ ms.locfileid: "75253905"
   
 -   **目标数据库** - 选择要发布您选择的对象的目标数据库。 您必须在选择目标数据库之前选择一个提供程序。  
   
-###  <a name="AdvScriptOpt"></a> “高级脚本编写选项”页  
+###  <a name="advanced-scripting-options-page"></a><a name="AdvScriptOpt"></a> “高级脚本编写选项”页  
  使用此页可以指定希望此向导生成脚本的方式。 此页中提供有许多不同的选项。 如果在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] “数据库引擎类型” **中指定的 SQL Server 或**版本不支持这些选项，则这些选项将灰显。  
 
 ![高级选项](media/generate-and-publish-scripts-wizard/advanced.png)
@@ -214,7 +214,7 @@ ms.locfileid: "75253905"
   
 -   **编写唯一键脚本** - 编写对表创建唯一键的脚本。 唯一键可防止输入重复的数据。 默认值为 **True**。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
-###  <a name="MgProviders"></a> “管理提供程序”页  
+###  <a name="manage-providers-page"></a><a name="MgProviders"></a> “管理提供程序”页  
  使用此对话框可查看、添加、编辑、删除或测试宿主提供程序连接。 宿主提供程序为使用 CodePlex 上 SQL Server Hosting Toolkit 中的 Database Publishing Service 项目创建的 Web 服务指定连接信息。  
   
  **已配置的提供程序** - 列出已保存的每个宿主提供程序的名称和 **Web** 服务地址。  
@@ -231,7 +231,7 @@ ms.locfileid: "75253905"
   
  **取消** - 撤消您在 **“宿主提供程序”** 对话框中做的所有更改。  
   
-###  <a name="AdvPubOpts"></a> “高级发布选项”页  
+###  <a name="advanced-publishing-options-page"></a><a name="AdvPubOpts"></a> “高级发布选项”页  
  使用此页可指定您希望该向导发布数据库的方式。 此页中提供有许多不同的选项。 如果在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] “数据库引擎类型” **中指定的 SQL Server 或**版本不支持这些选项，则这些选项将灰显。  
 
   ![高级发布](media/generate-and-publish-scripts-wizard/advancedpublish.png)
@@ -288,7 +288,7 @@ ms.locfileid: "75253905"
   
 9. “发布数据压缩选项”  - 如果在源数据库或源数据库中的表上配置了发布数据压缩选项，则在发布过程中包括数据压缩选项。 默认值为 **True**。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
-###  <a name="ProvConfig"></a> “提供程序配置”页  
+###  <a name="provider-configuration-page"></a><a name="ProvConfig"></a> “提供程序配置”页  
  使用此对话框可以查看或修改宿主提供程序设置。 可以使用此对话框执行以下操作：  
   
 -   查看、添加或编辑宿主提供程序的连接信息。  
@@ -321,12 +321,12 @@ ms.locfileid: "75253905"
   
  **取消** - 撤消在此对话框中做的所有更改并返回到向导。  
   
-###  <a name="Summary"></a> 摘要页  
+###  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  此页汇总了您在此向导中所选的选项。 若要更改某个选项，请单击 **“上一步”** 。 若要开始生成将保存或发布的脚本，请单击 **“下一步”** 。  
   
  **检查所做选择** - 显示您在向导的每一页中所做的选择。 展开某个节点可看到在相应页中选择的选项。  
   
-###  <a name="SavePubScripts"></a> “保存或发布脚本”页  
+###  <a name="save-or-publish-scripts-page"></a><a name="SavePubScripts"></a> “保存或发布脚本”页  
  使用此页可以在向导出现时监视其进度。  
   
  **详细信息** - 查看 **“操作”** 列可以看到向导的进度。 在生成脚本后，向导将根据您的选择将脚本保存到某一文件或者使用它们发布到某一 Web 服务。 在上述各步骤完成后，单击 **“结果”** 列中的值可以看到相应步骤的结果。  

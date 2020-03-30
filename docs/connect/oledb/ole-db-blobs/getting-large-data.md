@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936538"
 ---
 # <a name="getting-large-data"></a>获取大型数据
@@ -27,7 +27,7 @@ ms.locfileid: "67936538"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  一般而言，使用者应将创建适用于 SQL Server 的 OLE DB 驱动程序存储对象的代码与处理未通过 ISequentialStream 接口指针引用的数据的其他代码分开。  
+  一般而言，使用者应将创建适用于 SQL Server 的 OLE DB 驱动程序存储对象的代码与处理未通过 ISequentialStream 接口指针引用的数据的其他代码分开  。  
   
  本文涉及可用于以下函数的功能：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67936538"
   
 -   ICommand::Execute  
   
- DBPROP_ACCESSORDER 属性（位于行集属性组中）设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 时，使用者在对 GetNextRows 方法的调用中应只提取单行数据。 这是因为 BLOB 数据没有缓冲。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据。  
+ DBPROP_ACCESSORDER 属性（位于行集属性组中）设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 时，使用者在对 GetNextRows 方法的调用中应只提取单行数据  。 这是因为 BLOB 数据没有缓冲。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据  。  
   
  OLE DB Driver for SQL Server 不会从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中检索大型数据，除非使用者请求检索。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
   

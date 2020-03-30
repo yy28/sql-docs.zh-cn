@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253861"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
@@ -28,13 +28,13 @@ ms.locfileid: "75253861"
 ## <a name="before-you-begin"></a>开始之前  
  选择最能满足您的需求的机制。  
   
-###  <a name="GenPubScriptWiz"></a> 生成和发布脚本向导  
+###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> 生成和发布脚本向导  
  使用 **“生成和发布脚本向导”** 可为多个对象创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 此向导为数据库中的所有对象或所选对象子集生成脚本。 该向导具有许多用于您的脚本的选项，例如是否包括权限、排序规则和约束等。 有关使用向导的说明，请参阅 [Generate and Publish Scripts Wizard](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
   
-###  <a name="OEScriptAsMenu"></a> 对象资源管理器“编写脚本为”菜单  
+###  <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> 对象资源管理器“编写脚本为”菜单  
  可以使用对象资源管理器“编写脚本为”菜单编写单个对象的脚本、编写多个对象的脚本或为单个对象编写多条脚本语句  。 您可以选择多种脚本类型之一；例如，创建、更改或删除对象。 您可以将脚本保存到查询编辑器窗口、文件或剪贴板。 脚本以 Unicode 格式创建。  
   
-##  <a name="ScriptSingleObject"></a> 生成单个对象的脚本  
+##  <a name="to-generate-a-script-of-a-single-object"></a><a name="ScriptSingleObject"></a> 生成单个对象的脚本  
  **编写单个对象的脚本**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  

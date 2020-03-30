@@ -16,16 +16,16 @@ ms.assetid: 6f341d0b-265a-415e-abe5-8f408fedbb21
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b60d2f35e1149f7f809f486f5a64e8bb99f45a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952687"
 ---
 # <a name="getconnection-method-sqlserverstatement"></a>getConnection 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索生成此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象。  
+  检索生成此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象。  
   
 ## <a name="syntax"></a>语法  
   

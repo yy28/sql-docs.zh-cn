@@ -16,10 +16,10 @@ ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3764ff5b9308b4b370dda14e98787513c28458c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983374"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>getEncrypt 方法 (SQLServerDataSource)
@@ -40,7 +40,7 @@ public boolean getEncypt()
 ## <a name="remarks"></a>备注  
  如果 encrypt 属性设置为**true**，则在服务器已安装有证书的情况下，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对在客户端与服务器之间发送的所有数据使用 SSL 加密。  
   
- 如果未指定 encrypt 属性或此属性设置为“false”，驱动程序将不会强制 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持 SSL 加密  。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例未配置为强制使用 SSL 加密，则将在不进行任何加密的情况下建立连接。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例已配置为强制使用 SSL 加密，当在已正确配置的 Java 虚拟机 (JVM) 上运行时，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将自动启用 SSL 加密，否则连接将终止并且驱动程序将报错。 如果未设置加密属性，[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md) 方法则将返回默认值“false”  。  
+ 如果未指定 encrypt 属性或此属性设置为“false”，驱动程序将不会强制  **支持 SSL 加密**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例未配置为强制使用 SSL 加密，则将在不进行任何加密的情况下建立连接。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例已配置为强制使用 SSL 加密，当在已正确配置的 Java 虚拟机 (JVM) 上运行时，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将自动启用 SSL 加密，否则连接将终止并且驱动程序将报错。 如果未设置加密属性，[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md) 方法则将返回默认值“false”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: c9ac64de75c79f3a614a8448b47e48af00b967b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75238915"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器和客户端服务帐户
@@ -27,17 +27,17 @@ ms.locfileid: "75238915"
   
 1.  在安装有 Distributed Replay 服务的计算机上，在命令提示符下键入 **dcomcnfg**。  
   
-2.  双击“服务”，向下滚动并右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<服务名称>”，然后单击“开始”或“停止”     。  
+2.  双击“服务”，向下滚动并右键单击“**Distributed Replay**服务名称>”，然后单击“开始”或“停止” **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<**   。  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>修改 Distributed Replay 控制器服务  
   
 1.  在控制器计算机上，停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器服务。  
   
-2.  在“服务”  下，右键单击  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播控制器”，然后选择“属性”  。  
+2.  在“服务”  下，右键单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 分布式重播控制器”，然后选择“属性”  。  
   
 3.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器属性”** 窗口中的 **“登录”** 选项卡上，选择 **“本帐户”** ，键入或单击 **“浏览”** 以输入新的登录帐户，然后单击 **“确定”** 。  
   
-     **重要说明**：配置 Distributed Replay 控制器时，可以指定一个或多个用于运行 Distributed Replay 客户端服务的用户帐户。 下面是支持的帐户的列表：  
+     **重要**：在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个帐户。 下面是支持的帐户的列表：  
   
     -   域用户帐户  
   

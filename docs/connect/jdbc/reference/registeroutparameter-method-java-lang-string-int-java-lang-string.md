@@ -16,10 +16,10 @@ ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18c7dad22a4f5314a0bc920c650bcdf0ecd32d52
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975921"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-javalangstring"></a>registerOutParameter 方法 (java.lang.String, int, java.lang.String)
@@ -39,15 +39,15 @@ public void registerOutParameter(java.lang.String s,
 #### <a name="parameters"></a>parameters  
  *s*  
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *n*  
   
  在 java.sql.Types 中定义的 JDBC 类型代码。  
   
- s1  
+ s1   
   
- 一个包含完全限定的 SQL 类型名称的字符串。  
+ 一个包含完全限定的 SQL 类型名称的字符串  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 0fc4e3bd7565d4227da1e2d29853ff65ed2b7ca5
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866400"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>用于 SQL Server 的 Microsoft ADO.NET
@@ -27,8 +27,8 @@ ADO.NET 是用于 .NET 语言的核心数据访问技术。 使用 Microsoft.Dat
 ## <a name="getting-started"></a>入门  
 * [步骤 1：配置用于 ADO.NET 开发的开发环境](step-1-configure-development-environment-ado-net-development.md)  
 * [步骤 2：创建用于 ADO.NET 开发的 SQL 数据库](step-2-create-sql-database-ado-net-development.md)  
-* [步骤 3：使用 ADO.NET 连接到 SQL 的概念证明](step-3-connect-sql-ado-net.md)  
-* [步骤 4：使用 ADO.NET 弹性连接到 SQL](step-4-connect-resiliently-sql-ado-net.md)  
+* [步骤 3：使用 ADO.NET 连接到 SQL 的概念验证](step-3-connect-sql-ado-net.md)  
+* [步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接](step-4-connect-resiliently-sql-ado-net.md)  
   
 ## <a name="documentation"></a>文档  
 * [ADO.NET 概述](https://msdn.microsoft.com/library/e80y5yhx.aspx)

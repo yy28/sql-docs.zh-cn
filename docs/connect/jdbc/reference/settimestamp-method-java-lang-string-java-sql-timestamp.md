@@ -16,10 +16,10 @@ ms.assetid: dc45b126-3196-47ff-956b-cbc897980ff8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc7ee76a87022f5ed2194027971e02f3895e8b36
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972370"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp"></a>setTimestamp 方法 (java.lang.String, java.sql.Timestamp)
@@ -36,9 +36,9 @@ public void setTimestamp(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>parameters  
- sCol  
+ sCol   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *t*  
   

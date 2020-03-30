@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041225"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
@@ -34,7 +34,7 @@ ms.locfileid: "63041225"
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Chart"></a>1.使用图表向导创建饼图  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1.使用图表向导创建饼图  
 本部分将介绍如何使用“图表向导”创建嵌入数据集、选择共享数据源并创建饼图。  
 
   
@@ -77,7 +77,7 @@ ms.locfileid: "63041225"
   
 9. 单击“下一步”。   
   
-## <a name="ChartType"></a>2.选择图表类型  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2.选择图表类型  
 可以从各种预定义的图表类型中进行选择。  
 
   
@@ -103,7 +103,7 @@ ms.locfileid: "63041225"
 
 ![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3.在每个切片中显示百分比  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3.在每个切片中显示百分比  
 在饼图的每个切片上，可以显示此切片占整个饼图的百分比。  
 
   
@@ -130,7 +130,7 @@ ms.locfileid: "63041225"
 
 ![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4.将多个小型切片合并为一个切片  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4.将多个小型切片合并为一个切片  
 在饼图所包含的切片中，有三个切片非常小。 可以将多个小切片合并为一个表示所有三个小切片的大型“其他”切片。  
 
 1.  切换到报表设计视图。  
@@ -155,7 +155,7 @@ ms.locfileid: "63041225"
 
 ![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5.从顶部开始绘制饼图值 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5.从顶部开始绘制饼图值 
 
 默认情况下，在饼图中，数据集中的第一个值从与饼顶部成 90 度的位置开始绘制。 可以在前几部分的饼图中看到。
 
@@ -173,7 +173,7 @@ ms.locfileid: "63041225"
 
 ![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6.添加报表标题  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6.添加报表标题  
   
 由于饼图是报表中的唯一可视化效果，因此图表无需具有标题。 需要报表标题。
   
@@ -197,7 +197,7 @@ ms.locfileid: "63041225"
   
 6.  单击 **“运行”** 以预览报表。  
   
-## <a name="Save"></a>7.保存报表  
+## <a name="7-save-the-report"></a><a name="Save"></a>7.保存报表  
   
 ### <a name="to-save-the-report"></a>保存报表  
   

@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7915b9fb74f05057e05eef022d7f9b0e4ccdd21f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989256"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>从 SQL Server 2005 Native Client 更新应用程序
@@ -24,7 +24,7 @@ ms.locfileid: "67989256"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本主题介绍自 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以来在 OLE DB Driver for SQL Server 中的重大更改。  
+  本主题介绍自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client 以来在 OLE DB Driver for SQL Server 中的重大更改。  
 
  从 Microsoft 数据访问组件 (MDAC) 升级到适用于 SQL Server 的 OLE DB 驱动程序时，也会看到一些行为差异。 有关详细信息，请参阅[将应用程序从 MDAC 更新到 OLE DB Driver for SQL Server](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。  
 

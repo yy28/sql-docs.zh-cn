@@ -17,15 +17,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253624"
 ---
 # <a name="search-text-with-wildcards"></a>使用通配符搜索文本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  以下表达式可以替换 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“查找和替换”对话框的“查找内容”字段中的字符或数字   。  
+  以下表达式可以替换 **“查找和替换”对话框的“查找内容”字段中的字符或数字**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  。  
   
 #### <a name="to-search-using-wildcards"></a>使用通配符进行搜索  
   

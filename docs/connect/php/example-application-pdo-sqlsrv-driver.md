@@ -11,10 +11,10 @@ ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8414497fed891e153399febf84151c82d915d77a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993588"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>示例应用程序（PDO_SQLSRV 驱动程序）
@@ -32,7 +32,7 @@ AdventureWorks 产品评论示例应用程序是使用 [!INCLUDE[ssDriverPHP](..
 ## <a name="requirements"></a>要求  
 若要运行 AdventureWorks 产品评论示例应用程序，你的计算机必须符合以下情况：  
   
--   你的系统满足 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的要求。 有关详细信息，请参阅 [Microsoft Drivers for PHP for SQL Server 的系统要求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
+-   你的系统满足 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的要求。 有关详细信息，请参阅 [Microsoft Drivers for PHP for SQL Server 系统要求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
  -   adventureworks_demo.php 和 photo.php 文件放置在 Web 服务器的根目录中。 文件必须包含本文档后面列出的代码。  
 -   已在本地计算机上安装了已连接 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库的 SQL Server 2005 或 SQL Server 2008。  
 -   安装了 Web 浏览器。  

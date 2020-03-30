@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b87f54bcfc50249cef1810a728eaa796e7ee3b38
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306798"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
+  使用“MSSQLSERVER 属性”  对话框上的“服务”  选项卡查看或指定下列选项。  
   
 ## <a name="options"></a>选项  
  **二进制路径**  
@@ -47,13 +47,13 @@ ms.locfileid: "75306798"
  **启动模式**  
  对此服务设置以下选项：  
   
--   手动：当计算机启动时，此服务不会自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
+-   手动：计算机启动时，此服务不自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
   
--   自动：此服务尝试在计算机启动时启动。  
+-   自动：计算机启动时，此服务将尝试启动。  
   
--   禁用：此服务无法启动。  
+-   已禁用：此服务无法启动。  
   
  **State**  
- 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
   
   

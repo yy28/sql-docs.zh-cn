@@ -8,10 +8,10 @@ ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244404"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
@@ -40,7 +40,7 @@ ms.locfileid: "75244404"
 |6|将 **Hostname** 和 **UrlRoot** 配置为使用 NLB 群集的虚拟服务器 IP。|本主题中的[如何配置 Hostname 和 UrlRoot](#SpecifyingVirtualServerName) 。|  
 |7|验证能否通过指定的主机名来访问服务器。|本主题中的[验证报表服务器访问权限](#Verify) 。|  
   
-## <a name="ViewState"></a> 如何配置视图状态验证
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> 如何配置视图状态验证
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 若要在 NLB 群集上运行扩展部署，必须配置视图状态验证，以便用户可以查看交互式 HTML 报表。  必须对报表服务器 Web 服务执行该操作。
@@ -92,7 +92,7 @@ ms.locfileid: "75244404"
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> 如何配置 Hostname 和 UrlRoot
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> 如何配置 Hostname 和 UrlRoot
 
  若要在 NLB 群集上配置报表服务器扩展部署，必须定义单个虚拟服务器名称，以提供服务器群集的单访问点。 然后向您的环境中的域名服务器 (DNS) 注册此虚拟服务器名称。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "75244404"
   
 6. 对于扩展部署中的每个报表服务器，在其相应的 RSReportServer.config 文件中重复上述步骤。  
   
-## <a name="Verify"></a> 验证报表服务器访问权限
+## <a name="verify-report-server-access"></a><a name="Verify"></a> 验证报表服务器访问权限
 
  验证可通过虚拟服务器名称（例如，`https://MyVirtualServerName/reportserver` 和 `https://MyVirtualServerName/reports`）访问横向扩展部署。  
   

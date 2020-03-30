@@ -16,10 +16,10 @@ ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a87f82805cad4ce781345ace8b97f4539aa675ad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983431"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>getDriverName 方法 (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public java.lang.String getDriverName()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含 JDBC 驱动程序名称的 String。  
+ 包含 JDBC 驱动程序名称的 String  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

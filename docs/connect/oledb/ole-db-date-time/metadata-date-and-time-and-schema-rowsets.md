@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 19524bbd935335cc0568dc499f95a794580df476
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015688"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>元数据 - 日期和时间与架构行集
@@ -32,11 +32,11 @@ ms.locfileid: "68015688"
 |列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|Clear|0|  
-|time|DBTYPE_DBTIME2|设置|0..7|  
+|time|DBTYPE_DBTIME2|Set|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
 |datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|设置|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|设置|0..7|  
+|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
  在 COLUMN_FLAGS 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，并且以下标记始终为 False：  
   

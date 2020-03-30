@@ -11,10 +11,10 @@ ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 800f87c82987396743ec4c0c278444c4ba61d49b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971407"
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource 成员
@@ -42,7 +42,7 @@ ms.locfileid: "67971407"
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|返回应用程序名称。|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|尝试与此 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 对象表示的数据源建立连接。|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|返回数据库名称。|  
-|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|返回 disableStatementPooling  连接属性的值。 此设置控制是否为此连接启用语句池。|  
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|返回 disableStatementPooling  连接属性的值。 此设置控制是否为此连接启用了语句池。|  
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|返回 enablePrepareOnFirstPreparedStatementCall  连接属性的值。|  
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|返回一个布尔值，此值指示是否启用了 encrypt 属性  。|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|返回数据源的说明。|  
@@ -100,7 +100,7 @@ ms.locfileid: "67971407"
 |[setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)|指定如何将 java.sql.Time 值发送到服务器。|  
 |[setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)|设置正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机的名称。|  
 |[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|设置 serverPreparedStatementDiscardThreshold  连接属性的新值。|  
-|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverdatasource.md)|设置此连接的准备的语句缓存的大小。|  
+|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverdatasource.md)|设置此连接的预定义语句缓存的大小。|  
 |[setTrustManagerClass](../../../connect/jdbc/reference/settrustmanagerclass-method-sqlserverdatasource.md)|设置 TrustManagerClass 连接属性的 String 值。|  
 |[setTrustManagerConstructorArg](../../../connect/jdbc/reference/settrustmanagerconstructorarg-method-sqlserverdatasource.md)|设置 TrustManagerConstructorArg 连接属性的 String 值。|  
 |[setTrustServerCertificate](../../../connect/jdbc/reference/settrustservercertificate-method-sqlserverdatasource.md)|设置一个布尔值，此值指示是否启用了 trustServerCertificate 属性  。|  

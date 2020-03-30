@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b4ab3a1b0d6f76cd3918b20460c41d66e9616da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972767"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverdatasource"></a>setStatementPoolingCacheSize 方法 (SQLServerDataSource)
@@ -32,7 +32,7 @@ public void setStatementPoolingCacheSize(boolean statementPoolingCacheSize);
 #### <a name="parameters"></a>parameters  
  *statementPoolingCacheSize*  
   
- statementPoolingCacheSize 连接属性的新值。  
+ statementPoolingCacheSize 连接属性的新  值。  
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -12,10 +12,10 @@ ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866270"
 ---
 # <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>订阅设置和文件共享帐户（SSRS 配置管理器）
@@ -23,7 +23,7 @@ ms.locfileid: "74866270"
   
  两个工作流与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件共享订阅共存：  
   
--   使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版本中的新增功能， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，用于一个或多个订阅。 配置 “指定文件共享帐户”，然后在单独的订阅配置页中，用户选择“使用文件共享帐户” 。  
+-   使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版本中的新增功能， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，用于一个或多个订阅。 配置  “指定文件共享帐户”，然后在单独的订阅配置页中，用户选择“使用文件共享帐户”  。  
   
 -   使用目标文件共享的特定凭据配置单独的订阅。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "74866270"
 >  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>审核文件共享帐户的使用情况的 PowerShell 示例  
- 运行以下 Windows PowerShell 脚本以列出所有配置为使用“文件共享帐户”的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 将报表服务器的 `SERVERNAME` 更新为相应的值。  
+ 运行以下 Windows PowerShell 脚本以列出所有配置为使用“文件共享帐户”的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅  。 将报表服务器的 `SERVERNAME` 更新为相应的值。  
   
 ```  
 # get all file share subscriptions using the default file share account  

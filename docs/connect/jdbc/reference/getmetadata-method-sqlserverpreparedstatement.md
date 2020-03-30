@@ -16,16 +16,16 @@ ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbc0a0493498f3d216c9e1395f651d8afec70711
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981854"
 ---
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索一个 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 对象，该对象包含有关执行此 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 对象时将返回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的列信息。  
+  检索一个 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 对象，该对象包含有关执行此 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象时将返回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 对象的列信息。  
   
 ## <a name="syntax"></a>语法  
   

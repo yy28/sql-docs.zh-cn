@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988668"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
@@ -28,7 +28,7 @@ ms.locfileid: "67988668"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 公开 ISequentialStream 接口，以便支持使用者访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ntext、text、image、varchar(max)、nvarchar(max)、varbinary(max) 和作为二进制大型对象 (BLOB) 的 xml 数据类型        。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据   。  
+  OLE DB Driver for SQL Server 公开 ISequentialStream 接口，以便支持使用者访问  **ntext、text、image、varchar(max)、nvarchar(max)、varbinary(max) 和作为二进制大型对象 (BLOB) 的 xml 数据类型**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]       。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据   。  
   
  有关演示此功能的示例，请参阅[设置大型数据 (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   

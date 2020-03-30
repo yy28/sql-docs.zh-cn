@@ -16,10 +16,10 @@ ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b51cbe470169459469959448208b3aa53b18cce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976252"
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>prepareCall 方法 (java.lang.String, int, int)
@@ -39,15 +39,15 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 #### <a name="parameters"></a>parameters  
  *sql*  
   
- 包含 SQL 语句的 String。  
+ 包含 SQL 语句的 String  。  
   
- resultSetType  
+ resultSetType   
   
- 指示结果集类型的 int。  
+ 指示结果集类型的 int  。  
   
- resultSetConcurrency  
+ resultSetConcurrency   
   
- 指示结果集并发类型的 int。  
+ 指示结果集并发类型的 int  。  
   
 ## <a name="return-value"></a>返回值  
  CallableStatement 对象。  

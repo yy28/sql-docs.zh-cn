@@ -16,10 +16,10 @@ ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b57f01670b52eaa17102001411458153be481f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979240"
 ---
 # <a name="gettablename-method-sqlserverresultsetmetadata"></a>getTableName 方法 (SQLServerResultSetMetaData)
@@ -37,10 +37,10 @@ public java.lang.String getTableName(int column)
 #### <a name="parameters"></a>parameters  
  *column*  
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个包含表名称的字符串。  
+ 一个包含表名称的字符串  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

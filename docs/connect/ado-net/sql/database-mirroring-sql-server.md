@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897002"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server 中的数据库镜像
@@ -48,7 +48,7 @@ ms.locfileid: "78897002"
 >  对于数据库镜像方案，必须在连接字符串中显式指定初始目录或数据库名称。 如果客户端接收没有显式指定初始编录或数据库的连接的故障转移信息，故障转移信息不会缓存，应用程序也不会在主体服务器失败时尝试进行故障转移。 如果连接字符串有故障转移伙伴的值，但没有初始目录或数据库的值，那么 `InvalidArgumentException` 会抛出。  
   
 ## <a name="retrieving-the-current-server-name"></a>检索当前服务器名称  
-在发生故障转移时，可以使用 <xref:Microsoft.Data.SqlClient.SqlConnection> 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> 属性，检索当前连接实际连接到的服务器的名称。 下面的代码片段检索活动服务器的名称（假设连接变量引用打开的 <xref:Microsoft.Data.SqlClient.SqlConnection>）。  
+在发生故障转移时，可以使用 <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection> 属性，检索当前连接实际连接到的服务器的名称。 下面的代码片段检索活动服务器的名称（假设连接变量引用打开的 <xref:Microsoft.Data.SqlClient.SqlConnection>）。  
   
 当故障转移事件发生且连接切换到镜像服务器时，DataSource  属性会更新，以反映镜像名称。  
   

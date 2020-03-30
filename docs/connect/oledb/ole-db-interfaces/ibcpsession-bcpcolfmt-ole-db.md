@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994576"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -44,7 +44,7 @@ HRESULT BCPColFmt(
 ```  
   
 ## <a name="remarks"></a>备注  
- BCPColFmt 方法用于在 BCP 数据文件字段和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列之间创建绑定  。 它将列的长度、类型、终止符和前缀长度视为参数处理，并为各个字段设置所有这些属性。  
+ BCPColFmt 方法用于在 BCP 数据文件字段和  **列之间创建绑定**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 它将列的长度、类型、终止符和前缀长度视为参数处理，并为各个字段设置所有这些属性。  
   
  如果用户选择交互模式，则调用该方法两次；一次按照默认值（与服务器列的类型相对应）设置列格式，另一次按照在交互模式期间选择的客户端的所选列类型为每个列设置格式。  
   
@@ -92,7 +92,7 @@ HRESULT BCPColFmt(
   
  如果将 cbUserData 设置为 BCP_LENGTH_NULL，则指示数据文件字段中的所有值已经或应当设置为 NULL  。 如果将 cbUserData 设置为 BCP_LENGTH_VARIABLE，则指示系统应当确定每个字段的数据的长度  。 对于某些字段，这可能意味着将生成长度/Null 指示器，并将该指示器放在从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制的数据的前面，或者应当将该指示器放在复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据中。  
   
- 对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 字符和二进制数据类型，cbUserData可以是 BCP_LENGTH_VARIABLE、BCP_LENGTH_NULL、0 或某个正值  。 如果 cbUserData 是 BCP_LENGTH_VARIABLE，则系统使用长度指示器（如果有）或终止符序列来确定数据的长度  。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果 cbUserData 是 BCP_LENGTH_VARIABLE，而且数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 字符或二进制类型，并且长度指示器和终止符序列均未指定，则系统返回错误消息  。  
+ 对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 字符和二进制数据类型，cbUserData可以是 BCP_LENGTH_VARIABLE、BCP_LENGTH_NULL、0 或某个正值  。 如果 cbUserData 是 BCP_LENGTH_VARIABLE，则系统使用长度指示器（如果有）或终止符序列来确定数据的长度  。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果 cbUserData 是 BCP_LENGTH_VARIABLE，而且数据类型是  **字符或二进制类型，并且长度指示器和终止符序列均未指定，则系统返回错误消息**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  如果 cbUserData 为 0 或正值，则系统使用 cbUserData 作为最大数据长度   。 但是，如果除了正的 cbUserData 以外，还提供了长度指示器或终止符序列，则系统使用导致数据复制量最少的方法来确定数据长度  。  
   

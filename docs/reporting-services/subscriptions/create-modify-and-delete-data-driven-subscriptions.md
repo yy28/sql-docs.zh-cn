@@ -14,10 +14,10 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140269"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>创建、修改和删除数据驱动订阅
@@ -35,14 +35,14 @@ ms.locfileid: "67140269"
   
 -   [运行订阅](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete"></a> 管理和删除数据驱动订阅  
+##  <a name="managing-and-deleting-a-data-driven-subscription"></a><a name="bkmk_manage_and_delete"></a> 管理和删除数据驱动订阅  
  不能通过 Web 门户来停止或删除正在进行的数据驱动订阅。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅 [创建和管理本机模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
  若要删除数据驱动订阅，请选中“订阅”  页上报表旁边的复选框，然后选择“删除”  。  
   
  有关如何取消数据驱动订阅的说明，请参阅 [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
-##  <a name="bkmk_create_and_modify"></a> 创建和修改数据驱动订阅  
+##  <a name="creating-and-modifying-a-data-driven-subscription"></a><a name="bkmk_create_and_modify"></a> 创建和修改数据驱动订阅  
  若要创建数据驱动订阅，请选择一个使用存储的凭据或不使用任何凭据的报表。 在您创建数据驱动订阅时，请考虑将命名约定用于说明字段，以便可以轻松地将标准说明与数据驱动说明区分开来。  
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>创建数据驱动订阅（本机模式）  
@@ -88,14 +88,14 @@ ms.locfileid: "67140269"
   
 -   **用户要求**。 订阅的作者必须具有“管理报表”和“管理所有订阅”的权限。 有关项级任务权限的详细信息，请参阅 [任务和权限](../../reporting-services/security/tasks-and-permissions.md)。 作者还须具有访问包含订阅服务器数据的外部数据源所需的凭据。  
   
-##  <a name="bkmk_define_query"></a> 定义检索订阅信息的查询  
+##  <a name="defining-a-query-that-retrieves-subscription-information"></a><a name="bkmk_define_query"></a> 定义检索订阅信息的查询  
  数据驱动订阅必须指定一个用于检索订阅服务器数据的查询或命令。 查询应为每个订阅服务器生成一行。 如果使用的是电子邮件传递扩展插件，则查询应为每个订阅服务器返回一个有效的电子邮件别名。 所执行的传递的数量取决于查询所返回的行数。 如果行集中包含 10,000 行，则该订阅将传递 10,000 个报表。  
   
  如果执行查询很耗时，则可以增加超时值以允许进行其他处理。  
   
  必须在此步骤中对查询进行验证才能继续。 验证操作并不处理查询，但它的确会返回行集中所有列的列表，以便可以在后续选择中引用这些列。 如果查询未能通过验证，则将无法继续操作。 如果查询语法不正确或者如果与数据源的连接无效，则查询将无法通过验证。 可使用 **“上一步”** 按钮更正数据源。  
   
-##  <a name="bkmk_run_subscription"></a> 运行订阅  
+##  <a name="running-the-subscription"></a><a name="bkmk_run_subscription"></a> 运行订阅  
  必须指定处理订阅的条件。 可以指定一个计划，也可以触发该订阅以便与对报表执行快照的更新保持一致。 处理数据驱动订阅的方式与处理标准订阅的方式相同。  
   
 ## <a name="see-also"></a>另请参阅  
