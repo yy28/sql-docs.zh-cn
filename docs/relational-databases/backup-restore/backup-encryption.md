@@ -11,17 +11,17 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19a8597136f073d609c7a9cc77ce8e2b73c72004
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71688293"
 ---
 # <a name="backup-encryption"></a>备份加密
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题概述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的加密选项。 其中详细介绍备份期间加密的用法、优点和推荐做法。  
 
-## <a name="Overview"></a> 概述  
+## <a name="overview"></a><a name="Overview"></a> 概述  
  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]开始，SQL Server 可在创建备份时加密数据。 通过在创建备份时指定加密算法和加密程序（证书或非对称密钥），可创建加密的备份文件。 所有存储目标：支持本地和 Windows Azure 存储。 此外，可为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 操作配置加密选项，这是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中引入的一项新功能。  
   
  若要在备份期间加密，必须指定加密算法以及用于保护加密密钥的加密程序。 支持以下加密选项：  
@@ -37,7 +37,7 @@ ms.locfileid: "71688293"
   
  如果从经过 TDE 加密的数据库还原备份，则要还原到的实例上应有 TDE 证书。  
   
-##  <a name="Benefits"></a> 优势  
+##  <a name="benefits"></a><a name="Benefits"></a> 优势  
   
 1. 加密数据库备份有助于保护数据：SQL Server 提供在创建备份的同时加密备份数据的选项。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71688293"
   
 1. 可将加密密钥与扩展密钥管理 (EKM) 提供程序集成。  
  
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  以下是有关加密备份的先决条件：  
   
 1. **创建 master 数据库的数据库主密钥：** 数据库主密钥是一个对称密钥，用于保护数据库中证书和非对称密钥的私钥。 有关详细信息，请参阅 [SQL Server 和数据库加密密钥（数据库引擎）](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
@@ -59,7 +59,7 @@ ms.locfileid: "71688293"
     > [!IMPORTANT]  
     >  仅支持位于扩展密钥管理 (EKM) 中的非对称密钥。  
   
-##  <a name="Restrictions"></a> 限制  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 限制  
  以下限制适用于加密选项：  
   
 - 如果使用非对称密钥加密备份数据，则仅支持位于 EKM 提供程序中的非对称密钥。  
@@ -70,14 +70,14 @@ ms.locfileid: "71688293"
   
 - 加密的备份不支持追加到现有的备份集选项。  
 
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
 
 若要加密备份或从加密备份中还原，请对用于加密数据库备份的证书或非对称密钥使用 VIEW DEFINITION 权限  。  
   
 > [!NOTE]  
 > 不需要访问 TDE 证书即可备份或还原受 TDE 保护的数据库。  
   
-## <a name="Methods"></a> 备份加密方法  
+## <a name="backup-encryption-methods"></a><a name="Methods"></a> 备份加密方法  
  以下各节简要介绍在备份期间加密数据的步骤。 有关使用 Transact-SQL 加密备份的不同步骤的完整演练，请参阅 [创建加密的备份](../../relational-databases/backup-restore/create-an-encrypted-backup.md)。  
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
@@ -115,7 +115,7 @@ $encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorTy
 Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDatabase>.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
-##  <a name="RecommendedPractices"></a> 推荐做法  
+##  <a name="recommended-practices"></a><a name="RecommendedPractices"></a> 推荐做法  
  将加密证书和密钥备份到安装实例的本地计算机以外的位置。 若要考虑灾难恢复情况，请考虑将证书和密钥存储到站点外位置。 没有用于加密备份的证书即无法还原加密的备份。  
   
  若要还原加密的备份，要还原到的实例上应有进行备份时使用的原始证书及匹配的指纹。 因此，不应在到期时续订或以任何方式更改证书。 续订可导致更改证书并触发指纹更改，从而使证书对于备份文件变为无效。 执行还原的帐户应对备份期间用于加密的证书或非对称密钥具有 VIEW DEFINITION 权限。  
@@ -124,7 +124,7 @@ Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDa
   
  如果数据库启用了 TDE，则选择其他证书或非对称密钥用于加密数据库和备份以提高安全性。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 |主题/任务|说明|  
 |-----------------|-----------------|  

@@ -12,10 +12,10 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285222"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Create Table SQL 语句（SQL Server 导入和导出向导）
@@ -26,7 +26,7 @@ ms.locfileid: "71285222"
 在“列映射”  对话框中，如果选择“创建目标表”  ，然后选择“编辑 SQL”  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“Create Table SQL 语句”  对话框。 在此页上，可查看并根据需要自定义 **CREATE TABLE** 命令，向导会运行该命令以创建新的目标表。
   
 > [!NOTE]
-> 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE 语句的信息，而不是有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的“Create Table SQL 语句”  对话框的信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 
+> 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE 语句的信息，而不是有关  **导入和导出向导的“Create Table SQL 语句”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对话框的信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 
   
 ## <a name="screen-shot-of-the-create-table-sql-statement-page"></a>“Create Table SQL 语句”页面的屏幕截图  
  以下屏幕截图显示向导的“Create Table SQL 语句”  对话框。

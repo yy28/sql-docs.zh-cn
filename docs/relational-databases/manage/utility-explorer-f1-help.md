@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024482"
 ---
 # <a name="utility-explorer-f1-help"></a>实用工具资源管理器的 F1 帮助
@@ -173,9 +173,9 @@ ms.locfileid: "68024482"
   
 -   兼容级别：（例如 Version100）  
   
--   已启用加密：（True 或 False）  
+-   启用加密：（True 或 False）  
   
--   恢复模式：（简单恢复模式、完整恢复模式和大容量日志恢复模式）  
+-   恢复模式：（简单、完全或大容量日志记录）  
   
 -   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
@@ -250,9 +250,9 @@ ms.locfileid: "68024482"
   
 -   兼容级别：（例如 Version100）  
   
--   已启用加密：（True 或 False）  
+-   启用加密：（True 或 False）  
   
--   恢复模式：（简单恢复模式、完整恢复模式和大容量日志恢复模式）  
+-   恢复模式：（简单、完全或大容量日志记录）  
   
 -   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。
 

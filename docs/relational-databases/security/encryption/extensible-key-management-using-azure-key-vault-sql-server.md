@@ -18,10 +18,10 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558030"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "75558030"
   
  本主题介绍了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 有关其他信息，你可以参阅 [使用 Azure 密钥保管库的可扩展密钥管理的设置步骤](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)、 [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)和 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)。  
   
-##  <a name="Uses"></a> 什么是可扩展密钥管理 (EKM)，为什么要使用它？  
+##  <a name="what-is-extensible-key-management-ekm-and-why-use-it"></a><a name="Uses"></a> 什么是可扩展密钥管理 (EKM)，为什么要使用它？  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了帮助保护敏感数据的几种加密类型，包括[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)、[列级加密](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) 和[备份加密](../../../relational-databases/backup-restore/backup-encryption.md)。 在传统的密钥层次结构中，上述三种加密类型均使用对称数据加密密钥 (DEK) 对数据进行加密。 通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的密钥层次结构对对称数据加密密钥进行加密而使其获得进一步的保护。 可替代这种模型的是 EKM 提供程序模型。 使用 EKM 提供程序体系结构， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的外部加密提供程序中的非对称密钥来保护数据加密密钥。 该模型额外添加了一个安全层，将密钥和数据分开管理。  
    
  下图对传统服务管理密钥层次结构与 Azure 密钥保管库系统进行比较。  

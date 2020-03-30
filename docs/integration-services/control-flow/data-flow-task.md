@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298349"
 ---
 # <a name="data-flow-task"></a>数据流任务
@@ -90,7 +90,7 @@ ms.locfileid: "71298349"
   
  许多日志事件都写入多个项，并且多个日志条目的消息都包含复杂的数据。 为了便于理解和交流复杂消息的内容，可以对消息文本进行分析。 根据日志的位置，可以使用 Transact-SQL 语句或脚本组件用列或其他更有用的格式来分离复杂文本。  
   
- 例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  :1185:OLE DB 源输出:1180:排序:1181:对输入进行排序:76”，已解析为列。 该消息由 **OnPipelineRowsSent** 事件在将行从 OLE DB 源发送到排序转换时写入。  
+ 例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  : 1185 : OLE DB 源输出 : 1180 : 排序 : 1181 : 对输入进行排序 : 76”，并解析为列。 该消息由 **OnPipelineRowsSent** 事件在将行从 OLE DB 源发送到排序转换时写入。  
   
 |列|说明|值|  
 |------------|-----------------|-----------|  

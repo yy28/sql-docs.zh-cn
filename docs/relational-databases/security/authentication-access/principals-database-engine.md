@@ -30,16 +30,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68344597"
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  “主体”  是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体的定义范围：Windows、服务器、数据库；以及主体是不可分割还是集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。 本主题适用于所有版本的 SQL Server，但在 SQL 数据库或 SQL 数据仓库的服务器级别主体上有一些限制。 
+  “主体”  是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体定义的范围（Windows、服务器或数据库）以及主体是否不可分或是一个集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。 本主题适用于所有版本的 SQL Server，但在 SQL 数据库或 SQL 数据仓库的服务器级别主体上有一些限制。 
   
 ## <a name="sql-server-level-principals"></a>SQL Server 级的主体  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68344597"
  管理员不可更改这些主体帐户的密码，因为这些密码基于颁发给 Microsoft 的证书。
   
 ## <a name="the-guest-user"></a>guest 用户  
- 每个数据库包括一个 `guest`的行为的更改。 授予 `guest` 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 `guest` 用户无法删除，但可通过撤消其 CONNECT 权限禁用。 可以通过在 `master` 或 `tempdb` 以外的任何数据库中执行 `REVOKE CONNECT FROM GUEST;` 来撤消 CONNECT 权限。  
+ 每个数据库包括一个 `guest`的行为的更改。 授予 `guest` 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 `guest` 用户无法删除，但可通过撤消其 CONNECT 权限禁用。 可以通过在 `REVOKE CONNECT FROM GUEST;` 或 `master` 以外的任何数据库中执行 `tempdb` 来撤消 CONNECT 权限。  
   
   
 ## <a name="related-tasks"></a>Related Tasks  

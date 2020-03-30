@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291471"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清除转换
@@ -74,13 +74,13 @@ ms.locfileid: "71291471"
   
 -   [设置“DQS 清除连接管理器”对话框中的选项](#manager)  
   
-###  <a name="open"></a> 打开 DQS 清除转换编辑器  
+###  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a> 打开 DQS 清除转换编辑器  
   
 1.  在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，将“DQS 清除转换”添加到 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]包。  
   
 2.  右键单击该组件，然后单击 **“编辑”** 。  
   
-###  <a name="connection"></a> 设置“连接管理器”选项卡上的选项  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **数据质量连接管理器**  
  从列表中选择现有 DQS 连接管理器，或单击“新建”  创建一个新连接。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71291471"
   
 -   **“重定向行”** ，指示输入数据未插入 Data Quality Services 数据库中并且重定向到错误输出。  
   
-###  <a name="mapping"></a> 设置“映射”选项卡上的选项  
+###  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> 设置“映射”选项卡上的选项  
  有关如何将列映射到复合域的信息，请参阅 [Map Columns to Composite Domains](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md)。  
   
  **可用输入列**  
@@ -134,7 +134,7 @@ ms.locfileid: "71291471"
  **状态别名**  
  列出包含已更正数据的状态信息的列。 在该字段中单击可修改列名。  
   
-###  <a name="advanced"></a> 设置“高级”选项卡上的选项  
+###  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a> 设置“高级”选项卡上的选项  
  **标准化输出**  
  指示是否根据为域定义的输出格式以标准化格式输出数据。 有关标准化格式的详细信息，请参阅 [数据清理](../../../data-quality-services/data-cleansing.md)。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "71291471"
  **追加的数据架构**  
  指示是否输出数据架构。 有关详细信息，请参阅 [将域或复合域附加到引用数据](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
-###  <a name="manager"></a> 设置“DQS 清除连接管理器”对话框中的选项  
+###  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a> 设置“DQS 清除连接管理器”对话框中的选项  
  **服务器名称**  
  选择或键入要连接的 DQS 服务器的名称。 有关该服务器的详细信息，请参阅 [DQS Administration](../../../data-quality-services/dqs-administration.md)。  
   

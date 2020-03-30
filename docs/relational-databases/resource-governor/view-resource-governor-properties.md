@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903912"
 ---
 # <a name="view-resource-governor-properties"></a>查看资源调控器属性
@@ -25,7 +25,7 @@ ms.locfileid: "72903912"
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的“资源调控器属性”页创建或配置资源调控器实体（如资源池和工作负荷组）。  
   
- ##  <a name="BeforeYouBegin"></a> 相关主题 
+ ##  <a name="related-topics"></a><a name="BeforeYouBegin"></a> 相关主题 
  除了查看资源调控器实体的属性外，还可以使用 **“资源调控器属性”** 页执行多个配置任务。 有关详细信息，请参阅以下主题：  
   
 -   [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)  
@@ -48,10 +48,10 @@ ms.locfileid: "72903912"
   
  可以通过查询 [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 动态管理视图来获取 is_configuration_pending 的当前状态以确定是否存在配置挂起。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  查看资源调控器属性需要 VIEW SERVER STATER 权限。 资源调控器配置任务需要 CONTROL SERVER 权限。  
   
-##  <a name="ViewRGProp"></a> 资源调控器属性页  
+##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> 资源调控器属性页  
  **若要查看资源调控器属性，请使用资源调控器属性页 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
@@ -62,7 +62,7 @@ ms.locfileid: "72903912"
   
 4.  若要保存任何更改，请单击 **“确定”** 。  
 
-##  <a name="RGProp"></a> Resource Governor properties  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **分类器函数名称**  
  通过从列表中选择来指定分类器函数。  
   

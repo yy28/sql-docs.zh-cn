@@ -10,10 +10,10 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296206"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导中的步骤
@@ -43,7 +43,7 @@ ms.locfileid: "71296206"
 > [!TIP]
 > 从向导的任何页面或对话框中点击 F1 键，可查看当前页的相关文档。
 
-## <a name="related"></a>相关任务和内容  
+## <a name="related-tasks-and-content"></a><a name="related"></a>相关任务和内容  
 以下是一些其他的基本任务。
 -   **查看有关向导工作原理的简短示例。**
 

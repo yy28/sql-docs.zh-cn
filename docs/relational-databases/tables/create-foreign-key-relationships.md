@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123749"
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
@@ -26,7 +26,7 @@ ms.locfileid: "68123749"
 
 本文介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建外键关系。 当希望将一个表的行与另一个表的行相关联时，您可在这两个表之间创建关系。
 
-## <a name="BeforeYouBegin"></a> 开始之前！ 限制和局限
+## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> 开始之前！ 限制和局限
 
 - 外键约束并不仅仅可以与另一表的主键约束相链接，它还可以定义为引用另一个表中 UNIQUE 约束的列。
 - 如果在 FOREIGN KEY 约束的列中输入非 NULL 值，则此值必须在被引用列中存在；否则，将返回违反外键约束的错误信息。 若要确保验证了组合外键约束的所有值，请对所有参与列指定 NOT NULL。

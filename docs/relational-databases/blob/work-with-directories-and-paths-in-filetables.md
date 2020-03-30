@@ -13,17 +13,17 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908702"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>在 FileTable 中使用目录和路径
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   说明 FileTable 中用于存储文件的目录结构。  
   
-##  <a name="HowToDirectories"></a> 如何：在 FileTable 中使用目录和路径  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 如何在 FileTable 中使用目录和路径  
  您可以使用以下 3 个函数以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 FileTable 目录：  
   
 |为得到这一结果|使用此函数|  
@@ -32,7 +32,7 @@ ms.locfileid: "72908702"
 |获取 FileTable 中文件或目录的绝对或相对 UNC 路径。|[GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |通过提供路径，获取 FileTable 中指定文件或目录的路径定位器 ID 值。|[GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="BestPracticeRelativePaths"></a> 如何：使用相对路径编写可移植代码  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> 如何使用相对路径编写可移植代码  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 可通过使用 [FileTableRootPath (Transact-SQL)](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 和 [GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)函数组合在运行时获取文件的完整路径，如下例所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
 ```sql  
@@ -49,17 +49,17 @@ PRINT @fullpath;
 GO  
 ```  
   
-##  <a name="restrictions"></a> 重要限制  
+##  <a name="important-restrictions"></a><a name="restrictions"></a> 重要限制  
   
-###  <a name="nesting"></a> 嵌套级别  
+###  <a name="nesting-level"></a><a name="nesting"></a> 嵌套级别  
   
 > **重要说明!!** 您不能在 FileTable 目录中存储超过 15 个级别的子目录。 在您存储 15 个级别的子目录时，最下面的一级不能包含文件，因为这些文件将代表另外一个级别。  
   
-###  <a name="fqnlength"></a> 完整路径名的长度  
+###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a> 完整路径名的长度  
   
 > **重要说明!!** NTFS 文件系统支持远远超过 Windows 外壳程序和大多数 Windows API 的 260 个字符限制的路径名。 因此，使用 Transact-SQL 在 FileTable 的文件层次结构中创建的文件有可能无法使用 Windows 资源管理器或很多其他 Windows 应用程序查看或打开，原因是这些文件的完整路径名称超过了 260 个字符。 但是，您可使用 Transact-SQL 继续访问这些文件。  
   
-##  <a name="fullpath"></a> FileTable 中存储的项的完整路径  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a> FileTable 中存储的项的完整路径  
  FileTable 中存储的文件或目录的完整路径用以下元素开头：  
   
 1.  为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例级别进行 FILESTREAM 文件 I/O 访问启用的共享区。  
@@ -76,7 +76,7 @@ GO
   
  请务必记住，在此实例级别 FILESTREAM 共享区下创建的目录层次结构是虚拟目录层次结构。 该层次结构存储于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，并且在物理上不在 NTFS 文件系统中表示。 访问 FILESTREAM 共享区之下和其包含的 FileTable 中的文件和目录的所有操作都将被文件系统中嵌入的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件拦截和处理。  
   
-##  <a name="roots"></a> 实例级、数据库级和 FileTable 级根目录的语义  
+##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a> 实例级、数据库级和 FileTable 级根目录的语义  
  此目录层次结构遵循下面的语义：  
   
 -   实例级别 FILESTREAM 共享区由管理员配置并且存储为服务器的属性。 您可以通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，重命名该存储区。 在重新启动服务器之前，重命名操作将不会生效。  
@@ -89,7 +89,7 @@ GO
   
 -   不能使用独占式文件句柄打开这些根目录。  
   
-##  <a name="is_directory"></a> FileTable 架构中的 is_directory 列  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> FileTable 架构中的 is_directory 列  
  下表说明 **is_directory** 列与包含 FileTable 中 FILESTREAM 数据的 **file_stream** 列之间的相互影响：  
   
 ||||  
@@ -100,7 +100,7 @@ GO
 |TRUE|Null|该项表示一个目录。|  
 |TRUE|\<value>|这是将被系统定义的约束捕获的无效组合。|  
   
-##  <a name="alwayson"></a> 将虚拟网络名称 (VNN) 用于 AlwaysOn 可用性组  
+##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> 将虚拟网络名称 (VNN) 用于 AlwaysOn 可用性组  
  在包含 FILESTREAM 或 FileTable 数据的数据库属于某一 AlwaysOn 可用性组时：  
   
 -   FILESTREAM 和 FileTable 函数接受或返回虚拟网络名称 (VNN)，而非计算机名称。 有关这些函数的详细信息，请参阅 [Filestream 和 FileTable 函数 (Transact-SQL)](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md)。  

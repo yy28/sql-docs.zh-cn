@@ -14,15 +14,15 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72006045"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>启用了外部脚本的服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-适用于：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 
+适用于：   和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)][!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 使用 **external scripts enabled** 选项启用包含某些远程语言扩展的脚本执行。 此属性默认处于禁用状态。 安装“高级分析服务”  后，安装程序可以根据需要将此属性设置为 true。
 
@@ -40,7 +40,7 @@ ms.locfileid: "72006045"
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 使用与 SQL Server 2016 相同的体系结构，但支持 Python 语言。
 
-    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中安装“高级分析扩展”功能，以启用外部脚本的执行  。 确保在初始安装过程中至少选择一种语言：R 和/或 Python。 
+    在  **安装过程中安装“高级分析扩展”功能，以启用外部脚本的执行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 确保在初始安装过程中至少选择一种语言：R 和/或 Python。 
 
 ## <a name="additional-requirements"></a>其他需求
 

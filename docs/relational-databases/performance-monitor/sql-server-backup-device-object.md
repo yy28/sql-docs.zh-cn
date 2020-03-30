@@ -14,16 +14,16 @@ ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 93302a5b9645784b3b326229545f92de0dce56f8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987201"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server Backup Device 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  **Backup Device** 对象提供的计数器可监视用于备份和还原操作的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备。 在希望基于每个设备确定吞吐量或备份和还原操作的进度及性能时，可以监视备份设备。 若要监视整个数据库备份或还原操作的吞吐量，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Databases 对象的 Backup/Restore Throughput/sec 计数器   。 有关详细信息，请参阅 [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
+  **Backup Device** 对象提供的计数器可监视用于备份和还原操作的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备。 在希望基于每个设备确定吞吐量或备份和还原操作的进度及性能时，可以监视备份设备。 若要监视整个数据库备份或还原操作的吞吐量，请使用  **Databases 对象的 Backup/Restore Throughput/sec 计数器**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  。 有关详细信息，请参阅 [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
   
  下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备计数器  。  
   

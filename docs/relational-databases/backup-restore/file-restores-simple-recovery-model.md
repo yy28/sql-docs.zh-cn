@@ -20,10 +20,10 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68138742"
 ---
 # <a name="file-restores-simple-recovery-model"></a>文件还原（简单恢复模式）
@@ -56,7 +56,7 @@ ms.locfileid: "68138742"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Overview"></a> 在简单恢复模式下还原文件和文件组的概述  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 在简单恢复模式下还原文件和文件组的概述  
  文件还原方案由复制、前滚和恢复相应数据的单一还原顺序组成，如下所示：  
   
 1.  从各个损坏文件的最新文件备份还原每个文件。  
@@ -86,7 +86,7 @@ ms.locfileid: "68138742"
   
 -   [示例：主文件组和一个其他文件组的脱机还原（完整恢复模式）](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **还原文件和文件组**  
   
 -   [在现有文件上还原文件和文件组 (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  

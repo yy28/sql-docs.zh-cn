@@ -13,10 +13,10 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941130"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>将日志传送升级至 SQL Server 2016 (Transact-SQL)
@@ -38,18 +38,18 @@ ms.locfileid: "76941130"
   
 -   [升级主实例](#UpgradePrimary)  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  开始之前，请仔细阅读以下重要信息：  
   
--   [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+-   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
--   [选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：检查支持的版本和版本升级以及环境中安装的其他组件，并据此选择适当的升级方法和步骤，按正确顺序升级组件。  
+-   [选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)： 选择合适的升级方法和步骤检查还根据升级中的组件在环境中安装其他组件和受支持版本和版本升级正确的顺序。  
   
 -   [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：查看发行说明和已知升级问题、预升级清单，并制定和测试升级计划。  
   
--   [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
+-   [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
   
-##  <a name="ProtectData"></a> 在升级前保护好您的数据  
+##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> 在升级前保护好您的数据  
  建议您最好在日志传送升级之前保护好您的数据。  
   
  **保护数据**  
@@ -63,12 +63,12 @@ ms.locfileid: "76941130"
 > [!IMPORTANT]  
 >  确保在主服务器上有足够的空间，以便按预计升级辅助副本时保存日志备份的副本。  如果要故障转移到辅助服务器，相同的考虑事项也适用于辅助服务器（新的主服务器）。  
   
-##  <a name="UpgradeMonitor"></a> 升级（可选）监视服务器实例  
+##  <a name="upgrading-the-optional-monitor-server-instance"></a><a name="UpgradeMonitor"></a> 升级（可选）监视服务器实例  
  监视服务器实例（如果存在）可随时升级。 但是，升级主服务器和辅助服务器时，不需要升级可选的监视服务器。  
   
  升级监视服务器时，日志传送配置仍将有效，但其状态不会记录在监视器上的表中。 监视服务器正在升级期间，已配置的任何警报都不会触发。 升级完毕后，可以通过执行 [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md) 系统存储过程来更新监视器表中的信息。   有关监视服务器的详细信息，请参阅[关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-##  <a name="UpgradeSecondaries"></a> 升级辅助服务器实例  
+##  <a name="upgrading-the-secondary-server-instances"></a><a name="UpgradeSecondaries"></a> 升级辅助服务器实例  
  升级主服务器实例之前的升级过程包括将辅助服务器实例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 始终首先升级辅助 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 由于升级后的辅助服务器实例继续还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主服务器实例的日志备份，因此日志传送在整个升级过程中都不间断。 由于在较新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的备份无法在较旧版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中还原，因此如果主服务器实例先于辅助服务器实例升级，将导致日志传送失败。 你可以同时或按顺序升级辅助实例，但必须在升级主实例前升级所有辅助实例，以避免日志传送失败。  
   
  辅助服务器实例正在升级期间，日志传送复制和还原作业不运行。 这意味着未还原的事务日志备份将在主服务器上累积，因此需确保空间充足以便保存这些未还原的备份。 累积的数量取决于主服务器实例上进行计划备份的频率，以及升级辅助实例的序列。 此外，如果还配置了单独的监视服务器，则若未执行还原的时间超过了所配置的时间间隔，就会引发警报。  
@@ -81,7 +81,7 @@ ms.locfileid: "76941130"
 > [!IMPORTANT]  
 >  对于要求升级的数据库，不支持 RESTORE WITH STANDBY 选项。 如果已使用 RESTORE WITH STANDBY 配置了升级的辅助数据库，则在升级后可能不再能够还原事务日志。 要对该辅助数据库恢复日志传送，您需要再次对该备用服务器设置日志传送。 有关 STANDBY 选项的详细信息，请参阅[还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)。  
   
-##  <a name="UpgradePrimary"></a> 升级主服务器实例  
+##  <a name="upgrading-the-primary-server-instance"></a><a name="UpgradePrimary"></a> 升级主服务器实例  
  由于日志传送是主要的灾难恢复解决方案，因此，最简单也是最常见的方案就是就地升级主实例，只是在此升级期间将无法使用数据库。 服务器升级完毕后，数据库即自动回到联机状态，随即进行升级。 数据库升级完毕后，日志传送作业将继续进行。  
   
 > [!NOTE]  

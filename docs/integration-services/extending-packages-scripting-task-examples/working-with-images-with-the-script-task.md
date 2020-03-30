@@ -24,10 +24,10 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296981"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
@@ -44,7 +44,7 @@ ms.locfileid: "71296981"
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-##  <a name="example1"></a>示例 1 说明：将图像转换为 JPEG 格式  
+##  <a name="example-1-description-convert-images-to-jpeg-format"></a><a name="example1"></a>示例 1 说明：将图像转换为 JPEG 格式  
  下面的示例打开一个由变量指定的图像文件，并使用编码器将其保存为压缩后的 JPEG 文件。 检索编码器信息的代码封装在一个私有函数中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>将此脚本任务示例配置为用于单个图像文件  
@@ -153,7 +153,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>示例 2 说明：创建并保存缩略图图像  
+##  <a name="example-2-description-create-and-save-thumbnail-images"></a><a name="example2"></a>示例 2 说明：创建并保存缩略图图像  
  下面的示例打开一个由变量指定的图像文件，在保持宽高比不变的情况下创建一个该图像的缩略图，并将此缩略图以修改后的名称保存。 在保持宽高比不变的情况下计算缩略图的高度和宽度的代码封装在一个私有子例程中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>将此脚本任务示例配置为用于单个图像文件  

@@ -19,10 +19,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71680984"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 项目和解决方案
@@ -115,13 +115,13 @@ ms.locfileid: "71680984"
   
 7.  如果源代码管理软件是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe， **“Visual SourceSafe 登录”** 对话框就会打开。 在 **“Visual SourceSafe 登录”** 对话框中，提供用户名、密码和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 数据库的名称。 单击 **“浏览”** 查找数据库。  
   
-    > **注意：** 若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”  菜单上的“选项”  ，然后展开“源代码管理”  节点。  
+    > **注意：** 若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”   菜单上的“选项”，然后展开“源代码管理”节点  。  
   
 8.  单击“确定”  ，将解决方案添加到 **解决方案资源管理器** ，并将项目添加到解决方案。  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>使用导入项目向导导入现有项目
   
-1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的“文件”  菜单上，单击“新建”   > “项目”  。  
+1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的“文件”  菜单上，单击“新建” >   “项目”  。  
   
 2.  在 **“新建项目”** 窗口的 **“已安装的模板”** 区域中，展开 **“商业智能”** ，然后单击 **“Integration Services”** 。  
   

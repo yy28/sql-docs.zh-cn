@@ -13,10 +13,10 @@ ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6b38a13252001f9c50b62510f11e43822cde1666
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68018857"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>二进制大型对象 (Blob) 数据 (SQL Server)
@@ -29,17 +29,17 @@ ms.locfileid: "68018857"
   
 ##  <a name="options-for-storing-blobs"></a>用于存储 Blob 的选项  
 
-### <a name="filestream-40sql-server41relational-databasesblobfilestream-sql-servermd"></a>[FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
+### <a name="filestream-40sql-server41"></a>[FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
 
 借助 FILESTREAM，基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序可以将非结构化的数据（如文档和图像）存储在文件系统中。 应用程序在利用丰富的流式 API 和文件系统的性能的同时，还可保持非结构化数据和对应的结构化数据之间的事务一致性。  
   
-### <a name="filetables-40sql-server41relational-databasesblobfiletables-sql-servermd"></a>[FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)  
+### <a name="filetables-40sql-server41"></a>[FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)  
 
 FileTable 功能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的文件数据提供对 Windows 文件命名空间的支持以及与 Windows 应用程序的兼容性支持。 FileTable 使得应用程序可以集成其存储和数据管理组件，可对非结构化数据和元数据提供集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括全文搜索和语义搜索）。  
   
  换言之，您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将文件和文档存储在称作 FileTable 的特别的表中，但是从 Windows 应用程序访问它们，就好像它们存储在文件系统中，而不必对您的客户端应用程序进行任何更改。  
   
-### <a name="remote-blob-store-40rbs41-40sql-server41relational-databasesblobremote-blob-store-rbs-sql-servermd"></a>[远程 Blob 存储区 (RBS) (SQL Server)](../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
+### <a name="remote-blob-store-40rbs41-40sql-server41"></a>[远程 Blob 存储区 (RBS) (SQL Server)](../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的远程 BLOB 存储 (RBS) 使数据库管理员能够在商用存储解决方案中存储二进制大型对象 (BLOB)，而不是直接存储在服务器上。 这可以节省大量空间，避免浪费昂贵的服务器硬件资源。 RBS 提供一组可定义应用程序标准化模型的 API 库以访问 BLOB 数据。 RBS 还包含维护工具（如垃圾收集）以帮助管理远程 BLOB 数据。  
   

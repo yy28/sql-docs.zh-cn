@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056264"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>配置和管理断字符和词干分析器以便搜索 (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "74056264"
 SELECT * FROM sys.fulltext_languages
 ```
 
-##  <a name="register"></a> 获取已注册断字符的列表
+##  <a name="get-the-list-of-registered-word-breakers"></a><a name="register"></a> 获取已注册断字符的列表
 
 必须注册一种语言的断字符，然后全文搜索才能使用该断字符。 注册断字符后，还可将关联的语言资源（词干分析器、干扰词（非索引字）和同义词库文件）用于全文索引和查询操作。
 
@@ -69,7 +69,7 @@ GO
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>如果添加或删除断字符  
 如果您添加、删除或更改了断字符，则需要刷新为全文索引和查询而支持的 Microsoft Windows 区域设置标识符 (LCID) 列表。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="default"></a> 设置默认的全文语言选项  
+##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> 设置默认的全文语言选项  
  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将把 **default full-text language** 选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的非本地化版本， **或** 选项为“英语”。  
   
  创建或修改全文索引时，可以为每个全文索引列指定不同的语言。 如果未指定列的语言，默认值是配置选项  “默认全文语言”的值。  
@@ -77,7 +77,7 @@ GO
 > [!NOTE]  
 >  在单个全文查询函数子句中列出的所有列必须使用同一语言，除非在查询中指定了 LANGUAGE 选项。 所查询的用于全文索引列的语言确定了对全文查询谓词（[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)）以及函数（[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)）的参数执行的语言分析。  
   
-##  <a name="lang"></a> 为索引列选择语言  
+##  <a name="choose-the-language-for-an-indexed-column"></a><a name="lang"></a> 为索引列选择语言  
  创建全文索引时，建议为每个索引列都指定一种语言。 如果未为列指定语言，则将使用系统默认语言。 某列的语言确定使用什么断字符和词干分析器对该列创建索引。 另外，该语言的同义词库文件将由针对相应列的全文查询使用。  
   
  如果要选择用于创建全文索引的列语言，有几个事项需要注意。 这些注意事项均与全文引擎如何对文本进行词汇切分再编制其索引有关。 有关详细信息，请参阅 [创建全文索引时选择语言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
@@ -90,7 +90,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 如需其他选项和详细信息，请参阅 [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)。
 
-##  <a name="tshoot"></a> 排查断字超时错误  
+##  <a name="troubleshoot-word-breaking-time-out-errors"></a><a name="tshoot"></a> 排查断字超时错误  
  在多种情况下会发生断字超时错误。 若要了解这些情况以及如何在每种情况下进行响应，请参阅 [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)。
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>有关 MSSQLSERVER_30053 错误的信息
@@ -130,7 +130,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 |筛选器后台进程配置不正确。|请确保使用的是当前密码，并且域策略不会阻止筛选器后台帐户登录。|  
 |服务器实例上运行的查询工作负荷很重。|请在负荷较轻的情况下再次尝试运行此查询。|  
 
-##  <a name="impact"></a> 了解已更新断字符的影响  
+##  <a name="understand-the-impact-of-updated-word-breakers"></a><a name="impact"></a> 了解已更新断字符的影响  
  每个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常都包括新的断字符，这些断字符与早期断字符相比具有更好的语言规则并且更加准确。 新断字符的行为可能与从以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入的全文索引中的断字符行为稍有不同。
  
 如果全文目录是在数据库升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前版本时导入的，这一点将非常重要。 该全文目录中全文索引使用的一种或多种语言现在可能与新断字符关联。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  

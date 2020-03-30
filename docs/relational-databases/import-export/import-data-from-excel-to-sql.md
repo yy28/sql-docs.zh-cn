@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245272"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
@@ -45,7 +45,7 @@ SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本�
 
 如果尚未安装 SQL Server，或已具有 SQL Server 但未安装 SQL Server Management Studio，请参阅 [下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
-## <a name="wiz"></a>SQL Server 导入和导出向导
+## <a name="sql-server-import-and-export-wizard"></a><a name="wiz"></a>SQL Server 导入和导出向导
 
 通过单步执行 SQL Server 导入和导出向导各页面，直接从 Excel 文件导入数据。 （可选）将设置保存为可以稍后自定义和重用的 SQL Server Integration Services (SSIS) 包。
 
@@ -67,7 +67,7 @@ SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本�
 
 要了解“导入和导出”向导的其他启动方法，请参阅[启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
-## <a name="ssis"></a> SQL Server Integration Services (SSIS)
+## <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> SQL Server Integration Services (SSIS)
 
 如果熟悉 SSIS，并且不想运行 SQL Server 导入和导出向导，请创建在数据流中使用 Excel 源和 SQL Server 目标的 SSIS 包。
 
@@ -80,7 +80,7 @@ SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本�
 
 ![数据流中的组件](media/excel-to-sql-data-flow.png)
 
-## <a name="openrowset"></a> OPENROWSET 和链接服务器
+## <a name="openrowset-and-linked-servers"></a><a name="openrowset"></a> OPENROWSET 和链接服务器
 
 > [!IMPORTANT]
 > 在 Azure SQL 数据库中，无法直接从 Excel 导入。 必须首先将数据导出到文本 (CSV) 文件。 有关示例，请参阅[示例](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。
@@ -183,7 +183,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 - [如何通过 SQL Server 链接服务器和分布式查询使用 Excel](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
 - [如何将 Excel 数据导入 SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
-## <a name="prereq"></a>先决条件 - 将 Excel 数据保存为文本
+## <a name="prerequisite---save-excel-data-as-text"></a><a name="prereq"></a>先决条件 - 将 Excel 数据保存为文本
 
 若要使用本页上的其他方法（BULK INSERT 语句、BCP 工具或 Azure 数据工厂），必须先将 Excel 数据导出到文本文件中。
 
@@ -194,7 +194,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 > [!TIP]
 > 为在使用数据导入工具时获得最佳结果，保存仅包含列标题和数据行的工作表。 如果保存的数据包含页标题、空白行、注释等，稍后可能会在导入数据时发生意外结果。
 
-## <a name="import-wiz"></a> 导入平面文件向导
+## <a name="the-import-flat-file-wizard"></a><a name="import-wiz"></a> 导入平面文件向导
 
 通过单步执行导入平面文件向导各页面，导入保存为文本文件的数据。
 
@@ -202,7 +202,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 
 有关导入平面文件向导的详细信息，请参阅[将平面文件导入到 SQL 向导](import-flat-file-wizard.md)。
 
-## <a name="bulk-insert"></a> BULK INSERT 命令
+## <a name="bulk-insert-command"></a><a name="bulk-insert"></a> BULK INSERT 命令
 
 `BULK INSERT` 是可以通过 SQL Server Management Studio 运行的 Transact-SQL 命令。 下面的示例将 `Data.csv` 逗号分隔文件中的数据加载到现有数据库表中。
 
@@ -224,7 +224,7 @@ GO
 - [使用 BULK INSERT 或 OPENROWSET(BULK...) 导入批量数据](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
-## <a name="bcp"></a> BCP 工具
+## <a name="bcp-tool"></a><a name="bcp"></a> BCP 工具
 
 BCP 是通过命令提示符运行的程序。 下面的示例将 `Data.csv` 逗号分隔文件中的数据加载到现有 `Data_bcp` 数据库表中。
 
@@ -243,7 +243,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 - [bcp 实用工具](../../tools/bcp-utility.md)
 - [准备用于批量导出或导入的数据](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-## <a name="adf-wiz"></a> 复制向导（Azure 数据工厂）
+## <a name="copy-wizard-azure-data-factory"></a><a name="adf-wiz"></a> 复制向导（Azure 数据工厂）
 
 通过单步执行 Azure 数据工厂复制向导各页面，导入保存为文本文件的数据。
 
@@ -254,7 +254,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 - [数据工厂复制向导](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 - [教程：使用数据工厂复制向导创建带有复制活动的管道](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
-## <a name="adf"></a> Azure 数据工厂
+## <a name="azure-data-factory"></a><a name="adf"></a> Azure 数据工厂
 
 如果熟悉 Azure 数据工厂，并且不想运行复制向导，请创建带有复制活动的管道，用于将文本文件复制到 SQL Server 或 Azure SQL 数据库。
 

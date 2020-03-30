@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095778"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>配置 SQL Server 代理邮件以使用数据库邮件
@@ -34,12 +34,12 @@ ms.locfileid: "74095778"
   
 -   [后续任务](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
   > [!NOTE]
   > 托管实例上的 SQL 代理始终配置为使用数据库邮件，因此在托管实例上此内容不适用。 在托管实例中，需要具有必须调用的配置文件 **AzureManagedInstance_dbmail_profile[，才能将 SQL 代理与数据库邮件绑定](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 。 
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   [启用数据库邮件](../../relational-databases/database-mail/configure-database-mail.md)。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74095778"
   
 -   将该配置文件设置为 **msdb** 数据库的默认配置文件。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  创建配置文件帐户和执行存储过程的用户应是 sysadmin 固定服务器角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **配置 SQL Server 代理邮件以使用数据库邮件**  
   
 -   在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -71,7 +71,7 @@ ms.locfileid: "74095778"
   
 -   重启 SQL Server 代理。  
   
-##  <a name="Follow_Up"></a> 后续任务  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> 后续任务  
  需要执行下列任务以完成对发送警报和通知的代理配置。  
   
 -   [警报](../../ssms/agent/alerts.md)  

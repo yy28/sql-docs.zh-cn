@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981714"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[限制返回的行数](#Offset)|OFFSET • FETCH|  
 |[将 ORDER BY 与 UNION、EXCEPT 和 INTERSECT 一起使用](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a>基本语法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a>基本语法  
  本节中的示例说明了使用最低要求的语法的 ORDER BY 子句的基本功能。  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. 指定在选择列表中定义的单个列  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a>指定升序和降序排序顺序  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a>指定升序和降序排序顺序  
   
 #### <a name="a-specifying-a-descending-order"></a>A. 指定降序  
  以下示例按 `ProductID` 数值列降序对结果集进行排序。  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a>指定排序规则  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a>指定排序规则  
  以下示例说明如何在 ORDER BY 子句中指定排序规则以更改查询结果的返回顺序。 将创建一个表，其中包含一个使用不区分大小写和重音的排序规则定义的列。 插入一些具有不同大小写和重音的值。 由于未在 ORDER BY 子句中指定排序规则，在对值进行排序时，第一个查询将使用列排序规则。 在第二个查询中，在 ORDER BY 子句中指定了区分大小写和重音的排序规则，这将改变行的返回顺序。  
   
 ```sql
@@ -319,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a>指定条件顺序  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a>指定条件顺序  
  以下示例在 ORDER BY 子句中使用 CASE 表达式，以根据给定的列值有条件地确定行的排序顺序。 在第一个示例中，会计算 `SalariedFlag` 表中 `HumanResources.Employee` 列的值。 `SalariedFlag` 设置为 1 的员工将按 `BusinessEntityID` 以降序顺序返回。 `SalariedFlag` 设置为 0 的员工将按 `BusinessEntityID` 以升序顺序返回。 在第二个示例中，当 `TerritoryName` 列等于“United States”时，结果集会按 `CountryRegionName` 列排序，对于所有其他行则按 `CountryRegionName` 排序。  
   
 ```sql
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a>在排名函数中使用 ORDER BY  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a>在排名函数中使用 ORDER BY  
  以下示例在 ROW_NUMBER、RANK、DENSE_RANK 和 NTILE 排名函数中使用 ORDER BY 子句。  
   
 ```sql
@@ -361,7 +361,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a>限制返回的行数  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a>限制返回的行数  
  以下示例使用 OFFSET 和 FETCH 限制查询返回的行数。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -489,7 +489,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a>将 ORDER BY 与 UNION、EXCEPT 和 INTERSECT 一起使用  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a>将 ORDER BY 与 UNION、EXCEPT 和 INTERSECT 一起使用  
  当查询使用 UNION、EXCEPT 或 INTERSECT 运算符时，必须在语句末尾指定 ORDER BY 子句，并对合并的查询结果进行排序。 以下示例返回所有红色或黄色的产品，并按 `ListPrice` 列对合并的列表进行排序。  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例演示按 `EmployeeKey` 数值列升序对结果集进行排序。  
   
 ```sql

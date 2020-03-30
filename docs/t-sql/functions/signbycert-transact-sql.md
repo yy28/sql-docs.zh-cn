@@ -24,10 +24,10 @@ ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 039e6b776240121aa66559cfb637c11f0ac70a9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71314580"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
@@ -51,8 +51,8 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  *\@cleartext*  
  类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含要签名的数据     。  
   
- **'** *password* **'**  
- 是用来对证书私钥进行加密的密码。 password 的数据类型为 nvarchar(128)   。  
+ ' password '     
+ 用来对证书私钥进行加密的密码。 password 的数据类型为 nvarchar(128)   。  
   
 ## <a name="return-types"></a>返回类型  
  varbinary（最大大小为 8000 个字节）  。  
@@ -61,7 +61,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例将用证书 `ABerglundCert07` 来签署 `@SensitiveData` 中的文本，该证书已用密码“pGFD4bb925DGvbd2439587y”进行解密。 然后，它在 `SignedData04` 表中插入明文和签名。  
+ 以下示例将用证书 `@SensitiveData` 来签署 `ABerglundCert07` 中的文本，该证书已用密码“pGFD4bb925DGvbd2439587y”进行解密。 然后，它在 `SignedData04` 表中插入明文和签名。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  

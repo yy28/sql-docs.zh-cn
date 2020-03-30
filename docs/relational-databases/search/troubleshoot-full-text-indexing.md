@@ -15,16 +15,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d8dd1cd471328859dd8bfa595fc341bda5f51f04
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095306"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>排除全文索引故障
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
-##  <a name="failure"></a> 排除全文索引故障  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> 排除全文索引故障  
  填充或维护全文索引时，由于下面描述的原因，全文索引器可能无法对一个或多个行编制索引。 这些行级别的错误不会干扰填充的进行。 索引器会跳过这些行，这意味着您无法查询这些行中包含的内容。  
   
  在以下情况下，可能会发生索引失败：  
@@ -54,7 +54,7 @@ ms.locfileid: "68095306"
 >  忽略签名验证将降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的安全性。 我们建议您对所实现的所有组件进行签名，或确保您获得的所有组件都经过签名。 有关对组件进行签名的信息，请参阅 [sp_fulltext_service (Transact SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。  
   
   
-##  <a name="state"></a> 对事务日志进行还原后全文索引处于不一致状态  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> 对事务日志进行还原后全文索引处于不一致状态  
  还原数据库的事务日志时可能会看到一条警告，指示全文索引处于不一致状态。 导致不一致的原因是在备份数据库之后，针对表的全文索引被修改了。 若要使全文索引处于一致状态，必须对表执行完全填充（爬网）。 有关详细信息，请参阅 [填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   
   

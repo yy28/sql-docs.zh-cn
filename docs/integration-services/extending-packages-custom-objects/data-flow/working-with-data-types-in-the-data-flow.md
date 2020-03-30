@@ -15,10 +15,10 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2100176fa0bb6f02deff6cdf2a210ea81e04f9a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287443"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>在数据流中使用数据类型
@@ -94,7 +94,7 @@ ms.locfileid: "71287443"
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt64%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|  
   
 ## <a name="mapping-data-types-in-the-data-flow"></a>在数据流中映射数据类型  
- 将数据从源经过转换移动到目标时，数据流组件有时必须在 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 枚举中定义的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 类型和在 System 命名空间中定义的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 托管数据类型之间转换数据类型  。 此外，组件有时必须先将一种 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型转换为另一种数据类型，然后才能将该类型转换为托管类型。  
+ 将数据从源经过转换移动到目标时，数据流组件有时必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 枚举中定义的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 类型和在 System 命名空间中定义的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 托管数据类型之间转换数据类型  。 此外，组件有时必须先将一种 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型转换为另一种数据类型，然后才能将该类型转换为托管类型。  
   
 > [!NOTE]  
 >  默认情况下安装在 C:\Program Files\Microsoft SQL Server\130\DTS\MappingFiles 中的 XML 格式的映射文件与本主题中讨论的数据类型映射无关。 这些文件将数据类型从一个数据库版本或系统映射到另一个数据库版本或系统（例如，从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 映射到 Oracle），并且只由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 导入和导出向导使用。 有关这些映射文件的详细信息，请参阅 [SQL Server 导入和导出向导](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  

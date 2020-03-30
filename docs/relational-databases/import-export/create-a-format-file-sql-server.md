@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68035825"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68035825"
  通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。  
   
 > [!NOTE]  
->  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bcp 可以读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bcp 生成的 10.0 版格式化文件，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bcp 无法读取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bcp 生成的 11.0 版格式化文件     。  
+>  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bcp 可以读取由 **bcp 生成的 10.0 版格式化文件，但** bcp 无法读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bcp 生成的 11.0 版格式化文件  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  。  
   
  本主题说明了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 为特定表创建格式化文件。 格式化文件基于指定的数据类型选项（ **-n**、 **-c**、 **-w**或 **-N**）以及表或视图分隔符。  
   
@@ -151,7 +151,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 ```  
   
- 如果尝试使用 `bcp in -c -C65001 -f format_file` ..." 或 "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ..." 将数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，有关排序规则/代码页的信息会优先于 65001 选项。  
+ 如果尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ..." 或 "`bcp in -c -C65001 -f format_file``BULK INSERT`/ ... `OPENROWSET` ..." 将数据导入 `FORMATFILE='format_file' CODEPAGE=65001`，有关排序规则/代码页的信息会优先于 65001 选项。  
 因此，如要生成格式化文件，必须在开始将数据导回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，手动从生成的格式化文件中删除排序规则信息。  
 以下是不具有排序规则信息的格式化文件的示例。  
   
@@ -195,7 +195,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
-|**-t** `,`|将逗号 ( **,** ) 指定为字段终止符。<br /><br /> 注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 -t 开关  。|  
+|**-t** `,`|将逗号 ( **,** ) 指定为字段终止符。<br /><br /> 请注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 **-t** 开关。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
  在 Windows 命令提示符下，输入以下 `bcp` 命令：  

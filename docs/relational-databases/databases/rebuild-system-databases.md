@@ -16,10 +16,10 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76516548"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
@@ -46,12 +46,12 @@ ms.locfileid: "76516548"
   
      [解决重新生成错误](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  重新生成 master、model、msdb 和 tempdb 系统数据库时，将删除这些数据库，然后在其原位置重新创建它们。 如果在重新生成语句中指定了新排序规则，则将使用该排序规则设置创建系统数据库。 用户对这些数据库所做的所有修改都会丢失。 例如，您在 master 数据库中的用户定义对象、msdb 中的预定作业或 model 数据库中对默认数据库设置的更改都会丢失。  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  在重新生成系统数据库之前执行下列任务，以确保可以将系统数据库还原至它们的当前设置。  
   
 1.  记录所有服务器范围的配置值。  
@@ -87,7 +87,7 @@ ms.locfileid: "76516548"
   
 7.  请验证本地服务器上是否有 master、model、msdb 数据模板文件和日志模板文件的副本。 模板文件的默认位置是 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Templates。 在重新生成过程中要用到这些文件，而且若想让安装成功这些文件必须存在。 如果缺少这些文件，请运行安装程序的“修复”功能或者手动从安装介质中复制这些文件。 若要在安装介质上查找这些文件，请导航到相应的平台目录（x86 或 x64），然后导航到 setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates。  
   
-##  <a name="RebuildProcedure"></a> 重新生成系统数据库  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> 重新生成系统数据库  
  以下过程将重新生成 master、model、msdb 和 tempdb 系统数据库。 无法指定要重新生成哪些系统数据库。 对于群集实例，必须在主动节点上执行此过程，并且在执行此过程之前，必须先使相应群集应用程序组中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源脱机。  
   
  此过程不重新生成 resource 数据库。 请参阅本主题后面的“resource 数据库重新生成过程”部分。  
@@ -111,8 +111,8 @@ ms.locfileid: "76516548"
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 数据文件的数目。 此值可以增加至 8 或内核数，以较大者为准。<br /><br /> 默认值：8 或内核数量，以较低者为准。|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每个 tempdb 数据文件的初始大小 (MB)。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：8.<br /><br /> 允许的范围：最小值 = 8，最大值 = 1024。|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 日志文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：8。<br /><br /> 允许范围：最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 日志文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：64<br /><br /> 允许范围：最小值 = 8，最大值 = 1024。|  
     |[ /SQLTEMPDBDIR=Directories ]|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：系统数据目录|  
     |[ /SQLTEMPDBLOGDIR=Directory ]|指定 tempdb 日志文件的目录。<br /><br /> 默认值：系统数据目录|  
   
@@ -139,7 +139,7 @@ ms.locfileid: "76516548"
   
 -   验证服务器范围的配置值是否与您以前记录的值相符。  
   
-##  <a name="Resource"></a> resource 数据库重新生成  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> resource 数据库重新生成  
  以下过程将重新生成 resource 系统数据库。 重新生成 resource 系统数据库时，所有的热修补程序都将丢失，因此必须重新应用。  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>重新生成 resource 系统数据库：  
@@ -156,7 +156,7 @@ ms.locfileid: "76516548"
   
 6.  在 **“准备修复”** 页上，单击 **“修复”** 。 “完成”页指示修复操作已完成。  
   
-##  <a name="CreateMSDB"></a> 创建新的 msdb 数据库  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> 创建新的 msdb 数据库  
  如果 **msdb** 数据库损坏并且您没有 **msdb** 数据库的备份，则可以通过使用 **instmsdb** 脚本创建新的 **msdb** 。  
   
 > [!WARNING]  
@@ -168,7 +168,7 @@ ms.locfileid: "76516548"
   
      有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-3.  在另一个命令行窗口中，通过执行以下命令（并且用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例替换 *\<servername>* ）来分离 **msdb** 数据库：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  在另一个命令行窗口中，通过执行以下命令（并且用 **的实例替换***servername>\<）来分离* msdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  使用 Windows 资源管理器，重命名 **msdb** 数据库文件。 默认情况下，这些文件位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 DATA 子文件夹中。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "76516548"
   
 6.  在命令行窗口中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并执行以下命令： `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例替换 *\<servername>* 。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的文件系统路径。  
+     使用  *的实例替换 \<* servername>[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的文件系统路径。  
   
 7.  使用 Windows 记事本，打开 **instmsdb.out** 文件，然后检查输出中是否存在任何错误。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "76516548"
   
 10. 备份 **msdb** 数据库。  
   
-##  <a name="Troubleshoot"></a> 解决重新生成错误  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> 解决重新生成错误  
  语法和其他运行时错误会显示在命令提示符窗口中。 检查 Setup 语句中是否存在以下语法错误：  
   
 -   每个参数名称前面缺少斜杠标记 (/)。  

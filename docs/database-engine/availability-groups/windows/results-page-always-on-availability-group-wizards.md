@@ -16,10 +16,10 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235450"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>“结果”页（AlwaysOn 可用性组向导）
@@ -27,7 +27,7 @@ ms.locfileid: "75235450"
 
   本帮助主题介绍 **“结果”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页可查看该向导的结果。  
   
-##  <a name="PageOptions"></a> 结果页选项  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> 结果页选项  
  **“摘要”** 网格包含以下列：  
   
  **名称**  
@@ -41,7 +41,7 @@ ms.locfileid: "75235450"
 |**错误**|指示验证步骤失败。 单击该链接可以查看错误消息。|  
 |**Success**|指示此验证步骤已成功完成。|  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

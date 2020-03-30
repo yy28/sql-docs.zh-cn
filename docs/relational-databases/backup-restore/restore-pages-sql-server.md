@@ -20,10 +20,10 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908830"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
@@ -49,14 +49,14 @@ ms.locfileid: "72908830"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="WhenUseful"></a> 何时适合页面还原？  
+###  <a name="when-is-a-page-restore-useful"></a><a name="WhenUseful"></a> 何时适合页面还原？  
  页面还原用于修复隔离出来的损坏页。 还原和恢复少量页面的速度可能比还原一个文件更快，因此减少了还原操作中处于脱机状态的数据量。 然而，如果文件中要还原的不只是少量页面，则通常还原整个文件更为有效。 例如，如果某个设备上的大量页都指出此设备有未解决的故障；不妨考虑还原该文件（可以还原到另一位置）并修复该设备。  
   
  此外，并非所有的页面错误都需要还原。 缓存数据（例如辅助索引）中可能出现的问题可以通过重新计算这些数据来解决。 例如，如果数据库管理员删除一个辅助索引，然后再重新生成一个辅助索引，则损坏的数据虽然已修复，但并没有在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表中反映出这一情况。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   页面还原适用于使用完整或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 只有读/写文件组支持页面还原。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72908830"
   
          执行页面还原的最佳做法是将数据库设置为完整恢复模式，并尝试进行一次日志备份。 如果可以进行日志备份，则可以继续进行页面还原。 如果日志备份失败，则您将不得不丢失上一个日志备份之后的工作，或必须尝试运行 DBCC（必须使用 REPAIR_ALLOW_DATA_LOSS 选项）。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   页面还原方案：  
   
@@ -99,14 +99,14 @@ ms.locfileid: "72908830"
   
      在您还原随后的日志备份时，它们将仅适用于包含要还原的至少一页的数据库文件。 必须将不中断的日志备份链应用于最后一次完整或差异还原，以便让包含该页的文件组前进到当前的日志文件。 与文件还原中一样，每次传递日志重做，前滚集都会前进一步。 为了成功还原页，已还原的页必须恢复到与数据库一致的状态。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 开始， 支持页面还原。  
   
 #### <a name="to-restore-pages"></a>还原页  
@@ -165,7 +165,7 @@ ms.locfileid: "72908830"
   
 7.   若要还原在页网格中列出的页，请单击“确定”。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  {1}若要在 RESTORE DATABASE 语句中指定一页，需要知道该页所在文件的文件 ID 和该页的页 ID。{2} {1}所需语法如下：{2}  
   
  `RESTORE DATABASE <database_name>`  
@@ -203,7 +203,7 @@ ms.locfileid: "72908830"
     > [!NOTE]  
     >  此顺序与文件还原顺序类似。 事实上，页面还原和文件还原都可以在相同的顺序中执行。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例使用 `B` 还原文件 `NORECOVERY`的四个损坏页。 随后，将使用 `NORECOVERY`应用两个日志备份，然后是结尾日志备份（使用 `RECOVERY`还原）。 此示例执行联机还原。 此示例中，文件 `B` 的文件 ID 为 `1`，损坏的页的页 ID 分别为 `57`、 `202`、 `916`和 `1016`。  
   
 ```sql  

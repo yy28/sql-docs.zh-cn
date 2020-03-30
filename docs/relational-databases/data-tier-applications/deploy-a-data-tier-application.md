@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190119"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
@@ -114,7 +114,7 @@ ms.locfileid: "74190119"
   
  “日志文件路径和名称”  ：- 指定日志文件的完整路径和文件名。 该框将用默认路径和文件名填充。 编辑该框中的字符串可以更改默认值，或者使用 **“浏览”** 按钮可以导航到要用于放置日志文件的文件夹。  
   
-###  <a name="Summary"></a> 摘要页  
+###  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用此页可以查看在部署 DAC 时向导将执行的操作。  
   
  **将使用以下设置部署 DAC。** - 查看显示的信息以便确保将执行的操作正确。 该窗口显示您选择的 DAC 包，以及您为部署的 DAC 实例选择的名称。 该窗口还显示在创建与该 DAC 相关联的数据库时将使用的设置。  

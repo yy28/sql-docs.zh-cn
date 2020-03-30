@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055979"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>格式化文件以导入或导出数据 (SQL Server)
@@ -29,12 +29,12 @@ ms.locfileid: "74055979"
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持两种格式化文件：XML 格式化文件和非 XML 格式化文件。 XML 格式化文件和非 XML 格式化文件在一个数据文件中包含每个字段的说明，并且 XML 格式化文件还包含相应表列的说明。 通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。
 
-## <a name="Benefits"></a> 格式化文件的优点
+## <a name="benefits-of-format-files"></a><a name="Benefits"></a> 格式化文件的优点
 
 - 为编写数据文件提供了一个灵活的系统，用户只需进行极少的编辑甚至无需编辑即可编写出符合其他数据格式的数据文件，或从其他软件读取数据文件。
 - 使您可以大容量导入数据，而不必添加或删除不需要的数据或者重新排列数据文件中现有数据的顺序。 当数据文件中的字段和表中的列存在不匹配的情况时，格式化文件尤其有用。
 
-## <a name="ExamplesOfFFs"></a> 格式化文件的示例
+## <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> 格式化文件的示例
 
 下面的示例说明了非 XML 格式化文件和 XML 格式化文件的布局。 这些格式化文件对应于 `HumanResources.myTeam` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 该表包含四列： `EmployeeID`、 `Name`、 `Title`和 `ModifiedDate`。
 
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 
 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。 
 
-## <a name="WhenFFrequired"></a> 何时需要使用格式化文件？
+## <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> 何时需要使用格式化文件？
 
 - INSERT ... SELECT * FROM OPENROWSET(BULK...) 语句始终要求使用格式化文件。
 - 对于 **bcp** 或 BULK INSERT，在简单的情况下，请视情况选用格式化文件，在极少数的情况下才必须使用。 但是，对于复杂的大容量导入情况，通常都会需要格式化文件。
@@ -107,7 +107,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 > [!NOTE]
 > 在缺少格式化文件的情况下，如果 **bcp** 命令指定了数据格式开关（ **-n**、 **-c**、 **-w**或 **-N**），或者 BULK INSERT 操作指定了 DATAFILETYPE 选项，那么指定的数据格式将用作解释数据文件字段的默认方法。
 
-## <a name="RelatedTasks"></a> 相关任务
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务
 
 - [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)
 - [使用格式化文件批量导入数据 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)

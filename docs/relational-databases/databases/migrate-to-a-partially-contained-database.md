@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908092"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -33,7 +33,7 @@ ms.locfileid: "72908092"
   
 -   [将用户迁移为包含的数据库用户](#users)  
   
-##  <a name="prepare"></a> 准备迁移数据库  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> 准备迁移数据库  
  在考虑将数据库迁移到部分包含的数据库模型时，请复查以下各项。  
   
 -   您应该了解部分包含的数据库模型。 有关详细信息，请参阅 [Contained Databases](../../relational-databases/databases/contained-databases.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "72908092"
   
 -   监视 **database_uncontained_usage** XEvent 以了解何时使用非包含的功能。  
   
-##  <a name="enable"></a> 启用包含的数据库  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> 启用包含的数据库  
  必须先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例上启用包含的数据库，然后才能创建包含的数据库。  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>使用 Transact-SQL 启用包含的数据库  
@@ -70,7 +70,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="convert"></a> 将数据库转换为部分包含的数据库  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> 将数据库转换为部分包含的数据库  
  通过更改 **CONTAINMENT** 选项可以将数据库转换为包含的数据库。  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>使用 Transact-SQL 将数据库转换为部分包含的数据库  
@@ -92,7 +92,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> 将用户迁移为包含的数据库用户  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> 将用户迁移为包含的数据库用户  
  以下示例将所有基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户迁移到具有密码的包含数据库用户。 该示例不包括未启用的登录名。 必须在包含的数据库中执行该示例。  
   
 ```sql  

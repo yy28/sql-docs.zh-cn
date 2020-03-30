@@ -17,10 +17,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68133270"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -150,7 +150,7 @@ ms.locfileid: "68133270"
 ### <a name="data-type-mapping-considerations"></a>数据类型映射注意事项  
  复制到 DB2 订阅服务器时，请考虑下列数据类型映射问题：  
   
--   在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] char、varchar、binary 和 varbinary 分别映射到 DB2 CHAR、VARCHAR、CHAR FOR BIT DATA 和 VARCHAR FOR BIT DATA 时，复制会将 DB2 数据类型的长度设置为与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类型的长度相同     。  
+-   在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] char、varchar、binary 和 varbinary 分别映射到 DB2 CHAR、VARCHAR、CHAR FOR BIT DATA 和 VARCHAR FOR BIT DATA 时，复制会将 DB2 数据类型的长度设置为与  **类型的长度相同**    [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
      这样，只要 DB2 页大小约束足够大，能容纳最大行大小，就可以在订阅服务器上成功创建已生成的表。 请确保用于访问 DB2 数据库的登录帐户具有访问表空间的权限，这些表空间具有足够大小可以存放向 DB2 复制的表。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "68133270"
   
      如果对于某个大型对象列没有适当的映射，请考虑对项目使用列筛选，以避免复制该列。 有关详细信息，请参阅[筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)。  
   
--   在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nchar 和 nvarchar 复制到 DB2 的 CHAR 和 VARCHAR 时，复制为 DB2 类型使用的说明符长度与为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类型相同   。 但是，数据类型长度对于生成的 DB2 表而言可能太小。  
+-   在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nchar 和 nvarchar 复制到 DB2 的 CHAR 和 VARCHAR 时，复制为 DB2 类型使用的说明符长度与为  **类型相同**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 但是，数据类型长度对于生成的 DB2 表而言可能太小。  
   
      在某些 DB2 环境中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] char 数据项并不限于单字节字符，对于 CHAR 或 VARCHAR 项的长度，必须考虑到这一点  。 如果需要，还必须考虑到“移入”  字符和“移出”  字符。 如果要复制包含 **nchar** 和 **nvarchar** 列的表，您可能需要在自定义创建脚本中为数据类型指定更大的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
   

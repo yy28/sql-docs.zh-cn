@@ -20,10 +20,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287871"
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
@@ -129,7 +129,7 @@ ms.locfileid: "71287871"
   
  如果包名称为 EmailRowCountPP，曾经在 2005 年 3 月 4 日运行，运行的持续时间为 9 秒钟，则该表达式的求值结果为下面的字符串。  
   
- PExpression-->Package:(EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>电子邮件正文的属性表达式  
  下面的属性表达式可用于设置发送邮件任务的 MessageSource 属性。 该表达式使用字符串文字、用户定义的变量和串联 (+) 运算符的组合。 用户定义变量命名为 `nasdaqrawrows`、 `nyserawrows`和 `amexrawrows`。 字符串“\n”指明是一个回车符。  
@@ -140,11 +140,11 @@ ms.locfileid: "71287871"
   
  Rows Processed:  
   
- NASDAQ:7058  
+ NASDAQ: 7058  
   
- NYSE:3528  
+ NYSE: 3528  
   
- AMEX:1102  
+ AMEX: 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>执行进程任务的可执行文件属性的属性表达式  
  下面的属性表达式可以用于设置执行进程任务的 Executable 属性。 该表达式使用字符串文字、运算符和函数的组合。 该表达式使用 DATEPART 和 GETDATE 函数以及条件运算符。  
@@ -159,7 +159,7 @@ ms.locfileid: "71287871"
  `@[User::myfilenamefull]`  
   
 > [!NOTE]  
->  连接管理器的属性表达式只能使用“属性”窗口进行访问。 若要查看连接管理器的属性，必须在“属性”窗口打开时在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“连接管理器”区域中选择连接管理器，或右键单击连接管理器并选择“属性”。    
+>  连接管理器的属性表达式只能使用“属性”窗口进行访问。 若要查看连接管理器的属性，必须在“属性”窗口打开时在  **设计器的“连接管理器”区域中选择连接管理器，或右键单击连接管理器并选择“属性”。** [!INCLUDE[ssIS](../../includes/ssis-md.md)]   
   
 ### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>文本文件日志提供程序的 ConfigString 属性的属性表达式  
  下面的属性表达式可以用于设置文本文件日志提供程序的 ConfigString 属性。 该表达式使用一个用户定义变量 `varConfigString`，该变量包含要使用的文件连接管理器的名称。 文件连接管理器指定将在其中写入日志项的文本文件的路径。  
@@ -167,7 +167,7 @@ ms.locfileid: "71287871"
  `@[User::varConfigString]`  
   
 > [!NOTE]  
->  日志提供程序的属性表达式只能通过“属性”窗口访问。 若要查看某日志提供程序的属性，必须在“属性”窗口打开的情况下在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“包资源管理器”选项卡中选择相应的日志提供程序；或者在包资源管理器中右键单击该日志提供程序，再单击“属性”。    
+>  日志提供程序的属性表达式只能通过“属性”窗口访问。 若要查看某日志提供程序的属性，必须在“属性”窗口打开的情况下在  **设计器的“包资源管理器”选项卡中选择相应的日志提供程序；或者在包资源管理器中右键单击该日志提供程序，再单击“属性”。** [!INCLUDE[ssIS](../../includes/ssis-md.md)]   
   
 ## <a name="external-resources"></a>外部资源  
   

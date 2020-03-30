@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 9d44a77a95b8b6a46fbc37a21a8abbd5ee75dfce
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288821"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>修改 SQL 复制的快照初始化选项 
@@ -28,11 +28,11 @@ ms.locfileid: "79288821"
 [使用快照初始化订阅](initialize-a-subscription-with-a-snapshot.md)时有许多可用选项。
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>指定快照格式 (SQL Server Management Studio)
-  在“发布属性 - \<发布>”  对话框的“快照”  页上指定快照格式。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  在“发布属性 - **发布>”** **对话框的“快照”\<** 页上指定快照格式。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-specify-snapshot-format"></a>指定快照格式  
   
-1.  在“发布属性 - \<发布>”  对话框的“快照”  页上，选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”  或“字符 - 如果发布服务器或订阅服务器没有运行 SQL Server，则需要此项”  。  
+1.  在“发布属性 - **发布>”** **对话框的“快照”\<** 页上，选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”  或“字符 - 如果发布服务器或订阅服务器没有运行 SQL Server，则需要此项”  。  
   
     > [!NOTE]  
     >  建议选择本机格式，除非此发布必须支持对 SQL Server Compact 数据库或非 SQL Server 数据库的订阅。  
@@ -44,12 +44,12 @@ ms.locfileid: "79288821"
 ### <a name="default-snapshot-location"></a>默认快照位置
 可以在配置分发向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)。 如果在未配置为分发服务器的服务器上创建发布，请在新建发布向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[创建发布](../../relational-databases/replication/publish/create-a-publication.md)。  
   
- 在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，修改默认快照位置。   有关详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在“发布属性 - \<发布>”对话框中设置每个发布的快照文件夹。  有关详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“分发服务器属性 - **分发服务器>”对话框的“发布服务器”页上，修改默认快照位置。** **\<** 有关详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在“发布属性 - **发布>”对话框中设置每个发布的快照文件夹。\<** 有关详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-modify-the-default-snapshot-location"></a>修改默认快照位置  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，单击要更改其默认快照位置的发布服务器的属性按钮 (…)。       
-2.  在“分发服务器属性 - \<分发服务器>”对话框中，为“默认快照文件夹”属性输入一个值。    
+1.  在“分发服务器属性 - **分发服务器>”对话框的“发布服务器”页上，单击要更改其默认快照位置的发布服务器的属性按钮 (…)。** **\<**     
+2.  在“分发服务器属性 - **分发服务器>”对话框中，为“默认快照文件夹”属性输入一个值。\<**   
   
     > [!NOTE]  
     >  快照代理必须对指定的目录具有写权限，而分发代理或合并代理必须具有读权限。 如果使用的是请求订阅，则必须指定一个共享目录作为通用命名约定 (UNC) 路径，如 \\\computername\snapshot。 有关详细信息，请参阅[保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。    
@@ -70,7 +70,7 @@ ms.locfileid: "79288821"
 >  不要同时使用 WebSync 和备用快照文件夹位置。  
   
 #### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-1.  在“发布属性 - \<发布>”  对话框的“快照”  页上：  
+1.  在“发布属性 - **发布>”** **对话框的“快照”\<** 页上：  
   
     1.  选择 **“将文件放入下列文件夹”** ，然后单击 **“浏览”** 定位到某个目录，或者输入用于存储快照文件的目录的路径。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "79288821"
 >  在某些情况下，压缩的快照可以提高通过网络传输快照文件的性能。 但是，如果压缩快照，则在生成快照文件时需要通过快照代理进行额外处理，而在应用快照文件时需要通过分发代理或合并代理进行额外处理。 在某些情况下，这可能会降低生成快照的速度，并增加应用快照所需的时间。 此外，如果发生网络故障，压缩的快照将无法恢复，因此不适用于不可靠的网络。 在网络中使用压缩的快照时，应仔细权衡这些利弊。  
   
 ### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-1.  在“发布属性 - \<发布>”  对话框的“快照”  页上：  
+1.  在“发布属性 - **发布>”** **对话框的“快照”\<** 页上：  
   
     1.  选择 **“将文件放入下列文件夹”** ，然后单击 **“浏览”** 定位到某个目录，或者输入用于存储快照文件的目录的路径。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "79288821"
 
 ### <a name="execute-a-script"></a>执行脚本 
 
-1.  在“发布属性 - \<发布>”  对话框的“快照”  页上：    
+1.  在“发布属性 - **发布>”** **对话框的“快照”\<** 页上：    
     -   若要指定在应用快照之前执行的脚本，请单击 **“浏览”** 导航到该脚本，或者在 **“应用快照之前执行此脚本”** 文本框中输入该脚本的路径。  
   
         > [!NOTE]  

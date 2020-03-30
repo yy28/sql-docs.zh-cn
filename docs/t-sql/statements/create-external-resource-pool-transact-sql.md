@@ -23,10 +23,10 @@ ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c55041d7b461406305a7b3a17c0e274270b7c5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68893895"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68893895"
 创建用于定义外部进程资源的外部池。 资源池表示数据库引擎实例的物理资源（内存和 CPU）的子集。 数据库管理员可以使用资源调控器在多个资源池之间分发服务器资源，最多可为 64 个池。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-对于 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
+对于 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 中的[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -76,9 +76,9 @@ MAX_CPU_PERCENT =value
 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} 将外部资源池附加到特定 CPU。
 
-AFFINITY CPU = ( \<CPU_range_spec> ) 将外部资源池映射到由给定 CPU_ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU   。
+AFFINITY CPU = ( **CPU_range_spec> ) 将外部资源池映射到由给定 CPU_ID 标识的**  CPU\<  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
-使用 AFFINITY NUMANODE = ( \<NUMA_node_range_spec> ) 时，会将外部资源池关联到对应于给定 NUMA 节点或节点范围的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU   。 
+使用 AFFINITY NUMANODE = ( **NUMA_node_range_spec> ) 时，会将外部资源池关联到对应于给定 NUMA 节点或节点范围的**  物理 CPU\<  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 
 
 MAX_MEMORY_PERCENT =value   
 指定此外部资源池中的请求可使用的总服务器内存量。 value 是一个整数  。 value 的允许范围是 1 到 100  。
@@ -88,7 +88,7 @@ MAX_PROCESSES =value
 
 ## <a name="remarks"></a>备注
 
-执行 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 语句时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]实现资源池。
+执行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ALTER RESOURCE GOVERNOR RECONFIGURE[ 语句时，](../../t-sql/statements/alter-resource-governor-transact-sql.md)实现资源池。
 
 有关资源池的常规信息，请参阅 [Resource Governor 资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、[sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 和 [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)。
 

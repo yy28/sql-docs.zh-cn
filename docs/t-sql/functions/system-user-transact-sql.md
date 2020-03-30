@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76315617"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
@@ -54,7 +54,7 @@ SYSTEM_USER
   
  如果用户名与登录名不同，则 SYSTEM_USER 返回登录名。  
   
- 如果当前用户使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回如下形式的 Windows 登录标识名称：DOMAIN\\user_login_name   。 但是，如果当前用户使用 SQL Server 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录标识名称，例如为作为  `WillisJo` 登录的用户返回 `WillisJo`。  
+ 如果当前用户使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回如下形式的 Windows 登录标识名称：DOMAIN*user_login_name*\\  。 但是，如果当前用户使用 SQL Server 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录标识名称，例如为作为  `WillisJo` 登录的用户返回 `WillisJo`。  
   
  SYSTEM_USER 返回当前执行的上下文的名称。 如果已使用 EXECUTE AS 语句进行上下文切换，则 SYSTEM_USER 将返回模拟的上下文的名称。  
 
@@ -129,9 +129,9 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C:使用 SYSTEM_USER 返回当前系统用户名  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C. 使用 SYSTEM_USER 返回当前系统用户名  
  以下示例返回 `SYSTEM_USER` 的当前值。  
   
 ```  

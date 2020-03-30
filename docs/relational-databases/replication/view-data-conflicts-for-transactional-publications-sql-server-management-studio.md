@@ -16,10 +16,10 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9b385de9eee9fd1073c2161d0db57fd0287f959c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321864"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>查看事务发布的数据冲突 (SQL Server Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "75321864"
   
     -   为 @conflict_retention sp_addpublication [的](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)参数指定保持值。  
   
-    -   将 **\@property** 参数的值指定为 @property ，并为 @value sp_addpublication [的](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。  
+    -   将 **@property** 参数的值指定为 @property ，并为 @value sp_addpublication [的](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。  
   
 ### <a name="to-view-conflicts"></a>查看冲突  
   

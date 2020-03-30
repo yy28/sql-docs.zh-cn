@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056204"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
@@ -29,7 +29,7 @@ ms.locfileid: "74056204"
   
 全文搜索同义词库是一个 XML 文本文件。
   
-##  <a name="tasks"></a>同义词库包含哪些内容  
+##  <a name="whats-in-a-thesaurus"></a><a name="tasks"></a>同义词库包含哪些内容  
  必须先为给定语言定义同义词库映射（即同义词），才能使全文搜索查询可以查找该语言的同义词。 必须手动配置每个同义词库以定义下面各项：  
   
 -   扩展集  
@@ -46,10 +46,10 @@ ms.locfileid: "74056204"
   
      对于给定同义词库，所有搜索模式要么区分标注字符，要么不区分标注字符，如波形符 ( **~** )、锐音符 ( **&acute;** ) 或元音变音符 ( **&uml;** )（即要么区分重音  ，要么不区分重音  ）。 例如，假设你在全文查询中指定要将“caf&eacute;”模式替换为其他模式。 如果同义词库不区分重音，全文搜索会替换“caf&eacute;”和“cafe”模式。 如果同义词库区分重音，全文搜索仅替换“caf&eacute;”模式。 默认情况下，同义词库不区分重音。  
   
-##  <a name="initial_thesaurus_files"></a>默认同义词库文件
+##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a>默认同义词库文件
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一组 XML 同义词库文件，分别对应于每种支持的语言。 这些文件实际上是空的。 它们仅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同义词库通用的顶级 XML 结构以及注释掉的示例同义词库。  
   
-##  <a name="location"></a>同义词库文件的位置  
+##  <a name="location-of-thesaurus-files"></a><a name="location"></a>同义词库文件的位置  
  同义词库文件的默认位置为：  
   
      <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
@@ -79,12 +79,12 @@ ms.locfileid: "74056204"
   
  全局同义词库文件对应于 LCID 为 0 的非特定语言。 此值只能由管理员更改。  
 
-##  <a name="how_queries_use_tf"></a>全文查询如何使用同义词库  
+##  <a name="how-full-text-queries-use-the-thesaurus"></a><a name="how_queries_use_tf"></a>全文查询如何使用同义词库  
 同义词库查询同时使用特定于语言的同义词库和全局同义词库。
 1.  首先，查询查找特定于语言的文件，并加载该文件以进行处理（除非已加载了该文件）。 该查询将进行扩展以包含同义词库文件中的扩展集和替换集规则所指定的特定于语言的同义词。 
 2.  然后，对全局同义词库重复执行这些步骤。 但是，如果字词已经是特定于语言的同义词库文件中的匹配项的一部分，则不会在全局同义词库中对该字词再次进行匹配。  
 
-##  <a name="structure"></a>同义词库文件的结构  
+##  <a name="structure-of-a-thesaurus-file"></a><a name="structure"></a>同义词库文件的结构  
  每个同义词库文件都定义了一个 ID 为 `Microsoft Search Thesaurus` 的 XML 容器，以及一个包含示例同义词库的注释 `<!--`...`-->`。 同义词库是在 `<thesaurus>` 元素中定义的，其中包含定义标注字符设置、扩展集和替换集的子元素的示例。
 
 典型的空同义词库文件包含以下 XML 文本：  
@@ -115,7 +115,7 @@ ms.locfileid: "74056204"
 </XML>  
 ```
 
-### <a name="expansion"></a> XML structure of an expansion set  
+### <a name="xml-structure-of-an-expansion-set"></a><a name="expansion"></a> XML structure of an expansion set  
   
  每个扩展集包含在 `<expansion>` 元素中。 在此元素中，可以在 `<sub>` 元素中指定一个或多个替换项。 在扩展集中，可以指定一组互为同义词的替换项。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "74056204"
 </expansion>  
 ```  
   
-### <a name="replacement"></a> XML structure of a replacement set  
+### <a name="xml-structure-of-a-replacement-set"></a><a name="replacement"></a> XML structure of a replacement set  
   
 每个替换集包含在 `<replacement>` 元素中。 在此元素中，可以在 `<pat>` 元素中指定一个或多个模式，还可以在 `<sub>` 元素中指定零个或多个替换项，每个替换项对应于一个同义词。 可以指定要由替换集替换的模式。 模式和替换项可以包含一个或一组单词。 如果没有为某个模式指定任何替换项，则会导致从用户查询中删除该模式。  
   
@@ -178,7 +178,7 @@ and
 > [!NOTE]  
 >  只能在文件中应用一次此设置，它适用于文件中的所有搜索模式。 不能为各个模式单独指定此设置。  
 
-##  <a name="editing"></a>编辑同义词库文件  
+##  <a name="edit-a-thesaurus-file"></a><a name="editing"></a>编辑同义词库文件  
 可通过编辑给定语言的同义词库文件（XML 文件）来配置该语言的同义词库。 在安装过程中，将安装空的同义词库文件，它们仅包含 `<xml>` 容器和注释掉的示例 `<thesaurus`> 元素。 为了使查找同义词的全文搜索查询正常工作，必须创建一个定义一组同义词的实际 `<thesaurus`> 元素。 可以定义两种形式的同义词，即扩展集和替换集。  
 
 ### <a name="edit-a-thesaurus-file"></a>编辑同义词库文件  

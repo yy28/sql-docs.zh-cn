@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412657"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>内存优化表的哈希索引疑难解答
@@ -114,7 +114,7 @@ ORDER BY [table], [index];
 1. 创建包含一些哈希索引的内存优化表。  
 2. 在表中填充数千行。  
     a. 取模运算符用于配置 StatusCode 列中的值重复率。  
-    b. 此循环在大约 1 分钟内插入 262,144 行。  
+    b.保留“数据库类型”设置，即设置为“共享”。 此循环在大约 1 分钟内插入 262,144 行。  
 3. 列显一条消息，要求你从 **sys.dm_db_xtp_hash_index_stats**运行上述 SELECT。  
 
 ```sql
@@ -232,6 +232,6 @@ OLTP 工作负载注重每个行。 全表扫描通常不是影响 OLTP 工作�
   - 完全扫描哈希索引所需的时间增加。  
   
 
-##  <a name="Additional_Reading"></a> 补充阅读  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 补充阅读  
  [内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)  

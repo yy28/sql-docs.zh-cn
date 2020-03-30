@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296881"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
@@ -58,7 +58,7 @@ ms.locfileid: "71296881"
   
  **“正在运行的包”** 文件夹不包含子文件夹，也不可扩展。  
   
- 默认情况下，“已存储的包”  文件夹包含两个文件夹：“文件系统”  和 MSDB  。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
+ 默认情况下， **“已存储的包”** 文件夹包含两个文件夹： **“文件系统”** 和 **MSDB**。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
   
  若要查看包存储区中的包列表，必须打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "71296881"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”** 。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器   。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击“**浏览更多...>”，并找到要使用的服务器** **\<** 。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”** 。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "71296881"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”** 。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器   。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击“**浏览更多...>”，并找到要使用的服务器** **\<** 。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”** 。  
   

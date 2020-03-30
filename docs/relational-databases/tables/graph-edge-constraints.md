@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70873880"
 ---
 # <a name="edge-constraints"></a>边缘约束
@@ -29,7 +29,7 @@ ms.locfileid: "70873880"
 
 边缘约束可用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 图形数据库中的边缘表强制执行数据完整性和特定语义。
 
-## <a name="Connection"></a> 边缘约束
+## <a name="edge-constraints"></a><a name="Connection"></a> 边缘约束
 
 在图形功能的第一个版本中，边缘表没有对边缘的终结点强制执行任何操作。 也就是说，无论何种类型，图形数据库中的边缘都可以将任何节点连接到任何其他节点。
 

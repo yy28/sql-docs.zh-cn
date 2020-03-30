@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251235"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>事务 - AlwaysOn 可用性组和数据库镜像
@@ -51,7 +51,7 @@ SQL Server 2017 支持用于可用性组中数据库的分布式事务。 包括
   
 数据库镜像也不支持跨数据库事务。  
   
-##  <a name="dtcsupport"></a> SSQL Server 2016 SP1 及较早版本：支持分布式事务  
+##  <a name="sql-server-2016-sp1-and-before-support-for-distributed-transactions"></a><a name="dtcsupport"></a> SSQL Server 2016 SP1 及较早版本：支持分布式事务  
 当数据库由不同的 SQL Server 实例托管时，可用性组支持分布式事务。 它也适用于 SQL Server 实例和其他兼容 DTC 的服务器之间的分布式事务。  
  
 Microsoft 分布式事务处理协调器（MSDTC 或 DTC）是一项 Windows 服务，用于为分布式系统提供事务基础结构。 MSDTC 允许客户端应用程序在一个事务中包含多个数据源，然后跨该事务包含的所有服务器提交该事务。 例如，可以使用 MSDTC 来协调跨不同服务器上多个数据库的事务。

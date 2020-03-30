@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295723"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>以编程方式管理包和文件夹
@@ -28,7 +28,7 @@ ms.locfileid: "71295723"
 
 <a name="top"></a>以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，你可能希望确定个别包或文件夹是否存在，或管理用于存储包的文件夹。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。    
     
-##  <a name="exists"></a>确定包或文件夹是否存在    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a>确定包或文件夹是否存在    
  若要以编程方式确定已保存的包是否存在，请先调用以下方法之一，然后尝试加载和运行该包：    
     
 |存储位置|调用的方法|    
@@ -45,10 +45,10 @@ ms.locfileid: "71295723"
     
  [返回页首](#top)    
     
-##  <a name="managing"></a>管理包和文件夹    
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a>管理包和文件夹    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供其他用于管理包和存储包的文件夹的方法。    
     
-###  <a name="managing_rempkg"></a>删除包    
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a>删除包    
  若要以编程方式删除已保存的包，请调用以下方法之一：    
     
 |存储位置|调用的方法|    
@@ -58,7 +58,7 @@ ms.locfileid: "71295723"
     
  [返回页首](#top)    
     
-###  <a name="managing_create"></a>创建文件夹    
+###  <a name="creating-a-folder"></a><a name="managing_create"></a>创建文件夹    
  若要以编程方式创建存储文件夹，请调用以下方法之一：    
     
 |存储位置|调用的方法|    
@@ -68,7 +68,7 @@ ms.locfileid: "71295723"
     
  [返回页首](#top)    
     
-###  <a name="managing_remfldr"></a>删除文件夹    
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a>删除文件夹    
  若要以编程方式删除存储文件夹，请调用以下方法之一：    
     
 |存储位置|调用的方法|    
@@ -78,7 +78,7 @@ ms.locfileid: "71295723"
     
  [返回页首](#top)    
     
-###  <a name="managing_rename"></a>重命名文件夹    
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a>重命名文件夹    
  若要以编程方式重命名存储文件夹，请调用以下方法之一：    
     
 |存储位置|调用的方法|    

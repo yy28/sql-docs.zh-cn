@@ -13,10 +13,10 @@ ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f5e9e831677a2779c908a0ec4b3afa5b27f7fff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68058488"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX（选择性 XML 索引）
@@ -65,11 +65,11 @@ xmlnamespace_uri AS xmlnamespace_prefix
 )  
 ```  
   
-##  <a name="Arguments"></a> 参数  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  index_name   
  要创建的新索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
-  \<table_object> 是包含要建立索引的 XML 列的表。 您可以使用下列格式：  
+ *\<* table_object> 是包含要建立索引的 XML 列的表。 您可以使用下列格式：  
   
 -   `database_name.schema_name.table_name`  
   
@@ -83,7 +83,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  USING XML INDEX sxi_index_name   
  现有选择性 XML 索引的名称。  
   
- FOR ( \<xquery_or_sql_values_path> ) 是要在其上创建辅助选择性 XML 索引的已建立索引的路径名称   。 要建立索引的路径是从 CREATE SELECTIVE XML INDEX 语句分配的名称。 有关详细信息，请参阅 [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。  
+ FOR ( **xquery_or_sql_values_path> ) 是要在其上创建辅助选择性 XML 索引的已建立索引的路径名称**\<  。 要建立索引的路径是从 CREATE SELECTIVE XML INDEX 语句分配的名称。 有关详细信息，请参阅 [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。  
   
  有关通过 \<index_options> 获取索引选项的信息，请参阅 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   

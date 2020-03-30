@@ -23,10 +23,10 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298505"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
@@ -56,7 +56,7 @@ ms.locfileid: "71298505"
   
  当多平面文件连接管理器引用多个文件时，文件的路径由竖线 (|) 分隔。 连接管理器的 **ConnectionString** 属性的格式如下：  
   
- \<路径>|\<路径>    
+ \<路径  路径>|\<  >  
   
  也可以使用通配符来指定多个文件。 例如，若要引用 C 驱动器上的所有文本文件，可以将 **ConnectionString** 属性的值设置为 C:\\\*.txt。  
   

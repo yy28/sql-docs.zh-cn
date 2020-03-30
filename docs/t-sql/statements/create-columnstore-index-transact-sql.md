@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729929"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -292,10 +292,10 @@ filegroup_name
   
 在此上下文中，“default”一词不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示     。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="GenRemarks"></a> 一般备注  
+##  <a name="general-remarks"></a><a name="GenRemarks"></a> 一般备注  
 可以为临时表创建列存储索引。 在删除表或结束会话时，也将删除索引。  
 
 可以在 Azure SQL 数据仓库支持的任何数据类型的列（字符串列除外）上创建有序的聚集列存储索引。  
@@ -331,7 +331,7 @@ filegroup_name
   
  有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。 
   
-##  <a name="LimitRest"></a> 限制和局限  
+##  <a name="limitations-and-restrictions"></a><a name="LimitRest"></a> 限制和局限  
 
 **列存储索引中的每一列都必须是以下常见业务数据类型之一：** 
 -   datetimeoffset [ ( n ) ]   
@@ -406,7 +406,7 @@ filegroup_name
   
  有关列存储索引的性能优势和限制的信息，请参阅[列存储索引概述](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
-##  <a name="Metadata"></a> 元数据  
+##  <a name="metadata"></a><a name="Metadata"></a> 元数据  
  列存储索引中的所有列在元数据中作为包含性列存储。 列存储索引中没有任何键列。 这些系统视图提供有关列存储索引的信息。  
   
 -   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
@@ -416,7 +416,7 @@ filegroup_name
 -   [sys.column_store_dictionaries (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a> 将行存储表转换为列存储的示例  
+##  <a name="examples-for-converting-a-rowstore-table-to-columnstore"></a><a name="convert"></a> 将行存储表转换为列存储的示例  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. 将堆转换为聚集列存储索引  
  此示例将一个表作为堆创建，然后将其转换为名为 cci_Simple 的聚集列存储索引。 这会将整个表的存储从行存储转换为列存储。  
@@ -601,7 +601,7 @@ REBUILD PARTITION = ALL
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-##  <a name="nonclustered"></a> 非聚集列存储索引示例  
+##  <a name="examples-for-nonclustered-columnstore-indexes"></a><a name="nonclustered"></a> 非聚集列存储索引示例  
   
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. 对行存储表创建列存储索引作为辅助索引  
  此示例会对行存储表创建非聚集列存储索引。 在这种情况下只能创建一个列存储索引。 列存储索引需要额外的存储空间，因为它包含行存储表中数据的副本。 此示例会创建一个简单表和聚集索引，然后演示创建非聚集列存储索引的语法。  
@@ -651,7 +651,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
     WHERE EndDate IS NOT NULL;  
 ```  
   
-###  <a name="ncDML"></a> D. 更改非聚集列存储索引中的数据  
+###  <a name="d-change-the-data-in-a-nonclustered-columnstore-index"></a><a name="ncDML"></a> D. 更改非聚集列存储索引中的数据  
    适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。
   
  在您在表上创建非聚集列存储索引后，不能直接在该表中修改数据。 具有 INSERT、UPDATE、DELETE 或 MERGE 的查询会失败并且返回错误消息。 若要添加或修改表中的数据，可以执行以下操作之一：  
@@ -668,7 +668,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   将分区从具有列存储索引的表切换到一个空的临时表中。 如果在临时表上有某个列存储索引，则禁用该列存储索引。 执行任何更新。 生成（或重新生成）列存储索引。 将临时表切换回主表的（现在为空的）分区中。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. 将聚集索引更改为聚集列存储索引  
  通过使用 DROP_EXISTING = ON 的 CREATE CLUSTERED COLUMNSTORE INDEX 语句，可以：  

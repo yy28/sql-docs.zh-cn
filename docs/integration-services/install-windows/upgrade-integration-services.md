@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262795"
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
@@ -69,7 +69,7 @@ ms.locfileid: "68262795"
   
  升级时，可以同时升级 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，也可以只升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，或只升级 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如果仅升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，则 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本仍将正常运行，但是不具有 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的功能。 如果仅升级 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，则 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 完全可以正常运行，但只能将包存储在文件系统中，除非其他计算机上有可用的 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] 实例。  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>将 Integration Services 和数据库引擎同时升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>将 Integration Services 和数据库引擎同时升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  本节介绍执行符合以下条件的升级的影响：  
   
 -   将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例同时升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -129,7 +129,7 @@ ms.locfileid: "68262795"
   
 -   默认情况下，在升级安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 被配置为将与运行包相关的事件记录到应用程序事件日志中。 使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的数据收集器功能时，此设置可能生成太多事件日志条目。 记录的事件包括 EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要停止将这两个事件记录到应用程序事件日志，请打开注册表进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 1 更改为 0。  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>仅将数据库引擎升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>仅将数据库引擎升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  本节介绍执行符合以下条件的升级的影响：  
   
 -   仅升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。 也就是说， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例现在为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的实例，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 实例和客户端工具均来自于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。  

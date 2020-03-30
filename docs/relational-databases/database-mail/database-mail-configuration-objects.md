@@ -33,28 +33,28 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134432"
 ---
 # <a name="database-mail-configuration-objects"></a>数据库邮件配置对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  数据库邮件有两个配置对象：数据库配置对象提供了一种方法，用于配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
+  数据库邮件具有两种配置对象：数据库配置对象提供了一种方法，您可以使用此方法配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
   
 -   数据库邮件帐户  
   
 -   数据库邮件配置文件  
   
   
-##  <a name="VisualElement"></a> 数据库邮件配置对象关系  
+##  <a name="database-mail-configuration-object-relationship"></a><a name="VisualElement"></a> 数据库邮件配置对象关系  
  图中显示了两个配置文件、三个帐户和三个用户。 用户 1 可以访问配置文件 1，该配置文件使用帐户 1 和帐户 2。 用户 3 可以访问配置文件 2，该配置文件使用帐户 2 和帐户 3。 用户 2 既可以访问配置文件 1，也可以访问配置文件 2。  
   
  ![用户、配置文件和帐户的关系](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "用户、配置文件和帐户的关系")  
   
   
-##  <a name="DBAccount"></a> 数据库邮件帐户  
+##  <a name="database-mail-account"></a><a name="DBAccount"></a> 数据库邮件帐户  
  数据库邮件帐户包含由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于向 SMTP 服务器发送电子邮件的信息。 每个帐户均包含一个电子邮件服务器的信息。  
   
  数据库邮件与 SMTP 服务器进行通信时支持三种身份验证方法：  
@@ -94,7 +94,7 @@ ms.locfileid: "68134432"
  使用数据库邮件配置向导可以方便地创建和管理帐户。 还可以使用 **msdb** 中的配置存储过程来创建和管理帐户。  
   
   
-##  <a name="DBProfile"></a> 数据库邮件配置文件  
+##  <a name="database-mail-profile"></a><a name="DBProfile"></a> 数据库邮件配置文件  
  数据库邮件配置文件是相关数据库邮件帐户的有序集合。 配置文件将由使用数据库邮件（而不是直接使用帐户）来发送电子邮件的应用程序指定。 将单个电子邮件服务器的信息与应用程序使用的对象分隔可以提高灵活性和可靠性：配置文件提供自动故障转移，因此如果一个电子邮件服务器停止响应，数据库邮件可以自动将邮件发送到另一个电子邮件服务器。 数据库管理员可以添加、删除或重新配置帐户，而不需要更改应用程序代码或作业步骤。  
   
  配置文件还有助于数据库管理员控制对电子邮件的访问。 若要发送数据库邮件，必须具有 **DatabaseMailUserRole** 中的成员身份。 配置文件使管理员可以更加灵活地控制谁来发送邮件以及使用哪些帐户。  
@@ -110,7 +110,7 @@ ms.locfileid: "68134432"
  如果存在具有相同序列号的多个帐户，则数据库邮件将仅使用其中一个帐户发送给定的电子邮件。 在此情况下，数据库邮件不能保证使用具有该序列号的特定帐户，也不能保证使用同一个帐户发送各个邮件。  
   
   
-##  <a name="RelatedTasks"></a> 数据库邮件配置任务  
+##  <a name="database-mail-configuration-tasks"></a><a name="RelatedTasks"></a> 数据库邮件配置任务  
  下表介绍了数据库邮件配置任务。  
   
 |配置任务|主题链接|  
@@ -121,7 +121,7 @@ ms.locfileid: "68134432"
 |介绍如何使用模板创建数据库邮件配置脚本||  
   
   
-##  <a name="Add_Tasks"></a> 附加数据库配置任务（系统存储过程）  
+##  <a name="additional-database-configuration-tasks-system-stored-procedures"></a><a name="Add_Tasks"></a> 附加数据库配置任务（系统存储过程）  
  数据库邮件配置存储过程位于 **msdb** 数据库中。  
   
  以下几个表列出了用于配置和管理数据库邮件的存储过程。  
@@ -165,7 +165,7 @@ ms.locfileid: "68134432"
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|停止数据库邮件外部程序和关联的 SQL Service Broker 队列。|  
 |[sysmail_help_status_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql.md)|指示数据库邮件是否已启动。|  
   
-##  <a name="RelatedContent"></a> 其他参考  
+##  <a name="additional-references"></a><a name="RelatedContent"></a> 其他参考  
   
 -   [数据库邮件日志和审核](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   

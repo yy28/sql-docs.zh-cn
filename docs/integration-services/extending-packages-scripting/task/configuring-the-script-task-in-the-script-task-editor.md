@@ -17,10 +17,10 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9ac35433b8e197da585f18a6cf87328d493c9bda
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286047"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在脚本任务编辑器中配置脚本任务
@@ -45,7 +45,7 @@ ms.locfileid: "71286047"
  若要设置脚本任务和脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“ScriptLanguage”属性    。 有关详细信息，请参阅 [General Page](../../general-page-of-integration-services-designers-options.md)。  
   
 ### <a name="entrypoint-property"></a>EntryPoint 属性  
- EntryPoint 属性对 VSTA 项目中的 ScriptMain 类指定一种方法，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时会将该方法作为脚本任务代码的入口点来调用   。 ScriptMain  类是脚本模板生成的默认类。  
+ EntryPoint 属性对 VSTA 项目中的 ScriptMain 类指定一种方法， **运行时会将该方法作为脚本任务代码的入口点来调用**  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]。 ScriptMain  类是脚本模板生成的默认类。  
   
  若要更改 VSTA 项目中方法的名称，则必须更改 **EntryPoint** 属性的值。  
   

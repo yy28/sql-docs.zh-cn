@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76259385"
 ---
 # <a name="create-primary-keys"></a>创建主键
@@ -26,23 +26,23 @@ ms.locfileid: "76259385"
 
 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义主键。 创建主键会自动创建相应的唯一群集索引、聚集索引或非聚集索引（如果这样指定）。
 
-## <a name="BeforeYouBegin"></a> 开始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前
 
-### <a name="Restrictions"></a> 限制和局限
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限
 
 - 一个表只能包含一个 PRIMARY KEY 约束。
 
 - 在 PRIMARY KEY 约束中定义的所有列都必须定义为 NOT NULL。 如果没有指定为 Null 性，则加入 PRIMARY KEY 约束的所有列的为 Null 性都将设置为 NOT NULL。
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 权限
+#### <a name="permissions"></a><a name="Permissions"></a> 权限
 
 使用主键创建新表需要在数据库中具有 CREATE TABLE 权限，并对在其中创建表的架构具有 ALTER 权限。
 
 在某一现有表中创建主键需要对该表具有 ALTER 权限。
 
-## <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
 ### <a name="to-create-a-primary-key"></a>创建主键
 
@@ -59,7 +59,7 @@ ms.locfileid: "76259385"
 
 如果定义复合键，则主键中列的顺序将与表中显示的列顺序相匹配。 不过，您可以在创建主键之后更改列的顺序。 有关详细信息，请参阅 [修改主键](../../relational-databases/tables/modify-primary-keys.md)。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>在现有表中创建主键
 

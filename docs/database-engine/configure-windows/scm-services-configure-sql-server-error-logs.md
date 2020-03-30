@@ -13,10 +13,10 @@ ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74127479"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 服务 - 配置 SQL Server 错误日志
@@ -40,7 +40,7 @@ ms.locfileid: "74127479"
 
       指定错误日志文件回收前创建的最大存档错误日志文件数。 默认值为 6，不包括当前文件。 该值决定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在回收备份日志前保留的以前的备份日志的数量。
 
-    b. 日志文件大小
+    b.保留“数据库类型”设置，即设置为“共享”。 日志文件大小
 
       **错误日志文件的大小上限（以 KB 为单位）**
 

@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244763"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>别名创建（Azure SQL 数据仓库、并行数据仓库）
@@ -42,7 +42,7 @@ object_source [ AS ] alias
  *alias*  
  表或列所需的临时引用名称。 可以使用任何有效的对象名称。 有关详细信息，请参阅[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的“对象命名规则”。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例展示了一个包含多个联接的查询。 此示例演示了表别名创建和列别名创建。  
   
 -   列别名创建：在此示例中，涉及选择列表中的列的列和表达式都创建了别名。 `SalesTerritoryRegion AS SalesTR` 演示了一个简单的列别名。 `Sum(SalesAmountQuota) AS TotalSales` 演示了  

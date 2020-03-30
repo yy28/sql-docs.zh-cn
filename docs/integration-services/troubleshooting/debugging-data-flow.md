@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295115"
 ---
 # <a name="debugging-data-flow"></a>调试数据流
@@ -172,7 +172,7 @@ order by source_component_name desc
   
 4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”  。  
   
-5.  单击“输入和输出属性”  选项卡并展开“\<组件名称> 错误输出”  ，然后展开“输出列”  。  
+5.  单击“输入和输出属性”  选项卡并展开“**组件名称> 错误输出”\<** ，然后展开“输出列”  。  
   
 6.  单击某列，然后更新其属性。  
   
@@ -183,7 +183,7 @@ order by source_component_name desc
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
 
-## <a name="add_viewer"></a> 将数据查看器添加到数据流
+## <a name="add-a-data-viewer-to-a-data-flow"></a><a name="add_viewer"></a> 将数据查看器添加到数据流
   本主题介绍如何在数据流中添加和配置数据查看器。 数据查看器可以显示在两个数据流组件之间移动的数据。 例如，数据查看器可以显示在数据流中的转换修改数据之前从数据源中提取的数据。  
   
  路径将一个数据流组件的输出连接到另一个组件的输入，以此连接数据流中的组件。  

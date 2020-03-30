@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095104"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>将 SQL Server 审核事件写入安全日志  
@@ -41,17 +41,17 @@ ms.locfileid: "68095104"
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将无法检测系统是否能够在安全日志中记录事件，从而导致可能丢失审核事件  
 -   Box 管理员修复安全日志后，日志记录行为将恢复正常。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员应了解安全日志的本地设置可能会被域策略覆盖。 在这种情况下，域策略可能会覆盖子类别设置 (**auditpol /get /subcategory:"application generated"** )。 这可能会影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在无法检测 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 尝试审核的事件是否将不被记录的情况下记录事件的能力。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须是 Windows 管理员，才能配置这些设置。  
   
-##  <a name="auditpolAccess"></a> 在 Windows 中使用 auditpol 配置审核对象访问设置  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a> 在 Windows 中使用 auditpol 配置审核对象访问设置  
   
 1.  使用管理权限打开命令提示符。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68095104"
   
 3.  关闭命令提示符窗口。  
   
-##  <a name="secpolAccess"></a> 使用 secpol 将生成安全审核权限授予帐户  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> 使用 secpol 将生成安全审核权限授予帐户  
   
 1.  对于任何 Windows 操作系统，在 **“开始”** 菜单上单击 **“运行”** 。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68095104"
   
 9. 重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便启用此设置。  
   
-##  <a name="secpolPermission"></a> 在 Windows 中使用 secpol 配置审核对象访问设置  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> 在 Windows 中使用 secpol 配置审核对象访问设置  
   
 1.  如果操作系统的版本早于 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008，则在 **“开始”** 菜单上单击 **“运行”** 。  
   
