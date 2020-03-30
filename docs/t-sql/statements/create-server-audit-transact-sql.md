@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983003"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
@@ -174,7 +174,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     WITH ( QUEUE_DELAY = 1000,  ON_FAILURE = SHUTDOWN);  
 ```  
   
-###  <a name="ExampleWhere"></a> C. 创建包含 WHERE 子句的服务器审核  
+###  <a name="c-creating-a-server-audit-containing-a-where-clause"></a><a name="ExampleWhere"></a> C. 创建包含 WHERE 子句的服务器审核  
  下面的示例将创建用于一个数据库、架构和用于该示例的两个表。 名为 `DataSchema.SensitiveData` 的表包含保密数据，因此，必须在审核中记录对该表的访问。 名为 `DataSchema.GeneralData` 的表不包含保密数据。 数据库审核规范将审核对 `DataSchema` 架构中所有对象的访问。 将使用 WHERE 子句创建服务器审核，该子句将服务器审核限制为仅限 `SensitiveData` 表。 服务器审核将假定在 `C:\SQLAudit` 中存在一个审核文件夹。  
   
 ```sql  

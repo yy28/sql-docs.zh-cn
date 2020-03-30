@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72689663"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>使用 AlwaysOn 可用性组配置复制
@@ -27,7 +27,7 @@ ms.locfileid: "72689663"
 
   配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制和 AlwaysOn 可用性组涉及七个步骤。 在下面的各节中将详细说明每个步骤。  
   
-##  <a name="step1"></a> 1.配置数据库发布和订阅  
+##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1.配置数据库发布和订阅  
  **配置分发服务器**  
   
  无法使用 SQL Server 2012 和 SQL Server 2014 将分发数据库置于可用性组中。 SQL 2016 及更高版本支持将分发数据库置于可用性组中。 有关详细信息，请参阅[配置可用性组中的分发数据库](../../../relational-databases/replication/configure-distribution-availability-group.md)。
@@ -98,7 +98,7 @@ ms.locfileid: "72689663"
   
 3.  创建复制发布、文章和订阅。 有关如何配置复制的详细信息，请参阅“发布数据和数据库对象”。  
   
-##  <a name="step2"></a> 2.配置 AlwaysOn 可用性组  
+##  <a name="2-configure-the-always-on-availability-group"></a><a name="step2"></a> 2.配置 AlwaysOn 可用性组  
  在目标主副本上，创建包含已发布的（或即将要发布的）数据库作为成员数据库的可用性组。 如果使用可用性组向导，则您可允许该向导最初同步辅助副本数据库，或者您可以使用备份和还原手动执行初始化。  
   
  为可用性组创建一个 DNS 侦听器，复制代理将使用它连接到当前主副本。 指定的侦听器名称将用作原始发布服务器/已发布数据库对的重定向的目标。 例如，如果您使用 DDL 来配置可用性组，则可使用以下代码示例为名为 `MyAG` 的现有可用性组指定可用性组侦听器：  
@@ -111,7 +111,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  有关详细信息，请参阅[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)。  
 
   
-##  <a name="step3"></a> 3.确保对所有次要副本主机配置复制  
+##  <a name="3-ensure-that-all-of-the-secondary-replica-hosts-are-configured-for-replication"></a><a name="step3"></a> 3.确保对所有次要副本主机配置复制  
  在每个辅助副本主机上，确保已将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置为支持复制。 可在每个辅助副本主机上运行以下查询来确定是否安装了复制功能：  
   
 ```  
@@ -124,7 +124,7 @@ SELECT @installed;
   
  如果 \@installed 设置为 0，则必须将复制功能添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中  。  
   
-##  <a name="step4"></a> 4.将辅助副本主机配置为复制发布服务器  
+##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a> 4.将辅助副本主机配置为复制发布服务器  
  辅助副本不能充当复制发布服务器或重新发布服务器，但必须配置复制以便在故障转移之后辅助副本可以接管。 在分发服务器上，为每个辅助副本主机配置分发。 指定在向分发服务器添加原始发布服务器时所指定的相同的分发数据库和工作目录。 如果使用存储过程来配置分发，请使用 **sp_adddistpublisher** 将远程发布服务器与分发服务器关联起来。 如果对原始发布服务器使用了 \@login 和 \@password，则在你添加辅助副本主机作为发布服务器时为每个辅助副本主机指定相同的值   。  
   
 ```  
@@ -151,7 +151,7 @@ EXEC sys.sp_addlinkedserver
     @server = 'MySubscriber';  
 ```  
   
-##  <a name="step5"></a> 5.将原始发布服务器重定向到 AG 侦听器名称  
+##  <a name="5-redirect-the-original-publisher-to-the-ag-listener-name"></a><a name="step5"></a> 5.将原始发布服务器重定向到 AG 侦听器名称  
  在分发数据库上的分发服务器中，运行存储过程 **sp_redirect_publisher** 以将原始发布服务器和已发布数据库与可用性组的可用性组侦听程序名称关联起来。  
   
 ```  
@@ -163,7 +163,7 @@ EXEC sys.sp_redirect_publisher
     @redirected_publisher = 'MyAGListenerName';  
 ```  
   
-##  <a name="step6"></a> 6.运行复制验证存储过程以验证配置  
+##  <a name="6-run-the-replication-validation-stored-procedure-to-verify-the-configuration"></a><a name="step6"></a> 6.运行复制验证存储过程以验证配置  
  在分发数据库上的分发服务器中，运行存储过程 **sp_validate_replica_hosts_as_publishers** 以确认现已将所有副本主机配置为充当已发布数据库的发布服务器。  
   
 ```  
@@ -189,10 +189,10 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
  这是预期的行为。 必须通过在主机上直接查询 sysserver 条目来验证这些次要副本主机上是否存在订阅服务器条目。  
   
-##  <a name="step7"></a> 7.向复制监视器添加原始发布服务器  
+##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7.向复制监视器添加原始发布服务器  
  在每个可用性组副本上，向复制监视器添加原始发布服务器。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **复制**  
   
 -   [维护 AlwaysOn 发布数据库 (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  

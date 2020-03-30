@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76934193"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
@@ -41,7 +41,7 @@ ms.locfileid: "76934193"
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前，请先审阅[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "76934193"
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> 安装修补程序要求
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> 安装修补程序要求
 
 Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装的 Microsoft Visual C++ 2013 运行时二进制文件存在问题。 现在有可用的更新来修复该问题。 如果 Visual C++ 运行时二进制文件的此更新未安装，SQL Server 可能会在某些情况下出现稳定性问题。 安装 SQL Server 前，请先按照 [SQL Server 发行说明](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)中的说明操作，以确定计算机是否需要 Visual C++ 运行时二进制文件的修补程序。 
 

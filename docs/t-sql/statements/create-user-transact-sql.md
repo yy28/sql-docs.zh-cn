@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056815"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -277,7 +277,7 @@ GO
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
-##  <a name="SyntaxSummary"></a> 语法摘要  
+##  <a name="syntax-summary"></a><a name="SyntaxSummary"></a> 语法摘要  
  **基于 master 数据库中登录名的用户**  
   
  下面的列表显示基于登录名的用户的可能语法。 未列出默认架构选项。  
@@ -388,7 +388,7 @@ CREATE USER JinghaoLiu FOR CERTIFICATE CarnationProduction50;
 GO   
 ```  
   
-###  <a name="withoutLogin"></a> D. 创建和使用不含登录名的用户  
+###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> D. 创建和使用不含登录名的用户  
  以下示例创建一个数据库用户 `CustomApp`，该用户不映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 然后，该示例向用户 `adventure-works\tengiz0` 授予相应的权限以便模拟 `CustomApp` 用户。  
   
 ```  

@@ -15,10 +15,10 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050628"
 ---
 # <a name="upgrading-mirrored-instances"></a>升级镜像实例
@@ -28,7 +28,7 @@ ms.locfileid: "68050628"
 > [!NOTE]  
 >  有关在迁移过程中使用数据库镜像与日志传送的信息，请下载此 [数据库镜像和日志传送白皮书](https://t.co/RmO6ruCT4J)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  开始之前，请仔细阅读以下重要信息：  
   
 -   [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
