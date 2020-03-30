@@ -20,10 +20,10 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322144"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
@@ -52,7 +52,7 @@ ms.locfileid: "75322144"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> 使用复制编程  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> 使用复制编程  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>创建和部署业务逻辑处理程序  
   
@@ -114,7 +114,7 @@ ms.locfileid: "75322144"
   
 1.  执行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **publication、\@article，为** property 指定值 article_resolver，为 **value 指定业务逻辑处理程序的友好名称\@**  **\@** **\@** 。  
   
-###  <a name="TsqlExample"></a> 示例（复制编程方式）  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 示例（复制编程方式）  
  该示例演示了可创建审核日志的业务逻辑处理程序。  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -125,7 +125,7 @@ ms.locfileid: "75322144"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
   
 #### <a name="to-create-a-business-logic-handler"></a>创建业务逻辑处理程序  
   
@@ -220,7 +220,7 @@ ms.locfileid: "75322144"
   
 6.  为 <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>设置业务逻辑处理程序的友好名称。 这是注册业务逻辑处理程序时指定的 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> 属性的值。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  此示例是一个业务逻辑处理程序，它记录有关订阅服务器上的插入、更新和删除操作的信息。  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  

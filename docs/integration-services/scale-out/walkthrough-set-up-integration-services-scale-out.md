@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288741"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>演练：安装 Integration Services (SSIS) Scale Out
@@ -43,7 +43,7 @@ ms.locfileid: "79288741"
 
 * [启用 Scale Out Worker](#EnableWorker)
 
-## <a name="InstallMaster"></a> 安装 Scale Out Master
+## <a name="install-scale-out-master"></a><a name="InstallMaster"></a> 安装 Scale Out Master
 
 要设置 Scale Out Master，必须在设置 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 时，安装数据库引擎服务、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 及 SSIS 的 Scale Out Master 功能。 
 
@@ -91,7 +91,7 @@ ms.locfileid: "79288741"
     > [!NOTE]
     > 如果 Scale Out Master 未与数据库引擎一起安装，且数据库引擎实例为命名实例，则须于安装后在 Scale Out Master 服务配置文件中配置 `SqlServerName`。 有关详细信息，请参阅 [Scale Out Master](integration-services-ssis-scale-out-master.md)。
 
-## <a name="InstallWorker"></a> 安装 Scale Out Worker
+## <a name="install-scale-out-worker"></a><a name="InstallWorker"></a> 安装 Scale Out Worker
  
 要设置 Scale Out Worker，必须在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装程序中安装 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 及其 Scale Out Worker 功能。
 
@@ -142,20 +142,20 @@ ms.locfileid: "79288741"
     -   `/ISWORKERSVCMASTER`（可选）
     -   `/ISWORKERSVCCERT`（可选）
  
-## <a name="InstallCert"></a> 安装 Scale Out Worker 客户端证书
+## <a name="install-scale-out-worker-client-certificate"></a><a name="InstallCert"></a> 安装 Scale Out Worker 客户端证书
 
 在 Scale Out Worker 安装期间，将在计算机上自动创建并安装辅助角色证书。 此外，将在 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 之下安装相应的客户端证书 SSISScaleOutWorker.cer。 对于用于对 Scale Out Worker 进行身份验证的 Scale Out Master，必须将此客户端证书添加到具有 Scale Out Master 的本地计算机的根存储中。
   
 要将客户端证书添加到根存储，可双击 .cer 文件，然后单击“证书”对话框中的“安装证书”  。 这将打开“证书导入向导”  。  
 
-## <a name="Firewall"></a> 打开防火墙端口
+## <a name="open-firewall-port"></a><a name="Firewall"></a> 打开防火墙端口
 
 在 Scale Out Master 计算机上的 Windows 防火墙中，打开在 Scale Out Master 安装期间指定的端口和 SQL Server 端口（默认为 1433）。
 
 > [!Note]
 > 打开防火墙端口之后，还需重启 Scale Out Worker 服务。
     
-## <a name="Start"></a>启动 SQL Server Scale Out Master 和 Worker 服务
+## <a name="start-sql-server-scale-out-master-and-worker-services"></a><a name="Start"></a>启动 SQL Server Scale Out Master 和 Worker 服务
 
 如果在安装期间未将服务的启动类型设置为“自动”，请启动以下服务  ：
 
@@ -163,18 +163,18 @@ ms.locfileid: "79288741"
 
 -   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
 
-## <a name="EnableMaster"></a> 启用 Scale Out Master
+## <a name="enable-scale-out-master"></a><a name="EnableMaster"></a> 启用 Scale Out Master
 
 在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] 中创建 SSISDB 目录时，请在“创建目录”对话框中，选择“启用此服务器作为 SSIS Scale Out Master”   。
 
 创建目录后，可使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 启用 Scale Out Master。
 
-## <a name="EnableAuth"></a> 启用 SQL Server 身份验证模式
+## <a name="enable-sql-server-authentication-mode"></a><a name="EnableAuth"></a> 启用 SQL Server 身份验证模式
 如果在数据库引擎安装期间没有启用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 身份验证，可在托管 SSISDB 目录的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例上启用 SQL Server 身份验证模式。 
 
 禁用 SQL Server 身份验证时，包执行不会受到阻止。 但是，执行日志将无法写入 SSISDB 数据库。
 
-## <a name="EnableWorker"></a> 启用 Scale Out Worker
+## <a name="enable-scale-out-worker"></a><a name="EnableWorker"></a> 启用 Scale Out Worker
 
 可通过 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 启用 Scale Out Worker，前者可提供图形用户界面；或通过存储过程启用。
 

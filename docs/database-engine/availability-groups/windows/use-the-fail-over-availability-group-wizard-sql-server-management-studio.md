@@ -21,35 +21,35 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821943"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用故障转移可用性组向导 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍了如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。 可用性组在可用性副本级别进行故障转移。 如果故障转移到一个处于 SYNCHRONIZED 状态的辅助副本，则向导将执行计划的手动故障转移（不会造成数据丢失）。 如果故障转移到一个处于 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 状态的次要副本，则向导将执行强制的手动故障转移（这也称为“强制故障转移”，可能造成数据丢失）  。 这两种形式的手动故障转移均会将您所连接的辅助副本转换为主角色。 计划的手动故障转移当前会将先前的主副本转换为辅助角色。 在强制故障转移之后，一旦先前的主副本联机，它就会转换为辅助角色。  
 
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  在你首次执行计划的手动故障转移之前，请参阅 [执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
  在你首次执行强制故障转移之前，请参阅 [执行可用性组的强制手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   故障转移命令将在目标辅助副本接受它之后立即返回。 但是，在可用性组完成故障转移之后，数据库恢复操作将以异步方式执行。  
     
-###  <a name="Prerequisites"></a> 使用“故障转移可用性组向导”的先决条件  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a> 使用“故障转移可用性组向导”的先决条件  
   
 -   必须连接到承载当前可用的可用性副本的服务器实例。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **使用“故障转移可用性组向导”**  
   
 1.  在对象资源管理器中，连接到承载需要进行故障转移的可用性组的辅助副本的服务器实例，然后展开服务器树。  
@@ -93,7 +93,7 @@ ms.locfileid: "74821943"
   
  此向导的其他页面与一个或多个其他 AlwaysOn 可用性组向导共享帮助，并且在不同的 F1 帮助主题中进行了介绍。  
   
-###  <a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
  本节介绍 **“选择新主副本”** 页的选项。 可使用此页选择可用性组将要故障转移到的辅助副本（即“故障转移目标”）。 此副本将成为新的主副本。  
   
 #### <a name="page-options"></a>页选项  
@@ -159,7 +159,7 @@ ms.locfileid: "74821943"
  **取消**  
  单击此选项可取消向导操作。 在 **“选择新主副本”** 页上，取消此向导将会导致其退出而不执行任何操作。  
   
-###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
  本节介绍 **“确认可能丢失数据”** 页（只有在执行强制故障转移时才会显示）的选项。 本主题仅供 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]使用。 可使用此页指示您是否愿意为强制对可用性组进行故障转移而承担可能造成数据丢失的风险。  
   
 #### <a name="confirm-potential-data-loss-options"></a>“确认可能丢失数据”选项  
@@ -171,7 +171,7 @@ ms.locfileid: "74821943"
  **取消**  
  单击此选项可取消向导操作。 在 **“确认可能丢失数据”** 页上，取消此向导将导致其退出而不执行任何操作。  
   
-###  <a name="ConnectToReplica"></a> Connect to Replica Page  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a> Connect to Replica Page  
  本节介绍 **的** “连接到副本” [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]页的选项。 只有当您尚未连接到目标辅助副本时才会显示此页。 可使用此页连接到您已选择作为新的主副本的辅助副本。  
   
 #### <a name="page-options"></a>页选项  

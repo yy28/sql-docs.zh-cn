@@ -12,10 +12,10 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284972"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>欢迎使用 SQL Server 导入和导出向导
@@ -44,7 +44,7 @@ ms.locfileid: "71284972"
 ## <a name="whats-next"></a>下一步是什么？  
  欢迎页之后，下一页是“选择数据源”  。 在此页上，需提供有关数据源以及如何连接到它的信息。 有关详细信息，请参阅 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
-## <a name="related"></a>相关任务和内容  
+## <a name="related-tasks-and-content"></a><a name="related"></a>相关任务和内容  
  以下是一些其他的基本任务。
 -   **查看有关向导工作原理的简短示例。**
 

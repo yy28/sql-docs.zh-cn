@@ -11,10 +11,10 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3bc559bce60b4b179cd6e5a69846e1caa9b4668b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257963"
 ---
 # <a name="filestream-functions-stored-procedures-and-views"></a>FILESTREAM、函数、存储过程和视图
@@ -23,7 +23,7 @@ ms.locfileid: "75257963"
   
  有关支持 FileTable 功能的数据库对象的列表，请参阅 [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)。  
   
-##  <a name="ddl"></a> Transact-SQL 数据定义语言 (DDL) 语句  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL 数据定义语言 (DDL) 语句  
   
 -   [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
@@ -37,29 +37,29 @@ ms.locfileid: "75257963"
   
 -   [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)
   
-##  <a name="func"></a> 系统函数  
+##  <a name="system-functions"></a><a name="func"></a> 系统函数  
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)  
   
 -   [PathName (Transact-SQL)](../../relational-databases/system-functions/pathname-transact-sql.md)  
   
-##  <a name="proc"></a> 系统存储过程  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> 系统存储过程  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
 -   [sp_filestream_force_garbage_collection (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
   
-##  <a name="cat"></a> 系统视图 - 目录视图  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> 系统视图 - 目录视图  
   
 -   [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)  
   
-##  <a name="dmv"></a> 系统视图 - 动态管理视图  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> 系统视图 - 动态管理视图  
   
 -   [sys.dm_filestream_file_io_handles (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql.md)  
   
 -   [sys.dm_filestream_file_io_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-requests-transact-sql.md)  
   
-##  <a name="api"></a> 编程 API  
+##  <a name="programming-apis"></a><a name="api"></a> 编程 API  
   
 -   [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

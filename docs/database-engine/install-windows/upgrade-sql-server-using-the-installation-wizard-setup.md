@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258800"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安装向导升级 SQL Server（安装程序）
@@ -41,7 +41,7 @@ ms.locfileid: "75258800"
 > * [升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [升级 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 您必须以管理员身份运行安装程序。 如果从远程共享位置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须使用对该远程共享位置具有读取和执行权限的域帐户且是本地管理员。  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ ms.locfileid: "75258800"
   
 ## <a name="procedure"></a>过程  
   
-### <a name="to-upgrade-includessnoversionincludesssnoversion-mdmd"></a>升级 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
+### <a name="to-upgrade-ssnoversion"></a>升级 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请移动到共享中的根文件夹，然后双击 Setup.exe。  
   

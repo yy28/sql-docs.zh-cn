@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298293"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
@@ -433,7 +433,7 @@ ms.locfileid: "71298293"
   
  **相关主题：** [“选择 SMO 枚举”对话框](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
-####  <a name="ForeachHDFSFile"></a> 枚举器 = Foreach HDFS 文件枚举器  
+####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> 枚举器 = Foreach HDFS 文件枚举器  
  “Foreach HDFS 文件枚举器”  允许 SSIS 包在指定的 HDFS 位置枚举 HDFS 文件。 每个 HDFS 文件名都可以存储在变量中并用于 Foreach 循环容器内的任务。  
   
  **Hadoop 连接管理器**  
@@ -457,7 +457,7 @@ ms.locfileid: "71298293"
   
  在编辑器中的“变量映射”  页上，选择或创建一个变量来存储枚举的 HDFS 文件的名称。  
   
-####  <a name="ForeachAzureBlob"></a> 枚举器 = Foreach Azure Blob 枚举器  
+####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> 枚举器 = Foreach Azure Blob 枚举器  
  “Azure Blob 枚举器”   允许 SSIS 包在指定的 blob 位置枚举 blob 文件。 枚举的 blob 文件名可以存储在变量中并用于 Foreach 循环容器内的任务。  
   
  **Azure Blob 枚举器** 是适用于 Azure for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的 SQL Server Integration Services (SSIS) 功能包的组件。 从 [此处](https://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
@@ -482,7 +482,7 @@ ms.locfileid: "71298293"
  **Blob 时间范围(自/至)筛选器**  
  指定时间范围筛选器。 将枚举在 **TimeRangeFrom** 之后以及 **TimeRangeTo** 之前修改的文件。 
 
-####  <a name="ForeachAdlsFile"></a> 枚举器 = Foreach ADLS 文件枚举器 
+####  <a name="enumerator--foreach-adls-file-enumerator"></a><a name="ForeachAdlsFile"></a> 枚举器 = Foreach ADLS 文件枚举器 
 借助 ADLS 文件枚举器  ，SSIS 包可枚举 Azure Data Lake Store 中的文件。 可将枚举的文件的完整路径（以斜杠 `/` 为前缀）存储在变量中，然后在 Foreach 循环容器内的任务中使用此文件路径。
   
 **AzureDataLakeConnection**  
@@ -497,7 +497,7 @@ ms.locfileid: "71298293"
 **SearchRecursively**  
 指定是否在指定目录中以递归方式搜索。  
 
-####  <a name="ForeachBlobFsFile"></a> 枚举器 = Foreach Data Lake Storage Gen2 文件枚举器 
+####  <a name="enumerator--foreach-data-lake-storage-gen2-file-enumerator"></a><a name="ForeachBlobFsFile"></a> 枚举器 = Foreach Data Lake Storage Gen2 文件枚举器 
 借助 Foreach Data Lake Storage Gen2 文件枚举器，SSIS 包可枚举 Azure Data Lake Storage Gen2 中的文件  。
 
 AzureStorageConnection   

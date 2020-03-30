@@ -16,10 +16,10 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251278"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>指定终结点 URL - 添加或修改可用性副本
@@ -30,7 +30,7 @@ ms.locfileid: "75251278"
 >  “端点 URL”一词是“服务器网络地址”一词的同义词，由数据库镜像的用户界面和文档使用。  
   
   
-##  <a name="SyntaxOfURL"></a> 端点 URL 的语法  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> 端点 URL 的语法  
  端点 URL 的语法采用以下形式：  
   
  TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
@@ -91,7 +91,7 @@ ms.locfileid: "75251278"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a> 查找系统的完全限定域名  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a> 查找系统的完全限定域名  
  若要查找系统的完全限定域名，请在该系统的 Windows 命令提示符下，输入：  
   
  **IPCONFIG /ALL**  
@@ -113,7 +113,7 @@ ms.locfileid: "75251278"
 > [!NOTE]  
 >  如果您需要与完全限定域名有关的详细信息，请与系统管理员联系。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置数据库镜像端点**  
   
 -   [为 AlwaysOn 可用性组创建数据库镜像终结点 (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
@@ -142,7 +142,7 @@ ms.locfileid: "75251278"
   
 -   [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

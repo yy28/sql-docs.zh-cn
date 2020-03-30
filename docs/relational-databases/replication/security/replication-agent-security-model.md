@@ -21,15 +21,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68768467"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  用复制代理安全模式可以对复制代理运行和建立连接所用的帐户进行精细粒度的控制：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[复制的标识和访问控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
+  可以使用复制代理安全模式，对复制代理运行和建立连接所用的帐户进行精细粒度的控制：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[复制的标识和访问控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
 
 对于 Azure SQL 数据库托管实例，复制代理安全模式有点不同，因为没有用于运行代理的 Windows 帐户。 而是必须通过 SQL Server 身份验证完成所有操作。 
   
@@ -38,11 +38,11 @@ ms.locfileid: "68768467"
   
  和所有可执行文件一样，复制代理在 Windows 帐户的上下文中运行。 它们使用此帐户来建立 Windows 集成安全性连接。 代理在哪个帐户之下运行取决于代理的启动方式：  
   
--   从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业启动代理，默认值为：使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业来启动复制代理时，代理将在配置复制时所指定的帐户的上下文中运行。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和复制的详细信息，请参阅本主题后面的“SQL Server 代理下的代理安全性”部分。 有关运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的帐户所需权限的信息，请参阅[配置 SQL Server 代理](../../../ssms/agent/configure-sql-server-agent.md)。  
+-   从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业启动代理时，默认设置为：使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业来启动复制代理时，代理将在配置复制时所指定的帐户的上下文中运行。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和复制的详细信息，请参阅本主题后面的“SQL Server 代理下的代理安全性”部分。 有关运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的帐户所需权限的信息，请参阅[配置 SQL Server 代理](../../../ssms/agent/configure-sql-server-agent.md)。  
   
--   从 MS-DOS 命令行或直接通过脚本启动代理：代理在命令行上运行代理的用户帐户的上下文中运行。  
+-   从 MS-DOS 命令行中直接启动或通过脚本启动代理时：代理在通过命令行运行代理的用户帐户的上下文中运行。  
   
--   从使用复制管理对象 (RMO) 或 ActiveX 控件的应用程序启动代理：代理在调用 RMO 或 ActiveX 控件的应用程序的上下文中运行。  
+-   从使用复制管理对象 (RMO) 或 ActiveX 控件的应用程序启动代理时：代理在调用 RMO 或 ActiveX 控件的应用程序的上下文中运行。  
   
     > [!NOTE]  
     >  不推荐使用 ActiveX 控件。  
@@ -76,13 +76,13 @@ ms.locfileid: "68768467"
 |请求订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<订阅数据库>-\<整数>**|  
 |推送订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
 |推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
-|请求订阅的分发代理|\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID> |  
+|请求订阅的分发代理|**Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>\<**|  
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
 |队列读取器代理|**[\<分发服务器>].\<整数>**|  
   
- \*对于 Oracle 发布的推送订阅，作业名称为“\<发布服务器>-\<发布服务器>”  而不是“\<发布服务器>-\<发布数据库>”  。  
+ \*对于 Oracle 发布的推送订阅，作业名称为“**发布服务器>-\<发布服务器>”\<** 而不是“**发布服务器>-\<发布数据库>”\<** 。  
   
- \*\*对于 Oracle 发布的请求订阅，作业名称为“\<发布服务器>-\<分发数据库>”  而不是“\<发布服务器>-\<发布数据库>”  。  
+ \*\*对于 Oracle 发布的请求订阅，作业名称为“**发布服务器>-\<分发数据库>”\<** 而不是“**发布服务器>-\<发布数据库>”\<** 。  
   
  配置复制时，指定运行代理应使用的帐户。 但是，所有作业步骤都使用“代理  ”的安全上下文运行；因此，复制会为指定的代理帐户在内部执行下列映射：  
   

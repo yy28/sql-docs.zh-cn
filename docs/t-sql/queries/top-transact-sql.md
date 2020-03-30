@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948241"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -161,7 +161,7 @@ TOP 不能与 OFFSET 和 FETCH 在同一个查询表达式（同一个查询范�
 |[包括关联值](#tie)|WITH TIES|  
 |[限制受 DELETE、INSERT 或 UPDATE 影响的行](#DML)|DELETE • INSERT • UPDATE|  
   
-###  <a name="BasicSyntax"></a>基本语法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a>基本语法  
 本节中的示例说明了使用最低要求的语法的 ORDER BY 子句的基本功能。  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. 使用 TOP 以及一个常量值  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a>包括关联值  
+###  <a name="including-tie-values"></a><a name="tie"></a>包括关联值  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. 使用 WITH TIES 以包含与最后一行中的值匹配的行  
 以下示例获取所有雇员中薪金最高的 `10` 个百分比的雇员，并根据其薪金按降序返回。 指定 `WITH TIES` 可确保结果集中同时包含其薪金与返回的最低薪金（最后一行）相同的所有雇员，即使这样做会超过雇员总数的 `10` 个百分比。  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a>限制受 DELETE、INSERT 或 UPDATE 影响的行  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a>限制受 DELETE、INSERT 或 UPDATE 影响的行  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. 使用 TOP 限制删除的行数  
 如果将 TOP (*n*) 子句用于 DELETE，将针对未定义的选定 *n* 行执行删除操作。 也即，DELETE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行  。 下面的示例从 `20` 表中删除其到期日期早于 2002 年 7 月 1 日的 `PurchaseOrderDetail` 行。  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 下列示例将返回匹配查询条件的前 31 行。 **ORDER BY** 子句可确保所返回的 31 行是按字母顺序排序的 `LastName` 列的前 31 行。  
   
 使用 TOP，且不指定关联  。  

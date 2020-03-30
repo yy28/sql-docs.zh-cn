@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253595"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>示例：使用证书设置数据库镜像 (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253595"
   
  将证书复制到其他系统时，请使用安全的复制方法。 必须格外小心地保证所有证书的安全。  
   
-##  <a name="ExampleH2"></a> 示例  
+##  <a name="example"></a><a name="ExampleH2"></a> 示例  
  下面的示例演示必须对驻留在 HOST_A 上的一个伙伴执行哪些操作。 在此示例中，两个伙伴是三个计算机系统上的默认服务器实例。 两个服务器实例在非信任的 Windows 域中运行，因此需要基于证书的身份验证。  
   
  HOST_A 担当初始主体角色，HOST_B 担当镜像角色。  
@@ -62,7 +62,7 @@ ms.locfileid: "75253595"
   
 4.  [配置镜像伙伴](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> 配置出站连接  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> 配置出站连接  
  **为出站连接配置 Host_A**  
   
 1.  在 master 数据库中，创建数据库主密钥（如果需要）。  
@@ -156,7 +156,7 @@ ms.locfileid: "75253595"
   
  [[示例顶部]](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> 配置入站连接  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> 配置入站连接  
  **为入站连接配置 Host_A**  
   
 1.  在 HOST_A 上为 HOST_B 创建一个登录名。  
@@ -233,7 +233,7 @@ ms.locfileid: "75253595"
 ### <a name="creating-the-mirror-database"></a>创建镜像数据库  
  有关如何创建镜像数据库的信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
-###  <a name="ConfigureMirroringPartners"></a> 配置镜像伙伴  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> 配置镜像伙伴  
   
 1.  在 HOST_B 的镜像服务器实例上，将 HOST_A 上的服务器实例设置为伙伴（使其成为初始主体服务器实例）。 将 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`替换为有效的网络地址。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253595"
   
  [[示例顶部]](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

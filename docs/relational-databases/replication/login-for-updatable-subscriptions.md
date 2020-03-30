@@ -13,10 +13,10 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710359"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
@@ -35,7 +35,7 @@ ms.locfileid: "71710359"
   
 -   复制创建的链接服务器；用在订阅服务器上做更改的用户的凭据建立连接。  
   
- 可以在此向导中指定前两个选项。 最后一个选项只能使用 [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 指定；将参数 `@security_mode` 的值指定为 1  。  
+ 可以在此向导中指定前两个选项。 最后一个选项只能使用 [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 指定；将参数  **的值指定为 1**`@security_mode`。  
   
 ## <a name="options"></a>选项  
  **创建使用以下 SQL Server 身份验证登录名进行连接的链接服务器：**  

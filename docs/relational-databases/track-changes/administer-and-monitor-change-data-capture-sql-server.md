@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095318"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74095318"
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   本主题介绍如何管理和监视变更数据捕获。  
   
-## <a name="Capture"></a> 捕获作业
+## <a name="capture-job"></a><a name="Capture"></a> 捕获作业
 
 捕获作业可通过运行无参数存储过程 `sp_MScdc_capture_job` 来启动。 此存储过程启动时，将从 msdb.dbo.cdc_jobs 中为捕获作业提取 `maxtrans`、`maxscans`、`continuous` 和 `pollinginterval` 的配置值。 然后，这些配置值会作为参数传递到存储过程 `sp_cdc_scan`。 该存储过程用于调用 `sp_replcmds` 以执行日志扫描。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "74095318"
 
 对于捕获作业，可以应用其他逻辑来确定是立即开始新扫描，还是在启动新扫描之前强制休眠，而非依赖于固定的轮询间隔。 该选择可以仅基于一天中的某个时间，可以在峰值活动期间强制长时间休眠，甚至可以在一天即将结束时（此时为完成白天处理并为夜间运行做准备的关键时刻）将轮询间隔改为 0。 也可以监视捕获进程进度，以确定何时已对午夜提交的所有事务进行扫描并将其存放在更改表中。 这将导致捕获作业结束，该作业可由计划的每日重启来重新启动。 通过将调用 `sp_cdc_scan` 的已交付作业步骤替换为针对 `sp_cdc_scan` 的用户已编写包装的调用，只需少量的额外操作即可获得高度自定义的行为。  
 
-## <a name="Cleanup"></a> 清除作业
+## <a name="cleanup-job"></a><a name="Cleanup"></a> 清除作业
 
 本部分提供有关变更数据捕获清除作业工作方式的信息。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "74095318"
 
 变更数据捕获使用基于保持期的清理策略来管理更改表的大小。 清除机制包含一个在启用第一个数据库表时所创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业。 单个清除作业可处理所有数据库更改表的清除工作并将相同的保持值应用到所有定义的捕获实例。
   
-清除作业可通过运行无参数存储过程 `sp_MScdc_cleanup_job` 来启动。 此存储过程开始时，将从 `msdb.dbo.cdc_jobs` 中提取为清除作业配置的保持期和阈值。 保持值用于计算更改表的新低水印。 从 `cdc.lsn_time_mapping` 表的最大 `tran_end_time` 值中减去指定分钟数即可获得日期时间值形式的新低水印。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 `lsn` 值。 如果表中多个项共享相同的提交时间，则会选择与具有最小 `lsn` 的项相对应的 `lsn` 作为新低水印。 该 `lsn` 值将传递到 `sp_cdc_cleanup_change_tables` 以从数据库更改表中删除更改表项。  
+清除作业可通过运行无参数存储过程 `sp_MScdc_cleanup_job` 来启动。 此存储过程开始时，将从 `msdb.dbo.cdc_jobs` 中提取为清除作业配置的保持期和阈值。 保持值用于计算更改表的新低水印。 从 `tran_end_time` 表的最大 `cdc.lsn_time_mapping` 值中减去指定分钟数即可获得日期时间值形式的新低水印。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 `lsn` 值。 如果表中多个项共享相同的提交时间，则会选择与具有最小 `lsn` 的项相对应的 `lsn` 作为新低水印。 该 `lsn` 值将传递到 `sp_cdc_cleanup_change_tables` 以从数据库更改表中删除更改表项。  
   
 > [!NOTE]  
 > 使用最近事务的提交时间作为计算新低水印的基准的优点在于：它可使更改在更改表中保留指定的时间。 即使在捕获进程运行落后时也会出现这种情况。 通过为实际低水印选择具有共享提交时间的最小 `lsn`，与当前低水印具有相同提交时间的所有项会继续保留在更改表中。  
@@ -90,7 +90,7 @@ ms.locfileid: "74095318"
 
  对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于 `lsn` 而不是时间，所以可使用任何数量的策略来确定要保存在更改表中的最小 `lsn`。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同的 `lsn` 来清除所有数据库的更改表，但还可以调用基础清除过程，以在捕获实例级别上进行清除。  
 
-## <a name="Monitor"></a> 监视变更数据捕获进程
+## <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> 监视变更数据捕获进程
 
 通过监视变更数据捕获进程，可以确定更改是否正以合理的滞后时间正确写入更改表中。 监视还可以帮助您标识可能发生的任何错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括两个动态管理视图，用于帮助你监视变更数据捕获： [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) 和 [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)。  
   
@@ -176,7 +176,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4. 在步骤 1 配置的数据仓库中，找到表 custom_snapshots.cdc_log_scan_data。 该表提供日志扫描会话中的数据的历史快照。 此数据可以用于分析与时间有关的滞后时间、吞吐量和其他性能度量值。  
 
-## <a name="ScriptUpgrade"></a> 脚本升级模式
+## <a name="script-upgrade-mode"></a><a name="ScriptUpgrade"></a> 脚本升级模式
 
 在向实例应用累积更新或服务包时，在重启时，实例可进入脚本升级模式。 在此模式下，SQL Server 可能会运行一个步骤以分析和升级内部 CDC 表，这可能会导致在捕获表上重新创建对象，如索引。 根据涉及的数据量，此步骤可能会需要一些时间，或者导致已启用的 CDC 数据库的高事务日志使用情况。
 

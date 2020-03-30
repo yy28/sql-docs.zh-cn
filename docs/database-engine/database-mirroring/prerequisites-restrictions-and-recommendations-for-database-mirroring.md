@@ -20,10 +20,10 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244370"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>数据库镜像的前提条件、限制和建议
@@ -35,13 +35,13 @@ ms.locfileid: "75244370"
  本主题说明了设置数据库镜像的前提条件和建议。 有关数据库镜像的介绍，请参阅 [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
   
-##  <a name="DbmSupport"></a> 数据库镜像支持  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> 数据库镜像支持  
  有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中数据库镜像支持的信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
   
  请注意，数据库镜像可使用任意支持的数据库兼容级别。 有关支持的兼容级别的信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   若要建立镜像会话，伙伴双方和见证服务器（如果有）必须在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75244370"
     >  如果数据库镜像已经停止，则必须将对主体数据库执行的所有后续日志备份应用到镜像数据库中，然后才可以重新启动镜像。  
   
   
-##  <a name="Restrictions"></a> 限制  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 限制  
   
 -   只能镜像用户数据库。 不能镜像 **master**、 **msdb**、 **tempdb**或 **model** 数据库。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75244370"
 -   跨数据库事务和分布式事务均不支持数据库镜像。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
   
-##  <a name="RecommendationsForPartners"></a> 配置伙伴服务器的建议  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a> 配置伙伴服务器的建议  
   
 -   应该在可以处理相同工作负荷的类似系统上运行伙伴。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75244370"
 -   关于广域网 (WAN) 对高安全性模式下的数据库镜像是否足够可靠，我们没有任何建议。 如果您决定在 WAN 上使用高安全性模式，则应注意将见证服务器添加至会话的方式，因为可能会发生意外的自动故障转移。 有关详细信息，请参阅本主题稍后部分中的 [部署数据库镜像的建议](#RecommendationsForDeploying)。  
   
   
-##  <a name="RecommendationsForDeploying"></a> 部署数据库镜像的建议  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a> 部署数据库镜像的建议  
  使用异步操作可获得最佳的数据库镜像性能。 如果镜像会话使用同步操作，则当该会话的工作负荷生成大量事务日志数据时，可能会降低性能。  
   
  在测试环境中，应当研究所有运行模式以评估数据库镜像的执行效率。 但是，在生产环境中部署镜像之前，务必要了解网络在实际环境中的运行方式。  

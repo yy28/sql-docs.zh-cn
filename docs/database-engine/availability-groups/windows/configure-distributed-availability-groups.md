@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146296"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>配置 Always On 分布式可用性组  
@@ -153,7 +153,7 @@ GO
 ```  
   
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>在第一个群集上创建分布式可用性组  
- 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`  。  
+ 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、**和**`ag1``ag2`。  
   
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
@@ -217,14 +217,14 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a> 联接第二个可用性组的辅助数据库
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> 联接第二个可用性组的辅助数据库
 当第二个可用性组的次要副本上的数据库处于正在还原状态后，必须手动将它联接到可用性组。
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a>故障转移到次要可用性组  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a>故障转移到次要可用性组  
 
 此时仅支持手动故障转移。 手动故障转移分布式可用性组：
 
@@ -284,7 +284,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
       INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    在可用性组 synchronization_state_desc 为 `SYNCHRONIZED` 并且在全局主数据库和转发器上每个数据库的 last_hardened_lsn 都相同之后，再继续操作  。  如果 synchronization_state_desc 不为 `SYNCHRONIZED` 或 last_hardened_lsn 不相同，请每五秒钟运行一次命令，直到它更改为止  。 请在 synchronization_state_desc = `SYNCHRONIZED` 且每个数据库的 last_hardened_lsn 都相同之后，再继续操作  。 
+    在可用性组 synchronization_state_desc 为  **并且在全局主数据库和转发器上每个数据库的 last_hardened_lsn 都相同之后，再继续操作**`SYNCHRONIZED`。  如果 synchronization_state_desc 不为  **或 last_hardened_lsn 不相同，请每五秒钟运行一次命令，直到它更改为止**`SYNCHRONIZED`。 请在 synchronization_state_desc  且每个数据库的 last_hardened_lsn 都相同之后，再继续操作 = `SYNCHRONIZED`。 
 
 1. 在全局主要副本上，将分布式可用性组角色设置为 `SECONDARY`。 
 

@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055956"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或默认值 (SQL Server)
@@ -33,13 +33,13 @@ ms.locfileid: "74055956"
 
 默认情况下，将数据导入表中时， [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句将使用为表中的列定义的所有默认值。  例如，如果数据文件中包含一个空字段，则会加载该列的默认值。  [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句都允许指定保留 NULL 值。
 
-相反，常规 INSERT 语句会保留空值而不会插入默认值。 INSERT ... SELECT * [FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句的基本行为与常规 INSERT 相同，但前者还支持插入默认值的[表提示](../../t-sql/queries/hints-transact-sql-table.md)。
+相反，常规 INSERT 语句会保留空值而不会插入默认值。 INSERT ... SELECT * [FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句的基本行为与常规 INSERT 相同，但前者还支持插入默认值的 [表提示](../../t-sql/queries/hints-transact-sql-table.md) 。
 
 |轮廓|
 |---|
 |[保留 Null 值](#keep_nulls)<br />[对 INSERT 使用默认值...SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[示例测试条件](#etc)<br />&emsp;&#9679;&emsp;[示例表](#sample_table)<br />&emsp;&#9679;&emsp;[示例数据文件](#sample_data_file)<br />&emsp;&#9679;&emsp;[示例非 XML 格式化文件](#nonxml_format_file)<br />[在批量导入期间保留 Null 或使用默认值](#import_data)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 bcp 并保留 NULL 值](#bcp_null)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 bcp 并保留 Null 值](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 bcp 和默认值](#bcp_default)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 bcp 和默认值](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 BULK INSERT 并保留 Null 值](#bulk_null)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 BULK INSERT 并保留 Null 值](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 BULK INSERT 和默认值](#bulk_default)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 BULK INSERT 和默认值](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 OPENROWSET(BULK...) 并保留 Null 值](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 OPENROWSET(BULK...) 和默认值](#openrowset__default_fmt)
 
-## 保留 Null 值<a name="keep_nulls"></a>  
+## <a name="keeping-null-values"></a>保留 Null 值<a name="keep_nulls"></a>  
 下列限定符指定在大容量导入操作期间数据文件中的空字段保留其空值，而不继承表列的默认值（如果存在）。  对于 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)，默认情况下，未在批量加载操作中指定的所有列都会设置为 NULL。
   
 |Command|Qualifier|限定符类型|  
@@ -53,16 +53,16 @@ ms.locfileid: "74055956"
 > [!NOTE]
 > 这些限定符通过这些大容量导入命令禁止检查表上的 DEFAULT 定义。  然而，对于任何并发 INSERT 语句，都需要 DEFAULT 定义。
  
-## 对 INSERT 使用默认值...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>  
+## <a name="using-default-values-with-insert--select--from-openrowsetbulk"></a>对 INSERT 使用默认值...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>  
 对于数据文件中的空字段，相应的表列使用其默认值（如果存在）。  若要使用默认值，请使用表提示 [KEEPDEFAULTS](../../t-sql/queries/hints-transact-sql-table.md)。
  
 > [!NOTE]
 >  有关详细信息，请参阅 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)、[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)、[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md) 和[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)
 
-## 示例测试条件<a name="etc"></a>  
+## <a name="example-test-conditions"></a>示例测试条件<a name="etc"></a>  
 本主题中的示例基于下面定义的表、数据文件和格式化文件。
 
-### **示例表**<a name="sample_table"></a>
+### <a name="sample-table"></a>**示例表**<a name="sample_table"></a>
 下面的脚本创建一个测试数据库和一个名为 `myNulls`的表。  请注意，第四个表列 ( `Kids`) 具有默认值。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 
 ```sql
@@ -79,7 +79,7 @@ CREATE TABLE dbo.myNulls (
    );
 ```
 
-### **示例数据文件**<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>**示例数据文件**<a name="sample_data_file"></a>
 使用记事本创建一个空文件 `D:\BCP\myNulls.bcp` ，并插入下面的数据。  请注意，在第三条记录（第四列）中没有任何值。
 
 ```
@@ -117,7 +117,7 @@ Get-Content -Path $bcpFile;
 Invoke-Item $bcpFile;
 ```
   
-### **示例非 XML 格式化文件**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**示例非 XML 格式化文件**<a name="nonxml_format_file"></a>
 SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myNulls.fmt`生成非 XML 格式化文件 `myNulls`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据， **t,** 用于将逗号指定为 [字段终止符](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)，而 **T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
 
 ```cmd
@@ -135,10 +135,10 @@ Notepad D:\BCP\myNulls.fmt
 
  有关创建格式化文件的详细信息，请参阅 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)。  
   
-## 在大容量导入期间保留 Null 或使用默认值<a name="import_data"></a>
+## <a name="keep-nulls-or-use-default-values-during-bulk-import"></a>在大容量导入期间保留 Null 或使用默认值<a name="import_data"></a>
 下面的示例使用上面创建的数据库、数据文件和格式化文件。
 
-### **在不使用格式化文件的情况下使用 [bcp](../../tools/bcp-utility.md) 并保留 NULL 值**<a name="bcp_null"></a>
+### <a name="using-bcp-and-keeping-null-values-without-a-format-file"></a>**在不使用格式化文件的情况下使用 [bcp](../../tools/bcp-utility.md) 并保留 NULL 值**<a name="bcp_null"></a>
 
 **-k** 开关。  在命令提示符处输入以下命令：
 
@@ -153,7 +153,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **在不使用格式化文件的情况下使用 [bcp](../../tools/bcp-utility.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
+### <a name="using-bcp-and-keeping-null-values-with-a-non-xml-format-file"></a>**在不使用格式化文件的情况下使用 [bcp](../../tools/bcp-utility.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
 **-k** 和 **-f** 开关。 在命令提示符处输入以下命令：
 
 ```cmd
@@ -167,7 +167,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
 
-### **在不使用格式化文件的情况下使用 [bcp](../../tools/bcp-utility.md) 和默认值**<a name="bcp_default"></a>
+### <a name="using-bcp-and-using-default-values-without-a-format-file"></a>**在不使用格式化文件的情况下使用 [bcp](../../tools/bcp-utility.md) 和默认值**<a name="bcp_default"></a>
 在命令提示符处输入以下命令：
 
 ```cmd
@@ -181,7 +181,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **在不使用格式化文件的情况下使用 [bcp](../../tools/bcp-utility.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
+### <a name="using-bcp-and-using-default-values-with-a-non-xml-format-file"></a>**在不使用格式化文件的情况下使用 [bcp](../../tools/bcp-utility.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
 **-f** 开关。  在命令提示符处输入以下命令：
 
 ```cmd
@@ -195,7 +195,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
 
-### **在不使用格式化文件的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 并保留 Null 值**<a name="bulk_null"></a>
+### <a name="using-bulk-insert-and-keeping-null-values-without-a-format-file"></a>**在不使用格式化文件的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 并保留 Null 值**<a name="bulk_null"></a>
 **KEEPNULLS** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 
 ```sql
@@ -214,7 +214,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **在不使用格式化文件的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
+### <a name="using-bulk-insert-and-keeping-null-values-with-a-non-xml-format-file"></a>**在不使用格式化文件的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
 **KEEPNULLS** 和 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 
 ```sql
@@ -233,7 +233,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **在不使用格式化文件的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和默认值**<a name="bulk_default"></a>
+### <a name="using-bulk-insert-and-using-default-values-without-a-format-file"></a>**在不使用格式化文件的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和默认值**<a name="bulk_default"></a>
 在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 
 ```sql
@@ -252,7 +252,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **在不使用格式化文件的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
+### <a name="using-bulk-insert-and-using-default-values-with-a-non-xml-format-file"></a>**在不使用格式化文件的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 
 ```sql
@@ -270,7 +270,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **在不使用格式化文件的情况下使用 [FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
+### <a name="using-openrowsetbulk-and-keeping-null-values-with-a-non-xml-format-file"></a>**在不使用格式化文件的情况下使用 [FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 
 ```sql
@@ -289,7 +289,7 @@ INSERT INTO dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **在不使用格式化文件的情况下使用 [FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
+### <a name="using-openrowsetbulk-and-using-default-values-with-a-non-xml-format-file"></a>**在不使用格式化文件的情况下使用 [FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 的情况下使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
 **KEEPDEFAULTS** 表提示和 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 
 ```sql
@@ -310,7 +310,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [批量导入数据时保留标识值 (SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)  
   

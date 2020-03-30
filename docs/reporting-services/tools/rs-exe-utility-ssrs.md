@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081686"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
@@ -45,10 +45,10 @@ rs {-?}
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a> 文件位置  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> 文件位置  
  **RS.exe** 位于 **\Program Files\Microsoft SQL Server\110\Tools\Binn**。 可以在文件系统的任何文件夹中运行此实用工具。  
   
-##  <a name="bkmk_arguments"></a> 参数  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a> 参数  
  **-?**  
  （可选）显示 **rs** 参数的语法。  
   
@@ -97,10 +97,10 @@ rs {-?}
  **-t**  
  （可选）将错误信息输出到跟踪日志中。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-##  <a name="bkmk_permissions"></a> 权限  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> 权限  
  若要运行该工具，必须拥有与运行脚本的报表服务器实例连接的权限。 可以运行脚本来更改本地计算机或远程计算机。 若要更改远程计算机上安装的报表服务器，请在 **-s** 参数中指定远程计算机。  
   
-##  <a name="bkmk_examples"></a> 示例  
+##  <a name="examples"></a><a name="bkmk_examples"></a> 示例  
  下面的示例说明如何指定包含 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 脚本的脚本文件以及要执行的 Web 服务方法。  
   
 ```  

@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055323"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>查看或更改收集组计划 (SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "74055323"
   
 6.  单击 **“确定”** 保存更改并关闭 **“数据收集组属性”** 对话框。  
   
-####  <a name="CollectionSet"></a> “数据收集组属性”对话框  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> “数据收集组属性”对话框  
  **“常规”页**  
   
  使用此页可以配置数据的收集和上载方式、配置计划以及配置数据在管理数据仓库中的保持期。 此页还提供了收集组的相关信息，如收集器类型、收集频率以及用于收集组的输入参数。  

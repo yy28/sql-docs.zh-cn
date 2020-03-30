@@ -11,10 +11,10 @@ ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
 ms.openlocfilehash: fca498fbc7f79dcfc8852799ade6e230952ea082
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75250957"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted"></a>演示将 Azure Key Vault 提供程序与 Always Encrypted 配合使用的示例
@@ -31,4 +31,4 @@ ms.locfileid: "75250957"
 
 - [演示将 Azure Key Vault 提供程序与通过安全 Enclaves 启用的 Always Encrypted 配合使用的示例](azure-key-vault-enclave-example.md)
 - [教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序](tutorial-always-encrypted-enclaves-develop-net-apps.md)
-- [对用于 SQL Server 的 Microsoft .NET 数据提供程序使用 Always Encrypted](sqlclient-support-always-encrypted.md)
+- [结合 Always Encrypted 和 Microsoft .NET Data Provider for SQL Server](sqlclient-support-always-encrypted.md)

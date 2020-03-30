@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67997915"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
@@ -88,7 +88,7 @@ RECONFIGURE
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-##  <a name="ResultSets"></a> 结果集  
+##  <a name="result-sets"></a><a name="ResultSets"></a> 结果集  
  在不使用参数执行时， **sp_configure** 会返回五列的结果集。  
   
 |列名称|数据类型|说明|  

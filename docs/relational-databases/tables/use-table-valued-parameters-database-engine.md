@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72796637"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用表值参数（数据库引擎）
@@ -43,7 +43,7 @@ ms.locfileid: "72796637"
 
 [示例](#Example)
 
-## <a name="Benefits"></a> 优势
+## <a name="benefits"></a><a name="Benefits"></a> 优势
 
 就像其他参数一样，表值参数的作用域也是存储过程、函数或动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文本。 同样，表类型变量也与使用 DECLARE 语句创建的其他任何局部变量一样具有作用域。 可以在动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句内声明表值变量，并且可以将这些变量作为表值参数传递到存储过程和函数。
 
@@ -58,10 +58,10 @@ ms.locfileid: "72796637"
 - 使客户端可以指定排序顺序和唯一键。
 - 在用于存储过程时像临时表一样被缓存。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，对于参数化查询，表值参数也被缓存。
 
-## <a name="Permissions"></a> 权限
+## <a name="permissions"></a><a name="Permissions"></a> 权限
 若要创建用户定义的表类型的实例或使用表值参数调用存储过程，用户必须对该类型或包含该类型的架构或数据库具有 EXECUTE 权限。
 
-## <a name="Restrictions"></a> 限制
+## <a name="restrictions"></a><a name="Restrictions"></a> 限制
 
 表值参数有下面的限制：
 
@@ -69,7 +69,7 @@ ms.locfileid: "72796637"
 - 表值参数必须作为输入 READONLY 参数传递到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程。 不能在例程体中对表值参数执行诸如 UPDATE、DELETE 或 INSERT 这样的 DML 操作。
 - 不能将表值参数用作 SELECT INTO 或 INSERT EXEC 语句的目标。 表值参数可以在 SELECT INTO 的 FROM 子句中，也可以在 INSERT EXEC 字符串或存储过程中。
 
-## <a name="BulkInsert"></a> 表值参数与 BULK INSERT 操作
+## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> 表值参数与 BULK INSERT 操作
 
 表值参数的使用方法与其他基于数据集的变量的使用方法相似；但是，频繁使用表值参数将比大型数据集要快。 大容量操作的启动开销比表值参数大，与之相比，表值参数在插入数目少于 1000 的行时具有很好的执行性能。
 
@@ -77,7 +77,7 @@ ms.locfileid: "72796637"
 
 表值参数在执行性能上与对等的参数阵列实现相当甚至更好。
 
-## <a name="Example"></a> 示例
+## <a name="example"></a><a name="Example"></a> 示例
 
 下面的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 并展示了如何执行以下操作：创建表值参数类型，声明变量来引用它，填充参数列表，然后将值传递到 AdventureWorks 数据库中的存储过程。
 

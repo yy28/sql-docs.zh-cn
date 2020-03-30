@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258786"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
@@ -43,13 +43,13 @@ ms.locfileid: "75258786"
   
 -   [示例中的内存和磁盘空间利用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 -   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16 GB 内存可供 SQL Server 使用。 有关内存中 OLTP 硬件的一般指南，请参阅下面的博客文章：[SQL Server 2014 中的内存中 OLTP 的硬件注意事项](blog-hardware-in-memory-oltp.md)
 
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks 安装内存中 OLTP 示例  
+##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks 安装内存中 OLTP 示例  
  请按照以下步骤安装示例：  
   
 1.  从 [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) 将 AdventureWorks2016CTP3.bak 和 SQLServer2016CTP3Samples.zip 下载到本地文件夹，例如“c:\temp”。  
@@ -80,7 +80,7 @@ ms.locfileid: "75258786"
   
 3.  若要查看示例脚本和工作负荷，请将文件 SQLServer2016CTP3Samples.zip 解压到本地文件夹。 有关运行工作负荷的说明，请查阅 In-Memory OLTP\readme.txt。  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> 示例表和过程的说明  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> 示例表和过程的说明  
  示例基于 AdventureWorks 中的现有表为产品和销售订单创建新表。 新表的架构类似于现有表，不过有几个区别，如下所述。  
   
  新的内存优化表带有后缀“_inmem”。 示例还包括带有后缀“_ondisk”的对应表 - 这些表可以用于在系统上进行内存优化表与基于磁盘的表性能之间的一对一比较。  
@@ -309,7 +309,7 @@ ms.locfileid: "75258786"
   
     -   它依赖于帮助器过程 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 来生成执行完整性检查所需的 T-SQL。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用演示工作负荷执行度量  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用演示工作负荷执行度量  
  Ostress 是 Microsoft CSS SQL Server 支持团队开发的命令行工具。 此工具可以用于并行执行查询或运行存储过程。 可以配置线程数来并行运行给定 T-SQL 语句，并且可以指定应对此线程执行语句的次数；Ostress 会加快线程，对所有线程并行执行语句。 对所有线程完成执行之后，Ostress 会报告所有线程完成执行所花费的时间。  
   
 ### <a name="installing-ostress"></a>安装 Ostress  
@@ -434,7 +434,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  我们建议在每次演示运行之后重置。 因为此工作负荷仅涉及插入，所以每次运行将占用更多内存，因而需要重置来防止内存不足。 运行之后占用的内存量在 [运行工作负荷之后的内存利用率](#Memoryutilizationafterrunningtheworkload)一节中进行了讨论。  
   
-###  <a name="Troubleshootingslow-runningtests"></a> 解决测试运行缓慢的问题  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> 解决测试运行缓慢的问题  
  测试结果通常因硬件而异，也因测试运行中使用的并发级别而异。 结果与预期不符时要了解的几个方面有：  
   
 -   并发事务数：对单个线程运行工作负荷时，通过内存中 OLTP 获得的性能提升可能小于 2 倍。 如果并发级别较高，则闩锁争用是唯一的大问题。  
@@ -447,10 +447,10 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   症状：如果对内存优化表运行工作负荷时 CPU 利用率不接近于 100% 或是非常尖峰，则可能存在日志 IO 瓶颈。 这可以通过打开资源监视器查看日志驱动器的队列长度来进行确认。  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 示例中的内存和磁盘空间利用率  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> 示例中的内存和磁盘空间利用率  
  下面我们讨论示例数据库的内存和磁盘空间利用率方面的情况。 我们还会介绍在有 16 个逻辑核心的测试服务器上看到的结果。  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> 内存优化表的内存利用率  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> 内存优化表的内存利用率  
   
 #### <a name="overall-utilization-of-the-database"></a>数据库的总体利用率  
  以下查询可用于获取系统中内存中 OLTP 的总体内存利用率。  
@@ -505,7 +505,7 @@ WHERE t.type='U'
   
  此处比较显著的是为索引分配的内存大小（与表数据大小相比）。 这是因为示例中的哈希索引针对较大数据大小预设了大小。 请注意，哈希索引有固定大小，因而其大小不会随表中的数据大小而增大。  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> 运行工作负荷之后的内存利用率  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> 运行工作负荷之后的内存利用率  
  插入 1000 万个销售订单之后，总体内存利用率类似于下面这样：  
   
 ```sql

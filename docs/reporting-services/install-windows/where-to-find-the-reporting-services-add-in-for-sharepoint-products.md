@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866280"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>在何处查找用于 SharePoint 产品的 Reporting Services 外接程序
@@ -26,7 +26,7 @@ ms.locfileid: "74866280"
 > [!IMPORTANT]  
 >  有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序、报表服务器和 SharePoint 的支持组合列表，请参阅[支持的 SharePoint、Reporting Services 服务器和外接程序的组合 (SQL Server 2016)](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
   
-##  <a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SharePoint 产品的 Reporting Services 加载项  
+##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SharePoint 产品的 Reporting Services 加载项  
  若要下载并安装该外接程序，请访问 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心：  
   
 -   [用于 Microsoft SharePoint 的 Microsoft® SQL Server 2016 Reporting Services 加载项](https://www.microsoft.com/download/details.aspx?id=52682)  
@@ -37,7 +37,7 @@ ms.locfileid: "74866280"
   
 -   从命令提示符安装中，使用 **RS_SHPWFE** 选项安装该外接程序。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令提示符安装的详细信息，请参阅 [在命令提示符处安装 Reporting Services](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)。  
   
-##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SharePoint 产品的 Reporting Services 加载项  
+##  <a name="sssql14-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SharePoint 产品的 Reporting Services 加载项  
  若要下载并安装该外接程序，请访问 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心：  
   
 -   [用于 Microsoft SharePoint 的 Microsoft® SQL Server 2014 Reporting Services 外接程序](https://www.microsoft.com/download/details.aspx?id=42294)  
@@ -48,7 +48,7 @@ ms.locfileid: "74866280"
   
 -   从命令提示符安装中，使用 **RS_SHPWFE** 选项安装该外接程序。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令提示符安装的详细信息，请参阅 [在命令提示符处安装 Reporting Services](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)。  
   
-##  <a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 产品的 Reporting Services 加载项  
+##  <a name="sssql11sp1-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 产品的 Reporting Services 加载项  
  该外接程序和报表服务器的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 版本添加了对 SharePoint Server 2013 的支持。  
   
  若要下载并安装该外接程序，请访问 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心：  
@@ -57,7 +57,7 @@ ms.locfileid: "74866280"
   
 -   **SP1：** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575).  
 
-##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 用于 SharePoint 2010 产品的 Reporting Services 加载项
+##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a><a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 用于 SharePoint 2010 产品的 Reporting Services 加载项
 
 在 SQL Server 2016 版本中，此外接程序作为 SQL Server 安装向导的一部分，可以在“功能选择”页面中进行安装。 如果你希望单独下载和安装此外接程序，则可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心的 [用于 Microsoft® SharePoint® 技术 2010 的 Microsoft® SQL Server® 2012 Reporting Services 外接程序](https://go.microsoft.com/fwlink/?LinkID=207242) 页获得此文件的最新版本。
 

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 32474836bfbf61f74370724f0750732e11542e9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284695"
 ---
 # <a name="distribution-agent-security"></a>分发代理安全性
@@ -29,7 +29,7 @@ ms.locfileid: "76284695"
   
 -   如果从新建订阅向导访问该对话框，您还可以指定分发代理在建立与订阅服务器（对于推送订阅）或分发服务器（对于请求订阅）的连接时所使用的上下文。 可以通过模拟 Windows 帐户，或在指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户的上下文中建立连接。  
   
--   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“分发服务器连接”** 行中的属性按钮 ( **...** ) 来指定分发代理建立连接时所使用的上下文。 有关访问“订阅属性”对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何：  [查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+-   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“分发服务器连接”** 行中的属性按钮 ( **...** ) 来指定分发代理建立连接时所使用的上下文。 有关访问“订阅属性”  对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
  所有帐户必须是有效的，并且为每个帐户指定了正确的密码。 在运行代理之前不会对帐户和密码进行验证。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "76284695"
   
  如果在建立连接时模拟进程帐户，则还需要其他权限。 请参阅下面的 **“连接到分发服务器”** 和 **“连接到订阅服务器”** 部分。  
   
- 由于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的实例上未运行分发代理，因此不能为对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的请求订阅指定“进程帐户”  。  
+ 由于 **的实例上未运行分发代理，因此不能为对** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的请求订阅指定“进程帐户”[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)][!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。  
   
  **“密码”** 和 **“确认密码”**  
  输入 Windows 帐户的密码。  
@@ -110,7 +110,7 @@ Persist Security Info=False;Connection Pooling=True;
   
 -   如果从新建订阅向导访问该对话框，您还可以指定分发代理在建立与订阅服务器（对于推送订阅）或分发服务器（对于请求订阅）的连接时所使用的上下文。 应使用 SQL Server 身份验证帐户建立连接。 
   
--   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“分发服务器连接”** 行中的属性按钮 ( **...** ) 来指定分发代理建立连接时所使用的上下文。 有关访问“订阅属性”对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何：  [查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+-   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“分发服务器连接”** 行中的属性按钮 ( **...** ) 来指定分发代理建立连接时所使用的上下文。 有关访问“订阅属性”  对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
  所有帐户必须是有效的，并且为每个帐户指定了正确的密码。 在运行代理之前不会对帐户和密码进行验证。  
   

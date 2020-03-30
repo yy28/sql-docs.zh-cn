@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113278"
 ---
 # <a name="subqueries-sql-server"></a>子查询 (SQL Server)
@@ -39,7 +39,7 @@ FROM Sales.SalesOrderHeader AS Ord;
 GO
 ```
 
-## <a name="fundamentals"></a> 子查询基础知识
+## <a name="subquery-fundamentals"></a><a name="fundamentals"></a> 子查询基础知识
 子查询也称为内部查询或内部选择，而包含子查询的语句也称为外部查询或外部选择。   
 
 许多包含子查询的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句都可以改用联接表示。 其他问题只能通过子查询提出。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，包含子查询的语句和语义上等效的不包含子查询的语句在性能上通常没有差别。 但是，在一些必须检查存在性的情况中，使用联接会产生更好的性能。 否则，为确保消除重复值，必须为外部查询的每个结果都处理嵌套查询。 所以在这些情况下，联接方式会产生更好的效果。 以下示例显示了返回相同结果集的 `SELECT` 子查询和 `SELECT` 联接：
@@ -92,7 +92,7 @@ GO
 -   通过未修改的比较运算符引入且必须返回单个值。
 -   通过 `EXISTS` 引入的存在测试。
 
-## <a name="rules"></a> 子查询规则
+## <a name="subquery-rules"></a><a name="rules"></a> 子查询规则
 子查询受下列限制的制约： 
 -   通过比较运算符引入的子查询选择列表只能包括一个表达式或列名称（对 `EXISTS` 执行的 `IN` 或对列表执行的 `SELECT *` 子查询除外）。   
 -   如果外部查询的 `WHERE` 子句包括列名称，它必须与子查询选择列表中的列是联接兼容的。   
@@ -104,7 +104,7 @@ GO
 -   不能更新使用子查询创建的视图。   
 -   按照惯例，由 `EXISTS` 引入的子查询的选择列表有一个星号 (\*)，而不是单个列名。 因为由 `EXISTS` 引入的子查询创建了存在测试并返回 TRUE 或 FALSE 而非数据，所以由 `EXISTS` 引入的子查询的规则与标准选择列表的规则相同。   
 
-## <a name="qualifying"></a> 在子查询中限定列名
+## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> 在子查询中限定列名
 在下列示例中，外部查询的  *子句中的 BusinessEntityID*`WHERE` 列是由外部查询的 `FROM` 子句中的表名 (Sales.Store  ) 隐性限定的。 对子查询的选择列表中 CustomerID  的引用则是由子查询的 `FROM` 子句（即通过 Sales.Customer  表）来限定的。
 
 ```sql
@@ -140,7 +140,7 @@ GO
 > [!IMPORTANT]
 > 如果某个子查询中引用的列不存在于该子查询的 `FROM` 子句引用的表中，而存在于外部查询的 `FROM` 子句引用的表中，则该查询可以正确执行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会用外部查询中的表名隐式限定该子查询中的列。   
 
-## <a name="nesting"></a> 多层嵌套
+## <a name="multiple-levels-of-nesting"></a><a name="nesting"></a> 多层嵌套
 子查询自身可以包括一个或多个子查询。 一个语句中可以嵌套任意数量的子查询。   
 
 以下查询将查找作为销售人员的雇员的姓名。   
@@ -202,7 +202,7 @@ ON e.BusinessEntityID = s.BusinessEntityID;
 GO
 ```
 
-## <a name="correlated"></a> 相关子查询
+## <a name="correlated-subqueries"></a><a name="correlated"></a> 相关子查询
 许多查询都可以通过执行一次子查询并将得到的值代入外部查询的 `WHERE` 子句中进行计算。 在包括相关子查询（也称为重复子查询）的查询中，子查询依靠外部查询获得值。 这意味着子查询是重复执行的，为外部查询可能选择的每一行均执行一次。
 此查询在 SalesPerson  表中检索奖金为 5000 且雇员标识号与 Employee  和 SalesPerson  表中的标识号相匹配的雇员的名和姓的一个实例。
 
@@ -259,7 +259,7 @@ GO
 
 通过在外部查询中引用表中的列作为表值函数的参数，相关子查询也可以在 `FROM` 子句中包含表值函数。 在这种情况下，对于外部查询的每一行，将根据子查询计算表值函数。    
   
-## <a name="types"></a> 子查询类型
+## <a name="subquery-types"></a><a name="types"></a> 子查询类型
 可以在许多位置指定子查询： 
 -   使用别名。 有关详细信息，请参阅[使用别名的子查询](#aliases)。
 -   使用 `IN` 或 `NOT IN`。 有关详细信息，请参阅[使用 IN 的子查询](#in)和[使用 NOT IN 的子查询](#notin)。
@@ -269,7 +269,7 @@ GO
 -   使用 `EXISTS` 或 `NOT EXISTS`。 有关详细信息，请参阅[使用 EXISTS 的子查询](#exists)和[使用 NOT EXISTS 的子查询](#notexists)。
 -   代替表达式。 有关详细信息，请参阅[用于替代表达式的子查询](#expression)。
 
-### <a name="aliases"></a> 使用别名的子查询
+### <a name="subqueries-with-aliases"></a><a name="aliases"></a> 使用别名的子查询
 许多其中的子查询和外部查询引用同一表的语句可称为自联接（将某个表与自身联接）。 例如，您可以使用子查询查找特定州的员工的地址。   
 
 ```sql
@@ -326,7 +326,7 @@ GO
 
 显式别名清楚地表明，在子查询中对 Person.Address  的引用并不等同于在外部查询中的该引用。   
 
-### <a name="in"></a> 使用 IN 的子查询
+### <a name="subqueries-with-in"></a><a name="in"></a> 使用 IN 的子查询
 通过 `IN`（或 `NOT IN`）引入的子查询结果是包含零个值或多个值的列表。 子查询返回结果之后，外部查询将利用这些结果。    
 下面的查询查找 Adventure Works Cycles 生成的所有车轮产品的名称。     
 
@@ -468,7 +468,7 @@ GO
 
 联接总是可以表示为子查询。 子查询经常（但不总是）可以表示为联接。 这是因为联接是对称的：无论以何种顺序联接表 A 和 B，都将得到相同的结果。 而对子查询来说，情况则并非如此。    
 
-### <a name="notin"></a> 使用 NOT IN 的子查询
+### <a name="subqueries-with-not-in"></a><a name="notin"></a> 使用 NOT IN 的子查询
 通过 NOT IN 关键字引入的子查询也返回一列零值或更多值。   
 以下查询将查找不是成品自行车的产品名称。   
 
@@ -488,7 +488,7 @@ GO
 
 此语句无法转换为一个联接。 这种类似但不相等连接有不同的含义：它在某个非成品自行车的子类别中查找产品名称。      
 
-### <a name="upsert"></a> UPDATE、DELETE 和 INSERT 语句中的子查询
+### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> UPDATE、DELETE 和 INSERT 语句中的子查询
 可以在 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT` 数据操作 (DML) 语句中嵌套子查询。    
 
 以下示例使 Production.Product  表的 ListPrice  列中的值加倍。 `WHERE` 子句中的子查询将引用 Purchasing.ProductVendor  表以便将 Product  表中更新的行仅限制为 BusinessEntity  1540 对应的那些行。
@@ -518,7 +518,7 @@ INNER JOIN Purchasing.ProductVendor AS pv
 GO   
 ```
 
-### <a name="comparison"></a> 使用比较运算符的子查询
+### <a name="subqueries-with-comparison-operators"></a><a name="comparison"></a> 使用比较运算符的子查询
 子查询可以由一个比较运算符（=、< >、>、> =、<、! >、! < 或 < =）。   
 
 与使用 `ANY` 引入的子查询一样，由未修饰的比较运算符（即后面不接 `ALL` 或 `IN` 的比较运算符）引入的子查询必须返回单个值而不是值列表。 如果这样的子查询返回多个值，SQL Server 将显示一条错误信息。    
@@ -569,7 +569,7 @@ WHERE ListPrice >
 GO
 ```
 
-### <a name="comparison_modified"></a> 用 ANY、SOME 或 ALL 修改的比较运算符
+### <a name="comparison-operators-modified-by-any-some-or-all"></a><a name="comparison_modified"></a> 用 ANY、SOME 或 ALL 修改的比较运算符
 可以用 ALL 或 ANY 关键字修改引入子查询的比较运算符。 SOME 是与 `ANY` 等效的 ISO 标准。     
 
 通过修改的比较运算符引入的子查询返回零个值或多个值的列表，并且可以包括 `GROUP BY` 或 `HAVING` 子句。 这些子查询可以用 `EXISTS` 重新表述。     
@@ -667,7 +667,7 @@ GO
 
 还可以使用 `<>ALL` 运算符获得相同的结果，该运算符与 `NOT IN` 等效。   
 
-### <a name="exists"></a> 使用 EXISTS 的子查询
+### <a name="subqueries-with-exists"></a><a name="exists"></a> 使用 EXISTS 的子查询
 使用 `EXISTS` 关键字引入子查询后，子查询的作用就相当于进行存在测试。 外部查询的 `WHERE` 子句测试子查询返回的行是否存在。 子查询实际上不产生任何数据，它只返回 TRUE 或 FALSE 值。   
 
 使用 EXISTS 引入的子查询的语法如下：   
@@ -735,7 +735,7 @@ WHERE ProductSubcategoryID IN
 GO
 ```   
 
-### <a name="notexists"></a> 使用 NOT EXISTS 的子查询
+### <a name="subqueries-with-not-exists"></a><a name="notexists"></a> 使用 NOT EXISTS 的子查询
 `NOT EXISTS` 与 `EXISTS` 的工作方式类似，只是如果子查询不返回行，那么使用 NOT EXISTS 的 `WHERE` 子句会得到令人满意的结果。    
 
 例如，查找不在轮子类别中的产品的名称：   
@@ -754,7 +754,7 @@ WHERE NOT EXISTS
 GO
 ```   
 
-### <a name="expression"></a> 用于替代表达式的子查询
+### <a name="subqueries-used-in-place-of-an-expression"></a><a name="expression"></a> 用于替代表达式的子查询
 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，除了在 `SELECT` 列表中以外，在 `UPDATE`、`INSERT`、`DELETE` 和 `ORDER BY` 语句中任何能够使用表达式的地方都可以用子查询替代。    
 
 以下示例说明如何使用此增强功能。 此查询找出所有山地车产品的价格、平均价格以及两者之间的差价。    

@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc2d749f3963f0828a70bc1506581f5bd2a35a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75246232"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
@@ -74,7 +74,7 @@ varchar [ ( n | max ) ] 可变大小字符串数据    。 使用 n  定义字�
 > 每个非 null varchar(max) 或 nvarchar(max) 列都需要 24 个字节的附加固定分配，这将在执行排序操作期间根据 8,060 字节行限制进行计数。 这样一来，可能会为非 null varchar(max) 或 nvarchar(max)（可在表格中进行创建）列数创建隐式限制。
 在以下情况下不提供特殊错误：创建表格（最大行大小超过允许的最大 8,060 字节时出现的一般警告除外）时，或插入数据时。 这一较大的行大小可能会导致在执行某些正常操作（例如聚集索引键更新或完整列集排序）期间出现错误（例如错误 512），这些错误只会在执行操作时发生。
 
-## <a name="_character"></a>转换字符数据
+## <a name="converting-character-data"></a><a name="_character"></a>转换字符数据
 
 如果将字符表达式转换为不同大小的字符数据类型，则对于新数据类型而言过长的值将被截断。 出于从字符表达式转换的目的将 **uniqueidentifier** 类型视为字符类型，因此，在转换到字符类型时要遵循截断规则。 请参阅后面的“示例”一节。
 

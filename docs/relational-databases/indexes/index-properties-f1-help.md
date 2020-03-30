@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68476303"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
@@ -43,7 +43,7 @@ ms.locfileid: "68476303"
   
  [索引属性筛选器页](#Filter)  
   
-##  <a name="General"></a> 索引属性常规页  
+##  <a name="index-properties-general-page"></a><a name="General"></a> 索引属性常规页  
  使用“常规”页可以查看或修改所选表或视图的索引属性。 每一页上的选项可基于所选索引的类型更改。  
   
  **表名称**  
@@ -55,7 +55,7 @@ ms.locfileid: "68476303"
  显示索引的名称。 对于现有索引，此字段是只读的。 在创建新的索引时，请键入索引的名称。  
   
  **索引类型**  
- 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是：“聚集”、“非聚集”、“主 XML”、“辅助 XML”、“空间”、“聚集列存储”或“非聚集列存储”        。  
+ 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是： **“聚集”** 、 **“非聚集”** 、 **“主 XML”** 、 **“辅助 XML”** 、 **“空间”** \ **“聚集列存储索引”** 或 **“非聚集列存储”** 。  
   
  **注意** 每个表只允许创建一个聚集索引。 每个表只允许创建一个 xVelocity 内存优化的列存储索引。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68476303"
  显示组成索引键的列是否允许在表或视图列中存储 Null 值。  
   
  **添加**  
- 向索引键添加列。 从单击“添加”时出现的“从 <表名称\< 选择列”对话框中选择表列    。 对于空间索引，在选择一列后，该按钮将呈灰色。  
+ 向索引键添加列。 从单击“添加”时出现的“从 <表名称 **选择列”对话框中选择表列** *\<*  。 对于空间索引，在选择一列后，该按钮将呈灰色。  
   
  **删除**  
  从组成索引键的列中删除所选列。  
@@ -113,7 +113,7 @@ ms.locfileid: "68476303"
  **包含列**  
  在非聚集索引中包含非键列。 使用此选项，您可以将列作为非键列添加到非聚集索引的叶级别中，从而跳过当前对索引键总大小的索引限制以及对构成索引键的最大列数的索引限制。 有关详细信息，请参阅 [创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
-##  <a name="Columns"></a> 用于为索引选择列的对话框  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> 用于为索引选择列的对话框  
  在创建或修改索引时，使用此页可以向 **“索引属性常规”** 页中添加列。  
   
  **复选框**  
@@ -134,7 +134,7 @@ ms.locfileid: "68476303"
  **允许 Null 值**  
  如果表定义允许该列包含空值，则显示 **“是”** 。 如果表定义不允许该列包含 Null 值，则显示 **“否”** 。  
 
-##  <a name="Options"></a> 选项页选项
+##  <a name="options-page-options"></a><a name="Options"></a> 选项页选项
  使用此页可以查看或修改各种索引选项。
 
 ### <a name="general-options"></a>常规选项
@@ -203,7 +203,7 @@ False 或未指定填充因子<br>
 考虑到中间级页上的键集，将中间级页填充到接近其容量的程度，以留出足够的空间，使之至少能够容纳索引的最大的一行。
 
 
-##  <a name="Storage"></a> 存储页选项  
+##  <a name="storage-page-options"></a><a name="Storage"></a> 存储页选项  
  使用此页可查看或修改所选索引的文件组或分区方案属性。 仅显示与索引类型相关的选项。  
   
  **文件组**  
@@ -234,7 +234,7 @@ False 或未指定填充因子<br>
 > [!NOTE]  
 >  如果表列是计算列，则 **“列数据类型”** 显示为“计算列”。  
   
-##  <a name="Spatial"></a> 空间页索引选项  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a> 空间页索引选项  
  使用 **“空间”** 页，可以查看或指定空间属性的值。 有关详细信息，请参阅[空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ### <a name="bounding-box"></a>边界框  
@@ -292,7 +292,7 @@ False 或未指定填充因子<br>
  **级别 4**  
  第四级网格的密度。  
   
-##  <a name="Filter"></a> 筛选器页  
+##  <a name="filter-page"></a><a name="Filter"></a> 筛选器页  
  使用此页可以输入用于筛选索引的筛选器谓词。 有关详细信息，请参阅 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
  **筛选表达式**  

@@ -47,10 +47,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924957"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -644,12 +644,12 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
 > [!IMPORTANT]
 > 如果索引所在的文件组脱机或设置为只读，则无法重新组织或重新生成索引。 如果指定了关键字 ALL，但有一个或多个索引位于脱机文件组或只读文件组中，该语句将失败。  
   
-## <a name="rebuilding-indexes"></a> 重新生成索引  
+## <a name="rebuilding-indexes"></a><a name="rebuilding-indexes"></a> 重新生成索引  
 重新生成索引将会删除并重新创建索引。 这将根据指定的或现有的填充因子设置压缩页来删除碎片、回收磁盘空间，然后对连续页中的索引行重新排序。 如果指定 ALL，将删除表中的所有索引，然后在单个事务中重新生成。 不必预先删除外键约束。 重新生成具有 128 个区或更多区的索引时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]延迟实际的页释放及其关联的锁，直到事务提交。  
  
 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。 
   
-## <a name="reorganizing-indexes"></a> 重新组织索引
+## <a name="reorganizing-indexes"></a><a name="reorganizing-indexes"></a> 重新组织索引
 使用最少系统资源重新组织索引。 通过对叶级页以物理方式重新排序，使之与叶节点的从左到右的逻辑顺序相匹配，进而对表和视图中的聚集索引和非聚集索引的叶级进行碎片整理。 重新组织还会压缩索引页。 压缩基于现有的填充因子值。 
   
 如果指定了 `ALL`，将重新组织表中的关系索引（包括聚集索引和非聚集索引）和 XML 索引。 指定 ALL 时应用某些限制，请参阅本文“参数”部分的 ALL 定义。  
@@ -659,7 +659,7 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
 > [!IMPORTANT]
 > 对于具有有序聚合列存储索引的 Azure SQL 数据仓库表，`ALTER INDEX REORGANIZE` 不会对数据重新排序。 要对数据重新排序，可使用 `ALTER INDEX REBUILD`。
   
-## <a name="disabling-indexes"></a> 禁用索引  
+## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> 禁用索引  
 禁用索引可防止用户访问该索引，对于聚集索引，还可防止用户访问基础表数据。 索引定义保留在系统目录中。 对视图禁用非聚集索引或聚集索引会以物理方式删除索引数据。 禁用聚集索引将阻止对数据的访问，但在删除或重新生成索引之前，数据在 B 树中一直保持未维护的状态。 若要查看已启用索引或已禁用的索引的状态，请查询 **sys.indexes** 目录视图中的 **is_disabled** 列。  
   
 如果表位于事务复制发布中，则无法禁用任何与主键列关联的索引。 复制需要使用这些索引。 若要禁用索引，必须先从发布中删除该表。 有关详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
@@ -682,7 +682,7 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
 |ALLOW_PAGE_LOCKS = ON|应用于堆和任何关联的非聚集索引。|  
 |ALLOW_PAGE_LOCKS = OFF|完全针对非聚集索引。 这意味着不允许对非聚集索引使用所有页锁。 在堆中，仅不允许使用有页的共享 (S) 锁、更新 (U) 锁和排他 (X) 锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]仍然可以获取意向页锁（IS、IU 或 IX），供内部使用。|  
   
-## <a name="online-index-operations"></a> 联机索引操作  
+## <a name="online-index-operations"></a><a name="online-index-operations"></a> 联机索引操作  
 重新生成索引且 ONLINE 选项设置为 ON 时，基础对象、表和关联的索引均可用于查询和数据修改。 您也可以联机重新生成单个分区上某索引的一部分。 更改过程中，排他表锁只保留非常短的时间。  
   
 重新组织索引始终联机执行。 该进程不长期保留锁，因此，不阻塞正在运行的查询或更新。  
@@ -695,7 +695,7 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
   
 同一时间执行的所有其他联机索引操作都将失败。 例如，您不能在同一个表中同时重新生成两个索引或更多索引，也不能在同一个表中重新生成现有索引时创建新的索引。  
 
-### <a name="resumable-indexes"></a> 可恢复索引操作
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> 可恢复索引操作
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
