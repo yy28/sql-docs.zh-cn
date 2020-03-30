@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056183"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
@@ -31,7 +31,7 @@ ms.locfileid: "74056183"
   
 -   配置用户数据库以进行全文搜索。 这涉及为数据库创建一个或多个全文目录并对每个要对其执行全文查询的表或索引视图定义一个全文索引。  
   
-##  <a name="props"></a> 查看和更改全文搜索的服务器属性  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> 查看和更改全文搜索的服务器属性  
  可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例的全文属性。  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>查看和更改全文搜索的服务器属性  
@@ -69,7 +69,7 @@ ms.locfileid: "74056183"
         > [!NOTE]  
         >  也可以使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** 操作来设置全文升级选项。  
   
-##  <a name="metadata"></a> 查看其他全文服务器属性  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> 查看其他全文服务器属性  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数可用来获取全文搜索的各种服务器级属性的值。 此信息可用于全文搜索的管理和故障排除。  
   
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器实例全文属性及其相关的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数。  
@@ -81,7 +81,7 @@ ms.locfileid: "74056183"
 |**LoadOSResources**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中是否注册并使用了操作系统断字符和筛选器。|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|指定全文引擎是否只加载已签名的二进制文件。|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> 监视全文搜索活动  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> 监视全文搜索活动  
  有几个动态管理视图和函数可用来监视服务器实例上的全文搜索活动。  
   
  **查看与正在进行填充活动的全文目录有关的信息**  

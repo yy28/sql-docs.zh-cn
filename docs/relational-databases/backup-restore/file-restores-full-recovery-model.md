@@ -20,10 +20,10 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908932"
 ---
 # <a name="file-restores-full-recovery-model"></a>文件还原（完整恢复模式）
@@ -55,7 +55,7 @@ ms.locfileid: "72908932"
     >  如果你希望数据库脱机以进行文件还原，请在开始还原序列之前执行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 语句以使数据库脱机：ALTER DATABASE *database_name* SET OFFLINE。  
   
   
-##  <a name="Overview"></a> 从文件备份还原损坏的文件  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> 从文件备份还原损坏的文件  
   
 1.  在还原一个或多个损坏的文件前，请尝试创建 [结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
@@ -121,7 +121,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [示例：主文件组和一个其他文件组的脱机还原（完整恢复模式）](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **还原文件和文件组**  
   
 -   [将文件还原到新位置 (SQL Server)](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  

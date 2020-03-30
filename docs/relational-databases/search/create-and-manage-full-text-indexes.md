@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257657"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
@@ -27,7 +27,7 @@ ms.locfileid: "75257657"
 ## <a name="prerequisite---create-a-full-text-catalog"></a>先决条件 - 创建全文目录
 必须具有全文目录，然后才能创建全文索引。 目录是包含一个或多个全文索引的虚拟容器。 有关详细信息，请参阅[创建和管理全文目录](../../relational-databases/search/create-and-manage-full-text-catalogs.md)。
   
-##  <a name="tasks"></a> 创建、更改或删除全文索引  
+##  <a name="create-alter-or-drop-a-full-text-index"></a><a name="tasks"></a> 创建、更改或删除全文索引  
 ### <a name="create-a-full-text-index"></a>创建全文索引  
   
 -   [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "75257657"
 
 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。
 
-##  <a name="view"></a> 查看全文索引的属性
+##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> 查看全文索引的属性
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>使用 Transact-SQL 查看全文索引的属性
 
 |目录视图或动态管理视图|说明|  
@@ -80,7 +80,7 @@ ms.locfileid: "75257657"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。   
   
-##  <a name="props"></a> 查看索引表和列的属性  
+##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a> 查看索引表和列的属性  
  一些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数（例如 OBJECTPROPERTYEX）可用来获取各种全文索引属性的值。 此信息可用于全文搜索的管理和故障排除。  
   
  下表列出了与索引表和列相关的全文属性及其相关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数。  
@@ -102,7 +102,7 @@ ms.locfileid: "75257657"
 |**TableFulltextPopulateStatus**|全文表的填充状态。|OBJECTPROPERTYEX|  
 |**TableHasActiveFulltextIndex**|表是否具有活动的全文索引。|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> 获取关于全文键列的信息  
+##  <a name="get-info-about-the-full-text-key-column"></a><a name="key"></a> 获取关于全文键列的信息  
  通常情况下，CONTAINSTABLE 或 FREETEXTTABLE 行集值函数的结果需要与基表相联接。 在这样的情况下，需要知道唯一键列名称。 可以查询给定的唯一索引是否作为全文键使用，并且可以获取全文键列的标识符。  
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>确定给定的唯一索引是否用作全文键列  
@@ -183,7 +183,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  有关 **xml** 列的索引编制和查询的详细信息，请参阅[结合使用全文搜索和 XML 列](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
   
-##  <a name="disable"></a> 为表禁用或重新启用全文索引   
+##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> 为表禁用或重新启用全文索引   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，默认情况下所有由用户创建的数据库都启用了全文索引。 另外，在为表创建全文索引并将列添加到索引之后，就会自动为单个表启用全文索引。 从表的全文索引中删除最后一列时，会自动为表禁用全文索引。  
   
  对于具有全文索引的表，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]手动为表禁用或重新启用全文索引。  
@@ -194,7 +194,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 3.  选择  “全文索引”，然后单击  “禁用全文索引”或  “启用全文索引”。  
   
-##  <a name="remove"></a> 从表中删除全文索引  
+##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> 从表中删除全文索引  
   
 1.  在对象资源管理器中，右键单击要删除的全文索引所在的表。  
   

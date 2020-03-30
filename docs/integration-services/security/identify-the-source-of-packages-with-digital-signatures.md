@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295697"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
@@ -47,7 +47,7 @@ ms.locfileid: "71295697"
   
 > **注意：** 可选的 **BlockedSignatureStates** 注册表值可指定比在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中或 **dtexec** 命令行中设置的数字签名选项限制性更强的设置。 在这种情况下，限制性更强的注册表设置将覆盖其他设置。  
 
-## <a name="registry"></a> 通过设置注册表值实现签名策略
+## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> 通过设置注册表值实现签名策略
   使用可选的注册表值可以管理组织用于加载签名包和未签名包的策略。 如果使用此注册表值，则必须在将运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包以及将强制实施该策略的每台计算机上创建此注册表值。 设置该注册表值后， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将在加载包之前检查或验证签名。  
   
  本主题中的此过程将介绍如何将可选的 **BlockedSignatureStates** DWORD 值添加到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS 注册表项中。 **BlockedSignatureStates** 中的数据值决定当包具有不可信签名、具有无效签名或未签名时是否阻止该包。 对于用来进行包签名的签名的状态， **BlockedSignatureStates** 注册表值使用下列定义：  
@@ -92,7 +92,7 @@ ms.locfileid: "71295697"
   
 9. 在 **“文件”** 菜单中，单击 **“退出”** 。    
 
-## <a name="cert"></a> 使用数字证书对包签名
+## <a name="sign-a-package-by-using-a-digital-certificate"></a><a name="cert"></a> 使用数字证书对包签名
   本主题介绍如何使用数字证书对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包进行签名。 可以使用数字签名以及其他设置来防止加载和运行无效的包。  
   
  必须先执行下列任务才能对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包进行签名：  
@@ -137,7 +137,7 @@ ms.locfileid: "71295697"
   
      虽然已对包进行了签名，您现在必须配置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，以便在加载该包之前检查或验证数字签名。  
 
-## <a name="signing_dialog"></a>“数字签名”对话框 UI 参考
+## <a name="digital-signing-dialog-box-ui-reference"></a><a name="signing_dialog"></a>“数字签名”对话框 UI 参考
   使用 **“数字签名”** 对话框可以使用数字签名对包进行签名或删除签名。 在 **中，** SSIS **菜单的** “数字签名” **选项中提供了** “数字签名” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]对话框。  
   
  有关详细信息，请参阅 [使用数字证书对包签名](#cert)。  

@@ -11,10 +11,10 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73032999"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
@@ -27,7 +27,7 @@ ms.locfileid: "73032999"
 - [使用 Management Studio 进行连接](#connect)  
 - [授权其他连接](#additional) 
 
-## <a name="tools">入门工具</a> 
+## <a name=""></a><a name="tools">入门工具</a> 
 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了多种工具。 本主题说明您首先需要的工具，并帮助选择适合于作业工具。 所有工具都可以从“开始”  菜单上访问。 默认情况下不会安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之类的一些工具。 必须在安装过程中将这些工具选择为客户端组件的一部分。 有关下面所述工具的完整说明，请在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机图书中进行搜索。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 仅包含其中的一部分工具。  
 
 ### <a name="basic-tools"></a>基本工具
@@ -46,7 +46,7 @@ ms.locfileid: "73032999"
 - 在当前版本的 Windows 中，在“开始”  菜单上，键入 **Configuration Manager**，然后单击“SQL Server 版本配置管理器”  。   
 - 使用较旧版本的 Windows 时，在“开始”  菜单上，依次指向“所有程序”  、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、“配置工具”  ，然后单击“SQL Server 配置管理器”  。  
 
-## <a name="connect"></a>使用 Management Studio 进行连接  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>使用 Management Studio 进行连接  
 - 如果知道实例名并且以计算机上的本地管理员组成员身份进行连接，则可以使用同一台计算机上运行的工具轻松连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 。 必须在承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的同一台计算机上执行下面的过程。  
 
 > [!NOTE]  
@@ -85,7 +85,7 @@ ms.locfileid: "73032999"
 > [!NOTE]
 > 本教程假定你刚接触 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，并且连接时没有出现特殊问题。 这应足以满足大多数人的需求，并使本教程保持简单。 有关疑难解答步骤的详细信息，请参阅 [对连接到 SQL Server 数据库引擎的疑难解答](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。 
 
-## <a name="additional"></a>授权其他连接  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>授权其他连接  
 现在，您已经以管理员身份连接到了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您的首要任务之一是授权其他用户进行连接。 实现此任务的步骤是创建一个登录名，然后授权此登录名以用户身份访问数据库。 登录名可以是使用 Windows 凭据的 Windows 身份验证登录名；也可以是 SQL Server 身份验证登录名（这些登录名在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中存储身份验证信息并独立于 Windows 凭据）。 尽可能使用 Windows 身份验证。
 
 > [!TIP]

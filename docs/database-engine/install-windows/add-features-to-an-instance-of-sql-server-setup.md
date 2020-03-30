@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68051201"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
@@ -36,25 +36,25 @@ ms.locfileid: "68051201"
 >  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  
   
 > [!NOTE]  
->  在向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例中添加功能时，现有的使用情况报告设置将应用于新添加的功能。 若要更改这些设置，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“配置工具”  菜单上的  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误和使用情况报告”工具。  
+>  在向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例中添加功能时，现有的使用情况报告设置将应用于新添加的功能。 若要更改这些设置，请使用 **“配置工具”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 菜单上的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **“** 错误和使用情况报告”工具。  
   
 ## <a name="procedures"></a>过程  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>若要从命令提示符向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>若要从命令提示符向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 setup.exe。 如果出现“ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装”对话框， [!INCLUDE[clickOK](../../includes/clickok-md.md)] 安装必备组件，然后单击 **“取消”** 退出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装。  
   
-2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要向现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加新功能，请在左侧导航区域中单击“安装”  ，然后单击“全新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装或向现有安装添加功能”  。  
+2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要向现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加新功能，请在左侧导航区域中单击“安装”  ，然后单击“全新  **独立安装或向现有安装添加功能”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。  
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要查看验证详细信息，请单击 **“查看详细信息”** 。 若要继续， [!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-4.  在“产品更新”页中，将显示最近提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新。 如果你不想包括更新，则取消选中“包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新”  复选框。 如果未发现任何产品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将不会显示该页并且自动前进到 **“安装安装程序文件”** 页。  
+4.  在“产品更新”页中，将显示最近提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新。 如果你不想包括更新，则取消选中“包括  **产品更新”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 复选框。 如果未发现任何产品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将不会显示该页并且自动前进到 **“安装安装程序文件”** 页。  
   
 5.  在“安装安装程序文件”页上，安装程序将提供下载、提取和安装这些安装程序文件的进度。 如果找到了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的更新，并且指定了包括该更新，则也将安装该更新。 单击 **“安装”** 以安装安装程序支持文件。  
   
 6.  系统配置检查器将在安装继续之前检验计算机的系统状态。  
   
-7.  在“安装类型”页上，选择“向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例中添加功能”  选项，然后选择要更新的实例。  
+7.  在“安装类型”页上，选择“向  **的现有实例中添加功能”[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 选项，然后选择要更新的实例。  
   
 8.  在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。 每个组件都只能在给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上安装一次。 若要安装多个组件，则必须安装其他的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
   
@@ -118,15 +118,15 @@ ms.locfileid: "68051201"
   
 20. 使用“ Distributed Replay 客户端配置”页可以指定您希望向其授予针对 Distributed Replay 客户端服务的管理权限的用户。 具有管理权限的用户将可以不受限制地访问 Distributed Replay 客户端服务。  
   
-     “控制器名称”是一个可选参数，其默认值为 \<blank>   。 输入客户端计算机将与 Distributed Replay 客户端服务进行通信的控制器的名称。 注意以下事项：  
+     “控制器名称”是一个可选参数，其默认值为 **blank>** \<  。 输入客户端计算机将与 Distributed Replay 客户端服务进行通信的控制器的名称。 注意以下事项：  
   
     -   如果您已经设置了一个控制器，则在配置每个客户端时输入该控制器的名称。  
   
     -   如果您尚未设置控制器，则可以将控制器名称保留为空白。 但是，您必须在 **“客户端配置”** 文件中手动输入控制器名称。  
   
-     为 Distributed Replay 客户端服务指定 **“工作目录”** 。 默认工作目录为 \<驱动器号>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\  。  
+     为 Distributed Replay 客户端服务指定 **“工作目录”** 。 默认工作目录为 \<驱动器号>:\Program Files  \\\DReplayClient\WorkingDir[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\。  
   
-     为 Distributed Replay 客户端服务指定 **“结果目录”** 。 默认结果目录为 \<驱动器号>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\  。  
+     为 Distributed Replay 客户端服务指定 **“结果目录”** 。 默认结果目录为 \<驱动器号>:\Program Files  \\\DReplayClient\ResultDir[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\。  
   
      若要继续，请单击 **“下一步”** 。  
   

@@ -18,10 +18,10 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241781"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>AlwaysOn 可用性组的可用性模式之间的差异
@@ -33,7 +33,7 @@ ms.locfileid: "75241781"
 > [!NOTE]  
 >  如果某一辅助副本超过了主副本的会话超时期限，则主副本将暂时切换到该辅助副本的异步提交模式。 在该辅助副本重新与主副本连接后，它们将恢复同步提交模式。  
   
-##  <a name="SupportedAvModes"></a> 受支持的可用性模式  
+##  <a name="supported-availability-modes"></a><a name="SupportedAvModes"></a> 受支持的可用性模式  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持三种可用性模式：异步提交模式、同步提交模式和仅配置模式，如下所示：  
   
 -   异步提交模式  是一种灾难恢复解决方案，适合于可用性副本的分布距离较远的情况。 如果每个辅助副本都在异步提交模式下运行，则主副本不会等待任何辅助副本强制写入日志， 而会在将日志记录写入本地日志文件后，立即将事务确认发送到客户端。 主副本使用与针对异步提交模式配置的辅助副本相关的最小事务滞后运行。  如果为当前主副本配置了异步提交可用性模式，则它将通过异步方式为所有辅助副本提交事务，而不管这些副本各自的可用性模式设置如何。  
@@ -61,14 +61,14 @@ ms.locfileid: "75241781"
   
  通常，节点 04 作为异步提交副本，部署在灾难恢复站点中。 在故障转移到节点 04 后节点 01、02 和 03 保持在异步提交模式，这一情况有助于避免因两个站点之间网络延迟较长而导致您的可用性组中的性能下降。  
   
-##  <a name="AsyncCommitAvMode"></a> Asynchronous-Commit Availability Mode  
+##  <a name="asynchronous-commit-availability-mode"></a><a name="AsyncCommitAvMode"></a> Asynchronous-Commit Availability Mode  
  在异步提交模式  下，次要副本永远不会与主要副本同步。 虽然给定的辅助数据库可能会赶上对应的主数据库，但任何辅助数据库在任何时点都可能会落后。 对于主副本和辅助副本相隔很远而且您不希望小错误影响主副本的灾难恢复方案的情况，或性能比同步数据保护更重要的情况，异步提交模式将会很有用。 而且，由于主副本不会等待来自辅助副本的确认，因而辅助副本上的问题从不会影响主副本。  
   
  异步提交辅助副本会尝试与接收自主副本的日志记录保持一致。 但异步提交辅助数据库往往会保持未同步状态，并且可能稍微滞后于相应的主数据库。 通常，异步提交辅助数据库和相应的主数据库之间的这个时间差会很小。 但是，如果承载辅助副本的服务器的工作负荷过高或网络速度很慢，则这个时间差会变得较大。  
   
  异步提交模式所支持的唯一故障转移形式为强制故障转移（可能造成数据丢失）。 强制故障转移是一种最后手段，仅可用于当前主要副本长时间保持不可用状态并且主数据库的即时可用性比可能丢失数据的风险更为重要的情况。故障转移目标必须是其角色处于 SECONDARY 或 RESOLVING 状态的副本。 故障转移目标将转换为主角色，并且其数据库副本将成为主数据库。 任何剩余的辅助数据库以及变得可用后的以前的主数据库都将被挂起，直到您手动单独恢复它们。 在异步提交模式下，原始主副本尚未发送到以前的辅助副本的任何事务日志都将丢失。 这意味着，某些或全部新的主数据库可能会缺少最近提交的事务。 有关强制故障转移的工作原理及其最佳使用方法的详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。  
   
-##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
+##  <a name="synchronous-commit-availability-mode"></a><a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  在同步提交可用性模式（同步提交模式  ）下，联接到某个可用性组后，辅助数据库就会与对应的主数据库求得一致并进入 SYNCHRONIZED 状态。 只要一直在进行数据同步，辅助数据库就会保持 SYNCHRONIZED 状态。 这可确保对某一给定主数据库提交的每个事务也对相应的辅助数据库提交。 在同步给定辅助副本上的每个辅助数据库之后，辅助副本的同步运行状态总体上将为 HEALTHY。  
   
  **本节内容：**  
@@ -81,7 +81,7 @@ ms.locfileid: "75241781"
   
 -   [使用自动故障转移的同步提交模式](#SyncCommitWithAuto)  
   
-###  <a name="DisruptSync"></a> 破坏数据同步的因素  
+###  <a name="factors-that-disrupt-data-synchronization"></a><a name="DisruptSync"></a> 破坏数据同步的因素  
  一旦其所有数据库均已同步，辅助副本即进入 HEALTHY 状态。 除非发生下列情况之一，否则，同步的辅助副本将会保持正常：  
   
 -   网络/计算机的延迟或故障导致辅助副本与主副本之间的会话超时。  
@@ -100,7 +100,7 @@ ms.locfileid: "75241781"
 > [!TIP]  
 >  若要查看可用性组、可用性副本或可用性数据库的同步运行状况，请分别查询 **sys.dm_hadr_availability_group_states** 、 **sys.dm_hadr_availability_replica_states** 或 [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)的 [synchronization_health](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)或 [synchronization_health_desc](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)列。  
   
-###  <a name="HowSyncWorks"></a> 辅助副本的同步工作原理  
+###  <a name="how-synchronization-works-on-a-secondary-replica"></a><a name="HowSyncWorks"></a> 辅助副本的同步工作原理  
  在同步提交模式下，在次要副本联接可用性组并与主要副本建立会话之后，次要副本会将传入日志记录写入到磁盘（强制写入日志  ）并向主要副本发送确认消息。 一旦辅助数据库上已经强制写入的日志赶上主数据库的日志末尾，辅助数据库的状态就会设置为 SYNCHRONIZED。 同步所需的时间实质上取决于会话开始时辅助数据库滞后于主数据库的程度（按最初从主副本收到的日志记录数计量）、主数据库的工作负荷和承载辅助副本的服务器实例的计算机的速度。  
   
  同步操作按下列方式维护：  
@@ -118,10 +118,10 @@ ms.locfileid: "75241781"
   
  同步提交模式通过要求在两个位置之间同步数据来保护您的数据，但代价是使事务的滞后时间有所增加。  
   
-### <a name="SyncCommitWithManual"></a> 仅使用手动故障转移的同步提交模式  
+### <a name="synchronous-commit-mode-with-only-manual-failover"></a><a name="SyncCommitWithManual"></a> 仅使用手动故障转移的同步提交模式  
  当这些副本连接在一起并且数据库已同步时，将支持手动故障转移。 如果辅助副本关闭，则主副本将不受影响。 如果不存在任何 SYNCHRONIZED 副本（即，不会将数据发送到任何辅助副本），则主副本将会暴露在风险之中。 如果主副本丢失，辅助副本将进入 RESOLVING 状态，但数据库所有者可强制故障转移到辅助副本（可能造成数据丢失）。 有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)概念。  
   
-###  <a name="SyncCommitWithAuto"></a> 使用自动故障转移的同步提交模式  
+###  <a name="synchronous-commit-mode-with-automatic-failover"></a><a name="SyncCommitWithAuto"></a> 使用自动故障转移的同步提交模式  
  通过确保在丢失主副本之后快速使数据库再次变为可用，自动故障转移可提供高可用性。 若要为可用性组配置自动故障转移，你需要将当前的主要副本和至少一个次要副本设置为使用同步提交模式自动故障转移。 你最多可以有三个自动故障转移副本。  
   
  此外，为了在特定时间自动执行故障转移，此辅助副本必须与主副本同步（即，辅助数据库全部同步），并且 Windows Server 故障转移群集 (WSFC) 群集必须具有仲裁。 如果主副本在这些条件下变得不可用，则将发生自动故障转移。 辅助副本将切换为主副本角色，并提供其数据库作为主数据库。 有关详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)主题的“自动故障转移”一节。  
@@ -138,7 +138,7 @@ ms.locfileid: "75241781"
 
 有关调查次要副本上的重做延迟的详细信息，请参阅[ 故障排除：主要副本未反映在次要副本上](../../../database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md)。
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **更改可用性模式和故障转移模式**  
   
 -   [更改可用性副本的可用性模式 (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -169,7 +169,7 @@ ms.locfileid: "75241781"
   
 -   [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

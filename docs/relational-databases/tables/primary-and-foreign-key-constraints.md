@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67999436"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
@@ -36,7 +36,7 @@ ms.locfileid: "67999436"
   
  [相关任务](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> 主键约束  
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> 主键约束  
  表通常具有包含唯一标识表中每一行的值的一列或一组列。 这样的一列或多列称为表的主键 (PK)，用于强制表的实体完整性。 由于主键约束可保证数据的唯一性，因此经常对标识列定义这种约束。  
   
  如果为表指定了主键约束， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将通过为主键列自动创建唯一索引来强制数据的唯一性。 当在查询中使用主键时，此索引还允许对数据进行快速访问。 如果对多列定义了主键约束，则一列中的值可能会重复，但来自主键约束定义中所有列的值的任何组合必须唯一。  
@@ -57,7 +57,7 @@ ms.locfileid: "67999436"
   
 -   如果在 CLR 用户定义类型的列中定义主键，则该类型的实现必须支持二进制排序。  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  外键 (FK) 是用于在两个表中的数据之间建立和加强链接的一列或多列的组合，可控制可在外键表中存储的数据。 在外键引用中，当包含一个表的主键值的一个或多个列被另一个表中的一个或多个列引用时，就在这两个表之间创建了链接。 这个列就成为第二个表的外键。  
   
  例如，因为销售订单和销售人员之间存在一种逻辑关系，所以 **Sales.SalesOrderHeader** 表含有一个指向 **Sales.SalesPerson** 表的外键链接。 **SalesOrderHeader** 表中的 **SalesPersonID** 列与 **SalesPerson** 表中的主键列相对应。 **SalesOrderHeader** 表中的 **SalesPersonID** 列是指向 **SalesPerson** 表的外键。 通过创建此外键关系，如果 **SalesPerson** 表的主键中不存在 SalesPersonID 的值，则 **SalesPersonID** 的值将无法插入到 **SalesOrderHeader** 表。  
@@ -118,7 +118,7 @@ ms.locfileid: "67999436"
   
 -   具有 INSTEAD OF 触发器的表不能同时具有指定级联操作的 REFERENCES 子句。 但是，级联操作目标表的 AFTER 触发器可对另一个表或视图执行 INSERT、UPDATE 或 DELETE 语句，这将激发为该对象定义的 INSTEAD OF 触发器。  
   
-##  <a name="Tasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 相关任务  
  下表列出了与主键和外键约束关联的常见任务。  
   
 |任务|主题|  

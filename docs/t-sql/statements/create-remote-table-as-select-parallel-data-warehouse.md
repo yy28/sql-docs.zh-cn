@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401704"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT（并行数据仓库）
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  连接设置允许使用 SSL 保护的用户名和密码数据连接到 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，但也以明文形式发送未加密的实际数据。 当发生这种情况时，恶意用户可能会截获 CREATE REMOTE TABLE 语句文本，其中包含登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名和密码。 为了避免这种风险，在连接到 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，请使用数据加密。  
   
-##  <a name="Examples"></a> 示例  
+##  <a name="examples"></a><a name="Examples"></a> 示例  
   
 ### <a name="a-creating-a-remote-table"></a>A. 创建远程表  
  此示例在数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和架构 `MyOrdersTable` 上创建名为 `OrderReporting` 的 `Orders` SMP 远程表。 `OrderReporting` 数据库在名为 `SQLA` 的服务器上，该服务器侦听默认端口 1433。 连接到服务器时使用用户 `David` 的凭据，密码为 `e4n8@3`。  

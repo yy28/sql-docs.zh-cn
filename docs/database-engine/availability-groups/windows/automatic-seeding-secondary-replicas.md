@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288541"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自动种子设定初始化 AlwaysOn 可用性组的辅助副本
@@ -46,7 +46,7 @@ ms.locfileid: "79288541"
 
 自动种子设定可以使用压缩，但它默认处于禁用状态。 启用压缩可减少网络带宽并可能加快进程速度，但代价是增加处理器开销。 若要在自动种子设定过程中使用压缩，请启用跟踪标志 9567 - 请参阅[调整可用性组的压缩](tune-compression-for-availability-group.md)。
 
-## <a name = "disklayout"></a>磁盘布局
+## <a name="disk-layout"></a><a name = "disklayout"></a>磁盘布局
 
 在 SQL Server 2016 及之前版本中，自动种子设定将在其中创建数据库的文件夹必须已经存在，并且与主要副本上的路径相同。 
 
@@ -103,13 +103,13 @@ WITH (
  GO
 ```
 
-在执行 `CREATE AVAILABILITY GROUP` 语句期间在主要副本上设置 `SEEDING_MODE` 不起作用，因为主要副本已包含数据库的主要读/写副本。 仅当另一个副本被设为主要副本并添加数据库时，才应用 `SEEDING_MODE`。 稍后可更改种子设定模式 - 请参阅[更改副本的种子设定模式](#change-the-seeding-mode-of-a-replica)。
+在执行 `SEEDING_MODE` 语句期间在主要副本上设置 `CREATE AVAILABILITY GROUP` 不起作用，因为主要副本已包含数据库的主要读/写副本。 仅当另一个副本被设为主要副本并添加数据库时，才应用 `SEEDING_MODE`。 稍后可更改种子设定模式 - 请参阅[更改副本的种子设定模式](#change-the-seeding-mode-of-a-replica)。
 
 在成为次要副本的实例上，一旦联接实例，SQL Server 日志中将添加以下消息：
 
 >可用性组“AGName”的本地可用性副本无权创建数据库，但 `SEEDING_MODE` 为 `AUTOMATIC`。 使用 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 命令，以允许创建由主要可用性副本进行种子设定的数据库。
 
-### <a name = "grantCreate"></a>授予可用性组在复制副本上创建数据库的权限
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a>授予可用性组在复制副本上创建数据库的权限
 
 加入后，授予可用性组在 SQL Server 的辅助副本实例上创建数据库的权限。 为了使自动种子设定正常工作，可用性组均需创建数据库的权限。 
 

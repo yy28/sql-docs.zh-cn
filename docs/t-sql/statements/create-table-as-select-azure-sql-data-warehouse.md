@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73660783"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT（Azure SQL 数据仓库）
@@ -167,7 +167,7 @@ Azure SQL 数据仓库尚不支持自动创建或自动更新统计信息。  �
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. 使用 CTAS 复制表 
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：Azure SQL 数据仓库和并行数据仓库
 
 `CTAS` 最常见的用途之一就是创建表副本，使你可以更改 DDL。 例如，如果最初将表创建为 `ROUND_ROBIN`，现在希望将其更改为分布在列上的表，则可以使用 `CTAS` 更改分布列。 `CTAS` 还可用于更改分区、索引或列类型。
 
@@ -239,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. 使用 CTAS 更改列属性 
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：Azure SQL 数据仓库和并行数据仓库
 
 本示例使用 CTAS 更改 DimCustomer2 表中多个列的数据类型、为 Null 性和排序规则。  
   
@@ -300,7 +300,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. 使用 CTAS 更改表的分布方法
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：Azure SQL 数据仓库和并行数据仓库
 
 此简单示例介绍如何改变表的分布方法。 为显示执行此操作的机制，它将哈希分布式表更改为轮循机制表，然后将轮循机制表更改回哈希分布式表。 最终的表与原始表相匹配。 
 
@@ -351,7 +351,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. 使用 CTAS 将表转换为复制表  
-适用对象：Azure SQL 数据仓库和并行数据仓库 
+适用范围：Azure SQL 数据仓库和并行数据仓库 
 
 此示例适用于将轮循机制表或哈希分布式表转换为复制表。 此特殊示例采用先前进一步改变分布类型的方法。  由于 DimSalesTerritory 是一个维度，而且可能是较小的表，因此可以选择重新创建该表作为复制表，从而避免在联接到其他表时数据发生移动。 
 
@@ -375,7 +375,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. 使用 CTAS 创建列数较少的表
-适用对象：Azure SQL 数据仓库和并行数据仓库 
+适用范围：Azure SQL 数据仓库和并行数据仓库 
 
 以下示例创建一个名为 `myTable (c, ln)` 的轮循机制分布式表。 新表仅包含两列。 它使用 SELECT 语句中的列别名作为列名。  
   
@@ -398,7 +398,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. 在 CREATE TABLE AS SELECT (CTAS) 中使用查询提示  
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：Azure SQL 数据仓库和并行数据仓库
   
 此查询显示在 CTAS 语句中使用查询联接提示的基本语法。 提交查询后，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 在为每个单独的分布生成查询计划时应用哈希联接策略。 有关哈希联接查询提示的详细信息，请参阅 [OPTION 子句 (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md).  
   
@@ -421,7 +421,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. 使用 CTAS 从 Azure Blob 存储导入数据  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+适用范围：Azure SQL 数据仓库和并行数据仓库  
 
 若要从外部表导入数据，只需使用 CREATE TABLE AS SELECT 从外部表进行选择。 从外部表选择数据到 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的语法与从常规表中选择数据的语法相同。  
   
@@ -503,7 +503,7 @@ AS SELECT * FROM ClickStreamExt
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. 使用 CTAS 而不是 SELECT..INTO  
-适用对象：Azure SQL 数据仓库和并行数据仓库
+适用范围：Azure SQL 数据仓库和并行数据仓库
 
 SQL Server 代码通常借助 SELECT..INTO 来使用 SELECT 语句的结果填充表。 这是 SQL Server SELECT..INTO 语句的一个例子。
 
@@ -529,8 +529,8 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隐式联接替换 `UPDATE` 语句中 `FROM` 子句的 ANSI 联接  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隐式联接替换 `FROM` 语句中 `UPDATE` 子句的 ANSI 联接  
+适用范围：Azure SQL 数据仓库和并行数据仓库  
 
 可能会发现更新很复杂，它使用 ANSI 联接语法将两个以上的表联接在一起，以执行 UPDATE 或 DELETE 操作。
 
@@ -574,7 +574,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-由于 SQL 数据仓库不支持 `UPDATE` 语句中 `FROM` 子句的 ANSI 联接，因此需要稍作更改才能使用此 SQL Server 代码。
+由于 SQL 数据仓库不支持 `FROM` 语句中 `UPDATE` 子句的 ANSI 联接，因此需要稍作更改才能使用此 SQL Server 代码。
 
 可以将 `CTAS` 和隐式联接结合使用来替换此代码：
 
@@ -613,9 +613,9 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. 使用 CTAS 指定要保留的数据而不是使用 DELETE 语句中 FROM 子句的 ANSI 联接  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+适用范围：Azure SQL 数据仓库和并行数据仓库  
 
-有时，删除数据的最佳方法是使用 `CTAS`。 只需选择希望保留的数据，而不是删除数据。 这尤其适用于使用 ansi 联接语法的 `DELETE` 语句，因为 SQL 数据仓库不支持 `DELETE` 语句中 `FROM` 子句中的 ANSI 联接。
+有时，删除数据的最佳方法是使用 `CTAS`。 只需选择希望保留的数据，而不是删除数据。 这尤其适用于使用 ansi 联接语法的 `DELETE` 语句，因为 SQL 数据仓库不支持 `FROM` 语句中 `DELETE` 子句中的 ANSI 联接。
 
 转换后的 DELETE 语句示例如下：
 
@@ -641,7 +641,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. 使用 CTAS 简化 merge 语句  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+适用范围：Azure SQL 数据仓库和并行数据仓库  
 
 使用 `CTAS` 可以替换（至少部分替换）Merge 语句。 可以将 `INSERT` 和 `UPDATE` 合并为一个语句。 在第二个语句中需要关闭任何已删除的记录。
 
@@ -680,7 +680,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 显式声明数据类型和输出是否可为 null  
-适用对象：Azure SQL 数据仓库和并行数据仓库  
+适用范围：Azure SQL 数据仓库和并行数据仓库  
 
 将 SQL Server 代码迁移到 SQL 数据仓库时，可能会遇到这种类型的编码模式：
 
@@ -736,7 +736,7 @@ from ctas_r
 
 我们发现这两种结果之间出现这种差异的原因是隐式类型转换。 在第一个示例中，表定义了列的定义。 插入行时会发生隐式类型转换。 在第二个示例中未发生隐式类型转换，因为表达式定义列的数据类型。 另请注意，第二个示例中的列已定义为可为 Null 的列，而第一个示例中并未如此。 在第一个示例中创建表时，显式定义了列的为 Null 性。 在第二个示例中，仅将它留给表达式，在默认情况下会产生 NULL 定义。  
 
-若要解决这些问题，则必须在 `CTAS` 语句的 `SELECT` 部分中显式设置类型转换和为 Null 性。 在创建表的部分无法设置这些属性。
+若要解决这些问题，则必须在 `SELECT` 语句的 `CTAS` 部分中显式设置类型转换和为 Null 性。 在创建表的部分无法设置这些属性。
 
 以下示例演示如何修复代码：
 

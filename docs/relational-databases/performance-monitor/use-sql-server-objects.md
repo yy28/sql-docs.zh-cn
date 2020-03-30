@@ -31,10 +31,10 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982188"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
@@ -68,7 +68,7 @@ ms.locfileid: "73982188"
   
 -   [所需的权限](#RequiredPermissions)  
   
-##  <a name="SQLServerAgentPOs"></a> SQL Server 代理性能对象  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a> SQL Server 代理性能对象  
  下表列出了为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理提供的性能对象：  
   
 |性能对象|说明|  
@@ -78,7 +78,7 @@ ms.locfileid: "73982188"
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的信息。|  
 |[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的常规信息。|  
   
-##  <a name="ServiceBrokerPOs"></a> Service Broker 性能对象  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a> Service Broker 性能对象  
  下表列出了为 [!INCLUDE[ssSB](../../includes/sssb-md.md)]代理提供的性能对象：  
   
 |性能对象|说明|  
@@ -87,7 +87,7 @@ ms.locfileid: "73982188"
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|提供 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的常规信息。|  
 |[SQLServer:Broker Transport](../../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md)|提供有关 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 网络的信息。|  
   
-##  <a name="SQLServerPOs"></a> SQL Server 性能对象  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server 性能对象  
  下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象：  
   
 |性能对象|说明|  
@@ -127,17 +127,17 @@ ms.locfileid: "73982188"
 |[SQLServer: Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|提供有关等待的信息。|  
 |[SQLServer: Workload Group Stats](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|提供了有关资源调控器工作负荷组统计的信息。|  
   
-##  <a name="SQLServerReplicationPOs"></a> SQL Server 复制性能对象  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> SQL Server 复制性能对象  
  下表列出了为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制提供的性能对象：  
   
 |性能对象|说明|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 有关详细信息，请参阅 [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)。|提供有关复制代理活动的信息。|  
   
-##  <a name="SsisPipelineCounters"></a> SSIS 管道计数器  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a> SSIS 管道计数器  
  有关 **SSIS 管道** 计数器的信息，请参阅 [性能计数器](../../integration-services/performance/performance-counters.md)。  
   
-##  <a name="RequiredPermissions"></a> 所需的权限  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> 所需的权限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的使用取决于 Windows 权限（ **SQLAgent:Alerts**除外）。 只有 **sysadmin** 固定服务器角色的成员可以使用 **SQLAgent:Alerts**。  
   
 ## <a name="see-also"></a>另请参阅  

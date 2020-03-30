@@ -13,10 +13,10 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299014"
 ---
 # <a name="browse-all-principals-dialog-box"></a>“浏览所有主体”对话框
@@ -32,7 +32,7 @@ ms.locfileid: "71299014"
   
 -   [配置选项](#options)  
   
-##  <a name="open_dialog"></a> 打开“浏览所有主体”对话框  
+##  <a name="open-the-browse-all-principals-dialog-box"></a><a name="open_dialog"></a> 打开“浏览所有主体”对话框  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71299014"
   
 5.  选择 **“权限”** 页，然后单击 **“浏览”** 。  
   
-##  <a name="options"></a> 配置选项  
+##  <a name="configure-the-options"></a><a name="options"></a> 配置选项  
  此页显示来自 SSISDB 数据库的目录视图 sys.database_principals 的主体。  
   
  选择主体后，在您单击 **“确定”** 并且关闭 **“浏览所有主体”** 对话框时，会将这些主体添加到父对话框的 **“权限”** 页上的 **“登录名或角色”** 列表中。 在将主体添加到 **“登录名或角色”** 列表后，您可以更改该主体对所选项目的权限。  

@@ -18,10 +18,10 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98333f81a1e7c50434936c2df958da21366c6e9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296988"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在脚本组件编辑器中配置脚本组件
@@ -53,7 +53,7 @@ ms.locfileid: "71296988"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>脚本转换编辑器的“输入列”页  
  对于转换组件和目标组件，将显示“脚本转换编辑器”的“输入列”页；对于源组件则不显示该页   。 在此页中，可以选择希望用于自定义脚本的可用输入列，然后指定可对这些列进行只读还是读/写访问。  
   
- 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入的一个类，并且此类包含每个所选输入列的类型化取值函数属性。 例如，如果从名为 CustomerInput 的输入中选择一个整型 CustomerID 列和一个字符串型 CustomerName 列，则 BufferWrapper 项目项将包含从 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 派生的 CustomerInput 类，并且 CustomerInput 类将公开名为 CustomerID 的整型属性和名为 CustomerName 的字符串型属性        。 使用此约定可编写能够进行类型检查的代码，如下所示：  
+ 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入的一个类，并且此类包含每个所选输入列的类型化取值函数属性。 例如，如果从名为 CustomerInput 的输入中选择一个整型 CustomerID 列和一个字符串型 CustomerName 列，则 BufferWrapper 项目项将包含从  **派生的 CustomerInput 类，并且 CustomerInput 类将公开名为 CustomerID 的整型属性和名为 CustomerName 的字符串型属性**    <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>    。 使用此约定可编写能够进行类型检查的代码，如下所示：  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -71,7 +71,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   用作目标时，脚本组件支持一个输入，没有输出。  
   
- 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入和输出的一个类。 例如，如果创建一个名为 CustomerOutput 的输出，则 BufferWrapper 项目项将包含一个从 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 派生的 CustomerOutput 类，并且 CustomerOutput 类将包含每个所创建的输出列的类型化取值函数属性    。  
+ 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入和输出的一个类。 例如，如果创建一个名为 CustomerOutput 的输出，则 BufferWrapper 项目项将包含一个从  **派生的 CustomerOutput 类，并且 CustomerOutput 类将包含每个所创建的输出列的类型化取值函数属性**  <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>  。  
   
  只能在“输入和输出”页中配置输出列  。 可在“输入列”页中选择转换和目标的输入列  。 在 BufferWrapper 项目项中创建的类型化取值函数属性对于输出列来说是只写的。 输入列的取值函数属性将为只读还是读/写取决于在“输入列”页中为每列所选的使用类型  。  
   
@@ -116,7 +116,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  您可以选择 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 作为脚本组件的编程语言。  
   
 #### <a name="edit-script-button"></a>“编辑脚本”按钮  
- 使用“编辑脚本”按钮可打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，你可以在其中编写自定义脚本  。 有关详细信息，请参阅[脚本组件的编码和调试](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
+ 使用“编辑脚本”按钮可打开   Tools for Applications (VSTA) IDE，你可以在其中编写自定义脚本[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 有关详细信息，请参阅[脚本组件的编码和调试](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>脚本转换编辑器的“连接管理器”页  
  在“脚本转换编辑器”的“连接管理器”页中，可以添加和删除要在自定义脚本中使用的连接管理器   。 通常，创建源或目标组件时需要引用连接管理器。  

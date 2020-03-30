@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821952"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用“新建可用性组”对话框 (SQL Server Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "74821952"
 >  有关创建可用性组的替代方法的信息，请参阅本主题后面的 [相关任务](#RelatedTasks)。  
   
   
-##  <a name="PrerequisitesRestrictions"></a>先决条件  
+##  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a>先决条件  
   
 -   创建可用性组之前，请先验证承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例位于同一 WSFC 故障转移群集内的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还要验证是否为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用了每个服务器实例以及是否满足其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 先决条件。 有关详细信息，我们强烈建议你参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74821952"
   
 -   为了使用 **“新建可用性组”** 对话框，您需要知道将承载可用性副本的服务器实例的名称。 此外，需要知道要添加到新可用性组的任何数据库的名称，并确保这些数据库满足 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。 如果输入无效值，新的可用性组将无法工作。  
   
-## <a name="Limitations"></a> 限制  
+## <a name="limitations"></a><a name="Limitations"></a> 限制  
  **“新建可用性组”** 对话框不：  
   
 -   创建可用性组侦听器。    
@@ -47,10 +47,10 @@ ms.locfileid: "74821952"
   
  有关这些配置任务的信息，请参阅本主题后面的 [跟进：创建可用性组之后](#FollowUp)。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用“新建可用性组”对话框 (SQL Server Management Studio)  
+##  <a name="using-the-new-availability-group-dialog-box-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用“新建可用性组”对话框 (SQL Server Management Studio)  
  **创建可用性组**  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后单击该服务器名称。  
@@ -76,7 +76,7 @@ ms.locfileid: "74821952"
   
      要退出对话框而不创建可用性组，请单击 **“取消”** 。  
   
-##  <a name="FollowUp"></a> 跟进：在使用“新建可用性组”对话框创建可用性组之后  
+##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> 跟进：在使用“新建可用性组”对话框创建可用性组之后  
   
 -   您将需要依次连接到承载可用性组的辅助副本的每个服务器实例并完成以下步骤：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "74821952"
   
 -   我们建议您为新的可用性组创建可用性组侦听器。 这要求您连接到承载当前主副本的服务器实例。 有关详细信息，请参阅 [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置可用性组和副本属性**  
   
 -   [更改可用性副本的可用性模式 (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -147,7 +147,7 @@ ms.locfileid: "74821952"
   
 -   [添加文件操作失败的故障排除（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

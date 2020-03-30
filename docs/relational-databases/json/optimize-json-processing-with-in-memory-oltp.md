@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74096071"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>使用内存中 OLTP 优化 JSON 处理
@@ -46,7 +46,7 @@ CREATE TABLE xtp.Product(
  - 使用内存优化索引[为 JSON 文档中的值编制索引](#index)。
  - [本机编译使用 JSON 文档中的值或者将结果设置为 JSON 文本格式的 SQL 查询](#compile)。
 
-## <a name="validate"></a>验证 JSON 列
+## <a name="validate-json-columns"></a><a name="validate"></a>验证 JSON 列
 SQL Server 和 Azure SQL 数据库允许添加本机编译的 CHECK 约束，用于验证字符串列中存储的 JSON 文档的内容。 使用本机编译的 JSON CHECK 约束，可以确保内存优化表中存储的 JSON 文本的格式正确。
 
 下面的示例创建一个包含 JSON 列 `Product` 的 `Tags` 表。 `Tags` 列包含 CHECK 约束，其使用 `ISJSON` 函数验证列中的 JSON 文本。
@@ -75,7 +75,7 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-## <a name="computedcol"></a>使用计算列公开 JSON 值
+## <a name="expose-json-values-using-computed-columns"></a><a name="computedcol"></a>使用计算列公开 JSON 值
 使用计算列可以公开 JSON 文本中的值和访问这些值，而无需从 JSON 文本中重新提取值，且无需重新分析 JSON 结构。 使用此方式公开的值已强类型化并且以物理方式持久保存在计算列中。 使用持久化计算列访问 JSON 值的速度比直接访问 JSON 文档中的值要快。
 
 下面的示例演示如何公开 JSON `Data` 列中的以下两个值：
@@ -100,7 +100,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-## <a name="index"></a>为 JSON 列中的值编制索引
+## <a name="index-values-in-json-columns"></a><a name="index"></a>为 JSON 列中的值编制索引
 SQL Server 和 Azure SQL 数据库允许使用内存优化索引为 JSON 列中的值编制索引。 必须使用计算列公开和强类型化要编制索引的 JSON 值，如前面的示例中所述。
 
 可以使用标准 NONCLUSTERED 和 HASH 索引为 JSON 列中的值编制索引。
@@ -131,7 +131,7 @@ ALTER TABLE Product
         WITH (BUCKET_COUNT=20000)
 ```
 
-## <a name="compile"></a>本机编译 JSON 查询
+## <a name="native-compilation-of-json-queries"></a><a name="compile"></a>本机编译 JSON 查询
 如果过程、函数和触发器包含使用内置 JSON 函数的查询，本机编译可以提高这些查询的性能，并减少运行这些查询所需的 CPU 周期。
 
 下面的示例演示使用多个 JSON 函数（JSON_VALUE、OPENJSON 和 JSON_MODIFY）的本机编译过程    。

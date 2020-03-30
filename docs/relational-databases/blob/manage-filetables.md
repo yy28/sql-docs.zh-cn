@@ -14,17 +14,17 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908743"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   说明用于管理 FileTable 的常见管理任务。  
   
-##  <a name="HowToEnumerate"></a> 如何获取 FileTable 和相关对象的列表  
+##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> 如何获取 FileTable 和相关对象的列表  
  若要获取 FileTable 的列表，请查询下列目录视图之一：  
   
 -   [sys.filetables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -47,7 +47,7 @@ FROM sys.filetable_system_defined_objects;
 GO  
 ```  
   
-##  <a name="BasicsDisabling"></a> 禁用和重新启用数据库级别的非事务性访问权限  
+##  <a name="disabling-and-re-enabling-non-transactional-access-at-the-database-level"></a><a name="BasicsDisabling"></a> 禁用和重新启用数据库级别的非事务性访问权限  
  若要获取执行某些管理任务所需的独占访问权限，可能必须暂时禁用非事务性访问权限。  
   
  **更改非事务性访问级别时 ALTER DATABASE 语句的行为**  
@@ -79,7 +79,7 @@ GO
   
 -   如果在实例级别禁用 FILESTREAM，将看不到该实例上的任何数据库级别目录。  
   
-###  <a name="HowToDisable"></a> 如何禁用和重新启用数据库级别的非事务性访问权限  
+###  <a name="how-to-disable-and-re-enable-non-transactional-access-at-the-database-level"></a><a name="HowToDisable"></a> 如何禁用和重新启用数据库级别的非事务性访问权限  
  有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  **禁用完全非事务性访问权限**  
@@ -106,7 +106,7 @@ SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );
 GO  
 ```  
   
-###  <a name="visible"></a> 如何确保数据库中的 FileTable 的可见性  
+###  <a name="how-to-ensure-the-visibility-of-the-filetables-in-a-database"></a><a name="visible"></a> 如何确保数据库中的 FileTable 的可见性  
  当满足以下所有条件时，则可看到数据库级别目录及其下的 FileTable 目录：  
   
 1.  在实例级别启用 FILESTREAM。  
@@ -115,7 +115,7 @@ GO
   
 3.  在数据库级别指定了有效目录。  
 
-##  <a name="BasicsEnabling"></a> 禁用和重新启用表级别 FileTable 命名空间  
+##  <a name="disabling-and-re-enabling-the-filetable-namespace-at-the-table-level"></a><a name="BasicsEnabling"></a> 禁用和重新启用表级别 FileTable 命名空间  
  禁用 FileTable 命名空间将会禁用所有系统定义的约束并触发使用 FileTable 创建的约束。 在必须通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作大规模重新组织 FileTable 而不产生强制 FileTable 语义的开销时，这一点很有用。 但是，这些操作会将 FileTable 置于不一致的状态，会阻止重新启用 FileTable 命名空间。  
   
  禁用 FileTable 命名空间具有下列结果：  
@@ -138,7 +138,7 @@ GO
   
 -   FileTable 目录及其包含的文件和目录将在文件系统中再次可见，且可用于文件 I/O 访问。  
   
-###  <a name="HowToEnableNS"></a> 如何禁用和重新启用表级别 FileTable 命名空间  
+###  <a name="how-to-disable-and-re-enable-the-filetable-namespace-at-the-table-level"></a><a name="HowToEnableNS"></a> 如何禁用和重新启用表级别 FileTable 命名空间  
  使用 **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 选项调用 ALTER TABLE 语句。  
   
  **禁用 FileTable 命名空间**  
@@ -155,13 +155,13 @@ ENABLE FILETABLE_NAMESPACE;
 GO  
 ```  
   
-##  <a name="BasicsKilling"></a> 终止与 FileTable 关联的打开的文件句柄  
+##  <a name="killing-open-file-handles-associated-with-a-filetable"></a><a name="BasicsKilling"></a> 终止与 FileTable 关联的打开的文件句柄  
  FileTable 中存储的文件的打开句柄可以阻止某些管理任务所需的独占访问。 若要启用紧急任务，您可能要终止与一个或多个 FileTable 关联的打开的文件句柄。  
   
 > [!WARNING]  
 >  终止打开的文件句柄可能会导致用户丢失未保存的数据。 此行为与文件系统自身的行为一致。  
   
-###  <a name="HowToListOpen"></a> 如何获取与 FileTable 关联的打开的文件句柄的列表  
+###  <a name="how-to-get-a-list-of-open-file-handles-associated-with-a-filetable"></a><a name="HowToListOpen"></a> 如何获取与 FileTable 关联的打开的文件句柄的列表  
  查询目录视图 [sys.dm_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 如何终止与 FileTable 关联的打开的文件句柄  
+###  <a name="how-to-kill-open-file-handles-associated-with-a-filetable"></a><a name="HowToKill"></a> 如何终止与 FileTable 关联的打开的文件句柄  
  使用相应参数调用存储过程 [sp_kill_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) 以终止数据库或 FileTable 中所有打开的文件句柄或终止特定句柄。  
   
 ```sql  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> 如何确定 FileTable 持有的锁  
+###  <a name="how-to-identify-the-locks-held-by-filetables"></a><a name="HowToIdentifyLocks"></a> 如何确定 FileTable 持有的锁  
  FileTable 持有的大多数锁与应用程序打开的文件相对应。  
   
  **确定打开的文件和关联锁**  
@@ -202,7 +202,7 @@ WHERE fcb_id IN
 GO  
 ```  
   
-##  <a name="BasicsSecurity"></a> FileTable 安全性  
+##  <a name="filetable-security"></a><a name="BasicsSecurity"></a> FileTable 安全性  
  存储在 FileTable 中的文件和目录仅受 SQL Server 安全机制的保护。 将对文件系统访问和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问强制实施基于表和列的安全性。 不支持 Windows 文件系统安全 API 和 ACL 设置。  
   
  由于文件数据作为 FILESTREAM 列存储在 FileTable 中，因此还将对 FileTable 应用 FILESTREAM 文件组和容器所适用的安全性和访问权限。  
@@ -213,7 +213,7 @@ GO
  **FileTable 安全性和文件系统访问**  
  文件系统 API 需要对 FileTable 中整个行的相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限（表级别权限）来打开存储在 FileTable 中的文件或目录的句柄。 如果用户对 FileTable 中的任何列没有相应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限，则将拒绝文件系统访问。  
   
-##  <a name="OtherBackup"></a> 备份和 FileTable  
+##  <a name="backup-and-filetables"></a><a name="OtherBackup"></a> 备份和 FileTable  
  当您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份 FileTable 时，FILESTREAM 数据将与数据库中的结构化数据一起备份。 如果您不想将 FILESTREAM 数据与关系数据一起备份，则可以使用部分备份将 FILESTREAM 文件组排除在外。  
   
  **FileTable 备份的事务一致性**  
@@ -222,13 +222,13 @@ GO
   
  但是，启用完全非事务性访问时，FileTable 可以包含比工具或进程从事务日志读取的事务更新（通过非事务性更新）更晚的数据。 这意味着对特定事务进行的“时间点”还原操作包含的 FILESTREAM 数据可能比该事务更新。 在 FileTable 上允许非事务性更新时，这是预期的行为。  
   
-##  <a name="Monitor"></a> SQL Server Profiler 和 FileTable  
+##  <a name="sql-server-profiler-and-filetables"></a><a name="Monitor"></a> SQL Server Profiler 和 FileTable  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 可为存储在 FileTable 中的文件捕获跟踪输出中的 Windows 文件打开和文件关闭操作。  
   
-##  <a name="OtherAuditing"></a> 审核和 FileTable  
+##  <a name="auditing-and-filetables"></a><a name="OtherAuditing"></a> 审核和 FileTable  
  可以像对任何其他表一样对 FileTable 进行审核。 但是，Win32 访问模式不是基于集的操作。 将文件系统中的单个操作转换为多个 Transact-SQL DML 操作。 例如，在 Microsoft Word 中打开文件将转换为多个打开/关闭/创建/重命名/删除操作和相应的 Transact-SQL DML 活动。 这将导致冗长的审核记录，很难将文件系统操作和相应的 Transact-SQL DML 审核记录关联。  
   
-##  <a name="OtherDBCC"></a> DBCC 和 FileTable  
+##  <a name="dbcc-and-filetables"></a><a name="OtherDBCC"></a> DBCC 和 FileTable  
  可以使用 DBCC CHECKCONSTRAINTS 验证 FileTable 上的约束，包括系统定义的约束。  
   
 ## <a name="see-also"></a>另请参阅  

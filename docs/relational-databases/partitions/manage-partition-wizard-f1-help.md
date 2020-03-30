@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892411"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>“管理分区向导”的 F1 帮助
@@ -44,7 +44,7 @@ ms.locfileid: "68892411"
   
  本节提供使用 **“管理分区向导”** 管理、修改和实现分区时所需的信息。  
   
-##  <a name="Top"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="Top"></a> 本节内容  
  以下章节提供关于 **“管理分区向导”** 页的帮助。  
   
  [管理分区向导（“选择分区操作”页）](#SelectPartitionAction)  
@@ -63,7 +63,7 @@ ms.locfileid: "68892411"
   
  [管理分区向导（“进度”页）](#Progress)  
   
-##  <a name="SelectPartitionAction"></a> 选择分区操作页面  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> 选择分区操作页面  
  使用 **“选择分区操作”** 页可以选择要对分区执行的操作。  
   
 ### <a name="create-a-staging-table"></a>创建临时表  
@@ -91,7 +91,7 @@ ms.locfileid: "68892411"
   
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
-##  <a name="SwitchIn"></a> 选择分区切入选项页  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 选择分区切入选项页  
  使用“选择分区切入选项”  页可以选择要切入到已分区表中的临时表。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -106,7 +106,7 @@ ms.locfileid: "68892411"
   
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
-##  <a name="SwitchOut"></a> 选择分区切出选项页  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 选择分区切出选项页  
  使用“选择分区切出选项”  页可以选择用于保存要从已分区表中切出的分区数据的分区和临时表。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -124,7 +124,7 @@ ms.locfileid: "68892411"
   
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
-##  <a name="StagingTableOptions"></a> 选择临时表选项页  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> 选择临时表选项页  
  使用 **“选择临时表选项”** 页可以创建用于切换已分区数据的临时表。  
   
  临时表必须与源表所在的选定分区位于同一文件组中。 临时表必须镜像源表与目标表的设计。  
@@ -146,7 +146,7 @@ ms.locfileid: "68892411"
   
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
-##  <a name="OutputOption"></a> 选择输出选项页  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> 选择输出选项页  
  使用 **“选择输出选项”** 页，以指定您想要如何完成对分区的修改。  
   
 ### <a name="create-script"></a>创建脚本  
@@ -173,7 +173,7 @@ ms.locfileid: "68892411"
   
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
-##  <a name="NewJob"></a> 新建作业计划页  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> 新建作业计划页  
  使用 **“新建作业计划”** 页可以查看和更改计划的属性。  
   
 ### <a name="options"></a>选项  
@@ -256,7 +256,7 @@ ms.locfileid: "68892411"
   
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
-##  <a name="Summary"></a> 摘要页  
+##  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用 **“摘要”** 可检查您在前面的页中选择的选项。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -265,7 +265,7 @@ ms.locfileid: "68892411"
   
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
-##  <a name="Progress"></a> “进度”页  
+##  <a name="progress-page"></a><a name="Progress"></a> “进度”页  
  使用 **“进度”** 页可以监视有关 **“管理分区向导”** 操作的状态信息。 根据在向导中选择的选项， **“进度”** 页可能会包含一个操作或多个操作。 最上面的方框显示向导的总体状态和向导已接收到的状态、错误和警告消息数。  
   
 ### <a name="options"></a>选项  

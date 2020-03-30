@@ -13,10 +13,10 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e29ad6de65172b08bb3f35aa89820ca817a9e1d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095297"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>变更数据捕获和其他 SQL Server 功能
@@ -33,10 +33,10 @@ ms.locfileid: "74095297"
 
 -   [包含的数据库](#Contained)
   
-##  <a name="ChangeTracking"></a> 更改跟踪  
+##  <a name="change-tracking"></a><a name="ChangeTracking"></a> 更改跟踪  
  可以对同一数据库启用变更数据捕获和 [更改跟踪](../../relational-databases/track-changes/about-change-tracking-sql-server.md) 。 没有特殊的注意事项。 有关详细信息，请参阅[处理更改跟踪 (SQL Server)](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)。  
   
-##  <a name="DatabaseMirroring"></a> 数据库镜像  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> 数据库镜像  
  可以对启用变更数据捕获的数据库进行镜像。 为确保捕获和清除操作可在故障转移之后自动发生，请执行以下步骤：  
   
 1.  确保在新的主体服务器实例上运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。  
@@ -49,7 +49,7 @@ ms.locfileid: "74095297"
   
  有关数据库镜像的信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
-##  <a name="TransReplication"></a> Transactional Replication  
+##  <a name="transactional-replication"></a><a name="TransReplication"></a> Transactional Replication  
  变更数据捕获和事务复制可以共存于同一数据库中，但在启用这两项功能后，更改表的填充处理方式将发生变化。 变更数据捕获和事务复制始终使用相同的过程 [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)从事务日志读取更改。 当单独启用变更数据捕获时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业会调用 **sp_replcmds**。 在同一数据库中启用这两项功能时，日志读取器代理会调用 **sp_replcmds**。 此代理将填充更改表和分发数据库表。 有关详细信息，请参阅 [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)。  
   
  假设为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库启用了变更数据捕获，并为捕获启用了两个表。 为了填充更改表，捕获作业将调用 **sp_replcmds**。 此外，还为该数据库启用了事务复制，并会创建发布。 此时，将为该数据库创建日志读取器代理，并删除捕获作业。 日志读取器代理继续从提交到更改表的最后一个日志序列号开始扫描日志。 这样将确保更改表中的数据一致性。 如果在此数据库中禁用事务复制，则会删除日志读取器代理，并重新创建捕获作业。  
@@ -59,7 +59,7 @@ ms.locfileid: "74095297"
   
  在启用了变更数据捕获的情况下，无法使用事务性复制的 **proc exec** 选项。  
   
-##  <a name="RestoreOrAttach"></a> 还原或附加启用了变更数据捕获的数据库  
+##  <a name="restoring-or-attaching-a-database-enabled-for-change-data-capture"></a><a name="RestoreOrAttach"></a> 还原或附加启用了变更数据捕获的数据库  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用以下逻辑确定还原或附加数据库后变更数据捕获是否继续保持启用状态：  
   
 -   如果数据库以同一数据库名称还原到同一服务器，变更数据捕获将保持启用状态。  
@@ -76,7 +76,7 @@ ms.locfileid: "74095297"
   
  可以使用 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 从还原或附加的数据库中删除变更数据捕获。  
   
-##  <a name="Contained"></a> 包含的数据库  
+##  <a name="contained-databases"></a><a name="Contained"></a> 包含的数据库  
  [包含的数据库](../../relational-databases/databases/contained-databases.md)中不支持变更数据捕获。
   
 ## <a name="change-data-capture-and-always-on"></a>变更数据捕获和 Always On  

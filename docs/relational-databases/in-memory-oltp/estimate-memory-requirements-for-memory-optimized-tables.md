@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412687"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
@@ -52,7 +52,7 @@ ms.locfileid: "74412687"
   
 - [表增长占用的内存](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> 内存优化表示例  
+###  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> 内存优化表示例  
 
 考虑以下内存优化的表架构：
   
@@ -83,7 +83,7 @@ GO
 
 我们将使用该架构来确定此内存优化表所需的最低内存。  
   
-###  <a name="bkmk_MemoryForTable"></a> 表占用的内存  
+###  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> 表占用的内存  
 
 内存优化表行包含三个部分：
   
@@ -102,7 +102,7 @@ GO
   
 根据上述计算，内存优化表中每行的大小为 24 + 32 + 200，即 256 个字节。  总共有 5 百万行，则表将占用 5,000,000 * 256 字节，共 1,280,000,000 字节 - 大约 1.28 GB。  
   
-###  <a name="bkmk_IndexMeemory"></a> 索引占用的内存  
+###  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> 索引占用的内存  
 
 #### <a name="memory-for-each-hash-index"></a>每个哈希索引占用的内存  
   
@@ -165,7 +165,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="bkmk_MemoryForRowVersions"></a> 行版本控制占用的内存
+###  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> 行版本控制占用的内存
 
 为避免锁定，内存 OLTP 在更新或删除行时采用乐观并发策略。 也就是说，对某行进行更新时，将额外创建一个该行的版本。 此外，删除是逻辑性的 — 现有行会标记为已删除，但并未立即删除。 系统将保持旧的行版本（包括已删除行）可用，直至可能会用到该版本的所有事务执行完毕为止。 
   
@@ -181,13 +181,13 @@ SELECT * FRON t_hk
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="bkmk_TableVariables"></a> 表变量占用的内存
+###  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> 表变量占用的内存
   
 只有在表变量超出范围时，才能释放表变量占用的内存。 来自表变量的行（包括作为更新的一部分删除的行）不会进行垃圾回收。 在表变量退出作用域之前不会释放内存。  
   
 与过程作用域相反，用于许多事务的在大型 SQL 批处理中定义的表变量可能会占用大量内存。 因为不对它们进行垃圾回收，所以，表变量中已删除的行可能会使用大量内存并且降低性能，这是因为读取操作需要扫描已删除的行。  
   
-###  <a name="bkmk_MemoryForGrowth"></a> 表增长占用的内存
+###  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> 表增长占用的内存
 
 上述计算结果为表当前所需的内存。 除该内存大小外，还需对表的增长作出预测并提供充足的内存来满足增长所需。  例如，如预测表会有 10% 的增长，则需将上述结果乘以 1.1 来算出表所需的总内存。  
   

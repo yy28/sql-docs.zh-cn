@@ -12,10 +12,10 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284943"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>保存并运行包（SQL Server 导入和导出向导）
@@ -58,12 +58,12 @@ ms.locfileid: "71284943"
 > [!IMPORTANT]
 > 此选项不会将包保存到 SSIS 目录数据库 (SSISDB)。  
 
- 在下一页（“保存 SSIS 包”  ），选择目标服务器并提供凭据以连接到该服务器。 有关详细信息，请参阅 [保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
+ 在下一页（“保存 SSIS 包”  ），选择目标服务器并提供凭据以连接到该服务器。 有关详细信息，请参阅[保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
   
  **文件系统**  
  选择此选项可将包保存为扩展名为 .dtsx 的文件  。  
   
- 在下一页（“保存 SSIS 包”  ），选择包的目标文件夹和文件名。 有关详细信息，请参阅 [保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
+ 在下一页（“保存 SSIS 包”  ），选择包的目标文件夹和文件名。 有关详细信息，请参阅[保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
  
  ## <a name="specify-the-package-protection-level"></a>指定包保护级别
  **包保护级别**  
@@ -85,7 +85,7 @@ ms.locfileid: "71284943"
   
 -   在当前页上，可以选择是将包保存在 SQL Server 中，还是作为文件保存。 此外，还可以选择已保存包的安全设置。  
   
--   接下来，在“保存 SSIS 包”  页上，提供包的名称以及有关其保存位置的详细信息。 有关详细信息，请参阅 [保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
+-   接下来，在“保存 SSIS 包”  页上，提供包的名称以及有关其保存位置的详细信息。 有关详细信息，请参阅[保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
   
  只有在此页上选择“保存 SSIS 包”  选项之后，这些选项才可用。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "71284943"
   
 -   如果选择了立即运行包但不保存它的选项，则下一个页面是“完成向导”  。 在此页上，你将查看你在向导中所做的选择，然后启动复制操作。 有关详细信息，请参阅 [完成向导](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)。  
   
--   如果选择了保存包的选项，则下一个页面是“保存 SSIS 包”  。 在此页上，你将指定用于保存包的附加选项。 （然后，在保存包之后，接下来的页面是“完成向导”  。）有关详细信息，请参阅[保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
+-   如果选择了保存包的选项，则下一个页面是“保存 SSIS 包”  。 在此页上，你将指定用于保存包的附加选项。 （然后，在保存包之后，接下来的页面是“完成向导”  。）有关详细信息，请参阅 [保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [保存包](../../integration-services/save-packages.md)  

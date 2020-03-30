@@ -11,10 +11,10 @@ ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68109607"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用内存优化表的要求
@@ -43,7 +43,7 @@ ms.locfileid: "68109607"
   
      要安装报表生成（[确定表或存储过程是否应移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]（通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器管理内存中 OLTP），[请下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。   
   
-## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>有关使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的重要说明  
+## <a name="important-notes-on-using-hek_2"></a>有关使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的重要说明  
   
 -   自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，对内存优化表没有大小限制（不同于可用内存）。 
 

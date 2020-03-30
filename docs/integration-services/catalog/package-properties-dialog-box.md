@@ -14,10 +14,10 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298972"
 ---
 # <a name="package-properties-dialog-box"></a>“包属性”对话框
@@ -35,7 +35,7 @@ ms.locfileid: "71298972"
   
 -   [配置选项](#options)  
   
-##  <a name="open_dialog"></a> 打开“包属性”对话框  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> 打开“包属性”对话框  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71298972"
   
 5.  右键单击该包，然后选择“属性”  。  
   
-##  <a name="options"></a> 配置选项  
+##  <a name="configure-the-options"></a><a name="options"></a> 配置选项  
  使用 **“常规”** 页可以查看所选包的属性。  
   
  “常规”  页上的所有属性都是只读的。  

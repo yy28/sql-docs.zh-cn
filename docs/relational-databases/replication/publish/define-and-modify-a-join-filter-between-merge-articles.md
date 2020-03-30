@@ -17,10 +17,10 @@ ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321558"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>定义和修改合并项目间的联接筛选器
@@ -41,19 +41,19 @@ ms.locfileid: "75321558"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   若要创建联接筛选器，发布必须至少包含两个相关表。 联接筛选器可扩展行筛选器；因此必须先对一个表定义行筛选器，才能使用联接将该筛选器扩展到另一个表。 定义一个联接筛选器后，如果发布包含更多相关表，则可使用其他联接筛选器来扩展此联接筛选器。  
   
 -   如果在初始化对发布的订阅后添加、修改或删除联接筛选器，必须在更改后生成新的快照并重新初始化所有订阅。 有关属性更改要求的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   可以为一组表手动创建联接筛选器，或者复制可以基于表上定义的外键和主键之间的关系自动生成筛选器。 有关自动生成一组联接筛选器的详细信息，请参阅[在合并项目之间自动生成一组联接筛选器 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上定义、修改和删除联接筛选器。**  **\<** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-join-filter"></a>定义联接筛选器  
@@ -103,7 +103,7 @@ ms.locfileid: "75321558"
   
 1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。**  **\<**   如果删除的联接筛选器自身是由其他联接扩展而成的，则也将删除那些联接。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  这些过程显示了父项目上的参数化筛选器以及该项目和相关子项目间的联接筛选器。 可以使用复制存储过程，以编程方式定义和修改联接筛选器。  
   
 #### <a name="to-define-a-join-filter-to-extend-an-article-filter-to-related-articles-in-a-merge-publication"></a>定义联接筛选器以将项目筛选器扩展到合并发布中的相关项目  
@@ -127,7 +127,7 @@ ms.locfileid: "75321558"
     > [!CAUTION]  
     >  仅当对父项目的基础表中的联接列具有可保证唯一性的约束时，才将 `@join_unique_key` 设置为 1  。 如果错误地将 `@join_unique_key` 设置为 1，则可能无法收敛数据  。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例定义了合并发布的项目，并针对 `SalesOrderDetail` 表来筛选 `SalesOrderHeader` 表项目，而该表本身使用静态行筛选器进行筛选。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095430"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "74095430"
 |是否更改了列|是|是|  
 |DML 类型|是|是|  
   
-##  <a name="Capture"></a> 变更数据捕获  
+##  <a name="change-data-capture"></a><a name="Capture"></a> 变更数据捕获  
  变更数据捕获通过获取进行 DML 更改的方面和更改的实际数据，提供用户表的历史更改信息。 更改是使用异步进程捕获的，此进程读取事务日志，并且对系统造成的影响很小。  
   
  正如下图所示，对用户表所做的更改是在相应更改表中捕获的。 这些更改表提供了更改随时间变化的历史视图。 借助于 [ 提供的](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)变更数据捕获[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能，可以方便且系统地使用更改数据。  
@@ -137,7 +137,7 @@ ms.locfileid: "74095430"
   
  可以使用 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 从还原或附加的数据库中删除变更数据捕获。  
   
-##  <a name="Tracking"></a> 更改跟踪  
+##  <a name="change-tracking"></a><a name="Tracking"></a> 更改跟踪  
  更改跟踪捕获更改了表行这一事实，但不会捕获更改的数据。 这样，应用程序就可以确定使用从用户表中直接获取的最新行数据更改的行。 因此，与变更数据捕获相比，更改跟踪可以解答的历史问题比较有限。 但是，对于不需要历史信息的那些应用程序，更改跟踪产生的存储开销要小得多，因为它不需要捕获更改的数据。 它使用同步跟踪机制来跟踪更改。 此功能旨在最大限度地减少 DML 操作开销。  
   
  下图显示了从使用更改跟踪中受益的同步方案。 在此方案中，应用程序需要以下信息：在上次表同步后更改的所有表行以及仅当前行数据。 由于使用同步机制来跟踪更改，因此，应用程序可以执行双向同步，并且可靠地检测到可能发生的任何冲突。  
