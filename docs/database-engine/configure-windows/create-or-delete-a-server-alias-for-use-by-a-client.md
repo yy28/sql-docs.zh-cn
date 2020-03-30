@@ -16,17 +16,17 @@ ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a0a678d3b5df450377517bc9c94d3771c45f22e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012068"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>创建或删除供客户端使用的服务器别名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建或删除服务器别名。 别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 可对任何客户端应用程序使用别名。 通过创建服务器别名，客户端计算机便可使用不同的网络协议连接到多个服务器，无需针对每台服务器指定协议和连接详细信息。 另外，还可以一直启用各种网络协议，即使只是偶尔会用到它们。 如果已将服务器配置为侦听非默认端口号或命名管道，并且禁用了 SQL Server Browser 服务，请创建一个别名来指定新端口号或命名管道。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   
 #### <a name="to-create-an-alias"></a>创建别名  
   

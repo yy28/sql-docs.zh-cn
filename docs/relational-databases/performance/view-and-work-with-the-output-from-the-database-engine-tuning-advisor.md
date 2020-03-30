@@ -27,10 +27,10 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165479"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>查看和使用来自数据库引擎优化顾问 (DTA) 的输出
@@ -39,7 +39,7 @@ ms.locfileid: "74165479"
 
   数据库引擎优化顾问在优化数据库时，会创建摘要、建议、报告和优化日志。 可以使用优化日志输出来对数据库引擎优化顾问优化会话进行故障排除。 可以使用摘要、建议和报告来确定是要实施优化建议，还是继续优化直到查询性能可提高到安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所需的程度为止。 有关如何使用数据库优化引擎来创建工作负荷和优化数据库的信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
-##  <a name="View"></a> 查看优化输出  
+##  <a name="view-tuning-output"></a><a name="View"></a> 查看优化输出  
  下列过程描述了如何使用数据库引擎优化顾问 GUI 来查看优化建议、摘要、报告和优化日志。 有关用户界面选项的信息，请参阅本主题后面的 [用户界面说明](#UI) 。  
   
  还可以使用 GUI 查看由 **dta** 命令行实用工具生成的优化输出。  
@@ -85,7 +85,7 @@ ms.locfileid: "74165479"
   
      如果优化会话中的所有事件均被数据库引擎优化顾问分析，将显示消息指示此会话的优化日志为空。 如果在最初运行优化会话时未选中 **“常规”** 选项卡上的 **“保存优化日志”** ，将显示一条消息来指出这一点。  
   
-##  <a name="Implement"></a> 实施优化建议  
+##  <a name="implement-tuning-recommendations"></a><a name="Implement"></a> 实施优化建议  
  可以手动实施数据库引擎优化顾问的建议，也可以在优化会话中自动实施。 如果需要在实施建议之前检查优化结果，请使用数据库引擎优化顾问 GUI。 然后，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 手动运行数据库引擎优化顾问在分析完工作负荷之后生成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，以便实施建议。 如果不需要在实施建议之前检查结果，则可以将 **-a** 选项与 **dta** 命令提示符实用工具结合使用。 这可以使实用工具在分析完工作负荷之后自动实施优化建议。 下列过程介绍了如何使用这两个数据库引擎优化顾问界面来实施优化建议。  
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 来手动实施优化建议  
@@ -120,7 +120,7 @@ ms.locfileid: "74165479"
   
 3.  按 Enter。  
   
-##  <a name="Analysis"></a> 执行探索性分析  
+##  <a name="perform-exploratory-analysis"></a><a name="Analysis"></a> 执行探索性分析  
  数据库管理员可以通过用户指定的数据库引擎优化顾问配置功能执行探索性分析。 使用此功能，数据库管理员将所需物理数据库设计指定给数据库引擎优化顾问，然后就可以评估该设计的性能效果，而无需实施该设计。 数据库引擎优化顾问图形用户界面 (GUI) 和命令行实用工具都支持用户指定的配置。 但是，命令行实用工具提供的灵活性最大。  
   
  如果您使用的是数据库引擎优化顾问 GUI，则可以评估实施部分数据库引擎优化顾问优化建议的效果，但无法向数据库引擎优化顾问添加假设物理设计结构来进行评估。  
@@ -184,7 +184,7 @@ ms.locfileid: "74165479"
   
 7.  重复步骤 6 和步骤 7，直到您所创建的假设配置能使查询性能达到您的要求为止。 然后，可以实施该新配置。 有关详细信息，请参阅本主题前面的 [实施优化建议](#Implement) 。  
   
-##  <a name="ReviewEvaluateClone"></a> 查看、评估和克隆优化会话  
+##  <a name="review-evaluate-and-clone-tuning-sessions"></a><a name="ReviewEvaluateClone"></a> 查看、评估和克隆优化会话  
  每当用户开始分析工作负荷对数据库的影响时，数据库引擎优化顾问都会创建新的优化会话。 可以使用数据库引擎优化顾问 GUI 中的“会话监视器”查看或重新加载在指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上运行的所有优化会话  。 能够查看所有现有优化会话后，就可以轻松实现以下操作：根据现有会话克隆会话，编辑现有优化建议、然后使用数据库引擎优化顾问来评估编辑的会话，或定期执行优化以监视数据库的物理设计。 例如，您可以按月优化数据库。  
   
  必须先通过使用数据库引擎优化顾问优化工作负荷，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建优化会话，然后才能查看服务器实例的优化会话。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
@@ -242,7 +242,7 @@ ms.locfileid: "74165479"
   
 6.  像其他优化会话一样，单击工具栏上的 **“开始分析”** 按钮分析工作负荷的影响。 数据库引擎优化顾问完成后，您可以像平时查看其他会话一样查看此会话的结果。  
   
-##  <a name="UI"></a> 用户界面说明  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> 用户界面说明  
   
 ### <a name="sessions-monitor"></a>会话监视器  
  **“会话监视器”** 显示有关在数据库引擎优化顾问中打开的会话的信息。 若要在属性窗口中显示有关会话的信息，请在 **“会话监视器”** 中选择会话名称。  

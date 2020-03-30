@@ -11,10 +11,10 @@ ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
 ms.openlocfilehash: 82ecd3fa04bbab0a1512ede08ebbc8bfaa3011f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244054"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序
@@ -25,7 +25,7 @@ ms.locfileid: "75244054"
 
 本教程介绍如何开发简单的应用程序，该应用程序可发出使用[具有安全 enclave 的 Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-enclaves.md) 的服务器端安全 enclave 的数据库查询。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 本教程是[教程：通过 SSMS 开始使用含安全 enclave 的 Always Encrypted](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) 的延续。 请务必先完成上一教程，再执行以下步骤。
 

@@ -47,10 +47,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249732"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -258,7 +258,7 @@ TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-dat
 > [!NOTE]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 TAPE 选项。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。
 
-n  一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
+*n* 一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
 
 MIRROR TO \<backup_device> [ ,...n ] 指定一组辅助备份设备（最多三个），其中每个设备都镜像 TO 子句中指定的备份设备   。 MIRROR TO 子句和 TO 子句必须指定相同类型和数量的备份设备。 最多可以使用三个 MIRROR TO 子句。
 
@@ -269,7 +269,7 @@ MIRROR TO \<backup_device> [ ,...n ] 指定一组辅助备份设备（最多三�
 
 有关 \<backup_device> 的信息，请参阅本部分前面的“\<backup_device>”。
 
-n  一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。 MIRROR TO 子句中的设备数必须等于 TO 子句中的设备数。
+*n* 一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。 MIRROR TO 子句中的设备数必须等于 TO 子句中的设备数。
 
 有关详细信息，请参阅本主题后面[备注](#general-remarks)部分中的“镜像媒体集中的媒体簇”。
 
@@ -556,7 +556,7 @@ BACKUP LOG 的 NO_TRUNCATE 选项相当于同时指定 COPY_ONLY 和 CONTINUE_AF
 > [!NOTE]
 > 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中备份的说明，请参阅[备份概述](../../relational-databases/backup-restore/backup-overview-sql-server.md)。
 
-### <a name="Backup_Types"></a> 备份类型
+### <a name="backup-types"></a><a name="Backup_Types"></a> 备份类型
 
 支持的备份类型取决于数据库的恢复模式，如下所示：
 
@@ -579,14 +579,14 @@ BACKUP LOG 的 NO_TRUNCATE 选项相当于同时指定 COPY_ONLY 和 CONTINUE_AF
 
 - “仅复制备份”  是特殊用途的完整备份或日志备份，它独立于正常的常规备份顺序。 若要创建仅复制备份，请在 BACKUP 语句中指定 COPY_ONLY 选项。 有关详细信息，请参阅[仅复制备份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
 
-### <a name="Tlog_Truncation"></a> 事务日志截断
+### <a name="transaction-log-truncation"></a><a name="Tlog_Truncation"></a> 事务日志截断
 
 若要避免填满数据库的事务日志，例行备份至关重要。 在简单恢复模式下，备份了数据库后会自动截断日志，而在完整恢复模式下，只有备份了事务日志后方才截断日志。 但是，截断过程有时也可能发生延迟。 有关延迟日志截断的因素的信息，请参阅[事务日志](../../relational-databases/logs/the-transaction-log-sql-server.md)。
 
 > [!NOTE]
 > 已停用 `BACKUP LOG WITH NO_LOG` 和 `WITH TRUNCATE_ONLY` 选项。 使用完整恢复模式或大容量日志恢复模式时，如果必须删除数据库中的日志备份链，请切换至简单恢复模式。 有关详细信息，请参阅[查看或更改数据库的恢复模式](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。
 
-### <a name="Formatting_Media"></a> 格式化备份介质
+### <a name="formatting-backup-media"></a><a name="Formatting_Media"></a> 格式化备份介质
 
 当且仅当满足任何以下条件时，BACKUP 语句才会格式化备份介质：
 
@@ -594,7 +594,7 @@ BACKUP LOG 的 NO_TRUNCATE 选项相当于同时指定 COPY_ONLY 和 CONTINUE_AF
 - 介质为空。
 - 操作正在写入延续磁带。
 
-### <a name="Backup_Devices_and_Media_Sets"></a> 使用备份设备和媒体集
+### <a name="working-with-backup-devices-and-media-sets"></a><a name="Backup_Devices_and_Media_Sets"></a> 使用备份设备和媒体集
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>条带媒体集（条带集）中的备份设备
 “条带集”  是一组磁盘文件，其中的数据划分为若干块并按固定顺序分发。 条带集中使用的备份设备数目必须保持不变（除非以 `FORMAT` 命令重新初始化介质）。
@@ -653,13 +653,13 @@ BACKUP 语句的 `TO` 子句中指定的每个备份设备均对应于一个媒�
 
 有关镜像媒体集的详细信息，请参阅[镜像备份媒体集](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)。 有关媒体集和媒体簇的常规信息，请参阅[媒体集、媒体簇和备份集](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。
 
-### <a name="Restoring_Backups"></a> 还原 SQL Server 备份
+### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a> 还原 SQL Server 备份
 
 要还原数据库，选择联机恢复数据库或使其还原文件或文件组，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“还原”任务  。 有关详细信息，请参阅[还原和恢复](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。
 
-## <a name="Additional_Considerations"></a> 有关 BACKUP 选项的其他注意事项
+## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a> 有关 BACKUP 选项的其他注意事项
 
-### <a name="Interactions_SKIP_etc"></a> SKIP、NOSKIP、INIT 和 NOINIT 之间的交互
+### <a name="interaction-of-skip-noskip-init-and-noinit"></a><a name="Interactions_SKIP_etc"></a> SKIP、NOSKIP、INIT 和 NOINIT 之间的交互
 
 下表说明了 { **NOINIT** | INIT } and { **NOSKIP** | SKIP } 选项之间的交互。
 
@@ -737,7 +737,7 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 
 备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。
 
-## <a name="examples"></a> 示例
+## <a name="examples"></a><a name="examples"></a> 示例
 
 本部分包含以下示例：
 
@@ -755,7 +755,7 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 > [!NOTE]
 > 备份操作指南主题还包含其他示例。 有关详细信息，请参阅[备份概述](../../relational-databases/backup-restore/backup-overview-sql-server.md)。
 
-### <a name="backing_up_db"></a> A. 备份整个数据库
+### <a name="a-backing-up-a-complete-database"></a><a name="backing_up_db"></a> A. 备份整个数据库
 
 以下示例将 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 数据库备份到磁盘文件。
 
@@ -766,7 +766,7 @@ BACKUP DATABASE AdventureWorks2012
 GO
 ```
 
-### <a name="backing_up_db_and_log"></a> B. 备份数据库和日志
+### <a name="b-backing-up-the-database-and-log"></a><a name="backing_up_db_and_log"></a> B. 备份数据库和日志
 
 下面的示例备份 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库，默认情况下，该数据库使用简单恢复模式。 若要支持日志备份，请将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库改为使用完整恢复模式。
 
@@ -804,7 +804,7 @@ GO
 > [!NOTE]
 > 对于生产数据库，需要定期备份日志。 应当经常进行日志备份，以提供足够的保护来防止数据丢失。
 
-### <a name="full_file_backup"></a> C. 创建辅助文件组的完整文件备份
+### <a name="c-creating-a-full-file-backup-of-the-secondary-filegroups"></a><a name="full_file_backup"></a> C. 创建辅助文件组的完整文件备份
 
 下面的示例将对两个辅助文件组中的各个文件创建完整文件备份。
 
@@ -817,7 +817,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="differential_file_backup"></a> D. 创建辅助文件组的差异文件备份
+### <a name="d-creating-a-differential-file-backup-of-the-secondary-filegroups"></a><a name="differential_file_backup"></a> D. 创建辅助文件组的差异文件备份
 
 下面的示例将对两个辅助文件组中的各个文件创建差异文件备份。
 
@@ -832,7 +832,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="create_single_family_mirrored_media_set"></a> E. 创建和备份到单簇镜像介质集
+### <a name="e-creating-and-backing-up-to-a-single-family-mirrored-media-set"></a><a name="create_single_family_mirrored_media_set"></a> E. 创建和备份到单簇镜像介质集
 
 下面的示例将创建包含一个介质簇和四个镜像的镜像介质集，并将 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 数据库备份到其中。
 
@@ -847,7 +847,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet0';
 ```
 
-### <a name="create_multifamily_mirrored_media_set"></a> F. 创建和备份到多簇镜像介质集
+### <a name="f-creating-and-backing-up-to-a-multifamily-mirrored-media-set"></a><a name="create_multifamily_mirrored_media_set"></a> F. 创建和备份到多簇镜像介质集
 
 下面的示例将创建镜像介质集，其中每个镜像包含两个介质簇。 然后将 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 数据库备份到这两个镜像中。
 
@@ -860,7 +860,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet1';
 ```
 
-### <a name="existing_mirrored_media_set"></a> G. 备份到现有镜像介质集
+### <a name="g-backing-up-to-an-existing-mirrored-media-set"></a><a name="existing_mirrored_media_set"></a> G. 备份到现有镜像介质集
 
 下面的示例将备份集追加到在前面的示例中创建的介质集上。
 
@@ -876,7 +876,7 @@ WITH
 > [!NOTE]
 > 为清楚起见，此处显示默认的 NOINIT。
 
-### <a name="creating_compressed_backup_new_media_set"></a> H. 在新的介质集中创建压缩备份
+### <a name="h-creating-a-compressed-backup-in-a-new-media-set"></a><a name="creating_compressed_backup_new_media_set"></a> H. 在新的介质集中创建压缩备份
 
 下面的示例格式化介质，并创建新的介质集，然后对 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 数据库执行压缩完整备份。
 
@@ -887,7 +887,7 @@ WITH
     COMPRESSION;
 ```
 
-### <a name="url"></a> I. 备份到 Microsoft Azure Blob 存储服务
+### <a name="i-backing-up-to-the-microsoft-azure-blob-storage-service"></a><a name="url"></a> I. 备份到 Microsoft Azure Blob 存储服务
 
 以下示例向 Microsoft Azure Blob 存储服务执行完整的 `Sales` 数据库备份。 存储帐户名称为 `mystorageaccount`。 容器名称为 `myfirstcontainer`。 已经创建具有读取、写入、删除和列表权限的存储访问策略。 已使用与存储访问策略相关联的共享访问签名创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份到 Microsoft Azure Blob 存储服务的详细信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
@@ -897,7 +897,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
-### <a name="backup_progress"></a> J. 跟踪备份语句的进度
+### <a name="j-track-the-progress-of-backup-statement"></a><a name="backup_progress"></a> J. 跟踪备份语句的进度
 
 以下查询返回有关当前正在运行的备份语句的信息：
 ```sql
@@ -994,7 +994,7 @@ TO URL
 > [!IMPORTANT]
 > 备份到 URL 时，若要备份到多个设备，必须使用共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。
 
-n  一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
+*n* 一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
 
 ### <a name="with-optionsspecifies-options-to-be-used-with-a-backup-operation"></a>WITH 选项 指定要用于备份操作的选项
 
@@ -1095,7 +1095,7 @@ STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 �
 
 URL 的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。
 
-## <a name="examples"></a> 示例
+## <a name="examples"></a><a name="examples"></a> 示例
 
 以下示例向 Microsoft Azure Blob 存储服务执行 `Sales` 的 COPY_ONLY 备份。 存储帐户名称为 `mystorageaccount`。 容器名称为 `myfirstcontainer`。 已经创建具有读取、写入、删除和列表权限的存储访问策略。 已使用与存储访问策略相关联的共享访问签名创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份到 Microsoft Azure Blob 存储服务的详细信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
@@ -1254,7 +1254,7 @@ BACKUP DATABASE 错误会在以下情况中发生：
 
 在 DATABASE 对象上使用 ExclusiveUpdate 锁。
 
-## <a name="Security"></a> Security
+## <a name="security"></a><a name="Security"></a> Security
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 备份不存储在设备上。 因此，IT 团队负责管理备份安全的所有方面。 例如，这包括管理备份数据的安全、用于存储备份的服务器的安全和将备份服务器连接到 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 设备的网络基础结构的安全。
 

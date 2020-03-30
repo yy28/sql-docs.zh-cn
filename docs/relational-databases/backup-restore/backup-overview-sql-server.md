@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70176262"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -96,10 +96,10 @@ ms.locfileid: "70176262"
  **[镜像介质集 (mirrored media set)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)**  
  介质集的多个副本（镜像）。  
   
-##  <a name="BackupCompression"></a> 备份压缩  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a> 备份压缩  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持压缩备份，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本可以还原压缩后的备份。 有关详细信息，请参阅[备份压缩 (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md)。  
   
-##  <a name="Restrictions"></a>  备份操作限制 
+##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  备份操作限制 
  可以在数据库在线并且正在使用时进行备份。 但是，存在下列限制。  
   
 ### <a name="cannot-back-up-offline-data"></a>无法备份脱机数据  
@@ -128,7 +128,7 @@ ms.locfileid: "70176262"
   
  如果备份操作与文件管理操作或收缩操作重叠，则产生冲突。 无论哪个冲突操作首先开始，第二个操作总会等待第一个操作设置的锁超时。（超时期限由会话超时设置控制。）如果在超时期限内释放锁，第二个操作将继续执行。 如果锁超时，则第二个操作失败。  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **备份设备和备份媒体**  
   
 -   [为磁盘文件定义逻辑备份设备 (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

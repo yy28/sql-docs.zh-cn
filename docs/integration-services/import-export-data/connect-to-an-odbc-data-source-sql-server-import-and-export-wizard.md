@@ -11,10 +11,10 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75608026"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>连接到 ODBC 数据源（SQL Server 导入和导出向导）
@@ -65,7 +65,7 @@ ms.locfileid: "75608026"
 
 如果提供连接字符串，“选择数据源”或“选择目标”页将显示向导连接到数据源要使用的所有连接信息，例如服务器、数据库名称和身份验证方法   。 如果提供 DSN，此信息不可见。
 
-## <a name="odbc_dsn"></a>选项 1 - 提供 DSN
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a>选项 1 - 提供 DSN
 如果要在连接信息中提供 DSN（数据源名称），使用“ODBC 数据源管理器”小程序，查找现有 DSN 的名称或创建一个新 DSN  。
 1.  在开始菜单或控制面板中搜索或浏览到“ODBC 数据源 (64 位)”小程序  。 如果只有 32 位驱动程序，或必须使用 32 位驱动程序，请改为搜索或浏览到“ODBC 数据源(32 位)”  。
 2.  启动小程序。 此时会打开“ODBC 数据源管理器”窗口  。 下面是小程序的外观。
@@ -88,7 +88,7 @@ ms.locfileid: "75608026"
     
 8.  返回向导，在“选择数据源”页或“选择目标”页上的“DSN”字段中输入 DSN 名称    。 继续执行向导的下一步。
 
-## <a name="odbc_connstring"></a>选项 2 - 提供一个连接字符串
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a>选项 2 - 提供一个连接字符串
 如果要在连接信息中提供连接字符串，可借助本主题的其余内容获取所需的连接字符串。
 
 本示例将使用以下连接字符串，该字符串与 Microsoft SQL Server 连接。 使用的数据库示例是 WideWorldImporters，我们将连接到本地计算机上的 SQL Server  。

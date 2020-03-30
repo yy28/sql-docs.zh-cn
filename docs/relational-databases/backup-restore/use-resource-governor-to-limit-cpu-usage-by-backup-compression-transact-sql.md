@@ -17,10 +17,10 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245411"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "75245411"
 > [!IMPORTANT]  
 >  在具体的资源调控器方案中，会话分类可能基于用户名、应用程序名称或者可以区分连接的其他任何因素。 有关详细信息，请参阅 [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) 和 [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md)。  
   
-##  <a name="Top"></a> 本主题包含下面一组方案，将按顺序对它们进行介绍：  
+##  <a name="this-topic-contains-the-following-set-of-scenarios-which-are-presented-in-sequence"></a><a name="Top"></a> 本主题包含下面一组方案，将按顺序对它们进行介绍：  
   
 1.  [为低优先级操作设置登录名和用户](#setup_login_and_user)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75245411"
   
 4.  [使用具有有限 CPU 的会话压缩备份](#creating_compressed_backup)  
   
-##  <a name="setup_login_and_user"></a> 为低优先级操作设置登录名和用户  
+##  <a name="setting-up-a-login-and-user-for-low-priority-operations"></a><a name="setup_login_and_user"></a> 为低优先级操作设置登录名和用户  
  本主题中的方案需要低优先级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和用户。 将使用用户名对运行于此登录中的会话进行分类，并将它们路由到限制 CPU 使用的资源调控器工作负荷组。  
   
  下面的过程介绍了出于此目的设置登录名和用户的步骤，之后给出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例“示例 A：设置登录名和用户 (Transact-SQL)。”  
@@ -102,7 +102,7 @@ GO
   
  [[返回页首]](#Top)  
   
-##  <a name="configure_RG"></a> 配置资源调控器以限制 CPU 使用  
+##  <a name="configuring-resource-governor-to-limit-cpu-usage"></a><a name="configure_RG"></a> 配置资源调控器以限制 CPU 使用  
   
 > [!NOTE]  
 >  确保资源调控器已启用。 有关详细信息，请参阅 [启用 Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)。  
@@ -240,7 +240,7 @@ GO
   
  [[返回页首]](#Top)  
   
-##  <a name="verifying"></a> 验证当前会话的分类 (Transact-SQL)  
+##  <a name="verifying-the-classification-of-the-current-session-transact-sql"></a><a name="verifying"></a> 验证当前会话的分类 (Transact-SQL)  
  还可以选择使用在分类器函数中指定的用户身份登录，通过在对象资源管理器中发出以下 [SELECT](../../t-sql/queries/select-transact-sql.md) 语句来验证会话分类：  
   
 ```sql  
@@ -260,7 +260,7 @@ GO
   
  [[返回页首]](#Top)  
   
-##  <a name="creating_compressed_backup"></a> 使用具有有限 CPU 的会话压缩备份  
+##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> 使用具有有限 CPU 的会话压缩备份  
  要在限定了最大 CPU 的会话中创建压缩备份，应当以分类器函数中指定的用户身份登录。 在备份命令中，指定 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 或选择“压缩备份”([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])  。 若要创建压缩数据库备份，请参阅[创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>示例 C：创建压缩备份 (Transact-SQL)  

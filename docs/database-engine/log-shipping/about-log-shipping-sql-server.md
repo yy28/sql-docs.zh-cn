@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057911"
 ---
 # <a name="about-log-shipping-sql-server"></a>关于日志传送 (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "68057911"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 优势  
+##  <a name="benefits"></a><a name="Benefits"></a> 优势  
   
 -   为单个主数据库以及一个或多个辅助数据库（每个数据库都位于单独的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上）提供灾难恢复解决方案。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68057911"
   
 -   允许用户将延迟时间定义为：从主服务器备份主数据库日志到辅助服务器必须还原（应用）日志备份之间的时间。 例如，如果主数据库上的数据被意外更改，则较长的延迟会很有用。 如果很快发现意外更改，则通过延迟，您可以在辅助数据库反映此更改之前从其中检索仍未更改的数据。  
   
-##  <a name="TermsAndDefinitions"></a> 术语和定义  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 术语和定义  
  主服务器 (primary server)  
  位于生产服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68057911"
 > [!TIP]  
 >  对于每个警报，您需要指定警报编号。 此外，请确保配置警报以便在引发警报时通知操作员。  
   
-##  <a name="ComponentsAndConcepts"></a> 日志传送概述  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> 日志传送概述  
  日志传送由三项操作组成：  
   
 1.  在主服务器实例中备份事务日志。  
@@ -128,7 +128,7 @@ ms.locfileid: "68057911"
   
  ![显示备份、复制和还原作业的配置](../../database-engine/log-shipping/media/ls-typical-configuration.gif "显示备份、复制和还原作业的配置")  
   
-##  <a name="Interoperability"></a> 互操作性  
+##  <a name="interoperability"></a><a name="Interoperability"></a> 互操作性  
  日志传送功能可以与下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能或组件一起使用：  
   
 -   [从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "68057911"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 和数据库镜像是互斥的。 不能将数据库配置为同时用于这些互斥的功能。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [将日志传送升级至 SQL Server 2016 (Transact-SQL)](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

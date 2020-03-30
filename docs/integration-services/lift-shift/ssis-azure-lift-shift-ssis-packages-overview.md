@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67896181"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
@@ -93,7 +93,7 @@ ms.locfileid: "67896181"
 
 若要入门，请参阅[教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包](ssis-azure-deploy-run-monitor-tutorial.md)。
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>先决条件
 
 要将 SSIS 包部署到 Azure，必须具有以下任一 SQL Server Data Tools (SSDT) 版本：
 -   对于 Visual Studio 2017，需要版本 15.3 或更高版本。

@@ -11,10 +11,10 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908443"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
@@ -31,7 +31,7 @@ ms.locfileid: "72908443"
 |[在提供足够内存时，解决由于内存不足导致的页分配失败问题](#bkmk_PageAllocFailure)|收到错误消息“由于资源池 '\<resourcePoolName>  ' 内存不足，不允许对数据库 '\<databaseName>  ' 进行页分配”时应采取的操作。 ……”当可用内存足以进行操作时。|
 |[在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)|在虚拟化环境中使用内存中 OLTP 需要注意的内容。|
   
-##  <a name="bkmk_resolveRecoveryFailures"></a> 解决 OOM 导致的数据库还原故障  
+##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> 解决 OOM 导致的数据库还原故障  
  尝试还原数据库时，可能会收到错误消息：“由于资源池‘\<databaseName>’内存不足，数据库‘\<resourcePoolName>’的还原操作失败。”   这表明服务器没有足够的可用内存来还原数据库。 
    
 将数据库还原到的服务器必须有足够的可用内存用于数据库备份中的内存优化表，否则数据库不会联机，并且会被标记为可疑。  
@@ -70,19 +70,19 @@ ms.locfileid: "72908443"
 -   增加 **最大服务器内存**。  
     有关配置 max server memory 的信息，请参阅主题[“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  。  
   
-##  <a name="bkmk_recoverFromOOM"></a> 消除工作负荷的低内存或 OOM 情况的影响  
+##  <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a><a name="bkmk_recoverFromOOM"></a> 消除工作负荷的低内存或 OOM 情况的影响  
  当然，最好不要出现低内存或 OOM（内存不足）情况。 好的计划和监视有助于避免 OOM 情况。 但再好的计划也并不总能预见实际情况，最后仍有可能遇到低内存或 OOM 情况。 从 OOM 恢复有两个步骤：  
   
 1.  [打开 DAC（专用管理员连接）](#bkmk_openDAC)  
   
 2.  [采取纠正措施](#bkmk_takeCorrectiveAction)  
 
-###  <a name="bkmk_openDAC"></a> 打开 DAC（专用管理员连接）  
+###  <a name="open-a-dac-dedicated-administrator-connection"></a><a name="bkmk_openDAC"></a> 打开 DAC（专用管理员连接）  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了专用管理员连接 (DAC)。 即使服务器对其他客户端连接停止响应，管理员也可以使用 DAC 访问正在运行的 SQL Server 数据库引擎实例来排除服务器上的故障。 `sqlcmd` 实用工具和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中都包含 DAC。  
   
  有关通过 SSMS 或 `sqlcmd` 使用 DAC 的指导，请参阅[用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。  
   
-###  <a name="bkmk_takeCorrectiveAction"></a> 采取纠正措施  
+###  <a name="take-corrective-action"></a><a name="bkmk_takeCorrectiveAction"></a> 采取纠正措施  
  要处理 OOM 情况，需要通过减少使用量释放现有内存，或者为内存中表提供更多可用内存。  
   
 #### <a name="free-up-existing-memory"></a>释放现有内存  
@@ -135,14 +135,14 @@ GO
 >  如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 设置为相同值。   
 > 有关详细信息，请参阅主题 [在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)。  
   
-##  <a name="bkmk_PageAllocFailure"></a> 在提供足够内存时，解决由于内存不足导致的页分配失败问题  
+##  <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a><a name="bkmk_PageAllocFailure"></a> 在提供足够内存时，解决由于内存不足导致的页分配失败问题  
  如果可用物理内存足以分配页时，在错误日志中收到错误消息 `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.`，可能是因为禁用了 Resource Governor。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
   
  若要解决此问题，您需要启用资源调控器。  
   
  有关使用对象资源管理器、资源调控器属性或 Transact-SQL 启用资源调控器的限制和局限以及指导的信息，请参阅 [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md) 。  
  
-## <a name="bkmk_VMs"></a>在 VM 环境下使用内存中 OLTP 的最佳做法
+## <a name="best-practices-using-in-memory-oltp-in-a-vm-environment"></a><a name="bkmk_VMs"></a>在 VM 环境下使用内存中 OLTP 的最佳做法
 服务器虚拟化可以帮助你改进应用程序配置、维护、可用性和备份/恢复流程，进而降低 IT 资本和运营成本并提高 IT 效率。 由于近年来的技术进步，可以更轻松地使用虚拟化来合并复杂的数据库工作负载。 本主题说明了在虚拟化环境中使用 SQL Server 内存中 OLTP 的最佳做法。
 
 ### <a name="memory-pre-allocation"></a>内存预先分配

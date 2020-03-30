@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
 ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957011"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教程：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 启用表空间使用情况示例见解小组件
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>教程：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 启用表空间使用情况示例见解小组件
 
 本教程演示如何在数据库仪表板上启用见解小组件，从而提供有关数据库中所有表的空间使用情况的一览式视图。 在本教程中，你将学习如何执行以下操作：
 
@@ -26,14 +26,14 @@ ms.locfileid: "74957011"
 > * 查看表空间使用情况的详细信息
 > * 在见解图上筛选数据和查看标签详细信息
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 本教程需要使用 SQL Server 或 Azure SQL 数据库 TutorialDB  。 若要创建 TutorialDB  数据库，请完成以下其中一项快速入门：
 
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 连接并查询 SQL Server](quickstart-sql-server.md)
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据库](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的数据库仪表板上打开管理见解
+## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的数据库仪表板上打开管理见解
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 具有内置的示例小组件，用于监视数据库中的表所使用的空间。
 

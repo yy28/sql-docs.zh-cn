@@ -9,10 +9,10 @@ ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079634"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上刻度的格式（报表生成器和 SSRS）
@@ -32,7 +32,7 @@ ms.locfileid: "77079634"
   
  若要快速开始设置刻度格式，请参阅[设置仪表的最小值和最大值（报表生成器和 SSRS）](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
-##  <a name="DefiningMinMax"></a> 定义刻度的最小值、最大值和间隔值  
+##  <a name="defining-minimum-maximum-and-intervals-on-a-scale"></a><a name="DefiningMinMax"></a> 定义刻度的最小值、最大值和间隔值  
  仪表通常用于显示按百分比度量的从 0 到 100 之间的 KPI，因此 0 和 100 分别是仪表上的最小属性和最大属性的默认值。 但是，这些值可能无法表示要尝试显示的值的刻度。 由于没有任何内置逻辑用来确定 KPI 数据字段所表示的内容，因此，仪表不会自动计算最小值和最大值。 如果 KPI 数据字段不是 0 和 100 之间的值，则必须显式设置最小属性和最大属性的值，以便为仪表上将显示的一个值提供上下文。  
   
  刻度上有主要刻度线和次要刻度线。 此外，刻度还具有通常与主要刻度线关联的标签。 例如，刻度可能在 0、20、40、60、80 和 100 处标有主要刻度线。 标签应与这些刻度线对应。 各标签值之间的差称为刻度间隔。 在本示例中，刻度间隔设置为 20。 可以在 **“径向刻度属性”** 或 **“线性刻度属性”** 对话框中设置“间隔”属性。  
@@ -47,13 +47,13 @@ ms.locfileid: "77079634"
   
  间隔偏移量确定在显示第一个标签之前将跳过的单位数。 刻度上显示的所有连续的主要刻度线和标签都将使用指定的间隔。 如将标签或刻度线间隔值设置为 0，则效果与将间隔重置为“自动”相同。  
   
-##  <a name="ReducingCollisions"></a> 使用乘数减少标签冲突  
+##  <a name="reducing-label-collisions-with-multipliers"></a><a name="ReducingCollisions"></a> 使用乘数减少标签冲突  
  如果值包含多个位数，则可能会影响仪表的可读性。 可以使用刻度乘数增大或缩小值的刻度。 指定刻度乘数后，刻度上的每个原始值都将在乘以该乘数后再显示在刻度上。 若要缩小值的刻度，必须指定一个小数。 例如，如果刻度从 0 到 10000，但是希望在仪表上显示 0 到 10 之间的数字，则可以使用 0.001 作为乘数值。  
   
 > [!NOTE]  
 >  使用乘数后，相应乘数不会与仪表使用的聚合字段的实际值相乘， 而仅与在定义最小值、最大值和间隔值之后在仪表上显示的标签值相乘。 使用乘数时，请考虑将间隔计算保持为自动。  
   
-##  <a name="SpecifyingScaleBar"></a> 指定径向刻度的刻度条宽度、半径和角度  
+##  <a name="specifying-the-scale-bar-width-radius-and-angles-on-a-radial-scale"></a><a name="SpecifyingScaleBar"></a> 指定径向刻度的刻度条宽度、半径和角度  
  使用 **“径向刻度属性”** 对话框的 **“布局”** 页可以设置刻度条宽度、刻度半径、刻度的开始角度和扫描角度。 可以使用这些属性自定义刻度的大小和格式。 例如，如果将刻度标签放置在刻度外侧，则需要重新调整刻度半径的大小，使这些标签能在仪表中显示。  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "77079634"
   
  扫描角度是刻度将在一个圆周中所跨的度数（介于 0 至 360 之间）。 扫描角度为 360 度将生成为一个完整圆的刻度。 如果您希望设计一个外观类似于时钟的仪表，则此方法很有用。  
   
-##  <a name="PositioningLabels"></a> 在线性或径向刻度上放置标签  
+##  <a name="positioning-labels-on-a-linear-or-radial-scale"></a><a name="PositioningLabels"></a> 在线性或径向刻度上放置标签  
  有两个属性可确定标签的位置。 标签放置属性指定标签是显示在刻度条的内侧、外侧还是与刻度条交叉。 距离属性用于设置标签与刻度相隔的距离（以刻度条为起点）。 如果您希望将标签放置到刻度条内侧，请指定一个负数。 例如，如果标签位于刻度外侧，并将到刻度的距离设置为 10，则标签将显示在刻度外侧的 10 个单位处（标签通常放置于此位置），其中 1 个单位代表：  
   
 -   径向仪表上仪表直径的 1%，或  

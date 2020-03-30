@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287721"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
@@ -71,7 +71,7 @@ ms.locfileid: "79287721"
   
 -   [执行和验证](../../integration-services/catalog/ssis-catalog.md#Executions)  
 
-##  <a name="CatalogObjectIdentifiers"></a> 目录对象标识符  
+##  <a name="catalog-object-identifiers"></a><a name="CatalogObjectIdentifiers"></a> 目录对象标识符  
  在目录中创建新对象时，为该对象指定一个名称。 对象名称就是一个标识符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了有关可在标识符中使用的字符的规则。 以下对象的名称必须遵循标识符规则。  
   
 -   Folder  
@@ -84,7 +84,7 @@ ms.locfileid: "79287721"
   
 -   环境变量  
   
-###  <a name="Folder"></a> 文件夹、项目和环境  
+###  <a name="folder-project-environment"></a><a name="Folder"></a> 文件夹、项目和环境  
  重命名文件夹、项目或环境时，请考虑以下规则。  
   
 -   无效字符包括 ASCII/Unicode 字符 1 到 31、引号 (")、小于号 (\<)、大于号 (>)、竖线 (|)、退格符 (\b)、null (\0) 和制表符 (\t)。  
@@ -95,14 +95,14 @@ ms.locfileid: "79287721"
   
 -   名称的长度必须大于 0 且小于或等于 128。  
   
-###  <a name="Parameter"></a> 参数  
+###  <a name="parameter"></a><a name="Parameter"></a> 参数  
  命名参数时，请考虑以下规则。  
   
 -   名称的第一个字符必须是在 Unicode 标准 2.0 中定义的字母，或者是下划线 (_)。  
   
 -   后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (_)。  
   
-###  <a name="EnvironmentVariable"></a> 环境变量  
+###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> 环境变量  
  命名环境变量时，请考虑以下规则。  
   
 -   无效字符包括 ASCII/Unicode 字符 1 到 31、引号 (")、小于号 (\<)、大于号 (>)、竖线 (|)、退格符 (\b)、null (\0) 和制表符 (\t)。  
@@ -117,10 +117,10 @@ ms.locfileid: "79287721"
   
 -   后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (_)。  
   
-##  <a name="Configuration"></a> 目录配置  
+##  <a name="catalog-configuration"></a><a name="Configuration"></a> 目录配置  
  通过调整目录属性来优化目录的行为方式。 目录属性定义如何对敏感数据进行加密，以及如何保留操作和项目版本控制数据。 若要设置目录属性，请使用“目录属性”  对话框，或调用 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)存储过程。 若要查看属性，请使用对话框或查询 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 可以通过右键单击对象资源管理器中的“SSISDB”  来访问该对话框。  
   
-###  <a name="Cleanup"></a> 操作和项目版本清理  
+###  <a name="operations-and-project-version-cleanup"></a><a name="Cleanup"></a> 操作和项目版本清理  
  目录中很多操作的状态数据都存储在内部数据库表中。 例如，目录会跟踪包执行和项目部署的状态。 为了维持操作数据的大小，使用 **中的** “SSIS Server 维护作业” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来删除旧数据。 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时创建此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 代理作业。  
   
  您可以使用相同名称将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到目录中的同一文件夹，以对其进行更新或重新部署。 默认情况下，每次重新部署某个项目时， **SSISDB** 目录都会保留早期版本的该项目。 为了维持操作数据的大小，使用了 **“SSIS 服务器维护作业”** 来删除旧版本的项目。  
@@ -143,7 +143,7 @@ ms.locfileid: "79287721"
  **每个项目的最大版本数**  
  定义在目录中存储项目的多少个版本。 将删除较旧版本的项目。  
   
-###  <a name="Encryption"></a> 加密算法  
+###  <a name="encryption-algorithm"></a><a name="Encryption"></a> 加密算法  
  **“加密算法”** 属性可指定用于对敏感参数值进行加密的加密类型。 可以从下列加密类型中选择。  
   
 -   AES_256（默认值）  
@@ -181,7 +181,7 @@ ms.locfileid: "79287721"
 |每个项目的最大版本数|MAX_PROJECT_VERSIONS|  
 |服务器范围的默认日志记录级别|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  文件夹中包含的项目、环境和包是安全对象。 您可以授予对文件夹的权限，包括 MANAGE_OBJECT_PERMISSIONS 权限。 利用 MANAGE_OBJECT_PERMISSIONS，您可以将文件夹内容的管理委托给用户，而无需为 ssis_admin 角色授予用户成员身份。 您还可以授予对项目、环境和操作的权限。 操作包括初始化 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、部署项目、创建和启动执行、验证项目和包以及配置 **SSISDB** 目录。  
   
  有关数据库角色的详细信息，请参阅 [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
@@ -203,7 +203,7 @@ ms.locfileid: "79287721"
 
  若要使用 Transact-SQL 管理权限，请调用 [catalog.grant_permission（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)、[catalog.deny_permission（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)和 [catalog.revoke_permission（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)。 若要查看所有对象的当前主体的有效权限，请查询 [catalog.effective_object_permissions（SSISDB 数据库）](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)。 本主题描述了不同类型的权限。 若要查看已显式分配给用户的权限，请查询 [catalog.explicit_object_permissions（SSISDB 数据库）](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)。  
   
-##  <a name="Folders"></a> 文件夹  
+##  <a name="folders"></a><a name="Folders"></a> 文件夹  
  文件夹包含 **SSISDB** 目录中的一个或多个项目和环境。 可以使用 [catalog.folders（SSISDB 数据库）](../../integration-services/system-views/catalog-folders-ssisdb-database.md) 视图来访问有关目录中的文件夹的信息。 可使用以下存储过程管理文件夹：  
   
 -   [catalog.create_folder（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
@@ -214,7 +214,7 @@ ms.locfileid: "79287721"
   
 -   [catalog.set_folder_description（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
-##  <a name="ProjectsAndPackages"></a> 项目和包  
+##  <a name="projects-and-packages"></a><a name="ProjectsAndPackages"></a> 项目和包  
  每个项目可以包含多个包。 项目和包都可以包含参数和对环境的引用。 您可以使用 [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md)访问参数和环境引用。  
   
  可通过调用以下存储过程来执行其他项目任务： 
@@ -237,7 +237,7 @@ ms.locfileid: "79287721"
   
 -   [catalog.object_versions（SSISDB 数据库）](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
   
-##  <a name="Parameters"></a> Parameters  
+##  <a name="parameters"></a><a name="Parameters"></a> Parameters  
  您可以使用参数在包执行时为包属性赋值。 若要设置包或项目参数的值和清除这些值，请调用 [catalog.set_object_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)和 [catalog.clear_object_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)。 若要为执行实例设置参数的值，请调用 [catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)。 可以通过调用 [catalog.get_parameter_values（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)来检索默认参数值。  
   
  以下视图显示了所有包和项目的参数，以及用于执行实例的参数值。  
@@ -246,7 +246,7 @@ ms.locfileid: "79287721"
   
 -   [catalog.execution_parameter_values（SSISDB 数据库）](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
   
-##  <a name="ServerEnvironments"></a> 服务器环境、服务器变量和服务器环境引用  
+##  <a name="server-environments-server-variables-and-server-environment-references"></a><a name="ServerEnvironments"></a> 服务器环境、服务器变量和服务器环境引用  
  服务器环境包含服务器变量。 当在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上执行或验证包时，可以使用这些变量值。  
   
  利用以下存储过程，您可以为环境和变量执行很多其他管理任务。  
@@ -287,7 +287,7 @@ ms.locfileid: "79287721"
   
 -   [catalog.environment_references（SSISDB 数据库）](../../integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
   
-##  <a name="Executions"></a> 执行和验证  
+##  <a name="executions-and-validations"></a><a name="Executions"></a> 执行和验证  
  执行就是一个包执行实例。 调用 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)可创建并启动执行。 若要停止执行或停止包/项目验证，请调用 [catalog.stop_operation（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)。  
   
  若要暂停正在运行的包和创建转储文件，请调用 catalog.create_execution_dump 存储过程。 转储文件提供了有关包执行的信息，可帮助您解决执行问题。 有关生成和配置转储文件的详细信息，请参阅 [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
@@ -372,7 +372,7 @@ ms.locfileid: "79287721"
   
 -   [配置选项](#options)  
   
-###  <a name="open_dialog"></a> 打开“目录属性”对话框  
+###  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a> 打开“目录属性”对话框  
   
 1.  打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
@@ -380,7 +380,7 @@ ms.locfileid: "79287721"
   
 3.  在对象资源管理器中，展开“Integration Services”  节点，右键单击“SSISDB”  ，然后单击“属性”  。  
   
-###  <a name="options"></a> 配置选项  
+###  <a name="configure-the-options"></a><a name="options"></a> 配置选项  
   
 #### <a name="options"></a>选项  
  下表描述对话框中的某些属性以及 `catalog.catalog_properties` 视图中的相应属性。  
@@ -399,7 +399,7 @@ ms.locfileid: "79287721"
   
  SSISDB 目录存储部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包  。 有关该目录的详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
-###  <a name="backup"></a> 备份 SSIS 数据库  
+###  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a> 备份 SSIS 数据库  
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
   
@@ -579,7 +579,7 @@ ms.locfileid: "79287721"
   
 3.  [在可用性组中升级 SSISDB](#Upgrade)  
   
-###  <a name="prereq"></a>先决条件  
+###  <a name="prerequisites"></a><a name="prereq"></a>先决条件  
 为 SSISDB 数据库启用 Always On 支持前，请先执行以下先决性步骤。  
   
 1.  设置 Windows 故障转移群集。 请参阅 [安装适用于 Windows Server 2012 的故障转移群集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 的博客文章以获取相关说明。 在所有群集节点上安装功能和工具。  
@@ -588,7 +588,7 @@ ms.locfileid: "79287721"
   
 3.  为每个 SQL Server 实例启用 Always On 可用性组。 有关详细信息，请参阅 [启用 AlwaysOn 可用性组](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) 。  
   
-###  <a name="Firsttime"></a> 为 AlwaysOn 配置 SSIS 支持  
+###  <a name="configure-ssis-support-for-always-on"></a><a name="Firsttime"></a> 为 AlwaysOn 配置 SSIS 支持  
   
 -   [步骤 1：创建 Integration Services 目录](#Step1)  
   
@@ -603,7 +603,7 @@ ms.locfileid: "79287721"
 > [!NOTE]
 > 若要详细了解此过程，请参阅数据平台 MVP Marcos Freccia 发布的以下演练及附加屏幕截图：[将 SSISDB 添加到 SQL Server 2016 的 AG](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/)。
 
-####  <a name="Step1"></a> 步骤 1：创建 Integration Services 目录  
+####  <a name="step-1-create-integration-services-catalog"></a><a name="Step1"></a> 步骤 1：创建 Integration Services 目录  
   
 1.  启动 **SQL Server Management Studio** 并连接到你想要设置为适用于 SSISDB 的 AlwaysOn 高可用性组的 **主节点** 的群集中的 SQL Server 实例。  
   
@@ -615,14 +615,14 @@ ms.locfileid: "79287721"
   
 5.  输入 **密码**，然后单击“确定”  。 该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
-####  <a name="Step2"></a> 步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组  
+####  <a name="step-2-add-ssisdb-to-an-always-on-availability-group"></a><a name="Step2"></a> 步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组  
 将 SSISDB 数据库添加到 AlwaysOn 可用性组的方法与将任何其他用户数据库添加到可用性组的方法几乎相同。 请参阅 [使用可用性组向导](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
 提供在“新建可用性组”  向导的“选择数据库”  页中创建 SSIS 目录时指定的密码。
 
 ![新建可用性组](../../integration-services/service/media/ssis-newavailabilitygroup.png "新建可用性组")  
   
-####  <a name="Step3"></a> 步骤 3：为 AlwaysOn 启用 SSIS 支持  
+####  <a name="step-3-enable-ssis-support-for-always-on"></a><a name="Step3"></a> 步骤 3：为 AlwaysOn 启用 SSIS 支持  
  创建 Integration Service 目录后，右键单击“Integration Service 目录”  节点，再单击“启用 Always On 支持”  。 应该能看到以下“为 AlwaysOn 启用支持”  的对话框。 如果此菜单被禁用，请确认已安装所有必备组件，然后单击“刷新”  。  
   
  ![为 Always On 启用支持](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -637,7 +637,7 @@ ms.locfileid: "79287721"
 2.  确保连接到主节点。 必须在主节点上启用 Always On 支持。
 3.  确保 SQL Server 版本为 13.0 或更高版本。 仅在 SQL Server 2016 及更高版本上，SSIS 才支持 Always On。
 
-###  <a name="Upgrade"></a> 在可用性组中升级 SSISDB  
+###  <a name="upgrading-ssisdb-in-an-availability-group"></a><a name="Upgrade"></a> 在可用性组中升级 SSISDB  
  如果正在从以前的版本升级 SQL Server，并且 SSISDB 位于 AlwaysOn 可用性组中，则“AlwaysOn 可用性组中的 SSISDB 检查”规则可能会阻止你的升级。 出现这种阻止是因为升级是以单用户模式运行的，而可用性数据库必须是多用户数据库。 因此，在升级或修补过程中，所有可用性数据库（包括 SSISDB）均将处于脱机状态，不会进行升级或修补。 为了让升级继续进行下去，应先从可用性组中删除 SSISDB，升级或修补每一节点，再将 SSISDB 添加回可用性组中。  
   
  如果被“Always On 可用性组中的 SSISDB 检查”规则阻止，请按照以下步骤操作，升级 SQL Server。  
@@ -662,7 +662,7 @@ ms.locfileid: "79287721"
   
 5.  按照[步骤 3：为 AlwaysOn 启用 SSIS 支持](#Step3)中的说明进行操作。  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   

@@ -13,10 +13,10 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048095"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>设置数据库镜像 (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "68048095"
 >  我们建议您在非高峰时段配置数据库镜像，因为配置会影响性能。  
   
   
-##  <a name="PrepareInstances"></a> 准备服务器实例以承载镜像服务器  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> 准备服务器实例以承载镜像服务器  
  对于每个数据库镜像会话：  
   
 1.  主体服务器、镜像服务器和见证服务器（如果有）都必须由位于单独的主机系统中的独立服务器实例承载。 每个服务器实例都需要数据库镜像端点。 如果您需要创建一个数据库镜像端点，请确保其他服务器实例无法访问该端点。  
@@ -48,7 +48,7 @@ ms.locfileid: "68048095"
   
 3.  在将承载镜像数据库的服务器实例上，设置镜像数据库所需的环境的其余部分。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-##  <a name="EstablishUsingWinAuthentication"></a> 概述：建立数据库镜像会话  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> 概述：建立数据库镜像会话  
  以下是建立镜像会话的基本步骤：  
   
 1.  通过对每个还原操作使用 RESTORE WITH NORECOVERY 还原以下备份来创建镜像数据库：  
@@ -98,7 +98,7 @@ ms.locfileid: "68048095"
 >  有关通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用基于证书的安全设置数据库镜像的示例，请参阅 [示例：使用证书设置数据库镜像 (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
   
-##  <a name="InThisSection"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本节内容  
  [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
  概述了在恢复挂起的会话之前创建或准备镜像数据库的步骤。 同时还提供了指向操作指南主题的链接。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68048095"
  [设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
  说明了创建使用本地服务器实例以外的帐户的远程服务器实例登录。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **SQL Server Management Studio**  
   
 -   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

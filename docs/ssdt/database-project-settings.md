@@ -41,10 +41,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241676"
 ---
 # <a name="database-project-settings"></a>数据库项目设置
@@ -81,7 +81,7 @@ ms.locfileid: "75241676"
   
 3.  单击“项目设置”  选项卡。现在，您可以配置数据库项目属性的常规属性了。 请注意左窗格上各个选项卡（代表不同类别）的可用性。  
   
-## <a name="bkmk_proj_settings"></a>项目设置  
+## <a name="project-settings"></a><a name="bkmk_proj_settings"></a>项目设置  
 下表中的设置适用于此数据库项目的所有配置。  
   
 |字段|默认值|说明|  
@@ -97,7 +97,7 @@ ms.locfileid: "75241676"
 |验证标识符的大小写|是|指定在项目生成时是否验证其中的 SQL 对象中的标识符的大小写。 此选项适用于为数据库指定区分大小写的排序规则的数据库项目。|  
 |数据库设置|基于数据库的标准配置设置的默认设置|您可以指定的设置示例包括针对 SQL Server 数据库的排序规则方法和数据库级别设置。|  
   
-## <a name="bkmk_evf"></a>扩展的 Transact-SQL 验证  
+## <a name="extended-transact-sql-verification"></a><a name="bkmk_evf"></a>扩展的 Transact-SQL 验证  
   
 > [!IMPORTANT]  
 > 扩展 Transact-SQL 验证功能将从 SQL Server 数据工具的下一个功能版本和 Visual Studio 的下一个主要版本中删除。  
@@ -156,12 +156,12 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 ### <a name="special-considerations-for-collations"></a>排序规则的特殊注意事项  
 有关部分包含的数据库中排序规则的详细信息，请参阅 [包含的数据库排序规则](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx)。  
   
-## <a name="bkmk_sqlclr"></a>SQLCLR  
+## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
 有关“程序集”选项的信息，请参见 [“程序集信息”对话框](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true)。  
   
 有关签名的信息，请参见 [“签名”页, 项目设计器](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) 主题的“程序集签名”  一节。  
   
-## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR 和 SQLCLR 生成  
+## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR 和 SQLCLR 生成  
 **SQLCLR** 和 **“SQLCLR 生成”** 属性页包含可供在您的项目中使用 SQL CLR 对象的许多设置。 具体来说， **SQLCLR** 属性页具有用于对 SQLCLR 程序集设置权限的权限级别设置。 它还具有“生成 DDL”设置，以便控制为已添加到项目的 SQLCLR 对象是否生成动态数据语言 (DDL)。 **“SQLCLR 生成”** 属性页包含可为配置项目中 SQLCLR 代码的编译而设置的所有编译器选项。  
   
 **“SQLCLR 生成”** 属性页包含用于生成 SQL CLR 对象的高级生成设置。 已基于用来编写 SQL CLR 对象代码的语言（VB 或 C#）提供了不同选项。  
@@ -171,7 +171,7 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 2.  如果对象是用 VB 编写的，则可以先选择 **“语言”** 下拉列表中的“VB”，然后单击 **“高级”** 按钮。 可以在[“高级编译器设置”对话框 (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx) 中找到 VB 选项的说明  
   
 
-## <a name="bkmk_build"></a>生成  
+## <a name="build"></a><a name="bkmk_build"></a>生成  
 可以为解决方案中的每个数据库项目选择生成配置。 默认情况下有一个配置，但您可以添加自定义配置。 例如，如果您需要一个总是删除并重新创建数据库的自定义配置，您可以选择添加自定义配置。 在包含不同项目类型的解决方案中，可以创建一个自定义解决方案配置，其中包含每个项目的特定生成配置。  
   
 #### <a name="to-specify-a-build-configuration-for-a-solution"></a>为解决方案指定生成配置  
@@ -197,14 +197,14 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 |将 Transact\-SQL 警告视为错误|否|指定出现 Transact\-SQL 警告是否应导致取消生成和部署过程。 如果清除此复选框，则将显示警告，但生成和部署过程将继续。 此设置特定于项目而不是用户，并且存储在 .sqlproj 文件中。|  
 |禁止显示 Transact\-SQL 警告|空白|指定一个以逗号或分号分隔的警告编号列表，这些编号标识禁止显示的警告。<br /><br />即使选中了“将 Transact\-SQL 警告视为错误”  复选框，禁止显示的警告也不会显示在“错误列表”  窗口中，并且不会影响生成操作成功完成。|  
   
-## <a name="bkmk_sqlcmd_variables"></a>SQLCMD 变量  
+## <a name="sqlcmd-variables"></a><a name="bkmk_sqlcmd_variables"></a>SQLCMD 变量  
 在 SQL Server 数据库项目中，您可以使用 SQLCMD 变量提供要用于调试或发布的动态替换。 您输入变量名称和值，并且在生成过程中，将替换这些值。 如果没有本地值，则会使用默认值。 通过在项目属性中输入这些变量，它们将在发布时自动提供并且存储于发布配置文件中。 您可以通过“加载值”按钮，将这些变量的项目值拖入发布中。  
   
 请确保在项目属性中输入正确的变量，因为不会针对项目中的脚本对这些变量进行验证，并且不自动填充在脚本中使用的变量。  
   
 此外，命令行发布还让您可以在命令行重写这些值或使用配置文件重写这些值。  
   
-## <a name="bkmk_build_events"></a>生成事件  
+## <a name="build-events"></a><a name="bkmk_build_events"></a>生成事件  
 使用这些设置可以指定要在生成操作开始之前执行的命令行以及要在生成操作完成之后执行的命令行。  
   
 |字段|默认值|说明|  
@@ -213,7 +213,7 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 |生成后事件命令行|无|指定要在项目生成之后执行的命令行。 单击“编辑生成后事件”  可修改该命令行。|  
 |运行生成后事件|成功生成时|指定生成后命令行应始终运行、仅在生成操作成功后运行还是仅在生成操作更新了项目输出（生成脚本）时运行。|  
   
-## <a name="bkmk_debug"></a>调试  
+## <a name="debug"></a><a name="bkmk_debug"></a>调试  
 可以使用这些设置来控制数据库项目的调试。  
   
 |字段|默认值|说明|  
@@ -227,10 +227,10 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 |不使用 ALTER ASSEMBLY 语句更新 CLR 类型|否|指定在部署更改时，是否使用 ALTER ASSEMBLY 语句来更新公共语言运行时 (CLR) 类型，或者是否将删除并重新创建实例化 CLR 类型的对象。|  
 |高级...|否|一种命令按钮，可用于指定控制部署的事件和行为的选项。|  
   
-## <a name="bkmk_ref_paths"></a>引用路径  
+## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>引用路径  
 使用此页，可以定义与跨数据库引用相关联的服务器变量和数据库变量。 此外，你可以指定这些变量的值。 有关详细信息，请参阅 [在数据库项目中使用引用](https://msdn.microsoft.com/library/bb386242.aspx)。  
   
-## <a name="bkmk_code_analysis"></a>代码分析  
+## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>代码分析  
 可以使用代码分析发现您的脚本中的潜在问题，例如设计、命名和性能问题。 数据库项目的规则组织成针对特定领域的预定义的规则集，并且您可以在 **“项目属性”** 属性页的 **“代码分析”** 选项卡中启用或禁用任何规则。 在同一个选项卡上，您可以指定代码分析以便在每次生成项目时自动运行，或者指定是否将警告视为错误。  
   
 若要手动使用代码分析，请在“解决方案资源管理器”  中右键单击你的项目，然后选择“运行代码分析”  。 代码分析警告在 **“错误列表”** 窗口中列出。 可以双击某一警告以便导航到包含该问题的源代码，并且可以通过使用“显示错误帮助”  上下文菜单查看警告的附加信息和可能的更正措施。 有关代码分析的详细信息，请参阅[分析数据库代码以提高代码质量](https://msdn.microsoft.com/library/dd172133.aspx)。  

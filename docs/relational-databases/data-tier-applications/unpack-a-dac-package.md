@@ -14,10 +14,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909527"
 ---
 # <a name="unpack-a-dac-package"></a>解压缩 DAC 包
@@ -28,10 +28,10 @@ ms.locfileid: "72909527"
   
 2.  **若要解压缩 DAC，请使用：** [“解压缩数据层应用程序”对话框](#UnpackDACDial)、[检查 DAC 包的内容](#ExamDACPack)  
 
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的 DAC 之前，请将其部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的一个独立的测试实例中，解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。  
   
-##  <a name="UnpackDACDial"></a> “解压缩数据层应用程序”对话框  
+##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> “解压缩数据层应用程序”对话框  
  **解压缩 DAC 包文件**  
   
 -   在 **Windows 资源管理器**中，导航到 DAC 包 (.dacpac) 文件的位置。  
@@ -48,7 +48,7 @@ ms.locfileid: "72909527"
   
     -   [查找文件夹](#Browse)  
   
-###  <a name="Unpack"></a> 解压缩 Microsoft SQL Server DAC 包文件  
+###  <a name="unpack-microsoft-sql-server-dac-package-file"></a><a name="Unpack"></a> 解压缩 Microsoft SQL Server DAC 包文件  
  使用此页可指定用来放置解压缩文件的目标文件夹，然后运行解压缩操作。  
   
  **文件将解压缩到此文件夹：** - 指定解压缩文件所在文件夹的完整路径。 如果该文件夹存在并且您知道完整路径，请在框中键入该路径。 如果该文件夹不存在或者您不知道完整路径，请单击 **“浏览”** 以导航到某一文件夹或者创建一个新文件夹。  
@@ -59,7 +59,7 @@ ms.locfileid: "72909527"
   
  **取消** - 终止该对话框且不解压缩 DAC 包。  
   
-###  <a name="Browse"></a> 查找文件夹  
+###  <a name="browse-for-folder"></a><a name="Browse"></a> 查找文件夹  
  使用此页可选择解压缩操作的目标文件夹。 或者，也可以创建一个新文件夹。  
   
  **文件夹列表** - 显示计算机的文件层次结构。 展开节点以导航到要将 DAC 包解压缩到的文件夹。 单击该文件夹，然后单击 **“确定”** 。  
@@ -70,7 +70,7 @@ ms.locfileid: "72909527"
   
  **取消** - 终止该对话框且未选择文件夹。  
   
-##  <a name="ExamDACPack"></a> 检查 DAC 包的内容  
+##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> 检查 DAC 包的内容  
  对包解压缩后，可以检查由“解压缩数据层应用程序”  对话框生成的文件。 该对话框在所选目标文件夹中生成以下文件：  
   
 1.  一个 Transact-SQL 脚本，包含用于创建在该 DAC 中定义的对象的语句。 该文件名是 *DACName*.sql，其中， *DACName* 是 DAC 的名称。  

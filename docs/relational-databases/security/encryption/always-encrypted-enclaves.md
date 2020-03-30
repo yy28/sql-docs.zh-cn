@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558022"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
@@ -139,7 +139,7 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 - 如果结合使用随机加密和已启用 enclave 的 CEK 来加密列，可能会导致列中存储的数据顺序泄露，因为此类列支持范围比较。 例如，如果包含员工薪金的加密列有索引，恶意 DBA 可以通过扫描此索引来查找最高加密薪金值，并确定薪金最高的员工（假设员工姓名未加密）。 
 - 如果使用 Always Encrypted 来防止 DBA 未经授权地访问敏感数据，请不要将列主密钥或列加密密钥与 DBA 共享。 借助 enclave 内的列加密密钥缓存，DBA 无需拥有对密钥的直接访问权限，即可管理加密列上的索引。
 
-## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> 可用性组和数据库迁移的注意事项
+## <a name="considerations-for-availability-groups-and-database-migration"></a><a name="anchorname-1-considerations-availability-groups-db-migration"></a> 可用性组和数据库迁移的注意事项
 
 配置支持使用 enclave 的查询所需的 AlwaysOn 可用性组时，必须确保在可用性组中托管数据库的所有 SQL Server 实例都支持含安全 enclave 的 Always Encrypted，并且已配置 enclave。 如果主数据库支持 enclave，但次要副本不支持，任何尝试使用含安全 enclave 的 Always Encrypted 功能的查询都会失败。
 

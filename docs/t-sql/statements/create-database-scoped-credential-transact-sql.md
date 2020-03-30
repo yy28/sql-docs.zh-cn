@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f6c4cbb43048e9dff683b510d958e3e25d87e823
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77507488"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -101,7 +101,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 为共享访问签名创建数据库范围凭据
 
-以下示例创建的数据库范围凭据可用于创建可执行批量操作（例如 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)）的[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)。 共享访问签名不能与 SQL Server、APS 或 SQL DW 中的 PolyBase一起使用。
+以下示例创建的数据库范围凭据可用于创建可执行批量操作（例如 [BULK INSERT](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [OPENROWSET](../../t-sql/statements/bulk-insert-transact-sql.md)）的[外部数据源](../../t-sql/functions/openrowset-transact-sql.md)。 共享访问签名不能与 SQL Server、APS 或 SQL DW 中的 PolyBase一起使用。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

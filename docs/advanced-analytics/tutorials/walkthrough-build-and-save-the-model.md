@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73724528"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>生成 R 模型并保存到 SQL（演练）
@@ -21,7 +21,7 @@ ms.locfileid: "73724528"
 
 在此步骤中，你将了解如何生成机器学习模型并将该模型保存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 通过保存模型，可以使用系统存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 或 [PREDICT (T-SQL) 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中直接调用模型。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 此步骤基于本演练之前的步骤假设一个正在进行的 R 会话。 它使用在这些步骤中创建的连接字符串和数据源对象。 以下工具和包用于运行脚本。
 

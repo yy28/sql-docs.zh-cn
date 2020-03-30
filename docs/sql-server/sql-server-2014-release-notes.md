@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155689"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -115,7 +115,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
   
 **解决方法：** 从 [SQL Server 2014 功能包下载页](https://go.microsoft.com/fwlink/?LinkID=306709)下载和安装正确的版本。  
   
-### <a name="ProdDoc"></a>产品文档 RTM
+### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>产品文档 RTM
   
 不提供某些语言的报表生成器和 PowerPivit 内容。 
 
@@ -148,7 +148,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
   
 **解决方法：** 无。  
   
-### <a name="DBEngine"></a>数据库引擎 (RTM)
+### <a name="database-engine-rtm"></a><a name="DBEngine"></a>数据库引擎 (RTM)
   
 #### <a name="changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>SQL Server 2014 RTM 中针对 Standard Edition 所做的更改  
 SQL Server 2014 Standard 具有以下更改：  
@@ -288,7 +288,7 @@ DATEPART(weekday, @d)
   
     `update` sysdac_history_internal `set` instance_id = '\<来自步骤 3 的值\>' `where` \<与要更新的行匹配的表达式\>  
   
-### <a name="SSRS"></a>Reporting Services (RTM)
+### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 本机模式报表服务器不能与 SQL Server 2014 Reporting Services SharePoint 组件并行运行  
 **问题：** 当同一服务器上安装了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件时，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务“SQL Server Reporting Services”(ReportingServicesService.exe) 将无法启动。  
@@ -334,7 +334,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 有关详细信息，请参阅 [SQL Server 2014 Reporting Services 提示、技巧和故障排除](https://go.microsoft.com/fwlink/?LinkID=391254)。  
   
-### <a name="AzureVM"></a> Azure 虚拟机上的 SQL Server 2014 RTM  
+### <a name="sql-server-2014-rtm-on-azure-virtual-machines"></a><a name="AzureVM"></a> Azure 虚拟机上的 SQL Server 2014 RTM  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>在 Azure 中配置可用性组侦听器时添加 Azure 副本向导返回错误  
 **问题：** 如果可用性组具有侦听器，当你尝试在 Azure 中配置可用性组侦听器时，添加 Azure 副本向导将返回错误。  
@@ -349,7 +349,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 2.  向导完成后，将需要按照 [Azure 中 AlwaysOn 可用性组的侦听器配置](https://msdn.microsoft.com/library/dn376546.aspx)中所述在 Azure 中完成侦听器配置  
   
-### <a name="SSAS"></a>Analysis Services (RTM)
+### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>必须为使用 SQL Server 2014 配置的 SharePoint 2010 新场下载、安装和注册 MSOLAP.5  
 **问题：**  
@@ -394,7 +394,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 -    如果刷新计划的序列化长度小于原有计划，则在为工作簿更新数据刷新计划时，缓冲区大小不会正确更新，并且新计划信息将与旧计划信息合并，导致计划损坏。  
   
-### <a name="DQS"></a>Data Quality Services (RTM)
+### <a name="data-quality-services-rtm"></a><a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Master Data Services 中没有对 Data Quality Services 的跨版本支持  
 **问题：** 不支持以下方案：  
@@ -405,7 +405,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **解决方法：** 使用相同版本的 Master Data Services 作为数据库引擎数据库和 Data Quality Services。  
   
-### <a name="UA"></a>升级顾问问题 (RTM)
+### <a name="upgrade-advisor-issues-rtm"></a><a name="UA"></a>升级顾问问题 (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 升级顾问报告与 SQL Server Reporting Services 不相关的升级问题  
 **问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 在分析 SQL Server Reporting Services 服务器时不正确地报告多个错误。  

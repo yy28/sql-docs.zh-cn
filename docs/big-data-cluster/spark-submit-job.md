@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: fc4f40981d246c47f923cb2a1afa5533a98081ac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244071"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-azure-data-studio"></a>在 Azure Data Studio 的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上提交 Spark 作业
@@ -23,7 +23,7 @@ ms.locfileid: "75244071"
 
 大数据群集的关键方案之一是能够为 SQL Server 提交 Spark 作业。 使用 Spark 作业提交功能，你可以提交引用 SQL Server 2019 大数据群集的的本地 Jar 或 Py 文件。 它还允许你执行已经位于 HDFS 文件系统中的 Jar 或 Py 文件。 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [SQL Server 2019 大数据工具](deploy-big-data-tools.md)：
    - **Azure Data Studio**

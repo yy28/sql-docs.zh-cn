@@ -13,10 +13,10 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903115"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>配置拓扑（对等复制）
@@ -63,7 +63,7 @@ ms.locfileid: "67903115"
   
 ### <a name="options-for-each-node"></a>每个节点的选项  
  **添加新的对等连接**  
- 在两个节点之间添加连接。 例如，如果要在 Node A 与 Node B 之间添加连接，则复制会添加两个订阅：第一个订阅使 Node A 可以接收来自 Node B 上的发布的更改，第二个订阅使 Node B 可以接收来自 Node A 上的发布的更改。  
+ 在两个节点之间添加连接。 例如，如果要在节点 A 和节点 B 之间添加连接，则复制会添加两个订阅：第一个订阅使节点 A 可以接收来自节点 B 上的发布的更改，第二个订阅使节点 B 可以接收来自节点 A 上的发布的更改。  
   
  **删除对等节点**  
  从拓扑中删除节点。 例如，如果删除了节点 C，则该节点上的发布也会删除。 节点 A 和节点 C 以及节点 B 和节点 C 之间的订阅也会删除。 而节点 C 上的数据库不会删除，发布和分发也不会禁用。  

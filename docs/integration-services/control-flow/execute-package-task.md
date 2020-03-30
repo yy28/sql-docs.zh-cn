@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294193"
 ---
 # <a name="execute-package-task"></a>执行包任务
@@ -137,13 +137,13 @@ ms.locfileid: "71294193"
   
 -   [设置“参数绑定”页上的选项](#parameter)  
   
-###  <a name="open"></a> 打开执行包任务编辑器  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> 打开执行包任务编辑器  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，打开包含执行包任务的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目。  
   
 2.  在 SSIS 设计器中右键单击该任务，然后单击“编辑”  。  
   
-###  <a name="general"></a> 设置“常规”页上的选项  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 设置“常规”页上的选项  
  **名称**  
  为执行包任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71294193"
  **说明**  
  键入对执行包任务的说明。  
   
-###  <a name="package"></a> 设置“包”页上的选项  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> 设置“包”页上的选项  
  **ReferenceType**  
  为项目中的子包选择“项目引用”  。 为位于包外部的子包选择 **“外部引用”** 。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "71294193"
  **PackageNameReadOnly**  
  显示包的名称。  
   
-###  <a name="parameter"></a> 设置“参数绑定”页上的选项  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> 设置“参数绑定”页上的选项  
  您可以将父包或项目中的值传递到子包。 项目必须使用项目部署模型，并且子包必须包含在父包所在的同一项目中。  
   
  有关将项目转换为项目部署模型的信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  

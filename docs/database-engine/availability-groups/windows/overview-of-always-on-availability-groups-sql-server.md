@@ -17,10 +17,10 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3a6a21cf82a7b94d5526e4492d69bc5f1578b716
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77478451"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "77478451"
   
  ![有五个副本的可用性组](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "有五个副本的可用性组")  
   
-##  <a name="AvDbs"></a> 可用性数据库  
+##  <a name="availability-databases"></a><a name="AvDbs"></a> 可用性数据库  
  若要将数据库添加到可用性组，该数据库必须是联机的读写数据库，它位于承载主副本的服务器实例上。 当您添加一个数据库时，它将作为主数据库加入可用性组，同时保持可用于客户端。 除非新的主数据库的备份还原到承载辅助副本（使用 RESTORE WITH NORECOVERY）的服务器实例，否则不存在对应的辅助数据库。 新的辅助数据库处于 RESTORING 状态，直至其加入可用性组。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
  加入后，辅助数据库将进入 ONLINE 状态，并启动与对应主数据库之间的数据同步。 “数据同步”  是在辅助数据库上重新生成对主数据库的更改的过程。 数据同步涉及主数据库将事务日志记录发送到辅助数据库。  
@@ -63,7 +63,7 @@ ms.locfileid: "77478451"
 > [!IMPORTANT]  
 >  可用性数据库在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、PowerShell 和 SQL Server 管理对象 (SMO) 名称中有时候被称作“数据库副本”  。 例如，“数据库副本”一词用于返回与可用性数据库有关的信息的 AlwaysOn 动态管理视图的名称中：**sys.dm_hadr_database_replica_states** 和 **sys.dm_hadr_database_replica_cluster_states**。 但在 SQL Server 联机丛书中，“副本”一词通常表示可用性副本。 例如，“主副本”和“辅助副本”始终表示可用性副本。  
   
-##  <a name="AGsARsADBs"></a> 可用性副本  
+##  <a name="availability-replicas"></a><a name="AGsARsADBs"></a> 可用性副本  
  每个可用性组定义一个包含两个或更多故障转移伙伴（称为可用性副本）的集合。  “可用性副本”是可用性组的组件。 每个可用性副本都承载可用性组中的可用性数据库的一个副本。 对于某个给定可用性组，可用性副本必须位于某一 WSFC 群集的不同节点上的单独 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上。 必须为 AlwaysOn 启用这些服务器实例中的每个实例。  
   
  对于每个可用性组，一个给定实例只能承载一个可用性副本。 但是，每个实例可用于多个可用性组。 给定的实例可以是独立实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI)。 如果您要求服务器级别的冗余，则使用故障转移群集实例。  
@@ -73,7 +73,7 @@ ms.locfileid: "77478451"
 > [!NOTE]  
 >  如果可用性副本的角色是不确定的（如在故障转移过程中），则其数据库将临时处于 NOT SYNCHRONIZING 状态。 其角色设置为 RESOLVING，直至可用性副本的角色已解析。 如果可用性副本解析为主角色，则其数据库将成为主数据库。 如果可用性副本解析为辅助角色，则其数据库将成为辅助数据库。  
   
-##  <a name="AvailabilityModes"></a> 可用性模式  
+##  <a name="availability-modes"></a><a name="AvailabilityModes"></a> 可用性模式  
  可用性模式是每个可用性副本的一个属性。 可用性模式确定主副本是否在给定的辅助副本将事务日志记录写入磁盘（强制写入日志）之前，等待提交数据库上的事务。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持两种可用性模式：“异步提交模式”和“同步提交模式”   。  
   
 -   **异步提交模式**  
@@ -86,7 +86,7 @@ ms.locfileid: "77478451"
   
  有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
   
-##  <a name="FormsOfFailover"></a> 故障转移类型  
+##  <a name="types-of-failover"></a><a name="FormsOfFailover"></a> 故障转移类型  
  在主副本和辅助副本之间的对话上下文中，通过称为“故障转移”  的过程，主角色和辅助角色是潜在可互换的。 在故障转移期间，目标辅助副本转换为主角色，成为新的主副本。 新的主副本使其数据库作为主数据库联机，而客户端应用程序可以连接到这些数据库。 如果以前的主副本可用，则它将转换为辅助角色，成为辅助副本。 以前的主数据库成为辅助数据库，且数据同步恢复。  
   
  有三种故障转移形式：自动、手动和强制（可能造成数据丢失）。 给定辅助副本支持的故障转移形式取决于其可用性模式，对于同步提交模式来说，取决于主副本和目标辅助副本的故障转移模式，如下所示。  
@@ -111,7 +111,7 @@ ms.locfileid: "77478451"
   
  有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)概念。  
   
-##  <a name="ClientConnections"></a> 客户端连接  
+##  <a name="client-connections"></a><a name="ClientConnections"></a> 客户端连接  
  您可以通过创建一个可用性组侦听器来提供到给定可用性组的主副本的客户端连接。 “可用性组侦听器”  提供一组附加到给定可用性组的资源，以便将客户端连接定向到相应的可用性副本。  
   
  一个可用性组侦听器与一个唯一的 DNS 名称（用作虚拟网络名称 (VNN)）、一个或多个虚拟 IP 地址 (VIP) 和一个 TCP 端口号关联。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)概念。  
@@ -119,7 +119,7 @@ ms.locfileid: "77478451"
 > [!TIP]  
 >  如果一个可用性组仅拥有两个可用性副本，并且未配置为允许对次要副本进行读访问，则客户端可以通过使用 [数据库镜像连接字符串](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)连接到主要副本。 从数据库镜像将数据库迁移到 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]之后，这种方法暂时非常有用。 在添加其他辅助副本之前，您需要为该可用性组创建一个可用性组侦听器，并更新您的应用程序以使用该侦听器的网络名称。  
   
-##  <a name="ActiveSecondaries"></a> 活动辅助副本  
+##  <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a> 活动辅助副本  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持活动辅助副本。 活动辅助功能包括对以下方面的支持：  
   
 -   **对辅助副本执行备份操作**  
@@ -132,7 +132,7 @@ ms.locfileid: "77478451"
   
      如果某一可用性组当前拥有一个可用性组侦听程序以及一个或多个可读次要副本，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以将读意向连接请求路由到其中一个可读次要副本（*只读路由*）。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)概念。  
   
-##  <a name="SessionTimeoutPerios"></a> 会话超时期限  
+##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a> 会话超时期限  
  会话超时期限是一个可用性副本属性，它决定在连接关闭前与另一个可用性副本的连接可处于不活动状态多长时间。 主副本和辅助副本相互 ping 以表示它们还处于活动状态。 在超时期限内从其他副本收到 ping 指示连接仍是打开的，且服务器实例正在进行通信。 收到 ping 后，可用性副本将重置此连接的会话超时计数器。  
   
  会话超时期限防止副本无限制等待接收来自另一个副本的 ping。 如果在会话超时期限内没有收到来自另一个副本的 ping，该副本将超时。连接将关闭，超时的副本进入 DISCONNECTED 状态。 即使为同步提交模式配置了断开连接的副本，事务也将不等待该副本重新连接和重新同步。  
@@ -142,16 +142,16 @@ ms.locfileid: "77478451"
 > [!NOTE]  
 >  在“正在解析”角色中，会话超时期限不适用，因为不进行 ping。  
   
-##  <a name="APR"></a> 自动页修复  
+##  <a name="automatic-page-repair"></a><a name="APR"></a> 自动页修复  
  每个可用性副本都通过解决阻止读取数据页的一定类型的错误，自动尝试从本地数据库上损坏的页中恢复。 如果辅助副本无法读取某页，则该副本从主副本请求该页的新副本。 如果主副本无法读取某页，该副本将向所有辅助副本广播索取新副本的请求，并从响应的第一个副本中获取该页。 如果此请求成功，则将以新副本替换不可读的页，这通常会解决该错误。  
   
  有关详细信息，请参阅[自动页修复（可用性组：数据库镜像）](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [AlwaysOn 可用性组入门 (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   **博客：**  
   
