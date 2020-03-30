@@ -12,10 +12,10 @@ ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
 ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258645"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>快速入门：本地备份和还原 SQL Server 数据库
@@ -25,7 +25,7 @@ ms.locfileid: "75258645"
 
 有关更详细的操作方法，请参阅[创建完整数据库备份](create-a-full-database-backup-sql-server.md)和[使用 SSMS 还原备份](restore-a-database-backup-using-ssms.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 要完成本快速入门，需要具备以下条件： 
 
 - [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)

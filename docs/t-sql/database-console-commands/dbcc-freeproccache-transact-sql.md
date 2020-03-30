@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101903"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -121,21 +121,21 @@ pool_name 是资源调控器资源池的名称  。 pool_name 的数据类型为
 适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - 要求具有 DB_OWNER 固定服务器角色中的成员资格。  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的一般备注  
+## <a name="general-remarks-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的一般备注  
 可以同时运行多个 DBCC FREEPROCCACHE 命令。
 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，清除计划缓存可能导致查询性能暂时性降低，因为传入查询编译新计划，而不是重复使用任何以前缓存的计划。 
 
 在计算节点上运行时，DBCC FREEPROCCACHE (COMPUTE) 仅会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新编译查询。 它不会导致 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 重新编译在控制节点上生成的并行查询计划。
 可在执行期间取消 DBCC FREEPROCCACHE。
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制与局限  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制与局限  
 无法在事务中运行 DBCC FREEPROCCACHE。
 EXPLAIN 语句中不支持使用 DBCC FREEPROCCACHE。
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的元数据  
+## <a name="metadata-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的元数据  
 运行 DBCC FREEPROCCACHE 时，会向 sys.pdw_exec_requests 系统视图中添加新行。
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>示例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-ssnoversion"></a>示例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. 从计划高速缓存中清除查询计划  
 以下示例通过指定查询计划句柄从计划高速缓存中清除查询计划。 为了确保示例查询在计划高速缓存中，首先执行该查询。 将查询 `sys.dm_exec_cached_plans` 和 `sys.dm_exec_sql_text` 动态管理视图以返回查询的计划句柄。 
@@ -187,7 +187,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE 基本语法示例  
 以下示例从计算节点中删除所有现有的查询计划缓存。 虽然上下文设置为 UserDbSales，但所有数据库的计算节点查询计划缓存都将删除。 WITH NO_INFOMSGS 子句可防止结果中显示信息性消息。  

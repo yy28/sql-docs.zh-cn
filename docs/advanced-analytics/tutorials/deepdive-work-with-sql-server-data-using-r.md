@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ae2fd2d200b6a231dd76f04556d6d221df00809f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947189"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>创建数据库和权限（SQL Server 和 RevoScaleR 教程）
@@ -33,17 +33,17 @@ ms.locfileid: "74947189"
 
 1. 在 SQL Server Management Studio 中，连接到已启用 R 的数据库实例。
 
-2. 右键单击“数据库”，再选择“新建数据库”。
+2. 右键单击“数据库”，再选择“新建数据库”   。
   
 2. 键入新数据库的名称：RevoDeepDive。
   
 ## <a name="create-a-login"></a>创建登录名
   
-1. 单击“新建查询”，然后将数据库上下文更改为 master 数据库。
+1. 单击“新建查询”  ，然后将数据库上下文更改为 master 数据库。
   
-2. 在新的“查询”窗口中，运行以下命令以创建用户帐户并将其分配到本教程中使用的数据库。 如有需要，请务必更改数据库名称。
+2. 在新的“查询”  窗口中，运行以下命令以创建用户帐户并将其分配到本教程中使用的数据库。 如有需要，请务必更改数据库名称。
 
-3. 若要验证登录名，选择新的数据库，依次展开“安全”和“用户”。
+3. 若要验证登录名，选择新的数据库，依次展开“安全”和“用户”   。
   
 **Windows 用户**
   
@@ -102,11 +102,11 @@ GO
   
 - **表名称具有 datareader 前缀，为什么？**
   
-    当指定此用户的默认架构为 db_datareader 时，所有的表和此用户创建的其他新对象都将以“架构”名称作为前缀。 架构像是一个文件夹，可将其添加到数据库来组织对象。 架构还定义了数据库中用户的权限。
+    当指定此用户的默认架构为 db_datareader 时，所有的表和此用户创建的其他新对象都将以“架构”名称作为前缀   。 架构像是一个文件夹，可将其添加到数据库来组织对象。 架构还定义了数据库中用户的权限。
   
-    如果架构与一个特定的用户名相关联，用户就是“架构所有者”。 创建对象时，将始终在自己的架构中创建，除非明确要求在另一个架构中创建对象。
+    如果架构与一个特定的用户名相关联，用户就是“架构所有者”  。 创建对象时，将始终在自己的架构中创建，除非明确要求在另一个架构中创建对象。
   
-    例如，如果创建一个名为 TestData 的表，且默认构架为 db_datareader，则创建名为 `<database_name>.db_datareader.TestData` 的表。
+    例如，如果创建一个名为 TestData 的表，且默认构架为 db_datareader，则创建名为 `<database_name>.db_datareader.TestData` 的表   。
   
     出于此原因，数据库可以包含多个具有相同名称的表，前提是这些表属于不同的架构。
    

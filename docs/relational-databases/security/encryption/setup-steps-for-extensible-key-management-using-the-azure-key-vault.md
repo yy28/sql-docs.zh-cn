@@ -15,10 +15,10 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557422"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤
@@ -238,7 +238,7 @@ SQL Server 版本  |可再发行组件安装链接
  > 虽然密钥保管库支持具有多个版本的相同命名的密钥，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器使用的密钥不应受版本控制或对其进行滚动更新。 如果管理员想要滚动用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的密钥，则应在保管库中创建一个具有不同名称的新密钥并用它来加密 DEK。  
    
   
-## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>第三部分：安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器  
+## <a name="part-iii-install-the-ssnoversion-connector"></a>第三部分：安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器  
  从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=521700)下载 SQL Server 连接器。 （此操作应由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员完成。）  
 
 > [!NOTE]  
@@ -262,7 +262,7 @@ SQL Server 版本  |可再发行组件安装链接
 -   [C.SQL Server 连接器的错误代码说明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>第四部分：配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-ssnoversion"></a>第四部分：配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  请参阅 [B. 常见问题解答](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)以查看本节中每个操作所需的最低权限级别的说明。  
   
 1.  **启动 sqlcmd.exe 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio。**  

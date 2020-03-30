@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952483"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>将 Reporting Services 分页报表项固定到 Power BI 仪表板
@@ -28,7 +28,7 @@ ms.locfileid: "75952483"
 
 可以将本地 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 分页报表项固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 服务中的仪表板，作为新磁贴。   若要固定，你的管理员需要先将报表服务器与 Azure Active Directory 和 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]相集成。  
   
-##  <a name="bkmk_requirements_to_pin"></a> 固定要求  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> 固定要求  
   
 -   配置报表服务器以与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。 有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。 如果尚未配置报表服务器，你在工具栏中将看不到“固定到 Power BI 仪表板”按钮  。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75952483"
  
     请参阅 [在 Reporting Services 数据源中存储凭据](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)中的“为特定于报表的数据源配置存储凭据（本机模式）”部分  
   
-##  <a name="bkmk_supported_items"></a> 可以固定的项  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> 可以固定的项  
  以下报表项可以固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板。  不能固定数据区域内嵌套的项。 例如，不能固定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 表或列表中嵌套的项。  
   
 -   图表  
@@ -54,7 +54,7 @@ ms.locfileid: "75952483"
 -   项需要在报表正文中。  不能固定页眉或页脚中的项。  
 -   可以固定顶级矩形内的单个项，但不能将所有项作为单个组进行固定。  
   
-##  <a name="bkmk_to_pin"></a> 固定报表项  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> 固定报表项  
   
 1. 确认你已登录到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]中。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，选择“我的设置”菜单项并登录  。 有关详细信息，请参阅[用于 Power BI 集成的“我的设置”（Web 门户）](my-settings-for-power-bi-integration-web-portal.md)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "75952483"
   
 6. 单击“关闭”，使报表返回到普通视图  。  
   
-##  <a name="bkmk_in_the_dashboard"></a> 在仪表板中
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> 在仪表板中
 
 将报表项固定到仪表板后，磁贴看起来与其他仪表板磁贴类似，没有可见指示标明磁贴来自 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 下表总结了从报表项填充磁贴属性的方式。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75952483"
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> 解决问题  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> 解决问题  
   
 -   **报表查看器工具栏上没有 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 按钮：** 该消息指示报表服务器尚未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。 有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "75952483"
 
 -   **Power BI 应用中的磁贴显示过时的数据：** 如果将 Reporting Services 报表项固定到仪表板，然后在应用中分发该仪表板，则该仪表板中的固定报表项将不会更新。 
 
-##  <a name="bkmk_subscription_management"></a> 订阅管理  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> 订阅管理  
  除故障排除部分所述的与订阅相关的问题外，以下信息将帮助你维护与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 相关的订阅。
   
 -   **项名称已更改：** 如果重命名或删除了固定的报表项，[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 磁贴将不再更新，并且你将看到如下错误消息。  如果将该项重命名回原始名称，则订阅将重新开始工作，磁贴将按订阅计划进行刷新。  

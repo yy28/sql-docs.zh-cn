@@ -15,10 +15,10 @@ ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e9a628b725222d0e77ed7fcb55b80ec8de153a55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558119"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>查看或修改基于策略的管理条件的属性
@@ -27,14 +27,14 @@ ms.locfileid: "75558119"
   
 
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
 
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-modify-a-conditions-properties"></a>查看或修改条件的属性  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75558119"
   
 6.  完成后，单击 **“确定”** 。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-a-conditions-properties"></a>查看条件的属性  
   

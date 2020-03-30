@@ -29,10 +29,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78280893"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
@@ -441,7 +441,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-x**<a name="x"></a>  
  结合使用该格式  和 -f  format_file  选项，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。 在导入或导出数据时， **-x** 不起作用。 如果不与格式  和 -f  format_file  一起使用，则将生成错误。  
 
-## 备注<a name="remarks"></a>
+## <a name="remarks"></a>备注<a name="remarks"></a>
 
 - 使用 **bcp** 工具时，将安装 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 客户端。 如果同时安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的工具，你所使用的可能是早期版本的 **bcp** 客户端，而不是 **bcp** 13.0 客户端，具体情况取决于 PATH 环境变量的值。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 bcp /v 或 bcp -v 命令   。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅[环境变量](https://docs.microsoft.com/windows/win32/shell/user-environment-variables)或在 Windows 帮助中搜索环境变量。
 

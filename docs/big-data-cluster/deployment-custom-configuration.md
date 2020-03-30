@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285851"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>为群集资源和服务配置部署设置
@@ -179,7 +179,7 @@ ms.locfileid: "79285851"
    azdata bdc config init --source aks-dev-test --target custom-bdc
    ```
 
-## <a id="docker"></a> 更改默认 Docker 注册表、存储库和映像标记
+## <a name="change-default-docker-registry-repository-and-images-tag"></a><a id="docker"></a> 更改默认 Docker 注册表、存储库和映像标记
 
 内置配置文件（尤其是 control.json）包含 `docker` 部分，其中的容器注册表、存储库和映像标记已预先填充。 默认情况下，大数据群集所需的映像位于 `mssql/bdc` 存储库中的 Microsoft 容器注册表 (`mcr.microsoft.com`) 中：
 
@@ -216,7 +216,7 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 > [!TIP]
 > 大数据群集部署必须有权访问从中拉取容器映像的容器注册表和存储库。 如果环境没有访问默认 Microsoft 容器注册表的权限，则可以执行脱机安装，其中所需的映像会首先放置在专用 Docker 存储库中。 有关脱机安装的详细信息，请参阅 [执行 SQL Server 大数据群集的脱机部署](deploy-offline.md)。 请注意，在签发部署前，必须先设置 `DOCKER_USERNAME` 和 `DOCKER_PASSWORD` [环境变量](deployment-guidance.md#env)，以确保部署工作流有权访问要从中拉取映像的专用存储库。
 
-## <a id="clustername"></a> 更改群集名称
+## <a name="change-cluster-name"></a><a id="clustername"></a> 更改群集名称
 
 群集名称既是大数据群集的名称，也是将在部署时创建的 Kubernetes 命名空间的名称。 它在 `bdc.json` 部署配置文件的以下部分中指定：
 
@@ -236,7 +236,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 > [!IMPORTANT]
 > 大数据群集的名称只能使用小写的字母数字字符，不能有空格。 将在与指定的群集名称同名的命名空间中创建群集的所有 Kubernetes 项目（容器、pod、状态集、服务）。
 
-## <a id="ports"></a> 更新终结点端口
+## <a name="update-endpoint-ports"></a><a id="ports"></a> 更新终结点端口
 
 在 `control.json` 中为控制器定义终结点，在 `bdc.json` 的相应部分中为网关和 SQL Server 主实例定义终结点。 `control.json` 配置文件的以下部分显示了控制器的终结点定义：
 
@@ -263,7 +263,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> 配置规模
+## <a name="configure-scale"></a><a id="replicas"></a> 配置规模
 
 每个资源（如存储池）的配置在 `bdc.json` 配置文件中定义。 例如，`bdc.json` 的以下部分显示 `storage-0` 资源定义：
 
@@ -305,7 +305,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 > [!NOTE]
 > 计算和数据池的有效实例上限为每个池 `8` 个实例。 虽然在部署时不会强制实施此限制，但不建议在生产部署中配置更高的规模。
 
-## <a id="storage"></a> 配置存储
+## <a name="configure-storage"></a><a id="storage"></a> 配置存储
 
 还可以更改用于每个池的存储类和特征。 以下示例将自定义存储类分配给存储池和数据池，并将用于存储数据的永久性卷声明的大小更新为 HDFS（存储池）500 Gb，数据池 100 Gb。 
 
@@ -369,7 +369,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 > [!NOTE]
 > 基于 `kubeadm-dev-test` 的配置文件不含每个池的存储定义，但可以根据需要使用上面的过程进行添加。
 
-## <a id="sparkstorage"></a> 配置不使用 spark 的存储池
+## <a name="configure-storage-pool-without-spark"></a><a id="sparkstorage"></a> 配置不使用 spark 的存储池
 
 还可以将存储池配置为在没有 spark 的情况下运行，并创建单独的 spark 池。 利用此配置可以在扩展 spark 计算能力时不用考虑存储。 若要了解如何配置 Spark 池，请参阅本文中的 [创建 Spark 池](#sparkpool)部分。
 
@@ -382,7 +382,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
 ```
 
-## <a id="sparkpool"></a> 创建 Spark 池
+## <a name="create-a-spark-pool"></a><a id="sparkpool"></a> 创建 Spark 池
 
 可以额外创建一个 Spark 池，而不是在存储池中运行的 Spark 实例。 以下示例显示如何通过修补 `bdc.json` 配置文件来创建具有两个实例的 Spark 池。 
 
@@ -425,7 +425,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 azdata bdc config patch -c custom-bdc/bdc.json -p spark-pool-patch.json
 ```
 
-## <a id="podplacement"></a> 使用 Kubernetes 标签配置 pod 布局
+## <a name="configure-pod-placement-using-kubernetes-labels"></a><a id="podplacement"></a> 使用 Kubernetes 标签配置 pod 布局
 
 可以控制具有特定资源的 Kubernetes 节点上的 pod 放置，以适应各种类型的工作负载要求。 使用 Kubernetes 标签，可以自定义 Kubernetes 群集中的哪些节点将用于部署大数据群集资源，还可以限制哪些节点用于特定资源。
 例如，你可能会想确保将存储池资源 pod 放置在具有更多存储的节点上，同时将 SQL Server 主实例放置在具有更高 CPU 和更多内存资源的节点上。 在这种情况下，需首先构建具有不同类型硬件的异类 Kubernetes 群集，然后相应[分配节点标签](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)。 部署大数据群集时，可使用 `control.json` 文件中的 `clusterLabel` 属性在群集级别指定相同的标签，以指示哪些节点用于大数据群集。 然后，将使用不同的标签用于池级别放置。 可使用 `nodeLabel` 属性在大数据群集部署配置文件中指定这些标签。 Kubernetes 在与指定标签匹配的节点上分配 pod。 需要添加到 kubernetes 群集中节点的特定标签键为 `mssql-cluster`（用于指示哪些节点用于大数据群集）和 `mssql-resource`（用于指示 pod 放置在哪些特定节点上以使用各种资源）。 这些标签的值可以是所选择的任何字符串。
@@ -467,7 +467,7 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.n
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
 
-## <a id="jsonpatch"></a> 使用 JSON 修补程序文件的其他自定义
+## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> 使用 JSON 修补程序文件的其他自定义
 
 JSON 修补程序文件一次配置多个设置。 有关 JSON 修补程序的详细信息，请参阅 [python 中的 JSON 修补程序](https://github.com/stefankoegl/python-json-patch)和 [JSONPath 联机计算器](https://jsonpath.com/)。
 

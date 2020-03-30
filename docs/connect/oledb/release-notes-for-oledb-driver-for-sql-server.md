@@ -7,18 +7,16 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: c0a9e1726958a1eda7cf71817479f7c37dcfe854
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.openlocfilehash: 2c50ae262516fab757d4de7c254af79f0184ea84
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79090529"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80345438"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序发行说明
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 本页讨论添加到适用于 SQL Server 的 Microsoft OLE DB 驱动程序的每个版本中的内容。
 

@@ -11,10 +11,10 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 24a87adf77ea4217cb27b20d2452fcbd5ba26135
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056247"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>更改数据库的目标恢复时间 (SQL Server)
@@ -28,19 +28,19 @@ ms.locfileid: "74056247"
   
 -   **要更改目标恢复时间，请使用：** [SQL Server Management Studio](#SSMSProcedure) 或 [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限 
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限 
   
 > [!CAUTION]  
 >  为间接检查点配置的数据库上的联机事务工作负荷可能导致性能下降。 间接检查点确保损坏页的数量低于特定阙值，以便在目标恢复时间内完成数据库恢复。 与利用脏页数量的间接检查点相反，“恢复间隔”配置选项使用事务数量来确定恢复时间。 如果在接收大量 DML 操作的数据库上启用了间接检查点，则后台编写器可开始主动将脏缓冲区刷新到磁盘上，确保执行恢复所需的时间位于数据库上设置的目标恢复时间范围内。 这可能造成某些系统上出现额外的 I/O 活动，如果磁盘子系统在 I/O 阙值之上或附近运行，则这会导致性能瓶颈。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **更改目标恢复时间**  
   
 1.  在 **“对象资源管理器”** 中，连接到某个 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，再展开该实例。  
@@ -51,7 +51,7 @@ ms.locfileid: "74056247"
   
 4.  在“恢复”面板的“目标恢复时间(秒)”字段中，指定要作为此数据库恢复时间上限的秒数   。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **更改目标恢复时间**  
   
 1.  连接到数据库所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  

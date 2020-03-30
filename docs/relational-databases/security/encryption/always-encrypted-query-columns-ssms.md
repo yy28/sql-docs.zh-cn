@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287131"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>通过 SQL Server Management Studio 查询使用 Always Encrypted 的列
@@ -77,7 +77,7 @@ ms.locfileid: "79287131"
 
 有关详细信息，请参阅 [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
-## <a name="en-dis"></a> 为数据库连接启用和禁用 Always Encrypted   
+## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a><a name="en-dis"></a> 为数据库连接启用和禁用 Always Encrypted   
 在 SSMS 中连接到数据库时，可以为数据库连接启用或禁用 Always Encrypted。 默认情况下，Always Encrypted 处于禁用状态。 
 
 为数据库连接启用 Always Encrypted 将指示用于 SQL Server 的 .NET Framework 数据提供程序（用于 SQL Server Management Studio）以透明方式尝试以下操作：   
@@ -106,7 +106,7 @@ ms.locfileid: "79287131"
 > 2.    选择“连接” > “更改连接…”   。这会为“查询编辑器”窗口的当前连接打开“连接到服务器”  对话框。 
 > 2.    按照以上步骤启用或禁用 Always Encrypted，然后单击“连接”  。  
    
-## <a name="param"></a>Always Encrypted 参数化   
+## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Always Encrypted 参数化   
  
 Always Encrypted 参数化是 SQL Server Management Studio 中的一种功能，可自动将 Transact-SQL 变量转换为查询参数（ [SqlParameter 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)的实例）。 （要求至少为 SSMS 版本 17.0。）这允许用于 SQL Server 的基础 .NET Framework 数据提供程序对针对加密列的数据进行检测，并在将数据发送到数据库之前对其进行加密。 
   

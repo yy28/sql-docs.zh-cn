@@ -36,10 +36,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286941"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
@@ -338,7 +338,7 @@ SELECT CAST (@x AS NVARCHAR(3));
 
 将数据库升级到兼容级别 110 或更高将不更改已存储到磁盘的用户数据。 您必须相应手动更正此数据。 例如，如果使用了 SELECT INTO 来从包含上述计算列表达式的源创建表，将存储数据（使用样式 0）而非存储计算列定义本身。 必须手动更新此数据，以匹配样式 121。
   
-## <a name="BKMK_examples"></a> 示例  
+## <a name="examples"></a><a name="BKMK_examples"></a> 示例  
   
 ### <a name="a-using-both-cast-and-convert"></a>A. 同时使用 CAST 和 CONVERT  
 每个示例检索标价的第一位是 `3` 的产品的名称，并将其 `ListPrice` 值转换为 `int`。
@@ -714,7 +714,7 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
 |130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
 |131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
 
-### <a name="precedence-example"></a> K. 允许的转换中数据类型优先级的影响  
+### <a name="k-effects-of-data-type-precedence-in-allowed-conversions"></a><a name="precedence-example"></a> K. 允许的转换中数据类型优先级的影响  
 以下示例定义一个类型为 VARCHAR 的变量，将整数值赋给该变量，然后选择该变量与字符串的串联。
 
 ```sql

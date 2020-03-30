@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287381"
 ---
 # <a name="run-integration-services-ssis-packages"></a>运行 Integration Services (SSIS) 包
@@ -111,7 +111,7 @@ ms.locfileid: "79287381"
   
      使用存储过程来运行包。 单击“脚本”  生成创建执行实例并启动执行实例的 Transact-SQL 语句。 该语句包含对 catalog.create_execution、catalog.set_execution_parameter_value 和 catalog.start_execution 存储过程的调用。 有关这些存储过程的详细信息，请参阅 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。  
 
-## <a name="execute_package_dialog"></a> Execute Package Dialog Box
+## <a name="execute-package-dialog-box"></a><a name="execute_package_dialog"></a> Execute Package Dialog Box
   使用 **“执行包”** 对话框可以运行在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上存储的包。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包可以包含在环境变量中存储的值的参数。 在执行此类包之前，您必须指定将使用哪一环境来提供环境变量值。 一个项目可以包含多个环境，但只能使用一个环境在执行时绑定环境变量值。 如果在包中未使用任何环境变量，则不要求环境。  
@@ -130,7 +130,7 @@ ms.locfileid: "79287381"
   
 -   [编写“执行包”对话框中选项的脚本](#script)  
   
-###  <a name="open_dialog"></a> 打开“执行包”对话框  
+###  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a> 打开“执行包”对话框  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
@@ -144,16 +144,16 @@ ms.locfileid: "79287381"
   
 5.  右键单击该包，然后单击“执行”  。  
   
-###  <a name="general"></a> 设置“常规”页上的选项  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 设置“常规”页上的选项  
  选择 **“环境”** 以便指定适用于运行的包的环境。  
   
-###  <a name="parameters"></a> 设置“参数”选项卡上的选项  
+###  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a> 设置“参数”选项卡上的选项  
  使用 **“参数”** 选项卡可以修改在包运行时使用的参数值。  
   
-###  <a name="connection"></a> 设置“连接管理器”选项卡上的选项  
+###  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  使用“连接管理器”选项卡可以设置包连接管理器的属性。  
   
-###  <a name="advanced"></a> 设置“高级”选项卡上的选项  
+###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> 设置“高级”选项卡上的选项  
  使用“高级”选项卡可以管理属性和其他包设置。  
   
  “添加”  、“编辑”  、“删除”   
@@ -168,7 +168,7 @@ ms.locfileid: "79287381"
  **32 位运行时**  
  指定包将在 32 位系统上执行。  
   
-###  <a name="script"></a> 编写“执行包”对话框中选项的脚本  
+###  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a> 编写“执行包”对话框中选项的脚本  
  在您处于 **“执行包”** 对话框中时，还可以使用工具栏上的 **“脚本”** 按钮为您编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码。 生成的脚本使用与你在“执行包”  对话框中选择的相同选项调用存储过程 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。 该脚本出现在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的新脚本窗口中。  
 
 ## <a name="see-also"></a>另请参阅  

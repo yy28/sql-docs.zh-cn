@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831917"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务运行简单的 Python 脚本
@@ -22,7 +22,7 @@ ms.locfileid: "76831917"
 
 在本快速入门中，将使用 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)运行一组简单的 Python 脚本。 你将了解如何在 SQL Server 实例中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 本快速入门需要使用安装了 Python 语言的 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)访问 SQL Server 实例。
 

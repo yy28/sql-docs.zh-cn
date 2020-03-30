@@ -15,17 +15,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084021"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 本主题介绍如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 tempdb 事务日志增长率以及控制事务日志文件的增长  。  
 
-##  <a name="MonitorSpaceUse"></a>监视日志空间使用情况  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>监视日志空间使用情况  
 使用 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) 监视日志空间使用情况。 此 DMV 返回有关当前使用的日志空间量信息，并指示何时需要截断事务日志。 
 
 若要了解有关日志文件的当前大小、最大大小以及文件的自动增长选项的信息，还可以在 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 中针对此日志文件使用 **size**、**max_size** 和 **growth** 等列。  
@@ -33,7 +33,7 @@ ms.locfileid: "68084021"
 > [!IMPORTANT]
 > 避免日志磁盘重载。 请确保日志存储可以承受 [IOPS](https://wikipedia.org/wiki/IOPS) 和事务加载的低延迟需求。 
   
-##  <a name="ShrinkSize"></a> 收缩日志文件大小  
+##  <a name="shrink-log-file-size"></a><a name="ShrinkSize"></a> 收缩日志文件大小  
  若要减少物理日志文件的物理大小，则必须收缩日志文件。 知道事务日志文件包含未使用空间时，此方法很有用。 仅当数据库处于联机状态，而且至少一个[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 可用时，才能收缩日志文件。 在某些情况下，直到下一个日志截断后，才能收缩日志。  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.locfileid: "68084021"
   
 -   [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)（请参阅日志文件或文件的 **size**、**max_size** 和 **growth** 列。）  
   
-##  <a name="AddOrEnlarge"></a> 添加或扩大日志文件  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a> 添加或扩大日志文件  
 可以通过扩大现有日志文件（如果磁盘空间允许）或将日志文件添加至数据库（通常是其他磁盘上的数据库）来获得空间。 一个事务日志文件就足够了，除非日志空间不足且保留日志文件的卷上的磁盘空间也不足。   
   
 -   要将日志文件添加到数据库，请使用 `ALTER DATABASE` 语句的 `ADD LOG FILE` 子句。 添加日志文件可以使日志获得空间。  
@@ -68,12 +68,12 @@ ms.locfileid: "68084021"
 
 有关详细信息，请参阅本主题中的[建议](#Recommendations)。
     
-##  <a name="tempdbOptimize"></a> 优化 tempdb 事务日志的大小  
+##  <a name="optimize-tempdb-transaction-log-size"></a><a name="tempdbOptimize"></a> 优化 tempdb 事务日志的大小  
  重新启动服务器实例可以将 **tempdb** 数据库的事务日志调整到自动增长之前的原始大小。 这会降低 **tempdb** 事务日志的性能。 
  
  您可以通过在启动或重新启动服务器实例之后增加 **tempdb** 事务日志的大小来避免此开销。 有关详细信息，请参阅 [tempdb Database](../../relational-databases/databases/tempdb-database.md)。  
   
-##  <a name="ControlGrowth"></a> 控制事务日志文件的增长  
+##  <a name="control-transaction-log-file-growth"></a><a name="ControlGrowth"></a> 控制事务日志文件的增长  
  使用 [ALTER DATABASE (Transact-SQL) 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)语句管理事务日志文件的增长。 注意以下事项：  
   
 -   要更改当前文件大小（以 KB、MB、GB 和 TB 为单位），请使用 `SIZE` 选项。  
@@ -82,7 +82,7 @@ ms.locfileid: "68084021"
 
 有关详细信息，请参阅本主题中的[建议](#Recommendations)。
 
-## <a name="Recommendations"></a> 建议
+## <a name="recommendations"></a><a name="Recommendations"></a> 建议
 下面是使用事务日志文件时的一些一般建议：
 
 -   `FILEGROWTH` 选项设置的事务日志的自动增长 (autogrow) 增量必须足够大，以领先于工作负载事务的需求。 因此，为了避免经常向日志文件中扩充内容，应该采用足够大的文件增量。 要正确设置事务日志的大小，建议监视以下时间内所占用的日志数量：

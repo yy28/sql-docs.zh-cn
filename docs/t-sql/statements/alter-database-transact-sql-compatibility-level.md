@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288661"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
@@ -121,7 +121,7 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="compatibility-levels-and-stored-procedures"></a>兼容性级别和存储过程
 执行某一存储过程时，该存储过程将使用定义它的数据库的当前兼容性级别。 在更改某一数据库的兼容性设置时，该数据库的所有存储过程都将随之自动重新编写。
 
-## <a name="backwardCompat"></a> 使用兼容性级别实现后向兼容性
+## <a name="using-compatibility-level-for-backward-compatibility"></a><a name="backwardCompat"></a> 使用兼容性级别实现后向兼容性
 [数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)设置提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的后向兼容性，在与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和查询优化行为相关的方面，后向兼容性仅适用于指定的数据库，而不是整个服务器。  
 
 从兼容性模式 130 开始，任何影响修补程序和功能的新查询计划都被特意地仅添加到新兼容性级别中。 这样做是为了最大限度地减少在升级过程中由于以下原因而引发的风险：新查询优化行为可能引入的查询计划更改导致性能降低。      

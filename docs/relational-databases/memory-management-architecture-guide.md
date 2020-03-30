@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287941"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
@@ -124,7 +124,7 @@ ms.locfileid: "79287941"
 |线程堆栈内存|是|是|
 |从 Windows 直接分配|是|是|
 
-## <a name="dynamic-memory-management"></a> 动态内存管理
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> 动态内存管理
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的默认内存管理行为是获取尽可能多的内存而不会造成系统内存短缺。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]通过使用 Microsoft Windows 中的内存通知 API 来实现这一点。
 
 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 动态使用内存时，它会定期查询系统以确定可用内存量。 保持此可用内存可避免操作系统 (OS) 进行分页。 如果可用内存较少， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将会释放内存以供操作系统使用。 如果有更多的内存可用， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能会分配更多的内存。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 仅在其工作负荷需要更多内存时才增加内存；空闲的服务器不会增加其虚拟地址空间的大小。  
@@ -203,7 +203,7 @@ min memory per query 配置选项设定将为执行查询分配的最小内存�
 >    
 > 有关使用此配置的建议，请参阅[配置 min memory per query 服务器配置选项](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations)。
 
-### <a name="memory-grant-considerations"></a>内存授予注意事项
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>内存授予注意事项
 对于“行模式执行”，任何情况下都不得超过初始内存授予  。 如果执行哈希或排序操作需要的内存多于初始授予，这些内存将溢出到磁盘   。 溢出的哈希操作由 TempDB 中的 Workfile 支持，而溢出的排序操作由[工作表](../relational-databases/query-processing-architecture-guide.md#worktables)支持。   
 
 排序操作期间发生的溢出称为 [Sort Warning](../relational-databases/event-classes/sort-warnings-event-class.md)。 Sort Warning 指示排序操作的内存不足。 这不包括涉及创建索引的排序操作，只包括查询内的排序操作（例如 `SELECT` 语句中使用的 `ORDER BY` 子句）。

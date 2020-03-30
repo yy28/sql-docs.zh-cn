@@ -12,10 +12,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75952512"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 配置复制
@@ -36,7 +36,7 @@ ms.locfileid: "75952512"
 
 通过[复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)配置所有复制配置。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 若要完成本教程，需要：
 
 - 两个 SQL Server 实例和 Linux 上最新版本的 SQL Server

@@ -10,10 +10,10 @@ author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
 ms.openlocfilehash: dc70690bfe3d3d95171c885707b5a195c31b2fc1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75233918"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>结合使用 Always Encrypted 和 Microsoft .NET Data Provider for SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "75233918"
 
 始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 为此，已启用 Always Encrypted 的驱动程序（如 Microsoft .NET Data Provider for SQL Server  ）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅[使用 Always Encrypted 开发应用程序](../../../relational-databases/security/encryption/always-encrypted-client-development.md)和[使用具有安全 Enclave 的 Always Encrypted 开发应用程序](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置具有 Always Encrypted 的数据库，请按照 [Always Encrypted 入门](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。
 - 请确保已在开发计算机上安装相应 .NET 平台。 借助 [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md)，.NET Framework 和 .NET Core 都支持 Always Encrypted 功能。 需要确保将 [.NET Framework 4.6](https://docs.microsoft.com/dotnet/framework/) 或更高版本/[.NET Core 2.1](https://docs.microsoft.com/dotnet/core/) 或更高版本配置为开发环境中的目标 .NET Framework 版本。 如果使用的是 Visual Studio，请参阅[框架目标概述](https://docs.microsoft.com/visualstudio/ide/visual-studio-multi-targeting-overview)。

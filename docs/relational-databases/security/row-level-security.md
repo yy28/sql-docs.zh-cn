@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288978"
 ---
 # <a name="row-level-security"></a>行级安全性
@@ -43,7 +43,7 @@ ms.locfileid: "78288978"
 > [!NOTE]
 > Azure SQL 数据仓库仅支持筛选谓词。 Azure SQL 数据仓库暂不支持阻止谓词。
 
-## <a name="Description"></a> 说明
+## <a name="description"></a><a name="Description"></a> 说明
 
 RLS 支持两种类型的安全谓词。  
   
@@ -89,7 +89,7 @@ RLS 支持两种类型的安全谓词。
   
 - 批量操作 API（包括 BULK INSERT）未发生变化。 这意味着，阻止谓词 AFTER INSERT 将应用于批量插入操作，就像普通的插入操作一样。  
   
-## <a name="UseCases"></a> 用例
+## <a name="use-cases"></a><a name="UseCases"></a> 用例
 
  下面是有关如何使用 RLS 的设计示例：  
   
@@ -103,7 +103,7 @@ RLS 支持两种类型的安全谓词。
   
  用更正式的术语来说，RLS 引入了基于谓词的访问控制。 它以基于谓词的集中式灵活评估为重点。 谓词可以基于元数据，也可以基于管理员根据需要确定的其他任何条件。 谓词用作一个条件，以便基于用户属性来确定用户是否具有合适的数据访问权限。 基于标签的访问控制可以通过使用基于谓词的访问控制来实现。  
   
-## <a name="Permissions"></a> 权限
+## <a name="permissions"></a><a name="Permissions"></a> 权限
 
  创建、更改或删除安全策略需要 **ALTER ANY SECURITY POLICY** 权限。 创建或删除安全策略需要针对架构的 **ALTER** 权限。  
   
@@ -119,7 +119,7 @@ RLS 支持两种类型的安全谓词。
   
  如果使用 `SCHEMABINDING = OFF`创建安全策略，则若要查询目标表，用户必须具有针对谓词函数及在其中使用的任何其他表、视图或函数的  **SELECT** 或 **EXECUTE** 权限。 如果使用 `SCHEMABINDING = ON` 创建安全策略（默认值），则当用户查询目标表时，会绕过这些权限检查。  
   
-## <a name="Best"></a> 最佳实践  
+## <a name="best-practices"></a><a name="Best"></a> 最佳实践  
   
 - 强烈建议为 RLS 对象、谓词函数和安全策略单独创建架构。 这有助于将针对这些特殊对象所需的权限与目标表分开。 在多租户数据库中可能需要对不同策略和谓词函数进行额外的分隔，但具体标准各有不同。
   
@@ -141,7 +141,7 @@ RLS 支持两种类型的安全谓词。
   
 - 谓词函数不应将串联字符串与 **NULL** 进行比较，因为这种行为受 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 选项的影响。  
 
-## <a name="SecNote"></a>安全说明：旁道攻击
+## <a name="security-note-side-channel-attacks"></a><a name="SecNote"></a>安全说明：旁道攻击
 
 ### <a name="malicious-security-policy-manager"></a>恶意安全策略管理员
 
@@ -151,7 +151,7 @@ RLS 支持两种类型的安全谓词。
 
 使用精心设计的查询可能会造成信息泄露。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 会让恶意用户知道 John Doe 的薪金是 100000 美元。 即使采用安全谓词来防止恶意用户直接查询其他人的薪金，用户仍然可以确定查询何时返回被零除异常。  
 
-## <a name="Limitations"></a> 跨功能兼容性
+## <a name="cross-feature-compatibility"></a><a name="Limitations"></a> 跨功能兼容性
 
  一般情况下，行级别安全性将按预期对各种功能正常运行。 但存在几种例外情况。 本部分介绍对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的某些其他功能使用行级别安全性的说明和注意事项。  
   
@@ -177,9 +177,9 @@ RLS 支持两种类型的安全谓词。
   
 - **临时表：** 临时表与 RLS 兼容。 但是，当前表中的安全谓词不会自动复制到历史记录表。 若要将安全策略应用到当前表和历史记录表，必须单独在每个表中添加安全谓词。  
   
-## <a name="CodeExamples"></a> 示例  
+## <a name="examples"></a><a name="CodeExamples"></a> 示例  
   
-### <a name="Typical"></a> A. 用户在数据库中进行身份验证的方案
+### <a name="a-scenario-for-users-who-authenticate-to-the-database"></a><a name="Typical"></a> A. 用户在数据库中进行身份验证的方案
 
  此示例创建三个用户和一个表，并在表中填充六行。 然后，它为表创建内联表值函数和安全策略。 接下来，此示例展示如何为各种用户筛选选择语句。  
   
@@ -301,7 +301,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. 对 Azure SQL 数据仓库外部表使用行级别安全性的方案
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. 对 Azure SQL 数据仓库外部表使用行级别安全性的方案
 
 此简短示例创建三个用户，以及一个包含六行的外部表。 然后，它为外部表创建内联表值函数和安全策略。 该示例演示如何为各种用户筛选选择语句。
 
@@ -418,7 +418,7 @@ DROP LOGIN Sales2;
 DROP LOGIN Manager;
 ```
 
-### <a name="MidTier"></a> C. 用户通过中间层应用程序连接到数据库的方案
+### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. 用户通过中间层应用程序连接到数据库的方案
 
 > [!NOTE]
 > 在此示例中，Azure SQL 数据仓库当前不支持阻止谓词功能，因此 Azure SQL 数据仓库不会阻止插入错误用户 ID 的行。

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.openlocfilehash: 9b953861799e380e4b4221a2cd7fe80badf83ffe
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77507530"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门：在 Red Hat 上安装 SQL Server 并创建数据库
@@ -37,7 +37,7 @@ ms.locfileid: "77507530"
 > [!TIP]
 > 本教程需要用户输入和 Internet 连接。 如果对[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
@@ -62,7 +62,7 @@ ms.locfileid: "77507530"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>安装 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安装 SQL Server
 
 若要在 RHEL 上配置 SQL Server，请在终端中运行以下命令以安装 **mssql-server** 包：
 
@@ -116,7 +116,7 @@ ms.locfileid: "77507530"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>安装 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安装 SQL Server
 
 > [!NOTE]
 > 以下用于 SQL Server 2019 的命令指向 RHEL 8 存储库。 RHEL 8 未预安装 SQL Server 所需的 python2。 有关详细信息，请参阅以下博客，了解如何安装 python2 并将其配置为默认解释器： https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
@@ -166,7 +166,7 @@ ms.locfileid: "77507530"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="tools"></a>安装 SQL Server 命令行工具
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>安装 SQL Server 命令行工具
 
 若要创建数据库，则需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤将安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 
@@ -201,7 +201,7 @@ ms.locfileid: "77507530"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="tools"></a>安装 SQL Server 命令行工具
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>安装 SQL Server 命令行工具
 
 若要创建数据库，则需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤将安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 

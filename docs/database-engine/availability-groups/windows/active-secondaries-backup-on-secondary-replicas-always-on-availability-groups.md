@@ -19,10 +19,10 @@ ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822411"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>卸载可用性组次要副本的支持备份
@@ -34,7 +34,7 @@ ms.locfileid: "74822411"
 >  在可用性组的主数据库或辅助数据库上不允许 RESTORE 语句。  
   
  
-##  <a name="SupportedBuTypes"></a> 辅助副本上支持的备份类型  
+##  <a name="backup-types-supported-on-secondary-replicas"></a><a name="SupportedBuTypes"></a> 辅助副本上支持的备份类型  
   
 -   在次要副本上执行 BACKUP DATABASE 时，仅支持数据库、文件或文件组的仅复制完整备份  。 仅复制备份不会影响日志链，也不会清除差异位图。  
   
@@ -50,14 +50,14 @@ ms.locfileid: "74822411"
 
 在分布式可用性组中，可以对与活动主要副本相同的可用性组中的次要副本执行备份，或对任何次要可用性组的主要副本执行备份。 无法对次要可用性组中的次要副本执行备份，因为次要副本仅与其可用性组中的主要副本通信。 仅直接与全局主要副本通信的副本才能执行备份操作。
 
-##  <a name="WhereBuJobsRun"></a> 配置运行备份作业的位置  
+##  <a name="configuring-where-backup-jobs-run"></a><a name="WhereBuJobsRun"></a> 配置运行备份作业的位置  
  在辅助副本上执行备份以减轻主生产服务器的备份工作负荷非常有好处。 但是，对辅助副本执行备份会显著增加用于确定应在何处运行备份作业的过程的复杂性。 要解决这个问题，请按如下所示配置备份作业运行的位置：  
   
 1.  配置可用性组以便指定要对其执行备份的可用性副本。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md) 中的 AUTOMATED_BACKUP_PREFERENCE 和 BACKUP_PRIORITY 参数   。  
   
 2.  为承载作为执行备份候选的可用性副本的每个服务器实例上的每个可用性数据库都创建编写了脚本的备份作业。 有关详细信息，请参阅“跟进：配置次要副本备份之后”部分，见[配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置辅助副本备份**  
   
 -   [配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  

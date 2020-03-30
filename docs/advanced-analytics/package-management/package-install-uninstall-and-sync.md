@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 71ff0b6232eb69af7e5e138d2681f8126a12d915
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485252"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server R 包同步
@@ -64,13 +64,13 @@ SQL Server 2017 CTP 2 或更高版本中提供此功能。
 
 + 执行包同步功能的人员必须是包含包的 SQL Server 实例和数据库上的安全主体。
 
-+ 函数的调用方必须是下列包管理角色之一的成员：rpkgs-shared 或 rpkgs-private。
++ 函数的调用方必须是下列包管理角色之一的成员：rpkgs-shared  或 rpkgs-private  。
 
-+ 若要同步标记为“共享”的包，运行函数的人员必须具有 rpkgs-shared-shared 角色的成员身份，并且要移动的包必须已安装到共享范围库。
++ 若要同步标记为“共享”  的包，运行函数的人员必须具有 rpkgs-shared-shared  角色的成员身份，并且要移动的包必须已安装到共享范围库。
 
-+ 若要同步标记为“私有”的包，包的所有者或管理员必须运行该函数，并且包必须是私有的。
++ 若要同步标记为“私有”  的包，包的所有者或管理员必须运行该函数，并且包必须是私有的。
 
-+ 若要代表其他用户同步包，所有者必须是 db_owner 数据库角色的成员。
++ 若要代表其他用户同步包，所有者必须是 db_owner  数据库角色的成员。
 
 ## <a name="how-package-synchronization-works"></a>包同步的工作原理
 
@@ -84,9 +84,9 @@ SQL Server 2017 CTP 2 或更高版本中提供此功能。
 
 3. 使用范围参数指定要同步的包。
 
-    如果使用“私有”范围，则只同步指定所有者所拥有的包。 如果指定“共享”范围，将同步数据库中的所有非私有包。 
+    如果使用“私有”  范围，则只同步指定所有者所拥有的包。 如果指定“共享”  范围，将同步数据库中的所有非私有包。 
     
-    如果在未指定“私有”或“共享”范围的情况下运行函数，将同步所有包。
+    如果在未指定“私有”  或“共享”  范围的情况下运行函数，将同步所有包。
 
 4. 如果此命令成功，则会将文件系统中的现有包添加到数据库，并具有指定的范围和所有者。
 
@@ -118,7 +118,7 @@ rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 
 ### <a name="example-3-restrict-synchronized-packages-by-owner"></a>示例 3。 根据所有者限制同步包
 
-下面的示例演示如何仅同步为特定用户安装的包。 在此示例中，用户由 SQL 登录名 user1 标识。
+下面的示例演示如何仅同步为特定用户安装的包。 在此示例中，用户由 SQL 登录名 user1  标识。
 
 ```R
 rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", verbose=TRUE))

@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
 ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957041"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程：将*五个最慢查询*示例小组件添加到数据库仪表板
@@ -29,7 +29,7 @@ ms.locfileid: "74957041"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 包含几个现成的见解小组件。 本教程介绍如何添加 *query-data-store-db-insight* 小组件，但所有小组件的添加步骤都基本相同。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 本教程需要使用 SQL Server 或 Azure SQL 数据库 TutorialDB  。 若要创建 TutorialDB  数据库，请完成以下其中一项快速入门：
 

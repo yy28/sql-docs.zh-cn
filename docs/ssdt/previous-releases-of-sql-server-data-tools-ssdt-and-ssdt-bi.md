@@ -12,12 +12,12 @@ manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 09/05/2018
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07504e19591b1f64aac77ebbc825bea58931b536
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7b22b71f3e5b9428e15a529917056565b874d55d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688567"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271413"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）
 
@@ -35,14 +35,7 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](downloa
 
 |SSDT 版本| Visual Studio 2017|
 |:---|:---|
-|15.9.2|[SSDT for VS2017 15.9.2](https://go.microsoft.com/fwlink/?linkid=2095463)|
-|15.9.1|[SSDT for VS2017 15.9.1](https://go.microsoft.com/fwlink/?linkid=2086373)|
-|15.9.0|[SSDT for VS2017 15.9.0](https://go.microsoft.com/fwlink/?linkid=2052454)|
-|15.8.2|[SSDT for VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
-|15.8.0|[SSDT for VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
-|15.7.1|[SSDT for VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
-|15.7.0|[SSDT for VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
-|15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
+|15.8.0|[SSDT for VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2124319)
 
 <br>
 

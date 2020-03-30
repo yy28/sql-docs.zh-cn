@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412765"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>从数据访问应用程序调用本机编译的存储过程
@@ -39,7 +39,7 @@ ms.locfileid: "74412765"
 - SqlClient 不支持检索有关本机编译存储过程返回的结果集的纯架构信息（元数据发现）(CommandType.SchemaOnly)。
   - 请改为使用 [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。
 
-### <a name="includessnoversionincludesssnoversion-mdmd-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
+### <a name="ssnoversion-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 版本不支持检索有关本机编译存储过程返回的结果集的纯架构信息（元数据发现）。
   - 请改为使用 [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。

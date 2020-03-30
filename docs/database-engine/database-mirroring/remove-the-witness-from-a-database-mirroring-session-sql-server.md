@@ -16,10 +16,10 @@ ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822519"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>从数据库镜像会话删除见证服务器 (SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "74822519"
   
 -   **跟进：** [删除见证服务器之后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-remove-the-witness"></a>删除见证服务器  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74822519"
     > [!NOTE]  
     >  如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”  字段。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-remove-the-witness"></a>删除见证服务器  
   
@@ -82,7 +82,7 @@ ms.locfileid: "74822519"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> 跟进：删除见证服务器之后  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a> 跟进：删除见证服务器之后  
  关闭见证服务器将根据事务安全设置更改 [运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)：  
   
 -   如果事务安全设置为 FULL（默认值），则会话将使用不带自动故障转移的高安全同步模式。  
@@ -92,7 +92,7 @@ ms.locfileid: "74822519"
 > [!TIP]  
 >  数据库的事务安全性设置记录在每个伙伴的 [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 目录视图中的 **mirroring_safety_level** 和 **mirroring_safety_level_desc** 列内。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   

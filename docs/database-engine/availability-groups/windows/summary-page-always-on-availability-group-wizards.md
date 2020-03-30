@@ -16,10 +16,10 @@ ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822558"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>“摘要”页（Always On 可用性组向导）
@@ -29,7 +29,7 @@ ms.locfileid: "74822558"
   
   本帮助主题介绍 **“摘要”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页上的网格可以查看您为新的可用性组进行的选择。 若要进行一项或多项更改，请单击 **“上一步”** 返回到相关的一个或多个页面。 更改完成后，单击 **“下一步”** 返回到 **“摘要”** 页。 如果您对所做选择满意，则单击 **“完成”** 。  
   
-##  <a name="PageOptions"></a> “摘要”页选项  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> “摘要”页选项  
  **脚本**  
  单击此选项可为摘要网格中所列的操作生成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本。 系统将提示您指定脚本的目标。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74822558"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [[顶部]](#Top)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

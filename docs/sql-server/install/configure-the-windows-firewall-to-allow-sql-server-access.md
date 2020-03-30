@@ -23,10 +23,10 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253466"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -45,7 +45,7 @@ ms.locfileid: "75253466"
 -   [配置 Windows 防火墙以允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
-##  <a name="BKMK_basic"></a> 基本防火墙信息  
+##  <a name="basic-firewall-information"></a><a name="BKMK_basic"></a> 基本防火墙信息  
  防火墙的工作原理是检查传入的数据包并将其与一组规则进行比较。 如果数据包符合规则所规定的标准，则防火墙会将该数据包传递给 TCP/IP 协议进行其他处理。 如果数据包不符合规则指定的标准，则防火墙将丢弃该数据包，此外，如果已启用日志记录，防火墙还将在防火墙日志文件中创建一个条目。  
   
  允许的通信的列表采用以下某种方式进行填充：  
@@ -60,13 +60,13 @@ ms.locfileid: "75253466"
  [Windows 防火墙设计指南](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
  [Introduction to Server and Domain Isolation（服务器和域隔离简介）](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   
-##  <a name="BKMK_default"></a> 默认防火墙设置  
+##  <a name="default-firewall-settings"></a><a name="BKMK_default"></a> 默认防火墙设置  
  规划防火墙配置的第一步是确定操作系统的防火墙的当前状态。 如果操作系统是从早期版本升级而来，则可能已保留以前的防火墙设置。 此外，防火墙设置可能已由其他管理员或域中的组策略更改。  
   
 > [!NOTE]  
 >  打开防火墙将影响访问此计算机的其他程序，例如文件和打印共享以及远程桌面连接。 在调整防火墙设置之前，管理员应对计算机上运行的所有应用程序加以考虑。  
   
-##  <a name="BKMK_programs"></a> 用于配置防火墙的程序  
+##  <a name="programs-to-configure-the-firewall"></a><a name="BKMK_programs"></a> 用于配置防火墙的程序  
 通过 **Microsoft 管理控制台** 或 **netsh** 配置 Windows 防火墙设置。  
 
 -  **Microsoft 管理控制台 (MMC)**  
@@ -95,10 +95,10 @@ ms.locfileid: "75253466"
     
 - **对于 Linux**：在 Linux 上，还需要打开与需要访问的服务关联的端口。 不同的 Linux 分发和不同的防火墙具有各自的过程。 如需了解两个示例，请参阅 [Red Hat 上的 SQL Server](../../linux/quickstart-install-connect-red-hat.md) 和 [SUSE 上的 SQL Server](../../linux/quickstart-install-connect-suse.md)。 
   
-## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>使用的端口 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="ports-used-by-ssnoversion"></a>使用的端口 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  下面几个表可有助于您确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的端口。  
   
-###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
+###  <a name="ports-used-by-the-database-engine"></a><a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  
 
 默认情况下，SQL Server 使用的典型端口和关联的数据库引擎服务是：TCP **1433**、**4022**、**135**、**1434**、UDP **1434**。 下表更为详细地介绍了这些端口。 命名实例使用[动态端口](#BKMK_dynamic_ports)。
@@ -121,7 +121,7 @@ ms.locfileid: "75253466"
   
  有关为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 Windows 防火墙的分步说明，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
-####  <a name="BKMK_dynamic_ports"></a> 动态端口  
+####  <a name="dynamic-ports"></a><a name="BKMK_dynamic_ports"></a> 动态端口  
  默认情况下，命名实例（包括 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]）使用动态端口。 也就是说，每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，它都将确定一个可用端口并使用此端口号。 如果命名实例是安装的唯一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能使用 TCP 端口 1433。 如果还安装了其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能会使用其他 TCP 端口。 由于所选端口可能会在每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时更改，因而很难配置防火墙以启用对正确端口号的访问。 因此，如果使用防火墙，则建议重新配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 以每次都使用同一端口号。 这称为固定端口或静态端口。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
  另一种配置命名实例以侦听固定端口的方法是在防火墙中为诸如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **之类的** 程序创建例外（针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]）。 这会非常方便，但当使用高级安全 Windows 防火墙 MMC 管理单元时，端口号将不会显示在“入站规则”  页的“本地端口”  列中。 这会使审核哪些端口处于打开状态变得更为困难。 另一个注意事项是，Service Pack 或累积更新可能会更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的路径，这将使防火墙规则作废。  
@@ -144,7 +144,7 @@ ms.locfileid: "75253466"
 
 有关终结点的详细信息，请参阅[将数据库引擎配置为侦听多个 TCP 端口](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)和[终结点目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)。 
   
-###  <a name="BKMK_ssas"></a> Analysis Services 使用的端口  
+###  <a name="ports-used-by-analysis-services"></a><a name="BKMK_ssas"></a> Analysis Services 使用的端口  
  
 默认情况下，SQL Server Analysis Services 使用的典型端口和关联的服务是：TCP **2382**、**2383**、**80**、**443**。 下表更为详细地介绍了这些端口。  
  
@@ -161,7 +161,7 @@ ms.locfileid: "75253466"
   
  有关为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置 Windows 防火墙的分步说明，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)。  
   
-###  <a name="BKMK_ssrs"></a> Reporting Services 使用的端口  
+###  <a name="ports-used-by-reporting-services"></a><a name="BKMK_ssrs"></a> Reporting Services 使用的端口  
 
 默认情况下，SQL Server Reporting Services 使用的典型端口和关联的服务是：TCP **80**、**443**。 下表更为详细地介绍了这些端口。 
 
@@ -175,7 +175,7 @@ ms.locfileid: "75253466"
   
 当 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例时，还必须为这些服务打开相应的端口。 有关为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置 Windows 防火墙的分步说明，请参阅 [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
-###  <a name="BKMK_ssis"></a> Integration Services 使用的端口  
+###  <a name="ports-used-by-integration-services"></a><a name="BKMK_ssis"></a> Integration Services 使用的端口  
  下表列出了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务经常使用的端口。  
   
 |Feature|端口|注释|  
@@ -184,7 +184,7 @@ ms.locfileid: "75253466"
   
 有关为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置 Windows 防火墙的分步说明，请参阅 [Integration Services 服务 (SSIS 服务)](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014)。  
   
-###  <a name="BKMK_additional_ports"></a> 其他端口和服务  
+###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> 其他端口和服务  
 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能依赖的一些端口和服务。  
   
 |场景|端口|注释|  
@@ -197,7 +197,7 @@ ms.locfileid: "75253466"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 群集|群集需要与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不直接相关的其他端口。|有关详细信息，请参阅 [Enable a network for cluster use](https://go.microsoft.com/fwlink/?LinkId=118372)（启用网络以供群集使用）。|  
 |HTTP 服务器 API (HTTP.SYS) 中保留的 URL 命名空间|很可能为 TCP 端口 80，但可以配置为其他端口。 有关常规信息，请参阅 [配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373)。|有关使用 HttpCfg.exe 预留 HTTP.SYS 端点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定信息，请参阅[关于 URL 预留和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
   
-##  <a name="BKMK_port_135"></a> 端口 135 的特殊注意事项  
+##  <a name="special-considerations-for-port-135"></a><a name="BKMK_port_135"></a> 端口 135 的特殊注意事项  
  将 RPC 与 TCP/IP 或 UDP/IP 一起用作传输方式时，通常会根据需要为系统服务动态分配入站端口。将使用端口号大于 1024 的 TCP/IP 和 UDP/IP 端口。 这些端口通常被不正式地称为“随机 RPC 端口”。 在这些情况下，RPC 客户端依赖 RPC 端点映射程序来通知它们为服务器分配了哪些动态端口。 对于一些基于 RPC 的服务，可以配置特定端口，而非让 RPC 动态分配一个端口。 此外，还可以将 RPC 动态分配的端口范围限制为一个较小的范围，不管何种服务均可如此。 由于许多服务都使用端口 135，它经常受到恶意用户的攻击。 当打开端口 135 时，请考虑限制防火墙规则的作用范围。  
   
  有关端口 135 的详细信息，请参阅以下参考内容：  
@@ -207,12 +207,12 @@ ms.locfileid: "75253466"
 -   [Remote procedure call (RPC)（远程过程调用 (RPC)）](https://go.microsoft.com/fwlink/?LinkId=118375)    
 -   [如何配置与防火墙一起使用的 RPC 动态端口分配](https://support.microsoft.com/kb/154596/)  
   
-##  <a name="BKMK_other_rules"></a> 与其他防火墙规则的交互  
+##  <a name="interaction-with-other-firewall-rules"></a><a name="BKMK_other_rules"></a> 与其他防火墙规则的交互  
  Windows 防火墙使用规则和规则组建立其配置。 每个规则或规则组通常与特定程序或服务相关，并且该程序和服务可以在您不知道的情况下修改或删除相应规则。 例如，规则组“万维网服务 (HTTP)”  和“万维网服务 (HTTPS)”  与 IIS 相关。 启用这些规则将打开端口 80 和 443，并且如果启用这些规则，则依赖端口 80 和 443 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能将能正常工作。 不过，配置 IIS 的管理员可能会修改或禁用这些规则。 因此，如果您为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用端口 80 或端口 443，则应创建您自己的规则或规则组，这样可以独立于其他 IIS 规则之外维护您的所需端口配置。  
   
  高级安全 Windows 防火墙 MMC 管理单元允许符合任何适用允许规则的所有通信。 因此，如果有两个均应用于端口 80 的规则（具有不同的参数），则符合任一规则的通信都将得到允许。 因此，如果一个规则允许来自本地子网的通过端口 80 的通信而另一个规则允许来自任意地址的通信，则实际结果是不管通信来源是什么，所有通向端口 80 的通信都将得到允许。 若要有效地管理对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的访问，管理员应定期查看服务器上启用的所有防火墙规则。  
   
-##  <a name="BKMK_profiles"></a> 防火墙配置文件概述  
+##  <a name="overview-of-firewall-profiles"></a><a name="BKMK_profiles"></a> 防火墙配置文件概述  
  操作系统使用防火墙配置文件按照连接性、连接数和类别来识别并记住与它们连接的每个网络。  
   
  在高级安全 Windows 防火墙中有三种网络位置类型：  
@@ -229,7 +229,7 @@ ms.locfileid: "75253466"
   
  使用高级安全 Windows 防火墙 MMC 管理单元查看和配置所有防火墙配置文件。 “控制面板”中的 **“Windows 防火墙”** 项仅可配置当前配置文件。  
   
-##  <a name="BKMK_additional_settings"></a> 使用“控制面板”中的“Windows 防火墙”项进行其他防火墙设置  
+##  <a name="additional-firewall-settings-using-the-windows-firewall-item-in-control-panel"></a><a name="BKMK_additional_settings"></a> 使用“控制面板”中的“Windows 防火墙”项进行其他防火墙设置  
  添加到防火墙的例外可以限制端口仅对来自特定计算机或本地子网的传入连接打开。 这种对端口打开范围的限制可以大大减少计算机对恶意用户的暴露程度，因此建议采用此类限制。  
   
 > [!NOTE]  
@@ -249,7 +249,7 @@ ms.locfileid: "75253466"
   
     -   **自定义列表**：只有具有列表中的 IP 地址的计算机可以连接。 这是比“仅我的网络(子网)”  更安全的设置，不过，使用 DHCP 的客户端计算机有时候会更改它们的 IP 地址。 这样的话，目标计算机将无法连接。 另一台您未打算授权的计算机可能接受这一列出的 IP 地址，从而能够连接。 如果希望列出其他配置为使用固定 IP 地址的服务器，则可能最好选择“自定义列表”选项；不过，入侵者可能会假冒 IP 地址  。 限制防火墙规则的作用大小取决于网络基础结构的优劣。  
   
-##  <a name="BKMK_WF_msc"></a> 使用高级安全 Windows 防火墙管理单元  
+##  <a name="using-the-windows-firewall-with-advanced-security-snap-in"></a><a name="BKMK_WF_msc"></a> 使用高级安全 Windows 防火墙管理单元  
  可以通过使用高级安全 Windows 防火墙 MMC 管理单元来配置其他高级防火墙设置。 此管理单元包括规则向导，并提供“控制面板”中的“Windows 防火墙”  项中未提供的附加设置。 这些设置包括：  
   
 -   加密设置  
@@ -267,7 +267,7 @@ ms.locfileid: "75253466"
 2.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，然后选择“新建规则”    。   
 3.  使用所需设置完成 **“新建入站规则向导”** 。  
   
-##  <a name="BKMK_troubleshooting"></a> 解决防火墙设置问题  
+##  <a name="troubleshooting-firewall-settings"></a><a name="BKMK_troubleshooting"></a> 解决防火墙设置问题  
  以下工具和方法对于解决防火墙问题会非常有用：  
   
 -   有效端口状态是与端口相关的所有规则的总体作用结果。 试图禁止通过某一端口访问时，查看引用该端口号的所有规则将会非常有用。 为此，请使用高级安全 Windows 防火墙 MMC 管理单元，并按端口号对入站和出站规则进行排序。  

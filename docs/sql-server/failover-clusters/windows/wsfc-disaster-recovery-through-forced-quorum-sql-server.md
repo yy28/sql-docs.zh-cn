@@ -15,27 +15,27 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821979"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   仲裁故障通常由涉及 WSFC 群集中的多个节点的系统性灾难、持久性通信故障或配置错误引起的。  从仲裁故障恢复需要手动干预。  
   
--   **开始之前：**[先决条件](#Prerequisites)、[安全性](#Security)  
+-   **开始之前：** [先决条件](#Prerequisites)、[安全性](#Security)  
   
--   通过强制仲裁过程进行 WSFC 灾难恢复 [通过强制仲裁过程进行 WSFC 灾难恢复](#Main)  
+-   通过强制仲裁过程进行 WSFC 灾难恢复  [通过强制仲裁过程进行 WSFC 灾难恢复](#Main)  
   
 -   [相关任务](#RelatedTasks)  
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  强制仲裁过程假定在仲裁失败前存在运行状况正常的仲裁。  
   
 > [!WARNING]  
@@ -43,10 +43,10 @@ ms.locfileid: "74821979"
 >   
 >  有关详细信息，请参阅：[Windows Server 故障转移群集 (WSFC) 与 SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx) 和 [WSFC 仲裁模式和投票配置 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
-##  <a name="Main"></a> 通过强制仲裁过程进行 WSFC 灾难恢复  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> 通过强制仲裁过程进行 WSFC 灾难恢复  
  请注意，仲裁故障将会使 WSFC 群集中的所有群集服务、SQL Server 实例和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]设为脱机，这是因为该群集的配置无法确保节点级容错。  仲裁故障意味着 WSFC 群集中的运行状况投票节点不再满足仲裁模型要求。 一些节点可能已完全失败，而另一些节点可能只是关闭了 WSFC 服务并且除失去与仲裁通信的能力之外其他方面运行状况良好。  
   
  若要使 WSFC 群集重新联机，您必须消除现有配置下仲裁故障的根源，根据需要恢复受影响的数据库，并且您可能需要在 WSFC 群集中重新配置其余的节点以反映现存的群集拓扑。  
@@ -104,7 +104,7 @@ ms.locfileid: "74821979"
   
 8.  **进行 RPO/RTO 分析。** 您应分析 SQL Server 系统日志、数据库时间戳和 Windows 事件日志，以确定故障的根源，并记录实际的恢复点和恢复时间经验。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [在无仲裁情况下强制启动 WSFC 群集](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74821979"
   
 -   [使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [查看故障转移群集的事件和日志](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

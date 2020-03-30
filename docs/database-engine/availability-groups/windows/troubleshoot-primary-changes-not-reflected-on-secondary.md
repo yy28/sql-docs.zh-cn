@@ -11,10 +11,10 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243012"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>确定对主要副本的更改在 Always On 可用性组的次要副本上未得到反映的原因
@@ -50,7 +50,7 @@ ms.locfileid: "75243012"
 以下各节介绍对于只读查询，主要副本上的更改未在次要副本上得到反映的常见原因。  
 
 
-##  <a name="BKMK_OLDTRANS"></a>长时间运行的活动事务  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a>长时间运行的活动事务  
  主要副本上长时间运行的事务可阻止在次要副本上读取更新。  
   
 ### <a name="explanation"></a>说明  
@@ -59,7 +59,7 @@ ms.locfileid: "75243012"
 ### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
  在主要副本上，使用 [DBCC OPENTRAN (Transact-SQL)](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) 查看最早的活动事务，并查看其是否可以回退。 最早的活动事务回退并同步到次要副本后，次要副本上的读取工作负荷可查看可用性数据库中的更新，直到当时最早的活动事务开始。  
   
-##  <a name="BKMK_LATENCY"></a>高网络延迟或低网络吞吐量导致主要副本上日志堆积  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a>高网络延迟或低网络吞吐量导致主要副本上日志堆积  
  高网络延迟或低网络吞吐量可阻止日志以足够快的速度发送到次要副本。  
   
 ### <a name="explanation"></a>说明  
@@ -92,7 +92,7 @@ ms.locfileid: "75243012"
   
  要解决此问题，请尝试升级网络带宽，或者删除或减少不必要的网络流量。  
   
-##  <a name="BKMK_REDOBLOCK"></a>另一报告工作负荷阻止重做线程运行  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a>另一报告工作负荷阻止重做线程运行  
  一个长时间运行的只读查询阻止次要副本上的重做线程执行数据定义语言 (DDL) 更改。 必须先取消阻止重做线程，然后才可对读取工作负荷进行进一步更新。  
   
 ### <a name="explanation"></a>说明  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  可以让报告工作负荷在取消阻止重做线程的点完成，或者通过对阻止会话 ID 执行 [KILL (Transact-SQL)](~/t-sql/language-elements/kill-transact-sql.md) 命令，立即取消阻止重做线程。  
   
-##  <a name="BKMK_REDOBEHIND"></a>重做线程因资源争用而滞后  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a>重做线程因资源争用而滞后  
  次要副本上的大型报告工作负荷降低了次要副本的性能，且重做线程已滞后。  
   
 ### <a name="explanation"></a>说明  

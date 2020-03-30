@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3bafc3a524ec854dc9bf1669660827d5a6bc80f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74901895"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>教程：适用于 SQL 开发者的 Python 数据分析
@@ -51,7 +51,7 @@ ms.locfileid: "74901895"
 
 将模型保存到数据库后，可以使用存储过程从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调用该模型以用于预测。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 + [使用 Python 的 SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 

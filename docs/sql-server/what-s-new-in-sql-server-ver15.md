@@ -10,10 +10,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79218056"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
@@ -194,7 +194,7 @@ ms.locfileid: "79218056"
 ## <a name="platform-choice"></a>平台选择
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中已引入的创新的基础上构建，旨在使你能够在所选平台上运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，并获得比以往更多的功能和更高的安全性。
 
-### <a id="sql-server-on-linux"></a>Linux
+### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
 | 新增功能或更新 | 详细信息 |
 |:-----|:-----|
@@ -227,7 +227,7 @@ ms.locfileid: "79218056"
 |服务器/CAL 许可证产品密钥的设置警告|如果输入了企业服务器/CAL 许可证产品密钥，且计算机上有 20 多个物理内核，或者在启用超线程时有 40 个逻辑内核，则安装过程中会显示警告。 用户仍然可以确认限制并继续设置，或者输入支持操作系统最大处理器数量的许可证密钥。|
 | &nbsp; | &nbsp; |
 
-## <a id="ml"></a>SQL Server 机器学习服务
+## <a name="sql-server-machine-learning-services"></a><a id="ml"></a>SQL Server 机器学习服务
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|

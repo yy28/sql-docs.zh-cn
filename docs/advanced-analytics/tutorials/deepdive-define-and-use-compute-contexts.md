@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c90c935f85584f8886ae112d5cfc03759c0a129a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947206"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>定义并使用计算上下文（SQL Server 和 RevoScaleR 教程）
@@ -21,7 +21,7 @@ ms.locfileid: "74947206"
 
 这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 4 个教程。
 
-在上一教程中，已使用 RevoScaleR 函数检查数据对象。 本教程介绍了 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 函数，它可用于为远程 SQL Server 定义计算上下文。 借助远程计算上下文，可以将 R 执行任务从本地会话转移到服务器上的远程会话。 
+在上一教程中，已使用 RevoScaleR  函数检查数据对象。 本教程介绍了 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 函数，它可用于为远程 SQL Server 定义计算上下文。 借助远程计算上下文，可以将 R 执行任务从本地会话转移到服务器上的远程会话。 
 
 > [!div class="checklist"]
 > * 了解远程 SQL Server 计算上下文的各个元素
@@ -61,7 +61,7 @@ ms.locfileid: "74947206"
     sqlConsoleOutput <- FALSE
     ```
   
-    到 RxInSqlServer 的 wait 参数支持以下选项：
+    到 RxInSqlServer  的 wait  参数支持以下选项：
   
     -   **TRUE**。 作业被配置为具有阻塞性且不会返回，直到它完成或失败。  有关详细信息，请参阅 [Machine Learning Server 中的分布式计算和并行计算](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
   

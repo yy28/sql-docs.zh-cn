@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.openlocfilehash: a4103e22facbb717b6797b91d8b218cc6ce4b0b7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288111"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
@@ -24,7 +24,7 @@ ms.locfileid: "79288111"
 > [!TIP]
 > 有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.md)。
 
-## <a id="connection"></a> 解决连接失败问题
+## <a name="troubleshoot-connection-failures"></a><a id="connection"></a> 解决连接失败问题
 如果在连接到 Linux SQL Server 时存在问题，可以检查以下几点。
 
 - 如果无法使用 localhost 进行本地连接，请尝试改用 IP 地址 127.0.0.1  。 Localhost 可能未正确映射到此地址  。

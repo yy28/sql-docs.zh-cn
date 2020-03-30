@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080838"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
@@ -25,7 +25,7 @@ ms.locfileid: "77080838"
  * 在 [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server) 上提出问题或建议。  
 
   
-##  <a name="Embedded"></a> 报表定义大小问题  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> 报表定义大小问题  
  使用这一部分可以帮助解决与报表定义大小相关的问题。  
   
 ## <a name="how-do-i-reduce-the-report-definition-size"></a>如何减少报表定义大小？  
@@ -49,7 +49,7 @@ ms.locfileid: "77080838"
   
  来自地图库中某个报表的地图元素将始终嵌入在某个地图层中。  
   
-##  <a name="Spatial"></a> 空间数据问题  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> 空间数据问题  
  使用这一部分可以帮助解决与空间数据相关的问题。  
   
 ## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>在设计图面上，我看到了示例空间数据  
@@ -100,7 +100,7 @@ ms.locfileid: "77080838"
   
 -   如果空间数据来自 SQL Server 数据库，则更改此查询以使用空间函数将数据限制到较小的区域。  
   
-##  <a name="Viewport"></a> 视区居中和视图问题  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a> 视区居中和视图问题  
  使用这一部分可以帮助解决与视区选项相关的问题。  
   
 ## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>无法对嵌入的地图元素设置居中和视图。  
@@ -122,7 +122,7 @@ ms.locfileid: "77080838"
   
 -   在报表中嵌入空间数据，并删除您不想包含的位置。  
   
-##  <a name="Layers"></a> 层问题  
+##  <a name="layer-issues"></a><a name="Layers"></a> 层问题  
  使用这一部分可以帮助解决与层选项相关的问题。  
   
 ## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>我看不到地图中的一层或多层。  
@@ -144,7 +144,7 @@ ms.locfileid: "77080838"
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>我对地图层设置了一个筛选器，但它不起作用。  
  若要对某层筛选数据，必须在筛选器表达式中指定数据类型。 请验证您已指定正确的基础数据类型，以便筛选器公式正确地计算指定的条件。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
-##  <a name="Legend"></a> 图例、色阶和规则问题  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> 图例、色阶和规则问题  
  使用这一部分可以帮助解决与规则、图例和色阶选项相关的问题。  
   
 ## <a name="how-do-i-control-the-values-in-the-map-legend"></a>如何控制地图图例中的值？  
@@ -175,7 +175,7 @@ ms.locfileid: "77080838"
   
  若要显示色阶，请为层或嵌入地图元素指定颜色规则。 有关详细信息，请参阅 [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
-##  <a name="Tile"></a> 图块问题  
+##  <a name="tile-issues"></a><a name="Tile"></a> 图块问题  
  使用这一部分可以帮助解决与图块背景选项相关的问题。  
   
 ## <a name="i-cannot-see-the-bing-maps-tile-background"></a>我看不到 Bing 地图图块背景。  
@@ -196,7 +196,7 @@ ms.locfileid: "77080838"
   
  若要包含没有文本的图块层，请选择 **“空中”** 视图。  
   
-##  <a name="Tooltip"></a> 工具提示和标签问题  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> 工具提示和标签问题  
  使用这一部分可以帮助解决与标签或工具提示选项相关的问题。  
   
 ## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>当我将标签或工具提示设置为表达式时，获得一个有关数据集作用域的表达式错误。  

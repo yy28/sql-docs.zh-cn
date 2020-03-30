@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6c33925b1a518cb975ebd427c252d0538cfb6ed2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287639"
 ---
 # <a name="delete-a-publication"></a>删除发布
@@ -37,7 +37,7 @@ ms.locfileid: "76287639"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  从 **中的** “本地发布” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]文件夹中删除发布。  
   
 #### <a name="to-delete-a-publication"></a>删除发布  
@@ -48,7 +48,7 @@ ms.locfileid: "76287639"
   
 3.  右键单击要删除的发布，然后单击 **“删除”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式删除发布。 使用的存储过程取决于要删除的发布的类型。  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "76287639"
   
 3.  在订阅服务器上，对订阅数据库执行 [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) 以删除订阅数据库中的任何剩余复制元数据。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  该示例演示如何删除事务发布并禁用数据库的事务发布。 该示例假定以前删除了所有订阅。 有关详细信息，请参阅 [Delete a Pull Subscription](../../../relational-databases/replication/delete-a-pull-subscription.md) 或 [Delete a Push Subscription](../../../relational-databases/replication/delete-a-push-subscription.md)。  
   
  [!code-sql[HowTo#sp_droppublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_1.sql)]  
@@ -93,7 +93,7 @@ ms.locfileid: "76287639"
   
  [!code-sql[HowTo#sp_dropmergepublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_2.sql)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  可以使用复制管理对象 (RMO) 以编程方式删除发布。 用于删除发布的 RMO 类取决于要删除的发布的类型。  
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>删除快照发布或事务发布  
@@ -144,7 +144,7 @@ ms.locfileid: "76287639"
   
 7.  关闭连接。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  下面的示例删除事务发布。 如果此数据库不存在其他事务发布，则事务发布也被禁用。  
   
  [!code-cs[HowTo#rmo_DropTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpub)]  

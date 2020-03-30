@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909614"
 ---
 # <a name="shrink-a-database"></a>收缩数据库
@@ -50,9 +50,9 @@ ms.locfileid: "72909614"
   
 -   **跟进：** [收缩数据库](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   收缩后的数据库不能小于数据库的最小大小。 最小大小是在数据库最初创建时指定的大小，或是上一次使用文件大小更改操作（如 DBCC SHRINKFILE）设置的显式大小。 例如，如果数据库最初创建时的大小为 10 MB，后来增长到 100 MB，则该数据库最小只能收缩到 10 MB，即使已经删除数据库的所有数据也是如此。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72909614"
   
 -   遇到 xVelocity 内存优化的列存储索引时，DBCC SHRINKDATABASE 将会失败。 遇到 columnstore 索引之前完成的工作将会成功，因此数据库可能会较小。 若要完成 DBCC SHRINKDATABASE，请在执行 DBCC SHRINKDATABASE 前禁用所有列存储索引，然后重新生成列存储索引。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   若要查看数据库中当前的可用（未分配）空间量。 有关详细信息，请参阅 [显示数据库的数据和日志空间信息](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
@@ -74,12 +74,12 @@ ms.locfileid: "72909614"
   
     -   除非有特定要求，否则不要将 AUTO_SHRINK 数据库选项设置为 ON。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>收缩数据库  
   
@@ -106,7 +106,7 @@ ms.locfileid: "72909614"
   
 4.  单击“确定”。   
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>收缩数据库  
   
@@ -118,7 +118,7 @@ ms.locfileid: "72909614"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a> 跟进：在收缩数据库之后  
+##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a> 跟进：在收缩数据库之后  
  被移动用来收缩文件的数据可以分布到文件的任何可用位置。 这将导致索引碎片并使搜索索引范围的查询变慢。 若要消除碎片，请考虑在收缩后重新生成文件的索引。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70929690"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
@@ -230,7 +230,7 @@ WHERE col1 = 'dn';
 
 利用[自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
 
-## <a name="Additional_Reading"></a> 另请参阅   
+## <a name="see-also"></a><a name="Additional_Reading"></a> 另请参阅   
  [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)   
  [内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    

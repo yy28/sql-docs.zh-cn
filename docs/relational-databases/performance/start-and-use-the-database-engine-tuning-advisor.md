@@ -19,17 +19,17 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983271"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启动和使用数据库引擎优化顾问。 有关如何查看和使用数据库优化结果，请参阅 [查看和使用数据库引擎优化顾问的输出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
   
-##  <a name="Initialize"></a> 初始化数据库引擎优化顾问  
+##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> 初始化数据库引擎优化顾问  
  第一次使用时，作为 **sysadmin** 固定服务器角色成员的用户必须初始化数据库引擎优化顾问。 这是因为必须在 **msdb** 数据库中创建多个系统表才能支持优化操作。 如果用户是 **db_owner** 固定数据库角色的成员，初始化还可以使他们能够优化数据库（他们拥有的数据库）中的表的工作负荷。  
   
  具有系统管理员权限的用户必须执行下列操作之一：  
@@ -38,7 +38,7 @@ ms.locfileid: "73983271"
   
 -   使用 **dta** 实用工具优化第一个工作负荷。 有关详细信息，请参阅本主题后面的 [使用 dta 实用工具](#dta) 。  
   
-##  <a name="Start"></a> 启动数据库引擎优化顾问  
+##  <a name="start-the-database-engine-tuning-advisor"></a><a name="Start"></a> 启动数据库引擎优化顾问  
  可以用几种不同的方式启动数据库引擎优化顾问图形用户界面 (GUI)，以支持不同情况下的数据库优化。 启动数据库引擎优化顾问的其他方式包括：通过 **“开始”** 菜单启动，通过 **中的** “工具” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单启动，通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查询编辑器启动，以及通过 **中的** “工具” [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]菜单启动。 第一次启动数据库引擎优化顾问时，该应用程序将显示一个 **“连接到服务器”** 对话框，您可以在该对话框中指定要连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 > [!WARNING]  
@@ -62,7 +62,7 @@ ms.locfileid: "73983271"
   
 1.  在 SQL Server Profiler 的 **“工具”** 菜单中，单击 **“数据库引擎优化顾问”** 。  
   
-##  <a name="Create"></a> 创建工作负荷  
+##  <a name="create-a-workload"></a><a name="Create"></a> 创建工作负荷  
  工作负荷是对要优化的一个或多个数据库执行的一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 数据库引擎优化顾问将分析这些工作负荷以便建议要使用的索引或分区策略来改善服务器的查询性能。  
   
  您可以通过使用以下方法之一创建工作负荷。  
@@ -85,7 +85,7 @@ ms.locfileid: "73983271"
   
 -   工作负荷也可以嵌入到 XML 输入文件，在此文件中您也可以为每一事件指定一个权重。 有关指定嵌入的工作负荷的详细信息，请参阅本主题后面的 [创建 XML 输入文件](#XMLInput) 。  
   
-###  <a name="SSMS"></a> 创建 TRANSACT-SQL 脚本工作负荷  
+###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> 创建 TRANSACT-SQL 脚本工作负荷  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中启动查询编辑器。 有关详细信息，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73983271"
   
 3.  使用 **.sql** 扩展名保存文件。 数据库引擎优化顾问 GUI 和命令行 **dta** 实用工具可以将此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本用作工作负荷。  
   
-###  <a name="Profiler"></a> 创建跟踪文件和跟踪表工作负荷  
+###  <a name="to-create-trace-file-and-trace-table-workloads"></a><a name="Profiler"></a> 创建跟踪文件和跟踪表工作负荷  
   
 1.  使用下列方法之一启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ：  
   
@@ -140,7 +140,7 @@ ms.locfileid: "73983271"
   
  数据库引擎优化顾问将优化新的工作负荷，因为跟踪中未指定登录信息。 如果某个语句没有相应的 **LoginName** ，数据库引擎优化顾问将通过模拟启动优化会话的用户（ **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员）来优化该语句。  
   
-##  <a name="Tune"></a> 优化数据库  
+##  <a name="tune-a-database"></a><a name="Tune"></a> 优化数据库  
  若要优化数据库，可以使用数据库引擎优化顾问 GUI 或 **dta** 实用工具。  
   
 > [!NOTE]  
@@ -149,10 +149,10 @@ ms.locfileid: "73983271"
 ### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>使用数据库引擎优化顾问图形用户界面  
  在数据库引擎优化顾问 GUI 上，可以利用计划缓存、工作负荷文件或工作负荷表来优化数据库。 可使用数据库引擎优化顾问 GUI 轻松查看您当前的优化会话结果和以前的优化会话结果。 有关用户界面选项的信息，请参阅本主题后面的 [用户界面说明](#UI) 。 有关使用数据库优化结果的详细信息，请参阅 [查看和使用数据库引擎优化顾问的输出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
 
-####  <a name="PlanCache"></a> 使用 Query Store 优化数据库
+####  <a name="to-tune-a-database-by-using-the-query-store"></a><a name="PlanCache"></a> 使用 Query Store 优化数据库
 有关详细信息，请参阅[使用 Query Store 中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
   
-####  <a name="PlanCache"></a> 使用计划缓存优化数据库  
+####  <a name="to-tune-a-database-by-using-the-plan-cache"></a><a name="PlanCache"></a> 使用计划缓存优化数据库  
   
 1.  启动数据库引擎优化顾问，并登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 有关详细信息，请参阅本主题前面的 [启动数据库引擎优化顾问](#Start) 。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "73983271"
 > [!NOTE]  
 >  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。     
   
-###  <a name="dta"></a> 使用 dta 实用工具  
+###  <a name="use-the-dta-utility"></a><a name="dta"></a> 使用 dta 实用工具  
  [dta 实用工具](../../tools/dta/dta-utility.md) 提供了一个命令提示符可执行文件，可以用来优化数据库。 该实用工具使您能够在批处理文件和脚本中使用数据库引擎优化顾问的功能。 **dta** 实用工具使用计划缓存项、跟踪文件、跟踪表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本作为工作负荷。 它还将使用符合数据库引擎优化顾问 XML 架构的 XML 输入，有关该架构的详细信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=43100)。  
   
  在使用 **dta** 实用工具开始优化工作负荷之前，请考虑下列事项：  
@@ -305,7 +305,7 @@ ms.locfileid: "73983271"
   
 5.  实用工具完成工作负荷的优化之后，可以使用数据库引擎优化顾问 GUI 查看优化会话的结果。 还有一种方法，可以使用 **-ox** 选项指定将优化建议写入 XML 文件。 有关详细信息，请参阅 [dta Utility](../../tools/dta/dta-utility.md)。  
   
-##  <a name="XMLInput"></a> 创建 XML 输入文件  
+##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a> 创建 XML 输入文件  
  如果是有经验的 XML 开发人员，您可以创建一些 XML 格式的文件， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问可使用这些文件来优化工作负荷。 若要创建这些 XML 文件，请使用您最喜爱的 XML 工具编辑示例文件，或者通过 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 架构生成实例。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 架构位于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的以下位置：  
@@ -331,7 +331,7 @@ ms.locfileid: "73983271"
 > [!NOTE]  
 >  如果你要使用内联工作负荷（即在 XML 输入文件中直接指定的工作负荷），请使用[内联工作负荷的 XML 输入文件示例 (DTA)](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md) 示例。  
   
-##  <a name="UI"></a> 用户界面说明  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> 用户界面说明  
   
 ### <a name="tools-menuoptions-page"></a>“工具”菜单/“选项”页  
  使用此对话框可以为数据库引擎优化顾问指定常规配置参数。  

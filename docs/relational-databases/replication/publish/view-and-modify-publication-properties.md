@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 852363b7106d6f4a6b4fb359a14410dd8cb09a99
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287501"
 ---
 # <a name="view-and-modify-publication-properties"></a>查看和修改发布属性
@@ -46,17 +46,17 @@ ms.locfileid: "76287501"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   创建复制后，有些属性便不可以再进行修改，如果该发布存在订阅，则其他属性也无法再进行修改。 不能进行修改的属性将显示为只读。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   创建发布之后，某些属性更改要求新的快照。 如果发布具有多个订阅，某些更改还会要求重新初始化所有订阅。 有关详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)和[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可在“发布属性 - \<发布>”对话框（在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器中可用）中查看和修改发布属性。  有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
  “发布属性 - \<发布>”对话框中包括以下页：   
@@ -99,7 +99,7 @@ ms.locfileid: "76287501"
   
 3.  根据需要修改属性，然后单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式修改发布以及返回其属性。 您使用的存储过程取决于发布的类型。  
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>查看快照发布或事务发布的属性  
@@ -132,7 +132,7 @@ ms.locfileid: "76287501"
   
 1.  执行 [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)，为相应的快照参数指定一个或多个新的快照属性。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此事务复制示例将返回该发布的属性。  
   
  [!code-sql[HowTo#sp_helppublication](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-publicat_1.sql)]  
@@ -149,7 +149,7 @@ ms.locfileid: "76287501"
   
  [!code-sql[HowTo#sp_changemergepublication](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-publicat_4.sql)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  可以使用复制管理对象 (RMO) 以编程方式修改发布以及访问其属性。 查看或修改发布属性所使用的 RMO 类取决于发布的类型。  
   
 #### <a name="to-view-or-modify-properties-of-a-snapshot-or-transactional-publication"></a>查看或修改快照发布或事务发布的属性  
@@ -176,7 +176,7 @@ ms.locfileid: "76287501"
   
 5.  （可选）如果已将 **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法以在服务器上提交更改。 如果将 **false** 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> （默认值），则会将更改立即发送到服务器。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  该示例设置事务发布的发布属性。 这些更改将被缓存，直至将其显式发送到服务器。  
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: fd19ef065c98022d0f8fecd8e4fd044007759005
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288064"
 ---
 # <a name="monitor-replication-agents"></a>监视复制代理
@@ -39,7 +39,7 @@ ms.locfileid: "76288064"
   
     -   队列读取器代理  
   
-     通过以下选项卡访问与这些代理相关联的信息和任务：“代理”（可用于每个发布服务器和发布）和“警告”（可用于每个发布）   。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     通过下列选项卡访问与这些代理关联的信息和任务： **“代理”** （每个发布服务器和发布都提供）和 **“警告”** （每个发布都提供）。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   以下代理与复制监视器中的订阅相关联：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "76288064"
   
     -   合并代理  
   
-     通过以下选项卡访问与这些代理相关联的信息和任务：“订阅监视列表”（所有发布服务器都提供）或“所有订阅”选项卡（所有发布都提供）   。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     通过下列选项卡访问与这些代理相关联的信息和任务： **“订阅监视列表”** （每个发布服务器都提供）或 **“所有订阅”** 选项卡（所有发布都提供）。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>使用 SQL Server Management Studio 监视复制代理  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 为监视复制代理提供下列对话框：  

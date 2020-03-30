@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256989"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用更改跟踪 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "78256989"
 
   使用更改跟踪的应用程序必须能够获取跟踪的更改，将这些更改应用到其他数据存储区并更新源数据库。 本主题介绍了如何执行这些任务，以及在发生故障转移且必须从备份还原数据库时，角色更改跟踪如何进行。  
   
-##  <a name="Obtain"></a> 通过使用更改跟踪函数获取更改  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> 通过使用更改跟踪函数获取更改  
  介绍如何使用更改跟踪功能来获取更改以及有关对数据库所做的更改的信息。  
   
 ### <a name="about-the-change-tracking-functions"></a>关于更改跟踪函数  
@@ -295,7 +295,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  若要在使用更改跟踪（或任何自定义跟踪机制）时选择适合应用程序的方法，您需要完成大量的分析工作。 因此，使用快照隔离要简单得多。  
   
-##  <a name="Handles"></a> 更改跟踪如何处理对数据库的更改  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a> 更改跟踪如何处理对数据库的更改  
  某些使用更改跟踪的应用程序执行与另一个数据存储区的双向同步。 即，在一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中所做的更改将更新到另一个数据存储区中，而在该数据存储区中所做的更改将更新到该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中。  
   
  当应用程序使用另一个数据存储区中的更改更新本地数据库时，应用程序必须执行以下操作：  
@@ -414,7 +414,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  在快照事务启动之后，在该快照事务中正在更新的行可能已经在另一个事务中进行了更新。 在这种情况下，会发生快照隔离更新冲突并导致该事务终止。 如果发生这种情况，请重试此更新。 随后，这会导致检测到更改跟踪冲突并且不会更改任何行。  
   
-##  <a name="DataRestore"></a> 更改跟踪和数据还原  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a> 更改跟踪和数据还原  
  对于需要同步的应用程序，必须考虑启用了更改跟踪的数据库恢复到早期版本数据的情况。 如果发生故障转移到异步数据库镜像的情况，或者如果在使用日志传送时出现故障，则数据库从备份还原之后就会发生这种情况。 以下情况揭示了这一问题：  
   
 1.  表 T1 启用了更改跟踪，并且该表的最低有效版本为 50。  

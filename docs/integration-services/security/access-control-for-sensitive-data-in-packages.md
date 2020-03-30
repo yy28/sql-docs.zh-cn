@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288181"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
@@ -86,7 +86,7 @@ ms.locfileid: "79288181"
   
 3.  在将包部署到生产环境后，运营团队可以通过分配一个只有他们自己知道的强密码来重新加密部署的包。 他们也可以通过选择 **EncryptSensitiveWithUserKey** 或 **EncryptAllWithUserKey**，并使用要运行包的帐户的本地凭据来加密部署的包。  
 
-## <a name="set_protection"></a> 设置或更改包的保护级别
+## <a name="set-or-change-the-protection-level-of-packages"></a><a name="set_protection"></a> 设置或更改包的保护级别
   若要控制对包内容以及其中包含的敏感值（如密码）的访问，请设置 **ProtectionLevel** 属性的值。 项目中所含的包需要具有与项目相同的保护级别才能生成项目。 如果更改项目的 **ProtectionLevel** 属性设置，需要为包手动更新该属性设置。  
   
  有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中安全功能的概述，请参阅[安全性概述 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)。  
@@ -136,7 +136,7 @@ ms.locfileid: "79288181"
   
          如果您在批文件中使用类似的命令，则请输入文件占位符“%f”作为批文件中的“%%f”。  
 
-## <a name="protection_dialog"></a>“包项目保护级别”对话框
+## <a name="package-project-protection-level-dialog-box"></a><a name="protection_dialog"></a>“包项目保护级别”对话框
   可以使用 **“包保护级别”** 对话框更新包的保护级别。 保护级别决定保护包时所使用的方法、密码或用户密钥以及作用域。 可以保护所有数据，也可以只保护敏感数据。  
   
  若要了解包安全性的要求和选项，参阅[安全性概述 (Integration Services)](../../integration-services/security/security-overview-integration-services.md) 可能有所帮助。  
@@ -151,7 +151,7 @@ ms.locfileid: "79288181"
  **重新键入密码**  
  再次键入该密码。  
 
-## <a name="password_dialog"></a>“包密码”对话框
+## <a name="package-password-dialog-box"></a><a name="password_dialog"></a>“包密码”对话框
   可以使用 **“包密码”** 对话框为使用密码加密的包提供包密码。 如果包使用 **“使用密码加密敏感数据”** 或 **“使用密码加密所有数据”** 保护级别，则必须提供密码。  
   
 ### <a name="options"></a>选项  

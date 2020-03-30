@@ -9,10 +9,10 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ca2ef5b2c605d2eb1ca73d05e897919869a435f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081232"
 ---
 # <a name="report-builder-functions---lookup-function"></a>报表生成器函数 - Lookup 函数
@@ -28,7 +28,7 @@ ms.locfileid: "77081232"
 Lookup(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *source_expression*  
  (**Variant**) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ProdID.Value` 。  
   

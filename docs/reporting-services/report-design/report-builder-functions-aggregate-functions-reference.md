@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081316"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>报表生成器函数 - 聚合函数参考
@@ -47,7 +47,7 @@ ms.locfileid: "77081316"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CalculatingAggregates"></a> 内置聚合函数  
+##  <a name="built-in-aggregate-functions"></a><a name="CalculatingAggregates"></a> 内置聚合函数  
  下列内置函数为默认作用域或命名作用域中的一组非 Null 数值数据计算汇总值。  
   
 |**Function**|**说明**|  
@@ -66,10 +66,10 @@ ms.locfileid: "77081316"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")返回页首  
   
-##  <a name="Restrictions"></a> 对内置字段、集合和聚合函数的限制  
+##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> 对内置字段、集合和聚合函数的限制  
  下表汇总了可以在其中添加表达式（包含对全局内置集合的引用）的报表位置的限制。  
   
-|报表中的位置|字段|parameters|ReportItems|PageNumber<br /><br /> TotalPages|数据源<br /><br /> 数据集|变量|RenderFormat|  
+|报表中的位置|字段|参数|ReportItems|PageNumber<br /><br /> TotalPages|数据源<br /><br /> 数据集|变量|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |页眉<br /><br /> 页脚|是|是|最多一个<br /><br /> 注释 1|是|是|是|是|  
 |Body|是<br /><br /> 注释 2|是|仅限当前作用域或包含作用域中的项<br /><br /> 注释 3|否|是|是|是|  
@@ -103,7 +103,7 @@ ms.locfileid: "77081316"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")返回页首  
   
-##  <a name="NestedRestrictions"></a> 对嵌套聚合的限制  
+##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> 对嵌套聚合的限制  
  下表汇总了对可以将其他聚合函数指定为嵌套函数的聚合函数的限制。  
   
 |上下文|RunningValue|RowNumber|第一个<br /><br /> 最后一个|Previous|Sum 和其他预排序函数|ReportItem 聚合|Lookup 函数|Aggregate 函数|  
@@ -120,7 +120,7 @@ ms.locfileid: "77081316"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")返回页首  
   
-##  <a name="CalculatingRunningValues"></a> 计算运行值  
+##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> 计算运行值  
  以下内置函数计算一组数据的运行值。 **RowNumber** 类似于 **RunningValue** ，它将返回计数的运行值，该计数针对包含作用域中的每一行进行递增。 这些函数的作用域参数必须指定包含作用域，用于控制计数开始的时间。  
   
 |**Function**|**说明**|  
@@ -130,7 +130,7 @@ ms.locfileid: "77081316"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")返回页首  
   
-##  <a name="RetrievingRowCounts"></a> 检索行计数  
+##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> 检索行计数  
  下列内置函数计算给定作用域内的行数。 使用此函数可以对所有行进行计数，包括含有 Null 值的行。  
   
 |**Function**|**说明**|  
@@ -139,7 +139,7 @@ ms.locfileid: "77081316"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")返回页首  
   
-##  <a name="LookupFunctions"></a> 从另一个数据集中查找值  
+##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> 从另一个数据集中查找值  
  下面的查找函数从指定数据集中检索值。  
   
 |**Function**|**说明**|  
@@ -150,7 +150,7 @@ ms.locfileid: "77081316"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")返回页首  
   
-##  <a name="RetrievingPostsortValues"></a> 检索依赖排序的值  
+##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> 检索依赖排序的值  
  下列内置函数返回给定作用域内第一个、最后一个或以前的值。 这些函数依赖数据值的排序顺序。 例如，可以使用这些函数查找页上的第一个和最后一个值来创建字典样式页眉。 使用 **Previous** 可以将指定作用域内某一行中的值与该行以前的值进行比较，例如，使用它可以查出表中的年度同比百分比值。  
   
 |**Function**|**说明**|  
@@ -161,7 +161,7 @@ ms.locfileid: "77081316"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")返回页首  
   
-##  <a name="RetrievingServerAggregates"></a> 检索服务器聚合  
+##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> 检索服务器聚合  
  下列内置函数从数据访问接口中检索自定义聚合。 例如，使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源类型可以检索在用于组头的数据源服务器上计算的聚合。  
   
 |**Function**|**说明**|  
@@ -170,7 +170,7 @@ ms.locfileid: "77081316"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")返回页首  
   
-##  <a name="TestingforScope"></a> 测试作用域  
+##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> 测试作用域  
  下列内置函数测试报表项的当前上下文，以确定该报表项是否为特定作用域的成员。  
   
 |函数|说明|  
@@ -179,7 +179,7 @@ ms.locfileid: "77081316"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")返回页首  
   
-##  <a name="RetrievingRecursiveLevel"></a> 检索递归级别  
+##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> 检索递归级别  
  下列内置函数检索处理递归层次结构时的当前级别。 此函数的结果与文本框中的 **Padding** 属性配合使用可以控制递归组可视层次结构的缩进级别。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
 |函数|说明|  

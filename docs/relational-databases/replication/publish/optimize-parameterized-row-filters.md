@@ -16,10 +16,10 @@ ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710859"
 ---
 # <a name="optimize-parameterized-row-filters"></a>优化参数化行筛选器
@@ -38,15 +38,15 @@ ms.locfileid: "71710859"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   当使用参数化筛选器时，可通过在创建发布时指定 **use partition groups** 或 **keep partition changes** 选项来控制合并复制处理筛选器的方式。 通过将其他元数据存储在发布数据库中，上述选项可提高具有已筛选项目的发布的同步性能。 通过在创建项目时设置 **partition options** ，您可以控制在订阅服务器之间共享数据的方式。 有关这些要求的详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
      使用 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact 订阅服务器时，keep_partition_changes 必须设置为 true 以确保正确传播删除操作。 设置为 false 时，订阅服务器可能有比预期更多的行。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  以下设置可用于优化参数化行筛选器：  
   
  **Partition Options**  
@@ -116,7 +116,7 @@ ms.locfileid: "71710859"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  有关 `@keep_partition_changes` 和 `@use_partition_groups` 的筛选选项的定义，请参阅 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 中优化参数化行筛选器。  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>创建新发布时指定合并筛选器的优化  

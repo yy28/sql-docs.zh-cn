@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: 了解如何使用 Azure Data Studio 中的 SQL 笔记本
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; maghan; sstein
+ms.reviewer: achatter; alayu; maghan; mikeray
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.openlocfilehash: 0cefd49b539c967a77faaa566fce9958182cc5df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575522"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448449"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何使用 Azure Data Studio 中的笔记本
 
@@ -32,14 +32,14 @@ ms.locfileid: "77575522"
 
 可以通过多种方式启动新建笔记本。
 
-1. 转到 Azure Data Studio 中的“文件菜单”，然后单击“新建笔记本”   。
+* 转到 Azure Data Studio 中的“文件菜单”，然后单击“新建笔记本”   。
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-2. 右键单击“SQL Server”连接，然后启动“新建笔记本”   。 
+* 右键单击“SQL Server”连接，然后启动“新建笔记本”   。
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-3. 打开命令面板（Ctrl+Shift+P），然后键入“New Notebook”   。 随即打开一个名为 `Notebook-1.ipynb` 的新文件。
+* 打开命令面板（Ctrl+Shift+P），然后键入“New Notebook”   。 随即打开一个名为 `Notebook-1.ipynb` 的新文件。
 
 ## <a name="supported-kernels-and-attach-to-context"></a>支持的内核并附加到上下文
 

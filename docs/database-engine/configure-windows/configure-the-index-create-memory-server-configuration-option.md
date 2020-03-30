@@ -13,10 +13,10 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012615"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>配置 index create memory 服务器配置选项
@@ -42,9 +42,9 @@ ms.locfileid: "68012615"
   
 -   **跟进：** [在配置 index create memory 选项之后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   [min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) 选项的设置优先于 index create memory 选项的设置   。 如果更改这些选项，使 **index create memory** 小于 **min memory per query**，则会收到警告消息，但设置的值仍会生效。 而且，在查询执行过程中，您还会收到类似的警告。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68012615"
   
 -   此选项的运行值不会超过用于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的操作系统和硬件平台的实际内存量。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
@@ -60,12 +60,12 @@ ms.locfileid: "68012615"
 
 -   在生产系统上创建索引通常是不常执行的任务，通常安排在非高峰时段执行。 因此，不常创建索引且在非峰值时间时，增加 index create memory 可提高索引创建的性能  。 但是，最好将 [min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) 配置选项保持在一个较低的值，这样即使所有请求的内存都不可用，索引创建作业仍能开始  。
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>配置 index create memory 选项  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68012615"
   
      **index create memory** 选项用于控制索引创建排序时所需的内存量。 **index create memory** 选项是自配置选项，在大多数情况下不需调整即可正常工作。 但如果在创建索引时遇到困难，可以考虑提高此选项的运行值。 查询排序由 **min memory per query** 选项控制。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>配置 index create memory 选项  
   
@@ -101,7 +101,7 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置 index create memory 选项之后  
+##  <a name="follow-up-after-you-configure-the-index-create-memory-option"></a><a name="FollowUp"></a> 跟进：在配置 index create memory 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
 ## <a name="see-also"></a>另请参阅  

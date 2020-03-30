@@ -20,16 +20,16 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893424"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>禁用或暂停报表和订阅处理  
 可采用多种方法禁用或暂停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和订阅处理。 本主题中的方法从禁用订阅到中断数据源连接，无所不包。 并非所有方法都支持这两种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式。 下表总结了方法以及支持的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式：  
   
-##  <a name="bkmk_top"></a> 本文内容  
+##  <a name="in-this-article"></a><a name="bkmk_top"></a> 本文内容  
   
 ||支持的服务器模式|  
 |-|---------------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "68893424"
 |[从角色中删除管理订阅权限（本机模式）](#bkmk_remove_manage_subscriptions_permission)|本机模式|  
 |[禁用传递扩展插件](#bkmk_disable_extensions)|本机模式和 SharePoint 模式|  
   
-##  <a name="bkmk_disable_subscription"></a>启用和禁用订阅  
+##  <a name="enable-and-disable-subscriptions"></a><a name="bkmk_disable_subscription"></a>启用和禁用订阅  
   
 >[!TIP]  
 >SQL 2016 Reporting Services 中的新增功能，启用和禁用订阅  。 使用新用户界面选项，可以快速启用和禁用订阅。 已禁用的订阅可以维护自身的其他配置属性（如计划），并能轻松地重新启用。 也可以编程方式启用和禁用订阅，或审核哪些订阅已遭禁用。  
@@ -117,14 +117,14 @@ ForEach ($subscription in $subscriptions)
 }  
 ```  
   
-##  <a name="bkmk_pause_schedule"></a> 暂停共享计划  
+##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> 暂停共享计划  
  如果报表或订阅按照某个共享计划运行，您可以通过暂停该计划来阻止这些报表或订阅的处理。 在恢复计划之前，会延迟由该计划驱动的所有报表和订阅处理。  
   
 -   **SharePoint 模式：** 在“站点设置”  的 ![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")中，选择“管理共享计划”  。 选择计划，并单击“暂停所选计划”  。  
   
 -   **本机模式：** 在 Web 门户中，从 Web 门户屏幕顶部的菜单栏中选择“设置”  按钮![设置按钮](media/ssrs-portal-settings-gear.png)，并从下拉菜单中选择“站点设置”  。 选择“计划”  选项卡以显示计划页。 选中要启用或禁用的计划旁边的复选框，然后分别选择“启用”  或“禁用”  按钮，以执行所需的操作。 “状态”列将相应地更新为“禁用”或“启用”。  
   
-##  <a name="bkmk_disable_shared_datasource"></a> 禁用共享数据源  
+##  <a name="disable-a-shared-data-source"></a><a name="bkmk_disable_shared_datasource"></a> 禁用共享数据源  
  使用共享数据源的一个优点是您可以通过禁用它来阻止报表或数据驱动订阅运行。 禁用共享数据源会断开报表与其外部源的连接。 禁用共享数据源后，所有原来使用该数据源的报表和订阅将无法再继续访问该数据源。  
   
  请注意，即使数据源不可用，你也仍可加载相应的报表。 该报表不包含任何数据，但具有适当权限的用户可以访问与该报表关联的属性页、安全设置、报表历史记录和订阅信息。  
@@ -133,12 +133,12 @@ ForEach ($subscription in $subscriptions)
   
 -   **本机模式：** 若要在本机模式报表服务器中禁用共享数据源，请在 Web 门户中打开相应数据源，再清除“启用此数据源”  复选框。  
   
-##  <a name="bkmk_modify_role_assignment"></a> 通过修改角色分配来阻止访问报表（本机模式）  
+##  <a name="modify-role-assignments-to-prevent-access-to-a-report-native-mode"></a><a name="bkmk_modify_role_assignment"></a> 通过修改角色分配来阻止访问报表（本机模式）  
 使报表不可用的方法之一是，暂时删除提供报表访问权限的角色分配。 无论采用哪种数据源连接，对所有报表都可以使用这种方法。 这种方法只针对目标报表，不会影响其他报表或项的操作。  
   
  若要删除角色分配，请在 Web 门户中打开报表的“安全”  页。 如果报表的安全设置是从父报表继承而来，你可以依次选择“自定义安全设置”  和“项安全性”  对话框中的“确认”  ，以创建忽略提供广泛访问权限的角色分配的限制性安全策略（例如，可以删除为每个人提供访问权限的角色分配，而保留为一小部分用户（如管理员）提供访问权限的角色分配）。  
   
-##  <a name="bkmk_remove_manage_subscriptions_permission"></a> 从角色中删除管理订阅权限（本机模式）  
+##  <a name="remove-manage-subscription-permissions-from-role-native-mode"></a><a name="bkmk_remove_manage_subscriptions_permission"></a> 从角色中删除管理订阅权限（本机模式）  
  若要阻止用户创建订阅，请从角色中清除“管理单独的订阅”  任务。 删除此任务后，“订阅”页将不可用。 在 Web 门户中，“我的订阅”页显示为空（无法删除它），即使它以前包含订阅，也不例外。 删除与订阅相关的任务会使用户无法创建和修改订阅，但这不会删除现有的订阅。 现有订阅将继续执行，直到你删除它们。 若要删除权限，请执行以下操作：  
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
@@ -156,7 +156,7 @@ ForEach ($subscription in $subscriptions)
 7.  单击“确定”  ，以应用更改。
 
   
-##  <a name="bkmk_disable_extensions"></a> 禁用传递扩展插件  
+##  <a name="disable-delivery-extensions"></a><a name="bkmk_disable_extensions"></a> 禁用传递扩展插件  
  对于有权创建对某个给定报表的订阅的任何用户，可以使用报表服务器上安装的所有传递扩展插件。 可以自动使用并配置下列传递扩展插件：  
   
 -   Windows 文件共享  

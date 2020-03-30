@@ -11,17 +11,17 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165522"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入门：将 SQL 备份和还原到 Azure Blob 存储服务
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 本快速入门可帮助你了解如何将备份写入 Azure Blob 存储服务以及如何从中还原。  本文介绍如何创建 Azure Blob 容器，将备份写入 Blob 服务，然后执行还原。
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 要完成本快速入门，必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。  需要 Azure 存储帐户、SQL Server Management Studio (SSMS)、针对运行 SQL Server 的服务器或 Azure SQL 数据库托管实例的访问权限。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”  权限的 db_backupoperator  数据库角色。 
 
 - 获取免费的 [Azure 帐户](https://azure.microsoft.com/offers/ms-azr-0044p/)。
@@ -122,7 +122,7 @@ GO
 ## <a name="back-up-database"></a>备份数据库
 在此步骤中，使用 SQL Server Management Studio 中的 GUI 或 Transact-SQL (T-SQL) 将数据库 `SQLTestDB` 备份到 Azure Blob 存储帐户。 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. 如果“备份数据库”向导尚未打开，则展开 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 的对象资源管理器中的“数据库”节点    。
 1. 右键单击新的 `SQLTestDB` 数据库，将鼠标悬停在“任务”上，然后选择“备份...”以启动“备份数据库”向导    。 
@@ -141,7 +141,7 @@ GO
    > 可以通过选择“备份数据库”向导顶部的“脚本”来编写此命令后面的 Transact-SQL 的脚本   ：![脚本命令](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 通过运行以下命令，使用 Transact-SQL 备份数据库： 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>删除数据库
 在此步骤中，先删除数据库再执行还原。 此步骤仅适用于本教程，但不太可能用于普通的数据库管理过程。 可以跳过此步骤，但之后将需要在托管实例上的还原过程中更改数据库的名称，或运行还原命令 `WITH REPLACE` 以便在本地成功还原数据库。 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. 展开对象资源管理器中的“数据库”节点，右键单击 `SQLTestDB` 数据库，然后选择“删除”以启动“删除对象”向导    。 
 1. 在托管实例上，选择“确定”以删除数据库  。 在本地，选中“关闭现有连接”旁边的复选框，然后选择“确定”以删除数据库   。 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 通过运行以下 Transact-SQL 命令，删除数据库：
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>对话框的 
 在此步骤中，使用 SQL Server Management Studio 中的 GUI 或 Transact-SQL 还原数据库。 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. 在 SQL Server Management Studio 的对象资源管理器中右键单击“数据库”节点，然后选择“还原数据库”    。 
 1. 选择“设备”，然后选择省略号 (...) 以选择设备  。 
@@ -216,7 +216,7 @@ GO
 1. 选择“确定”，关闭“选择备份设备”对话框   。 
 1. 选择“确定”以还原数据库  。 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 若要从 Azure Blob 存储还原本地数据库，请修改以下 Transact-SQL 命令以使用自己的存储帐户，然后在新的查询窗口中运行该命令。 
 

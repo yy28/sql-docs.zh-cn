@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957031"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教程：使用 Transact-SQL 编辑器创建数据库对象 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>教程：使用 Transact-SQL 编辑器创建数据库对象 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 创建和运行查询、存储过程、脚本等是数据库专业人员的核心任务。 本教程演示 T-SQL 编辑器中用于创建数据库对象的主要功能。
 
@@ -29,7 +29,7 @@ ms.locfileid: "74957031"
 > * 使用“速览定义”和“转到定义”   查看数据库对象详细信息
 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 本教程需要使用 SQL Server 或 Azure SQL 数据库 TutorialDB  。 若要创建 TutorialDB  数据库，请完成以下其中一项快速入门：
 

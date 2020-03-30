@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73595482"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序
@@ -24,7 +24,7 @@ ms.locfileid: "73595482"
 
 本教程介绍如何开发简单的应用程序，该应用程序可发出使用[具有安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md) 的服务器端安全 enclave 的数据库查询。 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 本教程是[教程：通过 SSMS 开始使用含安全 enclave 的 Always Encrypted](./tutorial-getting-started-with-always-encrypted-enclaves.md) 的延续。 请务必先完成上一教程，再执行以下步骤。
 
 此外，还需要 Visual Studio（推荐使用 2019 版）- 可从 [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com) 下载。 应用程序开发计算机必须运行 .NET Framework 4.7.2 或更高版本。

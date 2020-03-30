@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082607"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
@@ -34,7 +34,7 @@ ms.locfileid: "77082607"
 > [!NOTE]  
 >  可以将地图作为报表部件与报表分开保存。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
   
-##  <a name="Process"></a> 向报表添加地图  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> 向报表添加地图  
  若要将地图添加到报表，请参阅下面给出的一般步骤列表：  
   
 -   确定您要显示哪些分析数据以及您需要哪些类型的空间数据。 例如，若要在气泡图上显示相关的商店年销售额，您需要用于分析数据的商店名称和商店销售额以及用于空间数据的商店名称和商店位置（如经度和纬度）。  
@@ -49,7 +49,7 @@ ms.locfileid: "77082607"
   
  有关详细信息，请参阅 [规划地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
   
-##  <a name="AddingData"></a> 向地图添加数据  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> 向地图添加数据  
  地图使用两类数据：空间数据和分析数据。 空间数据定义地图的外观，而分析数据提供与地图关联的值。 例如，空间数据定义某个地区中各市县的位置，而分析数据提供每个市县的人口数。  
   
  地图必须具有空间数据；分析数据是可选的。 例如，您可以添加一个地图，该地图只显示某个市县的商店位置。  
@@ -136,12 +136,12 @@ ms.locfileid: "77082607"
   
  在本例中，只靠市县名称不足以唯一标识人口数。 例如，在美国有多个市县的名称为 Albany。 若要指定特定市县，必须指定地区以及市县名称。  
   
-##  <a name="Viewport"></a> 了解地图视区  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> 了解地图视区  
  在为报表指定地图数据之后，可以通过指定地图“视区”  来限制地图的显示区域。 默认情况下，视区为整个地图的区域。 若要裁剪地图，可以指定中心、缩放级别以及最大和最小坐标，以定义要在报表中包含的区域。 若要改进地图在报表中的显示，可以将图例、距离刻度和色阶移到视区之外。 下图显示一个视区：  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
-##  <a name="TileLayer"></a> 添加 Bing 地图图块层  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> 添加 Bing 地图图块层  
  您可以为 Bing 地图图块添加一个层，以便为由视区定义的当前地图视图提供地理背景。 若要添加图块层，必须指定 **“地理”** 坐标系和投影类型 **Mercator**。 将自动从 Bing 地图 Web 服务中检索与您选择的视区中心和缩放级别匹配的图块。  
   
  可通过指定下列选项自定义层：  
@@ -162,7 +162,7 @@ ms.locfileid: "77082607"
   
  有关图块的详细信息，请参阅 [Bing 地图图块系统](https://go.microsoft.com/fwlink/?linkid=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
-##  <a name="MapLayers"></a> 了解地图层和地图元素  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> 了解地图层和地图元素  
  一个地图可以具有多个层。 有三种类型的层。 每层显示一种类型的空间数据：  
   
 -   **多边形层：** 显示区域的轮廓或对于多边形中心点显示标记，这是针对每个多边形自动计算的。  
@@ -208,7 +208,7 @@ ms.locfileid: "77082607"
   
  有关详细信息，请参阅[交互式排序、文档结构图和链接（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)。  
   
-##  <a name="Legends"></a> 了解地图图例、色阶和距离刻度  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> 了解地图图例、色阶和距离刻度  
  可以向报表中添加各种图例以帮助用户解释地图。 地图可以包含以下各项：  
   
 -   **图例：** 您可以创建多个图例。 将根据您为每个层上的地图元素指定的规则，自动生成图例中列出的项。 对于每个规则，您可以指定用于显示其相关项的图例。 通过这种方法，您可以将来自多个层的项分配给同一图例或不同图例。  
@@ -219,14 +219,14 @@ ms.locfileid: "77082607"
   
  您可以将图例、色阶和距离刻度定位在视区内外的不连续位置。 有关详细信息，请参阅 [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
-##  <a name="Troubleshooting"></a> 排除地图故障  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> 排除地图故障  
  地图报表使用的空间数据和分析数据来自各种数据源。 每个地图层都可能使用不同的数据源。 每个层的显示属性遵循特定的优先顺序（基于层属性、规则和地图元素属性）。  
   
  如果您查看地图报表时看不到所需的结果，其根源可能是各种问题。 为了帮助您隔离和了解每个问题，一次处理一个层肯定会有所帮助。 使用“地图”窗格可以选择层并轻松地切换其可见性。  
   
  若要详细了解地图报表问题，请参阅[排除报表故障：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  本部分列出的过程分步向您介绍如何在报表中使用地图和地图层。  
   
 -   [添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -235,7 +235,7 @@ ms.locfileid: "77082607"
   
 -   [向地图添加自定义位置（报表生成器和 SSRS）](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="Section"></a> 本节内容  
  [规划地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)  
   
  [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

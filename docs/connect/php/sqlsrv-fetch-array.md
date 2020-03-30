@@ -18,10 +18,10 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015033"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
@@ -36,7 +36,7 @@ ms.locfileid: "68015033"
 sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 *$stmt*：对应于已执行语句的语句资源。  
   
 *$fetchType* [可选]：预定义常量。 此参数可以采用下表中列出的值之一：  

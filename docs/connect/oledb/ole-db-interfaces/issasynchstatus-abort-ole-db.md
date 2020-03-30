@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015435"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -39,10 +39,10 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>参数  
- hChapter[in]  
- 要中止其操作的章节的句柄。 如果所调用的对象不是行集对象或者操作不应用于章节，则调用方必须将 hChapter 设置为 DB_NULL_HCHAPTER。  
+ hChapter[in]   
+ 要中止其操作的章节的句柄。 如果所调用的对象不是行集对象或者操作不应用于章节，则调用方必须将 hChapter 设置为 DB_NULL_HCHAPTER  。  
   
- eOperation[in]  
+ eOperation[in]   
  要中止的操作。 应使用以下值：  
   
  DBASYNCHOP_OPEN - 要取消的请求应用于行集的异步打开或填充，或应用于数据源对象的异步初始化。  
@@ -61,21 +61,21 @@ HRESULT Abort(
  发生了特定于访问接口的错误。  
   
  E_INVALIDARG  
- hChapter 参数不是 DB_NULL_HCHAPTER，或 eOperation 不是 DBASYNCH_OPEN。  
+ hChapter  参数不是 DB_NULL_HCHAPTER，或 eOperation  不是 DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
- 已对尚未调用或尚未完成 IDBInitialize::Initialize 的数据源对象调用 ISSAsynchStatus::Abort。  
+ 已对尚未调用或尚未完成 IDBInitialize::Initialize 的数据源对象调用 ISSAsynchStatus::Abort   。  
   
- 已对数据源对象调用 ISSAsynchStatus::Abort，此前，该对象已调用 IDBInitialize::Initialize 但随后在初始化或超时之前取消。数据源对象仍未初始化。  
+ 已对数据源对象调用 ISSAsynchStatus::Abort，此前，该对象已调用 IDBInitialize::Initialize 但随后在初始化或超时之前取消   。数据源对象仍未初始化。  
   
- 已对以前调用了 ITransaction::Commit 或 ITransaction::Abort 并在提交或中止后处于僵停状态的行集调用 ISSAsynchStatus::Abort。  
+ 已对以前调用了 ITransaction::Commit 或 ITransaction::Abort 并在提交或中止后处于僵停状态的行集调用 ISSAsynchStatus::Abort    。  
   
- 已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort。 该行集处于僵停状态。  
+ 已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort  。 该行集处于僵停状态。  
   
 ## <a name="remarks"></a>备注  
- 中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
+ 中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED  。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
   
- 如果调用 ISSAsynchStatus::Abort 并为 eOperation 传递除了 DBASYNCHOP_OPEN 以外的值，将返回 S_OK。 这并不意味着操作已完成或取消。  
+ 如果调用 ISSAsynchStatus::Abort 并为 eOperation 传递除了 DBASYNCHOP_OPEN 以外的值，将返回 S_OK   。 这并不意味着操作已完成或取消。  
   
 ## <a name="see-also"></a>另请参阅  
  [执行异步操作](../../oledb/features/performing-asynchronous-operations.md)  

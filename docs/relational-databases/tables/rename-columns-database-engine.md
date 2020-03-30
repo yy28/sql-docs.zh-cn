@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082584"
 ---
 # <a name="rename-columns-database-engine"></a>重命名列（数据库引擎）
@@ -42,19 +42,19 @@ ms.locfileid: "68082584"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 开始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前
 
-### <a name="Restrictions"></a> 限制和局限
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限
 
 重命名列将不会自动重命名对该列的引用。 您必须手动修改引用已重命名列的任何对象。 例如，如果您重命名表列，并且触发器中引用了该列，则必须修改触发器以反映新的列名。 请使用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 在重命名对象之前列出对象的依赖关系。
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 权限
+#### <a name="permissions"></a><a name="Permissions"></a> 权限
 
 需要对对象的 ALTER 权限。
 
-## <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
 ### <a name="to-rename-a-column-using-object-explorer"></a>使用对象资源管理器重命名列
 
@@ -71,7 +71,7 @@ ms.locfileid: "68082584"
 > [!NOTE]
 > 您也可以在 **“列属性”** 选项卡中更改列名。选择要更改名称的列，并为 **“名称”** 键入新值。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 **重命名列**
 

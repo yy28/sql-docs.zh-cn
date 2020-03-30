@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68073137"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  在数据导出期间，数据库将报告外部数据源上发生的任何 Java 错误。  
   
-##  <a name="GeneralRemarks"></a> 一般备注  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> 一般备注  
  在 CETAS 语句结束后，可在外部表上运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。 除非使用 CREATE TABLE AS SELECT 语句进行导入，否则这些操作将在查询期间将数据导入数据库。  
   
  外部表名和定义存储在数据库元数据中。 数据存储在外部数据源中。  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>锁定  
  采用 SCHEMARESOLUTION 对象上的共享锁。  
   
-##  <a name="Examples"></a> 示例  
+##  <a name="examples"></a><a name="Examples"></a> 示例  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. 使用 CREATE EXTERNAL TABLE AS SELECT (CETAS) 创建 Hadoop 表  
  以下示例使用源表 `dimCustomer` 中的列定义和数据创建一个名为 `hdfsCustomer` 的新外部表。  

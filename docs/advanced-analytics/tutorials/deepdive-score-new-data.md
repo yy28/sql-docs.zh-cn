@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947184"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>对新数据进行评分（SQL Server 和 RevoScaleR 教程）
@@ -51,7 +51,7 @@ ms.locfileid: "74947184"
     ```
     此时尚未创建表。 此语句仅定义数据的容器。
      
-3. 使用 rxGetComputeContext() 检查当前计算上下文，并将计算上下文设置为服务器（如果需要）。
+3. 使用 rxGetComputeContext() 检查当前计算上下文，并将计算上下文设置为服务器（如果需要）  。
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -65,8 +65,8 @@ ms.locfileid: "74947184"
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    + 函数 rxSqlServerTableExists 会查询 ODBC 驱动程序，如果表存在，则返回 TRUE，否则返回 FALSE。
-    + 函数 rxSqlServerDropTable 会执行 DDL，如果已成功删除表，则返回 TRUE，否则返回 FALSE。
+    + 函数 rxSqlServerTableExists 会查询 ODBC 驱动程序，如果表存在，则返回 TRUE，否则返回 FALSE  。
+    + 函数 rxSqlServerDropTable 会执行 DDL，如果已成功删除表，则返回 TRUE，否则返回 FALSE  。
 
 5. 执行 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 以创建评分，并将其保存在数据源 sqlScoreDS 中定义的新表中。
   
@@ -80,17 +80,17 @@ ms.locfileid: "74947184"
         overwrite = TRUE)
     ```
   
-    rxPredict 函数是另一种函数，支持在远程计算上下文中运行。 可以使用 rxPredict 函数从基于 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 或 [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) 创建的模型创建评分。
+    rxPredict  函数是另一种函数，支持在远程计算上下文中运行。 可以使用 rxPredict 函数从基于 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 或 [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) 创建的模型创建评分  。
   
     - 参数 *writeModelVars* 在此处设置为 **TRUE** 。 这意味着新表中将包含用于估计的变量。
   
     - 参数 *predVarNames* 指定将在其中存储结果的变量。 此处需要传递一个新变量 `ccFraudLogitScore`。
   
-    - rxPredict 的 type 参数定义计算预测的方式。 指定关键字“响应”以根据响应变量的比例生成分数。 或者，使用关键字“链接”根据底层的链接函数生评分，在这种情况下，使用逻辑量表创建预测。
+    - rxPredict  的 type  参数定义计算预测的方式。 指定关键字“响应”以根据响应变量的比例生成分数  。 或者，使用关键字“链接”根据底层的链接函数生评分，在这种情况下，使用逻辑量表创建预测  。
 
 6. 不久，可以在 Management Studio 中刷新表的列表，以查看新的表及其数据。
 
-7. 若要将其他变量添加到输出预测中，请使用 *extraVarsToWrite* 参数。  例如，在以下代码中，会将来自评分数据表的变量 custID 添加到预测的输出表中。
+7. 若要将其他变量添加到输出预测中，请使用 *extraVarsToWrite* 参数。  例如，在以下代码中，会将来自评分数据表的变量 custID  添加到预测的输出表中。
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -116,7 +116,7 @@ ms.locfileid: "74947184"
         connectionString = sqlConnString)
     ```
 
-     从本示例中，可以看到使用 RxSqlServerData 数据源对象根据 SQL 查询、函数或存储过程定义任意数据集，然后将其用于 R 代码中非常容易。 变量不会存储实际值，只存储数据源定义；仅当在函数（如 rxImport）中使用此查询时，才会执行此查询以生成该值。
+     从本示例中，可以看到使用 RxSqlServerData  数据源对象根据 SQL 查询、函数或存储过程定义任意数据集，然后将其用于 R 代码中非常容易。 变量不会存储实际值，只存储数据源定义；仅当在函数（如 rxImport  ）中使用此查询时，才会执行此查询以生成该值。
       
 2. 调用 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 函数，将这些值放在能够跨计算上下文共享的数据框中。
   

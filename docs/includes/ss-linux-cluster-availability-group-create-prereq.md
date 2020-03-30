@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 创建可用性组前，需要：
 

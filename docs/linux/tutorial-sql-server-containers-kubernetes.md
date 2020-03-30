@@ -9,12 +9,12 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50c10c976cd30db4c8fcdcd1404f4618e77356c4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558342"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216667"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes 服务 (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
@@ -47,7 +47,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 ![Kubernetes SQL Server 群集示意图](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 * **Kubernetes 群集**
    - 本教程需要使用 Kubernetes 群集。 这些步骤使用 [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) 来管理群集。 
@@ -182,7 +182,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
              value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: MSSQL_SA_PASSWORD
+           - name: SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql

@@ -11,10 +11,10 @@ ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982958"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
@@ -32,7 +32,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
                        java.lang.String columnNamePattern)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *catalog*  
   
  一个包含目录名称的字符串  。 如果该名称为空字符串 ""，则结果将包括无目录的函数。 如果此字符串为“null”，目录名称则不可用于搜索  。  

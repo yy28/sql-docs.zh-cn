@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981818"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  有关搜索属性列表的详细信息，请参阅[使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## <a name="change-tracking-no-population"></a> 更改跟踪和 NO POPULATION 参数的交互  
+## <a name="interactions-of-change-tracking-and-no-population-parameter"></a><a name="change-tracking-no-population"></a> 更改跟踪和 NO POPULATION 参数的交互  
  是否填充全文索引取决于是否启用了更改跟踪以及在 ALTER FULLTEXT INDEX 语句中是否指定了 WITH NO POPULATION。 下表概述了其交互结果。  
   
 |更改跟踪|WITH NO POPULATION|结果|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  有关填充全文检索的详细信息，请参阅[填充全文检索](../../relational-databases/search/populate-full-text-indexes.md)。  
   
-## <a name="change-search-property-rebuild-index"></a> 更改搜索属性列表将导致重新生成索引  
+## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a><a name="change-search-property-rebuild-index"></a> 更改搜索属性列表将导致重新生成索引  
  第一次将全文索引与搜索属性列表相关联时，必须重新填充索引以便对属性特定的搜索词编制索引。 不会截断现有的索引数据。  
   
  但是，如果将全文索引与不同的属性列表相关联，则会重新生成索引。 立即重新生成索引将截断全文索引，从而删除所有现有的数据，并且必须重新填充索引。 在进行填充时，针对基表的全文查询仅搜索已通过填充编制索引的表行。 重新填充的索引数据将包括新添加的搜索属性列表的注册属性中的元数据。  

@@ -15,10 +15,10 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908889"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
@@ -41,22 +41,22 @@ ms.locfileid: "72908889"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   使用 STANDBY 查找未知的时间点。  
   
 -   在还原顺序中尽早指定时间点  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **将数据库还原到时间点**  
   
 1.  在“对象资源管理器”中，连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开服务器树。  
@@ -80,7 +80,7 @@ ms.locfileid: "72908889"
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在“源:设备:数据库”列表框中，选择应还原的数据库名称 **。**  
+         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。  
   
          **注意** ：此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72908889"
   
 14. 如果要在每个还原操作之间进行提示，请选择 **“还原每个备份之前进行提示”** 。 除非数据库过大并且您要监视还原操作的状态，否则通常没有必要选中该选项。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **开始之前**  
   
  始终从日志备份还原到指定时间。 在还原序列的每个 RESTORE LOG 语句中，必须在相同的 STOPAT 子句中指定目标时间或事务。 作为时点还原的先决条件，必须首先还原其端点早于目标还原时间的完整数据库备份。 只要您之后还原每个随后日志备份（到达和包括包含目标时间点的日志备份），该完整数据库备份就可以早于最近的完整数据库备份。  
@@ -134,11 +134,11 @@ ms.locfileid: "72908889"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…      
+ RESTORE LOG database_name FROM <backup_device> WITH STOPAT *time, RECOVERY…* **=**    
   
  恢复点是在 **time** 指定的 *datetime*值或之前发生的最新的事务提交。  
   
- 要只还原在特定时间点之前所做的修改，请为还原的每个备份指定 WITH STOPAT = time   。 这样确保了不会超出目标时间。  
+ 要只还原在特定时间点之前所做的修改，请为还原的每个备份指定 WITH STOPAT  **time=**  。 这样确保了不会超出目标时间。  
   
  **将数据库还原到时间点**  
   
@@ -159,7 +159,7 @@ ms.locfileid: "72908889"
     > [!NOTE]  
     >  RECOVERY 和 STOPAT 选项。 如果事务日志备份不包含要求的时间（例如，如果指定的时间超出了事务日志所包含的时间范围），则会生成警告，并且不会恢复数据库。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例将数据库还原到它在 `12:00 AM` 的 `April 15, 2020` 的状态，并显示涉及多个日志备份的还原操作。 在备份设备上，要还原的完整数据库备份 `AdventureWorksBackups`是设备上的第三个备份集 (`FILE = 3`)，第一个日志备份是第四个备份集 (`FILE = 4`)，第二个日志备份是第五个备份集 (`FILE = 5`)。  
   
 > [!IMPORTANT]  
@@ -182,7 +182,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   

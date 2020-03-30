@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cfd14c6cd0147d9e4c163a4802f060ecc4374754
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121824"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -51,7 +51,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>参数  
  transaction_name   
- 是为 BEGIN TRANSACTION 上的事务分配的名称。 transaction_name 必须符合标识符规则，但只使用事务名称的前 32 个字符  。 嵌套事务时，transaction_name 必须是最外面的 BEGIN TRANSACTION 语句中的名称  。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此  。  
+ 是为 BEGIN TRANSACTION 上的事务分配的名称。 transaction_name 必须符合标识符规则，但只使用事务名称的前 32 个字符  。 嵌套事务时，transaction_name 必须是最外面的 BEGIN TRANSACTION 语句中的名称  。 transaction_name 始终区分大小写，即使  *实例不区分大小写也是如此*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  **@** *tran_name_variable*  
  用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量     。  
@@ -66,7 +66,7 @@ ROLLBACK { TRAN | TRANSACTION }
  ROLLBACK TRANSACTION 语句不生成显示给用户的消息。 如果在存储过程或触发器中需要警告，请使用 RAISERROR 或 PRINT 语句。 RAISERROR 是用于指出错误的首选语句。  
   
 ## <a name="general-remarks"></a>一般备注  
- 不带 savepoint_name 和 transaction_name 的 ROLLBACK TRANSACTION 将回滚到事务的起点   。 嵌套事务时，该语句将所有内层事务回滚到最外面的 BEGIN TRANSACTION 语句。 在这两种情况下，ROLLBACK TRANSACTION 都将 @@TRANCOUNT 系统函数减小为 0。 ROLLBACK TRANSACTION savepoint_name 不会减小 @@TRANCOUNT  。  
+ 不带 savepoint_name 和 transaction_name 的 ROLLBACK TRANSACTION 将回滚到事务的起点   。 嵌套事务时，该语句将所有内层事务回滚到最外面的 BEGIN TRANSACTION 语句。 在这两种情况下，ROLLBACK TRANSACTION 都将 @@TRANCOUNT 系统函数减小为 0。 ROLLBACK TRANSACTION savepoint_name 不会减小 @  @TRANCOUNT。  
   
  在由 BEGIN DISTRIBUTED TRANSACTION 显式启动或从本地事务升级而来的分布式事务中，ROLLBACK TRANSACTION 不能引用 savepoint_name  。  
   

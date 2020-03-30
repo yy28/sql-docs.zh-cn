@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73632936"
 ---
 # <a name="compatibility-certification"></a>兼容性认证
@@ -57,7 +57,7 @@ ms.locfileid: "73632936"
 
 对于新的开发工作，或当现有应用程序需要使用新功能（如[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)）以及一些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 时，请计划将数据库兼容性级别升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新级别，并认证应用程序可与该兼容性级别一起使用。 有关升级数据库兼容性级别的详细信息，请参阅[升级数据库兼容性级别的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)。
    
-### <a name="queryplan_shape"></a> 为什么使用查询计划形状？      
+### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> 为什么使用查询计划形状？      
 查询计划形状是指组成查询计划的各种运算符的可视化表示形式。 其中包括查找、扫描、联接和排序等运算符，以及它们之间指示数据流和操作（必须执行这些操作才能生成指定的结果集）顺序的连接。 查询计划形状由查询优化器确定。
 
 若要在升级过程中保持查询性能的可预测性，其中一个基本目标是确保使用相同的查询计划形状。 这可通过在升级后不立即改变数据库兼容性级别来实现，即使基础 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有不同的版本。 如果查询执行生态系统中没有其他更改（例如可用资源的重大更改或基础数据中的数据分布），则查询的性能应保持不变。 

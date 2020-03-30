@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121590"
 ---
 # <a name="transactions-sql-data-warehouse"></a>事务（SQL 数据仓库）
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>锁定行为  
  当多个用户同时访问数据时，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 使用以下锁定确保事务的完整性和保持数据库的一致性。 隐式和显式事务均可使用锁定。 每个事务对所依赖的资源（如表或数据库）请求不同类型的锁。 所有 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 锁都是表级别或更高级别。 锁可以阻止其他事务以某种可能会导致事务请求锁出错的方式修改资源。 每个事务将在不再依赖锁定资源时释放锁；显式事务会保留锁，直到事务完成（提交或回滚）。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 使用显式事务  
   

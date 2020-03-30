@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287081"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
@@ -34,7 +34,7 @@ ms.locfileid: "79287081"
   每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 事务日志是数据库的重要组件，如果系统出现故障，则可能需要使用事务日志将数据库恢复到一致状态。 本指南提供有关事务日志的物理和逻辑体系结构的信息。 了解该体系结构可以提高您在管理事务日志时的效率。  
 
   
-##  <a name="Logical_Arch"></a> 事务日志逻辑体系结构  
+##  <a name="transaction-log-logical-architecture"></a><a name="Logical_Arch"></a> 事务日志逻辑体系结构  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事务日志按逻辑运行，就好像事务日志是一串日志记录一样。 每条日志记录由一个日志序列号 (LSN) 标识。 每条新日志记录均写入日志的逻辑结尾处，并使用一个比前面记录的 LSN 更高的 LSN。 日志记录按创建的顺序存储：如果 LSN2 大于 LSN1，则 LSN2 所标识的日志记录描述的更改发生在日志记录 LSN1 描述的更改之后。 每条日志记录都包含其所属事务的 ID。 对于每个事务，与事务相关联的所有日志记录通过使用可提高事务回滚速度的向后指针挨个链接在一个链中。  
   
  数据修改的日志记录或者记录所执行的逻辑操作，或者记录已修改数据的前像和后像。 前像是执行操作前的数据副本；后像是执行操作后的数据副本。  
@@ -69,7 +69,7 @@ ms.locfileid: "79287081"
 
 差异和日志备份将还原的数据库推到稍后的时间，该时间与一个更高的 LSN 相对应。 
   
-##  <a name="physical_arch"></a> 事务日志物理体系结构  
+##  <a name="transaction-log-physical-architecture"></a><a name="physical_arch"></a> 事务日志物理体系结构  
 数据库中的事务日志映射在一个或多个物理文件上。 从概念上讲，日志文件是一系列日志记录。 从物理上讲，日志记录序列被有效地存储在实现事务日志的物理文件集中。 每个数据库必须至少有一个日志文件。  
   
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在内部将每物理日志文件分成多个虚拟日志文件 (VLF)。 虚拟日志文件没有固定大小，且物理日志文件所包含的虚拟日志文件数不固定。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在创建或扩展日志文件时动态选择虚拟日志文件的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 尝试维护少量的虚拟文件。 在扩展日志文件后，虚拟文件的大小是现有日志大小和新文件增量大小之和。 管理员不能配置或设置虚拟日志文件的大小或数量。  
@@ -130,14 +130,14 @@ ms.locfileid: "79287081"
   
  日志截断会由于多种因素发生延迟。 如果日志截断延迟的时间较长，则事务日志可能会填满磁盘空间。 有关信息，请参阅[可能延迟日志截断的因素](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)和[解决事务日志已满的问题（SQL Server 错误 9002）](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
-##  <a name="WAL"></a> 预写事务日志  
+##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a> 预写事务日志  
  本节说明预写事务日志在将数据修改记录到磁盘的过程中所起的作用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用预写日志 (WAL) 算法，此日志确保在将关联的日志记录写入磁盘后再将数据修改写入磁盘。 这维护了事务的 ACID 属性。  
   
  要了解预写日志的工作方式，了解如何将修改的数据写入磁盘很重要。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护一个缓冲区缓存，在必须检索数据时从其中读取数据页。 在缓冲区缓存中修改页后，不会将其立即写回磁盘；而是将其标记为“脏”  。 在将数据页物理写入磁盘之前，可以将其逻辑写入多次。 对于每次逻辑写入，都会在记录修改的日志缓存中插入一条事务日志记录。 在将关联的脏页从缓冲区缓存中删除并写入磁盘之前，必须将这条些日志记录写入磁盘。 检查点进程定期在缓冲区高速缓存中扫描包含来自指定数据库的页的缓冲区，然后将所有脏页写入磁盘。 CHECKPOINT 可创建一个检查点，在该点保证全部脏页都已写入磁盘，从而在以后的恢复过程中节省时间。  
   
  将修改后的数据页从高速缓冲存储器写入磁盘的操作称为刷新页。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有一个逻辑，它可以在写入关联的日志记录前防止刷新脏页。 日志记录将在刷新日志缓冲区时写入磁盘。  只要事务提交或日志缓冲区已满，就会发生这种情况。  
   
-##  <a name="Backups"></a> 事务日志备份  
+##  <a name="transaction-log-backups"></a><a name="Backups"></a> 事务日志备份  
  本节介绍了有关如何备份和还原（应用）事务日志的概念。 在完整恢复模式和批量日志恢复模式下，执行例行事务日志备份（“日志备份”  ）对于恢复数据十分必要。 可以在任何完整备份运行的时候备份日志。 有关恢复模型的详细信息，请参阅 [SQL Server 数据库的备份和还原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
  在创建第一个日志备份之前，必须先创建完整备份（如数据库备份或一组文件备份中的第一个备份）。 仅使用文件备份还原数据库会较复杂。 因此，建议您尽可能从完整数据库备份开始。 此后，必须定期备份事务日志。 这不仅能最小化工作丢失风险，还有助于事务日志的截断。 通常，事务日志在每次常规日志备份之后截断。  

@@ -20,10 +20,10 @@ ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4014060d393e4af5ec9739cdd2487d7920195266
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012350"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>配置恢复间隔服务器配置选项
@@ -51,13 +51,13 @@ ms.locfileid: "68012350"
   
 -   **跟进：** [在配置恢复间隔选项之后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   恢复间隔仅影响使用默认目标恢复时间 (0) 的数据库。 若要覆盖数据库上的服务器恢复间隔，请对该数据库配置非默认目标恢复时间。 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
@@ -65,12 +65,12 @@ ms.locfileid: "68012350"
   
 -   如果您使用 **sp_configure** 将 **“恢复间隔”** 选项的值更改为超过 60（分钟），则指定 RECONFIGURE WITH OVERRIDE。 WITH OVERRIDE 将禁用配置值检查（检查无效的值或并非推荐的值）。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **设置恢复间隔**  
   
 1.  在对象资源管理器中，右键单击服务器实例，再选择 **“属性”** 。  
@@ -79,7 +79,7 @@ ms.locfileid: "68012350"
   
 3.  在 **“恢复”** 下的 **“恢复间隔(分钟)”** 框中，键入或选择一个介于 0 到 32767 之间的值，以设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时用于恢复每个数据库花费的最长时间（分钟）。 默认值为 0，指示由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动配置。 实际上，这表示每个数据库的恢复时间不超过 1 分钟，对于活动的数据库大约每 1 分钟有一个检查点。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-set-the-recovery-interval"></a>设置恢复间隔  
   
@@ -105,7 +105,7 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置恢复间隔选项之后  
+##  <a name="follow-up-after-you-configure-the-recovery-internal-option"></a><a name="FollowUp"></a> 跟进：在配置恢复间隔选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
 ## <a name="see-also"></a>另请参阅  

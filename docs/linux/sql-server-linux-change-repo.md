@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198424"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置存储库以便安装和升级 Linux 上的 SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "79198424"
 > [!TIP]
 > SQL Server 2019 现在可用！ 若要试用该版本，请按照本文说明配置新的 mssql-server-2019 存储库  。 然后按照[安装指南](sql-server-linux-setup.md)中的说明进行安装。
 
-## <a id="repositories"></a>存储库
+## <a name="repositories"></a><a id="repositories"></a>存储库
 
 在 Linux 上安装 SQL Server 时，须配置 Microsoft 存储库。 此存储库用于获取数据库引擎包、mssql-server 以及相关 SQL Server 包  。 现有五个主要存储库：
 
@@ -46,7 +46,7 @@ ms.locfileid: "79198424"
 | 2017  | **mssql-server-2017** | SQL Server 2017 累积更新 (CU) 存储库。 |
 | 2017 GDR  | **mssql-server-2017-gdr** | SQL Server 2017 GDR 存储库仅用于关键更新。 |
 
-## <a id="cuversusgdr"></a> 累积更新与 GDR
+## <a name="cumulative-update-versus-gdr"></a><a id="cuversusgdr"></a> 累积更新与 GDR
 
 务必注意，每个分发都有两种主要的存储库类型：
 
