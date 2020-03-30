@@ -11,17 +11,17 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
 ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75884052"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 SQL Server
+# <a name="quickstart-connect-and-query-sql-server-using-name-sos"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 SQL Server
 
 本快速入门介绍如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接到 SQL Server，然后使用 Transact-SQL (T-SQL) 语句创建 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教程中使用的 TutorialDB  。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 要完成本快速入门，需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，并访问 SQL Server。
 

@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095703"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
@@ -54,16 +54,16 @@ ms.locfileid: "74095703"
   
 -   **若要配置数据库邮件，请使用**：[数据库邮件配置向导](#DBWizard)，[使用模板](#Template)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 有关详细信息，请参阅主题 [Database Mail XPs Server 配置选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  在任何数据库中启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 都需要数据库锁。 如果在 **msdb**中停用了 Service Broker，则若要启用数据库邮件，应首先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，以使 Service Broker 可以获取所需的锁。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  要配置数据库邮件，您必须是 **sysadmin** 固定服务器角色的成员。 若要发送数据库邮件，您必须是 **msdb** 数据库中的 **DatabaseMailUserRole** 数据库角色的成员。  
   
-##  <a name="DBWizard"></a> 使用数据库邮件配置向导  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="DBWizard"></a> 使用数据库邮件配置向导  
  **使用向导配置数据库邮件**  
   
 1.  在对象资源管理器中，展开要配置数据库邮件的实例所在节点。  
@@ -100,7 +100,7 @@ ms.locfileid: "74095703"
   
     -   [“发送测试电子邮件”页](#TestEmail)  
   
-###  <a name="Welcome"></a> “欢迎”页  
+###  <a name="welcome-page"></a><a name="Welcome"></a> “欢迎”页  
  此页说明配置数据库邮件的步骤。  
   
  **不再显示此页** - 选中它，可在以后的显示中跳过此“欢迎”页。  
@@ -111,7 +111,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="ConfigTask"></a> 选择配置任务  
+###  <a name="select-configuration-task"></a><a name="ConfigTask"></a> 选择配置任务  
  使用 **“选择配置任务”** 页可以指示每次使用此向导时要完成的任务。 如果您在完成向导前改变了主意，请使用 **“上一步”** 按钮返回此页并选择其他任务。  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="NewAccount"></a> “新建帐户”页  
+###  <a name="new-account-page"></a><a name="NewAccount"></a> “新建帐户”页  
  使用此页可以创建新的数据库邮件帐户。 数据库邮件帐户包含向 SMTP 服务器发送电子邮件所需的信息。  
   
  数据库邮件帐户包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向 SMTP 服务器发送电子邮件所需的信息。 每个帐户均包含一个电子邮件服务器的信息。  
@@ -182,7 +182,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="ExistingAccount"></a> “管理现有帐户”页  
+###  <a name="manage-existing-account-page"></a><a name="ExistingAccount"></a> “管理现有帐户”页  
  使用此页可以管理现有数据库邮件帐户。  
   
  **帐户名称**  
@@ -232,7 +232,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="NewProfile"></a> “新建配置文件”页  
+###  <a name="new-profile-page"></a><a name="NewProfile"></a> “新建配置文件”页  
  使用此页可以创建数据库邮件配置文件。 数据库邮件配置文件是数据库邮件帐户的集合。 在无法访问电子邮件服务器时，配置文件通过提供其他的数据库邮件帐户来提高可靠性。 至少需要一个数据库邮件帐户。 有关在配置文件中设置数据库邮件帐户的优先级的详细信息，请参阅 [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md)。  
   
  使用 **“上移”** 和 **“下移”** 按钮可以更改数据库邮件帐户的使用顺序。 此顺序由一个名为序列号的值来确定。 **“上移”** 减小序列号， **“下移”** 增大序列号。 序列号可以确定数据库邮件使用配置文件中帐户的顺序。 对于新的电子邮件，数据库邮件将从序列号最小的帐户开始。 如果该帐户失败，数据库邮件就使用具有下一个序列号较大的帐户，依此类推，直到数据库邮件成功发送邮件，或者序列号最大的帐户也失败为止。 如果具有最高序列号的帐户失败，则数据库邮件将在一段时间内（该时间在数据库邮件的 **AccountRetryDelay** 参数中配置）暂停发送邮件，之后从最低序列号开始重新尝试发送邮件。 使用数据库邮件的 **AccountRetryAttempts** 参数，可以配置外部邮件进程使用指定配置文件中的每个帐户尝试发送电子邮件的次数。 可以在数据库邮件配置向导的 **“配置系统参数”** 页上配置 **AccountRetryDelay** 和 **AccountRetryAttempts** 参数。  
@@ -260,7 +260,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="ExistingProfile"></a> “管理现有配置文件”页  
+###  <a name="manage-existing-profile-page"></a><a name="ExistingProfile"></a> “管理现有配置文件”页  
  使用此页可以管理现有的数据库邮件配置文件。 数据库邮件配置文件是数据库邮件帐户的集合。 在无法访问电子邮件服务器时，配置文件通过提供其他的数据库邮件帐户来提高可靠性。 至少需要一个数据库邮件帐户。 有关在配置文件中设置数据库邮件帐户的优先级的详细信息，请参阅 [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md)。  
   
  使用 **“上移”** 和 **“下移”** 按钮可以更改数据库邮件帐户的使用顺序。 此顺序由一个名为序列号的值来确定。 **“上移”** 减小序列号， **“下移”** 增大序列号。 序列号可以确定数据库邮件使用配置文件中帐户的顺序。 对于新的电子邮件，数据库邮件将从序列号最小的帐户开始。 如果该帐户失败，数据库邮件就使用具有下一个序列号较大的帐户，依此类推，直到数据库邮件成功发送邮件，或者序列号最大的帐户也失败为止。 如果具有最高序列号的帐户失败，则数据库邮件将在一段时间内（该时间在数据库邮件的 **AccountRetryDelay** 参数中配置）暂停发送邮件，之后从最低序列号开始重新尝试发送邮件。 使用数据库邮件的 **AccountRetryAttempts** 参数，可以配置外部邮件进程使用指定配置文件中的每个帐户尝试发送电子邮件的次数。 可以在数据库邮件配置向导的 **“配置系统参数”** 页上配置 **AccountRetryDelay** 和 **AccountRetryAttempts** 参数。  
@@ -300,7 +300,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="AddAccount"></a> Add Account to Profile Page  
+###  <a name="add-account-to-profile-page"></a><a name="AddAccount"></a> Add Account to Profile Page  
  使用此页可选择要添加到配置文件的帐户。 请从 **“帐户名”** 框中选择现有帐户，或单击 **“新建帐户”** 。  
   
  **帐户名称**  
@@ -317,7 +317,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="AccountsProfiles"></a> “管理帐户和配置文件”页  
+###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a> “管理帐户和配置文件”页  
  使用此页可选择用于管理配置文件或帐户的任务。  
   
  **创建新帐户**  
@@ -334,7 +334,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="ProfileSecurityPublic"></a> “管理配置文件安全性”，“公共”选项卡  
+###  <a name="manage-profile-security-public-tab"></a><a name="ProfileSecurityPublic"></a> “管理配置文件安全性”，“公共”选项卡  
  使用此页可配置公共配置文件。  
   
  配置文件可以为公共配置文件或专用配置文件。 只有特定用户或角色才能访问专用配置文件。 公共配置文件允许所有用户或角色访问邮件主机数据库 (**msdb**)，以使用该配置文件发送电子邮件。  
@@ -355,7 +355,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="ProfileSecurityPrivate"></a> “管理配置文件安全性”，“专用”选项卡  
+###  <a name="manage-profile-security-private-tab"></a><a name="ProfileSecurityPrivate"></a> “管理配置文件安全性”，“专用”选项卡  
  使用此页可配置专用配置文件。  
   
  配置文件可以为公共配置文件或专用配置文件。 只有特定用户或角色才能访问专用配置文件。 公共配置文件允许所有用户或角色访问邮件主机数据库 (**msdb**)，以使用该配置文件发送电子邮件。  
@@ -379,7 +379,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="SystemParameters"></a> AccountRetryAttempts  
+###  <a name="configure-system-parameters"></a><a name="SystemParameters"></a> AccountRetryAttempts  
  使用此页可以指定数据库邮件系统参数。 查看系统参数和每个参数的当前值。 选择某个参数可以在信息窗格中查看其简短说明。  
   
  **帐户重试次数**  
@@ -413,12 +413,12 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="CompleteWizard"></a> “完成向导”页  
+###  <a name="complete-the-wizard-page"></a><a name="CompleteWizard"></a> “完成向导”页  
  使用此页可以查看 **“数据库邮件配置向导”** 将要执行的操作。 在完成该向导之前，不会进行任何更改。  
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="TestEmail"></a> Send Test E-Mail Page  
+###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
  使用**从 _<instance_name>_ 发送测试电子邮件**页，可以使用指定的数据库邮件配置文件发送电子邮件。 只有 **sysadmin** 固定服务器角色的成员才可以使用此页发送测试电子邮件。  
   
  **数据库邮件配置文件**  
@@ -443,7 +443,7 @@ ms.locfileid: "74095703"
   
  [数据库邮件配置向导](#DBWizard)  
   
-##  <a name="Template"></a> 模板  
+##  <a name="using-templates"></a><a name="Template"></a> 模板  
  **创建数据库邮件配置脚本**  
   
 1.  在 **“视图”** 菜单上，选择 **“模板资源管理器”** 。  

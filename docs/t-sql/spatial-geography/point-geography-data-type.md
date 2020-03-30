@@ -19,10 +19,10 @@ ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72260167"
 ---
 # <a name="point-geography-data-type"></a>Point（geography 数据类型）
@@ -38,7 +38,7 @@ Point ( Lat, Long, SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- Lat   
+ *Lat*  
  一个 float 表达式，表示正在生成的 Point 的 X 坐标   。  
   
  *Long*  

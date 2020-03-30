@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288781"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
@@ -36,7 +36,7 @@ ms.locfileid: "79288781"
 
 本文介绍如何安装命令行工具。 如果正在寻找有关如何使用 **sqlcmd** 或 **bcp** 的示例，请参阅本主题末尾的[链接](#next-steps)。
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/> 在 RHEL 7 上安装工具
+## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/> 在 RHEL 7 上安装工具
 
 通过以下步骤在 Red Hat Enterprise Linux 上安装 **mssql-tools**。 
 
@@ -92,7 +92,7 @@ ms.locfileid: "79288781"
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a> 在 Ubuntu 16.04 上安装工具
+## <a name="install-tools-on-ubuntu-1604"></a><a id="ubuntu"></a> 在 Ubuntu 16.04 上安装工具
 
 通过以下步骤在 Ubuntu 上安装 **mssql-tools**。
 
@@ -140,7 +140,7 @@ ms.locfileid: "79288781"
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a> 在 SLES 12 上安装工具
+## <a name="install-tools-on-sles-12"></a><a id="SLES"></a> 在 SLES 12 上安装工具
 
 通过以下步骤在 SUSE Linux Enterprise Server 上安装 **mssql-tools**。 
 
@@ -179,7 +179,7 @@ ms.locfileid: "79288781"
    source ~/.bashrc
    ```
 
-## <a id="macos"></a> 在 macOS 上安装工具
+## <a name="install-tools-on-macos"></a><a id="macos"></a> 在 macOS 上安装工具
 
 macOS 上目前提供 **sqlcmd** 和 **bcp** 的预览版。 有关详细信息，请参阅[公告](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)。
 
@@ -198,7 +198,7 @@ brew install mssql-tools
 #HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
-## <a id="docker"></a> Docker
+## <a name="docker"></a><a id="docker"></a> Docker
 
 如果[在 Docker 容器中运行 SQL Server](quickstart-install-connect-docker.md)，则 SQL Server 命令行工具已包含在 SQL Server Linux 容器映像中。 如果使用交互式 bash shell 附加到正在运行的容器，则可以在本地运行这些工具。
 

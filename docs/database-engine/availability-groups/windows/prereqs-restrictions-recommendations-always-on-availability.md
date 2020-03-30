@@ -20,10 +20,10 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831936"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
@@ -34,7 +34,7 @@ ms.locfileid: "76831936"
 > [!IMPORTANT]  
 >  在部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]之前，强烈建议您阅读本主题的每个章节。  
     
-##  <a name="DotNetHotfixes"></a> 支持可用性组的 .Net 修补程序  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 支持可用性组的 .Net 修补程序  
  根据您将用于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]组件和功能，您可能需要安装在下表中标识的其他 .Net 修补程序。 可以按任意顺序安装这些修补程序。  
   
 ||依赖功能|修补程序|链接|  
@@ -42,7 +42,7 @@ ms.locfileid: "76831936"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347：[.Net 3.5 SP1 修补程序添加对 AlwaysOn 功能的支持](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
-###  <a name="SystemRequirements"></a>清单：要求（Windows 系统）  
+###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a>清单：要求（Windows 系统）  
  为了支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能，请确保要参与一个或多个可用性组的每台计算机都满足以下基本要求：  
   
 ||要求|链接|  
@@ -56,7 +56,7 @@ ms.locfileid: "76831936"
 > [!IMPORTANT]  
 >  另外，确保已正确配置了您的环境以连接到可用性组。 有关详细信息，请参阅 [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
-##  <a name="ComputerRecommendations"></a> 针对承载可用性副本的计算机的建议（Windows 系统）  
+##  <a name="recommendations-for-computers-that-host-availability-replicas-windows-system"></a><a name="ComputerRecommendations"></a> 针对承载可用性副本的计算机的建议（Windows 系统）  
   
 -   **的系统：** 对于给定的可用性组，所有可用性副本都应在可处理同样的工作负荷的相当的系统上运行。  
   
@@ -64,18 +64,18 @@ ms.locfileid: "76831936"
   
 -   **足够的磁盘空间：** 服务器实例在其上承载可用性副本的每个计算机都必须为该可用性组中的所有数据库拥有足够的磁盘空间。 请记住，在主数据库增长时，其相应的辅助数据库也增长相同量。  
   
-###  <a name="PermissionsWindows"></a> 权限（Windows 系统）  
+###  <a name="permissions-windows-system"></a><a name="PermissionsWindows"></a> 权限（Windows 系统）  
  若要管理 WSFC，用户必须是每个群集节点上的系统管理员。  
   
  有关用于管理群集的帐户的详细信息，请参阅[附录 A：故障转移群集要求](https://technet.microsoft.com/library/dd197454.aspx)。  
   
-###  <a name="RelatedTasksWindows"></a> 相关任务（Windows 系统）  
+###  <a name="related-tasks-windows-system"></a><a name="RelatedTasksWindows"></a> 相关任务（Windows 系统）  
   
 |任务|链接|  
 |----------|----------|  
 |设置 HostRecordTTL 值。|[更改 HostRecordTTL（使用 Windows PowerShell）](#ChangeHostRecordTTLps)|  
   
-####  <a name="ChangeHostRecordTTLps"></a> 更改 HostRecordTTL（使用 Windows PowerShell）  
+####  <a name="change-the-hostrecordttl-using-windows-powershell"></a><a name="ChangeHostRecordTTLps"></a> 更改 HostRecordTTL（使用 Windows PowerShell）  
   
 1.  通过 **“以管理员身份运行”** 打开 PowerShell 窗口。  
   
@@ -105,14 +105,14 @@ ms.locfileid: "76831936"
   
 -   [群集资源命令和等效的 Windows PowerShell cmdlet](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-###  <a name="RelatedContentWS"></a> 相关内容（Windows 系统）  
+###  <a name="related-content-windows-system"></a><a name="RelatedContentWS"></a> 相关内容（Windows 系统）  
   
 -   [在多站点故障转移群集中配置 DNS 设置](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
 -   [向网络名称资源注册 DNS](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
-##  <a name="ServerInstance"></a> SQL Server 实例先决条件和限制  
+##  <a name="sql-server-instance-prerequisites-and-restrictions"></a><a name="ServerInstance"></a> SQL Server 实例先决条件和限制  
   每个可用性组均要求称作“可用性副本” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的一组故障转移伙伴，它们由  的实例承载。 给定的服务器实例可以是独立实例  或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例  (FCI)。  
   
  **本节内容：**  
@@ -127,7 +127,7 @@ ms.locfileid: "76831936"
   
 -   [相关内容](#RelatedContentSI)  
   
-###  <a name="PrerequisitesSI"></a>清单：先决条件（服务器实例）  
+###  <a name="checklist-prerequisites-server-instance"></a><a name="PrerequisitesSI"></a>清单：先决条件（服务器实例）  
   
 ||先决条件|链接|  
 |-|------------------|-----------|  
@@ -141,7 +141,7 @@ ms.locfileid: "76831936"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果使用 FILESTREAM 的任何数据库将添加到某一可用性组，请确保在将承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。|[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果任何包含的数据库将添加到某一可用性组，请确保在将承载该可用性组的可用性副本的每个服务器实例上将 **contained database authentication** 服务器选项都设置为 **1** 。|[contained database authentication 服务器配置选项](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [服务器配置选项 (SQL Server)](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
-###  <a name="ThreadUsage"></a> 可用性组的线程使用情况  
+###  <a name="thread-usage-by-availability-groups"></a><a name="ThreadUsage"></a> 可用性组的线程使用情况  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的工作线程具有以下要求：  
   
 -   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的一个空闲实例上， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用 0 线程。  
@@ -166,14 +166,14 @@ ms.locfileid: "76831936"
   
  有关详细信息，请参阅 [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)（CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程师博客）。  
   
-###  <a name="PermissionsSI"></a> 权限（服务器实例）  
+###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a> 权限（服务器实例）  
   
 |任务|所需的权限|  
 |----------|--------------------------|  
 |创建数据库镜像端点|要求具有 CREATE ENDPOINT 权限，或者具有 **sysadmin** 固定服务器角色的成员身份。  此外，还要求 CONTROL ON ENDPOINT 权限。 有关详细信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。|  
 |启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|要求本地计算机上“管理员”组中的成员身份以及对 WSFC 的完全控制  。|  
   
-###  <a name="RelatedTasksSI"></a> 相关任务（服务器实例）  
+###  <a name="related-tasks-server-instance"></a><a name="RelatedTasksSI"></a> 相关任务（服务器实例）  
   
 |任务|项目|  
 |----------|-----------|  
@@ -181,19 +181,19 @@ ms.locfileid: "76831936"
 |创建数据库镜像端点（如果它尚不存在）|[为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [使用数据库镜像终结点证书 (Transact-SQL)](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [为 AlwaysOn 可用性组创建数据库镜像终结点 (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
 |启用可用性组|[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
   
-###  <a name="RelatedContentSI"></a> 相关内容（服务器实例）  
+###  <a name="related-content-server-instance"></a><a name="RelatedContentSI"></a> 相关内容（服务器实例）  
   
 -   [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
-##  <a name="NetworkConnect"></a> 网络连接建议  
+##  <a name="network-connectivity-recommendations"></a><a name="NetworkConnect"></a> 网络连接建议  
  强烈建议为 WSFC 节点之间的通信和可用性副本之间的通信使用相同的网络链接。  如果某些链接失败（甚至间歇性断开），使用单独的网络链接可能会导致意外行为。  
   
  例如，要使可用性组支持自动故障转移，作为自动故障转移伙伴的辅助副本必须处于 SYNCHRONIZED 状态。 如果到此辅助副本的网络链接失败（甚至间歇性断开），副本将进入 UNSYNCHRONIZED 状态，并且在该链接恢复之前无法重新同步。 如果该次要副本未同步并且 WSFC 请求自动故障转移，此时不会发生自动故障转移。  
   
-##  <a name="ClientConnSupport"></a> 客户端连接支持  
+##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a> 客户端连接支持  
  有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持客户端连接的详细信息，请参阅 [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
-##  <a name="FciArLimitations"></a> 使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和限制  
+##  <a name="prerequisites-and-restrictions-for-using-a-sql-server-failover-cluster-instance-fci-to-host-an-availability-replica"></a><a name="FciArLimitations"></a> 使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和限制  
  **本节内容：**  
   
 -   [限制](#RestrictionsFCI)  
@@ -204,7 +204,7 @@ ms.locfileid: "76831936"
   
 -   [相关内容](#RelatedContentFCIs)  
   
-###  <a name="RestrictionsFCI"></a> 限制 (FCI)  
+###  <a name="restrictions-fcis"></a><a name="RestrictionsFCI"></a> 限制 (FCI)  
   
 > [!NOTE]  
 > 故障转移群集实例支持群集共享卷 (CSV)。 有关 CSV 的详细信息，请参阅 [了解故障转移群集中的群集共享卷](https://technet.microsoft.com/library/dd759255.aspx)。  
@@ -221,13 +221,13 @@ ms.locfileid: "76831936"
   
 -   **更改 FCI 网络名称：** 如果你需要更改托管可用性副本的 FCI 的网络名称，则需要从副本的可用性组中删除它，然后将它添加回可用性组中。 您不能删除主副本，因此，如果您在重命名承载主副本的 FCI，则应故障转移到某一辅助副本，然后删除之前的主副本并将其添加回去。 请注意，重命名 FCI 可能会更改其数据库镜像端点的 URL。 当您添加副本时，请确保指定当前端点的 URL。  
   
-###  <a name="PrerequisitesFCI"></a>清单：先决条件 (FCI)  
+###  <a name="checklist-prerequisites-fcis"></a><a name="PrerequisitesFCI"></a>清单：先决条件 (FCI)  
   
 ||先决条件|链接|  
 |-|------------------|----------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|请确保每个 SQL Server 故障转移群集实例 (FCI) 都拥有标准 SQL Server 故障转移群集实例安装所要求的共享存储。||  
   
-###  <a name="RelatedTasksFCIs"></a> 相关任务 (FCI)  
+###  <a name="related-tasks-fcis"></a><a name="RelatedTasksFCIs"></a> 相关任务 (FCI)  
   
 |任务|项目|  
 |----------|-----------|  
@@ -235,13 +235,13 @@ ms.locfileid: "76831936"
 |您的现有 SQL Server 故障转移群集的就地升级|[升级 SQL Server 故障转移群集实例（安装程序）](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |维护您的现有 SQL Server 故障转移群集|[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
-###  <a name="RelatedContentFCIs"></a> 相关内容 (FCI)  
+###  <a name="related-content-fcis"></a><a name="RelatedContentFCIs"></a> 相关内容 (FCI)  
   
 -   [故障转移群集和可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
 -   [Always On 体系结构指南：使用故障转移群集实例和可用性组生成高可用性和灾难恢复解决方案](https://technet.microsoft.com/library/jj215886.aspx)  
   
-##  <a name="PrerequisitesForAGs"></a> 可用性组先决条件和限制  
+##  <a name="availability-group-prerequisites-and-restrictions"></a><a name="PrerequisitesForAGs"></a> 可用性组先决条件和限制  
  **本节内容：**  
   
 -   [限制](#RestrictionsAG)  
@@ -252,7 +252,7 @@ ms.locfileid: "76831936"
   
 -   [相关任务](#RelatedTasksAGs)  
   
-###  <a name="RestrictionsAG"></a> 限制（可用性组）  
+###  <a name="restrictions-availability-groups"></a><a name="RestrictionsAG"></a> 限制（可用性组）  
   
 -   可用性副本必须由一个 WSFC 的不同节点承载  ：对于某个给定可用性组，可用性副本必须由在同一 WSFC 的不同节点上运行的服务器实例承载。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。  
   
@@ -273,14 +273,14 @@ ms.locfileid: "76831936"
   
     -   不要使用故障转移群集管理器来故障转移可用性组。 必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
   
-###  <a name="RequirementsAG"></a> 先决条件（可用性组）  
+###  <a name="prerequisites-availability-groups"></a><a name="RequirementsAG"></a> 先决条件（可用性组）  
  在创建或重新配置可用性组配置时，请确保您遵守以下要求。  
   
 ||先决条件|说明|  
 |-|------------------|-----------------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您计划使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 承载可用性副本，则请确保您理解 FCI 限制并且满足 FCI 要求。|[有关使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和限制](#FciArLimitations)（本文前面已予以介绍）|  
   
-###  <a name="SecurityAG"></a> 安全性（可用性组）  
+###  <a name="security-availability-groups"></a><a name="SecurityAG"></a> 安全性（可用性组）  
   
 -   从 WSFC 继承安全性。 Windows Server 故障转移群集为整个群集粒度提供两级用户安全性：  
   
@@ -304,7 +304,7 @@ ms.locfileid: "76831936"
 |更改可用性组|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。<br /><br /> 此外，将数据库联接到可用性组要求具有 **db_owner** 固定服务器角色的成员身份。|  
 |删除可用性组|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。 若要删除并非在本地副本位置上承载的某一可用性组，您需要针对该可用性组的 CONTROL SERVER 权限或 CONTROL 权限。|  
   
-###  <a name="RelatedTasksAGs"></a> 相关任务（可用性组）  
+###  <a name="related-tasks-availability-groups"></a><a name="RelatedTasksAGs"></a> 相关任务（可用性组）  
   
 |任务|项目|  
 |----------|-----------|  
@@ -313,7 +313,7 @@ ms.locfileid: "76831936"
 |创建可用性组侦听器|[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |删除可用性组|[删除可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)|  
   
-##  <a name="PrerequisitesForDbs"></a> 可用性数据库先决条件和限制  
+##  <a name="availability-database-prerequisites-and-restrictions"></a><a name="PrerequisitesForDbs"></a> 可用性数据库先决条件和限制  
  若要符合添加到可用性组的条件，数据库必须满足以下先决条件和限制。  
   
  **本节内容：**  
@@ -328,7 +328,7 @@ ms.locfileid: "76831936"
   
 -   [相关任务](#RelatedTasksADb)  
   
-###  <a name="RequirementsDb"></a>清单：要求（可用性数据库）  
+###  <a name="checklist-requirements-availability-databases"></a><a name="RequirementsDb"></a>清单：要求（可用性数据库）  
  为了符合添加到可用性组的条件，数据库必须：  
   
 ||要求|链接|  
@@ -348,7 +348,7 @@ ms.locfileid: "76831936"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]可使用任何受支持的数据库兼容性级别。  
   
-###  <a name="RestrictionsDb"></a> 限制（可用性数据库）  
+###  <a name="restrictions-availability-databases"></a><a name="RestrictionsDb"></a> 限制（可用性数据库）  
   
 -   如果辅助数据库的文件路径（包括驱动器号）不同于相应主数据库的路径，则以下限制适用：  
   
@@ -363,13 +363,13 @@ ms.locfileid: "76831936"
   
 -   您不能删除当前属于可用性组的数据库。  
   
-###  <a name="TDEdbs"></a> 关注受 TDE 保护的数据库  
+###  <a name="follow-up-for-tde-protected-databases"></a><a name="TDEdbs"></a> 关注受 TDE 保护的数据库  
  如果使用透明数据加密 (TDE)，则用于创建和解密其他密钥的证书或非对称密钥在承载可用性组的可用性副本的每个服务器实例上必须相同。 有关详细信息，请参阅 [将受 TDE 保护的数据库移到其他 SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。  
   
-###  <a name="PermissionsDbs"></a> 权限（可用性数据库）  
+###  <a name="permissions-availability-databases"></a><a name="PermissionsDbs"></a> 权限（可用性数据库）  
  需要对数据库拥有 ALTER 权限。  
   
-###  <a name="RelatedTasksADb"></a> 相关任务（可用性数据库）  
+###  <a name="related-tasks-availability-databases"></a><a name="RelatedTasksADb"></a> 相关任务（可用性数据库）  
   
 |任务|项目|  
 |----------|-----------|  
@@ -377,7 +377,7 @@ ms.locfileid: "76831936"
 |将辅助数据库联接到可用性组（手动）|[将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  
 |修改可用性数据库的数目|[将数据库添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)<br /><br /> [将辅助数据库从可用性组删除 (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)<br /><br /> [将主数据库从可用性组删除 (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)|  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

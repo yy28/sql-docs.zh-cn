@@ -15,10 +15,10 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822559"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
@@ -32,7 +32,7 @@ ms.locfileid: "74822559"
 |[备份首选项](#BackupPreferencesTab)|使用此选项卡可以整体为可用性组指定您的备份首选项，并为各个可用性副本指定备份优先级。|  
 |[侦听器](#Listener)|使用此选项卡（如果可用）可以创建可用性组侦听器。 默认情况下不创建侦听器。<br /><br /> 仅当您正在运行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]时，此选项卡才可用。<br/><br/>群集类型为 EXTERNAL 或 NONE 时，DHCP 将处于禁用状态。 |  
   
-##  <a name="ReplicasTab"></a> “副本”选项卡  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> “副本”选项卡  
  **服务器实例**  
  显示将承载可用性副本的服务器实例的名称。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74822559"
  **删除副本**  
  单击可从可用性组中删除选择的辅助副本。  
   
-##  <a name="EndpointsTab"></a> “端点”选项卡  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> “端点”选项卡  
  对于将承载可用性副本的每个服务器实例， **“端点”** 选项卡将显示现有数据库镜像端点的实际值（如果有）或者要使用 Windows 身份验证的潜在新端点的建议值。 对于现有端点和潜在端点，“端点”值网格将显示以下信息：  
   
  **服务器名称**  
@@ -107,7 +107,7 @@ ms.locfileid: "74822559"
   
      如果在配置端点时保持 **“指定可用性副本”** 页打开，则返回 **“端点”** 选项卡，然后单击 **“刷新”** 以更新 **“端点值”** 网格。  
   
-##  <a name="BackupPreferencesTab"></a> “备份首选项”选项卡  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> “备份首选项”选项卡  
  若要指定应发生备份的位置，请选择下列选项之一。  
   
  **优先辅助**  
@@ -137,7 +137,7 @@ ms.locfileid: "74822559"
  **排除副本**  
  防止选择此可用性副本来执行备份。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  
   
-##  <a name="Listener"></a> “侦听器”选项卡  
+##  <a name="listener-tab"></a><a name="Listener"></a> “侦听器”选项卡  
  为将提供客户端连接点的[可用性组侦听器](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)指定你的首选项，其中包括：  
   
  **不立即创建可用性组侦听器。**  
@@ -195,7 +195,7 @@ ms.locfileid: "74822559"
 >  -   请求您的网络管理员将该侦听器的 IP 地址保留为专用。 将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
 > -   将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288381"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510198"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ GO
 4. 关系引擎开始执行计划。 在处理需要基表中数据的步骤时，关系引擎请求存储引擎向上传递从关系引擎请求的行集中的数据。
 5. 关系引擎将存储引擎返回的数据处理成为结果集定义的格式，然后将结果集返回客户端。
 
-### <a name="ConstantFolding"></a> 常量折叠和表达式计算 
+### <a name="constant-folding-and-expression-evaluation"></a><a name="ConstantFolding"></a> 常量折叠和表达式计算 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会先计算一些常量表达式来提高查询性能。 这称为常量折叠。 常量是 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本，例如 `3`、`'ABC'`、`'2005-12-31'`、`1.0e3` 或 `0x12345678`。
 
 #### <a name="foldable-expressions"></a>可折叠表达式
@@ -181,7 +181,7 @@ WHERE TotalDue > 117.00 + 1000.00;
 
 另一方面，如果 `dbo.f` 是用户定义的标量函数，则不折叠表达式 `dbo.f(100)`，因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不折叠包含用户定义函数的表达式，即使这些函数是确定性函数也是如此。 有关参数化的详细信息，请参阅本文稍后的[强制参数化](#ForcedParam)部分。
 
-#### <a name="ExpressionEval"></a>表达式计算 
+#### <a name="expression-evaluation"></a><a name="ExpressionEval"></a>表达式计算 
 此外，有些不可进行常量折叠但其参数在编译时已知的表达式（无论其参数是参数变量还是常量）将由优化期间优化器中包括的结果集大小（基数）估计器来计算。
 
 具体而言，在编译时将计算下列内置函数和特殊运算符（如果它们的所有输入都已知）：`UPPER`、`LOWER`、`RTRIM`、`DATEPART( YY only )`、`GETDATE`、`CAST` 和 `CONVERT`。 如果所有输入都是已知的，则在编译时计算下列运算符：
@@ -550,9 +550,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -573,9 +573,9 @@ GO
 再次验证可在计划缓存中找到的内容。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -599,10 +599,10 @@ GO
 再次验证可在计划缓存中找到的内容。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -690,7 +690,7 @@ sql_handle
 > [!NOTE]
 > 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `ON` 时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `OFF` 时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在低于 2005 版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
 
-### <a name="PlanReuse"></a>参数和执行计划的重复使用
+### <a name="parameters-and-execution-plan-reuse"></a><a name="PlanReuse"></a>参数和执行计划的重复使用
 使用参数（包括 ADO、OLE DB 和 ODBC 应用程序中的参数标记）有助于重用执行计划。 
 
 > [!WARNING] 
@@ -758,7 +758,7 @@ WHERE AddressID = 1 + 2;
 
 但根据简单参数化规则，可以将该查询参数化。 尝试强制参数化失败后，仍将接着尝试简单参数化。
 
-### <a name="SimpleParam"></a>简单参数化
+### <a name="simple-parameterization"></a><a name="SimpleParam"></a>简单参数化
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，在 Transact-SQL 语句中使用参数或参数标记可以提高关系引擎将新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与现有的、以前编译的执行计划相匹配的能力。
 
 > [!WARNING] 
@@ -793,7 +793,7 @@ WHERE ProductSubcategoryID = 4;
 
 您也可以指定对单个查询以及其他在语法上等效，只有参数值不同的查询进行参数化。 
 
-### <a name="ForcedParam"></a>强制参数化
+### <a name="forced-parameterization"></a><a name="ForcedParam"></a>强制参数化
 通过指定将数据库中的所有 `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 语句参数化，可以覆盖 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认简单参数化行为（但会受到某些限制）。 通过在 `PARAMETERIZATION` 语句中将 `FORCED` 选项设置为 `ALTER DATABASE` 可以启用强制参数化。 强制参数化通过降低查询编译和重新编译的频率，可以提高某些数据库的性能。 能够通过强制参数化受益的数据库通常是需要处理来自源（例如，销售点应用程序）的大量并发查询的数据库。
 
 当 `PARAMETERIZATION` 选项设置为 `FORCED`时， `SELECT`、 `INSERT`、 `UPDATE`或 `DELETE` 语句中出现的任何文本值（无论以什么形式提交）都将在查询编译期间转换为参数。 但下列查询构造中出现的文本例外： 
@@ -842,7 +842,7 @@ WHERE ProductSubcategoryID = 4;
 * 如果二进制文本在 8,000 字节以内，将参数化为 varbinary(8000)。 如果多于 8,000 字节，则转换为 varbinary(max)。
 * Money 类型的文本，将参数化为 money。
 
-#### <a name="ForcedParamGuide"></a>强制参数化使用指南
+#### <a name="guidelines-for-using-forced-parameterization"></a><a name="ForcedParamGuide"></a>强制参数化使用指南
 当把 `PARAMETERIZATION` 选项设置为 FORCED 时考虑以下事项：
 
 * 强制参数化实际上是在对查询进行编译时将查询中的文本常量更改为参数。 因此，查询优化器可能会选择不太理想的查询计划。 尤其是查询优化器不太可能将查询与索引视图或计算列索引相匹配。 它还可能会选择对分区表和分布式分区视图执行的不太理想的查询计划。 强制参数化不能用于高度依赖索引视图和计算列索引的环境。 通常， `PARAMETERIZATION FORCED` 选项应仅供有经验的数据库管理员在确定这样做不会对性能产生负面影响之后使用。
@@ -894,7 +894,7 @@ WHERE ProductID = 63;
 * 应用程序可以控制何时创建和重新使用执行计划。
 * 准备/执行模型可移植到其他数据库，包括早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-### <a name="ParamSniffing"></a>参数截取
+### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a>参数截取
 “参数探查”指 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在编译或重新编译期间“探查”当前参数值，并将其传递给查询优化器，以便将这些参数值用于生成可能更高效的查询执行计划的这一过程。
 
 在编译或重新编译期间，将针对以下类型的批处理对参数值进行探查：
@@ -903,7 +903,7 @@ WHERE ProductID = 63;
 -  通过 sp_executesql 提交的查询 
 -  预定义查询
 
-有关对错误参数探查问题进行故障排除的详细信息，请参阅[对具有参数敏感型查询执行计划问题的查询进行故障排除](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems)。
+有关对错误参数探查问题进行故障排除的详细信息，请参阅[对具有参数敏感型查询执行计划问题的查询进行故障排除](/azure/sql-database/sql-database-monitor-tune-overview)。
 
 > [!NOTE]
 > 对于使用 `RECOMPILE` 提示的查询，将探查参数值和局部变量的当前值。 探查的参数值和局部变量值在批处理中所处的位置刚好就在具有 `RECOMPILE` 提示的语句前面。 特别的是，对于参数，不会探查随批处理调用而出现的值。
@@ -945,7 +945,7 @@ WHERE ProductID = 63;
 * 对于特定的查询，认为串行执行计划快于任何可能的并行执行计划。
 * 查询包含无法并行运行的标量运算符或关系运算符。 某些运算符可能会导致查询计划的一部分以串行模式运行，或者导致整个计划以串行模式运行。
 
-### <a name="DOP"></a>并行度
+### <a name="degree-of-parallelism"></a><a name="DOP"></a>并行度
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 自动检测每个并行查询执行或索引数据定义语言 (DDL) 操作实例的最佳并行度。 此操作所依据的条件如下： 
 
 1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否运行在具有多个微处理器或 CPU 的计算机（例如对称多处理计算机，即 SMP）上  。 只有具有多个 CPU 的计算机才能使用并行查询。 
@@ -1285,12 +1285,12 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 再举一个例子，假设表在 A 列上有四个分区，边界点为 (10, 20, 30)，在 B 列上有一个索引，并且查询有谓词子句 `WHERE B IN (50, 100, 150)`。 由于表分区基于 A 的值，因此 B 的值可以出现在任何表分区中。 这样，查询处理器将分别在四个表分区中查找三个 B 值 (50, 100, 150) 中的每一个值。 查询处理器将按比例分配工作线程，以便它可以并行执行 12 个查询扫描中的每一个扫描。
 
-|基于 A 列的表分区 |在每个表分区中查找 B 列 |
+|基于 A 列的表分区    |在每个表分区中查找 B 列 |
 |----|----|
-|表分区 1：A < 10   |B=50, B=100, B=150 |
-|表分区 2：A >= 10 和 A < 20   |B=50, B=100, B=150 |
-|表分区 3：A >= 20 和 A < 30   |B=50, B=100, B=150 |
-|表分区 4：A >= 30  |B=50, B=100, B=150 |
+|表分区 1：A < 10     |B=50, B=100, B=150 |
+|表分区 2：A >= 10 和 A < 20     |B=50, B=100, B=150 |
+|表分区 3：A >= 20 和 A < 30     |B=50, B=100, B=150 |
+|表分区 4：A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>最佳实践
 
@@ -1374,7 +1374,7 @@ SET STATISTICS XML OFF;
 GO
 ```
 
-##  <a name="Additional_Reading"></a> 其他阅读主题  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他阅读主题  
  [Showplan 逻辑运算符和物理运算符参考](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [扩展事件](../relational-databases/extended-events/extended-events.md)  
  [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)  

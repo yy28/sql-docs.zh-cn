@@ -11,10 +11,10 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557942"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server 代理中运行 Windows PowerShell 步骤
@@ -37,13 +37,13 @@ ms.locfileid: "75557942"
 
 - 使用命令提示作业步骤以便运行 PowerShell.exe，并且指定导入 **sqlps** 模块的脚本。
 
-### <a name="LimitationsRestrictions"></a> 关于内存占用的警告
+### <a name="caution-about-memory-consumption"></a><a name="LimitationsRestrictions"></a> 关于内存占用的警告
 
 通过 sqlps  模块运行 PowerShell 的每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤都启动进程，大约占用 20MB  内存。 同时运行大量的 Windows PowerShell 作业步骤会对性能产生负面影响。  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="PShellJob"></a> 创建 PowerShell 作业步骤  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a> 创建 PowerShell 作业步骤  
  **创建 PowerShell 作业步骤**  
   
 1.  展开“SQL Server 代理”  ，创建一个新作业或右键单击一个现有作业，再单击“属性”  。 有关创建作业的详细信息，请参阅 [创建作业](../ssms/agent/create-jobs.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "75557942"
   
 7.  单击 **“高级”** 页设置以下作业步骤选项：当该作业步骤成功或失败时将执行的操作、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理应该尝试执行该作业步骤的次数以及重试的时间间隔。  
   
-##  <a name="CmdExecJob"></a> 创建命令提示作业步骤  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a> 创建命令提示作业步骤  
  **创建 CmdExec 作业步骤**  
   
 1.  展开“SQL Server 代理”  ，创建一个新作业或右键单击一个现有作业，再单击“属性”  。 有关创建作业的详细信息，请参阅 [创建作业](../ssms/agent/create-jobs.md)。  

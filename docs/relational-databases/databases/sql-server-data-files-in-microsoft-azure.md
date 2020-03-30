@@ -11,10 +11,10 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74833583"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
@@ -109,7 +109,7 @@ ON
 - 在 Azure 虚拟机中运行的 SQL Server：如果要在 [Azure 虚拟机上安装 SQL Server](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，请安装 SQL Server 2016，或更新现有实例。 同样，也可以使用 SQL Server 2016 平台映像在 Azure 中创建新虚拟机。
 
   
-###  <a name="bkmk_Limitations"></a> 限制  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 限制  
   
 - 在此功能的最新版本中，不支持在 Azure 存储中存储 **FileStream** 数据。 可以在数据库中存储 **FileStream** 文件，该数据库还包含存储在 Azure 存储中的数据文件，但所有 FileStream 数据文件都必须存储在本地存储中。  由于 FileStream 数据必须驻留在本地存储中，不能使用 Azure 存储在计算机之间移动它，我们建议继续使用[传统技术](../../relational-databases/blob/move-a-filestream-enabled-database.md)在不同的计算机之间移动与 FileStream 关联的数据。  
   
@@ -154,7 +154,7 @@ ON
 
 - **sys.master_files** 系统视图中新增一个 **int**列，即 **credential_id** 。 credential_id 列用于实现将 Azure 存储数据文件交叉引用回为其创建的凭据的 `sys.credentials`  。 你可以使用它来排除故障，例如，当有数据库文件使用凭据时无法删除凭据。  
   
-##  <a name="bkmk_Troubleshooting"></a> 排查“Microsoft Azure 中的 SQL Server 数据文件”功能问题  
+##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> 排查“Microsoft Azure 中的 SQL Server 数据文件”功能问题  
  为避免不受支持的功能或限制造成的错误，首先请查看 [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)。  
   
  下面列出了使用“Azure 存储中的 SQL Server 数据文件”功能时可能遇到的错误。  

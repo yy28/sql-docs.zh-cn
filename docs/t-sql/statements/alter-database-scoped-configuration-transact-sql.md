@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
 ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288967"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -409,7 +409,7 @@ DW_COMPATIBILITY_LEVEL（预览版） **=** {AUTO  | 10 | 20 }
 |**10**| 在引入兼容性级别支持之前，请练习 Transact-SQL 和查询处理行为。|
 |**20**| 第一种兼容性级别，包括封闭 Transact-SQL 和查询处理行为。 |
 
-## <a name="Permissions"></a> 权限
+## <a name="permissions"></a><a name="Permissions"></a> 权限
 
 需要数据库上的 `ALTER ANY DATABASE SCOPE CONFIGURATION`。 用户若具有针对数据库的 CONTROL 权限，便可授予此权限。
 

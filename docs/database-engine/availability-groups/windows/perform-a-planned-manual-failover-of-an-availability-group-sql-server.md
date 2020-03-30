@@ -16,10 +16,10 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287201"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的计划手动故障转移 (SQL Server)
@@ -31,12 +31,12 @@ ms.locfileid: "79287201"
 > [!NOTE]  
 >  如果次要副本和主要副本都配置为自动故障转移模式，那么同步次要副本后，该副本还可以用作自动故障转移的目标。 有关详细信息，请参阅[可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
    
-##  <a name="BeforeYouBegin"></a> 准备工作 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 准备工作 
 
 >[!IMPORTANT]
 >在没有群集管理器的情况下，需要通过一些特定过程对读取缩放可用性组进行故障转移。 当可用性组具有 CLUSTER_TYPE = NONE 时，请按照[故障转移读取缩放可用性组上的主要副本](#fail-over-the-primary-replica-on-a-read-scale-availability-group)中的过程进行操作。
 
-###  <a name="Restrictions"></a> 限制和局限 
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限 
   
 - 故障转移命令将在目标辅助副本接受它之后立即返回。 但是，在可用性组完成故障转移之后，数据库恢复操作将以异步方式执行。 
 - 故障转移时，可能不维护可用性组中数据库间的跨数据库一致性。 
@@ -44,7 +44,7 @@ ms.locfileid: "79287201"
     > [!NOTE] 
     >  对跨数据库和分布式事务的支持因 SQL Server 和操作系统版本而异。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。 
   
-###  <a name="Prerequisites"></a>先决条件和限制 
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>先决条件和限制 
   
 -   目标次要副本和主要副本必须同时在同步提交可用性模式下运行。 
 -   目标次要副本当前必须与主要副本同步。 此次要副本上的所有辅助数据库都必须已联接到可用性组。 它们还必须与自己对应的主数据库同步（即本地辅助数据库必须为 SYNCHRONIZED）。 
@@ -53,12 +53,12 @@ ms.locfileid: "79287201"
     >  要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 动态管理视图中的 is_failover_ready 列  。 或查看 [AlwaysOn 组仪表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”  列。 
 -   只有目标辅助副本支持该任务。 您必须连接到承载目标辅助副本的服务器实例。 
   
-###  <a name="Security"></a> Security 
+###  <a name="security"></a><a name="Security"></a> Security 
   
-####  <a name="Permissions"></a> 权限 
+####  <a name="permissions"></a><a name="Permissions"></a> 权限 
  需要具有针对可用性组的 ALTER AVAILABILITY GROUP 权限。 还要求具备 CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。 
   
-##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio 
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio 
  对可用性组执行手动故障转移： 
   
 1. 在对象资源管理器中，连接到托管需要进行故障转移的可用性组的一个次要副本的服务器实例。 展开服务器树。 
@@ -69,7 +69,7 @@ ms.locfileid: "79287201"
   
 4. “故障转移可用性组向导”随即启动。 有关详细信息，请参阅[使用故障转移可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。 
   
-##  <a name="TsqlProcedure"></a>使用 Transact-SQL 
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL 
  对可用性组执行手动故障转移： 
   
 1. 连接到承载目标辅助副本的服务器实例。 
@@ -86,7 +86,7 @@ ms.locfileid: "79287201"
     ALTER AVAILABILITY GROUP MyAg FAILOVER;  
     ```  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell 
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a>使用 PowerShell 
  对可用性组执行手动故障转移： 
   
 1. 将目录 (cd  ) 更改为托管目标次要副本的服务器实例。 
@@ -107,7 +107,7 @@ ms.locfileid: "79287201"
     -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [获取有关 SQL Server PowerShell 的帮助](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> 跟进：在对可用性组进行手动故障转移后 
+##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> 跟进：在对可用性组进行手动故障转移后 
  如果故障转移到可用性组的 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外，请调整 Windows Server 故障转移群集节点的仲裁投票以反映新的可用性组配置。 有关详细信息，请参阅 [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。 
 
 <a name = "ReadScaleOutOnly"><a/>

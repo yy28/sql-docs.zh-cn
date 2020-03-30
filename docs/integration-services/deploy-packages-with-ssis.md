@@ -21,10 +21,10 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b873c611c0e997c5033c2efed341f93e0ec5aa5e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290730"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署包
@@ -51,7 +51,7 @@ ms.locfileid: "71290730"
 ## <a name="what-you-learn"></a>学习内容    
 熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新工具、控件和功能的最好方法，就是使用它们。 本教程将引导您完成创建 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目再将包和其他所需文件添加到项目的步骤。 完成项目后，将创建部署捆绑，将该捆绑复制到目标计算机，然后在目标计算机上安装包。    
     
-## <a name="prerequisites"></a>必备条件    
+## <a name="prerequisites"></a>先决条件    
 本教程适用于已经熟悉基本的文件系统操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新功能认识有限的用户。 为了更好地理解基本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 概念（将在本教程中使用它们），你可能会发现首先学习完下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程很有用：[SSIS 如何创建 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。    
     
 ### <a name="on-the-source-computer"></a>在源计算机上

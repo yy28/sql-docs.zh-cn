@@ -13,10 +13,10 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3c6614425cf8796bd7ec462a62f9410b9ca5857
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936384"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>加载 Microsoft Drivers for PHP for SQL Server
@@ -31,7 +31,7 @@ ms.locfileid: "67936384"
 还可以在构建 PHP 时或使用 `phpize` 从源生成驱动程序。 如果选择从源生成驱动程序，则可以通过在生成 PHP 时将 `--enable-sqlsrv=static --with-pdo_sqlsrv=static`（在 Linux 和 macOS 上）或 `--enable-sqlsrv=static --with-pdo-sqlsrv=static`（在 Windows 上）添加到 `./configure` 命令来将驱动程序静态生成到 PHP 中，而不是将它们生成为共享扩展。 有关 PHP 生成系统和 `phpize` 的详细信息，请参阅 [PHP 文档](http://php.net/manual/install.php)。
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>将驱动程序文件移动到扩展目录中  
-驱动程序文件必须位于 PHP 运行时可以找到它的目录中。 最简单的方法是将驱动程序文件放入默认的 PHP 扩展目录中。要查找默认目录，只需在 Windows 上运行 `php -i | sls extension_dir` 或在 Linux/macOS 上运行 `php -i | grep extension_dir`。 如果使用的不是默认扩展目录，请使用 extension_dir 选项在 PHP 配置文件 (php.ini) 中指定一个目录。 例如，在 Windows 上，如果已将驱动程序文件置于 `c:\php\ext` 目录中，则将以下行添加到 php.ini 中：
+驱动程序文件必须位于 PHP 运行时可以找到它的目录中。 最简单的方法是将驱动程序文件放入默认的 PHP 扩展目录中。要查找默认目录，只需在 Windows 上运行 `php -i | sls extension_dir` 或在 Linux/macOS 上运行 `php -i | grep extension_dir`。 如果使用的不是默认扩展目录，请使用 extension_dir  选项在 PHP 配置文件 (php.ini) 中指定一个目录。 例如，在 Windows 上，如果已将驱动程序文件置于 `c:\php\ext` 目录中，则将以下行添加到 php.ini 中：
   
 ```  
 extension_dir = "c:\PHP\ext"  
@@ -40,7 +40,7 @@ extension_dir = "c:\PHP\ext"
 ## <a name="loading-the-driver-at-php-startup"></a>在 PHP 启动时加载驱动程序  
 若要在 PHP 启动时加载 SQLSRV 驱动程序，首先要将驱动程序文件移动到扩展目录中。 然后，按如下步骤操作：  
   
-1.  要启用 SQLSRV 驱动程序，请通过向扩展部分添加以下行并适当地更改文件名来修改 php.ini：  
+1.  要启用 SQLSRV  驱动程序，请通过向扩展部分添加以下行并适当地更改文件名来修改 php.ini  ：  
   
     在 Windows 上： 
     ```  
@@ -55,7 +55,7 @@ extension_dir = "c:\PHP\ext"
     extension=sqlsrv.so
     ```
   
-2.  要启用 PDO_SQLSRV 驱动程序，PHP 数据对象 (PDO) 必须可用作内置扩展，或用作动态加载的扩展。
+2.  要启用 PDO_SQLSRV  驱动程序，PHP 数据对象 (PDO) 必须可用作内置扩展，或用作动态加载的扩展。
 
     在 Windows 上，预生成的 PHP 二进制文件带有内置的 PDO，因此无需修改 php.ini 即可加载它。 但是，如果已从源编译 PHP 并指定了要生成的单独 PDO 扩展，它将被命名为 `php_pdo.dll`，并且必须将其复制到扩展目录中并将以下行添加到 php.ini 中：  
     ```
@@ -80,7 +80,7 @@ extension_dir = "c:\PHP\ext"
 > [!NOTE]  
 > 若要确定驱动程序是否已成功加载，请运行可调用 [phpinfo()](https://php.net/manual/en/function.phpinfo.php) 的脚本。  
   
-有关 php.ini 指令的详细信息，请参阅[核心 php.ini 指令说明](https://php.net/manual/en/ini.core.php)。  
+有关 php.ini 指令的详细信息，请参阅[核心 php.ini 指令说明](https://php.net/manual/en/ini.core.php)  。  
   
 ## <a name="see-also"></a>另请参阅  
 [开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727470"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>使用 sqlrutils 创建存储过程
@@ -21,7 +21,7 @@ ms.locfileid: "73727470"
 
 本文介绍了转换 R 代码以作为 T-SQL 存储过程运行的步骤。 为了获得最佳的可能结果，可能需要对代码进行某种程度的修改，以确保所有输入可参数化。
 
-## <a name="bkmk_rewrite"></a>步骤 1. 重写 R 脚本
+## <a name="step-1-rewrite-r-script"></a><a name="bkmk_rewrite"></a>步骤 1. 重写 R 脚本
 
 为获得最佳结果，应重写 R 代码，以将其封装为单个函数。
 
@@ -145,7 +145,7 @@ StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp
 2. 定义 `$query` 或为每个输入参数设置 `$value` 。
 3. 使用 `executeStoredProcedure` 从 R 开发环境执行该存储过程，传递设置的输入参数对象列表。
 
-## <a name = "samples"></a>示例
+## <a name="example"></a><a name = "samples"></a>示例
 
 此示例显示了从 SQL Server 数据库获取数据、对数据执行一些转换并将其保存到不同数据库的 R 脚本的前后版本。
 

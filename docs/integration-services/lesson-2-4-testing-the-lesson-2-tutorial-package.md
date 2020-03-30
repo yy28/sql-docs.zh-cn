@@ -11,10 +11,10 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283556"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>第 2-4 课：测试第 2 课教程包

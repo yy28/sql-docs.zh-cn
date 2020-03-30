@@ -11,10 +11,10 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822180"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>排除故障：可用性组超过了 RPO
@@ -29,7 +29,7 @@ ms.locfileid: "74822180"
   
 2.  [磁盘 I/O 瓶颈降低次要副本上的强化速度](#BKMK_IO_BOTTLENECK)  
   
-##  <a name="BKMK_LATENCY"></a>高网络延迟或低网络吞吐量导致主要副本上日志堆积  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a>高网络延迟或低网络吞吐量导致主要副本上日志堆积  
  数据库超过其 RPO 的最常见原因是：无法以足够快的速度将数据库发送到次要副本。  
   
 ### <a name="explanation"></a>说明  
@@ -63,7 +63,7 @@ ms.locfileid: "74822180"
 要解决此问题，请尝试升级网络带宽，或者删除或减少不必要的网络流量。  
 
 
-##  <a name="BKMK_IO_BOTTLENECK"></a>磁盘 I/O 瓶颈降低次要副本上的强化速度  
+##  <a name="disk-io-bottleneck-slows-down-log-hardening-on-the-secondary-replica"></a><a name="BKMK_IO_BOTTLENECK"></a>磁盘 I/O 瓶颈降低次要副本上的强化速度  
  根据数据库文件部署，日志强化速度可能因与报告工作负荷的 I/O 争用而降低。  
   
 ### <a name="explanation"></a>说明  

@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708738"
 ---
 # <a name="back-up-a-transaction-log"></a>备份事务日志
@@ -26,17 +26,17 @@ ms.locfileid: "71708738"
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份事务日志。  
 
 ## <a name="before-you-begin"></a>开始之前
-### <a name="Restrictions"></a> 限制和局限  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 不允许在显式或[隐式](../../t-sql/statements/set-implicit-transactions-transact-sql.md)事务中使用 `BACKUP` 语句。 显式事务就是可以显式地在其中定义事务的开始和结束的事务。
 
-### <a name="Recommendations"></a> 建议  
+### <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 - 如果数据库使用完整[恢复模式](recovery-models-sql-server.md)或大容量日志恢复模式，则必须足够频繁地备份事务日志，以保护数据和避免[事务日志变满](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。 这将截断日志，并且支持将数据库还原到特定时间点。 
   
 - 默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果频繁地备份日志，这些成功消息会迅速累积，从而产生巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目，请参阅 [跟踪标志 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
-### <a name="Permissions"></a> 权限
+### <a name="permissions"></a><a name="Permissions"></a> 权限
 
 默认情况下，为 sysadmin 固定服务器角色以及 db_owner 和 db_backupoperator 固定数据库角色的成员授予所需的 `BACKUP DATABASE` 和 `BACKUP LOG` 权限    。 开始操作前，先检查是否有正确的权限。
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell
 
 设置和使用 [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)。 使用 **Backup-SqlDatabase** cmdlet 并为 **-BackupAction** 参数的值指定 **Log** 。  
   
@@ -160,7 +160,7 @@ GO
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

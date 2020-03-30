@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041195"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：生成基本表报表（报表生成器）
@@ -26,7 +26,7 @@ ms.locfileid: "63041195"
 ## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="CreateTable"></a>1.使用向导创建报表  
+## <a name="1-create-a-report-using-a-wizard"></a><a name="CreateTable"></a>1.使用向导创建报表  
 使用表或矩阵向导创建表报表。 有两类模式：报表设计模式和共享数据集设计模式。 在报表设计模式中，您可以在“报表数据”窗格中指定数据，在设计图面上指定报表布局。 在共享数据集设计模式中，可以创建与他人共享的数据集查询。 在本教程中，您将使用报表设计模式。  
   
 ### <a name="to-create-a-report"></a>创建报表  
@@ -41,7 +41,7 @@ ms.locfileid: "63041195"
   
 3.  在右窗格中，选择“表或矩阵向导”  。  
   
-## <a name="DataConnection"></a>1a. 在表向导中指定数据连接  
+## <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. 在表向导中指定数据连接  
 数据连接包含要连接到外部数据源（如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库）的信息。 通常会从数据源所有者处获取连接信息以及要使用的凭据类型。 若要指定数据连接，可以从报表服务器使用共享数据源或创建仅在此报表中使用的嵌入数据源。  
   
 在本教程中，您将使用嵌入数据源。 若要了解有关使用共享数据源的详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "63041195"
   
 9. 单击“下一步”。   
   
-## <a name="Query"></a>1b. 在表向导中创建查询  
+## <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. 在表向导中创建查询  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在这一报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ ms.locfileid: "63041195"
   
 4.  单击“下一步”。   
   
-## <a name="Groups"></a>1c. 在表向导中将数据组织到组中  
+## <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1c. 在表向导中将数据组织到组中  
 在选择要进行分组的字段时，可以设计一个表格，其中的行和列显示了详细数据和聚合数据。  
   
 ### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -159,7 +159,7 @@ ms.locfileid: "63041195"
   
 6.  单击“下一步”。   
   
-## <a name="Subtotals"></a>1d. 在表向导中添加小计行和合计行  
+## <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1d. 在表向导中添加小计行和合计行  
 创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
   
 ### <a name="to-add-subtotals-and-totals"></a>添加小计和总计  
@@ -186,7 +186,7 @@ ms.locfileid: "63041195"
   
 表将添加到设计图面中。 该表有 5 列、5 行。 “行组”窗格显示三个行组：“SalesDate”、“Subcategory”和“Details”。 详细信息数据是由数据集查询检索的所有数据。  
   
-## <a name="FormatCurrency"></a>2.将数据格式设置为货币  
+## <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2.将数据格式设置为货币  
 默认情况下，Sales 字段的汇总数据将显示总数。 请设置其格式，以使其显示货币形式的数字。   
   
 ### <a name="to-format-a-currency-field"></a>设置货币字段格式  
@@ -203,7 +203,7 @@ ms.locfileid: "63041195"
   
 Sales 的汇总值会以货币形式显示。  
   
-## <a name="FormatDate"></a>3.将数据格式设置为日期格式  
+## <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3.将数据格式设置为日期格式  
 默认情况下，SalesDate 字段会同时显示日期和时间。 您可以设置其格式，使其只显示日期。  
   
 ### <a name="to-format-a-date-field-as-the-default-format"></a>将日期字段设置为默认格式  
@@ -242,7 +242,7 @@ SalesDate 值将以默认日期格式显示。
   
 SalesDate 值将显示月份名而非月份数字。  
   
-## <a name="Width"></a>4.更改列宽  
+## <a name="4-change-column-widths"></a><a name="Width"></a>4.更改列宽  
 默认情况下，表中的每个单元格都包含一个文本框。 在呈现页面时，文本框将垂直扩展以容纳文本。 在呈现的报表中，每个行将扩展到行中呈现的最高文本框的高度。 设计图面上的行的高度不会影响已呈现报表中的行的高度。  
   
 若要减少每个行占用的垂直空间量，请扩展列宽以容纳单个行的列中的文本框的预计内容。  
@@ -259,7 +259,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 4.  单击 **“运行”** 以预览报表。  
   
-## <a name="Title"></a>5.添加报表标题  
+## <a name="5-add-a-report-title"></a><a name="Title"></a>5.添加报表标题  
 报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本教程中，您将使用自动放置在表体顶部的文本框。  
   
 通过将不同的字体样式、大小和颜色应用于文本的短语和单个字符，可以进一步增强文本。 有关详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
@@ -282,7 +282,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>6.保存报表  
+## <a name="6-save-the-report"></a><a name="Save"></a>6.保存报表  
 将报表保存到报表服务器或计算机上。 如果不将报表保存到报表服务器上，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
@@ -311,7 +311,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 4.  单击“ **保存**”。  
   
-## <a name="Export"></a>7.导出报表  
+## <a name="7-export-the-report"></a><a name="Export"></a>7.导出报表  
 可以将报表导出为不同的格式，如 Microsoft Excel 和逗号分隔值 (CSV) 文件。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中用于控制分页的规则。  
   
 在本教程中，您将报表导出为 Excel 格式，并设置报表的属性以便为工作簿选项卡提供自定义名称。  

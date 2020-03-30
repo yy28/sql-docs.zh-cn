@@ -47,10 +47,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287921"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
@@ -331,7 +331,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  有关详细信息，请参阅[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)。  
 
-## <a name="Simple"></a> 简单示例
+## <a name="simple-examples"></a><a name="Simple"></a> 简单示例
 
 为帮助快速入门，这里提供以下两个简单示例：  
 `SELECT DB_NAME() AS ThisDB;` 返回当前数据库的名称。  
@@ -464,7 +464,7 @@ GO
   
  对于 CLR 存储过程，需要 EXTERNAL NAME 子句中引用的程序集的所有权，或者该程序集的 REFERENCES 权限  。  
   
-##  <a name="mot"></a> CREATE PROCEDURE 和内存优化表  
+##  <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE 和内存优化表  
  可以通过传统和本机编译存储过程访问内存优化表。 大多数情况下，本机过程是更高效的方式。
 有关详细信息，请参阅[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
@@ -487,7 +487,7 @@ GO
   
  有关本机编译的存储过程中的可编程性、支持的查询外围应用和运算符的论述，请参阅[本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
   
-## <a name="Examples"></a> 示例  
+## <a name="examples"></a><a name="Examples"></a> 示例  
   
 |类别|作为特征的语法元素|  
 |--------------|------------------------------|  
@@ -499,7 +499,7 @@ GO
 |[强制过程重新编译](#Recompile)|WITH RECOMPILE|  
 |[设置安全性上下文](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a> 基本语法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本语法  
  此节中的示例说明了使用最低要求的语法的 CREATE PROCEDURE 语句的基本功能。  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. 创建简单 Transact-SQL 过程  
@@ -558,7 +558,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a> 传递参数  
+###  <a name="passing-parameters"></a><a name="Parameters"></a> 传递参数  
  此节中的示例说明如何使用输入参数和输出参数将值传递给存储过程以及从存储过程传递值。  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D. 创建带有输入参数的过程  
@@ -766,7 +766,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a> 使用存储过程修改数据  
+###  <a name="modifying-data-by-using-a-stored-procedure"></a><a name="Modify"></a> 使用存储过程修改数据  
  此节中的示例说明如何通过在过程定义中包含数据操作语言 (DML) 语句，在表或视图中插入或修改数据。  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>I. 在存储过程中使用 UPDATE  
@@ -790,7 +790,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a> 错误处理  
+###  <a name="error-handling"></a><a name="Error"></a> 错误处理  
  此节中的示例介绍一些方法，这些方法用于处理在执行存储过程时可能出现的错误。  
   
 #### <a name="j-using-trycatch"></a>J. 使用 TRY...CATCH  
@@ -865,7 +865,7 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a> 对过程定义进行模糊处理  
+###  <a name="obfuscating-the-procedure-definition"></a><a name="Encrypt"></a> 对过程定义进行模糊处理  
  此节中的示例说明如何对存储过程定义进行模糊处理。  
   
 #### <a name="k-using-the-with-encryption-option"></a>K. 使用 WITH ENCRYPTION 选项  
@@ -911,7 +911,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a>强制过程重新编译  
+###  <a name="forcing-the-procedure-to-recompile"></a><a name="Recompile"></a>强制过程重新编译  
  此节中的示例使用 WITH RECOMPILE 子句强制过程在每次执行时进行重新翻译。  
   
 #### <a name="l-using-the-with-recompile-option"></a>L. 使用 WITH RECOMPILE 选项  
@@ -934,7 +934,7 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a> 设置安全性上下文  
+###  <a name="setting-the-security-context"></a><a name="Security"></a> 设置安全性上下文  
  此节中的示例使用 EXECUTE AS 子句设置执行存储过程的安全上下文。  
   
 #### <a name="m-using-the-execute-as-clause"></a>M. 使用 EXECUTE AS 子句  

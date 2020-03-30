@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903854"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
@@ -26,7 +26,7 @@ ms.locfileid: "72903854"
 
 全文目录是虚拟对象，不属于任何文件组。
   
-##  <a name="creating"></a> 创建全文目录  
+##  <a name="create-a-full-text-catalog"></a><a name="creating"></a> 创建全文目录  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>使用 Transact-SQL 创建全文目录
 使用 [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)。 例如：
@@ -52,7 +52,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="props"></a> 获取全文目录的属性  
+##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> 获取全文目录的属性  
 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 **FULLTEXTCATALOGPROPERTY** 获取与全文目录相关的各种属性的值。 有关详细信息，请参阅 [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)。
 
 例如，运行以下查询可获取全文目录 `Catalog1` 中的索引计数。
@@ -77,7 +77,7 @@ GO
 |**PopulateStatus**|填充状态。<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**UniqueKeyCount**|全文目录中的唯一键数。| 
 
-##  <a name="rebuildone"></a> 重新生成全文目录  
+##  <a name="rebuild-a-full-text-catalog"></a><a name="rebuildone"></a> 重新生成全文目录  
 
 运行 Transact-SQL 语句 [ALTER FULLTEXT CATALOG ...REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)，或者在 SQL Server Management Studio (SSMS) 中执行以下操作。
@@ -92,7 +92,7 @@ GO
   
 5.  在“重新生成全文目录”  对话框中，单击“关闭”  。  
    
-##  <a name="rebuildall"></a> 为数据库重新生成所有全文目录  
+##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> 为数据库重新生成所有全文目录  
 
 1.  在 SSMS 的对象资源管理器中，依次展开服务器、“数据库”  、包含要重新生成的全文目录的数据库。  
   
@@ -106,7 +106,7 @@ GO
   
   
   
-##  <a name="removing"></a> 从数据库中删除全文目录  
+##  <a name="remove-a-full-text-catalog-from-a-database"></a><a name="removing"></a> 从数据库中删除全文目录  
 
 运行 Transact-SQL 语句 [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)，或在 SQL Server Management Studio (SSMS) 中执行以下操作。

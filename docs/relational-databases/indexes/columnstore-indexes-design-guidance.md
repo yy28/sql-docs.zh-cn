@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70009431"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
@@ -23,7 +23,7 @@ ms.locfileid: "70009431"
 
 有关设计列存储索引的概要建议。 做出少量明智的决策，就能帮助实现较高的数据压缩率和查询性能，列存储索引的目标就在于此。 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 本文假设读者熟悉列存储的体系结构和术语。 有关详细信息，请参阅[列存储索引 - 概述](../../relational-databases/indexes/columnstore-indexes-overview.md)和[列存储索引体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)。
 

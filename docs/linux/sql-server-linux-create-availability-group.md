@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077443"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 创建和配置可用性组
@@ -59,7 +59,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>重启 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-ssnoversion-md"></a>重启 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 启用可用性组后，与 Windows 一样，必须重启 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 可以通过以下方式完成：
 
 ```bash
@@ -316,7 +316,7 @@ sudo systemctl restart mssql-server
 
 本文介绍如何使用 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 以创建 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的可用性组。
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-ssmanstudiofull-md"></a>使用 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 本部分介绍如何使用 SSMS 和新可用性组向导创建群集类型为“外部”的 AG。
 
@@ -533,7 +533,7 @@ sudo systemctl restart mssql-server
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>为 Pacemaker 创建 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 登录和权限
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>为 Pacemaker 创建 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 登录和权限
 
 Linux 上基于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pacemaker 高可用性群集需要访问 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 实例，以及可用性组本身的权限。 这些步骤用于创建登录和关联权限，以及指示 Pacemaker 如何登录 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的文件。
 

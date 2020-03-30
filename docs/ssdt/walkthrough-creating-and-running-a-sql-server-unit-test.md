@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242699"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>演练：创建和运行 SQL Server 单元测试
@@ -39,10 +39,10 @@ ms.locfileid: "75242699"
   
 当某个单元测试在存储过程中检测到错误后，您需要更正该错误，然后重新运行测试。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 若要完成本演练，您必须能够连接到有权在其上创建和部署数据库的数据库服务器（或 LocalDB 数据库）。 有关详细信息，请参阅 [执行 Visual Studio 的数据库功能所需的权限](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)。  
   
-## <a name="CreateScript"></a>创建包含数据库架构的脚本  
+## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>创建包含数据库架构的脚本  
   
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>创建可从中导入架构的脚本  
   
@@ -222,7 +222,7 @@ ms.locfileid: "75242699"
   
     接下来，创建一个数据库项目并从已创建的脚本导入架构。  
   
-## <a name="CreateProjectAndImport"></a>创建数据库项目并导入架构  
+## <a name="create-a-database-project-and-import-a-schema"></a><a name="CreateProjectAndImport"></a>创建数据库项目并导入架构  
   
 #### <a name="to-create-a-database-project"></a>创建数据库项目  
   
@@ -263,10 +263,10 @@ ms.locfileid: "75242699"
   
 2.  在“SQL Server 对象资源管理器”  中，在“项目”节点中查看该数据库。  
   
-## <a name="DeployDBProj"></a>部署到 LocalDB  
+## <a name="deploying-to-localdb"></a><a name="DeployDBProj"></a>部署到 LocalDB  
 默认情况下，在您按 F5 时，会将数据库部署（或发布）到 LocalDB 数据库。 您可以通过转到项目属性页的“调试”选项卡并更改连接字符串，更改数据库位置。  
   
-## <a name="CreateDBUnitTests"></a>创建 SQL Server 单元测试  
+## <a name="create-sql-server-unit-tests"></a><a name="CreateDBUnitTests"></a>创建 SQL Server 单元测试  
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>创建针对存储过程的 SQL Server 单元测试  
   
@@ -297,7 +297,7 @@ ms.locfileid: "75242699"
   
     将生成测试项目，并且将显示 SQL Server 单元测试设计器。 接下来，需要在单元测试的 Transact\-SQL 脚本中更新测试逻辑。  
   
-## <a name="DefineTestLogic"></a>定义测试逻辑  
+## <a name="define-test-logic"></a><a name="DefineTestLogic"></a>定义测试逻辑  
 此非常简单的数据库具有两个表 Customer 和 Order。 可以使用以下存储过程更新数据库：  
   
 -   uspNewCustomer - 此存储过程向 Customer 表中添加记录，以将客户的“YTDOrders”和“YTDSales”列设置为零。  
@@ -699,7 +699,7 @@ ms.locfileid: "75242699"
   
     此时，您已准备好运行测试。  
   
-## <a name="RunTests"></a>运行 SQL Server 单元测试  
+## <a name="run-sql-server-unit-tests"></a><a name="RunTests"></a>运行 SQL Server 单元测试  
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>运行 SQL Server 单元测试  
   
@@ -755,7 +755,7 @@ ms.locfileid: "75242699"
   
     测试通过。  
   
-## <a name="NegativeTest"></a>添加负面单元测试  
+## <a name="add-a-negative-unit-test"></a><a name="NegativeTest"></a>添加负面单元测试  
 您可以创建负面测试来验证测试在应失败时是否失败。 例如，如果您尝试取消已填充的订单，则该测试应失败。 在本演练的此部分，您将为 Sales.uspCancelOrder 存储过程创建一个负面单元测试。  
   
 若要创建和验证负面测试，您必须执行以下任务：  

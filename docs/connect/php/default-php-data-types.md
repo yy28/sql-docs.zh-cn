@@ -14,10 +14,10 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993675"
 ---
 # <a name="default-php-data-types"></a>默认 PHP 数据类型
@@ -73,7 +73,7 @@ ms.locfileid: "67993675"
 
 1.  数据以在系统上设置的 Windows 区域设置的代码页中指定的 8 位字符的形式返回。 任何多字节字符或未映射到此代码页中的字符都会替换为单字节问号 (?) 字符。  
   
-2.  如果 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 或 [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) 用于检索具有默认 PHP 类型 Stream 的字符串的数据，该数据将返回为具有与流相同的编码的字符串。 例如，如果 SQL Server 二进制类型使用 sqlsrv_fetch_array进行检索，默认返回类型将是二进制字符串。  
+2.  如果 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 或 [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) 用于检索具有默认 PHP 类型 Stream 的字符串的数据，该数据将返回为具有与流相同的编码的字符串。 例如，如果 SQL Server 二进制类型使用 sqlsrv_fetch_array进行检索，默认返回类型将是二进制字符串  。  
   
 3.  数据以原始字节流的形式从服务器返回，无需执行编码或转换。  
 

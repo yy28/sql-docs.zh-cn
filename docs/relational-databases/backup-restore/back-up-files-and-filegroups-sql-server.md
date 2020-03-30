@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708687"
 ---
 # <a name="back-up-files-and-filegroups"></a>备份文件和文件组
@@ -29,9 +29,9 @@ ms.locfileid: "71708687"
   
 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
 
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 - 不允许在显式或隐式事务中使用 BACKUP 语句。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "71708687"
   
 有关限制的详细信息，请参阅 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
-###  <a name="Recommendations"></a> 建议
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议
   
 默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地备份日志，这些成功消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目，请参阅 [跟踪标志 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
 
-###  <a name="Permissions"></a> 权限
+###  <a name="permissions"></a><a name="Permissions"></a> 权限
 
 默认情况下，为 sysadmin 固定服务器角色以及 db_owner 和 db_backupoperator 固定数据库角色的成员授予 `BACKUP DATABASE` 和 `BACKUP LOG` 权限    。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "71708687"
 
 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。  
   
-###  <a name="TsqlExample"></a> 示例
+###  <a name="examples"></a><a name="TsqlExample"></a> 示例
 下面的示例备份了 `Sales` 数据库的辅助文件组的一个或多个文件。 此数据库使用完整恢复模式并且包含以下辅助文件组：  
   
 - 名为 `SalesGroup1` 的文件组，它包含文件 `SGrp1Fi1` 和 `SGrp1Fi2`。  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> 使用 PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell
 
 设置和使用 [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)。
   

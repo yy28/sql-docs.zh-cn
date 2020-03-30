@@ -17,10 +17,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e69d3d2d73a53f6bdd8a3fe7282c1e9ad65b5773
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095287"
 ---
 # <a name="upgrade-full-text-search"></a>升级全文搜索
@@ -28,7 +28,7 @@ ms.locfileid: "68095287"
   将全文搜索升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是在安装期间以及在附加、还原或使用复制数据库向导复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的数据库文件和全文目录期间执行的。  
   
   
-##  <a name="Upgrade_Server"></a> 升级服务器实例  
+##  <a name="upgrade-a-server-instance"></a><a name="Upgrade_Server"></a> 升级服务器实例  
  对于就地升级， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例将与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的旧版本并行安装，且数据将被迁移。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的旧版本安装了全文搜索，则将自动安装新版本的全文搜索。 并行安装表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例级存在下列每个组件。  
   
  断字符、词干分析器和筛选器  
@@ -43,7 +43,7 @@ ms.locfileid: "68095287"
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中，每个全文检索都驻留在属于文件组的全文目录中，它们均具有物理路径，并被视为数据库文件。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中，全文目录是一个包含一组全文检索的逻辑对象或虚拟对象。 因此，新的全文目录不会视为带有物理路径的数据库文件。 但是，在升级包含数据文件的所有全文目录期间，将在相同磁盘上创建新的文件组。 这可以在升级后维护旧磁盘的 I/O 行为。 该目录的所有全文检索均被放置到新的文件组中（如果存在根路径）。 如果旧的全文目录路径无效，升级过程将全文检索保留在与基表相同的文件组中，或者对于分区表，则保留在主文件组中。  
   
   
-##  <a name="FT_Upgrade_Options"></a> 全文升级选项  
+##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a> 全文升级选项  
  将服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，您可以通过用户界面选择以下全文升级选项之一。  
   
 **导入**  
@@ -62,7 +62,7 @@ ms.locfileid: "68095287"
  **重置**  
  重置全文目录。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级时，将删除全文目录文件，但会保留全文目录和全文检索的元数据。 在进行升级后，所有全文检索将禁用更改跟踪，并且不会自动启动爬网。 在升级完成后，目录将保留为空，直至手动执行完全填充。  
   
-##  <a name="Choosing_Upgade_Option"></a> 有关选择全文升级选项的注意事项  
+##  <a name="considerations-for-choosing-a-full-text-upgrade-option"></a><a name="Choosing_Upgade_Option"></a> 有关选择全文升级选项的注意事项  
  为升级选择升级选项时，请考虑以下几点：  
   
 -   需要查询结果的一致性吗？  
@@ -114,7 +114,7 @@ ms.locfileid: "68095287"
   
  对于从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]导入的全文目录，该全文目录在其自己的文件组中仍然是数据库文件。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中除不存在 MSFTESQL 服务以外，全文目录的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份进程仍然适用。 有关 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 进程的信息，请参阅 SQL Server 2005 联机丛书中的 [备份和还原全文目录](https://go.microsoft.com/fwlink/?LinkId=209154) 。  
   
-##  <a name="Upgrade_Db"></a> 将数据库升级到 时迁移全文检索 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> 将数据库升级到 时迁移全文检索 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  使用附加、还原或复制数据库向导可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中的数据库文件和全文目录升级到现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入、重置或重新生成全文检索（如果有）。 **upgrade_option** 服务器属性控制在升级这些数据库期间服务器实例使用哪个全文升级选项。  
   
  将任何 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加、还原或复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动进行升级。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，将升级选项设置为“导入”时，如果全文目录不可用，则会重新生成关联的全文检索。  
@@ -125,7 +125,7 @@ ms.locfileid: "68095287"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  ：使用“服务器属性”对话框的“全文升级选项”   。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
-##  <a name="Considerations_for_Restore"></a> 有关将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录还原到 的注意事项 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a> 有关将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录还原到 的注意事项 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  将全文数据从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一种方法是将完整数据库备份还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  导入 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录时，您可以备份和还原数据库和目录文件。 其行为与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中相同：  
@@ -168,7 +168,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> 将 SQL Server 2005 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="attaching-a-sql-server-2005-database-to-sscurrent"></a><a name="Attaching_2005_ft_catalogs"></a> 将 SQL Server 2005 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中，全文目录是表示一组全文检索的逻辑概念。 全文目录是虚拟对象，不属于任何文件组。 但是，将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例时，会将目录文件从其先前位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中相同。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中附加的每个全文目录的状态与从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]分离数据库时相同。 如果分离操作挂起任意全文检索填充，该填充将在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上恢复，全文检索随后即可用于全文搜索。  

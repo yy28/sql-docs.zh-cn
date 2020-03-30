@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73530934"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
@@ -382,7 +382,7 @@ RESTORE 语句也可用于对全文数据执行替代位置还原、差异还原
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含备份和还原历史记录表，这些表可以跟踪每个服务器实例的备份和还原活动。 执行还原时，还将修改备份历史记录表。 有关这些表的信息，请参阅[备份历史记录和标头信息](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)。
 
-## <a name="REPLACEoption"></a> REPLACE 选项的影响
+## <a name="replace-option-impact"></a><a name="REPLACEoption"></a> REPLACE 选项的影响
 应尽可能避免使用 REPLACE，而且在使用该选项之前必须仔细考虑。 还原一般会防止意外使用一个数据库覆盖另一个数据库。 如果 RESTORE 语句中指定的数据库已存在于当前服务器上，并且指定的数据库系列 GUID 与备份集中记录的数据库系列 GUID 不同，则不还原该数据库。 这是一项重要的安全保护措施。
 
 使用 REPLACE 选项后，就会忽略还原时通常执行的几项重要安全检查。 忽略的检查如下：
@@ -434,7 +434,7 @@ RESTORE 语句也可用于对全文数据执行替代位置还原、差异还原
 
 RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 `db_owner` 固定数据库角色成员没有 RESTORE 权限。
 
-## <a name="examples"></a> 示例
+## <a name="examples"></a><a name="examples"></a> 示例
 
 所有的示例均假定已执行了完整数据库备份。
 
@@ -455,7 +455,7 @@ RESTORE 示例包括：
 > [!NOTE]
 > 有关其他示例，请参阅[还原和恢复概述](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)中列出的还原操作指南主题。
 
-### <a name="restoring_full_db"></a> A. 还原完整数据库
+### <a name="a-restoring-a-full-database"></a><a name="restoring_full_db"></a> A. 还原完整数据库
 
 下面的示例从 `AdventureWorksBackups` 逻辑备份设备还原完整数据库备份。 有关创建此设备的示例，请参阅[备份设备](../../relational-databases/backup-restore/backup-devices-sql-server.md)。
 
@@ -469,7 +469,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [[示例顶部]](#examples)
 
-### <a name="restoring_full_n_differential_db_backups"></a> B. 还原完整数据库备份和差异数据库备份
+### <a name="b-restoring-full-and-differential-database-backups"></a><a name="restoring_full_n_differential_db_backups"></a> B. 还原完整数据库备份和差异数据库备份
 
 下面的示例还原完整数据库备份后，从同时还包含差异数据库备份的 `Z:\SQLServerBackups\AdventureWorks2012.bak` 备份设备还原差异备份。 要还原的完整数据库备份是设备上的第六个备份集 (`FILE = 6`)，差异数据库备份是设备上的第九个备份集 (`FILE = 9`)。 在恢复了差异备份之后，便恢复了数据库。
 
@@ -486,7 +486,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [[示例顶部]](#examples)
 
-### <a name="restoring_db_using_RESTART"></a> C. 使用 RESTART 语法还原数据库
+### <a name="c-restoring-a-database-using-restart-syntax"></a><a name="restoring_db_using_RESTART"></a> C. 使用 RESTART 语法还原数据库
 
 下面的示例使用 `RESTART` 选项重新启动因服务器电源故障而中断的 `RESTORE` 操作。
 
@@ -501,7 +501,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [[示例顶部]](#examples)
 
-### <a name="restoring_db_n_move_files"></a> D. 还原数据库并移动文件
+### <a name="d-restoring-a-database-and-move-files"></a><a name="restoring_db_n_move_files"></a> D. 还原数据库并移动文件
 
 下面的示例还原完整数据库和事务日志，并将还原后的数据库移动到 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` 目录中。
 
@@ -520,7 +520,7 @@ RESTORE LOG AdventureWorks2012
 
 [[示例顶部]](#examples)
 
-### <a name="copying_db_using_bnr"></a> E. 使用 BACKUP 和 RESTORE 复制数据库
+### <a name="e-copying-a-database-using-backup-and-restore"></a><a name="copying_db_using_bnr"></a> E. 使用 BACKUP 和 RESTORE 复制数据库
 
 下面的示例使用 `BACKUP` 和 `RESTORE` 语句创建 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的副本。 `MOVE` 语句使数据和日志文件还原到指定的位置。 `RESTORE FILELISTONLY` 语句用于确定待还原数据库内的文件数及名称。 该数据库的新副本称为 `TestDB`。 有关详细信息，请参阅 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。
 
@@ -540,7 +540,7 @@ GO
 
 [[示例顶部]](#examples)
 
-### <a name="restoring_to_pit_using_STOPAT"></a> F. 使用 STOPAT 还原到时间点
+### <a name="f-restoring-to-a-point-in-time-using-stopat"></a><a name="restoring_to_pit_using_STOPAT"></a> F. 使用 STOPAT 还原到时间点
 
 下面的示例将数据库还原到它在 `12:00 AM` 的 `April 15, 2020` 的状态，并显示涉及多个日志备份的还原操作。 在备份设备上，要还原的完整数据库备份 `AdventureWorksBackups`是设备上的第三个备份集 (`FILE = 3`)，第一个日志备份是第四个备份集 (`FILE = 4`)，第二个日志备份是第五个备份集 (`FILE = 5`)。
 
@@ -562,7 +562,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 
 [[示例顶部]](#examples)
 
-### <a name="restoring_transaction_log_to_mark"></a> G. 将事务日志还原到标记
+### <a name="g-restoring-the-transaction-log-to-a-mark"></a><a name="restoring_transaction_log_to_mark"></a> G. 将事务日志还原到标记
 
 下面的示例将事务日志还原到名为 `ListPriceUpdate`的标记事务中的标记处。
 
@@ -601,7 +601,7 @@ RESTORE LOG AdventureWorks2012
 
 [[示例顶部]](#examples)
 
-### <a name="restoring_using_TAPE"></a> H. 使用 TAPE 语法还原
+### <a name="h-restoring-using-tape-syntax"></a><a name="restoring_using_TAPE"></a> H. 使用 TAPE 语法还原
 
 下面的示例从 `TAPE` 备份设备还原完整数据库备份。
 
@@ -612,7 +612,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [[示例顶部]](#examples)
 
-### <a name="restoring_using_FILE_n_FG"></a> I. 使用 FILE 和 FILEGROUP 语法还原
+### <a name="i-restoring-using-file-and-filegroup-syntax"></a><a name="restoring_using_FILE_n_FG"></a> I. 使用 FILE 和 FILEGROUP 语法还原
 
 下面的示例还原名为 `MyDatabase` 的数据库，该数据库有两个文件、一个辅助文件组和一个事务日志。 数据库使用完整恢复模式。
 
@@ -656,7 +656,7 @@ GO
 
 [[示例顶部]](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. 从数据库快照恢复
+### <a name="j-reverting-from-a-database-snapshot"></a><a name="reverting_from_db_snapshot"></a> J. 从数据库快照恢复
 
 下面的示例将数据库恢复到数据库快照。 该示例假定该数据库当前仅存在一个快照。 有关如何创建此数据库快照的示例，请参阅[创建数据库快照](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)。
 
@@ -673,7 +673,7 @@ GO
 
 [[示例顶部]](#examples)
 
-### <a name="Azure_Blob"></a> K. 从 Microsoft Azure Blob 存储服务还原
+### <a name="k-restoring-from-the-microsoft-azure-blob-storage-service"></a><a name="Azure_Blob"></a> K. 从 Microsoft Azure Blob 存储服务还原
 
 以下三个示例都涉及 Microsoft Azure 存储服务的使用。 存储帐户名称为 `mystorageaccount`。 数据文件的容器称为 `myfirstcontainer`。 备份文件的容器称为 `mysecondcontainer`。 已为每个容器创建具有读取、写入、删除和列表权限的存储访问策略。 已使用与存储访问策略相关联的共享访问签名创建 SQL Server 凭据。 针对使用 Microsoft Azure Blob 存储进行 SQL Server 备份和还原的信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
@@ -814,11 +814,11 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 
 RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 `db_owner` 固定数据库角色成员没有 RESTORE 权限。
 
-## <a name="examples"></a> 示例
+## <a name="examples"></a><a name="examples"></a> 示例
 
 以下示例从 URL 还原仅复制的数据库备份，包括创建凭据。
 
-### <a name="restore-mi-database"></a> A. 从四个备份设备还原数据库
+### <a name="a-restore-database-from-four-backup-devices"></a><a name="restore-mi-database"></a> A. 从四个备份设备还原数据库
 
 ```sql
 
@@ -842,7 +842,7 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 
-### <a name="restore-mi-database-variables"></a> B. 通过变量还原指定数据库
+### <a name="b-restore-database-specified-via-variable"></a><a name="restore-mi-database-variables"></a> B. 通过变量还原指定数据库
 
 ```sql
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
@@ -852,7 +852,7 @@ RESTORE DATABASE @db_name
 FROM URL = @url
 ```
 
-### <a name="restore-mi-database-progress"></a> C. 跟踪还原语句的执行进度
+### <a name="c-track-progress-of-restore-statement"></a><a name="restore-mi-database-progress"></a> C. 跟踪还原语句的执行进度
 
 ```sql
 SELECT query = a.text, start_time, percent_complete,

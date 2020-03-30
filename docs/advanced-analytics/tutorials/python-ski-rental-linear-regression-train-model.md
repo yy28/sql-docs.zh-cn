@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c564ac26c5706e67d9a633a05f81cb48d00fb771
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75681758"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教程：在 SQL Server 机器学习服务中定型线性回归模型
@@ -33,15 +33,15 @@ ms.locfileid: "75681758"
 
 [第四部分](python-ski-rental-linear-regression-deploy-model.md)介绍如何将模型存储到 SQL Server，然后根据在第二和第三部分中开发的 Python 脚本来创建存储过程。 存储过程将在 SQL Server 中运行，以便基于新数据进行预测。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 * 本教程的第三部分假设你已完成[第一部分](python-ski-rental-linear-regression.md)及其先决条件。
 
 ## <a name="train-the-model"></a>定型模型
 
-为进行预测，必须找到一个最能描述数据集中变量之间的依赖关系的函数（模型）。 这称为定型模型。 定型数据集是在此系列第二部分中创建的 pandas 数据帧“df”中的整个数据集的一个子集。
+为进行预测，必须找到一个最能描述数据集中变量之间的依赖关系的函数（模型）。 这称为定型模型。 定型数据集是在此系列第二部分中创建的 pandas 数据帧“df”中的整个数据集的一个子集  。
 
-使用线性回归算法定型模型 lin_model。
+使用线性回归算法定型模型 lin_model  。
 
 ```python
 # Store the variable we'll be predicting on.
@@ -73,7 +73,7 @@ Testing set shape: (91, 7)
 
 ## <a name="make-predictions"></a>作出预测
 
-使用 PREDICT 函数预测使用模型 lin_model 的租赁计数。
+使用 PREDICT 函数预测使用模型 lin_model 的租赁计数  。
 
 ```python
 # Generate our predictions for the test set.

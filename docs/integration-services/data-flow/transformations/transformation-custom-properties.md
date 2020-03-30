@@ -42,10 +42,10 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291135"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
@@ -76,7 +76,7 @@ ms.locfileid: "71291135"
 ### <a name="transformations-without-custom-properties"></a>不包含自定义属性的转换  
  以下转换不包含组件级、输入级或输出级自定义属性：[合并转换](../../../integration-services/data-flow/transformations/merge-transformation.md)、[多播转换](../../../integration-services/data-flow/transformations/multicast-transformation.md)和 [Union All 转换](../../../integration-services/data-flow/transformations/union-all-transformation.md)。 这些转换仅使用对所有数据流组件均通用的属性。  
   
-##  <a name="aggregate"></a> 聚合转换自定义属性  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> 聚合转换自定义属性  
  聚合转换既包含自定义属性，又包含对所有数据流组件通用的属性。  
   
  下表介绍聚合转换的自定义属性。 所有属性均可读/写。  
@@ -111,7 +111,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)。  
   
-##  <a name="audit"></a> 审核转换自定义属性  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> 审核转换自定义属性  
  审核转换仅包含在组件级别对所有数据流组件通用的属性。  
   
  下表介绍审核转换的输出列的自定义属性。 所有属性均可读/写。  
@@ -124,7 +124,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [审核转换](../../../integration-services/data-flow/transformations/audit-transformation.md)。  
   
-##  <a name="cachetransform"></a> “缓存转换”转换自定义属性  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> “缓存转换”转换自定义属性  
  “缓存转换”转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍“缓存转换”转换的属性。 所有属性均可读/写。  
@@ -137,7 +137,7 @@ ms.locfileid: "71291135"
 |InputColumns|String|选定输入列的列表。|  
 |CacheColumnName|String|指定映射到选定输入列的列名称。<br /><br /> CacheColumnName 属性中的列名称必须与“缓存连接管理器编辑器”  的“列”  页中列出的对应列的名称相匹配。<br /><br /> 有关详细信息，请参阅 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
   
-##  <a name="charmap"></a> 字符映射转换自定义属性  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> 字符映射转换自定义属性  
  字符映射转换仅包含在组件级别对所有数据流组件通用的属性。  
   
  下表介绍字符映射转换的输出列的自定义属性。 所有属性均可读/写。  
@@ -151,7 +151,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Character Map Transformation](../../../integration-services/data-flow/transformations/character-map-transformation.md)。  
   
-##  <a name="condsplit"></a> 有条件拆分转换自定义属性  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> 有条件拆分转换自定义属性  
  有条件拆分转换仅包含在组件级别对所有数据流组件通用的属性。  
   
  下表介绍有条件拆分转换的输出的自定义属性。 所有属性均可读/写。  
@@ -167,7 +167,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
   
-##  <a name="copymap"></a> 复制列转换自定义属性  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> 复制列转换自定义属性  
  复制列转换仅包含在组件级别对所有数据流组件通用的属性。  
   
  下表介绍复制列转换的输出列的自定义属性。 所有属性均可读/写。  
@@ -180,7 +180,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Copy Column Transformation](../../../integration-services/data-flow/transformations/copy-column-transformation.md)。  
   
-##  <a name="dataconv"></a> 数据转换自定义属性  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> 数据转换自定义属性  
  数据转换仅包含在组件级别对所有数据流组件通用的属性。  
   
  下表介绍数据转换的输出列的自定义属性。 所有属性均可读/写。  
@@ -194,7 +194,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
-##  <a name="dmquery"></a> 数据挖掘查询转换自定义属性  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> 数据挖掘查询转换自定义属性  
  数据挖掘查询转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍数据挖掘查询转换的自定义属性。 所有属性均可读/写。  
@@ -213,7 +213,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Data Mining Query Transformation](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md)。  
   
-##  <a name="derived"></a> 派生列转换自定义属性  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> 派生列转换自定义属性  
  派生列转换仅包含在组件级别对所有数据流组件通用的属性。  
   
  下表介绍派生列转换的输入列和输出列的自定义属性。 如果选择将派生列添加为新列，则这些自定义属性将应用到新的输出列；如果选择将现有输入列的内容替换为派生结果，则这些自定义属性将应用到现有输入列。 所有属性均可读/写。  
@@ -227,7 +227,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [派生列转换](../../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
-##  <a name="extract"></a> 导出列转换自定义属性  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> 导出列转换自定义属性  
  导出列转换仅包含在组件级别对所有数据流组件通用的属性。  
   
  下表介绍导出列转换的输入列的自定义属性。 所有属性均可读/写。  
@@ -243,7 +243,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Export Column Transformation](../../../integration-services/data-flow/transformations/export-column-transformation.md)。  
   
-##  <a name="insert"></a> 导入列转换自定义属性  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> 导入列转换自定义属性  
  导入列转换仅包含在组件级别对所有数据流组件通用的属性。  
   
  下表介绍导入列转换的输入列的自定义属性。 所有属性均可读/写。  
@@ -257,7 +257,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Import Column Transformation](../../../integration-services/data-flow/transformations/import-column-transformation.md)。  
   
-##  <a name="fgroup"></a> 模糊分组转换自定义属性  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> 模糊分组转换自定义属性  
  模糊分组转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍模糊分组转换的自定义属性。 所有属性均可读/写。  
@@ -290,7 +290,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)。  
   
-##  <a name="flookup"></a> 模糊查找转换自定义属性  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> 模糊查找转换自定义属性  
  模糊查找转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍模糊查找转换的自定义属性。 除 **ReferenceMetadataXML** 以外的所有属性均可读/写。  
@@ -335,7 +335,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)。  
   
-##  <a name="lookup"></a> 查找转换自定义属性  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> 查找转换自定义属性  
  查找转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍查找转换的自定义属性。 除 **ReferenceMetadataXML** 以外的所有属性均可读/写。  
@@ -369,7 +369,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
-##  <a name="mjoin"></a> 合并联接转换自定义属性  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> 合并联接转换自定义属性  
  合并联接转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍合并联接转换的自定义属性。  
@@ -391,7 +391,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)。  
   
-##  <a name="oledbcmd"></a> OLE DB 命令转换自定义属性  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> OLE DB 命令转换自定义属性  
  OLE DB 命令转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍 OLE DB 命令转换的自定义属性。  
@@ -412,7 +412,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [OLE DB Command Transformation](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)。  
   
-##  <a name="percent"></a> 百分比抽样转换自定义属性  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> 百分比抽样转换自定义属性  
  百分比抽样转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍百分比抽样转换的自定义属性。  
@@ -432,7 +432,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Percentage Sampling Transformation](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)。  
   
-##  <a name="pivot"></a> 透视转换自定义属性  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> 透视转换自定义属性  
  下表介绍透视转换的自定义组件属性。  
   
 |properties|数据类型|说明|  
@@ -454,7 +454,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Pivot Transformation](../../../integration-services/data-flow/transformations/pivot-transformation.md)。  
   
-##  <a name="rowcount"></a> 行计数转换自定义属性  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> 行计数转换自定义属性  
  行计数转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍行计数转换的自定义属性。 所有属性均可读/写。  
@@ -467,7 +467,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Row Count Transformation](../../../integration-services/data-flow/transformations/row-count-transformation.md)。  
   
-##  <a name="rowsamp"></a> 行抽样转换自定义属性  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> 行抽样转换自定义属性  
  行抽样转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍行抽样转换的自定义属性。 所有属性均可读/写。  
@@ -493,7 +493,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)。  
   
-##  <a name="script"></a> 脚本组件自定义属性  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> 脚本组件自定义属性  
  脚本组件既包含自定义属性，也包含对所有数据流组件通用的属性。 无论脚本组件用作源、转换，还是用作目标，都具有相同的自定义属性。  
   
  下表介绍脚本组件的自定义属性。 所有属性均可读/写。  
@@ -507,7 +507,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Script Component](../../../integration-services/data-flow/transformations/script-component.md)。  
   
-##  <a name="scd"></a> 渐变维度转换自定义属性  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> 渐变维度转换自定义属性  
  渐变维度转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍渐变维度转换的自定义属性。 所有属性均可读/写。  
@@ -533,7 +533,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)。  
   
-##  <a name="sort"></a> 排序转换自定义属性  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> 排序转换自定义属性  
  排序转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍排序转换的自定义属性。 所有属性均可读/写。  
@@ -560,7 +560,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Sort Transformation](../../../integration-services/data-flow/transformations/sort-transformation.md)。  
   
-##  <a name="textract"></a> 字词提取转换自定义属性  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> 字词提取转换自定义属性  
  字词提取转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍字词提取转换的自定义属性。 所有属性均可读/写。  
@@ -580,7 +580,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Term Extraction Transformation](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)。  
   
-##  <a name="tlookup"></a> 字词查找转换自定义属性  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> 字词查找转换自定义属性  
  字词查找转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
  下表介绍字词查找转换的自定义属性。 所有属性均可读/写。  
@@ -607,7 +607,7 @@ ms.locfileid: "71291135"
   
  有关详细信息，请参阅 [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)。  
   
-##  <a name="unpivot"></a> 逆透视转换自定义属性  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> 逆透视转换自定义属性  
  逆透视转换仅包含在组件级别对所有数据流组件通用的属性。  
   
 > [!NOTE]  

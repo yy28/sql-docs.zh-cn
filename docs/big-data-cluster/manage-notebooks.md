@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d2a051e297b48ed8d813fce0e0e8ffa748a84d16
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252013"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>使用 Azure Data Studio 笔记本管理 SQL Server 大数据群集
@@ -29,7 +29,7 @@ ms.locfileid: "75252013"
 
 除了笔记本之外，还可以查看一组称为 Jupyter Book 的笔记本。 Jupyter Book 提供用于帮助浏览笔记本集合的目录，这样，无论是想对 SQL Server 进行故障排除还是查看群集状态，都可以轻松找到所需的笔记本。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要打开一个笔记本，需要满足以下先决条件：
 

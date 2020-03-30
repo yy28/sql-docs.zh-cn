@@ -16,10 +16,10 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b2003a0adfd2883b83623f5b367e775cc526e052
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79190570"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中数据库引擎功能的中断性变更
@@ -28,7 +28,7 @@ ms.locfileid: "79190570"
 
   本主题介绍 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 和更低版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的中断性变更。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。  
   
-##  <a name="SQL15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中的重大更改  
+##  <a name="breaking-changes-in-sssql15"></a><a name="SQL15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中的重大更改  
   
 -   `sys.dm_io_virtual_file_stats` 的 sample_ms  列已从 int  扩展到 bigint  数据类型。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "79190570"
 
 -   数据库兼容性级别为 130 时，在某些数字和日期时间数据类型之间执行隐式转换的操作显示出更高的准确性，并且可能导致不同的转换值。 这包括使用需要计算的函数，例如，`DATEDIFF` 和 `ROUND`。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4010261)。
 
-## <a name="previous-versions"></a> 先前版本  
+## <a name="previous-versions"></a><a name="previous-versions"></a> 先前版本  
 
 有关 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和一些早期版本中重大更改的信息，请参阅 [SQL Server 2014 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)。
 

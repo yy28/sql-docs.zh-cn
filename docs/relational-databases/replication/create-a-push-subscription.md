@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70059292"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
@@ -31,7 +31,7 @@ ms.locfileid: "70059292"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
 使用新建订阅向导，在发布服务器或订阅服务器上创建推送订阅。 按照向导中的页的指示执行下列操作：  
   
 - 指定发布服务器和发布。  
@@ -82,7 +82,7 @@ ms.locfileid: "70059292"
   
 7. 完成新建订阅向导中的页。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
 可以使用复制存储过程以编程方式创建推送订阅。 所用的存储过程取决于订阅所属的发布的类型。  
   
 > [!IMPORTANT]
@@ -150,7 +150,7 @@ ms.locfileid: "70059292"
 > [!IMPORTANT]
 > 使用远程分发服务器在发布服务器上创建推送订阅时，为所有参数（包括 job_login 和 job_password）提供的值将以纯文本格式发送到分发服务器   。 在运行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例创建事务发布的推送订阅。 登录名和密码在运行时使用 sqlcmd 脚本变量提供  。  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_1.sql)]  
@@ -159,7 +159,7 @@ ms.locfileid: "70059292"
   
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_2.sql)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象  
+##  <a name="using-replication-management-objects"></a><a name="RMOProcedure"></a> 使用复制管理对象  
  可以使用复制管理对象 (RMO) 以编程方式创建推送订阅。 用于创建推送订阅的 RMO 类取决于要为其创建订阅的发布类型。  
   
 > [!IMPORTANT]
@@ -245,7 +245,7 @@ ms.locfileid: "70059292"
 > [!IMPORTANT]  
 > 使用远程分发服务器在发布服务器上创建推送订阅时，为所有属性（包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>）提供的值将以纯文本形式发送到分发服务器。 调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法之前，应先对发布服务器与其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  该示例创建事务发布的新推送订阅。 用于运行分发代理作业的 Windows 帐户凭据在运行时传递。  
   
  [!code-cs[HowTo#rmo_CreateTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  

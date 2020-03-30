@@ -17,10 +17,10 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258882"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "75258882"
   若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
   
   
-##  <a name="InitialConnection"></a> 建立到数据库镜像会话的初始连接  
+##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> 建立到数据库镜像会话的初始连接  
  对于到镜像数据库的初始连接，客户端必须提供一个至少提供服务器实例名称的连接字符串。 这个必需的服务器名称应标识当前主体服务器实例，并称为“初始伙伴名称”  。  
   
  另外，连接字符串还可以提供另一个服务器实例的名称，此名称应标识当前镜像服务器实例，以便在首次连接尝试期间初始伙伴不可用的情况下使用。 第二个名称称为“故障转移伙伴名称”  。  
@@ -155,7 +155,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> 连接重试算法（用于 TCP/IP 连接）  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> 连接重试算法（用于 TCP/IP 连接）  
  对于 TCP/IP 连接，在两个伙伴名称都在缓存中时，数据访问接口遵循连接重试算法。 不论是初次与会话建立连接，还是在中断已建立连接后重新连接，这都适用。 打开连接之后，还需要一些时间完成预登录和登录的步骤。  
   
 > [!NOTE]  
@@ -204,7 +204,7 @@ Server=123.34.45.56,4724;
   
  ![重试延迟时间算法](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "重试延迟时间算法")  
   
-##  <a name="Reconnecting"></a> 重新连接到数据库镜像会话  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> 重新连接到数据库镜像会话  
  如果已建立的到数据库镜像会话的连接因某种原因（例如，由于数据库镜像故障转移）而失败，但应用程序尝试重新连接到初始服务器，则数据访问接口可以尝试使用客户端缓存中存储的故障转移伙伴名称进行重新连接。 但是，重新连接不是自动进行的， 应用程序必须能够识别错误。 然后，应用程序需要关闭失败的连接并使用相同的连接字符串属性打开新连接。 此时，数据访问接口将连接重定向到故障转移伙伴。 如果由此名称标识的服务器实例当前为主体服务器，则连接尝试通常都会成功。 如果不确定事务已提交还是回滚，则应用程序必须检查事务的状态，检查方法与重新连接到独立服务器实例时所用的方法相同。  
   
  重新连接类似于连接字符串为其提供故障转移伙伴名称的初始连接。 如果首次连接尝试失败，则连接尝试会反复轮流使用初始伙伴名称和故障转移伙伴名称，直到客户端连接到主体服务器或数据访问接口超时。  
@@ -225,7 +225,7 @@ Server=123.34.45.56,4724;
   
 ##  <a name="Benefits"></a>   
   
-##  <a name="StalePartnerName"></a> 已过时故障转移伙伴名称的影响  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> 已过时故障转移伙伴名称的影响  
  数据库管理员可以随时更改故障转移伙伴。 因此，客户端提供的故障转移伙伴名称可能已过时  。 例如，假设名为 Partner_B 的故障转移伙伴已由另一个服务器实例 Partner_C 替换。 现在，如果客户端提供 Partner_B 作为故障转移伙伴名称，则该名称已过时。 如果客户端提供的故障转移伙伴名称已过时，数据访问接口的行为与客户端未提供故障转移伙伴名称时的行为相同。  
   
  例如，假设客户端使用一个连接字符串连续进行四次连接尝试。 在此连接字符串中，初始伙伴名称为 Partner_A，故障转移伙伴名称为 Partner_B：  

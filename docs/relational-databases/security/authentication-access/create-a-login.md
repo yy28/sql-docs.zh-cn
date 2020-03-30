@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776391"
 ---
 # <a name="create-a-login"></a>创建一个登录名
@@ -35,7 +35,7 @@ ms.locfileid: "75776391"
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建登录名。 登录名是连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的个人或进程的标识。  
   
-##  <a name="Background"></a> 背景  
+##  <a name="background"></a><a name="Background"></a> 背景  
  登录名是一个可由安全系统进行身份验证的安全主体或实体。 用户需要使用登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可基于 Windows 主体（例如，域用户或 Windows 域组）创建登录名，或者也可创建一个并非基于 Windows 主体的登录名（例如， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名）。  
   
 > **注意：** 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]必须使用混合模式身份验证。 有关详细信息，请参阅 [选择身份验证模式](../../../relational-databases/security/choose-an-authentication-mode.md)。  
@@ -44,13 +44,13 @@ ms.locfileid: "75776391"
   
 > **注意：** 当登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，在 master 数据库验证标识。 使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 连接进行身份验证。 当使用包含的数据库用户时，登录名不是必需的。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要对服务器拥有 **ALTER ANY LOGIN** 或 **ALTER LOGIN** 权限。  
   
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 要求具有 **loginmanager** 角色的成员身份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SSMS 创建登录名  
+##  <a name="create-a-login-using-ssms"></a><a name="SSMSProcedure"></a> 使用 SSMS 创建登录名  
   
   
 1.  在对象资源管理器中，展开要在其中创建新登录名的服务器实例的文件夹。  
@@ -226,7 +226,7 @@ ms.locfileid: "75776391"
  **SQL Server 身份验证**  
  仅当所选的登录名使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证进行连接并且登录名已锁定时，复选框“登录名已锁定”  才可用。该设置是只读的。 若要解除对已锁定登录名的锁定，请执行带 UNLOCK 选项的 ALTER LOGIN。  
   
-##  <a name="TsqlProcedure"></a> 使用 T-SQL 创建使用 Windows 身份验证的登录名  
+##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> 使用 T-SQL 创建使用 Windows 身份验证的登录名  
   
  
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
@@ -263,7 +263,7 @@ ms.locfileid: "75776391"
   
  有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](../../../t-sql/statements/create-login-transact-sql.md)。  
   
-##  <a name="FollowUp"></a> 跟进：在创建登录名后采取的步骤  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a> 跟进：在创建登录名后采取的步骤  
  创建登录名后，该登录名可连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，但不一定有执行任何有用工作的充分权限。 下面的列表提供了指向常见登录操作的链接。  
   
 -   若要将登录名加入某一角色，请参阅 [加入角色](../../../relational-databases/security/authentication-access/join-a-role.md)。  

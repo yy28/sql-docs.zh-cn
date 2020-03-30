@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401578"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "74401578"
   
 -  [E.批量导出 XML 数据](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>以二进制字节流的形式大容量导入 XML 数据  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>以二进制字节流的形式大容量导入 XML 数据  
  在从文件大容量导入 XML 数据时，如果文件中包含要应用的编码声明，则应在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 选项。 SINGLE_BLOB 选项可确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 分析器根据 XML 声明中指定的编码方案导入数据。  
   
 #### <a name="sample-table"></a>示例表  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [[返回页首]](#top)  
   
-##  <a name="existing_row"></a> 将 XML 数据大容量导入现有行中  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> 将 XML 数据大容量导入现有行中  
  此示例使用 `OPENROWSET` 大容量行集提供程序向示例表 `T`中的现有行添加一个 XML 实例。  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [[返回页首]](#top)  
   
-## <a name="file_contains_dtd"></a> 从包含 DTD 的文件中大容量导入 XML 数据  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> 从包含 DTD 的文件中大容量导入 XML 数据  
   
 > [!IMPORTANT]  
 >  若非您的 XML 环境有特殊要求，建议不要启用对文档类型定义 (DTD) 的支持。 启用 DTD 支持会增加服务器的可攻击外围应用，并且可能会使它受到拒绝服务攻击。 如果必须启用 DTD 支持，可以通过仅处理可信的 XML 文档来降低安全风险。  
@@ -189,7 +189,7 @@ INSERT T1
   
  [[返回页首]](#top)  
   
-## <a name="field_terminator_in_format_file"></a> 使用格式化文件显式指定字段终止符  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> 使用格式化文件显式指定字段终止符  
  下面的示例说明如何大容量导入 XML 文档 `Xmltable.dat`。  
   
 #### <a name="sample-data-file"></a>示例数据文件  
@@ -252,7 +252,7 @@ GO
   
  [[返回页首]](#top)  
   
-## <a name="bulk_export_xml_data"></a> 大容量导出 XML 数据  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> 大容量导出 XML 数据  
  下面的示例使用 [bcp](../../tools/bcp-utility.md) 从表中批量导出 XML 数据，该表是在上一示例中使用同一个 XML 格式化文件创建的。 在下面的 `bcp` 命令中， `<server_name>` 和 `<instance_name>` 代表必须使用相应的值替换的占位符：  
   
 ```cmd

@@ -17,10 +17,10 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2200027e65978ea0af8cdcc100cda830e8a35881
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75240618"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色任务与SharePoint 组权限对比
@@ -38,7 +38,7 @@ ms.locfileid: "75240618"
   
 -   [比较本机模式任务和 SharePoint 权限](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a> 比较权限工具和术语  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> 比较权限工具和术语  
  **本机模式：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式权限对象（角色和任务）在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建并在报表管理器中为各用户配置。  
   
  **SharePoint 模式：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式使用 SharePoint 权限功能。 SharePoint 组和权限从以下“站点设置”  页进行管理。  
@@ -53,7 +53,7 @@ ms.locfileid: "75240618"
   
  有关 SharePoint 权限的详细信息，请参阅 [权限级别和权限](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) 以及 [在 SharePoint 2013 中确定权限级别和组](https://technet.microsoft.com/library/cc262690.aspx)。  
   
-##  <a name="bkmk_compare_roles_groups"></a> 比较本机模式角色与 SharePoint 组  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> 比较本机模式角色与 SharePoint 组  
  下表将在本机模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的预定义角色定义与标准 SharePoint 组进行比较。 如果 SharePoint 组与您需要的特定角色不匹配，可以在 SharePoint 中创建自定义组并分配权限级别。  
   
  **注意**：可用的默认 SharePoint 组取决于用于创建 SharePoint 站点的站点模板。  
@@ -68,7 +68,7 @@ ms.locfileid: "75240618"
 |-| 使用“查看者”组授予查看呈现的报表的权限。  “查看者”组无法下载或查看报表项的内容。<br /><br /> **注意：** 从 SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 开始，“查看者”组不具有创建订阅的权限  。|  
 | “系统用户”和“系统管理员” |这些角色对于在 SharePoint 模式下运行的报表服务器并不是必需的。  “系统用户”和“系统管理员”  对应于 SharePoint 场或 Web 应用程序级权限。 报表服务器不提供任何要求该级别授权的功能。|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a> 比较本机模式任务和 SharePoint 权限  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> 比较本机模式任务和 SharePoint 权限  
  下表将比较 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式任务与 SharePoint 权限。  “类型”列指示本机模式任务与系统角色或标准角色和项是否相关。 系统角色管理系统级别的权限，例如共享计划。  
   
 |本机模式任务|角色类型|等效 SharePoint 权限|  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286561"
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
@@ -192,7 +192,7 @@ ms.locfileid: "79286561"
 * 若要详细了解目录、文件位置和实例 ID 命名，请参阅 [SQL Server 默认实例和命名实例的文件位置](file-locations-for-default-and-named-instances-of-sql-server.md)  
 * [文件服务器上的共享权限和 NTFS 权限](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
-## <a name="serverconfig"></a>“数据库引擎配置 - 服务器配置”页
+## <a name="database-engine-configuration---server-configuration-page"></a><a name="serverconfig"></a>“数据库引擎配置 - 服务器配置”页
 
 此页可用于设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式，并将 Windows 用户或组添加为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]管理员。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "79286561"
 
 若要详细了解如何选择用于运行 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的帐户，请参阅[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
 
-## <a name ="datadir"></a>“数据库引擎配置 - 数据目录”页
+## <a name="database-engine-configuration---data-directories-page"></a><a name ="datadir"></a>“数据库引擎配置 - 数据目录”页
 
 此页面可用于指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 程序和数据文件的安装位置。 根据安装类型，支持的存储可能包括本地磁盘、共享存储或 SMB 文件服务器。  
   
@@ -330,7 +330,7 @@ ms.locfileid: "79286561"
   * 在系统文件所在的目录上
   * 在故障转移群集实例的映射网络驱动器上  
   
-## <a name="a-nametempdba-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/>“数据库引擎配置 - TempDB”页
+## <a name="a-nametempdb-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/>“数据库引擎配置 - TempDB”页
 
 此页可用于指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 tempdb  数据和日志文件位置、大小、增长设置和文件数量。 根据安装类型，支持的存储可能包括本地磁盘、共享存储或 SMB 文件服务器。  
   
@@ -417,7 +417,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/>“数据库引擎配置 - MaxDOP”页
+## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/>“数据库引擎配置 - MaxDOP”页
 
 “最大并行度(MaxDOP)”  决定了一个语句最多可以使用多少个处理器。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了在安装过程中配置此选项的功能。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 还可以根据内核数自动为服务器检测建议的 MaxDOP 设置。  
 
@@ -427,7 +427,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 * “最大并行度 (MaxDOP)”  是在并行执行一个语句期间使用的最大处理器数的值。 默认值遵循[配置服务器配置选项“最大并行度”](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。
 
-## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/>“数据库引擎配置 - 内存”页
+## <a name="a-namememory-database-engine-configuration---memory-page"></a><a name="memory"><a/>“数据库引擎配置 - 内存”页
 
 “最小服务器内存”  决定了 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将用于缓冲池和其他缓存的内存下限。 默认值和建议值均为 0。 若要详细了解“最小服务器内存”  的影响，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)。
 

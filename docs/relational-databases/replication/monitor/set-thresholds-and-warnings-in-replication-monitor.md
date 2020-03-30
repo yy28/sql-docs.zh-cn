@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287814"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在复制监视器中设置阈值和警告
@@ -58,7 +58,7 @@ ms.locfileid: "76287814"
   
 -   [为快照发布设置阈值和警告](#Snapshot)  
   
-##  <a name="Transactional"></a> 为事务发布设置阈值和警告  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> 为事务发布设置阈值和警告  
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后单击其中的一个发布。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76287814"
   
 5.  单击“关闭”  。  
   
-##  <a name="Merge"></a> 为合并发布设置阈值和警告  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a> 为合并发布设置阈值和警告  
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后单击其中的一个发布。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "76287814"
   
 5.  单击“关闭”  。  
   
-##  <a name="Snapshot"></a> 为快照发布设置阈值和警告  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> 为快照发布设置阈值和警告  
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后单击其中的一个发布。  
   

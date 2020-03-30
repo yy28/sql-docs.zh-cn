@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594464"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>使用 PowerShell 预配 Always Encrypted 密钥
@@ -27,7 +27,7 @@ ms.locfileid: "73594464"
 有关如何开始将 SqlServer PowerShell 模块用于 Always Encrypted 的信息，请参阅 [使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
 
 
-## <a name="KeyProvisionWithoutRoles"></a> 不使用角色分隔的密钥预配
+## <a name="key-provisioning-without-role-separation"></a><a name="KeyProvisionWithoutRoles"></a> 不使用角色分隔的密钥预配
 
 本部分描述的密钥预配方法不支持安全管理员和 DBA 间的角色分隔。 下面的一些步骤将对物理密钥的操作与对密钥元数据的操作组合在一起。 因此，如果组织使用的是 DevOps 模型，或者数据库托管在云中且主要目的是限制云管理员（而不是本地 DBA）访问敏感数据，则推荐使用此密钥预配方法。 如果潜在对手包括 DBA，或 DBA 不得有权访问敏感数据，不推荐使用这种方法。
 
@@ -164,7 +164,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="KeyProvisionWithRoles"></a> 不使用角色分隔的密钥设置
+## <a name="key-provisioning-with-role-separation"></a><a name="KeyProvisionWithRoles"></a> 不使用角色分隔的密钥设置
 
 此部分分步介绍了如何配置加密，其中安全管理员无权访问数据库，且数据库管理员无权访问密钥存储或纯文本密钥。
 

@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049909"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 文档的版本控制系统
@@ -130,13 +130,13 @@ ms.locfileid: "73049909"
 | `sql-server-2019` | 与值 `sql-server-2017` 的情况相同，但参数和控件设置为 2019。 |
 | &nbsp; | &nbsp; |
 
-### <a name="anchor-allsql-hidenothing"></a> 所有 SQL - 不隐藏任何内容的特殊名字对象
+### <a name="all-sql---hide-nothing-special-moniker"></a><a name="anchor-allsql-hidenothing"></a> 所有 SQL - 不隐藏任何内容的特殊名字对象
 
 有一个特殊名字对象产品，即“所有 SQL”，其唯一版本为“不隐藏任何内容”   。 这个名字对象的目的是对某些更改进行内部测试。 如果客户使用此名字对象，则比告知更容易产生误导。
 
 某些文章包含有关多个版本的 SQL Server 信息。 每个常规名字对象都隐藏有版本控制的部分，否则这些部分可能会显示与名字对象的版本不准确、混淆或矛盾的信息。 特殊的“所有 SQL”名字对象将显示所有版本部分，并且可能不会明显显示出不准确的信息  。
 
-## <a name="anchor-message-unavailable-for-moniker"></a> 消息：请求的页面不适用于\<名字对象\>
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 消息：请求的页面不适用于\<名字对象\>
 
 以下方案导致在 :::no-loc text="Docs"::: 网页顶部附近显示信息性消息：
 

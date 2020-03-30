@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843782"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>数据迁移的监视与故障排除 (Stretch Database)
@@ -33,10 +33,10 @@ ms.locfileid: "73843782"
   
  ![Stretch Database 监视器](../../sql-server/stretch-database/media/stretch-monitor.PNG "Stretch Database 监视器")  
   
-##  <a name="Migration"></a> 检查动态管理视图中数据迁移的状态  
+##  <a name="check-the-status-of-data-migration-in-a-dynamic-management-view"></a><a name="Migration"></a> 检查动态管理视图中数据迁移的状态  
  打开动态管理视图 **sys.dm_db_rda_migration_status** 以查看有多少批数据和数据行已迁移。 有关详细信息，请参阅 [sys.dm_db_rda_migration_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
   
-##  <a name="Firewall"></a> 数据迁移故障排除  
+##  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> 数据迁移故障排除  
  **我的已启用拉伸的表中的行未迁移到 Azure。这是什么问题？**  
  有几个问题可能会影响迁移。 请检查以下事项。  
   

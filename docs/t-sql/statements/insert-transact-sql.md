@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982228"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -411,7 +411,7 @@ OUTPUT 子句
   
  若要使用 OPENROWSET 函数 BULK 选项执行 INSERT，必须是 sysadmin 固定服务器角色成员或 bulkadmin 固定服务器角色成员   。  
   
-##  <a name="InsertExamples"></a> 示例  
+##  <a name="examples"></a><a name="InsertExamples"></a> 示例  
   
 |类别|作为特征的语法元素|  
 |--------------|------------------------------|  
@@ -424,7 +424,7 @@ OUTPUT 子句
 |[通过使用提示覆盖查询优化器的默认行为](#TableHints)|表提示|  
 |[捕获 INSERT 语句的结果](#CaptureResults)|OUTPUT 子句|  
   
-###  <a name="BasicSyntax"></a> 基本语法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本语法  
  本节中的示例说明了使用最低要求的语法的 INSERT 语句的基本功能。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 插入单行数据  
@@ -453,7 +453,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> 处理列值  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> 处理列值  
  本节中的示例说明将值插入列中的方法，这些列是使用 IDENTITY 属性或 DEFAULT 值定义的列，或者是用 uniqueidentifer 之类的数据类型定义的列，或者是用户定义类型列  。  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 将数据插入其列具有默认值的表  
@@ -529,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> 插入来自其他表的数据  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> 插入来自其他表的数据  
  本节中的示例说明将行从一个表插入另一个表的方法。  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. 使用 SELECT 和 EXECUTE 选项插入来自其他表的数据  
@@ -666,7 +666,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> 指定目标对象，而非标准表  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> 指定目标对象，而非标准表  
  本节中的示例说明如何通过指定视图或表变量来插入行。  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. 通过指定视图来插入数据  
@@ -712,7 +712,7 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> 向远程表中插入行  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> 向远程表中插入行  
  本节中的示例说明如何通过使用[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[行集函数](../../t-sql/functions/rowset-functions-transact-sql.md)引用一个远程目标表，向该表插入行。  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. 通过使用链接服务器向远程表插入数据  
@@ -804,7 +804,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> 从表或数据文件中大容量加载数据  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> 从表或数据文件中大容量加载数据  
  本节中的示例说明通过 INSERT 语句向表中大容量加载数据的两个方法。  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. 将数据插入堆中并按最小方式记录日志  
@@ -864,7 +864,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> 通过使用提示覆盖查询优化器的默认行为  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> 通过使用提示覆盖查询优化器的默认行为  
  本节中的示例说明如何使用[表提示](../../t-sql/queries/hints-transact-sql-table.md)在处理 INSERT 语句时暂时覆盖查询优化器的默认行为。  
   
 > [!CAUTION]  
@@ -881,7 +881,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> 捕获 INSERT 语句的结果  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> 捕获 INSERT 语句的结果  
  本节中的示例说明如何使用 [OUTPUT Clause](../../t-sql/queries/output-clause-transact-sql.md) 从 INSERT 语句影响的每一行返回信息（或基于的表达式）。 这些结果可以返回到处理应用程序，以供在确认消息、存档以及其他类似的应用程序要求中使用。  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. 将 OUTPUT 用于 INSERT 语句  

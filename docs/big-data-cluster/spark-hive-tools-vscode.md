@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255921"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>在 Visual Studio Code 中的 SQL Server 大数据群集上提交 Spark 作业
@@ -24,7 +24,7 @@ ms.locfileid: "75255921"
 Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包括 Windows、Linux 和 macOS。 下面介绍了不同平台的必备条件。
 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 完成本文中的步骤需要以下各项：
 
@@ -176,7 +176,7 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 支持 [Apache Livy](https://livy.incubator.apache.org/) 配置，在工作空间文件夹中的 .VSCode\settings.json 中可以设置该配置  。 目前，Livy 配置仅支持 Python 脚本。 更多详细信息，请参阅 [Livy 自述文件](https://github.com/cloudera/livy/blob/master/README.rst )。
 
-### <a id="triggerlivyconf"></a>如何触发 Livy 配置 
+### <a name="how-to-trigger-livy-configuration"></a><a id="triggerlivyconf"></a>如何触发 Livy 配置 
 
 #### <a name="method-1"></a>方法 1
 

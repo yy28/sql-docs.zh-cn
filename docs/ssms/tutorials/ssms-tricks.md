@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245508"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和技巧
@@ -37,7 +37,7 @@ ms.locfileid: "75245508"
 > * 访问 SQL Server 错误日志
 > * 查找 SQL Server 实例的名称
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要测试本文提供的步骤，必须有 SQL Server Management Studio、对 SQL Server 的访问权限，以及 AdventureWorks 数据库。 
 
@@ -231,7 +231,7 @@ ms.locfileid: "75245508"
 
 6. 在记事本中打开 errorlog.log 文件。 
 
-## <a name="determine-sql-server-name"></a>查找 SQL Server 实例名称
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>查找 SQL Server 实例名称
 
 在连接到 SQL Server 之前和之后，有几个选项可用于查找 SQL Server 的名称。  
 

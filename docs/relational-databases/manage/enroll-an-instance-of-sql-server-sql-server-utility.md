@@ -21,10 +21,10 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115421"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>注册 SQL Server 的实例（SQL Server 实用工具）
@@ -87,17 +87,17 @@ ms.locfileid: "68115421"
   
 -   [注册 SQL Server 的实例](#Enrolling)  
   
-##  <a name="Welcome"></a> 注册实例向导简介  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> 注册实例向导简介  
  若要启动该向导，请展开实用工具控制点上的实用工具资源管理器树，右键单击“托管实例”，然后选择“添加托管实例…”   。  
   
  若要继续，请单击 **“下一步”** 。  
   
-##  <a name="Instance_name"></a> 指定 SQL Server 的实例  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> 指定 SQL Server 的实例  
  若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“连接…”  。以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
  若要继续，请单击 **“下一步”** 。  
   
-##  <a name="Connection_dialog"></a> 连接对话框  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 连接对话框  
  在“连接到服务器”对话框中，验证服务器类型、计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称信息。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ ms.locfileid: "68115421"
   
  若要继续，请单击“连接...”  。  
   
-##  <a name="Proxy_configuration"></a> 实用工具收集组帐户  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> 实用工具收集组帐户  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 Windows 域帐户。 此帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 此外，也可以使用现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。 若要满足验证要求，请使用以下准则来指定帐户。  
   
  如果您指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户选项：  
@@ -114,7 +114,7 @@ ms.locfileid: "68115421"
   
  若要继续，请单击 **“下一步”** 。  
   
-##  <a name="Validation_rules"></a> SQL Server 实例验证  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> SQL Server 实例验证  
  在此版本中，在要注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上，必须满足以下条件：  
   
 |条件|纠正措施|  
@@ -141,7 +141,7 @@ ms.locfileid: "68115421"
   
  若要继续，请单击 **“下一步”** 。  
   
-##  <a name="Summary"></a> 实例注册摘要  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> 实例注册摘要  
  摘要页列出与要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例有关的信息。  
   
  托管实例设置：  
@@ -152,7 +152,7 @@ ms.locfileid: "68115421"
   
  若要继续，请单击 **“下一步”** 。  
   
-##  <a name="Enrolling"></a> 注册 SQL Server 的实例  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> 注册 SQL Server 的实例  
  “注册”页提供操作的状态：  
   
 -   准备用于注册的实例。  
@@ -183,7 +183,7 @@ ms.locfileid: "68115421"
   
  若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除托管实例，请在“实用工具资源管理器导航”  窗格中选择“托管实例”  以便填充托管实例的列表视图，在“实用工具资源管理器内容”  列表视图中右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“取消实例托管”  。  
   
-##  <a name="PowerShell_enroll"></a> 使用 PowerShell 注册 SQL Server 的实例  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> 使用 PowerShell 注册 SQL Server 的实例  
  使用下面的示例将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例注册到现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中：  
   
 ```  

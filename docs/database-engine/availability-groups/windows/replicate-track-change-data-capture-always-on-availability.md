@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235393"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433754"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助于提供高可用性和附加数据库恢复功能。  
   
-##  <a name="Overview"></a>可用性组的复制概述  
+##  <a name="overview-of-replication-with-availability-groups"></a><a name="Overview"></a>可用性组的复制概述  
   
-###  <a name="PublisherRedirect"></a> 发布服务器重定向  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a> 发布服务器重定向  
  如果已发布的数据库可以识别 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则使用 redirected_publishers 条目配置向发布数据库提供代理访问的分发服务器。 这些条目利用可用性组侦听器名称连接到发布服务器和发布数据库，重定向最初配置的发布服务器/数据库对。 通过可用性组侦听器名称建立的连接在故障转移时将会失败。 当复制代理在故障转移之后重新启动时，连接会自动重定向到新的主副本。  
   
  在可用性组中，辅助数据库不能充当发布服务器。 仅当事务复制与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]组合在一起时，才支持重新发布。  
@@ -39,7 +39,7 @@ ms.locfileid: "75235393"
 > [!NOTE]  
 >  故障转移到辅助副本后，复制监视器无法调整 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的发布实例的名称，将继续在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的原始主实例名称下显示复制信息。 在故障转移之后，无法使用复制监视器输入跟踪令牌，但是可以在复制监视器中显示使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]在新发布服务器上输入的跟踪令牌。  
   
-###  <a name="Changes"></a>为支持可用性组对复制代理进行的常规更改  
+###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a>为支持可用性组对复制代理进行的常规更改  
  修改了三个复制代理来支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 日志读取器代理、快照代理和合并代理经过了修改，现在可以查询重定向发布服务器的分发数据库，并且可以使用返回的可用性组侦听器名称来连接数据库发布服务器（如果已声明重定向的发布服务器）。  
   
  默认情况下，当代理查询分发服务器以确定是否已重定向原始发布服务器时，则在将重定向的主机返回到代理之前，将会验证当前目标或重定向的适用性。 建议执行此操作。 不过，如果代理启动非常频繁，与验证存储过程相关的开销可能会过于昂贵。 日志读取器代理、快照代理和合并代理中已新增命令行开关 *BypassPublisherValidation*。 使用此开关时，重定向的发布服务器将会立即返回到代理，并绕过验证存储过程的执行。  
@@ -59,7 +59,7 @@ ms.locfileid: "75235393"
   
      跟踪标志 1448 支持复制日志读取器前移，即便在异步辅助副本未确认接受更改的情况下，也是如此。 甚至在此跟踪标志已启用的情况下，日志读取器也始终等待同步次要副本。 日志读取器将不会超过同步辅助副本的最小确认。 此跟踪标志应用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例，而不仅仅应用于可用性组、可用性数据库或日志读取器实例。 此跟踪标志会立即生效，无需重新启动。 它可提前激活或在异步辅助副本失败时激活。  
   
-###  <a name="StoredProcs"></a>支持可用性组的存储过程  
+###  <a name="stored-procedures-supporting-availability-groups"></a><a name="StoredProcs"></a>支持可用性组的存储过程  
   
 -   **sp_redirect_publisher**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75235393"
   
      此存储过程总是手动运行。 调用方必须是分发服务器的 **sysadmin** 、分发数据库的 **dbowner** ，或者是发布服务器数据库的某一发布的 **发布访问列表** 的成员。 此外，调用方的登录名必须是对所有可用性副本主机有效的登录名，并且对与发布服务器数据库关联的可用性数据库具有 select 权限。  
   
-###  <a name="CDC"></a> 变更数据捕获  
+###  <a name="change-data-capture"></a><a name="CDC"></a> 变更数据捕获  
  启用了变更数据捕获 (CDC) 的数据库能够利用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 确保数据库在出现故障时保持可用，而且确保持续监视针对数据库表的更改并将更改存入 CDC 更改表。 配置 CDC 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的顺序并不重要。 可以将启用 CDC 的数据库添加到 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，而且属于 AlwaysOn 可用性组成员的数据库也可以启用 CDC。 但是，在这两种情况下，CDC 配置都是始终在当前或目标主副本上执行。 CDC 使用日志读取器代理，它具有本主题前面的“日志读取器代理修改”  部分所述的相同限制。  
   
 -   **对未启用复制的变更数据捕获的捕获更改**  
@@ -123,7 +123,7 @@ ms.locfileid: "75235393"
   
     -   另一个方案则确保将连接请求定向到只读次要副本。  
   
-     如果要用来查找只读的辅助副本，则还必须为可用性组定义一个只读的路由列表。 有关详细信息，请参阅 [为只读路由配置可用性副本](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConfigureARsForROR)。  
+     如果要用来查找只读的辅助副本，则还必须为可用性组定义一个只读的路由列表。 有关详细信息，请参阅 [为只读路由配置可用性副本](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。  
   
     > [!NOTE]  
     >  在创建可用性组侦听器名称时以及在客户端应用程序使用该名称来访问可用性组数据库副本时，会出现一些传播延迟。  
@@ -177,7 +177,7 @@ ms.locfileid: "75235393"
     - 重启每个次要副本实例上的 SQL Server 服务
     - 或者，从可用性组的所有次要副本实例中删除此数据库，并使用自动或手动种子设定将它添加到可用性组副本实例
   
-###  <a name="CT"></a> 更改跟踪  
+###  <a name="change-tracking"></a><a name="CT"></a> 更改跟踪  
  启用了更改跟踪 (CT) 的数据库可以成为 AlwaysOn 可用性组的一部分。 不需要任何其他配置。 使用 CDC 表值函数 (TVF) 来访问更改数据的更改跟踪客户端应用程序将需要具备在故障转移后定位主副本的能力。 如果客户端应用程序通过可用性组侦听器名称进行连接，则连接请求将始终会适当地定向到当前主副本。  
   
 > [!NOTE]  
@@ -187,10 +187,10 @@ ms.locfileid: "75235393"
 >   
 >  对于作为辅助副本成员的数据库（即，辅助数据库）而言，不支持更改跟踪。 对主副本中的数据库运行更改跟踪查询。  
   
-##  <a name="Prereqs"></a> 有关使用复制的先决条件、限制和注意事项  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> 有关使用复制的先决条件、限制和注意事项  
  本节介绍使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]部署复制时的注意事项，包括先决条件、限制和建议。  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>先决条件  
   
 -   在使用事务复制并且发布数据库位于可用性组中时，发布服务器和分发服务器都必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 订阅服务器可以使用较低级别的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75235393"
   
 -   存在于数据库外部的元数据和对象不会传播到辅助副本，包括登录名、作业和链接服务器。 如果您在故障转移后需要新的主数据库中有元数据和对象，则必须手动复制它们。 有关详细信息，请参阅 [管理可用性组中数据库的登录名和作业 (SQL Server)](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **复制**  
   
 -   [为 AlwaysOn 可用性组配置复制 (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  

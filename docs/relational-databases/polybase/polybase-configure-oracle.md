@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 25fae1036d3a07d3cdbfe92ef55fe92e0396497a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242634"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>配置 PolyBase 以访问 Oracle 中的外部数据
@@ -23,7 +23,7 @@ ms.locfileid: "75242634"
 
 本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 Oracle 中的外部数据。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。
 

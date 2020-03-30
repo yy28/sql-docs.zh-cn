@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286241"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>安装或卸载用于 SharePoint 的 Reporting Services 加载项 (SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "79286241"
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
-##  <a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
  将报表服务器与 SharePoint 产品的实例集成需要若干步骤，安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是其中的一步。 若要详细了解如何安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。  
   
 -   如果将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与具有多个 Web 前端应用程序的 SharePoint 场集成，则将该外接程序安装到场中每台具有 Web 服务器前端的计算机上。 仅对将要用于访问报表服务器内容的 Web 前端执行此操作。  
@@ -37,7 +37,7 @@ ms.locfileid: "79286241"
   
 -   您必须是网站集管理员才能激活 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成功能。   
   
-##  <a name="bkmk_whatinstalled"></a> 外接程序安装执行哪些操作？  
+##  <a name="what-does-the-add-in-install"></a><a name="bkmk_whatinstalled"></a> 外接程序安装执行哪些操作？  
  外接程序安装过程由两个阶段组成，完成标准安装时将自动完成这两个阶段：  
   
 -   第一个阶段是将文件安装到适当的文件夹。 这些文件夹是 SharePoint 部署的标准文件夹。 要安装的文件之一是 rsCustomAction.exe。  
@@ -50,7 +50,7 @@ ms.locfileid: "79286241"
 > [!NOTE]  
 >  在安装 SharePoint 产品之前安装外接程序的好处是：当新的服务器添加到场后，SharePoint 场会配置并激活 Reporting Services 外接程序。  
   
-##  <a name="bkmk_3ways_to_install"></a> 安装方法概述  
+##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> 安装方法概述  
  使用以下两种方法之一可以安装用于 SharePoint 产品的 SQL Server 2016 Reporting Services 外接程序：  
   
 -   **安装向导：** ![注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注") 在 SQL Server 2016 中，此加载项可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”  页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”  。  
@@ -60,7 +60,7 @@ ms.locfileid: "79286241"
     > [!NOTE]  
     >  如果你将 **/q** 开关用于无提示命令行安装，将不显示最终用户许可协议。 对此软件的使用受到许可协议控制并且由您负责遵守该许可协议，而与安装方法无关。  
   
-##  <a name="bkmk_install_rssharepoint"></a> 使用安装文件 rsSharePoint.msi 安装外接程序  
+##  <a name="install-the-add-in-using-the-installation-file-rssharepointmsi"></a><a name="bkmk_install_rssharepoint"></a> 使用安装文件 rsSharePoint.msi 安装外接程序  
  本节介绍如何通过运行 .msi 安装向导或命令行安装，直接安装 rssharepoint.msi。 如果您使用 SQL Server 安装向导安装了该外接程序，则无需执行这些步骤。  
   
  您可以通过运行以下命令，看到命令行开关的完整列表：  
@@ -81,7 +81,7 @@ Rssharepoint.msi /?
   
 3.  在 SharePoint 管理中心配置报表服务器设置和功能激活。 。 有关安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。  
   
-###  <a name="bkmk_files_only_installation"></a> “仅文件”安装  
+###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a> “仅文件”安装  
  若要安装文件但跳过自定义操作安装阶段，则可以从命令行中使用 SKIPCA 选项来运行 rssharepoint.msi：  
   
 1.  使用 **管理员权限**打开命令提示符。  
@@ -131,7 +131,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi /q  
     ```  
   
-##  <a name="bkmk_remove_addin"></a> 如何删除 Reporting Services 外接程序  
+##  <a name="how-to-remove-the-reporting-services-add-in"></a><a name="bkmk_remove_addin"></a> 如何删除 Reporting Services 外接程序  
  可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 控制面板或命令行卸载用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 外接程序。  
   
 1.  使用控制面板将在当前计算机上完全卸载文件， **并且** 将从 SharePoint 场中删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对象和功能。 删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对象和功能后，您将不再能查看和更新报表。  
@@ -201,7 +201,7 @@ Rssharepoint.msi /?
   
  上述步骤假定您使用 SkipCA=1 完成了 .msi 安装并且 rscusstomaction.exe 可用。 有关详细信息，请参阅描述仅文件安装的部分。  
   
-##  <a name="bkmk_repair"></a> 如何从命令行修复 rssharepoint.msi  
+##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a> 如何从命令行修复 rssharepoint.msi  
  若要使用命令行修复或卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，请执行以下步骤：  
   
 1.  使用 **管理员权限**打开命令提示符。  
@@ -212,7 +212,7 @@ Rssharepoint.msi /?
     msiexec.exe /f rssharepoint.msi  
     ```  
   
-##  <a name="bkmk_logfiles"></a> 安装日志文件  
+##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> 安装日志文件  
  安装程序在运行期间，会为安装 **外接程序的用户将相应信息记录到** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件夹下的一个日志文件中。 例如，**c:\Users\\<用户名\>\AppData\Local\Temp**。此文件名为 **RS_SP_\<number>.log**，例如，**RS_SP_0.log**。 日志中的每个错误都以字符串“SSRSCustomActionError”开头。  
   
 > [!NOTE]  
@@ -246,7 +246,7 @@ Rssharepoint.msi /?
   
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured` 列中的一个值匹配。  
   
-##  <a name="bkmk_upgrade"></a> 升级  
+##  <a name="upgrade"></a><a name="bkmk_upgrade"></a> 升级  
  如果具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的现有安装，则可以升级到当前版本。 外接程序安装程序将检测现有版本并提示您确认是否更新。 将显示如下的消息：  
   
  在你的系统上检测到此产品的较低版本。  是否要升级现有安装？  
@@ -255,7 +255,7 @@ Rssharepoint.msi /?
   
  请注意， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序不能识别实例。 一台计算机上只能有一个外接程序实例。 不能并行运行不同版本和当前版本。  
   
-##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
+##  <a name="rscustomactionexe"></a><a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  下表概述了 rscustomaction.exe 的各个开关：  
   
 |开关|说明|  

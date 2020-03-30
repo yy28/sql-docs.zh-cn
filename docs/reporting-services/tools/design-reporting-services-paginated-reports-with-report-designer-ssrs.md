@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286161"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>使用报表设计器设计 Reporting Services 分页报表 (SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "79286161"
  利用本主题中的信息可为 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 解决方案中的单个报表项目设计分页报表和相关项。 有关 SQL Server Data Tools 中的解决方案和多个项目的详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。  
 
   
-##  <a name="bkmk_SharedDataSources"></a> 共享数据源  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a> 共享数据源  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可为报表解决方案定义和部署共享数据源。 可通过使用 **OverwriteDataSources** 和 **TargetDataSourceFolder** 属性，脱离项目中的其他项而单独部署共享数据源。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
  在报表设计器中，您可以使用“报表数据”窗格和解决方案资源管理器来定义在报表中使用的数据源。 有关详细信息，请参阅 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 不能使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 打开已发布到某一报表服务器或 SharePoint 站点、但不包括在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 解决方案中的数据源。 对于该功能，请使用[报表生成器创作环境 (SSRS)](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)。  
@@ -46,14 +46,14 @@ ms.locfileid: "79286161"
   
  有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
    
-##  <a name="bkmk_SharedDatasets"></a> 共享数据集  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> 共享数据集  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可为报表解决方案定义和部署共享数据集。 可通过使用 **OverwriteDatasets** 和 **TargetDatasetFolder** 属性，脱离项目中的其他项而单独部署共享数据集。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
  在报表设计器中，您可以使用“报表数据”窗格和解决方案资源管理器来定义在报表中使用的共享数据集。 有关详细信息，请参阅 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 不能使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 从报表服务器或 SharePoint 站点直接打开已发布的数据集。 对于该功能，请在共享数据集模式下使用[报表生成器创作环境 (SSRS)](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)。  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一个客户端工具。 您可以使用查询设计器在本地以预览方式创建和测试您的查询结果。 在部署后，您可以独立于共享数据集所依赖的共享数据源和报表来单独管理共享数据集。 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)、[查询设计工具 (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md) 和[共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)。  
   
-##  <a name="bkmk_Reports"></a> 分页报表  
+##  <a name="paginated-reports"></a><a name="bkmk_Reports"></a> 分页报表  
 分页报表是报表项目中存储的文件。 报表可用作独立报表、子报表或者从主报表进行的钻取操作的目标。 可通过使用 **TargetReportFolder** 和其他属性，脱离项目中的其他项而单独部署报表。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
 > [!NOTE]  
@@ -84,18 +84,18 @@ ms.locfileid: "79286161"
   
      有关详细信息，请参阅[报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)。  
   
-##  <a name="bkmk_ReportParts"></a> 报表部件  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> 报表部件  
  在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”  发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
  可通过使用 **TargetReportPartFolder** 和其他属性，脱离项目中的其他项而单独部署报表部件。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
-##  <a name="bkmk_Resources"></a> Resources  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Resources  
  您可以将与您的项目相关、但报表服务器尚未处理的文件添加到您的项目中。 例如，您可以为图片添加图像，或者为空间数据添加 ESRI 形状文件。 有关详细信息，请参阅[资源](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)。  
  
-##  <a name="bkmk_ReportLayout"></a> 分页报表布局  
+##  <a name="paginated-report-layout"></a><a name="bkmk_ReportLayout"></a> 分页报表布局  
  若要创建报表布局，请将报表项和数据区域从工具箱拖到设计图面上，然后对其进行排列。 将数据集字段拖至设计图面上的项，以便向报表添加数据。 若要在 Tablix 数据区域的组中组织数据，请将数据集字段拖至“分组”窗格。 因为报表创作工具是实质上是一种创建报表定义的方法，所以，用于报表设计的方法在报表生成器和报表设计器之间十分相似。  
    
-##  <a name="bkmk_Preview"></a> 预览分页报表  
+##  <a name="preview-a-paginated-report"></a><a name="bkmk_Preview"></a> 预览分页报表  
  使用 **“预览”** 可以验证报表数据和布局设计。 在你预览报表时，报表处理器将对报表定义架构和表达式语法进行验证，然后在 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 窗口中列出问题。  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ ms.locfileid: "79286161"
   
     -   报表布局需要修改，才能更好地以打印格式阅读。  
    
-##  <a name="bkmk_SaveandDeploy"></a> 保存和部署分页报表  
+##  <a name="save-and-deploy-paginated-reports"></a><a name="bkmk_SaveandDeploy"></a> 保存和部署分页报表  
  在报表设计器中，您可以在本地保存报表和其他项目文件，或者将它们部署到报表服务器或 SharePoint 站点。 共享数据源、共享数据集、报表、报表资源和报表部件可以单独部署或一起部署，具体部署方式取决于您配置的项目部署属性。 有关详细信息，请参阅 [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)。  
   
  在报表设计器中，必须了解如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中当前版本的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]所支持的报表定义架构设计报表。 在您为特定的报表服务器或 SharePoint 站点设置项目部署属性，然后保存报表时，报表设计器将报表定义保存到架构中与目标报表服务器上的版本匹配的生成目录中。 若要创建可在下级报表服务器上发布的报表，报表设计器将删除在目标架构中不存在的报表项。 这种情况将自动发生，而没有提示。 在发生此情况时，原始报表定义将保留在项目文件夹中。 已部署的修改的报表定义位于生成文件夹中。  
@@ -159,7 +159,7 @@ ms.locfileid: "79286161"
 ### <a name="export-a-paginated-report-to-a-different-file-format"></a>将分页报表导出为不同的文件格式  
  报表可导出为各种格式，这些格式会影响某些报表布局和交互式功能的行使。 有关各种输出格式的设计注意事项的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
    
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> 报表验证和错误级别  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> 报表验证和错误级别  
  在预览之前和在部署过程中对报表进行验证。 当生成报表时，可能发生许多生成问题。 例如，报表可能包含与项目配置指定的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本不兼容的字符串（如表达式或查询）。  
   
  使用 ErrorLevel 属性可以管理生成警告和错误。 ErrorLevel 属性可以包含值 0 到 4（包括这两者）。 此值确定将哪些生成问题报告为错误，以及将哪些生成问题报告为警告。 默认值为 2。 警告和错误将写入到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][输出](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 窗口中。  

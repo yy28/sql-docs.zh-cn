@@ -16,10 +16,10 @@ ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822060"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>向 SQL Server 资源添加依赖项
@@ -30,9 +30,9 @@ ms.locfileid: "74822060"
   
 -   **若要为 SQL Server 资源添加依赖关系，请使用：** [Windows 故障转移群集管理器](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  需要特别注意的是：如果要将其他任何资源添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组中，这些资源必须始终具有自身的唯一 SQL 网络名称资源以及自身的 SQL IP 地址资源。  
   
  不要将现有的 SQL 网络名称资源和 SQL IP 地址资源用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以外的任何资源。 如果将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源与其他资源共享，可能会发生下列问题：  
@@ -55,10 +55,10 @@ ms.locfileid: "74822060"
   
      如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组中安装 MS DTC，并且具有依赖于 MS DTC 的其他资源，则在此组脱机时或者处于故障转移期间的情况下，MS DTC 将不可用。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议您尽可能将 MS DTC 放入单独的组中且占用单独的物理磁盘资源。  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  如果将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装到具有多个磁盘驱动器的 WSFC 资源组，并选择将数据置于其中一个驱动器上，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源将被设置为只依赖于该驱动器。 若要将数据或日志放到另一个磁盘上，必须先为相应磁盘添加与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的依赖关系。  
   
-##  <a name="WinClusManager"></a> 使用故障转移群集管理器管理单元  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WinClusManager"></a> 使用故障转移群集管理器管理单元  
  **为 SQL Server 资源添加依赖关系**  
   
 -   打开故障转移群集管理器管理单元。  

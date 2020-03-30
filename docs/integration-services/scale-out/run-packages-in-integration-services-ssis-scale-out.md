@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72305075"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) Scale Out 中运行包
@@ -32,7 +32,7 @@ ms.locfileid: "72305075"
 
 -   [SQL Server 代理作业](#sql_agent)
 
-## <a name="scale_out_dialog"></a>通过“在 Scale Out 中执行包”对话框运行包
+## <a name="run-packages-with-the-execute-package-in-scale-out-dialog-box"></a><a name="scale_out_dialog"></a>通过“在 Scale Out 中执行包”对话框运行包
 
 1. 打开“在 Scale Out 中执行包”对话框。
 
@@ -61,7 +61,7 @@ ms.locfileid: "72305075"
 
     单击“确定”  ，启动包执行。 若要查看包执行报表，在对象资源管理器中右键单击包，单击“报表”  ，单击“所有执行”  ，查找该执行。
     
-## <a name="stored_proc"></a>在存储过程中运行包
+## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a>在存储过程中运行包
 
 1.  创建执行。
 
@@ -124,7 +124,7 @@ GO
 
 要将默认执行模式切换回来以便不按默认 Scale Out 模式运行包，请将“服务器范围内的默认执行模式”设置为“服务器”   。
 
-## <a name="sql_agent"></a>在 SQL Server 代理作业中运行包
+## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a>在 SQL Server 代理作业中运行包
 在 SQL Server 代理作业中，可以运行 SSIS 包作为作业的一个步骤。 要在 Scale Out 中运行包，请将默认执行模式设置为“Scale Out”  。将默认执行模式设置为“Scale Out”后，SQL Server 代理作业中的包将在 Scale Out 模式下运行  。
 
 ## <a name="next-steps"></a>后续步骤

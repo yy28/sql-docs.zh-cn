@@ -11,17 +11,17 @@ ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
 ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957071"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据库
+# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据库
 
 在本快速入门中，你将使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接到 Azure SQL 数据库服务器。 随后，你将运行 Transact-SQL (T-SQL) 语句来创建和查询 TutorialDB 数据库，该数据库亦用于其他 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教程。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要完成本快速入门，你需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 和 Azure SQL 数据库服务器。
 

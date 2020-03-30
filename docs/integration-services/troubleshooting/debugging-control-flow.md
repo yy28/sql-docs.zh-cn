@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295134"
 ---
 # <a name="debugging-control-flow"></a>调试控制流
@@ -118,7 +118,7 @@ ms.locfileid: "71295134"
 |输出|显示 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中各功能的状态消息。|  
 |即时|用于调试和评估表达式，并打印变量值。|  
 
-## <a name="debug"></a> 通过在任务或容器上设置断点调试包
+## <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a><a name="debug"></a> 通过在任务或容器上设置断点调试包
   本过程介绍如何在包、任务、For 循环容器、Foreach 循环容器或序列容器中设置断点。  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>在包、任务或容器中设置断点  

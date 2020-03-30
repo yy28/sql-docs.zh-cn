@@ -14,10 +14,10 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909512"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
@@ -34,9 +34,9 @@ ms.locfileid: "72909512"
   
 -   **若要将数据库恢复到数据库快照，请使用：** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  下列情况不支持恢复：  
   
 -   数据库存在多个快照。 还原时，对于计划恢复的数据库，只能存在一个快照。  
@@ -67,7 +67,7 @@ ms.locfileid: "72909512"
   
 -   恢复操作会删除所有的全文目录。  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  确保源数据库与数据库快照满足以下先决条件：  
   
 -   确认数据库没有损坏。  
@@ -79,12 +79,12 @@ ms.locfileid: "72909512"
   
 -   删除当前数据库中存在的任何其他快照。 有关详细信息，请参阅 [删除数据库快照 (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)实例。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  任何具有源数据库 RESTORE DATABASE 权限的用户都可以将其恢复至创建数据库快照时的状态。  
   
-##  <a name="TsqlProcedure"></a> 如何将数据库恢复到数据库快照（使用 Transact-SQL）  
+##  <a name="how-to-revert-a-database-to-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> 如何将数据库恢复到数据库快照（使用 Transact-SQL）  
  **将数据库恢复到数据库快照**  
   
 > [!NOTE]  
@@ -118,14 +118,14 @@ ms.locfileid: "72909512"
   
 6.  尤其在使用完整（或大容量日志）恢复模式时，可以选择备份恢复后的数据库。 备份数据库，请参阅[创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
 
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  本节包含演示如何将数据库恢复到数据库快照的以下示例：  
   
 -   A. [恢复 AdventureWorks 数据库的快照](#Reverting_AW)  
   
 -   B. [恢复 Sales 数据库的快照](#Reverting_Sales)  
   
-####  <a name="Reverting_AW"></a> A. 恢复 AdventureWorks 数据库的快照  
+####  <a name="a-reverting-a-snapshot-on-the-adventureworks-database"></a><a name="Reverting_AW"></a> A. 恢复 AdventureWorks 数据库的快照  
  此示例假定 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库当前只存在一个快照。 有关在此创建数据库要恢复到的快照的示例，请参阅 [创建数据库快照 (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
@@ -136,7 +136,7 @@ DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO  
 ```  
   
-####  <a name="Reverting_Sales"></a> B. 恢复 Sales 数据库的快照  
+####  <a name="b-reverting-a-snapshot-on-the-sales-database"></a><a name="Reverting_Sales"></a> B. 恢复 Sales 数据库的快照  
  此示例假定在 **Sales** 数据库当前存在两个快照： **sales_snapshot0600** 和 **sales_snapshot1200**。 此示例删除了较旧的快照并将数据库恢复到较新的快照。  
   
  有关用于创建此示例所基于的示例数据库和快照的代码，请参阅：  
@@ -158,7 +158,7 @@ RESTORE DATABASE Sales FROM DATABASE_SNAPSHOT = 'sales_snapshot1200';
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建数据库快照 (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72586767"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC 资源
@@ -332,7 +332,7 @@ GO
 > 
 > 为可用性组启用 DTC 支持的唯一方法是使用 Transact-SQL 创建可用性组。
  
-## <a name="ClusterDTC"></a>8.准备群集资源
+## <a name="8--prepare-cluster-resources"></a><a name="ClusterDTC"></a>8.准备群集资源
 
 此脚本将准备 DTC 从属资源：磁盘和 IP。  将向 Windows 群集添加共享存储。  将创建网络资源，然后创建 DTC 并使其成为可用性组的资源。  在 `SQLNODE1` 上运行以下 PowerShell 脚本。 感谢 [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) 提供脚本！
 
@@ -479,7 +479,7 @@ $nodes = (Get-ClusterNode).Name;
 }
 ```  
 
-## <a name="11--cycle-the-includessnoversionincludesssnoversion-mdmd-service-for-each-instance"></a>11.对每个实例循环运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务
+## <a name="11--cycle-the-ssnoversion-service-for-each-instance"></a>11.对每个实例循环运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务
 
 完整配置群集 DTC 服务后，需要停止然后重启可用性组中的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过注册使用此 DTC 服务。
 

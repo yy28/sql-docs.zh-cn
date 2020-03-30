@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254053"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "75254053"
   有关更深入的说明，请参阅[恢复模式](recovery-models-sql-server.md)。
   
   
-##  <a name="BeforeYouBegin"></a> 准备工作  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 准备工作  
   
 
 -   在从[完整恢复模式或大容量日志恢复模式](recovery-models-sql-server.md)切换前，先[备份事务日志](back-up-a-transaction-log-sql-server.md)  。  
@@ -50,10 +50,10 @@ ms.locfileid: "75254053"
   
 **注意！** 如果在大容量操作过程中切换到完整恢复模式，则大容量操作日志记录将从最小日志记录更改为最大日志记录，反之亦然。  
   
-###  <a name="Security"></a> 所需的权限  
+###  <a name="required-permissions"></a><a name="Security"></a> 所需的权限  
    需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>查看或更改恢复模式  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75254053"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>查看恢复模式  
   
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 建议：在更改恢复模式后  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> 建议：在更改恢复模式后  
   
 -   **在完整恢复模式和大容量日志恢复模式之间切换后**  
   
@@ -128,7 +128,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   确保定期执行数据库备份。 备份数据库对于保护数据和截断事务日志的不活动部分是基本操作。  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -138,7 +138,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [数据库维护计划](../maintenance-plans/maintenance-plans.md) （ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 联机丛书中）  
   

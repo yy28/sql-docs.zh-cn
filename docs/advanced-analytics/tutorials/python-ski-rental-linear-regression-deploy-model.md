@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e78f099f108f9affa58f53d1ad46b802eae004dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75681719"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python 教程：将线性回归模型部署到 SQL Server 机器学习服务中
@@ -35,7 +35,7 @@ ms.locfileid: "75681719"
 
 在[第三部分](python-ski-rental-linear-regression-train-model.md)中，你了解了如何在 Python 中定型线性回归机器学习模型。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 * 本教程的第四部分假设你已完成了[第一部分](python-ski-rental-linear-regression.md)和其中的必备条件。
 

@@ -24,10 +24,10 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a94825fe0af3820ab7f39ca25a104242e21bda8c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258654"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在备份和还原期间可能的介质错误 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258654"
 >  镜像备份最多提供 4 个介质集的副本（镜像），提供备用副本以便从损坏介质导致的错误中恢复。 有关详细信息，请参阅本主题后面的 [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)不熟悉的读者。  
   
   
-##  <a name="BckChecksums"></a> 备份校验和  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> 备份校验和  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持三种校验和：页校验和、日志块校验和以及备份校验和。 生成备份校验和时，BACKUP 将验证从数据库读取的数据是否与数据库中存在的任意校验和或页残缺指示一致。  
   
  BACKUP 语句选择性地计算备份流的备份校验和；如果给定页上存在页校验和或残缺页信息，则当备份该页时，BACKUP 还将验证它的校验和、残缺页状态以及 ID。 创建备份校验和时，备份操作不会向页中添加任何校验和。 将在这些页位于数据库中时对其进行备份，备份不会修改这些页。  
@@ -75,7 +75,7 @@ ms.locfileid: "75258654"
   
 4.  发出一条消息，说明已成功生成备份，但备份中包含页错误。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **启用或禁用备份校验和**  
   
 -   [在备份或还原期间启用或禁用备份校验和 (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

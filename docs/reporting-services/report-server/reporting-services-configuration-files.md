@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564123"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 配置文件
@@ -34,7 +34,7 @@ ms.locfileid: "67564123"
   
 -   [配置文件摘要（SharePoint 模式）](#bkmk_config_file_Summary_sharepoint_mode)  
   
-##  <a name="bkmk_config_file_Summary_native_mode"></a> 配置文件摘要（本机模式）  
+##  <a name="summary-of-configuration-files-native-mode"></a><a name="bkmk_config_file_Summary_native_mode"></a> 配置文件摘要（本机模式）  
  下表说明配置设置的存储位置。 大多数配置设置都存储在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]附带的配置文件中。 默认情况下，安装目录如下：  
   
 ```
@@ -57,7 +57,7 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
 |RSReportDesigner.config|存储报表设计器的配置设置。 有关详细信息，请参阅 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies。|  
 |RSPreviewPolicy.config|存储报表预览期间使用的服务器扩展插件的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
-##  <a name="bkmk_config_file_Summary_sharepoint_mode"></a> 配置文件摘要（SharePoint 模式）  
+##  <a name="summary-of-configuration-files-sharepoint-mode"></a><a name="bkmk_config_file_Summary_sharepoint_mode"></a> 配置文件摘要（SharePoint 模式）  
  下表说明用于 SharePoint 模式报表服务器的配置文件。 大多数配置设置存储在 SharePoint 服务应用程序数据库中。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。  
   
  默认情况下，SharePoint 模式的安装目录如下：  

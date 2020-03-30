@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43820f44e789330ed437c104e385090a8179a2b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74947106"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>使用 .NET 应用中的 C# 代码 部署 SSIS 项目
@@ -24,7 +24,7 @@ ms.locfileid: "74947106"
 
 若要创建 C# 应用，可以使用 Visual Studio、Visual Studio Code 或所选的另一工具。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 开始之前，请确保已安装 Visual Studio 或 Visual Studio Code。 从 [Visual Studio 下载](https://www.visualstudio.com/downloads/)中下载免费的社区版 Visual Studio 或免费的 Visual Studio Code。
 

@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287834"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
@@ -109,7 +109,7 @@ ms.locfileid: "76287834"
   
 可以通过对多个主体多次调用 EXECUTE AS 语句来创建执行上下文堆栈。 在调用时，REVERT 语句将把上下文切换为上下文堆栈中上一级的登录帐户或用户。 有关此行为的示例，请参阅[示例 A](#_exampleA)。  
   
-##  <a name="_user"></a>指定用户名或登录名  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a>指定用户名或登录名  
  EXECUTE AS \<context_specification> 中指定的用户或登录名必须分别作为 sys.database_principals 或 sys.server_principals 中的主体存在，否则 EXECUTE AS 语句将失败   。 此外，还必须为该主体授予 IMPERSONATE 权限。 除非调用方是数据库所有者或 sysadmin 固定服务器角色的成员，否则即使用户通过 Windows 组成员身份访问数据库或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，主体也必须存在  。 例如，假设条件如下： 
   
 -   CompanyDomain\SQLUsers 组拥有 Sales 数据库的访问权限   。  
@@ -141,7 +141,7 @@ ms.locfileid: "76287834"
   
 ## <a name="examples"></a>示例  
   
-###  <a name="_exampleA"></a> A. 使用 EXECUTE AS 和 REVERT 切换上下文  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. 使用 EXECUTE AS 和 REVERT 切换上下文  
  以下示例使用多个主体创建上下文执行堆栈。 然后使用 `REVERT` 语句将执行上下文重置为上一个调用方。 将多次执行 `REVERT` 语句以向上移动堆栈，直到将执行上下文设置为原始调用方为止。  
   
 ```  

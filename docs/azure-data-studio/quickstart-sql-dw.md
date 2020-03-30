@@ -11,17 +11,17 @@ ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957104"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据仓库中的数据
+# <a name="quickstart-use-name-sos-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据仓库中的数据
 
 本快速入门演示如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接到 Azure SQL 数据仓库，然后使用 Transact-SQL 语句创建、插入和选择数据。 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 若要完成此快速入门，需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 和 Azure SQL 数据仓库。
 
 - [安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)。

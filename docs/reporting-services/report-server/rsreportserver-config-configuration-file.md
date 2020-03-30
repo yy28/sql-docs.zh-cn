@@ -9,10 +9,10 @@ ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500413"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
@@ -23,7 +23,7 @@ ms.locfileid: "66500413"
  在以下内容中将按照这些设置在默认安装的配置文件中出现的顺序展示。 有关如何编辑此文件的说明，请参阅 [修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
  
-##  <a name="bkmk_file_location"></a> 文件位置  
+##  <a name="file-location"></a><a name="bkmk_file_location"></a> 文件位置  
 
 根据报表服务器模式，RSReportServer.config 位于以下文件夹中：  
 
@@ -55,7 +55,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  
 有关编辑此文件的详细信息，请参阅 [修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
-##  <a name="bkmk_generalconfiguration"></a> 常规配置设置 (rsreportserver.config)  
+##  <a name="general-configuration-settings-rsreportserverconfig"></a><a name="bkmk_generalconfiguration"></a> 常规配置设置 (rsreportserver.config)  
  下表提供有关在文件的第一部分显示的常规配置设置的信息。 将按设置在配置文件中的显示顺序依次列出： 表的最后一列指示设置是适用于本机模式报表服务器 **(N)** 还是 SharePoint 模式报表服务器 **(S)** 或两者均适用。  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**WatsonDumpOnExceptions**|指定您要在错误日志中报告的异常列表。 如果存在重复问题并希望为要发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 以进行分析的信息创建转储，此设置会非常有用。 创建转储会影响性能，因此仅在诊断问题时才需更改此设置。|N,S|  
 |**WatsonDumpExcludeIfContainsExceptions**|指定您希望不要在错误日志中报告的异常列表。 在诊断问题并且不希望服务器为特定异常创建转储时，此设置非常有用。|N,S|  
   
-##  <a name="bkmk_URLReservations"></a> URLReservations（RSReportServer.config 文件）  
+##  <a name="urlreservations-rsreportserverconfig-file"></a><a name="bkmk_URLReservations"></a> URLReservations（RSReportServer.config 文件）  
  URLReservations 为当前实例定义报表服务器 Web 服务和 Web 门户的 HTTP 访问  。 URL 会在配置报表服务器时保留和存储在 HTTP.SYS 中。  
   
 > [!WARNING]  
@@ -110,7 +110,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**AccountSid**|指定已为其创建 URL 预留的帐户的安全标识符 (SID)。 该帐户应为报表服务器服务运行时所使用的帐户。 如果 SID 与服务帐户不匹配，则报表服务器可能无法侦听相应 URL 上的请求。|N|  
 |**AccountName**|指定与 **AccountSid**对应的可读帐户名称。 该名称不会被使用，但它会显示在文件中，这样你便可以轻松确定用于相应 URL 预留的帐户的服务帐户。|N|  
   
-##  <a name="bkmk_Authentication"></a> 身份验证（RSReportServer.config 文件）  
+##  <a name="authentication-rsreportserverconfig-file"></a><a name="bkmk_Authentication"></a> 身份验证（RSReportServer.config 文件）  
  **Authentication** 指定报表服务器所接受的一个或多个身份验证类型。 默认设置和值是本节中介绍的设置和值的子集。 只会自动添加默认设置。 若要添加其他设置，必须使用文本编辑器将相应的元素结构添加到 RSReportServer.config 文件中并设置其值。  
   
  默认值包括 **RSWindowsNegotiate** 和 **RSWindowsNTLM** ，其中 **EnableAuthPersistance** 设置为 **True**：  
@@ -144,7 +144,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**RSWindowsExtendedProtectionScenario**|默认值为 **Proxy**。|N|  
 |**EnableAuthPersistence**|确定针对连接还是针对各个请求执行身份验证。<br /><br /> 有效值为 **True** （默认值）或 **False**。 如果设置为 **True**，则从同一连接发出的后续请求会采用第一个请求的模拟上下文。<br /><br /> 如果使用代理服务器软件（如 ISA 服务器）访问报表服务器，则此值必须设置为 **False** 。 如果使用代理服务器，则允许多个用户使用来自代理服务器的单个连接。 对于这种情况，您应禁用身份验证持久性，以便可以对各个用户请求单独进行身份验证。 如果不将 **EnableAuthPersistence** 设置为 **False**，则所有用户都将使用第一个请求的模拟上下文进行连接。|N,S|  
   
-##  <a name="bkmk_service"></a> 服务（RSReportServer.config 文件）  
+##  <a name="service-rsreportserverconfig-file"></a><a name="bkmk_service"></a> 服务（RSReportServer.config 文件）  
  **Service** 指定作为一个整体应用于服务的应用程序设置。  
   
  以下表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
@@ -170,7 +170,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**FileShareStorageLocation**|指定文件系统中用于存储临时快照的单个文件夹。 尽管可以将文件夹路径指定为 UNC 路径，但不建议您这样做。 默认值为空。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
 |**IsRdceEnabled**|指定是否已启用报表定义自定义扩展插件 (RDCE)。 有效值为 **True** 和 **False**。|N,S|  
   
-##  <a name="bkmk_UI"></a> UI（RSReportServer.config 文件）  
+##  <a name="ui-rsreportserverconfig-file"></a><a name="bkmk_UI"></a> UI（RSReportServer.config 文件）  
  UI 指定应用于 Web 门户应用程序的配置设置  。  
   
  以下表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
@@ -181,7 +181,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ReportBuilderTrustLevel**|请不要修改此值，它是不可配置的。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以及更高版本中，报表生成器仅在 FullTrust  下运行。 有关不再使用的部分信任模式的详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)。|N,S|  
 |**PageCountMode**|仅用于 Web 门户，此设置指定在呈现报表之前或查看报表时报表服务器是否计算页计数值。 有效值为 **Estimate** （默认值）和 **Actual**。 在用户查看报表时，使用 **Estimate** 计算页计数信息。 最初，页计数设置为 2（指当前页再加上一页），而当用户在报表中翻页时会上调。 如果您想在显示报表之前提前计算页计数，请使用 **Actual** 。 提供**Actual** 是为了向后兼容。 请注意，如果将 **PageCountMode** 设置为 **Actual**，则系统必须对整个报表进行处理后才能得到有效的页计数，这会增加报表显示之前所需等待的时间。|N,S|  
   
-##  <a name="bkmk_extensions"></a> 扩展插件（RSReportServer.config 文件）本机模式  
+##  <a name="extensions-rsreportserverconfig-file-native-mode"></a><a name="bkmk_extensions"></a> 扩展插件（RSReportServer.config 文件）本机模式  
  **仅对于本机模式** 的报表服务器，“扩展插件”部分才显示在 rsreportserver.config 文件中。 SharePoint 模式的报表服务器的扩展插件信息存储在 SharePoint 配置数据库中，并针对每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序进行配置。  
   
  **扩展插件** 指定以下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的可扩展模块的配置设置：  
@@ -208,7 +208,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  上述某些扩展插件严格控制为供报表服务器内部使用。 本文不介绍仅内部使用的扩展插件的配置设置。 以下各节将介绍默认扩展插件的配置设置。 如果您所使用的报表服务器具有自定义的扩展插件，则您的配置文件可能包含此处未介绍的设置。 下面将按扩展插件的显示顺序依次列出。 对于反复出现在同一种扩展插件的多个实例中的设置，我们只介绍一次。  
   
-###  <a name="bkmk_extensionsgeneral"></a> 传递扩展插件常规配置  
+###  <a name="delivery-extensions-general-configuration"></a><a name="bkmk_extensionsgeneral"></a> 传递扩展插件常规配置  
  指定用于通过订阅传递报表的默认（可能为自定义）传递扩展插件。 RSReportServer.config 文件包含四个传递扩展插件的应用程序设置：  
   
 1.  报表服务器电子邮件  
@@ -230,14 +230,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SecondsBeforeRetry**|指定每次重试尝试之间的时间间隔（秒）。 默认值为 900。|  
 |**配置**|包含特定于各传递扩展插件的配置设置。|  
   
-####  <a name="bkmk_fileshare_extension"></a> 文件共享传递扩展插件配置设置  
+####  <a name="file-share-delivery-extension-configuration-settings"></a><a name="bkmk_fileshare_extension"></a> 文件共享传递扩展插件配置设置  
  文件共享传递会将已导出为应用程序文件格式的报表发送到网络上的共享文件夹中。 有关详细信息，请参阅 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)。  
   
 |设置|说明|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**， **RenderingExtension**|这些设置用于特意排除那些无法与文件共享传递协同工作的导出格式。 这些格式通常用于交互式报表、预览或预加载报表缓存。 它们无法生成便于桌面应用程序查看的应用程序文件。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
-####  <a name="bkmk_email_extension"></a> 报表服务器电子邮件扩展插件配置设置  
+####  <a name="report-server-e-mail-extension-configuration-settings"></a><a name="bkmk_email_extension"></a> 报表服务器电子邮件扩展插件配置设置  
  报表服务器电子邮件使用 SMTP 网络设备向电子邮件地址发送报表。 必须对此传递扩展插件进行配置才能使用。 有关详细信息，请参阅 [Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
 |设置|说明|  
@@ -258,17 +258,17 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**DefaultHostName**|此值与 **SendEmailToUserAlias**一起使用。<br /><br /> 指定一个字符串值，表示当 **SendEmailToUserAlias** 设置为 True 时追加到用户别名中的主机名。 此值可以为域名系统 (DNS) 名称或 IP 地址。|  
 |**PermittedHosts**|通过显式指定哪些主机能够接收电子邮件传递来限制报表分发。 在 **PermittedHosts**中，每个主机均指定为一个 **HostName** 元素，其中值为 IP 地址或 DNS 名称。<br /><br /> 只有为这些主机定义的电子邮件帐户才是有效的收件人。 如果指定 **DefaultHostName**，请确保在 **PermittedHosts** 的 **HostName**元素中包括该主机。 此值必须是一个或多个 DNS 名称或 IP 地址。 默认情况下，不设置此值。 如果未设置该值，则对于可接收通过电子邮件发送的报表的用户没有任何限制。|  
   
-####  <a name="bkmk_documentlibrary_extension"></a> 报表服务器 SharePoint 文档库扩展插件配置  
+####  <a name="report-server-sharepoint-document-library-extension-configuration"></a><a name="bkmk_documentlibrary_extension"></a> 报表服务器 SharePoint 文档库扩展插件配置  
  报表服务器文档库会将已导出为应用程序文件格式的报表发送到文档库中。 只有配置为在 SharePoint 集成模式下运行的报表服务器才能使用此传递扩展插件。 有关详细信息，请参阅 [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)。  
   
 |设置|说明|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats，RenderingExtension**|这些设置用于特意排除那些无法与文档库传递协同工作的导出格式。 HTMLOWC、RGDI 和 Null 传递扩展插件都被排除。 这些格式通常用于交互式报表、预览或预加载报表缓存。 它们无法生成便于桌面应用程序查看的应用程序文件。|  
   
-####  <a name="bkmk_null_extension"></a> NULL 传递扩展插件配置  
+####  <a name="null-delivery-extension-configuration"></a><a name="bkmk_null_extension"></a> NULL 传递扩展插件配置  
  NULL 传递提供程序用于为单个用户预生成的报表预加载缓存。 对于此传递扩展插件，没有相应的配置设置。 有关详细信息，请参阅 [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
   
-###  <a name="bkmk_ui"></a> 传递 UI 扩展插件常规配置  
+###  <a name="delivery-ui-extensions-general-configuration"></a><a name="bkmk_ui"></a> 传递 UI 扩展插件常规配置  
  指定包含用户界面组件的传递扩展插件，在 Web 门户中定义单个订阅时，订阅定义页中显示这些用户界面组件。 如果需创建和部署具有用户定义选项的自定义传递扩展插件，并且要使用 Web 门户，则必须注册此处的传递扩展插件。 默认情况下，存在报表服务器电子邮件和报表服务器文件共享的配置设置。 仅用于数据驱动订阅或 SharePoint 应用程序页的传递扩展插件不具有此处的设置。  
   
 |设置|说明|  
@@ -277,7 +277,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**配置**|指定传递扩展插件的配置选项。 可以设置每个传递扩展插件的默认呈现格式。 有效值为 rsreportserver.config 文件的呈现部分中描述的呈现扩展名。|  
 |**DefaultRenderingExtension**|指定传递扩展插件是否为默认值。 报表服务器电子邮件是默认的传递扩展插件。 有效值包括 **True** 或 **False**。 如果多个扩展插件包含 **True**值，则将第一个扩展插件视为默认扩展插件。|  
   
-###  <a name="bkmk_rendering"></a> 呈现扩展插件常规配置  
+###  <a name="rendering-extensions-general-configuration"></a><a name="bkmk_rendering"></a> 呈现扩展插件常规配置  
  指定用于呈现报表的默认（可能为自定义）呈现扩展插件。  
   
  除非部署自定义的呈现扩展插件，否则不要修改此部分。 有关详细信息，请参阅 [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)。  
@@ -326,7 +326,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  除非部署自定义的呈现扩展插件，否则不要修改此部分。 有关详细信息，请参阅 [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)。  
   
-###  <a name="bkmk_data"></a> 数据扩展插件常规配置  
+###  <a name="data-extensions-general-configuration"></a><a name="bkmk_data"></a> 数据扩展插件常规配置  
  指定用于处理查询的默认（可能为自定义）数据处理扩展插件。 默认数据处理扩展插件包含以下内容：  
   
 -   SQL  
@@ -355,28 +355,28 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  除非要添加自定义数据处理插件，否则不要修改此部分。 有关详细信息，请参阅 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)。  
   
-###  <a name="bkmk_semantic"></a> 语义查询扩展插件常规配置  
+###  <a name="semantic-query-extensions-general-configuration"></a><a name="bkmk_semantic"></a> 语义查询扩展插件常规配置  
  指定用于处理报表模型的语义查询处理扩展插件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 附带的语义查询处理扩展插件支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据、Oracle 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据。 请不要修改此部分。 查询处理是不可扩展的。  
   
-###  <a name="bkmk_model"></a> 模型生成配置  
+###  <a name="model-generation-configuration"></a><a name="bkmk_model"></a> 模型生成配置  
  指定用于从报表服务器上已发布的共享数据源创建报表模型的模型生成扩展插件。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据、Oracle 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据源生成模型。 请不要修改此部分。 模型生成是不可扩展的。  
   
-###  <a name="bkmk_security"></a> 安全扩展插件配置  
+###  <a name="security-extension-configuration"></a><a name="bkmk_security"></a> 安全扩展插件配置  
  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所用的授权组件。 该组件由 RSReportServer.config 文件的 **Authentication** 元素中注册的身份验证扩展插件使用。 除非要实现自定义的身份验证扩展插件，否则不要修改此部分。 有关添加自定义安全功能的详细信息，请参阅 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)。 有关授权的详细信息，请参阅 [Authorization in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)。  
   
-###  <a name="bkmk_authentication"></a> 身份验证扩展插件配置  
+###  <a name="authentication-extension-configuration"></a><a name="bkmk_authentication"></a> 身份验证扩展插件配置  
  指定报表服务器使用的默认和自定义身份验证扩展插件。 默认的扩展插件基于 Windows 身份验证。 除非要实现自定义的身份验证扩展插件，否则不要修改此部分。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的身份验证的详细信息，请参阅 [Reporting Services 中的身份验证](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md) 和 [针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)。 有关添加自定义安全功能的详细信息，请参阅 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)。  
   
-###  <a name="bkmk_eventprocessing"></a> 事件处理  
+###  <a name="event-processing"></a><a name="bkmk_eventprocessing"></a> 事件处理  
  指定默认的事件处理程序。 请不要修改此部分。 此部分不可扩展。  
   
-###  <a name="bkmk_reportdefinition"></a> 报表定义自定义  
+###  <a name="report-definition-customization"></a><a name="bkmk_reportdefinition"></a> 报表定义自定义  
  指定修改报表定义的自定义扩展插件的名称和类型。  
   
-###  <a name="bkmk_rdlsandboxing"></a> RDLSandboxing  
+###  <a name="rdlsandboxing"></a><a name="bkmk_rdlsandboxing"></a> RDLSandboxing  
  指定报表定义语言 (RDL) 模式，该模式可帮助您在多个用户共享报表服务器的单个 Web 场的情况下检测到和限制单个用户使用的特定类型的报表资源。 有关详细信息，请参阅 [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)。  
   
-##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration（RSReportServer.config 文件）  
+##  <a name="maptileserverconfiguration-rsreportserverconfig-file"></a><a name="bkmk_MapTileServer"></a> MapTileServerConfiguration（RSReportServer.config 文件）  
  **MapTileServerConfiguration** 为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 必应地图 Web 服务定义配置设置，而该 Web 服务为在报表服务器上发布的报表中的某个地图报表项提供图块背景。 所有子元素都是必需的。  
   
 |设置|说明|  
@@ -386,7 +386,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**AppID**|指定要用于 Bing 地图 Web 服务的应用程序标识符 (AppID)。 **(Default)** 指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认 AppID。<br /><br /> 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。<br /><br /> 请勿更改此值，除非您必须为您自己的 Bing 地图许可协议指定自定义 AppID。 当您更改 AppID 时，不必重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，更改就可以生效。|  
 |**CacheLevel**|从 System.Net.Cache 的 HttpRequestCacheLevel 枚举指定一个值。 默认值为 **Default**。 有关详细信息，请参阅 [HttpRequestCacheLevel 枚举](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
   
-##  <a name="bkmk_nativedefaultfile"></a> 本机模式报表服务器的默认配置文件  
+##  <a name="default-configuration-file-for-a-native-mode-report-server"></a><a name="bkmk_nativedefaultfile"></a> 本机模式报表服务器的默认配置文件  
  默认情况下，rsreportserver.config 文件安装到以下位置：  
   
  C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer   
@@ -720,7 +720,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration> 
 ```  
   
-##  <a name="bkmk_sharepointdefaultfile"></a> SharePoint 模式报表服务器的默认配置文件  
+##  <a name="default-configuration-file-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepointdefaultfile"></a> SharePoint 模式报表服务器的默认配置文件  
  默认情况下，rsreportserver.config 文件安装到以下位置：  
   
  C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting   

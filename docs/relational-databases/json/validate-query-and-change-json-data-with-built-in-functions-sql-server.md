@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287891"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用内置函数 (SQL Server) 验证、查询和更改 JSON 数据
@@ -76,7 +76,7 @@ CREATE TABLE Families (
 )
 ``` 
 
-##  <a name="ISJSON"></a> 使用 ISJSON 函数验证 JSON 文本  
+##  <a name="validate-json-text-by-using-the-isjson-function"></a><a name="ISJSON"></a> 使用 ISJSON 函数验证 JSON 文本  
  **ISJSON** 函数测试字符串是否包含有效 JSON。  
   
 下面的示例将返回 JSON 列包含有效 JSON 文本的行。 请注意，如果没有显式 JSON 约束，则可在 NVARCHAR 列中输入任意文本：  
@@ -89,7 +89,7 @@ WHERE ISJSON(doc) > 0
 
 有关详细信息，请参阅 [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)。  
   
-##  <a name="VALUE"></a> 使用 JSON_VALUE 函数从 JSON 文本中提取值  
+##  <a name="extract-a-value-from-json-text-by-using-the-json_value-function"></a><a name="VALUE"></a> 使用 JSON_VALUE 函数从 JSON 文本中提取值  
 **JSON_VALUE** 函数从 JSON 字符串中提取标量值。 下面的查询将返回其中 `id` JSON 字段与值 `AndersenFamily` 一致的文档，按 `city` 和 `state` JSON 字段排序：
 
 ```sql  
@@ -109,7 +109,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 有关详细信息，请参阅 [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)。  
   
-##  <a name="QUERY"></a> 使用 JSON_QUERY 函数从 JSON 文本中提取对象或数组  
+##  <a name="extract-an-object-or-an-array-from-json-text-by-using-the-json_query-function"></a><a name="QUERY"></a> 使用 JSON_QUERY 函数从 JSON 文本中提取对象或数组  
 
 **JSON_QUERY** 函数从 JSON 字符串中提取对象或数组。 下面的示例演示了如何在查询结果中返回 JSON 片段。  
   
@@ -179,7 +179,7 @@ FROM Families f
 
 根文档与两个 `children` 行进行了联接，这两个行由生成两个行（或元组）的首次 `OPENJSON(children)` 调用返回。 然后，使用 `OUTER APPLY` 运算符将每行与由 `OPENJSON(pets)` 生成的新行进行联接。 Jesse 有两只宠物，因此 `(AndersenFamily, Jesse, Merriam)` 与为 Goofy 和 Shadow 生成的两行进行了联接。 Lisa 没有宠物，因此 `OPENJSON(pets)` 没有为该元组返回的任何行。 但是，由于我们使用的是 `OUTER APPLY`，因此这列的结果是 `NULL`。 如果我们使用 `CROSS APPLY` 而不是 `OUTER APPLY`，则不会在结果中返回 Lisa，因为没有可以与该元组联接的任何宠物行。
 
-##  <a name="JSONCompare"></a> 对比 JSON_VALUE 与 JSON_QUERY  
+##  <a name="compare-json_value-and-json_query"></a><a name="JSONCompare"></a> 对比 JSON_VALUE 与 JSON_QUERY  
 **JSON_VALUE** 和 **JSON_QUERY** 之间的主要区别在于 **JSON_VALUE** 返回标量值，而 **JSON_QUERY** 返回数组或对象。  
   
 请参考以下示例 JSON 文本。  
@@ -242,7 +242,7 @@ GROUP BY JSON_VALUE(Info, '$.Customer.Name'), Status
 HAVING SUM(SubTotal)>1000
 ```  
   
-##  <a name="MODIFY"></a> 使用 JSON_MODIFY 函数更新 JSON 文本中的属性值  
+##  <a name="update-property-values-in-json-text-by-using-the-json_modify-function"></a><a name="MODIFY"></a> 使用 JSON_MODIFY 函数更新 JSON 文本中的属性值  
 JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串  。  
   
 以下示例将更新包含 JSON 的变量中的 JSON 属性的值。  

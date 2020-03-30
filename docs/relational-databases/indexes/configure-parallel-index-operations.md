@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908130"
 ---
 # <a name="configure-parallel-index-operations"></a>配置并行索引操作
@@ -48,9 +48,9 @@ ms.locfileid: "72908130"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   查询优化器使用的处理器数量通常能够提供最佳的性能。 但是，有些操作（如创建、重新生成或删除很大的索引）占用大量资源，在索引操作期间会造成没有足够的资源供其他应用程序和数据库操作使用。 出现此问题时，您可以通过限制用于索引操作的处理器数，手动配置用于运行索引语句的最大处理器数。  
   
@@ -78,10 +78,10 @@ ms.locfileid: "72908130"
   
 -   如果查询优化器将并行度应用于生成操作，则需要排序的已分区索引操作的内存需求可能会很大。 并行度越高，内存需求就越大。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
-###  <a name="Security"></a><a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Security"></a><a name="Permissions"></a> 权限  
  要求具有对表或视图的 `ALTER` 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>设置索引的最大并行度  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72908130"
   
 8.  单击“确定”。   
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>设置现有索引的最大并行度  
   

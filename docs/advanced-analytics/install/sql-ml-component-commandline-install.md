@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727589"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>从命令行安装 SQL Server 机器学习 R 和 Python 组件
@@ -89,7 +89,7 @@ ms.locfileid: "73727589"
 | /MPYCACHEDIRECTORY | 保留供将来使用。 使用 %TEMP% 存储 Python 组件 CAB 文件，以便在没有 Internet 连接的计算机上安装。 |
 ::: moniker-end
 
-## <a name="indb"></a> 数据库内实例安装
+## <a name="in-database-instance-installations"></a><a name="indb"></a> 数据库内实例安装
 
 数据库内分析可用于数据库引擎实例，这是向安装添加 AdvancedAnalytics 功能所需的  。 可以安装带有高级分析的数据库引擎实例，或[将它添加到现有实例](#add-existing)。 
 
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> 安装后配置（必需）
+## <a name="post-install-configuration-required"></a><a name="post-install"></a> 安装后配置（必需）
 
 仅适用于数据库内安装。
 
@@ -159,7 +159,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 1. SQL Server R Services：启用外部脚本后才能使用此功能。 按照[安装 SQL Server R Services（数据库内）](sql-r-services-windows-install.md)中的说明执行下一步。 
 ::: moniker-end
 
-## <a name="add-existing"></a> 向现有数据库引擎实例添加高级分析
+## <a name="add-advanced-analytics-to-an-existing-database-engine-instance"></a><a name="add-existing"></a> 向现有数据库引擎实例添加高级分析
 
 向现有数据库引擎实例添加数据库内高级分析时，请提供实例名称。 例如，如果之前安装了 SQL Server 2017 或更高版本的数据库引擎和 Python，则可以使用此命令添加 R。
 
@@ -168,7 +168,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a> 无提示安装
+## <a name="silent-install"></a><a name="silent"></a> 无提示安装
 
 无提示安装会阻止检查 .cab 文件位置。 因此，必须指定要在其中解压缩 .cab 文件的位置。 对于 Python，CAB 文件必须位于 %TEMP* 中。 对于 R，你可以使用临时目录来设置文件夹路径。
  
@@ -179,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a> 独立服务器安装
+## <a name="standalone-server-installations"></a><a name="shared-feature"></a> 独立服务器安装
 
 独立服务器是未绑定到数据库引擎实例的“共享功能”。 以下示例显示了用于安装独立服务器的有效语法。
 

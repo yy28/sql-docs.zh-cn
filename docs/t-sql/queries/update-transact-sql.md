@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78176687"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
@@ -329,7 +329,7 @@ GO
 > [!IMPORTANT]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 ntext、text 和 image 数据类型    。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
-### <a name="updating-lobs"></a> 更新大值数据类型  
+### <a name="updating-large-value-data-types"></a><a name="updating-lobs"></a> 更新大值数据类型  
  使用 .WRITE (expression,@Offset,@Length) 子句执行 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型的部分或完整更新            。 
  
  例如，对 varchar(max) 列的部分更新可能只删除或修改该列的前 200 个字节（如果使用的是 ASCII 字符，则为前 200 个字符），而完整更新则删除或修改该列中的所有数据  。 如果将数据库恢复模式设置为大容量日志模式或简单模式，则对插入或追加新数据的 .WRITE 更新进行最小日志记录  。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
@@ -470,7 +470,7 @@ ID     Value
   
  UPDATE 权限默认授予 `sysadmin` 固定服务器角色、`db_owner` 和 `db_datawriter` 固定数据库角色的成员以及表所有者。 `sysadmin`、`db_owner` 和 `db_securityadmin` 角色的成员以及表所有者可以将权限转让给其他用户。  
   
-##  <a name="UpdateExamples"></a> 示例  
+##  <a name="examples"></a><a name="UpdateExamples"></a> 示例  
   
 |类别|作为特征的语法元素|  
 |--------------|------------------------------|  
@@ -486,7 +486,7 @@ ID     Value
 |[捕获 UPDATE 语句的结果](#CaptureResults)|OUTPUT 子句|  
 |[在其他语句中使用 UPDATE](#Other)|存储过程 • TRY…CATCH|  
   
-###  <a name="BasicSyntax"></a>基本语法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a>基本语法  
  本节中的示例说明了使用最低要求的语法的 UPDATE 语句的基本功能。  
   
 #### <a name="a-using-a-simple-update-statement"></a>A. 使用简单 UPDATE 语句  
@@ -510,7 +510,7 @@ SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;
 GO  
 ```  
   
-###  <a name="LimitingValues"></a> 限制更新的行  
+###  <a name="limiting-the-rows-that-are-updated"></a><a name="LimitingValues"></a> 限制更新的行  
  本节中的示例说明了可用于限制 UPDATE 语句所影响的行数的方法。  
   
 #### <a name="c-using-the-where-clause"></a>C. 使用 WHERE 子句  
@@ -598,7 +598,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-###  <a name="ColumnValues"></a> 设置列值  
+###  <a name="setting-column-values"></a><a name="ColumnValues"></a> 设置列值  
  本节中的示例说明了如何使用计算值、子查询和 DEFAULT 值来更新列。  
   
 #### <a name="g-specifying-a-computed-value"></a>G. 指定计算值  
@@ -664,7 +664,7 @@ SET CostRate = DEFAULT
 WHERE CostRate > 20.00;  
 ```  
   
-###  <a name="TargetObjects"></a> 指定目标对象，而非标准表  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> 指定目标对象，而非标准表  
  本节中的示例说明了如何通过指定视图、表别名或表变量来更新行。  
   
 #### <a name="k-specifying-a-view-as-the-target-object"></a>K. 将视图指定为目标对象  
@@ -721,7 +721,7 @@ ORDER BY EmpID;
 GO  
 ```  
   
-###  <a name="OtherTables"></a> 基于其他表中的数据更新数据  
+###  <a name="updating-data-based-on-data-from-other-tables"></a><a name="OtherTables"></a> 基于其他表中的数据更新数据  
  本节中的示例说明了基于一个表中的信息更新另一个表中的行的方法。  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>N. 将 UPDATE 语句用于来自其他表的信息  
@@ -760,7 +760,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> 更新远程表中的行  
+###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> 更新远程表中的行  
  本节中的示例说明了如何使用[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[行集函数](../../t-sql/functions/rowset-functions-transact-sql.md)引用一个远程目标表，从而更新该表中的行。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. 使用链接服务器更新远程表中的数据  
@@ -804,7 +804,7 @@ UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
-###  <a name="LOBValues"></a> 更新大型对象数据类型  
+###  <a name="updating-large-object-data-types"></a><a name="LOBValues"></a> 更新大型对象数据类型  
  本节中的示例说明了如何更新使用大型对象 (LOB) 数据类型定义的列中的值。  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. 使用包含 .WRITE 的 UPDATE 来修改 nvarchar(max) 列中的数据  
@@ -907,7 +907,7 @@ SET [Chart] = CAST('Xray 1' as varbinary(max))
 WHERE [SerialNumber] = 2;  
 ```  
   
-###  <a name="UDTs"></a> 更新用户定义类型  
+###  <a name="updating-user-defined-types"></a><a name="UDTs"></a> 更新用户定义类型  
  以下示例修改 CLR 用户定义类型 (UDT) 列中的值。 演示了三种方法。 有关用户定义的列的详细信息，请参阅 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
 #### <a name="v-using-a-system-data-type"></a>V. 使用系统数据类型  
@@ -937,7 +937,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a> 通过使用提示覆盖查询优化器的默认行为  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> 通过使用提示覆盖查询优化器的默认行为  
  本节中的示例说明了如何使用表提示和查询提示在处理 UPDATE 语句时暂时覆盖查询优化器的默认行为。  
   
 > [!CAUTION]  
@@ -975,7 +975,7 @@ GO
 EXEC Production.uspProductUpdate 'BK-%';  
 ```  
   
-###  <a name="CaptureResults"></a> 捕获 UPDATE 语句的结果  
+###  <a name="capturing-the-results-of-the-update-statement"></a><a name="CaptureResults"></a> 捕获 UPDATE 语句的结果  
  本节中的示例说明如何使用 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)从 UPDATE 语句影响的每一行返回信息（或基于的表达式）。 这些结果可以返回到处理应用程序，以供在确认消息、存档以及其他类似的应用程序要求中使用。  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. 使用包含 OUTPUT 子句的 UPDATE  
@@ -1009,7 +1009,7 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-###  <a name="Other"></a> 在其他语句中使用 UPDATE  
+###  <a name="using-update-in-other-statements"></a><a name="Other"></a> 在其他语句中使用 UPDATE  
  本节中的示例说明了如何在其他语句中使用 UPDATE。  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. 在存储过程中使用 UPDATE  

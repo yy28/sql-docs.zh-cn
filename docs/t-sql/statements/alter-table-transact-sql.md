@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288301"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -1054,7 +1054,7 @@ ALTER TABLE 权限适用于 ALTER TABLE SWITCH 语句涉及的两个表。 已�
 
 添加更新表中的行的列要求对该表具有 UPDATE 权限  。 例如，在表不为空时，添加有默认值的 NOT NULL  列，或添加标识列。
 
-## <a name="Example_Top"></a> 示例
+## <a name="examples"></a><a name="Example_Top"></a> 示例
 
 |类别|作为特征的语法元素|
 |--------------|------------------------------|
@@ -1065,7 +1065,7 @@ ALTER TABLE 权限适用于 ALTER TABLE SWITCH 语句涉及的两个表。 已�
 |[禁用和启用约束和触发器](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
-### <a name="add"></a>添加列和约束
+### <a name="adding-columns-and-constraints"></a><a name="add"></a>添加列和约束
 
 本节中的示例说明将列和约束添加到表中。
 
@@ -1295,7 +1295,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-### <a name="Drop"></a>删除列和约束
+### <a name="dropping-columns-and-constraints"></a><a name="Drop"></a>删除列和约束
 
 本节中的示例说明如何删除列和约束。
 
@@ -1380,7 +1380,7 @@ DROP TABLE Person.ContactBackup ;
 
 ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [示例](#Example_Top)
 
-### <a name="alter_column"></a>更改列定义
+### <a name="altering-a-column-definition"></a><a name="alter_column"></a>更改列定义
 
 #### <a name="a-changing-the-data-type-of-a-column"></a>A. 更改列的数据类型
 
@@ -1474,7 +1474,7 @@ ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCR
 GO
 ```
 
-### <a name="alter_table"></a>更改表定义
+### <a name="altering-a-table-definition"></a><a name="alter_table"></a>更改表定义
 
 本节中的示例说明如何更改表定义。
 
@@ -1592,7 +1592,7 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING;
 ```
 
-### <a name="disable_enable"></a>禁用和启用约束和触发器
+### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a>禁用和启用约束和触发器
 
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. 禁用和重新启用约束
 
@@ -1659,7 +1659,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>联机操作
+### <a name="online-operations"></a><a name="online"></a>联机操作
 
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. 使用低优先级等待选项的联机索引重新生成
 
@@ -1697,7 +1697,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a>系统版本控制
+### <a name="system-versioning"></a><a name="system_versioning"></a>系统版本控制
 
 以下四个示例将帮助你熟悉使用系统版本控制的语法。 如需其他帮助，请参阅[系统版本控制时态表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)。
 

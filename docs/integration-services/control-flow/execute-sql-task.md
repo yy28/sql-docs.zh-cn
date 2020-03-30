@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298306"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
@@ -272,7 +272,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 -   [获取返回代码的值](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a>参数名称和标记  
+###  <a name="parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>参数名称和标记  
  执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器类型要求，SQL 命令必须使用格式为 \@varParameter  的参数标记，而 OLE DB 连接类型则要求使用问号 (?) 参数标记。  
   
  在变量与参数之间的映射中可以用作参数名的名称也因连接管理器类型而异。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器类型使用前缀为 \@ 的用户定义的名称，而 OLE DB 连接管理器类型则要求使用从 0 开始的序数数值作为参数名。  
@@ -307,7 +307,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
  使用 OLE DB 连接管理器时，不能使用参数化的子查询，这是因为执行 SQL 任务不能通过 OLE DB 访问接口得到参数信息。 但是，您可以使用表达式将参数值串联到查询字符串中，并设置该任务的 SqlStatementSource 属性。  
   
-###  <a name="Date_and_time_data_types"></a>将参数用于日期和时间数据类型  
+###  <a name="use-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a>将参数用于日期和时间数据类型  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>在 ADO.NET 和 ADO 连接管理器中使用日期和时间参数  
  读取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型、 **time** 和 **datetimeoffset**数据时，使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADO 连接管理器的执行 SQL 任务有以下附加要求：  
@@ -356,7 +356,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
  如果数据未存储在相应的输入或输出参数中，包将失败。  
   
-###  <a name="WHERE_clauses"></a>在 WHERE 子句中使用参数  
+###  <a name="use-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a>在 WHERE 子句中使用参数  
  SELECT、INSERT、UPDATE 和 DELETE 命令经常包含 WHERE 子句以指定筛选器，这些筛选器定义源表中的每行要用于 SQL 命令所必须满足的条件。 参数在 WHERE 子句中提供筛选值。  
   
  可以使用参数标记来动态提供参数值。 可以在 SQL 语句中使用哪些参数标记和参数名称的规则取决于执行 SQL 所使用的连接管理器的类型。  
@@ -377,7 +377,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接类型使用参数名 \@parmMinProductID 和 \@parmMaxProductID。  
   
-###  <a name="Stored_procedures"></a>在存储过程中使用参数  
+###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>在存储过程中使用参数  
  运行存储过程的 SQL 命令也可以使用参数映射。 与参数化查询的规则一样，参数标记和参数名称的使用规则取决于执行 SQL 所使用的连接管理器的类型。  
   
  下表按连接管理器类型列出了 EXEC 命令的示例。 示例运行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]存储过程。 该存储过程使用 `@StartProductID` 和 `@CheckDate` Input 参数  。  
@@ -464,7 +464,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 14. 单击“确定”。   
 
-##  <a name="Return_codes"></a>获取返回代码的值  
+##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a>获取返回代码的值  
  存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要在执行 SQL 任务中实现返回代码，需要使用 **ReturnValue** 类型的参数。  
   
  下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 **input** 参数。 对于所有参数类型（“Input”、“Output”和“ReturnValue”），参数标记和参数名称的使用规则都是相同的    。  
@@ -493,7 +493,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 -   [使用结果集填充变量](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a>指定结果集类型  
+###  <a name="specify-a-result-set-type"></a><a name="Result_set_type"></a>指定结果集类型  
  执行 SQL 任务支持下列结果集类型：  
   
 -   查询不返回结果时使用的 **“无”** 结果集。 例如，该结果集用于在表中添加、更改和删除记录的查询。  
@@ -506,7 +506,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
  如果“执行 SQL 任务”使用了 **“完整结果集”** 结果集并且查询返回多个行集，则该任务仅返回第一个行集。 如果该行集生成一个错误，则该任务将报告这个错误。 如果其他行集生成错误，则该任务不会报告这些错误。  
   
-###  <a name="Populate_variable_with_result_set"></a>使用结果集填充变量  
+###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a>使用结果集填充变量  
  如果结果集类型为单行、行集或 XML，则可以将查询返回的结果集绑定到用户定义的变量。  
   
  如果结果集类型为“单行”  ，则可以使用列名作为结果集名称，将返回结果中的列绑定到一个变量，也可以使用列列表中列的序号位置作为结果集名称。 例如，查询 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的结果集名称可以是 **Color** 或 **0**。 如果查询返回多个列，而您要访问所有列中的值，则必须将每列绑定到一个不同的变量。 如果使用数字作为结果集名称，将列映射到变量，则数字将反映列在查询的列列表中显示的顺序。 例如，在查询 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，对 **Color** 列使用 0，对 **ListPrice** 列使用 1。 使用列名作为结果集名称的功能将依赖于所配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  

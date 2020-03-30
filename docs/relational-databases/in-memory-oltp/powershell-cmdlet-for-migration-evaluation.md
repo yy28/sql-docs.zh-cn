@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68698306"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>用于迁移评估的 PowerShell Cmdlet
@@ -44,7 +44,7 @@ Save-SqlMigrationReport
 ;
 ```
 
-## <a name="parameters"></a>parameters
+## <a name="parameters"></a>参数
 
 下表对这些参数进行了说明。
 
@@ -70,7 +70,7 @@ Save-SqlMigrationReport
 | 用户名 | 当通过 SQL Server 身份验证（而不是 Windows 身份验证）进行连接时是必需的。 否则省略。 |
 | &nbsp; | &nbsp; |
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 必须先安装名为 SqlServer  的模块，然后才能运行此 cmdlet：
 

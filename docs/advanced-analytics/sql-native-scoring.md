@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727284"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用 PREDICT T-SQL 函数本机评分
@@ -34,7 +34,7 @@ ms.locfileid: "73727284"
 
 此函数将返回输入数据的预测以及要传递的源数据的任何列。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 PREDICT 在所有版本的 SQL Server 2017 数据库引擎上都可用，并且默认启用，包括 Windows 上的 SQL Server 机器学习服务、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) 或 Azure SQL 数据库。 无需安装 R、Python 或启用其他功能。
 

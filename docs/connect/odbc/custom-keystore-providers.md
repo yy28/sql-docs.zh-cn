@@ -11,10 +11,10 @@ ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
 author: MightyPen
 ms.openlocfilehash: 0cf2946517be732094d01ff9889faf080a36e85b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68006492"
 ---
 # <a name="custom-keystore-providers"></a>自定义密钥存储提供程序
@@ -90,7 +90,7 @@ typedef struct CEKeystoreProvider {
 |`EncryptCEK`|CEK 加密函数。 驱动程序不调用此函数，但提供此函数是为了让密钥管理工具创建对 ECEK 的编程访问。 如果不需要，可以为 null。|
 |`Free`|终止函数。 如果不需要，可以为 null。|
 
-除 Free 之外，该接口中的函数均具有一对参数 ctx 和 onError。 前者标识调用函数的上下文，而后者则用于报告错误。 有关详细信息，请参阅下面的[上下文](#context-association)和[错误处理](#error-handling)。
+除 Free 之外，该接口中的函数均具有一对参数 ctx  和 onError  。 前者标识调用函数的上下文，而后者则用于报告错误。 有关详细信息，请参阅下面的[上下文](#context-association)和[错误处理](#error-handling)。
 
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
@@ -175,11 +175,11 @@ void (*Free)();
 
 ### <a name="error-handling"></a>错误处理
 
-由于在提供程序的处理过程中可能发生错误，因此提供了一种机制，该机制可以将错误以更具体详细的方式报告给驱动程序，而不是布尔值成功/失败。 许多函数具有一对参数 ctx 和 onError，除成功/失败返回值外，还可以结合使用这些参数。
+由于在提供程序的处理过程中可能发生错误，因此提供了一种机制，该机制可以将错误以更具体详细的方式报告给驱动程序，而不是布尔值成功/失败。 许多函数具有一对参数 ctx  和 onError  ，除成功/失败返回值外，还可以结合使用这些参数。
 
-ctx 参数标识发生提供程序操作的上下文。
+ctx  参数标识发生提供程序操作的上下文。
 
-onError 参数指向具有以下原型的错误报告功能：
+onError  参数指向具有以下原型的错误报告功能：
 
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, ...);`
 
@@ -229,7 +229,7 @@ void *stmtCtx;
 |`dbcCtx`|连接上下文。|
 |`stmtCtx`|语句上下文。|
 
-其中的每个上下文都是一个不透明值，尽管与相应的 ODBC 句柄不同，但可以用作该句柄的唯一标识符：如果句柄 X 与上下文值 Y 关联，那么与 X 同时存在的其他环境、连接或语句句柄将不会具有 Y 的上下文值，并且不会将任何其他上下文值与句柄 X 关联起来。如果完成的提供程序操作缺少特定的句柄上下文（例如，SQLSetConnectAttr 调用以加载和配置提供程序，其中没有语句句柄），则结构中的相应上下文值为 null。
+其中的每个上下文都是一个不透明值，尽管与相应的 ODBC 句柄不同，但可以用作该句柄的唯一标识符：如果句柄 X  与上下文值 Y  关联，那么与 X  同时存在的其他环境、连接或语句句柄将不会具有 Y  的上下文值，并且不会将任何其他上下文值与句柄 X  关联起来。如果完成的提供程序操作缺少特定的句柄上下文（例如，SQLSetConnectAttr 调用以加载和配置提供程序，其中没有语句句柄），则结构中的相应上下文值为 null。
 
 
 ## <a name="example"></a>示例

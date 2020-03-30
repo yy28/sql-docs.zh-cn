@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77705902"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
@@ -50,7 +50,7 @@ ms.locfileid: "77705902"
 
 当运行使用 query_post_execution_showplan  事件的扩展事件会话时，还会填充 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV，它使用[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)或直接查询 DMV，为所有会话启用实时查询统计。 有关详细信息，请参阅 [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)。
 
-## <a name="lwp"></a>轻型查询执行统计信息分析基础结构
+## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a>轻型查询执行统计信息分析基础结构
 
 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，引入了新的轻型查询执行统计信息概要分析基础结构或轻型分析   。 
 

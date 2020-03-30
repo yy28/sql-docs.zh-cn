@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241810"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>更改管理 Always On 可用性组中副本元数据的群集
@@ -32,7 +32,7 @@ ms.locfileid: "75241810"
 > [!CAUTION]  
 >  仅在跨群集迁移 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 部署的过程中切换 HADR 群集上下文。  
   
-##  <a name="Restrictions"></a> 限制和局限  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   您只能将 HADR 群集上下文从本地 WSFC 群集切换到远程群集，然后再从远程群集切换回本地群集。 不能将 HADR 群集上下文从一个远程群集切换到另一个远程群集。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75241810"
   
 -   远程 HADR 群集上下文随时可以切换回本地群集。 但是，只要服务器实例承载任何可用性副本，该上下文将无法再进行切换。  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   您对其更改 HADR 群集上下文的服务器实例必须正在运行 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 或更高版本（Enterprise Edition 或更高）。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "75241810"
   
 -   在您可以从远程群集切换到本地群集之前，所有同步提交副本必须都处于 SYNCHRONIZED 状态。  
   
-##  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   我们建议您指定完整的域名。 这是因为为了找到短名称的目标 IP 地址，ALTER SERVER CONFIGURATION 使用 DNS 名称解析。 在某些情况下，根据 DNS 搜索顺序，使用短名称可能会导致混淆。 例如，考虑以下命令，该命令在 `abc` 域 (`node1.abc.com`) 中的节点上执行。 意向的目标群集是 `CLUS01` 域 ( `xyz` ) 中的`clus01.xyz.com`群集。 但是，本地域主机还承载名为 `CLUS01` (`clus01.abc.com`) 的一个群集。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75241810"
     ```  
   
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
   
 -   **SQL Server 登录名**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "75241810"
   
     -   远程 WSFC 读写访问权限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **更改可用性副本的 WSFC 群集上下文**  
   
 1.  连接到承载可用性组的主副本或辅助副本的服务器实例。  
@@ -112,7 +112,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在切换可用性副本的群集上下文后  
+##  <a name="follow-up-after-switching-the-cluster-context-of-an-availability-replica"></a><a name="FollowUp"></a> 跟进：在切换可用性副本的群集上下文后  
  新的 HADR 群集上下文将立即生效，而不重新启动服务器实例。 HADR 群集上下文设置是持久的实例级别设置，在服务器实例重新启动时也保持不变。  
   
  通过查询 [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) 动态管理视图确认新的 HADR 群集上下文，如下所示：  
@@ -129,7 +129,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   以前属于可用性副本的所有数据库现在都处于 RESTORING 状态。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [删除可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
@@ -143,7 +143,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [SQL Server 2012 技术文章](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   

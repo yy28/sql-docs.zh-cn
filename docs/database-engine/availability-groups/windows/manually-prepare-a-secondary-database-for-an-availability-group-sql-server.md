@@ -19,10 +19,10 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68023707"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>为 Always On 可用性组准备辅助数据库
@@ -35,7 +35,7 @@ ms.locfileid: "68023707"
 > [!TIP]  
 >  如果有现有的日志传送配置，则能够将日志传送主数据库与一个或多个辅助数据库一起转换为可用性组主要副本和一个或多个次要副本。 有关详细信息，请参阅[从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
 
-##  <a name="Prerequisites"></a>先决条件和限制  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>先决条件和限制  
   
 -   确保计划放置数据库的系统的磁盘驱动器空间足以存储辅助数据库。  
   
@@ -49,21 +49,21 @@ ms.locfileid: "68023707"
   
 -   还原数据库后，必须还原 (WITH NORECOVERY) 自上次还原的数据备份之后创建的各个日志备份。  
   
-##  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立实例上，我们建议，如有可能，给定辅助数据库的文件路径（包括驱动器号）应该与相应的主数据库的路径相同。 这是因为，如果在创建辅助数据库时移动了数据库文件，则随后在辅助数据库上执行的添加文件操作可能会失败，并导致该辅助数据库挂起。  
   
 -   准备辅助数据库之前，我们强烈建议您挂起针对可用性组中数据库的计划日志备份，直到完成辅助副本的初始化。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  备份数据库时， [TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md) 设置为 OFF。 因此，在新还原的数据库中，TRUSTWORTHY 始终为 OFF。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)。  
   
  如果服务器实例上不存在要还原的数据库，则 RESTORE 语句要求 CREATE DATABASE 权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../../../t-sql/statements/restore-statements-transact-sql.md)备份。  
   
-##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 > [!NOTE]  
 >  如果托管主要副本的服务器实例和托管次要副本的每个实例之间的备份和还原文件路径完全相同，则应该能够通过使用[新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)、[将副本添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或[将数据库添加到可用性组向导](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)创建次要副本数据库。  
@@ -88,7 +88,7 @@ ms.locfileid: "68023707"
 > [!NOTE]  
 >  有关如何执行这些备份和还原操作的信息，请参阅本节后面的 [相关备份和还原任务](#RelatedTasks)。  
   
-###  <a name="RelatedTasks"></a> 相关备份和还原任务  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a> 相关备份和还原任务  
  **创建数据库备份**  
   
 -   [创建完整数据库备份 (SQL Server)](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -109,7 +109,7 @@ ms.locfileid: "68023707"
   
 -   [将数据库还原到新位置 (SQL Server)](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **准备辅助数据库**  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ ms.locfileid: "68023707"
 > [!NOTE]  
 >  有关如何执行这些备份和还原操作的信息，请参阅本主题后面的 [相关备份和还原任务](#RelatedTasks)。  
   
-###  <a name="ExampleTsql"></a> Transact-SQL 示例  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a> Transact-SQL 示例  
  下面的示例准备一个辅助数据库。 此示例使用了 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 示例数据库，默认情况下，该数据库使用简单恢复模式。  
   
 1.  若要使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 数据库，请改用完整恢复模式：  
@@ -227,7 +227,7 @@ ms.locfileid: "68023707"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **准备辅助数据库**  
   
 1.  如果你需要创建主数据库的最近备份，请将目录 (**cd**) 更改为托管主副本的服务器实例。  
@@ -247,7 +247,7 @@ ms.locfileid: "68023707"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a>示例备份和还原脚本及命令  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a>示例备份和还原脚本及命令  
  下面的 PowerShell 命令将完整的数据库备份和事务日志备份到网络共享，并自该共享位置还原这些备份。 此示例假定数据库还原到的文件路径与数据库备份到的文件路径相同。  
   
 ```  
@@ -262,7 +262,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> 后续步骤  
+##  <a name="next-steps"></a><a name="FollowUp"></a> 后续步骤  
  若要完成辅助数据库的配置，您需要将新还原的数据库联接到可用性组。 有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  

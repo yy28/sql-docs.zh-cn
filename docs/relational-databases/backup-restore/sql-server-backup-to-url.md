@@ -11,10 +11,10 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a68190ff087707bdf0b89dc756c9346d10d34ad
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288861"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
@@ -43,7 +43,7 @@ ms.locfileid: "79288861"
   
 -   [使用 SQL Server Management Studio 从 Azure 存储还原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a> Security  
+###  <a name="security"></a><a name="security"></a> Security  
  以下是备份到 Microsoft Azure Blob 存储服务或从该服务还原时的安全注意事项和要求。  
   
 -   为 Microsoft Azure Blob 存储服务创建容器时，我们建议你将访问权限设置为“私有”  。 将访问权限设置为“私有”后，只允许可提供对 Azure 帐户进行身份验证所需的信息的用户或帐户进行访问。  
@@ -53,12 +53,12 @@ ms.locfileid: "79288861"
   
 -   用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”  权限的 **db_backup 操作员**数据库角色。  
   
-###  <a name="intorkeyconcepts"></a> 关键组件和概念简介  
+###  <a name="introduction-to-key-components-and-concepts"></a><a name="intorkeyconcepts"></a> 关键组件和概念简介  
  以下两节介绍 Microsoft Azure Blob 存储服务以及在备份到 Microsoft Azure Blob 存储服务或从该服务还原时使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 了解这些组件和它们之间的交互对于执行备份到 Microsoft Azure Blob 存储服务或从中还原很重要。  
   
  在 Azure 订阅中创建 Azure 存储帐户是此过程中的第一步。 此存储帐户是对使用存储帐户创建的所有容器和对象具有完全管理权限的管理帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Azure 存储帐户名称及其访问密钥值来进行身份验证，将 blob 写入到 Microsoft Azure Blob 存储服务和从中读取 blob，也可以使用特定容器上生成的共享访问签名令牌授予它读取和写入权限。 有关 Azure 存储帐户的详细信息，请参阅[关于 Azure 存储帐户](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)；有关共享访问签名的详细信息，请参阅[共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据存储此身份验证信息并在备份或还原操作期间使用它。  
   
-###  <a name="blockbloborpageblob"></a> 备份到块 blob 和页 blob 
+###  <a name="backup-to-block-blob-vs-page-blob"></a><a name="blockbloborpageblob"></a> 备份到块 blob 和页 blob 
  Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 SQL Server 备份可以使用其中任一 blob 类型，具体取决于所使用的 Transact-SQL 语法：如果凭证中使用的是存储密钥，则使用页 blob；如果使用的是共享访问签名，则使用块 blob。
  
  备份到块 blob 仅在 SQL Server 2016 或更高版本中可用。 如果正在运行 SQL Server 2016 或更高版本，我们建议你备份到块 blob 而不是页 blob。 主要原因是：
@@ -72,7 +72,7 @@ ms.locfileid: "79288861"
 - 使用备份压缩或
 - 备份到多个块 blob
 
-###  <a name="Blob"></a> Microsoft Azure Blob 存储服务  
+###  <a name="microsoft-azure-blob-storage-service"></a><a name="Blob"></a> Microsoft Azure Blob 存储服务  
  **存储帐户：** 存储帐户是所有存储服务的起始点。 要访问 Microsoft Azure Blob 存储服务，请首先创建一个 Azure 存储帐户。 有关详细信息，请参阅 [创建存储帐户](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)  
   
  **容器：** 一个容器提供一组 Blob 的分组，并且可以存储无限数目的 Blob。 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入 Microsoft Azure Blob 存储服务，你必须至少创建根容器。 你可以在容器上生成共享访问签名令牌，并只授予其对特定容器上的对象的访问权限。  
@@ -83,7 +83,7 @@ ms.locfileid: "79288861"
   
  **Azure 快照：** 在某一时间点创建的 Azure blob 快照。 有关详细信息，请参阅 [创建 Blob 的快照](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份现在支持对 Microsoft Azure Blob 存储服务中存储的数据库文件进行 Azure 快照备份。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件  
+###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件  
  **URL：** URL 指定统一资源标识符 (URI) 来标识唯一备份文件。 URL 用于提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份文件的位置和名称。 URL 必须指向实际 blob，而不仅仅是容器。 如果 blob 不存在，则创建它。 如果指定了现有 blob，则除非指定了“WITH FORMAT”选项以覆盖 blob 中的现有备份文件，否则备份将失败。  
   
  以下是一个示例 URL 值：http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>。 HTTPS 不是必需的，但建议这样做。  
@@ -96,7 +96,7 @@ ms.locfileid: "79288861"
   
  有关使用凭据的其他示例的信息，请参阅 [创建 SQL Server 代理的代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
-###  <a name="limitations"></a> 限制  
+###  <a name="limitations"></a><a name="limitations"></a> 限制  
   
 -   不支持备份到高级存储。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "79288861"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求备份设备名称最多包含 259 个字符。 对于用于指定 URL“https://.blob.core.windows.net//.bak”所需的元素，BACKUP TO URL 占用 36 个字符，其余 223 个字符将用于帐户、容器和 Blob 名称。  
   
-###  <a name="Support"></a> 对备份/还原语句的支持  
+###  <a name="support-for-backuprestore-statements"></a><a name="Support"></a> 对备份/还原语句的支持  
   
 |备份/还原语句|支持|例外|注释|
 |-|-|-|-|
@@ -207,7 +207,7 @@ ms.locfileid: "79288861"
   
  有关还原参数的详细信息，请参阅[RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
-##  <a name="BackupTaskSSMS"></a> 使用 SQL Server Management Studio 中的备份任务  
+##  <a name="using-back-up-task-in-sql-server-management-studio"></a><a name="BackupTaskSSMS"></a> 使用 SQL Server Management Studio 中的备份任务  
 可以使用 SQL Server 凭据通过 SQL Server Management Studio 中的备份任务将数据库备份到 URL。  
   
 > [!NOTE]  
@@ -241,13 +241,13 @@ ms.locfileid: "79288861"
   
  [创建凭据 - 向 Azure 存储进行身份验证](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
-##  <a name="MaintenanceWiz"></a> 使用维护计划向导将 SQL Server 备份到 URL  
+##  <a name="sql-server-backup-to-url-using-maintenance-plan-wizard"></a><a name="MaintenanceWiz"></a> 使用维护计划向导将 SQL Server 备份到 URL  
  与之前介绍的备份任务类似，SQL Server Management Studio 中的维护计划向导包括 URL  作为一个目标选项，以及 SQL 凭据等备份到 Azure 存储所需的其他支持对象。 它具有相同的功能。有关详细信息，请参阅 [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 中的“定义备份任务”部分  。  
   
 > [!NOTE]  
 >  若要使用共享访问令牌创建条带备份集、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份或 SQL 凭据，则必须在维护计划向导中使用 Transact-SQL、Powershell 或 C#，而不是备份任务。  
   
-##  <a name="RestoreSSMS"></a> 使用 SQL Server Management Studio 从 Microsoft Azure 存储还原  
+##  <a name="restoring-from-microsoft-azure-storage-using-sql-server-management-studio"></a><a name="RestoreSSMS"></a> 使用 SQL Server Management Studio 从 Microsoft Azure 存储还原  
 “还原数据库”任务包括 **URL** 作为要从其还原的设备。  以下步骤描述如何使用还原任务从 Microsoft Azure Blob 存储服务进行还原： 
   
 1.  右键单击“数据库”  ，然后选择“还原数据库...”  。 
@@ -272,7 +272,7 @@ ms.locfileid: "79288861"
   
      [还原数据库（“选项”页）](../../relational-databases/backup-restore/restore-database-options-page.md)  
   
-##  <a name="Examples"></a> 代码示例  
+##  <a name="code-examples"></a><a name="Examples"></a> 代码示例  
  本节包含以下示例。  
   
 -   [创建凭据](#credential)  
@@ -284,7 +284,7 @@ ms.locfileid: "79288861"
 > [!NOTE]  
 >  有关将 Microsoft Azure Blob 存储服务和 SQL Server 2016 配合使用的教程，请参见[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
-###  <a name="SAS"></a> 创建共享访问签名  
+###  <a name="create-a-shared-access-signature"></a><a name="SAS"></a> 创建共享访问签名  
  以下示例创建可用于在新创建的容器中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的共享访问签名。 该脚本创建与存储访问策略关联的共享访问签名。 有关详细信息，请参阅[共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 此脚本还编写在 SQL Server 上创建凭据时所需的 T-SQL 命令。 
 
 > [!NOTE] 
@@ -343,7 +343,7 @@ Write-Host $tSql
 
 成功运行脚本后，将 `CREATE CREDENTIAL` 命令复制到查询工具，连接到 SQL Server 的实例并运行该命令以创建使用共享访问签名的凭据。 
 
-###  <a name="credential"></a> 创建凭据  
+###  <a name="create-a-credential"></a><a name="credential"></a> 创建凭据  
  下面的示例创建用于向 Microsoft Azure Blob 存储服务进行身份验证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据。 执行下列操作之一： 
   
 1.  **使用共享访问签名**  
@@ -371,7 +371,7 @@ Write-Host $tSql
    ,SECRET = '<mystorageaccountaccesskey>';  
    ```  
   
-###  <a name="complete"></a> 执行完整数据库备份  
+###  <a name="perform-a-full-database-backup"></a><a name="complete"></a> 执行完整数据库备份  
  下面的示例执行 AdventureWorks2016 数据库到 Microsoft Azure Blob 存储服务的完整数据库备份。 执行下列操作之一：   
   
   
@@ -397,7 +397,7 @@ Write-Host $tSql
 
   
   
-###  <a name="PITR"></a> 使用 STOPAT 还原到时间点  
+###  <a name="restoring-to-a-point-in-time-using-stopat"></a><a name="PITR"></a> 使用 STOPAT 还原到时间点  
  下面的示例将 AdventureWorks2016 示例数据库还原到某个时间点的状态，并显示还原操作。  
   
 1.  **From URL 使用共享访问签名**  

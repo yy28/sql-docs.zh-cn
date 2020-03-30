@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866371"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时的问题
@@ -78,7 +78,7 @@ ms.locfileid: "78866371"
 
 如果实例已停止，请右键单击实例，再单击“启动”  。 此时，服务器实例启动，且指示器变成绿色箭头。
 
-## <a name = "startbrowser"></a> 验证 - SQL Server Browser 服务正在运行
+## <a name="verify---sql-server-browser-service-is-running"></a><a name = "startbrowser"></a> 验证 - SQL Server Browser 服务正在运行
 
 要连接到命名实例，SQL Server Browser 服务必须处于运行状态。 在配置管理器中，找到“SQL Server Browser”  服务，并验证它是否正在运行。 如果未运行，请启动它。 默认实例不需要 SQL Server Browser 服务。
 
@@ -129,7 +129,7 @@ SQL Server 的默认实例不需要 SQL Server Browser 服务。
 
   >SQL Server 可以使用 IP 版本 4 协议或 IP 版本 6 协议进行连接。 你的网络可能允许其中某种协议，或者两种协议都允许。 多数用户首先会排查 **IPv4** 地址问题。 它更短且更容易键入。
 
-## <a name = "getTCP"></a>获取 SQL Server 实例 TCP 端口
+## <a name="get-the-sql-server-instance-tcp-port"></a><a name = "getTCP"></a>获取 SQL Server 实例 TCP 端口
 
 在大多数情况下，你是使用 TCP 协议从另一台计算机连接到数据库引擎。
 
@@ -142,7 +142,7 @@ SQL Server 的默认实例不需要 SQL Server Browser 服务。
   > [!NOTE]
   > 系统可能会列出 `IP address 127.0.0.1`。 这称为“环回适配器地址”。 只有同一台计算机上的进程才能使用它进行连接。 它可用于故障排除，但你不能使用它从另一台计算机进行连接。
 
-## <a name = "enableprotocols"></a>启用协议
+## <a name="enable-protocols"></a><a name = "enableprotocols"></a>启用协议
 
 在某些 SQL Server 安装中，不支持从另一台计算机连接到数据库引擎，除非管理员使用配置管理器启用这种连接。 若要支持从另一台计算机进行连接，请执行以下操作：
 
@@ -150,7 +150,7 @@ SQL Server 的默认实例不需要 SQL Server Browser 服务。
 1. 在配置管理器的左窗格中，展开“SQL Server 网络配置”  ，然后选择要连接到的 SQL Server 实例。 右窗格会列出可用的连接协议。 共享内存通常处于启用状态。 只能从同一台计算机使用共享内存，因此，大多数安装会将它保留为启用状态。 若要从另一台计算机连接到 SQL Server，通常使用 TCP/IP。 如果未启用 TCP/IP，请右键单击“TCP/IP”  ，然后单击“启用”  。
 1. 如果更改了任何协议已启用的设置，请重启数据库引擎。 在左窗格中，选择“SQL Server 服务”  。 在右窗格中，右键单击数据库引擎实例，然后单击“重新启动”  。
 
-## <a name="testTCPIP"></a>测试 TCP/IP 连接
+## <a name="testing-tcpip-connectivity"></a><a name="testTCPIP"></a>测试 TCP/IP 连接
 
 使用 TCP/IP 连接到 SQL Server 时，要求 Windows 可以建立连接。 使用 `ping` 工具测试 TCP。
 

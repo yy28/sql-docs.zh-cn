@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 2b0f576365ef8e6221196eef4a9fca92f54f6318
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287341"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
@@ -84,7 +84,7 @@ ms.locfileid: "76287341"
   
 -   内存优化表并非支持所有 Transact-SQL 功能。 有关详细信息，请参阅[内存中 OLTP 不支持的 Transact-SQL 构造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
-##  <a name="Schema"></a> 修改架构文件  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a> 修改架构文件  
   
 -   如果使用内存优化表选项 `DURABILITY = SCHEMA_AND_DATA` ，则表必须具有非聚集主键索引。  
   

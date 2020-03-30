@@ -13,10 +13,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77147376"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数参考
@@ -29,7 +29,7 @@ ms.locfileid: "77147376"
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
 
-##  <a name="bkmk_htmlviewer"></a> HTML 查看器命令 (rc:)
+##  <a name="html-viewer-commands-rc"></a><a name="bkmk_htmlviewer"></a> HTML 查看器命令 (rc:)
  - HTML 查看器命令用于指向 HTML 查看器且以 rc: 为前缀  ：
   
 -   **Toolbar**：显示或隐藏工具栏。 如果此参数的值为 **false**，将忽略所有剩余的选项。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。 此参数的默认值为 **true**。
@@ -113,7 +113,7 @@ ms.locfileid: "77147376"
   
 -   **设备信息设置**：以 `rc:tag=value` 形式指定设备信息设置，其中，tag 是特定于当前使用的呈现扩展插件的设备信息设置的名称  。 （请参阅 Format 参数的说明  。）例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置，向 JPEG 图像呈现报表，方法是在 URL 访问字符串中使用以下参数：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`  。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。
   
-##  <a name="bkmk_reportserver"></a> 报表服务器命令 (rs:)
+##  <a name="report-server-commands-rs"></a><a name="bkmk_reportserver"></a> 报表服务器命令 (rs:)
  报表服务器命令以 *rs:* 为前缀，用于指向报表服务器：
   
 -   **命令**：根据目录项的类型，对其执行操作。 默认值由在 URL 访问字符串中引用的目录项的类型确定。 有效值是：
@@ -264,7 +264,7 @@ ms.locfileid: "77147376"
   
 -   ShowHideToggle  ：切换报表部分的显示和隐藏状态。 指定用于表示要切换的部分的正整数。
   
-##  <a name="bkmk_webpart"></a> 报表查看器 Web 部件命令 (rv:)
+##  <a name="report-viewer-web-part-commands-rv"></a><a name="bkmk_webpart"></a> 报表查看器 Web 部件命令 (rv:)
  以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留的报表参数名称用于指向与 SharePoint 集成的报表查看器 Web 部件。 这些参数名称带有 *rv:* 前缀。 报表查看器 Web 部件也接受 rs:ParameterLanguage 参数  。
   
 -   **Toolbar**：控制报表查看器 Web 部件的工具栏显示。 默认值是 **Full**秒。 值可以是：

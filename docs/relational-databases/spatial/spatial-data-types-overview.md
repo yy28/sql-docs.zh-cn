@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048522"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
@@ -28,7 +28,7 @@ ms.locfileid: "68048522"
 有两种类型的空间数据。 **geometry** 数据类型支持平面或欧几里得（平面球）数据。 **geometry** 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。
 另外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 **geography** 数据类型，该数据类型可存储诸如 GPS 纬度和经度坐标之类的椭圆体（圆球）数据。
 
-##  <a name="objects"></a> 空间数据对象  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> 空间数据对象  
 **geometry** 和 **geography** 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种  “可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例的某些属性从其父级数据类型派生而来，使其在 **Points**中区分为 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** 、 **geometry** 或多个 **geography** 或 **GeometryCollection**实例。 **Geography** 类型具有附加实例类型 **FullGlobe**。  
 
 下图描述了 **geometry** 和 **geometry** 数据类型所基于的 **geography** 层次结构。 **geometry** 和 **geography** 的可实例化类型以蓝色表示。  
@@ -53,7 +53,7 @@ geometry 和 geography 类型的子类型分为简单类型和集合类型。  �
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> GEOMETRY 和 GEOGRAPHY 数据类型之间的差异  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> GEOMETRY 和 GEOGRAPHY 数据类型之间的差异  
 两种空间数据类型的行为经常非常相似，但在数据存储方式和操作方式上存在某些重要的差别。  
 
 ### <a name="how-connecting-edges-are-defined"></a>如何定义连接边  
@@ -86,7 +86,7 @@ OGC 的 SQL 简单功能规范讨论了外环和内环，但此差别对 [!INCLU
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-##  <a name="circular"></a> 圆弧线段  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> 圆弧线段  
 三种可实例化类型可以采用圆弧线段：CircularString、CompoundCurve 和 CurvePolygon    。  圆弧线段在二维平面中由三个点定义；第三个点不能与第一个点相同。  
 
 图 A 和 B 显示典型的圆弧线段。 请注意这三个点如何落在圆周上。  

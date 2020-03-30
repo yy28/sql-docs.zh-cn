@@ -14,10 +14,10 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1f42630e101a60c9d3265ab96a5b126551eeaff0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991586"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性组：互操作性 (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "67991586"
 
 本主题说明 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中其他 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能的互操作性。
 
-## <a name="Interop"></a> 可与 AlwaysOn 可用性组互操作的功能
+## <a name="features-that-interoperate-with-always-on-availability-groups"></a><a name="Interop"></a> 可与 AlwaysOn 可用性组互操作的功能
 
 下表列出了在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中可与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 互操作的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能。  “详细信息”列中的链接表示给定功能的互操作性注意事项。
 
@@ -46,20 +46,20 @@ ms.locfileid: "67991586"
 |Service Broker|[含有 AlwaysOn 可用性组的 Service Broker (SQL Server)](../../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)|
 |SQL Server 代理|&nbsp;|
 
-## <a name="restrictions"></a> 可与 AlwaysOn 可用性组互操作，但具有限制的功能
+## <a name="features-that-interoperate-with-always-on-availability-groups-with-restrictions"></a><a name="restrictions"></a> 可与 AlwaysOn 可用性组互操作，但具有限制的功能
 
 以下功能可与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 互操作，但存在某些限制。 有关详细信息，请参阅链接的主题。
 
 - 跨数据库事务/分布式事务（[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 和 Windows Server 2016）。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - [查询统计信息系统数据收集器](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query)无法在具有不可读的辅助副本的环境中可靠运行。 若要使用查询统计信息系统数据收集器，请将所有辅助可用性组副本设置为允许[读取访问](configure-read-only-access-on-an-availability-replica-sql-server.md)。 
 
-## <a name="NoInterop"></a> 不能与 AlwaysOn 可用性组互操作的功能
+## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> 不能与 AlwaysOn 可用性组互操作的功能
 
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不能与以下功能互操作：
 
 - 数据库镜像。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
 
-## <a name="RelatedContent"></a> 相关内容
+## <a name="related-content"></a><a name="RelatedContent"></a> 相关内容
 
 - **博客：**
 

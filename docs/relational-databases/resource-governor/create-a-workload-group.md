@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73633005"
 ---
 # <a name="create-a-workload-group"></a>创建工作负荷组
@@ -28,9 +28,9 @@ ms.locfileid: "73633005"
   
 -   若要创建工作负荷组，请使用：  [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限
 
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
@@ -38,11 +38,11 @@ ms.locfileid: "73633005"
   
  允许索引创建操作使用比最初授予的工作区内存多的工作区内存，以便提高性能。 这个特别处理由资源调控器支持，然而，最初授予及任何其他内存授予都受工作负荷组和资源池设置的限制。  
   
-###  <a name="Permissions"></a> 权限
+###  <a name="permissions"></a><a name="Permissions"></a> 权限
 
  创建工作负荷组需要 CONTROL SERVER 权限。  
   
-##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建工作负荷组
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建工作负荷组
 
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73633005"
   
 7.  若要保存更改，请单击 **“确定”** 。  
 
-##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 创建工作负荷组  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreRPTSQL"></a> 使用 Transact-SQL 创建工作负荷组  
  **使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  运行 CREATE WORKLOAD GROUP 语句，指定要设置的属性值。  

@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286321"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
@@ -30,7 +30,7 @@ ms.locfileid: "79286321"
 
 SQL 内容团队会对所有公开发表的内容进行验证，以确保技术准确性和一致性。 
 
-## <a id="githubui"></a>在浏览器中编辑
+## <a name="edit-in-your-browser"></a><a id="githubui"></a>在浏览器中编辑
 
 可以在浏览器中对 SQL Server 内容进行简单编辑，然后将其提交到 Microsoft。 有关详细信息, 请参阅 [Microsoft Docs 参与者指南概述](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)。 
 
@@ -51,7 +51,7 @@ SQL 内容团队会对所有公开发表的内容进行验证，以确保技术�
 
 ![编辑 SQL 文档](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a id="tools"></a>使用工具在本地编辑
+## <a name="edit-locally-with-tools"></a><a id="tools"></a>使用工具在本地编辑
 
 另一个编辑选项是创建 sql-docs 或 azure-docs 存储库的分支并将其克隆到本地计算机   。 然后可以使用 Markdown 编辑器和 git 客户端提交所做的更改。 此工作流适用于更复杂或涉及多个文件的编辑。 另外，它也适用于针对 docs.microsoft.com 的频繁参与者。
 

@@ -33,10 +33,10 @@ author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75831816"
 ---
 # <a name="collation-and-unicode-support"></a>排序规则和 Unicode 支持
@@ -49,7 +49,7 @@ ms.locfileid: "75831816"
     
 为了充分利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的排序规则支持，应了解本主题中所定义的术语以及这些术语与数据的特征之间的关系。    
     
-##  <a name="Terms"></a> 排序规则术语    
+##  <a name="collation-terms"></a><a name="Terms"></a> 排序规则术语    
     
 -   [排序规则](#Collation_Defn) 
     - [排序规则集](#Collation_sets)
@@ -58,7 +58,7 @@ ms.locfileid: "75831816"
 -   [代码页](#Code_Page_Defn)    
 -   [排序顺序](#Sort_Order_Defn)    
     
-###  <a name="Collation_Defn"></a> 排序规则    
+###  <a name="collation"></a><a name="Collation_Defn"></a> 排序规则    
 排序规则指定表示数据集中每个字符的位模式。 排序规则还确定数据的排序和比较规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在单个数据库中存储具有不同排序规则的对象。 对于非 Unicode 列，排序规则设置指定数据的代码页以及可以表示哪些字符。 必须将在非 Unicode 列间移动的数据从源代码页转换到目标代码页。    
     
 当[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在具有不同排序规则设置的不同数据库上下文中运行时，其运行结果可能会不同。 如果可能，请为组织使用标准化排序规则。 这样就不必显式指定每个字符或 Unicode 表达式中的排序规则。 如果必须使用具有不同排序规则和代码页设置的对象，请对查询进行编码，以考虑排序规则的优先顺序规则。 有关详细信息，请参阅 [排序规则优先顺序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。    
@@ -110,7 +110,7 @@ ms.locfileid: "75831816"
 
 <sup>2</sup> 如果添加 UTF-8 选项 (\_UTF8)，可使用 UTF-8 对 Unicode 数据进行编码。 有关详细信息，请参阅本文中的 [UTF-8 支持](#utf8)部分。 
 
-### <a name="Collation_sets"></a> 排序规则集
+### <a name="collation-sets"></a><a name="Collation_sets"></a> 排序规则集
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下排序规则集：    
 
@@ -118,10 +118,10 @@ ms.locfileid: "75831816"
 -  [二进制排序规则](#Binary-collations)
 -  [SQL Server 排序规则](#SQL-collations)
     
-#### <a name="Windows-collations"></a> Windows 排序规则    
+#### <a name="windows-collations"></a><a name="Windows-collations"></a> Windows 排序规则    
 Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数据的存储规则。 在 Windows 排序规则中，可以使用与 Unicode 数据相同的算法实现非 Unicode 数据的比较。 Windows 基本排序规则指定应用字典排序时所用的字母表或语言。 规则还指定用于存储非 Unicode 字符数据的代码页。 Unicode 排序和非 Unicode 排序都与特定 Windows 版本中的字符串比较相兼容。 这保证了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所有数据类型的一致性，使开发人员能够使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的相同规则对应用程序中的字符串排序。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。    
     
-#### <a name="Binary-collations"></a> 二进制排序规则    
+#### <a name="binary-collations"></a><a name="Binary-collations"></a> 二进制排序规则    
 二进制排序规则基于区域设置和数据类型定义的编码值顺序来对数据进行排序。 它们区分大小写。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的二进制排序规则定义了所使用的区域设置和 ANSI 代码页。 这将强制使用二进制排序顺序。 由于它们相对简单，因此二进制排序规则有助于提高应用程序性能。 对于非 Unicode 数据类型，数据比较将基于 ANSI 代码页中定义的码位。 对于 Unicode 数据类型，数据比较将基于 Unicode 码位。 对于 Unicode 数据类型的二进制排序规则，数据排序将不考虑区域设置。 例如，对 Unicode 数据应用 Latin_1_General_BIN 和 Japanese_BIN，会得到完全相同的排序结果   。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。   
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有两种类型的二进制排序规则：
@@ -130,7 +130,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 
 -  更新的 BIN2 排序规则可实现纯码位比较  。 在 BIN2 排序规则中，所有字符根据其码位排序。 由于 Intel 平台是一个 little endian 体系结构，因此 Unicode 码字符始终以字节对调的形式存储。     
     
-#### <a name="SQL-collations"></a> SQL Server 排序规则    
+#### <a name="sql-server-collations"></a><a name="SQL-collations"></a> SQL Server 排序规则    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_\*) 提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本兼容的排序顺序。 非 Unicode 数据的字典排序规则与 Windows 操作系统提供的任何排序例程都不兼容。 但是，Unicode 数据的排序与特定版本的 Windows 排序规则兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则对非 Unicode 数据和 Unicode 数据使用不同的比较规则，因此对于相同数据的比较会看到不同的结果，具体取决于基本数据类型。 有关详细信息，请参阅 [SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。 
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，默认安装排序规则设置由操作系统 (OS) 区域设置确定。 服务器级排序规则可以在安装期间进行更改，也可以在安装前通过更改 OS 区域设置进行更改。 出于后向兼容性原因，默认排序规则设置为与每个特定区域设置关联的最早可用版本。 因此，不推荐总是使用默认排序规则。 更改 Windows 排序规则的默认安装设置可充分利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 例如，对于 OS 区域设置“英语(美国)”（代码页 1252），安装过程中的默认排序规则是 SQL_Latin1_General_CP1_CI_AS，可将其更改为最接近的 Windows 对等排序规则 Latin1_General_100_CI_AS_SC   。
@@ -141,7 +141,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 > -   应用程序代码依赖早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则的行为。    
 > -   必须存储反映多种语言的字符数据。    
     
-### <a name="Collation_levels"></a> 排序规则级别
+### <a name="collation-levels"></a><a name="Collation_levels"></a> 排序规则级别
 支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的下列级别设置排序规则：    
 
 -  [服务器级排序规则](#Server-level-collations)
@@ -149,7 +149,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 -  [列级排序规则](#Column-level-collations)
 -  [表达式级排序规则](#Expression-level-collations)
 
-#### <a name="Server-level-collations"></a> 服务器级排序规则   
+#### <a name="server-level-collations"></a><a name="Server-level-collations"></a> 服务器级排序规则   
 默认服务器排序规则是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中设置的，它将成为系统数据库和所有用户数据库的默认排序规则。 
 
 下表显示由操作系统 (OS) 区域设置确定的默认排序规则标识，其中包括它们的 Windows 和 SQL 语言代码标识符 (LCID)：
@@ -388,7 +388,7 @@ SELECT CONVERT(varchar, SERVERPROPERTY('collation'));
 SELECT * FROM sys.fn_helpcollations();
 ```
     
-#### <a name="Database-level-collations"></a> 数据库级排序规则    
+#### <a name="database-level-collations"></a><a name="Database-level-collations"></a> 数据库级排序规则    
 创建或修改数据库时，可使用 `CREATE DATABASE` 或 `ALTER DATABASE` 语句的 `COLLATE` 子句指定默认数据库排序规则。 如果未指定排序规则，将为该数据库分配服务器排序规则。    
     
 除非更改服务器的排序规则，否则无法更改系统数据库的排序规则。
@@ -413,7 +413,7 @@ ALTER DATABASE myDB COLLATE Greek_CS_AI;
 SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
 ```
 
-#### <a name="Column-level-collations"></a> 列级排序规则    
+#### <a name="column-level-collations"></a><a name="Column-level-collations"></a> 列级排序规则    
 当创建或更改表时，可使用 `COLLATE` 子句指定每个字符串列的排序规则。 如果不指定排序规则，将为列分配数据库的默认排序规则。    
 
 可使用如下的 `ALTER TABLE` 语句更改列的排序规则：
@@ -422,23 +422,23 @@ SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
 ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
 ```
     
-#### <a name="Expression-level-collations"></a> 表达式级排序规则    
+#### <a name="expression-level-collations"></a><a name="Expression-level-collations"></a> 表达式级排序规则    
 表达式级排序规则在语句运行时设置，并且影响结果集的返回方式。 这可以使 `ORDER BY` 排序结果特定于区域设置。 要实现表达式级别的排序规则，请使用如下的 `COLLATE` 子句：    
     
 ```sql    
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
 ```    
     
-###  <a name="Locale_Defn"></a> 区域设置    
+###  <a name="locale"></a><a name="Locale_Defn"></a> 区域设置    
 区域设置是与位置或区域性相关联的一组信息。 此信息可以包括所用语言的名称和标识符、用于书写该语言的文字以及文化习俗。 排序规则可以与一个或多个区域设置相关联。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。    
     
-###  <a name="Code_Page_Defn"></a> 代码页    
+###  <a name="code-page"></a><a name="Code_Page_Defn"></a> 代码页    
 代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”   。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。     
  
-###  <a name="Sort_Order_Defn"></a> 排序顺序    
+###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a> 排序顺序    
 排序顺序指定数据值的排序方式。 该顺序影响数据比较的结果。 数据的排序通过使用排序规则而实现，且可使用索引对排序进行优化。    
     
-##  <a name="Unicode_Defn"></a> Unicode 支持    
+##  <a name="unicode-support"></a><a name="Unicode_Defn"></a> Unicode 支持    
 Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。
 
 ### <a name="unicode-basics"></a>Unicode 基础知识
@@ -505,7 +505,7 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
 |非 Unicode|Unicode|该方案对使用多语言数据不是理想配置。 在此方案下不能向非 Unicode 服务器写入 Unicode 数据。 在向服务器的代码页之外的服务器发送数据时，很可能会发生问题。|    
 |非 Unicode|非 Unicode|这是对多语言数据有极大局限性的方案。 您只可使用一个代码页。|    
     
-##  <a name="Supplementary_Characters"></a> 增补字符    
+##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> 增补字符    
 Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 之间的值）。 最常用字符的码位值介于范围 000000-00FFFF（65,535 个字符）之间，可以装入内存中和磁盘上的 8 位字或 16 位字中。 通常将此范围指定为基本多文种平面 (BMP)。 
 
 但 Unicode 联盟额外建立了 16 个字符“平面”，每个平面的大小都与 BMP 相同。 此定义允许 Unicode 表示介于码位范围 000000-10FFFF 之间的 1,114,112 个字符（即 2<sup>16</sup>* 17 个字符）。 码位值大于 00FFFF 的字符需要 2 到 4 个连续 8 位字 (UTF-8)，或 2 个连续 16 位字 (UTF-16)。 超出 BMP 的字符称为“附属字符”  ，其他连续 8 位字或 16 位字称为“代理项对”  。 如需了解增补字符、代理项、代理项对的更多详细信息，请参阅 [Unicode 标准](http://www.unicode.org/standard/standard.html)。    
@@ -544,7 +544,7 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|返回 0-0x10FFFF 范围内的一个 UTF-16 码位。|返回 0-0xFFFF 范围内的一个 UCS-2 码位。|    
 |[匹配一个通配符](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [通配符 - 无需匹配的字符](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|增补字符支持所有通配符操作。|增补字符不支持这些通配符操作。 支持其他通配符运算符。|    
     
-## <a name="GB18030"></a> GB18030 支持    
+## <a name="gb18030-support"></a><a name="GB18030"></a> GB18030 支持    
 GB18030 是中国对中文字符进行编码的一个单独标准。 在 GB18030 中，字符长度可以是 1 个字节、2 个字节或 4 个字节。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过对从客户端应用程序进入服务器的 GB18030 编码字符进行确认，然后在本机将其转换并存储为 Unicode 字符，来对这些字符提供支持。 这些字符存储在服务器中后，在所有后续操作中均视为 Unicode 字符。 
 
 可以使用任何中文排序规则，最好使用最新的 100 版本。 所有 \_100 级排序规则均支持使用 GB18030 字符进行语言排序。 如果数据中包含增补字符（代理项对），则可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的 SC 排序规则来改进搜索和排序操作。    
@@ -552,7 +552,7 @@ GB18030 是中国对中文字符进行编码的一个单独标准。 在 GB18030
 > [!NOTE]
 > 确保 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 等客户端工具使用 Dengxian 字体来正确地显示包含 GB18030 编码字符的字符串。
     
-## <a name="Complex_script"></a> 复杂文种支持    
+## <a name="complex-script-support"></a><a name="Complex_script"></a> 复杂文种支持    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支持输入、存储、更改和显示复杂文种。 复杂文种包括下列几种类型：    
     
 -   脚本包括从右到左和从左到右两种文字组合，如阿拉伯语和英语文字的组合。    
@@ -561,7 +561,7 @@ GB18030 是中国对中文字符进行编码的一个单独标准。 在 GB18030
     
 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交互的数据库应用程序必须使用支持复杂文种的控件。 在托管代码中创建的标准 Windows 窗体控件支持复杂文种。    
 
-## <a name="Japanese_Collations"></a> 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 中添加的日语排序规则
+## <a name="japanese-collations-added-in--sssqlv14_md"></a><a name="Japanese_Collations"></a> 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 中添加的日语排序规则
  
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，支持新的日语排序规则系列，并具有各种排列选项（\_CS、\_AS、\_KS、\_WS 和 \_VSS）。 
 
@@ -578,12 +578,12 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 
 <a name="ctp23"></a>
 
-## <a name="utf8"></a> UTF-8 支持
+## <a name="utf-8-support"></a><a name="utf8"></a> UTF-8 支持
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，以及作为字符串数据的数据库级别或列级别排序规则。 UTF-8 受 char  和 varchar  数据类型支持，并在创建对象的排序规则或将其更改为带有 UTF8  后缀的排序规则时启用。 例如，将 LATIN1_GENERAL_100_CI_AS_SC 更改为 LATIN1_GENERAL_100_CI_AS_SC_UTF8   。 
 
 UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中所述。 nchar  和 nvarchar  数据类型仅支持 UCS-2 或 UTF-16 编码，并保持不变。
 
-### <a name="storage_differences"></a> UTF-8 与 UTF-16 的存储差异
+### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> UTF-8 与 UTF-16 的存储差异
 Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 之间的值）。 使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 时，UTF-8 和 UTF-16 编码都可用来表示整个范围：    
 -  如果使用 UTF-8 编码，ASCII 范围（000000-00007F）内的字符需要 1 个字节，介于 000080 和 0007FF、000800 和 00FFFF 以及 0010000 和 0010FFFF 之间的码位分别需要 2、3 和 4 个字节。 
 -  如果使用 UTF-16 编码，介于 000000 和 00FFFF 以及 0010000 和 0010FFFF 之间的码位分别需要 2 和 4 个字节。 
@@ -616,7 +616,7 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 
 有关其他注意事项，请参阅[编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)。
 
-### <a name="converting"></a> 转换为 UTF-8
+### <a name="converting-to-utf-8"></a><a name="converting"></a> 转换为 UTF-8
 因为在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字节存储大小，而不定义可以存储的字符数，所以确定必须转换的数据类型大小很重要，这可以避免数据被截断      。 
 
 例如，考虑定义为 NVARCHAR(100) 的列，该列存储了 180 个字节的日语字符  。 在本示例中，当前使用 UCS-2 或 UTF-16 对列数据进行编码，每个字符使用 2 个字节。 将列类型转换为 VARCHAR(200) 不足以防止数据被截断，因为新的数据类型只能存储 200 个字节，而使用 UTF-8 编码时，日语字符需要 3 个字节  。 因此，必须将列定义为 VARCHAR(270)，以避免由于数据截断而丢失数据  。
@@ -627,7 +627,7 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 
 要更改数据库排序规则（默认允许新对象继承数据库排序规则）或更改服务器排序规则（默认允许新数据库继承系统排序规则），请参阅本文的[相关任务](#Related_Tasks)部分。 
 
-##  <a name="Related_Tasks"></a> Related tasks    
+##  <a name="related-tasks"></a><a name="Related_Tasks"></a> Related tasks    
     
 |任务|主题|    
 |----------|-----------|    
@@ -638,7 +638,7 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 |介绍如何编写更易于在不同语言之间移植或更轻松地支持多种语言的 Transact-SQL 语句|[编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |介绍如何更改有关日期、时间和货币数据的使用和显示方式的错误消息和首选项的语言|[设置会话语言](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Related content    
+##  <a name="related-content"></a><a name="Related_Content"></a> Related content    
 有关详细信息，请参阅下列相关内容：
 * [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)  
 * [使用 Unicode 字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)

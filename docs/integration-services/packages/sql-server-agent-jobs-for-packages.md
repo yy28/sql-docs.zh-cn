@@ -16,10 +16,10 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295811"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
@@ -43,7 +43,7 @@ ms.locfileid: "71295811"
   
 -   [对计划的包进行故障排除](#trouble)  
   
-##  <a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的服务，使您能够通过运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业自动执行任务和计划任务的执行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须处于运行状态，作业才能自动运行。 有关详细信息，请参阅 [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent)。  
   
  在您连接到 **的实例时，** “SQL Server 代理” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 节点将出现在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的对象资源管理器中。  
@@ -56,7 +56,7 @@ ms.locfileid: "71295811"
   
  可以通过设置通知选项来增强作业，如指定在作业完成时向某个操作员发送电子邮件或添加警报。 有关详细信息，请参阅 [“警报”](https://docs.microsoft.com/sql/ssms/agent/alerts)。  
   
-##  <a name="packages"></a> Scheduling Integration Services Packages  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  在您创建一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以便计划 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包后，必须至少添加一个步骤，并将该步骤的类型设置为 **“SQL Server Integration Services 包”** 。 一个作业可以包括多个步骤，并且每个步骤可以运行不同的包。  
   
  从作业步骤中运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包类似于使用 **dtexec** (dtexec.exe) 和 **DTExecUI** (dtexecui.exe) 实用工具运行包。 可以在“新建作业步骤”  对话框中设置运行时选项，而不是使用命令行选项或“执行包实用工具”  对话框来设置包的运行时选项。 有关运行包的选项的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "71295811"
   
  有关演示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行包的视频，请观看 MSDN 库中的视频主页[操作说明：使用 SQL Server 代理自动执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141771)。  
   
-##  <a name="trouble"></a> 故障排除  
+##  <a name="troubleshooting"></a><a name="trouble"></a> 故障排除  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤可能无法启动某个包，即便该包可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及从命令行成功运行。 该问题有一些常见的原因和一些推荐的解决方法。 有关详细信息，请参阅以下资源。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章： [当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)  
@@ -100,7 +100,7 @@ ms.locfileid: "71295811"
   
     有关“概述”、“所有消息”和“执行性能”报告的详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
 
-## <a name="schedule"></a> 使用 SQL Server 代理计划包
+## <a name="schedule-a-package-by-using-sql-server-agent"></a><a name="schedule"></a> 使用 SQL Server 代理计划包
   下面的过程提供了通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤运行包来自动执行该包的步骤。  
   
 ### <a name="to-automate-package-execution-by-using-sql-server-agent"></a>通过使用 SQL Server 代理自动执行包  
