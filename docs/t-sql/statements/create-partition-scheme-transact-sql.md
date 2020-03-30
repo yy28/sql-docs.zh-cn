@@ -29,10 +29,10 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048147"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
@@ -157,7 +157,7 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  如果将分区函数 `myRangePF4` 更改为添加一个分区，则文件组 `test5fg` 将接收到新创建的分区。  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. 仅在 PRIMARY 上创建分区模式 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 仅支持 PRIMARY
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. 仅在 PRIMARY 上创建分区模式 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 仅支持 PRIMARY
 
  以下示例创建一个分区函数，将表或索引分为四个分区。 然后创建一个分区方案，指定在 PRIMARY 文件组中创建所有分区。  
   

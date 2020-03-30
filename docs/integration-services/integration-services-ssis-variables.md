@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296154"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
@@ -251,7 +251,7 @@ ms.locfileid: "71296154"
   
 -   “变量”窗口。  
   
--   属性窗口。 “属性”  窗口列出了用于配置“变量”  窗口中未提供的变量的属性：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
+-   属性窗口。 “属性”  窗口中列出了用于配置“变量”  窗口中不可用变量的属性：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了一组无法更新属性的系统变量，但 RaiseChangedEvent 属性例外。  

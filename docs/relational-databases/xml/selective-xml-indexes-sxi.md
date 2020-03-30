@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000706"
 ---
 # <a name="selective-xml-indexes-sxi"></a>选择性 XML 索引 (SXI)
@@ -33,7 +33,7 @@ ms.locfileid: "68000706"
   
  该选择性 XML 索引功能还支持针对已按选择性 XML 索引建立索引的节点的辅助选择性 XML 索引。 这些辅助选择性索引是高效的并且进一步改进了查询性能。  
   
-##  <a name="benefits"></a> 选择性 XML 索引的优点  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> 选择性 XML 索引的优点  
  选择性 XML 索引具有下列优点：  
   
 1.  极大改进了针对典型查询负荷的 XML 数据类型的查询性能。  
@@ -45,7 +45,7 @@ ms.locfileid: "68000706"
 4.  无需更新应用程序即可享有选择性 XML 索引所带来的好处。  
   
   
-##  <a name="compare"></a> 选择性 XML 索引和主 XML 索引  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> 选择性 XML 索引和主 XML 索引  
   
 > [!IMPORTANT]  
 >  在大多数情况下，通过创建选择性 XML 索引而不是普通 XML 索引，可以改善性能和提高存储效率。  
@@ -57,7 +57,7 @@ ms.locfileid: "68000706"
 -   您要为未知元素或文档结构内未知位置中的元素支持查询。  
   
   
-##  <a name="example"></a> 选择性 XML 索引的简单示例  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> 选择性 XML 索引的简单示例  
  请将下面的 XML 片段视为由大约 500,000 行构成的表中的一个 XML 文档：  
   
 ```xml  
@@ -101,7 +101,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>支持的功能、先决条件和限制  
   
-###  <a name="features"></a> 支持的 XML 功能  
+###  <a name="supported-xml-features"></a><a name="features"></a> 支持的 XML 功能  
  选择性 XML 索引在 exist()、value() 和 nodes() 方法内支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支持的 XQuery。  
   
 -   对于 exist()、value() 和 nodes() 方法，选择性 XML 索引包含用于转换整个表达式的足够信息。  
@@ -113,7 +113,7 @@ FOR
 -   对于 modify() 方法，选择性 XML 索引不用于更新 XML 文档。  
   
   
-###  <a name="unsupported"></a> 不支持的 XML 功能  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> 不支持的 XML 功能  
  选择性 XML 索引不支持在 XML 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实现中支持的以下功能：  
   
 -   对具有复杂 XS 类型的节点建立索引：联合类型、序列类型和列表类型。  
@@ -129,7 +129,7 @@ FOR
 -   通过使用 id() 函数为节点指定和检索标识符。  
   
   
-###  <a name="prereq"></a>先决条件  
+###  <a name="prerequisites"></a><a name="prereq"></a>先决条件  
  必须首先满足以下先决条件，然后才能对用户表中的 XML 列创建选择性 XML 索引：  
   
 -   聚集索引必须存在于用户表的主键上。  
@@ -139,7 +139,7 @@ FOR
 -   在用于选择性 XML 索引时，用户表的聚集键限制为 15 列。  
   
   
-###  <a name="limits"></a> 限制  
+###  <a name="limitations"></a><a name="limits"></a> 限制  
  **一般要求和限制**  
   
 -   只能对单个 XML 列创建各个选择性 XML 索引。  
@@ -191,7 +191,7 @@ FOR
 -   在数据库优化顾问中不支持选择性 XML 索引和辅助选择性 XML 索引。  
   
   
-##  <a name="reltasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相关任务  
   
 |||  
 |-|-|  

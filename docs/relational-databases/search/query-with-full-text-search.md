@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68053571"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
@@ -31,7 +31,7 @@ ms.locfileid: "68053571"
 -   要匹配单词和短语，可使用 CONTAINS 和 CONTAINSTABLE   。
 -   要匹配含义，但不匹配确切的措辞，可使用 FREETEXT 和 FREETEXTTABLE   。
 
-## <a name="examples_simple"></a>每个谓词和函数的示例
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a>每个谓词和函数的示例
 
 以下示例使用 AdventureWorks 示例数据库。 有关 AdventureWorks 的最终版本，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502)。 要运行示例查询，还需要设置全文搜索。 有关详细信息，请参阅[全文搜索入门](get-started-with-full-text-search.md)。 
 
@@ -172,9 +172,9 @@ GO
 
 **详细信息**。 有关这些函数的语法和参数的详细信息，请参阅 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。
 
-## <a name="examples_specific"></a>特定搜索类型
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a>特定搜索类型
 
-###  <a name="Simple_Term"></a>搜索特定的单词或短语（简单词）  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>搜索特定的单词或短语（简单词）  
  可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 在表中搜索特定单词或短语。 例如，如果要在  **数据库的“ProductReview”** [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
   
 ```sql
@@ -197,7 +197,7 @@ GO
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查找短语的完全匹配项。 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 将短语拆分为几个词。
 
-###  <a name="Prefix_Term"></a>搜索带有某个前缀的单词（前缀词）  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a>搜索带有某个前缀的单词（前缀词）  
  可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 来搜索具有指定前缀的词或短语。 将返回列中所有包含以指定前缀开头的文本的项。 例如，要搜索包含前缀 `top`- 的所有行，如 `top``ple`、 `top``ping`和 `top`。 该查询如以下示例所示：  
   
 ```sql  
@@ -224,7 +224,7 @@ GO
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支持前缀搜索。
   
-###  <a name="Inflectional_Generation_Term"></a>搜索特定单词的变形（派生词）  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>搜索特定单词的变形（派生词）  
 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 搜索动词的所有不同时态和语态形式或搜索名词的单数和复数形式（变形搜索）或者搜索特定词的同义词形式（同义词库搜索）。  
   
 以下示例在 `Comments` 数据库的 `ProductReview` 表的 `AdventureWorks` 列搜索“foot”的任意变形（“foot”、“feet”等）： 
@@ -267,7 +267,7 @@ GO
 
 有关邻近搜索的详细信息，请参阅[使用 NEAR 搜索与另一个词邻近的词](search-for-words-close-to-another-word-with-near.md)。
 
-###  <a name="Weighted_Term"></a>使用加权值搜索单词或短语（加权词）  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a>使用加权值搜索单词或短语（加权词）  
 您可以使用 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 来搜索词或短语并指定加权值。 加权值用介于 0.0 到 1.0 之间的一个数字来表示，用于指示一组词和短语中的每个词和短语的重要程度。 加权值的最低值是 0.0，最高值是 1.0。  
   
 下例所示的查询使用加权值搜索所有符合以下条件的客户地址：地址中任何以字符串“Bay”开头的文本包含“Street”或“View”。 在结果中，对那些包含较多指定词的行赋予较高的排名。  
@@ -297,7 +297,7 @@ GO
 
 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支持加权词搜索。
 
-##  <a name="Using_Boolean_Operators"></a>使用 AND、OR 和 NOT（布尔运算符）
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a>使用 AND、OR 和 NOT（布尔运算符）
  
 CONTAINS 谓词和 CONTAINSTABLE 函数使用相同的搜索条件。 它们都支持使用布尔运算符（AND、OR、AND NOT）将多个搜索词组合起来，以执行逻辑运算。 例如，可以使用 AND 查找既包含“latte”又包含“New York-style bagel”的行。 例如，可以使用 AND NOT 查找包含“bagel”但不包含“cream cheese”的行。  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a>大小写、非索引字、语言和同义词库
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a>大小写、非索引字、语言和同义词库
 
  编写全文查询时，还可以指定以下选项：
   
@@ -331,7 +331,7 @@ GO
   
 -   **同义词库**。 FREETEXT 和 FREETEXTTABLE 查询默认情况下使用同义词库。 CONTAINS 和 CONTAINSTABLE 支持可选的 THESAURUS 参数。 有关详细信息，请参阅[为全文搜索配置和管理同义词库文件](configure-and-manage-thesaurus-files-for-full-text-search.md)。
   
-##  <a name="tokens"></a>检查词汇切分结果
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a>检查词汇切分结果
 
 在查询中应用给定的断字符、同义词库和非索引字表组合后，可以使用 sys.dm_fts_parser 动态管理视图查看全文搜索如何切分结果  。 有关详细信息，请参阅[sys.dm_fts_parser (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)。  
   

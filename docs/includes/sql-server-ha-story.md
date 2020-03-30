@@ -157,7 +157,7 @@ FCI 可用于灾难恢复。 与一般可用性组一样，基础群集机制也
 ### <a name="log-shipping"></a>日志传送
 日志传送是为 SQL Server 数据库提供灾难恢复最古老的方法之一。 日志传送通常与可用性组和 FCI 结合使用，在其他选项可能由于环境、管理技能或预算而可能不太适用的情况下，提供经济高效且更简单的灾难恢复。 与日志传送的高可用性情况类似，许多环境会延迟加载事务日志，以便解决人为错误。
 
-## <a name = "Migrations"></a>迁移和升级
+## <a name="migrations-and-upgrades"></a><a name = "Migrations"></a>迁移和升级
 
 部署新实例或升级旧实例时，业务不容许出现长时间的中断。 本部分介绍如何使用 SQL Server 的可用性功能，最大限度地减少执行计划内体系结构更改、服务器交换、平台更改（例如 Windows Server 和 Linux 之间）时的停机时间或修补过程中的停机时间。
 
@@ -224,7 +224,7 @@ FCI 可就地升级到 SQL Server 2017。 有关详细信息，请参阅[升级 
 
 由于日志传送只基于备份和还原，所以 Windows Server 上的 SQL Server 与 Linux 上的 SQL Server 在数据库、文件结构等方面没有任何差异。 这意味着可在基于 Windows Server 的 SQL Server 安装和基于 Linux 的安装之间以及在 Linux 分发之间配置日志传送。 其他所有内容保持不变。 唯一需要注意的是，就像可用性组一样，若源的 SQL Server 主版本高于目标的 SQL Server 版本，则无法使用日志传送。 
 
-## <a name = "ReadScaleOut"></a>读取缩放
+## <a name="read-scale"></a><a name = "ReadScaleOut"></a>读取缩放
 
 自在 SQL Server 2012 中引入次要副本后，它们已用于只读查询。 可用性组可实现两种方式：允许直接访问次要副本以及[配置只读路由](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)，后者需要使用侦听器。  SQL Server 2016 引入了通过使用轮循机制算法的侦听器负载均衡只读连接的功能，允许只读请求分布在所有可读副本中。 
 

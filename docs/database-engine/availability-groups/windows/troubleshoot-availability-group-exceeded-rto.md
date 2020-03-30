@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013747"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>故障排除：可用性组超过了 RTO
@@ -28,7 +28,7 @@ ms.locfileid: "68013747"
   
 2.  [重做线程因资源争用而滞后](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a>报告工作负荷阻止重做线程运行  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a>报告工作负荷阻止重做线程运行  
  一个长时间运行的只读查询阻止次要副本上的重做线程执行数据定义语言 (DDL) 更改。  
   
 ### <a name="explanation"></a>说明  
@@ -44,7 +44,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  可以让报告工作负荷在取消阻止重做线程的点完成，或者通过对阻止会话 ID 执行 [KILL (Transact-SQL)](~/t-sql/language-elements/kill-transact-sql.md) 命令，立即取消阻止重做线程。  
   
-##  <a name="BKMK_CONTENTION"></a>重做线程因资源争用而滞后  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a>重做线程因资源争用而滞后  
  次要副本上的大型报告工作负荷降低了次要副本的性能，且重做线程已滞后。  
   
 ### <a name="explanation"></a>说明  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b028b6ab4da678444427682a635f679acce576ab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123575"
 ---
 # <a name="execute-user-defined-functions"></a>执行用户定义函数
@@ -29,16 +29,16 @@ ms.locfileid: "68123575"
 > **注意：** 有关用户定义函数的详细信息，请访问  [用户定义函数](user-defined-functions.md) 和 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 。 
   
  
-##  <a name="BeforeYouBegin"></a> 准备工作  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 准备工作  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  在 Transact-SQL 中，可通过使用 *value* 或使用 @*parameter_name*=*value*来提供参数。 来提供参数。参数不是事务的一部分；因此，如果在以后回退的事务中更改了参数，则此参数的值不会恢复为以前的值。 返回给调用方的值总是模块返回时的值。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
  运行 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 语句无需权限。 但是，EXECUTE 字符串内引用的安全对象上 **需要** 权限。 例如，如果字符串包含 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句，则 EXECUTE 语句的调用方必须具有对目标表的 INSERT 权限。 在遇到 EXECUTE 语句时，即使 EXECUTE 语句包含于模块内，也将检查权限。 有关详细信息，请参阅 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ### <a name="example"></a>示例 
   

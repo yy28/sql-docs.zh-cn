@@ -18,10 +18,10 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294145"
 ---
 # <a name="for-loop-container"></a>For 循环容器
@@ -121,7 +121,7 @@ ms.locfileid: "71294145"
   
  表达式中可以包含变量。 使用变量的优点是变量可在运行时更新，使得包管理起来更灵活、更容易。 表达式的最大长度为 4000 个字符。  
   
- 在表达式中指定变量时，必须在其前面加符号 @。 例如，对于名为 Counter  的变量，请在 For 循环容器使用的表达式中输入 @Counter。 如果变量上包含了命名空间属性，则您必须用方括号将变量和命名空间括起来。 例如，对于 MyNamespace 命名空间中的 Counter 变量，请键入 [@MyNamespace::Counter]   。  
+ 在表达式中指定变量时，必须在其前面加符号 @。 例如，对于名为 Counter  的变量，请在 For 循环容器使用的表达式中输入 @Counter。 如果变量上包含了命名空间属性，则您必须用方括号将变量和命名空间括起来。 例如，对于 MyNamespace 命名空间中的 Counter 变量，请键入 [ **]**  @MyNamespace::Counter。  
   
  For 循环容器使用的变量必须在 For 循环容器的范围内定义，或者在包容器层次结构中较高层次容器的范围内定义。 例如，For 循环容器可使用在其范围内定义的变量，也可使用在包范围内定义的变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   

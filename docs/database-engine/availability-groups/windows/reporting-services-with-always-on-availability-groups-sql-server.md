@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243624"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "75243624"
   
  有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般信息，请参阅[适用于 SQL Server 2012 的 Always On 的常见问题解答 https://msdn.microsoft.com/sqlserver/gg508768) (](https://msdn.microsoft.com/sqlserver/gg508768)。  
 
-##  <a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性组的要求  
+##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性组的要求  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 报表服务器使用 .NET Framework 4.0，并支持将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性用于数据源。  
   
  若要结合使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本，你需要下载并安装 .Net 3.5 SP1 的修补程序。 该修补程序添加对 SQL Client for AG 功能的支持以及对连接字符串属性 **ApplicationIntent** 和 **MultiSubnetFailover**的支持。 如果未在承载报表服务器的每台计算机上安装该修补程序，尝试预览报表的用户将看到类似以下内容的错误消息并将错误消息写入报表服务器跟踪日志：  
@@ -46,7 +46,7 @@ ms.locfileid: "75243624"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件（如 RSreportserver.config），它们不包括在  **功能中**[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如果手动更改某一报表服务器上的配置文件，将需要手动更新副本。  
   
-##  <a name="bkmk_reportdatasources"></a> 报表数据源和可用性组  
+##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> 报表数据源和可用性组  
  基于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 数据源行为会根据管理员配置 AG 环境的方式不同而变化。  
   
  要将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用于报表数据源，您需要配置报表数据源连接字符串以使用可用性组“侦听器 DNS 名称”  。 支持以下数据源：  
@@ -91,7 +91,7 @@ ms.locfileid: "75243624"
   
  将只读辅助副本作为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据源时，确保数据更新滞后时间满足报表用户的要求很重要。  
   
-##  <a name="bkmk_reportdesign"></a> 报表设计和可用性组  
+##  <a name="report-design-and-availability-groups"></a><a name="bkmk_reportdesign"></a> 报表设计和可用性组  
  在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中设计报表或在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中创建报表项目时，用户可以配置报表数据源连接字符串以包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]提供的新连接属性。 对连接属性的支持取决于用户在何处预览报表。  
   
 -   **本地预览：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 使用 .NET Framework 4.0，并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性。  
@@ -100,7 +100,7 @@ ms.locfileid: "75243624"
   
 > **错误消息：** “关键字不受支持的‘applicationintent’”  
   
-##  <a name="bkmk_reportserverdatabases"></a> 报表服务器数据库和可用性组  
+##  <a name="report-server-databases-and-availability-groups"></a><a name="bkmk_reportserverdatabases"></a> 报表服务器数据库和可用性组  
  Reporting Services 和 Power BI 报表服务器为将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和报表服务器数据库结合使用提供了有限的支持。 可以在 AG 中将报表服务器数据库配置为副本的一部分；但是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 在发生故障转移时不会自动将另一副本用于报表服务器数据库。 不支持使用 MultiSubnetFailover 与报表服务器数据库。  
   
  需要使用手动操作或自定义自动化脚本来完成故障转移和恢复。 在完成这些操作前，在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移后报表服务器的某些功能可能不能正常工作。  
@@ -108,7 +108,7 @@ ms.locfileid: "75243624"
 > [!NOTE]  
 >  规划报表服务器数据库的故障转移和灾难恢复时，建议您始终备份报表服务器加密密钥的副本。  
   
-###  <a name="bkmk_differences_in_server_mode"></a> SharePoint 模式和本机模式之间的区别  
+###  <a name="differences-between-sharepoint-native-mode"></a><a name="bkmk_differences_in_server_mode"></a> SharePoint 模式和本机模式之间的区别  
  本节总结了 SharePoint 模式和本机模式的报表服务器与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]交互方式的区别。  
   
  SharePoint 报表服务器将为您创建的每个 **服务应用程序创建** 3 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 个数据库。 创建服务应用程序时，SharePoint 模式下与报表服务器数据库的连接在 SharePoint 管理中心中配置。 这些数据库的默认名称包含与服务应用程序相关联的 GUID。 以下是 SharePoint 模式报表服务器的示例数据库名称：  
@@ -134,7 +134,7 @@ ms.locfileid: "75243624"
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 同步过程将检测内容数据库中项列表与报表服务器数据库中项列表的差异。  
 > -   同步过程将删除或更新内容数据库中的项。  
   
-###  <a name="bkmk_prepare_databases"></a> 为可用性组准备报表服务器数据库  
+###  <a name="prepare-report-server-databases-for-availability-groups"></a><a name="bkmk_prepare_databases"></a> 为可用性组准备报表服务器数据库  
  以下是用于准备并将报表服务器数据库添加到 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的基本步骤：  
   
 -   创建可用性组并配置“侦听器 DNS 名称”  。  
@@ -147,7 +147,7 @@ ms.locfileid: "75243624"
   
 -   将数据库连接更新为使用侦听程序 DNS 名称。 对于本机模式的报表服务器，在 **配置管理器中更改** “报表服务器数据库名称” [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 对于 SharePoint 模式，为 **服务应用程序更改** 数据库服务器名称 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。  
   
-###  <a name="bkmk_steps_to_complete_failover"></a> 完成报表服务器数据库的灾难恢复所需的步骤  
+###  <a name="steps-to-complete-disaster-recovery-of-report-server-databases"></a><a name="bkmk_steps_to_complete_failover"></a> 完成报表服务器数据库的灾难恢复所需的步骤  
  在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移到辅助副本后，需要完成以下步骤：  
   
 1.  停止 SQL 代理服务实例，该实例由承载 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据库的主数据库引擎使用。  
@@ -164,7 +164,7 @@ ms.locfileid: "75243624"
   
 5.  验证报表可以针对新主副本运行。  
   
-###  <a name="bkmk_failover_behavior"></a> 发生故障转移时的报表服务器行为  
+###  <a name="report-server-behavior-when-a-failover-occurs"></a><a name="bkmk_failover_behavior"></a> 发生故障转移时的报表服务器行为  
  当报表服务器数据库发生故障转移且您已更新该报表服务器环境以使用新主副本时，故障转移和恢复过程中会出现一些操作问题。 这些问题的影响各不相同，具体取决于故障转移时 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的负载、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移到辅助副本所花的时间以及报表服务器管理员更新报表环境以使用新主副本所花的时间。  
   
 -   由于重试逻辑和报表服务器无法在故障转移期间将预定工作标记为“已完成”，可能多次执行后台处理。  

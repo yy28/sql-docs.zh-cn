@@ -13,10 +13,10 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292367"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 文件目标
@@ -59,7 +59,7 @@ Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体
 3. 在“高级”选项卡上，选择“环境变量”   。
 4. 在“系统变量”部分中，选择“新建”   。
 5. 输入变量名称 `JAVA_HOME`  。
-6. 选择“浏览目录”，导航到已提取的文件夹，然后选择 `jre` 子文件夹  。
+6. 选择“浏览目录”，导航到已提取的文件夹，然后选择  **子文件夹**`jre`。
    然后选择“确定”，“变量值”将自动进行填充   。
 7. 选择“确定”，关闭“新建系统变量”对话框   。
 8. 选择“确定”，关闭“环境变量”对话框   。

@@ -20,10 +20,10 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9685c68127b5370d007981a2f01e67f8d22df5da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73843693"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
@@ -54,7 +54,7 @@ numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),
 ## <a name="examples"></a>示例  
   
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. 从指定表返回种子值  
- 以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person.Address` 表的种子值。  
+ 以下示例返回 `Person.Address` 数据库中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的种子值。  
   
 ```sql  
 USE AdventureWorks2012;  

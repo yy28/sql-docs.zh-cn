@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056521"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
@@ -37,7 +37,7 @@ ms.locfileid: "74056521"
   
  本主题介绍可找到有关可用属性的信息的常用方法，尤其是有关 Microsoft 定义的属性。 有关由第三方定义的属性的信息，请参阅第三方文档或与该供应商联系。  
   
-##  <a name="wellknown"></a> 查找广泛使用的、众所周知的 Microsoft 属性的信息  
+##  <a name="finding-information-about-widely-used-well-known-microsoft-properties"></a><a name="wellknown"></a> 查找广泛使用的、众所周知的 Microsoft 属性的信息  
  Microsoft 定义了数百个在多种上下文中使用的文档属性，但这只是每种文件格式使用的可用属性的一小部分。 在常用的 Windows 属性中包括一小部分泛型属性。 下表显示了众所周知的泛型属性的一些示例。 下表显示了已知名称、Windows 规范名称（来自 Microsoft 发布的属性说明）、属性集 GUID、属性整数标识符和简短说明。  
   
 |已知名称|Windows 规范名称|属性集 GUID|整数标识符|说明|  
@@ -57,7 +57,7 @@ ms.locfileid: "74056521"
   
 -   由软件供应商定义的特定于应用程序的自定义属性。  
   
-##  <a name="filtdump"></a> 通过使用 FILTDUMP.EXE 查找有关可用属性的信息  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a> 通过使用 FILTDUMP.EXE 查找有关可用属性的信息  
  若要了解哪些属性是由安装的 IFilter 发现和提取的，可安装并运行属于 **Windows SDK 的** filtdump.exe [!INCLUDE[msCoName](../../includes/msconame-md.md)] 实用工具。  
   
  从命令提示符运行 **filtdump.exe** 并提供一个参数。 此参数是具有特定文件类型的单独文件的名称，该文件类型是安装 IFilter 所针对的目标文件类型。 该实用工具显示文档中由 IFilter 发现的所有属性的列表及其属性集 GUID、整数标识符以及其他信息。  
@@ -68,7 +68,7 @@ ms.locfileid: "74056521"
   
 -   对于 32 位版本，请查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`。  
   
-##  <a name="propdesc"></a> 从 Windows 属性说明查找搜索属性的值  
+##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a> 从 Windows 属性说明查找搜索属性的值  
  对于众所周知的 Windows 搜索属性，可以从属性说明 ( **propertyDescription** ) 的 **formatID** 和**propID**属性中获取你需要的信息。  
   
  下面的示例显示了典型的 Microsoft 属性说明的相关部分，在此示例中为 `System.Author` 属性的说明。 `formatID` 特性指定属性集 GUID `F29F85E0-4FF9-1068-AB91-08002B27B3D9`， `propID` 特性指定属性整数 ID `4.` 。请注意， `name` 特性指定 Windows 规范属性名称 `System.Author`。 （此示例中省略了不相关的属性描述部分。）  
@@ -87,7 +87,7 @@ propID = 4
   
  有关 Windows 属性的完整列表，请参阅也在 Windows 搜索文档中的 [Windows 属性](https://go.microsoft.com/fwlink/?LinkId=215013)。  
   
-##  <a name="examples"></a> 将属性添加到搜索属性列表  
+##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> 将属性添加到搜索属性列表  
  下面的示例说明如何将属性添加到搜索属性列表中。 该示例使用 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) 语句将 `System.Author` 属性添加到名为 `PropertyList1`的搜索属性列表，并为属性 `Author`提供用户友好名称。  
   
 ```  

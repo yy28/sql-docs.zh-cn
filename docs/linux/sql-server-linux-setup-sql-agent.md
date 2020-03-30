@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.openlocfilehash: b281c60248d86daba36a2cf5628e1ae729d227fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258388"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安装 SQL Server 代理
@@ -41,7 +41,7 @@ ms.locfileid: "75258388"
    | SQL Server 2017 CU4 及更高版本</br>SQL Server 2019 | [启用 SQL Server 代理](#EnableAgentAfterCU4) |
    | SQL Server 2017 CU3 及更低版本 | [安装 SQL Server 代理](#InstallAgentBelowCU4) |
 
-## <a id="EnableAgentAfterCU4"></a>启用 SQL Server 代理
+## <a name="enable-the-sql-server-agent"></a><a id="EnableAgentAfterCU4"></a>启用 SQL Server 代理
 
 对于 SQL Server 2019 和 SQL Server 2017 CU4 及更高版本，只需启用 SQL Server 代理。 无需安装单独的包。
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 > [!NOTE]
 > 如果是在安装了代理的情况下从 2017 CU3 或更低版本进行升级，将自动启用 SQL Server 代理并卸载以前的代理包。  
 
-## <a name="InstallAgentBelowCU4"></a>安装 SQL Server 代理
+## <a name="install-the-sql-server-agent"></a><a name="InstallAgentBelowCU4"></a>安装 SQL Server 代理
 
 对于 SQL Server 2017 CU3 及更低版本，必须安装 SQL Server 代理包。
 
@@ -67,7 +67,7 @@ sudo systemctl restart mssql-server
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-### <a name="RHEL">在 RHEL 上安装</a>
+### <a name=""></a><a name="RHEL">在 RHEL 上安装</a>
 
 通过下列步骤在 Red Hat Enterprise Linux 上安装 mssql-server-agent  。 
 
@@ -86,7 +86,7 @@ sudo systemctl restart mssql-server
 
 如果需要脱机安装，请在[发行说明](sql-server-linux-release-notes.md)中找到 SQL Server 代理包下载。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
-### <a name="ubuntu">在 Ubuntu 上安装</a>
+### <a name=""></a><a name="ubuntu">在 Ubuntu 上安装</a>
 
 通过下列步骤在 Ubuntu 上安装 mssql-server-agent  。 
 
@@ -106,7 +106,7 @@ sudo systemctl restart mssql-server
 
 如果需要脱机安装，请在[发行说明](sql-server-linux-release-notes.md)中找到 SQL Server 代理包下载。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
-### <a name="SLES">在 SLES 上安装</a>
+### <a name=""></a><a name="SLES">在 SLES 上安装</a>
 
 通过下列步骤在 SUSE Linux Enterprise Server 上安装 mssql-server-agent  。 
 

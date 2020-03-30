@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287281"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
@@ -75,7 +75,7 @@ FILESTREAM 数据必须存储在 FILESTREAM 文件组中。 FILESTREAM 文件组
 > [!NOTE]
 > SQL 登录名不能与 FILESTREAM 容器配合工作。 只有 NTFS 或 ReFS 身份验证可与 FILESTREAM 容器配合工作。
 
-## <a name="dual"></a> 使用 Transact-SQL 和文件系统流访问来访问 BLOB 数据
+## <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> 使用 Transact-SQL 和文件系统流访问来访问 BLOB 数据
 
 在将数据存储在 FILESTREAM 列中之后，即可通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 事务或 Win32 API 访问文件。  
   

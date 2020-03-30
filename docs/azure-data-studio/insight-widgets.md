@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957051"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的见解小组件管理服务器和数据库
+# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的见解小组件管理服务器和数据库
 
 见解小组件使用用于监视服务器和数据库的 Transact-SQL (T-SQL) 查询，并将其转化为富有见解力的可视化效果。
 

@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 36c2fd4974bb295516f90f7e8c80635dbcae48eb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 75e0ba15f12f86b92c679c373463c4684cf56878
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67927769"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486572"
 ---
 # <a name="ranking-functions-transact-sql"></a>排名函数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   排名函数为分区中的每一行返回一个排名值。 根据所用函数的不同，某些行可能与其他行接收到相同的值。 排名函数具有不确定性。  
   

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295859"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
@@ -43,7 +43,7 @@ ms.locfileid: "71295859"
     -   [导入](#issues-importing)的问题。
     -   [导出](#issues-exporting)的问题。
 
-## <a name="tools"></a> 可以使用的工具
+## <a name="tools-you-can-use"></a><a name="tools"></a> 可以使用的工具
 
 可使用以下某一工具通过 SSIS 从 Excel 导入数据或将数据导出到 Excel：
 
@@ -51,7 +51,7 @@ ms.locfileid: "71295859"
 
 -   内置于 SSIS 的“SQL Server 导入和导出向导”  。 有关详细信息，请参阅[使用 SQL Server 导入和导出向导导入和导出数据](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)和[连接到 Excel 数据源（SQL Server 导入和导出向导）](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。
 
-## <a name="files-you-need"></a>获取连接到 Excel 所需的文件
+## <a name="get-the-files-you-need-to-connect-to-excel"></a><a name="files-you-need"></a>获取连接到 Excel 所需的文件
 
 如果没有安装 Excel 的连接组件，首先需要下载这些组件，然后才能通过 SSIS 从 Excel 导出数据或将数据导入 Excel。 默认情况下，没有安装 Excel 的连接组件。
 
@@ -69,7 +69,7 @@ ms.locfileid: "71295859"
 
     如果安装 2016 可再发行组件遇到问题，请改为从此处安装 2010 可再发行组件：[Microsoft Access 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
 
-## <a name="specify-excel"></a> 指定 Excel 作为数据源
+## <a name="specify-excel-as-your-data-source"></a><a name="specify-excel"></a> 指定 Excel 作为数据源
 
 第一步需要指出希望连接到 Excel。
 
@@ -87,7 +87,7 @@ ms.locfileid: "71295859"
 
 如果在数据源列表中看不到 Excel，请确保运行的是 32 位向导。 Excel 连接组件通常是 32 位文件，在 64 位向导中不可见。
 
-## <a name="excel-file"></a>Excel 文件和文件路径
+## <a name="excel-file-and-file-path"></a><a name="excel-file"></a>Excel 文件和文件路径
 
 提供的第一条信息是 Excel 文件的路径和文件名称。 在 SSIS 包的“Excel 连接管理器编辑器”中提供此信息，或在导入和导出向导的“选择数据源”页或“选择目标”页中提供    。
 
@@ -102,7 +102,7 @@ ms.locfileid: "71295859"
 > [!IMPORTANT]
 > 无法连接到受密码保护的 Excel 文件。
 
-## <a name="excel-version"></a>Excel 版本
+## <a name="excel-version"></a><a name="excel-version"></a>Excel 版本
 
 提供的第二条消息是 Excel 文件版本。 在 SSIS 包的“Excel 连接管理器编辑器”中提供此信息，或在导入和导出向导的“选择数据源”页或“选择目标”页中提供    。
 
@@ -110,7 +110,7 @@ ms.locfileid: "71295859"
 
 如果只安装了旧版本的连接组件，则可能无法在此列表中选择新版本的 Excel。 “Excel 版本”列表包括 SSIS 支持的所有 Excel 版本  。 此列表中显示的项并不表示已安装必需的连接组件。 例如，即使没有安装 2016 连接组件，列表中仍会显示“Microsoft Excel 2016”  。
 
-## <a name="first-row"></a>首行包含列名称
+## <a name="first-row-has-column-names"></a><a name="first-row"></a>首行包含列名称
 
 如果要从 Excel 导入数据，则下一步是指示数据的首行是否包含列名称。 在 SSIS 包的“Excel 连接管理器编辑器”中提供此信息，或在导入和导出向导的“选择数据源”页中提供   。
 
@@ -120,7 +120,7 @@ ms.locfileid: "71295859"
 
 如果要从 Excel 导出数据，并且启用了此选项，则导出的数据的首行包括列名称。
 
-## <a name="sheets-ranges"></a>工作表和范围
+## <a name="worksheets-and-ranges"></a><a name="sheets-ranges"></a>工作表和范围
 
 以下有三种可用作数据的源或目标的 Excel 对象类型：工作表、已命名范围或用其地址指定的未命名单元格范围。
 
@@ -169,7 +169,7 @@ ms.locfileid: "71295859"
 
 -   通过选择“预览”预览示例数据以确认是否需要  。
 
-## <a name="issues-types"></a>数据类型的问题
+## <a name="issues-with-data-types"></a><a name="issues-types"></a>数据类型的问题
 
 ### <a name="data-types"></a>数据类型
 
@@ -202,7 +202,7 @@ SSIS 不隐式转换数据类型。 因此，在将其加载到非 Excel 目标�
 > [!TIP]
 > 如果使用的是导入和导出向导，并且数据需要一些转换，则向导会配置必要的转换。 因此，即使想使用 SSIS 包时，使用导入和导出向导创建初始包也十分有用。 使用该向导帮助你创建和配置连接管理器、源、转换和目标。
 
-## <a name="issues-importing"></a>导入的问题
+## <a name="issues-with-importing"></a><a name="issues-importing"></a>导入的问题
 
 ### <a name="empty-rows"></a>空行
 
@@ -232,7 +232,7 @@ Excel 驱动程序读取指定源中一定数量的行（默认情况下为八�
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## <a name="issues-exporting"></a>导出的问题
+## <a name="issues-with-exporting"></a><a name="issues-exporting"></a>导出的问题
 
 ### <a name="create-a-new-destination-file"></a>创建新的目标文件
 

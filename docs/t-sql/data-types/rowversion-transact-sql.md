@@ -27,10 +27,10 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77179278"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-然后，可以使用以下示例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在更新期间实现 `MyTest` 表的乐观并发控制。 脚本使用 `<myRv>` 来表示上次读取该行时的 rowversion 值  。 将该值替换为实际 rowversion 值  。 一个实际的 rowversion 值的示例是 `0x00000000000007D3`  。
+然后，可以使用以下示例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在更新期间实现 `MyTest` 表的乐观并发控制。 脚本使用 `<myRv>` 来表示上次读取该行时的 rowversion 值  。 将该值替换为实际 rowversion 值  。 一个实际的 rowversion 值的示例是  `0x00000000000007D3`。
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -101,7 +101,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 
 
-还可以将示例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句放在事务中。 通过在事务的作用域中查询 `@t` 变量，可以在不重新查询 `MyTest` 表的情况下检索表的更新后的 `myKey` 列。
+还可以将示例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句放在事务中。 通过在事务的作用域中查询 `@t` 变量，可以在不重新查询 `myKey` 表的情况下检索表的更新后的 `MyTest` 列。
 
 以下是使用 timestamp 语法的同一个示例  。 将 `<myTS>` 替换为实际的 timestamp  。
 

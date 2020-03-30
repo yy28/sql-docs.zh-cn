@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908938"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>删除具有活动租约的备份 Blob 文件
@@ -42,7 +42,7 @@ ms.locfileid: "72908938"
   
 1. **删除 Blob：** 要删除具有活动租约的 blob，必须首先中断租约。  
 
-###  <a name="Code_Example"></a> PowerShell 脚本示例  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> PowerShell 脚本示例  
   
 > [!IMPORTANT]
 > 如果您正在运行 PowerShell 2.0，可能遇到加载 Microsoft WindowsAzure.Storage.dll 程序集的问题。 我们建议升级 [Powershell](https://docs.microsoft.com/powershell/) 以解决该问题。 还可使用以下解决方法，以使用以下语句创建或修改 powershell.exe.config 文件以在运行时加载 .NET 2.0 和 .NET 4.0 程序集：  

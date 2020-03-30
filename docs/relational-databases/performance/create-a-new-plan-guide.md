@@ -15,10 +15,10 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946960"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
@@ -27,7 +27,7 @@ ms.locfileid: "67946960"
 
 计划指南将固定查询计划和/或查询提示应用于查询。
   
-##  <a name="Restrictions"></a> 限制和局限  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
 -   sp_create_plan_guide 的参数必须以显示的顺序提供。 为 **sp_create_plan_guide**的参数提供值时，必须显式指定所有的参数名称，或全部都不指定。 例如，如果指定了 **@name =** ，则也必须指定 **@stmt =** 、 **@type =** 等。 同样，如果省略了 **@name =** 并仅提供了参数值，则其余的参数名称也必须省略并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
   
 -   您可以为相同的查询和批处理或模块创建多个 OBJECT 或 SQL 计划指南。 但是，在任何给定的时间只能启用一个计划指南。  
@@ -36,10 +36,10 @@ ms.locfileid: "67946960"
   
 -   如果尝试删除或修改的函数、存储过程或 DML 触发器由某个计划指南引用，则不管该指南为启用状态还是禁用状态，都会导致错误。 尝试删除计划指南被引用并已为其定义触发器的表也将导致错误。  
 
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  若要创建类型为 OBJECT 的计划指南，需要拥有对被引用对象的 ALTER 权限。 若要创建类型为 SQL 或 TEMPLATE 的计划指南，需要拥有对当前数据库的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SSMS 创建计划指南  
+##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> 使用 SSMS 创建计划指南  
 1.  单击加号以便展开您要在其中创建计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
 2.  右键单击“计划指南”文件夹，然后选择“新建计划指南…”。**select_plan_guide**  ![](../../relational-databases/performance/media/select-plan-guide.png)
@@ -70,7 +70,7 @@ ms.locfileid: "67946960"
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-##  <a name="TsqlProcedure"></a> 使用 T-SQL 创建计划指南  
+##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> 使用 T-SQL 创建计划指南  
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  

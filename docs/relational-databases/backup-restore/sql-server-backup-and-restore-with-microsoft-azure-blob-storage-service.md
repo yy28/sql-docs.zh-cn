@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251134"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
@@ -35,7 +35,7 @@ ms.locfileid: "75251134"
   
 -   **让 SQL Server 管理向 Microsoft Azure 进行的备份：** 配置 SQL Server 以管理备份策略，并为一个数据库或多个数据库安排备份，或在实例级别设置默认值。 此功能被称为 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 。 有关详细信息，请参阅 [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更高版本中提供此功能。  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>将 Microsoft Azure Blob 服务用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>将 Microsoft Azure Blob 服务用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处  
   
 -   灵活、可靠、无限制的站点外存储：在 Microsoft Azure Blob 服务上存储备份是一种方便、灵活、易于访问的站点外备选方法。 为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份创建站点外存储就像修改您的现有脚本/作业一样简单。 站点外存储位置通常应远离生产数据库位置，以防止出现同时影响站点外和生产数据库位置的一个灾难。 通过选择地理复制 Blob 存储区，您在发生可能影响整个区域的灾难时多了一层额外的保护。 此外，备份副本随时随地可用，并可以轻松访问它们来执行还原。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75251134"
   
 -   成本优势：仅对使用的服务付费。 可以作为经济合算的站点外备份存档方案。 有关详细信息和链接，请参阅 [Microsoft Azure 计费注意事项](#Billing) 一节。  
   
-##  <a name="Billing"></a> Microsoft Azure 计费注意事项：  
+##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Microsoft Azure 计费注意事项：  
  了解 Microsoft Azure 存储成本使你能够预测在 Microsoft Azure 中创建和存储备份的成本。  
   
  [Microsoft Azure 价格计算器](https://go.microsoft.com/fwlink/?LinkId=277060) 可以帮助估算你的成本。  

@@ -17,10 +17,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906374"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
@@ -42,20 +42,20 @@ ms.locfileid: "72906374"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果表具有聚集索引，则将此聚集索引移动到新文件组的同时也会将表移动到该文件组。  
   
 -   不能通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]来移动使用 UNIQUE 或 PRIMARY KEY 约束创建的索引。 若要移动这些索引，请在 [中使用](../../t-sql/statements/create-index-transact-sql.md) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]语句以及 (DROP_EXISTING=ON) 选项。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>使用表设计器将现有索引移到其他文件组  
   
@@ -143,7 +143,7 @@ ms.locfileid: "72906374"
 > [!NOTE]  
 >  如果指定的值比可用 CPU 数大，则将使用实际的可用 CPU 数。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中  
   

@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112278"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
@@ -144,13 +144,13 @@ ms.locfileid: "79112278"
   两种版本的提供程序都有相同的 ID。 若要指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时是否使用可用的 64 位版本的提供程序，需要设置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 Run64BitRuntime 属性。 如果将 Run64BitRuntime 属性设置为 **true**，运行时将发现并使用该 64 位提供程序；如果 Run64BitRuntime 为 **false**，则运行时将发现并使用 32 位提供程序。 有关可以对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目进行设置的属性的详细信息，请参阅 [Integration Services (SSIS) 与 Studio 环境](https://msdn.microsoft.com/library/ms140028.aspx)。   
 
 ## <a name="add-a-connection-manager"></a>添加连接管理器
-###  <a name="wizard"></a> 创建包时添加连接管理器  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> 创建包时添加连接管理器  
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导  
   
      除了创建和配置连接管理器之外，该向导还有助于创建和配置使用该连接管理器的源和目标。 有关详细信息，请参阅 [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md)。  
   
-###  <a name="package"></a> 向现有包中添加连接管理器  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> 向现有包中添加连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "79112278"
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-###  <a name="project"></a> 在项目级别添加连接管理器  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> 在项目级别添加连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -243,14 +243,14 @@ ms.locfileid: "79112278"
  **添加**  
  使用与各连接类型相应的编辑器指定连接属性。  
    
-##  <a name="parameter"></a> 创建连接管理器属性的参数  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> 创建连接管理器属性的参数  
   
 1.  在“连接管理器”  区域中，右键单击要为其创建参数的连接管理器，然后单击“参数化”  。  
   
 2.  在 **“参数化”** 对话框中配置参数设置。 有关详细信息，请参阅 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)。  
 
 ## <a name="delete-a-connection-manager"></a>删除连接管理器 
-###  <a name="DeletePackageLevel"></a> 从包中删除连接管理器  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> 从包中删除连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -270,7 +270,7 @@ ms.locfileid: "79112278"
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-###  <a name="DeleteProjectLevel"></a> 删除共享连接管理器（项目级别连接管理器）  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> 删除共享连接管理器（项目级别连接管理器）  
   
 1.  若要删除项目级别的连接管理器，请在“解决方案资源管理器”  窗口的“连接管理器”  节点下，右键单击连接管理器，然后单击“删除”  。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 显示下面的警告消息：  
   

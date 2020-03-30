@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71682109"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
@@ -46,7 +46,7 @@ p（精度）
 >  Informatica 仅支持 16 位有效位数，无论指定精度和小数位数如何。  
   
 s（小数位数）   
-小数点右侧存储的十进制数字位数。 从 p 中减去此数字可确定小数点左边的最大位数  。 确定位数值必须介于 0 和 p  之间，只能在指定了精度的情况下指定此值。 默认的确定位数为 0；因此，0 <= s \<= p   。 最大存储大小基于精度而变化。
+小数点右侧存储的十进制数字位数。 从 p 中减去此数字可确定小数点左边的最大位数  。 确定位数值必须介于 0 和 p  之间，只能在指定了精度的情况下指定此值。 默认的确定位数为 0；因此，0 <= s  p\<=   。 最大存储大小基于精度而变化。
   
 |Precision|存储字节数|  
 |---|---|

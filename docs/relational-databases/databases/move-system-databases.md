@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68100464"
 ---
 # <a name="move-system-databases"></a>移动系统数据库
@@ -56,7 +56,7 @@ ms.locfileid: "68100464"
 >  移动文件之后， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服务帐户必须有权访问新文件的文件夹位置中的文件。
     
   
-##  <a name="Planned"></a> 预先安排的重定位与预定的磁盘维护过程  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 预先安排的重定位与预定的磁盘维护过程  
  若要将移动系统数据库数据或日志文件的操作作为预先安排的重定位或预定的维护操作的一部分，请按照下列步骤操作。 此过程适用于除 master 和 Resource 数据库以外的所有系统数据库。  
   
 1.  对于要移动的每个文件，请运行以下语句。  
@@ -93,7 +93,7 @@ ms.locfileid: "68100464"
   
 2.  通过发送测试邮件来验证数据库邮件是否正常运行。  
   
-##  <a name="Failure"></a> 故障恢复过程  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> 故障恢复过程  
  如果由于硬件故障而必须移动文件，则请按照下列步骤将文件重新定位到一个新位置。 此过程适用于除 master 和 Resource 数据库以外的所有系统数据库。  
   
 > [!IMPORTANT]  
@@ -141,7 +141,7 @@ ms.locfileid: "68100464"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> 移动 master 数据库  
+##  <a name="moving-the-master-database"></a><a name="master"></a> 移动 master 数据库  
  若要移动 master 数据库，请按下列步骤进行操作。  
   
 1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 **“Microsoft SQL Server”** 和 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
@@ -188,10 +188,10 @@ ms.locfileid: "68100464"
 10. 此时 SQL Server 应正常运行。 但是 Microsoft 建议还调整 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup` 处的注册表项，其中 instance_ID  类似于 `MSSQL13.MSSQLSERVER`。 在该配置单元中，将 `SQLDataRoot` 值更改为新路径。 未能更新注册表可能会导致修补和升级失败。
 
   
-##  <a name="Resource"></a> 移动 Resource 数据库  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a> 移动 Resource 数据库  
  Resource 数据库的位置是 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\。 无法移动该数据库。  
   
-##  <a name="Follow"></a> 后续操作：移动所有系统数据库后  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 后续操作：移动所有系统数据库后  
  如果已将所有系统数据库都移到新的驱动器/卷或移到使用不同驱动器盘符的另一个服务器，请进行下列更新。  
   
 -   更改 SQL Server 代理日志路径。 如果不更新此路径，SQL Server 代理将无法启动。  
@@ -216,7 +216,7 @@ ms.locfileid: "68100464"
   
 4.  先停止然后启动 SQL Server 服务以完成更改。  
   
-##  <a name="Examples"></a> 示例  
+##  <a name="examples"></a><a name="Examples"></a> 示例  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. 移动 tempdb 数据库  
  作为预先安排的重定位的一部分，下面的示例将 `tempdb` 数据和日志文件移动到一个新位置。  

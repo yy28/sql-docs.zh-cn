@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112255"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
@@ -84,7 +84,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-指定可作为请求分类依据的会话上下文值。  上下文是类型为 nvarchar(255) 的可选参数。  在提交设置会话上下文的请求之前，请使用变量名称为 `wlm_context` 的 [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)。
+指定可作为请求分类依据的会话上下文值。  上下文是类型为 nvarchar(255) 的可选参数。  在提交设置会话上下文的请求之前，请使用变量名称为 [ 的 ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)sys.sp_set_session_context`wlm_context`。
 
 示例：
 

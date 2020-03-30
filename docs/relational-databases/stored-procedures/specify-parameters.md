@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70110273"
 ---
 # <a name="specify-parameters"></a>指定参数
@@ -61,7 +61,7 @@ GO
 ## <a name="specifying-parameter-names"></a>指定参数名称  
  创建过程并声明参数名时，参数名必须以一个 \@ 字符开头，并且必须在过程范围内是唯一的。  
   
- 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 my_proc  需要使用三个参数，分别名为 \@first  、\@second  和 \@third  ，可以将传递到此过程的值赋给参数名，如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 my_proc  需要使用三个参数，分别名为 **first\@** 、**second\@** 和 **third\@** ，可以将传递到此过程的值赋给参数名，如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
 >  如果以 **\@parameter =** _value_ 格式提供参数值，必须按此格式提供所有后续参数。 如果未按格式 **\@parameter =** _value_ 传递参数值，必须按 CREATE PROCEDURE 语句中所列参数顺序（从左到右）提供值。  
@@ -168,10 +168,10 @@ GO
   
 ```  
   
- 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 输出参数 \@cost  和 \@compareprices  用于控制流语言，以便在“消息”  窗口中返回消息。  
+ 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 输出参数 **cost\@** 和 **compareprices\@** 用于控制流语言，以便在“消息”  窗口中返回消息。  
   
 > [!NOTE]  
->  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 不过，数据类型和参数定位必须匹配（除非使用的是 \@listprice= _variable_）  。  
+>  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 不过，数据类型和参数定位必须匹配（除非使用的是 **listprice= \@variable**）  。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

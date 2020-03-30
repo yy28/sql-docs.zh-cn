@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73531564"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
@@ -33,7 +33,7 @@ ms.locfileid: "73531564"
   
 3.  [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)。 在数据库引擎升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 并且数据库处于联机状态后，还需要完成一些步骤，包括制作新备份、升级数据库功能以启用新功能以及重新填充全文目录。 本文讨论了这些步骤。  
   
-4.  升级[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)（适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  ）。 当你的数据库在新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中处于联机状态后，要执行的一个步骤可能是，通过更改数据库兼容性级别来升级数据库功能模式以启用新功能。 这可以手动完成，也可以通过查询优化助手完成。 
+4.  升级[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)（适用于：**和**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。 当你的数据库在新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中处于联机状态后，要执行的一个步骤可能是，通过更改数据库兼容性级别来升级数据库功能模式以启用新功能。 这可以手动完成，也可以通过查询优化助手完成。 
 
     - [更改数据库兼容性模式和使用查询存储](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 手动更改数据库兼容性级别后，使用查询存储来监视性能并识别可能的回归。 本文讨论建议的过程，并提供建议的工作流。  
 

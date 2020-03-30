@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ce6bea9e9f99cd5db4559c6f4b1d966e809f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123712"
 ---
 # <a name="create-tables-database-engine"></a>创建表（数据库引擎）
@@ -27,7 +27,7 @@ ms.locfileid: "68123712"
   
 
   
-##  <a name="Permissions"></a> 首先检查你的权限！  
+##  <a name="check-your-permissions-first"></a><a name="Permissions"></a> 首先检查你的权限！  
 此任务需要在数据库中具有 CREATE TABLE 权限，对在其中创建表的架构具有 ALTER 权限。  
   
  如果 CREATE TABLE 语句中的任何列被定义为 CLR 用户定义类型，则需要具有对此类型的所有权或 REFERENCES 权限。  
@@ -69,7 +69,7 @@ ms.locfileid: "68123712"
   
 11. 若要查看这个新表，请在 **“对象资源管理器”** 中展开 **“表”** 节点，然后按 **F5** 刷新对象列表。 该新表将显示在表列表中。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ## <a name="using-query-editor"></a>使用查询编辑器  
   

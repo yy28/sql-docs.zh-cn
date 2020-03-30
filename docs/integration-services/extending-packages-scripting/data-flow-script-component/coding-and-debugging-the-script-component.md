@@ -22,10 +22,10 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286544"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
@@ -38,7 +38,7 @@ ms.locfileid: "71286544"
 ## <a name="writing-the-script-in-code-design-mode"></a>在代码设计模式下编写脚本  
   
 ### <a name="script-component-development-environment"></a>脚本组件开发环境  
- 要编写脚本，请在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE    。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和对象浏览器。  
+ 要编写脚本，请在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开  Tools for Applications (VSTA) IDE   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和对象浏览器。  
   
  脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本转换编辑器”中设置 ScriptLanguage 属性可指定脚本语言   。 如果您倾向于使用其他编程语言，则可以用您选择的语言开发自定义程序集，然后通过脚本组件中的代码调用其功能。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "71286544"
   
 -   ComponentWrapper 项目项包含三个类  ：  
   
-    -   UserComponent 类，继承自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>，包含你将用于处理数据和与包进行交互的方法和属性  。 ScriptMain 类继承自 UserComponent 类   。  
+    -   UserComponent 类，继承自 **，包含你将用于处理数据和与包进行交互的方法和属性**<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>。 ScriptMain 类继承自 UserComponent 类   。  
   
     -   Connections 集合类，包含对在“脚本转换编辑器”的“连接管理器”页上选择的连接的引用  。  
   
     -   Variables 集合类，包含对一些变量的引用，这些变量是在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariable 和 ReadWriteVariables 属性中输入的      。  
   
--   BufferWrapper 项目项，包含从每个输入和输出的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 继承的类，这些输入和输出是在“脚本转换编辑器”的“输入和输出”页上配置的    。 其中每个类都包含与已配置的输入和输出列对应的类型化取值函数属性以及包含这些列的数据流缓冲区。  
+-   BufferWrapper 项目项，包含从每个输入和输出的  **继承的类，这些输入和输出是在“脚本转换编辑器”的“输入和输出”页上配置的**<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>   。 其中每个类都包含与已配置的输入和输出列对应的类型化取值函数属性以及包含这些列的数据流缓冲区。  
   
  有关如何使用这些对象、方法和属性的信息，请参阅[了解脚本组件对象模型](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)。 有关如何在特定类型的脚本组件中使用这些类的方法和属性的信息，请参阅[其他脚本组件示例](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)一节。 该示例主题还包含完整的代码示例。  
   
@@ -174,7 +174,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |变量|使用 ComponentWrapper 项目项的 Variables 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Variables 属性公开     。<br /><br /> **PreExecute** 方法仅可访问只读变量。 **PostExecute** 方法既可访问只读变量，又可访问读/写变量。|  
 |连接|使用 ComponentWrapper 项目项的 Connections 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Connections 属性公开     。|  
-|事件|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口的 Fire\<X> 方法引发事件   。|  
+|事件|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性和  **接口的 Fire**X> 方法引发事件 **\<** <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>。|  
 |日志记录|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法执行日志记录  。|  
   
 ## <a name="debugging-the-script-component"></a>调试脚本组件  
@@ -190,7 +190,7 @@ public class ScriptMain : UserComponent
   
 -   使用 System.Windows.Forms 命名空间的 MessageBox.Show 方法中断执行并显示模式消息   。 （调试过程结束后，请删除此代码。）  
   
--   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明  。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息  。 FireProgress 事件的消息显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“进度”选项卡中  。 有关详细信息，请参阅[在脚本组件中引发事件](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)。  
+-   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明  。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息  。 FireProgress 事件的消息显示在  **设计器的“进度”选项卡中**[!INCLUDE[ssIS](../../../includes/ssis-md.md)]。 有关详细信息，请参阅[在脚本组件中引发事件](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)。  
   
 -   将事件或用户定义的消息记录到已启用的日志记录提供程序中。 有关详细信息，请参阅[脚本组件中的日志记录](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)。  
   
