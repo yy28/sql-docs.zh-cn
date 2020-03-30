@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593875"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73593875"
   
 -   [修改 ConfigurationInfo 表（本机模式）](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> 为 SharePoint 模式启用远程错误  
+##  <a name="enable-remote-errors-for-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 为 SharePoint 模式启用远程错误  
  可以通过两个不同的过程为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式启用远程错误。 对于两个不同的报表服务器体系结构，过程是不同的。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中引入的基于较新的 SharePoint 服务的体系结构利用可为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序配置的设置。 较旧的体系结构利用单一站点级别的设置。  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>为 Reporting Services 服务应用程序启用远程错误  
@@ -60,7 +60,7 @@ ms.locfileid: "73593875"
   
 5.  单击 **“确定”**  
   
-##  <a name="bkmk_mgtStudio"></a> 通过 SQL Server Management Studio 启用远程错误（本机模式）  
+##  <a name="enable-remote-errors-through-sql-server-management-studio-native-mode"></a><a name="bkmk_mgtStudio"></a> 通过 SQL Server Management Studio 启用远程错误（本机模式）  
   
 1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅[连接到 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73593875"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> 通过脚本启用远程错误（本机模式）  
+##  <a name="enable-remote-errors-through-script-native-mode"></a><a name="bkmk_script"></a> 通过脚本启用远程错误（本机模式）  
   
 1.  创建文本文件并将以下脚本复制到该文件中。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "73593875"
   
 6.  有关详细信息，请参阅 [RS.exe 实用工具 (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
-##  <a name="bkmk_ConfigurationInfo"></a> 修改 ConfigurationInfo 表（本机模式）  
+##  <a name="modifying-the-configurationinfo-table-native-mode"></a><a name="bkmk_ConfigurationInfo"></a> 修改 ConfigurationInfo 表（本机模式）  
   
 > [!NOTE]  
 >  您可以通过编辑报表服务器数据库中的 **ConfigurationInfo** 表将 **EnableRemoteErrors** 设置为 **True**，但是如果报表服务器正在使用中，则应使用 SQL Server Management Studio 或脚本来修改此设置。 如果修改了数据库中的设置，则需要重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，然后更改才会生效。  

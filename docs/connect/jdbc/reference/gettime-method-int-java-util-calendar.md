@@ -16,10 +16,10 @@ ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979107"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>getTime 方法 (int, java.util.Calendar)
@@ -36,11 +36,11 @@ public java.sql.Time getTime(int index,
 ```  
   
 #### <a name="parameters"></a>parameters  
- 索引  
+ 索引   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
- cal  
+ cal   
   
  Calendar 对象。  
   

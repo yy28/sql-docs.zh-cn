@@ -15,10 +15,10 @@ ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ae494ae5b12cf99e836869f65c055803dd9666e6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025257"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "68025257"
 > [!NOTE]  
 >  若要在停止会话后继续镜像，必须建立新的数据库镜像会话。 如果在停止镜像后创建日志备份，必须在重新启动镜像之前将该日志备份应用到镜像数据库中。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **删除数据库镜像**  
   
 -   [删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  

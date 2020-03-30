@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9130fd4fae0660008ede059418179b1bb9777a9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990836"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修复失败的 SQL Server 安装
@@ -49,7 +49,7 @@ ms.locfileid: "67990836"
   
 - 若要在“准备”操作失败之后修复故障转移群集节点，请使用 **“删除节点”** ，然后再次执行“准备”步骤。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 
   
-## <a name="repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>从安装中心修复失败的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装 
+## <a name="repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>从安装中心修复失败的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装 
   
 1. 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质中启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序 (setup.exe)。 
   
@@ -70,7 +70,7 @@ ms.locfileid: "67990836"
   
 8. “修复进度”页显示修复操作的状态。 “完成”页指示修复操作已完成。 
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>使用命令提示符修复失败的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>使用命令提示符修复失败的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
   
 1. 在命令提示符下运行以下命令：  
   

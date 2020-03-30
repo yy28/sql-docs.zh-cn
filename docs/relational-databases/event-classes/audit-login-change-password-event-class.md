@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 434c98eebc7c4651e194f698c7d748f858b55b50
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897590"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  只要用户更改了其 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录密码，就会发生 Audit Login Change Password 事件类  。  
+  只要用户更改了其   登录密码，就会发生 Audit Login Change Password 事件类[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="audit-login-change-password-event-class-data-columns"></a>Audit Login Change Password 事件类的数据列  
   

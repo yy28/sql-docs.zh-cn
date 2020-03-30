@@ -15,10 +15,10 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012894"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>为数据库引擎访问配置 Windows 防火墙
@@ -55,10 +55,10 @@ ms.locfileid: "68012894"
   
 ## <a name="before-you-begin"></a>开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  打开防火墙的端口可能会使服务器受到恶意攻击。 请确保在打开端口之前了解防火墙系统。 有关详细信息，请参阅 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
  适用于 Windows Vista、Windows 7 和 Windows Server 2008  
   
  以下过程通过使用具有高级安全 Microsoft 管理控制台 (MMC) 管理单元的 Windows 防火墙来配置该 Windows 防火墙。 高级安全 Windows 防火墙仅配置当前配置文件。 有关高级安全 Windows 防火墙的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  

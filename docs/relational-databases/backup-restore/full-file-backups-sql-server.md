@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939614"
 ---
 # <a name="full-file-backups-sql-server"></a>完整文件备份 (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "67939614"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 文件备份的优点  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> 文件备份的优点  
  相对于数据库备份，文件备份具有如下优点：  
   
 -   使用文件备份使您能够只还原损坏的文件，而不用还原数据库的其余部分，从而加快了恢复速度。  
@@ -58,13 +58,13 @@ ms.locfileid: "67939614"
   
 -   与完整数据库备份（对于超大型数据库而言，变得难以管理）相比，文件备份增加了计划和介质处理的灵活性。 文件或文件组备份的更高灵活性对于包含具有不同更新特征的数据的大型数据库也很有用。  
   
-##  <a name="Disadvantages"></a> 文件备份的缺点  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> 文件备份的缺点  
   
 -   与完整数据库备份相比，文件备份的主要缺点是管理较复杂。 维护和跟踪这些完整备份是一种耗时的任务，所需空间可能会超过完整数据库备份的所需空间。  
   
 -   如果某个损坏的文件未备份，那么介质故障可能会导致无法恢复整个数据库。 因此，必须维护一组完整的文件备份，对于完整/大容量日志恢复模式，还必须维护一个或多个日志备份，这些日志备份至少涵盖第一个完整文件备份和最后一个完整备份之间的时间间隔。  
   
-##  <a name="Overview"></a> 文件备份概述  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> 文件备份概述  
  完整文件备份指备份一个或多个文件或文件组中的所有数据。 文件备份在默认情况下包含足够的日志记录，可以将文件前滚至备份操作的末尾。  
   
  备份只读文件或文件组的方法对每种恢复模式均相同。 在完整恢复模式下，一整套完整文件备份与跨所有文件备份的足够日志备份合起来等同于完整数据库备份。  
@@ -87,7 +87,7 @@ ms.locfileid: "67939614"
 > [!NOTE]  
 >  在完整恢复模式下，必须在还原读/写文件备份时前滚事务日志，以确保该文件与数据库的其余部分保持一致。 若要避免前滚大量事务日志备份，请考虑使用差异文件备份。 有关详细信息，请参阅 [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **创建文件或文件组备份**  
   
 -   [备份文件和文件组 (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "67939614"
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [备份和还原：互操作性和共存 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [备份和还原：互操作性和共存 (SQL Server)](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [文件还原（简单恢复模式）](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [文件还原（完整恢复模式）](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   

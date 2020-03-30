@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581131"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>修改 Reporting Services 配置文件 (RSreportserver.config)
@@ -33,7 +33,7 @@ ms.locfileid: "65581131"
   
 -   [编辑 Reporting Services 配置文件](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> 读取和使用配置值  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> 读取和使用配置值  
  当启动服务时或保存配置文件时，报表服务器会读取配置文件。 在当前的应用程序域过期之后，新值和修订后的值会在新应用程序域中生效。 如有可能，仍在当前应用程序域中处理的请求将能够完成。 但是，有几个设置要求立即执行应用程序域回收操作。 在这种情况下，所有正在进行的请求都将在新的应用程序域中重新启动。  
   
  如果报表服务器检测到无效值，则报表服务器会在 Windows 应用程序日志中记录一个错误，报表服务器将无法启动或者将使用默认值，具体取决于错误的类型：  
@@ -44,13 +44,13 @@ ms.locfileid: "65581131"
   
  所有的配置文件更改（包括成功的更改）都将记录在报表服务器的跟踪日志文件中。 仅将错误记录到应用程序事件日志中。  
   
-##  <a name="bkmk_default_values"></a> 关于默认值  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> 关于默认值  
  大多数配置设置都具有在报表服务器内部指定的默认值。 如果用户定义的值无效或者未指定，报表服务器将使用这些默认值。 如果由于配置设置无效而必须使用默认值，则错误将写入跟踪日志文件中。  
   
-##  <a name="bkmk_delete_config_settings"></a> 删除配置设置  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> 删除配置设置  
  对于具有默认值的配置设置，从配置文件中删除该设置将没有任何效果。 大多数配置设置实际上都是在内部定义和配置的。 如果从配置文件中删除项目，则内部副本仍将可用并使用为其定义的默认值。  
   
-##  <a name="bkmk_edit_configuation_file"></a> 编辑 Reporting Services 配置文件  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> 编辑 Reporting Services 配置文件  
   
 1.  查找要编辑的配置文件：  
   

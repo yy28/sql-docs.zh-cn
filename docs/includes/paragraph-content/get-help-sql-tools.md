@@ -5,13 +5,13 @@ ms.prod: sql
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 991261683a84b3afc200308bd82d8fce8e95e96d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68161803"
 ---
-## <a name="info_tipmediainfo-tippng-get-help-for-sql-tools"></a>![info_tip](../media/info-tip.png) 获取 SQL 工具的帮助
+## <a name="info_tip-get-help-for-sql-tools"></a>![info_tip](../media/info-tip.png) 获取 SQL 工具的帮助
 
 - [提交 Azure Data Studio Git 问题](https://github.com/Microsoft/azuredatastudio/issues)
 - [参与 Azure Data Studio](https://github.com/Microsoft/azuredatastudio)

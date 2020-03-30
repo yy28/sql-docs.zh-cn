@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574349"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
@@ -77,7 +77,7 @@ ms.locfileid: "65574349"
   
 ### <a name="verify-execution-account-and-database-authentication"></a>验证执行帐户和数据库身份验证
 
- **执行帐户**：验证你的服务应用程序是否正在使用执行帐户：  
+ **执行帐户** ：验证您的服务应用程序是否正在使用执行帐户：  
   
 1.  在 SharePoint 管理中心的“应用程序管理”  组中，选择“管理服务应用程序”  。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65574349"
   
 4.  如果配置了执行帐户，则当需要还原服务应用程序备份时，您需要知道凭据。 在知道正确的凭据之前，请不要继续执行备份和还原过程。  
   
- **数据库身份验证**：验证你的服务应用程序是否正在使用 Windows 身份验证来进行数据库身份验证：  
+ **数据库身份验证** ：验证您的服务应用程序是否正在使用 Windows 身份验证来进行数据库身份验证：  
   
 1.  在 SharePoint 管理中心的“应用程序管理”  组中，选择“管理服务应用程序”  。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "65574349"
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>配置执行帐户和数据库身份验证
 
- **执行帐户**：如果你的服务应用程序正在使用执行账户，请完成下列步骤对它进行配置：  
+ **执行帐户** ：如果您的服务应用程序正在使用执行帐户，请完成一些步骤对它进行配置：  
   
 1.  在 SharePoint 管理中心的“应用程序管理”  组中，选择“管理服务应用程序”  。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "65574349"
   
 5.  选择“确定”  。  
   
- **数据库身份验证**：如果你的服务应用程序正在使用 Windows 身份验证来进行数据库身份验证，请完成以下步骤：  
+ **数据库身份验证** ：如果您的服务应用程序正在使用 Windows 身份验证来进行数据库身份验证，请完成以下步骤：  
   
 1.  在 SharePoint 管理中心的“应用程序管理”  组中，选择“管理服务应用程序”  。  
   

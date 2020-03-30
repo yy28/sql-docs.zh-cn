@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573657"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>在 Analysis Services 的 MDX 查询设计器中定义参数
@@ -29,7 +29,7 @@ ms.locfileid: "65573657"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>在设计模式下的 MDX 中定义查询参数  
   
-1.  在“报表数据”窗格中，右键单击从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源类型创建的数据集，然后单击“查询”。 此时将在设计模式下打开 MDX 查询设计器。  
+1.  在“报表数据”窗格中，右键单击从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源类型创建的数据集，然后单击“查询”  。 此时将在设计模式下打开 MDX 查询设计器。  
   
 2.  将维度拖至筛选区域，然后将其放入 **“维度”** 列的第一个单元格中。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65573657"
   
 6.  在 **“参数”** 列中，选择复选框以创建报表参数。  
   
-7.  单击 **“运行”**。  
+7.  单击 **“运行”** 。  
   
      运行查询后，单击工具栏中的 **“设计”** 可以切换到查询模式来查看所创建的 MDX 查询。 若要继续使用设计模式开发查询，请不要在查询模式下更改查询文本。 单击 **“设计”** 可以切换回设计模式。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "65573657"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>在查询模式下的 MDX 中定义查询参数  
   
-1.  在“报表数据”窗格中，右键单击从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源类型创建的数据集，然后单击“查询”。 此时将在设计模式下打开 MDX 查询设计器。  
+1.  在“报表数据”窗格中，右键单击从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源类型创建的数据集，然后单击“查询”  。 此时将在设计模式下打开 MDX 查询设计器。  
   
 2.  在工具栏上单击 **“设计”** 以切换到查询模式。  
   
-3.  在 MDX 查询设计器工具栏上，单击“查询参数”（![“查询参数”对话框图标](../../reporting-services/report-data/media/iconqueryparameter.gif "“查询参数”对话框图标")）。 此时将打开“查询参数”对话框。  
+3.  在 MDX 查询设计器工具栏上，单击“查询参数”  （![“查询参数”对话框图标](../../reporting-services/report-data/media/iconqueryparameter.gif "“查询参数”对话框图标")）。 此时将打开“查询参数”对话框。  
   
-4.  在“参数”列中，单击“\<输入参数>”，然后键入参数的名称。  
+4.  在“参数”列中，单击“**输入参数>”，然后键入参数的名称** **\<** 。  
   
 5.  在“ **维度** ”列中，从下拉列表中选择一个值。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "65573657"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-10. 在查询设计器工具栏中，单击 **“运行”**。  
+10. 在查询设计器工具栏中，单击 **“运行”** 。  
   
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

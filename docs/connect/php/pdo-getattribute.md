@@ -11,10 +11,10 @@ ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c25e68d0e03442cc8cb493aea91c9ae09b175def
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916380"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
@@ -41,7 +41,7 @@ mixed PDO::getAttribute ( $attribute )
 |Attribute|由以下值处理|支持的值|说明|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|指定列名称是否应使用特定格式。 PDO::CASE_LOWER 强制使用小写列名称，PDO::CASE_NATURAL 保留数据库返回的列名称，而PDO::CASE_UPPER 强制使用大写列名称。<br /><br />默认值为 PDO::CASE_NATURAL。<br /><br />还可以使用 PDO::setAttribute 设置此属性。|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|字符串数组|介绍驱动程序和相关库的版本。 返回带有以下元素的数组：ODBC 版本 (*MajorVer*.*MinorVer*)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL 名称和版本、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|字符串数组|介绍驱动程序和相关库的版本。 返回带有以下元素的数组：ODBC 版本 (MajorVer.MinorVer)、 *Native Client DLL 名称和版本、* 版本 (MajorVer.MinorVer.BuildNumber.Revision)  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]    |  
 |PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|如果未设置为 PDO::PARAM_STR_CHAR，则返回 PDO::PARAM_STR_NATL。|
 |PDO::ATTR_DRIVER_NAME|PDO|String|始终返回“sqlsrv”。|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|指示 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 (MajorVer.MinorVer.BuildNumber.Revision)    |  

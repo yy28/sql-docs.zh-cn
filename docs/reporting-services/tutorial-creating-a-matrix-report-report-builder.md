@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63294676"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表（报表生成器）
@@ -27,7 +27,7 @@ ms.locfileid: "63294676"
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅 [教程先决条件](../reporting-services/prerequisites-for-tutorials-report-builder.md)。 
   
-## <a name="CreateMatrix"></a>1.使用新的表或矩阵向导创建矩阵报表和数据集  
+## <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1.使用新的表或矩阵向导创建矩阵报表和数据集  
 在本部分中，选择共享数据源，创建嵌入数据集，并在矩阵报表中显示数据。  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ ms.locfileid: "63294676"
 
 11. 单击“下一步”。   
   
-## <a name="Groups"></a>2.使用新的表或矩阵向导组织数据并选择布局  
+## <a name="2-organize-data-and-choose-layout-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2.使用新的表或矩阵向导组织数据并选择布局  
 使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成矩阵设计之前展现对数据进行分组的结果。  
   
 1.  在“排列字段”  页上，将 Territory 从“可用字段”  拖到“行组”  中。  
@@ -145,7 +145,7 @@ ms.locfileid: "63294676"
 
 ![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
   
-## <a name="FormatData"></a>3.设置数据格式  
+## <a name="3-format-data"></a><a name="FormatData"></a>3.设置数据格式  
 默认情况下，Sales 字段的汇总数据显示一般数字，而 SalesDate 字段则显示日期和时间信息。 在本节中，设置 Sales 字段格式以便将数字显示为货币，并且设置 SalesDate 字段格式以便只显示日期。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值  。  
   
 ### <a name="to-format-fields"></a>设置字段格式  
@@ -170,7 +170,7 @@ ms.locfileid: "63294676"
   
 日期值仅显示日期，销售值显示为货币。  
   
-## <a name="AdjacentGroup"></a>4.添加相邻列组  
+## <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4.添加相邻列组  
 可以在父子关系中嵌套行组和列组，或者在同级关系中保持它们相邻。  
   
 在本节中，添加与 Subcategory 列组相邻的列组，复制单元以便填充这个新的列组，然后使用表达式创建该列组标题的值。  
@@ -216,7 +216,7 @@ ms.locfileid: "63294676"
 > [!NOTE]  
 > 如果数据包括了其他天，则报表也将包括这些天的相应列。 每个列都具有列标题 **Sales**以及按地区统计的销售总额。  
   
-## <a name="Width"></a>5.更改列宽  
+## <a name="5-change-column-widths"></a><a name="Width"></a>5.更改列宽  
 包括矩阵的报表填充以水平方式展开，并且在运行时以垂直方式展开。 如果您计划将数据导出到用于打印报表的格式（例如 Microsoft Word 或 Adobe PDF），则控制水平展开将特别重要。 如果报表跨多页水平展开，则打印报表将很难理解。 为了尽量缩小水平展开，您可以将列的大小调整为宽度仅供无需换行就可以显示数据。 您还可以重命名列，以便其标题适合显示数据所需的宽度。  
   
 ### <a name="to-rename-and-resize-the-columns"></a>重命名列和调整列的大小  
@@ -245,7 +245,7 @@ ms.locfileid: "63294676"
   
 包含数量的列现在变窄，并且命名为 QTY。  
   
-## <a name="MergeCells"></a>6.合并矩阵单元  
+## <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6.合并矩阵单元  
 角区域是矩阵的左上角。 根据矩阵中行组和列组的数目，角区域中单元的数目将有所不同。 在本教程中内置的矩阵在其角区域中具有四个单元。 单元按两行和两列排列，反映行和列组层次结构的深度。 这四个单元并不用于此报表，并且您要将它们合并为一个单元。  
   
 ### <a name="to-merge-matrix-cells"></a>合并矩阵单元  
@@ -268,7 +268,7 @@ ms.locfileid: "63294676"
   
 不再显示矩阵左上角的单元格。 
   
-## <a name="HeaderTitle"></a>7.添加报表表头和报表标题  
+## <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7.添加报表表头和报表标题  
 报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本教程中，您将删除报表顶部的文本框，并向表头中添加主题。  
   
 ### <a name="to-add-a-report-header-and-report-title"></a>添加报表表头和报表标题  
@@ -293,7 +293,7 @@ ms.locfileid: "63294676"
   
 报表在表头中包含一个报表标题。  
   
-## <a name="Save"></a>8.保存报表  
+## <a name="8-save-the-report"></a><a name="Save"></a>8.保存报表  
 您可以将报表保存到报表服务器、SharePoint 库或本地计算机。  
   
 在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  
@@ -324,7 +324,7 @@ ms.locfileid: "63294676"
   
 4.  单击“保存”  。  
   
-## <a name="RotateTextBox"></a>9.（可选）将文本框旋转 270 度  
+## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9.（可选）将文本框旋转 270 度  
 具有矩阵的报表在运行时可以垂直方式和水平方式展开。 通过垂直旋转文本框或者旋转 270 度，您可以节约水平空间。 呈现的报表然后将更窄，并且如果导出到 Microsoft Word 之类的格式，报表将更有可能适合打印页面。  
   
 文本框还可以将文本显示为竖排（从上到下）。 有关详细信息，请参阅[文本框（报表生成器和 SSRS）](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)。  
