@@ -18,10 +18,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a36d403867699a02adfec0d04c9db4efa803514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281884"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何创建 ETL 包
@@ -41,7 +41,7 @@ ms.locfileid: "71281884"
 ## <a name="what-you-learn"></a>学习内容  
 熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新工具、控件和功能的最好方法，就是使用它们。 本教程将指导使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器创建一个简单的 ETL 包，其中包含循环、配置、错误流逻辑和日志记录。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 本教程适用于熟悉基本数据库操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新功能认识有限的用户。  
 
 若要运行本教程，必须安装下列组件：  

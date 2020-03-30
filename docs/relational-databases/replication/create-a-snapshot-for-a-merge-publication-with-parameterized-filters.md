@@ -16,10 +16,10 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321815"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>为包含参数化筛选器的合并发布创建快照
@@ -52,13 +52,13 @@ ms.locfileid: "75321815"
  快照代理为每个分区创建快照。 对于预生成的快照和订阅服务器请求的快照，代理使用在创建发布的快照代理作业时（该作业通过新建发布向导或 **sp_addpublication_snapshot**创建）指定的凭据运行和进行连接。 若要更改凭据，请使用 **sp_changedynamicsnapshot_job**。 有关详细信息，请参阅 [sp_changedynamicsnapshot_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)。  
 
   
-##  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   在使用参数化筛选器为合并发布生成快照时，必须先生成一个包含所有已发布数据和订阅的订阅服务器元数据的标准（架构）快照。 有关详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。 创建完架构快照后，便可生成包含特定于订阅服务器的已发布数据分区的快照。  
   
 -   如果发布中对一个或多个项目的筛选生成了对每个订阅具有唯一性的非重叠分区，则每当运行合并代理时都会清除元数据。 这意味着分区快照会过期得更快。 使用此选项时，应考虑允许订阅服务器启动快照的生成和传递。 
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在“发布属性 - \<发布>”对话框的“数据分区”页上为分区生成快照。   有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 可以允许订阅服务器启动快照生成及传送和/或生成快照。  
   
  生成一个或多个分区的快照之前，必须：  
@@ -103,7 +103,7 @@ ms.locfileid: "75321815"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  使用存储过程和快照代理，您可以执行以下操作：  
   
 -   允许订阅服务器在第一次同步时请求快照生成和应用。  
@@ -200,7 +200,7 @@ ms.locfileid: "75321815"
 > [!NOTE]  
 >  有关复制代理编程的详细信息，请参阅[复制代理可执行文件概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例使用参数化筛选器创建合并发布，其中由订阅服务器启动快照生成过程。 \@job_login 和 \@job_password 的值通过脚本变量进行传递   。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_1.sql)]  
@@ -272,7 +272,7 @@ PAUSE
   
 ```  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  可以使用复制管理对象 (RMO) 通过以下方法以编程的方式生成分区快照：  
   
 -   允许订阅服务器在第一次同步时请求快照生成和应用。  
@@ -401,7 +401,7 @@ PAUSE
   
 8.  为每个订阅服务器重复步骤 4-7。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  此示例创建一个允许订阅服务器请求快照生成的合并发布。  
   
  [!code-cs[HowTo#rmo_CreateMergePub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepub)]  

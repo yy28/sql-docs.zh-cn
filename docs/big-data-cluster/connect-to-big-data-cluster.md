@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285981"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>使用 Azure Data Studio 连接到 SQL Server 大数据群集
@@ -30,7 +30,7 @@ ms.locfileid: "79285981"
    - **kubectl**
    - **azdata**
 
-## <a id="master"></a> 连接到群集
+## <a name="connect-to-the-cluster"></a><a id="master"></a> 连接到群集
 
 若要使用 Azure Data Studio 连接到大数据群集，请与群集中的 SQL Server 主实例建立新的连接。 以下是操作方法。
 

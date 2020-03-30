@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 42250d8edbd646f9bd89f3663f2591b3404fe05f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68007938"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包
@@ -24,7 +24,7 @@ ms.locfileid: "68007938"
 
 本教程演示如何将 SQL Server Integration Services (SSIS) 项目部署到 Azure SQL 数据库中的 SSIS 目录、在 Azure-SSIS Integration Runtime 中运行包，以及监视正在运行的包。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 开始之前，请确保有 SQL Server Management Studio 版本 17.2 或更高版本。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
