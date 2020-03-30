@@ -16,10 +16,10 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244984"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>使用 SQL Server Management 中的“可用性组向导”将副本添加到 AlwaysOn 可用性组
@@ -29,10 +29,10 @@ ms.locfileid: "75244984"
 > [!NOTE]  
 >  有关使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 将辅助副本添加到可用性组的详细信息，请参阅 [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
     
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  如果你从未向可用性组添加过任何可用性副本，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的“服务器实例”与“可用性组和副本”部分。  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
@@ -56,12 +56,12 @@ ms.locfileid: "75244984"
   
      如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
    
-## <a name="Permissions"></a> 权限  
+## <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
  如果要允许“将副本添加到可用性组向导”管理数据库镜像端点，还需要 CONTROL ON ENDPOINT 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用“将副本添加到可用性组向导”(SQL Server Management Studio)  
+##  <a name="using-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用“将副本添加到可用性组向导”(SQL Server Management Studio)  
  **使用“将副本添加到可用性组向导”**  
   
 1.  在对象资源管理器中，连接到承载可用性组的主副本的服务器实例，然后展开服务器树。  
@@ -118,7 +118,7 @@ ms.locfileid: "75244984"
 > [!IMPORTANT]  
 >  添加副本后，请参阅 [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

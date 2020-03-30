@@ -1,7 +1,7 @@
 ---
 title: 指定列的默认值 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1544242905645fed5cb00fda3f7da0a06809326c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74200500"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448489"
 ---
 # <a name="specify-default-values-for-columns"></a>指定列的默认值
 
@@ -33,7 +33,7 @@ ms.locfileid: "74200500"
 
 - 如果没有设置允许空值的选项，则该列将保持空白，但在用户为该列提供值之前，他们将无法保存行。
 
-## <a name="Restrictions"></a> 限制和局限
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限
 
 在开始之前，请注意以下限制和局限：
 
@@ -45,11 +45,11 @@ ms.locfileid: "74200500"
 
 - 若要输入对象/函数，请输入对象/函数的名称并且不要用引号将名称括起来。
 
-### <a name="Security"></a> 安全权限
+### <a name="security-permissions"></a><a name="Security"></a> 安全权限
 
 本文中所述的操作要求对表具有 ALTER 权限。
 
-## <a name="SSMSProcedure"></a> 使用 SSMS 指定默认值
+## <a name="use-ssms-to-specify-a-default"></a><a name="SSMSProcedure"></a> 使用 SSMS 指定默认值
 
 可以使用对象资源管理器指定表列的默认值。
 
@@ -66,7 +66,7 @@ ms.locfileid: "74200500"
 
 4. 在“文件”菜单上，单击“保存表名称”    。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL 指定默认值
+## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 指定默认值
 
 可通过多种方法使用 SSMS 提交 T-SQL，指定列的默认值。
 
@@ -84,7 +84,7 @@ ms.locfileid: "74200500"
    INSERT INTO dbo.doc_exz (column_a) VALUES (7);
    GO
    ALTER TABLE dbo.doc_exz
-     ADD CONSTRAINT col_b_def
+     ADD CONSTRAINT DF_Doc_Exz_Column_B
      DEFAULT 50 FOR column_b;
    GO
    ```
@@ -106,7 +106,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50);
+      column_b INT CONSTRAINT DF_Doc_Exz_Column_B DEFAULT 50);
 ```
 
 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。

@@ -13,10 +13,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291832"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>设置数据流组件的属性
@@ -122,7 +122,7 @@ ms.locfileid: "71291832"
 -   [输出列](#outputcolumns)  
   
  
-###  <a name="components"></a>组件属性  
+###  <a name="component-properties"></a><a name="components"></a>组件属性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中，数据流中的组件实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口。  
   
  下表介绍了数据流中的组件的属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
@@ -142,7 +142,7 @@ ms.locfileid: "71291832"
 |ValidateExternalMetadata|Boolean|指示外部列的元数据是否经过验证。 此属性的默认值为 **True**。|  
 |版本|Integer|组件的版本。|  
   
-###  <a name="inputs"></a>输入属性  
+###  <a name="input-properties"></a><a name="inputs"></a>输入属性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中，转换和目标都具有输入。 数据流中的组件的输入实现了 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> 接口。  
   
  下表描述了数据流中的组件的输入属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
@@ -162,7 +162,7 @@ ms.locfileid: "71291832"
   
  目标以及某些转换不支持错误输出，这些组件的 ErrorRowDisposition 和 TruncationRowDisposition 属性是只读的。  
   
-###  <a name="inputcolumns"></a>输入列属性  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a>输入列属性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中，输入包含输入列集合。 数据流中的组件的输入列实现了 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> 接口。  
   
  下表描述了数据流中的组件的输入列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
@@ -186,7 +186,7 @@ ms.locfileid: "71291832"
   
  输入列还具有“数据类型属性”下描述的数据类型属性。  
   
-###  <a name="outputs"></a>输出属性  
+###  <a name="output-properties"></a><a name="outputs"></a>输出属性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中，源和转换具有输出。 数据流中的组件的输出实现了 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 接口。  
   
  下表描述了数据流中的组件的输出属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
@@ -207,7 +207,7 @@ ms.locfileid: "71291832"
 |SynchronousInputID|Integer|与输出同步的输入的 ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
   
-###  <a name="outputcolumns"></a>输出列属性  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a>输出列属性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中，输出包含输出列集合。 数据流中的组件的输出列实现了 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> 接口。  
   
  下表描述了数据流中的组件的输出列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  

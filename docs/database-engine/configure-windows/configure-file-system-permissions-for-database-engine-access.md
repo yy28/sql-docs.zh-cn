@@ -15,10 +15,10 @@ ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a42a4a17a1eee9222318e2b508b28d190361d85e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012780"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>配置数据库引擎访问的文件系统权限
@@ -38,7 +38,7 @@ ms.locfileid: "68012780"
 4.  在“输入要选择的对象名称”  框中，键入联机丛书主题[**配置 Windows 服务帐户和权限**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中所列的每个服务 SID 的名称。 （对于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 每个服务 SID 名称，将 **NT SERVICE\MSSQLSERVER** 用于默认实例，或将 **NT SERVICE\MSSQL$InstanceName** 用于命名实例。）  
   
 5.  单击 **“检查名称”** 以验证该条目。 （如果验证失败，可能告知你找不到该名称。 单击 **“确定”** 时，将显示 **“找到多个名称”** 对话框。 现在选择每个服务 SID 名称（**MSSQLSERVER** 或 **NT SERVICE\MSSQL$InstanceName**），然后单击“确定”  。  再次单击“确定”  以返回到“权限”  对话框。）   
-6.  在“组或用户”名称框中，选择每个服务 SID 名称  ，然后在“对 \<名称> 的权限”框中  ，针对“完全控制”选中“允许”复选框   。  
+6.  在“组或用户”名称框中，选择每个服务 SID 名称  ，然后在“对 **名称> 的权限”框中**\<，针对“完全控制”选中“允许”复选框   。  
   
 7. 单击 **“应用”** ，然后单击 **“确定”** 两次以退出。  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287152"
 ---
 # <a name="snapshot-replication"></a>快照复制
@@ -50,7 +50,7 @@ ms.locfileid: "76287152"
   
  [分发代理和合并代理](#DistAgent)  
   
-##  <a name="HowWorks"></a> 快照复制的工作机制  
+##  <a name="how-snapshot-replication-works"></a><a name="HowWorks"></a> 快照复制的工作机制  
  默认情况下，所有三种复制都使用快照初始化订阅服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照代理始终生成快照文件，但传递文件的代理因使用的复制类型而异。 快照复制和事务复制使用分发代理传递文件，而合并复制使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合并代理。 快照代理在分发服务器上运行。 对于推送订阅，分发代理和合并代理在分发服务器上运行；对于请求订阅，则在订阅服务器上运行。  
   
  可以在创建订阅后立即生成和应用快照，也可以按照创建发布时制定的计划进行。 快照代理准备快照文件（其中包含已发布表和数据库对象的架构和数据），然后将这些文件存储在发布服务器的快照文件夹中，并在分发服务器上的分发数据库中记录跟踪信息。 配置分发服务器时，可以指定一个默认的快照文件夹，也可以为发布指定一个备用位置，以替代默认位置或与之并存。  
@@ -61,7 +61,7 @@ ms.locfileid: "76287152"
   
  ![快照复制组件和数据流](../../relational-databases/replication/media/snapshot.gif "快照复制组件和数据流")  
   
-##  <a name="SnapshotAgent"></a> 快照代理  
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> 快照代理  
  对于合并复制，每当运行快照代理时都会生成快照。 对于事务复制，是否生成快照取决于发布属性 **immediate_sync**的设置。 如果该属性设置为 TRUE（使用新建发布向导时的默认设置），则每当运行快照代理时都会生成快照，而且可以随时将其应用到订阅服务器。 如果该属性设置为 FALSE（使用 **sp_addpublication**时的默认设置），则仅当自上次快照代理运行以来添加了新订阅时，才会生成快照；订阅服务器必须等待快照代理完成，才能实现同步。  
   
  快照代理执行以下操作：  
@@ -86,7 +86,7 @@ ms.locfileid: "76287152"
   
  在快照生成过程中，不能对已发布表进行构架更改。 生成快照文件后，可以使用 Windows 资源管理器在快照文件夹中查看这些快照文件。  
   
-##  <a name="DistAgent"></a> 分发代理和合并代理  
+##  <a name="distribution-agent-and-merge-agent"></a><a name="DistAgent"></a> 分发代理和合并代理  
  对于快照发布，分发代理每次运行发布时，都会将一个新快照移动到每个尚未同步但已标记为重新初始化或者包含新项目的订阅服务器中。  
   
  对于快照复制和事务复制，分发代理执行以下操作：  

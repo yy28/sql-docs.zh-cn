@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286934"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
@@ -44,16 +44,16 @@ ms.locfileid: "76286934"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   对于运行低于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本的发布服务器，sysadmin  固定服务器角色中的用户可以在“订阅服务器”  页上注册订阅服务器。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开始，不再需要为复制显式注册订阅服务器。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  如果可能，请在运行时提示用户输入安全凭据。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>查看和修改分发服务器属性  
   
@@ -85,7 +85,7 @@ ms.locfileid: "76286934"
   
 4.  根据需要修改属性，然后单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式查看发布服务器和分发服务器属性。  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>查看分发服务器和分发数据库属性  
@@ -107,7 +107,7 @@ ms.locfileid: "76286934"
   
 4.  在分发服务器上，执行 [sp_changedistpublisher](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) ，以便使用分发服务器更改发布服务器的属性。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本返回有关分发服务器和分发数据库的信息。  
   
  [!code-sql[HowTo#sp_helpdistributor](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_1.sql)]  
@@ -125,7 +125,7 @@ ms.locfileid: "76286934"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_5.sql)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>查看和修改分发服务器属性  
   
@@ -190,7 +190,7 @@ ms.locfileid: "76286934"
   
     5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 方法。 为 *password* 参数传递步骤 5 中的新密码值。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  此示例显示如何更改分发和分发数据库属性。  
   
 > [!IMPORTANT]  

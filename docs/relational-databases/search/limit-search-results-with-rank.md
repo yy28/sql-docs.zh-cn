@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132279"
 ---
 # <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
@@ -36,7 +36,7 @@ ms.locfileid: "68132279"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 按排名对匹配项进行排序，并且最多只返回指定数目的行。 这样可以大幅度提高性能。 例如，对于正常情况下会从一个包含一百万行的表中返回 100,000 行的查询，如果只要求返回前 100 行，此查询的处理速度会更快。  
   
-##  <a name="examples"></a> 使用 RANK 限制搜索结果的示例  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> 使用 RANK 限制搜索结果的示例  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>示例 A：仅搜索前三个匹配项  
  下面的示例使用 CONTAINSTABLE 仅返回前三个匹配项。  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> 搜索查询结果如何进行排名  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> 搜索查询结果如何进行排名  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的全文搜索可以生成可选分数（或排名值），该分数（或排名值）指示全文查询返回的数据的相关性。 对于每一行计算此排名值，并且可将此排名值用作排序条件按相关性对给定查询的结果集排序。 此排名值仅指示结果集中各行相关性的相对顺序。 实际的值并不重要，并且每次运行查询时实际值通常都不同。 此排名值在不同的查询之间没有任何意义。  
   
 ### <a name="statistics-for-ranking"></a>排名统计信息  

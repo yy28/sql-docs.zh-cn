@@ -16,10 +16,10 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bf48a304517eee91ff16c02dab72abb4790e6b0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254073"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>创建差异数据库备份 (SQL Server)
@@ -44,28 +44,28 @@ ms.locfileid: "75254073"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 准备工作  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 准备工作  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   不允许在显式或隐式事务中使用 BACKUP 语句。  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   创建差异数据库备份需要有以前的完整数据库备份。 如果你的数据库从未进行过备份，则请在创建任何差异备份之前，先执行完整数据库备份。 有关详细信息，请参阅 [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中创建差异数据库备份。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   当差异备份的大小增大时，还原差异备份会显著延长还原数据库所需的时间。 建议按设定的间隔执行新的完整备份，以便为数据建立新的差异基准。 例如，您可以每周执行一次整个数据库的完整备份（即完整数据库备份），然后在该周内执行一系列常规的差异数据库备份。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 首先检查你的权限！  
+####  <a name="check-your-permissions-first"></a><a name="Permissions"></a> 首先检查你的权限！  
  BACKUP DATABASE 和 BACKUP LOG 权限默认为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色。  
   
  备份设备的物理文件的所有权和权限问题将会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)**不** 检查文件访问权限。 在你因尝试备份或还原而访问物理资源之前，备份设备物理文件中的权限问题并不明显。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
+##  <a name="sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>创建差异数据库备份  
 
@@ -136,7 +136,7 @@ ms.locfileid: "75254073"
     > [!NOTE]  
     >  另外，可以使用维护计划向导创建差异数据库备份。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL  
   
 #### <a name="create-a-differential-database-backup"></a>创建差异数据库备份  
   
@@ -152,7 +152,7 @@ ms.locfileid: "75254073"
   
      BACKUP DATABASE *database_name* TO <backup_device> WITH DIFFERENTIAL  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例为 `MyAdvWorks` 数据库创建完整数据库备份和差异数据库备份。  
   
 ```sql  

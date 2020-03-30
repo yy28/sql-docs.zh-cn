@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78946724"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>启动、停止、暂停、继续、重启 SQL Server 服务
@@ -121,7 +121,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### <a name="configmande"></a> 启动、停止、暂停、继续或重启 SQL Server 数据库引擎的实例
+#### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="configmande"></a> 启动、停止、暂停、继续或重启 SQL Server 数据库引擎的实例
 
 1. 使用上面的说明启动 SQL Server 配置管理器。
 
@@ -153,7 +153,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-### <a name="ssmsde"></a> 启动、停止、暂停、继续或重启 SQL Server 数据库引擎的实例
+### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="ssmsde"></a> 启动、停止、暂停、继续或重启 SQL Server 数据库引擎的实例
 
 1. 在对象资源管理器中，连接到数据库引擎的实例，右键单击要启动的数据库引擎的实例，然后单击“启动”、“停止”、“暂停”、“继续”或“重启”      。
 
@@ -171,11 +171,11 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
 
 3. 系统提示你是否要执行操作时，请单击“是”  。
 
-## <a name="CommandPrompt"></a> 使用 net 命令的命令提示符窗口
+## <a name="command-prompt-window-using-net-commands"></a><a name="CommandPrompt"></a> 使用 net 命令的命令提示符窗口
 
 可以使用 Microsoft Windows net 命令启动、停止或暂停 Microsoft SQL Server 服务  。
 
-### <a name="dbDefault"></a> 启动数据库引擎的默认实例
+### <a name="to-start-the-default-instance-of-the-database-engine"></a><a name="dbDefault"></a> 启动数据库引擎的默认实例
 
 - 在命令提示符下，输入下列命令之一：  
   
@@ -185,9 +185,9 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
 
     **net start MSSQLSERVER**
 
-### <a name="dbNamed"></a> 启动数据库引擎的命名实例
+### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> 启动数据库引擎的命名实例
 
-- 在命令提示符下，输入下列命令之一。 将 \<instancename> 替换为要管理的实例的名称  。  
+- 在命令提示符下，输入下列命令之一。 将 *instancename> 替换为要管理的实例的名称\<* 。  
   
     **net start "SQL Server (** *instancename* **)"**
   
@@ -195,7 +195,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
   
     **net start MSSQL$** *instancename*  
   
-### <a name="dbStartup"></a> 使用启动选项启动数据库引擎  
+### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> 使用启动选项启动数据库引擎  
 
 - 将启动选项添加到 **net start "SQL Server (MSSQLSERVER)"** 语句末尾，之间用空格分隔开。 使用 **net start**启动时，启动选项使用正斜杠 (/) 而不是连字符 (-)。  
   
@@ -208,7 +208,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
   > [!NOTE]
   >  有关启动选项的详细信息，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
-###  <a name="agDefault"></a> 在 SQL Server 的默认实例上启动 SQL Server 代理
+###  <a name="to-start-the-sql-server-agent-on-the-default-instance-of-sql-server"></a><a name="agDefault"></a> 在 SQL Server 的默认实例上启动 SQL Server 代理
   
 - 在命令提示符下，输入下列命令之一：  
   
@@ -218,7 +218,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
   
     **net start SQLSERVERAGENT**
   
-###  <a name="agNamed"></a> 在 SQL Server 的命名实例上启动 SQL Server 代理  
+###  <a name="to-start-the-sql-server-agent-on-a-named-instance-of-sql-server"></a><a name="agNamed"></a> 在 SQL Server 的命名实例上启动 SQL Server 代理  
   
 - 在命令提示符下，输入下列命令之一。 将 *instancename* 替换为要管理的实例的名称。  
   
@@ -230,7 +230,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
   
  有关如何在详细模式中运行 SQL Server 代理以执行故障排除的信息，请参阅 [sqlagent90 应用程序](../../tools/sqlagent90-application.md)。  
 
-### <a name="Browser"></a> 启动 SQL Server Browser  
+### <a name="to-start-the-sql-server-browser"></a><a name="Browser"></a> 启动 SQL Server Browser  
 
 - 在命令提示符下，输入下列命令之一：  
   
@@ -240,7 +240,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
   
     **net start SQLBrowser**
   
-### <a name="pauseStop"></a> 在命令提示符窗口中暂停或停止服务  
+### <a name="to-pause-or-stop-services-from-the-command-prompt-window"></a><a name="pauseStop"></a> 在命令提示符窗口中暂停或停止服务  
 
 - 要暂停或停止服务，请通过以下方式修改命令。  
 
@@ -248,7 +248,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
 
 - 若要停止服务，请将 **net start** 替换为 **net stop**。  
 
-## <a name="TsqlProcedure"></a> Transact-SQL
+## <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL
 
 可以通过使用 SHUTDOWN 语句来停止数据库引擎  。  
 
@@ -268,7 +268,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
 
 有关 **SHUTDOWN** 语句的详细信息，请参阅 [SHUTDOWN (Transact-SQL)](../../t-sql/language-elements/shutdown-transact-sql.md)。  
 
-## <a name="PowerShellProcedure"></a> PowerShell
+## <a name="powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 ### <a name="to-start-and-stop-database-engine-services"></a>启动和停止数据库引擎服务
 

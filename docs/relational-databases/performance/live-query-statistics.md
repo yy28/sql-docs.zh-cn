@@ -18,10 +18,10 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 03e19dd52f7ea996690eaf55bad9cdf9d5eccb6b
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256925"
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
@@ -32,7 +32,7 @@ ms.locfileid: "78256925"
 > [!NOTE]
 > 在内部，实时查询统计信息利用 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV。
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
+适用范围： **（从**  开始）和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 > [!WARNING]  
 > 此功能主要用于故障排除。 使用此功能会明显降低整体查询性能，尤其是在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "78256925"
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>查看任何查询的实时查询统计信息 
 
-此外，可以通过右键单击“进程”表或“活动的耗费大量资源的查询”表中的任何查询，从[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)中访问实时执行计划    。  
+此外，可以通过右键单击“进程”表或“活动的耗费大量资源的查询”表中的任何查询，从**活动监视器[中访问实时执行计划](../../relational-databases/performance-monitor/activity-monitor.md)**   。  
   
  ![活动监视器中的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsactmon.png "活动监视器中的“实时查询统计信息”按钮")  
   

@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296289"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>创建数据库（SQL Server 导入和导出向导）
@@ -28,7 +28,7 @@ ms.locfileid: "71296289"
 向导中的“创建数据库”  对话框仅提供可用于创建新 SQL Server 数据库的基本选项。 若要查看和配置用于新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的所有选项，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建数据库或在向导创建数据库后对其进行配置。 
 
 > [!NOTE]
-> 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 语句的信息，而不是有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的“创建数据库”  对话框的信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+> 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 语句的信息，而不是有关  **导入和导出向导的“创建数据库”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对话框的信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>“创建数据库”页的屏幕截图  
 以下屏幕截图显示向导的“创建数据库”  对话框。  

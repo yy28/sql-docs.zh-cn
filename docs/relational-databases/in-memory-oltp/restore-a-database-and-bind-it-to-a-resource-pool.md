@@ -11,10 +11,10 @@ ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 4b19476f08398e6b704ee56125f3290d39c59954
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111816"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>还原数据库并将它绑定到资源池
@@ -34,7 +34,7 @@ ms.locfileid: "68111816"
   
 5.  [监视资源池性能](../../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md#bkmk_Monitor)  
   
-###  <a name="bkmk_NORECOVERY"></a> 使用 NORECOVERY 还原  
+###  <a name="restore-with-norecovery"></a><a name="bkmk_NORECOVERY"></a> 使用 NORECOVERY 还原  
  还原数据库时 ，NORECOVERY 将创建数据库并在不使用内存的情况下还原磁盘映像。  
   
 ```sql  
@@ -43,7 +43,7 @@ RESTORE DATABASE IMOLTP_DB
    WITH NORECOVERY  
 ```  
   
-###  <a name="bkmk_createPool"></a> 创建资源池  
+###  <a name="create-the-resource-pool"></a><a name="bkmk_createPool"></a> 创建资源池  
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建了名为 Pool_IMOLTP 的资源池，有 50% 内存可供其使用。  创建该池后，资源调控器重新配置为包括 Pool_IMOLTP。  
   
 ```sql  
@@ -52,7 +52,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-###  <a name="bkmk_bind"></a> 绑定数据库和资源池  
+###  <a name="bind-the-database-and-resource-pool"></a><a name="bkmk_bind"></a> 绑定数据库和资源池  
  使用系统函数 `sp_xtp_bind_db_resource_pool` 将数据库绑定到资源池。 该函数使用两个参数：数据库名称，然后是资源池名称。  
   
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义数据库 IMOLTP_DB 与资源池 Pool_IMOLTP 的绑定。 完成下一步骤后，绑定才生效。  
@@ -62,7 +62,7 @@ EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'
 GO  
 ```  
   
-###  <a name="bkmk_RECOVERY"></a> 使用 RECOVERY 还原  
+###  <a name="restore-with-recovery"></a><a name="bkmk_RECOVERY"></a> 使用 RECOVERY 还原  
  使用 RECOVERY 还原数据库时，数据库将联机并还原所有数据。  
   
 ```sql  
@@ -70,7 +70,7 @@ RESTORE DATABASE IMOLTP_DB
    WITH RECOVERY  
 ```  
   
-###  <a name="bkmk_Monitor"></a> 监视资源池性能  
+###  <a name="monitor-the-resource-pool-performance"></a><a name="bkmk_Monitor"></a> 监视资源池性能  
  一旦数据库绑定到命名的资源池并使用 RECOVERY 还原，请监视 Resource Pool Stats 对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [SQL Server, Resource Pool Stats 对象](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)。  
   
 ## <a name="see-also"></a>另请参阅  

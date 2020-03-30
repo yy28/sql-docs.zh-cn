@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 8cda2b7729f205da7908fa481b2e1a5639a095a1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287310"
 ---
 # <a name="scripting-replication"></a>编写复制脚本
@@ -47,7 +47,7 @@ ms.locfileid: "76287310"
 5.  在多个订阅服务器上运行脚本，以生成所需的请求订阅。  
   
 ## <a name="script-replication-objects"></a>脚本复制对象  
- 复制向导或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“复制”文件夹中的脚本复制对象  。 如果从向导编写脚本，则可以选择创建对象并为其编写脚本，也可以选择仅编写脚本。  
+ 复制向导或   中“复制”文件夹中的脚本复制对象[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果从向导编写脚本，则可以选择创建对象并为其编写脚本，也可以选择仅编写脚本。  
   
 > [!IMPORTANT]  
 >  所有密码的脚本被编写为 NULL。 如果可能，请在运行时提示用户输入安全凭据。 如果将凭据存储在脚本文件中，则必须确保文件的安全以防受到未经授权的访问。  
@@ -84,7 +84,7 @@ ms.locfileid: "76287310"
   
 3.  右键单击某个发布或订阅，然后单击 **“生成脚本”** 。  
   
-4.  在“生成 SQL 脚本 - \<复制对象>”  对话框中指定选项。  
+4.  在“生成 SQL 脚本 - **复制对象>”\<** 对话框中指定选项。  
   
 5.  单击 **“将脚本保存到文件”** 。  
   

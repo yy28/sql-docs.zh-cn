@@ -15,10 +15,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282171"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以编程方式加载和运行远程包
@@ -33,7 +33,7 @@ ms.locfileid: "71282171"
   
  或者，您也可以从安装了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本地计算机运行远程包。 有关详细信息，请参阅[以编程方式加载和运行本地包](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)。  
   
-##  <a name="top"></a>在远程计算机上运行远程包  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a>在远程计算机上运行远程包  
  如上所述，可以用多种方法在远程服务器上运行远程包：  
   
 -   [使用 SQL Server 代理以编程方式运行远程包](#agent)  
@@ -42,7 +42,7 @@ ms.locfileid: "71282171"
   
  本主题中用于加载和保存包的几乎所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集  。 但是本主题中演示的用于执行 sp_start_job 存储过程的 ADO.NET 方法是一个例外，该方法只需引用 System.Data   。 在新项目中添加对 Microsoft.SqlServer.ManagedDTS 程序集的引用后，请使用 using 或 Imports 语句导入  **命名空间**<xref:Microsoft.SqlServer.Dts.Runtime>   。  
   
-###  <a name="agent"></a>使用 SQL Server 代理以编程方式在服务器上运行远程包  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a>使用 SQL Server 代理以编程方式在服务器上运行远程包  
  下面的代码示例演示如何以编程方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器上运行远程包。 该示例代码调用系统存储过程 sp_start_job，该存储过程启动一个  **代理作业**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该存储过程启动的作业名为 `RunSSISPackage`，并且此作业位于远程计算机上。 然后 `RunSSISPackage` 作业在远程计算机上运行包。  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ namespace LaunchSSISPackageAgent_CS
 }  
 ```  
   
-###  <a name="service"></a>使用 Web 服务或远程组件以编程方式运行远程包  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a>使用 Web 服务或远程组件以编程方式运行远程包  
  上面的以编程方式在服务器上运行包的解决方案不需要服务器上的任何自定义代码。 但是，您可能更倾向于不依赖 SQL Server 代理来执行包的解决方案。 下面的示例演示可在服务器上创建用于在本地启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的 Web 服务，以及可用于从客户端计算机调用 Web 服务的测试应用程序。 如果你更倾向于创建远程组件而不是 Web 服务，则可在远程组件中使用同一代码逻辑，只需很少的更改。 但是，与 Web 服务相比，远程组件可能需要更广泛的配置。  
   
 > [!IMPORTANT]  

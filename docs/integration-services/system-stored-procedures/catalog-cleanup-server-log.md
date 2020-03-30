@@ -11,10 +11,10 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288071"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      可指定范围或级别（执行与项目）以及要删除的密钥数量。 删除的默认批大小为 1000。 将级别设置为 2 时，仅当删除关联的项目时才会删除密钥和证书。  
   
- 有关详细信息，请参阅下面的知识库文章：[修复：在 SQL Server 2012 中将 SSISDB 用作部署存储时的性能问题](https://support.microsoft.com/kb/2972285)  
+ 有关详细信息，请参阅以下知识库文章：[修复：在 SQL Server 2012 中使用 SSISDB 作为部署存储时的性能问题](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>示例  
  以下示例调用 cleanup_server_log 存储过程。  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091436"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "68091436"
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="BenefitsOfXmlFFs"></a> XML 格式化文件的优点  
+##  <a name="benefits-of-xml-format-files"></a><a name="BenefitsOfXmlFFs"></a> XML 格式化文件的优点  
   
 -   XML 格式化文件是自描述型，因此易于阅读、 创建和扩展。 这些文件具有较强的可读性，这使您更容易理解在大容量操作过程中是如何解释数据的。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68091436"
     > [!NOTE]  
     >  **bcp** 命令和 BULK INSERT 语句需要使用目标表，因为它们使用目标表列执行类型转换。  
   
-##  <a name="StructureOfXmlFFs"></a> XML 格式化文件的结构  
+##  <a name="structure-of-xml-format-files"></a><a name="StructureOfXmlFFs"></a> XML 格式化文件的结构  
  和非 XML 格式化文件一样，XML 格式化文件定义数据文件中数据字段的格式和结构，并将这些数据字段映射到单个目标表中的相应列。  
   
  XML 格式化文件有两个主要组件，即 \<RECORD> 和 \<ROW>：  
@@ -97,7 +97,7 @@ ms.locfileid: "68091436"
   
      每个 \<COLUMN> 元素均只能映射到数据文件中的一个字段。 \<ROW> 元素中 \<COLUMN> 元素的顺序定义了其在批量操作中返回的顺序。 XML 格式化文件为每个 \<COLUMN> 元素分配了一个本地名称，该名称与批量导入操作的目标表中的列没有关系。  
   
-##  <a name="SchemaSyntax"></a> XML 格式化文件的架构语法  
+##  <a name="schema-syntax-for-xml-format-files"></a><a name="SchemaSyntax"></a> XML 格式化文件的架构语法  
  本节概要介绍 XML 格式化文件的 XML 架构的元素和属性。 格式化文件的语法与操作的方向无关；即大容量导出和大容量导入中使用的语法相同。 本节还介绍大容量导入如何使用 \<ROW> 和 \<COLUMN> 元素以及如何将元素的 xsi:type 值放入数据集。  
   
  若要查看该语法与实际的 XML 格式化文件的对应关系，请参阅本主题后面的 [XML 格式化文件示例](#SampleXmlFFs)。  
@@ -115,7 +115,7 @@ ms.locfileid: "68091436"
   
 -   [将 xsi:type 值放入数据集](#PutXsiTypeValueIntoDataSet)  
   
-###  <a name="BasicSyntax"></a> XML 架构的基本语法  
+###  <a name="basic-syntax-of-the-xml-schema"></a><a name="BasicSyntax"></a> XML 架构的基本语法  
  此语法语句仅显示元素（\<BCPFORMAT>、\<RECORD>、\<FIELD>、\<ROW> 和 \<COLUMN>）及其基本属性。  
   
  \<BCPFORMAT ...>  
@@ -149,7 +149,7 @@ ms.locfileid: "68091436"
   
 -   [\<COLUMN> 元素的属性](#AttrOfColumnElement)以及（[\<COLUMN> 元素的 Xsi:type 值](#XsiTypeValuesOfCOLUMN)）  
   
-####  <a name="SchemaElements"></a> 架构元素  
+####  <a name="schema-elements"></a><a name="SchemaElements"></a> 架构元素  
  本节总结了 XML 架构为 XML 格式化文件定义的每个元素的作用。 本主题在后面有单独的章节介绍这些属性。  
   
  \<BCPFORMAT>  
@@ -176,7 +176,7 @@ ms.locfileid: "68091436"
  \</BCPFORMAT>  
  用于结束格式化文件。  
   
-####  <a name="AttrOfFieldElement"></a>\<FIELD> 元素的属性  
+####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>\<FIELD> 元素的属性  
  本节介绍 \<FIELD> 元素的属性，现将其架构语法总结如下：  
   
  <FIELD  
@@ -204,12 +204,12 @@ ms.locfileid: "68091436"
 |ID **="** _fieldID_ **"**|指定数据文件中的字段的逻辑名称。 字段的 ID 是用于引用字段的键。<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> maps to \<COLUMN SOURCE **="** _fieldID_ **"** />|必选|  
 |xsi:type **="** _fieldType_ **"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的类型。 *fieldType* 的值决定了给定实例中需要下面哪个可选属性。|必需（取决于数据类型）|  
 |LENGTH **="** _n_ **"**|此属性定义固定长度的数据类型实例的长度。<br /><br /> *n* 值必须是正整数。|除非是 xsi:type 值所必需，否则可选。|  
-|PREFIX_LENGTH **="** _p_ **"**|此属性定义二进制数据表示形式的前缀的长度。 PREFIX_LENGTH 值 p 必须是下列值之一  ：1、2、4 或 8。|除非是 xsi:type 值所必需，否则可选。|  
+|PREFIX_LENGTH **="** _p_ **"**|此属性定义二进制数据表示形式的前缀的长度。 PREFIX_LENGTH 值、 *p*必须是下列值之一：1、2、4 或 8。|除非是 xsi:type 值所必需，否则可选。|  
 |MAX_LENGTH **="** _m_ **"**|此属性为给定字段中可以存储的最大字节数。 如果没有目标表，列的最大长度就是未知的。 MAX_LENGTH 属性限定输出字符列的最大长度，从而限制为列值分配的存储空间。 当在 SELECT FROM 子句中使用了 OPENROWSET 函数的 BULK 选项时，使用该属性将带来极大的方便。<br /><br /> *m* 值必须是正整数。 默认情况下， **char** 列的最大长度为 8000 个字符， **nchar** 列的最大长度为 4000 个字符。|可选|  
 |COLLATION **="** _collationName_ **"**|COLLATION 仅适用于字符字段。 有关 SQL 排序规则名称的列表，请参阅 [SQL Server 排序规则名称 (Transact SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。|可选|  
 |TERMINATOR **= "** _terminator_ **"**|此属性指定数据字段的终止符。 该终止符可以是任意字符。 该字符必须是数据中没有的唯一字符。<br /><br /> 默认情况下，该字段的终止符为制表符（用 \t 表示）。 若要表示段落标记，请使用 \r\n。|仅和需要该属性的字符数据 xsi:type 一起使用。|  
   
-#####  <a name="XsiTypeValuesOfFIELD"></a>\<FIELD> 元素的 Xsi:type 值  
+#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a>\<FIELD> 元素的 Xsi:type 值  
  xsi:type 值是标识元素实例的数据类型的 XML 构造（用法同属性）。 本节后面将介绍有关“在数据集中包含 xsi:type 值”的信息。  
   
  \<FIELD> 元素的 xsi:type 值支持下列数据类型。  
@@ -227,7 +227,7 @@ ms.locfileid: "68091436"
   
  有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
-####  <a name="AttrOfColumnElement"></a>\<COLUMN> 元素的属性  
+####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>\<COLUMN> 元素的属性  
  本节介绍 \<COLUMN> 元素的属性，现将其架构语法总结如下：  
   
  <COLUMN  
@@ -256,13 +256,13 @@ ms.locfileid: "68091436"
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|指定映射到列的字段 ID。<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> maps to \<FIELD ID **="** _fieldID_ **"** />|必选|  
 |NAME = "*columnName*"|指定格式化文件所表示的行集中的列名。 此列名用于标识结果集中的列，并且该列不需要与目标表中使用的列名相对应。|必选|  
-|xsi **:** type **="** _ColumnType_ **"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的数据类型。 *ColumnType* 的值决定了给定实例中需要下面哪个可选属性。<br /><br /> 注意：[&lt;COLUMN&gt; 元素的 Xsi:type 值](#XsiTypeValuesOfCOLUMN)部分中的 <COLUMN\< 元素表列出了 *ColumnType* 的可能值及其相关属性。|可选|  
+|xsi **:** type **="** _ColumnType_ **"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的数据类型。 *ColumnType* 的值决定了给定实例中需要下面哪个可选属性。<br /><br /> 注意：  COLUMN\< 元素的 Xsi:type 值[部分中的 &lt;COLUMN> 元素表列出了 &gt;ColumnType](#XsiTypeValuesOfCOLUMN) 的可能值及其相关属性。|可选|  
 |LENGTH **="** _n_ **"**|定义固定长度的数据类型实例的长度。 仅当 xsi:type 为字符串数据类型时，才使用 LENGTH。<br /><br /> *n* 值必须是正整数。|可选（仅当 xsi:type 是字符串数据类型时才可用）|  
 |PRECISION **="** _n_ **"**|指示数字的位数。 例如，数 123.45 精度为 5。<br /><br /> 该值必须是正整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
 |SCALE **="** _int_ **"**|指示数字中小数点右边的位数。 例如，数字 123.45 的小数位数为 2。<br /><br /> 该值必须为整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|指示列是否可以接受 NULL 值。 此属性与 FIELDS 完全无关。 但是，如果列不可为空值，而字段指定为 NULL（未指定任何值），将产生运行时错误。<br /><br /> NULLABLE 属性仅在您只执行普通 SELECT FROM OPENROWSET(BULK...) 语句时才使用。|可选（任何数据类型均可用）|  
   
-#####  <a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 元素的 Xsi:type 值  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 元素的 Xsi:type 值  
  xsi:type 值是标识元素实例的数据类型的 XML 构造（用法同属性）。 本节后面将介绍有关“在数据集中包含 xsi:type 值”的信息。  
   
  \<COLUMN> 元素支持下列本机 SQL 数据类型：  
@@ -277,11 +277,11 @@ ms.locfileid: "68091436"
 |字符串|**SQLCHAR**、 **SQLVARYCHAR**、 **SQLNCHAR**和 **SQLNVARCHAR**|无。|NULLABLE、LENGTH|  
   
 > [!IMPORTANT]  
->  若要大容量导出或导入 SQLXML 数据，请在格式化文件中使用下列数据类型之一：SQLCHAR 或 SQLVARYCHAR（数据以客户端代码页或排序规则隐含的代码页的形式发送）、SQLNCHAR 或 SQLNVARCHAR（数据以 Unicode 的形式发送）或者 SQLBINARY 或 SQLVARYBIN（数据不经任何转换直接发送）。  
+>  若要大容量导出或导入 SQLXML 数据，请在格式文件中使用下列数据类型之一：SQLCHAR 或 SQLVARYCHAR（数据以客户端代码页或排序规则隐含的代码页的形式发送）、SQLNCHAR 或 SQLNVARCHAR（数据以 Unicode 的形式发送）或者 SQLBINARY 或 SQLVARYBIN（数据不经任何转换直接发送）。  
   
  有关值数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
-###  <a name="HowUsesROW"></a> 大容量导入如何使用 \<ROW> 元素  
+###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a> 大容量导入如何使用 \<ROW> 元素  
  在某些上下文中可以忽略 \<ROW> 元素。 \<ROW> 元素是否影响大容量导入操作取决于操作的执行方式：  
   
 -   **bcp** 命令  
@@ -297,7 +297,7 @@ ms.locfileid: "68091436"
     > [!NOTE]  
     >  OPENROWSET BULK 子句需要格式化文件（请注意，将字段的数据类型转换为列的数据类型只能使用 XML 格式化文件进行）。  
   
-###  <a name="HowUsesColumn"></a> 大容量导入如何使用 \<COLUMN> 元素  
+###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a> 大容量导入如何使用 \<COLUMN> 元素  
  为了将数据大容量地导入表中，格式化文件中的 \<COLUMN> 元素将数据文件字段映射到表列，方法是指定：  
   
 -   行中每个字段在数据文件中的位置。  
@@ -308,7 +308,7 @@ ms.locfileid: "68091436"
   
  与此类似，为了将数据从表中大容量地导出，格式化文件中的各个 \<COLUMN> 将输入表行的列映射到输出数据文件中与之对应的字段。  
   
-###  <a name="PutXsiTypeValueIntoDataSet"></a> 将 xsi:type 值放入数据集  
+###  <a name="putting-the-xsitype-value-into-a-data-set"></a><a name="PutXsiTypeValueIntoDataSet"></a> 将 xsi:type 值放入数据集  
  当通过 XML 架构定义 (XSD) 语言验证 XML 文档时，xsi:type 值不放入数据集。 但是，通过将 XML 格式化文件加载到 XML 文档（如 `myDoc`）中，可以将 xsi:type 信息放入数据集。如下列代码段所示：  
   
 ```cs
@@ -322,7 +322,7 @@ for(int i=0;i<ColumnList.Count;i++)
 }  
 ```  
   
-##  <a name="SampleXmlFFs"></a> XML 格式化文件示例  
+##  <a name="sample-xml-format-files"></a><a name="SampleXmlFFs"></a> XML 格式化文件示例  
  本节包含在各种情况下使用 XML 格式化文件的信息，并提供了一个 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 示例。  
   
 > [!NOTE]  
@@ -347,7 +347,7 @@ for(int i=0;i<ColumnList.Count;i++)
 > [!NOTE]  
 >  有关创建格式化文件的信息，请参阅 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)。  
   
-###  <a name="OrderCharFieldsSameAsCols"></a> A. 对字符数据字段和表列进行相同的排序  
+###  <a name="a-ordering-character-data-fields-the-same-as-table-columns"></a><a name="OrderCharFieldsSameAsCols"></a> A. 对字符数据字段和表列进行相同的排序  
  下面的示例显示了一个 XML 格式化文件，该文件描述一个包含三个字符数据字段的数据文件。 格式化文件将数据文件映射到包含三列的表中。 数据字段与表中的列一一对应。  
   
  **表（行）：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
@@ -385,7 +385,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  有关等效的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例，请参阅 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)。  
   
-###  <a name="OrderFieldsAndColsDifferently"></a> B. 对数据字段和表列进行不同的排序  
+###  <a name="b-ordering-data-fields-and-table-columns-differently"></a><a name="OrderFieldsAndColsDifferently"></a> B. 对数据字段和表列进行不同的排序  
  下面的示例显示了一个 XML 格式化文件，该文件描述一个包含三个字符数据字段的数据文件。 格式化文件将数据文件映射到包含三列（与数据文件的字段排序方式不同）的表中。  
   
  **表（行）：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
@@ -420,10 +420,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  有关等效的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例，请参阅 [使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)。  
   
-###  <a name="OmitField"></a> C. 省略数据字段  
+###  <a name="c-omitting-a-data-field"></a><a name="OmitField"></a> C. 省略数据字段  
  下面的示例显示了一个 XML 格式化文件，该文件描述一个包含四个字符数据字段的数据文件。 格式化文件将数据文件映射到包含三列的表中。 第二个数据字段不与任何表列对应。  
   
- **表（行）：** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
+ **表（行）：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **数据文件（记录）：** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -460,7 +460,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  有关等效的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例，请参阅 [使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)。  
   
-###  <a name="MapXSItype"></a> D. 将 \<FIELD> xsi:type 映射到 \<COLUMN> xsi:type  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. 将 \<FIELD> xsi:type 映射到 \<COLUMN> xsi:type  
  下面的示例显示了各种类型的字段及其与列的映射。  
   
 ```xml
@@ -497,7 +497,7 @@ xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 </BCPFORMAT>  
 ```  
   
-###  <a name="MapXMLDataToTbl"></a> E. 将 XML 数据映射到表  
+###  <a name="e-mapping-xml-data-to-a-table"></a><a name="MapXMLDataToTbl"></a> E. 将 XML 数据映射到表  
  下面的示例创建了一个空的两列表 (`t_xml`)，表中的第一列映射到 `int` 数据类型，第二列映射到 `xml` 数据类型。  
   
 ```sql
@@ -521,7 +521,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </BCPFORMAT>  
 ```  
   
-###  <a name="ImportFixedFields"></a> F. 导入固定长度或固定宽度的字段  
+###  <a name="f-importing-fixed-length-or-fixed-width-fields"></a><a name="ImportFixedFields"></a> F. 导入固定长度或固定宽度的字段  
  下面的示例分别介绍包含 `10` 个或 `6` 个字符的固定字段。 格式化文件将这些字段的长度/宽度分别表示为 `LENGTH="10"` 和 `LENGTH="6"`。 数据文件中的每行都以回车符-换行符组合 {CR}{LF} 结束，格式化文件将这表示为 `TERMINATOR="\r\n"`。  
   
 ```xml
@@ -541,7 +541,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </BCPFORMAT>  
 ```  
   
-###  <a name="AdditionalExamples"></a> 其他示例  
+###  <a name="additional-examples"></a><a name="AdditionalExamples"></a> 其他示例  
  有关非 XML 格式化文件和 XML 格式化文件的其他示例，请参阅下列主题：  
   
 -   [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
@@ -550,7 +550,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   
@@ -562,7 +562,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
  无。  
   
 ## <a name="see-also"></a>另请参阅  

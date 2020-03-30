@@ -14,10 +14,10 @@ ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1655992526096035eb109821d8950980921951ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251218"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>解决失败的添加文件操作问题（AlwaysOn 可用性组）

@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548283"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -226,7 +226,7 @@ DELETE
 |[从远程表中删除行](#RemoteTables)|链接服务器 • OPENQUERY 行集函数 • OPENDATASOURCE 行集函数|  
 |[捕获 DELETE 语句的结果](#CaptureResults)|OUTPUT 子句|  
   
-###  <a name="BasicSyntax"></a> 基本语法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本语法  
  本节中的示例说明了使用最低要求的语法的 DELETE 语句的基本功能。  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. 使用不带 WHERE 子句的 DELETE  
@@ -237,7 +237,7 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a> 限制删除的行数  
+###  <a name="limiting-the-rows-deleted"></a><a name="LimitRows"></a> 限制删除的行数  
  本节中的示例演示了如何限制将被删除的行数。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. 使用 WHERE 子句删除行集  
@@ -335,7 +335,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> 从远程表中删除行  
+###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> 从远程表中删除行  
  本节中的示例说明如何使用[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[行集函数](../../t-sql/functions/rowset-functions-transact-sql.md)引用一个远程表，以便从该表中删除行。 远程表存在于不同的服务器或 SQL Server 实例上。  
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
@@ -386,7 +386,7 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a> 捕获 DELETE 语句的结果  
+###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> 捕获 DELETE 语句的结果  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>I. 使用带有 OUTPUT 子句的 DELETE  
  以下示例演示如何将 `DELETE` 语句的结果保存到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的表变量中。  
@@ -431,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>K. 从表中删除所有行  
  下面的示例从 `Table1` 表中删除所有行，因为该例未使用 WHERE 子句限制删除的行数。  

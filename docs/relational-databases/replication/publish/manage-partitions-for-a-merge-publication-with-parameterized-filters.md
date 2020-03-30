@@ -16,10 +16,10 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f375d81d77fb943f6cfe1b911ab8bcc9f385533
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321213"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>通过参数化筛选器为合并发布管理分区
@@ -40,15 +40,15 @@ ms.locfileid: "75321213"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   如果对复制拓扑编写脚本（建议这样做），则发布脚本包含用于创建数据分区的存储过程调用。 该脚本提供了对所创建的分区的引用和一种在必要时重建分区的途径。 有关详细信息，请参阅 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
 -   如果发布具有的参数化筛选器可生成带有非重叠分区的订阅，并且如果特定订阅丢失并需要重新创建，则您必须执行以下操作：删除曾订阅的分区，重新创建订阅，然后重新创建该分区。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。 生成发布创建脚本时，复制会为现有订阅服务器分区生成创建脚本。 有关详细信息，请参阅 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可在“发布属性 - **发布>”对话框的“数据分区”页上管理分区。** **\<** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 在此页上，可以执行下列操作：创建和删除分区、允许订阅服务器启动快照的生成和传递、生成一个或多个分区的快照和清除快照。  
   
 #### <a name="to-create-a-partition"></a>创建分区  
@@ -89,7 +89,7 @@ ms.locfileid: "75321213"
   
 2.  单击 **“清除现有快照”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  为了更好地管理带有参数化筛选器的发布，可使用复制存储过程以编程方式枚举现有的分区。 还可以创建和删除现有的分区。 可以获取以下有关现有分区的信息：  
   
 -   如何筛选分区（使用 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 或 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)）。  
@@ -124,7 +124,7 @@ ms.locfileid: "75321213"
   
      此操作还将删除快照作业以及该分区的任何快照文件。  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  若要更好地管理具有参数化筛选器的发布，可以通过使用复制管理对象 (RMO) 以编程方式创建新的订阅服务器分区，枚举现有的订阅服务器分区以及删除订阅服务器分区。 有关如何创建订阅服务器分区的信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。 可以获得有关现有分区的以下信息：  
   
 -   分区所基于的值和筛选函数。  

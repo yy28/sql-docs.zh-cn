@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941119"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
@@ -140,7 +140,7 @@ SQL Server 2017 或更高版本中的分布式可用性组可以混合同一分�
 
 ![通过分布式可用性组扩大读取](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-下图显示 AG 1 作为两个不同分布式可用性组的主要副本：分布式 AG 1（包含 AG 1 和 AG 2）和分布式 AG 2（包含 AG 1 和 AG 3）。
+下图显示 AG 1 为两个不同分布式可用性组的主要副本：分布式 AG 1（包含 AG 1 和 AG 2）和分布式 AG 2（包含 AG 1 和 AG 3）。
 
 
 ![使用分布式可用性组扩大读取的另一示例]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -217,7 +217,7 @@ Cluster Group                   JC                    Online
 
 ### <a name="dmv-to-list-all-availability-replica-names"></a>通过 DMV 列出所有可用性副本名称
 
-使用动态管理视图时，这些概念仍然适用。 使用以下查询，可查看所有可用性组（常规和分布式）及参与其中的节点。 仅当查询参与分布式可用性组的 WSFC 群集中的主副本时，才显示此结果。 在名为 `is_distributed` 的动态管理视图 `sys.availability_groups` 中有一个新列，它在可用性组为分布式可用性组时为 1。 若要查看此列：
+使用动态管理视图时，这些概念仍然适用。 使用以下查询，可查看所有可用性组（常规和分布式）及参与其中的节点。 仅当查询参与分布式可用性组的 WSFC 群集中的主副本时，才显示此结果。 在名为 `sys.availability_groups` 的动态管理视图 `is_distributed` 中有一个新列，它在可用性组为分布式可用性组时为 1。 若要查看此列：
 
 ```sql
 -- shows replicas associated with availability groups

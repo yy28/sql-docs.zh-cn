@@ -18,10 +18,10 @@ ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254151"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暂停和恢复数据库镜像 (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75254151"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="EffectOnLogTrunc"></a> 暂停和恢复如何影响日志截断  
+##  <a name="how-pausing-and-resuming-affect-log-truncation"></a><a name="EffectOnLogTrunc"></a> 暂停和恢复如何影响日志截断  
  通常，在数据库上执行自动检查点操作时，事务日志将在下一个日志备份后截断到该检查点。 当数据库镜像会话处于暂停时，当前所有日志记录都保持为活动状态，因为主体服务器正等待将这些记录发送到镜像服务器。 未发送的日志记录将堆积在主体数据库的事务日志中，直到会话恢复并且主体服务器将它们发送到镜像服务器为止。  
   
  会话恢复时，主体服务器立即开始将堆积的日志记录发送到镜像服务器。 当镜像服务器确认与最早的自动检查点相对应的日志记录已排队后，主体服务器便会将主体数据库的日志截断到该检查点。 镜像服务器会截断同一个日志记录的重做队列。 随着对每个连续的检查点重复此过程，日志将对检查点逐个分阶段地截断。  
@@ -51,7 +51,7 @@ ms.locfileid: "75254151"
 > [!NOTE]  
 >  有关检查点和日志截断的详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
-##  <a name="AvoidFullLog"></a> 避免出现已满事务日志  
+##  <a name="avoid-a-full-transaction-log"></a><a name="AvoidFullLog"></a> 避免出现已满事务日志  
  如果填满该日志（因为它达到其最大大小或服务器实例耗尽空间），则数据库将无法再执行任何更新。 若要避免出现这种问题，有两种选择：  
   
 -   在该日志填满之前恢复数据库镜像会话，或添加更多的日志空间。 恢复数据库镜像会使主体服务器将其累积的活动日志发送到镜像服务器，并将镜像数据库设置为 SYNCHRONIZING 状态。 然后镜像服务器可将日志镜像到磁盘并开始重做。  
@@ -60,7 +60,7 @@ ms.locfileid: "75254151"
   
      和暂停会话不同，删除镜像将删除有关镜像会话的所有信息。 每个伙伴服务器实例将保留其自己的数据库副本。 如果前一个镜像副本已恢复，则它将与前一个主体副本分离，且滞后时间等于此会话暂停的时间。 有关详细信息，请参阅 [删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **暂停或恢复数据库镜像**  
   
 -   [暂停或恢复数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  

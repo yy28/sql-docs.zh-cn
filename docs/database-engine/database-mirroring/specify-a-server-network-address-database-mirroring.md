@@ -17,10 +17,10 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252755"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定服务器网络地址（数据库镜像）
@@ -30,7 +30,7 @@ ms.locfileid: "75252755"
  在服务器网络地址中指定一个端口之前，服务器实例上必须具有数据库镜像端点。 有关详细信息，请参阅 [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
   
-##  <a name="Syntax"></a> 服务器网络地址的语法  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> 服务器网络地址的语法  
  服务器网络地址的语法格式如下：  
   
  TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
@@ -121,7 +121,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> 示例  
+##  <a name="examples"></a><a name="Examples"></a> 示例  
  以下示例显示了其他域中名为 `REMOTESYSTEM3` 的计算机系统上的某个服务器实例的服务器网络地址。 域信息为 `NORTHWEST.ADVENTURE-WORKS.COM`，数据库镜像端点的端口为 `7025`。 假设具有这些示例组件，则服务器网络地址将为：  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -130,7 +130,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   

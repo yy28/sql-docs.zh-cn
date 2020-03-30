@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 790d756479f4111d6c3b40d05643ec788527473c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054779"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>使用配置文件安装 SQL Server
@@ -67,18 +67,18 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  安装程序基础结构将写出已运行操作的所有适当参数，但不包括密码等敏感信息。 /IAcceptSQLServerLicenseTerms 参数也不写出到配置文件，它要求修改配置文件或在命令提示符下提供一个值。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 另外，对于通常不通过命令提示符提供值的布尔参数，值将包括在内。 
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>使用配置文件安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>使用配置文件安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 只能在命令行安装中使用配置文件。 
   
 > [!NOTE]  
 > 如果需要对配置文件进行更改，建议您创建一个副本并对副本进行操作。 
   
-### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>如何使用配置文件安装独立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例  
+### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>如何使用配置文件安装独立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例  
   
 -   通过命令提示符运行安装，然后使用 *ConfigurationFile* 参数提供 ConfigurationFile.ini 文件。 
   
-### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>如何使用配置文件准备和完成独立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的映像 (SysPrep)  
+### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>如何使用配置文件准备和完成独立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的映像 (SysPrep)  
   
 1. 准备一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并在同一计算机上配置它们。 
   
@@ -96,7 +96,7 @@ FEATURES=SQL,Tools
   
     -   可以将完全的映像配置文件随 Windows 映像一起存储，以便自动执行已准备实例的配置。 
   
-### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>如何使用配置文件安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集  
+### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>如何使用配置文件安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集  
   
 1. “集成安装”选项（在一个节点上创建单节点故障转移群集并在其他节点上运行 AddNode）：  
   
@@ -118,11 +118,11 @@ FEATURES=SQL,Tools
   
     -   接着，您可以提供此 ConfigurationFile.ini 文件以完成故障转移群集。 
   
-### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>如何使用配置文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集中添加或删除节点  
+### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>如何使用配置文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集中添加或删除节点  
   
 -   如果您有以前用来在故障转移群集中添加或删除节点的配置文件，可以重复使用这个文件来添加或删除其他节点。 
   
-### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>如何使用配置文件升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集  
+### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>如何使用配置文件升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集  
   
 1. 在被动节点上运行升级，然后捕获 ConfigurationFile.ini 文件。 您可以通过执行真正的升级，或者可以通过在升级过程结束时退出而不进行真正的升级来达到此目的。 
   

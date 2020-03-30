@@ -17,10 +17,10 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165536"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>打开 SQL Server Management Studio (SSMS) 中的活动监视器
@@ -29,7 +29,7 @@ ms.locfileid: "74165536"
  活动监视器将在被监视的实例上运行查询以获取有关活动监视器显示窗格的信息。 当刷新间隔设置为小于 10 秒时，运行这些查询所用的时间可能会对服务器性能产生影响。  
   
   
-##  <a name="Permissions"></a> 检查你的权限！  
+##  <a name="check-your-permissions"></a><a name="Permissions"></a> 检查你的权限！  
  若要查看实际的活动，必须拥有 VIEW SERVER STATE 权限。 若要查看活动监视器的“数据文件 I/O”部分，除了 VIEW SERVER STATE 之外，您还必须具有 CREATE DATABASE、ALTER ANY DATABASE 或 VIEW ANY DEFINITION 权限。  
   
  若要终止进程，用户必须是 sysadmin 或 processadmin 固定服务器角色的成员。  

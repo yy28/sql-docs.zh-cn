@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017657"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一约束和 CHECK 约束
@@ -34,7 +34,7 @@ ms.locfileid: "68017657"
   
  [相关任务](#Tasks)  
   
-##  <a name="Unique"></a> UNIQUE 约束  
+##  <a name="unique-constraints"></a><a name="Unique"></a> UNIQUE 约束  
  约束是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为您强制执行的规则。 例如，您可以使用 UNIQUE 约束确保在非主键列中不输入重复的值。 尽管 UNIQUE 约束和 PRIMARY KEY 约束都强制唯一性，但想要强制一列或多列组合（不是主键）的唯一性时应使用 UNIQUE 约束而不是 PRIMARY KEY 约束。  
   
  UNIQUE 约束允许 NULL 值，这一点与 PRIMARY KEY 约束不同。 不过，当与参与 UNIQUE 约束的任何值一起使用时，每列只允许一个空值。 FOREIGN KEY 约束可以引用 UNIQUE 约束。  
@@ -43,7 +43,7 @@ ms.locfileid: "68017657"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将自动创建 UNIQUE 索引来强制执行 UNIQUE 约束的唯一性要求。 因此，如果试图插入重复行， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将返回错误消息，说明该操作违反了 UNIQUE 约束，不能将该行添加到表中。 除非显式指定了聚集索引，否则，默认情况下将创建唯一的非聚集索引以强制执行 UNIQUE 约束。  
   
-##  <a name="Check"></a> CHECK 约束  
+##  <a name="check-constraints"></a><a name="Check"></a> CHECK 约束  
  通过限制一个或多个列可接受的值，CHECK 约束可以强制域完整性。 可以通过任何基于逻辑运算符返回 TRUE 或 FALSE 的逻辑（布尔）表达式创建 CHECK 约束。 例如，可以通过创建 CHECK 约束将 **salary** 列中值的范围限制为从 $15,000 到 $100,000 之间的数据。 这可防止薪金超出常规薪金范围之外。 逻辑表达式将如下： `salary >= 15000 AND salary <= 100000`。  
   
  可以将多个 CHECK 约束应用于单个列。 还可以通过在表级创建 CHECK 约束，将一个 CHECK 约束应用于多个列。 例如，多列 CHECK 约束可用于确认 **country_region** 列值为 **USA** 的任意行是否在 **state** 列中还有一个由两个字符构成的值。 这使得在一个位置可以同时检查多个条件。  
@@ -87,7 +87,7 @@ DELETE CheckTbl WHERE col1 = 10;
   
  即使 `DELETE` 约束指定表 `CHECK` 必须至少包含 `CheckTbl` 行， `1` 语句也会成功。  
   
-##  <a name="Tasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 相关任务  
   
 > [!NOTE]  
 >  如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  

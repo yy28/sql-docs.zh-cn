@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287801"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
@@ -61,13 +61,13 @@ ms.locfileid: "79287801"
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>支持高可用性和灾难恢复解决方案
 备用服务器解决方案、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]数据库镜像和日志传送极大程度地依赖于事务日志。 
 
-在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 方案中，数据库的每个更新（主要副本）在数据库的完整且独立的副本（次要副本）中直接再现  。 主要副本直接将每个日志记录发送到次要副本，这可将传入日志记录应用到可用性组数据库，并不断前滚。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+在  **方案中，数据库的每个更新（主要副本）在数据库的完整且独立的副本（次要副本）中直接再现[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]** 。 主要副本直接将每个日志记录发送到次要副本，这可将传入日志记录应用到可用性组数据库，并不断前滚。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
 在日志传送方案中，主服务器将主数据库的活动事务日志发送到一个或多个目标服务器  。 每个辅助服务器将该日志还原为其本地的辅助数据库。 有关详细信息，请参阅 [关于日志传送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。 
 
 在数据库镜像方案中，数据库（主体数据库）的每次更新都在独立的、完整的数据库（镜像数据库）副本中立即重新生成  。 主体服务器实例立即将每个日志记录发送到镜像服务器实例，镜像服务器实例将传入的日志记录应用于镜像数据库，从而将其继续前滚。 有关详细信息，请参阅 [数据库镜像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
 
-##  <a name="Characteristics"></a>事务日志特征
+##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>事务日志特征
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 事务日志的特征： 
 -  事务日志是作为数据库中的单独的文件或一组文件实现的。 日志缓存与数据页的缓冲区高速缓存是分开管理的，因此可在[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中生成简单、快速和功能强大的代码。 有关详细信息，请参阅[事务日志物理体系结构](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。
 
@@ -79,10 +79,10 @@ ms.locfileid: "79287801"
 
 有关事务日志体系结构和内部组件的详细信息，请参阅 [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。
 
-##  <a name="Truncation"></a> 事务日志截断  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> 事务日志截断  
 日志截断将释放日志文件的空间，以便由事务日志重新使用。 必须定期截断事务日志，防止占满分配的空间。 几个因素可能延迟日志截断，因此监视日志大小很重要。 某些操作可以最小日志量进行记录以减少其对事务日志大小的影响。  
  
-日志截断从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的逻辑事务日志中删除不活动的[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，释放逻辑日志中的空间以便物理事务日志重用这些空间。 如果事务日志从不截断，它最终将填满分配给物理日志文件的所有磁盘空间。  
+日志截断从 [ 数据库的逻辑事务日志中删除不活动的](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)虚拟日志文件 (VLF)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，释放逻辑日志中的空间以便物理事务日志重用这些空间。 如果事务日志从不截断，它最终将填满分配给物理日志文件的所有磁盘空间。  
   
 为了避免空间不足，除非由于某些原因延迟日志截断，否则将在以下事件后自动进行截断：  
   
@@ -95,13 +95,13 @@ ms.locfileid: "79287801"
 > 日志截断并不减小物理日志文件的大小。 若要减少物理日志文件的物理大小，则必须收缩日志文件。 有关收缩物理日志文件大小的信息，请参阅 [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)。  
 > 但是，请记住[可能延迟日志截断的因素](#FactorsThatDelayTruncation)。 如果在日志收缩后还需要存储空间，则会再次增加事务日志，导致在增加日志操作期间产生性能开销。
   
-##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  在日志记录长时间处于活动状态时，事务日志截断将延迟，事务日志可能填满，这一点我们在本主题（很长）前面提到过。  
   
 > [!IMPORTANT]
 > 有关如何响应已满事务日志的信息，请参阅[解决事务日志已满的问题（SQL Server 错误 9002）](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
- 实际上，日志截断会由于多种原因发生延迟。 查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图的 **log_reuse_wait** 和 **log_reuse_wait_desc** 列，了解哪些因素（如果存在）阻止日志截断。 下表对这些列的值进行了说明。  
+ 实际上，日志截断会由于多种原因发生延迟。 查询 **sys.databases** 目录视图的 **log_reuse_wait** 和 [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列，了解哪些因素（如果存在）阻止日志截断。 下表对这些列的值进行了说明。  
   
 |log_reuse_wait 值|log_reuse_wait_desc 值|说明|  
 |----------------------------|----------------------------------|-----------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "79287801"
 |14|OTHER_TRANSIENT|当前未使用此值。|  
 |16|XTP_CHECKPOINT|需要执行内存中 OLTP 检查点。对于内存优化表，如果上次检查点后事务日志文件变得大于 1.5 GB（包括基于磁盘的表和内存优化表），则执行自动检查点<br /> 有关详细信息，请参阅[内存优化表的检查点操作](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md)和[内存中优化表的日志记录和检查点流程](https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
-##  <a name="MinimallyLogged"></a> 可尽量减少日志量的操作  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> 可尽量减少日志量的操作  
 最小日志记录  是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志 [恢复模式](../backup-restore/recovery-models-sql-server.md) 下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
 > [!NOTE]
@@ -133,7 +133,7 @@ ms.locfileid: "79287801"
   
  下列操作在完整恢复模式下执行完整日志记录，而在简单和大容量日志恢复模式下按最小方式记录日志：  
   
--   批量导入操作（[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+-   批量导入操作（[bcp](../../tools/bcp-utility.md)、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)和 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 启用事务复制时，将完全记录 `BULK INSERT` 操作，即使处于大容量日志恢复模式下。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "79287801"
   
 启用事务复制时，将完全记录 `SELECT INTO` 操作，即使处于大容量日志恢复模式下。  
   
--   插入或追加新数据时，使用 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句中的 `.WRITE` 子句部分更新到大型值数据类型。 注意，在更新现有值时没有使用最小日志记录。 有关大型值数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
+-   插入或追加新数据时，使用 `.WRITE`UPDATE[ 语句中的 ](../../t-sql/queries/update-transact-sql.md) 子句部分更新到大型值数据类型。 注意，在更新现有值时没有使用最小日志记录。 有关大型值数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
 -   在[nUPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 语句。 注意，在更新现有值时没有使用最小日志记录。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "79287801"
   
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆重新生成（如果适用）。 `DROP INDEX` 操作期间将始终完整记录索引页的释放操作  。
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **管理事务日志**  
   
 -   [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

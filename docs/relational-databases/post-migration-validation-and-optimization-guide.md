@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909159"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
@@ -29,9 +29,9 @@ ms.locfileid: "72909159"
 
 以下是迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 平台后会遇到的一些常见性能方案及其应对方法。 其中包括从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]（从较低版本迁移到较高版本），以及从外部平台（如 Oracle、DB2、MySQL 和 Sybase）迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的方案。
 
-## <a name="CEUpgrade"></a> 由于 CE 版本变更导致的查询回归
+## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> 由于 CE 版本变更导致的查询回归
 
-适用于：从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  。
+适用于：从 **迁移到**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 从较低版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本，且将[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)升级到最新可用级别时，工作负载可能会面临性能回归风险。
 
@@ -47,7 +47,7 @@ ms.locfileid: "72909159"
 
 有关本主题的详细信息，请参阅[在升级到更高版本 SQL Server 的过程中保持性能稳定性](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)。
 
-## <a name="ParameterSniffing"></a>对参数截取的敏感性
+## <a name="sensitivity-to-parameter-sniffing"></a><a name="ParameterSniffing"></a>对参数截取的敏感性
 
 **适用于：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
@@ -68,7 +68,7 @@ ms.locfileid: "72909159"
 > [!TIP] 
 > 利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 计划分析功能快速识别这是否是一个问题。 请访问[此处](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)了解更多可用信息。
 
-## <a name="MissingIndexes"></a>缺失索引
+## <a name="missing-indexes"></a><a name="MissingIndexes"></a>缺失索引
 
 **适用于：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
@@ -86,7 +86,7 @@ ms.locfileid: "72909159"
 > [!TIP] 
 > 此类预先存在的脚本示例包括 [Index Creation](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) 和 [Index Information](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information)。 
 
-## <a name="InabilityPredicates"></a>无法使用谓词筛选数据
+## <a name="inability-to-use-predicates-to-filter-data"></a><a name="InabilityPredicates"></a>无法使用谓词筛选数据
 
 **适用于：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
@@ -115,7 +115,7 @@ ms.locfileid: "72909159"
 > [!NOTE] 
 > 可以编程方式完成上述所有操作。
 
-## <a name="TableValuedFunctions"></a>使用表值函数（多语句表值函数和内联表值函数）
+## <a name="use-of-table-valued-functions-multi-statement-vs-inline"></a><a name="TableValuedFunctions"></a>使用表值函数（多语句表值函数和内联表值函数）
 
 **适用于：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
@@ -162,7 +162,7 @@ ms.locfileid: "72909159"
 
 2.  如果问题更复杂，请考虑使用内存优化表或临时表中存储的中间结果。
 
-##  <a name="Additional_Reading"></a> 其他阅读主题
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他阅读主题
 
  [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 1ce8df82856f7a6a495fdd026dec0d46eaba4c89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287519"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>为 SQL Server 复制指定架构选项
@@ -44,17 +44,17 @@ ms.locfileid: "76287519"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果在创建发布后更改架构选项，则必须生成新的快照。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   有关架构选项的完整列表，请参阅 `@schema_option`sp_addarticle &#40;Transact-SQL&#41;[ 和 ](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_addmergearticle &#40;Transact-SQL&#41;[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 参数。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在“项目属性 - **项目>”对话框的“属性”选项卡上指定架构选项，例如是否将约束和触发器复制到订阅服务器。** **\<** 此选项卡可在新建发布向导和“发布属性 - **发布>”对话框中获得。\<** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-schema-options"></a>指定架构选项  
@@ -76,7 +76,7 @@ ms.locfileid: "76287519"
   
 5.  如果处于“发布属性 - **发布>”对话框中，请单击“确定”以保存并关闭该对话框。\<**   
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  架构选项指定为十六进制值，该值为一个或多个选项的 [|（位或）](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 结果。 有关详细信息，请参阅 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 和 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。  
   
 > [!NOTE]  

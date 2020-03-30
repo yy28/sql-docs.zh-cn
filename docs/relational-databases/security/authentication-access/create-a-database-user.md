@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981930"
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
@@ -38,7 +38,7 @@ ms.locfileid: "73981930"
   
  可以通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]来创建数据库用户。  
   
-##  <a name="Understanding"></a> 了解用户类型  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> 了解用户类型  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 提供了创建数据库用户时的 6 个选项。 下图在绿框中显示了这 6 个选项，并展示了选项所代表的含义。  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981930"
   
 > **提示！** 对于组织内的用户，最好选择使用 Windows 身份验证。因为组织内的用户不需要记住其他密码，而且 Windows 身份验证可以提供其他安全功能，例如 Kerberos。  
   
-##  <a name="Restrictions"></a> 背景  
+##  <a name="background"></a><a name="Restrictions"></a> 背景  
  用户是数据库级别安全主体。 登录名必须映射到数据库用户才能连接到数据库。 一个登录名可以作为不同用户映射到不同的数据库，但在每个数据库中只能作为一个用户进行映射。 在部分包含数据库中，可以创建不具有登录名的用户。 有关包含的数据库用户的详细信息，请参阅 [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)。 如果在数据库中启用了 guest 用户，未映射到数据库用户的登录名可作为 guest 用户进入该数据库。  
   
 > **重要说明！** guest 用户通常处于禁用状态。 除非有必要，否则不要启用 guest 用户。  
   
  可以向作为安全主体的用户授予权限。 用户的作用域是数据库。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 **ALTER ANY USER** 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SSMS 创建用户  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> 使用 SSMS 创建用户  
   
  
 1.  在对象资源管理器中，展开 **“数据库”** 文件夹。  
@@ -140,7 +140,7 @@ ms.locfileid: "73981930"
      **删除**  
      删除所选扩展属性。  
   
-##  <a name="TsqlProcedure"></a> 使用 T-SQL 创建用户  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> 使用 T-SQL 创建用户  
     
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287035"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步请求订阅
@@ -36,7 +36,7 @@ ms.locfileid: "76287035"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  订阅由分发代理（对于快照复制和事务复制）或合并代理（对于合并复制）进行同步。 代理可以连续运行、按需运行或按计划运行。 有关如何指定同步计划的详细信息，请参阅[指定同步计划](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
  在 **中的** “本地订阅” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]文件夹中，按需同步订阅。  
@@ -53,7 +53,7 @@ ms.locfileid: "76287035"
   
 5.  单击“关闭”  。  
   
-##  <a name="ReplProg"></a> Replication Agents  
+##  <a name="replication-agents"></a><a name="ReplProg"></a> Replication Agents  
  可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步请求订阅。 被调用的复制代理可执行文件将取决于请求订阅所属的发布的类型。 有关详细信息，请参阅 [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md)。  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ ms.locfileid: "76287035"
   
     -   **-SubscriberSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> 示例（复制代理）  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> 示例（复制代理）  
  以下示例启动分发代理以同步请求订阅。 所有连接均使用 Windows 身份验证实现。  
   
 ```  
@@ -181,7 +181,7 @@ SET Publication=AdvWorksSalesOrdersMerge
 -Validate 3  -ParallelUploadDownload 1 ;  
 ```  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  可以使用复制管理对象 (RMO) 和托管代码对复制代理功能的访问权限，以编程方式同步请求订阅。 用于同步请求订阅的类取决于订阅所属的发布的类型。  
   
 > [!NOTE]
@@ -241,7 +241,7 @@ SET Publication=AdvWorksSalesOrdersMerge
         > [!NOTE]  
         >  如果您在创建请求订阅时将 **false** for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> （默认值），则还需要指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>复制代理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>复制代理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>复制代理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>复制代理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>复制代理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>，并选择性地指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>复制代理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>复制代理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> ，因为 [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  该示例将请求订阅与事务发布进行同步，其中，代理使用代理作业进行异步启动。  
   
 ```csharp  

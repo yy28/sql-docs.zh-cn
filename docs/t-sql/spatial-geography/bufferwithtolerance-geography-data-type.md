@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066537"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance（geography 数据类型）
@@ -59,12 +59,12 @@ _relative_
 ## <a name="return-types"></a>返回类型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
-CLR 返回类型：**SqlGeography**  
+CLR 返回类型：SqlGeography   
   
 ## <a name="remarks"></a>备注  
 如果 distance  不是数字 (NAN)，或如果 distance  是正/负无穷大，此方法会抛出 ArgumentException  。  如果 tolerance  为零 (0)，而不是数字 (NaN)、负数或正/负无穷大，此方法也会抛出 ArgumentException  。  
   
-`STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到两极的距离时，`STBuffer()` 在两极返回 FullGlobe 实例   。  
+`STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到两极的距离时， **在两极返回 FullGlobe 实例**`STBuffer()`  。  
   
 在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException   ：  
   

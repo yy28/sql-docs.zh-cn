@@ -17,17 +17,17 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78370540"
 ---
 # <a name="user-defined-functions"></a>用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   与编程语言中的函数类似，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的例程。 返回值可以是单个标量值或结果集。  
    
-##  <a name="Benefits"></a> 用户定义函数  
+##  <a name="user-defined-functions"></a><a name="Benefits"></a> 用户定义函数  
 为什么使用用户定义函数 (UDF)？ 
   
 -   允许模块化程序设计。  
@@ -47,7 +47,7 @@ ms.locfileid: "78370540"
 > [!IMPORTANT]
 > 查询中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] UDF 只能针对单个线程执行（串行执行计划）。 因此，使用 UDF 会阻止并行查询处理。 有关并行查询处理的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。
   
-##  <a name="FunctionTypes"></a> 函数类型  
+##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> 函数类型  
 **标量函数**  
  用户定义标量函数返回在 RETURNS 子句中定义的类型的单个数据值。 对于内联标量函数，返回的标量值是单个语句的结果。 对于多语句标量函数，函数体可以包含一系列返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 返回类型可以是除 **text**、 **ntext**、 **image**、 **cursor**和 **timestamp**外的任何数据类型。 
  **[示例。](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
@@ -58,7 +58,7 @@ ms.locfileid: "78370540"
 **系统函数**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了许多系统函数，可用于执行各种操作。 这些函数不能修改。 有关详细信息，请参阅[内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)、[系统存储函数 (Transact-SQL)](~/relational-databases/system-functions/system-functions-category-transact-sql.md) 和[动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
-##  <a name="Guidelines"></a> 准则  
+##  <a name="guidelines"></a><a name="Guidelines"></a> 准则  
  在函数中，将会区别处理导致语句被取消并继续执行模块（如触发器或存储过程）中的下一个语句的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误。 在函数中，上述错误会导致停止执行函数。 接下来该操作导致取消调用该函数的语句。  
   
  `BEGIN...END` 块中的语句不能有任何副作用。 函数副作用是指对具有函数外作用域（例如数据库表的修改）的资源状态的任何永久性更改。 函数中的语句唯一能做的更改是对函数上的局部对象（如局部游标或局部变量）的更改。 不能在函数中执行的操作包括：对数据库表的修改，对不在函数上的局部游标进行操作，发送电子邮件，尝试修改目录，以及生成返回至用户的结果集。  
@@ -71,7 +71,7 @@ ms.locfileid: "78370540"
 > [!IMPORTANT]   
 > 有关用户定义函数的详细信息和性能注意事项，请参阅[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。 
   
-##  <a name="ValidStatements"></a> 函数中的有效语句  
+##  <a name="valid-statements-in-a-function"></a><a name="ValidStatements"></a> 函数中的有效语句  
 函数中的有效语句的类型包括：  
   
 -   `DECLARE` 语句，该语句可用于定义函数局部的数据变量和游标。  
@@ -103,7 +103,7 @@ ms.locfileid: "78370540"
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- 下列不确定性内置函数不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数中使用  。  
+ 下列不确定性内置函数不能在  **用户定义函数中使用**[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 |||  
 |-|-|  
@@ -112,10 +112,10 @@ ms.locfileid: "78370540"
   
  有关确定性和不确定性的内置系统函数的列表，请参阅[确定性和不确定性的函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
-##  <a name="SchemaBound"></a> 绑定到架构的函数  
+##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> 绑定到架构的函数  
  `CREATE FUNCTION` 支持 `SCHEMABINDING` 子句，后者可将函数绑定到它引用的任何对象（如表、视图和其他用户定义函数）的架构。 尝试更改或删除绑定到架构的函数所引用的任何对象失败。  
   
- 必须满足以下条件才能在 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 中指定 `SCHEMABINDING`：  
+ 必须满足以下条件才能在 `SCHEMABINDING`CREATE FUNCTION[ 中指定 ](../../t-sql/statements/create-function-transact-sql.md)：  
   
 -   该函数引用的所有视图和用户定义函数必须是绑定到架构的视图和函数。  
   
@@ -125,10 +125,10 @@ ms.locfileid: "78370540"
   
  可使用 `ALTER FUNCTION` 删除架构绑定。 `ALTER FUNCTION` 语句会在不指定 `WITH SCHEMABINDING` 的情况下重新定义函数。  
   
-##  <a name="Parameters"></a> 指定参数  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a> 指定参数  
  用户定义函数采用零个或多个输入参数并返回标量值或表。 一个函数最多可以有 1024 个输入参数。 如果函数的参数有默认值，则调用该函数时必须指定 DEFAULT 关键字，才能获取默认值。 此行为与在用户定义存储过程中具有默认值的参数不同，在后一种情况下，忽略参数同样意味着使用默认值。 用户定义函数不支持输出参数。  
   
-##  <a name="Tasks"></a> 更多示例！  
+##  <a name="more-examples"></a><a name="Tasks"></a> 更多示例！  
   
 |||  
 |-|-|  

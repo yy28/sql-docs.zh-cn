@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831838"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
@@ -70,7 +70,7 @@ PATINDEX 基于输入的排序规则执行比较。 若要以指定排序规则�
 ## <a name="examples"></a>示例  
   
 ### <a name="a-simple-patindex-example"></a>A. 简单 PATINDEX 示例  
- 以下示例检查字符 `ter` 起始位置的短字符串 (`interesting data`)。  
+ 以下示例检查字符 `interesting data` 起始位置的短字符串 (`ter`)。  
   
 ```sql  
 SELECT position = PATINDEX('%ter%', 'interesting data');  
@@ -85,7 +85,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. 在 PATINDEX 中使用模式  
-以下示例查找模式 `ensure` 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `DocumentSummary` 表中 `Document` 列特定行中的开始位置。  
+以下示例查找模式 `ensure` 在 `DocumentSummary` 数据库的 `Document` 表中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列特定行中的开始位置。  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  

@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285127"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供源查询（SQL Server 导入和导出向导）
@@ -59,7 +59,7 @@ WHERE CommissionPct > 0.015
  **“浏览”**  
  使用“打开”对话框选择包含 SQL 查询的文本的已保存文件  。 选择一个文件可以将该文件中的文本复制到“SQL 语句”  文本框中。  
  
-## <a name="excelQueries"></a> 为 Excel 提供源查询
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> 为 Excel 提供源查询
 
 > [!IMPORTANT]
 > 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
@@ -88,6 +88,6 @@ WHERE CommissionPct > 0.015
   
 -   对于大多数目标，下一页是“选择源表和源视图”  。 在此页上，可查看提供的查询以及（可选）选择要复制的列和预览示例数据。 有关详细信息，请参阅 [选择源表和源视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)。  
   
--   如果目标是平面文件，则下一页是“配置平面文件目标”  。 在此页上，可为目标平面文件指定格式设置选项。 （配置平面文件之后，随后下一页是“选择源表和源视图”  。）有关详细信息，请参阅[配置平面文件目标](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
+-   如果目标是平面文件，则下一页是“配置平面文件目标”  。 在此页上，可为目标平面文件指定格式设置选项。 （配置平面文件之后，随后下一页是“选择源表和源视图”  。）有关详细信息，请参阅 [配置平面文件目标](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
 
 

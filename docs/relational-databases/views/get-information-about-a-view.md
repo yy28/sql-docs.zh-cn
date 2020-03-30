@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909884"
 ---
 # <a name="get-information-about-a-view"></a>获取有关视图的信息
@@ -48,14 +48,14 @@ ms.locfileid: "72909884"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  使用 `sp_helptext` 返回视图的定义需要 **public** 角色的成员身份。 使用 `sys.sql_expression_dependencies` 查找视图的所有依赖关系需要对该数据库的 VIEW DEFINITION 权限以及对数据库的 `sys.sql_expression_dependencies` 的 SELECT 权限。 系统对象定义（如 SELECT OBJECT_DEFINITION 中返回的对象定义）是公开可见的。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>使用对象资源管理器获取视图属性  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72909884"
   
 4.  选择“[视图名称] 依赖的对象”  可以显示由该视图引用的对象。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>获取视图的定义和属性  
   

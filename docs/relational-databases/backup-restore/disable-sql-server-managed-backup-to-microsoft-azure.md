@@ -11,20 +11,20 @@ ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d85df8c4d07a61c75dcb42eadbc9c7cdae4faad6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257968"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>对 Microsoft Azure 禁用 SQL Server 托管备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍了如何在数据库级别和实例级别禁用或暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
-##  <a name="DatabaseDisable"></a> 为数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+##  <a name="disable-ss_smartbackup-for-a-database"></a><a name="DatabaseDisable"></a> 为数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  通过使用系统存储过程 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]managed_backup.sp_backup_config_basic (Transact SQL)[，可以禁用 ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 设置。 *enable_backup 参数用于启用和禁用特定数据库的 \@ 配置；其中，1 表示启用配置设置，0 表示禁用配置设置*[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
-#### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>为特定数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
+#### <a name="to-disable-ss_smartbackup-for-a-specific-database"></a>为特定数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -42,10 +42,10 @@ GO
 > [!NOTE]
 > 可能还需要根据自己的配置设置 `@container_url` 参数。
   
-##  <a name="DatabaseAllDisable"></a> 为实例上的所有数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+##  <a name="disable-ss_smartbackup-for-all-the-databases-on-the-instance"></a><a name="DatabaseAllDisable"></a> 为实例上的所有数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  下面的过程适用于要从实例上当前启用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的所有数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置的情形。  存储 URL、保持和 SQL 凭据之类的配置设置将在元数据中保留；并且如果以后为数据库启用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，则可以使用这些设置。 如果你要暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服务，则可以使用在本主题后面部分中说明的主开关。  
   
-#### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-for-all-the-databases"></a>为所有数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
+#### <a name="to-disable-ss_smartbackup-for-all-the-databases"></a>为所有数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -109,10 +109,10 @@ SELECT * FROM managed_backup.fn_backup_db_config (NULL);
 GO  
 ```  
   
-##  <a name="InstanceDisable"></a> 禁用实例的默认 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 设置  
+##  <a name="disable-default-ss_smartbackup-settings-for-the-instance"></a><a name="InstanceDisable"></a> 禁用实例的默认 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 设置  
  实例级别的默认设置适用于在该实例上创建的所有新数据库。  如果不再需要默认设置，则可以通过使用 managed_backup.sp_backup_config_basic 系统存储过程（将 **database_name 参数设置为 NULL），禁用此配置** *\@* 。 禁用并不会删除存储 URL、保持设置或 SQL 凭据名称之类的其他配置设置。 如果以后为该实例启用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，将使用这些设置。  
   
-#### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-default-configuration-settings"></a>禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 默认配置设置：  
+#### <a name="to-disable-ss_smartbackup-default-configuration-settings"></a>禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 默认配置设置：  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -126,10 +126,10 @@ GO
     GO
     ```  
   
-##  <a name="InstancePause"></a> 在实例级别暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+##  <a name="pause-ss_smartbackup-at-the-instance-level"></a><a name="InstancePause"></a> 在实例级别暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  有时可能需要在短期内临时暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服务。  **managed_backup.sp_backup_master_switch** 系统存储过程允许在实例级别禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服务。  使用相同的存储过程恢复 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 \@state 参数用于定义是应禁用还是启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
-#### <a name="to-pause-includess_smartbackupincludesss-smartbackup-mdmd-services-using-transact-sql"></a>使用 Transact-SQL 暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服务：  
+#### <a name="to-pause-ss_smartbackup-services-using-transact-sql"></a>使用 Transact-SQL 暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服务：  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -144,7 +144,7 @@ EXEC managed_backup.sp_backup_master_switch @new_state=0;
 Go
 ```  
   
-#### <a name="to-resume-includess_smartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>使用 Transact-SQL 恢复 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
+#### <a name="to-resume-ss_smartbackup-using-transact-sql"></a>使用 Transact-SQL 恢复 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   

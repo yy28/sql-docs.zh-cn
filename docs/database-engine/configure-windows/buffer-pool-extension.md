@@ -11,10 +11,10 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76918344"
 ---
 # <a name="buffer-pool-extension"></a>缓冲池扩展
@@ -26,7 +26,7 @@ ms.locfileid: "76918344"
   
  数据和索引页从磁盘读入缓冲池，修改后的页（也称为脏页）写回磁盘。 服务器和数据库检查点上的内存压力会造成缓冲区缓存中的热（活动）脏页被逐出缓存并写入机械磁盘，然后又读回到缓存中。 这些 I/O 操作通常是 4 到 16 KB 数据的小型随机读和写操作。 小型随机 I/O 模式会导致频繁搜索、机械磁盘臂争用、I/O 滞后时间延长以及系统的总 I/O 吞吐量减少。  
   
- 解决这些 I/O 瓶颈的典型方法是添加更多 DRAM，或者添加高性能 SAS 主轴。 虽然这些方法很有用，但它们具有明显缺点：DRAM 比数据存储驱动器成本更高，增加主轴数会增加硬件购置的资本支出，并且功耗和部件故障概率都会提高，从而增加运行成本。  
+ 解决这些 I/O 瓶颈的典型方法是添加更多 DRAM，或者添加高性能 SAS 主轴。 虽然这些方法很有用，但它们有重大缺点：DRAM 比数据存储驱动器更昂贵，增加主轴数会增加硬件购置的资本支出，并且功耗和部件故障概率都会提高，从而增加运行成本。  
   
  缓冲池扩展功能通过非易失性存储器（通常为 SSD）来扩展缓冲池缓存。 由于这种扩展，缓冲池可以容纳更大的数据库工作集，可强制在 RAM 和 SSD 之间对 I/O 分页。 这会有效地将小型随机 I/O 从机械磁盘卸载到固态硬盘。 由于固态硬盘滞后时间短且具有更佳随机 I/O 性能，缓冲池扩展可显著提高 I/O 吞吐量。  
   

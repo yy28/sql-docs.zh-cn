@@ -20,10 +20,10 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68105027"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
@@ -62,7 +62,7 @@ DISTINCT
 `CHECKSUM_AGG` 具有类似于其他聚合函数的功能。 有关详细信息，请参阅[聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
-这些示例使用 `CHECKSUM_AGG` 检测 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `ProductInventory` 表的 `Quantity` 列中的更改。
+这些示例使用 `CHECKSUM_AGG` 检测 `Quantity` 数据库中 `ProductInventory` 表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列中的更改。
   
 ```sql
 --Get the checksum value before the column value is changed.  

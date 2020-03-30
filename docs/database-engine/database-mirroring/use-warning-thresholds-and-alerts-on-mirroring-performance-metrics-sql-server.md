@@ -19,10 +19,10 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74820901"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74820901"
  针对镜像数据库建立监视之后，系统管理员可以为多个关键绩效指标配置警告阈值。 同时，管理员还可以为这些数据库镜像事件和其他数据库镜像事件配置警报。  
   
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> 性能指标和警告阈值  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> 性能指标和警告阈值  
  下表列出可为其配置警告的性能指标，说明相应的警告阈值并列出相应的数据库镜像监视器标签。  
   
 |性能指标|警告阈值|数据库镜像监视器标签|  
@@ -44,7 +44,7 @@ ms.locfileid: "74820901"
   
  对于上述任何一个性能指标，系统管理员都可以指定镜像数据库的阈值。 有关详细信息，请参阅本主题后面的 [设置和管理警告阈值](#SetUpManageWarningThresholds)。  
   
-##  <a name="SetUpManageWarningThresholds"></a> 设置和管理警告阈值  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> 设置和管理警告阈值  
  系统管理员可以为关键镜像性能指标配置一个或多个警告阈值。 我们建议为伙伴双方都设置给定警告的阈值，以确保即使出现数据库故障转移的情况，警告也会一直保留。 每个伙伴的适当阈值都取决于该伙伴系统的性能。  
   
  可以使用下列任意一项配置和管理警告阈值：  
@@ -80,7 +80,7 @@ ms.locfileid: "74820901"
 >   
 >  。  
   
-##  <a name="UseAlerts"></a> 将警报用于镜像数据库  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a> 将警报用于镜像数据库  
  监视镜像数据库的一个重要组成部分就是针对重要的数据库镜像事件配置警报。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可生成下列数据库镜像事件类型：  
   
 -   性能阈值事件  
@@ -101,7 +101,7 @@ ms.locfileid: "74820901"
 > [!IMPORTANT]  
 >  对于所有镜像会话，我们极力建议您将数据库配置为针对任意状态更改事件发送警报。 除非专门通过手动配置更改来实现状态更改，否则会出现危及数据安全的情况。 为了帮助保护数据，请找出状态发生意外更改的原因并予以纠正。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **使用 SQL Server Management Studio 创建警报**  
   
 -   [使用错误号创建警报](../../ssms/agent/create-an-alert-using-an-error-number.md)  

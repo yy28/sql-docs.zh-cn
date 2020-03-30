@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7d48edb0024261bee87071cbd3ac77e3c49aabfd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284694"
 ---
 # <a name="disable-publishing-and-distribution"></a>禁用发布和分发
@@ -52,13 +52,13 @@ ms.locfileid: "76284694"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   若要禁用发布和分发，所有分发数据库和发布数据库都必须联机。 如果存在分发数据库或发布数据库的“数据库快照”  ，则在禁用发布和分发前，必须先删除这些数据库快照。 数据库快照是数据库的只读脱机副本，与复制快照无关。 有关详细信息，请参阅[数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用禁用发布和分发向导禁用发布和分发。  
   
 #### <a name="to-disable-publishing-and-distribution"></a>禁用发布和分发  
@@ -69,7 +69,7 @@ ms.locfileid: "76284694"
   
 3.  完成禁用发布和分发向导中的步骤。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式禁用发布和分发。  
   
 #### <a name="to-disable-publishing-and-distribution"></a>禁用发布和分发  
@@ -91,7 +91,7 @@ ms.locfileid: "76284694"
     > [!NOTE]  
     > 如果在您执行 [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) 和 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)之前并未删除所有复制发布和分发对象，这些过程将返回错误。 若要在删除发布服务器或分发服务器时删除所有与复制相关的对象，必须将 `@no_checks` 参数设置为 1  。 如果发布服务器或分发服务器脱机或无法访问，则可以将 `@ignore_distributor` 参数设置为 1  ，以便能够删除它们；不过，必须手动删除任何保留的发布和分发对象。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例脚本从订阅数据库删除复制对象。  
   
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_1.sql)]  
@@ -100,7 +100,7 @@ ms.locfileid: "76284694"
   
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_2.sql)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
   
 #### <a name="to-disable-publishing-and-distribution"></a>禁用发布和分发  
   
@@ -120,7 +120,7 @@ ms.locfileid: "76284694"
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 在没有首先验证所有本地发布数据库是否已禁用以及分发数据库是否已卸载的情况下，将 **true** 值传递给 *force* 以删除分发服务器上的所有复制对象。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  此示例将删除分发服务器上的发布服务器注册，删除分发数据库并卸载分发服务器。  
   
  [!code-cs[HowTo#rmo_DropDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpub)]  

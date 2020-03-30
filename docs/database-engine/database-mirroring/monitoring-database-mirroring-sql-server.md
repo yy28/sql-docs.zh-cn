@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212286"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>监视数据库镜像 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "70212286"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="MonitoringStatus"></a> 监视镜像状态  
+##  <a name="monitoring-mirroring-status"></a><a name="MonitoringStatus"></a> 监视镜像状态  
  若要对服务器实例上一个或多个镜像数据库进行监视设置和管理，可以使用数据库镜像监视器或 **dbmmonitor** 系统存储过程。 可以在镜像会话期间监视镜像数据库，以验证数据是否流动以及流动的情况。  
   
  具体而言，监视镜像数据库可以：  
@@ -63,7 +63,7 @@ ms.locfileid: "70212286"
   
      如果新状态行中的值超过阈值，则系统便会向 Windows 事件日志发送提示性事件。 系统管理员可以随后根据这些事件手动配置警报。 有关详细信息，请参阅 [使用镜像性能度量的警告阈值和警报 (SQL Server)](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
-###  <a name="tools_for_monitoring_dbm_status"></a> 数据库镜像状态监视工具  
+###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> 数据库镜像状态监视工具  
  可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 系统存储过程来监视镜像状态。 两个系统管理员（即  sysadmin 固定服务器角色成员以及在**msdb** 数据库中，由系统管理员添加到 **dbm_monitor** 固定数据库角色的用户）均可使用这些工具监视本地服务器实例上任何镜像数据库中的数据库镜像。 使用上述任意一种工具时，系统管理员还可以手动刷新镜像状态。  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ ms.locfileid: "70212286"
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>删除数据库镜像监视器作业  
  数据库镜像监视器作业（ **“数据库镜像监视器作业”** ）在删除之前将一直保留。 必须由系统管理员对监视作业进行管理。 若要删除  “数据库镜像监视器作业”，请使用 **sp_dbmmonitordropmonitoring**。 有关详细信息，请参阅 [sp_dbmmonitordropmonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)。  
   
-###  <a name="perf_metrics_of_dbm_monitor"></a> 数据库镜像监视器显示的状态  
+###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> 数据库镜像监视器显示的状态  
  数据库镜像监视器的 **“状态”** 页描述了镜像伙伴以及镜像会话的状态。 状态信息包括性能指标（如事务日志的状态）以及在会话没有同步时，有助于当前对完成故障转移所需时间和潜在数据丢失进行评估的其他信息。 此外， **“状态”** 页还概略显示有关镜像会话的状态和信息。  
   
 > [!NOTE]  
@@ -248,7 +248,7 @@ ms.locfileid: "70212286"
   
     -   带自动故障转移功能的高安全(同步)  
   
-##  <a name="AdditionalSources"></a> 有关镜像数据库的其他信息源  
+##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> 有关镜像数据库的其他信息源  
  除了使用数据库镜像监视器和 dbmmonitor 存储过程监视镜像数据库并对所监视的性能变量设置警报之外， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 还提供了用于数据库镜像的目录视图、性能计数器和事件通知。  
   
  **本节内容：**  
@@ -259,7 +259,7 @@ ms.locfileid: "70212286"
   
 -   [数据库镜像事件通知](#DbmEventNotif)  
   
-###  <a name="DbmMetadata"></a> 数据库镜像元数据  
+###  <a name="database-mirroring-metadata"></a><a name="DbmMetadata"></a> 数据库镜像元数据  
  通过下列目录视图或动态管理视图公开的元数据对每个数据库镜像会话进行了说明：  
   
 -   **sys.database_mirroring**  
@@ -280,7 +280,7 @@ ms.locfileid: "70212286"
   
      有关详细信息，请参阅 [sys.dm_db_mirroring_connections (Transact-SQL)](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)。  
   
-###  <a name="DbmPerfCounters"></a> 数据库镜像性能计数器  
+###  <a name="database-mirroring-performance-counters"></a><a name="DbmPerfCounters"></a> 数据库镜像性能计数器  
  使用性能计数器可以监视数据库镜像性能。 例如，可以检查 **Transaction Delay** 计数器以确定数据库镜像是否影响主体服务器的性能，可以检查 **Redo Queue** 和 **Log Send Queue** 计数器以确定镜像数据库与主体数据库之间保持同步的情况。 还可以检查 **Log Bytes Sent/sec** 计数器以监视每秒发送的日志量。  
   
  在任一伙伴的性能监视器中，性能计数器可用于数据库镜像性能对象 (**SQLServer:Database Mirroring**)。 有关详细信息，请参阅 [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)。  
@@ -289,7 +289,7 @@ ms.locfileid: "70212286"
   
 -   [启动系统监视器 (Windows)](../../relational-databases/performance/start-system-monitor-windows.md)  
   
-###  <a name="DbmEventNotif"></a> 数据库镜像事件通知  
+###  <a name="database-mirroring-event-notifications"></a><a name="DbmEventNotif"></a> 数据库镜像事件通知  
  事件通知是特殊类型的数据库对象。 执行事件通知可响应各种 Transact-SQL 数据定义语言 (DDL) 语句和 SQL 跟踪事件，并将有关服务器事件和数据库事件的信息发送到 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。  
   
  下列事件可用于数据库镜像：  
@@ -302,7 +302,7 @@ ms.locfileid: "70212286"
   
      这报告与数据库镜像传输安全性相关的审核消息。 有关详细信息，请参阅 [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用镜像性能度量的警告阈值和警报 (SQL Server)](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

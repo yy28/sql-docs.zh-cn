@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 829c8e5e6f4207e721c4fa57b7cb012146e2762d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288251"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
@@ -51,7 +51,7 @@ ms.locfileid: "76288251"
   
  **配置预定义的复制警报**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[配置预定义的复制警报 (SQL Server Management Studio)](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[配置预定义的复制警报 (SQL Server Management Studio)](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>直接查看应用程序日志  
  若要查看 Windows 应用程序日志，请使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件查看器。 应用程序日志包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息以及计算机上其他许多活动的消息。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误日志不同，新的应用程序日志不是在每次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时创建（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会话都会在现有应用程序日志中写入新事件）；但是，您可以指定已记录事件的保留时间。 查看 Windows 应用程序日志时，可以筛选特定事件的日志。 有关详细信息，请参阅 Windows 文档。  
@@ -62,7 +62,7 @@ ms.locfileid: "76288251"
 ### <a name="framework-for-automating-responses"></a>用于自动生成响应的框架  
  通常，当发生警报时，能够帮助您理解引起警报的原因以及应采取的适当措施的唯一信息就包含在警报消息中。 分析此信息的过程是一个易出错且费时的过程。 复制在 **sysreplicationalerts** 系统表中提供了有关警报的其他信息，从而使自动生成响应变得更容易，因为系统表中提供的信息已按自定义程序易于使用的格式进行了分析。  
   
- 例如，如果订阅服务器 A 上的 **Sales.SalesOrderHeader** 表中的数据未通过验证， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以激发消息 20574，通知您未通过验证。 你收到的消息将是：“订阅服务器 A 上对发布 MyPublication 中项目 SalesOrderHeader 的订阅未通过数据验证”。  
+ 例如，如果订阅服务器 A 上的 **Sales.SalesOrderHeader** 表中的数据未通过验证， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以激发消息 20574，通知您未通过验证。 您收到的消息是：“订阅服务器‘A’上对发布‘MyPublication’中项目‘SalesOrderHeader’的订阅未通过数据验证”。  
   
  如果基于该消息创建响应，必须手动分析该消息中的订阅服务器名称、项目名称、发布名称和错误。 但是，因为分发代理和合并代理将相同的信息写入了 **sysreplicationalerts** （同时写入的还有代理类型、警报时间、发布数据库、订阅服务器数据库和发布类型等详细信息），所以响应作业可以直接从该表中查询相关的信息。 虽然无法将确切的行与警报的特定实例相关联，但是该表中有一个 **status** 列，可用于跟踪所服务的条目。 此表中的条目会一直保留到历史记录保持期结束。  
   

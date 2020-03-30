@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822673"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性组仪表板 (SQL Server Management Studio)
@@ -85,7 +85,7 @@ ms.locfileid: "74822673"
 > [!TIP]  
 >  单击列标题可按可用性组的名称、主实例、故障转移模式或问题对可用性组信息进行排序。  
   
-##  <a name="AvGroupDetails"></a> 可用性组详细信息  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> 可用性组详细信息  
  将为您可以从摘要屏幕中选择的可用性组显示以下详细信息：  
   
  **可用性组状态**  
@@ -104,7 +104,7 @@ ms.locfileid: "74822673"
  **群集状态**  
  群集的名称和状态，所连接的服务器实例和可用性组都是该群集的成员节点。  
   
-##  <a name="AvReplicaDetails"></a> 可用性副本详细信息  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性副本详细信息  
 
 连接到主要副本时，“可用性副本详细信息”会显示可用性组中所有副本中的信息  。 连接到次要副本时，显示内容仅显示已连接副本中的信息。  
 

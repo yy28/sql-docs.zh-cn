@@ -10,10 +10,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68141271"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
@@ -54,8 +54,8 @@ RENAME OBJECT [::] [ [database_name  . [ schema_name ] .  ] | [ schema_name .  ]
 
 更改用户定义的表的名称。 使用一部分、两部分或三部分名称指定要重命名的表。 以一部分名称的形式指定新表 new_table_name  。
 
-RENAME DATABASE [::] [ database_name TO new_database_name
-适用于：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
+RENAME DATABASE [::] [ database_name TO new_database_name*适用于：*  
+  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 将用户定义的数据库的名称从 database_name 更改为 new_database_name   。 无法将数据库重命名为以下任何 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 保留数据库名称：
 
@@ -113,7 +113,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
 ### <a name="b-rename-a-table"></a>B. 重命名表
 
-适用于：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、 
+适用于：  、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 此示例将 Customer 表重命名为 Customer1。
 
@@ -128,7 +128,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
 
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. 将表移动到另一个架构
 
-适用于：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、 
+适用于：  、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 如果要将对象移动到另一个架构，请使用 [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md)。 例如，以下语句会将表项从 product 架构移动到 dbo 架构。
 
@@ -138,7 +138,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. 在重命名表之前终止会话
 
-适用于：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、 
+适用于：  、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 请务必记住，无法重命名正在使用的表。 重命名表需要在表上使用排他锁。 如果表正在使用中，则可能需要终止使用表的会话。 若要终止会话，可以使用 KILL 命令。 应谨慎使用 KILL，因为终止会话时会回滚任何未提交的工作。 SQL 数据仓库中的会话使用“SID”作为前缀。 调用 KILL 命令时需要包括“SID”和会话编号。 此示例查看活动或空闲会话的列表，然后终止会话“SID1234”。
 

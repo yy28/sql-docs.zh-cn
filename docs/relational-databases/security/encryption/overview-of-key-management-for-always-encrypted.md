@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288731"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 密钥管理概述
@@ -46,7 +46,7 @@ ms.locfileid: "79288731"
 - **密钥轮换** - 定期使用新密钥替换现有密钥。 如果密钥已泄漏，或者为了遵守强制规定必须轮换加密密钥的组织的策略或遵从性规则，则可能需要轮换密钥。 
 
 
-## <a name="KeyManagementRoles"></a> 密钥管理角色
+## <a name="key-management-roles"></a><a name="KeyManagementRoles"></a> 密钥管理角色
 
 存在两种不同的用户角色来管理“始终加密”密钥：安全管理员和数据库管理员 (DBA)：
 
@@ -58,7 +58,7 @@ ms.locfileid: "79288731"
 ## <a name="managing-keys-with-role-separation"></a>使用角色分离管理密钥
 当使用角色分离管理“始终加密”密钥时，将由组织中的不同人员来分别承担安全管理员和 DBA 角色。 使用角色分离的密钥管理过程可确保 DBA 不具有访问密钥或托管实际密钥的密钥存储的权限，而安全管理员则不具有访问包含敏感数据的数据库的权限。 如果你的目标是确保组织中的 DBA 无法访问敏感数据，则建议使用角色分离管理密钥。 
 
-**注意：** 安全管理员生成并处理纯文本密钥，因此他们不得在托管数据库系统的相同计算机上执行任务，也不得在可被 DBA 或可能成为潜在对手的其他任何人访问的计算机上执行任务。 
+**注意：** 安全管理员生成并处理纯文本密钥，因此他们不应在托管数据库系统的同一计算机上执行任务，或者是在 DBA 或可能是潜在的攻击者的其他任何人可访问的计算机上执行任务。 
 
 ## <a name="managing-keys-without-role-separation"></a>不使用角色分离管理密钥
 当不使用角色分离管理“始终加密”密钥时，一个人可以同时承担安全管理员和 DBA 角色，这表明此人需要能够访问并管理密钥/密钥存储和密钥元数据。 如果组织使用的是 DevOps 模型，或者数据库托管在云中且主要目的是限制云管理员（而不是本地 DBA）访问敏感数据，则推荐不使用角色分离管理密钥。

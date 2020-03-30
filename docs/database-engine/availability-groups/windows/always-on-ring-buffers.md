@@ -11,10 +11,10 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822112"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>使用环形缓冲区获取有关 AlwaysOn 可用性组的运行状况信息
@@ -62,7 +62,7 @@ ORDER BY record.value('(./Record/@time)[1]','bigint') DESC
 GO  
 ```  
   
-##  <a name="BKMK_RingBufferTypes"></a>可用性组环形缓冲区类型  
+##  <a name="availability-groups-ring-buffer-types"></a><a name="BKMK_RingBufferTypes"></a>可用性组环形缓冲区类型  
  sys.dm_os_ring_buffers 中存在四种可用性组环形缓冲区。 下表介绍了这些环形缓冲区类型以及每种环形缓冲区类型“记录”列的内容示例。  
   
  **RING_BUFFER_HADRDBMGR_API**  

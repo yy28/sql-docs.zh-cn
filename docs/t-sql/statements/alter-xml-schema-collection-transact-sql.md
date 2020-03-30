@@ -29,10 +29,10 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68055958"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
@@ -57,12 +57,12 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  是 XML 架构集合的 SQL 标识符。  
   
     “架构组件”  
- 是要插入的架构组件。  
+ 要插入的架构组件。  
   
 ## <a name="remarks"></a>备注  
  使用 ALTER XML SCHEMA COLLECTION 添加其命名空间尚不在 XML 架构集合中的新 XML 架构，或向已存在于该集合的命名空间中添加新组件。  
   
- 以下示例将新的 \<element> 添加到集合 `MyColl` 的现有命名空间 `https://MySchema/test_xml_schema` 中。  
+ 以下示例将新的 \<element> 添加到集合 `https://MySchema/test_xml_schema` 的现有命名空间 `MyColl` 中。  
   
 ```  
 -- First create an XML schema collection.  

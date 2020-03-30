@@ -10,10 +10,10 @@ ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288371"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>连接到 SQL Server 数据源（SQL Server 导入和导出向导）
@@ -55,7 +55,7 @@ ms.locfileid: "79288371"
  输入源或目标提供程序的名称，或从下拉列表选择服务器。  
   
  **Integrated Security**  
- 使用 Windows 集成身份验证进行连接（建议），请指定 True  ；若要用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定 False  。 如果指定 **False**，则必须输入用户 ID 和密码。 默认值为 **False**。  
+ 使用 Windows 集成身份验证进行连接（建议），请指定 True  ；若要用  **身份验证进行连接，请指定 False**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果指定 **False**，则必须输入用户 ID 和密码。 默认值为 **False**。  
   
  **用户 ID**  
  如果正在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请输入用户名。  

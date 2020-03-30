@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134785"
 ---
 # <a name="extract-a-dac-from-a-database"></a>从数据库中提取 DAC
@@ -34,13 +34,13 @@ ms.locfileid: "68134785"
 ## <a name="before-you-begin"></a>开始之前  
  您可以从驻留在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更高版本的实例上的数据库中提取 DAC。 如果对已从 DAC 部署的数据库运行提取进程，则仅提取数据库中对象的定义。 该进程并不引用在 **msdb** 中注册的 DAC（在**中为** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]）。 该提取进程不注册当前数据库引擎实例中的 DAC 定义。 有关注册 DAC 的详细信息，请参阅 [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)。  
   
-##  <a name="LimitationsRestrictions"></a> 限制和局限  
+##  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  只能从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库中提取 DAC。 如果数据库有 DAC 中不支持的对象或包含的用户，则不能提取 DAC。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  提取 DAC 至少要求 ALTER ANY LOGIN 和数据库作用域 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 提取 DAC 可由 securityadmin 固定服务器角色的成员（也是从其提取 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以提取 DAC。  
   
-##  <a name="UsingDACExtractWizard"></a> 使用“提取数据层应用程序向导”  
+##  <a name="using-the-extract-data-tier-application-wizard"></a><a name="UsingDACExtractWizard"></a> 使用“提取数据层应用程序向导”  
  **使用向导提取 DAC**  
   
 1.  在 **“对象资源管理器”** 中，展开包含要从其提取 DAC 的数据库的实例的节点。  
@@ -61,7 +61,7 @@ ms.locfileid: "68134785"
   
     5.  [“生成包”页](#BuildPackage)  
   
-###  <a name="Introduction"></a> “向导”简介页  
+###  <a name="wizard-introduction-page"></a><a name="Introduction"></a> “向导”简介页  
  此页描述用于提取数据层应用程序的各个步骤。  
   
  **不再显示此页。** - 选中该复选框可以停止在将来显示此页。  
@@ -72,7 +72,7 @@ ms.locfileid: "68134785"
   
  [[提取向导]](#UsingDACExtractWizard)  
   
-###  <a name="SelectData"></a> Select data page  
+###  <a name="select-data-page"></a><a name="SelectData"></a> Select data page  
 选择要包括在数据层应用程序 (DAC) 包文件中的引用数据。 在 DAC 包中包括数据是可选的。 DAC 包将已包括与数据库相关的所有受支持的数据库对象和实例对象的架构。  
   
  您可以在 DAC 包文件中包含多达 10 MB 的引用数据。 但是，对于要包含在该 DAC 中的表，它们可能不包含二进制大型对象 (BLOB) 数据类型（如 **image** 或 **varchar(max)** ）。 若要提取大量数据以转移到另一个数据库，应使用 SQL Server Integration Services、大容量复制实用工具或许多其他数据迁移方法之一。  
@@ -81,7 +81,7 @@ ms.locfileid: "68134785"
   
  [[提取向导]](#UsingDACExtractWizard)  
   
-###  <a name="SetProperties"></a> Set properties page  
+###  <a name="set-properties-page"></a><a name="SetProperties"></a> Set properties page  
  使用该向导页描述数据层应用程序 (DAC)。 这些属性用于标识 DAC，并有助于与其他应用程序区分开。  
   
  **名称** - 此名称标识 DAC。 它可以不同于 DAC 包文件的名称，并且应描述您的应用程序。 例如，如果数据库用于财务应用程序，则可能要命名为“DAC Finance”。  
@@ -94,7 +94,7 @@ ms.locfileid: "68134785"
   
  **覆盖现有文件** - 如果已存在同名的 DAC 包文件，则选中此复选框可以替换该文件。  
   
-###  <a name="ValidateSummary"></a> Validation and summary page  
+###  <a name="validation-and-summary-page"></a><a name="ValidateSummary"></a> Validation and summary page  
  在此页上，该向导将验证数据层应用程序 (DAC) 是否支持所有数据库对象。 它还检查数据库对象之间的依赖关系，以便确定该组对象是否可以成功包括在 DAC 中。 之后，它将显示一个验证报表，汇总您在此向导中选择的选项。 若要更改某个选项，请单击 **“上一步”** 。 若要开始提取 DAC，请单击 **“下一步”** 。  
   
 > **注意！** 如果 DAC 不支持一个或多个对象，则“下一步”  按钮将被禁用，并且提取过程无法继续。 在这样的情况下，建议删除不支持的对象，然后再次运行此向导。  
@@ -113,7 +113,7 @@ ms.locfileid: "68134785"
   
  **保存报告** - 使你可以保存一个基于 HTML 的文件，该文件列出摘要中“DAC 对象”  节点下的所有对象。 当在 DAC 中不支持您的一些数据库对象时，此报表可能会非常有用。 使用此报表可以在尝试再次提取 DAC 前更改或删除不支持的对象。  
   
- ###  <a name="BuildPackage"></a> Build package page  
+ ###  <a name="build-package-page"></a><a name="BuildPackage"></a> Build package page  
  使用该页监视向导在提取数据层应用程序 (DAC) 时的进度。  
   
  **操作** - 在“创建并保存 DAC 包文件”  操作期间，向导从你的 SQL Server 数据库提取 DAC。 然后，一个 DAC 包将在内存中创建并保存到您指定的位置中。 单击 **“结果”** 列中的链接可以查看相应步骤的结果。  
@@ -122,7 +122,7 @@ ms.locfileid: "68134785"
   
  “完成”  - 单击此项可在完成处理后或出错时关闭向导。  
    
-##  <a name="ExtractDACPowerShell"></a> 使用 PowerShell 提取 DAC  
+##  <a name="extract-a-dac-using-powershell"></a><a name="ExtractDACPowerShell"></a> 使用 PowerShell 提取 DAC  
  **使用 PowerShell 脚本中的 Extract() 方法从数据库提取 DAC**  
   
 1.  创建一个 SMO Server 对象，并且将其设置为包含要从其提取 DAC 的数据库的实例。  

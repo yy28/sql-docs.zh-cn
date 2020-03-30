@@ -11,10 +11,10 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68086284"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中数据库文件的文件快照备份
@@ -31,7 +31,7 @@ ms.locfileid: "68086284"
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>使用 Azure 快照备份 Azure 中存储的数据库文件  
   
-### <a name="what-is-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>什么是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份  
+### <a name="what-is-a-ssnoversion-file-snapshot-backup"></a>什么是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份  
  文件快照备份包括一组 blob 的 Azure 快照（包含数据库文件）以及备份文件（包含指向这些文件快照的指针）。 每个文件快照都会与基本 blob 一起存储在容器中。 你可以指定要将备份文件本身写入到 URL、磁盘还是磁带。 建议备份到 URL。 有关备份的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)，有关备份到 URL 的详细信息，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
   
  ![快照功能的体系结构](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "快照功能的体系结构")  
@@ -46,7 +46,7 @@ ms.locfileid: "68086284"
 >  在建立事务日志备份链所需的初始完整备份（可以是文件快照备份）后，你只需执行事务日志备份，因为每个事务日志文件快照备份集均包含所有数据库文件的文件快照，并可用于执行数据库还原或日志还原。 在初始完整数据库备份之后，不需要执行其他完整或差异备份，因为 Azure Blob 存储服务可处理每个文件快照和每个数据库文件的基本 blob 的当前状态之间的差异。  
   
 > [!NOTE]  
->  有关将 Microsoft Azure Blob 存储服务和 SQL Server 2016 配合使用的教程，请参见[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+>  有关将 SQL Server 2016 用于 Microsoft Azure Blob 存储服务的教程，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ### <a name="restore-using-file-snapshot-backups"></a>使用文件快照备份还原  
  由于每个文件快照备份集均包含每个数据库文件的文件快照，因此还原过程最多需要相邻的两个文件快照备份集。 无论备份集是来自完整数据库备份还是来自日志备份，都是如此。 在使用传统流备份文件执行还原过程时，这与还原过程大不相同。 使用传统流备份时，还原过程需要使用整个备份集链：完整备份、差异备份以及一个或多个事务日志备份。 无论还原是使用文件快照备份还是使用流备份集，还原过程的恢复部分将保持不变。  
@@ -58,10 +58,10 @@ ms.locfileid: "68086284"
 ### <a name="file-backup-set-maintenance"></a>文件备份集维护  
  **删除文件快照备份集：** 不能使用 FORMAT 参数覆盖文件快照备份集。 不允许使用 FORMAT 参数以避免保留使用原始文件快照备份创建的孤立文件快照。 若要删除文件快照备份集，请使用 **sys.sp_delete_backup** 系统存储过程。 此存储过程删除组成备份集的备份文件和文件快照。 使用另一种方法删除文件快照备份集可以删除备份文件，而不删除备份集中的文件快照。  
   
- **删除孤立的备份文件快照：** 在以下情况下，你可能有孤立的文件快照：未使用“sys.sp_delete_backup”系统存储过程删除备份文件，或者在包含数据库或数据库文件的 blob 有关联的备份文件快照时，删除了该数据库或数据库文件  。 若要确定可能会孤立的文件快照，请使用 **sys.fn_db_backup_file_snapshots** 系统函数列出数据库文件的所有文件快照。 若要确定属于特定文件快照备份集的文件快照，请使用 RESTORE FILELISTONLY 系统存储过程。 然后，可以使用 **sys.sp_delete_backup_file_snapshot** 系统存储过程删除已孤立的单个备份文件快照。 可在本主题的末尾找到使用此系统函数和这些系统存储过程的示例。 有关详细信息，请参阅 [sp_delete_backup (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)、[sys.fn_db_backup_file_snapshots (Transact-SQL)](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)、[sp_delete_backup_file_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 和 [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
+ **删除孤立的备份文件快照：** 在以下情况下，你可能有孤立的文件快照：未使用 **sys.sp_delete_backup** 系统存储过程删除备份文件，或者在包含数据库或数据库文件的 blob 有关联的备份文件快照时，删除了该数据库或数据库文件。 若要确定可能会孤立的文件快照，请使用 **sys.fn_db_backup_file_snapshots** 系统函数列出数据库文件的所有文件快照。 若要确定属于特定文件快照备份集的文件快照，请使用 RESTORE FILELISTONLY 系统存储过程。 然后，可以使用 **sys.sp_delete_backup_file_snapshot** 系统存储过程删除已孤立的单个备份文件快照。 可在本主题的末尾找到使用此系统函数和这些系统存储过程的示例。 有关详细信息，请参阅 [sp_delete_backup (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)、[sys.fn_db_backup_file_snapshots (Transact-SQL)](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)、[sp_delete_backup_file_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 和 [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
   
 ### <a name="considerations-and-limitations"></a>注意事项和限制  
- **高级存储：** 使用高级存储时，适用以下限制：  
+ **高级存储：** 使用高级存储时，以下限制适用：  
   
 -   不能使用高级存储存储备份文件本身。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "68086284"
   
 -   RESTORE WITH MOVE 是必需的。  
   
--   有关高级存储的其他信息，请参阅[高级存储：Azure 虚拟机工作负载的高性能存储](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)  
+-   有关高级存储的其他信息，请参阅 [高级存储器：适用于 Azure 虚拟机工作负载的高性能存储](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)  
   
  **单个存储帐户：** 文件快照和目标 blob 必须使用相同的存储帐户。  
   
- **大容量恢复模式：** 使用大容量日志恢复模式并处理事务日志备份（包含以最低限度记录的事务）时，不能使用该事务日志备份执行日志还原（包括时间点恢复）。 而是应执行到文件快照备份集的时间的数据库还原。 此限制与流备份的限制相同。  
+ **大容量恢复模式：** 使用大容量日志恢复模式，并处理包含最低限度记录的事务的事务日志备份时，不能使用该事务日志备份执行日志还原（包括时间点恢复）。 而是应执行到文件快照备份集的时间的数据库还原。 此限制与流备份的限制相同。  
   
  **联机还原：** 使用文件快照备份时，不能执行联机还原。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
@@ -111,7 +111,7 @@ BACKUP LOG AdventureWorks2016
 GO  
 ```  
   
-## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份还原  
+## <a name="restoring-from-a-ssnoversion-file-snapshot-backup"></a>从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份还原  
  下面的示例使用事务日志文件快照备份集还原 AdventureWorks2016 数据库，并显示恢复操作。 请注意，你可以从单个事务日志文件快照备份集还原数据库。  
   
 ```  
@@ -120,7 +120,7 @@ WITH RECOVERY, REPLACE;
 GO  
 ```  
   
-## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup-to-a-point-in-time"></a>从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份还原到某个时间点  
+## <a name="restoring-from-a-ssnoversion-file-snapshot-backup-to-a-point-in-time"></a>从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份还原到某个时间点  
  下面的示例使用两个事务日志文件快照备份集将 AdventureWorks2016 还原到其指定时间点的状态，并显示恢复操作。  
   
 ```  

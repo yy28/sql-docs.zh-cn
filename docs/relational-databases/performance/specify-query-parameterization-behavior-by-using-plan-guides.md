@@ -19,10 +19,10 @@ ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8c4c252de5a9d23ecfbaee06ca6322f3b08b275f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761881"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>使用计划指南指定查询参数化行为
@@ -53,7 +53,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  请指定 PARAMETERIZATION FORCED 查询提示以对查询的参数化表单创建计划指南。  
 
     > [!IMPORTANT]  
-    >  作为参数化查询的一部分， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据文字的值和大小，将数据类型分配给替换文字值的参数。 传递给 sp_get_query_template 的 \@stmt 输出参数的常量文字值也发生同样的过程   。 由于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数化查询时，sp_create_plan_guide 的 \@params 参数中指定的数据类型必须与此查询中的数据类型匹配，因此可能必须要创建多个计划指南以涵盖全部可能的查询参数值   。  
+    >  作为参数化查询的一部分， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据文字的值和大小，将数据类型分配给替换文字值的参数。 传递给 sp_get_query_template 的 **stmt 输出参数的常量文字值也发生同样的过程\@**  。 由于在  **参数化查询时，sp_create_plan_guide 的 \@params 参数中指定的数据类型必须与此查询中的数据类型匹配，因此可能必须要创建多个计划指南以涵盖全部可能的查询参数值**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
 以下脚本既可用于获取参数化查询也可用于之后对其创建计划指南：  
   

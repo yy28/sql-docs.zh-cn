@@ -18,17 +18,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021223"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 本主题介绍全文索引和查询性能不佳的常见原因。 此外，还提供了有关缓解这些问题和提高性能的一些建议。
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>硬件资源问题
 硬件资源（例如内存、磁盘速度、CPU 速度和计算机体系结构）会影响全文索引和全文查询的性能。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "68021223"
   
     对大量数据进行主合并会创建一个长时间运行的事务，在检查点期间延迟事务日志的截断。 在这种情况下，事务日志可能会在完整恢复模式下显著增长。 作为最佳做法，在使用完整恢复模式的数据库中重新组织较大的全文索引之前，应确保事务日志中包含足够的空间用于长时间运行的事务。 有关详细信息，请参阅 [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)。  
   
-##  <a name="tuning"></a>优化全文索引的性能  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a>优化全文索引的性能  
 若要最大限度地提高全文索引的性能，请实施下列最佳做法：  
   
 -   若要最大程度地使用所有 CPU 处理器或核心，请将 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**' 设置为系统上的 CPU 数。 有关此配置选项的信息，请参阅 [max full-text crawl range 服务器配置选项](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
@@ -70,7 +70,7 @@ ms.locfileid: "68021223"
 
 -   如果使用基于时间戳列的增量填充，请对 **timestamp** 列生成辅助索引来提高增量填充的性能。  
   
-##  <a name="full"></a>排查完全填充性能问题  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a>排查完全填充性能问题  
 ### <a name="review-the-full-text-crawl-logs"></a>查看全文爬网日志
  若要帮助诊断性能问题，请查看全文爬网日志。
  
@@ -133,10 +133,10 @@ ms.locfileid: "68021223"
 |平台|估计 fdhost.exe 的内存需求量 (MB) -F^1 |用于计算最大服务器内存的公式 -M^2 |  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
 |x86|F   = 爬网范围数  \* 50|M =minimum(T, 2000) - F - 500  |  
-|x64|F   = 爬网范围数  \* 10 \* 8|M = T - F - 500   |  
+|x64|F   = 爬网范围数  \* 10 \* 8|M*T*F - 500 =    -  |  
 
 **有关公式的说明**
-1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2*等。 然后计算 M 为 T- sigma(_F_i)      。  
+1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2*等。 然后计算 M 为 T *sigma(_F_i)*  **-**   。  
 2.  500 MB 是系统中其他进程所需内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
 3.  。*ism_size* 假定为 8 MB。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "68021223"
   
  `F = 8*10*8=640`  
   
- 然后，计算出最大服务器内存的最佳值 -M   。 该系统的可用物理内存总量（以 MB 为单位）-T- 为 `8192`  。  
+ 然后，计算出最大服务器内存的最佳值 **M**-  。 该系统的可用物理内存总量（以 MB 为单位）-T- 为  `8192`。  
   
  `M = 8192-640-500=7052`  
   
@@ -195,7 +195,7 @@ GO
   
          若要减少碎片，可以重新组织或重新生成聚集索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
-##  <a name="filters"></a>排查文档索引编制缓慢的问题
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a>排查文档索引编制缓慢的问题
 
 > [!NOTE]
 > 本部分所述的问题只会影响对嵌入其他文档类型的文档（例如 Microsoft Word 文档）编制索引的客户。

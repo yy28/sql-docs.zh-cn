@@ -15,10 +15,10 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62e22823d19ab7dff113566927f0d59dfd4a693e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294484"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 连接管理器
@@ -44,7 +44,7 @@ ms.locfileid: "71294484"
 -   如果要连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，则应指定身份验证模式。  
 
 > [!NOTE]    
->  如果在 Azure 数据工厂 (ADF) 中使用 SSIS 并希望连接到 Azure Analysis Services (AAS) 实例，则不能使用已启用多重身份验证 (MFA) 的帐户，而必须使用不需要任何交互性/MFA 的账户或服务主体。 如要使用后者，请参阅[此处](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)创建一个并为其分配服务器管理员角色，然后选择“使用指定用户名和密码”以登录到连接管理器中的服务器，最后输入 `User name: app:YourApplicationID` 和 `Password: YourAuthorizationKey`  。
+>  如果在 Azure 数据工厂 (ADF) 中使用 SSIS 并希望连接到 Azure Analysis Services (AAS) 实例，则不能使用已启用多重身份验证 (MFA) 的帐户，而必须使用不需要任何交互性/MFA 的账户或服务主体。 如要使用后者，请参阅[此处](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)创建一个并为其分配服务器管理员角色，然后选择“使用指定用户名和密码”以登录到连接管理器中的服务器，最后输入 **和**`User name: app:YourApplicationID``Password: YourAuthorizationKey`。
   
 -   指示是否在运行时保留从连接管理器中创建的连接。  
   

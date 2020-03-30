@@ -17,10 +17,10 @@ ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75247453"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "75247453"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> 文件还原和数据库启动  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> 文件还原和数据库启动  
  本节仅与包含多个文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
 > [!NOTE]  
@@ -50,18 +50,18 @@ ms.locfileid: "75247453"
   
  如果数据库启动过程中出现问题，恢复将失败且数据库被标记为 SUSPECT。 如果可以将问题隔离到单个文件或多个文件，则数据库管理员可以使文件脱机并尝试重新启动数据库。 若要使文件脱机，可以使用下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句：  
   
- ALTER DATABASE database_name MODIFY FILE (NAME ='filename', OFFLINE)     
+ ALTER DATABASE database_name MODIFY FILE (NAME ='filename', OFFLINE)  ****  
   
  如果数据库成功启动，则任何包含脱机文件的文件组将保持脱机状态。  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> 联机还原和禁用的索引  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> 联机还原和禁用的索引  
  本节仅适用于包含多个文件组的数据库；在简单恢复模式下，适用于至少包含一个只读文件组的数据库。  
   
  在此类情况下，当数据库处于联机状态时，仅当包含索引任意部分的所有文件组均联机时，才能创建、删除、启用或禁用索引。  
   
  有关还原脱机文件组的信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
-##  <a name="DbMandBnR"></a> 数据库镜像以及备份和还原  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> 数据库镜像以及备份和还原  
  本节仅与包含多个文件组的完整模式数据库有关。  
   
 > [!NOTE]  
@@ -86,7 +86,7 @@ ms.locfileid: "75247453"
   
 -   不允许还原主体数据库。  
   
-##  <a name="PiecemealAndFTIndexes"></a> 段落还原和全文索引  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> 段落还原和全文索引  
  本节仅与包含多个文件组的数据库有关；对于简单模式数据库，仅与只读文件组有关。  
   
  全文索引存储在数据库文件组中，受段落还原的影响。 如果全文索引与任何关联的表数据位于同一文件组中，则段落还原将按预期的方式工作。  
@@ -113,7 +113,7 @@ ms.locfileid: "75247453"
   
  在基表文件组和全文索引文件组均联机后，将立即恢复所有暂停的全文填充。  
   
-##  <a name="FileBnRandCompression"></a> 文件备份、还原和压缩  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> 文件备份、还原和压缩  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持对只读文件组和只读数据库进行 NTFS 文件系统数据压缩。  
   
  压缩的 NTFS 文件支持还原只读文件组中的文件。 这些文件组的备份和还原实质上与任何只读文件组相同，但下列情况除外：  
@@ -125,7 +125,7 @@ ms.locfileid: "75247453"
 > [!NOTE]  
 >  读/写数据库的日志文件决不要放在压缩文件系统中。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
@@ -134,6 +134,6 @@ ms.locfileid: "75247453"
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[活动次要副本：备份次要副本 \(Always On 可用性组\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[活动次要副本：次要副本备份 \(AlwaysOn 可用性组\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

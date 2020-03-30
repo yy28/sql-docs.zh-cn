@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287618"
 ---
 # <a name="manage-identity-columns"></a>管理标识列
@@ -40,15 +40,15 @@ ms.locfileid: "76287618"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   在多个发布中发布表时，必须为这些发布指定相同的标识范围管理选项。 有关详细信息，请参阅[发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)中的“在多个发布中发布表”。  
   
 -   要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅[序列号](../../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可在新建发布向导的“项目属性 - **项目>”对话框的“属性”选项卡上指定标识列管理选项。** **\<** 有关使用此向导的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)。 在新建发布向导中：  
   
 -   如果在 **“发布类型”** 页上选择 **“合并发布”** 或 **“带有更新订阅的事务发布”** ，那么请选择自动或手动标识范围管理（建议使用默认值自动）。 在发布表后不能修改该属性，但可以修改其他相关属性。  
@@ -92,7 +92,7 @@ ms.locfileid: "76287618"
   
 5.  在“发布属性 - **发布>”对话框中单击“确定”。** **\<**  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  创建项目时，可使用复制存储过程来指定标识范围管理选项。  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>定义事务发布的项目时启用自动标识范围管理  

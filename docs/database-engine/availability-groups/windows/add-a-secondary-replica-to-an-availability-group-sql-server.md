@@ -14,10 +14,10 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 615659a84dcf318adb598451626f5282fa8e3d36
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014811"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>将次要副本添加到 AlwaysOn 可用性组
@@ -25,20 +25,20 @@ ms.locfileid: "68014811"
   本主题描述了如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
 
   
-##  <a name="PrerequisitesRestrictions"></a> 先决条件和限制  
+##  <a name="prerequisites-and-restrictions"></a><a name="PrerequisitesRestrictions"></a> 先决条件和限制  
   
 -   您必须连接到承载主副本的服务器实例。  
   
  有关详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)配置服务器实例时遇到的典型问题。  
 
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
 
 [!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **添加副本**  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
@@ -57,7 +57,7 @@ ms.locfileid: "68014811"
   
          若要添加其他副本，请重复前面的步骤。 当您指定完副本后，单击 **“确定”** 以完成此操作。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **添加副本**  
   
 1.  连接到承载主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
@@ -75,7 +75,7 @@ ms.locfileid: "68014811"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **添加副本**  
   
 1.  将目录 (**cd**) 更改为托管主副本的服务器实例。  
@@ -106,7 +106,7 @@ ms.locfileid: "68014811"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：在添加辅助副本之后  
+##  <a name="follow-up-after-adding-a-secondary-replica"></a><a name="FollowUp"></a> 跟进：在添加辅助副本之后  
  若要为现有可用性组添加副本，您必须执行以下步骤：  
   
 1.  连接到将要承载新辅助副本的服务器实例。  
@@ -117,7 +117,7 @@ ms.locfileid: "68014811"
   
 4.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **管理可用性副本**  
   
 -   [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  

@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292182"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -149,13 +149,13 @@ ms.locfileid: "71292182"
   
 -   [设置“列”选项卡上的选项](#mapping)  
   
-###  <a name="open"></a> 打开原始文件目标编辑器  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> 打开原始文件目标编辑器  
   
 1.  将原始文件目标添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包。  
   
 2.  右键单击该组件，然后单击 **“编辑”** 。  
   
-###  <a name="connection"></a> 设置“连接管理器”选项卡上的选项  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **访问模式**  
  选择指定文件名的方式。 选择 **“文件名”** 可以直接输入文件名和路径，选择 **“变量中的文件名”** 可以指定包含文件名的变量。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292182"
   
  单击 **“生成初始原始文件”** 时，将显示一个消息框。 单击 **“确定”** 可继续创建文件。 单击 **“取消”** 可选择 **“列”** 页上的其他列列表。  
   
-###  <a name="mapping"></a> 设置“列”选项卡上的选项  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> 设置“列”选项卡上的选项  
  **可用输入列**  
  选择要写入原始文件的一个或多个输入列。  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292182"
   
 -   [设置“列”选项卡上的选项](#mapping)  
   
-###  <a name="open"></a> 打开原始文件目标编辑器  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> 打开原始文件目标编辑器  
   
 1.  将原始文件目标添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包。  
   
 2.  右键单击该组件，然后单击 **“编辑”** 。  
   
-###  <a name="connection"></a> 设置“连接管理器”选项卡上的选项  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **访问模式**  
  选择指定文件名的方式。 选择 **“文件名”** 可以直接输入文件名和路径，选择 **“变量中的文件名”** 可以指定包含文件名的变量。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292182"
   
  单击此按钮时，将显示列的列表。 您可以单击“取消”以修改列或单击“确定”以继续创建该文件。  
   
-###  <a name="mapping"></a> 设置“列”选项卡上的选项  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> 设置“列”选项卡上的选项  
  **可用输入列**  
  选择要写入原始文件的一个或多个输入列。  
   

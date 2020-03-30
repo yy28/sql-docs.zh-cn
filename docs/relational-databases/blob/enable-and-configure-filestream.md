@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908769"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
@@ -23,7 +23,7 @@ ms.locfileid: "72908769"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
   
-##  <a name="enabling"></a> 启用 FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> 启用 FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>启用和更改 FILESTREAM 设置  
   
@@ -58,9 +58,9 @@ ms.locfileid: "72908769"
   
 13. 重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
 
-##  <a name="best"></a>最佳做法  
+##  <a name="best-practices"></a><a name="best"></a>最佳做法  
   
-###  <a name="config"></a>物理配置和维护  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a>物理配置和维护  
  设置 FILESTREAM 存储卷时，请考虑下列准则：  
   
 -   禁用 FILESTREAM 计算机系统中的短文件名。 创建短文件名需要花费相当长的时间。 若要禁用短文件名，请使用 Windows **fsutil** 实用工具。  
@@ -84,7 +84,7 @@ ms.locfileid: "72908769"
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a>物理数据库设计  
+###  <a name="physical-database-design"></a><a name="database"></a>物理数据库设计  
  设计 FILESTREAM 数据库时，应考虑下列准则：  
   
 -   FILESTREAM 列必须附带相应的 **uniqueidentifier**ROWGUID 列。 这些类型的表还必须附带唯一索引。 此索引通常不是聚集索引。 如果数据库业务逻辑需要聚集索引，则必须确保该索引中存储的值不是随机的。 随机值将导致每次向表中添加行或从表中删除行时，索引都会重新排序。  

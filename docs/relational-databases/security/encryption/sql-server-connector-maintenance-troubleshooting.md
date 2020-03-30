@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557922"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 连接器维护与故障排除
@@ -25,7 +25,7 @@ ms.locfileid: "75557922"
   本主题提供了有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的补充信息。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的详细信息，请参阅 [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;（使用 Azure 密钥保管库的可扩展密钥管理）](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)、[Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)和 [Use SQL Server Connector with SQL Encryption Features（使用具有 SQL 加密功能的 SQL Server 连接器）](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。  
   
   
-##  <a name="AppendixA"></a> A. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的维护说明  
+##  <a name="a-maintenance-instructions-for-ssnoversion-connector"></a><a name="AppendixA"></a> A. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的维护说明  
   
 ### <a name="key-rollover"></a>密钥滚动更新  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75557922"
     GO  
     ```  
   
-### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器  
+### <a name="upgrade-of-ssnoversion-connector"></a>升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器  
 
 已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 生产环境中支持版本 1.0.1.0 和更高版本。 使用以下说明升级到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344)提供的最新版本。
 
@@ -138,7 +138,7 @@ ms.locfileid: "75557922"
   
 8.  在验证更新是否有效之后，可以删除旧 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器文件夹（如果在步骤 3 中你选择将其重命名而不是卸载。）  
   
-### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>滚动更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务主体  
+### <a name="rolling-the-ssnoversion-service-principal"></a>滚动更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务主体  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中创建的服务主体作为凭据来访问密钥保管库。  服务主体具有客户端 ID 和身份验证密钥。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据是使用 **VaultName**、 **客户端 ID**和 **身份验证密钥**设置的。  身份验证密钥  在特定的期限内有效（一年或两年）。   在该期限已过之前，必须在 Azure AD 中为服务主体生成新密钥。  然后，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中更改凭据。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 为当前会话中的凭据保留缓存，因此，如果凭据发生更改，应重新启动 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
   
 ### <a name="key-backup-and-recovery"></a>密钥备份和恢复  
@@ -156,7 +156,7 @@ ms.locfileid: "75557922"
 只要密钥备份保留在同一个地理区域或国家云，就可以跨 Azure 区域还原密钥备份，这些国家/地区包括：美国、加拿大、日本、澳大利亚、印度、APAC、欧洲、巴西、中国、美国政府或德国。  
   
   
-##  <a name="AppendixB"></a> B. 常见问题  
+##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. 常见问题  
 ### <a name="on-azure-key-vault"></a>在 Azure 密钥保管库  
   
 **密钥操作如何与 Azure 密钥保管库配合使用？**  
@@ -165,7 +165,7 @@ ms.locfileid: "75557922"
  **什么是密钥 URI？**  
  Azure 密钥保管库中的所有密钥都有一个统一资源标识符 (URI)，你可以使用它在应用程序中引用密钥。 使用格式 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 可获取当前版本，使用 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 可获取特定的版本。  
   
-### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>有关配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-ssnoversion"></a>有关配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 SQL Server 连接器需要哪些终结点的访问权限？  该连接器与两个终结点通信，这两个终结点需要列入允许列表。 与这些其他服务进行出站通信所需的唯一端口是 443（用于 Https）：
 -  login.microsoftonline.com/*:443
@@ -203,7 +203,7 @@ SQL Server 连接器需要哪些终结点的访问权限？  该连接器与两�
 
 若要了解有关 Active Directory 的详细信息，请阅读 [Azure 订阅如何与 Azure Active Directory 相关](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
   
-##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的错误代码说明  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的错误代码说明  
  **提供程序错误代码：**  
   
 错误代码  |符号  |说明    

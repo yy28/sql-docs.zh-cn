@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056372"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "74056372"
 > [!IMPORTANT]  
 >  使用本机格式时，请使用长度前缀而不要使用字段终止符。 本机格式数据可能会与终止符相冲突，因为本机格式数据文件是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部二进制数据格式存储的。  
   
-##  <a name="PrefixLengthsExport"></a> 大容量导出时的前缀长度  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> 大容量导出时的前缀长度  
   
 > [!NOTE]  
 >  导出字段时前缀长度提示中提供的默认值指明的是该字段的最有效前缀长度。  
@@ -86,7 +86,7 @@ ms.locfileid: "74056372"
   
  \***的未来版本中将删除**ntext **、** text **和** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
   
-##  <a name="PrefixLengthsImport"></a> 大容量导入时的前缀长度  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> 大容量导入时的前缀长度  
  大容量导入数据时，前缀长度为最初创建数据文件时指定的值。 如果数据文件不是由 **bcp** 命令创建，那么可能没有长度前缀字符。 在这种情况下，将前缀长度指定为 0。  
   
 > [!NOTE]  

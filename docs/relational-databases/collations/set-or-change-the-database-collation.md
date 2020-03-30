@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866106"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
@@ -28,7 +28,7 @@ ms.locfileid: "78866106"
 > 在 Azure SQL 数据库中未明确禁止更改数据库排序规则。 但是，更改数据库排序规则将要求对数据库和其他用户或后台进程（例如正在进行备份的后台进程）的排他锁能够保留数据库锁并防止排序规则发生更改。 如果在后台进程访问数据库时对 Azure SQL 数据库执行了 `ALTER DATABASE COLLATE` 语句，该语句将失败。 如果收到锁超时错误，则需要重试该语句。 
  
 > [!NOTE]
-> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，不能使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改排序规则。 只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行更改。
+> 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 上创建数据库后，不能使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 更改排序规则。 只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行更改。
 
  **本主题内容**  
   
@@ -46,17 +46,17 @@ ms.locfileid: "78866106"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   仅限 Windows Unicode 的排序规则只能与 COLLATE 子句一起使用，以便将排序规则应用于列级别和表达式级别数据上的 **nchar**、 **nvarchar**和 **ntext** 数据类型。 它们不能与 COLLATE 子句一起使用以更改数据库或服务器实例的排序规则。  
   
 -   如果指定的排序规则或者被引用的对象所使用的排序规则使用 Windows 不支持的代码页，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将显示错误。  
 
--   在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，不能使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改排序规则。 只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行更改。
+-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 上创建数据库后，不能使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 更改排序规则。 只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行更改。
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 你可以在 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) 和 [SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)中找到支持的排序规则名称，或者可以使用 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 系统函数。  
   
@@ -68,16 +68,16 @@ ms.locfileid: "78866106"
   
 -   **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**或 **ntext** 系统数据类型和基于这些系统数据类型的所有用户定义的数据类型均已更改为新的默认排序规则。  
   
-可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 `COLLATE` 子句来更改在用户数据库中创建的任何新对象的排序规则。 使用此语句不能更改任何现有用户定义的表中列的排序规则  。 使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 `COLLATE` 子句可以更改这些列的排序规则。  
+可以使用 `COLLATE`ALTER DATABASE[ 语句的 ](../../t-sql/statements/alter-database-transact-sql.md) 子句来更改在用户数据库中创建的任何新对象的排序规则。 使用此语句不能更改任何现有用户定义的表中列的排序规则  。 使用 `COLLATE`ALTER TABLE[ 的 ](../../t-sql/statements/alter-table-transact-sql.md) 子句可以更改这些列的排序规则。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
- 若要创建新数据库，需要 master 数据库中的 `CREATE DATABASE` 权限，或者需要 `CREATE ANY DATABASE` 或 `ALTER ANY DATABASE` 权限  。  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
+ 若要创建新数据库，需要 master 数据库中的 `CREATE DATABASE` 权限，或者需要 **或** 权限`CREATE ANY DATABASE``ALTER ANY DATABASE`。  
   
  若要更改现有数据库的排序规则，需要数据库上的 `ALTER` 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>设置或更改数据库排序规则  
   
@@ -89,7 +89,7 @@ ms.locfileid: "78866106"
   
 3.  在完成后，单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>设置数据库排序规则  
   

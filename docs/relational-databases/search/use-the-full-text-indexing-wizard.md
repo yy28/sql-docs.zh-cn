@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903813"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
@@ -88,7 +88,7 @@ ms.locfileid: "72903813"
     a. **名称**  
      为新的全文目录输入一个名称。  
   
-     b. **设置为默认目录**  
+     b.保留“数据库类型”设置，即设置为“共享”。 **设置为默认目录**  
      选中此项可以将该目录设为此数据库的默认目录。  
   
      c. **区分重音**  
@@ -139,7 +139,7 @@ ms.locfileid: "72903813"
      **Stop**  
      中断当前操作，并阻止该向导在此会话期间执行后续全文操作。  
   
-     **报告**  
+     **Report**  
      当执行完所有操作以后，单击此按钮可以访问所执行操作的报告。 您可以查看该报告，将其打印为文件，复制到剪贴板，或用电子邮件发送该报告。  
   
   

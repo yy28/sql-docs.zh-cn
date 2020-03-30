@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: fd69090db106894bd686ee74a801afeff2d79649
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056114"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>语义搜索 DDL、函数、存储过程和视图
@@ -25,14 +25,14 @@ ms.locfileid: "74056114"
   
  有关支持全文搜索的语句和数据库对象的列表，请参阅 [全文搜索 DDL、函数、存储过程和视图](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md)。  
   
-##  <a name="ddl"></a> 数据定义语言 (DDL) 语句  
+##  <a name="data-definition-language-ddl-statements"></a><a name="ddl"></a> 数据定义语言 (DDL) 语句  
   
 |Object|更多信息|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)|[对表和列启用语义搜索](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)|[对表和列启用语义搜索](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> 系统函数  
+##  <a name="system-functions"></a><a name="func"></a> 系统函数  
   
 |Object|更多信息|  
 |------------|----------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "74056114"
 |[semanticsimilaritydetailstable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md)|[使用语义搜索来查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md)|[使用语义搜索来查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> 系统元数据函数  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> 系统元数据函数  
   
 |Object|更多信息|  
 |------------|----------------------|  
@@ -51,14 +51,14 @@ ms.locfileid: "74056114"
 |[OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md)|[对表和列启用语义搜索](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)|[安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> 系统存储过程  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> 系统存储过程  
   
 |Object|更多信息|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)|[安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)|[安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> 目录视图  
+##  <a name="catalog-views"></a><a name="cv"></a> 目录视图  
   
 |Object|更多信息|  
 |------------|----------------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "74056114"
 |[sys.fulltext_semantic_language_statistics_database (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)|[安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)|[安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> 动态管理视图  
+##  <a name="dynamic-management-views"></a><a name="dmv"></a> 动态管理视图  
   
 |Object|更多信息|  
 |------------|----------------------|  

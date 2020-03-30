@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74909031"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
@@ -159,7 +159,7 @@ REVOKE
   
  具备 CONTROL SERVER 权限的被权限者（例如 sysadmin 固定服务器角色的成员）可以撤消对该服务器的任何安全对象所拥有的任何权限。 对数据库具有 CONTROL 权限的被授权者（例如 db_owner 固定数据库角色的成员）可以撤消对该数据库的任何安全对象所拥有的任何权限。 被授予架构的 CONTROL 权限的用户可以撤消针对该架构的任何对象的任何权限。  
   
-##  <a name="securable"></a>特定于安全对象的语法  
+##  <a name="securable-specific-syntax"></a><a name="securable"></a>特定于安全对象的语法  
  下表列出了安全对象以及描述特定于安全对象的语法的主题。  
   
 |安全对象|主题|  

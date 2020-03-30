@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68139602"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
@@ -43,9 +43,9 @@ ms.locfileid: "68139602"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  新的外键列必须与和其相关的主键列的数据类型和大小相匹配，但以下情况例外：  
   
 -   **char** 列或 **sysname** 列可以与 **varchar** 列相关。  
@@ -54,12 +54,12 @@ ms.locfileid: "68139602"
   
 -   别名数据类型可以与其基类型相关。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>修改外键  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68139602"
   
 4.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改外键**  
   
  若要使用 Transact-SQL 修改 FOREIGN KEY 约束，必须先删除现有的 FOREIGN KEY 约束，然后再用新定义重新创建该约束。 有关详细信息，请参阅 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 和 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。  

@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287841"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>监视运行包和其他操作
@@ -55,12 +55,12 @@ ms.locfileid: "79287841"
   
  使用九种不同的状态类型来指示操作的状态。 有关状态类型的完整列表，请参阅 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图。  
 
-## <a name="active_ops"></a>“活动操作”对话框
+## <a name="active-operations-dialog-box"></a><a name="active_ops"></a>“活动操作”对话框
   使用 **“活动操作”** 对话框可以查看 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上当前运行的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作的状态，例如部署、验证和包执行。 此数据存储在 SSISDB 目录中。  
   
  有关相关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 视图的详细信息，请参阅 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)、[catalog.validations（SSISDB 数据库）](../../integration-services/system-views/catalog-validations-ssisdb-database.md)和 [catalog.executions（SSISDB 数据库）](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
   
-###  <a name="open_dialog"></a> 打开“活动操作”对话框  
+###  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a> 打开“活动操作”对话框  
   
 1.  打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "79287841"
  通过托管 API 以编程方式访问  
  请参阅 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间及其类。  
 
-## <a name="reports"></a> Reports for the Integration Services Server
+## <a name="reports-for-the-integration-services-server"></a><a name="reports"></a> Reports for the Integration Services Server
   在当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了标准报告，帮助你监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。 这些报告有助于您查看包状态和历史记录，并根据需要确定包执行失败的原因。  
   
  在每个报告页的顶部，后退图标会将您转到查看过的上一页，刷新图标会刷新在该页上显示的信息，打印图标则可以打印当前页。  
@@ -179,7 +179,7 @@ ms.locfileid: "79287841"
  **“所有验证”** 报告显示已在服务器上执行的所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 验证的摘要。 摘要中显示每次验证的信息，如状态、开始时间和结束时间。 每个摘要条目包含一个指向在验证期间生成的消息的链接。 与 Integration Services 面板一样，您可以将筛选器应用于表，以便缩小显示的信息的范围。  
   
 ### <a name="custom-reports"></a>自定义报告  
- 可以将自定义报告（.rdl 文件）添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“Integration Services 目录”节点下的 **SSISDB** 目录节点  。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
+ 可以将自定义报告（.rdl 文件）添加到 **中“Integration Services 目录”节点下的**SSISDB **目录节点**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
   
 > [!NOTE]  
 >  将自定义报告添加到“数据库”  节点下的 **SSISDB** 节点时，可以不使用 SSISDB 前缀。  

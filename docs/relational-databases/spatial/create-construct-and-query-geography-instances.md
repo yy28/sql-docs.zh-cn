@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b942e32e78a0a66e2d650ad36202bdf0effebc05
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048751"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
@@ -27,9 +27,9 @@ ms.locfileid: "68048751"
   
  **geography** 类型已进行预定义，可在每个数据库中使用。 你可以创建 **geography** 类型的表列并对 **geography** 数据进行操作，就像使用其他系统提供的数据类型一样。  
   
-##  <a name="creating"></a> 创建或构建新的地域实例  
+##  <a name="creating-or-constructing-a-new-geography-instance"></a><a name="creating"></a> 创建或构建新的地域实例  
   
-###  <a name="existing"></a> 从现有实例创建新的地域实例  
+###  <a name="creating-a-new-geography-instance-from-an-existing-instance"></a><a name="existing"></a> 从现有实例创建新的地域实例  
  **geography** 数据类型提供了许多内置方法，你可以使用这些方法基于现有实例创建新的 **geography** 实例。  
   
  **在地域周围创建缓冲区**  
@@ -47,7 +47,7 @@ ms.locfileid: "68048751"
  **通过一个地域中没有与另一个地域发生重叠的点创建地域**  
  [STDifference（geography 数据类型）](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
-###  <a name="wkt"></a> 从熟知文本输入构造地域实例  
+###  <a name="constructing-a-geography-instance-from-well-known-text-input"></a><a name="wkt"></a> 从熟知文本输入构造地域实例  
  **geography** 数据类型提供了若干种用开放地理空间联盟 (OGC) WKT 表示形式生成地域的内置方法。 WKT 标准是一种允许地域数据以文本形式交换的文本字符串。  
   
  **用 WKT 输入构造任意类型的地域实例**  
@@ -76,7 +76,7 @@ ms.locfileid: "68048751"
  **用 WKT 输入构造地域 GeometryCollection 实例**  
  [STGeomCollFromText（geography 数据类型）](../../t-sql/spatial-geography/stgeomcollfromtext-geography-data-type.md)  
   
-###  <a name="wkb"></a> 从熟知二进制输入构造地域实例  
+###  <a name="constructing-a-geography-instance-from-well-known-binary-input"></a><a name="wkb"></a> 从熟知二进制输入构造地域实例  
  WKB 是 OGC 规定的一种二进制格式，该格式允许 **Geography** 数据在客户端应用程序和 SQL 数据库之间进行交换。 以下函数接受使用 WKB 输入构造地域实例：  
   
  **用 WKB 输入构造任意类型的地域实例**  
@@ -103,15 +103,15 @@ ms.locfileid: "68048751"
  **用 WKB 输入构造地域 GeometryCollection 实例**  
  [STGeomCollFromWKB（geography 数据类型）](../../t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type.md) STGeomCollFromWKB（geography 数据类型）  
   
-###  <a name="gml"></a> 用 GML 文本输入构造地域实例  
+###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> 用 GML 文本输入构造地域实例  
  **geography** 数据类型提供了一种用 GML（ **geography** 实例的 XML 表示形式）生成 **geography** 实例的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
- 有关地理标记语言的详细信息，请参阅 OGC 规范：[OGC 规范，地理标记语言。](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ 有关地域标记语言的详细信息，请参阅 OGC 规范： [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)（OGC 规范，地域标记语言）。  
   
  **用 GML 输入构造任意类型的地域实例**  
  [GeomFromGML（geography 数据类型）](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
   
-##  <a name="returning"></a> 从地域实例返回熟知文本和熟知二进制  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geography-instance"></a><a name="returning"></a> 从地域实例返回熟知文本和熟知二进制  
  可以使用以下方法返回 WKT 或 WKB 格式的 **geography** 实例：  
   
  **返回地域实例的 WKT 表示形式**  
@@ -128,10 +128,10 @@ ms.locfileid: "68048751"
  **返回地域实例的 GML 表示形式**  
  [AsGml（geography 数据类型）](../../t-sql/spatial-geography/asgml-geography-data-type.md)  
   
-##  <a name="query"></a> 查询地域实例的属性和行为  
+##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> 查询地域实例的属性和行为  
  所有 **geography** 实例都有很多可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的方法进行检索的属性。 下列主题定义了地域类型的属性和行为，并为查询每种图形定义了方法。  
   
-###  <a name="valid"></a> 有效性、实例类型和 GeometryCollection 信息  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有效性、实例类型和 GeometryCollection 信息  
  构造 **geography** 实例后，就可以使用以下方法返回实例类型，或者，如果它是 **GeometryCollection** 实例，则返回特定的 **geography** 实例。  
   
  **返回地域的实例类型**  
@@ -146,7 +146,7 @@ ms.locfileid: "68048751"
  **返回 GeometryCollection 实例中的特定地域**  
  [STGeometryN（geography 数据类型）](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN（geography 数据类型）  
   
-###  <a name="number"></a> 点数  
+###  <a name="number-of-points"></a><a name="number"></a> 点数  
  所有非空 **geography** 实例都由“点”  组成。 这些点表示球体的纬度和经度坐标，在其上可绘制 **geography** 实例。 **geography** 数据类型提供了许多用于查询实例点的内置方法。  
   
  **返回构成实例的点数。**  
@@ -161,7 +161,7 @@ ms.locfileid: "68048751"
  **返回实例的终点**  
  [STEndpoint（geography 数据类型）](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
-###  <a name="dimension"></a> 维度  
+###  <a name="dimension"></a><a name="dimension"></a> 维度  
  非空 **geography** 实例可以为零维、一维或二维。 零维 **geography** 实例（如 **Point** 和 **MultiPoint**）没有长度或面积。 一维对象（如 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString**）有长度。 二维实例（如 **Polygon、CurvePolygon**和 **MultiPolygon**）有面积和长度。 空实例会报告 -1 维，并且 **GeometryCollection** 会报告其内容的最大维度。  
   
  **返回实例的维度**  
@@ -173,13 +173,13 @@ ms.locfileid: "68048751"
  **返回实例的面积**  
  [STArea（geography 数据类型）](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
-###  <a name="empty"></a> Empty  
+###  <a name="empty"></a><a name="empty"></a> Empty  
  空  **geography** 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 实例的长度为 0。 空的 **Polygon, CurvePolygon** 和 **MultiPolygon** 实例的面积为 0。  
   
  **确定实例是否为空**  
  [STIsEmpty（geography 数据类型）](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
-###  <a name="closure"></a> 闭合  
+###  <a name="closure"></a><a name="closure"></a> 闭合  
  闭合的  **geography** 实例是指起始点和终点相同的图形。 **Polygon** 实例被视为闭合的。 **Point** 实例不是闭合的。  
   
  环是一个简单、闭合的 **LineString** 实例。  
@@ -193,7 +193,7 @@ ms.locfileid: "68048751"
  **返回地域实例的指定环**  
  [RingN（geography 数据类型）](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
-###  <a name="srid"></a> 空间引用标识符 (SRID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> 空间引用标识符 (SRID)  
  空间引用标识符 (SRID) 是指定 **geography** 实例所在的椭球坐标系的标识符。 两个拥有不同 SRID 的 **geography** 实例是不可比的。  
   
  **设置或返回实例的 SRID**  
@@ -201,7 +201,7 @@ ms.locfileid: "68048751"
   
  此属性可以进行修改。  
   
-##  <a name="rel"></a> 确定地域实例之间的关系  
+##  <a name="determining-relationships-between-geography-instances"></a><a name="rel"></a> 确定地域实例之间的关系  
  **geography** 数据类型提供了许多内置方法，你可以使用这些方法确定两个 **geography** 实例之间的关系。  
   
  **确定两个实例是否包含相同的点集**  
@@ -225,12 +225,12 @@ ms.locfileid: "68048751"
  **派生一个地域实例相比于另一个地域实例的余集或唯一点**  
  [STSymDifference（geography 数据类型）](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
-##  <a name="supportedsrid"></a> 地域实例必须使用支持的 SRID  
+##  <a name="geography-instances-must-use-supported-srid"></a><a name="supportedsrid"></a> 地域实例必须使用支持的 SRID  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持基于 EPSG 标准的 SRID。 必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography **实例的支持** 的 SRID 执行计算或将方法用于地域空间数据。 SRID 必须与 **sys.spatial_reference_systems** 目录视图中显示的 SRID 中的一个匹配。 如前所述，在使用 **geography** 数据类型对空间数据执行计算时，结果将取决于在创建数据时使用的是哪个椭圆体，因为为每个椭圆体都分配了一个特定空间引用标识符 (SRID)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用方法时， **geography** 实例之间的关系。 如果要使用 WGS 84（或 SRID 4326）之外的某个空间引用系统中的数据，您需要确定地域空间数据的特定 SRID。  
   
-##  <a name="examples"></a> 示例  
+##  <a name="examples"></a><a name="examples"></a> 示例  
 以下示例说明如何添加和查询地理数据。  
   
 ### <a name="example-a"></a>示例 A。 

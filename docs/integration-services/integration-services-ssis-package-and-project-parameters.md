@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5c773ae8db0b9942e23e40fb5f72b989b97ccfcc
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903852"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
@@ -58,7 +58,7 @@ ms.locfileid: "77903852"
   
  可以使用单个参数向多个包属性分配值。 只能从单个参数为单个包属性分配值。  
   
-###  <a name="executions"></a> 执行和参数值  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> 执行和参数值  
   “执行”是表示包执行的单个实例的对象。 当您创建执行时，指定运行包所需的所有详细信息（如执行参数值）。 您还可以修改现有执行的参数值。  
   
  显式设置一个执行参数值时，该值仅适用于执行的特定实例。 使用执行值而非服务器值或设计值。 如果未显式设置执行值并指定了服务器值，则使用服务器值。  
@@ -106,7 +106,7 @@ ms.locfileid: "77903852"
 ## <a name="create-parameters"></a>创建参数
 使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 可以创建项目参数和包参数。 下面的过程提供了有关创建包参数/项目参数的分步说明。  
   
-> **注意：** 若要将使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本创建的项目转换为项目部署模型，则可以使用 **“Integration Services 项目转换向导”** 来创建基于配置的参数。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+> **注意：** 若要将使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本创建的项目转换为项目部署模型，则可以使用“Integration Services 项目转换向导”  来创建基于配置的参数。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ### <a name="create-package-parameters"></a>创建包参数  
   
@@ -129,13 +129,13 @@ ms.locfileid: "77903852"
     |必选|需要首先指定并非设计默认值的值，包才能执行。|  
     |说明|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
-    > **注意：** 在您向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
+    > **注意：** 在向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
   
 4.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件中。  
   
     > **警告！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。  可以使用“删除 (X)”工具栏按钮来删除参数。  使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
   
-    > **注意：** 如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。   
+    > **注意：** 如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”  选项卡将为空且被禁用。  
   
 ### <a name="create-project-parameters"></a>创建项目参数  
   
@@ -209,7 +209,7 @@ ms.locfileid: "77903852"
   
 3.  通过在 **“选择页”** 之下单击 **“参数”** ，打开参数页。  
   
-4.  在 **“参数”** 列表中选择所需参数。 注意：“容器”  列将帮助区分项目参数和包参数。  
+4.  在 **“参数”** 列表中选择所需参数。 注意： **“容器”** 列将帮助区分项目参数和包参数。  
   
 5.  在 **“值”** 列中，指定所需的服务器默认参数值。  
 
@@ -217,6 +217,6 @@ ms.locfileid: "77903852"
  若要使用 TRANSACT-SQL 设置服务器默认值，请使用 [catalog.set_object_parameter_value（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)存储过程。 若要查看当前服务器默认值，请查询 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。 若要清除服务器默认值，请使用 [catalog.clear_object_parameter_value（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)存储过程。  
   
 ## <a name="related-content"></a>相关内容  
- mattmasson.com 上的博客文章：[SSIS 快速提示：必需的参数](https://go.microsoft.com/fwlink/?LinkId=239781)。  
+ mattmasson.com 上的博客文章 [SSIS 快速提示：必需参数](https://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   

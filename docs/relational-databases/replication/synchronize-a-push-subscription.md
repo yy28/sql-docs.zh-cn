@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907870"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步推送订阅
@@ -28,10 +28,10 @@ ms.locfileid: "72907870"
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  订阅由分发代理（对于快照复制和事务复制）或合并代理（对于合并复制）进行同步。 代理可以连续运行、按需运行或按计划运行。 有关如何指定同步计划的详细信息，请参阅[指定同步计划](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
- 从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“本地发布”和“本地订阅”文件夹及复制监视器的“所有订阅”选项卡中，按需同步订阅    。 不能从订阅服务器按需同步对 Oracle 发布的订阅。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 从   的“本地发布”和“本地订阅”文件夹及复制监视器的“所有订阅”选项卡中，按需同步订阅  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  。 不能从订阅服务器按需同步对 Oracle 发布的订阅。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>在 Management Studio 中按需同步推送订阅（在发布服务器中）  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72907870"
   
 4.  右键单击要同步的订阅，然后单击 **“查看同步状态”** 。  
   
-5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
+5.  在“查看同步状态 - **订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。\<**  完成同步后，将显示消息 **“同步完成”** 。  
   
 6.  单击“关闭”  。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "72907870"
   
 4.  将显示一条消息，指示建立与分发服务器的连接。 单击“确定”。   
   
-5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
+5.  在“查看同步状态 - **订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。\<**  完成同步后，将显示消息 **“同步完成”** 。  
   
 6.  单击“关闭”  。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72907870"
   
 4.  若要查看同步进度，请右键单击该订阅，然后单击 **“查看详细信息”** 。  
   
-##  <a name="ReplProg"></a> 使用复制代理  
+##  <a name="using-replication-agents"></a><a name="ReplProg"></a> 使用复制代理  
  可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步推送订阅。 被调用的复制代理可执行文件将取决于推送订阅所属的发布的类型。  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>启动分发代理以将推送订阅与事务发布进行同步  
@@ -154,7 +154,7 @@ ms.locfileid: "72907870"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a> 示例（复制代理）  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> 示例（复制代理）  
  以下示例启动分发代理以同步推送订阅。  
   
 ```  
@@ -196,7 +196,7 @@ REM -- The following command must be supplied without line breaks.
   
 ```  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  可以使用复制管理对象 (RMO) 和托管代码的复制代理功能访问权限以编程方式同步推送订阅。 用于同步推送订阅的类取决于订阅所属的发布的类型。  
   
 > [!NOTE]
@@ -250,7 +250,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   获取 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 属性中 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> 类的实例，然后调用 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 该方法可以同步启动合并代理，并且控件仍属于运行代理作业。 在执行同步期间，您可以在代理仍旧运行的情况下处理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 事件。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  该示例将推送订阅与事务发布进行同步，其中，代理使用代理作业进行异步启动。  
   
  [!code-cs[HowTo#rmo_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  

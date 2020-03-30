@@ -15,10 +15,10 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286991"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>AlwaysOn 可用性组配置疑难解答 (SQL Server)
@@ -44,10 +44,10 @@ ms.locfileid: "79286991"
 |[相关任务](#RelatedTasks)|包含 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 联机丛书中专门针对排除可用性组配置问题的面向任务的主题列表。|  
 |[相关内容](#RelatedContent)|包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书以外的相关资源的列表。|  
   
-##  <a name="IsHadrEnabled"></a> 未启用 AlwaysOn 可用性组  
+##  <a name="always-on-availability-groups-is-not-enabled"></a><a name="IsHadrEnabled"></a> 未启用 AlwaysOn 可用性组  
  必须在每个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上启用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能。 有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
-##  <a name="Accounts"></a> 帐户  
+##  <a name="accounts"></a><a name="Accounts"></a> 帐户  
  必须正确配置运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所用的帐户。  
   
 1.  帐户是否具有正确的权限？  
@@ -58,10 +58,10 @@ ms.locfileid: "79286991"
   
 2.  如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，则您必须使用证书来进行端点身份验证。 如果您的服务帐户使用的是同一个域中的域帐户，则您可以选择为所有副本位置上的每个服务帐户授予 CONNECT 访问权限，或者您可以使用证书。 有关详细信息，请参阅[使用数据库镜像终结点证书 (Transact-SQL)](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
-##  <a name="Endpoints"></a> Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  必须正确配置端点。  
   
-1.  确保要托管可用性副本（每个副本位置  ）的各个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例都具有数据库镜像终结点。 若要确定给定服务器实例上是否存在数据库镜像终结点，请使用 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 目录视图。 有关详细信息，请参阅[创建 Windows 身份验证的数据库镜像终结点 (Transact-SQL)](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
+1.  确保要托管可用性副本（每个副本位置[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *）的各个*  实例都具有数据库镜像终结点。 若要确定给定服务器实例上是否存在数据库镜像终结点，请使用 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 目录视图。 有关详细信息，请参阅[创建 Windows 身份验证的数据库镜像终结点 (Transact-SQL)](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
 2.  检查端口号是否正确。  
   
@@ -111,16 +111,16 @@ ms.locfileid: "79286991"
   
     ```  
   
-##  <a name="SystemName"></a> System Name  
+##  <a name="system-name"></a><a name="SystemName"></a> System Name  
  对于端点 URL 中服务器实例的系统名称，可以使用明确标识系统的任何名称。 服务器地址可以是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址（最好是静态 IP 地址）。 保证使用完全限定域名的有效性。 有关详细信息，请参阅 [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)配置服务器实例时遇到的典型问题。  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  要承载可用性副本的每个服务器实例必须能够通过 TCP 访问其他各个服务器实例的端口。 当服务器实例位于相互不信任的不同域（不可信的域）中时，这尤为重要。  
   
-##  <a name="Msg1418"></a> 端点访问（SQL Server 错误 1418）  
+##  <a name="endpoint-access-sql-server-error-1418"></a><a name="Msg1418"></a> 端点访问（SQL Server 错误 1418）  
  此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 消息指示无法到达端点 URL 中指定的服务器网络地址或该地址不存在，同时建议您确认网络地址名称并重新发出命令。  
   
-##  <a name="JoinDbFails"></a> 联接数据库失败（SQL Server 错误 35250）  
+##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> 联接数据库失败（SQL Server 错误 35250）  
  此部分介绍由于与主副本的连接处于非活动状态而导致未能将辅助数据库联接到可用性组的可能原因和解决方法。  
   
  **解决方法：**  
@@ -129,7 +129,7 @@ ms.locfileid: "79286991"
   
 2.  检查网络服务帐户是否拥有对端点的 CONNECT 权限。  
   
-##  <a name="ROR"></a> 只读路由未正确工作  
+##  <a name="read-only-routing-is-not-working-correctly"></a><a name="ROR"></a> 只读路由未正确工作  
  验证以下配置值设置并且根据需要进行更正。  
   
 ||On...|操作|注释|链接|  
@@ -141,7 +141,7 @@ ms.locfileid: "79286991"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|确保 READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) 包含正确的完全限定域名 (FQDN) 和端口号。|-|[计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|客户端系统|确认客户端驱动程序支持只读路由。|-|[AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
@@ -157,13 +157,13 @@ ms.locfileid: "79286991"
   
 -   [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [查看故障转移群集的事件和日志](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Get-ClusterLog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

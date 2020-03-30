@@ -16,10 +16,10 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ff0280b7a3a071a87feb029e6e906eaeace8a2d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822537"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的强制手动故障转移 (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "74822537"
 >  有关强制故障转移的先决条件和建议的详细信息，以及使用强制故障的示例应用场景，请参阅本主题后面部分的 [示例应用场景：使用故障转移从灾难性故障中恢复](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)。  
   
   
-##  <a name="Restrictions"></a> 限制和局限  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   不能执行强制故障转移的唯一时间是在 Windows Server 故障转移群集 (WSFC) 群集缺少仲裁时。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "74822537"
     > [!NOTE]  
     >  对跨数据库和分布式事务的支持因 SQL Server 和操作系统版本而异。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   WSFC 群集具有仲裁。 如果群集缺乏仲裁，请参阅 [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。  
   
 -   您必须能够连接到承载其角色处于 SECONDARY 或 RESOLVING 状态的副本的服务器实例。  
   
-##  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   主副本仍在运行时，请勿进行强制故障转移。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "74822537"
   
 -   如果客户端无法连接到原始主副本，则强制故障转移可能会导致某些“裂脑”风险。 在强制故障转移之前，强烈建议您禁止客户端访问原始主副本。 否则，在强制故障转移之后，原始主数据库和当前主数据库便会分别进行更新。  
   
-##  <a name="WaysToAvoidDataLoss"></a> 强制仲裁后避免数据丢失的可能方法  
+##  <a name="potential-ways-to-avoid-data-loss-after-quorum-is-forced"></a><a name="WaysToAvoidDataLoss"></a> 强制仲裁后避免数据丢失的可能方法  
  在仲裁后的一些失败条件下，您可以避免数据丢失，如下所示：  
   
 -   **如果原始主副本处于联机状态**  
@@ -111,10 +111,10 @@ ms.locfileid: "74822537"
     >  在您强制故障转移到辅助副本时，丢失的数据量将取决于故障转移目标落在主副本之后有多远。 但是，在 WSFC 群集缺少仲裁或者仲裁已被强制时，您不能评估可能的数据丢失量。 但请注意，一旦 WSFC 群集重新获得运行状况正常的仲裁后，您可以开始跟踪可能的数据丢失。 有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。  
   
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **强制故障转移（可能丢失数据）**  
   
 1.  在对象资源管理器中，连接到一个服务器实例，该服务器实例承载需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本，然后展开服务器树。  
@@ -127,7 +127,7 @@ ms.locfileid: "74822537"
   
 5.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面的 [跟进：强制故障转移后的重要任务](#FollowUp)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **强制故障转移（可能丢失数据）**  
   
 1.  连接到一个服务器实例，该服务器实例承载需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本。  
@@ -146,7 +146,7 @@ ms.locfileid: "74822537"
   
 3.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面的 [跟进：强制故障转移后的重要任务](#FollowUp)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **强制故障转移（可能丢失数据）**  
   
 1.  将目录 (cd) 更改为一个服务器实例，该实例托管需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本  。  
@@ -186,7 +186,7 @@ ms.locfileid: "74822537"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：强制故障转移后的重要任务  
+##  <a name="follow-up-essential-tasks-after-a-forced-failover"></a><a name="FollowUp"></a> 跟进：强制故障转移后的重要任务  
   
 1.  执行强制故障转移之后，故障转移到的辅助副本将变成新的主副本。 但是，要使客户端可访问可用性副本，您可能需要重新配置 WSFC 仲裁或调整可用性组的可用性模式配置，如下所示：  
   
@@ -244,7 +244,7 @@ ms.locfileid: "74822537"
   
     -   [备份事务日志 (SQL Server)](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="ExampleRecoveryFromCatastrophy"></a> 示例应用场景：使用故障转移从灾难性故障中恢复  
+##  <a name="example-scenario-using-a-forced-failover-to-recover-from-a-catastrophic-failure"></a><a name="ExampleRecoveryFromCatastrophy"></a> 示例应用场景：使用故障转移从灾难性故障中恢复  
  如果主副本失败并且没有同步的辅助副本可用，则强制可用性组进行故障转移可能是适当的反应。 强制执行故障转移是否合适取决于以下几个方面：(1) 您是否预期到主副本处于脱机状态的时间超过您的服务级别协议 (SLA) 的容限，(2) 您是否愿意为使主数据库更快处于可用状态，而承担数据可能丢失的风险。 如果您决定可用性组需要强制故障转移，则实际的强制故障转移将是多步骤过程中的一个步骤。  
   
  为了说明使用强制故障转移从灾难性故障中恢复所需的步骤，本主题提供了一个可能的灾难恢复应用场景。 此示例应用场景假定某一可用性组的原始拓扑结构由一个主数据中心和一个远程数据中心构成。主数据中心承载三个同步提交可用性副本，包括主副本；而远程数据中心承载两个异步提交辅助副本。 下图说明了此示例可用性组的原始拓扑结构。 该可用性组由一个多子网 WSFC 群集承载，并且在主数据中心具有三个节点（**节点 01**、 **节点 02**和 **节点 03**），在远程数据中心有两个节点（**节点 04** 和 **节点 05**）。  
@@ -263,7 +263,7 @@ ms.locfileid: "74822537"
   
 -   [将可用性组返回到其原始拓扑](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="responding-to-the-catastrophic-failure-of-the-main-data-center"></a><a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  下图说明了为响应在主数据中心发生的灾难性故障而在远程数据中心执行的一系列操作。  
   
  ![主数据中心故障响应步骤](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "主数据中心故障响应步骤")  
@@ -276,7 +276,7 @@ ms.locfileid: "74822537"
 |**2.**|数据库管理员连接到具有最少的延迟的服务器示例（在 **节点 04**上）并且执行强制手动故障转移。 此强制故障转移将此次要副本转换为主角色并且挂起其余次要副本上的辅助数据库（在 **节点 05**上）。|[sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) （查询 **sys.dm_hadr_database_replica_states** 列）。 有关详细信息，请参阅本主题前面的 [建议](#Recommendations)。）|  
 |**3.**|数据库管理员手动恢复剩余辅助副本上的每个辅助数据库。|[恢复可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)|  
   
-###  <a name="ReturnToOrigTopology"></a> 将可用性组返回到其原始拓扑  
+###  <a name="returning-the-availability-group-to-its-original-topology"></a><a name="ReturnToOrigTopology"></a> 将可用性组返回到其原始拓扑  
  下图说明了在主数据中心返回到联机状态并且 WSFC 节点重新建立与 WSFC 群集的通信后将该可用性组返回到其原始拓扑的一系列操作。  
   
 > [!IMPORTANT]  
@@ -293,7 +293,7 @@ ms.locfileid: "74822537"
 |**3.**|在 **节点 03** 上同步提交次要副本（原始主要副本）进入 HEALTHY 同步状态后，数据库管理员将执行到该副本的计划的手动故障转移，使其再次成为主要副本。 **节点 04** 上的副本将恢复成为辅助副本。|[sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [使用 AlwaysOn 策略查看可用性组的运行状况 (SQL Server)](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|数据库管理员将连接到新的主副本，并且：<br /><br /> 1) 将以前的主副本（在远程中心中）更改回异步提交模式。<br /><br /> 2) 将主数据中心中的异步提交辅助副本更改回同步提交模式。|[更改可用性副本的可用性模式 (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **调整仲裁投票**  
   
 -   [查看群集仲裁 NodeWeight 设置](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
@@ -314,7 +314,7 @@ ms.locfileid: "74822537"
   
 -   [添加文件操作失败的故障排除（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   **博客：**  
   

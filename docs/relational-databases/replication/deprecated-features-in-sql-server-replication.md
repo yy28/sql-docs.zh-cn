@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 9f414d0ac6fc35e8ad65cedad2b04f88eb3b3553
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284749"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server 复制中不推荐使用的功能
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   本主题介绍 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中仍然可用但不推荐使用的复制功能。 按照计划， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
-## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="items-deprecated-in-sssql15"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 |Feature|说明|  
 |-------------|-----------------|  

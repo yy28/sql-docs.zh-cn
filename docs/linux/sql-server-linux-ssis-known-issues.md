@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288061"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>适用于 Linux 上 SSIS 的限制和已知问题
@@ -36,7 +36,7 @@ Linux 上的此版 SSIS 不支持以下功能：
 
 有关 Linux 上 SSIS 的其他限制和已知问题，请参阅[发行说明](sql-server-linux-release-notes.md#ssis)。
 
-## <a name="components"></a> 支持和不支持的组件
+## <a name="supported-and-unsupported-components"></a><a name="components"></a> 支持和不支持的组件
 
 Linux 支持以下内置 Integration Services 组件。 其中一些在 Linux 平台上有局限性。 Linux 不支持未在此处列出的内置组件。
 

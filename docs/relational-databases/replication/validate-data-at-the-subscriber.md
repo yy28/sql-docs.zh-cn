@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710768"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
@@ -259,7 +259,7 @@ ms.locfileid: "71710768"
   
      有关详细信息，请参阅 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 或 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  通过使用复制，您可以使用复制管理对象 (RMO) 以编程方式验证订阅服务器上的数据是否与发布服务器上的数据匹配。 使用的对象取决于复制拓扑的类型。 事务复制要求验证发布的所有订阅。  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ ms.locfileid: "71710768"
   
 5.  对订阅运行合并代理以开始验证，或者等待下一个计划的代理运行。 有关详细信息，请参阅 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 和 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。 验证操作的结果将写入代理的历史记录，您可以使用复制监视器查看。 有关详细信息，请参阅 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)。  
   
-###  <a name="RMOExample"></a> 示例 (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> 示例 (RMO)  
  此示例将对事务发布的所有订阅标记为行计数验证。  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

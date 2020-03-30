@@ -15,10 +15,10 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dcff763612b51918eb13336379c01f1c1ac9e108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822079"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>可用性组的驱动程序和客户端连接支持
@@ -27,7 +27,7 @@ ms.locfileid: "74822079"
   本主题介绍与 AlwaysOn 可用性组进行客户端连接时的注意事项，包括针对客户端配置和设置的先决条件、限制和建议。  
   
  
-##  <a name="ClientConnSupport"></a> 客户端连接支持  
+##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a> 客户端连接支持  
  以下部分提供有关对客户端连接的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持的信息。  
   
  **驱动程序支持**  
@@ -52,7 +52,7 @@ ms.locfileid: "74822079"
 > [!IMPORTANT]  
 >  要连接到一个可用性组侦听器，客户端必须使用 TCP 连接字符串。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
