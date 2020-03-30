@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990935"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>使用 SMB 文件共享存储安装 SQL Server
@@ -80,7 +80,7 @@ ms.locfileid: "67990935"
   
      有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中不同命令行参数选项的用法的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>操作系统注意事项（SMB 协议与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）  
+## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>操作系统注意事项（SMB 协议与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）  
  不同的 Windows 操作系统具有不同的 SMB 协议版本，并且 SMB 协议版本对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言是透明的。 您可以就 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]而言发现不同 SMB 协议版本的好处。  
   
 |操作系统|SMB2 协议版本|优势 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  

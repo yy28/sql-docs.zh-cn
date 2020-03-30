@@ -16,10 +16,10 @@ ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 56380d1b81f5b5e4968217ce0bf4bbe5207eca01
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976574"
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>othersUpdatesAreVisible 方法 (SQLServerDatabaseMetaData)
@@ -35,9 +35,9 @@ public boolean othersUpdatesAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>parameters  
- type  
+ type   
   
- 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一  ：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -58,7 +58,7 @@ public boolean othersUpdatesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果更新操作可见，则为 true。 否则为 **false**。  
+ 如果更新操作可见，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

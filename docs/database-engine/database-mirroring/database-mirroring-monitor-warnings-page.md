@@ -13,10 +13,10 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73efd4acedfbce0dcfdea72be63b5b11a086d38f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006383"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>数据库镜像监视器（警告页）
@@ -49,7 +49,7 @@ ms.locfileid: "68006383"
  有关详细信息，请参阅本主题后面的“备注”。  
   
 ## <a name="remarks"></a>备注  
- 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 _<SYSTEM_NAME>_ ”或“未连接到 _<SYSTEM_NAME>_ \\ _<instance_name>_ ”    。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示“等待数据...”  。  
+ 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 **<SYSTEM_NAME>** ”或“未连接到 _<SYSTEM_NAME>_  <instance_name> _”_ **\\**  。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示“等待数据...”  。  
   
  当信息可用时，每个警告的单元格将会显示指定的阈值（和度量单位）或“未启用”  。  
   

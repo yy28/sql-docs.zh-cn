@@ -11,10 +11,10 @@ ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c755fd18f3b904f6c28707752e5ff00c6086f0b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570287"
 ---
 # <a name="configurationsetting-property---machineaccountidentity"></a>ConfigurationSetting 属性 - MachineAccountIdentity
@@ -34,7 +34,7 @@ public string MachineAccountIdentity;
  一个 **String** 值，其中包含安装了报表服务器的计算机的计算机帐户标识。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 属性](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)  

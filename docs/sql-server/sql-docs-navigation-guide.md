@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831624"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文档导航指南 
@@ -24,7 +24,7 @@ ms.locfileid: "76831624"
 
 SQL Server 中心页可以在 [https://aka.ms/sqldocs](https://aka.ms/sqldocs) 中找到，是用于查找相关 SQL Server 内容的入口点。
 
-始终可以通过从 SQL Server 技术文档集中每个页面顶部的标题中选择“SQL 文档”来导航回到此页面： 
+始终可以通过从 SQL Server 技术文档集中每个页面顶部的标题中选择“SQL 文档”  来导航回到此页面： 
 
 ![标题中的 SQL 文档](media/sql-server-docs-navigation-guide/sql-docs-in-header.png)
 
@@ -32,7 +32,7 @@ SQL Server 中心页可以在 [https://aka.ms/sqldocs](https://aka.ms/sqldocs) �
 
 如果要在脱机系统上查看 SQL Server 文档，有两个选项可实现此操作。 可以在 SQL Server 技术文档中的任何位置创建 PDF，也可以使用 [SQL Server 脱机帮助查看器](sql-server-help-installation.md)下载脱机内容。 
 
-如果要创建 PDF，请选择每个目录底部的“下载 PDF”链接。
+如果要创建 PDF，请选择每个目录底部的“下载 PDF”链接  。
 
 
 ![下载 PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
@@ -63,7 +63,7 @@ SQL Server 技术文档为几种受支持的 SQL Server 版本和风格提供内
 
 ![SQL 文档版本筛选器](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-依次选择“所有 SQL”\>“不隐藏任何内容”，可确保所有内容都可见，并且版本筛选器没有隐藏任何内容。 “不隐藏任何内容”选项可能会在同一篇文章中显示与几个不同 SQL Server 版本相关的内容，这可能会令内容相互矛盾、不明确或产生混淆。 因此，[不建议将“不隐藏任何内容”选项用于常规用途](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。 
+依次选择“所有 SQL”  \>“不隐藏任何内容”  ，可确保所有内容都可见，并且版本筛选器没有隐藏任何内容。 “不隐藏任何内容”  选项可能会在同一篇文章中显示与几个不同 SQL Server 版本相关的内容，这可能会令内容相互矛盾、不明确或产生混淆。 因此，[不建议将“不隐藏任何内容”  选项用于常规用途](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。 
 
 ## <a name="breadcrumbs"></a>痕迹导航
 
@@ -80,7 +80,7 @@ SQL Server 技术文档为几种受支持的 SQL Server 版本和风格提供内
 
 ## <a name="submit-docs-feedback"></a>提交文档反馈
 
-如果在文章中发现错误内容，则可以向下滚动到页面底部并选择“内容反馈”，将反馈提交给 SQL 内容团队。
+如果在文章中发现错误内容，则可以向下滚动到页面底部并选择“内容反馈”  ，将反馈提交给 SQL 内容团队。
 
 ![Git Issue 内容反馈](media/sql-server-get-help/git-issues.png)
 

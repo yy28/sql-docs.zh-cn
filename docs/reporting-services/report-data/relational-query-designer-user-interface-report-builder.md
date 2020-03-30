@@ -15,10 +15,10 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593380"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>关系查询设计器用户界面（报表生成器）
@@ -66,10 +66,10 @@ ms.locfileid: "73593380"
  [查询结果](#QueryResults)  
  显示自动生成的查询的结果集示例数据。  
   
-###  <a name="DatabaseView"></a> “数据库视图”窗格  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> “数据库视图”窗格  
  “数据库视图”窗格显示您有权查看的数据库对象的元数据，该元数据取决于数据源连接和凭据。 层次结构视图显示按数据库架构组织的数据库对象。 展开每个架构的节点可查看表、视图、存储过程及表值函数。 展开表或视图可显示列。  
   
-###  <a name="SelectedFields"></a> “所选字段”窗格  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> “所选字段”窗格  
  “所选字段”窗格显示报表数据集中的字段以及要包括在查询中的分组和聚合。  
   
  显示下列选项：  
@@ -114,14 +114,14 @@ ms.locfileid: "73593380"
 |Var Distinct|返回唯一项的方差。 实现 VAR 聚合和 DISTINCT 关键字的组合。|  
 |VarP Distinct|返回唯一项的方差。 实现 VARP 聚合和 DISTINCT 关键字的组合。|  
   
-###  <a name="FunctionParameters"></a> “函数参数”窗格  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> “函数参数”窗格  
  “函数参数”窗格显示存储过程或表值函数的参数。 显示以下列：  
   
 -   **参数名称** ：显示由存储过程或表值函数定义的参数名称。  
   
 -   **值** 在查询运行以检索在设计时在“查询结果”窗格中显示的数据时用于查询参数的值。 当报表在运行时运行时不使用此值。  
   
-###  <a name="Relationships"></a> “关系”窗格  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> “关系”窗格  
  “关系”窗格显示联接关系。 可以根据从数据库元数据检索的外键关系自动检测到关系，也可以手动创建关系。  
   
  显示下列选项：  
@@ -159,7 +159,7 @@ ms.locfileid: "73593380"
   
 -   **联接字段** ：列出联接字段对，如果某个关系具有多个联接条件，则各个联接字段对用逗号 (,) 分隔。  
   
-###  <a name="AppliedFilters"></a> “应用的筛选器”窗格  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> “应用的筛选器”窗格  
  “应用的筛选器”窗格显示用于限定在运行时检索的数据行数的条件。 此窗格中指定的条件用于生成 SQL WHERE 子句。 如果选择了参数选项，则会自动创建报表参数。 通过基于查询参数的报表参数，用户可为查询指定值，以便控制报表中的数据。  
   
  显示以下列：  
@@ -172,7 +172,7 @@ ms.locfileid: "73593380"
   
 -   **参数** ：显示用于为查询添加查询参数的选项。 使用“数据集属性”可查看查询参数与报表参数之间的关系。  
   
-###  <a name="QueryResults"></a> “查询结果”窗格  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> “查询结果”窗格  
  “查询结果”窗格显示由其他窗格中的选项指定并且自动生成的查询的结果。 结果集中的列是您在“所选字段”窗格中指定的字段，行数据受限于您在“应用的筛选器”窗格中指定的筛选器。 如果查询包括聚合，则结果集将包括新的聚合列。 例如，如果使用 Count 聚合对列 **Color** 进行聚合，则查询结果将包括新列。 默认情况下，此列名为 **Count_Color**。  
   
  此数据表示在运行查询时数据源中的值。 此数据未保存在报表定义中。报表中的实际数据是在处理报表时进行检索的。  

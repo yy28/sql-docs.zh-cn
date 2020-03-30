@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69652308"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在大数据群集中装载 S3 以实现 HDFS 分层
@@ -43,7 +43,7 @@ ms.locfileid: "69652308"
    > [!TIP]
    > 有关如何创建 S3 访问密钥的详细信息，请参阅 [S3 访问密钥](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)。
 
-## <a id="mount"></a>装载远程 HDFS 存储
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a>装载远程 HDFS 存储
 
 准备好带有访问密钥的凭据文件后，接下来即可开始装载。 以下步骤说明了如何将 S3 中的远程 HDFS 存储装载到大数据群集的本地 HDFS 存储中。
 
@@ -72,7 +72,7 @@ ms.locfileid: "69652308"
 
 如果成功装载，应该能够查询 HDFS 数据并针对它运行 Spark 作业。 它显示在大数据群集上 HDFS 中由 `--mount-path` 指定的位置处。
 
-## <a id="status"></a> 获取装载状态
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> 获取装载状态
 
 要列出大数据群集中的全部装载状态，可使用以下命令：
 
@@ -94,7 +94,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> 删除装载
+## <a name="delete-the-mount"></a><a id="delete"></a> 删除装载
 
 要删除装载，请使用 azdata bdc hdfs mount delete 命令，并在 HDFS 中指定装载路径  ：
 

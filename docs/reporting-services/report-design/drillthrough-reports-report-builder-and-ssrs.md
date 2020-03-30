@@ -9,10 +9,10 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 117b3cb90970c03c836964d47d91c37f0e65a294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080456"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>钻取报表（报表生成器和 SSRS）
@@ -25,7 +25,7 @@ ms.locfileid: "77080456"
 > [!NOTE]  
 >  当您在报表生成器中工作时，必须连接到报表服务器，才能查看在单击主报表中钻取链接时打开的钻取报表。  
   
- 若要快速开始使用钻取报表，请参阅[教程：生成钻取报表和主报表（报表生成器）](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 
+ 若要快速开始使用钻取报表，请参阅[教程：创建钻取报表和主报表（报表生成器）](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 
    
 ## <a name="parameters-in-drillthrough-reports"></a>钻取报表中的参数  
  钻取报表通常包含由汇总报表传入其中的参数。 在销售额汇总报表示例中，汇总报表将字段 [OrderNumber] 包含在表单元的文本框中。 该钻取报表中包含一个将订单号作为值的参数。 在 [OrderNumber] 的文本框中设置钻取报表链接时，同时也将目标报表的参数设置为 [OrderNumber]。 当用户单击该汇总报表中的订单号后，目标详细信息报表随即打开并显示该订单号的信息。 若要查看有关基于参数值自定义钻取报表的说明，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)和 [InScope 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-inscope-function.md)。  

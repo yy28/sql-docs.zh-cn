@@ -11,10 +11,10 @@ ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4b159e57f6f2335e894490f7e34d159bd95b2b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993136"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
@@ -30,15 +30,15 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>parameters  
-$column  ：列（从 1 开始的索引）的（混合）数量或结果集中的列的名称。  
+$column：列（从 1 开始的索引）的（混合）数量或结果集中的列的名称  。  
   
-&$param  ：列将绑定到的 PHP 变量的（混合）名称。  
+&$param：列将绑定到的 PHP 变量的（混合）名称  。  
   
-$type  ：参数的可选数据类型，由 PDO::PARAM_* 常量表示。  
+$type：参数的可选数据类型，由 PDO::PARAM_* 常量表示  。  
   
-$maxLen  ：可选整数，不由 Microsoft Drivers for PHP for SQL Server 使用。  
+$*maxLen*：可选整数，不由 Microsoft Drivers for PHP for SQL Server 使用。  
   
-$driverdata  ：适用于驱动程序的可选混合参数。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 来将列作为使用 UTF-8 编码的字符串绑定到变量。  
+$driverdata：适用于驱动程序的可选混合参数  。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 来将列作为使用 UTF-8 编码的字符串绑定到变量。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  

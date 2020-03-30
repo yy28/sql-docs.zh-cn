@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
 ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68891859"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>在 Reporting Services 数据源中存储凭据
@@ -32,7 +32,7 @@ ms.locfileid: "68891859"
 
 可以配置存储的凭据， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器可使用这些凭据来访问报表的外部数据。 如果报表在无人参与的状态下运行，则使用存储凭据，例如将报表作为电子邮件发布的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 计划或触发报表处理时，报表服务器将检索和使用这些凭据。 本主题向你说明了为本机模式下和 SharePoint 模式下的报表服务器配置存储凭据的过程。  
   
-##  <a name="bkmk_top"></a> 存储凭据的安全策略要求  
+##  <a name="security-policy-requirements-for-stored-credentials"></a><a name="bkmk_top"></a> 存储凭据的安全策略要求  
  ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 要求为报表服务器上的以下其中一项安全策略配置用于存储凭据的帐户。 建议使用环境要求的最低级别权限来选择策略。  
   
 1.  **允许在本地登录**。 有关详细信息，请参阅 [允许在本地登录](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)。  
@@ -41,7 +41,7 @@ ms.locfileid: "68891859"
   
 3.  有关策略的一般信息，请参阅 [在组策略对象上编辑安全设置](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx)。  
   
-##  <a name="bkmk_stored_credentials_data_source_native"></a> 为特定于报表的数据源配置存储的凭据（本机模式）  
+##  <a name="configure-stored-credentials-for-a-report-specific-data-source-native-mode"></a><a name="bkmk_stored_credentials_data_source_native"></a> 为特定于报表的数据源配置存储的凭据（本机模式）  
   
 1.  在 Web 门户中，浏览到包含该报表的文件夹。 单击报表磁贴右上角的省略号 (...)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68891859"
   
      ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> 为特定于报表的数据源配置存储的凭据（SharePoint 模式）  
+##  <a name="configure-stored-credentials-for-a-report-specific-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_data_source_sharepoint"></a> 为特定于报表的数据源配置存储的凭据（SharePoint 模式）  
   
 1.  浏览到包含该报表的文档库，然后单击打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "ssrs 项的文档库上下文菜单")。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "68891859"
   
      ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> 为共享数据源配置存储凭据（本机模式）  
+##  <a name="configure-stored-credentials-for-a-shared-data-source-native-mode"></a><a name="bkmk_stored_credentials_shared_data_source_native"></a> 为共享数据源配置存储凭据（本机模式）  
   
 1.  在 Web 门户中，浏览到共享数据源项。 
   
@@ -123,7 +123,7 @@ ms.locfileid: "68891859"
   
      ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> 为共享数据源配置存储凭据（SharePoint 模式）  
+##  <a name="configure-stored-credentials-for-a-shared-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> 为共享数据源配置存储凭据（SharePoint 模式）  
   
 1.  在文档库中，浏览到共享数据源项。![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")  
   

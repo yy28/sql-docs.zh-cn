@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190395"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上配置 HDFS 分层
@@ -57,7 +57,7 @@ HDFS 分层支持刷新。 刷新现有装载可获取远程数据的最新快�
 - [如何在大数据群集中装载 ADLS Gen2 以实现 HDFS 分层](hdfs-tiering-mount-adlsgen2.md)
 - [如何在大数据群集中装载 S3 以实现 HDFS 分层](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> 已知问题和限制
+## <a name="known-issues-and-limitations"></a><a id="issues"></a> 已知问题和限制
 
 以下列表提供了在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 中使用 HDFS 分层时的已知问题和当前限制：
 

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 3bf78fc05390cc3c0d3cff0b87f05883eafe916a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994358"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "67994358"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  ISSCommandWithParameters 接口公开了对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 和用户定义类型 (UDT) 的支持  。 这一可选接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo）之外，ISSCommandWithParameters 还提供了两个用于处理服务器特定数据类型的新方法      。  
+  ISSCommandWithParameters 接口公开了对  **XML 和用户定义类型 (UDT) 的支持**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 这一可选接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo）之外，ISSCommandWithParameters 还提供了两个用于处理服务器特定数据类型的新方法      。  
   
 > [!NOTE]  
 >  当使用服务组件时，可以使用 ISSCommandWithParameters 接口，但是服务组件不会使用此接口  。  

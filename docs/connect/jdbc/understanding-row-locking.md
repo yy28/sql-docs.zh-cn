@@ -11,10 +11,10 @@ ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bcd18baf401378605abf0d53e203d0a3745ee887
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027328"
 ---
 # <a name="understanding-row-locking"></a>了解行锁
@@ -29,7 +29,7 @@ ms.locfileid: "69027328"
 锁定用于确保事务完整性和数据库一致性。 锁定可以防止用户读取其他用户正在更改的数据，并防止多个用户同时更改相同的数据。 如果不使用锁定，数据库中的数据可能在逻辑上变得不正确，而针对这些数据进行查询可能会产生想不到的结果。
 
 > [!NOTE]  
-> 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行锁定的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“[!INCLUDE[ssDE](../../includes/ssde_md.md)] 中的锁定”。
+> 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行锁定的详细信息，请参阅 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 联机丛书中的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的锁定”。
 
 ## <a name="see-also"></a>另请参阅
 

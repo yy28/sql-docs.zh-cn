@@ -15,15 +15,15 @@ ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025481"
 ---
 # <a name="server-properties---general-page"></a>服务器属性 -“常规”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用此页面可以查看有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 安装的只读信息。  
+  使用此页面可以查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的只读信息。  
   
 ## <a name="property-grid"></a>属性网格  
  查看所选服务器的属性，例如服务器名称、服务器操作系统或处理器数。  
@@ -59,10 +59,10 @@ ms.locfileid: "68025481"
  显示服务器支持的排序规则。 排序规则指定用于 Unicode 数据和非 Unicode 数据的特定代码页和排序顺序。  
   
  **已群集化**  
- 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集中配置了该服务器实例，则显示“True”  ；如果未群集该服务器实例，则显示“False”  。  
+ 如果在  **故障转移群集中配置了该服务器实例，则显示“True”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]；如果未群集该服务器实例，则显示“False”  。  
   
  **启用 HADR**  
- 如果启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，则显示“True”  ；如果禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，则显示“False”  。 有关启用或禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
+ 如果启用  **功能，则显示“True”** [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]；如果禁用  **功能，则显示“False”** [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 有关启用或禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 ## <a name="description-field"></a>说明字段  
  查看服务器属性的其他信息。  

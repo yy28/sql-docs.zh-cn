@@ -16,10 +16,10 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013627"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
@@ -30,10 +30,10 @@ ms.locfileid: "68013627"
 >  有关使用“对象资源管理器详细信息”窗格的信息，请参阅 [对象资源管理器详细信息窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  您必须连接到承载主副本或辅助副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（服务器实例）。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **监视可用性组、可用性副本和可用性数据库**  
   
 1.  在“视图”菜单上单击 **“对象资源管理器详细信息”** ，或按 **F7** 键。  
@@ -54,13 +54,13 @@ ms.locfileid: "68013627"
   
          若要对多个可用性数据库执行操作，请选择这些数据库，然后右键单击它们以打开一个列出可用命令的上下文菜单。  
   
-##  <a name="AvGroupsDetails"></a> 可用性组详细信息  
+##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a> 可用性组详细信息  
  **“可用性组”** 详细信息屏幕显示以下列：  
   
  **名称**  
  列出所选可用性组的“可用性副本”、“可用性数据库”和“可用性组”侦听器等文件夹。     
   
-##  <a name="AvReplicaDetails"></a> 可用性副本详细信息  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性副本详细信息  
  **“可用性副本”** 详细信息屏幕显示以下列：  
   
  **服务器实例**  
@@ -101,7 +101,7 @@ ms.locfileid: "68013627"
 > [!NOTE]  
 >  有关可用性副本的性能计数器的信息，请参阅 [SQL Server，可用性副本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
-##  <a name="AvDbDetails"></a> 可用性数据库详细信息  
+##  <a name="availability-database-details"></a><a name="AvDbDetails"></a> 可用性数据库详细信息  
  **“可用性数据库”** 详细信息屏幕显示给定可用性组中的可用性数据库的以下属性：  
   
  **名称**  

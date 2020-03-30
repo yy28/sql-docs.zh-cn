@@ -13,10 +13,10 @@ ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3e8c86c1ba590ab574e7afe351b3e29c2c918b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194070"
 ---
 # <a name="deploying-a-data-processing-extension"></a>部署数据处理扩展插件
@@ -39,8 +39,8 @@ ms.locfileid: "63194070"
   
 |主题|说明|  
 |-----------|-----------------|  
-|[如何：向报表服务器部署数据处理扩展插件](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|介绍如何将数据处理扩展插件部署到报表服务器。|  
-|[如何：向报表设计器部署数据处理扩展插件](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|介绍如何将数据处理扩展插件部署到报表设计器。|  
+|[如何向报表服务器部署数据处理扩展插件](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|介绍如何将数据处理扩展插件部署到报表服务器。|  
+|[如何向报表设计器部署数据处理扩展插件](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|介绍如何将数据处理扩展插件部署到报表设计器。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../../../reporting-services/extensions/reporting-services-extensions.md)   

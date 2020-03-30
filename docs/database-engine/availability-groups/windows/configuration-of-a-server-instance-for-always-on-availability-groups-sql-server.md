@@ -14,10 +14,10 @@ ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 94f3a9b92e05983ff9e2a10473a171069acf9a77
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67988550"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>对 SQL Server 实例启用 AlwaysOn 可用性组功能
@@ -28,7 +28,7 @@ ms.locfileid: "67988550"
 > [!IMPORTANT]  
 >  有关针对 Windows Server 故障转移群集 (WSFC) 节点的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 先决条件和限制以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例的基本信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)的要求。  
    
-##  <a name="TermsAndDefinitions"></a> 术语和定义  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 术语和定义  
  [Always On 可用性组](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库”  ，它们共同实现故障转移）支持故障转移环境。  
   
@@ -38,14 +38,14 @@ ms.locfileid: "67988550"
  [数据库镜像端点](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
  端点就是一个 SQL Server 对象，它支持 SQL Server 在网络中通信。 若要参与数据库镜像和/或 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，服务器实例需要一个特殊的专用端点。 服务器实例上所有的镜像和可用性组连接都使用相同的数据库镜像端点。 此端点用途特殊，专门用于接收来自其他服务器实例的这些连接。  
   
-##  <a name="ConfigSI"></a> 配置服务器实例以支持 Always On 可用性组  
+##  <a name="to-configure-a-server-instance-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> 配置服务器实例以支持 Always On 可用性组  
  要支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，服务器实例必须位于承载可用性组的 WSFC 故障转移群集的某个节点上，启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 并且占有一个数据库镜像端点。  
   
 1.  对要参与一个或多个可用性组的每个服务器实例启用 AlwaysOn 可用性组功能。 一个给定服务器实例只能为一个给定可用性组承载单个可用性副本。  
   
 2.  确保服务器实例拥有数据库镜像端点。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **启用 AlwaysOn 可用性组**  
   
 -   [启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "67988550"
   
 -   [允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   **博客：**  
   

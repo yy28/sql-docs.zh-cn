@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939205"
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
@@ -141,7 +141,7 @@ ms.locfileid: "67939205"
   
 -   不定期地重新对合并复制系统表建立索引。  
   
-     在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings      。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+     在合并复制维护过程中，应不定期检查以下与合并复制相关联的系统表的增长情况： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、 **MSmerge_past_partition_mappings**。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   使用复制监视器中的 **“同步历史记录”** 选项卡监视同步性能。  
   

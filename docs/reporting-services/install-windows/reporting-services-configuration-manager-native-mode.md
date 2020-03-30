@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593783"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
@@ -29,7 +29,7 @@ ms.locfileid: "73593783"
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理员不设计用来管理 SharePoint 模式报表服务器。 SharePoint 模式通过使用 SharePoint 管理中心和 PowerShell 脚本进行管理和配置。  
   
-##  <a name="bkmk_scenarios"></a> 要使用 Reporting Services 配置管理器的情形  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> 要使用 Reporting Services 配置管理器的情形  
  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器执行下列任务：  
   
 -   配置报表服务器服务帐户。 此帐户最初是在安装过程中配置的，但是，如果需要更新密码或使用其他帐户，则可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器进行修改。  
@@ -48,7 +48,7 @@ ms.locfileid: "73593783"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并不帮助您管理报表服务器内容、启用额外功能或授予服务器的访问权。 完全部署还需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 启用额外功能或修改默认值，以及使用 Web 门户授予用户对服务器的访问权。
 
-##  <a name="bkmk_requirements"></a> 要求
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> 要求
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器是版本特定的。 随此版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 一起安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器不能用于配置早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果在同一计算机上并行运行新版本和旧版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则必须使用随每个版本安装的 Reporting Service 配置管理器来配置每个实例。  
 
@@ -64,7 +64,7 @@ ms.locfileid: "73593783"
 
 安装 SQL Server Reporting Services 时，将自动安装 Reporting Services 配置管理器。
 
-##  <a name="bkmk_start_configuration_manager"></a> 启动 Reporting Services 配置管理器
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> 启动 Reporting Services 配置管理器
 
 1.  使用适合于您的 Microsoft Windows 版本的以下步骤：
 

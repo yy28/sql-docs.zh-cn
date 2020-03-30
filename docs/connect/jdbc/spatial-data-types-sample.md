@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e0557030bdec7b566a69696a8fd50cb543a7fc1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027686"
 ---
 # <a name="spatial-data-types-sample"></a>空间数据类型示例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序演示了如何创建、插入和检索空间数据类型（Geometry 和 Geography）。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序展示了如何创建、插入和检索空间数据类型（Geometry 和 Geography）。
   
 此示例的代码文件名为 SpatialDataTypes.java，位于以下位置：  
 
@@ -37,11 +37,11 @@ ms.locfileid: "69027686"
   
 ## <a name="example"></a>示例
 
-在下面的示例中，示例代码创建一个名为 SpatialDataTypesTable_JDBC_Sample 的表，其中包含“Geometry”和“Geography”列。
+在下面的示例中，示例代码创建名为 SpatialDataTypesTable_JDBC_Sample 的表，其中包含“Geometry”和“Geography”列。
 
-该示例首先根据表示 POINT 的熟知文本 (WKT) 创建“Geometry”和“Geography”对象。 它将 SQLServerPreparedStatement 和参数化查询结合使用，以便将数据相应地映射到每列。
+此示例先根据表示 POINT 的熟知文本 (WKT) 创建“Geometry”和“Geography”对象。 然后，它结合使用 SQLServerPreparedStatement 和参数化查询，以将数据相应地映射到每一列。
 
-最后，该示例将数据插入表中并进行检索。 数据以 WKT 的格式显示。
+最后，此示例将数据插入表中，并检索它。 数据以 WKT 的形式显示。
 
 ```java
 import java.sql.Connection;

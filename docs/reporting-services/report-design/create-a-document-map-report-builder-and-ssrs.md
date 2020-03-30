@@ -9,10 +9,10 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6f1d18c8559625c6e58b45b4e9810ed29e0ef28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082294"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
@@ -26,7 +26,7 @@ ms.locfileid: "77082294"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> 文档结构图和呈现扩展插件  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> 文档结构图和呈现扩展插件  
  文档结构图专门用于 HTML 呈现扩展插件（如预览和报表查看器）。 其他呈现扩展插件具有不同的呈现文档结构图的方式：  
   
 -   PDF 将文档结构图呈现为“书签”窗格。  

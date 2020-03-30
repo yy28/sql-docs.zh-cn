@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72517944"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
@@ -37,7 +37,7 @@ ms.locfileid: "72517944"
   
  
   
-##  <a name="BestPractices"></a> 最佳实践  
+##  <a name="best-practices"></a><a name="BestPractices"></a> 最佳实践  
   
 -   查看 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72517944"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重启计算机，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update 包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重新启动计算机， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
   
     -   .NET Framework 4：安装程序在群集化的操作系统上安装 .NET Framework 4。 为了缩短安装时间，您可以考虑在您运行安装程序之前安装 .NET Framework 4。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72517944"
   
     -   如果您要使用 SMB 文件共享作为存储选项，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装帐户必须拥有对文件服务器的 SeSecurityPrivilege 权限。 为此，请使用文件服务器上的“本地安全策略”控制台将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装帐户添加到 **“管理审核和安全日志”** 权限中。  
   
-##  <a name="Hardware"></a> 确认您的硬件解决方案  
+##  <a name="verify-your-hardware-solution"></a><a name="Hardware"></a> 确认您的硬件解决方案  
   
 -   如果群集解决方案中包含地理位置分散的群集节点，则还必须验证网络延迟和共享磁盘支持之类的附加项。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72517944"
   
 -   如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 源安装文件和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集位于不同的域中，若要安装该群集，需要将安装文件复制到可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的当前域中。  
   
-##  <a name="Security"></a> 查看安全注意事项  
+##  <a name="review-security-considerations"></a><a name="Security"></a> 查看安全注意事项  
   
 -   若要使用加密，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中的所有节点上安装带有完全限定的 WSFC 群集 DNS 名称的服务器证书。 例如，如果您有一个包含两个节点（节点的名称分别为“Test1.DomainName.com”和“Test2.DomainName.com”）的群集和一个名为“Virtsql”的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例，则必须获取“Virtsql.DomainName.com”的证书，并在 test1 和 test2 节点上安装该证书。 然后，可以选中 **配置管理器中的** “强制协议加密” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复选框，以将故障转移群集配置为使用加密。  
   
@@ -146,13 +146,13 @@ ms.locfileid: "72517944"
   
 -   若要对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用 Kerberos 身份验证，请参阅 [知识库中的](https://support.microsoft.com/kb/319723) How to use Kerberos authentication in SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （如何在 SQL Server 中使用 Kerberos 身份验证）。  
 
--   SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持使用以下配置： 
+-   SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持  使用以下配置： 
     *   工作组群集上的 SQL FCI。 
     *   多域群集上的 SQL FCI。   
     *   域和工作组群集上的 SQL FCI。 
 
   
-##  <a name="Network"></a> 查看网络、端口和防火墙注意事项  
+##  <a name="review-network-port-and-firewall-considerations"></a><a name="Network"></a> 查看网络、端口和防火墙注意事项  
   
 -   确认在开始安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前，已对所有专用网卡禁用 NetBIOS。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "72517944"
   
     5.  安装完成后，请返回到“控制面板”中的“网络连接”，禁用当前未使用的任何网络适配器。  
   
-##  <a name="OS_Support"></a> 确认您的操作系统  
+##  <a name="verify-your-operating-system"></a><a name="OS_Support"></a> 确认您的操作系统  
  确保您的操作系统已正确安装并且支持故障转移群集。 下表列出了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本和支持这些版本的操作系统。  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
@@ -199,7 +199,7 @@ ms.locfileid: "72517944"
   
  **支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集。  
   
-##  <a name="MultiSubnet"></a> 针对多子网配置的其他注意事项  
+##  <a name="additional-considerations-for-multi-subnet-configurations"></a><a name="MultiSubnet"></a> 针对多子网配置的其他注意事项  
  下面的部分描述了在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集时要记住的要求。 多子网配置涉及跨多个子网的群集，因此，涉及使用多个 IP 地址以及对 IP 地址资源依赖关系的更改。  
   
 ### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Edition 和操作系统注意事项  
@@ -225,7 +225,7 @@ ms.locfileid: "72517944"
 #### <a name="related-content"></a>相关内容  
  有关 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 多站点故障转移的详细信息，请参阅 [Windows Server 2008 R2 故障转移群集站点](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) 和 [在多站点故障转移群集中设计群集服务或应用程序](https://go.microsoft.com/fwlink/?LinkId=177873)。  
   
-##  <a name="WSFC"></a> 配置 Windows Server 故障转移群集  
+##  <a name="configure-windows-server-failover-cluster"></a><a name="WSFC"></a> 配置 Windows Server 故障转移群集  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 必须至少在服务器群集的一个节点上配置群集服务 (WSFC)。 您还必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 与 WSFC 一起运行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 支持最多 16 节点的故障转移群集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支持两节点的故障转移群集。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72517944"
   
 -   配置域名服务 (DNS) 或 Windows Internet 名称服务 (WINS)。 必须在要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的环境中运行 DNS 服务器或 WINS 服务器。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP 接口虚拟引用注册动态域名服务。 DNS 服务器配置应允许群集节点动态注册映射到网络名称的联机 IP 地址。 如果无法完成动态注册，安装程序将失败，安装将回滚。 有关详细信息，请参阅 [这篇知识库文章](https://support.microsoft.com/kb/947048)。  
   
-##  <a name="MSDTC"></a> 安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器  
+##  <a name="install-msconame-distributed-transaction-coordinator"></a><a name="MSDTC"></a> 安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器  
  在故障转移群集上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前，请确定是否必须创建 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器 (MSDTC) 群集资源。 如果只安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，则 MSDTC 群集资源不是必需的。 如果要安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 SSIS、工作站组件或者要使用分布式事务处理，则必须安装 MSDTC。 请注意，MSDTC 对于仅 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例不是必需的。  
   
  在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]中，您可以在单个故障转移群集上安装 MSDTC 的多个实例。 安装的第一个 MSDTC 实例将是 MSDTC 的群集默认实例。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将通过自动使用安装到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本地群集资源组的 MSDTC 实例，利用该 MSDTC 实例。 但是，单个应用程序可以映射到群集上的任何 MSDTC 实例。  

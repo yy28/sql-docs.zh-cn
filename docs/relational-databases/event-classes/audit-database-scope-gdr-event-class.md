@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 766d8066ab75ec95ccaa1ada0f3706219cfc95dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897627"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  每当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的用户发出针对语句权限的 GRANT、REVOKE 或 DENY 时（仅限于数据操作，例如针对某个数据库授予权限），都会发生 Audit Database Scope GDR 事件类  。  
+  每当   中的用户发出针对语句权限的 GRANT、REVOKE 或 DENY 时（仅限于数据操作，例如针对某个数据库授予权限），都会发生 Audit Database Scope GDR 事件类[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="audit-database-scope-gdr-event-class-data-columns"></a>Audit Database Scope GDR 事件类的数据列  
   

@@ -11,20 +11,20 @@ ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33998300281a274067a0879775dc33c9d7635471
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028413"
 ---
 # <a name="caching-result-set-data-sample"></a>缓存结果集数据的示例
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序说明了如何从数据库中检索大量数据，然后使用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的 [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 方法控制在客户端中缓存的数据行数。  
+此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序说明了如何从数据库中检索大量数据，然后使用 [SQLServerResultSet](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 对象的 [setFetchSize](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法控制在客户端中缓存的数据行数。  
   
 > [!NOTE]  
-> 限制客户端中缓存的行数与限制结果集中包含的总行数不同。 要控制结果集中包含的总行数，请使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 方法，该对象具有继承对象 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象。  
+> 限制客户端中缓存的行数与限制结果集中包含的总行数不同。 要控制结果集中包含的总行数，请使用 [SQLServerStatement](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 对象的 [setMaxRows](../../../connect/jdbc/reference/sqlserverstatement-class.md) 方法，该对象具有继承对象 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象。  
   
 要对客户端中缓存的行数进行限制，首先必须在创建 Statement 对象时使用服务器端游标，并且在创建 Statement 对象时专门声明要使用的游标类型。 例如，JDBC 驱动程序提供了 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 游标类型，该类型是用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的快速只进、只读的服务器端游标。  
   

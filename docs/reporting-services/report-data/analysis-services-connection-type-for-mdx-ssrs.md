@@ -9,10 +9,10 @@ ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eff17f770599ae953afeaae81779f0326ad89e4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081830"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>针对 MDX 的 Analysis Services 连接类型 (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081830"
   
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a> 连接字符串  
+##  <a name="connection-string"></a><a name="Connection"></a> 连接字符串  
  当连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集时，您将会连接到服务器上一个 Analysis Services 实例中的数据库对象。 该数据库可能具有多个多维数据集。 可在生成查询时在查询设计器中指定多维数据集。 下面的示例演示连接字符串：  
   
 ```  
@@ -32,7 +32,7 @@ data source=<server name>;initial catalog=<database name>
  有关更多连接字符串的示例，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Credentials"></a> 凭据  
+##  <a name="credentials"></a><a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。  
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
@@ -47,10 +47,10 @@ data source=<server name>;initial catalog=<database name>
   
 -   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)
   
- 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
   
-##  <a name="Query"></a> 查询  
+##  <a name="queries"></a><a name="Query"></a> 查询  
  与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源建立数据连接之后，您可以创建一个数据集，并定义一个指定要从多维数据集中检索哪些数据的多维表达式 (MDX) 查询。 使用 MDX 图形查询设计器在数据源的基础数据结构中进行浏览和选择。  
   
  可以通过下列方式指定查询：  
@@ -70,13 +70,13 @@ data source=<server name>;initial catalog=<database name>
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展数据集字段属性。 这些值可从外部数据源获得，但在“报表数据”窗格中不显示。 可以通过内置 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Fields **集合，在报表中使用** 数据处理扩展插件支持的扩展字段属性。 对于在数据源中具有值的属性，可以访问预定义的属性值，如 **FormattedValue**、 **Color**或 **UniqueName**。 有关详细信息，请参阅 msdn.microsoft.com 上 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
   
-##  <a name="Parameters"></a> Parameters  
+##  <a name="parameters"></a><a name="Parameters"></a> Parameters  
  若要包括查询参数，请在查询设计器的筛选区域创建一个筛选器，并将该筛选器标记为参数。 系统将为每个筛选器自动创建一个数据集以提供可用值。 默认情况下，这些数据集不显示在“报表数据”窗格中。 有关详细信息，请参阅[在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)和[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
  默认情况下，每个报表参数的数据类型均为 **Text**。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
-##  <a name="Remarks"></a> 注释  
+##  <a name="remarks"></a><a name="Remarks"></a> 注释  
  Analysis Services 数据扩展插件基于 XMLA (XML for Analysis) 协议。 通过 XMLA 协议将来自多维数据集的结果集作为平展行集进行检索。 不支持不规则层次结构。 有关详细信息，请参阅 [不规则层次结构](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies)。  
   
  还可以从 OLE DB 数据源类型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中检索数据。 有关详细信息，请参阅 [OLE DB 连接类型 (SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)。  
@@ -84,7 +84,7 @@ data source=<server name>;initial catalog=<database name>
  有关版本支持的详细信息，请参阅 [Reporting Services 支持的数据源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
   
-##  <a name="Related"></a> 相关章节  
+##  <a name="related-sections"></a><a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  

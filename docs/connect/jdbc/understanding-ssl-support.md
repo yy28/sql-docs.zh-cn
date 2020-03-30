@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71713301"
 ---
 # <a name="understanding-encryption-support"></a>了解加密支持
@@ -58,7 +58,7 @@ ms.locfileid: "71713301"
 | true           | false 或 blank         | 值                 | 值      | blank              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果服务器要求客户端支持 TLS 加密，或者服务器支持加密，则驱动程序将启动 TLS 证书交换。<br /><br /> 驱动程序将使用 trustStore 属性值查找 trustStore 文件的位置  。 此外，驱动程序还将使用 hostNameInCertificate 属性值以验证 TLS 证书  。<br /><br /> 如果服务器未配置为支持加密，驱动程序将报错并终止连接。                                                                                  |
 | true           | false 或 blank         | 值                 | 值      | 值              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果服务器要求客户端支持 TLS 加密，或者服务器支持加密，则驱动程序将启动 TLS 证书交换。<br /><br /> 驱动程序将使用 trustStore 属性值查找证书 trustStore 文件，并使用 trustStorePassword 属性值检查 trustStore 文件的完整性   。 此外，驱动程序还将使用 hostNameInCertificate 属性值以验证 TLS 证书  。<br /><br /> 如果服务器未配置为支持加密，驱动程序将报错并终止连接。 |
   
-如果 encrypt 属性设置为 true，则 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将使用 JVM 的默认 JSSE 安全提供程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 协商 TLS 加密  。 默认的安全提供程序可能不支持成功协商 TLS 加密所需的全部功能。 例如，默认的安全提供程序可能不支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TLS 证书中使用的 RSA 公钥的大小。 在这种情况下，默认的安全提供程序可能报错，此错误将导致 JDBC 驱动程序终止连接。 为了解决这一问题，请执行下列操作之一：  
+如果 encrypt 属性设置为 true，则 **将使用 JVM 的默认 JSSE 安全提供程序与** 协商 TLS 加密[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 默认的安全提供程序可能不支持成功协商 TLS 加密所需的全部功能。 例如，默认的安全提供程序可能不支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TLS 证书中使用的 RSA 公钥的大小。 在这种情况下，默认的安全提供程序可能报错，此错误将导致 JDBC 驱动程序终止连接。 为了解决这一问题，请执行下列操作之一：  
   
 - 使用具有较小 RSA 公钥的服务器证书配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

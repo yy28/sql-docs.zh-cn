@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c758a55b39eeecde4a3a713bc13462f01aa77a32
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015189"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>客户端连接中的服务主体名称 (SPN) (OLE DB)
@@ -41,7 +41,7 @@ ms.locfileid: "68015189"
 |SSPROP_INIT_SERVERSPN|VT_BSTR，读/写|指定服务器的 SPN。 默认值为空字符串，这会使 OLE DB Driver for SQL Server 使用提供程序生成的默认 SPN。|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR，读/写|指定故障转移伙伴的 SPN。 默认值为空字符串，这会使 OLE DB Driver for SQL Server 使用提供程序生成的默认 SPN。|  
   
-## <a name="data-source-properties"></a>数据源属性  
+## <a name="data-source-properties"></a>{1}数据源属性{2}  
  DBPROPSET_SQLSERVERDATASOURCEINFO 属性集中的以下属性支持应用程序发现身份验证方法  。  
   
 |名称|类型|使用情况|  

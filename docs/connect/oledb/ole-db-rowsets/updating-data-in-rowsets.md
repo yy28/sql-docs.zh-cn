@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e19128d6defa2c154cc8bddbcc4bcaa761b58a2b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015346"
 ---
 # <a name="updating-data-in-rowsets"></a>更新行集中的数据
@@ -29,7 +29,7 @@ ms.locfileid: "68015346"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序在使用者更新包含该数据的可修改行集时更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 当使用者请求支持 IRowsetChange 或 IRowsetUpdate 接口时，将创建一个可修改的行集。  
+  适用于 SQL Server 的 OLE DB 驱动程序在使用者更新包含该数据的可修改行集时更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 当使用者请求支持 IRowsetChange 或 IRowsetUpdate 接口时，将创建一个可修改的行集   。  
   
  可由 OLE DB Driver for SQL Server 修改的所有行集均使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标来支持该行集。 行集属性 DBPROP_LOCKMODE 更改游标中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并发控制行为，并确定在可更新行集中提取行集的行和生成数据完整性错误的行为。  
   

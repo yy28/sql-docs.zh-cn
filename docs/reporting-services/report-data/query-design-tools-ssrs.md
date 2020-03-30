@@ -19,10 +19,10 @@ ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4d92cb7c7b669b4a3087790397a1965d460dd9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082009"
 ---
 # <a name="query-design-tools-ssrs"></a>查询设计工具 (SSRS)
@@ -60,50 +60,50 @@ ms.locfileid: "77082009"
   
 -   **能否导入查询。** 例如，对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源，可从报表定义文件 (.rdl) 或 .sql 文件中导入现有查询。  
   
-##  <a name="Textbased"></a> 基于文本的查询设计器  
+##  <a name="text-based-query-designer"></a><a name="Textbased"></a> 基于文本的查询设计器  
  基于文本的查询设计器是大多数受支持的关系数据源的默认查询生成工具，这些数据源包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、Teradata、OLE DB、XML 和 ODBC。 与图形查询设计器相比，此查询设计工具无法在查询设计过程中验证查询语法。 下图显示了基于文本的查询设计器。  
   
  ![用于关系数据查询的通用查询设计器](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "用于关系数据查询的通用查询设计器")  
   
  建议使用基于文本的查询设计器创建复杂查询、使用存储过程、查询 XML 数据以及编写动态查询。 根据数据源的不同，可以通过切换工具栏上的“编辑为文本”按钮而在图形查询设计器和基于文本的查询设计器之间进行切换  。 有关详细信息，请参阅 [基于文本的查询设计器用户界面](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。  
   
-##  <a name="Graphical"></a> 图形查询设计器  
+##  <a name="graphical-query-designer"></a><a name="Graphical"></a> 图形查询设计器  
  图形查询设计器用于创建或修改针对关系数据库运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。 此查询设计工具用于多种 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 产品和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件中。 此工具支持 Text、StoredProcedure 和 TableDirect 模式，具体取决于数据源类型。 下图显示了图形查询设计器。  
   
  ![用于 SQL 查询的图形查询设计器](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "用于 SQL 查询的图形查询设计器")  
   
  可以通过切换工具栏上的“编辑为文本”按钮而在图形查询设计器和基于文本的查询设计器之间进行切换。  有关详细信息，请参阅 [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。  
   
-##  <a name="Model"></a> 报表模型查询设计器  
+##  <a name="report-model-query-designer"></a><a name="Model"></a> 报表模型查询设计器  
  报表模型查询设计器用于创建或修改针对已发布到报表服务器的 SMDL 报表模型运行的查询。 针对模型运行的报表支持点击链接型数据浏览。 查询在运行时确定数据浏览路径。 下图显示了报表模型查询设计器。  
   
  ![语义模型查询设计器 UI](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "语义模型查询设计器 UI")  
   
  若要使用报表模型查询设计器，必须定义指向已发布模型的数据源。 定义数据源的数据集时，可以在报表模型查询设计器中打开数据集查询。 报表模型查询设计器可在图形模式或基于文本的模式下使用。 可以通过切换工具栏上的“编辑为文本”按钮而在图形查询设计器和基于文本的查询设计器之间进行切换。  有关详细信息，请参阅 [Report Model Query Designer User Interface](../../reporting-services/report-data/report-model-query-designer-user-interface.md)。  
   
-##  <a name="MDX"></a> MDX 查询设计器  
+##  <a name="mdx-query-designer"></a><a name="MDX"></a> MDX 查询设计器  
  多维表达式 (MDX) 查询设计器用于创建或修改针对具有多维数据集的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源运行的查询。 下图显示了定义查询和筛选器后的 MDX 查询设计器。  
   
  ![Analysis Services MDX 查询设计器的设计视图](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 查询设计器的设计视图")  
   
  若要使用 MDX 查询设计器，必须定义包含可用 Analysis Services 多维数据集的数据源，该多维数据集应是有效的并已经过处理。 为数据源定义数据集时，可以在 MDX 查询设计器中打开查询。 如有必要，请使用工具栏上的 MDX 和 DMX 按钮在 MDX 和 DMX 模式之间进行切换。 有关详细信息，请参阅 [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)。  
   
-##  <a name="DMX"></a> DMX 查询设计器  
+##  <a name="dmx-query-designer"></a><a name="DMX"></a> DMX 查询设计器  
  数据挖掘预测表达式 (DMX) 查询设计器用于创建或修改针对具有挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源运行的查询。 下图显示了选择模型和输入表后的 DMX 查询设计器。  
   
  ![Analysis Services DMX 查询设计器的设计视图](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX 查询设计器的设计视图")  
   
  若要使用 DMX 查询设计器，必须定义包含有效数据挖掘模型的可用数据源。 为数据源定义数据集时，可以在 DMX 查询设计器中打开查询。 如有必要，请使用工具栏上的 MDX 和 DMX 按钮在 MDX 和 DMX 模式之间进行切换。 选择模型后，可创建向报表提供数据的数据挖掘预测查询。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
   
-##  <a name="SAPBW"></a> Sap NetWeaver BI 查询设计器  
+##  <a name="sap-netweaver-bi-query-designer"></a><a name="SAPBW"></a> Sap NetWeaver BI 查询设计器  
  [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 查询设计器用于从 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 数据库中检索数据。 若要使用此查询设计器，必须定义至少包含一个 InfoCube、MultiProvider 或启用了 Web 的查询的 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 数据源。 下图显示了 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 查询设计器。 有关详细信息，请参阅 [SAP NetWeaver BI Query Designer User Interface](../../reporting-services/report-data/sap-netweaver-bi-query-designer-user-interface.md)。  
   
  ![在设计模式下使用 MDX 的查询设计器](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "在设计模式下使用 MDX 的查询设计器")  
   
-##  <a name="Hyperion"></a> Hyperion Essbase 查询设计器  
+##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a> Hyperion Essbase 查询设计器  
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 查询设计器用于在 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据库和应用程序中检索数据。 下图显示了 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 查询设计器。  
   
- ![用于 Hyperion Essbase 数据源的查询设计器](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "用于 Hyperion Essbase 数据源的查询设计器")  
+ ![用于 Hyperion Essbase 数据源的查询设计器](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Hyperion Essbase 数据源的查询设计器")  
   
  若要使用此查询设计器，必须具有至少包含一个数据库的 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源。  
   

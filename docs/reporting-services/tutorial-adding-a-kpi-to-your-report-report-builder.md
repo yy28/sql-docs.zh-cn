@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041753"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
@@ -32,7 +32,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Table"></a>1.使用表向导或矩阵向导创建表报表和数据集  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1.使用表向导或矩阵向导创建表报表和数据集  
 在本部分中，选择共享数据源，创建嵌入数据集，并在表中显示数据。  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>创建具有嵌入数据集的表  
@@ -99,7 +99,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
 11. 单击“下一步”。   
   
-## <a name="CompleteWizard"></a>2.在向导中组织数据并选择布局  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2.在向导中组织数据并选择布局  
 表或矩阵向导提供一个初始设计以在其中显示数据。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>将数据组织到组中并选择布局 
@@ -173,7 +173,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
  
 ![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3.使用背景色显示 KPI  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3.使用背景色显示 KPI  
 可将背景色设置为运行报表时计算的表达式。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>使用背景色显示 KPI 的当前状态  
@@ -198,7 +198,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
 ![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4.使用仪表显示 KPI  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4.使用仪表显示 KPI  
 仪表显示数据集中的单个值。 本教程使用水平线性仪表，因为即使是在该仪表较小或在表单元内使用的情况下，其形状和简便性也使其易于读取。 有关详细信息，请参阅 [仪表（报表生成器和 SSRS）](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>使用仪表显示 KPI 的当前状态  
@@ -253,7 +253,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5.使用指示器显示 KPI  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5.使用指示器显示 KPI  
 指示器是以直观的形式传递数据值的小巧而简单的仪表。 由于指示器尺寸较小且具有简便性，其经常被用于表和矩阵中。 有关详细信息，请参阅[指示器（报表生成器和 SSRS）](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>使用指示器显示 KPI 的当前状态  
@@ -288,7 +288,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
 ![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6.添加报表标题  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6.添加报表标题  
 报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本部分中，可使用自动放在表体顶部的文本框。  
   
 通过将不同的字体样式、大小和颜色应用于文本的短语和单个字符，可以进一步增强文本。 有关详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
@@ -303,7 +303,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 4.  单击 **“运行”** 以预览报表。  
   
-## <a name="Save"></a>7.保存报表  
+## <a name="7-save-the-report"></a><a name="Save"></a>7.保存报表  
 将报表保存到报表服务器或计算机上。 如果不将报表保存到报表服务器上，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  

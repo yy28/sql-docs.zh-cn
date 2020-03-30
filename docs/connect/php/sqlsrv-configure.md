@@ -17,10 +17,10 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935807"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
@@ -38,7 +38,7 @@ sqlsrv_configure( string $setting, mixed $value )
 #### <a name="parameters"></a>parameters  
 *$setting*：要配置的设置的名称。 有关设置列表，请参阅下表。  
   
-*$value*：要应用于在 $setting  参数中指定的设置的值。 此参数的可能值取决于指定的设置。 下表列出了可能的组合：  
+*$value*：要应用于在 *$setting* 参数中指定的设置的值。 此参数的可能值取决于指定的设置。 下表列出了可能的组合：  
   
 |设置|$Value 参数的可能值（括号中为等效整数）|默认值|  
 |-----------|------------------------------------------------------------------------------|-----------------|  

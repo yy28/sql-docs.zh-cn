@@ -11,10 +11,10 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247294"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 组件和配置
@@ -44,14 +44,14 @@ ms.locfileid: "75247294"
 
     ![“视图”菜单](media/ssms-configuration/viewmenu.png)
 
-* **对象资源管理器** (F8)：对象资源管理器是服务器中所有数据库对象的树视图。 此视图包括 SQL Server 数据库引擎、SQL Server Analysis Services、SQL Server Reporting Services 和 SQL Server Integration Services 的数据库。 对象资源管理器包括连接到它的所有服务器的信息。 
+* **对象资源管理器** (F8)：对象资源管理器是服务器中所有数据库对象的树状视图。 此视图包括 SQL Server 数据库引擎、SQL Server Analysis Services、SQL Server Reporting Services 和 SQL Server Integration Services 的数据库。 对象资源管理器包括连接到它的所有服务器的信息。 
 
     ![“对象资源管理器”](media/ssms-configuration/objectexplorer.png)
 * **查询窗口** (Ctrl+N)：选择“新建查询”后，在此窗口中输入 Transact-SQL (T-SQL) 查询  。 查询结果也显示在此处。
 
     ![“新建查询”窗口](media/ssms-configuration/newquery.png)
 
-* **属性** (F4)：查询窗口处于打开状态时，可以看到“属性”视图。 该视图显示查询的基本属性。 例如，它显示查询开始的时间，返回的行数及连接详细信息。  
+* **属性** (F4)：当查询窗口打开时，可看到“属性”视图。 该视图显示查询的基本属性。 例如，它显示查询开始的时间，返回的行数及连接详细信息。  
 
     ![属性](media/ssms-configuration/properties.png)
 
@@ -112,25 +112,25 @@ ms.locfileid: "75247294"
 
   ![“工具”菜单](media/ssms-configuration/tools.png)
 
-* 要修改突出显示的工具栏，请选择“工具” > “自定义”   ：
+* 要修改突出显示的工具栏，请选择“工具” **“自定义”**  >   ：
 
     ![自定义工具栏](media/ssms-configuration/toolbar.png)
 
 ### <a name="change-the-font"></a>更改字体
 
-* 要更改字体，请选择“工具” > “选项” > “字体和颜色”    ：
+* 要更改字体，请选择“工具” **“选项”** “字体和颜色” >    >   ：
 
      ![更改字体和颜色](media/ssms-configuration/fontsandcolors.png)
 
 ### <a name="change-startup-options"></a>更改启动选项
 
-* 启动选项决定了首次打开 SSMS 时工作区的外观。 要更改启动选项，请选择“工具” > “选项” > “启动”    ：
+* 启动选项决定了首次打开 SSMS 时工作区的外观。 要更改启动选项，请选择“工具” **“选项”** “启动” >    >   ：
 
     ![更改启动选项](media/ssms-configuration/startup.png)
 
 ### <a name="reset-settings-to-the-default"></a>将设置重置为默认值
 
-* 可从菜单导出和导入所有这些设置。 要导入或导出设置或恢复默认设置，请选择“工具” > “导入和导出设置”   
+* 可从菜单导出和导入所有这些设置。 要导入或导出设置或恢复默认设置，请选择“工具” **“导入和导出设置”**  >   
 
     ![导入和导出设置](media/ssms-configuration/settings.png)
 

@@ -11,10 +11,10 @@ ms.assetid: 70bbdde0-75f7-4169-88c5-dbbe2c4bcd03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2a1af43238d2f0da19c65535f3c6f84fa0e434f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972798"
 ---
 # <a name="setsqlxml-method-sqlserverpreparedstatement"></a>setSQLXML 方法 (SQLServerPreparedStatement)
@@ -31,11 +31,11 @@ public final void setSQLXML(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>parameters  
- parameterIndex  
+ parameterIndex   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
- xmlObject  
+ xmlObject   
   
  包含参数值的 SQLXML 对象。  
   

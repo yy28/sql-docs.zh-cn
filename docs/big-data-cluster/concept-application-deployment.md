@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831571"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>什么是大数据群集上的应用程序部署？
@@ -43,13 +43,13 @@ output: #output parameter the app expects and the type
   result: int
 ```
 
-控制器会检查 `spec.yaml` 文件中指定的 `runtime`，并调用相应的运行时处理程序。 运行时处理程序会创建应用程序。 首先，会创建包含一个或多个 pod 的 Kubernetes ReplicaSet，其中每个 pod 都包含要部署的应用程序。 pod 的数量由应用程序的 `spec.yaml` 文件中设置的 `replicas` 参数定义。 每个 pod 可以有一个或多个池。 池的数量由 `spec.yaml` 文件中设置的 `poolsize` 参数定义。
+控制器会检查 `runtime` 文件中指定的 `spec.yaml`，并调用相应的运行时处理程序。 运行时处理程序会创建应用程序。 首先，会创建包含一个或多个 pod 的 Kubernetes ReplicaSet，其中每个 pod 都包含要部署的应用程序。 pod 的数量由应用程序的 `replicas` 文件中设置的 `spec.yaml` 参数定义。 每个 pod 可以有一个或多个池。 池的数量由 `poolsize` 文件中设置的 `spec.yaml` 参数定义。
 
 这些设置会影响部署可以并行处理的请求数量。 一个给定时间的最大请求数等于 `replicas` 乘以 `poolsize`。 如果有 5 个副本，每个副本有 2 个池，则部署可以并行处理 10 个请求。 有关 `replicas` 和 `poolsize` 的图形表示方式，请参阅下图：
 
 ![池大小和副本](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-如果在 `spec.yaml` 文件中设置了 `schedule`，那么，在创建 ReplicaSet 并启动 pod 后，会创建一个 cron 作业。 最后，会创建一个可用于管理和运行应用程序的 Kubernetes 服务（请参阅下文）。
+如果在 `schedule` 文件中设置了 `spec.yaml`，那么，在创建 ReplicaSet 并启动 pod 后，会创建一个 cron 作业。 最后，会创建一个可用于管理和运行应用程序的 Kubernetes 服务（请参阅下文）。
 
 执行应用程序时，应用程序的 Kubernetes 服务会将请求代理给副本并返回结果。
 

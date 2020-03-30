@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5e44bf3326a01df14156046377475d00e94c0f30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897529"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Audit Login Failed 事件类表示用户尝试登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并失败  。 此类中的事件由新连接或从连接池中重用的连接触发。  
+  Audit Login Failed 事件类表示用户尝试登录到   并失败[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类中的事件由新连接或从连接池中重用的连接触发。  
   
 ## <a name="audit-login-failed-event-class-data-columns"></a>Audit Login Failed 事件类的数据列  
   

@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593921"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -29,7 +29,7 @@ ms.locfileid: "73593921"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-##  <a name="bkmk_sharepointmode"></a> 验证 SharePoint 模式安装  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> 验证 SharePoint 模式安装  
   
 ### <a name="to-verify-the-reporting-services-service"></a>验证 Reporting Services 服务  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73593921"
 
 ::: moniker-end
   
-##  <a name="bkmk_nativemode"></a> 验证本机模式安装  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> 验证本机模式安装  
  如果使用默认配置安装本机模式的报表服务器，安装程序将安装并部署该服务器。 可以执行几个简单的测试来验证安装程序是否部署了报表服务器。 只有本地管理员才能执行这些步骤。 若要让其他用户执行测试，必须为这些用户配置报表服务器访问权限。  
   
 ### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>验证报表服务器已安装并正常运行  
@@ -92,7 +92,7 @@ ms.locfileid: "73593921"
   
 4.  运行报表以测试报表服务器的操作。 对于此步骤，您可以从教程创建一个示例报表。 有关详细信息，请参阅[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   
-### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>验证 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 已安装并正常运行  
+### <a name="to-verify-that-the-ssrswebportal-is-installed-and-running"></a>验证 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 已安装并正常运行  
   
 1.  打开浏览器，在地址栏中键入 Web 门户 URL。 该地址由你在安装过程中或在 Reporting Services 配置工具的“Web 门户 URL”页中为 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 指定的服务器名称和虚拟目录名称组成。 默认情况下， [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 虚拟目录的名称为 **报表**。 可以使用以下 URL 验证 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 安装：  
   

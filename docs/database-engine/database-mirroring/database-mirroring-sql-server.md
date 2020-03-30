@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006342"
 ---
 # <a name="database-mirroring-sql-server"></a>数据库镜像 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "68006342"
 >  有关数据库镜像的支持、限制、先决条件、配置伙伴服务器的建议和部署数据库镜像的建议的信息，请参阅 [数据库镜像的前提条件、限制和建议](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
   
   
-##  <a name="Benefits"></a> 数据库镜像的优点  
+##  <a name="benefits-of-database-mirroring"></a><a name="Benefits"></a> 数据库镜像的优点  
  数据库镜像是一种简单的策略，具有下列优点：  
   
 -   提高数据库的可用性。  
@@ -60,7 +60,7 @@ ms.locfileid: "68006342"
      为了尽量减少镜像服务器的停机时间，您可以按顺序升级承载故障转移伙伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这样只会导致一个故障转移的停机时间。 这种形式的升级称为“滚动升级  ”。 有关详细信息，请参阅 [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
   
   
-##  <a name="TermsAndDefinitions"></a> 数据库镜像术语和定义  
+##  <a name="database-mirroring-terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 数据库镜像术语和定义  
  自动故障转移 (automatic failover)  
  一种过程，当主体服务器不可用时，该过程将导致镜像服务器接管主体服务器的角色，并使其数据库的副本联机以作为主体数据库。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68006342"
  仅用于高安全性模式，SQL Server 的一个可选实例，它能使镜像服务器识别何时要启动自动故障转移。 与这两个故障转移伙伴不同的是，见证服务器并不能用于数据库。 见证服务器的唯一角色是支持自动故障转移。  
   
   
-##  <a name="HowWorks"></a> 数据库镜像概述  
+##  <a name="overview-of-database-mirroring"></a><a name="HowWorks"></a> 数据库镜像概述  
  数据库镜像维护一个数据库的两个副本，这两个副本必须驻留在不同的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务器实例上。 通常，这些服务器实例驻留在不同位置的计算机上。 启动数据库上的数据库镜像操作时，在这些服务器实例之间形成一种关系，称为“数据库镜像会话”  。  
   
  其中一个服务器实例使数据库服务于客户端（主体服务器  ）。 另一个服务器实例则根据镜像会话的配置和状态，充当热备用或温备用服务器（镜像服务器  ）。 同步数据库镜像会话时，数据库镜像提供热备用服务器，可支持在已提交事务不丢失数据的情况下进行快速故障转移。 未同步会话时，镜像服务器通常用作热备用服务器（可能造成数据丢失）。  
@@ -140,7 +140,7 @@ ms.locfileid: "68006342"
 -   [暂停会话对主体事务日志的影响](#ImpactOfPausing)  
   
   
-###  <a name="OperatingModes"></a> 运行模式  
+###  <a name="operating-modes"></a><a name="OperatingModes"></a> 运行模式  
  数据库镜像会话以同步操作或异步操作运行。 在异步操作下，事务不需要等待镜像服务器将日志写入磁盘便可提交，这样可最大程度地提高性能。 在同步操作下，事务将在伙伴双方处提交，但会延长事务滞后时间。  
   
  有两种镜像运行模式。 一种是高安全性模式  ，它支持同步操作。 在高安全性模式下，当会话开始时，镜像服务器将使镜像数据库尽快与主体数据库同步。 一旦同步了数据库，事务将在伙伴双方处提交，这会延长事务滞后时间。  
@@ -165,7 +165,7 @@ ms.locfileid: "68006342"
 >  建立新的镜像会话或将见证服务器添加到现有镜像配置要求涉及的所有服务器实例运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但是，当升级到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本时，所涉及的实例的版本可以不同。 有关详细信息，请参阅 [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
   
   
-####  <a name="TxnSafety"></a> 事务安全与运行模式  
+####  <a name="transaction-safety-and-operating-modes"></a><a name="TxnSafety"></a> 事务安全与运行模式  
  运行模式是异步还是同步取决于事务安全设置。 如果专门使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来配置数据库镜像，则在您选择运行模式时，将自动配置事务安全设置。  
   
  如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 配置数据库镜像，则必须了解如何设置事务安全。 事务安全由 ALTER DATABASE 语句的 SAFETY 属性控制。 在正在镜像的数据库中，SAFETY 为 FULL 或 OFF。  
@@ -177,7 +177,7 @@ ms.locfileid: "68006342"
  有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
   
-###  <a name="RoleSwitching"></a> 角色切换  
+###  <a name="role-switching"></a><a name="RoleSwitching"></a> 角色切换  
  在数据库镜像会话上下文中，通常可以使用一个称为“角色切换”  的过程来互换主体角色和镜像角色。 角色切换涉及将主体角色转换给镜像服务器的操作。 在角色切换中，镜像服务器充当主体服务器的“故障转移伙伴  ”。 进行角色切换时，镜像服务器将接管主体角色，并使其数据库的副本联机以作为新的主体数据库。 以前的主体服务器（如果有）将充当镜像角色，并且其数据库将变为新的镜像数据库。 这些角色可以反复地来回切换。  
   
  存在以下三种角色切换形式。  
@@ -202,7 +202,7 @@ ms.locfileid: "68006342"
  在任何一种角色切换情况下，一旦新的主体数据库联机，客户端应用程序便会通过重新连接到数据库来快速恢复。  
   
   
-###  <a name="ConcurrentSessions"></a> 并发会话  
+###  <a name="concurrent-sessions"></a><a name="ConcurrentSessions"></a> 并发会话  
  给定的服务器实例可以参与到多个具有相同或不同服务器实例的并发数据库镜像会话（每个镜像数据库发生一次）中。 通常，服务器实例专门用作其所有数据库镜像会话中的伙伴或见证服务器。 但是，由于每个会话都独立于其他会话，因此服务器实例可以在某些会话中充当伙伴，而在其他会话中充当见证服务器。 例如，请看三个服务器实例（`SSInstance_1`、 `SSInstance_2`和 `SSInstance_3`）中的下列四个会话。 每个服务器实例都可在某些会话中作为伙伴，而在其他会话中作为见证服务器：  
   
 |服务器实例|数据库 A 的会话|数据库 B 的会话|数据库 C 的会话|数据库 D 的会话|  
@@ -224,19 +224,19 @@ ms.locfileid: "68006342"
 > [!NOTE]  
 >  由于镜像数据库相互独立，因此这些数据库不能作为一个组来进行故障转移。  
   
-###  <a name="ClientConnections"></a> 客户端连接  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> 客户端连接  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了对数据库镜像会话的客户端连接支持。 有关详细信息，请参阅 [将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
   
-###  <a name="ImpactOfPausing"></a> 暂停会话对主体事务日志的影响  
+###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a> 暂停会话对主体事务日志的影响  
  数据库所有者可以随时暂停会话。 执行暂停操作将保留在删除镜像时的会话状态。 暂停会话时，主体服务器不会向镜像服务器发送任何新的日志记录。 所有这些记录将保持活动状态，并堆积在主体数据库的事务日志中。 只要数据库镜像会话保持暂停状态，事务日志就不会被截断。 因此，如果数据库镜像会话暂停时间过长，则可能会使该日志填满。  
   
  有关详细信息，请参阅本主题后面的 [暂停和恢复数据库镜像 (SQL Server)](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)。  
   
-##  <a name="SettingUpDbmSession"></a> 设置数据库镜像会话  
+##  <a name="setting-up-database-mirroring-session"></a><a name="SettingUpDbmSession"></a> 设置数据库镜像会话  
  开始镜像会话之前，数据库所有者或系统管理员必须创建镜像数据库，设置端点和登录名。在某些情况下，还要创建并设置证书。 有关详细信息，请参阅本主题后面的 [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   
-##  <a name="InterOp"></a> 与其他数据库引擎功能的互操作性和共存  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="InterOp"></a> 与其他数据库引擎功能的互操作性和共存  
  数据库镜像可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的下列功能或组件一起使用。  
   
 -   [日志传送](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
@@ -247,7 +247,7 @@ ms.locfileid: "68006342"
   
 -   [复制](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="InThisSection"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本节内容  
  [数据库镜像的前提条件、限制和建议](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  说明了设置数据库镜像的前提条件和建议。  
   
@@ -282,7 +282,7 @@ ms.locfileid: "68006342"
  包含有关使用数据库镜像监视器或 **dbmmonitor** 存储过程来监视数据库镜像或会话的信息。  
   
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 ### <a name="configuration-tasks"></a>配置任务  
  **使用 SQL Server Management Studio**  
@@ -346,7 +346,7 @@ ms.locfileid: "68006342"
  [数据库镜像终结点 (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [自动页修复（可用性组：数据库镜像）](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [数据库镜像配置故障排除 (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [数据库镜像：互操作性和共存 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [数据库镜像：互操作性和共存 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [数据库镜像的先决条件、限制和建议](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
