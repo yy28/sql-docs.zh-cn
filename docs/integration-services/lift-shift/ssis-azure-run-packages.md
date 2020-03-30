@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054633"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>运行部署在 Azure 中的 SQL Server Integration Services (SSIS) 包
@@ -42,11 +42,11 @@ ms.locfileid: "68054633"
 > [!NOTE]
 > 通过 `dtexec.exe` 运行包的操作尚未经过部署到 Azure 的包的测试。
 
-## <a name="ssms"></a>使用 SSMS 运行包
+## <a name="run-a-package-with-ssms"></a><a name="ssms"></a>使用 SSMS 运行包
 
 在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“执行”以打开“执行包”对话框   。 有关详细信息，请参阅[使用 SQL Server Management Studio (SSMS) 运行 SSIS 包](../ssis-quickstart-run-ssms.md)。
 
-## <a name="sproc"></a>使用存储过程运行包
+## <a name="run-a-package-with-stored-procedures"></a><a name="sproc"></a>使用存储过程运行包
 
 在可连接到 Azure SQL 数据库并运行 Transact-SQL 代码的任何环境中，可以通过调用以下存储过程来运行包：
 
@@ -62,7 +62,7 @@ ms.locfileid: "68054633"
 
 - [使用 Transact-SQL 从 Visual Studio Code 运行 SSIS 包](../ssis-quickstart-run-tsql-vscode.md)
 
-## <a name="script"></a>使用脚本或代码运行包
+## <a name="run-a-package-with-script-or-code"></a><a name="script"></a>使用脚本或代码运行包
 
 在可以调用托管 API 的任何开发环境中，可以通过调用 `Execute` 命名空间中 `Package` 对象的 `Microsoft.SQLServer.Management.IntegrationServices` 方法，运行包。
 
@@ -72,11 +72,11 @@ ms.locfileid: "68054633"
 
 - [使用 .NET 应用中的 C# 代码运行 SSIS 包](../ssis-quickstart-run-dotnet.md)
 
-## <a name="exec_activity"></a>使用“执行 SSIS 包”活动运行包
+## <a name="run-a-package-with-the-execute-ssis-package-activity"></a><a name="exec_activity"></a>使用“执行 SSIS 包”活动运行包
 
 有关详细信息，请参阅[在 Azure 数据工厂中使用“执行 SSIS 包”活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
 
-## <a name="sproc_activity"></a>使用“存储过程”活动运行包
+## <a name="run-a-package-with-the-stored-procedure-activity"></a><a name="sproc_activity"></a>使用“存储过程”活动运行包
 
 有关详细信息，请参阅[在 Azure 数据工厂中使用存储过程活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
 

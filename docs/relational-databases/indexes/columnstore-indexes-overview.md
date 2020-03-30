@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70009408"
 ---
 # <a name="columnstore-indexes-overview"></a>列存储索引：概述
@@ -90,7 +90,7 @@ ms.locfileid: "70009408"
 #### <a name="batch-mode-execution"></a>批模式执行
 批处理模式执行是一种查询处理方法，用于同时处理多个行。 批模式执行与列存储存储格式紧密集成，并且围绕列存储存储格式进行了优化。 批处理模式执行有时亦称为基于矢量  或矢量化  执行。 对列存储索引执行的查询使用批处理模式执行，这通常可将查询性能提升 2 到 4 倍。 有关详细信息，请参阅[查询处理体系结构指南](../query-processing-architecture-guide.md#execution-modes)。 
   
-##  <a name="benefits"></a> 为何要使用列存储索引？  
+##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> 为何要使用列存储索引？  
 列存储索引可实现极高的数据压缩级别（通常是传统方法的 10 倍），从而明显降低数据仓库存储成本。 对于分析，列存储索引实现的性能比 btree 索引高出一个量级。 列存储索引是数据仓库和分析工作负载的首选数据存储格式。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，可以使用列存储索引对操作工作负荷执行实时分析。  
   
 列存储索引速度较快的原因：  
@@ -134,7 +134,7 @@ ms.locfileid: "70009408"
 |[sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## <a name="related-tasks"></a>相关任务  
-所有关系表（除非指定为非聚集列存储索引）使用行存储作为基础数据格式。 如果不指定 `WITH CLUSTERED COLUMNSTORE INDEX` 选项，则 `CREATE TABLE` 将创建行存储表。  
+所有关系表（除非指定为非聚集列存储索引）使用行存储作为基础数据格式。 如果不指定 `CREATE TABLE` 选项，则 `WITH CLUSTERED COLUMNSTORE INDEX` 将创建行存储表。  
   
 使用 `CREATE TABLE` 语句创建表时，可通过指定 `WITH CLUSTERED COLUMNSTORE INDEX` 选项，将表创建为列存储。 如果你已有一个行存储表并想要将其转换为列存储，可以使用 `CREATE COLUMNSTORE INDEX` 语句。  
   

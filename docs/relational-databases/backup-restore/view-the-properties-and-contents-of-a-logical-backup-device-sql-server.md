@@ -21,10 +21,10 @@ ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9511548a99277ae0a1b7232fe41cc41bbb6a224d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255597"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>查看逻辑备份设备的属性和内容 (SQL Server)
@@ -44,15 +44,15 @@ ms.locfileid: "75255597"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  有关安全性的信息，请参阅 [RESTORE LABELONLY (Transact SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，获取有关备份集或备份设备的信息要求具有 CREATE DATABASE 权限。 有关详细信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>查看逻辑备份设备的属性和内容  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75255597"
 > [!NOTE]  
 >  有关详细信息，请参阅 [媒体内容页](../../relational-databases/backup-restore/backup-device-media-contents-page.md)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>查看逻辑备份设备的属性和内容  
   
