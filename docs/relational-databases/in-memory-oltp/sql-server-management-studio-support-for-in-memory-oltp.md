@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412526"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
@@ -86,7 +86,7 @@ ms.locfileid: "74412526"
   
     -   在  “对象资源管理器”中，右键单击数据库，单击  “属性”，然后单击  “常规”页。  “分配给内存优化对象的内存”属性的值指示分配给数据库中内存优化对象的内存。  “内存优化对象使用的内存”属性的值指示数据库中内存优化对象使用的内存。  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>中支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>中支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持具有内存优化的数据文件组、内存优化的表、索引和本机编译的存储过程的数据库上数据库引擎所支持的功能和操作。  
   
  对于数据库、表、存储过程、用户定义的表类型或索引对象，以下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能已得到更新或扩展，以便支持内存中 OLTP。  
@@ -152,7 +152,7 @@ ms.locfileid: "74412526"
   
 -   Template Explorer  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>中不支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>中不支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  对于内存中 OLTP 对象，数据库引擎不支持的功能和操作， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 同样不支持。  
   
  有关不支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的详细信息，请参阅 [内存中 OLTP 不支持的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。  

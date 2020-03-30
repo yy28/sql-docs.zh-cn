@@ -13,10 +13,10 @@ ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 07c1743107d3edce7012740a3f1600d2157bf001
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68136890"
 ---
 # <a name="create-a-resource-pool"></a>创建资源池
@@ -28,17 +28,17 @@ ms.locfileid: "68136890"
   
 -   **要创建资源池，请使用：** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  最大 CPU 百分比必须大于或等于最小 CPU 百分比。 最大内存百分比必须大于或等于最小内存百分比。  
   
  所有资源池的最小 CPU 百分比和最小内存百分比的总和不得超过 100。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  创建资源池需要 CONTROL SERVER 权限。  
   
-##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建资源池  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建资源池  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”** 。  
@@ -53,7 +53,7 @@ ms.locfileid: "68136890"
   
 6.  若要保存更改，请单击 **“确定”** 。  
   
-##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 创建资源池  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a> 使用 Transact-SQL 创建资源池  
  **使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  运行 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) 或 [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 语句，指定要设置的属性值。  

@@ -12,10 +12,10 @@ author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258986"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>使用 PowerShell Desired State Configuration 安装 SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "75258986"
 - SQL Server 2017 安装介质。
 - SqlServerDsc DSC 资源  。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 在大多数情况下，DSC 用于处理先决条件要求。 但是，出于本演示的目的，我们将手动处理先决条件。
 

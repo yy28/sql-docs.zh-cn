@@ -18,10 +18,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254835"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
@@ -93,7 +93,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
  >[!IMPORTANT]
  > 在此方案中，数据在发送回服务器时不会加密，因为目标列是不接受加密数据的常规 varchar。 
   
-## <a name="selecting--deterministic-or-randomized-encryption"></a>选择确定性加密或随机加密  
+## <a name="selecting-deterministic-or-randomized-encryption"></a><a name="selecting--deterministic-or-randomized-encryption"></a>选择确定性加密或随机加密  
  数据库引擎始终不会对加密列中存储的纯文本数据进行操作，但仍支持对已加密数据的某些查询，具体取决于列的加密类型。 始终加密支持两种类型的加密：随机加密和确定性加密。  
   
 - 确定性加密始终对任何给定的纯文本值生成相同的加密值。 使用确定性加密允许对加密列进行点查找、等值联结、分组和建立索引。 但也可能允许未经授权的用户通过检查加密列中的模式来猜测有关加密值的信息，尤其是存在一个规模较小的可能加密值集合时，如 True/False 或 North/South/East/West 等区域。 确定性加密必须使用具有字符列的 binary2 排序顺序的列排序规则。

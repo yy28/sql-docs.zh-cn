@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947273"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>数据科学方案和解决方案模板
@@ -96,7 +96,7 @@ ms.locfileid: "74947273"
 **方式：** 此模板使用 SQL Server R Services 预测对电力的需求。 用于预测的模型是一个基于“rxDForest”的随机林回归模型，这是一个包含在 Microsoft R Server 中的高性能机器学习算法  。 解决方案包括一个需求模拟器、用于定型模型的所有 R 和 T-SQL 代码以及可用于生成和报告预测的存储过程。 
 
 
-## <a name="bkmk_HowTo"></a>如何使用模板
+## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>如何使用模板
 
 要下载每个模板中包含的文件，可以使用 GitHub 命令，或者可以打开链接，然后单击“下载 Zip 文件”  将所有文件都保存到计算机。  下载后，解决方案通常会包含这些文件夹：
   

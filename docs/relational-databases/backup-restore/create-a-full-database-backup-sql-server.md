@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710324"
 ---
 # <a name="create-a-full-database-backup"></a>完整数据库备份
@@ -30,32 +30,32 @@ ms.locfileid: "71710324"
 
 若要了解如何将 SQL Server 备份到 Azure Blob 存储服务，请参阅[使用 Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
-## <a name="Restrictions"></a> 限制和局限
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限
 
 - 不允许在显式或隐式事务中使用 `BACKUP` 语句。
 - 无法在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中还原较新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建的备份。
 
 有关备份概念和任务的概述和详细信息，请在继续操作前先参阅[备份概述 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。
 
-## <a name="Recommendations"></a> 建议
+## <a name="recommendations"></a><a name="Recommendations"></a> 建议
 
 - 随着数据库不断增大，完整数据库备份的完成时间会延长，并且需要占用更多存储空间。 对于大型数据库，请考虑用一系列[差异数据库备份](../../relational-databases/backup-restore/differential-backups-sql-server.md)来补充完整数据库备份。
 - 使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 系统存储过程估计完整数据库备份的大小。
 - 默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 若频繁备份，这些成功消息会迅速累积，从而生成巨大的错误日志！ 这会使查找其他消息变得非常困难。 在这些情况下，如果脚本均不依赖于这些备份日志条目，则可使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
-## <a name="Security"></a> Security
+## <a name="security"></a><a name="Security"></a> Security
 
 针对数据库备份，TRUSTWORTHY 设置为 OFF  。 有关如何将 TRUSTWORTHY 设置为 ON 的详细信息，请参阅 [ALTER DATABASE SET 选项 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  。
 
 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，PASSWORD 和 MEDIAPASSWORD 选项不再可用于创建备份   。 不过，您仍可以还原使用密码创建的备份。
 
-## <a name="Permissions"></a> 权限
+## <a name="permissions"></a><a name="Permissions"></a> 权限
 
 默认情况下，为 sysadmin 固定服务器角色以及 db_owner 和 db_backupoperator 固定数据库角色的成员授予 `BACKUP DATABASE` 和 `BACKUP LOG` 权限    。
 
  备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务必须能够读取和写入设备，这意味着运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须对备份设备具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)不检查文件访问权限。 因此，除非你因尝试备份或还原而访问物理资源，否则可能看不到备份设备物理文件中的这些问题。
 
-## <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
 > [!NOTE]
 > 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮并选择脚本目标生成相应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 脚本  。
@@ -240,7 +240,7 @@ GO
 
 1. 备份成功完成后，单击“确定”，关闭“SQL Server Management Studio”对话框  。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 通过执行 `BACKUP DATABASE` 语句创建完整数据库备份，同时指定：
 
@@ -278,7 +278,7 @@ GO
  > [!IMPORTANT]
  > 当使用 `BACKUP` 语句的 FORMAT 子句时要十分小心，因为它会破坏以前存储在备份介质中的所有备份  。
 
-### <a name="TsqlExample"></a> 示例
+### <a name="examples"></a><a name="TsqlExample"></a> 示例
 
 对于以下示例，使用以下 Transact-SQL 代码创建测试数据库：
 
@@ -361,7 +361,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> 使用 PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell
 
 使用 **Backup-SqlDatabase** cmdlet。 若要显式指示这是完整数据库备份，请使用其默认值 Database 指定 -BackupAction 参数   。 对于完整数据库备份而言，此参数是可选的。
 
@@ -402,7 +402,7 @@ $backupFile = $container + '/' + $fileName
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
-## <a name="RelatedTasks"></a> Related tasks
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks
 
 - [备份数据库 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [创建差异数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)

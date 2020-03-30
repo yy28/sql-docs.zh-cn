@@ -13,10 +13,10 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252966"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 创建 Always On 可用性组
@@ -30,17 +30,17 @@ ms.locfileid: "75252966"
 >  除了使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]之外，您还可以使用“创建可用性组”向导或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlet。 有关详细信息，请参阅 [使用可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)、 [使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)或 [创建可用性组 (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)。  
 
   
-## <a name="PrerequisitesRestrictions"></a> 先决条件、限制和建议  
+## <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a> 先决条件、限制和建议  
   
 -   创建可用性组之前，请先验证承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例位于同一 WSFC 故障转移群集内的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还请验证每个服务器实例是否都满足所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 先决条件。 有关详细信息，我们强烈建议你参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 创建和配置可用性组 
+##  <a name="using-transact-sql-to-create-and-configure-an-availability-group"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 创建和配置可用性组 
 
-###  <a name="SummaryTsqlStatements"></a> 任务和相应 Transact-SQL 语句摘要  
+###  <a name="summary-of-tasks-and-corresponding-transact-sql-statements"></a><a name="SummaryTsqlStatements"></a> 任务和相应 Transact-SQL 语句摘要  
  下表列出了涉及创建和配置可用性组的基本任务，并且指出了要用于这些任务的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 必须按照任务在表中出现的顺序执行 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 任务。  
   
 |任务|Transact-SQL 语句|执行任务的位置&#42; |  
@@ -67,7 +67,7 @@ ms.locfileid: "75252966"
   
 5.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
-##  <a name="ExampleConfigAGWinAuth"></a> 示例：配置使用 Windows 身份验证的可用性组  
+##  <a name="example-configuring-an-availability-group-that-uses-windows-authentication"></a><a name="ExampleConfigAGWinAuth"></a> 示例：配置使用 Windows 身份验证的可用性组  
  此示例创建一个示例 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 配置过程，该过程使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 设置使用 Windows 身份验证的数据库镜像端点并且创建和配置一个可用性组及其辅助数据库。  
   
  此示例包含以下部分：  
@@ -78,7 +78,7 @@ ms.locfileid: "75252966"
   
 -   [示例配置过程的完整代码示例](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a> 使用示例配置过程的先决条件  
+###  <a name="prerequisites-for-using-the-sample-configuration-procedure"></a><a name="PrerequisitesForExample"></a> 使用示例配置过程的先决条件  
  此示例过程具有以下要求：  
   
 -   服务器实例必须支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)配置服务器实例时遇到的典型问题。  
@@ -118,7 +118,7 @@ ms.locfileid: "75252966"
   
  [[示例顶部]](#ExampleConfigAGWinAuth)  
   
-###  <a name="SampleProcedure"></a> 示例配置过程  
+###  <a name="sample-configuration-procedure"></a><a name="SampleProcedure"></a> 示例配置过程  
  在这个示例配置中，将在两个独立服务器实例上创建可用性副本，这些服务器实例的服务帐户在不同的可信域（`DOMAIN1` 和 `DOMAIN2`）下运行。  
   
  下表总结了此示例配置中使用的值。  
@@ -290,7 +290,7 @@ ms.locfileid: "75252966"
   
     ```  
   
-###  <a name="CompleteCodeExample"></a> 示例配置过程的完整代码示例  
+###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> 示例配置过程的完整代码示例  
  下面的示例合并了示例配置过程的所有步骤中的代码示例。 下表总结了此代码示例中使用的占位符值。 有关此代码示例中的步骤的详细信息，请参阅本主题中前面的 [使用示例配置过程的先决条件](#PrerequisitesForExample) 和 [示例配置过程](#SampleProcedure)。  
   
 |占位符|说明|  
@@ -446,7 +446,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置可用性组和副本属性**  
   
 -   [更改可用性副本的可用性模式 (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -505,7 +505,7 @@ GO
   
 -   [添加文件操作失败的故障排除（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   **博客：**  
   

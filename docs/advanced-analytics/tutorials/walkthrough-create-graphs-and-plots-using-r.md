@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 34ec0c2814dda7d2cf4bada10e5e53c05f8e08b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73724019"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R 创建图形和绘图（演练）
@@ -21,7 +21,7 @@ ms.locfileid: "73724019"
 
 在本演练的此部分中，你将学习使用 R 和 SQL Server 数据生成绘图和地图的技术。 创建简单的直方图，然后开发更复杂的地图绘图。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 此步骤基于本演练之前的步骤假设一个正在进行的 R 会话。 它使用在这些步骤中创建的连接字符串和数据源对象。 以下工具和包用于运行脚本。
 

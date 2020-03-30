@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4bb0b9c6b9d6fe47b69678211122e5c8be7023c7
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78937665"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
@@ -138,7 +138,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 传递表的所有权  
- 下面的示例在 `dbo` 架构中创建一个表 `Region`，创建一个 `Sales` 架构，然后将 `Region` 表从 `dbo` 架构移动到 `Sales` 架构。  
+ 下面的示例在 `Region` 架构中创建一个表 `dbo`，创建一个 `Sales` 架构，然后将 `Region` 表从 `dbo` 架构移动到 `Sales` 架构。  
   
 ```  
 CREATE TABLE dbo.Region   

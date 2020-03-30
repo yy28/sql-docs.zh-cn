@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252752"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>传输安全性 - 数据库镜像 - AlwaysOn 可用性
@@ -40,7 +40,7 @@ ms.locfileid: "75252752"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Authentication"></a> 身份验证  
+##  <a name="authentication"></a><a name="Authentication"></a> 身份验证  
  身份验证是验证用户是否具有其所声明的身份的过程。 数据库镜像端点之间的连接需要进行身份验证。 伙伴或见证服务器的连接请求（如果有）必须进行身份验证。  
   
  用于数据库镜像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的服务器实例使用的身份验证类型是数据库镜像端点的一种属性。 数据库镜像端点可以使用两种类型的传输安全性功能：Windows 身份验证（安全支持提供程序接口 (SSPI)）和基于证书的身份验证。  
@@ -64,7 +64,7 @@ ms.locfileid: "75252752"
   
  建立连接时，服务器实例使用其证书的私钥建立自己的标识。 接收连接请求的服务器实例使用发送方证书的公钥对发送方的标识进行身份验证。 例如，请考虑两个服务器实例 Server_A 和 Server_B。 Server_A 先使用其私钥加密连接标头，然后再将连接请求发送到 Server_B。 Server_B 使用 Server_A 证书的公钥解密连接标头。 如果解密的标头是正确的，则 Server_B 就会知道该标头是 Server_A 加密的，从而连接通过了身份验证。 如果解密的标头是错误的，则 Server_B 就会知道该连接请求不可靠，从而拒绝连接。  
   
-##  <a name="DataEncryption"></a> 数据加密  
+##  <a name="data-encryption"></a><a name="DataEncryption"></a> 数据加密  
  默认情况下，数据库镜像端点要求加密通过镜像连接发送的数据。 在这种情况下，端点只能连接到也使用加密的端点。 除非您可以保证您的网络是安全的，否则我们建议您对数据库镜像连接加密。 但是，您可以禁用加密或支持加密（不是必需的）。 如果禁用加密，则数据将永远不会加密，并且端点无法连接到要求加密的端点。 如果支持加密，则只有另一端点也支持或要求加密时，数据才会加密。  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ ms.locfileid: "75252752"
   
  有关用于指定加密的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法的信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **为数据库镜像端点配置传输安全性**  
   
 -   [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

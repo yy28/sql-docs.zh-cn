@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287431"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导导入和导出数据
@@ -45,7 +45,7 @@ ms.locfileid: "79287431"
     \- 或 \-
 -   **查看示例。** 若要快速浏览典型会话中常见的多个屏幕，请查看此仅占用一页的简单示例 — [开始使用这一简单的导入和导出向导示例](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。  
 
-##  <a name="wizardSources"></a>我可以使用哪些源和目标？  
+##  <a name="what-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a>我可以使用哪些源和目标？  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导可以将数据复制到下表中列出的数据源以及从中复制数据。 若要连接其中某些数据源，可能需要下载并安装其他文件。
  
 | 数据源 | 是否必须下载其他文件？ |
@@ -87,7 +87,7 @@ ms.locfileid: "79287431"
 > [!TIP]
 > 从向导的任何页面或对话框中点击 F1 键，可查看当前页的相关文档。   
   
-##  <a name="wizardSSIS"></a> 向导使用 SQL Server Integration Services (SSIS)  
+##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> 向导使用 SQL Server Integration Services (SSIS)  
  向导使用 SQL Server Integration Services (SSIS) 复制数据。 SSIS 是一种用于提取、转换和加载数据 (ETL) 的工具。 向导页面会使用某些 SSIS 语言。
   
  在 SSIS 中，基本单位是 **包**。 当你在向导的各个页面之间移动并指定选项时，向导会在内存中创建 SSIS 包。    

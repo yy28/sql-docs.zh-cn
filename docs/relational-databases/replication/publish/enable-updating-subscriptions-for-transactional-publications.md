@@ -16,10 +16,10 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8afde3ebd4082df0c1fc0065b2aa058095905ead
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321244"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>对事务发布启用更新订阅
@@ -29,12 +29,12 @@ ms.locfileid: "75321244"
 > **注意！！** [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以在新建发布向导的 **“发布类型”** 页上对事务发布启用更新订阅。  
   
  若要使用更新订阅，还必须在新建订阅向导中配置一些选项。  
@@ -47,7 +47,7 @@ ms.locfileid: "75321244"
 
     > **注意：** 即使仅使用即时更新订阅，也要配置队列读取器代理。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  在使用复制存储过程以编程方式创建事务发布时，您可以启用立即或排队更新订阅。  
   
 #### <a name="to-create-a-publication-that-supports-immediate-updating-subscriptions"></a>创建支持立即更新订阅的发布  
@@ -98,7 +98,7 @@ ms.locfileid: "75321244"
   
 1.  在发布服务器上，对发布数据库执行 [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 将 **property 的值指定为 conflict_policy，并为** value 指定所需的冲突策略模式 pub wins、sub reinit 或 sub wins **\@**    **\@** 。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例创建一个支持立即和排队更新请求订阅的发布。  
   
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../relational-databases/replication/codesnippet/tsql/enable-updating-subscrip_1.sql)]  

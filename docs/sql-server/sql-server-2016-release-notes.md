@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286331"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
@@ -28,7 +28,7 @@ ms.locfileid: "79286331"
 - [![Azure 虚拟机小](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) 是否拥有 Azure 帐户？  然后转到 **[此处](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** ，启动装有 SQL Server 2016 SP1 的虚拟机。
 - [![下载 SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 若要获取最新版本的 Management Studio，请参阅 **[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)** 。
 
-## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
+## <a name="sql-server-2016-service-pack-2-sp2"></a><a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 包括 2016 SP1 之后、CU8 之前（含 CU8）发布的所有累积更新。
 
@@ -87,7 +87,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
+## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含至 SQL Server 2016 RTM CU3 的所有累积更新，包括安全更新 MS16-136。 它包含 SQL Server 2016 累积更新（并包含最新累积更新 - CU3 和 2016 年 11 月 8 日发布的安全更新 MS16-136）中提供的解决方案的汇总。
 
 以下功能在 SQL Server SP1 的标准、Web、Express 和 Local DB 版中均可用（另有注明的除外）：
@@ -135,13 +135,13 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
+##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [数据库引擎 (GA)](#bkmk_ga_instalpatch)
 -   [Stretch Database (GA)](#bkmk_ga_stretch)
 -   [查询存储 (GA)](#bkmk_ga_query_store)
 -   [产品文档 (GA)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 安装修补程序要求 (GA)
+### <a name="repl_icon_warn--install-patch-requirement-ga"></a>![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 安装修补程序要求 (GA)
 **问题及其对客户的影响：** Microsoft 已发现影响 Microsoft VC++ 2013 运行时二进制文件的一个问题，这些二进制文件是作为 SQL Server 2016 系统必备进行安装的。 现在有可用的更新来修复该问题。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 2016 可能会遇到稳定性问题。 在安装 SQL Server 2016 之前，请检查计算机是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的修补程序。 此修补程序也包含在 [SQL Server 2016 RTM 的累积更新包 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) 中。
 
 **解决方法：** 使用以下任一解决方案：
@@ -167,7 +167,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
     - **下载中心：** 最后，可从 Microsoft 下载中心获取该更新。 可以在安装 SQL Server 2016 之后下载更新软件并安装在服务器上。
 
 
-### <a name="bkmk_ga_stretch"></a>Stretch Database
+### <a name="stretch-database"></a><a name="bkmk_ga_stretch"></a>Stretch Database
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>与数据库或表名称中的特定字符有关的问题
 
@@ -181,7 +181,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
 **解决方法：** 删除使用 INCLUDE 关键字的索引，对表启用 Stretch Database，然后重新创建索引。 如果这样做，请务必遵从组织的维护实践和策略，以确保对受影响的表的用户的影响最小或没有影响。
 
-### <a name="bkmk_ga_query_store"></a>Query Store
+### <a name="query-store"></a><a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>与版本的自动数据清理有关的问题（不包括企业版和开发人员版）
 
@@ -205,7 +205,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 - `sp_query_store_remove_query`
 
 
-###  <a name="bkmk_ga_docs"></a> 产品文档 (GA)
+###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> 产品文档 (GA)
  **问题及其对客户的影响：** 尚未提供可下载的 SQL Server 2016 文档版本。 在使用帮助库管理器尝试联机安装内容时，你将看到 SQL Server 2012 和 SQL Sever 2014 文档，但没有 SQL Server 2016 文档的选项  。
 
  **解决方法：** 使用以下任一解决方法暂时解决此问题：

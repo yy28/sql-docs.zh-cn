@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078571"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
@@ -100,17 +100,17 @@ ms.locfileid: "77078571"
   
  有关地图的详细信息，请参阅 [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。 有关向报表添加地图的分步说明，请参阅[教程：地图报表（报表生成器）](../../reporting-services/tutorial-map-report-report-builder.md)。  
   
-##  <a name="SpatialDataSource"></a> 选择空间数据的源  
+##  <a name="choose-a-source-of-spatial-data"></a><a name="SpatialDataSource"></a> 选择空间数据的源  
  在此页上，指定空间数据源和要包括的空间数据。 空间数据可来自地图库或 ESRI 形状文件，也可来自数据集查询（此类查询指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或更高版本数据库中的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 空间数据）。  
   
  可以为每层使用相同或不同的空间数据源，但必须在每次添加层时指定源。 当空间数据来自地图库或 ESRI 形状文件时，空间数据源不是单独的报表项。 它不显示在“报表数据”窗格中。  
   
-###  <a name="SpatialData"></a> 什么是空间数据？  
+###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> 什么是空间数据？  
  空间数据包含定义地理或几何元素的坐标。 在地图中，空间数据定义“地图元素”  ：定义区域或形状的多边形、定义路线或路径的线条，以及定义标记或图钉的点。 空间数据在数据源中以二进制格式存储，并指定为坐标集。 例如，点是 X 和 Y 坐标 (X Y)，线条是两组坐标 ((X1 Y1), (X2 Y2))，多边形是四组或更多坐标，其中第一组和最后一组坐标是相同的 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
   
  有关详细信息，请参阅所用空间数据类型的文档。  
   
-###  <a name="MapGallery"></a> What is the map gallery?  
+###  <a name="what-is-the-map-gallery"></a><a name="MapGallery"></a> What is the map gallery?  
  地图库所包含的地图来自面向报表创作环境的地图库文件夹中的报表。 库中的地图提供支持向报表快速添加地图。 库中预先定义的地图是由地图提供商提供的。  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ms.locfileid: "77078571"
   
  若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
-###  <a name="Shapefile"></a> What is an ESRI shapefile?  
+###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
  ESRI 形状文件是一个文件集，其中的数据符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式。 该文件集通常包含 \<filename.shp> 文件（包含空间数据）和一个支持文件 \<filename.dbf>   。  
   
  当您将形状文件指定为空间数据源而该文件位于您的本地计算机中时，空间数据将自动嵌入到报表中。 若要动态使用 ESRI 文件中的空间数据，必须执行以下操作：  
@@ -127,10 +127,10 @@ ms.locfileid: "77078571"
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器中，将 .shp 文件及 .dbf 文件同时添加到报表项目中，然后将该 .shp 文件的名称指定为空间数据源。  
   
-###  <a name="GetShapefiles"></a> 在何处可以获取 ESRI 形状文件？  
+###  <a name="where-can-i-get-esri-shapefiles"></a><a name="GetShapefiles"></a> 在何处可以获取 ESRI 形状文件？  
  在网络上提供 ESRI 形状文件。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
   
-###  <a name="SqlServerSpatial"></a> 什么是 SQL Server 空间查询？  
+###  <a name="what-is-a-sql-server-spatial-query"></a><a name="SqlServerSpatial"></a> 什么是 SQL Server 空间查询？  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空间查询是一种数据集查询，该查询指定来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库的 SQLGeometry 或 SQLGeography 数据类型的数据。  
   
 > [!NOTE]  
@@ -140,7 +140,7 @@ ms.locfileid: "77078571"
   
  有关详细信息，请参阅 [空间数据类型](../../relational-databases/spatial/spatial-data-types-overview.md)。  
   
-##  <a name="MapView"></a> 选择空间数据和地图视图选项  
+##  <a name="choose-spatial-data-and-map-view-options"></a><a name="MapView"></a> 选择空间数据和地图视图选项  
  在此页上可以设置以下选项：  
   
 -   为在上一向导页中选定的空间数据设置视图中心和缩放级别。 您设置的视图适用于整个地图。  
@@ -153,12 +153,12 @@ ms.locfileid: "77078571"
   
 -   指定是否包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 地图图块背景。  
   
-###  <a name="Viewport"></a> 什么是地图视图或视区？  
+###  <a name="what-is-the-map-view-or-viewport"></a><a name="Viewport"></a> 什么是地图视图或视区？  
  地图视区定义要为报表中的所有层显示的地图区域。  
   
  默认情况下，色阶和距离刻度显示在视区内，地图图例显示在视区外。 可以在完成向导操作后更改这些视区选项。  
   
-###  <a name="Resolution"></a> 什么是地图分辨率和优化？  
+###  <a name="what-is-map-resolution-and-optimization"></a><a name="Resolution"></a> 什么是地图分辨率和优化？  
  当您更改表示线条或多边形的空间数据的分辨率时，您是在指定要绘制的地图的详细程度。 例如，对于区域的空中视图，您是需要将粒度降到地球上百米的表面积，还是一英里的分辨率就足够了？  
   
  如果报表中嵌入了空间数据，较高的分辨率将增加按该分辨率绘制详细信息所需的元素数。 如果报表中未嵌入空间数据，较高的分辨率将在您每次查看报表时增加报表处理器按该分辨率计算地图中线条所需的时间。  
@@ -167,14 +167,14 @@ ms.locfileid: "77078571"
   
  调整滑块时，向导窗格中的预览数据随之更新，为您指示调整的影响。 将地图添加到报表后，可以通过更改地图视区选项来调整此值。  
   
-###  <a name="Embed"></a> 嵌入空间数据有什么作用？  
+###  <a name="what-does-embedding-spatial-data-do"></a><a name="Embed"></a> 嵌入空间数据有什么作用？  
  在报表中嵌入地图元素或 Bing 地图图块时，空间数据存储在报表定义中。  
   
  带地图的报表可以使用在处理报表时动态检索到的空间数据或 Bing 地图图块，或是在设计时创建然后嵌入报表定义的空间数据或 Bing 地图图块。 嵌入的地图元素可能会显著增加报表定义的大小，但会减少在报表中查看地图所需的时间。 动态地图元素减少报表定义大小，但会增加处理和查看地图所需的时间。  
   
  优秀的报表设计要求您在静态和动态地图数据之间权衡利弊，找出适合您所在环境的平衡点。 总之，更多数据意味着报表定义和编译的报表要求在报表服务器上占有更大的存储空间，以及较长的处理时间。 剪裁空间数据并限制其他报表数据，以便仅包括报表所需信息，这始终不失为一种好的做法。  
   
-###  <a name="Tiles"></a> 什么是 Bing 地图图块背景？  
+###  <a name="what-is-a-bing-map-tile-background"></a><a name="Tiles"></a> 什么是 Bing 地图图块背景？  
  若要向地图中添加地理图像背景，请选择 Bing 地图图块背景选项。 报表处理器会为在此向导页上指定的地图区域和分辨率从 Bing 地图 Web 服务下载图块。 可以指定下列图块类型之一：  
   
 -   **道路：** 显示背景为白色的道路地图样式。  
@@ -189,12 +189,12 @@ ms.locfileid: "77078571"
   
  有关自定义图块层的其他方式的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
-##  <a name="Visualization"></a> 选择地图可视化  
+##  <a name="choose-map-visualization"></a><a name="Visualization"></a> 选择地图可视化  
  在此页上，选择要添加到报表的地图或地图层的类型。 首次运行该向导时，将向报表添加地图以及第一个地图层。 一个地图可以包含多个地图层。 每个地图层都显示一种特定类型的空间数据：多边形、线条或点。  
   
  您选择的地图类型取决于地图的用途和可用的数据。  
   
-###  <a name="MapType"></a> 基本图、气泡图和分析图之间有什么区别？  
+###  <a name="what-is-the-difference-among-a-basic-map-a-bubble-map-and-an-analytical-map"></a><a name="MapType"></a> 基本图、气泡图和分析图之间有什么区别？  
  **“基本图”** 只显示位置。 您可以通过阴影来改变地图上区域的颜色，但颜色不代表分析数据值。  
   
  **“气泡图”** 将单个分析数据聚合的相关值表示为气泡大小，例如，商店销售额。 可以为多边形或点创建气泡图。 对于多边形，设置多边形中心点属性；对于点，设置标记属性。  
@@ -203,29 +203,29 @@ ms.locfileid: "77078571"
   
  有关详细信息，请参阅 [规划地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
   
-##  <a name="AnalyticalData"></a> 选择分析数据集  
+##  <a name="choose-the-analytical-dataset"></a><a name="AnalyticalData"></a> 选择分析数据集  
  在此页上，指定要在此地图层上显示的分析数据的来源。  
   
  若要在地图背景上显示报表数据或任何分析数据，必须指定数据来源以及如何将这些数据关联到空间数据。 数据可以来自现有报表数据集，或来自针对其建立查询的新数据集。 现有分析数据可以包括在包含空间数据的 ESRI 形状文件中。  
   
-###  <a name="Diff"></a> 空间数据和分析数据之间有什么区别？  
+###  <a name="what-is-the-difference-between-spatial-data-and-analytical-data"></a><a name="Diff"></a> 空间数据和分析数据之间有什么区别？  
  空间数据包含指定点、线条和多边形的一系列坐标。 地图元素基于空间数据。  
   
  分析数据是您要用来改变地图外观的数值或类别数据。 分析数据可以来自报表数据集，也可能随地图库或 ESRI 形状文件中的某个地图的空间数据附带。  
   
-##  <a name="SpecifyMatchFields"></a> 指定匹配字段  
+##  <a name="specify-the-match-fields"></a><a name="SpecifyMatchFields"></a> 指定匹配字段  
  在此页上，建立空间数据与分析数据之间的关系。  
   
-###  <a name="MatchFields"></a> 什么是匹配字段？  
+###  <a name="what-are-match-fields"></a><a name="MatchFields"></a> 什么是匹配字段？  
  匹配字段支持报表处理器在分析数据与空间数据之间建立关系。 匹配字段指定分析数据内的唯一值。 例如，商店名称在数据中可能不唯一，所以可以同时指定城市和商店的名称。  
   
-##  <a name="ThemeandVisualization"></a> 选择颜色主题和数据可视化  
+##  <a name="choose-color-theme-and-data-visualization"></a><a name="ThemeandVisualization"></a> 选择颜色主题和数据可视化  
  在此页上，指定如何在地图背景上使数据可视、指定地图主题、要可视化的字段，以及要改变的内容：颜色、大小和/或标记类型。  
   
-###  <a name="Theme"></a> 主题有什么作用？  
+###  <a name="what-does-the-theme-do"></a><a name="Theme"></a> 主题有什么作用？  
  所选主题设置颜色、边框和字体的默认值。 可以在完成向导操作后更改这些选项。  
   
-###  <a name="Legends"></a> 地图预览中的图例和比例尺有什么作用？  
+###  <a name="what-are-the-legends-and-scales-in-map-preview-for"></a><a name="Legends"></a> 地图预览中的图例和比例尺有什么作用？  
  图例可帮助用户解释地图上显示的数据。 地图中提供了色阶、距离刻度和图例。  
   
 -   **颜色范围。** 颜色范围显示一个带刻度的颜色条，刻度用于提供由报表处理器根据你为层指定的规则所确定的数据间隔指南。  
@@ -234,7 +234,7 @@ ms.locfileid: "77078571"
   
 -   **图例。** 图例用于提供帮助解释地图上的颜色、大小和标记类型含义的指南。 默认情况下，所有层的所有规则都会在第一个图例中显示数据间隔。 将地图添加到报表后，可以自定义此图例以及添加图例。  
   
-###  <a name="Rules"></a> 什么是规则？  
+###  <a name="what-are-rules"></a><a name="Rules"></a> 什么是规则？  
  规则是报表处理器将分析数据划分为范围所使用的计算。 可以为每一层指定不同的规则。 可以指定的规则类型取决于层上空间数据的类型：  
   
 -   **多边形：** 可以指定颜色规则。  

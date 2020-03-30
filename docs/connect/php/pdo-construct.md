@@ -11,10 +11,10 @@ ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a181d6e8b9a3ffbf9d65dc74cae967d6a1f40c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936258"
 ---
 # <a name="pdo__construct"></a>PDO::__construct
@@ -29,7 +29,7 @@ ms.locfileid: "67936258"
 PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 *$dsn*：包含前缀名（始终是 `sqlsrv`）、冒号和 Server 关键字的字符串。 例如，`"sqlsrv:server=(local)"` 。 你可以选择指定其他连接关键字。 有关 Server 关键字和其他连接关键字的介绍，请参阅 [Connection Options](../../connect/php/connection-options.md) 。 因为整个 *$dsn* 包含在引号中，所以每个连接关键字不应单独引用。  
   
 *$username*：可选。 包含用户名的字符串。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定登录 ID。 若要使用 Windows 身份验证进行连接，请指定 `""`。  

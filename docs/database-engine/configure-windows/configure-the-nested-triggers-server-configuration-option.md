@@ -13,10 +13,10 @@ ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2ac59b4fb2923aacd377bb974e49dd8edebf5587
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012503"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>配置 nested triggers 服务器配置选项
@@ -38,14 +38,14 @@ ms.locfileid: "68012503"
   
 -   **跟进：** [在配置嵌套触发器选项之后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-nested-triggers-option"></a>配置 nested triggers 选项  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68012503"
   
 2.  在“高级”  页上，将“允许触发器激发其他触发器”  选项设置为“True”  （默认值）或“False”  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-nested-triggers-option"></a>配置 nested triggers 选项  
   
@@ -79,7 +79,7 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置嵌套触发器选项之后  
+##  <a name="follow-up-after-you-configure-the-nested-triggers-option"></a><a name="FollowUp"></a> 跟进：在配置嵌套触发器选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
 ## <a name="see-also"></a>另请参阅  

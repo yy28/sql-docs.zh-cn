@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288451"
 ---
 # <a name="query-store-usage-scenarios"></a>Query Store 使用方案
@@ -110,7 +110,7 @@ ms.locfileid: "79288451"
   
 根据分析，查询性能获得了提升，因此你会保留索引。  
   
-## <a name="CEUpgrade"></a>升级到新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期间保持性能稳定  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a>升级到新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期间保持性能稳定  
 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]之前，用户在升级到最新的平台版本时要冒性能下降的风险。 之所以会出现这种情况，是因为最新版查询优化器会在新版本安装之后即时启用。  
   
 自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起，所有查询优化器更改都会绑定到最新的[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)，因此计划不会在升级后立即更改，而是在用户将 `COMPATIBILITY_LEVEL` 数据库更改为最新版本后更改。 利用此功能和 Query Store，你可以在升级过程中对查询性能进行精确的控制。 建议的升级工作流如下图所示：  

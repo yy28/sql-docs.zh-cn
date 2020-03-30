@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73658794"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教程：在 Java 中使用正则表达式 (regex) 搜索字符串
@@ -24,7 +24,7 @@ ms.locfileid: "73658794"
 
 此示例代码使用检查文本是否包含单词“Java”或“java”的正则表达式。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 + [Windows](../install/install-sql-server-language-extensions-on-windows.md) 或 [Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions) 上的 SQL Server 2019 数据库引擎实例，具有扩展性框架和 Java 编程扩展。 有关详细信息，请参阅 [SQL Server 2019 中的语言扩展](../language-extensions-overview.md)。 有关编码要求的详细信息，请参阅[如何在 SQL Server 中调用 Java](../how-to/call-java-from-sql.md)。
 

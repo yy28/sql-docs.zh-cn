@@ -11,16 +11,16 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71127243"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 PostgreSQL
+# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 PostgreSQL
 本快速入门介绍如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接到 Postgres，然后使用 SQL 语句创建数据库 *tutorialdb* 并对其进行查询。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要完成本快速入门，需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)]、[!INCLUDE[name-sos](../includes/name-sos-short.md)] 的 PostgreSQL 扩展以及对 PostgreSQL 服务器的访问权限。
 

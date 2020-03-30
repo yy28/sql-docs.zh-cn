@@ -13,10 +13,10 @@ ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e2a9ede7817eb504a5926ee1a7bb6be2019f0b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041233"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>使用 Transact-SQL 访问 FILESTREAM 数据
@@ -26,7 +26,7 @@ ms.locfileid: "68041233"
 > [!NOTE]  
 >  本主题中的示例需要在 [创建启用 FILESTREAM 的数据库](../../relational-databases/blob/create-a-filestream-enabled-database.md) 和 [创建表以存储 FILESTREAM 数据](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)中创建的启用了 FILESTREAM 的数据库和表。  
   
-##  <a name="ins"></a> 插入包含 FILESTREAM 数据的行  
+##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> 插入包含 FILESTREAM 数据的行  
  若要在支持 FILESTREAM 数据的表中插入一行，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 语句。 在 FILESTREAM 列中插入数据时，可以插入 NULL 或 **varbinary(max)** 值。  
   
 ### <a name="inserting-null"></a>插入 NULL  
@@ -53,7 +53,7 @@ ms.locfileid: "68041233"
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
   
-##  <a name="upd"></a> 更新 FILESTREAM 数据  
+##  <a name="updating-filestream-data"></a><a name="upd"></a> 更新 FILESTREAM 数据  
  可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更新文件系统文件中的数据；但是，如果必须以流的方式将大量数据传输到文件，您可能并不希望这样做。  
   
  下面的示例将文件记录中的所有文本替换为文本 `Xray 1`。  
@@ -61,7 +61,7 @@ ms.locfileid: "68041233"
  [!code-sql[FILESTREAM#FS_UpdateData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_4.sql)]  
   
   
-##  <a name="del"></a> 删除 FILESTREAM 数据  
+##  <a name="deleting-filestream-data"></a><a name="del"></a> 删除 FILESTREAM 数据  
  删除包含 FILESTREAM 字段的行时，会同时删除其基础文件系统文件。 删除行（从而删除文件）的唯一方式是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE 语句。  
   
  下面的示例说明了如何删除一行及其关联的文件系统文件。  

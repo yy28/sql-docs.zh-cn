@@ -28,10 +28,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77544937"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
@@ -867,7 +867,7 @@ sqlcmd  打印输出服务器发送的所有信息性消息。 在以下示例�
   
  虽然 `BusinessEntityID` 列宽只有四个字符，但已将其扩展以适应更长的列名。 默认情况下，输出会在 80 个字符处终止。 可通过使用 **-w** 选项或设置 SQLCMDCOLWIDTH 脚本变量来进行更改。  
   
-###  <a name="OutputXML"></a> XML 输出格式  
+###  <a name="xml-output-format"></a><a name="OutputXML"></a> XML 输出格式  
  从 FOR XML 子句得到的 XML 输出是在连续流中的未格式化的输出。  
   
  若要得到 XML 输出，请使用以下命令： `:XML ON`。  
@@ -884,7 +884,7 @@ sqlcmd  打印输出服务器发送的所有信息性消息。 在以下示例�
 > [!NOTE]  
 >  `:XML` 命令不支持 SET STATISTICS XML 语句。  
   
-###  <a name="OutputJSON"></a> JSON 输出格式  
+###  <a name="json-output-format"></a><a name="OutputJSON"></a> JSON 输出格式  
  若要得到 JSON 输出，请使用以下命令： `:XML ON`。 否则，输出包括的列名和 JSON 文本。 此输出不是有效的 JSON。  
   
  若要关闭 XML 模式，请使用以下命令：`:XML OFF`。  

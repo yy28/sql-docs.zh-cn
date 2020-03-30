@@ -13,10 +13,10 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903940"
 ---
 # <a name="delete-a-resource-pool"></a>删除资源池
@@ -28,16 +28,16 @@ ms.locfileid: "72903940"
   
 -   **若要删除资源池，请使用：** [SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  如果资源池中包含工作负荷组，则不能删除该池。  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  不能删除资源调控器默认资源池或内部资源池。 如果资源池中包含工作负荷组，则不能删除该池。 有关详细信息，请参阅 [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md)。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  删除资源池需要 CONTROL SERVER 权限。  
   
-##  <a name="DelRPSSMS"></a> 使用对象资源管理器删除资源池  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> 使用对象资源管理器删除资源池  
  **使用 SQL Server Management Studio 删除资源池**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”** 。  
@@ -49,7 +49,7 @@ ms.locfileid: "72903940"
     > [!NOTE]  
     >  如果尝试删除的资源池中包含工作负荷组，则此操作将失败。  
   
-##  <a name="DelRPTSQL"></a> 使用 Transact-SQL 删除资源池  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> 使用 Transact-SQL 删除资源池  
  **使用 Transact-SQL 删除资源池**  
   
 1.  运行 **DROP RESOURCE POOL** 或 **DROP EXTERNAL RESOURCE POOL** 语句，该语句指定要删除的资源池的名称。  

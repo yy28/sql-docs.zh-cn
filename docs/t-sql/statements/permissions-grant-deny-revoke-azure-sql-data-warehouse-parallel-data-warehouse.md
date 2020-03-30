@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255467"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>权限：GRANT、DENY、REVOKE（Azure SQL 数据仓库、并行数据仓库）
@@ -263,7 +263,7 @@ REVOKE
   
 -   USE 语句不需要权限  。 所有主体都可在任何数据库上运行 USE 语句  。  
   
-##  <a name="Examples"></a> 示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> 示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. 为登录名授予服务器级权限  
  以下两个语句为登录名授予服务器级权限。  

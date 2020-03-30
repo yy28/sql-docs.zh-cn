@@ -18,10 +18,10 @@ ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e47aebb82c0cc3149dae7de697e92c965903a753
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101794"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings（geography 数据类型）
@@ -39,7 +39,7 @@ ms.locfileid: "68101794"
 ## <a name="return-type"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
   
- CLR 返回类型：**SqlInt32**  
+ CLR 返回类型：SqlInt32   
   
 ## <a name="remarks"></a>备注  
  如果该实例不是 Polygon 实例，则此方法返回 NULL；如果该实例为空，则将返回 0  。 此方法是精确方法。  

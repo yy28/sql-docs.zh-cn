@@ -13,10 +13,10 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294693"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 实例
@@ -76,7 +76,7 @@ ms.locfileid: "71294693"
     |![错误](../../integration-services/change-data-capture/media/error.gif "错误")|**错误**。 Oracle CDC 实例因为发生了不可重试的错误而未运行。 以下子状态可用：<br /><br /> **配置不当**：发生了需要手动干预的配置错误。<br /><br /> **要求提供密码**：没有为 Oracle CDC 实例设置密码或密码无效。<br /><br /> **意外**。 所有其他不可恢复错误。|  
     |![确定](../../integration-services/change-data-capture/media/okay.gif "确定")|**正在运行**：CDC 实例正在运行并且正在处理更改记录。 以下子状态可用：<br /><br /> **空闲**：所有更改记录都已处理并且存储在目标更改表中。 没有活动事务。<br /><br /> **正在处理**：存在正处理、但尚未写入更改表的更改记录。|  
     |![Stop](../../integration-services/change-data-capture/media/stop.gif "停止")|**已停止**：CDC 实例未在运行。 该已停止状态指示 CDC 实例已正常停止。|  
-    |![已暂停](../../integration-services/change-data-capture/media/paused.gif "已暂停")|**已暂停**：CDC 实例正在运行，但由于可重试错误导致处理已挂起。 以下子状态可用：<br /><br /> **断开连接**：无法建立到源 Oracle 数据库的连接。 在连接恢复时会继续处理。<br /><br /> **存储**：存储已满。 在其他存储变为可用时将继续处理。<br /><br /> **记录器**：记录器连接到 Oracle，但由于临时问题（例如，所需的事务日志不可用）无法读取 Oracle 事务日志。|  
+    |![已暂停](../../integration-services/change-data-capture/media/paused.gif "已暂停")|**已暂停**：CDC 实例正在运行，但由于可重试错误处理已挂起。 以下子状态可用：<br /><br /> **断开连接**：无法建立到源 Oracle 数据库的连接。 在连接恢复时会继续处理。<br /><br /> **存储**：存储已满。 在其他存储变为可用时将继续处理。<br /><br /> **记录器**：记录器连接到 Oracle，但由于临时问题（例如，所需的事务日志不可用）无法读取 Oracle 事务日志。|  
   
 -   **详细状态**：当前子状态。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71294693"
   
 -   **时间戳**：上次从状态表中读取 CDC 状态时的 UTC 时间。  
   
--   **当前正在处理**：在此部分中监视下列信息。  
+-   **当前正处理**：您在此部分中监视下列信息。  
   
     -   **上一个事务时间戳**：写入更改表的上一个事务的本地时间。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71294693"
   
     -   **事务日志头 CN**：从 Oracle 事务日志读取的最近更改号 (CN)。  
   
-    -   **事务日志尾 CN**：用于恢复或重启 CDC 实例的更改号。 在发生重新启动或任何其他类型的失败（包括群集故障转移）时 Oracle CDC 实例将重新定位到此位置。  
+    -   **事务日志尾 CN**：用于恢复或重新启动 CDC 实例的更改号。 在发生重新启动或任何其他类型的失败（包括群集故障转移）时 Oracle CDC 实例将重新定位到此位置。  
   
     -   **当前 CN**：在源 Oracle 数据库（而非事务日志）中看到的最后的更改号 (SCN)。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "71294693"
   
     -   **暂存事务**：暂存到 [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) 表的当前源 Oracle 事务的数目。  
   
--   **计数器**：在此部分中监视下列信息。  
+-   **计数器**：您在此部分中监视下列信息。  
   
     -   **完成的事务数**：自上次重置 CDC 实例后完成的事务数。 此计数中不包括那些不包含有关表的事务。  
   

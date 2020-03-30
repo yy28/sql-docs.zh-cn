@@ -16,10 +16,10 @@ ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255983"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>为镜像准备镜像数据库 (SQL Server)
@@ -46,9 +46,9 @@ ms.locfileid: "75255983"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Requirements"></a> 要求  
+###  <a name="requirements"></a><a name="Requirements"></a> 要求  
   
 -   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 尽管镜像服务器可以具有更高版本的 SQL Server，但仅在仔细计划的升级过程中建议此配置。 在此类配置中，会面临自动故障转移的风险，数据移动在其中会被自动挂起，因为数据不能移到更低版本的 SQL Server。 有关详细信息，请参阅 [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "75255983"
   
 -   计划创建镜像数据库的系统的磁盘驱动器空间必须足以容纳镜像数据库。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   不能镜像 **master**、 **msdb**、 **temp**或 **model** 系统数据库。  
   
 -   不能镜像属于 [AlwaysOn 可用性组](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)的数据库。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   使用最近的主体数据库的完整数据库备份或最近的差异数据库备份。  
   
@@ -87,22 +87,22 @@ ms.locfileid: "75255983"
   
 -   对于生产数据库，始终备份到单独的设备。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  备份数据库时，TRUSTWORTHY 设置为 OFF。 因此，在新的镜像数据库中，TRUSTWORTHY 始终为 OFF。 如果数据库在故障转移之后需要得到信任，则必须执行其他设置步骤。 有关详细信息，请参阅 [将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)中准备镜像数据库。  
   
  有关启用镜像数据库主秘钥自动加密的详细信息，请参阅 [设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  数据库所有者或系统管理员。  
   
-##  <a name="PrepareToRestartMirroring"></a> 准备现有镜像数据库以重新启动镜像  
+##  <a name="to-prepare-an-existing-mirror-database-to-restart-mirroring"></a><a name="PrepareToRestartMirroring"></a> 准备现有镜像数据库以重新启动镜像  
  如果已删除镜像，并且该镜像数据库仍处于 RECOVERING 状态，则可以重新启动镜像。  
   
 1.  至少进行主体数据库的一个日志备份。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。  
   
 2.  在镜像数据库中，使用 RESTORE WITH NORECOVERY 还原删除镜像后在主体数据库中执行的所有日志备份。 有关详细信息，请参阅 [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)中准备镜像数据库。  
   
-##  <a name="CombinedProcedure"></a> 准备新的镜像数据库  
+##  <a name="to-prepare-a-new-mirror-database"></a><a name="CombinedProcedure"></a> 准备新的镜像数据库  
  **准备镜像数据库**  
   
 > [!NOTE]  
@@ -137,7 +137,7 @@ ms.locfileid: "75255983"
   
     -   [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  必须先创建镜像数据库，才能启动数据库镜像会话。 应该在启动镜像会话之前执行此操作。  
   
  此示例使用了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库，默认情况下，该数据库使用简单恢复模式。  
@@ -237,7 +237,7 @@ ms.locfileid: "75255983"
   
  有关设置数据库镜像、显示安全设置、准备镜像数据库、设置合作伙伴以及添加见证服务器的完整示例的信息，请参阅 [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)中准备镜像数据库。  
   
-##  <a name="FollowUp"></a> 跟进：准备镜像数据库之后  
+##  <a name="follow-up-after-preparing-a-mirror-database"></a><a name="FollowUp"></a> 跟进：准备镜像数据库之后  
   
 1.  如果在最近的 RESTORE LOG 操作之后已执行了任何其他日志备份，则还必须使用 RESTORE WITH NORECOVERY 手动应用其他每个日志备份。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "75255983"
   
 4.  如果数据库在故障转移后需要得到信任，则必须在镜像开始后执行额外的设置步骤。 有关详细信息，请参阅 [将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)中准备镜像数据库。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

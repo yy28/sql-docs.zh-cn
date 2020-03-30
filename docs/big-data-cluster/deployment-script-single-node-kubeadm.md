@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f60256e58339387323f923c85d2b880459455663
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252102"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>使用 bash 脚本部署到单个节点 kubeadm 群集
@@ -23,7 +23,7 @@ ms.locfileid: "75252102"
 
 在本教程中，你将使用示例 bash 部署脚本部署使用 kubeadm 的单节点 Kubernetes 群集，并在其上部署 SQL Server 大数据群集。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - Vanilla Ubuntu 18.04 或 16.04 服务器虚拟机或物理计算机  。 所有依赖项都由脚本设置，你可以从 VM 内部运行该脚本。
 

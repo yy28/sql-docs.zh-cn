@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9aeefb0b6fd9ca1a744d132fccf1eedfedbaa6e7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75681741"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教程：在 SQL Server 机器学习服务中准备数据以定型线性回归模型
@@ -33,7 +33,7 @@ ms.locfileid: "75681741"
 
 [第四部分](python-ski-rental-linear-regression-deploy-model.md)介绍如何将模型存储到 SQL Server，然后根据在第二和第三部分中开发的 Python 脚本来创建存储过程。 存储过程将在 SQL Server 中运行，以便基于新数据进行预测。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 * 本教程的第二部分假设你已完成[第一部分](python-ski-rental-linear-regression.md)且满足其必备条件。
 

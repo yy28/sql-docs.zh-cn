@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727346"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
@@ -92,7 +92,7 @@ SQL Server 2016 的早期版本无法在没有 Internet 连接的脱机安装过
 
 卸载 SQL Server 机器学习组件的预发布版本可能很复杂，并且可能需要运行某种特殊脚本。 请与技术支持联系以获取帮助。
 
-###  <a name="bkmk_Uninstall"></a> 从 Microsoft R Server 的旧版本升级前先进行卸载
+###  <a name="uninstall-prior-to-upgrading-from-an-older-version-of-microsoft-r-server"></a><a name="bkmk_Uninstall"></a> 从 Microsoft R Server 的旧版本升级前先进行卸载
 
 如果安装了 Microsoft R Server 的预发布版本，必须先卸载它，才能升级到较新版本。
 
@@ -132,7 +132,7 @@ SQL Server 2016 的早期版本无法在没有 Internet 连接的脱机安装过
 
 如果安装 Microsoft R Client，并使用它在远程 SQL Server 计算上下文中运行 R，则可能收到类似以下的错误：
 
-计算机上运行的 Microsoft R Client 版本为 9.0.0，与 8.0.3 版的 Microsoft R Server 不兼容 *。请下载并安装兼容版本。
+计算机上运行的 Microsoft R Client 版本为 9.0.0，与 8.0.3 版的 Microsoft R Server 不兼容 *。* 请下载并安装兼容版本。
 
 在 SQL Server 2016 中，要求 SQL Server R Services 中运行的 R 版本与 Microsoft R Client 中的库完全相同。 以后的版本将消除此要求。 但是，建议始终获取机器学习组件的最新版本，并安装所有服务包。 
 

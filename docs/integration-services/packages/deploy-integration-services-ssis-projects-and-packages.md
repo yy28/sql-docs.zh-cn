@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286821"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
@@ -131,7 +131,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 4.  （可选）创建已部署项目的环境。 
   
-###  <a name="convert"></a> 将项目转换为项目部署模型  
+###  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a> 将项目转换为项目部署模型  
   
 1.  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”  。  
   
@@ -141,7 +141,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 2.  完成向导。
   
-###  <a name="deploy"></a> 将项目部署到 Integration Services 服务器  
+###  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a> 将项目部署到 Integration Services 服务器  
   
 1.  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]并打开项目，然后从 **“项目”** 菜单，选择 **“部署”** 以便启动 **“Integration Services 部署向导”** 。  
   
@@ -164,7 +164,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 ## <a name="deploy-packages-to-integration-services-server"></a>将包部署到 Integration Services 服务器
   [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引入了增量包部署功能，能够让你将一个或多个包部署到现有或新的项目，而无需部署整个项目。  
   
-###  <a name="DeployWizard"></a> 通过使用 Integration Services 部署向导部署包  
+###  <a name="deploy-packages-by-using-the-integration-services-deployment-wizard"></a><a name="DeployWizard"></a> 通过使用 Integration Services 部署向导部署包  
   
 1.  在命令提示符下，从 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 运行 **isdeploymentwizard.exe**。 在 64 位计算机上， **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**中还有 32 位版本的工具。  
   
@@ -172,7 +172,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  完成向导。 按照 [Package Deployment Model](#PackageModel)中所述的后续步骤进行操作。  
   
-###  <a name="SSMS"></a> 使用 SQL Server Management Studio 部署包  
+###  <a name="deploy-packages-by-using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio 部署包  
   
 1.  在 SQL Server Management Studio 中，展开对象资源管理器中的  “Integration Services 目录” > **SSISDB**节点。  
   
@@ -184,7 +184,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 5.  完成向导。 按照 [Package Deployment Model](#PackageModel)中所述的后续步骤进行操作。  
   
-###  <a name="SSDT"></a> 使用 SQL Server Data Tools (Visual Studio) 部署包  
+###  <a name="deploy-packages-by-using-sql-server-data-tools-visual-studio"></a><a name="SSDT"></a> 使用 SQL Server Data Tools (Visual Studio) 部署包  
   
 1.  在 Visual Studio 中，在 Integration Services 项目处于打开状态时，选择一个或多个要部署的包。  
   
@@ -192,7 +192,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  完成向导。 按照 [Package Deployment Model](#PackageModel)中所述的后续步骤进行操作。  
   
-###  <a name="StoredProcedure"></a> 使用 deploy_packages 存储过程部署包  
+###  <a name="deploy-packages-by-using-the-deploy_packages-stored-procedure"></a><a name="StoredProcedure"></a> 使用 deploy_packages 存储过程部署包  
  可以使用 **[catalog].[deploy_packages]** 存储过程将一个或多个 SSIS 包部署到 SSIS 目录。 下面的代码示例演示如何通过此存储过程将包部署到 SSIS 服务器。 有关详细信息，请参阅 [catalog.deploy_packages](../../integration-services/system-stored-procedures/catalog-deploy-packages.md)。  
   
 ```cs
@@ -235,7 +235,7 @@ private static void Main(string[] args)
   
 ```  
   
-###  <a name="MOMApi"></a> 使用管理对象模型 API 部署包  
+###  <a name="deploy-packages-using-the-management-object-model-api"></a><a name="MOMApi"></a> 使用管理对象模型 API 部署包  
  下面的代码示例演示如何通过管理对象模型 API 将包部署到服务器。  
   
 ```cs 
@@ -304,7 +304,7 @@ static void Main()
  
  对于每个部署模型，此页上的设置会有所不同。 基于你在此页中选择的模型，按照 [Project Deployment Model](#ProjectModel) 部分或 [Package Deployment Model](#PackageModel) 部分的步骤进行操作。  
   
-###  <a name="ProjectModel"></a> Project Deployment Model  
+###  <a name="project-deployment-model"></a><a name="ProjectModel"></a> Project Deployment Model  
   
 #### <a name="select-source"></a>选择源
 
@@ -322,7 +322,7 @@ static void Main()
 
  部署过程完成之后，将看到“结果”  页。 该页显示每个操作是成功了还是失败了。 如果操作失败，单击 **“结果”** 列中的 **“失败”** 可以显示错误说明。 单击“保存报表...”  以将结果保存到 XML 文件，或单击“关闭”  以退出向导。
   
-###  <a name="PackageModel"></a> Package Deployment Model  
+###  <a name="package-deployment-model"></a><a name="PackageModel"></a> Package Deployment Model  
   
 #### <a name="select-source"></a>选择源
 
@@ -555,7 +555,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [设置执行转换的选项](#conversion)  
   
-###  <a name="open_dialog"></a> 打开“Integration Services 项目转换向导”  
+###  <a name="open-the-integration-services-project-conversion-wizard"></a><a name="open_dialog"></a> 打开“Integration Services 项目转换向导”  
  执行下列操作之一以打开 **“Integration Services 项目转换”** 向导。  
   
 -   在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”  。  
@@ -564,7 +564,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  根据您是从 **还是从** 运行 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，该向导将执行不同的转换任务。   
   
-###  <a name="locate"></a> 设置“查找包”页上的选项  
+###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> 设置“查找包”页上的选项  
   
 > [!NOTE]  
 >  只有在从 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]运行该向导时，“查找包”  页才可用。  
@@ -602,7 +602,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **文件夹**  
  键入包路径，或通过单击“浏览”  导航到该包。  
   
-###  <a name="selectPackages"></a> 设置“选择包”页上的选项  
+###  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a> 设置“选择包”页上的选项  
  **包名称**  
  列出包文件。  
   
@@ -621,7 +621,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **“刷新”**  
  刷新包的列表。  
   
-###  <a name="destination"></a> 设置“选择目标”页上的选项  
+###  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a> 设置“选择目标”页上的选项  
  在此页上，指定新的项目部署文件 (.ispac) 的名称和路径或者选择一个现有文件。  
   
 > [!NOTE]  
@@ -639,7 +639,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **项目说明**  
  键入项目的可选说明。  
   
-###  <a name="projectProperties"></a> 设置“指定项目属性”页上的选项  
+###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> 设置“指定项目属性”页上的选项  
   
 > [!NOTE]  
 >  只有在从 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]运行该向导时，“指定项目属性”  页才可用。  
@@ -653,7 +653,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **项目说明**  
  键入可选的项目说明。  
   
-###  <a name="executePackage"></a> 设置“更新执行包任务”页上的选项  
+###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> 设置“更新执行包任务”页上的选项  
  更新包中所含的执行包任务，以使用基于项目的引用。 有关详细信息，请参阅 [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)。  
   
  **父包**  
@@ -668,7 +668,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **分配引用**  
  选择存储在项目中的子包。  
   
-###  <a name="configurations"></a> 设置“选择配置”页上的选项  
+###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> 设置“选择配置”页上的选项  
  选择您要用参数替换的包配置。  
   
  **包**  
@@ -694,7 +694,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  如果没有选择此选项，将只删除已选择用参数替换的配置。  
   
-###  <a name="createParameters"></a> 设置“创建参数”页上的选项  
+###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> 设置“创建参数”页上的选项  
  选择每个配置属性的参数名称和作用域。  
   
  **包**  
@@ -706,7 +706,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **范围**  
  选择参数的作用域（包或项目）。  
   
-###  <a name="configureParameters"></a> 设置“配置参数”页上的选项  
+###  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a> 设置“配置参数”页上的选项  
  **名称**  
  列出参数名称。  
   
@@ -724,7 +724,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **“设置参数详细信息”** 对话框还列出参数值的数据类型和参数的来源。  
   
-###  <a name="review"></a> 设置“检查”页上的选项  
+###  <a name="set-the-options-on-the-review-page"></a><a name="review"></a> 设置“检查”页上的选项  
  使用“检查”页可以确认为项目转换选择的选项  。  
   
  **“上一步”**  
@@ -733,7 +733,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **转换**  
  单击以将项目转换为项目部署模型。  
   
-###  <a name="conversion"></a> 设置执行转换的选项  
+###  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a> 设置执行转换的选项  
  “执行转换”页显示项目转换的状态。  
   
  **Action**  

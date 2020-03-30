@@ -10,10 +10,10 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258106"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>查找、查看和管理报表（报表生成器和 SSRS）
@@ -33,7 +33,7 @@ ms.locfileid: "75258106"
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> 在报表生成器中查找和查看报表  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a> 在报表生成器中查找和查看报表  
  若要查找您要使用的报表或者选择要用于报表中的共享数据源、图像或子报表，请浏览您的计算机、报表服务器上的文件夹或者与 Reporting Services 集成的 SharePoint 站点。  
   
  若要查找某一报表服务器上的报表，必须指定该报表服务器的 URL，并且对于文件夹具有读取和保存报表项的相应权限。 若要获得相应 URL 和权限，请询问报表服务器的系统管理员。  
@@ -49,7 +49,7 @@ ms.locfileid: "75258106"
 -   **查看报表** ：在创建或更新报表时在报表生成器中预览报表。 在报表生成器连接到某一报表服务器时，该报表服务器加载和处理报表；否则，将在本地处理报表。 报表生成器中的报表查看器将显示呈现的报表。  
   
  
-##  <a name="ViewingAndManagingReportServer"></a> 从报表服务器查看和管理报表  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a> 从报表服务器查看和管理报表  
  可以使用 Web 门户查看和管理报表服务器上的报表。 浏览服务器上的文件夹找到报表，运行报表，以在浏览器中查看它们，并且执行管理任务。  
   
  Web 门户可帮助你完成以下管理任务：  
@@ -90,7 +90,7 @@ Web 门户通常包含文件夹、报表、数据源以及“我的报表”文�
 |Ctrl+F5 组合键|产生与单击报表工具栏上的 **“刷新”** 按钮相同的结果。|  
   
   
-##  <a name="ViewingAndManagingSharePointSite"></a> 从 SharePoint 站点查看和管理报表服务器项  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a> 从 SharePoint 站点查看和管理报表服务器项  
  如果系统管理员将报表服务器配置为以 SharePoint 集成模式运行，则可以从 SharePoint 站点查看和管理报表及其他报表服务器项。  
   
  SharePoint 站点包括的页面可用于设置数据源属性、报表历史记录、报表处理选项、计划、订阅、报表参数以及创建共享计划。 在 SharePoint 站点中管理报表服务器项的方式与您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的其他工具创建和管理它们的方式相同。  
@@ -104,7 +104,7 @@ Web 门户通常包含文件夹、报表、数据源以及“我的报表”文�
   
  访问 SharePoint 站点时，您可以看到“浏览”页和“库工具”选项卡。“浏览”页列出各个库，还列出所选库的内容。 可以查看库中的报表和其他项，浏览文件夹，搜索站点以查找项。  
   
- 若要将报表服务器项与 SharePoint 站点中的其他项区分开，可使用图标直观地识别出报表服务器项，也可以将鼠标指针置于类型上方并查看文件扩展名。 下图显示了 Reports 库中的文件夹和报表定义：  
+ 若要将报表服务器项与 SharePoint 站点中的其他项区分开，可使用图标直观地识别出报表服务器项，也可以将鼠标指针置于类型上方并查看文件扩展名。 下图显示了 Reports 库中的文件夹和报表定义  ：  
   
  ![带有报表服务器项的 SharePoint 库](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "带有报表服务器项的 SharePoint 库")  
   
@@ -119,11 +119,11 @@ Web 门户通常包含文件夹、报表、数据源以及“我的报表”文�
  ![报表服务器项的菜单命令](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "报表服务器项的菜单命令")  
   
   
-##  <a name="DeskTop"></a> 在桌面应用程序中查看报表  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a> 在桌面应用程序中查看报表  
  可以完全不使用浏览器，而改用桌面应用程序（例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel）作为报表查看器。 若要执行此操作，请定义一个订阅来指定桌面应用程序格式和共享文件夹目标。 报表服务器可将报表生成为应用程序文件，追加文件扩展名，然后将报表作为文件保存到您的硬盘上。 之后便可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel（或其他应用程序）代替浏览器来查看报表。  
   
   
-##  <a name="AboutUserSessions"></a> 关于用户会话  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a> 关于用户会话  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在查看报表时使用浏览器会话保持一致性。 会话是基于浏览器连接而不是基于经过身份验证的用户。 用户每次在新的浏览器窗口中打开报表时，都会创建一个新会话。 建立了浏览器会话后，您可以继续使用会话开始时打开的报表版本，即使该报表已在报表服务器上被修改。 例如，如果您在晚上 11:00 打开了一个报表，而报表作者在晚上 11:01 重新发布了同一报表，则您的会话包含的仍然是您在该会话期间打开的报表版本。  
   
  如果使用浏览器的 **“刷新”** 按钮在同一会话内刷新报表，则将显示报表的原始会话版本。 如果使用报表工具栏上的 **“刷新”** 按钮刷新按需运行的报表，则将重新运行该报表并显示新数据（如果有的话）。  
@@ -131,7 +131,7 @@ Web 门户通常包含文件夹、报表、数据源以及“我的报表”文�
  会话信息存储在报表服务器的临时数据库中。 报表服务器不使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 会话管理。 如果重新启动服务器或执行数据库恢复操作，将无法还原会话状态。 有关会话管理的详细信息，请参阅 [标识执行状态](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)。  
   
  
-##  <a name="InThisSection"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本节内容  
  以下文章介绍了有关查看和管理报表的其他信息。  
   
  [查找、查看和管理报表](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

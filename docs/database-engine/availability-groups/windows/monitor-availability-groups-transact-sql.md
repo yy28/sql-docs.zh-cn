@@ -18,10 +18,10 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014704"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>监视可用性组 (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68014704"
 >  可以使用这些视图的 ID 列来联接很多视图，以便在单个查询中返回多个视图的信息。  
   
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 目录视图要求具有服务器实例的 VIEW ANY DEFINITION 权限。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 动态管理视图要求具有服务器的 VIEW SERVER STATE 权限。  
   
-##  <a name="AoAgFeatureOnSI"></a> 监视服务器实例上的 AlwaysOn 可用性组功能  
+##  <a name="monitoring-the-always-on-availability-groups-feature-on-a-server-instance"></a><a name="AoAgFeatureOnSI"></a> 监视服务器实例上的 AlwaysOn 可用性组功能  
  若要监视服务器实例上的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能，请使用以下内置函数：  
   
  [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) 函数  
@@ -43,7 +43,7 @@ ms.locfileid: "68014704"
   
  **列名称：** IsHadrEnabled 和 HadrManagerStatus  
   
-##  <a name="WSFC"></a> 监视 WSFC 群集上的可用性组  
+##  <a name="monitoring-availability-groups-on-the-wsfc-cluster"></a><a name="WSFC"></a> 监视 WSFC 群集上的可用性组  
  若要监视 Windows Server 故障转移群集 (WSFC) 群集（承载启用了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的本地服务器实例），请使用以下视图：  
   
  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014704"
   
  有关 WSFC 群集和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的信息，请参阅 [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) 和[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
   
-##  <a name="AvGroups"></a> 监视可用性组  
+##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a> 监视可用性组  
  若要监视服务器实例为其承载可用性副本的可用性组，请使用以下视图：  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "68014704"
   
  **列名：** group_id、primary_replica、primary_recovery_health、primary_recovery_health_desc、secondary_recovery_health、secondary_recovery_health_desc、synchronization_health、synchronization_health_desc  
   
-##  <a name="AvReplicas"></a> sys.dm_hadr_availability_replica_cluster_states  
+##  <a name="monitoring-availability-replicas"></a><a name="AvReplicas"></a> sys.dm_hadr_availability_replica_cluster_states  
  若要监视可用性副本，请使用以下视图和系统函数：  
   
  [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
@@ -134,7 +134,7 @@ ms.locfileid: "68014704"
 > [!NOTE]  
 >  有关可用性副本的性能计数器（ **SQLServer:Availability Replica**  性能对象）的信息，请参阅 [SQL Server，可用性副本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
-##  <a name="AvDbs"></a> sys.dm_hadr_database_replica_cluster_states  
+##  <a name="monitoring-availability-databases"></a><a name="AvDbs"></a> sys.dm_hadr_database_replica_cluster_states  
  若要监视可用性数据库，请使用以下视图：  
   
  [监视可用性数据库](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
@@ -171,7 +171,7 @@ ms.locfileid: "68014704"
 > [!NOTE]  
 >  有关可用性数据库的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 性能计数器（ **SQLServer:Database Replica** 性能对象）的信息，请参阅 [SQL Server，数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要监视可用性数据库的事务日志活动，请使用以下 SQLServer:Databases 性能对象计数器  ：“日志刷新写入时间(毫秒)”、“日志刷新次数/秒”、“日志池缓存失误数/秒”、“日志池磁盘读取数/秒”和“日志池请求数/秒”      。有关详细信息，请参阅 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
   
-##  <a name="AGlisteners"></a> 监视可用性组侦听器  
+##  <a name="monitoring-availability-group-listeners"></a><a name="AGlisteners"></a> 监视可用性组侦听器  
  若要监视 WSFC 群集子网上的可用性组侦听器，请使用以下视图：  
   
  [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
@@ -193,7 +193,7 @@ ms.locfileid: "68014704"
   
  有关可用性组侦听程序的信息，请参阅[可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **AlwaysOn 可用性组监视任务：**  
   
 -   [使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  

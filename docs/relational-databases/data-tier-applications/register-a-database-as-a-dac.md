@@ -19,10 +19,10 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134679"
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
@@ -36,15 +36,15 @@ ms.locfileid: "68134679"
 ## <a name="before-you-begin"></a>开始之前  
  注册过程将创建用于定义数据库中的对象的 DAC 定义。 DAC 定义与数据库的组合构成一个 DAC 实例。 如果在数据库引擎的实例上将数据库注册为 DAC，则在下次将实用工具收集组从该实例发送到实用工具控制点时，已注册的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 实用工具资源管理器的“已部署的数据层应用程序”节点中，并且将在“已部署的数据层应用程序”的详细信息页面中报告    。  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库上执行 DAC 注册。 如果已为数据库注册了 DAC，则无法执行 DAC 注册。 例如，如果数据库是通过部署 DAC 创建的，则无法运行  “注册数据层应用程序向导”。  
   
  如果数据库有 DAC 中不支持的对象或包含的用户，则不能注册 DAC。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中注册 DAC 至少需要 ALTER ANY LOGIN 和数据库范围 VIEW DEFINITION 权限，对 **sys.sql_expression_dependencies**具有 SELECT 权限，且具备 **dbcreator** 固定服务器角色的成员身份。 **sysadmin** 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以注册 DAC。 注册在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中不包含登录名的 DAC 要求具有 **dbmanager** 或 **serveradmin** 角色的成员身份。 注册在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中包含登录名的 DAC 要求具有 **loginmanager** 或 **serveradmin** 角色的成员身份。  
   
-##  <a name="UsingRegisterDACWizard"></a> 使用注册数据层应用程序向导  
+##  <a name="using-the-register-data-tier-application-wizard"></a><a name="UsingRegisterDACWizard"></a> 使用注册数据层应用程序向导  
  **使用向导注册 DAC**  
   
 1.  在 **“对象资源管理器”** 中，展开包含要注册为 DAC 的数据库的实例的节点。  
@@ -63,7 +63,7 @@ ms.locfileid: "68134679"
   
     4.  [“注册 DAC”页](#Register)  
   
-##  <a name="Introduction"></a> “简介”页  
+##  <a name="introduction-page"></a><a name="Introduction"></a> “简介”页  
  此页描述用于注册数据层应用程序的各个步骤。  
   
  **不再显示此页。** - 选中该复选框可以停止在将来显示此页。  
@@ -74,7 +74,7 @@ ms.locfileid: "68134679"
   
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
   
-##  <a name="Set_properties"></a> “设置属性”页  
+##  <a name="set-properties-page"></a><a name="Set_properties"></a> “设置属性”页  
  使用此页可指定 DAC 级别的属性，如应用程序名称和版本。  
   
  **应用程序名称。** - 指定用于标识 DAC 定义的名称的字符串，该字段用数据库名称进行填充。  
@@ -91,7 +91,7 @@ ms.locfileid: "68134679"
   
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
   
-##  <a name="Summary"></a> “验证和摘要”页  
+##  <a name="validation-and-summary-page"></a><a name="Summary"></a> “验证和摘要”页  
  使用此页可以查看在注册 DAC 时向导将执行的操作。 当该页验证可从数据库的对象中生成 DAC 时，它将经历三个状态。  
   
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
@@ -131,7 +131,7 @@ ms.locfileid: "68134679"
   
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
   
-##  <a name="Register"></a> “注册 DAC”页  
+##  <a name="register-dac-page"></a><a name="Register"></a> “注册 DAC”页  
  此页报告注册成功与否。  
   
   “注册 DAC”- 报告为注册 DAC 而执行的每个操作成功与否。 查看信息以便确定每个操作是成功还是失败。 遇到了错误的任何操作都将在 **“结果”** 列中具有一个链接。 选择该链接可以查看针对该操作的错误报告。  
@@ -142,7 +142,7 @@ ms.locfileid: "68134679"
   
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
   
-##  <a name="RegisterDACPowerShell"></a> 使用 PowerShell 注册 DAC  
+##  <a name="register-a-dac-using-powershell"></a><a name="RegisterDACPowerShell"></a> 使用 PowerShell 注册 DAC  
  **在 PowerShell 脚本中使用 Register() 方法将数据库注册为 DAC**  
   
 1.  创建一个 SMO Server 对象，并且将该对象设置为包含要注册为 DAC 的数据库的实例。  

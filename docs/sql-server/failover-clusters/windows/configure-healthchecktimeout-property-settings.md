@@ -11,10 +11,10 @@ ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3e03c9f0a62896daa192fa33e7b1e0a549b1b46f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822004"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
@@ -25,17 +25,17 @@ ms.locfileid: "74822004"
   
 -   **若要配置 HeathCheckTimeout 设置，请使用：** [PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Limits"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Limits"></a> 限制和局限  
  此属性的默认值为 30,000 毫秒（30 秒）。 最小值为 15,000 毫秒（15 秒）。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 ##### <a name="to-configure-healthchecktimeout-settings"></a>配置 HealthCheckTimeout 设置  
   
@@ -67,7 +67,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 -   [群集资源命令和等效的 Windows PowerShell cmdlet](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a> 使用故障转移群集管理器管理单元  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WSFC"></a> 使用故障转移群集管理器管理单元  
  **配置 HealthCheckTimeout 设置**  
   
 1.  打开故障转移群集管理器管理单元。  
@@ -78,10 +78,10 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 4.  选择 **“属性”** 选项卡，为 **HealthCheckTimeout** 属性输入所需的值，然后单击 **“确定”** 以应用更改。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  使用 [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，你可以指定 HealthCheckTimeOut 属性值。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例将 HealthCheckTimeout 选项设置为 15,000 毫秒（15 秒）。  
   
 ```  

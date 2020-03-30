@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140217"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -52,7 +52,7 @@ ms.locfileid: "67140217"
 
 过期的报表特定计划仍会附加到报表。 您可以通过检查计划的结束日期来确定计划是否已过期。 过期的共享计划仍会保留在“共享计划”列表中。 “状态”字段指示计划是否已过期。 您可以通过延长结束日期来恢复计划，也可以在不再需要计划时删除计划引用。
 
-## <a name="bkmk_native"></a> 创建、删除或修改共享的计划（Web 门户）
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> 创建、删除或修改共享的计划（Web 门户）
  创建和修改计划包括设置确定计划运行时间的频率选项。
 
  您可以在任何时候创建或修改计划。 但是，如果计划在您完成修改之前已经开始运行，则使用计划的修改前版本。 修改的计划必须在保存后才能生效。
@@ -114,7 +114,7 @@ ms.locfileid: "67140217"
 
  如果删除由多个报表和订阅使用的共享计划，报表服务器将为以前使用该共享计划的每个报表和订阅都创建一个计划。 每个新计划都将包含已在共享计划中指定的日期、时间和重复执行模式。
 
-##  <a name="bkmk_sharepoint"></a>创建和管理共享的计划（SharePoint 模式）
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a>创建和管理共享的计划（SharePoint 模式）
  若要在 SharePoint 站点上创建、修改或删除共享计划，您必须为站点管理员。
 
  您可以用描述性名称标识特定计划。 如果未指定名称，将根据有关计划的事实数据（例如计划的重复执行模式或其运行日期和时间）创建一个默认名称。

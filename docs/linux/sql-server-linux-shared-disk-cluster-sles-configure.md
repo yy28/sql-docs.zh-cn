@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68032221"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 SLES 共享磁盘群集
@@ -24,7 +24,7 @@ ms.locfileid: "68032221"
 
 有关群集配置、资源代理选项、管理、最佳实践和建议的详细信息，请参阅 [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)（SUSE Linux Enterprise 高可用性扩展 12 SP2）。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要完成下面的端到端方案，需要两台计算机来部署两个节点群集，还需要一台服务器来配置 NFS 共享。 以下步骤概述了如何配置这些服务器。
 

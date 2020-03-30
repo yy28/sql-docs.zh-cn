@@ -18,10 +18,10 @@ ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2845ecc6189b113bc31ae85b869985cf2ddfdb16
-ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77051677"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference（geometry 数据类型）
@@ -38,12 +38,12 @@ ms.locfileid: "77051677"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 调用 `STSymDifference()` 的实例以外的另一个 **geometry** 实例。  
+ 调用 **的实例以外的另一个**geometry`STSymDifference()` 实例。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：**SqlGeometry**  
+ CLR 返回类型：SqlGeometry   
   
 ## <a name="remarks"></a>备注  
  如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  

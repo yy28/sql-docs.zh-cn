@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: e97f535dedd2b6ee25abfc886d1f08272697c549
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287501"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
@@ -54,7 +54,7 @@ ms.locfileid: "79287501"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="rhel"></a> 运行基于 RHEL 的容器映像
+## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> 运行基于 RHEL 的容器映像
 
 SQL Server Linux 容器映像的文档指向基于 Ubuntu 的容器。 从 SQL Server 2019 开始，可使用基于 Red Hat Enterprise Linux (RHEL) 的容器。 在所有 docker 命令中，将容器存储库从 mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04 更改为 mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8   。
 
@@ -73,7 +73,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="production"></a> 运行生产容器映像
+## <a name="run-production-container-images"></a><a id="production"></a> 运行生产容器映像
 
 上一部分中的快速入门从 Docker Hub 运行 SQL Server 的免费 Developer Edition。 如果想要运行生产容器映像（例如 Enterprise、Standard 或 Web Edition），大部分信息仍然适用。 但是，存在一些差异，此处将其列出。
 
@@ -210,7 +210,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
 
-## <a id="customcontainer"></a> 创建自定义容器
+## <a name="create-a-customized-container"></a><a id="customcontainer"></a> 创建自定义容器
 
 可以创建自己的 [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) 来创建自定义 SQL Server 容器。 有关详细信息，请参阅[组合使用 SQL Server 和节点应用程序的演示](https://github.com/twright-msft/mssql-node-docker-demo-app)。 如果创建了自己的 Dockerfile，请注意前台进程，因为此进程控制容器的生命周期。 如果它退出，容器将关闭。 例如，如果想要运行脚本并启动 SQL Server，请确保 SQL Server 进程是最右侧的命令。 所有其他命令都会在后台运行。 以下命令在 Dockerfile 中对此进行说明：
 
@@ -220,7 +220,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 
 如果撤销上一个示例中的命令，则容器将在 do-my-sql-commands.sh 脚本完成时关闭。
 
-## <a id="persist"></a> 保留数据
+## <a name="persist-your-data"></a><a id="persist"></a> 保留数据
 
 即使通过 `docker stop` 和 `docker start` 重启容器，SQL Server 配置仍会更改，且数据库文件依然保留在容器中。 但是，如果使用 `docker rm` 删除容器，则会删除容器中的所有内容，包括 SQL Server 和数据库。 以下部分介绍如何使用**数据卷**保留数据库文件（即使关联的容器已被删除）。
 
@@ -368,7 +368,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
-## <a id="tz"></a> 配置时区
+## <a name="configure-the-timezone"></a><a id="tz"></a> 配置时区
 
 若要在具有特定时区的 Linux 容器中运行 SQL Server，请配置 `TZ` 环境变量。 若要查找正确的时区值，请从 Linux bash 提示符运行 `tzselect` 命令：
 
@@ -425,7 +425,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 ```
 ::: moniker-end
 
-## <a id="tags"></a> 运行特定 SQL Server 容器映像
+## <a name="run-a-specific-sql-server-container-image"></a><a id="tags"></a> 运行特定 SQL Server 容器映像
 
 在某些情况下，可能不希望使用最新的 SQL Server 容器映像。 若要运行特定 SQL Server 容器映像，请使用以下步骤：
 
@@ -449,7 +449,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 这些步骤也可用于降级现有容器。 例如，你可能会希望回滚或降级正在运行的容器以进行故障排除或测试。 若要降级正在运行的容器，必须对数据文件夹使用持久性技术。 按照[升级部分](#upgrade)所述的相同步骤进行操作，但在运行新容器时指定早期版本的标记名称。
 
-## <a id="version"></a> 检查容器版本
+## <a name="check-the-container-version"></a><a id="version"></a> 检查容器版本
 
 如果想要了解正在运行的 docker 容器中的 SQL Server 的版本，请运行以下命令以显示它。 将 `<Container ID or name>` 替换为目标容器 ID 或名称。 将 `<YourStrong!Passw0rd>` 替换为 SA 登录名的 SQL Server 密码。
 
@@ -505,7 +505,7 @@ Packages
   sqlagent.sfp                  14.0.3029.16
 ```
 
-## <a id="upgrade"></a> 升级容器中的 SQL Server
+## <a name="upgrade-sql-server-in-containers"></a><a id="upgrade"></a> 升级容器中的 SQL Server
 
 若要使用 Docker 升级容器映像，请先确定升级版本的标记。 使用 `docker pull` 命令从注册表中拉取此版本：
 
@@ -528,7 +528,7 @@ docker pull mcr.microsoft.com/mssql/server:<image_tag>
 
 1. 使用 `docker rm` 删除旧容器（可选）。
 
-## <a id="buildnonrootcontainer"></a> 生成并运行非根 SQL Server 2017 容器
+## <a name="build-and-run-non-root-sql-server-2017-containers"></a><a id="buildnonrootcontainer"></a> 生成并运行非根 SQL Server 2017 容器
 
 按照以下步骤生成以 `mssql`（非根）用户身份启动的 SQL Server 2017 容器。
 
@@ -566,7 +566,7 @@ docker exec -it sql1 bash
 whoami
 ```
 
-## <a id="nonrootuser"></a>在主机上以其他非根用户的身份运行容器
+## <a name="run-container-as-a-different-non-root-user-on-the-host"></a><a id="nonrootuser"></a>在主机上以其他非根用户的身份运行容器
 
 若要以其他非根用户的身份运行 SQL Server 容器，请将 -u 标志添加到 docker run 命令。 非根容器具有以下限制：必须作为根组的一部分运行，除非已将卷装载到非根用户可以访问的“/var/opt/mssql”。 根组不向非根用户授予任何额外的根权限。
 
@@ -603,7 +603,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PT
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="storagepermissions"></a>为非根容器配置持久存储权限
+## <a name="configure-persistent-storage-permissions-for-non-root-containers"></a><a id="storagepermissions"></a>为非根容器配置持久存储权限
 
 若要允许非根用户访问已装载的卷上的 DB 文件，请确保运行容器所用的用户/组可以接触持久文件存储。  
 
@@ -632,7 +632,7 @@ chmod -R g=u <database file dir>
 chown -R 10001:0 <database file dir>
 ```
 
-## <a id="changefilelocation"></a>更改默认文件位置
+## <a name="change-the-default-file-location"></a><a id="changefilelocation"></a>更改默认文件位置
 
 添加 `MSSQL_DATA_DIR` 变量以在 `docker run` 命令中更改数据目录，然后将卷装载到容器的用户有权访问的位置。
 
@@ -640,7 +640,7 @@ chown -R 10001:0 <database file dir>
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="troubleshooting"></a> 故障排除
+## <a name="troubleshooting"></a><a id="troubleshooting"></a> 故障排除
 
 以下部分提供关于在容器中运行 SQL Server 的故障排除建议。
 
@@ -760,7 +760,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 - 使用 `docker run` 命令的 `-h YOURHOSTNAME` 参数显式设置容器主机名。 配置可用性组时会使用此主机名。 如果不使用 `-h` 来指定它，它会默认使用容器 ID。
 
-### <a id="errorlogs"></a> SQL Server 安装和错误日志
+### <a name="sql-server-setup-and-error-logs"></a><a id="errorlogs"></a> SQL Server 安装和错误日志
 
 可在 **/var/opt/mssql/log** 中查看 SQL Server 安装和错误日志。 如果容器未在运行，请先启动它。 然后使用交互式命令提示符来检查日志。
 

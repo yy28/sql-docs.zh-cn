@@ -13,10 +13,10 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297316"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>生成、部署和调试自定义对象
@@ -26,7 +26,7 @@ ms.locfileid: "71297316"
 
   在为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的自定义对象编写代码后，必须生成和部署程序集，并将该程序集集成到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使其可在包中使用，然后对其进行测试和调试。  
   
-##  <a name="top"></a> 生成、部署和调试 Integration Services 自定义对象的步骤  
+##  <a name="steps-in-building-deploying-and-debugging-a-custom-object-for-integration-services"></a><a name="top"></a> 生成、部署和调试 Integration Services 自定义对象的步骤  
  您已编写了对象的自定义功能代码。 现在必须对所编写的代码进行测试，使其可供用户使用。 对于可为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的所有类型的自定义对象，步骤都非常相似。  
   
  下面是生成、部署和测试的步骤。  
@@ -47,7 +47,7 @@ ms.locfileid: "71297316"
   
  现在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的包。 有关此改进对自定义扩展的影响的详细信息，请参阅[使 SSIS 自定义扩展插件获得用于 SQL Server 2016 的 SSDT 2015 多版本的支持](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)  
   
-##  <a name="signing"></a> 为程序集签名  
+##  <a name="signing-the-assembly"></a><a name="signing"></a> 为程序集签名  
  若要共享程序集，必须将其安装在全局程序集缓存中。 程序集被添加到全局程序集缓存之后，可以由 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 这样的应用程序使用。 全局程序集缓存要求必须使用强名称为程序集进行签名，这样可保证程序集是全局唯一的。 强名称程序集有一个完全限定的名称，由程序集的名称、区域性、公钥及版本号组成。 运行库使用这些信息来定位程序集并将其与其他同名的程序集区分开。  
   
  若要使用强名称为程序集签名，必须首先具有或创建公钥/私钥对。 这一对加密公钥和加密私钥用于在生成时创建强名称程序集。  
@@ -62,7 +62,7 @@ ms.locfileid: "71297316"
   
  在生成时，可以轻松在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中使用强名称为程序集签名。 在“项目属性”  对话框中，选择“签名”  选项卡。选择“为程序集签名”  的选项，然后提供密钥文件 (.snk) 的路径。  
   
-##  <a name="building"></a> 生成程序集  
+##  <a name="building-the-assembly"></a><a name="building"></a> 生成程序集  
  为项目签名后，必须使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的“生成”  菜单上可用的命令来生成或重新生成项目或解决方案。 您的解决方案可能包含单独的自定义用户界面项目，该项目也必须使用强名称签名，并且可以同时生成。  
   
  执行下两个步骤（部署程序集并将其安装在全局程序集缓存中）的最简便方法是将这些步骤编写为 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的生成后事件。 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目的项目属性的“编译”  页和 C# 项目的“生成事件”  页都提供可用的生成事件。 命令提示实用工具（如 gacutil.exe  ）需要完整路径。 包含空格的路径和展开为包含空格的路径的宏（如 $(TargetPath)）的前后都需要引号。  
@@ -75,7 +75,7 @@ ms.locfileid: "71297316"
 copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProviders "  
 ```  
   
-##  <a name="deploying"></a> 部署程序集  
+##  <a name="deploying-the-assembly"></a><a name="deploying"></a> 部署程序集  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时创建的一系列文件夹中的文件进行枚举，从而查找可在包中使用的自定义对象。 使用默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装设置时，这一组文件夹位于 C:\Program Files\Microsoft SQL Server\130\DTS  下。 但是，如果为自定义对象创建安装程序，应检查 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\Setup\DtsPath  注册表项的值，以验证此文件夹的位置。  
   
 > [!NOTE]  
@@ -99,7 +99,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 > [!NOTE]  
 >  将程序集复制到这些文件夹中即可支持可用任务、连接管理器等的枚举。 因此，您不一定要将只包含用于自定义对象的自定义用户界面的程序集部署到这些文件夹中。  
   
-##  <a name="installing"></a> 在全局程序集缓存中安装程序集  
+##  <a name="installing-the-assembly-in-the-global-assembly-cache"></a><a name="installing"></a> 在全局程序集缓存中安装程序集  
  若要将任务程序集安装到全局程序集缓存 (GAC) 中，请使用命令行工具 gacutil.exe  ，或将程序集拖至 `%system%\assembly` 目录中。 为方便起见，还可以在生成事件后中调用 gacutil.exe  。  
   
  下面的命令使用 gacutil.exe  将名为 MyTask.dll  的组件安装到 GAC 中。  
@@ -110,7 +110,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
  有关全局程序集缓存的详细信息，请参阅“[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 工具”中的“全局程序集缓存工具 (Gactutil.exe)”。  
   
-##  <a name="troubleshooting"></a> 对部署进行故障排除  
+##  <a name="troubleshooting-the-deployment"></a><a name="troubleshooting"></a> 对部署进行故障排除  
  如果自定义对象显示在“工具箱”  或可用对象列表中，但无法将其添加到包中，可以尝试以下操作：  
   
 1.  在全局程序集缓存中查找该组件是否有多个版本。 如果全局程序集缓存中存在该组件的多个版本，则设计器可能无法加载该组件。 请删除全局程序集缓存中该程序集的所有实例，然后重新添加该程序集。  
@@ -121,7 +121,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 4.  将 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 附加到 devenv.exe  ，然后设置一个断点以单步执行初始化代码，确保不会发生异常。  
   
-##  <a name="testing"></a> 测试并调试代码  
+##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> 测试并调试代码  
  若要调试自定义对象的运行时方法，最简单的方法是在生成自定义对象后从 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 启动 dtexec.exe  ，然后运行使用该组件的包。  
   
  若要调试组件的设计时方法（如 Validate  方法），请在第二个 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], 实例中打开使用该组件的包，并附加到该实例的 devenv.exe  进程。  

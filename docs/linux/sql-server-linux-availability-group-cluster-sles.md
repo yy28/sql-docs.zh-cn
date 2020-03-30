@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558437"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
@@ -48,7 +48,7 @@ ms.locfileid: "75558437"
 
 5. [将可用性组添加为群集中的资源](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)。 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 要完成下面的端到端方案，需要三台计算机来部署三个节点群集。 下面的步骤概述了配置这些服务器的方法。
 

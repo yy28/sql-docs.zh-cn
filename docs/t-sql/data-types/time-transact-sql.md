@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000453"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -88,7 +88,7 @@ ms.locfileid: "68000453"
   
  默认字符串文字格式（用于下级客户端）将遵照 SQL 标准格式（定义为 hh:mm:ss[.nnnnnnn]）。 这种格式类似于 ISO 8601 对不包含秒小数部分的 TIME 的定义。  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> 下级客户端的向后兼容性  
+##  <a name="backward-compatibility-for-down-level-clients"></a><a name="BackwardCompatibilityforDownlevelClients"></a> 下级客户端的向后兼容性  
  某些下级客户端不支持 time、time、datetime2 和 datetimeoffset 数据类型     。 下表显示了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上级实例与下级客户端之间的类型映射。  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|传递给下级客户端的默认字符串文字格式|下级 ODBC|下级 OLEDB|下级 JDBC|下级 SQLCLIENT|  
@@ -241,7 +241,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-###  <a name="ExampleB"></a> B. 将有效的时间字符串文字插入 time(7) 列  
+###  <a name="b-inserting-valid-time-string-literals-into-a-time7-column"></a><a name="ExampleB"></a> B. 将有效的时间字符串文字插入 time(7) 列  
  下表列出了可插入到数据类型为 time(7) 的一个列中的不同字符串文字，以及在插入后存储到该列中的对应值  。  
   
 |字符串文字格式类型|插入的字符串文字|存储的 time(7) 值|说明|  

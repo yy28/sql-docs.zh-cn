@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6c492a7875eed70cc58efa2dcae8ac180229e5ad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246500"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
@@ -36,17 +36,17 @@ ms.locfileid: "75246500"
   
 -   **若要配置用户以创建和管理 SQL Server 代理作业，请使用：** [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>开始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 若要配置用户以创建或执行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，必须先将某个现有 SQL Server 登录名或 msdb 角色添加到 msdb 数据库中的下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色之一：SQLAgentUserRole、SQLAgentReaderRole 或 SQLAgentOperatorRole。  
   
 默认情况下，这些数据库角色的成员可以创建各自的作业步骤，这些作业步骤不执行其他作业步骤。 如果这些非管理用户要运行那些执行其他作业步骤类型（例如， [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包）的作业，它们需要对代理帐户具有访问权限。 sysadmin 固定服务器角色的所有成员都有创建、修改和删除代理帐户的权限。 有关与这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色相关的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
 **将 SQL 登录帐户或 msdb 角色添加到 SQL Server 代理固定数据库角色**  
   
 1.  在 **对象资源管理器**中，展开某个服务器。  

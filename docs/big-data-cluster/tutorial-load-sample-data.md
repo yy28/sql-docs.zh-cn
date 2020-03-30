@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831413"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 大数据群集中
@@ -25,7 +25,7 @@ ms.locfileid: "76831413"
 > [!TIP]
 > 可在 [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 存储库中找到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的其他示例。 它们位于 **sql-server-samples/samples/features/sql-big-data-cluster/** 路径中。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
@@ -34,11 +34,11 @@ ms.locfileid: "76831413"
    - **sqlcmd**
    - **curl**
  
-## <a id="sampledata"></a> 加载示例数据
+## <a name="load-sample-data"></a><a id="sampledata"></a> 加载示例数据
 
 以下步骤使用启动脚本下载 SQL Server 数据库备份并将数据加载到大数据群集中。 为了便于使用，这些步骤已划分为 [Windows](#windows) 和 [Linux](#linux) 部分。 若要将基本用户名/密码用作身份验证机制，请先设置 AZDATA_USERNAME 和 AZDATA_PASSWORD 环境变量，再执行脚本。 否则，脚本会使用集成身份验证连接到 SQL Server 主实例和 Knox 网关。 此外，若要使用集成身份验证，还应为终结点指定 DNS 名称。
 
-## <a id="windows"></a> Windows
+## <a name="windows"></a><a id="windows"></a> Windows
 
 以下步骤介绍如何使用 Windows 客户端将示例数据加载到大数据群集中。
 
@@ -76,7 +76,7 @@ ms.locfileid: "76831413"
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
-## <a id="linux"></a> Linux
+## <a name="linux"></a><a id="linux"></a> Linux
 
 以下步骤介绍如何使用 Linux 客户端将示例数据加载到大数据群集中。
 

@@ -23,10 +23,10 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287770"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>为数据流组件开发用户界面
@@ -91,7 +91,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的返回值确定对组件的更改是持久的还是被放弃。 此方法返回 false  时，所有更改都被放弃；返回 true  时，将持久化对组件的更改并将包标记为需要保存。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>使用 SSIS 设计器的服务  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 IServiceProvider  参数可以访问 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的以下服务：  
+ **方法的 IServiceProvider**<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 参数可以访问 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的以下服务：  
   
 |服务|说明|  
 |-------------|-----------------|  

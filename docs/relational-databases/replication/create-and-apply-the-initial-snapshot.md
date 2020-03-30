@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6f5bb78720f864a5fddcbe957f36290e097984ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284893"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
@@ -139,7 +139,7 @@ ms.locfileid: "76284893"
     -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** =  **\@publisher_security_mode**  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例演示如何创建事务发布，并为新的发布添加快照代理作业（使用 **sqlcmd** 脚本变量）。 此示例还启动该作业。  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../relational-databases/replication/codesnippet/tsql/create-and-apply-the-ini_1.sql)]  
@@ -167,7 +167,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 ```  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  快照代理将在创建发布后生成快照。 可以使用复制管理对象 (RMO) 和直接托管代码对复制代理功能的访问权限以编程的方式生成这些快照。 所使用的对象取决于复制的类型。 可以使用 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 对象同步启动快照代理，也可以使用代理作业异步启动快照代理。 初始快照生成后，该快照将在订阅首次同步时传输并应用到订阅服务器。 只要现有快照不再包含有效的最新数据，您就需要重新运行代理。 有关详细信息，请参阅[维护发布](../../relational-databases/replication/publish/maintain-publications.md)。  
   
 > [!IMPORTANT]  
@@ -241,7 +241,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> 方法。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  此示例同步运行快照代理，为事务发布生成初始快照。  
   
  [!code-cs[HowTo#rmo_GenerateSnapshot](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_generatesnapshot)]  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401655"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>内存中 OLTP 和内存优化
@@ -84,7 +84,7 @@ ms.locfileid: "74401655"
   
 -   [内存中 OLTP 博客](https://go.microsoft.com/fwlink/?LinkId=311696)  
 
-## <a name="anchorname-17minute-video"></a>已编制索引的 17分钟视频
+## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>已编制索引的 17分钟视频
 
 - _视频标题：_ &nbsp; **SQL Server 2016 中的内存中 OLTP**
 - _发布日期：_ &nbsp; 2019 年 3 月 10 日，发布于 `YouTube.com`。
@@ -103,7 +103,7 @@ ms.locfileid: "74401655"
 2. 接下来，我们会看到如何通过在 SQL Server Management Studio (SSMS) 中单击几次来创建和填充表的内存优化版本。
 3. 随后演示使用内存优化表重新运行。 可测量到速度大幅提高。
 
-### <a name="anchorname-index-17minute-video"></a>视频中每节的索引
+### <a name="index-to-each-section-in-the-video"></a><a name="anchorname-index-17minute-video"></a>视频中每节的索引
 
 | 时间标记链接 | 节标题 |
 | :------------- | :------------ |

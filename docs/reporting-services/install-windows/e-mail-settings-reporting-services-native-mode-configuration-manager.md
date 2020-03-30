@@ -14,10 +14,10 @@ ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866000"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>电子邮件设置 - Reporting Services 本机模式（配置管理器）
@@ -48,7 +48,7 @@ SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用�
 > [!NOTE] 
 > 报表服务器电子邮件设置都是基于 CDO。 若要了解有关特定设置的更多详细信息，可以参考 CDO 产品文档。
 
-## <a name="a-namersconfigmanconfigure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>使用 Reporting Services 配置管理器配置报表服务器电子邮件
+## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>使用 Reporting Services 配置管理器配置报表服务器电子邮件
 
 1. 启动 Reporting Services 配置管理器，然后连接到报表服务器实例。
 

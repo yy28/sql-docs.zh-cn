@@ -15,10 +15,10 @@ ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252782"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>设置登录帐户 - 数据库镜像 AlwaysOn 可用性
@@ -35,7 +35,7 @@ ms.locfileid: "75252782"
     > [!IMPORTANT]  
     >  要创建更安全的环境，请考虑为每个服务器实例使用单独的域帐户。  
   
-##  <a name="CreateLogin"></a> 为不同帐户创建登录名  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a> 为不同帐户创建登录名  
  如果两个服务器实例作为不同的帐户运行，则系统管理员必须使用 CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句针对每个服务器实例为远程实例的启动服务帐户创建一个登录名。 有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)。  
   
 > [!IMPORTANT]  
@@ -52,10 +52,10 @@ ms.locfileid: "75252782"
 > [!NOTE]  
 >  可以使用计算机帐户（而不是域用户）连接网络服务帐户。 如果使用的是计算机帐户，则必须将其作为用户添加到其他服务器实例上。  
   
-##  <a name="GrantConnect"></a> 为不同帐户创建登录名  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a> 为不同帐户创建登录名  
  在服务器实例上创建登录帐户后，必须授予登录帐户连接到服务器实例的数据库镜像端点的权限。 系统管理员使用 GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句授予连接权限。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)的信息。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
   

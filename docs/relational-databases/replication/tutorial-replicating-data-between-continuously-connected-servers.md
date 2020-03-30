@@ -16,10 +16,10 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321924"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教程：在两个完全连接的服务器之间配置复制（事务）
@@ -38,7 +38,7 @@ ms.locfileid: "75321924"
 > * 验证订阅和测量滞后时间。
   
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 本教程适用于熟悉数据库基本操作但复制经验不足的用户。 在开始本教程之前，必须完成[教程：准备 SQL Server 以用于复制](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
   
 若要完成本教程，需要 SQL Server、SQL Server Management Studio (SSMS) 以及 AdventureWorks 数据库：  

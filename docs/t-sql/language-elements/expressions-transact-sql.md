@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70978600"
 ---
 # <a name="expressions-transact-sql"></a>表达式（Transact-SQL)
@@ -98,7 +98,7 @@ ms.locfileid: "70978600"
 ## <a name="expression-results"></a>表达式结果  
  对于由单个常量、变量、标量函数或列名组成的简单表达式，其数据类型、排序规则、精度、小数位数和值就是它所引用的元素的数据类型、排序规则、精度、小数位数和值。  
   
- 用比较运算符或逻辑运算符组合两个表达式时，生成的数据类型为布尔，并且值为以下之一：TRUE、FALSE 或 UNKNOWN。 有关 Boolean 数据类型的详细信息，请参阅[比较运算符 (Transact SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)。  
+ 用比较运算符或逻辑运算符组合两个表达式时，生成的数据类型为 Boolean，并且值为下列类型之一：TRUE、FALSE 或 UNKNOWN。 有关 Boolean 数据类型的详细信息，请参阅[比较运算符 (Transact SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)。  
   
  用算术运算符、位运算符或字符串运算符组合两个表达式时，生成的数据类型取决于运算符。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70978600"
   
  任何计算结果为字符串的表达式的排序规则都应遵循排序规则优先顺序规则。 有关详细信息，请参阅[排序规则优先顺序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。  
   
- 在 C 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 这类编程语言中，表达式的计算结果始终为单值结果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 选择列表中的表达式遵循此规则的变体：对结果集中的每一行单独计算表达式。 同一个表达式对结果集内的每一行可能会有不同的值，但该表达式在每一行的值是唯一的。 例如，在 `SELECT` 语句中，对 `ProductID` 的引用以及选择列表中的术语 `1+2` 都是表达式：  
+ 在 C 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 这类编程语言中，表达式的计算结果始终为单值结果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 选择列表中的表达式按以下规则进行变体：分别对结果集中的每一行计算表达式的值。 同一个表达式对结果集内的每一行可能会有不同的值，但该表达式在每一行的值是唯一的。 例如，在 `SELECT` 语句中，对 `ProductID` 的引用以及选择列表中的术语 `1+2` 都是表达式：  
   
 ```  
 USE AdventureWorks2012;  

@@ -13,10 +13,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75952501"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>配置 Linux 上的 SQL Server 复制
@@ -35,7 +35,7 @@ ms.locfileid: "75952501"
   
 * 有关存储过程的示例，请参阅[配置 Linux 上的 SQL Server 复制](sql-server-linux-replication-tutorial-tsql.md)教程。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 在配置发布服务器、分发服务器和订阅服务器之前，需要为 SQL Server 实例完成几个配置步骤。
 

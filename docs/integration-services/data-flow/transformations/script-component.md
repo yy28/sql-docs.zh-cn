@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297878"
 ---
 # <a name="script-component"></a>脚本组件
@@ -133,7 +133,7 @@ ms.locfileid: "71297878"
  为连接键入唯一的描述性名称。  
   
  **连接管理器**  
- 从可用的连接管理器列表中选择，或选择“\<新建连接>”以打开“添加 SSIS 连接管理器”对话框   。  
+ 从可用的连接管理器列表中选择，或选择“**新建连接>”以打开“添加 SSIS 连接管理器”对话框\<**  。  
   
  **说明**  
  输入连接的说明。  

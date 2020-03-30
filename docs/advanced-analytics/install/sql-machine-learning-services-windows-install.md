@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: ee706d160ac94c80fc826ce6d199fd66bc37d1fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286111"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216486"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -22,7 +22,7 @@ ms.locfileid: "79286111"
 
 了解如何在 Windows 上安装 SQL Server 机器学习服务。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
 
-## <a name="bkmk_prereqs"></a> 安装前清单
+## <a name="pre-install-checklist"></a><a name="bkmk_prereqs"></a> 安装前清单
 
 + 需要数据库引擎实例。 不能只安装 Python 或 R 功能，但可以将它们逐渐添加到现有实例。
 

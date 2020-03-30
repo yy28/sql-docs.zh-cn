@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727455"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何使用 olapR 在 R 中创建 MDX 查询
@@ -32,7 +32,7 @@ ms.locfileid: "73727455"
 + 创建新的 OLAP 对象
 + 写回分区，包括度量值或总和
 
-## <a name="buildMDX"></a> 从 R 生成 MDX 查询
+## <a name="build-an-mdx-query-from-r"></a><a name="buildMDX"></a> 从 R 生成 MDX 查询
 
 1. 定义指定 OLAP 数据源（SSAS 实例）和 MSOLAP 提供程序的连接字符串。
 
@@ -58,7 +58,7 @@ ms.locfileid: "73727455"
   + `executeMD` 返回多维数组
   + `execute2D` 返回二维（表格）数据帧
 
-## <a name="executeMDX"></a> 从 R 执行有效的 MDX 查询
+## <a name="execute-a-valid-mdx-query-from-r"></a><a name="executeMDX"></a> 从 R 执行有效的 MDX 查询
 
 1. 定义指定 OLAP 数据源（SSAS 实例）和 MSOLAP 提供程序的连接字符串。
 

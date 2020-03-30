@@ -15,10 +15,10 @@ ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68086017"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>删除数据库快照 (Transact-SQL)
@@ -27,10 +27,10 @@ ms.locfileid: "68086017"
   
 ## <a name="security"></a>安全性  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  具有 DROP DATABASE 权限的任何用户都可以删除数据库快照。  
   
-##  <a name="TsqlProcedure"></a> 如何删除数据库快照（使用 Transact-SQL）  
+##  <a name="how-to-drop-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> 如何删除数据库快照（使用 Transact-SQL）  
  **删除数据库快照**  
   
 1.  标识要删除的数据库快照。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看数据库快照。 有关详细信息，请参阅 [查看数据库快照 (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)中查看数据库快照。  
@@ -41,7 +41,7 @@ ms.locfileid: "68086017"
   
      其中， *database_snapshot_name* 是要删除的数据库快照的名称。  
   
-####  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+####  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例将删除名为 SalesSnapshot0600 的数据库快照，而不影响源数据库。  
   
 ```  
@@ -53,7 +53,7 @@ DROP DATABASE SalesSnapshot0600 ;
 > [!NOTE]  
 >  有关数据库快照如何使用稀疏文件的信息，请参阅 [数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)中查看数据库快照。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建数据库快照 (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

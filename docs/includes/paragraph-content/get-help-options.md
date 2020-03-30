@@ -1,4 +1,4 @@
-## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 获取帮助
+## <a name="info_tip-get-help"></a>![info_tip](../media/info-tip.png) 获取帮助
 
 - [UserVoice：是否有改进 SQL Server 的建议？](https://feedback.azure.com/forums/908035-sql-server)
 - [设置和升级：MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)

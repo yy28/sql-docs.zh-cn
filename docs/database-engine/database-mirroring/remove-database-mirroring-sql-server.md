@@ -14,10 +14,10 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da0da7ae26d859c8bd7ea4b92ff126819d6bc2ae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025387"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "68025387"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-remove-database-mirroring"></a>删除数据库镜像  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68025387"
   
 5.  若要删除镜像，请单击 **“删除镜像”** 。 此时，将显示一个提示，要求您进行确认。 如果单击 **“是”** ，会话将停止，并从数据库中删除镜像。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要删除数据库镜像，请使用 **“数据库属性”** ， 即使用 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
 #### <a name="to-remove-database-mirroring"></a>删除数据库镜像  
@@ -84,7 +84,7 @@ ms.locfileid: "68025387"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> 跟进：删除数据库镜像  
+##  <a name="follow-up-removing-database-mirroring"></a><a name="FollowUp"></a> 跟进：删除数据库镜像  
   
 > [!NOTE]  
 >  有关删除镜像的影响的信息，请参阅[删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
@@ -104,7 +104,7 @@ ms.locfileid: "68025387"
     > [!IMPORTANT]  
     >  如果恢复该数据库，则两个同名的不同数据库处于联机状态。 因此，需要确保客户端仅可访问其中一个数据库，通常为最新的主体数据库。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [暂停或恢复数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  
   

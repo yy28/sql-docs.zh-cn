@@ -16,10 +16,10 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79375554"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服务（数据库引擎和 SSAS）
@@ -126,7 +126,7 @@ ms.locfileid: "79375554"
  隐藏的实例是仅支持共享内存连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，设置 `HideInstance` 标记来指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器不应对此服务器实例的相关信息做出响应。  
   
 ### <a name="using-a-firewall"></a>使用防火墙  
- 若要与有防火墙保护的服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行通信，除了打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 端口（如 1433）之外，还要打开 UDP 端口 1434。 有关使用防火墙的信息，请参见“如何：为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access 配置防火墙”（位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）。  
+ 若要与有防火墙保护的服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行通信，除了打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 端口（如 1433）之外，还要打开 UDP 端口 1434。 有关如何使用防火墙的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何将防火墙配置为允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问”。  
   
 ## <a name="see-also"></a>另请参阅  
  [网络协议和网络库](../../sql-server/install/network-protocols-and-network-libraries.md)  

@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: cac6ecd59b270feecea3590c33c9dc8c41f1edcc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73638031"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
@@ -25,7 +25,7 @@ ms.locfileid: "73638031"
   
 ## <a name="install-semantic-search"></a>安装语义搜索  
   
-###  <a name="HowToCheckInstalled"></a> 检查是否安装了语义搜索  
+###  <a name="check-whether-semantic-search-is-installed"></a><a name="HowToCheckInstalled"></a> 检查是否安装了语义搜索  
  查询 [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md) 元数据函数的 **IsFullTextInstalled** 属性。  
   
  返回值 1 表示安装了全文搜索和语义搜索；返回值 0 表示未安装它们。  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> 安装语义搜索  
+###  <a name="install-semantic-search"></a><a name="BasicsSemanticSearch"></a> 安装语义搜索  
  若要安装语义搜索，在 SQL Server 安装过程中，请在“要安装的功能”页上选择“全文和语义提取搜索”。    
   
  统计语义搜索依赖于全文搜索。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这两个可选功能是一起安装的。  
@@ -43,7 +43,7 @@ GO
 ## <a name="install-the-semantic-language-statistics-database"></a>安装语义语言统计数据库  
  语义搜索具有一个称为语义语言统计数据库的附加外部依赖项。 此数据库包含语义搜索所需的统计语言模型。 单个语义语言统计数据库包含语义索引支持的所有语言的语言模型。  
   
-###  <a name="HowToCheckDatabase"></a> 检查是否安装了语义语言统计数据库  
+###  <a name="check-whether-the-semantic-language-statistics-database-is-installed"></a><a name="HowToCheckDatabase"></a> 检查是否安装了语义语言统计数据库  
  查询目录视图 [sys.fulltext_semantic_language_statistics_database (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
  如果为该实例安装并注册了语义语言统计数据库，则查询结果将包含有关该数据库的单行信息。  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> 安装、附加和注册语义语言统计数据库  
+###  <a name="install-attach-and-register-the-semantic-language-statistics-database"></a><a name="HowToInstallModel"></a> 安装、附加和注册语义语言统计数据库  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不安装语义语言统计数据库。 若要将语义语言统计数据库设置为语义索引的必备组件，请执行以下操作：  
   
  **1.安装语义语言统计数据库。**  
@@ -100,7 +100,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
 
-##  <a name="reqinstall"></a> 语义语言统计数据库的要求和限制  
+##  <a name="requirements-and-restrictions-for-the-semantic-language-statistics-database"></a><a name="reqinstall"></a> 语义语言统计数据库的要求和限制  
   
 -   在一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上只能附加和注册一个语义语言统计数据库。  
   
@@ -112,7 +112,7 @@ GO
   
 -   可以分离或删除语义语言统计数据库。 如果存在任何对数据库具有读锁定的当前索引操作，则分离或删除操作将失败或超时。这与现有行为一致。 删除该数据库后，任何语义索引操作都将失败。  
  
-##  <a name="HowToUnregister"></a> 删除语义语言统计数据库  
+##  <a name="remove-the-semantic-language-statistics-database"></a><a name="HowToUnregister"></a> 删除语义语言统计数据库  
 
 ###  <a name="unregister-detach-and-remove-the-semantic-language-statistics-database"></a>取消注册、分离和删除语义语言统计数据库 
 
@@ -143,7 +143,7 @@ GO
   
 ## <a name="install-optional-support-for-newer-document-types"></a>安装对较新文档类型的可选支持  
   
-###  <a name="office"></a> 为 Microsoft Office 和其他 Microsoft 文档类型安装最新筛选器  
+###  <a name="install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a> 为 Microsoft Office 和其他 Microsoft 文档类型安装最新筛选器  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装最新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 断字符和词干分析器，但是不为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 文档和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文档类型安装最新的筛选器。 要为使用最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 应用程序创建的文档编制索引，必须安装这些筛选器。 若要下载最新的筛选器，请参阅 [Microsoft Office 2010 Filter Packs](https://www.microsoft.com/download/details.aspx?id=17062)。 （对于 Office 2013 或 Office 2016，不会显示为筛选器包版本。）
   
   

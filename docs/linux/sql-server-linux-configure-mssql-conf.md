@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286911"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
@@ -90,7 +90,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 * 这些示例通过指定完整路径 /opt/mssql/bin/mssql-conf 来运行 mssql-conf  。 如果选择改为导航到该路径，请在当前目录 ./mssql-conf 的上下文中运行 mssql-conf  。
 
-## <a id="agent"></a> 启用 SQL Server 代理
+## <a name="enable-sql-server-agent"></a><a id="agent"></a> 启用 SQL Server 代理
 
 使用 sqlagent.enabled 设置可启用 [SQL Server 代理](sql-server-linux-run-sql-server-agent-job.md)  。 默认情况下，SQL Server 代理处于禁用状态。 如果 mssql.conf 设置文件中不存在 sqlagent.enabled，则 SQL Server 在内部假定已禁用 SQL Server 代理  。
 
@@ -108,7 +108,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo systemctl restart mssql-server
    ```
 
-## <a id="collation"></a> 更改 SQL Server 排序规则
+## <a name="change-the-sql-server-collation"></a><a id="collation"></a> 更改 SQL Server 排序规则
 
 使用 set-collation 选项可将排序规则值更改为支持的任何排序规则  。
 
@@ -128,7 +128,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 若要获取支持的排序规则的列表，请运行 [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 函数：`SELECT Name from sys.fn_helpcollations()`。
 
-## <a id="customerfeedback"></a> 配置客户反馈
+## <a name="configure-customer-feedback"></a><a id="customerfeedback"></a> 配置客户反馈
 
 使用 telemetry.customerfeedback 设置可更改 SQL Server 是否向 Microsoft 发送反馈  。 默认情况下，对于所有版本，此值设置为“true”  。 若要更改该值，请运行以下命令：
 
@@ -149,7 +149,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 有关详细信息，请参阅 [Linux 上的 SQL Server 的客户反馈](sql-server-linux-customer-feedback.md) 和 [SQL Server 隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。
 
-## <a id="datadir"></a> 更改默认数据或日志目录位置
+## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> 更改默认数据或日志目录位置
 
 使用 filelocation.defaultdatadir 和 filelocation.defaultlogdir 设置可更改创建新数据库和日志文件的位置   。 默认情况下，此位置为 /var/opt/mssql/data。 若要更改这些设置，请使用以下步骤：
 
@@ -187,7 +187,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 1. 此命令还假定存在 /tmp/log 目录，并且它位于用户和组“mssql”下  。
 
 
-## <a id="masterdatabasedir"></a> 更改默认的 master 数据库文件目录位置
+## <a name="change-the-default-master-database-file-directory-location"></a><a id="masterdatabasedir"></a> 更改默认的 master 数据库文件目录位置
 
 使用 filelocation.masterdatafile 和 filelocation.masterlogfile 设置可更改 SQL Server 引擎查找 master 数据库文件的位置   。 默认情况下，此位置为 /var/opt/mssql/data。
 
@@ -238,7 +238,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    > [!NOTE]
    > 如果 SQL Server 在指定目录中找不到 master.mdf 和 mastlog.ldf 文件，将在指定目录中自动创建系统数据库的模板化副本，并且 SQL Server 将成功启动。 但是，诸如用户数据库、服务器登录名、服务器证书、加密密钥、SQL 代理作业或旧 SA 登录密码等元数据将不会在新 master 数据库中更新。 必须停止 SQL Server 并将旧的 master.mdf 和 mastlog.ldf 移动到新的指定位置，然后启动 SQL Server 以继续使用现有元数据。
  
-## <a id="masterdatabasename"></a> 更改 master 数据库文件的名称
+## <a name="change-the-name-of-master-database-files"></a><a id="masterdatabasename"></a> 更改 master 数据库文件的名称
 
 使用 filelocation.masterdatafile 和 filelocation.masterlogfile 设置可更改 SQL Server 引擎查找 master 数据库文件的位置   。 还可以使用它来更改 master 数据库和日志文件的名称。 
 
@@ -273,7 +273,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo systemctl start mssql-server
    ```
 
-## <a id="dumpdir"></a> 更改默认转储目录位置
+## <a name="change-the-default-dump-directory-location"></a><a id="dumpdir"></a> 更改默认转储目录位置
 
 使用 filelocation.defaultdumpdir 设置可更改每当系统崩溃时生成内存和 SQL 转储的默认位置  。 默认情况下，这些文件在 /var/opt/mssql/log 中生成。
 
@@ -304,7 +304,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo systemctl restart mssql-server
    ```
 
-## <a id="errorlogdir"></a> 更改默认的错误日志文件目录位置
+## <a name="change-the-default-error-log-file-directory-location"></a><a id="errorlogdir"></a> 更改默认的错误日志文件目录位置
 
 使用 filelocation.errorlogfile 设置可更改创建新错误日志、默认探查器跟踪、系统健康状况会话 XE 和 Hekaton 会话 XE 文件的位置  。 默认情况下，此位置为 /var/opt/mssql/log。 设置用于 SQL 错误日志文件的目录将成为其他日志的默认日志目录。
 
@@ -336,7 +336,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    ```
 
 
-## <a id="backupdir"></a> 更改默认备份目录位置
+## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> 更改默认备份目录位置
 
 使用 filelocation.defaultbackupdir 设置可更改生成备份文件的默认位置  。 默认情况下，这些文件在 /var/opt/mssql/data 中生成。
 
@@ -367,7 +367,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a> 指定核心转储设置
+## <a name="specify-core-dump-settings"></a><a id="coredump"></a> 指定核心转储设置
 
 如果某个 SQL Server 进程发生异常，SQL Server 会创建内存转储。
 
@@ -400,14 +400,14 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
     | **filtered** | Filtered 采用基于减法的设计，其中包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和主机环境，从转储中排除某些区域。
     | **full** | Full 是完整的过程转储，包括 /proc/$pid/maps 中的所有区域  。 这并非由 coredump.captureminiandfull 设置控制  。 |
 
-## <a id="dbmail"></a> 为 Linux 上的 SQL Server 设置默认数据库邮件配置文件
+## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> 为 Linux 上的 SQL Server 设置默认数据库邮件配置文件
 
 通过 sqlpagent.databasemailprofile 可为电子邮件警报设置默认的 DB 邮件配置文件  。
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a> 高可用性
+## <a name="high-availability"></a><a id="hadr"></a> 高可用性
 
 使用 hadr.hadrenabled 选项可在 SQL Server 实例上启用可用性组  。 下面的命令通过将 hadr.hadrenabled 设置为 1 来启用可用性组  。 必须重启 SQL Server，该设置才能生效。
 
@@ -422,7 +422,7 @@ sudo systemctl restart mssql-server
 - [为 Linux 上的 SQL Server 配置读取缩放可用性](sql-server-linux-availability-group-configure-rs.md)
 
 
-## <a id="localaudit"></a> 设置本地审核目录
+## <a name="set-local-audit-directory"></a><a id="localaudit"></a> 设置本地审核目录
 
 使用 telemetry.userrequestedlocalauditdirectory 设置可启用本地审核，并可设置创建本地审核日志的目录  。
 
@@ -453,7 +453,7 @@ sudo systemctl restart mssql-server
 
 有关详细信息，请参阅 [Linux 上的 SQL Server 客户反馈](sql-server-linux-customer-feedback.md)。
 
-## <a id="lcid"></a> 更改 SQL Server 区域设置
+## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> 更改 SQL Server 区域设置
 
 使用 language.lcid 设置可将 SQL Server 区域设置更改为任何支持的语言标识符 (LCID)  。 
 
@@ -469,7 +469,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a> 设置内存限制
+## <a name="set-the-memory-limit"></a><a id="memorylimit"></a> 设置内存限制
 
 使用 memory.memorylimitmb 设置可控制 SQL Server 可用的物理内存量（以 MB 为单位）  。 默认值为物理内存的 80%。
 
@@ -487,7 +487,7 @@ sudo systemctl restart mssql-server
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="msdtc"></a> 配置 MSDTC
+## <a name="configure-msdtc"></a><a id="msdtc"></a> 配置 MSDTC
 
 network.rpcport 和 distributedtransaction.servertcpport 设置用于配置 Microsoft 分布式事务处理协调器 (MSDTC)   。 要更改这些设置，请运行以下命令：
 
@@ -530,7 +530,7 @@ network.rpcport 和 distributedtransaction.servertcpport 设置用于配置 Micr
 ::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-eula"></a> 接受 MLServices EULA
+## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> 接受 MLServices EULA
 
 将[机器学习 R 或 Python 包](sql-server-linux-setup-machine-learning.md)添加到数据库引擎需要接受 R 和 Python 的开源分发许可条款。 下表枚举了与 mlservices EULA 相关的所有可用命令或选项。 对 R 和 Python 使用相同的 EULA 参数，具体取决于所安装的内容。
 
@@ -560,7 +560,7 @@ accepteulaml = Y
 :::moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-outbound-access"></a> 启用出站网络访问
+## <a name="enable-outbound-network-access"></a><a id="mlservices-outbound-access"></a> 启用出站网络访问
 
 默认情况下，[SQL Server 机器学习服务](sql-server-linux-setup-machine-learning.md)功能中的 R、Python 和 Java 扩展的出站网络访问处于禁用状态。 若要启用出站请求，请使用 mssql-conf 设置“outboundnetworkaccess”布尔属性。
 
@@ -587,7 +587,7 @@ outboundnetworkaccess = 1
 ```
 :::moniker-end
 
-## <a id="tcpport"></a> 更改 TCP 端口
+## <a name="change-the-tcp-port"></a><a id="tcpport"></a> 更改 TCP 端口
 
 使用 network.tcpport 设置可更改 SQL Server 侦听连接的 TCP 端口  。 默认情况下，此端口设置为 1433。 若要更改端口，请运行以下命令：
 
@@ -609,7 +609,7 @@ outboundnetworkaccess = 1
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a> 指定 TLS 设置
+## <a name="specify-tls-settings"></a><a id="tls"></a> 指定 TLS 设置
 
 以下选项为在 Linux 上运行的 SQL Server 实例配置 TLS。
 
@@ -624,7 +624,7 @@ outboundnetworkaccess = 1
 
 有关使用 TLS 设置的示例，请参阅[加密与 Linux 上的 SQL Server 的连接](sql-server-linux-encrypted-connections.md)。
 
-## <a id="traceflags"></a> 启用/禁用跟踪标志
+## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> 启用/禁用跟踪标志
 
 使用 traceflag 选项可启用或禁用 SQL Server 服务启动的跟踪标志  。 若要启用/禁用跟踪标志，请使用以下命令：
 
@@ -679,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 请注意，此文件中未显示的所有设置均使用其默认值。 下一部分提供示例 mssql.conf 文件  。
 
 
-## <a id="mssql-conf-format"></a> mssql.conf format
+## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> mssql.conf format
 
 以下 /var/opt/mssql/mssql.conf 文件提供了每个设置的示例  。 可以根据需要使用此格式手动更改 mssql.conf 文件  。 如果手动更改文件，则必须在应用更改之前重启 SQL Server。 要将 mssql.conf 文件与 Docker 配合使用，必须让 Docker [保留你的数据](sql-server-linux-configure-docker.md)  。 首先将完整的 mssql.conf 文件添加到主机目录，然后运行容器  。 [客户反馈](sql-server-linux-customer-feedback.md)中有一个示例。
 

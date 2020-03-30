@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014678"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
@@ -436,7 +436,7 @@ ms.locfileid: "68014678"
   
  可以查看作业历史记录，以检查评估结果。 评估失败情况还记录在事件为 ID 34052 的 Windows 应用程序日志中（事件查看器中）。 还可以配置 SQL Server 代理以发送有关策略失败的警报。 有关详细信息，请参阅[配置警报以通知策略管理员策略失败情况](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)。  
   
-##  <a name="BKMK_SCENARIOS"></a>性能故障排除方案  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a>性能故障排除方案  
  下表列出了常见的与性能相关的故障排除方案。  
   
 |场景|说明|  
@@ -445,7 +445,7 @@ ms.locfileid: "68014678"
 |[故障排除：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
 |[故障排除：主要副本的更改未反映在次要副本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。|  
   
-##  <a name="BKMK_XEVENTS"></a>有用的扩展事件  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a>有用的扩展事件  
  在对“正在同步”状态下的副本进行故障排除时，以下扩展事件很有用  。  
   
 |事件名称|类别|Channel|可用性副本|  

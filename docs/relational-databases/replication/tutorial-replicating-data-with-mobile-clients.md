@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321847"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教程：在服务器和移动客户端之间配置复制（合并）
@@ -36,7 +36,7 @@ ms.locfileid: "75321847"
 > * 为合并发布添加移动订阅服务器。
 > * 使订阅与合并发布同步。
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 本教程面向熟悉数据库基本数据库操作但复制经验不足的用户。 在开始本教程之前，必须完成[教程：准备 SQL Server 以用于复制](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
   
 若要完成本教程，需要 SQL Server、SQL Server Management Studio (SSMS) 以及 AdventureWorks 数据库： 

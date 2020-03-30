@@ -11,10 +11,10 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286511"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
@@ -116,7 +116,7 @@ ms.locfileid: "79286511"
   
 3. 按照下一节的代码示例所示设置日志记录功能。 在输出日志文件中搜索“服务器 XA DLL 版本:...”这一短语。  
 
-### <a name="BKMK_ServerSide"></a>为自动回滚尚未准备好的事务配置服务器端超时设置  
+### <a name="configuring-server-side-timeout-settings-for-automatic-rollback-of-unprepared-transactions"></a><a name="BKMK_ServerSide"></a>为自动回滚尚未准备好的事务配置服务器端超时设置  
 
 > [!WARNING]  
 > 此服务器端选项是适用于 SQL Server 的 Microsoft JDBC Driver 4.2（和更高版本）附带的新功能。 要获取更新后的行为，务必更新服务器上的 sqljdbc_xa.dll。 有关设置客户端超时的详细信息，请参阅 [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  

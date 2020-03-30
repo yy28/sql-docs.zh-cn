@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055926"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>使用 BCP 时指定兼容性数据格式 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74055926"
 >  如果不熟悉导入或导出数据的数据格式，请参阅 [用于批量导入或导出的数据格式 (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)。  
   
   
-##  <a name="bcpDataFormatAttr"></a> bcp 数据格式属性  
+##  <a name="bcp-data-format-attributes"></a><a name="bcpDataFormatAttr"></a> bcp 数据格式属性  
  **bcp** 命令允许你按照下列数据格式属性指定数据文件中每个字段的结构：  
   
 -   文件存储类型  
@@ -52,7 +52,7 @@ ms.locfileid: "74055926"
      对于字符数据字段，可以选择使用终止字符标记数据文件中每个字段的结尾（使用“字段终止符”  ）以及每行的结尾（使用“行终止符”  ）。 终止符是为读取数据文件的程序提供的一种方法，用于指出一个字段或行的结束位置和另一个字段或行的开始位置。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
   
-##  <a name="FieldSpecificPrompts"></a> 字段特定的提示概述  
+##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> 字段特定的提示概述  
  如果交互式 **bcp** 命令包含 **in** 或 **out** 选项，但既不包含格式化文件开关 ( **-f**)，也不包含数据格式开关（ **-n**、 **-c**、 **-w**或 **-N**），则该命令将针对源表或目标表中的每列依次提示输入上述每个属性。 在每个提示中， **bcp** 命令都根据表列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型提供一个默认值。 接受所有提示的默认值生成的结果与在命令行指定本机格式 ( **-n**) 生成的结果相同。 每个提示都会显示一个用方括号括起来的默认值：[*default*]。 按 Enter 即接受显示的默认值。 若要指定与默认值不同的值，请在提示符下输入新值。  
   
 ### <a name="example"></a>示例  
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  依次针对每个表列显示以上提示（根据需要）。  
   
   
-##  <a name="FieldByFieldNonXmlFF"></a> 将逐个字段数据存储在非 XML 格式化文件中  
+##  <a name="storing-field-by-field-data-in-a-non-xml-format-file"></a><a name="FieldByFieldNonXmlFF"></a> 将逐个字段数据存储在非 XML 格式化文件中  
  指定所有的表列后， **bcp** 命令将提示你选择生成非 XML 格式化文件，以存储刚刚提供的逐个字段信息（请参阅上述示例）。 如果选择生成格式化文件，则可以随时从表中导出数据，也可以将结构类似的数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  

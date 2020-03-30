@@ -16,10 +16,10 @@ ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 61e3395939b7faf059a5376674d4f85e3d5c6677
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251163"
 ---
 # <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>指定出错后继续或停止备份或还原
@@ -39,11 +39,11 @@ ms.locfileid: "75251163"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  备份  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75251163"
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-specify-whether-backup-continues-or-stops-after-an-error-is-encountered"></a>指定备份操作在遇到错误后是继续还是停止  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75251163"
   
 2.  在 **“选项”** 页的 **“可靠性”** 部分中，单击 **“写入介质前检查校验和”** 和 **“出错时继续”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-specify-whether-a-backup-operation-continues-or-stops-after-encountering-an-error"></a>指定备份操作在遇到错误后是继续还是停止  
   

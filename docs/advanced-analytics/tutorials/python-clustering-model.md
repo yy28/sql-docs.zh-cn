@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f5d1254c6b5c478c7bcad63da0902f21f4db70a9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306583"
 ---
 # <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>教程：配合使用 K-Means 群集和 SQL Server 机器学习服务对客户进行分类
@@ -42,7 +42,7 @@ K-Means 群集是一种无监督式学习算法，该算法根据相似性寻找
 
 在[第四部分](python-clustering-model-deploy.md)中，你将了解如何在 SQL 数据库中创建存储过程，以便基于新数据在 Python 中执行聚类分析。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 * 支持 Python 语言的 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15)中的安装说明进行操作。
 

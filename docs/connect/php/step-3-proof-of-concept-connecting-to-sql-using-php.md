@@ -11,10 +11,10 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014799"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步骤 3：使用 PHP 连接到 SQL 的概念证明
@@ -23,7 +23,7 @@ ms.locfileid: "68014799"
 ## <a name="step-1--connect"></a>步骤 1：连接  
   
   
-此 OpenConnection 函数在后跟的所有函数的顶部附近位置调用。  
+此 OpenConnection  函数在后跟的所有函数的顶部附近位置调用。  
   
   
 ```php 

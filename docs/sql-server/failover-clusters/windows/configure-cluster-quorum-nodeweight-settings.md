@@ -14,10 +14,10 @@ ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5b7fcc8a38ab33ebb3330826313db70458518d0e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822037"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>配置群集仲裁 NodeWeight 设置
@@ -30,9 +30,9 @@ ms.locfileid: "74822037"
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  仅在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 或更高版本中支持此功能。  
   
 > [!IMPORTANT]  
@@ -43,10 +43,10 @@ ms.locfileid: "74822037"
 > [!TIP]  
 >  如果未安装此修补程序，本主题中的示例将为 NodeWeight 返回空或 NULL 值。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 ##### <a name="to-configure-nodeweight-settings"></a>配置 NodeWeight 设置  
   
@@ -73,7 +73,7 @@ $nodes = Get-ClusterNode -Cluster $cluster
 $nodes | Format-Table -property NodeName, State, NodeWeight  
 ```  
   
-##  <a name="CommandPromptProcedure"></a> 使用 cluster.exe  
+##  <a name="using-clusterexe"></a><a name="CommandPromptProcedure"></a> 使用 cluster.exe  
   
 > [!NOTE]  
 >  在 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 版本中不推荐使用 cluster.exe 实用工具。  在将来的开发工作中，请将 PowerShell 与故障转移群集结合使用。  在 Windows Server 的下一版本中，将删除 cluster.exe 实用工具。 有关详细信息，请参阅 [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx)（为故障转移群集将 cluster.exe 命令映射到 Windows PowerShell Cmdlet）。  
@@ -91,7 +91,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
 ```  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [查看故障转移群集的事件和日志](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

@@ -16,23 +16,23 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284904"
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中配置发布和分发。
 
-##  <a name="BeforeYouBegin"></a> 开始之前 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前 
 
-###  <a name="Security"></a> Security 
+###  <a name="security"></a><a name="Security"></a> Security 
 有关详细信息，请参阅[查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。
 
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
-可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - \<分发服务器>”  对话框中的属性。 若要配置分发服务器以便 `db_owner` 固定数据库角色的成员可以创建发布，或者要配置不是发布服务器的远程分发服务器，请使用“配置分发向导”。
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
+可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - **分发服务器>”\<** 对话框中的属性。 若要配置分发服务器以便 `db_owner` 固定数据库角色的成员可以创建发布，或者要配置不是发布服务器的远程分发服务器，请使用“配置分发向导”。
 
 #### <a name="to-configure-distribution"></a>配置分发 
 
@@ -54,7 +54,7 @@ ms.locfileid: "76284904"
 
   - 还可以为配置设置编写脚本（可选）。 有关详细信息，请参阅 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)。
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 
 可以使用复制存储过程以编程方式配置复制发布和分发。
 ### <a name="to-configure-publishing-using-a-local-distributor"></a>使用本地分发服务器配置发布
 1. 执行 [sp_get_distributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md) 以确定服务器是否已配置为分发服务器。
@@ -67,7 +67,7 @@ ms.locfileid: "76284904"
 
    对于 SQL 数据库托管实例上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
 
-3. 在发布服务器上执行 [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 对 `@dbname` 指定要发布的数据库，对 `@optname` 指定复制类型，并对 `@value` 指定值 `true`。
+3. 在发布服务器上执行 [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 对 `@dbname` 指定要发布的数据库，对 `@optname` 指定复制类型，并对 `true` 指定值 `@value`。
 
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>使用远程分发服务器配置发布 
 
@@ -77,7 +77,7 @@ ms.locfileid: "76284904"
 
    - 如果结果集中 `distribution db installed` 的值为 `0`，请在分发服务器上对 master 数据库执行 [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)。 对 `@database` 指定分发数据库名称。 也可以对 `@max_distretention` 指定最长事务保持期，并对 `@history_retention` 指定历史记录保持期。 如果要创建一个新的数据库，请指定所需的数据库属性参数。
 
-2. 在分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，同时对 `@working_directory` 指定用作默认快照文件夹的 UNC 共享。 如果分发服务器在连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，还必须对 `@security_mode` 指定值 `0`，并对 `@login` 和 `@password` 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。
+2. 在分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，同时对 `@working_directory` 指定用作默认快照文件夹的 UNC 共享。 如果分发服务器在连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，还必须对 `0` 指定值 `@security_mode`，并对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定 `@login` `@password` 登录信息。
 
    对于 SQL 数据库托管实例上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
 
@@ -85,12 +85,12 @@ ms.locfileid: "76284904"
 
 4. 在发布服务器上执行 [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 对 `@dbname` 指定要发布的数据库，对 `@optname` 指定复制类型，并对 `@value` 指定值 true。
 
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL) 
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL) 
 下面的示例说明了如何以编程方式配置发布和分发。 在本示例中，使用脚本变量提供要配置为发布服务器和本地分发服务器的服务器的名称。 可以使用复制存储过程以编程方式配置复制发布和分发。
 
 [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/configure-publishing-and_1.sql)] 
 
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO) 
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO) 
 
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>在单个服务器上配置发布和分发 
 
@@ -159,7 +159,7 @@ ms.locfileid: "76284904"
 > [!IMPORTANT]
 > 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 Windows .NET Framework 提供的 [Cryptographic Services](https://go.microsoft.com/fwlink/?LinkId=34733) （加密服务）。
 
-###  <a name="PShellExample"></a> 示例 (RMO) 
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 示例 (RMO) 
 可以通过使用复制管理对象 (RMO) 以编程方式配置复制发布和分发。
 
 [!code-cs[HowTo#rmo_AddDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_adddistpub)] 

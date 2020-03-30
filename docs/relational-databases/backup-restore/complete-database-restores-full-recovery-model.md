@@ -18,10 +18,10 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908963"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整数据库还原（完整恢复模式）
@@ -41,7 +41,7 @@ ms.locfileid: "72908963"
 
 有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)中的“兼容性支持”部分。
   
-##  <a name="PointOfFailure"></a> 将数据库还原到故障点  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> 将数据库还原到故障点  
 
  通常，将数据库恢复到故障点分为下列基本步骤：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72908963"
 > [!NOTE]  
 >  计划将数据库备份还原到其它服务器实例时，请参阅 [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
-###  <a name="TsqlSyntax"></a> 基本 TRANSACT-SQL RESTORE 语法  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本 TRANSACT-SQL RESTORE 语法  
  上图中还原顺序的基本 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语法如下：  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
@@ -82,7 +82,7 @@ ms.locfileid: "72908963"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> 示例：恢复到故障点 (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> 示例：恢复到故障点 (Transact-SQL)  
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例显示了将数据库还原到故障点的还原顺序中的基本选项。 此示例将创建数据库的结尾日志备份。 接下来，此示例将还原完整数据库备份和日志备份，然后还原结尾日志备份。 此示例将在最后的单独步骤中恢复数据库。  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> 将数据库还原到日志备份中的某个时间点  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> 将数据库还原到日志备份中的某个时间点  
  在完整恢复模式下，完整的数据库还原通常可恢复到日志备份中的某个时间点、标记的事务或 LSN。 但是，在大容量日志恢复模式下，如果日志备份包含大容量更改，则不能进行时点恢复。  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>时点还原方案示例  
@@ -145,7 +145,7 @@ GO
 > [!NOTE]  
 >  有关时间点存储的示例，请参阅 [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)中的“兼容性支持”部分。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **还原完整数据库备份**  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  

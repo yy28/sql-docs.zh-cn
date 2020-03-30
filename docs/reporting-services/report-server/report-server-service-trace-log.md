@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68254867"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器跟踪日志是 ASCII 文本文件，其中包含有关报表服务器服务操作的详细信息。  文件中的信息包括由报表服务器 Web 服务、Web 门户和后台处理执行的操作。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息非常有用。 例如，排除订阅问题时。  
 
-## <a name="bkmk_view_log"></a> 报表服务器日志文件位于何处？
+## <a name="where-are-the-report-server-log-files"></a><a name="bkmk_view_log"></a> 报表服务器日志文件位于何处？
 
 跟踪日志文件为 `ReportServerService_<timestamp>.log` 和 `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log`，且位于以下文件夹中：
 
@@ -28,7 +28,7 @@ ms.locfileid: "68254867"
 
 跟踪日志每天进行创建，其中第一个条目发生在午夜（本地时间）之后，并且在每次重新启动该服务时都创建跟踪日志。 时间戳基于协调世界时 (UTC)。 该文件是 EN-US 格式。 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。  
 
-## <a name="bkmk_trace_configuration_settings"></a> 跟踪配置设置
+## <a name="trace-configuration-settings"></a><a name="bkmk_trace_configuration_settings"></a> 跟踪配置设置
 
 在配置文件 ReportingServicesService.exe.config 中管理跟踪日志行为  。可在以下文件夹路径中找到该配置文件：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68254867"
 |**组件类别**|按以下格式指定为其生成跟踪日志信息的组件以及跟踪级别：<br /><br /> \<component category>:\<tracelevel><br /><br /> 可以指定所有或部分组件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果您不想生成特定组件的信息，则可以禁用其跟踪（例如“SemanticModelGenerator:0”）。 请不要禁用 **all**的跟踪。<br /><br /> 如果要查看为每个语义查询生成的 Transact-SQL 语句，则可以设置“SemanticQueryEngine:4”。 Transact-SQL 语句记录到跟踪日志中。 下例说明将 Transact-SQL 语句添加到日志的配置设置：<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|组件类别可以设置为：<br /><br /> <br /><br /> **All** 用于跟踪未划分为特定类别的所有进程的常规报表服务器活动。<br /><br /> **RunningJobs** 用于跟踪正在进行中的报表或订阅操作。<br /><br /> **SemanticQueryEngine** 用于跟踪用户在基于模型的报表中执行即席数据浏览时处理的语义查询。<br /><br /> **SemanticModelGenerator** 用于跟踪模型生成。<br /><br /> **http** 用于启用报表服务器 HTTP 日志文件。 有关详细信息，请参阅 [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)。|  
 |组件类别的 trace level 值 |\<component category>:\<tracelevel><br /><br /> <br /><br /> 如果您不对组件追加跟踪级别，将使用为 **DefaultTraceSwitch** 指定的值。 例如，如果指定“all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator”，所有组件将使用默认跟踪级别。|有效的跟踪级别值包括：<br /><br /> <br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式<br /><br /> 报表服务器的默认级别为“all:3”。|  
   
-## <a name="bkmk_add_custom"></a> 添加自定义配置设置以指定转储文件位置  
+## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> 添加自定义配置设置以指定转储文件位置  
 可以添加自定义设置来设置 Dr. Watson for Windows 工具用于存储转储文件的位置。 自定义设置为 **Directory**。 下例提供了如何在 **RStrace** 部分中指定此配置设置的说明：  
 
 ```
@@ -77,7 +77,7 @@ ms.locfileid: "68254867"
   
 有关详细信息，请参阅 [网站上的](https://support.microsoft.com/?kbid=913046) 知识库文章 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
-##  <a name="bkmk_log_file_fields"></a> 日志文件字段
+##  <a name="log-file-fields"></a><a name="bkmk_log_file_fields"></a> 日志文件字段
 
 跟踪日志中包括以下字段：  
   

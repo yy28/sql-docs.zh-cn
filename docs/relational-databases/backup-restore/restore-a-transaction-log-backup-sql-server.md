@@ -20,10 +20,10 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111180"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>还原事务日志备份 (SQL Server)
@@ -47,9 +47,9 @@ ms.locfileid: "68111180"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   备份必须按照其创建顺序进行还原。 在还原特定的事务日志备份之前，必须先还原下列以前备份，而不回滚未提交的事务，即 WITH NORECOVERY：  
   
@@ -59,12 +59,12 @@ ms.locfileid: "68111180"
   
          有关事务日志备份的详细信息，请参阅[事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md) 和[应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!WARNING]  
 >  一般的还原过程需要在“还原数据库”  对话框中同时选择日志备份以及数据和差异备份。  
@@ -191,7 +191,7 @@ ms.locfileid: "68111180"
   
 11. 可选选项。如果选中此选项，请在 **“备用文件”** 文本框中指定备用文件的名称。 如果您使数据库处于只读模式，则必须选中此选项。 您可以浏览到该备用文件，也可以在文本框中键入其路径名。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 > [!IMPORTANT]  
 >  我们建议您在每个 RESTORE 语句中显式指定 WITH NORECOVERY 或 WITH RECOVERY 以消除混淆。 在编写脚本时，这样做尤其重要。  
@@ -236,7 +236,7 @@ ms.locfileid: "68111180"
     > [!IMPORTANT]  
     >  如果要创建镜像数据库，则省略恢复步骤。 镜像数据库必须仍处于 RESTORING 状态。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  默认情况下， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库使用简单恢复模式。 以下示例要求修改数据库以使用完整恢复模式，如下所示：  
   
 ```sql  
@@ -289,7 +289,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   

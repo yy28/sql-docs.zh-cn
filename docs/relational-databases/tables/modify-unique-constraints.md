@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68811335"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一约束
@@ -40,14 +40,14 @@ ms.locfileid: "68811335"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-unique-constraint"></a>修改唯一约束  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68811335"
   
 5.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
-##  <a name="TsqlProcedure"></a> **修改唯一约束**  
+##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **修改唯一约束**  
   
  若要使用 Transact-SQL 修改 UNIQUE 约束，必须首先删除现有的 UNIQUE 约束，然后用新定义重新创建。 有关详细信息，请参阅 [Delete Unique Constraints](../../relational-databases/tables/delete-unique-constraints.md) 和 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)。  
   

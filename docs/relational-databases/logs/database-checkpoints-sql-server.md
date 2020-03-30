@@ -28,17 +28,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288341"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   “检查点”会创建一个已知的正常点，在意外关闭或崩溃后进行恢复的过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以从该点开始应用日志中所包含的更改。
 
-##  <a name="Overview"></a> 概述   
+##  <a name="overview"></a><a name="Overview"></a> 概述   
 出于性能方面的考虑，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 对内存（缓冲区缓存）中的数据库页进行修改，但在每次更改后不将这些页写入磁盘。 相反， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 定期发出对每个数据库的检查点命令。 检查点将当前内存中已修改的页面（称为“脏页”）和事务日志信息从内存写入磁盘，并记录事务日志中的信息   。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支持几种类型的检查点：自动、间接、手动和内部。 下表总结了“检查点”  的类型：
@@ -58,7 +58,7 @@ ms.locfileid: "79288341"
 > [!IMPORTANT]
 > 长时间运行的未提交的事务会增加所有类型的检查点的恢复时间。   
   
-##  <a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME 和“recovery interval”选项的相互影响  
+##  <a name="interaction-of-the-target_recovery_time-and-recovery-interval-options"></a><a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME 和“recovery interval”选项的相互影响  
  下表总结了服务器端 sp_configure'recovery interval' 设置和数据库特定的 `ALTER DATABASE ... TARGET_RECOVERY_TIME` 设置   。  
   
 |target_recovery_time|'recovery interval'|使用的检查点类型|  
@@ -67,7 +67,7 @@ ms.locfileid: "79288341"
 |0|>0|自动检查点，其目标恢复间隔由 sp_configure 'recovery interval' 选项的用户定义的设置指定  。|  
 |>0|不适用。|间接检查点，其目标恢复时间由 TARGET_RECOVERY_TIME 设置确定，以秒为单位。|  
   
-##  <a name="AutomaticChkpt"></a> 自动检查点  
+##  <a name="automatic-checkpoints"></a><a name="AutomaticChkpt"></a> 自动检查点  
 每当日志记录数达到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 估计在“恢复间隔”  服务器配置选项中指定的时间内可以处理的数量时，便会生成一个自动检查点。 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。
  
 在没有用户定义的目标恢复时间的每个数据库中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成自动检查点。 频率取决于“恢复间隔”  高级服务器配置选项，该选项指定给定的服务器实例在系统重新启动期间应用于恢复数据库的最长时间。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库分发一个检查点。 
@@ -78,7 +78,7 @@ ms.locfileid: "79288341"
   
 在系统崩溃后恢复给定数据库所需的时间主要取决于重做崩溃时的脏页所需的随机 I/O 量。 这意味着 **recovery interval** 设置不可靠。 它不能确定准确的恢复持续时间。 此外，正在执行自动检查点操作时，数据的常规 I/O 活动显著增加并且无法预测。  
    
-###  <a name="PerformanceImpact"></a> 恢复间隔对恢复性能的影响  
+###  <a name="impact-of-recovery-interval-on-recovery-performance"></a><a name="PerformanceImpact"></a> 恢复间隔对恢复性能的影响  
 对于使用短事务的联机事务处理 (OLTP) 系统， **恢复间隔** 是确定恢复时间的主要因素。 但是， **恢复间隔** 选项不影响撤消长时间运行的事务所需的时间。 恢复具有长时间运行事务的数据库所需的时间可能会比“恢复间隔”设置指定的时间要长得多  。 
  
 例如，如果一个长时间运行的事务在服务器实例禁用前花费了两个小时来执行更新，则实际的恢复将必然花费比 **恢复间隔** 值更长的时间来恢复该长时间运行的事务。 有关长时间运行的事务对恢复时间的影响的详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。 有关恢复过程的详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
@@ -91,7 +91,7 @@ ms.locfileid: "79288341"
   
 如果您决定增大 **recovery interval** 设置，我们建议一点一点逐渐增大该值并评估每次增大对恢复性能的影响。 这种方法很重要，因为随着 **recovery interval** 设置的增大，数据库恢复需要更长的时间来完成。 例如，如果“恢复间隔”更改为 10 分钟，则恢复完成所耗的时间比“恢复间隔”设置为 1 分钟时多出 10 倍左右   。  
   
-##  <a name="IndirectChkpt"></a> 间接检查点
+##  <a name="indirect-checkpoints"></a><a name="IndirectChkpt"></a> 间接检查点
 间接检查点是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的，用于提供自动检查点的可配置数据库级替代方法。 可通过指定“目标恢复时间”数据库配置选项来配置此检查点  。 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。
 在系统崩溃时，间接检查点与自动检查点相比，恢复时间可能更短更可预测。 间接检查点具有以下优点：  
   
@@ -109,10 +109,10 @@ ms.locfileid: "79288341"
 > 间接检查点是在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中创建的新数据库的默认行为，包括模型和 TempDB 数据库。          
 > 就地升级或从以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原的数据库，除非显式更改为使用间接检查点，否则将使用以前的自动检查点行为。       
 
-### <a name="ctp23"></a> 改进了间接检查点可伸缩性
+### <a name="improved-indirect-checkpoint-scalability"></a><a name="ctp23"></a> 改进了间接检查点可伸缩性
 在低于 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 的版本中，如果存在生成大量脏页的数据库（例如 `tempdb`），你可能会遇到计划程序无法完成错误。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 为间接检查点引入了改进的可伸缩性，这应该有助于避免具有大量 `UPDATE`/`INSERT` 工作负载的数据库中出现这些错误。
   
-##  <a name="EventsCausingChkpt"></a> 内部检查点  
+##  <a name="internal-checkpoints"></a><a name="EventsCausingChkpt"></a> 内部检查点  
 内部检查点由各种服务器组件生成，以确保磁盘映像与日志的当前状态匹配。 生成内部检查点以响应下列事件：  
   
 -   已经使用 ALTER DATABASE 添加或删除了数据库文件。  
@@ -127,7 +127,7 @@ ms.locfileid: "79288341"
   
 -   使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 脱机。      
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **更改服务器实例的恢复间隔**  
   
 -   [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  

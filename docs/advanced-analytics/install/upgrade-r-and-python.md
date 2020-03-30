@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69634552"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习（R 和 Python）组件
@@ -106,7 +106,7 @@ Python 3.5 上的 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 
 就用户体验而言，技术及其使用方式是不变的。 唯一的区别在于存在较新版本的包，并且可能存在最初无法通过 SQL Server 提供的其他包。
 
-## <a name="bkmk_BindWizard"></a>使用安装程序绑定到 MLS
+## <a name="bind-to-mls-using-setup"></a><a name="bkmk_BindWizard"></a>使用安装程序绑定到 MLS
 
 Microsoft 机器学习安装程序检测现有功能和 SQL Server 版本，并调用名为 SqlBindR.exe 的实用工具来更改绑定。 在内部，SqlBindR 被链接到安装程序并间接使用。 稍后，可以直接从命令行调用 SqlBindR 来执行特定选项。
 
@@ -210,7 +210,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 1. 运行 ServerSetup.exe 并按照屏幕提示完成安装。
 
-## <a name="bkmk_BindCmd"></a>命令行操作
+## <a name="command-line-operations"></a><a name="bkmk_BindCmd"></a>命令行操作
 
 运行 Microsoft Machine Learning Server 后，名为 SqlBindR.exe 的命令行实用工具可用于进行进一步的绑定操作。 例如，如果决定反转绑定，可以重新运行安装程序或使用命令行实用工具。 此外，还可以使用此工具检查实例兼容性和可用性。
 
@@ -229,7 +229,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 4. 在升级完成后，重启与已修改的任何实例关联的启动板服务。
 
-## <a name="bkmk_Unbind"></a>还原或取消绑定实例
+## <a name="revert-or-unbind-an-instance"></a><a name="bkmk_Unbind"></a>还原或取消绑定实例
 
 可以将绑定实例还原为由 SQL Server 安装程序建立的 R 和 Python 组件的初始安装。 要还原到 SQL Server 服务，需执行三个步骤。
 
@@ -243,7 +243,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 回滚绑定有两个选项：再次重新运行安装程序或使用 SqlBindR 命令行实用工具。
 
-#### <a name="bkmk_wizunbind"></a> 使用安装程序取消绑定
+#### <a name="unbind-using-setup"></a><a name="bkmk_wizunbind"></a> 使用安装程序取消绑定
 
 1. 找到 Machine Learning Server 的安装程序。 如果已删除该安装程序，可能需要重新下载，或从另一台计算机复制。
 2. 请确保在包含要取消绑定的实例的计算机上运行安装程序。
@@ -252,7 +252,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 4. 接受许可协议。 即使在安装时也必须表明你已接受许可条款。
 5. 单击“完成”  。 此过程需要花费一点时间。
 
-#### <a name="bkmk_cmdunbind"></a> 使用命令行取消绑定
+#### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> 使用命令行取消绑定
 
 1. 如上节所述，打开命令提示符并导航到包含 **sqlbindr.exe** 的文件夹。
 
@@ -282,7 +282,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 `sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |名称|说明|
 |------|------|
