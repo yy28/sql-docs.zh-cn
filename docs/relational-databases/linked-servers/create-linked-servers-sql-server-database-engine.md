@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761888"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
@@ -29,24 +29,24 @@ ms.locfileid: "76761888"
 
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
   
-##  <a name="Background"></a> 背景  
+##  <a name="background"></a><a name="Background"></a> 背景  
  链接服务器让用户可以对 OLE DB 数据源进行分布式异类查询。 在创建某一链接服务器后，可对该服务器运行分布式查询，并且查询可以联接来自多个数据源的表。 如果链接服务器定义为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，则可执行远程存储过程。  
   
  链接服务器的功能和必需的参数可能会有很大差异。 本主题中的示例是典型示例，但并未描述所有选项。 有关详细信息，请参阅 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的数据。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
   
 ### <a name="permissions"></a>权限  
  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，需要具有 **ALTER ANY LINKED SERVER** 权限，或需要具有 **setupadmin** 固定服务器角色中的成员资格。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，要求具有 **CONTROL SERVER** 权限，或者具有 **sysadmin** 固定服务器角色的成员身份。  
   
-##  <a name="Procedures"></a> 如何创建链接服务器  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> 如何创建链接服务器  
  您可以使用以下任意一项：  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建与其他 SQL Server 实例的链接服务器  
   
@@ -197,7 +197,7 @@ ms.locfileid: "76761888"
      **支持 "Like" 运算符**  
      指示访问接口支持使用 LIKE 关键字的查询。  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建链接服务器，请使用 [sp_addlinkedserver (Transact SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN (Transact SQL)](../../t-sql/statements/create-login-transact-sql.md) 和 [sp_addlinkedsrvlogin (Transact SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) 语句。  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>使用 Transact-SQL 创建与其他 SQL Server 实例的链接服务器  
@@ -225,7 +225,7 @@ ms.locfileid: "76761888"
   
     ```  
   
-##  <a name="FollowUp"></a> 跟进：在创建链接服务器后采取的步骤  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> 跟进：在创建链接服务器后采取的步骤  
   
 #### <a name="to-test-the-linked-server"></a>测试链接服务器  
   

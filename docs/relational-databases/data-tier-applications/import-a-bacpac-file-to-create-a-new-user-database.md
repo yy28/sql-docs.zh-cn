@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094567"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
@@ -84,7 +84,7 @@ ms.locfileid: "74094567"
   
     -   [“结果”页](#Results)  
   
-###  <a name="Introduction"></a> “简介”页  
+###  <a name="introduction-page"></a><a name="Introduction"></a> “简介”页  
  此页介绍“数据层应用程序导入向导”的各个步骤。  
   
  **选项**  
@@ -95,7 +95,7 @@ ms.locfileid: "74094567"
   
 -   **取消** - 取消操作并关闭向导。  
   
-###  <a name="Import_settings"></a> “导入设置”页  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> “导入设置”页  
  使用此页可以指定要导入的 .bacpac 文件的位置。  
   
 -   **从本地磁盘导入** - 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径  。 路径名必须包含文件名和 .bacpac 扩展名。  
@@ -106,7 +106,7 @@ ms.locfileid: "74094567"
   
      若要继续，请指定要导入的 .bacpac 文件，然后单击 **“打开”** 。  
   
-###  <a name="Database_settings"></a> “数据库设置”页  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> “数据库设置”页  
  使用此页面可以指定将要创建的数据库的详细信息。  
   
  **对于 SQL Server 的本地实例：**  
@@ -129,15 +129,15 @@ ms.locfileid: "74094567"
   
  若要继续，请单击 **“下一步”** 。  
   
-###  <a name="Summary"></a> 摘要页  
+###  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导入操作，请单击 **“完成”** 。 若要取消导入操作并退出向导，请单击“取消”  。  
   
-###  <a name="Progress"></a> “进度”页  
+###  <a name="progress-page"></a><a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  
   
  若要继续，请单击 **“下一步”** 。  
   
-###  <a name="Results"></a> “结果”页  
+###  <a name="results-page"></a><a name="Results"></a> “结果”页  
  此页将报告导入和创建数据库操作是成功还是失败，并显示各个操作的成功或失败。 遇到了错误的任何操作都将在 **“结果”** 列中具有一个链接。 单击该链接可以查看针对该操作的错误报告。  
   
  单击“**关闭**”以关闭向导。  

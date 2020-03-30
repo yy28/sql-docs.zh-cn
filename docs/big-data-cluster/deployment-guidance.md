@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286061"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -35,14 +35,14 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 - Azure Data Studio
 - Azure Data Studio 的[数据虚拟化扩展](../azure-data-studio/data-virtualization-extension.md)
 
-## <a id="prereqs"></a> Kubernetes 必备条件
+## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Kubernetes 必备条件
 
 对于服务器和客户端 (kubectl)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 需要的最低 Kubernetes 版本至少为 v1.13。
 
 > [!NOTE]
 > 请注意，客户端和服务器 Kubernetes 版本应在 +1 或 -1 次要版本之内。 有关详细信息，请参阅 [Kubernetes 发行说明和版本偏差 SKU 策略](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
 
-### <a id="kubernetes"></a> Kubernetes 群集设置
+### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Kubernetes 群集设置
 
 如果已拥有满足上述必备条件的 Kubernetes 群集，则可以直接跳至[部署步骤](#deploy)。 本节假定你对 Kubernetes 概念有基本的了解。  有关 Kubernetes 的详细信息，请参阅 [Kubernetes 文档](https://kubernetes.io/docs/home)。
 
@@ -75,13 +75,13 @@ kubectl config view
 
 如果在 AKS 中进行部署，则无需进行任何存储设置。 AKS 通过动态预配提供内置的存储类。 可以在部署配置文件中自定义存储类（`default` 或 `managed-premium`）。 内置配置文件使用 `default` 存储类。 如果要在使用 `kubeadm` 部署的 Kubernetes 群集上进行部署，则需要确保有足够的存储来存储所需规模的群集，并对其进行配置以供使用。 如果想要自定义存储的使用方式，应该在继续操作之前执行此操作。 请参阅 [Kubernetes 上的 SQL Server 大数据群集的数据暂留](concept-data-persistence.md)。
 
-## <a id="deploy"></a> 部署概述
+## <a name="deployment-overview"></a><a id="deploy"></a> 部署概述
 
 大多数大数据群集设置都在 JSON 部署配置文件中定义。 在设置期间可以为使用 `kubeadm` 创建的 AKS 和 Kubernetes 群集使用默认部署配置文件，也可以自定义自己的部署配置文件。 出于安全原因，身份验证设置通过环境变量传递。
 
 以下部分详细介绍了如何配置大数据群集部署并提供了常见自定义示例。 此外，你始终可以使用 VS Code 等编辑器编辑自定义部署配置文件。
 
-## <a id="configfile"></a> 默认配置
+## <a name="default-configurations"></a><a id="configfile"></a> 默认配置
 
 JSON 配置文件中定义了大数据群集部署选项。 可以从 `azdata` 中提供的内置部署配置文件开始自定义群集部署。 
 
@@ -125,7 +125,7 @@ azdata bdc create --accept-eula=yes
 > [!IMPORTANT]
 > 大数据群集的默认名称为 `mssql-cluster`。 要运行任何使用 `-n` 参数指定 Kubernetes 命名空间的 `kubectl` 命令，必须了解这一点。
 
-## <a id="customconfig"></a> 自定义配置
+## <a name="custom-configurations"></a><a id="customconfig"></a> 自定义配置
 
 还可以自定义部署以适应计划运行的工作负载。 请注意，不能在部署后更改大数据群集服务的规模（副本数）或存储设置，因此，必须仔细规划部署配置以避免容量问题。 要自定义部署，请按以下步骤操作：
 
@@ -165,7 +165,7 @@ azdata bdc create --accept-eula=yes
 
 > 有关部署配置文件结构的详细信息，请参阅[部署配置文件参考](reference-deployment-config.md)。 有关更多配置示例，请参阅[配置大数据群集的部署设置](deployment-custom-configuration.md)。
 
-## <a id="env"></a> 环境变量
+## <a name="environment-variables"></a><a id="env"></a> 环境变量
 
 以下环境变量用于未存储在部署配置文件中的安全设置。 请注意，可以在配置文件中设置除凭据之外的 Docker 设置。
 
@@ -208,11 +208,11 @@ azdata bdc create --config-profile custom --accept-eula yes
 - 如果密码中含有任何特殊字符，请确保使用双引号将密码括起来。 可以将 `AZDATA_PASSWORD` 设置为自己喜欢的任意形式，但请确保密码足够复杂，且请勿使用 `!`、`&` 或 `'` 字符。 请注意，双引号分隔符仅适用于 bash 命令。
 - `AZDATA_USERNAME` 登录名是安装过程中在 SQL Server 主实例上创建的系统管理员。 创建 SQL Server 容器后，通过在容器中运行 `echo $AZDATA_PASSWORD`，可发现指定的 `AZDATA_PASSWORD` 环境变量。 出于安全目的，最好更改密码。
 
-## <a id="unattended"></a> 无人参与安装
+## <a name="unattended-install"></a><a id="unattended"></a> 无人参与安装
 
 对于无人参与的部署，必须设置所有所需的环境变量，使用配置文件，并使用 `--accept-eula yes` 参数调用 `azdata bdc create` 命令。 上述部分中的示例介绍了无人参与安装的语法。
 
-## <a id="monitor"></a> 监视部署
+## <a name="monitor-the-deployment"></a><a id="monitor"></a> 监视部署
 
 在群集启动过程中，客户端命令窗口返回部署状态。 在部署过程中，应该看到一系列消息正在等待控制器 Pod：
 
@@ -239,7 +239,7 @@ Cluster deployed successfully.
 > [!TIP]
 > 除非通过自定义配置进行修改，否则部署的大数据群集的默认名称为 `mssql-cluster`。
 
-## <a id="endpoints"></a> 检索终结点
+## <a name="retrieve-endpoints"></a><a id="endpoints"></a> 检索终结点
 
 部署脚本成功完成后，可以使用以下步骤获取大数据群集的外部终结点的地址。
 
@@ -293,7 +293,7 @@ Cluster deployed successfully.
 kubectl get svc -n <your-big-data-cluster-name>
 ```
 
-## <a id="status"></a> 验证群集状态
+## <a name="verify-the-cluster-status"></a><a id="status"></a> 验证群集状态
 
 部署完成后，可以通过 [azdata bdc status show](reference-azdata-bdc-status.md) 命令检查群集的状态。
 
@@ -423,7 +423,7 @@ Sql: ready                                                                      
 
 除了使用 `azdata` 之外，还可以使用 Azure Data Studio 查找终结点和状态信息。 有关通过 `azdata` 和 Azure Data Studio 查看群集状态的详细信息，请参阅[如何查看大数据群集的状态](view-cluster-status.md)。
 
-## <a id="connect"></a> 连接到群集
+## <a name="connect-to-the-cluster"></a><a id="connect"></a> 连接到群集
 
 有关如何连接到大数据群集的详细信息，请参阅[使用 Azure Data Studio 连接到 SQL Server 大数据群集](connect-to-big-data-cluster.md)。
 

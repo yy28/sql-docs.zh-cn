@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299008"
 ---
 # <a name="configure-dialog-box"></a>配置对话框
@@ -36,7 +36,7 @@ ms.locfileid: "71299008"
   
 -   [设置“引用”页上的选项](#references)  
   
-##  <a name="open_dialog"></a> 打开“配置”对话框  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> 打开“配置”对话框  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71299008"
   
 5.  右键单击该包或项目，然后单击“配置”。   
   
-##  <a name="parameter"></a> 设置“参数”页上的选项  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> 设置“参数”页上的选项  
  使用 **“参数”** 页查看参数名称和值，然后修改值。  
   
  在“范围”下拉列表中，选择“参数”和“连接管理器”选项卡中显示的参数的范围。     
@@ -80,7 +80,7 @@ ms.locfileid: "71299008"
  **值**  
  列出分配给连接管理器属性的值。 单击省略号按钮可更改 **“设置参数值”** 对话框中的值。 您可以输入一个文字值、映射包含您要使用的值的环境变量，或使用包中的默认值。  
   
-##  <a name="references"></a> 设置“引用”页上的选项  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> 设置“引用”页上的选项  
  使用 **“引用”** 页来添加和删除对环境的引用以及访问环境属性。  
   
  环境可为已部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的项目中包含的包指定运行时值。  

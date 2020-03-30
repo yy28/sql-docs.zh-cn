@@ -25,17 +25,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903882"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   创建和维护全文索引涉及使用称为“填充”  （也称为“爬网”  ）的过程填充索引。  
   
-##  <a name="types"></a> Types of population  
+##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 全文索引支持以下填充类型：
 -   **完全**填充
 -   基于**更改跟踪**的自动或手动填充
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  若要运行增量填充，请使用 `START INCREMENTAL POPULATION` 子句执行 `ALTER FULLTEXT INDEX` 语句。  
   
-###  <a name="create"></a>创建或更改增量填充计划   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a>创建或更改增量填充计划   
   
 1.  在 Management Studio 的对象资源管理器中展开服务器。  
   
@@ -208,7 +208,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-##  <a name="crawl"></a>排查全文填充（爬网）错误  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>排查全文填充（爬网）错误  
 如果在爬网期间发生了错误，全文搜索的爬网日志功能会创建并维护一个爬网日志，该日志是一个纯文本文件。 每个爬网日志都对应于某一个全文目录。 默认情况下，给定实例（在此示例中为默认实例）的爬网日志文件位于 `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` 文件夹中。
  
 爬网日志文件遵循以下命名方案：  
