@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077778"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>数据集字段集合（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "77077778"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Fields"></a> 数据集字段和查询  
+##  <a name="dataset-fields-and-queries"></a><a name="Fields"></a> 数据集字段和查询  
  数据集字段由数据集查询命令和您定义的所有计算字段指定。 在报表中所看到的字段集合取决于您所使用的数据集类型：  
   
 -   **共享数据集。** 在将共享数据集直接添加到报表后，或者当添加包含共享数据集的报表部件后，字段集合为用于共享数据集定义中的查询的字段列表。 当在报表服务器上更改共享数据集定义时，本地字段集合不会发生更改。 若要更新本地字段集合，必须刷新本地共享数据集的列表。  
@@ -59,7 +59,7 @@ ms.locfileid: "77077778"
 >  并非所有的 **Field** 属性均可用于所有数据源。 针对所有的数据源定义 **Value** 和 **IsMissing** 属性。 仅当数据源提供了其他预定义的属性（例如，多维数据源的 **Key**、 **UniqueName**和 **ParentUniqueName** ）时，才支持这些属性。 某些数据访问接口支持自定义属性。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。 例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
   
-##  <a name="Defaults"></a> 了解字段的默认表达式  
+##  <a name="understanding-default-expressions-for-fields"></a><a name="Defaults"></a> 了解字段的默认表达式  
  文本框可以是报表正文中的文本框报表项，也可以是 Tablix 数据区域的单元中的一个文本框。 将字段与文本框进行链接时，文本框的位置决定了字段引用的默认表达式。 在报表正文中，文本框值表达式必须指定聚合和数据集。 如果报表中只有一个数据集，系统将为您创建此默认表达式。 对于表示数值的字段，默认聚合函数为 SUM。 对于表示非数值的字段，默认聚合为 First。  
   
  在 Tablix 数据区域中，默认字段表达式取决于字段所添加到的文本框的行成员身份和组成员身份。 将“销售量”字段添加到表详细信息行的文本框中时，字段表达式为 `[Sales]`。 如果将同一字段添加到组头中的文本框，则默认表达式为 `(Sum[Sales])`，这是因为组头显示组的汇总值，而不是详细值。 报表运行时，报表处理器对每个表达式进行计算，然后替换报表中的结果。  
@@ -67,7 +67,7 @@ ms.locfileid: "77077778"
  有关表达式的详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
   
-##  <a name="DataTypes"></a> 字段数据类型  
+##  <a name="field-data-types"></a><a name="DataTypes"></a> 字段数据类型  
  创建数据集后，数据源中字段的数据类型可能不与报表中使用的数据类型完全相同。 数据类型可能经过一到两层映射。 数据处理扩展插件或数据访问接口可能将数据源中的数据类型映射到公共语言运行时 (CLR) 数据类型。 数据处理扩展插件返回的数据类型将映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中的公共语言运行时 (CLR) 数据类型的子集。  
   
  在数据源中，数据以该数据源所支持的数据类型存储。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据必须是受支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一，例如 **nvarchar** 或 **datetime**。 从数据源检索数据时，数据通过与数据源类型相关联的数据处理扩展插件或数据访问接口进行传递。 数据可能从数据源所使用的数据类型转换为数据处理扩展插件所支持的数据类型，具体情况取决于数据处理扩展插件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用随 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]一起安装的公共语言运行时 (CLR) 所支持的数据类型。 数据访问接口将结果集中的每一列从本机数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 数据类型。  
@@ -101,7 +101,7 @@ ms.locfileid: "77077778"
  有关在表达式中包括对数据集字段的引用的详细信息，请参阅[表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   
   
-##  <a name="MissingFields"></a> 检测运行时缺失的字段  
+##  <a name="detecting-missing-fields-at-run-time"></a><a name="MissingFields"></a> 检测运行时缺失的字段  
  处理报表时，数据集的结果集可能会由于数据源中不再存在指定的所有列而不包含这些列的值。 可以使用字段属性 IsMissing 检测在运行时是否返回了某个字段的值。 有关详细信息，请参阅[数据集字段集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。  
   
   

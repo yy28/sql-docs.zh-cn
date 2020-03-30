@@ -12,17 +12,17 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077658"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的元素路径语法 (SSRS)
   在报表设计器中，可以通过定义元素路径（区分大小写）来指定 XML 数据源中要用于报表的数据。 元素路径指示如何遍历 XML 数据源中的 XML 层次结构节点及其属性。 若要使用默认元素路径，请将数据集查询或 XML **ElementPath** 的 XML **Query** 保留为空。 从 XML 数据源检索数据时，具有文本值的元素节点和元素节点属性将成为结果集中的列。 运行查询时，节点值和属性将成为行数据。 该列在“报表数据”窗格中显示为数据集字段集合。 本主题介绍元素路径语法。  
   
 > [!NOTE]  
->  元素路径语法与命名空间无关。 若要在元素路径中使用命名空间，请使用包括[用于 XML 报表数据的 XML 查询语法 (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md) 中介绍的 XML **ElementPath** 元素的 XML 查询语法。  
+>  元素路径语法与命名空间无关。 若要在元素路径中使用命名空间，请使用包括**用于 XML 报表数据的 XML 查询语法 (SSRS)** 中介绍的 XML [ElementPath](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md) 元素的 XML 查询语法。  
   
  下表介绍用于定义元素路径的约定。  
   
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |**编码**|指示此元素的 **Value** 是编码的 XML，它需要解码并作为此元素的子元素。|  
 |**字段列表**|定义要用于检索数据的元素和属性集。<br /><br /> 如果未指定，则所有属性和子元素都将用作字段。 如果指定了空字段列表 ( **{}** )，则不使用来自该节点的任何字段。<br /><br /> **FieldList** 不可以同时包含 **Value** 以及 **Element** 或 **ElementNode**。|  
 |**字段**|指定作为数据集字段检索的数据。|  
-|**Attribute**|**ElementNode**中的“名称/值”对。 例如，在元素节点“\<Customer ID="1">”中，“ID”  是属性，并且“\@ID(Integer)  ”将返回“1”，表示对应数据字段“ID”  中的整数类型。|  
+|**Attribute**|**ElementNode**中的“名称/值”对。 例如，在元素节点“\<Customer ID="1">”中，“ID”  是属性，并且“**ID(Integer)\@** ”将返回“1”，表示对应数据字段“ID”  中的整数类型。|  
 |**值**|元素的值。 **Value** 只能在元素路径的最后一个 **ElementNode** 中使用。 例如，由于 \<Return> 是一个叶节点，因此如果将其包含于元素路径的结尾处，则 Return {@} 的值将为 Chair   。|  
 |**Element**|命名子元素的值。 例如，Customers {}/Customer {}/LastName 仅检索 LastName 元素的值。|  
 |类型 |用于从此元素创建的字段的可选数据类型。|  
@@ -90,7 +90,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  当元素路径为空时，查询将使用默认元素路径：指向叶节点集合的第一个路径。 在第一个示例中，将元素路径保留为空等效于指定元素路径 /Customers/Customer/Orders/Order。 将在结果集中返回沿该路径分布的所有节点值和属性，并且节点名和属性名将显示为数据集字段。  
   
- **示例 1**：空   
+ **示例 #1**： *空*  
   
 |订单|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  

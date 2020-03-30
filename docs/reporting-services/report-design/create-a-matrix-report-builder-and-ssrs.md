@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078685"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>创建矩阵（报表生成器和 SSRS）
@@ -20,12 +20,12 @@ ms.locfileid: "77078685"
   
  在最初设计之后，便可继续开发矩阵以改善用户的查看体验。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
- 若要快速开始使用矩阵，请参阅[教程：生成矩阵报表（报表生成器）](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)。  
+ 若要快速开始使用列表，请参阅[教程：创建矩阵报表（报表生成器）](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将列表作为报表部件与报表分开发布。 阅读有关 [报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
   
-##  <a name="AddingMatrix"></a> 向报表添加矩阵  
+##  <a name="adding-a-matrix-to-your-report"></a><a name="AddingMatrix"></a> 向报表添加矩阵  
  从功能区上的“插入”选项卡向设计图面添加一个矩阵。 您可以选择通过使用表或矩阵向导添加矩阵，包括创建数据源连接和数据集，以及基于矩阵模板配置矩阵或添加矩阵。  
   
 > [!NOTE]  
@@ -41,16 +41,16 @@ ms.locfileid: "77078685"
   
  通过将数据集字段拖动至“分组”面板的“行组”和“列组”区域来添加组。 您拖动至行组或列组窗格的第一个字段将替换最初的空默认组。 然后便可根据数据为每个单元应用格式设置。  
   
- ![“矩阵”、“类别”行和“地域”列组](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "“矩阵”、“类别”行和“地域”列组")  
+ ![矩阵、Category 行和 Geography 列组](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "矩阵、Category 行和 Geography 列组")  
   
  在“预览”中，矩阵将扩展以显示行组和列组值。 单元将显示汇总值，如下图所示。  
   
- ![呈现的矩阵（具有扩展组）预览](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "呈现的矩阵（具有扩展组）预览")  
+ ![呈现的矩阵（包含扩展组）预览](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "呈现的矩阵（包含扩展组）预览")  
   
  您开始使用的矩阵为基于 Tablix 数据区域的模板。 不过，您可以继续设计自己矩阵，例如，添加嵌套的或相邻的行组或列组，甚至可以添加详细信息组。 有关详细信息，请参阅[利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
   
-##  <a name="AddingParentGroupChild"></a> 向矩阵添加父组或子组  
+##  <a name="adding-a-parent-group-or-child-group-to-a-matrix"></a><a name="AddingParentGroupChild"></a> 向矩阵添加父组或子组  
  若要基于单个数据集字段添加组，请将该字段从“报表数据”窗格拖动至“分组”窗格的相应“行组”或“列组”区域。 将该字段放在组层次结构中可设置其与现有组的关系。 将其放在现有组的上方可创建父组，或者将其放在现有组的下方可创建子组。  
   
  将字段放在 **“分组”** 窗格中时，将发生以下几种情况：  
@@ -78,7 +78,7 @@ ms.locfileid: "77078685"
  有关详细信息，请参阅 [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
   
-##  <a name="AddingAdjacentGroup"></a> 向矩阵添加相邻组  
+##  <a name="adding-an-adjacent-group-to-a-matrix"></a><a name="AddingAdjacentGroup"></a> 向矩阵添加相邻组  
  若要添加基于单个数据集字段的相邻组，请在“分组”窗格中使用快捷菜单。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 下图显示了基于地域的组和基于年份的相邻组。  
   
  ![“地域”和“年份”相邻列组](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "“地域”和“年份”相邻列组")  

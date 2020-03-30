@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573880"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>排查 Reporting Services 报表问题
@@ -34,7 +34,7 @@ ms.locfileid: "65573880"
   
 若要查看调用堆栈，请用本地管理员凭据登录到报表服务器，右键单击“报表管理器”页，然后单击“查看源”  。 调用堆栈会提供有关错误消息的详细上下文。  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 验证查询和凭据  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 验证查询和凭据  
 在将复杂查询包含在报表中之前，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 进行验证。   
   
 有关详细信息，请参阅 [数据库引擎查询编辑器](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) 和 [通过使用对象资源管理器管理对象](~/ssms/object/manage-objects-by-using-object-explorer.md)。  

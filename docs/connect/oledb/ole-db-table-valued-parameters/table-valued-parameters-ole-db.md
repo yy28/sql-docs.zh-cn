@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 3f942130244aaf08d533ac4a1abdc1752971209d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015268"
 ---
 # <a name="table-valued-parameters-ole-db"></a>表值参数 (OLE DB)
@@ -28,9 +28,9 @@ ms.locfileid: "68015268"
   本节介绍 OLE DB Driver for SQL Server 中的表值参数支持。 有关其他概述信息，请参阅[表值参数 (OLE DB Driver for SQL Server)](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。 有关示例，请参阅[使用表值参数 (OLE DB)](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)。  
   
 ## <a name="remarks"></a>备注  
- 现在，可向服务器发送多行数据作为带参数集的过程的参数（如 ICommand::Execute 中的 DBPARAMS 参数）。 使用参数集时，该参数集中的每个元素都必须通过单独的远程过程调用 (RPC) 请求发送到服务器。 表值参数提供类似的功能，但可以与服务器更好地集成。 它减少了 RPC 请求数，并在服务器上启用基于集的操作。  
+ 现在，可向服务器发送多行数据作为带参数集的过程的参数（如 ICommand::Execute 中的 DBPARAMS 参数）  。 使用参数集时，该参数集中的每个元素都必须通过单独的远程过程调用 (RPC) 请求发送到服务器。 表值参数提供类似的功能，但可以与服务器更好地集成。 它减少了 RPC 请求数，并在服务器上启用基于集的操作。  
   
- OLE DB Driver for SQL Server 以 OLE DB Rowset 对象形式支持表值参数。 使用者（即使用适用于 SQL Server 的 OLE DB 驱动程序的客户端应用程序）可将任意 Rowset 对象提供用作表值参数的占位符。 表值参数的处理方式与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 参数类型相似。 OLE DB Driver for SQL Server 提供创建、发现、规范、绑定和架构接口。  
+ OLE DB Driver for SQL Server 以 OLE DB Rowset  对象形式支持表值参数。 使用者（即使用适用于 SQL Server 的 OLE DB 驱动程序的客户端应用程序）可将任意 Rowset 对象提供用作表值参数的占位符  。 表值参数的处理方式与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 参数类型相似。 OLE DB Driver for SQL Server 提供创建、发现、规范、绑定和架构接口。  
   
 ## <a name="in-this-section"></a>本节内容  
   

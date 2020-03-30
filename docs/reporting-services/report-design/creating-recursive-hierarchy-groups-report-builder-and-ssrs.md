@@ -9,10 +9,10 @@ ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1674673e3c009815d04e3c4428244dfc29d0343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078526"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>创建递归层次结构组（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "77078526"
  有关详细信息，请参阅[在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)和[创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)。  
   
 ### <a name="aggregate-functions-that-support-recursion"></a>支持递归的聚合函数  
- 可以使用接受 *Recursive* 参数的 Reporting Services 聚合函数来计算递归层次结构的汇总数据。 以下函数接受 Recursive  作为参数：[Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)、[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)、[CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)、[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)、[Max](../../reporting-services/report-design/report-builder-functions-max-function.md)、[Min](../../reporting-services/report-design/report-builder-functions-min-function.md)、[StDev](../../reporting-services/report-design/report-builder-functions-stdev-function.md)、[StDevP](../../reporting-services/report-design/report-builder-functions-stdevp-function.md)、[Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、[Var](../../reporting-services/report-design/report-builder-functions-var-function.md) 和 [VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 可以使用接受 *Recursive* 参数的 Reporting Services 聚合函数来计算递归层次结构的汇总数据。 下列函数接受 **Recursive** 参数： [Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、 [Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)、 [Count](../../reporting-services/report-design/report-builder-functions-count-function.md)、 [CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)、 [CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)、 [Max](../../reporting-services/report-design/report-builder-functions-max-function.md)、 [Min](../../reporting-services/report-design/report-builder-functions-min-function.md)、 [StDev](../../reporting-services/report-design/report-builder-functions-stdev-function.md)、 [StDevP](../../reporting-services/report-design/report-builder-functions-stdevp-function.md)、 [Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、 [Var](../../reporting-services/report-design/report-builder-functions-var-function.md)和 [VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

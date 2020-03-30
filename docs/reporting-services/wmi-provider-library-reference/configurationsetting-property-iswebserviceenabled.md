@@ -16,10 +16,10 @@ ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9859e89a35f7e2da6dbfe9f033984c7c7b514fbd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573597"
 ---
 # <a name="configurationsetting-property---iswebserviceenabled"></a>ConfigurationSetting 属性 - IsWebServiceEnabled
@@ -42,7 +42,7 @@ public boolean IsWebServiceEnabled;
  [MSReportServer_ConfigurationSetting 类](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

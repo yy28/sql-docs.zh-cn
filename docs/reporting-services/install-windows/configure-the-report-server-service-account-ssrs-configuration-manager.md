@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 12/04/2019
 ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866020"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
@@ -78,7 +78,7 @@ ms.locfileid: "74866020"
 |**Local Service**|**Local Service** 是一个与经过身份验证的本地 Windows 用户帐户类似的内置帐户。 以 **“Local Service”** 帐户运行的服务将以一个没有凭据的 Null 会话形式访问网络资源。 此帐户不适合于 Intranet 部署方案。因为在此部署方案下，报表服务器必须连接至远程报表服务器数据库或网络域控制器，以在打开报表或处理订阅之前对用户进行身份验证。|  
 |**Local System**|**Local System** 是一个高特权帐户，运行报表服务器时不需要此帐户。 请勿将此帐户用于报表服务器的安装。 此时应选择域帐户或 **Network Service** 。|  
   
-## <a name="localaccounts"></a> 使用本地帐户的注意事项
+## <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a> 使用本地帐户的注意事项
 
  使用本地帐户的主要注意事项是报表服务器是否需要访问远程数据库服务器、邮件服务器和域控制器。 如果将报表服务器配置为作为本地 Windows 用户帐户、Local Service 或 Local System 运行，则必须考虑如何设置其他配置设置以及订阅创建和传递方面的注意事项：  
   

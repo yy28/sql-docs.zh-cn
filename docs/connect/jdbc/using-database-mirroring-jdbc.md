@@ -11,10 +11,10 @@ ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026428"
 ---
 # <a name="using-database-mirroring-jdbc"></a>使用数据库镜像 (JDBC)
@@ -23,7 +23,7 @@ ms.locfileid: "69026428"
 
 数据库镜像主要是用来增加数据库可用性和数据冗余的软件解决方案。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 为数据库镜像提供了隐式支持，这样，在为数据库配置好该功能后，开发人员便无需编写任何代码或采取任何措施。
 
-数据库镜像是按数据库实现的，它在备用服务器上保留一份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品数据库的副本。 该服务器根据数据库镜像会话的配置和状态，充当热备用或温备用服务器。 热备份服务器支持不会丢失任何已提交事务的快速故障转移，暖备份服务器支持强制服务（可能会丢失数据）。
+数据库镜像是按数据库实现的，它在备用服务器上保留一份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品数据库的副本。 {1}该服务器根据数据库镜像会话的配置和状态，充当热备用或温备用服务器。{2} 热备份服务器支持不会丢失任何已提交事务的快速故障转移，暖备份服务器支持强制服务（可能会丢失数据）。
 
 产品数据库称为“主体”数据库，备份副本称为“镜像”数据库   。 主体数据库和镜像数据库必须位于不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（服务器实例）中，如果可能，它们应位于不同的计算机中。
 
@@ -31,11 +31,11 @@ ms.locfileid: "69026428"
 
 如果 Partner_A 服务器发生了无法恢复的损坏，则可将 Partner_C 服务器联机，充当 Partner_B（此时为主服务器）的镜像服务器。 然而，在这种情况下，客户端应用程序必须包含编程逻辑，以确保更新连接字符串属性，来反映数据库镜像配置中使用的新服务器名称。 否则，连接该服务器将失败。
 
-备用数据库镜像配置提供不同级别的性能和数据安全，并支持不同形式的故障转移。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“数据库镜像概述”。
+{1}备用数据库镜像配置提供不同级别的性能和数据安全，并支持不同形式的故障转移。{2} 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“数据库镜像概述”。
 
 ## <a name="programming-considerations"></a>编程注意事项
 
-当主体数据库服务器失败时，客户端应用程序则接收错误以响应 API 调用，这指示与数据库之间的连接已丢失。 出现这种情况时，所有未提交的数据库更改都将丢失，当前事务将回滚。 如果发生这种情况，应用程序应关闭连接（或释放数据源对象）并尝试重新将其打开。 进行连接时，新连接将以透明方式重新定向到镜像数据库（此时充当主服务器），而无需客户端修改连接字符串或数据源对象。
+{1}当主体数据库服务器失败时，客户端应用程序则接收错误以响应 API 调用，这指示与数据库之间的连接已丢失。{2} 出现这种情况时，所有未提交的数据库更改都将丢失，当前事务将回滚。 如果发生这种情况，应用程序应关闭连接（或释放数据源对象）并尝试重新将其打开。 进行连接时，新连接将以透明方式重新定向到镜像数据库（此时充当主服务器），而无需客户端修改连接字符串或数据源对象。
 
 连接刚刚建立时，主服务器将向出现故障转移时要使用的客户端发送其故障转移伙伴的标识。 当应用程序尝试与失败的主服务器建立初始连接时，客户端并不知道故障转移伙伴的标识。 为了使客户端能够应对这种情况，failoverPartner 连接字符串属性以及可选的 [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) 数据源方法都允许客户端在本机指定故障转移伙伴的标识。 该客户端属性仅可在此种情况下使用，如果主服务器可用，则不使用该属性。
 

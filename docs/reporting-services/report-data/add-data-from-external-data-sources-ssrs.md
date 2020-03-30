@@ -10,10 +10,10 @@ reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
 ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081843"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>从外部数据源中添加数据 (SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081843"
   
  有关数据源类型的详细信息，请参阅 [本节内容](#InThisSection)。  
   
-##  <a name="DataAccess"></a> 了解数据访问技术  
+##  <a name="understanding-data-access-technology"></a><a name="DataAccess"></a> 了解数据访问技术  
  检索报表数据集的数据需要数据访问软件的多个层。 下面的列表简单说明了如何将报表与数据访问技术一起使用：  
   
 -   **应用程序和用户界面** ：用于执行以下操作的报表生成器应用程序：创建数据源、添加对共享数据源的引用、添加共享数据集，或者添加包括数据源的报表部件和该应用程序所依赖的数据集。  
@@ -41,7 +41,7 @@ ms.locfileid: "77081843"
 > [!NOTE]  
 >  在您未连接到报表服务器时，您可以从随报表生成器一起安装的数据扩展插件中进行选择。 您作为单个用户使用您计算机上的凭据访问数据。 在您连接到报表服务器时，您可以从报表服务器上安装的数据扩展插件中进行选择。 您以运行报表的多个用户中的一个用户名义访问数据，并且您使用的是报表服务器上的凭据。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)  
   
-##  <a name="ReportData"></a> 了解报表数据  
+##  <a name="understanding-report-data"></a><a name="ReportData"></a> 了解报表数据  
  用最简单的形式来说，报表将来自报表数据集的数据显示在报表页上的数据区域中，即，显示在单个表、图表、矩阵或其他类型的报表数据区域中。 报表数据集中的数据来自于单个查询命令返回的第一个结果集，该查询命令是通过对外部数据源进行只读访问运行的。 可以根据需要扩展每个数据区域以显示数据集中的所有数据。  
   
  数据集中的数据实质上是表格。 列来自于数据集查询中的字段。 行来自于结果集中的行。 可以在报表中使用以下通用数据类型：  
@@ -59,11 +59,11 @@ ms.locfileid: "77081843"
 -   支持递归数据。 一个包含递归数据层次结构的结果集会包括有关矩形结果集中分层结构的所有信息。 例如，公司中的上下级结构可用一个包含“员工”和“经理”两列的表来表示。 每位经理同时也是另一位经理的员工。 总经理通常包含一个 null 或某个其他指示该员工没有经理的标识符。  
   
   
-##  <a name="DataTypes"></a> 使用数据类型  
+##  <a name="working-with-data-types"></a><a name="DataTypes"></a> 使用数据类型  
  创建数据集后，字段的数据类型将从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]映射到公共语言运行时 (CLR) 数据类型的子集。 无法清晰映射的数据类型以字符串的形式返回。 有关使用字段数据类型的详细信息，请参阅 [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。 创建参数后，数据类型必须是受支持的报表定义数据类型。 有关将数据类型从数据提供程序映射到报表参数的详细信息，请参阅[表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
   
  [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -73,7 +73,7 @@ ms.locfileid: "77081843"
  [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="InThisSection"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本节内容  
  下列主题提供有关每个内置数据扩展插件的信息。  
   
 |主题|数据源类型|  
@@ -90,7 +90,7 @@ ms.locfileid: "77081843"
 |[ODBC 连接类型 (SSRS)](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
   
-##  <a name="Related"></a> 相关章节
+##  <a name="related-sections"></a><a name="Related"></a> 相关章节
 
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   

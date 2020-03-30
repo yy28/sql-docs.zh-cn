@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68714964"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>为 SQLRUserGroup 创建登录名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-当脚本中的[环回连接](../../advanced-analytics/concepts/security.md#implied-authentication)指定了信任连接，且用于执行包含代码的对象的标识是 Windows 用户帐户时，在 [SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) 中为 [SQLRUserGroup](../concepts/security.md#sqlrusergroup) 创建登录名  。
+当脚本中的[环回连接](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)指定了信任连接，且用于执行包含代码的对象的标识是 Windows 用户帐户时，在 [SQL Server](../concepts/security.md#sqlrusergroup) 中为 [SQLRUserGroup](../../advanced-analytics/concepts/security.md#implied-authentication) 创建登录名  。
 
 信任连接是那些在连接字符串中具有 `Trusted_Connection=True` 的连接。 当 SQL Server 收到指定信任连接的请求时，它将检查当前 Windows 用户的标识是否具有登录名。 对于作为工作线程帐户执行的外部进程（例如 SQLRUserGroup 中的 MSSQLSERVER01），请求失败是因为默认情况下这些帐户没有登录名  。
 
@@ -50,7 +50,7 @@ ms.locfileid: "68714964"
 5. 滚动服务器上的组帐户列表，直到找到一个以 `SQLRUserGroup` 开头的组帐户。
     
     + 无论安装的是 R 还是 Python，或者两者都已安装，与默认实例的 Launchpad 服务相关联的组名称始终为 SQLRUserGroup   。 仅为默认实例选择此帐户。
-    + 如果使用的是命名实例，则实例名称将附加到默认工作组名称 `SQLRUserGroup` 的名称之后  。 例如，如果实例名称为“MLTEST”，则此实例的默认用户组名称将为 SQLRUserGroupMLTest  。
+    + 如果使用的是命名实例，则实例名称将附加到默认工作组名称  _的名称之后_`SQLRUserGroup`。 例如，如果实例名称为“MLTEST”，则此实例的默认用户组名称将为 SQLRUserGroupMLTest  。
  
     ![服务器上的组示例](media/implied-auth-login5.png "服务器上的组示例")
    

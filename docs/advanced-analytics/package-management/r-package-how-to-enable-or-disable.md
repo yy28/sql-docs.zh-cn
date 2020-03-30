@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485232"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>启用或禁用 SQL Server 的远程包管理
@@ -31,7 +31,7 @@ ms.locfileid: "74485232"
 
 [禁用](#bkmk_disable)包管理功能也需要多个步骤：删除数据库级的包和权限（每个数据库一次），然后从服务器删除角色（每个实例一次）。
 
-## <a name="bkmk_enable"></a> 启用包管理
+## <a name="enable-package-management"></a><a name="bkmk_enable"></a> 启用包管理
 
 1. 在 SQL Server 上，打开提升的命令提示符，并导航到包含 RegisterRExt.exe 的文件夹。 默认位置为 `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`。
 
@@ -76,7 +76,7 @@ ms.locfileid: "74485232"
 
 启用此功能后，可以使用 RevoScaleR 函数从远程 R 客户端安装或卸载包。
 
-## <a name="bkmk_disable"></a> 禁用包管理
+## <a name="disable-package-management"></a><a name="bkmk_disable"></a> 禁用包管理
 
 1. 在提升的命令提示符下，再次运行 RegisterRExt 实用程序，并禁用数据库级别的包管理：
 

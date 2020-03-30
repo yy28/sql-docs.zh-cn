@@ -12,10 +12,10 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993398"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序检索输出参数
@@ -32,7 +32,7 @@ ms.locfileid: "67993398"
 以下示例调用可返回某个指定员工的从年初至今的销售的存储过程。 PHP 变量 *$lastName* 是输入参数，而 *$salesYTD* 是输出参数。  
   
 > [!NOTE]  
-> 将 *$salesYTD* 初始化为 0.0 会将返回的 PHPTYPE 设置为 **浮点型**。 为确保数据类型完整性，应在调用存储过程之前初始化输出参数，或应指定所需的 PHPTYPE。 有关指定 PHPTYPE 的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
+> 将 *$salesYTD* 初始化为 0.0 会将返回的 PHPTYPE 设置为 **浮点型**。 为确保数据类型完整性，应在调用存储过程之前初始化输出参数，或应指定所需的 PHPTYPE。 有关指定 PHPTYPE 的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 由于存储过程仅返回一个结果，所以在执行存储过程后 *$salesYTD* 会立即包含输出参数的返回值。  
   

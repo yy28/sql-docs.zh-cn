@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578177"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>暂停和恢复共享计划
@@ -36,7 +36,7 @@ ms.locfileid: "65578177"
   
 -   [暂停和恢复共享计划（SharePoint 模式）](#bkmk_sharepoint)  
   
-##  <a name="bkmk_native"></a> 暂停和恢复共享计划（本机模式）  
+##  <a name="pause-and-resume-shared-schedules-native-mode"></a><a name="bkmk_native"></a> 暂停和恢复共享计划（本机模式）  
  要暂停和恢复共享计划，请使用报表管理器中的“计划”页。 不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]；它没有提供用于暂停和恢复计划的选项。 有关详细信息，请参阅 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>暂停或恢复共享计划  
@@ -47,7 +47,7 @@ ms.locfileid: "65578177"
   
 3.  选择计划，在功能区中单击 **“暂停”** 或 **“恢复”** 。 如果计划当前已暂停， **“状态”** 列将包含 **“已暂停”** 。  
   
-##  <a name="bkmk_sharepoint"></a> 暂停和恢复共享计划（SharePoint 模式）  
+##  <a name="pause-and-resume-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 暂停和恢复共享计划（SharePoint 模式）  
  要暂停和恢复共享计划，请使用“站点设置”页或 PowerShell。 针对每个 SharePoint 站点管理计划。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>暂停或恢复共享计划  

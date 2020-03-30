@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081619"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>向表或矩阵添加交互式排序（报表生成器和 SSRS）
@@ -28,7 +28,7 @@ ms.locfileid: "77081619"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="BackToTop"></a> 本文内容  
+##  <a name="in-this-article"></a><a name="BackToTop"></a> 本文内容  
  [对不具有组的表的详细信息行进行排序](#SortingDetailRows)  
   
  [对表或矩阵的顶级父行组进行排序](#SortingTopLevelParent)  
@@ -39,7 +39,7 @@ ms.locfileid: "77081619"
   
  [同步多个数据区域的排序顺序](#SynchronizingSortOrder)  
   
-##  <a name="SortingDetailRows"></a> 对不具有组的表的详细信息行进行排序  
+##  <a name="sorting-detail-rows-for-a-table-with-no-groups"></a><a name="SortingDetailRows"></a> 对不具有组的表的详细信息行进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并按该列中显示的值对表中的详细信息行进行排序。  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>将交互式排序按钮添加到列标题以按值对表进行排序  
@@ -62,7 +62,7 @@ ms.locfileid: "77081619"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
-##  <a name="SortingTopLevelParent"></a> 对表或矩阵的顶级父行组进行排序  
+##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> 对表或矩阵的顶级父行组进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并按该列中显示的值对表或矩阵中的父组行进行排序。 子组的顺序保持不变。  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>将交互式排序按钮添加到列标题以对组进行排序  
@@ -86,7 +86,7 @@ ms.locfileid: "77081619"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
-##  <a name="SortingChildGroups"></a> 对组的子组或详细信息行进行排序  
+##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> 对组的子组或详细信息行进行排序  
  将交互式排序按钮添加到组头行，可使用户能够对父组中的子组的值进行排序，或者对最内部的子组的详细信息行进行排序。  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>将交互式排序按钮添加到组行标题中的文本框以对子组或详细信息行进行排序  
@@ -109,7 +109,7 @@ ms.locfileid: "77081619"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
-##  <a name="SortingMultipleRowGroups"></a> 基于复杂组表达式对行进行排序  
+##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> 基于复杂组表达式对行进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并对组合的父组和子组进行排序。 若要获得此效果，必须将组表达式更改为两个组的组合。 例如，假定用一个矩阵显示某个商店中按颜色和大小分组的商品的库存总计。 若要基于颜色和大小的组合对行进行排序，而不是让颜色和大小各有单独的组，则可以基于颜色和大小的组合来定义组。 有关定义组表达式的详细信息，请参阅[组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
   
  在下面的过程中，术语指定 Tablix 数据区域。 有关详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
@@ -166,7 +166,7 @@ ms.locfileid: "77081619"
   
  ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
-##  <a name="SynchronizingSortOrder"></a> 同步多个数据区域的排序顺序  
+##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> 同步多个数据区域的排序顺序  
  添加交互式排序按钮，可使用户能够单击一个排序按钮并对多个数据区域进行排序。 创建交互式排序按钮时，可以指定是否基于相同报表数据集同步多个数据区域的排序。 例如，报表可能包括以图形方式显示数据的矩阵和图表。 用户更改矩阵中行的排序顺序时，图表将自动显示相同的排序顺序。  
   
  若要同步排序顺序，必须为要排序的数据区域或组使用相同的排序表达式，并将排序的作用预定义为两个数据区域的共同祖先。 共同祖先可以是两个数据区域都链接到的数据集，也可以是两个数据区域都显示在其中的包含数据区域。 例如，假定一个报表同时具有显示相同数据集的数据和包含在列表中的矩阵和图表。 若要同步排序操作，必须对该矩阵的列指定交互式排序，并将作用域设置为该列表。 用户对矩阵进行排序时，也将对图表进行排序。  

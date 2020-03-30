@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571489"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 用户的数据警报管理器
@@ -41,7 +41,7 @@ ms.locfileid: "65571489"
 > [!NOTE]  
 >  在您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 警报功能之前，管理员必须向您授予权限。 有关所需权限的信息，请参阅 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)。  
   
-##  <a name="ViewingAlerts"></a> 查看数据警报信息  
+##  <a name="view-data-alert-information"></a><a name="ViewingAlerts"></a> 查看数据警报信息  
  您可以查看在数据警报设计器中创建的数据警报列表。 若要打开数据警报管理器，请右键单击发布到 SharePoint 库的报表。 下图显示了报表右键单击菜单中的“管理数据警报”选项。   
   
  ![从报表上下文菜单打开警报管理器](../reporting-services/media/rs-openalertmanager.gif "从报表上下文菜单打开警报管理器")  
@@ -57,24 +57,24 @@ ms.locfileid: "65571489"
 |TopPromotion|PromotionTracking|Lauren Johnson|0||5/23/2011|创建了警报。|  
   
   
-##  <a name="DeleteAlerts"></a> 删除数据警报  
+##  <a name="delete-data-alerts"></a><a name="DeleteAlerts"></a> 删除数据警报  
  您从数据警报管理器中删除警报定义。 作为信息工作者，您可以删除您创建的警报定义。 您无法删除其他人创建的警报定义。 有关详细信息，请参阅 [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
  当您删除警报定义时，将永久删除该警报定义。 如果您仅希望暂停警报消息，应更改重复执行模式或更改警报定义的开始或停止日期。 有关详细信息，请参阅 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
-##  <a name="EditAlerts"></a> 编辑数据警报  
+##  <a name="edit-data-alerts"></a><a name="EditAlerts"></a> 编辑数据警报  
  作为信息工作者，从数据警报管理器中打开您的警报定义以便编辑。 您可以编辑您创建的警报定义，但无法编辑其他人创建的警报定义。 右键单击警报定义并单击“编辑”时，“数据警报设计器”随即打开，其中将显示警报定义  。 有关详细信息，请参阅 [数据警报设计器](../reporting-services/data-alert-designer.md) 和 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
-##  <a name="RunAlerts"></a> 运行数据警报  
+##  <a name="run-data-alerts"></a><a name="RunAlerts"></a> 运行数据警报  
  数据警报管理器包括有关上次警报服务处理数据警报定义的时间和已发送数据警报消息的次数的信息。 您可能要立即运行并发送警报消息，而非等待计划指定的时间。 当您从数据警报管理器运行警报时，会覆盖警报计划，并根据运行报表所需的时间和您选择运行警报的报表服务器的繁忙程度，在一至五分钟之内启动对警报定义的处理。 但是，如果您指定仅当结果更改时才发送消息，则结果没有更改时，将不创建或发送消息。 有关详细信息，请参阅 [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
 > [!NOTE]  
 >  单击 **“运行”**  选项后，需要几秒钟更新 **“状态”** 列的值以指示正在处理警报。 如果您多次单击 **“运行”**  选项，则将会多次处理警报。 这将不必要地占用报表服务器上的资源，并且还可能会影响报表服务器的性能。 若要查看有关警报的更新信息，请单击 Web 浏览器按钮以检查状态更新及有关警报的其他信息。  
   
   
-##  <a name="HowTo"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 相关任务  
  本节列出了向您展示如何管理警报和编辑警报定义的过程。  
   
 -   [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  

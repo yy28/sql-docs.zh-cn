@@ -12,10 +12,10 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580840"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
@@ -81,7 +81,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  如果报表包含的某个报表参数具有默认值，并且 **Prompt** 属性的值为 **false** （即，在报表管理器中未选择 Prompt User 属性），则无法在 URL 中为该报表参数传递值。 这向管理员提供了一个选项，以防止最终用户添加或修改某些报表参数的值。  
   
-##  <a name="bkmk_examples"></a> 其他示例  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> 其他示例  
  以下 URL 示例包含空格和多个参数  
   
 -   文件夹名称“SQL Server User Education Team”包含空格，因此“+”将替换每个空格。  

@@ -9,10 +9,10 @@ ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080488"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
@@ -60,7 +60,7 @@ ms.locfileid: "77080488"
   
 1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”  。  
   
-     “为以下项设置表达式: Value”  文本框包含表达式 =Globals!PageNumber。  
+     “为以下项设置表达式: 值”文本框包含表达式 =Globals!PageNumber  。  
   
 2.  将光标放在 = 号后，然后键入 "Page " &  。  
   

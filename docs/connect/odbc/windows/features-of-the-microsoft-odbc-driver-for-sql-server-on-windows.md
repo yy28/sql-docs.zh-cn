@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: 6e3f7929c17b161d3534474d3d9ad99e559714d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69653809"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver for SQL Server 的功能
@@ -45,7 +45,7 @@ ODBC Driver 13.1 for SQL Server 不仅包含以前版本 (11) 的所有功能，
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft ODBC Driver 11 for SQL Server（Windows 平台）  
 
-适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 ODBC 驱动程序包含 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中随附的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的所有功能。 有关详细信息，请参阅 [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序基于 Windows 操作系统中随附的 ODBC 驱动程序。 有关详细信息，请参阅 [Windows 数据访问组件 SDK](https://msdn.microsoft.com/library/aa968814(VS.85).aspx)。  
+适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 ODBC 驱动程序包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中随附的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驱动程序的所有功能。 有关详细信息，请参阅 [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序基于 Windows 操作系统中随附的 ODBC 驱动程序。 有关详细信息，请参阅 [Windows 数据访问组件 SDK](https://msdn.microsoft.com/library/aa968814(VS.85).aspx)。  
   
 该版本适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 ODBC 驱动程序包含以下新功能：  
   
@@ -64,7 +64,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支
   
 ## <a name="behavior-changes"></a>行为更改
 
-在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中，如果显示宽度为 0，`sqlcmd.exe` 的 `-y0` 选项将导致输出在 1 MB 处被截断。
+在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中，如果显示宽度为 0，`-y0` 的 `sqlcmd.exe` 选项将导致输出在 1 MB 处被截断。
   
 从 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 开始，当指定 `-y0` 时，对单列中可以检索的数据量没有任何限制。 `sqlcmd.exe` 现最多可流式传输 2GB（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型最大值）列。  
   

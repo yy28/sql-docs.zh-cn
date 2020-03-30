@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078936"
 ---
 # <a name="url-access-ssrs"></a>URL 访问 (SSRS)
@@ -102,7 +102,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  与要使用的参数值相对应的 URL 文本。  
   
- **注意：** 有关可用 URL 访问参数的列表，请参阅 [URL 访问参数参考](../reporting-services/url-access-parameter-reference.md)。 有关在 URL 中传递报表参数的示例，请参阅 [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)。  
+ **注意：** 有关可用 URL 访问参数的列表，请参阅 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)。 有关在 URL 中传递报表参数的示例，请参阅 [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

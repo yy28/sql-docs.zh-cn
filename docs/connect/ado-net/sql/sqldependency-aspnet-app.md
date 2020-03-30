@@ -13,23 +13,23 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 8e159a6db1820169cd81caa05e70765ac32f0d56
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896230"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 应用程序中的 SqlDependency
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-本节中的示例演示了如何通过利用 ASP.NET <xref:System.Web.Caching.SqlCacheDependency> 对象间接使用 <xref:Microsoft.Data.SqlClient.SqlDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 对象使用 <xref:Microsoft.Data.SqlClient.SqlDependency> 侦听通知并正确更新缓存。  
+本节中的示例演示了如何通过利用 ASP.NET <xref:Microsoft.Data.SqlClient.SqlDependency> 对象间接使用 <xref:System.Web.Caching.SqlCacheDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 对象使用 <xref:Microsoft.Data.SqlClient.SqlDependency> 侦听通知并正确更新缓存。  
   
 > [!NOTE]
 >  该示例代码假定你已通过执行[启用查询通知](enable-query-notifications.md)中的脚本启用了查询通知。  
   
 ## <a name="about-the-sample-application"></a>关于示例应用程序  
-示例应用程序使用单个 ASP.NET 网页在 <xref:System.Web.UI.WebControls.GridView> 控件中显示 AdventureWorks SQL Server 数据库中的产品信息  。 页面加载完成后，代码会将当前时间写入 <xref:System.Web.UI.WebControls.Label> 控件。 然后，它定义一个 <xref:System.Web.Caching.SqlCacheDependency> 对象并设置 <xref:System.Web.Caching.Cache> 对象的属性，以存储最多三分钟的缓存数据。 然后代码将连接到数据库并检索数据。 当页面加载完成且应用程序运行时，ASP.NET 将从缓存中检索数据，如注意到页面上的时间未更改，则可以确认此情况。 如果受到监视的数据发生更改，ASP.NET 将使缓存失效，并在 `GridView` 控件中重新填充新数据，同时更新 `Label` 控件中显示的时间。  
+示例应用程序使用单个 ASP.NET 网页在  **控件中显示 AdventureWorks SQL Server 数据库中的产品信息**<xref:System.Web.UI.WebControls.GridView>。 页面加载完成后，代码会将当前时间写入 <xref:System.Web.UI.WebControls.Label> 控件。 然后，它定义一个 <xref:System.Web.Caching.SqlCacheDependency> 对象并设置 <xref:System.Web.Caching.Cache> 对象的属性，以存储最多三分钟的缓存数据。 然后代码将连接到数据库并检索数据。 当页面加载完成且应用程序运行时，ASP.NET 将从缓存中检索数据，如注意到页面上的时间未更改，则可以确认此情况。 如果受到监视的数据发生更改，ASP.NET 将使缓存失效，并在 `GridView` 控件中重新填充新数据，同时更新 `Label` 控件中显示的时间。  
   
 ## <a name="creating-the-sample-application"></a>创建示例应用程序  
 执行以下步骤以创建和运行示例应用程序：  

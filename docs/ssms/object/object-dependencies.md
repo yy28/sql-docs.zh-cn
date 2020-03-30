@@ -13,10 +13,10 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257162"
 ---
 # <a name="object-dependencies"></a>对象依赖关系
@@ -28,14 +28,14 @@ ms.locfileid: "75257162"
 使用此对话框可在更改或删除所选对象之前了解其依赖关系。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
-依赖于 \<所选对象> 的对象    
+依赖于 **所选对象> 的对象** _\<_  
 单击此按钮将列出依赖于所选对象的对象，以及依赖关系跟踪所涉及的对象。  
   
-\<所选对象> 依赖的对象     
+**所选对象> 依赖的对象** _\<_   
 单击此按钮将列出所选对象所依赖的并且依赖关系跟踪涉及的对象。  
   
 **依赖项**  
-如果单击了“依赖 <selected object> 的对象”   ，则选择此选项将显示依赖于所选对象的对象的层次结构视图。 如果单击了“<selected object> 依赖的对象”    ，则选择此选项将显示所选对象所依赖的对象的层次结构视图。  
+如果单击了“依赖  **的对象”** *<selected object>* ，则选择此选项将显示依赖于所选对象的对象的层次结构视图。 如果单击了“ **依赖的对象”** *<selected object>*  ，则选择此选项将显示所选对象所依赖的对象的层次结构视图。  
   
 **名称**  
 显示上面“依赖关系”  树视图中所选对象的名称。  

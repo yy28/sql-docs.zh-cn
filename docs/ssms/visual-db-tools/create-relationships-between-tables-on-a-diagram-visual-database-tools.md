@@ -14,10 +14,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: eb0d82c1693c452462b8bef2e55cd4e41b13689b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198380"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在关系图中创建表间的关系（可视化数据库工具）
@@ -30,9 +30,9 @@ ms.locfileid: "79198380"
   
 2.  将所选列拖动到相关的表中。  
   
-3.  出现两个对话框：“外键关系”对话框和“表和列”对话框，并且后者显示在前   。  
+3.  显示两个对话框：“外键关系”  对话框和前景中显示的“表和列”  对话框。  
   
-4.  “关系名”使用系统提供的名称，其格式为 FK_localtable_\_foreigntabl    。 您可以更改此值。  
+4.  “关系名”使用系统提供的名称，其格式为 FK_localtable_**foreigntabl**  \_  。 您可以更改此值。  
   
 5.  验证“主键表”  是否指定了正确的表。  
   

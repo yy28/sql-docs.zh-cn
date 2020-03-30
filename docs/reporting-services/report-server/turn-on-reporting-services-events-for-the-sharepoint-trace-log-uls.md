@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893243"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
@@ -35,7 +35,7 @@ ms.locfileid: "68893243"
   
 -   [跟踪日志位置](#bkmk_trace)  
   
-##  <a name="bkmk_general"></a> 一般 ULS 日志建议  
+##  <a name="general-uls-log-recommendations"></a><a name="bkmk_general"></a> 一般 ULS 日志建议  
  下表列出了监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 环境的推荐事件类别和级别。 记录事件时，每一项都包括记录事件的时间、进程名和线程 ID。  
   
 |类别|级别|说明|  
@@ -46,7 +46,7 @@ ms.locfileid: "68893243"
 |拓扑|“详细”|记录当前用户信息。|  
 |Web 部件|“详细”|记录涉及访问报表查看器 Web 部件的事件。|  
   
-##  <a name="bkmk_turnon"></a> 在 Reporting Services 类别中打开和关闭 Reporting Services 事件  
+##  <a name="to-turn-on-and-off-reporting-services-events-in-the-reporting-services-category"></a><a name="bkmk_turnon"></a> 在 Reporting Services 类别中打开和关闭 Reporting Services 事件  
   
 1.  从 SharePoint 管理中心  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68893243"
 > [!NOTE]  
 >  **不支持选项** “要报告给事件日志的严重程度最低的事件” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 已忽略该选项。  
   
-##  <a name="bkmk_recommended"></a> 建议配置  
+##  <a name="recommended-configuration"></a><a name="bkmk_recommended"></a> 建议配置  
  以下日志记录选项建议用作标准配置：  
   
 -   **HTTP 重定向程序**  
@@ -80,7 +80,7 @@ ms.locfileid: "68893243"
 Get-SPDiagnosticConfig  
 ```  
   
-##  <a name="bkmk_readentries"></a> 读取日志条目  
+##  <a name="reading-the-logs-entries"></a><a name="bkmk_readentries"></a> 读取日志条目  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志中的条目采用以下方式进行格式化。  
   
 1.  **产品：SQL Server Reporting Services**  
@@ -89,7 +89,7 @@ Get-SPDiagnosticConfig
   
 3.  **类别：** 与 Web 前端组件相关或从中进行通信的事件不包含“Report Server”。 例如“服务应用程序代理”、“报表服务器警报运行时”。 WFE 条目包含 CorrelationID，而服务器条目不包含。  
   
-##  <a name="bkmk_list"></a> SQL Server Reporting Services 事件列表  
+##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> SQL Server Reporting Services 事件列表  
  下表是 SQL Server Reporting Services 类别中事件的列表：  
   
 |区域名称|说明或示例条目|  
@@ -124,7 +124,7 @@ Get-SPDiagnosticConfig
 |报表服务器提供程序||  
 |报表服务器呈现||  
 |报表服务器报表预览||  
-|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services starting SKU:计算<br /><br /> MediumEvaluation copy:180 days left|  
+|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services starting SKU: Evaluation<br /><br /> MediumEvaluation copy: 180 days left|  
 |报表服务器运行作业||  
 |报表服务器运行请求||  
 |报表服务器计划||  
@@ -137,7 +137,7 @@ Get-SPDiagnosticConfig
 |服务应用程序代理||  
 |共享服务|示例条目：<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
-##  <a name="bkmk_powershell"></a> 使用 PowerShell 查看日志文件  
+##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> 使用 PowerShell 查看日志文件  
  ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")可以使用 PowerShell 从 ULS 日志文件中返回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关事件列表。 从 SharePoint 2010 Management Shell 运行以下命令以便从该文件（ULS 日志文件 UESQL11SPOINT-20110606-1530.log）中返回包含“sql server reporting services”的行的筛选后列表  ：  
   
 ```  
@@ -148,7 +148,7 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  有关如何使用 PowerShell 查看日志数据的详细信息，请参阅 [查看诊断日志 (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)  
   
-##  <a name="bkmk_trace"></a> 跟踪日志位置  
+##  <a name="trace-log-location"></a><a name="bkmk_trace"></a> 跟踪日志位置  
  跟踪日志文件通常位于文件夹 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** 中，但您可以从 SharePoint 管理中心的 **“诊断日志记录”** 页中验证或更改此路径。  
   
  有关在 SharePoint 2010 管理中心配置 SharePoint 服务器上的诊断日志记录的详细信息和步骤，请参阅 [配置诊断日志记录设置 (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423)。  

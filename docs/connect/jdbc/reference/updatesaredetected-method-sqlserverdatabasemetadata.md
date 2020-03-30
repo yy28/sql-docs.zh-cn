@@ -16,16 +16,16 @@ ms.assetid: cb541175-d3a5-4bca-b327-64e2270c0df1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93b9fa705f7d3ed00431db9ca5ff507beffc890d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998336"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>updatesAreDetected 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 方法检测到可见行更新。  
+  检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 类的 [rowUpdated](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法检测到可见行更新。  
   
 ## <a name="syntax"></a>语法  
   

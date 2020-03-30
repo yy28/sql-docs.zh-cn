@@ -11,10 +11,10 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
 ms.openlocfilehash: 441adf8e3623f06bfa98718ebc6c01c314c94828
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004706"
 ---
 # <a name="using-always-encrypted-with-the-secure-enclaves"></a>使用具有安全 Enclave 的 Always Encrypted
@@ -40,7 +40,7 @@ ms.locfileid: "77004706"
 
 **enclaveAttestationProtocol：** 证明服务的协议。 目前唯一支持的值是 HGS（主机保护者服务）  。
 
-用户必须启用 columnEncryptionSetting 并正确设置上述两个连接字符串属性，才能从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 中启用具有安全 Enclave 的 Always Encrypted   。
+用户必须启用 columnEncryptionSetting 并正确设置上述两个连接字符串属性，才能从  **中启用具有安全 Enclave 的 Always Encrypted**  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。
 
 ## <a name="working-with-secure-enclaves"></a>使用安全 Enclave
 如果正确设置了 Enclave 连接属性，此功能将以透明方式工作。 驱动程序将确定查询是否需要自动使用安全 Enclave。 下面是触发 Enclave 计算的查询示例。 可以在 [Always Encrypted Enclave 入门](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)中找到数据库和表的设置。

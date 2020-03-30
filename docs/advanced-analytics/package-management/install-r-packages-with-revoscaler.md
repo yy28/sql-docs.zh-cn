@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 1d5d832d41f6bd087c6e9b334ebeac03728f97b1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485282"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 安装 R 包
@@ -111,7 +111,7 @@ connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Fi
 
 ### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>获取远程 SQL Server 计算上下文中的包路径
 
-此示例获取计算上下文 `sqlcc` 上，RevoScaleR  包的路径。
+此示例获取计算上下文  **上，RevoScaleR**`sqlcc` 包的路径。
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -127,7 +127,7 @@ print(sqlPackagePaths)
 
 ### <a name="get-locations-for-multiple-packages"></a>获取多个包的位置
 
-以下示例获取计算上下文 `sqlcc` 上，RevoScaleR  和 lattice  包的路径。 获取有关多个包的信息时，传递包含包名称的字符串向量。
+以下示例获取计算上下文  **上，RevoScaleR** **和 lattice**`sqlcc` 包的路径。 获取有关多个包的信息时，传递包含包名称的字符串向量。
 
 ```R
 packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlcc)

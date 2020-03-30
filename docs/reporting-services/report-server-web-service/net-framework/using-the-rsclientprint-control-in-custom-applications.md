@@ -15,10 +15,10 @@ ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f352c393f1386dae1839a76a4fd6e5a2553a54c3
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198554"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
@@ -40,7 +40,7 @@ ms.locfileid: "79198554"
     
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 概述  
- 该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 该控件打包为 CAB 文件。 “打印”对话框中的文本已本地化为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中支持的所有语言  。 RSPrintClient ActiveX 控件使用图像呈现扩展插件 (EMF) 打印报表  。 使用了以下 EMF 设备信息：StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight 和 PageWidth。 不支持图像呈现的其他设备信息设置。  
+ 该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 该控件打包为 CAB 文件。 “打印”对话框中的文本已本地化为  **中支持的所有语言**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 RSPrintClient ActiveX 控件使用图像呈现扩展插件 (EMF) 打印报表  。 使用的 EMF 设备信息包括：StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight 和 PageWidth。 不支持图像呈现的其他设备信息设置。  
   
 ### <a name="language-support"></a>语言支持  
  该打印控件可以提供不同语言的用户界面文本，接受符合不同度量系统标准的输入值。 所用的语言和度量系统由 Culture 和 UICulture 属性确定   。 这两个属性都接受 LCID 值。 如果为所支持语言的变体语言指定 LCID，则会应用最接近的匹配语言。 如果不支持指定的 LCID，并且没有最接近的匹配 LCID，则会应用英语（美国）。  

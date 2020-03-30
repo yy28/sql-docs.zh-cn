@@ -11,15 +11,15 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286591"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>演练：使用自定义测试条件来验证存储过程的结果
 
-在本功能扩展演练中，将创建一个测试条件，并且将通过创建 SQL Server 单元测试来验证其功能。 此过程包括为该测试条件创建一个类库项目，并且对该项目进行签名和安装它。 如果你已具有一个要更新的测试条件，请参见[如何：将 Visual Studio 2010 自定义测试条件从早期版本升级到 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  
+在本功能扩展演练中，将创建一个测试条件，并且将通过创建 SQL Server 单元测试来验证其功能。 此过程包括为该测试条件创建一个类库项目，并且对该项目进行签名和安装它。 如果已有要更新的测试条件，请参阅[如何：将 Visual Studio 2010 自定义测试条件从早期版本升级到 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  
   
 本演练演示以下任务：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "79286591"
   
 2.  在“签名”  选项卡上，选中“为程序集签名”  复选框。  
   
-3.  在“选择强名称密钥文件”  框中，单击“\<新建...>”  。  
+3.  在“选择强名称密钥文件”  框中，单击“**新建...>”\<** 。  
   
     “创建强名称密钥”  对话框随即出现。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "79286591"
   
 6.  在“项目”  菜单上，单击“卸载项目”  。  
   
-7.  在“解决方案资源管理器”  中右键单击项目，然后选择“编辑 <project name>.csproj”  。  
+7.  在“解决方案资源管理器”  中右键单击项目，然后选择“编辑 **.csproj”<project name>** 。  
   
 8.  在导入 Microsoft.CSharp.targets  后添加以下 Import 语句：  
   
@@ -121,7 +121,7 @@ ms.locfileid: "79286591"
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  添加 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)。 请参阅[如何：为 SQL Server 单元测试设计器创建测试条件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)，了解有关 UnitTesting.Conditions.ExportTestConditionAttribute 的详细信息。  
+5.  添加 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)。 有关 UnitTesting.Conditions.ExportTestConditionAttribute 的详细信息，请参阅 [如何：为 SQL Server 单元测试设计器创建测试条件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)。  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -344,7 +344,7 @@ namespace ColumnCountCondition
   
 接下来，我们将生成该项目。  
   
-## <a name="xxx"></a>编译项目并且安装测试条件  
+## <a name="compiling-the-project-and-installing-your-test-condition"></a><a name="xxx"></a>编译项目并且安装测试条件  
 在“生成”  菜单中，单击“生成解决方案”  。  
   
 接下来，您要将程序集信息复制到 Extensions 目录中。 在 Visual Studio 启动后，它会标识 %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions 目录和子目录中的任何扩展，并且使它们可供使用：  
@@ -375,13 +375,13 @@ namespace ColumnCountCondition
   
 3.  在“测试名称”  中，键入 SampleUnitTest  。  
   
-4.  在“添加到测试项目”  中，单击“创建新的 Visual C\# 测试项目”  。 然后，单击“确定”  以便显示“新建测试项目”  对话框。  
+4.  在“添加到测试项目”  中，单击“创建新的 Visual C **测试项目”\#** 。 然后，单击“确定”  以便显示“新建测试项目”  对话框。  
   
 5.  为项目名称键入 SampleUnitTest  。  
   
 6.  单击“取消”  以创建单元测试而不配置要使用数据库连接的测试项目。 空白测试将出现在 SQL Server 单元测试设计器中。 将 Visual C\# 源代码文件添加到该测试项目中。  
   
-    有关创建和配置具有数据库连接的数据库单元测试的更多信息，请参见[如何：创建空的 SQL Server 单元测试](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)。  
+    有关创建和配置具有数据库连接的数据库单元测试的更多信息，请参阅[如何：创建空的 SQL Server 单元测试](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)。  
   
 7.  单击“单击此处以创建”  以完成单元测试的创建。 你将看到在 SQL Server 项目中显示的新的测试条件。  
   
@@ -400,7 +400,7 @@ namespace ColumnCountCondition
   
 5.  在“属性”  窗口中，配置 Count、Enabled 和 ResultSet 属性。  
   
-    有关详细信息，请参阅[操作说明：向 SQL Server 单元测试添加测试条件](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
+    有关详细信息，请参阅[如何：向 SQL Server 单元测试中添加测试条件](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

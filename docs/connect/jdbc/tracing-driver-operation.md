@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027595"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
@@ -59,8 +59,8 @@ ms.locfileid: "69027595"
 |WARNING|指示潜在的问题。|  
 |INFO|提供信息性消息。|  
 |FINE|提供跟踪信息，包括基本的对象创建和析构。 此外，还包括公共方法引发的所有异常。|  
-|FINER|提供详细的跟踪信息，包括具有相关参数数据类型的所有公共方法的进入点和退出点，以及公共类的所有公共属性。 此外，还包括输入参数、输出参数以及除 CLOB、BLOB、NCLOB、Reader 和 \<stream> 返回值类型以外的方法返回值。<br /><br /> 下列日志记录类别存在于 JDBC 驱动程序版本 1.2 中，并具有 FINE 日志记录级别：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 和 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 从 2.0 发行版开始，这些日志记录类别升级到 FINER 级别。|  
-|FINEST|提供非常详细的跟踪信息。 此为最低日志记录级别。<br /><br /> 下列日志记录类别存在于 JDBC 驱动程序版本 1.2 中，并具有 FINEST 日志记录级别：TDS.DATA 和 TDS.TOKEN。 从 2.0 发行版开始，这些日志记录类别保持 FINEST 日志记录级别。|  
+|FINER|提供详细的跟踪信息，包括具有相关参数数据类型的所有公共方法的进入点和退出点，以及公共类的所有公共属性。 此外，还包括输入参数、输出参数以及除 CLOB、BLOB、NCLOB、Reader 和 \<stream> 返回值类型以外的方法返回值。<br /><br /> 下列日志记录类别存在于 JDBC Driver 1.2 中并具有 FINE 日志记录级别：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 和 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 从 2.0 发行版开始，这些日志记录类别升级到 FINER 级别。|  
+|FINEST|提供非常详细的跟踪信息。 此为最低日志记录级别。<br /><br /> 下列日志记录类别存在于 JDBC Driver 1.2 中并具有 FINEST 日志记录级别：TDS.DATA 和 TDS.TOKEN。 从 2.0 发行版开始，这些日志记录类别保持 FINEST 日志记录级别。|  
 |OFF|关闭日志记录功能。|  
 |ALL|启用所有消息的日志记录。|  
   

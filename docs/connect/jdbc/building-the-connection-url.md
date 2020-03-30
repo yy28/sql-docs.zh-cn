@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004532"
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
@@ -50,7 +50,7 @@ ms.locfileid: "77004532"
 > [!NOTE]  
 >  尽管前面的示例在连接字符串中使用了用户名和密码，但您应使用集成安全性，因为这样做更安全。 有关详细信息，请参阅本主题后面部分的[通过集成身份验证进行连接](#Connectingintegrated)一节。  
   
- 以下连接字符串演示了如何使用集成身份验证和 Kerberos，从一个在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的任何操作系统上运行的应用程序连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库：  
+ 以下连接字符串演示了如何使用集成身份验证和 Kerberos，从一个在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的任何操作系统上运行的应用程序连接到 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 数据库：  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -91,7 +91,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  大括号内的空白为原义字符，不能删除。  
   
-##  <a name="Connectingintegrated"></a> 在 Windows 上通过集成身份验证进行连接  
+##  <a name="connecting-with-integrated-authentication-on-windows"></a><a name="Connectingintegrated"></a> 在 Windows 上通过集成身份验证进行连接  
  JDBC 驱动程序支持通过 integratedSecurity 连接字符串属性在 Windows 操作系统上使用“类型 2”集成身份验证。 若要使用集成身份验证，请将 mssql-jdbc_auth-\<version>-\<arch>.dll 文件复制计算机中 Windows 系统路径下的 JDBC 驱动程序安装目录中。  
   
  mssql-jdbc_auth-\<version>-\<arch>.dll 文件的安装位置如下：  

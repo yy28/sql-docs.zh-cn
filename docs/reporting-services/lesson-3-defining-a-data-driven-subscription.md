@@ -9,20 +9,20 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826859"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>第 3 课：定义数据驱动订阅
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 门户的“数据驱动订阅”页，以连接到订阅数据源、生成检索订阅数据的查询，并将结果集映射到报表和传递选项。  
   
 > [!NOTE]  
-> 开始操作之前，请确认“[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理”服务正在运行  。 如果该代理服务未运行，则无法保存订阅。  一种验证方法是，打开 [SQL Server 配置管理器](../relational-databases/sql-server-configuration-manager.md)。
-本课程假设您已经完成了第 1 课和第 2 课，并且报表数据源使用存储的凭据。  有关详细信息，请参阅[第 2 课：修改报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+> 开始操作之前，请确认“ **代理”服务正在运行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** 。 如果该代理服务未运行，则无法保存订阅。  一种验证方法是，打开 [SQL Server 配置管理器](../relational-databases/sql-server-configuration-manager.md)。
+本课程假设您已经完成了第 1 课和第 2 课，并且报表数据源使用存储的凭据。  有关详细信息，请参阅 [第 2 课：修改报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
-## <a name="bkmk_startwizard"></a>启动数据驱动订阅向导  
+## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>启动数据驱动订阅向导  
   
 1.  在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户中，单击“主文件夹”  ，然后导航到包含“Sales Orders”  报表的文件夹。  
   

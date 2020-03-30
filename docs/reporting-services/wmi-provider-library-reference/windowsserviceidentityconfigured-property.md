@@ -16,10 +16,10 @@ ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4787d704141f00c5f0b3c4bf4742bf26feacde60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571033"
 ---
 # <a name="windowsserviceidentityconfigured-property"></a>WindowsServiceIdentityConfigured 属性
@@ -42,7 +42,7 @@ public string WindowsServiceIdentityConfigured;
  [MSReportServer_ConfigurationSetting 类](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

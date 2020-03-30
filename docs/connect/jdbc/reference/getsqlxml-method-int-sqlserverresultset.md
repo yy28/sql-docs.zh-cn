@@ -11,10 +11,10 @@ ms.assetid: faa35676-573d-48d5-afd9-850134735728
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bed4b5c0b25566527654111c03808e421eea895
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979722"
 ---
 # <a name="getsqlxml-method-int-sqlserverresultset"></a>getSQLXML 方法 (int) (SQLServerResultSet)
@@ -30,9 +30,9 @@ public final java.sql.SQLXML getSQLXML(int columnIndex)
 ```  
   
 #### <a name="parameters"></a>parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
  ASQLXMLobject。  

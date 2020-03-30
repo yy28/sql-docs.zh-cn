@@ -11,10 +11,10 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079636"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>设置报表项的格式（报表生成器和 SSRS）
@@ -30,7 +30,7 @@ ms.locfileid: "77079636"
   
  通过选择要对其设置格式的项，然后打开该项的“属性”对话框，可以更改格式设置选项。 例如，如果要对整个文本框的内容或文本框中的选定文字设置格式，则只需右键单击该项，再选择“文本框属性”  。 然后，便可应用所需的格式设置样式。  
   
- 若要快速开始，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
+ 若要快速开始使用，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027842"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC 驱动程序的预处理语句元数据缓存
@@ -74,7 +74,7 @@ ms.locfileid: "69027842"
 |void setDisableStatementPooling(boolean value)|将语句池设置为 true 或 false。|
 |boolean getDisableStatementPooling()|如果禁用了语句池，则返回 true。|
 |void setStatementPoolingCacheSize(int value)|指定此连接的预定义语句缓存的大小。 如果值小于 1，则表示没有缓存。|
-|int getStatementPoolingCacheSize()|返回此连接的预定义语句缓存的大小。 如果值小于 1，则表示没有缓存。|
+|int getStatementPoolingCacheSize()|返回此连接的准备的语句缓存的大小。 如果值小于 1，则表示没有缓存。|
 |int getStatementHandleCacheEntryCount()|返回当前已入池的预定义语句句柄的数目。|
 |boolean isPreparedStatementCachingEnabled()|是否为此连接启用语句池。|
 
@@ -85,7 +85,7 @@ ms.locfileid: "69027842"
 |void setDisableStatementPooling(boolean disableStatementPooling)|将语句池设置为 true 或 false|
 |boolean getDisableStatementPooling()|如果禁用了语句池，则返回 true。|
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|指定此连接的预定义语句缓存的大小。 如果值小于 1，则表示没有缓存。|
-|int getStatementPoolingCacheSize()|返回此连接的预定义语句缓存的大小。 如果值小于 1，则表示没有缓存。|
+|int getStatementPoolingCacheSize()|返回此连接的准备的语句缓存的大小。 如果值小于 1，则表示没有缓存。|
 
 ## <a name="see-also"></a>另请参阅  
  [通过 JDBC 驱动程序提升性能和可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  

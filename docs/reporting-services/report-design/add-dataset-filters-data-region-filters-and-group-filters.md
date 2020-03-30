@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65582057"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>添加数据集筛选器、数据区域筛选器和组筛选器
@@ -25,12 +25,12 @@ ms.locfileid: "65582057"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> 选择设置筛选器的时间  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> 选择设置筛选器的时间  
  无法在数据源中筛选数据时，请为报表项指定筛选器。 例如，当数据源不支持查询参数、您必须运行存储过程且无法修改查询或者参数化报表快照显示不同用户的自定义数据时，请使用报表筛选器。  
   
  在检索报表数据集之前或之后都可以对该报表数据进行筛选。 若要在检索之前筛选数据，请更改每个数据集的查询。 筛选查询中的数据时，可在数据源中筛选数据，这样可以减少必须在报表中检索和处理的数据量。 若要在检索之后筛选数据，请在报表中创建筛选表达式。 可以为数据集、数据区域或组（包括详细信息组）设置筛选表达式。 还可以在筛选表达式中包含参数，从而提供一种为特定值或特定用户筛选数据的方式。例如，对标识查看报表的用户的值进行筛选。  
   
-##  <a name="Where"></a> 选择设置筛选器的位置  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> 选择设置筛选器的位置  
  筛选器的设置位置应根据您希望在报表中获得的效果来确定。 在运行时，报表处理器按以下顺序应用筛选器：先对数据集，再对数据区域，最后对组，在每个组层次结构中按自上而下的顺序。 在表、矩阵或列表中，对行组、列组和相邻组分别应用各自的筛选器。 在图表中，对类别组和序列组分别应用各自的筛选器。 报表处理器应用筛选器时，会按每个报表项 **“属性”** 对话框的 **“筛选器”** 页上定义的顺序应用所有筛选器公式，这等效于使用布尔 AND 操作组合所有筛选器公式。  
   
  下面的列表比较对不同报表项设置筛选器的效果：  
@@ -47,7 +47,7 @@ ms.locfileid: "65582057"
   
  返回页首  
   
-##  <a name="FilterEquations"></a> 了解筛选器公式  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a> 了解筛选器公式  
  在运行时，报表处理器会将值转换为指定数据类型，然后使用指定运算符来比较表达式和值。 下面列出筛选器公式的每个部分：  
   
 -   **表达式** ：定义对其进行筛选的内容。 通常为数据集字段。  

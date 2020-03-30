@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843774"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>还原已启用延伸的数据库 (Stretch Database)
@@ -58,7 +58,7 @@ Azure 上的 SQL Server Stretch Database 服务在删除数据库之前会创建
 5. 指定新的**数据库名称**，并单击“**创建**”。
 6. 数据库还原过程将随即开始，并且可以使用“**通知**”监视还原进度。
 
-## <a name="reconnect"></a>还原 SQL Server 数据库和远程 Azure 数据库之间的连接
+## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>还原 SQL Server 数据库和远程 Azure 数据库之间的连接
 
 1.  如果要连接到使用不同的名称或不同区域中的已还原的 Azure 数据库，请运行 [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) 存储过程，断开与之前 Azure 数据库的连接。  
   

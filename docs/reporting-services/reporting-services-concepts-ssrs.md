@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078181"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77078181"
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式   
   
-##  <a name="bkmk_ReportServerConcepts"></a> 报表服务器概念  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> 报表服务器概念  
  报表服务器是安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 实例的计算机。 报表服务器在内部存储各种项，例如分页和移动报表、报表相关项和资源、计划以及订阅。 报表服务器可以配置为单个独立的服务器，也可以配置为扩展场，或者可与 SharePoint 服务器相集成。 您通过 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 服务、WMI 提供程序、URL 访问或者以编程方式通过脚本与报表服务器项交互。 您与报表服务器交互的方式依赖于部署拓扑和配置。  
   
 ### <a name="native-mode-report-servers"></a>本机模式报表服务器
@@ -59,7 +59,7 @@ ms.locfileid: "77078181"
  有关要用于与报表服务器交互的工具列表，请参阅 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)。  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> 报表和相关项的概念  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> 报表和相关项的概念  
 ### <a name="reports-and-report-definitions"></a>报表和报表定义
 
 
@@ -145,7 +145,7 @@ ms.locfileid: "77078181"
  数据警报是在警报数据库中内部存储的项。 数据警报定义包括要从现有报表数据馈送使用的数据、要满足的条件、计划以及警报的收件人。 数据警报仅可用于发布到与 SharePoint Server 相集成的报表服务器的报表。 数据警报不可用于本机报表服务器安装。 有关详细信息，请参阅 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)。  
   
   
-##  <a name="bkmk_TypesofReports"></a> Reporting Services 分页报表的类型  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Reporting Services 分页报表的类型  
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中， *“报表”* 一词可适用于特定类型的报表服务器项、布局设计或解决方案设计。 单个 Reporting Services 分页报表可以具有多种类型的特征；例如，报表可同时是独立报表、主报表引用的子报表、不同主报表中钻取报表的目标和链接报表。  
   
 ### <a name="drilldown-reports"></a>明细报表 
@@ -183,7 +183,7 @@ ms.locfileid: "77078181"
  升级的报表是在将报表服务器从某一 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本升级到更高版本时转换为更新的架构的已发布报表定义。 原始报表定义将保留。 报表将在内存中升级、编译，并且编译后的版本将在内部保存。 有关详细信息，请参阅 [升级 Reporting Services 报表](../reporting-services/install-windows/upgrade-reports.md)。  
   
   
-##  <a name="bkmk_StagesofReports"></a> Reporting Services 分页报表的阶段  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Reporting Services 分页报表的阶段  
  报表定义可以创建、发布或保存、编译、处理、缓存、呈现、查看、导出和另存为历史记录。 在您运行报表时，报表服务器将分三个步骤处理报表：报表处理、数据处理和呈现。 数据和报表处理根据报表定义执行；结果将用内部中间格式存储。 中间格式的报表随后将呈现为特定的查看格式。 下图显示了报表处理的阶段和元素。  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "报表处理关系图")  

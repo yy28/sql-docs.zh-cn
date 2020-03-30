@@ -11,10 +11,10 @@ ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027114"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>使用含返回状态的存储过程
@@ -23,7 +23,7 @@ ms.locfileid: "69027114"
 
 可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程是一个返回状态或结果参数的存储过程。 这通常用于指示存储过程执行成功还是失败。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类，调用此类存储过程并处理其返回的数据。
 
-使用 JDBC 驱动程序调用这种存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 返回状态参数的 `call` 转义序列的语法如下所示：
+使用 JDBC 驱动程序调用这种存储过程时，必须结合 `call`SQLServerConnection[ 类的 ](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)prepareCall[ 方法使用 ](../../connect/jdbc/reference/sqlserverconnection-class.md) SQL 转义序列。 返回状态参数的 `call` 转义序列的语法如下所示：
 
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 

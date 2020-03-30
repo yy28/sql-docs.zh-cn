@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843810"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
@@ -35,7 +35,7 @@ ms.locfileid: "73843810"
  > [!NOTE]
  > 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。
  
-##  <a name="EnableWizardTable"></a> 使用向导在表上启用 Stretch Database  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-table"></a><a name="EnableWizardTable"></a> 使用向导在表上启用 Stretch Database  
  **启动向导**  
  1.  在 SQL Server Management Studio 的对象资源管理器中，选择要在其上启用 Stretch 的表。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73843810"
  **结果**  
  查看结果。  
   
-##  <a name="EnableTSQLTable"></a> 使用 Transact-SQL 在表上启用 Stretch Database  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-table"></a><a name="EnableTSQLTable"></a> 使用 Transact-SQL 在表上启用 Stretch Database  
  也可以使用 Transact-SQL 为现有表启用 Stretch Database，或使用启用的 Stretch Database 创建一个新表。  
   
 ### <a name="options"></a>选项  

@@ -14,10 +14,10 @@ ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 34873835231c122f3d086c3490be2bab7a684925
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198529"
 ---
 # <a name="web-service-authentication"></a>Web 服务身份验证
@@ -53,7 +53,7 @@ ReportingService service = new ReportingService();
 service.Credentials = new System.Net.NetworkCredential("username", "password", "domain");  
 ```  
   
- 必须在调用报表服务器 Web 服务的任何方法之前设置凭据。 如果没有设置凭据，将收到错误代码“HTTP 401 错误: 拒绝访问。 必须在使用服务之前对其进行身份验证，但在设置凭据之后，只要你继续使用同一个服务变量（如 rs  ），就不需要再次设置这些凭据。  
+ 必须在调用报表服务器 Web 服务的任何方法之前设置凭据。 如果您没有设置凭据，将收到错误代码“HTTP 401 错误: 拒绝访问”。 必须在使用服务之前对其进行身份验证，但在设置凭据之后，只要你继续使用同一个服务变量（如 rs  ），就不需要再次设置这些凭据。  
   
 ## <a name="custom-authentication"></a>自定义身份验证  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包含一个编程 API，它向开发人员提供了设计和开发自定义身份验证扩展插件（称为安全扩展插件）的机会。 有关详细信息，请参阅 [Implementing a Security Extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)。  

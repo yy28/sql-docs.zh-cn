@@ -11,10 +11,10 @@ ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027393"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔离级别
@@ -55,7 +55,7 @@ ms.locfileid: "69027393"
   
 事务必须至少在可重复读的隔离级别运行，才能在两个事务都检索同一行，然后根据原先检索的值更新行时，防止出现丢失更新的情况。 如果两个事务使用一个 UPDATE 语句更新行，而且更新并不以先前检索的值为基础，则在默认的已提交读的隔离级别上不会发生丢失更新的情况。  
 
-若要为事务设置隔离级别，可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 方法。 此方法接受 int 值作为其参数，此参数基于如下所示的连接常量之一：  
+若要为事务设置隔离级别，可以使用 [SQLServerConnection](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 类的 [setTransactionIsolation](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法。 此方法接受 int 值作为其参数，此参数基于如下所示的连接常量之一  ：  
 
 ```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
@@ -73,7 +73,7 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隔离级别的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“[!INCLUDE[ssDE](../../includes/ssde_md.md)] 中的隔离级别”。  
+有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隔离级别的详细信息，请参阅 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 联机丛书中的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的隔离级别”。  
 
 ## <a name="see-also"></a>另请参阅
 

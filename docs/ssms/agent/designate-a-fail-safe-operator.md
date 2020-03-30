@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1c56acaa84b26192d766097294a5ab2bfd31ab8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242452"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定防故障操作员
@@ -30,11 +30,11 @@ ms.locfileid: "75242452"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-防故障操作员是在无法联系到指定的操作员时接收警报的用户。 本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中设置防故障操作员以接收 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报通知。  
+防故障操作员是在无法联系到指定的操作员时接收警报的用户。 本主题介绍如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中设置防故障操作员以接收 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代理警报通知。  
   
-## <a name="BeforeYouBegin"></a>开始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
-### <a name="Restrictions"></a>限制和局限  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制和局限  
   
 -   在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
@@ -42,12 +42,12 @@ ms.locfileid: "75242452"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 只有 **sysadmin** 固定服务器角色的成员才能指定防故障操作员。  
   
-## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-designate-a-fail-safe-operator"></a>指定防故障操作员  
   
@@ -55,13 +55,13 @@ ms.locfileid: "75242452"
   
 2.  右键单击“SQL Server 代理”  ，然后选择“属性”  。  
   
-3.  在“SQL Server 代理属性 - server\_name”对话框的“选择页”下，选择“警报系统”     。  
+3.  在“SQL Server 代理属性 - server**name”对话框的“选择页”下，选择“警报系统”** _\__   。  
   
 4.  在“防故障操作员”  下，选中“启用防故障操作员”  。  
   
 5.  在“操作员”  列表中，选择想要执行防故障的操作员。  
   
-6.  选中以下任意或所有复选框来指定通知操作员的方式：“电子邮件”、“寻呼机”或“Net Send”    。  
+6.  选中以下任何或所有复选框以指定通知操作员的方法：“电子邮件”  、“寻呼程序”  或“Net send”  。  
   
 7.  完成后，单击 **“确定”** 。  
   

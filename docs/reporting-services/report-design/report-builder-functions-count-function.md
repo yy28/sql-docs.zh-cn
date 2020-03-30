@@ -9,10 +9,10 @@ ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081303"
 ---
 # <a name="report-builder-functions---count-function"></a>报表生成器函数 - Count 函数

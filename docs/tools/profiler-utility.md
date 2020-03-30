@@ -17,10 +17,10 @@ ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307395"
 ---
 # <a name="profiler-utility"></a>Profiler 实用工具
@@ -110,7 +110,7 @@ profiler
 |ss|两位数秒数|  
   
 > [!NOTE]  
->  仅当在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中启用了“使用区域设置来显示日期和时间值”  选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
+>  仅当在  **中启用了“使用区域设置来显示日期和时间值”** [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
   
  **/R**  
  启用跟踪文件滚动。  

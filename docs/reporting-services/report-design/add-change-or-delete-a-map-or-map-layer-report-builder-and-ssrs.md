@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080649"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
@@ -59,23 +59,23 @@ ms.locfileid: "77080649"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddLayer"></a> 从地图层向导添加层  
+##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> 从地图层向导添加层  
   
 -   从“功能区”的 **“插入”** 菜单上，单击 **“地图”** ，然后单击 **“地图” Wizard.** 。通过该向导可以向现有地图添加层。 地图向导和地图层向导的大多数向导页是相同的。  
   
      有关详细信息，请参阅 [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
-##  <a name="ChangeLayer"></a> 使用地图层向导更改层的选项  
+##  <a name="to-change-options-for-a-layer-by-using-the-map-layer-wizard"></a><a name="ChangeLayer"></a> 使用地图层向导更改层的选项  
   
 -   运行地图层向导。 此向导允许您更改使用地图层向导创建的层的选项。 在“地图”窗格中，右键单击该层，然后在工具栏上单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
      有关详细信息，请参阅 [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
-##  <a name="AddVectorLayer"></a> 从“地图”窗格工具栏添加点、线条或多边形层  
+##  <a name="to-add-a-point-line-or-polygon-layer-from-the-map-pane-toolbar"></a><a name="AddVectorLayer"></a> 从“地图”窗格工具栏添加点、线条或多边形层  
   
 1.  单击地图直到显示“地图”窗格。  
   
-2.  依次单击工具栏中的“添加层”  按钮，以及下拉列表中的要添加的层类型：“点”  、“线”  或“多边形”  。  
+2.  在工具栏上单击“添加层”  按钮，从下拉列表中单击要添加的层类型：“点”  、“线条”  或“多边形”  。  
   
     > [!NOTE]  
     >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要在“地图”窗格工具栏中启动向导，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
@@ -100,7 +100,7 @@ ms.locfileid: "77080649"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="FilterAnalyticalData"></a> 为层筛选分析数据  
+##  <a name="to-filter-analytical-data-for-the-layer"></a><a name="FilterAnalyticalData"></a> 为层筛选分析数据  
   
 1.  单击地图直到显示“地图”窗格。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "77080649"
   
 4.  定义筛选器公式以便限制用于地图显示的分析数据。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
-##  <a name="PointProperties"></a> 为点层或多边形中心点控制点属性  
+##  <a name="to-control-point-properties-for-a-point-layer-or-for-polygon-center-points"></a><a name="PointProperties"></a> 为点层或多边形中心点控制点属性  
   
 1.  选择 **“地图点属性”** 对话框中的 **“常规”** 可以更改以下地图元素的标签、工具提示和标记类型选项：  
   
@@ -118,7 +118,7 @@ ms.locfileid: "77080649"
   
     -   多边形层上的所有动态或嵌入的多边形的中心点。 中心点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定中心点的选项，请使用 [“地图嵌入点属性”对话框，标记](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 页。  
   
-##  <a name="Embedded"></a> 指定嵌入数据作为空间数据的源  
+##  <a name="to-specify-embedded-data-as-a-source-of-spatial-data"></a><a name="Embedded"></a> 指定嵌入数据作为空间数据的源  
   
 1.  单击地图直到显示“地图”窗格。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "77080649"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ESRI"></a> 指定 ESRI 形状文件作为空间数据的源  
+##  <a name="to-specify-an-esri-shapefile-as-a-source-of-spatial-data"></a><a name="ESRI"></a> 指定 ESRI 形状文件作为空间数据的源  
   
 1.  单击地图直到显示“地图”窗格。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "77080649"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DatasetField"></a> 指定报表数据集字段作为空间数据的源  
+##  <a name="to-specify-a-report-dataset-field-as-a-source-of-spatial-data"></a><a name="DatasetField"></a> 指定报表数据集字段作为空间数据的源  
   
 1.  单击地图直到显示“地图”窗格。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "77080649"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileLayer"></a> 添加图块层  
+##  <a name="to-add-a-tile-layer"></a><a name="TileLayer"></a> 添加图块层  
   
 1.  单击地图直到显示“地图”窗格。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "77080649"
     > [!NOTE]  
     >  当您在地图向导或地图层向导中添加多边形、线条或点层时，也可以添加图块层。 在 **“选择空间数据和地图视图选项”** 页上，选择选项 **“为该地图视图添加 Bing 地图背景”** 。  
   
-##  <a name="DrawingOrder"></a> 更改层的绘制顺序  
+##  <a name="to-change-the-drawing-order-of-a-layer"></a><a name="DrawingOrder"></a> 更改层的绘制顺序  
   
 1.  单击地图直到显示“地图”窗格。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "77080649"
   
 3.  在“地图”窗格工具栏上，单击向上键或向下键来更改每个层的绘制顺序。  
   
-##  <a name="Transparency"></a> 更改多边形、线条或点层的透明度  
+##  <a name="to-change-the-transparency-of-a-polygon-line-or-point-layer"></a><a name="Transparency"></a> 更改多边形、线条或点层的透明度  
   
 1.  单击地图直到显示“地图”窗格。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "77080649"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileTransparency"></a> 更改图块层的透明度  
+##  <a name="to-change-the-transparency-of-a-tile-layer"></a><a name="TileTransparency"></a> 更改图块层的透明度  
   
 1.  单击地图直到显示“地图”窗格。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "77080649"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Secure"></a> 为图块层指定安全连接  
+##  <a name="to-specify-a-secure-connection-for-a-tile-layer"></a><a name="Secure"></a> 为图块层指定安全连接  
   
 1.  单击地图直到显示“地图”窗格。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "77080649"
   
  Bing 地图 Web 服务的连接将使用 HTTP SSL（安全套接字层）服务来检索此层的 Bing 地图图块。  
   
-##  <a name="Language"></a> 为图块标签指定语言  
+##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> 为图块标签指定语言  
   
 1.  默认情况下，对于显示标签的图块样式，从报表生成器的默认区域设置确定语言。 您可以按如下方式自定义图块标签的语言设置：  
   
@@ -232,7 +232,7 @@ ms.locfileid: "77080649"
   
      设置图块标签语言的优先次序为：报表属性 Language、“报表生成器”的默认区域设置、地图属性 TileLanguage。  
   
-##  <a name="ConditionalHide"></a> 基于视区缩放级别有条件地隐藏层  
+##  <a name="to-conditionally-hide-a-layer-based-on-viewport-zoom-level"></a><a name="ConditionalHide"></a> 基于视区缩放级别有条件地隐藏层  
   
 1.  设置 **“可见性”** 选项以控制地图层的显示方式。  
   

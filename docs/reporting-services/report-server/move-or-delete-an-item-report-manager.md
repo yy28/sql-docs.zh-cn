@@ -12,10 +12,10 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1be40ed580de1163c0e85e37e7b8ffc1bccc342
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581091"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移动或删除项（报表管理器）
@@ -35,7 +35,7 @@ ms.locfileid: "65581091"
 |![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")|共享数据源|  
 ||共享数据集|  
   
- 并非所有使用的项都可以移动。 不能移动与报表相关联的项，例如订阅或报表历史记录。 这些项随其关联报表一起移动。 同样，也不能移动文件夹层次结构之外的项（如共享计划）。 不具备相应权限时不能移动项。 移动项的权限在你为相关项在角色分配中选择了以下任务时传递：“管理报表”、“管理模型”、“管理文件夹”和“管理数据源”。  
+ 并非所有使用的项都可以移动。 不能移动与报表相关联的项，例如订阅或报表历史记录。 这些项随其关联报表一起移动。 同样，也不能移动文件夹层次结构之外的项（如共享计划）。 不具备相应权限时不能移动项。 如果您对相关项的角色分配选择了以下任务，则说明已被授予移动相应项的权限：“管理报表”、“管理模型”、“管理文件夹”和“管理数据源”。  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>从“内容”页中移动项  
   

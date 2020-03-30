@@ -157,10 +157,10 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082120"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
@@ -178,12 +178,12 @@ ms.locfileid: "77082120"
   
  ![仪表元素关系图](../../reporting-services/report-design/media/gauge-elements-diagram.gif "仪表元素关系图")  
   
- 若要详细了解如何将仪表用作 KPI，请参阅[教程：向报表添加 KPI（报表生成器）](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 有关将仪表用作 KPI 的详细信息，请参阅[教程：向报表添加 KPI（报表生成器）](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将仪表作为报表部件与报表分开发布。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
   
-##  <a name="GaugeTypes"></a> 仪表类型  
+##  <a name="gauge-types"></a><a name="GaugeTypes"></a> 仪表类型  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供两种仪表类型：径向仪表和线性仪表。 在您要将数据表示为速度时通常使用径向仪表。 线性仪表用于将数据表示为温度或刻度值。  
   
  这两种类型之间的主要差异体现在仪表的整体形状和可用仪表指针上。 径向仪表是圆形或圆形的度数，类似里程表。 仪表指针通常是针形，但可以是标记和条。  
@@ -198,15 +198,15 @@ ms.locfileid: "77082120"
   
  ![rs_RadialGauge](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 径向仪表选项：“径向”、“最小径向仪表”、“两个确定位数”、“东北方向 90 度”、“西北方向 90 度”、“西南方向 90 度”、“东南方向 90 度”、“北方 180 度”、“南方 180 度”、“西方 180 度”、“东方 180 度”和“仪表”。  
+ 径向仪表选项：“径向”、“径向，最小仪表”、“两个刻度”、“东北方向 90 度”、“西北方向 90 度”、“西南方向 90 度”、“东南方向 90 度”、“北方 180 度”、“南方 180 度”、“西方 180 度”、“东方 180 度”和“仪表”。  
   
  **线性仪表**  
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 线性仪表选项：“水平”、“垂直”、“多个条形指针”、“两个确定位数”、“三个颜色范围”、“对数”、“温度计”、“华氏/摄氏温度计”和“子弹图”。  
+ 线性仪表选项：“水平”、“垂直”、“多个条形指针”、“两个刻度”、“三个颜色范围”、“对数”、“温度计”、“华氏/摄氏温度计”和“圆点图”。  
   
-##  <a name="AddingData"></a> 向仪表添加数据  
+##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a> 向仪表添加数据  
  在您将仪表添加到设计图面后，可以将数据集字段拖到仪表数据窗格上。 默认情况下，仪表将字段值聚合为在仪表上显示的一个值。 该值通过使用 Value 属性附加到指针。 根据字段的数据类型，仪表使用 SUM 或 COUNT 聚合。 在您使用适合于相加的数字数据时，仪表使用 SUM 函数。 否则，它使用 COUNT 聚合。 指针的值可以使用其他聚合或不使用聚合。  
   
  可以向仪表添加分组，以便在仪表上查看各组或各行。 应用分组和筛选时，仪表使用指针值显示返回数据集中的最后一组或一行。  
@@ -248,7 +248,7 @@ ms.locfileid: "77082120"
   
  对于在表或列表中显示多个仪表并希望显示按组聚合的数据等情况，您可能希望在仪表中添加组。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="PositioningData"></a> 定位仪表中的元素  
+##  <a name="positioning-elements-in-a-gauge"></a><a name="PositioningData"></a> 定位仪表中的元素  
  仪表面板是包含一个或多个仪表的顶级容器。 通过单击仪表之外，可以查看 **“仪表面板属性”** 对话框。 每个仪表又都包含几个仪表元素：仪表刻度、仪表范围和仪表指针。 使用仪表时，将需要了解如何在仪表面板中度量元素，以修改这些元素的大小和位置。  
   
 ### <a name="understanding-size-and-position-measurements"></a>了解大小和位置度量  
@@ -275,7 +275,7 @@ ms.locfileid: "77082120"
 ### <a name="maintaining-aspect-ratio-on-a-linear-gauge"></a>保持线性仪表上的宽高比  
  径向仪表假定为圆形，因此该仪表类型通常可保持相同的宽度和高度值。 但是，在线性仪表上，该仪表假定为矩形，宽度和高度之间的比例通常是不相等的。 仪表的宽高比可确定调整仪表大小后应保持的宽度和高度的比例。 例如，如果该值设置为 2，则无论如何调整仪表的大小，仪表的宽度将始终是仪表高度的两倍。 若要设置纵横比，可以在“线性仪表属性”  对话框中设置 AspectRatio 属性。  
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  本节中列出的过程分步骤显示如何在报表中使用仪表、如何使数据在仪表中高效地显示以及如何添加和配置仪表及其元素。  
   
 -   [向报表添加仪表（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
@@ -286,7 +286,7 @@ ms.locfileid: "77082120"
   
 -   [指定图像作为仪表指针（报表生成器和 SSRS）](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
-##  <a name="InThisSection"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本节内容  
  下列主题提供与使用仪表有关的其他信息。  
   
 |||  

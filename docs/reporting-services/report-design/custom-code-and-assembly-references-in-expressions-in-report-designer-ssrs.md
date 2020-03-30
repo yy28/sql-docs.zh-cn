@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab5e36ce6e76cf0017e7306802544f1b2764af73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080573"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>报表设计器的表达式中的自定义代码和程序集引用 (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "77080573"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RB3"></a> 在报表生成器中使用自定义代码  
+##  <a name="working-with-custom-code-in-report-builder"></a><a name="RB3"></a> 在报表生成器中使用自定义代码  
  在报表生成器中，您可以从报表服务器中打开包含对自定义程序集的引用的报表。 例如，您可以编辑通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器创建和部署的报表。 必须将自定义程序集部署到报表服务器。  
   
  您不能执行下列操作：  
@@ -47,22 +47,22 @@ ms.locfileid: "77080573"
   
 2.  在本地模式下预览具有对自定义程序集的引用的报表。  
   
-##  <a name="Common"></a> 包括对常用函数的引用  
- 使用 **“表达式”** 对话框查看内置到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的常见函数分类列表。 展开 **“常见函数”** 并单击一个类别时， **“项”** 窗格显示表达式中包括的函数的列表。 常见函数包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空间以及 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库函数中的类。 为方便起见，你可以在“表达式”  对话框中查看最常用的函数，它们在其中按类别列出：文本、日期和时间、数学、检查、程序流、聚合、金融、转换和杂项。 不太常用的函数未显示在列表中，但仍然可以用在表达式中。  
+##  <a name="including-references-to-commonly-used-functions"></a><a name="Common"></a> 包括对常用函数的引用  
+ 使用 **“表达式”** 对话框查看内置到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的常见函数分类列表。 展开 **“常见函数”** 并单击一个类别时， **“项”** 窗格显示表达式中包括的函数的列表。 常见函数包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空间以及 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库函数中的类。 为方便起见，您可以在 **“表达式”** 对话框中查看最常用的函数，这些函数按以下类别排列：文本、日期和时间、数学函数、检查函数、程序流函数、聚合函数、财务函数、转换函数和杂项函数。 不太常用的函数未显示在列表中，但仍然可以用在表达式中。  
   
  若要使用内置函数，请双击“项”窗格中的函数名称。 “说明”窗格中显示该函数的说明，“示例”窗格中显示函数调用的示例。 在“代码”窗格中，在左圆括号 **(** 后键入函数名称时，IntelliSense 将帮助显示函数调用的各项有效语法。 例如，若要计算表中一个名为 `Quantity` 的字段的最大值，首先将简单表达式 `=Max(` 添加到“代码”窗格，然后使用智能标记查看该函数调用的所有可能的有效语法。 若要完成本示例，请键入 `=Max(Fields!Quantity.Value)`。  
   
  有关每个函数的详细信息，请参阅 <xref:System.Math>、 <xref:System.Convert>和 MSDN 中的 [Visual Basic 运行时库成员](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
-##  <a name="NotCommon"></a> 包括对不太常用函数的引用  
+##  <a name="including-references-to-less-commonly-used-functions"></a><a name="NotCommon"></a> 包括对不太常用函数的引用  
  若要包括一个对不太常用的 CLR 命名空间的引用，必须使用完全限定引用，例如 <xref:System.Text.StringBuilder>。 对于这些不太常用的函数， **“表达式”** 对话框的“代码”窗格不支持 IntelliSense。  
   
  有关详细信息，请参阅 [Visual Basic Runtime Library Members](https://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
   
-##  <a name="External"></a> 包括对外部程序集的引用  
+##  <a name="including-references-to-external-assemblies"></a><a name="External"></a> 包括对外部程序集的引用  
  若要包括对外部程序集中的类的引用，必须标识报表处理器的程序集。 使用 **“报表属性”** 对话框的 **“引用”** 页指定要添加到报表中的程序集的完全限定名称。 在表达式中，必须使用程序集中的类的完全限定名称。 外部程序集中的类不显示在 **“表达式”** 对话框中，您必须提供正确无误的类名称。 完全限定名称包括命名空间、类名称和成员名称。  
   
-##  <a name="Embedded"></a> 包括嵌入代码  
+##  <a name="including-embedded-code"></a><a name="Embedded"></a> 包括嵌入代码  
  若要将嵌入代码添加到某个报表，请使用 **“报表属性”** 对话框的“代码”选项卡。 创建的代码块可以包含多个方法。 嵌入代码中的方法必须采用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写，并且必须是基于实例的方法。 对于 System.Convert 和 System.Math namespaces 命名空间，报表处理器会自动添加引用。 使用 **“报表属性”** 对话框的 **“引用”** 页添加其他程序集引用。 有关详细信息，请参阅 [向报表添加程序集引用 (SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)。  
   
  嵌入代码中的方法可通过全局定义的 **Code** 成员使用。 你可以通过引用 **Code** 成员和方法名称来访问这些方法。 下面的示例调用 **ToUSD**方法，该方法将 `StandardCost` 字段中的值转换为美元值：  
@@ -114,7 +114,7 @@ End Function
   
  有关内置对象集合和初始化的详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)和[初始化自定义程序集对象](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)。  
   
-##  <a name="Parameters"></a> 包括对代码中的参数的引用  
+##  <a name="including-references-to-parameters-from-code"></a><a name="Parameters"></a> 包括对代码中的参数的引用  
  可以通过所提供的报表定义代码块中或自定义程序集中的自定义代码来引用全局参数集合。 该参数集合是只读的，并且没有公共迭代器。 不能使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** 单步构造该集合。 您需要首先知道在报表定义中定义的参数名称，然后才能在代码中引用该参数。 但是，可以遍历多值参数的所有值。  
   
  下表包含从自定义代码引用该内置集合 `Parameters` 的示例：  
@@ -155,7 +155,7 @@ Public Function ShowParameterValues(ByVal parameter as Parameter)
 End Function  
 ```  
   
-##  <a name="Custom"></a> 包括对自定义程序集中的代码的引用  
+##  <a name="including-references-to-code-from-custom-assemblies"></a><a name="Custom"></a> 包括对自定义程序集中的代码的引用  
  若要在报表中使用自定义程序集，您必须先创建程序集，使其可供报表设计器使用，然后在报表中添加对该程序集的引用，最后在报表中使用表达式来引用该程序集中包含的方法。 如果报表部署到报表服务器，您还必须向报表服务器部署该自定义程序集。  
   
  有关创建自定义程序集并使其可供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用的信息，请参阅 [将自定义程序集用于报表](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)。  
@@ -177,10 +177,10 @@ End Function
   
  有关访问代码的详细信息，请参阅 [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)。  
   
-##  <a name="collections"></a> 将内置集合传递到自定义程序集  
+##  <a name="passing-built-in-collections-into-custom-assemblies"></a><a name="collections"></a> 将内置集合传递到自定义程序集  
  如果要将内置集合（如 *Globals* 或 *Parameters* 集合）传递到自定义程序集进行处理，则必须将代码项目中的程序集引用添加到定义内置集合的程序集中并且访问正确的命名空间。 根据您是为运行在报表服务器上的报表（服务器报表）开发自定义程序集，还是为在 .NET 应用程序中本地运行的报表（本地报表）开发自定义程序集，需要引用的程序集会有所不同。 有关详细信息，请参阅下文。  
   
--   **命名空间:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
+-   **命名空间：** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
 -   **程序集（本地报表）：** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   

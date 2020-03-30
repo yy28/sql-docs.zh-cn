@@ -9,10 +9,10 @@ ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 882a098aaabcd4610fc6623e9741f7eeaa4f53ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081177"
 ---
 # <a name="report-builder-functions---previous-function"></a>报表生成器函数 - Previous 函数
@@ -33,7 +33,7 @@ Previous(expression, scope)
  （**Variant** 或 **Binary**）用于标识数据和检索以前值的表达式，例如 `Fields!Fieldname.Value` 或 `Sum(Fields!Fieldname.Value)`。  
   
  *作用域*  
- (**String**) 可选。 组或数据区域的名称，也可以为 null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为“Nothing”  ），它指定从中检索由表达式  指定的以前值的作用域。  
+ (**String**) 可选。 组或数据区域的名称，也可以为 null（在  **中为“Nothing”** [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），它指定从中检索由表达式  指定的以前值的作用域。  
   
 ## <a name="return-type"></a>返回类型  
  返回 **Variant** 或 **Binary**。  

@@ -1,5 +1,6 @@
 ---
 title: 在 Web 门户中查找和查看报表（报表生成器）| Microsoft Docs
+description: 报表管理器是一种基于 Web 的工具，该工具包含查看和管理报表的功能。 它是报表服务器安装的一部分。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0041517770e7ffe961fa1df42afa56bfb161fc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d3bd5691a31ebaaaf49bb5c2f8eb1357b60f6551
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079270"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342817"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>在 Web 门户中查找和查看报表（报表生成器和 SSRS）
   报表管理器是一种基于 Web 的工具，该工具包含查看和管理报表的功能。 它是报表服务器安装的一部分。 若要打开报表管理器，请在浏览器窗口中键入报表管理器 URL。 有关浏览器要求的信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。 有关如何可在报表服务器上配置报表管理器 URL 的详细信息，请与系统管理员联系。 有关详细信息，请参阅[配置报表管理器（本机模式）](../../reporting-services/report-server/configure-report-manager-native-mode.md)。  

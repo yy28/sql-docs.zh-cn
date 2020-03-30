@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63295728"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
@@ -31,7 +31,7 @@ ms.locfileid: "63295728"
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Setup"></a>1.使用表向导或矩阵向导创建表报表和数据集  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1.使用表向导或矩阵向导创建表报表和数据集  
 在本部分中，将创建表报表、数据源和数据集。 在设计表的布局时，将只包含若干字段。 完成向导后，您将手动添加列。 使用该向导可以方便地对表进行布局。  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.locfileid: "63295728"
   
 17. 单击“完成”  。  
   
-## <a name="UpdateNames"></a>2.更新数据源和数据集的默认名称  
+## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2.更新数据源和数据集的默认名称  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>更新数据源的默认名称  
   
@@ -146,7 +146,7 @@ ms.locfileid: "63295728"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Concatenate"></a>3.显示名字首字母和姓氏  
+## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3.显示名字首字母和姓氏  
 在本部分，在表达式中使用 **Left** 函数和 **Concatenate** ( **&** ) 运算符（其计算结果为包括首字母和姓氏的名称）。 你可以逐步生成表达式，也可以跳过一些步骤，将表达式从教程复制/粘贴到“表达式”  对话框中。   
   
 1.  右键单击“StateProvince”  列，指向“插入列”  ，然后单击“左”  。  
@@ -191,7 +191,7 @@ ms.locfileid: "63295728"
   
 12. 单击 **“运行”** 以预览报表。  
 
-## <a name="DateFormat"></a>（可选）设置日期列、货币列和标题行的格式  
+## <a name="optional-format-the-date-and-currency-columns-and-header-row"></a><a name="DateFormat"></a>（可选）设置日期列、货币列和标题行的格式  
 在此部分中，设置“Last Purchase”  列和“YTDPurchase”列的格式，此两列分别包含日期和货币。 同样设置标题行的格式。  
   
 ### <a name="to-format-the-date-column"></a>设置日期列的格式  
@@ -227,7 +227,7 @@ ms.locfileid: "63295728"
 ![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
-## <a name="Gender"></a>4.使用颜色显示性别  
+## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4.使用颜色显示性别  
 在本部分中，将添加颜色以显示人员性别。 将添加一个新列以显示这些颜色，然后基于“性别”字段的值确定在列中显示的颜色。  
   
 将该报表制作为镶边报表时，若要保留在该表单元格中使用的颜色，添加一个矩形，然后向该矩形添加背景色。  
@@ -309,7 +309,7 @@ ms.locfileid: "63295728"
 
     ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
-## <a name="Lookup"></a>5.查找 CountryRegion 名称  
+## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5.查找 CountryRegion 名称  
 在此部分，创建 CountryRegion 数据集，使用 **Lookup** 函数显示国家/地区的名称，而非国家/地区的标识符。  
   
 ### <a name="to-create-the-countryregion-dataset"></a>创建 CountryRegion 数据集  
@@ -379,7 +379,7 @@ ms.locfileid: "63295728"
   
 11. 单击 **“运行”** 以预览报表。  
   
-## <a name="Count"></a>6.计算自上次采购后的天数  
+## <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6.计算自上次采购后的天数  
 在本部分中，添加一列，然后使用 **Now** 函数或 `ExecutionTime` 内置全局变量计算客户自上次采购至今的天数。  
   
 ### <a name="to-add-the-days-ago-column"></a>添加 Days Ago 列  
@@ -419,7 +419,7 @@ ms.locfileid: "63295728"
 
 11. 单击 **“运行”** 以预览报表。  
   
-## <a name="Indicator"></a>7.使用指示器显示销售情况对比  
+## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7.使用指示器显示销售情况对比  
 在本部分中，添加一个新列，使用指示器显示某个人的年初至今 (YTD) 采购量是高于还是低于平均 YTD 采购量。 **Round** 函数从值中去掉小数部分。  
   
 需通过几个步骤配置指示器及其状态。 如果需要，可以跳过“配置指示器”过程，将已完成的表达式从本教程复制/粘贴到“表达式”对话框  。  
@@ -514,7 +514,7 @@ ms.locfileid: "63295728"
 
     ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
-## <a name="GreenBar"></a>8.制作镶边报表  
+## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8.制作镶边报表  
 创建参数以便报表读者可指定要应用于报表的交替行的颜色，使报表成为镶边报表。  
   
 ### <a name="to-add-a-parameter"></a>添加参数  
@@ -611,7 +611,7 @@ ms.locfileid: "63295728"
     
     ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
-## <a name="Title"></a>（可选）添加报表标题  
+## <a name="optional-add-a-report-title"></a><a name="Title"></a>（可选）添加报表标题  
 为报表添加标题。  
   
 ### <a name="to-add-a-report-title"></a>添加报表标题  
@@ -630,7 +630,7 @@ ms.locfileid: "63295728"
   
 3.  为报表中的非白色镶边选择颜色，然后单击“查看报表”  。  
   
-## <a name="Save"></a>（可选）保存报表  
+## <a name="optional-save-the-report"></a><a name="Save"></a>（可选）保存报表  
 您可以将报表保存到报表服务器、SharePoint 库或本地计算机。 有关详细信息，请参阅[保存报表（报表生成器）](../reporting-services/report-builder/saving-reports-report-builder.md)。  
   
 在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  

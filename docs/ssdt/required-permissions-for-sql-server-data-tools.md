@@ -11,10 +11,10 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256994"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools 所需权限
@@ -35,7 +35,7 @@ ms.locfileid: "75256994"
   
 -   [针对 SQL Server 公共语言运行时 (SQL CLR) 项目的权限](#SQLCLRPermissions)  
   
-## <a name="DatabaseCreationAndDeploymentPermissions"></a>用于创建或部署数据库的权限  
+## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>用于创建或部署数据库的权限  
 必须具有以下权限才能创建或部署数据库。  
   
 |||  
@@ -51,10 +51,10 @@ ms.locfileid: "75256994"
   
 有关详细信息，请参阅 SQL Server 联机丛书。  
   
-## <a name="DatabaseRefactoringPermissions"></a>用于重构数据库的权限  
+## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a>用于重构数据库的权限  
 *数据库重构*仅在数据库项目内发生。 您必须有权使用数据库项目。 在您在目标数据库上部署更改之前，对目标数据库不需要具有权限。  
   
-## <a name="DatabaseUnitTestingPermissions"></a>用于在 SQL Server 数据库上执行单元测试的权限  
+## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>用于在 SQL Server 数据库上执行单元测试的权限  
 必须具有以下权限才能在数据库上执行单元测试。  
   
 |||  
@@ -66,10 +66,10 @@ ms.locfileid: "75256994"
 |在运行测试前部署数据库更改|您必须使用特权上下文数据库连接。 有关详细信息，请参阅[如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。|  
 |在运行测试前生成数据|您必须使用特权上下文数据库连接。 有关详细信息，请参阅[如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。|  
   
-## <a name="DataGenerationPermissions"></a>用于生成数据的权限  
+## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>用于生成数据的权限  
 必须对目标数据库中的对象具有 **INSERT** 和 **SELECT** 权限，才能通过使用数据生成器生成测试数据。 如果在生成数据前清除数据，则还必须对目标数据库中的对象具有 **DELETE** 权限。 若要重置某个表中的 **IDENTITY** 列，则必须拥有该表，或者必须是 db_owner 或 db_ddladmin 角色的成员。  
   
-## <a name="SchemaAndDataComparePermissions"></a>用于比较架构和数据的权限  
+## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>用于比较架构和数据的权限  
 您必须具有以下权限才能比较架构或数据。  
   
 |||  
@@ -82,10 +82,10 @@ ms.locfileid: "75256994"
   
 有关详细信息，请参阅 SQL Server 联机丛书。  
   
-## <a name="Transact-SQLEditorPermissions"></a>用于运行 Transact\-SQL 编辑器的权限  
+## <a name="permissions-to-run-the-transact-sql-editor"></a><a name="Transact-SQLEditorPermissions"></a>用于运行 Transact\-SQL 编辑器的权限  
 可以在 Transact\-SQL 编辑器内执行的工作由你对目标数据库的执行上下文确定。  
   
-## <a name="SQLCLRPermissions"></a>针对 SQL Server 公共语言运行时项目的权限  
+## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>针对 SQL Server 公共语言运行时项目的权限  
 下表列出了您为部署或调试 CLR 项目而必须具有的权限：  
   
 |操作|所需的权限|  

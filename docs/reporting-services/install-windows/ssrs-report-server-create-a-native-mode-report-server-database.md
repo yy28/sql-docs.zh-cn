@@ -13,10 +13,10 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866328"
 ---
 # <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>创建本机模式报表服务器数据库（SSRS 配置管理器）
@@ -32,7 +32,7 @@ ms.locfileid: "74866328"
   
  如果在本机模式的默认配置下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则安装报表服务器实例时会自动创建和配置报表服务器数据库。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器查看或修改安装程序为您配置的设置。  
   
-##  <a name="rsdbrequirements"></a> 开始之前  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> 开始之前  
  创建或配置报表服务器数据库是一个多步骤过程。 创建报表服务器数据库之前，请考虑要如何指定下列各项：  
   
  **选择数据库服务器**  

@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994291"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>使用 IRow 提取单行
@@ -31,7 +31,7 @@ ms.locfileid: "67994291"
 
   OLE DB Driver for SQL Server 中的 IRow  接口实现得以简化，以提高性能。 IRow 允许直接访问单行对象的列  。 如果预先知道命令执行的结果确实是生成单行，则 IRow 将检索该行的列  。 如果结果集包括多行，则 IRow 将只显示第一行  。  
   
- IRow 实现不允许行的任何导航  。 该行中的每一列只能访问一次，但有一个例外：可以一次访问一个列以查找列大小，然后再次提取数据。  
+ IRow 实现不允许行的任何导航  。 行中的每一列只能访问一次，以下情况例外：可以访问一次列以查找列大小，再次访问以提取数据。  
   
 > [!NOTE]  
 >  IRow::Open 只支持打开 DBGUID_STREAM 和 DBGUID_NULL 对象类型  。  

@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015634"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 执行存储过程并处理输出
@@ -36,13 +36,13 @@ ms.locfileid: "68015634"
   
 2.  通过使用 DBBINDING 结构数组创建一组绑定（每个参数标记一个）。  
   
-3.  通过使用 IAccessor::CreateAccessor  方法为定义的参数创建取值函数。 CreateAccessor 从一组绑定创建取值函数  。  
+3.  使用 IAccessor::CreateAccessor  方法，为定义的参数创建取值函数。 CreateAccessor 从一组绑定创建取值函数  。  
   
 4.  填写 DBPARAMS 结构。  
   
 5.  调用 Execute 命令（在这种情况下是调用存储过程）  。  
   
-6.  通过使用 IRowset::Release  方法处理行集并释放它。  
+6.  使用 IRowset::Release  方法，处理并释放行集。  
   
 7.  处理从存储过程接收的返回代码和输出参数值。  
   

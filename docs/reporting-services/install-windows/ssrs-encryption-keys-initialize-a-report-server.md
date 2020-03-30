@@ -15,10 +15,10 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080827"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS 加密密钥 - 初始化报表服务器
@@ -65,7 +65,7 @@ ms.locfileid: "77080827"
 >  还可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序以编程的方式初始化报表服务器。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>如何确认报表服务器初始化  
- 要确认报表服务器初始化，请通过在命令窗口中键入 https://\<servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令  。 如果发生 **RSReportServerNotActivated** 错误，则表示初始化失败。  
+ 要确认报表服务器初始化，请通过在命令窗口中键入 https://**servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令\<** 。 如果发生 **RSReportServerNotActivated** 错误，则表示初始化失败。  
   
 ## <a name="see-also"></a>另请参阅
 [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

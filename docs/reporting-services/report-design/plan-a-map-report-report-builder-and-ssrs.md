@@ -9,10 +9,10 @@ ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082417"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
@@ -21,7 +21,7 @@ ms.locfileid: "77082417"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> 指定地图的作用  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> 指定地图的作用  
  良好的报表设计可以提供相关的信息以帮助用户采取措施来解决问题。 若要创建有用的、易于理解的地图显示，请确定您希望地图帮助您回答的问题。 例如，在某个地图上，您可以实现以下数据类型的可视化，以确定市场商机：  
   
 -   每个商店的相关销售额。  
@@ -34,7 +34,7 @@ ms.locfileid: "77082417"
   
  在确定地图显示的作用之后，必须分析您需要的数据。 分析数据来自报表数据集。 位置数据来自您必须指定的空间数据源。  
   
-##  <a name="Data"></a> 指定空间数据和分析数据  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> 指定空间数据和分析数据  
  您必须指定您需要哪些空间数据和分析数据。  
   
  分析数据可来自报表数据集，来自与地图库中的地图一起包括的示例数据，或者来自与 ESRI 形状文件中的空间数据一起包括的分析数据。  
@@ -92,7 +92,7 @@ ms.locfileid: "77082417"
   
  当您已确定空间数据源、空间数据、分析数据源、分析数据和匹配字段时，您就已准备就绪，可以确定要向报表添加哪种类型的地图。  
   
-##  <a name="MapType"></a> 选择地图类型  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> 选择地图类型  
  当您运行“地图”向导时，可以向报表添加地图并添加第一个地图层。 通过向导，可以向报表添加以下地图类型之一：  
   
 -   基本图，显示位置而没有关联的分析数据。  
@@ -118,7 +118,7 @@ ms.locfileid: "77082417"
   
  可以单独为每个层自定义显示或数据选项。 有关运行向导后自定义地图的详细信息，请参阅 [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)中的“在何处可以获取 ESRI 形状文件？”。  
   
-##  <a name="Legend"></a> 规划图例  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> 规划图例  
  为了帮助用户解释地图，可以添加多个地图图例、一个色阶和一个距离刻度。 当您设计地图时，请规划要在何处显示图例。 可以指定有关每个图例的以下信息：  
   
 -   **图例位置。** 例如，图例可以显示在视区内部或外部，并相对于视区显示在 12 个分离的位置。  
@@ -135,7 +135,7 @@ ms.locfileid: "77082417"
   
  有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)和[更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
-##  <a name="Embedding"></a> 在报表定义大小与报表处理时间之间达到平衡  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> 在报表定义大小与报表处理时间之间达到平衡  
  针对地图的良好报表设计要求您在控制报表性能和报表定义大小的选项之间达到平衡。 基于空间数据或 Bing 地图图块的地图元素可以是静态的且可嵌入到报表定义中；它们也可以是动态的，而在每次处理报表时创建。 必须在静态或动态地图数据之间进行折衷，并找出适合您所在环境的平衡点。 在制定这一决策时，请考虑以下信息：  
   
 -   嵌入的地图元素可能显著增加报表定义的大小，但会减少在报表中查看地图所需的时间。 报表服务器可能具有大小限制，您需要注意这一点。  

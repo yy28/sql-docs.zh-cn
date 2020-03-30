@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028896"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
@@ -63,7 +63,7 @@ ms.locfileid: "69028896"
   
 阅读以深入了解 [Reporting Services 中的共享数据源](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
    
-## <a name="shared-dataset">创建共享数据集</a>  
+## <a name=""></a><a name="shared-dataset">创建共享数据集</a>  
   
 使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](../install-windows/install-report-builder.md)，或从 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
   
@@ -93,7 +93,7 @@ ms.locfileid: "69028896"
    
 现在，你便可以基于该数据集创建 KPI 和移动报表了。  可以针对相同的数据源创建多个数据集。 可以针对这些共享数据集创建多个 KPI 和移动报表。   
   
-## <a name="create-KPI">创建 KPI</a>  
+## <a name=""></a><a name="create-KPI">创建 KPI</a>  
 可在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中立即创建 KPI。    
   
 1. 在 Web 门户右上角，单击“新建” **“新建 KPI”**  >   。   
@@ -133,7 +133,7 @@ ms.locfileid: "69028896"
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">创建 Reporting Services 移动报表</a>  
+## <a name=""></a><a name="create-mobile-report">创建 Reporting Services 移动报表</a>  
    
 要创建 Reporting Services 移动报表，请 [安装 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkId=717766)，或从 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户启动它。 
 

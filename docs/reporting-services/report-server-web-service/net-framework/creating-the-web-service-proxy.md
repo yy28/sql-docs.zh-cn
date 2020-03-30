@@ -16,10 +16,10 @@ ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198307"
 ---
 # <a name="creating-the-web-service-proxy"></a>创建 Web 服务代理
@@ -117,7 +117,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- 还可以将“using”  （在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为“Import”  ）指令添加到报表服务器 Web 服务引用中。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
+ 还可以将“using”  （在  **中为“Import”** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）指令添加到报表服务器 Web 服务引用中。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
   
 ```vb  
 Import myNamespace.myReferenceName  

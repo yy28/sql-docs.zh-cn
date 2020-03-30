@@ -16,10 +16,10 @@ ms.assetid: 20403133-7a6a-4a03-8cbb-ccf9b3ab19d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6ec69aa6bef5f0a9faee3d1115fb1978f7a32cf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974348"
 ---
 # <a name="setdescription-method-sqlserverdatasource"></a>setDescription 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public void setDescription(java.lang.String description)
 #### <a name="parameters"></a>parameters  
  *description*  
   
- 一个包含说明的 String。  
+ 一个包含说明的 String  。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173607"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 大数据群集部署配置 Azure Kubernetes 服务
@@ -76,7 +76,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
    az account list-locations -o table
    ```
 
-1. 使用“**az group create**”命令创建资源组。 以下示例在 `westus2` 位置创建名为 `sqlbdcgroup` 的资源组。
+1. 使用“**az group create**”命令创建资源组。 以下示例在 `sqlbdcgroup` 位置创建名为 `westus2` 的资源组。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -161,7 +161,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
    kubectl get nodes
    ```
 
-## <a id="troubleshoot"></a> 故障排除
+## <a name="troubleshooting"></a><a id="troubleshoot"></a> 故障排除
 
 如果使用上述命令创建 Azure Kubernetes 服务时遇到任何问题，请尝试以下解决方法：
 

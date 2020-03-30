@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265154"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）
@@ -26,12 +26,12 @@ ms.locfileid: "68265154"
 ## <a name="add-leading-zeroes-if-missing"></a>添加前导零（如果缺少）
 从版本 5.6.0 开始，连接或语句属性 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 允许用户设置十进制字符串格式。 此属性需要一个布尔值（true 或 false），并且仅影响提取结果中的十进制值或数值的格式设置。 换言之，此属性不会对其他操作（如插入或更新）产生影响。
 
-默认情况下，`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 为 false。 如果设置为 true，则将为小于 1 的任何十进制值添加前导零到十进制字符串。
+默认情况下，`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 为 false  。 如果设置为 true，则将为小于 1 的任何十进制值添加前导零到十进制字符串。
 
 ## <a name="configure-number-of-decimal-places"></a>配置小数位数
 打开 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 后，另一个连接或语句属性 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 允许用户在显示 money 和 smallmoney 数据时配置小数位数。 它接受 [0, 4] 范围内的整数值，在显示时可能会出现舍入。 但是，基础 money 数据保持不变。
 
-语句属性始终重写相应的连接设置。 请注意，`PDO::SQLSRV_ATTR_DECIMAL_PLACES` 选项仅影响 money 数据，并且 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 必须设置为 true。 否则，无论 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 如何设置，都会关闭格式设置。
+语句属性始终重写相应的连接设置。 请注意，`PDO::SQLSRV_ATTR_DECIMAL_PLACES` 选项仅  影响 money 数据，并且 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 必须设置为 true。 否则，无论 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 如何设置，都会关闭格式设置。
 
 > [!NOTE]
 > 由于 money 或 smallmoney 字段的数值范围为 4，因此，将 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 设置为任何负数或大于 4 的任何值都将被忽略。 不建议使用任何格式化的 money 数据作为任何计算的输入。

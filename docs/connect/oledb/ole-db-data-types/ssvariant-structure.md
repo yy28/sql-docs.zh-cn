@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 09ff4af7026ce75a8668db22910e550dc0c72857
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995167"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 结构
@@ -69,13 +69,13 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|支持 bit  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。|  
 |rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|支持 uniqueidentifier  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|支持 numeric  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|支持 date[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型  。|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|支持 date **数据类型**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|支持 smalldatetime  、datetime  和 datetime2  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。|  
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|支持 time  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> tTime2Val  (DBTIME2  )<br /><br /> bScale  (BYTE  ) 指定 tTime2Val  值的小数位数。|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|支持 datetime2  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> tsDataTimeVal  (DBTIMESTAMP)<br /><br /> bScale  (BYTE  ) 指定 tsDataTimeVal  值的小数位数。|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|支持 datetimeoffset  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> tsoDateTimeOffsetVal  (DBTIMESTAMPOFFSET  )<br /><br /> bScale  (BYTE  ) 指定 tsoDateTimeOffsetVal  值的小数位数。|  
-|NCharVal|没有对应的 OLE DB 类型指示器。|**struct _NCharVal**|**VT_SS_WVARSTRING、**<br /><br /> **VT_SS_WSTRING**|支持 nchar  和 nvarchar  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength  (SHORT  ) 指定 pwchNCharVal  指向的字符串的实际长度。 不包括尾零。<br /><br /> sMaxLength  (SHORT  ) 指定 pwchNCharVal  指向的字符串的最大长度。<br /><br /> 指向字符串的 pwchNCharVal  (WCHAR \*  ) 指针。<br /><br /> 不使用的成员：rgbReserved  、dwReserved  和 pwchReserved  。|  
-|CharVal|没有对应的 OLE DB 类型指示器。|**struct _CharVal**|**VT_SS_STRING、**<br /><br /> **VT_SS_VARSTRING**|支持 char  和 varchar  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength  (SHORT  ) 指定 pchCharVal  指向的字符串的实际长度。 不包括尾零。<br /><br /> sMaxLength  (SHORT  ) 指定 pchCharVal  指向的字符串的最大长度。<br /><br /> 指向字符串的 pchCharVal  (CHAR \*  ) 指针。<br /><br /> 不使用的成员：<br /><br /> rgbReserved  、dwReserved  和 pwchReserved  。|  
+|NCharVal|没有对应的 OLE DB 类型指示器。|**struct _NCharVal**|**VT_SS_WVARSTRING、**<br /><br /> **VT_SS_WSTRING**|支持 nchar  和 nvarchar  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength  (SHORT  ) 指定 pwchNCharVal  指向的字符串的实际长度。 不包括尾零。<br /><br /> sMaxLength  (SHORT  ) 指定 pwchNCharVal  指向的字符串的最大长度。<br /><br /> 指向字符串的 pwchNCharVal  (WCHAR  \*) 指针。<br /><br /> 不使用的成员：rgbReserved  、dwReserved  和 pwchReserved  。|  
+|CharVal|没有对应的 OLE DB 类型指示器。|**struct _CharVal**|**VT_SS_STRING、**<br /><br /> **VT_SS_VARSTRING**|支持 char  和 varchar  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength  (SHORT  ) 指定 pchCharVal  指向的字符串的实际长度。 不包括尾零。<br /><br /> sMaxLength  (SHORT  ) 指定 pchCharVal  指向的字符串的最大长度。<br /><br /> 指向字符串的 pchCharVal  (CHAR  \*) 指针。<br /><br /> 不使用的成员：<br /><br /> rgbReserved  、dwReserved  和 pwchReserved  。|  
 |BinaryVal|没有对应的 OLE DB 类型指示器。|**struct _BinaryVal**|**VT_SS_VARBINARY、**<br /><br /> **VT_SS_BINARY**|支持 binary  和 varbinary  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength  (SHORT  ) 指定 prgbBinaryVal  指向的数据的实际长度。<br /><br /> sMaxLength  (SHORT  ) 指定 prgbBinaryVal  指向的数据的最大长度。<br /><br /> 指向二进制数据的 prgbBinaryVal  (BYTE  \*) 指针。<br /><br /> 不使用的成员：dwReserved  。|  
 |UnknownType|不使用|不使用|不使用|不使用|  
 |BLOBType|不使用|不使用|不使用|不使用|  

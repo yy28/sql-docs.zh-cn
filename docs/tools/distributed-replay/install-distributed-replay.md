@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74992180"
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
@@ -29,7 +29,7 @@ ms.locfileid: "74992180"
   
 -   [使用配置文件安装 Distributed Replay](#bkmk_configuration_file)  
   
-##  <a name="bkmk_wizard"></a> 从安装向导安装 Distributed Replay  
+##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> 从安装向导安装 Distributed Replay  
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
   
 -   您可以将管理工具与 Distributed Replay 控制器安装在同一台计算机上，也可以安装在不同的计算机上。  
@@ -136,7 +136,7 @@ ms.locfileid: "74992180"
 ### <a name="net-framework-security"></a>.NET Framework 安全性  
  您必须具有管理权限才能安装任何 Distributed Replay 功能。 只有拥有 sysadmin 权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名才可以将客户端服务帐户添加到测试服务器的 sysadmin 服务器角色中。 有关分布式重播的安全注意事项的详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)。  
   
-##  <a name="bkmk_command_prompt"></a> 从命令提示符安装 Distributed Replay  
+##  <a name="install-distributed-replay-from-the-command-prompt"></a><a name="bkmk_command_prompt"></a> 从命令提示符安装 Distributed Replay  
  通过从命令提示符安装 Distributed Replay 的新实例，您可以指定要安装的功能以及如何配置这些功能。 在命令提示符下安装支持对 Distributed Replay 组件进行安装、修复、升级和卸载。 通过命令提示符安装时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持完全静默模式（通过使用 /Q 参数）。  
   
 > [!NOTE]  
@@ -182,7 +182,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /C
 setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CLTSVCACCOUNT="domain\svcuser" /CLTSVCPASSWORD="password" /CLTSTARTUPTYPE=Automatic /CLTCTLRNAME=ControllerMachineName /CLTWORKINGDIR="C:\WorkingDir" /CLTRESULTDIR="C:\ResultDir  
 ```  
   
-##  <a name="bkmk_configuration_file"></a> 使用配置文件安装 Distributed Replay  
+##  <a name="install-distributed-replay-using-a-configuration-file"></a><a name="bkmk_configuration_file"></a> 使用配置文件安装 Distributed Replay  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供基于用户输入和系统默认值生成配置文件的功能。 如果您指定要安装管理工具，则可以使用配置文件来部署三个 Distributed Replay 组件（管理工具、Distributed Replay 控制器和 Distributed Replay 客户端）。 它支持安装、修复和卸载 Distributed Replay 组件。  
   
  安装程序仅支持通过命令行使用配置文件。 下面列出了在使用配置文件时参数的处理顺序：  

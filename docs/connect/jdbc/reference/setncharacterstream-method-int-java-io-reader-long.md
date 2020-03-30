@@ -11,10 +11,10 @@ ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76c59a5e367e3d3e8524a64f5ae7ac6dab85b529
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973946"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>setNCharacterStream 方法 (int, java.io.Reader, long)
@@ -32,9 +32,9 @@ public final void setNCharacterStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>parameters  
- parameterIndex  
+ parameterIndex   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
  *value*  
   
@@ -42,7 +42,7 @@ public final void setNCharacterStream(int parameterIndex,
   
  *length*  
   
- 指示参数值中字符数的 long。  
+ 指示参数值中字符数的 long  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,11 +50,11 @@ public final void setNCharacterStream(int parameterIndex,
 ## <a name="remarks"></a>备注  
  此 setNCharacterStream 方法是由 java.sql.PreparedStatement 接口中的 setNCharacterStream 方法指定的。  
   
- 此方法应用于 NCHAR、NVARCHAR、NTEXT 和 XML 数据类型。  
+ 此方法应用于 NCHAR  、NVARCHAR  、NTEXT  和 XML  数据类型。  
   
- 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   
- 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setNCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度  。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setNCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [setNCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   

@@ -9,17 +9,17 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65105930"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 课：设置报表格式 (Reporting Services)
 
 既然您已经向 Sales Orders 报表添加了一个数据区域和一些字段，那么您就可以设置日期和货币字段以及列标题的格式。
 
-## <a name="bkmk_format_date"></a>设置日期格式
+## <a name="format-the-date"></a><a name="bkmk_format_date"></a>设置日期格式
 
 默认情况下，Date 字段表达式显示日期和时间信息。 您可以设置其格式，使其只显示日期。
 
@@ -30,7 +30,7 @@ ms.locfileid: "65105930"
 5. 选择“确定”  以应用格式。
 6. 预览报表以查看对 `[Date]` 字段格式的更改，然后更改回设计视图。
 
-## <a name="bkmk_format_currency"></a>设置货币格式
+## <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>设置货币格式
 
 LineTotal 字段表达式显示常规数字。 可以设置其格式，以使其显示货币形式的数字。
 
@@ -44,7 +44,7 @@ LineTotal 字段表达式显示常规数字。 可以设置其格式，以使其
 5. 选择“确定”  以应用格式。
 6. 预览报表以查看对 `[LineTotal]` 表达式列的更改，然后更改回设计视图。  
 
-## <a name="bkmk_change_textstyle"></a>更改文本样式和列宽
+## <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>更改文本样式和列宽
 
 可以通过突出显示标题行并调整数据列的宽度向报表添加其他格式。
 
@@ -65,7 +65,7 @@ LineTotal 字段表达式显示常规数字。 可以设置其格式，以使其
 
 ## <a name="next-steps"></a>后续步骤
 
-在本课程中，你已成功设置列标题和字段表达式格式。 接下来，向报表添加分组和总计。 继续学习[第 6 课：添加分组和总计 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)。
+在本课程中，你已成功设置列标题和字段表达式格式。 接下来，向报表添加分组和总计。 继续学习[第 6 课：添加分组和总计 (Reporting Services)](lesson-6-adding-grouping-and-totals-reporting-services.md)。
 
 ## <a name="see-also"></a>另请参阅
 

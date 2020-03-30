@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571580"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
@@ -69,7 +69,7 @@ ms.locfileid: "65571580"
   
      根据所选列的数据类型，将列出不同的比较运算符。 如果该列具有日期数据类型，则在规则的阈值旁将显示一个日历图标。 您可以通过单击日历中的日期或者键入日期，输入数据。  
   
-     数据警报设计器提供两种比较模式：“值输入模式”  和“字段选择模式”  。 默认模式为 **“值输入模式”** 。 仅当处于 **“值输入模式”** 且正在使用 **“是”** 比较时，才可添加 OR 子句。  
+     数据警报设计器提供了两种比较模式： **“值输入模式”** 和 **“字段选择模式”** 。 默认模式为 **“值输入模式”** 。 仅当处于 **“值输入模式”** 且正在使用 **“是”** 比较时，才可添加 OR 子句。  
   
 9. 若要添加 OR 子句，请单击向下箭头，然后单击“值输入模式”  。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "65571580"
   
 20. 或者，在 **“主题”** 文本框中，更新警报消息的“主题”行。  
   
-     默认“主题”为“\<数据警报名称> 的数据警报”  。  
+     默认“主题”为“**数据警报名称> 的数据警报”\<** 。  
   
 21. 还可以在 **“说明”** 文本框中键入对警报消息的说明。  
   
-22. 单击“ **保存**”。  
+22. 单击“保存”  。  
 
 ## <a name="see-also"></a>另请参阅
 

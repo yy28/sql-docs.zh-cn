@@ -9,10 +9,10 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081937"
 ---
 # <a name="report-datasets-ssrs"></a>报表数据集 (SSRS)
@@ -36,12 +36,12 @@ ms.locfileid: "77081937"
   
  您还可以通过添加包括其所依赖的数据集的报表部件，向报表添加数据集。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要了解如何创建显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中数据的报表，请参阅[教程：生成基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。 若要生成包含自己数据的报表，请参阅[教程：脱机生成快速图表报表（报表生成器）](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 若要了解如何创建可显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据的报表，请参阅[教程：创建基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。 若要生成包含自身数据的报表，请参阅[教程：脱机创建快速图表报表（报表生成器）](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> 添加报表数据  
+##  <a name="adding-report-data"></a><a name="Methods"></a> 添加报表数据  
  在报表生成器中，您可以通过以下方式添加报表数据。  
   
 -   将报表部件从报表服务器添加到报表。 每个报表部件都是独立的并包括相关数据集。 这些数据集是预定义的。  
@@ -76,7 +76,7 @@ ms.locfileid: "77081937"
 -   [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-##  <a name="QuickStart"></a> 通过报表部件添加数据  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> 通过报表部件添加数据  
  报表部件包含它们所依赖的数据集。 这些数据集是在报表服务器上提供的共享数据源的基础上生成的。 在报表生成器中，在向您的报表中添加报表部件时，相关数据集将添加到报表中，就像您手动添加了它们一样。 例如，一个预定义的图表包含一个数据集。 若要查看数据，请预览报表。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "77081937"
 -   有关详细信息，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)和[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
   
-##  <a name="Queries"></a> 查询和查询设计器  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> 查询和查询设计器  
  若要指定数据源中所需的数据，您应该生成一个查询命令。 每种数据源类型都提供相关的“查询设计器”  ，以帮助您生成查询。 查询设计器可为图形查询设计器或基于文本的查询设计器。 在图形查询设计器中，可查看表示外部数据源中数据的元数据，并且通过将字段或实体拖到查询设计曲面图，以交互方式生成查询。 在基于文本的查询设计器中，您可以按照外部数据源支持的查询语法编写或导入查询。  
   
  在查询设计器中，可以运行查询以查看示例数据并验证查询命令语法。 结果集中的列名将成为您在“报表数据”窗格中看到的字段名称。 结果集必须是单组行和列，在其中，为每行数据存在相同数目的值。 不支持来自单个查询的多个结果集。 不支持不具有固定数目的列并且可为每一行生成不同数目的数据值的不规则层次结构。  
@@ -97,7 +97,7 @@ ms.locfileid: "77081937"
  数据扩展插件和外部数据源之间的通信由数据提供程序处理。 对查询命令语法的支持、查询参数和结果集中值的数据类型由各数据访问接口确定。 有关详细信息，请参阅与特定类型数据扩展插件和[查询设计工具 &#40;SSRS&#41;](query-design-tools-ssrs.md) 相关的主题。  
   
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
@@ -117,7 +117,7 @@ ms.locfileid: "77081937"
  [在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
   
-##  <a name="Section"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="Section"></a> 本节内容  
  [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
  [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

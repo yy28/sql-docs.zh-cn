@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844592"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
@@ -41,7 +41,7 @@ ms.locfileid: "73844592"
   
 -   具有创建新 Azure 服务器或选择现有 Azure 服务器所需的连接和登录名信息。  
   
-##  <a name="EnableTSQLServer"></a> 先决条件：在服务器上启用 Stretch Database  
+##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 先决条件：在服务器上启用 Stretch Database  
  必须先在本地服务器上启用 Stretch Database，然后才能在数据库或表上启用它。 此操作需要 sysadmin 或 serveradmin 权限。  
   
 -   如果你拥有必要的管理权限，“为数据库启用 Stretch”  向导将会为服务器配置 Stretch。  
@@ -60,10 +60,10 @@ GO
   
  有关详细信息，请参阅[配置远程数据存档服务器配置选项](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md)和 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
-##  <a name="Wizard"></a> 使用向导在数据库上启用 Stretch Database  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-database"></a><a name="Wizard"></a> 使用向导在数据库上启用 Stretch Database  
  有关为数据库启用延伸向导的信息，包括必须输入的信息以及必须做出的选择，请参阅 [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)（通过运行“启用数据库延伸向导”入门）。  
   
-##  <a name="EnableTSQLDatabase"></a> 使用 Transact-SQL 在数据库上启用 Stretch Database  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-database"></a><a name="EnableTSQLDatabase"></a> 使用 Transact-SQL 在数据库上启用 Stretch Database  
  必须先在数据库上启用 Stretch Database，然后才能在单个表上启用它。  
   
  在数据库或表上启用 Stretch Database 需要 db_owner 权限。 对数据库启用 Stretch Database 还需要有 CONTROL DATABASE 权限。  

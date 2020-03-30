@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.openlocfilehash: 666b10f91db9fa5cdf53dd2a826b38752708e3cd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77608472"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216969"
 ---
 # <a name="alerts"></a>警报
 
@@ -108,7 +108,9 @@ ms.locfileid: "77608472"
     > [!NOTE]  
     > 存储服务器名称的事件日志变量不得超过 32 个字符。 因此，如果主机名和实例名的总大小超过 32 个字符，可能会出现以下错误：
     
-    警告，[466]，生成性能计数器警报时，无法复制服务器名称 LONGNAMESQLSERV\LONGINSTANCENAME。
+   ``` 
+   Warning,[466] Failed to copy server name LONGNAMESQLSERV\LONGINSTANCENAME while generating performance counter alerts.
+   ```
   
   
 ## <a name="selecting-a-wmi-event"></a>选择 WMI 事件  

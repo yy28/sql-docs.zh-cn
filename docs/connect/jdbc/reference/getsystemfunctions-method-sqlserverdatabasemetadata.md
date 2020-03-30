@@ -16,10 +16,10 @@ ms.assetid: 6d390ec5-9ee2-49c4-b661-a93b55691dd1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08df5c1c52712e8180d18dbe930cea271ca03e64
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979277"
 ---
 # <a name="getsystemfunctions-method-sqlserverdatabasemetadata"></a>getSystemFunctions 方法 (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public java.lang.String getSystemFunctions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含系统函数列表的 String。  
+ 包含系统函数列表的 String  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

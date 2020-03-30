@@ -11,17 +11,17 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 7ad2b810092fae850a667a1611880f4b03b6a9a8
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79078950"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>安装 Microsoft ODBC Driver for SQL Server (macOS)
 
 本文介绍如何在 macOS 上安装 Microsoft ODBC Driver for SQL Server。 本文还包括有关 SQL Server 的可选命令行工具（`bcp` 和 `sqlcmd`）以及 unixODBC 开发标头的说明。
 
-本文提供了用于通过 bash shell 安装 ODBC 驱动程序的命令。 如果要直接下载包，请参阅[下载 ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md)。
+本文提供了用于从 bash shell 安装 ODBC 驱动程序的命令。 如果要直接下载包，请参阅[下载 ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md)。
 
 ## <a name="microsoft-odbc-17"></a>Microsoft ODBC 17
 
@@ -41,7 +41,7 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 
 以下各节提供了有关在 macOS 上安装 Microsoft ODBC 驱动程序的早期版本的说明。
 
-## <a id="13.1"></a> ODBC 13.1
+## <a name="odbc-131"></a><a id="13.1"></a> ODBC 13.1
 
 使用以下命令在 OS X 10.11 (El Capitan) 和 macOS 10.12 (Sierra) 上安装 Microsoft ODBC Driver 13.1 for SQL Server：
 
@@ -60,7 +60,7 @@ macOS 上的 ODBC 驱动程序由以下组件构成：
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|包含该驱动程序所有功能的动态库 (`dylib`) 文件。 此文件安装在 `/usr/local/lib/` 中。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 ODBC Driver 17 的 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` 中和 ODBC Driver 13 的 `[driver .dylib directory]../share/msodbcsql/resources/en_US/` 中。 | 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：** 无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/usr/local/include/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/include/msodbcsql/` 中。 |
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/usr/local/include/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/include/msodbcsql/` 中。 |
 |LICENSE.txt|包含最终用户许可协议条款的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/local/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/share/doc/msodbcsql/` 中。 |
 |RELEASE_NOTES|包含发行说明的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/local/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/share/doc/msodbcsql/` 中。 |
 

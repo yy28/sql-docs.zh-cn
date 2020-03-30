@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 SQLSRV 驱动程序检索 I/O 参数 | Microsoft Docs
+title: 操作说明：使用 SQLSRV 驱动程序检索 I/O 参数 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -12,10 +12,10 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993465"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序检索输入和输出参数
@@ -30,9 +30,9 @@ ms.locfileid: "67993465"
 下面的示例将调用一个从指定员工的可用休假小时数减去已用休假小时数的存储过程。 表示已用休假小时数的变量 *$vacationHrs*将作为输入参数传递给该存储过程。 在更新可用休假小时数之后，该存储过程将使用同一参数返回剩余的休假小时数。  
   
 > [!NOTE]  
-> 将 *$vacationHrs* 初始化为 4 可将返回的 PHPTYPE 设置为整数。 若要确保数据类型的完整性，应先初始化输入/输出参数并随后调用存储过程，或者应指定所需的 PHPTYPE。 有关指定 PHPTYPE 的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
+> 将 *$vacationHrs* 初始化为 4 可将返回的 PHPTYPE 设置为整数。 若要确保数据类型的完整性，应先初始化输入/输出参数并随后调用存储过程，或者应指定所需的 PHPTYPE。 有关指定 PHPTYPE 的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
-因为该存储过程返回两个结果，所以在执行该存储过程之后必须调用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)，使输出参数的值可用。 调用 sqlsrv_next_result 后，$vacationHrs 将包含存储过程返回的输出参数的值。  
+因为该存储过程返回两个结果，所以在执行该存储过程之后必须调用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)，使输出参数的值可用。 调用 sqlsrv_next_result 后，$vacationHrs 将包含存储过程返回的输出参数的值   。  
   
 > [!NOTE]  
 > 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  

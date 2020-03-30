@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 411d03198633354169e7faf8f5693685e078f2fa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75239153"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
@@ -46,46 +46,46 @@ ms.locfileid: "75239153"
   
 ## <a name="before-you-begin"></a>开始之前  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>设置作业步骤的成功流或失败流  
   
-1.  在 **对象资源管理器**中，展开 **“SQL Server 代理”**，然后展开 **“作业”**。  
+1.  在 **对象资源管理器**中，展开 **“SQL Server 代理”** ，然后展开 **“作业”** 。  
   
-2.  右键单击要编辑的作业，然后单击“属性”。  
+2.  右键单击要编辑的作业，然后单击“属性”  。  
   
-3.  选择 **“步骤”** 页，单击一个步骤，再单击 **“编辑”**。  
+3.  选择 **“步骤”** 页，单击一个步骤，再单击 **“编辑”** 。  
   
 4.  在 **“作业步骤属性”** 对话框中，选择 **“高级”** 页。  
   
-5.  在“成功时要执行的操作”列表中，单击作业步骤成功完成时要执行的操作。  
+5.  在“成功时要执行的操作”  列表中，单击作业步骤成功完成时要执行的操作。  
   
-6.  在 **“重试次数”** 框中输入介于 0 到 9999 之间的次数，应将作业步骤重复该次数，然后才能认为其失败。 如果在“重试次数”框中输入的值大于 0，则应在“重试间隔（分钟）”框中输入介于 1 到 9999 之间的分钟数，必须经过该间隔后才能重试作业步骤。  
+6.  在 **“重试次数”** 框中输入介于 0 到 9999 之间的次数，应将作业步骤重复该次数，然后才能认为其失败。 如果在“重试次数”  框中输入的值大于 0，则应在“重试间隔（分钟）”  框中输入介于 1 到 9999 之间的分钟数，必须经过该间隔后才能重试作业步骤。  
   
 7.  在 **“失败时要执行的操作”** 列表中，单击作业步骤失败时要执行的操作。  
   
 8.  如果作业是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，则可以从下列选项中进行选择：  
   
-    -   在 **“输出文件”** 框中，输入要将脚本输出写入的输出文件名。 默认情况下，每次执行作业步骤时都覆盖该文件。 如果不希望覆盖输出文件，请选中 **“将输出追加到现有文件”**。  
+    -   在 **“输出文件”** 框中，输入要将脚本输出写入的输出文件名。 默认情况下，每次执行作业步骤时都覆盖该文件。 如果不希望覆盖输出文件，请选中 **“将输出追加到现有文件”** 。  
   
-    -   如果希望将作业步骤记录到一个数据库表中，请选中 **“记录到表”** 。 默认情况下，每次执行作业步骤时都覆盖该表的内容。 如果不希望覆盖表内容，则请选中 **“将输出追加到表中的现有条目”**。 在执行作业步骤后，您可以通过单击 **“查看”** 来查看此表的内容。  
+    -   如果希望将作业步骤记录到一个数据库表中，请选中 **“记录到表”** 。 默认情况下，每次执行作业步骤时都覆盖该表的内容。 如果不希望覆盖表内容，则请选中 **“将输出追加到表中的现有条目”** 。 在执行作业步骤后，您可以通过单击 **“查看”** 来查看此表的内容。  
   
     -   如果希望将输出包括在步骤的历史记录中，请选中 **“在历史记录中包含步骤输出”** 。 仅当没有错误时，才会显示输出结果。 此外，输出可能会被截断。  
   
 9. 如果 **“作为以下用户运行”** 列表可用，则选择具有作业要使用的凭据的代理帐户。  
   
-## <a name="TSQL"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>设置作业步骤的成功流或失败流  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE msdb;  
@@ -101,7 +101,7 @@ ms.locfileid: "75239153"
   
 有关详细信息，请参阅 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
   
-## <a name="SMO"></a>使用 SQL Server 管理对象  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理对象  
 **设置作业步骤的成功流或失败流**  
   
 通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 **JobStep** 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  

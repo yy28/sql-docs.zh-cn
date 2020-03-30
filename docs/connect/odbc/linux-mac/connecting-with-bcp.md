@@ -13,10 +13,10 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996617"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
@@ -63,7 +63,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -d  
 使值传递给将解释为数据源名称 (DSN) 的 `bcp` -S 选项。 有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的“sqlcmd 和 bcp 中的 DSN 支持”。  
   
-- -e error_file 指定错误文件的完整路径，此文件用于存储 `bcp` 实用工具无法从文件传输到数据库的所有行  。  
+- -e error_file 指定错误文件的完整路径，此文件用于存储  *实用工具无法从文件传输到数据库的所有行*`bcp`。  
   
 - -E  
 将导入数据文件中的一个或多个标识值用于标识列。  

@@ -16,10 +16,10 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581445"
 ---
 # <a name="report-and-snapshot-size-limits"></a>报表和快照的大小限制
@@ -50,7 +50,7 @@ ms.locfileid: "65581445"
  仅在呈现到 Excel 格式时，才对报表大小有严格限制。 工作表不能超过 65536 行或 256 列。 其他呈现格式没有这些限制，因此大小仅受服务器上资源量的限制。  
   
 > [!NOTE]  
->  报表处理和呈现都在内存中进行。 如果您具有大型报表或大量用户，则务必进行某种容量规划，确保您执行的报表服务器部署令用户满意。 若要详细了解工具和指南，请参阅 MSDN 上发布的以下文章：[计划使用 Reporting Services 实现可伸缩性和性能](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10))和[使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](https://go.microsoft.com/fwlink/?LinkID=77519)。  
+>  报表处理和呈现都在内存中进行。 如果您具有大型报表或大量用户，则务必进行某种容量规划，确保您执行的报表服务器部署令用户满意。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容： [Planning for Scalability and Performance with Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) （规划 Reporting Services 的扩展性和性能）和 [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519)（使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试）。  
   
 ## <a name="measuring-snapshot-storage"></a>度量快照存储  
  任何给定快照的大小都与报表中的数据量成正比。 快照通常比报表服务器上存储的其他项大得多。 快照大小通常在几 MB 到几十 MB 之间。 如果报表非常大，则可能会看到更大的快照。 根据使用快照的频率以及配置报表历史记录的方式，报表服务器数据库所需的磁盘空间量可能会在短期内迅速增加。  

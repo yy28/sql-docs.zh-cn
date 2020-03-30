@@ -11,10 +11,10 @@ ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7936f33fd7a831d19e7978681cbb169f3b9aba7b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028394"
 ---
 # <a name="basic-data-types-sample"></a>基本数据类型示例
@@ -38,7 +38,7 @@ ms.locfileid: "69028394"
   
 ## <a name="example"></a>示例
 
-在下面的示例中，示例代码先与数据库建立连接，再从 DataTypesTable 测试表中检索一行数据。 然后，将调用自定义的 displayRow 方法，以使用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的各种 get\<Type> 方法来显示结果集中的所有数据。  
+在下面的示例中，示例代码先与数据库建立连接，再从 DataTypesTable 测试表中检索一行数据。 然后，将调用自定义的 displayRow 方法，以使用 \<SQLServerResultSet[ 类的各种 get](../../../connect/jdbc/reference/sqlserverresultset-class.md)Type> 方法来显示结果集中的所有数据。  
   
 接下来，示例代码使用 SQLServerResultSet 类的各种 update\<Type> 方法来更新结果集中的数据，然后调用 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法将输入更新到数据库中。  
   

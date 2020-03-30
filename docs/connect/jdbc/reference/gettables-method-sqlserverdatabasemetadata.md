@@ -16,10 +16,10 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979210"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 方法 (SQLServerDatabaseMetaData)
@@ -71,7 +71,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**字符串**|表架构名称。|  
 |TABLE_NAME|**字符串**|表名称。|  
 |TABLE_TYPE|**字符串**|表类型。|  
-|REMARKS|**字符串**|表的说明。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
+|REMARKS|**字符串**|表的说明。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不返回此列的值。|  
 |TYPE_CAT|**字符串**|JDBC 驱动程序不支持此类型。|  
 |TYPE_SCHEM|**字符串**|JDBC 驱动程序不支持此类型。|  
 |TYPE_NAME|**字符串**|JDBC 驱动程序不支持此类型。|  

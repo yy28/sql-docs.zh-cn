@@ -9,10 +9,10 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1c9edca5b50403f47b82cd2e69d51eb568c66f8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081784"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 连接类型 (SSRS)
@@ -22,17 +22,17 @@ ms.locfileid: "77081784"
   
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a> 连接字符串  
+##  <a name="connection-string"></a><a name="Connection"></a> 连接字符串  
  请联系数据库管理员，获取连接信息以及用于连接到数据源的凭据。 下面的连接字符串示例指定使用端口 8000 的服务器上的 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 数据源，以及使用 SOAP 的 Internet 上的 XML for Analysis Services (XMLA)：  
   
 ```  
 DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- 有关更多连接字符串示例，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 有关更多连接字符串的示例，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Credentials"></a> 凭据  
+##  <a name="credentials"></a><a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。  
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
@@ -40,7 +40,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  有关详细信息，请参阅[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-##  <a name="Query"></a> 查询  
+##  <a name="queries"></a><a name="Query"></a> 查询  
  可以在设计模式或查询模式下使用图形查询设计器，通过浏览数据源中的基础数据结构来生成多维表达式 (MDX) 查询。 在设计时，您可以采用交互方式从查询设计器中运行查询，以查看结果。 生成的查询定义了数据集中的字段。 在运行时，将从数据源返回实际数据。 使用图形查询设计器执行以下操作：  
   
 -   在设计模式下，将维度、成员、成员属性和关键数字从数据源拖至“数据”窗格，以生成多维表达式 (MDX) 查询。 将计算成员从“计算成员”窗格拖至“数据”窗格，以定义附加数据集字段。  
@@ -52,7 +52,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  有关使用此查询设计器的详细信息，请参阅 [SAP NetWeaver BI 查询设计器用户界面（报表生成器）](https://msdn.microsoft.com/library/8edda06d-1608-498b-bd50-10905e54f6ce)。  
   
   
-##  <a name="Extended"></a> 扩展字段属性  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> 扩展字段属性  
  [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 数据源支持扩展字段属性。 扩展字段属性是除了通过数据处理扩展插件为数据集字段定义的 **Value** 和 **IsMissing** 之外的其他属性。 扩展属性包括预定义属性和自定义属性。 预定义属性是对多个数据源通用的属性。 自定义属性对于每个数据源都是唯一的。  
   
 ### <a name="working-with-field-properties"></a>使用字段属性  
@@ -94,13 +94,13 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  有关在表达式中使用字段和字段属性的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
   
-##  <a name="Remarks"></a> 注释  
+##  <a name="remarks"></a><a name="Remarks"></a> 注释  
  不是所有的报表传递模式都受到此数据访问接口的支持。 此数据处理扩展插件不支持通过数据驱动订阅传递报表。 有关详细信息，请参阅[使用外部数据源提供订阅方数据（数据驱动订阅）](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
  有关详细信息，请参阅 [Using SQL Server 2008 Reporting Services with SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352)（使用具有 SAP NetWeaver Business Intelligence 的 SQL Server 2008 Reporting Services）。  
   
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
   
  [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -110,7 +110,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> 相关章节  
+##  <a name="related-sections"></a><a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  

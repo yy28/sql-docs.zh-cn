@@ -11,17 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: kenvh
 ms.openlocfilehash: 63681ee474d4993e248bf02dcabd9065317ffa39
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028057"
 ---
 # <a name="fips-mode"></a>FIPS 模式
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver for SQL Server 支持在配置为“符合 FIPS 140 标准”的 JVM 中运行。
+Microsoft JDBC Driver for SQL Server 支持在配置为“符合 FIPS 140 标准”的 JVM 中运行  。
 
 #### <a name="prerequisites"></a>必备条件
 
@@ -87,11 +87,11 @@ private Certificate getCertificate(String pathName)
 
 |properties|类型|默认|说明|说明|
 |---|---|---|---|---|
-|encrypt|布尔 [“true / false”]|“false”|对于启用了 FIPS 的 JVM，加密属性应为 true||
-|TrustServerCertificate|布尔 [“true / false”]|“false”|对于 FIPS，用户需要验证证书链，因此用户应将“false”值用于此属性。 ||
+|encrypt|布尔 [“true / false”]|“false”|对于启用了 FIPS 的 JVM，加密属性应为 true ||
+|TrustServerCertificate|布尔 [“true / false”]|“false”|对于 FIPS，用户需要验证证书链，因此用户应将“false”值用于此属性  。 ||
 |trustStore|String|Null|导入证书的 Java 密钥存储文件路径。 如果在系统上安装证书，则无需传递任何内容。 驱动程序使用 cacerts 或 jssecacerts 文件。||
 |trustStorePassword|String|Null|用于检查 trustStore 数据完整性的密码。||
-|fips|布尔 [“true / false”]|“false”|对于启用了 FIPS 的 JVM，此属性应为 true|已在 6.1.4 中添加（稳定版 6.2.2）||
+|fips|布尔 [“true / false”]|“false”|对于启用了 FIPS 的 JVM，此属性应为 true |已在 6.1.4 中添加（稳定版 6.2.2）||
 |fipsProvider|String|Null|JVM 中配置的 FIPS 提供程序。 例如，BCFIPS 或 SunPKCS11-NSS |已在 6.1.2 中添加（稳定版 6.2.2），已在 6.4.0 中弃用 - 请在[此处](https://github.com/Microsoft/mssql-jdbc/pull/460)查看详细信息。|
 |trustStoreType|String|JKS|对于 FIPS 模式，请将信任存储类型设置为 PKCS12 或由 FIPS 提供程序定义的类型 |已在 6.1.2 中添加（稳定版 6.2.2）||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

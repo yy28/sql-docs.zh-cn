@@ -18,10 +18,10 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991727"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性组中连接到副本的客户端连接的类型
@@ -35,7 +35,7 @@ ms.locfileid: "67991727"
 > [!NOTE]  
 >  有关处理客户端连接请求的可用性组侦听程序的信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
-##  <a name="ConnectAccessForSecondary"></a> 辅助角色支持的连接访问类型  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> 辅助角色支持的连接访问类型  
  辅助角色对于客户端连接支持三种备选方式，如下所示：  
   
  无连接  
@@ -51,7 +51,7 @@ ms.locfileid: "67991727"
   
  有关详细信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
-##  <a name="ConnectAccessForPrimary"></a> 主角色支持的连接访问类型  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> 主角色支持的连接访问类型  
  主角色对于客户端连接支持两种备选方式，如下所示：  
   
  允许所有连接  
@@ -64,7 +64,7 @@ ms.locfileid: "67991727"
   
  有关详细信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> 连接访问配置如何影响客户端连接  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> 连接访问配置如何影响客户端连接  
  副本的连接访问设置决定连接尝试是失败还是成功。 下表简要说明对于每个连接访问设置，给定连接尝试是失败还是成功。  
   
 |副本角色|副本上支持的连接访问|连接意向|连接尝试结果|  
@@ -93,7 +93,7 @@ ms.locfileid: "67991727"
   
  通常，在此示例方案中，仅在同步提交副本之间发生故障转移，但在故障转移之后，读意向应用程序立即可以重新连接到其中一个异步提交辅助副本。 然而，当主计算中心发生灾难时，两个同步提交副本都将丢失。 附属站点的数据库管理员通过强制手动故障转移到异步提交辅助副本来进行响应。 其余辅助副本上的辅助数据库已由于强制故障转移而被挂起，而使它们不可用于只读工作负载。 新的主副本（配置为读写连接）可防止读意向工作负荷与读写工作负荷发生争用。 这意味着，除非数据库管理员对于其他异步提交辅助副本恢复辅助数据库，否则读意向客户端无法连接到任何可用性副本。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67991727"
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

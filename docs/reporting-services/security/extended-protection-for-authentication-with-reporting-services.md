@@ -9,10 +9,10 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b273ef327b666c7c660349657fa9ca9eabe9f4a4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571001"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
@@ -81,8 +81,8 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
 |场景|方案图|保护方式|  
 |--------------|----------------------|-------------------|  
 |HTTP 通信。 报表服务器将实行“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_Indirect](../../reporting-services/security/media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|将 **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Any**。<br /><br /> <br /><br /> \- 没有 SSL 渠道，因此不可能实行渠道绑定。<br /><br /> \- 必须对报表服务器进行配置，使之识别代理服务器的名称，以确保正确实行服务绑定。|  
-|HTTP 通信。<br /><br /> 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|设置 <br />                    **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 到代理的 SSL 渠道是可用的，因此，可以与代理之间实行渠道绑定。<br /><br /> \- 还可以实行服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames**中配置代理名称。|  
-|与安全代理之间的间接 HTTPS 通信。 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|设置 <br />                    **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 到代理的 SSL 渠道是可用的，因此，可以与代理之间实行渠道绑定。<br /><br /> \- 还可以实行服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames**中配置代理名称。|  
+|HTTP 通信。<br /><br /> 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|Set <br />                    **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 到代理的 SSL 渠道是可用的，因此，可以与代理之间实行渠道绑定。<br /><br /> \- 还可以实行服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames**中配置代理名称。|  
+|与安全代理之间的间接 HTTPS 通信。 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|Set <br />                    **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 到代理的 SSL 渠道是可用的，因此，可以与代理之间实行渠道绑定。<br /><br /> \- 还可以实行服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames**中配置代理名称。|  
   
 ### <a name="gateway"></a>网关  
  此方案介绍连接到执行 SSL 和对用户进行身份验证的设备或软件的客户端应用程序。 接着，此设备或软件模拟用户上下文或其他用户上下文，之后对报表服务器发出请求。  
@@ -107,13 +107,13 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
   
  当对配置设置进行验证失败时，将在报表服务器上禁用身份验证类型 **RSWindowsNTLM**、 **RSWindowsKerberos** 和 **RSWindowsNegotiate** 。  
   
-###  <a name="ConfigurationSettings"></a> Reporting Services 扩展保护的配置设置  
+###  <a name="configuration-settings-for-reporting-services-extended-protection"></a><a name="ConfigurationSettings"></a> Reporting Services 扩展保护的配置设置  
  下表提供有关在 **rsreportserver.config** 中显示的扩展保护配置设置的信息。  
   
 |设置|说明|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|指定扩展保护的实行程度。 有效值是：<br /><br /> **OFF**：默认。 指定没有渠道绑定或服务绑定验证。<br /><br /> **Allow** 支持扩展保护，但并不需要此功能。  指定：<br /><br /> \- 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。 实行保护的方式通过设置 **RsWindowsExtendedProtectionScenario**来确定<br /><br /> \- 对于在不支持扩展保护的操作系统上运行的应用程序而言，将允许进行身份验证。<br /><br /> **Require** 指定：<br /><br /> \- 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。<br /><br /> \- 对于在不支持扩展保护的操作系统上运行的应用程序而言，将 **不** 允许进行身份验证。|  
-|**RsWindowsExtendedProtectionScenario**|指定要验证哪些形式的扩展保护：渠道绑定、服务绑定，或两者。 有效值是：<br /><br /> **代理**：默认。 指定：<br /><br /> \- 当存在渠道绑定标记时，使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> \- 实行服务绑定。<br /><br /> **Any** 指定：<br /><br /> \- 不要求 Windows NTLM、Kerberos 和 Negotiate 身份验证以及渠道绑定。<br /><br /> \- 实行服务绑定。<br /><br /> **Direct** 指定：<br /><br /> \- 当 CBT 存在、与当前服务之间存在 SSL 连接并且用于 SSL 连接的 CBT 与 NTLM、Kerberos 或 Negotiate 标记的 CBT 匹配时，应使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> \- 不实行服务绑定。<br /><br /> <br /><br /> 注意：如果 RsWindowsExtendedProtectionLevel 设置为 OFF，则忽略 RsWindowsExtendedProtectionScenario 设置    。|  
+|**RSWindowsExtendedProtectionLevel**|指定扩展保护的实行程度。 有效值是：<br /><br /> **Off**：默认值。 指定没有渠道绑定或服务绑定验证。<br /><br /> **Allow** 支持扩展保护，但并不需要此功能。  指定：<br /><br /> \- 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。 实行保护的方式通过设置 **RsWindowsExtendedProtectionScenario**来确定<br /><br /> \- 对于在不支持扩展保护的操作系统上运行的应用程序而言，将允许进行身份验证。<br /><br /> **Require** 指定：<br /><br /> \- 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。<br /><br /> \- 对于在不支持扩展保护的操作系统上运行的应用程序而言，将 **不** 允许进行身份验证。|  
+|**RsWindowsExtendedProtectionScenario**|指定使哪种格式的扩展保护生效：渠道绑定、服务绑定或这两者。 有效值是：<br /><br /> **Proxy**：默认值。 指定：<br /><br /> \- 当存在渠道绑定标记时，使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> \- 实行服务绑定。<br /><br /> **Any** 指定：<br /><br /> \- 不要求 Windows NTLM、Kerberos 和 Negotiate 身份验证以及渠道绑定。<br /><br /> \- 实行服务绑定。<br /><br /> **Direct** 指定：<br /><br /> \- 当 CBT 存在、与当前服务之间存在 SSL 连接并且用于 SSL 连接的 CBT 与 NTLM、Kerberos 或 Negotiate 标记的 CBT 匹配时，应使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> \- 不实行服务绑定。<br /><br /> <br /><br /> 注意：如果 **RsWindowsExtendedProtectionLevel** 设置为 **OFF** ，则忽略 **RsWindowsExtendedProtectionScenario**设置。|  
   
  **rsreportserver.config** 配置文件中的示例条目：  
   
@@ -166,7 +166,7 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
 [使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [针对验证的扩展保护概述](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft 安全公告：身份验证的扩展保护](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Microsoft 安全建议：针对验证的扩展保护](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

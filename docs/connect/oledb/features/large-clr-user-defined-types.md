@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: acbdd170808ed9f6d7f67265a4e0d18f3b9e8eb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989068"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 用户定义类型
@@ -26,7 +26,7 @@ ms.locfileid: "67989068"
 
   在 SQL Server 2005 中，公共语言运行时 (CLR) 中的用户定义类型 (UDT) 已限制为最大 8,000 字节。 这一限制在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更高版本中已取消。 CLR UDT 现在以针对大型对象 (LOB) 类型的类似方式处置。 也就是说，小于或等于 8,000 字节的 UDT 在行为上与 SQL Server 2005 中相同，但支持更大的 UDT 并且将其大小报告为“无限制”。  
   
- 有关详细信息，请参阅[大型 CLR 用户定义类型 &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)。  
+ 有关详细信息，请参阅[大型 CLR 用户定义类型 (OLE DB)](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)。  
   
 ## <a name="use-cases"></a>用例   
   

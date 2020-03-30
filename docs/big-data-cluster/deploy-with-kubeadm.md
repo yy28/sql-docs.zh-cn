@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 6b5f2c8dac062f147326a0b9fcfb7120f0648729
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74165436"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>在多台计算机上为 SQL Server 大数据群集部署配置 Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文提供示例，说明如何使用 kubeadm 在多台计算机上为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署配置 Kubernetes  。 在此示例中，目标为多台 Ubuntu 16.04 或 18.04 LTS 计算机（物理或虚拟）。 如果要部署到其他 Linux 平台，则必须更改部分命令以匹配你的系统。  
+本文提供示例，说明如何使用 kubeadm 在多台计算机上为  **部署配置 Kubernetes**[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 在此示例中，目标为多台 Ubuntu 16.04 或 18.04 LTS 计算机（物理或虚拟）。 如果要部署到其他 Linux 平台，则必须更改部分命令以匹配你的系统。  
 
 > [!TIP] 
 > 有关配置 Kubernetes 的示例脚本，请参阅[在 Ubuntu 16.04 LTS 或 18.04 LTS 上使用 Kubeadm 创建 Kubernetes 群集](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)。

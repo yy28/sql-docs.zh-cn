@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892225"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>MSRS 2011 SharePoint 模式性能对象的性能计数器
@@ -41,7 +41,7 @@ ms.locfileid: "68892225"
   
 -   [使用 PowerShell Cmdlet 返回列表](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> MSRS 2011 Web Service SharePoint Mode 性能计数器  
+##  <a name="msrs-2011-web-service-sharepoint-mode-performance-counters"></a><a name="bkmk_webservice"></a> MSRS 2011 Web Service SharePoint Mode 性能计数器  
  **MSRS 2011 Web Service SharePoint Mode** 性能对象监视报表服务器性能。 此性能对象包括一系列用于跟踪报表服务器处理的计数器，这些处理通常通过交互式报表查看操作启动。 在设置计数器时，可将此计数器应用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的全部实例，也可以选择特定实例。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，这些计数器就会重置。  
   
  下表列出了 **MSRS 2011 Web Service SharePoint Mode** 性能对象中包含的计数器。  
@@ -71,7 +71,7 @@ ms.locfileid: "68892225"
 |**总执行的报表数**|服务启动后成功运行的报表的总数。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，此计数器就会重置。|  
 |**请求总数**|服务启动后对报表服务器发出的全部请求的总数。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，此计数器就会重置。|  
   
-##  <a name="bkmk_windowsservice"></a> MSRS 2011 Windows Service SharePoint Mode 性能计数器  
+##  <a name="msrs-2011-windows-service-sharepoint-mode-performance-counters"></a><a name="bkmk_windowsservice"></a> MSRS 2011 Windows Service SharePoint Mode 性能计数器  
  **MSRS 2011 Windows Service SharePoint Mode** 性能对象用于监视报表服务器 Windows 服务。 此性能对象包括一系列用于跟踪报表处理的计数器，这些处理通过计划操作启动。 计划操作可以包括订阅和传递、报表执行快照和报表历史记录。 在设置计数器时，可将此计数器应用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的全部实例，也可以选择特定实例。  
   
  下表列出了 **MSRS 2011 Windows Service SharePoint mode** 性能对象中包含的计数器。  
@@ -118,7 +118,7 @@ ms.locfileid: "68892225"
 |**请求总数**|服务启动后成功运行的报表的总数。 当应用程序域回收时，将重置此计数器。|  
 |**总快照更新数**|报表执行快照更新的总数。|  
   
-##  <a name="bkmk_powershell"></a> 使用 PowerShell Cmdlet 返回列表  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> 使用 PowerShell Cmdlet 返回列表  
  ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")下面的 Windows PowerShell 脚本返回 CounterSetName 以“msr”开头的计数器集  
   
 ```  

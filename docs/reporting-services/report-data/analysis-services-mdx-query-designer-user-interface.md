@@ -15,10 +15,10 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573269"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查询设计器用户界面
@@ -70,7 +70,7 @@ ms.locfileid: "65573269"
 |![更改为 DMX 查询语言视图](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "更改为 DMX 查询语言视图")|切换到命令类型 DMX。|  
 |![刷新结果数据](../../reporting-services/report-data/media/rsqdicon-refresh.gif "刷新结果数据")|刷新数据源的元数据。|  
 |![添加计算成员](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。|  
-|![切换显示空单元](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切换显示空单元")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
+|![切换为显示空单元格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切换为显示空单元格")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
 |![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
 |![“显示聚合”按钮](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "“显示聚合”按钮")|在“数据”窗格中显示聚合。|  
 |![删除](../../reporting-services/report-data/media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|  
@@ -109,7 +109,7 @@ ms.locfileid: "65573269"
   
 -   **添加计算成员**（![添加计算成员](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "添加计算成员")）  
   
--   **显示空单元格**（![切换显示空单元格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切换显示空单元")）  
+-   **显示空单元格**（![切换为显示空单元格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切换为显示空单元格")）  
   
 -   **自动执行**（![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询")）  
   

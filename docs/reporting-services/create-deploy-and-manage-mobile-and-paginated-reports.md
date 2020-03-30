@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082633"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
@@ -63,7 +63,7 @@ Reporting Services 与“传统”分页报表相关联，非常适合用于为�
 * 已更新所有默认样式和调色板，因此默认情况下，使用新的极简主义新式样式创建报表。
 * 已更新“参数”窗格，因此可随意排列参数。
 * 可以导出到 PowerPoint 等新格式。 PowerPoint 中的 Reporting Services 可视化效果是实时且可编辑的，不仅仅是屏幕截图。
-* 可以打造混合的 Power BI/Reporting Services 体验：可以将报表中的视觉对象固定到 Power BI 仪表板，而不是在 Power BI 中重新生成本地 Reporting Services 报表。 然后可以在 Power BI 仪表板上同一个位置监视所有内容。
+* 可创建混合的 Power BI/Reporting Services 体验：可将报表中的视觉对象固定到 Power BI 仪表板，而不是在 Power BI 中重新创建本地 Reporting Services 报表。 然后可以在 Power BI 仪表板上同一个位置监视所有内容。
 
 ## <a name="mobile-reports"></a>移动报表
 
@@ -83,7 +83,7 @@ Reporting Services 与“传统”分页报表相关联，非常适合用于为�
 
 对于本机模式 Reporting Services 的最终用户，前门是可在大多数浏览器中查看的新式 Web 门户。 可以在新门户中访问所有 Reporting Services 移动报表、分页报表及 KPI。 KPI 可结合浏览器查看关键业务指标，而无需打开报表。
 
-新的 Web 门户是完全重写的报表管理器。 它现在是基于标准的单页 HTML5 应用程序，更适合在以下新式浏览器中使用：Microsoft Edge、Internet Explorer 10 和11、Chrome、Firefox、Safari 以及所有主流浏览器。
+新的 Web 门户是完全重写的报表管理器。 现在，它是单页、基于标准的 HTML5 应用，新式浏览器针已针对此应用进行了优化，这些浏览器包括：Microsoft Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari 以及所有主流浏览器。
 
 Web 门户内容按类型进行整理：
 

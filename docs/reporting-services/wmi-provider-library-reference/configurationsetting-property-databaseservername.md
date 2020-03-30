@@ -16,10 +16,10 @@ ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a967cb012f8647d51a33b2a603144bfd4dd8d9e7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573533"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting 属性 - DatabaseServerName
@@ -42,7 +42,7 @@ public string DatabaseServerName;
  [MSReportServer_ConfigurationSetting 类](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10a2411f26315a7c0cf50e9eca4daec45567fab4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049831"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 驱动程序概述
@@ -25,7 +25,7 @@ Microsoft JDBC Driver for SQL Server 是类型 4 Java Database Connectivity (JDB
 
 ## <a name="redistribution"></a>重新分发
 
-JDBC 驱动程序版本 6.0、6.2、6.4 和 7.0 是可再发行版本。 查看许可协议中的“可分发代码”子句。
+JDBC 驱动程序版本 6.0、6.2、6.4 和 7.0 是可再发行版本。 查看许可协议中的“可分发代码”子句  。
 
 JDBC 驱动程序版本 4.x 是旧的过时版本。 对 4.x 的支持已在 2018 年之前过期。
 

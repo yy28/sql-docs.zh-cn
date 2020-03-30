@@ -16,10 +16,10 @@ ms.assetid: 2188a6e1-792f-47bd-b207-1d01741231b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4e5d97f3b4b47e111da7c4a9efd9edeb87f168c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976788"
 ---
 # <a name="nativesql-method-sqlserverconnection"></a>nativeSQL 方法 (SQLServerConnection)
@@ -40,10 +40,10 @@ public java.lang.String nativeSQL(java.lang.String sql)
 #### <a name="parameters"></a>parameters  
  *sql*  
   
- 包含 SQL 语句的 String。  
+ 包含 SQL 语句的 String  。  
   
 ## <a name="return-value"></a>返回值  
- 包含转换的 SQL 语句的 String。  
+ 包含转换的 SQL 语句的 String  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: 多实例报表服务器部署的 URL 保留项（SSRS Configuration Manager） |Microsoft Docs
+title: 多实例报表服务器部署的 URL 预留（SSRS 配置管理器） |微软文档
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f49a13fa50254e4c485a228d506b49e14d190959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66108622"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380688"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>多实例报表服务器部署的 URL 预留（SSRS 配置管理器）
   如果将多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例安装在同一台计算机上，则必须考虑如何为每个实例定义 URL 预留。 在每个实例中，报表服务器 Web 服务和报表管理器都必须至少有一个 URL 预留。 整组预留在 HTTP.SYS 中必须保持唯一。  
@@ -42,13 +42,13 @@ ms.locfileid: "66108622"
 |报表服务器的默认实例 (MSSQLSERVER)|ReportServer_MyNamedInstance|唯一性|  
 |----------------------------------------------------|-----------------------------------|----------------|  
 |http://+:80/reportserver|http://+:8888/reportserver|每个实例都在一个不同的端口上侦听。|  
-|http://www.contoso.com/reportserver|http://SRVR-46/reportserver|每个实例都对应不同的服务器名称（完全限定域名和计算机名称）。|  
+|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|每个实例都对应不同的服务器名称（完全限定域名和计算机名称）。|  
   
 ## <a name="uniqueness-requirements"></a>唯一性要求  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的基础技术对于唯一名称施加了一定的要求。 HTTP.SYS 要求其存储库中的所有 URL 保持唯一。 您可以通过改变端口、主机名或虚拟目录名称来创建唯一的 URL。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 要求同一个进程内的应用程序标识保持唯一。 此要求会影响虚拟目录名称。 它规定您不能在同一个报表服务器实例中复制虚拟目录名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置报表服务器 URL（SSRS 配置管理器）](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [配置报表服务器 URL &#40;SSRS 配置管理器&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [配置 URL（SSRS 配置管理器）](configure-a-url-ssrs-configuration-manager.md)  
   
   

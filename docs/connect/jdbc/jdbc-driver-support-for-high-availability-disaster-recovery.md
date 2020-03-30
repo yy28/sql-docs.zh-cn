@@ -11,10 +11,10 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027954"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驱动程序对高可用性和灾难恢复的支持
@@ -22,7 +22,7 @@ ms.locfileid: "69027954"
 
   本主题介绍 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 对于高可用性和灾难恢复的支持 -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。 有关 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的详细信息，请参阅 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 联机丛书。  
   
- 从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版本开始，可以在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听器。 如果将 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中新增了以下[连接属性](../../connect/jdbc/setting-the-connection-properties.md)：  
+ 从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版本开始，可以在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听器。 如果将 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。 [ 中新增了以下](../../connect/jdbc/setting-the-connection-properties.md)连接属性[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]：  
   
 -   **multiSubnetFailover**  
   
@@ -49,9 +49,9 @@ ms.locfileid: "69027954"
  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 multiSubnetFailover 进行连接  
- 在连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 multiSubnetFailover=true  。 multiSubnetFailover 可加快 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中所有可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行进行连接。 子网故障转移期间，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将积极地重试 TCP 连接。  
+ 在连接到 **可用性组或** 故障转移群集实例的可用性组侦听程序时，应始终指定 multiSubnetFailover=true[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 multiSubnetFailover 可加快  **中所有可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 在多子网故障转移过程中，客户端将尝试并行进行连接。 子网故障转移期间，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将积极地重试 TCP 连接。  
   
- multiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将尝试通过试图连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库  。 如果对连接指定的是 MultiSubnetFailover=true  ，客户端重试 TCP 连接尝试的速度快于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
+ multiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 **将尝试通过试图连接到所有 IP 地址来连接到主** 实例上的数据库[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果对连接指定的是 MultiSubnetFailover=true  ，客户端重试 TCP 连接尝试的速度快于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
   
  有关 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 中的连接字符串关键字的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69027954"
   
 -   连接到配置有超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将导致连接失败。  
   
--   基于以下身份验证类型，使用 multiSubnetFailover  连接属性的应用程序的行为将不会受到影响：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
+-   基于以下身份验证类型，使用 multiSubnetFailover 连接属性的应用程序的行为不受到影响： **身份验证、Kerberos 身份验证或 Windows 身份验证**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 -   增加 loginTimeout 的值，以延长故障转移时间并减少应用程序连接重试次数  。  
   

@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22527cdfa08907dfdf120ef32c918ecb9eaf86bb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993977"
 ---
 # <a name="supporting-distributed-transactions"></a>支持分布式事务
@@ -43,7 +43,7 @@ ms.locfileid: "67993977"
 |punkTransactionCoord |指向 MS DTC 事务对象的指针。|  
 |IsoLevel |被 OLE DB Driver for SQL Server 忽略。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
 |IsoFlags |必须为 0。 如果使用者指定了其他任何值，OLE DB Driver for SQL Server 返回 XACT_E_NOISORETAIN。|  
-|POtherOptions |如果不为 NULL，OLE DB Driver for SQL Server 请求从接口获取 options 对象。 如果 options 对象的 ulTimeout  成员不为零，OLE DB Driver for SQL Server 返回 XACT_E_NOTIMEOUT。 OLE DB Driver for SQL Server 忽略 szDescription  成员的值。|  
+|POtherOptions |如果不是 NULL，OLE DB Driver for SQL Server 将从该接口请求选项对象。 如果 options 对象的 ulTimeout  成员不为零，OLE DB Driver for SQL Server 返回 XACT_E_NOTIMEOUT。 OLE DB Driver for SQL Server 忽略 szDescription  成员的值。|  
   
  下面的示例通过使用 MS DTC 来协调事务：  
   

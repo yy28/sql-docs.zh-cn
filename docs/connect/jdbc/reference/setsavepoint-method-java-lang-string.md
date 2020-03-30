@@ -16,10 +16,10 @@ ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cae36f62cba9f7c8b97ae13c06d1f01960f616e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973089"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>setSavepoint 方法 (java.lang.String)
@@ -48,7 +48,7 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
 ## <a name="remarks"></a>备注  
  此 setSavePoint 方法是由 java.sql.Connection 接口中的 setSavePoint 方法指定的。  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 会自动转义 sName  参数。  
+ *会自动转义 sName*[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 参数。  
   
 ## <a name="see-also"></a>另请参阅  
  [setSavepoint 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   

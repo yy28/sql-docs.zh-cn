@@ -12,10 +12,10 @@ ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0e9752c14ef2ba03cdb95ad8fe4430c4d4fa23db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081434"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>将查询参数与报表参数相关联（报表生成器和 SSRS）
@@ -29,7 +29,7 @@ ms.locfileid: "77081434"
   
 1.  在“报表数据”窗格中，右键单击数据集，再单击“数据集属性”  ，然后单击“参数”  。  
   
-    > **注意：** 如果“报表数据”窗格不可见，请单击“视图”  菜单上的“报表数据”  。  
+    > **注意：** 如果“报表数据”窗格不可见，请单击“视图”菜单上的“报表数据”   。  
   
 2.  在 **“参数名称”** 列中，查找查询参数的名称。 将基于查询自动填充参数名称。 每次更改查询时，都会检查查询是否有新的查询参数。 手动创建的查询参数不会随着查询的更改而变化。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "77081434"
   
     -   在 **“参数值”** 中，键入或选择计算结果为要传递给查询参数的值的表达式。 这通常为报表参数的名称。  
   
-        > **注意：** 您不仅可以将报表参数作为查询参数的值。 也可以使用任何表达式来计算参数值。  
+        > **注意：** 不仅可以将报表参数作为查询参数的值。 也可以使用任何表达式来计算参数值。  
   
 3.  对于其他查询参数，重复执行步骤 2。  
   

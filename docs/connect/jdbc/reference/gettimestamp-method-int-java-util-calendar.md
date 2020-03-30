@@ -16,10 +16,10 @@ ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50aa202837bee9e091cbb2ad31f56da6ea15eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978871"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp 方法 (int, java.util.Calendar)
@@ -36,11 +36,11 @@ public java.sql.Timestamp getTimestamp(int index,
 ```  
   
 #### <a name="parameters"></a>parameters  
- 索引  
+ 索引   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
- cal  
+ cal   
   
  Calendar 对象。  
   
@@ -53,7 +53,7 @@ public java.sql.Timestamp getTimestamp(int index,
 ## <a name="remarks"></a>备注  
  此 getTimestamp 方法是由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定的。  
   
- 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 列返回值。  
+ 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime  和 smalldatetime  列返回值。  
   
 ## <a name="see-also"></a>另请参阅  
  [getTimestamp 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

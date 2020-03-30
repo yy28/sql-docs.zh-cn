@@ -11,10 +11,10 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941206"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
@@ -29,9 +29,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>parameters
-$*语句*：包含 SQL 语句的字符串。
+$*statement*：包含 SQL 语句的字符串。
 
-*key_pair*：包含属性名称和值的数组。 有关详细信息，请参阅“备注”部分。
+key_pair：包含属性名称和值的数组  。 有关详细信息，请参阅“备注”部分。
 
 ## <a name="return-value"></a>返回值
 如果成功，则返回 PDOStatement 对象。 如果失败，则返回 PDOException 对象或 False，具体取决于 `PDO::ATTR_ERRMODE` 的值。
@@ -49,7 +49,7 @@ $*语句*：包含 SQL 语句的字符串。
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|指定设置提取的 Money 值格式时的小数位数。 仅当 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 为 true 时此选项才起作用。 有关详细信息，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|如果为 True，则指定直接查询执行。 False 表示已准备的语句执行。 有关 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 的详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8（默认值）<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 有关详细信息，请参阅[操作说明：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 有关详细信息，请参阅[如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|处理具有数值 SQL 类型的列中的数值提取。 有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|指定是否在合适时向十进制字符串添加前导零。 如已设置，此选项将启用用于设置 Money 类型格式的 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 选项。 有关详细信息，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
@@ -295,7 +295,7 @@ $stmt->execute([':value' => $p]);
 如你所见，绑定是由驱动程序在内部完成的。 一个有效的查询会被发送到服务器，以便在没有任何参数的情况下完成执行。 与常规情况相比，当不使用参数化查询功能时，会产生一些限制。
 
 - 它不适用于绑定为 `PDO::PARAM_INPUT_OUTPUT` 的参数。
-    - 当用户在 `PDO::bindParam()` 中指定 `PDO::PARAM_INPUT_OUTPUT` 时，将引发 PDO 异常。
+    - 当用户在 `PDO::PARAM_INPUT_OUTPUT` 中指定 `PDO::bindParam()` 时，将引发 PDO 异常。
 - 它不适用于绑定为输出参数的参数。
     - 当用户使用用于输出参数的占位符创建一个准备好的语句时（也就是说，在占位符后面有一个等号，比如 `SELECT ? = COUNT(*) FROM Table1`），将引发 PDO 异常。
     - 当准备好的语句调用将占位符作为输出参数自变量的存储过程时，不会引发异常，因为驱动程序无法检测输出参数。 但是，用户为输出参数提供的变量将保持不变。

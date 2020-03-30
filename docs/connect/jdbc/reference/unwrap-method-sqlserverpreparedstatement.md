@@ -11,10 +11,10 @@ ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81e533e32504df219155259e9639c83c3be4c647
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985600"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>unwrap 方法 (SQLServerPreparedStatement)
@@ -30,9 +30,9 @@ public <T> T unwrap(Class<T> iface)
 ```  
   
 #### <a name="parameters"></a>parameters  
- iface  
+ iface   
   
- 定义接口的类型为 T 的类。  
+ 定义接口的类型为 T 的类  。  
   
 ## <a name="return-value"></a>返回值  
  实现指定接口的对象。  
@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  应用程序可能需要访问特定于 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的 JDBC API 扩展。 如果类公开供应商扩展，则 unwrap 方法支持对此对象扩展的公共类取消包装。  
   
- 调用此方法时，对象会取消对以下类的包装：[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 和 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。  
+ 调用此方法时，对象会取消对下列类的包装：[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 和 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。  
   
  有关示例代码，请参阅 [unwrap 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)。  
   

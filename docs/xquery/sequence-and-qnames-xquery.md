@@ -1,5 +1,5 @@
 ---
-title: Sequence 和 QNames （XQuery） |Microsoft Docs
+title: 序列和 Q 名称 （XQuery） |微软文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbb20c9e14c4e76b8862a23e8d758fcbba94da7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946340"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380778"
 ---
 # <a name="sequence-and-qnames-xquery"></a>序列和 QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  XQuery 中的每个标识符都是一个 QName。 QName 由一个命名空间前缀和一个本地名称组成。 在这样的实现中，XQuery 中的变量名是 QNames，它们不能带有前缀。  
   
- 请考虑以下示例，其中针对非类型化的**xml**变量指定了查询：  
+ 请考虑以下示例，其中针对未键入的**xml**变量指定查询：  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  在表达式 (`/Root/a`) 中，`Root` 和 `a` 是 QNames。  
   
- 在下面的示例中，对类型化的**xml**列指定了一个查询。 查询将在第一个\<workcenter 位置上循环访问所有步骤> 元素。  
+ 在下面的示例中，针对键入的**xml**列指定了查询。 查询遍比较第一个工作\<中心位置的所有步骤>元素。  
   
 ```  
 SELECT Instructions.query('  
@@ -126,12 +126,9 @@ WHERE ProductModelID=7;
   
  在查询表达式中，注意下列事项：  
   
--   
-  `AWMI root`、`AWMI:Location`、`AWMI:step` 和 `$Step` 都是 QNames。 
-  `AWMI` 是一个前缀，`root`、`Location` 和 `Step` 都是本地名称。  
+-   `AWMI root`、`AWMI:Location`、`AWMI:step` 和 `$Step` 都是 QNames。 `AWMI` 是一个前缀，`root`、`Location` 和 `Step` 都是本地名称。  
   
--   
-  `$step` 变量是一个 QName 并且没有前缀。  
+-   `$step` 变量是一个 QName 并且没有前缀。  
   
  已经预定义了下列命名空间，以便与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 支持一起使用。  
   
@@ -142,14 +139,14 @@ WHERE ProductModelID=7;
 |xdt|http://www.w3.org/2004/07/xpath-datatypes|  
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |（无前缀）|`urn:schemas-microsoft-com:xml-sql`|  
-|sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
+|sqltypes|`https://schemas.microsoft.com/sqlserver/2004/sqltypes`|  
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |（无前缀）|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- 你创建的每个数据库都有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
+ 您创建的每个数据库都有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
   
 > [!NOTE]  
->  此实现不支持`local`前缀，如的 XQuery 规范中http://www.w3.org/2004/07/xquery-local-functions所述。  
+>  此实现不支持 中的`local`XQuery 规范中http://www.w3.org/2004/07/xquery-local-functions所述的前缀。  
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)  

@@ -16,10 +16,10 @@ ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b52007528ee5c3d3caaabc83b158e50156b664e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975696"
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>rowInserted 方法 (SQLServerResultSet)
@@ -35,7 +35,7 @@ public boolean rowInserted()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果行中曾进行过插入并且检测到了插入操作，则为“true”。 否则为 **false**。  
+ 如果行中曾进行过插入并且检测到了插入操作，则为“true”  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

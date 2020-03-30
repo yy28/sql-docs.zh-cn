@@ -9,10 +9,10 @@ ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd597c9a85f381e95de3b04fa22c577e89a26047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081770"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 连接类型 (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081770"
   
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a> 连接字符串  
+##  <a name="connection-string"></a><a name="Connection"></a> 连接字符串  
  用于 OLE DB 数据处理扩展插件的连接字符串取决于您想要的数据访问接口。 典型的连接字符串包含数据访问接口支持的名称/值对。 例如，下面的连接字符串为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 AdventureWorks 数据库指定 OLE DB 访问接口。  
   
 ```  
@@ -34,7 +34,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  有关连接字符串示例，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Credentials"></a> 凭据  
+##  <a name="credentials"></a><a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。  
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
@@ -48,11 +48,11 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 >  建议您不要在连接字符串中添加登录信息（如密码）。 报表生成器在 **“数据源”** 对话框中提供了一个用于输入凭据的单独选项卡。  
   
   
-##  <a name="Parameters"></a> Parameters  
+##  <a name="parameters"></a><a name="Parameters"></a> Parameters  
  某些 OLE DB 访问接口支持未命名参数，而不支持命名参数。 通过在查询中使用占位符按位置传递参数。 占位字符由数据访问接口所支持的语法确定。  
   
   
-##  <a name="Remarks"></a> 注释  
+##  <a name="remarks"></a><a name="Remarks"></a> 注释  
  OLEDB 是一项用于为特定数据源生成数据访问接口的本机技术。 OLEDB 基于 COM（组件对象模型）接口。 OLEDB 这项技术晚于 ODBC、早于 ADO.NET 数据访问接口。 与任何其他 COM 组件一样，OLEDB 数据访问接口注册到操作系统。 OLEDB 数据访问接口可从 Microsoft 和第三方供应商那里获得。 Microsoft 还提供 MSDASQL，即架起与 ODBC 驱动程序的通信桥梁的 OLEDB 数据访问接口。 有关详细信息，请参阅 [ODBC 连接类型 (SSRS)](../../reporting-services/report-data/odbc-connection-type-ssrs.md)。  
   
  若要成功检索到想要的数据，则必须提供数据访问接口支持的查询语法。 参数支持因数据访问接口而异。 有关详细信息，请参阅针对所选数据访问接口的主题。 例如：  
@@ -66,7 +66,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  有关特定 OLE DB 数据提供程序的详细信息，请参阅 [Reporting Services 支持的数据源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
   
  [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -76,7 +76,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> 相关章节  
+##  <a name="related-sections"></a><a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  

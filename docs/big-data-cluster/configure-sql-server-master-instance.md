@@ -10,10 +10,10 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a124b3a82c75f3da5f7abbdec3b519c86ec7c1c5
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090517"
 ---
 # <a name="configure-master-instance-of-big-data-clusters-2019"></a>配置 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的主实例
@@ -43,7 +43,7 @@ ms.locfileid: "79090517"
    traceflag0 = 1204
    ```
 
-1. 将 `mssql-custom.conf` 文件复制到 `master-0` Pod 中的 `mssql-server` 容器中的 `/var/opt/mssql`。 将 `<namespaceName>` 替换为大数据群集名称。
+1. 将 `mssql-custom.conf` 文件复制到 `/var/opt/mssql` Pod 中的 `mssql-server` 容器中的 `master-0`。 将 `<namespaceName>` 替换为大数据群集名称。
 
    ```bash
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>

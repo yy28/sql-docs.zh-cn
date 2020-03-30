@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008699"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
@@ -32,9 +32,9 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-使用 DSN 连接时，还可以向 `odbc.ini` 中的 DSN 条目添加 Trusted_Connection=yes  。
+使用 DSN 连接时，还可以向  **中的 DSN 条目添加 Trusted_Connection=yes**`odbc.ini`。
   
-`sqlcmd` 的 `-E` 选项和 `bcp` 的 `-T` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)   。
+`-E` 的 `sqlcmd` 选项和 `-T` 的 `bcp` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接**和**使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)[  ](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
 
 确保要连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的客户端主体已使用 Kerberos KDC 进行身份验证。
   
@@ -87,10 +87,10 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 配置集成身份验证后，凭据将传递给链接服务器。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>集成身份验证和 sqlcmd
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `sqlcmd` 的 `-E` 选项。 确保运行 `sqlcmd` 的帐户与默认的 Kerberos 客户端主体相关联。
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `-E` 的 `sqlcmd` 选项。 确保运行 `sqlcmd` 的帐户与默认的 Kerberos 客户端主体相关联。
 
 ## <a name="integrated-authentication-and-bcp"></a>集成身份验证和 bcp
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `bcp` 的 `-T` 选项。 确保运行 `bcp` 的帐户与默认的 Kerberos 客户端主体相关联。 
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `-T` 的 `bcp` 选项。 确保运行 `bcp` 的帐户与默认的 Kerberos 客户端主体相关联。 
   
 将 `-T` 与 `-U` 或 `-P` 选项结合使用是错误的。
   

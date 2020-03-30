@@ -16,10 +16,10 @@ ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 078c430e2300a0b80f85357f9f962e8e2dd72838
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570909"
 ---
 # <a name="configurationsetting-property---databaselogontype"></a>ConfigurationSetting 属性 - DatabaseLogonType
@@ -57,7 +57,7 @@ public int DatabaseLogonType;
  如果指定 2（Windows 服务），则报表服务器使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帐户和 Windows 服务帐户来访问报表服务器数据库。 DatabaseLogonAccount 属性被忽略。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

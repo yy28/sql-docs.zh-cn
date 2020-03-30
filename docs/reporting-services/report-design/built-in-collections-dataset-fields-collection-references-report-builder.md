@@ -9,10 +9,10 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081896"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>内置集合 - 数据集字段集合引用（报表生成器）
@@ -38,7 +38,7 @@ ms.locfileid: "77081896"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>在运行时检测动态字段的缺失字段  
- 默认情况下，“字段集合”中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` \<table>  ，其中表定义会发生变化。  
+ 默认情况下，字段集合中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` *table>\<* ，其中表定义会发生变化。  
   
 > [!NOTE]  
 >  IsMissing 可针对任何类型的数据源检测在设计时和运行时数据集架构中的更改。 IsMissing 不能用于检测多维数据集中的空成员，并且与 **EMPTY** 和 **NON EMPTY**查询语言概念无关。  

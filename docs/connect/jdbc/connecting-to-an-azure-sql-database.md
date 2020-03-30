@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155113"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>连接到 Azure SQL 数据库
@@ -25,14 +25,14 @@ ms.locfileid: "70155113"
   
 - [SQL Azure 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [如何：使用 JDBC 连接到 SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [如何使用 JDBC 连接到 SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [使用 Azure Active Directory 身份验证连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>详细信息
 
 连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 时，应连接到主数据库以调用 SQLServerDatabaseMetaData.getCatalogs  。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支持从用户数据库中返回整个目录集。 SQLServerDatabaseMetaData.getCatalogs 使用 sys.databases 视图获取目录  。 请参阅 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中有关权限的讨论，了解对 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 的 SQLServerDatabaseMetaData.getCatalogs  行为。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支持从用户数据库中返回整个目录集。 SQLServerDatabaseMetaData.getCatalogs 使用 sys.databases 视图获取目录  。 请参阅 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中有关权限的讨论，了解对  **的 SQLServerDatabaseMetaData.getCatalogs**[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 行为。  
   
 ## <a name="connections-dropped"></a>删除的连接
 

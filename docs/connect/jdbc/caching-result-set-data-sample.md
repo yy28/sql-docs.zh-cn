@@ -11,20 +11,20 @@ ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f59c7010875824b65d6b7d12129056f02537e908
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028425"
 ---
 # <a name="caching-result-set-data-sample"></a>缓存结果集数据的示例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序说明了如何从数据库中检索大量数据，然后使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 方法控制在客户端中缓存的数据行数。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序说明了如何从数据库中检索大量数据，然后使用 [SQLServerResultSet](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 对象的 [setFetchSize](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法控制在客户端中缓存的数据行数。
 
 > [!NOTE]  
-> 限制客户端中缓存的行数与限制结果集中包含的总行数不同。 要控制结果集中包含的总行数，请使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 方法，该对象具有继承对象 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象。
+> 限制客户端中缓存的行数与限制结果集中包含的总行数不同。 要控制结果集中包含的总行数，请使用 [SQLServerStatement](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 对象的 [setMaxRows](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法，该对象具有继承对象 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象。
 
 要对客户端中缓存的行数进行限制，首先必须在创建 Statement 对象时使用服务器端游标，并且在创建 Statement 对象时专门声明要使用的游标类型。 例如，JDBC 驱动程序提供了 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 游标类型，该类型是用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的快速只进、只读的服务器端游标。
 
@@ -41,7 +41,7 @@ ms.locfileid: "69028425"
 
 ## <a name="requirements"></a>要求
 
-若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 还需要访问 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库。 若要详细了解如何设置 classpath，请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。
+若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 还需要访问 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库。 若要详细了解如何设置类路径，请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。

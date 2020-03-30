@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580090"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
@@ -34,7 +34,7 @@ ms.locfileid: "65580090"
   
 2.  在服务应用程序名称附近单击或单击 **“类型”** 列，这将选择整行，然后在 SharePoint 功能区上单击 **“属性”** 。  
   
- 有关服务应用程序属性的详细信息，请参阅[步骤 3：创建 Reporting Services 服务应用程序](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)中的“服务应用程序”一节。  
+ 有关服务应用程序属性的详细信息，请参阅 [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)。  
   
 ## <a name="open-service-application-management-pages"></a>打开服务应用程序管理页面
 
@@ -146,7 +146,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  选择此选项可指定一个帐户。  
   
  **帐户**  
- 输入一个 Windows 域用户帐户。 使用如下格式：\<domain>\\<user account\>  。  
+ 输入一个 Windows 域用户帐户。 使用如下格式：*domain>\<<user account\\\>* 。  
   
  **密码**  
  键入密码。  

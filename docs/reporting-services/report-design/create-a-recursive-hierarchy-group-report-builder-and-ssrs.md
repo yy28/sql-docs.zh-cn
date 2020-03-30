@@ -9,10 +9,10 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080546"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>创建一个递归层次结构组（报表生成器和 SSRS）
@@ -48,7 +48,7 @@ ms.locfileid: "77080546"
     > [!NOTE]  
     >  如果看不到“属性”窗格，请单击“视图”选项卡上的“属性”。    
   
-2.  在“属性”窗格中，展开“填充”节点，再单击“左”，然后从下拉列表中选择“\<表达式…>”    。  
+2.  在“属性”窗格中，展开“填充”节点，再单击“左”，然后从下拉列表中选择“**表达式…>”**  **\<** 。  
   
 3.  在“表达式”窗格中，键入以下表达式：  
   

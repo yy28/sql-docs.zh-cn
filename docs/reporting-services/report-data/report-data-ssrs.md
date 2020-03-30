@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190721"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的报表数据简介
@@ -39,7 +39,7 @@ ms.locfileid: "74190721"
 6.  **外部数据源** 检索来自关系数据库、多维数据库、SharePoint 列表或 Web 服务的数据。  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> 定义术语  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> 定义术语  
   
 - **数据连接。** 也称为“数据源”  。 数据连接包含名称和依赖于连接类型的连接属性。 根据设计，数据源连接不包含凭据。 数据连接不指定从外部数据源中检索哪些数据。 为此，请在创建数据集时指定查询。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190721"
   
 - **凭据。** 凭据是身份验证信息，你必须提供这些信息才能访问外部数据。  
   
-##  <a name="BkMk_ReportDataTips"></a> 用于指定报表数据的提示
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> 用于指定报表数据的提示
 
  使用以下信息可以设计您的报表数据策略。  
   

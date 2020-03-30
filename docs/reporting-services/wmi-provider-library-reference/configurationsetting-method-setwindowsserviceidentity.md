@@ -16,10 +16,10 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b12b21fe8e51f8c03bf01efd7df63053c528781
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570914"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>ConfigurationSetting 方法 - SetWindowsServiceIdentity
@@ -54,7 +54,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="remarks"></a>备注  
- UseBuiltInAccount 参数设置为 true 并且报表服务器在 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] 或 Windows XP 上运行时，将忽略 Name、Domain 和 Password 参数的值，并且使用本地系统帐户      。  
+ UseBuiltInAccount 参数设置为 true 并且报表服务器在 Microsoft  *或 Windows XP 上运行时，将忽略 Name、Domain 和 Password 参数的值，并且使用本地系统帐户*  [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]    。  
   
  UseBuiltInAccount 参数设置为 true 并且报表服务器在 Windows Server 2003 上运行时，将忽略 Domain 和 Password 属性，并且名称字段必须包含“Builtin\NetworkService”、“Builtin\System”或“Builtin\LocalService”     。  
   

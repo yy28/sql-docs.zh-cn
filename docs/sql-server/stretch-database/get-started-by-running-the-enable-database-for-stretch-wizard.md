@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843804"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>通过运行“启用数据库延伸向导”开始
@@ -45,7 +45,7 @@ ms.locfileid: "73843804"
   
 2.  右键单击并选择“任务”  ，再选择“Stretch”  ，然后选择  “启用”以启动向导。  
   
-##  <a name="Intro"></a> 简介  
+##  <a name="introduction"></a><a name="Intro"></a> 简介  
  查看向导和必备组件的用途。  
  
  重要的先决条件包括以下内容。
@@ -55,7 +55,7 @@ ms.locfileid: "73843804"
   
  ![Stretch Database 向导的“简介”页](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database 向导的“简介”页")  
   
-##  <a name="Tables"></a> 选择表  
+##  <a name="select-tables"></a><a name="Tables"></a> 选择表  
  选择要为其启用延伸的表。  
  
 具有大量行的表显示于已排序列表的顶端。 向导显示表的列表之前，它会对当前不受 Stretch Database 支持的数据类型对其进行分析。 
@@ -102,7 +102,7 @@ ms.locfileid: "73843804"
   
 -   运行 ALTER TABLE 语句以在退出向导后指定筛选器函数。 有关所需步骤，请参阅 [运行向导后添加筛选器函数](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)。  
   
-##  <a name="Configure"></a> 配置 Azure  
+##  <a name="configure-azure"></a><a name="Configure"></a> 配置 Azure  
   
 1.  使用 Microsoft 帐户登录到 Microsoft Azure。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "73843804"
   
          ![选择现有的 Azure 服务器 - Stretch Database 向导](../../sql-server/stretch-database/media/stretch-wizard-5.png "选择现有的 Azure 服务器 - Stretch Database 向导")  
   
-##  <a name="Credentials"></a> 安全凭据  
+##  <a name="secure-credentials"></a><a name="Credentials"></a> 安全凭据  
  必须有一个数据库主密钥，以保护 Stretch Database 用于连接到远程数据库的凭据。  
   
  如果数据库主密钥已存在，请对其输入密码。  
@@ -156,26 +156,26 @@ ms.locfileid: "73843804"
   
  有关数据库主密钥的详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) 和[创建数据库主密钥](../../relational-databases/security/encryption/create-a-database-master-key.md)。 有关向导创建的凭据的详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
   
-##  <a name="Network"></a> 选择 IP 地址  
+##  <a name="select-ip-address"></a><a name="Network"></a> 选择 IP 地址  
  使用子网 IP 地址范围（推荐）或 SQL Server 的公共 IP 地址，在允许 SQL Server 与远程 Azure 服务器通信的 Azure 上创建防火墙规则。  
   
  你在此页上提供的 IP 地址（一个或多个）将告知 Azure 服务器允许通过 Azure 防火墙传递由 SQL Server 启动的传入数据、查询和管理操作。 该向导不会更改 SQL Server 上的防火墙设置中的任何内容。  
   
  ![选择 Stretch Database 向导的“IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "选择 Stretch Database 向导的“IP 地址”页")  
   
-##  <a name="Summary"></a>总结  
+##  <a name="summary"></a><a name="Summary"></a>总结  
  查看你输入的值和你在该向导中选择的选项以及 Azure 上的预估成本。 然后选择“完成”  以启用 Stretch。  
   
  ![Stretch Database 向导的“摘要”页](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database 向导的“摘要”页")  
   
-##  <a name="Results"></a> 结果  
+##  <a name="results"></a><a name="Results"></a> 结果  
  查看结果。  
   
  若要监视数据迁移的状态，请参阅[数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
  ![Stretch Database 向导的“结果”页](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Stretch Database 向导的“结果”页")  
   
-##  <a name="KnownIssues"></a> 对向导进行故障排除  
+##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> 对向导进行故障排除  
  **Stretch Database 向导失败。**  
  如果延伸数据库尚未在服务器级别启用，而你在不使用系统管理员权限的情况下运行向导来启用延伸数据库，则向导会失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅 [先决条件：在服务器上启用 Stretch Database 的权限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
   

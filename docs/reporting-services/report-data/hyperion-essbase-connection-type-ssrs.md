@@ -9,10 +9,10 @@ ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079025"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77079025"
   
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a> 连接字符串  
+##  <a name="connection-string"></a><a name="Connection"></a> 连接字符串  
  下面的连接字符串示例指定使用端口 13080 的服务器上的 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源以及使用 SOAP 的 Internet 上的 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA)，并连接到示例目录：  
   
 ```  
@@ -30,7 +30,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  有关连接字符串示例的更多信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Credentials"></a> 凭据  
+##  <a name="credentials"></a><a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。  
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
@@ -38,7 +38,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  有关详细信息，请参阅[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-##  <a name="Query"></a> 查询  
+##  <a name="queries"></a><a name="Query"></a> 查询  
  可以通过下列方式指定查询：  
   
 -   以交互方式生成查询。 在设计模式或查询模式下使用图形查询设计器，可浏览外部数据源中的元数据和生成采用多维表达式 (MDX) 语法的查询。  
@@ -56,14 +56,14 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据处理扩展插件支持扩展数据集字段属性。 这些值可从外部数据源获得，但在“报表数据”窗格中不显示。 有关详细信息，请参阅本主题后面的 [扩展字段属性](#Extended) 。  
   
   
-##  <a name="Parameters"></a> 查询参数  
+##  <a name="query-parameters"></a><a name="Parameters"></a> 查询参数  
 
  若要包括查询参数，请在查询设计器的筛选区域创建一个筛选器，并将该筛选器标记为参数。 系统将为每个筛选器自动创建一个数据集以提供可用值。 默认情况下，这些数据集不显示在“报表数据”窗格中。 有关详细信息，请参阅[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。
 
  默认情况下，每个报表参数的数据类型均为 **Text**。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
-##  <a name="Extended"></a> 扩展字段属性  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> 扩展字段属性  
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除了通过数据处理扩展插件为数据集字段定义的 **Value** 和 **IsMissing** 之外的其他属性。 扩展属性包括预定义属性和自定义属性。 预定义属性是对多个数据源通用的属性。 自定义属性对于每个数据源都是唯一的。  
   
  扩展字段属性不作为可拖至报表布局的项出现在“报表数据”窗格中。 不过，您可以将该属性的父字段拖至报表中，然后将默认属性由 **Value** 更改为要使用的属性。  
@@ -105,13 +105,13 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |**FORMAT_STRING**|**字符串**|针对度量值定义，是可作为 String 类型的 **FormattedValue** 。|  
   
   
-##  <a name="Remarks"></a> 注释  
+##  <a name="remarks"></a><a name="Remarks"></a> 注释  
  不是所有的报表传递模式都受到此数据访问接口的支持。 此数据处理扩展插件不支持通过数据驱动订阅传递报表。 有关详细信息，请参阅[使用外部数据源提供订阅方数据（数据驱动订阅）](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。 
   
  有关详细信息，请参阅 [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)（使用具有 Hyperion Essbase 的 SQL Server 2005 Reporting Services）。  
   
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明：  
   
  [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -121,7 +121,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> 相关章节  
+##  <a name="related-sections"></a><a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  

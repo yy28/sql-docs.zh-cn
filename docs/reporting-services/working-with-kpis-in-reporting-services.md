@@ -8,10 +8,10 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
 ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68329359"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
@@ -42,7 +42,7 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
 可以在报表服务器中的任何文件夹中创建 KPI。  创建 KPI 前，需要考虑 KPI 的正确放置位置。 可以将它放在用户可见、同时可与周围其他报表和 KPI 相关的文件夹中。  
 ## <a name="adding-a-kpi"></a>添加 KPI
   
-在确定 KPI 的位置之后，转到该文件夹并从顶部菜单中选择“新建” > “KPI”   。  
+在确定 KPI 的位置之后，转到该文件夹并从顶部菜单中选择“新建” **“KPI”**  >   。  
   
 ![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
   
@@ -61,9 +61,9 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
 | 趋势集 | 用于图表可视化的逗号分隔的数值。 也可以将其设置为具有表示走向的值的数据集列。 |
 | 相关内容 | 设置钻取链接的功能。 此链接可以是在门户上发布的移动报表或自定义 URL。 |
   
-> **警告**：虽然可以在设计时使用用于“状态”字段的单词，如果要刷新数据集，还是应使用数值  。 如果使用单词刷新数据集，而不是使用数值，则可能会损坏服务器上的 KPI。  
+> **警告**：虽然可以在设计时使用用于“状态”  字段的单词，如果要刷新数据集，还是应当使用数值。 如果使用单词刷新数据集，而不是使用数值，则可能会损坏服务器上的 KPI。  
 >
-> **注意**：“值”、“目标”和“状态”字段只能从数据集结果的第一行选择一个值    。 但是，“趋势集”  字段中，可以选择反映这种趋势的具体列。  
+> **请注意**：“值”、“目标”和“状态”字段只能从数据集结果的第一行选择一个值    。 但是，“趋势集”  字段中，可以选择反映这种趋势的具体列。  
   
 若要使用来自共享数据集的数据，可以执行以下步骤。
   

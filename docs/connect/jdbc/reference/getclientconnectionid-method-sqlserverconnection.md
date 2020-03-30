@@ -11,10 +11,10 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953176"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 方法 (SQLServerConnection)
@@ -56,7 +56,7 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- 无论连接到什么版本的服务器，getClientConnectionID 都有效，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 及更早版本中将不会提供扩展事件日志和连接环形缓冲区上的条目。  
+ 无论连接到什么版本的服务器，getClientConnectionID 都有效，但是在  **2008 R2 及更早版本中将不会提供扩展事件日志和连接环形缓冲区上的条目**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  如果启用记录连接 ID 的扩展事件，您可以在扩展事件日志中查找连接 ID，以查看失败是否源自服务器。 还可以针对某些连接错误在连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)）中查找连接 ID。 如果在连接环形缓冲区中找不到连接 ID，可以认为是网络错误。  
   

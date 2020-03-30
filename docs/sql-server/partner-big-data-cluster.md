@@ -10,10 +10,10 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 918b3b6bfcb217ef90ae08a9fb746a4836d51900
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256890"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>SQL Server 大数据群集合作伙伴
@@ -28,7 +28,7 @@ ms.locfileid: "77256890"
 |![HPE][2] |以 Microsoft SQL Server 的企业性能为重点<br>我们的存储解决方案提供使用无忧的 Microsoft SQL Server。 集成增强了复制数据管理，改进了数据保护，加速了 DevOps，并提供了云的快速入口。|[网站][hpe_website]<br>[数据表][hpe_datasheet]<br>[下载评估][hpe_download]<br>[Twitter][hpe_twitter]<br>[视频][hpe_youtube]<br>[博客][hpe_download]|
 |![NetApp][3] |NetApp StorageGRID 是软件定义的对象存储。 它可以在虚拟环境中部署为，仅限软件且为特定用途而创建的设备组合。<br/><br/>在单个命名空间中，StorageGRID 可以跨位于世界各地的多个数据中心进行扩展。 StorageGRID 提供了支持动态数据管理的大规模 S3 对象存储，方便客户在利用公有云资源的同时，在本地运行下一代工作流。 StorageGRID 独特的数据管理策略引擎可确保性能和持续性达到优化水平，并遵守数据位置要求。 |[网站][netapp_website]<br>[数据表][netapp_datasheet]<br>[Twitter][netapp_twitter]<br>[视频][netapp_youtube]<br>[文档][netapp_docs]|
 |![StreamSets][4] |Streamsets 为大数据群集的操作数据管道提供了一个无代码解决方案： <br/><ul><li> 利用直观的可视化工具设计和操作连续的数据流，无需知道如何为大数据系统编写代码</li><li>使用直观的拖放用户界面，即可在 Apache Spark 上开发复杂的分析应用程序 </li><li>通过本机集成到 SQL Server 和 HDFS，从各种数据源大规模提取并处理数据</li><li>加速从关系数据库、Hadoop 群集和 NoSQL 存储迁移到大数据群集</li></ul>   | [网站][streamsets_website]<br>[博客][streamsets_blog]<br>[视频][streamsets_youtube]<br>[文档][streamsets_docs]|
-|![azuredatalake][5] |Azure Data Lake Analytics<br><br>为智能操作提供技术支持的按需分析作业服务<br><br>在 U-SQL、R、Python 和 .NET 中轻松开发和运行大规模并行数据转换和处理程序，处理的数据量可达 PB 级。 由于没有需要管理的基础结构，你可以按需处理数据、立即进行扩展，并且仅按每作业支付费用。|[网站][azuredatalake_website]<br>[数据表](/azure/data-lake-analytics/data-lake-analytics-overview/)<br>[Twitter][azuredatalake_twitter]<br>[博客][azuredatalake_blog]|
+|![azuredatalake][5] |Azure Data Lake Analytics<br><br>为智能操作提供技术支持的按需分析作业服务<br><br>在 U-SQL、R、Python 和 .NET 中轻松开发和运行大规模并行数据转换和处理程序，处理的数据量可达 PB 级。 无需管理基础结构，可按需处理数据、即时缩放，按作业付费。|[网站][azuredatalake_website]<br>[数据表](/azure/data-lake-analytics/data-lake-analytics-overview/)<br>[Twitter][azuredatalake_twitter]<br>[博客][azuredatalake_blog]|
 
 ## <a name="next-steps"></a>后续步骤
 若要详细了解其他一些合作伙伴，请参阅[高可用性和灾难恢复合作伙伴][hadr_partners]、[管理合作伙伴][management_partners]以及[监视合作伙伴][monitor_partners]。

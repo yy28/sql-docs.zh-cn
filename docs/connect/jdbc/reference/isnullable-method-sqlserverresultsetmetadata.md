@@ -16,10 +16,10 @@ ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3918215f40a77fa5288dd345715856829b607dae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977522"
 ---
 # <a name="isnullable-method-sqlserverresultsetmetadata"></a>isNullable 方法 (SQLServerResultSetMetaData)
@@ -37,10 +37,10 @@ public int isNullable(int column)
 #### <a name="parameters"></a>parameters  
  *column*  
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 如果该列可为 Null，则为 true。 否则为 **false**。  
+ 如果该列可为 Null，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

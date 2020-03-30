@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571559"
 ---
 # <a name="data-alert-messages"></a>数据警报消息
@@ -22,14 +22,14 @@ ms.locfileid: "65571559"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 数据警报通过电子邮件传递两种类型的数据警报消息：包含数据警报结果的消息和包含错误说明的消息。 具有结果的消息向所有收件人告知有关报表数据中共同感兴趣的和对业务决策至关重要的更改。 如果由于某种原因导致错误且结果不可用，则发送错误消息。
+SQL Server Reporting Services 数据警报通过电子邮件传递两种类型的数据警报消息：具有数据警报结果的消息和具有错误说明的消息。 具有结果的消息向所有收件人告知有关报表数据中共同感兴趣的和对业务决策至关重要的更改。 如果由于某种原因导致错误且结果不可用，则发送错误消息。
 
 数据警报定义的所有者还可以在数据警报管理器中查看有关数据警报实例的信息。 有关详细信息，请参阅 [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)。  
 
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
-##  <a name="DataAlertMessages"></a> 数据警报消息  
+##  <a name="data-alert-messages"></a><a name="DataAlertMessages"></a> 数据警报消息  
  下图显示具有结果的数据警报消息和具有错误说明的警报消息。  
   
  **结果消息**  
@@ -59,7 +59,7 @@ SQL Server Reporting Services 数据警报通过电子邮件传递两种类型�
  两种消息类型的唯一区别在于项 5，即 **警报结果**。 如果在创建数据警报实例或数据警报消息时发生错误，则 **警报结果** 显示一条描述问题的错误消息。 此错误消息将发送给所有收件人，让他们知道他们预期和可能依赖来制定业务决策的警报结果不可用。  
   
   
-##  <a name="HowTo"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 相关任务  
  本部分列出的过程说明如何创建和编辑数据警报定义，这些定义可提供您在数据警报消息中看到的大量信息。  
   
 -   [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  

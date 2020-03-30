@@ -18,10 +18,10 @@ ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6fb059d867a7a3448e5a842929df48ad009f2518
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198474"
 ---
 # <a name="report-server-web-service"></a>报表服务器 Web 服务
@@ -63,7 +63,7 @@ Reporting Services 可用 Web 服务开发选项
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 或更高版本安装在具有与报表服务器的 Internet 连接或能够访问报表服务器的计算机上。  
   
--   在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK（若要使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发和部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的话）。  
+-   在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK（若要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 开发和部署 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应用程序的话）。  
   
 -   深入理解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。  
   

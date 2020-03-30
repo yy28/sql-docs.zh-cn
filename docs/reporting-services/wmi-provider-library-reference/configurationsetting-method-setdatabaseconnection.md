@@ -16,10 +16,10 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af40d79d876edb8f0448bd5abaef5c173a6edce9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572599"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting 方法 - SetDatabaseConnection
@@ -70,7 +70,7 @@ public void BackupEncryptionKey(string Server,
 ## <a name="remarks"></a>备注  
  当 CredentialsType 参数设置为 0 (Windows) 时，必须设置 UserName 和 Password 参数    。 UserName 参数的格式必须为“domain\username”，相应的值必须代表有效的 Windows 登录名  。  
   
- 如果将 CredentialsType 参数设置为 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，则 UserName 参数传递的值必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的要求   。  
+ 如果将 CredentialsType 参数设置为 1 ( *)，则 UserName 参数传递的值必须符合*  登录名的要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  如果将 CredentialsType 参数设置为 2（Windows 服务），则报表服务器将使用集成安全性连接到报表服务器数据库，并且忽略 UserName 和 Password 参数    。 报告服务器 Web 服务将使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帐户或应用程序池的帐户及 Windows 服务帐户访问报表服务器数据库。  
   
@@ -78,7 +78,7 @@ public void BackupEncryptionKey(string Server,
   
  SetDatabaseConnection 方法不会检查报表服务器是否可以使用指定的数据连接到报表服务器数据库。  
   
- 在第一次设置时，将根据以下处理器来设置 ConnectionPoolSize 属性：ConnectionPoolSize = 处理器数 * 75。  
+ 在第一次设置时，将根据以下处理器来设置 ConnectionPoolSize 属性：ConnectionPoolSize = #Processors * 75。  
   
  SetDatabaseConnection 方法不会向指定的帐户授予权限。 您必须为需要访问报表服务器数据库的每一帐户调用 [GenerateDatabaseRightsScript](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md) 方法，然后运行所生成的脚本。  
   

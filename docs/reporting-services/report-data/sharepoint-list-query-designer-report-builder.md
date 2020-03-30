@@ -11,10 +11,10 @@ ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500051"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 列表查询设计器（报表生成器）
@@ -54,15 +54,15 @@ ms.locfileid: "66500051"
  [查询结果](#QueryResults)  
  显示自动生成的查询的结果集示例数据。  
   
-###  <a name="DatabaseView"></a> “SharePoint 列表”窗格  
+###  <a name="sharepoint-lists-pane"></a><a name="DatabaseView"></a> “SharePoint 列表”窗格  
  “SharePoint 列表”窗格显示您有权查看的数据库对象的元数据，该元数据取决于数据源连接和凭据。 层次结构视图显示按数据库架构组织的数据库对象。 展开每个架构的节点可查看表、视图、存储过程及表值函数。 展开表或视图可显示列。  
   
-###  <a name="SelectedFields"></a> “所选字段”窗格  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> “所选字段”窗格  
  “所选字段”窗格显示您为 SharePoint 列表项选择的列表项字段。 此窗格中显示的字段将成为报表数据集的字段集合。 创建数据集和查询后，使用“报表数据”窗格可查看报表数据集的字段集合。 这些字段表示当您查看报表时可在表、图表及其他报表项中显示的数据。  
   
  若要在此窗格中添加或删除字段，请在“SharePoint 列表”窗格中选中或清除针对表或视图字段的复选框。  
   
-###  <a name="AppliedFilters"></a> “应用的筛选器”窗格  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> “应用的筛选器”窗格  
  “应用的筛选器”窗格显示用于限制在运行时检索的数据行数的条件。 此窗格中指定的条件用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] WHERE 子句。 如果选择了参数选项，则会自动创建报表参数。 通过基于查询参数的报表参数，用户可为查询指定值，以便控制报表中的数据。  
   
  显示以下列：  
@@ -75,7 +75,7 @@ ms.locfileid: "66500051"
   
 -   **参数** ：显示用于为查询添加查询参数的选项。 使用“数据集属性”可查看查询参数与报表参数之间的关系。  
   
-###  <a name="QueryResults"></a> “查询结果”窗格  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> “查询结果”窗格  
  “查询结果”窗格显示由其他窗格中的选项指定并且自动生成的查询的结果。 结果集中的列是您在“所选字段”窗格中指定的字段，行数据受限于您在“应用的筛选器”窗格中指定的筛选器。  
   
  此数据表示在运行查询时数据源中的值。 此数据未保存在报表定义中。报表中的实际数据是在处理报表时进行检索的。  

@@ -9,10 +9,10 @@ ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b07c03980cf1eb2cc7f99ab6d4e6470485bb53f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080600"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>添加、更改或删除报表参数（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "77080600"
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>添加或编辑报表参数  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 或报表设计器的“报表数据”  窗格中，右键单击“参数”  节点，然后单击“添加参数”  。 此时将打开 **“报表参数属性”** 对话框。  
+1.  在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或报表设计器的“报表数据”  窗格中，右键单击“参数”  节点，然后单击“添加参数”  。 此时将打开 **“报表参数属性”** 对话框。  
   
 2.  在 **“名称”** 中，键入参数的名称，或接受默认名称。  
   

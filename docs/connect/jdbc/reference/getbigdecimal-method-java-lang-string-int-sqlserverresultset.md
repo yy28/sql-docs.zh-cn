@@ -16,10 +16,10 @@ ms.assetid: 572a1799-c232-400f-b8d8-37a5719a8d5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 701afddaeaad79356a6b76a05a02f5cff1df1f39
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953905"
 ---
 # <a name="getbigdecimal-method-javalangstring-int-sqlserverresultset"></a>getBigDecimal 方法 (java.lang.String, int) (SQLServerResultSet)
@@ -41,11 +41,11 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName,
 #### <a name="parameters"></a>parameters  
  *columnName*  
   
- 一个包含列名的字符串。  
+ 一个包含列名的字符串  。  
   
  *scale*  
   
- 指示小数点右边的位数的 int。  
+ 指示小数点右边的位数的 int  。  
   
 ## <a name="return-value"></a>返回值  
  BigDecimal 对象。  

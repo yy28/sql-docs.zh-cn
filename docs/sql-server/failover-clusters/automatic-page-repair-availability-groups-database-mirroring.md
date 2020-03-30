@@ -17,10 +17,10 @@ ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822640"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自动页修复（可用性组：数据库镜像）
@@ -44,7 +44,7 @@ ms.locfileid: "74822640"
   
 -   [如何查看自动页修复尝试](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> 导致自动页修复尝试的错误类型  
+##  <a name="error-types-that-cause-an-automatic-page-repair-attempt"></a><a name="ErrorTypes"></a> 导致自动页修复尝试的错误类型  
  数据库镜像自动页修复只尝试修复特定数据文件中的页，此数据文件是指对其执行的操作由于下表中列出的某一错误而失败的数据文件。  
   
 |错误号|说明|导致自动页修复尝试的实例|  
@@ -56,7 +56,7 @@ ms.locfileid: "74822640"
  若要查看最近的 823 CRC 错误和 824 错误，请参阅 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 数据库中的 [suspect_pages](../../relational-databases/databases/msdb-database.md) 表。  
 
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="page-types-that-cannot-be-automatically-repaired"></a><a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
  页自动修复不能修复以下控制页类型：  
   
 -   文件头页（页 ID 0）。  
@@ -66,10 +66,10 @@ ms.locfileid: "74822640"
 -   分配页：全局分配映射 (GAM) 页、共享全局分配映射 (SGAM) 页和页可用空间 (PFS) 页。  
   
  
-##  <a name="PrimaryIOErrors"></a> 处理主体/主数据库上的 I/O 错误  
+##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> 处理主体/主数据库上的 I/O 错误  
  在主体/主数据库中，仅当数据库处于 SYNCHRONIZED 状态且主体/主数据库仍向镜像/辅助数据库发送数据库日志记录时，才会尝试自动页修复。 自动页修复尝试中操作的基本顺序如下：  
   
-1.  当主体/主数据库中的数据页上发生读取错误时，主体/主数据库将使用相应的错误状态在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表中插入一行。 对于数据库镜像，主体服务器将从镜像服务器请求该页的副本。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主体数据库将向所有辅助数据库广播请求，并且从第一个响应中获取该页。 此请求指定当前在刷新日志末尾的页 ID 和 LSN。 此页将标记为“还原已挂起” 。 这将使它在自动页修复尝试期间不可访问。 修复尝试期间对此页的访问尝试将失败，并显示错误 829（还原已挂起）。  
+1.  当主体/主数据库中的数据页上发生读取错误时，主体/主数据库将使用相应的错误状态在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表中插入一行。 对于数据库镜像，主体服务器将从镜像服务器请求该页的副本。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主体数据库将向所有辅助数据库广播请求，并且从第一个响应中获取该页。 此请求指定当前在刷新日志末尾的页 ID 和 LSN。 此页将标记为“还原已挂起”  。 这将使它在自动页修复尝试期间不可访问。 修复尝试期间对此页的访问尝试将失败，并显示错误 829（还原已挂起）。  
   
 2.  收到页请求后，镜像/辅助数据库将等待，直到将日志重做到请求中指定的 LSN 处。 然后，镜像/辅助数据库将在其数据库副本中尝试访问此页。 如果可以访问此页，则镜像/辅助数据库将此页的副本发送到主体/主数据库。 否则，镜像/辅助数据库将向主体/主数据库返回错误，并且自动页修复失败。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74822640"
 5.  如果此页 I/O 错误导致出现任何 [延迟的事务](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)，则修复此页后，主体/主数据库将尝试解决这些事务。  
   
  
-##  <a name="SecondaryIOErrors"></a> 处理镜像/辅助数据库上的 I/O 错误  
+##  <a name="handling-io-errors-on-the-mirrorsecondary-database"></a><a name="SecondaryIOErrors"></a> 处理镜像/辅助数据库上的 I/O 错误  
  处理在镜像/辅助数据库中发生的数据页 I/O 错误通常采用与数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]相同的方式。  
   
 1.  对于数据库镜像，如果镜像服务器在其重做日志记录时遇到一个或多个页 I/O 错误，则镜像会话将进入 SUSPENDED 状态。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，如果辅助副本在其重做日志记录时遇到一个或多个页 I/O 错误，则辅助数据库将进入 SUSPENDED 状态。 此时，镜像/辅助数据库使用相应的错误状态在 **suspect_pages** 表中插入一行。 然后，镜像/辅助数据库从主体/主数据库请求此页的副本。  
@@ -92,11 +92,11 @@ ms.locfileid: "74822640"
      如果镜像/辅助数据库未从主体/主数据库收到它请求的页，则自动页修复尝试将失败。 对于数据库镜像，镜像会话将保持挂起。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，辅助数据库将保持挂起。 如果手动恢复镜像会话或辅助数据库，则损坏的页将在同步阶段再次导致错误。  
   
  
-##  <a name="DevBP"></a> Developer Best Practice  
+##  <a name="developer-best-practice"></a><a name="DevBP"></a> Developer Best Practice  
  自动页修复是一个运行在后台的异步进程。 因此，请求不可读的页的数据库操作将失败，并且不管导致失败的条件是什么均返回错误代码。 当开发用于镜像数据库或可用性数据库的应用程序时，应截获失败操作的异常。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误代码为 823、824 或 829，则应稍后重试操作。  
   
 
-##  <a name="ViewAPRattempts"></a> 如何：查看自动页修复尝试  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
  下面的动态管理视图返回对应于给定可用性数据库或镜像数据库上最新自动页修复尝试的行，每个数据库最多可对应 100 行。  
   
 -   **AlwaysOn 可用性组：**  

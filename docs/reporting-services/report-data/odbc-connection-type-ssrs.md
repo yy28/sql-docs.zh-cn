@@ -9,10 +9,10 @@ ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fa8d62f80662c9d99ba0f62a5b7d114b5146fb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082143"
 ---
 # <a name="odbc-connection-type-ssrs"></a>ODBC 连接类型 (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77082143"
   
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a> 连接字符串  
+##  <a name="connection-string"></a><a name="Connection"></a> 连接字符串  
  用于 ODBC 数据处理扩展插件的连接字符串取决于您想要的 ODBC 驱动程序。 典型的连接字符串包含驱动程序支持的名称/值对。 例如，下面的连接字符串为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 AdventureWorks 数据库指定 ODBC 驱动程序。  
   
 ```  
@@ -28,7 +28,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
 ```  
   
   
-##  <a name="Credentials"></a> 凭据  
+##  <a name="credentials"></a><a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。  
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
@@ -38,10 +38,10 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
 > [!NOTE]  
 >  建议您不要在连接字符串中添加登录信息（如密码）。 报表生成器在 **“数据源”** 对话框中提供了一个用于输入凭据的单独选项卡。  
   
- 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
   
-##  <a name="Remarks"></a> 注释  
+##  <a name="remarks"></a><a name="Remarks"></a> 注释  
  ODBC 是在 OLEDB 之前采用的一种早期数据访问技术。 ODBC 只支持关系数据源。 ODBC 数据访问接口称为“驱动程序”  。 ODBC 驱动程序由 Microsoft 和第三方供应商提供。 例如，Microsoft Office 安装了连接到 Office 文件格式的 ODBC 驱动程序。  
   
  必须先安装 ODBC 驱动程序并生成计算机或系统 DSN，才能生成 ODBC 连接字符串。 若要成功检索到想要的数据，则必须提供驱动程序支持的查询语法。 参数支持因驱动程序而异。 有关详细信息，请参阅特定于所选驱动程序的主题，例如，[SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)。  
@@ -50,7 +50,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  有关特定 ODBC 数据提供程序的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。
   
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
   
  [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -60,7 +60,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> 相关章节  
+##  <a name="related-sections"></a><a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  

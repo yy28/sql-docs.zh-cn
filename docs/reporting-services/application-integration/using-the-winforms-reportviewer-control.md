@@ -13,10 +13,10 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ae42ea326af05bd715b9380b794384d6690fdb7
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198439"
 ---
 # <a name="use-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
@@ -40,7 +40,7 @@ ms.locfileid: "79198439"
   
  此控件添加到该窗体之后，将出现“ReportViewer 任务”智能标记，并提示你选择一个报表  。  
   
- 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项   。 在选择“\<服务器报告>  ”选项后，将出现两个其他属性：“报告服务器 Url”  和“报告路径”  。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径   。  
+ 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“**服务器报表>”选项\<**  。 选中“**服务器报表>”选项后，将出现两个附加的属性：“报表服务器 URL”和“报表路径”\<**   。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径   。  
   
  ![选择服务器报表](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "选择服务器报表")  
   

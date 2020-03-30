@@ -12,10 +12,10 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 934bd563af82c5fb8ca1d08ae7dc1b17160e3284
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058831"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>安装 Microsoft ODBC Driver for SQL Server (Linux)
@@ -24,7 +24,7 @@ ms.locfileid: "79058831"
 
 本文提供了用于从 bash shell 安装 ODBC 驱动程序的命令。 如果要直接下载包，请参阅[下载 ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md)。
 
-## <a id="17"></a> Microsoft ODBC 17
+## <a name="microsoft-odbc-17"></a><a id="17"></a> Microsoft ODBC 17
 
 以下部分介绍了如何从用于不同 Linux 分发版本的 bash shell 安装 Microsoft ODBC 驱动程序 17。
 
@@ -37,7 +37,7 @@ ms.locfileid: "79058831"
 > [!IMPORTANT]
 > 如果安装了暂时可用的 v17 `msodbcsql` 包，应先删除它，再安装 `msodbcsql17` 包。 这样可避免冲突。 `msodbcsql17` 包可以与 `msodbcsql` v13 包并行安装。
 
-### <a id="alpine17"></a> Alpine Linux
+### <a name="alpine-linux"></a><a id="alpine17"></a> Alpine Linux
 
 ```bash
 #Download the desired package(s)
@@ -62,7 +62,7 @@ sudo apk add --allow-untrusted mssql-tools_17.5.2.1-1_amd64.apk
 > [!NOTE]
 > 必须有驱动程序版本 17.5 或更高版本，才能获得 Alpine 支持。
 
-### <a id="debian17"></a> Debian
+### <a name="debian"></a><a id="debian17"></a> Debian
 
 ```bash
 sudo su
@@ -97,7 +97,7 @@ sudo apt-get install libgssapi-krb5-2
 > [!NOTE]
 > 可以将设置环境变量“ACCEPT_EULA”替换为设置 debconf 变量“msodbcsql/ACCEPT_EULA”：`echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
-### <a id="redhat17"></a> Red Hat Enterprise Server 和 Oracle Linux
+### <a name="red-hat-enterprise-server-and-oracle-linux"></a><a id="redhat17"></a> Red Hat Enterprise Server 和 Oracle Linux
 
 ```bash
 sudo su
@@ -126,7 +126,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a id="suse17"></a> SUSE Linux Enterprise Server
+### <a name="suse-linux-enterprise-server"></a><a id="suse17"></a> SUSE Linux Enterprise Server
 
 ```bash
 sudo su
@@ -157,7 +157,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ```
 
-### <a id="ubuntu17"></a> Ubuntu
+### <a name="ubuntu"></a><a id="ubuntu17"></a> Ubuntu
 
 ```bash
 sudo su
@@ -202,7 +202,7 @@ sudo apt-get install unixodbc-dev
 - [Microsoft ODBC Driver 13 for SQL Server](#13)
 - [Microsoft ODBC Driver 11 for SQL Server](#11)
 
-## <a id="13.1"></a> ODBC 13.1
+## <a name="odbc-131"></a><a id="13.1"></a> ODBC 13.1
 
 以下部分介绍了如何从用于不同 Linux 分发版本的 bash shell 安装 Microsoft ODBC 驱动程序 13.1。
 
@@ -344,7 +344,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-## <a id="13"></a> ODBC 13
+## <a name="odbc-13"></a><a id="13"></a> ODBC 13
 
 以下部分介绍了如何从用于不同 Linux 分发版本的 bash shell 安装 Microsoft ODBC 驱动程序 13。
 
@@ -428,13 +428,13 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-所有这些包都具有自己的依赖项，这些依赖性可能会显示在系统上，也可能不会显示。 有关此问题的常规解决方案，请参阅发行版对应的包管理器文档：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) 和 [SUSE](https://en.opensuse.org/Portal:Zypper)
+所有这些包都具有自己的依赖项，这些依赖性可能会显示在系统上，也可能不会显示。 有关此问题的常规解决方案，请参阅分发对应的包管理器文档：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) 和 [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 还有一种常见做法是，手动下载所有相关包并将其一起放置在安装计算机上，然后依次手动安装每个包，最后安装 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 包。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
 
-- 从 [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) 下载最新的 `msodbcsql` `.rpm` 。
+- 从 `msodbcsql``.rpm`[ 下载最新的 https://packages.microsoft.com/rhel/7/prod/ ](https://packages.microsoft.com/rhel/7/prod/)。
 - 安装依赖项和驱动程序
   
 ```bash
@@ -444,7 +444,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
-- 从 [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/) 下载最新的 `msodbcsql` `.deb` 。
+- 从 `msodbcsql``.deb`[ 下载最新的 https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)。
 - 安装依赖项和驱动程序
 
 ```bash
@@ -454,7 +454,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
 
-- 从 [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) 下载最新的 `msodbcsql` `.rpm` 。
+- 从 `msodbcsql``.rpm`[ 下载最新的 https://packages.microsoft.com/sles/12/prod/ ](https://packages.microsoft.com/sles/12/prod/)。
 - 安装依赖项和驱动程序。
 
 ```bash
@@ -468,7 +468,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 ```
 
-## <a id="11"></a> ODBC 11
+## <a name="odbc-11"></a><a id="11"></a> ODBC 11
 
 以下部分介绍如何在 Linux 安装 Microsoft ODBC 驱动程序 11。 安装 unixODBC 驱动程序管理器后才能开始使用该驱动程序。 有关详细信息，请参阅[安装驱动程序管理器](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)。
 
@@ -519,7 +519,7 @@ Linux 上的 ODBC 驱动程序由以下组件构成：
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X 或 libmsodbcsql-13.X.so.X.X|包含该驱动程序所有功能的共享对象 (`so`) 动态库文件。 此文件安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/lib64/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/lib64/` 中。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/` 中| 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：** 无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/include/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/include/` 中。 |
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/include/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/include/` 中。 |
 |LICENSE.txt|包含最终用户许可协议条款的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/share/doc/msodbcsql/` 中。|
 |RELEASE_NOTES|包含发行说明的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/share/doc/msodbcsql/` 中。|
 
