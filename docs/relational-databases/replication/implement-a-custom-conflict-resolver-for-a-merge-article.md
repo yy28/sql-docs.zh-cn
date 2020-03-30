@@ -18,10 +18,10 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322154"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
@@ -36,7 +36,7 @@ ms.locfileid: "75322154"
   
      [基于 COM 的冲突解决程序](#COM)  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以编写自己的自定义冲突解决程序以作为每个发布服务器上的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 在同步过程中，当冲突解决程序注册到的项目遇到冲突时，就是调用此存储过程。 合并代理将冲突行的相关信息传递到此过程的必需参数。 基于存储过程的自定义冲突解决程序将始终在发布服务器上创建。  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ms.locfileid: "75322154"
   
 2.  执行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **publication\@** 、**article\@** 并指定 **property** **的值为 resolver_info\@** ，同时为 **value\@** 指定用于实现冲突解决程序逻辑的存储过程的名称。  
   
-##  <a name="COM"></a> 使用基于 COM 的自定义冲突解决程序  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a> 使用基于 COM 的自定义冲突解决程序  
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间实现了一个接口，可便于编写复杂的业务逻辑，用于处理事件，并解决在合并复制同步过程中发生的冲突。 有关详细信息，请参阅[为合并项目实现业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。 您也可以编写自己的基于本机代码的自定义业务逻辑以解决冲突。 此逻辑作为 COM 组件生成，并编译到动态链接库 (DLL) 中（使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 等产品）。 这类基于 COM 的自定义冲突解决程序必须实现 ICustomResolver  接口，这是专为解决冲突而设计的接口。  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>创建和注册基于 COM 的自定义冲突解决程序  

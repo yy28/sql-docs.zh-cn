@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68034522"
 ---
 # <a name="service-broker"></a>Service Broker
@@ -106,7 +106,7 @@ FROM ExpenseQueue;
 
 - 不支持跨实例 Service Broker 
  - `sys.routes` -先决条件：通过 sys.routes 选择地址。 在每个路由上，地址必须是本地的。 请参阅 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)。
- - `CREATE ROUTE` - 不能使用除 `LOCAL` 以外的 `ADDRESS` 执行 `CREATE ROUTE`。 请参阅 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)。
+ - `CREATE ROUTE` - 不能使用除 `CREATE ROUTE` 以外的 `ADDRESS` 执行 `LOCAL`。 请参阅 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)。
  - `ALTER ROUTE` 不能结合使用 `ALTER ROUTE` 和 `ADDRESS`（`LOCAL` 除外）。 请参阅 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)。  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>可以将消息发送到多个目标服务（多播）  

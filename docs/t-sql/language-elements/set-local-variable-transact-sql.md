@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072286"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
@@ -67,7 +67,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>参数  
 **@** _local_variable_  
-除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 (@) 开头  。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
+除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 ( **) 开头@** 。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
 property_name   
 用户定义类型的属性。  
@@ -122,7 +122,7 @@ CURSOR
 指定 SET 语句包含游标的声明。  
   
 SCROLL  
-指定游标支持所有提取选项：FIRST、LAST、NEXT、PRIOR、RELATIVE 以及 ABSOLUTE。 如果还指定了 FAST_FORWARD，则不能指定 SCROLL。  
+指定游标支持所有提取选项：FIRST、LAST、NEXT、PRIOR、RELATIVE 和 ABSOLUTE。 如果还指定了 FAST_FORWARD，则不能指定 SCROLL。  
   
 FORWARD_ONLY  
 指定游标仅支持 FETCH NEXT 选项。 仅以一个方向、从第一行到最后一行检索游标。 如果没有使用 STATIC、KEYSET 或 DYNAMIC 关键字指定 FORWARD_ONLY，游标将作为 DYNAMIC 实现。 如果 FORWARD_ONLY 和 SCROLL 均未指定，那么除非指定了 STATIC、KEYSET 或 DYNAMIC 关键字，否则默认值为 FORWARD_ONLY。 对于 STATIC、KEYSET 和 DYNAMIC 游标，SCROLL 为默认值。  
@@ -184,7 +184,7 @@ SET **@** _cursor_variable_ 的语法规则不包含 LOCAL 和 GLOBAL 关键字�
 不要在 SELECT 语句中使用变量来连接值（即，计算聚合值）。 可能发生了意外查询结果。 因为，SELECT 列表中的所有表达式（包括赋值）不一定对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](https://support.microsoft.com/kb/287515)。  
   
 ## <a name="permissions"></a>权限  
-要求具有 public 角色的成员身份。 所有用户都可以使用 SET @local_variable   。  
+要求具有 public 角色的成员身份。 所有用户都可以使用 SET **local_variable@**  。  
   
 ## <a name="examples"></a>示例  
   
@@ -288,7 +288,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 通过调用类型的方法为用户定义类型的变量赋值  
-以下示例通过调用类型的 `SetXY` 方法设置用户定义类型 point 的值  。  
+以下示例通过调用类型的  **方法设置用户定义类型 point 的值**`SetXY`。  
   
 ```  
 DECLARE @p Point;  
@@ -306,7 +306,7 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. 输出使用 SET 初始化的变量值  
 以下示例创建 `@myvar` 变量，将字符串值放入该变量，然后输出 `@myvar` 变量的值。  

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054561"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>计划 Azure 中部署的 SQL Server Integration Services (SSIS) 包的执行
@@ -36,13 +36,13 @@ ms.locfileid: "68054561"
 - [作为 Azure 数据工厂管道的一部分间接地计划包](#activity)
 
 
-## <a name="ssms"></a>使用 SSMS 计划包
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a>使用 SSMS 计划包
 
 在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“计划”以打开“新建计划”对话框   。 有关详细信息，请参阅[使用 SSMS 计划 Azure 中的 SSIS 包](ssis-azure-schedule-packages-ssms.md)。
 
 此功能要求 SQL Server Management Studio 17.7 或更高版本。 若要获取 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
-## <a name="elastic"></a> 使用 SQL 数据库弹性作业计划安排一个包
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> 使用 SQL 数据库弹性作业计划安排一个包
 
 有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理横向扩展的云数据库](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)。
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a>使用 SQL Server 代理在本地计划包
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a>使用 SQL Server 代理在本地计划包
 
 有关 SQL Server 代理的详细信息，请参阅 [包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。
 
@@ -160,7 +160,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
 
 6.  完成配置并计划作业。
 
-## <a name="activity"></a>作为 Azure 数据工厂管道的一部分计划包
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a>作为 Azure 数据工厂管道的一部分计划包
 
 可通过使用触发器间接地计划包，从而运行用于运行 SSIS 包的 Azure 数据工厂管道。
 

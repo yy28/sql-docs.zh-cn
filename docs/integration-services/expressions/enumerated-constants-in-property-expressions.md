@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297641"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>属性表达式中的枚举常量
@@ -47,7 +47,7 @@ ms.locfileid: "71297641"
   
  [Common Properties](#CommonProperties)  
   
-##  <a name="Package"></a> “包”  
+##  <a name="package"></a><a name="Package"></a> “包”  
  下表列出了通过使用枚举器中的值所设置的包的属性的友好名称和等价数值。  
   
  **PackageType** 属性 - 通过使用“DTSPackageType”枚举中的值设置  。  
@@ -90,7 +90,7 @@ ms.locfileid: "71297641"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> 优先约束  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> 优先约束  
  **EvalOp** 属性 - 通过使用“DTSPrecedenceEvalOp”枚举中的值设置  。  
   
 |DTSPrecedenceEvalOp 中的友好名称|数值|  
@@ -109,7 +109,7 @@ ms.locfileid: "71297641"
 |Completion|2|  
 |已取消|3|  
   
-##  <a name="Foreach"></a> Foreach 循环枚举器  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Foreach 循环枚举器  
  Foreach 循环包括一组其属性可以由属性表达式设置的枚举器。  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach ADO 枚举器  
@@ -147,7 +147,7 @@ ms.locfileid: "71297641"
 |节点|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> “任务”  
+##  <a name="tasks"></a><a name="Tasks"></a> “任务”  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括许多其属性可以由属性表达式设置的任务。  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务  
@@ -479,7 +479,7 @@ ms.locfileid: "71297641"
 |Fast|1|  
 |Precise|2|  
   
-##  <a name="MaintenancePlanTasks"></a> 维护计划任务  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> 维护计划任务  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括的一组任务将执行在维护计划和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用的 SQL Server 任务。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持通过编程来使用这些任务，而且编程参考文档不包括这些任务及其枚举器的 API 文档。  
@@ -572,7 +572,7 @@ ms.locfileid: "71297641"
 |索引|2|  
 |All|3|  
   
-##  <a name="CommonProperties"></a> 通用属性  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> 通用属性  
  包、任务和 Foreach 循环、For 循环和序列容器可以使用以下枚举来设置指定的属性。  
   
  **ForceExecutionResult** 属性 - 通过使用“DTSForcedExecResult”枚举中的值设置  。  

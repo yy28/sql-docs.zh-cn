@@ -13,10 +13,10 @@ ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874740"
 ---
 # <a name="create-a-maintenance-plan"></a>创建维护计划
@@ -39,20 +39,20 @@ ms.locfileid: "70874740"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  若要创建多服务器维护计划，必须配置包含一个主服务器和一个（或多个）目标服务器的多服务器环境。 必须在主服务器上创建和维护多服务器维护计划。 在目标服务器上可以查看这些计划，但不能进行维护。 
  
-###  <a name="Prerequisite"></a> 先决条件  
+###  <a name="prerequisite"></a><a name="Prerequisite"></a> 先决条件  
 必须启用 [“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) 。
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  若要创建或管理维护计划，您必须是 **sysadmin** 固定服务器角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>使用维护计划向导创建维护计划  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70874740"
   
 4.  按照[创建维护计划（维护计划设计图面）](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)中的步骤创建维护计划。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-maintenance-plan"></a>创建维护计划  
   

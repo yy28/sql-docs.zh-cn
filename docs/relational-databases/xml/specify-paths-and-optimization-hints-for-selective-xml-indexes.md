@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257615"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>为选择性 XML 索引指定路径和优化提示
@@ -29,7 +29,7 @@ ms.locfileid: "75257615"
   
  有关选择性 XML 索引的详细信息，请参阅 [选择性 XML 索引 (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
-##  <a name="untyped"></a> 了解非类型化 XML 中的 XQuery 和 SQL Server 类型  
+##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> 了解非类型化 XML 中的 XQuery 和 SQL Server 类型  
  选择性 XML 索引支持两种类型系统：XQuery 类型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。 已建立索引的路径可用于匹配 XQuery 表达式，或者用于匹配 XML 数据类型的 value() 方法的返回值。  
   
 -   在未对要建立索引的路径加批注时，或者使用 XQUERY 关键字进行批注时，该路径匹配 XQuery 表达式。 对于 XQUERY 批注的节点路径有两种变化形式：  
@@ -135,7 +135,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ```  
   
   
-##  <a name="typed"></a> 了解对类型化 XML 的选择性 XML 索引支持  
+##  <a name="understanding-selective-xml-index-support-for-typed-xml"></a><a name="typed"></a> 了解对类型化 XML 的选择性 XML 索引支持  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的类型化 XML 是与某一给定 XML 文档相关联的架构。 该架构定义文档的整体结构以及节点的类型。 如果某一架构存在，则在用户提升路径时选择性 XML 索引将应用该架构结构，因此，无需为路径指定 XQUERY 类型。  
   
  选择性 XML 索引支持以下 XSD 类型：  
@@ -209,7 +209,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  有关优化提示的详细信息，请参阅 [指定优化提示](#hints)。  
   
-##  <a name="paths"></a> 指定路径  
+##  <a name="specifying-paths"></a><a name="paths"></a> 指定路径  
  通过选择性 XML 索引，您可以从您预期要运行的查询相关的已存储 XML 数据仅对节点的子集建立索引。 在相关节点的子集远小于 XML 文档中节点的总数时，选择性 XML 索引将仅存储相关节点。 为了从选择性 XML 索引中受益，请标识要建立索引的正确的节点子集。  
   
 ### <a name="choosing-the-nodes-to-index"></a>选择要建立索引的节点  
@@ -345,7 +345,7 @@ WHERE T.xmldata.exist('
 |**/a/b/c/d/e/g**|通过 exist() 方法为存在的节点 `g` 进行求值。|  
   
   
-##  <a name="hints"></a> 指定优化提示  
+##  <a name="specifying-optimization-hints"></a><a name="hints"></a> 指定优化提示  
  您可以使用可选的优化提示为按选择性 XML 索引建立索引的节点指定附加的映射详细信息。 例如，可以指定节点的数据类型和基数，以及与数据结构有关的某些信息。 这些附加信息支持更好的映射。 它还可以导致改进性能和/或节约存储空间。  
   
  是否使用优化提示是可选的。 您可以始终接受默认映射，这样做是可靠的，但无法提供最佳性能和存储。  
@@ -416,7 +416,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  在现有字符串长于指定的 MAXLENGTH 时，将该值插入到索引中将失败。  
   
   
-##  <a name="sample"></a> 针对示例的示例 XML 文档  
+##  <a name="sample-xml-document-for-examples"></a><a name="sample"></a> 针对示例的示例 XML 文档  
  下面的示例 XML 文档在本主题的示例中引用：  
   
 ```xml  

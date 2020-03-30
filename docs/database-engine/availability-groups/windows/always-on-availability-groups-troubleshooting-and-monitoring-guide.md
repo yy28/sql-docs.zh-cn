@@ -11,10 +11,10 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822045"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>监视可用性组并对其进行故障排除
@@ -23,7 +23,7 @@ ms.locfileid: "74822045"
  由于可用性组是集成技术，因此遇到的许多问题可能是数据库系统中其他问题的症状。 部分问题由可用性组内的设置造成，例如可用性数据库被挂起。 其他问题可能包括 SQL Server 其他方面的问题，例如 SQL Server 设置、数据库文件部署和与可用性无关的系统性能问题。 可能还有一些问题发生在 SQL Server 之外，例如网络 I/O、TCP/IP、Active Directory 和 Windows Server 故障转移群集 (WSFC) 问题。 通常情况下，出现在可用性组、副本或数据库中的问题需要对多个技术进行故障排除才能确定根本原因。  
   
   
-##  <a name="BKMK_SCENARIOS"></a>故障排除方案  
+##  <a name="troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a>故障排除方案  
  下表包含指向可用性组常见故障排除方案的链接。 它们按方案类型（如配置、客户端连接、故障转移和性能）分类。  
   
 |场景|方案类型|说明|  
@@ -37,7 +37,7 @@ ms.locfileid: "74822045"
 |[故障排除：主要副本的更改未反映在次要副本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|性能|客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。|  
 |[故障排除：Always On 可用性组的高 HADR_SYNC_COMMIT 等待类型](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|性能|如果 HADR_SYNC_COMMIT 特别长，则数据移动流或次要副本日志强化存在性能问题。|  
 
-##  <a name="BKMK_TOOLS"></a>有用的故障排除工具  
+##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a>有用的故障排除工具  
  当配置或运行可用性组时，不同的工具可帮助诊断不同类型的问题。 下表提供的链接指向有关工具的有用信息。  
   
 |工具|说明|  
@@ -53,7 +53,7 @@ ms.locfileid: "74822045"
 |Always On 性能计数器|监视可用性组活动，反映在系统监视器中，并且可用于性能调整。 有关详细信息，请参阅 [SQL Server，可用性副本](~/relational-databases/performance-monitor/sql-server-availability-replica.md)和 [SQL Server，数据库副本](~/relational-databases/performance-monitor/sql-server-database-replica.md)。|  
 |[Always On 环形缓冲区](always-on-ring-buffers.md)|记录 SQL Server 系统中的内部诊断警报，可用于调试可用性组相关问题。|  
   
-##  <a name="BKMK_MONITOR"></a>监视可用性组  
+##  <a name="monitoring-availability-groups"></a><a name="BKMK_MONITOR"></a>监视可用性组  
  对可用性组进行故障排除的最佳时机是在出现问题，导致需要故障转移（无论是自动还是手动）之前。 通过监视可用性组的性能指标，并在可用性组副本的执行超出服务级别协议 (SLA) 范围时发送警告，可实现此操作。 例如，同步次要副本出现性能问题，导致估计的故障转移时间增加，且你不想等到自动故障转移发生并发现故障转移时间超过恢复时间目标时。  
   
  可用性组是高可用性和灾难恢复解决方案，因此要监视的最重要的性能指标是估计的故障转移时间以及灾难中可能的数据丢失，前者会影响恢复时间目标 (RTO)，而后者会影响恢复点目标 (RPO)。 可在任何给定时间从 SQL Sever 公开的数据中收集这些指标，以便在发生实际故障事件前，通过系统的高可用性灾难恢复 (HADR) 功能收到有关问题的警报。 因此，请务必熟悉可用性组的数据同步流程并相应地收集有关指标。  

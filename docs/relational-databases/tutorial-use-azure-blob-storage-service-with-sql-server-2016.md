@@ -15,10 +15,10 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286971"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
@@ -30,7 +30,7 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
 
 此教程通过多个部分介绍如何在 Microsoft Azure Blob 存储服务中处理 SQL Server 数据文件。 每个部分专注于某个特定任务，应按顺序完成各部分的内容。 首先，将学习如何使用存储访问策略和共享访问签名在 Blob 存储中新建容器。 然后，学习如何创建 SQL Server 凭据以将 SQL Server 与 Azure Blob 存储相集成。 接下来，将数据库备份到 Blob 存储，并将其还原到 Azure 虚拟机。 然后，使用 SQL Server 2016 文件快照事务日志备份还原到某个时间点和新的数据库。 最后，本教程会演示元数据系统存储过程和函数的使用方法，帮助了解和使用文件快照备份。
   
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 若要完成本教程，你必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。 若要使用本教程，你需要一个 Azure 存储帐户、SQL Server Management Studio (SSMS)、本地 SQL Server 实例的访问权限、运行 SQL Server 2016 的 Azure 虚拟机 (VM) 的访问权限和一个 AdventureWorks2016 数据库。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”  权限的 db_backupoperator  数据库角色。 
 

@@ -17,10 +17,10 @@ ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 92e485372bca104ae7c34405f711ced3a6a60a44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242580"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>完整数据库还原（简单恢复模式）
@@ -42,7 +42,7 @@ ms.locfileid: "75242580"
 > [!NOTE]  
 >  有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)中的“兼容性支持”部分。  
   
-##  <a name="Overview"></a> 在简单恢复模式下还原数据库的概述  
+##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 在简单恢复模式下还原数据库的概述  
  简单恢复模式下的完整数据库还原只涉及一个或两个 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句，具体取决于是否需要还原差异数据库备份。 如果只使用完整数据库备份，则只需还原最近的备份，如下图所示。  
   
  ![仅还原完整数据库备份](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "仅还原完整数据库备份")  
@@ -54,7 +54,7 @@ ms.locfileid: "75242580"
 > [!NOTE]  
 >  如果你计划将数据库备份还原到其它服务器实例，请参阅 [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
-###  <a name="TsqlSyntax"></a> 基本 TRANSACT-SQL RESTORE 语法  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本 TRANSACT-SQL RESTORE 语法  
  用于还原完整数据库备份的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语法是：  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
@@ -66,7 +66,7 @@ ms.locfileid: "75242580"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="Example"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="Example"></a> 示例 (Transact-SQL)  
  以下示例首先显示如何使用 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 语句来创建 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份和差异数据库备份。 然后按顺序还原这些备份。 将数据库还原到完成差异数据库备份时的状态。  
   
  该示例说明数据库完整还原方案的还原序列中的关键选项。 *还原顺序* 由通过一个或多个还原阶段来移动数据的一个或多个还原操作组成。 将省略与此目的不相关的语法和详细信息。 在恢复数据库时，尽管 RECOVERY 选项是默认值，但为清楚起见，仍建议显式指定该选项。  
@@ -100,7 +100,7 @@ FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **还原完整数据库备份**  
   
 -   [在简单恢复模式下还原数据库备份 (Transact-SQL)](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  

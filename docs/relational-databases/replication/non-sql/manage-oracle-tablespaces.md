@@ -14,10 +14,10 @@ ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6320d7192d2493486779a1b6ac433f78a45114ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70276542"
 ---
 # <a name="manage-oracle-tablespaces"></a>管理 Oracle 表空间
@@ -32,15 +32,15 @@ ms.locfileid: "70276542"
   
 -   使用 [sp_changearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 若要使用 **sp_changearticle**，请指定下列内容：  
   
-    -   为参数 \@publisher 指定 Oracle 发布服务器的名称  。  
+    -   为参数 **publisher 指定 Oracle 发布服务器的名称\@** 。  
   
-    -   为参数 \@publication 指定 Oracle 发布的名称  。  
+    -   为参数 **publication 指定 Oracle 发布的名称\@** 。  
   
-    -   为参数 \@article 指定项目的名称  。  
+    -   为参数 **article 指定项目的名称\@** 。  
   
-    -   为参数 \@property 指定“tablespace”值  。  
+    -   为参数 **property 指定“tablespace”值\@** 。  
   
-    -   为参数 \@value 指定表空间名称  。  
+    -   为参数 **value 指定表空间名称\@** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

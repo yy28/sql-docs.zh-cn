@@ -21,10 +21,10 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295672"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色（SSIS 服务）
@@ -93,7 +93,7 @@ ms.locfileid: "71295672"
   
      可以将读取者角色和写入者角色分配给每个包。  
 
-## <a name="assign"></a> 将读取者角色和写入者角色分配给包
+## <a name="assign-a-reader-and-writer-role-to-a-package"></a><a name="assign"></a> 将读取者角色和写入者角色分配给包
   可以将读取者角色和写入者角色分配给每个包。  
   
 ### <a name="assign-a-reader-and-writer-role-to-a-package"></a>将读取者角色和写入者角色分配给包  
@@ -108,7 +108,7 @@ ms.locfileid: "71295672"
   
 5.  单击“确定”。 
 
-## <a name="create"></a> 创建用户定义的角色
+## <a name="create-a-user-defined-role"></a><a name="create"></a> 创建用户定义的角色
     
 ### <a name="to-create-a-user-defined-role"></a>创建用户定义角色  
   
@@ -134,8 +134,8 @@ ms.locfileid: "71295672"
   
 11. 单击“确定”。 
 
-## <a name="roles_dialog"></a>“包角色”对话框 UI 参考
-  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“包角色”  对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中存储的包  。  
+## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a>“包角色”对话框 UI 参考
+  可以使用  **中的“包角色”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中存储的包  。  
   
  该对话框中列出的角色是 **msdb** 系统数据库的当前数据库角色。 如果未选择任何角色，将应用默认的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色。 默认情况下，读取者角色包括 **db_ssisadmin**、 **db_ssisoperator**以及创建包的用户。 作为以上任一角色的成员的用户或创建该包的用户，可以枚举、查看、导出和运行包。 默认情况下，写入者角色包括 **db_ssisadmin** 和创建包的用户。 作为此角色的成员的用户和创建该包的用户，可以导入、删除和更改包。  
   

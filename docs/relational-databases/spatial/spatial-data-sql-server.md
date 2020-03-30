@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278139"
 ---
 # <a name="spatial-data-sql-server"></a>空间数据 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "72278139"
   
  这两种数据类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中都是作为 .NET 公共语言运行时 (CLR) 数据类型实现的。  
   
-##  <a name="reltasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相关任务  
  [创建、构造和查询几何图形实例](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  介绍可用于 geometry 数据类型实例的方法。  
   

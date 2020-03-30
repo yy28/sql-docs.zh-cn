@@ -14,10 +14,10 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fa5d6c780ce80e8f6de0493494f736f7049edc16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298962"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 服务器和目录
@@ -40,7 +40,7 @@ ms.locfileid: "71298962"
   
  还可以利用 SSIS 和 Always On 可用性组，提供高可用性的 SSISDB 及其内容。 有关详细信息，请参阅[对 SSIS 目录 (SSISDB) 使用 Always On](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另请参阅 blogs.msdn.com 上 Matt Masson 的博客文章[结合使用 SSIS 和 Always On](https://go.microsoft.com/fwlink/?LinkId=255873)。  
   
-##  <a name="ssms"></a> SQL Server Management Studio 中的 Integration Services 服务器  
+##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> SQL Server Management Studio 中的 Integration Services 服务器  
  在您连接到承载 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库的 **ssDEnoversion** 实例时，您将在对象资源管理器中看到下列对象：  
   
 -   **SSISDB 数据库**  

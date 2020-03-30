@@ -14,17 +14,17 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558504"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的其他实例。 TDE 针对数据和日志文件执行实时 I/O 加密和解密。 加密使用数据库加密密钥 (DEK)，它存储在数据库引导记录中，可在恢复时使用。 DEK 是使用存储在服务器的 **master** 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。   
    
-##  <a name="Restrictions"></a> 限制和局限  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   在移动 TDE 保护的数据库时，您还必须移动用于打开 DEK 的证书或非对称密钥。 该证书或非对称密钥必须安装在目标服务器的 **master** 数据库中，以便 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以访问数据库文件。 有关详细信息，请参阅[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75558504"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认情况下，将此处创建的文件存储在 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** 中。 您的文件名和位置可能会有所不同。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
   
 -   要求针对 **master** 数据库的 **CONTROL DATABASE** 权限以便创建数据库主密钥。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "75558504"
   
 -   需要拥有已加密数据库的 **CONTROL DATABASE** 权限和用于加密数据库加密密钥的证书或非对称密钥的 **VIEW DEFINITION** 权限。  
   
-##  <a name="SSMSProcedure"></a> 创建由透明数据加密保护的数据库  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> 创建由透明数据加密保护的数据库  
 
 以下过程演示了必须使用 SQL Server Management Studio 和 Transact-SQL 创建由 TDE 保护的数据库。
   
-###  <a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
   
 1.  在 **master** 数据库中创建数据库主密钥和证书。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75558504"
   
 8.  完成后，单击 **“确定”** 。  
 
-###  <a name="TsqlCreate"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> 使用 Transact-SQL  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
@@ -136,11 +136,11 @@ ms.locfileid: "75558504"
   
 -   [ALTER DATABASE (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> 移动由透明数据加密保护的数据库 
+##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> 移动由透明数据加密保护的数据库 
 
 以下过程演示了必须使用 SQL Server Management Studio 和 Transact-SQL 移动由 TDE 保护的数据库。
   
-###  <a name="SSMSMove"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> 使用 SQL Server Management Studio  
   
 1.  在对象资源管理器中，右键单击在前面已进行加密的数据库，指向“任务”，然后选择“分离…”   。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "75558504"
      **消息**  
      显示空消息或 **“找不到文件”** 超链接。  
   
-###  <a name="TsqlMove"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> 使用 Transact-SQL  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

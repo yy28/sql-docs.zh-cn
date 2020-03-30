@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905522"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
@@ -45,14 +45,14 @@ ms.locfileid: "72905522"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  使用 **sys.sql_expression_dependencies** 查找函数的依赖关系要求对该数据库具有 VIEW DEFINITION 权限，以及对数据库具有 **sys.sql_expression_dependencies** 的 SELECT 权限。 系统对象定义（如 OBJECT_DEFINITION 中返回的对象定义）是公开可见的。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>显示用户定义函数的属性  
   
@@ -111,7 +111,7 @@ ms.locfileid: "72905522"
      **架构已绑定**  
      指示该函数是否已绑定到架构。 值为 True 和 False。 有关绑定到架构的函数的信息，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 的 SCHEMABINDING 部分。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>获取函数的定义和属性  
   

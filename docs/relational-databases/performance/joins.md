@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287471"
 ---
 # <a name="joins-sql-server"></a>联接 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "79287471"
 -   哈希联接   
 -   自适应联接（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）
 
-## <a name="fundamentals"></a> 联接基础知识
+## <a name="join-fundamentals"></a><a name="fundamentals"></a> 联接基础知识
 通过联接，可以从两个或多个表中根据各个表之间的逻辑关系来检索数据。 联接指明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应如何使用一个表中的数据来选择另一个表中的行。    
 
 联接条件可通过以下方式定义两个表在查询中的关联方式：    
@@ -108,7 +108,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > 例如，`SELECT * FROM t1 JOIN t2 ON SUBSTRING(t1.textcolumn, 1, 20) = SUBSTRING(t2.textcolumn, 1, 20)` 可对表 t1 和 t2 中每个文本列的前 20 个字符进行两表内部联接。   
 > 此外，另一种可以采用的比较两个表中 ntext 或 text 列的方法是用 `WHERE` 子句比较这些列的长度，例如：`WHERE DATALENGTH(p1.pr_info) = DATALENGTH(p2.pr_info)`
 
-## <a name="nested_loops"></a> 了解嵌套循环联接
+## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> 了解嵌套循环联接
 如果一个联接输入很小（不到 10 行），而另一个联接输入很大而且已在其联接列上创建了索引，则索引 Nested Loops 连接是最快的联接操作，因为它们需要的 I/O 和比较都最少。 
 
 嵌套循环联接也称为嵌套迭代  ，它将一个联接输入用作外部输入表（显示为图形执行计划中的顶端输入），将另一个联接输入用作内部（底端）输入表。 外部循环逐行处理外部输入表。 内部循环会针对每个外部行执行，在内部输入表中搜索匹配行。   
@@ -119,7 +119,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 嵌套循环联接运算符的 OPTIMIZED 属性设置为 True  时，这意味着当内侧表很大时，使用优化的嵌套循环（或批处理排序）来最大程度地减少 I/O，而不管是否对其进行并行化。 鉴于排序本身是隐藏操作，在分析执行计划时，给定计划中的这种优化可能不是非常明显。 但是可以在计划 XML 中查找属性 OPTIMIZED，它表明嵌套循环联接可能会尝试重新排序输入行以提高 I/O 性能。
 
-## <a name="merge"></a> 了解合并联接
+## <a name="understanding-merge-joins"></a><a name="merge"></a> 了解合并联接
 如果两个联接输入并不小但已在二者联接列上排序（例如，如果它们是通过扫描已排序的索引获得的），则合并联接是最快的联接操作。 如果两个联接输入都很大，而且这两个输入的大小差不多，则预先排序的合并联接提供的性能与哈希联接相近。 但是，如果这两个输入的大小相差很大，则哈希联接操作通常快得多。       
 
 合并联接要求两个输入都在合并列上排序，而合并列由联接谓词的等效 (ON) 子句定义。 通常，查询优化器扫描索引（如果在适当的一组列上存在索引），或在合并联接的下面放一个排序运算符。 在极少数情况下，虽然可能有多个等效子句，但只用其中一些可用的等效子句获得合并列。    
@@ -132,7 +132,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 合并联接本身的速度很快，但如果需要排序操作，选择合并联接就会非常费时。 然而，如果数据量很大且能够从现有 B 树索引中获得预排序的所需数据，则合并联接通常是最快的可用联接算法。    
 
-## <a name="hash"></a> 了解哈希联接
+## <a name="understanding-hash-joins"></a><a name="hash"></a> 了解哈希联接
 哈希联接可以有效处理未排序的大型非索引输入。 它们对复杂查询的中间结果很有用，因为：
 -   中间结果未经索引（除非已经显式保存到磁盘上然后创建索引），而且通常不为查询计划中的下一个操作进行适当的排序。
 -   查询优化器只估计中间结果的大小。 由于对于复杂查询，估计可能有很大的误差，因此如果中间结果比预期的大得多，则处理中间结果的算法不仅必须有效而且必须适度弱化。   
@@ -145,13 +145,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 以下几节介绍了不同类型的哈希联接：内存中的哈希联接、Grace 哈希联接和递归哈希联接。    
 
-### <a name="inmem_hash"></a> 内存中的哈希联接
+### <a name="in-memory-hash-join"></a><a name="inmem_hash"></a> 内存中的哈希联接
 哈希联接先扫描或计算整个生成输入，然后在内存中生成哈希表。 根据计算得出的哈希键的哈希值，将每行插入哈希存储桶。 如果整个生成输入小于可用内存，则可以将所有行都插入哈希表中。 生成阶段之后是探测阶段。 一次一行地对整个探测输入进行扫描或计算，并为每个探测行计算哈希键的值，扫描相应的哈希存储桶并生成匹配项。    
 
-### <a name="grace_hash"></a> Grace 哈希联接
+### <a name="grace-hash-join"></a><a name="grace_hash"></a> Grace 哈希联接
 如果生成输入大于内存，哈希联接将分为几步进行。 这称为“Grace 哈希联接”。 每一步都分为生成阶段和探测阶段。 首先，消耗整个生成和探测输入并将其分区（使用哈希键上的哈希函数）为多个文件。 对哈希键使用哈希函数可以保证任意两个联接记录一定位于相同的文件对中。 因此，联接两个大输入的任务简化为相同任务的多个较小的实例。 然后将哈希联接应用于每对分区文件。    
 
-### <a name="recursive_hash"></a> 递归哈希联接
+### <a name="recursive-hash-join"></a><a name="recursive_hash"></a> 递归哈希联接
 如果生成输入非常大，以至于标准外部合并的输入需要多个合并级别，则需要多个分区步骤和多个分区级别。 如果只有某些分区较大，则只需对那些分区使用附加的分区步骤。 为了使所有分区步骤尽可能快，将使用大的异步 I/O 操作以便单个线程就能使多个磁盘驱动器繁忙工作。    
 
 > [!NOTE]
@@ -164,7 +164,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > [!NOTE]
 > 角色反转的发生独立于任何查询提示或结构。 角色反转不会显示在查询计划中；角色反转对于用户是透明的。
 
-### <a name="hash_bailout"></a> 哈希援助
+### <a name="hash-bailout"></a><a name="hash_bailout"></a> 哈希援助
 术语“哈希援助”有时用于描述 Grace 哈希联接或递归哈希联接。    
 
 > [!NOTE]
@@ -172,7 +172,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 有关哈希援助的详细信息，请参阅 [Hash Warning 事件类](../../relational-databases/event-classes/hash-warning-event-class.md)。    
 
-## <a name="adaptive"></a> 了解自适应联接
+## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> 了解自适应联接
 借助[批处理模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)自适应联接功能，可延迟选择[哈希联接](#hash)或[嵌套循环](#nested_loops)联接方法，将其延迟到扫描第一个输入之后  。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，查询计划可在执行期间动态切换到较好的联接策略，而无需进行重新编译。 
 
 > [!TIP]
@@ -291,7 +291,7 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 > [!NOTE]
 > USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。 
 
-## <a name="nulls_joins"></a> NULL 值和联接
+## <a name="null-values-and-joins"></a><a name="nulls_joins"></a> NULL 值和联接
 联接表的列中的 null 值（如果有）互相不匹配。 如果其中一个联接表的列中出现空值，只能通过外部联接返回这些空值（除非 `WHERE` 子句不包括空值）。     
 
 下面的两个表中，每个表中要参与联接的列中均包含 NULL 值：     

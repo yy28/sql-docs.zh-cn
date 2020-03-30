@@ -20,10 +20,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056101"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
@@ -32,7 +32,7 @@ ms.locfileid: "74056101"
   
  关联的 [筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) 确定能否针对指定的文档类型进行属性搜索。 对于某些文档类型，关联的 IFilter 提取为该类型文档定义的某些或所有属性，以及文档正文的内容。 您可以对全文索引进行配置，以便仅对全文索引期间 IFilter 提取的属性支持属性搜索。 在提取若干文档属性的 IFilter 中，包括用于提取 Microsoft Office 文档类型（如 .docx、.xlsx 和.pptx）的 IFilter。 另一方面，XML IFilter 不发出属性。  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> 全文搜索如何与搜索属性一起使用  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> 全文搜索如何与搜索属性一起使用  
   
 ### <a name="internal-property-ids"></a>内部属性 ID  
  全文引擎任意向每个注册的属性分配一个内部属性 ID，这个 ID 在该特定搜索列表中唯一标识属性并且特定于该搜索属性列表。 因此，如果某个属性添加到多个搜索属性列表中，则其内部属性 ID 很可能在不同列表之间是不同的。  
@@ -56,14 +56,14 @@ ms.locfileid: "74056101"
   
  属性范围的全文查询使用向全文索引的当前搜索属性列表注册的内部属性 ID。  
   
-##  <a name="impact"></a> 启用属性搜索的影响  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> 启用属性搜索的影响  
  根据您在搜索属性列表中指定的属性的数目以及每个属性的内容，配置全文索引以便支持搜索一个或多个属性将在某种程度上增加索引的大小。  
   
  在测试 Microsoft Word、Excel 和 PowerPoint 文档的典型资料时，我们配置了一个全文索引以便对典型的搜索属性建立索引。 对这些属性建立索引将全文索引的大小增加了大约 5%。 我们预计这一大小上的增量对于大多数文档资料而言大致相近。 不过，这个大小上的增量最终将取决于相对于整个数据量，给定文档资料中的属性数据量的比例。  
   
-##  <a name="creating"></a> 创建搜索属性列表并启用属性搜索  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a> 创建搜索属性列表并启用属性搜索  
   
-###  <a name="creating_sub"></a> 创建搜索属性列表  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a> 创建搜索属性列表  
  **使用 Transact-SQL 创建搜索属性列表**  
   
  使用 [CREATE SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/create-search-property-list-transact-sql.md) 语句并至少提供该列表中的一个名称。  
@@ -92,7 +92,7 @@ ms.locfileid: "74056101"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="adding"></a> 将属性添加到搜索属性列表  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a> 将属性添加到搜索属性列表  
  属性搜索要求创建“搜索属性列表”  并且指定您希望可供搜索的一个或多个属性。 在您向搜索属性列表添加某一属性时，将向该特定列表注册该属性。 若要向搜索属性列表添加属性，您需要以下值：  
   
 -   属性集 GUID  
@@ -141,7 +141,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  使用 **“搜索属性列表属性”** 对话框以添加或删除搜索属性。 在对象资源管理器中，您可以在关联数据库的 **“存储”** 节点下找到 **“搜索属性列表”** 。  
   
-###  <a name="associating"></a> 将搜索属性列表与全文索引关联  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> 将搜索属性列表与全文索引关联  
  为使全文索引支持对向搜索属性列表注册的属性执行属性搜索，您需要将搜索属性列表与索引相关联并且重新填充该索引。 重新填充全文索引将为每个已注册属性中的搜索词创建特定于属性的索引条目。  
   
  只要全文索引保持与此搜索属性列表相关联，全文查询就可以使用 CONTAINS 谓词的 PROPERTY 选项来搜索为该搜索属性列表注册的属性。  
@@ -156,7 +156,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  在“全文索引属性”  对话框的“常规”  页上，为“搜索属性列表”  指定一个值。  
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a> 使用 CONTAINS 查询搜索属性  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> 使用 CONTAINS 查询搜索属性  
  针对属性范围的全文查询的基本 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 语法如下：  
   
 ```sql  
@@ -176,9 +176,9 @@ GO
   
  该示例假定文档的 IFilter 提取其 Title 属性，然后将 Title 属性添加到搜索属性列表，并且搜索属性列表与全文索引相关联。  
   
-##  <a name="managing"></a> 管理搜索属性列表  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a> 管理搜索属性列表  
   
-###  <a name="viewing"></a> 查看和更改搜索属性列表  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a> 查看和更改搜索属性列表  
  **使用 Transact-SQL 更改搜索属性列表**  
   
  使用 [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md) 语句添加或删除搜索属性。  
@@ -205,7 +205,7 @@ GO
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="deleting"></a> 删除搜索属性列表  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> 删除搜索属性列表  
  在属性列表与任何全文索引关联时，不能从数据库中删除该列表。  
   
  **使用 Transact-SQL 删除搜索属性列表**  

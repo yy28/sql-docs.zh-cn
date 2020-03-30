@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72930275"
 ---
 # <a name="full-text-search"></a>全文搜索
@@ -40,7 +40,7 @@ ms.locfileid: "72930275"
   
  全文查询根据特定语言（例如，英语或日语）的规则对词和短语进行操作，从而依据全文索引中的文本数据执行语言搜索。 全文查询可以包括简单的词和短语，或者词或短语的多种形式。 全文查询返回包含至少一个匹配项（也称为“命中”  ）的所有文档。 当目标文档包含在全文查询中指定的所有字词，并符合任何其他搜索条件（如匹配的字词之间的距离）时，即发生匹配。    
   
-##  <a name="queries"></a> 全文搜索查询  
+##  <a name="full-text-search-queries"></a><a name="queries"></a> 全文搜索查询  
  在将列添加到全文索引之后，用户和应用程序即可对列中的文本运行全文查询。 这些查询可以搜索以下项中的任一项：  
   
 -   一个或多个特定的词或短语（“简单词”  ）  
@@ -78,10 +78,10 @@ ms.locfileid: "72930275"
   
  有关详细信息，请参阅 [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
   
-##  <a name="like"></a> 全文搜索查询与 LIKE 谓词的对比
+##  <a name="compare-full-text-search-queries-to-the-like-predicate"></a><a name="like"></a> 全文搜索查询与 LIKE 谓词的对比
  与全文搜索不同，[LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词仅对字符模式有效。 另外，不能使用 LIKE 谓词来查询格式化的二进制数据。 此外，对大量非结构化的文本数据执行 LIKE 查询要比对相同数据执行同样的全文查询慢得多。 对数百万行文本数据进行的 LIKE 查询可能需要几分钟的时间才能返回结果；而对于同样的数据，全文查询只需要几秒甚至更少的时间，具体取决于返回的行数。  
   
-##  <a name="architecture"></a> 全文搜索体系结构
+##  <a name="full-text-search-architecture"></a><a name="architecture"></a> 全文搜索体系结构
  全文搜索体系结构包括以下进程：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程 (sqlservr.exe)。  
@@ -94,7 +94,7 @@ ms.locfileid: "72930275"
   
  ![全文搜索体系结构](../../relational-databases/search/media/ifts-arch.gif "全文搜索体系结构")  
 
-###  <a name="sqlprocess"></a> SQL Server 进程  
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a> SQL Server 进程  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程使用全文搜索的以下组件：  
   
 -   **用户表。** 这些表包含要进行全文索引的数据。  
@@ -116,7 +116,7 @@ ms.locfileid: "72930275"
   
 -   **筛选器后台程序管理器。** 筛选器后台程序管理器负责监视全文引擎筛选器后台程序宿主的状态。  
   
-###  <a name="fdhostprocess"></a> Filter Daemon Host process  
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a> Filter Daemon Host process  
  筛选器后台程序宿主是一个由全文引擎启动的进程。 它运行下列全文搜索组件，这些组件负责对表中的数据进行访问、筛选和断字，同时还负责对查询输入进行断字和提取词干。  
   
  筛选器后台程序宿主的组件如下：  
@@ -127,10 +127,10 @@ ms.locfileid: "72930275"
   
 -   **断字符和词干分析器。** 断字符是特定于语言的组件，它根据给定语言的词汇规则查找词边界（“断字”  ）。 每个断字符都与用于组合动词及执行变形扩展的特定于语言的词干分析器组件相关联。 在创建索引时，筛选器后台程序宿主使用断字符和词干分析器来对给定表列中的文本数据执行语言分析。 与全文索引中的表列相关的语言将决定为列创建索引时要使用的断字符和词干分析器。 有关详细信息，请参阅 [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
-##  <a name="processing"></a> 全文搜索处理  
+##  <a name="full-text-search-processing"></a><a name="processing"></a> 全文搜索处理  
  全文搜索由全文引擎提供支持。 全文引擎有两个角色：索引支持和查询支持。  
   
-###  <a name="indexing"></a> 全文索引过程  
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a> 全文索引过程  
  全文填充（也称为爬网）开始后，全文引擎会将大批数据存入内存并通知筛选器后台程序宿主。 宿主对数据进行筛选和断字，并将转换的数据转换为倒排词列表。 然后，全文搜索从词列表中提取转换的数据，对其进行处理以删除非索引字，然后将某一批次的词列表永久保存到一个或多个倒排索引中。  
   
  对存储在 **varbinary(max)** 或 **image** 列中的数据编制索引时，筛选器（实现 **IFilter** 接口）将基于为该数据指定的文件格式（例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word）来提取文本。 在某些情况下，筛选器组件要求将 **varbinary(max)** 或 **image** 数据写入 filterdata 文件夹中，而不是将其存入内存。  
@@ -141,7 +141,7 @@ ms.locfileid: "72930275"
   
  填充完成后，将触发最终的合并过程，以便将索引碎片合并为一个主全文索引。 由于只需要查询主索引而不需要查询大量索引碎片，因此这将提高查询性能，并且可以使用更好的计分统计信息来得出相关性排名。  
   
-###  <a name="querying"></a> 全文查询过程  
+###  <a name="full-text-querying-process"></a><a name="querying"></a> 全文查询过程  
  查询处理器将查询的全文部分传递到全文引擎以进行处理。 全文引擎执行断字，此外，它还可以执行同义词库扩展、词干分析以及非索引字（干扰词）处理。 然后，查询的全文部分以 SQL 运算符的形式表示，主要作为流式表值函数 (STVF)。 在查询执行过程中，这些 STVF 访问倒排索引以检索正确结果。 此时会将结果返回给客户端，或者先将它们进一步处理，再将它们返回给客户端。  
 
 ## <a name="full-text-index-architecture"></a>全文索引体系结构
@@ -151,7 +151,7 @@ ms.locfileid: "72930275"
   
 每个表只允许有一个全文索引。 若要对某个表创建全文索引，该表必须具有一个唯一且非 Null 的列。 你可以在 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **text**、 **ntext**、 **image**、 **xml**、 **varbinary**类型的列上生成全文索引，并且可对 **varbinary(max)** 索引以进行全文搜索。 在数据类型为  **varbinary**、 **varbinary(max)** 、 **image**或 **xml** 的列上创建全文索引需要你指定类型列。 *类型列*是用来存储每行中文档的文件扩展名（.doc、.pdf、xls 等）的表列。  
 
-###  <a name="structure"></a> 全文索引结构  
+###  <a name="full-text-index-structure"></a><a name="structure"></a> 全文索引结构  
  对全文索引的结构的良好了解将帮助您了解全文引擎的工作方式。 本主题使用 **中的** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 表的以下摘录部分作为示例表。 此摘录部分仅显示该表的两个列（ **DocumentID** 列和 **Title** 列）和三行。  
   
  对于本示例，我们假定已对“标题”  列创建全文索引。  
@@ -195,7 +195,7 @@ ms.locfileid: "72930275"
   
  **Occurrence** 列包含整数值。 对于每个 DocId 值，均有一个 Occurrence 值的列表对应于该 DocId 值中特定关键字的相对字偏移量。 位置值用于确定短语或邻近匹配项，例如具有相邻位置值的短语。 它们还用于计算相关性分数，例如记分时可能会用某个关键字在 DocId 中的出现次数。   
   
-###  <a name="fragments"></a> 全文索引碎片  
+###  <a name="full-text-index-fragments"></a><a name="fragments"></a> 全文索引碎片  
  逻辑全文索引通常拆分到多个内部表中。 每个内部表称为一个全文索引碎片。 这些碎片中的某一些可能包含比其他碎片更新的数据。 例如，如果用户更新其 DocId 是 3 的以下行，并且该表可自动跟踪更改，则会创建新的碎片。  
   
 |DocumentID|标题|  
@@ -238,7 +238,7 @@ ms.locfileid: "72930275"
 |将数据添加到全文索引的操作称为“填充”  ，可以通过计划或特定请求来请求填充，也可以在添加新数据时自动填充。|当插入、更新或删除作为其基础的数据时自动更新。|  
 |在同一个数据库内分组为一个或多个全文目录。|不分组。|  
 
-##  <a name="components"></a> 全文搜索中的语言组件和语言支持
+##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> 全文搜索中的语言组件和语言支持
  全文搜索支持大约 50 种不同语言，例如英语、西班牙语、中文、日语、阿拉伯语、孟加拉语和印地语。 有关支持的全文语言的完整列表，请参阅 [sys.fulltext_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。 全文索引中包含的每一列与一个 Microsoft Windows 区域设置标识符 (LCID) 相关联，每个区域设置标识符等同于全文搜索支持的一种语言。 例如，LCID 1033 等于美国英语，LCID 2057 等于英国英语。 对于每种支持的全文语言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供语言组件以支持对以该语言存储的全文数据进行索引和查询。  
   
  语言特有组件包括：  

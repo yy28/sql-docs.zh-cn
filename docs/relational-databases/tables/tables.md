@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287741"
 ---
 # <a name="tables"></a>表
@@ -44,7 +44,7 @@ ms.locfileid: "79287741"
 临时表存储在 **tempdb**中。 临时表有两种类型：本地表和全局表。 它们在名称、可见性以及可用性上有区别。 本地临时表的名称以单个数字符号 (#) 打头；它们仅对当前的用户连接是可见的；当用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时被删除。 全局临时表的名称以两个数字符号 (##) 打头，创建后对任何用户都是可见的，当所有引用该表的用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时将被删除。 
 
 
-#### <a name="ctp23"></a> 跨多个作用域使用临时表减少了对工作负荷的重新编译
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> 跨多个作用域使用临时表减少了对工作负荷的重新编译
 
 在所有数据库兼容性级别下，[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] 跨多个作用域使用临时表减少了对工作负载的重新编译。 Azure SQL 数据库也在数据库兼容性级别 150 下针对所有部署模型启用了此功能。  在推出此功能之前，当引用带有数据操作语言 DML 语句（`SELECT`、`INSERT`、`UPDATE`、`DELETE`）的临时表时，如果此临时表由外部作用域批处理创建，则会导致每次执行时都会重新编译 DML 语句。 借助此改进，SQL Server 可执行其他轻量级检查来避免不必要的重新编译：
 

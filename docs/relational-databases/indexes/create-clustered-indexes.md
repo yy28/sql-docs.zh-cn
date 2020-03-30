@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024988"
 ---
 # <a name="create-clustered-indexes"></a>创建聚集索引
@@ -45,9 +45,9 @@ ms.locfileid: "68024988"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Implementations"></a> 典型实现  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 典型实现  
  聚集索引按下列方式实现：  
   
 -   **PRIMARY KEY 和 UNIQUE 约束**  
@@ -62,7 +62,7 @@ ms.locfileid: "68024988"
   
      指定非聚集主键约束后，您可以对非主键列的列创建聚集索引。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   创建聚集索引结构后，旧（源）结构和新（目标）结构的各自的文件和文件组都需要磁盘空间。 在完成事务提交后，才会释放旧结构。 排序也需要其他临时磁盘空间。 有关详细信息，请参阅 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
   
@@ -72,12 +72,12 @@ ms.locfileid: "68024988"
   
 -   聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 **varcharr** 列。 如果对 **varchar** 列创建了聚集索引，并且 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。 若要获得有关可能包含行溢出数据的表的信息，请使用 [sys.dm_db_index_physical_stats (Transact-SQL) ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 动态管理函数。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>使用对象资源管理器创建聚集索引  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68024988"
   
 10. 在“文件”  菜单上，单击“保存 **table**name _”\__ 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>创建聚集索引  
   

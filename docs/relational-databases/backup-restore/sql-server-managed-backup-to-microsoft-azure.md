@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245429"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>目标为 Microsoft Azure 的 SQL Server 托管备份
@@ -34,7 +34,7 @@ ms.locfileid: "75245429"
   
  你还可以对备份进行加密以提高安全性，并且可以设置自定义计划以控制执行备份的时间。 有关使用用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的 Microsoft Azure Blob 存储的优势详细信息，请参阅 [Microsoft Azure Blob 存储服务的 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-##  <a name="Prereqs"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prereqs"></a>先决条件  
  Microsoft Azure 存储空间是 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 用于存储备份文件的存储区。 需要以下先决条件：  
   
 |先决条件|说明|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245429"
 > 代理服务器不支持 SQL Server 托管备份。
 >
   
-##  <a name="support_limits"></a> 可支持性  
+##  <a name="supportability"></a><a name="support_limits"></a> 可支持性  
  以下内容支持特定于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的限制和注意事项：  
   
 -   支持备份“主”  、“模型”  和“msdb”  系统数据库。 不支持备份“tempdb”  。 

@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68096822"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "68096822"
   
  还可以使用 XML 架构集合类型化 XML 变量、参数和列。  
   
-##  <a name="ddl"></a> 用于管理架构集合的 DDL  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> 用于管理架构集合的 DDL  
  可以在数据库中创建 XML 架构集合，并将它们与 **xml** 类型的变量和列相关联。 为了管理数据库中的架构集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 语句：  
   
 -   [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 可将架构组件导入到数据库。  
@@ -61,7 +61,7 @@ ms.locfileid: "68096822"
   
  若要删除架构集合，请使用 DROP XML SCHEMA COLLECTION 语句。 它将删除包含在集合中的所有架构并删除集合对象。 请注意，只有在满足 [DROP XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) 中所述的条件时，才能删除架构集合。  
   
-##  <a name="components"></a> 了解架构组件  
+##  <a name="understanding-schema-components"></a><a name="components"></a> 了解架构组件  
  使用 CREATE XML SCHEMA COLLECTION 语句时，将把各种架构组件导入数据库中。 架构组件包括架构元素、属性和类型定义。 使用 DROP XML SCHEMA COLLECTION 语句时，将删除整个集合。  
   
  CREATE XML SCHEMA COLLECTION 将把架构组件保存到各种系统表中。  
@@ -131,7 +131,7 @@ ms.locfileid: "68096822"
 |**targetNamespace**|有关属于目标命名空间的组件的信息存储在元数据中。|  
 | &nbsp; | &nbsp; |
   
-##  <a name="perms"></a> XML 架构集合的权限  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> XML 架构集合的权限  
  您必须具有必要的权限才能执行下列操作：  
   
 -   创建/加载 XML 架构集合  
@@ -160,7 +160,7 @@ ms.locfileid: "68096822"
   
      本主题讨论了如何拒绝创建 XML 架构集合的权限和如何拒绝 XML 架构集合对象的权限。  
   
-##  <a name="info"></a> 获取有关 XML 架构和架构集合的信息  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> 获取有关 XML 架构和架构集合的信息  
  XML 架构集合在目录视图 sys.xml_schema_collections 中枚举出来。 XML 架构集合“sys”由系统定义。 它包含无需显式加载即可在所有用户定义的 XML 架构集合中使用的预定义命名空间。 此列表包含 xml、xs、xsi、fn 和 xdt 的命名空间。 另外两个目录视图是 sys.xml_schema_namespaces（它枚举每个 XML 架构集合中的所有命名空间）和 sys.xml_components（它枚举每个 XML 架构中的所有 XML 架构组件）。  
   
  内置函数 XML_SCHEMA_NAMESPACE  （schemaName、XmlSchemacollectionName、namespace-uri）  生成 xml  数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  

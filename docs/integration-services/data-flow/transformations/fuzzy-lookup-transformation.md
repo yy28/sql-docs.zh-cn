@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291494"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
@@ -58,7 +58,7 @@ ms.locfileid: "71291494"
   
  此转换有一个输入和一个输出。  
   
- 在模糊匹配中，只能使用具有 **DT_WSTR** 和 **DT_STR** 数据类型的输入列。 完全匹配可以使用除 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**之外的所有 DTS 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。 参与输入和引用表之间联接的列必须具有兼容的数据类型。 例如，可以将具有 DTS DT_WSTR 数据类型的列联接到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nvarchar 数据类型的列，但是不能将具有 DT_WSTR 数据类型的列联接到具有 int 数据类型的列     。  
+ 在模糊匹配中，只能使用具有 **DT_WSTR** 和 **DT_STR** 数据类型的输入列。 完全匹配可以使用除 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**之外的所有 DTS 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。 参与输入和引用表之间联接的列必须具有兼容的数据类型。 例如，可以将具有 DTS DT_WSTR 数据类型的列联接到具有  **nvarchar 数据类型的列，但是不能将具有 DT_WSTR 数据类型的列联接到具有 int 数据类型的列**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]    。  
   
  通过指定最大内存量、行比较算法以及对转换所用的索引和引用表进行缓存，可以自定义这种转换。  
   

@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296919"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
@@ -55,7 +55,7 @@ ms.locfileid: "71296919"
   
 -   如果脚本任务配置为 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 编程语言，则 **ScriptMain** 类有一个公共子例程 **Main**。 **ScriptMain.Main** 子例程是运行脚本任务时运行时所调用的方法。  
   
-     默认情况下，新脚本的 **Main** 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 [从脚本任务返回结果](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)中介绍了 **Dts.TaskResult** 属性。  
+     默认情况下，新脚本的 **Main** 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 **从脚本任务返回结果**中介绍了 [Dts.TaskResult](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md) 属性。  
   
 -   如果脚本任务配置为 Visual C# 编程语言，则 **ScriptMain** 类有一个公共方法：**Main**。 此方法在脚本任务运行时调用。  
   

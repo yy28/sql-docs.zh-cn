@@ -30,10 +30,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287852"
 ---
 # <a name="programmatically-monitor-replication"></a>以编程方式监视复制
@@ -56,7 +56,7 @@ ms.locfileid: "76287852"
   
  [复制管理对象 (RMO)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>从分发服务器监视发布服务器、发布和订阅  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76287852"
   
     -   将“**mode”** **的值指定为“1”\@** ，可以启用监视阈值指标；或指定为“2”  可以禁用它。  
   
-##  <a name="RMO"></a> 复制管理对象 (RMO)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> 复制管理对象 (RMO)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>监视对订阅服务器上的合并发布的订阅  
   

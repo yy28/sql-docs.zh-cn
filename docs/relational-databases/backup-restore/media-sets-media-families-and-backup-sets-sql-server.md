@@ -23,10 +23,10 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258684"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258684"
   
 >**注意！** 有关 SQL Server 备份到 Azure Blob 存储服务的详细信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
    
-##  <a name="TermsAndDefinitions"></a> 术语  
+##  <a name="terms"></a><a name="TermsAndDefinitions"></a> 术语  
  **介质集 (media set)**  
  备份介质（磁带或磁盘文件）的有序集合，使用固定类型和数量的备份设备向其写入了一个或多个备份操作。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75258684"
  通过成功的备份操作添加到介质组的备份内容。  
   
 
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> 媒体集、媒体簇和备份集概述  
+##  <a name="overview-of-media-sets-media-families-and-backup-sets"></a><a name="OvMediaSetsFamiliesBackupSets"></a> 媒体集、媒体簇和备份集概述  
  包含一个或多个备份介质的集合的备份构成一个介质集。 *媒体集* 是 *备份媒体*（磁带或磁盘文件，或者是 Azure Blob）的有序集合，一个或多个备份操作使用固定类型和数量的备份设备向其写入。 给定媒体集使用磁带驱动器，或者使用磁盘驱动器或 Azure Blob，但不能结合使用两者或以上。 
  
 **例如：** 与媒体集相关联的备份设备可能是三个名为 `\\.\TAPE0`、 `\\.\TAPE1`和 `\\.\TAPE2`的磁带驱动器。 该介质集仅包含磁带，最少需要三个磁带（每个磁带机一个磁带）。 备份设备的类型和数量是在创建介质集时建立的，不能更改。 但是，如有必要，可以在备份和还原操作之间将给定设备替换为同一类型的设备。  
@@ -166,7 +166,7 @@ GO
 -   备份集的数量  
 
   
-##  <a name="CreatingMediaSet"></a> Creating a new media set  
+##  <a name="creating-a-new-media-set"></a><a name="CreatingMediaSet"></a> Creating a new media set  
  若要创建新介质集，必须格式化备份介质（一个或多个磁带或磁盘文件）。 格式化进程会对备份介质进行以下更改：  
   
 1.  删除旧标头（如果存在），从而有效地删除备份介质中以前的内容。  
@@ -176,7 +176,7 @@ GO
 2.  向每个备份设备中的备份介质（磁带或磁盘文件）写入新的介质标头。  
 
   
-##  <a name="UseExistingMediaSet"></a> 备份到现有媒体集  
+##  <a name="backing-up-to-an-existing-media-set"></a><a name="UseExistingMediaSet"></a> 备份到现有媒体集  
  当备份到某个现有介质集时，您可以使用以下两个选项：  
   
 -   追加到现有备份集。  
@@ -193,7 +193,7 @@ GO
 
     >  使用 BACKUP 语句中的 INIT 选项可指定覆盖现有备份集。  
   
-##  <a name="Appending"></a> Appending to existing backup sets  
+##  <a name="appending-to-existing-backup-sets"></a><a name="Appending"></a> Appending to existing backup sets  
  可以将来自相同或不同数据库的、在不同时间执行的备份存储在同一个介质上。 通过将其他备份集追加到现有介质上，介质上以前的内容保持不变，新的备份在介质上最后一个备份的结尾处写入。  
   
  默认情况下, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终在介质上追加新的备份。 只能在介质的结尾处追加备份。 例如，如果介质卷包含五个备份集，则不能跳过前三个备份集而用新的备份集覆盖第四个备份集。  
@@ -205,7 +205,7 @@ GO
 > **重要说明！** 压缩和未压缩的备份不能在一个介质集中共存。 任何版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本可以读取压缩的备份。 有关详细信息，请参阅[备份压缩 (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md)。  
   
  
-##  <a name="Overwriting"></a> Overwriting backup sets  
+##  <a name="overwriting-backup-sets"></a><a name="Overwriting"></a> Overwriting backup sets  
  使用 BACKUP 语句中的 INIT 选项可指定覆盖现有备份集。 此选项将覆盖介质上的所有备份集并保留介质标头（如果有）。 如果没有介质标头，则创建一个标头。  
   
  对于磁带标头，适当地保留标头还是很有帮助的。 对于磁盘备份介质，只覆盖备份操作中指定的备份设备所使用的文件；磁盘上的其他文件不受影响。 覆盖备份时，保留现有的所有介质标头，同时将新的备份创建为备份设备中的第一个备份。 如果没有现有的介质标头，将自动编写一个带相关介质名称和介质描述的有效介质标头。 如果现有的介质标头无效，备份操作将终止。 如果介质为空，则使用给定的 MEDIANAME、MEDIAPASSWORD 和 MEDIADESCRIPTION（如果存在）生成新的介质标头。  
@@ -227,7 +227,7 @@ GO
   
 
   
-##  <a name="SequenceNumbers"></a> 序列号  
+##  <a name="sequence-numbers"></a><a name="SequenceNumbers"></a> 序列号  
  对于介质集中的多个介质簇或介质簇中的多个备份介质，正确的顺序很重要。 因此，备份按以下方式分配序列号：  
   
 -   介质集中的有序介质簇  
@@ -238,7 +238,7 @@ GO
   
      介质序列号指示介质簇中的物理介质的顺序。 对于第一个备份介质，序列号是 1。 第一个备份介质的标记为 1，第二个介质（第一个延续磁带）的标记为 2，依此类推。 在还原备份集时，介质序列号可以确保负责还原备份的操作员按正确的顺序装入介质。  
   
-###  <a name="MultipleDevices"></a> 多个设备  
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> 多个设备  
  当您使用多个磁带机或磁盘文件时，请注意以下事项：  
   
 -   备份时的注意事项：  
@@ -249,7 +249,7 @@ GO
   
      对于任何从磁盘备份进行的还原以及任何联机还原，必须同时装入全部介质簇。 对于从磁带备份进行的脱机还原，可以在数量少于介质簇的备份设备中处理介质簇。 必须在每一介质簇已完全处理之后才能开始处理另一个介质簇。 介质簇总是并行处理的，除非使用单个设备还原介质簇。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **创建新媒体集**  
   
 -   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“备份到新媒体集并清除所有现有备份集”  选项）  

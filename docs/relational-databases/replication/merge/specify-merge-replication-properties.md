@@ -15,10 +15,10 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908161"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合并复制属性
@@ -76,7 +76,7 @@ ms.locfileid: "72908161"
  Microsoft SQL Server 复制提供交互式冲突解决程序，可用于在 Microsoft Windows 同步管理器中按需同步期间手动解决冲突。 启用交互式冲突解决方法后，在同步过程中即可使用交互式冲突解决程序来交互式解决冲突。 交互式冲突解决程序可以通过 Microsoft Windows 同步管理器获取。 有关详细信息，请参阅[使用 Windows 同步管理器同步订阅（Windows 同步管理器）](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
   
-### <a name="Recommendations"></a> 建议  
+### <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   如果在 Windows 同步管理器以外执行同步（如 SQL Server Management Studio 或复制监视器中的计划同步或按需同步），则会使用为项目指定的默认冲突解决方法自动解决冲突，而无需用户干预。 有关详细信息，请参阅 [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
   

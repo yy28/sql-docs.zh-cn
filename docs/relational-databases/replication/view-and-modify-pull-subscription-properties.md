@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 024f76fd4f87f353908fc634ec486f579f2e7e79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286924"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>查看和修改请求订阅属性
@@ -40,7 +40,7 @@ ms.locfileid: "76286924"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在“订阅属性 - **发布服务器>：\<PublicationDatabase>”对话框（可从 \< 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>从 Management Studio 中的发布服务器查看请求订阅属性  
@@ -73,7 +73,7 @@ ms.locfileid: "76286924"
   
 4.  查看属性，然后单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式修改请求订阅以及访问其属性。 所用的存储过程取决于订阅所属的发布的类型。  
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>查看对快照发布或事务发布的请求订阅的属性  
@@ -121,7 +121,7 @@ ms.locfileid: "76286924"
   
 1.  在订阅服务器上，执行 [sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)。 指定 `@publication`、`@publisher`、`@publisher_db`，以及要更改为 `@property` 的订阅属性，要更改为 `@value` 的新值。  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  用于查看或修改请求订阅属性的 RMO 类取决于订阅请求订阅的发布类型。  
   
 #### <a name="to-view-or-modify-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>查看或修改对快照发布或事务发布的请求订阅的属性  

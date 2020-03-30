@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094559"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>常规数据库邮件故障排除步骤 
@@ -151,7 +151,7 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 
 
-##  <a name="RelatedContent"></a> 另请参阅
+##  <a name="see-also"></a><a name="RelatedContent"></a> 另请参阅
   
 -   [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

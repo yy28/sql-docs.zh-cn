@@ -16,10 +16,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d765e8f603233b78b96cbcfe8189a89da1c8cd98
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165597"
 ---
 # <a name="perform-index-operations-online"></a>联机执行索引操作
@@ -44,9 +44,9 @@ ms.locfileid: "74165597"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   建议对于全天候运行的业务环境执行联机索引操作，在这些环境中，在执行索引操作期间必须有并发用户活动。  
   
@@ -62,12 +62,12 @@ ms.locfileid: "74165597"
   
 -   有关联机创建、重新生成或删除索引的更多限制和局限性，请参阅 [联机索引操作指南](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-rebuild-an-index-online"></a>联机重新生成索引  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74165597"
   
 10. 在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ### <a name="to-create-rebuild-or-drop-an-index-online"></a>联机创建、重新生成或删除索引  
   

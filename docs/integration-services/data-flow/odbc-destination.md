@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298217"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
@@ -33,7 +33,7 @@ ms.locfileid: "71298217"
   
  ODBC 目标具有一个常规输出和一个错误输出。  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> 加载选项  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 加载选项  
  ODBC 目标可以使用两个访问加载模块之一。 在 [ODBC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)中设置模式。 这两种模式是：  
   
 -   **批处理**：在此模式中，ODBC 目标将基于发现的 ODBC 访问接口功能尝试使用最高效的插入方法。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”  并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”  模式。  

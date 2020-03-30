@@ -15,10 +15,10 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115744"
 ---
 # <a name="maintenance-plan-design-tab"></a>维护计划（“设计”选项卡）
@@ -69,7 +69,7 @@ ms.locfileid: "68115744"
   
  在将维护任务放在设计图面上之后，可以根据需要编辑其属性。 例如，在将“备份数据库”任务添加到计划中之后，可以指定要在该任务中备份的特定数据库。 设计图面上未正确配置的任务包含一个带有白色 x 的红色图标。  
   
- 若要将维护任务添加到计划中，请从“维护计划任务”  工具箱中将该任务的图标拖到计划设计图面上，或者在该工具箱中双击该任务，从而将该任务添加到当前活动的设计器图面上。 如果“维护计划中的任务”工具箱不可见，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“视图”菜单中选择“工具箱”    。 在 **“工具箱”** 窗格中展开 **“维护计划中的任务”** 节点。  
+ 若要将维护任务添加到计划中，请从“维护计划任务”  工具箱中将该任务的图标拖到计划设计图面上，或者在该工具箱中双击该任务，从而将该任务添加到当前活动的设计器图面上。 如果“维护计划中的任务”工具箱不可见，请在 **“视图”菜单中选择“工具箱”**  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  。 在 **“工具箱”** 窗格中展开 **“维护计划中的任务”** 节点。  
   
  若要从计划中删除某项任务，请在设计器图面中选择该任务，按“DELETE”  键，或者右键单击该任务，再单击“删除”  。  
   

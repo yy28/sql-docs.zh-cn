@@ -13,10 +13,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68809838"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
@@ -57,7 +57,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 需要设备上的 VIEW SERVER STATE 权限。
   
-## <a name="examples-includesssdwincludessssdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+## <a name="examples-sssdw"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
 ### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN 基本语法  
  在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 实例上运行时，修改上述查询以同时选择 distribution_id。  
@@ -75,7 +75,7 @@ order by request_id, [dms_step_index];
 DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );  
 ```  
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN 基本语法  
  运行时间太长的查询运行的是 DMS 查询计划操作或 SQL 查询计划操作。  
   

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68697495"
 ---
 # <a name="data-type-conversion-database-engine"></a>数据类型转换（数据库引擎）
@@ -68,7 +68,7 @@ SET @string = 1;
 SELECT @string + ' is a string.'
 ```
 
-`1` 的 `int` 值会转换为 `varchar`，因此 `SELECT` 语句返回值 `1 is a string.`。
+`int` 的 `1` 值会转换为 `varchar`，因此 `SELECT` 语句返回值 `1 is a string.`。
 
 下面的示例演示改为使用 `int` 变量的类似脚本：
 
@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**、**smalldatetime**|**Date**|  
 |设置为 NULL 的任何类型|Variant 设置为 Null |  
   
-除了 binary、varbinary 和 image 值以外，所有单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值都被转换为单个 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值    。 这些值将被转换为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中的一维 Byte() 数组  。 此数组的范围为 Byte( 0 to _length_ 1)，其中 length 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] binary、varbinary 或 image 值中的字节数       。
+除了 binary、varbinary 和 image 值以外，所有单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值都被转换为单个 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值    。 这些值将被转换为  **中的一维 Byte() 数组**[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。 此数组的范围为 Byte( 0 to **length** 1)，其中 length 是  _binary、varbinary 或 image 值中的字节数_   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    。
   
 以下是从 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的转换。
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3581d9247979702a7c1e9af409b43121c4158334
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111890"
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式化文件 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68111890"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 非 XML 格式化文件的优点  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> 非 XML 格式化文件的优点  
   
 -   通过在 **bcp** 命令中指定 **format** 选项，可以自动创建非 XML 格式化文件。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68111890"
 > [!NOTE]  
 >  XML 格式化文件与非 XML 格式化文件相比具有一些优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
   
-##  <a name="Structure"></a> 非 XML 格式化文件的结构  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> 非 XML 格式化文件的结构  
  非 XML 格式化文件是具有特殊结构的文本文件。 非 XML 格式化文件包含了有关每个表列的文件存储类型、前缀长度、字段长度和字段终止符的信息。  
   
  下图显示了一个示例非 XML 格式化文件的格式化文件字段。  
@@ -79,7 +79,7 @@ ms.locfileid: "68111890"
 > [!NOTE]  
 >  您可以修改格式化文件，以便从字段编号或顺序与表列的编号或顺序不同的数据文件进行大容量导入。 有关详细信息，请参阅本主题后面的 [相关任务](#RelatedTasks) 列表。  
   
-##  <a name="Examples"></a> 非 XML 格式化文件的示例  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> 非 XML 格式化文件的示例  
  下面的示例显示了一个以前创建的非 XML 格式化文件 (`myDepartmentIdentical-f-c.fmt`)。 该文件描述了 `HumanResources.Department` 示例数据库中的 `AdventureWorks2012` 表中每一列的字符数据字段。  
   
  生成的格式化文件 `myDepartmentIdentical-f-c.fmt`包含以下信息：  
@@ -96,7 +96,7 @@ ms.locfileid: "68111890"
 > [!NOTE]  
 >  有关显示与该非 XML 格式化文件示例相关的格式化文件字段的说明，请参阅本主题前面的 [非 XML 格式化文件的结构](#Structure)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   

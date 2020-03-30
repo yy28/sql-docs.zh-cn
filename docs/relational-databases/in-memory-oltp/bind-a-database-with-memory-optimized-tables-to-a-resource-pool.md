@@ -11,10 +11,10 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412759"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>将具有内存优化表的数据库绑定至资源池
@@ -50,10 +50,10 @@ ms.locfileid: "74412759"
   
 -   [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
   
-##  <a name="bkmk_CreatePool"></a> 创建数据库和资源池  
+##  <a name="create-the-database-and-resource-pool"></a><a name="bkmk_CreatePool"></a> 创建数据库和资源池  
  您可以按任意顺序创建数据库和资源池。 要注意的是，在将数据库绑定至资源池前，它们必须都已存在。  
   
-###  <a name="bkmk_CreateDatabase"></a> 创建数据库  
+###  <a name="create-the-database"></a><a name="bkmk_CreateDatabase"></a> 创建数据库  
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建一个名为 IMOLTP_DB 的数据库，它将包含一个或多个内存优化表。 路径 \<driveAndPath> 必须在运行此命令前就存在。  
   
 ```sql  
@@ -64,7 +64,7 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-###  <a name="bkmk_DeterminePercent"></a> 确定 MIN_MEMORY_PERCENT 的 MAX_MEMORY_PERCENT 的最小值  
+###  <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a><a name="bkmk_DeterminePercent"></a> 确定 MIN_MEMORY_PERCENT 的 MAX_MEMORY_PERCENT 的最小值  
  在确定了内存优化表所需的内存后，确定所需的可用内存的百分比，并且将内存百分比设置为该值或更高值。  
   
  **示例：**    
@@ -83,7 +83,7 @@ GO
   
  因此，您需要至少 62.5% 的可用内存量来满足您的内存优化表和索引的 16 GB 要求。  因为 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值必须是整数，所以，我们将它们设置为至少 63%。  
   
-###  <a name="bkmk_CreateResourcePool"></a> 创建一个资源池并配置内存  
+###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> 创建一个资源池并配置内存  
  为内存优化表配置内存时，应基于 MIN_MEMORY_PERCENT 而非 MAX_MEMORY_PERCENT 完成容量规划。  有关 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的信息，请参阅 [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)。 对于内存优化表，这将提高内存可用性的可预测性，因为 MIN_MEMORY_PERCENT 会对其他资源池带来内存压力以确保其得到遵守。 为确保内存可用并帮助避免内存不足情况，MIN_MEMORY_PERCENT 与 MAX_MEMORY_PERCENT 的值应相同。 请参阅下面的 [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ，以了解基于已提交内存量的可用于内存优化表的内存百分比。  
   
  有关在虚拟机环境下工作时的详细信息，请参阅 [最佳做法：在虚拟机环境中使用内存中 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
@@ -102,7 +102,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-##  <a name="bkmk_DefineBinding"></a> 将数据库绑定到池  
+##  <a name="bind-the-database-to-the-pool"></a><a name="bkmk_DefineBinding"></a> 将数据库绑定到池  
  使用系统函数 `sp_xtp_bind_db_resource_pool` 将数据库绑定到资源池。 该函数使用两个参数：数据库名称和资源池名称。  
   
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义数据库 IMOLTP_DB 与资源池 Pool_IMOLTP 的绑定。 该绑定要到数据库联机后才生效。  
@@ -114,7 +114,7 @@ GO
   
  系统函数 sp_xtp_bind_db_resourece_pool 使用两个字符串参数：database_name 和 pool_name。  
   
-##  <a name="bkmk_ConfirmBinding"></a> 确认绑定  
+##  <a name="confirm-the-binding"></a><a name="bkmk_ConfirmBinding"></a> 确认绑定  
  确认绑定，记录 IMOLTP_DB 的资源池 ID。 它不应为 NULL。  
   
 ```sql  
@@ -123,7 +123,7 @@ FROM sys.databases d
 GO  
 ```  
   
-##  <a name="bkmk_MakeBindingEffective"></a> 使绑定生效  
+##  <a name="make-the-binding-effective"></a><a name="bkmk_MakeBindingEffective"></a> 使绑定生效  
  将数据库绑定至资源池后，必须使数据库脱机后再恢复联机以使绑定生效。 如果在先前数据库已绑定至另一资源池，此操作将移除之前的资源池中分配的内存，内存优化表和索引的内存分配现在来自与数据库新绑定的资源池。  
   
 ```sql  
@@ -141,7 +141,7 @@ GO
   
  现在数据库已绑定至资源池。  
   
-##  <a name="bkmk_ChangeAllocation"></a> 更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT  
+##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> 更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT  
  如果您将附加内存添加到服务器，或者添加内存优化表更改所需的内存量，则可能需要更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 以下步骤演示了如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 有关要用于 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值的指导信息，请参阅下面的部分。  有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
   
 1.  使用 `ALTER RESOURCE POOL` 可更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。  
@@ -162,7 +162,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE
 GO  
 ```  
   
-##  <a name="bkmk_PercentAvailable"></a> 可用于内存优化表和索引的内存百分比  
+##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> 可用于内存优化表和索引的内存百分比  
  如果将包含内存优化表的数据库和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷映射到同一资源池，资源调控器会为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 设置一个内部使用阈值，使资源池用户不产生资源使用冲突。 一般来说， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 使用阈值约为资源池的 80%。 下表列出了不同内存大小的实际阈值。  
   
  在为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 数据库创建专用资源池时，您需要在考虑行版本和数据增长后估计内存中表所需的物理内存量。 在估计所需的内存后，你将使用 DMV `sys.dm_os_sys_info` 中“committed_target_kb”列所反映的针对 SQL 实例的提交目标内存所占用的百分比，创建一个资源池（请参阅 [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)）。 例如，您可以将可供实例使用的总内存的 40% 用来创建资源池 P1。 在此 40% 之外， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎将获取一个较小的百分比来存储 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 数据。  这样做是为了确保 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 不会占用来自该池的所有内存。  这个较小的百分比值依赖于目标提交内存。 下表描述在引发 OOM 错误之前在资源池（命名资源池或默认资源池）中可用于 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 数据库的内存。  

@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056473"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "74056473"
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为使用其中一个系统服务帐户（Local System、Network Service 或 Local Service）运行，且创建管理数据仓库的实例与数据收集器的实例不同，则必须将收集组配置为使用代理将数据上载到管理数据仓库。  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  请确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在运行。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74056473"
   
 6.  重复步骤 5 直至将使用该数据收集的所有数据库实例均配置为将数据上载到共享的管理数据仓库。  
 
-####  <a name="Wizard"></a> 配置管理数据仓库向导  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> 配置管理数据仓库向导  
  **“欢迎”页**  
   
  欢迎页是配置数据收集向导的起始页。 是否显示此页是可选的。  

@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286577"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
@@ -36,7 +36,7 @@ ms.locfileid: "71286577"
 > [!TIP]  
 >  如果希望创建可重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
 
-##  <a name="configuring"></a> 配置用于测试示例的包  
+##  <a name="configuring-a-package-to-test-the-samples"></a><a name="configuring"></a> 配置用于测试示例的包  
  您可以配置单个包来测试本主题中的所有示例。 这些示例使用许多相同的包变量和相同的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类。  
   
 ### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>将包配置为用于本主题中的示例  
@@ -69,7 +69,7 @@ ms.locfileid: "71286577"
   
 5.  设置脚本组件的默认脚本语言，方法是使用“选项”  对话框的“常规”  页上的“脚本语言”  选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
-##  <a name="example1"></a> 示例 1 说明：检查 Excel 文件是否存在  
+##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> 示例 1 说明：检查 Excel 文件是否存在  
  本示例可确定 `ExcelFile` 变量中指定的 Excel 工作簿文件是否存在，然后根据该结果设置 `ExcelFileExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
 ### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> 示例 2 说明：检查 Excel 表是否存在  
+##  <a name="example-2-description-check-whether-an-excel-table-exists"></a><a name="example2"></a> 示例 2 说明：检查 Excel 表是否存在  
  本示例可确定 `ExcelTable` 变量中指定的 Excel 工作表或命名范围是否存在于 `ExcelFile` 变量中指定的 Excel 工作簿文件中，然后根据该结果设置 `ExcelTableExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
 ### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
@@ -246,7 +246,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> 示例 3 说明：获取文件夹中的 Excel 文件的列表  
+##  <a name="example-3-description-get-a-list-of-excel-files-in-a-folder"></a><a name="example3"></a> 示例 3 说明：获取文件夹中的 Excel 文件的列表  
  本示例使用由 `ExcelFolder` 变量值指定的文件夹中找到的 Excel 文件的列表来填充数组，然后将该数组复制到 `ExcelFiles` 变量。 您可以使用 Foreach 源变量枚举器循环访问数组中的文件。  
   
 ### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
@@ -318,7 +318,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>备用解决方案  
  如果不使用脚本任务将 Excel 文件列表收集到数组中，则还可以使用 ForEach 文件枚举器来循环访问文件夹中的所有 Excel 文件。 有关详细信息，请参阅[使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
   
-##  <a name="example4"></a> 示例 4 说明：获取 Excel 文件中的表的列表  
+##  <a name="example-4-description-get-a-list-of-tables-in-an-excel-file"></a><a name="example4"></a> 示例 4 说明：获取 Excel 文件中的表的列表  
  本示例使用在 Excel 工作簿文件中找到的由 `ExcelFile` 变量值指定的工作表和指定范围列表来填充数组，然后将该数组复制到 `ExcelTables` 变量。 您可以使用 Foreach 源变量枚举器循环访问数组中的表。  
   
 > [!NOTE]  
@@ -430,7 +430,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>备用解决方案  
  如果不使用脚本任务将 Excel 表列表收集到数组中，则还可以使用 ForEach ADO.NET 架构行集枚举器来循环访问 Excel 工作簿文件中的所有表（即，工作表和指定范围）。 有关详细信息，请参阅[使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
   
-##  <a name="testing"></a> 显示示例的结果  
+##  <a name="displaying-the-results-of-the-samples"></a><a name="testing"></a> 显示示例的结果  
  如果已在同一个包中配置本主题的所有示例，则可以将所有脚本任务连接到用于显示所有示例输出的其他脚本任务。  
   
 ### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>配置用于显示本主题中的示例输出的脚本任务  

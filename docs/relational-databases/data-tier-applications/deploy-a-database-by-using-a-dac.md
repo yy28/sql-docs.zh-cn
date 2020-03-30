@@ -20,25 +20,25 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134810"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用“将数据库部署到 SQL Azure”  向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器之间，或在两台 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]服务器之间部署数据库。  
   
-##  <a name="BeforeBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> 开始之前  
  该向导使用数据层应用程序 (DAC) BACPAC 存档文件部署数据库对象的数据和定义。 它从源数据库执行 DAC 导出操作，并对目标执行 DAC 导入。  
   
-###  <a name="DBOptSettings"></a> 数据库选项和设置  
+###  <a name="database-options-and-settings"></a><a name="DBOptSettings"></a> 数据库选项和设置  
  默认情况下，在部署过程中创建的数据库将具有来自 CREATE DATABASE 语句的默认设置。 例外是数据库集合和兼容级别将设置为源数据库中的值。  
   
  数据库选项（如 TRUSTWORTHY、DB_CHAINING 和 HONOR_BROKER_PRIORITY）不能作为部署过程的一部分进行调整。 物理属性（例如文件组的数目或者文件的数目和大小）不能作为部署过程的一部分进行更改。 在部署完成后，可以使用 ALTER DATABASE 语句、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 对数据库进行定制。  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  **“部署数据库”** 向导支持：  
   
 -   将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例部署到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
@@ -51,7 +51,7 @@ ms.locfileid: "68134810"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例必须运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本才能使用此向导。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例上的数据库包含 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]上不支持的对象，则无法使用该向导将数据库部署到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 如果 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 上的数据库包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持的对象，则您无法使用该向导将数据库部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC BACPAC 文件中且没有密码。 在导入此 BACPAC 时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
 #### <a name="permissions"></a>权限  
@@ -59,7 +59,7 @@ ms.locfileid: "68134810"
   
  此向导需要对目标实例或服务器的 DAC 导入权限。 登录名必须是 **sysadmin** 或 **serveradmin** 固定服务器角色的成员，或者是 **dbcreator** 固定服务器角色的成员并且具有 ALTER ANY LOGIN 权限。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以导入 DAC。 将具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  
   
-##  <a name="UsingDeployDACWizard"></a> 使用部署数据库向导  
+##  <a name="using-the-deploy-database-wizard"></a><a name="UsingDeployDACWizard"></a> 使用部署数据库向导  
  **使用部署数据库向导迁移数据库**  
   
 1.  连接到您要部署的数据库的位置。 只能指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器。  
@@ -82,7 +82,7 @@ ms.locfileid: "68134810"
     
     -   [结果](#Results)  
   
-##  <a name="Introduction"></a> “简介”页  
+##  <a name="introduction-page"></a><a name="Introduction"></a> “简介”页  
  此页说明 **“部署数据库”** 向导的步骤。  
   
  **选项**  
@@ -93,7 +93,7 @@ ms.locfileid: "68134810"
   
 -   **取消** - 取消操作并关闭向导。  
   
-##  <a name="Deployment_settings"></a> “部署设置”页  
+##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a> “部署设置”页  
  使用此页可以指定目标服务器并提供有关新数据库的详细信息。  
   
  **本地主机：**  
@@ -112,13 +112,13 @@ ms.locfileid: "68134810"
   
 -   指定临时文件的本地目录，该文件为 BACPAC 存档文件。 请注意，将在指定位置创建此文件，并且在操作完成后，此文件将保留在该位置。  
   
-##  <a name="Summary"></a> 摘要页  
+##  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成部署操作，请单击 **“完成”** 。 若要取消部署操作并退出向导，请单击 **“取消”** 。  
   
-##  <a name="Progress"></a> “进度”页  
+##  <a name="progress-page"></a><a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  
   
-##  <a name="Results"></a> “结果”页  
+##  <a name="results-page"></a><a name="Results"></a> “结果”页  
  此页将报告部署操作是成功还是失败，并显示每个操作的结果。 遇到了错误的任何操作都将在 **“结果”** 列中具有一个链接。 单击该链接可以查看针对该操作的错误报告。  
   
  单击 **“完成”** 关闭向导。  

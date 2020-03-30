@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71174230"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>查看和修改推送订阅属性
@@ -32,7 +32,7 @@ ms.locfileid: "71174230"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以从下列位置查看和修改发布服务器的推送订阅属性：  
   
 -   “订阅属性 - **发布服务器>：\<PublicationDatabase>”对话框，可从 \< 中获取。** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
@@ -59,7 +59,7 @@ ms.locfileid: "71174230"
   
 4.  根据需要修改属性，然后单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式修改推送订阅和访问其属性。 所用的存储过程取决于订阅所属的发布的类型。  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>查看快照或事务发布的推送订阅的属性  
@@ -97,9 +97,9 @@ ms.locfileid: "71174230"
   
 1.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)。 指定 **publication、\@subscriber、** subscriber_db，将 **property 指定为要更改的订阅属性，并将 \@value 指定为新值** **\@** **\@** **\@** 。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  用于查看或修改推送订阅属性的 RMO 类取决于订阅推送订阅的发布的类型。  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>查看或修改快照发布或事务发布的推送订阅的属性  

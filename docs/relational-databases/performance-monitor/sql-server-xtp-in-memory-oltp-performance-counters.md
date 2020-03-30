@@ -11,10 +11,10 @@ ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165509"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP（内存中 OLTP）性能计数器
@@ -28,7 +28,7 @@ ms.locfileid: "74165509"
   
  其中 *\<version>* 的值类似于 2016。  
   
-##  <a name="SQLServerPOs"></a> SQL Server XTP 性能对象  
+##  <a name="sql-server-xtp-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server XTP 性能对象  
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能对象。  
   
 |性能对象|说明|  

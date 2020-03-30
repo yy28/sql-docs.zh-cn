@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77173561"
 ---
 # <a name="install-polybase-on-linux"></a>在 Linux 上安装 PolyBase
@@ -36,7 +36,7 @@ ms.locfileid: "77173561"
 
 
 
-## <a name="RHEL">在 RHEL 上安装</a>
+## <a name=""></a><a name="RHEL">在 RHEL 上安装</a>
 
 通过下列命令在 Red Hat Enterprise Linux 上安装 mssql-server-polybase  。 
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 
 如果需要脱机安装，请在[发行说明](../../linux/sql-server-linux-release-notes.md)中找到 PolyBase 包下载。 然后执行与文章[安装 SQL Server](../../linux/sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
-## <a name="ubuntu">在 Ubuntu 上安装</a>
+## <a name=""></a><a name="ubuntu">在 Ubuntu 上安装</a>
 
 通过下列命令在 Ubuntu 上安装 mssql-server-polybase  。 
 
@@ -74,7 +74,7 @@ sudo systemctl restart mssql-server
 
 如果需要脱机安装，请在[发行说明](../../linux/sql-server-linux-release-notes.md)中找到 PolyBase 包下载。 然后执行与文章[安装 SQL Server](../../linux/sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
-## <a name="SLES">在 SLES 上安装</a>
+## <a name=""></a><a name="SLES">在 SLES 上安装</a>
 
 通过下列命令在 SUSE Linux Enterprise Server 上安装 mssql-server-polybase  。 
 
@@ -95,7 +95,7 @@ sudo systemctl restart mssql-server
 如果需要脱机安装，请在[发行说明](../../linux/sql-server-linux-release-notes.md)中找到 PolyBase 包下载。 然后执行与文章[安装 SQL Server](../../linux/sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
 
-## <a name="enable">启用 PolyBase</a> 
+## <a name=""></a><a name="enable">启用 PolyBase</a> 
 
 安装完成后，必须启用 PolyBase 来获取其功能。 连接到已安装的 SQL Server 实例并使用以下 Transact-SQL 命令进行启用。
 

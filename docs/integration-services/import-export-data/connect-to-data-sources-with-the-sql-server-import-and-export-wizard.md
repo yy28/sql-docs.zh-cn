@@ -10,10 +10,10 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4598eba24c44bddb66ef97120d4c1decc9ca7d63
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903931"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导连接到数据源
@@ -40,7 +40,7 @@ ms.locfileid: "77903931"
 ## <a name="connect-to-other-data-providers"></a>连接到其他数据提供程序
 有关如何连接到此处未列出的数据源的信息，请参阅 [The Connection Strings Reference](https://www.connectionstrings.com/)（连接字符串参考）。 该第三方站点包含示例连接字符串、关于数据提供程序的详细信息以及它们需要的连接信息。
 
-## <a name="related"></a>相关任务和内容  
+## <a name="related-tasks-and-content"></a><a name="related"></a>相关任务和内容  
 以下是一些其他的基本任务。
 -   **查看有关向导工作原理的简短示例。**
 

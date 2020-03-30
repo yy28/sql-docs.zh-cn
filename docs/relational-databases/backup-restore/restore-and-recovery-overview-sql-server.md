@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288571"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "79288571"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原对所有支持的操作系统都有效。 有关支持的操作系统的信息，请参阅 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)中的“兼容性支持”部分。  
   
-##  <a name="RestoreScenariosOv"></a> 还原方案概述  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> 还原方案概述  
  *中的“还原方案*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ”是从一个或多个备份还原数据、继而恢复数据库的过程。 支持的还原方案取决于数据库的恢复模式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本。  
   
  下表介绍了不同恢复模式所支持的可行还原方案。  
@@ -85,7 +85,7 @@ ms.locfileid: "79288571"
   
 -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，还原文件或页面的操作可能会允许数据库中的其他数据在还原操作期间仍保持联机状态。  
 
-## <a name="TlogAndRecovery"></a> 恢复和事务日志
+## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> 恢复和事务日志
 对于大多数还原方案，需要应用事务日志备份并允许 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 运行恢复过程  才能使数据库联机。 恢复是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于让每个数据库以事务一致状态或干净状态启动的进程。
 
 如果故障转移或其他非干净关闭，数据库可能处于这样的状态：某些修改从未从缓冲区缓存写入数据文件，且在数据文件内可能有未完成事务所做的某些修改。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例启动时，将根据最后一个[数据库检查点](../../relational-databases/logs/database-checkpoints-sql-server.md)运行每个数据库的恢复，其中包含三个阶段：
@@ -105,7 +105,7 @@ ms.locfileid: "79288571"
 > [!NOTE]
 > 若要在最大程度上使用企业环境中的数据库，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 可以在重做阶段后使数据库联机，而撤消阶段仍在执行。 这称为“快速恢复”。
 
-##  <a name="RMsAndSupportedRestoreOps"></a> 恢复模式和支持的还原操作  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a> 恢复模式和支持的还原操作  
  可用于数据库的还原操作取决于所用的恢复模式。 下表简要说明了每种恢复模式是否支持给定的还原方案以及适用范围。  
   
 |还原操作|完整恢复模式|大容量日志恢复模式|简单恢复模式|  
@@ -123,7 +123,7 @@ ms.locfileid: "79288571"
 > [!IMPORTANT]  
 > 无论数据库的恢复模式如何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法还原到早于创建该备份的版本的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本。  
   
-## <a name="RMsimpleScenarios"></a> 简单恢复模式下的还原方案  
+## <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a> 简单恢复模式下的还原方案  
  简单恢复模式对还原操作有下列限制：  
   
 -   文件还原和段落还原仅对只读辅助文件组可用。 有关这些还原方案的信息，请参阅 [文件还原（简单恢复模式）](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md) 和[段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。  
@@ -137,7 +137,7 @@ ms.locfileid: "79288571"
 > [!IMPORTANT]  
 > 无论数据库的恢复模式如何， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法从早于创建该备份的版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本还原。  
   
-##  <a name="RMblogRestore"></a> 在大容量日志恢复模式下进行还原  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> 在大容量日志恢复模式下进行还原  
  本节讨论特定于大容量日志恢复模式的还原注意事项，大容量日志恢复模式专门用于补充完整恢复模式。  
   
 > [!NOTE]  
@@ -164,12 +164,12 @@ ms.locfileid: "79288571"
   
  有关如何执行联机还原的信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
-##  <a name="DRA"></a> 数据库恢复顾问 (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> 数据库恢复顾问 (SQL Server Management Studio)  
 数据库恢复顾问简化了制定还原计划的过程，可以很轻松地实现最优的正确还原顺序。 很多已知数据库还原问题和客户所要求的增强功能已得到解决。 数据库恢复顾问引入的主要增强功能包括：  
   
--   **还原计划算法：** 用于制定还原计划的算法已得到明显改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更高。  
+-   **还原计划算法：**  用于制定还原计划的算法已得到明显改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更高。  
   
--   **时间点还原：** 数据库恢复顾问极大地简化了将数据库还原到给定时间点的过程。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+-   **时间点还原：**  数据库恢复顾问极大地简化了将数据库还原到给定时间点的过程。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
 有关详细信息，请参阅下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可管理性博客中有关数据库恢复顾问的信息：  
   
@@ -177,8 +177,8 @@ ms.locfileid: "79288571"
   
 -   [恢复顾问：使用 SSMS 创建/还原拆分备份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
-## <a name="adr"></a> 加速数据库恢复
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中提供了[加速数据库恢复](/azure/sql-database/sql-database-accelerated-database-recovery/) 通过重新设计 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [恢复过程](#TlogAndRecovery)，加速数据库恢复极大地提高了数据库可用性，尤其是存在长时间运行的事务时。 启用了加速数据库恢复的数据库在故障转移或其他非干净关闭后完成恢复过程的速度显著加快。 启用加速数据库恢复后，回滚取消长时间运行的事务的速度也显著加快。
+## <a name="accelerated-database-recovery"></a><a name="adr"></a> 加速数据库恢复
+[ 和 ](/azure/sql-database/sql-database-accelerated-database-recovery/) 中提供了[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]加速数据库恢复[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 通过重新设计 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [恢复过程](#TlogAndRecovery)，加速数据库恢复极大地提高了数据库可用性，尤其是存在长时间运行的事务时。 启用了加速数据库恢复的数据库在故障转移或其他非干净关闭后完成恢复过程的速度显著加快。 启用加速数据库恢复后，回滚取消长时间运行的事务的速度也显著加快。
 
 可使用以下语法对 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 按数据库启用加速数据库恢复：
 
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上将默认启用加速数据库恢复。
 
-## <a name="RelatedContent"></a> 另请参阅  
+## <a name="see-also"></a><a name="RelatedContent"></a> 另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056322"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式化文件跳过数据字段 (SQL Server)
@@ -30,12 +30,12 @@ ms.locfileid: "74056322"
 |[示例测试条件](#etc)<br />&emsp;&#9679;&emsp;[示例表](#sample_table)<br />&emsp;&#9679;&emsp;[示例数据文件](#sample_data_file)<br />[创建格式化文件](#create_format_file)<br />&emsp;&#9679;&emsp;[创建非 XML 格式化文件](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[修改非 XML 格式化文件](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[创建 XML 格式化文件](#xml_format_file)<br />&emsp;&#9679;&emsp;[修改 XML 格式化文件](#modify_xml_format_file)<br />[使用格式化文件导入数据以跳过数据字段](#import_data)<br />&emsp;&#9679;&emsp;[使用 bcp 和非 XML 格式化文件](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[使用 bcp 和 XML 格式化文件](#bcp_xml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和非 XML 格式化文件](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和 XML 格式化文件](#bulk_xml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和非 XML 格式化文件](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和 XML 格式化文件](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
 > [!NOTE]
->  可以使用非 XML 或 XML 格式化文件将数据文件批量导入表中，方法是使用 [bcp 实用工具](../../tools/bcp-utility.md)命令、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句或 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句。 有关详细信息，请参阅[使用格式化文件批量导入数据 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。
+>  可以使用非 XML 或 XML 格式化文件将数据文件批量导入表中，方法是使用 [bcp 实用工具](../../tools/bcp-utility.md) 命令、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句或 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句。 有关详细信息，请参阅[使用格式化文件批量导入数据 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。
 
-## 示例测试条件<a name="etc"></a>  
+## <a name="example-test-conditions"></a>示例测试条件<a name="etc"></a>  
 本主题中修改的格式化文件示例基于下面定义的表和数据文件。
   
-### 示例表<a name="sample_table"></a>
+### <a name="sample-table"></a>示例表<a name="sample_table"></a>
 下面的脚本创建一个测试数据库和一个名为 `myTestSkipField`的表。  在 Microsoft SQL Server Management Studio (SSMS) 中执行以下 Transact-SQL：
  
 ```sql
@@ -51,7 +51,7 @@ CREATE TABLE myTestSkipField
    );
 ```
   
-### 示例数据文件<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>示例数据文件<a name="sample_data_file"></a>
 创建一个空文件 `D:\BCP\myTestSkipField.bcp` 并插入以下数据： 
 ```
 1,SkipMe,Anthony,Grosse
@@ -59,7 +59,7 @@ CREATE TABLE myTestSkipField
 3,SkipMe,Stella,Rosenhain
 ```
   
-## 创建格式化文件<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>创建格式化文件<a name="create_format_file"></a>
 若要将数据从 `myTestSkipField.bcp` 大容量导入至 `myTestSkipField` 表，则该格式化文件必须进行下列操作：
 * 将第一个数据字段映射到第一列 `PersonID`。
 * 跳过第二个数据字段。
@@ -68,14 +68,14 @@ CREATE TABLE myTestSkipField
 
 用于创建格式化文件的最简单方法是使用 [bcp 实用工具](../../tools/bcp-utility.md)。  首先，从现有表创建基本格式化文件。  其次，修改基本格式化文件以反映实际数据文件。
   
-### <a name="nonxml_format_file"></a>创建非 XML 格式化文件 
+### <a name="creating-a-non-xml-format-file"></a><a name="nonxml_format_file"></a>创建非 XML 格式化文件 
 有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。 下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myTestSkipField.fmt`生成非 XML 格式化文件 `myTestSkipField`。  此外，限定符 `c` 用于指定字符数据， `t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  在命令提示符处输入以下命令：
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt -t, -T
 ```
 
-### 修改非 XML 格式化文件 <a name="modify_nonxml_format_file"></a>
+### <a name="modifying-the-non-xml-format-file"></a>修改非 XML 格式化文件 <a name="modify_nonxml_format_file"></a>
 有关术语，请参阅 [非 XML 格式化文件的结构](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) 。 在记事本中打开 `D:\BCP\myTestSkipField.fmt` 并执行以下修改：
 1) 复制 `FirstName` 的整个格式化文件行，并紧接在下一行的 `FirstName` 后面粘贴它。
 2) 对于新行和所有后续行，将主机文件字段顺序值增加一。
@@ -109,14 +109,14 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 * `myTestSkipField.bcp` 中的第三个数据字段映射到第二列， `myTestSkipField.. FirstName`
 * `myTestSkipField.bcp` 中的第四个数据字段映射到第三列， `myTestSkipField.. LastName`
 
-### 创建 XML 格式化文件 <a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>创建 XML 格式化文件 <a name="xml_format_file"></a>  
 有关详细信息，请查看 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 。  下面的命令使用 [bcp 实用工具](../../tools/bcp-utility.md) 基于 `myTestSkipField.xml`的架构创建 xml 格式化文件 `myTestSkipField`。  此外，限定符 `c` 用于指定字符数据， `t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  `x` 限定符必须用于生成基于 XML 的格式化文件。  在命令提示符处输入以下命令：
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.xml -t, -T
 ```
 
-### 修改 XML 格式化文件 <a name="modify_xml_format_file"></a>
+### <a name="modifying-the-xml-format-file"></a>修改 XML 格式化文件 <a name="modify_xml_format_file"></a>
 有关术语，请参阅 [XML 格式化文件的架构语法](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 。  在记事本中打开 `D:\BCP\myTestSkipField.xml` 并执行以下修改：
 1) 复制整个第二个字段，并紧接在下一行的第二个字段后面粘贴它。
 2) 对于新 FIELD 和每个后续 FIELD，将“FIELD ID”值增加 1。
@@ -165,22 +165,22 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.
 * 与 COLUMN 3 对应的 FIELD 3 映射到第二个表列， `myTestSkipField.. FirstName`
 * 与 COLUMN 4 对应的 FIELD 4 映射到第三个表列， `myTestSkipField.. LastName`
 
-## 使用格式化文件导入数据以跳过数据字段<a name="import_data"></a>
+## <a name="importing-data-with-a-format-file-to-skip-a-data-field"></a>使用格式化文件导入数据以跳过数据字段<a name="import_data"></a>
 下面的示例使用上面创建的数据库、数据文件和格式化文件。
 
-### 使用 [bcp](../../tools/bcp-utility.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>使用 [bcp](../../tools/bcp-utility.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
 在命令提示符处输入以下命令：
 ```
 bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myTestSkipField.fmt -T
 ```
 
-### 使用 [bcp](../../tools/bcp-utility.md) 和 [XML 格式化文件](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>使用 [bcp](../../tools/bcp-utility.md) 和 [XML 格式化文件](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a>
 在命令提示符处输入以下命令：
 ```
 bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myTestSkipField.xml -T
 ```
 
-### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中执行以下 Transact-SQL：
 ```sql
 USE TestDatabase;  
@@ -196,7 +196,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式化文件](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式化文件](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中执行以下 Transact-SQL：
 ```sql
 USE TestDatabase;  
@@ -212,7 +212,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 在 Microsoft SQL Server Management Studio (SSMS) 中执行以下 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -231,7 +231,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式化文件](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式化文件](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中执行以下 Transact-SQL：
 ```sql
 USE TestDatabase;  

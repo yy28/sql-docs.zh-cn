@@ -16,10 +16,10 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321974"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切换可更新事务性订阅的更新模式
@@ -40,17 +40,17 @@ ms.locfileid: "75321974"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   可以随时从立即更新向排队更新进行故障转移。 但执行该操作后，只有在已连接订阅服务器和发布服务器且队列读取器代理已将队列中的所有挂起消息应用到发布服务器后，才能恢复立即更新。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   当对事务发布的更新订阅支持从一种更新模式故障转移到另一种更新模式时，可通过编程方式切换更新模式以应对连接发生短暂变化的情况。 可以使用复制存储过程，以编程方式并根据需要设置更新模式。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!NOTE]  
 >  若要在创建订阅后更改更新模式，必须在创建订阅时将 **update_mode** 属性设置为 **failover** （允许从立即更新切换到排队更新）或 **queued failover** （允许从排队更新切换到立即更新）。 在新建订阅向导中，这些属性是自动设置的。  
@@ -75,7 +75,7 @@ ms.locfileid: "75321974"
   
  有关访问“订阅属性 - **发布服务器>: \<发布数据库>”\<** 对话框的详细信息，请参阅[查看和修改请求订阅属性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-switch-between-update-modes"></a>切换更新模式  
   

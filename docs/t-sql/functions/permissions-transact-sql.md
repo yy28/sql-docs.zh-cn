@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73843632"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -52,7 +52,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  安全对象的 ID。 如果未指定 objectid，则位图值包含当前用户的语句权限；否则，位图包含当前用户对该安全对象的权限  。 指定的安全对象必须在当前数据库中。 使用 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 函数确定 objectid 值  。  
   
  **'** *column* **'**  
- 是返回其权限信息的列的可选名。 该列必须是 objectid 指定的表中的有效列名  。  
+ 返回其权限信息的列的可选名。 该列必须是 objectid 指定的表中的有效列名  。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  

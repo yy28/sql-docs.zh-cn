@@ -19,17 +19,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76929125"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和阅读 SQL Server 安装程序日志文件
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-默认情况下，SQL Server 安装程序会在 \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log 内带有日期和时间戳的文件夹中创建日志文件，其中 nnn 是与正在安装的 SQL 版本相对应的数字    。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下执行安装程序时，将在 %temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
+默认情况下，SQL Server 安装程序会在 **programfiles%\Microsoft SQL Server\%nnn\Setup Bootstrap\Log 内带有日期和时间戳的文件夹中创建日志文件，其中 nnn 是与正在安装的 SQL 版本相对应的数字\\ **  。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下执行安装程序时，将在 %temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
 
    | 文件           | 路径 |
    | :------        | :----------------------------- |
@@ -37,7 +37,7 @@ ms.locfileid: "76929125"
    | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss  |
    | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **数据存储** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore 
-   | **MSI 日志文件** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log |
+   | **MSI 日志文件** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss  Name>.log\\\<|
    | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss  |
    | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss  |
    | **对于无人参与的安装** | %temp%\sqlsetup*.log |
@@ -85,7 +85,7 @@ ms.locfileid: "76929125"
   > 请注意，修补时可能会存在多个子文件夹（一个用于每个要修补的实例，一个用于共享功能），其中包含一组类似的文件（即 %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM > \MSSQLSERVER）。 
   
 ### <a name="location"></a>位置  
- Summary.txt 位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\  。
+ Summary.txt 位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log  \\。
   
  若要找到摘要文本文件中的错误，请使用“error”或“failed”关键字搜索该文件。
   
@@ -95,7 +95,7 @@ ms.locfileid: "76929125"
  summary_engine 基本文件类似于摘要文件，是在主工作流中生成的。
   
 ### <a name="location"></a>位置  
- Summary_\<MachineName>_YYYYMMDD_HHMMss.txt 文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\  。
+ Summary_\<MachineName>_YYYYMMDD_HHMMss.txt 文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log *<YYYYMMDD_HHMM>* \\\\。
   
   
 ## <a name="detailtxt-file"></a>Detail.txt 文件
@@ -104,7 +104,7 @@ ms.locfileid: "76929125"
  Detail.txt 是针对主工作流（如安装或升级）生成的，它提供有关执行的详细信息。 文件中的日志根据调用安装的每个操作的时间生成。 文本文件显示操作执行的顺序及其依赖项。  
   
 ### <a name="location"></a>位置  
- Detail.txt 文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt  。  
+ Detail.txt 文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log *<YYYYMMDD_HHMM>\Detail.txt*\\。  
   
  如果在安装过程中发生错误，系统会将异常或错误记录在该文件的末尾。 若要查找该文件中的错误，请首先检查文件末尾，然后在文件中搜索“error”或“exception”关键字
     
@@ -120,7 +120,7 @@ ms.locfileid: "76929125"
 -   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>位置  
- MSI 日志文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log  。  
+ MSI 日志文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log *<YYYYMMDD_HHMM>* <Name\\.log\\\>。  
   
  该文件的末尾是有关执行的摘要，其中包括成功状态或失败状态以及属性。 若要查找 MSI 文件中的错误，请搜索“value 3”并查看前后文本。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "76929125"
  本配置文件包含安装过程中提供的输入设置。 该文件可用于在无需手动输入设置的情况下重新启动安装。 但是，帐户的密码、PID 和某些参数不保存在该配置文件中。 可以将这些设置添加到该文件中，也可通过使用命令行或安装程序用户界面提供这些设置。 有关详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
   
 ### <a name="location"></a>位置  
- ConfigurationFile.ini 位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\  。  
+ ConfigurationFile.ini 位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log *<YYYYMMDD_HHMM>* \\\\。  
   
 ## <a name="systemconfigurationcheck_reporthtm-file"></a>SystemConfigurationCheck_Report.htm 文件
   
@@ -138,7 +138,7 @@ ms.locfileid: "76929125"
  系统配置检查报表包含有关每个执行规则的简短说明，以及执行状态。
   
 ### <a name="location"></a>位置  
-SystemConfigurationCheck_Report.htm 位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\  。
+SystemConfigurationCheck_Report.htm 位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log *<YYYYMMDD_HHMM>* \\\\。
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   

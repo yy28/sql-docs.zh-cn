@@ -15,10 +15,10 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710989"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>通过 FTP 传递快照
@@ -39,21 +39,21 @@ ms.locfileid: "71710989"
   
 -   若要通过文件传输协议 (FTP) 传输快照文件，必须先配置一个 FTP 服务器。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 文档。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  为了帮助改进安全性，建议您在通过 Internet 使用 FTP 快照传递时实现虚拟专用网络 (VPN)。 有关详细信息，请参阅[使用 VPN 通过 Internet 发布数据](../../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md)。  
   
  出于安全考虑，最好不允许匿名登录 FTP 服务器。 快照代理必须对指定的目录具有写权限，而分发代理或合并代理必须具有读权限。 如果使用请求订阅，就必须指定一个共享目录作为通用命名约定 (UNC) 路径，例如 \\\ftpserver\home\snapshots。 有关详细信息，请参阅[保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
  如果可能，请在运行时提示用户输入其凭据。 如果将凭据存储在脚本文件中，则必须确保此文件的安全。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 配置 FTP 服务器后，请在“发布属性 \<发布>”对话框中为该服务器指定目录和安全信息。  有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 配置 FTP 服务器后，请在“发布属性 **发布>”对话框中为该服务器指定目录和安全信息。\<** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-ftp-information"></a>指定 FTP 信息  
   
-1.  在“发布属性 - \<发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。    
+1.  在“发布属性 - **发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。\<**   
   
-    -   “FTP 快照”页面，用于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的发布服务器的快照发布、事务发布以及合并发布  。  
+    -   “FTP 快照”页面，用于运行   之前版本的发布服务器的快照发布、事务发布以及合并发布[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
   
     -   **“FTP 快照和 Internet”** 页，用于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器的合并发布。  
   
@@ -71,12 +71,12 @@ ms.locfileid: "71710989"
 
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  通过使用复制存储过程，可以按编程方式设置在 FTP 服务器上提供快照文件的选项以及修改这些 FTP 设置。 所用的过程由发布的类型决定。 FTP 快照传递仅可同请求订阅一起使用。  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布启用 FTP 快照传递  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 指定 `@publication`，为 `@enabled_for_internet` 指定值 true，并为以下参数指定适当的值  ：  
+1.  在发布服务器上，对发布数据库执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 指定 `@publication`，为  **指定值 true，并为以下参数指定适当的值**`@enabled_for_internet`：  
   
     -   `@ftp_address` - 用于传递快照的 FTP 服务器的地址。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71710989"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>为合并发布启用 FTP 快照传递  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 `@publication`，为 `@enabled_for_internet` 指定值 true，并为以下参数指定适当的值  ：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 `@publication`，为  **指定值 true，并为以下参数指定适当的值**`@enabled_for_internet`：  
   
     -   `@ftp_address` - 用于传递快照的 FTP 服务器的地址。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "71710989"
   
 3.  （可选）若要禁用 FTP 快照传递，请在发布服务器上对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 将值 `enabled_for_internet` 指定给 `@property`，将值 `false` 指定给 `@value`。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例创建一个合并发布，该发布允许订阅服务器通过使用 FTP 访问快照数据。 访问 FTP 共享区时，订阅服务器应使用安全的 VPN 连接。 **sqlcmd** 脚本变量用于提供登录名和密码值。 有关详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
  [!code-sql[HowTo#sp_createmergepub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_1.sql)]  

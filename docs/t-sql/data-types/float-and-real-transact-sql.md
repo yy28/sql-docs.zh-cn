@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71682011"
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "71682011"
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
-float [ (_n_) ] 其中 n 为用于存储 float 数值尾数的位数（以科学记数法表示），因此可以确定精度和存储大小      。 如果指定了 n，则它必须是介于 1 和 53 之间的某个值    。 n 的默认值为 53   。
+float [ (**n**) ] 其中 n 为用于存储 float 数值尾数的位数（以科学记数法表示），因此可以确定精度和存储大小      。 如果指定了 n，则它必须是介于 1 和 53 之间的某个值    。 n 的默认值为 53   。
   
 |n 值 |Precision|存储大小|  
 |---|---|---|

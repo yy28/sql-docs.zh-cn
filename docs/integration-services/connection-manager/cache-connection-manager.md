@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294447"
 ---
 # <a name="cache-connection-manager"></a>缓存连接管理器
@@ -67,7 +67,7 @@ ms.locfileid: "71294447"
   
  “缓存连接管理器编辑器”  对话框包含以下选项卡：  
   
-###  <a name="generaltab"></a> “常规”选项卡  
+###  <a name="general-tab"></a><a name="generaltab"></a> “常规”选项卡  
  “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件   。  
   
 #### <a name="options"></a>选项  
@@ -98,7 +98,7 @@ ms.locfileid: "71294447"
  **刷新元数据**  
  删除缓存连接管理器中的列元数据，然后用所选缓存文件中的列元数据重新填充缓存连接管理器。  
   
-###  <a name="columnstab"></a> “列”选项卡  
+###  <a name="columns-tab"></a><a name="columnstab"></a> “列”选项卡  
  **“缓存连接管理器编辑器”** 对话框的 **“列”** 选项卡用于配置缓存中各列的属性。  
   
 #### <a name="options"></a>选项  

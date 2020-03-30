@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 85d4d245ae71adbd6b1c534381c7683b676d7fbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288203"
 ---
 # <a name="initialize-a-subscription-manually"></a>手动初始化订阅
@@ -27,13 +27,13 @@ ms.locfileid: "76288203"
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中手动初始化订阅。 虽然初始快照通常用于初始化订阅，但如果架构和初始数据已经在订阅服务器上存在，则可以在不使用快照的情况下初始化对发布的订阅。  
   
 
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果在将数据及架构复制到订阅服务器和手动初始化订阅之间的时间段内，在使用事务复制发布的数据库上进行了某活动，则此活动导致的更改可能不会复制到订阅服务器。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可通过将架构（通常为数据）复制到订阅数据库，手动初始化对发布的订阅。 架构和数据应与发布数据库匹配。 然后在新建订阅向导的 **“初始化订阅”** 页上指定订阅不需要架构和数据。 有关访问此向导的详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) 和 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)中手动初始化订阅。  
   
  首次对订阅进行同步时，复制所需的对象和元数据将复制到订阅数据库。  
@@ -44,7 +44,7 @@ ms.locfileid: "76288203"
   
 2.  清除 **“初始化订阅”** 页中的 **“初始化”** 复选框。 对每个只要求复制对象和元数据的订阅执行此操作。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程手动初始化订阅。  
   
 #### <a name="to-manually-initialize-a-pull-subscription-to-a-transactional-publication"></a>手动初始化对事务发布的请求订阅  

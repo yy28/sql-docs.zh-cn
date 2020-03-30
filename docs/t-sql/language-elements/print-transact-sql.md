@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc83aca49b6147835353538d809be121756ecda6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072401"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
@@ -48,7 +48,7 @@ PRINT msg_str | @local_variable | string_expr
  字符串或 Unicode 字符串常量。 有关详细信息，请参阅[常量 (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)。  
   
  **@** *local_variable*  
- 是任何有效的字符数据类型的变量。 @  local\_variable  的数据类型必须为 char  、nchar  、varchar  或 nvarchar  ，或者必须能够隐式转换为这些数据类型。  
+ 任何有效的字符数据类型的变量。 **@** local_variable\__ 的数据类型必须为 char  、nchar  、varchar  或 nvarchar  ，或者必须能够隐式转换为这些数据类型。  
   
  string_expr   
  返回字符串的表达式。 可包括串联的文字值、函数和变量。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
@@ -98,7 +98,7 @@ PRINT @PrintMessage;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-conditionally-executing-print"></a>C. 有条件地执行打印  
  以下示例使用 `PRINT` 语句有条件地返回消息。  

@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908560"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
@@ -46,7 +46,7 @@ ms.locfileid: "72908560"
   
 -   [SqlErrorLogFile 类](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md) （本主题显示如何检索有关指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件的信息。）  
   
-##  <a name="BeforeYouBegin"></a> 权限  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> 权限  
  若要连接到脱机日志文件，您必须在本地和远程计算机上同时具有以下权限：  
   
 -   针对 **Root\Microsoft\SqlServer\ComputerManagement12** WMI 命名空间的读取访问权限。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。 有关详细信息，请参阅本节后面的“验证 WMI 权限”过程。  

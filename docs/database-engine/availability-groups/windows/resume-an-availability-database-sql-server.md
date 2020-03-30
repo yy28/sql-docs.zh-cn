@@ -18,10 +18,10 @@ ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822601"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>恢复可用性数据库 (SQL Server)
@@ -36,19 +36,19 @@ ms.locfileid: "74822601"
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  RESUME 命令只要被承载目标数据库的副本接受后就返回，但是实际上继续数据库以异步方式发生。  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载要恢复的数据库的服务器实例。    
 -   可用性组必须联机。    
 -   主数据库必须处于联机状态且可用。  
   
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **恢复辅助数据库**  
   
 1.  在对象资源管理器中，连接到承载要恢复的数据库所在的可用性副本的服务器实例，然后展开服务器树。  
@@ -64,7 +64,7 @@ ms.locfileid: "74822601"
 > [!NOTE]  
 >  若要恢复此副本位置上的其他数据库，请对每个数据库重复执行步骤 4 和 5。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **恢复本地挂起的辅助数据库**  
   
 1.  连接到承载想要恢复其数据库的辅助副本的服务器实例。  
@@ -73,7 +73,7 @@ ms.locfileid: "74822601"
 
      ALTER DATABASE *database_name* SET HADR RESUME;
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **恢复辅助数据库**  
   
 1.  将目录 (**cd**) 更改为托管要恢复其数据库的副本的服务器实例。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
@@ -94,7 +94,7 @@ ms.locfileid: "74822601"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [挂起可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   

@@ -18,25 +18,25 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dfba294b5c07fc7053669c5c4ebbbd46217efb18
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822633"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>从 Always On 可用性组中删除主数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell 从 Always On 可用性组中删除主数据库和对应的辅助数据库。  
   
-##  <a name="Prerequisites"></a> 先决条件和限制  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 先决条件和限制  
   
 -   只有主副本支持该任务。 您必须连接到承载主副本的服务器实例。  
   
  
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **删除可用性数据库**  
   
 1.  在对象资源管理器中，连接到承载要删除的一个或多个数据库的主副本的服务器实例，然后展开服务器树。  
@@ -55,7 +55,7 @@ ms.locfileid: "74822633"
   
 6.  在 **“从可用性组中删除数据库”** 对话框中，删除所有列出的数据库，然后单击 **“确定”** 。 如果您不想全部删除这些数据库，请单击 **“取消”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **删除可用性数据库**  
   
 1.  连接到承载主副本的服务器实例。  
@@ -72,7 +72,7 @@ ms.locfileid: "74822633"
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **删除可用性数据库**  
   
 1.  将目录 (**cd**) 更改为托管主副本的服务器实例。  
@@ -93,7 +93,7 @@ ms.locfileid: "74822633"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：在从可用性组中删除可用性数据库之后  
+##  <a name="follow-up-after-removing-an-availability-database-from-an-availability-group"></a><a name="FollowUp"></a> 跟进：在从可用性组中删除可用性数据库之后  
  从其可用性组中删除可用性数据库后，将结束先前主数据库与对应的辅助数据库之间的数据同步。 以前的主数据库保持联机状态。 每个对应的辅助数据库都处于 RESTORING 状态。  
   
  此时，可以通过多种备选方法处理删除的辅助数据库：  

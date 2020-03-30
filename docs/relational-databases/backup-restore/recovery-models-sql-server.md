@@ -29,10 +29,10 @@ ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aa1521e40df7483c7a4dc336484d6ecf28e909cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325441"
 ---
 # <a name="recovery-models-sql-server"></a>恢复模式 (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "75325441"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="RMov"></a> 恢复模式概述  
+##  <a name="recovery-model-overview"></a><a name="RMov"></a> 恢复模式概述  
  下表概述了这三种恢复模式。  
   
 |恢复模式|说明|工作丢失的风险|能否恢复到时点？|  
@@ -54,7 +54,7 @@ ms.locfileid: "75325441"
 |**完整**|需要日志备份。<br /><br /> 数据文件丢失或损坏不会导致丢失工作。<br /><br /> 可以恢复到任意时点（例如应用程序或用户错误之前）。 有关完整恢复模式下的数据库备份的信息，请参阅 [完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 和[完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。|正常情况下没有。<br /><br /> 如果日志尾部损坏，则必须重做自最新日志备份之后所做的更改。|如果备份在接近特定的时点完成，则可以恢复到该时点。 有关使用日志备份还原到故障点的信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。<br /><br /> 注意：如果有两个或更多必须在逻辑上保持一致的完整恢复模式数据库，则最好执行特殊步骤，以确保这些数据库的可恢复性。 有关详细信息，请参阅 [包含标记的事务的相关数据库的恢复](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)。|  
 |**大容量日志**|需要日志备份。<br /><br /> 是完整恢复模式的附加模式，允许执行高性能的大容量复制操作。<br /><br /> 通过使用最小方式记录大多数大容量操作，减少日志空间使用量。 有关尽量减少日志量的操作的信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。<br /><br /> 日志备份可能很大，因为日志备份中捕获了最低限度记录的操作。 有关大容量日志恢复模式下的数据库备份的信息，请参阅[完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 和[完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。|如果在最新日志备份后发生日志损坏或执行大容量日志记录操作，则必须重做自该上次备份之后所做的更改。<br /><br /> 否则不丢失任何工作。|可以恢复到任何备份的结尾。 不支持时点恢复。|  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

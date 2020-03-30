@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056686"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>为 Always On 可用性组配置灵活的自动故障转移策略
@@ -34,7 +34,7 @@ ms.locfileid: "74056686"
   > 不能使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]配置可用性组的灵活故障转移策略。  
   
  
-## <a name="Limitations"></a> 自动故障转移的限制  
+## <a name="limitations-on-automatic-failovers"></a><a name="Limitations"></a> 自动故障转移的限制  
   
 -   要执行自动故障转移，当前主副本和一个辅助副本必须配置为使用自动故障转移的同步提交可用性模式，而且辅助副本必须与主副本同步。  
   
@@ -42,24 +42,24 @@ ms.locfileid: "74056686"
   
 -   如果某个可用性组超过其 WSFC 故障阈值，则该 WSFC 群集不会尝试为该可用性组执行自动故障转移。 此外，该可用性组的 WSFC 资源组始终保持失败状态，直到群集管理员手动将该失败的资源组联机，或是数据库管理员对该可用性组执行手动故障转移。 WSFC 故障阈值  定义为给定时间段中可用性组所支持的最大故障数。 默认时间段为六个小时，此时间段中最大故障数的默认值为 *n*-1，其中 *n* 是 WSFC 节点的数目。 若要更改给定的可用性组的故障阈值，请使用 WSFC 故障转移管理器控制台。  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载主副本的服务器实例。  
    
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
   
 |任务|权限|  
 |----------|-----------------|  
 |为新的可用性组配置灵活故障转移策略|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |修改现有可用性组的策略|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 
-##  <a name="HCtimeout"></a> 运行状况检查超时阈值  
+##  <a name="health-check-timeout-threshold"></a><a name="HCtimeout"></a> 运行状况检查超时阈值  
  可用性组的 WSFC 资源 DLL 将通过在承载主副本的 SQL Server 实例上调用 *sp_server_diagnostics* 存储过程来对主副本执行 [运行状况检查](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 。 **sp_server_diagnostics** 按等于可用性组的运行状况检查超时阈值的 1/3 的时间间隔返回结果。 默认的运行状况检查超时阈值为 30 秒，这将导致 **sp_server_diagnostics** 按 10 秒的时间间隔返回结果。 如果 **sp_server_diagnostics** 的运行速度较慢且未返回信息，则资源 DLL 将在等待运行状况检查超时阈值的完全时间间隔后确定主副本已停止响应。 如果主副本停止响应，则启动自动故障转移（如果当前受支持）。  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** 在数据库级别不执行运行状况检查。  
   
-##  <a name="FClevel"></a> 故障条件级别  
+##  <a name="failure-condition-level"></a><a name="FClevel"></a> 故障条件级别  
  由 **sp_server_diagnostics** 返回的诊断数据和运行状况信息是否保证触发自动故障转移取决于可用性组的失败条件级别。 *失败条件级别* 指定触发自动故障转移的失败条件。 有 5 个失败条件级别，其范围从最少限制（级别 1）到最多限制（级别 5）。 给定级别包含限制较少的级别。 因此，最严格的级别 5 包含四个限制更少的条件，依此类推。  
   
 > [!IMPORTANT]  
@@ -78,7 +78,7 @@ ms.locfileid: "74056686"
 > [!NOTE]  
 >  缺少 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例对客户端请求的响应与可用性组无关。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **配置灵活故障转移策略**  
   
 1.  连接到承载主副本的服务器实例。  
@@ -115,7 +115,7 @@ ms.locfileid: "74056686"
         ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT = 60000);  
         ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **配置灵活故障转移策略**  
   
 1.  将默认值 (**cd**) 设置为托管主副本的服务器实例。  
@@ -161,7 +161,7 @@ ms.locfileid: "74056686"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
 
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置自动故障转移**  
   
 -   [更改可用性副本的可用性模式 (SQL Server) ](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)（自动故障转移要求同步提交可用性模式）  
@@ -170,7 +170,7 @@ ms.locfileid: "74056686"
   
 -   [配置灵活的故障转移策略以控制自动故障转移的条件（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [工作原理：SQL Server AlwaysOn 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   

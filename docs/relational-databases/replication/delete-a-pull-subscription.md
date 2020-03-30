@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c97f69b69075a4ab60f8378344de139924dca788
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284624"
 ---
 # <a name="delete-a-pull-subscription"></a>删除请求订阅
@@ -37,7 +37,7 @@ ms.locfileid: "76284624"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在发布服务器上删除请求订阅（从 **的** “本地发布” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]文件夹中），或在订阅服务器上删除请求订阅（从 **“本地订阅”** 文件夹中）。 删除订阅不会从订阅中删除对象或数据，必须对其手动删除。  
   
 #### <a name="to-delete-a-pull-subscription-at-the-publisher"></a>在发布服务器上删除请求订阅  
@@ -62,7 +62,7 @@ ms.locfileid: "76284624"
   
 4.  在确认对话框中，选择是否连接到发布服务器以删除订阅信息。 如果清除 **“连接到发布服务器”** 复选框，则应在以后连接到发布服务器以删除订阅信息。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式删除请求订阅。 所用的存储过程取决于订阅所属的发布的类型。  
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>删除对快照发布或事务发布的请求订阅  
@@ -77,7 +77,7 @@ ms.locfileid: "76284624"
   
 2.  在发布服务器上，对发布数据库执行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 **publication、\@subscriber 和** subscriber_db **\@** **\@** 。 将 **subscription_type** **的值指定为 pull\@** 。 （可选）如果无法访问分发服务器，请将 **ignore_distributor 的值指定为 1，以便在不删除分发服务器上相关对象的情况下删除订阅** **\@** 。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例删除对事务发布的请求订阅。 第一个批处理在订阅服务器上执行，第二个批处理在发布服务器上执行。  
   
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_1.sql)]  
@@ -90,7 +90,7 @@ ms.locfileid: "76284624"
   
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_4.sql)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  可通过使用复制管理对象 (RMO) 以编程方式删除请求订阅。 用于删除请求订阅的 RMO 类由该请求订阅所订阅的发布类型决定。  
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>删除对快照发布或事务发布的请求订阅  
@@ -125,7 +125,7 @@ ms.locfileid: "76284624"
   
 7.  调用 <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A> 方法。 将订阅服务器和订阅数据库的名称分别指定给 *subscriber* 和 *subscriberDB* 参数。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  本示例将删除对事务发布的请求订阅并删除发布服务器上的订阅注册。  
   
  [!code-cs[HowTo#rmo_DropTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpullsub)]  

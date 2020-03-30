@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874762"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安装 SQL Server 全文搜索
@@ -30,7 +30,7 @@ ms.locfileid: "70874762"
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">在 RHEL 上安装</a>
+## <a name=""></a><a name="RHEL">在 RHEL 上安装</a>
 
 通过下列命令在 Red Hat Enterprise Linux 上安装 mssql-server-fts  。 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 如果需要脱机安装，请在[发行说明](sql-server-linux-release-notes.md)中找到全文搜索包下载。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
-## <a name="ubuntu">在 Ubuntu 上安装</a>
+## <a name=""></a><a name="ubuntu">在 Ubuntu 上安装</a>
 
 通过下列命令在 Ubuntu 上安装 mssql-server-fts  。 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 如果需要脱机安装，请在[发行说明](sql-server-linux-release-notes.md)中找到全文搜索包下载。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
-## <a name="SLES">在 SLES 上安装</a>
+## <a name=""></a><a name="SLES">在 SLES 上安装</a>
 
 通过下列命令在 SUSE Linux Enterprise Server 上安装 mssql-server-fts  。 
 
@@ -142,7 +142,7 @@ sudo zypper update mssql-server-fts
 | 乌尔都语 | 1056 |
 | 越南语 | 1066 |
 
-## <a id="filters"></a> 筛选器
+## <a name="filters"></a><a id="filters"></a> 筛选器
 
 全文搜索还适用于二进制文件中存储的文本。 但在这种情况下，需要安装一个筛选器来处理文件。 有关筛选器的详细信息，请参阅[配置和管理搜索筛选器](../relational-databases/search/configure-and-manage-filters-for-search.md)
 

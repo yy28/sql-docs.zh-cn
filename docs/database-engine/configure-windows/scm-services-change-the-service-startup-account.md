@@ -15,10 +15,10 @@ ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212318"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM 服务 - 更改服务启动帐户
@@ -28,9 +28,9 @@ ms.locfileid: "70212318"
 > [!IMPORTANT]  
 >  更改 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服务启动帐户后，必须重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（ [!INCLUDE[ssDE](../../includes/ssde-md.md)]）才能使更改生效。 重新启动此服务时，所有与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例关联的数据库在此服务成功重新启动后才能使用。 如果必须更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服务启动帐户，请确保在定期计划维护期间或者数据库可以脱机（不中断日常操作）时执行此操作。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   群集服务器  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70212318"
   
      在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装期间， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务被配置为使用 Network Service 帐户（但已禁用）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务分配的帐户，但不能启用或启动该服务。 将 SKU 从 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 升级到 Express 以外的版本后，不能自动启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务，但可以在需要时通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器以及将服务启动模式更改为“手动”或“自动”来启用该服务。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   
 #### <a name="to-change-the-sql-server-service-startup-account"></a>更改 SQL Server 服务启动帐户  
   
@@ -54,13 +54,13 @@ ms.locfileid: "70212318"
     >  -   **Windows 10**：  
     >          要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“起始页”  中键入 SQLServerManager13.msc（适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）。 对于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请将 13 替换为较小的数字。 单击“SQLServerManager13.msc”可打开配置管理器。 要将配置管理器固定到“起始页”或“任务栏”，请右键单击“SQLServerManager13.msc”，然后单击“打开文件位置”  。 在“Windows 文件资源管理器”中，右键单击“SQLServerManager13.msc”，然后单击“固定到‘开始’屏幕”  或“固定到任务栏”  。  
     > -   **Windows 8**：  
-    >          若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager\<version>.msc（例如 SQLServerManager13.msc），然后按“Enter”      。  
+    >          若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager**version>.msc（例如 SQLServerManager13.msc），然后按“Enter”**  **\<**   。  
   
 2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“SQL Server 服务”** 。  
   
 3.  在详细信息窗格中，右键单击要为其更改服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称，再单击“属性”  。  
   
-4.  在“SQL Server \<instancename> 属性”对话框中，单击“登录”选项卡，并选择“登录身份”帐户类型      。  
+4.  在“SQL Server **instancename> 属性”对话框中，单击“登录”选项卡，并选择“登录身份”帐户类型\<**     。  
   
 5.  选择了新服务启动帐户后，单击 **“确定”** 。  
   

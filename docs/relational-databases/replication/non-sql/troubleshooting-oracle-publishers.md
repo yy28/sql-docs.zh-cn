@@ -14,10 +14,10 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907957"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
@@ -62,14 +62,14 @@ ms.locfileid: "72907957"
   
 -   已使用正确的 Oracle 主目录和路径。 即使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上只安装了一组 Oracle 二进制文件，也要确保正确设置与 Oracle 主目录相关的环境变量。 如果更改了环境变量值，必须停止并重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 才能使更改生效。  
   
- 有关配置和测试连接的详细信息，请参阅[配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)中的“在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装和配置 Oracle 客户端网络软件”。  
+ 有关配置和测试连接的详细信息，请参阅[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置 Oracle 发布服务器[中的“在 ](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md) 分发服务器上安装和配置 Oracle 客户端网络软件”。  
   
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle 发布服务器与另一分发服务器相关联  
  一个 Oracle 发布服务器只能与一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器相关联。 如果有不同的分发服务器与 Oracle 发布服务器相关联，则必须先删除它才能使用另一分发服务器。 如果未先删除该分发服务器，就会收到以下错误消息之一：  
   
 -   “Oracle 服务器实例‘\<*OraclePublisherName*>'’以前配置为将‘\<*SQLServerDistributorName*>’作为其分发服务器。 若要开始使用‘\<*NewSQLServerDistributorName*>’作为其分发服务器，必须删除 Oracle 服务器实例上的当前复制配置，而这将删除该服务器实例上的所有发布。”  
   
--   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* ’上的发布服务器‘\<*OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘ *\<SynonymName>* ’，以便重新创建。”  
+-   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>.\<*DistributionDatabaseName>* ’上的发布服务器‘ *\<OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘ *\<SynonymName>* ’，以便重新创建。”  
   
  删除 Oracle 发布服务器时，会自动清除 Oracle 数据库中的复制对象。 但是，在某些情况下需要手动清除 Oracle 复制对象。 手动清除复制创建的 Oracle 复制对象：  
   

@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296297"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>连接到 Access 数据源（SQL Server 导入和导出向导）
@@ -71,7 +71,7 @@ ms.locfileid: "71296297"
 > [!NOTE]
 > 若要使用 64 位版本的 SQL Server 导入和导出向导，必须安装 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位应用程序且仅安装 32 位文件，包括 32 位版本的向导。
 
-## <a name="officeDownloads"></a>获取连接到 Access 所需的文件  
+## <a name="get-the-files-you-need-to-connect-to-access"></a><a name="officeDownloads"></a>获取连接到 Access 所需的文件  
 如果尚未安装 Microsoft Office 数据源（包括 Access 和 Excel）的连接组件，则可能需要下载它们。 从此处下载 Access 和 Excel 文件的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。
   
 最新版组件可以打开 Access 早期版本创建的文件。
@@ -82,7 +82,7 @@ ms.locfileid: "71296297"
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a> 数据库文件是否受密码保护？
+## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> 数据库文件是否受密码保护？
 在某些情况下，Access 数据库受密码保护，但不使用工作组信息文件。 所有用户都必须提供相同的密码，但不必输入用户名。 若要提供数据库密码，请执行以下操作。
 
 1.  在“选择数据源”  或“选择目标”  页上，单击“高级”  按钮打开“数据链接属性”  对话框。  

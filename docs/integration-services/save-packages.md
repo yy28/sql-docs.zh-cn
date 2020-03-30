@@ -19,10 +19,10 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295740"
 ---
 # <a name="save-packages"></a>保存包
@@ -47,7 +47,7 @@ ms.locfileid: "71295740"
     >  可以在“属性”窗口中验证保存包的路径及文件名。  
 
 ## <a name="save-a-copy-of-a-package"></a>保存一个包副本
-  此部分介绍如何将包的副本保存到文件系统、包存储区或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb 数据库  。 指定保存包副本的位置时，也能够更新包的名称。  
+  此部分介绍如何将包的副本保存到文件系统、包存储区或   中的 msdb 数据库[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定保存包副本的位置时，也能够更新包的名称。  
   
  包存储区可以同时包括 **msdb** 数据库和文件系统中的文件夹，也可以只包含 **msdb**或文件系统中的文件夹。 在 **msdb**中，包将保存到 **sysssispackages** 表中。 此表包括一个 **folderid** 列，用于标识包所属的逻辑文件夹。 逻辑文件夹提供了对保存到 **msdb** 中的包进行分组的有用方式，文件系统中的文件夹也提供了对保存到文件系统中的包进行分组的方式。 **msdb** 中的 **sysssispackagefolders** 表中的行定义这些文件夹。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71295740"
   
 1.  在解决方案资源管理器中，双击要保存其副本的包。  
   
-2.  在“文件”菜单上，单击“包文件\<的副本 > 另存为”   。  
+2.  在“文件”菜单上，单击“包文件**的副本 > 另存为”** **\<** 。  
   
 3.  在 **“保存包的副本”** 对话框，在 **“包位置”** 列表中选择包的位置。 提供了以下选项：  
     -   SQL Server
@@ -110,7 +110,7 @@ ms.locfileid: "71295740"
   
 2.  在解决方案资源管理器中，右键单击项目，指向“添加”，然后单击“新建项”。    
   
-3.  在“添加新项 —\<项目名称>”对话框中，单击要用作模板的包  。  
+3.  在“添加新项 —**项目名称>”对话框中，单击要用作模板的包\<** 。  
   
      模板列表包括名为“新建 SSIS 包”的默认包模板。 包图标将标识可以用作包模板的模板。  
   

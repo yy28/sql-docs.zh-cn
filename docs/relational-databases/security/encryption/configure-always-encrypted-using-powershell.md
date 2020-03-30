@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594417"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
@@ -35,7 +35,7 @@ SqlServer PowerShell 模块提供用于在 [ 或 ](../../../relational-databases
 在一台安全计算机（并非托管 SQL Server 实例的计算机）上安装 [SqlServer module](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) （SqlServer 模块）。 可通过 PowerShell 库直接安装该模块。  请参阅[下载说明](../../../ssms/download-sql-server-ps-module.md)了解详细信息。
 
 
-## <a name="importsqlservermodule"></a> 导入 SqlServer 模块 
+## <a name="importing-the-sqlserver-module"></a><a name="importsqlservermodule"></a> 导入 SqlServer 模块 
 
 加载 SqlServer 模块：
 
@@ -49,7 +49,7 @@ SqlServer PowerShell 模块提供用于在 [ 或 ](../../../relational-databases
 Import-Module "SqlServer" 
 ```
 
-## <a name="connectingtodatabase"></a> 连接到数据库
+## <a name="connecting-to-a-database"></a><a name="connectingtodatabase"></a> 连接到数据库
 
 一些 Always Encrypted cmdlet 适用于数据库中的数据或元数据，并要求你首先应连接到数据库。 使用 SqlServer 模块配置 Always Encrypted 时，建议使用两种方法来连接到数据库： 
 1. 使用 Get-SqlDatabase cmdlet 进行连接  。
@@ -117,7 +117,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 - [通过 PowerShell 对使用 Always Encrypted 的列进行加密、重新加密或解密](configure-column-encryption-using-powershell.md)
 
 
-##  <a name="aecmdletreference"></a> Always Encrypted Cmdlet 参考
+##  <a name="always-encrypted-cmdlet-reference"></a><a name="aecmdletreference"></a> Always Encrypted Cmdlet 参考
 
 以下 PowerShell cmdlet 可供 Always Encrypted 使用：
 

@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68011948"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>默认 SQL Server 网络协议配置
@@ -57,7 +57,7 @@ ms.locfileid: "68011948"
 
 
 
-## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器设置
+## <a name="ssnoversion_md-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器设置
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服务可以配置为在安装过程中自动启动。 默认设置是在下列条件下自动启动：
 

@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 38eaba8bdf2772fe03690773881c67306a024b64
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056135"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>备份和还原全文目录和索引
@@ -32,9 +32,9 @@ ms.locfileid: "74056135"
 > [!IMPORTANT]  
 >  可以在升级 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库时导入全文目录。 每个导入的全文目录在其自身的文件组中都是一个数据库文件。 若要备份导入的目录，只需备份其文件组即可。 有关详细信息，请参阅 [联机丛书中的](https://go.microsoft.com/fwlink/?LinkID=121052)备份和还原全文目录 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
-##  <a name="backingup"></a> 备份全文目录的全文索引  
+##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> 备份全文目录的全文索引  
   
-###  <a name="Find_FTIs_of_a_Catalog"></a> 查找全文目录的全文索引  
+###  <a name="finding-the-full-text-indexes-of-a-full-text-catalog"></a><a name="Find_FTIs_of_a_Catalog"></a> 查找全文目录的全文索引  
  你可以通过使用以下 [SELECT](../../t-sql/queries/select-transact-sql.md) 语句检索全文索引的属性，此语句将从 [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) 和 [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) 目录视图选择一些列。  
   
 ```  
@@ -50,7 +50,7 @@ GO
 ```  
   
   
-###  <a name="Find_FG_of_FTI"></a> 查找包含全文索引的文件组或文件  
+###  <a name="finding-the-filegroup-or-file-that-contains-a-full-text-index"></a><a name="Find_FG_of_FTI"></a> 查找包含全文索引的文件组或文件  
  创建全文索引时，该全文索引将放在以下某个位置：  
   
 -   用户指定的文件组。  
@@ -73,7 +73,7 @@ GO
 ```  
   
   
-###  <a name="Back_up_FTIs_of_FTC"></a> 备份包含全文索引的文件组  
+###  <a name="backing-up-the-filegroups-that-contain-full-text-indexes"></a><a name="Back_up_FTIs_of_FTC"></a> 备份包含全文索引的文件组  
  在找到包含全文目录索引的文件组后，您需要备份找到的每个文件组。 在备份过程中，不会删除或添加全文目录。  
   
  文件组的首次备份必须是完整文件备份。 在创建文件组的完整文件备份之后，您可以仅备份文件组中的更改，方法是：创建一系列基于完整文件备份的一个或多个差异文件备份。  
@@ -85,7 +85,7 @@ GO
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
   
-##  <a name="Restore_FTI"></a> 还原全文索引  
+##  <a name="restoring-a-full-text-index"></a><a name="Restore_FTI"></a> 还原全文索引  
  还原备份的文件组将还原全文索引文件，以及此文件组中的其他文件。 默认情况下，文件组将还原至该文件组在备份时所在的磁盘位置。  
   
  如果在创建备份时全文索引表处于联机状态并且正在运行填充，则在还原之后将继续填充。  

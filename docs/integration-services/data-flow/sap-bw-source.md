@@ -11,10 +11,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6f510f17f6a03320e8a20bf8a39e0452bfbeb718
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298070"
 ---
 # <a name="sap-bw-source"></a>SAP BW 源
@@ -40,7 +40,7 @@ ms.locfileid: "71298070"
   
 -   [配置 SAP BW 源](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> 准备源所需的 SAP Netweaver BW 对象  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-source-requires"></a><a name="bkmk_Prepare_Objects"></a> 准备源所需的 SAP Netweaver BW 对象  
  SAP BW 源要求 SAP Netweaver BW 系统中存在某些对象才能正常工作。 如果这些对象还不存在，必须按照下列步骤在 SAP Netweaver BW 系统中创建并配置这些对象。  
   
 > [!NOTE]  
@@ -84,12 +84,12 @@ ms.locfileid: "71298070"
   
      SAP BW 源可调用进程链来激活数据传输进程。  
   
-##  <a name="bkmk_Connect_Database"></a> 连接至 SAP Netweaver BW 系统  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> 连接至 SAP Netweaver BW 系统  
  在连接 SAP Netweaver BW 版本 7 系统时，SAP BW 源会使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 包中的 SAP BW 连接管理器。 SAP BW 连接管理器是 SAP BW 源唯一可以使用的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 连接管理器。  
   
  有关 SAP BW 连接管理器的详细信息，请参阅 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)。  
   
-##  <a name="bkmk_Configure_Source"></a> 配置 SAP BW 源  
+##  <a name="configuring-the-sap-bw-source"></a><a name="bkmk_Configure_Source"></a> 配置 SAP BW 源  
  可以按下列方式配置 SAP BW 源：  
   
 -   查找并选择用来提取数据的 Open Hub Service (OHS) 目标。  

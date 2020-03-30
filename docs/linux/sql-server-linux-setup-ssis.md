@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0f400667e73effb73ff41c3c7270e3f89a2ca0da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76162638"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安装 SQL Server Integration Services (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "76162638"
 - [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a>在 Ubuntu 上安装 SSIS
+## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a>在 Ubuntu 上安装 SSIS
 
 要在 Ubuntu 上安装 mssql-server-is 包，请按照以下步骤操作  ：
 
@@ -118,7 +118,7 @@ sudo apt-get install mssql-server-is
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a>在 RHEL 上安装 SSIS
+## <a name="install-ssis-on-rhel"></a><a name="RHEL"></a>在 RHEL 上安装 SSIS
 要在 RHEL 上安装 mssql-server-is 包，请按照以下步骤操作  ：
 
 <!--SQL Server 2017 on Linux-->
@@ -217,7 +217,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | 环境变量 | 说明 |
 |---|---|
 | ACCEPT_EULA | 设置为任何值（例如“Y”）时，都接受 SQL Server 许可条款。|
-| SSIS_PID | 设置 SQL Server 版本或产品密钥。 可能的值有：<ul><li>计算</li><li>开发人员</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>产品密钥</li></ul>指定产品密钥时，其格式必须为：#####-#####-#####-#####-#####，其中 # 为字母或数字       。  |
+| SSIS_PID | 设置 SQL Server 版本或产品密钥。 可能的值有：<ul><li>计算</li><li>开发人员</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>产品密钥</li></ul>指定产品密钥时，其格式必须为： *#####* - *#####* - *，其中 ##### 为字母或数字*- *#####* - *#####* *#* 。  |
 | | |
 
 ## <a name="next-steps"></a>后续步骤

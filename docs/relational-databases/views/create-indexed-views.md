@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325509"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
@@ -31,7 +31,7 @@ ms.locfileid: "75325509"
 
 本文介绍了如何对视图创建索引。 对视图创建的第一个索引必须是唯一聚集索引。 创建唯一聚集索引后，可以创建更多非聚集索引。 为视图创建唯一聚集索引可以提高查询性能，因为视图在数据库中的存储方式与具有聚集索引的表的存储方式相同。 查询优化器可使用索引视图加快执行查询的速度。 要使优化器考虑将该视图作为替换，并不需要在查询中引用该视图。
 
-## <a name="BeforeYouBegin"></a> 开始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前
 
 创建索引视图需要执行下列步骤并且这些步骤对于成功实现索引视图而言非常重要：
 
@@ -47,7 +47,7 @@ ms.locfileid: "75325509"
 >
 > <sup>1</sup> 例如 UPDATE、DELETE 或 INSERT 操作。
 
-### <a name="Restrictions"></a> 索引视图所需的 SET 选项
+### <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a> 索引视图所需的 SET 选项
 
 如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 `CONCAT_NULL_YIELDS_NULL` 设置为 ON 后，表达式 `'abc' + NULL` 会返回值 NULL`NULL`。 但将 `CONCAT_NULL_YIELDS_NULL` 设置为 OFF 后，同一表达式会生成 `'abc'`。
 
@@ -131,13 +131,13 @@ ms.locfileid: "75325509"
 > [!IMPORTANT]
 > 临时查询顶部不支持索引视图（使用 `FOR SYSTEM_TIME` 子句的查询）。
 
-### <a name="Recommendations"></a> 建议
+### <a name="recommendations"></a><a name="Recommendations"></a> 建议
 
 引用索引视图中的 **datetime** 和 **smalldatetime** 字符串文字时，建议使用确定性日期格式样式将文字显式转换为所需日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST 与 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 有关确定性和非确定性表达式的详细信息，请参阅本页中的[注意事项](#nondeterministic)部分。
 
 如果表被大量索引视图引用（或引用它的索引视图数量较少，但非常复杂），那么在该表上执行 DML（如 `UPDATE`、`DELETE` 或 `INSERT`）时，必须在执行 DML 期间更新这些索引视图。 因此，DML 查询性能可能会显着降低，或者在某些情况下，甚至无法生成查询计划。 在这种情况下，请在生成使用之前测试 DML 查询、分析查询计划并调整/简化 DML 语句。
 
-### <a name="Considerations"></a> 注意事项
+### <a name="considerations"></a><a name="Considerations"></a> 注意事项
 
 索引视图中列的 **large_value_types_out_of_row** 选项的设置继承的是基表中相应列的设置。 此值是使用 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)设置的。 从表达式组成的列的默认设置为 0。 这意味着大值类型存储在行内。
 
@@ -151,13 +151,13 @@ ms.locfileid: "75325509"
 
 <a name="nondeterministic"></a> 将字符串隐式转换为 datetime  或 smalldatetime  所涉及的表达式被视为具有不确定性。 有关详细信息，请参阅[文字日期字符串转换为日期值的不确定性转换](../../t-sql/data-types/nondeterministic-convert-date-literals.md)。
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 权限
+#### <a name="permissions"></a><a name="Permissions"></a> 权限
 
 要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限   。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-create-an-indexed-view"></a>创建索引视图
 

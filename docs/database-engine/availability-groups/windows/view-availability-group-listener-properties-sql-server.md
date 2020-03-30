@@ -15,17 +15,17 @@ ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821772"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>查看可用性组侦听器属性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何使用 *或* 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中查看 AlwaysOn 可用性组侦听程序[!INCLUDE[tsql](../../../includes/tsql-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的属性。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **查看侦听器属性**  
   
 1.  在对象资源管理器中，连接到服务器实例（其上承载要查看其侦听器的可用性组的任何可用性副本）。 单击服务器名称以展开服务器树。  
@@ -38,7 +38,7 @@ ms.locfileid: "74821772"
   
 5.  这将打开 **“可用性组侦听器属性”** 对话框。 有关详细信息，请参阅本主题后面的 [可用性组侦听程序属性（对话框）](#AgListenerPropertiesDialog)。  
   
-###  <a name="AgListenerPropertiesDialog"></a> 可用性组侦听程序属性（对话框）  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a> 可用性组侦听程序属性（对话框）  
  **侦听器 DNS 名称**  
  可用性组侦听器的网络名称。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74821772"
   
  网格显示侦听器侦听的各个子网以及与该子网关联的 IP 地址。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看侦听器属性**  
   
  若要监视可用性组侦听器，请使用以下视图：  
@@ -82,7 +82,7 @@ ms.locfileid: "74821772"
 > [!NOTE]  
 >  有关使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 监视你的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 环境的详细信息，请参阅 [监视可用性组 (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
