@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76928008"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 扩展性入门
+# <a name="getting-started-with-name-sos-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 扩展性入门
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 具有多种扩展性机制，可以自定义用户体验并使这些自定义项可供整个用户社区使用。 核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台基于 Visual Studio Code 构建，因此大多数 Visual Studio Code 扩展性 API 都可用。 此外，我们还为特定于数据管理的活动提供了额外的扩展点。
 

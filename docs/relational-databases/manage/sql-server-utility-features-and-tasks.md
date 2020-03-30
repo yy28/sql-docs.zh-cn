@@ -18,10 +18,10 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115306"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 实用工具的功能和任务
@@ -31,7 +31,7 @@ ms.locfileid: "68115306"
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server 实用工具的优点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具在一个统一的视图中对组织的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相关实体进行建模。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSMS) 中的实用工具资源管理器和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 实用工具视点通过用作实用工具控制点 (UCP) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例向管理员提供反映 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源运行状况的整体视图。 通过在 UCP 中为使用过度和使用不足策略以及多种重要参数提供的摘要和详细数据的组合，可以实现资源合并机会，并且能够轻松发现资源使用过度的情况。 运行状况策略是可以配置的，并且可以进行调整以便更改资源使用率阈值的上限和下限。 可以更改全局监视策略，或为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中管理的每个实体配置单独的监视策略。  
   
-##  <a name="typical_scenarios"></a> SQL Server 实用工具入门  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> SQL Server 实用工具入门  
  一般的用户方案都是从创建实用工具控制点开始，该实用工具控制点为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具建立中心原因点。 该 UCP 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中提供从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例收集的资源运行状况的合并视图。 在创建该 UCP 后，您将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中，以便该 UCP 可以管理它们。  
   
  可基于全局策略定义或者基于单独的策略定义监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个实例和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理的数据层应用程序。  

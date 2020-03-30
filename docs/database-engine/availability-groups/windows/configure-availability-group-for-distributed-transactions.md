@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713268"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
@@ -41,7 +41,7 @@ ms.locfileid: "71713268"
 
 除非数据库也是故障转移群集的成员，否则可用性组处理不会涉及 DTC。 在可用性组中，副本间的一致性由可用性组逻辑维持：主副本不会完成提交并向调用方确认提交，直到辅助副本确认已将日志记录保留在持久存储中。 此时主副本才声明该事务完成。 在异步模式下，我们不会等待辅助副本确认，此模式下明显有丢失少量数据的可能性。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 将可用性组配置为支持分布式事务前，必须满足以下先决条件：
 
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分布式事务 - 技术概念
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>分布式事务 - 技术概念
 
 分布式事务可跨两个或多个数据库。 作为事务管理器，DTC 可协调 SQL Server 实例之间和其他数据源之间的事务。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 数据库引擎的每个实例都可以充当资源管理器。 如果使用 `DTC_SUPPORT = PER_DB` 配置可用性组，数据库也可以充当资源管理器。 有关详细信息，请参阅 MS DTC 文档。
 

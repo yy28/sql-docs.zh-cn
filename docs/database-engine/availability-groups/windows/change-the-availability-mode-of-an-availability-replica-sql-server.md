@@ -15,25 +15,25 @@ ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b1a3b5d1dfdf3a5e8556058cee750a4e2e08476a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822442"
 ---
 # <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>更改 Always On 可用性组中副本的可用性模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 来更改 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性组的可用性副本的可用性模式。 可用性模式是一个副本属性，用于控制以异步还是同步方式提交副本。 异步提交模式  可使性能最大化，但要牺牲高可用性；它仅支持强制手动故障转移（有可能丢失数据），该故障转移一般称为*强制故障转移*。 *同步提交模式* 更多地强调高可用性而不是性能，并且一旦同步次要副本，即支持手动故障转移（也可以支持自动故障转移）。  
     
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 您必须连接到承载主副本的服务器实例。  
   
 
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **更改可用性组的可用性模式**  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
@@ -46,7 +46,7 @@ ms.locfileid: "74822442"
   
 5.  在 **“可用性副本属性”** 对话框中，使用 **“可用性模式”** 下拉列表更改此副本的可用性模式。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **更改可用性组的可用性模式**  
   
 1.  连接到承载主副本的服务器实例。  
@@ -78,7 +78,7 @@ ms.locfileid: "74822442"
        WITH (FAILOVER_MODE = AUTOMATIC);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **更改可用性组的可用性模式**  
   
 1.  将目录 (**cd**) 更改为托管主副本的服务器实例。  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98ab53220b995c0c94aa2eb25d509bd67f7090b5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908041"
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
@@ -29,9 +29,9 @@ ms.locfileid: "72908041"
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建非聚集索引。 非聚集索引是一种与存储在表中的数据相分离的索引结构，可对一个或多个选定列重新排序。 非聚集索引通常可帮助您通过比搜索基础表更快的速度查找数据；有时可以完全由非聚集索引中的数据回答查询，或非聚集索引可将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基础表中的行。 一般来说，创建非聚集索引是为了提高聚集索引不涵盖的频繁使用的查询的性能，或在没有聚集索引的表（称为堆）中查找行。 可以对表或索引视图创建多个非聚集索引。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Implementations"></a> 典型实现  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 典型实现  
  可以通过下列方法实现非聚集索引：  
   
 -   **UNIQUE 约束**  
@@ -46,12 +46,12 @@ ms.locfileid: "72908041"
   
      对视图创建唯一的聚集索引后，便可以创建非聚集索引。 有关详细信息，请参阅 [创建索引视图](../../relational-databases/views/create-indexed-views.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>使用表设计器创建非聚集索引  
   
@@ -93,7 +93,7 @@ ms.locfileid: "72908041"
   
 9. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>对表创建非聚集索引  
   

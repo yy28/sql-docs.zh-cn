@@ -15,10 +15,10 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 325d5cde9ae15bb58c6173a974f14f48847c3361
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282478"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>使用 SQL Server 代理在远程服务器上平衡包的负载
@@ -88,7 +88,7 @@ ms.locfileid: "71282478"
 ### <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>调试 SQL Server 代理作业和子包  
  通过使用下列方法之一，可以测试 SQL Server 代理作业及其子包：  
   
--   通过单击“调试” / “开始执行(不调试)”在 SSIS 设计器中运行每个子包   。  
+-   通过单击“调试” **“开始执行(不调试)”在 SSIS 设计器中运行每个子包** /   。  
   
 -   通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在远程计算机上运行单个 SQL Server 代理作业，以确保包运行。  
   

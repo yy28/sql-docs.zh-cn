@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165219"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的时态表
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - **PERIOD** 列始终不可为 null，即使未指定是否为 null，也是如此。 如果将 PERIOD 列显式定义为可为 null，则 CREATE TABLE 语句将失败   。
 - 历史记录表必须在列数、列名、排序和数据类型方面始终与当前表或临时表架构一致。
 - 将在当前表或临时表所在的架构中自动创建匿名历史记录表。
-- 匿名历史记录表名采用以下格式：MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]  . 后缀是可选的，仅当表名的第一部分不唯一时才会添加它。
+- 匿名历史记录表名称采用以下格式：*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* （suffix 为后缀）。 后缀是可选的，仅当表名的第一部分不唯一时才会添加它。
 - 历史记录表将创建为行存储表。 如果可能，将应用页压缩，否则历史记录表将不会进行压缩。 例如，某些表配置（如稀疏列）不允许压缩。
 - 将为历史记录表（名称自动生成，格式为 *IX_<history_table_name>* ）创建一个默认聚集索引。 聚集索引包含 **PERIOD** 列（结束、开始）。
 - 若要将当前表创建为内存优化表，请参阅[系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。

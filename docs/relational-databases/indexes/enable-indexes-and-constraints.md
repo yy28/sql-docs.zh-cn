@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c1f860f69ef95af42627d0d2bad869afbb366fc4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107111"
 ---
 # <a name="enable-indexes-and-constraints"></a>启用索引和约束
@@ -44,9 +44,9 @@ ms.locfileid: "68107111"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   在索引重新生成之后，任何因禁用索引而被禁用的约束必须手动将其启用。 PRIMARY KEY 和 UNIQUE 约束可通过重新生成相关联的索引来启用。 您必须重新生成（启用）索引才能启用引用 PRIMARY KEY 或 UNIQUE 约束的 FOREIGN KEY 约束。 FOREIGN KEY 约束可使用 ALTER TABLE CHECK CONSTRAINT 语句来启用。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "68107111"
 
 -   重新生成禁用的压缩非聚集索引时，data_compression 默认为“none”，表示该索引要解压缩。 这是因为禁用非聚集索引后，压缩设置元数据会丢失。 要解决此问题，必须在重新生成语句中指定显式数据压缩。
 
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 如果使用 DBCC DBREINDEX，用户必须拥有该表；或者是 sysadmin  固定服务器角色的成员；或者是 db_ddladmin  和 db_owner  固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>启用禁用的索引  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68107111"
   
  在 **“重新生成索引”** 对话框中将提供以下信息：  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>使用 ALTER INDEX 启用已禁用的索引  
   

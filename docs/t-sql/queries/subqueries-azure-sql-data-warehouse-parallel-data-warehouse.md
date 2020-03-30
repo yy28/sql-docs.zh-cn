@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244834"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查询（Azure SQL 数据仓库、并行数据仓库）
@@ -32,7 +32,7 @@ ms.locfileid: "75244834"
   
 -   [示例：SQL 数据仓库和并行数据仓库](#Examples)  
   
-##  <a name="Basics"></a> 基础知识  
+##  <a name="basics"></a><a name="Basics"></a> 基础知识  
  子查询  
  子查询是一个嵌套在 SELECT、INSERT、UPDATE 或 DELETE 语句或其他子查询中的查询。 子查询亦称内部查询或内部选择。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75244834"
  相关子查询  
  引用外部查询中的表的子查询。  
   
-##  <a name="Examples"></a> 示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> 示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  本节提供 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]支持的子查询的示例。  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. 子查询中的 TOP 和 ORDER BY  

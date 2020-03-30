@@ -17,10 +17,10 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aaeef70fe81699d0cbb00ba3d7e5a6dfcf1b6aa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241734"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>配置对 Always On 可用性组的次要副本的只读访问
@@ -30,18 +30,18 @@ ms.locfileid: "75241734"
  有关对次要副本允许只读访问的含义的信息以及有关对连接访问的介绍，请参阅[关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) 和[活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  
-##  <a name="Prerequisites"></a> 先决条件和限制  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 先决条件和限制  
   
 -   若要配置不同的连接访问，您必须连接到承载主副本的服务器实例。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
   
 |任务|权限|  
 |----------|-----------------|  
 |在创建可用性组时配置副本|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |修改可用性副本|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **配置对可用性副本的访问**  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
@@ -73,7 +73,7 @@ ms.locfileid: "75241734"
          **允许读/写连接**  
          在 Application Intent 属性设置为 **ReadWrite** 或者未设置 Application Intent 连接属性时，将允许连接。 不允许 Application Intent 连接属性设置为 **ReadOnly** 的连接。 这可帮助阻止客户错误地将读意向工作负荷连接到主副本。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **配置对可用性副本的访问**  
   
 > [!NOTE]  
@@ -110,7 +110,7 @@ ms.locfileid: "75241734"
      ALL  
      主副本中的数据库允许所有连接。 这是默认设置。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例将辅助副本添加到名为 *AG2*的可用性组。 一个独立服务器实例 *COMPUTER03\HADR_INSTANCE*被指定为承载新的可用性副本。 将此副本配置为对主角色允许读写连接，对辅助角色仅允许读意向连接。  
   
 ```  
@@ -125,7 +125,7 @@ ALTER AVAILABILITY GROUP AG2
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **配置对可用性副本的访问**  
   
 > [!NOTE]  
@@ -161,7 +161,7 @@ GO
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="PSExample"></a> 示例 (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> 示例 (PowerShell)  
  下面的示例将 **ConnectionModeInSecondaryRole** 和 **ConnectionModeInPrimaryRole** 参数均设置为 **AllowAllConnections**。  
   
 ```  
@@ -174,7 +174,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
 ```  
   
-##  <a name="FollowUp"></a> 跟进：为可用性副本配置只读访问后  
+##  <a name="follow-up-after-configuring-read-only-access-for-an-availability-replica"></a><a name="FollowUp"></a> 跟进：为可用性副本配置只读访问后  
  **对可读取辅助副本的只读访问**  
   
 -   使用 [bcp 实用工具](../../../tools/bcp-utility.md) 或 [sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)时，你可以通过指定 **-K ReadOnly** 开关来对允许只读访问的任意次要副本指定只读访问。  
@@ -196,13 +196,13 @@ DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'
   
  若要标识读写数据库，请将 READ_WRITE 指定为值：  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [为可用性组配置只读路由 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 -   [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [Always On：可读次要副本的价值主张](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-value-proposition-of-readable-secondary.aspx)  
   

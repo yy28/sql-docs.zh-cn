@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127120"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用复制数据库向导
@@ -49,7 +49,7 @@ ms.locfileid: "68127120"
 -   计划何时移动或复制数据库。  
   
 
-##  <a name="Restrictions"></a> 限制和局限  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   在 Express 版本中未提供复制数据库向导。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68127120"
 > **重要说明!!** **分离和附加** 方法将导致源数据库和目标数据库所有权设置为执行 **复制数据库向导**的登录名。  若要更改数据库的所有权，请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) 。
   
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
 -   确保在目标服务器上启动了 SQL Server 代理。  
 
 -   确保可以从目标服务器访问源服务器上的数据和日志文件目录。
@@ -90,7 +90,7 @@ ms.locfileid: "68127120"
 
 > **重要说明!!** 在 **分离和附加** 方法下，如果不使用 Integration Services 代理帐户，复制或移动过程将失败。  在某些情况下，源数据库不会重新附加到源服务器，并将从数据和日志文件中去除所有 NTFS 安全权限。  如果发生这种情况，请导航到你的文件，重新应用相关权限，然后再将数据库重新附加到 SQL Server 实例。
   
-##  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   为了确保升级后的数据库具有最佳性能，请对升级后的数据库运行 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) （更新统计信息）。  
   
@@ -98,10 +98,10 @@ ms.locfileid: "68127120"
   
 
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须是源服务器和目标服务器上 **sysadmin** 固定服务器角色的成员。  
   
-##  <a name="Overview"></a> 复制数据库向导页 
+##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> 复制数据库向导页 
 从 SQL Server Management Studio 的**对象资源管理器**中启动**复制数据库向导**，并展开“数据库”  。  然后右键单击某个数据库，指向“任务”  ，再单击“复制数据库”  。  如果显示“欢迎使用复制数据库向导”  初始页，则单击“下一步”  。
 
 
@@ -295,7 +295,7 @@ ms.locfileid: "68127120"
 -    **消息**  
 提供每个步骤返回的任何消息。
 
-##  <a name="Examples"></a> 示例
+##  <a name="examples"></a><a name="Examples"></a> 示例
 ### <a name="common-steps"></a>**一般步骤** 
 无论你选择“移动”  还是“复制”  ，“分离和附加”  还是“SMO”  ，下列五个步骤均相同。  为简洁起见，这些步骤仅在此处列出一次，之后所有示例将从 **步骤 6**开始。
 
@@ -384,12 +384,12 @@ ms.locfileid: "68127120"
 14. 手动启动新创建的 SQL Server 代理作业 `SalesCopy weekly refresh`。  查看作业历史记录，并确保实例上现在存在 `SalesCopy` 。
 
   
-##  <a name="FollowUp"></a> 跟进：升级数据库之后  
+##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> 跟进：升级数据库之后  
  使用复制数据库向导将数据库从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”  时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”  属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
  如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
  
- ## <a name="Post"></a> 复制或移动后的注意事项
+ ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> 复制或移动后的注意事项
  请考虑在“复制”  或“移动”  之后是否要执行以下步骤：
 -    使用分离和附加方法时更改数据库的所有权。
 -    在“移动”  后删除源服务器上的服务器对象。

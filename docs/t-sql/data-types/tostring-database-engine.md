@@ -18,10 +18,10 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000431"
 ---
 # <a name="tostring-database-engine"></a>ToString（数据库引擎）
@@ -88,7 +88,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>B. 不使用表转换 Transact-SQL 值  
-下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用 `Parse` 将字符串值转换为 hierarchyid   。
+下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用  **将字符串值转换为 hierarchyid**`Parse`  。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  

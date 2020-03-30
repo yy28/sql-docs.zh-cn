@@ -21,10 +21,10 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296217"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 编程概述
@@ -51,7 +51,7 @@ ms.locfileid: "71296217"
 ## <a name="supported-languages"></a>支持的语言  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 完全支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 这使开发人员可以自主选择符合 .NET 的语言来对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程。 尽管运行时引擎和数据流引擎都是用本机代码编写的，但是都可以通过完全托管对象模型来使用。  
   
- 可以用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或者另一种代码或文本编辑器对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包、自定义任务和组件进行编程。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 为开发人员提供了许多工具和功能以简化和加速编码、调试和测试的迭代周期。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 还使部署更加容易。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编译和生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 代码项目。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包括 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 编译器和相关工具。  
+ 可以用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 或者另一种代码或文本编辑器对 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 包、自定义任务和组件进行编程。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 为开发人员提供了许多工具和功能以简化和加速编码、调试和测试的迭代周期。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 还使部署更加容易。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编译和生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 代码项目。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包括 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 编译器和相关工具。  
   
 > [!IMPORTANT]  
 >  默认情况下，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安装，但不安装 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 除非 SDK 已安装在计算机上，并且 SDK 文档包含在联机丛书集中，否则本部分中指向 SDK 内容的链接将无效。 安装 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 后，可以按照[添加或删除 SQL Server 的产品文档](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052)中的说明将 SDK 文档添加到联机丛书集和目录中。  
@@ -62,7 +62,7 @@ ms.locfileid: "71296217"
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 应用程序编程接口与基于 COM 的脚本语言（如 VBScript）不兼容。  
   
 ## <a name="locating-assemblies"></a>定位程序集  
- 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 \<drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存  。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
+ 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 *drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存\<* 。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
   
  与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本一样，核心 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 扩展性 .dll 文件也位于 *\<驱动器>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies 中。  
   

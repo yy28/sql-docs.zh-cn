@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981957"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -361,7 +361,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>上下文切换  
  可以使用 `AS { LOGIN | USER } = ' name '` 子句切换动态语句的执行上下文。 当将上下文切换指定为 `EXECUTE ('string') AS <context_specification>` 时，上下文切换的持续时间限制为执行查询的范围。  
   
-###  <a name="_user"></a>指定用户名或登录名  
+###  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a>指定用户名或登录名  
  `AS { LOGIN | USER } = ' name '` 中指定的用户名或登录名必须分别为 sys.database_principals 或 sys.server_principals 的主体，否则该语句将失败。 此外，还必须为该主体授予 IMPERSONATE 权限。 除非调用方是数据库所有者或 sysadmin 固定服务器角色的成员，否则，即使在用户通过 Windows 组成员身份访问数据库或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，也必须存在该主体。 例如，假设条件如下：  
   
 -   CompanyDomain\SQLUsers 组具有对 Sales 数据库的访问权限。  
@@ -658,7 +658,7 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>示例 O：基本过程执行  
  执行存储过程：  

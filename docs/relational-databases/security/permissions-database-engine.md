@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68995852"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
@@ -40,7 +40,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 有关计划权限系统的相关提示，请参阅 [数据库引擎权限入门](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
   
-##  <a name="_conventions"></a> 权限命名约定  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a> 权限命名约定  
  下面介绍命名权限时遵循的一般约定：  
   
 -   CONTROL  
@@ -96,7 +96,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
-##  <a name="_securables"></a> 适用于特定安全对象的权限  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a> 适用于特定安全对象的权限  
  下表列出了主要的权限类别以及可应用这些权限的安全对象的种类。  
   
 |权限|适用于|  
@@ -118,7 +118,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 > [!CAUTION]  
 >  安装期间授予系统对象的默认权限已针对可能的威胁进行了仔细评估，并且作为强化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分，无需进行更改。 对系统对象权限的任何更改都可能限制或破坏功能，并且可能让你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装处于不受支持的状态。  
   
-##  <a name="_permissions"></a> SQL Server 权限  
+##  <a name="sql-server-permissions"></a><a name="_permissions"></a> SQL Server 权限  
  下表提供了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限的完整列表。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 权限仅适用于受支持的基本安全对象。 不能在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中授予服务器级别权限，但是在某些情况下，可改为授予数据库权限。  
   
 |基础安全对象|对基础安全对象的粒度权限|权限类型代码|包含基础安全对象的安全对象|对容器安全对象的权限隐含着对基础安全对象的粒度权限|  
@@ -361,7 +361,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> 权限检查算法摘要  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 权限检查算法摘要  
  检查权限可能很复杂。 权限检查算法包括重叠的组成员关系和所有权链接、显式和隐式权限，并且会受包含安全实体的安全类的权限影响。 该算法的一般过程是收集所有相关权限。 如果未找到阻止性 DENY，该算法将搜索提供足够访问权限的 GRANT。 该算法包含三个基本元素： **安全上下文**、 **权限空间**和 **必需的权限**。  
   
 > [!NOTE]  
@@ -423,7 +423,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 表上的 DENY 被列中的 GRANT 替代。 但是，表上的后续 DENY 将删除 GRANT 列。 
   
-##  <a name="_examples"></a> 示例  
+##  <a name="examples"></a><a name="_examples"></a> 示例  
  本节中的以下示例说明如何检索权限信息。  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 返回可授予权限的完整列表  

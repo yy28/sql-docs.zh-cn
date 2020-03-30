@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907538"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
@@ -38,7 +38,7 @@ ms.locfileid: "72907538"
   
 -   [排除内存问题](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB"></a> 使用内存优化表创建示例数据库  
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a> 使用内存优化表创建示例数据库  
  如果您已具有含内存优化表的数据库，则可以跳过此部分。  
   
  以下步骤将创建一个数据库，其中包含您可在本主题的其余部分中使用的三个内存优化表。 在该示例中，我们将该数据库映射到了一个资源池，以便我们可以控制内存优化表可使用的内存量。  
@@ -125,9 +125,9 @@ ms.locfileid: "72907538"
     GO  
     ```  
   
-##  <a name="bkmk_Monitoring"></a> 监视内存使用量  
+##  <a name="monitoring-memory-usage"></a><a name="bkmk_Monitoring"></a> 监视内存使用量  
   
-###  <a name="bkmk_UsingSSMS"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+###  <a name="using-ssmanstudiofull"></a><a name="bkmk_UsingSSMS"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 附随内置的标准报表，以便监视内存中表使用的内存。 可以使用对象资源管理器访问这些报表。 还可使用对象资源管理器监视单独的内存优化表占用的内存。  
   
 #### <a name="consumption-at-the-database-level"></a>数据库级别的内存使用情况  
@@ -145,7 +145,7 @@ ms.locfileid: "72907538"
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
-###  <a name="bkmk_UsingDMVs"></a> 使用 DMV  
+###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> 使用 DMV  
  有许多 DMV 可用于监视由内存优化表、索引、系统对象和运行时结构使用的内存。  
   
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>内存优化表和索引的内存使用情况  
@@ -246,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  有关详细信息，请参阅 [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
   
-#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>跨实例的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎使用的内存  
+#### <a name="memory-consumed-by-hek_2-engine-across-the-instance"></a>跨实例的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎使用的内存  
  管理分配给 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎和内存优化对象的内存的方式与管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内任何其他内存消耗者的方式完全相同。 MEMORYCLERK_XTP 类型的内存分配器计算分配给 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎的所有内存。 使用下面的查询可查找 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎使用的所有内存。  
   
 ```sql  
@@ -272,10 +272,10 @@ MEMORYCLERK_XTP      Default    64             0
   
  有关详细信息，请参阅 [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。  
   
-##  <a name="bkmk_MemOptObjects"></a> 管理内存优化对象使用的内存  
+##  <a name="managing-memory-consumed-by-memory-optimized-objects"></a><a name="bkmk_MemOptObjects"></a> 管理内存优化对象使用的内存  
  你可以按主题 [将具有内存优化表的数据库绑定至资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)中所述，通过将内存优化表绑定到一个命名的资源池，控制内存优化表所占用的总内存。  
   
-##  <a name="bkmk_Troubleshooting"></a> 排除内存问题  
+##  <a name="troubleshooting-memory-issues"></a><a name="bkmk_Troubleshooting"></a> 排除内存问题  
  排除内存问题是一个由三个步骤构成的过程：  
   
 1.  标识您的数据库或实例中对象所使用的内存量。 您可以使用上文中所述的可用于内存优化表的多种监视工具。  例如 DMV `sys.dm_db_xtp_table_memory_stats` 或 `sys.dm_os_memory_clerks`。  

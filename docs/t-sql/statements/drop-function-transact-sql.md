@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5cc1eb2d3c2953fd2bdf24fdf3c13c94872f6632
-ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77144190"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
@@ -57,7 +57,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
   
 ## <a name="arguments"></a>参数
  *IF EXISTS*    
- 只有在函数已存在时才对其进行有条件地删除。 在 [!INCLUDE[sssds_md](../../includes/sssds-md.md)] 中以及从 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 开始可用。
+ 只有在函数已存在时才对其进行有条件地删除。 在 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 中以及从 [!INCLUDE[sssds_md](../../includes/sssds-md.md)] 2016 开始可用。
   
  *schema_name*  
  用户定义函数所属的架构的名称。  
@@ -76,7 +76,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-function"></a>A. 删除函数  
- 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 `Sales` 架构中删除 `fn_SalesByStore` 用户定义函数。 若要创建此函数，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的示例 B。  
+ 以下示例从 `fn_SalesByStore` 示例数据库的 `Sales` 架构中删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 用户定义函数。 若要创建此函数，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的示例 B。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

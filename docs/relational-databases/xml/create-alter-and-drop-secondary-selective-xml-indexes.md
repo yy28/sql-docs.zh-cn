@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ee462efca08173d6571fe5a3b3971b8f0460988a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258376"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>创建、更改和删除辅助选择性 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   说明如何创建新的辅助选择性 XML 索引或者更改或删除现有的辅助选择性 XML 索引。  
   
-##  <a name="create"></a> 创建辅助选择性 XML 索引  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> 创建辅助选择性 XML 索引  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>如何创建辅助选择性 XML 索引  
  **使用 Transact-SQL 创建辅助选择性 XML 索引**  
@@ -42,7 +42,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> 更改辅助选择性 XML 索引  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> 更改辅助选择性 XML 索引  
  辅助选择性 XML 索引不支持 ALTER 语句。 若要更改辅助选择性 XML 索引，请删除现有索引，然后重新创建它。  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>如何更改辅助选择性 XML 索引  
@@ -68,7 +68,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> 删除辅助选择性 XML 索引  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> 删除辅助选择性 XML 索引  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>如何删除辅助选择性 XML 索引  
  **使用 Transact-SQL 删除辅助选择性 XML 索引**  

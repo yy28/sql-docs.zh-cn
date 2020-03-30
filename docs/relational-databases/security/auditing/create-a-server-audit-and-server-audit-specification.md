@@ -19,10 +19,10 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75952469"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
@@ -43,17 +43,17 @@ ms.locfileid: "75952469"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   审核必须已存在，才能为它创建服务器审核规范。 服务器审核规范在创建之后处于禁用状态。  
   
 -   CREATE SERVER AUDIT 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
   
 -   若要创建、更改或删除服务器审核，主体需要拥有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75952469"
   
 -   创建服务器审核规范后，具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 权限的主体、sysadmin 帐户或具有对审核的明确访问权的主体即可查看该规范。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>创建服务器审核  
   
@@ -156,7 +156,7 @@ ms.locfileid: "75952469"
   
 3.  完成后，单击“**确定**”。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>创建服务器审核  
   

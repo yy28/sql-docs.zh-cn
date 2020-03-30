@@ -11,10 +11,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75776521"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：使用 Spark 作业将数据引入 SQL Server 数据池
@@ -33,7 +33,7 @@ ms.locfileid: "75776521"
 > [!TIP]
 > 如果需要，可以下载并运行本教程中的命令脚本。 有关说明，请参阅 GitHub 上的[数据池示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)。
 
-## <a id="prereqs"></a>先决条件
+## <a name="prerequisites"></a><a id="prereqs"></a>先决条件
 
 - [大数据工具](deploy-big-data-tools.md)
    - **kubectl**
@@ -43,11 +43,11 @@ ms.locfileid: "75776521"
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>在数据池中创建外部表
 
-以下步骤会在数据池中创建一个名为“web_clickstreams_spark_results”的外部表。 然后，可以将此表用作将数据引入到大数据群集的位置。
+以下步骤会在数据池中创建一个名为“web_clickstreams_spark_results”的外部表  。 然后，可以将此表用作将数据引入到大数据群集的位置。
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”  。
 
    ![SQL Server 主实例查询](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
@@ -78,7 +78,7 @@ ms.locfileid: "75776521"
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
-1. 在数据池中创建一个名为“web_clickstreams_spark_results”的外部表。
+1. 在数据池中创建一个名为“web_clickstreams_spark_results”的外部表  。
 
    ```sql
    USE Sales

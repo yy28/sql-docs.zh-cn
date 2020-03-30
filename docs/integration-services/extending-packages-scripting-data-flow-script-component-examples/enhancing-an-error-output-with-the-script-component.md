@@ -16,10 +16,10 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba095c6aa132a816dc63377d0b04f559df6a6853
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297081"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用脚本组件增强错误输出
@@ -29,7 +29,7 @@ ms.locfileid: "71297081"
 
   默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误输出中的另外两列 ErrorCode 和 ErrorColumn 只包含表示错误号的数值代码以及出现错误的列的 ID。 如果没有相应的错误说明和列名称，这些数值可能没有多大用处。  
   
- 本主题介绍如何使用脚本组件向数据流中的现有错误输出数据添加错误说明和列名称。 示例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法添加与特定预定义 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误代码对应的错误说明，该接口通过脚本组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性提供。 然后，示例通过使用同一接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法，添加与捕获的沿袭 ID 对应的列名称。  
+ 本主题介绍如何使用脚本组件向数据流中的现有错误输出数据添加错误说明和列名称。 示例使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 方法添加与特定预定义 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 错误代码对应的错误说明，该接口通过脚本组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性提供。 然后，示例通过使用同一接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法，添加与捕获的沿袭 ID 对应的列名称。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个数据流任务和多个包的组件，请考虑以此脚本组件示例中的代码为基础，创建自定义数据流组件。 有关详细信息，请参阅 [开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "71297081"
   
 4.  打开“脚本转换编辑器”  ，在“脚本”  页中，为 **ScriptLanguage** 属性选择脚本语言。  
   
-5.  单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，并添加下面的示例代码  。  
+5.  单击“编辑脚本”打开  Tools for Applications (VSTA) IDE，并添加下面的示例代码[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
   
 6.  关闭 VSTA。  
   

@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095995"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分布式查询：OLE DB 连接
@@ -610,7 +610,7 @@ SQL Server 使用 `IOpenRowset::OpenRowset` 在基表上打开行集，并调用
 
 Microsoft SQL Server 提供了一组最强大的工具，用于访问来自异类数据源的数据。 通过了解 SQL Server 公开的 OLE-DB 接口，开发者可以在分布式查询中实现高度的控制和复杂性。
 
-## <a name="appendixa"></a> SQL Server 使用的 OLE DB 接口
+## <a name="ole-db-interfaces-consumed-by-sql-server"></a><a name="appendixa"></a> SQL Server 使用的 OLE DB 接口
 
 下表列出了 SQL Server 使用的所有 OLE DB 接口。 “必需”列指示接口是否是 SQL Server 所需的最小 OLE DB 功能的一部分，或者该接口是否是可选的。 如果给定的接口未标记为必需，则 SQL Server 仍可以访问提供程序，但是对于该提供程序，某些特定的 SQL Server 功能或优化无法使用。
 
@@ -654,7 +654,7 @@ Microsoft SQL Server 提供了一组最强大的工具，用于访问来自异�
 >[!NOTE]
 >`Index` 对象、`Command` 对象和 `Error` 对象不是必需的。 但是，如果它们受支持，则列出的接口是必需的，如“必需”列中所指定的那样。
 
-## <a name="appendixb"></a>用于生成远程查询的 SQL 子集
+## <a name="sql-subset-used-for-generating-remote-queries"></a><a name="appendixb"></a>用于生成远程查询的 SQL 子集
 
 SQL Server 查询处理器针对 SQL 命令提供程序生成的 SQL 子集取决于提供程序支持的语法级别，如 `DBPROP_SQLSUPPORT` 属性所示。
 
@@ -794,7 +794,7 @@ digit ::= 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
 
 period ::= . 
 
-## <a name="appendixc"></a>SQL Server 特定的属性
+## <a name="sql-server-specific-properties"></a><a name="appendixc"></a>SQL Server 特定的属性
 
 ```
 enum SQLPROPERTIES

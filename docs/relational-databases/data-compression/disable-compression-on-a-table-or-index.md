@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 523b082be7b61991db13d588a7203ad4ce5597ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68055433"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>对表或索引禁用压缩功能
@@ -40,9 +40,9 @@ ms.locfileid: "68055433"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果表是堆，ONLINE 模式的重新生成操作将在单个线程内完成。 请为多线程堆重新生成操作使用 OFFLINE 模式。 有关数据压缩的详细信息，请参阅 [数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
@@ -50,12 +50,12 @@ ms.locfileid: "68055433"
   
 -   如果表具有非对齐索引，则无法更改单个分区的压缩设置。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或索引具有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-disable-compression-on-a-table"></a>对表禁用压缩功能  
   
@@ -174,7 +174,7 @@ ms.locfileid: "68055433"
      **消息**  
      提供从该进程中返回的任何错误或警告消息。  
   
-     **报告**  
+     **Report**  
      创建包含创建分区向导结果的报告。 这些选项是 **“查看报告”** 、 **“将报告保存到文件”** 、 **“将报告复制到剪贴板”** 和 **“将报告作为电子邮件发送”** 。  
   
      **查看报告**  
@@ -191,7 +191,7 @@ ms.locfileid: "68055433"
   
      完成时，单击“关闭”  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-disable-compression-on-a-table"></a>对表禁用压缩功能  
   

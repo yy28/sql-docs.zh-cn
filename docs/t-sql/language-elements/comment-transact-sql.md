@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7e9aaab99194646874c0823abb61100cdc524aa
-ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78261696"
 ---
 # <a name="---comment-transact-sql"></a>--（注释）(Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "78261696"
  包含注释文本的字符串。  
   
 ## <a name="remarks"></a>备注  
-将两个连字符 (“--”) 用于单行或嵌套的注释  。 使用 -- 插入的注释通过一个新行终止，该新行由回车符 (u + 000A)、换行符 (u + 000D) 或二者的组合指定  。 注释没有最大长度限制。 下表列出了可用来注释或取消注释文本的键盘快捷键：
+将两个连字符 (“ **”) 用于单行或嵌套的注释--** 。 使用  **插入的注释通过一个新行终止，该新行由回车符 (u + 000A)、换行符 (u + 000D) 或二者的组合指定--** 。 注释没有最大长度限制。 下表列出了可用来注释或取消注释文本的键盘快捷键：
   
 |操作|Standard|  
 |------------|--------------|  

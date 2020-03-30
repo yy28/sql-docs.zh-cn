@@ -16,10 +16,10 @@ ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 2507328ccc1d2a8baa47e97353c17ccc0345d3d7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957431"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>使用 EKM 在 SQL Server 上启用 TDE
@@ -29,9 +29,9 @@ ms.locfileid: "74957431"
  TDE 使用称为数据库加密密钥的对称密钥来加密整个数据库的存储。 还可以使用受主数据库的数据库主密钥保护的证书来保护数据库加密密钥。 有关使用数据库主密钥保护数据库加密密钥的详细信息，请参阅[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)。 有关当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 Azure VM 上运行时配置 TDE 的信息，请参阅[使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。 有关使用 Azure 密钥保管库中的密钥配置 TDE 的信息，请参阅 [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。 
 
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   必须是高特权用户（如系统管理员）才能创建数据库加密密钥以及加密数据库。 该用户必须能够通过 EKM 模块进行身份验证。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "74957431"
   
 -   您的 EKM 提供程序所需的选项和参数可能与下面的代码示例中所提供的选项和参数不同。 有关详细信息，请参阅 EKM 提供程序。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  本文使用了以下权限：  
   
 -   若要更改配置选项以及运行 RECONFIGURE 语句，您必须具有 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
@@ -56,7 +56,7 @@ ms.locfileid: "74957431"
   
 -   需要拥有对数据库的 CONTROL 权限才能加密该数据库。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>使用 EKM 启用 TDE  
   
