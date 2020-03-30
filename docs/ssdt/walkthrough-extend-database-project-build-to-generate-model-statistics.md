@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242693"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>演练：扩展数据库项目生成以生成模型统计信息
@@ -70,7 +70,7 @@ ms.locfileid: "75242693"
   
 在此示例中，该属性的第一个参数应是一个唯一标识符，该标识符将用于在项目文件中标识你的参与者。 最佳做法是将库的命名空间（在本演练中为 “ExampleContributors”）与类名称（在本演练中为 “ModelStatistics”）结合使用来生成标识符。 您将了解如何使用此命名空间来指定应在演练的后面部分运行参与者。  
   
-## <a name="CreateBuildContributor"></a>创建生成参与者  
+## <a name="create-a-build-contributor"></a><a name="CreateBuildContributor"></a>创建生成参与者  
 若要创建生成参与者，您必须执行以下任务：  
   
 -   创建类库项目并添加所需的引用。  
@@ -89,11 +89,11 @@ ms.locfileid: "75242693"
   
 2.  将文件“Class1.cs”重命名为“ModelStatistics.cs”。  
   
-3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”。  
+3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”  。  
   
-4.  选择“System.ComponentModel.Composition”  条目，然后单击“确定” 。  
+4.  选择“System.ComponentModel.Composition”  条目，然后单击“确定”  。  
   
-5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”。 单击“浏览”按钮。  导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin 文件夹。 选择“Microsoft.SqlServer.Dac.dll” 、“Microsoft.SqlServer.Dac.Extensions.dll” 和“Microsoft.Data.Tools.Schema.Sql.dll”  条目，然后单击“确定” 。  
+5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”  。 单击“浏览”按钮。  导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin  文件夹。 选择“Microsoft.SqlServer.Dac.dll”  、“Microsoft.SqlServer.Dac.Extensions.dll”  和“Microsoft.Data.Tools.Schema.Sql.dll”  条目，然后单击“确定”  。  
   
     接下来，开始向类中添加代码。  
   
@@ -432,39 +432,39 @@ ms.locfileid: "75242693"
   
 ### <a name="to-sign-and-build-the-assembly"></a>生成程序集并对其进行签名  
   
-1.  在“项目”  菜单上，单击“MyBuildContributor 属性” 。  
+1.  在“项目”  菜单上，单击“MyBuildContributor 属性”  。  
   
 2.  单击“签名”  选项卡。  
   
-3.  单击“对程序集签名” 。  
+3.  单击“对程序集签名”  。  
   
-4.  在“选择强名称密钥文件”中，单击 **<New>**。  
+4.  在“选择强名称密钥文件”  中，单击 **<New>** 。  
   
-5.  在“创建强名称密钥”  对话框的“密钥文件名称” 中，键入“MyRefKey” 。  
+5.  在“创建强名称密钥”  对话框的“密钥文件名称”  中，键入“MyRefKey”  。  
   
 6.  （可选）可以为强名称密钥文件指定密码。  
   
-7.  单击“确定”。  
+7.  单击“确定”。   
   
-8.  在“文件”  菜单上，单击“全部保存” 。  
+8.  在“文件”  菜单上，单击“全部保存”  。  
   
-9. 在“生成”菜单中，单击“生成解决方案”。  
+9. 在“生成”  菜单中，单击“生成解决方案”  。  
   
     接下来，您必须安装程序集，以便在生成 SQL 项目时加载该程序集。  
   
-## <a name="InstallBuildContributor"></a>安装生成参与者  
+## <a name="install-a-build-contributor"></a><a name="InstallBuildContributor"></a>安装生成参与者  
 若要安装生成参与者，您必须将程序集与关联的 .pdb 文件复制到 Extensions 文件夹。  
   
 #### <a name="to-install-the-mybuildcontributor-assembly"></a>安装 MyBuildContributor 程序集  
   
 1.  接下来，您要将程序集信息复制到 Extensions 目录中。 Visual Studio 在启动后将识别 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录和子目录中的任何扩展文件，并使其可供使用。  
   
-2.  将 MyBuildContributor.dll 程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。  
+2.  将 MyBuildContributor.dll  程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。  
   
     > [!NOTE]  
     > 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
   
-## <a name="TestBuildContributor"></a>运行或测试生成参与者  
+## <a name="run-or-test-your-build-contributor"></a><a name="TestBuildContributor"></a>运行或测试生成参与者  
 若要运行或测试生成参与者，您必须执行以下任务：  
   
 -   向计划生成的 .sqlproj 文件添加属性。  
@@ -525,7 +525,7 @@ ms.locfileid: "75242693"
   
 1.  在 Visual Studio 中，右键单击项目并选择“重新生成”。 这将重新生成项目，您应该看到生成的模型统计信息，其中输出将包含在生成输出中并保存到 ModelStatistics.xml。 请注意，可能需要在解决方案资源管理器中选择“显示所有文件”才能看到 xml 文件。  
   
-2.  打开 Visual Studio 命令提示符：在“开始”菜单上，依次单击“所有程序”、“Microsoft Visual Studio <Visual Studio Version>”、“Visual Studio Tools”和“Visual Studio 命令提示符(<Visual Studio Version>)”。  
+2.  打开 Visual Studio 命令提示符：在“开始”  菜单上，依次单击“所有程序”  、“Microsoft Visual Studio **”<Visual Studio Version>** 、“Visual Studio Tools”  和“Visual Studio 命令提示符( **)”<Visual Studio Version>** 。  
   
 3.  在命令提示符处，导航到包含 SQL 项目的文件夹。  
   

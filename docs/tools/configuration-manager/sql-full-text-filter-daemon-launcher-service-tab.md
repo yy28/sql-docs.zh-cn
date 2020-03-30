@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 72e85b49f70a93a633ad8ef2eeeecd526e59e97a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306729"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL 全文筛选器后台程序启动器（“服务”选项卡）
@@ -53,7 +53,7 @@ ms.locfileid: "75306729"
   
 -   自动：计算机启动时，此服务将尝试启动。  
   
--   禁用：此服务无法启动。  
+-   已禁用：此服务无法启动。  
   
  **State**  
  指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  

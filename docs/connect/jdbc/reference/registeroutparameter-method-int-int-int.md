@@ -16,10 +16,10 @@ ms.assetid: d902d4e0-881f-4182-814c-0ede9a8da7fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b6948bf6b86160b1752a483b13f83abbfc467ef2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975941"
 ---
 # <a name="registeroutparameter-method-int-int-int"></a>registerOutParameter 方法 (int, int, int)
@@ -55,7 +55,7 @@ public void registerOutParameter(int index,
 ## <a name="remarks"></a>备注  
  此 registerOutParameter 方法是由 java.sql.CallableStatement 接口中的 registerOutParameter 方法指定的。  
   
- 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 开始，sqlType  为 java.sql.Types.TIME 类型时，此方法的行为由 sendTimeAsDatetime  连接属性（[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)）和 [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改。  
+ 自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 驱动程序 3.0 起，如果 sqlType  为 java.sql.Types.TIME 类型，此方法的行为由 sendTimeAsDatetime  连接属性（[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)）和 [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改。  
   
  有关详细信息，请参阅[配置将 java.sql.Time 值发送到服务器的方式](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   

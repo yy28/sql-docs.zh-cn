@@ -13,10 +13,10 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 09df28c2bcd304733250a90813773ede3a29c2ed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245714"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>选项（“设计器”-“表设计器和数据库设计器”页）

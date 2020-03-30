@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909524"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
@@ -47,9 +47,9 @@ ms.locfileid: "67909524"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Performance"></a> 性能注意事项  
+###  <a name="performance-considerations"></a><a name="Performance"></a> 性能注意事项  
   
 #### <a name="page-splits"></a>页拆分  
  正确选择填充因子值可提供足够的空间，以便随着向基础表中添加数据而扩展索引，从而降低页拆分的可能性。如果向已满的索引页添加新行， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将把大约一半的行移到新页中，以便为该新行腾出空间。 这种重组称为页拆分。 页拆分可为新记录腾出空间，但是执行页拆分可能需要花费一定的时间，此操作会消耗大量资源。 此外，它还可能造成碎片，从而导致 I/O 操作增加。 如果经常发生页拆分，可通过使用新的或现有的填充因子值来重新生成索引，从而重新分发数据。 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
@@ -59,12 +59,12 @@ ms.locfileid: "67909524"
 #### <a name="adding-data-to-the-end-of-the-table"></a>将数据添加到表的末尾  
  如果新数据在表中均匀分布，则不是 0 或 100 的非零填充因子对性能有利。 但是，如果所有数据都添加到表的末尾，则不会填充索引页中的可用空间。 例如，如果索引键列是 IDENTITY 列，则新行的键将总是增加，并且索引行在逻辑意义上将添加到索引的末尾。 如果将用加长行的大小的数据来更新现有行，则请使用小于 100 的填充因子。 每页上的额外字节将有助于把行中的额外长度造成的页拆分降低到最小限度。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>使用表设计器指定填充因子  
   
@@ -102,7 +102,7 @@ ms.locfileid: "67909524"
   
 8.  单击“确定”。   
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>在现有索引中指定填充因子  
   

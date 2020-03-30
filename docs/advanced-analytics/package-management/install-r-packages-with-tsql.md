@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485262"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>使用 T-SQL (CREATE EXTERNAL LIBRARY) 将 R 包安装在 SQL Server 上
@@ -35,7 +35,7 @@ ms.locfileid: "74485262"
 
 如果要安装单个包，请下载压缩格式的包。
 
-由于包依赖项，更常见的方法是安装多个包。 当包需要其他包时，必须在安装过程中验证是否所有包都可供访问。 建议使用 [miniCRAN](https://andrie.github.io/miniCRAN/) [创建本地存储库](create-a-local-package-repository-using-minicran.md)来组装一个完整的包集合，以及使用 [igraph](https://igraph.org/r/) 来分析包依赖项。 安装包的错误版本或省略包依赖项可能导致 CREATE EXTERNAL LIBRARY 语句失败。 
+由于包依赖项，更常见的方法是安装多个包。 当包需要其他包时，必须在安装过程中验证是否所有包都可供访问。 建议使用 [miniCRAN](create-a-local-package-repository-using-minicran.md) [创建本地存储库](https://andrie.github.io/miniCRAN/)来组装一个完整的包集合，以及使用 [igraph](https://igraph.org/r/) 来分析包依赖项。 安装包的错误版本或省略包依赖项可能导致 CREATE EXTERNAL LIBRARY 语句失败。 
 
 ## <a name="copy-the-file-to-a-local-folder"></a>将文件复制到本地文件夹
 

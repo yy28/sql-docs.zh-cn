@@ -15,10 +15,10 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65619613"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>授予用户对报表服务器的访问权限

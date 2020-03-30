@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d88350f00b90156cd1e33a4d816ae649cc6910f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990946"
 ---
 # <a name="install-sql-server-servicing-updates"></a>安装 SQL Server 服务更新
@@ -29,7 +29,7 @@ ms.locfileid: "67990946"
   
 及时安装最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，确保系统是最新的并且具有最新的安全更新。  
   
-## <a name="installing-updates-for-includenoversionincludesssnoversion-mdmd-during-a-new-installation"></a>在全新安装期间为 [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] 安装更新  
+## <a name="installing-updates-for-noversion-during-a-new-installation"></a>在全新安装期间为 [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] 安装更新  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将最新的产品更新集成到主产品安装中，以便可以同时安装主产品及其适用的更新。 产品更新可以从以下位置搜索适用的更新：  
   
 - [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update  
@@ -42,7 +42,7 @@ ms.locfileid: "67990946"
   
 在找到最新版本的适用更新后，安装程序将下载这些更新并将其与当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程集成在一起。 产品更新可包括累积更新、Service Pack 或者 Service Pack 连同累积更新。  
   
-## <a name="installing-updates-for-includessnoversionincludesssnoversion-mdmd-after-it-has-already-been-installed"></a>在已安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 后为其安装更新  
+## <a name="installing-updates-for-ssnoversion-after-it-has-already-been-installed"></a>在已安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 后为其安装更新  
 在 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的已安装实例上，我们建议应用最新的安全更新和关键更新，包括常规分发发布 (GDR)、Service Pack (SP) 和累积更新 (CU)。 有关其他信息，请参阅 [2016 年 3 月针对 SQL Server 增量服务模型 (ISM) 的公告](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)。
 
 > [!NOTE]

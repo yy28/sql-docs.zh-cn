@@ -10,10 +10,10 @@ ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76911241"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和连接字符串关键字和属性
@@ -246,7 +246,7 @@ ms.locfileid: "76911241"
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-要使用 XA 兼容事务处理器 (TP) 启用 XA 事务，应用程序需要使用 SQL_COPT_SS_ENLIST_IN_XA 和指向 `XACALLPARAM` 对象的指针调用 SQLSetConnectAttr  。 Windows（17.3 及更高版本）、Linux 和 Mac支持此选项。
+要使用 XA 兼容事务处理器 (TP) 启用 XA 事务，应用程序需要使用 SQL_COPT_SS_ENLIST_IN_XA 和指向  **对象的指针调用 SQLSetConnectAttr**`XACALLPARAM`。 Windows（17.3 及更高版本）、Linux 和 Mac支持此选项。
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 

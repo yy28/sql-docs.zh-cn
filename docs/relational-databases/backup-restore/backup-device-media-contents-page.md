@@ -13,10 +13,10 @@ ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987760"
 ---
 # <a name="backup-device-media-contents-page"></a>备份设备（“介质内容”页）
@@ -69,7 +69,7 @@ ms.locfileid: "67987760"
 |**用户名**|{1}执行备份操作的用户的名称。{2}|  
 |**过期日期**|备份集的过期日期和时间。|  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [为磁盘文件定义逻辑备份设备 (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

@@ -11,10 +11,10 @@ ms.author: v-dapugl
 author: david-puglielli
 manager: v-mabarw
 ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941087"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>在适用于 SQL Server 的 PHP 驱动程序中使用具有安全 Enclave 的 Always Encrypted
@@ -46,9 +46,9 @@ ColumnEncryption=VBS-HGS,http://attestationserver.mydomain/Attestation
 
 - 使用 `ALTER TABLE` 加密表时，每次调用 `ALTER TABLE` 时只能加密一个列，因此需要进行多次调用来加密多个列。
 - 将比较阈值作为比较 char 和 nchar 类型的参数传递时，必须在相应的 `SQLSRV_SQLTYPE_*` 中指定列宽度，否则将返回错误 `HY104`、`Invalid precision value`。
-- 对于模式匹配，必须使用 `COLLATE` 子句将排序规则指定为 `Latin1_General_BIN2`。
-- 将模式匹配字符串作为匹配 char 和 nchar 类型的参数传递时，传递给 `sqlsrv_query` 或 `sqlsrv_prepare` 的 `SQLSRV_SQLTYPE_*` 应指定要匹配的字符串的长度，而不是列的大小，因为 char 和 nchar 类型在字符串末尾填充空白。 例如，将 `%abc%` 字符串与 char(10) 列匹配时，指定 `SQLSRV_SQLTYPE_CHAR(5)`。 如果改为指定 `SQLSRV_SQLTYPE_CHAR(10)`，则查询将匹配 `%abc%     `（追加了五个空格），而追加的空格少于五的列中的所有数据都将不匹配（因此 `abcdef` 不匹配 `%abc%`，因为它有四个填充空格）。 对于 Unicode 字符串，请使用 `mb_strlen` 或 `iconv_strlen` 函数获取字符数。
-- PDO 接口不允许指定参数的长度。 相反，请在 `PDOStatement::bindParam` 中指定长度 0 或 `null`。 如果将长度显式设置为另一个数字，则该参数将被视为输出参数。
+- 对于模式匹配，必须使用 `Latin1_General_BIN2` 子句将排序规则指定为 `COLLATE`。
+- 将模式匹配字符串作为匹配 char 和 nchar 类型的参数传递时，传递给 `SQLSRV_SQLTYPE_*` 或 `sqlsrv_query` 的 `sqlsrv_prepare` 应指定要匹配的字符串的长度，而不是列的大小，因为 char 和 nchar 类型在字符串末尾填充空白。 例如，将 `%abc%` 字符串与 char(10) 列匹配时，指定 `SQLSRV_SQLTYPE_CHAR(5)`。 如果改为指定 `SQLSRV_SQLTYPE_CHAR(10)`，则查询将匹配 `%abc%     `（追加了五个空格），而追加的空格少于五的列中的所有数据都将不匹配（因此 `abcdef` 不匹配 `%abc%`，因为它有四个填充空格）。 对于 Unicode 字符串，请使用 `mb_strlen` 或 `iconv_strlen` 函数获取字符数。
+- PDO 接口不允许指定参数的长度。 相反，请在 `null` 中指定长度 0 或 `PDOStatement::bindParam`。 如果将长度显式设置为另一个数字，则该参数将被视为输出参数。
 - 在 Always Encrypted 中，模式匹配对非字符串类型不起作用。
 - 为清楚起见，将不包括错误检查。 
 

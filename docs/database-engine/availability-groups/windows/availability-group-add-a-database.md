@@ -15,10 +15,10 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991502"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>将数据库添加到 AlwaysOn 可用性组
@@ -34,10 +34,10 @@ ms.locfileid: "67991502"
 -   数据库必须位于承载主副本的服务器实例上并符合可用性数据库的先决条件和限制。 有关详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)配置服务器实例时遇到的典型问题。  
   
  
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
 
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
@@ -58,7 +58,7 @@ ms.locfileid: "67991502"
   
          在您使用 **“可用性组属性”** 对话框将数据库添加到可用性组后，需要在承载辅助副本的每个服务器实例上配置相应的辅助数据库。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="TsqlProcedure"></a>使用 Transact-SQL  
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
 
   
 1.  连接到承载主副本的服务器实例。    
@@ -79,7 +79,7 @@ ms.locfileid: "67991502"
   
 3.  在您将数据库添加到可用性组后，需要在承载辅助副本的每个服务器实例上配置相应的辅助数据库。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a>使用 PowerShell  
 
   
 1.  将目录 (**cd**) 更改为托管主副本的服务器实例。  
@@ -106,7 +106,7 @@ ms.locfileid: "67991502"
   
  有关完整示例，请参阅下面的 [示例 (PowerShell)](#PSExample)。  
   
-###  <a name="PSExample"></a> 示例 (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> 示例 (PowerShell)  
  下面的示例说明了一个完整过程：从承载可用性组主副本的服务器实例上的一个数据库中准备一个辅助数据库，将此数据库添加到可用性组（作为主数据库），然后将此辅助数据库加入可用性组。 首先，该示例备份数据库及其事务日志。 然后，此示例将数据库和日志备份还原到承载辅助副本的服务器实例。  
   
  此示例调用两次 **Add-SqlAvailabilityDatabase** ：第一次是针对主要副本调用，以便将数据库添加到可用性组；第二次是针对次要副本调用，以便将该副本上的辅助数据库加入到可用性组。 如果您有多个辅助副本，则对其中每个副本还原和加入辅助数据库。  

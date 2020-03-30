@@ -12,16 +12,16 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140373"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>打开或关闭 Reporting Services 功能
   您可以关闭不用作锁定策略一部分的报表服务器功能，以减小生产报表服务器的攻击面。 在大多数情况下，需要同时运行各种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能才能使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的所有功能。 但是根据所用的部署模型，您可以禁用不需要的功能。 例如，如果所有报表处理均已配置为预定操作，则可以只启用后台处理。 同样，如果只需要交互式的按需报表，可以只运行报表服务器 Web 服务。  
   
- 本文中的过程展示了如何禁用本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 可以不同的方式配置这些功能，如直接编辑 `RsReportServer.config` 文件或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中基于策略的管理的“Reporting Services 的外围应用配置”  方面。 使用以下链接可以找到说明如何打开或关闭相应功能的步骤：  
+ 本文中的过程展示了如何禁用本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 可以不同的方式配置这些功能，如直接编辑 `RsReportServer.config` 文件或使用  **中基于策略的管理的“Reporting Services 的外围应用配置”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]方面。 使用以下链接可以找到说明如何打开或关闭相应功能的步骤：  
   
 -   [报表服务器 Web 服务](#RSWebSvc)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67140373"
   
 -   [适用于报表数据源的 Windows 集成安全性](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> 报表服务器 Web 服务  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a> 报表服务器 Web 服务  
   
 ### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>通过编辑配置来启用或禁用报表服务器 Web 服务的具体步骤  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67140373"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> 预定的事件和传递  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> 预定的事件和传递  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>通过编辑配置打开或关闭预定的事件和传递  
   
@@ -94,11 +94,11 @@ ms.locfileid: "67140373"
 > [!NOTE]  
 >  不能完全关闭后台处理，因为它提供执行服务器操作所需的数据库维护功能。  
   
-##  <a name="WebPortal"></a>Web 门户
+##  <a name="web-portal"></a><a name="WebPortal"></a>Web 门户
   
 从 SQL Server 2016 Reporting Services 累积更新 2 开始，将始终启用 Web 门户。
   
-##  <a name="WinIntSec"></a> Windows 集成安全性  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Windows 集成安全性  
   
 ### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 启用或禁用 Windows 集成安全性的具体步骤  
   

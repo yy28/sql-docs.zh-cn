@@ -11,10 +11,10 @@ ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027724"
 ---
 # <a name="sparse-columns"></a>稀疏列
@@ -23,7 +23,7 @@ ms.locfileid: "69027724"
 
 稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 当至少能够节省 20% 到 40% 的空间时，才应考虑使用稀疏列。
 
-当连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]（或更高版本）的服务器时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 支持稀疏列。 可以使用 [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、[SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) 或 [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) 确定哪个列是稀疏列以及哪个列是列集列。
+当连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（或更高版本）的服务器时，[!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] JDBC Driver 3.0 支持稀疏列。 可以使用 [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、[SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) 或 [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) 确定哪个列是稀疏列以及哪个列是列集列。
 
 此示例的代码文件名为 SparseColumns.java，位于以下位置：  
 

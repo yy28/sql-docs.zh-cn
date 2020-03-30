@@ -10,10 +10,10 @@ ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4ab490b9c392f10abf4314dd70d760695d13a70f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68126162"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的本地语言版本
@@ -31,7 +31,7 @@ ms.locfileid: "68126162"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本也可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的英文实例并行安装。  
   
-##  <a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
+##  <a name="configure-operating-system-to-support-localized-versions"></a><a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
  在支持的操作系统的英文版上，通过使用 Windows 多语言用户界面包 (MUI) 设置，支持使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本。  
   
  不过，在运行英语版操作系统（具有非英文 MUI 设置）的服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本之前，必须先验证某些操作系统设置。 需要验证下列操作系统设置是否匹配要安装的本地化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的语言：  

@@ -12,10 +12,10 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499936"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>在报表服务器上配置 Windows 身份验证
@@ -113,7 +113,7 @@ ms.locfileid: "66499936"
   
 8.  重新启动报表服务器以清除当前打开的任何会话。  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> 连接到报表服务器时解决 Kerberos 身份验证错误  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a> 连接到报表服务器时解决 Kerberos 身份验证错误  
  在为 Negotiate 或 Kerberos 身份验证配置的报表服务器上，如果出现 Kerberos 身份验证错误，则客户端与报表服务器的连接将失败。 已知在以下情况下会出现 Kerberos 身份验证错误：  
   
 -   报表服务器服务作为 Windows 域用户帐户运行并且您没有为该帐户注册服务主体名称 (SPN)。  

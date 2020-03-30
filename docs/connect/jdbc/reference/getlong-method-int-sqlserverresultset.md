@@ -16,16 +16,16 @@ ms.assetid: 2d1beec5-fc50-4563-81da-835e4b392874
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f775473fcab7f7019f4ba640fccc8af34188ab12
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982530"
 ---
 # <a name="getlong-method-int-sqlserverresultset"></a>getLong 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 long。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 long  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,12 +35,12 @@ public long getLong(int columnIndex)
 ```  
   
 #### <a name="parameters"></a>parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- long 值。  
+ long  值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

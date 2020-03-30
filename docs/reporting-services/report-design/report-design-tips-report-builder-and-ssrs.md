@@ -9,10 +9,10 @@ ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081086"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>报表设计提示（报表生成器和 SSRS）
@@ -21,7 +21,7 @@ ms.locfileid: "77081086"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningReports"></a> 设计报表  
+##  <a name="designing-reports"></a><a name="DesigningReports"></a> 设计报表  
   
 -   设计精良的报表传达的信息可为您指引行动的方向。 确定报表有助于回答的问题。 设计报表时要对这些问题了然于胸。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77081086"
   
  有关设计报表时需考虑的事项的详细信息，请参阅[规划报表（报表生成器）](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
   
-##  <a name="NamingConventions"></a> 报表、数据源和数据集的命名约定  
+##  <a name="naming-conventions-for-reports-data-sources-and-datasets"></a><a name="NamingConventions"></a> 报表、数据源和数据集的命名约定  
   
 -   应对数据源和数据集使用命名约定来记录数据的来源。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081086"
   
 -   在报表名称中用下划线来代替空格。 如果从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web 门户下载了某个报表，报表名称中的空格将被下划线取代。 如果使用下载功能将报表保存在本地，而后又将这些报表包括在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，使用下划线有助于确保子报表与报表的依赖关系以及钻取链接准确无误。  
   
-##  <a name="Data"></a> 处理数据  
+##  <a name="working-with-data"></a><a name="Data"></a> 处理数据  
   
 -   生成报表时，第一步是要使所有要处理的数据均显示在“报表数据”窗格中。 在提炼报表旨在回答的问题时，考虑如何将报表数据集中的数据限定为所需的那些数据。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "77081086"
   
 -   根据您的要求，您可以在报表中显示报表数据源的名称和位置、数据集查询命令文本和参数值。 许多新用户会问到的第一个问题就是：数据来自哪里？ 为了减少报表中的混乱，您可以有条件地隐藏含有此类信息的文本框，让用户自行选择是否查看。 尽量在报表最后一页上添加此信息。 基于用户可以更改的参数设置文本框的可见性。  
   
-##  <a name="DesignSurface"></a> 与报表设计图面交互  
+##  <a name="interacting-with-the-report-design-surface"></a><a name="DesignSurface"></a> 与报表设计图面交互  
  报表设计图面不是“所见即所得”的。 当您将报表项放在设计图面上时，其相对位置影响这些项出现在所呈现报表页上的方式。 请保留空格。  
   
 -   使用对齐线和布局按钮对齐并排列报表设计图面上的各个项。 例如，您可以对齐所选项的顶部或边缘，展开某个项以与另一个项的大小匹配，或者调整项之间的间距。  
@@ -88,7 +88,7 @@ ms.locfileid: "77081086"
   
 -   若要将字段从“报表数据”窗格拖至“分组”窗格，应避免跨设计图面上的其他报表项拖动该字段，否则，可能会选择其他项而取消选定 Tablix 数据区域。 将字段向下拖过“报表数据”窗格中，然后拖到“分组”窗格中。  
   
-###  <a name="Selecting"></a> 选择项  
+###  <a name="selecting-items"></a><a name="Selecting"></a> 选择项  
  为帮助选择要放在报表设计图面上的对象，请使用 ESC 键、单击右键出现的上下文菜单、“属性”窗格和“分组”窗格。  
   
 -   -   按 Esc 键可循环显示占据设计图面上同一区域的一系列报表项。  
@@ -101,31 +101,31 @@ ms.locfileid: "77081086"
   
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的报表设计器中，您可以从“属性”窗格工具栏的对象下拉列表中进行选择，也可以从“文档大纲”窗口的报表项层次结构视图中进行选择。 您可以在此窗格中选择项，然后查看在设计图面上选定了哪个项。 若要打开“文档大纲”窗口，请在 **“视图”** 菜单中指向 **“其他窗口”** ，然后单击 **“文档大纲”** 。  
   
-##  <a name="ReportItems"></a> 使用特定类型的报表项  
+##  <a name="working-with-specific-types-of-report-items"></a><a name="ReportItems"></a> 使用特定类型的报表项  
   
-###  <a name="Parameters"></a> 使用参数  
+###  <a name="working-with-parameters"></a><a name="Parameters"></a> 使用参数  
   
 -   报表参数的主要作用是筛选数据源中的数据以及检索满足报表的这一用途所需的内容。  
   
 -   对于报表参数，应在支持交互与帮助用户取得所需结果之间寻找一个平衡点。 例如，您可以将参数的默认值设置为您所熟知的常用值。  
   
-###  <a name="Text"></a> 处理文本  
+###  <a name="working-with-text"></a><a name="Text"></a> 处理文本  
   
 -   当您将多行文本粘贴到文本框中时，该文本将作为一个文本运行而添加。 每个文本运行只能格式化为一个单元。 若要单独设置每行格式，应根据需要，通过在文本运行中按 Enter 来插入新行。 然后，可以对文本框中的每个单独文本行应用格式和样式。  
   
 -   您可以对文本框或对文本框中的占位符文本设置格式属性和操作。 如果只有一行文本，则对文本框设置属性比对文本设置属性效率更高。  
   
-###  <a name="Expressions"></a> 使用表达式  
+###  <a name="working-with-expressions"></a><a name="Expressions"></a> 使用表达式  
   
 -   了解简单表达式格式和复杂表达式格式。 可以在文本框、“属性”窗格中的属性或对话框中接受表达式的位置直接键入简单表达式格式。 有关详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
 -   创建表达式时，最好单独创建每个部分并验证其值。 您随后可以将所有部分组合到最终的表达式中。 一种可取的做法是在矩阵单元中添加文本框，显示表达式的各个部分，然后对该文本框设置条件可见性。 若要控制文本框隐藏时的边框样式和颜色，首先将该文本框置于矩形中，然后将该矩形的边框样式和颜色设置为与该矩阵相同。  
   
-###  <a name="Indicators"></a> 使用指示器  
+###  <a name="working-with-indicators"></a><a name="Indicators"></a> 使用指示器  
   
 -   默认情况下，一个指示器至少显示三种状态。 在向报表添加指示器之后，您可以通过添加或删除状态来配置指示器。 为便于您的用户查看，请选择一个颜色和形状都可以变化的指示器。  
   
-##  <a name="Rendering"></a> 控制报表项在报表页上的呈现  
+##  <a name="controlling-the-rendering-of-report-items-on-the-report-page"></a><a name="Rendering"></a> 控制报表项在报表页上的呈现  
   
 -   在报表设计图面上，报表项将增大以容纳来自关联的数据集、表达式、子报表或文本中的内容。  
   

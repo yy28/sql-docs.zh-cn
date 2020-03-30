@@ -21,10 +21,10 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940407"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
@@ -87,7 +87,7 @@ Oracle 版本信息：
   
 -   如果在发布中添加或删除项目，必须重新初始化对非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器的订阅。  
   
--   所有非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器支持的约束都只有：NULL 和 NOT NULL。 主键约束按唯一索引复制。  
+-   所有非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器支持的约束只有：NULL 和 NOT NULL。 主键约束按唯一索引复制。  
   
 -   不同的数据库处理 NULL 值的方式不同，这将影响空白值、空字符串和 NULL 的显示方式， 而显示方式又影响在定义了唯一约束的列中插入值的行为。 例如，Oracle 允许唯一列中有多个 NULL 值，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅允许唯一列中存在一个 NULL 值。  
   

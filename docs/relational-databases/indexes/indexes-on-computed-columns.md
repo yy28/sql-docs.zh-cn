@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909692"
 ---
 # <a name="indexes-on-computed-columns"></a>计算列上的索引
@@ -115,7 +115,7 @@ COLUMNPROPERTY 函数的 **IsPrecise** 属性报告 *computed_column_expression*
 > [!NOTE]
 > 当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。  
   
-## <a name="BKMK_persisted"></a> 对持久化计算列创建索引  
+## <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> 对持久化计算列创建索引  
 
 有时可以创建一个计算列，并使用一个确定性但不精确的表达式进行定义。 列在 CREATE TABLE 或 ALTER TABLE 语句中被标记为 PERSISTED 时，可以执行此操作。
 

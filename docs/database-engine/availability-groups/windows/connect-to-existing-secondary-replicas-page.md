@@ -14,10 +14,10 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991141"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>连接到现有次要副本页 - Always On 可用性组
@@ -40,7 +40,7 @@ ms.locfileid: "67991141"
  **取消**  
  单击此选项可取消向导操作。 在 **“连接到现有的辅助副本”** 页上，取消此向导将导致其退出而不执行任何操作。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用“将副本添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

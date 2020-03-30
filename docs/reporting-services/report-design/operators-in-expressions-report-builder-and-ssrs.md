@@ -9,10 +9,10 @@ ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0cf32f32a375f998522ff689663ec0296a0b5be4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082590"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>表达式中的运算符（报表生成器和 SSRS）
@@ -45,7 +45,7 @@ ms.locfileid: "77082590"
 |>=|大于等于。|  
 |=|等于。|  
 |<>|不等于。|  
-|Like|确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。<br /><br /> 下表列出了可以用作通配符的字符：<br /><br /> %：包含零个或多个字符的任意字符串。<br /><br /> _：任何单个字符。<br /><br /> [ ]：指定范围（例如 [a-f]）或集合（例如 [aeiou]）内的任何单个字符。<br /><br /> [^]：不在指定范围（例如 [^a - f]）或集（例如 [^aeiou]）内的任何单个字符|  
+|Like|确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。<br /><br /> 下表列出了可以用作通配符的字符：<br /><br /> %：包含零个或多个字符的任意字符串。<br /><br /> _：任何单个字符。<br /><br /> [ ]：指定范围（例如 [a-f]）或集合（例如 [aeiou]）内的任何单个字符。<br /><br /> [^]：不在指定范围（例如 [^a - f]）或集合（例如 [^aeiou]）内的任何单个字符|  
 |Is|比较两个对象引用。|  
   
 ### <a name="string-concatenation"></a>字符串串联  

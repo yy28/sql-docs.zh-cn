@@ -14,17 +14,17 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995270"
 ---
 # <a name="retrieve-and-query-xml-data"></a>检索和查询 XML 数据
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   本主题说明查询 XML 数据必须指定的查询选项。 它还说明了当 XML 实例存储在数据库中时未保留的部分。  
   
-##  <a name="features"></a> 未保留的 XML 实例的功能  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 未保留的 XML 实例的功能  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可保留 XML 实例的内容，但不会保留 XML 数据模型中认为是不重要的 XML 实例的某些方面。 这意味着检索到的 XML 实例可能与服务器中存储的实例不相同，但将包含同样的信息。  
   
 ### <a name="xml-declaration"></a>XML 声明  
@@ -87,7 +87,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> 设置所需的查询选项  
+##  <a name="setting-required-query-options"></a><a name="query"></a> 设置所需的查询选项  
  当使用 **xml** 数据类型方法查询 **xml** 类型列或变量时，以下选项必须按照所显示的内容进行设置。  
   
 |SET 选项|所需值|  

@@ -12,17 +12,17 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: b1db107bc9d426036f5831ad8f49f5fc5f7edddc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306998"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重播选项（分布式重播管理工具）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 DReplay.exe 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **replay** 命令行选项和相应的语法。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 DReplay.exe  是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **replay** 命令行选项和相应的语法。  
   
  **replay** 选项启动事件重播阶段，在该阶段中，控制器将重播数据调度到指定客户端，启动分布式重播并同步客户端。 每个参与重播的客户端可以选择记录重播活动并在本地保存结果跟踪文件。  
   
@@ -59,7 +59,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
  **-o**  
  捕获客户端的重播活动，并将其保存到一个结果跟踪文件中，该文件的路径由客户端配置文件 `<ResultDirectory>` 的 `DReplayClient.xml`元素指定。  
   
- 如果 -o 参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。  
+ 如果 -o  参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。  
   
  **-s** _target_server_  
  指定应针对其重播分布式工作负荷的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目标实例。 必须以 **server_name[\instance name]** 格式指定此参数。  

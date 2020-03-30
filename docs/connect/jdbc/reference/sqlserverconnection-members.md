@@ -11,10 +11,10 @@ ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3e3ba3d7da52f10b9bd51934b25f44a38a16be0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971724"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection 成员
@@ -43,7 +43,7 @@ ms.locfileid: "67971724"
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|清除所报告的有关此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的所有警告。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|立即释放此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的数据库和 JDBC 资源，而非等待它们自动释放。|  
-|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|强制对任何未完成且已放弃的预定义语句执行 unprepare 请求。| 
+|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|强制对任何未完成且已放弃的准备的语句执行取消准备请求。| 
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|让自上次提交或回滚后的所有更改都成为永久性更改，并释放当前由此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象保留的任何数据库锁。|  
 |[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.Blob  对象。|  
 |[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.Clob  对象。|  
@@ -57,11 +57,11 @@ ms.locfileid: "67971724"
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|返回 disableStatementPooling  连接属性的值。 此设置控制是否为此连接启用了语句池。|
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|返回当前未完成的预定义语句的 unprepare 操作数。|
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|返回 enablePrepareOnFirstPreparedStatementCall  连接属性的值。|
-|[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|检索使用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象创建的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前可保持性。|  
+|[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|检索使用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象创建的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的当前可保持性。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|检索包含有关数据库元数据的 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 对象，对此数据库而言，此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象表示一项连接。|  
 |[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|返回 serverPreparedStatementDiscardThreshold  连接属性的值。|  
 |[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|返回当前已入池的预定义语句句柄的数目。|  
-|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|返回此连接的预定义语句缓存的大小。|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|返回此连接的准备的语句缓存的大小。|  
 |[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|检索此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的当前事务隔离级别。|  
 |[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|检索与此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象关联的 Map 对象。|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|检索调用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象时报告的第一个警告。|  
@@ -79,7 +79,7 @@ ms.locfileid: "67971724"
 |[setClientInfo](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)|设置客户端信息属性的值。|  
 |[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverconnection.md)|将语句池设置为 true 或 false。|  
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|指定 enablePrepareOnFirstPreparedStatementCall  连接属性的新值。|  
-|[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|将使用此 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 对象创建的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的可保持性更改为给定可保持性。|  
+|[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|将使用此 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象创建的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 对象的可保持性更改为给定可保持性。|  
 |[setReadOnly](../../../connect/jdbc/reference/setreadonly-method-sqlserverconnection.md)|将此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象设置为只读模式，以此作为 JDBC 驱动程序启用数据库优化的提示。|  
 |[setSavepoint](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)|在当前事务中创建未命名的保存点，并返回代表它的新 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 对象。|  
 |[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|设置 serverPreparedStatementDiscardThreshold  连接属性的新值。|  

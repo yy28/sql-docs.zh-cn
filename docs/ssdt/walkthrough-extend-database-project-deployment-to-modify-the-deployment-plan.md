@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242667"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>演练：扩展数据库项目部署以修改部署计划
@@ -41,7 +41,7 @@ ms.locfileid: "75242667"
 > [!NOTE]  
 > 本演练面向已熟悉 SQL Server Data Tools 的 SQL 功能的用户。 您还应熟悉 Visual Studio 的基本概念，例如，如何创建类库以及如何使用代码编辑器向类添加代码。  
   
-## <a name="CreateDeploymentContributor"></a>创建部署参与者  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>创建部署参与者  
 若要创建部署参与者，您必须执行以下任务：  
   
 -   创建类库项目并添加所需的引用。  
@@ -639,7 +639,7 @@ ms.locfileid: "75242667"
   
     接下来，您必须安装程序集，以便在部署 SQL 项目时加载该程序集。  
   
-## <a name="InstallDeploymentContributor"></a>安装部署参与者  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>安装部署参与者  
 若要安装部署参与者，您必须将程序集与关联的 .pdb 文件复制到 Extensions 文件夹。  
   
 #### <a name="to-install-the-myotherdeploymentcontributor-assembly"></a>安装 MyOtherDeploymentContributor 程序集  
@@ -648,7 +648,7 @@ ms.locfileid: "75242667"
   
 2.  将 MyOtherDeploymentContributor.dll  程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
   
-## <a name="TestDeploymentContributor"></a>运行或测试部署参与者  
+## <a name="run-or-test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>运行或测试部署参与者  
 若要运行或测试部署参与者，您必须执行以下任务：  
   
 -   向计划生成的 .sqlproj 文件添加属性。  

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
 ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76516598"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>不同版本支持的 SQL Server Reporting Services 功能
@@ -27,7 +27,7 @@ ms.locfileid: "76516598"
  - [SQL Server Reporting Services (SSRS) 最近更新](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
  - [不同 SQL Server 版本支持的功能](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="SSRS"></a> SQL Server Reporting Services  
 
 有关 Evaluation 和 Developer 版本支持的功能，请参阅下表中列出的 SQL Server Enterprise Edition 列。
 
@@ -73,7 +73,7 @@ ms.locfileid: "76516598"
 > SQL Server Express with Tools 和 SQL Server Express 不支持 Reporting Services。
   
 ## <a name="edition-requirements-for-the-report-server-database"></a>报表服务器数据库的版本要求
- 创建报表服务器数据库时，并非所有版本的 SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 都可以用来承载数据库。 下表显示了可用于特定 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 版本。  
+ 创建报表服务器数据库时，并非所有版本的 SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 都可以用来承载数据库。 下表显示了可用于特定 SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] 版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本。  
   
 |对于此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 版本，|使用此版本的数据库引擎实例来承载数据库。|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
@@ -83,7 +83,7 @@ ms.locfileid: "76516598"
 |Express with Advanced Services|具有高级服务的 Express（仅本地）|  
 |计算|计算|  
   
-##  <a name="BIC"></a>商业智能客户端  
+##  <a name="business-intelligence-clients"></a><a name="BIC"></a>商业智能客户端  
 Microsoft 下载中心提供以下软件客户端应用程序。 它们有助于创建在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上运行的商业智能文档。 当你在某一服务器环境中托管这些文档时，请使用支持该文档类型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 下表标识哪一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含承载在这些客户端应用程序中创建的文档所需的服务器功能。  
   
 |工具名称|Enterprise|Standard|Web|Express with Advanced Services|开发人员|  

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: ed7fa07959715ac6c08b8799c5579e90939f87c2
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896266"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
@@ -36,10 +36,10 @@ ms.locfileid: "78896266"
 介绍对 SQL Server Express 用户实例的支持。  
   
 [SQL Server 中的数据库镜像](database-mirroring-sql-server.md)  
-介绍数据库镜像功能。  
+介绍了数据库镜像功能。  
 
 [上下文连接](context-connection.md)  
-介绍上下文连接。  
+介绍了上下文连接。  
   
 [SQL Server 中的查询通知](query-notifications-sql-server.md)  
 介绍当数据发生更改时，.NET 应用程序如何从 SQL Server 请求通知。  

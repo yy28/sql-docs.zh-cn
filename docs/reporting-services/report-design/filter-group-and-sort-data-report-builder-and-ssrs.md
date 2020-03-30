@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080167"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
@@ -52,7 +52,7 @@ ms.locfileid: "77080167"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Filtering"></a> 对报表中的数据进行筛选  
+##  <a name="filtering-data-in-the-report"></a><a name="Filtering"></a> 对报表中的数据进行筛选  
  筛选器是报表的部件，可在通过数据连接检索报表数据后，帮助控制这些数据。 如果您无法将数据集查询更改为在从外部数据源检索数据之前筛选数据，则需要使用筛选器。  
   
  在可能的情况下，请生成仅返回需要显示在报表中的数据的数据集查询。 如果您减少了必须检索和处理的数据量，则会有助于提高报表性能。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
@@ -66,7 +66,7 @@ ms.locfileid: "77080167"
  若要为每个用户自定义视图，可在筛选器中包含对内置 UserID 字段的引用。 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
   
-##  <a name="Grouping"></a> 对报表中的数据进行分组  
+##  <a name="grouping-data-in-the-report"></a><a name="Grouping"></a> 对报表中的数据进行分组  
  组可以组织报表中的数据，以便显示这些数据或计算聚合值。 了解如何定义组和使用组功能，有助于您设计更简洁的报表。  
   
  组表达式是在您执行以下操作时自动创建的：  
@@ -102,12 +102,12 @@ ms.locfileid: "77080167"
  当您在表、矩阵或列表中的某个单元嵌套一个数据区域时，会自动将数据的作用域设置为单元最内部的组成员。 例如，假定您将图表添加到同时位于行组和列组内的单元中。 在运行时，对该图表可用的数据将以最内部行组实例和最内部列组实例作为作用域。 有关详细信息，请参阅 [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
   
-##  <a name="Sorting"></a> 对报表中的数据进行排序  
+##  <a name="sorting-data-in-the-report"></a><a name="Sorting"></a> 对报表中的数据进行排序  
  若要控制报表中数据的排序顺序，您可以在数据集查询中对数据进行排序，或者为数据区域或组定义排序表达式。 您也可以向表和矩阵添加交互式排序按钮，以便用户能够更改行的排序顺序。  
   
  所有三种排序类型均可在同一报表中组合使用。 默认情况下，排序顺序取决于数据集查询返回数据的顺序。 排序表达式应用于数据区域和数据区域组。 交互式排序在排序表达式后应用。  
   
- 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 以下聚合函数的返回值受排序顺序影响：First、Last 和 Previous。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 聚合函数 First、Last 和 Previous 的返回值会受到排序顺序的影响。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>在数据集查询中对数据进行排序  
  在数据集查询中包括排序顺序可在为报表检索数据之前对数据进行预排序。 通过在查询中对数据进行排序，排序工作将由数据源而非报表处理器完成。  
@@ -159,13 +159,13 @@ FROM Production.Product
   
  有关详细信息，请参阅[对数据区域中的数据排序（报表生成器和 SSRS）](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)和 [Lookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。  
   
-###  <a name="Interactive"></a> 为用户添加交互式排序  
+###  <a name="adding-interactive-sorting-for-the-user"></a><a name="Interactive"></a> 为用户添加交互式排序  
  若要让用户能够更改表或矩阵中的报表数据的排序顺序，您可向列标题或组头添加交互式排序按钮。 用户可以单击该按钮以切换排序顺序。 允许用户交互的呈现格式（如 HTML）支持交互式排序。  
   
  您向 Tablix 数据区域单元中的文本框添加交互式排序按钮。 默认情况下，每个单元包含一个文本框。 在文本框属性中，可以指定要进行排序的表格或矩阵数据区域的部分（父组值、子组值或详细信息行）、排序依据以及是否对具有对等关系的其他报表项应用排序表达式。 例如，如果提供同一数据集的视图的表和图表均包含在矩形内，则它们为对等数据区域。 用户在表中切换排序顺序时，也将切换图表的排序顺序。 有关详细信息，请参阅[交互式排序（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)。  
   
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  [在滚动报表时保持标题可见（报表生成器和 SSRS）](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
  [与组一起显示组头和组尾（报表生成器和 SSRS）](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
@@ -184,14 +184,14 @@ FROM Production.Product
   
  [向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="Section"></a> 本节内容  
  [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
  [筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
   
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)  
   
-##  <a name="Related"></a> 相关章节  
+##  <a name="related-sections"></a><a name="Related"></a> 相关章节  
  [了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
   
  [创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  

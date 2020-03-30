@@ -11,16 +11,16 @@ ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d9362a41e5a48400c1b63d52b2ff89095d119d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981398"
 ---
 # <a name="getnstring-method-javalangstring"></a>getNString 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定 NCHAR、NVARCHAR 或 LONGNVARCHAR 参数的值作为 Java 编程语言中的 String 进行检索。  
+  将指定 NCHAR  、NVARCHAR  或 LONGNVARCHAR  参数的值作为 Java 编程语言中的 String 进行检索。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,9 +30,9 @@ public final java.lang.String getNString(java.lang.String parameterName)
 ```  
   
 #### <a name="parameters"></a>parameters  
- parameterName  
+ parameterName   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  AStringobject。  

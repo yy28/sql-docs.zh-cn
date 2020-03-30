@@ -10,10 +10,10 @@ helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76761801"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隐私补充
@@ -132,7 +132,7 @@ ms.locfileid: "76761801"
 - 事件名称和错误代码
 - 硬件设置和 OEM 制造商等标识
 
-Microsoft does 会检查由使用 SQL Server 的其他程序设置的应用程序名称值（示例：启用使用情况数据时，Sharepoint 或第三方打包程序在发送给 Microsoft 的系统元数据中包括此信息）。 客户不应将个人数据（如最终用户身份信息）存储在系统元数据字段中，也不应创建旨在将个人数据存储到这些字段的应用程序。 
+Microsoft 不检查其他使用 SQL Server 的程序设置的应用程序名称值（例如：Sharepoint 或第三方打包程序，并且在使用情况数据启用时将此信息包含在发送给 Microsoft 的系统元数据中）。 客户不应将个人数据（如最终用户身份信息）存储在系统元数据字段中，也不应创建旨在将个人数据存储到这些字段的应用程序。 
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 

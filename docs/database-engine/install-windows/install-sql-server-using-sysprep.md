@@ -11,17 +11,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990948"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安装 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相关的安装操作可以通过安装中心来访问。  “安装中心”的  “高级”页具有两个选项 -  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”和  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”。 [准备](#prepare) 和 [完成](#complete) 部分将详细说明安装过程。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相关的安装操作可以通过安装中心来访问。  “安装中心”的  “高级”页具有两个选项 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 的独立实例的映像准备”和 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 的已准备独立实例的映像完成”。 [准备](#prepare) 和 [完成](#complete) 部分将详细说明安装过程。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。 
   
 还可以使用命令提示符或配置文件准备和完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 有关详细信息，请参阅：  
   
@@ -34,10 +34,10 @@ ms.locfileid: "67990948"
   
 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本及硬件和软件要求的详细信息，请参阅[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 
     
-##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 群集支持  
+##  <a name="ssnoversion-sysprep-cluster-support"></a><a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 群集支持  
  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]开始，SysPrep 支持从命令行安装群集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [什么是 Sysprep？](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)。 
   
-### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集（无人参与）  
+### <a name="to-prepare-a-ssnoversion-failover-cluster-unattended"></a>准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集（无人参与）  
   
 1. 准备映像（如 [使用 SysPrep 安装 SQL Server 的注意事项](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)中所述）并通过 SysPrep 一般化捕获 Windows 映像。 以下示例准备该映像：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67990948"
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-### <a name="complete-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集（无人参与）  
+### <a name="complete-a-ssnoversion-failover-cluster-unattended"></a>完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集（无人参与）  
   
 1. 使用在拥有可用存储组的节点上的 **/ACTION=CompleteFailoverCluster** 运行 setup.exe：  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67990948"
     setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName>  /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  
     ```  
   
-### <a name="adding-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>向现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集添加节点（无人参与）  
+### <a name="adding-a-node-to-an-existing-ssnoversion-failover-cluster-unattended"></a>向现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集添加节点（无人参与）  
   
 1. 通过运行 Windows SysPrep 特殊化来部署该映像。 
   
@@ -77,25 +77,25 @@ ms.locfileid: "67990948"
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-##  <a name="prepare"></a> 准备映像  
+##  <a name="prepare-image"></a><a name="prepare"></a> 准备映像  
   
-### <a name="prepare-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的独立实例。 
+### <a name="prepare-a-stand-alone-instance-of-ssnoversion"></a>准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的独立实例。 
   
 1. 插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。 
   
-2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击  “高级”页上的  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”。 
+2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页上的** **“** 的独立实例的映像准备”。 
   
 3. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”** 。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
-4. 在“产品更新”页中，将显示最近提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新。 如果你不想包括更新，则取消选中“包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新”  复选框。 如果未发现任何产品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将不会显示该页并且自动前进到 **“安装安装程序文件”** 页。 
+4. 在“产品更新”页中，将显示最近提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新。 如果你不想包括更新，则取消选中“包括  **产品更新”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 复选框。 如果未发现任何产品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将不会显示该页并且自动前进到 **“安装安装程序文件”** 页。 
   
 5. 在“安装安装程序文件”页上，安装程序将提供下载、提取和安装这些安装程序文件的进度。 如果找到了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的更新，并且指定了包括该更新，则也将安装该更新。 
   
 6. 系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
-7. 在  “准备映像类型”页中，选择  “准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例”。 
+7. 在  “准备映像类型”页中，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“准备**  的新实例”。 
   
-     仅当计算机上存在未配置的已准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，才显示  “准备映像类型”页。 您可以选择准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例，或者将 sys prep 支持的功能添加到计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的现有已准备实例。 有关如何向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能的详细信息，请参阅 [向已准备实例添加功能](#AddFeatures)。 
+     仅当计算机上存在未配置的已准备  **实例时，才显示**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“准备映像类型”页。 您可以选择准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例，或者将 sys prep 支持的功能添加到计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的现有已准备实例。 有关如何向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能的详细信息，请参阅 [向已准备实例添加功能](#AddFeatures)。 
   
 8. 在 **“许可条款”** 页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 
   
@@ -103,7 +103,7 @@ ms.locfileid: "67990948"
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> 全文功能<br /><br /> “数据库引擎服务”<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下的<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可再发行的功能<br /><br /> 共享功能|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep{2}|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> 全文功能<br /><br /> “数据库引擎服务”<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下的<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可再发行的功能<br /><br /> 共享功能|  
   
      突出显示功能名称时，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。 
   
@@ -135,9 +135,9 @@ ms.locfileid: "67990948"
   
 18. 这将完成准备步骤。 您可以完成该映像或者按 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)中所述部署准备的映像。 
   
-##  <a name="complete"></a> 完成映像  
+##  <a name="complete-image"></a><a name="complete"></a> 完成映像  
   
-### <a name="complete-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="complete-a-prepared-instance-of-ssnoversion"></a>完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. 如果在您的计算机的映像中包括了一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，则在“开始”菜单中会看到一个相应的快捷方式。 你也可以启动安装中心，然后在  “高级”页上单击  “已准备独立实例的映像完成”。 
   
@@ -153,7 +153,7 @@ ms.locfileid: "67990948"
   
 7. 在 **“选择已准备实例”** 页上，从下拉框中选择您要完成的已准备实例。 从  “实例 ID”列表中选择未配置的实例。 
   
-     **已安装的实例：** 该网格显示所有实例，包括此计算机上的任何已准备实例。 
+     **安装的实例：** 该网格显示所有实例，包括此计算机上的任何已准备实例。 
   
 8. 在 **“查看功能”** 页上，您将看到在安装的准备步骤中包括的所选功能和组件。 如果您要向未在已准备实例中包括的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加更多功能，则必须首先完成此步骤以完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后从 **“安装中心”** 的 **“添加功能”** 上添加功能。 
   
@@ -172,7 +172,7 @@ ms.locfileid: "67990948"
   
 10. 本文中的其余工作流取决于在准备步骤中已选择的功能。 您可能不会看到所有的页面，具体取决于进行的选择。 
   
-11. 在“服务器配置 - 服务帐户”页上指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的登录帐户  。 此页上配置的实际服务取决于您选择安装的功能。 
+11. 在“服务器配置 - 服务帐户”页上指定  **服务的登录帐户**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此页上配置的实际服务取决于您选择安装的功能。 
   
      您可以为所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 您还可以指定是自动启动、手动启动还是禁用服务。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您逐个配置服务帐户，以便为每项服务提供最低权限，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将被授予完成其任务所必须具备的最低权限。 有关详细信息，请参阅 [服务器配置 - 服务帐户](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。 
   
@@ -219,19 +219,19 @@ ms.locfileid: "67990948"
   
 23. 此步骤完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例的配置并且您已完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的安装。 
   
-##  <a name="AddFeatures"></a> Add Features to a Prepared Instance  
+##  <a name="add-features-to-a-prepared-instance"></a><a name="AddFeatures"></a> Add Features to a Prepared Instance  
   
-### <a name="add-features-to-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="add-features-to-a-prepared-instance-of-ssnoversion"></a>向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. 插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。 
   
-2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能，请单击  “高级”页上的  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”。 
+2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能，请单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页上的** **“** 的独立实例的映像准备”。 
   
 3. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”** 。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 4. 在“安装程序支持文件”页，单击 **“安装”** 以安装安装程序支持文件。 
   
-5. 在  “准备映像类型”页上，选择  “向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的现有已准备实例中添加功能”选项。 从可用的已准备实例的下拉列表中，选择要将功能添加到的特定的已准备实例。 
+5. 在  “准备映像类型”页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“向**  的现有已准备实例中添加功能”选项。 从可用的已准备实例的下拉列表中，选择要将功能添加到的特定的已准备实例。 
   
 6. 在 **“功能选择”** 页上，指定要添加到指定的已准备实例的功能。 
   
@@ -251,15 +251,15 @@ ms.locfileid: "67990948"
   
 13. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。 
   
-##  <a name="RemoveFeatures"></a> 从已准备实例删除功能  
+##  <a name="remove-features-from-a-prepare-instance"></a><a name="RemoveFeatures"></a> 从已准备实例删除功能  
   
-### <a name="removing-features-from-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="removing-features-from-a-prepared-instance-of-ssnoversion"></a>从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. 若要开始卸载过程，请从 **“开始”** 菜单单击 **“控制面板”** ，然后双击 **“程序和功能”** 。 
   
 2. 双击要卸载的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，再单击 **“删除”** 。 
   
-3. 将运行安装程序支持规则以验证您的计算机配置。 单击 **“确定”** 继续。 
+3. 将运行安装程序支持规则以验证您的计算机配置。 单击“确定”以继续。  
   
 4. 在 **“选择实例”** 页中，选择要修改的已准备实例。 已准备实例的名称将显示为“未配置 PreparedInstanceID”，其中 PreparedInstanceID 是您选择的实例。 
   
@@ -273,15 +273,15 @@ ms.locfileid: "67990948"
   
 9. 在 **“完成”** 页上可以查看操作的完成状态。 单击 **“关闭”** 以退出安装向导。 
   
-##  <a name="Uninstall"></a> 卸载已准备实例  
+##  <a name="uninstalling-a-prepared-instance"></a><a name="Uninstall"></a> 卸载已准备实例  
   
-### <a name="uninstall-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="uninstall-a-prepared-instance-of-ssnoversion"></a>卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. 若要开始卸载过程，请从 **“开始”** 菜单单击 **“控制面板”** ，然后双击 **“程序和功能”** 。 
   
 2. 双击要卸载的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，再单击 **“删除”** 。 
   
-3. 将运行安装程序支持规则以验证您的计算机配置。 单击 **“确定”** 继续。 
+3. 将运行安装程序支持规则以验证您的计算机配置。 单击“确定”以继续。  
   
 4. 在 **“选择实例”** 页中，选择要修改的已准备实例。 已准备实例的名称将显示为“未配置 PreparedInstanceID”，其中 PreparedInstanceID 是您选择的实例。 
   
@@ -297,7 +297,7 @@ ms.locfileid: "67990948"
   
 10. 重复步骤 1 到 9，直到删除所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件。 
   
-##  <a name="bk_Modifying_Uninstalling"></a> 修改或卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已完成实例。 
+##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a> 修改或卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已完成实例。 
  添加或删除功能或者卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成实例的过程类似于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已安装实例的过程。 有关详细信息，请参阅以下文章：  
   
 - [向 SQL Server 实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  

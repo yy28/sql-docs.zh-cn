@@ -19,10 +19,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9166b647ec2921efb460add27ae75a00ea6cb4eb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257556"
 ---
 # <a name="view-sql-server-agent-error-log"></a>查看 SQL Server 代理错误日志
@@ -36,14 +36,14 @@ ms.locfileid: "75257556"
   
 日志文件查看器显示来自许多不同组件的日志信息。 打开日志文件查看器后，请使用 **“选择日志”** 窗格选择要显示的日志。 每个日志显示适合于该类别日志的列。 日志是否可用取决于日志文件查看器的打开方式。  
   
-## <a name="BeforeYouBegin"></a>开始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
-### <a name="Restrictions"></a>限制和局限  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制和局限  
 “对象资源管理器”仅在您拥有使用权限时才显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理节点。  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，必须将 **代理配置为使用** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定服务器角色的成员帐户的凭据，才能执行其功能。 该帐户必须拥有以下 Windows 权限：  
   
 -   以服务身份登录 (SeServiceLogonRight)  
@@ -56,7 +56,7 @@ ms.locfileid: "75257556"
   
 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户所需的 Windows 权限的详细信息，请参阅 [为 SQL Server 代理服务选择帐户](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) 和 [设置 Windows 服务帐户](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
-## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-view-the-ssnoversion-agent-error-log"></a>查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75257556"
     选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  
   
     **实例**  
-    发生事件的实例的名称。 这显示为：计算机名称\\实例名称   。  
+    发生事件的实例的名称。 这显示为：计算机名称*实例名称*\\  。  
   
     **Date**  
     显示事件的日期。  

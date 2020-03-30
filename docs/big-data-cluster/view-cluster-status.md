@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531591"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何查看大数据群集的状态 
@@ -22,7 +22,7 @@ ms.locfileid: "73531591"
 
 本文介绍如何访问服务终结点，以及如何查看 SQL Server 大数据群集组件的状态。 可以同时使用 Azure Data Studio 和 azdata  ，本文会介绍这两种方法。
 
-## <a id="datastudio"></a> 使用 Azure Data Studio
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> 使用 Azure Data Studio
 
 下载 **Azure Data Studio** 的最新[预览体验内部版本](https://aka.ms/getazuredatastudio)后，可以使用 SQL Server 大数据群集仪表板查看服务终结点以及大数据群集的状态。 下面的某些功能仅在 Azure Data Studio 的预览体验内部版本中可用。
 
@@ -55,7 +55,7 @@ ms.locfileid: "73531591"
 
 可以直接单击这些链接。 在访问这些仪表板时，将需要进行身份验证。 对于指标和日志仪表板，请提供在部署时使用环境变量设置的控制器管理员凭据 AZDATA_USERNAME 和 AZDATA_PASSWORD   。 Spark 面板将使用网关 (Knox) 凭据：与 AD 集成的群集中的 AD 标识，或如果在群集中使用基本身份验证，则为用户 root 和 AZDATA_PASSWORD   。 
 
-### <a id="notebook"></a> 群集状态笔记本
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> 群集状态笔记本
 
 1. 还可以通过启动群集状态笔记本来查看大数据群集的群集状态。 若要启动笔记本，请单击“群集状态”任务  。
 

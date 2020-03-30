@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c59785c6ba0fb20949721070008246a3a6bc49e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897432"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  每当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何用户对架构对象权限发出 GRANT、REVOKE 或 DENY 时，都会发生 Audit Schema Object GDR 事件类  。  
+  每当   中的任何用户对架构对象权限发出 GRANT、REVOKE 或 DENY 时，都会发生 Audit Schema Object GDR 事件类[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="audit-schema-object-gdr-event-class-data-columns"></a>Audit Schema Object GDR Event 事件类的数据列  
   

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285771"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 的管理和故障排除
@@ -27,7 +27,7 @@ ms.locfileid: "79285771"
   要对 Stretch Database 进行管理和故障排除，请使用本文中所述的工具和方法。  
 ## <a name="manage-local-data"></a>管理本地数据  
   
-###  <a name="LocalInfo"></a> 获取对 Stretch Database 启用的本地数据库和表的相关信息。  
+###  <a name="get-info-about-local-databases-and-tables-enabled-for-stretch-database"></a><a name="LocalInfo"></a> 获取对 Stretch Database 启用的本地数据库和表的相关信息。  
  打开目录视图 **sys.databases** 和 **sys.tables** ，查看有关已启用延伸的 SQL Server 数据库和表的信息。 有关详细信息，请参阅 [sys.databases (Transact SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 和 [sys.tables (Transact SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)。  
  
  若要查看 SQL Server 中已启用延伸的表使用的空间量，请运行以下语句。
@@ -44,17 +44,17 @@ GO
 ### <a name="check-the-filter-function-applied-to-a-table"></a>检查应用到表的筛选器函数  
  打开目录视图 **sys.remote_data_archive_tables** ，并检查 **filter_predicate** 列的值，以标识 Stretch Database 用于选择要迁移的行的函数。 如果值为 null，则整个表符合迁移条件。 有关详细信息，请参阅 [sys.remote_data_archive_tables (Transact SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
-###  <a name="Migration"></a> 检查数据迁移的状态  
+###  <a name="check-the-status-of-data-migration"></a><a name="Migration"></a> 检查数据迁移的状态  
  在 SQL Server Management Studio 中选择数据库的“任务 | 延伸 | 监视”  以便在 Stretch Database 监视器中监视数据迁移。 有关详细信息，请参阅 [数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
  或者，打开动态管理视图 **sys.dm_db_rda_migration_status** 以查看有多少批数据和数据行已迁移。  
   
-###  <a name="Firewall"></a> 数据迁移故障排除  
+###  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> 数据迁移故障排除  
  有关故障排除建议，请参阅 [数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
 ## <a name="manage-remote-data"></a>管理远程数据  
   
-###  <a name="RemoteInfo"></a> 获取 Stretch Database 使用的远程数据库和表的相关信息。  
+###  <a name="get-info-about-remote-databases-and-tables-used-by-stretch-database"></a><a name="RemoteInfo"></a> 获取 Stretch Database 使用的远程数据库和表的相关信息。  
  打开目录视图 **sys.remote_data_archive_databases** 和 **sys.remote_data_archive_tables** ，以了解有关存储已迁移数据的远程数据库和表的信息。 有关详细信息，请参阅 [sys.remote_data_archive_databases (Transact SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md) 和 [sys.remote_data_archive_tables (Transact SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)。  
  
 若要查看 Azure 中已启用延伸的表使用的空间量，请运行以下语句。
@@ -103,7 +103,7 @@ GO
  ### <a name="change-the-scope-of-queries-for-all-queries-by-all-users"></a>更改所有用户所有查询的查询作用域  
  若要更改所有用户所有查询的作用域，请运行存储的过程 **sys.sp_rda_set_query_mode**。 可缩小作用域以便仅查询本地数据、禁用所有查询或还原默认设置。 有关详细信息，请参阅 [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)。  
    
- ### <a name="queryHints"></a>更改管理员单个查询的查询作用域  
+ ### <a name="change-the-scope-of-queries-for-a-single-query-by-an-administrator"></a><a name="queryHints"></a>更改管理员单个查询的查询作用域  
  若要更改 db_owner 角色成员单个查询的作用域，请将 **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** 查询提示添加到 SELECT 语句。 REMOTE_DATA_ARCHIVE_OVERRIDE 查询提示可以具有下列值。  
  -   **LOCAL_ONLY**。 仅查询本地数据。  
    
@@ -120,7 +120,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="adminHints"></a>进行管理更新和删除  
+ ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>进行管理更新和删除  
  默认情况下，无法更新或删除已启用延伸的表中符合迁移条件的行或已迁移的行。 如果必须解决此问题，db_owner 角色的成员可在语句中添加 **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** 查询提示以运行 UPDATE 或 DELETE 操作。 REMOTE_DATA_ARCHIVE_OVERRIDE 查询提示可以具有下列值。  
  -   **LOCAL_ONLY**。 仅更新或删除本地数据。  
    

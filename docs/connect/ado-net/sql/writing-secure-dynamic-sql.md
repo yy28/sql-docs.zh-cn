@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895887"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中编写安全动态 SQL
@@ -46,7 +46,7 @@ SQL 注入是恶意用户输入 Transact-SQL 语句而不是有效输入的过�
   
 - 在多层环境中，所有数据都应该在验证之后才允许进入可信区域。  
   
-- 不接受以下来自可构造文件名的字段中的字符串：AUX、CLOCK$、COM1 到 COM8、CON、CONFIG$、LPT1 到 LPT8、NUL 和 PRN。  
+- 在可能据以构造文件名的字段中，不接受下列字符串：AUX、CLOCK$、COM1 到 COM8、CON、CONFIG$、LPT1 到 LPT8、NUL 以及 PRN。  
   
 - 将 <xref:Microsoft.Data.SqlClient.SqlParameter> 对象与存储过程和命令一起使用以提供类型检查和长度验证。  
   

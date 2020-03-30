@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
 ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78937668"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 进行开发
@@ -33,7 +33,7 @@ REST API 请求/响应对可分解为五个组件：
 * **请求 URI**，其中包括：`{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`。 虽然请求 URI 包含在请求消息标头中，但此处将单独进行调用，因为大多数语言或框架都要求将其与请求消息分开传递。
 
     * URI 方案：指示用于传输请求的协议。 例如，`http` 或 `https`。
-    * URI 主机：指定通过 REST 服务终结点的服务器域名或 IP 地址，例如 `myserver.contoso.com`。
+    * URI 主机：指定承载 REST 服务终结点的服务器域名或 IP 地址，例如 `myserver.contoso.com`。
     * 资源路径：指定资源或资源集合，其中可能包含服务在做资源抉择时使用的多个段。 例如：`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` 可用于获取 CatalogItem 的指定属性。
     * 查询字符串（可选）：提供其他简单参数，例如 API 版本或资源选择条件。
 

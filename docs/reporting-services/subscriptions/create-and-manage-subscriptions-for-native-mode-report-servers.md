@@ -12,10 +12,10 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971314"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>创建和管理本机模式报表服务器的订阅
@@ -33,7 +33,7 @@ ms.locfileid: "76971314"
   
 -   [删除订阅](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a> 针对订阅的一般要求  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_create_subscription"></a> 针对订阅的一般要求  
  本文中的内容说明如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 Web 门户在本机模式报表服务器上创建订阅。 定义订阅之后，可以在 Web 门户中通过“我的订阅”页或特定报表的“订阅”  选项卡访问订阅。  
   
  [创建和管理 SharePoint 模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) 介绍了如何使用 SharePoint 站点中的应用程序页订阅在 SharePoint 模式下运行的报表服务器上的报表。  
@@ -46,13 +46,13 @@ ms.locfileid: "76971314"
   
  本文不介绍如何创建数据驱动订阅。 有关如何创建数据驱动订阅的说明，请参阅[创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
   
-## <a name="bkmk_create_fileshare_subscription"></a> 创建文件共享订阅  
+## <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a> 创建文件共享订阅  
   
 1. 浏览[报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)。  
   
 2.  导航到所需报表。 右键单击报表，并选择“订阅”。   
   
-3.  **说明**：键入此报表订阅的描述，最多 512 个字符。  
+3.  **描述**：键入此报表订阅的描述，最多 512 个字符。  
   
 4.  **所有者**：“所有者”字段默认为当前用户，创建订阅时不能编辑。 但是，在保存订阅后，你可以更改订阅属性，包括所有者和描述。  
 
@@ -68,14 +68,14 @@ ms.locfileid: "76971314"
   
 8. 在“传递选项(Windows 文件共享)”下，指定：   
    - **文件名**：键入报表的文件名。
-   - **创建文件时添加文件扩展名**：选择此选项，将向文件名中添加三个字符的文件扩展名。 文件扩展名由所选择的报表输出格式决定。  
+   - **创建文件时添加文件扩展名**：此选项会在文件名中添加三个字符的文件扩展名。 文件扩展名由所选择的报表输出格式决定。  
    - **路径**：键入要向其中传递报表的现有文件夹的通用命名约定 (UNC) 路径（例如，\\<servername\>\<myreports>）。 在路径开头包括双反斜杠字符。 在路径末尾不要使用反斜杠。  
   
      ![文件共享订阅](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "文件共享订阅")  
   
    - **呈现格式**：为文件传递选择一种报表输出格式。 选择与要用来打开报表的桌面应用程序相对应的格式。 避免使用不以单数据流呈现报表的格式，也不要使用引入静态文件不支持的交互的格式（例如 HTML 4.0）。  
   
-   - **凭据**：选择使用文件共享帐户或特定的 Windows 用户凭据。 如果你的报表管理员尚未配置文件共享帐户，则将禁用“使用文件共享帐户”  。 有关详细信息，请参阅[订阅设置和文件共享帐户 (Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 在“用户名”和“密码”文本框中，指定访问文件共享所需的凭据，用户名的格式为 \<domain>\\\<user name>     。  
+   - **凭据**：选择使用文件共享帐户或特定的 Windows 用户凭据。 如果你的报表管理员尚未配置文件共享帐户，则将禁用“使用文件共享帐户”  。 有关详细信息，请参阅[订阅设置和文件共享帐户 (Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 在“用户名”和“密码”文本框中，指定访问文件共享所需的凭据，用户名的格式为 **domain>** **user name>** *\<* \\ *\<* 。  
   
    - **覆盖选项**：  
      - “使用较新版本覆盖现有文件”  。  
@@ -86,13 +86,13 @@ ms.locfileid: "76971314"
   
 报表作为静态文件传递。 如果报表包含交互功能（例如，指向其他行和列的链接），则这些功能不可用。  
   
-##  <a name="bkmk_create_email_subscription"></a> 创建电子邮件订阅  
+##  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a> 创建电子邮件订阅  
   
 1. 浏览[报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)。  
   
 2. 导航到所需报表。 右键单击报表，并选择“订阅”。   
   
-3. **说明**：键入此报表订阅的描述，最多 512 个字符。  
+3. **描述**：键入此报表订阅的描述，最多 512 个字符。  
   
 4.  **所有者**：“所有者”字段默认为当前用户，创建订阅时不能编辑。 但是，在保存订阅后，你可以更改订阅属性，包括所有者和描述。  
 
@@ -112,11 +112,11 @@ ms.locfileid: "76971314"
      >[!NOTE]  
      > 根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 还可以在“抄送”、“密件抄送”和“答复”文本框中键入其他电子邮件地址    。 这要求您具有管理所有订阅的权限。  
   
-   - **使用者**：默认为“在 @ExecutionTime 执行 @ReportName”。 可以对主题进行编辑，但请注意，@ReportName 和 @ExecutionTime 是“主题”字段中仅支持的两个全局变量  。  
+   - 主题：默认为“在 **执行**”@ReportName@ExecutionTime。 可以对主题进行编辑，但请注意，@ReportName 和 @ExecutionTime 是“主题”字段中仅支持的两个全局变量  。  
   
      ![电子邮件订阅](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "电子邮件订阅")  
 
-   - **包括报表**：选择此选项可嵌入或附加报表的副本。 报表的格式由所选的呈现格式决定。 如果您认为报表大小会超过为电子邮件系统定义的限制，请不要选择此选项。  
+   - **包括报表**：选择此选项可嵌入或附加报表副本。 报表的格式由所选的呈现格式决定。 如果您认为报表大小会超过为电子邮件系统定义的限制，请不要选择此选项。  
   
    - **包括链接**：选择此选项可在电子邮件正文中包括指向报表的 URL 链接。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "76971314"
   
 9. 对于参数化报表，请指定要用于此订阅的报表的参数。 这些参数可以与用于按需运行报表的参数或其他预定操作中使用的参数不同。  
   
-##  <a name="bkmk_modify_subscription"></a> 修改订阅  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a> 修改订阅  
  您可以随时修改订阅。 在修改正在处理的订阅时，如果更新的设置在传递扩展插件接收订阅数据之前就已保存到报表服务器中，则订阅将使用更新的设置。 否则，使用现有设置。  
   
  创建订阅的用户拥有该订阅。 每个用户都可以修改或删除自己所拥有的订阅。 你可以从订阅属性页中更改报表的所有者，或者以编程方式更改所有权。 有关详细信息，请参阅以下主题：  
@@ -148,7 +148,7 @@ ms.locfileid: "76971314"
 >[!NOTE]  
 > 报表服务器管理员无法从一个位置管理在给定的报表服务器上正在使用的所有单独的订阅。 但是，报表服务器管理员可以访问每个单独的订阅来进行修改或删除。  
   
-##  <a name="bkmk_delete_subscription"></a> 删除订阅  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a> 删除订阅  
 删除订阅：  
   
 1. 浏览[报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)。  

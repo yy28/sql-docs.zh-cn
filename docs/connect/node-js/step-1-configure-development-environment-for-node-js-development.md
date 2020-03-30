@@ -11,10 +11,10 @@ ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68003757"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>步骤 1：配置用于 Node.js 开发的开发环境
@@ -26,7 +26,7 @@ ms.locfileid: "68003757"
   
 1. **安装 Node.js 运行时和 npm 包管理器**  
 a. 转到 [Node.js](https://nodejs.org/en/download/)  
-b. 单击相应的 Windows 安装程序 msi 链接。   
+b.保留“数据库类型”设置，即设置为“共享”。 单击相应的 Windows 安装程序 msi 链接。   
 c. 下载后，运行 msi 来安装 Node.js  
   
 2. **打开 cmd.exe**  
@@ -78,7 +78,7 @@ c. 下载后，运行 msi 来安装 Node.js
   
 1. **安装 Node.js 运行时和 npm 包管理器**  
 a. 转到 [Node.js](https://nodejs.org/en/download/)  
-b. 单击相应的 Mac OS 安装程序链接。  
+b.保留“数据库类型”设置，即设置为“共享”。 单击相应的 Mac OS 安装程序链接。  
 c. 下载后，运行 dmg 来安装 Node.js  
   
 2. **打开终端**  

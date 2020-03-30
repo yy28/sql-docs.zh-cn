@@ -9,10 +9,10 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574735"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>表（报表生成器和 SSRS）
@@ -20,13 +20,13 @@ ms.locfileid: "65574735"
    
  可以按单个字段、多个字段或通过编写自己的表达式来对数据进行分组。 可以创建嵌套组或独立的相邻组。 若要显示分组数据的聚合值，可向这些组添加总计。 可设置行和列的格式以突出显示要强调的数据。 可以在开始时隐藏详细信息数据或分组数据，并包括明细切换以使用户能够交互选择要显示的数据量。  
   
- 若要快速开始使用表，请参阅[教程：生成基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)或[生成基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速学会使用表，请参阅[教程：创建基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)或[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   
 > [!NOTE]  
 >  您可以将表作为报表部件与报表分开发布。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
   
   
-##  <a name="AddingTable"></a> 添加表以显示详细信息数据  
+##  <a name="adding-a-table-to-display-detail-data"></a><a name="AddingTable"></a> 添加表以显示详细信息数据  
  从功能区上的“插入”选项卡向设计图面添加一个表。 您可以通过使用表或矩阵向导添加表（包括创建数据源连接和数据集以及配置表），或者基于您手动配置的表模板添加表。  
   
 > [!NOTE]  
@@ -42,7 +42,7 @@ ms.locfileid: "65574735"
   
  ![设计图面上的表模板，选中](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "设计图面上的表模板，选中")  
   
- 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行控点](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "详细信息行的 3 条平行线的行控点")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下图展示了包含下面这些字段的表数据区域：“Date”、“Order”、“Product”、“Qty”和“Line Total”。  
+ 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行控点](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "详细信息行的 3 条平行线的行控点")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下面的关系图显示了具有以下字段的表数据区域：Date、Order、Product、Qty 和 Line Total。  
   
  ![带有以粗体显示的列标题的表的设计](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "带有以粗体显示的列标题的表的设计")  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65574735"
   
  有关详细信息，请参阅[向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="AddingRowGroups"></a> 将行组添加到表  
+##  <a name="adding-row-groups-to-a-table"></a><a name="AddingRowGroups"></a> 将行组添加到表  
  正如可以将字段从“报表数据”窗格拖到单元格以显示详细信息数据一样，可以将字段拖到“分组”窗格以添加组。 对于表，可将字段拖到“行组”窗格。 在添加组后，表会自动将单元格添加到其中要显示组值的行组区域的新列中。 有关区域的详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
  下图显示了“设计”视图中具有两个嵌套行组的表。 这两个行组是通过以下方法创建的：依次将 Order 字段和 Date 字段拖到“行组”窗格并将每个组作为现有组的父组插入。 该图显示了基于日期的父组和基于订单号的子组，以及默认情况下定义的详细信息组。  
@@ -87,7 +87,7 @@ ms.locfileid: "65574735"
   
  有关详细信息，请参阅[向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="RemovingHidingRows"></a> 删除或隐藏详细信息行  
+##  <a name="removing-or-hiding-detail-rows"></a><a name="RemovingHidingRows"></a> 删除或隐藏详细信息行  
  在预览了报表中的表后，您可能会决定删除现有详细信息行。 或者可能决定按默认情况隐藏详细信息行，并允许用户在查看更多或更少详细信息之间切换，就像在明细报表中一样。  
   
  若要从表中删除详细信息行，请使用“分组”窗格。 选择详细信息组，并使用快捷菜单删除显示详细信息数据的组和行。 下图显示了按日期和订单号分组的表的设计视图，但没有详细信息行。 没有向该表添加任何总计行。  

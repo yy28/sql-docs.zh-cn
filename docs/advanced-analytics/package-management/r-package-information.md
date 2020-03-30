@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479418"
 ---
 # <a name="get-r-package-information"></a>获取 R 包信息
@@ -134,7 +134,7 @@ R 支持包括开源 R，因此可调用基本 R 函数并安装其他开源和�
 
 ## <a name="list-all-installed-r-packages"></a>列出所有已安装的 R 包
 
-以下示例在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程中使用 R 函数 `installed.packages()` 来显示已安装在当前 SQL 实例的 R_SERVICES 库中的 R 包的列表。 该脚本在 DESCRIPTION 文件中返回包名称和版本字段。
+以下示例在 `installed.packages()` 存储过程中使用 R 函数 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来显示已安装在当前 SQL 实例的 R_SERVICES 库中的 R 包的列表。 该脚本在 DESCRIPTION 文件中返回包名称和版本字段。
 
 ```sql
 EXECUTE sp_execute_external_script

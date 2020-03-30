@@ -13,10 +13,10 @@ author: MightyPen
 ms.reviewer: carlrab
 ms.author: genemi
 ms.openlocfilehash: f384e121d3b4ce0aa7ebcb380ebe5eaaa0ee3d45
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917814"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 系统要求
@@ -53,7 +53,7 @@ ms.locfileid: "76917814"
 |ODBC 驱动程序 13  | | | | | |Y| |
 |ODBC 驱动程序 11  |Y|Y|Y|Y|Y|Y|Y|
 
-如果使用的是 SQLSRV 驱动程序，[sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) 将返回有关 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 正在使用哪个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server 的信息。 如果使用的是 PDO_SQLSRV 驱动程序，可以使用 [PDO::getAttribute](../../connect/php/pdo-getattribute.md) 来发现版本。
+如果使用的是 SQLSRV 驱动程序，[sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) 将返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在使用哪个版本的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Microsoft ODBC Driver for SQL Server 的信息。 如果使用的是 PDO_SQLSRV 驱动程序，可以使用 [PDO::getAttribute](../../connect/php/pdo-getattribute.md) 来发现版本。
 
 ## <a name="sql-server"></a>SQL Server
 

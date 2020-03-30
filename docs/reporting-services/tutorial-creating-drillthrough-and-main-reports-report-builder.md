@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73637982"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
@@ -35,7 +35,7 @@ ms.locfileid: "73637982"
     
 有关一般要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="DMatrixAndDataset"></a>1.使用表或矩阵向导创建钻取报表  
+## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1.使用表或矩阵向导创建钻取报表  
 使用“表或矩阵向导”从“入门”对话框创建一个矩阵报表  。 该向导提供两种模式：报表设计模式和共享数据集设计模式。 在本教程中，您将使用报表设计模式。  
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
@@ -50,7 +50,7 @@ ms.locfileid: "73637982"
   
 3.  在右窗格中，确认已选中“表或矩阵向导”  。  
   
-## <a name="DConnection"></a>1a. 指定数据连接  
+## <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>1a. 指定数据连接  
 数据连接包含连接到外部数据源（如 Analysis Services 多维数据集或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库）所需的信息。 若要指定数据连接，可以从报表服务器使用共享数据源或创建仅在此报表中使用的嵌入数据源。 在本教程中，您将使用嵌入数据源。 若要了解有关使用共享数据源的详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 #### <a name="to-create-an-embedded-data-source"></a>创建嵌入数据源  
@@ -96,7 +96,7 @@ ms.locfileid: "73637982"
   
 14. 单击“下一步”。   
   
-## <a name="DMDXQuery"></a>1b. 创建 MDX 查询  
+## <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. 创建 MDX 查询  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
   
 #### <a name="to-create-query-filters"></a>创建查询筛选器  
@@ -149,7 +149,7 @@ ms.locfileid: "73637982"
     > [!NOTE]  
     > 该参数包含产品类别的名称。 单击主报表中的产品类别名称时，通过使用此参数将它的名称传递给钻取报表。  
   
-### <a name="DSkip"></a>创建数据集  
+### <a name="to-create-the-dataset"></a><a name="DSkip"></a>创建数据集  
   
 1.  从“Channel”维度将“Channel Name”拖到数据窗格。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "73637982"
   
 7.  单击“下一步”。   
   
-## <a name="DLayout"></a>1c. 将数据组织到组中  
+## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. 将数据组织到组中  
 在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -191,7 +191,7 @@ ms.locfileid: "73637982"
   
 6.  单击“下一步”。   
   
-## <a name="DTotals"></a>1d. 添加小计和总计  
+## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 添加小计和总计  
 创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 还可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
   
 #### <a name="to-add-subtotals-and-totals"></a>添加小计和总计  
@@ -208,7 +208,7 @@ ms.locfileid: "73637982"
   
 3.  若要预览报表，请单击“运行 (!)”  。  
   
-## <a name="DFormat"></a>2.将数据格式设置为货币格式  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2.将数据格式设置为货币格式  
 将货币格式应用到钻取报表中的销售额字段。  
   
 #### <a name="to-format-data-as-currency"></a>将数据格式设置为货币格式  
@@ -219,7 +219,7 @@ ms.locfileid: "73637982"
   
 3.  在“主文件夹”  选项卡上的“数字”  组中，单击“货币”  。  
   
-## <a name="DSparkline"></a>3.添加要在迷你图中显示销售值的列  
+## <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3.添加要在迷你图中显示销售值的列  
 报表不将销售额和销售退货额显示为货币值，而是在迷你图中显示这些值。  
   
 #### <a name="to-add-sparklines-to-columns"></a>将迷你图添加到列  
@@ -252,7 +252,7 @@ ms.locfileid: "73637982"
   
 13. 若要预览报表，请单击“运行”  。  
   
-## <a name="DReportTitle"></a>4.添加包含产品类别名称的报表标题  
+## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4.添加包含产品类别名称的报表标题  
 报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本教程中，您将使用自动放置在表体顶部的文本框。  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
@@ -279,7 +279,7 @@ ms.locfileid: "73637982"
   
 报表标题包含第一个产品类别的名称。 以后，在您将此报表作为钻取报表运行时，产品类别名称将动态更改，以反映在主报表中单击的产品类别的名称。  
   
-## <a name="DParameter"></a>5.更新参数属性  
+## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5.更新参数属性  
 默认情况下，参数是可见的，但是这对此报表不合适。 您将更新钻取报表的参数属性。  
   
 #### <a name="to-hide-a-parameter"></a>隐藏参数  
@@ -302,7 +302,7 @@ ms.locfileid: "73637982"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="DSave"></a>6.将报表保存到 SharePoint 库  
+## <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6.将报表保存到 SharePoint 库  
 可以将报表保存到 SharePoint 库、报表服务器或您的计算机。 如果将报表保存到您的计算机，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。 在本教程中，您将把报表保存到 SharePoint 库。  
   
 #### <a name="to-save-the-report"></a>保存报表  
@@ -335,7 +335,7 @@ ms.locfileid: "73637982"
   
 7.  单击“保存”  。  
   
-## <a name="MMatrixAndDataset"></a>1.使用表或矩阵向导创建主报表  
+## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1.使用表或矩阵向导创建主报表  
 使用“表或矩阵向导”从“入门”对话框创建一个矩阵报表   。  
   
 #### <a name="to-create-the-main-report"></a>创建主报表  
@@ -348,7 +348,7 @@ ms.locfileid: "73637982"
  
 2.  在“入门”  对话框中，确认已选中“新建报表”  ，然后单击“表或矩阵向导”  。  
   
-## <a name="MConnection"></a>1a. 指定数据连接  
+## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. 指定数据连接  
 您将嵌入数据源添加到主报表。  
   
 #### <a name="to-create-an-embedded-data-source"></a>创建嵌入数据源  
@@ -387,7 +387,7 @@ ms.locfileid: "73637982"
   
 14. 单击“下一步”。   
   
-## <a name="MMDXQuery"></a>1b. 创建 MDX 查询  
+## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. 创建 MDX 查询  
 接下来将创建嵌入数据集。 为此，您将使用查询设计器来创建筛选器、参数和计算成员以及数据集本身。  
   
 #### <a name="to-create-query-filters"></a>创建查询筛选器  
@@ -469,7 +469,7 @@ ms.locfileid: "73637982"
   
 8.  在“名称”  框中，键入 **Net Sales**，然后单击“确定”  。“计算成员”窗格将列出“Net Sales”  计算成员。  
   
-### <a name="MSkip"></a>创建数据集  
+### <a name="to-create-the-dataset"></a><a name="MSkip"></a>创建数据集  
   
 1.  从“Channel”维度将“Channel Name”拖到数据窗格。  
   
@@ -485,7 +485,7 @@ ms.locfileid: "73637982"
   
 6.  单击“下一步”。   
   
-## <a name="MLayout"></a>1c. 将数据组织到组中  
+## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. 将数据组织到组中  
 在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -504,7 +504,7 @@ ms.locfileid: "73637982"
   
     步骤 3 和 4 指定要在矩阵中显示的数据。  
   
-## <a name="MTotals"></a>1d. 添加小计和总计  
+## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. 添加小计和总计  
 可以在报表中显示小计和总计。 主报表中的数据作为指示器显示；在完成向导后将删除总计。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>添加小计和总计  
@@ -519,7 +519,7 @@ ms.locfileid: "73637982"
   
 3.  若要预览报表，请单击“运行”  。  
   
-## <a name="MGrandTotal"></a>2.删除总计行  
+## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2.删除总计行  
 数据值作为指示器状态显示，包括列组总计。 删除显示总计的行。  
   
 #### <a name="to-remove-the-grand-total-row"></a>删除总计行  
@@ -530,7 +530,7 @@ ms.locfileid: "73637982"
   
 3.  若要预览报表，请单击“运行”  。  
   
-## <a name="MDrillthrough"></a>3.配置用于钻取的文本框操作  
+## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3.配置用于钻取的文本框操作  
 若要启用钻取，请在主报表中指定文本框的操作。  
   
 #### <a name="to-enable-an-action"></a>启用操作  
@@ -574,7 +574,7 @@ ms.locfileid: "73637982"
   
 这些产品类别名称采用常见的链接格式（蓝色带下划线）。  
   
-## <a name="MIndicators"></a>4.使用指示器替换数值  
+## <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4.使用指示器替换数值  
 使用指示器显示“在线”和“分销商”渠道的数量和销售额的情况。  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>添加 Net QTY 值的指示器  
@@ -605,7 +605,7 @@ ms.locfileid: "73637982"
   
 6.  若要预览报表，请单击 **“运行”** 。  
   
-## <a name="MParameter"></a>5.更新参数属性  
+## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5.更新参数属性  
 默认情况下，参数是可见的，但是这对此报表不合适。 您将更新参数属性以便使参数为内部参数。  
   
 #### <a name="to-make-the-parameter-internal"></a>使参数为内部参数  
@@ -620,7 +620,7 @@ ms.locfileid: "73637982"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="MTitle"></a>6.添加报表标题  
+## <a name="6-add-a-report-title"></a><a name="MTitle"></a>6.添加报表标题  
 将标题添加到主报表。  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
@@ -635,7 +635,7 @@ ms.locfileid: "73637982"
   
 5.  若要预览报表，请单击 **“运行”** 。  
   
-## <a name="MSave"></a>7.将主报表保存到 SharePoint 库  
+## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7.将主报表保存到 SharePoint 库  
 将主报表保存到 SharePoint 库。  
   
 #### <a name="to-save-the-report"></a>保存报表  
@@ -661,7 +661,7 @@ ms.locfileid: "73637982"
   
 7.  单击“保存”  。  
   
-## <a name="MRunReports"></a>8.运行主报表和钻取报表  
+## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8.运行主报表和钻取报表  
 运行主报表，然后单击产品类别列中的值以运行钻取报表。  
   
 #### <a name="to-run-the-reports"></a>运行报表  

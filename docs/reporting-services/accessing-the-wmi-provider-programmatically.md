@@ -9,16 +9,16 @@ ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8196e045704adedbf235fcba566ba22b009536f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62704585"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>以编程方式访问 WMI 提供程序
 
 ## <a name="wmi-provider-overview"></a>WMI 提供程序概述  
- 在本主题的代码示例中，用于获取 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的相关信息的命名空间是 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 中的 System.Management  命名空间。 System.Management 命名空间提供一组托管代码类，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 应用程序可通过这些类访问和操作管理信息  。 若要详细了解如何通过 System.Management  命名空间使用 Reporting Services WMI 类，请参阅 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 中的“使用 System.Managment 访问管理信息”。  
+ 在本主题的代码示例中，用于获取 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的相关信息的命名空间是   中的 System.Management[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 命名空间。 System.Management 命名空间提供一组托管代码类， **应用程序可通过这些类访问和操作管理信息**[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 若要详细了解如何通过 System.Management  命名空间使用 Reporting Services WMI 类，请参阅 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 中的“使用 System.Managment 访问管理信息”。  
   
 ## <a name="finding-a-report-server-instance"></a>查找报表服务器实例  
  查找与您的报表服务器安装有关的信息的首选方式是枚举 WMI 实例集合。 下面的示例说明如何通过创建某一集合并循环遍历该集合以显示属性，查找每个报表服务器实例上的属性。  

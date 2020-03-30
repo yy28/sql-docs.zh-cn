@@ -11,10 +11,10 @@ ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c84e4081b9369d504d173387c6944b06d927c9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026897"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>使用含输入参数的存储过程
@@ -23,7 +23,7 @@ ms.locfileid: "69026897"
 
 可以调用包含一个或多个 IN 参数的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程，这些参数可用于向存储过程传递数据。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类，调用此类存储过程并处理其返回的数据。
 
-使用 JDBC 驱动程序调用带 IN 参数的存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 带有 IN 参数的 `call` 转义序列的语法如下所示：
+使用 JDBC 驱动程序调用带 IN 参数的存储过程时，必须结合 `call`SQLServerConnection[ 类的 ](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)prepareCall[ 方法使用 ](../../connect/jdbc/reference/sqlserverconnection-class.md) SQL 转义序列。 带有 IN 参数的 `call` 转义序列的语法如下所示：
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 

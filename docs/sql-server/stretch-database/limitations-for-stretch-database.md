@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843785"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database 的限制
@@ -26,7 +26,7 @@ ms.locfileid: "73843785"
 
   了解有关启用 Stretch 的表的限制，以及当前为表启用 Stretch 的限制。  
   
-##  <a name="Caveats"></a> 启用 Stretch 的表的限制  
+##  <a name="limitations-for-stretch-enabled-tables"></a><a name="Caveats"></a> 启用 Stretch 的表的限制  
   
 启用 Stretch 的表具有下列限制。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73843785"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引筛选不会传播至远程表。  
   
-##  <a name="Limitations"></a> 当前为表启用 Stretch 的限制  
+##  <a name="limitations-that-currently-prevent-you-from-enabling-stretch-for-a-table"></a><a name="Limitations"></a> 当前为表启用 Stretch 的限制  
    
  以下为当前阻止对表启用 Stretch 的项。  
   

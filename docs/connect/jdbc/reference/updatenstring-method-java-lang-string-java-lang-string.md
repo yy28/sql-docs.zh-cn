@@ -11,10 +11,10 @@ ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0fdc853608cf1897e97e08aac673aff78df00aef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998551"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString 方法 (java.lang.String, java.lang.String)
@@ -45,7 +45,7 @@ public void updateNString(java.lang.String columnLabel,
 ## <a name="remarks"></a>备注  
  此 updateNString 方法是由 java.sql.ResultSet 接口中的 updateNString 方法指定的。  
   
- 此方法将 Java String 传递到所选的 nchar、nvarchar(max)、ntext 和 xml 列      。 在其他数据类型列上使用此方法会引发异常。  
+ 此方法将 Java String  传递到选定 nchar  、nvarchar(max)  、ntext  和 xml  列。 在其他数据类型列上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateNString 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

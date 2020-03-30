@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844553"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用筛选器函数选择要迁移的行 (Stretch Database)
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>运行向导后添加筛选器函数  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>运行向导后添加筛选器函数  
   
 如果想要使用无法在“启用数据库延伸”向导中创建的函数  ，请退出向导，然后运行 **ALTER TABLE** 语句以指定函数。 但是，在应用函数之前，必须停止已在进行的数据迁移并取回已迁移的数据。 （有关其必要性的原因的详细信息，请参阅 [替换现有的筛选器函数](#replacePredicate)。）
   
@@ -492,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  如果此函数针对行返回非空结果，则该行符合迁移条件。  
   
-## <a name="replacePredicate"></a>替换现有的筛选器函数  
+## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>替换现有的筛选器函数  
  可以通过再次运行 **ALTER TABLE** 语句并为 **FILTER_PREDICATE** 参数指定新值来替换以前指定的筛选器函数。 例如：  
   
 ```sql  

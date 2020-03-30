@@ -11,10 +11,10 @@ ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027914"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>通过 JDBC 驱动程序管理结果集
@@ -22,9 +22,9 @@ ms.locfileid: "69027914"
 
   结果集是一个对象，表示从数据源返回的一组数据，通常是查询的结果。 结果集包含一些行和列，用于保存请求的数据元素，并使用游标对其进行导航。 结果集是可更新的，这意味着可以对其进行修改，并将修改内容传给原始数据源。 结果集还可以有多种针对基础数据源中更改的敏感度级别。  
   
- 创建语句时（即在调用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法时）确定结果集的类型。 结果集的基本作用是向 Java 应用程序提供数据库数据的可用表示形式。 通常通过针对结果集数据元素并且带类型的 getter 和 setter 方法来完成这项任务。  
+ 创建语句时（即在调用 [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 类的 [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法时）确定结果集的类型。 结果集的基本作用是向 Java 应用程序提供数据库数据的可用表示形式。 通常通过针对结果集数据元素并且带类型的 getter 和 setter 方法来完成这项任务。  
   
- 以下示例基于 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库，通过调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法创建结果集。 然后使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法显示结果集中的数据。  
+ 以下示例基于 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库，通过调用 [SQLServerStatement](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 类的 [executeQuery](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法创建结果集。 然后使用 [SQLServerResultSet](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 类的 [getString](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法显示结果集中的数据。  
   
  [!code[JDBC#ManagingResultSets1](../../connect/jdbc/codesnippet/Java/managing-result-sets-with-t_1.java)]  
   
