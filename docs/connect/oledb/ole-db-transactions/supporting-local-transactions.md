@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c0cfc1ad6ff3439efe458f97394909c919b77075
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993959"
 ---
 # <a name="supporting-local-transactions"></a>支持本地事务
@@ -39,9 +39,9 @@ ms.locfileid: "67993959"
   
 |参数|说明|  
 |---------------|-----------------|  
-| isoLevel[in]|用于该事务的隔离级别。 在本地事务中，OLE DB Driver for SQL Server 支持以下各项：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意：从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，不管是否对数据库启用了版本支持，ISOLATIONLEVEL_SNAPSHOT 对 isoLevel  参数都有效。 但是，如果用户尝试执行语句，并且未启用版本支持和/或数据库不为只读，则将发生错误。 此外，如果在连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本时将 ISOLATIONLEVEL_SNAPSHOT 指定为 isoLevel，将发生 XACT_E_ISOLATIONLEVEL 错误  。|  
+| isoLevel[in]|用于该事务的隔离级别。 在本地事务中，OLE DB Driver for SQL Server 支持以下各项：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意：从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，ISOLATIONLEVEL_SNAPSHOT 对 isoLevel 参数有效，而不管是否对数据库启用了版本支持  。 但是，如果用户尝试执行语句，并且未启用版本支持和/或数据库不为只读，则将发生错误。 此外，如果在连接到 *以前的* 版本时将 ISOLATIONLEVEL_SNAPSHOT 指定为 isoLevel，将发生 XACT_E_ISOLATIONLEVEL 错误[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。|  
 | isoFlags[in]|OLE DB Driver for SQL Server 针对任何非零值返回错误。|  
-| pOtherOptions[in]|如果不是 NULL，OLE DB Driver for SQL Server 将从该接口请求选项对象。 如果选项对象的 ulTimeout  成员不为零，则 OLE DB Driver for SQL Server 返回 XACT_E_NOTIMEOUT。 OLE DB Driver for SQL Server 忽略 szDescription  成员的值。|  
+| pOtherOptions[in]|如果不是 NULL，OLE DB Driver for SQL Server 将从该接口请求选项对象。 如果 options 对象的 ulTimeout  成员不为零，OLE DB Driver for SQL Server 返回 XACT_E_NOTIMEOUT。 OLE DB Driver for SQL Server 忽略 szDescription  成员的值。|  
 | pulTransactionLevel[out]|如果不为 NULL，OLE DB Driver for SQL Server 将返回事务的嵌套级别。|  
   
  对于本地事务，OLE DB Driver for SQL Server 按如下方式实现 ITransaction::Abort  参数。  

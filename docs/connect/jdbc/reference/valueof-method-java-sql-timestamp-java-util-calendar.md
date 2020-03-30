@@ -11,16 +11,16 @@ ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11d8f8e346fdb0f07770feec815e5aa5fe88355f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68001583"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf 方法 (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  创建一个 DateTimeOffset 对象，表示按照距 GMT（给定 java.sql.Timestamp 值以及指示偏移量的 java.util.Calendar 值）的特定偏移量的时间点。  
+  创建一个 DateTimeOffset  对象，表示按照距 GMT（给定 java.sql.Timestamp 值以及指示偏移量的 java.util.Calendar 值）的特定偏移量的时间点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,9 +34,9 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  java.sql.Timestamp值。  
   
- calendar  
+ calendar   
   
- 偏移值。  将根据 timestamp 值设置 calendar 的日期和时间组件。  
+ 偏移值。  将根据 timestamp  值设置 calendar  的日期和时间组件。  
   
 ## <a name="return-value"></a>返回值  
  返回一个 DateTimeOffset 对象，该对象表示在给定 java.util.Calendar 对象的时区由 java.sql.Timestamp 对象给定的时间点。  

@@ -10,10 +10,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
 ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246876"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>安装非英语语言版本的 SQL Server Management Studio (SSMS)
@@ -21,7 +21,7 @@ ms.locfileid: "75246876"
 SSMS 提供了多种语言，但如果系统区域设置不匹配 SSMS 语言，SSMS 安装程序将阻止在计算机上安装。
 
 > [!NOTE]
-> 本文适用于 SSMS 17.x。 对于 SSMS 18.x，已取消阻止混合语言设置，例如，现在可以在法语版 Windows 上安装 SSMS 德语版。 如果 OS 语言与 SSMS 语言不匹配，请在“工具” > “选项” > “国际设置”下设置所需语言，否则 SSMS 将显示英语用户界面    。
+> 本文适用于 SSMS 17.x。 对于 SSMS 18.x，已取消阻止混合语言设置，例如，现在可以在法语版 Windows 上安装 SSMS 德语版。 如果 OS 语言与 SSMS 语言不匹配，请在“工具” **“选项”** “国际设置”下设置所需语言，否则 SSMS 将显示英语用户界面 >    >   。
 
 以下说明因 Windows 版本而异。 下面的说明适用于 Windows 10。
 
@@ -45,7 +45,7 @@ SSMS 提供了多种语言，但如果系统区域设置不匹配 SSMS 语言，
    - 下载并安装所需的 Visual Studio 2015 Shell（独立）语言包。
 
    > [!IMPORTANT]
-   > 使用前述步骤来安装 Visual Studio 2015 Shell（独立）语言包，请勿使用“工具”   | “选项”   | “区域设置”  上的“获取其他语言”  链接。
+   > 使用前述步骤来安装 Visual Studio 2015 Shell（独立）语言包，请勿使用“工具”  **“选项”**  |  **“区域设置”**  | 上的“获取其他语言”  链接。
 
 5. 运行 SSMS 并通过以下菜单选择你想要使用的语言：
    - “工具”   | “选项”   | “区域设置” 

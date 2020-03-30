@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243763"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>连接字符串和权限概述
@@ -27,7 +27,7 @@ ms.locfileid: "75243763"
 > [!NOTE]  
 > 只有在使用 SQL Server 身份验证的情况下执行上下文和特权上下文才会不同。 如果使用 Windows 身份验证，则将对这两个连接字符串使用相同的凭据。  
   
--   执行上下文（必需）- 运行测试脚本的用户帐户。 此连接字符串应具有您预期用户会拥有的相同凭据。 这一点非常重要，因为它将确保会将适当的权限应用于您的数据库。 有关详细信息，请参阅[操作说明：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。  
+-   执行上下文（必需）- 运行测试脚本的用户帐户。 此连接字符串应具有您预期用户会拥有的相同凭据。 这一点非常重要，因为它将确保会将适当的权限应用于您的数据库。 有关详细信息，请参阅[如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。  
   
     在测试项目的 app.config 文件中，这是 `ExecutionContext` 元素。  
   

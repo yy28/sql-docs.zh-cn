@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995096"
 ---
 # <a name="metadata---parameter-and-rowset"></a>元数据 - 参数和行集
@@ -42,11 +42,11 @@ ms.locfileid: "67995096"
 |参数类型|wType |ulParamSize |bPrecision |bScale |dwFlags <br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|设置|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|设置|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|Set|  
   
  请注意，在某些情况下，值范围不是连续的。 这是因为当小数精度大于零时添加了小数点。  
   
@@ -87,11 +87,11 @@ ms.locfileid: "67995096"
 |列类型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|设置|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|设置|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|Set|  
   
  在 DBCOLUMN_FLAGS 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，而下列标志则始终为 False：  
   
@@ -121,11 +121,11 @@ ms.locfileid: "67995096"
 |参数类型|wType |ulColumnSize |bPrecision |bScale |dwFlags <br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  
+|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|设置|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|设置|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|Set|  
   
  在 dwFlags 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，而下列标志则始终为 False  ：  
   

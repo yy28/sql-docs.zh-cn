@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: a3a567d86cb70c5d6d931d631a0f744ea59d359f
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896696"
 ---
 # <a name="manipulating-data"></a>操作数据
@@ -26,7 +26,7 @@ ms.locfileid: "78896696"
 在引入多重活动结果集 (MARS) 之前，开发人员必须使用多个连接或服务器端游标来解决某些情况。 此外，如果在事务情境下使用多个连接，则需要绑定的连接（使用 sp_getbindtoken 和 sp_bindsession）   。 以下场景说明了如何使用启用了 MARS 的连接，而不是使用多个连接。  
   
 ## <a name="using-multiple-commands-with-mars"></a>将多个命令与 MARS 结合使用  
-下面的控制台应用程序演示如何使用两个包含两个 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象和一个启用了 MARS 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 对象。  
+下面的控制台应用程序演示如何使用两个包含两个 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象的 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象和一个启用了 MARS 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 对象。  
   
 ### <a name="example"></a>示例  
 该示例将打开与 AdventureWorks  数据库的单个连接。 使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象时，将创建一个 <xref:Microsoft.Data.SqlClient.SqlDataReader>。 使用阅读器时，打开第二个 <xref:Microsoft.Data.SqlClient.SqlDataReader>，使用第一个 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的数据作为第二个阅读器的 WHERE 子句的输入。  
@@ -109,7 +109,7 @@ static void Main()
 MARS 允许将连接用于读取操作和数据操作语言 (DML) 操作，其中有多个待处理操作。 此功能使应用程序无需处理连接繁忙错误。 此外，MARS 可以替换服务器端游标的用户，这通常会消耗更多资源。 最后，因为可以在单个连接上执行多个操作，所以，这些操作可以共享相同的事务上下文，不需要使用 sp_getbindtoken 和 sp_bindsession 系统存储过程   。  
   
 ### <a name="example"></a>示例  
-下面的控制台应用程序演示如何使用两个包含三个 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象和一个启用了 MARS 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:Microsoft.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:Microsoft.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录由第二个 <xref:Microsoft.Data.SqlClient.SqlDataReader> 访问。 通过执行计算来确定新的 OnOrderQty  。 然后，通过第三个命令对象来使用新值更新 ProductVendor 表  。 整个过程发生在单个事务中，该事务在结束时回滚。  
+下面的控制台应用程序演示如何使用两个包含三个 <xref:Microsoft.Data.SqlClient.SqlDataReader> 对象的 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象和一个启用了 MARS 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:Microsoft.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:Microsoft.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录由第二个 <xref:Microsoft.Data.SqlClient.SqlDataReader> 访问。 通过执行计算来确定新的 OnOrderQty  。 然后，通过第三个命令对象来使用新值更新 ProductVendor 表  。 整个过程发生在单个事务中，该事务在结束时回滚。  
   
 > [!NOTE]
 >  下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库  。 示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。 根据环境需要修改连接字符串。  

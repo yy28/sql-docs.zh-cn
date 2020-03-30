@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 099af3161e020700f172b316657885cad72c7c40
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015410"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "68015410"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  ISSAsynchStatus 公接口开对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 异步操作的支持  。 这一可选接口继承自核心 OLE DB 接口 IDBAsynchStatus  。 除了从 IDBAsynchStatus 继承的 Abort 和 GetStatus 方法外，ISSAsynchStatus 还提供一个新方法，用于在完成异步操作或发生超时前等待     。  
+  ISSAsynchStatus 公接口开对  **异步操作的支持**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 这一可选接口继承自核心 OLE DB 接口 IDBAsynchStatus  。 除了从 IDBAsynchStatus 继承的 Abort 和 GetStatus 方法外，ISSAsynchStatus 还提供一个新方法，用于在完成异步操作或发生超时前等待     。  
   
 |方法|说明|  
 |------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "68015410"
 -   **IMultipleResults::GetResult**  
   
 ## <a name="see-also"></a>另请参阅  
- [接口 (OLE DB)](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
+ [接口 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [执行异步操作](../../oledb/features/performing-asynchronous-operations.md)  
   
   

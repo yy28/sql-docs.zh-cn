@@ -13,10 +13,10 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993705"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常量 (Microsoft Drivers for PHP for SQL Server)
@@ -71,7 +71,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性是任一非负整数，表示超时时间�
 
 ### <a name="handling-date-and-time-fetches"></a>处理日期和时间提取
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 如果保留 false，默认行为是将它们作为字符串返回。 可以在连接或语句级别使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 设置此属性，但语句属性将重写相应的连接属性。 有关详细信息，请参阅[操作说明：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 如果保留 false，默认行为是将它们作为字符串返回。 可以在连接或语句级别使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 设置此属性，但语句属性将重写相应的连接属性。 有关详细信息，请参阅[如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驱动程序常量  
 以下部分将列出由 SQLSRV 驱动程序使用的常量。  
@@ -157,7 +157,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否以 [PHP DateTime](http://php
 > [!NOTE]  
 > 使用 SQLSRV_PHPTYPE_STREAM 或 SQLSRV_PHPTYPE_STRING 时，必须指定编码   。 如果未提供参数，将返回错误。  
   
-有关这些常量的详细信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)、[如何：使用 SQLSRV 驱动程序以流的形式检索字符数据](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)。  
+有关这些常量的详细信息，请参阅 [如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)， [如何：使用 SQLSRV 驱动程序以流的形式检索字符数据](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)。  
   
 ### <a name="sqltype-constants"></a>SQLTYPE 常量  
 下表列出了用于描述 SQL Server 数据类型的常量。 某些常量类似于函数，可能使用对应于精度、小数位数和/或长度的参数。  绑定参数时，应使用函数式常量。 对于类型比较，需要标准（非函数式）常量。 有关 SQL Server 数据类型的信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。 有关精度、小数位数和长度的信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  

@@ -15,10 +15,10 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006403"
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
@@ -51,7 +51,7 @@ ms.locfileid: "68006403"
  *<Database_name>*  
  向数据库镜像监视器注册的镜像数据库的名称。  
   
- \<Status>   
+ *Status>\<*  
  可能的状态及其相关图标如下所示：  
   
 |图标|状态|说明|  
@@ -82,7 +82,7 @@ ms.locfileid: "68006403"
   
  通过选择 **“警告”** 选项卡式页面，系统管理员可以查看数据库的当前警告配置。 在此，管理员可以启动 **“设置警告阈值”** 对话框，以启用并配置一个或多个警告阈值。  
   
- 在选项卡上方的横幅中，详细信息窗格将监视器上次刷新状态信息的时间显示为：“上次刷新：\<date>\<time>”   。 通常，数据库镜像监视器会在不同时间从主体和镜像服务器实例中检索状态信息。 将显示两次刷新时间中较早的时间。  
+ 在选项卡上方的横幅中，详细信息窗格将监视器上次刷新状态信息的时间显示为：“上次刷新：**date>** time>” _\<\<_ 。 通常，数据库镜像监视器会在不同时间从主体和镜像服务器实例中检索状态信息。 将显示两次刷新时间中较早的时间。  
   
 ## <a name="action-menu"></a>“操作”菜单  
  **“操作”** 菜单总是包含以下命令：  

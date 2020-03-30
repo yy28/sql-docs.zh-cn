@@ -14,10 +14,10 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259330"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
@@ -32,7 +32,7 @@ ms.locfileid: "76259330"
 > [!NOTE]  
 > HTTP.SYS 是一个操作系统组件，用于侦听网络请求并将它们路由至请求队列。 在此版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，HTTP.SYS 为报表服务器 Web 服务和 Web 门户建立和维护请求队列。 Internet Information Services (IIS) 不再用于承载或访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 若要详细了解 HTTP.SYS 功能，请参阅 [HTTP 服务器 API](https://go.microsoft.com/fwlink/?LinkId=92652)。  
   
-##  <a name="ReportingServicesURLs"></a> Reporting Services 中的 URL  
+##  <a name="urls-in-reporting-services"></a><a name="ReportingServicesURLs"></a> Reporting Services 中的 URL  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中，可以通过 URL 访问以下工具、应用程序和项：  
   
 -   报表服务器 Web 服务  
@@ -46,7 +46,7 @@ ms.locfileid: "76259330"
 > [!NOTE]  
 > 本主题不介绍如何对报表服务器中存储的特定报表进行 URL 访问。 若要详细了解如何对这些项进行 URL 访问，请参阅[使用 URL 访问来访问报表服务器项](../../reporting-services/access-report-server-items-using-url-access.md)。  
   
-##  <a name="URLreservation"></a> URL 预留和注册  
+##  <a name="url-reservation-and-registration"></a><a name="URLreservation"></a> URL 预留和注册  
  URL 预留定义了可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在 HTTP.SYS 中为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 保留一个或多个 URL，然后在服务启动时注册它们。 通过向 URL 追加参数，可以通过 Web 服务打开报表。 预留和注册功能是由 HTTP.SYS 提供。 有关详细信息，请参阅[命名空间预留、注册和路由](https://go.microsoft.com/fwlink/?LinkId=92653)。  
   
  *URL 预留*是指创建指向 Web 应用程序的 URL 端点并将其存储在 HTTP.SYS 中的过程。 HTTP.SYS 是计算机上定义的所有 URL 预留的公共存储库，它定义了一组保证 URL 预留唯一的公共规则。  
@@ -62,7 +62,7 @@ ms.locfileid: "76259330"
 |`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|此 URL 预留针对端口 80 指定了一个通配符 (+)。 这会将指定主机（在端口 80 上解析为报表服务器计算机）的任何传入请求放入报表服务器队列中。 请注意，借助此 URL 预留，可以使用任意数目的 URL 访问报表服务器。<br /><br /> 对于大多数操作系统而言，这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的默认 URL 预留。|  
 |`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|此 URL 预留指定了一个 IP 地址，与通配符 URL 预留相比，其限制性要强很多。 只能使用包含此 IP 地址的 URL 连接到报表服务器。 给定此 URL 预留，对 `https://<computername>/reportserver` 或 `https://localhost/reportserver` 的报表服务器请求将失败。|  
   
-##  <a name="DefaultURLs"></a> 默认 URL  
+##  <a name="default-urls"></a><a name="DefaultURLs"></a> 默认 URL  
  如果在默认配置中安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，安装程序将为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]保留 URL。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中定义 URL 预留时，也可以接受这些默认值。 如果安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 或安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作为命名实例，则默认 URL 将包含实例名称。  
   
 > [!IMPORTANT]  
@@ -91,13 +91,13 @@ ms.locfileid: "76259330"
 |SQL Server Express|报表服务器 Web 服务|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
 |SQL Server Express|Web 门户|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
-##  <a name="URLPermissionsAccounts"></a> 用于 Reporting Services URL 的身份验证和服务标识  
+##  <a name="authentication-and-service-identity-for-reporting-services-urls"></a><a name="URLPermissionsAccounts"></a> 用于 Reporting Services URL 的身份验证和服务标识  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留显示 URL 预留的帐户。 虚拟服务帐户用于为运行在同一实例上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序创建的所有 URL。
   
  
  因为默认安全性为 **RSWindowsNegotiate**，所以匿名访问已禁用。 对于 Intranet 访问，报表服务器 URL 使用网络计算机名称。 如果要为 Internet 连接配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，必须使用其他设置。 若要详细了解身份验证，请参阅[向报表服务器进行身份验证](../../reporting-services/security/authentication-with-the-report-server.md)。  
   
-##  <a name="URLlocalAdmin"></a> 用于本地管理的 URL  
+##  <a name="urls-for-local-administration"></a><a name="URLlocalAdmin"></a> 用于本地管理的 URL  
  如果为 URL 预留指定了强通配符或弱通配符，则可使用 `https://localhost/reportserver` 或 `https://localhost/reports`。  
   
  `https://localhost` URL 将解释为 `https://127.0.0.1`。 如果你将 URL 预留限定为计算机名称或单个 IP 地址，则除非在本地计算机上为 127.0.0.1 创建附加预留，否则将无法使用 localhost。 同样，如果您的计算机上禁用 localhost 或 127.0.0.1，也无法使用该 URL。  

@@ -11,10 +11,10 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b5e17a6b7a98101eac8e3ddbb29a8438bc10075
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75681698"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 驱动程序的 Always Encrypted API 参考
@@ -156,7 +156,7 @@ microsoft.sql.Types  类中的新类型
 
 |名称|说明|  
 |----------|-----------------|  
-|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|使用 `setObject()/updateObject()` API 方法将参数值发送到加密  列 datetime、smalldatetime、money、smallmoney、uniqueidentifier 时，将这些类型用作目标 SQL 类型。|  
+|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|使用  **API 方法将参数值发送到加密**`setObject()/updateObject()`列 datetime、smalldatetime、money、smallmoney、uniqueidentifier 时，将这些类型用作目标 SQL 类型。|  
   
   
  **SQLServerStatementColumnEncryptionSetting Enum**  

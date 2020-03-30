@@ -11,10 +11,10 @@ ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571277"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>ConfigurationSetting 方法 - RemoveSSLCertificateBinding
@@ -45,7 +45,7 @@ public void RemoveSSLCertificateBindings(string Application,
  *IPAddress*  
  应用程序的 IP 地址。  
   
- 端口  
+ 端口   
  与该绑定关联的 SSL 端口。  
   
  *lcid*  
@@ -64,7 +64,7 @@ public void RemoveSSLCertificateBindings(string Application,
  此方法可以从 rsreportserver.config 文件中删除特定的绑定，也可以选择从 HTTP.SYS 中删除特定的绑定。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

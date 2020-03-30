@@ -16,16 +16,16 @@ ms.assetid: 0bbd6842-7210-432a-bef4-e15a63f5cc96
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c9c73652c1c0b512c24e2d592323833390c7b0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953334"
 ---
 # <a name="getcatalogseparator-method-sqlserverdatabasemetadata"></a>getCatalogSeparator 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此数据库用作目录和表名之间的分隔符的字符串。  
+  检索此数据库用作目录和表名之间的分隔符的字符串  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +35,7 @@ public java.lang.String getCatalogSeparator()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个包含目录分隔符的字符串。  
+ 一个包含目录分隔符的字符串  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

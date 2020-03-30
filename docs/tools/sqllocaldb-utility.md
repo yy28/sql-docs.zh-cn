@@ -15,10 +15,10 @@ ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c829c9adce95dd1a4a84d5fd6fc7b88abdece96a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306669"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 实用工具
@@ -44,8 +44,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>参数  
- [ create   | c  ] \<instance-name>  \<instance-version>  [-s  ]  
- 新建 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 SqlLocalDB 使用由 \<instance-version> 参数指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二进制文件的版本   。 版本号以数字格式指定，至少有一个小数点。 次要版本号 (Service Pack） 是可选的。 例如，下面的两个版本号均可接受：11.0 或 11.0.1186。 必须在计算机上安装指定的版本。 如果未指定，版本号默认为 **SqlLocalDB** 实用工具的版本。 添加 -s  可启动新的 LocalDB  实例。  
+ [ create   | c  ] *instance-name>\<* *instance-version>\<* [-s  ]  
+ 新建 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 SqlLocalDB 使用由 **instance-version> 参数指定的**  二进制文件的版本[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] *\<* 。 版本号以数字格式指定，至少有一个小数点。 次要版本号 (Service Pack） 是可选的。 例如，下面的两个版本号均可接受：11.0 或 11.0.1186。 必须在计算机上安装指定的版本。 如果未指定，版本号默认为 **SqlLocalDB** 实用工具的版本。 添加 -s  可启动新的 LocalDB  实例。  
   
  [ **共享** | **h** ]  
  使用指定的共享名称共享指定的 **LocalDB** 私有实例。 如果省略该用户 SID 或帐户名称，则默认为当前用户。  
@@ -65,7 +65,7 @@ SqlLocalDB.exe
  [ **info** | **i** ] [ *\<instance-name>* ]  
  列出当前用户拥有的所有 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 实例。  
   
- \<instance-name> 返回指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]LocalDB 实例的名称、版本、状态（正在运行或已停止）、上次启动时间，以及 LocalDB 的本地管道名称    。  
+ *instance-name> 返回指定的 \<LocalDB 实例的名称、版本、状态（正在运行或已停止）、上次启动时间，以及 LocalDB 的本地管道名称*[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]   。  
   
  [ **trace** | **t** ] **on** | **off**  
  **trace on** 为当前用户启用针对 **SqlLocalDB** API 调用的跟踪。 **trace off** 禁用跟踪。  

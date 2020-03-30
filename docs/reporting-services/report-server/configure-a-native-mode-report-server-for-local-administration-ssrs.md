@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080895"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "77080895"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -57,19 +57,19 @@ ms.locfileid: "77080895"
   
 -   [其他信息](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a> 配置更改概述  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a> 配置更改概述  
  下面的配置更改对服务器进行配置，以便您可以使用标准用户权限管理报表服务器内容和操作：  
   
 -   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 添加到受信任站点。 默认情况下，在上列操作系统上运行的 Internet Explorer 是以 **“保护模式”** 运行的，此功能可阻止浏览器请求到达运行在同一计算机上的高级别进程。 通过将报表服务器应用程序添加为受信任站点，可以禁用这些应用程序的保护模式。  
   
 -   创建角色分配，授予您（报表服务器管理员）管理内容和操作的权限而无需使用 Internet Explorer 中的 **“以管理员的身份运行”** 功能。 通过为您的 Windows 用户帐户创建角色分配，并通过显式角色分配替换 Reporting Services 创建的预定义的内置角色分配，您将获得对报表服务器的访问权限（包括内容管理员和系统管理员权限）。  
   
-##  <a name="bkmk_configure_local_server"></a> 配置本地报表服务器和 Web 门户管理  
+##  <a name="to-configure-local-report-server-and-web-portal-administration"></a><a name="bkmk_configure_local_server"></a> 配置本地报表服务器和 Web 门户管理  
  如果您浏览到本地报表服务器并且看到如下错误，请完成本节中的配置步骤：  
   
 -   用户 `'Domain\[user name]`' 没有必需的权限。 请验证授予了足够的权限并且解决了 Windows 用户帐户控制(UAC)限制问题。  
   
-###  <a name="bkmk_site_settings"></a> 浏览器中“受信任的站点”设置  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a> 浏览器中“受信任的站点”设置  
   
 1.  使用“以管理员的身份运行”权限打开一个浏览器窗口。 从“开始”菜单上，右键单击 Internet Explorer，然后选择“以管理员的身份运行”。     
   
@@ -95,7 +95,7 @@ ms.locfileid: "77080895"
   
 12. 选择“确定”  。  
   
-###  <a name="bkmk_configure_folder_settings"></a> Web 门户文件夹设置  
+###  <a name="web-portal-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Web 门户文件夹设置  
   
 1.  在 Web 门户的主页上，单击“管理文件夹”。   
   
@@ -107,7 +107,7 @@ ms.locfileid: "77080895"
   
 6.  选择“确定”  。  
   
-###  <a name="bkmk_configure_site_settings"></a> Web 门户网站设置  
+###  <a name="web-portal-site-settings"></a><a name="bkmk_configure_site_settings"></a> Web 门户网站设置  
   
 1.  使用管理权限打开浏览器并浏览到 Web 门户 `https://<server name>/reports`。  
   
@@ -129,12 +129,12 @@ ms.locfileid: "77080895"
   
 8. 重新在 Internet Explorer 中打开 Web 门户，但不使用“以管理员的身份运行”  。  
   
-##  <a name="bkmk_configure_ssms"></a> 为本地报表服务器管理配置 SQL Server Management Studio (SSMS)  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a> 为本地报表服务器管理配置 SQL Server Management Studio (SSMS)  
  默认情况下，您不能访问在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的所有报表服务器属性，除非您使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
  **配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色属性和角色分配，以便您无需每次都使用提升的权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   从“开始”菜单，右键单击“Microsoft SQL Server [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]”，然后单击“以管理员身份运行”。     
+-   从“开始”菜单，右键单击“Microsoft SQL Server **”，然后单击“以管理员身份运行”。** **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**   
   
 -   连接到您的本地 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "77080895"
   
  现在，在您打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并且没有明确选择 **“以管理员身份运行”** 时，您有权访问报表服务器属性。  
   
-##  <a name="bkmk_configure_ssdt"></a> 配置 SQL Server Data Tools (SSDT) 以便发布到本地报表服务器  
+##  <a name="to-configure-sql-server-data-tools-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a> 配置 SQL Server Data Tools (SSDT) 以便发布到本地报表服务器  
  如果您在本主题的第一节中列出的操作系统之一上安装了 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ，并且希望 SSDT 与本地本机模式报表服务器交互，您将会遇到权限错误，除非您使用提升的权限打开 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或者配置报表服务角色。 例如，如果您没有足够的权限，将遇到如下问题：  
   
 -   在您尝试将报表项部署到本地报表服务器时，您将在 **“错误列表”** 窗口中看到如下错误消息：  
@@ -171,7 +171,7 @@ ms.locfileid: "77080895"
   
 -   请参阅本主题中前面的 [Web 门户文件夹设置](#bkmk_configure_folder_settings)和 [Web 门户网站设置](#bkmk_configure_site_settings)部分。  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> 其他信息  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a> 其他信息  
  与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理相关的一个附加的常见配置步骤是在 Windows 防火墙中打开端口 80，以便允许访问报表服务器计算机。 有关说明，请参阅 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
 ## <a name="see-also"></a>另请参阅  

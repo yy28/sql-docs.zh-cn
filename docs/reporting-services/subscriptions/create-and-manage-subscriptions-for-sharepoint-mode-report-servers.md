@@ -13,10 +13,10 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578350"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>创建和管理 SharePoint 模式报表服务器的订阅
@@ -48,7 +48,7 @@ ms.locfileid: "65578350"
   
 -   [删除订阅](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> 针对订阅的一般要求  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> 针对订阅的一般要求  
  若要创建订阅，报表必须使用已存储凭据，并且您必须拥有查看该报表和创建警报的权限。  
   
  在创建订阅时，可以选择输出文件格式。 并不是每个报表在每种格式下都能正常显示。 在订阅中选择格式之前，请打开报表并将其导出为不同格式以验证是否像预期的那样显示。  
@@ -64,7 +64,7 @@ ms.locfileid: "65578350"
   
  为订阅选择的输出格式基于在报表服务器上安装的呈现扩展插件。 您只能选择报表服务器上的呈现扩展插件所支持的输出格式。  
   
-###  <a name="bkmk_tosharepoint_library"></a> 创建订阅以便将报表传递到 SharePoint 库  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> 创建订阅以便将报表传递到 SharePoint 库  
   
 1.  浏览到包含报表的 SharePoint 库。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65578350"
   
 10. 在 **“参数”** 中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 如果所选报表不包含参数，则“参数”部分在此页上不可见。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> 为共享文件夹传递创建订阅  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> 为共享文件夹传递创建订阅  
   
 1.  浏览到包含报表的 SharePoint 库。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65578350"
   
 12. 在 **“参数”** 中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
-###  <a name="bkmk_subscription_for_email"></a> 为报表服务器电子邮件传递创建订阅  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> 为报表服务器电子邮件传递创建订阅  
   
 1.  浏览到包含报表的 SharePoint 库。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "65578350"
   
 10. 在 **“参数”** 中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
-###  <a name="bkmk_to_modify_subscription"></a> 删除或修改订阅  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> 删除或修改订阅  
   
 1.  浏览到包含报表的 SharePoint 库。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "65578350"
   
 3.  每个订阅都按照传递类型进行标识。 单击订阅类型，以便查看和更改现有属性。  
   
-###  <a name="bkmk_to_delete_subscription"></a> 删除订阅  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> 删除订阅  
   
 1.  浏览到包含报表的 SharePoint 库。  
   

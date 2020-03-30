@@ -14,10 +14,10 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286381"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
@@ -42,11 +42,11 @@ ms.locfileid: "79286381"
   
 -   通过制定报表处理计划，并指定哪些报表按需运行，哪些报表应从缓存加载，从而均衡服务器上的报表处理需求。  
   
--   通过使用以下两个预定义的角色提供执行管理任务的权限：系统管理员  和内容管理员  。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。  
+-   通过使用以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。  
   
 用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 Web 门户。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 Web 门户用于向用户授予对报表服务器项和操作的访问权限，用于查看和使用报表以及其他内容类型，并用于查看和使用所有共享项和报表分发功能。 Web 门户是更新后的站点，提供了已弃用报表管理器的许多功能。 有关详细信息，请参阅 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
-##  <a name="bkmk_ReportServerItems"></a> 报表服务器项  
+##  <a name="report-server-items"></a><a name="bkmk_ReportServerItems"></a> 报表服务器项  
  报表服务器项包括报表、共享数据源、共享数据库、报表部件、资源（存储在报表服务器上但不由报表服务器处理的项）及文件夹。 项可以依赖其他项，例如，一个报表可以依赖它所引用的共享数据源。 如果您移动一个依赖项，报表服务器会自动更新引用信息。  
   
  您可以将报表服务器项移动到报表服务器文件夹层次结构中的不同位置。 移动项时，所有属性（包括安全设置）也随之移至新的位置。 移动文件夹时，文件夹中的所有项也随之移动。  
@@ -60,7 +60,7 @@ ms.locfileid: "79286381"
 
  并非所有使用的项都可以移动。 不能移动与报表相关联的项，例如订阅或报表历史记录。 这些项随其关联报表一起移动。 同样，也不能移动文件夹层次结构之外的项（如共享计划）。 不具备相应权限时不能移动项。 移动项的权限在你为相关项在角色分配中选择了以下任务时传递：“管理报表”、“管理文件夹”和“管理数据源”。  
   
-##  <a name="bkmk_Folders"></a> 文件夹  
+##  <a name="folders"></a><a name="bkmk_Folders"></a> 文件夹  
  文件夹层次结构用于对报表服务器存储和管理的项进行寻址。  默认情况下，文件夹结构由名为“主文件夹”的根节点和支持可选的“我的报表”功能的保留文件夹组成。 其他文件夹是用户定义的。 如果您需要对多个项授予同一级别的访问权限，则报表服务器文件夹将非常有用。 对文件夹设置的权限可以由文件夹中的项继承到该文件夹中的子文件夹。 例如，您可以在主文件夹下创建一系列文件夹，将组权限分配给每个文件夹，然后让组成员根据需要再组文件夹下自定义文件夹。  
   
  如果使用浏览器直接连接到报表服务器，文件夹结构的根节点就是报表服务器虚拟目录的名称。 从根节点中，您可以根据需要创建、修改和删除文件夹以组织报表服务器内容。 您可以向文件夹添加内容、在文件夹之间移动项、修改文件夹名或位置，还可以删除不再需要的文件夹。  
@@ -115,7 +115,7 @@ ms.locfileid: "79286381"
   
  项在文件夹中的可见性取决于角色分配（即查看项的权限）以及对文件夹有效的查看选项这两个方面。 在 Web 门户中，可以将“内容”页设置为列表视图或详细信息视图。 在某些情况下，可能会在列表视图中隐藏特定报表或项。 在删除某个文件夹的内容之前，请确保先在详细信息视图中查看该文件夹。  
   
-##  <a name="bkmk_Resources"></a> Resources  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Resources  
  资源是指存储在报表服务器上但不由报表服务器处理的托管项。 通常，资源为报表用户提供外部内容。 例如描述报表中所使用业务规则的 .jpg 文件、包含空间数据的 ESRI 形状文件或 HTML 文件中的图像。 JPG、SHP 或 HTML 文件存储在报表服务器上，但报表服务器会将文件直接传递到浏览器，而不会首先对其进行处理。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)以及[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)中的“向地图添加数据”部分。  
   
 ### <a name="adding-and-viewing-a-resource"></a>添加和查看资源  
@@ -144,7 +144,7 @@ ms.locfileid: "79286381"
   
  有关详细信息，请参阅[更新资源（Web 门户）](../../reporting-services/report-server/update-a-resource-report-manager.md)。  
   
-##  <a name="bkmk_MyReports"></a> 我的报表  
+##  <a name="my-reports"></a><a name="bkmk_MyReports"></a> 我的报表  
  “我的报表”文件夹是使用有效域帐户登录到报表服务器中的用户的个人工作区。 此专用文件夹为制作中的报表、不准备大范围分发的报表或为特定需要定制的报表提供了存储区域。 您不能限制“我的报表”文件夹中存储的项数量或大小，也不能将“我的报表”文件夹配置为在多个用户间共享。  
   
  从技术角度上讲，“我的报表”可以将每个用户看到的虚拟文件夹的名称（“我的报表”）映射到“用户文件夹”文件夹以及基于用户名的唯一子文件夹。 在用户访问自己的“我的报表”文件夹时，该用户实际上要重定向到位于“用户文件夹”下其自己的子文件夹。 每个子文件夹为用户添加到其“我的报表”文件夹中的报表和项提供了存储区。 在 Web 门户中，不会在根级别处看到“我的报表”。 需要深化到“用户”文件夹。  
@@ -162,8 +162,8 @@ ms.locfileid: "79286381"
 |（空格）|[ ]|Firstname Lastname  将变为 Firstname[ ]Lastname |  
 |\（反斜杠）|替换为一个空格字符|DomainName\Username  将变为 DomainName Username |  
 |@（@ 符号）|[at]|username  @hotmail.com 将变为 username  [at]hotmail.com|  
-|&（与号）|[amp]|username@  company&  company.com  将变为 username[at]company[amp]company.com   |  
-|$（美元符号）|[dollar]|User $Name   将变为 User[ ][dollar]Name  |  
+|&（与号）|[amp]|username  @company  &company.com  将变为 username[at]company[amp]company.com   |  
+|$（美元符号）|[dollar]|User*Name* $  将变为 User[ ][dollar]Name  |  
   
  “我的报表”功能是可选的。 安装报表服务器时，默认情况下将禁用“我的报表”功能。 有关启用此功能的详细信息，请参阅 [启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)。 有关详细信息，请参阅 [保护我的报表](../../reporting-services/security/secure-my-reports.md)。  
   

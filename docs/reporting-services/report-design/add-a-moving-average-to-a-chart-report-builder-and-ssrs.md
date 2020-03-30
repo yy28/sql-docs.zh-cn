@@ -9,10 +9,10 @@ ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7d125bdd5fd23273a9601405c99b1908d57dd6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080712"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>向图表添加移动平均线（报表生成器和 SSRS）
@@ -22,7 +22,7 @@ ms.locfileid: "77080712"
   
  移动平均值公式是技术分析中最常用的价格指标。 包括平均值、中值和标准偏差在内的许多其他公式也可以从图表的序列中派生。 指定移动平均值时，每个公式可能有一个或多个必须指定的参数。  
  
- [教程：向报表添加柱形图（报表生成器）](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)逐步介绍了如何向图表添加移动平均（若要先通过示例数据进行尝试的话）。
+ [教程：向报表添加柱形图（报表生成器）](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)介绍如何向图表添加移动平均线（如果想先通过示例数据尝试此操作）。
   
  在设计模式下添加移动平均值公式时，添加的行序列只会显示为占位符。 该图表将在报表处理期间计算每个公式的数据点。  
   

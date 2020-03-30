@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531975"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>执行 SQL Server 大数据群集的脱机部署
@@ -55,7 +55,7 @@ ms.locfileid: "73531975"
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> 大数据群集容器映像
+### <a name="big-data-cluster-container-images"></a><a id="images"></a> 大数据群集容器映像
 
 脱机安装需要以下大数据群集容器映像：
 - **mssql-service-proxy**
@@ -85,7 +85,7 @@ ms.locfileid: "73531975"
 - **mssql-ssis-app-runtime**
 
 
-## <a id="automated"></a> 自动化脚本
+## <a name="automated-script"></a><a id="automated"></a> 自动化脚本
 
 可以使用自动化 Python 脚本，该脚本将自动拉取所有必需的容器映像，并将其推送到专用存储库中。
 
@@ -120,7 +120,7 @@ ms.locfileid: "73531975"
 
 大数据群集部署需要多种工具，包括 Python、 **和 Kubectl**`azdata`  。 通过下列步骤在脱机服务器上安装这些工具。
 
-### <a id="python"></a> 脱机安装 python
+### <a name="install-python-offline"></a><a id="python"></a> 脱机安装 python
 
 1. 在具有 Internet 访问权限的计算机上，下载以下包含 Python 的压缩文件之一：
 
@@ -138,7 +138,7 @@ ms.locfileid: "73531975"
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a> 脱机安装 azdata
+### <a name="install-azdata-offline"></a><a id="azdata"></a> 脱机安装 azdata
 
 1. 在具有 Internet 连接和 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的计算机上运行以下命令，将所有 `azdata` 包下载到当前文件夹。
 
@@ -154,7 +154,7 @@ ms.locfileid: "73531975"
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> 脱机安装 Kubectl
+### <a name="install-kubectl-offline"></a><a id="kubectl"></a> 脱机安装 Kubectl
 
 若要将 Kubectl 安装到脱机计算机，请使用以下步骤  。
 

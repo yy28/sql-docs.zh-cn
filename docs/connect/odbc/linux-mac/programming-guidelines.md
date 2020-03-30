@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285861"
 ---
 # <a name="programming-guidelines"></a>编程指南
@@ -22,10 +22,10 @@ ms.locfileid: "79285861"
 
 macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的编程功能建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 的基础之上。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 建立在 Windows 数据访问组件中的 ODBC（[ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkID=45250)）的基础之上。  
 
-通过在包含 unixODBC 标头（`sql.h`、`sqlext.h`、`sqltypes.h` 和 `sqlucode.h`）后包含 `/usr/local/include/msodbcsql.h`，ODBC 应用程序可以使用多重活动结果集 (MARS) 和其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定功能。 然后，使用与在 Windows ODBC 应用程序中将使用的相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定项符号名称。
+通过在包含 unixODBC 标头（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、`/usr/local/include/msodbcsql.h`、`sql.h` 和 `sqlext.h`）后包含 `sqltypes.h`，ODBC 应用程序可以使用多重活动结果集 (MARS) 和其他 `sqlucode.h` 特定功能。 然后，使用与在 Windows ODBC 应用程序中将使用的相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定项符号名称。
 
 ## <a name="available-features"></a>可用功能  
-在使用 macOS 和 Linux 上的 ODBC 驱动程序时，用于 ODBC ([ SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 文档的以下各个部分均有效：  
+在使用 macOS 和 Linux 上的 ODBC 驱动程序时，用于 ODBC ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server Native Client (ODBC)[) 的 ](https://go.microsoft.com/fwlink/?LinkID=134151) Native Client 文档的以下各个部分均有效：  
 
 -   [与 SQL Server 通信 (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
 -   [连接和查询超时支持](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
@@ -75,7 +75,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 对于 ODBC Driver 17，支持以下一种字符集/编码中的 SQLCHAR 数据：
 
 > [!NOTE]  
-> 由于 `musl` 和 `glibc` 中存在 `iconv` 差异，许多区域设置在 Alpine Linux 上不受支持。
+> 由于 `iconv` 和 `musl` 中存在 `glibc` 差异，许多区域设置在 Alpine Linux 上不受支持。
 >
 > 有关详细信息，请参阅[与 glibc 的功能差异](https://wiki.musl-libc.org/functional-differences-from-glibc.html)
 
@@ -106,7 +106,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 |ISO-8859-13|拉丁语 - 7|
 |ISO-8859-15|拉丁语 - 9|
 
-连接后，驱动程序将检测加载它的进程的当前区域设置。 如果驱动程序使用上述一种编码，则驱动程序会将该编码用于 SQLCHAR（窄字符）数据；否则，默认使用 UTF-8。 默认情况下，由于所有进程都在“C”区域设置中启动（并因此导致驱动程序默认为 UTF-8），如果应用程序需要使用上述一种编码，则它应在连接前使用 setlocale 函数设置适当的区域设置：可显式指定所需的区域设置，或通过使用空字符串（例如，`setlocale(LC_ALL, "")`）来使用环境的区域设置  。
+连接后，驱动程序将检测加载它的进程的当前区域设置。 如果驱动程序使用上述一种编码，则驱动程序会将该编码用于 SQLCHAR（窄字符）数据；否则，默认使用 UTF-8。 默认情况下，由于所有进程都在“C”区域设置中启动（并因此导致驱动程序默认为 UTF-8），如果应用程序需要使用上述一种编码，则它应在连接前使用 setlocale 函数设置适当的区域设置：可显式指定所需的区域设置，或通过使用空字符串（例如， **）来使用环境的区域设置**`setlocale(LC_ALL, "")`。
 
 因此，在编码为 UTF-8 的典型 Linux 或 Mac 环境中，从 ODBC Driver 13 或 13.1 升级的 ODBC Driver 17 用户将不会察觉到任何差异。 但是，通过 `setlocale()` 使用上述列表中非 UTF-8 编码的应用程序需要对传入/传出驱动程序的数据使用该编码，而不是 UTF-8。
 
@@ -122,13 +122,13 @@ Windows 与 Linux 和 macOS 上的几个版本的 iconv 库之间存在一些编
 
 在 ODBC 驱动程序 13 和 13.1 中，当在 SQLPutData 缓冲区上拆分 UTF-8 多字节字符或 UTF-16 代理项时，这会导致数据损坏。 使用用于流式传输不会在部分字符编码中结束的 SQLPutData 的缓冲区。 ODBC Driver 17 消除了这一限制。
 
-## <a name="bkmk-openssl"></a>OpenSSL
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
 从版本 17.4 开始，驱动程序将动态加载 OpenSSL，从而使其可以在具有版本 1.0 或 1.1 的系统上运行，而不需要单独的驱动程序文件。 当存在多个版本的 OpenSSL 时，驱动程序将尝试加载最新版本。 该驱动程序当前支持 OpenSSL 1.0.x 和 1.1.x
 
 > [!NOTE]  
 > 如果链接到使用驱动程序（或其组件之一）的应用程序或动态加载不同版本的 OpenSSL，则可能会发生潜在冲突。 如果系统上存在多个版本的 OpenSSL，并且应用程序使用 OpenSSL，则强烈建议你格外谨慎，以确保应用程序和驱动程序加载的版本不匹配，因为这些错误可能会破坏内存，从而损坏内存，因此，不一定会以明显或一致的方式表现出来。
 
-## <a name="bkmk-alpine"></a>Alpine Linux
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
 在撰写本文时，MUSL 中的默认堆栈大小为 128K，足以满足基本的 ODBC 驱动程序功能，但是根据应用程序执行的操作，超过此限制并不困难，尤其是从多个线程调用驱动程序的情况。 建议使用 `-Wl,-z,stack-size=<VALUE IN BYTES>` 编译 Alpine Linux 上的 ODBC 应用程序，以增加堆栈大小。 作为参考，大多数 GLIBC 系统上的默认堆栈大小为 2MB。
 
 ## <a name="additional-notes"></a>其他说明  

@@ -15,17 +15,17 @@ ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 112db971dd632b5114c8a05f9642b740335de03f
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198544"
 ---
 # <a name="supplying-web-service-method-arguments"></a>提供 Web 服务方法参数
   报表服务器 Web 服务方法通过 HTTP 上的 SOAP 向位于指定 URL 处的服务发送请求。 此服务接收请求，对其进行处理，然后返回响应。 这些请求和响应采用 XML 文档形式。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 在某些情况下，Web 服务方法可能具有可选输入参数。 即使 Web 服务方法的某个输入参数为可选，也仍必须包含该参数并将参数值设置为 null（在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为“Nothing”）   。 将参数值设置为 null 后，可将 SOAP 请求中该参数的元素值设置为 null   。  
+ 在某些情况下，Web 服务方法可能具有可选输入参数。 即使 Web 服务方法的某个输入参数为可选，也仍必须包含该参数并将参数值设置为 null（在  **中为“Nothing”）**  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]。 将参数值设置为 null 后，可将 SOAP 请求中该参数的元素值设置为 null   。  
   
  以下示例使用 <xref:ReportService2010.ReportingService2010.CreateFolder%2A> 方法在 Sales 文件夹中创建名为 Product Sales 的新文件夹。 通过为文件夹属性提供 null 值，将不会为该文件夹提供用户特定的属性  ：  
   

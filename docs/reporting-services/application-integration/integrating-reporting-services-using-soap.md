@@ -17,17 +17,17 @@ ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c19676b59b2de393f7d68a6660ec33db50c29e09
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74796968"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>使用 SOAP 集成 Reporting Services
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API 提供了多个 Web 服务终结点，用于开发自定义报表解决方案。 这些端点目前分为两个类别：管理和执行。 管理功能通过 <xref:ReportService2005>、<xref:ReportService2006> 和 <xref:ReportService2010> 端点公开。 <xref:ReportService2005> 端点用于管理配置为本机模式的报表服务器，而 <xref:ReportService2006> 端点用于管理配置为 SharePoint 集成模式的报表服务器。 <xref:ReportService2010> 合并了 <xref:ReportService2005> 和 <xref:ReportService2006> 的功能，可以管理配置为本机模式或 SharePoint 集成模式的报表服务器。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中不推荐使用 <xref:ReportService2005> 和 <xref:ReportService2006> 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
+>  在 <xref:ReportService2005> 中不推荐使用 <xref:ReportService2006> 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
   
  执行功能通过 <xref:ReportExecution2005> 端点公开，当将报表服务器配置为本机模式或 SharePoint 集成模式时使用它。 以下主题说明如何使用这些端点在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows、SharePoint 和 Web 应用程序中开发报表解决方案。  
   

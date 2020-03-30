@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241569"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>如何：配置 SQL Server 单元测试执行
@@ -32,7 +32,7 @@ ms.locfileid: "75241569"
     > [!NOTE]  
     > 测试不在解决方案文件夹中运行，而是在本地硬盘上的一个单独的文件夹中运行。 虽然您可配置测试部署的各个方面，但通常不需要为单元测试配置它们。 有关测试部署的更多信息，请参见[运行测试](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)。  
   
-## <a name="SpecifyConnectionStrings"></a>指定连接字符串  
+## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>指定连接字符串  
   
 #### <a name="to-specify-database-connection-strings"></a>指定数据库连接字符串  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75241569"
   
 4.  重新生成测试项目以应用配置更改。  
   
-## <a name="DeployingDBSchema"></a>部署数据库架构  
+## <a name="deploy-a-database-schema"></a><a name="DeployingDBSchema"></a>部署数据库架构  
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>将数据库项目的架构部署到数据库  
   

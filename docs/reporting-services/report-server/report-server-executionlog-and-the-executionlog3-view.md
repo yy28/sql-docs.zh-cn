@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65619691"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>报表服务器 ExecutionLog 和 ExecutionLog3 视图
@@ -23,7 +23,7 @@ ms.locfileid: "65619691"
   
  配置为 SharePoint 模式的报表服务器也可以利用 SharePoint ULS 日志。 有关详细信息，请参阅 [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> 查看日志信息  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> 查看日志信息  
  报表服务器执行日志将报表执行情况的有关数据记录在内部数据库表中。 表中的信息可从 SQL Server 视图获得。  
   
  报表执行日志存储于默认名为 **ReportServer**的报表服务器数据库中。 SQL 视图提供执行日志信息。 “2”和“3”视图已在最近的版本中添加，并且包含新字段或者所包含字段的名称比以前版本更友好。 较旧的视图仍保留在产品中，这样，依赖于它们的自定义应用程序将不会受到影响。 如果您不依赖于较旧的视图，例如 ExecutionLog，则建议您使用最新视图 ExecutionLog**3**。  
@@ -42,7 +42,7 @@ ms.locfileid: "65619691"
   
 -   [日志字段 (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> 针对 SharePoint 模式报表服务器的配置设置  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> 针对 SharePoint 模式报表服务器的配置设置  
  您可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的系统设置启用或禁用报表执行日志记录。  
   
  默认情况下，日志条目保留 60 天。 超过此日期的条目将于每日凌晨 2:00 删 除。 对于成熟的安装，在任何给定时间都只保留 60 天的信息。  
@@ -69,7 +69,7 @@ ms.locfileid: "65619691"
   
 2.  将 **ExecutionLogLevel** 更改为 **verbose**。 该字段是文本输入字段，其两个可能的值是 **verbose** 和 **normal**。  
   
-##  <a name="bkmk_native"></a> 针对本机模式报表服务器的配置设置  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> 针对本机模式报表服务器的配置设置  
  从 SQL Server Management Studio 的“服务器属性”页，您可以启用或禁用报表执行日志记录。 **EnableExecutionLogging** 是高级属性。  
   
  默认情况下，日志条目保留 60 天。 超过此日期的条目将于每日凌晨 2:00 删 除。 对于成熟的安装，在任何给定时间都只保留 60 天的信息。  
@@ -96,7 +96,7 @@ ms.locfileid: "65619691"
   
 2.  在“用户定义”部分中，将 ExecutionLogLevel 更改为 verbose    。 该字段是文本输入字段，其两个可能的值是 **verbose** 和 **normal**。  
   
-##  <a name="bkmk_executionlog3"></a> 日志字段 (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> 日志字段 (ExecutionLog3)  
  此视图在基于 XML 的 **AdditionalInfo** 列中添加了其他性能诊断节点。 AdditionalInfo 列包含 1 对多的其他字段的 XML 结构信息。 下面是一个示例 Transact SQL 语句，从视图 ExecutionLog3 检索行。 该示例假定报表服务器数据库名为 **ReportServer**：  
   
 ```  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RowCount|查询返回的结果行数。|  
 |AdditionalInfo|包含与执行有关的附加信息的 XML 属性包。 对于每一行，内容可以不同。|  
   
-##  <a name="bkmk_additionalinfo"></a> AdditionalInfo 字段  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> AdditionalInfo 字段  
  AdditionalInfo 字段是包含与执行有关的其他信息的 XML 属性包或结构。 对于日志中的每一行，内容可以不同。  
   
  下面显示标准日志记录和详细日志记录模式下 AddtionalInfo 字段的内容示例：  
@@ -307,7 +307,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> 日志字段 (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> 日志字段 (ExecutionLog2)  
  此视图添加了几个新字段并且重命名了其他几个字段。 下面是一个示例 Transact SQL 语句，从视图 ExecutionLog2 检索行。 该示例假定报表服务器数据库名为 **ReportServer**：  
   
 ```  
@@ -338,7 +338,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|查询返回的结果行数。|  
 |AdditionalInfo|包含与执行有关的附加信息的 XML 属性包。|  
   
-##  <a name="bkmk_executionlog"></a> 日志字段 (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> 日志字段 (ExecutionLog)  
  下面是一个示例 Transact SQL 语句，从视图 ExecutionLog 检索行。 该示例假定报表服务器数据库名为 **ReportServer**：  
   
 ```  

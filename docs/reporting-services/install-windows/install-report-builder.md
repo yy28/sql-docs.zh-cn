@@ -9,10 +9,10 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971387"
 ---
 # <a name="install-report-builder"></a>安装报表生成器
@@ -31,7 +31,7 @@ ms.locfileid: "76971387"
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
- 可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。 有关信息，请参阅 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
+ 可以从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 门户或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有关信息，请参阅 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -50,9 +50,9 @@ ms.locfileid: "76971387"
   
 ## <a name="system-requirements"></a>系统要求
   
- 请参阅 Microsoft 下载中心上 [报表生成器下载页](https://go.microsoft.com/fwlink/?LinkID=734968) 的 **“系统要求”** 部分。
+ 请参阅 Microsoft 下载中心上 **报表生成器下载页** 的 [“系统要求”](https://go.microsoft.com/fwlink/?LinkID=734968)部分。
   
-##  <a name="download"></a> 从下载站点安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+##  <a name="to-install-ssrbnoversion-from-the-download-site"></a><a name="download"></a> 从下载站点安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  在 [Microsoft 下载中心的报表生成器页上](https://go.microsoft.com/fwlink/?LinkID=734968) ，单击“下载”  。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "76971387"
 4.  在 **“默认的目标服务器”** 页上，如果目标报表服务器的 URL 与默认 URL 不同，则可选择提供前者。 单击“下一步”。   
   
     > [!NOTE]  
-    >  如果计划在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 连接到某个报表服务器时使用它，则此时提供该报表服务器的 URL 将会非常方便。 从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中的“选项”对话框也可以执行相同操作  。  
+    >  如果计划在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 连接到某个报表服务器时使用它，则此时提供该报表服务器的 URL 将会非常方便。 从  **中的“选项”对话框也可以执行相同操作**[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。  
   
-5.  单击“安装”以完成 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的安装  。  
+5.  单击“安装”以完成  **的安装**[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。  
   
 ## <a name="to-install-ssrbnoversion-from-a-share"></a>从共享安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76971387"
   
 ## <a name="to-install-ssrbnoversion-from-the-command-line"></a>从命令行安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 
 
- 还可以执行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的命令行安装，并提供参数以自定义安装。 除了标准 MSI 内部参数以外，还可以使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 提供的自定义参数：RBINSTALLDIR 和 REPORTSERVERURL。 RBINSTALLDIR 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的根安装文件夹。 REPORTSERVERURL 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 用于在服务器上保存报表的默认报表服务器。  
+ 还可以执行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的命令行安装，并提供参数以自定义安装。 除了标准的 MSI 内部参数以外，还可以使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 提供的自定义参数：RBINSTALLDIR 和 REPORTSERVERURL。 RBINSTALLDIR 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的根安装文件夹。 REPORTSERVERURL 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 用于在服务器上保存报表的默认报表服务器。  
   
  如果要进行根本没有用户界面交互的完全静默安装，请指定 **/quiet** 选项。 根据设计，quiet 选项标志会隐藏安装错误。 因此，建议在使用 quiet 选项时包括 **/l** 选项，该选项指定进行日志记录。   
   
@@ -99,7 +99,7 @@ ms.locfileid: "76971387"
   
      `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
   
-     专门用来安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的两个选项是：RBINSTALLDIR 和 REPORTSERVERURL。 不需要在命令行中包含这些参数。 以下为基准命令：  
+     安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的两个特定选项为：RBINSTALLDIR 和 REPORTSERVERURL。 不需要在命令行中包含这些参数。 以下为基准命令：  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -107,13 +107,13 @@ ms.locfileid: "76971387"
   
 ## <a name="set-ssrbnoversion-defaults"></a>设置 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 默认值  
   
--   安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 后，可以设置一些默认选项。 单击“文件” > “选项”   。  
+-   安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 后，可以设置一些默认选项。 单击“文件” **“选项”**  >   。  
   
      设置默认 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或者 SharePoint 站点最有用。 有关详细信息，请参阅 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)。  
   
 -   单击“报表生成器”  。  
   
-     如果未在现有服务器列表中看到报表服务器，请关闭“打开报表”对话框，并单击 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 底部的“连接”，以连接到服务器   。  
+     如果未在现有服务器列表中看到报表服务器，请关闭“打开报表”对话框，并单击  **底部的“连接”，以连接到服务器**  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)   

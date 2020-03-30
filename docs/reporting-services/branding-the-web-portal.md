@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72251909"
 ---
 # <a name="branding-the-web-portal"></a>设置 Web 门户的品牌
@@ -75,7 +75,7 @@ LESS 样式表中包含了引用预定义 LESS 变量的块，如下所示。
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-经过处理的输出会查看“\@primaryButtonBg  变量，并确保它映射到了名为“primary”  的 json 属性（在此示例中是 #009900）。 这样才能输出正确的 CSS。  
+经过处理的输出会查看“**primaryButtonBg\@** 变量，并确保它映射到了名为“primary”  的 json 属性（在此示例中是 #009900）。 这样才能输出正确的 CSS。  
   
     .btn-primary {   
         color:#ffffff;   

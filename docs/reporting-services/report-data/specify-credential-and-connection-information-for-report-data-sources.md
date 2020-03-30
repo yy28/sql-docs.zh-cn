@@ -28,10 +28,10 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244555"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
@@ -147,7 +147,7 @@ ms.locfileid: "75244555"
 ## <a name="user-name-and-password-login"></a>使用用户名和密码登录  
  选择 **“使用此用户名和密码”** 时，必须提供用户名和密码才能访问数据源。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，凭据针对的可能是数据库登录。 凭据将传递到数据源用于身份验证。  
   
-##  <a name="DataSourceConfigurationConnections"></a> 数据源配置和网络连接  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> 数据源配置和网络连接  
  下表显示了如何针对特定的凭据类型和数据处理扩展插件组合建立连接。 如果要使用自定义数据处理扩展插件，请参阅 [指定用于自定义数据处理扩展插件的连接](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md)。  
   
 |类型 |**网络连接上下文**|**数据源类型**<br /><br /> **（SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase）**|  

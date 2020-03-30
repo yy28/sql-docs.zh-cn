@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090598"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
@@ -40,9 +40,9 @@ ms.locfileid: "79090598"
   
 ## <a name="typically-used-sqlcmd-options"></a>常用 sqlcmd 选项  
   
--   服务器选项 (-S  )，用于标识 sqlcmd  连接到的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
+-   服务器选项 (-S  )，用于标识 sqlcmd[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到的   的实例。  
   
--   身份验证选项（-E、-U 和 -P），用于指定 sqlcmd 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所使用的凭据     。 **注意：** -E  选项为默认选项，无需指定。  
+-   身份验证选项（-E、-U 和 -P），用于指定 sqlcmd 连接到  **实例所使用的凭据**    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **注意：** -E 选项为默认选项，无需指定  。  
   
 -   输入选项（-Q、-q 和 -i），用于标识 sqlcmd 输入的位置     。  
   

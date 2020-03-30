@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 26e97354d54cb65578bcbb35d2c96fb6914270d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015198"
 ---
 # <a name="stored-procedures---calling"></a>存储过程 - 调用
@@ -95,7 +95,7 @@ ms.locfileid: "68015198"
   
  使用 ODBC CALL 转义序列调用过程的常用语法是：  
   
- {[?=  ]call  procedure\_name  [(  [parameter  ][,  [parameter  ]]...)  ]}  
+ {[?=  ]call  procedure_name\__ [(  [parameter  ][,  [parameter  ]]...)  ]}  
   
  例如：  
   

@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499560"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
@@ -22,12 +22,12 @@ ms.locfileid: "66499560"
 
 该报表按地区对信息进行分组，并且显示该地区的销售经理的姓名以及详细和汇总销售信息。 从使用列表数据区域作为自由格式报表的基础开始，然后添加具有图像的装饰性面板、插入数据的静态文本、用于显示详细信息的表以及可选的用于显示汇总信息的饼图和柱形图。  
   
-完成本教程的估计时间：20 分钟。  
+完成本教程的预计学时：20 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="BlankReport"></a>1.创建空白报表、数据源和数据集  
+## <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1.创建空白报表、数据源和数据集  
   
 > [!NOTE]  
 > 在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
@@ -46,15 +46,15 @@ ms.locfileid: "66499560"
   
 ### <a name="to-create-a-new-data-source"></a>创建新数据源  
   
-1.  在“报表数据”窗格中，单击“新建” > “数据源”   。  
+1.  在“报表数据”窗格中，单击“新建” **“数据源”**  >   。  
   
-2.  在“名称”  框中键入：ListDataSource   
+2.  在 **“名称”** 框中，键入： **ListDataSource**。  
   
 3.  单击 **“使用我的报表中嵌入的连接”** 。  
   
-4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”  框中键入：数据源 = \<servername>   
+4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = **servername>** **\<**  
   
-    \<servername>（例如，Report001）指定安装了 SQL Server Database Engine 的实例的计算机  。 因为此报表的数据不是从 SQL Server 数据库中提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库仅用于对查询进行分析。  
+    **servername>（例如，Report001）指定安装了 SQL Server Database Engine 的实例的计算机\<** 。 因为此报表的数据不是从 SQL Server 数据库中提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库仅用于对查询进行分析。  
   
 5.  单击 **“凭据”** ，然后输入连接至 SQL Server 数据库引擎实例所需的凭据。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "66499560"
   
 ### <a name="to-create-a-new-dataset"></a>新建数据集  
   
-1.  在“报表数据”窗格中，单击“新建” > “数据集”   。  
+1.  在“报表数据”窗格中，单击“新建” **“数据集”**  >   。  
   
-2.  在“名称”  框中键入：ListDataset  。  
+2.  在“名称”框中，键入：ListDataset   。  
   
 3.  单击“使用在我的报表中嵌入的数据集”  ，然后验证数据源是否为 **ListDataSource**。  
   
@@ -115,14 +115,14 @@ ms.locfileid: "66499560"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="List"></a>2.添加并配置列表  
+## <a name="2-add-and-configure-a-list"></a><a name="List"></a>2.添加并配置列表  
 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，列表数据区域是创建自由格式报表的理想工具。 它以及表和矩阵均基于 *tablix* 数据区域。 有关详细信息，请参阅 [创建带列表的发票和表单](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
 将使用一个列表在格式类似新闻稿的报表中显示销售区域的销售信息。 这些信息按地区分组。 您将添加一个按地区对数据进行分组的新行组，然后删除内置的“详细信息”行组。  
   
 ### <a name="to-add-a-list"></a>添加列表  
   
-1.  在“插入”选项卡 >“数据区域” > “列表”上    。 
+1.  在“插入”选项卡 >“数据区域” **“列表”上**   >   。 
 
 2. 在表体（标题和页脚区域之间）内单击，然后拖动生成列表框。 将列表框设为 7 英寸高，6.25 英寸宽。 若要获取确切大小，请在“位置”下的“属性”窗格中，键入“宽度”和“高度”属性的值     。
   
@@ -149,7 +149,7 @@ ms.locfileid: "66499560"
   
     ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
-2.  在“分组依据”列表中，选择 `[Territory].`   
+2.  在“分组依据”列表中，选择  `[Territory].`  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -167,7 +167,7 @@ ms.locfileid: "66499560"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Graphics"></a>3.添加图形元素  
+## <a name="3-add-graphic-elements"></a><a name="Graphics"></a>3.添加图形元素  
 列表数据区域的好处之一是，可以将矩形和文本框之类的报表项添加到任何地方，而不会被限制为表格布局。 您将通过添加图形（用颜色填充的矩形）增强报表的外观。  
   
 ### <a name="to-add-graphic-elements-to-the-report"></a>向报表添加图形元素  
@@ -190,7 +190,7 @@ ms.locfileid: "66499560"
   
 ![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
-## <a name="Text"></a>4.添加自由格式的文本  
+## <a name="4-add-free-form-text"></a><a name="Text"></a>4.添加自由格式的文本  
 可以添加文本框，用于显示在每个报表页上都重复的静态文本，以及数据字段。  
   
 ### <a name="to-add-text-to-the-report"></a>向报表添加文本  
@@ -199,7 +199,7 @@ ms.locfileid: "66499560"
   
 2.  在“插入”选项卡 >“文本框”上   。 在列表左上角的之前添加的矩形内部单击，通过拖动将文本框设为约 3.45 英寸宽，5 英寸高。  
   
-3.  将光标置于文本框中，然后键入：Newsletter for  。 在“for”一词后包括一个空格，以将文本与将要在下一步中添加的字段分隔开来。   
+3.  将光标置于文本框中，然后键入 **Newsletter for** 。 在“for”一词后包括一个空格，以将文本与将要在下一步中添加的字段分隔开来。   
   
     ![添加新闻稿标题文本](../reporting-services/media/tutorial-newsletterfor.png "添加新闻稿标题文本")  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66499560"
     *  “20 磅”  。
     *  “番茄色”  。  
   
-9. 将光标置于你在步骤 3 中键入的文本之下，然后键入：Hello，在单词后面有一个空格，用于分隔将在下一步中添加的文本和字段  。  
+9. 将光标置于步骤 3 中键入的文本下方，然后键入 **Hello** 并在该词后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来。  
  
 10. 将“ `[FullName]` ”字段从“报表数据”窗格的“ListDataSet”拖到文本框中，将它放在“Hello ”后面，然后键入一个逗号 (,)。  
    
@@ -244,7 +244,7 @@ ms.locfileid: "66499560"
       *  “10 磅”  。
       *  “黑色”  。  
  
-20. 将光标放在文本框中的无意义文本的下方，然后键入：Congratulations on your total sales of，在文本后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来  。 
+20. 将光标置于文本框内无意义文本的下方，然后键入 **Congratulations on your total sales of**并在文本后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来。 
   
 21. 将“Sales”字段拖到文本框中，放在之前步骤中键入的文本后面，然后键入一个感叹号 (!)。  
 
@@ -282,14 +282,14 @@ ms.locfileid: "66499560"
   
 ![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
-## <a name="Table"></a>5.添加一个表以显示销售详细信息  
+## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5.添加一个表以显示销售详细信息  
 使用新建表和矩阵向导可以将表添加到自由格式的报表。 完成向导后，您将手动添加一个合计行。  
   
 ### <a name="to-add-a-table"></a>添加表  
   
-1.  在“插入”选项卡上，依次单击“数据区域”区域 >“表” > “表向导”     。  
+1.  在“插入”选项卡上，依次单击“数据区域”区域 >“表” **“表向导”**    >   。  
   
-2.  在“选择数据集”页上，单击“ListDataset” > “下一步”    。  
+2.  在“选择数据集”页上，单击“ListDataset” **“下一步”**   >   。  
   
 4.  在“排列字段”页上，将“Product”字段从“可用字段”拖到“值”中    。  
   
@@ -310,7 +310,7 @@ ms.locfileid: "66499560"
     > [!NOTE]  
     > 确保该表位于列表框和灰色矩形内部。  
   
-12. 选中该表，在“行组”窗格中右键单击“详细信息” > “添加总计” > “之后”     。  
+12. 选中该表，在“行组”窗格中右键单击“详细信息” **“添加总计”** “之后”   >    >   。  
   
     ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
   
@@ -328,7 +328,7 @@ ms.locfileid: "66499560"
   
 ![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
    
-## <a name="Save"></a>6.保存报表  
+## <a name="6-save-the-report"></a><a name="Save"></a>6.保存报表  
 您可以将报表保存到报表服务器、SharePoint 库或本地计算机。  
   
 在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  
@@ -345,7 +345,7 @@ ms.locfileid: "66499560"
   
 4.  在 **“名称”** 中，用 **SalesInformationByTerritory**替换默认名称。  
   
-5.  单击“ **保存**”。  
+5.  单击“保存”  。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -357,16 +357,16 @@ ms.locfileid: "66499560"
   
 3.  在 **“名称”** 中，用 **SalesInformationByTerritory**替换默认名称。  
   
-4.  单击“ **保存**”。  
+4.  单击“保存”  。  
   
-## <a name="Line"></a>7.（可选）添加线条以便分隔报表区域  
+## <a name="7-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>7.（可选）添加线条以便分隔报表区域  
 添加线条可以分隔报表的可编辑区域和详细信息区域。  
   
 ### <a name="to-add-a-line"></a>添加线条  
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  在“插入”选项卡上，单击“报表项” > “线条”    。  
+2.  在“插入”选项卡上，单击“报表项” **“线条”**   >   。  
   
 3.  在第 4 课中添加的文本框下方画一条线。  
   
@@ -374,14 +374,14 @@ ms.locfileid: "66499560"
      * “宽度”：选择“3 磅”   。
      * “颜色”  选择“番茄色”  。  
   
-## <a name="Visualization"></a>8.（可选）添加汇总数据可视化  
+## <a name="8-optional-add-summary-data-visualizations"></a><a name="Visualization"></a>8.（可选）添加汇总数据可视化  
 矩形有助于控制报表的呈现方式。 将饼图和柱形图放置于矩形内，可以确保报表以您所需的方式呈现。  
   
 ### <a name="to-add-a-rectangle"></a>添加矩形  
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  在“插入”选项卡上，单击“报表项” >  “矩形”    。 将列表框内的矩形拖到表的右侧，将矩形设为约 2.25 英寸宽，7.9 英寸高。  
+2.  在“插入”选项卡上，单击“报表项” **“矩形”**   >    。 将列表框内的矩形拖到表的右侧，将矩形设为约 2.25 英寸宽，7.9 英寸高。  
   
 3.  选中新矩形，在“属性”窗格中，将 **边框颜色设为浅灰色**、 **边框样式设为纯色**以及 **边框宽度设为 2 磅**。 
 
@@ -389,11 +389,11 @@ ms.locfileid: "66499560"
   
 ## <a name="to-add-a-pie-chart"></a>添加饼图  
   
-1.  在“插入”选项卡上，单击“数据可视化” > “图表” > “图表向导”     。  
+1.  在“插入”选项卡上，单击“数据可视化” **“图表”** “图表向导”   >    >   。  
   
-2.  在“选择数据集”页上，单击“ListDataset” > “下一步”    。  
+2.  在“选择数据集”页上，单击“ListDataset” **“下一步”**   >   。  
   
-3.  单击“饼图” > “下一步”   。  
+3.  单击“饼图” **“下一步”**  >   。  
   
 4.  在“排列图表字段”页上，将“Product”拖到“类别”中  。  
   
@@ -405,7 +405,7 @@ ms.locfileid: "66499560"
   
 9. 将图表拖至该矩形内。  
    
-10. 选择图表标题，然后键入：Product Quantities Sold  。  
+10. 选择图表标题，然后键入 **Product Quantities Sold**。  
   
 12. 在“开始”选项卡的“字体”上，对标题进行以下设置   ：
     * 字体  为 Segoe UI Semibold  。
@@ -424,7 +424,7 @@ ms.locfileid: "66499560"
   
 ## <a name="to-add-a-column-chart"></a>添加柱形图  
   
-1.  在“插入”选项卡上，单击“数据可视化” > “图表” > “图表向导”     。  
+1.  在“插入”选项卡上，单击“数据可视化” **“图表”** “图表向导”   >    >   。  
   
 2.  在“选择数据集”页上，单击“ListDataset”，然后单击“下一步”    。  
   
@@ -444,7 +444,7 @@ ms.locfileid: "66499560"
   
 9. 将图表拖至该矩形内的饼图之下。  
    
-10. 选择图表标题，然后键入：Product Sales  。  
+10. 选择图表标题，然后键入 **Product Sales**。  
   
 12. 在“开始”选项卡的“字体”上，对标题进行以下设置   ：
     * 字体  为 Segoe UI Semibold  。
@@ -458,7 +458,7 @@ ms.locfileid: "66499560"
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. 选择图表轴，然后在“开始”选项卡上单击“数字” > “货币”    。
+12. 选择图表轴，然后在“开始”选项卡上单击“数字” **“货币”**   >   。
 
 13. 选择“减少小数位数”  两次，以便数字仅显示美元，而不显示美分。      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>确认图表位于矩形内  
@@ -486,7 +486,7 @@ ms.locfileid: "66499560"
   
 1.  选择饼图，按下 Ctrl 键，然后选择柱形图。  
   
-2.  选中两个图表，然后右键单击“布局” > “使宽度相同”   。  
+2.  选中两个图表，然后右键单击“布局” **“使宽度相同”**  >   。  
   
     > [!NOTE]  
     > 你首先单击的项决定所有选定项的宽度。  

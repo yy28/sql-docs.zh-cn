@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579002"
 ---
 # <a name="manage-a-running-process"></a>管理运行中的进程
@@ -64,7 +64,7 @@ ms.locfileid: "65579002"
   
 -   [以编程方式管理作业](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a> 查看和取消作业（本机模式）  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> 查看和取消作业（本机模式）  
  可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 查看或取消报表服务器上正在运行的作业。 您必须刷新页面，才能检索当前正在运行的作业的列表或从报表服务器数据库中获取最新的作业状态信息。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器之后，您可以打开作业文件夹以查看该报表服务器计算机上当前正在处理的报表的列表。 在“作业属性”页上显示了每个作业的状态信息。 打开“取消报表服务器作业”对话框可以查看所有作业的状态信息。  
   
  可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 查看或取消报表服务器上正在运行的作业。 您必须刷新页面，才能检索当前正在运行的作业的列表或从报表服务器数据库中获取最新的作业状态信息。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器之后，您可以打开作业文件夹以查看该报表服务器计算机上当前正在处理的报表的列表。 在“作业属性”页上显示了每个作业的状态信息。 打开“取消报表服务器作业”对话框可以查看所有作业的状态信息。  
@@ -98,7 +98,7 @@ ms.locfileid: "65579002"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>配置检索作业状态的频率设置  
  正在运行的作业存储在报表服务器的临时数据库中。 您可以修改 RSReportServer.config 文件中的配置设置，以控制报表服务器扫描正在进行的作业的频率，以及正在运行的作业的状态在多长时间间隔后从“新”更改为“正在运行”。 **RunningRequestsDbCycle** 设置指定报表服务器扫描正在运行的进程的频率。 默认情况下，每隔 60 秒记录一次状态信息。 **RunningRequestsAge** 设置指定作业的状态从“新”更改为“正在运行”的时间间隔。  
   
-##  <a name="bkmk_sharepoint"></a> 查看和取消作业（SharePoint 模式）  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 查看和取消作业（SharePoint 模式）  
  使用 SharePoint 管理中心为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序完成 SharePoint 模式部署中作业的管理。  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>在 SharePoint 模式下管理作业  
@@ -113,7 +113,7 @@ ms.locfileid: "65579002"
   
 5.  或单击您的作业的框，然后单击 **“删除”** 以取消作业。 删除作业并不会删除订阅。  
   
-##  <a name="bkmk_programmatically"></a> 以编程方式管理作业  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> 以编程方式管理作业  
  您可以通过编程方式或使用脚本来管理作业。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ListJobs%2A>、 <xref:ReportService2010.ReportingService2010.CancelJob%2A>。  
   
 ## <a name="see-also"></a>另请参阅  

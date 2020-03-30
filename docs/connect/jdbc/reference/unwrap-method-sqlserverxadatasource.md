@@ -11,10 +11,10 @@ ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67986046"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>unwrap 方法 (SQLServerXADataSource)
@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  应用程序可能需要访问特定于 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的 JDBC API 扩展。 如果类公开供应商扩展，则 unwrap 方法支持对此对象扩展的公共类取消包装。  
   
- [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 类扩展了 [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 类，而后者则是从 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 类扩展而来的。 调用此方法时，对象会取消对以下类的包装：[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 和 [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
+ [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 类扩展了 [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 类，而后者则是从 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 类扩展而来的。 调用此方法时，对象会取消对下列类的包装：[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 和 [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
   
  有关详细信息，请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   

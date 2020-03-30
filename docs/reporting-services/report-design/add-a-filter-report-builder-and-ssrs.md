@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080754"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>添加筛选器（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "77080754"
   
 1.  在 **“设计”** 视图中打开报表。  
   
-2.  在设计图面上选择数据区域，然后右键单击“\<data region>属性”   。 对于仪表，选择 **“仪表面板属性”** 。 此时将打开“\<data region>属性”   对话框。  
+2.  在设计图面上选择数据区域，然后右键单击“_data region>属性”\<_  。 对于仪表，选择 **“仪表面板属性”** 。 此时将打开“_data region>属性”\<_  对话框。  
   
     > [!NOTE]  
     >  在 Tablix 数据区域上，右键单击角部单元格或行或列的控点，然后单击“Tablix 属性”  。  

@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 39e83bab2e5a159d97b3b5bdd0ef5feaa69f43c5
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897106"
 ---
 # <a name="getting-started-with-the-sqlclient-driver"></a>SqlClient 驱动程序入门
@@ -24,6 +24,6 @@ ms.locfileid: "78897106"
 
 * [步骤 1：配置用于 ADO.NET 开发的开发环境](step-1-configure-development-environment-ado-net-development.md)  
 * [步骤 2：创建用于 ADO.NET 开发的 SQL 数据库](step-2-create-sql-database-ado-net-development.md)  
-* [步骤 3：使用 ADO.NET 连接到 SQL 的概念证明](step-3-connect-sql-ado-net.md)  
-* [步骤 4：使用 ADO.NET 弹性连接到 SQL](step-4-connect-resiliently-sql-ado-net.md)  
+* [步骤 3：使用 ADO.NET 连接到 SQL 的概念验证](step-3-connect-sql-ado-net.md)  
+* [步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接](step-4-connect-resiliently-sql-ado-net.md)  
 

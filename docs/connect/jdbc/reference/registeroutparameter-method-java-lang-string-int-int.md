@@ -16,10 +16,10 @@ ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 134fcc223486971bb8249f1313c84ce969308626
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975928"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>registerOutParameter 方法 (java.lang.String, int, int)
@@ -39,7 +39,7 @@ public void registerOutParameter(java.lang.String s,
 #### <a name="parameters"></a>parameters  
  *s*  
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *sqlType*  
   
@@ -47,7 +47,7 @@ public void registerOutParameter(java.lang.String s,
   
  *scale*  
   
- 一个 int 值，此值指示要放在小数点右边的位数。  
+ 一个 int 值，此值指示要放在小数点右边的位数  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

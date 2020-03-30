@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256724"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页
@@ -46,7 +46,7 @@ ms.locfileid: "77256724"
 
     ![添加报表查看器 Web 部件。](media/sharepoint-report-viewer-web-part.png)
 
-    最初可能遇到错误。 出现错误的原因是，默认报表服务器 URL 设置为 https://localhost  且可能在该位置不可用。
+    最初可能遇到错误。 出现错误的原因是，默认报表服务器 URL 设置为 *https://localhost* 且可能在该位置不可用。
 
 ## <a name="configure-the-report-viewer-web-part"></a>配置报表查看器 Web 部件
 
@@ -56,7 +56,7 @@ ms.locfileid: "77256724"
 
     ![编辑 Web 部件下拉列表中的网页。](media/sharepoint-edit-web-part.png)
 
-2. 为承载报表的报表服务器输入“报表服务器 URL”  。 URL 看起来应类似于 https://myrsserver/reportserver  。
+2. 为承载报表的报表服务器输入“报表服务器 URL”  。 URL 看起来应类似于 *https://myrsserver/reportserver* 。
 
 3. 输入想要在 Web 部件中显示的报表的路径和名称。 这看起来应类似于 /AdventureWorks Sample Reports/Company Sales  。 在此示例中，报表“公司销售额”  位于名为 AdventureWorks 示例报表  的文件夹中。
 

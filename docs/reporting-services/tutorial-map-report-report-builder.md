@@ -9,10 +9,10 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041455"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
@@ -27,16 +27,16 @@ ms.locfileid: "63041455"
 在本教程中，将生成一个地图报表，该报表显示了纽约州各县内的商店位置。  
    
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何转到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-完成本教程的估计时间：30 分钟。  
+本教程的预计学时：30 分钟。  
   
 ## <a name="requirements"></a>要求  
 对于本教程，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅 [计划地图报表支持](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
 
 有关其他要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Map"></a>1.通过地图向导使用多边形层创建地图  
+## <a name="1-create-a-map-with-a-polygon-layer-from-the-map-wizard"></a><a name="Map"></a>1.通过地图向导使用多边形层创建地图  
 在本部分中，从地图库向报表中添加地图。 该地图具有一个层，此层显示了纽约州中的各个县。 各县的形状为根据地图库中的地图内嵌入的空间数据得出的多边形。  
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>使用地图向导在新报表中添加地图  
@@ -108,7 +108,7 @@ ms.locfileid: "63041455"
   
 并不显示地图图例和色阶，因为没有任何与各县关联的分析数据。 稍后，您将在本教程中添加分析数据。  
   
-## <a name="PointLayer"></a>2.添加地图点层以显示商店位置  
+## <a name="2-add-a-map-point-layer-to-display-store-locations"></a><a name="PointLayer"></a>2.添加地图点层以显示商店位置  
 在本部分中，将使用地图层向导添加一个点层，用于显示商店的位置。  
   
 > [!NOTE]  
@@ -124,7 +124,7 @@ ms.locfileid: "63041455"
   
 3.  在“选择空间数据的来源”页上，选择“SQL Server 空间查询”，然后单击“下一步”    。  
   
-4.  在“选择具有 SQL Server 空间数据的数据集”页上，单击“添加具有 SQL Server 空间数据的新数据集” > “下一步”    。  
+4.  在“选择具有 SQL Server 空间数据的数据集”页上，单击“添加具有 SQL Server 空间数据的新数据集” **“下一步”**   >   。  
   
 5.  在“选择与 SQL Server 空间数据源的连接”页上，选择现有数据源，或浏览到报表服务器并选择数据源  。  
 
@@ -169,12 +169,12 @@ ms.locfileid: "63041455"
 9. 在查询设计器工具栏中，单击“运行”  ( **!** )。  
   
     结果集包含七列，这些列表示纽约州的一组销售消费品的商店。 以下是列表，并对意思可能不明显的列进行说明： 
-    *   **StoreKey**：店铺标识符。  
+    *   **StoreKey**：商店标识符。  
     *   **StoreName**。
-    *   **SellingArea**：产品展示区域，面积介于 455 平方英尺和 1,125 平方英尺之间。
+    *   **SellingArea**：可用于展示产品的区域，面积从 455 平方英尺到 1,125 平方英尺。
     *   **City**。
     *   **County**。
-    *   **销售**：总销售额。 
+    *   **Sales**：总销售额。 
     *   **SpatialLocation**：以经度和纬度表示的位置。 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
@@ -195,9 +195,9 @@ ms.locfileid: "63041455"
   
 16. 在“选择颜色主题和数据可视化”页上，选择“使用气泡大小实现数据的可视化效果”   。  
   
-17. 在“数据字段”中选择 `[Sum(SellingArea)]`，根据商店为展示产品而保留的区域的大小来改变气泡大小  。  
+17. 在“数据字段”中选择 **，根据商店为展示产品而保留的区域的大小来改变气泡大小**`[Sum(SellingArea)]`。  
   
-18. 选择“显示标签”，然后在“数据字段”中选择 `[City]`   。
+18. 选择“显示标签”，然后在“数据字段”中选择   `[City]`。
 
 18. 单击“完成”  。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "63041455"
 
 
   
-## <a name="LineLayer"></a>3.添加地图线条层以显示路线  
+## <a name="3-add-a-map-line-layer-to-display-a-route"></a><a name="LineLayer"></a>3.添加地图线条层以显示路线  
 使用地图层向导添加一个显示两个商店间路线的地图层。 本教程中，通过三个商店位置创建路径。 在业务应用程序中，路径可能是两个商店间的最佳路线。  
   
 ### <a name="to-add-a-line-layer-to-map"></a>向地图添加线条层  
@@ -284,7 +284,7 @@ ms.locfileid: "63041455"
 
       这是缩放百分比。 缩放百分比为 125% 时，应该可以看到整个州。
   
-## <a name="TileLayer"></a>4.添加 Bing 地图图块背景  
+## <a name="4-add-a-bing-maps-tile-background"></a><a name="TileLayer"></a>4.添加 Bing 地图图块背景  
 在本部分中，将添加一个地图层，用于显示 Bing 地图图块背景。  
   
 1.  切换到“设计”视图。  
@@ -306,7 +306,7 @@ ms.locfileid: "63041455"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Transparent"></a>5.将层设置为透明  
+## <a name="5-make-a-layer-transparent"></a><a name="Transparent"></a>5.将层设置为透明  
 在本部分中，要让某一层上的项透过另一层显示出来，可以调整层的顺序以及透明度，从而获得想要的效果。 从创建的第一层（即“PolygonLayer1”）开始。 
   
 1.  双击地图以显示“地图层”  窗格。  
@@ -321,12 +321,12 @@ ms.locfileid: "63041455"
 
     ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
   
-## <a name="Vary"></a>6.根据销售改变县颜色  
+## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6.根据销售改变县颜色  
 多边形层上的每个县都有一种不同的颜色，因为报表处理器会根据您在地图向导的最后一页选择的主题，自动从调色板中分配一个颜色值。  
   
 在本部分中，指定颜色规则，以便将特定的颜色与每个县的商店销售额范围关联起来。 颜色红-黄-绿指示相应的高-中-低销售额。 设置色阶的格式以显示货币。 在新的图例中显示年销售额范围。 对于不包含商店的县，不使用任何颜色，以指明没有关联的数据。  
   
-### <a name="Relationship"></a>6a. 在空间数据与分析数据之间建立关系  
+### <a name="6a-build-a-relationship-between-spatial-and-analytical-data"></a><a name="Relationship"></a>6a. 在空间数据与分析数据之间建立关系  
 若要基于分析数据改变县形状中的颜色，首先需要将分析数据与空间数据关联起来。 在本教程中，您将使用要匹配的县名称。 
   
 1.  切换到“设计”视图。  
@@ -355,7 +355,7 @@ ms.locfileid: "63041455"
   
 对于包含商店的每个县，其颜色取决于您在向导中选择的样式的调色板。 其他县为灰色。  
   
-### <a name="ColorRules"></a>6b. 为多边形指定颜色规则  
+### <a name="6b-specify-color-rules-for-polygons"></a><a name="ColorRules"></a>6b. 为多边形指定颜色规则  
 若要创建根据商店销售额改变每个县颜色的规则，必须指定范围值、要显示的范围的划分数以及要使用的颜色。  
   
 #### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>为具有关联数据的所有多边形指定颜色规则  
@@ -398,7 +398,7 @@ ms.locfileid: "63041455"
   
     色阶显示四种颜色：红色、橙色、黄色和绿色。 每个颜色表示一个销售额范围，此范围是以县为单位根据销售额自动计算得出的。  
   
-### <a name="ColorScale"></a>6c. 将色阶中的数据的格式设置为“货币”  
+### <a name="6c-format-the-data-in-the-color-scale-as-currency"></a><a name="ColorScale"></a>6c. 将色阶中的数据的格式设置为“货币”  
 默认情况下，数据具有常规格式。 在本部分中，将应用自定义格式。  
   
 1. 切换到“设计”视图。  
@@ -409,7 +409,7 @@ ms.locfileid: "63041455"
   
     色阶对于每个范围用货币格式显示年销售额。  
   
-### <a name="NewLegend"></a>6d. 添加图例标题   
+### <a name="6d-add-a-legend-title"></a><a name="NewLegend"></a>6d. 添加图例标题   
   
 1.  仍然选中“色阶”，在“属性”窗格中可以看到“MapColorScale”的属性  。 
   
@@ -423,7 +423,7 @@ ms.locfileid: "63041455"
   
 具有关联的商店和销售额的县根据颜色规则进行显示。 没有销售额的县没有颜色。  
   
-### <a name="NoData"></a>6f. 更改没有数据的县的颜色  
+### <a name="6f-change-color-for-counties-with-no-data"></a><a name="NoData"></a>6f. 更改没有数据的县的颜色  
 可以为层上所有地图元素设置默认显示选项。 颜色规则优先于这些显示选项。  
   
 #### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>为层上的所有元素设置显示属性  
@@ -448,7 +448,7 @@ ms.locfileid: "63041455"
   
 不具有关联数据的县显示为灰蓝色。 只有那些具有关联的分析数据的县才会根据指定的颜色规则具有从“红色”  到“绿色”  的颜色。  
   
-## <a name="CustomPoint"></a>7.添加自定义点  
+## <a name="7-add-a-custom-point"></a><a name="CustomPoint"></a>7.添加自定义点  
 为了表示尚未建立的新商店，将在本部分中指定一个点并使用“星形”标记类型  。  
   
 1.  切换到“设计”视图。  
@@ -491,7 +491,7 @@ ms.locfileid: "63041455"
 
 ![report-builder-map-custom-point-new-store](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
-## <a name="CenterView"></a>8.中心和调整地图大小   
+## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8.中心和调整地图大小   
 在本部分中，将学习如何更改地图中心，以及更改缩放级别的另一种方法。  
  
 1.  切换到“设计”视图。  
@@ -512,7 +512,7 @@ ms.locfileid: "63041455"
   
 在“设计”视图中，显示图面上的地图以及视图基于示例数据。 在呈现的报表中，地图视图位于您指定的视图的中心。  
   
-## <a name="Title"></a>9.添加报表标题  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9.添加报表标题  
   
 1.  切换到“设计”视图。
   
@@ -522,7 +522,7 @@ ms.locfileid: "63041455"
   
 此标题将显示在报表的顶部。 当未定义页眉时，表体顶部的项等同于报表表头。  
   
-## <a name="Save"></a>10.保存报表  
+## <a name="10-save-the-report"></a><a name="Save"></a>10.保存报表  
   
 1.  在“设计”视图或“预览”中，在“文件”菜单上单击“另存为”   。
  
@@ -530,7 +530,7 @@ ms.locfileid: "63041455"
 
 3. 将其保存到本地计算机或 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 服务器。
   
-4. 单击“ **保存**”。 
+4. 单击“保存”  。 
 
 如果将其保存到报表服务器，则可在其中进行查看。
 

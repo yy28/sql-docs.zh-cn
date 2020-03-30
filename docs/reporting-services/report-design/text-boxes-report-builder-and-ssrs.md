@@ -14,10 +14,10 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: db8676a7b00b3cfbf70bca4fecee7539437e1bc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080868"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文本框（报表生成器和 SSRS）
@@ -37,7 +37,7 @@ ms.locfileid: "77080868"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> 扩大和收缩文本框  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> 扩大和收缩文本框  
  默认情况下，文本框的大小是固定的。 您可以允许文本框基于其内容垂直收缩或扩展。 有关详细信息，请参阅 [允许文本框扩大或收缩（报表生成器和 SSRS）](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)的详细信息。  
   
 ## <a name="rotating-a-text-box"></a>旋转文本框  
@@ -51,9 +51,9 @@ ms.locfileid: "77080868"
   
  方向是对文本框设置的并且适用于文本框中的所有文本。 不能为文本框的各个部分指定不同的方向。  
   
- 若要开始使用，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)中有关旋转文本的部分，并参阅[设置文本框方向（报表生成器和 SSRS）](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)。  
+ 若要开始使用，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)中关于旋转文本的部分和[设置文本框方向（报表生成器和 SSRS）](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)。  
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  [添加、移动或删除文本框（报表生成器和 SSRS）](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [设置文本框中文本的格式（报表生成器和 SSRS）](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  

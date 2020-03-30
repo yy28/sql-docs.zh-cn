@@ -20,10 +20,10 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247300"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中编写对象脚本
@@ -59,7 +59,7 @@ ms.locfileid: "75247300"
 
 2. 展开 **“数据库”** 节点。
 
-3. 右键单击数据库“Adventureworks2016” > “任务” > “备份”    ：
+3. 右键单击数据库“Adventureworks2016” **“任务”** “备份” >    >   ：
 
     ![备份数据库](media/scripting-ssms/backupdb.png)
 
@@ -75,7 +75,7 @@ ms.locfileid: "75247300"
 
 ### <a name="script-t-sql-when-you-shrink-the-transaction-log"></a>在收缩事务日志时编写 T-SQL 脚本
 
-1. 右键单击数据库“AdventureWorks2016” > “任务” > “收缩” > “文件”     ：
+1. 右键单击数据库“AdventureWorks2016” **“任务”** “收缩” > “文件”   >    >   ：
 
      ![收缩文件](media/scripting-ssms/shrinkfiles.png)
 
@@ -103,7 +103,7 @@ ms.locfileid: "75247300"
 
 2. 展开 **“数据库”** 节点。
 
-3. 右键单击数据库“AdventureWorks2016” > “编写数据库脚本为” > “创建到” > “新建查询窗口”     ：
+3. 右键单击数据库“AdventureWorks2016” **“编写数据库脚本为”** “创建到” > “新建查询窗口”   >    >   ：
 
     ![编写数据库脚本](media/scripting-ssms/scriptdb.png)
 
@@ -137,7 +137,7 @@ ms.locfileid: "75247300"
 
     a. 选择“保存到新建查询窗口”  。
 
-    b. 选择“高级”并确保已设置以下选项  ：
+    b.保留“数据库类型”设置，即设置为“共享”。 选择“高级”并确保已设置以下选项  ：
 
       * “编写统计信息脚本”设置为“编写统计信息脚本”   。
       * “要编写脚本的数据的类型”设置为“仅限架构”   。
@@ -172,7 +172,7 @@ ms.locfileid: "75247300"
 
 4. 展开“表”节点  。
 
-5. 右键单击“dbo.ErrorLog” > “编写表脚本为” > “删除并创建到” > “新建查询编辑器窗口”     ：
+5. 右键单击“dbo.ErrorLog” **“编写表脚本为”** “删除并创建到” > “新建查询编辑器窗口”   >    >   ：
 
     ![编写表脚本](media/scripting-ssms/scripttable.png)
 
@@ -193,7 +193,7 @@ ms.locfileid: "75247300"
 
 4. 展开“存储过程”节点  。
 
-5. 右键单击存储过程“dbo.uspGetBillOfMaterials” > “编写存储过程脚本为” > “删除并创建到” > “新建查询编辑器窗口”     ：
+5. 右键单击存储过程“dbo.uspGetBillOfMaterials” **“编写存储过程脚本为”** “删除并创建到” > “新建查询编辑器窗口”   >    >   ：
 
     ![编写存储过程脚本](media/scripting-ssms/scriptstoredprocedure.PNG)
 
@@ -209,7 +209,7 @@ ms.locfileid: "75247300"
 
 4. 展开“会话”节点  。
 
-5. 右键单击感兴趣的扩展会话 >“编写会话脚本为” > “CREATE 到” > “新建查询编辑器窗口”    ：
+5. 右键单击感兴趣的扩展会话 >“编写会话脚本为” **“CREATE 到”** “新建查询编辑器窗口” >    >   ：
 
     ![扩展的新建查询编辑器窗口会话](media/scripting-ssms/scriptxevents.png)
 

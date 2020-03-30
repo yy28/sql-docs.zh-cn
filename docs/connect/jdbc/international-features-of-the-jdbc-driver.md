@@ -11,10 +11,10 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028007"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 驱动程序的国际功能
@@ -54,7 +54,7 @@ ms.locfileid: "69028007"
 ## <a name="collation-support"></a>排序规则支持  
  JDBC Driver 3.0 支持 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 和 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所支持的所有排序规则，并且还支持 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 中引入的新排序规则或新版 Windows 排序规则名称。  
   
- 有关排序规则的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[排序规则和 Unicode 支持](https://go.microsoft.com/fwlink/?LinkId=131366)和 [Windows 排序规则名称 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)。  
+ 有关排序规则的详细信息，请参阅 [ 联机丛书中的](https://go.microsoft.com/fwlink/?LinkId=131366)排序规则和 Unicode 支持[和 ](https://go.microsoft.com/fwlink/?LinkId=131367)Windows 排序规则名称 (Transact-SQL)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="using-international-domain-names-idn"></a>使用国际域名 (IDN)  
  JDBC Driver 6.0 for SQL Server 支持使用国际化域名 (IDN)，并且可以在连接期间按照要求将 Unicode serverName 转换为 ASCII 兼容编码 (Punycode)。  如果 IDN 以 Punycode 格式（由 RFC 3490 指定）作为 ASCII 字符串存储在域名系统 (DNS) 中，通过将 serverNameAsACE 属性设置为 true 来启用 Unicode 服务器名称的转换。  否则，如果 DNS 服务配置为允许使用 Unicode 字符，请将 serverNameAsACE 属性设置为 false（默认值）。  对于旧版 JDBC 驱动程序，还可以先使用 [Java 的 IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 方法将 serverName 转换为 Punycode，再为连接设置此属性。  

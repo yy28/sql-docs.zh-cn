@@ -11,10 +11,10 @@ ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025581"
 ---
 # <a name="wrappers-and-interfaces"></a>包装器和接口
@@ -27,7 +27,7 @@ ms.locfileid: "69025581"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持 java.sql.Wrapper 接口。 该接口提供一种机制，通过代理接口访问特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 JDBC API 扩展。
 
-java.sql.Wrapper 接口定义两个方法：isWrapperFor  和 unwrap  。 isWrapperFor 方法检查指定的输入对象是否实现此接口  。 unwrap 方法返回一个实现此接口的对象，从而允许访问特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的方法  。
+java.sql.Wrapper 接口定义两个方法：isWrapperFor  和 unwrap  。 isWrapperFor 方法检查指定的输入对象是否实现此接口  。 unwrap 方法返回一个实现此接口的对象，从而允许访问特定于  **的方法**[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。
 
 按如下方式公开了 isWrapperFor  和 unwrap  方法：
 

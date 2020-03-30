@@ -16,10 +16,10 @@ ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b192f9055394393c48fa19eda697791ddfe3fa2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976163"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>prepareStatement 方法 (java.lang.String, int, int)
@@ -37,17 +37,17 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
 ```  
   
 #### <a name="parameters"></a>parameters  
- sSql  
+ sSql   
   
- 包含 SQL 语句的 String。  
+ 包含 SQL 语句的 String  。  
   
- resultSetType  
+ resultSetType   
   
- 指示结果集类型的 int。  
+ 指示结果集类型的 int  。  
   
- resultSetConcurrency  
+ resultSetConcurrency   
   
- 指示结果集并发类型的 int。  
+ 指示结果集并发类型的 int  。  
   
 ## <a name="return-value"></a>返回值  
  PreparedStatement 对象。  

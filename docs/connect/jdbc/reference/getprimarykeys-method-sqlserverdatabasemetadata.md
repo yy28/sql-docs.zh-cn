@@ -16,10 +16,10 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980762"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys 方法 (SQLServerDatabaseMetaData)
@@ -39,15 +39,15 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 #### <a name="parameters"></a>parameters  
  *cat*  
   
- 一个包含目录名称的字符串。  
+ 一个包含目录名称的字符串  。  
   
  *schema*  
   
- 一个包含架构名称的字符串。  
+ 一个包含架构名称的字符串  。  
   
  *table*  
   
- 一个包含表名称的字符串。  
+ 一个包含表名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  

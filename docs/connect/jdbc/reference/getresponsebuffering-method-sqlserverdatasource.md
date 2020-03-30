@@ -16,10 +16,10 @@ ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b3e53579b8c95cce0585e9614152053f39cafa8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980432"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering 方法 (SQLServerDataSource)
@@ -35,12 +35,12 @@ public java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含小写 full 或 adaptive 的 String。  
+ 包含小写 full  或 adaptive  的 String  。  
   
 ## <a name="remarks"></a>备注  
- 指定在运行时从服务器读取全部结果的 full 值。  
+ 指定在运行时从服务器读取全部结果的 full  值。  
   
- adaptive 值指定在必要时缓冲尽可能少的数据。 adaptive 值为默认缓冲模式。  
+ adaptive  值指定在必要时缓冲尽可能少的数据。 adaptive  值为默认缓冲模式。  
   
  有关使用响应缓冲模式的详细信息，请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
   

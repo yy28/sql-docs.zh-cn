@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081761"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77081761"
   
 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-## <a name="Connection"></a> 连接字符串
+## <a name="connection-string"></a><a name="Connection"></a> 连接字符串
 
 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，也会连接到云中的数据库对象。 正如现场数据库一样，托管数据库可能具有包含多个表、视图和存储过程的不同架构。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则会连接到管理员为你分配的默认数据库。  
   
@@ -45,7 +45,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 有关详细信息和连接字符串示例，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
-## <a name="Credentials"></a> 凭据
+## <a name="credentials"></a><a name="Credentials"></a> 凭据
 
 Windows 身份验证（集成安全性）不受支持。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则会发生错误。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 仅支持 SQL Server 身份验证（用户名和密码），并且在每次连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，用户都必须提供凭据（登录名和密码）。  
   
@@ -57,9 +57,9 @@ Windows 身份验证（集成安全性）不受支持。 如果试图使用 Wind
   
 - 不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
+有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
-## <a name="Query"></a> 查询
+## <a name="queries"></a><a name="Query"></a> 查询
 
 查询指定了要为报表数据集检索哪些数据。 查询的结果集中的列填充数据集的字段集合。 如果查询返回多个结果集，则报表仅处理查询所检索的第一个结果集。 尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]之间存在一些差别（如所支持的数据库大小），但根据 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]编写查询类似于根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库编写查询。 有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（如 BACKUP）在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中不受支持，但也不是在报表查询中使用的语句。 有关详细信息，请参阅 [SQL Server 连接类型 (SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。  
   
@@ -81,7 +81,7 @@ Windows 身份验证（集成安全性）不受支持。 如果试图使用 Wind
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，可帮助你编写仅检索摘要数据的查询。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言功能包括：GROUP BY 子句、DISTINCT 关键字以及 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言的完全支持，包括分组和聚合。 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)。  
   
-### <a name="QueryText"></a> 使用 Text 查询类型
+### <a name="using-query-type-text"></a><a name="QueryText"></a> 使用 Text 查询类型
 
 在基于文本的查询设计器中，可以键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令来定义数据集中的数据。 例如，下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询选择职位为销售助理的所有雇员的姓名：
 
@@ -108,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 运行查询时，会自动创建与查询参数对应的报表参数。 有关详细信息，请参阅本主题后面的 [查询参数](#Parameters) 。  
   
-### <a name="QueryStoredProcedure"></a> 使用 StoredProcedure 查询类型
+### <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> 使用 StoredProcedure 查询类型
 
 您可以采用以下方式之一为数据集查询指定存储过程：  
   
@@ -126,7 +126,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
 有关存储过程的详细信息，请参阅[存储过程（数据库引擎）](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)。  
   
-## <a name="Parameters"></a> Parameters
+## <a name="parameters"></a><a name="Parameters"></a> Parameters
 
 如果查询文本包含查询变量或具有输入参数的存储过程，则将自动生成数据集的对应查询参数和报表的报表参数。 查询文本不得包含针对每个查询变量的 DECLARE 语句。  
   
@@ -140,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
 
 默认情况下，各个报表参数的数据类型均为“Text”，并具有自动创建的数据集，以提供可用值的下拉列表。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
 
-## <a name="Remarks"></a> 注释
+## <a name="remarks"></a><a name="Remarks"></a> 注释
   
 ###### <a name="alternate-data-extensions"></a>备用数据扩展插件
 
@@ -167,7 +167,7 @@ WHERE EmployeeID = (@EmpID)
 
 ::: moniker-end
 
-## <a name="HowTo"></a> 操作指南主题
+## <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题
 
 本节包含使用数据连接、数据源和数据集的分步说明。  
   
@@ -177,7 +177,7 @@ WHERE EmployeeID = (@EmpID)
   
 [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-## <a name="Related"></a> 相关章节
+## <a name="related-sections"></a><a name="Related"></a> 相关章节
 
 文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   

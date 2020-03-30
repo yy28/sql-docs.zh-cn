@@ -11,15 +11,15 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245730"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>选项（“环境” - “字体和颜色”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”对话框可以为 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各种用户界面元素建立自定义的字体和配色方案  。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，然后选择“字体和颜色”  。  
+使用“选项”对话框可以为   中的各种用户界面元素建立自定义的字体和配色方案[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，然后选择“字体和颜色”  。  
   
 在更改配色方案的会话期间，更改不会生效。 您可以通过打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的另一个实例，并将其设置为您的更改要应用的环境，来评估颜色更改效果。  
   

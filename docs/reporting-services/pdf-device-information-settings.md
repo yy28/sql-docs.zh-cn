@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70911321"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 设备信息设置
@@ -28,7 +28,6 @@ ms.locfileid: "70911321"
 |**ColumnSpacing**|要为报表设置的列间距。 此值将覆盖报表的原始设置。|  
 |**DpiX**|输出设备在 X 方向的分辨率。|  
 |**DpiY**|输出设备在 Y 方向的分辨率。|  
-|**EmbedFonts**|指示是否将字体嵌入到 PDF 文件中，该文件的大小较大，但会为所有客户端正确呈现报表字体。 如果值为“无”  ，表示禁用字体嵌入。|  
 |**EndPage**|要呈现的报表的最后一页。 默认值为 **StartPage**的值。|  
 |**HumanReadablePDF**|指示是否呈现未压缩的 PDF 文件，此文件大小更大，但在纯文本编辑器中更易于人们阅读。 默认值为 **false.**|  
 |**MarginBottom**|要为报表设置的下边距值，以英寸为单位。 必须包含一个整数或小数值，后跟“in”（例如，1in）。 此值将覆盖报表的原始设置。|  

@@ -16,10 +16,10 @@ ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982825"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys 方法 (SQLServerDatabaseMetaData)
@@ -39,15 +39,15 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 #### <a name="parameters"></a>parameters  
  *cat*  
   
- 一个包含目录名称的字符串。  
+ 一个包含目录名称的字符串  。  
   
  *schema*  
   
- 一个包含架构名称的字符串。  
+ 一个包含架构名称的字符串  。  
   
  *table*  
   
- 一个包含表名称的字符串。  
+ 一个包含表名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  

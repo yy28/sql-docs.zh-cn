@@ -1,6 +1,6 @@
 ---
 title: 日期和时间数据
-description: 介绍了如何使用 SQL Server 2008 中引入的新日期和时间数据类型。
+description: 介绍如何使用在 SQL Server 2008 中引入的新的日期和时间数据类型。
 ms.date: 09/30/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896988"
 ---
 # <a name="date-and-time-data"></a>日期和时间数据
@@ -65,12 +65,12 @@ Transact-SQL SET LANGUAGE 语句隐式设置确定日期部分顺序的 DATEFORM
   
 - `SqlDbType.DateTimeOffSet`  
 
-通过使用 <xref:System.Data.SqlDbType> 枚举之一，可以指定 <xref:Microsoft.Data.SqlClient.SqlParameter> 的数据类型。 
+通过使用 <xref:Microsoft.Data.SqlClient.SqlParameter> 枚举之一，可以指定 <xref:System.Data.SqlDbType> 的数据类型。 
 
 > [!NOTE]
-> 无法将 `SqlParameter` 的 `DbType` 属性设置为 `SqlDbType.Date`。
+> 无法将 `DbType` 的 `SqlParameter` 属性设置为 `SqlDbType.Date`。
 
-也可以采用通用的方式通过将 `SqlParameter` 对象的 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 属性设置为特定的 <xref:System.Data.DbType> 枚举值来指定 <xref:Microsoft.Data.SqlClient.SqlParameter> 的类型。 <xref:System.Data.DbType> 中已添加了下面的枚举值，以支持 `datetime2` 和 `datetimeoffset` 数据类型：  
+也可以采用通用的方式通过将 <xref:Microsoft.Data.SqlClient.SqlParameter> 对象的 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 属性设置为特定的 `SqlParameter` 枚举值来指定 <xref:System.Data.DbType> 的类型。 <xref:System.Data.DbType> 中已添加了下面的枚举值，以支持 `datetime2` 和 `datetimeoffset` 数据类型：  
   
 - DbType.DateTime2  
   
@@ -105,7 +105,7 @@ Transact-SQL SET LANGUAGE 语句隐式设置确定日期部分顺序的 DATEFORM
 >  小于零或大于等于 24 小时的时间值会导致 <xref:System.ArgumentException> 抛出。  
   
 ### <a name="creating-parameters"></a>创建参数  
-可以创建 <xref:Microsoft.Data.SqlClient.SqlParameter> 对象，具体方法为使用它的构造函数，或将它添加到 <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> 集合（通过调用 <xref:Microsoft.Data.SqlClient.SqlParameterCollection> 的 `Add` 方法）。 `Add` 方法需要使用构造函数参数或现有参数对象作为输入。  
+可以创建 <xref:Microsoft.Data.SqlClient.SqlParameter> 对象，具体方法为使用它的构造函数，或将它添加到 <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> 集合（通过调用 `Add` 的 <xref:Microsoft.Data.SqlClient.SqlParameterCollection> 方法）。 `Add` 方法需要使用构造函数参数或现有参数对象作为输入。  
   
 本主题接下来的几个部分举例介绍了如何指定日期和时间参数。
   
@@ -150,7 +150,7 @@ parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");
 ```  
   
 ### <a name="addwithvalue"></a>AddWithValue  
-也可以使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 的 `AddWithValue` 方法来提供参数，如下面的代码片段所示。 不过，`AddWithValue` 方法不允许为参数指定 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 或 <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A>。  
+也可以使用 `AddWithValue` 的 <xref:Microsoft.Data.SqlClient.SqlCommand> 方法来提供参数，如下面的代码片段所示。 不过，`AddWithValue` 方法不允许为参数指定 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 或 <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A>。  
   
 ```csharp  
 command.Parameters.AddWithValue(   
@@ -177,7 +177,7 @@ command.Parameters.AddWithValue(
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>|返回作为字段的基础提供程序专用类型的类型。 对于新日期和时间类型，返回与 `GetFieldType` 相同的类型。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>|获取指定列的值。 对于新日期和时间类型，返回与 `GetValue` 相同的类型。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>|检索指定数组中的值。|  
-|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|检索列值作为 <xref:System.Data.SqlTypes.SqlString>。 如果数据无法表示为 `SqlString`，则会导致 <xref:System.InvalidCastException> 抛出。|  
+|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|检索列值作为 <xref:System.Data.SqlTypes.SqlString>。 如果数据无法表示为 <xref:System.InvalidCastException>，则会导致 `SqlString` 抛出。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValue%2A>|检索列数据作为默认 `SqlDbType`。 对于新日期和时间类型，返回与 `GetValue` 相同的类型。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>|检索指定数组中的值。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetString%2A>|如果 Type System Version 设置为 SQL Server 2005，则以字符串形式检索列值。 如果数据无法表示为字符串，则会导致 <xref:System.InvalidCastException> 抛出。|  

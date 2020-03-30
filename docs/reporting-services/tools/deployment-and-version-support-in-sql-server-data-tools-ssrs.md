@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571499"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的部署和版本支持 (SSDT)
@@ -26,7 +26,7 @@ ms.locfileid: "65571499"
   
 -   将报表部署到报表服务器。  
   
-##  <a name="bkmk_ConfigurationandDeploymentProperties"></a> 配置和部署属性  
+##  <a name="configuration-and-deployment-properties"></a><a name="bkmk_ConfigurationandDeploymentProperties"></a> 配置和部署属性  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 支持项目配置。 项目配置由一组属性组成，当作为预览或部署报表的一个步骤生成项目时，这些属性指定位置和行为。 若要了解有关项目配置的更多信息，请参阅 Visual Studio 文档。  
   
  使用项目配置可以控制报表定义升级到与目标报表服务器兼容的架构版本。 项目配置控制的属性包括目标报表服务器、生成进程临时存储报表定义以便预览和部署的文件夹以及错误级别。  
@@ -47,7 +47,7 @@ ms.locfileid: "65571499"
   
  您可以将多个项目配置添加到项目中；每个配置用于不同方案，例如，部署到不同版本的报表服务器。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md) 和[“项目属性页”对话框](../../reporting-services/tools/project-property-pages-dialog-box.md)。  
   
-##  <a name="bkmk_SupportedVersions"></a> 支持的版本  
+##  <a name="supported-versions"></a><a name="bkmk_SupportedVersions"></a> 支持的版本  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，是 32 位报表服务器项目开发环境，根据设计，它不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的计算机上运行，也不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的服务器上安装。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  

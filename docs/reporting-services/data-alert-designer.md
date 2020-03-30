@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571595"
 ---
 # <a name="data-alert-designer"></a>数据警报设计器
@@ -54,7 +54,7 @@ ms.locfileid: "65571595"
   
  若要打开数据警报设计器，请单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项。 如果您看不到 **“新建数据警报”** 选项，则此报表未配置为使用存储的凭据。 您可以通过从 SharePoint 库更新报表数据源来更新凭据类型。  
   
-##  <a name="AlertDesigner"></a> 数据警报设计器用户界面  
+##  <a name="data-alert-designer-user-interface"></a><a name="AlertDesigner"></a> 数据警报设计器用户界面  
  数据警报设计器分为若干区域。 其中包括用于选择报表数据馈送的区域、通过向条件添加规则来创建简单或复杂条件的区域等区域。 下图显示数据警报设计器中的区域。  
   
  ![“警报设计器”用户界面中的区域](../reporting-services/media/rs-alertdesigner.gif "“警报设计器”用户界面中的区域")  
@@ -170,13 +170,13 @@ ms.locfileid: "65571595"
 ### <a name="email-settings"></a>电子邮件设置  
  在“收件人”选项中，指定通过电子邮件接收数据警报消息的收件人的电子邮件地址  。 多个电子邮件地址由分号分隔，与在 Microsoft Office Outlook 电子邮件中的操作方式相同。 还可以指定分发组作为收件人，以便更容易和更有效地管理收件人列表。 如果在您创建警报定义时 SharePoint 可以确定您的电子邮件地址，则您的电子邮件地址将自动添加到收件人列表中；否则，您需要显式将您自己作为收件人添加。  
   
- 电子邮件的默认主题为“\<警报名称> 的数据警报”  。 您可以更改主题以适合您的需要。  
+ 电子邮件的默认主题为“**警报名称> 的数据警报”\<** 。 您可以更改主题以适合您的需要。  
   
  还可以提供一个说明以包含在 **“说明”** 选项的数据警报消息中。 包含说明（尤其如果您具有类似的数据警报）将帮助您快速区分和了解您的警报消息。 除了在报表服务器满足指定规则时发送的警报消息之外，在发生错误时还向所有收件人发送一条警报消息。 有关详细信息，请参阅 [Data Alert Messages](../reporting-services/data-alert-messages.md)。  
   
  有关如何生成电子邮件的详细信息，请参阅 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)。  
   
-##  <a name="CreateAlert"></a> 创建数据警报定义  
+##  <a name="create-a-data-alert-definition"></a><a name="CreateAlert"></a> 创建数据警报定义  
  如果您被授予了 SharePoint 的“查看项”和“创建警报”权限，只要报表使用存储的凭据或没有凭据，您就可以为您有权查看的任何报表创建数据警报定义。 您从 SharePoint 库运行该报表。 您可在数据警报设计器中使用的数据来自该报表。 如果对此报表进行参数化，你可能需要使用不同的参数值来运行此报表，从而确保你感兴趣的数据出现在此报表中。 在该报表打开后，单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项，以便打开数据警报设计器。 下图显示如何打开数据警报设计器。  
   
  ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "从 SharePoint 库打开警报设计器")  
@@ -184,7 +184,7 @@ ms.locfileid: "65571595"
  有关详细信息，请参阅 [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
   
   
-##  <a name="SaveAlert"></a> 保存数据警报定义  
+##  <a name="save-a-data-alert-definition"></a><a name="SaveAlert"></a> 保存数据警报定义  
  数据警报设计器显示将保存数据警报定义的站点的 URL。 数据警报定义始终作为报表保存到相同的站点。  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ ms.locfileid: "65571595"
  在保存警报定义前，要对该定义进行验证。 您必须首先纠正所有错误，然后才能成功保存警报定义。 有关详细信息，请参阅 [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
   
   
-##  <a name="EditAlert"></a> 编辑数据警报定义  
+##  <a name="edit-a-data-alert-definition"></a><a name="EditAlert"></a> 编辑数据警报定义  
  在保存数据警报定义后，可以在数据警报设计器中重新打开和编辑该定义。 您可以添加、更改或删除规则和子句以及更改计划和电子邮件设置。 如果警报使用的报表数据馈送已更改，并且不再提供警报规则引用的字段，或者这些字段的数据类型或其他元数据已更改，则该警报定义将不再有效，您必须纠正错误后才能重新保存它。 如果您要使用不同的数据馈送，则必须创建一个新的警报定义。  
   
  若要编辑数据警报定义，请在警报管理器中右键单击，然后单击 **“编辑”** 。 下图显示了数据警报管理器中数据警报上的上下文菜单。  
@@ -203,7 +203,7 @@ ms.locfileid: "65571595"
  有关详细信息，请参阅 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
-##  <a name="HowTo"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 相关任务  
  本节列出的过程介绍如何创建和编辑警报。  
   
 -   [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)  

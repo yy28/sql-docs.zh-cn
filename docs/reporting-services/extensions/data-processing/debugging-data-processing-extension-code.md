@@ -13,10 +13,10 @@ ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 031dade1cb1f5535a1b0ccacc0efe4ca8b241ccb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194045"
 ---
 # <a name="debugging-data-processing-extension-code"></a>调试数据处理扩展插件代码
@@ -26,7 +26,7 @@ ms.locfileid: "63194045"
   
 1.  启动 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] 并打开数据处理扩展插件项目。  
   
-2.  生成项目，并将数据处理扩展插件程序集以及随附的 .pdb 文件部署到报表设计器。 有关部署的详细信息，请参阅[如何：向报表设计器部署数据处理扩展插件](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)。  
+2.  生成项目，并将数据处理扩展插件程序集以及随附的 .pdb 文件部署到报表设计器。 有关部署的详细信息，请参阅[如何：将数据处理扩展插件部署到报表设计器](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)。  
   
 3.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中打开新的报表项目，同时在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的一个单独窗口中让数据处理扩展插件代码处于打开状态。  
   

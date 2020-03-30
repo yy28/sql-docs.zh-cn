@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564027"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>为报表服务器应用程序配置可用内存
@@ -72,7 +72,7 @@ ms.locfileid: "67564027"
 |**MemorySafetyMargin**|指定 **WorkingSetMaximum** 的百分比，该百分比用于定义中压情况和低压情况之间的边界。 此值是为系统保留的可用内存百分比，无法用于报表服务器操作。 默认值为 80。|  
   
 > [!NOTE]  
->  MemoryLimit 和 MaximumMemoryLimit 设置在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中已过时。 如果升级现有安装或使用包含这些设置的 RSReportServer.config 文件，报表服务器将不再读取这些值。  
+>  MemoryLimit 和 MaximumMemoryLimit 设置在  **和更高版本中已过时**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。 如果升级现有安装或使用包含这些设置的 RSReportServer.config 文件，报表服务器将不再读取这些值。  
   
 #### <a name="example-of-memory-configuration-settings"></a>内存配置设置示例  
  下面的示例显示了使用自定义内存配置值的报表服务器计算机的配置设置。 如果要添加 **WorkingSetMaximum** 或 **WorkingSetMinimum**，必须在 RSReportServer.config 文件中键入这些元素和值。 两个值都是整数，表示要分配给服务器应用程序的 RAM（以 KB 为单位）。 下面的示例指定报表服务器应用程序的总内存分配不能超过 4 GB。 如果 **WorkingSetMinimum** 的默认值（ **WorkingSetMaximum**的 60%）可接受，则可忽略该值并在 RSReportServer.config 文件中仅指定 **WorkingSetMaximum** 。 此示例包括 **WorkingSetMinimum** 以说明在要添加该元素时的显示方式：  
@@ -86,7 +86,7 @@ ms.locfileid: "67564027"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>关于 ASP.NET 内存配置设置  
- 尽管 2016 及更高版本的报表服务器 Web 服务和 Web 门户是 HTML5 应用程序，早期版本是 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序，但这些应用程序都不会响应在 IIS 5.0 及更高兼容性模式下运行的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序的 machine.config 的 processModel 部分中指定的内存配置设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 仅从 RSReportServer.config 文件中读取内存配置设置。  
+ 尽管 2016 及更高版本的报表服务器 Web 服务和 Web 门户是 HTML5 应用程序，早期版本是 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序，但这些应用程序都不会响应在 IIS 5.0 及更高兼容性模式下运行的  **应用程序的 machine.config 的 processModel**[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 部分中指定的内存配置设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 仅从 RSReportServer.config 文件中读取内存配置设置。  
   
 ## <a name="see-also"></a>另请参阅  
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

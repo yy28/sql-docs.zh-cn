@@ -16,10 +16,10 @@ ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67956067"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute 方法 (SQLServerResultSet)
@@ -35,12 +35,12 @@ public boolean absolute(int row)
 ```  
   
 #### <a name="parameters"></a>parameters  
- row  
+ row   
   
- 指示要移到的行号的 int 值。 它可以为正数、负数或 0。  
+ 指示要移到的行号的 int  值。 它可以为正数、负数或 0。  
   
 ## <a name="return-value"></a>返回值  
- 如果游标移到给定位置，则值为 true。 如果游标位于第一行之前或最后一行之后，则值为 false。  
+ 如果游标移到给定位置，则值为 true  。 如果游标位于第一行之前或最后一行之后，则值为 false  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

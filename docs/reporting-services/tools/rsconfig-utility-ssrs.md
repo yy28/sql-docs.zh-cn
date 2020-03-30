@@ -15,10 +15,10 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082179"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
@@ -53,7 +53,7 @@ rsconfig {-?}
 |-i   instancename |如果使用了命名实例，则此参数是必需的。|如果使用已命名的 Reporting Services 实例，则此值指定 Reporting Services 实例的名称。|  
 |-d   databasename |必需。|指定报表服务器数据库的名称。|  
 |-a   authmethod |必需。|指定报表服务器连接到报表服务器数据库时使用的身份验证方法。 有效值是 **Windows** 或 **SQL** （该参数不区分大小写）。<br /><br /> **Windows** 指定报表服务器使用 Windows 身份验证。<br /><br /> **SQL** 指定报表服务器使用 SQL Server 身份验证。|  
-|-u   [domain\\]username |**-e** 是必需的， **-c**是可选的。|指定报表服务器数据库连接或无人参与帐户的用户帐户。<br /><br /> 对于 **rsconfig -e**，该参数是必需的。 该帐户必须是域用户帐户。<br /><br /> 对于 **rsconfig -c** 和 **-a SQL**，此参数必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。<br /><br /> 对于 **rsconfig -c** 和 **-a Windows**，此参数可能指定域用户、内置帐户或服务帐户凭据。 若要指定域帐户，请以“domain\username”  格式指定域  和用户名  。 如果使用了内置帐户，则该参数是可选的。 如果要使用服务帐户凭据，则可省略该参数。|  
+|-u   [domain *]username\\*|**-e** 是必需的， **-c**是可选的。|指定报表服务器数据库连接或无人参与帐户的用户帐户。<br /><br /> 对于 **rsconfig -e**，该参数是必需的。 该帐户必须是域用户帐户。<br /><br /> 对于 **rsconfig -c** 和 **-a SQL**，此参数必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。<br /><br /> 对于 **rsconfig -c** 和 **-a Windows**，此参数可能指定域用户、内置帐户或服务帐户凭据。 若要指定域帐户，请以“domain\username”  格式指定域  和用户名  。 如果使用了内置帐户，则该参数是可选的。 如果要使用服务帐户凭据，则可省略该参数。|  
 |-p   password |如果指定了 **-c** 参数，则为必需项。|指定与 *username* 参数一起使用的密码。 如果帐户不需要密码，则可将该参数设置为空值。 对于域帐户，此值区分大小写。|  
 |**-t**|可选。|将错误消息输出到跟踪日志。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
   
@@ -70,7 +70,7 @@ rsconfig {-?}
   
 -   配置报表服务器在其他凭据不可用时登录远程数据库服务器所用的特殊帐户。  
   
-可以针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的本地或远程实例来运行 rsconfig 实用工具  。 不能使用 **rsconfig** 实用工具解密和查看已设置的值。  
+可以针对  **的本地或远程实例来运行 rsconfig 实用工具**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 不能使用 **rsconfig** 实用工具解密和查看已设置的值。  
   
 要配置的计算机上必须安装 Windows Management Instrumentation (WMI) 才能运行此配置工具。  
   

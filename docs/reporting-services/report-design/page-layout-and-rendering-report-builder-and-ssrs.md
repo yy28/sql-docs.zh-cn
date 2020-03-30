@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082446"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
@@ -24,7 +24,7 @@ ms.locfileid: "77082446"
   
  对于导出的报表获得最佳结果通常是一个循环往复的过程：在报表生成器或报表设计器中创作和预览报表，将报表导出为首选的格式，检查导出的报表，然后对报表进行更改。  
     
-##  <a name="PageLayout"></a> 报表项  
+##  <a name="report-items"></a><a name="PageLayout"></a> 报表项  
  报表项是与不同类型的报表数据关联的布局元素。 
  
 * 表、矩阵、列表、图表和仪表都是分别链接到一个报表数据集的数据区域报表项。 处理报表时，数据区域会在报表页内横向和向下扩展，以便显示数据。 
@@ -44,14 +44,14 @@ ms.locfileid: "77082446"
   
  报表可以跨越多个页，每个页上都可以有重复的页眉和页脚。 报表可包含图形元素，如图像和线条，并可具有多种基于表达式的字体、颜色和样式。  
   
-##  <a name="ReportSections"></a> 报表区域  
+##  <a name="report-sections"></a><a name="ReportSections"></a> 报表区域  
  报表由三个主要区域组成：页  眉（可选）、页  脚（可选）和表体。 报表的页眉和页脚不是独立的报表区域，而是由放置在表体的顶部和底部的报表项组成  。 页眉和页脚会在报表每一页的顶部和底部重复相同的内容。 您可以在页眉和页脚中放置图像、文本框和线条。 可以在表体中放置任何类型的报表项。  
   
  您可以设置报表项的属性，以便一开始就在页中隐藏或显示该报表项。 可以设置数据区域的行、列或组的可见性属性，并提供切换按钮使用户能以交互方式显示或隐藏报表数据。 还可以使用表达式（包括基于报表参数的表达式）来设置可见性或初始可见性。  
   
  处理报表时，会将报表数据与报表布局元素组合起来，并将组合的数据发送到报表呈现器。 呈现器会根据报表项扩展插件的预定义规则，确定每一页能够容纳的数据量。 若要设计对您要使用的呈现器而言最优的易读报表，您需要了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。 有关详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
-##  <a name="RenderingExtensions"></a> 呈现器  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a> 呈现器  
  Reporting Services 包括一组呈现器，也称为呈现扩展插件，可用来将报表导出为其他格式。 有三种类型的呈现器：  
   
 -   **数据呈现器** ：数据呈现器会去除报表中的所有格式设置和布局信息而仅显示数据。 可使用所产生的文件将原始报表数据导入为其他文件类型，如 Excel、其他数据库、XML 数据消息或自定义应用程序。 可用的数据呈现器为 CSV 和 XML。  
@@ -65,7 +65,7 @@ ms.locfileid: "77082446"
   
  在报表生成器或报表设计器中预览报表时，或者在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器中运行报表时，报表总是首先以 HTML 格式呈现。 在运行报表后，您可以将其导出为不同的文件格式。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中用于控制分页的规则。  
   
-##  <a name="RenderingBehaviors"></a> 呈现行为  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a> 呈现行为  
  根据选择的呈现器，当呈现报表时，将应用特定的规则。 报表项在页面上的呈现方式由以下因素综合确定：  
   
 -   呈现规则。  
@@ -78,7 +78,7 @@ ms.locfileid: "77082446"
   
  有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
    
-##  <a name="Pagination"></a> 分页  
+##  <a name="pagination"></a><a name="Pagination"></a> 分页  
  分页方式指的是报表内的页数以及报表项在这些页上的排列方式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分页方式因您用来查看和传递报表的呈现扩展插件以及您配置报表使用的分页符和哪些项目放在同一页的选项不同而异。  
   
  若要成功设计一个对用户而言易于阅读、对准备用于传递报表的呈现器而言最优的报表，需要了解在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。 使用 **数据** 和 **软分页** 呈现扩展插件导出的报表通常不受分页影响。 当您使用数据呈现扩展插件时，报表将呈现为 XML 或 CSV 格式的表格行集。 为了确保导出的报表数据有用，应了解所应用的规则从报表呈现了一个平展的表格行集。  
@@ -87,7 +87,7 @@ ms.locfileid: "77082446"
   
  **硬分页** 呈现器对于报表布局和实际页面大小的影响最大。 若要了解详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
    
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  本节列出的过程分步向您介绍如何在报表中使用分页。  
   
 -   [添加分页符（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)  
@@ -102,7 +102,7 @@ ms.locfileid: "77082446"
   
 -   [隐藏第一页或最后一页的页眉或页脚（报表生成器和 SSRS）](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本节内容  
  以下主题介绍有关页面布局和呈现方式的其他信息：  
   
  [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

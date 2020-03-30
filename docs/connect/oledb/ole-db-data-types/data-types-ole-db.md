@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 05e9714159a3253a92c2eb0aeef3ea48e632345c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015820"
 ---
 # <a name="data-types-ole-db"></a>数据类型 (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "68015820"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  若要使用适用于 SQL Server 的 OLE DB 驱动程序执行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句和处理结果，必须了解绑定行集中的参数或列时以及当适用于 SQL Server 的 OLE DB 驱动程序使用 ITableDefinition 接口在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建表时，此访问接口是如何将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型映射到 OLE DB 数据类型的  。  
+  若要使用适用于 SQL Server 的 OLE DB 驱动程序执行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句和处理结果，必须了解绑定行集中的参数或列时以及当适用于 SQL Server 的 OLE DB 驱动程序使用 ITableDefinition 接口在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建表时，此访问接口是如何将  **数据类型映射到 OLE DB 数据类型的**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
   

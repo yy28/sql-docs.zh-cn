@@ -11,10 +11,10 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ec984cbb220bffecfae5a929ddad103780450285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081060"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>报表设计器中的报表部件 (SSRS)
@@ -23,9 +23,9 @@ ms.locfileid: "77081060"
   
  通常，报表部件在报表设计器中和报表生成器中以相同的方式工作。 若要了解基本功能，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
- 但在报表设计器中，报表部件在工作方式上还存在一些基本差异。 一个主要的差异就是工作流。 报表生成器启用协同创作：我创建并发布报表部件。 您可以重复使用、修改和重新发布该报表部件。 在报表设计器中，发布是单向的：我可以从报表设计器发布报表部件，你能重用它。 但是，我不能在报表设计器中在报表中重复使用现有的报表部件。 本主题首先快速介绍一下报表部件，然后详细阐述这些差异。  
+ 但在报表设计器中，报表部件在工作方式上还存在一些基本差异。 一个主要的差异就是工作流。 报表生成器支持协作创作：我创建了一个报表部件并发布它。 您可以重复使用、修改和重新发布该报表部件。 在报表设计器中，发布是单向的：我可以从报表设计器发布一个报表部件，而您可以重复使用该部件。 但是，我不能在报表设计器中在报表中重复使用现有的报表部件。 本主题首先快速介绍一下报表部件，然后详细阐述这些差异。  
   
-##  <a name="ComponentWorkflow"></a> 报表部件发布的生命周期  
+##  <a name="life-cycle-of-report-part-publishing"></a><a name="ComponentWorkflow"></a> 报表部件发布的生命周期  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  在报表设计器中，人员 A 创建一个含报表的项目，而报表中的图表依赖于某一嵌入数据集。  
@@ -42,7 +42,7 @@ ms.locfileid: "77081060"
   
 6.  在报表生成器中，人员 B 接受来自服务器的更新的图表。 这将覆盖人员 B 已对人员 B 的报表中的图表所做的更改。  
   
-##  <a name="PublishingComponents"></a> 发布报表部件  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> 发布报表部件  
  在您发布某一报表部件时，报表设计器将向其分配唯一 ID。 之后，它将保持该 ID，无论您对该报表部件进行何种更改。 该 ID 将您的报表中的原始报表项链接到该报表部件。 在其他报表作者在报表生成器中重复使用该报表部件时，该 ID 还将其报表中的报表部件链接到该报表部件。  
   
  以下是您可以作为报表部件发布的报表项：  
@@ -76,12 +76,12 @@ ms.locfileid: "77081060"
  在您部署报表时，报表部件将发布到某一 SharePoint 站点或报表服务器，并且其他人可以重复使用它。 若要发布某一报表部件，在部署报表时，必须具有与某一报表服务器的连接并且对其具有足够的权限。  
   
   
-##  <a name="SearchReuseComponents"></a> 重复使用报表部件  
+##  <a name="reusing-report-parts"></a><a name="SearchReuseComponents"></a> 重复使用报表部件  
  与报表生成器中不同，如果某一项目并非您在其中创建了报表部件的项目，则不能在该项目中搜索和重复使用该报表部件。  
   
  使用报表生成器的报表作者中可以搜索和重复使用您在他们所创建的报表中发布的报表部件。  
   
-##  <a name="RepublishingComponents"></a> 重新发布报表部件  
+##  <a name="republishing-report-parts"></a><a name="RepublishingComponents"></a> 重新发布报表部件  
  在报表设计器中，您应该从创建了现有报表部件的报表内更新该报表部件。 在报表生成器中，报表作者可以重复使用该报表部件，并且可以将其作为新的报表部件发布而无需替换您发布的报表部件。 如果他们有足够的权限，也可以更新您发布的报表部件。 对网站或服务器上的文件夹具有足够权限的任何人也可以更新存储在那里的报表部件。 最后的更新会覆盖以前的更新。  
   
  您可以修改报表部件，然后将其重新发布到网站或服务器上。 对于将该报表部件添加到某一报表中的报表生成器报表作者，系统将在他们下次打开该报表时向他们通知所做更改。 他们可以选择接受或拒绝您的更改。  

@@ -12,19 +12,19 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
 ms.openlocfilehash: 89089c07a3b13ee7764770df3d582ba449b65f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307795"
 ---
 # <a name="run-sql-server-profiler"></a>运行 SQL Server Profiler
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-可以通过多种方法运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，以支持在各种情况下收集跟踪输出。 启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的方法包括：从 Windows 10“开始”菜单启动、从[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问中的“工具”菜单启动以及从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的多个位置启动   。  
+可以通过多种方法运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，以支持在各种情况下收集跟踪输出。 启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的方法包括：从 Windows 10“开始”菜单启动、从**优化顾问中的“工具”菜单启动以及从**  中的多个位置启动  [!INCLUDE[ssDE](../../includes/ssde-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-首次启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 并从“文件”菜单中选择“新建跟踪”时，此应用程序将显示“连接到服务器”对话框，在该对话框中可以指定要连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例    。  
+首次启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 并从“文件”菜单中选择“新建跟踪”时，此应用程序将显示“连接到服务器”对话框，在该对话框中可以指定要连接到的  **实例**   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>从 Windows 10“开始”菜单启动 SQL Server Profiler  
 -  单击 Window“启动”  图标或按 Windows 键，然后开始键入“SQL Server Profiler 17”。 显示“SQL Server Profiler 17”  磁贴时，单击它。   
 
@@ -32,7 +32,7 @@ ms.locfileid: "75307795"
 -  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的 **“工具”** 菜单上，单击 **SQL Server Profiler**。  
 
 ## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中启动 SQL Server Profiler  
- 可以从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的多个位置启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在启动时将加载连接上下文、跟踪模板及其启动点的筛选上下文。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在自己的实例中启动每个 SQL Server Profiler 会话，在关闭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的情况下，Profiler 仍继续运行。  
+ 可以从 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的多个位置启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在启动时将加载连接上下文、跟踪模板及其启动点的筛选上下文。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在自己的实例中启动每个 SQL Server Profiler 会话，在关闭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的情况下，Profiler 仍继续运行。  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>从“工具”菜单启动 SQL Server Profiler  
 -  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“工具”菜单中，单击“SQL Server Profiler”   。  
 

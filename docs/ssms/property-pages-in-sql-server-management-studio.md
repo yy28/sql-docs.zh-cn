@@ -13,10 +13,10 @@ ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 039ad2ec8ea2e0d05eae0ec2d627c07117580bf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258920"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的属性页
@@ -31,5 +31,5 @@ ms.locfileid: "75258920"
 |**字母顺序**|按字母顺序列出所选对象的所有属性和属性值。|  
 |属性名称|网格中的第一列列出属性名称。|  
 |属性|网格中的第二列列出属性值。|  
-|说明窗格|说明窗格显示在属性页的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”命令打开或关闭属性的说明。|  
+|说明窗格|说明窗格显示在属性页的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”  命令打开或关闭属性的说明。|  
   

@@ -11,10 +11,10 @@ ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936216"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
@@ -30,7 +30,7 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>parameters  
-$name  ：一个可选字符串，可用于指定序列名称。 
+$name：允许指定序列名称的可选字符串  。 
   
 ## <a name="return-value"></a>返回值  
 如果未提供序列名称，则为最近添加的行的标识符的字符串。

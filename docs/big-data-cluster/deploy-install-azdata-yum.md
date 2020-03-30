@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cf6e061b0ca4fca7c843575a87038a801ab8f758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728548"
 ---
 # <a name="install-azdata-with-yum"></a>使用 yum 安装 `azdata`
@@ -28,7 +28,7 @@ ms.locfileid: "75728548"
 ## <a name="install-with-yum"></a>使用 yum 进行安装
 
 >[!IMPORTANT]
-> `azdata-cli` 的 RPM 包依赖于 python3 包。 在你的系统上，这可能是早于所要求的 Python 3.6.x 的 Python 版本。 如果这对你来说是问题，请找到一个替代 python3 包，或按照使用 [`pip`](deploy-install-azdata-pip.md) 的手动安装说明执行操作。
+> `azdata-cli` 的 RPM 包依赖于 python3 包。 在你的系统上，这可能是早于所要求的 Python 3.6.x  的 Python 版本。 如果这对你来说是问题，请找到一个替代 python3 包，或按照使用 [`pip`](deploy-install-azdata-pip.md) 的手动安装说明执行操作。
 
 1. 导入 Microsoft 存储库密钥
 
@@ -65,7 +65,7 @@ azdata --version
 
 ## <a name="update"></a>更新
 
-使用 `yum update` 命令更新 `azdata-cli`。
+使用 `azdata-cli` 命令更新 `yum update`。
 
 ```bash
 sudo yum update azdata-cli

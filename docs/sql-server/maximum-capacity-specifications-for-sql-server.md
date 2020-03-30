@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3436ac152de56d06d5e928d271f8b143b695ba70
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79126000"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510218"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 
@@ -36,7 +36,7 @@ ms.locfileid: "79126000"
 >[!NOTE]
 >除了本文中的信息外，你可能还会发现以下链接有用：
 >
->* [下载 SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads_)
+>* [下载 SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 >* [安装 SQL Server 的硬件和软件要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 >* [检查系统配置检查器的参数](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 >

@@ -17,10 +17,10 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230478"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>创建新的 SQL Server 故障转移群集（安装程序）
@@ -35,7 +35,7 @@ ms.locfileid: "75230478"
   
  对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装，提供以下选项：  
   
- 选项 1：  带“添加节点”功能的集成安装  
+ **选项 1：带“添加节点”功能的集成安装**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 集成故障转移群集安装包括以下步骤：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "75230478"
   
     -   如果要添加的节点具有其他或不同子网，安装程序允许您指定其他 IP 地址。 如果要添加的节点在其他子网上，还需要确认 IP 地址资源依赖关系更改为 OR。 有关在“添加节点”操作期间可能的不同方案的详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
- **选项 2：** 高级/企业安装  
+ **选项 2：高级/企业安装**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 高级/企业故障转移群集安装包括以下步骤：  
   
@@ -227,7 +227,7 @@ ms.locfileid: "75230478"
     >   
     >  您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中的所有节点上安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本必须相同。 若要向现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加新节点，务必使安装的版本与现有故障转移群集的版本相同。  
   
-##  <a name="prepare"></a> 准备  
+##  <a name="prepare"></a><a name="prepare"></a> 准备  
   
 #### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>高级/企业故障转移群集安装步骤 1：准备  
   

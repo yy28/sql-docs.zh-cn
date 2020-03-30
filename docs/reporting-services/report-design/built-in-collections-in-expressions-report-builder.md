@@ -9,21 +9,21 @@ ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082199"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>表达式中的内置集合（报表生成器）
-  在报表的表达式中，可以添加对下列内置集合的引用：ReportItems、Parameters、Fields、DataSets、DataSources、Variables，以及适用于全局信息（如报表名称）的内置字段。 并非所有集合都显示在 **“表达式”** 对话框中。 DataSets 和 DataSources 集合只有在运行时报表将发布到报表服务器之后才可用。 ReportItems 集合是报表区域中的文本框集合，例如页面或页眉中的文本框。  
+  在报表的表达式中，可以包含对以下内置集合的引用：ReportItems、Parameters、Fields、DataSets、DataSources、Variables 和全局信息的内置字段（如报表名称）。 并非所有集合都显示在 **“表达式”** 对话框中。 DataSets 和 DataSources 集合只有在运行时报表将发布到报表服务器之后才可用。 ReportItems 集合是报表区域中的文本框集合，例如页面或页眉中的文本框。  
   
  有关详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a> 了解内置集合  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> 了解内置集合  
  下表列出了在您撰写表达式时可用的内置集合。 无论是否能够使用“表达式”对话框以交互方式添加对集合、示例和包含可用的初始化集合值的说明的引用，每行都包括集合的区分大小写编程名称。  
   
 |内置集合|“表达式”对话框中的类别|示例|说明|  
@@ -37,7 +37,7 @@ ms.locfileid: "77082199"
 |**变量**|`Variables`|`=Variables!CustomTimeStamp.Value`|表示报表变量和组变量的集合。 有关详细信息，请参阅[报表和组变量集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)。|  
 |**ReportItems**|不显示|`=ReportItems("Textbox1").Value`|表示报表项中的文本框集合。 此集合可以用于汇总页面中的项，包括页眉或页脚。 有关详细信息，请参阅 [ReportItems 集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)。|  
   
-##  <a name="Syntax"></a> 在表达式中使用集合语法  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> 在表达式中使用集合语法  
  若要从表达式中引用某个集合，可将标准的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语法用于集合中的项。 下表显示集合语法的示例。  
   
 |语法|示例|  

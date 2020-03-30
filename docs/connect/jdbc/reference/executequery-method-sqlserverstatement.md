@@ -16,10 +16,10 @@ ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d66ceda5c9afee28240de5af9fe833acd4e25bbb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954778"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>executeQuery 方法 (SQLServerStatement)
@@ -37,7 +37,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 #### <a name="parameters"></a>parameters  
  *sql*  
   
- 包含 SQL 语句的 String。  
+ 包含 SQL 语句的 String  。  
   
 ## <a name="return-value"></a>返回值  
  SQLServerResultSet 对象。  
@@ -48,7 +48,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="remarks"></a>备注  
  此 executeQuery 方法是由 java.sql.Statement 接口中的 executeQuery 方法指定的。  
   
- 如果给定的 SQL 语句没有生成单一的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象，则会引发 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
+ 如果给定的 SQL 语句没有生成单一的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverexception-class.md) 对象，则会引发 [SQLServerException](../../../connect/jdbc/reference/sqlserverresultset-class.md)。  
   
  如果执行存储过程将产生大于 1 的更新计数，或生成多个结果集，则请使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法执行存储过程。  
   

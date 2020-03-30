@@ -21,10 +21,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 889b0497959e7ac7b624d7659fba2648166f0a63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254443"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
@@ -124,9 +124,9 @@ WHERE
   
 一般情况下，以下规则将决定 AND 和 OR 子句在“条件”窗格中的显示方式：  
   
--   所有用 AND 链接的条件都显示在“筛选器”网格列中或同一个“或...”列中。  
+-   所有用 AND 链接的条件都显示在“筛选器”  网格列中或同一个“或...”  列中。  
   
--   所有用 OR 链接的条件都显示在不同的“或...”列中。  
+-   所有用 OR 链接的条件都显示在不同的“或...”  列中。  
   
 -   如果 AND 和 OR 子句组合的逻辑结果是将 AND 分布到多个 OR 子句中，则“条件”窗格将根据需要重复 AND 子句以明确地表示结果。  
   

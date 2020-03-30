@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7b617ecdbf2977372dbb006baaec4c791b988ef8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988902"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的稀疏列支持
@@ -36,7 +36,7 @@ ms.locfileid: "67988902"
   
 |场景|行为|  
 |--------------|--------------|  
-|select \* from table  或 IOpenRowset::OpenRowset。|返回不是稀疏 column_set 的成员的所有列，以及包含是稀疏 column_set 的成员的所有非空列值的 XML 列   。|  
+|select  **from table\*** 或 IOpenRowset::OpenRowset。|返回不是稀疏 column_set 的成员的所有列，以及包含是稀疏 column_set 的成员的所有非空列值的 XML 列   。|  
 |按名称引用列。|可以不考虑其稀疏列状态或 column_set 成员身份如何而引用列  。|  
 |通过计算的 XML 列访问 column_set 成员列  。|作为稀疏 column_set 的成员的列可以通过按名称选择 column_set 进行访问，并且可通过在 column_set 列中更新 XML 插入和更新值    。<br /><br /> 该值必须符合针对 column_set 列的架构  。|  
 |通过 DBSCHEMA_COLUMNS 架构行集检索某一表中所有列的元数据，不存在列限制 (OLE DB)。|为不是 column_set 的成员的所有列返回行  。 如果该表具有稀疏 column_set，则将为其返回一行  。<br /><br /> 请注意，此操作并不返回是 column_set 的成员的列的元数据  。|  
@@ -51,7 +51,7 @@ ms.locfileid: "67988902"
 ## <a name="down-level-client-behavior"></a>下级客户端行为  
  下级客户端将只为不属于 SQLColumns 和 DBSCHMA_COLUMNS 的稀疏 column_set 的成员的列返回元数据  。
   
- 下级客户端将按名称访问作为稀疏 column_set 的成员的列，并且 column_set 列将可作为 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 客户端的 XML 列访问   。  
+ 下级客户端将按名称访问作为稀疏 column_set 的成员的列，并且 column_set 列将可作为  **客户端的 XML 列访问**  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
   
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>针对稀疏列的大容量复制 (BCP) 支持  
  对于稀疏列或 column_set 功能，在 OLE DB 中针对 BCP API 没有任何变化  。  

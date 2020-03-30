@@ -18,10 +18,10 @@ ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081451"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>内置集合 - 报表和组变量引用（报表生成器）
@@ -41,7 +41,7 @@ ms.locfileid: "77081451"
   
 -   **只读使用** ：设置值一次以便为报表会话创建一个常量，例如创建一个时间戳。  
   
-     因为当用户在报表中翻页时，文本框中的表达式将按需计算，所以，如果用户通过使用“上一页”  按钮向前和向后翻页，动态值（例如，包括返回时间的 `Now()` 函数的表达式）可以返回不同的值。 通过将报表变量的值设置为表达式 `=Now()`，然后在表达式中添加变量，可确保整个报表处理过程中使用相同的值。  
+     因为当用户在报表中翻页时，文本框中的表达式将按需计算，所以，如果用户通过使用“上一页”`Now()`**按钮向前和向后翻页，动态值（例如，包括返回时间的**  函数的表达式）可以返回不同的值。 通过将报表变量的值设置为表达式 `=Now()`，然后在表达式中添加变量，可确保整个报表处理过程中使用相同的值。  
   
 -   **读写使用** ：设置值一次并在报表会话中序列化该值。 变量的读写选项提供了一个比在报表定义的代码块中使用静态变量更好的选择。  
   

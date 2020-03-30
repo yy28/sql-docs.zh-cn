@@ -17,10 +17,10 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258153"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
@@ -28,13 +28,13 @@ ms.locfileid: "75258153"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集是一种配置，其中，每个故障转移群集节点都连接到其他子网或其他子网组。 这些子网可位于同一位置或在地理上分散的地点中。 跨地理上分散的站点进行群集有时称为拉伸群集。 因为没有所有节点都可以访问的共享存储，所以在多个子网上的数据存储之间应该复制数据。 对于数据复制，有多个可用数据的副本。 因此，多子网故障转移群集除了具备高可用性之外，还提供了灾难恢复解决方案。  
   
    
-##  <a name="VisualElement"></a> SQL Server 多子网故障转移群集（两个节点，两个子网）  
+##  <a name="sql-server-multi-subnet-failover-cluster-two-nodes-two-subnets"></a><a name="VisualElement"></a> SQL Server 多子网故障转移群集（两个节点，两个子网）  
  下图表示 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的一个两节点、两子网的故障转移群集实例 (FCI)。  
   
  ![包含 MultiSubnetFailover 的多子网体系结构](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "包含 MultiSubnetFailover 的多子网体系结构")  
   
   
-##  <a name="Configurations"></a> 多子网故障转移群集实例配置  
+##  <a name="multi-subnet-failover-cluster-instance-configurations"></a><a name="Configurations"></a> 多子网故障转移群集实例配置  
  以下是使用多个子网的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 的一些示例：  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 包括 Node1 和 Node2。 节点 1 连接到 Subnet1。 Node2 连接到 Subnet2。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将此配置视作一个多子网群集，并且将 IP 地址资源依赖关系设置为 **OR**。  
@@ -47,7 +47,7 @@ ms.locfileid: "75258153"
   
     > **注意：** 此配置不视作多子网故障转移群集配置，因为群集的节点位于同一组子网中。  
   
-##  <a name="ComponentsAndConcepts"></a> IP 地址资源注意事项  
+##  <a name="ip-address-resource-considerations"></a><a name="ComponentsAndConcepts"></a> IP 地址资源注意事项  
  在一个多子网故障转移群集配置中，IP 地址不由该故障转移群集中的所有节点所拥有，并且在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启动期间可能不是全都处于联机状态。 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]开始，您可以将 IP 地址资源依赖关系设置为 **OR**。 这使得 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以在存在至少一个它可以绑定到的有效 IP 地址时处于联机状态。  
   
   > [!NOTE] 
@@ -64,7 +64,7 @@ ms.locfileid: "75258153"
    
  并行安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 与 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的独立实例时，请注意避免 IP 地址上的 TCP 端口号冲突。 当 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的两个实例都配置为使用默认 TCP 端口 (1433) 时，通常会发生冲突。 要避免冲突，请将一个实例配置为使用非默认的固定端口。 在独立实例上配置固定端口通常是最简单的。 若将 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置为使用不同的端口，则在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 未能连接到备用节点时，将防止出现会阻止实例启动的意外 IP 地址/TCP 端口冲突。  
   
-##  <a name="DNS"></a> 故障转移期间的客户端恢复延迟  
+##  <a name="client-recovery-latency-during-failover"></a><a name="DNS"></a> 故障转移期间的客户端恢复延迟  
  默认情况下，多子网 FCI 会针对其网络名称启用 RegisterAllProvidersIP 群集资源。 在多子网配置中，将在 DNS 服务器上注册网络名称的联机和脱机 IP 地址。 之后，客户端应用程序会从 DNS 服务器检索所有已注册的 IP 地址，并尝试按顺序或并行连接到这些地址。 这意味着，多子网故障转移中的客户端恢复时间不再依赖 DNS 更新延迟。 默认情况下，客户端会按顺序尝试 IP 地址。 当客户端在其连接字符串中使用新的可选 **MultiSubnetFailover=True** 参数时，它将改为同时尝试 IP 地址并连接到第一台响应的服务器。 这有助于在发生故障转移时最大程度地减少客户端恢复延迟。 有关详细信息，请参阅 [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) 和 [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
  对于旧版客户端库或第三方数据访问接口，您不能在连接字符串中使用 **MultiSubnetFailover** 参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在它能够循环访问多子网 FCI 中的所有 IP 地址之前不会超时。  
@@ -75,7 +75,7 @@ ms.locfileid: "75258153"
  > - 若要使用多个子网且有静态 DNS，必须先制定用于更新与侦听器关联的 DNS 记录的流程，再执行故障转移，否则网络名称将无法联机。
   
    
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 |内容说明|主题|  
 |-------------------------|-----------|  

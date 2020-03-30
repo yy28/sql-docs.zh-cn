@@ -11,16 +11,16 @@ ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca79a13146df59b0c7159de112feee3ec478249d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015105"
 ---
 # <a name="converting-data-types"></a>转换数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送数据或从其中检索数据时，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 允许指定数据类型。 指定数据类型是可选的。 如果不指定数据类型，将使用默认类型。 此部分的主题介绍如何指定数据类型并提供有关默认数据类型的详细信息。  
+当向 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 发送数据或从其中检索数据时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许指定数据类型。 指定数据类型是可选的。 如果不指定数据类型，将使用默认类型。 此部分的主题介绍如何指定数据类型并提供有关默认数据类型的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
   

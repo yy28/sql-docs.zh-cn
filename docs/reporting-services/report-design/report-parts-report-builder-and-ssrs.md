@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081107"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
@@ -24,7 +24,7 @@ ms.locfileid: "77081107"
   
  您添加到报表中的报表部件将按唯一 ID 维持与站点或服务器上报表部件实例的关系。 在您将报表部件从站点或服务器添加到报表后，可以对这些报表部件进行修改，而与站点或服务器上的原始报表部件无关。 您可以接受他人对站点或服务器上报表部件的更新，并且可以将修改后的报表部件保存回站点或服务器，以及添加新报表部件或改写原始报表部件（如果您具有足够的权限）。  
   
-##  <a name="ComponentWorkflow"></a> 报表部件的生命周期  
+##  <a name="life-cycle-of-a-report-part"></a><a name="ComponentWorkflow"></a> 报表部件的生命周期  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  人员 A 创建一个含图表的报表，该图表依赖于某一嵌入数据集。  
@@ -42,7 +42,7 @@ ms.locfileid: "77081107"
 6.  人员 B 接受来自服务器的更新的图表。 这将覆盖人员 B 已对人员 B 的报表中的图表所做的更改。  
   
   
-##  <a name="PublishingComponents"></a> 发布报表部件  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> 发布报表部件  
  在您发布报表部件时，报表生成器会向其分配一个不同于报表部件名称的唯一 ID。 报表生成器将保持该 ID，无论您对该报表部件进行何种更改。 该 ID 将您的报表中的原始报表项链接到该报表部件。 在其他报表作者重复使用该报表部件时，该 ID 也将其报表中的报表部件链接到报表服务器上的报表部件。  
   
  以下是您可以作为报表部件发布的报表项：  
@@ -81,7 +81,7 @@ ms.locfileid: "77081107"
  您还可以在“属性”窗格中编辑说明。  
   
   
-##  <a name="ReusingComponents"></a> 重复使用报表部件  
+##  <a name="reusing-report-parts"></a><a name="ReusingComponents"></a> 重复使用报表部件  
  创建报表的最简单方式是从报表部件库将现有报表部件（如表或图表）添加到您的报表。 将报表部件添加到您的报表后，可以根据需要进行修改，或者接受来自服务器的更新。 更改您的报表中的报表项将不会对站点或服务器上发布的报表部件的实例产生影响，并且不会破坏报表中的实例与站点或服务器上的实例之间的关系 如果您具有足够的权限，则可以将更新的副本保存回站点或服务器。 如果其他人修改站点或服务器上的副本，您可以决定是将您的副本保持原样，还是更新该副本以便与站点或服务器上的副本相符。  
   
 ### <a name="searching-for-report-parts"></a>搜索报表部件  
@@ -103,7 +103,7 @@ ms.locfileid: "77081107"
  在您添加另一个报表部件时，如果该报表部件使用的数据集与您的报表中已存在的某一数据集完全相同，则向导不会将该数据集的其他版本添加到您的报表；它会重定向该报表部件中的引用以便转到现有数据集。 有关详细信息，请参阅 [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)。  
   
   
-##  <a name="UpdatingComponents"></a> 通过来自服务器的更改更新报表部件  
+##  <a name="updating-report-parts-with-changes-from-the-server"></a><a name="UpdatingComponents"></a> 通过来自服务器的更改更新报表部件  
  每次打开报表时，报表生成器都检查该报表中各报表部件的服务器实例是否已在服务器上进行了更新。 它还将检查报表部件的依赖项（如数据集和参数）的更改。 如果任何已发布的报表部件或其依赖关系已在服务器上进行了更新，则报表中的信息栏将显示已更新的数量。 您可以选择查看并接受或拒绝更新，或关闭信息栏。 如果您选择查看更新，则可以看到报表部件的缩略图、最后修改者以及最后修改时间。 然后，您可以接受任何或所有更新项。  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ ms.locfileid: "77081107"
  若要还原到服务器上的版本，只需删除在您的报表中具有的版本并且再次添加它。  
   
   
-##  <a name="RepublishingComponents"></a> 更新已在服务器上的报表部件  
+##  <a name="updating-report-parts-already-on-the-server"></a><a name="RepublishingComponents"></a> 更新已在服务器上的报表部件  
  您可以选择更新服务器上的现有报表部件，或者将其作为新的报表部件发布而不替换现有的报表部件。 在您更新服务器上的报表部件时，它并不自动修改该报表部件在其他报表中的副本。 如果其他报表作者已将该报表部件添加到某一报表，则在他们下次打开该报表时向他们通知所做的更改。 他们可以选择接受或拒绝您的更改。  
   
  如果您选择将该报表部件作为新的报表部件发布，则报表生成器将为其提供一个新的唯一 ID，并且它将不再链接到原始报表部件。  
@@ -128,10 +128,10 @@ ms.locfileid: "77081107"
  如果数据集嵌入在该报表部件中，则每次您发布该报表部件时，该数据集都将显示在 **“发布报表部件”** 对话框中。 共享数据集不显示在 **“发布报表部件”** 对话框中。  
   
   
-##  <a name="RptPartsRptDesigner"></a> 在报表设计器中使用报表部件  
+##  <a name="working-with-report-parts-in-report-designer"></a><a name="RptPartsRptDesigner"></a> 在报表设计器中使用报表部件  
  报表部件的工作方式与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器稍有不同。 在报表设计器中，发布是单向的：您可以从报表设计器发布报表部件，但不能在报表设计器中重复使用现有报表部件。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
  [发布和重新发布报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
  [浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

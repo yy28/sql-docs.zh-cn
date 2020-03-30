@@ -24,10 +24,10 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080337"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
@@ -62,13 +62,13 @@ ms.locfileid: "77080337"
   
 有关简单表达式和复杂表达式、使用表达式的位置、以及表达式中可以包含的引用类型的详细信息，请参阅 [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。 有关为计算聚合而计算表达式时所处上下文的详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
-若要了解如何编写表达式，以使用本主题中的表达式示例所用的许多函数和运算符，请参阅[教程：表达式简介](../../reporting-services/tutorial-introducing-expressions.md)。  
+若要了解如何编写使用许多本主题中的表达式示例所用的函数和运算符的表达式，请参阅 [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md)。  
 
   
 ## <a name="functions"></a>函数  
  报表中的许多表达式都包含函数。 您可以使用这些函数来设置数据格式、应用逻辑和访问报表元数据。 可以编写使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库、<xref:System.Convert> 和 <xref:System.Math> 命名空间中的函数的表达式。 您可以从其他程序集或自定义代码中向函数添加引用。 还可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的类，其中包括 <xref:System.Text.RegularExpressions>。  
   
-##  <a name="VisualBasicFunctions"></a> Visual Basic 函数  
+##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Visual Basic 函数  
  您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数来处理文本框中所显示的数据，或者处理参数、属性或报表其他区域中所用的数据。 本部分举例说明了其中的一些函数。 有关详细信息，请参阅 [Visual Basic Runtime Library Members](https://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
   
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了许多自定义格式选项，例如，特定日期格式。 有关详细信息，请参阅 MSDN 上的 [格式化类型](https://go.microsoft.com/fwlink/?LinkId=112024) 。  
@@ -87,7 +87,7 @@ ms.locfileid: "77080337"
     = Round(1.3*5)/5  
     ```  
   
-###  <a name="DateFunctions"></a> 日期函数  
+###  <a name="date-functions"></a><a name="DateFunctions"></a> 日期函数  
   
 -   **Today** 函数可提供当前日期。 此表达式可用在文本框中以在报表上显示日期，或用在参数中以根据当前日期筛选数据。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "77080337"
 |一年前|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |两年前|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-###  <a name="StringFunctions"></a> 字符串函数  
+###  <a name="string-functions"></a><a name="StringFunctions"></a> 字符串函数  
   
 -   使用串联运算符和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 常量可将多个字段组合在一起。 以下表达式返回两个字段，它们分别位于同一文本框的不同行中：  
   
@@ -208,7 +208,7 @@ ms.locfileid: "77080337"
   
      如果文本框仅包含日期或数字，则应使用文本框的 Format 属性来应用格式设置，而不应在文本框中使用 **Format** 函数。  
   
--   Right、Len 和 InStr 函数对于返回子字符串十分有用，例如将 DOMAIN\\username 剪裁为用户名      。 下面的表达式从名为 User  的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
+-   Right、Len 和 InStr 函数对于返回子字符串十分有用，例如将 DOMAIN**username 剪裁为用户名**    \\  。 下面的表达式从名为 User\\ *的参数返回反斜杠 (* ) 字符右侧的字符串部分：  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -233,7 +233,7 @@ ms.locfileid: "77080337"
   
     ```  
   
--   若要基于单个参数提供日期范围，可使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 中的 Regex  函数对更改现有字符串的格式很有用，例如设置电话号码格式。 以下表达式使用 **Replace** 函数将字段中的十位电话号码格式从“nnn  -nnn  -nnnn  ”更改为“(nnn  ) nnn  -nnnn  ”：  
+-   若要基于单个参数提供日期范围，可使用   中的 Regex[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]<xref:System.Text.RegularExpressions> 函数对更改现有字符串的格式很有用，例如设置电话号码格式。 以下表达式使用 **Replace** 函数将字段中的十位电话号码格式从“nnn  -nnn  -nnnn  ”更改为“(nnn  ) nnn  -nnnn  ”：  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -258,7 +258,7 @@ ms.locfileid: "77080337"
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-###  <a name="ConversionFunctions"></a> 转换函数  
+###  <a name="conversion-functions"></a><a name="ConversionFunctions"></a> 转换函数  
  使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数可以将字段从一种数据类型转换为另一种不同的数据类型。 转换函数可用于将字段的默认数据类型转换为计算所需的数据类型或用于组合文本。  
   
 -   以下表达式将常量 500 转换为十进制类型，以便将其与筛选表达式值字段中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] money 数据类型进行比较。  
@@ -273,7 +273,7 @@ ms.locfileid: "77080337"
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-###  <a name="DecisionFunctions"></a> 决策函数  
+###  <a name="decision-functions"></a><a name="DecisionFunctions"></a> 决策函数  
   
 -   **Iif** 函数可根据表达式的计算结果（True 或 False）返回两个值中的一个。 下面的表达式使用 **Iif** 函数在 **的值超过 100 时返回布尔值** True `LineTotal` 。 否则，它将返回 **False**：  
   
@@ -328,10 +328,10 @@ ms.locfileid: "77080337"
   
     ```  
   
-##  <a name="ReportFunctions"></a> 报表函数  
+##  <a name="report-functions"></a><a name="ReportFunctions"></a> 报表函数  
  在表达式中，您可以添加对使用报表中数据的附加报表函数的引用。 本部分举例说明了其中两个函数。 有关报表函数和示例的详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
-###  <a name="Sum"></a> Sum  
+###  <a name="sum"></a><a name="Sum"></a> Sum  
   
 -   **Sum** 函数可以对某个组或数据区域中的值求和。 此函数在组的组头或组尾中非常有用。 下面的表达式显示 Order 组或数据区域中的数据之和：  
   
@@ -345,7 +345,7 @@ ms.locfileid: "77080337"
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-###  <a name="RowNumber"></a> RowNumber  
+###  <a name="rownumber"></a><a name="RowNumber"></a> RowNumber  
   
 -   **RowNumber** 函数，如果用在数据区域内的文本框中，则显示表达式所在文本框中的每个实例的行号。 此函数可用于为表中的各行编号。 还可以用于更复杂的情况，如根据行数插入分页符。 有关详细信息，请参阅本主题中的 [分页符](#PageBreaks) 。  
   
@@ -355,10 +355,10 @@ ms.locfileid: "77080337"
     =RowNumber(Nothing)  
     ```  
   
-##  <a name="AppearanceofReportData"></a> 报表数据的外观  
+##  <a name="appearance-of-report-data"></a><a name="AppearanceofReportData"></a> 报表数据的外观  
  您可以使用表达式来控制数据在报表中的显示形式。 例如，可以在一个文本框中显示两个字段的值，显示报表的相关信息，或设置报表中分页符的插入方式。  
   
-###  <a name="PageHeadersandFooters"></a> 页眉和页脚  
+###  <a name="page-headers-and-footers"></a><a name="PageHeadersandFooters"></a> 页眉和页脚  
  在设计报表时，可能需要在报表表尾中显示报表名称和页码。 为此，可使用以下表达式：  
   
 -   下面的表达式提供报表的名称及其运行时间。 可以将该表达式放置在报表表尾或表体的文本框中。 其时间格式为短日期形式的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式设置字符串：  
@@ -398,7 +398,7 @@ ms.locfileid: "77080337"
 > [!NOTE]  
 >  对于表头或表尾中的每个表达式，只能引用一个报表项。 还可以引用表头和表尾表达式中的文本框名称，但不能引用文本框中的实际数据表达式。  
   
-###  <a name="PageBreaks"></a> 分页符  
+###  <a name="page-breaks"></a><a name="PageBreaks"></a> 分页符  
  在某些报表中，可能需要在指定行数之后、特定的组或报表项中插入分页符。 为此，您可以创建一个包含组或您希望的详细记录的组，然后在该组中添加一个分页符，再添加一个组表达式以按指定的行数进行分组。  
   
 -   下面的表达式放置在组表达式中，为每 25 行指定一个编号。 如果为组定义了分页符，则此表达式会每隔 25 行插入一个分页符。  
@@ -415,10 +415,10 @@ ms.locfileid: "77080337"
   
      有关为组设置分页符的详细信息，请参阅[添加分页符（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)。  
   
-##  <a name="Properties"></a> 属性  
+##  <a name="properties"></a><a name="Properties"></a> 属性  
  表达式不仅用于显示文本框中的数据。 还可以用于更改将属性应用于报表项的方式。 您可以更改报表项的样式信息，或更改其可见性。  
   
-###  <a name="Formatting"></a> 格式设置  
+###  <a name="formatting"></a><a name="Formatting"></a> 格式设置  
   
 -   如果下面的表达式用于文本框的 Color 属性中，则可以根据 `Profit` 字段的值更改文本的颜色：  
   
@@ -448,7 +448,7 @@ ms.locfileid: "77080337"
 ### <a name="chart-colors"></a>图表颜色  
  若要指定形状图的颜色，可以使用自定义代码控制颜色映射为数据点值的顺序。 这有助于您对具有相同类别组的多个图表使用一致的颜色。 有关详细信息，请参阅[对多个形状图指定一致的颜色（报表生成器和 SSRS）](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)。  
   
-###  <a name="Visibility"></a> 可见性  
+###  <a name="visibility"></a><a name="Visibility"></a> 可见性  
  您可以使用报表项的可见性属性来显示和隐藏报表中的项。 在诸如表的数据区域中，可以根据表达式中的值在一开始隐藏详细信息行。  
   
 -   如果下面的表达式用于组中详细信息行的初始可见性，则可以在 `PctQuota` 字段中显示超过 90% 的所有销售的详细信息行：  
@@ -469,7 +469,7 @@ ms.locfileid: "77080337"
     =IIF(Fields!Column_1.IsMissing, true, false)  
     ```  
   
-###  <a name="Hyperlinks"></a> URL  
+###  <a name="urls"></a><a name="Hyperlinks"></a> URL  
  可以使用报表数据自定义 URL，还可以有条件地控制是否将 URL 添加为对文本框的操作。  
   
 -   如果将下面的表达式用作对文本框的操作，则可以生成一个自定义 URL，它可将数据集字段 `EmployeeID` 指定为 URL 参数。  
@@ -486,10 +486,10 @@ ms.locfileid: "77080337"
     =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
-##  <a name="ReportData"></a> 报表数据  
+##  <a name="report-data"></a><a name="ReportData"></a> 报表数据  
  您可使用表达式来处理报表中所使用的数据。 可以引用参数和其他报表信息。 甚至可以更改用于检索报表数据的查询。  
   
-###  <a name="Parameters"></a> Parameters  
+###  <a name="parameters"></a><a name="Parameters"></a> Parameters  
  您可以在参数中使用表达式来更改参数的默认值。 例如，可以根据用于运行报表的用户 ID，使用参数来筛选某个特定用户的数据。  
   
 -   下面的表达式如果用作参数的默认值，可以收集运行报表的用户的 ID：  
@@ -510,7 +510,7 @@ ms.locfileid: "77080337"
     =Fields(Parameters!ParameterField.Value).Value  
     ```  
   
-##  <a name="CustomCode"></a> 自定义代码  
+##  <a name="custom-code"></a><a name="CustomCode"></a> 自定义代码  
  您可以在报表中使用自定义代码。 自定义代码嵌入在报表中，或存储在报表使用的自定义程序集中。 有关自定义代码的详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>使用组变量自定义聚合  

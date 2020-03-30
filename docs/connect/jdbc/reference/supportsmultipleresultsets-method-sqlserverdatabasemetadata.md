@@ -16,16 +16,16 @@ ms.assetid: cb4d0b91-db1d-4a6f-a87c-8ea125215afc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 688d17b7f703dc34658e66e3915b8ffaeda24e7b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969225"
 ---
 # <a name="supportsmultipleresultsets-method-sqlserverdatabasemetadata"></a>supportsMultipleResultSets 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此数据库是否支持通过一次调用 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 [execute](../../../connect/jdbc/reference/execute-method.md) 方法获取多个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
+  检索此数据库是否支持通过一次调用 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [execute](../../../connect/jdbc/reference/execute-method.md) 方法获取多个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象。  
   
 ## <a name="syntax"></a>语法  
   

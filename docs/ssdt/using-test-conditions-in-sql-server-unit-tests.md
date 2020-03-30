@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243521"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用测试条件
@@ -75,7 +75,7 @@ ms.locfileid: "75243521"
   
 有关如何使用预期异常和负 SQL Server 单元测试的示例，请参阅[演练：创建和运行 SQL Server 单元测试](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)。  
   
-## <a name="SpecifyDataChecksum"></a>指定数据校验和  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>指定数据校验和  
 若要显示 SQL Server 单元测试设计器，可以在 “解决方案资源管理器”  中双击单元测试源代码文件。  
   
 向您的数据库单元测试添加“数据校验和”测试条件之后，您必须使用以下过程配置所需校验和：  
@@ -107,7 +107,7 @@ ms.locfileid: "75243521"
   
     测试条件的“值”  列将显示预期校验和的值。  
   
-## <a name="SpecifyExpectedSchema"></a>指定预期架构  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>指定预期架构  
 向 SQL Server 单元测试添加“预期架构”测试条件之后，必须使用以下过程配置预期架构：  
   
 #### <a name="to-specify-an-expected-schema"></a>指定预期架构  

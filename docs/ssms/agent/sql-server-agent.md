@@ -16,10 +16,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257936"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
@@ -31,7 +31,7 @@ ms.locfileid: "75257936"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在  *中执行计划的管理任务，即“作业”* [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
 
-## <a name="Benefits"></a>SQL Server 代理的好处 
+## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server 代理的好处 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储作业信息。 作业包含一个或多个作业步骤。 每个步骤都有自己的任务。例如，备份数据库。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75257936"
 > [!NOTE]  
 > 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 代理服务处于禁用状态，除非用户明确选择自动启动该服务。  
   
-## <a name="Components"></a>SQL Server 代理的组件  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server 代理的组件  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用下列组件来定义要执行的任务、执行任务的时间以及报告任务成功或失败的方式。  
   
 ### <a name="jobs"></a>作业  
@@ -114,7 +114,7 @@ ms.locfileid: "75257936"
   
 可以将操作员定义为一组个人的别名。 这样，该组的所有成员就可以同时收到通知。 有关详细信息，请参阅 [运算符](../../ssms/agent/operators.md)。  
   
-## <a name="Security"></a>SQL Server 代理管理的安全性  
+## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server 代理管理的安全性  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在 **msdb**数据库中使用了 **SQLAgentUserRole**、 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 固定数据库角色，用于控制非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin **固定服务器角色成员的用户对** 代理的访问。 除了这些固定数据库角色之外，子系统和代理还有助于数据库管理员确保每个作业步骤运行时都具有执行其任务所需的最低权限。  
   
 ### <a name="roles"></a>角色  

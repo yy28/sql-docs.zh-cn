@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574020"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>用于报表服务器上的项的 URL 示例 - SharePoint 模式
@@ -100,7 +100,7 @@ ms.locfileid: "65574020"
 |**或** 实例的 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 文件夹中的 Company Sales 示例报表。|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
 | 或 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 实例的“报表中心” [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 中的 Company Sales 示例报表。|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
-##  <a name="publishingToDocLib"></a> 从创作工具发布到 SharePoint 库  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> 从创作工具发布到 SharePoint 库  
  使用报表创作工具向库中发布报表和相关文件时，在添加文件之前会对文件进行验证。 如果通过使用 SharePoint 库的 **“上载”** 操作来上载报表和相关文件，则不进行验证检查。 直到通过管理、编辑和运行报表来访问时，您才会知道文件是否有效。  
   
 > [!NOTE]  

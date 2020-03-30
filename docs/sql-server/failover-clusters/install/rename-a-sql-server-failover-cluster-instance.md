@@ -15,10 +15,10 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230719"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
@@ -63,7 +63,7 @@ ms.locfileid: "75230719"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>在重命名操作之后的其他注意事项  
  在重命名故障转移群集的网络名称后，需要按照下面的说明进行验证和操作，使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在所有情况下都正常工作。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务  ：验证和执行以下针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务的附加操作：  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务：** 验证和执行以下针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务的附加操作：  
   
 -   如果 SQL 代理配置为事件转发，请修复注册表设置。 有关详细信息，请参阅[指定事件转发服务器 (SQL Server Management Studio)](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12)。  
   

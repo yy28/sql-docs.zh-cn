@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574821"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的浏览器支持
@@ -108,7 +108,7 @@ ms.locfileid: "65574821"
 
  如果未启用脚本功能，则打开报表时将显示如下错误消息：
 
-- **你的浏览器不支持脚本或已配置为不允许脚本运行。单击此处查看不含脚本的报表**。
+- **您的浏览器不支持脚本或已配置为不允许脚本运行。请单击此处在没有脚本的情况下查看此报表**。
 
  如果选择查看不支持脚本的报表，则报表将会以 HTML 格式呈现，同时不具有报表工具栏和文档结构图等报表查看器功能。
 

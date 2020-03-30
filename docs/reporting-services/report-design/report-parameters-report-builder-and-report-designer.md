@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68941141"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
@@ -33,9 +33,9 @@ ms.locfileid: "68941141"
 
 本主题介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表参数的常规用法、可设置的属性等内容。 通过报表参数，您可以控制报表数据、将相关报表连接在一起以及更改报表显示。 可在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 和报表设计器中所创建的分页报表中使用报表参数，也可在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中所创建的移动报表中使用。 阅读有关 [报表参数概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)的详细信息。  
 
-若要自行尝试向报表中添加参数，请参见[教程：向报表添加参数（报表生成器）](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)。  
+若要尝试自己向报表添加参数，请参阅 [教程：向报表添加参数（报表生成器）](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)中所创建的移动报表中使用。  
 
-## <a name="bkmk_Common_Uses_for_Parameters"></a> 参数的常规用法
+## <a name="common-uses-for-parameters"></a><a name="bkmk_Common_Uses_for_Parameters"></a> 参数的常规用法
 
  下面是一些最常用的使用参数的方法。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68941141"
   
     有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。  
   
-## <a name="UserInterface"></a> 使用参数查看报表
+## <a name="viewing-a-report-with-parameters"></a><a name="UserInterface"></a> 使用参数查看报表
 
 查看具有参数的报表时，报表查看器工具栏将显示每个参数，以便你可以通过交互方式指定值。 下图显示了具有参数 @ReportMonth、@ReportYear、@EmployeeID、@ShowAll、@ExpandTableRows、@CategoryQuota 和 @SalesDate 的报表的参数区域。  
 
@@ -75,17 +75,17 @@ ms.locfileid: "68941141"
   
 1. **“参数”窗格** 报表查看器工具栏显示各个参数的提示和默认值。 可以在参数窗格中自定义参数布局。 有关详细信息，请参阅 [自定义报表中的参数窗格（报表生成器）](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中所创建的移动报表中使用。  
   
-2. \@SalesDate 参数  参数 @SalesDate 的数据类型为 DateTime  。 文本框旁边会显示“选择日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
+2. **SalesDate 参数\@** 参数 @SalesDate 的数据类型为 DateTime  。 文本框旁边会显示“选择日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
   
-3. \@ShowAll 参数  参数 @ShowAll 的数据类型为 Boolean  。 使用单选按钮指定 **True** 或 **False**。  
+3. **ShowAll 参数\@** 参数 @ShowAll 的数据类型为 Boolean  。 使用单选按钮指定 **True** 或 **False**。  
   
 4. **“显示或隐藏参数区域”控点** 在报表查看器工具栏上，单击此箭头可显示或隐藏参数窗格。  
   
-5. \@CategoryQuota 参数  参数 @CategoryQuota 的数据类型为 Float，因此它采用数值  。  @CategoryQuota 设置为允许多个值。  
+5. **CategoryQuota 参数\@** 参数 @CategoryQuota 的数据类型为 Float，因此它采用数值  。  @CategoryQuota 设置为允许多个值。  
   
 6. **查看报表** 输入参数值之后，单击“查看报表”  可运行报表。 如果所有参数都具有默认值，则报表会在第一次查看时自动运行。  
   
-## <a name="bkmk_Create_Parameters"></a> 创建参数
+## <a name="creating-parameters"></a><a name="bkmk_Create_Parameters"></a> 创建参数
 
 可以通过几种不同方式创建报表参数。
   
@@ -142,7 +142,7 @@ ms.locfileid: "68941141"
   
 - 无需先选择参数值即可运行报表，因为已经为该参数设置了默认值。  
   
-## <a name="bkmk_Report_Parameters"></a> 报表参数属性
+## <a name="report-parameter-properties"></a><a name="bkmk_Report_Parameters"></a> 报表参数属性
 
  可用使用“报表属性”对话框来更改报表属性参数。 下表总结了可以为各个参数设置的属性：  
   
@@ -161,7 +161,7 @@ ms.locfileid: "68941141"
 |默认值|设置来自查询或静态列表的默认值。<br /><br /> 如果每个参数均具有默认值，则报表将在第一次查看时自动运行。|  
 |高级|设置报表定义属性 **UsedInQuery**，该值指示此参数是直接还是间接影响报表中的数据。<br /><br /> **自动确定何时刷新**<br /> 当您希望报表处理器来确定该值的设置时选择此选项。 如果报表处理器发现数据集查询具有对此参数的直接或间接引用，或者报表具有子报表，则该值为 **True** 。<br /><br /> **始终刷新**<br /> 当报表参数直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 True。<br /><br /> **从不刷新**<br /> 当报表参数未直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 False。<br /><br /> **注意** 应慎重使用“从不刷新”  。 在报表服务器上， **UsedInQuery** 用于帮助控制报表数据和所呈现报表的高速缓存选项，以及控制快照报表的参数选项。 如果您未正确设置 **“从不刷新”** ，可能导致对不正确的报表数据或报表进行高速缓存，或者导致快照报表具有不一致的数据。 有关详细信息，请参阅[报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)。|  
   
-##  <a name="bkmk_Dataset_Parameters"></a> 数据集查询  
+##  <a name="dataset-query"></a><a name="bkmk_Dataset_Parameters"></a> 数据集查询  
  若要筛选数据集查询中的数据，可以通过指定结果集中要包含或排除的值，来包含一个限制检索到的数据的限制子句。  
   
  使用数据源的查询设计器来帮助生成参数化查询。  
@@ -170,7 +170,7 @@ ms.locfileid: "68941141"
   
 -   对于基于多维数据源（例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase）的查询，可以指定是否创建基于查询设计器中您指定的筛选器的参数。 有关详细信息，请参阅[查询设计工具 &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md) 中与数据扩展插件对应的查询设计器主题。  
   
-##  <a name="bkmk_Manage_Parameters"></a> 已发布报表的参数管理  
+##  <a name="parameter-management-for-a-published-report"></a><a name="bkmk_Manage_Parameters"></a> 已发布报表的参数管理  
  当您设计报表时，报表参数保存在报表定义中。 当您发布报表时，报表参数与报表定义分开保存和管理。  
   
  对于已发布报表，可以使用：  
@@ -193,7 +193,7 @@ ms.locfileid: "68941141"
   
  报表执行选项可以影响参数的处理方式。 作为快照运行的报表不能使用来自查询的参数，除非该查询包含这些参数的默认值。  
   
-##  <a name="bkmk_Parameters_Subscription"></a> 订阅参数  
+##  <a name="parameters-for-a-subscription"></a><a name="bkmk_Parameters_Subscription"></a> 订阅参数  
  您可以定义按需订阅或快照订阅，可以指定在订阅处理过程中所用的参数值。  
   
 -   按需运行报表  。  对于按需报表，你可以指定不同于每个参数（该报表所列的参数）的已发布值的参数值。 例如，假设有一个 Call Service 报表使用 *Time Period* 参数返回当前日、周或月的客户服务请求。 如果报表的默认参数值设置为“今天”  ，则订阅可以使用不同的参数值（例如，“周”  或“月”  ）以生成包含每周或每月数字的报表。  
@@ -209,7 +209,7 @@ ms.locfileid: "68941141"
   
  有关详细信息，请参阅[订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
-##  <a name="bkmk_Parameters_Security"></a> 参数和数据保护  
+##  <a name="parameters-and-securing-data"></a><a name="bkmk_Parameters_Security"></a> 参数和数据保护  
  在分发包含保密信息或敏感信息的参数化报表时要谨慎。 用户可能会很容易地将报表参数替换为其他值，从而导致您不希望发生的信息泄露。  
   
  另一种将参数用于雇员或个人数据的安全方法是：基于包含 Users 集合中的 **UserID** 字段的表达式选择数据。 Users 集合提供了获取报表运行用户的标识的方法，并使用该标识检索用户特定的数据。  
@@ -221,7 +221,7 @@ ms.locfileid: "68941141"
 >   
 >  若要降低无意中运行恶意脚本的风险，请仅从可信来源打开呈现的报表。 有关保护报表的详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。  
 
-##  <a name="bkmk_Related_Topics"></a> 相关章节  
+##  <a name="related-sections"></a><a name="bkmk_Related_Topics"></a> 相关章节  
 
  [教程：向报表添加参数（报表生成器）](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   

@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581248"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>报表设计和报表部署的规划 | Reporting Services
@@ -22,7 +22,7 @@ ms.locfileid: "65581248"
   
  RDL 文件是在 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 项目的报表设计器以及报表生成器中创作的。 RDLC 文件是使用包括在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中的 ReportViewer 控件创作的。
   
-##  <a name="bkmk_rdl_schema_versions"></a> RDL 架构版本  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> RDL 架构版本  
  下表列出了可用的每个架构版本及其缩写，这些缩写要在本主题的其余部分通篇使用：  
   
 |缩写|架构版本|  
@@ -43,22 +43,22 @@ ms.locfileid: "65581248"
   
  有关 ReportViewer 控件的详细信息，请参阅 [ReportViewer 控件 (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)。  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> 报表服务器和 RDL 架构支持  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> 报表服务器和 RDL 架构支持  
  可以使用以下方法将报表定义文件部署到 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 报表服务器：  
   
--   **报表设计器：** 使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的报表设计器来部署报表。  
+-   **报表设计器：** 通过 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]中的报表设计器部署报表。  
   
--   **报表生成器：** 使用报表生成器将报表保存到报表服务器。  
+-   **报表生成器：** 通过报表生成器将报表保存到报表服务器。  
   
--   **Web 门户：** 从 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 将报表上传到本机模式报表服务器。  
+-   **Web 门户：** 通过 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]将报表上传到本机模式报表服务器。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint：** 将报表上传到配置有 SharePoint 模式报表服务器的 SharePoint 站点。  
+-   **SharePoint：** 将报表上载到使用 SharePoint 模式报表服务器配置的 SharePoint 站点。  
 
 ::: moniker-end
   
--   **以编程方式：** 使用 SOAP API 接口以编程方式将报表发布到报表服务器。 有关详细信息，请参阅 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)。  
+-   **以编程方式：** 使用报表服务器的 SOAP API 接口以编程方式发布报表。 有关详细信息，请参阅 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)。  
   
  下表按报表服务器的版本列出了支持的 rdl 架构版本。  
   
@@ -70,11 +70,11 @@ ms.locfileid: "65581248"
   
  如果您将报表定义上载到报表服务器或者升级包含现有报表的报表服务器，报表服务器将保留原格式的报表定义。 **首次使用时**，报表服务器会将报表服务器数据库中的报表升级到二进制格式，并保留这种格式以便以后查看。 报表定义 (.rdl) 本身不升级。  
   
- 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，选择报表并单击“下载”。 
+ 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，选择报表并单击“下载”  。 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”**。  
+在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”** 。  
 
 ::: moniker-end
   
@@ -82,7 +82,7 @@ ms.locfileid: "65581248"
   
  有关报表升级以及支持的架构版本的详细信息，请参阅 [升级报表](../reporting-services/install-windows/upgrade-reports.md)。  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> 报表创作和部署支持  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> 报表创作和部署支持  
  报表创作环境为 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 项目中的报表设计器以及报表生成器。 报表创作环境对报表升级、报表设计、在本地模式下预览报表、在报表服务器上预览报表以及报表部署提供各种支持。  
   
  下表汇总了对不同架构版本的报表定义的创作和部署支持：  
@@ -101,7 +101,7 @@ ms.locfileid: "65581248"
   
 -   [用于 Visual Studio 2015 的 SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。  
   
-##  <a name="bkmk_reportviewer"></a> ReportViewer 控件  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> ReportViewer 控件  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer 控件可在本地预览模式或远程模式下显示 .rdlc 报表，该控件还可以显示在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上托管的 .rdl 文件。 下表提供 ReportViewer 控件为进行本地处理 (.rdlc) 支持的 RDL 版本的列表。 [报表服务器和 RDL 架构支持](#bkmk_report_server_rdl_schema_support)一节中总结了服务器端 RDL 支持。  
   
 |产品中的 ReportViewer 控件|用于本地预览的 RDL 版本|  

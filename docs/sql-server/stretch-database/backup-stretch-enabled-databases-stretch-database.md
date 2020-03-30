@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286301"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>备份已启用延伸的数据库 (Stretch Database)
@@ -35,7 +35,7 @@ ms.locfileid: "79286301"
   
 若要备份已启用延伸的 SQL Server 数据库，可以继续使用目前所用的 SQL Server 备份方法。 有关详细信息，请参阅 [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。
   
- 已启用延伸的 SQL Server 数据库备份只包含该备份运行时所处时间点的本地数据和符合迁移条件的数据。 （符合条件的数据是指尚未迁移，但会根据表的迁移设置迁移到 Azure 的数据。）这称为**浅表**备份，这种备份不会包括已迁移到 Azure 的数据。  
+ 已启用延伸的 SQL Server 数据库备份只包含该备份运行时所处时间点的本地数据和符合迁移条件的数据。 （符合条件的数据是指尚未迁移，但会根据表的迁移设置迁移到 Azure 的数据。）这称为 **浅表** 备份，这种备份不会包括已迁移到 Azure 的数据。  
   
 ## <a name="back-up-your-remote-azure-data"></a>备份远程 Azure 数据   
   
@@ -46,7 +46,7 @@ Azure 上的 SQL Server Stretch Database 服务通过自动存储快照（至少
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure 可降低地域冗余带来的数据丢失的风险  
 Azure 数据库备份存储在地域冗余 Azure 存储 (RA-GRS) 上，因此默认为地域冗余。 地域冗余存储会将你的数据复制到距主要区域数百英里的次要区域。 在主要区域和次要区域，数据将分别复制到次要区域三次，并且是在不同的容错域和升级域之间复制。 这可确保即使遇到整个区域停电或致使 Azure 其中一个区域不可用的灾难时，你的数据仍是持久的。
 
-### <a name="stretchRPO"></a>Stretch Database 通过暂时保留已迁移行来降低 Azure 数据的数据丢失风险
+### <a name="stretch-database-reduces-the-risk-of-data-loss-for-your-azure-data-by-retaining-migrated-rows-temporarily"></a><a name="stretchRPO"></a>Stretch Database 通过暂时保留已迁移行来降低 Azure 数据的数据丢失风险
 在 Stretch Database 将符合条件的行从 SQL Server 迁移至 Azure 后，它可将这些行保留在临时表中至少 8 小时。 如果还原 Azure 数据库的备份，Stretch Database 将使用保存在临时表中的行来协调 SQL Server 和 Azure 的数据库。
 
 还原 Azure 数据的备份后，必须运行 [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 存储过程，重新将已启用延伸的 SQL Server 数据库连接至远程 Azure 数据库。 当你运行 **sys.sp_rda_reauthorize_db**时，Stretch Database 将自动协调 SQL Server 和 Azure 的数据库。

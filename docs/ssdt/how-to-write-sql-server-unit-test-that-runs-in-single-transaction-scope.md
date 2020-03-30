@@ -11,17 +11,17 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246490"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>如何：编写在单个事务范围内运行的 SQL Server 单元测试
 
 您可以修改单元测试以便在单个事务的范围内运行。 如果您采用此方法，则可以在测试结束后回滚测试所执行的所有更改。 下面的过程介绍了如何执行以下操作：  
   
--   在 Transact\-SQL 测试脚本中创建一个使用 BEGIN TRANSACTION 和 ROLLBACK TRANSACTION 的事务。  
+-   在 Transact\-SQL 测试脚本中创建一个使用 BEGIN TRANSACTION  和 ROLLBACK TRANSACTION  的事务。  
   
 -   为测试类中的单个测试方法创建事务。  
   
@@ -61,13 +61,13 @@ ms.locfileid: "75246490"
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>为单个测试方法创建事务  
   
-1.  在“解决方案资源管理器”中，右键单击测试项目中的“引用”节点，然后单击“添加引用”。  
+1.  在“解决方案资源管理器”  中，右键单击测试项目中的“引用”  节点，然后单击“添加引用”  。  
   
-    此时将显示“添加引用”对话框。  
+    此时将显示“添加引用”对话框。   
   
-2.  单击 .NET 选项卡。  
+2.  单击 .NET  选项卡。  
   
-3.  在程序集列表中，单击“System.Transactions”，然后单击“确定”。  
+3.  在程序集列表中，单击“System.Transactions”  ，然后单击“确定”  。  
   
 4.  打开你的单元测试的 Visual Basic 或 C# 文件。  
   
@@ -156,19 +156,19 @@ ms.locfileid: "75246490"
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>启动分布式事务处理协调器服务  
-本主题中的一些过程将会使用 System.Transactions 程序集中的类型。 在按照这些过程进行操作之前，您必须确保在运行单元测试的计算机上正在运行分布式事务处理协调器服务。 否则，测试将失败，并且会出现以下错误消息：“测试方法 ProjectName.TestName.MethodName 引发异常：System.Data.SqlClient.SqlException：服务器 ComputerName 上的 MSDTC 不可用”。  
+本主题中的一些过程将会使用 System.Transactions 程序集中的类型。 在按照这些过程进行操作之前，您必须确保在运行单元测试的计算机上正在运行分布式事务处理协调器服务。 否则，测试将失败并显示以下错误消息：“测试方法 ProjectName.TestName.MethodName    引发异常: System.Data.SqlClient.SqlException: 服务器‘ComputerName  ’上的 MSDTC 不可用”。  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>启动分布式事务处理协调器服务  
   
-1.  打开“控制面板”  
+1.  打开“控制面板”   
   
-2.  在“控制面板”中，打开“管理工具”。  
+2.  在“控制面板”  中，打开“管理工具”  。  
   
-3.  在“管理工具”中，打开“服务”。  
+3.  在“管理工具”  中，打开“服务”  。  
   
-4.  在“服务”窗格中，右键单击“分布式事务处理控制器”服务，然后单击“启动”。  
+4.  在“服务”  窗格中，右键单击“分布式事务处理控制器”  服务，然后单击“启动”  。  
   
-    该服务的状态应更新为“已启动”。 现在，您应该能够运行使用 System.Transactions 的单元测试。  
+    该服务的状态应更新为“已启动”  。 现在，您应该能够运行使用 System.Transactions 的单元测试。  
   
 > [!IMPORTANT]  
 > 即使您已启动分布式事务处理控制器服务，也可能会出现下面的错误：`System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`。 如果出现此错误，则您必须对分布式事务处理控制器服务进行网络访问方面的配置。 有关详细信息，请参见[启用网络 DTC 访问](https://go.microsoft.com/fwlink/?LinkId=193916)。  

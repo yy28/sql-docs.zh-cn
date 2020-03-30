@@ -16,10 +16,10 @@ ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ffe17993b3a03563ec20e8f509e6eae2f6ed47cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977788"
 ---
 # <a name="isbeforefirst-method-sqlserverresultset"></a>isBeforeFirst 方法 (SQLServerResultSet)
@@ -35,7 +35,7 @@ public boolean isBeforeFirst()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果游标位于第一行之前，则为值 true  。 如果游标位于其他任何位置或结果集不包含任何行，则值为 false  。  
+ 如果游标位于第一行之前，则为值 true  。 如果游标在任何其他位置或结果集不包含任何行，则为 false  。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

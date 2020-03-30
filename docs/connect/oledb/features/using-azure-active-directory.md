@@ -10,10 +10,10 @@ ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: b459877be731da11b33d13772bbf186ecf72198c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285801"
 ---
 # <a name="using-azure-active-directory"></a>使用 Azure Active Directory
@@ -34,7 +34,7 @@ ms.locfileid: "79285801"
 - Azure Active Directory MSI 身份验证
 
 > [!NOTE]
-> 不  支持使用以下将 `DataTypeCompatibility`（或其对应的属性）设置为 `80` 的身份验证模式：
+> 不`DataTypeCompatibility``80`支持使用以下将 **（或其对应的属性）设置为**  的身份验证模式：
 > - 使用登录 ID 和密码进行 Azure Active Directory 身份验证
 > - 使用访问令牌进行 Azure Active Directory 身份验证
 > - Azure Active Directory 集成身份验证
@@ -60,13 +60,13 @@ ms.locfileid: "79285801"
 为了提高安全性，当使用新的连接属性/关键字时，驱动程序会通过将默认加密值设置为 `yes` 来重写该值。 重写在数据源对象初始化时发生。 如果在通过任何方法初始化之前设置加密，则会考虑该值，而不会进行重写。
 
 > [!NOTE]   
-> 在 ADO 应用程序以及通过 `IDataInitialize::GetDataSource` 获取 `IDBInitialize` 接口的应用程序中，实现接口的核心组件会将加密显式设置为其默认值 `no`。 因此，新的身份验证属性/关键字遵循此设置，而不会  重写加密值。 因此，建议  这些应用程序显式设置 `Use Encryption for Data=true` 来重写默认值。
+> 在 ADO 应用程序以及通过 `IDBInitialize` 获取 `IDataInitialize::GetDataSource` 接口的应用程序中，实现接口的核心组件会将加密显式设置为其默认值 `no`。 因此，新的身份验证属性/关键字遵循此设置，而不会  重写加密值。 因此，建议  这些应用程序显式设置 `Use Encryption for Data=true` 来重写默认值。
 
 ### <a name="certificate-validation"></a>证书验证
 为了提高安全性，新的连接属性/关键字遵循 `TrustServerCertificate` 设置（及其相应的连接字符串关键字/属性），独立于客户端加密设置  。 因此，默认情况下会验证服务器证书。
 
 > [!NOTE]   
-> 还可以通过 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` 注册表项的 `Value` 字段来控制证书验证。 有效值为 `0` 或 `1`。 OLE DB 驱动程序在注册表和连接属性/关键字设置之间选择最安全的选项。 也就是说，只要至少有一个注册表/连接设置启用服务器证书验证，驱动程序就会验证服务器证书。
+> 还可以通过 `Value` 注册表项的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` 字段来控制证书验证。 有效值为 `0` 或 `1`。 OLE DB 驱动程序在注册表和连接属性/关键字设置之间选择最安全的选项。 也就是说，只要至少有一个注册表/连接设置启用服务器证书验证，驱动程序就会验证服务器证书。
 
 ## <a name="gui-additions"></a>GUI 添加件
 驱动程序图形用户界面已增强，以允许 Azure Active Directory 身份验证。 有关详细信息，请参阅：

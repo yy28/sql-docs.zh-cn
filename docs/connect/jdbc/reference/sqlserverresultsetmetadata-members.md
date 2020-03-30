@@ -11,10 +11,10 @@ ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5998d16986c23b351fe565bbad0d84d2619aaa2f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970528"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData 成员
@@ -39,7 +39,7 @@ ms.locfileid: "67970528"
 |名称|说明|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|获取包括指定列的表的目录名称。|  
-|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|如果调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 方法来从列中检索值，则返回生成其实例的 Java 类的完全限定名称。|  
+|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|如果调用 [SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 类的 [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法来从列中检索值，则返回生成其实例的 Java 类的完全限定名称。|  
 |[getColumnCount](../../../connect/jdbc/reference/getcolumncount-method-sqlserverresultsetmetadata.md)|返回结果集中的列数。|  
 |[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|返回指定列的正常最大宽度（以字符数计）。|  
 |[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|获取在打印输出和显示屏中使用的指定列的建议标题。|  
