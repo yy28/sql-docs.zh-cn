@@ -13,10 +13,10 @@ ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071357"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX（选择性 XML 索引）
@@ -109,11 +109,11 @@ identifier
 )  
 ```  
   
-##  <a name="Arguments"></a> 参数  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  index_name   
  要更改的现有索引的名称。  
   
- \<table_object>   
+ *table_object>\<*  
  包含要建立索引的 XML 列的表。 使用以下格式之一：  
   
 -   `database_name.schema_name.table_name`  
@@ -148,7 +148,7 @@ identifier
  若要运行 ALTER INDEX，需要对表或视图拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例说明 ALTER INDEX 语句。 该语句将路径 `'/a/b/m'` 添加到索引的 XQuery 部分，并且从在 [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md) 主题的示例中创建的索引的 SQL 部分删除路径 `'/a/b/e'`。 要删除的路径由在创建时提供给它的名称标识。  
+ 下面的示例说明 ALTER INDEX 语句。 该语句将路径 `'/a/b/m'` 添加到索引的 XQuery 部分，并且从在 `'/a/b/e'`CREATE SELECTIVE XML INDEX (Transact-SQL)[ 主题的示例中创建的索引的 SQL 部分删除路径 ](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。 要删除的路径由在创建时提供给它的名称标识。  
   
 ```sql  
 ALTER INDEX sxi_index  

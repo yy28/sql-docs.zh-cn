@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048715"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
@@ -33,9 +33,9 @@ ms.locfileid: "68048715"
 > [!NOTE]  
 >  有关空间索引与分区和文件组的关系的信息，请参阅 [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)中的“备注”部分。  
   
-##  <a name="creating"></a> 创建、修改和删除空间索引  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> 创建、修改和删除空间索引  
   
-###  <a name="create"></a> 创建空间索引  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> 创建空间索引  
  **使用 Transact-SQL 创建空间索引**  
  [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68048715"
   
 7.  若要指定想为其创建索引的空间数据列，请单击 **“添加”** 。  
   
-8.  在“从 \<表名称> 中选择列”对话框中，通过选中相应的复选框，选择类型为 geometry 或 geography 的列     。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”** 。  
+8.  在“从 **表名称> 中选择列”对话框中，通过选中相应的复选框，选择类型为 geometry 或 geography 的列** *\<*   。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”** 。  
   
 9. 请在 **“索引键列”** 网格中验证您的列选择。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68048715"
 5.  在 **“所选空间索引”** 列表中选择新的索引，然后在右侧的网格中设置空间索引的属性。 有关属性的信息，请参阅[空间索引对话框 (Visual Database Tools)](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)。  
   
   
-###  <a name="alter"></a> 更改空间索引  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> 更改空间索引  
   
 -   [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68048715"
 -   [将现有索引移动到其他文件组中](../../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> 删除空间索引  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> 删除空间索引  
  **使用 Transact-SQL 删除空间索引**  
  [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68048715"
 4.  单击 **“删除”** 。  
   
   
-##  <a name="restrictions"></a> 对空间索引的限制  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> 对空间索引的限制  
  只能对类型为 **geometry** 或 **geography**的列创建空间索引。  
   
 ### <a name="table-and-view-restrictions"></a>针对表和视图的限制  

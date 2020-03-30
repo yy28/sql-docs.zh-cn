@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68212749"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>证书管理（SQL Server 配置管理器）
@@ -41,11 +41,11 @@ SSL/TLS 证书广泛用于保护对 SQL Server 的访问。 对于早期版本�
 > [!NOTE]
 > 通过较低版本的 SQL Server（从 SQL Server 2008 开始），可使用 SQL Server 配置管理器中的证书管理功能。
 
-##  <a name="provision-single-server-cert"></a> 为单一 SQL Server 实例安装证书  
+##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> 为单一 SQL Server 实例安装证书  
   
 1. 在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”  。  
   
-2. 右键单击“&lt;实例名称&gt; 的协议”，然后选择“属性”    。  
+2. 右键单击“**实例名称** 的协议”，然后选择“属性” *&lt;&gt;*  。  
   
 3. 选择“证书”选项卡，然后选择“导入”   。  
   
@@ -54,11 +54,11 @@ SSL/TLS 证书广泛用于保护对 SQL Server 的访问。 对于早期版本�
 5. 选择“下一步”，验证证书  。 如果没有错误，请选择“下一步”，将证书导入到本地实例  。  
   
  
-##  <a name="provision-failover-cluster-cert"></a> 在故障转移群集配置中安装证书  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> 在故障转移群集配置中安装证书  
   
 1. 在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”  。
   
-2. 右键单击“&lt;实例名称&gt; 的协议”，然后选择“属性”    。 
+2. 右键单击“**实例名称** 的协议”，然后选择“属性” *&lt;&gt;*  。 
 
 3. 选择“证书”选项卡，然后选择“导入”   。
 
@@ -77,11 +77,11 @@ SSL/TLS 证书广泛用于保护对 SQL Server 的访问。 对于早期版本�
 > [!NOTE]
 > 在 SQL Server 故障转移群集实例的活动节点中完成这些步骤。 用户必须拥有所有群集节点的管理员权限。
 
-##  <a name="provision-availability-group-cert"></a> 在可用性组配置中安装证书  
+##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a> 在可用性组配置中安装证书  
   
 1. 在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”  。
   
-2. 右键单击“&lt;实例名称&gt; 的协议”，然后选择“属性”    。  
+2. 右键单击“**实例名称** 的协议”，然后选择“属性” *&lt;&gt;*  。  
   
 3. 选择“证书”选项卡，然后选择“导入”   。  
   

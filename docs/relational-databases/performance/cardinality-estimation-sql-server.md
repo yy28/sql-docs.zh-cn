@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946999"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
@@ -61,17 +61,17 @@ ms.locfileid: "67946999"
 
 -  **独立性：** 假设不同列上的数据分布是独立于彼此的，除非可获取相关性信息且信息可用。
 -  **一致性：** 不同值均匀分布且具有相同的频率。 更确切地说，是在每个[直方图](../../relational-databases/statistics/statistics.md#histogram)步骤中，不同值均匀分布，并且每个值都具有相同的频率。 
--  **包容（简单）：** 用户查询已存在的数据。 例如，对于两个表之间的等值联接，在联接直方图以评估联接选择性之前，考虑每个输入直方图中的谓词选择性<sup>1</sup>。 
+-  **包含（简单）：** 用户查询已存在的数据。 例如，对于两个表之间的等值联接，在联接直方图以评估联接选择性之前，考虑每个输入直方图中的谓词选择性<sup>1</sup>。 
 -  **包含：** 对于 `Column = Constant` 的筛选器谓词，通常假定事实上关联列存在常数。 如果相应的直方图步骤非空，则假定该步骤的其中一个不同值匹配谓词的值。
 
   <sup>1</sup>满足谓词的行计数。
 
 后续更新从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，意味着兼容性级别为 120 及以上。 级别 120 及以上的 CE 更新中引入了已更新的假设和算法，非常适用于现代数据仓库和 OLTP 工作负荷。 从 CE 70 假设开始，以下模型假设已自 CE 120 起更改：
 
--  独立性转变为相关性   ：不同列值的组合不一定独立。 这可能类似于更真实的数据查询。
--  简单包含转变为基本包含   ：用户可能查询不存在的数据。 例如，对于两个表之间的等值联接，我们使用基本表直方图来评估联接选择性，然后考虑谓词选择性因素。
+-  独立性转变为相关性：不同列值的组合不一定独立   。 这可能类似于更真实的数据查询。
+-  简单包含转变为基础包含：用户可能查询不存在的数据   。 例如，对于两个表之间的等值联接，我们使用基本表直方图来评估联接选择性，然后考虑谓词选择性因素。
   
-**兼容性级别：** 通过使用以下 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，可以确保数据库位于特定级别。  
+**兼容性级别：** 通过使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]COMPATIBILITY_LEVEL[ 的 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 代码，可以确保数据库位于特定级别。  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -111,7 +111,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**查询存储：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询存储是用于检查查询性能的一种方便的工具。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点   。  
+查询存储：从  **开始，查询存储是用于检查查询性能的一种方便的工具**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点   。  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
@@ -256,7 +256,7 @@ GO
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>示例 A. CE 认为最大值可能大于最近收集统计信息时的值  
   
-当 `OrderAddedDate` 的最大值为 `2016-04-30` 时，假定上次在 `2016-04-30` 收集 `OrderTable` 的统计信息。 CE 120（和更高版本）认为数据按升序排序的 `OrderTable` 中的列的值可能大于由统计信息记录的最大值  。 这种假设改进了 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的查询计划，如下所示。  
+当 `OrderTable` 的最大值为 `2016-04-30` 时，假定上次在 `OrderAddedDate` 收集 `2016-04-30` 的统计信息。 CE 120（和更高版本）认为数据按升序排序的 `OrderTable` 中的列的值可能大于由统计信息记录的最大值  。 这种假设改进了 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的查询计划，如下所示。  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  

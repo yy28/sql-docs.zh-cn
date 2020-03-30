@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041356"
 ---
 # <a name="transaction-log-backups-sql-server"></a>事务日志备份 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "68041356"
  
 数据库管理员通常偶尔（如每周）会创建完整数据库备份，还可以选择以较短间隔（如每天）创建一系列差异备份。 与数据库备份无关，数据库管理员可以比较频繁地创建事务日志备份。 对于给定的备份类型，最恰当的备份间隔取决于一系列因素，如数据的重要性、数据库的大小和服务器的工作负荷。 有关实现好策略的详细信息，请参阅本主题中的[建议](#Recommendations)。 
    
-##  <a name="LogBackupSequence"></a> 日志备份顺序的工作方式  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a> 日志备份顺序的工作方式  
  事务日志备份“日志链”  的序列与数据备份无关。 例如，假设有下列事件顺序。  
   
 |时间|事件|  
@@ -45,7 +45,7 @@ ms.locfileid: "68041356"
   
  晚上 8:00 创建的事务日志备份包含从下午 4:00 到晚上 8:00 的事务日志记录，跨越了在晚上 6:00 创建完整数据库备份的时间。从上午 8:00 创建的初始完整数据库备份一直到晚上 8:00 创建的最后事务日志备份，事务日志备份序列保持连续。 有关如何应用这些日志备份的信息，请参阅 [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).中的示例。  
   
-##  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   如果事务日志损坏，则最新有效备份以后执行的工作将丢失。 因此，我们强烈建议您将日志文件存储在容错的存储设备中。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68041356"
 > 若要限制需要还原的日志备份的数量，必须定期备份数据。 例如，可以制定这样一个计划：每周进行一次完整数据库备份，每天进行若干次差异数据库备份。  
 > 同样，实现恢复策略时，请考虑所需 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)，尤其是完整和差异的数据库备份频率。
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **创建事务日志备份**  
   
 -   [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

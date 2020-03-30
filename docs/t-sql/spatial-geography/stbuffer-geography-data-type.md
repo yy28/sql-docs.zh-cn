@@ -18,10 +18,10 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042528"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer（geography 数据类型）
@@ -42,19 +42,19 @@ ms.locfileid: "68042528"
  distance   
  类型为 float（在 .NET Framework 中为 double）的值，用于指定与围绕其计算缓冲区的 geography 实例的距离    。  
   
- 缓冲区的最大距离不能超过 0.999 \* π * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 的地球圆周）或整个地球  。  
+ 缓冲区的最大距离不能超过 0.999 \* π * minorAxis *minorAxis / majorAxis（~0.999* 1/2 的地球圆周）或整个地球\*\*。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：**SqlGeography**  
+ CLR 返回类型：SqlGeography   
   
 ## <a name="remarks"></a>备注  
- STBuffer() 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) 相同：指定 tolerance = abs(distance) \* .001 且 relative = false    。  
+ STBuffer() 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) 相同：指定 tolerance = abs(distance)  *.001 且 relative*false\*   =   。  
   
  负的缓冲区将删除 geography 实例的给定距离的边界内的所有点  。  
   
- `STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到极地的距离时，`STBuffer()` 返回 FullGlobe 实例   。 缓冲区不能超过完整的地球。  
+ `STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到极地的距离时， **返回 FullGlobe 实例**`STBuffer()`  。 缓冲区不能超过完整的地球。  
   
  在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException   ：  
   

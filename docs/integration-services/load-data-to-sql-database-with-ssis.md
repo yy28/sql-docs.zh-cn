@@ -11,10 +11,10 @@ ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924996"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 SQL Server 或 Azure SQL 数据库中
@@ -138,7 +138,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
    3. 在“登录服务器”部分中，选择“使用 SQL Server 身份验证”或输入身份验证信息   。
    4. 在“连接到数据库”部分中，选择现有数据库  。
     a. 单击 **“测试连接”** 。
-    b. 在报告连接测试结果的对话框中，单击“确定”返回“连接管理器”对话框   。
+    b.保留“数据库类型”设置，即设置为“共享”。 在报告连接测试结果的对话框中，单击“确定”返回“连接管理器”对话框   。
     c. 在“连接管理器”对话框中，单击“确定”返回“配置 ADO.NET 连接管理器”对话框    。
 5. 在“配置 ADO.NET 连接管理器”对话框中，单击“确定”返回“ADO.NET 目标编辑器”    。
 6. 在“ADO.NET 目标编辑器”中，单击“使用表格或视图”列表旁边的“新建”，打开“创建表格”对话框，创建包含与源表匹配的列列表的新目标表     。

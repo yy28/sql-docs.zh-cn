@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68047989"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>数据库镜像端点 (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "68047989"
 >  后续版本的 Microsoft SQL Server 将删除数据库镜像功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用数据库镜像的应用程序，以便改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 。  
   
   
-##  <a name="ServerNetworkAddress"></a> 服务器网络地址  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> 服务器网络地址  
  服务器实例的网络地址（其“服务器网络地址”  或“终结点 URL”  ）包含其端点的端口号，以及主机的系统名称和域名。 端口号唯一标识特定的服务器实例。  
   
  下图具体说明了如何将同一服务器上的两个服务器实例进行唯一标识。 两个服务器实例的服务器网络地址均包含相同的系统名称 `MYSYSTEM`和域名 `Adventure-Works.MyDomain.com`。 若要使系统能够路由到服务器实例的连接，服务器网络地址需要包括与特定服务器实例的镜像端点相关联的端口号。  
@@ -57,7 +57,7 @@ ms.locfileid: "68047989"
 >  请勿重新配置正在使用的数据库镜像端点。 服务器实例使用彼此的端点来了解其他系统的状态。 如果重新配置端点，则可能会重新启动此端点，从而导致其他服务器实例出现错误。 这对于自动故障转移模式尤为重要，在此模式下，在伙伴上重新配置端点可能会导致故障转移。  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> 为数据库镜像端点确定身份验证类型  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> 为数据库镜像端点确定身份验证类型  
  理解您的服务器实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户将确定您可以将何种类型的身份验证用于数据库镜像端点十分重要，下面将阐释这一点：  
   
 -   如果每个服务器实例都在某一域服务帐户下运行，则您可以将 Windows 身份验证用于您的数据库镜像端点。 如果所有服务器实例使用相同的域用户帐户运行，则正确的用户登录名将自动存在于全部两个 **master** 数据库中。 这样可简化可用性数据库的安全配置并建议这样做。  
@@ -74,7 +74,7 @@ ms.locfileid: "68047989"
      没有使用证书来配置数据库镜像安全性的任何自动方法。 你将需要使用 CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或 **New-SqlHadrEndpoint** PowerShell cmdlet。 有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)。 有关在服务器实例上启用证书身份验证的信息，请参阅 [使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置数据库镜像端点**  
   
 -   [创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

@@ -1,4 +1,4 @@
-##  <a name="info-tippngmediainfo-tippng-get-help"></a>![info-tip.png](media/info-tip.png) 获取帮助
+##  <a name="info-tippng-get-help"></a>![info-tip.png](media/info-tip.png) 获取帮助
 
 - [UserVoice - 改进 SQL Server 的建议？](https://feedback.azure.com/forums/908035-sql-server)
 - [SQL Server 安全 - MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)

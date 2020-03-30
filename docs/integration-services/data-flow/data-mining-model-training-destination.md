@@ -20,10 +20,10 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f064ad734e90d2748b959e7fdc9d5868b22c25cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293112"
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
@@ -58,7 +58,7 @@ ms.locfileid: "71293112"
   
 ### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”  按钮创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接。  
+ 从现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**按钮创建新的**  连接。  
   
  **新建**  
  通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  

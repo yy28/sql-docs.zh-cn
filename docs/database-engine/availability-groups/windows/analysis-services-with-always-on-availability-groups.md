@@ -13,10 +13,10 @@ ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892888"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>含有 AlwaysOn 可用性组的 Analysis Services
@@ -27,14 +27,14 @@ ms.locfileid: "68892888"
   
  处理和查询属于只读工作负荷。 您可以通过将这些工作负荷转移到可读辅助副本来改善性能， 但这需要执行额外配置。 请使用本主题中的核对清单来确保遵循所有步骤。  
   
-##  <a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
  您必须具有针对所有副本的 SQL Server 登录名。 必须具有 **sysadmin** 权限才能配置可用性组、侦听器和数据库；但用户只需要 **db_datareader** 权限即可从 Analysis Services 客户端访问数据库。  
   
  请使用支持表格格式数据流 (TDS) 协议版本 7.4 或更高版本的数据访问接口（如 SQL Server Native Client 11.0），或 .NET Framework 4.02 中用于 SQL Server 的数据访问接口。  
   
  **（仅限只读工作负荷）** 。 必须为只读连接配置辅助副本角色，可用性组必须具备路由列表，并且 Analysis Services 数据源中的连接必须指定可用性组侦听器。 本主题中提供了相关说明。  
   
-##  <a name="bkmk_UseSecondary"></a> 核对清单：使用辅助副本执行只读操作  
+##  <a name="checklist-use-a-secondary-replica-for-read-only-operations"></a><a name="bkmk_UseSecondary"></a> 核对清单：使用辅助副本执行只读操作  
  除非您的 Analysis Services 解决方案包括写回功能，否则您可以配置数据源连接使用可读的辅助副本。 如果您的网络连接速度很快，那么辅助副本的数据滞后时间很短，可提供与主副本几乎相同的数据。 通过将辅助副本用于 Analysis Services 操作，您可以减少主副本上的读写争用，并且更充分地利用可用性组中的辅助副本。  
   
  默认情况下，允许对主副本进行读写和读意向访问，同时不允许连接辅助副本。 需要进行额外配置，才能建立与辅助副本的只读客户端连接。 配置要求对辅助副本设置属性，并运行定义只读路由列表的 T-SQL 脚本。 请使用以下过程来确保已执行以上两个步骤。  
@@ -119,7 +119,7 @@ ms.locfileid: "68892888"
   
      下一步，在使用您刚配置的组中的数据库的 Analysis Services 模型中创建数据源。  
   
-##  <a name="bkmk_ssasAODB"></a> 使用 AlwaysOn 可用性数据库创建 Analysis Services 数据源  
+##  <a name="create-an-analysis-services-data-source-using-an-always-on-availability-database"></a><a name="bkmk_ssasAODB"></a> 使用 AlwaysOn 可用性数据库创建 Analysis Services 数据源  
  本节说明如何创建连接到可用性组中的数据库的 Analysis Services 数据源。 您可以使用这些说明来配置与主副本（默认）的连接，或配置与基于上一节中的步骤配置的可读辅助副本的连接。 AlwaysOn 配置设置连同在客户端中设置的连接属性将共同决定是使用主要副本还是次要副本。  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 的 Analysis Services 多维和数据挖掘模型项目中，右键单击“数据源”  并选择“新建数据源”  。 单击 **“新建”** 创建新的数据源。  
@@ -150,7 +150,7 @@ ms.locfileid: "68892888"
   
  现在已经定义了数据源。 接下来可以构建模型，可以从数据源视图入手；如果是表格模型，则可以创建关系。 在您需要从可用性数据库中检索数据时（例如在您准备处理或部署解决方案时），您可以测试配置以验证是否从辅助副本检索数据。  
   
-##  <a name="bkmk_test"></a> 测试配置  
+##  <a name="test-the-configuration"></a><a name="bkmk_test"></a> 测试配置  
  在 Analysis Services 中配置了辅助副本并创建了数据源连接后，您可以确认处理和查询命令是否重定向到辅助副本。 还可以执行计划的手动故障转移，以验证适用于此应用场景的恢复计划。  
   
 #### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>第 1 步：确认数据源连接重定向到辅助副本  
@@ -200,7 +200,7 @@ ms.locfileid: "68892888"
   
 9. 在 Analysis Services 解决方案中重复处理或查询命令，然后在 SQL Server Profiler 中并排观察跟踪状况。 您应能发现在另一个实例（即现在的新辅助副本）上执行处理的证据。  
   
-##  <a name="bkmk_whathappens"></a> 故障转移之后的情形  
+##  <a name="what-happens-after-a-failover-occurs"></a><a name="bkmk_whathappens"></a> 故障转移之后的情形  
  在故障转移期间，辅助副本转换为主角色，以前的主副本转换为辅助角色。 所有客户端连接都已终止，可用性组侦听器的所有权随主副本角色移至新的 SQL Server 实例，并且该侦听器终结点绑定到新实例的虚拟 IP 地址和 TCP 端口。 有关详细信息，请参阅本主题后面的 [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)之类的系统数据库。  
   
  如果执行过程中出现故障转移，Analysis Services 中会出现以下错误并显示在日志文件或输出窗口中：“OLE DB 错误: OLE DB 或 ODBC 错误通讯链接失败; 08S01; TPC 提供程序: 现有连接已被远程主机强行关闭。 ; 08S01。”  
@@ -209,7 +209,7 @@ ms.locfileid: "68892888"
   
  若错误反复出现，则很可能是因为配置有误。 您可以尝试重新运行 T-SQL 脚本，以解决辅助副本上可能存在的路由列表、只读路由 URL 和读意向问题。 还应该确认主副本允许所有连接。  
   
-##  <a name="bkmk_writeback"></a> 使用 AlwaysOn 可用性数据库时执行写回  
+##  <a name="writeback-when-using-an-always-on-availability-database"></a><a name="bkmk_writeback"></a> 使用 AlwaysOn 可用性数据库时执行写回  
  写回是 Analysis Services 中用来支持 Excel 中的假设分析的一项功能。 该功能还常用于自定义应用程序中的预算和预测任务。  
   
  要支持写回功能，需要 READWRITE 客户端连接。 在 Excel 中，如果在只读连接上尝试写回，将出现以下错误：“无法从外部数据源检索数据。” “无法从外部数据源检索数据。”  

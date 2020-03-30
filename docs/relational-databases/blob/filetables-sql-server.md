@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68125173"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "68125173"
   
  FileTable 功能是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FILESTREAM 技术的基础上生成的。 有关 FILESTREAM 的详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
   
-##  <a name="Goals"></a> FileTable 功能的优点  
+##  <a name="benefits-of-the-filetable-feature"></a><a name="Goals"></a> FileTable 功能的优点  
  FileTable 功能的目标包括：  
   
 -   针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中存储的文件数据的 Windows API 兼容性。 Windows API 兼容性包括以下方面：  
@@ -49,7 +49,7 @@ ms.locfileid: "68125173"
  这样，FileTable 将消除使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储和管理非结构化数据的一个巨大障碍，这些数据目前作为文件存储在文件服务器上。 企业可以将这些数据从文件服务器移到 FileTable，以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的集成管理和服务。 同时，它们可以保持现有 Windows 应用程序的 Windows 应用程序兼容性，将这些数据视为文件系统中的文件。  
  
   
-##  <a name="Description"></a> 什么是 FileTable？  
+##  <a name="what-is-a-filetable"></a><a name="Description"></a> 什么是 FileTable？  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于需要在数据库中存储文件和目录的应用程序，借助 Windows API 兼容性和非事务性访问，提供一种特殊的 **文件表**，也称为 **FileTable**。 FileTable 是一种专用的用户表，它包含存储 FILESTREAM 数据的预定义架构以及文件和目录层次结构信息、文件属性。  
   
  FileTable 提供以下功能：  
@@ -86,9 +86,9 @@ ms.locfileid: "68125173"
 
 -   无法通过 dbmail 发送电子邮件请求以及附加位于文件流目录中的文件（因此无法附加 filetable）。 文件系统筛选器驱动程序 RsFx0420 会检查进出文件流文件夹的传入 I/O 请求。 如果请求不是同时出自 SQLServer 可执行文件和文件流代码中，则会显式禁止它们。
   
-##  <a name="additional"></a> 使用 FileTable 的其他注意事项  
+##  <a name="additional-considerations-for-using-filetables"></a><a name="additional"></a> 使用 FileTable 的其他注意事项  
   
-###  <a name="DBA"></a> 管理注意事项  
+###  <a name="administrative-considerations"></a><a name="DBA"></a> 管理注意事项  
  **关于 FILESTREAM 和 FileTable**  
   
 -   独立于 FILESTREAM 配置 FileTable。 因此，您可以继续使用 FILESTREAM 功能，而不启用非事务性访问或创建 FileTable。  
@@ -101,10 +101,10 @@ ms.locfileid: "68125173"
   
 -   您可以通过将非事务性访问关闭或者启用只读或完全读/写访问，在数据库级别配置或优化非事务性访问。  
    
-###  <a name="memory"></a> FileTable 不支持内存映射文件  
+###  <a name="filetables-do-not-support-memory-mapped-files"></a><a name="memory"></a> FileTable 不支持内存映射文件  
  FileTable 不支持内存映射文件。 “记事本”和“画图”是两个常见的使用内存映射文件的示例应用程序。 不能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的计算机上使用这些应用程序来打开存储在 FileTable 中的文件。 但是，可以从远程计算机使用这些应用程序来打开存储在 FileTable 中的文件，因为在这些情况下不使用内存映射功能。  
    
-##  <a name="reltasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相关任务  
  [启用 FileTable 的先决条件](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
  介绍如何启用创建和使用 FileTable 的先决条件。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "68125173"
  [管理 FileTable](../../relational-databases/blob/manage-filetables.md)  
  说明用于管理 FileTable 的常见管理任务。  
   
-##  <a name="relcontent"></a> 相关内容  
+##  <a name="related-content"></a><a name="relcontent"></a> 相关内容  
  [FileTable 架构](../../relational-databases/blob/filetable-schema.md)  
  说明 FileTable 的预定义固定架构。  
   

@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902827"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67902827"
   
      在此部分中，需要定义端点上所支持的负载。 负载可以为以下多种支持类型中的一种：[!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker、数据库镜像。 在此部分中，还需要提供语言特定信息。  
   
-> **注意：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中已删除了本机 XML Web 服务（SOAP/HTTP 终结点）。  
+> 请注意： **中已删除了本机 XML Web 服务（SOAP/HTTP 终结点）** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,7 +118,7 @@ FOR DATABASE_MIRRORING (
   
  若要重新分配所有权，请参阅 [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)。  
   
- STATE = { STARTED | STOPPED | DISABLED }    
+ STATE  **{ STARTED | STOPPED | DISABLED }=**   
  端点创建时的状态。 如果在创建端点时未指定状态，则默认值为 STOPPED。  
   
  STARTED  
@@ -138,7 +138,7 @@ FOR DATABASE_MIRRORING (
  FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING }  
  指定负载类型。  
   
- 当前，没有要传入 `<language_specific_arguments>` 参数 (parameter) 的特定于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言的参数 (argument)。  
+ 当前，没有要传入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 参数 (parameter) 的特定于 `<language_specific_arguments>` 语言的参数 (argument)。  
   
  **TCP 协议选项**  
   
@@ -159,14 +159,14 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  有关特定于 SERVICE_BROKER 的选项，请参阅本节后面的“SERVICE_BROKER 选项”。 有关特定于 DATABASE_MIRRORING 的选项，请参阅本节后面的“DATABASE_MIRRORING 选项”。  
   
- AUTHENTICATION =\<authentication_options> 为此终结点指定连接需要的 TCP/IP 身份验证  。 默认值为 WINDOWS。  
+ AUTHENTICATION **=authentication_options> 为此终结点指定连接需要的 TCP/IP 身份验证**\<。 默认值为 WINDOWS。  
   
  支持的身份验证方法包括 NTLM 或 Kerberos 或这两种方法。  
   
 > [!IMPORTANT]  
 >  服务器实例上所有的镜像连接都只使用一个数据库镜像端点。 任何创建其他数据库镜像端点的尝试都将失败。  
   
- \<authentication_options> ::=   
+ **authentication_options> ::=\<**  
   
  WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]    
  指定端点使用 Windows 身份验证协议进行连接以验证端点。 这是默认值。  
@@ -220,7 +220,7 @@ FOR DATABASE_MIRRORING (
   
  下列参数专用于 SERVICE_BROKER 选项。  
   
- MESSAGE_FORWARDING = { ENABLED | DISABLED }    
+ MESSAGE_FORWARDING  **{ ENABLED | DISABLED }=**   
  确定是否将转发此端点所收到的位于其他位置的服务的消息。  
   
  ENABLED  
@@ -229,14 +229,14 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  放弃位于其他位置的服务的消息。 这是默认值。  
   
- MESSAGE_FORWARD_SIZE =forward_size    
+ MESSAGE_FORWARD_SIZE **forward_size=**   
  指定存储要转发的消息时为要使用的端点分配的最大存储量 (MB)。  
   
  **DATABASE_MIRRORING 选项**  
   
  下列参数专用于 DATABASE_MIRRORING 选项。  
   
- ROLE = { WITNESS | PARTNER | ALL }   
+ ROLE  **{ WITNESS | PARTNER | ALL }=**  
  指定端点支持的数据库镜像角色（一个或多个）。  
   
  WITNESS  
