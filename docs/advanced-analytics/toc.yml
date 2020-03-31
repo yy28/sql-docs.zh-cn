@@ -11,22 +11,20 @@
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: 独立服务器
       href: ../advanced-analytics/r/r-server-standalone.md
-    - name: 新增功能？
+    - name: 新增功能
       href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: 安装
   items:
-    - name: SQL Server 2019 中的隔离变化
-      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: 在 Windows 上安装 ML 服务
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
     - name: 在 Linux 上安装 ML 服务
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+    - name: 在 Linux 上安装 ML 服务
+      href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
+    - name: SQL Server 2019 中的隔离变化
+      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: 安装 R Services
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: 安装独立服务器
-      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
-    - name: 安装预先定型的模型
-      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: 脱机安装（无 Internet）
       items:
         - name: 没有 Internet 访问权限的安装
@@ -35,16 +33,20 @@
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: 命令提示符设置
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
+    - name: 安装预先定型的模型
+      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: 升级 Python 和 R
       href: ../advanced-analytics/install/upgrade-r-and-python.md
     - name: Azure Data Studio 笔记本
       href: ../advanced-analytics/install/sql-machine-learning-azure-data-studio.md
     - name: 设置 Python 客户端
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
-    - name: 设置 R 客户端
+    - name: 设置 R 客户
       href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: 在 Azure VM 上安装
       href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
+    - name: 安装独立服务器
+      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
 - name: 快速入门
   items:
     - name: Python
@@ -115,7 +117,7 @@
           href: ../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md
         - name: 在 T-SQL 中使用 R
           items:
-            - name: 1. 介绍
+            - name: 1. 简介
               href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
             - name: 2. 数据研究
               href: ../advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md
@@ -127,7 +129,7 @@
               href: ../advanced-analytics/tutorials/sqldev-operationalize-the-model.md
         - name: 在 R 工具中使用 SQL ML
           items:
-            - name: 1. 介绍
+            - name: 1. 简介
               href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
             - name: 2. 数据研究
               href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
@@ -141,7 +143,7 @@
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: RevoScaleR 深入了解
           items:
-            - name: 介绍
+            - name: 简介
               href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
             - name: 1. 创建数据库和权限
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
@@ -193,7 +195,7 @@
       href: ../advanced-analytics/concepts/extension-r.md
     - name: 安全性
       href: ../advanced-analytics/concepts/security.md
-- name: 操作方法指南
+- name: 操作指南
   items:
     - name: 连接
       items:
@@ -339,7 +341,7 @@
   items:
     - name: 发行说明 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
-    - name: 故障排除
+    - name: 疑难解答
       items:
         - name: 疑难解答概述
           href: ../advanced-analytics/machine-learning-troubleshooting-faq.md

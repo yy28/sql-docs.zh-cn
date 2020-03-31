@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 8cf37ff6a4ad5e2b627fa5d968391cc5a7597a4a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244090"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的笔记本
@@ -23,7 +23,7 @@ ms.locfileid: "75244090"
 
 本文介绍如何使用 SQL Server 在 Azure Data Studio 中打开和保存笔记本文件。 还演示了如何更改与 SQL Server 大数据群集的连接。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 本文假定你已有一个要在 Azure Data Studio 中使用的笔记本。 若要创建笔记本，请参阅[如何在 SQL Server 中使用笔记本](notebooks-guidance.md)。 若要使用 Azure Data Studio 中的笔记本，则必须满足以下先决条件：
 
@@ -51,7 +51,7 @@ ms.locfileid: "75244090"
 
 ### <a name="command-palette"></a>命令面板
 
-通过键入 Ctrl+Shift+P（在 Windows 中）或 Cmd+Shift+P（在 Mac 中），使用命令面板中的命令“File:Open”  。
+通过键入 Ctrl+Shift+P（在 Windows 中）  或 Cmd+Shift+P（在 Mac 中），使用命令面板中的命令“File:Open”。
 
 ![通过在命令面板中输入“File:Open”，打开“打开文件”对话框](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -65,7 +65,7 @@ ms.locfileid: "75244090"
 > 以下方法目前不会保存对笔记本的更改：
 >
 > - “文件”菜单中的“文件保存”、“文件另存为...”和“文件全部保存”命令    。
-> - 在命令面板中输入的“File:Open”命令  。
+> - 在命令面板中  输入的“File:Open”命令。
 
 ## <a name="change-the-big-data-cluster"></a>更改大数据群集
 
