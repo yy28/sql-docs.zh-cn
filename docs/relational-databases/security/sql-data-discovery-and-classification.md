@@ -12,10 +12,10 @@ ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
 ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548336"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
@@ -29,14 +29,14 @@ ms.locfileid: "75548336"
 > [!NOTE]
 > SQL Server 2012 及更高版本支持数据发现和分类，这些功能可用于 [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更高版本  。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](/azure/sql-database/sql-database-data-discovery-and-classification/)。
 
-## <a id="subheading-1"></a>概述
+## <a name="overview"></a><a id="subheading-1"></a>概述
 数据发现和分类引入了一套高级服务，形成了一种旨在保护各种数据（而不只是数据库）的全新 SQL 信息保护范例：
 
 * 发现和建议 - 分类引擎扫描数据库，并标识包含潜在敏感数据的列  。 利用它可以轻松查看和应用相应的分类建议，也可以手动对列进行分类。
 * 标记 - 可以在列上永久地标记敏感度分类标签  。
 * 可见性 - 可以在详细报表中查看数据库分类状态，如在符合性和审核等事项中对其有需求，则可以直接打印/导出该报表  。
 
-## <a id="subheading-2"></a>发现、分类和标记敏感列
+## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>发现、分类和标记敏感列
 以下部分介绍如何在数据库中发现包含敏感数据的列并对其进行分类和标记、如何查看数据库的当前分类状态，以及如何导出报表。
 
 分类包含两种元数据属性：
@@ -91,7 +91,7 @@ ms.locfileid: "75548336"
 
     ![“导航”窗格][10]
 
-## <a id="subheading-3"></a>使用 SSMS 管理信息保护策略
+## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>使用 SSMS 管理信息保护策略
 
 你可以使用 [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更高版本来管理信息保护策略：
 
@@ -111,7 +111,7 @@ ms.locfileid: "75548336"
 > 信息保护策略文件不存储在 SQL Server 中。
 > SSMS 使用默认的信息保护策略。 如果自定义的信息保护策略失败，SSMS 将无法使用默认策略。 数据分类失败。 要解决此问题，请单击“重置信息保护策略”以使用默认策略并重新启用数据分类  。
 
-## <a id="subheading-4"></a>访问分类元数据
+## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>访问分类元数据
 
 SQL Server 2019 引入了 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 系统目录视图。 此视图返回信息类型和敏感度标签。 
 
@@ -183,15 +183,15 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-## <a id="subheading-5"></a>管理分类
+## <a name="manage-classifications"></a><a id="subheading-5"></a>管理分类
 
-# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+# <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 可以使用 T-SQL 添加/删除列分类，以及检索整个数据库的所有分类。
 
 - 添加/更新一列或多列分类：[添加敏感度分类](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
 - 删除一列或多列分类：[删除敏感度分类](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
 
-# <a name="powershell-cmdlettabsql-powelshell"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
+# <a name="powershell-cmdlet"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
 可以使用 PowerShell Cmdlet 添加/删除列分类，以及检索整个数据库的所有分类并获取建议。
 
 - [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
@@ -201,7 +201,7 @@ FROM
 
 ---
 
-## <a id="subheading-6"></a>后续步骤
+## <a name="next-steps"></a><a id="subheading-6"></a>后续步骤
 
 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](https://go.microsoft.com/fwlink/?linkid=866265)。
 

@@ -14,10 +14,10 @@ author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287571"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
@@ -26,13 +26,13 @@ ms.locfileid: "79287571"
 
 本文概述使用 SQL Server 查询存储处理工作负载的最佳做法。
 
-## <a name="SSMS"></a>使用最新 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a>使用最新 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一组用户界面，旨在配置查询存储和使用收集的工作负载数据。 单击[此处](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)下载最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
 有关如何使用查询存储进行故障排除的简要说明，请参阅[查询存储 @Azure 博客](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。
 
-## <a name="Insight"></a>在 Azure SQL 数据库中使用 Query Performance Insight
+## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a>在 Azure SQL 数据库中使用 Query Performance Insight
 
 如果在 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中运行查询存储，则可使用 [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) 来分析一定时段内的资源消耗情况。 虽然可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 来获取所有查询的详细资源消耗情况（例如 CPU、内存和 I/O），但使用 Query Performance Insight 可以快速且有效地确定查询对数据库总体 DTU 消耗情况的影响。 有关详细信息，请参阅 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)（Azure SQL 数据库的 Query Performance Insight）。
 
@@ -57,7 +57,7 @@ ms.locfileid: "79287571"
 
 可以毫无顾忌地在所有数据库中使用 Query Store，甚至是在密集打包的池中。 与资源过度使用（为弹性池中的大量数据库启用了查询存储时可能会遇到这种情况）相关的所有问题都已得到了解决。
 
-## <a name="Configure"></a> 始终根据工作负载调整查询存储
+## <a name="keep-query-store-adjusted-to-your-workload"></a><a name="Configure"></a> 始终根据工作负载调整查询存储
 
 根据工作负荷和性能故障排除要求来配置 Query Store。
 默认参数是启动的理想参数，但应监视查询存储在一定时段内的行为表现，并对其配置进行相应的调整。
@@ -66,14 +66,14 @@ ms.locfileid: "79287571"
 
  下面是设置参数值时应遵循的准则：
 
-**最大大小 (MB)** ：为查询存储在数据库中占用的数据空间指定一个限制。 这是最重要的设置，直接影响查询存储的操作模式。
+**最大大小 (MB)**：为查询存储在数据库中占用的数据空间指定一个限制。 这是最重要的设置，直接影响查询存储的操作模式。
 
 当查询存储收集查询、执行计划和统计信息时，其在数据库中的大小会一直增长，直至达到此限制。 达到此限制后，Query Store 会自动将操作模式更改为只读，并停止收集新数据，这意味着你的性能分析自此不再精确。
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认值为 100 MB。 如果工作负载会生成大量不同的查询和计划，或者想要让查询历史记录保存较长的时间，则此大小可能不足。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，默认值是 1 GB。 请跟踪当前的空间使用情况，增大“最大大小 (MB)”的值以防查询存储转换到只读模式  。
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认值为 100 MB。 如果工作负载会生成大量不同的查询和计划，或者想要让查询历史记录保存较长的时间，则此大小可能不足。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，默认值是 1 GB。 请跟踪当前的空间使用情况，增大“最大大小 (MB)”的值以防查询存储转换到只读模式。
 
 > [!IMPORTANT]
-> 没有严格执行“最大大小 (MB)”限制  。 仅当查询存储将数据写入磁盘时才检查存储大小。 此间隔由“数据刷新间隔（分钟）”选项设置  。 如果查询存储已违反存储大小检查之间的最大大小限制，则它将转换为只读模式。 如果启用了“基于大小的清理模式”，则也会触发强制实施最大大小限制的清理机制  。
+> 没有严格执行“最大大小 (MB)”限制。 仅当查询存储将数据写入磁盘时才检查存储大小。 此间隔由“数据刷新间隔（分钟）”选项设置。 如果查询存储已违反存储大小检查之间的最大大小限制，则它将转换为只读模式。 如果启用了“基于大小的清理模式”，则也会触发强制实施最大大小限制的清理机制。
 
 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或执行以下脚本，以便获取有关 Query Store 大小的最新信息：
 
@@ -86,33 +86,33 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;
 ```
 
-以下脚本将设置新的“最大大小 (MB)”值  ：
+以下脚本将设置新的“最大大小 (MB)”值：
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
 ```
 
- **数据刷新间隔（分钟）** ：它定义将收集的运行时统计信息保存到磁盘的频率。 它在图形用户界面 (GUI) 中以分钟为单位，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中以秒为单位。 默认值为 900 秒，在图形用户界面中为 15 分钟。 如果工作负载不生成大量不同的查询和计划或者你能够接受在数据库关闭之前花更长的时间来保留数据，可考虑使用更大的值。
+ **数据刷新间隔（分钟）**：它定义将收集的运行时统计信息保存到磁盘的频率。 它在图形用户界面 (GUI) 中以分钟为单位，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中以秒为单位。 默认值为 900 秒，在图形用户界面中为 15 分钟。 如果工作负载不生成大量不同的查询和计划或者你能够接受在数据库关闭之前花更长的时间来保留数据，可考虑使用更大的值。
 
 > [!NOTE]
 > 如果出现故障转移或关闭命令，使用跟踪标志 7745 会阻止查询存储数据写入磁盘。 有关更多信息，请参阅[在任务关键型服务器上使用跟踪标志](#Recovery)部分。
 
-使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 为“数据刷新间隔”设置不同的值  ：
+使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 为“数据刷新间隔”设置不同的值：
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);
 ```
 
-**统计信息收集间隔**：定义已收集的运行时统计信息的粒度级别（以分钟为单位）。 默认值为 60 分钟。 如果需要更细的粒度或更短的时间来检测和缓解问题，可考虑使用较小的值。 请记住，该值会直接影响查询存储数据的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 为“统计信息收集间隔”设置不同的值  ：
+**统计信息收集间隔**：定义已收集的运行时统计信息的粒度级别（以分钟为单位）。 默认值为 60 分钟。 如果需要更细的粒度或更短的时间来检测和缓解问题，可考虑使用较小的值。 请记住，该值会直接影响查询存储数据的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 为“统计信息收集间隔”设置不同的值：
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
 ```
 
-**过时查询阈值（天）** ：基于时间的清除策略，用于控制持久化运行时统计信息和非活动查询的保持期（以天为单位）。 查询存储默认配置为将数据保留 30 天，这对于你的方案来说可能过长。
+**过时查询阈值（天）**：基于时间的清除策略，用于控制持久化运行时统计信息和非活动查询的保持期（以天为单位）。 查询存储默认配置为将数据保留 30 天，这对于你的方案来说可能过长。
 
 避免保留你并不打算使用的历史数据。 这样可以减少变为只读状态的次数。 查询存储数据的大小以及检测和解决问题的时间将会变得更可预测。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或以下脚本配置基于时间的清理策略：
 
@@ -136,7 +136,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 - **自定义**：支持额外控件和微调数据收集策略功能。 新的自定义设置定义在内部捕获策略时间阈值期间执行的操作。 这是评估配置条件的时间边界，如果所有值为 true，则查询存储可以捕获查询。
 
 > [!IMPORTANT]
-> 当查询存储捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询    。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。
+> 当查询存储捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。
 
  以下脚本将 QUERY_CAPTURE_MODE 设置为 AUTO：
 
@@ -180,7 +180,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-下面的示例将 QUERY_CAPTURE_MODE 设置为 AUTO，并在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中设置其他建议选项，同时视需要使用默认值设置 CUSTOM 捕获策略，而不是使用新的默认 AUTO 捕获模式  ：
+下面的示例将 QUERY_CAPTURE_MODE 设置为 AUTO，并在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中设置其他建议选项，同时视需要使用默认值设置 CUSTOM 捕获策略，而不是使用新的默认 AUTO 捕获模式：
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -270,7 +270,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 - 在某些情况下，如果你看到执行计划中估计的行数和实际的行数存在显著差异，则可强制执行统计信息的重新编译。
 - 重写有问题的查询，例如可以充分利用查询参数化或实现更优化的逻辑。
 
-## <a name="Verify"></a>确保查询存储持续收集查询数据
+## <a name="verify-that-query-store-collects-query-data-continuously"></a><a name="Verify"></a>确保查询存储持续收集查询数据
 
 查询存储可在无提示的情况下更改操作模式。 请定期监视查询存储的状态以确保查询存储正常运行，并采取相应措施，避免发生不必要的故障。 执行以下查询，以便确定操作模式并查看最相关的参数：
 
@@ -287,7 +287,7 @@ FROM sys.database_query_store_options;
 
 `actual_state_desc` 和 `desired_state_desc` 之间存在差异，这表明自动更改了操作模式。 最常见的更改是查询存储在无提示的情况下切换到只读模式。 在极罕见的情况下，查询存储可能会因内部错误而导致处于错误状态。
 
-当实际状态为只读时，可使用 **readonly_reason** 列来确定根本原因。 通常情况下，你会发现，查询存储转换为只读模式是因为超出了大小配额。 这种情况下，readonly_reason  设置为 65536。 有关其他原因，请参阅 [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。
+当实际状态为只读时，可使用 **readonly_reason** 列来确定根本原因。 通常情况下，你会发现，查询存储转换为只读模式是因为超出了大小配额。 这种情况下，readonly_reason 设置为 65536。 有关其他原因，请参阅 [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。
 
 考虑执行以下步骤将 Query Store 切换为读写模式并激活数据收集功能：
 
@@ -309,7 +309,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 
 - 遵循最佳实践规范即可避免在无提示情况下更改操作模式。 如果可以确保查询存储大小始终小于最大允许值，则会极大地降低转换为只读模式的几率。 根据[配置查询存储](#Configure)部分所述，可激活基于大小的策略，使查询存储在大小接近极限时自动清除数据。
 - 为了确保最新的数据能够得到保留，可将基于时间的策略配置为定期删除过时信息。
-- 最后，请考虑将“查询存储捕获模式”设置为“Auto”，因为这样通常可以筛选掉与工作负载不太相关的查询   。
+- 最后，请考虑将“查询存储捕获模式”设置为“Auto”，因为这样通常可以筛选掉与工作负载不太相关的查询。
 
 ### <a name="error-state"></a>错误状态
 
@@ -329,7 +329,7 @@ FROM sys.database_query_store_options;
 
 如果问题仍然存在，则表明磁盘上的查询存储数据已永久损坏。
 
-从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储  。 必须先禁用查询存储，然后才能尝试恢复操作。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，需要从查询存储中清除数据，如下所示。
+从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储。 必须先禁用查询存储，然后才能尝试恢复操作。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，需要从查询存储中清除数据，如下所示。
 
 如果恢复失败，可先尝试清除查询存储，然后再设置读写模式。
 
@@ -357,11 +357,11 @@ FROM sys.database_query_store_options;
 |------------------------|--------------|
 |**全部**|对工作负载进行彻底地分析，分析所有查询的形状及其执行频率和其他统计信息。<br /><br /> 识别工作负荷中的新查询。<br /><br /> 检测是否使用即席查询来识别用户或自动参数化的机会。<br /><br />注意：这是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认捕获模式。|
 |**Auto**|关注相关且可操作的查询。 例如，那些定期执行的查询或资源消耗很大的查询。<br /><br />注意：从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，这是默认捕获模式。|
-|无 |你已经捕获了需要在运行时监视的查询集，因此需消除其他查询可能会带来的干扰。<br /><br /> “无”适用于测试和基准测试环境。<br /><br /> “无”也适用于需要提供已配置的 Query Store 配置来监视其应用程序工作负荷的软件供应商。<br /><br /> 在使用“无”时应格外小心，因为可能无法跟踪和优化重要的新查询。 避免使用“无”，除非你的特定方案需要使用它。|
+|无|你已经捕获了需要在运行时监视的查询集，因此需消除其他查询可能会带来的干扰。<br /><br /> “无”适用于测试和基准测试环境。<br /><br /> “无”也适用于需要提供已配置的 Query Store 配置来监视其应用程序工作负荷的软件供应商。<br /><br /> 在使用“无”时应格外小心，因为可能无法跟踪和优化重要的新查询。 避免使用“无”，除非你的特定方案需要使用它。|
 |**自定义**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 在 `ALTER DATABASE SET QUERY_STORE` 命令下引入自定义捕获模式。 启用后，在新的“查询存储捕获策略”设置下有额外可用的查询存储配置，可用于微调特定服务器中的数据收集。<br /><br />新的自定义设置定义在内部捕获策略时间阈值期间执行的操作。 这是评估配置条件的时间边界，如果所有值为 true，则查询存储可以捕获查询。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|
 
 > [!NOTE]
-> 当查询存储捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询    。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。
+> 当查询存储捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>在 Query Store 中保留最相关数据
 
@@ -371,10 +371,10 @@ FROM sys.database_query_store_options;
 |最佳做法|设置|
 |-------------------|-------------|
 |对保留的历史数据进行限制。|配置基于时间的策略以激活自动清理功能。|
-|筛选掉不相关的查询。|将“查询存储捕获模式”配置为“自动”   。|
+|筛选掉不相关的查询。|将“查询存储捕获模式”配置为“自动”。|
 |达到最大大小时，删除不太相关的查询。|激活基于大小的清理策略。|
 
-## <a name="Parameterize"></a> 避免使用非参数化查询
+## <a name="avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> 避免使用非参数化查询
 
 在不必要的情况下使用非参数化查询不是最佳做法。 临时分析就是一个示例。 不能重复使用缓存的计划，因为这会强制查询优化器在碰到每个唯一的查询文本时都进行查询编译。 有关详细信息，请参阅[强制参数化使用指南](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)。
 
@@ -390,11 +390,11 @@ FROM sys.database_query_store_options;
   - 如果工作负载中不同查询计划的数目很小，则使用 [parameterization database option](../../relational-databases/databases/database-properties-options-page.md#miscellaneous) 命令配置强制的参数化操作。 例如，当不同 query_hash 的计数与 sys.query_store_query 中项的总数之比远小于 1 时。
 - 将 QUERY_CAPTURE_MODE 设置为 AUTO 即可自动筛选掉资源消耗小的即席查询。
 
-## <a name="Drop"></a> 避免对包含对象使用 DROP 和 CREATE 模式
+## <a name="avoid-a-drop-and-create-pattern-for-containing-objects"></a><a name="Drop"></a> 避免对包含对象使用 DROP 和 CREATE 模式
 
 查询存储会将查询条目与包含对象（例如存储过程、函数和触发器）相关联。 重新创建包含对象时，会针对同一查询文本生成新的查询条目。 这会阻止你跟踪该查询在一定时段内的性能统计信息，并会使用计划强制机制。 若要避免这种情况，请尽可能使用 `ALTER <object>` 过程来更改包含对象定义。
 
-## <a name="CheckForced"></a> 定期检查强制计划的状态
+## <a name="check-the-status-of-forced-plans-regularly"></a><a name="CheckForced"></a> 定期检查强制计划的状态
 
 可以方便地使用计划强制机制来修复关键查询的性能问题，使这些查询的结果更可预测。 与计划提示和计划指南一样，强制实施某项计划并不能确保在今后的执行过程中会用到它。 通常情况下，如果对数据库架构的更改导致执行计划所引用的对象被更改或删除，计划强制就会失败。 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会回退到重新编译查询，而强制失败的实际原因则显示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 以下查询返回强制计划的相关信息：
 
@@ -409,15 +409,15 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;
 ```
 
-有关原因的完整列表，请参阅 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 你还可以使用 query_store_plan_forcing_failed  XEvent 来跟踪和故障排除计划强制失败情况。
+有关原因的完整列表，请参阅 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 你还可以使用 query_store_plan_forcing_failed XEvent 来跟踪和故障排除计划强制失败情况。
 
-## <a name="Renaming"></a> 避免在使用强制计划执行查询时重命名数据库
+## <a name="avoid-renaming-databases-for-queries-with-forced-plans"></a><a name="Renaming"></a> 避免在使用强制计划执行查询时重命名数据库
 
 执行计划使用由三个部分组成的名称（例如 `database.schema.object`）来引用对象。
 
 如果重命名数据库，计划强制就会失败，导致在执行所有后续的查询时都需要重新编译。
 
-## <a name="Recovery"></a> 在任务关键型服务器上使用跟踪标志
+## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> 在任务关键型服务器上使用跟踪标志
 
 全局跟踪标志 7745 和 7752 可用于使用查询存储来提高数据库的可用性。 有关更多信息，请参见[跟踪标记](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 

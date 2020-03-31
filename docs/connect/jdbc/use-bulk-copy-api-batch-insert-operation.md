@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027097"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>将大容量复制 API 用于批量插入操作
@@ -25,7 +25,7 @@ Microsoft JDBC Driver 7.0 for SQL Server 支持使用大容量复制 API 对 Azu
 
 此功能仅适用于 PreparedStatement 和 CallableStatement 的 `executeBatch()` 和 `executeLargeBatch()` API。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 为大容量复制 API 启用批量插入功能有两个先决条件。
 

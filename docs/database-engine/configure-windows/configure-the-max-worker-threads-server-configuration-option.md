@@ -14,10 +14,10 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776425"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>配置 max worker threads 服务器配置选项
@@ -43,13 +43,13 @@ ms.locfileid: "75776425"
   
 -   **跟进：** [在配置“最大工作线程”选项之后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   当实际的查询请求数量少于 **max worker threads**中设置的数量时，每一个线程处理一个查询请求。 但是，如果实际的查询请求数量超过了 **max worker threads**中设置的数量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将工作线程集中到池中，这样下一个可用的工作线程就可以处理请求。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。 如果怀疑存在性能问题，可能不是由于工作线程不可用。 很有可能是导致工作线程等待的因素造成的，例如 I/O。 在更改最大工作线程设置之前，最好找到导致性能问题的根本原因。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "75776425"
     |CPU 数|32 位计算机|64 位计算机|  
     |------------|------------|------------| 
     |\<= 4 个处理器|256|512|
-    |4 到 64 个（含）处理器|256 +（（逻辑 CPU 位数 - 4）* 8）|512 +（（逻辑 CPU 位数 - 4）* 16）|
+    |\> 4 到 \<64 个（含）处理器|256 +（（逻辑 CPU 位数 - 4）* 8）|512 +（（逻辑 CPU 位数 - 4）* 16）|
     |\> 64 个处理器|256 + ((逻辑 CPU 位数 - 4) * 32)|512 + ((逻辑 CPU 位数 - 4) * 32)|
   
     > [!NOTE]  
@@ -100,12 +100,12 @@ ms.locfileid: "75776425"
  WHERE s.is_user_process = 0;  
  ```  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要使用两个参数执行 sp_configure  来更改配置选项或运行 `RECONFIGURE` 语句，用户必须拥有 `ALTER SETTINGS` 服务器级别权限。 `ALTER SETTINGS` 权限由 sysadmin  和 serveradmin  固定服务器角色隐式拥有。  
   
-##  <a name="SSMSProcedure"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+##  <a name="using-ssmanstudiofull"></a><a name="SSMSProcedure"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>配置 max worker threads 选项  
   
@@ -119,7 +119,7 @@ ms.locfileid: "75776425"
 > 使用 **max worker threads** 选项配置可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的工作线程数。 **max worker threads** 的默认设置适用于大多数系统。 不过，根据您的系统配置，有时将 **max worker threads** 设置为较小的值会提高性能。
 > 有关详细信息，请参阅本页的[建议](#Recommendations)。
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>配置 max worker threads 选项  
   
@@ -142,7 +142,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在配置“最大工作线程数”选项后  
+##  <a name="follow-up-after-you-configure-the-max-worker-threads-option"></a><a name="FollowUp"></a> 跟进：在配置“最大工作线程数”选项后  
  执行 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) 后，此更改将立即生效，而无需重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  

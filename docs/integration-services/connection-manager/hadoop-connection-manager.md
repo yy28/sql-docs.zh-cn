@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903784"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 连接管理器
@@ -69,7 +69,7 @@ ms.locfileid: "77903784"
 -   选项 1：[将 SSIS 计算机联接到 Kerberos 领域](#kerberos-join-realm)
 -   选项 2：[启用 Windows 域和 Kerberos 领域之间的相互信任](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>方法 1：将 SSIS 计算机联接到 Kerberos 领域
+### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>方法 1：将 SSIS 计算机联接到 Kerberos 领域
 
 #### <a name="requirements"></a>要求：
 
@@ -99,7 +99,7 @@ ms.locfileid: "77903784"
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>方法 2：启用 Windows 域和 Kerberos 领域之间的相互信任
+### <a name="option-2-enable-mutual-trust-between-the-windows-domain-and-the-kerberos-realm"></a><a name="kerberos-mutual-trust"></a>方法 2：启用 Windows 域和 Kerberos 领域之间的相互信任
 
 #### <a name="requirements"></a>要求：
 -   网关计算机必须联接 Windows 域。

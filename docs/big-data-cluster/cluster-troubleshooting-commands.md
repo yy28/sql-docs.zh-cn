@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70153635"
 ---
 # <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 并对其进行故障排除
@@ -98,7 +98,7 @@ kubectl describe pod  master-0 -n mssql-cluster
 kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
-## <a id="services"></a> 获取服务的状态
+## <a name="get-status-of-services"></a><a id="services"></a> 获取服务的状态
 
 运行以下命令以获取有关大数据群集服务的详细信息。 这些详细信息包括服务类型以及与相应服务和端口关联的 IP。 请注意，SQL Server 大数据群集服务是在群集启动时创建的新命名空间中创建的，该命名空间基于部署配置文件中指定的群集名称。
 
@@ -138,7 +138,7 @@ kubectl describe service <service_name> -n <namespace_name>
 kubectl describe service master-svc-external -n mssql-cluster
 ```
 
-## <a id="copy"></a> 复制文件
+## <a name="copy-files"></a><a id="copy"></a> 复制文件
 
 如果需要将文件从容器复制到本地计算机，请使用带以下语法的命令 `kubectl cp`：
 
@@ -152,7 +152,7 @@ kubectl cp <pod_name>:<source_file_path> -c <container_name> -n <namespace_name>
 kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <container_name>  -n <namespace_name>
 ```
 
-### <a id="copyfrom"></a> 从容器复制文件
+### <a name="copy-files-from-a-container"></a><a id="copyfrom"></a> 从容器复制文件
 
 下面的示例将 SQL Server 日志文件从容器复制到本地计算机上的 `~/temp/sqlserverlogs` 路径（在本示例中，本地计算机是 Linux 客户端）：
 
@@ -160,7 +160,7 @@ kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <conta
 kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
-### <a id="copyinto"></a> 将文件复制到容器中
+### <a name="copy-files-into-container"></a><a id="copyinto"></a> 将文件复制到容器中
 
 下面的示例将“AdventureWorks2016CTP3.bak”文件从本地计算机复制到 `master-0` Pod 中的 SQL Server 主实例容器 (`mssql-server`)  。 该文件将被复制到容器的 `/tmp` 目录中。 
 
@@ -168,7 +168,7 @@ kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sq
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
-## <a id="forcedelete"></a> 强制删除 Pod
+## <a name="force-delete-a-pod"></a><a id="forcedelete"></a> 强制删除 Pod
  
 建议不要强制删除 Pod。 但是，为了测试可用性、复原能力或数据持久性，可以使用 `kubectl delete pods` 命令删除 Pod 以模拟 Pod 发生故障。
 
@@ -182,7 +182,7 @@ kubectl delete pods <pod_name> -n <namespace_name> --grace-period=0 --force
 kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
-## <a id="getip"></a> 获取 Pod IP
+## <a name="get-pod-ip"></a><a id="getip"></a> 获取 Pod IP
  
 出于故障排除目的，可能需要获取当前正在运行 Pod 的节点的 IP。 若要获取 IP 地址，请使用带有以下语法的 `kubectl get pods` 命令：
 
