@@ -10,10 +10,10 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287241"
 ---
 # <a name="database-engine-errors"></a>数据库引擎错误
@@ -4796,7 +4796,7 @@ ORDER BY message_id
 |   [10535](mssqlserver-10535-database-engine-error.md) |   16  |   否  |   无法创建计划指南“%.*ls”，因为指定给 \@params 的值无效。 请以 <parameter_name> <parameter_type> 的形式指定该值，或指定 NULL。 |
 |   [10536](mssqlserver-10536-database-engine-error.md) |   16  |   否  |   由于在计划缓存中找不到与指定计划句柄对应的计划，因此无法创建计划指南 '%.*ls'。 请指定已缓存的计划句柄。 有关已缓存的计划句柄的列表，请查询 sys.dm_exec_query_stats 动态管理视图。  |
 |   [10537](mssqlserver-10537-database-engine-error.md) |   16  |   否  |   无法创建计划指南“%.*ls”，因为与指定 \@plan_handle 对应的批或模块中有超过 1000 个符合条件的语句。 通过为每个语句指定 statement_start_offset 值，为批或模块中的每个语句创建一个计划指南。   |
-|   [10538](mssqlserver-10538-database-engine-error.md) |   16  |   否  |   '%.*ls' 包含该语句的相同作用域和初始偏移量值，因此无法启用计划指南 '%.* ls'。 请先禁用现有计划指南，再启用指定的计划指南。   |
+|   [10538](mssqlserver-10538-database-engine-error.md) |   16  |   否  |   由于已启用的计划指南 '%.*ls' 包含该语句的相同作用域和初始偏移量值，因此无法启用计划指南 '%.* ls'。 请先禁用现有计划指南，再启用指定的计划指南。   |
 |   [10539](mssqlserver-10539-database-engine-error.md) |   16  |   否  |   因为指定的计划指南 ID 为 NULL 或无效，或者您对该计划指南引用的对象没有所需权限，所以找不到该计划指南。 请确保计划指南 ID 有效，当前会话设置为正确的数据库上下文，并且您对该计划指南引用的对象具有 ALTER 权限或您具有 ALTER DATABASE 权限。  |
 |   10601   |   16  |   否  |   由于查询计划对于初始偏移量为 %d 的语句不可用，因此无法从缓存创建计划指南 '%.*ls'。如果该语句依赖于尚未创建的数据库对象，则可能出现此问题。 请确保所有必要的数据库对象都已存在，并在创建该计划指南之前先执行该语句。 |
 |   10602   |   16  |   否  |   不能为聚集索引指定包含性列。  |
