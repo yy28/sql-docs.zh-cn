@@ -11,10 +11,10 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761851"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
@@ -52,7 +52,7 @@ ms.locfileid: "76761851"
   
 -   [示例](#example)  
   
-##  <a name="server"></a> Integration Services 服务器和项目文件  
+##  <a name="integration-services-server-and-project-file"></a><a name="server"></a> Integration Services 服务器和项目文件  
  当你使用 **dtexec** 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上运行包时，**dtexec** 会调用 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)存储过程来创建执行、设置参数值并启动执行。 可以在服务器的相关视图中或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的标准报告来查看所有执行日志。 有关报表的详细信息，请参阅 [Integration Services 服务器的报表](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
   
  以下是在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上执行包的一个示例。  
@@ -65,7 +65,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  你可以使用 **dtexec** 与第三方计划工具来计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包。  
   
-##  <a name="bit"></a> 64 位计算机上的安装注意事项  
+##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> 64 位计算机上的安装注意事项  
  在 64 位计算机上， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将安装 64 位版本的 **dtexec** 实用工具 (dtexec.exe)。 如果需要以 32 位模式运行某些包，则必须安装 32 位版本的 **dtexec** 实用工具。 若要安装 32 位版本的 **dtexec** 实用工具，必须在安装过程中选择“客户端工具”或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。  
   
  默认情况下，同时安装了 64 位和 32 位版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示实用工具的 64 位计算机将在命令提示符处运行 32 位版本。 运行 32 位版本的原因是：在 PATH 环境变量中，32 位版本的目录路径显示在 64 位版本的目录路径之前。 （通常，32 位目录路径是 \<drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn，而 64 位目录路径是\<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn。   ）  
@@ -80,12 +80,12 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 -   通过将 64 位路径 (\<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn) 置于 32 位路径 (\<drive>:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 之前，可永久更改 PATH 环境变量中路径的顺序   。  
   
-##  <a name="side"></a> 有关使用并行安装的计算机的注意事项  
+##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> 有关使用并行安装的计算机的注意事项  
  当在已安装 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 或 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 的计算机上安装 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 时，安装多个版本的 **dtexec** 实用工具。  
   
  若要确保运行正确的实用工具版本，请在命令提示符处，通过输入完整路径 (\<drive>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn) 来运行此实用工具  。  
   
-##  <a name="phases"></a> 执行的阶段  
+##  <a name="phases-of-execution"></a><a name="phases"></a> 执行的阶段  
  该实用工具的执行过程经历四个阶段。 这些阶段如下所列：  
   
 1.  命令溯源阶段：命令提示符读取选项列表和已指定的参数。 如果遇到 **/?** 或 **/HELP** 选项，则会跳过所有后续阶段。  
@@ -102,7 +102,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 4.  验证和执行阶段：运行包，如果指定了 /VALIDATE 选项，则验证但不运行包  。  
   
-##  <a name="exit"></a> 返回的退出代码  
+##  <a name="exit-codes-returned"></a><a name="exit"></a> 返回的退出代码  
  **dtexec 实用工具返回的退出代码**  
   
  运行包时， **dtexec** 可能会返回退出代码。 使用该退出代码填充 ERRORLEVEL 变量，然后可以在批处理文件的条件语句或分支逻辑中测试该变量的值。 下表列出了 **dtexec** 实用工具退出时可以设置的值。  
@@ -116,7 +116,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 |5|实用工具无法加载请求的包。 无法加载包。|  
 |6|实用工具的命令行中有内部语法错误或语义错误。|  
   
-##  <a name="syntaxRules"></a> 语法规则  
+##  <a name="syntax-rules"></a><a name="syntaxRules"></a> 语法规则  
  **实用工具语法规则**  
   
  所有选项必须以斜杠 (/) 或减号 (-) 开头。 此处显示的选项以斜杠 (/) 开始，但可用减号 (-) 替换。  
@@ -127,7 +127,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  除密码外，其他选项和参数都不区分大小写。  
   
-##  <a name="cmdshell"></a> 从 xp_cmdshell 中使用 dtexec  
+##  <a name="using-dtexec-from-the-xp_cmdshell"></a><a name="cmdshell"></a> 从 xp_cmdshell 中使用 dtexec  
  **从 xp_cmdshell 中使用 dtexec**  
   
  可以从 **xp_cmdshell** 提示符处运行 dtexec。 以下示例显示如何运行名为 UpsertData.dtsx 的包并忽略返回代码：  
@@ -145,7 +145,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
   
 > **重要说明!!** 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，新安装中将默认禁用 **xp_cmdshell** 选项。 运行 **sp_configure** 系统存储过程可以启用此选项。 有关详细信息，请参阅 [xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
 
-##  <a name="bash"></a> 从 Bash 中使用 dtexec
+##  <a name="using-dtexec-from-bash"></a><a name="bash"></a> 从 Bash 中使用 dtexec
 
 Bash  shell 是适用于 Linux 的常用 shell。 它还可在 Windows 上使用。 可以从 Bash 提示符下运行 dtexec。 请注意，分号 (`;`) 在 Bash 中是一个命令分隔符运算符。 使用 `/Conn[ection]` 或 `/Par[arameter]` 或 `/Set` 选项将值传递到包时，这一点尤其重要，因为它们使用分号来分隔提供的项的名称和值。 下面的示例演示了使用 Bash 将值传入包时正确转义分号和其他项的方法：
 
@@ -153,13 +153,13 @@ Bash  shell 是适用于 Linux 的常用 shell。 它还可在 Windows 上使用
 dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
 ```
 
-##  <a name="syntax"></a> 语法  
+##  <a name="syntax"></a><a name="syntax"></a> 语法  
   
 ```  
 dtexec /option [value] [/option [value]]...  
 ```  
   
-##  <a name="parameter"></a> Parameters  
+##  <a name="parameters"></a><a name="parameter"></a> Parameters  
   
 -   **/?** [option_name]  ：（可选）。 显示命令提示符选项，或显示指定的 *option_name* 的帮助，然后关闭实用工具。  
   
@@ -482,7 +482,7 @@ dtexec /option [value] [/option [value]]...
   
      此选项仅由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用。 如果在命令提示符下运行 **dtexec** 实用工具，则会忽略此选项。  
   
-##  <a name="remark"></a> 注释  
+##  <a name="remarks"></a><a name="remark"></a> 注释  
  命令选项的指定顺序可以影响包的执行方式：  
   
 -   选项的处理顺序与其在命令行中出现的顺序一致。 命令文件的读取顺序与其在命令行中出现的顺序一致。 命令文件中的命令的处理顺序也与其出现的顺序一致。  
@@ -491,7 +491,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Set** 和 **/ConfigFile** 选项将按其出现的顺序进行处理。  
   
-##  <a name="example"></a> 示例  
+##  <a name="examples"></a><a name="example"></a> 示例  
  下面的示例说明了如何使用 dtexec  命令提示实用工具配置和执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
  **“正在运行的包”**  
