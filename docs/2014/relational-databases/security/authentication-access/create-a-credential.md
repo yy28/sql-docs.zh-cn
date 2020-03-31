@@ -42,20 +42,20 @@ ms.locfileid: "79289465"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果该提供程序没有任何登录名映射的凭据，则使用映射到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的凭据。  
   
 -   一个登录名可以有多个映射的凭据，只要它们用于不同的提供程序即可。 每个登录名的每个提供程序只能有一个映射的凭据。 相同的凭据可以映射到其他登录名。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  必须具有 ALTER ANY CREDENTIAL 权限才能创建或修改凭据，并且必须具有 ALTER ANY LOGIN 权限才能将登录名映射到凭据。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-credential"></a>创建凭据  
   
@@ -75,9 +75,9 @@ ms.locfileid: "79289465"
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-###  <a name="Credential"></a>创建凭据  
+###  <a name="to-create-a-credential"></a><a name="Credential"></a>创建凭据  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
