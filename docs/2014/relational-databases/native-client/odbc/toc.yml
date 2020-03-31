@@ -148,7 +148,7 @@
 - name: 管理 Text 和 Image 列
   href: ../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md
   items:
-    - name: 绑定与未绑定的 text 和 image 列
+    - name: 绑定与未绑定的 Text 和 Image 列
       href: ../../native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
     - name: 有日志记录的修改与无日志记录的修改
       href: ../../native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: 对具有稀疏列的表调用 SQLColumns
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: 如何在 Geography 列中插入行 (ODBC)
+    - name: 如何：在 Geography 列中插入行 (ODBC)
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: 获取 Kerberos 相互身份验证
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

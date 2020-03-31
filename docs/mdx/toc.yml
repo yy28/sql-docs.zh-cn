@@ -153,7 +153,7 @@
           href: ../mdx/comment-mdx.md
         - name: //（注释）
           href: ../mdx/comment-mdx-double-slash.md
-        - name: ':（范围）'
+        - name: 解码的字符：（范围）
           href: ../mdx/range-mdx.md
         - name: + （添加）"
           href: ../mdx/add-mdx.md

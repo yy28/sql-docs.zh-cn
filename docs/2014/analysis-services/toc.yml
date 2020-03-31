@@ -348,7 +348,7 @@
           href: lesson-1-create-a-new-tabular-model-project.md
         - name: 第 2 课：添加数据
           href: lesson-2-add-data.md
-        - name: 第 3 课：重命名列
+        - name: 第 3 课：对列重命名
           href: rename-columns.md
         - name: 第 4 课：标记为日期表
           href: lesson-3-mark-as-date-table.md

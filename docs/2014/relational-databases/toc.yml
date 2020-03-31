@@ -192,7 +192,7 @@
               href: tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
     - name: 教程：使用证书为存储过程签名
       href: tutorial-signing-stored-procedures-with-a-certificate.md
-    - name: 'Tutorial: Ownership Chains and Context Switching'
+    - name: 教程：所有权链和上下文切换
       href: tutorial-ownership-chains-and-context-switching.md
     - name: 教程：使用基于策略的管理来管理服务器
       href: policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
@@ -211,17 +211,17 @@
               href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
             - name: 订阅和检查 Finance Name 策略
               href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
-    - name: 教程：使用基于策略的管理来评估最佳实践
+    - name: 教程：使用基于策略的管理来评估最佳做法
       href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
       items:
-        - name: 课程 1：按需评估最佳实践策略
+        - name: 第 1 课：按需评估最佳做法策略
           href: ../tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md
           items:
             - name: 通过使用对象资源管理器执行按需评估
               href: ../tutorials/perform-an-on-demand-evaluation-by-using-object-explorer.md
             - name: 通过使用已注册的服务器执行按需评估
               href: ../tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md
-        - name: 课程 2：定期评估最佳实践策略
+        - name: 第 2 课：定期评估最佳做法策略
           href: ../tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md
           items:
             - name: 将策略导入到单个实例
@@ -235,7 +235,7 @@
       items:
         - name: 第 1 课：创建 Azure 存储对象
           href: ../tutorials/lesson-1-create-windows-azure-storage-objects.md
-        - name: 'Lesson 2: Create a SQL Server Credential'
+        - name: 第 2 课：创建 SQL Server 凭据
           href: ../tutorials/lesson-2-create-a-sql-server-credential.md
         - name: 第 3 课：将完整数据库备份写入到 Azure Blob 存储服务
           href: ../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md

@@ -98,7 +98,7 @@
       href: example-retrieving-product-model-information-as-xml.md
     - name: 示例：指定带有 ELEMENTS 指令的 XSINIL
       href: example-specifying-xsinil-with-the-elements-directive.md
-    - name: 示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构
+    - name: 示例：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果
       href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
     - name: 示例：检索二进制数据
       href: example-retrieving-binary-data.md
@@ -106,7 +106,7 @@
       href: example-renaming-the-row-element.md
     - name: 示例：为 FOR XML 生成的 XML 指定根元素
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-    - name: 示例：查询 XML 类型的列
+    - name: 示例：查询 XMLType 列
       href: example-querying-xmltype-columns.md
     - name: 将 AUTO 模式与 FOR XML 一起使用
       href: use-auto-mode-with-for-xml.md
@@ -118,7 +118,7 @@
       href: examples-using-auto-mode.md
     - name: 将 EXPLICIT 模式与 FOR XML 一起使用
       href: use-explicit-mode-with-for-xml.md
-    - name: 示例：检索雇员信息
+    - name: 示例：检索员工信息
       href: example-retrieving-employee-information.md
     - name: 示例：指定 ELEMENT 指令
       href: example-specifying-the-element-directive.md
