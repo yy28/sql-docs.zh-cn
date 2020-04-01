@@ -1,1 +1,1 @@
-<Token>适用对象：**是**SQL Server ![否](media/yes.png)Azure SQL 数据库 ![否](media/no.png)Azure Synapse Analytics (SQL DW) ![否](media/no.png)并行数据仓库![](media/no.png)</Token>
+<Token>**应用到：** ![](media/yes-icon.png)是![SQL](media/no-icon.png)服务器![没有](media/no-icon.png)Azure SQL 数据库 没有 Azure ![](media/no-icon.png)突触分析 （SQL DW） 没有并行数据仓库</Token>
