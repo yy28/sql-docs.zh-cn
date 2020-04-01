@@ -4,12 +4,12 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 044aa25e15ecf3b57de0e4053e0196e4a348af2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ac25de3f833e7ef73e2469e0c9bb904e7348318
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76037738"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80502329"
 ---
-<Token>**适用于：** ![是](media/yes.png)SQL Server 2016 及更高版本 ![是](media/yes.png)Azure SQL 数据库 ![否](media/no.png)Azure Synapse Analytics (SQL DW) ![否](media/no.png)并行数据仓库 </Token>
+<Token>**适用于：** ![是](media/yes-icon.png)SQL Server 2016 及更高版本 ![是](media/yes-icon.png)Azure SQL 数据库 ![否](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![否](media/no-icon.png)并行数据仓库 </Token>
 

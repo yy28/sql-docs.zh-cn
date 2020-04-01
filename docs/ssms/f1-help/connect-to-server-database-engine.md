@@ -1,7 +1,7 @@
 ---
 title: 连接到服务器（数据库引擎）
 ms.custom: seo-lt-2019
-ms.date: 08/14/2017
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c29717713a6b2e41456288f026b46e220be8b229
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fdaf17118649543fe95ba60c7f6c0148d52d0e5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261699"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402538"
 ---
 # <a name="connect-to-server-database-engine"></a>连接到服务器（数据库引擎）
 
@@ -63,7 +63,10 @@ ms.locfileid: "78261699"
 > Azure Active Directory 身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的机制。  如果是使用凭证从未与 Azure 联合的域登录到 Windows，或使用基于初始域或客户端域的 Azure AD 进行 Azure AD 身份验证，请使用此方法连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
 > 
 > **Active Directory - 集成**  
-> Azure Active Directory 身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的机制。 如果使用 Azure Active Directory 凭证从联合域登录到 Windows，请使用此方法连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
+> Azure Active Directory 身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的机制。 如果你使用来自联合域（或配置为使用无缝单一登录以实现直通和密码哈希身份验证的托管域）的 Azure Active Directory 凭据登录到 Windows，可使用此方法连接到 SQL 数据库、托管实例或 Azure Synapse Analytics。 有关详细信息，请参阅 [Azure Active Directory 无缝单一登录](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)和[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
+>
+  > [!NOTE]
+  > 不支持将用于集成 Windows 身份验证的 [MSAL.NET (Microsoft.Identity.Client)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#roadmap) 用于无缝单一登录以实现直通或密码哈希身份验证。  
   
 **用户名**  
 连接所使用的 Windows 用户名。 只有选择使用 **Active Directory 密码身份验证**进行连接时，此选项才可用。 选择“Windows 身份验证”  或“Active Directory - 集成身份验证”  时，它是只读的。  
