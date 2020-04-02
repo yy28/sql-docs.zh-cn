@@ -1,5 +1,5 @@
 ---
-title: sys. dm_server_registry （Transact-sql） |Microsoft Docs
+title: 系统dm_server_registry（转算-SQL） |微软文档
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090725"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530828"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "68090725"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|注册表项名称。 可以为 Null。|  
-|value_name|**nvarchar(256)**|项值名称。 这是注册表编辑器的 "**名称**" 列中显示的项。 可以为 Null。|  
-|value_data|**sql_variant**|项数据的值。 这是显示在注册表编辑器的 "**数据**" 列中的指定项的值。 可以为 Null。|  
+|value_name|**nvarchar(256)**|项值名称。 这是注册表编辑器**的名称**列中显示的项目。 可以为 Null。|  
+|value_data|**sql_variant**|项数据的值。 这是给定条目的注册表编辑器的数据**列中显示的**值。 可以为 Null。|  
   
 ## <a name="security"></a>安全性  
   
@@ -67,7 +67,7 @@ WHERE registry_key LIKE N'%SQLAgent%';
 ```  
 SELECT registry_key, value_name, value_data  
 FROM sys.dm_server_registry  
-WHERE registry_key = N'CurrentVersion';  
+WHERE value_name = N'CurrentVersion';  
 ```  
   
 ### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>D. 显示在启动过程中传递到 SQL Server 实例的参数  
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. dm_server_services &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [系统dm_server_services&#40;转算-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   
