@@ -1,7 +1,7 @@
 ---
 title: 使用查询存储监视性能 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02658b617400f33b5a648dab43953a041f5c2936
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288461"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448176"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 
-[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询存储功能让你可以探查查询计划选项和性能。 它可帮助你快速找到查询计划更改所造成的性能差异，从而简化了性能疑难解答。 查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。 它按时间窗口将数据分割开来，使你可以查看数据库使用模式并了解服务器上何时发生了查询计划更改。 可以使用 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 选项来配置查询存储。
 
@@ -32,7 +32,7 @@ ms.locfileid: "79288461"
 > [!IMPORTANT]
 > 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中正在运行的工作负载见解使用查询存储，请尽快安装 [KB 4340759](https://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。
 
-## <a name="Enabling"></a> 启用查询存储
+## <a name="enabling-the-query-store"></a><a name="Enabling"></a> 启用查询存储
 
  默认情况下，新数据库的查询存储处于非活动状态。
 
@@ -63,7 +63,7 @@ SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 > [!IMPORTANT]
 > 有关启用查询存储并使其适用于你的工作负载，请参阅[查询存储最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure)。
 
-## <a name="About"></a>查询存储中的信息
+## <a name="information-in-the-query-store"></a><a name="About"></a>查询存储中的信息
 
 由于统计信息更改、架构更改、索引的创建/删除等多种不同原因，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查询的执行计划通常会随着时间而改进。过程缓存（其中存储了缓存的查询计划）仅存储最近的执行计划。 还会由于内存压力从计划缓存中逐出计划。 因此，执行计划更改造成的查询性能回归可能非常重大，且长时间才能解决。
 
@@ -109,7 +109,7 @@ INNER JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;
 ```
 
-## <a name="Regressed"></a> 使用回归查询功能
+## <a name="use-the-regressed-queries-feature"></a><a name="Regressed"></a> 使用回归查询功能
 
 在启用查询存储后，刷新对象资源管理器窗格的数据库部分，以添加“查询存储”部分  。
 
@@ -123,7 +123,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 若要强制执行某一计划，请选择查询和计划，然后单击“强制计划”  。 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。
 
-## <a name="Waiting"></a> 查找等待查询
+## <a name="finding-waiting-queries"></a><a name="Waiting"></a> 查找等待查询
 
 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 开始，查询存储中将提供每个查询随时间变化的等待统计信息。
 
@@ -151,7 +151,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 |每个数据库的高 PAGEIOLATCH_SH 等待|特定查询在查询存储中的高缓冲 IO 等待|在查询存储中查找具有大量物理读取的查询。 如果它们与含较高 IO 等待的查询匹配，执行执行搜索而不是扫描时，请考虑引入关于基础实体的索引，以便减少查询的 IO 开销。|
 |每个数据库的高 SOS_SCHEDULER_YIELD 等待|特定查询在查询存储中的高 CPU 等待|查找查询存储中前几个使用 CPU 最多的查询。 其中，请确定其高 CPU 趋势与受影响查询的高 CPU 等待关联的查询。 重点优化这些查询 - 可能存在计划回归，或缺失的索引。|
 
-## <a name="Options"></a> 配置选项
+## <a name="configuration-options"></a><a name="Options"></a> 配置选项
 
 以下选项可用于配置查询存储参数。
 
@@ -177,7 +177,7 @@ WAIT_STATS_CAPTURE_MODE：控制查询存储是否捕获等待统计信息  。 
 
 若要深入了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来设置选项，请参阅 [选项管理](#OptionMgmt)。
 
-## <a name="Related"></a> 相关视图、功能和过程
+## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> 相关视图、功能和过程
 
 通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用以下视图和过程来查看和管理查询存储。
 
@@ -211,9 +211,9 @@ WAIT_STATS_CAPTURE_MODE：控制查询存储是否捕获等待统计信息  。 
 |[sp_query_store_remove_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|
 |sp_query_store_consistency_check &#40;Transct-SQL&#41;||
 
-## <a name="Scenarios"></a>键使用方案
+## <a name="key-usage-scenarios"></a><a name="Scenarios"></a>键使用方案
 
-### <a name="OptionMgmt"></a> 选项管理
+### <a name="option-management"></a><a name="OptionMgmt"></a> 选项管理
 
 本部分提供一些有关如何管理查询存储功能本身的准则。
 
@@ -303,35 +303,44 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 **删除即席查询**
 
-这会删除只执行了一次且已超过 24 小时的查询。
+这将每隔 3 分钟从查询存储中清除即席查询和内部查询，以便查询存储不会耗尽空间并删除我们真正需要跟踪的查询
 
 ```sql
+SET NOCOUNT ON
+-- This purges adhoc and internal queries from the query store every 3 minutes so that the
+-- query store does not run out of space and remove queries we really need to track
+DECLARE @command varchar(1000)
+
+SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
+EXEC(''
 DECLARE @id int
 DECLARE adhoc_queries_cursor CURSOR
 FOR
 SELECT q.query_id
 FROM sys.query_store_query_text AS qt
 JOIN sys.query_store_query AS q
-    ON q.query_text_id = qt.query_text_id
+ON q.query_text_id = qt.query_text_id
 JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
+ON p.query_id = q.query_id
 JOIN sys.query_store_runtime_stats AS rs
-    ON rs.plan_id = p.plan_id
-GROUP BY q.query_id
-HAVING SUM(rs.count_executions) < 2
-AND MAX(rs.last_execution_time) < DATEADD (hour, -24, GETUTCDATE())
-ORDER BY q.query_id ;
+ON rs.plan_id = p.plan_id
+WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
 
+' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
+' GROUP BY q.query_id
+HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
+' ORDER BY q.query_id ;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
-    BEGIN
-        PRINT @id
-        EXEC sp_query_store_remove_query @id
-        FETCH NEXT FROM adhoc_queries_cursor INTO @id
-    END
+BEGIN
+EXEC sp_query_store_remove_query @id
+FETCH NEXT FROM adhoc_queries_cursor INTO @id
+END
 CLOSE adhoc_queries_cursor ;
 DEALLOCATE adhoc_queries_cursor;
+'') END' ;
+EXEC sp_MSforeachdb @command
 ```
 
 你可以使用其他逻辑来定义自己的过程，以清理不再需要的数据。
@@ -341,7 +350,7 @@ DEALLOCATE adhoc_queries_cursor;
 - sp_query_store_reset_exec_stats 用于清除给定计划的运行时统计信息  。
 - sp_query_store_remove_plan 用于删除单个计划  。
 
-### <a name="Peformance"></a> 性能审核和疑难解答
+### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> 性能审核和疑难解答
 
 查询存储将保存整个查询过程中的编译历史记录和运行时度量，使你能询问有关工作负载的问题。
 
@@ -580,7 +589,7 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);
 ```
 
-### <a name="Stability"></a> 维护查询性能稳定性
+### <a name="maintaining-query-performance-stability"></a><a name="Stability"></a> 维护查询性能稳定性
 
 对于执行多次的查询，你可能注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用了会导致不同资源利用率和持续时间的不同计划。 借助查询存储，可以检测到查询性能何时回归，并确定在感兴趣的时间段内的最优计划。 然后你可以对未来的查询执行强制执行此最优计划。
 
@@ -596,7 +605,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 使用 **sp_query_store_force_plan** 时，你只可以强制执行查询存储记录为该查询计划的那些计划。 换句话说，可用于查询的计划只有那些在查询存储处于活动状态时已用于执行该查询的计划。
 
-#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> 计划强制支持快进和静态游标
+#### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> 计划强制支持快进和静态游标
 
 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 Azure SQL 数据库（所有部署模型）开始，查询数据存储支持为快进和静态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及 API 游标强制执行查询执行计划。 支持通过 `sp_query_store_force_plan` 或通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询存储报表进行强制执行。
 

@@ -1,5 +1,6 @@
 ---
-title: 支持的版本和版本升级 - SQL Server 2019 | Microsoft Docs
+title: 支持的版本和版本升级 (SQL Server 2019)
+description: SQL Server 2019 支持的版本和版本升级。
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cff48da9e251fedd56d676349480e350c88bcae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c1f38c4563c01d756a7b81c0bdc34ecc429d5dbf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73531537"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434134"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2019"></a>SQL Server 2019 支持的版本和版本升级
+# <a name="supported-version--edition-upgrades-sql-server-2019"></a>支持的版本和版本升级 (SQL Server 2019)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -45,7 +46,7 @@ ms.locfileid: "73531537"
   
 - 不能在升级现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的过程中添加新功能。 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例升级到 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 之后，您可以使用 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 安装程序添加功能。 有关详细信息，请参阅[向 SQL Server 的实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)。  
  
-## <a name="upgrades-from-earlier-versions-to-includesssqlv15-mdincludessssqlv15-mdmd"></a>从早期版本升级到 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>从早期版本升级到 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 支持从下列 SQL Server 版本升级：
 
@@ -108,7 +109,7 @@ ms.locfileid: "73531537"
 
 - 大容量加载:可以将表从 SQL Server 2008 或 SQL Server 2008 R2 大容量复制到 SQL Server 2019。
 
-## <a name="includesssqlv15-mdincludessssqlv15-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 版本升级 
+## <a name="sssqlv15-md-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 版本升级 
 
 下表列出了 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]中支持的版本升级方案。  
 
@@ -117,7 +118,7 @@ ms.locfileid: "73531537"
 |升级前的版本|升级到的版本|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise（服务器+CAL 和内核）**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> 对于独立安装，支持从 Evaluation（免费版本）升级到任何付费版本；但对于群集安装，则不支持此升级。|  
+|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> 对于独立安装，支持从 Evaluation（免费版本）升级到任何付费版本；但对于群集安装，则不支持此升级。 此限制不适用于安装在参与可用性组的 Windows 故障转移群集上的独立实例。 |  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise（服务器+CAL 或内核许可证）|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  

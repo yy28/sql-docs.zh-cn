@@ -1,8 +1,8 @@
 ---
-title: Microsoft SQL 数据库中的标量 UDF 内联 | Microsoft Docs
-description: 标量 UDF 内联功能可提高在 SQL Server（从 SQL Server 2019 开始）和 Azure SQL 数据库中调用标量 UDF 的查询性能。
+title: Microsoft SQL Server 中的标量 UDF 内联 | Microsoft Docs
+description: 标量 UDF 内联功能可提高在 SQL Server（从 SQL Server 2019 开始）中调用标量 UDF 的查询性能。
 ms.custom: ''
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287401"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486555"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍了标量 UDF 内联，这是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一项功能。 此功能提高了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中调用标量 UDF 的查询性能。
+本文介绍了标量 UDF 内联，这是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一项功能。 此功能提高了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 开始）中调用标量 UDF 的查询性能。
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 标量用户定义函数
 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中实现并返回单个数据值的用户定义函数 (UDF) 称为 T-SQL 标量用户定义函数。 T-SQL UDF 是一种跨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询实现代码重用和模块化的巧妙方法。 某些计算（如复杂的业务规则）在命令性 UDF 窗体中更易表示。 UDF 有助于构建复杂的逻辑，而无需编写复杂 SQL 查询的专业知识。

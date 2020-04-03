@@ -1,5 +1,6 @@
 ---
 title: 创建自定义报表项运行时组件 | Microsoft Docs
+description: 了解如何创建自定义报表项运行时组件，并在设计环境中定义该组件的属性。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f92a148ec6f967fe1d3fe4282af68c0f801aa0c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0946739b0b0aaefd1e0d6a682f0228dfa98529c9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194020"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216980"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>创建自定义报表项运行时组件
   自定义报表项运行时组件作为使用任何符合 CLS 的语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 组件实现，该组件由报表处理器在运行时调用。 可在设计环境下定义此类运行时组件的属性，方法为修改相应自定义报表项的对应设计时组件。  

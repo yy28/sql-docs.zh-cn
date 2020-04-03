@@ -1,5 +1,6 @@
 ---
 title: 介绍 Reporting Services 中的异常处理 | Microsoft Docs
+description: 了解如何处理报表服务器 Web 服务引发的异常，以便在发生错误时向用户返回有用的信息。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee084e9d85a1bee21db3994be8b9473daefc7c0f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: edaacc97dae131afbc0a9b9f3651877e4952754d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62992240"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215717"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>介绍 Reporting Services 中的异常处理
   如果您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序将某一请求发送到报表服务器 Web 服务但该服务无法处理该请求，则该服务会将一个 SOAP 异常返回到客户端。 处理报表服务器 Web 服务引发的异常是您开发的应用程序的重要一环，因为可以在错误发生时将有用信息返回给用户。  

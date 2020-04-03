@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75241217"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80386186"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的发行说明
 
@@ -49,6 +49,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom |  ScriptDom 分析回归在 18.3.1 中引入，其中“重命名”被错误地视为顶级令牌，导致分析失败。
 | &nbsp; | &nbsp; |
 
+### <a name="known-issues"></a>已知问题 
+
+| Feature | 详细信息 |
+| :------ | :------ |
+| 部署 |  在 18.4.1 中引入了一个退行性问题，导致“对象引用未设置为对象的实例”。 作为具有外部登录名的用户部署 dacpac 或导入 bacpac 时出错。 使用 sqlpackag 18.4 可暂时避开此问题，将在下一个 sqlpackag 版本中进行修复。 | 
+| &nbsp; | &nbsp; |
 
 ## <a name="184-sqlpackage"></a>18.4 sqlpackage
 

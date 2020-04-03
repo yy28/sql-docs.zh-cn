@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90e200cba5cf2b8c367dfdb97b5ae5e192773e44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74822423"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510008"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>故障转移到日志传送辅助服务器 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "74822423"
   
 2.  将所有未应用的事务日志备份按顺序应用到每个辅助数据库中。 有关详细信息，请参阅[应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-3.  如果可以访问主数据库，则请备份活动的事务日志，并将日志备份应用到辅助数据库。  
+3.  如果可以访问主数据库，则请备份活动的事务日志，并将日志备份应用到辅助数据库。 可能需要在发出 restore 命令之前将数据库设置为[单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)以获得独占访问权限，然后在还原完成后将其切换回多用户模式。  
   
      如果原始主服务器实例没有损坏，则请使用 WITH NORECOVERY 备份主数据库的事务日志尾部。 这将使数据库处于还原状态，因此用户无法使用。 最终，您将能够通过应用替换主数据库中的事务日志备份前滚此数据库。  
   
-     有关详细信息，请参阅[事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
+     有关详细信息，请参阅[事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。   
   
 4.  同步辅助服务器之后，可以根据您的首选，通过恢复任一辅助数据库并将客户端重定向到该服务器实例来故障转移该辅助服务器。 恢复操作将使数据库处于一致的状态并使其联机。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822423"
   
      如果其他辅助数据库不可用，请参阅[配置日志传送 (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [交换主日志传送服务器和辅助日志传送服务器的角色 (SQL Server)](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   

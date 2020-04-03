@@ -1,7 +1,7 @@
 ---
 title: 结合使用 JDBC 驱动程序和 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 37057985b6c552091d2989d56a13c52b0b0cf5ac
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004605"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271323"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "77004605"
 
 Always Encrypted 允许客户端对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（例如用于 SQL Server 的 Microsoft JDBC Driver 6.0 或更高版本）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此行为。 该驱动程序自动确定哪些查询参数与 Always Encrypted 数据库列相对应，并对这些参数的值进行加密，然后再将这些参数递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和 [JDBC 驱动程序的 Always Encrypted API 参考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 - 确保在开发计算机上安装 Microsoft JDBC Driver for SQL Server 6.0（或更高版本）。 
 - 下载并安装 Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files。  请确保阅读包含在 zip 文件中的自述文件，以获取安装说明和导出/导入问题的相关详细信息。  
 
@@ -58,6 +58,8 @@ Microsoft JDBC Driver for SQL Server 包含下列内置列主密钥存储提供�
 
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 密钥保管库提供程序
 Azure Key Vault 便于存储和管理用于 Always Encrypted 的列主密钥（尤其是当应用程序在 Azure 中托管时）。 Microsoft JDBC Driver for SQL Server 包括内置提供程序 SQLServerColumnEncryptionAzureKeyVaultProvider，适用于在 Azure Key Vault 中存储密钥的应用程序。 此提供程序的名称是 AZURE_KEY_VAULT。 为了使用 Azure Key Vault 存储提供程序，应用程序开发人员需要在 Azure Key Vault 中创建保管库和密钥，并在 Azure Active Directory 中创建应用注册。 必须在访问策略中为已注册的应用程序授予“获取”、“解密”、“加密”、“解包密钥”、“包装密钥”和“验证”权限，访问策略为创建用于 Always Encrypted 的密钥保管库而定义。 若要详细了解如何设置密钥保管库并创建列主密钥，请参阅 [Azure Key Vault - 分步](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)和[在 Azure Key Vault 中创建列主密钥](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
+
+使用 Azure Key Vault 提供程序时，JDBC 驱动程序根据受信任的终结点列表来验证列主密钥路径。 从驱动程序版本 8.2.2 开始，可配置此列表：在应用程序的工作目录中创建“mssql-jdbc.properties”文件，将 `AKVTrustedEndpoints` 属性设置为用分号分隔的列表。 如果该值以分号开头，则它将扩展默认列表；否则，它将替换默认列表。
 
 对于此页上的示例，如果已通过使用 SQL Server Management Studio 创建了基于 Azure Key Vault 的列主密钥和列加密密钥，那么用来重新创建它们的 T-SQL 脚本可能与此示例类似，并附带自己的 KEY_PATH  和 ENCRYPTED_VALUE  ：
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 39273f66a62f713e7aa95c3ce20d9ed3204776e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288291"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380808"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,8 +177,10 @@ VERBOSE LOGGING = { 'logging_detail' | DEFAULT }
   
 -   2 - 错误和警告  
   
+在资源故障转移方案中，SQL Server 资源 DLL 可以在发生故障转移之前获取转储文件。 这同时适用于 FCI 和可用性组技术。 SQL Server 资源 DLL 确定 SQL Server 资源失败时，SQL Server 资源 DLL 使用 Sqldumper.exe 实用程序获取 SQL Server 进程的转储文件。 若要确保 Sqldumper.exe 实用程序在资源故障转移时成功生成转储文件，必须将以下三个属性设置为先决条件：SqlDumperDumpTimeOut、SqlDumperDumpPath、SqlDumperDumpFlags。
+
 SQLDUMPEREDUMPFLAGS  
-确定 SQL Server SQLDumper 实用工具生成的转储文件的类型。 默认设置为 0。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
+确定 SQL Server SQLDumper 实用工具生成的转储文件的类型。 默认设置为 0。 此设置使用十进制值而不是十六进制值。 对于小型转储使用 288，对于具有间接内存的小型转储使用 296，对于已筛选转储使用 33024。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
 SQLDumper 实用工具存储转储文件的位置。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
@@ -304,7 +306,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 |[设置内存数据库选项](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> 设置进程关联  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> 设置进程关联  
 本节中的示例显示如何设置与 CPU 和 NUMA 节点的进程关联。 该示例假定服务器包含 256 个 CPU，这些 CPU 分为四组，每组各有 16 个 NUMA 节点。 线程未分配给任何 NUMA 节点或 CPU。  
   
 -   组 0：NUMA 节点 0 到 3，CPU 0 到 63  
@@ -351,7 +353,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  。    
   
@@ -387,7 +389,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> 设置故障转移群集属性  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> 设置故障转移群集属性  
   
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  。   
   
@@ -401,7 +403,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> B. 更改可用性副本的群集上下文  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> B. 更改可用性副本的群集上下文  
 下面的示例更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 HADR 群集上下文。 为了指定目标 WSFC 群集 (`clus01`)，本示例指定完整的群集对象名称 (`clus01.xyz.com`)。  
   
 ```sql  
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>设置缓冲池扩展选项  
   
-####  <a name="BufferPoolExtension"></a> A. 设置缓冲池扩展选项  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. 设置缓冲池扩展选项  
   
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）  。    
   
@@ -439,7 +441,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a> 设置内存数据库选项
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> 设置内存数据库选项
 
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）  。
 

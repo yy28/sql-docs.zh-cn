@@ -8,12 +8,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 427aff5fe9911fde59f3f37077fc9c2306d2bd42
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67910485"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487595"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例：Ubuntu 的无人参与 SQL Server 安装脚本
 
@@ -24,13 +24,16 @@ ms.locfileid: "67910485"
 > [!TIP]
 > 如果不需要无人参与安装脚本，则安装 SQL Server 最快速的方法是遵循 [Ubuntu 的快速入门](quickstart-install-connect-ubuntu.md)。 有关其他设置信息，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 至少需要 2GB 内存才能运行 Linux 上的 SQL Server。
 - 文件系统必须是 XFS 或 EXT4   。 其他文件系统（如 BTRFS）均不受支持  。
 - 有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
 ## <a name="sample-script"></a>示例脚本
+
+> [!NOTE]
+> 如果 SQL Server 启动缓慢，则脚本可能会失败。 这是因为脚本将以非零状态退出。 删除第一行上的 `-e` 开关可以解决此问题。
 
 ```bash
 #!/bin/bash -e

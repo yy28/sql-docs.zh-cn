@@ -1,5 +1,6 @@
 ---
 title: PolyBase 查询方案 | Microsoft Docs
+description: 查看使用 SQL Server 的 PolyBase 功能的查询示例，包括 SELECT、使用本地表进行外部 JOIN、导入/导出数据和新目录视图。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -17,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a8912a290723e3f0e1d0a0b951a6a5d1ce04b725
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: aeac57c5ae6facfeb092592c2f3dca851bb9b87b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710515"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217090"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase 查询方案
 

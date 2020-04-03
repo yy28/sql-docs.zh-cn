@@ -1,5 +1,6 @@
 ---
 title: 如何：部署自定义报表项 | Microsoft Docs
+description: 了解部署自定义报表项。 你将修改报表服务器配置文件，并将组件程序集复制到相应的文件夹。
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 31347efeda4805d4faffc993c164441cba1697c4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194137"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216919"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>如何部署自定义报表项
+# <a name="how-to-deploy-a-custom-report-item"></a>如何：部署自定义报表项
   若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自定义报表项，必须修改报表服务器配置文件，并将设计时和运行时组件程序集复制到报表设计器和报表服务器的相应应用程序文件夹中。  
   
 ### <a name="to-deploy-a-custom-report-item"></a>部署自定义报表项  

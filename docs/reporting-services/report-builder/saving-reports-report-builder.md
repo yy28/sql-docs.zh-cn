@@ -1,5 +1,6 @@
 ---
 title: 保存报表（报表生成器）| Microsoft Docs
+description: 在报表生成器中，可以保存报表的定义，其中包括布局而非数据。 每次运行报表时，都会刷新数据。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8682d55f6c805066f5b596e79a074f253db9faa9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c96b1a65c6a576391f072f2bdabb4b70cb0fd63
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66499631"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290794"
 ---
 # <a name="saving-reports-report-builder"></a>保存报表（报表生成器）
   在报表生成器中，可以将分页报表保存到你有写入权限的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表服务器、SharePoint 库和文件共享，也可以将其保存到你的计算机。 
@@ -30,7 +31,7 @@ ms.locfileid: "66499631"
   
  若要了解有关直接在报表服务器上查看和管理报表的详细信息，请参阅[查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)和 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
-##  <a name="SavingReportDefinitions"></a> 将报表保存到报表服务器  
+##  <a name="saving-reports-to-a-report-server"></a><a name="SavingReportDefinitions"></a> 将报表保存到报表服务器  
   将报表保存到报表服务器也称为发布报表。 尽管可以将报表保存到计算机，但是将报表保存到报表服务器更有利：  
   
 -   报表可供其他有权访问您保存报表的文件夹的用户使用。  
@@ -45,16 +46,16 @@ ms.locfileid: "66499631"
   
 -   可以记录报表运行情况，提供性能和审核信息。  
   
-##  <a name="ExportingAndSavingReports"></a> 导出和保存报表  
+##  <a name="exporting-and-saving-reports"></a><a name="ExportingAndSavingReports"></a> 导出和保存报表  
  如果只有少量要存档的报表，可以考虑导出报表并将其另存为文件。 在将报表导出到其他应用程序（如 PDF 或 Excel）后，您可以将其另存为文件，并放在网络上受保护的共享目录中。 或者，如果希望在报表服务器数据库中保留报表的所有副本（不论何种格式），则可以将已保存的 PDF 或 Excel 文件作为资源项上载。 有关导出报表的详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 和 [上传文件或报表](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)。  
   
-##  <a name="UsingFileShareDelivery"></a> 使用文件共享传递  
+##  <a name="using-file-share-delivery"></a><a name="UsingFileShareDelivery"></a> 使用文件共享传递  
  如果有大量要存档的报表，则可以创建订阅，将报表直接传递到文件系统。 对于这种方法，您必须为每个报表创建订阅，选择存储这些报表的共享文件夹，并制订用于指定文件创建时间的计划。 一旦定义订阅，报表服务器即可在无人参与的情况下运行报表，并且使用提供的计划存档报表文件。 如果只是偶尔存档报表，您也可以创建一次性的计划。 有关订阅和文件共享传递的详细信息，请参阅 [Reporting Services 中的文件共享传递](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)。  
   
-##  <a name="UsingReportHistory"></a> 使用报表历史记录  
+##  <a name="using-report-history"></a><a name="UsingReportHistory"></a> 使用报表历史记录  
  您还可以使用报表历史记录功能创建历史记录副本。 随后，您可以备份报表服务器数据库，将备份内容存储在安全的位置，以备将来使用。 所有报表历史记录（连同报表、共享数据源项、文件夹、订阅和共享计划）都存储在报表服务器数据库中。 您可以通过创建备份来维护报表历史记录和元数据（如指定报表接收人的订阅信息）的永久副本。 有关详细信息，请参阅 [创建、修改和删除报表历史记录中的快照](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)。  
  
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作指南主题  
   
 -   [将报表保存到报表服务器（报表生成器）](../../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md)  
   

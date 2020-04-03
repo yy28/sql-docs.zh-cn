@@ -1,5 +1,6 @@
 ---
 title: 在 Windows 上配置 PolyBase 横向扩展组 | Microsoft Docs
+description: 设置 PolyBase 横向扩展组以创建 SQL Server 实例群集。 这提高了来自外部源的大型数据集的查询性能。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256750"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216076"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>在 Windows 上配置 PolyBase 横向扩展组
 
@@ -21,7 +22,7 @@ ms.locfileid: "77256750"
 
 本文介绍如何在 Windows 上设置 [PolyBase 横向扩展组](polybase-scale-out-groups.md)。 此功能将创建 SQL Server 实例的群集来处理来自外部数据源的大型数据集（如 Hadoop 或 Azure Blob 存储），从而通过一种扩展的方式提高查询性能。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
   
 - 同一个域中有多台计算机  
   

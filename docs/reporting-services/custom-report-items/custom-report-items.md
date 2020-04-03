@@ -1,5 +1,6 @@
 ---
 title: 自定义报表项 | Microsoft Docs
+description: 了解自定义报表项以及它们如何由运行时组件和设计时组件组成。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee4b1e82ec3671cdc978c9af889d201ec430ed87
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d3c799f70e0b3df67096e1e6ca2e3a17bcc11572
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194138"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216932"
 ---
 # <a name="custom-report-items"></a>自定义报表项
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供大量工具，用于生成和发布企业报表，管理安全性和订阅，以及通过全面的 API 扩展报表功能。 报表使用称作报表定义语言 (RDL) 的基于 XML 的语言定义。 RDL 提供一组指令，用于描述报表的布局、查询信息和项类型。 可以通过编写自定义报表项来扩展 RDL。 自定义报表项由运行时组件（由报表处理器在运行时调用）和设计时组件（允许在报表设计器中使用该自定义报表项）构成。  
@@ -42,7 +43,7 @@ ms.locfileid: "63194138"
  [创建自定义报表项设计时组件](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
  描述如何创建自定义报表项设计时组件。  
   
- [如何部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [如何：部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
  描述如何部署自定义报表项。  
   
  [自定义报表项类库](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 497791ba9eb066621a468ec954a0d3bc27d2cfcb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028726"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216617"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>使用 PowerShell Core 管理 Linux 上的 SQL Server
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>探索 PS Core 中当前可用的 cmdlet
-虽然 SqlServer 模块当前在 Windows PowerShell 中有 109 个 cmdlet 可用，但其中只有 62 个可用于 PSCore。 下面提供了当前可用的 59 个 cmdlet 的完整列表。  有关 SqlServer 模块中所有 cmdlet 的深入文档，请参阅 SqlServer [cmdlet 参考](https://docs.microsoft.com/powershell/module/sqlserver/)。
+虽然 SqlServer 模块当前在 Windows PowerShell 中有 109 个 cmdlet 可用，但其中只有 62 个可用于 PSCore。 下面提供了当前可用的 62 个 cmdlet 的完整列表。  有关 SqlServer 模块中所有 cmdlet 的深入文档，请参阅 SqlServer [cmdlet 参考](https://docs.microsoft.com/powershell/module/sqlserver/)。
 
 以下命令将显示正在使用的 PowerShell 版本上可用的所有 cmdlet。
 

@@ -1,5 +1,6 @@
 ---
 title: 打印报表（SharePoint 模式下的 Reporting Services）| Microsoft Docs
+description: 如果报表服务器在 SharePoint 模式下运行，则可以通过 SharePoint 站点、浏览器或目标应用程序打印 SharePoint Web 应用程序中的报表。
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 407d20b06c6dccdb63f5455ffe24a3505d8bd823
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eb3511714f893e4513c8a5ba1c215807003e6534
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65875206"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290819"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>打印报表（SharePoint 模式下的 Reporting Services）
   对于在 SharePoint 模式下运行的报表服务器，可使用三种方法从 SharePoint Web 应用程序打印报表：  

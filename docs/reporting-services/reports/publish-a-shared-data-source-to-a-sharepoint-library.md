@@ -1,5 +1,6 @@
 ---
 title: 将共享数据源发布到 SharePoint 库 | Microsoft Docs
+description: 了解如何将共享数据源发布到以 SharePoint 集成模式运行的报表服务器。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd8444cc0bcdfe29268504cf2441c10d67a9ad0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 50b21145d0e1929b6ef5ba1f6e0f23692d9b4b7c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577522"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510098"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
   若要将共享数据源发布到在 SharePoint 集成模式下运行的报表服务器，必须在报表设计器中设置报表的项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。  
@@ -28,7 +29,7 @@ ms.locfileid: "65577522"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开现有的或新的报表服务器项目。  
   
-2.  在 **“项目”** 菜单上，单击 **“属性”** 。 “_项目>属性页”对话框即会打开\<_  。  
+2.  在 **“项目”** 菜单上，单击 **“属性”** 。 “\<项目>属性页”对话框即会打开   。  
   
 3.  选择发布到 SharePoint 站点所用的 **“配置”** 。  
   

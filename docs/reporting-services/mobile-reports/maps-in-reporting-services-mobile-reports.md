@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 移动报表中的地图 | Microsoft Docs
+description: Microsoft SQL Server 移动报表发布服务器提供三种类型的地图可视化，并且内置了各个洲和不同国家/地区的地图。
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6b7635b0af96f0009ef6220fc8360a1373d2f998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62683704"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448434"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 地图是实现地理数据可视化效果的好办法。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三种不同类型的地图可视化，并且内置了各个洲和不同国家/地区的地图。 你也可以 [上载和使用自定义地图](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
@@ -58,7 +59,7 @@ SQL Server 移动报表提供了三种不同类型的地图，分别适用于不
   
 2. 选择“添加数据”，然后选择“本地 Excel”或“SSRS 服务器”    。  
   
-   > **提示**：请确保 [数据的格式为可用于移动报表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
+   > **提示**：请确保[数据格式适用于移动报表](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
 3. 选择需要的工作表，并选择“导入”  。  
    你可以在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中看到你的数据。  

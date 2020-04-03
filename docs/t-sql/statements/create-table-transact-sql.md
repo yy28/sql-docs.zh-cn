@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287661"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380668"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -69,7 +69,7 @@ ms.locfileid: "79287661"
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -956,7 +956,7 @@ Test1Col
 - FOREIGN KEY 约束仅能引用位于同一服务器上的同一数据库中的表。 跨数据库的引用完整性必须通过触发器实现。 有关详细信息，请参阅 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)。
 - FOREIGN KEY 约束可引用同一表中的其他列。 此行为称为自引用。
 - 列级 FOREIGN KEY 约束的 REFERENCES 子句只能列出一个引用列。 此列的数据类型必须与定义约束的列的数据类型相同。
-- 表级 FOREIGN KEY 约束的 REFERENCES 子句中引用列的数目必须与约束列列表中的列数相同。 每个引用列的数据类型也必须与列表中相应列的数据类型相同。
+- 表级 FOREIGN KEY 约束的 REFERENCES 子句中引用列的数目必须与约束列列表中的列数相同。 每个引用列的数据类型也必须与列表中相应列的数据类型相同。 引用列的指定顺序必须与指定主键列或引用表上的唯一约束的列时所用的顺序相同。
 - 如果类型为 timestamp 的列是外键或被引用键的一部分，则不能指定 CASCADE、SET NULL 或 SET DEFAULT  。
 - 可将 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION 在相互存在引用关系的表上进行组合。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 遇到 NO ACTION，它将停止并回滚相关的 CASCADE、SET NULL 和 SET DEFAULT 操作。 如果 DELETE 语句导致 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION 操作的组合，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 检查所有 NO ACTION 前，将应用所有 CASCADE、SET NULL 和 SET DEFAULT 操作。
 - 对于表可包含的引用其他表的 FOREIGN KEY 约束的数目或其他表所拥有的引用特定表的 FOREIGN KEY 约束的数目， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都没有预定义的限制。

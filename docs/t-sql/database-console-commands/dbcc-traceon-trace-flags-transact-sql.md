@@ -1,7 +1,7 @@
 ---
 title: 跟踪标志 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2020
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 3296dad876dc0f3ce95a29dc1b9f21f38db7b0a5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288631"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402595"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -184,10 +184,11 @@ ms.locfileid: "79288631"
 |**9939**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，允许在引用内存优化表或表变量的 DML 操作中并行计划和并行扫描内存优化表和表变量，前提是它们不是 DML 操作的目标。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4013877)。<br /><br />**注意：** 如果还显式启用了跟踪标志 4199，则不需要使用跟踪标志 9939。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|   
 |**10204**|在列存储索引重组期间禁用合并/重新压缩。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，当重组列存储索引时，会有一个新功能将所有小型压缩行组自动合并为较大的压缩行组，并重新压缩具有大量已删除行的所有行组。<br /><br />**注意：** 跟踪标志 10204 不适用于对内存优化表创建的列存储索引。<br /><br />**作用域**：全局或会话|   
 |**10316**|允许对[内部内存优化暂存时态表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)创建除默认索引之外的附加索引。 如果有特定的查询模式，其中包含未被默认索引覆盖的列，则可以考虑添加附加索引。<br /><br />**注意：** 内存优化表的经系统版本控制的时态表旨在提供较高的事务吞吐量。 请注意，创建附加索引可能会为更新或删除当前表中的行的 DML 操作带来开销。 如果使用附加索引，应力求在时态查询的性能和额外的 DML 开销之间找到适当的平衡点。<br /><br />**作用域**：全局或会话|
-|**11023**|对于未将采样率显式指定为 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 语句一部分的所有后续统计信息更新，禁止使用上一个持续采样率。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4039284)。<br /><br />**作用域**：全局或会话|    
-|**11024**|当任何分区的修改计数超过本地[阈值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)时，允许触发统计信息的自动更新。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4041811)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：全局或会话| 
-|**11047**|将由 `query wait (s)` 或 Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` 配置设置的默认超时应用于列存储索引生成操作。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4480641)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 及更高内部版本。<br /><br />**作用域**：全局或会话|  
-
+|**11023**|对于未将采样率显式指定为 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 语句一部分的所有后续统计信息更新，禁止使用上一个持续采样率。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4039284)。<br /><br />**作用域**：仅全局|    
+|**11024**|当任何分区的修改计数超过本地[阈值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)时，允许触发统计信息的自动更新。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4041811)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：仅全局| 
+|**11047**|将由 `query wait (s)` 或 Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` 配置设置的默认超时应用于列存储索引生成操作。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4480641)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 及更高内部版本。<br /><br />**作用域**：仅全局| 
+|**11064**|通过优化 `SELECT` 和 `INSERT` 语句之间的内存分布，提高了将数据加载到列存储索引的操作的可伸缩性。 有关将数据加载到列存储索引中的详细信息，请参阅[列存储索引 - 数据加载指南](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高内部版本。<br /><br />**作用域**：仅全局| 
+|**11068**|使用配置的最大并行度 (MAXDOP) 值作为列存储索引插入操作。 有关替代并行度的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism)。<br /><br />**重要提示：** 只有同时启用跟踪标志 11064，此跟踪标志才有效。<br /><br />**重要提示：** 优先选择更快的数据加载而不是维护[列存储段](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment)的质量时，请使用此跟踪标志。 例如，如果在并行模式下执行插入操作，则在将 1,048,577 个行加载到列存储时，使用此跟踪标志可能会导致多个压缩行组。 如果不使用此跟踪标志，插入操作会生成一个压缩行组。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高内部版本。<br /><br />**作用域**：仅全局| 
   
 ## <a name="examples"></a>示例  
  以下示例使用 DBCC TRACEON 针对服务器级别的所有会话将跟踪标志 3205 设置为开。  

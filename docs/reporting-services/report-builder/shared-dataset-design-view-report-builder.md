@@ -1,5 +1,6 @@
 ---
 title: 共享数据集设计视图（报表生成器）| Microsoft Docs
+description: 在报表生成器中，使用“共享数据集设计”窗口创建要共享的数据集。 在报表服务器上发布共享数据集以在多个报表中使用。
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ece66b7fbe027f8119bb8703df58ca94098ed515
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190025"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290788"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
   在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 共享数据集发布在报表服务器上，可由多个报表使用。 你可以创建数据集，以便与他人共享。 在共享数据集设计窗口中，你可以选择共享数据源，指定共享数据集的属性，在查询设计器中创建查询。  
@@ -22,7 +23,7 @@ ms.locfileid: "74190025"
   
  有关如何处理报表中的数据的详细信息，请参阅 [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
   
-##  <a name="Ribbon"></a> 功能区  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a> 功能区  
  功能区可帮助您快速查找完成任务所需的命令。 命令分为以下逻辑组：连接、数据集和查询设计器。  
   
 ### <a name="connection"></a>连接  
@@ -58,7 +59,7 @@ ms.locfileid: "74190025"
  有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 中与数据源类型对应的主题。  
   
   
-##  <a name="DesignSurface"></a> 查询设计器图面  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a> 查询设计器图面  
  查询设计器可帮助您使用外部数据源所要求的语法来生成查询。  
   
  有些数据源类型提供了图形查询设计器，您可以使用这些设计器来浏览外部数据源中的元数据。 您还可以通过互动方式将名称从元数据窗格拖动到查询设计图面，或通过互动方式选择要使用的名称。  
@@ -68,7 +69,7 @@ ms.locfileid: "74190025"
  每种数据源类型都对将针对外部数据源进行的查询有特定的要求。 有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 中与数据源类型对应的主题。  
   
   
-##  <a name="Results"></a> 查看查询结果  
+##  <a name="viewing-query-results"></a><a name="Results"></a> 查看查询结果  
  在共享数据集设计视图中，您要生成一个将在处理报表时通过数据连接检索数据的查询。  
   
  运行此查询可查看通过数据连接获取的示例数据，从而验证该查询是否返回您需要的数据类型。 结果集中的列来自通过数据连接获取的数据架构的元数据。 列名成为数据集字段集合。 您在查询结果集中看到的数据值是设计时数据。 在将共享数据集另存为报表服务器上的共享数据集定义后，仅查询文本得到保存。 查询结果集中的数据不会被保存。  
@@ -85,7 +86,7 @@ ms.locfileid: "74190025"
  有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
-##  <a name="Save"></a> 保存共享数据集  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> 保存共享数据集  
  若要保存生成的查询，请在 **“报表生成器”** 按钮上单击 **“保存”** 或 **“另存为”** 。 导航到报表服务器上的相应文件夹，然后保存共享数据集定义。 在您将共享数据集保存到报表服务器后，其他用户才能使用此共享数据集。  
   
   

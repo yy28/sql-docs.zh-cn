@@ -1,5 +1,6 @@
 ---
 title: 在报表中查找文本、数字或日期 | Microsoft Docs
+description: 了解如何使用 Reporting Services 搜索报表中的内容，如文本、数字和日期。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f76bc00eca721a2ca118062d21cafe042e572dbb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39dad6e1717e151a7fc90cfac60a6adc1c7dddf2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576405"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510148"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>在报表中查找文本、数字或日期
   通过键入要查找的词或短语（搜索项的最大长度为 256 个字符），可以在报表中搜索内容。 搜索一种导航技术，它在报表中查找匹配值并将焦点放在报表中包含该值的部分。  

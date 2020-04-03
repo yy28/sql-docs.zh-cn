@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558367"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448407"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -310,7 +310,7 @@ BULK INSERT 语句可在用户定义的事务内执行，以便将数据导入�
 
  有关何时在事务日志中记录由批量导入 SQL SErver 执行的行插入操作的信息，请参阅[批量导入的最小日志记录的先决条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。 Azure SQL 数据库中不支持最小日志记录。
 
-## <a name="Limitations"></a> 限制
+## <a name="restrictions"></a><a name="Limitations"></a> 限制
 
 将格式文件用于 BULK INSERT 时，最多只能指定 1024 个字段。 这与表中允许的最大列数相同。 如果将带 BULK INSERT 的格式化文件与包含 1024 个字段以上的数据文件一起使用，BULK INSERT 将生成 4822 错误。 [bcp 实用工具](../../tools/bcp-utility.md)没有此限制，因此，对于包含 1024 个以上字段的数据文件，请使用不带格式化文件 BULK INSERT 或使用 bcp 命令  。
 
@@ -464,6 +464,24 @@ CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH ( TYPE = BLOB_STORAGE,
           LOCATION = 'https://****************.blob.core.windows.net/invoices'
           , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
+另一种方法是通过[托管标识](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)访问存储帐户。 为此，请按照 [步骤 1 到 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) 进行操作，将 SQL 数据库配置为通过托管标识访问存储，之后你便可实现如下所示的代码示例
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
 );
 
 BULK INSERT Sales.Invoices

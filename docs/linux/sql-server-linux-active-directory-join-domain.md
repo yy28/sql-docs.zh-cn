@@ -1,7 +1,7 @@
 ---
 title: 将 Linux 上的 SQL Server 加入 Active Directory
 titleSuffix: SQL Server
-description: ''
+description: 本文提供了将 SQL Server Linux 主机连接到 AD 域的指导。 你可以使用内置的 SSSD 包或使用第三方 AD 提供程序。
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761871"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216186"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>将 Linux 主机上的 SQL Server 加入 Active Directory 域
 
@@ -22,7 +22,7 @@ ms.locfileid: "76761871"
 
 本文提供有关如何将 SQL Server Linux 主机加入 Active Directory (AD) 域的常规指南。 有两种方法：使用内置 SSSD 包或使用第三方 Active Directory 提供程序。 第三方域加入产品的示例包括 [PowerBroker 标识服务 (PBIS)](https://www.beyondtrust.com/)、[One Identity](https://www.oneidentity.com/products/authentication-services/) 和 [Centrify](https://www.centrify.com/)。 本指南涵盖用于检查 Active Directory 配置的步骤。 但本指南不提供在使用第三方实用程序时如何将计算机加入域的相关说明。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 在配置 Active Directory 身份验证之前，需要先在自己的网络上设置 Active Directory 域控制器 (Windows)。 然后将自己的 Linux 主机上的 SQL Server 加入 Active Directory 域。
 
@@ -129,7 +129,7 @@ ping contoso.com
 - [选项 1：使用 SSSD 包](#option1)
 - [选项 2：使用第三方 openldap 提供程序实用工具](#option2)
 
-### <a id="option1"></a> 选项 1：使用 SSSD 包加入 AD 域
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> 选项 1：使用 SSSD 包加入 AD 域
 
 此方法使用 realmd 和 sssd 包将 SQL Server 主机加入到 AD 域   。
 
@@ -203,7 +203,7 @@ ping contoso.com
 
 有关详细信息，请参阅 Red Hat 文档：[发现和加入标识域](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)。
 
-### <a id="option2"></a> 选项 2：使用第三方 openldap 提供程序实用工具
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> 选项 2：使用第三方 openldap 提供程序实用工具
 
 可以使用 [PBIS](https://www.beyondtrust.com/)、[VAS](https://www.oneidentity.com/products/authentication-services/) 或 [Centrify](https://www.centrify.com/) 等第三方实用程序。 本文不提供每个实用程序的相关步骤。 需先使用其中某个实用程序将 SQL Server 的 Linux 主机加入域，然后才能继续操作。  
 

@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 创建适用于 SQL Server、Azure SQL 数据库、Azure Synapse Analytics 和 Analytics Platform System 的数据库语法
 ms.custom: ''
-ms.date: 02/07/2020
+ms.date: 03/16/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b809d3512c16a366f8f4add88cf8a0b091156d2
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.openlocfilehash: 1e20a18a405bc0bf2bf8fe94926d5bf4a6cb30ec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074475"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448410"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -75,7 +75,7 @@ ms.locfileid: "77074475"
 
 创建数据库。
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
 [ CONTAINMENT = { NONE | PARTIAL } ]
 [ ON
@@ -134,7 +134,7 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 
 附加数据库
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
     ON <filespec> [ ,...n ]
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }
@@ -151,7 +151,7 @@ CREATE DATABASE database_name
 
 创建数据库快照
 
-```sql
+```syntaxsql
 CREATE DATABASE database_snapshot_name
     ON
     (
@@ -432,7 +432,7 @@ AS SNAPSHOT OF source_database_name  指定要创建的数据库为 source_datab
 
 在一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例中最多可以指定 32,767 个数据库。
 
-每个数据库都有一个所有者，它可以在数据库中执行特殊操作。 所有者是创建数据库的用户。 可以使用 [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) 更改数据库所有者。
+每个数据库都有一个所有者，它可以在数据库中执行特殊操作。 所有者是创建数据库的用户。 数据库所有者可使用 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) 方法进行更改。
 
 某些数据库功能依赖文件系统中存在的功能来实现数据库的完整功能。 依赖于文件系统功能集的功能的一些示例包括：
 
@@ -837,7 +837,7 @@ GO
 - [数据库分离和附加](../../relational-databases/databases/database-detach-and-attach-sql-server.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
-- [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
+- [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)
 - [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
 - [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
 - [数据库快照](../../relational-databases/databases/database-snapshots-sql-server.md)
@@ -864,7 +864,7 @@ GO
 
 ### <a name="create-a-database"></a>创建数据库
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
@@ -900,7 +900,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ### <a name="copy-a-database"></a>复制数据库
 
-```
+```stntaxsql
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
@@ -1230,7 +1230,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]
 ```
@@ -1300,7 +1300,7 @@ CREATE DATABASE TestDB1;
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
     [ MAXSIZE = {
@@ -1411,7 +1411,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 CREATE DATABASE database_name
 WITH (
     [ AUTOGROW = ON | OFF , ]

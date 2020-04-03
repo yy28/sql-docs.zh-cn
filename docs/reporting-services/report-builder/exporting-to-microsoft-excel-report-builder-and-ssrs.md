@@ -1,5 +1,6 @@
 ---
 title: 导出到 Microsoft Excel（报表生成器）| Microsoft Docs
+description: 在报表生成器中，Excel 呈现扩展插件将分页报表呈现为 Office Open XML 格式，以用于 Microsoft Excel。
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079585"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342895"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表呈现为 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 呈现扩展插件，Excel 中的列宽度更精确地反映了报表中的列宽度。  
@@ -29,7 +30,7 @@ ms.locfileid: "77079585"
 >   
 >  若要降低无意中运行恶意脚本的风险，请仅从可信来源打开呈现的报表。 有关保护报表的详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。  
   
-##  <a name="ExcelLimitations"></a> Excel 限制  
+##  <a name="excel-limitations"></a><a name="ExcelLimitations"></a> Excel 限制  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 对于导出的报表存在一些限制。 最重要的限制包括：  
   
 -   最大列宽限制为 255 个字符（或 1726.5 磅）。 呈现器不会验证列宽是否小于此限制。  
@@ -178,7 +179,7 @@ ms.locfileid: "77079585"
   
  因为报表显式设置行高，所以，默认行高将只影响在导出到 Excel 后自动调整大小的行。  
   
-##  <a name="ReportItemsExcel"></a> Excel 格式的报表项  
+##  <a name="report-items-in-excel"></a><a name="ReportItemsExcel"></a> Excel 格式的报表项  
  矩形、子报表、表体和数据区域呈现为一组 Excel 单元格。 文本框、图像、图表、数据条、迷你图、地图、仪表和指示器必须呈现在一个 Excel 单元格内，这些元素可能会根据报表其余部分的布局进行合并。  
   
  图像、图表、迷你图、数据条、地图、仪表、指示器和线条虽然位于一个 Excel 单元格内，但是它们却位于单元网格的顶部。 线条呈现为单元格边框。  
@@ -192,7 +193,7 @@ ms.locfileid: "77079585"
   
  如果未找到匹配项，Excel 将使用打印机的默认页面大小。 如果页面宽度小于页面高度，则将页面方向设置为“纵向”；否则，将方向设置为“横向”。  
   
-##  <a name="WorksheetTabNames"></a> 工作表选项卡名称  
+##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> 工作表选项卡名称  
  将报表导出到 Excel 时，将分页符创建的报表页导出到不同的工作表。 如果您提供了报表的初始页名称，默认情况下 Excel 工作簿的每个工作表将具有此名称。 此名称显示在工作表选项卡上。不过，由于工作簿的每个工作表必须具有唯一的名称，因此从第二个工作表开始会将一个整数追加到每个工作表的初始页名称，从 1 开始追加，每增加一个工作表，该整数递增 1。 例如，如果初始页名称为 **Sales Report by Fiscal Year**，则第二个工作表的名称为 **Sales Report by Fiscal Year1**，第三个工作表的名称为 **Sales Report by Fiscal Year2**，依次类推。  
   
  如果分页符创建的所有报表页都提供新页名称，每个工作表将具有相关的页名称。 但是，这些页名称可能不唯一。 如果页名称不唯一，按与初始页名称相同的方式来命名工作表。 例如，如果两个组的页名称是 **Sales for NW**，则一个工作表选项卡将具有名称 **Sales for NW**，另一个工作表选项卡具有名称 **Sales for NW1**。  
@@ -201,7 +202,7 @@ ms.locfileid: "77079585"
   
  Reporting Services 提供要对报表、数据区域、组和矩形设置的属性，帮助您创建可以所需方式导出到 Excel 的报表。 有关详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
-##  <a name="DocumentProperties"></a> 文档属性  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> 文档属性  
  Excel 呈现器会将以下元数据写入 Excel 文件。  
   
 |报表元素属性|说明|  
@@ -211,7 +212,7 @@ ms.locfileid: "77079585"
 |说明|Report.Description|  
 |LastSaved|报表执行的日期和时间，格式为 ISO 日期/时间值。|  
   
-##  <a name="PageHeadersFooters"></a> 页眉和页脚  
+##  <a name="page-headers-and-footers"></a><a name="PageHeadersFooters"></a> 页眉和页脚  
  根据设备信息 SimplePageHeaders 设置，页眉可以按两种方式呈现：页眉可以呈现在每个工作表单元网格的顶部，或者位于实际 Excel 工作表表头部分。 默认情况下，页眉呈现至 Excel 工作表的单元网格上。  
   
  页脚始终呈现至实际 Excel 工作表表尾部分，无论 SimplePageHeaders 设置的值如何。  
@@ -227,7 +228,7 @@ ms.locfileid: "77079585"
   
  由于 Excel 的局限性，文本框是唯一能呈现在 Excel 表头/表尾部分的报表项类型。  
   
-##  <a name="Interactivity"></a> 交互  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 交互  
  Excel 支持一些交互元素。 下面是对一些特定行为的说明。  
   
 ### <a name="show-and-hide"></a>显示和隐藏  
@@ -262,7 +263,7 @@ ms.locfileid: "77079585"
 ### <a name="bookmarks"></a>书签  
  文本框中的书签链接在用于呈现文本的单元格中呈现为 Excel 超链接。 图像和图表的书签链接在呈现的图像上呈现为 Excel 超链接。 单击书签后，将转至用于呈现标有书签的报表项的 Excel 单元格。  
   
-##  <a name="ConditionalFormat"></a> 在运行时更改报表  
+##  <a name="changing-reports-at-run-time"></a><a name="ConditionalFormat"></a> 在运行时更改报表  
  如果某个报表必须以多种格式呈现，并且不可能创建以您所需的所有格式呈现的报表布局，则可以考虑使用 RenderFormat 内置全局属性中的值，在运行时有条件地更改报表外观。 这样，您可以根据用于在每种格式中获取最佳结果的呈现器，隐藏或显示报表项。 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  

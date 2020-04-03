@@ -1,5 +1,6 @@
 ---
 title: 在 Windows 上安装 PolyBase | Microsoft Docs
+description: 了解如何将 PolyBase 安装为单节点或 PolyBase 横向扩展组。 可以使用安装向导或命令提示符。 最后，启用 PolyBase。
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288471"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217109"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -95,7 +96,7 @@ ms.locfileid: "79288471"
    > 安装后，必须[启用 PolyBase 功能](#enable)。
 
 
-##  <a name="installing"></a> 使用命令提示符
+##  <a name="use-a-command-prompt"></a><a name="installing"></a> 使用命令提示符
 
 使用此表中的值来创建安装脚本。 SQL Server PolyBase 引擎和 SQL Server PolyBase 数据移动服务必须在同一帐户下运行。 在 PolyBase 横向扩展组中，所有节点上的 PolyBase 服务必须在同一个域帐户下运行。  
    
@@ -151,7 +152,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-## <a id="enable"></a> 启用 PolyBase
+## <a name="enable-polybase"></a><a id="enable"></a> 启用 PolyBase
 
 安装完成后，必须启用 PolyBase 来获取其功能。 使用以下 Transact-SQL 命令。 在大数据群集安装过程中部署的 SQL 2019 实例默认启用此设置。
 
@@ -166,7 +167,7 @@ RECONFIGURE;
 
 PolyBase 安装三个用户数据库：DWConfiguration、DWDiagnostics 和 DWQueue。 这些数据库供 PolyBase 使用。 请勿更改或删除它们。  
    
-### <a id="confirminstall"></a> 如何确认安装  
+### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> 如何确认安装  
 
 运行以下命令。 如果已安装 PolyBase，则返回 1。 否则返回 0。  
 

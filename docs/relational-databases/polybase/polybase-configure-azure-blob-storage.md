@@ -1,5 +1,6 @@
 ---
 title: 访问外部数据：Azure blob 存储 - PolyBase
+description: 本文使用 Azure Blob 存储的 SQL Server 实例上的 PolyBase。 PolyBase 适用于外部表的临时查询和数据导入/导出。
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 680a8e28e807505f4824524a686f244621cb3dd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258696"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215848"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>配置 PolyBase 以访问 Azure Blob 存储中的外部数据
 
@@ -22,7 +23,7 @@ ms.locfileid: "75258696"
 
 本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 Azure Blob 存储中的外部数据。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。 这篇安装文章介绍了安装的先决条件。
 

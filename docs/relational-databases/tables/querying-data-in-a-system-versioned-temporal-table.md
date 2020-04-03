@@ -1,7 +1,7 @@
 ---
 title: 在系统版本控制临时表中查询数据 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/28/2016
+ms.date: 03/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 415e966e2ecebb9004e64ddedd6b96d87cedee35
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74165614"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402677"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>在系统控制版本的时态表中查询数据
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-如果想要获取临时表中数据的最新（实际）状态，完全可以像查询非临时表一样进行查询。 如果 PERIOD 列未隐藏，其值将出现在 SELECT \* 查询中。 如果已将“PERIOD”列指定为隐藏，其值将不会出现在 SELECT  **查询中**\*。 当 **PERIOD** 列隐藏时，可在 SELECT 子句中明确引用 **PERIOD** 列以返回这些列的值。
+如果想要获取临时表中数据的最新（实际）状态，完全可以像查询非临时表一样进行查询。 如果 PERIOD 列未隐藏，其值将出现在 SELECT \* 查询中。 如果已将“PERIOD”列指定为隐藏，其值将不会出现在 SELECT \* 查询中  。 当 **PERIOD** 列隐藏时，可在 SELECT 子句中明确引用 **PERIOD** 列以返回这些列的值。
 
 若要执行任何一种基于时间的分析，请将新的 FOR SYSTEM_TIME 子句和四个特定时态的子子句结合使用，以便跨当前表和历史记录表查询数据  。 有关这些子句的详细信息，请参阅[临时表](../../relational-databases/tables/temporal-tables.md)和 [FROM (Transact SQL)](../../t-sql/queries/from-transact-sql.md)
 
@@ -32,7 +32,7 @@ ms.locfileid: "74165614"
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-可以在查询中为每个表单独指定**FOR SYSTEM_TIME** 。 它可以在公用表表达式、表值函数和存储过程内使用。
+可以在查询中为每个表单独指定**FOR SYSTEM_TIME** 。 它可以在公用表表达式、表值函数和存储过程内使用。 将表别名与时态表一起使用时，时态表名称和别名之间必须包含 FOR SYSTEM_TIME 子句  ，请参阅[使用 AS OF 子句查询特定时间](#query-for-a-specific-time-using-the-as-of-sub-clause)中的第二个示例。
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>使用 AS OF 子子句查询特定时间
 

@@ -1,5 +1,6 @@
 ---
 title: 基于报表生成数据馈送（报表生成器）| Microsoft Docs
+description: Reporting Services Atom 呈现扩展插件将生成一个服务文档，文档中包含分页报表中的数据馈送以及其本身的数据区域中的馈赠。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35f1f5f80d47aa5a59b77de9c4ebcab168394498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 93eecfd3ffb66be1a1758f3265bf91a5842a4abc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079174"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342807"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
 
@@ -31,7 +32,7 @@ ms.locfileid: "77079174"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a> 作为数据馈送的报表  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a> 作为数据馈送的报表  
  可以将生产报表作为数据馈送导出，或者可以创建主要目的是以数据馈送的形式向应用程序提供数据的报表。 将报表用作数据馈送为您在以下情况下提供了另一种向应用程序提供数据的方式：当数据不易通过客户端数据访问接口访问时，或者您更喜欢隐藏数据源的复杂性以使数据的使用更为简便时。 还可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能（如安全、计划和报表快照）管理用来提供数据馈送的报表，这是将报表用作数据馈送的另一个优点。  
   
  若要充分利用 Atom 呈现扩展插件，您应该理解报表是如何呈现到数据馈送中的。 如果使用现有报表，则若能预测这些报表能够生成的数据馈送将很有用；如果编写报表的目的是专门用作数据馈送，则重要的是能够包括数据并优化报表布局以充分利用数据馈送。  
@@ -39,7 +40,7 @@ ms.locfileid: "77079174"
  有关详细信息，请参阅[从报表生成数据馈送（报表生成器和 SSRS）](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
   
-##  <a name="AtomServiceDocument"></a> Atom 服务文档（.atomsvc 文件）  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a> Atom 服务文档（.atomsvc 文件）  
  Atom 服务文档指定针对一个或多个数据馈送的连接。 该连接至少是指向生成馈送的数据服务的简单 URL。  
   
  使用 Atom 呈现扩展插件呈现报表数据时，Atom 服务文档将列出可用于报表的数据馈送。 该文档为报表中的每个数据区域至少列出一个数据馈送。 表和仪表都只生成一个数据馈送；但矩阵、列表和图表可能生成多个数据馈送，具体取决于它们所显示的数据。  
@@ -59,7 +60,7 @@ ms.locfileid: "77079174"
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
   
-##  <a name="DataFeeds"></a> 数据馈送  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a> 数据馈送  
  数据馈送是一个 XML 文件，它具有一致的不随时间变化的表格格式，以及在每次运行报表时都可能不同的可变数据。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 生成的数据馈送采用与 ADO.NET Data Services 生成的数据馈送相同的格式。  
   
  数据馈送包含两部分：标题和数据。 Atom 规范中定义了各部分中的元素。 标题包括用于数据馈送的字符编码架构之类的信息。  
@@ -122,7 +123,7 @@ ms.locfileid: "77079174"
  数据馈送用 .atom 文件扩展名保存。 可以使用文本或 XML 编辑器（如记事本或 XML 编辑器）来查看文件结构和内容。  
   
   
-##  <a name="FlatteningReportData"></a> 平展报表数据  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a> 平展报表数据  
  Atom 呈现器将报表数据提供为 XML 格式的平展行集。 用于平展数据表的规则与用于 CSV 呈现器的规则相同，只有以下几点例外：  
   
 -   范围中的项平展到详细信息级别。 不同于 CSV 呈现器，顶级文本框显示在写入数据馈送的每个条目中。  
@@ -144,7 +145,7 @@ ms.locfileid: "77079174"
  有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
   
-##  <a name="AtomRendering"></a> Atom 呈现规则  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a> Atom 呈现规则  
  Atom 呈现扩展插件在呈现数据馈送时忽略以下信息：  
   
 -   格式设置和布局  
@@ -181,7 +182,7 @@ ms.locfileid: "77079174"
 |映射|为每个地图数据区域生成数据馈送。 如果多个地图层使用相同数据区域，数据馈送将包含所有层的数据。 该数据馈送包含一个记录，该记录包含地图层的每个地图成员的标签和值。|  
   
   
-##  <a name="DeviceInfo"></a> 设备信息设置  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 设备信息设置  
  您可以更改此呈现器的某些默认设置，包括要使用的编码架构。 有关详细信息，请参阅 [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md)。  
 
 ## <a name="next-steps"></a>后续步骤

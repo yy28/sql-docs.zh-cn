@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c2350410fe4aa70a9091314034a849a2ed8c4e18
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296950"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216906"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
 
@@ -85,7 +85,7 @@ ms.locfileid: "71296950"
   
  如果 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务已停止，可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器、执行包实用工具以及 **dtexec** 命令提示实用工具 (dtexec.exe) 继续运行包。 但是，您无法监视正在运行的包。  
   
- 默认情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在 NETWORK SERVICE 帐户的上下文中运行。  
+ 默认情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在 NETWORK SERVICE 帐户的上下文中运行。 建议在具有有限权限的帐户（如 NETWORK SERVICE 帐户）下运行 SQL Server Integration Services 服务。 在高特权帐户下运行 SQL Server Integration Services 服务有着潜在的安全风险。 
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务将信息写入 Windows 事件日志。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看服务事件。 也可以通过 Windows 事件查看器查看服务事件。  
   

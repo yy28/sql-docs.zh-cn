@@ -1,5 +1,6 @@
 ---
 title: 限制报表历史记录 - Reporting Services | Microsoft Docs
+description: 了解如何为报表服务器配置报表历史记录。 还将了解如何为特定的报表配置报表历史记录。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 634a033c06b2ed6815e32cf97829118dafa13b5f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67492596"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510118"
 ---
 # <a name="limit-report-history---reporting-services"></a>限制报表历史记录 - Reporting Services
   报表历史记录是随着时间变化而创建的报表快照的集合。 您可以按需创建报表历史记录，也可以安排快照的创建频率以及将快照添加到报表历史记录中的频率。  

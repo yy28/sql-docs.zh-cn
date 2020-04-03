@@ -1,5 +1,6 @@
 ---
 title: Hadoop 的 PolyBase 配置和安全 | Microsoft Docs
+description: 使用这些设置将 PolyBase 连接到 Hadoop，包括 Hadoop.RPC.Protection、CDH 5.X 群集的示例 XML 文件和 Kerberos 配置。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef4222b866be7979410f6a3f97dce8a4fc24ecd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59d268e0af326a92693cb09cb8e786364cd1f874
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909429"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215896"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 配置和安全
 
@@ -21,7 +22,7 @@ ms.locfileid: "72909429"
 
 本文为影响 PolyBase 与 Hadoop 的连接的各种配置设置提供参考。 有关如何将 PolyBase 与 Hadoop 配合使用的演练，请参阅[配置 PolyBase 以访问 Hadoop 中的外部数据](polybase-configure-hadoop.md)。
 
-## <a id="rpcprotection"></a> Hadoop.RPC.Protection 设置
+## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Hadoop.RPC.Protection 设置
 
 在 Hadoop 群集中保护通信的常用方法是将 hadoop.rpc.protection 配置更改为“隐私”或“完整性”。 默认情况下，PolyBase 假定配置设置为“身份验证”。 要替代此默认设置，请将以下属性添加到 core-site.xml 文件。 通过更改此配置，可实现 hadoop 节点之间以及 SSL 到 SQL Server 的连接之间安全的数据传输。
 

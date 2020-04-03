@@ -1,5 +1,6 @@
 ---
 title: 导出报表（报表生成器）| Microsoft Docs
+description: 可以使用报表生成器、报表设计器或报表服务器将 Reporting Services 报表导出为其他文件格式，如 PowerPoint 或 PDF。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078486"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342926"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>导出报表（报表生成器和 SSRS）
 
@@ -37,7 +38,7 @@ ms.locfileid: "77078486"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a name="bkmk_export_from_rb"></a> 从报表生成器导出报表
+## <a name="to-export-a-report-from-report-builder"></a><a name="bkmk_export_from_rb"></a> 从报表生成器导出报表
 
 1.  运行或预览报表。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "77078486"
   
      将打开“另存为”  对话框。 默认情况下，文件名为所导出报表的名称。 也可更改该文件名。  
   
-##  <a name="bkmk_export_from_rm"></a> 从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户导出报表  
+##  <a name="to-export-a-report-from-the-ssrsnoversion-web-portal"></a><a name="bkmk_export_from_rm"></a> 从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户导出报表  
   
 1.  从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户的“主页”  导航至要导出的报表。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "77078486"
   
      将使用与所选格式关联的应用程序显示或保存该报表。 如果单击 **“保存”** ，系统将提示您指定保存报表的位置。  
   
-##  <a name="bkmk_export_from_sharepoint"></a> 从 SharePoint 库导出该报表。  
+##  <a name="to-export-a-report-from-a-sharepoint-library"></a><a name="bkmk_export_from_sharepoint"></a> 从 SharePoint 库导出该报表。  
   
 1.  预览报表。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "77078486"
   
      **注意** 如果因没有与此文件类型关联的程序而导致程序无法以您所选的格式打开此报表，系统会提示您保存导出的报表或在线查找可打开此报表的程序。  
   
-##  <a name="RendererTypes"></a> 呈现扩展插件类型  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a> 呈现扩展插件类型  
  有三种类型的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 呈现扩展插件：  
   
 -   **数据呈现扩展插件** 数据呈现扩展插件会去除报表中的所有格式设置和布局信息而仅显示数据。 可使用所产生的文件将原始报表数据导入为其他文件类型，如 Excel、其他数据库、XML 数据消息或自定义应用程序。 数据呈现器不支持分页。  
@@ -106,7 +107,7 @@ ms.locfileid: "77078486"
   
      支持以下硬分页呈现器扩展插件：TIFF 和 PDF。  
   
-##  <a name="ExportFormats"></a> 查看报表时可以导出的格式  
+##  <a name="formats-you-can-export-while-viewing-reports"></a><a name="ExportFormats"></a> 查看报表时可以导出的格式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了用于以不同格式呈现报表的呈现扩展插件。 应针对你所选的文件格式优化报表设计。  下表列出了你可以从用户界面导出的格式。  此外，还列出了你可以结合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅或在从 URL 访问导出报表时使用的其他格式。  请参阅本主题中的 [导出报表的其他方式](#OtherWaysExportingReports)部分。  
   
 |格式|呈现扩展插件类型|说明|  
@@ -121,12 +122,12 @@ ms.locfileid: "77078486"
 |WORDOPENXML|软分页|查看报表时导出菜单中显示为“Word”。 Word 呈现扩展插件可将报表呈现为与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 兼容的 Word 文档 (.docx)。  有关详细信息，请参阅[导出到 Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)。|  
 |XML|数据|XML 呈现扩展插件可以按 XML 格式返回报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。<br/><br/> 有关详细信息，请参阅[导出到 HTML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。|  
   
-##  <a name="GeneratingDataFeedsFromReport"></a> 从报表生成数据馈送  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a> 从报表生成数据馈送  
  若要从某个报表生成数据馈送，请在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户中运行该报表，然后单击 Web 门户工具栏上的“生成数据馈送”  图标。 系统会提示您选择保存还是打开文件。 如果您选择 **“打开”** ，则将在应用程序中打开与 .atomsvc 文件扩展名关联的 Atom 服务文档。 如果您选择 **“保存”** ，则将该文档另存为 .atomsvc 文件。 默认情况下，该文件的名称即为报表的名称。 您可以将此名称更改为一个更有意义的名称。  
   
  将该 Atom 服务文档保存到计算机上。 稍后，您可以将其上载到报表服务器或另一个服务器上以供他人使用。 有关详细信息，请参阅[基于报表生成数据馈送](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)和[基于单个报表生成数据馈送](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
-##  <a name="Troubleshooting"></a> 排除与导出的报表有关的问题  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a> 排除与导出的报表有关的问题  
  有时候，在您将报表导出到不同格式后，它们看起来不同或者没有按您预期的方式工作。 出现此问题的原因是某些规则和限制可能应用于呈现器。 在创建报表时，可以考虑这些来解决许多限制。 在报表中可能需要使用稍有不同的布局，仔细对齐报表中的项，将报表表尾限制为单行文本等。  
   
  如果报表包含带有阿拉伯数字的 Unicode 文本，或包含以阿拉伯数字表示的日期，当你将报表导出为以下任何一种格式或打印报表时，这些日期和数字将不会正确呈现。  
@@ -163,7 +164,7 @@ ms.locfileid: "77078486"
   
  此外，您还可以使用 RenderFormat 内置全局属性，针对不同呈现器有条件地应用不同的报表布局。 有关详细信息，请参阅[内置的全局和用户引用](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
 
-##  <a name="OtherWaysExportingReports"></a> 导出报表的其他方式  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a> 导出报表的其他方式  
  导出报表是在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或报表生成器中打开报表时可以根据需要执行的一项任务。 若要自动执行导出操作（例如，根据重复执行的计划，将报表以特定文件类型导出到共享文件夹中），请创建一个订阅，将报表传递到共享文件夹。 有关详细信息，请参阅 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)。  
   
  在报告工具中预览或在浏览器应用程序（如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户）中打开的报表始终首先以 HTML 格式呈现。 不能将其他呈现扩展插件指定为用于查看的默认扩展插件。 但是，可以创建一个订阅，使用该订阅按所需呈现格式生成报表，然后再传递到电子邮件收件箱或共享文件夹。 有关详细信息，请参阅 [创建和管理本机模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) 和 [创建、修改和删除数据驱动订阅](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)。  

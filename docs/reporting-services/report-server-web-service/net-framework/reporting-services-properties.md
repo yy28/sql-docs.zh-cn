@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 属性 | Microsoft Docs
+description: 报表服务器定义全局系统属性和单个项属性。 应用程序可以将用户定义的属性添加到系统和项属性。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36a105d3220755dd03ff05a50dd403d4bac25d3a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7240bf3e987c5817489035d94879817f5f39569b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62703831"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509708"
 ---
 # <a name="reporting-services-properties"></a>Reporting Services 属性
   报表服务器定义对于报表服务器而言为全局的一组系统属性，并定义与报表服务器数据库中存储的单独项关联的一组项属性。 不能删除由报表服务器定义的属性，在某些情况下，它们是只读的。 应用程序可以通过将其他用户定义属性添加到系统以及添加项属性来扩展系统属性和项属性。  

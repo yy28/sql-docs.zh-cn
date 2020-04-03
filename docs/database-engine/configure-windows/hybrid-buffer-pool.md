@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112289"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216256"
 ---
 # <a name="hybrid-buffer-pool"></a>混合缓冲池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 在 Windows 上格式化 PMEM 设备时，使用可用于 NTFS 的最大分配单元大小（Windows Server 2019 中为 2 MB）并确保已为 DAX（直接访问）格式化该设备。
 
-使用大页面内存分配模型，该模型可通过[跟踪标志 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 启用。 跟踪标志 834 是一个启动跟踪标志。
-
-使用大页面内存分配模型要求在 Windows 上使用[内存中的锁定页面](./enable-the-lock-pages-in-memory-option-windows.md)。
+在 Windows 上使用[内存中的锁定页面](./enable-the-lock-pages-in-memory-option-windows.md)。
 
 文件大小应为 2 MB 的倍数（模数 2 MB 应等于零）。
 

@@ -1,5 +1,6 @@
 ---
 title: 防止无效请求 | Microsoft Docs
+description: 了解如何通过分析应用程序流程并确保发送到报表服务器的请求有效来防止无效请求。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 219fc1883f395e56f1fd73af32e95ea066df28b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c11cfc1213e70bf362185a63883b8e84282696ca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62992220"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216363"
 ---
 # <a name="preventing-invalid-requests"></a>防止无效请求
   您可以通过分析应用程序流程并确保要发送到报表服务器的请求有效，防止引发某些类型的异常。 例如，在使用户能够添加或更新报表名称、数据源或其他报表服务器项的应用程序中，您应该对用户可能输入的文本进行验证。 您应该始终在将请求发送到报表服务器之前检查是否使用了保留字符。 在代码中使用条件 if  语句或其他逻辑构造可以向用户发出警报，提醒用户尚未满足将请求发送到报表服务器所需的条件。  

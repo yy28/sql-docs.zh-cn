@@ -1,6 +1,6 @@
 ---
 title: 故障转移群集示例 - Linux 上的 SQL Server
-description: ''
+description: Linux 上的 SQL Server 故障转移群集实例的概念包括群集层、实例数、IP 地址和名称以及共享存储。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59cc941e9ea278bc0e6e679c0691fcf7b65bce2b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68032390"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216221"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>故障转移群集示例 - Linux 上的 SQL Server
 

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "78225918"
+ms.locfileid: "80402655"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具（预览）
 
@@ -22,11 +22,23 @@ ms.locfileid: "78225918"
 
 如果你没有 Azure DevOps 组织，首先请注册 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)，然后根据[这些步骤](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension)添加 SSIS DevOps 工具扩展   。
 
-SSIS DevOps 工具包括 SSIS 生成任务和 SSIS 部署发布任务    。
+SSIS DevOps 工具包括 SSIS 生成任务、SSIS 部署发布任务和 SSIS 目录配置任务     。
 
-- SSIS 生成任务支持在项目部署模型或包部署模型中生成 dtproj 文件  。
+- [SSIS 生成](#ssis-build-task)任务支持在项目部署模型或包部署模型中生成 dtproj 文件  。
 
-- SSIS 部署任务支持将单个或多个 ispac 文件部署到本地 SSIS 目录，并将 Azure-SSIS IR 或 SSISDeploymentManifest 文件及其关联文件部署到本地或 Azure 文件共享  。
+- [SSIS 部署](#ssis-deploy-task)任务支持将单个或多个 ispac 文件部署到本地 SSIS 目录，并将 Azure-SSIS IR 或 SSISDeploymentManifest 文件及其关联文件部署到本地或 Azure 文件共享  。
+
+- [SSIS 目录配置](#ssis-catalog-configuration-task)任务支持使用采用 JSON 格式的配置文件配置 SSIS 目录的文件夹/项目/环境  。 此任务支持以下方案：
+    - Folder
+        - 创建文件夹。
+        - 更新文件夹说明。
+    - Project
+        - 配置参数的值，同时支持文本值和引用值。
+        - 添加环境引用。
+    - 环境
+        - 创建环境。
+        - 更新环境说明。
+        - 创建或更新环境变量。
 
 ## <a name="ssis-build-task"></a>SSIS 生成任务
 
@@ -64,8 +76,6 @@ cat log.txt
 
 - SSIS 生成任务不支持 EncryptSensitiveWithPassword 和 EncryptAllWithPassword 保护级别   。 请确保基本代码中的所有 SSIS 项目都不使用这两个保护级别，否则，SSIS 生成任务在执行过程中将挂起和超时。
 
-- ConnectByProxy  是最近在 SSDT 中添加的新属性。 Microsoft 托管的代理上安装的 SSDT 未更新，因此，请使用自托管代理作为解决办法。
-
 ## <a name="ssis-deploy-task"></a>SSIS 部署任务
 
 ![部署任务](media/ssis-deploy-task.png)
@@ -98,7 +108,7 @@ cat log.txt
 
 #### <a name="authentication-type"></a>身份验证类型
 
-用于访问指定目标服务器的身份验证类型。 仅当目标类型为 SSISDB 时，此属性才可见。 SSIS 部署任务通常支持四种类型：
+用于访问指定目标服务器的身份验证类型。 仅当目标类型为 SSISDB 时，此属性才可见。 通常支持以下身份验证类型：
 
 - Windows 身份验证
 - SQL Server 身份验证
@@ -143,7 +153,203 @@ SSIS 部署任务当前不支持以下方案：
 - 将 ispac 部署到只允许多重身份验证 (MFA) 的 Azure SQL Server 或 Azure SQL 托管实例。
 - 将包部署到 MSDB 或 SSIS 包存储。
 
+## <a name="ssis-catalog-configuration-task"></a>SSIS 目录配置任务
+
+![目录配置任务](media/ssis-catalog-configuation-task.png)
+
+### <a name="properties"></a>属性
+
+#### <a name="configuration-file-source"></a>配置文件源
+
+SSIS 目录配置 JSON 文件的源。 源可以是“文件路径”，也可以是“内联”。
+
+有关如何[定义配置 JSON](#define-configuration-json) 的详细信息，请参阅：
+
+- 请参阅[内联配置 JSON 示例](#a-sample-inline-configuration-json)。
+- 请参阅 [JSON 架构](#json-schema)。
+
+#### <a name="configuration-json-file-path"></a>配置 JSON 文件路径
+
+SSIS 目录配置 JSON 文件的路径。 只有在选择“文件路径”作为配置文件源时，此属性才可见。
+
+若要在配置 JSON 文件中使用[管道变量](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch)，你需要在此任务之前添加[文件转换任务](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)，以将配置值替换为管道变量。 有关详细信息，请参阅 [JSON 变量替换](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)。
+
+#### <a name="inline-configuration-json"></a>内联配置 JSON
+
+SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件源时，此属性才可见。 可以直接使用管道变量。
+
+#### <a name="roll-back-configuration-when-error-occurs"></a>发生错误时回退配置
+
+在发生错误时是否回退此任务所进行的配置。
+
+#### <a name="target-server"></a>目标服务器
+
+目标 SQL Server 的名称。 它可以是本地 SQL Server、Azure SQL 数据库或 Azure SQL 数据库托管实例的名称。
+
+#### <a name="authentication-type"></a>身份验证类型
+
+用于访问指定目标服务器的身份验证类型。 通常支持以下身份验证类型：
+
+- Windows 身份验证
+- SQL Server 身份验证
+- Active Directory - 密码
+- Active Directory - 集成
+
+但特定身份验证类型是否受支持取决于目标服务器类型和代理类型。 下表列出了详细的支持矩阵。
+
+| |Microsoft 托管代理|自托管代码|
+|---------|---------|---------|
+|本地 SQL Server 或 VM |空值|Windows 身份验证|
+|Azure SQL|SQL Server 身份验证 <br> Active Directory - 密码|SQL Server 身份验证 <br> Active Directory - 密码 <br> Active Directory - 集成|
+
+#### <a name="username"></a>用户名
+
+用于访问目标 SQL Server 的用户名。 只有在身份验证类型为“SQL Server 身份验证”或“Active Directory - 密码”时，此属性才可见。
+
+#### <a name="password"></a>密码
+
+用于访问目标 SQL Server 的密码。 只有在身份验证类型为“SQL Server 身份验证”或“Active Directory - 密码”时，此属性才可见。
+
+### <a name="define-configuration-json"></a>定义配置 JSON
+
+配置 JSON 架构有三层：
+
+- 目录
+- 文件夹
+- 项目和环境
+
+![目录配置架构](media/catalog-configuration-schema.png)
+
+#### <a name="a-sample-inline-configuration-json"></a>内联配置 JSON 示例
+
+```json
+{
+  "folders": [
+    {
+      "name": "devopsdemo",
+      "description": "devops demo folder",
+      "projects": [
+        {
+          "name": "catalog devops",
+          "parameters": [
+            {
+              "name": "password",
+              "container": "Package.dtsx",
+              "value": "passwd",
+              "valueType": "referenced"
+            },
+            {
+              "name": "serverName",
+              "container": "catalog devops",
+              "value": "localhost",
+              "valueType": "literal"
+            }
+          ],
+          "references": [
+            {
+              "environmentName": "test",
+              "environmentFolder": "devopsdemo"
+            },
+            {
+              "environmentName": "test",
+              "environmentFolder": "."
+            }
+          ]
+        }
+      ],
+      "environments": [
+        {
+          "name": "test",
+          "description": "test",
+          "variables": [
+            {
+              "name": "passwd",
+              "type": "string",
+              "description": "",
+              "value": "$(SSISDBServerAdminPassword)",
+              "sensitive": true
+            },
+            {
+              "name": "serverName",
+              "type": "string",
+              "description": "",
+              "value": "$(TargetServerName)",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### <a name="json-schema"></a>JSON 架构
+
+##### <a name="catalog-attributes"></a>目录属性
+
+|properties  |说明  |说明  |
+|---------|---------|---------|
+|文件夹  |文件夹对象的数组。 每个对象都包含目录文件夹的配置信息。|有关文件夹对象的架构，请参阅“文件夹属性”  。|
+
+##### <a name="folder-attributes"></a>文件夹属性
+
+|properties  |说明  |说明  |
+|---------|---------|---------|
+|name  |目录文件夹的名称。|如果文件夹不存在，将创建一个文件夹。|
+|description|目录文件夹的说明。|将跳过 NULL 值  。|
+|projects|项目对象的数组。 每个对象都包含项目的配置信息。|有关项目对象的架构，请参阅“项目属性”  。|
+|environments|环境对象的数组。 每个对象都包含环境的配置信息。|有关环境对象的架构，请参阅“环境属性”  。|
+
+##### <a name="project-attributes"></a>项目属性
+
+|properties  |说明  |说明  |
+|---------|---------|---------|
+|name|项目名称。 |如果父文件夹中不存在项目，则将跳过项目对象。|
+|parameters|参数对象的数组。 每个对象都包含参数的配置信息。|有关参数对象的架构，请参阅“参数属性”  。|
+|引用|引用对象的数组。 每个对象都代表对目标项目的环境引用。|有关引用对象的架构，请参阅“引用属性”  。|
+
+##### <a name="parameter-attributes"></a>参数属性
+
+|properties  |说明  |说明  |
+|---------|---------|---------|
+|name|参数的名称。|参数可以是项目参数，也可以是包参数   。 <br> 如果父项目中不存在参数，则将跳过参数。|
+|容器 (container)|参数的容器。|<li>如果参数是项目参数，则容器应为项目名称  。 <li>如果它是包参数，则容器应为扩展名为 .dtsx 的包名称   。 <li> 如果参数是连接管理器属性，则名称应采用以下格式：CM.\<连接管理器名称>.\<属性名称>  。|
+|值|参数值。|<li>当 valueType 是引用对象时   ：值是对字符串类型中的环境变量的引用  。 <li> 当 valueType 是文本时   ：此属性支持任何有效的布尔、数字和字符串 JSON 值    。 <br> 该值将转换为目标参数类型。 如果无法转换，则会发生错误。<li> Null 值无效  。 任务将跳过此参数对象，并发出警告。|
+|valueType|参数值的类型。|有效类型包括： <br> 文本  ：value 属性表示文本值  。 <br> 引用对象  ：value 属性表示对环境变量的引用  。|
+
+##### <a name="reference-attributes"></a>引用属性
+
+|properties  |说明  |说明  |
+|---------|---------|---------|
+|environmentFolder|环境的文件夹名称。|如果文件夹不存在，将创建一个文件夹。 <br> 值可以是“.”，它表示引用环境的项目的父文件夹。|
+|environmentName|引用的环境的名称。|如果环境不存在，将创建指定的环境。|
+
+##### <a name="environment-attributes"></a>环境属性
+
+|properties  |说明  |说明  |
+|---------|---------|---------|
+|name|环境的名称。|如果环境不存在，将创建环境。|
+|description|环境的说明。|将跳过 NULL 值  。|
+|variables|变量对象的数组。|每个对象都包含环境变量的配置信息。有关变量对象的架构，请参阅“变量属性”  。|
+
+##### <a name="variable-attributes"></a>变量属性
+
+|properties  |说明  |说明  |
+|---------|---------|---------|
+|name|环境变量的名称。|如果环境变量不存在，将创建环境变量。|
+|type|环境变量的数据类型。|有效类型包括： <br> *boolean* <br> byte  <br> *datetime* <br> Decimal <br> *double* <br> int16  <br> int32  <br> int64  <br> sbyte  <br> single  <br> *string* <br> uint32  <br> uint64 |
+|description|环境变量的说明。|将跳过 NULL 值  。|
+|值|环境变量的值。|此属性支持任何有效的布尔、数字和字符串 JSON 值。<br> 该值将转换为 type 属性指定的类型  。 如果转换失败，则会发生错误。<br>Null 值无效  。 任务将跳过此环境变量对象，并发出警告。|
+|sensitive|环境变量的值是否是敏感值。|有效输入为： <br> true  <br> *false*|
+
 ## <a name="release-notes"></a>发行说明
+
+### <a name="version-020-preview"></a>版本 0.2.0 预览版
+
+发行日期：2020 年 3 月 31 日
+
+- 添加 SSIS 目录配置任务。
 
 ### <a name="version-013-preview"></a>版本 0.1.3 预览版
 

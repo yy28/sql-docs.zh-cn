@@ -1,5 +1,6 @@
 ---
 title: PolyBase Kerberos 连接疑难解答 | Microsoft Docs
+description: 若要使用 Kerberos 保护的 Hadoop 群集解决 PolyBase 的身份验证问题，可以使用 PolyBase 中内置的交互式诊断。
 author: alazad-msft
 ms.author: alazad
 ms.reviewer: mikeray
@@ -10,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909145"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215847"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -30,7 +31,7 @@ ms.locfileid: "72909145"
 > 此工具将有助于找出非 SQL Server 问题，使你集中精力解决 HDFS Kerberos 设置问题，即识别用户名/密码错误配置的问题和群集 Kerberos 设置配置错误问题。      
 > 该工具独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 它作为 Jupyter Notebook 提供并且需要 Azure Data Studio。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 1. 安装了 PolyBase 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]RTM CU6 / [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3 / [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 或更高版本
 1. 受 Kerberos（Active Directory 或 MIT）保护的 Hadoop 群集（Cloudera 或 Hortonworks）

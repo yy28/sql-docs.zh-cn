@@ -1,5 +1,6 @@
 ---
 title: 在报表生成器中预览报表 | Microsoft Docs
+description: 创建 Reporting Services 分页报表时，可以预览该报表以验证该报表是否显示了所需的内容。
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5af8a22b4cba1fd7d2ad43629b379e351b207b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580717"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342750"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
   当创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，经常预览报表以验证报表显示你所需的内容会非常有用。 若要预览报表，请单击 **“运行”** 。 报表将在预览模式下呈现。  

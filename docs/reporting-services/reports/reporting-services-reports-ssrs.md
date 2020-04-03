@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 报表 | Microsoft Docs
+description: 了解有关 Reporting Services 报告的详细信息，包括报表的好处、如何创建分页报表以及如何查看报表。
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9eb81b3b3274afa8a53a217ea1139a8a904979ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082429"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510058"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表是基于 XML 的报表定义，其中包括报表数据和报表布局元素。 在客户端文件系统中，报表定义具有文件扩展名 .rdl。 在发布某一分页报表后，该报表将成为在报表服务器或 SharePoint 站点上存储的报表项。 分页报表是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供的基于服务器的报表平台的一部分。 你还可以 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
@@ -45,7 +46,7 @@ ms.locfileid: "77082429"
   
     ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
-##  <a name="bkmk_StagesSummary"></a> 报表处理阶段  
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> 报表处理阶段  
  在您创建报表时，以 XML 格式定义一个报表定义文件 (.rdl)。 该文件包含报表处理器合并报表数据和报表布局所需的所有信息。 当您查看报表时，报表将经历以下阶段：  
   
 -   **编译。** 对报表定义中的表达式进行计算，将编译后的中间格式内部存储于报表服务器上。  
@@ -155,7 +156,7 @@ ms.locfileid: "77082429"
   
  有关性能的详细信息，请参阅[性能、快照、缓存 (Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)。  
   
-##  <a name="bkmk_SecureReportsSummary"></a> 保护报表  
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> 保护报表  
  保护报表：  
   
 作为报表服务器管理员，标识用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的授权和身份验证系统。 默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 Windows 身份验证、集成的安全性和角色分配来帮助控制对已发布报表的访问。 有关详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性和保护](../../reporting-services/security/reporting-services-security-and-protection.md)。  

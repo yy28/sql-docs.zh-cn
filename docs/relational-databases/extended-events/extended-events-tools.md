@@ -1,5 +1,6 @@
 ---
 title: 扩展事件工具
+description: 这些工具创建和管理 SQL Server 扩展事件会话。 除了你创建的会话外，服务器上还有一个默认的系统运行状况会话。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 811542608a33777a5e44183f65e44d8321a65c63
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8359dfc1874f55542e02ca7f05e3ca6cfead1c07
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234633"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433684"
 ---
 # <a name="extended-events-tools"></a>扩展事件工具
 

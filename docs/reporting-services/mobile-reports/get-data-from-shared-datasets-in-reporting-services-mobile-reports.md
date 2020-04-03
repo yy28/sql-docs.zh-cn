@@ -1,5 +1,6 @@
 ---
 title: 在 Reporting Services 移动报表中从共享数据集获取数据 | Microsoft Docs
+description: 通过使用在 Reporting Services web 门户上配置的共享数据源，SQL Server 移动报表发布服务器几乎可以从任何源访问数据。
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4cc5e1538d1575e05e1eecd3959c98404cdbf5d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63061114"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448244"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
 除了[从 Excel 文件中加载数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)外，SQL Server 移动报表发布服务器还可以访问几乎任何来源的数据。 访问数据需要在 Reporting Services Web 门户上配置的共享数据源。 了解有关 [创建共享数据源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [创建共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)的详细信息。  

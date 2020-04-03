@@ -1,5 +1,6 @@
 ---
 title: 导出到 CSV 文件（报表生成器）| Microsoft Docs
+description: 在报表生成器中，CSV 呈现扩展插件将分页报表呈现为可读且与许多应用程序兼容的纯文本格式。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078374"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342882"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
   逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现分页报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。  
@@ -27,7 +28,7 @@ ms.locfileid: "77078374"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV 呈现  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> CSV 呈现  
  当使用默认设置进行呈现时，CSV 报表具有以下特征：  
   
 -   默认字段分隔符字符串是逗号 (,)。  
@@ -95,7 +96,7 @@ ms.locfileid: "77078374"
  有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
   
-##  <a name="RenderingModes"></a> 呈现器模式  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> 呈现器模式  
  CSV 呈现扩展插件可在两种模式下运行：一种模式针对 Excel 进行了优化，另一种模式针对要求严格遵守 RFC 4180 中的 CSV 规范的第三方应用程序进行了优化。 根据所用模式的不同，对等数据区域的处理方式也有所不同。  
   
 ### <a name="default-mode"></a>默认模式  
@@ -119,7 +120,7 @@ ms.locfileid: "77078374"
 #### <a name="formatting"></a>格式设置  
  值未经过格式化。  
   
-##  <a name="Interactivity"></a> 交互  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 交互  
  此呈现器生成的两种 CSV 格式都不支持交互。 不会呈现以下交互元素：  
   
 -   超链接  
@@ -137,7 +138,7 @@ ms.locfileid: "77078374"
 -   书签  
   
   
-##  <a name="DeviceInfo"></a> 设备信息设置  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改设备信息设置来更改相应呈现器的某些默认设置，包括呈现使用的模式、用作分隔符的字符以及用作文本限定符默认字符串的字符。 有关详细信息，请参阅 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)。  
   
   

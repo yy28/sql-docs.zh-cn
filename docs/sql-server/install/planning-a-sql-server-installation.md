@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94cdaba9319ed683dafcf3e8e29903b1d1957100
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68019835"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79428178"
 ---
 # <a name="planning-a-sql-server-installation"></a>计划 SQL Server 安装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68019835"
   
  无论使用哪种安装方法，您都需要作为个人或代表实体确认接受软件许可条款，除非您对于软件的使用受单独的协议（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 批量许可协议或与 ISV 或 OEM 之间的第三方协议）管辖。  
   
- 将在安装程序用户界面中显示许可条款，供您审核审阅和接受。 无人参与的安装（使用 `/Q` 或 `/QS` 参数）必须包含 `/IAcceptSQLServerLicenseTerms` 参数。 在 [Microsoft SQL Server 许可条款和许可证信息](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)中下载和查看许可条款。 有关批量许可条款，请参阅[Licensing Termss and Documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)（许可条款和文档）。 有关 SQL Server 的早期版本，请参阅 [Microsoft 软件许可条款](https://go.microsoft.com/fwlink/?LinkID=148209)。  
+ 将在安装程序用户界面中显示许可条款，供您审核审阅和接受。 无人参与的安装（使用 `/Q` 或 `/QS` 参数）必须包含 `/IAcceptSQLServerLicenseTerms` 参数。 在 [Microsoft SQL Server 许可条款和许可证信息](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)中下载和查看许可条款。 有关批量许可条款，请参阅[许可条款和文档](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 有关 SQL Server 的早期版本，请参阅 [Microsoft 软件许可条款](https://go.microsoft.com/fwlink/?LinkID=148209)。  
   
 > [!NOTE]  
 >  根据您接收软件的方式（例如，通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 批量许可），您对软件的使用可能受其他条款和条件约束。  
@@ -40,8 +40,7 @@ ms.locfileid: "68019835"
  [SQL Server 安装中的新增功能](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  本文介绍有关这一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中新增或改进的安装功能的详细信息。  
   
- [安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- 本文列出了安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的最低硬件和软件要求。  
+ 安装 [SQL Server 2016 和 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 或 [SQL Server on Linux](../../linux/sql-server-linux-setup.md) 的硬件和软件要求。本文列出了安装和运行 SQL Server 实例的最低硬件和软件要求。 。  
   
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  本文介绍安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前和安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后应考虑的一些最佳安全做法。  

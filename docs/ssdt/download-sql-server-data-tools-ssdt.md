@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77652936"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271483"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下载 SQL Server Data Tools (SSDT) for Visual Studio
 
@@ -79,10 +79,10 @@ SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Serv
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017（独立安装程序）
 
-[![下载](../ssdt/media/download.png)下载 SSDT for Visual Studio 2017 (15.9.3)](https://go.microsoft.com/fwlink/?linkid=2110080)
+[![下载](../ssdt/media/download.png)下载 SSDT for Visual Studio 2017 (15.9.4)](https://go.microsoft.com/fwlink/?linkid=2124518 )
 
 > [!IMPORTANT]
-> * 安装 SSDT for Visual Studio 2017 (15.9.3) 前，请卸载“Analysis Services 项目”  和“Reporting Services 项目”  扩展（如已安装），并关闭所有 VS 实例。
+> * 安装 SSDT for Visual Studio 2017 (15.9.4) 前，请卸载“Analysis Services 项目”  和“Reporting Services 项目”  扩展（如已安装），并关闭所有 VS 实例。
 > * 删除了收件箱组件 Power Query Source for SQL Server 2017。 目前，我们已宣布推出 Power Query Source for SQL Server 2017 & 2019 作为现成组件，可在[此处](https://www.microsoft.com/download/details.aspx?id=100619)下载。
 > * 删除了收件箱组件 Microsoft Oracle Connector for SQL Server 2019。 目前，我们已宣布将 Microsoft Oracle Connector for SQL Server 2019 作为现成组件推出（可以从[此处](https://www.microsoft.com/download/details.aspx?id=58228)下载）。
 
@@ -98,17 +98,17 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 此版本的 SSDT for VS 2017 可安装以下语言  ：
 
-* [简体中文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
-* [繁体中文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
-* [英语（美国）]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
-* [法语]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
-* [德语]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
-* [意大利语]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
-* [日语]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
-* [朝鲜语]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
-* [葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
-* [俄语]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
-* [西班牙语]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
+* [简体中文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
+* [繁体中文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
+* [英语（美国）]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
+* [法语]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
+* [德语]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
+* [意大利语]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
+* [日语]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
+* [朝鲜语]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
+* [葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
+* [俄语]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
+* [西班牙语]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>注意事项和限制
 
@@ -129,8 +129,6 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 3. 仍联机时，执行以下命令之一以下载脱机安装所需的全部文件。 使用 `--layout` 选项是关键，它用于下载脱机安装的实际文件。 将 `<filepath>` 替换为保存文件的实际布局路径。
    1. 对于某种具体语言，请传递区域设置：`vs_sql.exe --layout c:\<filepath> --lang en-us`（一种语言大约为 1GB）。
    1. 对于所有语言，请省略 `--lang` 参数：`vs_sql.exe --layout c:\<filepath>`（所有语言大约为 3.9GB）。
-
-4. 执行 `SSDT-Setup-ENU.exe /layout c:\<filepath>`，将 SSDT 有效负载提取到下载 VS2017 文件的同一 `<filepath>` 位置。 此操作可确保将两者中的所有文件都合并到一个布局文件夹中。
 
 完成上述步骤后，可以脱机  完成以下步骤：
 

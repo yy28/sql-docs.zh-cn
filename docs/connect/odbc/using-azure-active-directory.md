@@ -1,7 +1,7 @@
 ---
 title: 结合使用 Azure Active Directory 和 ODBC 驱动程序 | Microsoft Docs for SQL Server
 ms.custom: ''
-ms.date: 11/08/2018
+ms.date: 03/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: af611e9c59e34030d594ecf6bcd8031fb5b253cb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286421"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79526812"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>结合使用 Azure Active Directory 和 ODBC 驱动程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>目的
 
-版本 13.1 或更高版本的 Microsoft ODBC Driver for SQL Server 允许 ODBC 应用程序通过用户名/密码、Azure Active Directory 访问令牌、Azure Active Directory 托管服务标识或 Windows 集成身份验证（仅限 Windows 驱动程序  ），使用 Azure Active Directory 中的联合身份连接到 SQL Azure 实例。 对于 ODBC 驱动程序版本13.1，Azure Active Directory 访问令牌身份验证仅适用于 Windows  。 ODBC 驱动程序版本 17 和更高版本支持在所有平台（Windows、Linux 和 Mac）上进行此身份验证。 Windows 的 ODBC 驱动程序版本 17.1 中引入了新的使用登录 ID 的 Azure Active Directory 交互式身份验证。 在 ODBC 驱动程序版本 17.3.1.1 中，针对系统分配的标识和用户分配的标识，添加了一种新的 Azure Active Directory 托管服务标识身份验证方法。 所有这些都是通过使用新的 DSN 和连接字符串关键字以及连接属性来实现的。
+版本 13.1 或更高版本的 Microsoft ODBC Driver for SQL Server 允许 ODBC 应用程序通过用户名/密码、Azure Active Directory 访问令牌、Azure Active Directory 托管服务标识或 Windows 集成身份验证（仅限 Windows 驱动程序  ），使用 Azure Active Directory 中的联合身份连接到 SQL Azure 实例。 对于 ODBC 驱动程序版本13.1，Azure Active Directory 访问令牌身份验证仅适用于 Windows  。 ODBC 驱动程序版本 17 和更高版本支持在所有平台（Windows、Linux 和 macOS）上进行此身份验证。 Windows 的 ODBC 驱动程序版本 17.1 中引入了新的使用登录 ID 的 Azure Active Directory 交互式身份验证。 在 ODBC 驱动程序版本 17.3.1.1 中，针对系统分配的标识和用户分配的标识，添加了一种新的 Azure Active Directory 托管服务标识身份验证方法。 所有这些都是通过使用新的 DSN 和连接字符串关键字以及连接属性来实现的。
 
 > [!NOTE]
 > Linux 和 macOS 上的 ODBC 驱动程序仅支持直接对 Azure Active Directory 进行 Azure Active Directory 身份验证。 如果使用的是来自 Linux 或 macOS 客户端的 Azure Active Directory 用户名/密码身份验证，并且 Active Directory 配置要求客户端针对 Active Directory 联合身份验证服务终结点进行身份验证，则身份验证可能会失败。
@@ -110,8 +110,8 @@ SQLDriverConnect 在请求完成连接所需的信息时显示的提示对话框
 对于对象 ID 为 myObjectId 的用户分配的标识，<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
 
-> [!NOTE] 
->- 将新 Active Directory 选项与 Windows ODBC 驱动程序一起使用时，请确保已安装 [SQL Server 的 Active Directory 身份验证库](https://go.microsoft.com/fwlink/?LinkID=513072)。 使用 Linux 和 macOS 驱动程序时，请确保已安装 `libcurl`。 对于驱动程序版本17.2 及更高版本，这不是显式依赖项，因为其他身份验证方法或 ODBC 操作不需要它。
+> [!NOTE]
+>- 将 Active Directory 选项与 Windows ODBC 驱动程序版本 17.4.2之前的版本一起使用时，请确保已安装 [SQL Server 的 Active Directory 身份验证库](https://go.microsoft.com/fwlink/?LinkID=513072)。 使用 Linux 和 macOS 驱动程序时，请确保已安装 `libcurl`。 对于驱动程序版本17.2 及更高版本，这不是显式依赖项，因为其他身份验证方法或 ODBC 操作不需要它。
 >- 若要使用 SQL Server 帐户的用户名和密码进行连接，现在可以使用新的 `SqlPassword` 选项，特别建议对 SQL Azure 使用此选项，因为此选项启用了更安全的连接默认值。
 >- 若要使用 Azure Active Directory 帐户的用户名和密码进行连接，请在连接字符串中指定 `Authentication=ActiveDirectoryPassword`，并分别使用用户名和密码指定 `UID` 和 `PWD` 关键字。
 >- 若要使用 Windows 集成身份验证或 Active Directory 集成（仅限 Windows 驱动程序）身份验证进行连接，请在连接字符串中指定 `Authentication=ActiveDirectoryIntegrated`。 驱动程序将自动选择正确的身份验证模式。 不得指定 `UID` 和 `PWD`。
@@ -141,7 +141,7 @@ typedef struct AccessToken
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);    
     ...
 ~~~
 以下示例显示了使用带有访问令牌身份验证的 Azure Active Directory 连接到 SQL Server 所需的代码。 在这种情况下，需要修改应用程序代码以处理访问令牌并设置关联的连接属性。
@@ -159,7 +159,7 @@ typedef struct AccessToken
     }
     ...
     SQLSetConnectAttr(hDbc, SQL_COPT_SS_ACCESS_TOKEN, (SQLPOINTER)pAccToken, SQL_IS_POINTER);
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);      
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);        
     ...
     free(pAccToken);
 ~~~

@@ -1,5 +1,6 @@
 ---
 title: 自定义报表项体系结构 | Microsoft Docs
+description: 了解自定义报表项体系结构是什么样的扩展，以至可以允许开发人员添加 RDL 本身不支持的功能。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15e81e7cc32e32f0cfc56da2a3ec3bb0983dde6d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 039afae1b8be540869930055e77320c27857e23d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194281"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216956"
 ---
 # <a name="custom-report-item-architecture"></a>自定义报表项体系结构
   自定义报表项是对报表定义语言 (RDL) 的扩展，允许开发人员添加在 RDL 中并不固有支持的功能或扩展现有控件的功能。 有两个用于自定义报表项的主要组件：运行时组件和设计时组件。 这些组件作为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集实现，并且可用任何符合 CLS 的语言编写。  

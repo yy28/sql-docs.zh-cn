@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983034"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486579"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 语句 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -97,7 +97,7 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar(255)**|备份集说明。|  
 |**BackupType**|**smallint**|备份类型：<br /><br /> 1 = 数据库 <br /><br /> 2 = 事务日志 <br /><br /> 4 = 文件 <br /><br /> 5 = 数据库差异 <br /><br /> 6 = 差异文件 <br /><br /> 7 = 部分 <br /><br /> 8 = 差异部分 |  
 |**ExpirationDate**|**datetime**|备份集的过期时间。|  
-|**Compressed**|**BYTE(1)**|是否使用基于软件的压缩对备份集进行压缩：<br /><br /> 0 = 否 <br /><br /> 1 = 是 |  
+|**Compressed**|**BIT(1)**|是否使用基于软件的压缩对备份集进行压缩：<br /><br /> 0 = 否 <br /><br /> 1 = 是 |  
 |**位置**|**smallint**|备份集在卷中的位置（用于 FILE = 选项）。|  
 |**DeviceType**|**tinyint**|与用于备份操作的设备对应的编号：<br /><br /> 磁盘：<br /><br /> 2 = 逻辑 <br /><br /> 102 = 物理 <br /><br /> 磁带：<br /><br /> 5 = 逻辑 <br /><br /> 105 = 物理 <br /><br /> 虚拟设备：<br /><br /> 7 = 逻辑 <br /><br /> 107 = 物理 <br /><br /> 逻辑设备名称和设备号在 sys.backup_devices 中；有关详细信息，请参阅 [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)  。|  
 |**UserName**|**nvarchar(128)**|执行备份操作的用户名。|  

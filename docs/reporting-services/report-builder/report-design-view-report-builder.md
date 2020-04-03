@@ -1,5 +1,6 @@
 ---
 title: 报表设计视图（报表生成器）| Microsoft Docs
+description: 本文介绍报表生成器窗口中用于添加、选择和组织报表资源以及更改报表项属性的控件。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca82e7fa0a302c4156c56c2e5ff66ad0cc49da99
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190035"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290869"
 ---
 # <a name="report-design-view-report-builder"></a>报表设计视图（报表生成器）
   报表生成器窗口旨在帮助轻松组织报表资源并快速生成所需分页报表。 设计图面位于窗口中心，周围是功能区和窗格。 设计图面用于添加和组织报表项。 本文说明用于添加、选择和组织报表资源，以及更改报表项属性的窗格。  
@@ -47,13 +48,13 @@ ms.locfileid: "74190035"
   
 8.  当前报表状态栏  
   
-##  <a name="Ribbon"></a> “参数”窗格  
+##  <a name="parameters-pane"></a><a name="Ribbon"></a> “参数”窗格  
  通过报表参数，可以控制报表数据、将相关报表连接在一起以及更改报表显示。 “参数”窗格中为报表参数提供灵活的布局。  
   
  阅读有关 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
-##  <a name="RptDesignSurface"></a> 报表设计图面  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> 报表设计图面  
  报表生成器的报表设计图面是用于设计报表的主工作区。 若要将报表项（如数据区域、子报表、文本框、图像、矩形和线条）放入报表中，请从功能区或报表部件库将它们添加到设计图面。 在设计图面中，您可以向报表项添加组、表达式、参数、筛选器、操作、可见性和格式设置。  
   
  还可以更改以下项：  
@@ -75,7 +76,7 @@ ms.locfileid: "74190035"
 >  若要显示标尺，请在“视图”  选项卡上，选中“标尺”  复选框。  
   
   
-##  <a name="ReptDataPane"></a> The Report Data Pane  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a> The Report Data Pane  
  在“报表数据”窗格中，在设计报表布局前可以定义报表所需的报表数据和报表资源。 例如，您可以向“报表数据”窗格中添加数据源、数据集、计算字段、报表参数和图像。  
   
  在将项添加到“报表数据”窗格中后，将字段拖到报表设计图面上的报表项，就可以控制数据在报表中的显示位置。  
@@ -105,7 +106,7 @@ ms.locfileid: "74190035"
 -   [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a> 报表部件库  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a> 报表部件库  
  创建报表的最简单方式是在该报表服务器或集成到 SharePoint 站点的报表服务器上查找现有报表部件（如表或图表）。  
   
  单击“插入”选项卡上的“报表部件”打开报表部件库  。 可以在曲终搜索要添加到报表中的报表部件。 可以按照报表部件的全名或部分名称、创建者、最后修改者、最后修改时间、存储位置以及报表部件的类型，对报表部件进行筛选。 例如，您可以搜索由您的同事之一在上周创建的所有图表。  
@@ -116,7 +117,7 @@ ms.locfileid: "74190035"
  您可以采用缩略图或列表的形式查看搜索结果，并且可以按名称、创建日期和修改日期以及创建者对搜索结果进行排序。 有关详细信息，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
   
-##  <a name="PropertiesPane"></a> “属性”窗格（报表生成器）  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> “属性”窗格（报表生成器）  
  报表中的每一项（包括数据区域、图像、文本框和表体本身）都有相关联的属性。 例如，文本框的 BorderColor 属性指示文本框的边框颜色值，报表的 PageSize 属性指示报表的页大小。  
   
  这些属性显示在“属性”窗格中。 该窗格中的属性会根据所选择的报表项发生变化。  
@@ -142,7 +143,7 @@ ms.locfileid: "74190035"
  “属性”窗格的顶部有三个按钮：“类别”、“按字母顺序排序”和“属性页”。 单击“按分类顺序”和“按字母顺序”按钮可在“属性”窗格视图之间切换。 单击 **“属性页”** 按钮可打开所选报表项的属性对话框。  
   
   
-##  <a name="GroupPane"></a> “分组”窗格 (Report Builder)  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> “分组”窗格 (Report Builder)  
  使用组可以将报表数据组织成可视层次结构，也可以计算总计。 可以在设计图面上或“分组”窗格中查看数据区域内的行组和列组。 “分组”窗格有两个窗格：“行组”和“列组”。 在你选择数据区域后，“分组”窗格会将此数据区域内的所有组显示为一个层次结构列表：子组以缩进的方式显示在其父组下方。  
   
  ![报表生成器行组](../../reporting-services/report-builder/media/ssrb-rowgroups.png "报表生成器行组")  
@@ -154,7 +155,7 @@ ms.locfileid: "74190035"
  有关详细信息，请参阅[“分组”窗格（报表生成器）](../../reporting-services/report-design/grouping-pane-report-builder.md)和[了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
   
-##  <a name="RunMode"></a> 在运行模式下预览报表  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> 在运行模式下预览报表  
  在报表设计视图中，您没有使用实际数据，而是使用由字段名称或表达式表示的数据表示形式。 如果要查看在您所设计的报表上下文中显示的实际数据，可以运行该报表以预览报表布局中显示的基础数据库中的数据。 通过在报表的设计和运行之间切换，您可以调整报表的设计并立即查看结果。 若要预览报表，请单击功能区上 **“视图”** 组中的 **“运行”** group on the ribbon.  
   
  单击 **“运行”** 时，报表生成器将连接到报表数据源、在您的计算机上缓存数据、组合数据和布局，然后在 HTML 查看器中呈现报表。 在继续设计报表时可以任意多次运行报表。 对报表满意后，可以将报表保存到报表服务器，在该服务器上具有相应权限的其他人可以查看该报表。  

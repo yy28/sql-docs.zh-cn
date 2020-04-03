@@ -1,5 +1,6 @@
 ---
 title: 配置报表的执行属性 - Reporting Services | Microsoft Docs
+description: 了解如何设置报表处理选项以指定何时检索报表数据，以避免每次请求报表时检索相同数据的开销。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5f30c3e123c80b9a16fd020e3126a3c40f366834
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67492755"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510168"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>配置报表的执行属性
   可以设置报表处理选项以指定何时为报表检索数据。 如果外部数据源按照特定的时间刷新（例如，每天或每周刷新数据仓库），并且您想要避免每当请求报表时对同一数据进行检索的开销，则为报表计划数据处理非常有用。 如果您想要控制外部数据库服务器上的处理负载，或者如果想要为必须使用相同数据集的多个用户提供一致的结果，则计划数据处理也很有用。 使用可变数据的按需运行报表每分钟都会生成不同的结果。 相反，报表快照则可用来针对包含同一时间点数据的其他报表或分析工具进行有效比较。  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 中扩展事件的目标
+description: 本文介绍 SQL Server 中扩展事件的 package0 目标。 了解有关收集和报告数据及目标参数的目标功能。
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba516e2e58a19ffdd5d225f3bc0a8c495c0432bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75501981"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487515"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标
 
@@ -34,7 +35,7 @@ ms.locfileid: "75501981"
 [Ring_buffer 部分](#h2_target_ring_buffer) 包括举例说明如何使用 [Transact-SQL 中的 XQuery](../../xquery/xquery-language-reference-sql-server.md) 将 XML 的字符串复制到关系行集。
 
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>先决条件
 
 
 - 需要对扩展事件的基础知识有一般性的了解，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)。

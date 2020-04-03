@@ -1,5 +1,6 @@
 ---
 title: 隐藏项（报表生成器）| Microsoft Docs
+description: 在报表生成器中，可以设置报表项的可见性。 你可以指定报表参数或其他表达式以有条件地隐藏项。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00d0544c6580e54f34b16bcce9dac2ce8604efdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dab0377e1f558c48be751b523c7129feefb18e66
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079048"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342789"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隐藏项（报表生成器和 SSRS）
   如果希望基于报表参数或指定的某个其他表达式来有条件地隐藏项，则可以设置报表项的可见性。  

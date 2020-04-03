@@ -1,5 +1,6 @@
 ---
 title: 避开 Excel 2003 行限制 | Microsoft Docs
+description: 将分页报表导出到 Excel 时，可以通过强制在一定数量的行后进行分页符换行，避免 Excel 2003 的行限制。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 940f5fd22d35ac0a90106c7a325e435e1d479bc4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577785"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290728"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   本主题介绍在将分页报表导出到 Excel 时，如何避开 Excel 2003 的行限制。 本解决方法适用于只包含表的报表。  

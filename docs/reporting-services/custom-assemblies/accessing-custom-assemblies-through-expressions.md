@@ -1,5 +1,6 @@
 ---
 title: 通过表达式访问自定义程序集 | Microsoft Docs
+description: 创建自定义程序集后，学习如何使用报表表达式访问自定义程序集中的类。
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 101af9d59d4a3f1e48d85859c91f77c8be2e4719
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e77b3df959230b7ecb8bb20874d61e9191074285
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194370"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217036"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>通过表达式访问自定义程序集
   在创建自定义程序集、使其可用于报表设计器或报表服务器、添加适当的安全策略以及在报表定义中添加对自定义程序集的引用之后，您就可以使用报表表达式访问程序集中类的成员。 若要在表达式中引用自定义代码，您必须调用程序集中某个类的成员。 调用方式取决于该方法是静态方法还是基于实例的方法。  

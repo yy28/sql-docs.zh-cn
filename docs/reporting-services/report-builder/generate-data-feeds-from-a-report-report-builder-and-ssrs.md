@@ -1,5 +1,6 @@
 ---
 title: 基于报表生成数据馈送（报表生成器）| Microsoft Docs
+description: 你可以从分页报表生成符合 Atom 的数据馈送。 在可使用数据馈送的应用程序（如 Power Pivot 或 Power BI）中使用馈送。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 177dbefd38e00d70a58b283bdeb52d2aa80abf97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6eedf7ae96f41a75a8690162de01473d7e2e5664
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079204"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342795"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>从报表生成数据馈送（报表生成器和 SSRS）
 

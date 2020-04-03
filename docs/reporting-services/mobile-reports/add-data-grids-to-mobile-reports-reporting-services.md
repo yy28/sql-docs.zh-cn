@@ -1,5 +1,6 @@
 ---
 title: 向移动报表添加数据网格 | Reporting Services | Microsoft Docs
+description: 可以在 SQL Server 移动报表发布服务器的网格中显示数据。 选择简单的数据网格、指示器数据网格或图表数据网格。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280465"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448319"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>向移动报表添加数据网格 | Reporting Services
 有时最佳可视化对象是数据本身。 了解用于在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中显示数据的三种数据网格（或表）  ：

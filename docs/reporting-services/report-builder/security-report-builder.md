@@ -1,5 +1,6 @@
 ---
 title: 安全性（报表生成器）| Microsoft Docs
+description: 报表生成器安全功能与发布位置、发布的报表、基于它们的外部数据源和模型以及交互式功能相关。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d2c4c195b0d21d2090e13eff578cc533871da4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190100"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290837"
 ---
 # <a name="security-report-builder"></a>安全性（报表生成器）
   报表生成器是一类设计用来与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器配合使用的报表创作客户端应用程序。 可以将报表服务器配置为在本机模式中作为独立服务器运行，也可以将报表服务器配置为在 SharePoint 集成模式中运行以支持 SharePoint 站点上的报表。  
@@ -34,7 +35,7 @@ ms.locfileid: "74190100"
   
  查看本主题中的信息，更好地了解如何使用安全性功能来帮助管理和保护报表以及与报表相关的项。  
   
-##  <a name="ReportServers"></a> 了解报表服务器的安全性  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> 了解报表服务器的安全性  
  发布报表和查看报表是需要特权的操作。 报表服务器管理员授予权限以确保只有得到授权的用户才能在下列某个类型的报表服务器上发布和查看报表：  
   
 -   在本机模式中配置的报表服务器  
@@ -54,7 +55,7 @@ ms.locfileid: "74190100"
      如果您无法连接到或浏览到 SharePoint 站点或子站点，请与 SharePoint 站点管理员联系。  
   
   
-##  <a name="Reports"></a> 了解已发布的报表以及与报表相关的项的安全性  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> 了解已发布的报表以及与报表相关的项的安全性  
  报表以及与报表相关的项的安全性由报表服务器管理员管理。 与报表相关的项包括嵌入数据源和共享数据源（包括凭据、共享数据集、参数、报表部件和模型）。  
   
  在报表服务器或 SharePoint 站点上，可以单独保护报表以及与报表相关的项和操作。 通过安全策略来授予项和操作的访问权限，这些策略可映射拥有与项相关的某个权限级别的用户帐户或组帐户。 为了降低维护大量策略所带来的复杂性和管理负担，容器（如文件夹）的权限由容器中的项来继承。 例如，如果用户具有某个文件夹的特定“查看报表”权限，则用户具有该文件夹中的项的“查看报表”权限。  
@@ -81,7 +82,7 @@ ms.locfileid: "74190100"
  有关详细信息，请参阅 [报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Data"></a> 了解报表数据和外部数据源的安全性  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> 了解报表数据和外部数据源的安全性  
  若要在报表中访问来自每个外部数据源的数据，请在报表中创建嵌入数据源或添加对共享数据源或共享数据集的引用。  
   
  对于每个外部数据源，您必须提供足以用来访问源和基础数据的凭据。 数据源所有者将指定用于提供此访问的凭据的类型。  
@@ -96,13 +97,13 @@ ms.locfileid: "74190100"
  有关数据源的详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Models"></a> 了解模型和安全筛选器  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> 了解模型和安全筛选器  
  在从基于外部数据的报表模型中检索数据时，可以在该模型中应用安全筛选器。这是保护数据的好方法，使每个运行报表的用户只能看到其有权使用的数据。  
   
  报表参数不能提供行级安全性；它们并不防止用户或用户组查看特定的数据行。 若要对报表中显示的数据应用安全性，必须使用安全筛选器或模型项安全性。  
   
   
-##  <a name="Interactive"></a> 了解为报表创作交互式功能的安全性  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> 了解为报表创作交互式功能的安全性  
  报表经常会使用参数，使用户能够以交互方式自定义其报表视图。 使用以下提示可帮助设计遵循良好实践的报表：  
   
 -   除非您提供了有效的值，否则不要使用基于查询参数且类型为 **Text** 的参数。 可用值列表可帮助用户只选择有效值。 如果不使用可用值列表，则无法限制用户可输入的值。  

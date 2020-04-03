@@ -1,5 +1,6 @@
 ---
 title: 向 Reporting Services 移动报表添加可视化效果 | Microsoft Docs
+description: 了解 Reporting Services 移动报表中可以使用的三种基本图表类型：时间、类别和总计，以及它们相应的比较图表。
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316618"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447989"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>向 Reporting Services 移动报表添加可视化效果
 图表是数据可视化效果必不可少的一部分。 了解可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表中使用的图表，这些图表可涵盖一系列方案。 

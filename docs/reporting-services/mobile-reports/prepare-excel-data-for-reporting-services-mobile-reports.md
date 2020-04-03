@@ -1,5 +1,6 @@
 ---
 title: 为 Reporting Services 移动报表准备 Excel 数据 | Microsoft Docs
+description: Reporting Services 移动报表可以使用来自 Excel 文件的数据。 按照以下提示准备 Excel 文件和工作表，以便轻松导入。
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62499937"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448377"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>为 Reporting Services 移动报表准备 Excel 数据
   

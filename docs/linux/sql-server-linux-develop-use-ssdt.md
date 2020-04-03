@@ -1,6 +1,6 @@
 ---
 title: 开发和部署 Linux 上的 SQL Server 数据库 | Microsoft Docs
-description: ''
+description: 使用 Visual Studio 的 SQL Server 数据工具是一个强大的开发环境和数据库生命周期管理环境，适用于 Linux 上的 SQL Server。
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: 0a7c16f508621297e39df5cd47bde891b7d8a140
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50f6e9a2b3292cb94f335092ef590ba6fb9ea422
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73033022"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216798"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
 

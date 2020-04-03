@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258787"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434124"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升级到 SQL Server 的其他版本（安装程序）
 
@@ -29,9 +29,9 @@ ms.locfileid: "75258787"
 - [安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **故障转移群集实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的一个节点上运行版本升级就足够了。 此节点可以是主动节点或被动节点，并且在版本升级过程中引擎不会使资源脱机。 版本升级后需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或故障转移到其他节点。  
+> 故障转移群集实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的其中某个节点上运行版本升级就足够了。 此节点可以是主动节点或被动节点，并且在版本升级过程中引擎不会使资源脱机。 版本升级后需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或故障转移到其他节点。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "75258787"
   
 ## <a name="procedure"></a>过程  
   
-### <a name="to-upgrade-to-a-different-edition-of-includessnoversionincludesssnoversion-mdmd"></a>升级到 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 的另一版本  
+### <a name="to-upgrade-to-a-different-edition-of-ssnoversion"></a>升级到 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 的另一版本  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 在根文件夹中，双击 setup.exe 或者从配置工具中启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。  
   
@@ -78,7 +78,15 @@ ms.locfileid: "75258787"
 -   升级之后，tempdb 和 model 系统数据库的大小和恢复模式保持不变。 可以根据需要重新配置这些设置。 有关详细信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   
 -   升级之后，模板数据库保留在计算机上。  
-  
+
+> [!NOTE]  
+> 如果过程在 Engine_SqlEngineHealthCheck 规则上失败，则可以使用命令行安装选项跳过此特定规则，以允许升级过程成功完成。 若要跳过检查此规则，请打开命令提示符，更改为包含 SQL Server 安装程序 (Setup.exe) 的路径。 然后，键入以下命令： 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## <a name="see-also"></a>另请参阅  
  [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [向后兼容性_已删除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

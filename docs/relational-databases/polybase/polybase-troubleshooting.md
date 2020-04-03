@@ -1,5 +1,6 @@
 ---
 title: PolyBase 的监视和故障排除 | Microsoft Docs
+description: 若要对 PolyBase 进行故障排除，请使用这些视图和 DMV。 查看 PolyBase 查询计划，监视 PolyBase 组中的节点，并设置 Hadoop 名称节点高可用性。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -14,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 171527b02674a5a02420f5cb002fddd7e7f31ac6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909627"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216047"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 的监视和故障排除
 

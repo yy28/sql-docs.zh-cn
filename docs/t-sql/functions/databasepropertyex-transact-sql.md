@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9384317f0e58e77a6bb51fe066458dcf956882ed
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75256099"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448306"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]检测到因电力故障或其他系统故障造成的不完全 I/O 操作。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int | 
 |IsVerifiedClone|数据库是使用 DBCC CLONEDATABASE 的 WITH VERIFY_CLONEDB 选项创建的用户数据库的仅限架构和仅限统计信息副本。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/3177838)。|**适用对象**：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int | 
 |IsXTPSupported|指示数据库是否支持内存中 OLTP，即创建和使用内存优化表和本机编译模块。<br /><br /> 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 与任何 MEMORY_OPTIMIZED_DATA 文件组的存在与否无关，创建内存中 OLTP 对象则需要该文件组。|**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本），以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效，出现错误或不适用<br /><br /> 基本数据类型：int |  
-|LastGoodCheckDbTime|在指定数据库上运行的上一成功 DBCC CHECKDB 的日期和时间。<sup>1</sup> 如果 DBCC CHECKDB 未在数据库上运行，则返回 1900-01-01 00:00:00.000。|**适用对象**：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始。<br /><br /> 日期时间值。<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：datetime | 
+|LastGoodCheckDbTime|在指定数据库上运行的上一成功 DBCC CHECKDB 的日期和时间。<sup>1</sup> 如果 DBCC CHECKDB 未在数据库上运行，则返回 1900-01-01 00:00:00.000。|适用于：从 SP2 开始的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  。</br>从 CU9 开始的 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]。</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 或更高版本。</br>Azure SQL 数据库。<br/><br/>日期时间值。<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：datetime | 
 |LCID|排序规则的 Windows 区域设置标识符 (LCID)。|LCID 值（十进制格式）。<br /><br /> 基本数据类型：int |  
 |MaxSizeInBytes|最大数据库大小（以字节为单位）。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL：数据库未启动<br /><br /> 基本数据类型：bigint |  
 |恢复|数据库恢复模式|FULL：完整恢复模式<br /><br /> BULK_LOGGED：大容量日志模型<br /><br /> SIMPLE：简单恢复模式<br /><br /> 基本数据类型：nvarchar(128) |  

@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fe202e213f200dcf98a7f0479c29451d36b8a8f
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 57639c3705f38396fdc3ebf5dd65b34c145c324d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77255971"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526792"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -59,7 +59,7 @@ CREATE LOGIN 参与事务。 如果在事务内执行 CREATE LOGIN 并且该事�
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
@@ -243,6 +243,18 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
 ```
 
+### <a name="g-creating-a-login-with-multiple-arguments"></a>G. 创建具有多个参数的登录名
+
+下面的示例演示如何在每个参数之间使用逗号将多个参数串在一起。
+
+```sql
+CREATE LOGIN [MyUser]
+WITH PASSWORD = 'MyPassword',
+DEFAULT_DATABASE = MyDatabase,
+CHECK_POLICY = OFF,
+CHECK_EXPIRATION = OFF ;
+```
+
 ## <a name="see-also"></a>另请参阅
 
 - [数据库引擎权限入门](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
@@ -266,7 +278,7 @@ GO
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 CREATE LOGIN login_name
  { WITH <option_list> }
@@ -278,7 +290,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>参数
 
-login_name  指定创建的登录名。 Azure SQL 数据库单一数据库/弹性池仅支持 SQL 登录名。 若要为 Azure Active Directory 用户创建帐户，请使用 [CREATE USER](create-user-transact-sql.md) 语句。
+login_name  指定创建的登录名。 Azure SQL 数据库中的单个数据库和共用数据库以及 Azure Synapse Analytics（以前的 Azure SQL 数据仓库）中的数据库仅支持 SQL 登录名。 若要为 Azure Active Directory 用户创建帐户或创建未与登录关联的用户帐户，请使用 [CREATE USER](create-user-transact-sql.md) 语句。 有关详细信息，请参阅[在 Azure SQL 数据库中管理登录名](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
 
 PASSWORD ='  password*'  指定正在创建的 SQL 登录名的密码。 请使用强密码。 有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)和[密码策略](../../relational-databases/security/password-policy.md)。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。
 
@@ -289,10 +301,10 @@ SID = sid  用于重新创建登录名。 仅适用于 SQL Server 身份验证�
 ## <a name="remarks"></a>备注
 
 - 密码是区分大小写的。
-- 有关用于传输登录名的脚本，请参阅[如何在 SQL Server 2005 和 SQL Server 2008 的实例之间传输登录名和密码](https://support.microsoft.com/kb/918992)。
 - 自动创建登录名将启用新的登录名，并授予它服务器级 CONNECT SQL 权限  。
-- 服务器的[身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)必须匹配登录名类型才能允许访问。
-- 有关设计权限系统的信息，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
+
+> [!IMPORTANT]
+> 有关在 Azure SQL 数据库中使用登录名和用户的信息，请参阅[在 Azure SQL 数据库中管理登录名](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
 
 ## <a name="login"></a>登录
 
@@ -302,31 +314,15 @@ CREATE LOGIN 语句必须是批中的唯一语句  。
 
 在连接到 SQL 数据库的一些方法（如 sqlcmd）中，必须使用 \<login>@\<server> 符号将 SQL 数据库服务器名称追加到连接字符串中的登录名之后    。 例如，如果登录为 `login1`，SQL 数据库服务器的完全限定名称是 `servername.database.windows.net`，则连接字符串的 username 参数应是 `login1@servername`  。 由于 username 参数的总长度为 128 个字符，因此，login_name 被限定为 127 个字符减去服务器名称的长度   。 在示例中，`login_name` 只能包含 117 个字符，因为 `servername` 包含 10 个字符。
 
-在 SQL 数据库中，必须连接到 master 数据库才能创建登录。
+在 SQL 数据库中，必须使用适当的权限连接到 master 数据库才能创建登录。 有关详细信息，请参阅[创建其他登录名和具有管理权限的用户](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions)。
 
 SQL Server 规则允许你创建 \<loginname>@\<servername> 格式的 SQL Server 身份验证登录。 如果你的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]服务器是 myazureserver 并且登录名是 myemail@live.com，则必须提供 myemail@live.com@myazureserver 格式的登录名    。
 
 在 SQL 数据库中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录表，请执行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-有关 SQL 数据库登录的详细信息，请参阅[管理 Azure SQL 数据库中的数据库和登录](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
-
 ## <a name="permissions"></a>权限
 
-只有服务器级别主体登录（由预配过程创建）或 master 数据库中的 `loginmanager` 数据库角色成员可以创建新的登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
-
-## <a name="logins"></a>登录名
-
-- 必须具有对服务器的 ALTER ANY LOGIN 权限或 securityadmin 固定服务器角色的成员身份   。 只有具有针对服务器的 ALTER ANY LOGIN 权限或 securityadmin 权限的成员身份的 Azure Active Directory (Azure AD) 帐户可以执行此命令 
-- 必须是用于 Azure SQL 数据库服务器的同一目录中的 Azure AD 成员
-
-## <a name="after-creating-a-login"></a>创建登录后
-
-创建登录后，该登录可以连接到 SQL 数据库，但是只具有授予 public 角色的权限  。 考虑执行以下部分活动。
-
-- 要连接到数据库，请在该数据库中创建登录对应的数据库用户。 有关详细信息，请参阅 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
-- 若要向数据库中的用户授予权限，请使用 ALTER SERVER ROLE ...  ADD MEMBER 语句将用户添加到其中一个内置数据库角色或自定义角色中，或者使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 语句直接向用户授予权限  。 有关详细信息，请参阅[非管理员角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[其他服务器级管理角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 语句。
-- 若要授予服务器范围内的权限，请在 master 数据库中创建数据库用户，并使用 ALTER SERVER ROLE ...  ADD MEMBER  语句将用户添加到其中一个管理服务器角色。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和[服务器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
-- 使用 GRANT 语句将服务器级别权限授予新的登录名或包含该登录名的角色  。 有关详细信息，请参阅 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
+只有服务器级别主体登录（由预配过程创建）或 master 数据库中的 `loginmanager` 数据库角色成员可以创建新的登录。 有关详细信息，请参阅[创建其他登录名和具有管理权限的用户](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions)。
 
 ## <a name="examples"></a>示例
 
@@ -386,7 +382,7 @@ GO
 
 ## <a name="syntax"></a>语法
 
-```sql
+```syntaxsql
 -- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
@@ -424,6 +420,9 @@ SID **=** *sid* 用于重新创建登录名。 仅适用于 SQL Server 身份验
 - Azure AD 登录名会在 sys.server_principals 中显示，同时，对于映射到 Azure AD 用户的登录名，类型列值设置为“E”，type_desc 设置为“EXTERNAL_LOGIN”；对于映射到 Azure AD 组的登录名，类型列值设置为“X”，type_desc 设置为“EXTERNAL_GROUP”     。
 - 有关用于传输登录名的脚本，请参阅[如何在 SQL Server 2005 和 SQL Server 2008 的实例之间传输登录名和密码](https://support.microsoft.com/kb/918992)。
 - 自动创建登录名将启用新的登录名，并授予它服务器级 CONNECT SQL 权限  。
+
+> [!IMPORTANT]
+> 有关在 Azure SQL 数据库中使用登录名和用户的信息，请参阅[在 Azure SQL 数据库中管理登录名](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
 
 ## <a name="logins-and-permissions"></a>登录名和权限
 
@@ -562,7 +561,7 @@ GO
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse Analytics
 CREATE LOGIN login_name
  { WITH <option_list> }
@@ -676,7 +675,7 @@ GO
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 

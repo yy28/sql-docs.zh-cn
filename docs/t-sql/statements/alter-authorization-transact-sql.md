@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 01fc7ed0e32df7c5c3465f85b5358c2c359fc767
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982883"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215908"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -191,7 +191,7 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE 或 ASYMMETRIC KEY|无法将这些实体的所有权转移给角色或组。|    
 |ENDPOINT|主体必须为登录名。|    
   
-## <a name="AlterDB"></a>对数据库执行 ALTER AUTHORIZATION  
+## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a>对数据库执行 ALTER AUTHORIZATION  
 **适用范围**：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>对于 SQL Server：  
 **对新所有者的要求：**    

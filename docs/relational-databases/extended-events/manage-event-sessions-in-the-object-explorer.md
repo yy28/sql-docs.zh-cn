@@ -1,5 +1,6 @@
 ---
 title: 在对象资源管理器中管理事件会话
+description: 可以在对象资源管理器中执行影响扩展事件的操作，例如创建、启动或停止、导出、导入、编辑或删除扩展事件会话。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234534"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434084"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在对象资源管理器中管理事件会话
 
@@ -99,7 +100,7 @@ STATE = STOP
   
 4.  展开 **“模板”** 下拉框。  
   
-5.  单击“**文件位置 …>打开”并通过浏览找到要导入的会话（XML 文件）\<** 。  
+5.  单击“\<文件位置 …>打开”并通过浏览找到要导入的会话（XML 文件）  。  
   
  会话将出现在 **“会话”** 节点下。 默认情况下，不会启动会话。  
   
@@ -116,7 +117,7 @@ STATE = STOP
   
 4.  在完成对事件会话的修改后，单击 **“确定”** 。  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  “新建会话向导”和“新建会话”对话框都包含一个可用于生成定义扩展事件会话的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的“脚本”选项。  
   
  可以通过以下方法访问现有扩展事件会话的 [!INCLUDE[tsql](../../includes/tsql-md.md)] ：右键单击该会话名称，选择 **“编写会话脚本为”** ，然后再选择 **“CREATE 到”** 。  

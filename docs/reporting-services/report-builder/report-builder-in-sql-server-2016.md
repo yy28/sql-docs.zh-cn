@@ -1,5 +1,6 @@
 ---
 title: SQL Server 中的报表生成器 | Microsoft Docs
+description: 报表生成器是用于编写分页报表的工具。 若要创建报表，请指定要检索的数据、从何处获取数据以及如何显示数据。
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67688517"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290898"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 中的报表生成器
 
@@ -30,7 +31,7 @@ ms.locfileid: "67688517"
   
  此分页报表包含一个矩阵，该矩阵具有行组和列组、迷你图、指示器，以及角单元中的摘要饼图，还附带一个地图，该地图具有以颜色和圆圈大小表示的两组地理数据。  
   
-##  <a name="JumpStartReptCreation"></a> 快速开始报表创建  
+##  <a name="jump-start-report-creation"></a><a name="JumpStartReptCreation"></a> 快速开始报表创建  
   
 -   **从共享数据集开始**。 共享数据集是基于共享数据源的查询，这些数据集在本机模式或 SharePoint 集成模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上保存。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67688517"
   
 -   **使用报表部件开始创建报表**。 报表部件是已单独发布到本机模式或 SharePoint 集成模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的报表项。 报表部件可以在其他报表中重用。 表、矩阵、图表和图像等报表项可以作为报表部件发布。  
   
-##  <a name="DesignRept"></a> 设计报表  
+##  <a name="design-your-report"></a><a name="DesignRept"></a> 设计报表  
   
 -   **创建具有表、矩阵、图表或自由格式报表布局的分页报表。** 为基于列的数据创建表报表，为汇总数据创建矩阵报表（如交叉表或数据透视表），为图形数据创建图表报表，为任何其他类型的数据创建自由格式报表。 报表可以与基于 Web 的动态应用程序的列表、图形和控件一同嵌入其他报表和图表。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "67688517"
   
 -   **嵌入或引用图像** 以及其他资源，包括外部内容。  
   
-##  <a name="ManageRpt"></a> 管理报表  
+##  <a name="manage-your-report"></a><a name="ManageRpt"></a> 管理报表  
   
 -   **将报表的定义保存到** 计算机或报表服务器，您可以在其中管理报表定义，还可以与他人共享。  
   

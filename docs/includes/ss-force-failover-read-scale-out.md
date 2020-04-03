@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "70963562"
+ms.locfileid: "80407984"
 ---
 每个可用性组仅有一个主要副本。 主要副本允许读取和写入操作。 若要更改哪个副本为主要副本，可进行故障转移。 在高可用性的可用性组中，群集管理器自动执行故障转移过程。 在群集类型为 NONE 的可用性组中，需手动执行故障转移过程。 
 
@@ -68,7 +68,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 3. 将 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 更新为 1。
 
-   以下脚本在名为 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 的可用性组上将 `ag1` 设置为 1。 运行以下脚本前，将 `ag1` 替换为可用性组的名称：
+   以下脚本在名为 `ag1` 的可用性组上将 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 设置为 1。 运行以下脚本前，将 `ag1` 替换为可用性组的名称：
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -76,19 +76,26 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ```
 
    此设置可确保将每个活动事务提交到主要副本和至少一个同步次要副本。 
-
-4. 将主要副本降级为次要副本。 将主要副本降级后，该副本为只读。 若要将角色更新为 `SECONDARY`，在托管主要副本的 SQL Server 实例上运行以下命令：
-
+   >[!NOTE]
+   >此设置并非特定于故障转移，应根据环境要求进行设置。
+   
+4. 使主要副本脱机以为角色更改做准备。
    ```SQL
-   ALTER AVAILABILITY GROUP [ag1] 
-        SET (ROLE = SECONDARY); 
+   ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
 5. 将目标次要副本升级为主要副本。 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-   ```  
+   ``` 
+
+6. 将旧的主要副本的角色更新为 `SECONDARY`，在托管主要副本的 SQL Server 实例上运行以下命令：
+
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET (ROLE = SECONDARY); 
+   ```
 
    > [!NOTE] 
    > 若要删除可用性组，请使用[删除可用性组](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql)。 对于使用群集类型为 NONE 或 EXTERNAL 创建的可用性组，请对可用性组的所有副本执行该命令。

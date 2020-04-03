@@ -1,5 +1,6 @@
 ---
 title: 设置报表生成器的默认选项 | Microsoft Docs
+description: 本文介绍可在报表生成器中设置的有用默认值。 这些默认值使报表创作更加简单快捷。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,17 +11,17 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577921"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290777"
 ---
 # <a name="set-default-options-for-report-builder"></a>设置报表生成器的默认选项
   在报表生成器中，可以设置大量有用的默认设置，以使报表创作更加容易和快速。  例如，如果你可以设置或更改默认报表服务器，除非另行指定，否则报表生成器会将你的报表自动保存到同一报表服务器。  
   
--   在报表生成器中，单击“文件” **“选项”**  >   。  
+-   在报表生成器中，单击“文件” > “选项”   。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **默认使用此报表服务器或 SharePoint 站点**  

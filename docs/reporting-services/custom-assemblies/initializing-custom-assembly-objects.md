@@ -1,6 +1,7 @@
 ---
 title: 初始化自定义程序集对象 | Microsoft Docs
 ms.date: 03/03/2017
+description: 了解使用从报表的全局对象集合中提供给你的值来初始化自定义类。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bef8bcf36629b0cb31afef31f4d9a199313f015
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c2f0f85904b4541ed478664f5f39e19cc309cf9a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63193953"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217026"
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自定义程序集对象
-  在某些情况下，您可能需要在实例化自定义程序集类中的属性值和字段值时初始化它们。 您最可能需要使用从报表的全局对象集合中提供给您的值来初始化自定义类。 为此，需要覆盖报表的 Code 对象的 OnInit 方法   。 若要访问 OnInit，请使用报表定义的 Code 元素   。 有两种方法可用于初始化你计划要在报表中使用的自定义程序集中类的属性值或字段值：可以使用 OnInit 声明和创建类的新实例，或者可以使用 OnInit 调用可以公共使用的方法   。  
+  在某些情况下，您可能需要在实例化自定义程序集类中的属性值和字段值时初始化它们。 您最可能需要使用从报表的全局对象集合中提供给您的值来初始化自定义类。 为此，需要覆盖报表的 Code 对象的 OnInit 方法   。 若要访问 OnInit，请使用报表定义的 Code 元素   。 可使用两种方法，在你计划在报表中使用的自定义程序集中初始化类的属性或字段值：可以使用 OnInit 声明和创建类的新实例，也可以使用 OnInit 调用公开可用的方法   。  
   
 ## <a name="global-object-collections-and-initialization"></a>全局对象集合和初始化  
  若干集合可用于初始化您的自定义类变量。 可以使用 Globals 和 User 集合   。 在调用 OnInit 方法时，Parameters、Fields 和 ReportItems 集合在报表生命周期中都不可用     。 若要使用共享集合（Globals 或 User），需要包括 Report 对象引用    。 例如，若要基于访问报表的用户的当前语言初始化自定义类，则 Code 元素可能如下  ：  

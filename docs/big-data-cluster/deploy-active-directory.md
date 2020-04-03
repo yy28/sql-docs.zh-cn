@@ -9,12 +9,12 @@ ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 2bbacb2bdeeb409f08e6e68438535bc0d6671b01
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190585"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79487615"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -77,19 +77,19 @@ BDC 域服务帐户 (DSA) 需要能够在 OU 中创建用户、组和计算机�
 
     ![image15](./media/deploy-active-directory/image15.png)
 
-1. 单击“添加...”并添加 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA 用户  
+1. 单击“添加...”，然后添加“bdcDSA”用户  
 
     ![image16](./media/deploy-active-directory/image16.png)
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. 选择 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA 用户并清除所有权限，然后单击“高级”  
+1. 选择 bdcDSA 用户并清除所有权限，然后单击“高级”  
 
 1. 单击“添加” 
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - 单击“选择主体”，插入 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA，然后单击“确定”  
+    - 单击“选择主体”，插入 bdcDSA，然后单击“确定”  
 
     - 将“类型”设置为“允许”  
 
@@ -113,7 +113,7 @@ BDC 域服务帐户 (DSA) 需要能够在 OU 中创建用户、组和计算机�
 
 - 单击“添加” 
 
-    - 单击“选择主体”，插入 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA，然后单击“确定”  
+    - 单击“选择主体”，插入 bdcDSA，然后单击“确定”  
 
     - 将“类型”设置为“允许”  
 
@@ -127,7 +127,7 @@ BDC 域服务帐户 (DSA) 需要能够在 OU 中创建用户、组和计算机�
 
 - 单击“添加” 
 
-    - 单击“选择主体”，插入 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA，然后单击“确定”  
+    - 单击“选择主体”，插入 bdcDSA，然后单击“确定”  
 
     - 将“类型”设置为“允许”  
 
@@ -166,7 +166,7 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 
 - `security.activeDirectory.ouDistinguishedName`：组织单位 (OU) 的可分辨名称，其中将添加群集部署创建的所有 AD 帐户。 如果域名为 `contoso.local`，则 OU 可分辨名称为：`OU=BDC,DC=contoso,DC=local`。
 
-- `security.activeDirectory.dnsIpAddresses`：域控制器的 IP 地址列表
+- `security.activeDirectory.dnsIpAddresses`：包含域的 DNS 服务器 IP 地址的列表。 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`设置用户帐户 ：域控制器的 FQDN 列表。 FQDN 包含域控制器的计算机/主机名。 如果有多个域控制器，可以在此处提供列表。 示例： `HOSTNAME.CONTOSO.LOCAL`
 
@@ -250,7 +250,7 @@ azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.a
 
 现在，你应该已设置所有所需的参数，用于部署具有 Active Directory 集成的 BDC。
 
-有关如何部署 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 的完整文档，请访问 [官方文档](deployment-guidance.md)。
+现在可以使用 `azdata` 命令和 kubeadm-prod 部署配置文件部署与 Active Directory 集成的 BDC 群集。 有关如何部署 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 的完整文档，请访问[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md)。
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>验证域控制器的反向 DNS 条目
 
@@ -325,3 +325,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - 目前，每个域 (Active Directory) 只能使用一个 BDC。 计划在将来的版本中对每个域启用多个 BDC。
 
 - 无法将安全配置中指定的任何 AD 组的作用域设置为 DomainLocal。 可以按照[这些说明](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)来查看 AD 组的作用域。
+
+- 可用于登录到 BDC 的 AD 帐户允许来自为 BDC 配置的同一域，计划在将来的版本中允许从其他受信任的域登录

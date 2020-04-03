@@ -1,6 +1,6 @@
 ---
 title: 运行 Linux 上的可用性组 SQL Server
-description: ''
+description: 本文介绍如何使用 Linux 上带可用性组的 SQL Server 实例来执行滚动升级。 升级之前，请查看最佳实践。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59e2f6c4321b1ccd90a66dd8e7466a3e0ccb490e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67916043"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216799"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>运行 Linux 上的 Always On 可用性组
 

@@ -1,5 +1,6 @@
 ---
 title: 在自定义程序集中断言权限 | Microsoft Docs
+description: 了解如何断言权限，以便实现对安全系统内的受保护资源进行安全调用的自定义程序集。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dabfe56423a08c6624adc6da322cf442e5a63b7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2b3f4600c4c03fe356f5694f0d9a6cd5bc7afb98
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194322"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217052"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>在自定义程序集中断言权限
   默认情况下，自定义程序集代码以受限的 Execution 权限集运行  。 在某些情况下，您可能想要实现对您的安全系统内的受保护资源（例如文件或注册表）进行安全调用的自定义程序集。 为此，您必须执行以下操作：  

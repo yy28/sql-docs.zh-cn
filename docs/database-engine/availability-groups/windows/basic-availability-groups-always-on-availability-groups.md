@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 71b949178269c2777f5cacd32997d872d36cfc32
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18d02267ee7093e4e79deb5985abb236898dbe84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74685655"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342868"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>单一数据库的基本 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,23 @@ ms.locfileid: "74685655"
  可以在任意两个 SQL Server 2016 Standard Edition 服务器上创建 AlwaysOn 基本可用性组。 当创建基本可用性组时，必须在创建期间指定两个副本。  
   
  若要创建基本可用性组，请使用 **CREATE AVAILABILITY GROUP** transact-SQL 命令并指定“WITH BASIC”  选项（默认值为“ADVANCED”  ）。 从版本 17.8 开始，还可以使用 SQL Server Management Studio 中的 UI 创建基本可用性组。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)。 
+
+请参阅以下有关使用 Transact-SQL (T-SQL) 创建基本可用性组的示例： 
+
+```sql
+CREATE AVAILABILITY GROUP [BasicAG]
+WITH (AUTOMATED_BACKUP_PREFERENCE = PRIMARY,
+BASIC,
+DB_FAILOVER = OFF,
+DTC_SUPPORT = NONE,
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 0)
+FOR DATABASE [AdventureWorks]
+REPLICA ON N'SQLVM1\MSSQLSERVER' WITH (ENDPOINT_URL = N'TCP://SQLVM1.Contoso.com:5022', FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, SEEDING_MODE = AUTOMATIC, SECONDARY_ROLE(ALLOW_CONNECTIONS = NO)),
+    N'SQLVM2\MSSQLSERVER' WITH (ENDPOINT_URL = N'TCP://SQLVM2.Contoso.com:5022', FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, SEEDING_MODE = AUTOMATIC, SECONDARY_ROLE(ALLOW_CONNECTIONS = NO));
+
+GO
+```
+
   
 > [!NOTE]  
 >  在指定“WITH BASIC”  时，基本可用性组的限制适用于 **CREATE AVAILABILITY GROUP** 命令。 例如，如果你尝试创建一个允许读取访问权限的基本可用性组，将收到错误。 其他限制同样适用。 有关详细信息，请参阅本主题的“限制”部分。  

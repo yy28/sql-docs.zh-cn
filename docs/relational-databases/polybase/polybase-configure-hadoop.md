@@ -1,5 +1,6 @@
 ---
 title: 访问外部数据：Hadoop - PolyBase
+description: 本文使用 Hardoop 的 SQL Server 实例上的 PolyBase。 PolyBase 适用于外部表的临时查询和数据导入/导出。
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 27fa4b36df7248ceee2a484d57ab77d28ca50247
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286901"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215853"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
@@ -66,7 +67,7 @@ ms.locfileid: "79286901"
   
    ![在 services.msc 中停止和启动 PolyBase 服务](../../relational-databases/polybase/media/polybase-stop-start.png "在 services.msc 中停止和启动 PolyBase 服务")  
   
-## <a id="pushdown"></a> 启用下推计算  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> 启用下推计算  
 
 若要提高查询性能，请对 Hadoop 群集启用下推计算：  
   

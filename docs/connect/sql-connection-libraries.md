@@ -8,19 +8,19 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/05/2020
 ms.author: JRoth
-ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286401"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434114"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 数据库的连接模块
 
 本文提供了连接模块或驱动程序  的下载链接，客户端程序可以使用这些链接与 [Microsoft SQL Server](../relational-databases/database-features.md) 及其在云中的孪生平台 [Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)进行交互。 驱动程序适用于多种编程语言，在以下操作系统上运行：
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **OOP 与关系不匹配：**
@@ -34,17 +34,6 @@ ms.locfileid: "79286401"
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>用于关系访问的驱动程序
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | 语言 | 下载 SQL 驱动程序 |
 | :------- | :---------------------- |
@@ -76,14 +65,15 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>“生成应用程序”网页
+
 可以通过 [https://aka.ms/sqldev](https://aka.ms/sqldev)  转到一组“生成应用程序”  网页。 网页提供有关编程语言、操作系统和 SQL 连接驱动程序的多种组合的信息。 “生成应用程序”网页提供的信息包括以下各项：
 
 - 有关语言 + 操作系统 + 驱动程序的各组合的入门方式的详细信息。
-    - 安装最新 SQL 连接驱动程序的说明。
+  - 安装最新 SQL 连接驱动程序的说明。
 - 以下各项的代码示例：
-    - 对象关系代码示例。
-    - ORM 代码示例。
-    - 列存储索引演示如何实现更快的性能。
+  - 对象关系代码示例。
+  - ORM 代码示例。
+  - 列存储索引演示如何实现更快的性能。
 
 **“生成应用程序”网页的第一页：**  
 ![“生成应用程序”网页的第一页屏幕截图](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -94,6 +84,7 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 &nbsp;
 
 ## <a name="related-links"></a>相关链接
+
 - [使用 Java 和其他语言连接到云中的 Azure SQL 数据库的代码示例](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)。
 
 <!--

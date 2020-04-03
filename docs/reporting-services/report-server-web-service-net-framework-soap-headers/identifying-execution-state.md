@@ -1,5 +1,6 @@
 ---
 title: 标识执行状态 | Microsoft Docs
+description: 了解如何使用 Reporting Services 来标识执行状态，以便可以通过多种方式与报表进行交互。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0977cc384dac80f28d6b7c5b7a0149ba200f1794
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991595"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215596"
 ---
 # <a name="identifying-execution-state"></a>标识执行状态
   超文本传输协议 (HTTP) 是一个无连接且无状态协议，这意味着它不自动指示不同请求是否来自同一个客户端，甚至也不指示单个浏览器实例是否仍在查看页面或站点。 会话创建逻辑连接，以通过 HTTP 在服务器与客户端之间维护状态。 与特定会话相关的用户特定的信息称为会话状态。  

@@ -21,17 +21,17 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ea01281d77206ceccfe8598efc31d073ceea9391
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906884"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448262"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回由数字数据转换来的字符数据。  
+  返回由数字数据转换来的字符数据。 字符数据右对齐，具有指定长度和十进制精度。 
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## <a name="remarks"></a>备注  
- 如果提供，则 STR 的 length 和 decimal 参数值应该是正数   。 在默认情况下或小数参数为 0 时，数字舍入为整数。 指定的长度应大于或等于小数点前面的部分加上数字符号（如果有）的长度。 短的 float_expression 在指定长度内右对齐，长的 float_expression 则截断为指定的小数位数   。 例如，STR(12,10) 生成结果 12  。 这在结果集中右对齐。 而 STR(1223,2) 则将结果集截断为 **  。 可以嵌套字符串函数。  
+ 如果提供，则 STR 的 length 和 decimal 参数值应该是正数   。 在默认情况下或小数参数为 0 时，数字舍入为整数。 指定的长度应大于或等于小数点前面的部分加上数字符号（如果有）的长度。 短的 float_expression 在指定长度内右对齐，长的 float_expression 则截断为指定的小数位数   。 例如，STR(12,10) 生成结果 12。 这在结果集中右对齐。 而 STR(1223,2) 则将结果集截断为 \*\*。 可以嵌套字符串函数。  
   
 > [!NOTE]  
 >  若要转换为 Unicode 数据，请在 CONVERT 或 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 转换函数内使用 STR。  

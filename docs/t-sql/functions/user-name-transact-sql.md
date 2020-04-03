@@ -24,12 +24,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 21c085bd942b368259444698cabf5dfa44d0fbe1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73844339"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526782"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,6 +53,9 @@ USER_NAME ( [ id ] )
   
 ## <a name="remarks"></a>备注  
  省略 id 时，则假定为当前上下文中的当前用户  。 如果此参数包含词 NULL，将返回 NULL。 如果在 EXECUTE AS 语句之后调用 USER_NAME，但不指定 id，则 USER_NAME 将返回模拟用户的名称  。 如果 Windows 主体通过某组中的成员身份访问数据库，则 USER_NAME 将返回 Windows 主体的名称，而不是该组的名称。  
+ 
+> [!NOTE]
+> 尽管 Azure SQL 数据库支持 USER_NAME，但 Azure SQL 数据库不支持使用 USER_NAME 的 Execute as  。 
   
 ## <a name="examples"></a>示例  
   
@@ -123,7 +126,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-user_name-without-an-id"></a>E. 使用不指定 ID 的 USER_NAME  
  以下示例在不指定 ID 的情况下查找当前用户的名称。  

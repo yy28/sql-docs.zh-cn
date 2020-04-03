@@ -1,5 +1,6 @@
 ---
 title: 将参数添加到移动报表 | Reporting Services | Microsoft Docs
+description: Reporting Services 移动报表可以具有参数，因此报表阅读器可以筛选报表。 此类报表也可以成为钻取的目标。
 ms.date: 07/30/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 348a8c1fa8ccdb4ade5b2ee3d39d6ecacf6e5a03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41895890a5528a1ddac90a4c9f9eea05d80fac93
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63317082"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448291"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>将参数添加到移动报表 | Reporting Services
 可以创建带参数的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表，以便你和你的报表读者可以筛选你的报表。 带参数的报表还可以是[源报表中的钻取](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)的目标。 
@@ -26,7 +27,7 @@ ms.locfileid: "63317082"
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. 在  **的左上角，选择“数据”选项卡**[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]。   
+2. 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 的左上角，选择“数据”选项卡  。   
   
 3. 在右上角选择“添加数据”  。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "63317082"
      
    ![SSMRP_PforParam](../../reporting-services/mobile-reports/media/ssmrp-pforparam.png)  
   
-6. 选择选项卡上的嵌齿，然后选择“Param **”{}** 。  
+6. 选择选项卡上的嵌齿，然后选择“Param {}”  。  
   
    ![SSMRP_ParamWheel](../../reporting-services/mobile-reports/media/ssmrp-paramwheel.png)  
   

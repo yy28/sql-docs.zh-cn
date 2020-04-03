@@ -1,5 +1,6 @@
 ---
 title: 向移动报表添加仪表 | Reporting Services | Microsoft Docs
+description: 你可以向 Reporting Services 移动报表添加仪表。 仪表可以单独显示数据集中的单个值，也可以与目标进行比较。
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280573"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448281"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>向移动报表添加仪表 | Reporting Services
 仪表是移动报表中最基本且使用最广泛的视觉对象。 它们显示数据集中的单个值 - 值本身，或相比于目标的值。
@@ -42,7 +43,7 @@ ms.locfileid: "63280573"
 
 4. [可选] 若要更改聚合，请选择“选项”，然后选择其他聚合  。
    
-   >**注意**：当你更改主值的聚合时，可能还想更改比较值的聚合，但在某些情况下，你可能想要混用聚合方法。  
+   >**注意**：如果更改主值的聚合，可能还需要更改比较值的聚合，尽管在某些情况下，可能需要混用聚合方法。  
 
 ## <a name="filter-a-gauge"></a>筛选仪表
   
@@ -58,7 +59,7 @@ ms.locfileid: "63280573"
   
 除了将仪表元素连接到数据字段的数据属性，还可以自定义多种功能属性和视觉对象属性。 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>设置值方向：值越大越好或值越小越好
+### <a name="set-value-direction-high-or-low-is-better"></a>设置值方向：“越高越好”或“越低越好”
 * 选择仪表，然后在“布局”选项卡的“视觉对象属性”窗格中，将“值方向”设置为“值越大越好”或“值越小越好”      。 
 
 “值越大越好”将正值显示为绿色（表示会有好结果的理想更改），将较小的值显示为红色（表示会有坏结果的不理想更改）  。 

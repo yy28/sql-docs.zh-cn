@@ -1,5 +1,6 @@
 ---
 title: 访问外部数据：MongoDB - PolyBase
+description: 本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 MongoDB 中的外部数据。 创建外部表以引用外部数据。
 ms.date: 12/13/2019
 ms.metadata: seo-lt-2019
 ms.prod: sql
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: aed736096918d121835149f8cbc9ba32399a3e80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255434"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215862"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>配置 PolyBase 以访问 MongoDB 中的外部数据
 
@@ -22,7 +23,7 @@ ms.locfileid: "75255434"
 
 本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 MongoDB 中的外部数据。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。
 

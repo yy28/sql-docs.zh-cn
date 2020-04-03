@@ -1,5 +1,6 @@
 ---
 title: 报表服务器项属性 | Microsoft Docs
+description: 项属性特定于报表服务器数据库中的项。 项包括报表、链接报表、文件夹、资源、模型和数据源。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128828"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509639"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 属性 - 报表服务器项属性
   项属性是特定于报表服务器数据库中的项的属性。 此类属性包括报表、链接报表、文件夹、资源、模型和数据源。  

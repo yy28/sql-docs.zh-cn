@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e67682a25768e80469aa13a027099bacc515f8a7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75259046"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448100"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "75259046"
   
 -   若要创建数据库镜像端点，请使用：  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  服务器实例的身份验证和加密方法由系统管理员建立。  
   
 > [!IMPORTANT]  
 >  不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 CREATE ENDPOINT 权限，或者具有 sysadmin 固定服务器角色的成员身份。 有关详细信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-database-mirroring-endpoint-that-uses-windows-authentication"></a>创建使用 Windows 身份验证的数据库镜像端点  
   
@@ -122,7 +122,7 @@ ms.locfileid: "75259046"
   
     -   \<algorithm>  提供为终结点指定加密标准的选项。 \<algorithm>  的值可以是以下算法或这些算法的组合之一：RC4、AES、AES RC4 或 RC4 AES。  
   
-         AES RC4 指定此端点协商加密算法，但优先使用 AES 算法。 RC4 AES 指定此端点协商加密算法，但优先使用 RC4 算法。 如果两个端点都指定了这两种算法，但顺序不同，则接受连接的端点入选。  
+         AES RC4 指定此端点协商加密算法，但优先使用 AES 算法。 RC4 AES 指定此端点协商加密算法，但优先使用 RC4 算法。 如果两个端点都指定了这两种算法，但顺序不同，则接受连接的端点入选。 显式地提供相同的算法以避免不同服务器之间的连接错误。
   
         > [!NOTE]  
         >  不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
@@ -139,7 +139,7 @@ ms.locfileid: "75259046"
     > [!NOTE]  
     >  若要更改现有的端点，请使用 [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)中使用 Windows 身份验证。  
   
-###  <a name="TsqlExample"></a> 示例：创建终结点以支持数据库镜像 (Transact-SQL)  
+###  <a name="example-creating-endpoints-to-support-for-database-mirroring-transact-sql"></a><a name="TsqlExample"></a> 示例：创建终结点以支持数据库镜像 (Transact-SQL)  
  下面的示例为三个不同的计算机系统上的默认服务器实例创建数据库镜像端点：  
   
 |服务器实例的角色|主机的名称|  
@@ -179,7 +179,7 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置数据库镜像端点**  
   
 -   [为 AlwaysOn 可用性组创建数据库镜像终结点 (SQL Server PowerShell)](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  

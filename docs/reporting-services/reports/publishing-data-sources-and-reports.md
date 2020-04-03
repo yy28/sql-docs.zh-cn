@@ -1,5 +1,6 @@
 ---
 title: 发布数据源和报表 | Microsoft Docs
+description: 了解如何发布数据源和报表，以便对报表服务器或 SharePoint 站点拥有权限的个人可运行该报表。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 93e0c70d19d4f64278603c062e4f59aedd97070b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190462"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510068"
 ---
 # <a name="publishing-data-sources-and-reports"></a>发布数据源和报表
   在发布报表之前，您应预览报表以查看其运行时的外观。 您可以继续改进设计，直到对结果满意为止。  

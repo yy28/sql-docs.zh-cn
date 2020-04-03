@@ -1,5 +1,6 @@
 ---
 title: 创建链接报表 | Microsoft Docs
+description: 了解如何创建链接报表，以便可以创建现有报表的其他版本。
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cb362f699e8bf87e0f386c3ec726869f67aec934
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67492816"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510158"
 ---
 # <a name="create-a-linked-report"></a>创建链接报表
   链接报表是提供对现有报表的访问点的报表服务器项。 从概念上说，它与用于运行程序或打开文件的程序快捷方式类似。  

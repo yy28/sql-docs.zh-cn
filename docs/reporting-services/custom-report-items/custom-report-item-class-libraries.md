@@ -1,5 +1,6 @@
 ---
 title: 自定义报表项类库 | Microsoft Docs
+description: 了解自定义报表项类库，并使用代码示例了解如何使用这些类。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f30b581c67eb161bd0d221b9a4aa341d90ab7148
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194110"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216942"
 ---
 # <a name="custom-report-item-class-libraries"></a>自定义报表项类库
   自定义报表项使用 Microsoft.ReportDesigner 命名空间中的类  。 用于实现自定义报表项的类可分为两个主要类别：旨在支持自定义报表项基础结构的唯一类和用于封装相关报表定义语言 (RDL) 元素功能的托管包装类。 有关如何使用这些类的代码示例，请参阅 [SQL Server Reporting Services Product Samples（SQL Server Reporting Services 产品示例）](https://go.microsoft.com/fwlink/?LinkId=177889)。  
@@ -40,7 +41,7 @@ ms.locfileid: "63194110"
 |CustomProperties |自定义报表项的自定义属性的集合。|  
 |高度 |自定义报表项控件的高度。|  
 |宽度 |自定义报表项控件的宽度。|  
-|**报告**|报表级别属性（如报表中数据集的列表）的容器。|  
+|**Report**|报表级别属性（如报表中数据集的列表）的容器。|  
 |AltReportItem |备用报表项对象，可在不支持自定义报表项运行时控件时使用。|  
 |**样式**|自定义报表项的样式属性。|  
 |修饰 |用于对控件进行交互式编辑的修饰窗口。|  

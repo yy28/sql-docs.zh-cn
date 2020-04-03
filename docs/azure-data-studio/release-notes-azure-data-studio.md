@@ -1,25 +1,40 @@
 ---
 title: 发行说明
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 发行说明
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408855"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215476"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="march-2020"></a>2020 年 3 月
+
+2020 年 3月 18 日&nbsp; / &nbsp;版本：1.16.0 
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 在 SQL 笔记本中添加了图表支持 | 在代码单元中运行 SQL 查询时，用户现在可以创建和保存图表。 |
+| 添加了创建 Jupyter 书籍体验 | 用户现在可以使用笔记本创建自己的 Jupyter 书籍。 |
+| 添加了对 Postgres 扩展的 AAD 支持 | |
+| 修复了许多辅助功能 bug | [辅助功能错误列表](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| VS Code 合并到 1.42 | 此版本包含对前 3 个 VS Code 版本中 VS Code 的更新。 [阅读其发行说明](https://code.visualstudio.com/updates/v1_42)以了解详细信息。 |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>2 月（修补程序）
 
@@ -49,6 +64,7 @@ ms.locfileid: "78408855"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>已知问题
+
 - MacOS Catalina 上的用户需要右键单击 Azure Data Studio，然后单击“打开”。
 
 ## <a name="december-2019-hotfix"></a>2019 年 12 月（修补程序）
@@ -144,6 +160,7 @@ ms.locfileid: "78408855"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
+
 - 笔记本
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 罕见情况，错误序列化笔记本时出现
 
@@ -163,6 +180,7 @@ ms.locfileid: "78408855"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
+
 - 笔记本
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 罕见情况，错误序列化笔记本时出现
 
@@ -201,10 +219,9 @@ ms.locfileid: "78408855"
 | 解决了 Bug 和问题 | 在以前版本的 Azure Data Studio 中，若在从“连接”对话框进行连接时选择了某个用户数据库，则生成的对象资源管理器条目将完全限定为该单一数据库。 从此版本开始将更改该行为，对象资源管理器中也会显示服务器级别属性。 <br/> 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)。 |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>2019 年 6 月
 
-2019 年 6 月 6 日&nbsp; / &nbsp;版本：1.8.0 
+2019 年 6 月 6 日&nbsp; / &nbsp;版本：1.8.0
 
 &nbsp;
 
@@ -220,6 +237,7 @@ ms.locfileid: "78408855"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
+
 - 适用于 Windows 的数据库管理工具扩展
     - 无法从断开连接的服务器节点启动属性
     - 无法启动 Azure 服务器的属性
@@ -361,8 +379,8 @@ ms.locfileid: "78408855"
 | 引入“粘贴计划”扩展。 | &nbsp; |
 | 引入增强色查询扩展，包括 SSMS 编辑器主题。 | &nbsp; |
 | 修复 SQL Server 代理、Profiler 和导入扩展中的问题。 | &nbsp; |
-| 修复导致 macOS 上丢失非活动连接的 .Net Core 套接字 KeepAlive 问题。 | &nbsp; |
-| 将 SQL 工具服务升级至 .Net Core 2.2 Preview 3（获得最终的 AAD 支持）。 | &nbsp; |
+| 修复导致 macOS 上丢失非活动连接的 .NET Core 套接字 KeepAlive 问题。 | &nbsp; |
+| 将 SQL 工具服务升级至 .NET Core 2.2 Preview 3（获得最终的 AAD 支持）。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>Bug 修复，2018 年 11 月

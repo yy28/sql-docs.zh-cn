@@ -1,5 +1,6 @@
 ---
 title: 将报表保存到 SharePoint 库（报表生成器）| Microsoft Docs
+description: 本文介绍将报表保存到为 SharePoint 集成配置的报表服务器所需的要求和过程。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916c135c9de0d67862d4b7300e24c2ae412b0cb6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41331a57b9eb8c3981a82e826794b9031b3eb73c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581138"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290854"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>将报表保存到 SharePoint 库（报表生成器）
   若要将报表保存到配置为 SharePoint 集成模式的报表服务器，必须找到 SharePoint 服务器并建立与报表服务器的连接。 在报表定义中，对与报表相关的项的所有引用都必须使用特定于 SharePoint 报表服务器的值。 相关项包括子报表、钻取报表和基于 Web 的图像等资源。 有关详细信息，请参阅[指定外部项的路径（报表生成器和 SSRS）](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
@@ -22,7 +23,7 @@ ms.locfileid: "65581138"
   
 ### <a name="to-save-a-report-to-a-sharepoint-site"></a>将报表保存到 SharePoint 站点  
   
-1.  从“报表生成器”按钮，单击 **“保存”** 。 此时，将打开“另存为”“**报表项>”对话框** _\<_ 。  
+1.  从“报表生成器”按钮，单击 **“保存”** 。 此时，将打开“另存为”“\<报表项>”对话框   。  
   
     > [!NOTE]  
     >  如果正在重新保存报表，会自动将其重新保存到以前的位置。 使用 **“另存为”** 选项可以更改位置。  

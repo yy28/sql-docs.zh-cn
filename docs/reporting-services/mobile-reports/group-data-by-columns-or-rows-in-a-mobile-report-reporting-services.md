@@ -1,5 +1,6 @@
 ---
 title: 在移动报表中按列或行对数据进行分组 | Reporting Service | Microsoft Docs
+description: 在移动报表发布服务器中，可以按多种类型的图表中的列或行来组织数据。 本文介绍按列或按行构造的数据。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3a4db20da76fa0188db3171f879e6fdcaefdacd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63200940"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448230"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>在移动报表中按列或行对数据进行分组 | Reporting Service
 在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中的许多类型的图表中，可以按列或按行来组织数据。 按照此分步说明执行操作。

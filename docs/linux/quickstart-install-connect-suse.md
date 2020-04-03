@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558624"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487605"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门：在 SUSE Linux Enterprise Server 上安装 SQL Server 并创建数据库
 
@@ -31,14 +31,14 @@ ms.locfileid: "75558624"
 在本快速入门中，将在 SUSE Linux Enterprise Server (SLES) v12 上安装 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
 > [!IMPORTANT]
-> SUSE Enterprise Linux Server v12 SP2、SP3 或 SP4 支持 SQL Server 2019。
+> SUSE Enterprise Linux Server v12 SP2、SP3、SP4 或 SP5 支持 SQL Server 2019。
 
 ::: moniker-end
 
 > [!TIP]
 > 本教程需要用户输入和 Internet 连接。 如果对[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -50,7 +50,7 @@ ms.locfileid: "75558624"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-必须拥有 SLES v12 SP2、SP3 或 SP4 计算机（内存至少为 2 GB）  。 文件系统必须是 XFS 或 EXT4   。 其他文件系统（如 BTRFS）均不受支持  。
+必须拥有 SLES v12 SP2、SP3、SP4 或 SP5 计算机（内存至少为 2 GB）  。 文件系统必须是 XFS 或 EXT4   。 其他文件系统（如 BTRFS）均不受支持  。
 
 ::: moniker-end
 
@@ -66,7 +66,7 @@ ms.locfileid: "75558624"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>安装 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安装 SQL Server
 
 若要在 SLES 上配置 SQL Server，请在终端中运行以下命令以安装 mssql-server 包  ：
 
@@ -125,7 +125,7 @@ ms.locfileid: "75558624"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>安装 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安装 SQL Server
 
 若要在 SLES 上配置 SQL Server，请在终端中运行以下命令以安装 mssql-server 包  ：
 
@@ -173,7 +173,7 @@ ms.locfileid: "75558624"
 ::: moniker-end
 
 
-## <a id="tools"></a>安装 SQL Server 命令行工具
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>安装 SQL Server 命令行工具
 
 若要创建数据库，则需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤将安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 

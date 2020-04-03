@@ -1,5 +1,6 @@
 ---
 title: PolyBase 中的常见问题解答 |Microsoft Docs
+description: 比较 PolyBase 和链接服务器，并比较大数据群集中的 PolyBase 和独立实例中的 PolyBase。 了解 PolyBase 2019 中的新增功能。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 9d4cda6dd0fdade80521a801799e5ee53a80c140
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0df90e30d88941d431da486fc7790b072a3eba77
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710556"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216054"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 

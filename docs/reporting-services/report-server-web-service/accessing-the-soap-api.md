@@ -1,5 +1,6 @@
 ---
 title: 访问 SOAP API | Microsoft Docs
+description: 报表服务器 Web 服务使用 HTTP 上的 SOAP，并且充当客户端与报表服务器之间的通信接口。 使用 WSDL 调用服务。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 165302d4bb324dfb79f43e37b8a47e5e11973ce5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026183"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509908"
 ---
 # <a name="accessing-the-soap-api"></a>访问 SOAP API
   报表服务器 Web 服务使用通过 HTTP 的简单对象访问协议 (SOAP)，并充当客户端程序和报表服务器之间的通信接口。 该 Web 服务提供两个端点（一个用于报表执行，一个用于报表管理），并且由您可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的完整功能的方法和一组复杂类型对象构成。 若要调用该服务，必须引用 Reporting Services Web 服务描述语言 (WSDL)。  

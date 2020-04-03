@@ -1,7 +1,7 @@
 ---
 title: 创建唯一约束 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/12/2016
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,17 +17,20 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a35a937411a83b9dd27f4ab1673c9a892cf615b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d66d2e0f2ddacb06e5313c6f5a5ee11fefaf2640
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72907920"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448194"
 ---
 # <a name="create-unique-constraints"></a>创建唯一约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建唯一约束，以便确保在未参与主键的特定列中不输入重复值。 创建唯一约束会自动创建相应的唯一索引。  
+  
+> [!NOTE]    
+> 有关 Azure Synapse Analytics 中的唯一性约束的信息，请参阅 [Azure Synapse Analytics 中的主键、外键和唯一键](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints)。
   
  **本主题内容**  
   
@@ -41,14 +44,14 @@ ms.locfileid: "72907920"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-constraint"></a>创建唯一约束  
   
@@ -62,7 +65,7 @@ ms.locfileid: "72907920"
   
 5.  在“文件”  菜单上，单击“保存”  以保存表名  。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>创建唯一约束  
   

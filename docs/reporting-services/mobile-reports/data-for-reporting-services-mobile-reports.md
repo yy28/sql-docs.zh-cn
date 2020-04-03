@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 移动报表的数据 | Microsoft Docs
+description: 将数据导入到 SQL Server 移动报表发布服务器后，无论数据来自 Excel 文件还是共享数据集，移动报表的创建和设计都是相同的。
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6131f6bce9cb6d1c87a4a75215a906b6d097c7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3c022631d0f21c4e23756e39e4824fe9f52ef3b5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63129741"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447869"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 数据模型非常简单。 将数据作为数据集的集合导入 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 。 不需要数据集之间的正式关系。 只要键值匹配，就可以在各个数据集之间进行查找。 日期/时间聚合通过移动报表运行时进行处理，即使数据集之间的日期/时间数据粒度不同，它们也会在不同的数据集之间进行匹配。   
   
 可以从以下两种类型的源导入数据：   
   
-* **本地 Excel 文件**：依次选择 Excel 文档，以及要导入的一个或多个工作表。 导入后，数据将存储在移动报表定义中。 若要刷新原始 Excel 文件中的数据，请使用[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]“数据”选项卡右上角的“刷新数据”命令。阅读有关[为 SSRS 移动报表准备 Excel 数据的详细信息](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
+* **本地 Excel 文件**：依次选择 Excel 文档，以及要导入的一个或多个工作表。 导入后，数据将存储在移动报表定义中。 若要刷新原始 Excel 文件中的数据，请使用[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]“数据”  选项卡右上角的“刷新数据”  命令。阅读有关[为 SSRS 移动报表准备 Excel 数据的详细信息](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
   
 * **SQL Server 移动报表发布服务器共享数据集**：浏览服务器上的已发布数据集列表，并选择要添加到移动报表的数据集。 基于服务器数据的移动报表始终与原始服务器数据集标尺连接，并反映该服务器上的数据的最新状态。 请参阅 [支持的数据源列表](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。   
   

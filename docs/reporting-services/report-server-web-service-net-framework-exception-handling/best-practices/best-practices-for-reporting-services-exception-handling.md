@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 异常处理的最佳做法 | Microsoft Docs
+description: 了解 Reporting Services 异常处理的最佳做法，例如如何处理不引发异常的错误情况。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6e59ea3edb968182091b1b6496d47e9adb4d4be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 06337dde035804436989c392724c85a7b72b78dc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63151117"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216396"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 异常处理的最佳实践
   当开发 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 应用程序时，可以使用多种方法来消除或减少异常的发生。 当确实发生异常时，请向用户提供明确和简洁的错误消息，并添加适当的异常处理以防止应用程序意外结束。  

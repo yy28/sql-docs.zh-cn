@@ -1,5 +1,6 @@
 ---
 title: 导出到 XML（报表生成器）| Microsoft Docs
+description: 在报表生成器中，XML 呈现扩展插件将分页报表呈现为 XML 格式。 将 XML 导入数据库、用作消息或发送到应用程序。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71e3b5102fa1ff37e7cea22562919b202889ecc3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079309"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342836"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>导出到 XML（报表生成器和 SSRS）
   XML 呈现扩展插件可以按 XML 格式返回分页报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。  
@@ -21,7 +22,7 @@ ms.locfileid: "77079309"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> 报表项  
+##  <a name="report-items"></a><a name="ReportItems"></a> 报表项  
  下表对各报表项的呈现形式进行了说明：  
   
 |Item|呈现行为|  
@@ -52,7 +53,7 @@ ms.locfileid: "77079309"
 -   将忽略**Images, lines, and custom report items** 。  
   
   
-##  <a name="DataTypes"></a> 数据类型  
+##  <a name="data-types"></a><a name="DataTypes"></a> 数据类型  
  为文本框元素或属性分配的 XSD 数据类型将基于文本框显示的值。  
   
 |如果所有文本框值都是|分配的数据类型为|  
@@ -68,7 +69,7 @@ ms.locfileid: "77079309"
 |其他|**xsd:string**|  
   
   
-##  <a name="XMLSpecificRenderingRules"></a> 特定于 XML 的呈现规则  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> 特定于 XML 的呈现规则  
  下面一节将说明 XML 呈现扩展插件是如何解释报表内的报表项的。  
   
 ### <a name="report-body"></a>表体  
@@ -150,15 +151,15 @@ ms.locfileid: "77079309"
  如果 DataElementOutput 属性的值等于 Output，则重复项的表头将呈现为详细信息元素的子级。  
   
   
-##  <a name="CustomFormatsXSLTransformations"></a> 自定义格式和 XSL 转换  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> 自定义格式和 XSL 转换  
  使用 XSL 转换 (XSLT) 可以将 XML 呈现扩展插件生成的 XML 文件转换为几乎任意格式的文件。 您可以使用此功能来生成现有呈现扩展插件尚不支持的格式的数据。 在尝试创建自己的呈现扩展插件之前，请首先考虑使用 XML 呈现扩展插件和 XSLT。  
   
   
-##  <a name="DuplicateName"></a> 名称重复  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> 名称重复  
  如果在同一范围内存在重复的数据元素名称，呈现器将显示一个错误消息。  
   
   
-##  <a name="XSLTTransformations"></a> XSLT 转换  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a> XSLT 转换  
  XML 呈现器可将服务器端 XSLT 转换应用到原始 XML 数据。 应用 XSLT 后，呈现器将输出转换后的内容而不是原始 XML 数据。 转换是在服务器而不是客户端上进行的。  
   
  应用到输出的 XSLT 可通过报表的 DataTransform 属性在报表定义文件中定义，或者使用 XSLT *DeviceInfo* 参数进行定义。 如果设置了以上值中的任意一个值，则每次使用 XML 呈现器时都会发生转换。 当使用订阅时，则必须在 RDL DataTransform 属性中定义 XSLT。  
@@ -166,7 +167,7 @@ ms.locfileid: "77079309"
  如果同时使用了 DataTransform 定义属性和设备信息设置来指定 XSLT 文件，则会先执行在 DataTransform 中指定的 XSLT 转换，然后执行由设备信息设置指定的 XSLT 转换。  
   
   
-###  <a name="DeviceInfo"></a> 设备信息设置  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改如下设备信息设置来更改此呈现器的某些默认设置：  
   
 -   应用于 XML 的转换 (XSLT)。  

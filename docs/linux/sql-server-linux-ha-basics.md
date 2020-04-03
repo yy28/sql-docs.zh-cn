@@ -1,6 +1,6 @@
 ---
 title: Linux 部署的 SQL Server 高可用性
-description: 了解 Linux 上的 SQL Server 提供的不同高可用性选项，例如 Always On 可用性组、故障转移群集实例 (FCI) 和日志传送。
+description: 了解 Linux 上的 SQL Server 提供的高可用性选项，例如 Always On 可用性组、故障转移群集实例 (FCI) 和日志传送。
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75656605"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216677"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>有关 Linux 部署的 SQL Server 可用性基础知识
 
@@ -22,7 +22,7 @@ ms.locfileid: "75656605"
 
 从 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 开始，Linux 和 Windows 都支持 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 与基于 Windows 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署一样，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 数据库和实例需要在 Linux 下高度可用。 本文介绍了规划和部署基于 Linux 的高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 数据库和实例的技术方面，以及与基于 Windows 的安装的一些区别。 因为 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 对于 Linux 专业人员来说可能是新内容，而 Linux 对于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 专业人员来说可能是新内容，所以这篇文章有时会介绍一些人熟悉，而其他人不熟悉的概念。
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 部署的可用性选项
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 部署的可用性选项
 除备份和还原之外，Linux 上还提供了与基于 Windows 的部署相同的三种可用性功能：
 -   Always On 可用性组 (AG)
 -   Always On 故障转移群集实例 (FCI)
@@ -51,7 +51,7 @@ ms.locfileid: "75656605"
 -   `systemctl` - 启动、停止或启用服务
 -   文本编辑器命令。 在 Linux 上，有各种文本编辑器选项，例如 vi 和 emacs。
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的可用性配置的常见任务
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的可用性配置的常见任务
 本节介绍所有基于 Linux 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署的常见任务。
 
 ### <a name="ensure-that-files-can-be-copied"></a>确保可以复制文件
@@ -120,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 包以实现可用性
+### <a name="install-ssnoversion-md-packages-for-availability"></a>安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 包以实现可用性
 在基于 Windows 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 安装中，有些组件甚至可以在基本引擎安装中安装，而其他组件则不能。 在 Linux 下，只有 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 引擎作为安装过程的一部分进行安装。 其他全部内容都是可选的。 对于 Linux 下的高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 实例，应使用 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 安装两个包：[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理 (mssql-server-agent) 和高可用性 (HA) 包 (mssql-server-ha)   。 虽然 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理在技术上是可选的，但它是 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的作业计划程序，并且是日志传送所必需的，因此建议安装。 在基于 Windows 的安装中，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理是不可选的。
 
 >[!NOTE]
@@ -204,10 +204,10 @@ Pacemaker 群集的日志位置因分发版而异。
 
 若要更改默认日志记录位置，请修改 `corosync.conf`。
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>计划 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pacemaker 群集
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>计划 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pacemaker 群集
 本部分讨论 Pacemaker 群集的重要规划点。
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>为 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 虚拟化基于 Linux 的 Pacemaker 群集
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>为 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 虚拟化基于 Linux 的 Pacemaker 群集
 使用虚拟机为 AG 和 FCI 部署基于 Linux 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署的规则与基于 Windows 的对应规则相同。 Microsoft 在 [Microsoft 支持知识库 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment) 中提供了一组基本规则，用于支持虚拟化 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署。 由于平台本身的差异，不同的虚拟机监控程序（如 Microsoft 的 Hyper-V 和 VMware 的 ESXi）可能会有不同的差异。
 
 对于虚拟化下的 AG 和 FCI，请确保为给定 Pacemaker 群集的节点设置了反关联性。 在 AG 或 FCI 配置中配置为高可用性时，托管 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 VM 不应在同一虚拟机监控程序主机上运行。 例如，如果部署了双节点 FCI，则需要至少有三个虚拟机监控程序主机，以便在主机发生故障时，特别是使用 Live Migration 或 vMotion 等功能时，其中一个托管节点的 VM 可以找到某个位置  。

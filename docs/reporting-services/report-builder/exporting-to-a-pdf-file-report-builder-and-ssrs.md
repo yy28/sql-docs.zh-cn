@@ -1,5 +1,6 @@
 ---
 title: 导出到 PDF 文件（报表生成器）| Microsoft Docs
+description: 在报表生成器中，PDF 呈现扩展插件将分页报表呈现为可在 Adobe Acrobat 和其他第三方 PDF 查看器中打开的文件。
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9c00901c1a409ec2a8a52476b201f2bf7992017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078266"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342858"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>导出到 PDF 文件（报表生成器和 SSRS）
   PDF 呈现扩展插件可将 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表呈现为可在 Adobe Acrobat 和其他支持 PDF 1.3 的第三方 PDF 查看器中打开的文件。 尽管 PDF 1.3 与 Adobe Acrobat 4.0 及更高版本兼容，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持 Adobe Acrobat 11.0 或更高版本。 呈现扩展插件不需要使用 Adobe 软件呈现报表。 不过，该插件需要使用 PDF 查看器（例如 Adobe Acrobat）才可查看或打印 PDF 格式的报表。  
@@ -25,7 +26,7 @@ ms.locfileid: "77078266"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> 嵌入字体  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> 嵌入字体  
  如有可能，PDF 呈现扩展插件会在 PDF 文件中嵌入显示报表所需的每个字体的子集。 因此报表服务器上必须安装有报表中使用的字体。 当报表服务器以 PDF 格式生成报表时，它将使用报表引用的字体中所存储的信息在 PDF 文件内创建字符映射。 如果报表服务器上未安装所引用的字体，生成的 PDF 文件可能不会包含正确的映射，因而在查看该 PDF 文件时可能不会正常显示。  
   
  满足以下条件时，将在 PDF 文件中嵌入字体：  
@@ -54,7 +55,7 @@ ms.locfileid: "77078266"
   
  嵌入 PDF 文件的字体包含在“字体”属性中，该属性随文件一起作为元数据保存。  
   
-##  <a name="Metadata"></a> 元数据  
+##  <a name="metadata"></a><a name="Metadata"></a> 元数据  
  除了报表布局外，PDF 呈现扩展插件会将以下元数据写入 PDF 文档信息字典。  
   
 |PDF 属性|创建自|  
@@ -67,7 +68,7 @@ ms.locfileid: "77078266"
 |**CreationDate**|报表执行时间，以 PDF **datetime** 格式表示。|  
   
   
-##  <a name="Interactivity"></a> 交互  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 交互  
  PDF 支持一些交互元素。 下面是对一些特定行为的说明。  
   
 ### <a name="show-and-hide"></a>显示和隐藏  
@@ -88,7 +89,7 @@ ms.locfileid: "77078266"
  报表中的超链接在 PDF 文件中呈现为可单击的链接。 单击超链接时，Acrobat 将打开默认的客户端浏览器并导航到超链接 URL。  
   
   
-##  <a name="Compression"></a> 压缩  
+##  <a name="compression"></a><a name="Compression"></a> 压缩  
  图像压缩基于图像的原始文件类型。 默认情况下，PDF 呈现扩展插件会压缩 PDF 文件。  
   
  为了尽可能保留 PDF 文件中所包含图像的任何压缩状态，JPEG 图像存储为 JPEG，所有其他图像类型都存储为 BMP。  
@@ -97,7 +98,7 @@ ms.locfileid: "77078266"
 >  PDF 文件不支持嵌入 PNG 图像。  
   
   
-##  <a name="DeviceInfo"></a> 设备信息设置  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置。 有关详细信息，请参阅 [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md)。  
   
   

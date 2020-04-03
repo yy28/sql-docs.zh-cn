@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 22fda4d5e11b562ea3162ed14766ed085977200e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68041337"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510038"
 ---
 # <a name="tail-log-backups-sql-server"></a>结尾日志备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68041337"
   
 > **注意：** 并非所有还原方案都要求执行结尾日志备份。 如果恢复点包含在较早的日志备份中，则无需结尾日志备份。 此外，如果您准备移动或替换（覆盖）数据库，并且在最新备份后不需要将该数据库还原到某一时间点，则不需要结尾日志备份。  
   
-   ##  <a name="TailLogScenarios"></a> 需要结尾日志备份的方案  
+   ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> 需要结尾日志备份的方案  
  建议您在以下方案中执行结尾日志备份：  
   
 -   如果数据库处于联机状态并且您计划对数据库执行还原操作，则从备份日志结尾开始。 若要避免联机数据库错误，必须使用...[BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 WITH NORECOVERY 选项。  
@@ -47,10 +47,10 @@ ms.locfileid: "68041337"
   
 |BACKUP LOG 选项|注释|  
 |-----------------------|--------------|  
-|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。 除非同时指定 NO_TRUNCATE 或 COPY_ONLY 选项，否则将截断日志。<br /><br /> **重要提示：** 除非数据库受损，否则不建议使用 NO_TRUNCATE。|  
+|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。 除非同时指定 NO_TRUNCATE 或 COPY_ONLY 选项，否则将截断日志。<br /><br /> **重要提示：** 除非数据库受损，否则不建议使用 NO_TRUNCATE。 在使用 NORECOVERY 执行还原之前，可能需要将数据库置于[单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)以获得独占访问权限。 还原后，请将数据库重新设置为多用户模式。 |  
 |CONTINUE_AFTER_ERROR|仅当您要备份受损数据库的尾部时，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 对受损数据库备份日志尾部时，日志备份中正常捕获的部分元数据可能不可用。 有关详细信息，请参阅本主题中的 [包含不完整备份元数据的结尾日志备份](#IncompleteMetadata)。|  
   
-##  <a name="IncompleteMetadata"></a> 包含不完整备份元数据的结尾日志备份  
+##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> 包含不完整备份元数据的结尾日志备份  
  结尾日志备份可捕获日志尾部，即使数据库脱机、损坏或缺少数据文件。 这可能导致还原信息命令和 **msdb**生成不完整的元数据。 但只有元数据是不完整的，而捕获的日志是完整且可用的。  
   
  如果结尾日志备份包含不完整的元数据，则 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 表中的 **has_incomplete_metadata** 将设置为 **1**。 此外，在 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)的输出中， **HasIncompleteMetadata** 将设置为 **1**。  
@@ -63,7 +63,7 @@ ms.locfileid: "68041337"
 -   **type_desc**  
 -   **is_readonly**  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  要创建结尾日志备份，请参阅[在数据库损坏时备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)。  
   
  若要还原事务日志备份，请参阅[还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)。  

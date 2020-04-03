@@ -1,5 +1,6 @@
 ---
 title: 打开具有特定查询字符串参数的移动报表 | Microsoft Docs
+description: 对于具有参数和数据源的 Reporting Services 移动报表，可以在报表 URL 中使用查询参数，以使用指定值打开它。
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62499974"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448391"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>打开具有特定查询字符串参数的移动报表 | Reporting Services
 如果有带有参数的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表和 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 数据源，则可以在报表 URL 中包括查询字符串参数，以便根据已指定的值自动打开报表。 
@@ -35,7 +36,7 @@ ms.locfileid: "62499974"
     
     `https://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
-     **对于 SQL Server 数据源**：查询字符串参数几乎相同，区别在于字段名前面有 \@ 符号：
+     **对于 SQL Server 数据源**：查询字符串参数几乎相同，区别在于字段名称前面有 \@ 符号：
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 

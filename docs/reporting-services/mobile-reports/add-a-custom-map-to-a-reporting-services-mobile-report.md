@@ -1,5 +1,6 @@
 ---
 title: 向 Reporting Services 移动报表添加自定义地图 | Microsoft Docs
+description: 你可以向 Reporting Services 移动报表添加自定义地图。 本文介绍如何加载数据并将其连接到自定义地图。
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9410aac6b74fbb515010517a2fe0667f3c197802
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.openlocfilehash: a1c15d5b5155d68f94a1672ca55654485c6b1835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971399"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448346"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>向 Reporting Services 移动报表添加自定义地图
 自定义地图需要两个文件：  

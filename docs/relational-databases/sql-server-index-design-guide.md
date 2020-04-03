@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287311"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486526"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "79287311"
 
 有关全文索引的信息，请参阅[填充全文索引](../relational-databases/search/populate-full-text-indexes.md)。
   
-##  <a name="Basics"></a> 索引设计基础知识  
+##  <a name="index-design-basics"></a><a name="Basics"></a> 索引设计基础知识  
  请考虑普通书籍：本书末尾有一个索引，可帮助快速查找书籍内的信息。 索引是按顺序排列的关键字列表，每个关键字旁边是一组页码，这些页码指向可在其中找到每个关键字的页面。 SQL Server 索引也一样：它是按顺序排列的值列表，每个值都有指向这些值所在的数据[页面](../relational-databases/pages-and-extents-architecture-guide.md)的指针。 索引本身存储在页面上，构成 SQL Server 中的索引页面。 在普通书籍中，如果索引跨越多个页面并且必须找到指向包含单词“SQL”的所有页面的指针，则必须翻阅，直到找到包含关键字“SQL”的索引页面。 在索引页面，你可以找到指向所有书籍页面的指针。  如果在索引的开头创建了一个页面，其中包含可以找到每个字母的字母顺序列表，则可以进一步优化此页面。 例如：“A 到 D - 第 121 页”，“E 到 G - 第 122 页”等等。 这个额外的页面将使你不必执行翻阅索引才能找到起始位置的步骤。 此类页面在常规书籍中不存在，但在 SQL Server 索引中确实存在。 此单个页面称为索引的根页。 根页是 SQL Server 索引使用的树结构的起始页面。 按照树的类比，包含指向实际数据的指针的结束页面被称为树的“叶页”。 
 
  SQL Server 索引是与表或视图关联的磁盘上或内存中结构，可以加快从表或视图中检索行的速度。 索引包含由表或视图中的一列或多列生成的键。 对于磁盘上的索引，这些键以树结构（B 树）存储，使 SQL Server 可以快速高效地找到与键值关联的一行或多行。  
@@ -83,7 +83,7 @@ ms.locfileid: "79287311"
 5.  确定索引的最佳存储位置。 非聚集索引可以与基础表存储在同一个文件组中，也可以存储在不同的文件组中。 索引的存储位置可通过提高磁盘 I/O 性能来提高查询性能。 例如，将非聚集索引存储在表文件组所在磁盘以外的某个磁盘上的一个文件组中可以提高性能，因为可以同时读取多个磁盘。  
      或者，聚集索引和非聚集索引也可以使用跨越多个文件组的分区方案。 在维护整个集合的完整性时，使用分区可以快速而有效地访问或管理数据子集，从而使大型表或索引更易于管理。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。 在考虑分区时，应确定是否应对齐索引，即，是按实质上与表相同的方式进行分区，还是单独分区。   
 
-##  <a name="General_Design"></a> 常规索引设计指南  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> 常规索引设计指南  
  经验丰富的数据库管理员能够设计出好的索引集，但是，即使对于不特别复杂的数据库和工作负荷来说，这项任务也十分复杂、耗时和易于出错。 了解数据库、查询和数据列的特征可以帮助您设计出最佳索引。  
   
 ### <a name="database-considerations"></a>数据库注意事项  
@@ -153,7 +153,7 @@ ms.locfileid: "79287311"
   
 您也可以通过设置选项（例如 FILLFACTOR）自定义索引的初始存储特征以优化其性能或维护。 而且，通过使用文件组或分区方案可以确定索引存储位置来优化性能。  
   
-###  <a name="Index_placement"></a> 文件组或分区方案的索引设置  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> 文件组或分区方案的索引设置  
  开发索引设计策略时，应该考虑在与数据库相关联的文件组上放置索引。 仔细选择文件组或分区方案可以改进查询性能。  
   
  默认情况下，索引存储在基表所在的文件组上，该索引即在该基表上创建。 非分区聚集索引和基表始终在同一个文件组中。 但是，您可以执行以下操作：  
@@ -177,7 +177,7 @@ ms.locfileid: "79287311"
   
 有关详细信息，请参阅 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
-###  <a name="Sort_Order"></a> 索引排序顺序设计指南  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> 索引排序顺序设计指南  
  定义索引时，应该考虑索引键列的数据是按升序还是按降序存储。 升序是默认设置，保持与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本的兼容性。 CREATE INDEX、CREATE TABLE 和 ALTER TABLE 语句的语法在索引和约束中的各列上支持关键字 ASC（升序）和 DESC（降序）：  
   
  当引用表的查询包含用以指定索引中键列的不同方向的 ORDER BY 子句时，指定键值存储在该索引中的顺序很有用。 在这些情况下，索引就无需在查询计划中使用 SORT 运算符。因此，使得查询更有效。 例如， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 采购部门的买方不得不评估他们从供应商处购买的产品的质量。 买方倾向于查验那些由具有高拒绝率的供应商发送的产品。 检索数据以满足此条件需要将 `RejectedQty` 表中的 `Purchasing.PurchaseOrderDetail` 列按降序（由大到小）排序，并且将 `ProductID` 列按升序（由小到大）排序，如下列查询所示。  
@@ -207,7 +207,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以在两个方向上同样有效地移动。 对于一个在 ORDER BY 子句中列的排序方向倒排的查询，仍然可以使用定义为 `(RejectedQty DESC, ProductID ASC)` 的索引。 例如，包含 ORDER BY 子句 `ORDER BY RejectedQty ASC, ProductID DESC` 的查询可以使用该索引。  
   
- 只可以为键列指定排序顺序。 [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 目录视图和 INDEXKEY_PROPERTY 函数报告索引列是按升序还是降序存储。  
+ 只能为索引中的键列指定排序顺序。 [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 目录视图和 INDEXKEY_PROPERTY 函数报告索引列是按升序还是降序存储。  
 
 ## <a name="metadata"></a>元数据  
 使用这些元数据视图可以查看索引的属性。 其他体系结构信息嵌入在其中的某些视图中。
@@ -228,7 +228,7 @@ ON Purchasing.PurchaseOrderDetail
 |[sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
 |[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
-##  <a name="Clustered"></a> 聚集索引设计指南  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> 聚集索引设计指南  
  聚集索引基于数据行的键值在表内排序和存储这些数据行。 每个表只能有一个聚集索引，因为数据行本身只能按一个顺序存储。 每个表几乎都对列定义聚集索引来实现下列功能：  
   
 -   可用于经常使用的查询。  
@@ -302,7 +302,7 @@ ON Purchasing.PurchaseOrderDetail
   
     宽键是若干列或若干大型列的组合。 所有非聚集索引将聚集索引中的键值用作查找键。 为同一表定义的任何非聚集索引都将增大许多，这是因为非聚集索引项包含聚集键，同时也包含为此非聚集索引定义的键列。  
   
-##  <a name="Nonclustered"></a> 非聚集索引设计指南  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> 非聚集索引设计指南  
  非聚集索引包含索引键值和指向表数据存储位置的行定位器。 可以对表或索引视图创建多个非聚集索引。 通常，设计非聚集索引是为改善经常使用的、没有建立聚集索引的查询的性能。  
   
  与使用书中索引的方式相似，查询优化器在搜索数据值时，先搜索非聚集索引以找到数据值在表中的位置，然后直接从该位置检索数据。 这使非聚集索引成为完全匹配查询的最佳选择，因为索引包含说明查询所搜索的数据值在表中的精确位置的项。 例如，为了从 `HumanResources. Employee` 表中查询向特定经理负责的所有雇员，查询优化器可能使用非聚集索引 `IX_Employee_ManagerID`；它以 `ManagerID` 作为其键列。 查询优化器能快速找出索引中与指定 `ManagerID`匹配的所有项。 每个索引项都指向表或聚集索引中准确的页和行，其中可以找到相应的数据。 在查询优化器在索引中找到所有项之后，它可以直接转到准确的页和行进行数据检索。  
@@ -371,7 +371,7 @@ ON Purchasing.PurchaseOrderDetail
   
      如果只有很少的非重复值，例如仅有 1 和 0，则大多数查询将不使用索引，因为此时表扫描通常更有效。 对于这种类型的数据，应考虑对仅出现在少数行中的非重复值创建筛选索引。 例如，如果大部分值都是 0，则查询优化器可以对包含 1 的数据行使用筛选查询。  
   
-####  <a name="Included_Columns"></a> 使用包含列扩展非聚集索引  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> 使用包含列扩展非聚集索引  
  您可以通过将非键列添加到非聚集索引的叶级，扩展非聚集索引的功能。 通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：  
   
 -   它们可以是不允许作为索引键列的数据类型。  
@@ -471,7 +471,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  您应该确定修改数据时在查询性能上的提升是否超过了对性能的影响，以及是否需要额外的磁盘空间要求。  
   
-##  <a name="Unique"></a> 唯一索引设计指南  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> 唯一索引设计指南  
  唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 只有当唯一性是数据本身的特征时，指定唯一索引才有意义。 例如，如果要确保 `NationalIDNumber` 表中 `HumanResources.Employee` 列的值是唯一的，当主键为 `EmployeeID`时，对 `NationalIDNumber` 列创建 UNIQUE 约束。 如果用户尝试在该列中为多个雇员输入相同的值，将显示错误消息并且不能输入重复的值。  
   
  使用多列唯一索引，索引能够保证索引键中值的每个组合都是唯一的。 例如，如果为 `LastName`、 `FirstName`和 `MiddleName` 列的组合创建了唯一索引，则表中的任意两行都不会有这些列值的相同组合。  
@@ -495,7 +495,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 -   唯一非聚集索引可以包括包含性非键列。 有关详细信息，请参阅 [具有包含列的索引](#Included_Columns)。  
   
   
-##  <a name="Filtered"></a> 筛选索引设计指南  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 筛选索引设计指南  
  筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
   
 **适用范围**： [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
@@ -635,7 +635,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  将数据转换从比较运算符的左边移动到右边可能会改变转换的含义。 在上例中，将 CONVERT 运算符添加到右边时，相应的比较从整数比较更改为 **varbinary** 比较。  
   
-## <a name="columnstore_index"></a>列存储索引设计指南
+## <a name="columnstore-index-design-guidelines"></a><a name="columnstore_index"></a>列存储索引设计指南
 
 *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 有关详细信息，请参阅[列存储索引概述](../relational-databases/indexes/columnstore-indexes-overview.md)。 
 
@@ -725,7 +725,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  
 有关详细信息，请参阅[列存储索引 - 设计指南](../relational-databases/indexes/columnstore-indexes-design-guidance.md)。
 
-##  <a name="hash_index"></a>哈希索引设计指南 
+##  <a name="hash-index-design-guidelines"></a><a name="hash_index"></a>哈希索引设计指南 
 
 所有内存优化表都至少必须有一个索引，因为行正是通过索引才连接在一起。 在内存优化表中，每个索引也经过内存优化。 哈希索引是内存优化表中可能存在的索引类型之一。 有关详细信息，请参阅[内存优化表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
@@ -759,7 +759,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
 ![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "索引键输入到哈希函数，输出是哈希桶的地址，用于指向链头。")  
 
-### <a name="configuring_bucket_count"></a>配置哈希索引桶计数
+### <a name="configuring-the-hash-index-bucket-count"></a><a name="configuring_bucket_count"></a>配置哈希索引桶计数
 哈希索引桶计数在索引创建时指定，可使用 `ALTER TABLE...ALTER INDEX REBUILD` 语法进行更改。  
   
 在大多数情况下，桶计数在理想情况下应该介于索引键中非重复值数目的 1 到 2 倍之间。   
@@ -794,7 +794,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 如果使用哈希索引并且唯一索引键的数目是行计数的 100 倍（或者更多），则考虑增加桶计数以避免较大的行链，或改用[非聚集索引](#inmem_nonclustered_index)。
 
-### <a name="h3-b2-declaration-limitations"></a>声明注意事项  
+### <a name="declaration-considerations"></a><a name="h3-b2-declaration-limitations"></a>声明注意事项  
 哈希索引只能存在于内存优化表中， 而不能存在于基于磁盘的表中。  
   
 可以将哈希索引声明为：  
@@ -817,7 +817,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
   
 以后，当不再需要旧版本时，垃圾回收 (GC) 线程将遍历桶及其链接列表，以清理旧条目。 如果链接列表链长度较短，GC 线程的执行效果会更佳。 有关详细信息，请参阅[内存中 OLTP 垃圾回收](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)。 
 
-##  <a name="inmem_nonclustered_index"></a>内存优化非聚集索引设计指南 
+##  <a name="memory-optimized-nonclustered-index-design-guidelines"></a><a name="inmem_nonclustered_index"></a>内存优化非聚集索引设计指南 
 
 非聚集索引是内存优化表中可能存在的一种索引类型。 有关详细信息，请参阅[内存优化表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
@@ -886,7 +886,7 @@ Bw 树中的索引页可按需增大，从存储单一行的大小开始，最�
 > [!TIP]
 > 非聚集索引键列中的列包含许多重复值时，更新、插入和删除的性能会降低。 在这种情况下提高性能的一种方法是向非聚集索引添加另一列。
 
-##  <a name="Additional_Reading"></a> 其他阅读主题  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他阅读主题  
 [CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md)    
 [ALTER INDEX (Transact-SQL)](../t-sql/statements/alter-index-transact-sql.md)   
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  

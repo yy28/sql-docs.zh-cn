@@ -1,5 +1,6 @@
 ---
 title: 使用 SSMS XEvent 探查器
+description: XEvent 探查器显示扩展事件的实时查看器。 了解为何使用此探查器、关键功能以及如何开始查看扩展事件。
 ms.date: 10/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,26 +15,26 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b500713053e8ea65722a10e2bf93ec566d9fbdd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fe9f63f1ae9b007da18f1b81ed23cd1c49bbfcbd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75251410"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487545"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 探查器
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 XEvent 探查器是 SQL Server Management Studio (SSMS) 的功能，可显示扩展事件的实时查看器窗口。 本概述描述了使用此探查器的原因、关键功能以及查看扩展事件的入门说明。
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>使用 XEvent 探查器的原因
 不同于 SQL 探查器，XEvent 探查器直接集成到 SSMS，基于 SQL 引擎中可缩放的扩展事件技术。 此功能可以快速访问 SQL 服务器上诊断事件的实时传送视频流视图。 此视图可自定义，并且自定义项可以 .viewsettings 文件的形式与其他 SSMS 用户共享。 使用 XE 探查器创建的会话与使用 SQL 探查器时类似的 SQL 跟踪相比，对运行的 SQL 服务器具有更低的侵入性。 用户也可以使用现有的 XE 会话属性 UI 或通过 TSQL 自定义此会话。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 此功能仅在 SQL Server Management Studio (SSMS) v17.3 或更高版本中可用。 请确保使用最新版本。 可以在[此处](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
 
-## <a id="getting-started"></a>入门
+## <a name="getting-started"></a><a id="getting-started"></a>入门
 若要访问 XEvent 探查器，请执行以下步骤：
 
 1. 打开 SQL Server Management Studio  。

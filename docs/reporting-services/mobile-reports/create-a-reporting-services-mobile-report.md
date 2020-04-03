@@ -1,5 +1,6 @@
 ---
 title: 创建 Reporting Services 移动报表 | Microsoft Docs
+description: 通过 SQL Server 移动报表发布服务器，使用灵活的移动报表元素创建适用于任何屏幕大小的 SQL Server Reporting Services 移动报表。
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 08076ebf437841f5d60d957df934fc7de6406ded
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316411"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448215"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>创建 Reporting Services 移动报表
 借助 SQL Server 移动报表发布服务器，可以在网格行和列可调整且移动报表元素灵活的设计图面上快速创建 SQL Server Reporting Services 移动报表，这些报表可轻松缩放至任何屏幕大小。  
   
 首次创建移动报表时，请从 Reporting Services Web 门户开始，以在本地计算机上安装 SQL Server 移动报表发布服务器。 也可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=733527)安装此应用程序。 在首次安装之后，就可以从 Web 门户或本地开始了。   
     
-1. 在 Reporting Services Web 门户的顶部栏中，选择“新建” **“移动报表”**  >   。  
+1. 在 Reporting Services Web 门户的顶部栏中，选择“新建” > “移动报表”   。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
@@ -42,7 +43,7 @@ ms.locfileid: "63316411"
   
 6. 选择“本地 Excel”  或“报表服务器”  。  
   
-   >**提示**：如果从 Excel 中添加数据，请确保：  
+   >**提示**：若要从 Excel 添加数据，请确保：  
     >* [准备 Excel 数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) 以在移动报表中进行处理。  
     >* 先关闭该文件。  
 7. 选择需要的工作表，并选择“导入”  。   

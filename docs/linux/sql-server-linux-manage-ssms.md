@@ -1,6 +1,6 @@
 ---
 title: 使用 SSMS 管理 Linux 上的 SQL Server
-description: ''
+description: 本文介绍 QL Server Management Studio，它是用于访问、配置、管理和开发 SQL Server 的组件的集成环境。
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/21/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68000090"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216648"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 SQL Server Management Studio 管理 Linux 上的 SQL Server
 
@@ -63,7 +63,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
    | **登录** | 输入对服务器上的数据库具有访问权限的用户名（例如，在安装时创建的默认 SA 帐户）  。 |
    | **密码** | 为指定的用户输入密码（如果是 SA 帐户，则在安装时已创建密码）  。 |
 
-    ![SQL Server Management Studio：连接到 SQL 数据库服务器](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio：连接到 SQL Database 服务器](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. 单击“连接”  。
 
@@ -91,7 +91,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 1. 单击“执行”按钮以运行查询并查看结果  。
 
-   ![成功。 连接到 SQL 数据库服务器：SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![成功。 连接到 SQL Database 服务器：SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 尽管可以使用 Transact-SQL 查询执行几乎任何的管理任务，但 SSMS 是一种可更轻松管理 SQL Server 的图形工具。 以下部分提供使用图形用户界面的一些示例。
 

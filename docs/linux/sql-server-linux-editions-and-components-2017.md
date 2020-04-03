@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017 的各版本和支持的功能 ~ Linux
+description: 本文介绍 Linux 上的 SQL Server 2017 的不同版本支持的功能。 有助于你从可用的版本和组件中进行选择。
 ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
@@ -24,12 +25,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288441"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402672"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的各版本和支持的功能
 
@@ -77,7 +78,7 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 
 开发人员版仍然仅支持一个 [SQL Server 分布式重播](../tools/distributed-replay/sql-server-distributed-replay.md)客户端。 
   
-##  <a name="Cross-BoxScaleLimits"></a>规模限制  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a>规模限制  
   
 |Feature|Enterprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +91,7 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
   
 <sup>1</sup> 对于具有基于服务器 + 客户端访问许可证 (CAL) 的许可的 Enterprise 版本（不适用于新协议），每个 SQL Server 实例的内核数上限为 20。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅[按 SQL Server 版本划分的计算能力限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
  
-##  <a name="RDBMSHA"></a>RDBMS 高可用性  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a>RDBMS 高可用性  
   
 |Feature|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +119,7 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 
 <sup>3</sup> Standard 版本支持基本可用性组。 基本可用性组支持两个副本，一个数据库。 有关基本可用性组的详细信息，请参阅 [可用性组](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。    
 
-##  <a name="RDBMSSP"></a>RDBMS 可伸缩性和性能  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a>RDBMS 可伸缩性和性能  
   
 |Feature|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +144,7 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 
 <sup>1</sup> 内存中 OLTP 数据大小和列存储段缓存限制为“规模限制”部分中的版本所指定的内存量。 最大并行度是有限的。 对于 Standard 版本，索引生成的进程并行度 (DOP) 限制为 2 DOP，对于 Web 和 Express 版本，索引生成的进程并行度 (DOP) 限制为 1 DOP。 这是指在基于磁盘的表和内存优化表上创建的列存储索引。
 
-##  <a name="RDBMSS"></a>RDBMS 安全性  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a>RDBMS 安全性  
   
 |Feature|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +158,7 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 |包含的数据库|是|是|是|是| 
 |备份加密|是|是|否|否|  
 
-##  <a name="RDBMSM"></a>RDBMS 可管理性  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a>RDBMS 可管理性  
   
 |Feature|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +177,7 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 |并行一致性检查|是|否|否|否| 
 |SQL Server 实用工具控制点|是|否|否|否|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Feature|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +198,11 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 
 <sup>1</sup> 具有多个计算节点的 Scale out 需要一个头节点。
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 有关 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 各个版本支持的 Integration Services (SSIS) 功能的信息，请参阅 [SQL Server 各个版本支持的 Integration Services 功能](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)。
 
-##  <a name="SLS"></a>空间和位置服务  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a>空间和位置服务  
   
 |功能名称|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -209,7 +210,7 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 |平面和大地测量数据类型|是|是|是|是| 
 |高级空间库|是|是|是|是|   
 |导入/导出业界标准的空间数据格式|是|是|是|是|   
-## <a name="Unsupported"></a> 不支持的功能和服务
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> 不支持的功能和服务
 
 Linux 上的 SQL Server 2017 目前不支持以下功能和服务。 随着时间的推移，对这些功能的支持将越来越多。
 
@@ -228,6 +229,7 @@ Linux 上的 SQL Server 2017 目前不支持以下功能和服务。 随着时�
 | &nbsp; | 警报 |
 | &nbsp; | 日志读取器代理 |
 | &nbsp; | 托管备份 |
+| &nbsp; | 使用 MSX/TSX 进行多服务器管理 |
 | **高可用性** | 数据库镜像  |
 | **安全性** | 可扩展的密钥管理 |
 | &nbsp; | 链接服务器的 AD 身份验证 | 

@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver 的发行说明 | Microsoft Docs
+title: JDBC Driver 发行说明
 ms.custom: ''
-ms.date: 02/26/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,60 +10,64 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 76607fbe96ef954ce90c7d24daf9a12b69a3fce6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 960f62117c77bbf94d4dba1fdb0599ba130922f2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903734"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271353"
 ---
-# <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的发行说明
-
-[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+# <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 发行说明
 
 本文列出了 Microsoft JDBC Driver for SQL Server  的版本。 对于每个发行版本，将对所做的更改进行命名和说明。
 
-## <a name="821"></a>8.2.1
+## <a name="82"></a><a id="82"></a> 8.2
+
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 8.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2122433)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 8.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122536)   
+
+版本号：8.2.2 发布时间：2020 年 3 月 24 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 zip 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)  
 
 ### <a name="compliance"></a>合规性
 
-2020 年 2 月 26 日
-
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
-| 下载 JDBC Driver 8.2 的最新更新。 | &bull;&nbsp;[Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub，8.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 8.2 包中的 jar。<br/><br/>例如，8.2 包中的 mssql-jdbc-8.2.1.jre11.jar 文件应与 Java 11 配合使用。 |
+| 下载 JDBC Driver 8.2 的最新更新。 | &bull; &nbsp; [GitHub，8.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 8.2 包中的 jar。<br/><br/>例如，8.2 包中的 mssql-jdbc-8.2.2.jre11.jar 文件应与 Java 11 配合使用。 |
 | 与 Java 开发工具包 (JDK) 版本 13.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.2 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 13.0 兼容。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-13"></a>支持 JDK 13
 
-除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.2.1 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 13.0 兼容。
+除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.2 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 13.0 兼容。
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 
 | Always Encrypted 更改 | 详细信息 |
 | :--------- | :------ |
-| Microsoft JDBC Driver 8.2.1 for SQL Server 现在支持具有安全 Enclave 的 Always Encrypted。 此处提供了更多详细信息：具有安全 Enclave 的 Always Encrypted。 |
+| Microsoft JDBC Driver 8.2 for SQL Server 现在支持具有安全 Enclave 的 Always Encrypted。 此处提供了更多详细信息：具有安全 Enclave 的 Always Encrypted。 |
 | 更多详细信息和示例代码。 | 请参阅[包含安全 Enclave 的 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server"></a>提高了从 SQL Server 检索临时数据类型时的性能
+### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>提高了从 SQL Server 检索临时数据类型时的性能 <sup>1</sup>
 
 | 临时数据类型更改 | 详细信息 |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.2.1 for SQL Server 提高了从 SQL Server 检索临时数据类型时的性能。 | 此更改通过尽可能避免使用 java.util.Calendar 来消除不必要的临时数据类型转换。 |
+| Microsoft JDBC Driver 8.2 for SQL Server 提高了从 SQL Server 检索临时数据类型时的性能。 | 此更改通过尽可能避免使用 java.util.Calendar 来消除不必要的临时数据类型转换。 |
 | 以下是已受此性能改进影响的临时数据类型的列表；格式为 SQL Server 数据类型，后跟相应的 Java 映射。 | date (java.sql.Date)、datetime (java.sql.Timestamp)、datetime2 (java.sql.Timestamp)、smalldatetime (java.sql.Timestamp) 和 time (java.sql.Time)。 |
 | &nbsp; | &nbsp; |
 
-> [!NOTE]
-> 由于 java.util.Calendar 和 java.time.LocalDateTime API 在处理时区方面存在差异，因此具有用户提供的与其关联的 java.util.Calendar 对象或 microsoft.sql.DateTimeOffset 数据类型的时态数据类型无法受益于这一改进。
+<sup>1</sup> 由于 java.util.Calendar 和 java.time.LocalDateTime API 在处理时区方面存在差异，因此具有用户提供的与其关联的 java.util.Calendar 对象的时态数据类型或 microsoft.sql.DateTimeOffset 数据类型无法受益于这一改进。
 
 ### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>将 mssql-jdbc_auth-\<version>-\<arch>.dll（之前是 sqljdbc_auth.dll）部署到 Maven 存储库
 
 | sqljdbc_auth.dll 更改 | 详细信息 |
 | :------------------- | :------ |
-| 从 Microsoft JDBC Driver 8.2.1 for SQL Server 开始，驱动程序依赖于 mssql-jdbc_auth-\<version>-\<arch>.dll（而不是 sqljdbc_auth.dll）来使用 Azure Active Directory 身份验证功能。 | &nbsp; |
+| 从 Microsoft JDBC Driver 8.2 for SQL Server 开始，驱动程序依赖于 mssql-jdbc_auth-\<version>-\<arch>.dll（而不是 sqljdbc_auth.dll）来使用 Azure Active Directory 身份验证功能。 | &nbsp; |
 | DLL 已被上传到 Maven 存储库，以便更轻松地进行访问。 | 请参阅[本页](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth)。 |
 | &nbsp; | &nbsp; |
 
@@ -74,15 +78,25 @@ ms.locfileid: "77903734"
 | 运用 Java 8 来使用具有安全 Enclave 的 Always Encrypted 时。 | 用户必须将 BouncyCastle 提供程序作为依赖项，或者映射/加载支持 RSASSA-PSS 签名算法的安全提供程序。 |
 | &nbsp; | &nbsp; |
 
-## <a name="741"></a>7.4.1
+## <a name="previous-releases"></a>以前的版本
+
+## <a name="a-id74-741"></a><a id="74"> 7.4.1
+
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 7.4.1 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122712)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 7.4.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122613)   
+
+版本号：7.4.1  
+发布日期：2019 年 8 月 2 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 self-extracting exe 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40a)  
 
 ### <a name="compliance"></a>合规性
 
-2019 年 8 月 2 日
-
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
-| 下载 JDBC Driver 7.4 的最新更新。 | &bull;&nbsp;[Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 下载 JDBC Driver 7.4 的最新更新。 | &bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 7.4 包中的 jar。<br/><br/>例如，7.4 包中的 mssql-jdbc-7.4.1.jre11.jar 文件应与 Java 11 配合使用。 |
 | 与 Java 开发工具包 (JDK) 版本 12.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 7.4 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 12.0 兼容。 |
 | &nbsp; | &nbsp; |
@@ -124,15 +138,23 @@ ms.locfileid: "77903734"
 | 使用 useFmtOnly 时。 | 此功能存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。 有关更多详细信息和解决方法建议，请参阅[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="722"></a>7.2.2
+## <a name="a-id72-722"></a><a id="72"> 7.2.2
+
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 7.2.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122435)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 7.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122434)   
+
+版本号：7.2.2  
+发布日期：2019 年 4 月 16 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 self-extracting exe 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40a)  
 
 ### <a name="compliance"></a>合规性
 
-2019 年 4 月 16 日
-
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
-| 下载 JDBC Driver 7.2 的最新更新。 | &bull;&nbsp;[Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull;&nbsp;[GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 下载 JDBC Driver 7.2 的最新更新。 | &bull;&nbsp;[GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 7.2 包中的 jar。<br/><br/>例如，7.2 包中的 mssql-jdbc-7.2.2.jre11.jar 文件应与 Java 11 配合使用。 |
 | 除 Java 开发工具包 (JDK) 版本 1.8 外，还与 JDK 11.0 兼容。 | 除 Java 开发工具包 (JDK) 版本 1.8 外，Microsoft JDBC Driver 7.2 for SQL Server 现在还与 JDK 11.0 兼容。 |
 | &nbsp; | &nbsp; |
@@ -141,7 +163,7 @@ ms.locfileid: "77903734"
 > 于 2019 年 1 月 31 日发布的 JDBC 7.2 Release To Web (RTW) 驱动程序中发现了 SQL 语句分析方面的问题。 所做的更改已回滚，并且新的 jar（版本 7.2.1）已于 2019 年 2 月 11 日发布。
 >
 > 对驱动程序进行了另一个更新来解决 ActivityID 未正确清除的问题。 新的 jar（版本 7.2.2）已于 2019 年 4 月 16 日发布。
-> 
+>
 > 我们建议更新项目以使用 7.2.2 版本 jar。 有关详细信息，请查看 [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) 和 [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2) 的发行说明。
 
 ### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Active Directory 托管服务标识  (MSI) 身份验证
@@ -195,6 +217,16 @@ ms.locfileid: "77903734"
 | &nbsp; | &nbsp; |
 
 ## <a name="70"></a>7.0
+
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 7.0 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122713)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 7.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122614)   
+
+版本号：7.0.0  
+发布日期：2018 年 7 月 31 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 self-extracting exe 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x40a)  
 
 Microsoft JDBC Driver 7.0 for SQL Server 完全符合 JDBC API 规范 4.2。 根据 Java 版本兼容性命名 7.0 包中的 jar。 例如，7.0 包中的 mssql-jdbc-7.0.0.jre10.jar 文件应与 Java 10 配合使用。
 
@@ -253,6 +285,16 @@ Microsoft JDBC Driver 7.0 for SQL Server 已将“用于 Java 的 Microsoft Azur
 
 ## <a name="64"></a>6.4
 
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 6.4 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122436)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 6.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122537)   
+
+版本号：6.4.0  
+发布日期：2018 年 2 月 27 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 self-extracting exe 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x40a)  
+
 Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 根据 Java 版本兼容性命名 6.4 包中的 jar。 例如，6.4 包中的 mssql-jdbc-6.4.0.jre8.jar 文件必须与 Java 8 配合使用。
 
 ### <a name="support-for-jdk-9"></a>支持 JDK 9
@@ -283,12 +325,12 @@ Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。
 
 JDBC 驱动程序现在支持要用于 SQL Server 的 `sql_variant` 数据类型。 TVP 和大容量复制等功能也支持 `sql_variant` 数据类型，但具有以下限制：
 
-* **对于日期值**： 
+* **对于日期值**：
 
   当使用 TVP 填充包含存储在 `sql_variant` 列中的 `datetime`、`smalldatetime` 或 `date` 值的表时，对结果集调用 `getDateTime()`、`getSmallDateTime()` 或 `getDate()` 方法不起作用并引发以下异常：
 
   `java java.lang.String cannot be cast to java.sql.Timestamp`
-    
+
   作为一种解决办法，可改为使用 `getString()` 或 `getObject()` 方法。
 
 * **对 null 值结合使用 TVP 和 sql_variant**：
@@ -309,14 +351,24 @@ JDBC 驱动程序已将“用于 Java 的 Microsoft Azure Active Directory 身�
 
 ## <a name="62"></a>6.2
 
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 6.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122616)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 6.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122615)   
+
+版本号：6.2.2  
+发布日期：2017 年 9 月 29 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 self-extracting exe 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40a)  
+
 Microsoft JDBC Driver 6.2 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 根据 Java 版本兼容性命名 6.2 包中的 jar。 例如，建议将 6.2 包中的 mssql-jdbc-6.2.2.jre8.jar 文件与 Java 8 配合使用。
 
 > [!NOTE]  
-> 在 2017 年 6 月 29 日发布的 JDBC 6.2 RTW 中发现了元数据缓存改进方面的问题。 改进已回滚，并且新的 jar（版本 6.2.1）已于 2017 年 7 月 17 日发布。 
+> 在 2017 年 6 月 29 日发布的 JDBC 6.2 RTW 中发现了元数据缓存改进方面的问题。 改进已回滚，并且新的 jar（版本 6.2.1）已于 2017 年 7 月 17 日发布。
 >
 > 另一个改进已将 Azure Key Vault 依赖库版本升级到 1.0.0，并且新的 jar（版本 6.2.2）已于 2017 年 10 月 19 日发布。
 >
-> 从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=852460)、[GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) 和 [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) 下载 JDBC Driver 6.2 的最新更新。 请更新项目以使用 6.2.2 版本 jar。 有关详细信息，请查看 [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 和 [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) 的发行说明。
+> 通过上述链接、[GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) 或 [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) 下载 JDBC Driver 6.2 的最新更新。 请更新项目以使用 6.2.2 版本 jar。 有关详细信息，请查看 [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 和 [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) 的发行说明。
 
 ### <a name="azure-ad-support-for-linux"></a>适用于 Linux 的 Azure AD 支持
 
@@ -330,22 +382,35 @@ JDBC 驱动程序现可在以符合美国联邦信息处理标准 (FIPS) 140 的
 
 JDBC 驱动程序现在具有以下支持：
 
-- Kerberos 配置无法修改或无法检索新令牌或 keytab 的应用程序的主体/密码方法。 此方法可用于对仅允许 Kerberos 身份验证的 SQL Server 实例进行身份验证。
-- 跨领域身份验证，方法是使用 Kerberos 集成身份验证，而无需明确设置服务器 SPN。 驱动程序现在会自动计算领域，即使未提供领域也是如此。
-- Kerberos 约束委派，方法是通过数据源接受被模拟用户凭据作为 GSS 凭据对象。 然后，此模拟凭据用于建立 Kerberos 连接。
+* Kerberos 配置无法修改或无法检索新令牌或 keytab 的应用程序的主体/密码方法。 此方法可用于对仅允许 Kerberos 身份验证的 SQL Server 实例进行身份验证。
+* 跨领域身份验证，方法是使用 Kerberos 集成身份验证，而无需明确设置服务器 SPN。 驱动程序现在会自动计算领域，即使未提供领域也是如此。
+* Kerberos 约束委派，方法是通过数据源接受被模拟用户凭据作为 GSS 凭据对象。 然后，此模拟凭据用于建立 Kerberos 连接。
 
 ### <a name="added-timeouts"></a>添加了超时
 
 JDBC 驱动程序现在支持以下可配置超时。 可以根据应用程序的需要进行更改。
 
-- 查询超时用于控制在运行查询时发生超时之前等待的秒数。
-- 套接字超时用于指定在读取或接受套接字时发生超时之前等待的毫秒数。
+* 查询超时用于控制在运行查询时发生超时之前等待的秒数。
+* 套接字超时用于指定在读取或接受套接字时发生超时之前等待的毫秒数。
 
 ## <a name="61"></a>6.1
 
-Microsoft JDBC Driver 6.1 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 这是 JDBC 驱动程序的初始开源版本。 其中包含 mssql-jdbc-6.1.0.jre8.jar 和 mssql-jdbc-6.1.0.jre7.jar 文件，它们对应于 Java 版本兼容性。
+版本号：6.1.0  
+发布日期：2016 年 11 月 17 日  
+
+Microsoft JDBC Driver 6.1 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 这是 JDBC 驱动程序的初始开源版本。 可在 [GitHub v6.1.0 标记](https://github.com/microsoft/mssql-jdbc/releases/tag/v6.1.0) 中找到源代码。 其中生成了 mssql-jdbc-6.1.0.jre8.jar 和 mssql-jdbc-6.1.0.jre7.jar 文件，它们对应于 Java 版本兼容性。
 
 ## <a name="60"></a>6.0
+
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 6.0 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122617)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122714)   
+
+版本号：6.0.8112  
+发布日期：2017 年 1 月 17 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 self-extracting exe 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x40a)  
 
 Microsoft JDBC Driver 6.0 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 根据 JDBC API 版本兼容性命名 6.0 包中的 jar。 例如，6.0 包中的 sqljdbc42.jar 文件符合 JDBC API 4.2。 同样，sqljdbc41.jar 文件符合 JDBC API 4.1。
 
@@ -370,7 +435,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="azure-active-directory"></a>Azure Active Directory
 
-Azure AD 身份验证是一种使用 Azure AD 标识连接到 Azure SQL 数据库 v12 的机制。 Azure AD 身份验证可用于集中管理数据库用户的标识，并替代 SQL Server 身份验证。 
+Azure AD 身份验证是一种使用 Azure AD 标识连接到 Azure SQL 数据库 v12 的机制。 Azure AD 身份验证可用于集中管理数据库用户的标识，并替代 SQL Server 身份验证。
 
 可使用 JDBC Driver 6.0 指定 JDBC 连接字符串中的 Azure AD 凭据以连接到 Azure SQL 数据库。 有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)一文中的身份验证属性。
 
@@ -383,6 +448,16 @@ Azure AD 身份验证是一种使用 Azure AD 标识连接到 Azure SQL 数据�
 驱动程序现在支持透明连接到 AlwaysOn 可用性组。 驱动程序快速发现服务器基础结构的当前 AlwaysOn 拓扑，并以透明方式连接到当前的活动服务器。
 
 ## <a name="42"></a>4.2
+
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 4.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122538)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 4.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122437)   
+
+版本号：4.2.8112  
+发布日期：2015 年 8 月 24 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 self-extracting exe 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x40a)  
 
 Microsoft JDBC Driver 4.2 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 根据 JDBC API 版本兼容性命名 4.2 包中的 jar。 例如，4.2 包中的 sqljdbc42.jar 文件符合 JDBC API 4.2。 同样，sqljdbc41.jar 文件符合 JDBC API 4.1。
 
@@ -415,13 +490,16 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ## <a name="41"></a>4.1
 
+版本号：4.1.8112  
+发布日期：2014 年 12 月 12 日
+
 ### <a name="support-for-jdk-7"></a>支持 JDK 7
 
 除了支持 JDK 6.0 和 5.0 以外，驱动程序还支持 JDK 版本 7.0。
 
-## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>JDBC Driver 6.4、6.0、4.2 和 4.1 应用程序不支持 Itanium
+## <a name="itanium-not-supported-for-jdbc-driver-applications"></a>JDBC Driver 应用程序不支持 Itanium
 
-不支持适用于 SQL Server 应用程序 的 Microsoft JDBC 驱动程序 6.4、6.0、4.2 和 4.1 在 Itanium 计算机上运行。
+不支持 Microsoft JDBC Driver for SQL Server 在 Itanium 计算机上运行。
 
 ## <a name="see-also"></a>另请参阅
 

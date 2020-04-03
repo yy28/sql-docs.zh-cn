@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0018d38beb1c576ea80b39d525388118d7b8063c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558311"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434104"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 Python 包
 
@@ -27,7 +27,7 @@ ms.locfileid: "77558311"
 > [!NOTE]
 > 不建议使用标准 Python `pip install` 命令在 SQL Server 2019 上添加 Python 包。 请改用本文中所述的 sqlmlutils  。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 + 必须使用 Python 语言选项安装 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。
 
@@ -75,9 +75,21 @@ ms.locfileid: "77558311"
 
 如果用于连接到 SQL Server 的客户端计算机具有 Internet 访问权限，则可以通过 Internet 使用 sqlmlutils 查找 text-tools 包和任何依赖项，然后将该包远程安装到 SQL Server 实例   。
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+1. 在客户端计算机上，打开 Python 或 Python 环境  。
+
+1. 使用以下命令安装 text-tools 包  。 替换你自己的 SQL Server 数据库连接信息（如果使用 Windows 身份验证，无需 `uid` 和 `pwd` 参数）。
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 1. 在客户端计算机上，打开 Python 或 Python 环境  。
 
 1. 使用以下命令安装 text-tools 包  。 请将相应部分替换为自己的 SQL Server 数据库连接信息。
+
+::: moniker-end
 
    ```python
    import sqlmlutils
@@ -105,12 +117,22 @@ ms.locfileid: "77558311"
 
 在本例中，text-tools 没有依赖项，因此 `text-tools` 文件夹中只有一个文件可供安装  。 而类似于 scikit-plot 的包有 11 个依赖项，因此你会在文件夹中找到 12 个文件（即 scikit-plot 包及其 11 个依赖包），然后可安装每个文件   。
 
-运行以下 Python 脚本。 替换包的实际文件路径和名称，以及你自己的 SQL Server 数据库连接信息（如果不使用 Windows 身份验证，请添加 `uid` 和 `pwd` 参数）。 对文件夹中的每个包文件重复 `sqlmlutils.SQLPackageManager` 语句。
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+运行以下 Python 脚本。 替换包的实际文件路径和名称，以及你自己的 SQL Server 数据库连接信息（如果使用 Windows 身份验证，无需 `uid` 和 `pwd` 参数）。 对文件夹中的每个包文件重复 `sqlmlutils.SQLPackageManager` 语句。
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+运行以下 Python 脚本。 替换包的实际文件路径和名称，以及你自己的 SQL Server 数据库连接信息。 对文件夹中的每个包文件重复 `sqlmlutils.SQLPackageManager` 语句。
+
+::: moniker-end
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="username", pwd="password"))
+sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>在 SQL Server 中使用包

@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688781"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271423"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
@@ -44,6 +44,39 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1594nbsp-ssdt-for-vs-2017"></a>15.9.4,&nbsp; SSDT for VS 2017
+
+发布时间：  &nbsp; 2020 年 3 月 26 日  
+生成号：  &nbsp; 14.0.16214.0  
+SSDT for Visual Studio 2017。 
+
+### <a name="whats-new"></a>新增功能
+
+| 新项 | 详细信息 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 修复了在容器内移动控制流约束行时 VS 可能崩溃的问题。 |
+| Integration Services (SSIS) | 修复了以下问题：维护计划任务的 UI 无法列出在任务 UI 之外创建的 ADO.NET 连接管理器。 |
+| Integration Services (SSIS) | 修复了以下问题：如果一个 SSAS 项目属于同时加载了 SSIS 项目的解决方案，则部署该 SSAS 时不显示 Azure 交互式登录页。 |
+| Integration Services (SSIS) | 修复了以下问题：未安装 SQL Server 时，单击 MSOLAP 驱动程序属性按钮会导致 DTS 向导崩溃。 |
+| Integration Services (SSIS) | 修复了以下问题：MSOLEDBSQL 驱动程序不支持 DTS 向导中的 AAD 身份验证。 |
+| Integration Services (SSIS) | 修复了以下问题：以 SQL Server 2012 为目标时，无法正确持久化 XML 源和 ADO.NET 目标。 |
+| Integration Services (SSIS) | 修复了 Web 服务任务编辑器中的“下载 WSDL”按钮可能无法正确显示的问题。 |
+| Integration Services (SSIS) | 修复了查找转换编辑器的“连接管理器”页中可能无法选择表的问题。 |
+| Integration Services (SSIS) | 修复了缓存转换编辑器布局可能混乱的问题。 |
+| Integration Services (SSIS) | 修复了包编辑器中“连接管理器”区域可能无法正确显示的问题。 |
+| Integration Services (SSIS) | 修复了“转换为包部署模型”向导中可能无法正确显示状态图标的问题。 |
+| Integration Services (SSIS) | 已将安装程序更改为不需要从 Internet 下载有效负载的完整安装程序。 |
+
+### <a name="known-issues"></a>已知问题
+
+| 已知问题 | 详细信息 |
+| :---------- | :------ |
+| 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 | 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。 |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持 OData v4。 | &nbsp; |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持使用 ODBC 连接到 Oracle。 | &nbsp; |
+| 未本地化 Power Query 源 | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3，SSDT&nbsp;for VS 2017
 

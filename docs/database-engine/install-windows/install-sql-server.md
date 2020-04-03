@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 30155a37f57391edeee916cd2b6629d63a1dcaaa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 58773f430fc61a7817d7d3ee7c9e7b597716c438
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288651"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434174"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 安装指南
 
@@ -44,7 +44,9 @@ ms.locfileid: "79288651"
     - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md)：  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
 
-*  **要求**：查看[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的安装要求、系统配置检查和安全注意事项 
+*  **要求**：查看 [SQL Server 2016 和 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 或 [Linux 上的 SQL Server](../../linux/sql-server-linux-setup.md) 的硬件和软件安装要求，以及系统配置检查和[规划 SQL Server 安装中](../../sql-server/install/planning-a-sql-server-installation.md)的安全注意事项 
+
+
   
 * **示例数据库和示例代码**： 
     * 默认情况下，它们不作为 SQL Server 安装程序的一部分安装，但可以找到它们 
@@ -68,8 +70,19 @@ ms.locfileid: "79288651"
 * [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
 
 
+## <a name="considerations"></a>注意事项
+
+-   如果通过远程桌面连接 RDC 客户端上本地资源中的介质来启动安装程序，安装将会失败。 若要执行远程安装，介质必须处于网络共享状态，或是物理计算机或虚拟机的本地介质。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质要么处于网络共享状态，要么是映射的驱动器、本地驱动器，或者是虚拟机的 ISO。  
+  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装该产品所需的以下软件组件：  
+  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持文件  
+
 ## <a name="sql-server-installation"></a>SQL Server 安装
- 
+
+
 |项目|说明|  
 |-----------|-----------------|  
 |[安装向导](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|使用从 setup.exe 安装媒体启动的安装向导 GUI 安装 SQL Server。 |  
@@ -111,7 +124,7 @@ ms.locfileid: "79288651"
 
 [升级 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/upgrade-sql-server.md)   
 [卸载 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/uninstall-sql-server.md)   
-[安装 SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)
-[安装 SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)
+[安装 SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)   
+[安装 SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)   
 [安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 商业智能功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
 [高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  

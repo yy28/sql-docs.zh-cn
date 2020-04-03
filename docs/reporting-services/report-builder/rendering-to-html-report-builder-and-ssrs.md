@@ -1,5 +1,6 @@
 ---
 title: 以 HTML 格式呈现（报表生成器）| Microsoft Docs
+description: 在报表生成器中，HTML 呈现扩展插件以 HTML 格式呈现分页报表。 它可以生成完整的 HTML 页面或可嵌入其他页面的片段。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6b8a27924bcceefe54d4a4663e3d55888920dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5862081622d9d5c1a42fa8806ae482f02919a7b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082481"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290870"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
   HTML 呈现扩展插件以 HTML 格式呈现分页报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。  
@@ -27,11 +28,11 @@ ms.locfileid: "77082481"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> 以 MHTML 格式呈现  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> 以 MHTML 格式呈现  
  HTML 呈现扩展插件还可以将报表呈现为 MHTML 格式（聚合 HTML 文档的 MIME 封装）。 MHTML 扩展了 HTML 以实现在 HTML 文档中嵌入图像等编码对象。 使用 MHTML 呈现扩展插件后，可将图像、文档或其他二进制文件等资源作为报表 HTML 内的 MIME 结构嵌入单个文件中。 MHTML 报表也可用于嵌入到电子邮件中，因为所有资源都包含在报表中。 虽然实际上呈现 MHTML 的是 HTML 呈现扩展插件，但此功能也可称为 MHTML 呈现扩展插件。  
   
   
-##  <a name="BrowserSupport"></a> 浏览器支持  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> 浏览器支持  
  此呈现扩展插件支持以下浏览器版本：  
   
 -   Internet Explorer 5.5 和更高版本  
@@ -43,7 +44,7 @@ ms.locfileid: "77082481"
  出于跨浏览器的考虑，呈现的报表可能因浏览器的不同而稍有差别。 例如，文本框包含名为 WritingMode 的属性。 Firefox 不支持此属性。  
   
   
-##  <a name="HTMLSpecificRenderingRules"></a> 特定于 HTML 的呈现规则  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> 特定于 HTML 的呈现规则  
  呈现时将应用下列特定于 HTML 的规则：  
   
 -   呈现器生成一个 HTML 表结构，以包含每个 **ReportItems** 集合（如果存在多个集合）中的所有项。  
@@ -61,7 +62,7 @@ ms.locfileid: "77082481"
 -   所有坐标和报表项尺寸的单位均转换为毫米。 其他所有尺寸（包括样式属性）均保留其原始单位。 小于 0.2mm 的尺寸差和位置差均视为 0mm。  
   
   
-##  <a name="Interactivity"></a> 交互  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 交互  
  HTML 支持一些交互元素。 下面是对一些特定行为的说明。  
   
 ### <a name="show-and-hide"></a>显示和隐藏  
@@ -84,10 +85,10 @@ ms.locfileid: "77082481"
   
  其他搜索和查找功能由 ReportViewer Web 窗体控件提供。  
   
-##  <a name="FontsOnClient"></a> 客户端计算机上的字体
+##  <a name="fonts-on-the-client-computer"></a><a name="FontsOnClient"></a> 客户端计算机上的字体
  如果报表中使用的是自定义字体，用于查看报表的计算机（客户端计算机）必须安装自定义字体，才能正确显示报表。 如果客户端计算机上没有安装此字体，报表显示的是系统默认字体，而不是自定义字体。
   
-##  <a name="DeviceInfo"></a> 设备信息设置  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置（包括以哪个模式呈现）。 有关详细信息，请参阅 [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)。  
   
   

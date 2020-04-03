@@ -1,7 +1,7 @@
 ---
 title: 系统要求、安装和驱动程序文件 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2019
+ms.date: 03/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6365b86a4efe8d29273035d62f76c7bb02b15335
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 2f451493a93e545fea0507f83fe5195b30ec2680
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79285811"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79526802"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系统要求、安装和驱动程序文件
 
@@ -23,17 +23,22 @@ ms.locfileid: "79285811"
 
 本文讨论连接到 SQL Server 的 ODBC 驱动程序。
 
-## <a name="driver-versions"></a>驱动程序版本
+## <a name="sql-version-compatibility"></a>SQL 版本兼容性
 
-| 驱动程序版本 | 支持说明 |
-| :------------- | :--------------------- |
-| ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | 支持连接到 SQL Server 2014、SQL Server 2012、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] 和 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 |
-| Windows 上的 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | 安装此版本的计算机上还可以安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的一个或多个版本。 |
-| ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | 支持连接到 SQL Server 2016、SQL Server 2014、SQL Server 2012、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]。 |
-| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | 除支持上述 13 版支持的相同数据库版本之外，还支持 SQL Server 2017。 |
-| ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | 支持与 13.1 支持的相同数据库版本。 |
-| 适用于 SQL Server 的 ODBC 驱动程序 17 | 从驱动程序版本 17.3 开始，支持 SQL Server 2019。 |
-| &nbsp; | &nbsp; |
+兼容性表示在驱动程序发布时，已测试驱动程序与现有 SQL 版本的兼容性。 SQL Server 版本通常尝试保持与现有客户端驱动程序的后向兼容性。 但是，旧的客户端驱动程序可能无法使用 SQL Server 版本中的新功能。
+
+|驱动程序版本|Azure SQL 数据库|Azure SQL DW|Azure SQL 托管实例|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
+|-|-|-|-|-|-|-|-|-|-|-|-|
+|17.5|Y|Y|Y|Y|Y|Y|Y|Y| | | |
+|17.4|Y|Y|Y|Y|Y|Y|Y|Y| | | |
+|17.3|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y| |
+|17.2|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
+|17.1|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
+|17.0|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
+|13.1| | | | |Y|Y|Y|Y|Y|Y| |
+|13  | | | | | |Y|Y|Y|Y|Y| |
+|11  | | | | | | |Y|Y|Y|Y|Y|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>连接字符串详细信息
 
@@ -41,33 +46,31 @@ ms.locfileid: "79285811"
 
 ## <a name="supported-operating-systems"></a>支持的操作系统
 
-可通过驱动程序在下列 Windows 操作系统上运行应用程序：  
+下表显示了 Windows 操作系统版本的驱动程序版本支持：
 
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Vista SP2（仅限 ODBC Driver 11。）&nbsp; 
-- Windows 7
-- Windows 8
-- Windows 8.1
-- Windows 10
+|驱动程序版本|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
+|-|-|-|-|-|-|-|-|-|-|
+|17.5|Y|Y|Y|Y| |Y|Y| | |
+|17.4|Y|Y|Y|Y|Y|Y|Y|Y| |
+|17.3|Y|Y|Y|Y|Y|Y|Y|Y| |
+|17.2| |Y|Y|Y|Y|Y|Y|Y| |
+|17.1| |Y|Y|Y|Y|Y|Y|Y| |
+|17.0| |Y|Y|Y|Y|Y|Y|Y| |
+|13.1| |Y|Y|Y|Y|Y|Y|Y| |
+|13  | | | |Y|Y| |Y|Y| |
+|11  | | | |Y|Y| | |Y|Y|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="installing-microsoft-odbc-driver-for-sql-server"></a>安装 Microsoft ODBC Driver for SQL Server
 
-从以下任一链接运行 `msodbcsql.msi` 可以安装该驱动程序：
-
-- [在 Windows 上下载 Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)
-- [在 Windows 上下载 Microsoft ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339)
-- [在 Windows 上下载 Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=50420)
-- [在 Windows 上下载 Microsoft ODBC Driver 11 for SQL Server](https://www.microsoft.com/download/details.aspx?id=36434)
+从任一 [Windows 的下载](../download-odbc-driver-for-sql-server.md#download-for-windows)运行 `msodbcsql.msi` 可以安装该驱动程序。
 
 > [!NOTE]
 > 对于安装了 Driver 17.1.0.1 或更低版本的用户，建议先手动将其卸载，然后再安装较新版本的驱动程序。
 
 ### <a name="side-by-side-with-native-client"></a>与 Native Client 并行安装
 
-驱动程序可以与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 并行安装。
+驱动程序可以与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 并行安装。 主要版本的驱动程序（11、13、17）也可以并行安装。
 
 调用 `msodbcsql.msi` 时，默认仅安装客户端组件。 客户端组件是一些文件，它们支持运行通过驱动程序开发的应用程序。 要安装 SDK 组件，请在命令行中指定 `ADDLOCAL=ALL`。 以下是一个示例。
   

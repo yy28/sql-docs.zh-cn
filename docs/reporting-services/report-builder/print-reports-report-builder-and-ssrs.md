@@ -1,5 +1,6 @@
 ---
 title: 打印报表 | Microsoft Docs
+description: 可以从 Web 门户或用于查看报表的应用程序中查看和打印报表。 客户端计算机按需执行打印处理。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dd9fc438ba1ec30a85119ceef6d5e1503a5ea1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f81be70bf4de9d9f15a3c35d3a3dc4b5c81f2609
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082492"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290885"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>打印报表 - Reporting Services (SSRS)
   在将报表保存到报表服务器之后，可以通过 Web 门户或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  

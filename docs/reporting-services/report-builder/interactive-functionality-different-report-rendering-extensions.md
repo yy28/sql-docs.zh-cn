@@ -1,5 +1,6 @@
 ---
 title: 交互功能 - 不同报表呈现扩展插件 | Microsoft Docs
+description: Reporting Services 允许在运行时与分页报表进行交互。 本文介绍交互式功能如何以特定格式工作。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8df9a5b08f4aa8883bb9351fa59df147e80bac95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580705"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342774"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>交互功能 - 不同报表呈现扩展插件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了在运行时与分页报表进行交互的功能。 并非所有的报表呈现格式都支持整套交互功能。 使用下表了解每项交互功能在处理特定格式时的工作原理。  

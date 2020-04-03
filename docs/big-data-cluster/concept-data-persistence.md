@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173573"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215737"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>使用 Kubernetes 上的 SQL Server 大数据群集进行数据暂留
 
@@ -33,6 +33,8 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
 - 如果在配置中提供的存储类的存储预配程序不支持动态预配，必须预先创建永久性卷。 例如，`local-storage` 预配程序不启用动态预配。 若要了解如何在使用 `kubeadm` 部署的 Kubernetes 群集中继续操作，请参阅此[示例脚本](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)。
 
 - 部署大数据群集时，可以配置相同的存储类，以供群集中的所有组件使用。 但生产部署的最佳做法是，各种组件需要不同的存储配置，以适应各种大小或吞吐量的工作负载。 可以覆盖控制器中为每个 SQL Server 主实例、数据集和存储池指定的默认存储配置。 本文提供了具体操作示例。
+
+- 在计算存储池大小要求时，必须考虑 HDFS 配置的复制因子。  复制因子在部署时可在群集部署配置文件中配置。 开发测试配置文件（即 `aks-dev-test`或`kubeadm-dev-test`）的默认值是 2，对于我们为生产部署推荐的配置文件（即 `kubeadm-prod`），默认值是 3。 作为最佳做法，我们建议你将大数据集群的生产部署配置为至少 3 个 HDFS 的复制因子。 复制因子的值将影响存储池中的实例数量：至少必须部署与复制因子的值一样多的存储池实例。 此外，还必须相应地调整存储空间的大小，并将在 HDFS 中复制数据的次数调整为复制因子的值。 在[此处](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication)可以找到更多关于 HDFS 数据复制的信息。 
 
 - 自 SQL Server 2019 CU1 发布后，无法在部署后修改存储配置设置。 此约束不仅阻止修改每个实例的永久性卷声明的大小，还阻止在部署后执行缩放操作。 因此，在部署大数据群集之前，请务必先计划存储布局。
 
@@ -101,7 +103,7 @@ azdata bdc config init --source aks-dev-test --target custom
 此过程会创建两个文件（`bdc.json` 和 `control.json`），你可以自定义它们，具体方法是手动编辑它们，或使用 `azdata bdc config` 命令。 可以结合使用 jsonpath 和 jsonpatch 库以提供编辑配置文件的方法。
 
 
-### <a id="config-samples"></a> 配置存储类名称和/或声明大小
+### <a name="configure-storage-class-name-andor-claims-size"></a><a id="config-samples"></a> 配置存储类名称和/或声明大小
 
 默认情况下，对于群集中预配的每个 Pod，为之预配的永久性卷声明的大小为 10GB。 可以在群集部署之前更新此值，以适应要在自定义配置文件中运行的工作负载。
 

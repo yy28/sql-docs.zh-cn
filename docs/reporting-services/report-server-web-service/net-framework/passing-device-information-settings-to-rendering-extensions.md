@@ -1,5 +1,6 @@
 ---
 title: 将设备信息设置传递给呈现扩展插件 | Microsoft Docs
+description: 呈现参数将传递给呈现扩展插件。 通过呈现方法、作为 URL 参数或在配置文件中指定设备信息设置。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c8dc233904cb94520d9074924c3aabc30be85a7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128881"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509768"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>将设备信息设置传递给呈现扩展插件
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，设备信息设置用于将呈现参数传递到呈现扩展插件。 报表服务器 Web 服务中的设置将以 **DeviceInfo** XML 元素的形式传递并由报表服务器进行处理。 由于设备信息设置均具有默认值，因此在呈现进程中可将其视为可选参数。 但是，您可以使用设备信息设置对呈现进行自定义并覆盖由服务器提供的默认值。  

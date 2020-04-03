@@ -1,5 +1,6 @@
 ---
 title: Detail 属性 | Microsoft Docs
+description: 了解 Reporting Services SoapException 类的 Detail 属性，特别是定义该属性的 XML 元素。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,58 +12,58 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 087f7f6da8882f181c55a187438d4493ec5b1a9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 929c597fda9b97c5ffdb24a0aed236f68727a3fd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991560"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215616"
 ---
 # <a name="detail-property"></a>Detail 属性
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]“SoapException”类的“Detail”属性具有以下 XML 结构：  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]“SoapException”  类的“Detail”  属性具有以下 XML 结构：  
   
 ## <a name="elements"></a>元素  
- Detail  
+ Detail   
  包含所有其他错误详细信息元素的顶级元素。  
   
  **ErrorCode**  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特定的错误代码。  
   
- HttpStatus  
+ HttpStatus   
  HTTP 状态代码。  
   
  **消息**  
  报表服务器分配的错误消息和错误代码。  
   
- HelpLink  
+ HelpLink   
  指向某网站的帮助链接 URL，在该网站中可以找到有关错误的更多信息。 有关详细信息，请参阅 [HelpLink 元素](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md)。  
   
- LinkID  
+ LinkID   
  分配给链接的 ID。  
   
- ProductName  
- 产品的名称。 默认值为“Microsoft SQL Server Reporting Services”。  
+ ProductName   
+ 产品的名称。 默认值为“Microsoft SQL Server Reporting Services”  。  
   
- ProductVersion  
+ ProductVersion   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的版本。 最大长度为 15 个字符。 版本号的格式应如下所示：8.00.0xxx.00。  
   
- ProductLocaleId  
+ ProductLocaleId   
  应用程序的 INTL DLL 的区域设置 ID 或语言 ID（例如，0x41A）。  
   
- OperatingSystem  
- 在其中安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的操作系统。 有效值包括：“0”表示独立于操作系统，“1”表示 [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]，“16”表示 Windows XP。  
+ OperatingSystem   
+ 在其中安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的操作系统。 有效值包括：“0”  表示独立于操作系统，“1”  表示 [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]，“16”  表示 Windows XP。  
   
- CountryLocaleId  
+ CountryLocaleId   
  操作系统的区域设置 ID 或语言 ID。 例如，对应于 Windows 法语版的值为 0x040c。  
   
- MoreInformation  
+ MoreInformation   
  一个 XML 字符串，其中包含在运行方法时出现的嵌套异常。  
   
  **数据源**  
- “MoreInformation”的一个子元素。 错误的源。  
+ “MoreInformation”  的一个子元素。 错误的源。  
   
  **消息**  
- “MoreInformation”的一个子元素。 嵌套异常的错误消息。 此元素包含“ErrorCode”和“HelpLink”的 XML 属性。  
+ “MoreInformation”  的一个子元素。 嵌套异常的错误消息。 此元素包含“ErrorCode”  和“HelpLink”  的 XML 属性。  
   
  **警告**  
  一个 XML 字符串，其中包含从报表处理返回的警告。  

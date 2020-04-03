@@ -1,5 +1,6 @@
 ---
 title: 使用 Reporting Services SOAP 标头 | Microsoft Docs
+description: 使用 Reporting Services SOAP 标头将操作批处理为单个事务、管理会话状态，并根据项的路径或 ID 检索属性。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99a4ac18003defd2a6b3cffdd4bc1d2955c44816
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7f0cb5dc846e8f1f7e292366c7f938366b53de2d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026014"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216193"
 ---
 # <a name="using-reporting-services-soap-headers"></a>使用 Reporting Services SOAP 标头
   使用 SOAP 与 Web 服务方法的通信遵循标准的格式。 此格式中的部分内容为在 XML 文档中编码的数据。 XML 文档由根 Envelope 元素组成，而根 Envelope 元素又由必需的 Body 元素和可选的 Header 元素组成    。 Body 元素包含特定于相应消息的数据  。 可选的 Header 元素包含与特定消息并不直接相关的其他信息  。 Header 元素的每一子元素都称为 SOAP 标头  。  

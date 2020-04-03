@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2024af63b1a033b2dcb5afbde461cff02b9462b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4cd11ea250637c172a9d8343af934c326089add
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082217"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380768"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>配置文件中的 URL（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 RSReportServer.config 文件中存储应用程序设置。 在此文件内，有一些既用于 URL 又用于 URL 预留的配置设置。 这些配置设置的用途和修改规则大不相同。 如果您习惯于通过修改配置文件来优化部署，则本主题可帮助您了解每项 URL 设置的用法。  
@@ -36,7 +36,7 @@ ms.locfileid: "77082217"
   
  当您配置用于应用程序访问的 URL 时，将在 RSReportServer.config 文件中自动指定**UrlRoot** 。 如果在配置文件中修改该值，则必须指定连接到报表服务器数据库（包含要传递的报表）的报表服务器 Web 服务的有效 URL 地址。 您只可以为一个报表服务器实例指定一个 **UrlRoot** ；对于任何给定的报表服务器实例，RSReportServer.config 文件中只能存在一个 **UrlRoot** 条目。 如果您为报表服务器 Web 服务保留了多个 URL，则必须为 **UrlRoot**选择其中一个可用值。  
   
- 在大多数情况下，您无需修改 **UrlRoot**。 然而，如果将通过完全限定的 URL 访问报表服务器，并且你未将使用主机标头的 URL 配置为完全限定的站点名称，则必须手动编辑 RSReportServer.config 以将 **UrlRoot** 设置为将用于呈现报表的完全限定的报表服务器 URL（例如， https://www.adventure-works.com/mywebapp/reportserver) ）。  
+ 在大多数情况下，您无需修改 **UrlRoot**。 然而，如果将通过完全限定的 URL 访问报表服务器，并且你未将使用主机标头的 URL 配置为完全限定的站点名称，则必须手动编辑 RSReportServer.config 以将 **UrlRoot** 设置为将用于呈现报表的完全限定的报表服务器 URL（例如，`https://www.adventure-works.com/mywebapp/reportserver`）。  
   
 #### <a name="urls-connecting-the-ssrswebportal-and-web-parts-to-the-report-server-web-service"></a>用于将 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 和 Web 部件连接到报表服务器 Web 服务的 URL  
  Reporting Services 的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 和 SharePoint 2.0 Web 部件是连接到报表服务器的 Web 前端组件。 用于连接到后端报表服务器的 URL 包括：  

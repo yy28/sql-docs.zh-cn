@@ -1,5 +1,6 @@
 ---
 title: 将报表发布到 SharePoint 库 | Microsoft Docs
+description: 了解如何通过在报表设计器中设置项目属性将报表发布到 SharePoint 库。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b10c9dbfa67a632ce007c1406f8b806a03475b4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 093837d7d7d2c6833b4c7dce8fabbf554d634290
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571048"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510108"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>将报表发布到 SharePoint 库
   若要将报表发布到配置为 SharePoint 集成模式的 SharePoint 站点，必须在报表设计器中设置项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。 在报表定义中，对子报表、钻取报表以及资源（如基于 Web 的图像）的所有引用都必须为完全限定的 URL。  
@@ -28,9 +29,9 @@ ms.locfileid: "65571048"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开现有的或新的报表服务器项目。  
   
-2.  在 **“项目”** 菜单中单击 **“属性”** 。 “_项目>属性页”对话框即会打开\<_  。  
+2.  在 **“项目”** 菜单中单击 **“属性”** 。 “\<项目>属性页”对话框即会打开   。  
   
-3.  在 **“配置”** 列表中，选择要用于生成并发布报表的解决方案生成配置的名称。 当前配置以“活动”状态列出（**配置>）** *\<* 。  
+3.  在 **“配置”** 列表中，选择要用于生成并发布报表的解决方案生成配置的名称。 当前配置以“活动”状态列出（\<配置>）   。  
   
 4.  如果想在项目中发布共享数据源，并覆盖以前发布的共享数据源，请将 **OverwriteDataSources** 设置为 **True**。  
   

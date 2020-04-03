@@ -1,5 +1,6 @@
 ---
 title: “转换 CRI”对话框（报表生成器）| Microsoft Docs
+description: 报表生成器提示你将某些具有不受支持的功能的自定义报表项转换为新的报表定义格式。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 16d2e745c923e719699c8295e186d5f91e7462da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5c3d7ece0e4bccf6bea6426391498005887ef6c8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580796"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342909"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>“转换 CRI”对话框（报表生成器）
 
@@ -31,9 +32,9 @@ ms.locfileid: "65580796"
   
 -   **是** 选择 **“是”** 将转换报表中所有可以转换的 CRI。 无法升级 CRI 中不受支持的功能，也不能从报表定义文件中删除它们。 有关不支持的功能的列表，请参阅 [升级报表](../../reporting-services/install-windows/upgrade-reports.md)。 查看报表时，可能看到 CRI 在报表中的显示方式存在差异。  
   
--   **否** ：如果不希望转换报表中的 CRI，请选择 **“否”** 。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”**。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
+-   **否** ：如果不希望转换报表中的 CRI，请选择 **“否”** 。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”** 。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
   
- 在这两种情况下，报表都会升级为新的报表定义格式，且原始报表的备份副本会另存为 \<报表名称> `-` Backup.rdl。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
+ 在这两种情况下，报表都会升级为新的报表定义格式，且原始报表的备份副本会另存为 \<报表名称> `-` Backup.rdl  。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
   
  如果不保存报表，则原始报表将保持不变。 但是，不能在比 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 更高的版本中或在使用此报表定义格式的报表创作环境中编辑该报表。 对于报表的原始版本，通过使用报表管理器将它上载到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器，可以继续运行它。 有关详细信息，请参阅[上传文件或报表（报表管理器）](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)。  
   

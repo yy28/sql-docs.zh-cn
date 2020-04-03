@@ -1,5 +1,6 @@
 ---
 title: 使用 Reporting Services 移动报表中的模拟数据 | Microsoft Docs
+description: 当将库元素放在设计图面上时，移动报表发布服务器会为其生成模拟数据。 设计具有模拟数据的原型。
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39640b3ce6e8d3c8760e3c1a1153949426eba80c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62474850"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448369"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
 将库元素放在设计图面上时， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 会立即生成该元素的模拟数据。 创建移动报表时，此数据有许多用处。   
@@ -38,7 +39,7 @@ ms.locfileid: "62474850"
   
 所有控件都绑定到真实数据之后，不再使用的模拟数据会自动从移动报表中删除。 不能删除设计图面上元素还在引用的模拟表。  
   
->**注意**：模拟数据不会添加到整个移动报表足迹，因为它没有使用移动报表进行序列化，而是在运行时实时生成。  
+>**注意**：模拟数据不会添加到整个移动报表占地，因为它没有与移动报表一起序列化，而是在运行时实时生成。  
   
 ### <a name="see-also"></a>另请参阅  
 - [使用 SQL Server Mobile Report Publisher 创建和发布移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

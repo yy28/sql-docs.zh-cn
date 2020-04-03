@@ -8,13 +8,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
-ms.date: 06/28/2018
-ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.date: 03/17/2020
+ms.openlocfilehash: 3a45b9164d2d81983e9a40f0395189979d4daa7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286481"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448259"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -78,7 +78,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/DiagnosticsFile:**|**/df**|{string}|指定一个用于存储诊断日志的文件。 |
 |**/MaxParallelism:**|**/mp**|{int}| 指定针对数据库运行的并发操作的并行度。 默认值为 8。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|指定 sqlpackage.exe 是否应覆盖现有文件。 指定 false 会导致 sqlpackage.exe 在遇到现有文件时中断操作。 默认值为 True。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:Publish /?。 |
+|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:Extract /?。 |
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隐藏详细反馈。 默认为 False。 |
 |**/SourceConnectionString:**|**/scs**|{string}|指定源数据库的有效 SQL Server/Azure 连接字符串。 如果指定了此参数，则应该独立于所有其他源参数来使用此参数。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|定义源数据库的名称。 |
@@ -111,7 +111,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|指定是否忽略用户和登录名之间的关系。|
 |**/p:**|LongRunningCommandTimeout=(INT32)| 指定针对 SQL Server 执行查询时的长时间运行命令超时（以秒为单位）。 使用 0 表示无限期等待。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定在提取过程中使用的架构模型的后备存储的类型。|
-|**/p:**|TableData=(STRING)|指示将从中提取数据的表。 请按以下格式指定表名，不一定要使用括号来括住名称部分：schema_name.table_identifier。|
+|**/p:**|TableData=(STRING)|指示将从中提取数据的表。 请按以下格式指定表名，不一定要使用括号来括住名称部分：schema_name.table_identifier。 可以多次指定此选项。|
 |**/p:**| TempDirectoryForTableData=(STRING)|指定用于在将表数据写入包文件前缓冲表数据的临时目录。|
 |**/p:**|VerifyExtraction=(BOOLEAN)|指定是否应验证提取的 dacpac。|
 
@@ -277,7 +277,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
 |**/DiagnosticsFile:**|**/df**|{string}|指定一个用于存储诊断日志的文件。 |
 |**/MaxParallelism:**|**/mp**|{int}| 指定针对数据库运行的并发操作的并行度。 默认值为 8。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|指定 sqlpackage.exe 是否应覆盖现有文件。 指定 false 会导致 sqlpackage.exe 在遇到现有文件时中断操作。 默认值为 True。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:Publish /?。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:Export /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隐藏详细反馈。 默认为 False。|
 |**/SourceConnectionString:**|**/scs**|{string}|指定源数据库的有效 SQL Server/Azure 连接字符串。 如果指定了此参数，则应该独立于所有其他源参数来使用此参数。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|定义源数据库的名称。 |
@@ -299,7 +299,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| 指定针对 SQLServer 执行查询时的数据库锁超时（以秒为单位）。 使用 -1 表示无限期等待。|
 |**/p:**|LongRunningCommandTimeout=(INT32)| 指定针对 SQL Server 执行查询时的长时间运行命令超时（以秒为单位）。 使用 0 表示无限期等待。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定在提取过程中使用的架构模型的后备存储的类型。|
-|**/p:**|TableData=(STRING)|指示将从中提取数据的表。 请按以下格式指定表名，不一定要使用括号来括住名称部分：schema_name.table_identifier。|
+|**/p:**|TableData=(STRING)|指示将从中提取数据的表。 请按以下格式指定表名，不一定要使用括号来括住名称部分：schema_name.table_identifier。 可以多次指定此选项。|
 |**/p:**|TempDirectoryForTableData=(STRING)|指定用于在将表数据写入包文件前缓冲表数据的临时目录。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|指定应使用的目标引擎版本。 这会影响是否允许具有 V12 功能的 Azure SQL 数据库服务器支持的对象，如生成的 bacpac 中的内存优化表。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|指定是否验证适用于 Microsoft Azure SQL 数据库 v12 的受支持全文文档类型。|
@@ -317,7 +317,7 @@ SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件�
 |**/Diagnostics:**|**/d**|{True&#124;False}|指定诊断日志记录是否输出到控制台。 默认为 False。 |
 |**/DiagnosticsFile:**|**/df**|{string}|指定一个用于存储诊断日志的文件。 |
 |**/MaxParallelism:**|**/mp**|{int}| 指定针对数据库运行的并发操作的并行度。 默认值为 8。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:Publish /?。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:Import /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隐藏详细反馈。 默认为 False。|
 |**/SourceFile:**|**/sf**|{string}|指定要用作操作源的源文件。 如果使用此参数，则其他源参数应无效。 |
 |**/TargetConnectionString:**|**/tcs**|{string}|指定目标数据库的有效 SQL Server/Azure 连接字符串。 如果指定了此参数，则应该独立于所有其他目标参数来使用此参数。 |
@@ -362,7 +362,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
 |**/OutputPath:**|**/op**|{string}|指定生成输出文件的文件路径。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|指定 sqlpackage.exe 是否应覆盖现有文件。 指定 false 会导致 sqlpackage.exe 在遇到现有文件时中断操作。 默认值为 True。 |
 |**/Profile:**|**/pr**|{string}|指定 DAC 发布配置文件的文件路径。 该配置文件定义在生成输出时要使用的属性和变量的集合。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:Publish /?。 |
+|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:DeployReport /?。 |
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隐藏详细反馈。 默认为 False。 |
 |**/SourceConnectionString:**|**/scs**|{string}|指定源数据库的有效 SQL Server/Azure 连接字符串。 如果指定了此参数，则应该独立于所有其他源参数来使用此参数。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|定义源数据库的名称。 |
@@ -527,7 +527,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 |**/OutputPath:**|**/op**|{string}|指定生成输出文件的文件路径。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|指定 sqlpackage.exe 是否应覆盖现有文件。 指定 false 会导致 sqlpackage.exe 在遇到现有文件时中断操作。 默认值为 True。 |
 |**/Profile:**|**/pr**|{string}|指定 DAC 发布配置文件的文件路径。 该配置文件定义在生成输出时要使用的属性和变量的集合。|
-|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:Publish /?。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|为特定于操作的属性指定名称值对；{PropertyName}={Value}。 请参考特定操作的帮助以便查看该操作的属性名称。 示例：sqlpackage.exe /Action:Script /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隐藏详细反馈。 默认为 False。|
 |**/SourceConnectionString:**|**/scs**|{string}|指定源数据库的有效 SQL Server/Azure 连接字符串。 如果指定了此参数，则应该独立于所有其他源参数来使用此参数。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|定义源数据库的名称。 |

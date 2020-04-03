@@ -1,5 +1,6 @@
 ---
 title: 确定持有锁的查询
+description: 本文介绍如何查找有锁的查询。 数据库管理员可能需要找到影响数据库性能的锁定的来源。
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa07161439f8536af056d8d99996d5c19242911e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6039185500b2bcf14f16f21f8507a80000d1bee5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234612"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433994"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>确定持有锁的查询
 

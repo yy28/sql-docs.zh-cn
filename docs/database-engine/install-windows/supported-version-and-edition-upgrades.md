@@ -1,5 +1,6 @@
 ---
-title: 支持的版本和版本升级 | Microsoft Docs
+title: 支持的版本和版本升级 (SQL Server 2016)
+description: SQL Server 2016 支持的版本和版本升级。
 ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 70486130ebdd5b8fd0f8481f3c94558036b4dbac
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67934865"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434144"
 ---
-# <a name="supported-version-and-edition-upgrades"></a>支持的版本和版本升级
+# <a name="supported-version--edition-upgrades-sql-server-2016"></a>支持的版本和版本升级 (SQL Server 2016)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -54,7 +55,7 @@ ms.locfileid: "67934865"
 
 -   从 RC1 或以前版本的 SQL Server 2016 升级到 RC3 或更高版本时，必须在升级前卸载 PolyBase 并在升级后重新安装。
   
-## <a name="upgrades-from-earlier-versions-to-includesssql15-mdincludessssql15-mdmd"></a>从早期版本升级到 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssql15-md"></a>从早期版本升级到 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
  
 SQL Server 2016 支持从下列 SQL Server 版本升级：
  
@@ -97,14 +98,14 @@ SQL Server 2016 支持从下列 SQL Server 版本升级：
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence{2}|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Evaluation|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
 |[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 候选发布* |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
 |[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Developer |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise | 
 
  \* 从候选发布升级的 Microsof 支持专门针对参与了技术采用计划 (TAP) 的客户。 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 支持  
+###  <a name="sssql15-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 支持  
 此节讨论针对 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支持。 在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中，您能够执行以下操作：  
   
 -   将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库（mdf/ldf 文件）附加到数据库引擎的 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 实例。  
@@ -138,7 +139,7 @@ SQL Server 2016 支持从下列 SQL Server 版本升级：
   
 -   支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 第三方自定义 Integration Services 组件，如执行和升级。  
   
-## <a name="includesssql15-mdincludessssql15-mdmd-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 版本升级  
+## <a name="sssql15-md-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 版本升级  
 下表列出了 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]中支持的版本升级方案。  
   
 有关如何执行版本升级的分步说明，请参阅[升级到 SQL Server 2016 的不同版本（安装程序）](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)。  
@@ -146,7 +147,7 @@ SQL Server 2016 支持从下列 SQL Server 版本升级：
 |升级前的版本|升级到的版本|  
 |------------------|----------------|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise（服务器+CAL 和内核）**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> 对于独立安装，支持从 Evaluation（免费版本）升级到任何付费版本；但对于群集安装，则不支持此升级。|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> 对于独立安装，支持从 Evaluation（免费版本）升级到任何付费版本；但对于群集安装，则不支持此升级。 此限制不适用于安装在参与可用性组的 Windows 故障转移群集上的独立实例。|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise（服务器+CAL 或内核许可证）|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  

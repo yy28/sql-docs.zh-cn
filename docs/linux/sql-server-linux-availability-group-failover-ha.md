@@ -1,6 +1,6 @@
 ---
 title: 管理可用性组故障转移 - Linux 上的 SQL Server
-description: ''
+description: 本文介绍故障转移的类型：自动故障转移、计划的手动故障转移和强制手动故障转移。 自动故障转移和计划的手动故障转移会保留所有数据。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280883"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216846"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always on 可用性组故障转移
 
@@ -24,7 +24,7 @@ ms.locfileid: "78280883"
 
 有关故障转移的背景信息，请参阅[故障转移和故障转移模式](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。
 
-## <a name="failover"></a>手动故障转移
+## <a name="manual-failover"></a><a name="failover"></a>手动故障转移
 
 使用群集管理工具对由外部群集管理器管理的 AG 进行故障转移。 例如，如果解决方案使用 Pacemaker 管理 Linux 集群，则使用 `pcs` 在 RHEL 或 Ubuntu 上执行手动故障转移。 在 SLES 中使用 `crm`。 
 
@@ -43,7 +43,7 @@ ms.locfileid: "78280883"
 
    其次，[删除位置约束](#removeLocConstraint)。
 
-#### <a name="manualMove"></a> 步骤 1. 通过移动可用性组资源手动进行故障转移
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> 步骤 1. 通过移动可用性组资源手动进行故障转移
 
 要手动将名为 ag_cluster 的 AG 资源故障转移到名为 nodeName2 的群集节点，请运行适用于你的分发的命令   ：
 
@@ -62,7 +62,7 @@ ms.locfileid: "78280883"
 >[!IMPORTANT]
 >手动故障转移资源后，需要删除自动添加的位置约束。
 
-#### <a name="removeLocConstraint"> </a> 步骤 2. 删除位置约束
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> 步骤 2. 删除位置约束
 
 在手动故障转移期间，`pcs` 命令 `move` 或 `crm` 命令 `migrate` 会为要放置在新目标节点上的资源添加位置约束。 若要查看新约束，请在手动移动资源后运行以下命令：
 
@@ -107,7 +107,7 @@ ms.locfileid: "78280883"
 - [Pacemaker - 手动移动资源](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES 管理指南 - 资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> 强制故障转移 
+## <a name="force-failover"></a><a name="forceFailover"></a> 强制故障转移 
 
 强制故障转移只用于灾难恢复。 在这种情况下，无法使用群集管理工具进行故障转移，因为主数据中心已关闭。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 仅在后述情况下才执行强制故障转移：需要立即恢复对 AG 的服务且愿意冒失去数据的风险。
 

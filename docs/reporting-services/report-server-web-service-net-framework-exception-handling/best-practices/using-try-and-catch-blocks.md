@@ -1,5 +1,6 @@
 ---
 title: 使用 Try 和 Catch 块 | Microsoft Docs
+description: 了解如何通过使用 try/catch 块应用足够的异常处理来针对无效请求提供另一层保护。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 055c1a98dd1c77f19712be66dc2b4dcaa6060b60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 51f6c4d3cbc7751df8e7685835057c4c5e58daa9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62992171"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216353"
 ---
 # <a name="using-try-and-catch-blocks"></a>使用 Try 和 Catch 块
   在通过向代码添加条件语句以限制对于报表服务器的无效请求之后，应通过使用 try/catch 块提供适当的异常处理。 此方法从另一个层面来防止无效的请求。 如果对于报表服务器的请求包含在 try 块中，并且该请求导致报表服务器引发异常，则将在 catch 块中捕获此异常，从而防止应用程序意外终止。 一旦捕获了异常，您就可以使用该异常来指导用户以不同方式操作，或者只是以友好的方式让用户知道已发生了错误。 然后，您可以使用 finally 块来清除任何资源。 在理想情况下，应生成一个常规异常处理计划以避免不必要地重复 try/catch 块。  

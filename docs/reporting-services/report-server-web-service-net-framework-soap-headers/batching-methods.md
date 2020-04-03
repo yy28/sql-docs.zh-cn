@@ -1,5 +1,6 @@
 ---
 title: 批处理方法 | Microsoft Docs
+description: 了解如何在报表服务中使用 SOAP 标头在单个操作中包含多个 Web 服务方法。
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcafb334e32a1b98d10c57d8f31fe321d0b7f182
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dcc18839d2e10a35a35289a5950cab566afea23a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991489"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215586"
 ---
 # <a name="batching-methods"></a>批处理方法
   通过在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用 SOAP 标头，您可以在单个操作中包含多个 Web 服务方法。 方法在单个数据库事务的作用域中按照调用它们的顺序运行。  

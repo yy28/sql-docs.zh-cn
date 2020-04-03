@@ -1,5 +1,6 @@
 ---
 title: 扩展事件的目标数据的高级视图
+description: 使用 SQL Server Management Studio 的高级功能来详细查看扩展事件的目标数据。 你可以查看、导出和操纵数据。
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 298cebbde96d9de3eadcb6c11ae59b43f2e973d5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255763"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434034"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标数据的高级查看功能
 
@@ -32,7 +33,7 @@ ms.locfileid: "75255763"
 
 
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>先决条件
 
 本文假定你已了解如何创建和启动事件会话。 有关如何创建事件会话的说明之前在下面的文章中已演示：
 

@@ -1,6 +1,6 @@
 ---
-title: 支持的版本和版本升级
-titleSuffix: SQL Server 2017
+title: 支持的版本和版本升级 (SQL Server 2017)
+description: SQL Server 2017 支持的版本和版本升级。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dba820ec4e353fff15b0695b97f940441caf802
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d3f5721cbbd6d56d4fc5f2510775b050c210c981
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258836"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434164"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017 支持的版本和版本升级
+# <a name="supported-version--edition-upgrades-sql-server-2017"></a>支持的版本和版本升级 (SQL Server 2017)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -51,7 +51,7 @@ ms.locfileid: "75258836"
  
 -   在 WOW 模式下不支持故障转移群集。  
     
-## <a name="upgrades-from-earlier-versions-to-includesssqlv14-mdincludessssqlv14-mdmd"></a>从早期版本升级到 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssqlv14-md"></a>从早期版本升级到 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
  
 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 支持从下列 SQL Server 版本升级：
  
@@ -112,7 +112,7 @@ ms.locfileid: "75258836"
  \* 从候选发布升级的 Microsof 支持专门针对参与了技术采用计划 (TAP) 的客户。 
 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 支持  
+###  <a name="sssqlv14-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 支持  
  此节讨论针对 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支持。 在 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 中，您能够执行以下操作：  
   
 -   将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库（mdf/ldf 文件）附加到数据库引擎的 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 实例。  
@@ -145,7 +145,7 @@ ms.locfileid: "75258836"
   
 - 支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 第三方自定义 Integration Services 组件，如执行和升级。  
   
-## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 版本升级  
+## <a name="sssqlv14-md-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 版本升级  
 下表列出了 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]中支持的版本升级方案。  
   
 有关如何执行版本升级的分步说明，请参阅[升级到 SQL Server 的不同版本（安装程序）](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)。  
@@ -153,7 +153,7 @@ ms.locfileid: "75258836"
 |升级前的版本|升级到的版本|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise（服务器+CAL 和内核）**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> 对于独立安装，支持从 Evaluation（免费版本）升级到任何付费版本；但对于群集安装，则不支持此升级。|  
+|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> 对于独立安装，支持从 Evaluation（免费版本）升级到任何付费版本；但对于群集安装，则不支持此升级。 此限制不适用于安装在参与可用性组的 Windows 故障转移群集上的独立实例。|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise（服务器+CAL 或内核许可证）|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise（服务器+CAL 或内核许可证） <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  

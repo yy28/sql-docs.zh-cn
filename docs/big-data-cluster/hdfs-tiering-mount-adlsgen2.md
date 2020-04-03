@@ -9,31 +9,31 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252009"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215377"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在大数据群集中装载 ADLS Gen2 以实现 HDFS 分层
 
 以下部分展示了如何使用 Azure Data Lake Storage Gen2 数据源配置 HDFS 分层的示例。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [部署大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
 
-## <a id="load"></a> 将数据加载到 Azure Data Lake Storage 中
+## <a name="load-data-into-azure-data-lake-storage"></a><a id="load"></a> 将数据加载到 Azure Data Lake Storage 中
 
 以下部分介绍如何设置 Azure Data Lake Storage Gen2，用于测试 HDFS 分层。 如果已将数据存储在 Azure Data Lake Storage 中，则可以跳过此部分，使用自己的数据。
 
-1. [使用 Data Lake Storage Gen2 功能创建存储帐户](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)。
+1. [使用 Data Lake Storage Gen2 功能创建存储帐户](/azure/storage/blobs/data-lake-storage-quickstart-create-account)。
 
-1. 在此存储帐户中为外部数据[创建 Blob 容器/文件系统](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)。
+1. 在此存储帐户中为数据[创建文件系统](/azure/storage/blobs/data-lake-storage-explorer)。
 
 1. 将 CSV 或 Parquet 文件上传到容器中。 这是外部 HDFS 数据，该数据将被装载到大数据群集中的 HDFS。
 
@@ -48,7 +48,7 @@ ms.locfileid: "75252009"
 1. 在右侧导航栏中选择“应用注册”，并创建新的注册
 1. 创建 Web 应用程序，然后按照向导操作。 记住在此处创建的应用的名称  。 稍后需要以授权用户的身份将此名称添加到 ADLS 帐户。 在选择应用程序时，另请注意概述中的应用程序客户端 ID。
 1. 创建 web 应用程序后，请转到“证书和密码”，创建“新客户端密码”并选择密钥持续时间  。 “添加”密码  。
-1.  返回“应用注册”页面，然后单击顶部的“终结点”。 记下“OAuth 令牌终结点(v2)”URL 
+1.     返回“应用注册”页面，然后单击顶部的“终结点”。 记下“OAuth 令牌终结点(v2)”URL 
 1. 现在应为 OAuth 记下以下内容：
 
     - Web 应用程序的“应用程序客户端 ID”
@@ -99,7 +99,7 @@ ms.locfileid: "75252009"
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
-## <a id="mount"></a>装载远程 HDFS 存储
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a>装载远程 HDFS 存储
 
 现在已为访问密钥或为使用 OAuth 设置了 MOUNT_CREDENTIALS 环境变量，可以开始装载了。 以下步骤将 Azure Data Lake 中的远程 HDFS 存储装载到大数据群集的本地 HDFS 存储中。
 
@@ -127,7 +127,7 @@ ms.locfileid: "75252009"
 
 如果成功装载，应该能够查询 HDFS 数据并针对它运行 Spark 作业。 它显示在大数据群集上 HDFS 中由 `--mount-path` 指定的位置处。
 
-## <a id="status"></a> 获取装载状态
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> 获取装载状态
 
 要列出大数据群集中的全部装载状态，可使用以下命令：
 
@@ -149,7 +149,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> 删除装载
+## <a name="delete-the-mount"></a><a id="delete"></a> 删除装载
 
 要删除装载，请使用 azdata bdc hdfs mount delete 命令，并在 HDFS 中指定装载路径  ：
 

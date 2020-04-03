@@ -1,5 +1,6 @@
 ---
 title: HelpLink 元素 | Microsoft Docs
+description: 了解有关 Detail 属性的 HelpLink 元素的详细信息，包括 HelpLink URL 的参数。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ed62c34095adc2e9c039d1780f616530679b601
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5a03f514b2305676d93ada0119326c101595f9c3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68307579"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215667"
 ---
 # <a name="helplink-element"></a>HelpLink 元素
   Detail  属性的 HelpLink  元素是报表服务器生成的 URL 字符串。 此 URL 指向由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 帮助和支持管理的一个网页，并针对在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中出现的特定错误提供附加帮助和知识库文章。 此 URL 具有以下语法：  
