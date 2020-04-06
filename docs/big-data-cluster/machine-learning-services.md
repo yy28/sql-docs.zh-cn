@@ -8,18 +8,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252027"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664134"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>通过机器学习服务在 SQL Server 大数据群集上运行 Python 和 R 脚本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-可以通过[机器学习服务](../advanced-analytics/index.yml)在 [SQL Server 大数据群集](big-data-cluster-overview.md)的主实例上运行 Python 和 R 脚本。
+可以通过[机器学习服务](../machine-learning/index.yml)在 [SQL Server 大数据群集](big-data-cluster-overview.md)的主实例上运行 Python 和 R 脚本。
 
 > [!NOTE]
 > 还可以通过 [SQL Server 语言扩展](../language-extensions/language-extensions-overview.md)在主实例上运行 Java 代码。 按照以下步骤操作还将启用语言扩展。
@@ -82,7 +82,7 @@ GO
 
 ## <a name="next-steps"></a>后续步骤
 
-+ [快速入门：通过 SQL Server 机器学习服务创建和运行简单的 Python 脚本](../advanced-analytics/tutorials/quickstart-python-create-script.md)
-+ [快速入门：通过 SQL Server 机器学习服务在 Python 中创建预测模型并对其进行评分](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [快速入门：通过 SQL Server 机器学习服务创建和运行简单的 R 脚本](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [快速入门：通过 SQL Server 机器学习服务在 R 中创建预测模型并对其进行评分](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)
++ [快速入门：通过 SQL Server 机器学习服务创建和运行简单的 Python 脚本](../machine-learning/tutorials/quickstart-python-create-script.md)
++ [快速入门：通过 SQL Server 机器学习服务在 Python 中创建预测模型并对其进行评分](../machine-learning/tutorials/quickstart-python-train-score-model.md)
++ [快速入门：通过 SQL Server 机器学习服务创建和运行简单的 R 脚本](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [快速入门：通过 SQL Server 机器学习服务在 R 中创建预测模型并对其进行评分](../machine-learning/tutorials/quickstart-r-train-score-model.md)

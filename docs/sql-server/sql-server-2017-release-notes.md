@@ -10,12 +10,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b59588853342b298ebe4ffa8effb59e371c9df6a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136481"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665398"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +149,7 @@ ms.locfileid: "68136481"
 
 ## <a name="more-information"></a>详细信息
 - [SQL Server Reporting Services 发行说明](../reporting-services/release-notes-reporting-services.md)的限制和问题。
-- [机器学习服务的已知问题](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
+- [机器学习服务的已知问题](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

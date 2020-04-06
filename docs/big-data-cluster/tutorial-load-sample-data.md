@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bcac2f50f8d4712b21a53aedb8ab14fdc9280963
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831413"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531144"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 大数据群集中
 
@@ -126,4 +126,4 @@ ms.locfileid: "76831413"
 
 笔记本：
 
-- [教程：在 SQL Server 2019 大数据群集上运行示例笔记本](tutorial-notebook-spark.md)
+- [教程：在 SQL Server 2019 大数据群集上运行示例笔记本](notebooks-tutorial-spark.md)

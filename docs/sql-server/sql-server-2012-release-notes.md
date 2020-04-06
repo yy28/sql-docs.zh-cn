@@ -12,12 +12,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 907fc65dc781ed3308e2f6752ab09702c5d7c16a
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136533"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625502"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 **解决方法：** 若要将语义语言统计数据库设置为语义索引的必备组件，请执行以下任务：  
   
-1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
+1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=52681) (https://www.microsoft.com/download/details.aspx?id=52681) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
   
 2.  将数据库移到相应的数据文件夹。 如果您要使数据库保持在其默认位置，必须首先更改权限，然后才能成功附加该数据库。  
   

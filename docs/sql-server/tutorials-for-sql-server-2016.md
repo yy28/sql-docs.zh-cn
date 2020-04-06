@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893085"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665394"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68893085"
 |[Integration Services 教程](../integration-services/integration-services-tutorials.md)|了解如何创建和部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包。|  
 |[复制教程](../relational-databases/replication/replication-tutorials.md)|了解如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]设置和运行复制技术。|  
 |[Reporting Services 教程 (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何创建基本报表和订阅。|  
-|[SQL Server 机器学习教程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|了解如何使用 R 或 Python 处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据。 从 [!INCLUDE[tsql](../includes/tsql-md.md)] 运行 R 或 Python 脚本。|  
+|[SQL Server 机器学习教程](../machine-learning/tutorials/sql-server-r-tutorials.md)|了解如何使用 R 或 Python 处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据。 从 [!INCLUDE[tsql](../includes/tsql-md.md)] 运行 R 或 Python 脚本。|  
   
  ## <a name="previously-published-tutorials"></a>以前发布的教程 
   

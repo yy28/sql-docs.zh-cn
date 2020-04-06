@@ -11,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55ed24599e3bed15a0478ce12ac316edb623f0cf
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190627"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662878"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ SQL Server 开发人员现在可访问开放源代码生态系统中提供的大
 - **性能改进** - 存储过程 `sp_execute_external_script` 已经过优化，支持列存储数据的批处理模式执行。
 
 
-有关详细信息，请参阅 [SQL Server 机器学习服务中的新增功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
+有关详细信息，请参阅 [SQL Server 机器学习服务中的新增功能](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)。
 
 ## <a name="next-steps"></a>后续步骤
 - 请参阅 [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)。

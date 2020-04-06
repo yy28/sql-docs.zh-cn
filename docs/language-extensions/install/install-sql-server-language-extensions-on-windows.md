@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d85376a8ebcd946950062ead62387897c47b537
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658845"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664413"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>在 Windows 上安装 SQL Server 语言扩展
 
@@ -39,7 +39,7 @@ ms.locfileid: "73658845"
 
 + 请勿在域控制器上安装 SQL Server 语言扩展。 安装程序的语言扩展部分将失败。
 
-+ 默认情况下，语言扩展和[机器学习服务](../../advanced-analytics/index.yml)安装在 SQL Server 大数据群集上。 如果使用大数据群集，则无需按照本文中的步骤进行操作。 有关详细信息，请参阅[在大数据群集上使用机器学习服务（Python 和 R）](../../big-data-cluster/machine-learning-services.md)。
++ 默认情况下，语言扩展和[机器学习服务](../../machine-learning/index.yml)安装在 SQL Server 大数据群集上。 如果使用大数据群集，则无需按照本文中的步骤进行操作。 有关详细信息，请参阅[在大数据群集上使用机器学习服务（Python 和 R）](../../big-data-cluster/machine-learning-services.md)。
 
 > [!IMPORTANT]
 > 安装完成后，请务必完成本文中所述的配置后步骤。 这些步骤包括使 SQL Server 能够使用外部代码，以及添加 SQL Server 代表你运行 Java 代码所需的帐户。 配置更改通常需要重启实例或重启 Launchpad 服务。
@@ -87,7 +87,7 @@ ms.locfileid: "73658845"
 
         - 如果要使用自己的 Java 运行时，请选择“机器学习服务和语言扩展”  。 请勿选择 Java。
 
-        如果要使用 R 和 Python，请参阅[在 Windows 上安装 SQL Server 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。
+        如果要使用 R 和 Python，请参阅[在 Windows 上安装 SQL Server 机器学习服务](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。
 
     ![语言扩展的功能选项](../media/sql-install-feature-selection.png)
 
@@ -227,17 +227,17 @@ GO
 
 在实例级别，其他配置可能包括：
 
-* [SQL Server 机器学习服务的防火墙配置](../../advanced-analytics/security/firewall-configuration.md)
+* [SQL Server 机器学习服务的防火墙配置](../../machine-learning/security/firewall-configuration.md)
 * [启用其他网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [启用远程连接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [为 SQLRUserGroup 创建登录名](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [为 SQLRUserGroup 创建登录名](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
 数据库上可能需要以下配置更新：
 
-* [向用户授予 SQL Server 机器学习服务的权限](../../advanced-analytics/security/user-permission.md)
+* [向用户授予 SQL Server 机器学习服务的权限](../../machine-learning/security/user-permission.md)
 * [向用户授予执行特定语言的权限](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
 
 > [!NOTE]

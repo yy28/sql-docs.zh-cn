@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190391"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531090"
 ---
 # <a name="get-started-with-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 入门
 
@@ -55,7 +55,7 @@ ms.locfileid: "74190391"
 
 大数据群集被部署为在 [Kubernetes](https://kubernetes.io/docs/home) 中进行管理的一系列相关容器。 可通过多种方式托管 Kubernetes。 即使已有现有的 Kubernetes 环境，也应查看大数据群集的相关要求。
 
-- **Azure Kubernetes 服务 (AKS)** ：AKS 支持在 Azure 中部署托管的 Kubernetes 群集。 用户仅管理和维护代理节点。 使用 AKS，无需为群集预配硬件。 还可轻松使用 [python 脚本](quickstart-big-data-cluster-deploy.md)或[部署笔记本](deploy-notebooks.md)创建 AKS 群集和部署大数据群集，只需一步即可完成。 有关为大数据群集部署配置 AKS 的详细信息，请参阅[为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 配置 Azure Kubernetes 服务](deploy-on-aks.md)。
+- **Azure Kubernetes 服务 (AKS)** ：AKS 支持在 Azure 中部署托管的 Kubernetes 群集。 用户仅管理和维护代理节点。 使用 AKS，无需为群集预配硬件。 还可轻松使用 [python 脚本](quickstart-big-data-cluster-deploy.md)或[部署笔记本](notebooks-deploy.md)创建 AKS 群集和部署大数据群集，只需一步即可完成。 有关为大数据群集部署配置 AKS 的详细信息，请参阅[为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 配置 Azure Kubernetes 服务](deploy-on-aks.md)。
 
 - **多台计算机**：还可以将 Kubernetes 部署到多台 Linux 计算机，这些计算机可以是物理服务器或虚拟机。 可使用 [Kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) 工具创建 Kubernetes 群集。 可使用 [bash 脚本](deployment-script-single-node-kubeadm.md)自动执行此类部署。 如果已有想要用于大数据群集的现有基础结构，此方法会很有效。 有关将 kubeadm 部署用于大数据群集的详细信息，请参阅[在多台计算机上为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署配置 Kubernetes](deploy-with-kubeadm.md)  。
 
@@ -83,7 +83,7 @@ ms.locfileid: "74190391"
 
 还可以通过运行 Azure Data Studio 笔记本部署大数据群集。 有关如何在 AKS 上使用笔记本进行部署的详细信息，请参阅以下文章：
 
-- [使用 Azure Data Studio 笔记本部署大数据群集](deploy-notebooks.md)。
+- [使用 Azure Data Studio 笔记本部署大数据群集](notebooks-deploy.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
