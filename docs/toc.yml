@@ -8529,6 +8529,14 @@
                   href: ssms/register-servers/registered-servers-f1-help.md
             - name: 使用 SSMS 编写脚本
               items:
+                - name: 生成脚本
+                  items:
+                    - name: 生成脚本
+                      href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+                    - name: 生成和发布脚本向导
+                      href: ssms/scripting/generate-and-publish-scripts-wizard.md
+                    - name: 生成脚本向导支持的对象
+                      href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: 查询和文本编辑器
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
@@ -8650,14 +8658,6 @@
                       items:
                         - name: “空间结果”窗口
                           href: ssms/scripting/spatial-results-window.md
-                        - name: 生成脚本
-                          href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-                          items:
-                            - name: 生成和发布脚本向导
-                              href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                              items:
-                                - name: 生成脚本向导支持的对象
-                                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: 操作说明
           items:
             - name: 安装非英语版 SSMS
