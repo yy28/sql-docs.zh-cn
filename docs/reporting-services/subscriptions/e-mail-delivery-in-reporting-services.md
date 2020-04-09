@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 中的电子邮件传递 | Microsoft Docs
+description: 本文介绍如何使用电子邮件传递扩展插件，该插件提供了通过电子邮件将报表发送到单个用户或组的方式。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72305046"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742076"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含电子邮件传递扩展插件，该插件提供了通过电子邮件将报表发送到单个用户或组的方式。 若要通过电子邮件分发报表，你可以 1) 配置报表服务器以进行电子邮件传递，并 2) 定义标准订阅或数据驱动订阅。 一个订阅不能在一个电子邮件中传递多个报表。 但你可以创建多个订阅。  
@@ -41,9 +42,9 @@ ms.locfileid: "72305046"
   
 -   在电子邮件的“主题:”行中发送通知。 默认情况下，订阅定义中的“主题:”行包含以下变量（这些变量将在处理订阅时替换为报表特定的信息）：  
   
-     **ReportName 指定报表的名称\@** 。  
+     \@ReportName 指定报表的名称  。  
   
-     **ExecutionTime 指定执行报表的时间\@** 。  
+     \@ExecutionTime 指定执行报表的时间  。  
   
      您可以将这些变量与静态文本组合在一起，也可以修改每个订阅的“主题:”行中的文本。  
   

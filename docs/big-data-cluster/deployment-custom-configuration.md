@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285851"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550198"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>为群集资源和服务配置部署设置
 
@@ -466,6 +466,8 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.zookeeper.spec
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.nodeLabel=bdc-shared"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
+>[!NOTE]
+> 最佳做法避免为 Kubernetes 主节点提供上述任何一个 BDC 角色。 如果仍计划将这些角色分配给 Kubernetes 主节点，则需要[删除其 ``master:NoSchedule`` 污点](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)。 请注意，这可能会使主节点过载，并导致无法在更大的群集上执行其 Kubernetes 管理任务。 在任何部署上向主节点计划一些 Pod 是正常的：它们已容忍 ``master:NoSchedule`` 污点，并且主要用于管理群集。 
 
 ## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> 使用 JSON 修补程序文件的其他自定义
 

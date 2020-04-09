@@ -1,5 +1,6 @@
 ---
-title: 解决 Reporting Services 报表设计问题 | Microsoft Docs
+title: 解决 Reporting Services 报表设计问题
+description: 本文介绍如何诊断和修复在报表创作应用程序的“设计”视图中创建报表布局时可能遇到的报表设计问题。
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd38603a00c01187c131c2f515c2a4c6c1cb858e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573844"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662807"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>解决 Reporting Services 报表设计问题
 在报表创作应用程序的设计视图中创建报表布局时，可能发生报表设计问题。 使用本主题可以帮助解决这些问题。   
@@ -41,7 +42,7 @@ PageNumber 和 TotalPages 仅在页眉和页脚中有效。
 若要向报表中添加 [&PageNumber] 或 [&TotalPages]，必须首先添加页眉或页脚。 有关详细信息，请参阅 [添加或删除页眉](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
-> 在页眉或页脚中包含 [&TotalPages] 可能会对报表处理有影响。 有关详细信息，请参阅“报表故障排除：以特定文件格式导出的报表”。  
+> 在页眉或页脚中包含 [&TotalPages] 可能会对报表处理有影响。 有关详细信息，请参阅“报表问题疑难解答”：以特定文件格式导出的报表。  
 [排除 Reporting Services 报表处理故障](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md)。  
   
 ## <a name="how-do-i-design-two-tables-or-a-chart-and-a-table-to-display-side-by-side"></a>如何设计并排显示的两个表或一个图表和一个表？  

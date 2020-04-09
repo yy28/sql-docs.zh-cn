@@ -1,5 +1,6 @@
 ---
-title: Reporting Services 订阅和传递疑难解答 | Microsoft Docs
+title: Reporting Services 订阅和传递的疑难解答
+description: 本文介绍如何诊断并修复在 SQL Server Reporting Services 中处理报表订阅、计划和交付时发现的问题。
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572118"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662755"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services 订阅和传递的疑难解答
   
@@ -24,7 +25,7 @@ ms.locfileid: "65572118"
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的订阅页包含订阅状态，如果订阅出现问题， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 日志中将包含详细信息。 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
 
-**跟踪日志：** 跟踪日志是文本文件，将写入到： `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
+**跟踪日志：** 跟踪日志是文本文件，将写入到：`\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
 
 以下是一个示例日志项：
 
@@ -52,7 +53,7 @@ ms.locfileid: "65572118"
   
 有关使用本地 SMTP 服务传递报表电子邮件的详细信息，请参阅“配置报表服务器以进行电子邮件传递”。  
   
-## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>无法发送邮件: 服务器拒绝了发件人地址。 服务器响应为: 454 5.7.3 客户端无权向本服务器提交邮件  
+## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>发送邮件时出错：服务器拒绝了发件人地址。 服务器响应为：454 5.7.3 客户端不具有将邮件提交给此服务器的权限  
 当 SMTP 服务器上的安全策略设置仅允许经过身份验证的用户提交邮件以进行后续传递时，会出现此错误。 如果 SMTP 服务器不接受匿名用户的电子邮件提交，则请与系统管理员联系以获取使用服务器的权限。  
 > 将 Exchange 服务器名称指定为 SMTPServer 时也会发生这种错误。 若要使用 Exchange 服务器传递电子邮件，必须指定为 Exchange 服务器配置的 SMTP 网关的名称。 请与 Exchange 管理员联系获取此信息。  
   

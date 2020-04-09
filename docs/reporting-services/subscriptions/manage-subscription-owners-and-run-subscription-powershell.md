@@ -1,6 +1,6 @@
 ---
 title: 管理订阅所有者并运行订阅 - PowerShell | Microsoft Docs
-description: 可以编程方式将 Reporting Services 订阅的所有权从一个用户转让给另一个用户。
+description: 了解如何以编程方式将 Reporting Services 订阅的所有权从一个用户转移到另一个用户。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
-ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0a05f23265bd6e81c639bc8342699bf3bb8ab661
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259325"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742187"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>管理订阅所有者并运行订阅 - PowerShell
 
@@ -57,23 +57,23 @@ ms.locfileid: "76259325"
   
 **本机模式：**
   
-- 列出订阅：（报表上的 [ReportOperation Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) ，且用户是订阅所有者）或 ReadAnySubscription。  
+- 列出订阅：报表上的 [ReportOperation 枚举](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx)（且用户是订阅所有者），或 ReadAnySubscription。  
   
 - 更改订阅：用户必须是 BUILTIN\Administrators 组的成员  
   
-- 列出子级：项的 ReadProperties  
+- 列出子级：项上的 ReadProperties  
   
 - 触发事件：GenerateEvents（系统）  
   
  **SharePoint 模式：**
   
-- 列出订阅：ManageAlerts 或（报表上的 [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) ，且用户是订阅所有者、订阅为定时订阅）。  
+- 列出订阅：报表上的 ManageAlerts 或 [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx)（且用户是订阅所有者、订阅是有时限的订阅）。  
   
 - 更改订阅：ManageWeb  
   
 - 列出子级：ViewListItems  
   
-- 引发事件：ManageWeb  
+- 触发事件：ManageWeb  
   
  有关详细信息，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "76259325"
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
-## <a name="script-list-the-ownership-of-all-subscriptions"></a><a name="bkmk_list_ownership_all"></a> 脚本：列出所有订阅的所有权
+## <a name="script-list-the-ownership-of-all-subscriptions"></a><a name="bkmk_list_ownership_all"></a> 脚本：列出全部订阅的所有权
 
 此脚本列出站点上的所有订阅。 可以使用此脚本来测试连接，或验证在其他脚本中使用的报表路径和订阅 ID。 这也是用于轻松审核存在哪些订阅以及它们的所有者是谁的一个有用脚本。  
   

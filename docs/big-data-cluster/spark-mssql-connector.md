@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8869a556eff61eca9cfc085b91cfc6fb9c0c3455
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8b8da0912f3c928857dd84b8981fecb10b17da
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79487675"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531109"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何使用 MSSQL Spark 连接器从 Spark 对 SQL Server 执行读写操作
 
@@ -111,7 +111,7 @@ writer.save()
 
 ### <a name="run-the-sample-notebook"></a>运行示例笔记本
 
-若要演示如何将 MSSQL Spark 连接器与非 AD 模式中的此数据配合使用，可下载示例笔记本，在 Azure Data Studio 中打开它，然后运行每个代码块。 有关使用笔记本的详细信息，请参阅[如何在 SQL Server 中使用笔记本](notebooks-guidance.md)。
+若要演示如何将 MSSQL Spark 连接器与非 AD 模式中的此数据配合使用，可下载示例笔记本，在 Azure Data Studio 中打开它，然后运行每个代码块。 有关使用笔记本的详细信息，请参阅[如何在 SQL Server 中使用笔记本](../azure-data-studio/notebooks-guidance.md)。
 
 1. 从 PowerShell 或 bash 命令行运行以下命令，以下载“mssql_spark_connector_non_ad_pyspark.ipynb”  示例笔记本：
 

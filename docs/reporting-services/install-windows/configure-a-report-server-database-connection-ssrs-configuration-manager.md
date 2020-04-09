@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 01/04/2020
+ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866033"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531165"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
 
@@ -91,6 +91,13 @@ ms.locfileid: "74866033"
   
 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例配置为使用 Windows 身份验证且与报表服务器计算机位于同一个域或可信域中，则可将连接配置为使用通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具作为连接属性进行管理的服务帐户或域用户帐户。 如果数据库服务器位于另一个域中，或者您使用的是工作组安全性，则必须将连接配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名。 在这种情况下，一定要对连接进行加密。  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> 使用 Azure SQL 托管实例承载报表服务器数据库时，SQL Server 身份验证是唯一受支持的凭据类型。 此外，请注意，托管实例无法承载报表服务器实例。
+
+::: moniker-end
+
 #### <a name="using-service-accounts-and-integrated-security"></a>使用服务帐户和集成安全性
 
 可以使用 Windows 集成安全性通过报表服务器服务帐户进行连接。 已为此帐户授予了登录报表服务器数据库的权限。 如果以默认配置安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，这将是安装程序选择的默认凭据类型。  
@@ -105,14 +112,7 @@ ms.locfileid: "74866033"
 
 #### <a name="using-a-sql-server-login"></a>使用 SQL Server 登录名
 
-可以指定使用一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名连接到报表服务器数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证并且报表服务器数据库位于远程计算机上，则可以使用 IPSec 来协助保护服务器之间的数据传输。 如果使用数据库登录名，则每次更改密码或帐户时，必须更新报表服务器数据库连接。  
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-> [!NOTE]
-> 如果你使用 Azure SQL 托管实例来托管 Reporting Services 2019 数据库，支持仅限于使用 SQL Server 登录凭据进行连接。
-
-::: moniker-end
+可以指定使用一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名连接到报表服务器数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证并且报表服务器数据库位于远程计算机上，则可以使用 IPSec 来协助保护服务器之间的数据传输。 如果使用数据库登录名，则每次更改密码或帐户时，必须更新报表服务器数据库连接。
 
 ### <a name="database-permissions"></a>数据库权限
 

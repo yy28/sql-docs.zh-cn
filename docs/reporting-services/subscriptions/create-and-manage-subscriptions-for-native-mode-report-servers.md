@@ -1,5 +1,6 @@
 ---
 title: 创建和管理本机模式报表服务器的订阅 | Microsoft Docs
+description: 了解如何作为单个用户（希望通过电子邮件传递报表或将报表传递到共享文件夹）创建和管理标准订阅。
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0521826132a51b6f0ec18b43bb8008098c61bd4
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971314"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742295"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>创建和管理本机模式报表服务器的订阅
   标准订阅是由希望通过电子邮件传递报表或将报表传递到共享文件夹的各个用户所创建的订阅。 本主题提供了由各个用户创建和管理的标准订阅的有关信息。 而数据驱动订阅具有不同的要求和步骤，将在另一个主题中进行讨论。 有关详细信息，请参阅 [创建、修改和删除数据驱动订阅](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -52,7 +53,7 @@ ms.locfileid: "76971314"
   
 2.  导航到所需报表。 右键单击报表，并选择“订阅”。   
   
-3.  **描述**：键入此报表订阅的描述，最多 512 个字符。  
+3.  **说明**：键入此报表订阅的描述，最多 512 个字符。  
   
 4.  **所有者**：“所有者”字段默认为当前用户，创建订阅时不能编辑。 但是，在保存订阅后，你可以更改订阅属性，包括所有者和描述。  
 
@@ -68,14 +69,14 @@ ms.locfileid: "76971314"
   
 8. 在“传递选项(Windows 文件共享)”下，指定：   
    - **文件名**：键入报表的文件名。
-   - **创建文件时添加文件扩展名**：此选项会在文件名中添加三个字符的文件扩展名。 文件扩展名由所选择的报表输出格式决定。  
+   - **创建文件时添加文件扩展名**：选择此选项，将向文件名中添加三个字符的文件扩展名。 文件扩展名由所选择的报表输出格式决定。  
    - **路径**：键入要向其中传递报表的现有文件夹的通用命名约定 (UNC) 路径（例如，\\<servername\>\<myreports>）。 在路径开头包括双反斜杠字符。 在路径末尾不要使用反斜杠。  
   
      ![文件共享订阅](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "文件共享订阅")  
   
    - **呈现格式**：为文件传递选择一种报表输出格式。 选择与要用来打开报表的桌面应用程序相对应的格式。 避免使用不以单数据流呈现报表的格式，也不要使用引入静态文件不支持的交互的格式（例如 HTML 4.0）。  
   
-   - **凭据**：选择使用文件共享帐户或特定的 Windows 用户凭据。 如果你的报表管理员尚未配置文件共享帐户，则将禁用“使用文件共享帐户”  。 有关详细信息，请参阅[订阅设置和文件共享帐户 (Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 在“用户名”和“密码”文本框中，指定访问文件共享所需的凭据，用户名的格式为 **domain>** **user name>** *\<* \\ *\<* 。  
+   - **凭据**：选择使用文件共享帐户或特定的 Windows 用户凭据。 如果你的报表管理员尚未配置文件共享帐户，则将禁用“使用文件共享帐户”  。 有关详细信息，请参阅[订阅设置和文件共享帐户 (Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 在“用户名”和“密码”文本框中，指定访问文件共享所需的凭据，用户名的格式为 \<domain>\\\<user name>     。  
   
    - **覆盖选项**：  
      - “使用较新版本覆盖现有文件”  。  
@@ -92,7 +93,7 @@ ms.locfileid: "76971314"
   
 2. 导航到所需报表。 右键单击报表，并选择“订阅”。   
   
-3. **描述**：键入此报表订阅的描述，最多 512 个字符。  
+3. **说明**：键入此报表订阅的描述，最多 512 个字符。  
   
 4.  **所有者**：“所有者”字段默认为当前用户，创建订阅时不能编辑。 但是，在保存订阅后，你可以更改订阅属性，包括所有者和描述。  
 
@@ -112,11 +113,11 @@ ms.locfileid: "76971314"
      >[!NOTE]  
      > 根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 还可以在“抄送”、“密件抄送”和“答复”文本框中键入其他电子邮件地址    。 这要求您具有管理所有订阅的权限。  
   
-   - 主题：默认为“在 **执行**”@ReportName@ExecutionTime。 可以对主题进行编辑，但请注意，@ReportName 和 @ExecutionTime 是“主题”字段中仅支持的两个全局变量  。  
+   - **使用者**：默认为“在 @ExecutionTime 执行 @ReportName”。 可以对主题进行编辑，但请注意，@ReportName 和 @ExecutionTime 是“主题”字段中仅支持的两个全局变量  。  
   
      ![电子邮件订阅](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "电子邮件订阅")  
 
-   - **包括报表**：选择此选项可嵌入或附加报表副本。 报表的格式由所选的呈现格式决定。 如果您认为报表大小会超过为电子邮件系统定义的限制，请不要选择此选项。  
+   - **包括报表**：选择此选项可嵌入或附加报表的副本。 报表的格式由所选的呈现格式决定。 如果您认为报表大小会超过为电子邮件系统定义的限制，请不要选择此选项。  
   
    - **包括链接**：选择此选项可在电子邮件正文中包括指向报表的 URL 链接。  
   

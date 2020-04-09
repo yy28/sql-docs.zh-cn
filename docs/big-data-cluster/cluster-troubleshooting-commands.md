@@ -1,5 +1,5 @@
 ---
-title: 监视和故障排除
+title: Kubernetes 疑难解答
 titleSuffix: SQL Server big data clusters
 description: 本文提供了用于监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 并对其进行故障排除的有用命令。
 author: mihaelablendea
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70153635"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664186"
 ---
-# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 并对其进行故障排除
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 疑难解答
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文介绍了几个用于监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 并对其进行故障排除的实用 Kubernetes 命令。 其中介绍了如何深入了解位于大数据群集中的 Pod 或其他 Kubernetes 项目的详细信息。 本文也涵盖了一些常见任务，例如将文件复制到运行某个 SQL Server 大数据群集服务的容器中或从中进行复制。
 
 > [!TIP]
-> 为了监视大数据群集组件的状态，可以使用 [azdata bdc status](deployment-guidance.md#status) 命令或 Azure Data Studio 附带的内置[排除故障笔记本](manage-notebooks.md)  。
+> 为了监视大数据群集组件的状态，可以使用 [azdata bdc status](deployment-guidance.md#status) 命令或 Azure Data Studio 附带的内置[排除故障笔记本](notebooks-manage-bdc.md)  。
 
 > [!TIP]
 > 在 Windows（cmd 或 PS）或 Linux (bash) 客户端计算机上运行以下 kubectl 命令  。 它们需要该群集中的上一身份验证以及一个用于运行该身份验证的群集上下文。 例如，对于先前创建的 AKS 群集，可以运行 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` 以下载 Kubernetes 群集配置文件并设置群集上下文。

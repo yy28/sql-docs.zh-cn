@@ -1,5 +1,6 @@
 ---
-title: 对在本机模式报表服务器上发布或查看报表进行故障排除 | Microsoft Docs
+title: 对在本机模式报表服务器上发布或查看报表进行故障排除
+description: 本文介绍如何诊断并修复将报表发布或上传到在本机模式下配置的报表服务器时出现的问题。
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 097ef18fe98b20794813e711650a9bb85add5c35
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573862"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662734"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>对在本机模式报表服务器上发布或查看报表进行故障排除
   

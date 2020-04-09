@@ -1,1 +1,1 @@
-**适用于：** ![是](media/yes.png)SQL Server 2016 及更高版本（仅限 Windows）![否](media/no.png)Azure SQL 数据库 ![否](media/no.png)Azure Synapse Analytics (SQL DW) ![否](media/no.png)并行数据仓库
+**适用对象：** ![是](media/yes-icon.png)SQL Server 2016 及更高版本（仅限 Windows）![否](media/no-icon.png)Azure SQL 数据库 ![否](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![否](media/no-icon.png)并行数据仓库

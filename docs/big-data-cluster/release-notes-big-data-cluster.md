@@ -5,16 +5,16 @@ description: 本文介绍 SQL Server 大数据群集的最新更新和已知问�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 03/12/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd004554ad45db40beae958bdf0a7142b1b74bab
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286221"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517157"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -24,7 +24,7 @@ ms.locfileid: "79286221"
 
 ## <a name="supported-platforms"></a>支持的平台
 
-本部分介绍 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC) 支持的平台。
+本部分介绍 BDC 支持的平台。
 
 ### <a name="kubernetes-platforms"></a>Kubernetes 平台
 
@@ -50,25 +50,34 @@ ms.locfileid: "79286221"
 
 |平台|支持的版本|
 |---------|---------|
-|`azdata`|必须与服务器具有相同的次要版本（与 SQL Server 主实例相同）。<br/><br/>运行 `azdata –-version` 以验证该版本。<br/><br/>自 SQL Server 2019 CU3 起，此版本为 `15.0.4023`。|
+|`azdata`|必须与服务器具有相同的次要版本（与 SQL Server 主实例相同）。<br/><br/>运行 `azdata –-version` 以验证该版本。<br/><br/>请参阅[版本历史记录](#release-history)获取最新版本。|
 |Azure Data Studio|获取 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新内部版本。|
 
 ## <a name="release-history"></a>版本历史记录
 
 下表列出了 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的版本历史记录。
 
-| 发布               | 版本       | 发布日期 |
-|-----------------------|---------------|--------------|
-| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
+| 发布               | 版本         | 发布日期 |
+|-----------------------|-----------------|--------------|
+| [CU4](#cu4)           | 15.0.4033.1     | 2020 年 3 月 31 日   |
+| [CU3](#cu3)           | 15.0.4023.6     | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
-| [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
-| [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
+| [CU1](#cu1)           | 15.0.4003.23    | 2020-01-07   |
+| [GDR1](#rtm)          | 15.0.2070.34    | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>如何安装更新
 
 若要安装更新，请参阅[如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
 
-## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3（2020 年三月）
+## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4（2020 年 4 月）
+
+SQL Server 2019 的累积更新 4 (CU4) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4033.1。
+
+|包版本 | 映像标记 |
+|-----|-----|
+|15.0.4033.1 |[2019-CU4-ubuntu-16.04]
+
+## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3（2020 年 3 月）
 
 SQL Server 2019 的累积更新 3 (CU3) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4023.6。
 
@@ -83,7 +92,7 @@ SQL Server 2019 CU3 解决了以前版本中的以下问题。
 - [通过专用存储库进行部署](#deployment-with-private-repository)
 - [升级可能因超时而失败](#upgrade-may-fail-due-to-timeout)
 
-## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2（2020 年 2 月）
+## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2（2020 年 2 月）
 
 SQL Server 2019 的累积更新 2 (CU2) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4013.40。
 
@@ -91,7 +100,7 @@ SQL Server 2019 的累积更新 2 (CU2) 版本。 此次发布的 SQL Server 数
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a name="cu1-jan-2020"></a><a id="cu1"></a> CU1（2020 年 1 月）
+## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1 （2020 年 1 月）
 
 SQL Server 2019 的累积更新 1 (CU1) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4003.23。
 
@@ -99,7 +108,7 @@ SQL Server 2019 的累积更新 1 (CU1) 版本。 此次发布的 SQL Server 数
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a name="gdr1-nov-2019"></a><a id="rtm"></a> GDR1（2019 年 11 月）
+## <a name="gdr1-november-2019"></a><a id="rtm"></a> GDR1（2019 年 11 月）
 
 SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)] 的公开发布。 此次发布的 SQL Server 数据库引擎版本是 15.0.2070.34。
 

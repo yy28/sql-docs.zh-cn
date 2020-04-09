@@ -1,5 +1,6 @@
 ---
 title: 监视 Reporting Services 订阅 | Microsoft Docs
+description: 了解如何使用 UI、PowerShell 或日志文件来跟踪 Reporting Services 订阅。 监视选项取决于正在运行的报表服务器模式。
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67285048"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742036"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  
@@ -47,12 +48,12 @@ ms.locfileid: "67285048"
 |------------|-----------------|  
 |新订阅|在您首次创建订阅时显示。|  
 |非活动|在无法处理订阅时显示。 有关详细信息，请参阅本文稍后将介绍的“管理非活动订阅”部分。|  
-|已完成：已处理 \<number> 个，共 *number> 个；* number> 个错误\<  \<  。|显示数据驱动订阅执行的状态；此消息来自计划和传递处理器。|  
+|已完成：已处理 \<number> 个，共 \<number> 个；\<number> 个错误    。|显示数据驱动订阅执行的状态；此消息来自计划和传递处理器。|  
 |已处理 \<number> 个 |计划和传递处理器成功传递或不再试图传递的通知数。 当数据驱动传递完成后，已处理通知数应等于已生成通知的总数。|  
 |总计 \<number> 个 |最后一次传递订阅生成的通知总数。|  
 |\<number> 个错误 |计划和传递处理器无法传递或不再试图传递的通知数。|  
 |无法发送邮件：传输无法连接到服务器。|表示报表服务器未连接到邮件服务器；此消息来自电子邮件传递扩展插件。|  
-|文件 \<filename> 已写入 *path>* \<。|表示已成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
+|文件 \<filename> 已写入 \<path>  。|表示已成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
 |写入文件时出现未知错误。|表示未能成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
 |连接到目标文件夹 \<path> 时出错。 请验证目标文件夹或文件共享是否存在。|表示无法找到指定的文件夹；此消息来自文件共享传递扩展插件。|  
 |文件 \<filename> 无法写入 \<path>。 请重试。|表示无法用新版本更新文件；此消息来自文件共享传递扩展插件。|  
@@ -76,7 +77,7 @@ ms.locfileid: "67285048"
   
  以下是与订阅相关的跟踪日志文件错误消息示例：  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i 信息:正在将 EnableExecutionLogging 初始化为 True，如服务器系统属性中所规定。emailextension!WindowsService_7!b60!05/20/2019-22:34:41 错误:发送电子邮件时出错  。 Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO:Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR:**发送电子邮件时出错了**。 异常：System.Net.Mail.SmtpException:SMTP 服务器需要一个安全连接或客户端未经过身份验证。 服务器响应为：5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  日志文件不包括有关是否打开报表或传递是否真正成功的信息。 成功传递意味着计划和传递处理器未生成任何错误，并且报表服务器已连接到邮件服务器。 如果电子邮件在用户邮箱中产生无法传递的消息错误，该信息不会包括在日志文件中。 有关日志文件的详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "67285048"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|进程|区域|类别|级别|Correlation|消息|  
-|5/21/2019 14:34:06:15|应用池：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|报表服务器电子邮件扩展插件|意外|(empty)|**发送邮件时出错。** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2019 14:34:06:15|应用池：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|报表服务器电子邮件扩展插件|意外|(empty)|**发送邮件时出错。** 异常：System.Net.Mail.SmtpException:邮箱不可用。 服务器响应为：5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> 使用 PowerShell 监视订阅  
  如需查看可用于检查本机模式或 SharePoint 模式订阅的状态的 PowerShell 脚本示例，请参阅[管理脚本所有者和运行脚本 - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  

@@ -1,5 +1,6 @@
 ---
-title: 与 Reporting Services 报表的数据检索问题疑难解答 |Microsoft 文档
+title: Reporting Services 报表的数据检索问题疑难解答
+description: 本文介绍如何诊断和修复通过本地预览报表或在报表服务器上运行报表来检索报表数据时遇到的问题。
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d62cff71d6967203ab3980624b1f7b192fb89906
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574428"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664451"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 报表的数据检索问题疑难解答
 报表处理的第一步是通过运行数据集查询检索每个数据集的报表数据。 本地预览报表时，数据源连接和凭据必须使用足够的权限才能检索计算机上的数据。 在报表服务器上运行报表时，数据源连接和凭据必须使用足够的权限才能检索报表服务器上的数据。 使用本主题可帮助解决有关报表数据检索的问题。   
   
 ## <a name="i-cannot-create-a-connection-to-a-data-source"></a>无法与数据源建立连接  
-当您创建数据源、运行数据集查询或预览报表时，可能得到下面的消息：无法与数据源 `<data source name>`建立连接。   
+创建数据源、运行数据集查询或预览报表时，你可能会收到以下消息：无法与数据源 `<data source name>` 建立连接。   
     
 ### <a name="data-source-is-not-available"></a>数据源不可用。  
 数据源由于其他某种原因脱机或不可用。   
@@ -57,7 +58,7 @@ ms.locfileid: "65574428"
 若要填充数据集字段集合，请执行以下操作：  
 * 确保您具有从数据库中检索字段信息的权限。 对于某些数据源，可能有权访问数据源，但无权访问表或列。 您可能有权访问视图，但无权运行创建视图的存储过程。 若要验证你是否具有访问数据库中特定表或列的权限，请使用用于报表的相同权限，在一个单独的应用程序（例如 SQL Server Management Studio）中验证查询结果。 如果看不到查询需要的结果，请与系统管理员联系调整您的数据访问权限。   
 * 在“数据集属性”  对话框的查询窗格中运行该查询。 有关详细信息，请参阅 [报表数据集（Report Builder 3.0 和 SSRS）](../../reporting-services/report-data/report-datasets-ssrs.md)。  
-* 手动添加字段。 有关详细信息，请参阅 [如何在“报表数据”窗格中添加、编辑或刷新字段（Report Builder 3.0 和 SSRS）](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。   
+* 手动添加字段。 有关详细信息，请参阅[操作说明：在“报表数据”窗格中添加、编辑和刷新字段（Report Builder 3.0 和 SSRS）](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。   
   
 ## <a name="see-also"></a>另请参阅  
 [错误和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

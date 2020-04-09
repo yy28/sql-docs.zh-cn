@@ -1,5 +1,6 @@
 ---
-title: 排查 Reporting Services 报表呈现问题 | Microsoft Docs
+title: 排查 Reporting Services 报表呈现问题
+description: 本文介绍如何诊断并修复在 SQL Server Reporting Services 中将编译的报表和布局数据发送到报表呈现器时的显示问题。
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574688"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662785"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>排查 Reporting Services 报表呈现问题
 将报表数据与布局信息组合起来后，会将组合的报表发送到报表呈现器。 例如，本地预览报表时，您是使用 HTML 呈现器查看组合报表。 使用本主题可帮助解决特定于报表呈现的问题。   
@@ -58,7 +59,7 @@ Reporting Services 提供了一个选项，可用来控制是保留还是消除�
 `Query execution failed for dataset 'DataSet1'.`   
 `The request failed with HTTP status 401: Unauthorized.`  
   
-**此问题的解决办法：** 将数据源修改为使用存储的凭据，而不是 Windows 凭据。  
+**若要暂时避开此问题，请执行以下操作：** 将数据源修改为使用存储的凭据，而不是 Windows 凭据。  
   
 **此问题适用于：** 配置为提示输入凭据的浏览器。  
   

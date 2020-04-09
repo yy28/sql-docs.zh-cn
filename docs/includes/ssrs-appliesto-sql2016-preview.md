@@ -1,1 +1,1 @@
-**适用于：** ![是](media/yes.png)SQL Server 2016![是](media/yes.png)Power BI 报表服务器
+**适用对象：** ![是](media/yes-icon.png)SQL Server 2016 ![是](media/yes-icon.png)Power BI 报表服务器

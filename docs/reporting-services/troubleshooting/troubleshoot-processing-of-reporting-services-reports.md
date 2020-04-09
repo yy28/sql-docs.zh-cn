@@ -1,5 +1,6 @@
 ---
-title: Reporting Services 报表处理疑难解答 | Microsoft Docs
+title: 排除 Reporting Services 报表处理故障
+description: 本文介绍如何解决在报表处理器合并数据和布局信息并计算报表项属性表达式时出现的问题。
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d10dc9e4e5808fbc9c315cb262a1b2136c73029
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573855"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664444"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>排除 Reporting Services 报表处理故障
 检索报表数据后，报表处理器会将这些数据与布局信息组合。 将在组合的数据和布局的上下文中计算具有表达式的每个报表项属性。 使用本主题可以帮助解决这些问题。   
@@ -23,7 +24,7 @@ ms.locfileid: "65573855"
   
 报表处理器会检查报表定义 (.rdl file) 是否符合 .rdl 文件开头的命名空间声明中指定的架构。 有关 RDL 架构的详细信息，请参阅 [查找报表定义架构版本 (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)。  
   
-此外，在运行时计算的报表表达式必须符合一组规则，才能确保正确组合报表数据和布局。 报表处理器检测到问题时，您可能会看到以下消息：报表 `<report name>` 的定义无效。  
+此外，在运行时计算的报表表达式必须符合一组规则，才能确保正确组合报表数据和布局。 报表处理器检测到问题时，你可能会看到以下消息：报表 `<report name>` 的定义无效。  
   
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>报表项表达式只能引用当前数据集作用域中的字段；如果在聚合中，则只能引用指定数据集作用域中的字段。  
   

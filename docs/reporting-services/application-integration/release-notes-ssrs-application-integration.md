@@ -11,18 +11,25 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: 5ee9bd80519e9dc9d75bb78a98b548b2a60ef247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ed8d92f77a360d195c893c38ee08e642ee0b24a
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259375"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80752883"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>适用于 SSRS 的 WebForms 和 WinForms 的报表查看器控件的发行说明
 
 这些是与 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 相关的 WebForms 和 WinForms 报表查看器控件的发行说明。
 
 有关 SSRS 的发行说明，请参阅 [SQL Server Reporting Services (SSRS) 2017 及更高版本的发行说明](../release-notes-reporting-services.md)。
+
+## <a name="15014040"></a>150.1404.0
+| 更改描述 | 详细信息 |
+| :----------------- | :------ |
+| Bug 修复 | 修复了 WebForms 中工具栏的选项卡排序问题。 |
+|           | 改进了表的 HTML 呈现辅助功能。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="15014000"></a>150.1400.0
 | 更改描述 | 详细信息 |
