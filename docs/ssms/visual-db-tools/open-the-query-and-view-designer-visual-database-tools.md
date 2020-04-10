@@ -16,15 +16,15 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 54e89acfe1f24aaf83292c787e7b3253454bee32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d496e53641b64a88fcf82016247b2ce4ab12b843
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251423"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980413"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>打开查询和视图设计器 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 当您打开视图的定义、显示查询或视图的结果或者创建或打开查询时，查询和视图设计器将会打开。 它由四个不同的窗格组成：  
   
 -   “关系图”窗格以图形形式显示了您通过数据连接选择的表或表值对象。 同时也会显示它们之间的联接关系。  

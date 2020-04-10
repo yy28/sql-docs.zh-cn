@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 425beac7bcae36170ff378b59d36da05838df645
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a94761b9c85e4d3aa1d88a21efdce51a0f46e6f7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028254"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922550"
 ---
 # <a name="working-with-large-data"></a>处理大型数据
 
@@ -23,7 +23,7 @@ ms.locfileid: "69028254"
 
 JDBC 驱动程序提供自适应缓冲支持，使您可以在无需服务器游标开销的情况下检索任何类型的大值数据。 借助自适应缓冲，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 可以在应用程序需要时从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中检索语句执行结果，而不是一次性检索全部结果。 一旦应用程序不再访问结果，驱动程序还会立即丢弃它们。  
   
-在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] JDBC Driver 1.2 版中，缓冲模式默认为“full”  。 如果应用程序没有将“responseBuffering”连接属性设置为“adaptive”  （在连接属性中或使用 [SQLServerStatement](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 对象的 [setResponseBuffering](../../../connect/jdbc/reference/sqlserverstatement-class.md) 方法），驱动程序支持一次性从服务器中读取全部结果。 应用程序必须将“responseBuffering”连接属性显式设置为“adaptive”  ，才能获取自适应缓冲行为。  
+在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] JDBC Driver 1.2 版中，缓冲模式默认为“full”  。 如果应用程序没有将“responseBuffering”连接属性设置为“adaptive”  （在连接属性中或使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法），驱动程序支持一次性从服务器中读取全部结果。 应用程序必须将“responseBuffering”连接属性显式设置为“adaptive”  ，才能获取自适应缓冲行为。  
   
 adaptive  值是默认缓冲模式，JDBC Driver 在必要时缓冲尽可能少的数据。 若要详细了解如何使用自适应缓冲，请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
