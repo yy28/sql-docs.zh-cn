@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e42f8927d293772cc227513acebece255964eeb4
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75557942"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809783"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server 代理中运行 Windows PowerShell 步骤
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 使用 SQL Server 代理可以在计划时间运行 SQL Server PowerShell 脚本。  
   
