@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b67bf56247302fb451e1ea9d0ea9f76f9726a836
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198414"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926693"
 ---
 # <a name="sql-data-developer"></a>SQL 数据开发人员
 使用 Microsoft 的 SQL 数据平台，为 Web 服务器、企业服务器和云创建跨移动设备和桌面设备以数据为中心的解决方案。  
