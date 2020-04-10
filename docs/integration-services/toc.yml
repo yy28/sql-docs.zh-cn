@@ -63,6 +63,8 @@
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
     - name: 使用 SSMS 安排 Azure 中的程序包
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+    - name: 迁移到 Azure 的流程和工具
+      href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: 安装集成服务
   href: ../integration-services/install-windows/install-integration-services.md
 - name: 并行安装 Integration Services 版本
@@ -338,7 +340,7 @@
               href: ../integration-services/control-flow/select-variables-page.md
         - name: 发送邮件任务
           href: ../integration-services/control-flow/send-mail-task.md
-        - name: 收缩数据库任务
+        - name: “收缩数据库”任务
           href: ../integration-services/control-flow/shrink-database-task.md
         - name: 传输数据库任务
           href: ../integration-services/control-flow/transfer-database-task.md
@@ -1007,7 +1009,7 @@
       href: ../integration-services/performance/integration-services-ssis-logging.md
     - name: 性能计数器
       href: ../integration-services/performance/performance-counters.md
-- name: 故障排除
+- name: 疑难解答
   items:
     - name: 概述
       href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
@@ -1595,7 +1597,7 @@
           href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
         - name: Oracle CDC 数据库
           href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
-        - name: 故障排除
+        - name: 疑难解答
           href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
         - name: Change Data Capture Designer for Oracle by Attunity F1 帮助参考
           href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
