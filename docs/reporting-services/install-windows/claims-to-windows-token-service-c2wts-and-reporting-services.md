@@ -6,12 +6,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49a42d5b84217e5fd2b49cd9de0092336d7933b2
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265003"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002661"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) 和 Reporting Services
 
@@ -49,7 +49,7 @@ C2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以�
 
     最佳做法是 C2WTS 应在其自己的域标识下运行。 
 
-    * 创建一个 Active Directory 帐户，并将该帐户注册为 SharePoint Server 中的托管帐户。 若要了解有关托管帐户的详细信息，请参阅 [Sharepoint 中的托管帐户](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)
+    * 创建一个 Active Directory 帐户，并将该帐户注册为 SharePoint Server 中的托管帐户。
    
     * 配置 C2WTS 服务以通过“SharePoint 管理中心 > 安全性 > 配置服务帐户 > Windows 服务 - Windows Token Service 声明”使用托管帐户
 
