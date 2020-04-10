@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb1af89c0641a50be503d1283f1f85a735a153f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0605fc5a0fc27abfbcd15c22d5553587eecb0349
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76929419"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916251"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序处理错误和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
