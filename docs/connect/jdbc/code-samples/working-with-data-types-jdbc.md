@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee1e64794480346b1742b441437db95b8ae41456
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d05200ff0c634ea327e58e5288ff8e99c0ec9418
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028288"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922561"
 ---
 # <a name="working-with-data-types-jdbc"></a>处理数据类型 (JDBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "69028288"
 > [!NOTE]  
 > 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 JDBC 驱动程序数据类型的详细说明（包括它们的区别以及如何将它们转换为 Java 语言数据类型），请参阅[了解 JDBC 驱动程序数据类型](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。  
   
-为了使用 SQL Server 数据类型，JDBC 驱动程序为 \<SQLServerPreparedStatement\< 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类提供了 get[Type> 和 set](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> 方法，为 \<SQLServerResultSet\< 类提供了 get[Type> 和 update](../../../connect/jdbc/reference/sqlserverresultset-class.md)Type> 方法。 要使用哪个方法取决于所使用的数据类型以及是否要使用结果集和查询。  
+为了使用 SQL Server 数据类型，JDBC 驱动程序为 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类提供了 get\<Type> 和 set\<Type> 方法，为 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类提供了 get\<Type> 和 update\<Type> 方法。 要使用哪个方法取决于所使用的数据类型以及是否要使用结果集和查询。  
   
 此部分的主题说明了如何在 Java 应用程序中使用 JDBC 驱动程序数据类型来访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。  
   

@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77acaa43c1360c1f5d1126f46b5d79dc6d74b4ce
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77173624"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002702"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
@@ -34,7 +34,7 @@ ms.locfileid: "77173624"
 | **Azure Data Studio** | 是 | 用于查询 SQL Server 的跨平台图形工具。 | [安装](https://aka.ms/getazuredatastudio) |
 | **数据虚拟化扩展** | 是 | 提供数据虚拟化向导的 Azure Data Studio 的扩展。 | [安装](../azure-data-studio/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | 针对 AKS | 用于管理 Azure 服务的新式命令行接口。 与 AKS 大数据群集部署配合使用（[详细信息](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)）。 | [安装](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
-| **mssql-cli** | 可选 | 用于查询 SQL Server 的新式命令行接口（[详细信息](https://github.com/dbcli/mssql-cli/blob/master/README.rst)）。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **mssql-cli** | 可选 | 用于查询 SQL Server 的新式命令行接口（[详细信息](../tools/mssql-cli.md)）。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | 针对某些脚本 | 用于查询 SQL Server 的旧式命令行工具（[详细信息](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)）。 安装 SQLCMD 包前，你可能需要安装 Microsoft ODBC Driver 11 for SQL Server。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | 针对某些脚本 | 使用 URL 传输数据的命令行工具。 | [Windows](https://curl.haxx.se/windows/) \| Linux：安装 curl 包 |
 
