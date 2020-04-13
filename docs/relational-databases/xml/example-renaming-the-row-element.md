@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 275b1c6c138b11fa6330dc61fbfbfd2014a229c5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9a082f5bd5159f8b1dc32c3c9e2ba233cce817b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006810"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664526"
 ---
 # <a name="example-renaming-the-ltrowgt-element"></a>示例：重命名 &lt;row&gt; 元素
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   对于结果集中的每一行，RAW 模式都生成一个元素 `<row>`。 您可以通过向 RAW 模式指定一个可选参数为该元素指定另一个名称，如该查询中所示。 该查询为行集中的每一行返回一个 <`ProductModel`> 元素。  
   
 ## <a name="example"></a>示例  

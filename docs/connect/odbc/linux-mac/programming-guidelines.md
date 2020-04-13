@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 9299e42d4e9defb5695716771a60ea2855729ee7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912373"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219210"
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -22,10 +22,10 @@ ms.locfileid: "80912373"
 
 macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的编程功能建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 的基础之上。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 建立在 Windows 数据访问组件中的 ODBC（[ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkID=45250)）的基础之上。  
 
-通过在包含 unixODBC 标头（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、`/usr/local/include/msodbcsql.h`、`sql.h` 和 `sqlext.h`）后包含 `sqltypes.h`，ODBC 应用程序可以使用多重活动结果集 (MARS) 和其他 `sqlucode.h` 特定功能。 然后，使用与在 Windows ODBC 应用程序中将使用的相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定项符号名称。
+通过在包含 unixODBC 标头（`sql.h`、`sqlext.h`、`sqltypes.h` 和 `sqlucode.h`）后包含 `/usr/local/include/msodbcsql.h`，ODBC 应用程序可以使用多重活动结果集 (MARS) 和其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定功能。 然后，使用与在 Windows ODBC 应用程序中将使用的相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定项符号名称。
 
 ## <a name="available-features"></a>可用功能  
-在使用 macOS 和 Linux 上的 ODBC 驱动程序时，用于 ODBC ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server Native Client (ODBC)[) 的 ](https://go.microsoft.com/fwlink/?LinkID=134151) Native Client 文档的以下各个部分均有效：  
+在使用 macOS 和 Linux 上的 ODBC 驱动程序时，用于 ODBC ([ SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 文档的以下各个部分均有效：  
 
 -   [与 SQL Server 通信 (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
 -   [连接和查询超时支持](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
@@ -39,7 +39,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 -   [处理结果 (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [运行存储过程](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [稀疏列支持 (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL 加密](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [使用不带验证的加密](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [表值参数](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [用于命令和数据 API 的 UTF-8 和 UTF-16](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [使用目录函数](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
@@ -75,7 +75,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 对于 ODBC Driver 17，支持以下一种字符集/编码中的 SQLCHAR 数据：
 
 > [!NOTE]  
-> 由于 `iconv` 和 `musl` 中存在 `glibc` 差异，许多区域设置在 Alpine Linux 上不受支持。
+> 由于 `musl` 和 `glibc` 中存在 `iconv` 差异，许多区域设置在 Alpine Linux 上不受支持。
 >
 > 有关详细信息，请参阅[与 glibc 的功能差异](https://wiki.musl-libc.org/functional-differences-from-glibc.html)
 
@@ -106,7 +106,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 |ISO-8859-13|拉丁语 - 7|
 |ISO-8859-15|拉丁语 - 9|
 
-连接后，驱动程序将检测加载它的进程的当前区域设置。 如果驱动程序使用上述一种编码，则驱动程序会将该编码用于 SQLCHAR（窄字符）数据；否则，默认使用 UTF-8。 默认情况下，由于所有进程都在“C”区域设置中启动（并因此导致驱动程序默认为 UTF-8），如果应用程序需要使用上述一种编码，则它应在连接前使用 setlocale 函数设置适当的区域设置：可显式指定所需的区域设置，或通过使用空字符串（例如， **）来使用环境的区域设置**`setlocale(LC_ALL, "")`。
+连接后，驱动程序将检测加载它的进程的当前区域设置。 如果驱动程序使用上述一种编码，则驱动程序会将该编码用于 SQLCHAR（窄字符）数据；否则，默认使用 UTF-8。 默认情况下，由于所有进程都在“C”区域设置中启动（并因此导致驱动程序默认为 UTF-8），如果应用程序需要使用上述一种编码，则它应在连接前使用 setlocale 函数设置适当的区域设置：可显式指定所需的区域设置，或通过使用空字符串（例如，`setlocale(LC_ALL, "")`）来使用环境的区域设置  。
 
 因此，在编码为 UTF-8 的典型 Linux 或 Mac 环境中，从 ODBC Driver 13 或 13.1 升级的 ODBC Driver 17 用户将不会察觉到任何差异。 但是，通过 `setlocale()` 使用上述列表中非 UTF-8 编码的应用程序需要对传入/传出驱动程序的数据使用该编码，而不是 UTF-8。
 

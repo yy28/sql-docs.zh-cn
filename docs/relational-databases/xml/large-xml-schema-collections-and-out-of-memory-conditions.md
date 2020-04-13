@@ -13,15 +13,15 @@ ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 085a59ce8861c3f38e5c7540d4d56201c896ccea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7615345a7d7f55df63bd054ca64e1da1cf9795e6
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257656"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665098"
 ---
 # <a name="large-xml-schema-collections-and-out-of-memory-conditions"></a>大型 XML 架构集合和内存不足的情况
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   当对大型 XML 架构集合调用内置 XML_SCHEMA_NAMESPACE() 函数时或当您试图删除大型 XML 架构集合时，可能会出现内存不足的情况。 可以使用以下解决方法来处理这种情况：  
   
 -   在系统负荷较少时，请使用 DROP_XML_SCHEMA_COLLECTION 命令。 如果该命令执行失败，则请使用 ALTER DATABASE 语句将数据库置于单用户模式，然后再次尝试 DROP XML SCHEMA COLLECTION 命令。 如果 XML 架构集合存在于 **master**、 **model**或 **tempdb**中，则单用户模式还要求重启服务器。  

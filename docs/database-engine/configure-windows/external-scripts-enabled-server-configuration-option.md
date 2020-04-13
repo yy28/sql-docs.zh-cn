@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14e3d788034fad9e26f8283e5155d29286ad7360
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72006045"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664304"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>启用了外部脚本的服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ RECONFIGURE WITH OVERRIDE;
 
 你必须重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以使此更改生效。
 
-有关详细信息，请参阅[安装 SQL Server 机器学习](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
+有关详细信息，请参阅[安装 SQL Server 机器学习](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -63,4 +63,4 @@ RECONFIGURE WITH OVERRIDE;
 
 [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-[SQL Server 机器学习服务](../../advanced-analytics/r/sql-server-r-services.md)
+[SQL Server 机器学习服务](../../machine-learning/index.yml)

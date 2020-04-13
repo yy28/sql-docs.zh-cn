@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a90f68a55b10234e0397aba480b8d78a9cea1d9c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b11588e7f8a1e075b5091e73fe71879c7b035fd4
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039118"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664944"
 ---
 # <a name="use-xml-in-computed-columns"></a>在计算列中使用 XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 实例可作为计算列的源或计算列的类型出现。 本主题中的示例演示如何将 XML 用于计算列。  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>从 XML 列创建计算列  

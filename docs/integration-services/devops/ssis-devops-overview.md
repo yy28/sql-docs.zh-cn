@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402655"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809715"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具（预览）
 
@@ -172,7 +172,7 @@ SSIS 目录配置 JSON 文件的源。 源可以是“文件路径”，也可�
 
 SSIS 目录配置 JSON 文件的路径。 只有在选择“文件路径”作为配置文件源时，此属性才可见。
 
-若要在配置 JSON 文件中使用[管道变量](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch)，你需要在此任务之前添加[文件转换任务](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)，以将配置值替换为管道变量。 有关详细信息，请参阅 [JSON 变量替换](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)。
+若要在配置 JSON 文件中使用[管道变量](/azure/devops/pipelines/process/variables)，你需要在此任务之前添加[文件转换任务](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)，以将配置值替换为管道变量。 有关详细信息，请参阅 [JSON 变量替换](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)。
 
 #### <a name="inline-configuration-json"></a>内联配置 JSON
 

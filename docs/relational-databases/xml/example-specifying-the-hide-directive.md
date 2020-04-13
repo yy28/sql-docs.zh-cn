@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 22ee3e41d5792683dd73520bbeacb35fdc91d83e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d656dd0022a3c3234baf1e032e26ef77c80b9421
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006709"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665377"
 ---
 # <a name="example-specifying-the-hide-directive"></a>示例：指定 HIDE 指令
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   此示例说明如何使用 **HIDE** 指令。 当希望查询返回一个属性以对该查询所返回的通用表中的行进行排序，但是不希望该属性出现在最终所得到的 XML 文档中时，该指令很有用。  
   
  以下查询将构造此 XML：  

@@ -29,12 +29,12 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca4bfd07491b25659253ca56eb1c16adb414544b
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121559"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809835"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,9 +70,14 @@ END CATCH
   
  TRY…CATCH 构造不能跨越多个批处理。 TRY…CATCH 构造不能跨越多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句块。 例如，TRY…CATCH 构造不能跨越 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的两个 BEGIN…END 块，且不能跨越 IF…ELSE 构造。  
   
- 如果 TRY 块所包含的代码中没有错误，则当 TRY 块中最后一个语句完成运行时，会将控制传递给紧跟在相关联的 END CATCH 语句之后的语句。 如果 TRY 块所包含的代码中有错误，则会将控制传递给相关联的 CATCH 块的第一个语句。 如果 END CATCH 语句是存储过程或触发器的最后一个语句，控制将回到调用该存储过程或运行该触发器的语句。  
-  
- 当 CATCH 块中的代码完成时，会将控制传递给紧跟在 END CATCH 语句之后的语句。 由 CATCH 块捕获的错误不会返回到调用应用程序。 如果错误消息的任何部分都必须返回到应用程序，则 CATCH 块中的代码必须使用 SELECT 结果集或 RAISERROR 和 PRINT 语句之类的机制执行此操作。  
+ 如果 TRY 块所包含的代码中没有错误，则当 TRY 块中最后一个语句完成运行时，会将控制传递给紧跟在相关联的 END CATCH 语句之后的语句。
+ 
+ 如果 TRY 块所包含的代码中有错误，则会将控制传递给相关联的 CATCH 块的第一个语句。 当 CATCH 块中的代码完成时，会将控制传递给紧跟在 END CATCH 语句之后的语句。 
+ 
+ > [!NOTE] 
+ > 如果 END CATCH 语句是存储过程或触发器的最后一个语句，控制将回到调用该存储过程或运行该触发器的语句。 
+ 
+ 由 CATCH 块捕获的错误不会返回到调用应用程序。 如果错误消息的任何部分都必须返回到应用程序，则 CATCH 块中的代码必须使用 SELECT 结果集或 RAISERROR 和 PRINT 语句之类的机制执行此操作。  
   
  TRY…CATCH 构造可以是嵌套式的。 TRY 块或 CATCH 块均可包含嵌套的 TRY…CATCH 构造。 例如，CATCH 块可以包含内嵌的 TRY…CATCH 构造，以处理 CATCH 代码所遇到的错误。  
   
@@ -133,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- ERROR\_\* 函数也适用于`CATCH`本机编译的存储过程[内的 ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 块。  
+ ERROR\_\* 函数也适用于[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)内的 `CATCH` 块。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY…CATCH 构造影响的错误  
  TRY…CATCH 构造在下列情况下不捕获错误：  

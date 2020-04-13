@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fcabc89e268e9ce5ed93211ccf89eed53e245c07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3720cfa4ee72df832b77ad4cab08013ddc8e0c7
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68029347"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664761"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>规范格式和模式限制
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XSD 模式方面允许对简单类型的词法空间进行限制。 当把模式限制加在存在多个可能的词法表示形式的类型上时，某些值可能引起对验证的意外行为。  
   
  因为这些值的词法表示形式未存储在数据库中，所以出现此行为。 因此，当这些值作为输出序列化时将其转换为它们的规范表示形式。 如果文档包含的值的规范格式不符合其类型的模式限制，则当用户尝试重新插入该文档时，将拒绝该文档。  

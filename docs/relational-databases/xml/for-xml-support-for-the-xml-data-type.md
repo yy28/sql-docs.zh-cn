@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7fdf9bda5ddf8f3fdd0012c8f8fffced6f8f9b19
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943251"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665316"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 数据类型的 FOR XML 支持
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   如果 FOR XML 查询在 SELECT 子句中指定了 **xml** 类型的列，列值将映射为返回的 XML 中的元素，不管是否指定了 ELEMENTS 指令。 **xml** 类型的列中的任何 XML 声明都不是序列化的。  
   
  例如，下列查询将从 `BusinessEntityID`xml`FirstName` 类型的 `LastName` 列中检索客户联系人信息（如 `AdditionalContactInfo`**和** 列以及电话号码）。  

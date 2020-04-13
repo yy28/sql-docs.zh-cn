@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 72449f54a5256987b7336c82fb5119235ab302b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f75729d1e31989bde851d1fde3a05ab932b6f460
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137471"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665033"
 ---
 # <a name="namespace-support-in-path-mode"></a>PATH 模式中的命名空间支持
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   PATH 模式中的命名空间支持是通过使用 WITH NAMESPACES 提供的。 例如，下面的查询演示了如何使用 WITH NAMESPACES 语法声明一个命名空间 (a:)，随后即可在后续的 SELECT 语句中使用此命名空间：  
   
 ```  

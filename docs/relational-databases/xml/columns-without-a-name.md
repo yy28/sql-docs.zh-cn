@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0d8fb8fc597fd0562640821769e3314b4f3020bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 685be1c7e6c43e28500dd1ee96ea6fe696ad8e20
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68112907"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664631"
 ---
 # <a name="columns-without-a-name"></a>没有名称的列
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   任何没有名称的列都将成为内联列。 例如，未指定列别名的计算列或嵌套标量查询将生成没有名称的列。 如果该列属于 **xml** 类型，则将插入该数据类型实例的内容。 否则，列内容将作为文本节点插入。  
   
 ```  

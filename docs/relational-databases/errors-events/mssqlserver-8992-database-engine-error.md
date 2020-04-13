@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25d673f7f385649afb0a46ae65a61e3eb0f270f9
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479668"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531078"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+|Item|值|
+|:---|:---|
 |产品名称|SQL Server|  
 |事件 ID|8992|  
 |事件源|MSSQLSERVER|  
@@ -43,9 +43,9 @@ DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定对象的系统元数据表中发现
 在对已从 SQL Server 2000 升级至 SQL Server 2005 或更高版本的数据库运行 DBCC CHECKDB 时，也可能发生此错误。 在 SQL Server 2000 中，DBCC CHECKDB 并不包括 DBCC CHECKCATALOG 功能，因此升级前不会捕捉到此错误，除非专门针对 SQL Server 2000 中的数据库执行 DBCC CHECKCATALOG。  
   
 除错误 8992 外，还可能显示以下任一错误：  
-|||
-|-|-| 
+
 |MSG ID|消息文本|
+|:---|:---|
 |3851|在系统表 sys.%ls%ls 中发现无效的行(%ls)。|
 |3852|sys.%ls%ls 中的行(%ls)在 sys.%ls%ls 中没有匹配的行(%ls)。|
 |3853|sys.%ls%ls 中的行(%ls)的属性(%ls)在 sys.%ls%ls 中没有匹配的行(%ls)。|

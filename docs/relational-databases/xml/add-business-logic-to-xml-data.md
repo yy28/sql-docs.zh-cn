@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a282e3e9493bb1cfbcc57186a8e1b9f53faf22f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aaabf611574c60620df600264537436b41e85c18
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095464"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664814"
 ---
 # <a name="add-business-logic-to-xml-data"></a>将业务逻辑添加到 XML 数据
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   可以采用多种方式将业务逻辑添加到 XML 数据中：  
   
 -   您可以编写行或列约束，以在插入和修改 XML 数据时强制实施特定于域的约束。  

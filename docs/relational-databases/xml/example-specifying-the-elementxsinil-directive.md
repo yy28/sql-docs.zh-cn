@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 485a0a9061a1cef6bdde4fee84b95614ea220005
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f717b4e5830fd9ab6089da3b7e97cb028a14ff13
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006714"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662972"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>示例：指定 ELEMENTXSINIL 指令
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   当指定 ELEMENT 指令检索以元素为中心的 XML 时，如果列具有 NULL 值，则 EXPLICIT 模式将不生成相应的元素。 另外，也可以指定 ELEMENTXSINIL 指令以请求为 **xsi:nil** 属性设置为 TRUE 值的 NULL 值生成元素。  
   
  以下查询构造包括雇员地址的 XML。 对于 `AddressLine2` 和 `City` 列，列名指定 `ELEMENTXSINIL` 指令。 这将为行集中的 `AddressLine2` 和 `City` 列中的 NULL 值生成元素。  

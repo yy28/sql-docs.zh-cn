@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dff9b54963eb88bb29172d270c092c33d0be4127
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5073f921a7d80df9e59e93915dedaec11fddcf76
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039172"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664973"
 ---
 # <a name="use-path-mode-with-for-xml"></a>将 PATH 模式与 FOR XML 一起使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   如 [使用 FOR XML 构造 XML](../../relational-databases/xml/for-xml-sql-server.md)中所述，PATH 模式提供了一种较简单的方法来混合元素和属性。 PATH 模式还是一种用于引入附加嵌套来表示复杂属性的较简单的方法。 尽管您可以使用 FOR XML EXPLICIT 模式查询从行集构造这种 XML，但 PATH 模式为可能很麻烦的 EXPLICIT 模式查询提供了一种较简单的替代方法。 通过 PATH 模式，以及用于编写嵌套 FOR XML 查询的功能和返回 **xml** 类型实例的 TYPE 指令，您可以编写简单的查询。  
   
  在 PATH 模式中，列名或列别名被作为 XPath 表达式来处理。 这些表达式指明了如何将值映射到 XML。 每个 XPath 表达式都是一个相对 XPath，它提供了项类型（例如属性、元素和标量值）以及将相对于行元素而生成的节点的名称和层次结构。  

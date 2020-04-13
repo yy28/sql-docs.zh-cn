@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa7bd23de60f82aa83620e0d81a1887c1c997634
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078032"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665268"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 查询中的 TYPE 指令
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)，这样便可以选择通过指定 TYPE 指令请求将 FOR XML 查询结果作为 **xml** 数据类型返回。 这样您便可以在服务器上处理 FOR XML 查询的结果。 例如，可以对其指定 Xquery，将结果分配给 **xml** 类型变量，或编写 [嵌套 FOR XML 查询](../../relational-databases/xml/use-nested-for-xml-queries.md)。  
   
 > [!NOTE]  

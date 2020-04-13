@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3719463499049d860d0aab234f7917a1f8bc052d
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995355"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665254"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   OPENXML 是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字，对内存中的 XML 文档提供与表或视图相似的行集。 OPENXML 允许像访问关系行集一样访问 XML 数据。 它通过提供以内部形式表示的 XML 文档的行集视图来实现这一点。 行集中的记录可以存储在数据库表中。  
   
  无论行集提供程序（视图或 OPENROWSET）可以在何处作为源出现，都可以在 SELECT 和 SELECT INTO 语句中使用 OPENXML。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  

@@ -15,16 +15,16 @@ ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 168e7e70735cabafaf4fab48d27c46cbe81d1ce1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13451c2f9cfa87c1ceb83956e9ebe6056b74b6ad
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257637"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665297"
 ---
 # <a name="generate-elements-for-null-values-with-the-xsinil-parameter"></a>使用 XSINIL 参数生成 NULL 值对应的元素
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **ELEMENTS** 指令将构造 XML，其中每个列值映射到 XML 中的一个元素。 默认情况下，如果列值为 NULL，则不添加元素。 但通过对 ELEMENTS 指令指定可选的 **XSINIL** 参数，可以请求创建 NULL 值对应的元素。 在这种情况下，将为每个 NULL 列值返回一个元素，其 **xsi:nil** 属性被设置为 TRUE。  
   

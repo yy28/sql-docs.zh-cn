@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6fb7538de11db0d5a37c44330bd2b0251d9031b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006674"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662964"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>示例：指定 XMLTEXT 指令
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   此示例说明如何在使用 EXPLICIT 模式的 **语句中使用** XMLTEXT `SELECT` 指令处理溢出列中的数据。  
   
  请考虑一下 `Person` 表。 此表含有存储 XML 文档的未使用部分的 `Overflow` 列。  

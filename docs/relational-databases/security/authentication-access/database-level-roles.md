@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287331"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664465"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 
@@ -112,18 +112,6 @@ ms.locfileid: "79287331"
 > [!IMPORTANT]  
 >  **db_ssisadmin** 角色和 **dc_admin** 角色的成员可以将其特权提升为 sysadmin。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的 sysadmin 安全上下文可以执行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包，所以可以实现特权提升。 若要防止在运行维护计划、数据收集组和其它 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包时提升特权，请将运行包的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业配置为具有有限特权的代理帐户，或仅将 **sysadmin** 成员添加到 **db_ssisadmin** 和 **dc_admin** 角色。  
 
-## <a name="working-with-r-services"></a>使用 R Services  
-
-**适用于：** SQL Server（从 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
-
-安装 R Services 时，其他数据库角色可用于管理包。 有关详细信息，请参阅 [SQL Server 的 R 包管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
-
-|角色名称 |说明|  
-|-------------|-----------------|
-|**rpkgs-users** |允许用户使用任何由 rpkgs 共享角色成员安装的共享包。|
-|**rpkgs-private** |提供具有与 rpkgs-users 角色权限相同的共享包的访问权限。 此角色的成员还可以安装、删除和使用个人作用域包。|
-|**rpkgs-shared** |提供与 rpkgs-private 角色相同的权限。 属于此角色成员的用户还可以安装或删除共享包。|
-  
 ## <a name="working-with-database-level-roles"></a>使用数据库级角色  
  下表说明了用于数据库级角色的命令、视图和函数。  
   

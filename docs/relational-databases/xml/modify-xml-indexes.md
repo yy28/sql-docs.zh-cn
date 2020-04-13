@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a579fcf8809c8c05838dad70126421362cd8048
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: efe1b72c4cb98b51da065b8194432f4e8d9efa61
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042679"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665077"
 ---
 # <a name="modify-xml-indexes"></a>修改 XML 索引
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句可用于修改现有的 XML 和非 XML 索引。 但是，并非所有的 ALTER INDEX 选项都适用于 XML 索引。 修改 XML 索引时以下选项不可用：  
   
 -   对于 XML 索引，重新生成和设置选项 IGNORE_DUP_KEY 无效。 对于辅助 XML 索引，重新生成选项 ONLINE 必须设置为 OFF。 在 ALTER INDEX 语句中，不允许 DROP_EXISTING 选项。  

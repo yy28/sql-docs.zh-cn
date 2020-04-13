@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 76e471b3e6e35e3c6f0568c446b9650466ffa542
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a98637671787e70dff614779c9e49393cae8a6e8
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006694"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664220"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>示例：指定 ID 和 IDREF 指令
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 此示例与 [指定 ELEMENTXSINIL 指令](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 示例几乎相同。 唯一的差别在于查询指定的是 **ID** 和 **IDREF** 指令。 这些指令覆盖 < **> 和 <** > 元素中 `OrderHeader`SalesPersonID`OrderDetail` 属性的类型。 这会形成文档内链接。 您需要使用架构才能查看被覆盖的类型。 因此，该查询在 FOR XML 子句中指定 **XMLDATA** 选项来检索架构。  
   

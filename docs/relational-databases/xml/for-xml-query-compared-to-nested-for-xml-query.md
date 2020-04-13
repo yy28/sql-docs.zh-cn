@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f00e060bf477d6e43f2ddd42e0fd4bbbf6515898
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94e88af049ca5db3bb975c787cda18176d655346
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943348"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665166"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 查询与嵌套 FOR XML 查询的比较
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主题将单个 FOR XML 查询与嵌套 FOR XML 查询进行了比较。 使用嵌套 FOR XML 查询的好处之一就是可以为查询结果指定一个以属性为中心和以元素为中心的 XML 的组合。 此示例演示了这种好处。  
   
 ## <a name="example"></a>示例  

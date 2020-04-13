@@ -22,12 +22,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c55041d7b461406305a7b3a17c0e274270b7c5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59dba483b5c8de6ba46634cfb40816ff8e01ee9b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68893895"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664245"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ MAX_PROCESSES =value
 
 有关资源池的常规信息，请参阅 [Resource Governor 资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、[sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 和 [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)。
 
-有关管理用于机器学习的外部资源池的详细信息，请参阅 [SQL Server 中机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)。 
+有关管理用于机器学习的外部资源池的详细信息，请参阅 [SQL Server 中机器学习的资源调控](../../machine-learning/administration/resource-governor.md)。 
 
 ## <a name="permissions"></a>权限
 

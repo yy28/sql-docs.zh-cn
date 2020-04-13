@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52d67c4fb8bf48726c5ac65f3f312fc97a1d9628
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76971225"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664339"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>在 Linux 上安装 SQL Server 语言扩展
 
@@ -30,7 +30,7 @@ Java 扩展包位于 SQL Server Linux 源存储库中。 如果已为数据库�
 
 Linux 容器也支持语言扩展。 我们不提供带有语言扩展的预生成容器，但你可以使用 [GitHub 中提供的示例模板](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)通过 SQL Server 容器创建一个。
 
-默认情况下，语言扩展和[机器学习服务](../advanced-analytics/index.yml)安装在 SQL Server 大数据群集上。 如果使用大数据群集，则无需按照本文中的步骤进行操作。 有关详细信息，请参阅[在大数据群集上使用机器学习服务（Python 和 R）](../big-data-cluster/machine-learning-services.md)。
+默认情况下，语言扩展和[机器学习服务](../machine-learning/index.yml)安装在 SQL Server 大数据群集上。 如果使用大数据群集，则无需按照本文中的步骤进行操作。 有关详细信息，请参阅[在大数据群集上使用机器学习服务（Python 和 R）](../big-data-cluster/machine-learning-services.md)。
 
 ## <a name="uninstall-preview-version"></a>卸载预览版
 

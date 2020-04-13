@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b89a9efa3a034b9310384cc63a9b4c0c93ab8717
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93534392fd8d79ca71064bb0df61be7533dd6e06
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986446"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665279"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>使用 FOR XML 从行集生成 XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以使用带有新的 **TYPE** 指令的 FOR XML，通过行集生成 **xml** 数据类型实例。  
   
  可以将结果赋给 **xml** 数据类型列、变量或参数。 同样，可以嵌套 FOR XML 以生成任意层次结构。 这使嵌套的 FOR XML 在编写上比 FOR XML EXPLICIT 更为方便，但是对于深层次的结构，它的执行效果不如后者。 FOR XML 还引入了新的 PATH 模式。 这个新模式指定某个列的值在 XML 树中的路径。  

@@ -18,16 +18,16 @@ ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c82fc52acaf8d3bbd351463803ae682ccfebc1b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245240"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664955"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>将 RAW 模式与 FOR XML 一起使用
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 RAW 模式可将查询结果集中的每一行转换为带有通用标识符 \<row> 或可能提供元素名称的 XML 元素。 默认情况下，非 NULL 行集中的每列值都将映射到 \<row> 元素的一个属性。 如果将 ELEMENTS 指令添加到 FOR XML 子句，则每列值都将映射到 \<row> 元素的子元素。 指定 ELEMENTS 指令之后，您还可以选择性地指定 XSINIL 选项以将结果集中的 NULL 列值映射到具有 `xsi:nil="true"` 属性的元素。
   

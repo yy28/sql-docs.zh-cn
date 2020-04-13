@@ -12,15 +12,15 @@ ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 98b28f2115634c8dd173adb22e76ec6a92cd8928
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ea398c3f4f29182122e6147d4b437bd7e715bb
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254121"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664918"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>示例：指定带有 ELEMENTS 指令的 XSINIL
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   以下查询将指定 `ELEMENTS` 指令以根据查询结果生成以元素为中心的 XML。  
   
 ## <a name="example"></a>示例  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5331a474d24d2204ca81e37427fc2615ecede622
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d8d3674766bfa6cb96a23e53b9f2aee440beb37
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078001"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665197"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>将 AUTO 模式与 FOR XML 一起使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   如 [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)中所述，AUTO 模式将查询结果以嵌套 XML 元素的方式返回。 这不能较好地控制从查询结果生成的 XML 的形式。 如果要生成简单的层次结构，AUTO 模式查询很有用。 但是， [将 EXPLICIT 模式与 FOR XML 一起使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) 和 [将 PATH 模式与 FOR XML 一起使用](../../relational-databases/xml/use-path-mode-with-for-xml.md) 在确定从查询结果生成的 XML 的形式方面可提供更好的控制和更大的灵活性。  
   
  在 FROM 子句内，每个在 SELECT 子句中至少有一列被列出的表都表示为一个 XML 元素。 如果在 FOR XML 子句中指定了可选的 ELEMENTS 选项，SELECT 子句中列出的列将映射到属性或子元素。  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f101051d924c1fca0bfbcd131ea8544ea4781e12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 108a54614bb6d77be53b28b42a128f9db7a46aae
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909111"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665014"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>对 XML 列使用全文搜索
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   您可以对 XML 列创建全文索引，这种索引对 XML 值的内容进行索引，但忽略 XML 标记。 元素标记用作标记边界。 将对以下项进行索引：  
   

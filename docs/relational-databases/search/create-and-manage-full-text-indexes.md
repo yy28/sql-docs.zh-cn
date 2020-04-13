@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257657"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530945"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "75257657"
   
 使用 [SELECT](../../t-sql/queries/select-transact-sql.md) 语句调用 [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) 函数。 在此函数的调用过程中，使用 OBJECT_ID 函数将表名 (*table_name*) 转换为表 ID，指定该表的唯一索引的名称，然后指定 **IsFulltextKey** 索引属性，如下所示：  
   
-```  
+```sql  
 SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
 ```  
   
@@ -119,7 +119,7 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  下例查询 `PK_Document_DocumentID` 索引是否用于强制实现全文键列的唯一性，如下所示：  
   
-```  
+```sql  
 USE AdventureWorks  
 GO  
 SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
@@ -133,7 +133,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
  
 若要获取此标识符，可以使用 SELECT 语句调用 OBJECTPROPERTYEX 函数。 使用 OBJECT_ID 函数将表名 (*table_name*) 转换为表 ID，并指定 **TableFulltextKeyColumn** 属性，如下所示：  
   
-```  
+```sql  
 SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
 ```  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  下例返回全文键列的标识符或 NULL。 NULL 表示您使用的是无效索引名称，索引名称与表不对应，或表不存在，等等。  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -150,7 +150,7 @@ GO
   
  下例说明如何使用唯一键列的标识符获取列的名称。  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 DECLARE @key_column sysname  

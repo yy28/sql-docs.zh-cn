@@ -1,5 +1,6 @@
 ---
 title: 使用格式化文件跳过表列 (SQL Server) | Microsoft Docs
+description: 本文描述当源数据文件中不存在该已跳过列的数据时，如何使用格式化文件跳过导入表列。
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909258"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980406"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式化文件跳过表列 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "72909258"
 -   跳过的列具有默认值。  
   
 ## <a name="sample-table-and-data-file"></a>示例表和数据文件  
- 本文中的示例需要一个处于 `myTestSkipCol`dbo**架构下的名为** 的表。 可以在示例数据库（例如 *WideWorldImporters* 或 *AdventureWorks*）或任何其他数据库中创建此表。 此表的创建方式如下所示：  
+ 本文中的示例需要一个处于 **dbo** 架构下的名为 `myTestSkipCol` 的表。 可以在示例数据库（例如 *WideWorldImporters* 或 *AdventureWorks*）或任何其他数据库中创建此表。 此表的创建方式如下所示：  
   
 ```sql
 USE WideWorldImporters;  
@@ -66,7 +67,7 @@ GO
 ## <a name="option-1---use-a-non-xml-format-file"></a>选项 #1 - 使用非 XML 格式化文件  
   
 ### <a name="step-1---create-a-default-non-xml-format-file"></a>步骤 #1 - 创建默认非 XML 格式化文件  
-在命令提示符下运行以下 bcp`myTestSkipCol`**命令为** 示例表创建默认非 XML 格式化文件：  
+在命令提示符下运行以下 bcp  命令为 `myTestSkipCol` 示例表创建默认非 XML 格式化文件：  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
@@ -140,7 +141,7 @@ GO
   
 ### <a name="step-1---create-a-default-xml-format-file"></a>步骤 #1 - 创建默认 XML 格式化文件   
 
-在命令提示符下运行以下 bcp`myTestSkipCol`**命令为** 示例表创建默认 XML 格式化文件：  
+在命令提示符下运行以下 bcp  命令为 `myTestSkipCol` 示例表创建默认 XML 格式化文件：  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
@@ -172,7 +173,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 
 ### <a name="step-2---modify-an-xml-format-file"></a>步骤 #2 - 修改 XML 格式化文件
 
-下面是将跳过 `myTestSkipCol2.xml` 的已修改 XML 格式化文件 `Col2`。 `FIELD` 的 `ROW` 和 `Col2` 条目已删除，并且条目已重新编号。 第一个字段后的分隔符也已从 `\t` 更改为 `,`。
+下面是将跳过 `Col2` 的已修改 XML 格式化文件 `myTestSkipCol2.xml`。 `Col2` 的 `FIELD` 和 `ROW` 条目已删除，并且条目已重新编号。 第一个字段后的分隔符也已从 `\t` 更改为 `,`。
 
 ```xml
 <?xml version="1.0"?>  
@@ -197,7 +198,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 
 使用 XML 格式化文件时，你无法在通过 bcp  命令或 `BULK INSERT` 语句直接向表导入内容时跳过列。 但是，您可以向表中除最后一列的所有列导入。 如果必须跳过最后一列以外的任何列，必须创建仅包含数据文件所含列的目标表视图。 然后，您可以将此文件中的数据大容量导入此视图。  
   
-下面的示例在 `v_myTestSkipCol` 表上创建 `myTestSkipCol` 视图。 此视图跳过第二表列 `Col2`。 然后此例使用 `BULK INSERT` 将 `myTestSkipCol2.dat` 数据文件导入此视图。  
+下面的示例在 `myTestSkipCol` 表上创建 `v_myTestSkipCol` 视图。 此视图跳过第二表列 `Col2`。 然后此例使用 `BULK INSERT` 将 `myTestSkipCol2.dat` 数据文件导入此视图。  
   
 在 SSMS 中，运行以下代码。 更新计算机上示例文件位置的文件系统路径。 
   

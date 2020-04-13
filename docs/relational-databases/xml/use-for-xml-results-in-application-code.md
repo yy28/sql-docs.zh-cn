@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 754b7a4baaff71cf0abe7193e5ba9c9cbd0a943a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9927e5a4477961fbd7122ae96b05e42c74bf2196
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039181"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665050"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   通过在 SQL 查询中使用 FOR XML 子句，可以检索查询结果，甚至可以将其转换为 XML 数据。 当 FOR XML 查询结果可以在 XML 应用程序代码中使用时，您可以使用此功能执行以下操作：  
   
 -   查询 SQL 表中 [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md) 值的实例  

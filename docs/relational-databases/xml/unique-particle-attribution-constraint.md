@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c64ff3f819e0d30db6654cbeed6cf5c19e43aa7
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078015"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665215"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一粒子归属约束
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在 XSD 中，复杂内容模型受唯一粒子归属 (UPA) 约束规则的约束。 此规则要求实例文档中的每个元素明确地完全对应于其父级的内容模型中的一个 `<xsd:element>` 或 `<xsd:any>` 粒子。 任何包含具有可能不明确的内容模型的类型的架构都将被拒绝。  
   
  导致不明确的最常见原因是具有可变出现范围（例如 minOccurs < maxOccurs）的 `<xsd:any>` 通配符字符和粒子。 例如，以下内容模型是不明确的，因为 <`e1`> 元素既可以与 `<xsd:element>` 元素匹配，也可以与 `<xsd:any>` 元素匹配。  

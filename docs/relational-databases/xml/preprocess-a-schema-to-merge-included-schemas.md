@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 58773dbce29589d66403c6584b5360c0dc8026d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995325"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664915"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>预处理架构以便合并包括的架构
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   W3C XSD **include** 元素支持架构模块性，通过功能可以将 XML 架构分区到多个物理文件中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前尚不支持此元素。 服务器将拒绝包含此元素的 XML 架构。  
   
  一种解决方法是，可以预处理包括 \<xsd:include> 指令的 XML 架构，来复制所有包含的架构的内容并将其合并为单个架构，以上载到服务器。 以下 C# 代码可用于预处理。 代码前面部分的注释提供了有关如何使用代码的信息。  

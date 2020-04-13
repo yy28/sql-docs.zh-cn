@@ -1,21 +1,20 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2020
+ms.date: 04/03/2020
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65f805c0d2467f3b4301ed1d237284cb61224b97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76d14fac74d806427f67eadaea3bb5363b17d88a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77520890"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664216"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "77520890"
 从指定的文件路径或字节流中注册数据库中的外部语言扩展。 此语句充当一种通用机制，数据库管理员使用它可在 SQL Server 支持的任何 OS 平台上注册新外部语言扩展。 有关详细信息，请参阅[语言扩展](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
 
 > [!NOTE]
-> 目前仅支持将 Java  用作外部语言。 “R”和“Python”是保留名称，不能使用这些特定名称创建外部语言   。 若要详细了解如何使用 R  和 Python  ，请参阅 [SQL Server 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/)。
+> 目前仅支持将 Java  用作外部语言。 “R”和“Python”是保留名称，不能使用这些特定名称创建外部语言   。 若要详细了解如何使用 R  和 Python  ，请参阅 [SQL Server 机器学习服务](https://docs.microsoft.com/sql/machine-learning/)。
 
 ## <a name="syntax"></a>语法
 
@@ -106,10 +105,6 @@ FROM <file_spec> [ ,...2 ]
 **平台**
 
 混合 OS 方案需要此参数。 在混合体系结构中，语言需要按平台进行一次注册。 平台和语言名称对每种外部语言是唯一键。 如果未指定平台，则假定为当前 OS。
-
-## <a name="remarks"></a>备注
-
-目前不支持 PARAMETERS 和 ENVIRONMENT_VARIABLES   。
 
 ## <a name="permissions"></a>权限
 

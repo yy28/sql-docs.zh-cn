@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9dcfe0dd5dea972145c35ddce9b75b1fb009ccb9
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006822"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664533"
 ---
 # <a name="example-querying-xmltype-columns"></a>示例：查询 XML 类型的列
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   下面的查询包括 **xml** 类型的列。 该查询从 `Instructions` xml **类型的** 列的第一个位置检索产品型号 ID、名称和生产步骤。  
   
 ## <a name="example"></a>示例  

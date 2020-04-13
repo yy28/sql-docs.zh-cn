@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a53419aba5515a9a60817ec0cc2a9de5a648d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb42a3b63c06e1d436bfac8f727c87ce201bd4ec
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80228338"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664379"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>在 Docker 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -129,10 +129,10 @@ RECONFIGURE WITH OVERRIDE
 
 Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server 一起使用：
 
-+ [Python 教程：在 SQL Server 机器学习服务中使用线性回归来预测雪橇租赁](../advanced-analytics/tutorials/python-ski-rental-linear-regression.md)
-+ [教程：配合使用 K-Means 群集和 SQL Server 机器学习服务对客户进行分类](../advanced-analytics/tutorials/python-clustering-model.md)
++ [Python 教程：在 SQL Server 机器学习服务中使用线性回归来预测雪橇租赁](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Python 教程：配合使用 K-Means 群集和 SQL Server 机器学习服务对客户进行分类](../machine-learning/tutorials/python-clustering-model.md)
 
 R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 协同工作的基础知识。 有关下一步，请参阅以下链接：
 
-+ [教程：在 T-SQL 中运行 R](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [教程：适用于 R 开发人员的数据库内分析](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [快速入门：在 T-SQL 中运行 R](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [教程：适用于 R 开发人员的数据库内分析](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

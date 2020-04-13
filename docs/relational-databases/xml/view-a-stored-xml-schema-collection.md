@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2e62fd82b302576dfbaf45cbb8073c2e94f7a67e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef32368031876bc14619cd14aa215402c67618b6
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096967"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662917"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>查看存储 XML 架构集合
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)导入 XML 架构集合之后，架构组件便存储在元数据中。 你可以使用 [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)内部函数重新构造 XML 架构集合。 此函数返回 **xml** 数据类型实例。  
   
  例如，以下查询从`ProductDescriptionSchemaCollection`数据库中的产品关系架构中检索 XML 架构集合 ( [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] )。  

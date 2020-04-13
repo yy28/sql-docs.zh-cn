@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 605911ebe60c7467db2792737426cc98ce67b52d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20d18e12da4738f5af674eb2e90c4344ffa2b535
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113136"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664717"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>将现有列更改为 XML 列
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ALTER TABLE 语句支持 **xml** 数据类型。 例如，可以将任意字符串类型列更改为 **xml** 数据类型。 注意，在这些情况下，列中包含的文档必须格式正确。 此外，如果将列的类型从字符串更改为类型化的 xml，则列中的文档将根据指定的 XSD 架构进行验证。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fc25632b2567b191fef3ffa3111a73da9699de9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cc0fa2ffe432d3edef8aa8f51e4f230c1e40d2e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001752"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665041"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>在 ASP.NET 中使用嵌套 FOR XML 查询
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在此示例中，ASP.NET 应用程序通过在 SQL Server 中执行存储过程将 XML 返回至浏览器。 该存储过程使用嵌套查询生成 XML。 [使用嵌套 AUTO 模式查询生成同级](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)主题中显示了一个类似的 SELECT 语句。 本示例演示了一种在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用嵌套的 FOR XML 查询来生成以元素为中心的 XML 的方法。  
   
 ## <a name="example"></a>示例  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a511e977975ad0e23c9cf553de000b32bad24e69
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 685ce50021a9bd06dc075198f008336b2c150a6b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039146"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665263"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>将 value() 和 nodes() 方法用于 OPENXML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   你可以在 **SELECT** 子句中对 **xml** 数据类型使用多个 **value()** 方法以生成所提取值的行集。 **nodes()** 方法为可用于其他查询的每个所选节点生成一个内部引用。 生成行集时，如果行集有多个列且用于生成行集的路径表达式比较复杂，结合使用 **nodes()** 和 **value()** 方法可能会更有效。  
   
  **nodes()** 方法生成特殊的 **xml** 数据类型的实例，每个实例都将其上下文设置为不同的选定节点。 这种 XML 实例支持 **query()** 、**value()** 、**nodes()** 和 **exist()** 方法，并可在 **count(\*)** 聚合中使用。 所有其他用法都会导致错误。  

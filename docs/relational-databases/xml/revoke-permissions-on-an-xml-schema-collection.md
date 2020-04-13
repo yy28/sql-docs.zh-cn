@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5d2cdfdf47aad32c9fc669ae054cf84c061c0ee5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3e6a69d61f65cb755fd96d8b0a310f002ab85a5
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000764"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664839"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤消对 XML 架构集合的权限
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   可以使用下列一种方法撤消创建 XML 架构集合的权限：  
   
 -   撤消对关系架构的 ALTER 权限。 这样，主体就不能在关系架构中创建 XML 架构集合。 但是，主体仍然可以在同一数据库的其他关系架构中执行此操作。  

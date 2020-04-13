@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402662"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002785"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的各版本和支持的功能
 
@@ -152,7 +152,7 @@ Linux 上的 SQL Server 2019 支持 SQL Server 数据库引擎。 下表介绍�
 |动态数据掩码|是|是|是|是|   
 |基本审核|是|是|是|是| 
 |精细审核|是|是|是|是| 
-|透明数据库加密|是|否|否|否|   
+|透明数据库加密|是|是|否|否|   
 |用户定义的角色|是|是|是|是| 
 |包含的数据库|是|是|是|是| 
 |备份加密|是|是|否|否|  
@@ -227,7 +227,6 @@ Linux 上的 SQL Server 2019 目前不支持以下功能和服务。 随着时�
 | **SQL Server 代理** |  子系统：CmdExec、PowerShell、队列读取器、SSIS、SSAS、SSRS |
 | &nbsp; | 警报 |
 | &nbsp; | 托管备份 |
-| &nbsp; | 使用 MSX/TSX 进行多服务器管理 |
 | **高可用性** | 数据库镜像  |
 | **安全性** | 可扩展的密钥管理 |
 | &nbsp; | 链接服务器的 AD 身份验证 | 

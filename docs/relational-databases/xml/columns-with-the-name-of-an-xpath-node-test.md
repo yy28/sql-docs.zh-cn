@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2e1b4811e15d9f6927d06a4d4f9ff99466eb164c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 632fe07b7ffdf74f01d9cf87367fee9fa7886f27
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68112910"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664644"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>列名为 XPath 节点测试的列
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   如果列名是某个 XPath 节点测试，将如下表所示映射该列的内容。 如果列名是某个 XPath 节点测试，则该列的内容将映射到相应的节点。 如果该列的 SQL 类型是 **xml**，将返回一个错误。  
   
 |列名|行为|  
