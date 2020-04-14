@@ -1,22 +1,22 @@
 ---
-title: 适用于 Microsoft SQL Server 的 Extensibility Framework API
+title: 扩展性框架 API
 titleSuffix: SQL Server Language Extensions
-description: ''
+description: 可以使用 Extensibility Framework 为 SQL Server 编写编程语言扩展插件。 适用于 Microsoft SQL Server 的 Extensibility Framework API 是一种 API，语言扩展插件可使用它来与 SQL Server 交互和交换数据。
 author: dphansen
 ms.author: davidph
-ms.date: 03/30/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba2405be5b4bb4805c524197bbac4ee9baa73ce
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517708"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012423"
 ---
-# <a name="extensibility-framework-api-for-microsoft-sql-server"></a>适用于 Microsoft SQL Server 的 Extensibility Framework API
+# <a name="extensibility-framework-api-for-sql-server"></a>适用于 SQL Server 的 Extensibility Framework API
 
 可以使用 Extensibility Framework 为 SQL Server 编写编程语言扩展插件。 适用于 Microsoft SQL Server 的 Extensibility Framework API 是一种 API，语言扩展插件可使用它来与 SQL Server 交互和交换数据。
 

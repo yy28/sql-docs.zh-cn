@@ -1,5 +1,6 @@
 ---
 title: 下载 SQL Server Management Studio (SSMS)
+description: 下载最新版 SQL Server Management Studio (SSMS)。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -22,13 +23,13 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 02/18/2020
-ms.openlocfilehash: 8045c054d05a1e92eaf18f9aba852d9301f7ef60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 04/07/2020
+ms.openlocfilehash: 5eb94f5755ee0f707ed753140633f923fad4d61b
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77652926"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873143"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -44,17 +45,17 @@ SSMS 是免费的！
 
 **[![下载](media/download-icon.png)下载 SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.4 是 SSMS 的最新正式发布 (GA) 版。 如果安装了之前的 SSMS 18 GA 版本，请安装 SSMS 18.4 将它升级到 18.4。
+SSMS 18.5 是 SSMS 的最新正式发布 (GA) 版本。 如果安装的是旧 GA 版本 SSMS 18，请安装 SSMS 18.5 将它升级到 18.5。
 
 ### <a name="version-information"></a>版本信息
 
-- 版本号：18.4  
-- 生成号：15.0.18206.0  
-- 发行日期：2019 年 11 月 4 日  
+- 版本号：18.5  
+- 生成号：15.0.18330.0  
+- 发行日期：2020 年 4 月 7 日  
 
 如果你有任何意见或建议，或想报告问题，最好是通过 [UserVoice](https://aka.ms/sqlfeedback) 与 SSMS 团队联系。
 
-SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。 但是，如果安装了 SSMS 18.x 预览版，必须在安装 SSMS 18.4 前卸载  预览版。 转到“帮助”>“相关窗口”，找到“预览版”，即可查看  。
+SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。 不过，如果安装的是 SSMS 18.x 预览版，必须在安装 SSMS 18.5 前卸载  它。 转到“帮助”>“相关窗口”，找到“预览版”，即可查看  。
 
 如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18 
 
@@ -65,8 +66,8 @@ SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与
 
 此版本的 SSMS 可以安装在以下语言中：
 
-SQL Server Management Studio 18.4：  
-[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
+SQL Server Management Studio 18.5：  
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模块可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
@@ -75,7 +76,7 @@ SQL Server Management Studio 18.4：
 
 有关此版本中新增功能的详细信息，请参阅 [SSMS 发行说明](release-notes-ssms.md)。
 
-此版本存在一些[已知问题](release-notes-ssms.md#known-issues-184)。
+此版本存在一些[已知问题](release-notes-ssms.md#known-issues-185)。
 
 ## <a name="previous-versions"></a>以前的版本
 
@@ -103,15 +104,15 @@ SQL Server Management Studio 18.4：
 
     你也可以传递 /Passive 而不是 /Quiet 来查看设置 UI   。
 
-3. 如果运行正常，根据示例，你可以在 %systemdrive%\SSMSto\Common7\IDE\Ssms.exe 中看到安装了 SSMS。 如果出现故障，可以检查返回的错误代码，并在 %TEMP%\SSMSSetup 处查看日志文件。
+3. 如果一切正常，你可以看到 SSMS 安装在 %systemdrive%\SSMSto\Common7\IDE\Ssms.exe 中（具体视示例而定）。 如果出现故障，可以检查返回的错误代码，并在 %TEMP%\SSMSSetup 处查看日志文件。
 
-## <a name="supported-sql-offerings-ssms-184"></a>受支持的 SQL 产品/服务 (SSMS 18.4)
+## <a name="supported-sql-offerings-ssms-185"></a>受支持的 SQL 产品/服务 (SSMS 18.5)
 
 - 此版本的 SSMS 适用于所有[受支持 SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，并且在最大程度上支持与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能配合使用。
 - 此外，SSMS 18.x 可与 SSMS 17.x、SSMS 16.x 或 SQL Server 2014 SSMS 及早期版本并行安装。
 - SQL Server Integration Services (SSIS) - SSMS 版本 17.x 或更高版本不支持连接到旧版 SQL Server Integration Services 服务。 要连接到早期版本的 Integration Services，请使用与 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 连接到旧版 SQL Server 2016 Integration Services 服务。 可以在同一台计算机上并行安装 SSMS 17.x 和 SSMS 16.x。 由于 SQL Server 2012 的发布，建议使用 SSIS 目录数据库 (SSISDB) 来存储、管理、运行和监视 Integration Services 包。 有关详细信息，请参阅 [SSIS 目录](../integration-services/catalog/ssis-catalog.md)。
 
-## <a name="supported-operating-systems-ssms-184"></a>受支持的操作系统 (SSMS 18.4)
+## <a name="supported-operating-systems-ssms-185"></a>受支持的操作系统 (SSMS 18.5)
 
 与最新可用的服务包一起使用时，此版本的 SSMS 支持以下 64 位平台：
 

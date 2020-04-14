@@ -1,7 +1,5 @@
 ---
 title: 连接到服务器（数据库引擎）
-ms.custom: seo-lt-2019
-ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,24 +15,30 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 396d9c1094d496289540804baa07c959fe5c3eef
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.custom: seo-lt-2019
+ms.date: 04/07/2020
+ms.openlocfilehash: 49bc9ee786c814da1322e9f44c1b80bf7bc63b23
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531208"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809703"
 ---
 # <a name="connect-to-server-database-engine"></a>连接到服务器（数据库引擎）
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 时，可以使用此对话框查看或指定选项。 大多数情况下，可以通过在“服务器名称”  框中输入数据库服务器的计算机名称并单击“连接”  来进行连接。 如果连接到命名实例，请使用计算机名称后跟反斜杠，然后是实例名。 例如，`mycomputer\myinstance` 。 如果要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，请使用后面跟有 **\sqlexpress**的计算机名称。  
+连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 时，可以使用此对话框查看或指定选项。 大多数情况下，可以通过在“服务器名称”  框中输入数据库服务器的计算机名称并单击“连接”  来进行连接。 如果连接到命名实例，请使用计算机名称后跟反斜杠，然后是实例名。 例如，`mycomputer\myinstance` 。 如果要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，请使用后面跟有 **\sqlexpress**的计算机名称。
   
-许多因素都会对您能否连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产生影响。 有关详细信息，请参阅以下资源：  
+许多因素都会对您能否连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产生影响。 有关详细信息，请参阅以下资源：
+
 - [教程第 1 课：连接到数据库引擎](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+
 - [排查连接到 SQL Server 数据库引擎时的问题](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
+
 - [解决 SQL Server 连接错误](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)   
   
-## <a name="options"></a>选项  
+## <a name="options"></a>选项
+
 **服务器类型**  
 从对象资源管理器注册服务器时，请选择要连接到的服务器的类型： [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 对话框的其余部分只显示适用于所选服务器类型的选项。 从“已注册的服务器”注册某服务器时，“服务器类型”  框是只读的，并且与“已注册的服务器”组件中显示的服务器类型匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，从“已注册的服务器”工具栏中选择“ [!INCLUDE[ssDE](../../includes/ssde_md.md)]”、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   
@@ -43,13 +47,13 @@ ms.locfileid: "80531208"
   
 > [!NOTE]  
 > 要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 的活动用户实例，请使用指定管道名称的命名管道协议进行连接，例如 `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`。 有关详细信息，请参阅 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 文档。  
+
 > [!NOTE]  
 > 连接通常保留在“最近使用”(MRU) 历史记录中。 若要从 MRU 中删除条目，只需单击“服务器名称”  组合框，选择要删除的服务器的名称，然后按 DEL  键。  
-   
+
 **身份验证**  
 当前版本的 SSMS 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的实例时提供五种身份验证模式。 如果你的“身份验证”对话框中与以下列表中的不匹配，请从 [下载 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 下载最新版本的 SSMS。  
 
-  
 > **Windows 身份验证**  
 > [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 身份验证模式允许用户通过 Windows 用户帐户进行连接。  
 > 
@@ -71,12 +75,14 @@ ms.locfileid: "80531208"
 **登录**  
 输入连接所用的登录名。 只有选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证或 Active Directory 密码身份验证进行连接时，此选项才可用。  
   
+> [!NOTE]  
+> 连接通常保留在“最近使用”(MRU) 历史记录中。 若要从 MRU 中删除条目，只需单击“服务器名称”  组合框，选择要删除的服务器的名称，然后按 DEL  键。 这是随 SSMS 18.5 一起引入的。
+
 **密码**  
 输入登录名的密码。 只有选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证或 Active Directory - 密码身份验证进行连接时，才可编辑此选项。  
-  
+
 **“连接”**  
-单击以连接到服务器。  
-  
+单击以连接到服务器。
+
 **选项**  
-单击以显示“连接属性”  和“其他连接参数”  选项卡。  
-  
+单击以显示“连接属性”  和“其他连接参数”  选项卡。

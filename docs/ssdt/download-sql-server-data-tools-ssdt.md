@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca30249097fa9ad4eec386ca0fc0698976e5362a
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271483"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809584"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下载 SQL Server Data Tools (SSDT) for Visual Studio
 
@@ -83,8 +83,12 @@ SQL Server Data Tools (SSDT) 是一款新式开发工具，用于生成 SQL Serv
 
 > [!IMPORTANT]
 > * 安装 SSDT for Visual Studio 2017 (15.9.4) 前，请卸载“Analysis Services 项目”  和“Reporting Services 项目”  扩展（如已安装），并关闭所有 VS 实例。
-> * 删除了收件箱组件 Power Query Source for SQL Server 2017。 目前，我们已宣布推出 Power Query Source for SQL Server 2017 & 2019 作为现成组件，可在[此处](https://www.microsoft.com/download/details.aspx?id=100619)下载。
-> * 删除了收件箱组件 Microsoft Oracle Connector for SQL Server 2019。 目前，我们已宣布将 Microsoft Oracle Connector for SQL Server 2019 作为现成组件推出（可以从[此处](https://www.microsoft.com/download/details.aspx?id=58228)下载）。
+> * 删除了收件箱组件 Power Query Source for SQL Server 2017。 目前，我们已宣布将 Power Query Source for SQL Server 2017 和 2019 作为现成组件推出（可以从[此处](https://www.microsoft.com/download/details.aspx?id=100619)下载）。
+> * 若要使用 Oracle 和 Teradata 连接器设计定目标到低于 SQL 2019 的旧版 SQL Server 的包，除了 [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) 和 [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) 之外，还需要安装相应版本的 Microsoft Connector for Oracle by Attunity 和 Microsoft Connector for Teradata by Attunity。
+>    * [版本 5.0 Microsoft Connector for Oracle by Attunity 和 Microsoft Connector for Teradata by Attunity（定目标到 SQL Server 2017）](https://www.microsoft.com/download/details.aspx?id=55179)
+>    * [版本 4.0 Microsoft Connector for Oracle by Attunity 和 Microsoft Connector for Teradata by Attunity（定目标到 SQL Server 2016）](https://www.microsoft.com/download/details.aspx?id=52950)
+>    * [版本 3.0 Microsoft Connector for Oracle by Attunity 和 Microsoft Connector for Teradata by Attunity（定目标到 SQL Server 2014）](https://www.microsoft.com/download/details.aspx?id=44582)
+>    * [版本 2.0 Microsoft Connector for Oracle by Attunity 和 Microsoft Connector for Teradata by Attunity（定目标到 SQL Server 2012）](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ### <a name="release-notes"></a>发行说明
 
@@ -146,7 +150,7 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 |项目模板|支持的 SQL 平台|
 |-------------------|--------------------|
-|关系数据库| SQL Server 2005\* - SQL Server 2017<br> （使用适用于 Visual Studio 2017 的 SSDT 17.x 或 SSDT 来连接 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)）<br /><br />Azure SQL 数据库<br /><br />Azure SQL 数据仓库（仅支持查询；尚不支持数据库项目）<br /><br /> \* SQL Server 2005 支持已停止提供，<br /><br /> 请迁移到官方支持的 SQL 版本|
+|关系数据库| SQL Server 2005\* - SQL Server 2017<br> （使用适用于 Visual Studio 2017 的 SSDT 17.x 或 SSDT 来连接 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)）<br /><br />Azure SQL Database<br /><br />Azure SQL 数据仓库（仅支持查询；尚不支持数据库项目）<br /><br /> \* SQL Server 2005 支持已停止提供，<br /><br /> 请迁移到官方支持的 SQL 版本|
 |Analysis Services 模型<br /><br />Reporting Services 报表 | SQL Server 2008 - SQL Server 2017|
 |Integration Services 包| SQL Server 2012 - SQL Server 2019 |
 

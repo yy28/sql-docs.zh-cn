@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 925254bbdc7200b5e7ca2a3c413de87e8915b2b4
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652236"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002726"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>将数据库还原到 SQL Server 大数据群集主实例
 
@@ -29,7 +29,7 @@ ms.locfileid: "69652236"
 本文演示如何还原 AdventureWorks 数据库，但可以使用任何数据库备份。 
 
 > [!TIP]
-> 可在[此处](https://www.microsoft.com/download/details.aspx?id=49502)下载 AdventureWorks 备份。
+> 下载 [AdventureWorks 备份](../samples/adventureworks-install-configure.md)。
 
 ## <a name="copy-the-backup-file"></a>复制备份文件
 
