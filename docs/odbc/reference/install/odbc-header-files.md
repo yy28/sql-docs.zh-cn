@@ -1,5 +1,5 @@
 ---
-title: ODBC 头文件 |Microsoft Docs
+title: ODBC 标题文件 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - header files [ODBC]
 - application files [ODBC]
 ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99ac5b590fc631292c5fe8ab91e0fafd58c38c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0e3a4b550660b0f669b0b7dd790ab2fbb5fbdd33
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093967"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288927"
 ---
 # <a name="odbc-header-files"></a>ODBC 头文件
 > [!NOTE]  
->  不需要再分发 ODBC 标头文件。 无视为 "核心"。  
+>  不需要重新分发 ODBC 标头文件。 没有一个被认为是"核心"。  
   
- **标头文件**  
+ **标题文件**  
   
- Odbcinst.ini  
+ 奥德布金斯特  
   
- Sql。h  
+ Sql.h  
   
- Sqltypes。h  
+ Sqlext.h  
   
- Sqltypes  
+ Sqltype.h  
   
- Sqlucode。h  
+ Sqlucode.h  
   
- Msdasql  
+ Msdasql.h  
   
- Msdadc  
+ Msdadc.h  
   
- Sqlspi （用于驱动程序开发，请参阅[ODBC 服务提供程序接口（SPI）参考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)，了解详细信息），从 WINDOWS 8 SDK 开始。
+ Sqlspi.h（用于驱动程序开发，请参阅[ODBC 服务提供商接口 （SPI） 参考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)，了解更多信息）可从 Windows 8 SDK 中开始。

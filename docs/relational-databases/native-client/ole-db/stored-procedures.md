@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 - stored procedures [OLE DB], about OLE DB stored procedures
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 668d264d9be032c7886026e628921ead837d7879
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f317ab69c210d91c9d5c85a0e6d5061b1177bdbb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73758413"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305308"
 ---
 # <a name="stored-procedures"></a>存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  存储过程（[&#40;数据库引擎&#41;的存储过程](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)）是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支持  
+  存储过程[存储过程（数据库引擎）](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持：  
   
 -   存储过程  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73758413"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [&#40;OLE DB 运行存储过程&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
+-   [运行存储过程 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
 -   [调用存储过程 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
   

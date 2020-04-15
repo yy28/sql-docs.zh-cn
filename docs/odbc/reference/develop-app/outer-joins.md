@@ -1,5 +1,5 @@
 ---
-title: 外部联接 |Microsoft Docs
+title: 外部联接 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4bf875b3afd21f6b8cb211c999401b0ecb80879
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 81988d34dca38d5c041ff9f87e9674d7c97d76cc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987812"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282439"
 ---
 # <a name="outer-joins"></a>外部联接
-ODBC 支持 SQL-92 左、右和完全外部联接语法。 外部联接的转义序列是  
+ODBC 支持 SQL-92 左、右和完整的外部联接语法。 外部联接的转义序列是  
   
- **{oj** _外联接_**}**  
+ **[oj** _外部联接_**]**  
   
- 其中*外联接*是  
+ *外部联接*是  
   
- *表引用*{**LEFT &#124; RIGHT &#124; FULL} 外部联接**{*表引用*&#124;*外*联接} **** _搜索条件_  
+ *表引用*[**左&#124; 右&#124;完整] 外部联接**[*表引用*&#124;*外部联接*=_在搜索条件_**上**  
   
- *表引用*指定表名称，*搜索条件*指定*表引用*之间的联接条件。  
+ *表引用*指定表名称，*搜索条件*指定*表引用 之间的*联接条件。  
   
- 外部联接请求必须出现在**FROM**关键字之后和**WHERE**子句之前（如果存在）。 有关完整的语法信息，请参阅附录 C： SQL 语法中的[外部联接转义序列](../../../odbc/reference/appendixes/outer-join-escape-sequence.md)。  
+ 外部联接请求必须出现在**FROM**关键字之后和**WHERE**子句之前（如果存在）。 有关完整的语法信息，请参阅附录 C 中的[外部联接转义序列](../../../odbc/reference/appendixes/outer-join-escape-sequence.md)：SQL 语法。  
   
- 例如，下面的 SQL 语句创建了一个相同的结果集，该结果集列出了所有客户，并显示了已打开的订单。 第一条语句使用转义序列语法。 第二个语句使用适用于 Oracle 的本机语法，并且不可互操作。  
+ 例如，以下 SQL 语句创建相同的结果集，该结果集列出所有客户并显示已打开的订单。 第一个语句使用转义序列语法。 第二个语句使用 Oracle 的本机语法，不可互操作。  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status  
@@ -45,4 +45,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
    WHERE (Orders.Status='OPEN') AND (Customers.CustID= Orders.CustID(+))  
 ```  
   
- 若要确定数据源和驱动程序支持的外部联接的类型，应用程序需要使用 SQL_OJ_CAPABILITIES 标志调用**SQLGetInfo** 。 可能支持的外部联接的类型包括：左、右、完全或嵌套外部联接;外部联接，其中**ON**子句中的列名与**外部联接**子句中的表名的顺序不同;与外部联接结合在一起的内部联接;使用任意 ODBC 比较运算符的外部联接。 如果 SQL_OJ_CAPABILITIES 信息类型返回0，则不支持外部联接子句。
+ 要确定数据源和驱动程序支持的外部联接类型，应用程序使用 SQL_OJ_CAPABILITIES 标志调用**SQLGetInfo。** 可能支持的外部联接类型为左联接、右联接、完整联接或嵌套外部联接;**ON**子句中的列名称与**OUTER JOIN**子句中的相应表名的顺序不相同的外部联接;内部联接与外部联接结合;和外部联接使用任何 ODBC 比较运算符。 如果SQL_OJ_CAPABILITIES信息类型返回 0，则不支持外部联接子句。

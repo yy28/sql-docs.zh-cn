@@ -1,5 +1,5 @@
 ---
-title: LIKE 转义序列 |Microsoft Docs
+title: 喜欢转义序列 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 517c21f7b64fa7ceb662af9839a9fed1a1e6eff6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041709"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304918"
 ---
 # <a name="like-escape-sequence"></a>LIKE 转义序列
-ODBC 对 LIKE 子句使用转义序列。 此转义序列的语法如下所示：  
+ODBC 使用 LIKE 子句的转义序列。 此转义序列的语法如下：  
   
 ```  
 {'escape-character'}  
 ```  
   
 ## <a name="remarks"></a>备注  
- 在 BNF 表示法中，语法如下：  
+ 在 BNF 符号中，语法如下所示：  
   
- *类似 ODBC-escape* ：： =  
+ *ODBC 类似转义*：：*  
   
- *Odbc-esc-发起程序*转义符 \*转义*符 ' *odbc-esc-终止符*  
+ *ODBC-esc-发端器*逃生'*逃生字符**'ODBC-esc终结器*  
   
- *转义*符：： =*字符*  
+ *转义字符*：：**字符*  
   
- *ODBC-esc-发起方*：： = {  
+ *ODBC-esc -发物人*：：*  
   
- *ODBC-esc-终止符*：： =}  
+ *ODBC-esc 终结器*：*|  
   
- 若要确定驱动程序是否支持类似的转义序列，应用程序可以使用 SQL_LIKE_ESCAPE_CLAUSE 信息类型调用**SQLGetInfo** 。
+ 要确定驱动程序是否支持 LIKE 转义序列，应用程序可以使用SQL_LIKE_ESCAPE_CLAUSE信息类型调用**SQLGetInfo。**

@@ -1,5 +1,5 @@
 ---
-title: 目录元数据 |Microsoft Docs
+title: 目录元数据 |微软文档
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,37 +11,37 @@ helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de11cf1346010881ae3af0bbdf69035583090dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ebf39ceb63a814b90bc5e6f0e2ebddeec401b126
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783705"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301838"
 ---
 # <a name="metadata---catalog"></a>元数据 - 目录
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主题介绍**SQLColumns**和**SQLProcedureColumns**返回的列元数据，以及**SQLGetTypeInfo**返回的数据类型元数据。  
+  本主题介绍**SQLColumn**和 SQL**程序列**返回的列元数据，以及**SQLGetTypeInfo**返回的数据类型元数据。  
   
 ## <a name="remarks"></a>备注  
- **SQLColumns**和**SQLProcedureColumns**为日期/时间类型返回以下列值。  
+ 以下列值由**SQLColumn**和**SQL 程序列**返回日期/时间类型。  
   
 |参数类型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8，10，16|16|23|19、21..27|26、28..34|  
+|COLUMN_SIZE|10|8,10..16|16|23|19、21..27|26、28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1. 7|1. 7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|Null|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|Null|  
 |CHAR_OCTET_LENGTH|Null|Null|Null|Null|Null|Null|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- **SQLGetTypeInfo**为日期/时间类型返回以下列值：  
+ 以下列值由**SQLGetTypeInfo**返回日期/时间类型：  
   
 |参数类型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
@@ -67,6 +67,6 @@ ms.locfileid: "73783705"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>另请参阅  
- [Metadata &#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [元数据&#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

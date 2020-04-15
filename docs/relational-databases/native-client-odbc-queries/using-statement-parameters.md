@@ -1,5 +1,5 @@
 ---
-title: Using 语句参数 |Microsoft Docs
+title: 使用语句参数 |微软文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779538"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297889"
 ---
 # <a name="using-statement-parameters"></a>使用语句参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "73779538"
   
 -   在构造查询条件时增强用户交互。  
   
--   管理**text**、 **ntext**和**image**数据以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定于数据的 C 数据类型。  
+-   管理**文本****、ntext**和**图像**数据以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定于 C 的数据类型。  
   
- 例如， **part**表包含名为**PartID**、 **Description**和**Price**的列。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
+ 例如，**零件**表具有名为 **"零件 ID"、"****描述**"和 "**价格"的**列。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,6 +58,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [绑定参数](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;执行查询](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [执行查询&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

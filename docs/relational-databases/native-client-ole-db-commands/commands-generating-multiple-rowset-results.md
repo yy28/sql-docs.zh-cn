@@ -1,5 +1,5 @@
 ---
-title: 生成多行集结果的命令 |Microsoft Docs
+title: 生成多个行集结果的命令 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,28 +15,27 @@ helpviewer_keywords:
 - commands [OLE DB]
 - multiple-rowset results
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19a6dafd921edf924a35e30c7770155986203f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2cbdba7e16240b5adfd14c43a5916aaaf8cf0400
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73758277"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304478"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>生成多个行集结果的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序可以从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句返回多个行集。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  
+  本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序可以从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句返回多个行集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  
   
 -   以单个命令的形式提交成批的 SQL 语句。  
   
 -   存储过程实现一批 SQL 语句。  
   
 ## <a name="batches"></a>批处理  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将分号字符识别为 SQL 语句的批处理分隔符：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序将分号字符识别为 SQL 语句的批处理分隔符：  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -46,8 +45,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
  通过一个批处理发送多个 SQL 语句比单独执行每个 SQL 语句更有效。 发送一个批处理减少了客户端和服务器之间的网络往返。  
   
 ## <a name="stored-procedures"></a>存储过程  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为存储过程中的每个语句返回一个结果集，因此大多数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程返回多个结果集。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为存储过程中的每个语句返回一个结果集，因此大多数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程返回多个结果集。  
   
 ## <a name="in-this-section"></a>本节内容  
   

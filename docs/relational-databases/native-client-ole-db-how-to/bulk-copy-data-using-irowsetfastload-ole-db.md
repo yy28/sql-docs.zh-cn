@@ -1,5 +1,5 @@
 ---
-title: 使用 IRowsetFastLoad （OLE DB）进行批量复制数据 |Microsoft Docs
+title: 使用 IRowsetFastLoad (OLE DB) 大容量复制数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,29 +13,29 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf5f597b739f4fd121d1c4174039dae5379122f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 37be3d529c1d219318af2743d854a6d1b67f0cee
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73768273"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300960"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad (OLE DB) 大容量复制数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   此示例说明如何使用 IRowsetFastLoad 将记录大容量复制到表中。  
   
- 通过将特定于 SQLOLEDB 提供程序的属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE，使用者将其对大容量复制的需要通知 SQLOLEDB。 通过在数据源上设置该属性，使用者创建 SQLOLEDB 会话。 新会话允许使用者访问**IRowsetFastLoad**。  
+ 通过将特定于 SQLOLEDB 提供程序的属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE，使用者将其对大容量复制的需要通知 SQLOLEDB。 通过在数据源上设置该属性，使用者创建 SQLOLEDB 会话。 新会话允许使用者访问 IRowsetFastLoad****。  
   
- 可以参考完整示例，该示例演示了使用 IRowsetFastLoad 将记录大容量复制到表中的过程****。 在此示例中，将 10 条记录添加到表 IRFLTable 中****。 需要在数据库中创建表**IRFLTable** 。  
+ 可以参考完整示例，该示例演示了使用 IRowsetFastLoad 将记录大容量复制到表中的过程****。 在此示例中，将 10 条记录添加到表 IRFLTable 中****。 您需要在数据库中创建表**IRFLTable。**  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保留凭据，则应使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>将数据大容量复制到 SQL Server 表中  
   
@@ -43,22 +43,22 @@ ms.locfileid: "73768273"
   
 2.  将特定于 SQLOLEDB 提供程序的数据源属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE。 通过将该属性设置为 VARIANT_TRUE，新创建的会话将允许使用者访问 IRowsetFastLoad****。  
   
-3.  创建请求**IOpenRowset**接口的会话。  
+3.  创建请求 IOpenRowset**** 接口的会话。  
   
 4.  调用 IOpenRowset::OpenRowset 以打开包括表（将使用大容量复制操作复制其中数据）中所有行的行集****。  
   
-5.  执行必要的绑定，并使用**IAccessor：： CreateAccessor**创建访问器。  
+5.  执行需要的绑定，并使用 IAccessor::CreateAccessor**** 创建取值函数。  
   
 6.  设置内存缓冲区，用于将数据从其复制到表中。  
   
-7.  调用**IRowsetFastLoad：： InsertRow**将数据大容量复制到表中。  
+7.  调用 IRowsetFastLoad::InsertRow**** 将数据大容量复制到表中。  
 
 ## <a name="example"></a>示例  
  在此示例中，将 10 条记录添加到表 IRFLTable 中。 您需要在数据库中创建表 IRFLTable。 IA64 平台不支持此示例。  
   
  执行第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的表。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 确保 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
   
  执行第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以删除该应用程序使用的表。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics |Microsoft Docs
+title: SQLStatistics |微软文档
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLStatistics function
 ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 103331bfff23e5fd315baf37407d385523a7b63d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2aa220cc17ac3e224037aecfda752f3276830dc2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785367"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291843"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  可以对静态游标执行**SQLStatistics** 。 尝试对可更新的（键集驱动或动态）执行**SQLStatistics**将返回 SQL_SUCCESS_WITH_INFO 指示游标类型已更改。  
+  **SQLStatistics**可以在静态游标上执行。 尝试对可上升（键集驱动或动态）执行**SQLStatisticsSQL_SUCCESS_WITH_INFO，** 指示游标类型已更改。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLStatistics 函数](https://go.microsoft.com/fwlink/?LinkId=59372)   
+ [SQL统计函数](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

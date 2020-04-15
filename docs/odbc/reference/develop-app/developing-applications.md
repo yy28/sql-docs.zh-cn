@@ -1,5 +1,5 @@
 ---
-title: 开发应用程序 |Microsoft Docs
+title: 开发应用程序 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - ODBC [ODBC], application development
 - application development [ODBC], about application development
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039911"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305858"
 ---
 # <a name="developing-applications"></a>开发应用程序
-本部分包含有关开发使用 ODBC 接口的应用程序和实现它的驱动程序的信息。  
+本节包含有关开发使用 ODBC 接口的应用程序的信息以及实现该接口的驱动程序的信息。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [ODBC 基础知识](../../../odbc/reference/develop-app/odbc-fundamentals.md)  
   
@@ -46,13 +46,13 @@ ms.locfileid: "68039911"
   
 -   [描述符](../../../odbc/reference/develop-app/descriptors.md)  
   
--   [中的](../../../odbc/reference/develop-app/transactions-odbc.md)  
+-   [事务](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
 -   [诊断](../../../odbc/reference/develop-app/diagnostics.md)  
   
 -   [互操作性](../../../odbc/reference/develop-app/interoperability.md)  
   
--   [编程时的注意事项](../../../odbc/reference/develop-app/programming-considerations.md)  
+-   [编程注意事项](../../../odbc/reference/develop-app/programming-considerations.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC 程序员参考](../../../odbc/reference/odbc-programmer-s-reference.md)

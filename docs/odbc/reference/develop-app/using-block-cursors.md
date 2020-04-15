@@ -1,5 +1,5 @@
 ---
-title: 使用块游标 |Microsoft Docs
+title: 使用块光标 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f5c487bd8b60a83c709399cb9673dc0b015bd79d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135537"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306788"
 ---
 # <a name="using-block-cursors"></a>使用块游标
-对块游标的支持内置于 ODBC 3。*x*。 当在 ODBC 3 中调用时， **SQLFetch**只能用于多行提取。*x*;如果为 ODBC 2，则为。*x*应用程序调用**SQLFetch**，它将只打开一行只进游标。 ODBC 3 时*x*应用程序调用 ODBC 2 中的**SQLFetch** 。*x*驱动程序，除非驱动程序支持**SQLExtendedFetch**，否则它将返回一行。 有关详细信息，请参阅附录 G：驱动程序准则中的[块游标、可滚动游标和后向兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
+对块游标的支持内置于 ODBC 3 中。*x*. . **SQLFetch**只能在 ODBC 3 中调用时用于多行提取。*x;* 如果 ODBC 2.*x*应用程序调用**SQLFetch，** 它将只打开一个单行、仅转发的游标。 当一个ODBC 3。*x*应用程序在 ODBC 2 中调用**SQLFetch。***x*驱动程序，它返回一行，除非驱动程序支持**SQLExtendedFetch**。 有关详细信息，请参阅附录 G 中的[块光标、可滚动光标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)：向后兼容性的驱动程序指南。  
   
- 若要使用块游标，应用程序将设置行集大小，绑定行集缓冲区（如前一部分中所述），还可以选择设置 SQL_ATTR_ROWS_FETCHED_PTR 和 SQL_ATTR_ROW_STATUS_PTR 语句特性，并调用**SQLFetch**或**SQLFetchScroll**来提取行块。 即使在提取行后，应用程序也可以更改行集大小并绑定新行集缓冲区（通过调用**SQLBindCol**或指定绑定偏移量）。  
+ 要使用块游标，应用程序设置行集大小，绑定行集缓冲区（如上一节所述），可以选择设置SQL_ATTR_ROWS_FETCHED_PTR和SQL_ATTR_ROW_STATUS_PTR语句属性，并调用**SQLFetch**或**SQLFetchScroll**来获取行块。 应用程序可以更改行集大小并绑定新的行集缓冲区（通过调用**SQLBindCol**或指定绑定偏移），即使在获取行之后也是如此。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [行集大小](../../../odbc/reference/develop-app/rowset-size.md)  
   
 -   [提取的行数和状态](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
--   [SQLGetData 和块游标;阻止 curso](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+-   [SQLGet数据和块光标;块库尔索](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
