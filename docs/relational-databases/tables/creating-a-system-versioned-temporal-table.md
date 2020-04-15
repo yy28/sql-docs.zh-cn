@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165219"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809855"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的时态表
 
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - **PERIOD** 列始终不可为 null，即使未指定是否为 null，也是如此。 如果将 PERIOD 列显式定义为可为 null，则 CREATE TABLE 语句将失败   。
 - 历史记录表必须在列数、列名、排序和数据类型方面始终与当前表或临时表架构一致。
 - 将在当前表或临时表所在的架构中自动创建匿名历史记录表。
-- 匿名历史记录表名称采用以下格式：*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* （suffix 为后缀）。 后缀是可选的，仅当表名的第一部分不唯一时才会添加它。
+- 匿名历史记录表名采用以下格式：MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]  . 后缀是可选的，仅当表名的第一部分不唯一时才会添加它。
 - 历史记录表将创建为行存储表。 如果可能，将应用页压缩，否则历史记录表将不会进行压缩。 例如，某些表配置（如稀疏列）不允许压缩。
 - 将为历史记录表（名称自动生成，格式为 *IX_<history_table_name>* ）创建一个默认聚集索引。 聚集索引包含 **PERIOD** 列（结束、开始）。
 - 若要将当前表创建为内存优化表，请参阅[系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。
@@ -164,9 +164,8 @@ ALTER TABLE InsurancePolicy
 
 - 对 SQL Server Enterprise Edition 以外的所有版本而言，将具有默认值的非 null 列添加到一张包含数据的现有表是一种关于数据大小的操作（对 Enterprise Edition 是一种元数据操作）。 对于 SQL Server Standard Edition 中包含数据的大型现有历史记录表而言，添加非 null 列代价高昂。
 - 必须小心选择期间开始和期间结束列的约束：
-
   - 开始列的默认值指定从哪个时间点起应考虑现有行有效。 不能将它指定为将来的日期时间点。
-  - 结束时间必须指定为一个给定 datetime2 精度的最大值
+  - 结束时间必须指定为一个给定 datetime2 精度的最大值，例如 `9999-12-31 23:59:59` 或 `9999-12-31 23:59:59.9999999`。
 - 添加期间将对当前表执行数据一致性检查，以确保期间列的默认值有效。
 - 如果在启用 **SYSTEM_VERSIONING**时指定了现有历史记录表，则将对当前表和历史记录表同时执行临时数据一致性检查。 如果你将 DATA_CONISTENCY_CHECK = OFF 指定为一个附加参数，则可跳过此项检查  。
 

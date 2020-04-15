@@ -1,5 +1,6 @@
 ---
 title: 用于大容量导入和导出的数据格式
+description: SQL Server 接受字符或本机二进制格式的数据。 在 SQL Server 和其他应用之间使用字符格式，在 SQL Server 实例之间使用本机格式。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1f6bb69e4d1a18cf2f3e596a4bbbd179e8c4f373
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce702e31c61971097cfd56789294dc0a035b4f1a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056019"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980459"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>用于大容量导入或导出的数据格式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "74056019"
 |将数据大容量导出到要在其他程序中使用的文本文件中。|-|-|是|-|  
 |使用包含 Unicode 数据而不包含任何扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|-|-|是|  
   
- \* 这是在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bcp**时从** 批量导出数据的最快方法。  
+ \* 这是在使用 **bcp** 时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批量导出数据的最快方法。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   

@@ -1,5 +1,6 @@
 ---
 title: 批量访问 Azure Blob 存储中数据
+description: 这些 Transact-SQL 示例演示如何使用 BULK INSERT 和 OPENROWSET 语句直接访问 Azure Blob 存储帐户中的文件。
 ms.description: Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account.
 ms.date: 10/22/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 08e81abbc21671881affc80fc9b7f0346cd490f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ed55e856a6a23da04b6f3a2812699c2b457a220
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056007"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980451"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>批量访问 Azure Blob 存储中数据的示例
 
@@ -42,7 +43,7 @@ ms.locfileid: "74056007"
 > [!IMPORTANT]
 > 必须借助一个使用 `SHARED ACCESS SIGNATURE` 标识的数据库范围凭据创建外部数据源。 若要为存储帐户创建共享访问签名，请查看 Azure 门户中存储帐户属性页上的“共享访问签名”属性。  有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 有关凭据的详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
-使用必须属于 `IDENTITY` 的 `SHARED ACCESS SIGNATURE` 创建数据库范围凭据。 使用为 blob 存储帐户生成的 SAS 令牌。 验证 SAS 令牌是否没有前导 `?`、你是否至少对应加载的对象拥有读取权限以及有效期是否有效（所有日期都采用 UTC 时间）。
+使用必须属于 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 创建数据库范围凭据。 使用为 blob 存储帐户生成的 SAS 令牌。 验证 SAS 令牌是否没有前导 `?`、你是否至少对应加载的对象拥有读取权限以及有效期是否有效（所有日期都采用 UTC 时间）。
 
 例如：
 

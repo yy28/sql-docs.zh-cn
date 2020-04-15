@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f753fde186e056b5c7222c2c801303661e1fd79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78fe63a54214ad7ff231ebf5df2353ef09d0fc09
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924666"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219136"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -113,8 +113,8 @@ JDBC 驱动程序 6.0、6.2、6.4 和 7.0 是可再发行的。 查看许可协�
 **我能否使用驱动程序从 Linux 计算机访问 Microsoft SQL Server？**  
 能！ 可以使用该驱动程序从 Linux、Unix 及其他非 Windows 平台访问 SQL Server。 有关详细信息，请参阅 [Microsoft JDBC Driver for SQL Server 支持矩阵](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)。
 
-**驱动程序是否支持安全套接字层 (SSL) 加密？**  
-从 1.2 版起，该驱动程序就支持安全套接字层 (SSL) 加密。 有关详细信息，请参阅[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)。
+**驱动程序是否支持 TLS 加密？**  
+自 1.2 版起，驱动程序支持传输层安全性 (TLS)（以前称为安全套接字层 (SSL)）加密。 有关详细信息，请参阅[使用加密](../../connect/jdbc/using-ssl-encryption.md)。
 
 **Microsoft JDBC Driver for SQL Server 支持哪些类型的身份验证？**  
 下表列出了可用的身份验证选项。 自 4.0 版起，驱动程序支持纯 Java Kerberos 身份验证。

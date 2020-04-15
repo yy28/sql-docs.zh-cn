@@ -1,7 +1,7 @@
 ---
 title: SQL_VARIANT_PROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 02/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22b11ff1f9a6ed218b4c63c2f22bfb6e2d441703
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c6816f1cd60450ecfc15e7a7c10199624f8c3dd
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74550199"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550190"
 ---
 # <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,9 +48,9 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 |值|说明|返回的 sql_variant 基类型|  
 |-----------|-----------------|----------------------------------------|  
-|**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，例如：<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 输入无效。|  
-|**精度**|数值基本数据类型的位数：<br /><br /> datetime = 23 <br /><br />**datetime2** = 27<br /><br /> smalldatetime = 16 <br /><br /> float = 53 <br /><br /> real = 24 <br /><br /> decimal (p,s) 和 numeric (p,s) = p  <br /><br /> money = 19 <br /><br /> smallmoney = 10 <br /><br /> bigint = 19 <br /><br /> int = 10 <br /><br /> smallint = 5 <br /><br /> tinyint = 3 <br /><br /> bit = 1 <br /><br /> 所有其他类型 = 0|**int**<br /><br /> NULL = 输入无效。|  
-|**缩放**|数值基本数据类型的小数点后的位数：<br /><br /> decimal (p,s) 和 numeric (p,s) = s  <br /><br /> money 和 smallmoney = 4  <br /><br /> datetime = 3 <br /><br />**datetime2** = 7<br /><br /> 所有其他类型 = 0|**int**<br /><br /> NULL = 输入无效。|  
+|**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，例如：<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **bit**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 输入无效。|  
+|**精度**|数值基本数据类型的位数：<br /><br /> date = 10 <br /><br /> datetime = 23 <br /><br /> **datetime2** = 27<br /><br /> datetime2 (s) = 19（s = 0 时），其他情况 s + 20 <br /><br /> datetimeoffset = 34 <br /><br /> datetimeoffset (s) = 26（s = 0 时），其他情况 s + 27 <br /><br /> smalldatetime = 16 <br /><br /> time = 16 <br /><br /> time (s) = 8（s = 0 时），其他情况 s + 9 <br /><br /> float = 53 <br /><br /> real = 24 <br /><br /> decimal 和 numeric = 18  <br /><br /> decimal (p,s) 和 numeric (p,s) = p  <br /><br /> money = 19 <br /><br /> smallmoney = 10 <br /><br /> bigint = 19 <br /><br /> int = 10 <br /><br /> smallint = 5 <br /><br /> tinyint = 3 <br /><br /> bit = 1 <br /><br /> 所有其他类型 = 0|**int**<br /><br /> NULL = 输入无效。|  
+|**缩放**|数值基本数据类型的小数点后的位数：<br /><br /> decimal 和 numeric = 0  <br /><br /> decimal (p,s) 和 numeric (p,s) = s  <br /><br /> money 和 smallmoney = 4  <br /><br /> datetime = 3 <br /><br /> **datetime2** = 7<br /><br /> datetime2 (s) = s (0 - 7) <br /><br /> datetimeoffset = 7 <br /><br /> datetimeoffset (s) = s (0 - 7) <br /><br /> time = 7 <br /><br /> time (s) = s (0 - 7) <br /><br /> 所有其他类型 = 0|**int**<br /><br /> NULL = 输入无效。|  
 |**TotalBytes**|同时容纳值的元数据和数据所需的字节数。 在检查 sql_variant 列中数据的最大一侧时，该信息很有用  。 如果该值大于 900，则索引创建会失败。|**int**<br /><br /> NULL = 输入无效。|  
 |**排序规则**|代表特定 sql_variant 值的排序规则  。|**sysname**<br /><br /> NULL = 输入无效。|  
 |**MaxLength**|最大数据类型长度（字节）。 例如，nvarchar(50) 的 MaxLength 是 100，int 的 MaxLength 是 4      。|**int**<br /><br /> NULL = 输入无效。|  
@@ -60,7 +60,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 ## <a name="examples"></a>示例  
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. 在表中使用 sql_variant  
- 以下示例检索有关 `SQL_VARIANT_PROPERTY` 值 `colA` 的 `46279.1` 信息，其中，`colB` =`1689`，并假设 `tableA` 有类型为 `colA` 和 `sql_variant` 的 `colB`。  
+ 以下示例检索有关 `colA` 值 `46279.1` 的 `SQL_VARIANT_PROPERTY` 信息，其中，`colB` =`1689`，并假设 `tableA` 有类型为 `sql_variant` 和 `colB` 的 `colA`。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -83,7 +83,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 使用 sql_variant 作为变量   
- 以下示例检索有关名为 `SQL_VARIANT_PROPERTY` 的变量的 @v1 信息。  
+ 以下示例检索有关名为 @v1 的变量的 `SQL_VARIANT_PROPERTY` 信息。  
   
 ```sql    
 DECLARE @v1 sql_variant;  

@@ -1,5 +1,6 @@
 ---
 title: 导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
+description: 在 SQL Server 2019 中，可结合使用 -V 开关和限定符，然后使用 bcp 来导入来自其他版本的 SQL Server 的本机格式数据和字符格式数据。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -16,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ae89c263008c035dc7cd8e0050b50a5cdd9cc705
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 581888db5b930ce6f2b44a991e3ef1ef2f08525a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056001"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980555"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "74056001"
  **UDT 表示用户定义的类型。  
   
 ## <a name="exporting-using--v-80"></a>使用 -V 80 进行导出  
- 使用 -V80 开关批量导出数据时，本机模式下的 nvarchar(max)、varchar(max)、varbinary(max)、XML 和 UDT 数据将像 text、image 和 ntext 数据一样以带有 4 个字节的前缀形式存储，而不是像  **及更高版本默认的那样以带有 8 个字节的前缀形式存储**       [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。  
+ 使用 -V80 开关批量导出数据时，本机模式下的 nvarchar(max)、varchar(max)、varbinary(max)、XML 和 UDT 数据将像 text、image 和 ntext 数据一样以带有 4 个字节的前缀形式存储，而不是像 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本默认的那样以带有 8 个字节的前缀形式存储        。  
   
 ## <a name="copying-date-values"></a>复制日期值  
  **bcp** 将使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ])。  

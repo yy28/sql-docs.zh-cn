@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f1e6d89848da95ab71cc6153faa55b50fc7452b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288611"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925479"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -261,7 +261,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|从 SQL Server 2017 开始不再适用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。 使用托管服务帐户、虚拟帐户或内置帐户时，可以省略此参数。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|从 SQL Server 2017 开始不再适用。  指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支持的值：<br /><br /> **自动**<br /><br /> **已禁用**<br /><br /> **手动**|  
 |Python/机器学习服务（数据库内）|/MPYCACHEDIRECTORY|保留供将来使用。 使用 %TEMP% 存储 Python .CAB 文件，以便在没有 Internet 连接的计算机上安装。 |  
-|R/机器学习服务（数据库内）|/MRCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或 R 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)安装 R 组件时，通常使用此设置。|  
+|R/机器学习服务（数据库内）|/MRCACHEDIRECTORY|使用此参数为 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或者 SQL Server 机器学习服务或机器学习服务器（独立版）中的 R 功能支持指定缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-component-install-without-internet-access)安装 R 组件时，通常使用此设置。|  
 |Java/语言扩展| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **可选** | 从 SQL Server 2019 开始，指定通过语言扩展安装 Java。 如果提供的 /SQL_INST_JAVA 不带 /SQLJAVADIR 参数，则表示假设你要安装由安装介质提供的 Zulu Open JRE。 <br /><br /> 为 /SQLJAVADIR 提供路径表示你要使用已安装的 JRE 或 JDK。 |
   
 ###### <a name="sample-syntax"></a>示例语法：  
@@ -396,7 +396,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/UIMODE<br /><br /> **可选**|指定在安装过程中是否只提供最少数量的对话框。 <br />                **/UIMode** 只能与 **/ACTION=INSTALL** 和 **UPGRADE** 参数一起使用。 支持的值：<br /><br /> **/UIMODE=Normal** 对于非 Express 版本是默认值，它为所选功能提供所有安装程序对话框。<br /><br /> **/UIMODE=AutoAdvance** 对于 Express 版本是默认值，它跳过不重要的对话框。<br /><br /> 请注意， **UIMode** 设置不能与 **/Q** 或 **/QS** 参数结合使用。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/SQMREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](https://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的功能使用情况报告。<br /><br />支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口将隐藏或关闭。|  
-|SQL Server Browser Service|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 SQL Server Browser 服务的 [启动](#Accounts) 模式。 支持的值：<br /><br /> **自动**<br /><br /> **已禁用**<br /><br /> **手动**|  
+|SQL Server Browser 服务|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 SQL Server Browser 服务的 [启动](#Accounts) 模式。 支持的值：<br /><br /> **自动**<br /><br /> **已禁用**<br /><br /> **手动**|  
 |SQL Server 全文|/FTUPGRADEOPTION<br /><br /> **可选**|指定全文目录升级选项。 支持的值：<br /><br /> **REBUILD**<br /><br /> **RESET**<br /><br /> **IMPORT**|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帐户。<br /><br /> 默认值：NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密码。 使用托管服务帐户、虚拟帐户或内置帐户时，可以省略此参数。|  
@@ -735,7 +735,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/SQMREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 在旧版本中，它指定 SQL Server 的功能使用情况报告。<br /><br />支持的值：<br /><br /> 0=禁用<br /><br /> 1=启用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口隐藏或关闭。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERROLLOWNERSHIP|指定升级过程中的 [故障转移行为](#RollOwnership) 。|  
-|SQL Server Browser Service|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 SQL Server Browser 服务的 [启动](#Accounts) 模式。 支持的值：<br /><br /> **自动**<br /><br /> **已禁用**<br /><br /> **手动**|  
+|SQL Server Browser 服务|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 SQL Server Browser 服务的 [启动](#Accounts) 模式。 支持的值：<br /><br /> **自动**<br /><br /> **已禁用**<br /><br /> **手动**|  
 |SQL Server 全文|/FTUPGRADEOPTION<br /><br /> **可选**|指定全文目录升级选项。 支持的值：<br /><br /> **REBUILD**<br /><br /> **RESET**<br /><br /> **IMPORT**|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帐户。<br /><br /> 默认值：NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密码。 使用托管服务帐户、虚拟帐户或内置帐户时，可以省略此参数。|  
@@ -843,10 +843,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBase |安装 PolyBase 组件。|
 ||PolyBaseCore | 从 SQL Server 2019 开始，与 **PolyBase** 配对以安装 Polybase 技术，该技术支持使用标准 T-SQL 语句实现跨 Oracle、Teradata、SQL Server 以及其他关系和非关系数据的真正集成查询。 |
 || PolyBaseJava | 从 SQL Server 2019 开始，与 **PolyBase** 配对以安装 PolyBase Java 连接器，该连接器支持使用标准 T-SQL 语句实现对 HDFS 数据的真正集成查询。
-||AdvancedAnalytics |安装 [SQL Server 2017 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)或 [SQL Server 2016 R Services（数据库内）](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install)。|  
-||SQL_INST_MR |适用于 [SQL Server 2017 和更高版本的机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 R Open 和专有 R 包  。|  
-||SQL_INST_MPY|适用于 [SQL Server 2017 和更高版本的机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 Anaconda 和专有 Python 包  。|  
-||SQL_INST_JAVA |适用于 [SQL Server 2017 和更高版本的机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 与 **AdvancedAnalytics** 配对以安装扩展，这些扩展支持使用标准 T-SQL 语句实现与 Java 的集成。|  
+||AdvancedAnalytics |安装 [SQL Server 机器学习服务](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)或 [SQL Server 2016 R Services（数据库内）](https://docs.microsoft.com/sql/machine-learning/install/sql-r-services-windows-install)。|  
+||SQL_INST_MR |适用于 [SQL Server 机器学习服务](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 R Open 和专有 R 包  。|  
+||SQL_INST_MPY|适用于 [SQL Server 机器学习服务](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 Anaconda 和专有 Python 包  。|  
+||SQL_INST_JAVA |适用于 [SQL Server 机器学习服务](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。 与 **AdvancedAnalytics** 配对以安装扩展，这些扩展支持使用标准 T-SQL 语句实现与 Java 的集成。|  
 |AS||安装所有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件。|  
 |RS||安装所有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 从 SQL Server 2017 开始已删除。 |  
 |RS_SHP||安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 从 SQL Server 2017 开始已删除。|  
@@ -856,8 +856,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Master|包括适用于 Integration Services Scale Out 的 Scale Out 主要角色。| 
 ||IS_Worker|包括适用于 Integration Services Scale Out 的 Scale Out 辅助角色。| 
 |MDS||安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。|  
-|SQL_SHARED_MPY||为 [SQL Server 2017 机器学习服务器（独立版）](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install)安装 Python 包 |  
-|SQL_SHARED_MR||为 [SQL Server 2016 R Server（独立版）](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install)或 SQL Server 2017 机器学习服务器（独立版）安装 R 包 |  
+|SQL_SHARED_MPY||为 [SQL Server 2017 机器学习服务器（独立版）](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-standalone-windows-install)安装 Python 包 |  
+|SQL_SHARED_MR||为 [SQL Server 2016 R Server（独立版）](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install?view=sql-server-2016)或 [SQL Server 机器学习服务器（独立版）](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install)安装 R 包 |  
 |工具*||安装客户端工具和 SQL Server 联机丛书组件。|  
 ||BC|安装向后兼容组件。|  
 ||Conn|安装连接组件。|

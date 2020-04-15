@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b84a323e3dd8bac95309f0462b48e322ba422c9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f43719fc585a4d1a2fda23fa1111a3918365572b
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911303"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219289"
 ---
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>getTrustServerCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,9 +38,9 @@ public boolean getTrustServerCertificate()
  如果已启用 trustServerCertificate，则为“true”  。 否则为 **false**。  
   
 ## <a name="remarks"></a>备注  
- 如果将 trustServerCertificate 属性设置为“true”，则当使用 SSL 对通信层加密时将自动信任  **安全套接字层 (SSL) 证书**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 换言之，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将不会验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 证书。 默认值是 **false**秒。  
+ 如果 trustServerCertificate 属性设置为 true，使用 TLS 加密通信层时，将自动信任 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 传输层安全性 (TLS)（以前称为安全套接字层 (SSL)）证书  。 换言之，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将不会验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TLS/SSL 证书。 默认值是 **false**秒。  
   
- 如果将 trustServerCertificate 属性设置为“false”，则  **将验证服务器 SSL 证书**[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。  
+ 如果将 trustServerCertificate 属性设置为 false，则 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将验证服务器 TLS/SSL 证书  。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

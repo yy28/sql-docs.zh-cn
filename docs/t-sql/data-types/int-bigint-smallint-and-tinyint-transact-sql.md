@@ -1,6 +1,6 @@
 ---
 title: int、bigint、smallint 和 tinyint (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: int、bigint、smallint 和 tinyint 数据类型的 Transact-SQL 参考。 这些数据类型用于表示整数数据。
 ms.date: 09/08/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -28,12 +28,12 @@ ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c65b8673b40c648ef930cd08b46dfaa249af603
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077902"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517569"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "68077902"
 |**tinyint**|0 到 255|1 字节|  
   
 ## <a name="remarks"></a>备注  
-int 数据类型是  **中的主要整数数据类型**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 bigint 数据类型用于整数值可能超过 int 数据类型支持范围的情况   。
+int 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的主要整数数据类型  。 bigint 数据类型用于整数值可能超过 int 数据类型支持范围的情况   。
   
 在数据类型优先次序表中，bigint 介于 smallmoney 和 int 之间    。
   
 仅当参数表达式为 bigint 数据类型时，函数才返回 bigint   。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会自动将其他整数数据类型（tinyint、smallint 和 int）提升到 bigint     。
   
 > [!CAUTION]  
->  使用 +、-、\*、/ 或 % 等算术运算符将 int、smallint、tinyint 或 bigint 常量值隐式或显式转换为 float、real、decimal 或 numeric 数据类型时， **计算数据类型和表达式结果的精度时应用的规则有所不同，这取决于查询是否是自动参数化的**        [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+>  使用 +、-、\*、/ 或 % 等算术运算符将 int、smallint、tinyint 或 bigint 常量值隐式或显式转换为 float、real、decimal 或 numeric 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算数据类型和表达式结果的精度时应用的规则有所不同，这取决于查询是否是自动参数化的         。  
 >   
 >  因此，查询中的类似表达式有时可能会生成不同的结果。 如果查询不是自动参数化的，则将常量值转换为指定的数据类型之前，首先将其转换为 numeric，该数据类型的精度很大，足以保存常量值  。 例如，常量值 1 转换为 numeric (1, 0)，常量值 250 转换为 numeric (3, 0)   。  
 >   

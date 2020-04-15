@@ -1,10 +1,9 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CREATE TRIGGER 语句的 Transact-SQL 参考，该语句用于创建 DML、DDL 或登录触发器。
 ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: mathoma
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -28,12 +27,13 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: mathoma
+ms.openlocfilehash: 93f97568bbdc2d640e947311acd90152a9ddf4ca
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287681"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517475"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>参数
 OR ALTER  
-适用范围：Azure **、** （从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] SP1 开始）[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 
+**适用对象**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。 
   
 只有在触发器已存在时才对其进行有条件地更改。 
   
@@ -172,7 +172,7 @@ DML 触发器所属架构的名称。 DML 触发器的范围限定为，对其�
 trigger_name   
 触发器的名称。 trigger_name  必须遵循[标识符](../../relational-databases/databases/database-identifiers.md)规则，但 trigger_name  不得以 # 或 ## 开头。  
   
-table*view* |    
+table | view    
 对其运行 DML 触发器的表或视图。 此表或视图有时称为“触发器表”或“触发器视图”。 可以根据需要指定表或视图的完全限定名称。 只有 INSTEAD OF 触发器才能引用视图。 无法对本地或全局临时表定义 DML 触发器。  
   
 DATABASE  
@@ -231,7 +231,7 @@ event_type
 启动后触发 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件的名称。 [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出了 DDL 触发器的有效事件。  
   
 event_group   
-预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 DDL 触发器在任何属于 event_group[!INCLUDE[tsql](../../includes/tsql-md.md)]*的* 语言事件启动后触发。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。  
+预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 DDL 触发器在任何属于 event_group  的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件启动后触发。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。  
   
 CREATE TRIGGER 运行完成后，*event_group* 还将充当宏，将它涉及的事件类型添加到 sys.trigger_events 目录视图中。  
   
@@ -260,16 +260,16 @@ DDL 和登录触发器使用 [EVENTDATA (Transact-SQL)](../../t-sql/functions/ev
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以通过表或视图上的 INSTEAD OF 触发器来更新 text  、ntext  或 image  列。  
   
 > [!IMPORTANT]
->   的未来版本中将删除 **ntext**、**text** 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)]image[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(MAX)** 、**nvarchar(MAX)** 和 **varbinary(MAX)** 数据。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 **ntext**、**text** 和 **image** 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(MAX)** 、**nvarchar(MAX)** 和 **varbinary(MAX)** 数据。  
   
 对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块  。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  
   
 \< method_specifier > **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
-对于 CLR 触发器，指定程序集与触发器绑定的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的  *标识符，并且它必须作为类存在于可见程序集中*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果该类有一个使用“.”来分隔命名空间部分的命名空间限定名称，则类名必须用 [] 或“ ”分隔符分隔。 此类不得为嵌套类。  
+对于 CLR 触发器，指定程序集与触发器绑定的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中  。 如果该类有一个使用“.”来分隔命名空间部分的命名空间限定名称，则类名必须用 [] 或“ ”分隔符分隔。 此类不得为嵌套类。  
   
 > [!NOTE]  
->  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法运行 CLR 代码。 可以创建、修改和删除引用托管代码模块的数据库对象，但除非使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure[ 启用了 ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)clr enabled 选项[，否则这些引用不会在 ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 实例中运行。  
+>  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法运行 CLR 代码。 可以创建、修改和删除引用托管代码模块的数据库对象，但除非使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 启用了 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)，否则这些引用不会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中运行。  
   
 ## <a name="remarks-for-dml-triggers"></a>DML 触发器的注释  
 DML 触发器经常用于强制执行业务规则和数据完整性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 ALTER TABLE 和 CREATE TABLE 语句来提供声明性引用完整性 (DRI)。 不过，DRI 不提供跨数据库引用完整性。 引用完整性是指有关表的主键和外键之间的关系的规则。 若要强制实现引用完整性，请在 ALTER TABLE 和 CREATE TABLE 中使用 PRIMARY KEY 和 FOREIGN KEY 约束。 如果触发器表存在约束，便在 INSTEAD OF 触发器运行后且 AFTER 触发器运行前检查这些约束。 如果违反了约束，INSTEAD OF 触发器操作回滚，且 AFTER 触发器不触发。  
@@ -414,7 +414,7 @@ SQL Server 的未来版本中将删除从触发器返回结果的功能。 返�
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. 使用包含提醒消息的 DML 触发器  
-如果有人试图在 `Customer` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中添加或更改数据，下列 DML 触发器将向客户端显示一条消息。  
+如果有人试图在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Customer` 表中添加或更改数据，下列 DML 触发器将向客户端显示一条消息。  
   
 ```sql  
 CREATE TRIGGER reminder1  
@@ -528,7 +528,7 @@ GO
 ```  
   
 ### <a name="f-using-a-logon-trigger"></a>F. 使用登录触发器  
-下面的登录触发器示例拒绝了作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_test*登录名的成员登录* 的尝试（如果在此登录名下已运行三个用户会话）。  
+下面的登录触发器示例拒绝了作为 *login_test* 登录名的成员登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的尝试（如果在此登录名下已运行三个用户会话）。  
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   

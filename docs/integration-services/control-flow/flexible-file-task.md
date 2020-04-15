@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72807419"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607858"
 ---
 # <a name="flexible-file-task"></a>灵活的文件任务
 
@@ -44,18 +44,19 @@ ms.locfileid: "72807419"
 - **SourceConnectionType：** 指定源连接管理器类型。
 - **SourceConnection：** 指定源连接管理器。
 - **SourceFolderPath：** 指定源文件夹路径。
-- **SourceFileName：** 指定源文件名称。 如果留空，则将复制源文件夹。
+- **SourceFileName：** 指定源文件名称。 如果留空，则将复制源文件夹。 源文件名称中允许使用以下通配符：`*`（匹配零个或多个字符）、`?`（匹配零个或单个字符）和 `^`（转义字符）。
 - **SearchRecursively：** 指定是否以递归方式复制子文件夹。
 - **DestinationConnectionType：** 指定目标连接管理器类型。
 - **DestinationConnection：** 指定目标连接管理器。
 - **DestinationFolderPath：** 指定目标文件夹路径。
-- **DestinationFileName：** 指定目标文件名称。
+- **DestinationFileName：** 指定目标文件名称。 如果留空，则将使用源文件名称。
 
 以下属性可用于“删除”操作  。
 - **ConnectionType：** 指定连接管理器类型。
 - **Connection：** 指定连接管理器。
 - **FolderPath：** 指定文件夹路径。
-- **FileName：** 指定文件名。 如果留空，则将删除文件夹。 对于 Azure Blob 存储，不支持删除文件夹。
+- **FileName：** 指定文件名。 如果留空，则将删除文件夹。 对于 Azure Blob 存储，不支持删除文件夹。 文件名称中允许使用以下通配符：`*`（匹配零个或多个字符）、`?`（匹配零个或单个字符）和 `^`（转义字符）。
+- **DeleteRecursively：** 指定是否递归删除文件。
 
 ***有关服务主体权限配置的说明***
 

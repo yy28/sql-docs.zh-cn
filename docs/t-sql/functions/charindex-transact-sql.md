@@ -1,6 +1,6 @@
 ---
 title: CHARINDEX (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CHARINDEX 函数的 Transact-SQL 参考。
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24c005d2b9b95827dce28bc78303a75828270143
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 45dabba61fc6fdedf002c10d33218b3b29c4212a
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68105049"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517564"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +73,7 @@ CHARINDEX 根据输入排序规则执行比较操作。 若要以指定的排序
 ## <a name="examples"></a>示例  
   
 ### <a name="a-returning-the-starting-position-of-an-expression"></a>A. 返回表达式的起始位置  
-此示例将在搜索的字符串值变量 `bicycle` 中搜索 `@document`。
+此示例将在搜索的字符串值变量 `@document` 中搜索 `bicycle`。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ### <a name="b-searching-from-a-specific-position"></a>B. 从特定位置中搜索  
-此示例使用可选的 start_location 参数在搜索的字符串值变量 *的第五个字符处开始搜索*`vital``@document`。
+此示例使用可选的 start_location 参数在搜索的字符串值变量 `@document` 的第五个字符处开始搜索 `vital` 。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -133,7 +133,7 @@ GO
 ```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>D. 执行区分大小写的搜索  
-此示例在搜索的字符串 `'TEST'` 中执行区分大小写的字符串 `'This is a Test``'` 搜索。
+此示例在搜索的字符串 `'This is a Test``'` 中执行区分大小写的字符串 `'TEST'` 搜索。
   
 ```sql
 USE tempdb;  
@@ -151,7 +151,7 @@ SELECT CHARINDEX ( 'TEST',
 0
 ```  
   
-此示例在 `'Test'` 中执行区分大小写的字符串 `'This is a Test'` 搜索。
+此示例在 `'This is a Test'` 中执行区分大小写的字符串 `'Test'` 搜索。
   
 ```sql
   
@@ -170,7 +170,7 @@ SELECT CHARINDEX ( 'Test',
 ```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>E. 执行不区分大小写的搜索  
-此示例在 `'TEST'` 中执行不区分大小写的字符串 `'This is a Test'` 搜索。
+此示例在 `'This is a Test'` 中执行不区分大小写的字符串 `'TEST'` 搜索。
   
 ```sql
   
@@ -192,7 +192,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>F. 从字符串表达式的开头搜索  
-此示例返回字符串 `is` 中字符串 `This is a string` 的第一个位置，从 `This is a string` 的位置 1（第一个字符）开始。
+此示例返回字符串 `This is a string` 中字符串 `is` 的第一个位置，从 `This is a string` 的位置 1（第一个字符）开始。
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string');  
@@ -206,7 +206,7 @@ SELECT CHARINDEX('is', 'This is a string');
 ```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. 从第一个位置以外的位置搜索  
-此示例返回字符串 `is` 中字符串 `This is a string` 的第一个位置，从位置 4（第四个字符）开始进行搜索。
+此示例返回字符串 `This is a string` 中字符串 `is` 的第一个位置，从位置 4（第四个字符）开始进行搜索。
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string', 4);  

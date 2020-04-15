@@ -17,12 +17,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123603"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928165"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68123603"
 ## <a name="built-in-function-determinism"></a>内置函数的确定性  
  用户无法影响任何内置函数的确定性。 每个内置函数都根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实现该函数的方式而分为确定性函数或非确定性函数。 例如，在查询中指定 ORDER BY 子句不会更改查询中使用的函数的决定机制。  
   
- 所有字符串内置函数都具有确定性。 有关这些函数的列表，请参阅[字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)。  
+ 除 [FORMAT](../../t-sql/functions/format-transact-sql.md) 外，所有字符串内置函数都是确定性的。 有关这些函数的列表，请参阅[字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)。  
   
  内置函数类别中除字符串函数以外的下列内置函数始终具有确定性。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "68123603"
 |ATN2|FLOOR|SIN|  
 |CEILING|ISNULL|SQUARE|  
 |COALESCE|ISNUMERIC|SQRT|  
-|COS|日志|TAN|  
-|COT|LOG10|年|  
-|DATALENGTH|月||  
+|COS|LOG|TAN|  
+|COT|LOG10|YEAR|  
+|DATALENGTH|MONTH||  
 |DATEADD|NULLIF||  
   
  下列函数并非始终是确定性函数，但是在以确定性方式指定后，可用于索引视图或计算列的索引。  

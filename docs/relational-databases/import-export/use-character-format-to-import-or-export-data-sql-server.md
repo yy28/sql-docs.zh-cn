@@ -1,5 +1,6 @@
 ---
 title: 使用字符格式导入和导出数据
+description: 采用字符格式后，所有列均应用字符数据格式。 与其他程序一起使用或从其他数据库供应商复制到实例时，这很有用。
 ms.date: 09/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 26a71907372fc6f69d76a8eba6bf3478ae6ec938
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056328"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980619"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,8 +50,8 @@ ms.locfileid: "74056328"
   
     |批量操作的方向|转换|  
     |---------------------------------|----------------|  
-    |Export|将数据转换为字符表示形式。 如果进行显式请求，字符列的数据将转换为所请求的代码页。 如果未指定代码页，将通过使用客户端计算机的 OEM 代码页对字符数据进行转换。|  
-    |Import|必要时将字符数据转换为本机表示形式，并将字符数据从客户端的代码页转换到目标列的代码页。|  
+    |导出|将数据转换为字符表示形式。 如果进行显式请求，字符列的数据将转换为所请求的代码页。 如果未指定代码页，将通过使用客户端计算机的 OEM 代码页对字符数据进行转换。|  
+    |导入|必要时将字符数据转换为本机表示形式，并将字符数据从客户端的代码页转换到目标列的代码页。|  
   
 -   为避免在转换期间丢失扩展字符，请使用 Unicode 字符格式或指定代码页。  
   

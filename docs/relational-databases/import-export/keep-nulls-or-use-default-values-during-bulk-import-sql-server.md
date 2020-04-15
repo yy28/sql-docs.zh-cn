@@ -1,5 +1,6 @@
 ---
 title: 在批量导入期间保留 Null 或默认值
+description: 为了在 SQL Server 中进行批量导入，bcp 和 BULK INSERT 都加载默认值来替换 null 值。 对于这两者，可以选择保留 null 值。
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,19 +22,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055956"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980375"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或默认值 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 默认情况下，将数据导入表中时， [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句将使用为表中的列定义的所有默认值。  例如，如果数据文件中包含一个空字段，则会加载该列的默认值。  [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句都允许指定保留 NULL 值。
 
-相反，常规 INSERT 语句会保留空值而不会插入默认值。 INSERT ... SELECT * [FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句的基本行为与常规 INSERT 相同，但前者还支持插入默认值的 [表提示](../../t-sql/queries/hints-transact-sql-table.md) 。
+相反，常规 INSERT 语句会保留空值而不会插入默认值。 INSERT ... SELECT * [FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句的基本行为与常规 INSERT 相同，但前者还支持插入默认值的[表提示](../../t-sql/queries/hints-transact-sql-table.md)。
 
 |轮廓|
 |---|

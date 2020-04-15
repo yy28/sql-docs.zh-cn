@@ -1,6 +1,6 @@
 ---
 title: ROW_NUMBER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: ROW_NUMBER 函数的 Transact-SQL 参考。 此函数对结果集的输出进行编号。
 ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 77ea306991662b48a164c52a506d921318844f5d
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095384"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517484"
 ---
 # <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,8 +87,8 @@ ORDER BY name ASC;
    
 |name    |recovery_model_desc |  
 |-----------  |------------ |  
-|master |SIMPLE |
-|model |FULL |
+|主 |SIMPLE |
+|模型 |FULL |
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
 
@@ -106,12 +106,12 @@ WHERE database_id < 5;
    
 |Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |master |SIMPLE |
-|2 |model |FULL |
+|1 |主 |SIMPLE |
+|2 |模型 |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-若是在 `PARTITION BY` 列上添加 `recovery_model_desc` 子句，当 `recovery_model_desc` 值发生更改时将重新开始编号。 
+若是在 `recovery_model_desc` 列上添加 `PARTITION BY` 子句，当 `recovery_model_desc` 值发生更改时将重新开始编号。 
  
 ```sql
 SELECT 
@@ -125,8 +125,8 @@ FROM sys.databases WHERE database_id < 5;
    
 |Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |model |FULL |
-|1 |master |SIMPLE |
+|1 |模型 |FULL |
+|1 |主 |SIMPLE |
 |2 |msdb |SIMPLE |
 |3 |tempdb |SIMPLE |
 

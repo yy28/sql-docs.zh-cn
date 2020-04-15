@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: baa8ac4db20eab2ce24ec3bb3963cd847f707fa4
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710859"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219346"
 ---
 # <a name="optimize-parameterized-row-filters"></a>优化参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "71710859"
   
 #### <a name="to-set-optimize-synchronization"></a>设置优化同步  
   
-1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为“优化同步”选项选择值 `True`    。  
+1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为“优化同步”选项选择值 `True`   。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -156,7 +156,7 @@ ms.locfileid: "71710859"
     > [!NOTE]  
     >  启用 `keep_partition_changes` 时，必须首先禁用 `use_partition_groups` 并为 `@force_reinit_subscription` 指定值 `1`。  
   
-4.  （可选）在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 为 `@property` 指定值 `partition_options`，并为 *@value` 指定适当的值。 有关以上筛选选项的定义，请参阅 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 。  
+4.  （可选）在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 为 `@property` 指定值 `partition_options`，并为 `@value` 指定适当的值。 有关以上筛选选项的定义，请参阅 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 。  
   
 5.  （可选）启动快照代理以重新生成快照（如果需要）。 有关哪些更改需要生成新快照的信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   

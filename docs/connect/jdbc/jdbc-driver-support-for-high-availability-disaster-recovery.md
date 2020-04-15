@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bfaf987fe9eb674ece6724b903c6a629f213fc3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c7035ebdab328abd33c4648754ebaba6b80efb54
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923128"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219189"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   本主题介绍 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 对于高可用性和灾难恢复的支持 -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。 有关 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的详细信息，请参阅 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 联机丛书。  
   
- 从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版本开始，可以在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听器。 如果将 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。 [ 中新增了以下](../../connect/jdbc/setting-the-connection-properties.md)连接属性[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]：  
+ 从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版本开始，可以在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听器。 如果将 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中新增了以下[连接属性](../../connect/jdbc/setting-the-connection-properties.md)：  
   
 -   **multiSubnetFailover**  
   
@@ -49,9 +49,9 @@ ms.locfileid: "80923128"
  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 multiSubnetFailover 进行连接  
- 在连接到 **可用性组或** 故障转移群集实例的可用性组侦听程序时，应始终指定 multiSubnetFailover=true[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 multiSubnetFailover 可加快  **中所有可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 在多子网故障转移过程中，客户端将尝试并行进行连接。 子网故障转移期间，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将积极地重试 TCP 连接。  
+ 在连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 multiSubnetFailover=true  。 multiSubnetFailover 可加快 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中所有可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行进行连接。 子网故障转移期间，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将积极地重试 TCP 连接。  
   
- multiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 **将尝试通过试图连接到所有 IP 地址来连接到主** 实例上的数据库[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果对连接指定的是 MultiSubnetFailover=true  ，客户端重试 TCP 连接尝试的速度快于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
+ multiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将尝试通过试图连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库  。 如果对连接指定的是 MultiSubnetFailover=true  ，客户端重试 TCP 连接尝试的速度快于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
   
  有关 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 中的连接字符串关键字的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "80923128"
   
 -   连接到配置有超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将导致连接失败。  
   
--   基于以下身份验证类型，使用 multiSubnetFailover 连接属性的应用程序的行为不受到影响： **身份验证、Kerberos 身份验证或 Windows 身份验证**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   基于以下身份验证类型，使用 multiSubnetFailover  连接属性的应用程序的行为将不会受到影响：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
   
 -   增加 loginTimeout 的值，以延长故障转移时间并减少应用程序连接重试次数  。  
   
@@ -111,8 +111,8 @@ ms.locfileid: "80923128"
   
  另外，getMultiSubnetFailover、setMultiSubnetFailover、getApplicationIntent、setApplicationIntent、getTransparentNetworkIPResolution      和 setTransparentNetworkIPResolution  方法也已添加到 [SQLServerDataSource 类](../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource 类](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)和 [SQLServerXADataSource 类](../../connect/jdbc/reference/sqlserverxadatasource-class.md)中。  
   
-## <a name="ssl-certificate-validation"></a>SSL 证书验证  
- 可用性组包含多个物理服务器。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 新增了对 SSL 证书中使用者替代名称的支持，因此多台主机可与同一个证书相关联  。 若要详细了解 SSL，请参阅[了解 SSL 支持](../../connect/jdbc/understanding-ssl-support.md)。  
+## <a name="tlsssl-certificate-validation"></a>TLS/SSL 证书验证  
+ 可用性组包含多个物理服务器。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 添加了对 TLS/SSL 证书中“使用者可选名称 (SAN)”的支持，因此可以将多个主机与统一证书关联  。 有关 TLS 的详细信息，请参阅[了解加密支持](../../connect/jdbc/understanding-ssl-support.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

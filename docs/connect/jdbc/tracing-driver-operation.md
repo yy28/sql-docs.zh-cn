@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb926c0696f0e926f91297ee5b719bbafce3eda8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909113"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219356"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,8 +59,8 @@ ms.locfileid: "80909113"
 |WARNING|指示潜在的问题。|  
 |INFO|提供信息性消息。|  
 |FINE|提供跟踪信息，包括基本的对象创建和析构。 此外，还包括公共方法引发的所有异常。|  
-|FINER|提供详细的跟踪信息，包括具有相关参数数据类型的所有公共方法的进入点和退出点，以及公共类的所有公共属性。 此外，还包括输入参数、输出参数以及除 CLOB、BLOB、NCLOB、Reader 和 \<stream> 返回值类型以外的方法返回值。<br /><br /> 下列日志记录类别存在于 JDBC Driver 1.2 中并具有 FINE 日志记录级别：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 和 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 从 2.0 发行版开始，这些日志记录类别升级到 FINER 级别。|  
-|FINEST|提供非常详细的跟踪信息。 此为最低日志记录级别。<br /><br /> 下列日志记录类别存在于 JDBC Driver 1.2 中并具有 FINEST 日志记录级别：TDS.DATA 和 TDS.TOKEN。 从 2.0 发行版开始，这些日志记录类别保持 FINEST 日志记录级别。|  
+|FINER|提供详细的跟踪信息，包括具有相关参数数据类型的所有公共方法的进入点和退出点，以及公共类的所有公共属性。 此外，还包括输入参数、输出参数以及除 CLOB、BLOB、NCLOB、Reader 和 \<stream> 返回值类型以外的方法返回值。<br /><br /> 下列日志记录类别存在于 JDBC 驱动程序版本 1.2 中，并具有 FINE 日志记录级别：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 和 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 从 2.0 发行版开始，这些日志记录类别升级到 FINER 级别。|  
+|FINEST|提供非常详细的跟踪信息。 此为最低日志记录级别。<br /><br /> 下列日志记录类别存在于 JDBC 驱动程序版本 1.2 中，并具有 FINEST 日志记录级别：TDS.DATA 和 TDS.TOKEN。 从 2.0 发行版开始，这些日志记录类别保持 FINEST 日志记录级别。|  
 |OFF|关闭日志记录功能。|  
 |ALL|启用所有消息的日志记录。|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "80909113"
 |XA|在 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 类中记录所有 XA 事务的日志消息。 应用程序可将日志记录级别设置为 FINE 和 FINER。|  
 |KerbAuthentication|记录有关类型 4 Kerberos 身份验证（authenticationScheme  连接属性设置为 JavaKerberos  ）的消息。 应用程序可将日志记录级别设置为 FINE 或 FINER。|  
 |TDS.DATA|记录包含驱动程序和 SQL Server 之间的 TDS 协议级别对话的消息。 发送和接收的每个 TDS 数据包的详细内容都以 ASCII 和十六进制格式记录。 不记录登录凭据（用户名和密码）。 但记录所有其他数据。<br /><br /> 该类别会创建非常冗长而详细的消息，并且只有通过将日志记录级别设置为 FINEST 才能启用它。|  
-|TDS.Channel|该类别跟踪 SQL Server 对 TCP 通信通道的操作。 记录的消息包括套接字的打开和关闭以及读取和写入。 还跟踪与 SQL Server 建立安全套接字层 (SSL) 连接的相关消息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINE、FINER 或 FINEST 才能启用。|  
+|TDS.Channel|该类别跟踪 SQL Server 对 TCP 通信通道的操作。 记录的消息包括套接字的打开和关闭以及读取和写入。 它还跟踪与 SQL Server 建立传输层安全性 (TLS)（以前称为安全套接字层 (SSL)）连接有关的信息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINE、FINER 或 FINEST 才能启用。|  
 |TDS.Writer|该类别跟踪对 TDS 信道的写入。 请注意，只跟踪写入的长度，不跟踪内容。 该类别还跟踪将关注信号发送给服务器以取消语句的执行时出现的问题。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
 |TDS.Reader|该类别跟踪 FINEST 级别 TDS 信道的某些读取操作。 在 FINEST 级别，跟踪可能非常详细。 在 WARNING 和 SEVERE 级别，该类别跟踪在驱动程序关闭连接之前，驱动程序何时从 SQL Server 收到无效的 TDS 协议。<br /><br /> 该类别只有通过将日志记录级别设置为 FINER 和 FINEST 才能启用。|  
 |TDS.Command|该类别跟踪低级状态转换以及与执行 TDS 命令（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行、ResultSet 游标获取、提交等）关联的其他信息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  

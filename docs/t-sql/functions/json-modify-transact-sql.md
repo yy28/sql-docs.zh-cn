@@ -1,7 +1,7 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 04/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -11,12 +11,12 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36e6f8f630439baddf1fb3a88ab8df7eb6687e4c
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109379"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002825"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -47,15 +47,15 @@ JSON_MODIFY ( expression , path , newValue )
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    指定应将新值追加到通过 *json path> 引用的数组的可选修饰符\<* 。  
+    指定应将新值追加到通过 \<json path> 引用的数组的可选修饰符  。  
   
 - *lax*  
-    指定通过 *json path> 引用的属性不是必须存在\<* 。 如果该属性不存在，则 JSON_MODIFY 尝试在指定路径上插入新值。 如果无法在路径上插入属性，则插入可能会失败。 如果未指定 lax  或 strict  ，则 lax  是默认模式。  
+    指定通过 \<json path> 引用的属性不是必须存在  。 如果该属性不存在，则 JSON_MODIFY 尝试在指定路径上插入新值。 如果无法在路径上插入属性，则插入可能会失败。 如果未指定 lax  或 strict  ，则 lax  是默认模式。  
   
 - *strict*  
-    指定通过 *json path> 引用的属性必须处于 JSON 表达式中\<* 。 如果该属性不存在，则 JSON_MODIFY 返回错误。  
+    指定通过 \<json path> 引用的属性必须处于 JSON 表达式中  。 如果该属性不存在，则 JSON_MODIFY 返回错误。  
   
-- *json path>\<*  
+- \<json path>   
     为要更新的属性指定路径。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值  。
@@ -64,6 +64,7 @@ JSON_MODIFY ( expression , path , newValue )
   
  *newValue*  
  path 指定的属性的新值  。  
+ 新值必须是 [n]varchar 或 text。
   
  在宽松模式下，如果新值为 NULL，则 JSON_MODIFY 会删除指定键。  
   
@@ -82,7 +83,7 @@ JSON_MODIFY ( expression , path , newValue )
 |现有的值|路径存在|宽松模式|严格模式|  
 |--------------------|-----------------|--------------|-----------------|  
 |不为 NULL|是|更新现有值。|更新现有值。|  
-|不为 NULL|否|尝试在指定路径上创建新的键:值对。<br /><br /> 这可能会失败。 例如，如果指定路径 `$.user.setting.theme`，则在 `theme` 或 `$.user` 对象不存在，或者设置是数组或标量值时，JSON_MODIFY 不会插入键 `$.user.settings`。|错误 - INVALID_PROPERTY|  
+|不为 NULL|否|尝试在指定路径上创建新的键:值对。<br /><br /> 这可能会失败。 例如，如果指定路径 `$.user.setting.theme`，则在 `$.user` 或 `$.user.settings` 对象不存在，或者设置是数组或标量值时，JSON_MODIFY 不会插入键 `theme`。|错误 - INVALID_PROPERTY|  
 |Null|是|删除现有属性。|将现有值设置为 NULL。|  
 |Null|否|无操作。 返回第一个参数作为结果。|错误 - INVALID_PROPERTY|  
   

@@ -11,12 +11,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286671"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550214"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列存储索引 - 数据加载指南
 
@@ -47,7 +47,7 @@ ms.locfileid: "79286671"
 
 -   **日志记录减小：** 直接加载到压缩行组中的数据会导致显著减小日志大小。 例如，如果 10 倍压缩数据，则相应事务日志将减小大约 10 倍，无需使用 TABLOCK 或批量记录的/简单恢复模式。 进入增量行组的任何数据都将被完全记录。 这包括任何少于 102400 行的批大小。  最佳做法是使用 batchsize >= 102400。 由于无需 TABLOCK，因此可以并行加载数据。 
 
--   **最小日志记录：** 如果遵循[最小日志记录](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的先决条件，则可以进一步减小日志记录。 但是，与将数据加载到行存储中不同，TABLOCK 会导致表具有 X 锁而不是 BU（批量更新）锁，因此无法完成并行数据加载。 有关锁定的详细信息，请参阅 [锁定和行版本控制](../sql-server-transaction-locking-and-row-versioning-guide.md)。
+-   **最小日志记录：** 如果遵循[最小日志记录](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的先决条件，则可以进一步减小日志记录。 但是，与将数据加载到行存储中不同，TABLOCK 会导致表具有 X 锁而不是 BU（批量更新）锁，因此无法完成并行数据加载。 有关锁定的详细信息，请参阅[锁定和行版本控制](../sql-server-transaction-locking-and-row-versioning-guide.md)。
 
 -   **锁定优化：** 在将数据加载到压缩行组时，将自动获取行组的 X 锁。 但是，大容量加载到增量行组时，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT，因为 X 行组锁不是锁定层次结构的一部分。  
   
@@ -97,7 +97,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **日志优化：** 将数据加载到压缩行组时，日志记录减小。   
 -   **锁定优化：** 加载到压缩行组时将获取行组上的 X 锁。 但是，对于增量行组，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
   
- 如果你有一个或多个非聚集索引，则索引本身不会经过锁定或日志记录优化，但是，针对聚集列存储索引的上述优化仍然存在  
+ 如果有一个或多个非聚集索引，则不会对索引本身进行锁定或日志记录优化，但是仍可使用如上所述的对聚集列存储索引的优化。  
   
 ## <a name="what-is-trickle-insert"></a>什么是渗透插入？
 

@@ -1,5 +1,6 @@
 ---
 title: 在批量导入中按最小方式记录日志的前提条件 | Microsoft Docs
+description: 在简单恢复模式或大容量日志恢复模式中，大容量导入操作的最小日志记录减少了操作填满日志空间的可能性。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69872eeb356ff4dbd530bf0c752cdf02706d8344
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70910831"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980074"
 ---
-# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>在批量导入中按最小方式记录日志的前提条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   对于完整恢复模式下的数据库，大容量导入执行的所有行插入操作都会完整地记录在事务日志中。 如果使用完整恢复模式，大型数据导入会导致填充事务日志的速度很快。 相反，对于简单恢复模式或大容量日志恢复模式，大容量导入操作的最小日志记录减少了大容量导入操作填满日志空间的可能性。 另外，最小日志记录的效率也比按完整方式记录日志高。  

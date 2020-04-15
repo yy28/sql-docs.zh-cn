@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5099b46b611043dcbfa0f5b4c3ca4e72c70a5800
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568080"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607865"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 
@@ -113,7 +113,7 @@ Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体
 2. 从命令提示符处，运行 `sysdm.cpl`。
 3. 在“高级”选项卡上，选择“环境变量”   。
 4. 在“系统变量”部分中，选择“新建”   。
-5. 输入变量名称 `JAVA_HOME`  。
+5. 输入变量名称 `JAVA_HOME` 。
 6. 选择“浏览目录”，导航到已提取的文件夹，然后选择 `jre` 子文件夹  。
    然后选择“确定”，“变量值”将自动进行填充   。
 7. 选择“确定”，关闭“新建系统变量”对话框   。
@@ -121,11 +121,11 @@ Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体
 9. 选择“确定”以关闭“系统属性”对话框   。
 
 > [!TIP]
-> 如果使用 Parquet 格式出现错误，指示“调用 java 时出现错误，消息：‘java.lang.OutOfMemoryError:Java 堆空间’”  ，则可以添加一个环境变量 `_JAVA_OPTIONS`  以调整 JVM 的最小/最大堆大小。
+> 如果使用 Parquet 格式出现错误，指示“调用 java 时出现错误，消息：‘java.lang.OutOfMemoryError:Java 堆空间’”  ，则可以添加一个环境变量 `_JAVA_OPTIONS` 以调整 JVM 的最小/最大堆大小。
 >
 >![jvm 堆](media/azure-feature-pack-jvm-heap-size.png)
 >
-> 示例：将变量 `_JAVA_OPTIONS`  的值设置为 `-Xms256m -Xmx16g`  。 标志 Xms 指定 Java 虚拟机 (JVM) 的初始内存分配池，而 Xmx 指定最大内存分配池。 这意味着 JVM 初始内存为 `Xms`  ，并且能够使用的最多内存为 `Xmx`  。 默认最小值为 64MB，最大值为 1G。
+> 示例：将变量 `_JAVA_OPTIONS` 的值设置为 `-Xms256m -Xmx16g` 。 标志 Xms 指定 Java 虚拟机 (JVM) 的初始内存分配池，而 Xmx 指定最大内存分配池。 这意味着 JVM 初始内存为 `Xms` ，并且能够使用的最多内存为 `Xmx` 。 默认最小值为 64MB，最大值为 1G。
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>在 Azure-SSIS Integration Runtime 上设置 Zulu 的 OpenJDK
 
@@ -148,11 +148,11 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> 如果使用 Parquet 格式并出现错误，指示“调用 java 时出现错误，消息：‘java.lang.OutOfMemoryError:Java 堆空间’”  ，则可以在 `main.cmd`  中添加命令以调整 JVM 的最小/最大堆大小。 示例：
+> 如果使用 Parquet 格式并出现错误，指示“调用 java 时出现错误，消息：‘java.lang.OutOfMemoryError:Java 堆空间’”  ，则可以在 `main.cmd` 中添加命令以调整 JVM 的最小/最大堆大小。 示例：
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~
-> 标志 Xms 指定 Java 虚拟机 (JVM) 的初始内存分配池，而 Xmx 指定最大内存分配池。 这意味着 JVM 初始内存为 `Xms`  ，并且能够使用的最多内存为 `Xmx`  。 默认最小值为 64MB，最大值为 1G。
+> 标志 Xms 指定 Java 虚拟机 (JVM) 的初始内存分配池，而 Xmx 指定最大内存分配池。 这意味着 JVM 初始内存为 `Xms` ，并且能够使用的最多内存为 `Xmx` 。 默认最小值为 64MB，最大值为 1G。
 
 **install_openjdk.ps1**
 
@@ -193,6 +193,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>发行说明
+
+### <a name="version-1180"></a>版本 1.18.0
+
+#### <a name="improvements"></a>改进
+
+1. 对于灵活的文件任务，有三项改进：(1) 添加了对复制/删除操作的通配符支持；(2) 用户可以启用/禁用对删除操作的递归搜索；(3) 复制操作的目标文件名可以为空，以保留源文件名。
 
 ### <a name="version-1170"></a>版本 1.17.0
 

@@ -1,7 +1,7 @@
 ---
 title: 使用查询存储监视性能 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448176"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012413"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 
@@ -34,9 +34,9 @@ ms.locfileid: "79448176"
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> 启用查询存储
 
- 默认情况下，新数据库的查询存储处于非活动状态。
+ 默认情况下，对于新的 SQL Server 和 Azure Synapse Analytics (SQL DW) 数据库不启用查询存储，而为新的 Azure SQL 数据库数据库默认启用查询存储。
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“查询存储”页
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“查询存储”页
 
 1. 在对象资源管理器中，右键单击数据库，然后单击“属性”  。
 
@@ -47,7 +47,7 @@ ms.locfileid: "79448176"
 
 3. 在“操作模式(要求)”  对话框中，选择“读写”  。
 
-## <a name="use-transact-sql-statements"></a>使用 Transact-SQL 语句
+### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 语句
 
 使用 ALTER DATABASE 语句启用给定数据库的查询存储  。 例如：
 

@@ -1,6 +1,6 @@
 ---
 title: 使用 PIVOT 和 UNPIVOT | Microsoft Docs
-ms.custom: ''
+description: PIVOT 和 UNPIVOT 关系运算符的 Transact-SQL 参考。 使用 SELECT 语句上的这些运算符可将表值表达式更改为另一个表。
 ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d776fbae94ae69af10595d7c0d50b84449dd9875
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc131a531be7882aacc8b8463e211523125960aa
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77255987"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517692"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 
@@ -153,14 +153,14 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-`EmployeeID` 列返回的唯一值变成了最终结果集中的字段。 因此，在 pivot 子句中指定的每个 `EmployeeID` 号都有对应的列：在此示例中，为员工 `250`、`251`、`256`、`257` 和 `260`。 `PurchaseOrderID` 列作为值列，将根据此列对最终输出中返回的列（称为分组列）进行分组。 在本例中，通过 `COUNT` 函数聚合分组列。 请注意，系统会显示警告消息，以指明在为每个员工计算 `PurchaseOrderID` 时，未考虑 `COUNT` 列中的任何 NULL 值。  
+`EmployeeID` 列返回的唯一值变成了最终结果集中的字段。 因此，在 pivot 子句中指定的每个 `EmployeeID` 号都有对应的列：在此示例中，为员工 `250`、`251`、`256`、`257` 和 `260`。 `PurchaseOrderID` 列作为值列，将根据此列对最终输出中返回的列（称为分组列）进行分组。 在本例中，通过 `COUNT` 函数聚合分组列。 请注意，系统会显示警告消息，以指明在为每个员工计算 `COUNT` 时，未考虑 `PurchaseOrderID` 列中的任何 NULL 值。  
   
 > [!IMPORTANT]  
 >  如果聚合函数与 `PIVOT` 一起使用，则计算聚合时将不考虑出现在值列中的任何空值。  
 
 ## <a name="unpivot-example"></a>逆透视示例
   
-与 `UNPIVOT` 执行的操作几乎相反，`PIVOT` 将列轮换为行。 假设以上示例中生成的表在数据库中存储为 `pvt`，并且您需要将列标识符 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋转为对应于特定供应商的行值。 因此，必须标识另外两个列。 包含要轮换的列值（`Emp1`、`Emp2`...）的列称为 `Employee`，保留要轮换列下的现有值的列称为 `Orders`。 这些列分别对应于  *定义中的 pivot_column 和 value_column*  [!INCLUDE[tsql](../../includes/tsql-md.md)]。 以下为该查询。  
+与 `PIVOT` 执行的操作几乎相反，`UNPIVOT` 将列轮换为行。 假设以上示例中生成的表在数据库中存储为 `pvt`，并且您需要将列标识符 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋转为对应于特定供应商的行值。 因此，必须标识另外两个列。 包含要轮换的列值（`Emp1`、`Emp2`...）的列称为 `Employee`，保留要轮换列下的现有值的列称为 `Orders`。 这些列分别对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义中的 pivot_column 和 value_column   。 以下为该查询。  
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
@@ -205,7 +205,7 @@ VendorID    Employee    Orders
   
 请注意，`UNPIVOT` 并不完全是 `PIVOT` 的逆操作。 `PIVOT` 执行聚合，并将多个可能的行合并为输出中的一行。 `UNPIVOT` 不重现原始表值表达式的结果，因为行已被合并。 另外，`UNPIVOT` 输入中的 NULL 值也在输出中消失了。 如果值消失，表明在执行 `PIVOT` 操作前，输入中可能就已存在原始 NULL 值。  
   
-`Sales.vSalesPersonSalesByFiscalYears` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 视图将使用 `PIVOT` 返回每个销售人员在每个会计年度的总销售额。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中编写视图脚本，请在“对象资源管理器”中的“视图”文件夹下找到  **数据库对应的视图**  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。 右键单击该视图名称，再选择“编写视图脚本为”  。  
+[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中的 `Sales.vSalesPersonSalesByFiscalYears` 视图将使用 `PIVOT` 返回每个销售人员在每个会计年度的总销售额。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中编写视图脚本，请在“对象资源管理器”中的“视图”文件夹下找到 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库对应的视图   。 右键单击该视图名称，再选择“编写视图脚本为”  。  
   
 ## <a name="see-also"></a>另请参阅  
 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

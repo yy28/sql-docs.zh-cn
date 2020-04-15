@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 650a298b9cc67b24c33f3da370a8a1b6de6ac63b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f7d9c9a1610b5ebcd086bec1cc11d0ec85f7358
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922662"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219436"
 ---
 # <a name="application-security"></a>应用程序安全性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,9 +59,9 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  代码“file:/install_dir/lib/-”是指 JDBC 驱动程序的安装目录。  
   
 ## <a name="protecting-server-communication"></a>保护服务器通信  
- 使用 JDBC 驱动程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库进行通信时，可以使用 Internet 协议安全 (IPSEC) 和/或安全套接字层 (SSL) 来保护信道。  
+ 使用 JDBC 驱动程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库进行通信时，可以使用 Internet 协议安全性 (IPSEC) 或传输层安全性 (TLS)（以前称为安全套接字层 (SSL)）来保护信道；或者可以同时使用这两者。  
   
- SSL 支持可用于在 IPSEC 保护措施之外提供另一层保护。 有关使用 SSL 的详细信息，请参阅[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)。  
+ TLS 支持可用于提供除 IPSEC 之外的其他保护级别。 有关使用 TLS 的详细信息，请参阅[使用加密](../../connect/jdbc/using-ssl-encryption.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [保护 JDBC 驱动程序应用程序](../../connect/jdbc/securing-jdbc-driver-applications.md)  

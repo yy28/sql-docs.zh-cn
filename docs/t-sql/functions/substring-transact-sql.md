@@ -1,6 +1,6 @@
 ---
 title: SUBSTRING (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: SUBSTRING 函数的 Transact-SQL 参考。 此函数返回指定字符、二进制、文本或图像表达式的一部分。
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68618e0dbafd152c8bdba71f0abf4b7c0b99bdac
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117666"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517095"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,10 +87,10 @@ WHERE database_id < 5;
 
 |name |初始 |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |st |
-|tempdb  |t  |mp |
-|model   |m  |de |
-|msdb    |m  |db |
+|主    |m    |st |
+|tempdb    |t    |mp |
+|模型    |m    |de |
+|msdb    |m    |db |
 
 
   
@@ -135,7 +135,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- 以下示例说明 SUBSTRING 对 text 和 ntext 数据的影响   。 首先，该示例在 `pubs` 数据库内创建一个名为 `npub_info` 的新表。 接着，该示例使用 `pr_info` 列的前 80 个字符在 `npub_info` 表中创建 `pub_info.pr_info` 列，然后将添加 `ü` 为第一个字符。 最后，`INNER JOIN` 检索所有出版商标识号以及 text 和 ntext 出版商信息列的`SUBSTRING`   。  
+ 以下示例说明 SUBSTRING 对 text 和 ntext 数据的影响   。 首先，该示例在 `pubs` 数据库内创建一个名为 `npub_info` 的新表。 接着，该示例使用 `pr_info` 列的前 80 个字符在 `npub_info` 表中创建 `pub_info.pr_info` 列，然后将添加 `ü` 为第一个字符。 最后，`INNER JOIN` 检索所有出版商标识号以及 text 和 ntext 出版商信息列的`SUBSTRING`  。  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   

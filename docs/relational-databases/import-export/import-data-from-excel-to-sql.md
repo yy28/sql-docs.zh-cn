@@ -1,5 +1,6 @@
 ---
 title: 将 Excel 数据导入 SQL | Microsoft Docs
+description: 本文介绍将 Excel 数据导入 SQL Server 或 Azure SQL 数据库的方法。 有些只使用一个步骤，而其他则需要一个中间文本文件。
 ms.custom: sqlfreshmay19
 ms.date: 09/30/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245272"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980572"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
 
@@ -140,7 +141,7 @@ GO
 
 ### <a name="linked-servers"></a>链接服务器
 
-还可以将从 SQL Server 到 Excel 文件的永久性连接配置为链接服务器  。 下面的示例将现有 Excel 链接服务器 `Data` 上的 `EXCELLINK` 工作表数据导入名为 `Data_ls` 的新 SQL Server 数据库表。
+还可以将从 SQL Server 到 Excel 文件的永久性连接配置为链接服务器  。 下面的示例将现有 Excel 链接服务器 `EXCELLINK` 上的 `Data` 工作表数据导入名为 `Data_ls` 的新 SQL Server 数据库表。
 
 ```sql
 USE ImportFromExcel;

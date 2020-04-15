@@ -1,6 +1,6 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: DATEDIFF 函数的 Transact-SQL 参考。 返回基于 datepart 的开始和结束日期之间的数值差异。
 ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -31,12 +31,12 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d74f65d119de40a2a02902076eebe6ae42bf4ce5
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68731132"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517512"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "68731132"
 
 此函数返回指定的 startdate 和 enddate 之间所跨的指定 datepart 边界的计数（作为带符号整数值）   。
   
-有关处理 startdate 和 enddate 值之间较大差异的函数，请参阅 [DATEDIFF_BIG (TRANSACT-SQ)](../../t-sql/functions/datediff-big-transact-sql.md)   。 有关所有 [ 日期和时间数据类型及函数的概述，请参阅](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和时间数据类型及函数 (Transact-SQL)[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+有关处理 startdate 和 enddate 值之间较大差异的函数，请参阅 [DATEDIFF_BIG (TRANSACT-SQ)](../../t-sql/functions/datediff-big-transact-sql.md)   。 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -106,17 +106,17 @@ startdate 与 enddate 之间的 int 差异，以 datepart 设置的边界表示 
   
 例如，`SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` 返回 -2，提示 2036 必须为闰年。 这种情况意味着如果从 _startdate_ '2036-03-01' 开始，然后计数 -2 天，则会得到 _enddate_ '2036-02-28'。
   
-若 bigint 的返回值超出范围（-2,147,483,648 到 +2,147,483,647）， **返回错误**`DATEDIFF`。  对于 millisecond，startdate 和 enddate 之间的最大差值为 24 天 20 小时 31 分钟 23.647 秒    。 对于 second，最大差值为 68 年 19 天 3 小时 14 分 7 秒  。
+若 bigint 的返回值超出范围（-2,147,483,648 到 +2,147,483,647），`DATEDIFF` 返回错误  。  对于 millisecond，startdate 和 enddate 之间的最大差值为 24 天 20 小时 31 分钟 23.647 秒    。 对于 second，最大差值为 68 年 19 天 3 小时 14 分 7 秒  。
   
-如果为 startdate 和 enddate 都只指定了时间值，并且 datepart 不是时间 datepart，则  *返回 0*    `DATEDIFF`。
+如果为 startdate 和 enddate 都只指定了时间值，并且 datepart 不是时间 datepart，则 `DATEDIFF` 返回 0     。
   
 `DATEDIFF` 使用 startdate  或 enddate  的时区偏移部分来计算返回值。
   
 由于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 仅精确到分钟，因此在 startdate 或 enddate 具有 smalldatetime 值时，返回值中的秒和毫秒将始终设置为 0    。
   
-如果只为某个日期数据类型变量指定时间值，`DATEDIFF` 会将所缺日期部分的值设置为默认值：`1900-01-01`。 如果只为某个时间或日期数据类型的变量指定日期值，`DATEDIFF` 会将所缺时间部分的值设置为默认值：`00:00:00`。 如果 startdate 和 enddate 中有一个只含时间部分，另一个只含日期部分， *会将所缺时间和日期部分设置为各自的默认值*  `DATEDIFF`。
+如果只为某个日期数据类型变量指定时间值，`DATEDIFF` 会将所缺日期部分的值设置为默认值：`1900-01-01`。 如果只为某个时间或日期数据类型的变量指定日期值，`DATEDIFF` 会将所缺时间部分的值设置为默认值：`00:00:00`。 如果 startdate 和 enddate 中有一个只含时间部分，另一个只含日期部分，`DATEDIFF` 会将所缺时间和日期部分设置为各自的默认值   。
   
-如果 startdate 和 enddate 具有不同的日期数据类型，并且其中一个的时间部分或秒小数部分精度比另一个高， *会将另一个的所缺部分设置为 0*  `DATEDIFF`。
+如果 startdate 和 enddate 具有不同的日期数据类型，并且其中一个的时间部分或秒小数部分精度比另一个高，`DATEDIFF` 会将另一个的所缺部分设置为 0   。
   
 ## <a name="_datepart_-boundaries"></a>datepart  边界
 
@@ -136,10 +136,10 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
 
-如果 startdate 和 enddate 的年份值不同，但它们的日历周值相同， *将对 datepart week 返回 0*  `DATEDIFF`   。
+如果 startdate 和 enddate 的年份值不同，但它们的日历周值相同，`DATEDIFF` 将对 datepart week 返回 0     。
 
 ## <a name="remarks"></a>备注  
-在 `DATEDIFF`、`SELECT <list>`、`WHERE`、`HAVING` 和 `GROUP BY` 子句中使用 `ORDER BY`。
+在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF`。
   
 `DATEDIFF` 将字符串文字隐式转换为 datetime2 类型  。 这就意味着，日期在作为字符串传递时，`DATEDIFF` 不会支持 YDM 格式。 必须先将字符串显式转换为 datetime 或 smalldatetime 类型，然后才能使用 YDM 格式   。
   

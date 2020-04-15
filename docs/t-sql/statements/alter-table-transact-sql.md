@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61329dcaeb7972382e9385b723f5be889470c3c
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288301"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002845"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -245,6 +245,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 }
 ```
 
+> [!NOTE]
+> 有关其他信息，请参阅：
+>
+> - [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md)
+> - [ALTER TABLE column_definition](alter-table-column-definition-transact-sql.md)
+> - [ALTER TABLE computed_column_definition](alter-table-computed-column-definition-transact-sql.md)
+> - [ALTER TABLE index_option](alter-table-index-option-transact-sql.md)
+> - [ALTER TABLE table_constraints](alter-table-table-constraint-transact-sql.md)
+
 ## <a name="syntax-for-memory-optimized-tables"></a>内存优化表的语法
 
 ```
@@ -341,8 +350,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 ```
 
 ```
-
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
@@ -374,8 +382,12 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 
 <column_constraint>::=
-    [ CONSTRAINT constraint_name ] DEFAULT constant_expression
-
+    [ CONSTRAINT constraint_name ] 
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
 <rebuild_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
@@ -407,8 +419,21 @@ ALTER COLUMN
 - 数据类型为 timestamp 的列  。
 - 表的 ROWGUIDCOL 列。
 - 计算列或用于计算列的列。
-- 用于 CREATE STATISTICS 语句生成的统计信息的列。 数据类型不会改变，除非列的数据类型为 varchar  、nvarchar  或 varbinary  ， 且新大小等于或大于旧大小， 或要将列从非 NULL 更改为 NULL。 首先，用 DROP STATISTICS 语句删除统计信息。
+- 用于 CREATE STATISTICS 语句生成的统计信息的列。 用户需要运行 DROP STATISTICS 才能删除统计信息，然后 ALTER COLUMN 才能成功。  运行此查询以获取用户创建的所有统计信息和表的统计信息列。
 
+``` sql
+
+SELECT s.name AS statistics_name  
+      ,c.name AS column_name  
+      ,sc.stats_column_id  
+FROM sys.stats AS s  
+INNER JOIN sys.stats_columns AS sc   
+    ON s.object_id = sc.object_id AND s.stats_id = sc.stats_id  
+INNER JOIN sys.columns AS c   
+    ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
+WHERE s.object_id = OBJECT_ID('<table_name>'); 
+
+```
    > [!NOTE]
    > 由查询优化器自动生成的统计信息将被 ALTER COLUMN 自动删除。
 
@@ -1058,11 +1083,11 @@ ALTER TABLE 权限适用于 ALTER TABLE SWITCH 语句涉及的两个表。 已�
 
 |类别|作为特征的语法元素|
 |--------------|------------------------------|
-|[添加列和约束](#add)|ADD • PRIMARY KEY 以及索引选项 • 稀疏列和列集 •|
+|[添加列和约束](#add)|ADD * PRIMARY KEY with index options * sparse columns and column sets *|
 |[删除列和约束](#Drop)|DROP|
-|[更改列定义](#alter_column)|更改数据类型 • 更改列大小 • 排序规则|
-|[更改表定义](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • 更改跟踪|
-|[禁用和启用约束和触发器](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
+|[更改列定义](#alter_column)|change data type * change column size * collation|
+|[更改表定义](#alter_table)|DATA_COMPRESSION * SWITCH PARTITION * LOCK ESCALATION * change tracking|
+|[禁用和启用约束和触发器](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
 ### <a name="adding-columns-and-constraints"></a><a name="add"></a>添加列和约束

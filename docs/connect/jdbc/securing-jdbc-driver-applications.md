@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb59afd2044fc1614bdf0303702d72a5435728ea
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd01462987ef425af32c8537f1fc99218d59e290
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928438"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219426"
 ---
 # <a name="securing-jdbc-driver-applications"></a>保护 JDBC 驱动程序应用程序
 
@@ -32,7 +32,7 @@ ms.locfileid: "80928438"
 | [保护连接字符串](../../connect/jdbc/securing-connection-strings.md) | 描述有助于保护可用来连接到数据源的信息的各种技术。                                                                                    |
 | [验证用户输入](../../connect/jdbc/validating-user-input.md)             | 描述验证用户输入的技术。                                                                                                                          |
 | [应用程序安全性](../../connect/jdbc/application-security.md)               | 描述如何使用 Java 策略权限来帮助保护 JDBC Driver 应用程序。                                                                                |
-| [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)               | 描述如何使用安全套接字层 (SSL) 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之间建立安全通信通道。 |
+| [使用加密](../../connect/jdbc/using-ssl-encryption.md)               | 描述如何使用传输层安全性 (TLS)（以前称为安全套接字层 (SSL)）与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库建立安全信道。 |
 | [FIPS 模式](../../connect/jdbc/fips-mode.md)                                     | 介绍了如何在符合 FIPS 规定的模式下使用 JDBC 驱动程序。                                                                                                              |
   
 ## <a name="see-also"></a>另请参阅  

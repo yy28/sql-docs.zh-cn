@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc70544fdb0bb79ef97d5026ad8b985ad8add2ba
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216076"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80443375"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>在 Windows 上配置 PolyBase 横向扩展组
 
@@ -87,7 +87,10 @@ ms.locfileid: "80216076"
 3. 在计算节点 (PQTH4A-CMP02) 上运行 services.msc。
   
 4. 关闭 PolyBase 引擎并重启 PolyBase 数据移动服务。
-  
+
+> [!NOTE] 
+> 当 Polybase Engine 服务重启或在头节点中停止时，只要关闭数据移动服务 (DMS) 与 Polybase Engine 服务 (DW) 之间的信道，DMS 服务就会停止。 如果 DW 引擎重启两次以上，则 DMS 会进入 90 分钟的静默期，并且必须等待 90 分钟才能进行下一次自动启动尝试。 在这种情况下，应在所有节点上手动启动此服务。
+
 ## <a name="optional-remove-a-compute-node"></a>可选：删除计算节点  
   
 1. 连接到计算节点 SQL Server (PQTH4A-CMP02)。

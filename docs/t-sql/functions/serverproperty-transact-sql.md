@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db0bbc0fe85809ea827b005e8c10bbbfe4f30670
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761648"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517517"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -67,6 +67,7 @@ propertyname
 |InstanceDefaultLogPath|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到当前版本 2015 年底开始的更新  。<br /><br /> 实例日志文件的默认路径的名称。|  
 |InstanceName|用户连接到的实例的名称。<br /><br /> 如果实例名称是默认实例，或者输入无效或发生错误，则返回 NULL。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：nvarchar(128) |  
 |IsAdvancedAnalyticsInstalled|如果安装期间安装了高级分析功能，则返回 1；如果未安装，则返回 0。|  
+|IsBigDataCluster| 从 CU4 开始在 [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 中引入。<br /><br />如果实例为 SQL Server 大数据群集，则返回 1；如果不是，则为 0。|  
 |IsClustered|服务器实例已配置在故障转移群集中。<br /><br /> 1 = 群集。<br /><br /> 0 = 非群集。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int |  
 |IsFullTextInstalled|全文和语义索引组件安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例上。<br /><br /> 1 = 已安装全文和语义索引组件。<br /><br /> 0 = 未安装全文和语义索引组件。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int |  
 |IsHadrEnabled|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 在此服务器实例上启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已禁用。<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已启用。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int <br /><br /> 要创建可用性副本并使该副本在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上运行，必须在该服务器实例上启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。<br /><br /> **注意：** IsHadrEnabled 属性仅与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 相关。 其他高可用性或灾难恢复功能（如数据库镜像或日志传送）都不受此服务器属性影响。|  

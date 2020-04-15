@@ -1,5 +1,6 @@
 ---
 title: 将平面文件导入 SQL |Microsoft 文档
+description: 利用导入平面文件向导可以轻松地将数据从 .csv 或 .txt 文件复制到新数据库表。 本文介绍如何以及何时使用该向导。
 ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f04842324642c3d24f8b378a3c096e94aa96227c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74190794"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980549"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
