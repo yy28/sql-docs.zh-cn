@@ -1,5 +1,5 @@
 ---
-title: 大型 CLR 用户定义类型（OLE DB） |Microsoft Docs
+title: 大型 CLR 用户定义类型 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,30 +10,29 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da389befc45fec755e65426850a7f98fd66d119e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760041"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304368"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
   
- 有关 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对大型 clr udt 的支持的详细信息，请参阅[大型 Clr 用户定义类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR udt &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 有关本机客户端中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对大型 CLR UDT 的支持的详细信息，请参阅[大型 CLR 用户定义类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR UDT (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>数据格式  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 表示其大小对于大型对象 (LOB) 类型不受限制的值的长度。 ~0 还表示大于 8,000 个字节的 CLR UDT 的大小。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 表示其大小对于大型对象 (LOB) 类型不受限制的值的长度。 ~0 还表示大于 8,000 个字节的 CLR UDT 的大小。  
   
  下表显示了参数和行集中的数据类型映射：  
   
-|SQL Server 数据类型|OLE DB 数据类型|内存布局|值|  
+|SQL Server 数据类型|OLE DB 数据类型|内存布局|“值”|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE[]（字节数组\)|132 (oledb.h)|  
   
@@ -48,14 +47,14 @@ ms.locfileid: "73760041"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
  需要 UDT 列时，在 ITableDefinition::CreateTable 所用的 DBCOLUMNDESC 结构中使用下列信息****：  
   
-|OLE DB 数据类型（*wType*）|*pwszTypeName*|SQL Server 数据类型|*rgPropertySets*|  
+|OLE DB 数据类型 (wType**)|pwszTypeName**|SQL Server 数据类型|rgPropertySets**|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|忽略|UDT|必须包括 DBPROPSET_SQLSERVERCOLUMN 属性集。|  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  通过 prgParamInfo 在 DBPARAMINFO 结构中返回的信息如下所示****：  
   
-|参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*DBPARAMFLAGS_ISLONG|  
+|参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|dwFlags** DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|"DBTYPE_UDT"|*n*|未定义|未定义|clear|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|"DBTYPE_UDT"|~0|未定义|未定义|set|  
@@ -63,7 +62,7 @@ ms.locfileid: "73760041"
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  在 DBPARAMBINDINFO 结构中提供的信息必须符合以下规定：  
   
-|参数类型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*DBPARAMFLAGS_ISLONG|  
+|参数类型|pwszDataSourceType**|*ulParamSize*|*bPrecision*|*bScale*|dwFlags** DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|已忽略|已忽略|如果将使用 DBTYPE_IUNKNOWN 传递参数，则必须进行设置。|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|~0|已忽略|已忽略|已忽略|  
@@ -76,10 +75,10 @@ ms.locfileid: "73760041"
   
 |列类型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|Null|Null|清除|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|Null|Null|Clear|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|~0|Null|Null|设置|DB_ALL_EXCEPT_LIKE|0|  
   
- 对于 Udt，还定义了以下列：  
+ 对于 UDT，还会定义以下列：  
   
 |列标识符|类型|说明|  
 |-----------------------|----------|-----------------|  
@@ -91,9 +90,9 @@ ms.locfileid: "73760041"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  在 DBCOLUMNINFO 结构中返回的信息如下所示：  
   
-|参数类型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
+|参数类型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|dwFlags**<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|~0|~0|清除|  
+|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|~0|~0|Clear|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|~0|~0|~0|设置|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>COLUMNS 行集（架构行集）  
@@ -101,7 +100,7 @@ ms.locfileid: "73760041"
   
 |列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|清除|*n*|  
+|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|Clear|*n*|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|设置|0|  
   
  对于 UDT，还会定义以下列：  
@@ -139,11 +138,11 @@ ms.locfileid: "73760041"
 |3|数据从二进制数据转换为十六进制字符串。|  
 |4|在使用 CreateAccessor 或 GetNextRows 时进行验证********。 错误为 DB_E_ERRORSOCCURRED 错误。 绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  
 |5|可能会使用 BY_REF。|  
-|6|UDT 参数可以绑定为 DBBINDING 中的 DBTYPE_IUNKNOWN。 如果绑定到 DBTYPE_IUNKNOWN，则表示应用程序要使用 ISequentialStream 接口将数据作为流进行处理。 当使用者在绑定中将*wType*指定为类型 DBTYPE_IUNKNOWN，并且该存储过程的相应列或输出参数为 UDT 时，SQL Server Native Client 将返回 ISequentialStream。 对于输入参数，SQL Server Native Client 将查询 ISequentialStream 接口的。<br /><br /> 如果是大型 UDT，可以选择不绑定 UDT 数据的长度，而是使用 DBTYPE_IUNKNOWN 绑定。 但是，对于小型 UDT，必须绑定长度。 如果满足以下一个或多个条件，可以将 DBTYPE_UDT 参数指定为大型 UDT：<br />*ulParamParamSize*为 ~ 0。<br />在 DBPARAMBINDINFO 结构中设置了 DBPARAMFLAGS_ISLONG。<br /><br /> 对于行数据，仅允许对大型 UDT 进行 DBTYPE_IUNKNOWN 绑定。 可以通过对行集或命令对象的 IColumnsInfo 接口使用 IColumnsInfo：： GetColumnInfo 方法来了解列是否为大型 UDT 类型。 如果满足以下一个或多个条件，DBTYPE_UDT 列即为大型 UDT 列：<br />DBCOLUMNFLAGS_ISLONG 标记是在 DBCOLUMNINFO 结构的 dwFlags 成员上设置的**。 <br />DBCOLUMNINFO 的*ulColumnSize*成员为 ~ 0。|  
+|6|UDT 参数可以绑定为 DBBINDING 中的 DBTYPE_IUNKNOWN。 如果绑定到 DBTYPE_IUNKNOWN，则表示应用程序要使用 ISequentialStream 接口将数据作为流进行处理。 当使用者在绑定中指定*wType*为类型DBTYPE_IUNKNOWN，并且存储过程的相应列或输出参数为 UDT 时，SQL Server 本机客户端将返回 ITt。 对于输入参数，SQL Server 本机客户端将查询 I顺序流接口的 。<br /><br /> 如果是大型 UDT，可以选择不绑定 UDT 数据的长度，而是使用 DBTYPE_IUNKNOWN 绑定。 但是，对于小型 UDT，必须绑定长度。 如果满足以下一个或多个条件，可以将 DBTYPE_UDT 参数指定为大型 UDT：<br />ulParamParamSize** 为 ~0。<br />在 DBPARAMBINDINFO 结构中设置了 DBPARAMFLAGS_ISLONG。<br /><br /> 对于行数据，仅允许对大型 UDT 进行 DBTYPE_IUNKNOWN 绑定。 可以通过对 Rowset 或 Command 对象的 IColumnsInfo 接口使用 IColumnsInfo::GetColumnInfo 方法来了解列是否为大型 UDT 类型。 如果满足以下一个或多个条件，DBTYPE_UDT 列即为大型 UDT 列：<br />DBCOLUMNFLAGS_ISLONG 标记是在 DBCOLUMNINFO 结构的 dwFlags 成员上设置的**。 <br />DBCOLUMNINFO 的 ulColumnSize** 成员为 ~0。|  
   
  可以绑定 DBTYPE_NULL 和 DBTYPE_EMPTY 用于输入参数，但不能用于输出参数或结果。 当绑定用于输入参数时，对于 DBTYPE_NULL，状态必须设置为 DBSTATUS_S_ISNULL，对于 DBTYPE_EMPTY 则必须设置为 DBSTATUS_S_DEFAULT。 DBTYPE_BYREF 不能与 DBTYPE_NULL 或 DBTYPE_EMPTY 一起使用。  
   
- DBTYPE_UDT 还可以转换为 DBTYPE_EMPTY 和 DBTYPE_NULL。 但是，DBTYPE_NULL 和 DBTYPE_EMPTY 无法转换为 DBTYPE_UDT。 这与 DBTYPE_BYTES 的情况是一致的。 **ISSCommandWithParameters**用于将 udt 作为参数处理。  
+ DBTYPE_UDT 还可以转换为 DBTYPE_EMPTY 和 DBTYPE_NULL。 但是，DBTYPE_NULL 和 DBTYPE_EMPTY 无法转换为 DBTYPE_UDT。 这与 DBTYPE_BYTES 的情况是一致的。 ISSCommandWithParameters 用于将 UDT 处理为参数****。  
   
  OLE DB 核心服务 (IDataConvert) 提供的数据转换不适用于 DBTYPE_UDT****。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "73760041"
 |客户端版本|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
 |SQL Server 2005|UDT|varbinary(max)|  
-|SQL Server 2008 及更高版本|UDT|UDT|  
+|SQL Server 2008 和更高版本|UDT|UDT|  
   
  如果 DataTypeCompatibility (SSPROP_INIT_DATATYPECOMPATIBILITY) 设置为“80”，则大型 UDT 类型按相同方式向客户端和下级客户端进行显示****。  
   

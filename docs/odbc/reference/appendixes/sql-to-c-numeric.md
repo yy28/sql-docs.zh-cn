@@ -1,5 +1,5 @@
 ---
-title: SQL 到 C：数值 |Microsoft Docs
+title: SQL 到 C：数字 |微软文档
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - numeric data type [ODBC], converting
 - converting data from SQL to C types [ODBC], numeric
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a23e60b161c09367cfb079cea1f7ca146b4ebee5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 36b24da4023a96b686742416b83bb5790e129278
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68056848"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296407"
 ---
 # <a name="sql-to-c-numeric"></a>从 SQL 到 C：数字
 
@@ -32,30 +32,30 @@ ms.locfileid: "68056848"
 - SQL_TINYINT  
 - SQL_FLOAT  
 - SQL_SMALLINT  
-- SQL_DOUBLE SQL_INTEGER  
+- SQL_DOUBLESQL_INTEGER  
 
-下表显示了数字 SQL 数据可转换为的 ODBC C 数据类型。 有关表中的列和字词的说明，请参阅将[数据从 SQL 转换为 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
+下表显示了可转换为数字 SQL 数据的 ODBC C 数据类型。 有关表中列和术语的说明，请参阅[将数据从 SQL 转换为 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
 
-|C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|C 类型标识符|测试|**目标价值Ptr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|字符字节长度 < *BufferLength*<br /><br /> < *BufferLength*的整个数字（相对于小数部分）<br /><br /> 整数位数（相对于小数） >= *BufferLength*|data<br /><br /> 截断的数据<br /><br /> 未定义|数据的长度（以字节为单位）<br /><br /> 数据的长度（以字节为单位）<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|字符长度 < *BufferLength*<br /><br /> < *BufferLength*的整个数字（相对于小数部分）<br /><br /> 整数位数（相对于小数） >= *BufferLength*|data<br /><br /> 截断的数据<br /><br /> 未定义|数据的长度（以字符为长度）<br /><br /> 数据的长度（以字符为长度）<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|不截断而转换的数据 [a]<br /><br /> 用小数位截断转换的数据 [a]<br /><br /> 数据的转换可能会导致整个（而非分数）数字 [a]|data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|数据在要将数字转换到的数据类型的范围内 [a]<br /><br /> 数据在要将数字转换到的数据类型的范围之外 [a]|data<br /><br /> 未定义|C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_BIT|Data 为0或 1 [a]<br /><br /> 数据大于0，小于2，并且不等于 1 [a]<br /><br /> 数据小于0或大于等于 2 [a]|data<br /><br /> 截断的数据<br /><br /> 未定义|1 [b]<br /><br /> 1 [b]<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_BINARY|Data <的字节长度 = *BufferLength*<br /><br /> 数据 > 的字节长度*BufferLength*|data<br /><br /> 未定义|数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|数据未截断<br /><br /> 秒的小数部分被截断<br /><br /> 数字的整个部分已截断|data<br /><br /> 截断的数据<br /><br /> 未定义|数据的长度（以字节为单位）<br /><br /> 数据的长度（以字节为单位）<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|数字的整个部分已截断|未定义|未定义|22015|  
+|SQL_C_CHAR|字符字节长度<*缓冲区长度*<br /><br /> *缓冲区长度*<整数（与小数）位数<br /><br /> >=*缓冲区长度*的整个（与小数）数字数|数据<br /><br /> 截断的数据<br /><br /> Undefined|以字节为单位的数据长度<br /><br /> 以字节为单位的数据长度<br /><br /> Undefined|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|字符长度<*缓冲区长度*<br /><br /> *缓冲区长度*<整数（与小数）位数<br /><br /> >=*缓冲区长度*的整个（与小数）数字数|数据<br /><br /> 截断的数据<br /><br /> Undefined|字符中的数据长度<br /><br /> 字符中的数据长度<br /><br /> Undefined|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|在不截断的情况下转换的数据[a]<br /><br /> 使用小数数字截断转换的数据[a]<br /><br /> 数据转换将导致整体数字（相对于小数）的丢失[a]|数据<br /><br /> 截断的数据<br /><br /> Undefined|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> Undefined|不适用<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|数据在要转换数字的数据类型范围内[a]<br /><br /> 数据不在要转换数字的数据类型范围之外[a]|数据<br /><br /> Undefined|C 数据类型的大小<br /><br /> Undefined|不适用<br /><br /> 22003|  
+|SQL_C_BIT|数据为 0 或 1[a]<br /><br /> 数据大于 0，小于 2，不等于 1[a]<br /><br /> 数据小于 0 或大于或等于 2[a]|数据<br /><br /> 截断的数据<br /><br /> Undefined|1[b]<br /><br /> 1[b]<br /><br /> Undefined|不适用<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_BINARY|数据<字节长度 =*缓冲区长度*<br /><br /> >*缓冲区长度*的数据字节长度|数据<br /><br /> Undefined|数据长度<br /><br /> Undefined|不适用<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH[c] SQL_C_INTERVAL_YEAR[c] SQL_C_INTERVAL_DAY[c] SQL_C_INTERVAL_HOUR[c] SQL_C_INTERVAL_MINUTE[c] SQL_C_INTERVAL_SECOND[c]|数据未截断<br /><br /> 分段秒部分截断<br /><br /> 被截断的整部分数字|数据<br /><br /> 截断的数据<br /><br /> Undefined|以字节为单位的数据长度<br /><br /> 以字节为单位的数据长度<br /><br /> Undefined|不适用<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_INTERVAL_YEAR_TO_MONTHSQL_C_INTERVAL_DAY_TO_HOURSQL_C_INTERVAL_DAY_TO_MINUTESQL_C_INTERVAL_HOUR_TO_MINUTESQL_C_INTERVAL_HOUR_TO_SECONDSQL_C_INTERVAL_DAY_TO_SECOND|被截断的整部分数字|Undefined|Undefined|22015|  
   
- [a] 此转换将忽略*BufferLength*的值。 驱动程序假设大小 **TargetValuePtr*是 C 数据类型的大小。  
+ [a] 此转换将忽略*缓冲区长度*的值。 驱动程序假定 **目标价值Ptr*的大小是 C 数据类型的大小。  
   
- [b] 这是对应的 C 数据类型的大小。  
+ [b] 这是相应的 C 数据类型的大小。  
   
- [c] 仅对精确数值数据类型（SQL_DECIMAL、SQL_NUMERIC、SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER 和 SQL_BIGINT）支持此转换。 近似数值数据类型（SQL_REAL、SQL_FLOAT 或 SQL_DOUBLE）不支持此方法。  
+ [c] 仅支持精确数值数据类型（SQL_DECIMAL、SQL_NUMERIC、SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER和SQL_BIGINT） 转换。 对于近似数值数据类型（SQL_REAL、SQL_FLOAT或SQL_DOUBLE），不支持它。  
 
-## <a name="sql_c_numeric-and-sqlsetdescfield"></a>SQL_C_NUMERIC 和 SQLSetDescField
+## <a name="sql_c_numeric-and-sqlsetdescfield"></a>SQL_C_NUMERIC和 SQLSetDesc 字段
 
- 若要执行 SQL_C_NUMERIC 值的手动绑定，需要[SQLSetDescField 函数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 （请注意，SQLSetDescField 已添加到 ODBC 3.0。）若要执行手动绑定，必须首先获取描述符句柄。  
+ [SQLSetDescField 函数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)需要执行具有SQL_C_NUMERIC值的手动绑定。 （请注意，SQLSetDescField 是在 ODBC 3.0 中添加的。要执行手动绑定，必须首先获取描述符句柄。  
 
 ```cpp
 if (fCType == SQL_C_NUMERIC) {   

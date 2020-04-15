@@ -1,5 +1,5 @@
 ---
-title: 事务隔离 |Microsoft Docs
+title: 事务隔离 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cf11d125bbdfab3c65d08fbf7d27a5ebe7f9096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 11ece337b06632df82d81dbbc058ff120f25adb4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985086"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298019"
 ---
 # <a name="transaction-isolation"></a>事务隔离
-*事务隔离*是指多个并发事务之间的交互程度。 为了了解这一点很重要，您首先需要了解 serializability 的概念。  
+*事务隔离*是指多个并发事务之间的交互程度。 要了解为什么这一点很重要，您需要首先了解序列化的概念。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [可序列化性](../../../odbc/reference/develop-app/serializability.md)  
   

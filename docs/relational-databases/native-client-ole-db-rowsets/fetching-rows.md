@@ -1,5 +1,5 @@
 ---
-title: 提取行 |Microsoft Docs
+title: 提取行 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2dee6b8b6967046bb8ce69984fe29b71f223789d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298867"
 ---
 # <a name="fetching-rows"></a>提取行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "73761711"
   
  若要从数据库提取行，使用者可调用某个方法，例如 IRowset::GetNextRows 或 IRowsetLocate::GetRowsAt********。 这些提取操作将行数据从服务器放入提供程序的行缓冲区中。 使用者不能直接访问提供程序的行缓冲区。 使用者使用 IRowset::GetData 从提供程序的缓冲区将数据复制到使用者缓冲区，并使用 IRowsetChange::SetData 将数据更改从使用者缓冲区复制到提供程序缓冲区********。  
   
- 使用者调用 GetData 方法，并传递行的句柄、取值函数的句柄和使用者分配的缓冲区的指针****。 工作**项转换数据**，并返回在用于创建访问器的绑定中指定的列。 使用者可以使用不同取值函数和缓冲区对某行多次调用 GetData，因此使用者可以获得相同数据的多个副本****。  
+ 使用者调用 GetData 方法，并传递行的句柄、取值函数的句柄和使用者分配的缓冲区的指针****。 GetData 转换数据，并返回在用于创建取值函数的绑定中指定的列****。 使用者可以使用不同取值函数和缓冲区对某行多次调用 GetData，因此使用者可以获得相同数据的多个副本****。  
   
  可以采用多种方式处理来自变长列的数据。 首先，可以将这样的列绑定到使用者的结构的有限部分。 这将导致当数据的长度超过缓冲区的长度时发生截断。 通过检查状态是否为 DBSTATUS_S_TRUNCATED，使用者可以确定是否已发生截断。 返回的长度始终是真实的字节长度，因此使用者还可以确定有多少数据被截断。  
   

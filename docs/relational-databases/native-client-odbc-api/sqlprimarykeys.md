@@ -1,5 +1,5 @@
 ---
-title: SQLPrimaryKeys |Microsoft Docs
+title: SQL 主键 |微软文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,34 +11,34 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLPrimaryKeys function
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ee83335e00c3129d73c26db37d40af2375c410
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2695d253030f13f71785046a25997ec6ee768622
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786046"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288967"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  表中可能有一列或多列可用作唯一的行标识符，而在没有 PRIMARY KEY 约束的情况下创建的表会将空结果集返回到 SQLPrimaryKeys。 ODBC 函数[SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md)报告没有主键的表的行标识符候选项。  
+  表可能具有可用作唯一行标识符的列或列，在没有"主要密钥"约束的情况下创建的表将空结果集返回到 SQLPrimaryKeys。 ODBC 函数[SQL 特别列](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md)报没有主键的表的行标识符候选项。  
   
- SQLPrimaryKeys 返回 SQL_SUCCESS *CatalogName*、 *SchemaName*或*TableName*参数是否存在值。 当这些参数中使用的值无效时，SQLFetch 返回 SQL_NO_DATA。  
+ SQL 主要密钥SQL_SUCCESS*目录名称*、*架构名称*参数或*表名*参数是否存在值。 当这些参数中使用的值无效时，SQLFetch 返回 SQL_NO_DATA。  
   
- 可以对静态服务器游标执行 SQLPrimaryKeys。 尝试对可更新的（动态或键集）游标执行 SQLPrimaryKeys 时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
+ SQL主要密钥可以在静态服务器游标上执行。 尝试在可上升（动态或键集）游标上执行 SQLPrimaryKeys 将返回SQL_SUCCESS_WITH_INFO指示游标类型已更改。  
   
- Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序通过接受*目录名称*参数的两部分名称 *（Linked_Server_Name.Catalog_Name*）支持报告链接服务器上的表的信息。  
   
 ## <a name="sqlprimarykeys-and-table-valued-parameters"></a>SQLPrimaryKeys 和表值参数  
- 如果语句特性 SQL_SOPT_SS_NAME_SCOPE 的值 SQL_SS_NAME_SCOPE_TABLE_TYPE，而不是其默认值 SQL_SS_NAME_SCOPE_TABLE，则 SQLPrimaryKeys 将返回有关表类型的主键列的信息。 有关 SQL_SOPT_SS_NAME_SCOPE 的详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
+ 如果语句属性SQL_SOPT_SS_NAME_SCOPE具有值SQL_SS_NAME_SCOPE_TABLE_TYPE，而不是其默认值SQL_SS_NAME_SCOPE_TABLE，SQLPrimaryKeys 将返回有关表类型的主要键列的信息。 有关SQL_SOPT_SS_NAME_SCOPE的详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
- 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[&#40;ODBC&#41;的表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLPrimaryKeys 函数](https://go.microsoft.com/fwlink/?LinkId=59361)   
+ [SQL 主键函数](https://go.microsoft.com/fwlink/?LinkId=59361)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

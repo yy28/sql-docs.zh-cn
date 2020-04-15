@@ -11,39 +11,38 @@ helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c3eec754255d38979892c6e1e2d99e03e274897
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f00744ce2f0363e7fcf38820b20e2b631df7adc6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76909617"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301059"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>针对 OLE DB 日期和时间改进的数据类型支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主题提供有关支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/时间数据类型 OLE DB （Native Client）类型的信息。  
+  本主题提供有关支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/时间数据类型的 OLE 数据库（本机客户端）类型的信息。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射  
  OLE DB 提供两种新数据类型来支持新服务器类型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表显示全部服务器类型映射：  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|OLE DB 数据类型|值|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|OLE DB 数据类型|“值”|  
 |-----------------------------------------|----------------------|-----------|  
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145（sqlncli.msi）|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146（sqlncli.msi）|  
+|time|DBTYPE_DBTIME2|145 （sqlncli.h）|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 （sqlncli.h）|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>数据格式：字符串和文字  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|OLE DB 数据类型|客户端转换的字符串格式|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|OLE DB 数据类型|客户端转换的字符串格式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
+|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 此数据类型精确到 1 分钟。 秒部分在输出中将为零，在输入中由服务器进行四舍五入。|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
@@ -75,7 +74,7 @@ ms.locfileid: "76909617"
   
  已对以下现有 OLE DB 结构的实现进行了修改，以支持新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型。 不过未更改定义。  
   
--   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 double****。 整个部分是自1899年12月30日以来的天数，而小数部分是一天的小数部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
+-   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 double****。 整数部分是自 1899 年 12 月 30 日以来的天数，小数部分是不足一天的部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
   
 -   DBTYPE_DBDATE  
   
@@ -160,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 如果将基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构更新为使用**datetime2**而不是**datetime**，则迁移到使用**sql_variant**并且依赖于**datetime**的有限精度的应用程序将需要进行更新。  
+ 如果基础架构更新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为使用**datetime2**而不是**日期时间**，则必须更新迁移到使用**sql_variant**并依赖于**有限日期时间**精度的本机客户端的应用程序。  
   
  还通过添加以下内容，对 SSVARIANT 的访问宏进行了扩展：  
   
@@ -172,18 +171,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
- 以下类型映射与 ITableDefinition：： CreateTable 使用的 DBCOLUMNDESC 结构一起使用：  
+ 以下类型映射用于 ITableDefinition::CreateTable 所使用的 DBCOLUMNDESC 结构：  
   
-|OLE DB 数据类型（*wType*）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|说明|  
+|OLE DB 数据类型 (wType**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|说明|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**（p）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
-|DBTYPE_DBTIME2|**时间**（p）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**（p）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序检查 DBCOLUMDESC *bScale*成员以确定小数秒精度。|  
+|DBTYPE_DBTIME2|**** time(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序检查 DBCOLUMDESC *bScale*成员以确定小数秒精度。|  
+|DBTYPE_DBTIMESTAMPOFFSET|**** datetimeoffset(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序检查 DBCOLUMDESC *bScale*成员以确定小数秒精度。|  
   
- 当应用程序在*wType*中指定 DBTYPE_DBTIMESTAMP 时，它可以通过在*pwszTypeName*中提供类型名称来覆盖指向**datetime2**的映射。 如果指定**datetime** ，则*bScale*必须为3。 如果指定**smalldatetime** ，则*bScale*必须为0。 如果*bScale*与*wType*和*pwszTypeName*不一致，将返回 DB_E_BADSCALE。  
+ 应用程序以 wType** 指定 DBTYPE_DBTIMESTAMP 时，它可以通过在 pwszTypeName** 中提供类型名称来覆盖到 datetime2**** 的映射。 如果指定 datetime****，则 bScale** 必须为 3。 如果指定 smalldatetime****，则 bScale** 必须为 0。 如果*bScale*与*wType*和*pwszTypeName*不一致，则返回DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE DB &#40;的日期和时间改进&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日期和时间改进 (OLE DB)](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

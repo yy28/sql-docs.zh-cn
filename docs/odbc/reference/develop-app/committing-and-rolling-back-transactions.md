@@ -1,5 +1,5 @@
 ---
-title: 提交和回滚事务 |Microsoft Docs
+title: 提交和回滚事务 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - transactions [ODBC], rolling back
 - transactions [ODBC], committing
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c7c028ca7e89378e959b11f59cad4119cef5086a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1c272d60242d31622452c4dcb0f6a16c4838768f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083312"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299107"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>提交和回滚事务
-若要在手动提交模式下提交或回滚事务，应用程序将调用**SQLEndTran**。 支持事务的 Dbms 驱动程序通常通过执行**COMMIT**或**ROLLBACK**语句来实现此功能。 当连接处于自动提交模式时，驱动程序管理器不会调用**SQLEndTran** ;它只会返回 SQL_SUCCESS，即使应用程序尝试回滚事务。 由于不支持事务的 Dbms 的驱动程序始终处于自动提交模式，因此它们可以实现**SQLEndTran**来返回 SQL_SUCCESS，而无需执行任何操作。  
+要在手动提交模式下提交或回滚事务，应用程序将调用**SQLEndTran**。 支持事务的 DBMS 的驱动程序通常通过执行**COMMIT**或**ROLLBACK**语句来实现此函数。 当连接处于自动提交模式时，驱动程序管理器不调用 SQLEndTran;但是，驱动程序管理器不会调用**SQLEndTran。** 它只是返回SQL_SUCCESS，即使应用程序尝试回滚事务。 由于不支持事务的 DBMS 的驱动程序始终处于自动提交模式，因此它们可以实现**SQLEndTran**返回SQL_SUCCESS而不执行任何操作或根本不实现它。  
   
 > [!NOTE]  
->  应用程序不应通过使用**SQLExecute**或**SQLExecDirect**执行**commit**或**ROLLBACK**语句来提交或回滚事务。 执行此操作的效果是不确定的。 可能的问题包括：驱动程序不再知道事务处于活动状态，并且这些语句对于不支持事务的数据源失败。 这些应用程序应改为调用**SQLEndTran** 。  
+>  应用程序不应通过使用 SQLExecute 或**SQLExecDirect**执行**COMMIT**或**SQLExecDirect****ROLLBACK**语句来提交或回滚事务。 执行此操作的效果未定义。 可能的问题包括驱动程序不再知道事务何时处于活动状态，以及这些语句对不支持事务的数据源失败。 这些应用程序应调用**SQLEndTran。**  
   
- 如果某个应用程序将环境句柄传递到**SQLEndTran** ，但未通过连接句柄，则驱动程序管理器将在概念上为在环境中具有一个或多个活动连接的每个驱动程序调用**SQLEndTran**和环境句柄。 然后，该驱动程序在环境中的每个连接上提交事务。 不过，请注意，驱动程序和驱动程序管理器都不会对环境中的连接执行两阶段提交;这只是为环境中的所有连接同时调用**SQLEndTran**的编程便捷。  
+ 如果应用程序将环境句柄传递给**SQLEndTran，** 但不传递连接句柄，则驱动程序管理器在概念上调用**SQLEndTran，** 并针对环境中具有一个或多个活动连接的每个驱动程序调用环境句柄。 然后，驱动程序在环境中的每个连接上提交事务。 但是，请务必认识到，驱动程序和驱动程序管理器都不会对环境中的连接执行两阶段提交;因此，驾驶员经理对环境中的连接执行两阶段提交。这只是同时调用**SQLEndTran**环境中所有连接的编程便利。  
   
- （*两阶段提交*通常用于提交分布于多个数据源的事务。 在其第一阶段中，数据源将被轮询，以确定它们是否可以提交事务的一部分。 在第二阶段中，事务实际上是在所有数据源上提交的。 如果在第一个阶段中，任何数据源都在无法提交事务的情况下进行回复，则不会发生第二阶段。）
+ （*两阶段提交*通常用于提交分布在多个数据源的事务。 在第一阶段，将轮询数据源，以决定是否可以提交其部分事务。 在第二阶段，事务实际上是在所有数据源上提交的。 如果第一阶段的任何数据源答复它们无法提交事务，则第二阶段不会发生。

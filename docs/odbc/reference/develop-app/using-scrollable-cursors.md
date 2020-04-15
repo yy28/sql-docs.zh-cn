@@ -1,5 +1,5 @@
 ---
-title: 使用可滚动游标 |Microsoft Docs
+title: 使用可滚动光标 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079572"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289128"
 ---
 # <a name="using-scrollable-cursors"></a>使用可滚动游标
-使用可滚动游标需要以下三个步骤：  
+使用可滚动光标需要以下三个步骤：  
   
 1.  确定游标功能。  
   
-2.  设置游标。  
+2.  设置光标。  
   
 3.  滚动和提取行。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [确定游标功能](../../../odbc/reference/develop-app/determining-cursor-capabilities.md)  
   

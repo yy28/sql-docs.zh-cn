@@ -1,5 +1,5 @@
 ---
-title: 持久化数据源对象 |Microsoft Docs
+title: 持久化数据源对象 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3355b086d884d68f829c34fb461589e4a46e05fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73771468"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297209"
 ---
 # <a name="persisted-data-source-objects"></a>持久化数据源对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持具有**IPersistFile**接口的持久化数据源对象。  
+  本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序支持具有**IPersistFile**接口的持久化数据源对象。  
   
 ## <a name="examples"></a>示例  
  **A. 使数据源初始化持久化：**  
@@ -231,6 +231,6 @@ HRESULT InitFromPersistedDS
  可在调用 IDBInitialize::Initialize 前后调用 IPersistFile::Save 方法********。 如果在从 IDBInitialize::Initialize 成功返回后调用该方法，可确保使有效的数据源指定持久化****。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据源对象 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [数据源对象 (OLE DB)](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

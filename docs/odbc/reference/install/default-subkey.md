@@ -1,5 +1,5 @@
 ---
-title: 默认子项 |Microsoft Docs
+title: 默认子键 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - registry entries for data sources [ODBC], default subkey
 - subkeys [ODBC], default subkey
 ms.assetid: a2259db8-feb7-4f0a-afc8-88e235d86be7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: adcb9175913603a0d13fb2587e62d41b52939042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5bfca9c5c81d94e3d337f8d349fbbd4ceb87dbdc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094198"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298387"
 ---
 # <a name="default-subkey"></a>默认子项
-注册表可以使用默认子项指定默认数据源。 此子项是数据源规范子项的一种特殊情况，它具有与任何其他数据源规范子项相同的值。 唯一的区别在于，它未在 "ODBC 数据源" 子项下作为值列出。
+注册表可能指定具有默认子键的默认数据源。 此子键是数据源规范子键的特殊情况，具有与任何其他数据源规范子键相同的值。 唯一的区别是，它不被列为 ODBC 数据源子键下的值。

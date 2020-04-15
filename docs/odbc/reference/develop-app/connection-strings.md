@@ -1,5 +1,5 @@
 ---
-title: 连接字符串 |Microsoft Docs
+title: 连接字符串 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f68a87db729df2f4a27e2766a9de60e8c75a71a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bbbb5b4672a8ea393380063887cfd77b3e910238
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036422"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299027"
 ---
 # <a name="connection-strings"></a>连接字符串
-连接字符串包含用于建立连接的信息。 完整的连接字符串包含建立连接所需的所有信息。 连接字符串是一系列由分号分隔的关键字/值对。 （有关连接字符串的完整语法，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。）使用连接字符串的方法是：  
+连接字符串包含用于建立连接的信息。 完整的连接字符串包含建立连接所需的所有信息。 连接字符串是一系列关键字/值对，由分号分隔。 （有关连接字符串的完整语法，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。连接字符串由以下者使用：  
   
--   **SQLDriverConnect**，它通过与用户交互来完成连接字符串。  
+-   **SQLDriverConnect**，它通过与用户的交互完成连接字符串。  
   
--   **SQLBrowseConnect**，它通过数据源迭代完成连接字符串。  
+-   **SQLBrowseConnect**，它与数据源以迭代方式完成连接字符串。  
   
- **SQLConnect**不使用连接字符串;使用**SQLConnect**类似于使用只包含三个关键字/值对的连接字符串进行连接（适用于数据源名称和（可选）用户 ID 和密码）。
+ SQLConnect 不使用连接字符串;因此 **，SQLConnect**不使用连接字符串。使用**SQLConnect**类似于使用仅包含三个关键字/值对的连接字符串（对于数据源名称，可选为用户 ID 和密码）。

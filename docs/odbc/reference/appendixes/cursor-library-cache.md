@@ -1,5 +1,5 @@
 ---
-title: 游标库缓存 |Microsoft Docs
+title: 光标库缓存 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 597abe268979852d754e2e3e86ae81daa8f3fed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5686bf0c3e261b1df947c02e2edaa419da498ecb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019064"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284687"
 ---
 # <a name="cursor-library-cache"></a>游标库缓存
 > [!IMPORTANT]  
->  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在将来版本的 Windows 中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的光标功能。  
   
- 对于结果集中的每个数据行，游标库将缓存每个绑定列的数据、每个绑定列中的数据长度以及行的状态。 游标库使用缓存中的值来通过**SQLFetch**和**SQLFetchScroll**返回，并为定位操作构造搜索语句。 有关详细信息，请参阅[构造搜索语句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
+ 对于结果集中的每一行数据，游标库缓存每个绑定列的数据、每个绑定列中的数据长度以及行的状态。 游标库使用缓存中的值通过**SQLFetch**和**SQLFetchScroll**返回，并为定位操作构造搜索语句。 有关详细信息，请参阅[构造搜索语句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [列数据](../../../odbc/reference/appendixes/column-data.md)  
   

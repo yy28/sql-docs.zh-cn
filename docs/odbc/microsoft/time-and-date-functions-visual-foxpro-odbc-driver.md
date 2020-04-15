@@ -1,5 +1,5 @@
 ---
-title: 时间和日期函数（Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+title: 时间和日期功能（可视化福克斯Pro ODBC驱动程序） |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,59 +15,59 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 86260f8e7245bed15122d4dbfc4649131674e17f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912406"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303058"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>时间和日期函数（Visual FoxPro ODBC 驱动程序）
-下表列出了 Visual FoxPro ODBC 驱动程序支持的 ODBC 时间和日期函数;当同一个函数的 Visual FoxPro 语法与 ODBC 语法不同时，将列出等效的 Visual FoxPro。  
+下表列出了 Visual FoxPro ODBC 驱动程序支持的 ODBC 时间和日期函数;当相同函数的 Visual FoxPro 语法与 ODBC 语法不同时，将列出 Visual FoxPro 等效项。  
   
-|ODBC 语法|Visual FoxPro 语法|  
+|ODBC 语法|可视化 FoxPro 语法|  
 |------------------|---------------------------|  
-|CURDATE *（）*|DATE *（）*|  
-|CURTIME *（）*|时间 *（）*|  
-|DAYNAME *（date_exp）*|CDOW *（date_exp）*|  
-|DAYOFMONTH （*date_exp）*|DAY *（）*|  
+|CURDATE *（ ）*|日期 *（ ）*|  
+|CURTIME *（ ）*|时间 *（ ）*|  
+|天名 *（date_exp）*|CDOW *（date_exp）*|  
+|一月 *（date_exp日）*|日 *（ ）*|  
 |小时 *（time_exp）*||  
 |分钟 *（time_exp）*||  
 |月 *（time_exp）*||  
-|MONTHNAME *（date_exp）*|CMONTH *（date_exp）*|  
-|NOW *（）*|DATETIME *（）*|  
-|SECOND *（time_exp）*|SEC *（time_exp）*|  
+|月名 *（date_exp）*|CMONTH *（date_exp）*|  
+|现在 *（ ）*|日期时间 *（ ）*|  
+|秒 *（time_exp）*|SEC *（time_exp）*|  
 |周 *（date_exp）*||  
-|YEAR *（date_exp）*||  
+|年份 *（date_exp）*||  
   
- 以下时间和日期函数不受支持：  
+ 不支持以下时间和日期函数：  
   
- DAYOFYEAR *（date_exp）*  
+ 一天 *（date_exp）*  
   
- 季度 *（date_exp）*  
+ *（date_exp）*  
   
- TIMESTAMPADD *（interval，integer_exp，timestamp_exp）*  
+ 时间戳（*间隔、integer_exp、timestamp_exp）*  
   
- TIMESTAMPDIFF *（interval，timestamp_exp1，timestamp_exp2）*  
+ 时间戳 *（间隔、timestamp_exp1、timestamp_exp2）*  
   
 ## <a name="odbc-escape-sequences"></a>ODBC 转义序列  
- 驱动程序还支持日期和时间戳数据的 ODBC 转义序列。 转义子句的语法如下所示：  
+ 驱动程序还支持日期和时间戳数据的 ODBC 转义序列。 转义子句语法如下所示：  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)-  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- 在此语法中， **d**表示*该值*是*yyyy-mm-dd*格式的日期， **ts**表示*该值*是*yyyy-mm-dd hh： mm： ss*[中的时间戳。*f ...*]形式. 日期和时间戳数据的速记语法如下：  
+ 在此语法中 **，d**指示*值*是*yyyy-mm-dd*格式的日期 **，ts**表示*值*是*yyyy-mm-dhh：mm：ss*中的时间戳 。*f...* 格式。 日期和时间戳数据的速记语法如下所示：  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- 例如，下面的每个语句通过使用受支持的 SQL UPDATE 命令中的日期和时间戳简写语法来更新 ALLTYPES 表：  
+ 例如，以下每个语句都使用受支持的 SQL UPDATE 命令中的日期和时间戳速记语法更新 ALLTYPES 表：  
   
 ```  
 UPDATE alltypes  
@@ -80,4 +80,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>备注  
- 有关转义序列的详细信息，请参阅 Odbc in odbc*程序员参考*中的[转义序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)。
+ 有关转义序列的详细信息，请参阅*ODBC 程序员参考*[中的 ODBC 中的转义序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)。

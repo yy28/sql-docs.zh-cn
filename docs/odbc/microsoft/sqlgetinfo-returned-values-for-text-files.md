@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo 返回的文本文件的值 |Microsoft Docs
+title: SQLGetInfo 文本文件的返回值 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 98dcfb671a96e9b82d7349193926e8f0f5349324
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898810"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298517"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>文本文件的 SQLGetInfo 返回值
-下表列出了*fInfoType*参数的 C 语言 #defines 和**SQLGetInfo**返回的相应值。 可以通过将列出的 C 语言 #defines 传递到*fInfoType*参数中的**SQLGetInfo**来检索此信息。 有关**SQLGetInfo**返回的值的详细信息，请参阅[ODBC 程序员参考](../../odbc/reference/odbc-programmer-s-reference.md)。  
+下表列出了*fInfoType*参数的 C 语言#defines以及**SQLGetInfo**返回的相应值。 可以通过将列出的 C 语言#defines传递给*fInfoType*参数中的**SQLGetInfo**来检索此信息。 有关**SQLGetInfo**返回的值的详细信息，请参阅[ODBC 程序员的参考](../../odbc/reference/odbc-programmer-s-reference.md)。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**返回32位位掩码，竖线（&#124;）表示按位 or。  
+>  在**SQLGetInfo**返回 32 位位掩码的位置时，垂直条（&#124;）表示一点或。  
   
-|InfoType|返回值|  
+|信息类型|返回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|全部集|  
+|SQL_AGGREGATE_FUNCTIONS|全部设置|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ ms.locfileid: "67898810"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|文件夹|  
+|SQL_CATALOG_TERM|"目录"|  
 |SQL_CATALOG_USAGE|多个值|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,12 +81,12 @@ ms.locfileid: "67898810"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|来自 Odbc 的 DSN，或 "" （如果在 Odbc 中使用驱动程序关键字）|  
+|SQL_DATA_SOURCE_NAME|如果 ODbc.ini 中使用 DRIVER 关键字，则来自 Odbc.ini 的 DSN 或""，|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|当前数据库目录|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|全文|  
-|SQL_DBMS_VER|ISAM：文本<br /><br /> 版本：1。0<br /><br /> 版本号格式：01.00.0000|  
+|SQL_DBMS_NAME|"文本"|  
+|SQL_DBMS_VER|ISAM： 文本<br /><br /> 版本：1.0<br /><br /> 版本号格式： 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
@@ -94,9 +94,9 @@ ms.locfileid: "67898810"
 |SQL_DRIVER_HENV|由驱动程序管理器处理。|  
 |SQL_DRIVER_HLIB|由驱动程序管理器处理。|  
 |SQL_DRIVER_HSTMT|由驱动程序管理器处理。|  
-|SQL_DRIVER_NAME|"OdbcJt32"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|*"4.00" （**nnnn*指定生成日期）|  
+|SQL_DRIVER_VER|"4.00.nnnn"*（nnnn*指定生成日期）*nnnn*|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ ms.locfileid: "67898810"
 |SQL_GETDATA_EXTENSIONS|多个值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" （后引号）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`""（回引）|  
 |SQL_KEYWORDS|多个值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -141,7 +141,7 @@ ms.locfileid: "67898810"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多个值|  
-|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|从驱动程序管理器|  
 |SQL_OJ_CAPABILITIES|多个值|  
@@ -155,12 +155,12 @@ ms.locfileid: "67898810"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|多个值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|全文|  
-|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ";：？/><,.!"[] &#124; "|  
+|SQL_SERVER_NAME|"文本"|  
+|SQL_SPECIAL_CHARACTERS|"[$%]\`&*-*""""？"？？/><,.!"\\[&#124;"|  
 |SQL_STRING_FUNCTIONS|多个值|  
 |SQL_SUBQUERIES|多个值|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|数据表|  
+|SQL_TABLE_TERM|"表"|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|多个值|  
