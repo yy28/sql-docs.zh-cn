@@ -1,5 +1,5 @@
 ---
-title: 绑定参数 ODBC |Microsoft Docs
+title: 绑定参数 ODBC |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,37 +10,37 @@ ms.topic: conceptual
 helpviewer_keywords:
 - binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1bc40d4800e7cd013b7ac908400c0492286314e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6e314bb9e3a1a979976a450e2a45a286ec54dfe7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107628"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306378"
 ---
 # <a name="binding-parameters-odbc"></a>绑定参数 ODBC
-在执行语句前，必须将 SQL 语句中的每个参数关联或*绑定*到应用程序中的变量。 当应用程序将变量绑定到参数时，它会对驱动程序描述变量地址、C 数据类型等。 还介绍了参数本身-SQL 数据类型、精度等。 驱动程序将此信息存储在它为该语句维护的结构中，并在执行语句时使用该信息检索变量中的值。  
+在执行语句之前，SQL 语句中的每个参数都必须关联或*绑定*到应用程序中的变量。 当应用程序将变量绑定到参数时，它将该变量 （ 地址、 C 数据类型等 ） 描述到驱动程序。 它还描述了参数本身 - SQL 数据类型、精度等。 驱动程序将此信息存储在它为该语句维护的结构中，并使用该信息在执行语句时从变量中检索值。  
   
- 在执行语句之前，可以随时绑定或重新绑定参数。 如果在执行语句后重新绑定参数，则在再次执行该语句之前，将不会应用绑定。 若要将参数绑定到不同的变量，应用程序只需使用新变量重新绑定参数;上一个绑定会自动释放。  
+ 在执行语句之前，可以随时绑定或反弹参数。 如果参数在执行语句后反弹，则绑定在语句再次执行之前不适用。 要将参数绑定到其他变量，应用程序只需将参数与新变量重新绑定即可;以前的绑定将自动释放。  
   
- 在将其他变量绑定到参数之前，变量保持绑定到参数，直到通过使用 SQL_RESET_PARAMS 选项调用**SQLFreeStmt**来解除所有参数的绑定，或直到语句释放。 出于此原因，应用程序必须确保在变量未绑定之前不会将其释放。 有关详细信息，请参阅[分配和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)。  
+ 变量将保留到参数，直到将不同的变量绑定到参数，直到所有参数通过使用 SQL_RESET_PARAMS 选项调用**SQLFreeStmt**或直到语句发布来取消绑定。 因此，应用程序必须确保在变量未绑定之前不会释放它们。 有关详细信息，请参阅[分配和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)。  
   
- 由于参数绑定只是存储在由语句的驱动程序所维护的结构中的信息，因此可按任意顺序进行设置。 它们还独立于所执行的 SQL 语句。 例如，假设应用程序绑定三个参数，然后执行以下 SQL 语句：  
+ 由于参数绑定只是存储在语句的驱动程序维护的结构中的信息，因此可以按任何顺序设置它们。 它们也独立于执行的 SQL 语句。 例如，假设应用程序绑定三个参数，然后执行以下 SQL 语句：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- 如果应用程序随后立即执行 SQL 语句  
+ 如果应用程序然后立即执行 SQL 语句  
   
 ```  
 SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?  
 ```  
   
- 在同一语句句柄上，使用**INSERT**语句的参数绑定，因为这些是存储在语句结构中的绑定。 在大多数情况下，这是一种不太好的编程做法，应避免这样做。 相反，应用程序应调用带有 SQL_RESET_PARAMS 选项的**SQLFreeStmt** ，以取消所有旧参数的绑定，然后绑定新参数。  
+ 在同一语句句柄上，使用**INSERT**语句的参数绑定，因为这些绑定存储在语句结构中。 在大多数情况下，这是一种糟糕的编程实践，应避免使用。 相反，应用程序应使用SQL_RESET_PARAMS选项调用**SQLFreeStmt，** 以取消绑定所有旧参数，然后绑定新参数。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [绑定参数标记](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
   

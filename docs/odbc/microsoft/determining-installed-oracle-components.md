@@ -1,5 +1,5 @@
 ---
-title: 确定已安装的 Oracle 组件 |Microsoft Docs
+title: 确定已安装的 Oracle 组件 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73a406487ea6a4e1ab00e0320923b0b276a359a6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079014"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303488"
 ---
 # <a name="determining-installed-oracle-components"></a>确定安装的 Oracle 组件
 > [!IMPORTANT]  
->  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
+>  此功能将在将来版本的 Windows 中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 而是使用 Oracle 提供的 ODBC 驱动程序。  
   
- 若要确定系统上安装的 Oracle 组件及其版本，请导航到 Oracle 主目录下的 \Orainst 目录。 打开以下文本文件之一： Nt. rgs、Win95 或 Win98。  
+ 要确定系统上安装的 Oracle 组件（及其版本），请导航到 Oracle 主目录下的 @Orainst 目录。 打开以下文本文件之一：Nt.rgs、Win95.rgs 或 Win98.rgs。  
   
- 文件格式如下所示：  
+ 文件格式类似于以下内容：  
   
 ```  
 0 ntinstall     all    "orainst"  "3.3.1.0.0C"  "Oracle Installer"  
@@ -37,4 +37,4 @@ ms.locfileid: "68079014"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- .Rgs 文件还包含每个组件的安装信息和说明。
+ .rgs 文件还包括每个组件的安装信息和说明。

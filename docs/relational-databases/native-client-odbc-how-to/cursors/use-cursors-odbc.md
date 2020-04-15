@@ -1,5 +1,5 @@
 ---
-title: 使用游标（ODBC） |Microsoft Docs
+title: 使用光标 （ODBC） |微软文档
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16124d582d5651462e0ba0fda657fe66097b9a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 45190660a75fed82f339ec845ee2b40faaf14c02
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781623"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294165"
 ---
 # <a name="use-cursors-odbc"></a>使用游标 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73781623"
   
      设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY 属性（这是首选选项）。  
   
-     或  
+     Or  
   
      设置 SQL_CURSOR_SCROLLABLE 和 SQL_CURSOR_SENSITIVITY 属性。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73781623"
   
 4.  执行 SQL 语句。  
   
-5.  或者，如果将通过使用 WHERE CURRENT OF 子句完成定位更新并且游标名称没有在第 3 步中随 [SQLSetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 提供，则调用 [SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 以获取游标名称。  
+5.  或者，如果将通过使用 WHERE CURRENT OF 子句完成定位更新并且游标名称没有在第 3 步中随 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 提供，则调用 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 以获取游标名称。  
   
 6.  调用 [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) 以获取行集中的列数 (C)。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "73781623"
      通过设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或通过设置 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE，可以控制所使用的游标类型。 不应将指定游标行为的两种方法混用。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用游标操作指南主题 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+ [使用光标操作主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   
