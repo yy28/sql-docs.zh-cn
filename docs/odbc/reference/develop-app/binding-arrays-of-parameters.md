@@ -1,5 +1,5 @@
 ---
-title: 绑定参数数组 |Microsoft Docs
+title: 参数绑定数组 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,32 +12,32 @@ helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 597142d41ed8d3cff26891dfdcc89398543dab43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73cfcde89e89edb87a4955cf0854c66a01d81e6f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103820"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283397"
 ---
 # <a name="binding-arrays-of-parameters"></a>绑定参数的数组
 使用参数数组的应用程序将数组绑定到 SQL 语句中的参数。 有两种绑定样式：  
   
--   将数组绑定到每个参数。 每个数据结构（数组）都包含单个参数的所有数据。 这称为按*列绑定*，因为它将一个值的列绑定到一个参数。  
+-   将数组绑定到每个参数。 每个数据结构（数组）都包含单个参数的所有数据。 这称为*按列绑定*，因为它绑定单个参数的值列。  
   
--   定义一个结构来保存整组参数的参数数据，并绑定这些结构的数组。 每个数据结构包含单个 SQL 语句的数据。 这称为按*行绑定*，因为它绑定了一行参数。  
+-   定义一个结构来保存整个参数集的参数数据，并绑定这些结构的数组。 每个数据结构都包含单个 SQL 语句的数据。 这称为*行绑定*，因为它绑定了一行参数。  
   
- 当应用程序将单个变量绑定到参数时，它会调用**SQLBindParameter**将数组绑定到参数。 唯一的区别是传递的地址是数组地址，而不是单变量地址。 应用程序设置 SQL_ATTR_PARAM_BIND_TYPE 语句特性来指定它是使用列（默认值）还是按行绑定。 是使用按列绑定还是按行绑定，在很大程度上取决于应用程序首选项。 根据处理器访问内存的方式，按行绑定可能会更快。 但是，除了大量的参数行以外，差别可能会忽略不计。  
+ 与应用程序将单个变量绑定到参数一样，它调用**SQLBindparameter**将数组绑定到参数。 唯一的区别是传递的地址是数组地址，而不是单变量地址。 应用程序设置SQL_ATTR_PARAM_BIND_TYPE语句属性以指定它是使用按列（默认）还是按行绑定。 是按列绑定还是按行绑定，很大程度上是应用程序首选项的问题。 根据处理器访问内存的方式，按行绑定可能更快。 但是，除了大量的参数行之外，这种差异可能会忽略不计。  
   
 ## <a name="column-wise-binding"></a>按列绑定  
- 使用按列绑定时，应用程序将一个或两个数组绑定到要为其提供数据的每个参数。 第一个数组保存数据值，第二个数组保存长度/指示器缓冲区。 每个数组包含的元素数量与参数的值相同。  
+ 使用按列绑定时，应用程序将一个或两个数组绑定到要为其提供数据的每个参数。 第一个数组保存数据值，第二个数组保存长度/指示器缓冲区。 每个数组包含的元素数与参数的值一样多。  
   
- 默认情况下，按列绑定。 应用程序还可以通过设置 SQL_ATTR_PARAM_BIND_TYPE 语句特性，从按行绑定改为按列绑定。 下图显示了按列绑定的工作方式。  
+ 按列方向绑定为默认值。 应用程序还可以通过设置SQL_ATTR_PARAM_BIND_TYPE语句属性，从逐行绑定更改为按列绑定。 下图显示了按列绑定的工作原理。  
   
- ![显示列&#45;方式绑定的工作原理](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![显示&#45;明智绑定的列的工作原理](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
- 例如，下面的代码将10元素数组绑定到 PartID、Description 和 Price 列的参数，并执行语句以插入10行。 它使用按列绑定。  
+ 例如，以下代码将 10 元素数组绑定到 PartID、描述和价格列的参数，并执行语句以插入 10 行。 它使用按列绑定。  
   
 ```  
 #define DESC_LEN 51  
@@ -118,19 +118,19 @@ for (i = 0; i < ParamsProcessed; i++) {
 ```  
   
 ## <a name="row-wise-binding"></a>按行绑定  
- 使用按行绑定时，应用程序为每组参数定义结构。 结构包含每个参数的一个或两个元素。 第一个元素保存参数值，第二个元素保存长度/指示器缓冲区。 然后，应用程序分配这些结构的数组，其中包含的元素数量与每个参数的值相同。  
+ 使用行绑定时，应用程序为每个参数集定义一个结构。 结构包含每个参数的一个或两个元素。 第一个元素包含参数值，第二个元素包含长度/指示器缓冲区。 然后，应用程序分配这些结构的数组，该数组包含的元素与每个参数的值一样多。  
   
- 应用程序将结构的大小声明为带有 SQL_ATTR_PARAM_BIND_TYPE 语句特性的驱动程序。 应用程序绑定数组的第一个结构中的参数地址。 因此，驱动程序可以将特定行和列的数据地址计算为  
+ 应用程序使用SQL_ATTR_PARAM_BIND_TYPE语句属性向驱动程序声明结构的大小。 应用程序绑定数组第一个结构中的参数的地址。 因此，驱动程序可以计算特定行的数据地址，并将该列计算为  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset  
 ```  
   
- 其中，行从1到参数集的大小进行编号。 偏移量（如果已定义）是 SQL_ATTR_PARAM_BIND_OFFSET_PTR 语句特性指向的值。 下图显示了按行绑定的工作方式。 参数可以按任意顺序放置在结构中，但会按顺序显示以便清晰。  
+ 其中行编号从 1 到参数集的大小。 偏移量（如果已定义）是SQL_ATTR_PARAM_BIND_OFFSET_PTR语句属性指向的值。 下图显示了行绑定的工作原理。 参数可以按任意顺序放置在结构中，但为了清楚起见，按顺序显示。  
   
- ![说明行&#45;方式绑定的工作原理](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![显示行&#45;明智的绑定的工作原理](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
- 下面的代码创建一个结构，其中包含要存储在 PartID、Description 和 Price 列中的值的元素。 然后，它会分配这些结构的10元素数组，并使用按行绑定将其绑定到 PartID、Description 和 Price 列的参数。 然后，它执行语句以插入10行。  
+ 以下代码创建一个结构，其中包含要存储在 PartID、说明和价格列中的值的元素。 然后，它分配这些结构的 10 个元素数组，并将其绑定到 PartID、描述和价格列的参数，使用行绑定。 然后，它执行一个语句来插入 10 行。  
   
 ```  
 #define DESC_LEN 51  

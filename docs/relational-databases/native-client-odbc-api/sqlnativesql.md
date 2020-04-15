@@ -1,5 +1,5 @@
 ---
-title: SQLNativeSql |Microsoft Docs
+title: SQLNativeSql |微软文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLNativeSql function
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d2baef508d6273ec6c89cca38961aa22742e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 19db781408b419c5aa657ac3a256188ff20e4554
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73926018"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298427"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 驱动程序在不访问服务器的情况下满足**SQLNativeSql**请求。 该函数有效地测试 SQL 语句的语法。 语法检查无法确定 SQL 语句中表达式的标识符或结果是否有效，并且[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLNativeSql**返回的本机 SQL 可能无法运行。  
+  本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 ODBC 驱动程序无需访问服务器即可满足**SQLNativeSql**请求。 该函数有效地测试 SQL 语句的语法。 语法检查不能确定 SQL 语句中的标识符或表达式结果是否有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**，SQLNativeSql**返回的本机 SQL 可能无法运行。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLNativeSql 函数](https://go.microsoft.com/fwlink/?LinkID=59358)   

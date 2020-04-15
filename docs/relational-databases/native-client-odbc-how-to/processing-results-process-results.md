@@ -1,5 +1,5 @@
 ---
-title: 处理结果（ODBC） |Microsoft Docs
+title: 流程结果 （ODBC） |微软文档
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebd41c30d72b86fe5344a15767648371a14f7a2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: de9adbcc2d89895a4162b5c7f7b2921f024d03e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780917"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300397"
 ---
 # <a name="processing-results---process-results"></a>处理结果 - 处理结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-ODBC 应用程序中的处理结果包括首先确定结果集的特征，然后使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)将数据检索到程序变量中。  
+处理 ODBC 应用程序中的结果首先涉及确定结果集的特征，然后使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)将数据检索到程序变量中。  
   
 ### <a name="to-process-results"></a>处理结果  
   
@@ -49,7 +49,7 @@ ODBC 应用程序中的处理结果包括首先确定结果集的特征，然后
   
     -   如果返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，则调用 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 以确定来自 PRINT 或 RAISERROR 语句的输出是否可用。  
   
-         如果将绑定语句参数用于某一存储过程的输出参数或返回值，则使用在绑定参数缓冲区中当前提供的数据。 此外，在使用绑定参数时，对 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 或 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 的每个调用都将执行 *S* 次 SQL 语句，其中，*S* 是绑定参数数组中元素的数目。 这意味着，将存在*S*组要处理的结果，其中每组结果都由所有结果集、输出参数以及 SQL 语句的单次执行通常返回的返回代码构成。  
+         如果将绑定语句参数用于某一存储过程的输出参数或返回值，则使用在绑定参数缓冲区中当前提供的数据。 此外，在使用绑定参数时，对 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 或 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 的每个调用都将执行 *S* 次 SQL 语句，其中，*S* 是绑定参数数组中元素的数目。 这意味着，将存在 *S* 组要处理的结果，而其中每组结果都由所有结果集、输出参数以及 SQL 语句的单次执行通常返回的返回代码构成。  
   
     > [!NOTE]  
     >  在某一结果集包含计算行时，每个计算行都可作为单独的结果集提供。 这些计算结果集混杂在普通行内，并且将普通行分为多个结果集。  
@@ -62,6 +62,6 @@ ODBC 应用程序中的处理结果包括首先确定结果集的特征，然后
 >  若要在 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 返回 SQL_NO_DATA 之前取消处理结果集，请调用 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[&#40;ODBC&#41;检索结果集信息](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[检索结果集信息&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

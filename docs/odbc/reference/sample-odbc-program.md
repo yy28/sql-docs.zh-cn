@@ -1,5 +1,5 @@
 ---
-title: 示例 ODBC 计划 |Microsoft Docs
+title: ODBC 计划示例 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 38ae6b7f-f53b-48a7-8fe5-4bbd6e0e414b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dbff5d9aecf03f612868e706ec6ba39860a6c403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ff91c54a55a7376b1be166a19a1d577339df70d3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076235"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280418"
 ---
 # <a name="sample-odbc-program"></a>示例 ODBC 程序
-[Odbc 代码示例](https://go.microsoft.com/fwlink/?LinkId=244831)将提示您输入 odbc 数据源名称。  然后，系统将提示您输入查询，示例将显示查询结果。
+[ODBC 代码示例](https://go.microsoft.com/fwlink/?LinkId=244831)会提示您输入 ODBC 数据源名称。  然后，系统将提示您输入查询，然后示例将显示查询的结果。

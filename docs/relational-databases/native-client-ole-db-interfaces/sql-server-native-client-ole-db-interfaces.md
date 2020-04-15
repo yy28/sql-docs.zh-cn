@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client （OLE DB）引用 |Microsoft Docs
+title: SQL 服务器本机客户端 （OLE DB） 参考 |微软文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - SQLNCLI, OLE DB
 - SQL Server Native Client, OLE DB
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 719e5d374929417771f69e2d51e47abc606727e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bc5fb3b05d4bb91b71e74bf68eb5ac2ec583a083
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789246"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289754"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) 接口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序向需要访问运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一台或多台计算机上的数据的使用者公开接口。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序是一个 OLE DB 版本2.0 兼容的提供程序。  
+  本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序向希望访问运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一台或多台计算机上的数据的使用者公开接口。 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序是符合 OLE DB 版本 2.0 的提供程序。  
   
- 此[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 提供程序编程参考不会记录所有 OLE DB 接口和方法，只记录使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序时出现特定于提供程序的行为的接口和方法。  
+ 此[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序编程引用不记录所有 OLE DB 接口和方法，只记录在使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序时表现出提供程序特定行为的接口和方法。  
   
  有关 OLE DB 核心接口和方法的完整说明，请参阅 [OLE DB Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45232)（OLE DB 程序员参考）。  
   

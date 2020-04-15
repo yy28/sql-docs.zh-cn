@@ -1,5 +1,5 @@
 ---
-title: 存储过程（Oracle ODBC 驱动程序） |Microsoft Docs
+title: 存储过程（Oracle 的 ODBC 驱动程序） |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cef0c3737dbca640d6b842fc495c14c925c35723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ed0dadb81f31492f0dca8801a8ba925a81eacdb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948810"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299177"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>存储过程（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
->  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
+>  此功能将在将来版本的 Windows 中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 而是使用 Oracle 提供的 ODBC 驱动程序。  
   
  本部分包括以下主题：  
   
