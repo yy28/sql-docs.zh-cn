@@ -1,5 +1,5 @@
 ---
-title: 支持的 SET 命令（Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+title: 支持的 SET 命令（可视化福克斯 Pro ODBC 驱动程序） |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,25 +16,25 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver [ODBC], SET commands
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54cc247827a176bc9921884ae318120b07108293
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4139751de61738903e4e152535fb75bf30a97a3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303128"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>支持的 SET 命令（Visual FoxPro ODBC 驱动程序）
 您的应用程序可以将以下 Visual FoxPro **SET**命令发送到数据源：  
   
- [设置 ANSI](../../odbc/microsoft/set-ansi-command.md)  
+ [SET ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
- [设置区块](../../odbc/microsoft/set-blocksize-command.md)  
+ [设置块大小](../../odbc/microsoft/set-blocksize-command.md)  
   
- [设置整理](../../odbc/microsoft/set-collate-command.md)  
+ [设置准](../../odbc/microsoft/set-collate-command.md)  
   
- [已删除集](../../odbc/microsoft/set-deleted-command.md)  
+ [设置删除](../../odbc/microsoft/set-deleted-command.md)  
   
  [设置精确](../../odbc/microsoft/set-exact-command.md)  
   

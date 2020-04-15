@@ -1,5 +1,5 @@
 ---
-title: UPDATE 语句限制 |Microsoft Docs
+title: 更新语句限制 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - UPDATE statement limitations [ODBC]
 - ODBC SQL grammar, UPDATE statement limitations
 ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1cc8cf58d4e4d826dc4b152e395dedbea395a095
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8ddf19c0b672901b2e778833f8bf624996d4ced3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088206"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307618"
 ---
 # <a name="update-statement-limitations"></a>UPDATE 语句限制
-为了使 Paradox 驱动程序更新表，表必须具有唯一索引（Paradox 主键）。 使用 Paradox 驱动程序时，如果不实现 Borland 数据库引擎，将无法更新 Paradox 表。  
+要更新表，表必须具有唯一索引（悖论主键）。 当您在不实现 Borland 数据库引擎的情况下使用悖论驱动程序时，无法更新 Paradox 表。  
   
- 不受文本驱动程序支持。  
+ 文本驱动程序不支持。  
   
- 当使用 Microsoft Excel 驱动程序时，可能会更新值，但无法基于 Microsoft Excel 电子表格从表中删除行。 因此，Microsoft Excel 驱动程序不会将 UPDATE 语句视为正式支持。 仅将 INSERT 语句视为受支持。
+ 使用 Microsoft Excel 驱动程序时，可以更新值，但不能从基于 Microsoft Excel 电子表格的表中删除行。 因此，Microsoft Excel 驱动程序不认为 UPDATE 语句不受官方支持。 只有 INSERT 语句被视为受支持。

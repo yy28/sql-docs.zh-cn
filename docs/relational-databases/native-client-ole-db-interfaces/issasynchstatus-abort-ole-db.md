@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus：： Abort （OLE DB） |Microsoft Docs
+title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7250c27e2ce35abbd15fc334f4f0ac07e94e985b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 976a23e84492ac9f062ea8d20bcc46545c391e5a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303912"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,10 +38,10 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>参数  
- *hChapter*[in]  
- 要中止其操作的章节的句柄。 如果被调用的对象不是行集对象或操作不适用于某一章节，则调用方必须将*hChapter*设置为 DB_NULL_HCHAPTER。  
+ hChapter[in]**  
+ 要中止其操作的章节的句柄。 如果被调用的对象不是行集对象，或者操作不适用于章节，则调用方必须将*hCa*设置为DB_NULL_HCHAPTER。  
   
- *eOperation*[in]  
+ eOperation[in]**  
  要中止的操作。 其值应为：  
   
  DBASYNCHOP_OPEN - 要取消的请求应用于行集的异步打开或填充，或应用于数据源对象的异步初始化。  
@@ -60,16 +60,16 @@ HRESULT Abort(
  发生了特定于访问接口的错误。  
   
  E_INVALIDARG  
- *HChapter*参数不是 DB_NULL_HCHAPTER 或*eOperation*不 DBASYNCH_OPEN。  
+ *h章*参数不是DB_NULL_HCHAPTER，或者*电子操作*不DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
- 对未在其上调用**IDBInitialize：： Initialize**的数据源对象调用了**ISSAsynchStatus：： Abort** ，或该对象尚未完成。  
+ **ISSAsynchStatus：abort**是在**IDB 初始化**的数据源对象上调用的：初始化尚未调用或尚未完成。  
   
- 对在其上调用了**IDBInitialize：： Initialize**但随后在初始化之前取消的数据源对象调用了**ISSAsynchStatus：： Abort** ，或已超时。数据源对象仍未初始化。  
+ **ISSAsynchStatus：：Abort**是在**IDB 初始化的**数据源对象上调用的：初始化已调用，但随后在初始化之前被取消，或者超时。数据源对象仍未初始化。  
   
- 在之前调用了**ITransaction：： Commit**或**ITransaction：： abort**的行集上调用了**ISSAsynchStatus：： abort** ，并且行集未保留在提交或中止后并且处于僵停状态。  
+ **ISSAsynchStatus：：Abort**是在**I事务：：提交**或**I事务：：中止**之前调用的行集中调用的，并且行集在提交或中止中无法存活，并且处于僵尸状态。  
   
- 对在其初始化阶段异步取消的行集调用了**ISSAsynchStatus：： Abort** 。 该行集处于僵停状态。  
+ 已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort****。 该行集处于僵停状态。  
   
 ## <a name="remarks"></a>备注  
  中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED****。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  

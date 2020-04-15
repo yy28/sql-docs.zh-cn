@@ -1,5 +1,5 @@
 ---
-title: 保留关键字 |Microsoft Docs
+title: 保留关键字 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,44 +11,44 @@ helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057207"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307988"
 ---
 # <a name="reserved-keywords"></a>保留关键字
-保留了下列关键字以用于 ODBC 函数调用。 这些词不会限制最低 SQL 语法;但是，为了确保与支持核心 SQL 语法的驱动程序兼容，应用程序应避免使用这些关键字中的任何一个。 #**Define**值 SQL_ODBC_KEYWORDS 包含这些关键字的以逗号分隔的列表。  
+保留了下列关键字以用于 ODBC 函数调用。 这些单词不限制最低 SQL 语法;因此，这些单词不会限制这些单词。但是，为了确保与支持核心 SQL 语法的驱动程序兼容，应用程序应避免使用这些关键字中的任何一个。 #**定义**值SQL_ODBC_KEYWORDS包含这些关键字的逗号分隔列表。  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|操作|ISOLATION|  
+|ACTION|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
 |ALLOCATE|LAST|  
 |ALTER|LEADING|  
-|和|LEFT|  
+|AND|LEFT|  
 |ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
 |ASC|LOWER|  
 |ASSERTION|MATCH|  
 |AT|MAX|  
-|AUTHORIZATION|最小值|  
-|平均值|MINUTE|  
+|AUTHORIZATION|MIN|  
+|AVG|MINUTE|  
 |BEGIN|MODULE|  
-|BETWEEN|月|  
+|BETWEEN|MONTH|  
 |BIT|NAMES|  
 |BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|否|  
+|CASCADED|是|  
 |CASE|无|  
 |CAST|NOT|  
 |CATALOG|Null|  
@@ -60,15 +60,15 @@ ms.locfileid: "68057207"
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|或|  
+|COLLATION|OR|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|与|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|置于|  
+|CONVERT|POSITION|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -94,18 +94,18 @@ ms.locfileid: "68057207"
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|大小|  
+|DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
-|End|SQLCA|  
+|END|SQLCA|  
 |END-EXEC|SQLCODE|  
 |ESCAPE|SQLERROR|  
 |EXCEPT|SQLSTATE|  
 |EXCEPTION|SQLWARNING|  
 |EXEC|SUBSTRING|  
-|在运行 CREATE 语句前执行|SUM|  
+|EXECUTE|SUM|  
 |EXISTS|SYSTEM_USER|  
 |EXTERNAL|TABLE|  
 |EXTRACT|TEMPORARY|  
@@ -127,7 +127,7 @@ ms.locfileid: "68057207"
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|标识|USER|  
+|IDENTITY|USER|  
 |IMMEDIATE|USING|  
 |IN|值|  
 |INCLUDE|VALUES|  
@@ -140,6 +140,6 @@ ms.locfileid: "68057207"
 |INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
-|INTERSECT|年|  
+|INTERSECT|YEAR|  
 |INTERVAL|ZONE|  
 |INTO||

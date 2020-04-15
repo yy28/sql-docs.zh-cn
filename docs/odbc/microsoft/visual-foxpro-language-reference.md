@@ -1,5 +1,5 @@
 ---
-title: Visual FoxPro 语言参考 |Microsoft Docs
+title: 可视化 FoxPro 语言参考 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - commands for FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], commands
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88993a80fa629c2f4cdc8448483fc8a65a6f2adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 97615b04861c02d4319e7a301043bb9f3c17e8c3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304779"
 ---
 # <a name="visual-foxpro-language-reference"></a>Visual FoxPro 语言参考
-本部分包含下列主题。  
+本部分包含以下主题。  
   
 -   [ALTER TABLE - SQL 命令](../../odbc/microsoft/alter-table-sql-command.md)  
   

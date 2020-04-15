@@ -1,5 +1,5 @@
 ---
-title: sql_variant 对日期和时间类型的支持 |Microsoft Docs
+title: sql_variant对日期和时间类型的支持 |微软文档
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f795f1848f3e4c9fe1239df79677c35c38ba3b58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 588fcceb40ea096c549a004c1e2636d0eaf17c6c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783512"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291661"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>sql_variant 对日期和时间类型的支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "73783512"
   
  列属性 SQL_CA_SS_VARIANT_TYPE 用于返回变体结果列的 C 类型。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了新增的属性 SQL_CA_SS_VARIANT_SQL_TYPE，该属性在实现行描述符 (IRD) 中设置变体结果列的 SQL 类型。 还可以在实现参数描述符 (IPD) 中使用 SQL_CA_SS_VARIANT_SQL_TYPE，以指定将 SQL_C_BINARY C 类型与 SQL_SS_VARIANT 类型绑定的 SQL_SS_TIME2 或 SQL_SS_TIMESTAMPOFFSET 参数的 SQL 类型。  
   
- 可以通过 SQLColAttribute 设置 SQL_SS_TIME2 和 SQL_SS_TIMESTAMPOFFSET 的新类型。 SQL_CA_SS_VARIANT_SQL_TYPE 可以通过 SQLGetDescField 返回。  
+ SQL_SS_TIME2和SQL_SS_TIMESTAMPOFFSET的新类型可以由 SQLColAttribute 设置。 SQL_CA_SS_VARIANT_SQL_TYPE可以通过 SQLGetDescField 返回。  
   
- 对于结果列，驱动程序将从变体转换到日期/时间类型。 有关详细信息，请参阅[从 SQL 转换为 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)。绑定到 SQL_C_BINARY 时，缓冲区长度必须足够大，以便接收对应于 SQL 类型的结构。  
+ 对于结果列，驱动程序将从变体转换到日期/时间类型。 有关详细信息，请参阅从[SQL 转换到 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)。绑定到 SQL_C_BINARY 时，缓冲区长度必须足够大，以接收对应于 SQL 类型的结构。  
   
- 对于 SQL_SS_TIME2 和 SQL_SS_TIMESTAMPOFFSET 参数，驱动程序会将 C 值转换为**sql_variant**值，如下表中所述。 如果参数被绑定为 SQL_C_BINARY 并且服务器类型是 SQL_SS_VARIANT，那么，除非应用程序已将 SQL_CA_SS_VARIANT_SQL_TYPE 设置为其他某个 SQL 类型，否则该参数将被视为二进制值。 这种情况下，SQL_CA_SS_VARIANT_SQL_TYPE 优先；就是说，如果设置 SQL_CA_SS_VARIANT_SQL_TYPE，它将覆盖从 C 类型推导出变体 SQL 类型的默认行为。  
+ 对于SQL_SS_TIME2和SQL_SS_TIMESTAMPOFFSET参数，驱动程序将 C 值转换为**sql_variant**值，如下表所述。 如果参数被绑定为 SQL_C_BINARY 并且服务器类型是 SQL_SS_VARIANT，那么，除非应用程序已将 SQL_CA_SS_VARIANT_SQL_TYPE 设置为其他某个 SQL 类型，否则该参数将被视为二进制值。 这种情况下，SQL_CA_SS_VARIANT_SQL_TYPE 优先；就是说，如果设置 SQL_CA_SS_VARIANT_SQL_TYPE，它将覆盖从 C 类型推导出变体 SQL 类型的默认行为。  
   
 |C 类型|服务器类型|注释|  
 |------------|-----------------|--------------|  
@@ -51,16 +51,16 @@ ms.locfileid: "73783512"
 |SQL_C_BIT|bit|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_UTINYINT|tinyint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE 未设置。|  
-|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale 设置为 SQL_DESC_PRECISION （ **SQLBindParameter**的*DecimalDigits*参数）。|  
-|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale 设置为 SQL_DESC_PRECISION （ **SQLBindParameter**的*DecimalDigits*参数）。|  
+|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> 比例设置为**SQL_DESC_PRECISION（SQLBind参数**的*十进制数字*参数）。|  
+|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> 比例设置为**SQL_DESC_PRECISION（SQLBind参数**的*十进制数字*参数）。|  
 |SQL_C_TYPE_DATE|date|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_TYPE_TIME|time(0)|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_TYPE_TIMESTAMP|datetime2|Scale 设置为 SQL_DESC_PRECISION （ **SQLBindParameter**的*DecimalDigits*参数）。|  
-|SQL_C_NUMERIC|Decimal|精度设置为 SQL_DESC_PRECISION （ **SQLBindParameter**的*ColumnSize*参数）。<br /><br /> 规模集设置为 SQL_DESC_SCALE （SQLBindParameter 的*DecimalDigits*参数）。|  
+|SQL_C_TYPE_TIMESTAMP|datetime2|比例设置为**SQL_DESC_PRECISION（SQLBind参数**的*十进制数字*参数）。|  
+|SQL_C_NUMERIC|Decimal|精度设置为**SQL_DESC_PRECISION（SQLBind参数**的*列大小*参数）。<br /><br /> 缩放设置为SQL_DESC_SCALE（SQLBind 参数的*十进制数字*参数）。|  
 |SQL_C_SS_TIME2|time|忽略 SQL_CA_SS_VARIANT_SQL_TYPE|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|忽略 SQL_CA_SS_VARIANT_SQL_TYPE|  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC&#41;&#40;的日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

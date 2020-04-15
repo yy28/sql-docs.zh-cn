@@ -1,5 +1,5 @@
 ---
-title: C 到 SQL：位 |Microsoft Docs
+title: C 到 SQL：位 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - bit data type [ODBC]
 - data conversions from C to SQL types [ODBC], bit
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cc5e26b30816d0989dca90566a1a5de008b71c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a96982573d83cf01947f82dc2014ee2c470931e3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019424"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292040"
 ---
 # <a name="c-to-sql-bit"></a>从 C 到 SQL：位
 位 ODBC C 数据类型的标识符是：  
   
  SQL_C_BIT  
   
- 下表显示了可转换位 C 数据的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了可转换为位 C 数据的 ODBC SQL 数据类型。 有关表中列和术语的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|无|不适用|  
-|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|无|不适用|  
-|SQL_BIT|无|不适用|  
+|SQL_CHARSQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHARSQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|None|不适用|  
+|SQL_DECIMALSQL_NUMERIC<br /><br /> SQL_TINYINTSQL_SMALLINT<br /><br /> SQL_INTEGERSQL_BIGINT<br /><br /> SQL_REALSQL_FLOAT<br /><br /> SQL_DOUBLE|None|不适用|  
+|SQL_BIT|None|不适用|  
   
- 驱动程序在转换位 C 数据类型的数据时忽略长度/指示器值，并假定数据缓冲区的大小为位 C 数据类型的大小。 长度/指示器值传入**SQLPutData**中的*StrLen_or_Ind*参数和在**SQLBindParameter**中通过*StrLen_or_IndPtr*参数指定的缓冲区中。 数据缓冲区是通过**SQLPutData**中的*DataPtr*参数和**SQLBindParameter**中的*ParameterValuePtr*参数指定的。
+ 驱动程序在从位 C 数据类型转换数据时忽略长度/指示器值，并假定数据缓冲区的大小是位 C 数据类型的大小。 长度/指标值在**SQLPutData**中的*StrLen_or_Ind*参数中传递，在**SQLBind 参数**中用*StrLen_or_IndPtr*参数指定的缓冲区中传递。 数据缓冲区使用**SQLPutData**中的*DataPtr*参数和**SQLBind 参数**中的*参数ValuePtr*参数指定。

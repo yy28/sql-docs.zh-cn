@@ -1,5 +1,5 @@
 ---
-title: 分配存储 |Microsoft Docs
+title: 分配存储 |微软文档
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - binding result sets [SQL Server Native Client]
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9afee1aa24f5f3cd15791038d12f5ac0bc842fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 067abcfc8aa5bfd781e6656e3ced9f9e1e573e5f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779362"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297867"
 ---
 # <a name="assigning-storage"></a>分配存储区
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   应用程序可以在执行 SQL 语句之前或之后为结果分配存储区。 如果应用程序首先准备或执行 SQL 语句，则它可以在为结果分配存储区之前询问有关结果集的情况。 例如，如果结果集是未知的，则应用程序在为它们分配存储区之前必须先检索列数。  
   
- 若要关联数据列的存储，应用程序将调用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)并将其传递：  
+ 要关联数据列的存储，应用程序调用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)并传递它：  
   
 -   数据将要转换成的数据类型。  
   
@@ -48,19 +48,19 @@ ms.locfileid: "73779362"
   
 -   用于返回可用数据字节数的存储缓冲区的地址。  
   
- 应用程序还可以将结果集列绑定到程序变量的数组，以支持分块提取结果集行。 数组绑定有两种不同的类型：  
+ 应用程序还可以将结果集列绑定到程序变量的数组，以支持分块提取结果集行。 有两种不同类型的数组绑定：  
   
 -   当每个列绑定到自身的变量数组时，将完成按列绑定。  
   
-     通过调用 SQL_ATTR_ROW_BIND_TYPE [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) *，并将**将 valueptr*设置为 SQL_BIND_BY_COLUMN 来指定按列绑定。 所有数组的元素个数必须相同。  
+     按列方向绑定是通过调用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)来指定的，*其属性*设置为*SQL_ATTR_ROW_BIND_TYPE，ValuePtr*设置为SQL_BIND_BY_COLUMN。 所有数组的元素个数必须相同。  
   
 -   当 SQL 语句中的所有参数作为一个单元绑定到包含这些参数中各个变量的结构数组时，将完成按行绑定。  
   
-     通过调用**SQLSetStmtAttr**并将*属性*设置为 SQL_ATTR_ROW_BIND_TYPE，并将*将 valueptr*设置为包含将接收结果集列的变量的结构的大小，可以指定按行绑定。  
+     按行绑定通过调用**SQLSetStmtAttr**来指定 *，其中属性*设置为SQL_ATTR_ROW_BIND_TYPE，ValuePtr 设置为包含将接收结果集列的变量的结构的大小。 *ValuePtr*  
   
  应用程序还将 SQL_ATTR_ROW_ARRAY_SIZE 设置为列或行数组中的元素个数，并设置 SQL_ATTR_ROW_STATUS_PTR 和 SQL_ATTR_ROWS_FETCHED_PTR。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;处理结果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [处理结果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

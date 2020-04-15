@@ -1,5 +1,5 @@
 ---
-title: dBASE 数据类型 |Microsoft Docs
+title: dBASE 数据类型 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - dbase data types [ODBC]
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17b96ad0b6674a2d120ef46d9bfa221e8df6d140
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096453"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307688"
 ---
 # <a name="dbase-data-types"></a>dBASE 数据类型
 下表显示了如何将 dBASE 数据类型映射到 ODBC SQL 数据类型。 请注意，并非所有 ODBC SQL 数据类型都受支持。  
@@ -31,30 +31,30 @@ ms.locfileid: "68096453"
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
-|FLOAT [1]|SQL_DOUBLE|  
-|LOGICAL|SQL_BIT|  
-|"|SQL_LONGVARCHAR|  
-|数值（BCD）|SQL_DOUBLE|  
-|OLEOBJECT [1]|SQL_LONGBINARY|  
+|浮点[1]|SQL_DOUBLE|  
+|逻辑|SQL_BIT|  
+|备忘录|SQL_LONGVARCHAR|  
+|数字 （BCD）|SQL_DOUBLE|  
+|OLEOBJECT[1]|SQL_LONGBINARY|  
   
- [1] 仅对 dBASE 版本5有效。*x*  
+ [1] 仅适用于 dBASE 版本 5。*x*  
   
- DBASE III 中的精度允许最多具有两位数字指数的数字和包含最多三位数指数的 dBASE IV 数字。 由于数字是以文本形式存储的，因此将其转换为数字。 如果要转换的数字不能容纳在字段中，则可能会出现无法解释的结果。  
+ dBASE III 中的精度允许具有最多两位指数的数字，以及最多三位指数的 dBASE IV 数字。 由于数字存储为文本，因此它们将转换为数字。 如果要转换的数字不适合字段，则可能会出现无法解释的结果。  
   
- 当 dBASE 允许使用数值数据类型指定精度和小数位数时，ODBC dBASE 驱动程序不支持该数据类型。 ODBC dBASE 驱动程序始终为数值数据类型返回15的精度，小数位数为0。  
+ 虽然 dBASE 允许使用 NUMERIC 数据类型指定精度和比例，但 ODBC dBASE 驱动程序不支持它。 ODBC dBASE 驱动程序始终返回数字数据类型的精度为 15 和 0 的比例。  
   
- 使用数据类型（ODBC dBASE 驱动程序）创建的列映射到 SQL_DOUBLE ODBC 数据类型。 因此，此列中的数据可能会进行舍入。 此行为不同于 dBASE （类型 N）（二进制编码的十进制（BCD））中数值数据类型的行为。  
+ 使用 ODBC dBASE 驱动程序创建的使用数字数据类型创建的列映射到 SQL_DOUBLE ODBC 数据类型。 因此，此列中的数据需要四舍五入。 此行为与 dBASE（类型 N）中的数字数据类型不同，后者为二进制编码十进制十进制 （BCD）。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**返回 ODBC SQL 数据类型。 对于本主题中前面列出的 ODBC SQL 数据类型，支持*Odbc 程序员参考*的附录 D 中的所有转换。  
+>  **SQLGetTypeInfo**返回 ODBC SQL 数据类型。 本主题前面列出的 ODBC SQL 数据类型都支持*ODBC 程序员参考*附录 D 中的所有转换。  
   
  下表显示了对 dBASE 数据类型的限制。  
   
-|数据类型|说明|  
+|数据类型|描述|  
 |---------------|-----------------|  
-|CHAR|创建零或未指定长度的 CHAR 列实际上将返回254字节的列。|  
-|加密数据|DBASE 驱动程序不支持加密的 dBASE 表。|  
-|LOGICAL|DBASE 驱动程序无法对逻辑列创建索引。|  
-|"|备注列的最大长度为65500字节。|  
+|CHAR|创建零或未指定长度的 CHAR 列实际上返回 254 字节列。|  
+|加密数据|dBASE 驱动程序不支持加密的 dBASE 表。|  
+|逻辑|dBASE 驱动程序无法在"逻辑"列上创建索引。|  
+|备忘录|MEMO 列的最大长度为 65，500 字节。|  
   
- [数据类型限制](../../odbc/microsoft/data-type-limitations.md)中可以找到更多有关数据类型的限制。
+ 数据类型的更多限制可以在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)中找到。

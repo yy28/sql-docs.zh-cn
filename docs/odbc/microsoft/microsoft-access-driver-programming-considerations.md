@@ -1,5 +1,5 @@
 ---
-title: Microsoft Access 驱动程序编程注意事项 |Microsoft Docs
+title: 微软访问驱动程序编程注意事项 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Access driver [ODBC]
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52c8a169c950de7c1b5f717c2591fff88add42f3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045121"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308048"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Microsoft Access 驱动程序编程注意事项
-本部分包含下列主题。  
+本部分包含以下主题。  
   
 -   [以编程方式为 Access 驱动程序设置选项](../../odbc/microsoft/setting-options-programmatically-for-the-access-driver.md)  
   

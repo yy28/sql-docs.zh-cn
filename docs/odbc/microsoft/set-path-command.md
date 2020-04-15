@@ -1,5 +1,5 @@
 ---
-title: 设置路径命令 |Microsoft Docs
+title: 设置 PATH 命令 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e44093c3ea18bc995264a8974726f5af0abe3b3a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063637"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300817"
 ---
 # <a name="set-path-command"></a>SET PATH 命令
-指定文件搜索的路径。 有关特定于驱动程序的信息，请参阅 "备注"。  
+指定文件搜索的路径。 有关特定于驱动程序的信息，请参阅备注。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,27 +30,27 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>参数  
- TO [ *Path*]  
- 指定要在 Visual FoxPro 中搜索的目录。 使用逗号或分号分隔目录。  
+ 到 [*路径*]  
+ 指定您希望 Visual FoxPro 搜索的目录。 使用逗号或分号分隔目录。  
   
 ## <a name="remarks"></a>备注  
- 设置路径允许您为其他可在存储过程中调用的 Visual FoxPro 程序指定搜索路径。 设置路径将不会更改为连接指定的数据源的路径。  
+ SET PATH 允许您为可在存储过程中调用的其他 Visual FoxPro 程序指定搜索路径。 SET PATH 不会更改您为连接指定的数据源的路径。  
   
- 将路径设置为不带*路径*的路径，以还原默认目录或文件夹的路径。  
+ 发出"设置路径到无*路径*"以还原默认目录或文件夹的路径。  
   
 ## <a name="driver-remarks"></a>驱动程序备注  
- 如果在存储过程中发出设置路径，则以下函数和命令将忽略该路径：  
+ 如果在存储过程中发出 SET PATH，则以下函数和命令将忽略它：  
   
--   诸如[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)和[SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)之类的目录函数将忽略新路径，并继续引用[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)或[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)中的数据源指定的路径。  
+-   目录函数（如[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)和[SQLColumns）](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)将忽略新路径，并继续引用[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)或[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)中数据源指定的路径。  
   
--   诸如 SELECT、INSERT、UPDATE、DELETE 和 CREATE TABLE 等命令将忽略新路径，并继续引用**SQLPrepare**或**SQLExecDirect**中的数据源指定的路径。  
+-   选择、插入、更新、删除和创建表等命令将忽略新路径，并继续引用**SQLPrepare**或**SQLExecDirect**中数据源指定的路径。  
   
- 如果在存储过程中发出集路径，但随后不将路径设置回其原始状态，则与数据库的其他连接将使用新路径（因为设置路径的作用域不是数据会话）。  
+ 如果在存储过程中发出 SET PATH，并且随后未将路径设置为其原始状态，则到数据库的其他连接将使用新路径（因为 SET PATH 未限定为数据会话）。  
   
- 如果要在数据源所指定的目录以外的目录中创建、选择或更新表，请使用命令指定文件的完整路径。  
+ 如果要在目录中创建、选择或更新数据源指定的表以外的表，请使用命令指定文件的完整路径。  
   
 ## <a name="see-also"></a>另请参阅  
- ["ODBC Visual FoxPro 安装程序" 对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
- [SQLColumns （Visual FoxPro ODBC 驱动程序）](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
- [SQLDriverConnect （Visual FoxPro ODBC 驱动程序）](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
+ [ODBC 可视化狐狸专业设置对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
+ [SQL柱（可视化福克斯Pro ODBC驱动程序）](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
+ [SQLDriver连接（可视化福克斯Pro ODBC驱动程序）](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables（Visual FoxPro ODBC 驱动程序）](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)

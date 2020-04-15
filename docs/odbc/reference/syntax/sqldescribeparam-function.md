@@ -1,5 +1,5 @@
 ---
-title: SQLDescribeParam 函数 |Microsoft Docs
+title: SQLDescribeParam 函数 |微软文档
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,21 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDescribeParam function [ODBC]
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9c1ba115766b820cdcc4f671eeacf9eeec90a894
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: be6d076ca121923a4b6769c7dad5269c3fd642ca
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68345445"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301157"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函数
-**度**  
- 引入的版本： ODBC 1.0 标准符合性： ODBC  
+**一致性**  
+ 版本介绍： ODBC 1.0 标准合规性： ODBC  
   
- **总结**  
- **SQLDescribeParam**返回与已准备的 SQL 语句相关联的参数标记的说明。 此信息也可用于 IPD 的字段。  
+ **摘要**  
+ **SQLDescribeParam**返回与准备好的 SQL 语句关联的参数标记的说明。 此信息也可在 IPD 领域提供。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,68 +48,68 @@ SQLRETURN SQLDescribeParam(
 ```  
   
 ## <a name="argument"></a>参数  
- *StatementHandle*  
- 送语句句柄。  
+ *语句句柄*  
+ [输入]语句句柄。  
   
- *ParameterNumber*  
- 送参数标记编号按递增参数顺序排序，从1开始。  
+ *参数编号*  
+ [输入]参数标记编号按增加参数顺序顺序排序，从 1 开始。  
   
- *DataTypePtr*  
- 输出指向要在其中返回参数的 SQL 数据类型的缓冲区的指针。 此值从 IPD 的 SQL_DESC_CONCISE_TYPE 记录 "字段中读取。 这将是 "附录 D：数据类型" 的 " [SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)" 部分或特定于驱动程序的 sql 数据类型的值之一。  
+ *数据类型Ptr*  
+ [输出]指向要返回参数的 SQL 数据类型的缓冲区的指针。 此值从 IPD 的SQL_DESC_CONCISE_TYPE记录字段中读取。 这将是附录[D：](../../../odbc/reference/appendixes/sql-data-types.md)数据类型或特定于驱动程序的 SQL 数据类型的 SQL 数据类型中的值之一。  
   
- ODBC 3 中的。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP 将分别在日期、时间或时间戳数据的* \*DataTypePtr*中返回;在 ODBC 2 中。将返回*x*、SQL_DATE、SQL_TIME 或 SQL_TIMESTAMP。 当 ODBC 2 时，驱动程序管理器会执行所需的映射。*x*应用程序正在使用 ODBC 3。*x*驱动程序或 ODBC 3。*x*应用程序正在使用 ODBC 2。*x*驱动程序。  
+ 在 ODBC 3 中。*x*x、SQL_TYPE_DATE、SQL_TYPE_TIME或SQL_TYPE_TIMESTAMP将分别在*\*DataTypePtr*中返回日期、时间或时间戳数据;在 ODBC 2 中。*x*x、SQL_DATE、SQL_TIME或SQL_TIMESTAMP将返回。 当 ODBC 2 时，驱动程序管理器执行所需的映射。*x*应用程序使用 ODBC 3。*x*驱动程序或当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序。  
   
- 当*ColumnNumber*等于0（对于书签列）时，将在* \*DataTypePtr*中为可变长度书签返回 SQL_BINARY。 （如果 ODBC 3 使用书签，则返回 SQL_INTEGER。使用 ODBC 2 的*x*应用程序。*x*驱动程序或 ODBC 2。使用 ODBC 3 的*x*应用程序。*x*驱动程序。）  
+ 当*列数*等于 0（对于书签列），SQL_BINARY在*\*DataTypePtr*中返回，用于可变长度书签。 （如果 ODBC 3 使用书签，则返回SQL_INTEGER。*x*应用程序使用 ODBC 2。*x*驱动程序或 ODBC 2。*x*使用 ODBC 3 的应用程序。*x*驱动程序。  
   
- 有关详细信息，请参阅附录 D：数据类型中的[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。  
+ 有关详细信息，请参阅附录 D 中的[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)：数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。  
   
- *ParameterSizePtr*  
- 输出指向缓冲区的指针，该缓冲区用于返回数据源定义的相应参数标记的列或表达式的大小（以字符为字符）。 有关列大小的详细信息，请参阅[列大小、十进制数字、传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
+ *参数SizePtr*  
+ [输出]指向缓冲区的指针，其中用于返回数据源定义的相应参数标记的列或表达式的大小（以字符表示）。 有关列大小的详细信息，请参阅[列大小、十进制数字、传输八点长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
   
- *DecimalDigitsPtr*  
- 输出指向缓冲区的指针，该缓冲区用于返回数据源定义的相应参数的列或表达式的小数位数。 有关十进制数字的详细信息，请参阅[列大小、十进制数字、传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
+ *十进制数字Ptr*  
+ [输出]指向缓冲区的指针，其中用于返回数据源定义的列或相应参数的表达式的十进制数字数。 有关十进制数字的详细信息，请参阅[列大小、十进制数字、传输八进制长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
   
- *NullablePtr*  
- 输出指向缓冲区的指针，将在此缓冲区中返回一个值，该值指示参数是否允许 NULL 值。 此值从 IPD 的 SQL_DESC_NULLABLE 字段中读取。 下列类型作之一：  
+ *空可点*  
+ [输出]指向缓冲区的指针，其中要返回指示参数是否允许 NULL 值的值。 此值从 IPD 的SQL_DESC_NULLABLE字段中读取。 下列类型作之一：  
   
 -   SQL_NO_NULLS：参数不允许 NULL 值（这是默认值）。  
   
--   SQL_NULLABLE：参数允许空值。  
+-   SQL_NULLABLE：参数允许 NULL 值。  
   
--   SQL_NULLABLE_UNKNOWN：驱动程序无法确定参数是否允许空值。  
+-   SQL_NULLABLE_UNKNOWN：驱动程序无法确定参数是否允许 NULL 值。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLDescribeParam**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLDescribeParam**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
+ 当**SQLDescribeParam**返回SQL_ERROR或SQL_SUCCESS_WITH_INFO时，可以通过调用**SQLGetDiagRec**获取关联的 SQLSTATE 值，该值具有*Handle*SQL_HANDLE_STMT的*句柄类型*和*语句句柄*。 下表列出了**SQLDescribeParam**通常返回的 SQLSTATE 值，并在此函数的上下文中解释每个值;符号"（DM）"在驱动程序管理器返回的 SQLStatEs 描述之前。 除非另有说明，否则与每个 SQLSTATE 值关联的返回代码将SQL_ERROR。  
   
-|SQLSTATE|错误|说明|  
+|SQLSTATE|错误|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|07009|描述符索引无效|（DM）为参数*ParameterNumber*指定的值小于1。<br /><br /> 为参数*ParameterNumber*指定的值大于关联的 SQL 语句中参数的数目。<br /><br /> 参数标记是非 DML 语句的一部分。<br /><br /> 参数标记是**选择**列表的一部分。|  
-|08S01|通信链接失败|在函数完成处理之前，驱动程序与连接到的数据源之间的通信链接失败。|  
-|21S01|插入值列表与列列表不匹配|**INSERT**语句中的参数数目与语句中指定的表中的列数不匹配。|  
-|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
-|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
-|HY008|操作已取消|已为*StatementHandle*启用异步处理。 函数被调用，在完成执行之前，在*StatementHandle*上调用了**SQLCancel**或**SQLCancelHandle** 。 然后，在*StatementHandle*上再次调用该函数。<br /><br /> 函数被调用，在完成执行之前，从多线程应用程序中的另一个线程调用*StatementHandle*上的**SQLCancel**或**SQLCancelHandle** 。|  
-|HY010|函数序列错误|（DM）在为*StatementHandle*调用**SQLPrepare**或**SQLExecDirect**之前调用了该函数。<br /><br /> （DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLDescribeParam**函数时，此异步函数仍在执行。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数（而不是此函数），并且在调用此函数时仍在执行。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**调用了*StatementHandle*并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
-|HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
-|HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。|（DM）有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此功能|（DM）与*StatementHandle*关联的驱动程序不支持该函数。|  
-|IM017|在异步通知模式下禁用轮询|无论何时使用通知模型，都将禁用轮询。|  
-|IM018|尚未调用**SQLCompleteAsync**来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING 并且启用了通知模式，则必须在句柄上调用**SQLCompleteAsync** ，以执行后处理并完成操作。|  
+|01000|一般警告|特定于驱动程序的信息消息。 （函数返回SQL_SUCCESS_WITH_INFO。|  
+|07009|无效描述符索引|（DM） 为参数*参数编号*指定的值小于 1。<br /><br /> 为参数*参数编号*指定的值大于关联的 SQL 语句中的参数数。<br /><br /> 参数标记是非 DML 语句的一部分。<br /><br /> 参数标记是**SELECT**列表的一部分。|  
+|08S01|通信链路故障|在函数完成处理之前，驱动程序与驱动程序连接到的数据源之间的通信链路失败。|  
+|21S01|插入值列表与列列表不匹配|**INSERT**语句中的参数数与语句中命名的表中的列数不匹配。|  
+|HY000|常规错误|发生一个错误，其中没有特定的 SQLSTATE，并且没有定义特定于实现的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*缓冲区中返回的错误消息描述了错误及其原因。|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成函数所需的内存。|  
+|HY008|操作已取消|异步处理已启用*语句句柄*。 调用该函数，在完成执行之前 **，SQLCancel**或**SQLCancelHandle**调用了*语句句柄*。 然后在*语句处理*上再次调用该函数。<br /><br /> 调用该函数，在完成执行之前 **，SQLCancel**或**SQLCancelHandle**是从多线程应用程序中的不同线程调用*的语句句柄*。|  
+|HY010|函数序列错误|（DM） 在调用**SQLPrepare**或**SQLExecDirect**进行*语句句柄*之前调用了函数。<br /><br /> （DM） 为与*语句句柄*关联的连接句柄调用异步执行函数。 调用**SQLDescribeParam**函数时，此异步函数仍在执行。<br /><br /> （DM） 为*语句句柄*调用了异步执行函数（不是此函数），并且在调用此函数时仍在执行。<br /><br /> （DM） SQLExecute、SQLExecDirect、SQLBulk**操作**或**SQLSetPos**被调用用于**SQLExecute***语句句柄*并返回SQL_NEED_DATA。 **SQLExecDirect** 在发送所有执行时数据参数或列的数据之前，调用了此功能。|  
+|HY013|内存管理错误|无法处理函数调用，因为无法访问基础内存对象，可能是因为内存条件较低。|  
+|HY117|由于未知事务状态，连接挂起。 只允许断开连接和只读功能。|（DM） 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|连接超时已过期|在数据源响应请求之前，连接超时期限已过期。 连接超时周期通过**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT设置。|  
+|IM001|驱动程序不支持此功能|（DM） 与*语句句柄*关联的驱动程序不支持该函数。|  
+|IM017|在异步通知模式下禁用轮询|每当使用通知模型时，都会禁用轮询。|  
+|IM018|尚未调用**SQLCompleteAsync**以完成对此句柄的先前异步操作。|如果句柄上的上一个函数调用返回SQL_STILL_EXECUTING，并且启用了通知模式，则必须在句柄上调用**SQLCompleteAsync**以执行后处理并完成操作。|  
   
 ## <a name="comments"></a>注释  
- 参数标记按递增参数顺序编号，从1开始，按照它们在 SQL 语句中出现的顺序进行编号。  
+ 参数标记按增加参数顺序编号，以 1 开头，按它们在 SQL 语句中显示的顺序进行编号。  
   
- **SQLDescribeParam**不返回 SQL 语句中参数的类型（输入、输入/输出或输出）。 在对过程的调用中，SQL 语句中的所有参数都是输入参数。 若要在对过程的调用中确定每个参数的类型，应用程序将调用**SQLProcedureColumns**。  
+ **SQLDescribeParam**不会返回 SQL 语句中参数的类型（输入、输入/输出或输出）。 除了对过程的调用中，SQL 语句中的所有参数都是输入参数。 要确定对过程调用中的每个参数的类型，应用程序调用**SQLAE 列**。  
   
  有关详细信息，请参阅[描述参数](../../../odbc/reference/develop-app/describing-parameters.md)。  
   
 ## <a name="code-example"></a>代码示例  
- 以下示例将提示用户输入 SQL 语句，然后准备该语句。 接下来，它调用**SQLNumParams**以确定语句是否包含任何参数。 如果该语句包含参数，则它会调用**SQLDescribeParam**来描述这些参数，并**SQLBindParameter**将其绑定。 最后，它会提示用户输入任何参数的值，然后执行该语句。  
+ 下面的示例提示用户使用 SQL 语句，然后准备该语句。 接下来，它将调用**SQLNumParams**以确定该语句是否包含任何参数。 如果语句包含参数，它将调用**SQLDescribeParam**来描述这些参数 **，SQLBind参数**将它们绑定。 最后，它提示用户输入任何参数的值，然后执行语句。  
   
 ```cpp  
 SQLCHAR       Statement[100];  
@@ -171,12 +171,12 @@ free(LenOrIndArray);
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关以下方面的信息|请参阅|  
+|有关以下方面的信息|查看|  
 |---------------------------|---------|  
 |将缓冲区绑定到参数|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|正在取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|执行已准备的 SQL 语句|[SQLExecute 函数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|准备要执行的语句|[SQLPrepare 函数](../../../odbc/reference/syntax/sqlprepare-function.md)|  
+|取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|执行准备好的 SQL 语句|[SQLExecute 函数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|准备执行语句|[SQLPrepare 函数](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

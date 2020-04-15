@@ -1,5 +1,5 @@
 ---
-title: 排序依据 |Microsoft Docs
+title: 使用组 BY 订购 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - GROUP BY clause [ODBC]
 - SQL grammar [ODBC], GROUP BY clause
 ms.assetid: eafcc668-9244-4e1e-a857-d9bd2585ed0c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0197edbc2280b5df9ca91567ad56afc4a68d80df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 44d3581f7a70c344cfa94faedcc5d279e50c7827
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291077"
 ---
 # <a name="order-by-with-group-by"></a>ORDER BY 与 GROUP BY
-可以对 GROUP BY*表达式列表*中的任何表达式或结果集中的任何列执行 ORDER by。
+可以对组 BY*表达式列表中的任何表达式*或结果集中的任何列执行 ORDER BY。

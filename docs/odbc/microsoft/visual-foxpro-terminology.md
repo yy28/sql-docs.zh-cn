@@ -1,5 +1,5 @@
 ---
-title: Visual FoxPro 术语 |Microsoft Docs
+title: 可视化 FoxPro 术语 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], glossary
 - FoxPro ODBC driver [ODBC], glossary
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5abd8c5bc4e7cbc2442d44eace58dda37c99c4e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 159314e3dddb946bceaeab5079ac81a685d087d6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076289"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307568"
 ---
 # <a name="visual-foxpro-terminology"></a>Visual FoxPro 术语
-**数据**  
- 在 Visual FoxPro 中，数据库文件的扩展名为 dbc，可以包含一个或多个**表**。  
+**数据库**  
+ 在 Visual FoxPro 中，数据库文件具有 .dbc 扩展名，可以包含一个或多个**表**。  
   
  **数据库表**  
- 在 Visual FoxPro 中，是与数据库关联的表。 对比度**可用表**。  
+ 在 Visual FoxPro 中，与数据库关联的表。 对比度**自由表**。  
   
- **可用表**  
- 在 Visual FoxPro 中，是指未与数据库关联的表。  
+ **免费表**  
+ 在 Visual FoxPro 中，未与数据库关联的表。  
   
- 在 FoxPro 版本2.x 中创建的 .dbf 文件是自由表，除非将其转换为 Visual FoxPro 表并添加到 Visual FoxPro 数据库。 对比**数据库表**。  
+ 在 FoxPro 版本 2.x 中创建的 .dbf 文件是一个可用表，除非它被转换为 Visual FoxPro 表并添加到 Visual FoxPro 数据库。 对比**数据库表**。  
   
- **可准备对象 SQL 语句**  
- **SQLPrepare**函数尚未处理的 SQL 语句。 有关 Visual FoxPro ODBC 驱动程序的此函数的详细信息，请参阅[SQLPrepare （Visual FOXPRO Odbc 驱动程序）](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)。  
+ **可预 SQL 语句**  
+ SQLPrepare 函数尚未处理的**SQL**语句。 有关此功能的详细信息，请参阅 Visual FoxPro ODBC 驱动程序，请参阅[SQLPrepare（可视化 FoxPro ODBC 驱动程序）。](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)  
   
- **数据表**  
- 在 Visual FoxPro 中，记录存储在表中。 表中的每一行都表示一条记录，而表中的列则表示该记录的字段。 每个可视 FoxPro 表都存储在其自身的文件中，扩展名为 .dbf。 Visual FoxPro 表可以与数据库相关联。  
+ **表**  
+ 在 Visual FoxPro 中，记录存储在表中。 表的每一行表示记录，表的列表示记录的字段。 每个 Visual FoxPro 表都存储在其自己的文件中，并带有 .dbf 扩展名。 可视化 FoxPro 表可以与数据库关联。  
   
- FoxPro 版本2。*x*表不与数据库相关联。
+ 福克斯专业版2。*x*表不与数据库关联。

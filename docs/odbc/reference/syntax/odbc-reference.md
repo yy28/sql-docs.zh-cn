@@ -1,5 +1,5 @@
 ---
-title: ODBC 引用 |Microsoft Docs
+title: ODBC 参考 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - API reference [ODBC]
 - ODBC [ODBC], API reference
 ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fab61517e226a0f78089d909188a275a61d0928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb7296920987683c97cdd37bb9cb6742ffec9361
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036360"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290527"
 ---
 # <a name="odbc-reference"></a>ODBC 参考
 以下主题包含所有 ODBC 函数的语法和语义信息。  
@@ -31,6 +31,6 @@ ms.locfileid: "68036360"
   
 -   [安装程序 DLL API 参考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
   
--   [翻译 DLL 函数引用](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
+-   [翻译 DLL 函数参考](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [ODBC 服务提供程序接口 (SPI) 参考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

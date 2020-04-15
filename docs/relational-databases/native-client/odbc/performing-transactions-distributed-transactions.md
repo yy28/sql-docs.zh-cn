@@ -1,5 +1,5 @@
 ---
-title: 创建分布式事务 |Microsoft Docs
+title: 创建分布式事务 |微软文档
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b01e47f81f153b73c8a57d23c9a75fc8b57ef66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f21ea9b7146b2907a09688f5189d6d9ae4f3f26a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761070"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303678"
 ---
 # <a name="create-a-distributed-transaction"></a>创建分布式事务
 
@@ -34,47 +34,47 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 -->
 
 
-可以通过不同的方式为不同的 Microsoft SQL 系统创建分布式事务。
+可以以不同的方式为不同的 Microsoft SQL 系统创建分布式事务。
 
-## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC 驱动程序调用 MSDTC 用于本地 SQL Server
+## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC 驱动程序在本地调用 SQL Server 的 MSDTC
 
-Microsoft 分布式事务处理协调器（MSDTC）允许应用程序跨两个或更多实例扩展或_分发_事务[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 即使两个实例托管在不同的计算机上，分布式事务也能正常工作。
+Microsoft 分布式事务协调器 （MSDTC） 允许应用程序跨 的两个或多个实例扩展或_分发_事务[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 即使两个实例托管在单独的计算机上，分布式事务也能正常工作。
 
-为本地 Microsoft SQL Server 安装了 MSDTC，但不适用于 Microsoft 的 Azure SQL 数据库云服务。
+MSDTC 安装在本地为 Microsoft SQL 服务器，但不适用于 Microsoft 的 Azure SQL 数据库云服务。
 
-当 c + + 程序管理分布式事务时，由开放式数据库连接（ODBC）的 SQL Server Native Client 驱动程序调用 MSDTC。 Native Client ODBC 驱动程序具有符合开放组分布式事务处理（DTP） XA 标准的事务管理器。 MSDTC 需要此相容性。 通常，所有事务管理命令都是通过此 Native Client ODBC 驱动程序发送的。 顺序如下：
+MSDTC 由打开数据库连接 （ODBC） 的 SQL Server 本机客户端驱动程序调用，当您C++程序管理分布式事务时。 本机客户端 ODBC 驱动程序具有符合开放组分布式事务处理 （DTP） XA 标准的事务管理器。 MSDTC 需要这种合规性。 通常，所有事务管理命令都通过此本机客户端 ODBC 驱动程序发送。 顺序如下：
 
-1. C + + Native Client ODBC 应用程序通过调用[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)启动了一个事务，并关闭了自动提交模式。
+1. C++本机客户端 ODBC 应用程序通过调用[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)启动事务，自动提交模式处于关闭状态。
 
-2. 应用程序在计算机 A 上的 SQL Server X 上更新某些数据。
+2. 应用程序在计算机 A 上更新 SQL Server X 上的一些数据。
 
-3. 应用程序会更新计算机 B 上 SQL Server Y 上的一些数据。
-    - 如果 SQL Server Y 上的更新失败，则将回滚两个 SQL Server 实例上的所有未提交的更新。
+3. 应用程序在计算机 B 上更新 SQL Server Y 上的一些数据。
+    - 如果 SQL Server Y 上的更新失败，则回滚两个 SQL Server 实例上未提交的所有更新。
 
-4. 最后，应用程序通过使用 SQL_COMMIT 或 SQL_ROLLBACK 选项调用[SQLEndTran _（1）_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)来结束事务。
+4. 最后，应用程序通过调用[SQLEndTran _（1）_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)结束事务，SQL_COMMIT 或SQL_ROLLBACK选项。
 
 _（1）_ 无需 ODBC 即可调用 MSDTC。 在这种情况下，MSDTC 成为事务管理器，应用程序不再使用**SQLEndTran**。
 
-### <a name="only-one-distributed-transaction"></a>仅一个分布式事务
+### <a name="only-one-distributed-transaction"></a>只有一个分布式事务
 
-假设你的 c + + Native Client ODBC 应用程序已登记到分布式事务中。 接下来，应用程序在另一个分布式事务中登记。 在这种情况下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，NATIVE Client ODBC 驱动程序将离开原始分布式事务，并登记到新的分布式事务中。
+假设您C++本机客户端 ODBC 应用程序已登记在分布式事务中。 接下来，应用程序将登记在第二个分布式事务中。 在这种情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序将离开原始分布式事务，并登记在新的分布式事务中。
 
-有关详细信息，请参阅[DTC 程序员参考](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))。
+有关详细信息，请参阅[DTC 程序员的参考](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))。
 
-## <a name="c-alternative-for-sql-database-in-the-cloud"></a>云中 SQL 数据库的 c # 替代项
+## <a name="c-alternative-for-sql-database-in-the-cloud"></a>云中 SQL 数据库的 C# 替代方案
 
-Azure SQL Database 或 Azure SQL 数据仓库不支持 MSDTC。
+Azure SQL 数据库或 Azure SQL 数据仓库不支持 MSDTC。
 
-但是，可以通过使 c # 程序使用[.net 类 system.exception](/dotnet/api/system.transactions.transactionscope)，为 SQL 数据库创建分布式事务。
+但是，可以通过让 C# 程序使用 .NET 类[系统，](/dotnet/api/system.transactions.transactionscope)为 SQL 数据库创建分布式事务。
 
 ### <a name="other-programming-languages"></a>其他编程语言
 
-以下其他编程语言可能不会为 SQL 数据库服务提供对分布式事务的任何支持：
+以下其他编程语言可能无法为 SQL 数据库服务的分布式事务提供任何支持：
 
-- 使用 ODBC 驱动程序的本机 c + +
-- 使用 Transact-sql 的链接服务器
+- 使用 ODBC 驱动程序的本机C++
+- 使用交易 SQL 链接服务器
 - JDBC 驱动程序
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [执行事务 (ODBC)](performing-transactions-in-odbc.md)

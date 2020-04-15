@@ -1,5 +1,5 @@
 ---
-title: C 间隔结构 |Microsoft Docs
+title: C 间隔结构 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3387b4fa48eb1a04102daadcc08f971765d7ca2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292149"
 ---
 # <a name="c-interval-structure"></a>C 间隔结构
-" [C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)" 部分中列出的每个 c 间隔数据类型都使用相同的结构来包含时间间隔数据。 调用**SQLFetch**、 **SQLFetchScroll**或**SQLGetData**时，驱动程序会将数据返回到 SQL_INTERVAL_STRUCT 结构，使用应用程序为 C 数据类型（在调用**SQLBindCol**、 **SQLGetData**或**SQLBindParameter**）中指定的值来解释 SQL_INTERVAL_STRUCT 的内容，并使用对应于 C 类型的*枚举*值填充结构的*interval_type*字段。 请注意，驱动程序不会读取*interval_type*字段来确定间隔的类型;它们检索 SQL_DESC_CONCISE_TYPE 描述符字段的值。 当结构用于参数数据时，驱动程序将使用 APD 的 SQL_DESC_CONCISE_TYPE 字段中的应用程序指定的值来解释 SQL_INTERVAL_STRUCT 的内容，即使应用程序将*interval_type*字段的值设置为其他值。  
+[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)部分中列出的每个 C 间隔数据类型都使用相同的结构来包含间隔数据。 当调用**SQLFetch、SQLFetch**或**SQLGetData**时，驱动程序将数据返回到SQL_INTERVAL_STRUCT结构中，使用应用程序为 C 数据类型指定的值（在调用**SQLFetchScroll** **SQLBindCol、SQLGetData**或**SQLGetData****SQLBind参数**）来解释SQL_INTERVAL_STRUCT的内容，并使用与 C 类型的枚*举*值填充结构*interval_type*字段。 请注意，驱动程序不读取*interval_type*字段以确定间隔的类型;因此，驱动程序不会读取该字段。它们检索SQL_DESC_CONCISE_TYPE描述符字段的值。 当结构用于参数数据时，驱动程序使用应用程序在 APD SQL_DESC_CONCISE_TYPE 字段中指定的值来解释SQL_INTERVAL_STRUCT的内容，即使应用程序将*interval_type*字段的值设置为不同的值也是如此。  
   
  此结构的定义如下：  
   
@@ -69,4 +69,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- SQL_INTERVAL_STRUCT 的 " *interval_type* " 字段向应用程序指示在联合中包含的结构，以及结构的相关成员。 如果 "间隔前导" 字段为 "无符号"，则 " *interval_sign* " 字段的值为 SQL_FALSE;如果 SQL_TRUE，则前导字段为负数。 不管*interval_sign*的值是什么，前导字段本身中的值始终为无符号值。 *Interval_sign*字段用作符号位。
+ SQL_INTERVAL_STRUCT*的interval_type*字段向应用程序指示在联合中持有哪些结构，以及结构中哪些成员是相关的。 如果间隔前导字段未签名，*则interval_sign*字段具有值SQL_FALSE;如果SQL_TRUE，则前导字段为负。 无论*interval_sign*的值如何，前导字段本身的值始终没有符号。 *interval_sign*字段充当符号位。

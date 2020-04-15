@@ -1,5 +1,5 @@
 ---
-title: 其他支持的 ODBC SQL 语法 |Microsoft Docs
+title: 其他支持的 ODBC SQL 语法 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a5939ee2b8163e5e71899d5074b851dfda87484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901395"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307128"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>支持的其他 ODBC SQL 语法
-ODBC 驱动程序完全支持核心和扩展 ODBC 2.5 语法中的最低 ODBC 2.5 语法和以下子句。 跳转到[ALTER TABLE 语句](../../odbc/microsoft/alter-table-statement.md)、[相关名称](../../odbc/microsoft/correlation-names.md)和[过程调用](../../odbc/microsoft/procedure-invocation.md)主题可显示其他信息。  
+ODBC 驱动程序完全支持最低 ODBC 2.5 语法和核心和扩展 ODBC 2.5 语法中的以下子句。 可以通过跳转到[ALTER TABLE 语句](../../odbc/microsoft/alter-table-statement.md)、[关联名称](../../odbc/microsoft/correlation-names.md)和[过程调用](../../odbc/microsoft/procedure-invocation.md)主题来显示其他信息。  
   
--   近似数字文本（内核）  
+-   近似数字文本（核心）  
   
--   [ALTER TABLE 语句](../../odbc/microsoft/alter-table-statement.md)（Core）  
+-   [更改表语句](../../odbc/microsoft/alter-table-statement.md)（核心）  
   
 -   二进制文本（扩展）  
   
--   [相关名称](../../odbc/microsoft/correlation-names.md)（核心）  
+-   [关联名称](../../odbc/microsoft/correlation-names.md)（核心）  
   
 -   [过程调用](../../odbc/microsoft/procedure-invocation.md)（扩展）  
   
--   [BETWEEN 谓词](../../odbc/microsoft/between-predicate.md)（内核）  
+-   ["中间"谓词](../../odbc/microsoft/between-predicate.md)（核心）  
   
--   [CREATE INDEX 语句](../../odbc/microsoft/create-index-statement.md)  
+-   [创建索引语句](../../odbc/microsoft/create-index-statement.md)  
   
 -   [日期算术](../../odbc/microsoft/date-arithmetic.md)  
   
@@ -51,16 +51,16 @@ ODBC 驱动程序完全支持核心和扩展 ODBC 2.5 语法中的最低 ODBC 2.
   
 -   [ORDER BY 与 GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
--   EXISTS 谓词（内核）  
+-   存在谓词（核心）  
   
--   IN （*valuelist*）（内核）  
+-   IN （*价值列表*） （核心）  
   
--   [Jet：外部联接](../../odbc/microsoft/jet-outer-joins.md)（扩展）  
+-   [喷射：外部连接](../../odbc/microsoft/jet-outer-joins.md)（扩展）  
   
--   SELECT 语句（扩展）（包括 GROUP BY、HAVING 和 UNION 子句）  
+-   选择语句（扩展）（包括集团 BY、有和联合子句）  
   
--   子查询（嵌套 select 语句）（内核）  
+-   子查询 （SUBSELECTs） （核心）  
   
--   [标量函数](../../odbc/microsoft/scalar-functions.md)  
+-   [Scalar 功能](../../odbc/microsoft/scalar-functions.md)  
   
 -   [表名称](../../odbc/microsoft/table-names.md)
