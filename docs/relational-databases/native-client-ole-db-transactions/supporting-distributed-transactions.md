@@ -1,5 +1,5 @@
 ---
-title: 支持分布式事务 |Microsoft Docs
+title: 支持分布式事务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,33 +16,33 @@ helpviewer_keywords:
 - ITransactionJoin interface
 - MS DTC, about distributed transaction support
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 352c71c70f67e9b93017511dcfe33bebe076ad17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7fa228f7189e6940669f1cfbce2bb4a3e5763b22
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73773036"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81279972"
 ---
 # <a name="supporting-distributed-transactions"></a>支持分布式事务
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口使用者可以使用**ITransactionJoin：： JoinTransaction**方法参与由 Microsoft 分布式事务处理协调器（MS DTC）协调的分布式事务。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序使用者可以使用**ITransactionJoin：：Join交易**方法参与由 Microsoft 分布式事务协调器 （MS DTC） 协调的分布式事务。  
   
- MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 若要启动某个事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用者使用了 MS DTC **ITransactionDispenser**接口。 ITransactionDispenser 的 BeginTransaction 成员返回分布式事务对象的引用********。 使用 JoinTransaction 将此引用传递[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]给 Native Client OLE DB 提供**** 程序。  
+ MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 要启动事务，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序使用者使用 MS DTC **I交易分配器**接口。 ITransactionDispenser 的 BeginTransaction 成员返回分布式事务对象的引用********。 此引用将传递给使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Join 事务**的原生客户端 OLE 数据库提供程序。  
   
  MS DTC 支持对分布式事务的异步提交和中止。 为了通知异步事务状态，使用者实现 ITransactionOutcomeEvents 接口并将该接口与 MS DTC 事务对象连接****。  
   
- 对于分布式事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**ITransactionJoin：： JoinTransaction**参数，如下所示。  
+ 对于分布式事务，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序实现**I事务联接：：联接事务**参数，如下所示。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
-|*punkTransactionCoord*|指向 MS DTC 事务对象的指针。|  
-|*IsoLevel*|由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序忽略。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
-|*IsoFlags*|必须为 0。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者指定了其他任何值，则 Native Client OLE DB 提供程序将返回 XACT_E_NOISORETAIN。|  
-|*POtherOptions*|如果不为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则 Native Client OLE DB 提供程序从接口请求 options 对象。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] options 对象的*ulTimeout*成员不为零，则 Native Client OLE DB 提供程序将返回 XACT_E_NOTIMEOUT。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序忽略*szDescription*成员的值。|  
+|punkTransactionCoord**|指向 MS DTC 事务对象的指针。|  
+|IsoLevel**|本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序忽略。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
+|IsoFlags**|必须为 0。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者指定了任何其他值，本机客户端 OLE 数据库提供程序将返回XACT_E_NOISORETAIN。|  
+|POtherOptions**|如果不是 NULL，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序将从接口请求选项对象。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项对象的*ulTimeout*成员不是零，则本机客户端 OLE DB 提供程序将返回XACT_E_NOTIMEOUT。 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序忽略*sz 描述*成员的值。|  
   
  下面的示例通过使用 MS DTC 来协调事务：  
   
@@ -142,6 +142,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [中的](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [事务](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

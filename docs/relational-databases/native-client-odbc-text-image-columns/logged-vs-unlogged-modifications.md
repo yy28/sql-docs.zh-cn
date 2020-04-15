@@ -1,5 +1,5 @@
 ---
-title: 已记录无日志记录修改 |Microsoft Docs
+title: 记录与未记录的修改 |微软文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 502a4eeb657d4bc9e92a2cda25e152329b281567
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dc7fb913bef4083b045a0c1c010bdedbc43135c5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790602"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297648"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>有日志记录的修改与无日志记录的修改
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  应用程序可以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]请求 NATIVE Client ODBC 驱动程序不记录**text**、 **ntext**和**image**修改。 但应慎用此选项。 它仅适用于**文本**、 **ntext**或**图像**数据不重要的情况，数据所有者愿意权衡恢复数据以提高性能的能力。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应用程序可以请求本机客户端 ODBC 驱动程序不记录**文本****、ntext**和**图像**修改。 但应慎用此选项。 它只应用于**文本****、ntext**或**图像**数据不重要且数据所有者愿意权衡恢复数据的能力以获得更高性能的情况。  
   
- 通过调用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)并将*属性*参数设置为 SQL_SOPT_SS_ TEXTPTR_LOGGING 并将*将 valueptr*设置为 SQL_TL_ON 或 SQL_TL_OFF，可以控制**text**、 **ntext**和**image**修改的日志记录。  
+ **文本****、ntext**和**图像**修改的日志记录通过调用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)进行控制，*属性*参数设置为SQL_SOPT_SS_TEXTPTR_LOGGING，ValuePtr 设置为SQL_TL_ON或SQL_TL_OFF。 *ValuePtr*  
   
 ## <a name="see-also"></a>另请参阅  
  [管理 Text 和 Image 列](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

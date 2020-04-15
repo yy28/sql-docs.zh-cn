@@ -1,5 +1,5 @@
 ---
-title: 数据源对象（OLE DB） |Microsoft Docs
+title: 数据源对象 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,28 +16,28 @@ helpviewer_keywords:
 - data source objects [OLE DB]
 - CLSID
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2683cdc7762f1f500918edce436153e0130d04bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d8bb984c789f759eb764ad580f971ab71c9fc946
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73758265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297619"
 ---
 # <a name="data-source-objects-ole-db"></a>数据源对象 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 对用于建立到数据存储的链接的一组 OLE DB 接口使用术语 "数据源"，如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端使用者的第一个任务。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端使用术语数据源的 OLE DB 接口集，用于建立指向数据存储的链接，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是本机客户端使用者的第一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]任务。  
   
- 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的 CLSID 是 C/c + + GUID CLSID_SQLNCLI10 （符号 SQLNCLI_CLSID 将解析为您引用的 sqlncli.msi 文件中的正确 progid）。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例****。  
+ 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 本机客户端 OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB 提供程序的 CLSID 是 C/C++ GUID CLSID_SQLNCLI10（符号SQLNCLI_CLSID解析为您引用的 sqlncli.h 文件中的正确 progid）。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例****。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 是进程内服务器。 使用 CLSCTX_INPROC_SERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]宏创建 Native Client OLE DB 提供程序对象的实例以指示可执行上下文。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端是进程中的服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序对象的实例使用CLSCTX_INPROC_SERVER宏来指示可执行上下文。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序数据源对象公开 OLE DB 初始化接口，该接口允许使用者连接到现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序数据源对象公开允许使用者连接到现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库的 OLE DB 初始化接口。  
   
- 通过 Native Client OLE DB 提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序建立的每个连接都会自动设置以下选项：  
+ 通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序进行的每个连接会自动设置这些选项：  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73758265"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- 此示例使用类标识符宏来创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序数据源对象并获取对其**IDBInitialize**接口的引用。  
+ 本示例使用类标识符宏创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序数据源对象，并获取对其**IDB 初始化接口的**引用。  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -72,13 +72,13 @@ else
 }  
 ```  
   
- 成功创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端的实例 OLE DB 提供程序数据源对象后，使用者应用程序可以通过初始化数据源并创建会话来继续。 OLE DB 会话提供允许数据访问和操作的接口。  
+ 成功创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序数据源对象的实例后，使用者应用程序可以通过初始化数据源和创建会话来继续。 OLE DB 会话提供允许数据访问和操作的接口。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序在成功完成数据源初始化的过程中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，使其第一次连接到指定的实例。 只要保持对数据源初始化接口的引用，或者在调用 IDBInitialize::Uninitialize 方法前，这一连接会一直保持****。  
+ 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序首次连接到 指定的实例，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为成功数据源初始化的一部分。 只要保持对数据源初始化接口的引用，或者在调用 IDBInitialize::Uninitialize 方法前，这一连接会一直保持****。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [数据源属性 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [数据源属性 (OLE DB)](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [数据源信息属性](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)  
   

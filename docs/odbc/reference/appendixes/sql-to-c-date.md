@@ -1,5 +1,5 @@
 ---
-title: SQL 到 C：日期 |Microsoft Docs
+title: SQL 到 C：日期 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - date data type [ODBC]
 - data conversions from SQL to C types [ODBC], date
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d282798a31ac9059ed3c1901ea01f1f3104f09c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe9656c0c02c0ff5a10029525da3d38280530cc3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68056880"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296527"
 ---
 # <a name="sql-to-c-date"></a>从 SQL 到 C：日期
-Date ODBC SQL 数据类型的标识符是：  
+日期 ODBC SQL 数据类型的标识符是：  
   
  SQL_TYPE_DATE  
   
- 下表显示了 SQL 数据可转换到的 ODBC C 数据类型。 有关表中的列和字词的说明，请参阅将[数据从 SQL 转换为 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
+ 下表显示了可以转换 SQL 数据的 ODBC C 数据类型。 有关表中列和术语的说明，请参阅[将数据从 SQL 转换为 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
   
-|C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|C 类型标识符|测试|**目标价值Ptr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 字符字节长度<br /><br /> 11 <= *BufferLength* <= 字符字节长度<br /><br /> *BufferLength* < 11|data<br /><br /> 截断的数据<br /><br /> 未定义|10<br /><br /> 数据的长度（以字节为单位）<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 字符长度<br /><br /> 11 <= *BufferLength* <= 字符长度<br /><br /> *BufferLength* < 11|data<br /><br /> 截断的数据<br /><br /> 未定义|10<br /><br /> 数据的长度（以字符为长度）<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Data <的字节长度 = *BufferLength*<br /><br /> 数据 > 的字节长度*BufferLength*|data<br /><br /> 未定义|数据的长度（以字节为单位）<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|None [a]|data|6 [c]|不适用|  
-|SQL_C_TYPE_TIMESTAMP|None [a]|数据 [b]|16 [c]|不适用|  
+|SQL_C_CHAR|*缓冲区长度*>字符字节长度<br /><br /> 11 <=*缓冲区长度*<= 字符字节长度<br /><br /> *缓冲区长度*< 11|数据<br /><br /> 截断的数据<br /><br /> Undefined|10<br /><br /> 以字节为单位的数据长度<br /><br /> Undefined|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*缓冲区长度*>字符长度<br /><br /> 11<=*缓冲区长度*<= 字符长度<br /><br /> *缓冲区长度*< 11|数据<br /><br /> 截断的数据<br /><br /> Undefined|10<br /><br /> 字符中的数据长度<br /><br /> Undefined|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|数据<字节长度 =*缓冲区长度*<br /><br /> >*缓冲区长度*的数据字节长度|数据<br /><br /> Undefined|以字节为单位的数据长度<br /><br /> Undefined|不适用<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|无[a]|数据|6[c]|不适用|  
+|SQL_C_TYPE_TIMESTAMP|无[a]|数据[b]|16[c]|不适用|  
   
- [a] 此转换将忽略*BufferLength*的值。 驱动程序假设大小 **TargetValuePtr*是 C 数据类型的大小。  
+ [a] 此转换将忽略*缓冲区长度*的值。 驱动程序假定 **目标价值Ptr*的大小是 C 数据类型的大小。  
   
- [b] timestamp 结构的时间字段设置为零。  
+ [b] 时间戳结构的时间字段设置为零。  
   
- [c] 这是对应的 C 数据类型的大小。  
+ [c] 这是相应的 C 数据类型的大小。  
   
- SQL 数据转换为字符 C 数据时，生成的字符串为 "*yyyy*-*mm*-*dd*" 格式。 此格式不受 Windows®的 "国家/地区" 设置的影响。
+ 当 SQL 数据转换为字符 C 数据的日期时，生成的字符串采用 *"yyyymm*-*mm*-*dd"* 格式。 此格式不受 Windows ®国家/地区设置的影响。

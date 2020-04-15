@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLBindCol |Microsoft Docs
+title: 使用 SQLBindCol |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da49ad4db80b93d02534a0c4ecacdc2621c9cf8d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022161"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294627"
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
-应用程序通过调用**SQLBindCol**绑定列。 此函数一次绑定一列。 在此应用程序中，应用程序指定了以下内容：  
+应用程序通过调用**SQLBindCol**来绑定列。 此函数一次绑定一列。 使用它，应用程序指定以下内容：  
   
--   列号。 列0是书签列;此列不包含在某些结果集中。 所有其他列都从数字1开始编号。 绑定编号较高的列与结果集中的列数不相同;在创建结果集之前，无法检测到此错误，因此由**SQLFetch**返回，而不是**SQLBindCol**返回。  
+-   列号。 列 0 是书签列;此列不包括在某些结果集中。 所有其他列都以数字 1 开头编号。 绑定编号较高的列比结果集中的列绑定错误;在创建结果集之前无法检测到此错误，因此**SQLFetch**而不是**SQLBindCol**会返回此错误。  
   
--   绑定到列的变量的 C 数据类型、地址和字节长度。 指定 C 数据类型时，不能将该列的 SQL 数据类型转换为错误。在创建结果集之前，可能不会检测到此错误，因此由**SQLFetch**返回，而不是**SQLBindCol**返回。 有关支持的转换的列表，请参阅附录 D：数据类型中的[将数据从 SQL 转换为 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。 有关字节长度的信息，请参阅[数据缓冲区长度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
+-   绑定到列的变量的 C 数据类型、地址和字节长度。 指定无法转换为列的 SQL 数据类型的 C 数据类型是错误的;在创建结果集之前可能无法检测到此错误，因此**SQLFetch**而不是**SQLBindCol**会返回此错误。 有关支持的转化列表，请参阅附录 D：数据类型中[将数据从 SQL 转换为 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。 有关字节长度的信息，请参阅[数据缓冲区长度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
   
--   长度/指示器缓冲区的地址。 长度/指示器缓冲区是可选的。 它用于返回二进制或字符数据的字节长度，如果数据为 NULL，则返回 SQL_NULL_DATA。 有关详细信息，请参阅[使用长度/指示器值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
+-   长度/指示器缓冲区的地址。 长度/指示器缓冲区是可选的。 它用于返回二进制或字符数据的字节长度，或者如果数据为 NULL，则返回SQL_NULL_DATA。 有关详细信息，请参阅[使用长度/指标值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
- 调用**SQLBindCol**时，驱动程序会将此信息与语句相关联。 提取每个数据行时，它将使用该信息为绑定应用程序变量中的每个列放入数据。  
+ 调用**SQLBindCol**时，驱动程序将此信息与语句关联。 获取每行数据时，它使用信息将每列的数据放在绑定的应用程序变量中。  
   
- 例如，下面的代码将变量绑定到业务员和 CustID 列。 列的数据将在*销售人员*和*CustID*中返回。 由于*销售人员*是字符缓冲区，因此应用程序会指定其字节长度（11），以便驱动程序可以确定是否截断数据。 返回标题的字节长度，或者，如果为 NULL，则将在*SalesPersonLenOrInd*中返回。  
+ 例如，以下代码将变量绑定到 SalesPerson 和 CustID 列。 列的数据将在*SalesPerson*和*CustID 中*返回。 由于*SalesPerson*是一个字符缓冲区，因此应用程序指定其字节长度 （11），以便驱动程序可以确定是否截截数据。 返回的标题的字节长度或是否为 NULL 将在*SalesPersonLenOrInd 中*返回。  
   
- 因为*CustID*是一个整数变量并且具有固定长度，所以无需指定其字节长度;驱动程序假定它是**sizeof （** SQLUINTEGER **）**。 返回的客户 ID 数据的字节长度（或是否为 NULL）将在*CustIDInd*中返回。 请注意，应用程序仅对薪金是否为空感兴趣，因为字节长度始终为**sizeof （** SQLUINTEGER **）**。  
+ 由于*CustID*是一个整数变量，并且具有固定长度，因此无需指定其字节长度;驱动程序假定它是**大小**（SQLUINTEGER）。**)** 返回的客户 ID 数据的字节长度或是否为 NULL 将在*CustIDInd*中返回。 请注意，应用程序只对工资是否为 NULL 感兴趣，因为字节长度始终**大小**（SQLUINTEGER）。**)**  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -70,7 +70,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- 下面的代码执行用户输入的**SELECT**语句，并打印结果集中的每一行数据。 由于应用程序无法预测**SELECT**语句创建的结果集的形状，因此它无法将硬编码的变量绑定到结果集，如前面的示例中所示。 相反，应用程序分配一个缓冲区，该缓冲区保存数据，并为该行中的每个列分配长度/指示器缓冲区。 对于每个列，它计算与列的内存起始位置的偏移量，并调整此偏移量，以便列的数据和长度/指示器缓冲区在对齐边界上启动。 然后，它将从偏移量开始的内存绑定到列。 从驱动程序的角度来看，此内存的地址与上一示例中的变量绑定的地址不区分开来。 有关对齐方式的详细信息，请参阅[对齐](../../../odbc/reference/develop-app/alignment.md)。  
+ 以下代码执行用户输入的**SELECT**语句，并在结果集中打印每行数据。 由于应用程序无法预测由**SELECT**语句创建的结果集的形状，因此无法像前面的示例中那样将硬编码变量绑定到结果集。 相反，应用程序分配一个缓冲区，该缓冲区保存该行中每一列的数据和长度/指示器缓冲区。 对于每列，它计算列内存开始的偏移量，并调整此偏移量，以便列的数据和长度/指示器缓冲区从对齐边界开始。 然后，它将从偏移量开始的内存绑定到列。 从驱动程序的角度来看，此内存的地址与上述示例中绑定的变量的地址无法区分。 有关对齐的详细信息，请参阅[对齐](../../../odbc/reference/develop-app/alignment.md)。  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

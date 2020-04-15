@@ -1,5 +1,5 @@
 ---
-title: 表值参数（OLE DB） |Microsoft Docs
+title: 表值参数 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,26 +11,25 @@ helpviewer_keywords:
 - OLE DB, table-valued parameters
 - table-valued parameters (OLE DB)
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67991d5bd50b9612b8f3eaff01d37eef581b22f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15055f582d7add6194753e2743d63b5e082318b5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761635"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300223"
 ---
 # <a name="table-valued-parameters-ole-db"></a>表值参数 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本节介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口中的表值参数支持。 有关其他概述信息，请参阅[表值参数 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)。 有关示例，请参阅[使用表值参数 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)。  
+  本节介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口中的表值参数支持。 有关其他概述信息，请参阅[&#40;SQL 服务器本机客户端&#41;的表值参数](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)。 有关示例，请参阅[使用表值参数 (OLE DB)](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)。  
   
 ## <a name="remarks"></a>备注  
  现在，可向服务器发送多行数据作为带参数集的过程的参数（如 ICommand::Execute 中的 DBPARAMS 参数）****。 使用参数集时，该参数集中的每个元素都必须通过单独的远程过程调用 (RPC) 请求发送到服务器。 表值参数提供类似的功能，但可以与服务器更好地集成。 这可以减少 RPC 请求数，并在服务器上启用基于集的操作。  
   
- Native Client OLE DB 提供程序中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持表值参数作为 OLE DB**行集**对象。 任何**行集**对象均可由使用者（即使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供程序的客户端应用程序）提供为表值参数参数的占位符。 表值参数的处理方式与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数类型相似。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口提供创建、发现、规范、绑定和架构接口。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序中支持表值参数作为 OLE DB**行集**对象。 任何**Rowset**对象都可以由使用者（即使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序的客户端应用程序）作为表值参数的占位符提供。 表值参数的处理方式与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数类型相似。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口提供创建、发现、规范、绑定和架构接口。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -46,12 +45,12 @@ ms.locfileid: "73761635"
   
 -   [OLE DB 表值参数类型支持](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)  
   
--   [OLE DB 表值参数类型支持 &#40;方法&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)  
+-   [OLE DB 表值参数类型支持（方法）](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)  
   
--   [OLE DB 表值参数类型支持 &#40;属性&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
+-   [OLE DB 表值参数类型支持（属性）](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL 服务器本机客户端&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [使用表值参数 (OLE DB)](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

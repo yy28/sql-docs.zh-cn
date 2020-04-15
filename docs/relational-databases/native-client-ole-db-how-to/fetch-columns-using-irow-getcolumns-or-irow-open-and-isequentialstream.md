@@ -1,5 +1,5 @@
 ---
-title: Fetch、IRow：： GetColumns 和 ISequentialStream
+title: 提取，IRow：获取列线和 I顺序流
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ISequentialStream interface, samples
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1151da2b2763aec188682ba6e5e227a8b560855f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 49b5690c5eb09504d61f3ca094a7ff3a1a3b07e9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75226083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295769"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "75226083"
   可使用 ISequentialStream 接口绑定或检索大型数据****。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保留凭据，则应使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列  
   
@@ -36,13 +36,13 @@ ms.locfileid: "75226083"
   
 2.  执行命令（本例中通过 IID_IRow 调用 ICommandExecute::Execute()）****。  
   
-3.  使用**IRow：： Open （）** 或**IRow：： GetColumns （）** 提取列数据。  
+3.  使用 IRow::Open()**** 或 IRow::GetColumns()**** 提取列数据。  
   
-    -   **IRow：： open （）** 可用于打开行上的**ISequentialStream** 。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）********。  
+    -   IRow::Open()**** 可用于打开行上的 ISequentialStream****。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）********。  
   
     -   如果使用 IRow::GetColumns()，则 DBCOLUMNACCESS 结构的 pData 元素设置为指向流对象********。  
   
-4.  重复使用**ISequentialStream：： read （）** 将指定数量的字节读入使用者缓冲区。  
+4.  重复使用 ISequentialStream::Read()****，将指定的字节数读入使用者缓冲区。  
   
 ## <a name="example"></a>示例  
  此示例显示如何使用 IRow 提取单行。 在此示例中，将一次从该行中检索一列。 此示例演示了 IRow::Open() 和 IRow::GetColumns() 的用法。 为读取列数据，示例中使用了 ISequentialStream::Read。  
@@ -51,7 +51,7 @@ ms.locfileid: "75226083"
   
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建该示例要使用的表。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 确保 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
   
  第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除该示例使用的表。  
   

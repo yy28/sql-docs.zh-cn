@@ -1,5 +1,5 @@
 ---
-title: 数据 FILESTREAM，ISequentialStream ICommandText
+title: 数据文件流，I顺序流 I命令文本
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,27 +8,27 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4395a52b49bdf5e41350a1e37cd33f72b35f1d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f27ac32da560316806086f51c69cd2a374eb1a15
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75241724"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295685"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>向 FILESTREAM 发送数据 - ISequentialStream 绑定到 ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   此示例使用绑定到 ICommandText 参数的 ISequentialStream 接口向 filestream 列发送大小在 4MB 与 4GB 之间的数据。  
   
- 有关 filestream 功能的详细信息，请参阅[Filestream 支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 有关文件流功能的详细信息，请参阅[FILESTREAM 支持&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>示例  
- 在编译并运行此示例之前，启用 FILESTREAM 支持（[启用和配置 filestream](../../../relational-databases/blob/enable-and-configure-filestream.md)）。  
+ 编译和运行此示例前，先启用 FILESTREAM 支持（[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)）。  
   
- 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
+ 确保 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
   
  该服务器必须具有名为 C:\DBFsa 的目录，示例将在其中创建数据库。 您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须对此位置具有写访问权限（例如，采用本地系统帐户登录）。  
   

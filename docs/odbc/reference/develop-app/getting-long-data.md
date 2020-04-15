@@ -1,5 +1,5 @@
 ---
-title: 正在获取长数据 |Microsoft Docs
+title: 获取长数据 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da901c22eb26af063397b4af184179ebe5c75924
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216360"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298987"
 ---
 # <a name="getting-long-data"></a>获取 Long 数据
-Dbms 将*长数据*定义为一定大小的任何字符或二进制数据，例如255个字符。 此数据可能足够小，可以存储在单个缓冲区中，例如几个字符的部分说明。 但是，存储在内存中的时间可能太长，例如长文本文档或位图。 由于此类数据不能存储在单个缓冲区中，因此在提取行中的其他数据之后，将从包含**SQLGetData**的部分中的驱动程序检索此类数据。  
+DBMS 将*长数据*定义为特定大小的任何字符或二进制数据，例如 255 个字符。 此数据可能足够小，可以存储在单个缓冲区中，例如几千个字符的部件描述。 但是，存储在内存中可能太长，例如长文本文档或位图。 由于此类数据不能存储在单个缓冲区中，因此在提取行中的其他数据后，将从具有**SQLGetData**的部件中的驱动程序中检索这些数据。  
   
 > [!NOTE]  
->  应用程序可以使用**SQLGetData**（而不只是长数据）检索任何类型的数据，尽管只能在部分中检索字符和二进制数据。 但是，如果数据太小，足以容纳在单个缓冲区中，通常没有理由使用**SQLGetData**。 将缓冲区绑定到列并让驱动程序返回缓冲区中的数据，这要简单得多。  
+>  应用程序实际上可以使用**SQLGetData**检索任何类型的数据，而不仅仅是长数据，尽管只能分批检索字符和二进制数据。 但是，如果数据足够小，可以容纳单个缓冲区，则通常没有理由使用**SQLGetData**。 将缓冲区绑定到列并让驱动程序返回缓冲区中的数据要容易得多。  
   
- 若要从某一列检索长数据，应用程序首先调用**SQLFetchScroll**或**SQLFetch**移动到某一行，并提取绑定列的数据。 然后，应用程序调用**SQLGetData**。 **SQLGetData**具有与**SQLBindCol**相同的参数：语句句柄;列号;应用程序变量的 C 数据类型、地址和字节长度;和长度/指示器缓冲区的地址。 这两个函数具有相同的参数，因为它们实质上是相同的任务：它们都描述了驱动程序的应用程序变量，并指定应在该变量中返回特定列的数据。 主要区别在于，在提取行之后（出于此原因，有时将其称为*后期绑定*），将调用**SQLGetData** ，并且由**SQLGetData**指定的绑定仅在调用期间持续。  
+ 若要从列检索长数据，应用程序首先调用**SQLFetchScroll**或**SQLFetch**移动到行并获取绑定列的数据。 然后，应用程序调用**SQLGetData**。 **SQLGetData**的参数与**SQLBindCol**相同：语句句柄;列号;应用程序变量的 C 数据类型、地址和字节长度;和长度/指示器缓冲区的地址。 这两个函数具有相同的参数，因为它们执行的任务基本相同：它们既向驱动程序描述应用程序变量，又指定应返回该变量中特定列的数据。 主要区别是 **，SQLGetData**是在获取行后调用的（由于此原因有时称为*后期绑定*），并且**SQLGetData**指定的绑定仅在调用期间持续。  
   
- 对于单列， **SQLGetData**的行为类似于**SQLFetch**：它检索列的数据，将其转换为应用程序变量的类型，并将其返回到该变量中。 它还返回长度/指示器缓冲区中数据的字节长度。 有关**SQLFetch**如何返回数据的详细信息，请参阅[提取数据行](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)。  
+ 对于单个列 **，SQLGetData**的行像**SQLFetch：** 它检索列的数据，将其转换为应用程序变量的类型，并在该变量中返回它。 它还返回长度/指示器缓冲区中数据的字节长度。 有关**SQLFetch**如何返回数据的详细信息，请参阅[获取一行数据](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)。  
   
- **SQLGetData**在一个重要方面与**SQLFetch**不同。 如果对同一列连续调用此方法，则每次调用都将返回连续的数据部分。 除最后一个调用之外的每个调用都将返回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01004 （字符串数据，右端被截断）;最后一个调用返回 SQL_SUCCESS。 这就是使用**SQLGetData**在部分中检索长数据的方式。 当没有更多要返回的数据时， **SQLGetData**将返回 SQL_NO_DATA。 应用程序负责将长数据放在一起，这可能意味着连接数据的各个部分。 每个部件都以 null 结尾;如果连接各个部分，应用程序必须删除 null 终止字符。 对于可变长度书签以及其他长数据，可以在部分中检索数据。 在每次调用时，长度/指示器缓冲区中返回的值会减少上一个调用中返回的字节数，但驱动程序通常不能发现可用数据量并返回 SQL_NO_TOTAL 的字节长度。 例如：  
+ **SQLGetData**在一个重要的方面与**SQLFetch**不同。 如果对同一列连续调用该列多次，则每个调用返回数据的连续部分。 除上次调用外，每个调用返回SQL_SUCCESS_WITH_INFO和 SQLSTATE 01004（字符串数据，右截断）;最后一次调用返回SQL_SUCCESS。 这是**SQLGetData**用于检索部分长数据的方式。 当没有更多的数据返回时 **，SQLGetData**会返回SQL_NO_DATA。 应用程序负责将长数据放在一起，这可能意味着将数据部分串联。 每个部件都是 null 终止的;因此，每个部件都为 null 终止。如果串联零件，应用程序必须删除 null 终止字符。 可以为可变长度书签和其他长数据检索零件中的数据。 长度/指示器缓冲区中返回的值按上一次调用中返回的字节数减小，尽管驱动程序通常无法发现可用数据量并返回 SQL_NO_TOTAL字节长度。 例如：  
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  
@@ -72,16 +72,16 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- 使用**SQLGetData**有几个限制。 通常，通过**SQLGetData**访问的列：  
+ 使用**SQLGetData**有几个限制。 通常，使用**SQLGetData**访问的列：  
   
--   必须按递增的列号（因为从数据源中读取结果集的列的方式）进行访问。 例如，对第5列调用**SQLGetData**是错误的，然后为第4列调用它。  
+-   必须按增加列数的顺序进行访问（因为从数据源读取结果集的列的方式）。 例如，为第 5 列调用**SQLGetData，** 然后为列 4 调用它是一个错误。  
   
 -   无法绑定。  
   
--   列号必须大于最后一个绑定列的列号。 例如，如果最后一个绑定列是第3列，则为第2列调用**SQLGetData**是错误的。 出于此原因，应用程序应确保将长数据列放在选择列表的末尾。  
+-   列号必须高于最后一个绑定列。 例如，如果最后一个绑定列是列 3，则为列 2 调用**SQLGetData**是错误的。 因此，应用程序应确保在选择列表的末尾放置长数据列。  
   
--   如果调用了**SQLFetch**或**SQLFetchScroll**来检索多个行，则不能使用。 有关详细信息，请参阅[使用块游标](../../../odbc/reference/develop-app/using-block-cursors.md)。  
+-   如果调用**SQLFetch**或**SQLFetchScroll**来检索多行，则无法使用。 有关详细信息，请参阅[使用块光标](../../../odbc/reference/develop-app/using-block-cursors.md)。  
   
- 某些驱动程序不会强制实施这些限制。 互操作应用程序应假设它们存在，或通过使用 SQL_GETDATA_EXTENSIONS 选项调用**SQLGetInfo**来确定不强制执行哪些限制。  
+ 某些驱动程序不强制执行这些限制。 可互操作的应用程序应假定它们存在，或者通过使用SQL_GETDATA_EXTENSIONS选项调用**SQLGetInfo**来确定不强制实施哪些限制。  
   
- 如果应用程序不需要字符列或二进制数据列中的所有数据，则可以在执行语句之前设置 SQL_ATTR_MAX_LENGTH 语句特性，从而减少基于 DBMS 的驱动程序中的网络流量。 这会限制将为任何字符列或二进制列返回的数据字节数。 例如，假设某列包含长文本文档。 浏览包含此列的表的应用程序可能必须只显示每个文档的第一页。 尽管可以在驱动程序中模拟此语句属性，但没有必要这样做。 特别是，如果应用程序要截断字符或二进制数据，则应使用**SQLBindCol**将小型缓冲区绑定到该列，并让驱动程序截断数据。
+ 如果应用程序不需要字符或二进制数据列中的所有数据，则可以在执行语句之前设置SQL_ATTR_MAX_LENGTH语句属性，从而减少基于 DBMS 的驱动程序中的网络流量。 这将限制将返回任何字符或二进制列的数据字节数。 例如，假设一列包含长文本文档。 浏览包含此列的表的应用程序可能必须仅显示每个文档的第一页。 尽管可以在驱动程序中模拟此语句属性，但没有理由执行此操作。 特别是，如果应用程序想要截截字符或二进制数据，它应该使用**SQLBindCol**将小缓冲区绑定到列，并让驱动程序截截数据。
