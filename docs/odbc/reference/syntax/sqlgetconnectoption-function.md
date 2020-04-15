@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectOption 函数 |Microsoft Docs
+title: SQLGetConnectOption 功能 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,27 +17,27 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetConnectOption function [ODBC]
 ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7461304a9aa015eac223dc726e669ad5c4ecd4ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94a29637365862990ea067f663023fae04a7af3e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103827"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285567"
 ---
 # <a name="sqlgetconnectoption-function"></a>SQLGetConnectOption 函数
-**度**  
- 引入的版本： ODBC 1.0 标准符合性：已弃用  
+**一致性**  
+ 版本介绍： ODBC 1.0 标准合规性： 已弃用  
   
- **总结**  
- 在 ODBC 3.x*中，odbc* *2.x 函数* **SQLGetConnectOption**已被**SQLGetConnectAttr**取代。 有关详细信息，请参阅[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)。  
+ **摘要**  
+ 在 ODBC *3.x*中，ODBC *2.x*函数**SQLGetConnectOption**已被**SQLGetConnectAttr**替换。 有关详细信息，请参阅[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)。  
   
 > [!NOTE]
->  有关 ODBC *2.x 应用程序**使用 odbc 2.x*驱动程序时，驱动程序管理器将此函数映射到的内容的详细信息，请参阅附录 G：驱动程序准则中的[映射弃用的函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)以实现向后兼容性。  
+>  有关驱动程序管理器将此功能映射到 ODBC *2.x*应用程序使用 ODBC *3.x*驱动程序时的详细信息，请参阅附录 G：向后兼容性驱动程序指南中的[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)。  
 > 
 > [!NOTE]
->  **SQLGetConnectOption**不支持 ODBC 3.8 中引入的属性 SQL_ASYNC_DBC_FUNCTION_ENABLE。 使用连接句柄上的异步操作的应用程序必须使用**SQLGetConnectAttr**。  
+>  **SQLGetConnectOption**不支持在 ODBC 3.8 中引入的属性SQL_ASYNC_DBC_FUNCTION_ENABLE。 在连接句柄上使用异步操作的应用程序必须使用**SQLGetConnectAttr**。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

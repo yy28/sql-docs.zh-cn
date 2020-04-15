@@ -1,5 +1,5 @@
 ---
-title: 处理返回代码和输出参数（ODBC） |Microsoft Docs
+title: 过程返回代码和输出参数 （ODBC） |微软文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,50 +11,48 @@ helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 156fc0a443d7c5742f49e4d94de6be6a12154172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780649"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281877"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>运行存储过程 - 处理返回代码和输出参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序支持将存储过程作为远程存储过程执行。 通过将存储过程作为远程存储过程执行，可使驱动程序和服务器能够优化存储过程的执行性能。  
   
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数在服务器的最后一个数据包中发送，在[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)返回 SQL_NO_DATA 之前，这些参数对应用程序不可用。 如果在存储过程中返回错误，请调用 SQLMoreResults 以转到下一个结果，直到返回 SQL_NO_DATA。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数从服务器发送到最后一个数据包中，在[SQLMore 结果](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)返回SQL_NO_DATA之前，应用程序不可用。 如果从存储过程返回错误，请致电 SQLMoreResult 以前进到下一个结果，直到返回SQL_NO_DATA。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保留凭据，则应使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>处理返回代码和输出参数  
   
 1.  构造使用 ODBC CALL 转义序列的 SQL 语句。 该语句应当对每个输入、输入/输出和输出参数以及过程返回值（如果有）使用参数标记。  
   
-2.  为每个输入、输入/输出和输出参数以及过程返回值（如果有）调用[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 。  
+2.  为每个输入、输入/输出和输出参数以及过程返回值（如果有）调用[SQLBind参数](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)。  
   
-3.  用**SQLExecDirect**执行语句。  
+3.  使用**SQLExecDirect**执行语句。  
   
-4.  处理结果集，直到**SQLFetch**或**SQLFetchScroll**在处理最后一个结果集时或在**SQLMoreResults**返回 SQL_NO_DATA 之前返回 SQL_NO_DATA。 这时，将以返回的数据值填充绑定到返回代码和输出参数的变量。  
+4.  进程结果集，直到**SQLFetch**或**SQLFetchScroll**在处理最后一个结果集时返回SQL_NO_DATA，或者直到**SQLMore 结果**返回SQL_NO_DATA。 这时，将以返回的数据值填充绑定到返回代码和输出参数的变量。  
 
 ## <a name="example"></a>示例  
  此示例显示如何处理返回代码和输出参数。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
- 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （您可以从 " [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)" 主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为 "SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从[Microsoft SQL 服务器示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载 AdventureWorks 示例数据库。此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为"SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）代码列表创建此示例使用的存储过程。  
+ 第一个[!INCLUDE[tsql](../../includes/tsql-md.md)]（ ） 代码列表创建此示例使用的存储过程。  
   
  使用 odbc32.lib 编译第二个 (C++) 代码列表。 然后，执行该程序。  
   
- 第三个[!INCLUDE[tsql](../../includes/tsql-md.md)]（）代码列表删除此示例使用的存储过程。  
+ 第三个[!INCLUDE[tsql](../../includes/tsql-md.md)]（ ） 代码列表将删除此示例使用的存储过程。  
   
 ```  
 use AdventureWorks  
@@ -196,6 +194,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[&#40;ODBC&#41;调用存储过程](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+[呼叫存储程序&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

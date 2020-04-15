@@ -1,5 +1,5 @@
 ---
-title: 支持本地事务 |Microsoft Docs
+title: 支持本地事务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,53 +15,53 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, transactions
 - local transactions [OLE DB]
 ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76e14df87e8dca104fc0b9da44836288dc56ea69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8533747bbe5ccb79a06b10a754c4af45ab241843
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761551"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280104"
 ---
 # <a name="supporting-local-transactions"></a>支持本地事务
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  会话分隔[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序本地事务的事务范围。 当使用者的方向时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 提供程序将请求提交给已连接的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，该请求构成了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供程序的工作单元。 本地事务始终 OLE DB 提供程序会话中包装一个或多个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工作单元。  
+  会话分隔[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序本地事务的事务范围。 当在使用者的指示下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序向 连接的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例提交请求时，请求构成了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序的工作单元。 本地事务始终在单个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序会话上包装一个或多个工作单元。  
   
- 使用默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 Native Client OLE DB 提供程序自动提交模式，单个工作单元被视为本地事务的作用域。 只能有一个单元参与本地事务。 当创建会话时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序会为会话启动一个事务。 在成功完成工作单元之后提交工作。 如果失败，则回滚任何已开始的任何工作，并向使用者报告错误。 在任一情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序都将为会话启动新的本地事务，以便在事务中执行所有工作。  
+ 使用默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序自动提交模式，单个工作单元将被视为本地事务的范围。 只能有一个单元参与本地事务。 创建会话时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序将开始会话的事务。 在成功完成工作单元之后提交工作。 如果失败，则回滚任何已开始的任何工作，并向使用者报告错误。 在这两种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序都启动会话的新本地事务，以便所有工作在事务中执行。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用者可以通过**ITransactionLocal**接口来更精确地控制本地事务范围。 当使用者会话启动事务时，事务起点和最终 Commit 或 Abort 方法调用之间的所有会话工作单元都被视为原子单元********。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者定向到此时，Native Client OLE DB 提供程序将隐式启动事务。 如果使用者未请求保持，该会话恢复为父事务级行为，通常为自动提交模式。  
+ 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序使用者可以使用**ITransactionLocal**接口更精确地控制本地事务范围。 当使用者会话启动事务时，事务起点和最终 Commit 或 Abort 方法调用之间的所有会话工作单元都被视为原子单元********。 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序在使用者指示时隐式启动事务。 如果使用者未请求保持，该会话恢复为父事务级行为，通常为自动提交模式。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持**ITransactionLocal：： StartTransaction**参数，如下所示。  
+ 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序支持**I事务本地：：启动事务**参数，如下所示。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
-|*isoLevel*[in]|用于该事务的隔离级别。 在本地事务中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持以下各项：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意：从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，ISOLATIONLEVEL_SNAPSHOT 对 isoLevel 参数有效，而不管是否对数据库启用了版本支持**。 但是，如果用户尝试执行语句，并且未启用版本支持和/或数据库不为只读，则将发生错误。 此外，如果在连接到 * 以前的 * 版本时将 ISOLATIONLEVEL_SNAPSHOT 指定为 isoLevel，将发生 XACT_E_ISOLATIONLEVEL 错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-|*isoFlags*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回除零以外的任何值的错误。|  
-|*pOtherOptions*[in]|如果不为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则 Native Client OLE DB 提供程序从接口请求 options 对象。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] options 对象的*ulTimeout*成员不为零，则 Native Client OLE DB 提供程序将返回 XACT_E_NOTIMEOUT。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序忽略*szDescription*成员的值。|  
-|*pulTransactionLevel*[out]|如果不为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则 Native Client OLE DB 提供程序将返回事务的嵌套级别。|  
+|** isoLevel[in]|用于该事务的隔离级别。 在本地事务中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序支持以下内容：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意：从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，ISOLATIONLEVEL_SNAPSHOT 对 isoLevel 参数有效，而不管是否对数据库启用了版本支持**。 但是，如果用户尝试执行语句，并且未启用版本支持和/或数据库不为只读，则将发生错误。 此外，如果在连接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本时将 ISOLATIONLEVEL_SNAPSHOT 指定为 isoLevel，将发生 XACT_E_ISOLATIONLEVEL 错误**。|  
+|** isoFlags[in]|本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序返回除零以外的任何值的错误。|  
+|** pOtherOptions[in]|如果不是 NULL，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序将从接口请求选项对象。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项对象的*ulTimeout*成员不是零，则本机客户端 OLE DB 提供程序将返回XACT_E_NOTIMEOUT。 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序忽略*sz 描述*成员的值。|  
+|** pulTransactionLevel[out]|如果不是 NULL，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序将返回事务的嵌套级别。|  
   
- 对于本地事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**ITransaction：： Abort**参数，如下所示。  
+ 对于本地事务，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序实现**I事务：：：中止**参数，如下所示。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
-|*pboidReason*[in]|忽略（如果设置）。 可以安全地为 NULL。|  
-|*fRetaining*[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将恢复为会话的自动提交模式。|  
-|*fAsync*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持异步中止。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值不为 FALSE，则 Native Client OLE DB 提供程序将返回 XACT_E_NOTSUPPORTED。|  
+|** pboidReason[in]|忽略（如果设置）。 可以安全地为 NULL。|  
+|** fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 FALSE 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序将恢复为会话的自动提交模式。|  
+|** fAsync[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序不支持异步中止。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值不是 FALSE，本机客户端 OLE 数据库提供程序将返回XACT_E_NOTSUPPORTED。|  
   
- 对于本地事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**ITransaction：： Commit**参数，如下所示。  
+ 对于本地事务，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序实现**I事务：：提交**参数，如下所示。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
-|*fRetaining*[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将恢复为会话的自动提交模式。|  
-|*grfTC*[in]|Native Client OLE DB 提供程序不支持异步和阶段[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一个返回。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序为除 XACTTC_SYNC 之外的任何值返回 XACT_E_NOTSUPPORTED。|  
-|*grfRM*[in]|必须为 0。|  
+|** fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 FALSE 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序将恢复为会话的自动提交模式。|  
+|** grfTC[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序不支持异步和阶段一返回。 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序返回XACT_E_NOTSUPPORTEDXACTTC_SYNC以外的任何值。|  
+|** grfRM[in]|必须为 0。|  
   
- 会话[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的 Native Client OLE DB 提供程序行集基于行集属性的值在本地提交或中止操作上保留 DBPROP_ABORTPRESERVE 和 DBPROP_COMMITPRESERVE。 默认情况下，这些属性都是 VARIANT_FALSE 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且会话上的所有 Native Client OLE DB 提供程序行集在中止或提交操作后将丢失。  
+ 会话[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的本机客户端 OLE DB 提供程序行集将保留在本地提交或中止操作上，具体取决于排集属性DBPROP_ABORTPRESERVE和DBPROP_COMMITPRESERVE的值。 默认情况下，这些属性都是VARIANT_FALSE，并且会话上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有本机客户端 OLE DB 提供程序行集在中止或提交操作后都会丢失。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序未实现**ITransactionObject**接口。 尝试检索接口上的引用的使用者将返回 E_NOINTERFACE。  
+ 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序不实现**I事务对象**接口。 尝试检索接口上的引用的使用者将返回 E_NOINTERFACE。  
   
  此示例使用 ITransactionLocal****。  
   
@@ -129,7 +129,7 @@ if (FAILED(hr))
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [记录](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
+ [交易](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [使用快照隔离](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   
   

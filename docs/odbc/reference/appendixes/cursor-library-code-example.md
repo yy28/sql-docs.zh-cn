@@ -1,5 +1,5 @@
 ---
-title: 游标库代码示例 |Microsoft Docs
+title: 光标库代码示例 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019076"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284677"
 ---
 # <a name="cursor-library-code-example"></a>游标库代码示例
 > [!IMPORTANT]  
->  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在将来版本的 Windows 中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的光标功能。  
   
- 下面的示例使用游标库检索 ORDERS 表中每个订单的 ID、打开日期和状态。 然后，它会显示20行数据。 如果用户更新这些数据，则代码会更新行集缓冲区并执行定位的 update 语句。 最后，它会提示用户滚动滚动并重复该过程。  
+ 下面的示例使用游标库从 ORDERS 表检索每个订单的 ID、打开日期和状态。 然后，它显示 20 行数据。 如果用户更新此数据，代码将更新行集缓冲区并执行定位的更新语句。 最后，它提示用户方向滚动并重复该过程。  
   
 ```  
 #define ROWS 20  

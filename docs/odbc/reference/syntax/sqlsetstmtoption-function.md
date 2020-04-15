@@ -1,5 +1,5 @@
 ---
-title: SQLSetStmtOption 函数 |Microsoft Docs
+title: SQLSetStmtOption 函数 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,27 +17,27 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetStmtOption function [ODBC]
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66a944c22c5f3c31ac1bd4cd8f556e97f28d331d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbbb186176868681c60831db71c4530edd97de4d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039569"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287247"
 ---
 # <a name="sqlsetstmtoption-function"></a>SQLSetStmtOption 函数
-**度**  
- 引入的版本： ODBC 1.0 标准符合性：已弃用  
+**一致性**  
+ 版本介绍： ODBC 1.0 标准合规性： 已弃用  
   
- **总结**  
- 在 ODBC 3.x*中，odbc*2.0 函数**SQLSetStmtOption**已被**SQLSetStmtAttr**取代。 有关详细信息，请参阅[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
+ **摘要**  
+ 在 ODBC 3 *.x*中，ODBC 2.0 函数**SQLSetStmtOption**已被**SQLSetStmtAttr**替换。 有关详细信息，请参阅[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
   
 > [!NOTE]
->  有关 ODBC*2.x 应用程序*使用 odbc 2.x 驱动程序时，驱动程序管理器将此函数映射到的内容的详细信息，请参阅附录 G：*驱动程序准则*中的[映射弃用的函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)以实现向后兼容性。  
+>  有关驱动程序管理器将此功能映射到 ODBC 2 *.x*应用程序使用 ODBC 3 *.x*驱动程序时的详细信息，请参阅附录 G：向后兼容性驱动程序指南中的[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)。  
   
 ## <a name="remarks"></a>备注  
- 如果你的应用程序将在64位操作系统上运行，请参阅[ODBC 64 位信息](../../../odbc/reference/odbc-64-bit-information.md)。  
+ 如果应用程序将在 64 位操作系统上运行，请参阅[ODBC 64 位信息](../../../odbc/reference/odbc-64-bit-information.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

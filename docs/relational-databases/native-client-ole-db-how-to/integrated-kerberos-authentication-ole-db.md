@@ -1,5 +1,5 @@
 ---
-title: 集成的 Kerberos 身份验证（OLE DB） |Microsoft Docs
+title: 集成的 Kerberos 身份验证 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2773078b8e442b1cfed70ccb9f4a8518b108b678
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0f86c41fb3884494f38f0b7817ff0eabe2d4dfcb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789909"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302258"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73789909"
   
  此外，还必须指定一个客户提供的 SPN。 在 .cpp 文件 中，将“CPSPN”更改为客户提供的 SPN。  
   
- 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
+ 确保 INCLUDE 环境变量包含包含 sqlncli.h 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

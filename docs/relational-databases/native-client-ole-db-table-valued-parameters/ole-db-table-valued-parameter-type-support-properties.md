@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f289da99108bb51c90f9f15bbe8d39a20a6be78
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242772"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283082"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 表值参数类型支持（属性）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "75242772"
   本主题提供有关与表值参数行集对象相关联的 OLE DB 属性和属性集的信息。  
   
 ## <a name="properties"></a>属性  
- 下面列出了通过表值参数行集对象上的 IRowsetInfo::GetProperties 方法公开的属性。 请注意，所有表值参数行集属性都是只读的。 因此，尝试通过 IOpenRowset：： OpenRowset 或 ITableDefinitionWithConstraints：： CreateTableWithConstraints 方法将任何属性设置为其非默认值将导致错误，并且不会创建任何对象。  
+ 下面列出了通过表值参数行集对象上的 IRowsetInfo::GetProperties 方法公开的属性。 请注意，所有表值参数行集属性都是只读的。 因此，尝试通过 IOpenRowset::OpenRowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 方法将任何属性设置为其非默认值将导致错误，并且不会创建任何对象。  
   
  在此处未列出在表值参数行集对象中未实现的属性。 有关属性的完整列表，请参阅 Windows 数据访问组件中的 OLE DB 文档。  
   
-|属性 ID|值|  
+|属性 ID|“值”|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -78,7 +78,7 @@ ms.locfileid: "75242772"
  以下属性集支持表值参数。  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- 如果需要，此属性由使用者在创建表值参数行集对象的过程中，通过将 ITableDefinitionWithConstraints：： CreateTableWithConstraints 用于每个列的 DBCOLUMNDESC 结构。  
+ 在通过 DBCOLUMNDESC 结构（如果需要）为每一列使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 来创建表值参数行集对象的过程中，使用者将使用此属性。  
   
 |属性 ID|属性值|  
 |-----------------|--------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "75242772"
 |||
 
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 这些属性由使用者读取，同时在对 ISSCommandWithParameters：： GetParameterProperties 的调用中发现表值参数类型信息，并在设置有关表值参数的特定属性时由使用者设置通过 ISSCommandWithParameters：： SetParameterProperties。  
+ 这些属性由使用者在对 ISSCommandWithParameters::GetParameterProperties 的调用中发现表值参数类型信息时读取，并且由使用者在通过 ISSCommandWithParameters::SetParameterProperties 设置有关表值参数的特定属性时设置。  
   
  下表详细说明了这些属性。  
   
@@ -95,8 +95,8 @@ ms.locfileid: "75242772"
 |SSPROP_PARAM_TYPE_TYPENAME|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型：VT_BSTR<br /><br /> 说明：使用者使用此属性获取或设置表值参数类型的名称。<br /><br /> 此属性还可以用于 CLR 用户定义类型。<br /><br /> 可以选择指定此属性，以便为表值参数提供表类型名称（在 ODBC 调用语法命令的情况下）。 此属性是即席参数化 SQL 查询所必需的。|  
 |SSPROP_PARAM_TYPE_SCHEMANAME|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型：VT_BSTR<br /><br /> 说明：使用者使用此属性获取或设置表值参数类型的架构名称。<br /><br /> 此属性还可以用于 CLR 用户定义类型。|  
 |SSPROP_PARAM_TYPE_CATALOGNAME|R/W：只读<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型：VT_BSTR<br /><br /> 说明：使用者使用此属性获取表值参数类型的目录名称。<br /><br /> 此属性还可以用于 CLR 用户定义类型。 设置此属性是错误的；用户定义表类型必须与使用它们的表值参数处于同一数据库中。|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型： VT_UI2 &#124; VT_ARRAY<br /><br /> 说明：使用者使用此属性指定行集中哪些列集要视作默认值。 将不为这些列发送值。 在从使用者行集对象提取数据时，提供程序不要求对此类列的绑定。<br /><br /> 数组中的每个元素都应是行集对象中某一列的序号。 无效的序号将导致在执行命令时发生错误。|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型： VT_UI2 &#124; VT_ARRAY<br /><br /> 说明：使用者使用此属性向服务器提供提示，以便指出列数据的排序顺序。 提供程序不执行任何验证，并且假定使用者符合已提供的规范。 服务器使用此属性执行优化。<br /><br /> 每一列的列顺序信息均由数组中的一对元素表示。 该元素对中的第一个元素是列的编号。 该元素对中的第二个元素将是 1 或 2，分别表示升序或降序。|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型：VT_UI2&#124;VT_ARRAY<br /><br /> 说明：使用者使用此属性指定行集中哪些列集要视作默认值。 将不为这些列发送值。 在从使用者行集对象提取数据时，提供程序不要求对此类列的绑定。<br /><br /> 数组中的每个元素都应是行集对象中某一列的序号。 无效的序号将导致在执行命令时发生错误。|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W：读/写<br /><br /> 默认值：VT_EMPTY<br /><br /> 类型：VT_UI2&#124;VT_ARRAY<br /><br /> 说明：使用者使用此属性向服务器提供提示，以便指出列数据的排序顺序。 提供程序不执行任何验证，并且假定使用者符合已提供的规范。 服务器使用此属性执行优化。<br /><br /> 每一列的列顺序信息均由数组中的一对元素表示。 该元素对中的第一个元素是列的编号。 该元素对中的第二个元素将是 1 或 2，分别表示升序或降序。|  
 |||
 
 ## <a name="see-also"></a>另请参阅  

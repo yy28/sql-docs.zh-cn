@@ -1,5 +1,5 @@
 ---
-title: 获取相互的 Kerberos 身份验证 |Microsoft Docs
+title: 获取相互 Kerberos 身份验证 |微软文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d222f54b3c19d0deaeab4a370ded226856f2246
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73782812"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301107"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>获取 Kerberos 相互身份验证
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "73782812"
   
  此示例不适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 有关详细信息，请参阅[客户端连接中的服务主体名称 &#40;SPN&#41; 支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 有关详细信息，请参阅[服务主体名称&#40;SPN&#41;客户端连接中的支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>示例  
  如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
@@ -36,7 +36,7 @@ ms.locfileid: "73782812"
   
  此外，还必须指定一个客户提供的 SPN。 将“CP_SPN”更改为客户提供的 SPN。  
   
- 使用 /EHsc、/D "_UNICODE"、/D "UNICODE" 和 odbc32.lib 进行编译。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
+ 使用 /EHsc、/D "_UNICODE"、/D "UNICODE" 和 odbc32.lib 进行编译。 确保 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
   
 ```  
 // compile with: /EHsc /D "_UNICODE" /D "UNICODE" odbc32.lib  

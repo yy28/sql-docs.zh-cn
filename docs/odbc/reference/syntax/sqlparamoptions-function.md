@@ -1,5 +1,5 @@
 ---
-title: SQLParamOptions 函数 |Microsoft Docs
+title: SQLParam 选项函数 |微软文档
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,27 +18,27 @@ f1_keywords:
 helpviewer_keywords:
 - SQLParamOptions function [ODBC]
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ebcd3da4f5e7d57bbc8883ebf7409ff5ea106f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 209cfe6444918a40f5199af1f1a839050a3a6a57
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306908"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions 函数
-**度**  
- 引入的版本： ODBC 1.0 标准符合性：已弃用  
+**一致性**  
+ 版本介绍： ODBC 1.0 标准合规性： 已弃用  
   
- **总结**  
- Odbc 2.0 函数**SQLParamOptions**已在 odbc 3 中被替换。*x*调用[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
+ **摘要**  
+ ODBC 2.0 函数**SQLParamOptions**已在 ODBC 3 中进行了更换。*x*通过调用[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
   
 > [!NOTE]  
->  有关在 ODBC 2 时驱动程序管理器将此函数映射到的内容的详细信息。*x*应用程序正在使用 ODBC 3。*x*驱动程序，有关向后兼容性，请参阅附录 G：驱动程序准则中的[映射弃用的函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)。  
+>  有关驱动程序管理器将此功能映射到 ODBC 2 时的详细信息。*x*应用程序使用 ODBC 3。*x*驱动程序，请参阅附录 G 中的[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)：向后兼容性的驱动程序指南。  
   
 ## <a name="remarks"></a>备注  
- 如果你的应用程序将在64位操作系统上运行，请参阅[ODBC 64 位信息](../../../odbc/reference/odbc-64-bit-information.md)。  
+ 如果应用程序将在 64 位操作系统上运行，请参阅[ODBC 64 位信息](../../../odbc/reference/odbc-64-bit-information.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

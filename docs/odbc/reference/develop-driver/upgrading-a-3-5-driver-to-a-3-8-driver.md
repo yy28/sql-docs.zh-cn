@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97b100b1ade97e1e88cf1421f09a7723412c8b76
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dcd01d050e806b733d75c54058945d367a33d6a7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79289795"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294428"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>将 3.5 驱动程序升级到 3.8 驱动程序
 本主题提供了将 ODBC 3.5 驱动程序升级到 ODBC 3.8 驱动程序的指南和注意事项。  
@@ -56,7 +56,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
   
  从 Windows 7 开始，ODBC 支持轮询方法（有关详细信息，请参阅[异步执行（轮询方法）。](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md) 不需要版本 3.8 ODBC 驱动程序对连接句柄实现异步操作。 即使驱动程序未在连接句柄上实现异步操作，驱动程序仍应实现SQL_ASYNC_DBC_FUNCTIONS *InfoType*并返回**SQL_ASYNC_DBC_NOT_CAPABLE**。  
   
- 启用异步连接操作后，连接操作的运行时间是所有重复调用的总时间。 如果上次重复调用发生在总时间超过 SQL_ATTR_CONNECTION_TIMEOUT 连接属性设置的值之后，并且操作尚未完成，则驱动程序将返回SQL_ERROR，并记录使用 SQLState HYT01 和消息"连接超时已过期"。 如果操作完成，则没有超时。  
+ 启用异步连接操作后，连接操作的运行时间是所有重复调用的总时间。 如果上次重复调用发生在总时间超过SQL_ATTR_CONNECTION_TIMEOUT连接属性设置的值之后，并且操作尚未完成，则驱动程序返回SQL_ERROR，并记录 SQLState HYT01 和消息"连接超时已过期"。。 如果操作完成，则没有超时。  
   
 ##### <a name="sqlcancelhandle-function"></a>SQLCancelHandle 函数  
  ODBC 3.8 支持[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)，用于取消连接和语句操作。 支持**SQLCancelHandle**的驱动程序必须导出该函数。 如果应用程序在语句句柄上调用**SQLCancel**或**SQLCancelHandle，** 驱动程序不应取消正在进行的任何同步或异步连接功能。 同样，如果应用程序在连接句柄上调用**SQLCancelHandle，** 驱动程序不应取消正在进行的任何同步或异步语句函数。 此外，如果应用程序在连接句柄上调用**SQLCancelHandle，** 驱动程序不应取消浏览操作 **（SQLBrowseConnect**返回SQL_NEED_DATA）。 在这些情况下，驱动程序应返回 HY010，"功能序列错误"。  

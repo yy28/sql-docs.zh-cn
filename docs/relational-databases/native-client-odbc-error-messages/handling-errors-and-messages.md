@@ -1,5 +1,5 @@
 ---
-title: 处理错误和消息 |Microsoft Docs
+title: 处理错误和消息 |微软文档
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - errors [ODBC], about error handling
 - messages [ODBC]
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 779a06881d49cf7853f20a5241c52b25d4ccfc24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 59bb40dbfc7f8596968d2dc441396dc9c076bb82
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783465"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291617"
 ---
 # <a name="handling-errors-and-messages"></a>处理错误和消息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,15 +34,15 @@ ms.locfileid: "73783465"
   
  诊断信息用于在开发时捕获编程错误，例如硬编码的 SQL 语句中的无效句柄和语法错误。 此外，该信息还用于在运行时捕获运行时错误和警告，例如用户输入的 SQL 语句中的数据截断、规则冲突和语法错误。 程序逻辑通常基于返回代码。  
   
- 例如，在应用程序调用**SQLFetch**来检索结果集中的行后，返回代码指示是否已到达结果集的末尾（SQL_NO_DATA）、是否返回了任何信息性消息（SQL_SUCCESS_WITH_INFO），或者是否发生了错误（SQL_ERROR）。  
+ 例如，在应用程序调用**SQLFetch**检索结果集中的行后，返回代码指示是否到达结果集的末尾（SQL_NO_DATA），是否返回任何信息性消息（SQL_SUCCESS_WITH_INFO），或者是否发生错误（SQL_ERROR）。  
   
- 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序返回 SQL_SUCCESS 以外的任何内容，则应用程序可以调用**SQLGetDiagRec**来检索任何信息或错误消息。 如果有多个消息，请使用**SQLGetDiagRec**向下和向下滚动消息集。  
+ 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序返回SQL_SUCCESS以外的任何内容，则应用程序可以调用**SQLGetDiagRec**来检索任何信息或错误消息。 如果消息集有多个消息，请使用**SQLGetDiagRec**向上和向下滚动消息集。  
   
  返回代码 SQL_INVALID_HANDLE 始终指示编程错误，并且决不能在运行时遇到。 所有其他返回代码提供运行时信息，但 SQL_ERROR 可以指示编程错误。  
   
- 用于 C [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的原始本机 API db-library 允许应用程序安装回调错误处理和消息处理函数，这些函数将返回错误或消息。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（如 PRINT、RAISERROR、DBCC 和 SET）将其结果返回到 DB-Library 消息处理程序函数，而不是结果集。 但是，ODBC API 不具备这种回调功能。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序检测到返回的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息时，它会将 ODBC 返回代码设置为 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 并将消息作为一个或多个诊断记录返回。 因此，ODBC 应用程序必须仔细测试这些返回代码，并调用**SQLGetDiagRec**来检索消息数据。  
+ 原始[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机 API DB-Library 表示 C，允许应用程序安装回调错误处理和消息处理功能，这些函数返回错误或消息。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（如 PRINT、RAISERROR、DBCC 和 SET）将其结果返回到 DB-Library 消息处理程序函数，而不是结果集。 但是，ODBC API 不具备这种回调功能。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序检测到从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的消息时，它将 ODBC 返回代码设置为SQL_SUCCESS_WITH_INFO或SQL_ERROR，并将消息作为一个或多个诊断记录返回。 因此，ODBC 应用程序必须仔细测试这些返回代码，并调用**SQLGetDiagRec**检索消息数据。  
   
- 有关跟踪错误的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 有关中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]添加的错误跟踪的增强功能的信息，请参阅[访问扩展事件日志中的诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
+ 有关跟踪错误的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中添加的错误跟踪的增强功能的信息，请参阅[访问扩展事件日志中的诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -57,6 +57,6 @@ ms.locfileid: "73783465"
 -   [错误消息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

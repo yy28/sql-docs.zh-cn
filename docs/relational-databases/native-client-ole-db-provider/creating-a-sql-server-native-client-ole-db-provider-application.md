@@ -1,5 +1,5 @@
 ---
-title: SQL Native Client OLE DB 提供程序应用
+title: SQL 本机客户端 OLE 数据库提供程序应用
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - OLE DB, creating applications
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a920320860512dcc0cdd80619cd7aa671c96a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ef8459fb3d906be6efca0e47d83418fb70bdebdb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247134"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289657"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>创建 SQL Server Native Client OLE DB 访问接口应用程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序应用程序涉及以下步骤：  
+  创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序应用程序涉及以下步骤：  
   
 1.  建立与数据源的连接。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "75247134"
   
 -   [处理结果](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
   
--   [关于 OLE DB 属性](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
+-   [关于 OLE 数据库属性](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
   
--   [在 SQL Server Native Client 中对 OLE DB 使用 OUTPUT 子句](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
+-   [在 SQL Server Native Client 中使用 OUTPUT 子句 (OLE DB)](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

@@ -1,5 +1,5 @@
 ---
-title: 准备和执行语句（ODBC） |Microsoft Docs
+title: 准备和执行声明 （ODBC） |微软文档
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eaf7e3518f369639ba3d2eb854a103ff839276c7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781394"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294057"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>准备和执行语句 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,27 +27,27 @@ ms.locfileid: "73781394"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>准备一次语句，然后多次执行它  
   
-1.  调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)可准备语句。  
+1.  调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)准备语句。  
   
-2.  也可以调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)来确定预定义语句中的参数数量。  
+2.  或者，调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)以确定准备好语句中的参数数。  
   
 3.  （可选）对于预定义语句中的每个参数：  
   
-    -   调用[SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)以获取参数信息。  
+    -   调用[SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)获取参数信息。  
   
-    -   使用[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)将每个参数绑定到程序变量。 设置任何执行时数据参数。  
+    -   使用[SQLBind 参数](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)将每个参数绑定到程序变量。 设置任何执行时数据参数。  
   
 4.  对于每次执行预定义语句：  
   
     -   如果语句有参数标记，请将数据值放到绑定参数缓冲区中。  
   
-    -   调用[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)以执行预定义语句。  
+    -   调用[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)以执行准备好的语句。  
   
-    -   如果使用执行时数据输入参数，则[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)将返回 SQL_NEED_DATA。 使用[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
+    -   如果使用执行时的数据输入参数[，SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)将返回SQL_NEED_DATA。 使用[SQLParam 数据和](https://go.microsoft.com/fwlink/?LinkId=58405) [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以块发送数据。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>用按列参数绑定预定义语句  
   
-1.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置以下属性：  
+1.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)来设置以下属性：  
   
     -   将 SQL_ATTR_PARAMSET_SIZE 设置为参数集 (S) 的数目。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "73781394"
   
     -   将 SQL_ATTR_PARAMS_STATUS_PTR 设置为指向 SQLUSSMALLINT 变量的数组 array[S]，以包含参数状态指示器。  
   
-2.  调用 SQLPrepare 以准备语句。  
+2.  调用 SQLPrepare 准备语句。  
   
-3.  也可以调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)来确定预定义语句中的参数数量。  
+3.  或者，调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)以确定准备好语句中的参数数。  
   
-4.  （可选）对于预定义语句中的每个参数，调用 SQLDescribeParam 以获取参数信息。  
+4.  或者，对于准备语句中的每个参数，调用 SQLDescribeParam 获取参数信息。  
   
 5.  对于每个参数标记：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73781394"
   
     -   分配 S 参数缓冲区的数组以存储数据长度。  
   
-    -   调用 SQLBindParameter，将参数数据值和数据长度数组绑定到语句参数。  
+    -   调用 SQLBind 参数将参数数据值和数据长度数组绑定到语句参数。  
   
     -   如果参数是执行时数据文本或映像参数，则设置它。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73781394"
   
     -   调用 SQLExecute 以执行预定义语句。  
   
-    -   如果使用执行时数据输入参数，则 SQLExecute 返回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以区块形式发送数据。  
+    -   如果使用执行时数据输入参数，则 SQLExecute 返回 SQL_NEED_DATA。 使用 SQLParam 数据和 SQLPutData 以区块发送数据。  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>用按行绑定参数预定义语句  
   
@@ -91,7 +91,7 @@ ms.locfileid: "73781394"
   
     -   第二部分是 SQLINTEGER 变量，以包含状态指示器。  
   
-2.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置以下属性：  
+2.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)来设置以下属性：  
   
     -   将 SQL_ATTR_PARAMSET_SIZE 设置为参数集 (S) 的数目。  
   
@@ -101,9 +101,9 @@ ms.locfileid: "73781394"
   
     -   将 SQL_ATTR_PARAMS_STATUS_PTR 设置为指向 SQLUSSMALLINT 变量的数组 array[S]，以包含参数状态指示器。  
   
-3.  调用 SQLPrepare 以准备语句。  
+3.  调用 SQLPrepare 准备语句。  
   
-4.  对于每个参数标记，调用 SQLBindParameter，将参数数据值和数据长度指针指向其在步骤1中分配的结构数组的第一个元素中的变量。 如果参数是执行时数据参数，则设置它。  
+4.  对于每个参数标记，调用 SQLBindParameter 以将参数数据值和数据长度指针指向步骤 1 中分配的结构数组的第一个元素中的变量。 如果参数是执行时数据参数，则设置它。  
   
 5.  对于每次执行预定义语句：  
   
@@ -111,9 +111,9 @@ ms.locfileid: "73781394"
   
     -   调用 SQLExecute 以执行预定义语句。 驱动程序将有效地执行 SQL 语句 S 次，每组参数一次。  
   
-    -   如果使用执行时数据输入参数，则 SQLExecute 返回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以区块形式发送数据。  
+    -   如果使用执行时数据输入参数，则 SQLExecute 返回 SQL_NEED_DATA。 使用 SQLParam 数据和 SQLPutData 以区块发送数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;执行查询操作指南主题](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [执行查询"如何"主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   
