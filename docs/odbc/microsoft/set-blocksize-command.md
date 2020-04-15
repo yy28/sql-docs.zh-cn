@@ -1,5 +1,5 @@
 ---
-title: 设置区块命令 |Microsoft Docs
+title: 设置块大小命令 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - set blocksize command [ODBC]
 ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe84a470f5e877c73701168394cd85d75253fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3eb9fbe9df90f7ddafebc6baa029164a578a6da3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67997757"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300897"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE 命令
-指定为备注字段的存储分配磁盘空间的方式。  
+指定如何为备忘录字段的存储分配磁盘空间。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,8 +30,8 @@ SET BLOCKSIZE TO nBytes
 ```  
   
 ## <a name="arguments"></a>参数  
- *nBytes*  
- 指定为备注字段分配的磁盘空间的块大小。 如果*nBytes*为0，则以单字节（1字节的块）分配磁盘空间。 如果*nBytes*是1到32之间的整数，则磁盘空间按*nBytes*字节的块进行分配，乘以512。 如果*nBytes*大于32，则将在*nBytes*字节的块中分配磁盘空间。 如果指定的块大小值大于32，可以节省大量磁盘空间。  
+ *n 字节*  
+ 指定分配备忘录字段的磁盘空间的块大小。 如果*n 字节*为 0，则以单个字节（1 字节的块）分配磁盘空间。 如果*n 字节*是介于 1 和 32 之间的整数，则磁盘空间以 n*字节*块乘以 512 为单位分配。 如果*n 字节*大于 32，则以 n*字节*块分配磁盘空间。 如果指定块大小值大于 32，则可以节省大量磁盘空间。  
   
 ## <a name="remarks"></a>备注  
- SET 块大小的默认值为64。 若要在创建文件后将块大小重置为其他值，请将其设置为新值，然后使用 "复制" 创建新表。 新表具有指定的块大小。
+ SET BLOCKSIZE 的默认值为 64。 要在创建文件后将块大小重置为其他值，请将其设置为新值，然后使用 COPY 创建新表。 新表具有指定的块大小。

@@ -1,5 +1,5 @@
 ---
-title: SQLCloseCursor 函数 |Microsoft Docs
+title: SQLCloseCursor 函数 |微软文档
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,21 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCloseCursor function [ODBC]
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef336a4deb734c0e44f9c15ae7f9faf0dcb32d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f2703af46e6043fbadb7d3ceb5c00c565c1f6777
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343154"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301297"
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 函数
-**度**  
- 引入的版本： ODBC 3.0 标准符合性： ISO 92  
+**一致性**  
+ 推出版本： ODBC 3.0 标准合规性： ISO 92  
   
- **总结**  
- **SQLCloseCursor**关闭已在语句上打开的游标，并放弃挂起的结果。  
+ **摘要**  
+ **SQLCloseCursor**关闭已在语句上打开的游标，并丢弃挂起的结果。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,44 +43,44 @@ SQLRETURN SQLCloseCursor(
 ```  
   
 ## <a name="arguments"></a>参数  
- *StatementHandle*  
- 送语句句柄。  
+ *语句句柄*  
+ [输入]语句句柄。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR或SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLCloseCursor**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLCloseCursor**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
+ 当**SQLCloseCursor**返回SQL_ERROR或SQL_SUCCESS_WITH_INFO时，可以通过调用**SQLGetDiagRec**获取关联的 SQLSTATE 值，该值具有*Handle*SQL_HANDLE_STMT的*句柄类型*和*语句句柄*。 下表列出了**SQLCloseCursor**通常返回的 SQLSTATE 值，并在此函数的上下文中解释了每个值;符号"（DM）"在驱动程序管理器返回的 SQLStatEs 描述之前。 除非另有说明，否则与每个 SQLSTATE 值关联的返回代码将SQL_ERROR。  
   
-|SQLSTATE|错误|说明|  
+|SQLSTATE|错误|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|24000|无效的游标状态|*StatementHandle*上没有打开的游标。 （这仅由 ODBC 3 返回。*x*驱动程序。）|  
-|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
-|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
-|HY010|函数序列错误|（DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数，并且在调用此函数时仍在执行该函数。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数，并且在调用此函数时仍在执行该函数。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**调用了*StatementHandle*并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
-|HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
-|HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。|（DM）有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此功能|（DM）与*StatementHandle*关联的驱动程序不支持该函数。|  
+|01000|一般警告|特定于驱动程序的信息消息。 （函数返回SQL_SUCCESS_WITH_INFO。|  
+|24000|无效的游标状态|*语句句柄*上未打开任何光标。 （这仅由 ODBC 3 返回。*x*驱动程序。|  
+|HY000|常规错误|发生一个错误，其中没有特定的 SQLSTATE，并且没有定义特定于实现的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*缓冲区中返回的错误消息描述了错误及其原因。|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成函数所需的内存。|  
+|HY010|函数序列错误|（DM） 与*语句句柄*关联的连接句柄调用异步执行函数，并在调用此函数时仍在执行。<br /><br /> （DM） 为*语句句柄*调用了异步执行函数，并且在调用此函数时仍在执行。<br /><br /> （DM） SQLExecute、SQLExecDirect、SQLBulk**操作**或**SQLSetPos**被调用用于**SQLExecute***语句句柄*并返回SQL_NEED_DATA。 **SQLExecDirect** 在发送所有执行时数据参数或列的数据之前，调用了此功能。|  
+|HY013|内存管理错误|无法处理函数调用，因为无法访问基础内存对象，可能是因为内存条件较低。|  
+|HY117|由于未知事务状态，连接挂起。 只允许断开连接和只读功能。|（DM） 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|连接超时已过期|在数据源响应请求之前，连接超时期限已过期。 连接超时周期通过**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT设置。|  
+|IM001|驱动程序不支持此功能|（DM） 与*语句句柄*关联的驱动程序不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- 如果没有打开的游标，则**SQLCloseCursor**将返回 SQLSTATE 24000 （无效的游标状态）。 调用**SQLCloseCursor**等效于调用带有 SQL_CLOSE 选项的**SQLFreeStmt** ，但如果语句上没有打开的游标，则与 SQL_CLOSE 的**SQLFreeStmt**不会对应用程序产生任何影响，而**SQLCloseCursor**返回 SQLSTATE 24000 （无效的游标状态）。  
+ 如果没有打开游标 **，SQLCloseCursor**将返回 SQLSTATE 24000（无效游标状态）。 调用**SQLCloseCursor**等效于使用SQL_CLOSE选项调用**SQLFreeStmt，** 但除了**sqlFreeStmt**具有SQL_CLOSE对应用程序没有影响，如果语句上未打开游标，而**SQLCloseCursor**返回 SQLSTATE 24000（无效游标状态）。  
   
 > [!NOTE]  
->  如果为 ODBC 3。使用 ODBC 2 的*x*应用程序。*x*驱动程序在未打开任何游标时调用**SQLCloseCursor** ，未返回 SQLSTATE 24000 （无效的游标状态），因为驱动程序管理器将**SQLCloseCursor**映射到**SQLFreeStmt**与 SQL_CLOSE。  
+>  如果 ODBC 3.*x*应用程序使用 ODBC 2。*x*驱动程序在未打开游标时调用**SQLCloseCursor，** 不会返回 SQLSTATE 24000（无效游标状态），因为驱动程序管理器将**SQLCloseCursor**映射到具有SQL_CLOSE的**SQLFreeStmt。**  
   
  有关详细信息，请参阅[关闭光标](../../../odbc/reference/develop-app/closing-the-cursor.md)。  
   
 ## <a name="code-example"></a>代码示例  
- 请参阅[SQLBrowseConnect 函数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)和[SQLConnect 函数](../../../odbc/reference/syntax/sqlconnect-function.md)。  
+ 请参阅[SQLBrowse连接函数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)和[SQLConnect 函数](../../../odbc/reference/syntax/sqlconnect-function.md)。  
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关以下方面的信息|请参阅|  
+|有关以下方面的信息|查看|  
 |---------------------------|---------|  
-|正在取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|释放句柄|[SQLFreeHandle 函数](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
+|取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|释放手柄|[SQLFreeHandle 函数](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |处理多个结果集|[SQLMoreResults 函数](../../../odbc/reference/syntax/sqlmoreresults-function.md)|  
   
 ## <a name="see-also"></a>另请参阅  

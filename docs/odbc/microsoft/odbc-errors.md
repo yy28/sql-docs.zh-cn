@@ -1,5 +1,5 @@
 ---
-title: ODBC 错误 |Microsoft Docs
+title: ODBC 错误 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - errors (ODBC desktop database drivers)
 ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7aa5d75b01fc30783505b2e149f3487b50f75150
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 06ef8558ce8e4266cdd77736bdceae210658b14b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915828"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298087"
 ---
 # <a name="odbc-errors"></a>ODBC 错误
-出现错误时，Microsoft ODBC 桌面数据库驱动程序将返回本机错误号、SQLSTATE （ODBC 错误代码）和错误消息。  
+发生错误时，Microsoft ODBC 桌面数据库驱动程序返回本机错误编号、SQLSTATE（ODBC 错误代码）和错误消息。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [本机错误](../../odbc/microsoft/native-error.md)  
   

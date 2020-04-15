@@ -1,5 +1,5 @@
 ---
-title: ODBC 函数和游标库 |Microsoft Docs
+title: ODBC 函数和光标库 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d8293e9bc952fc1dffc5a8f796f5a066b91ae811
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100662"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304338"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 函数和游标库
 > [!IMPORTANT]  
->  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在将来版本的 Windows 中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的光标功能。  
   
- 为连接启用 ODBC 游标库时，驱动程序管理器将调用游标库中的函数，而不是在驱动程序中。 游标库执行该函数或在指定的驱动程序中调用它。  
+ 启用连接的 ODBC 游标库后，驱动程序管理器将调用游标库中的函数，而不是在驱动程序中调用函数。 游标库要么执行该函数，要么在指定的驱动程序中调用它。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [由游标库执行的 ODBC 函数](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
   
@@ -33,9 +33,9 @@ ms.locfileid: "68100662"
   
 -   [SQLBindParameter（游标库）](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
   
--   [SQLBulkOperations （游标库）](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
+-   [SQLBulk 操作（光标库）](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
   
--   [SQLCloseCursor （游标库）](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
+-   [SQLCloseCursor（光标库）](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
   
 -   [SQLEndTran（游标库）](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68100662"
   
 -   [SQLSetDescField 和 SQLSetDescRec（游标库）](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
   
--   [SQLSetEnvAttr （游标库）](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
+-   [SQLSetEnvAttr（光标库）](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
   
 -   [SQLSetPos（游标库）](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
   

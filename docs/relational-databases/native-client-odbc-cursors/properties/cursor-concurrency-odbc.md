@@ -1,5 +1,5 @@
 ---
-title: 游标并发（ODBC） |Microsoft Docs
+title: 光标并发 （ODBC） |微软文档
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - cursors [ODBC], concurrency
 - ODBC cursors, concurrency
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3ea2db629f1a1621e23257a35be52a2f58a6ea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 309bfb0313adeeb0002910975c0a484461ea608c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784221"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298361"
 ---
 # <a name="cursor-concurrency-odbc"></a>游标并发 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  和游标类型一样，游标操作也受应用程序设置的并发选项的影响。 并发选项是使用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)的 SQL_ATTR_CONCURRENCY 选项设置的。 并发类型包括：  
+  和游标类型一样，游标操作也受应用程序设置的并发选项的影响。 使用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)SQL_ATTR_CONCURRENCY 选项设置并发选项。 并发类型包括：  
   
 -   只读 (SQL_CONCUR_READONLY)  
   

@@ -1,5 +1,5 @@
 ---
-title: 表值参数，内存中的值（ODBC）
+title: 表值参数，内存中的值 （ODBC）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6530c3b558f26e3f75f5cff63f33f2e58c119c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 042dd929e2000000042618d84dc0195ec57a3e9c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246392"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297792"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>所有值位于内存中时将数据作为表值参数发送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[将表值参数用于 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="prerequisite"></a>先决条件  
  该过程假定已在服务器上执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -89,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  参数绑定的第二阶段是绑定表值参数的列。 首先将参数焦点设置为表值参数的序号。 然后使用 SQLBindParameter 来绑定表值的列，方法与它们是存储过程的参数相同，但使用 ParameterNumber 的列序号。 如果有更多表值参数，我们会轮流将焦点设置为每个参数，并绑定它们的列。 最终，将参数焦点重置为 0。  
+3.  参数绑定的第二阶段是绑定表值参数的列。 首先将参数焦点设置为表值参数的序号。 然后，表值的列通过使用 SQLBind 参数绑定的方式与作为存储过程的参数（但使用参数编号的列序数）的方式相同。 如果有更多表值参数，我们会轮流将焦点设置为每个参数，并绑定它们的列。 最终，将参数焦点重置为 0。  
   
     ```cpp
     // Bind columns for the table-valued parameter (param 2).  
@@ -105,8 +105,7 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  填充参数缓冲区。 
-  `cbTVP` 将设置为要发送到服务器的行数。  
+4.  填充参数缓冲区。 `cbTVP` 将设置为要发送到服务器的行数。  
   
     ```cpp
     // Populate parameters.  

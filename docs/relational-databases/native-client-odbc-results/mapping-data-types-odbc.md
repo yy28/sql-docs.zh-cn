@@ -1,5 +1,5 @@
 ---
-title: 映射数据类型（ODBC） |Microsoft Docs
+title: 映射数据类型 （ODBC） |微软文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,41 +17,41 @@ helpviewer_keywords:
 - sql_variant data type
 - SQL Server Native Client ODBC driver, data types
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd3bada9ea15d1104edb33024c4ab1476843c73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 92426c854758d07a9d62ec57510d202b870dd9f2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779135"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304617"
 ---
 # <a name="mapping-data-types-odbc"></a>映射数据类型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 数据类型映射到 ODBC sql 数据类型。 以下部分讨论 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 数据类型以及它们映射到的 ODBC SQL 数据类型。 此外，还讨论 ODBC SQL 数据类型和它们对应的 ODBC C 数据类型，以及支持的和默认的转换。  
+  本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 ODBC 驱动程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将 SQL 数据类型映射到 ODBC SQL 数据类型。 以下部分讨论 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 数据类型以及它们映射到的 ODBC SQL 数据类型。 此外，还讨论 ODBC SQL 数据类型和它们对应的 ODBC C 数据类型，以及支持的和默认的转换。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Timestamp**数据类型映射到 SQL_BINARY 或 SQL_VARBINARY ODBC 数据类型，因为**时间戳**列中的值不是**datetime**值，而是表示行上的活动序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的**BINARY （8）** 或**VARBINARY （8）** 值。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序遇到字节数为奇数的 SQL_C_WCHAR (Unicode) 值，则将截断尾随奇数字节。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**时间戳**数据类型映射到SQL_BINARY或SQL_VARBINARY ODBC 数据类型，因为**时间戳**列中的值不是**日期时间**值，而是指示行上活动序列的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**二进制（8）** 或**varbinary（8）** 值。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序遇到字节数为奇数的 SQL_C_WCHAR (Unicode) 值，则将截断尾随奇数字节。  
   
 ## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>在 ODBC 中处理 sql_variant 数据类型  
- " **Sql_variant**数据类型" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列可以包含除大型对象（lob）以外的任何数据类型，如**text**、 **ntext**和**image**。 例如，列可能包含某些行的**smallint**值、其他行的**float**值，以及余数中的**char/nchar**值。  
+ **sql_variant**数据类型列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以包含除大型对象 （LOB） 以外的任何数据类型，如**文本****、ntext**和**图像**。 例如，该列可以包含某些行**的较小值**、其他行的**浮动**值和其余行中的**char/nchar**值。  
   
- **Sql_variant**的数据类型类似于 Microsoft Visual Basic®中的**variant**数据类型。  
+ **sql_variant**数据类型类似于 Microsoft 可视化基本®中的**变体**数据类型。  
   
 ### <a name="retrieving-data-from-the-server"></a>从服务器检索数据  
- ODBC 没有变体类型的概念，因此限制在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 odbc 驱动程序的**sql_variant**数据类型。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，如果指定了 binding，则**sql_variant**数据类型必须绑定到其中一个已记录的 ODBC 数据类型。 **SQL_CA_SS_VARIANT_TYPE**，特定于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的新属性将向用户返回**sql_variant**列中的实例的数据类型。  
+ ODBC 没有变体类型的概念，限制在 中使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql_variant**数据类型与 ODBC 驱动程序在 。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，如果指定绑定，则**sql_variant**数据类型必须绑定到一个已记录的 ODBC 数据类型。 **SQL_CA_SS_VARIANT_TYPE**（一个特定于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序的新属性）将**sql_variant**列中实例的数据类型返回给用户。  
   
- 如果未指定绑定，则可以使用[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)函数来确定**sql_variant**列中的实例的数据类型。  
+ 如果未指定绑定，[则 SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)函数可用于确定**sql_variant**列中实例的数据类型。  
   
- 若要检索**sql_variant**数据，请执行以下步骤。  
+ 要检索**sql_variant，** 请按照以下步骤操作。  
   
-1.  调用**SQLFetch**以定位到检索到的行。  
+1.  调用**SQLFetch**以定位到检索的行。  
   
-2.  调用**SQLGetData**，指定类型 SQL_C_BINARY，并指定0作为数据长度。 这会强制驱动程序读取**sql_variant**标头。 标头在**sql_variant**列中提供该实例的数据类型。 **SQLGetData**返回值的大小（以字节为单位）。  
+2.  调用**SQLGetData**，为类型指定SQL_C_BINARY，为数据长度指定 0。 这将强制驱动程序读取**sql_variant**标头。 标头在**sql_variant**列中提供该实例的数据类型。 **SQLGetData**返回值的大小（以字节为单位）。  
   
-3.  通过将**SQL_CA_SS_VARIANT_TYPE**指定为其属性值来调用[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) 。 此函数将**sql_variant**列中的实例的 C 数据类型返回到客户端。  
+3.  通过将**SQL_CA_SS_VARIANT_TYPE**指定为其属性值来调用[SQLColAttribute。](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) 此函数将**sql_variant**列中实例的 C 数据类型返回给客户端。  
   
  以下是演示上述步骤的代码片段。  
   
@@ -86,12 +86,12 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 }  
 ```  
   
- 如果用户使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)创建绑定，则驱动程序将读取元数据和数据。 然后，驱动程序将这些数据转换为在绑定中指定的适当 ODBC 类型。  
+ 如果用户使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)创建绑定，则驱动程序读取元数据和数据。 然后，驱动程序将这些数据转换为在绑定中指定的适当 ODBC 类型。  
   
 ### <a name="sending-data-to-the-server"></a>将数据发送到服务器  
- **SQL_SS_VARIANT**，特定于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的一种新数据类型用于发送到**sql_variant**列的数据。 使用参数将数据发送到服务器时（例如，INSERT INTO TableName VALUES （?,?））， [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)用于指定参数信息，包括 C 类型和相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序会将 C 数据类型转换为相应的**sql_variant**子类型之一。  
+ **SQL_SS_VARIANT**（一种特定于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序的新数据类型）用于发送到**sql_variant**列的数据。 使用参数（例如，插入表名称值（?,?））将数据发送到服务器时[，SQLBind参数](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)用于指定参数信息，包括 C 类型和相应的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型。 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 ODBC 驱动程序将 C 数据类型转换为适当的**sql_variant**子类型之一。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;处理结果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [处理结果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

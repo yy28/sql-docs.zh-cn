@@ -1,5 +1,5 @@
 ---
-title: 数据类型（OLE DB） |Microsoft Docs
+title: 数据类型 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73770752"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304429"
 ---
 # <a name="data-types-ole-db"></a>数据类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  若要[!INCLUDE[tsql](../../includes/tsql-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 提供程序来执行语句并处理结果，您必须知道在行集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内绑定参数或列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，Native Client OLE DB 提供程序如何将数据类型映射到 OLE DB 数据类型，以及何时使用**ITableDefinition**接口在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建表。  
+  为了[!INCLUDE[tsql](../../includes/tsql-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序执行语句和处理结果，您必须知道[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序如何在行集中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]绑定参数或列时将数据类型映射到 OLE DB 数据类型，以及何时使用**ITable定义**接口在 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建表。  
   
 ## <a name="in-this-section"></a>本节内容  
   

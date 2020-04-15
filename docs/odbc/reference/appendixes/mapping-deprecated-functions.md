@@ -1,5 +1,5 @@
 ---
-title: 映射弃用的函数 |Microsoft Docs
+title: 映射已弃用函数 |微软文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,47 +15,47 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990708"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299877"
 ---
 # <a name="mapping-deprecated-functions"></a>映射已弃用的函数
-本部分介绍了如何通过 ODBC 1.x 驱动程序管理器映射不推荐使用的函数，以*保证 odbc* *2.x 驱动程序*的向后兼容性与 odbc *2.x 应用程序*一起使用。 无论应用程序的版本是什么，驱动程序管理器都将执行此映射。 由于以下列表中的每个 ODBC 2.x 函数都映射到相应*的 odbc* *1.x 函数（* 在 odbc 1.x 驱动程序中调用时），因此 *，odbc 2.X* *驱动程序不必**实现 odbc 2.x 函数。*  
+本节介绍 ODBC *3.x*驱动程序管理器如何映射弃用函数，以确保 ODBC *3.x*驱动程序与 ODBC *2.x*应用程序一起使用的向后兼容性。 驱动程序管理器执行此映射，而不考虑应用程序的版本。 由于以下列表中的每个 ODBC *2.x*函数在 ODBC *3.x*驱动程序中调用时都映射到相应的 ODBC *3.x*函数，因此 ODBC *3.x*驱动程序不必实现 ODBC *2.x*函数。  
   
- 当*驱动程序为 ODBC 1.x*驱动程序，并且该驱动程序不支持正在映射的函数时，将触发列表中的映射。  
+ 当驱动程序是 ODBC *3.x*驱动程序且驱动程序不支持正在映射的功能时，将触发列表中的映射。  
   
- 下表列出*了 ODBC 2.x*中引入的所有复制功能。  
+ 下表列出了 ODBC *3.x*中引入的所有重复功能。  
   
-|ODBC *2.x*函数|ODBC *2.x*函数|  
+|ODBC *2.x*功能|ODBC *3.x*功能|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**SQLAllocHandle**|  
+|**SQLAlloc连接**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
 |**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
-|**SQLColAttributes**|**SQLColAttribute**|  
+|**SQLColattributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|带有 SQL_DROP*选项*的**SQLFreeStmt**|**SQLFreeHandle**|  
+|**SQLFreeStmt，** 具有SQL_DROP*选项*|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
-|**SQLSetConnectOption**|**SQLSetConnectAttr**|  
+|**SQLSet 连接选项**|**SQLSetConnectAttr**|  
 |**SQLSetParam**[2]|**SQLBindParameter**|  
 |**SQLSetScrollOption**|**SQLSetStmtAttr**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1]*虽然 ODBC 2.x 中不*存在此函数，但它是开放组和 ISO 标准。  
+ [1] 尽管 ODBC *2.x*中不存在此功能，但它在开放组和 ISO 标准中。  
   
  [2] 这是一个 ODBC 1.0 函数。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [SQLAllocConnect 映射](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
   

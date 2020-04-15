@@ -1,5 +1,5 @@
 ---
-title: ODBC API 实现详细信息 |Microsoft Docs
+title: ODBC API 实施详细信息 |微软文档
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,26 +13,24 @@ helpviewer_keywords:
 - ODBC, SQL Server-specific behaviors
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb05bdc934fe8f42a4f0f6589d0f75d38ca621fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 880c38483b3896f95ccfde4f8237d6d0acbf8e3c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787866"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302689"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 实现细节
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   开放式数据库连接 (ODBC) 是 Microsoft Win32 应用程序编程接口，应用程序使用该接口来访问 ODBC 数据源中的数据。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序参考未提供所有 ODBC 函数调用的文字说明。 只讨论那些与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时具有特定于驱动程序的参数或行为的函数。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序参考未提供所有 ODBC 函数调用的文字说明。 只讨论那些与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时具有特定于驱动程序的参数或行为的函数。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范。 若要全面了解 ODBC 3.51，请从[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink?linkid=4173)下载 Microsoft 数据访问组件 SDK，或者联机查看[odbc 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范。 有关 ODBC 3.51 的全面参考，请从[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink?linkid=4173)下载 Microsoft 数据访问组件 SDK，或在线查看[ODBC 程序员的参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -137,7 +135,7 @@ ms.locfileid: "73787866"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41; 引用](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [SQL 服务器本机客户端&#40;ODBC&#41; 参考](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [使用 SQL Server Native Client 生成应用程序](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

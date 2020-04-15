@@ -1,5 +1,5 @@
 ---
-title: 数据 FILESTREAM、Irowsetfastupload 向（OLE DB）
+title: 数据文件，IRowsetFastupload（OLE DB）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,27 +8,27 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 545190d2852d617fa7d73f4aaf464d15b7f1327b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d298d9c4677d6b50ad0234a85e3d51b4bb8478ae
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225946"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295600"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   此示例使用 IRowsetFastUpload 接口向 filestream 列发送大小在 4 MB 与 4 GB 之间的数据。  
   
- 有关 filestream 功能的详细信息，请参阅[Filestream 支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 有关文件流功能的详细信息，请参阅[FILESTREAM 支持&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>示例  
- 在编译并运行此示例之前，启用 FILESTREAM 支持（[启用和配置 filestream](../../../relational-databases/blob/enable-and-configure-filestream.md)）。  
+ 编译和运行此示例前，先启用 FILESTREAM 支持（[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)）。  
   
- 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
+ 确保 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
   
  该服务器必须具有名为 C:\DBFsa 的目录，示例将在其中创建数据库。 您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须对此位置具有写访问权限（例如，采用本地系统帐户登录）。  
   
