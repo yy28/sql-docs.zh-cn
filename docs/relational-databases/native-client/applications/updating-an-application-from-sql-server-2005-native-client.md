@@ -1,5 +1,5 @@
 ---
-title: 本机客户端，更新应用 SQL 2005
+title: 从 SQL 2005 更新
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c047d243804b13733a7380ced362546ceda1e294
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 3287f5faf6d748a433a425c1ecf505bbe551d3b2
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81302489"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388290"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>从 SQL Server 2005 Native Client 更新应用程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "81302489"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 随 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 附带。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 随 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 附带。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 随 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 附带。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 随 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 附带。  
   
-|自 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以来 SQL Server Native Client 中已更改的行为|描述|  
+|自 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以来 SQL Server Native Client 中已更改的行为|说明|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB 仅填充到定义的小数位数。|对于将转换后的数据发送到服务器的转换，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端（以[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]开头）的焊盘仅跟踪数据中的零，直到**日期时间**值的最大长度。 SQL Server Native Client 9.0 则填充到 9 位数。|  
 |验证 ICommandWithParameter::SetParameterInfo 的 DBTYPE_DBTIMESTAMP。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端（以[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]开头）在 ICommand 与参数中实现*bScale*的 OLE DB 要求：：将参数信息设置为DBTYPE_DBTIMESTAMP的分数秒精度。|  

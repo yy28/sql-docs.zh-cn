@@ -1,5 +1,6 @@
 ---
 title: 使用 sql:hide 隐藏元素和属性
+description: 了解如何在针对 XSD 架构执行 XPath 查询时使用 sql：hide 注释来隐藏元素和属性。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,26 +26,26 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 670b11e86498116549c395c47364604e72b790a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af964cd3561a28db049baa49c2e74140db994784
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246863"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388171"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 隐藏元素和属性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  针对 XSD 架构执行 XPath 查询时，生成的 XML 文档具有在架构中指定的元素和属性。 您可以使用**sql： hide**批注指定在架构中隐藏某些元素和属性。 当查询的选择条件需要架构中的特定元素或属性，但是不希望在生成的 XML 文档中返回这些元素或属性时，该批注很有用。  
+  针对 XSD 架构执行 XPath 查询时，生成的 XML 文档具有在架构中指定的元素和属性。 可以使用**sql：hide**注释指定某些元素和属性隐藏在架构中。 当查询的选择条件需要架构中的特定元素或属性，但是不希望在生成的 XML 文档中返回这些元素或属性时，该批注很有用。  
   
- **Sql： hide**批注采用布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
+ **sql：hide**注释采用布尔值（0=false，1=true）。 可接受的值为 0、1、true 和 false。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅运行[SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 对属性指定 sql:hide  
- 此示例中的 XSD 架构由一个** \<人员组成。请联系>** 元素与**ContactID**、 **FirstName**和**LastName**属性。  
+ 此示例中的 XSD 架构由**\<人员.contact.>** 具有联系人**ID、Name**和**姓氏**属性的元素组成。 **FirstName**  
   
- Person>元素属于复杂类型，因此映射到具有相同名称的表（默认映射）。 ** \<** Person>元素的所有属性都属于简单类型，并映射到 AdventureWorks 数据库的 Contacttable 中具有相同名称的列。 ** \<** 在架构中， **sql： hide**批注是在**ContactID**属性中指定的。 针对此架构指定 XPath 查询时，XML 文档中将不会返回**ContactID** 。  
+ Person.contact>元素的类型很复杂，因此映射到同名表（默认映射）。 ** \<** Person.Contact.>元素的所有属性类型简单，并映射到"个人.联系人"数据库中具有相同名称的列。 ** \<** 在架构中，在**ContactID**属性上指定**sql：hide**注释。 针对此架构指定 XPath 查询时，不会在 XML 文档中返回**ContactID。**  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -59,7 +60,7 @@ ms.locfileid: "75246863"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>根据架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 Hide.xml。  
   
@@ -81,7 +82,7 @@ ms.locfileid: "75246863"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅使用[ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是结果集：  
   
@@ -91,7 +92,7 @@ ms.locfileid: "75246863"
 </ROOT>  
 ```  
   
- 当在元素上指定了**sql： hide**时，元素及其属性或子元素不会出现在生成的 XML 文档中。 下面是在** \<OD>** 元素上指定了**sql： hide**的另一个 XSD 架构：  
+ 在元素上指定**sql：hide**时，元素及其属性或子元素不会显示在生成的 XML 文档中。 下面是另一个 XSD 架构，其中**sql：hide**在**\<OD>** 元素上指定：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -146,7 +147,7 @@ ms.locfileid: "75246863"
 </xsd:schema>  
 ```  
   
- 针对此架构指定 XPath 查询（ `/Customers[@CID="1"]`例如）时，生成的 XML 文档不包含** \<OD>** 元素及其子级，如下面的部分结果所示：  
+ 当针对此架构指定 XPath`/Customers[@CID="1"]`查询（例如 ）时，生成的 XML 文档不包括**\<OD>** 元素及其子元素，如此部分结果所示：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

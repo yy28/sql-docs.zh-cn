@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "62767556"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>步骤 7：添加和配置 OLE DB 目标
@@ -24,7 +24,7 @@ ms.locfileid: "62767556"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>添加和配置示例 OLE DB 目标  
   
-1.  在 " **SSIS 工具箱**" 中，**展开 "** **其他目标**"，然后将**OLE DB "目标**" 拖动到 "数据流" 选项卡的设计图面上。将 OLE DB 目标直接放置在**Lookup Date Key**转换的下面。  
+1.  在**SSIS 工具箱**中，展开**其他目标**，并将**OLE DB 目标**拖动到**数据流**选项卡的设计图面上。 **Lookup Date Key**  
   
 2.  单击“查找日期键”**** 转换，并将绿色箭头拖到新添加的“OLE DB 目标”**** 上，以便将两个组件连接在一起。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767556"
   
 13. 右键单击 **Sample OLE DB Destination** 目标，再单击“属性”****。  
   
-14. 在属性窗口中，验证属性是否`LocaleID`设置为 "**英语（美国）** "，并`DefaultCodePage`将属性设置为**1252**。  
+14. `LocaleID`在"属性"窗口中，验证属性是否设置为**英语（美国），** 属性`DefaultCodePage`设置为**1252**。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 8：使 Lesson 1 包更易理解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

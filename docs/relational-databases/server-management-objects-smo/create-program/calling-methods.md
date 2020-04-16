@@ -1,5 +1,5 @@
 ---
-title: 调用方法 |Microsoft Docs
+title: 调用方法 |微软文档
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 471549e5a42f8d08a62da37c4e98e66bc9b67413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "70148761"
 ---
 # <a name="calling-methods"></a>调用方法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  方法执行与对象相关的特定任务，如在数据库上发出**检查点**或请求实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的已枚举登录列表。  
+  方法执行与对象相关的特定任务，例如在数据库上颁发**检查点**或请求 实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的枚举登录列表。  
   
  方法针对对象执行操作。 方法可以使用参数并通常具有返回值。 返回值可以是简单数据类型、复杂对象或包含很多成员的结构。  
   
  使用异常处理检测方法是否成功。 有关详细信息，请参阅 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)。  
   
 ## <a name="examples"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在可视化工作室 .NET 中创建可视化 C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>在 Visual Basic 中使用简单 SMO 方法  
@@ -68,8 +68,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>在 Visual Basic 中使用带参数的 SMO 方法  
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 **FillFactor**的数字参数。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 **FillFactor**的数字参数。  
   
 ```VBNET
 Dim srv As Server  
@@ -80,8 +79,7 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>在 Visual C# 中使用带参数的 SMO 方法  
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的数字参数。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的数字参数。  
   
 ```csharp  
 {   
@@ -96,8 +94,7 @@ tb.RebuildIndexes(70);
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>在 Visual Basic 中使用返回 DataTable 对象的枚举方法  
  本节说明如何调用枚举方法以及如何处理返回的 <xref:System.Data.DataTable> 对象中的数据。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回 <xref:System.Data.DataTable> 对象，该对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回 <xref:System.Data.DataTable> 对象，该对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.  
@@ -121,9 +118,7 @@ Next
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>在 Visual C# 中使用返回 DataTable 对象的枚举方法  
  本节说明如何调用枚举方法以及如何处理返回的 <xref:System.Data.DataTable> 对象中的数据。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回系统 <xref:System.Data.DataTable> 对象。 
-  <xref:System.Data.DataTable> 对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回系统 <xref:System.Data.DataTable> 对象。 <xref:System.Data.DataTable> 对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   
@@ -184,8 +179,7 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>在 Visual Basic 中复制 SMO 对象  
- 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
+ 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server.
@@ -201,8 +195,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 ```
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>在 Visual C# 中复制 SMO 对象  
- 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
+ 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
   
 ```csharp  
 {   

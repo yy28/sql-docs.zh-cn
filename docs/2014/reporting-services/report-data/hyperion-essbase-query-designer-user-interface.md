@@ -19,12 +19,12 @@ ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2cd868dc316a9da8339b5e12002a11d167e30710
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 1c7a12ec8f9e2bd49c9aecc1080fe0b5cff854ce
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78172989"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81387961"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase 查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一个图形查询设计器，用于为 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动在数据源中定义的多维数据集的成员，以生成可在处理报表时检索数据的 MDX 查询。
@@ -65,13 +65,13 @@ ms.locfileid: "78172989"
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 不可用于此数据源类型。|
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|
 |![刷新数据集字段](../media/rsqdicon-refreshfields.gif "刷新数据集字段")|刷新数据源的元数据。|
-|![添加计算成员](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。 使用此按钮可以创建或编辑计算成员表达式，其中包括设置 **“求解次序”** 属性。|
-|![切换为显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切换显示空单元")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|
-|![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|
-|![删除](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "删除")|从查询中删除选定项。 使用此按钮可以删除“筛选器”窗格中的选定行。|
-|![运行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|
-|![取消查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "取消查询")|取消查询。|
-|![切换到设计模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|
+|![添加计算成员](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。 使用此按钮可以创建或编辑计算成员表达式，其中包括设置 **“求解次序”** 属性。|
+|![切换为显示空单元格](../../analysis-services/media/rsqdicon-showemptycells.gif "切换为显示空单元格")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|
+|![自动执行查询](../../analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|
+|![删除](../../analysis-services/media/rsqdicon-delete.gif "删除")|从查询中删除选定项。 使用此按钮可以删除“筛选器”窗格中的选定行。|
+|![运行查询](../../analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|
+|![取消查询](../../analysis-services/media/rsqdicon-cancel.gif "取消查询")|取消查询。|
+|![切换到设计模式](../../analysis-services/media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|
 
 ## <a name="graphical-query-designer-in-query-mode"></a>查询模式下的图形查询设计器
  若要将图形查询设计器更改为查询模式，请单击工具栏上的 **“设计模式”** 切换按钮。 下图列出了查询模式下查询设计器的各个部分。
@@ -94,13 +94,13 @@ ms.locfileid: "78172989"
 
 -   **编辑为文本**
 
--   **添加计算成员**（![添加计算成员](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")）
+-   **添加计算成员**（![添加计算成员](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")）
 
--   **显示空单元格**（![切换为显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切换显示空单元")）
+-   **显示空单元格**（![切换为显示空单元格](../../analysis-services/media/rsqdicon-showemptycells.gif "切换为显示空单元格")）
 
--   **自动执行**（![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")）
+-   **自动执行**（![自动执行查询](../../analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")）
 
 ## <a name="see-also"></a>另请参阅
- [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [rsreportdesigner.config 配置文件](../report-server/rsreportdesigner-configuration-file.md)
+ [创建共享数据集或嵌入式数据集&#40;报表生成器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [RS 报告设计器配置文件](../report-server/rsreportdesigner-configuration-file.md)
 
 

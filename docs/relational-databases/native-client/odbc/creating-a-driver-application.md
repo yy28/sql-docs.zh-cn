@@ -1,5 +1,5 @@
 ---
-title: 创建 SQL 本机客户端 ODBC 应用
+title: 创建应用程序
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +24,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b210066caedef8a1efe6c702860f434f483269a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 4e65eaac59bcc16e123bda3e47af29dc4a836ce5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303728"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388391"
 ---
 # <a name="creating-a-driver-application"></a>创建驱动程序应用程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

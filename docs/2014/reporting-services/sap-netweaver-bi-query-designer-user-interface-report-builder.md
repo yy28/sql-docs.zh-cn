@@ -1,5 +1,5 @@
 ---
-title: SAP NetWeaver BI 查询设计器用户界面（报表生成器） |Microsoft Docs
+title: SAP NetWeaver BI 查询设计器用户界面（报表生成器） |微软文档
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aebffe75cf3644717315cd80c82cc753e3256f57
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: d3dc9e21a9bea5c188b32ccc01b7d1fa6d15fa98
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78174937"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388647"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>SAP NetWeaver BI 查询设计器用户界面（报表生成器）
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供了一个图形查询设计器，用于为 SAP NetWeaver®商业智能数据源生成多维表达式（MDX）查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个元数据窗格，在该窗格中，您可以从 InfoCube、MultiProvider 或根据数据源定义的启用 Web 的查询中拖动成员，创建 MDX 查询以便在处理报表时检索数据。
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可用于为 SAP NetWeaver® Business Intelligence 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个元数据窗格，在该窗格中，您可以从 InfoCube、MultiProvider 或根据数据源定义的启用 Web 的查询中拖动成员，创建 MDX 查询以便在处理报表时检索数据。
 
 > [!IMPORTANT]
 >  用户创建和运行查询时访问数据源。 您应授予对数据源的最小权限（如只读权限）。
@@ -48,19 +48,19 @@ ms.locfileid: "78174937"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>设计模式下的图形查询设计器工具栏
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表介绍了这些按钮及其功能。
 
-|按钮|说明|
+|Button|说明|
 |------------|-----------------|
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 不可用于此数据源类型。|
-|**Import**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|
+|**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|
 |![刷新数据集字段](media/rsqdicon-refreshfields.gif "刷新数据集字段")|刷新数据源的元数据。|
-|![添加计算成员](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。|
-|![切换显示空单元](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切换显示空单元")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|
-|![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|
-|![删除](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|
-|![“查询参数”对话框图标](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "“查询参数”对话框图标")|显示 **“变量”** 对话框。 仅当选定的多维数据集为“查询”多维数据集时此按钮才可用（因为只有“查询”多维数据集支持变量）。 当向变量分配默认值时，将创建一个相应的报表参数。|
-|![运行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|
-|![取消查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "取消查询")|取消查询。|
-|![切换到设计模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|
+|![添加计算成员](../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。|
+|![切换显示空单元](../analysis-services/media/rsqdicon-showemptycells.gif "切换为显示空单元格")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|
+|![自动执行查询](../analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|
+|![删除](../analysis-services/media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|
+|![“查询参数”对话框图标](../analysis-services/media/iconqueryparameter.gif "“查询参数”对话框图标")|显示 **“变量”** 对话框。 仅当选定的多维数据集为“查询”多维数据集时此按钮才可用（因为只有“查询”多维数据集支持变量）。 当向变量分配默认值时，将创建一个相应的报表参数。|
+|![运行查询](../analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|
+|![取消查询](../analysis-services/media/rsqdicon-cancel.gif "取消查询")|取消查询。|
+|![切换到设计模式](../analysis-services/media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|
 
 ## <a name="graphical-query-designer-in-query-mode"></a>查询模式下的图形查询设计器
  若要将图形查询设计器更改为查询模式，请单击工具栏上的 **“设计模式”** 切换按钮。
@@ -90,15 +90,15 @@ ms.locfileid: "78174937"
 
 -   **编辑为文本**
 
--   **添加计算成员**（![添加计算成员](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")）
+-   **添加计算成员**（![添加计算成员](../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")）
 
--   **显示空单元格**（![切换以显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切换显示空单元")）
+-   **显示空单元格**（![切换为显示空单元格](../analysis-services/media/rsqdicon-showemptycells.gif "切换为显示空单元格")）
 
--   **自动执行**（![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")）
+-   **自动执行**（![自动执行查询](../analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")）
 
--   **删除**（![delete](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "删除")）
+-   **删除**（![删除](../analysis-services/media/rsqdicon-delete.gif "删除")）
 
 ## <a name="see-also"></a>另请参阅
- [查询设计器 &#40;报表生成器&#41;](../../2014/reporting-services/query-designers-report-builder.md)
+ [查询设计器（报表生成器）](../../2014/reporting-services/query-designers-report-builder.md)
 
 

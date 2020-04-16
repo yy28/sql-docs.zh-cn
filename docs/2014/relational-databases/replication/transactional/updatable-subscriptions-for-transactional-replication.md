@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "62655479"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655479"
  **切换更新模式**  
   
  若要切换更新模式，必须为这两种更新模式都启用发布和订阅，然后再根据需要进行切换。 有关详细信息，请参阅  
-[切换可更新事务订阅的更新模式](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。  
+[在可更新事务订阅的更新模式之间切换](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>使用可更新订阅的注意事项  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62655479"
   
 -   如果使用 `TIMESTAMP` 或 `IDENTITY` 列，且将这些列按其基本数据类型进行复制，则不应在订阅服务器中更新这些列中的值。  
   
--   订阅服务器不能更新或插入 `text`、`ntext` 或 `image` 值，因为不能在复制更改跟踪触发器中从插入或删除的表中读取数据。 同样，订阅服务器不能使用 `text` 或 `image` 更新或插入 `WRITETEXT` 或 `UPDATETEXT` 值，因为这些数据会被发布服务器覆盖。 但可以将 `text` 和 `image` 列分区到单独的表中，并在一个事务中修改这两个表。  
+-   订阅服务器不能更新或插入 `text`、`ntext` 或 `image` 值，因为不能在复制更改跟踪触发器中从插入或删除的表中读取数据。 同样，订阅服务器不能使用 `WRITETEXT` 或 `UPDATETEXT` 更新或插入 `text` 或 `image` 值，因为这些数据会被发布服务器覆盖。 但可以将 `text` 和 `image` 列分区到单独的表中，并在一个事务中修改这两个表。  
   
      若要更新订阅服务器上的大型对象，请分别使用数据类型 `varchar(max)`、`nvarchar(max)`、`varbinary(max)`，而不要使用 `text`、`ntext` 和 `image` 数据类型。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "62655479"
     -   如果出现预料中的冲突：如果使用“订阅服务器入选”冲突解决，则不应在发布服务器或订阅服务器中使用外键约束；如果使用“发布服务器入选”冲突解决，则不应在订阅服务器中使用外键约束。  
   
 ## <a name="see-also"></a>另请参阅  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+ [对等事务复制](peer-to-peer-transactional-replication.md)   
  [事务复制](transactional-replication.md)   
  [发布数据和数据库对象](../publish/publish-data-and-database-objects.md)   
- [订阅发布](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

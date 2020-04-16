@@ -1,5 +1,5 @@
 ---
-title: 基于文本的查询设计器用户界面 |Microsoft Docs
+title: 基于文本的查询设计器用户界面 |微软文档
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,36 +16,36 @@ ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fd3dfdb640c0e2c1b225b0b3a54fcc8bc3ebabc5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 340040a0806a87d55582356d085ab924e25b6a48
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177142"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388671"
 ---
 # <a name="text-based-query-designer-user-interface"></a>基于文本的查询设计器用户界面
   使用基于文本的查询设计器可以用数据源支持的查询语言来指定查询，还可以运行查询并在运行时查看结果。 您可以指定多个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，为自定义数据处理扩展插件指定查询或命令语法，还可以指定指定为表达式的查询。 因为基于文本的查询设计器不会对查询进行预处理，并且能适应任何类型的查询语法，所以成为了众多数据源类型的默认查询设计器工具。
 
  基于文本的查询设计器将显示工具栏和以下两个窗格：
 
--   **查询**显示查询文本、表名或存储过程名称。
+-   **查询**显示查询文本、表名称或存储过程名称。
 
--   **结果**显示在设计时运行查询的结果。
+-   **结果** ：在设计时，显示查询的运行结果。
 
 ## <a name="text-based-query-designer-toolbar"></a>基于文本的查询设计器工具栏
  基于文本的查询设计器为所有命令类型都提供一个单一工具栏。 下表列出了该工具栏中的每个按钮及其功能。
 
-|按钮|说明|
+|Button|说明|
 |------------|-----------------|
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 并非所有的数据源类型都支持图形查询设计器。|
-|**Import**|从文件或报表中导入现有的查询。 仅支持 .sql 和 .rdl 文件类型。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|
-|![运行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“结果”窗格中显示结果集。|
-|**命令类型**|选择 **Text**、 **StoredProcedure**或 **TableDirect**。 如果存储过程带有参数，则单击工具栏上的 **“运行”** 时，将出现 **“定义查询参数”** 对话框，您可以根据需要填入值。 请注意，如果存储过程返回多个结果集，则仅使用第一个结果集填充数据集。<br /><br /> 所支持的命令类型因数据源类型而异。 例如，仅 OLE DB 和 ODBC 支持 **TableDirect**。|
+|**导入**|从文件或报表中导入现有的查询。 仅支持 .sql 和 .rdl 文件类型。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|
+|![运行查询](../analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“结果”窗格中显示结果集。|
+|**命令类型**|选择 **Text**、 **StoredProcedure**或 **TableDirect**。 如果存储过程带有参数，则单击工具栏上的 **“运行”** 时，将出现 **“定义查询参数”** 对话框，您可以根据需要填入值。 请注意，如果存储过程返回多个结果集，则仅使用第一个结果集来填充数据集。<br /><br /> 所支持的命令类型因数据源类型而异。 例如，仅 OLE DB 和 ODBC 支持 **TableDirect**。|
 
 ### <a name="command-type-text"></a>命令类型 Text
  创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据集时，默认情况下，报表设计器会显示图形查询设计器。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮****。 基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 下图标出了每个窗格。
 
- ![用于关系数据查询的通用查询设计器](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "用于关系数据查询的通用查询设计器")
+ ![用于关系数据查询的通用查询设计器](../analysis-services/media/rsqd-dsaw-sql-generic.gif "用于关系数据查询的通用查询设计器")
 
  下表介绍了每个窗格的功能。
 
@@ -61,7 +61,7 @@ ms.locfileid: "78177142"
 SELECT LastName FROM Person.Person;
 ```
 
- 您可以对命令类型文本使用任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，包括 `EXEC` 语句。 下面的查询将调用[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]存储过程`uspGetEmployeeManagers` ，并返回标识号为1的员工的命令链。
+ 您可以对命令类型文本使用任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，包括 `EXEC` 语句。 以下查询调用[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]存储过程`uspGetEmployeeManagers`，并返回具有标识号 1 的员工的命令链。
 
 ```
 EXEC uspGetEmployeeManagers 1;
@@ -87,9 +87,9 @@ uspGetEmployeeManagers;
 
  `Sales.Customer`
 
- 输入表名称 Sales. Customer 时，它等效于创建[!INCLUDE[tsql](../includes/tsql-md.md)]语句。 `SELECT * FROM Sales.Customer;`
+ 当您输入表名 Sales.Customer 时，它等效于创建[!INCLUDE[tsql](../includes/tsql-md.md)]语句`SELECT * FROM Sales.Customer;`。
 
 ## <a name="see-also"></a>另请参阅
- [报表设计器 SQL Server Data Tools 中的查询设计工具 &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md) [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)&#41;SQL Server 的[连接](report-data/sql-server-connection-type-ssrs.md)类型 &#40;ssrs&#41;OLE DB ssrs &#40;[类型](report-data/ole-db-connection-type-ssrs.md)&#41;[Ssrs &#40;Ssrs](report-data/odbc-connection-type-ssrs.md)&#41;[报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)&#41;[rsreportdesigner.config 配置文件](report-server/rsreportdesigner-configuration-file.md)
+ [报表设计器 SQL 服务器数据工具中的查询设计工具&#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)[报表生成器和共享数据集&#40;报表生成器和共享数据集&#40;报表生成器和共享数据集](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [&#41;&#40;sSRS&#41;](report-data/sql-server-connection-type-ssrs.md) OLE DB[连接类型&#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md) [ODBC 连接类型&#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)[报表嵌入数据集和共享数据集&#40;报表生成器和 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) RS[报告设计器配置文件](report-server/rsreportdesigner-configuration-file.md)
 
 

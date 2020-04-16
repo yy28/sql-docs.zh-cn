@@ -1,5 +1,5 @@
 ---
-title: 定义和浏览透视 |Microsoft Docs
+title: 定义和浏览透视 |微软文档
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "69493776"
 ---
 # <a name="defining-and-browsing-perspectives"></a>定义和浏览透视
   透视可以出于特定目的简化多维数据集的视图。 默认情况下，用户可以查看多维数据集内对其具有查看权限的所有元素。 用户查看整个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集时所看到的内容是该多维数据集的默认透视。 对于导航视图的用户，尤其对于只需与多维数据集的一小部分交互就能满足其商业智能和报表需求的用户来说，整个多维数据集的视图将是非常复杂的。  
   
- 若要降低多维数据集明显的复杂性，可以创建多维数据集的可查看子集，这称为“透视”**，透视可以只向用户显示多维数据集内的度量值组、度量值、维度、属性、层次结构、关键绩效指标 (KPI)、操作和计算成员的一部分。 在使用针对以前版本的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 编写的客户端应用程序时，这种做法可能特别有用。 例如，这些客户端不具有显示文件夹或透视的概念，但对于较早的客户端，透视的显示方式类似于多维数据集。 有关详细信息，请参阅 [透视](multidimensional-models-olap-logical-cube-objects/perspectives.md)和 [多维模型中的透视](multidimensional-models/perspectives-in-multidimensional-models.md)。  
+ 若要降低多维数据集明显的复杂性，可以创建多维数据集的可查看子集，这称为“透视”**，透视可以只向用户显示多维数据集内的度量值组、度量值、维度、属性、层次结构、关键绩效指标 (KPI)、操作和计算成员的一部分。 在使用针对以前版本的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]编写的客户端应用程序时，这种做法可能特别有用。 例如，这些客户端不具有显示文件夹或透视的概念，但对于较早的客户端，透视的显示方式类似于多维数据集。 有关详细信息，请参阅 [透视](multidimensional-models-olap-logical-cube-objects/perspectives.md)和 [多维模型中的透视](multidimensional-models/perspectives-in-multidimensional-models.md)。  
   
 > [!NOTE]  
 >  透视不是安全机制，而是用于提供更好用户体验的工具。 透视的所有安全性都从基础多维数据集继承。  
@@ -48,41 +48,41 @@ ms.locfileid: "69493776"
      当用户通过使用此透视来浏览多维数据集时，此度量值将是用户所看到的度量值（除非指定了其他度量值）。  
   
     > [!NOTE]  
-    >  还可以在多维数据集的“多维数据集结构”[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**选项卡上的“属性”窗口中，为整个 ** Tutorial 多维数据集设置默认度量值。  
+    >  还可以在多维数据集的“多维数据集结构”**** 选项卡上的“属性”窗口中，为整个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集设置默认度量值。  
   
 5.  请清除下列对象的复选框：  
   
-    -   `Reseller Sales`度量值组  
+    -   `Reseller Sales`度量组  
   
-    -   **销售配额**度量值组  
+    -   “销售配额”**** 度量值组  
   
-    -   **销售配额 1**度量值组  
+    -   “销售配额 1”**** 度量值组  
   
-    -   **分销商**多维数据集维度  
+    -   “分销商”**** 多维数据集维度  
   
-    -   **经销商地域**多维数据集维度  
+    -   “分销商所在地域”**** 多维数据集维度  
   
-    -   "**销售区域**" 多维数据集维度  
+    -   “销售区域”**** 多维数据集维度  
   
-    -   **员工**多维数据集维度  
+    -   “雇员”**** 多维数据集维度  
   
-    -   **提升**多维数据集维度  
+    -   “促销”**** 多维数据集维度  
   
-    -   **分销商收入**KPI  
+    -   “分销商收入”**** KPI  
   
-    -   **大型分销商**命名集  
+    -   “大型分销商”**** 命名集  
   
-    -   **总销售额**计算成员  
+    -   “总销售额”**** 计算成员  
   
-    -   "**总产品成本**" 计算成员  
+    -   “总产品成本”**** 计算成员  
   
-    -   **经销商 GPM**计算成员  
+    -   “分销商 GPM”**** 计算成员  
   
-    -   **GPM**计算成员总数  
+    -   “总 GPM”**** 计算成员  
   
-    -   **分销商销售额与所有产品计算成员的比率**  
+    -   “所有产品的分销商销售额比率”**** 计算成员  
   
-    -   "**所有产品的总销售额比率**" 计算成员  
+    -   “所有产品的总销售额比率”**** 计算成员  
   
      这些对象与“Internet 销售”无关。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493776"
   
 1.  在“透视”**** 选项卡的工具栏上，单击“新建透视”**** 按钮。  
   
-2.  将新透视的名称更改为`Reseller Sales`。  
+2.  将新透视图的名称更改为`Reseller Sales`。  
   
 3.  将“分销商销售额”**** 设置为默认度量值。  
   
@@ -101,29 +101,29 @@ ms.locfileid: "69493776"
   
 4.  请清除下列对象的复选框：  
   
-    -   `Internet Sales`度量值组  
+    -   `Internet Sales`度量组  
   
-    -   " **Internet 销售原因**" 度量值组  
+    -   “Internet 销售原因”**** 度量值组  
   
-    -   "**客户**" 多维数据集维度  
+    -   “客户”**** 多维数据集维度  
   
-    -   " **Internet 销售订单详细信息**" 多维数据集维度  
+    -   “Internet 销售订单详细信息”**** 多维数据集维度  
   
-    -   "**销售原因**" 多维数据集维度  
+    -   “销售原因”**** 多维数据集维度  
   
-    -   **Internet 销售详细信息钻取操作**钻取操作  
+    -   “Internet 销售详细信息钻取操作”**** 钻取操作  
   
-    -   **总销售额**计算成员  
+    -   “总销售额”**** 计算成员  
   
-    -   "**总产品成本**" 计算成员  
+    -   “总产品成本”**** 计算成员  
   
-    -   **INTERNET GPM**计算成员  
+    -   “Internet GPM”**** 计算成员  
   
-    -   **GPM**计算成员总数  
+    -   “总 GPM”**** 计算成员  
   
-    -   "**所有产品的 Internet 销售额比率**" 计算成员  
+    -   “所有产品的 Internet 销售额比率”**** 计算成员  
   
-    -   "**所有产品的总销售额比率**" 计算成员  
+    -   “所有产品的总销售额比率”**** 计算成员  
   
      这些对象与“分销商销售”无关。  
   
@@ -131,34 +131,34 @@ ms.locfileid: "69493776"
   
 1.  在“透视”**** 选项卡的工具栏上，单击“新建透视”**** 按钮。  
   
-2.  将新透视的名称更改为`Sales Summary`。  
+2.  将新透视图的名称更改为`Sales Summary`。  
   
     > [!NOTE]  
     >  不能将计算度量值指定为默认度量值。  
   
 3.  请清除下列对象的复选框：  
   
-    -   `Internet Sales`度量值组  
+    -   `Internet Sales`度量组  
   
-    -   `Reseller Sales`度量值组  
+    -   `Reseller Sales`度量组  
   
-    -   " **Internet 销售原因**" 度量值组  
+    -   “Internet 销售原因”**** 度量值组  
   
-    -   **销售配额**度量值组  
+    -   “销售配额”**** 度量值组  
   
-    -   **Sales Quotas1**度量值组  
+    -   “销售 Quotas1”**** 度量值组  
   
-    -   " **Internet 销售订单详细信息**" 多维数据集维度  
+    -   “Internet 销售订单详细信息”**** 多维数据集维度  
   
-    -   "**销售原因**" 多维数据集维度  
+    -   “销售原因”**** 多维数据集维度  
   
-    -   **Internet 销售详细信息钻取操作**钻取操作  
+    -   “Internet 销售详细信息钻取操作”**** 钻取操作  
   
 4.  选中以下对象的复选框：  
   
-    -   **Internet 销售计数**度量值  
+    -   “Internet 销售计数”**** 度量值  
   
-    -   **分销商销售计数**度量值  
+    -   “分销商销售计数”**** 度量值  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>通过每个透视浏览多维数据集  
   
@@ -176,13 +176,13 @@ ms.locfileid: "69493776"
   
      ![Excel 中的“数据连接”向导](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel 中的“数据连接”向导")  
   
-6.  在`Internet Sales` **透视**列表中选择，然后在 "元数据" 窗格中查看度量值和维度。  
+6.  在`Internet Sales`**"透视"** 列表中选择，然后查看元数据窗格中的度量值和维度。  
   
      请注意，只那些为“Internet 销售”透视指定的对象才会出现。  
   
 7.  在元数据窗格中，展开“度量值”****。  
   
-     请注意，只有`Internet Sales`度量值组显示为 "所有产品的**GPM**和**internet 销售比率**" 计算成员。  
+     请注意，只显示`Internet Sales`度量值组，以及**Internet GPM**和**Internet 销售比率到所有产品**计算成员。  
   
 8.  在模型中，再次选择 Excel。 选择 `Sales Summary`。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "69493776"
  [定义和浏览翻译](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [视角](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [观点](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [多维模型中的透视](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

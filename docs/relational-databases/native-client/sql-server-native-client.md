@@ -1,5 +1,5 @@
 ---
-title: SQL 服务器本机客户端 |微软文档
+title: 关于
 ms.date: 04/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30ef404501c498fca2c722e9eb88bb13997a17b5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: d175942c9d636221868ca12743e6dac79bb2ddcb
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81305014"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388716"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,6 +59,6 @@ SNAC 或 SQL Server 本机客户端是一个已互换用于引用 SQL Server 的
 
 -   [处理字符转换时 ODBC 驱动程序行为的变化](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [安装 SQL 服务器本机客户端](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [SQL Server Native Client 功能](../../relational-databases/native-client/features/sql-server-native-client-features.md)  

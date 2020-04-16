@@ -1,5 +1,5 @@
 ---
-title: 本机客户端，连接关键字 SQL
+title: 使用连接字符串关键字
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6dd4f0cecc7b2772e82386d552e8b391d6dfd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 86e615d22284c5e22f3c6281caa683becfc35bb0
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303903"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388588"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>将连接字符串关键字用于 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,13 +57,13 @@ ms.locfileid: "81303903"
   
  下表对可能与 ODBC 连接字符串一起使用的关键字进行了说明。  
   
-|关键字|描述|  
+|关键字|说明|  
 |-------------|-----------------|  
 |**Addr**|“Address”的同义词。|  
 |**地址**|运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。 “Address”通常是服务器的网络名称，也可以是诸如管道、IP 地址或 TCP/IP 端口和套接字地址之类的其他名称****。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端时，**地址**的值优先于在 ODBC 连接字符串中传递给**服务器**的值。 另请注意，`Address=;`将连接到**Server**关键字中指定的服务器，而`Address= ;, Address=.;`和`Address=localhost;``Address=(local);`都会导致与本地服务器的连接。<br /><br /> Address 关键字的完整语法如下所示****：<br /><br /> [_protocol_**:**]*Address*[**,**_port &#124;\pipe\pipename_]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。 有关协议的详细信息，请参阅[配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果未指定*协议*或**网络**关键字，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用配置管理器中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]指定的协议顺序。<br /><br /> “port”是指定服务器上所要连接到的端口**。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。|  
 |**AnsiNPW**|如果是“yes”，则驱动程序使用 ANSI 定义的行为来处理 NULL 比较、字符数据填充、警告和 NULL 串联。 如果是“no”，则不公开 ANSI 定义的行为。 有关 ANSI NPW 行为的详细信息，请参阅[ISO 选项的效果](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
 |**应用程序**|调用[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)的应用程序的名称（可选）。 如果指定，此值存储在**master.dbo.sys进程**列**中program_name，** 并由[sp_who](../../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)和[APP_NAME](../../../t-sql/functions/app-name-transact-sql.md)函数返回。|  
-|**应用程序意图**|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite********。 默认值为 ReadWrite****。  例如：<br /><br /> `ApplicationIntent=ReadOnly`<br /><br /> 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端对[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的支持的详细信息，请参阅 SQL Server[本机客户端支持高可用性、灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|**应用程序意图**|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。 默认值为 ReadWrite****。  例如：<br /><br /> `ApplicationIntent=ReadOnly`<br /><br /> 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端对[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的支持的详细信息，请参阅 SQL Server[本机客户端支持高可用性、灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |**AttachDBFileName**|可附加数据库的主文件的名称。 如果使用 C 字符串变量，请包括完整路径，并将所有 \ 字符转义：<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> 附加此数据库并使其成为连接的默认数据库。 要使用**AttachDBFileName，** 还必须在[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)数据库参数或SQL_COPT_CURRENT_CATALOG连接属性中指定数据库名称。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不重新附加它；而是使用已附加的数据库作为连接的默认数据库。|  
 |**AutoTranslate**|如果是“yes”，则客户端和服务器之间发送的 ANSI 字符串将通过 Unicode 进行转换，以使在客户端与服务器的代码页之间匹配扩展字符的问题最小化。<br /><br /> 客户端SQL_C_CHAR发送到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**字符****、varchar**或**文本**变量、参数或列的数据使用客户端 ANSI 代码页 （ACP） 从字符转换为 Unicode，然后使用服务器的 ACP 从 Unicode 转换为字符。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**字符****、varchar**或发送到客户端**的文本**数据SQL_C_CHAR变量使用服务器 ACP 从字符转换为 Unicode，然后使用客户端 ACP 从 Unicode 转换为字符。<br /><br /> 这些转换由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序在客户端上执行。 这要求在服务器上使用的相同 ANSI 代码页 (ACP) 在客户端上可用。<br /><br /> 这些设置对于为下面这些传输而发生的转换无效：<br /><br /> \*UnicodeSQL_C_WCHAR客户端数据发送到**服务器上的字符****、varchar**或**文本**。<br /><br /> &#42;**字符****、varchar**或**文本**服务器数据发送到客户端上的 Unicode SQL_C_WCHAR变量。<br /><br /> \*ANSISQL_C_CHAR客户端数据发送到服务器上的 Unicode **nchar、nvarchar**或**nchar****ntext。**<br /><br /> \*Unicode **nchar、nvarchar**或**ntext**服务器数据发送到客户端上的 ANSI SQL_C_CHAR变量。 **nvarchar**<br /><br /> 如果是“no”，则不执行字符转换。<br /><br /> 本机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端 ODBC 驱动程序不转换客户端 ANSI 字符SQL_C_CHAR发送到**服务器上的字符****、varchar**或**文本**变量、参数或列的数据。 对从服务器发送到客户端上的SQL_C_CHAR变量的**字符****、varchar**或**文本**数据不执行任何转换。<br /><br /> 如果客户端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在使用不同的 ACP，则扩展字符可能被错误解释。|  
 |**数据库**|连接的默认 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的名称。 如果未指定**数据库**，则使用为登录定义的默认数据库。 来自 ODBC 数据源的默认数据库将覆盖为登录定义的默认数据库。 除非还指定**了附加DBFileName，** 否则数据库必须是现有数据库。 如果也指定**了 AttachDBFileName，** 则它指向的主文件将附加并指定**数据库**指定的数据库名称。|  
@@ -87,7 +87,7 @@ ms.locfileid: "81303903"
 |**区域**|如果是“yes”，则在将货币、日期和时间数据转换为字符数据时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将使用客户端设置。 该转换是单向的；驱动程序不会识别其中非 ODBC 标准格式的日期字符串或货币值；例如，在 INSERT 或 UPDATE 语句中使用的参数。 如果是“no”，则驱动程序使用 ODBC 标准字符串来表示转换为字符数据的货币、日期和时间数据。|  
 |**SaveFile**|如果连接成功则在其中保存当前连接的属性的 ODBC 数据源文件的名称。|  
 |**Server**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 该值必须是服务器的网络名称、IP 地址或者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器别名。<br /><br /> “Address”**** 关键字将替代“Server”**** 关键字。<br /><br /> 通过指定以下条件之一，可连接到本地服务器的默认实例：<br /><br /> **服务器*;**<br /><br /> **服务器*;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** _instancename_ **;**<br /><br /> 有关本地数据库支持的详细信息，请参阅[本地DB 的 SQL Server 本机客户端支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)。<br /><br /> 指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的命名实例， 追加**\\**_实例名称_。<br /><br /> 如果不指定服务器，则与本地计算机上的默认实例建立连接。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> Server**** 关键字的完整语法如下：<br /><br /> **Server=**[_protocol_**:**]*Server*[**,**_port_]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。<br /><br /> 以下示例将指定一个命名管道：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此行指定 named pipes 协议、本地计算机上的一个命名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称 (`MSSQL$MYINST01`)，以及命名管道的默认名称 (`sql/query`)。<br /><br /> 如果未指定*协议*或**网络**关键字，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用配置管理器中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]指定的协议顺序。<br /><br /> “port”是指定服务器上所要连接到的端口**。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。<br /><br /> 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端时，在 ODBC 连接字符串中传递到**Server**的值的开头将忽略空格。|  
-|**ServerSPN**|服务器的 SPN。 默认值为空字符串。 空字符串导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用驱动程序生成的默认 SPN。|  
+|**服务器SPN**|服务器的 SPN。 默认值为空字符串。 空字符串导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用驱动程序生成的默认 SPN。|  
 |**StatsLog_On**|如果是“yes”，则启用对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序性能数据的捕获。 如果是“no”，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序性能数据在连接上不可用。|  
 |**StatsLogFile**|用于记录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序性能统计信息的文件的完整路径和文件名。|  
 |**Trusted_Connection**|如果是“yes”，则指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用 Windows 身份验证模式进行登录验证。 否则指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户名和密码进行登录验证，并且必须指定 UID 和 PWD 关键字。|  
@@ -140,30 +140,30 @@ ms.locfileid: "81303903"
   
  下表对可能与 DBPROP_INIT_PROVIDERSTRING 一起使用的关键字进行了说明。  
   
-|关键字|初始化属性|描述|  
+|关键字|初始化属性|说明|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|“Address”的同义词。|  
 |**地址**|SSPROP_INIT_NETWORKADDRESS|组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的网络地址。<br /><br /> 有关有效地址语法的详细信息，请参阅本主题后面的**地址**ODBC 关键字的说明。|  
 |**应用程序**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
-|**应用程序意图**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite********。<br /><br /> 默认值为 ReadWrite****。 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端对[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的支持的详细信息，请参阅 SQL Server[本机客户端支持高可用性、灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|**应用程序意图**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。<br /><br /> 默认值为 ReadWrite****。 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端对[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的支持的详细信息，请参阅 SQL Server[本机客户端支持高可用性、灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|可附加数据库的主文件的名称（包括完整路径名）。 若要使用 AttachDBFileName，还必须使用访问接口字符串 Database 关键字来指定数据库名称****。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会重新附加它（而是使用已附加的数据库作为连接的默认数据库）。|  
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 可识别的值为“yes”和“no”。|  
 |**数据库**|DBPROP_INIT_CATALOG|数据库名称。|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|指定要使用的数据类型的处理模式。 对于访问接口数据类型，可识别的值为“0”，对于 SQL Server 2000 数据类型则为“80”。|  
 |**加密**|SSPROP_INIT_ENCRYPT|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“yes”和“no”。 默认值为“no”。|  
-|**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|用于数据库镜像的故障转移服务器的名称。|  
+|**故障转移合作伙伴**|SSPROP_INIT_FAILOVERPARTNER|用于数据库镜像的故障转移服务器的名称。|  
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|故障转移伙伴的 SPN。 默认值为空字符串。 空字符串导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
 |**语言**|SSPROP_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语言。|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|如果服务器是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本，则启用或禁用连接上的多个活动结果集 (MARS)。 可能的值为“yes”和“no”。 默认值为“no”。|  
 |**网**|SSPROP_INIT_NETWORKLIBRARY|“Network”的同义词。|  
 |**网络**|SSPROP_INIT_NETWORKLIBRARY|用于与组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的网络库。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|“Network”的同义词。|  
-|**PacketSize**|SSPROP_INIT_PACKETSIZE|网络数据包大小。 默认值为 4096。|  
+|**数据包大小**|SSPROP_INIT_PACKETSIZE|网络数据包大小。 默认值为 4096。|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|接受字符串“yes”和“no”作为值。 如果是“no”，则不允许数据源对象保留敏感的身份验证信息。|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录密码。|  
 |**Server**|DBPROP_INIT_DATASOURCE|组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。<br /><br /> 如果不指定，则与本地计算机上的默认实例建立连接。<br /><br /> 有关有效地址语法的详细信息，请参阅本主题中的**服务器**ODBC 关键字的说明。|  
-|**ServerSPN**|SSPROP_INIT_SERVERSPN|服务器的 SPN。 默认值为空字符串。 空字符串导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
+|**服务器SPN**|SSPROP_INIT_SERVERSPN|服务器的 SPN。 默认值为空字符串。 空字符串导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
 |**超时**|DBPROP_INIT_TIMEOUT|等待数据源初始化完成的时间（秒）。|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|如果是“yes”，则指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用 Windows 身份验证模式进行登录验证。 否则指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户名和密码进行登录验证，并且必须指定 UID 和 PWD 关键字。|  
 |**信任服务器证书**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受字符串“yes”和“no”作为值。 默认值为“no”，它意味着将验证服务器证书。|  
@@ -195,10 +195,10 @@ ms.locfileid: "81303903"
   
  下表对可能与 IDataInitialize::GetDataSource 配合使用的关键字进行了说明****：  
   
-|关键字|初始化属性|描述|  
+|关键字|初始化属性|说明|  
 |-------------|-----------------------------|-----------------|  
 |**应用程序名称**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite********。<br /><br /> 默认值为 ReadWrite****。 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端对[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的支持的详细信息，请参阅 SQL Server[本机客户端支持高可用性、灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。<br /><br /> 默认值为 ReadWrite****。 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端对[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的支持的详细信息，请参阅 SQL Server[本机客户端支持高可用性、灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 可识别的值为“true”和“false”。|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|等待数据源初始化完成的时间（秒）。|  
@@ -246,9 +246,9 @@ ms.locfileid: "81303903"
   
  下表对可能与 ADO 连接字符串一起使用的关键字进行了说明：  
   
-|关键字|初始化属性|描述|  
+|关键字|初始化属性|说明|  
 |-------------|-----------------------------|-----------------|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite********。<br /><br /> 默认值为 ReadWrite****。 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端对[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的支持的详细信息，请参阅 SQL Server[本机客户端支持高可用性、灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。<br /><br /> 默认值为 ReadWrite****。 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端对[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的支持的详细信息，请参阅 SQL Server[本机客户端支持高可用性、灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |**应用程序名称**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 可识别的值为“true”和“false”。|  
@@ -276,7 +276,7 @@ ms.locfileid: "81303903"
   
  **注意**：在连接字符串中，“旧密码”属性会设置 SSPROP_AUTH_OLD_PASSWORD，它是当前密码（可能已过期），通过访问接口字符串属性无法获取该密码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Native Client 生成应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

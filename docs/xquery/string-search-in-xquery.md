@@ -1,5 +1,6 @@
 ---
-title: XQuery 中的字符串搜索 |Microsoft Docs
+title: XQuery 中的字符串搜索 |微软文档
+description: 通过在 XQuery 中查看字符串搜索示例，了解如何在 XML 文档中搜索文本。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946251"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388055"
 ---
 # <a name="string-search-in-xquery"></a>XQuery 中的字符串搜索
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 在前面的查询中， `where` FLOWR 表达式中的筛选`for`表达式的结果，并只返回满足**contains （）** 条件的元素。  
+ 在上一个查询中`where`，FLOWR 表达式中筛选`for`表达式的结果，并仅返回满足 包含 **（）** 条件的元素。  
   
  结果如下：  
   
@@ -58,7 +59,7 @@ WHERE ProductModelID=19
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
+ [XML 数据&#40;SQL 服务器&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

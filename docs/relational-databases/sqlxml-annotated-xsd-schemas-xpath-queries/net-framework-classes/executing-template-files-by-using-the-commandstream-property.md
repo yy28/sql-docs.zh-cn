@@ -1,5 +1,6 @@
 ---
-title: 用 CommandStream 属性运行模板文件
+title: 使用命令流属性运行模板文件
+description: 了解如何使用 SqlXml命令对象的 CommandStream 属性执行由 SQL 或 XPath 查询组成的模板文件。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8741f9f4a094e33aa8da52d6a27d5169e2b09866
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251480"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388367"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>使用 CommandStream 属性执行模板文件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  此示例演示如何使用 SqlXmlCommand 对象的 CommandStream 属性来指定由 SQL 或 XPath 查询组成的模板文件。 在此应用程序中，将为命令文件打开 FileStreamobject，并将文件流指定为执行的 CommandStream。  
+  此示例演示如何通过使用 SqlXml命令对象的 CommandStream 属性来指定由 SQL 或 XPath 查询组成的模板文件。 在此应用程序中，为命令文件打开 FileStream 对象，并将文件流指定为执行的命令流。  
   
- 在下面的示例中，CommandType 属性指定为 SqlXmlCommandType （而不是 TemplateFile）。  
+ 在下面的示例中，命令类型属性指定为 SqlXml命令类型.模板（而不是模板文件）。  
   
  下面是示例 XML 模板：  
   
@@ -84,7 +85,7 @@ class Test
   
 1.  将该示例中提供的 XML 模板 (TemplateFile.xml) 保存在某个文件夹中。  
   
-2.  将此示例中提供的 c # 代码（DocSample.cs）保存到存储架构的相同文件夹中。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+2.  将此示例中提供的 C# 代码（DocSample.cs）保存在存储架构的同一文件夹中。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 3.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   

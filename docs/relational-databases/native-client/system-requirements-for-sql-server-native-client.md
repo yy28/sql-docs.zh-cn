@@ -1,5 +1,5 @@
 ---
-title: SQL 服务器本机客户端的系统要求 |微软文档
+title: 系统要求
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdf5d2de1c465300be803386e75acecfb61db93b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
-ms.translationtype: HT
+ms.openlocfilehash: 87470f9dc2c0bedbb3dd6fd0e45de64e256775cd
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81305018"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388036"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系统要求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "81305018"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|映像|  
-|varchar(max)|varchar|varchar|Text|  
+|varchar(max)|varchar|varchar|文本|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |xml|xml|xml|Ntext|  
 |CLR UDT （> 8Kb）|udt|varbinary|映像|  
