@@ -16,33 +16,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42b25dfe8f0a39c577e38c6d1ef21c7f3315a89d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "75231777"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
   从 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 开始，扩展了对服务主体名称 (SPN) 的支持，从而能够在所有协议中相互进行身份验证。 在先前版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，如果已使用 Active Directory 注册 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的默认 SPN，则仅对使用 TCP 的 Kerberos 支持 SPN。  
   
- 身份验证协议可使用 SPN 来确定运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时使用的帐户。 如果实例帐户已知，则 Kerberos 身份验证可用于通过客户端和服务器提供相互身份验证。 如果实例帐户未知，则使用仅通过服务器提供客户端的身份验证的 NTLM 身份验证。 目前， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 执行身份验证查找，并从实例名和网络连接属性派生 SPN。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将尝试在启动时注册 SPN，或者可手动对其进行注册。 但是，如果尝试注册 SPN 的帐户的访问权限不足，则注册将失败。  
+ 身份验证协议可使用 SPN 来确定运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时使用的帐户。 如果实例帐户已知，则 Kerberos 身份验证可用于通过客户端和服务器提供相互身份验证。 如果实例帐户未知，则使用仅通过服务器提供客户端的身份验证的 NTLM 身份验证。 目前， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 执行身份验证查找，并从实例名和网络连接属性派生 SPN。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将尝试在启动时注册 SPN，或者可手动对其进行注册。 但是，如果尝试注册 SPN 的帐户的访问权限不足，则注册将失败。  
   
- 域和计算机帐户在 Active Directory 中自动注册。 这些帐户可以用作 SPN，管理员也可以定义自己的 SPN。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可通过允许客户端直接指定要使用的 SPN，从而使安全身份验证更易于管理且更可靠。  
+ 域和计算机帐户在 Active Directory 中自动注册。 这些帐户可以用作 SPN，管理员也可以定义自己的 SPN。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可通过允许客户端直接指定要使用的 SPN，从而使安全身份验证更易于管理且更可靠。  
   
 > [!NOTE]  
 >  只有在使用 Windows 集成安全性进行连接时，才使用客户端应用程序指定的 SPN。  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 是一款诊断工具，可帮助解决与 Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]相关的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **Kerberos 配置管理器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]是一种诊断工具，可帮助解决 Kerberos 相关连接问题。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 是一款诊断工具，可帮助解决与 Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]相关的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **Kerberos 配置管理器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]是一种诊断工具，可帮助解决 Kerberos 相关连接问题。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
  有关 Kerberos 的详细信息，请参阅下列文章：  
   
--   [适用于 Windows 的 Kerberos 技术补充](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos Technical Supplement for Windows（针对 Windows 的 Kerberos 技术补充信息）](https://go.microsoft.com/fwlink/?LinkId=101449)  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -52,15 +50,11 @@ ms.locfileid: "75231777"
 |场景|说明|  
 |--------------|-----------------|  
 |早期应用程序不指定 SPN。|该兼容应用场景可确保不会对针对先前版本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发的应用程序的行为进行任何更改。 如果未指定 SPN，则应用程序使用已生成的 SPN，但不能识别使用哪个身份验证方法。|  
-|使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 当前版本的客户端应用程序将连接字符串中的 SPN 指定为域用户或计算机帐户、特定于实例的 SPN 或用户定义的字符串。|在访问接口、初始化或连接字符串中可使用 `ServerSPN` 关键字进行以下操作：<br /><br /> -指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例用于连接的帐户。 这可简化对 Kerberos 身份验证的访问。 如果 Kerberos 密钥发行中心 (KDC) 存在且指定了正确的帐户，则使用 Kerberos 身份验证的可能性大于 NTLM。 KDC 通常与域控制器在同一台计算机上。<br />-指定用于查找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的服务帐户的 SPN。 对于每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，会生成两个可用于此目的的默认 SPN。 但是，不能保证 Active Directory 中存在这些密钥，因此这种情况下无法保证 Kerberos 身份验证。<br />-指定将用于查找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的服务帐户的 SPN。 此 SPN 可以是任何映射到服务帐户的用户定义字符串。 这种情况下，必须手动在 KDC 中注册密钥，且密钥必须满足用户定义的 SPN 的规则。<br /><br /> 
-  `FailoverPartnerSPN` 关键字可用于为故障转移伙伴服务器指定 SPN。 帐户和 Active Directory 键值的范围与您可为主体服务器指定的值相同。|  
+|使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 当前版本的客户端应用程序将连接字符串中的 SPN 指定为域用户或计算机帐户、特定于实例的 SPN 或用户定义的字符串。|在访问接口、初始化或连接字符串中可使用 `ServerSPN` 关键字进行以下操作：<br /><br /> - 指定实例用于连接的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]帐户。 这可简化对 Kerberos 身份验证的访问。 如果 Kerberos 密钥发行中心 (KDC) 存在且指定了正确的帐户，则使用 Kerberos 身份验证的可能性大于 NTLM。 KDC 通常与域控制器在同一台计算机上。<br />- 指定 SPN 以查找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的服务帐户。 对于每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，会生成两个可用于此目的的默认 SPN。 但是，不能保证 Active Directory 中存在这些密钥，因此这种情况下无法保证 Kerberos 身份验证。<br />- 指定将用于查找实例的服务帐户的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SPN。 此 SPN 可以是任何映射到服务帐户的用户定义字符串。 这种情况下，必须手动在 KDC 中注册密钥，且密钥必须满足用户定义的 SPN 的规则。<br /><br /> `FailoverPartnerSPN` 关键字可用于为故障转移伙伴服务器指定 SPN。 帐户和 Active Directory 键值的范围与您可为主体服务器指定的值相同。|  
 |ODBC 应用程序将 SPN 指定为主体服务器或故障转移伙伴服务器的连接属性。|连接属性 `SQL_COPT_SS_SERVER_SPN` 可用于为与主体服务器的连接指定 SPN。<br /><br /> 连接属性 `SQL_COPT_SS_FAILOVER_PARTNER_SPN` 可用于为故障转移伙伴服务器指定 SPN。|  
-|OLE DB 应用程序将 SPN 指定为主体服务器或故障转移伙伴服务器的数据源初始化属性。|
-  `SSPROP_INIT_SERVER_SPN` 属性集中的连接属性 `DBPROPSET_SQLSERVERDBINIT` 可用于为连接指定 SPN。<br /><br /> 
-  `SSPROP_INIT_FAILOVER_PARTNER_SPN` 中的连接属性 `DBPROPSET_SQLSERVERDBINIT` 可用于为故障转移伙伴服务器指定 SPN。|  
+|OLE DB 应用程序将 SPN 指定为主体服务器或故障转移伙伴服务器的数据源初始化属性。|`SSPROP_INIT_SERVER_SPN` 属性集中的连接属性 `DBPROPSET_SQLSERVERDBINIT` 可用于为连接指定 SPN。<br /><br /> `SSPROP_INIT_FAILOVER_PARTNER_SPN` 中的连接属性 `DBPROPSET_SQLSERVERDBINIT` 可用于为故障转移伙伴服务器指定 SPN。|  
 |用户在 ODBC 数据源名称 (DSN) 中为服务器或故障转移伙伴服务器指定 SPN。|可在 ODBC DSN 中通过 DSN 设置对话框指定 SPN。|  
-|用户在 OLE DB 的 **“数据链接”** 或 **“登录”** 对话框中为服务器或故障转移伙伴服务器指定 SPN。|可在 **“数据链接”** 或 **“登录”** 对话框中指定 SPN。 
-  **“登录”** 对话框可用于 ODBC 或 OLE DB。|  
+|用户在 OLE DB 的 **“数据链接”** 或 **“登录”** 对话框中为服务器或故障转移伙伴服务器指定 SPN。|可在 **“数据链接”** 或 **“登录”** 对话框中指定 SPN。 **“登录”** 对话框可用于 ODBC 或 OLE DB。|  
 |ODBC 应用程序确定用于建立连接的身份验证方法。|连接成功打开后，应用程序可查询连接属性 `SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD`，从而确定使用了哪个身份验证方法。 值将包括但不限于 `NTLM` 和`Kerberos`。|  
 |OLE DB 应用程序确定用于建立连接的身份验证方法。|连接成功打开后，应用程序可查询 `SSPROP_AUTHENTICATION_METHOD` 属性集中的连接属性 `DBPROPSET_SQLSERVERDATASOURCEINFO`，从而确定使用了哪个身份验证方法。 值将包括但不限于 `NTLM` 和`Kerberos`。|  
   
@@ -78,7 +72,7 @@ ms.locfileid: "75231777"
  新的连接行为由客户端实现，因此这种行为不特定于某个版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="linked-servers-and-delegation"></a>链接服务器和委托  
- 创建链接服务器时，`@provstr`sp_addlinkedserver 的  参数可用于指定服务器和故障转移伙伴的 SPN[](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)。 这样做的好处与在客户端连接字符串中指定 SPN 相同：建立使用 Kerberos 身份验证的连接更简单、更可靠。  
+ 创建链接服务器时，[sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 的  参数可用于指定服务器和故障转移伙伴的 SPN`@provstr`。 这样做的好处与在客户端连接字符串中指定 SPN 相同：建立使用 Kerberos 身份验证的连接更简单、更可靠。  
   
  使用链接服务器的委托要求 Kerberos 身份验证。  
   
@@ -100,13 +94,13 @@ ms.locfileid: "75231777"
   
 |语法|说明|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|使用除 TCP 之外的协议时访问接口生成的用于默认实例的默认 SPN。<br /><br /> *fqdn*为完全限定的域名。|  
-|MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。<br /><br /> *port* 是 TCP 端口号。|  
-|MSSQLSvc/*fqdn*：*InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。<br /><br /> *InstanceName*是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例名称。|  
+|MSSQLSvc/*fqdn*|使用除 TCP 之外的协议时访问接口生成的用于默认实例的默认 SPN。<br /><br /> *fqdn* 为完全限定的域名。|  
+|MSSQLSvc/*fqdn*：*端口*|使用 TCP 时访问接口生成的默认 SPN。<br /><br /> *端口*是 TCP 端口号。|  
+|MSSQLSvc/*fqdn*：*实例名称*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。<br /><br /> InstanceName 为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名**。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|映射到内置计算机帐户的 SPN，这些内置计算机帐户由 Windows 自动注册。|  
-|*用户名*@*域*|域帐户的直接规范。<br /><br /> *用户名*是 Windows 用户帐户名。<br /><br /> *域*为 Windows 域名或完全限定的域名。|  
-|*MachineName*$@*域*|计算机帐户的直接规范。<br /><br /> （如果要连接到的服务器在 "本地系统" 或 "网络服务" 帐户下运行，若要`ServerSPN`获取 Kerberos 身份验证，可以采用*MachineName*$@*域*格式。）|  
-|*KDCKey*/*计算机名*|用户指定的 SPN。<br /><br /> *KDCKey*是符合 KDC 密钥的规则的字母数字字符串。|  
+|*用户名*@*域*|域帐户的直接规范。<br /><br /> *Username* 为 Windows 用户帐户名。<br /><br /> *Domain* 为 Windows 域名或完全限定的域名。|  
+|*机器名称*$@*域*|计算机帐户的直接规范。<br /><br /> （如果要连接到的服务器正在 LOCAL SYSTEM 或网络服务帐户下运行，要获得 Kerberos`ServerSPN`身份验证，可以采用*计算机名称*$@*域*格式。|  
+|*KDCKey*/*机器名称*|用户指定的 SPN。<br /><br /> *KDCKey* 为符合 KDC 密钥的规则的字母数字字符串。|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>支持 SPN 的 ODBC 和 OLE DB 语法  
  有关特定于语法的信息，请参阅以下主题：  

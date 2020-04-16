@@ -1,5 +1,5 @@
 ---
-title: 配置服务帐户（SSRS Configuration Manager） |Microsoft Docs
+title: 配置服务帐户（SSRS 配置管理器） |微软文档
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "71952586"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>配置服务帐户（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中，报表服务器 Web 服务、报表管理器和后台处理应用程序在一个服务内运行。 运行该服务的帐户是在安装过程中定义的，即在“服务标识”页中指定的帐户；但是，如果希望使用不同的帐户或更改密码，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。  
   
- 如果您的 Report Server 配置为使用 SharePoint 集成模式，并且您使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具更改了该服务帐户，则您还必须打开 SharePoint 管理中心并使用 " [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **授予数据库访问权限**" 页重新应用 "Report Server" 和 "实例" 设置。 此步骤向新服务帐户授予对 SharePoint 数据库的访问权限，这是将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]集成所必需的。  
+ 如果报表服务器配置为使用 SharePoint 集成模式，并且使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"配置"工具更改服务帐户，则还必须打开 SharePoint 管理中心管理并使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**"授予数据库访问**"页重新应用报表服务器和实例设置。 此步骤向新服务帐户授予对 SharePoint 数据库的访问权限，这是将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]集成所必需的。  
   
  请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来更新服务帐户，以便可以同时更新依赖服务标识的其他设置。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71952586"
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到报表服务器。  
   
-2.  在“服务帐户”页上，选择描述您要使用的帐户类型的选项。 有关指定哪种帐户类型的建议，请参阅[将报表服务器服务帐户 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)中。  
+2.  在“服务帐户”页上，选择描述您要使用的帐户类型的选项。 有关要指定哪个帐户类型的建议，请参阅[将报表服务器服务帐户&#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 3.  如果选择了一个 Windows 用户帐户，请指定新的帐户名和密码。 帐户名不能超过 20 个字符。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71952586"
   
 5.  当系统提示您备份对称密钥时，请键入对称密钥备份的文件名和位置，并键入用于锁定和解锁该文件的密码，然后单击 **“确定”**。  
   
-6.  如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息将更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现“ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **数据库连接”** 对话框，请输入拥有连接到数据库的权限的凭据，然后单击 **“确定”**。  
+6.  如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息将更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现  的“数据库连接”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **** 对话框，请输入拥有连接到数据库的权限的凭据，然后单击“确定”****。  
   
 7.  当系统提示您还原对称密钥时，请键入在步骤 5 中指定的密码，并单击 **“确定”**。  
   
@@ -64,10 +64,10 @@ ms.locfileid: "71952586"
 -   更新服务帐户时可能会发生 URL 预留错误。 每个 URL 预留都包含一个安全描述符，其中包含授权该服务帐户接受该 URL 上的请求的自由访问控制列表 (DACL)。 更新帐户时，必须重新创建该 URL，以便用新帐户信息更新 DACL。 如果无法重新创建 URL 预留，并且你知道该帐户是有效的，请尝试重新启动计算机。 如果错误仍然存在，请尝试使用不同的帐户。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [&#40;SSRS Configuration Manager 配置报表服务器数据库连接&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [服务帐户 &#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
+ [报告服务配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [配置报表服务器服务帐户&#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [服务帐户&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

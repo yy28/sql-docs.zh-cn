@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "73882239"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
@@ -79,7 +79,7 @@ ms.locfileid: "73882239"
   
  若要处理验证失败，请考虑以下事项：  
   
--   配置名为 **“复制: 订阅服务器未通过数据验证”** 的复制警报，以便您在验证失败时得到通知。 有关详细信息，请参阅 [配置预定义的复制警报 &#40;SQL Server Management Studio& # 41 （管理/配置预定义---------------------Studio）。  
+-   配置名为 **“复制: 订阅服务器未通过数据验证”** 的复制警报，以便您在验证失败时得到通知。 有关详细信息，请参阅 [配置预定义的复制警报&#40;SQL 服务器管理工作室&#41（管理/配置预定义复制-警报-sql-服务器-管理-studio.md）。  
   
 -   验证失败是否已对您的应用程序带来问题？ 如果验证失败带来了问题，请手动更新数据以进行同步，或者重新初始化订阅：  
   
@@ -112,7 +112,7 @@ ms.locfileid: "73882239"
 
 #### <a name="all-articles"></a>所有项目
   
-1.  在发布服务器上，对发布数据库执行 [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)。 **为\@rowcount_only**指定** \@发布**和以下值之一：    
+1.  在发布服务器上，对发布数据库执行 [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)。 **为\@rowcount_only**指定**\@发布**和以下值之一：    
     -   **1** - 只检查行计数（默认值）    
     -   **2** - 行计数和二进制校验和。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "73882239"
   
 #### <a name="single-article"></a>单个项目 
   
-1.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定** \@发布**、 ** \@项目**的名称，并为** \@rowcount_only**指定以下值之一：    
-    -   **1** -仅限行计数检查（默认值）    
-    -   **2** -行计数和二进制校验和。  
+1.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定**\@发布**、**\@文章**的文章名称以及**\@rowcount_only**的以下值之一：    
+    -   **1** - 只检查行计数（默认值）    
+    -   **2** - 行计数和二进制校验和。  
   
     > [!NOTE]  
     >  若要成功地执行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)，必须对发布的基表中的所有列拥有 SELECT 权限。  
@@ -137,11 +137,11 @@ ms.locfileid: "73882239"
 #### <a name="single-subscriber"></a>单个订阅服务器
   
 1.  在发布服务器的发布数据库中，使用 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql) 打开一个显式事务。    
-2.  在发布服务器上，对发布数据库执行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)。 指定** \@发布的发布、** ** \@订阅**服务器的名称以及** \@destination_db**的订阅数据库的名称。    
+2.  在发布服务器上，对发布数据库执行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)。 指定**\@出版物的发布**、**\@订阅者**的订阅者名称以及**\@destination_db**订阅数据库的名称。    
 3.  （可选）对每个要验证的订阅都重复步骤 2。    
-4.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定** \@发布**、 ** \@项目**的名称，并为** \@rowcount_only**指定以下值之一：    
-    -   **1** -仅限行计数检查（默认值）    
-    -   **2** -行计数和二进制校验和。  
+4.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定**\@发布**、**\@文章**的文章名称以及**\@rowcount_only**的以下值之一：    
+    -   **1** - 只检查行计数（默认值）    
+    -   **2** - 行计数和二进制校验和。  
   
     > [!NOTE]  
     >  若要成功地执行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)，必须对发布的基表中的所有列拥有 SELECT 权限。  
@@ -151,7 +151,7 @@ ms.locfileid: "73882239"
 7.  （可选）如果分发代理尚未运行，请启动分发代理。 有关详细信息，请参阅 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 和 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)。    
 8.  检查代理输出以获取验证结果。 有关详细信息，请参阅 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  
 
-##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>对事务发布的所有推送订阅 
+##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>所有推送到事务发布订阅 
 
 ### <a name="using-replication-monitor"></a>使用复制监视器
   
@@ -187,9 +187,9 @@ ms.locfileid: "73882239"
 
 ### <a name="using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL)
 
-1.  在发布服务器上，对发布数据库执行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)。 指定** \@发布**、 ** \@订阅**服务器的订阅服务器名称、 ** \@subscriber_db**的订阅数据库的名称，以及** \@级别**的下列值之一：   
-    -   **1** -仅限行计数验证。    
-    -   **3** -行计数二进制校验和验证。  
+1.  在发布服务器上，对发布数据库执行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)。 指定**\@发布**、**\@订阅者**订阅方的名称**\@、subscriber_db**订阅数据库的名称以及**\@级别**以下值之一：   
+    -   **1** - 只验证行计数。    
+    -   **3** - 行计数二进制校验和验证。  
   
      这样会标记所选订阅以便验证。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "73882239"
 3.  右键单击要验证其订阅的发布，然后单击 **“验证所有订阅”**。    
 4.  在 **“验证所有订阅”** 对话框中，指定要执行的验证类型（行计数，或行计数和校验和）。    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
-6.  在复制监视器或 "**查看同步状态**" 对话框中查看验证结果。 对于每个订阅：    
+6.  在"复制监视器"或"**查看同步状态"** 对话框中查看验证结果。 对于每个订阅：    
     1.  展开发布，右键单击该订阅，然后单击 **“查看同步状态”**。   
     2.  如果代理未运行，请单击 **“查看同步状态”** 对话框中的 **“启动”** 。 该对话框将显示有关验证的信息性消息。  
   
@@ -218,9 +218,9 @@ ms.locfileid: "73882239"
 
 ### <a name="using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL)
 
-1.  在发布服务器上，对发布数据库执行 [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)。 **为\@level**指定** \@发布**和以下值之一：    
-    -   **1** -仅限行计数验证。    
-    -   **3** -行计数二进制校验和验证。  
+1.  在发布服务器上，对发布数据库执行 [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)。 指定**\@发布**和以下值之一的**\@级别**：    
+    -   **1** - 只验证行计数。    
+    -   **3** - 行计数二进制校验和验证。  
   
      这样会标记所有订阅以便验证。  
   
@@ -303,7 +303,7 @@ ms.locfileid: "73882239"
 4.  调用 <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> 方法。 传递要验证的订阅服务器和订阅数据库的名称以及所需的 <xref:Microsoft.SqlServer.Replication.ValidationOption>。    
 5.  对订阅运行合并代理以开始验证，或者等待下一个计划的代理运行。 有关详细信息，请参阅 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 和 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)。 验证操作的结果将写入代理的历史记录，您可以使用复制监视器查看。 有关详细信息，请参阅 [Monitoring Replication](monitoring-replication.md)。  
   
-###  <a name="RMOExample"></a> 示例 (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a>示例 （RMO）  
  此示例将对事务发布的所有订阅标记为行计数验证。  
   
  [!code-csharp[HowTo#rmo_ValidateTranPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_validatetranpub)]  

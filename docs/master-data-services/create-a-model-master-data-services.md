@@ -14,10 +14,10 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "73728481"
 ---
 # <a name="create-a-model-master-data-services"></a>创建模型 (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728481"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建模型以便包含模型对象。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员&#40;主数据服务&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-model"></a>创建模型  
   
@@ -45,9 +45,9 @@ ms.locfileid: "73728481"
   
 5.  （可选）在“说明”**** 字段中，输入模型说明。  
   
-6.  在“日志保留期(以天为单位)” **** 字段中，选择一个日志数据保留选项。 默认值是“系统设置” ****，指示值继承自 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系统设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
+6.  在“日志保留天数” **** 字段中，选择一个选项来保留日志数据。 默认值是“系统设置” ****，指示值继承自 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系统设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
-     若要替代系统设置且不删除事务日志数据，请选择“否” ****。 若要仅保留今日的日志数据并截断之前所有天数的日志数据，请选择“是”并将“天数”字段设置为 0********。 若要保留特定天数的日志数据，请选择“是” **** ，然后将“天数” **** 字段设置为相应天数。  
+     若要替代系统设置且不删除事务日志数据，请选择“否” ****。 要仅保留今天的日志数据并截留所有前几天的日志数据，请选择 **"是**"并将 **"天"** 字段设置为 0。 若要保留特定天数的日志数据，请选择“是” **** 并将“天数” **** 字段设置为相应天数。  
   
 7.  或者，选择 **“使用与模型相同的名称创建实体”** 可以使用与模型相同的名称创建实体。  
   
@@ -55,31 +55,31 @@ ms.locfileid: "73728481"
   
  对于创建的每个模型，系统都会在网格中添加一行（其中包含八列）。 八个列是：  
   
--   **状态**：模型状态。 单击 "**保存模型**" 按钮后，将显示 "![更新](../master-data-services/media/mds-model-status-updating.png "正在更新…")" 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示![错误](../master-data-services/media/mds-model-status-error.png "错误")映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "OK") 图像。  
+-   状态****：模型状态。 单击"**保存模型"** 按钮时，将显示!["更新](../master-data-services/media/mds-model-status-updating.png "正在更新")"图像，表示模型正在更新。 如果创建或编辑模型时出现错误，将显示!["错误"](../master-data-services/media/mds-model-status-error.png "错误")图像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "OK") 图像。  
   
--   **名称**：模型名称。  
+-   名称****：模型名称。  
   
--   **说明**：模型说明。  
+-   说明****：模型说明。  
   
--   **日志保留天数**：保留该模型的日志的天数。  
+-   日志保留天数****：日志可保留该模型的天数。  
   
--   **创建者**：创建模型的用户的用户名。  
+-   创建者****：创建模型的用户的用户名。  
   
--   **创建日期和时间**：创建模型的日期和时间。  
+-   创建的日期和时间****：创建模型的日期和时间。  
   
--   **更新者**：上次更新模型的用户的用户名。  
+-   更新者****：上次更新模型的用户的用户名。  
   
--   **更新的日期和时间**：上次更新模型的日期和时间。  
+-   创建的日期和时间****：上次更新模型的日期和时间。  
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [创建实体 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
+-   [创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Master Data Services &#40;模型&#41;](../master-data-services/models-master-data-services.md)   
- [实体 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [删除 &#40;Master Data Services 的模型&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [编辑模型 &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
- [Master Data Services 的事务 &#40;&#41;](../master-data-services/transactions-master-data-services.md)  
+ [&#40;主数据服务&#41;](../master-data-services/models-master-data-services.md)   
+ [实体&#40;主数据服务&#41;](../master-data-services/entities-master-data-services.md)   
+ [删除主数据服务&#40;模型&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [编辑模型&#40;主数据服务&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
   
