@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664282"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488196"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "80664282"
   
 > [!NOTE] 
 >  
-> 此动态管理视图 （DMV） 仅在安装并启用支持外部脚本执行的功能时才可用。 有关详细信息，请参阅[SQL Server 2016 中的 R 服务和](../../machine-learning/r/sql-server-r-services.md)SQL Server [2017 及更高版本中的机器学习服务 （R、Python）。](../../machine-learning/what-is-sql-server-machine-learning.md)  
+> 此动态管理视图 （DMV） 仅在安装并启用支持外部脚本执行的功能时才可用。 有关详细信息，请参阅[SQL Server 2016 中的 R 服务和](../../machine-learning/r/sql-server-r-services.md)SQL Server [2017 及更高版本中的机器学习服务 （R、Python）。](../../machine-learning/sql-server-machine-learning-services.md)  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**唯一标识符**|发送外部脚本请求的进程的 ID。 这对应于收到的进程 ID[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |语言|**nvarchar**|表示支持的脚本语言的关键字。 |  
-|degree_of_parallelism|**Int**|数字，指示已创建的并行进程数。 此值可能与请求的并行进程数不同。|  
+|degree_of_parallelism|**int**|数字，指示已创建的并行进程数。 此值可能与请求的并行进程数不同。|  
 |external_user_name|**nvarchar**|在其下执行脚本的 Windows 工作线程帐户。|  
   
 ## <a name="permissions"></a>权限  

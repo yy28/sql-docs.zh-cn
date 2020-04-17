@@ -1,5 +1,6 @@
 ---
-title: 设计程序集 |Microsoft Docs
+title: 设计组件 |微软文档
+description: 本文介绍了在设计要在 SQL Server 上托管的程序集时需要考虑的因素，包括程序集的打包、管理和限制。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028036"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488036"
 ---
 # <a name="assemblies---designing"></a>程序集 - 设计
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明了设计程序集时应考虑的下列因素：  
   
--   打包程序集  
+-   包装组件  
   
 -   管理程序集安全性  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68028036"
   
  将代码打包到程序集中时，应考虑以下内容：  
   
--   依赖于 CLR 用户定义函数的 CLR 用户定义类型和索引可以导致持久化数据存在于依赖程序集的数据库中。 数据库中具有依赖于程序集的持久化数据时，修改程序集的代码通常更加复杂。 因此，通常将持久化数据相关性依赖（例如使用用户定义函数的用户定义类型和索引）的代码与没有这种持久化数据相关性的代码分开更好。 有关详细信息，请参阅[实现程序集](../../relational-databases/clr-integration/assemblies-implementing.md)和[ALTER ASSEMBLY &#40;transact-sql&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
+-   依赖于 CLR 用户定义函数的 CLR 用户定义类型和索引可以导致持久化数据存在于依赖程序集的数据库中。 数据库中具有依赖于程序集的持久化数据时，修改程序集的代码通常更加复杂。 因此，通常将持久化数据相关性依赖（例如使用用户定义函数的用户定义类型和索引）的代码与没有这种持久化数据相关性的代码分开更好。 有关详细信息，请参阅[实现程序集](../../relational-databases/clr-integration/assemblies-implementing.md)和[ALTER ASSEMBLY &#40;执行 SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
   
 -   如果托管代码需要更高的权限，最好将该代码与不需要更高权限的代码分开，并将其放入单独的程序集。  
   
@@ -54,11 +55,10 @@ ms.locfileid: "68028036"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE 不限制程序集访问资源，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以内和以外的资源。 在 UNSAFE 程序集内运行的代码可以调用非托管代码。  
   
- 同时，指定 UNSAFE 将允许程序集中的代码执行 CLR 验证工具认为是非安全类型的操作。 这些操作可能以非控制的方式访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程空间中的内存缓冲区。 UNSAFE 程序集也可能破坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或公共语言运行时的安全系统。 有经验的开发人员或管理员应仅向高度可信的程序集授予 UNSAFE 权限。 只有**sysadmin**固定服务器角色的成员才可以创建不安全的程序集。  
+ 同时，指定 UNSAFE 将允许程序集中的代码执行 CLR 验证工具认为是非安全类型的操作。 这些操作可能以非控制的方式访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程空间中的内存缓冲区。 UNSAFE 程序集也可能破坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或公共语言运行时的安全系统。 有经验的开发人员或管理员应仅向高度可信的程序集授予 UNSAFE 权限。 只有**系统管理员**固定服务器角色的成员才能创建 UNSAFE 程序集。  
   
 ## <a name="restrictions-on-assemblies"></a>对程序集的限制  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对程序集中的托管代码有一些限制，以便确保可以以可靠和可伸缩的方式运行它们。 这意味着在 SAFE 和 EXTERNAL_ACCESS 程序集不允许可能危及服务器可靠性的某些操作。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对程序集中的托管代码有一些限制，以便确保可以以可靠和可伸缩的方式运行它们。 这意味着在 SAFE 和 EXTERNAL_ACCESS 程序集不允许可能危及服务器可靠性的某些操作。  
   
 ### <a name="disallowed-custom-attributes"></a>禁止的自定义属性  
  不能用以下自定义属性批注程序集：  
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>禁止的 .NET Framework API  
- 不[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]能从安全的和 EXTERNAL_ACCESS 的程序集调用任何用某个不允许的**HostProtectionAttributes**批注的 API。  
+ 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]使用不允许的**主机保护属性**之一进行批号签名的 API 都不能从 SAFE 和EXTERNAL_ACCESS程序集调用。  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -118,7 +118,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [程序集 &#40;数据库引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [程序集&#40;数据库引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 集成安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 事务生存期 |Microsoft Docs
+title: 事务生存期 |微软文档
+description: 了解 SQL Server CLR 集成中的事务生存期。 在 Transact-SQL 存储过程中启动的事务与托管代码中启动的事务不同。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1fed737c644ebb241a5761fffd2409c2556d28ea
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70874852"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487483"
 ---
 # <a name="transaction-lifetimes"></a>事务生存期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "70874852"
   
 -   尝试提交不在同一过程中启动的事务将导致运行时错误。  
   
--   如果尝试回滚不是在同一过程中启动的事务，则会导致事务停止响应（防止任何其他副作用的操作发生）。 事务将断开连接，直到 CLR 代码离开作用域。 请注意当您在过程内检测到错误并想确保终止整个事务时，这可能很有用。  
+-   尝试回滚未在同一过程中启动的事务会导致事务停止响应（防止发生任何其他副作用操作）。 事务将断开连接，直到 CLR 代码离开作用域。 请注意当您在过程内检测到错误并想确保终止整个事务时，这可能很有用。  
   
 ## <a name="see-also"></a>另请参阅  
  [CLR 集成和事务](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

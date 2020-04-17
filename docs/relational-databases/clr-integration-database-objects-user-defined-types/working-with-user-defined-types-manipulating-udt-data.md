@@ -1,5 +1,6 @@
 ---
-title: 操作 UDT 数据 |Microsoft Docs
+title: 操作 UDT 数据 |微软文档
+description: 本文介绍如何在 SQL Server 数据库的 UDT 列中插入、选择和更新数据。
 ms.custom: ''
 ms.date: 12/05/2019
 ms.prod: sql
@@ -28,21 +29,19 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5ab38e745c619d119e8e4ca477e9e78f4ac7783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4ff4b620f2f06243b23b4c540f4c99b3c3cafa41
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74901934"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486894"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>使用用户定义类型 - 操作 UDT 数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 没有为在对用户定义类型 (UDT) 列中的数据进行修改时所使用的 INSERT、UPDATE 或 DELETE 语句提供专用语法。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函数用于将本机数据类型转换为 UDT 类型。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 没有为在对用户定义类型 (UDT) 列中的数据进行修改时所使用的 INSERT、UPDATE 或 DELETE 语句提供专用语法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函数用于将本机数据类型转换为 UDT 类型。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>在 UDT 列中插入数据  
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句将三行示例数据插入到**Points**表中。 **Point**数据类型由作为 UDT 属性公开的 X 和 Y 整数值组成。 必须使用 CAST 或 CONVERT 函数将以逗号分隔的 X 和 Y 值转换为**点**类型。 前两个语句使用 CONVERT 函数将字符串值转换为**点**类型，第三个语句使用 CAST 函数：  
+ 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句将三行示例数据插入**到"点"** 表中。 **点**数据类型由 X 和 Y 整数值组成，这些值作为 UDT 的属性公开。 您必须使用 CAST 或 CONVERT 函数将逗号分隔 X 和 Y 值转换为**点**类型。 前两个语句使用 CONVERT 函数将字符串值转换为**Point**类型，第三个语句使用 CAST 函数：  
   
 ```sql  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -57,7 +56,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 若要查看以可读格式显示的输出，请调用**Point** UDT 的**ToString**方法，该方法将值转换为其字符串表示形式。  
+ 要查看以可读格式显示的输出，请调用**Point** UDT 的**ToString**方法，该方法将值转换为其字符串表示形式。  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -84,7 +83,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- **Point** UDT 将其 X 和 Y 坐标公开为属性，然后您可以单独选择这些属性。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将分别选择 X 和 Y 坐标：  
+ **点**UDT 公开其 X 和 Y 坐标作为属性，然后您可以单独选择这些属性。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将分别选择 X 和 Y 坐标：  
   
 ```sql  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -102,7 +101,7 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>使用变量  
- 可以通过使用 DECLARE 语句将变量分配给 UDT 类型来使用变量。 以下语句使用[!INCLUDE[tsql](../../includes/tsql-md.md)] SET 语句分配值，并通过对变量调用 UDT 的**ToString**方法来显示结果：  
+ 可以通过使用 DECLARE 语句将变量分配给 UDT 类型来使用变量。 以下语句使用[!INCLUDE[tsql](../../includes/tsql-md.md)]SET 语句分配值，并通过在变量上调用 UDT 的**ToString**方法来显示结果：  
   
 ```sql  
 DECLARE @PointValue Point;  
@@ -131,7 +130,7 @@ SELECT @PointValue.ToString() AS PointValue;
  使用 SELECT 和使用 SET 进行变量赋值的差异是 SELECT 允许在一个 SELECT 语句中为多个变量赋值，而 SET 语法则要求每次变量赋值都要有自己的 SET 语句。  
   
 ## <a name="comparing-data"></a>比较数据  
- 如果在定义类时已将**IsByteOrdered**属性设置为**true** ，则可以使用比较运算符来比较 UDT 中的值。 有关详细信息，请参阅[创建用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)。  
+ 如果在定义类时将**IsByteOrdered**属性设置为**true，** 则可以使用比较运算符比较 UDT 中的值。 有关详细信息，请参阅[创建用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)。  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Points   
@@ -139,7 +138,7 @@ FROM dbo.Points
 WHERE PointValue > CONVERT(Point, '2,2');  
 ```  
   
- 如果值本身是可比较的，则可以比较 UDT 的内部值，而不考虑**IsByteOrdered**设置。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句选择 X 大于 Y 的行：  
+ 如果值本身是可比的，则可以比较 UDT 的内部值，而不考虑**IsByteOrdered**设置。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句选择 X 大于 Y 的行：  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -158,9 +157,9 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>调用 UDT 方法  
- 还可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中调用在 UDT 中定义的方法。 **Point**类包含三个方法： "**距离**"、" **DistanceFrom**" 和 " **DistanceFromXY**"。 有关定义这三个方法的代码清单，请参阅[编写用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)的代码。  
+ 还可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中调用在 UDT 中定义的方法。 **点**类包含三种方法：**距离**、**距离**和**距离距离XY。** 有关定义这三种方法的代码列表，请参阅[编写用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
   
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句调用**PointValue**方法：  
+ 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句调用**PointValue.距离**方法：  
   
 ```sql  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -169,7 +168,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- 结果显示在 "**距离**" 列中：  
+ 结果显示在 **"距离**"列中：  
   
 ```  
 ID X  Y  Distance  
@@ -179,7 +178,7 @@ ID X  Y  Distance
  3  1 99 99.0050503762308  
 ```  
   
- **DistanceFrom**方法采用**Point**数据类型的参数，并显示从指定点到 PointValue 的距离：  
+ **"距离"** 方法采用**点**数据类型的参数，并显示从指定点到点值的距离：  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -187,7 +186,7 @@ SELECT ID, PointValue.ToString() AS Pnt,
 FROM dbo.Points;  
 ```  
   
- 结果显示表中每一行的**DistanceFrom**方法结果：  
+ 结果显示表中每行的 **"距离"** 方法的结果：  
   
 ```  
 ID Pnt DistanceFromPoint  
@@ -197,7 +196,7 @@ ID Pnt DistanceFromPoint
  3 1,9                90  
 ```  
   
- **DistanceFromXY**方法单独使用点作为参数：  
+ **"距离从XY"** 方法将点单独作为参数：  
   
 ```sql  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   
@@ -205,7 +204,7 @@ PointValue.DistanceFromXY(1, 99) AS DistanceFromXY
 FROM dbo.Points  
 ```  
   
- 结果集与**DistanceFrom**方法相同。  
+ 结果集与 **"距离"** 方法相同。  
   
 ## <a name="updating-data-in-a-udt-column"></a>更新 UDT 列中的数据  
  若要更新 UDT 列中的数据，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE 语句。 还可以使用 UDT 的方法以更新对象的状态。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句更新表中的单个行：  
@@ -224,7 +223,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- 如果已使用将字节排序设置为**true**定义 udt， [!INCLUDE[tsql](../../includes/tsql-md.md)]则可以计算 WHERE 子句中的 udt 列。  
+ 如果 UDT 已定义字节排序设置为**true**，[!INCLUDE[tsql](../../includes/tsql-md.md)]则可以在 WHERE 子句中评估 UDT 列。  
   
 ```sql  
 UPDATE dbo.Points  

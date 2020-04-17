@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128765"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487152"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全对象都有可以授予主体的关联权限。 本主题提供了下列信息：  
@@ -32,13 +32,13 @@ ms.locfileid: "63128765"
   
 -   [与特定的安全对象相关的权限](#_securables)  
   
--   [SQL Server 权限](#_permissions)  
+-   [SQL 服务器权限](#_permissions)  
   
 -   [权限检查算法](#_algorithm)  
   
 -   [示例](#_examples)  
   
-##  <a name="_conventions"></a> 权限命名约定  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>权限命名约定  
  下面介绍命名权限时遵循的一般约定：  
   
 -   CONTROL  
@@ -51,33 +51,33 @@ ms.locfileid: "63128765"
   
 -   ALTER ANY \<*Server Securable*>，其中 *Server Securable* 可为任何服务器安全对象。  
   
-     授予创建、更改或删除“服务器安全对象”  的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
+     授予创建、更改或删除“服务器安全对象” ** 的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
   
 -   ALTER ANY \<*Database Securable*>，其中 *Database Securable* 可为数据库级别的任何安全对象。  
   
-     授予创建、更改或删除“数据库安全对象”  的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
+     授予创建、更改或删除“数据库安全对象” ** 的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
   
 -   TAKE OWNERSHIP  
   
      允许被授权者获取所授予的安全对象的所有权。  
   
--   IMPERSONATE \<*Login*>  
+-   模拟\<*登录*>  
   
      允许被授权者模拟该登录名。  
   
--   IMPERSONATE \<*User*>  
+-   \<模拟*用户*>  
   
      允许被授权者模拟该用户。  
   
--   CREATE \<*服务器安全对象*>  
+-   创建\<*服务器可安全保护*>  
   
-     授予被授权者创建“服务器安全对象”  的权限。  
+     授予被授权者创建“服务器安全对象” ** 的权限。  
   
--   CREATE \<*数据库安全对象*>  
+-   创建\<*数据库可安全保护*>  
   
-     授予被授权者创建“数据库安全对象”  的权限。  
+     授予被授权者创建“数据库安全对象” ** 的权限。  
   
--   CREATE \<*包含架构的安全对象*>  
+-   创建\<*包含架构的可安全保护*>  
   
      授予创建包含在架构中的安全对象的权限。 但是，若要在特定架构中创建安全对象，必须对该架构具有 ALTER 权限。  
   
@@ -92,12 +92,12 @@ ms.locfileid: "63128765"
      对象的 REFERENCES 权限是使用引用该对象的 `WITH SCHEMABINDING` 子句创建 FUNCTION 或 VIEW 时所必需的。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
- 有关 pdf 格式的所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]权限的海报大小的图表，请[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)参阅。  
+ 有关 pdf 格式所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]权限的海报大小图表，请参阅。 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)  
   
-##  <a name="_securables"></a> 适用于特定安全对象的权限  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>适用于特定安全可保护的权限  
  下表列出了主要的权限类别以及可应用这些权限的安全对象的种类。  
   
-|权限|适用于|  
+|权限|适用对象|  
 |----------------|----------------|  
 |SELECT|同义词<br /><br /> 表和列<br /><br /> 表值函数（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 和公共语言运行时 (CLR)）和列<br /><br /> 视图和列|  
 |VIEW CHANGE TRACKING|表<br /><br /> 架构|  
@@ -105,7 +105,7 @@ ms.locfileid: "63128765"
 |REFERENCES|标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 表和列<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）和列<br /><br /> 类型<br /><br /> 视图和列<br /><br /> 序列对象|  
 |INSERT|同义词<br /><br /> 表和列<br /><br /> 视图和列|  
 |DELETE|同义词<br /><br /> 表和列<br /><br /> 视图和列|  
-|在运行 CREATE 语句前执行|过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 同义词<br /><br /> CLR 类型|  
+|EXECUTE|过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 同义词<br /><br /> CLR 类型|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列|  
 |VIEW DEFINITION|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 登录名、用户和角色<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 视图<br /><br /> 序列对象|  
 |ALTER|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 序列对象<br /><br /> 登录名、用户和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 视图|  
@@ -116,7 +116,7 @@ ms.locfileid: "63128765"
 > [!CAUTION]  
 >  安装期间授予系统对象的默认权限已针对可能的威胁进行了仔细评估，并且作为强化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分，无需进行更改。 对系统对象权限的任何更改都可能限制或破坏功能，并且可能让你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装处于不受支持的状态。  
   
-##  <a name="_permissions"></a>SQL Server 和 SQL 数据库权限  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL 服务器和 SQL 数据库权限  
  下表提供了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限的完整列表。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 权限仅适用于受支持的基本安全对象。 不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中授予服务器级别权限，但是在某些情况下，可改为授予数据库权限。  
   
 |基础安全对象|对基础安全对象的粒度权限|权限类型代码|包含基础安全对象的安全对象|对容器安全对象的权限隐含着对基础安全对象的粒度权限|  
@@ -202,7 +202,7 @@ ms.locfileid: "63128765"
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
-|DATABASE|在运行 CREATE 语句前执行|EX|SERVER|CONTROL SERVER|  
+|DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意：仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
@@ -240,7 +240,7 @@ ms.locfileid: "63128765"
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
 |OBJECT|DELETE|DL|SCHEMA|DELETE|  
-|OBJECT|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
+|OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
@@ -270,7 +270,7 @@ ms.locfileid: "63128765"
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
 |SCHEMA|DELETE|DL|DATABASE|DELETE|  
-|SCHEMA|在运行 CREATE 语句前执行|EX|DATABASE|在运行 CREATE 语句前执行|  
+|SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
@@ -307,7 +307,7 @@ ms.locfileid: "63128765"
 |SERVER|EXTERNAL ACCESS ASSEMBLY|XA|不适用|不适用|  
 |SERVER|IMPERSONATE ANY LOGIN|IAL|不适用|不适用|  
 |SERVER|SELECT ALL USER SECURABLES|SUS|不适用|不适用|  
-|SERVER|关机|SHDN|不适用|不适用|  
+|SERVER|SHUTDOWN|SHDN|不适用|不适用|  
 |SERVER|UNSAFE ASSEMBLY|XU|不适用|不适用|  
 |SERVER|VIEW ANY DATABASE|VWDB|不适用|不适用|  
 |SERVER|VIEW ANY DEFINITION|VWAD|不适用|不适用|  
@@ -326,23 +326,23 @@ ms.locfileid: "63128765"
 |SYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
 |SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|类型|CONTROL|CL|SCHEMA|CONTROL|  
-|类型|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
-|类型|REFERENCES|RF|SCHEMA|REFERENCES|  
-|类型|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
-|类型|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
+|TYPE|CONTROL|CL|SCHEMA|CONTROL|  
+|TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
+|TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
+|TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
+|TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |USER|ALTER|AL|DATABASE|ALTER ANY USER|  
 |USER|CONTROL|CL|DATABASE|CONTROL|  
 |USER|IMPERSONATE|IM|DATABASE|CONTROL|  
 |USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
-|XML SCHEMA COLLECTION|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
+|XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> 权限检查算法摘要  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 权限检查算法摘要  
  检查权限可能很复杂。 权限检查算法包括重叠的组成员关系和所有权链接、显式和隐式权限，并且会受包含安全实体的安全类的权限影响。 该算法的一般过程是收集所有相关权限。 如果未找到阻止性 DENY，该算法将搜索提供足够访问权限的 GRANT。 该算法包含三个基本元素： **安全上下文**、 **权限空间**和 **必需的权限**。  
   
 > [!NOTE]  
@@ -396,7 +396,7 @@ ms.locfileid: "63128765"
   
 7.  如果对于 **权限空间** 中的任何对象，没有拒绝 **必需的权限** 且 **必需的权限** 包含对 **安全上下文**中任何标识直接或隐式的 GRANT 或 GRANT WITH GRANT 权限，则通过权限检查。  
   
-##  <a name="_examples"></a> 示例  
+##  <a name="examples"></a><a name="_examples"></a> 示例  
  本节中的以下示例说明如何检索权限信息。  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 返回可授予权限的完整列表  
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [权限层次结构（数据库引擎）](permissions-hierarchy-database-engine.md)   
+ [权限层次结构&#40;数据库引擎&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

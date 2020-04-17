@@ -13,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721531"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486986"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
   本主题针对如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本用于合并复制的 Web 同步，介绍手动配置 IIS 的完整过程。 
@@ -28,11 +28,11 @@ ms.locfileid: "62721531"
  有关整个配置过程的概述，请参阅[配置 Web 同步](configure-web-synchronization.md)。  
   
 > [!IMPORTANT]  
->  请确保您的应用程序仅使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更高版本，并且 IIS 服务器上没有安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的较早版本。 较早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能引起错误，如：“Web 同步期间出现的消息的格式无效。 请确保在 Web 服务器上正确配置了复制组件。”。  
+>  请确保您的应用程序仅使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更高版本，并且 IIS 服务器上没有安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的较早版本。 较早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能导致错误，例如：“Web 同步期间消息的格式无效。 请确保在 Web 服务器上正确配置了复制组件。”。  
   
  若要使用 Web 同步，必须通过完成以下步骤来配置 IIS 7。 本主题对每个步骤都进行了详细说明。  
   
-1.  在运行 IIS 的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算机上安装和配置复制侦听器。  
+1.  在运行 IIS 的计算机上安装和配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器。  
   
 2.  配置安全套接字层 (SSL)。 IIS 和所有订阅服务器之间的通信需要 SSL。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62721531"
   
 ## <a name="installing-the-sql-server-replication-listener"></a>安装 SQL Server 复制侦听器  
 
-从版本 5.0 开始，IIS 中支持 Web 同步。 IIS 版本 5 和 6 的“配置 Web 同步向导”不可与 IIS 版本 7.0 和更高版本一起使用。 **从 SQL Server 2012 开始，若要使用 IIS 服务器上的 web 同步组件，应该使用复制安装 SQL Server。这可以是免费的 SQL Server Express 版本。**
+从版本 5.0 开始，IIS 中支持 Web 同步。 IIS 版本 5 和 6 的“配置 Web 同步向导”不可与 IIS 版本 7.0 和更高版本一起使用。 **从 SQL Server 2012 开始，要使用 IIS 服务器上的 Web 同步组件，应当随复制安装 SQL Server。这可以是免费的 SQL Server Express 版本。**
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>安装和配置 SQL Server 复制侦听器  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62721531"
   
 4.  注册 replisapi.dll：  
   
-    1.  单击 **“开始”**，然后单击 **“运行”**。 在 "**打开**" 框中`cmd`，输入，然后单击 **"确定"**。  
+    1.  单击 **“启动”** ，再单击 **“运行”** 。 在 **"打开"** 框中，`cmd`输入 ，然后单击"**确定**"。  
   
     2.  在步骤 1 所创建的目录中，执行以下命令：  
   
@@ -66,9 +66,9 @@ ms.locfileid: "62721531"
   
     1.  在 **“Internet 信息服务(IIS)管理器”** 的 **“连接”** 窗格中，右键单击 **“默认网站”**，然后选择 **“添加虚拟目录”**。  
   
-    2.  对于 "**别名**" `SQLReplication`，请输入。  
+    2.  对于**别名**，输入`SQLReplication`。  
   
-    3.  对于“物理路径”，输入 **** 驱动器>:\Inetpub\SQLReplication**\<，然后单击“确定”。\\******  
+    3.  对于“物理路径”，输入 **\<驱动器>:\Inetpub\SQLReplication\\**，然后单击“确定”。********  
   
 7.  配置 IIS 以允许执行 replisapi.dll。  
   
@@ -78,13 +78,13 @@ ms.locfileid: "62721531"
   
     3.  在 **“操作”** 窗格中，单击 **“添加模块映射”**。  
   
-    4.  对于 "**请求**路径" `replisapi.dll`，请输入。  
+    4.  对于**请求**路径，输入`replisapi.dll`。  
   
     5.  从 **“模块”** 下拉列表中，选择 **“IsapiModule”**。  
   
-    6.  对于“可执行文件”，输入 **** 驱动器>:\Inetpub\SQLReplication\replisapi.dll **。\<**  
+    6.  对于“可执行文件”，输入 **\<驱动器>:\Inetpub\SQLReplication\replisapi.dll**。****  
   
-    7.  对于“名称”****，请输入 `Replisapi`。  
+    7.  对于“名称”  ，请输入 `Replisapi`。  
   
     8.  依次单击 **“请求限制”** 按钮、 **“访问”** 选项卡和 **“执行”**。  
   
@@ -147,8 +147,7 @@ ms.locfileid: "62721531"
   
 1.  在 **“连接”** 窗格中，单击 **“默认网站”** （或是不同于默认网站的 Web 同步站点）。  
   
-2.  在 **“操作”** 窗格中，依次单击 **“绑定”** 和 **“添加”**。 
-  **“添加网站绑定”** 对话框将出现。  
+2.  在 **“操作”** 窗格中，依次单击 **“绑定”** 和 **“添加”**。 **“添加网站绑定”** 对话框将出现。  
   
 3.  从 **“类型”** 下拉列表中，选择 **“https”**。 保留 **“IP 地址”** 和 **“端口”** 的默认设置。  
   
@@ -156,9 +155,9 @@ ms.locfileid: "62721531"
   
 ###### <a name="to-test-the-certificate"></a>测试证书  
   
-1.  在**Internet Information Services （IIS）管理器**中，单击 "默认网站" **。**  
+1.  在**互联网信息服务 （IIS） 管理器**中，单击**默认网站。**  
   
-2.  从“操作”窗格中，单击“浏览 **:443(https)”。****\***  
+2.  从“操作”窗格中，单击“浏览 \*:443(https)”。********  
   
 3.  Internet Explorer 随即打开并显示一条消息“此网站的安全证书有问题。”。 此警告向您表明关联的证书不是由认可的 CA 颁发的，因此可能不值得信任。 这个警告在意料之中，只需单击 **“继续浏览此网站(不推荐)”**。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "62721531"
   
  除了要执行下列步骤之外，请确保所需的登录名存在于发布访问列表 (PAL) 中。 有关 PAL 的详细信息，请参阅[保护发布服务器](security/secure-the-publisher.md)。  
   
- **重要提示**本部分中创建的帐户是在同步过程中将连接到发布服务器和分发服务器的帐户。 此帐户必须作为 SQL 登录帐户添加到分发服务器和发布服务器上。  
+ **重要提示** 本节中创建的帐户就是要在同步期间连接到发布服务器和分发服务器的帐户。 此帐户必须作为 SQL 登录帐户添加到分发服务器和发布服务器上。  
   
  用于 SQL Server 复制侦听器的帐户必须具有“合并代理安全性”主题中的“连接发布服务器或分发服务器”一节所述的权限。  
   
@@ -189,7 +188,7 @@ ms.locfileid: "62721531"
   
 1.  在运行 IIS 的计算机上创建一个本地帐户：  
   
-    1.  打开“服务器管理器”。**** 从“开始”菜单，右键单击 **“计算机”**，然后单击 **“管理”**。  
+    1.  打开**服务器管理器**。 从“开始”菜单，右键单击 **“计算机”**，然后单击 **“管理”**。  
   
     2.  在 **“服务器管理器”** 中，展开 **“配置”**，然后展开 **“本地用户和组”**。  
   
@@ -219,7 +218,7 @@ ms.locfileid: "62721531"
   
     2.  在 **“安全性”** 选项卡上，单击 **“编辑”**。  
   
-    3.  在“**文件夹名> 的权限”对话框中，单击“添加”以添加在步骤 1 中创建的帐户。\<******  
+    3.  在“\<文件夹名> 的权限”对话框中，单击“添加”以添加在步骤 1 中创建的帐户。********  
   
     4.  确保 **“从此位置”** 显示的是本地计算机（而不是域）的名称。 如果此字段不显示本地计算机名称，请单击 **“位置”**。 在 **“位置”** 对话框中，选择本地计算机，然后单击 **“确定”**。  
   
@@ -273,7 +272,7 @@ ms.locfileid: "62721531"
   
 1.  确保订阅服务器中的局域网 (LAN) 设置正确：  
   
-    1.  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 的 "**工具**" 菜单上，单击 " **Internet 选项**"。  
+    1.  在[!INCLUDE[msCoName](../../includes/msconame-md.md)]Internet 资源管理器中，在 **"工具"** 菜单上，单击 **"互联网选项**"。  
   
     2.  在 **“连接”** 选项卡上，单击 **“局域网设置”**。  
   
@@ -281,7 +280,7 @@ ms.locfileid: "62721531"
   
     4.  如果使用了代理服务器，请单击 **“为 LAN 使用代理服务器”** 和 **“对于本地地址不使用代理服务器”**，然后单击 **“确定”**。  
   
-2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如： **https://server.domain.com/directory/replisapi.dll?diag**。  
+2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如：`https://server.domain.com/directory/replisapi.dll?diag`。  
   
     > [!NOTE]  
     >  在上例中， **server.domain.com** 应原样替换为在 IIS 管理器的 **“服务器证书”** 部分中列出的 **“颁发给”** 名称。  
@@ -308,7 +307,7 @@ ms.locfileid: "62721531"
     > [!NOTE]  
     >  为用户安装证书。 必须为要与 IIS 同步的每个用户执行该过程。  
   
-4.  在“连接到 **服务器名>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。\<** 在新建订阅向导中也要指定这些凭据。  
+4.  在“连接到 \<服务器名>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。**** 在新建订阅向导中也要指定这些凭据。  
   
 5.  在名为 **“SQL Websync 诊断信息”** 的 Internet Explorer 窗口中，验证该页中每个 **“状态”** 列的值是否都为 **SUCCESS**。  
   
@@ -319,7 +318,7 @@ ms.locfileid: "62721531"
     2.  以诊断模式连接到服务器。 如果证书安装正确，就不会显示 **“安全警报”** 对话框。 如果显示了该对话框，那么合并代理试图连接到正在运行 IIS 的计算机时就会失败。 必须确保您所访问的服务器的证书已作为可信证书添加到订阅服务器的证书存储区。 有关导出证书的详细信息，请参阅 IIS 文档。  
   
 ## <a name="see-also"></a>另请参阅  
- [用于合并复制的 Web 同步](web-synchronization-for-merge-replication.md)   
- [配置 Web 同步](configure-web-synchronization.md)  
+ [合并复制的 Web 同步](web-synchronization-for-merge-replication.md)   
+ [Configure Web Synchronization](configure-web-synchronization.md)  
   
   

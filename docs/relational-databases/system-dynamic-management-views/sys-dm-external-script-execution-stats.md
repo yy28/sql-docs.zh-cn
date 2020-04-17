@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19eaefc6fcd6615b74614893a37aa1722095e63d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9597b55eabb247dc4a95ed83fe04abac5067a269
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664313"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488172"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "80664313"
 为每种类型的外部脚本请求返回一行。 外部脚本请求由受支持的外部脚本语言分组。 为每个已注册的外部脚本函数生成一行。 除非是由父进程（如 `rxExec`）发送，否则不会记录任意外部脚本函数。
   
 > [!NOTE]  
-> 此动态管理视图 （DMV） 仅在安装并启用支持外部脚本执行的功能时才可用。 有关详细信息，请参阅[SQL Server 2016 中的 R 服务和](../../machine-learning/r/sql-server-r-services.md)SQL Server [2017 及更高版本中的机器学习服务 （R、Python）。](../../machine-learning/what-is-sql-server-machine-learning.md)  
+> 此动态管理视图 （DMV） 仅在安装并启用支持外部脚本执行的功能时才可用。 有关详细信息，请参阅[SQL Server 2016 中的 R 服务和](../../machine-learning/r/sql-server-r-services.md)SQL Server [2017 及更高版本中的机器学习服务 （R、Python）。](../../machine-learning/sql-server-machine-learning-services.md)  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |语言|**nvarchar**|已注册的外部脚本语言的名称。 每个外部脚本必须在脚本请求中指定语言以启动关联的启动器。 |  
 |counter_name|**nvarchar**|已注册的外部脚本函数的名称。 不可为 null。|  
-|counter_value|**整数**|已在服务器上调用已注册外部脚本函数的实例的总数。 此值是累计的（从在实例上安装该功能的时间开始），且不能重置。|  
+|counter_value|**integer**|已在服务器上调用已注册外部脚本函数的实例的总数。 此值是累计的（从在实例上安装该功能的时间开始），且不能重置。|  
 
   
 ## <a name="permissions"></a>权限  

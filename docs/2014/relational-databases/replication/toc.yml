@@ -11,7 +11,7 @@
       href: administration/best-practices-for-replication-administration.md
     - name: 常见问题
       href: administration/frequently-asked-questions-for-replication-administrators.md
-- name: 操作方法指南
+- name: 操作指南
   items:
     - name: 管理员
       items:
@@ -362,7 +362,7 @@
         - name: 复制到 SQL 数据库 +
           href: 'https://docs.microsoft.com/azure/sql-database/replication-to-sql-database'
         - name: SQL 数据库 MI 中的复制 +
-          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md'
+          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance'
         - name: 重新发布数据
           href: republish-data.md
         - name: 通过 Internet 复制
@@ -432,7 +432,7 @@
                   href: non-sql/backup-and-restore-for-oracle-publishers.md
                 - name: 创建的对象
                   href: non-sql/objects-created-on-the-oracle-publisher.md
-                - name: 故障排除
+                - name: 疑难解答
                   href: non-sql/troubleshooting-oracle-publishers.md
         - name: 非 SQL 订阅服务器
           href: non-sql/non-sql-server-subscribers.md
@@ -493,7 +493,7 @@
                   items:
                     - name: 订阅监视列表
                       href: publisher-information-subscription-watch-list-transactional.md
-                    - name: Subscriptions
+                    - name: 订阅
                       href: publication-information-all-subscriptions-transactional-publication.md
                     - name: 警告
                       href: publication-information-warnings-transactional-publication.md
@@ -511,7 +511,7 @@
                   items:
                     - name: 订阅监视列表
                       href: publisher-information-subscription-watch-list-merge-publication.md
-                    - name: Subscriptions
+                    - name: 订阅
                       href: publication-information-all-subscriptions-merge-publication.md
                     - name: 警告
                       href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
@@ -523,7 +523,7 @@
                   items:
                     - name: 订阅监视列表
                       href: publisher-information-subscription-watch-list-snapshot.md
-                    - name: Subscriptions
+                    - name: 订阅
                       href: publication-information-all-subscriptions-snapshot-publication.md
                     - name: 警告
                       href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
@@ -531,7 +531,7 @@
                       href: publication-information-agents-snapshot-publication.md
                     - name: 分发服务器到订阅服务器的历史记录
                       href: subscription-distributor-to-subscriber-history-snapshot-subscription.md
-        - name: Configure Distribution Wizard
+        - name: 配置分发向导
           href: configure-distribution-wizard.md
           items:
             - name: 分发服务器
@@ -540,11 +540,11 @@
               href: snapshot-folder.md
             - name: 分发数据库
               href: distribution-database.md
-            - name: 发布者
+            - name: 发布服务器
               href: publishers.md
             - name: 分发服务器密码
               href: distributor-password.md
-        - name: New Publication Wizard
+        - name: 新建发布向导
           href: new-publication-wizard.md
           items:
             - name: Oracle 发布服务器

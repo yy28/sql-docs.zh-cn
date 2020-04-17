@@ -166,7 +166,7 @@
     - name: 在 Excel 中分析表格模型
       href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: 表格模型解决方案部署
-  href: tabular-model-solution-deployment-ssas-tabular.md
+  href: 'https://docs.microsoft.com/analysis-services/deployment/tabular-model-solution-deployment'
   items:
     - name: 从 SQL Server Data Tools 进行部署
       href: deploy-from-sql-server-data-tools-ssas-tabular.md

@@ -1,5 +1,6 @@
 ---
-title: 定义 UDT 表和列 |Microsoft Docs
+title: 定义 UDT 表和列 |微软文档
+description: 注册包含 UDT 定义的程序集后，可以在列定义中使用它。
 ms.custom: ''
 ms.date: 12/05/2019
 ms.prod: sql
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8386da85d22f50b45492ecd52588e6d06fe80590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f46ebc5089a4cb2fdb974df52d9bc876f925da4
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74901958"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486886"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>使用用户定义类型 - 定义 UDT 表和列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  一旦包含用户定义类型（UDT）定义的程序集已在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中注册，它就可以在列定义中使用。 有关详细信息，请参阅 [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)。  
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中注册了包含用户定义类型 （UDT） 定义的程序集后，可以在列定义中使用。 有关详细信息，请参阅 [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)。  
   
 ## <a name="creating-tables-with-udts"></a>使用 UDT 创建表  
- 没有用于在表中创建 UDT 列的特殊语法。 您可以在某一列定义中使用 UDT 的名称，就像它是某一内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型一样。 下面的 CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建一个名为**Points**的表，其中包含一个名为 **"ID"** 的列，该列定义为**int** identity 列和表的主键。 第二列的名称为**PointValue**，数据类型为**Point**。 本示例中使用的架构名称为**dbo**。 请注意，您必须具有指定架构名称所需的权限。 如果省略架构名称，将使用数据库用户的默认架构。  
+ 没有用于在表中创建 UDT 列的特殊语法。 您可以在某一列定义中使用 UDT 的名称，就像它是某一内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型一样。 以下 CREATE [!INCLUDE[tsql](../../includes/tsql-md.md)] TABLE 语句创建一个名为 **"点**"的表，该列名为**ID，** 该列定义为**int**标识列和表的主键。 第二列名为**PointValue，** 数据类型为**Point**。 此示例中使用的架构名称是**dbo**。 请注意，您必须具有指定架构名称所需的权限。 如果省略架构名称，将使用数据库用户的默认架构。  
   
 ```sql  
 CREATE TABLE dbo.Points   
@@ -50,6 +51,6 @@ CREATE TABLE dbo.Points
  有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 SQL Server 中使用用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
- [CREATE TYPE （Transact-sql）](../../t-sql/statements/create-type-transact-sql.md)     
+ [使用 SQL 服务器中的用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
+ [创建类型（转算 SQL）](../../t-sql/statements/create-type-transact-sql.md)     
  [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     

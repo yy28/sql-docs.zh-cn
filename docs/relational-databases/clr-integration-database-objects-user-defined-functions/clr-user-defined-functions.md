@@ -1,5 +1,6 @@
 ---
-title: CLR 用户定义函数 |Microsoft Docs
+title: CLR 用户定义的功能 |微软文档
+description: SQL Server CLR 集成允许您在任何 .NET 框架编程语言中创建用户定义的标量值、表值和聚合函数。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6195badbf3fc0d789e1b083ab187eebbce2414fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68009722"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488262"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 用户定义函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,6 +41,6 @@ ms.locfileid: "68009722"
  说明如何实现和使用用户定义聚合。  
   
 ## <a name="see-also"></a>另请参阅  
- [用户定义函数](../../relational-databases/user-defined-functions/user-defined-functions.md)  
+ [用户定义的函数](../../relational-databases/user-defined-functions/user-defined-functions.md)  
   
   

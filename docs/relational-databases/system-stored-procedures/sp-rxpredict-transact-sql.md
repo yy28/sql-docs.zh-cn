@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012433"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488527"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>支持的算法
 
-要创建和训练模型，请使用[SQL Server 机器学习服务 （R 或 Python）、SQL](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [Server 2016 R 服务](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)[、SQL Server 机器学习服务器（独立）（R 或 Python）](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)或[SQL Server 2016 R 服务器（独立）](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)提供的 R 或 Python 支持的算法之一。
+要创建和训练模型，请使用[SQL Server 机器学习服务 （R 或 Python）、SQL](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services) [Server 2016 R 服务](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)[、SQL Server 机器学习服务器（独立）（R 或 Python）](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)或[SQL Server 2016 R 服务器（独立）](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)提供的 R 或 Python 支持的算法之一。
 
 #### <a name="r-revoscaler-models"></a>R： RevoScaleR 模型
 
