@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: 参考
       items:
+        - name: BDC 合作伙伴
+          href: sql-server/partner-big-data-cluster.md
         - name: 部署参考
           items:
             - name: 部署配置文件
@@ -1385,6 +1387,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: “查询存储”页
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: 事件通知
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: 实现
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: 配置对话安全性
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: 获取信息
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: 文件流、文件表和 Blob
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1539,15 +1550,8 @@
       items:
         - name: 序列属性
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
-    - name: 服务代理
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: 实现
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: 配置对话安全性
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: 获取信息
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+    - name: Service Broker
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: 空间数据
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -4370,8 +4374,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: SQL Server 监视器概述
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Service Broker
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: 缓冲池扩展
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: 服务器配置选项
@@ -10073,8 +10075,6 @@
           href: sql-server/sql-server-docs-contribute.md
     - name: 合作伙伴
       items:
-        - name: 大数据群集
-          href: sql-server/partner-big-data-cluster.md
         - name: 监视
           href: sql-server/partner-monitor-sql-server.md
         - name: 高可用性和灾难恢复
