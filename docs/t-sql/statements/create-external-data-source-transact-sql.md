@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 461ce274af8d58574afa3e55e44e950b77cb6014
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705882"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633418"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -58,7 +58,7 @@ ms.locfileid: "77705882"
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -106,7 +106,7 @@ WITH
 - 查询 Hadoop 时，所有表使用相同的外部数据源，以确保查询语义一致。
 - 可使用 `sqlserver` 位置前缀将 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 连接到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 或 Azure Synapse Analytics。
 - 通过 `ODBC` 连接时，请指定 `Driver={<Name of Driver>}`。
-- `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为会使用安全的 SSL 连接发送数据。
+- `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为数据是使用安全 TLS/SSL 连接来发送的。
 - 要确保在 Hadoop `Namenode` 故障转移期间成功进行 PolyBase 查询，请考虑针对 Hadoop 群集的 `Namenode` 使用虚拟 IP 地址。 如果不这样做，请执行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = key_value_pair 
@@ -395,7 +395,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>概述：Azure SQL 数据库
+## <a name="overview-azure-sql-database"></a>概述：Azure SQL Database
 
 为弹性查询创建外部数据源。 外部数据源用于建立连接以及支持以下这些用例：
 
@@ -405,7 +405,7 @@ WITH
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -473,7 +473,7 @@ WITH
 
 当 `TYPE` 设置为 `RDBMS` 或 `SHARD_MAP_MANAGER` 时，配置此参数。
 
-| 类型              | DATABASE_NAME 的值                                       |
+| TYPE              | DATABASE_NAME 的值                                       |
 | ----------------- | ------------------------------------------------------------ |
 | RDBMS             | 使用 `LOCATION` 提供的服务器上的远程数据库的名称 |
 | SHARD_MAP_MANAGER | 作为分片映射管理器运行的数据库的名称      |
@@ -622,7 +622,7 @@ WITH
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -654,10 +654,10 @@ WITH
 
 设置位置时的其他说明和指南：
 
-- 默认选项是在预配 Azure Data Lake Storage Gen 2 时使用 `enable secure SSL connections`。 启用此链接后，必须选择在安全的 SSL 连接时使用 `abfss`。 请注意，`abfss` 也适用于不安全的 SSL 连接。
+- 默认选项是在预配 Azure Data Lake Storage Gen 2 时使用 `enable secure SSL connections`。 如果此选项已启用，必须在选择安全 TSL/SSL 连接时使用 `abfss`。 请注意，`abfss` 也适用于不安全的 TLS/SSL 连接。
 - 创建对象时，Azure Synapse 不会验证外部数据源是否存在。 。 要进行验证，请使用外部数据源创建外部表。
 - 查询 Hadoop 时，所有表使用相同的外部数据源，以确保查询语义一致。
-- `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为会使用安全的 SSL 连接发送数据。
+- `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为数据是使用安全 TLS 连接来发送的。
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = credential_name 
 
@@ -872,7 +872,7 @@ WITH
 
 ## <a name="syntax"></a>语法
 
-```sql
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -908,7 +908,7 @@ WITH
 
 - 创建对象时，PDW 引擎不会验证外部数据源是否存在。 要进行验证，请使用外部数据源创建外部表。
 - 查询 Hadoop 时，所有表使用相同的外部数据源，以确保查询语义一致。
-- `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为会使用安全的 SSL 连接发送数据。
+- `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为数据是使用安全 TLS 连接来发送的。
 - 要确保在 Hadoop `Namenode` 故障转移期间成功进行 PolyBase 查询，请考虑针对 Hadoop 群集的 `Namenode` 使用虚拟 IP 地址。 如果不这样做，请执行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = credential_name 

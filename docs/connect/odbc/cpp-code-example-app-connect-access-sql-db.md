@@ -1,5 +1,6 @@
 ---
 title: C++ ODBC 应用访问 SQL 数据库
+description: 此 C++ 示例演示了如何使用 ODBC API 连接和访问 SQL 数据库。
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4f3df5ecdefffc8c9d5ae1cc43ba9210f458c41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 819fdc766d03d845582dfc0ae7885615cd8a6019
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907643"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528921"
 ---
 # <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ ODBC 示例应用程序访问 SQL 数据库
 
@@ -22,7 +23,7 @@ ms.locfileid: "80907643"
 
 此 C++ 示例演示了如何使用 ODBC API 连接和访问 SQL 数据库。
 
-在 2013 年 10 月到 2019 年 7 月间，此示例 C++ ODBC 应用程序被下载了 47,300 次。 2019 年 7 月，此应用程序源从 Microsoft 的代码库移到此网页。
+在 2013 年 10 月到 2019 年 7 月间，此示例 C++ ODBC 应用程序被下载了 47,300 次。 2019 年 7 月，此应用程序源已从 Microsoft 的代码库迁移到此网页。
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md

@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41a39c92a8ec9e9d940c44660a02abe5e710fede
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580020"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487020"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>配置 Reporting Services 以使用使用者可选名称
 
@@ -20,11 +20,11 @@ ms.locfileid: "65580020"
 
 该说明适用于 Reporting Service URL 以及 Web 服务 URL。
 
-要使用 SAN，SSL 证书必须在服务器上注册，签名并且获得私钥。 你无法使用自签名证书。  
+若要使用 SAN，TLS/SSL 证书必须注册在服务器上、进行签名并且有私钥。 你无法使用自签名证书。  
   
- Reporting Services 中的 URL 可配置为使用 SSL 证书。 一个证书通常只有一个使用者名称，此名称针对一个 SSL（安全套接字层）会话只允许一个 URL。 SAN 是证书中的附加字段，允许 SSL 服务对许多 URL 进行侦听，并与其他应用程序共享 SSL 端口。 SAN 的形式为 `www.s2.com`。  
+ 可以将 Reporting Services 中的 URL 配置为使用 TLS/SSL 证书。 证书通常只包含使用者名称，它只允许对传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）会话使用一个 URL。 SAN 是证书中的附加字段，可便于 TLS 服务侦听许多 URL，并与其他应用程序共享 TLS 端口。 SAN 的形式为 `www.s2.com`。  
   
- 有关 Reporting Services 的 SSL 设置的详细信息，请参阅[配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 若要详细了解 Reporting Services 的 TLS 设置，请参阅[在本机模式报表服务器上配置 TLS 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
 ## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>将 SSRS 配置为使用适用于 Web 服务 URL 的使用者可选名称
   
@@ -32,11 +32,11 @@ ms.locfileid: "65580020"
   
      有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在“Web 服务 URL”  页面上，选择一个 SSL 端口和 SSL 证书。  
+2.  在“Web 服务 URL”  页上，选择 TLS/SSL 端口和 TLS/SSL 证书。  
   
      ![Reporting Services 配置管理器](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 配置管理器")  
   
-     配置管理器注册端口的 SSL 证书。  
+     配置管理器为端口注册 TLS/SSL 证书。  
   
 3.  打开 rsreportserver.config 文件。  
   

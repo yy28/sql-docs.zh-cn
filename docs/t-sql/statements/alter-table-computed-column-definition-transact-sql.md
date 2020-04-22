@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b06287c5a21b2b333335cc199a9447200e04110
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982046"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631592"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73982046"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -55,7 +55,7 @@ column_name
  要更改、添加或删除的列的名称。 column_name 可以包含 1 到 128 个字符  。 对于使用 timestamp 数据类型创建的新列，则可以省略 column_name   。 如果没有为 timestamp 数据类型的列指定 column_name，则使用名称 timestamp    。  
   
 computed_column_expression   
- 定义计算列的值的表达式。 计算列是以非物理方式存储在表中的虚拟列，该列是通过使用同一表中的其他列的表达式计算得出的。 例如，计算列可以包含定义：cost AS price * qty。表达式可以是非计算列的列名、常量、函数、变量，也可以是用一个或多个运算符连接的上述元素的任意组合。 表达式不能是子查询，也不能包含别名数据类型。  
+ 定义计算列的值的表达式。 计算列是以非物理方式存储在表中的虚拟列，该列是通过使用同一表中的其他列的表达式计算得出的。 表达式必须生成值。 例如，计算列可以包含定义：cost AS price * qty。另一个包含位运算符的示例：is_finalised AS is_checked | is_approved。 表达式可以是非计算列的名称、常量、函数、变量以及通过一个或多个运算符连接的上述元素的任意组合。 表达式不能是搜索条件、子查询，也不能包含别名数据类型。  
   
  计算列可用于选择列表、WHERE 子句、ORDER BY 子句或其他任何可以使用正则表达式的位置，但下列情况除外：  
   

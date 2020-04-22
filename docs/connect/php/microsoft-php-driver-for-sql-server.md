@@ -1,5 +1,6 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+description: Microsoft Drivers for PHP for SQL Server 支持通过 PHP 扩展与 SQL Server for PHP 应用程序集成。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b13d533ae1acd2fee069a2418b70cf9489d74884
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922848"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486733"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
 
@@ -26,8 +27,8 @@ Microsoft Drivers for PHP for SQL Server 支持与 SQL Server for PHP 应用程�
 ## <a name="getting-started"></a>入门  
 * [步骤 1：配置用于 PHP 开发的开发环境](step-1-configure-development-environment-for-php-development.md)  
 * [步骤 2：创建用于 PHP 开发的数据库](step-2-create-a-sql-database-for-php-development.md)  
-* [步骤 3：使用 PHP 连接到 SQL 的概念验证](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [步骤 4：使用 PHP 实现对 SQL 的弹性连接](step-4-connect-resiliently-to-sql-with-php.md)  
+* [步骤 3：使用 PHP 连接到 SQL 的概念证明](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [步骤 4：使用 PHP 弹性连接到 SQL](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>文档  
 * [入门](getting-started-with-the-php-sql-driver.md)

@@ -1,5 +1,6 @@
 ---
 title: JDBC Driver 发行说明
+description: 本文列出了 Microsoft JDBC Driver for SQL Server 的各个发行版。 对于每个发行版本，将对所做的更改进行命名和说明。
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 35073498dd654df3d03f6fc0d66d2cfca758ec3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbcff4ee14db85a3a973496ce8a5cb24772a35b9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902283"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634285"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 发行说明
 
@@ -50,7 +51,7 @@ ms.locfileid: "80902283"
 | Always Encrypted 更改 | 详细信息 |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server 现在支持具有安全 Enclave 的 Always Encrypted。 此处提供了更多详细信息：具有安全 Enclave 的 Always Encrypted。 |
-| 更多详细信息和示例代码。 | 请参阅[包含安全 Enclave 的 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)。 |
+| 更多详细信息和示例代码。 | 请参阅[包含安全 Enclave 的 Always Encrypted](always-encrypted-with-secure-enclaves.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>提高了从 SQL Server 检索临时数据类型时的性能 <sup>1</sup>
@@ -110,7 +111,7 @@ ms.locfileid: "80902283"
 | NTLM 更改 | 详细信息 |
 | :--------- | :------ |
 | 支持 NTLM 身份验证模式。 | 这种身份验证模式允许 Windows 和非 Windows 客户端使用 Windows 域用户对 SQL Server 进行身份验证。 |
-| 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 NTLM 身份验证进行连接](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)。 |
+| 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 NTLM 身份验证进行连接](using-ntlm-authentication-to-connect-to-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>通过 useFmtOnly  引入了对 ParameterMetaData 的查询
@@ -118,7 +119,7 @@ ms.locfileid: "80902283"
 | useFmtOnly 更改 | 详细信息 |
 | :---------- | :------ |
 | 添加了 useFmtOnly  连接属性。 | 借助此功能，用户可以选择通过 `SET FMTONLY ON` 旧版 API 查询 ParameterMetaData。 这对于 `sp_describe_undeclared_parameters` 不按预期执行的情况很有用。 |
-| 更多详细信息和限制。 | 请参阅[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| 更多详细信息和限制。 | 请参阅[使用 useFmtOnly](using-usefmtonly.md) |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>更新了 Microsoft Azure Key Vault SDK for Java  版本 1.2.1
@@ -127,7 +128,7 @@ ms.locfileid: "80902283"
 | :------------------- | :------ |
 | 已将 _Microsoft Azure Key Vault SDK for Java_ 的 Maven 依赖项更新为版本 1.2.1。 | &nbsp; |
 | 删除作为 Maven 依赖项的 _Microsoft Azure SDK for Key Vault WebKey_。 | &nbsp; |
-| 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
+| 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
@@ -135,7 +136,7 @@ ms.locfileid: "80902283"
 | 已知问题 | 详细信息 |
 | :----------- | :------ |
 | 使用 NTLM 身份验证时。 | 目前不支持同时启用扩展保护和加密连接。 |
-| 使用 useFmtOnly 时。 | 此功能存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。 有关更多详细信息和解决方法建议，请参阅[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md)。 |
+| 使用 useFmtOnly 时。 | 此功能存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。 有关更多详细信息和解决方法建议，请参阅[使用 useFmtOnly](using-usefmtonly.md)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="a-id72-722"></a><a id="72"> 7.2.2
@@ -171,7 +172,7 @@ ms.locfileid: "80902283"
 | MSI 更改 | 详细信息 |
 | :--------- | :------ |
 | 支持 Active Directory 托管服务标识 (MSI) 身份验证模式。 | 此身份验证模式适用于支持“标识”功能的 Azure 资源。<br/><br/>两种类型的托管系统标识 (MSI) 均受驱动程序支持，可获取用于建立安全连接的 accessToken  。 |
-| 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 Azure Active Directory 身份验证进行连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。 |
+| 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 Azure Active Directory 身份验证进行连接](connecting-using-azure-active-directory-authentication.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-_open-service-gateway-initiative_-osgi-support"></a>引入开放服务网关协议  (OSGi) 支持
@@ -187,7 +188,7 @@ ms.locfileid: "80902283"
 | 错误 API 更改 | 详细信息 |
 | :--------------- | :------ |
 | 引入了 SQLServerError API。 | 获取 API 以检索有关从服务器生成的错误的其他详细信息。<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
-| 其他详细信息。 | 请参阅[处理错误](../../connect/jdbc/handling-errors.md)。 |
+| 其他详细信息。 | 请参阅[处理错误](handling-errors.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>更新了用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)  版本 1.6.3
@@ -196,7 +197,7 @@ ms.locfileid: "80902283"
 | :------------ | :------ |
 | 已将 ADAL4J 上的 Maven 依赖项更新为版本 1.6.3。 | &nbsp; |
 | 引入了“适用于 AutoRest 的 Java 客户端运行时”  作为 Maven 依赖项版本 1.6.5。 | &nbsp; |
-| 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
+| 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>更新了 Microsoft Azure Key Vault SDK for Java  版本 1.2.0
@@ -205,7 +206,7 @@ ms.locfileid: "80902283"
 | :------------------- | :------ |
 | 已将 Microsoft Azure Key Vault SDK for Java  的 Maven 依赖项更新为版本 1.2.0。 | &nbsp; |
 | 引入了 Microsoft Azure SDK for Key Vault WebKey  作为 Maven 依赖项（版本 1.2.0）。 | &nbsp; |
-| 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
+| 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
@@ -236,23 +237,23 @@ Microsoft JDBC Driver 7.0 for SQL Server 完全符合 JDBC API 规范 4.2。 根
 
 ### <a name="support-for-spatial-datatypes"></a>支持空间数据类型
 
-Microsoft JDBC Driver 7.0 for SQL Server 现在提供对 SQL Server 空间数据类型 Geography 和 Geometry 的支持。 有关空间数据类型 API 以及如何使用它们的详细信息，请参阅[使用空间数据类型](../../connect/jdbc/use-spatial-datatypes.md)。
+Microsoft JDBC Driver 7.0 for SQL Server 现在提供对 SQL Server 空间数据类型 Geography 和 Geometry 的支持。 有关空间数据类型 API 以及如何使用它们的详细信息，请参阅[使用空间数据类型](use-spatial-datatypes.md)。
 
 ### <a name="implementation-for-jdbc-43-introduced-javasqlconnection-apis-beginrequest-and-endrequest"></a>JDBC 4.3 实现引入了 java.sql.Connection API beginRequest() 和 endRequest()
 
-Microsoft JDBC Driver 7.0 for SQL Server 现在实现了 `java.sql.Connection` 类中的 `beginRequest()` 和 `endRequest()` API。 这些 API 是使用 JDBC 4.3 规范和 JDK 9 引入的。 有关这些 API 的驱动程序实现的详细信息，请参阅 [JDBC 驱动程序的 JDBC 4.3 符合性](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)。
+Microsoft JDBC Driver 7.0 for SQL Server 现在实现了 `java.sql.Connection` 类中的 `beginRequest()` 和 `endRequest()` API。 这些 API 是使用 JDBC 4.3 规范和 JDK 9 引入的。 有关这些 API 的驱动程序实现的详细信息，请参阅 [JDBC 驱动程序的 JDBC 4.3 符合性](jdbc-4-3-compliance-for-the-jdbc-driver.md)。
 
 ### <a name="support-for-sql-data-discovery-and-classification"></a>支持 SQL 数据发现和分类
 
 Microsoft JDBC Driver 7.0 for SQL Server 支持 SQL 数据发现和分类，以用于支持此功能的任何目标数据库。 驱动程序现在公开 `SQLServerResultSet.getSensitivityClassification()` API 以从提取的 `ResultSet` 中提取此信息。
 
-若要详细了解如何将此功能用于 JDBC 驱动程序，请参阅 [SQL 数据发现和分类](../../connect/jdbc/data-discovery-classification-sample.md)中的示例。
+若要详细了解如何将此功能用于 JDBC 驱动程序，请参阅 [SQL 数据发现和分类](data-discovery-classification-sample.md)中的示例。
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>添加了连接属性：useBulkCopyForBatchInsert
 
 Microsoft JDBC Driver 7.0 for SQL Server 引入了新的连接属性 `useBulkCopyForBatchInsert`。 只有 Azure SQL 数据仓库才支持此属性。
 
-默认情况下禁用此属性。 当将大量数据推送到 Azure SQL 数据仓库时，可以启用此属性以提高用户应用程序的性能。 启用此属性将更改批插入操作的行为，以切换为对用户提供的数据执行大容量复制操作。 有关此属性及其限制的详细信息，请参阅[将大容量复制 API 用于批插入操作](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)。
+默认情况下禁用此属性。 当将大量数据推送到 Azure SQL 数据仓库时，可以启用此属性以提高用户应用程序的性能。 启用此属性将更改批插入操作的行为，以切换为对用户提供的数据执行大容量复制操作。 有关此属性及其限制的详细信息，请参阅[将大容量复制 API 用于批插入操作](use-bulk-copy-api-batch-insert-operation.md)。
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>添加了连接属性：cancelQueryTimeout
 
@@ -281,7 +282,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>更新了“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”版本：1.6.0
 
-Microsoft JDBC Driver 7.0 for SQL Server 已将“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”上的 Maven 依赖项更新为版本 1.6.0。 有关依赖项的详细信息，请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
+Microsoft JDBC Driver 7.0 for SQL Server 已将“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”上的 Maven 依赖项更新为版本 1.6.0。 有关依赖项的详细信息，请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
 ## <a name="64"></a>6.4
 
@@ -303,7 +304,7 @@ Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。
 
 ### <a name="jdbc-43-compliance"></a>JDBC 4.3 符合性
 
-除了支持 4.1 和 4.2 以外，驱动程序还支持 Java Database Connectivity API 4.3 规范。 JDBC 4.3 API 方法已添加，但尚未实现。 有关详细信息，请参阅 [JDBC Driver 的 JDBC 4.3 合规性](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)。
+除了支持 4.1 和 4.2 以外，驱动程序还支持 Java Database Connectivity API 4.3 规范。 JDBC 4.3 API 方法已添加，但尚未实现。 有关详细信息，请参阅 [JDBC Driver 的 JDBC 4.3 合规性](jdbc-4-3-compliance-for-the-jdbc-driver.md)。
 
 ### <a name="added-connection-property-sslprotocol"></a>添加了连接属性：sslProtocol
 
@@ -339,15 +340,15 @@ JDBC 驱动程序现在支持要用于 SQL Server 的 `sql_variant` 数据类型
 
 ### <a name="implemented-prepared-statement-metadata-caching"></a>实现了预处理语句元数据缓存
 
-JDBC 驱动程序已实现预处理语句元数据缓存以改进性能。 现在驱动程序支持使用 `disableStatementPooling` 和 `statementPoolingCacheSize` 连接属性缓存驱动程序中的预处理语句元数据。 默认情况下，该功能被禁用。 有关详细信息，请参阅 [JDBC 驱动程序的预处理语句元数据缓存](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)。
+JDBC 驱动程序已实现预处理语句元数据缓存以改进性能。 现在驱动程序支持使用 `disableStatementPooling` 和 `statementPoolingCacheSize` 连接属性缓存驱动程序中的预处理语句元数据。 默认情况下，该功能被禁用。 有关详细信息，请参阅 [JDBC 驱动程序的预处理语句元数据缓存](prepared-statement-metadata-caching-for-the-jdbc-driver.md)。
 
-### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmac"></a>添加了对 Linux/Mac 上的 Azure AD 集成身份验证的支持
+### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmacos"></a>Linux/macOS 现已开始支持 Azure AD 集成身份验证
 
-JDBC Driver 现在支持，在所有受支持的操作系统（Windows、Linux 和 Mac）上结合使用 Azure Active Directory (Azure AD) 集成身份验证和 Kerberos。 或者，在 Windows 操作系统上，用户可以使用 mssql-jdbc_auth-\<version>-\<arch>.dll 进行身份验证。
+JDBC 驱动程序现在支持，在所有受支持的操作系统（Windows、Linux 和 macOS）上结合使用 Azure Active Directory (Azure AD) 集成身份验证和 Kerberos。 或者，在 Windows 操作系统上，用户可以使用 mssql-jdbc_auth-\<version>-\<arch>.dll 进行身份验证。
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>更新了“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”版本：1.4.0
 
-JDBC 驱动程序已将“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”上的 Maven 依赖项更新为版本 1.4.0。 有关依赖项的详细信息，请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
+JDBC 驱动程序已将“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”上的 Maven 依赖项更新为版本 1.4.0。 有关依赖项的详细信息，请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
 ## <a name="62"></a>6.2
 
@@ -423,11 +424,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="always-encrypted"></a>Always Encrypted
 
-驱动程序支持 SQL Server 2016 中的 Always Encrypted 功能。 此功能可确保从不在 SQL Server 实例中以纯文本形式显示敏感数据。 Always Encrypted 工作方式是，以透明方式加密应用程序中的数据，这样 SQL Server 就只会处理已加密数据，而不会处理纯文本值。 即使 SQL Server 实例或主机计算机遭入侵，攻击者也只能获得敏感数据的已加密文本。 有关详细信息，请参阅[对 JDBC 驱动程序使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。
+驱动程序支持 SQL Server 2016 中的 Always Encrypted 功能。 此功能可确保从不在 SQL Server 实例中以纯文本形式显示敏感数据。 Always Encrypted 工作方式是，以透明方式加密应用程序中的数据，这样 SQL Server 就只会处理已加密数据，而不会处理纯文本值。 即使 SQL Server 实例或主机计算机遭入侵，攻击者也只能获得敏感数据的已加密文本。 有关详细信息，请参阅[对 JDBC 驱动程序使用 Always Encrypted](using-always-encrypted-with-the-jdbc-driver.md)。
 
 ### <a name="internationalized-domain-names"></a>国际化域名
 
-驱动程序支持服务器名称的国际化域名 (IDN)。 有关详细信息，请参阅 [JDBC 驱动程序的国际功能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)一文中的“使用国际域名”。
+驱动程序支持服务器名称的国际化域名 (IDN)。 有关详细信息，请参阅 [JDBC 驱动程序的国际功能](international-features-of-the-jdbc-driver.md)一文中的“使用国际域名”。
 
 ### <a name="parameterized-queries"></a>参数化查询
 
@@ -437,11 +438,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 Azure AD 身份验证是一种使用 Azure AD 标识连接到 Azure SQL 数据库 v12 的机制。 Azure AD 身份验证可用于集中管理数据库用户的标识，并替代 SQL Server 身份验证。
 
-可使用 JDBC Driver 6.0 指定 JDBC 连接字符串中的 Azure AD 凭据以连接到 Azure SQL 数据库。 有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)一文中的身份验证属性。
+可使用 JDBC Driver 6.0 指定 JDBC 连接字符串中的 Azure AD 凭据以连接到 Azure SQL 数据库。 有关详细信息，请参阅[设置连接属性](setting-the-connection-properties.md)一文中的身份验证属性。
 
 ### <a name="table-valued-parameters"></a>表值参数
 
-借助 TVP，可以将多行数据从客户端应用程序轻松封送到 SQL Server，而无需进行多次往返或使用特殊的服务器端逻辑来处理数据。 可使用 TVP 来封装客户端应用程序中的数据行，并以一个参数化命令的形式将数据发送到服务器。 传入数据行将存储在随后可使用 Transact-SQL 对其进行操作的表变量中。 有关详细信息，请参阅[使用表值参数](../../connect/jdbc/using-table-valued-parameters.md)。
+借助 TVP，可以将多行数据从客户端应用程序轻松封送到 SQL Server，而无需进行多次往返或使用特殊的服务器端逻辑来处理数据。 可使用 TVP 来封装客户端应用程序中的数据行，并以一个参数化命令的形式将数据发送到服务器。 传入数据行将存储在随后可使用 Transact-SQL 对其进行操作的表变量中。 有关详细信息，请参阅[使用表值参数](using-table-valued-parameters.md)。
 
 ### <a name="always-on-availability-groups"></a>AlwaysOn 可用性组
 
@@ -474,19 +475,19 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="jdbc-41-and-42-compliance"></a>JDBC 4.1 和 4.2 的遵从性
 
-除了支持 4.0 以外，驱动程序还支持 Java Database Connectivity API 4.1 和 4.2 规范。 有关详细信息，请参阅 [JDBC 驱动程序的 JDBC 4.1 符合性](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)和 [JDBC 驱动程序的 JDBC 4.2 符合性](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)。
+除了支持 4.0 以外，驱动程序还支持 Java Database Connectivity API 4.1 和 4.2 规范。 有关详细信息，请参阅 [JDBC 驱动程序的 JDBC 4.1 符合性](jdbc-4-1-compliance-for-the-jdbc-driver.md)和 [JDBC 驱动程序的 JDBC 4.2 符合性](jdbc-4-2-compliance-for-the-jdbc-driver.md)。
 
 ### <a name="bulk-copy"></a>大容量复制
 
-大容量复制功能可用于将大量数据快速复制到 SQL Server 数据库中的表或视图。 有关详细信息，请参阅[结合使用大容量复制和 JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)。
+大容量复制功能可用于将大量数据快速复制到 SQL Server 数据库中的表或视图。 有关详细信息，请参阅[结合使用大容量复制和 JDBC Driver](using-bulk-copy-with-the-jdbc-driver.md)。
 
 ### <a name="xa-transaction-rollback-option"></a>XA 事务回滚选项
 
-驱动程序新增了适用于未准备好事务的现有自动回滚的超时选项。 有关详细信息，请参阅[了解 XA 事务](../../connect/jdbc/understanding-xa-transactions.md)。
+驱动程序新增了适用于未准备好事务的现有自动回滚的超时选项。 有关详细信息，请参阅[了解 XA 事务](understanding-xa-transactions.md)。
 
 ### <a name="new-kerberos-principal-connection-property"></a>新 Kerberos 主体连接属性
 
-驱动程序使用新连接属性，提高 Kerberos 连接灵活性。 有关详细信息，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。
+驱动程序使用新连接属性，提高 Kerberos 连接灵活性。 有关详细信息，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。
 
 ## <a name="41"></a>4.1
 
@@ -503,4 +504,4 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ## <a name="see-also"></a>另请参阅
 
-[JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[JDBC 驱动程序的概述](overview-of-the-jdbc-driver.md)

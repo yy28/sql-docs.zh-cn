@@ -7,12 +7,12 @@ ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e75becc77691ccd91c8c5db01bd08112aaad9476
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 7782806a1ba44c4f18c4005dfa592998cc9f026b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517676"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301710"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的发行说明
 
@@ -29,7 +29,7 @@ ms.locfileid: "80517676"
 |-----|-----|-----|
 | Red Hat Enterprise Linux Server 7.3、7.4、7.5、7.6 或 8 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2、SP3、SP4 或 SP5 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS，18.04 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-ubuntu.md) | 
+| Ubuntu 16.04 LTS、18.04 LTS | XFS 或 EXT4 | [安装指南](quickstart-install-connect-ubuntu.md) | 
 | 适用于 Windows、Mac 或 Linux 的 Docker 引擎 1.8 及更高版本 | 空值 | [安装指南](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -205,19 +205,19 @@ ms.locfileid: "80517676"
 
       1. 将以下项添加到 /var/opt/mssql/mssql.conf。
 
-      ```
-      [network]
-      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
-      ```
+          ```
+          [network]
+          tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+          ```
 
-         >[!NOTE]
-         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
+         > [!NOTE]
+         > 在前面的代码中，`!` 对表达式进行求反。 这向 OpenSSL 指明不使用以下密码套件。  
 
       1. 使用以下命令重启 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-      ```bash
-      sudo systemctl restart mssql-server
-      ```
+          ```bash
+          sudo systemctl restart mssql-server
+          ```
 
 - Windows 上使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库无法在 Linux 上的 SQL Server 2019 (15.x) 上进行还原。 要还原使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库，请首先将数据库升级到 Windows 上的 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]、SQL Server 2017 或 SQL Server 2019，然后再通过备份/还原或分离/附加将数据库移至 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 

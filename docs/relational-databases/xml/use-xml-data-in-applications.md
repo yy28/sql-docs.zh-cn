@@ -1,5 +1,6 @@
 ---
 title: 在应用程序中使用 XML 数据 | Microsoft Docs
+description: 了解在应用程序中使用 xml 数据类型时可用的选项。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa573c4d824d8a1f419335fa0c7b3d451b80f96e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7e4811d4c79a167efbf7f5b40ecf6270caff38df
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664978"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388313"
 ---
 # <a name="use-xml-data-in-applications"></a>使用 XML 数据应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -146,7 +147,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 处理 xml 类型列中的 XML  
- 若要使用 ADO.NET 和   处理“xml”数据类型列中的 XML，可以使用“SqlCommand”类的标准行为[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]  。 例如，可以按照使用 **xml** 检索任何 SQL 列的相同方法检索 **SqlDataReader**数据类型列及其值。但是，如果要将 **xml** 数据类型列的内容作为 XML 使用，必须先将这些内容指派给 **XmlReader** 类型。  
+ 若要使用 ADO.NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 处理“xml”数据类型列中的 XML，可以使用“SqlCommand”类的标准行为   。 例如，可以按照使用 **xml** 检索任何 SQL 列的相同方法检索 **SqlDataReader**数据类型列及其值。但是，如果要将 **xml** 数据类型列的内容作为 XML 使用，必须先将这些内容指派给 **XmlReader** 类型。  
   
  有关详细信息和示例代码，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文档中的“数据读取器中的 XML 列值”。  
   

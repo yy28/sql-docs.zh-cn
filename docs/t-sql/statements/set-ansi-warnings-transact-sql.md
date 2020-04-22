@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7209914e92854dc301266625a0345336f787e4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 141e7ddb6fb0f8d539af559532debe65c01b569f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948029"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634461"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "67948029"
   
 ## <a name="syntax"></a>语法
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_WARNINGS ON
@@ -73,8 +73,8 @@ SET ANSI_WARNINGS ON
 > [!IMPORTANT]
 > 执行分布式查询时，应将 ANSI_WARNINGS 设置为 ON。  
   
- 进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序会自动将 ANSI_WARNINGS 设置为 ON。 这可以在 ODBC 数据源、ODBC 连接属性（它们在连接前在应用程序中设置）中进行配置。 从 DB-Library 应用程序连接时，SET ANSI_WARNINGS 的默认值为 OFF。  
-  
+客户端（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft JDBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）自动使用连接标志将 ANSI_WARNINGS 设置为 ON。 这可以在 ODBC 数据源、ODBC 连接属性（它们在连接前在应用程序中设置）中进行配置。 从 DB-Library 应用程序连接时，SET ANSI_WARNINGS 的默认值为 OFF。 有关详细信息，请参阅表格格式数据流 (TDS) 协议规范中的 [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac)。 
+
 ANSI_DEFAULTS 为 ON 时，将启用 ANSI_WARNINGS。  
   
 ANSI_WARNINGS 的设置是在执行或运行时定义的，而不是在分析时定义的。  

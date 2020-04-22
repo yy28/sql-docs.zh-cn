@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244082"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634951"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>在 IntelliJ 的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上提交 Spark 作业
 
@@ -33,9 +33,9 @@ ms.locfileid: "75244082"
 ## <a name="link-sql-server-big-data-cluster"></a>链接 SQL Server 大数据群集
 1. 打开 IntelliJ IDEA 工具。
 
-2. 如果使用的是自签名证书，请从“工具”菜单中依次选择“Azure”、“验证 Spark 群集 SSL 证书”、“禁用”，以禁用 SSL 证书验证     。
+2. 如果使用的是自签名证书，请在“工具”  菜单中依次选择“Azure”  、“验证 Spark 群集 SSL 证书”  和“禁用”  ，以禁用 TLS/SSL 证书验证。
 
-    ![链接 SQL Server 大数据群集 - 禁用 SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![链接 SQL Server 大数据群集 - 禁用 TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. 从“视图”菜单中选择“工具窗口”，然后选择“Azure Explorer”，以打开“Azure 资源管理器”    。
 4. 右键单击“SQL Server 大数据群集”，然后选择“链接 SQL Server 大数据群集”   。 输入“服务器”、“用户名”和“密码”，然后单击“确定”     。

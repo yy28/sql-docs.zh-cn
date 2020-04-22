@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570760"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630643"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 方法 - CreateSSLCertificateBinding
-  创建 SSL 证书绑定。  
+  创建 TLS/SSL 证书绑定。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +35,7 @@ public void CreateSSLCertificateBinding(string application,
     int lcid, out string error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *应用程序*  
  应为其创建证书绑定的应用程序的名称。  
   
@@ -46,7 +46,7 @@ public void CreateSSLCertificateBinding(string application,
  应用程序的 IP 地址。  
   
  端口   
- 与该绑定关联的 SSL 端口。  
+ 与绑定关联的 TLS 端口。  
   
  *Lcid*  
  用于返回的错误消息的区域设置。  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>备注  
  此方法将向 rsreportserver.config 中为该应用程序添加一个绑定。 如果某个绑定在 HTTP.SYS 中不存在，则会在其中创建它。  
   
- 在创建绑定之前，该方法调用会检查指定应用程序的 Url 预留，以确定 SSL 证书绑定是否有效。  
+ 在创建绑定前，此方法调用会检查指定应用程序的 URL 预留，以确定 TLS/SSL 证书绑定是否有效。  
   
  如果验证到存在以下情况，则会导致错误：  
   

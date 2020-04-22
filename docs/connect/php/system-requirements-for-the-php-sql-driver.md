@@ -1,5 +1,6 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 系统要求 | Microsoft Docs
+title: Microsoft Drivers for PHP 系统要求
+description: Microsoft Drivers for PHP for SQL Server 支持各种 PHP 版本、操作系统和 SQL Server 版本。
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
 ms.reviewer: carlrab
 ms.author: v-daenge
-ms.openlocfilehash: 2e48fcb222575095fab4c313102de8abc4e3efa0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0537f39c83239e148541a4739ccdfb83c8f5e6c9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926867"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635704"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 系统要求
 
@@ -25,13 +26,13 @@ ms.locfileid: "80926867"
 
 本文列出了必须在系统上安装才能使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 访问 SQL Server 或 Azure SQL 数据库中的数据的组件。
 
-正式支持 Microsoft PHP Drivers for SQL Server 版本 3.2 及更高版本。 有关支持 PHP 驱动程序生命周期和要求的完整详细信息，请参阅[支持矩阵](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md)。
+正式支持 Microsoft PHP Drivers for SQL Server 版本 3.2 及更高版本。 有关支持 PHP 驱动程序生命周期和要求的完整详细信息，请参阅[支持矩阵](microsoft-php-drivers-for-sql-server-support-matrix.md)。
 
 ## <a name="php"></a>PHP
 
-要了解如何下载并安装最新的稳定 PHP 二进制文件，请参阅 [PHP 网站](https://php.net)。  Microsoft Drivers for PHP for SQL Server 需要正确版本的 PHP，如 [PHP 版本支持](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support)中所述。
+要了解如何下载并安装最新的稳定 PHP 二进制文件，请参阅 [PHP 网站](https://php.net)。  Microsoft Drivers for PHP for SQL Server 需要正确版本的 PHP，如 [PHP 版本支持](microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support)中所述。
 
--   必须通过相应的 PHP 版本启用驱动程序文件的正确版本。 有关不同驱动程序文件的信息，请参阅[驱动程序版本](#driver-versions)。  若要下载驱动程序，请参阅[下载 Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md)。 要了解如何配置适用于 PHP 的驱动程序，请参阅[加载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)。
+-   必须通过相应的 PHP 版本启用驱动程序文件的正确版本。 有关不同驱动程序文件的信息，请参阅[驱动程序版本](#driver-versions)。  若要下载驱动程序，请参阅[下载 Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md)。 要了解如何配置适用于 PHP 的驱动程序，请参阅[加载 Microsoft Drivers for PHP for SQL Server](loading-the-php-sql-driver.md)。
 
 -   Web 服务器是必需的。 必须将 Web 服务器配置为运行 PHP。 有关使用 IIS 托管 PHP 应用程序的信息，请参阅 [PHP 网站上的教程](http://docs.php.net/manual/da/install.windows.iis7.php)。
 
@@ -42,7 +43,7 @@ ms.locfileid: "80926867"
 
 ## <a name="odbc-driver"></a>ODBC 驱动程序
 
-运行 PHP 的计算机需要正确版本的 Microsoft ODBC Driver for SQL Server。 [可以在此页](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017)下载支持平台的所有支持的驱动程序版本。
+运行 PHP 的计算机需要正确版本的 Microsoft ODBC Driver for SQL Server。 [可以在此页](../odbc/download-odbc-driver-for-sql-server.md)下载支持平台的所有支持的驱动程序版本。
 
 如果要在 64 位版本的 Windows 上下载 Windows 版本的驱动程序，ODBC 64 位安装程序将同时安装 32 位和 64 位 ODBC 驱动程序。 如果使用的是 32 位版本的 Windows，请使用 ODBC x86 安装程序。 在非 Windows 平台上，仅 64 位版本的驱动程序可用。
 
@@ -53,11 +54,11 @@ ms.locfileid: "80926867"
 |ODBC 驱动程序 13  | | | | | |Y| |
 |ODBC 驱动程序 11  |Y|Y|Y|Y|Y|Y|Y|
 
-如果使用的是 SQLSRV 驱动程序，[sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) 将返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在使用哪个版本的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Microsoft ODBC Driver for SQL Server 的信息。 如果使用的是 PDO_SQLSRV 驱动程序，可以使用 [PDO::getAttribute](../../connect/php/pdo-getattribute.md) 来发现版本。
+如果使用的是 SQLSRV 驱动程序，[sqlsrv_client_info](sqlsrv-client-info.md) 将返回有关 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 正在使用哪个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server 的信息。 如果使用的是 PDO_SQLSRV 驱动程序，可以使用 [PDO::getAttribute](pdo-getattribute.md) 来发现版本。
 
 ## <a name="sql-server"></a>SQL Server
 
-有关对 Azure SQL 数据库使用 PHP 的信息，请参阅[连接到 Microsoft Azure SQL 数据库](../../connect/php/connecting-to-microsoft-azure-sql-database.md)。
+有关对 Azure SQL 数据库使用 PHP 的信息，请参阅[连接到 Microsoft Azure SQL 数据库](connecting-to-microsoft-azure-sql-database.md)。
 
 |SQL Server 的 PHP 驱动程序版本 &#8594;<br />&#8595; SQL Server 版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -73,13 +74,13 @@ ms.locfileid: "80926867"
 
 ## <a name="operating-systems"></a>操作系统
 
-有关支持的操作系统的详细信息，请参阅[支持的操作系统](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems)。
+有关支持的操作系统的详细信息，请参阅[支持的操作系统](microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems)。
 
 ## <a name="driver-versions"></a>驱动程序版本
 
-本部分列出各版本的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 所附带的驱动程序文件。 每个安装包都包含线程和非线程变体中的 SQLSRV 和 PDO_SQLSRV 驱动程序文件。 在 Windows 上，它们也可用于 32 位和 64 位变体。 若要配置可供与 PHP 运行时一起使用的驱动程序，请按照 [加载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的安装说明进行操作。
+本部分列出各版本的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 所附带的驱动程序文件。 每个安装包都包含线程和非线程变体中的 SQLSRV 和 PDO_SQLSRV 驱动程序文件。 在 Windows 上，它们也可用于 32 位和 64 位变体。 若要配置可供与 PHP 运行时一起使用的驱动程序，请按照 [加载 Microsoft Drivers for PHP for SQL Server](loading-the-php-sql-driver.md) 中的安装说明进行操作。
 
-在支持的 Linux 和 macOS 版本上，可以按照 [Linux 和 macOS 安装说明](../../connect/php/installation-tutorial-linux-mac.md)，使用 PHP 的 PECL 包系统安装适当的驱动程序。 或者，可以从 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 项目页中为平台下载预生成的二进制文件 -- 下表列出了在预生成的二进制包中找到的文件。
+在支持的 Linux 和 macOS 版本上，可以按照 [Linux 和 macOS 安装说明](installation-tutorial-linux-mac.md)，使用 PHP 的 PECL 包系统安装适当的驱动程序。 或者，可以从 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 项目页中为平台下载预生成的二进制文件 -- 下表列出了在预生成的二进制包中找到的文件。
 
 **Microsoft Drivers 5.8 for PHP for SQL Server：**
 
@@ -258,7 +259,7 @@ ms.locfileid: "80926867"
 
 ## <a name="see-also"></a>另请参阅
 
-- [开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
-- [Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
-- [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
-- [PDO_SQLSRV 驱动程序 API 参考](../../connect/php/pdo-sqlsrv-driver-reference.md)
+- [开始使用 Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
+- [Microsoft Drivers for PHP for SQL Server 编程指南](programming-guide-for-php-sql-driver.md)
+- [SQLSRV 驱动程序 API 参考](sqlsrv-driver-api-reference.md)
+- [PDO_SQLSRV 驱动程序 API 参考](pdo-sqlsrv-driver-reference.md)

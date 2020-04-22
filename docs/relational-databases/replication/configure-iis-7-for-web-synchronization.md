@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903209"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529117"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67903209"
   
 1.  在运行 IIS 的计算机上安装和配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器。  
   
-2.  配置安全套接字层 (SSL)。 IIS 和所有订阅服务器之间的通信需要 SSL。  
+2.  配置传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）。 必须配置 TLS，才能在 IIS 和所有订阅服务器之间通信。  
   
 3.  配置 IIS 身份验证。  
   
@@ -97,9 +97,7 @@ ms.locfileid: "67903209"
 ## <a name="configuring-iis-authentication"></a>配置 IIS 身份验证  
  当订阅服务器计算机连接到 IIS 时，订阅服务器必须经过 IIS 的身份验证才能访问资源和过程。 身份验证可以应用于整个网站或您创建的虚拟目录。  
   
- 建议您使用带有 SSL 的基本身份验证。 无论使用何种类型的身份验证，都需要 SSL。  
-  
- 建议您使用带有 SSL 的基本身份验证。 无论使用何种类型的身份验证，都需要 SSL。  
+ 建议结合使用基本身份验证和 TLS。 无论使用哪种类型的身份验证，都需要 TLS。
   
 #### <a name="to-configure-iis-authentication"></a>配置 IIS 身份验证  
   
@@ -112,7 +110,7 @@ ms.locfileid: "67903209"
 4.  右键单击“基本身份验证”，然后选择“启用”。  
   
 ## <a name="configuring-secure-sockets-layer"></a>配置安全套接字层  
- 若要配置 SSL，请指定一个供正在运行 IIS 的计算机使用的证书。 用于合并复制的 Web 同步支持使用服务器证书，但不支持使用客户端证书。 若要为部署配置 IIS，就必须首先从证书颁发机构 (CA) 获取证书。 有关证书的详细信息，请参阅 IIS 文档。  
+ 若要配置 TLS，请指定证书，以供正在运行 IIS 的计算机使用。 用于合并复制的 Web 同步支持使用服务器证书，但不支持使用客户端证书。 若要为部署配置 IIS，就必须首先从证书颁发机构 (CA) 获取证书。 有关证书的详细信息，请参阅 IIS 文档。  
   
  安装证书后，必须使该证书与 Web 同步所用的网站相关联。 出于开发和测试目的，可以指定自签名证书。 IIS 7 可以为您创建证书并在计算机上注册该证书。  
   
@@ -121,9 +119,9 @@ ms.locfileid: "67903209"
 > [!IMPORTANT]  
 >  不建议对生产环境中的安装使用自签名证书， 因为自签名证书不安全。 仅将自签名证书用于开发和测试目的。  
   
- 若要配置 SSL，您需要执行以下步骤：  
+ 若要配置 TLS，请按照以下步骤操作：  
   
-1.  配置网站要求 SSL 并忽略客户端证书。  
+1.  将网站配置为，要求使用 TLS，并忽略客户端证书。  
   
 2.  从 CA 获得证书或创建自签名证书。  
   
@@ -268,7 +266,7 @@ ms.locfileid: "67903209"
     5.  再次单击 **“确定”** ，关闭“高级设置”。  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>测试到 replisapi.dll 的连接  
- 在诊断模式下运行 Web 同步，以便测试与正在运行 IIS 的计算机的连接，并确保已正确安装安全套接字层 (SSL) 证书。 若要在诊断模式下运行 Web 同步，您必须是运行 IIS 的计算机中的管理员。  
+ 在诊断模式下运行 Web 同步，以测试与正在运行 IIS 的计算机的连接，并确保正确安装了 TLS/SSL 证书。 若要在诊断模式下运行 Web 同步，您必须是运行 IIS 的计算机中的管理员。  
   
 #### <a name="to-test-the-connection-to-replisapidll"></a>测试到 replisapi.dll 的连接  
   

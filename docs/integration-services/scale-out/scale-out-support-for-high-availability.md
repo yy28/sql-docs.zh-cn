@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286881"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487986"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
@@ -53,7 +53,7 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3.在辅助节点上安装 Scale Out Master
 在用于 Scale Out Master 的辅助节点上安装 SQL Server 数据库引擎服务、Integration Services 和 Scale Out Master。 
 
-使用在主节点上使用的相同 Scale Out Master 证书。 使用私钥导出主节点上的 Scale Out Master SSL 证书，将其安装到辅助节点上本地计算机的根证书存储中。 在辅助节点上安装 Scale Out Master 时，请选择此证书。
+使用在主节点上使用的相同 Scale Out Master 证书。 使用私钥导出主节点上的 Scale Out Master TLS/SSL 证书，并将它安装到辅助节点上的本地计算机的根证书存储中。 在辅助节点上安装 Scale Out Master 时，请选择此证书。
 
 ![HA 主节点配置 2](media/ha-master-config2.PNG)
 

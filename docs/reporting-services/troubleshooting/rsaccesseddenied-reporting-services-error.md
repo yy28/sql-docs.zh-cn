@@ -1,5 +1,6 @@
 ---
 title: rsAccessedDenied - Reporting Services 错误 | Microsoft Docs
+description: 在此错误参考页中，了解“rsAccessedDenied”：为用户“mydomain\myAccount”授予的权限不足，无法执行此操作。
 ms.date: 05/22/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0063256e371585fe6d63a1a635aa286fca5a7d39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab443e48037add1cc507b71fe87fe7be7bcb43f9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66270225"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487235"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Reporting Services 错误
   当用户没有权限进行操作时，会出现 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 错误 **rsAccessedDenied** 。 例如，用户没有允许他们打开报表的角色分配，或者没有用所需的权限打开其浏览器。  

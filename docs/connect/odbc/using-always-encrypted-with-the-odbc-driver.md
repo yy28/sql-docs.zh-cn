@@ -1,5 +1,6 @@
 ---
-title: 在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted | Microsoft Docs
+title: 结合使用 Always Encrypted 和 JDBC 驱动程序
+description: 了解如何结合使用 Always Encrypted 和 Microsoft ODBC Driver for SQL Server 来开发 ODBC 应用程序。
 ms.custom: ''
 ms.date: 09/01/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285841"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635424"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -23,9 +24,9 @@ ms.locfileid: "79285841"
 - 适用于 SQL Server 的 ODBC 驱动程序 13.1
 - 适用于 SQL Server 的 ODBC 驱动程序 17
 
-### <a name="introduction"></a>介绍
+### <a name="introduction"></a>简介
 
-本文介绍如何使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)或[具有安全 Enclaves 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 和[适用于 SQL Server 的 ODBC 驱动程序](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
+本文介绍如何使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)或[具有安全 Enclaves 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 和[适用于 SQL Server 的 ODBC 驱动程序](microsoft-odbc-driver-for-sql-server.md)。
 
 始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（例如适用于 SQL Server 的 ODBC 驱动程序）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此目标。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 具有安全 enclave 的 Always Encrypted  扩展此功能，以便对敏感数据启动更丰富的功能，同时保持数据的机密性。
 
@@ -60,7 +61,7 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>启用“具有安全 Enclaves 的 Always Encrypted”
 
 > [!NOTE]
-> 在 Linux 和 Mac 上，必须有 OpenSSL 版本 1.0.1 或更高版本，才能使用具有安全 Enclave 的 Always Encrypted。
+> 在 Linux 和 macOS 上，必须有 OpenSSL 版本 1.0.1 或更高版本，才能使用具有安全 Enclave 的 Always Encrypted。
 
 自版本 17.4 起，驱动程序支持具有安全 Enclave 的 Always Encrypted。 若要启用在连接到 SQL Server 2019 或更高版本时使用 enclave，请将 `ColumnEncryption` DSN、连接字符串或连接属性设置为 enclave 类型名称、证明协议和关联的证明数据（用逗号分隔）。 在版本 17.4 中，只支持[基于虚拟化的安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave 类型和[主机保护者服务](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)证明协议（由 `VBS-HGS` 表示）；若要使用它，请指定认证服务器的 URL，例如：
 
@@ -431,16 +432,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 将 AKV 用于 CMK 存储无需其他 ODBC 应用程序更改。
 
 > [!NOTE]
-> 驱动程序包含它信任的 AKV 终结点的列表。 自驱动程序版本 17.5.2 起，此列表是可配置的：可将驱动程序或 DSN 的 ODBCINST.INI 或 ODBC.INI 注册表项 (Windows) 或 `odbcinst.ini` 或 `odbc.ini` 文件部分 (Linux/Mac) 中的 `AKVTrustedEndpoints` 属性设置为以分号分隔的列表。 在 DSN 中进行设置的优先级高于在驱动程序中设置。 如果该值以分号开头，则它将扩展默认列表；否则，它将替换默认列表。 默认列表（自 17.5 起）为 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`。
+> 驱动程序包含它信任的 AKV 终结点的列表。 自驱动程序版本 17.5.2 起，此列表是可配置的：可以将驱动程序或 DSN 的 ODBCINST.INI 或 ODBC.INI 注册表项 (Windows) 或 `odbcinst.ini`/`odbc.ini` 文件部分 (Linux/macOS) 中的 `AKVTrustedEndpoints` 属性设置为分号分隔列表。 在 DSN 中进行设置的优先级高于在驱动程序中设置。 如果该值以分号开头，则它将扩展默认列表；否则，它将替换默认列表。 默认列表（自 17.5 起）为 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`。
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
 
-适用于 Windows 上的 SQL Server 的 ODBC 驱动程序包含用于 Windows 证书存储的内置列主密钥存储提供程序 `MSSQL_CERTIFICATE_STORE`。 （此提供程序在 macOS 或 Linux 上不可用。）此提供程序会将 CMK 存储在客户端计算机本地，应用程序无需额外配置即可将它与驱动程序配合使用。 但是，应用程序必须有权访问存储中的证书及其私钥。 有关详细信息，请参阅[创建并存储列主密钥 (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)。
+适用于 Windows 上的 SQL Server 的 ODBC 驱动程序包含用于 Windows 证书存储的内置列主密钥存储提供程序 `MSSQL_CERTIFICATE_STORE`。 （此提供程序在 macOS 或 Linux 上不可用。）此提供程序会将 CMK 存储在客户端计算机本地，应用程序无需额外配置即可将它与驱动程序配合使用。 但是，应用程序必须有权访问存储中的证书及其私钥。 有关详细信息，请参阅[创建并存储列主密钥 (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 ### <a name="using-custom-keystore-providers"></a>使用自定义密钥存储提供程序
 
-ODBC Driver for SQL Server 同时支持使用 CEKeystoreProvider 接口的自定义第三方密钥存储提供程序。 这允许应用程序加载、查询和配置密钥存储提供程序，这样驱动程序即可使用它们访问加密列。 此外，应用程序还可以直接与密钥存储提供程序交互，以加密 SQL Server 存储的 CEK，并执行使用 ODBC 访问加密列之外的任务；有关详细信息，请参阅[自定义密钥存储提供程序](../../connect/odbc/custom-keystore-providers.md)。
+ODBC Driver for SQL Server 同时支持使用 CEKeystoreProvider 接口的自定义第三方密钥存储提供程序。 这允许应用程序加载、查询和配置密钥存储提供程序，这样驱动程序即可使用它们访问加密列。 此外，应用程序还可以直接与密钥存储提供程序交互，以加密 SQL Server 存储的 CEK，并执行使用 ODBC 访问加密列之外的任务；有关详细信息，请参阅[自定义密钥存储提供程序](custom-keystore-providers.md)。
 
 使用两个连接属性与自定义密钥存储提供程序进行交互。 它们分别是：
 
@@ -543,7 +544,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 若要了解更多错误详细信息，可参阅 [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx)。
 
 > [!NOTE]
-> 在必要的情况下，提供程序可以使用连接句柄，来将写入的数据与特定连接关联。 这将有助于实现基于连接的配置。 它还可忽略连接上下文，并且无论用于发送数据的连接是什么，均以相同方式处理数据。 有关详细信息，请参阅[上下文关联](../../connect/odbc/custom-keystore-providers.md#context-association)。
+> 在必要的情况下，提供程序可以使用连接句柄，来将写入的数据与特定连接关联。 这将有助于实现基于连接的配置。 它还可忽略连接上下文，并且无论用于发送数据的连接是什么，均以相同方式处理数据。 有关详细信息，请参阅[上下文关联](custom-keystore-providers.md#context-association)。
 
 #### <a name="reading-data-from-a-provider"></a>从提供程序读取数据
 
@@ -565,7 +566,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 对于应用程序和密钥存储提供程序之间的传输数据的格式，此接口没有额外要求。 各个提供程序可以根据自身需要定义自己的协议/数据格式。
 
-有关实现自己的密钥存储提供程序的示例，请参阅[自定义密钥存储提供程序](../../connect/odbc/custom-keystore-providers.md)
+有关实现自己的密钥存储提供程序的示例，请参阅[自定义密钥存储提供程序](custom-keystore-providers.md)
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>使用 Always Encrypted 时的 ODBC 驱动程序限制
 
@@ -648,7 +649,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|如果值为 TRUE，可以将 varbinary(max) 值插入加密列。 如果为 FALSE，除非提供正确的类型和加密元数据，否则将阻止插入。|
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 如果使用 Always Encrypted 时遇到问题，请先检查以下几点：
 

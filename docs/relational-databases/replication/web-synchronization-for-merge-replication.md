@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2374100459ea4e6ee05a8bba8e77919ec9185898
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136969"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529104"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68136969"
   
  例如，正在出差的销售代表可以使用 Web 同步。 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]公司的销售代表们要去所在区域的不同商店和供应商那里出差。 如果出差时间较长，销售代表们会住在宾馆里，这就需要一种方便的方法，能够在每天结束时上载销售数据，下载产品更新信息。  
   
- 因此， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部门为每台便携式计算机配置了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并启用了合并复制以便使用 Web 同步。 每台便携式计算机上的合并代理都有一个 Internet URL，它指向运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 的计算机上所安装的复制组件。 这些组件用于使订阅服务器与发布服务器同步。 现在，每个代表能够通过任何可用的 Internet 连接进行连接而无须使用远程拨号，能够上载和下载合适的数据。 Internet 连接使用安全套接字层 (SSL)，所以不需要虚拟专用网络 (VPN)。  
+ 因此， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部门为每台便携式计算机配置了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并启用了合并复制以便使用 Web 同步。 每台便携式计算机上的合并代理都有一个 Internet URL，它指向运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 的计算机上所安装的复制组件。 这些组件用于使订阅服务器与发布服务器同步。 现在，每个代表能够通过任何可用的 Internet 连接进行连接而无须使用远程拨号，能够上载和下载合适的数据。 Internet 连接使用传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”），因此不需要虚拟专用网 (VPN)。  
   
  有关如何配置 Web 同步所需的组件的信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)、[配置 IIS 以实现 Web 同步](../../relational-databases/replication/configure-iis-for-web-synchronization.md)和[配置 IIS 7 以实现 Web 同步](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)。  
   

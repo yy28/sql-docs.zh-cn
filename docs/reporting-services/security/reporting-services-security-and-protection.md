@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03234369ed7422433b35a5e3d296f6db1d1b2223
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 189c0d314ba3f16b00ad570b3e0f9fbce9fa2f7e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570661"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632414"
 ---
 # <a name="reporting-services-security-and-protection"></a>Reporting Services 安全性和保护
   你可使用本节中的信息来了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安全功能。 本节还将说明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中支持的授权模型和身份验证提供程序。  
@@ -33,6 +33,6 @@ ms.locfileid: "65570661"
   
 |任务说明|链接|  
 |-----------------------|-----------|  
-|配置安全套接字层 (SSL) 以便确保与报表服务器的客户端连接的安全。|[配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
+|配置传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”），以保护客户端与报表服务器的连接。|[在本机模式报表服务器上配置 TLS 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
   
   

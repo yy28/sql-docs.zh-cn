@@ -1,5 +1,6 @@
 ---
 title: 不确定性内容模型 | Microsoft Docs
+description: 举例说明了如何使用包含非确定性内容模型的 XML 架构。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e2deef952a4c938a65cf1c8a5c8181c2fd6bc04
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 23118823d946266d841c444f2f7e1f7f1bec230b
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665075"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388478"
 ---
 # <a name="non-deterministic-content-models"></a>不确定性内容模型
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "80665075"
   
  不过从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 开始，如果匹配项约束为 0、1 或不受限制，则会接受不确定性内容模型。  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>示例：拒绝的不确定性内容模型  
+## <a name="example-non-deterministic-content-model-rejected"></a>示例：已拒绝的不确定性内容模型  
  下面的示例尝试创建具有不确定的内容模型的 XML 架构。 此代码失败，因为不清楚 `<root>` 元素应有一个包含两个 `<a>` 元素的序列，还是 `<root>` 元素应有两个序列，其中每个序列有一个 `<a>` 元素。  
   
 ```  
@@ -60,7 +61,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>示例：接受的不确定性内容模型  
+## <a name="example-non-deterministic-content-model-accepted"></a>示例：已接受的不确定性内容模型  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本中，会拒绝下面的架构。  
   
 ```  

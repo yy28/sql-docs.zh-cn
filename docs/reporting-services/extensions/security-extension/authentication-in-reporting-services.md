@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193843"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488581"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的身份验证
   身份验证是确立用户对某一身份的权限的过程。 您可以使用多种方法来验证某一用户的身份。 最常见的方法是使用密码。 例如，在实现窗体身份验证时，您希望某一实现查询用户的凭据（通常通过请求提供登录名和密码的某些界面），然后根据数据存储区（例如数据库表或配置文件）验证用户。 如果无法验证凭据，该身份验证过程将失败，并且用户将假定匿名身份。  
@@ -117,14 +117,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  在该 Web 服务成功通过安全扩展插件验证用户身份后，它将生成用于后续请求的 cookie。 该 cookie 可能不会在自定义安全机构内持久化，因为报表服务器不拥有该安全机构。 该 cookie 从 <xref:ReportService2010.ReportingService2010.LogonUser%2A> Web 服务方法返回并且用于后续的 Web 服务方法调用和 URL 访问中。  
   
 > [!NOTE]  
->  为了避免在传输期间损坏 cookie，从 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 返回的身份验证 cookie 应使用安全套接字层 (SSL) 加密安全地传输。  
+>  为了避免 Cookie 在传输期间泄漏，应使用传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）加密来安全地传输从 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 返回的身份验证 Cookie。  
   
  如果您在安装自定义安全扩展插件时通过 URL 访问报表服务器，则 Internet 信息服务 (IIS) 和 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 将自动管理身份验证票证的传输。 如果您在通过 SOAP API 访问报表服务器，则您的代理类的实现必须包括用于管理身份验证票证的附加支持。 有关使用 SOAP API 和管理身份验证票证的详细信息，请参阅“使用具有自定义安全性的 Web 服务”。  
   
 ## <a name="forms-authentication"></a>窗体身份验证  
  窗体身份验证是一种 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 身份验证，其中，未经身份验证的用户定向到某一 HTML 窗体。 一旦用户提供凭据后，系统将发出包含身份验证票证的 cookie。 对于以后的请求，系统首先检查 cookie 以确定报表服务器是否已验证用户的身份。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可以扩展，以便使用可通过 Reporting Services API 提供的安全可扩展接口支持窗体身份验证。 如果您扩展 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以使用窗体身份验证，则将安全套接字层 (SSL) 用于与报表服务器的全部通信，以便防止恶意用户获取对其他用户的 cookie 的访问。 SSL 使客户端和报表服务器能够彼此进行身份验证，并且确保没有其他计算机可以读取两台计算机之间的通信内容。 通过 SSL 连接从客户端传送的所有数据都进行加密，以便恶意用户无法截获发送给报表服务器的密码或数据。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可以扩展，以便使用可通过 Reporting Services API 提供的安全可扩展接口支持窗体身份验证。 如果将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 扩展为使用表单身份验证，请将传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）用于与报表服务器的全部通信，以防止恶意用户获取对其他用户的 Cookie 的访问权限。 借助 TLS，客户端和报表服务器可以相互验证，并确保其他任何计算机都不能读取两台计算机之间的通信内容。 通过 TLS 连接从客户端发送的所有数据都进行加密，这样恶意用户就无法截获发送给报表服务器的密码或数据。  
   
  实现窗体身份验证通常是为了支持针对非 Windows 的其他平台的帐户和身份验证。 向请求对某一报表服务器的访问的用户提供一个图形界面，并且提供的凭据将提交到安全机构以便进行身份验证。  
   

@@ -1,5 +1,6 @@
 ---
 title: 设置连接属性
+description: 可以通过多种方式来指定 Microsoft JDBC Driver for SQL Server 的连接字符串属性。
 ms.custom: ''
 ms.date: 03/13/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04b133b47cd81cb6c97d4d29dbe2e758656f962b
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: fadc79d2d44cbd835fafbf4ecd68247122577c66
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219396"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487076"
 ---
 # <a name="setting-the-connection-properties"></a>设置连接属性
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077057"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487166"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
   必须为每个应用程序配置至少一个 URL 才能使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL  。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。  
@@ -33,7 +33,7 @@ ms.locfileid: "77077057"
   
  要详细了解如何存储和维护 URL 或详细了解互操作性问题，请参阅[关于 URL 预留和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)和[并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  在创建或修改 URL 之前，请注意以下几点：  
   
 -   您必须是报表服务器计算机上本地 Administrators 组的成员。  
@@ -84,20 +84,20 @@ ms.locfileid: "77077057"
   
 6.  如果尚未进行验证，请验证 IIS（如果已安装）的虚拟目录名称是否与您要使用的名称不同。  
   
-7.  如果安装了 SSL 证书，则现在可以选择它以将 URL 绑定到计算机上安装的 SSL 证书。  
+7.  如果安装了 TLS/SSL 证书，现在可以选择它来将 URL 绑定到计算机上安装的 TLS/SSL 证书。  
   
-8.  （可选）如果选择了 SSL 证书，则可以指定一个自定义端口。 默认端口为 443，但您可以使用任何可用端口。  
+8.  （可选）如果选择了 TLS/SSL 证书，可以指定自定义端口。 默认端口为 443，但您可以使用任何可用端口。  
   
 9. 单击 **“应用”** 创建 URL。  
   
 10. 通过单击页面 **URL** 部分中的链接来测试该 URL。 请注意，必须先创建并配置报表服务器数据库，然后才能测试 URL。 有关指导，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
 > [!NOTE]
->  如果你已有 SSL 绑定和 URL 预留且要更改 SSL 绑定，例如使用不同的证书或主机标头，则建议按顺序完成以下步骤：  
+>  如果你已有 TLS 绑定和 URL 预留，且要更改 TLS 绑定（例如使用不同的证书或主机头），建议按顺序完成以下步骤：  
 > 
 >  1.  首先删除所有 URL 预留。  
-> 2.  然后删除所有 SSL 绑定。  
-> 3.  接着重新创建 URL 和 SSL 绑定。  
+> 2.  然后，删除所有 TLS 绑定。  
+> 3.  接下来，重新创建 URL 和 TLS 绑定。  
 > 
 >  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器完成上述步骤。  
 > 
@@ -113,9 +113,9 @@ ms.locfileid: "77077057"
   
 3.  指定虚拟目录。 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 与报表服务器 Web 服务侦听相同的 IP 地址和端口。 如果将 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 配置为指向不同的报表服务器 Web 服务，则必须在 RSReportServer.config 文件中修改 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL 设置。  
   
-4.  如果安装了 SSL 证书，则可以选择它以要求通过 HTTPS 路由针对 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的所有请求。  
+4.  如果安装了 TLS/SSL 证书，可以选择它来要求所有向 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 发出的请求都通过 HTTPS 进行路由。  
   
-     （可选）如果选择了 SSL 证书，则可以指定一个自定义端口。 默认端口为 443，但您可以使用任何可用端口。  
+     （可选）如果选择了 TLS/SSL 证书，可以指定自定义端口。 默认端口为 443，但您可以使用任何可用端口。  
   
 5.  单击 **“应用”** 创建 URL。  
   
@@ -136,14 +136,14 @@ ms.locfileid: "77077057"
  主机标头是允许多个网站共享一个 IP 地址和端口的唯一名称。 主机标头名称比 IP 地址和端口号更容易记住和键入。 这里有一个主机标头名称的示例： www.adventure-works.com 。  
   
  **SSL 端口**  
- 为 SSL 连接指定端口。 SSL 的默认端口为 443。  
+ 为 TLS/SSL 连接指定端口。 TLS 的默认端口为 443。  
   
  **SSL 证书**  
- 指定安装在此计算机上的 SSL 证书的证书名称。 如果证书映射到某个通配符，则可以将其用于报表服务器连接。  
+ 指定在此计算机上安装的 TLS/SSL 证书的证书名称。 如果证书映射到某个通配符，则可以将其用于报表服务器连接。  
   
  指定为其注册证书的完全限定的计算机名称。 指定的名称必须与为其注册证书的名称相同。  
   
- 必须先安装证书，才能使用此选项。 还必须修改 RSReportServer.config 文件中的 UrlRoot 配置设置，以便指定要为其注册证书的计算机的完全限定名称。 有关详细信息，请参阅 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 必须先安装证书，才能使用此选项。 还必须修改 RSReportServer.config 文件中的 UrlRoot 配置设置，以便指定要为其注册证书的计算机的完全限定名称。 有关详细信息，请参阅[在本机模式报表服务器上配置 TLS 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>设置 URL 的高级属性  
   

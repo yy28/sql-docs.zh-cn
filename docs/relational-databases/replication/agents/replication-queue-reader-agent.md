@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7ba560e46aaebc1aa5bc6901a3c0067fae91bdb2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c3dacfe725541c93f3d5fe1276513423d77aeba9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085944"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529391"
 ---
 # <a name="replication-queue-reader-agent"></a>复制队列读取器代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,16 +79,16 @@ qrdrsvc [-?]
  指定分发服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式（默认设置），值 **1** 指示 Windows 身份验证模式。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- 队列读取器代理建立连接时使用的安全套接字层 (SSL) 加密级别。  
+ 是队列读取器代理在建立连接时使用的传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）加密的级别。  
   
 |EncryptionLevel 值|说明|  
 |---------------------------|-----------------|  
-|**0**|指定不使用 SSL。|  
-|**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
-|**2**|指定使用 SSL，并验证证书。|  
+|**0**|指定不使用 TLS。|  
+|**1**|指定使用 TLS，但代理不验证 TLS/SSL 服务器证书是否由受信任的颁发者进行签名。|  
+|**2**|指定使用 TLS，并验证证书。|  
 
  > [!NOTE]  
- >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，“Server”参数应设置为 SQL Server 的完全限定名称。
+ >  有效的 TLS/SSL 证书是使用 SQL Server 的完全限定的域名进行定义。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，“Server”参数应设置为 SQL Server 的完全限定名称。
   
  有关详细信息，请参阅[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   

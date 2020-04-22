@@ -1,5 +1,6 @@
 ---
-title: 连接到 SQL Server | Microsoft Docs
+title: 使用 ODBC 进行连接
+description: 了解如何使用 Microsoft ODBC Driver for SQL Server 建立从 Linux 或 macOS 到数据库的连接。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219388"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632798"
 ---
 # <a name="connecting-to-sql-server"></a>连接到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "81219388"
   
 ## <a name="connection-properties"></a>连接属性  
 
-有关 Linux 和 Mac 上支持的所有连接字符串关键字和属性，请参阅 [DSN 和连接字符串关键字和属性](../../../connect/odbc/dsn-connection-string-attribute.md)
+有关 Linux 和 macOS 上支持的所有连接字符串关键字和属性，请参阅 [DSN 和连接字符串关键字和属性](../dsn-connection-string-attribute.md)。
 
 > [!IMPORTANT]  
 > 当连接到使用数据库镜像（有一个故障转移伙伴）的数据库时，不要在连接字符串中指定数据库名称。 应发送 use  database_name  命令连接到该数据库，然后再执行查询。  
@@ -113,6 +114,6 @@ TLS 使用 OpenSSL 库。 下表显示了 OpenSSL 的受支持的最低版本和
 
 ## <a name="see-also"></a>另请参阅
 
-- [安装 Linux 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [安装 macOS 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [编程指南](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [安装 Linux 上的 Microsoft ODBC Driver for SQL Server](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [安装 macOS 上的 Microsoft ODBC Driver for SQL Server](install-microsoft-odbc-driver-sql-server-macos.md)
+- [编程指南](programming-guidelines.md)

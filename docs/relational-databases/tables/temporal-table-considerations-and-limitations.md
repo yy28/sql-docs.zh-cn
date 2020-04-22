@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70958340"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487446"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>临时表注意事项和限制
 
@@ -49,10 +49,10 @@ ms.locfileid: "70958340"
 - 在当前表或历史记录表上均不允许使用**INSTEAD OF** 触发器，以避免导致 DML 逻辑失效。 仅在当前表上允许**AFTER** 触发器。 这些触发器在历史记录表上会被阻止，以避免导致 DML 逻辑失效。
 - 复制技术的使用受到限制：
 
-  - **始终启用：** 完全支持
-  - **更改数据捕获和更改数据跟踪：** 仅当前表支持
-  - **快照和事务复制**：仅支持未启用临时的单个发布服务器和启用了临时的一个订阅服务器。 在这种情况下，发布服务器用于 OLTP 工作负载，而订阅服务器用于卸载报表（包括“AS OF”查询）。 不支持使用多个订阅服务器，因为这种方案可能导致临时数据不一致，原因是每个服务器都依赖于本地系统时钟。
-  - **合并复制：** 不支持临时表
+  - **Always On：** 完全支持
+  - **变更数据捕获和数据跟踪**仅当前表支持
+  - **快照和事务复制**：仅支持未启用临时的单个发布服务器和启用了临时的一个订阅服务器。 在这种情况下，发布服务器用于 OLTP 工作负载，而订阅服务器用于卸载报表（包括“AS OF”查询）。 启动后，分发代理打开在其停止前一直保持打开状态的事务。 由于有此行为，SysStartTime 和 SysEndTime 填充到分发代理启动的第一个事务的开始时间。 因此，最好按计划运行分发代理，而不是采用默认的连续运行方式。 不支持使用多个订阅服务器，因为这可能会由于依赖本地系统时钟而导致临时数据不一致。
+  - **合并复制：** 不支持时态表
 
 - 定期查询仅影响当前表中的数据。 若要查询历史记录表中的数据，必须使用临时查询。 稍后将在本文档中“查询临时数据”部分讨论相关内容。
 - 最佳索引策略将包括当前表上的聚集列存储索引和/或 B 树行存储索引，以及历史记录表上的聚集列存储索引，旨在优化存储大小和性能。 如果你创建/使用自己的历史记录表，我们强烈建议你创建此类型的索引，它包含以时间段列的结尾为开头的时间段列，以加快临时查询，同时加快作为数据一致性检查的一部分的查询。 默认历史记录表具有基于时间段列（结束、开始）创建的聚集行存储索引。 建议至少应使用非聚集行存储索引。

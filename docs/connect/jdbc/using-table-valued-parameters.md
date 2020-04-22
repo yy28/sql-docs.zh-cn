@@ -1,5 +1,6 @@
 ---
-title: 使用表值参数 | Microsoft Docs
+title: 使用表值参数
+description: 表值参数提供了一种高效的方法，可以在一个参数化命令中将多行数据从客户端发送到 SQL Server。
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a4a46120991400f8e76c91e8a0e9b00ada2eac0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923853"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631935"
 ---
 # <a name="using-table-valued-parameters"></a>使用表值参数
 
@@ -48,7 +49,7 @@ ms.locfileid: "80923853"
   
 - 创建一系列单独的 SQL 语句，以执行影响多行的数据修改。 更改可以单独提交给服务器，也可以批量提交给组。 不过，即使是包含多个语句的批量提交，每个语句也是在服务器上单独执行。  
   
-- 使用 bcp 实用工具或 [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md) 将多行数据加载到表中。 尽管这种技术非常高效，但它不支持服务器端处理，除非将数据加载到临时表或表变量中。
+- 使用 bcp 实用工具或 [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md) 将多行数据加载到表中。 尽管这种技术非常高效，但它不支持服务器端处理，除非将数据加载到临时表或表变量中。
   
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
 
@@ -314,4 +315,4 @@ pStmt.execute();
 
 ## <a name="see-also"></a>另请参阅
 
-[JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驱动程序概述](overview-of-the-jdbc-driver.md)  

@@ -1,5 +1,6 @@
 ---
-title: 使用 bcp 进行连接 | Microsoft Docs
+title: 使用 bcp 连接
+description: 了解如何在 Linux 和 macOS 上结合使用 bcp 实用工具与 Microsoft ODBC Driver for SQL Server。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924546"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632799"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 本页介绍与 `bcp` 的 Windows 版本之间的区别。
+可以在 Linux 和 macOS 上结合使用 [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 与 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 本页介绍与 `bcp` 的 Windows 版本之间的区别。
   
 - 字段终止符是制表符 ("\t")。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "80924546"
 > -   -r"\n"  
 > -   -r'\n'  
   
-以下是将表行复制到文本文件的 `bcp` 示例命令调用：  
+以下示例是将表行复制到文本文件的 `bcp` 命令调用：  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -61,9 +62,9 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定要连接到的数据库。  
   
 - -d  
-使值传递给将解释为数据源名称 (DSN) 的 `bcp` -S 选项。 有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的“sqlcmd 和 bcp 中的 DSN 支持”。  
+使值传递给将解释为数据源名称 (DSN) 的 `bcp` -S 选项。 有关详细信息，请参阅[使用 sqlcmd 进行连接](connecting-with-sqlcmd.md)中的“sqlcmd 和 bcp 中的 DSN 支持”。  
   
-- -e error_file 指定错误文件的完整路径，此文件用于存储  *实用工具无法从文件传输到数据库的所有行*`bcp`。  
+- -e error_file 指定错误文件的完整路径，此文件用于存储 `bcp` 实用工具无法从文件传输到数据库的所有行  。  
   
 - -E  
 将导入数据文件中的一个或多个标识值用于标识列。  
@@ -84,7 +85,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定要从表中导出或从数据文件中导入的最后一行的编号。  
   
 - -m *max_errors*  
-指定取消 `bcp` 操作之前可能出现的语法错误的最大数目。  
+指定可能出现的语法错误的上限，超过此上限即导致 `bcp` 操作取消。  
   
 - -n  
 使用数据的本机（数据库）数据类型执行大容量复制操作。  
@@ -147,4 +148,4 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
   
 ## <a name="see-also"></a>另请参阅
 
-[使用 sqlcmd 进行连接  ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[使用 sqlcmd 进行连接  ](connecting-with-sqlcmd.md)  

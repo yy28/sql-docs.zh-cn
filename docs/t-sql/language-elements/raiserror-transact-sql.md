@@ -29,15 +29,18 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252045"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630746"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!NOTE]
+> RAISERROR  语句不遵循 SET XACT_ABORT  。 新应用程序应使用 THROW 而不是 RAISERROR   。
 
   生成错误消息并启动会话的错误处理。 RAISERROR 可以引用 sys.messages 目录视图中存储的用户定义消息，也可以动态建立消息。 该消息作为服务器错误消息返回到调用应用程序，或返回到 TRY…CATCH 构造的关联 CATCH 块。 新应用程序应改用 [THROW](../../t-sql/language-elements/throw-transact-sql.md)。  
   
@@ -45,7 +48,7 @@ ms.locfileid: "72252045"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -54,7 +57,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
@@ -112,18 +115,18 @@ RAISERROR ( { msg_str | @local_variable }
 |------------------------|----------------|  
 |d 或 i|带符号的整数|  
 |o|无符号的八进制数|  
-|s|String|  
+|s|字符串|  
 |u|无符号的整数|  
 |x 或 X|无符号的十六进制数|  
   
 > [!NOTE]  
->  这些类型规范基于最初为 C 标准库中 printf 函数定义的规范。  RAISERROR 消息字符串中使用的类型规范映射到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据类型，而 printf 中使用的规范映射到 C 语言数据类型。  **没有与关联 C 数据类型类似的数据类型时，RAISERROR 不支持 printf 中使用的类型规范。** [!INCLUDE[tsql](../../includes/tsql-md.md)] 例如， *没有指针数据类型，因此 RAISERROR 不支持用于指针的 %p 规范。* [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+>  这些类型规范基于最初为 C 标准库中 printf 函数定义的规范。  RAISERROR 消息字符串中使用的类型规范映射到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据类型，而 printf 中使用的规范映射到 C 语言数据类型。  [!INCLUDE[tsql](../../includes/tsql-md.md)] 没有与关联 C 数据类型类似的数据类型时，RAISERROR 不支持 printf 中使用的类型规范。  例如，[!INCLUDE[tsql](../../includes/tsql-md.md)] 没有指针数据类型，因此 RAISERROR 不支持用于指针的 %p 规范。   
   
 > [!NOTE]  
 >  要将值转换为 [!INCLUDE[tsql](../../includes/tsql-md.md)] bigint 数据类型，请指定 %I64d   。  
   
  *local_variable\@*  
- 是一个可以为任何有效字符数据类型的变量，其中包含的字符串的格式化方式与 msg_str 相同  。 *local_variable 必须为 char 或 varchar，或者能够隐式转换为这些数据类型。\@*    
+ 是一个可以为任何有效字符数据类型的变量，其中包含的字符串的格式化方式与 msg_str 相同  。 \@local_variable 必须为 char 或 varchar，或者能够隐式转换为这些数据类型。     
   
  severity   
  用户定义的与该消息关联的严重级别。 使用 msg_id 引发使用 sp_addmessage 创建的用户定义消息时，RAISERROR 上指定的严重性会替代 sp_addmessage 中指定的严重性。   
@@ -159,7 +162,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
 |值|说明|  
 |-----------|-----------------|  
-|日志|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的错误日志和应用程序日志中记录错误。 记录到错误日志的错误目前被限定为最多 440 字节。 只有 sysadmin 固定服务器角色成员或具有 ALTER TRACE 权限的用户才能指定 WITH LOG。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|LOG|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的错误日志和应用程序日志中记录错误。 记录到错误日志的错误目前被限定为最多 440 字节。 只有 sysadmin 固定服务器角色成员或具有 ALTER TRACE 权限的用户才能指定 WITH LOG。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|将消息立即发送给客户端。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|将 @@ERROR 值和 ERROR_NUMBER 值设置为 msg_id 或 50000，不用考虑严重级别。 <br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
@@ -176,7 +179,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  msg_id 指定 sys.messages 目录视图中可用的用户定义消息时，RAISERROR 按照与应用到使用 msg_str 指定的用户定义消息文本的规则相同的规则处理文本列中的消息。   用户定义消息文本可以包含转换规格，并且 RAISERROR 将参数值映射到转换规格。 使用 sp_addmessage 添加用户定义错误消息，使用 sp_dropmessage 删除用户定义错误消息。  
   
- RAISERROR 可以代替 PRINT 将消息返回到调用应用程序。 RAISERROR 支持类似于 C 标准库中 printf 函数功能的字符代替，而  **PRINT 语句则不支持。** [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 语句不受 TRY 块的影响，而在严重级别为 11 到 19 的情况下在 TRY 块中运行的 RAISERROR 会将控制传输至关联的 CATCH 块。 指定严重级别为 10 或更低以使用 RAISERROR 返回 TRY 块中的消息，而不必调用 CATCH 块。  
+ RAISERROR 可以代替 PRINT 将消息返回到调用应用程序。 RAISERROR 支持类似于 C 标准库中 printf 函数功能的字符代替，而 [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 语句则不支持。  PRINT 语句不受 TRY 块的影响，而在严重级别为 11 到 19 的情况下在 TRY 块中运行的 RAISERROR 会将控制传输至关联的 CATCH 块。 指定严重级别为 10 或更低以使用 RAISERROR 返回 TRY 块中的消息，而不必调用 CATCH 块。  
   
  通常，连续的参数替换连续的转换规格；第一个参数替换第一个转换规格，第二个参数替换第二个转换规格，以此类推。 例如，在以下 `RAISERROR` 语句中，第一个参数 `N'number'` 替换第一个转换规格 `%s`，第二个参数 `5` 替换第二个转换规格 `%d.`。  
   

@@ -1,6 +1,6 @@
 ---
 title: 全文搜索入门 | Microsoft Docs
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903825"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288133"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,17 @@ SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查�
 2.  在对 Document 表创建全文索引之前，请确保该表具有唯一的、不可为 Null 的单列索引。 下面的 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 语句可对 Document 表的 DocumentID 列创建唯一索引 `ui_ukDoc`：  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  具有唯一键后，即可使用下面的 `Document` CREATE FULLTEXT INDEX [语句对](../../t-sql/statements/create-fulltext-index-transact-sql.md) 表创建全文索引。  
+3.  使用以下 [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 语句删除 `Document` 表上的现有全文检索。 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  具有唯一键后，即可使用下面的 `Document` CREATE FULLTEXT INDEX [语句对](../../t-sql/statements/create-fulltext-index-transact-sql.md) 表创建全文索引。  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,6 +79,8 @@ SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查�
     GO  
   
     ```  
+    
+  
   
      此示例中定义的 TYPE COLUMN 指定表中的类型列，该列包含“Document”列（为二进制类型）的每一行中文档的类型。 此类型列存储给定行中文档的、由用户提供的文件扩展名 -“.doc”、“.xls”等等。 全文引擎使用给定行中的文件扩展名调用正确的筛选器，以用于分析该行中的数据。 筛选器分析行的二进制数据后，指定的分词系统将分析内容。 （此示例中使用了英国英语的分词系统。）有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
 

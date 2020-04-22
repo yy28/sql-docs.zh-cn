@@ -1,5 +1,6 @@
 ---
-title: ODBC 驱动程序的 DSN 和连接字符串关键字 - SQL Server | Microsoft Docs
+title: ODBC DSN 和连接字符串关键字
+description: 此页面列出了 ODBC Driver for SQL Server 中提供的连接字符串和 DSN 的关键字以及 SQLSetConnectAttr 和 SQLGetConnectAttr 的连接属性。
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76911241"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528979"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和连接字符串关键字和属性
 
@@ -22,7 +23,7 @@ ms.locfileid: "76911241"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>受支持的 DSN/连接字符串关键字和连接属性
 
-下表列出了每个平台的可用关键字和属性（L：Linux；M：Mac；W：Windows）。 单击关键字或属性获取更多详细信息。
+下表列出了每个平台的可用关键字和属性（L：Linux；M：macOS；W：Windows）。 单击关键字或属性获取更多详细信息。
 
 | DSN / 连接字符串关键字 | 连接属性 | 平台 |
 |-|-|-|
@@ -121,7 +122,7 @@ ms.locfileid: "76911241"
 | [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
-以下是[将连接字符串关键字用于 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)、[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLSetConnectAttr 函数](../../odbc/reference/syntax/sqlsetconnectattr-function.md)中未记录的一些连接字符串关键字和连接属性。
+以下是[将连接字符串关键字用于 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)、[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLSetConnectAttr 函数](../../odbc/reference/syntax/sqlsetconnectattr-function.md)中未收录的一些连接字符串关键字和连接属性。
 
 ### <a name="description"></a>说明
 
@@ -246,7 +247,7 @@ ms.locfileid: "76911241"
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-要使用 XA 兼容事务处理器 (TP) 启用 XA 事务，应用程序需要使用 SQL_COPT_SS_ENLIST_IN_XA 和指向  **对象的指针调用 SQLSetConnectAttr**`XACALLPARAM`。 Windows（17.3 及更高版本）、Linux 和 Mac支持此选项。
+要使用 XA 兼容事务处理器 (TP) 启用 XA 事务，应用程序需要使用 SQL_COPT_SS_ENLIST_IN_XA 和指向 `XACALLPARAM` 对象的指针调用 SQLSetConnectAttr  。 Windows（17.3 及更高版本）、Linux 和 macOS 支持此选项。
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -257,15 +258,15 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 
 |值|说明|平台|  
 |-----------|-----------------|-----------------|  
-|XACALLPARAM 对象*|指向 `XACALLPARAM` 对象的指针。|Windows、Linux 和 Mac|
+|XACALLPARAM 对象*|指向 `XACALLPARAM` 对象的指针。|Windows、Linux 和 macOS|
 |TRUE|将 XA 事务与 ODBC 连接关联。 将在 XA 事务的保护下执行所有相关的数据库活动。|Windows|  
 |FALSE|将事务与 ODBC 连接解除关联。|Windows|
 
- 有关 XA 事务的详细信息，请参阅[使用 XA 事务](../../connect/odbc/use-xa-with-dtc.md)。
+ 若要详细了解 XA 事务，请参阅[使用 XA 事务](../../connect/odbc/use-xa-with-dtc.md)。
 
 ### <a name="sql_copt_ss_spid"></a>SQL_COPT_SS_SPID
 
-检索连接的服务器进程 ID。 这等效于 T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md) 变量，只不过它不会对服务器产生额外的往返。
+检索连接的服务器进程 ID。 这相当于 T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md) 变量，不同之处在于它不会导致额外往返到服务器。
 
 | 属性值 | 说明 |
 |-|-|

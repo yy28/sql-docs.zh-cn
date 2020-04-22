@@ -1,5 +1,6 @@
 ---
 title: 系统要求、安装和驱动程序文件 | Microsoft Docs
+description: 本文介绍了 Microsoft ODBC Driver for SQL Server 的系统要求。
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7969d9505f9f4f1896505849efe0306801838433
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e2b56528a369d58238a545afc20b35787003b6b1
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920153"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484446"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系统要求、安装和驱动程序文件
 
@@ -27,7 +28,7 @@ ms.locfileid: "80920153"
 
 兼容性表示在驱动程序发布时，已测试驱动程序与现有 SQL 版本的兼容性。 SQL Server 版本通常尝试保持与现有客户端驱动程序的后向兼容性。 但是，旧的客户端驱动程序可能无法使用 SQL Server 版本中的新功能。
 
-|驱动程序版本|Azure SQL 数据库|Azure SQL DW|Azure SQL 托管实例|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
+|驱动程序版本|Azure SQL Database|Azure SQL DW|Azure SQL 托管实例|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
 |-|-|-|-|-|-|-|-|-|-|-|-|
 |17.5|Y|Y|Y|Y|Y|Y|Y|Y| | | |
 |17.4|Y|Y|Y|Y|Y|Y|Y|Y| | | |

@@ -1,5 +1,6 @@
 ---
-title: 结合使用 Azure Active Directory 和 ODBC 驱动程序 | Microsoft Docs for SQL Server
+title: 结合使用 Azure Active Directory 和 ODBC 驱动程序
+description: 借助 Microsoft ODBC Driver for SQL Server，ODBC 应用程序可以使用 Azure Active Directory 连接到 Azure SQL 数据库实例。
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f572479921eef0f8957bba6890d0d92415b7c44b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 15f8117c84f952d4244c95a53d187e142daa8572
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928339"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635411"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>结合使用 Azure Active Directory 和 ODBC 驱动程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>目的
 
-版本 13.1 或更高版本的 Microsoft ODBC Driver for SQL Server 允许 ODBC 应用程序通过用户名/密码、Azure Active Directory 访问令牌、Azure Active Directory 托管服务标识或 Windows 集成身份验证（仅限 Windows 驱动程序  ），使用 Azure Active Directory 中的联合身份连接到 SQL Azure 实例。 对于 ODBC 驱动程序版本13.1，Azure Active Directory 访问令牌身份验证仅适用于 Windows  。 ODBC 驱动程序版本 17 和更高版本支持在所有平台（Windows、Linux 和 macOS）上进行此身份验证。 Windows 的 ODBC 驱动程序版本 17.1 中引入了新的使用登录 ID 的 Azure Active Directory 交互式身份验证。 在 ODBC 驱动程序版本 17.3.1.1 中，针对系统分配的标识和用户分配的标识，添加了一种新的 Azure Active Directory 托管服务标识身份验证方法。 所有这些都是通过使用新的 DSN 和连接字符串关键字以及连接属性来实现的。
+借助 Microsoft ODBC Driver for SQL Server 版本 13.1 或更高版本，ODBC 应用程序可以结合使用 Azure Active Directory 中的联合标识与用户名/密码、Azure Active Directory 访问令牌、Azure Active Directory 托管服务标识或 Windows 集成身份验证（仅限 Windows 驱动程序  ），连接到 Azure SQL 数据库实例。 对于 ODBC 驱动程序版本13.1，Azure Active Directory 访问令牌身份验证仅适用于 Windows  。 ODBC 驱动程序版本 17 和更高版本支持在所有平台（Windows、Linux 和 macOS）上进行此身份验证。 Windows 的 ODBC 驱动程序版本 17.1 中引入了新的使用登录 ID 的 Azure Active Directory 交互式身份验证。 在 ODBC 驱动程序版本 17.3.1.1 中，针对系统分配的标识和用户分配的标识，添加了一种新的 Azure Active Directory 托管服务标识身份验证方法。 所有这些都是通过使用新的 DSN 和连接字符串关键字以及连接属性来实现的。
 
 > [!NOTE]
 > Linux 和 macOS 上的 ODBC 驱动程序仅支持直接对 Azure Active Directory 进行 Azure Active Directory 身份验证。 如果使用的是来自 Linux 或 macOS 客户端的 Azure Active Directory 用户名/密码身份验证，并且 Active Directory 配置要求客户端针对 Active Directory 联合身份验证服务终结点进行身份验证，则身份验证可能会失败。

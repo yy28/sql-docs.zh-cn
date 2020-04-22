@@ -1,5 +1,6 @@
 ---
-title: Microsoft JDBC Driver for SQL Server 的功能依赖项 | Microsoft Docs
+title: Microsoft JDBC 驱动程序的功能依赖项
+description: 了解 Microsoft JDBC Driver for SQL Server 的依赖项，以及如何满足这些依赖项。
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8aa9b287d6d04b8ea21e8a8fd76460005edc5cd5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a08c60322ba4cb75bef804eafb9a3e68e7df5de
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917983"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631197"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能依赖项
 
@@ -94,13 +95,13 @@ ms.locfileid: "80917983"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供程序：
 
-- JDBC Driver 版本 8.2.2 - 依赖项版本：Azure-Keyvault（版本 1.2.2）、Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.7.0) 及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
-- JDBC 驱动程序版本 7.4.1 - 依赖项版本：Azure-Keyvault（版本 1.2.1）、Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.6.10) 及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
-- JDBC 驱动程序版本 7.2.2 - 依赖项版本：Azure-Keyvault（版本 1.2.0）、Azure-Keyvault-Webkey（版本 1.2.0）、Adal4j（版本 1.6.3）、Client-Runtime-for-AutoRest (1.6.5) 及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
-- JDBC 驱动程序版本 7.0.0 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.6.0）及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
-- JDBC 驱动程序版本 6.4.0 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.4.0）及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)）
-- JDBC 驱动程序版本 6.2.2 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.4.0）及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)）
-- JDBC 驱动程序版本 6.0.0 - 依赖项版本：Azure-Keyvault（版本 0.9.7）、Adal4j（版本 1.3.0）及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)）
+- JDBC Driver 版本 8.2.2 - 依赖项版本：Azure-Keyvault（版本 1.2.2）、Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.7.0) 及其依赖项（[示例应用程序](azure-key-vault-sample-version-7.0.md)）
+- JDBC 驱动程序版本 7.4.1 - 依赖项版本：Azure-Keyvault（版本 1.2.1）、Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.6.10) 及其依赖项（[示例应用程序](azure-key-vault-sample-version-7.0.md)）
+- JDBC 驱动程序版本 7.2.2 - 依赖项版本：Azure-Keyvault（版本 1.2.0）、Azure-Keyvault-Webkey（版本 1.2.0）、Adal4j（版本 1.6.3）、Client-Runtime-for-AutoRest (1.6.5) 及其依赖项（[示例应用程序](azure-key-vault-sample-version-7.0.md)）
+- JDBC 驱动程序版本 7.0.0 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.6.0）及其依赖项（[示例应用程序](azure-key-vault-sample-version-7.0.md)）
+- JDBC 驱动程序版本 6.4.0 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.4.0）及其依赖项（[示例应用程序](azure-key-vault-sample-version-6.2.2.md)）
+- JDBC 驱动程序版本 6.2.2 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.4.0）及其依赖项（[示例应用程序](azure-key-vault-sample-version-6.2.2.md)）
+- JDBC 驱动程序版本 6.0.0 - 依赖项版本：Azure-Keyvault（版本 0.9.7）、Adal4j（版本 1.3.0）及其依赖项（[示例应用程序](azure-key-vault-sample-version-6.0.0.md)）
 
 > [!NOTE]
 > 使用 6.2.2 和 6.4.0 驱动程序版本，azure-keyvault-java 依赖项已更新为版本 1.0.0。 但是，新版本与上一版本 (0.9.7) 不兼容，并且会中断驱动程序中的现有实现。 驱动程序中的新实现需要 API 更改，因而会中断使用 Azure Key Vault 提供程序的客户端程序。
@@ -117,15 +118,15 @@ ms.locfileid: "80917983"
 - JDBC 驱动程序版本 6.2.2 - 依赖项版本：Adal4j（版本 1.4.0）及其依赖项
 - JDBC 驱动程序版本 6.0.0 - 依赖项版本：Adal4j（版本 1.3.0）及其依赖项。 在此版本的驱动程序中，可以仅在 Windows 操作系统上使用 ActiveDirectoryIntegrated  身份验证模式并使用 sqljdbc_auth.dll 和适用于 SQL Server 的 Active Directory 身份验证库 (ADALSQL.DLL) 进行连接。
 
-从驱动程序版本 6.4.0 开始，应用程序不一定需要在 Windows 操作系统上使用 ADALSQL.DLL。 对于非 Windows 操作系统  ，驱动程序需要使用 Kerberos 票证才能进行 ActiveDirectoryIntegrated 身份验证。 有关如何使用 Kerberos 连接到 Active Directory 的详细信息，请参阅[在 Windows、Linux 和 Mac 上设置 Kerberos 票证](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)。
+从驱动程序版本 6.4.0 开始，应用程序不一定需要在 Windows 操作系统上使用 ADALSQL.DLL。 对于非 Windows 操作系统  ，驱动程序需要使用 Kerberos 票证才能进行 ActiveDirectoryIntegrated 身份验证。 若要详细了解如何使用 Kerberos 连接到 Active Directory，请参阅[在 Windows、Linux 和 macOS 上设置 Kerberos 票证](connecting-using-azure-active-directory-authentication.md#set-kerberos-ticket-on-windows-linux-and-macos)。
 
 对于 Windows 操作系统  ，驱动程序默认查找 sqljdbc_auth.dll，并且不需要 Kerberos 票证设置或 Azure 库依赖项。 如果 sqljdbc_auth.dll 不可用，驱动程序会查找用于在其他操作系统上对 Active Directory 进行身份验证的 Kerberos 票证。
 
 从驱动程序版本 8.2.2 开始，“sqljdbc_auth”将被重命名为“mssql-jdbc_auth-\<version>-\<arch>.dll”。 例如 “mssql-jdbc_auth-8.2.2.x64.dll”。
 
-可以获取使用此功能的[示例应用程序](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。
+可以获取使用此功能的[示例应用程序](connecting-using-azure-active-directory-authentication.md)。
 
 ## <a name="see-also"></a>另请参阅
 
 [JDBC 驱动程序 GitHub 存储库](https://github.com/microsoft/mssql-jdbc)  
-[JDBC Driver API 参考](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[JDBC Driver API 参考](reference/jdbc-driver-api-reference.md)

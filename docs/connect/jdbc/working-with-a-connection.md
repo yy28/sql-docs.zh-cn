@@ -1,5 +1,6 @@
 ---
-title: 使用连接 | Microsoft Docs
+title: 处理 JDBC 连接
+description: 举例说明了如何通过不同方法使用 Microsoft JDBC Driver for SQL Server 的 SQLServerConnection 类来连接到 SQL Server 数据库。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6bb17c47097966faa6ae86194a3e5069fd91648b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1253c2ec5822fef83d6da71279752202f2d93ebd
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923908"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631947"
 ---
 # <a name="working-with-a-connection"></a>处理连接
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-以下各部分提供了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类来连接到 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 数据库的不同方法的示例。
+以下各部分提供了使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 [SQLServerConnection](reference/sqlserverconnection-class.md) 类来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的不同方法的示例。
 
 > [!NOTE]  
-> 如果在使用 JDBC 驱动程序连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时遇到问题，请参阅[连接疑难解答](../../connect/jdbc/troubleshooting-connectivity.md)获取有关解决方法的建议。
+> 如果在使用 JDBC 驱动程序连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时遇到问题，请参阅[连接疑难解答](troubleshooting-connectivity.md)获取有关解决方法的建议。
 
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>使用 DriverManager 类创建连接
 
@@ -43,7 +44,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>使用 SQLServerDriver 类创建连接
 
-如果必须为 DriverManager 指定驱动程序列表中的特定驱动程序，可以使用 [SQLServerDriver](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) 类的 [connect](../../connect/jdbc/reference/sqlserverdriver-class.md) 方法来创建数据库连接，如下所示：
+如果必须为 DriverManager 指定驱动程序列表中的特定驱动程序，可以使用 [SQLServerDriver](reference/sqlserverdriver-class.md) 类的 [connect](reference/connect-method-sqlserverdriver.md) 方法来创建数据库连接，如下所示：
 
 ```java
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
@@ -53,7 +54,7 @@ Connection con = d.connect(connectionUrl, new Properties());
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>使用 SQLServerDataSource 类创建连接
 
-如果必须使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类创建连接，可以先使用此类的各种 setter 方法，然后调用 [getConnection](../../connect/jdbc/reference/getconnection-method.md) 方法，如下所示：
+如果必须使用 [SQLServerDataSource](reference/sqlserverdatasource-class.md) 类创建连接，可以先使用此类的各种 setter 方法，然后调用 [getConnection](reference/getconnection-method.md) 方法，如下所示：
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();  
@@ -65,39 +66,39 @@ ds.setDatabaseName("AdventureWorks");
 Connection con = ds.getConnection();  
 ```
 
-## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>创建定目标到非常具体的数据源的连接
+## <a name="creating-a-connection-that-targets-a-specific-data-source"></a>创建定目标到特定数据源的连接
 
-如果必须创建目标为非常特殊的数据源的数据库连接，可以采用多种方法。 每种方法取决于使用此连接 URL 设置的属性。
+如果必须建立定目标到特定数据源的数据库连接，可以采用许多方法。 每种方法取决于使用此连接 URL 设置的属性。
 
-若要连接到远程服务器上的默认实例，请使用：
+若要连接到远程服务器上的默认实例，请使用以下示例：
 
 ```java
 String url = "jdbc:sqlserver://MyServer;integratedSecurity=true;"
 ```
 
-若要连接到服务器上的特定端口，请使用：
+若要连接到服务器上的特定端口，请使用以下示例：
 
 ```java
 String url = "jdbc:sqlserver://MyServer:1533;integratedSecurity=true;"
 ```
 
-若要连接到服务器上的指定实例，请使用：
+若要连接到服务器上的命名实例，请使用以下示例：
 
 ```java
 String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSecurity=true;"
 ```
 
-若要连接到服务器上的特定数据库，请使用：
+若要连接到服务器上的特定数据库，请使用以下示例：
 
 ```java
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-若要查看更多连接 URL 示例，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)。
+若要查看更多连接 URL 示例，请参阅[生成连接 URL](building-the-connection-url.md)。
 
-## <a name="creating-a-connection-with-a-custom-login-time-out"></a>创建有自定义登录超时的连接
+## <a name="creating-a-connection-with-a-custom-login-timeout"></a>创建有自定义登录超时的连接
 
-如果必须调节服务器负载或网络流量，可以创建具有特定登录超时值（以秒为单位）的连接，如下所示：
+如果必须为服务器负载或网络流量进行调整，可以创建有特定登录超时值（以秒为单位）的连接，如以下示例所示：
 
 ```java
 String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;"
@@ -105,7 +106,7 @@ String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;
 
 ## <a name="create-a-connection-with-application-level-identity"></a>创建有应用程序级别标识的连接
 
-如果必须记录日志并进行分析，则必须将连接标识为源于特定应用程序，如下所示：
+如果必须记录日志并进行分析，则必须将连接标识为源于特定应用程序，如以下示例所示：
 
 ```java
 String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"
@@ -113,7 +114,7 @@ String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecu
 
 ## <a name="closing-a-connection"></a>关闭连接
 
-可以通过调用 SQLServerConnection 类的 [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md) 方法显式地关闭数据库连接，如下所示：
+可以通过调用 SQLServerConnection 类的 [close](reference/close-method-sqlserverconnection.md) 方法显式地关闭数据库连接，如下所示：
 
 ```java
 con.close();
@@ -126,4 +127,4 @@ con.close();
 
 ## <a name="see-also"></a>另请参阅
 
-[通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[通过 JDBC 驱动程序连接到 SQL Server](connecting-to-sql-server-with-the-jdbc-driver.md)

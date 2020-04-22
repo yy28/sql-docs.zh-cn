@@ -1,5 +1,6 @@
 ---
 title: 生成连接 URL | Microsoft Docs
+description: 了解 Microsoft JDBC Driver for SQL Server 使用的连接字符串的格式。
 ms.custom: ''
 ms.date: 01/29/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 889571da70eaf43878d4226751b2b031853f802f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 59949c80c565cca03c42b453659117abd69c8e7e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922630"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486909"
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "80922630"
 > [!NOTE]  
 >  尽管前面的示例在连接字符串中使用了用户名和密码，但您应使用集成安全性，因为这样做更安全。 有关详细信息，请参阅本主题后面部分的[通过集成身份验证进行连接](#Connectingintegrated)一节。  
   
- 以下连接字符串演示了如何使用集成身份验证和 Kerberos，从一个在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的任何操作系统上运行的应用程序连接到 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 数据库：  
+ 以下连接字符串演示了如何使用集成身份验证和 Kerberos，从一个在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的任何操作系统上运行的应用程序连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库：  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  

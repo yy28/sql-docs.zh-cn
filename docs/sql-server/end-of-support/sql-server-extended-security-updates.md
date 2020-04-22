@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256720"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488340"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什么是 SQL Server 的外延安全更新程序？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -207,6 +207,25 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
 
 1. 从其中下载安全更新程序（若有）。 
 
+## <a name="configure-regional-redundancy"></a>配置区域冗余 
+
+如果需要为自己的 SQL Server 注册表  提供区域冗余，客户可以在两个不同的区域中创建注册数据。 然后，客户可以根据 SQL Server 注册表  服务可用性，从两个区域中的任何一个下载安全更新程序。 
+
+为了实现区域冗余，必须在两个不同的区域中创建 SQL Server 注册表  服务，且必须在这两个服务之间拆分 SQL Server 清单。 这样，一半的 SQL Server 是向一个区域中的注册表服务注册，另一半的 SQL Server 是向另一个区域中的注册表服务注册。 
+
+若要配置区域冗余，请按照以下步骤操作：
+
+1. 将 SQL Server 2008 或 2008 R2 清单拆分为两个文件（如 upload1.csv 和 upload2.csv）。 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="示例上传文件":::
+
+1. 在一个区域中创建第一个 SQL Server 注册表  服务，然后向它批量注册其中一个 csv 文件。 例如，在“美国西部”  区域中创建第一个 SQL Server 注册表  服务，然后批量注册使用 upload1.csv 文件的 SQL Server。 
+1. 在第二个区域中创建第二个 SQL Server 注册表  服务，然后向它批量注册另一个 csv 文件。 例如，在“美国东部”  区域中创建第二个 SQL Server 注册表  服务，然后批量注册使用 upload2.csv 文件的 SQL Server。 
+
+
+在向两个不同的 SQL Server 注册表  资源注册数据后，可以根据服务可用性从两个区域中的任何一个下载安全更新程序。 
+
+
 ## <a name="faq"></a>常见问题解答
 
 有关外延安全更新程序的一般常见问题解答，可以参阅[外延安全更新程序 FAQ](https://www.microsoft.com/cloud-platform/extended-security-updates)。 下面列出了特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的常见问题解答。 
@@ -217,7 +236,7 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
 
 **终止支持意味着什么？**
 
-对于 Business 和 Developer 产品（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows Server），Microsoft 生命周期策略提供 10 年支持（主要支持为 5 年，外延支持为 5 年）。 根据策略，在外延支持期结束后，就不会提供修补程序或安全更新程序，这可能会导致安全和合规性问题出现，并给客户的应用程序和业务带来严重的安全风险。
+对于 Business 和 Developer 产品（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows Server），Microsoft 生命周期策略提供 10 年支持（主要支持为 5 年，外延支持为 5 年）。 根据策略，在外延支持期结束后，就不会提供修补程序或安全更新程序，这可能会导致安全性和合规性问题出现，并给客户的应用程序和业务带来严重的安全风险。
 
 **什么版本的 SQL Server 有资格获得外延安全更新程序？**
 

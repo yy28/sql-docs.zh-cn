@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742076"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632519"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含电子邮件传递扩展插件，该插件提供了通过电子邮件将报表发送到单个用户或组的方式。 若要通过电子邮件分发报表，你可以 1) 配置报表服务器以进行电子邮件传递，并 2) 定义标准订阅或数据驱动订阅。 一个订阅不能在一个电子邮件中传递多个报表。 但你可以创建多个订阅。  
   
- 报表服务器通过标准连接与电子邮件服务器相连。 它不使用通过安全套接字层 (SSL) 进行加密的通信。 电子邮件服务器必须是与报表服务器位于同一网络上的远程或本地简单邮件传输协议 (SMTP) 服务器。  
+ 报表服务器通过标准连接与电子邮件服务器相连。 它不使用通过传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）进行加密的通信。 电子邮件服务器必须是与报表服务器位于同一网络上的远程或本地简单邮件传输协议 (SMTP) 服务器。  
   
  有关指导你创建订阅的详细步骤，请参阅以下内容：  
   

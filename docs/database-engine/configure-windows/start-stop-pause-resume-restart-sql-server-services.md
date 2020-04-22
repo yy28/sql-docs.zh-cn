@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78946724"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287857"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>启动、停止、暂停、继续、重启 SQL Server 服务
 
@@ -187,7 +187,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
 
 ### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> 启动数据库引擎的命名实例
 
-- 在命令提示符下，输入下列命令之一。 将 *instancename> 替换为要管理的实例的名称\<* 。  
+- 在命令提示符下，输入下列命令之一。 将 \<instancename> 替换为要管理的实例的名称  。  
   
     **net start "SQL Server (** *instancename* **)"**
   
@@ -338,6 +338,10 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
     # Display the state of the service.
     $DfltInstance
     ```  
+  
+##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> 使用服务控制器类
+
+可以使用 ServiceController 类来控制 SQL Server 服务或其他任何 Windows 服务。 有关如何做到这一点的示例，请参阅 [ServiceController 类](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8)。
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>在 Linux 上管理 SQL Server 服务
 

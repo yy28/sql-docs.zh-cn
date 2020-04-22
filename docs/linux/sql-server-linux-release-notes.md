@@ -3,17 +3,17 @@ title: Linux 上的 SQL Server 2017 的发行说明
 description: 本文包含 Linux 上运行的 SQL Server 2017 的发行说明和支持功能。 发行说明适用于最新版本和几个以前的版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/03/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: e52132e0121b602092a9e1bb94cca3e5e8d1ba73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0decf0cbaf3d64353e76c4927369503add744808
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286691"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298257"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的发行说明
 
@@ -28,9 +28,9 @@ ms.locfileid: "79286691"
 
 | 平台 | 文件系统 | 安装指南 |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3、7.4、7.5 或7.6 服务器 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux Server 7.3、7.4、7.5、7.6 或 8 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS | XFS 或 EXT4 | [安装指南](quickstart-install-connect-ubuntu.md) | 
+| Ubuntu 16.04 LTS、18.04 LTS | XFS 或 EXT4 | [安装指南](quickstart-install-connect-ubuntu.md) | 
 | 适用于 Windows、Mac 或 Linux 的 Docker 引擎 1.8 及更高版本 | 空值 | [安装指南](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -46,6 +46,7 @@ ms.locfileid: "79286691"
 
 | 发布               | 版本       | 发布日期 |
 |-----------------------|---------------|--------------|
+| [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
@@ -80,6 +81,27 @@ ms.locfileid: "79286691"
 - [安装全文搜索包](sql-server-linux-setup-full-text-search.md)
 - [安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu20-april-2020"></a><a id="CU20"></a> CU20（2020 年 4 月）
+
+这是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累积更新 20 (CU20) 发行版。 此发行版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本为 14.0.3294.2。 若要了解此发行版中的修补程序和改进，请参阅 <https://support.microsoft.com/help/4541283>。
+
+### <a name="package-details"></a>包详细信息
+
+对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+
+> [!NOTE]
+> 自 CU20 起，SQL Server 2017 现已开始支持 Ubuntu 18.04  和 RHEL 8  。
+>
+> Ubuntu 的脱机包安装链接指向 Ubuntu 18.04 包，不适用于 Ubuntu 18.04 的 SSIS 包除外。 若要查找 Ubuntu 16.04 包，请参阅下载路径 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>。
+>
+> Red Hat 的脱机包安装链接指向 RHEL 8 包，不适用于 RHEL 8 的 SSIS 包除外。 若要查找 RHEL 7 包，请参阅下载路径 <https://packages.microsoft.com/rhel/7/mssql-server-2017/>。
+
+| 程序包 | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 14.0.3294.2-27 | [引擎 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3294.2-27.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3294.2-27.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3294.2-27.x86_64.rpm)</br>[SSIS 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 包 | 14.0.3294.2-27 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3294.2-27.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3294.2-27.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3294.2-27.x86_64.rpm) | 
+| Ubuntu 18.04 Debian 包 | 14.0.3294.2-27 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3294.2-27_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3294.2-27_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3294.2-27_amd64.deb)<br/>[SSIS 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu19-february-2020"></a><a id="CU19"></a> CU19（2020 年 2 月）
 
@@ -502,19 +524,19 @@ sudo systemctl start mssql-server
 
       1. 将以下项添加到 /var/opt/mssql/mssql.conf。
 
-      ```
-      [network]
-      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
-      ```
+         ```
+         [network]
+         tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+         ```
 
-         >[!NOTE]
-         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
+         > [!NOTE]
+         > 在前面的代码中，`!` 对表达式进行求反。 这向 OpenSSL 指明不使用以下密码套件。  
 
       1. 使用以下命令重启 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-      ```bash
-      sudo systemctl restart mssql-server
-      ```
+         ```bash
+         sudo systemctl restart mssql-server
+         ```
 
 - Windows 上使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库无法在 Linux 上的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 上进行还原。 要还原使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库，请首先将数据库升级到 Windows 上的 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]，然后再通过备份/还原或分离/附加将数据库移至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 

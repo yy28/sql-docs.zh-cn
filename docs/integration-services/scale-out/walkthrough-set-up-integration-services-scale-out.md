@@ -5,17 +5,17 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288741"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487996"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>演练：安装 Integration Services (SSIS) Scale Out
 
@@ -66,9 +66,9 @@ ms.locfileid: "79288741"
 
     ![主节点配置](media/master-config.PNG "主节点配置")
 
-4.  通过执行以下操作之一，指定用于保护 Scale Out Master 与 Scale Out Worker 之间的通信的 SSL 证书。
-    * 单击“创建新的 SSL 证书”，使安装进程创建默认的自签名 SSL 证书  。  默认证书安装在本地计算机中受信任的根证书颁发机构之下。 可在此证书中指定 CN。 CN 中应包含主终结点的主机名。 默认包含主节点的计算机名称和 IP。
-    * 单击“使用现有的 SSL 证书”，然后单击“浏览”，在本地计算机上选择现有的 SSL 证书   。 文本框中显示证书的指纹。 单击“浏览”  ，显示存储在本地计算机中受信任的根证书颁发机构中的证书。 必须选择存储在此处的证书。       
+4.  通过执行以下操作之一，指定用于保护 Scale Out Master 与 Scale Out 工作器之间通信的 TLS/SSL 证书。
+    * 单击“新建 SSL 证书”  ，让安装进程创建默认的自签名 TLS/SSL 证书。  默认证书安装在本地计算机中受信任的根证书颁发机构之下。 可在此证书中指定 CN。 CN 中应包含主终结点的主机名。 默认包含主节点的计算机名称和 IP。
+    * 依次单击“使用现有 SSL 证书”  和“浏览”  ，以选择本地计算机上的现有 TLS/SSL 证书。 文本框中显示证书的指纹。 单击“浏览”  ，显示存储在本地计算机中受信任的根证书颁发机构中的证书。 必须选择存储在此处的证书。       
 
     ![主节点配置 2](media/master-config-2.PNG "主节点配置 2")
   
@@ -118,14 +118,14 @@ ms.locfileid: "79288741"
     > [!NOTE]
     > 此处也可跳过 Worker 配置，并在安装后使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 将 Scale Out Worker 与 Scale Out Master 关联起来。
 
-4. 对于多台计算机环境，需指定用于验证 Scale Out Master 的客户端 SSL 证书  。 对于单一计算机环境，则无需指定客户端 SSL 证书  。 
+4. 对于多计算机  环境，请指定用于验证 Scale Out Master 的客户端 TLS/SSL 证书。 对于单计算机  环境，无需指定客户端 TLS/SSL 证书。 
   
-    单击“浏览”  ，查找证书文件 (*.cer)。 要使用默认 SSL 证书，请在安装了 Scale Out Master 的计算机上找到 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn`，并在其下选择 `SSISScaleOutMaster.cer` 文件。   
+    单击“浏览”  ，查找证书文件 (*.cer)。 若要使用默认 TLS/SSL 证书，请在安装了 Scale Out Master 的计算机上找到 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn`，并在其下选择 `SSISScaleOutMaster.cer` 文件。   
 
     ![辅助角色配置 2](media/worker-config-2.PNG "辅助角色配置 2")
 
     > [!NOTE]
-    > 如果 Scale Out Master 使用的 SSL 证书为自签名证书，则需要在具有 Scale Out Worker 的计算机上安装相应的客户端 SSL 证书。 如果在“Integration Services Scale Out Worker 配置”页上提供了客户端 SSL 证书的文件路径，证书将自动安装；否则，稍后必须手动安装证书  。 
+    > 如果 Scale Out Master 使用的 TLS/SSL 证书为自签名证书，则需要在安装了 Scale Out 工作器的计算机上安装相应的客户端 TLS/SSL 证书。 如果你在“Integration Services Scale Out 工作器配置”  页上提供了客户端 TLS/SSL 证书的文件路径，证书会自动安装；否则，必须稍后手动安装证书。 
      
 5. 完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导。
 

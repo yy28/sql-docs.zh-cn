@@ -1,6 +1,6 @@
 ---
-title: 用于 SQL Server 的 Microsoft ADO.NET | Microsoft Docs
-description: 用于 SQL Server 的 Microsoft ADO.NET 简介
+title: Microsoft ADO.NET
+description: Microsoft ADO.NET for SQL Server 是用于 .NET 语言的核心数据访问技术。 使用 Microsoft.Data.SqlClient 命名空间来访问 SQL Server。
 ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5e037c080d850bbb34327f46b2aac931f64c687d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c89c1c5073e86121e4fbadc3a2901057c0a361a4
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928967"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529095"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>用于 SQL Server 的 Microsoft ADO.NET
 
@@ -27,8 +27,8 @@ ADO.NET 是用于 .NET 语言的核心数据访问技术。 使用 Microsoft.Dat
 ## <a name="getting-started"></a>入门  
 * [步骤 1：配置用于 ADO.NET 开发的开发环境](step-1-configure-development-environment-ado-net-development.md)  
 * [步骤 2：创建用于 ADO.NET 开发的 SQL 数据库](step-2-create-sql-database-ado-net-development.md)  
-* [步骤 3：使用 ADO.NET 连接到 SQL 的概念验证](step-3-connect-sql-ado-net.md)  
-* [步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接](step-4-connect-resiliently-sql-ado-net.md)  
+* [步骤 3：使用 ADO.NET 连接到 SQL 的概念证明](step-3-connect-sql-ado-net.md)  
+* [步骤 4：使用 ADO.NET 弹性连接到 SQL](step-4-connect-resiliently-sql-ado-net.md)  
   
 ## <a name="documentation"></a>文档  
 * [ADO.NET 概述](https://msdn.microsoft.com/library/e80y5yhx.aspx)

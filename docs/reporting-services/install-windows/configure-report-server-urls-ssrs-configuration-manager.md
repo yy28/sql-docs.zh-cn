@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 021df541af90bcaae13e1544f9f6a72e77f8eaf7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080246"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486913"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>配置报表服务器 URL（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 用于访问报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 在可以使用任一应用程序之前，必须分别为 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]至少配置一个 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为这两个应用程序 URL 提供了默认值，默认值在大多数部署方案中都能正常使用，包括与其他 Web 服务和应用程序的并行部署。  
@@ -33,7 +33,7 @@ ms.locfileid: "77080246"
 |主机名|TCP/IP 网络使用 IP 地址来唯一标识网络上的设备。 计算机中安装的每个网络适配器都有一个物理 IP 地址。 如果 IP 地址解析为主机标头，则可以指定主机标头。 如果要将报表服务器部署到企业网络上，则可以使用计算机的网络名称。|  
 |端口|TCP 端口是设备上的端点。 报表服务器将侦听指定端口上的请求。|  
 |虚拟目录|端口通常由多个 Web 服务或应用程序共享。 为此，报表服务器 URL 始终包括与获取请求的应用程序对应的虚拟目录。 您必须为侦听同一 IP 地址和端口的每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都指定唯一的虚拟目录名称。|  
-|SSL 设置|可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 配置为使用计算机中先前安装的现有 SSL 证书。 有关详细信息，请参阅 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|  
+|SSL 设置|可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 配置为，使用计算机中先前安装的现有 TLS/SSL 证书。 有关详细信息，请参阅[在本机模式报表服务器上配置 TLS 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|  
   
 ## <a name="default-urls"></a>默认 URL  
  通过 URL 访问报表服务器或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 时，该 URL 应包括主机名称而不是 IP 地址。 在 TCP/IP 网络上，IP 地址将解析为主机名称（或计算机的网络名称）。 如果使用了默认值配置 URL，则应可以使用将计算机名称或 localhost 指定为主机名的 URL 来访问报表服务器 Web 服务：  

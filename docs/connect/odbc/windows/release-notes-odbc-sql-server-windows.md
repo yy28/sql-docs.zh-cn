@@ -1,5 +1,6 @@
 ---
 title: Windows 上的 ODBC Driver for SQL Server 发行说明
+description: 本发行说明文章介绍了 Windows 上每个发行版 Microsoft ODBC Driver for SQL Server 的变更内容。
 ms.custom: ''
 ms.date: 03/10/2020
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: e9210592e4c4e347662dc0ec534d511be4fa2e95
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e0ed6f2976f0b0f0b93f91f70f82ba30822c87c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80345431"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633874"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver for SQL Server 发行说明
 

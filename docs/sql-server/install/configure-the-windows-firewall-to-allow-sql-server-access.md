@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253466"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528786"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "75253466"
 |专用管理连接|对于默认实例，为 TCP 端口 1434。 其他端口用于命名实例。 有关端口号，请查看错误日志。|默认情况下，不会启用与专用管理员连接 (DAC) 的远程连接。 若要启用远程 DAC，请使用外围应用配置器方面。 有关详细信息，请参阅 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务|UDP 端口 1434|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务用于侦听指向命名实例的传入连接，并为客户端提供与此命名实例对应的 TCP 端口号。 通常，只要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例，就会启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 服务。 如果客户端配置为连接到命名实例的特定端口，则不必启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。|  
 |具有 HTTP 终结点的实例。|可以在创建 HTTP 端点时指定。 对于 CLEAR_PORT 通信，默认端口为 TCP 端口 80，对于 SSL_PORT 通信，默认端口为 443。|用于通过 URL 实现的 HTTP 连接。|  
-|具有 HTTPS 终结点的默认实例 |TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用安全套接字层 (SSL) 的 HTTP 连接。|  
+|具有 HTTPS 终结点的默认实例 |TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）的 HTTP 连接。|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 端口 4022。 若要验证使用的端口，请执行下面的查询：<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]，没有默认端口，不过这是联机丛书示例中使用的常规配置。|  
 |数据库镜像|管理员选择的端口。 若要确定此端口，请执行以下查询：<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|对于数据库镜像，没有默认端口，不过联机丛书示例使用 TCP 端口 5022 或 7022。 请务必不要中断正在使用的镜像终结点，尤其是在处于带有自动故障转移功能的高安全模式下时。 防火墙配置必须避免破坏仲裁。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。|  
 |复制|与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复制连接使用典型的常规 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 端口（供默认实例使用的 TCP 端口 1433 等）<br /><br /> 复制快照的 Web 同步和 FTP/UNC 访问要求在防火墙上打开其他端口。 为了将初始数据和架构从一个位置传输到另一个位置，复制可以使用 FTP（TCP 端口 21）或者通过 HTTP（TCP 端口 80）或文件共享进行的同步。 文件共享使用 UDP 端口 137 和 138，如果使用 NetBIOS，则还有 TCP 端口 139。 文件共享使用 TCP 端口 445。|对于通过 HTTP 进行的同步，复制使用 IIS 端点（其端口可配置，但默认情况下为端口 80），不过 IIS 进程通过标准端口（对于默认实例为 1433）连接到后端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 在使用 FTP 进行 Web 同步期间，FTP 传输是在 IIS 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器之间进行，而非在订阅服务器和 IIS 之间进行。|  
@@ -155,7 +155,7 @@ ms.locfileid: "75253466"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|对于默认实例，为 TCP 端口 2383。|默认 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的标准端口。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务|仅 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 命名实例需要的 TCP 端口 2382|客户端向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 命名实例发出不指定端口号的连接请求时，该连接请求将被转到端口 2382，即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 侦听的端口。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 将此请求重定向到该命名实例所使用的端口。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置为通过 IIS/HTTP 使用<br /><br /> （PivotTable® Service 使用 HTTP 或 HTTPS）|TCP 端口 80|用于通过 URL 实现的 HTTP 连接。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置为通过 IIS/HTTPS 使用<br /><br /> （PivotTable® Service 使用 HTTP 或 HTTPS）|TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用安全套接字层 (SSL) 的 HTTP 连接。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置为通过 IIS/HTTPS 使用<br /><br /> （PivotTable® Service 使用 HTTP 或 HTTPS）|TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用 TLS 的 HTTP 连接。|  
   
  如果用户通过 IIS 和 Internet 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，则必须打开 IIS 侦听的端口，并在客户端连接字符串中指定该端口。 在这种情况下，不需要打开任何端口就能直接访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 默认端口 2389 和端口 2382 应当与所有其他并非必需的端口一起受到限制。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "75253466"
 |Feature|端口|注释|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 服务|TCP 端口 80|用于通过 URL 实现的与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之间的 HTTP 连接。 建议不要使用预配置规则 **万维网服务(HTTP)** 。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置为通过 HTTPS 使用|TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用安全套接字层 (SSL) 的 HTTP 连接。 建议不要使用预配置规则“安全万维网服务(HTTPS)”  。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置为通过 HTTPS 使用|TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用 TLS 的 HTTP 连接。 建议不要使用预配置规则“安全万维网服务(HTTPS)”  。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
   
 当 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例时，还必须为这些服务打开相应的端口。 有关为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置 Windows 防火墙的分步说明，请参阅 [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   

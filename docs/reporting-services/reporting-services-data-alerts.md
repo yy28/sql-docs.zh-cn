@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286621"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487789"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
 
@@ -116,7 +116,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
 ##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> 安装数据警报  
  数据警报功能仅当在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时才可用。 在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，安装程序会自动创建警报数据库（用于存储数据警报定义和警报元数据）和两个 SharePoint 页（用于管理警报和向 SharePoint 站点添加数据警报设计器）。 没有要执行的特殊步骤或在安装过程中为警报设置的选项。  
   
- 若要详细了解如何在 SharePoint 模式中安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，包括 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中新增的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共享服务和使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能前必须先创建和配置的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序，请参阅 MSDN 库中的[安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。  
+ 若要详细了解如何在 SharePoint 模式中安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，包括 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中新增的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务和使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能前必须先创建和配置的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序，请参阅 MSDN 库中的[安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。  
   
  如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅[配置 SQL Server 代理](../ssms/agent/configure-sql-server-agent.md)和[启动、停止、暂停、继续、重启数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
@@ -270,12 +270,12 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的性能计数器。 有关详细信息，请参阅 [ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)、[MSRS 2011 Web Service 和 MSRS 2011 Windows Service 性能对象的性能计数器（本机模式）](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)和 [MSRS 2011 Web Service SharePoint Mode 性能对象和 MSRS 2011 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   
-##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> 对 SSL 的支持  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可以使用 HTTP SSL（安全套接字层）服务建立到报表服务器或 SharePoint 站点的加密连接。  
+##  <a name="support-for-tls"></a><a name="SupportForSSL"></a> 支持 TLS  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可以使用 HTTP SSL 服务与报表服务器或 SharePoint 站点建立加密连接。 传输层安全性 (TLS) 旧称为“安全套接字层 (SSL)”。
   
- 警报运行时服务和数据警报用户界面支持 SSL，无论使用 SSL 或 HTTP，它们的用法都类似，但是存在一些细微差别。 当使用 SSL 连接创建数据警报定义时，从数据警报消息链接回 SharePoint 库的 URL 也使用 SSL。 您可以标识此 SSL 连接，因为它在其 URL 中使用的是 HTTPS，而不是 HTTP。 同样，如果使用 HTTP 连接创建数据警报定义，则链回到 SharePoint 站点的链接使用 HTTP。 不管警报定义是使用 SSL 还是 HTTP 创建的，在使用数据警报设计器或数据警报管理器时，用户和警报管理员的体验都完全相同。 如果在从创建警报定义到后来更新并重新保存警报定义的这段时间内应更改此协议（HTTP 或 SSL），则保留原始协议，并在链接 URL 中使用。  
+ 警报运行时服务和数据警报用户界面都支持 TLS，且无论是使用 TLS 还是 HTTP，它们的工作原理都类似，但仍存在一些细微差别。 如果数据警报定义是使用 TLS 连接创建的，那么从数据警报消息链接回 SharePoint 库的 URL 也使用 TLS。 可以标识 TLS 连接，因为它在 URL 中使用的是 HTTPS，而不是 HTTP。 同样，如果使用 HTTP 连接创建数据警报定义，则链回到 SharePoint 站点的链接使用 HTTP。 不管警报定义是使用 TLS 还是 HTTP 创建的，在使用数据警报设计器或数据警报管理器时，用户和警报管理员的体验都完全相同。 如果协议（HTTP 或 TLS）在警报定义创建时和在后来更新并重新保存时应不一样，则原始协议会保留并用于链接 URL。  
   
- 如果在配置为使用 SSL 的 SharePoint 站点上创建数据警报，然后删除 SSL 要求，则该警报在该站点上仍将正常工作。 如果删除该站点，则会改用默认区域站点。  
+ 如果你在配置为使用 TLS 的 SharePoint 站点上创建数据警报，然后又删除 TLS 要求，则警报仍继续在站点上正常运行。 如果删除该站点，则会改用默认区域站点。  
   
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> 数据警报用户界面  
  数据警报提供用于管理警报的 SharePoint 页以及用于创建和编辑数据警报定义的设计器。  

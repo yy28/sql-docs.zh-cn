@@ -32,16 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134432"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529420"
 ---
 # <a name="database-mail-configuration-objects"></a>数据库邮件配置对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  数据库邮件具有两种配置对象：数据库配置对象提供了一种方法，您可以使用此方法配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
+  数据库邮件有两个配置对象：数据库配置对象提供了一种方法，用于配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
   
 -   数据库邮件帐户  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68134432"
   
 -   电子邮件服务器的端口号。  
   
--   用于指示是否使用安全套接字层 (SSL) 与 SMTP 邮件服务器建立连接的位列。  
+-   指明是否使用传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）与 SMTP 邮件服务器建立连接的位列。  
   
 -   用于指示是否使用为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]配置的凭据与 SMTP 服务器建立连接的位列。  
   

@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efa536024021e1182ad565fe534d3e706f4e7eff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 83ce3690d194b8b06fc79d58c2d7bc7efa996619
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917960"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293377"
 ---
 # <a name="fips-mode"></a>FIPS 模式
 
@@ -22,10 +22,10 @@ ms.locfileid: "80917960"
 
 Microsoft JDBC Driver for SQL Server 支持在配置为“符合 FIPS 140 标准”的 JVM 中运行  。
 
-#### <a name="prerequisites"></a>必备条件
+#### <a name="prerequisites"></a>先决条件
 
 - 配置了 FIPS 的 JVM
-- 相应的 SSL 证书
+- 相应的 TLS/SSL 证书
 - 相应的策略文件
 - 相应的配置参数
 
@@ -38,11 +38,11 @@ Microsoft JDBC Driver for SQL Server 支持在配置为“符合 FIPS 140 标准
 供应商可能有一些其他步骤来配置启用了 FIPS 的 JVM。
 
 ## <a name="appropriate-ssl-certificate"></a>相应的 SSL 证书
-为了连接到 FIPS 模式下的 SQL Server，需要有效的 SSL 证书。 将其安装或导入到启用了 FIPS 的客户端计算机 (JVM) 上的 Java 密钥存储中。
+必须有有效的 TLS/SSL 证书，才能连接到 FIPS 模式下的 SQL Server。 将其安装或导入到启用了 FIPS 的客户端计算机 (JVM) 上的 Java 密钥存储中。
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>将 SSL 证书导入到 Java 密钥存储中
 对于 FIPS，很可能需要导入 PKCS 格式或特定于提供程序的格式的证书 (.cert)。
-使用以下代码片段导入 SSL 证书，并使用相应的密钥存储格式将其存储在工作目录中。 _TRUST\_STORE\_PASSWORD_ 是 Java 密钥存储的密码。
+使用以下代码片段导入 TLS/SSL 证书，并使用相应的密钥存储格式将它存储在工作目录中。 _TRUST\_STORE\_PASSWORD_ 是 Java 密钥存储的密码。
 
 ```java
 public void saveGenericKeyStore(
@@ -72,7 +72,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-以下示例使用 BouncyCastle 提供程序导入 PKCS12 格式的 Azure SSL 证书。 该证书使用以下代码片段导入到名为 _MyTrustStore\_PKCS12_ 的工作目录中：
+以下示例使用 BouncyCastle 提供程序导入 PKCS12 格式的 Azure TLS/SSL 证书。 该证书使用以下代码片段导入到名为 _MyTrustStore\_PKCS12_ 的工作目录中：
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
@@ -88,9 +88,9 @@ private Certificate getCertificate(String pathName)
 |---|---|---|---|---|
 |encrypt|布尔 [“true / false”]|“false”|对于启用了 FIPS 的 JVM，加密属性应为 true ||
 |TrustServerCertificate|布尔 [“true / false”]|“false”|对于 FIPS，用户需要验证证书链，因此用户应将“false”值用于此属性  。 ||
-|trustStore|String|Null|导入证书的 Java 密钥存储文件路径。 如果在系统上安装证书，则无需传递任何内容。 驱动程序使用 cacerts 或 jssecacerts 文件。||
-|trustStorePassword|String|Null|用于检查 trustStore 数据完整性的密码。||
+|trustStore|字符串|Null|导入证书的 Java 密钥存储文件路径。 如果在系统上安装证书，则无需传递任何内容。 驱动程序使用 cacerts 或 jssecacerts 文件。||
+|trustStorePassword|字符串|Null|用于检查 trustStore 数据完整性的密码。||
 |fips|布尔 [“true / false”]|“false”|对于启用了 FIPS 的 JVM，此属性应为 true |已在 6.1.4 中添加（稳定版 6.2.2）||
-|fipsProvider|String|Null|JVM 中配置的 FIPS 提供程序。 例如，BCFIPS 或 SunPKCS11-NSS |已在 6.1.2 中添加（稳定版 6.2.2），已在 6.4.0 中弃用 - 请在[此处](https://github.com/Microsoft/mssql-jdbc/pull/460)查看详细信息。|
-|trustStoreType|String|JKS|对于 FIPS 模式，请将信任存储类型设置为 PKCS12 或由 FIPS 提供程序定义的类型 |已在 6.1.2 中添加（稳定版 6.2.2）||
+|fipsProvider|字符串|Null|JVM 中配置的 FIPS 提供程序。 例如，BCFIPS 或 SunPKCS11-NSS |已在 6.1.2 中添加（稳定版 6.2.2），已在 6.4.0 中弃用 - 请在[此处](https://github.com/Microsoft/mssql-jdbc/pull/460)查看详细信息。|
+|trustStoreType|字符串|JKS|对于 FIPS 模式，请将信任存储类型设置为 PKCS12 或由 FIPS 提供程序定义的类型 |已在 6.1.2 中添加（稳定版 6.2.2）||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

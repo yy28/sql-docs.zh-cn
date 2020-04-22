@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdb8fc97b8b2403366e19456b7c744012ee9007f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 59c833c86c632c0f5a0838a98f31d89f4f0df5fb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570253"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635874"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting 属性 - SecureConnectionLevel
   返回 RSReportServer.config 文件中指定的安全连接级别。 只读。  
@@ -36,7 +36,7 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## <a name="property-values"></a>属性值  
- 表示安全连接级别的 **Integer** 值。 返回值表示是否配置 SSL。 值大于或等于 1 表示打开了 SSL。 值为 0 表示关闭了 SSL。  
+ 表示安全连接级别的 **Integer** 值。 返回值指明是否配置了 TLS。 值大于或等于 1 表示启用了 TLS。 值为 0 表示禁用了 TLS。  
   
 ## <a name="example-code"></a>示例代码  
  [MSReportServer_ConfigurationSetting 类](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

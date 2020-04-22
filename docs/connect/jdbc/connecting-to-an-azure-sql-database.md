@@ -1,5 +1,6 @@
 ---
-title: 连接到 Azure SQL 数据库 | Microsoft Docs
+title: 连接到 Azure SQL 数据库
+description: 本文介绍了在使用 Microsoft JDBC Driver for SQL Server 连接到 Azure SQL 数据库时遇到的问题。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,33 +11,33 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f7ecc575fc444a7f834cd8ed84ee340902199b09
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922465"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632523"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>连接到 Azure SQL 数据库
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本文章讨论使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 时遇到的问题。 有关连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 的详细信息，请参阅：  
+本文介绍了在使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 时遇到的问题。 若要详细了解如何连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，请参阅：  
   
 - [SQL Azure 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [如何使用 JDBC 连接到 SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [如何：使用 JDBC 连接到 SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
-- [使用 Azure Active Directory 身份验证连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+- [使用 Azure Active Directory 身份验证连接](connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>详细信息
 
-连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 时，应连接到主数据库以调用 SQLServerDatabaseMetaData.getCatalogs  。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支持从用户数据库中返回整个目录集。 SQLServerDatabaseMetaData.getCatalogs 使用 sys.databases 视图获取目录  。 请参阅 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中有关权限的讨论，了解对  **的 SQLServerDatabaseMetaData.getCatalogs**[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 行为。  
+连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 后，应连接到 master 数据库，以调用 SQLServerDatabaseMetaData.getCatalogs  。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支持从用户数据库中返回整个目录集。 SQLServerDatabaseMetaData.getCatalogs 使用 sys.databases 视图获取目录  。 请参阅 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中有关权限的讨论，以了解 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 上的 SQLServerDatabaseMetaData.getCatalogs  行为。  
   
 ## <a name="connections-dropped"></a>删除的连接
 
-连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 时，空闲连接在处于不活动状态一定时间后可能被某个网络组件（如防火墙）终止。 在此上下文中，有两种类型的空闲连接：  
+连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 后，空闲连接可能在一段时间不活动后被网络组件（如防火墙）终止。 在此上下文中，有两种类型的空闲连接：  
 
 - TCP 层出现空闲，在此情形下，任意数量的网络设备都可以删除连接。  
 
@@ -90,4 +91,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## <a name="see-also"></a>另请参阅
 
-[通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[通过 JDBC 驱动程序连接到 SQL Server](connecting-to-sql-server-with-the-jdbc-driver.md)  

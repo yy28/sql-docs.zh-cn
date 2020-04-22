@@ -1,5 +1,6 @@
 ---
-title: Azure Active Directory | Microsoft Docs
+title: Azure Active Directory
+description: 了解如何将 Azure Active Directory 身份验证用于 Microsoft Drivers for PHP for SQL Server。
 ms.date: 02/25/2019
 ms.prod: sql
 ms.prod_service: connectivity
@@ -8,35 +9,32 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - azure active directory, authentication, access token
-author: david-puglielli
-ms.author: v-dapugl
-manager: v-mabarw
-ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ac1e598b5599caa9020ed795d1bffd185887ad76
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265180"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625457"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) 是一项中心用户 ID 管理技术，可以作为 [SQL Server 身份验证](../../connect/php/how-to-connect-using-sql-server-authentication.md)的替代方法。 Azure AD 允许使用用户名和密码、Windows 集成身份验证或 Azure AD 访问令牌在 Azure AD 中使用联合身份连接到 Microsoft Azure SQL 数据库和 SQL 数据仓库。 适用于 SQL Server 的 PHP 驱动程序提供对这些功能的部分支持。
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) 是一项中心用户 ID 管理技术，可以作为 [SQL Server 身份验证](how-to-connect-using-sql-server-authentication.md)的替代方法。 Azure AD 允许使用用户名和密码、Windows 集成身份验证或 Azure AD 访问令牌在 Azure AD 中使用联合身份连接到 Microsoft Azure SQL 数据库和 SQL 数据仓库。 适用于 SQL Server 的 PHP 驱动程序提供对这些功能的部分支持。
 
-若要使用 Azure AD，请使用“Authentication”  或“AccessToken”  关键字（它们互相排斥），如下表所示。 有关更多技术详细信息，请参阅[结合使用 Azure Active Directory 和 ODBC 驱动程序](../../connect/odbc/using-azure-active-directory.md)。
+若要使用 Azure AD，请使用“Authentication”  或“AccessToken”  关键字（它们互相排斥），如下表所示。 有关更多技术详细信息，请参阅[结合使用 Azure Active Directory 和 ODBC 驱动程序](../odbc/using-azure-active-directory.md)。
 
 |关键字|值|说明|
 |-|-|-|
-|**AccessToken**|未设置（默认值）|身份验证模式由其他关键字确定。 有关详细信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。 |
+|**AccessToken**|未设置（默认值）|身份验证模式由其他关键字确定。 有关详细信息，请参阅 [Connection Options](connection-options.md)。 |
 ||一个字节字符串|从 OAuth JSON 响应中提取的 Azure AD 访问令牌。 连接字符串不能包含用户 ID、密码或 Authentication 关键字（在 Linux 或 macOS 中需要 ODBC Driver 版本 17 或更高版本）。 |
-|**身份验证**|未设置（默认值）|身份验证模式由其他关键字确定。 有关详细信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。 |
+|**身份验证**|未设置（默认值）|身份验证模式由其他关键字确定。 有关详细信息，请参阅 [Connection Options](connection-options.md)。 |
 ||`SqlPassword`|使用用户名和密码直接对 SQL Server 实例（可能是 Azure 实例）进行身份验证。 必须使用“UID”  和“PWD”  关键字将用户名和密码传递到连接字符串。 |
 ||`ActiveDirectoryPassword`|使用用户名和密码对 Azure Active Directory 标识进行身份验证。 必须使用“UID”  和“PWD”  关键字将用户名和密码传递到连接字符串。 |
 ||`ActiveDirectoryMsi`|使用系统分配的托管标识或用户分配的托管标识进行身份验证（需要 ODBC Driver 版本 17.3.1.1 或更高版本）。 有关概述和教程，请参阅 [什么是 Azure 资源的托管标识？](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)。|
 
 “Authentication”  关键字影响连接安全设置。 如果在连接字符串中设置了此关键字，则默认情况下“Encrypt”  关键字设置为 true，这意味着客户端将请求加密。 而且，除非 TrustServerCertificate  设置为 true（默认情况下为 false  ），否则将验证服务器证书，而不考虑加密设置。 此功能有别于旧的、不安全的登录方法，在此方法中，仅当在连接字符串中明确请求加密时，才会验证服务器证书。
-
-将 Azure AD 与 Windows 上适用于 SQL Server 的 PHP 驱动程序一起使用时，可能会要求你安装 [Microsoft Online Services 登录助手](https://www.microsoft.com/download/details.aspx?id=41950)（ODBC 17+ 不需要安装）。
 
 #### <a name="limitations"></a>限制
 
@@ -237,6 +235,6 @@ try {
 ```
 
 ## <a name="see-also"></a>另请参阅
-[结合使用 Azure Active Directory 和 ODBC 驱动程序](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)
+[结合使用 Azure Active Directory 和 ODBC 驱动程序](../odbc/using-azure-active-directory.md)
 
 [什么是 Azure 资源的托管标识？](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)

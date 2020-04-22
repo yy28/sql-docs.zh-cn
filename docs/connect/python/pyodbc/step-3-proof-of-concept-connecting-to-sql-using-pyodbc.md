@@ -1,5 +1,6 @@
 ---
-title: 步骤 3：使用 pyodbc 连接到 SQL 的概念证明 | Microsoft Docs
+title: 步骤 3：使用 pyodbc 连接到 SQL
+description: 第 3 步是概念证明，展示了如何使用 Python 和 pyODBC 连接到 SQL Server。 基本示例展示了如何选择和插入数据。
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: arob98
 ms.author: angrobe
-ms.openlocfilehash: c5d8adfa33541402fb50017c3790d38f0396d73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 971f89f9748ab8f31c234f872e817b0b474dcbe0
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78256897"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528471"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3：使用 pyodbc 连接到 SQL 的概念验证
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3：使用 pyodbc 连接到 SQL 的概念证明
 
 此示例是一个概念证明。 为了清楚起见，此示例代码已经过简化，并不一定代表 Microsoft 建议的最佳做法。  
 

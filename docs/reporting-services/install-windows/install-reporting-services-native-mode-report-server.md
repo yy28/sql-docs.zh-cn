@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64c6981b34f973737b30480b92152faae9e74fd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510188"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486834"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安装 Reporting Services 2016 本机模式报表服务器
 
@@ -90,7 +90,7 @@ URL 预留由前缀、主机名、端口和虚拟目录组成：
 
 |组成部分|说明|
 |----------|-----------------|
-|前缀|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，安装程序将尝试创建使用 HTTP 前缀的 URL 预留。|
+|前缀|默认的前缀为 HTTP。 如果你以前安装过传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）证书，安装程序会尝试创建使用 HTTP 前缀的 URL 预留。|
 |主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver`。|
 |端口|默认端口为 80。 请注意，如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 应用程序时，必须将该端口显式添加至 URL 中。|
 |虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer_\<instance_name>（对于报表服务器 Web 服务）和 Reports_\<instance_name>（对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]）   。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，默认的虚拟目录为 **reports**。|
@@ -188,7 +188,7 @@ URL 预留由前缀、主机名、端口和虚拟目录组成：
 [配置报表服务器数据库连接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
 [“仅文件”安装 (Reporting Services)](../../reporting-services/install-windows/files-only-installation-reporting-services.md)  
 [初始化报表服务器](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
-[配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+[在本机模式报表服务器上配置 TLS 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

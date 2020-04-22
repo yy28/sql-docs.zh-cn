@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a282ed4ce04df00a062fb1b910318125e23b1634
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c5e66e7ff2b36cd63acb4d05b6503f0bbc33a4a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078785"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528741"
 ---
 # <a name="replication-security-best-practices"></a>复制安全最佳实践
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "68078785"
   
  下面是在所有环境中均与复制相关的信息：  
   
--   使用行业标准方法 [如虚拟专用网络 (VPN)、安全套接字层 (SSL) 或 IP 安全 (IPSEC)] 加密复制拓扑中计算机间的连接。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。 有关使用 VPN 和 SSL 在 Internet 上复制数据的信息，请参阅 [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)。  
+-   使用行业标准方法来对复制拓扑中计算机间的连接进行加密，如虚拟专用网 (VPN)、传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）或 IP 安全性 (IPSEC)。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。 若要了解如何使用 VPN 和 TLS 通过 Internet 复制数据，请参阅[保护通过 Internet 进行的复制](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)。  
   
-     如果使用 SSL 来确保复制拓扑中计算机间的连接安全，请为每个复制代理的 **-EncryptionLevel** 参数指定值 **1** 或 **2** （建议指定值 **2** ）。 值 **1** 指定使用加密，但是代理不验证 SSL 服务器证书是否由可信颁发者签名；值 **2** 指定证书要经过验证。 代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
+     如果使用 TLS 来保护复制拓扑中计算机间的连接，请为每个复制代理的 -EncryptionLevel  参数指定值 1  或 2  （建议指定值 2  ）。 值 1  指定使用加密，但代理不验证 TLS/SSL 服务器证书是否由受信任的颁发者进行签名；值 2  指定验证证书。 代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   
     -   [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: 使用 SQL 转义序列 | Microsoft Docs
+title: 在 JDBC 中使用 SQL 转义序列
+description: Microsoft JDBC Driver for SQL Server 支持使用 JDBC API 定义的 SQL 转义序列。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b2bacdc6eb65824c34f6bb2e6dec86f5abe9efd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 68b595c1901d010b798ebf1767e270e468fb9163
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924016"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528182"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 转义序列
 
@@ -71,7 +72,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
 | 字符串函数                                                                                                                                                                                                                                                                                                                        | 数值函数                                                                                                                                                                                                                                                                                                                                                                                                   | 日期时间函数                                                                                                                                                                                                                                                                                                                                             | 系统函数                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> 日志<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> 月<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> {1}WEEK{2}<br /><br /> 年 | DATABASE<br /><br /> IFNULL<br /><br /> USER |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> USER |
 
 > [!NOTE]  
 > 如果您试图使用数据库不支持的函数，则将发生错误。  
@@ -157,7 +158,7 @@ JDBC 驱动程序支持以下外部联接转义序列：
 LIMIT <rows> [OFFSET <row offset>]  
 ```
 
-转义语法有两个部分：\<行> 是必需部分，用于指定要返回的行数  。 OFFSET 和 \<行偏移> 都是可选部分，用于指定在开始返回行之前要跳过的行数  。 JDBC 驱动程序通过将查询转换为使用 TOP 而不是 LIMIT，仅支持必需部分。 SQL Server 不支持 LIMIT 子句。 JDBC 驱动程序不支持可选的 **行偏移>；如果使用它，驱动程序将引发异常\<** 。  
+转义语法有两个部分：\<行> 是必需部分，用于指定要返回的行数  。 OFFSET 和 \<行偏移> 都是可选部分，用于指定在开始返回行之前要跳过的行数  。 JDBC 驱动程序通过将查询转换为使用 TOP 而不是 LIMIT，仅支持必需部分。 SQL Server 不支持 LIMIT 子句。 JDBC 驱动程序不支持可选的 \<行偏移>；如果使用它，驱动程序将引发异常  。  
   
 ## <a name="see-also"></a>另请参阅
 

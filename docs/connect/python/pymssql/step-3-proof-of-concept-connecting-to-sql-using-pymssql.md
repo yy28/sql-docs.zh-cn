@@ -1,5 +1,6 @@
 ---
-title: 步骤 3：使用 pymssql 连接到 SQL 的概念证明 | Microsoft Docs
+title: 步骤 3：使用 pymssql 连接到 SQL
+description: 第 3 步是概念证明，展示了如何使用 Python 和 pymssql 连接到 SQL Server。 基本示例展示了如何选择和插入数据。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1c75d13e9e44632c411639385227776f54ca1a9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913093"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528556"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步骤 3：使用 pymssql 连接到 SQL 的概念证明
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80913093"
   
 ## <a name="step-2--execute-query"></a>步骤 2：执行查询  
   
-[Cursor.execute](https://pypi.org/project/pymssql/) 函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实际上可接受任何查询，并返回可使用 [cursor.fetchone()](https://pypi.org/project/pymssql/) 循环访问的结果集。  
+[Cursor.execute](https://pypi.org/project/pymssql/) 函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实质上接受任意查询，并返回可使用 [cursor.fetchone()](https://pypi.org/project/pymssql/) 循环访问的结果集。  
   
   
 ```python
@@ -50,7 +51,7 @@ ms.locfileid: "80913093"
   
 ## <a name="step-3--insert-a-row"></a>步骤 3：插入行  
   
-此示例展示了如何安全执行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
+此示例展示了如何安全地执行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 语句和传递参数。 将参数作为值传递可保护应用程序不受 [SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)影响。  
   
   
 ```python
@@ -66,7 +67,7 @@ ms.locfileid: "80913093"
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>步骤 4：回滚事务  
+## <a name="step-4-roll-back-a-transaction"></a>步骤 4：回滚事务  
   
 此代码示例演示了可以在其中执行以下操作的事务的用法：  
   

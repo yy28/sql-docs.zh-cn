@@ -1,5 +1,6 @@
 ---
-title: 使用集成身份验证 | Microsoft Docs
+title: 使用集成身份验证
+descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921163"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629617"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,9 +33,9 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-使用 DSN 连接时，还可以向  **中的 DSN 条目添加 Trusted_Connection=yes**`odbc.ini`。
+使用 DSN 连接时，还可以向 `odbc.ini` 中的 DSN 条目添加 Trusted_Connection=yes  。
   
-`-E` 的 `sqlcmd` 选项和 `-T` 的 `bcp` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接**和**使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)[  ](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
+`sqlcmd` 的 `-E` 选项和 `bcp` 的 `-T` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接](connecting-with-sqlcmd.md)和[使用 bcp 进行连接](connecting-with-bcp.md)   。
 
 确保要连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的客户端主体已使用 Kerberos KDC 进行身份验证。
   
@@ -87,10 +88,10 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 配置集成身份验证后，凭据将传递给链接服务器。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>集成身份验证和 sqlcmd
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `-E` 的 `sqlcmd` 选项。 确保运行 `sqlcmd` 的帐户与默认的 Kerberos 客户端主体相关联。
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `sqlcmd` 的 `-E` 选项。 确保运行 `sqlcmd` 的帐户与默认的 Kerberos 客户端主体相关联。
 
 ## <a name="integrated-authentication-and-bcp"></a>集成身份验证和 bcp
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `-T` 的 `bcp` 选项。 确保运行 `bcp` 的帐户与默认的 Kerberos 客户端主体相关联。 
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `bcp` 的 `-T` 选项。 确保运行 `bcp` 的帐户与默认的 Kerberos 客户端主体相关联。 
   
 将 `-T` 与 `-U` 或 `-P` 选项结合使用是错误的。
   
@@ -125,11 +126,11 @@ forwardable = yes
 
 如果 Kerberos 身份验证失败，则 Linux 或 macOS 上的 ODBC 驱动程序不使用 NTLM 身份验证。  
 
-有关将 Linux 或 macOS 计算机向 Active Directory 进行身份验证的详细信息，请参阅[将 Linux 客户端向 Active Directory 进行身份验证](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[将 OS X 与 Active Directory 集成的最佳做法](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf)。 有关配置 Kerberos 的详细信息，请参阅 [MIT Kerberos 文档](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
+若要详细了解如何使用 Active Directory 验证 Linux 或 macOS 计算机，请参阅[使用 Active Directory 验证 Linux 客户端](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)。 有关配置 Kerberos 的详细信息，请参阅 [MIT Kerberos 文档](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
 ## <a name="see-also"></a>另请参阅  
-[编程指南](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[编程指南](programming-guidelines.md)
 
-[发行说明](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[发行说明](release-notes-odbc-sql-server-linux-mac.md)
 
-[使用 Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[使用 Azure Active Directory](../using-azure-active-directory.md)

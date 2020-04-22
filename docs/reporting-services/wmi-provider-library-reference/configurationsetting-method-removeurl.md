@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3471c54ae18269c281104c3572235099bcf4e61b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3ea8098d3dd6a1512f83022fe7ab7e733bd42ae5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571297"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636392"
 ---
 # <a name="configurationsetting-method---removeurl"></a>ConfigurationSetting 方法 - RemoveURL
   删除为报表服务器保留的 URL。 如果需要删除多个 URL，则必须逐个调用此 API 来完成操作。  
@@ -57,7 +57,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
   
  在调用 [ReserveURL](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md) 方法之前，必须为 *Application* 参数的 VirtualDirectory 配置属性提供一个值。 使用 [SetVirtualDirectory 方法 (WMI MSReportServer_ConfigurationSetting )](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) 方法设置 VirtualDirectory 属性。  
   
- 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了 SSL 证书，但是没有其他 URL 需要它，则将删除它。  
+ 如果 TLS/SSL 证书是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 预配，但没有其他 URL 需要它，它就会被删除。  
   
  此方法会导致所有非配置应用程序域在执行此操作时进行硬回收并停止；应用程序域将在此操作完成后重新启动。  
   

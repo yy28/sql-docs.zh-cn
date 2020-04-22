@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a9874a24ae077b0381d8e8e8834b091a72953688
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 821d9e5339c70551a3503faa81ca15276892ed86
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980589"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529216"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式化文件将表列映射到数据文件字段 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,20 +85,20 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **之后**
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 修改的格式化文件现在可反映：
@@ -116,7 +116,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 有关术语，请参阅 [XML 格式化文件的架构语法](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 。  在记事本中打开 `D:\BCP\myRemap.xml` 并执行以下修改：
 1. 在格式化文件中声明 \<FIELD> 元素的顺序是这些字段在数据文件中的显示顺序，因此颠倒具有 ID 属性 2 和 3 的 \<FIELD> 元素的顺序。
 2. 确保 \<FIELD> ID 属性值是顺序的。
-3. \<ROW> 元素中 \<COLUMN> 元素的顺序定义了其在批量操作中返回的顺序。  XML 格式化文件为每个 \<COLUMN> 元素分配了一个本地名称，该名称与批量导入操作的目标表中的列没有关系。  \<COLUMN> 元素的顺序与 \<RECORD> 定义中的 \<FIELD> 元素的顺序无关。  每个 \<COLUMN> 元素对应一个 \<FIELD> 元素（其 ID 在 \<COLUMN> 元素的 SOURCE 属性中指定）。  因此，\<COLUMN> SOURCE 的值是需要修订的唯一属性。  颠倒 \<COLUMN> SOURCE 属性 2 和 3 的顺序。
+3. \<ROW> 元素中 \<COLUMN> 元素的顺序定义了批量操作将这些元素发送到目标的顺序。  XML 格式化文件为每个 \<COLUMN> 元素分配了一个本地名称，该名称与批量导入操作的目标表中的列没有关系。  \<COLUMN> 元素的顺序与 \<RECORD> 定义中的 \<FIELD> 元素的顺序无关。  每个 \<COLUMN> 元素对应一个 \<FIELD> 元素（其 ID 在 \<COLUMN> 元素的 SOURCE 属性中指定）。  因此，\<COLUMN> SOURCE 的值是需要修订的唯一属性。  颠倒 \<COLUMN> SOURCE 属性 2 和 3 的顺序。
 
 比较更改  
 **之前**

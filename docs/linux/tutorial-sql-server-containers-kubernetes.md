@@ -9,12 +9,12 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50c10c976cd30db4c8fcdcd1404f4618e77356c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216667"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635434"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes 服务 (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
@@ -52,7 +52,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 * **Kubernetes 群集**
    - 本教程需要使用 Kubernetes 群集。 这些步骤使用 [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) 来管理群集。 
 
-   - 请参阅[部署 Azure 容器服务 (AKS) 群集](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)以使用 `kubectl` 在 AKS 中创建单节点 Kubernetes 群集并连接到该群集。 
+   - 若要使用 `kubectl` 在 AKS 中创建单节点 Kubernetes 群集并连接到此群集，请参阅[部署 Azure Kubernetes 服务 (AKS) 群集](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)。 
 
    >[!NOTE]
    >若要防范节点发生故障，Kubernetes 群集需要使用多个节点。

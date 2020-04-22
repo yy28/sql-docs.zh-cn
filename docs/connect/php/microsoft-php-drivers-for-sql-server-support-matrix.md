@@ -1,7 +1,8 @@
 ---
-title: SQL Server 的 Microsoft PHP 驱动程序支持矩阵 | Microsoft Docs
+title: Microsoft Drivers for PHP 支持矩阵
+description: 本页包含 SQL Server 的 Microsoft PHP 驱动程序的支持矩阵和支持生命周期策略。
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: ''
-ms.openlocfilehash: 57e7a8e5849b984676c2e0a843c753a12f2f20dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922830"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632750"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server 的 Microsoft PHP 驱动程序支持矩阵
 
@@ -106,7 +107,7 @@ Microsoft PHP 驱动程序不提供扩展和自定义支持选项。
 |Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-列出的 Microsoft PHP 驱动程序版本支持以下 Linux 和 Mac 操作系统版本（仅限 64 位）：
+以下 Linux 和 macOS 操作系统版本（仅限 64 位）可以与列出的 Microsoft PHP 驱动程序版本配合使用：
 
 |SQL Server 的 PHP 驱动程序版本 &#8594;<br />&#8595; 操作系统|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -132,12 +133,12 @@ Microsoft PHP 驱动程序不提供扩展和自定义支持选项。
 |macOS El Capitan（64 位）           |   |   |Y  |Y  |Y  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> 版本 5.8 中的 Alpine Linux 支持是实验性支持。
+<sup>1</sup>Alpine Linux 支持是版本 5.8.0 的实验性支持。 版本 5.8.1 引入了生产支持。
 
 ## <a name="see-also"></a>另请参阅
 
-[发行说明](../../connect/php/release-notes-php-sql-driver.md)
+[发行说明](release-notes-php-sql-driver.md)
 
-[支持资源](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[支持资源](support-resources-for-the-php-sql-driver.md)
 
-[系统要求](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[系统要求](system-requirements-for-the-php-sql-driver.md)

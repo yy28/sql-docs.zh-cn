@@ -1,5 +1,6 @@
 ---
-title: 步骤 3：使用 PHP 连接到 SQL 的概念证明 | Microsoft Docs
+title: 步骤 3：使用 PHP 连接到 SQL
+description: 第 3 步是概念证明，展示了如何使用 PHP 连接到 SQL Server。 基本示例展示了如何选择和插入数据。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926855"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528581"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步骤 3：使用 PHP 连接到 SQL 的概念证明
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "80926855"
   
 ## <a name="step-2--execute-query"></a>步骤 2：执行查询  
   
-[sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) 函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实际上可接受任何查询和连接对象，并返回可使用 [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php) 循环访问的结果集。  
+[sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) 函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实质上接受任意查询和连接对象，并返回可使用 [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php) 循环访问的结果集。  
   
 ```php  
     function ReadData()  
@@ -79,8 +80,7 @@ ms.locfileid: "80926855"
   
 ## <a name="step-3--insert-a-row"></a>步骤 3：插入行  
   
-此示例展示了如何安全执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
-  
+此示例展示了如何安全地执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句和传递参数。 参数值保护应用程序不受 [SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)影响。
   
 ```php 
     function InsertData()  
@@ -109,7 +109,7 @@ ms.locfileid: "80926855"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>步骤 4：回滚事务  
+## <a name="step-4--roll-back-a-transaction"></a>步骤 4：回滚事务  
   
   
 此代码示例演示了可以在其中执行以下操作的事务的用法：  

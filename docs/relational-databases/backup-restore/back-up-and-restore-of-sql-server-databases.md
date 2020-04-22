@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bcf8cbc87fc1784a177a9bf58a43f58156fbb96
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256740"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487916"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "77256740"
   
  SQL Server 备份和还原组件为保护存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的关键数据提供了基本安全保障。 为了尽量降低灾难性数据丢失的风险，需备份数据库，以便定期保存对数据的修改。 计划良好的备份和还原策略有助于保护数据库，使之免受各种故障导致的数据丢失的威胁。 测试策略，方法是先还原一组备份，然后恢复数据库，以便准备好对灾难进行有效的响应。
   
- 除了在本地存储中存储备份外，SQL Server 还支持备份到 Azure Blob 存储服务和从其还原。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 对于使用 Microsoft Azure Blob 存储服务存储的数据库文件， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供相应的选项让你使用 Azure 快照来实现接近实时的备份和更快的还原。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+ 除了在本地存储中存储备份外，SQL Server 还支持备份到 Azure Blob 存储服务和从其还原。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 对于使用 Microsoft Azure Blob 存储服务存储的数据库文件， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供相应的选项让你使用 Azure 快照来实现接近实时的备份和更快的还原。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。 Azure 还为 Azure VM 中运行的 SQL Server 提供企业级备份解决方案。 作为完全托管的备份解决方案，它支持 AlwaysOn 可用性组、长期保留、时点恢复以及集中管理和监视。 有关详细信息，请参阅 [Azure VM 中 SQL Server 的 Azure 备份](https://docs.microsoft.com/azure/backup/backup-azure-sql-database)。
   
 ##  <a name="why-back-up"></a>为何备份？  
 -   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。 备份是保护数据的唯一方法  。

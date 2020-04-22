@@ -1,5 +1,6 @@
 ---
 title: rsProcessingError - Reporting Services 错误 | Microsoft Docs
+description: 在此错误参考页中，了解事件 ID“rsProcessingError”：“SQL Server Reporting Services 报表处理期间出错”。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573814"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487214"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 错误
     
@@ -53,7 +54,7 @@ ms.locfileid: "65573814"
   
 -   将 Nullable 属性设置为 **False** 的参数检测到该参数中包含 Null 值。  
   
--   数据区域的 Hidden 属性的表达式包含以下错误：对象引用未设置为某个对象的实例。  
+-   数据区域的 Hidden 属性的表达式包含以下错误：“对象引用未设置为某个对象的实例”。  
   
 -   表达式包含的函数调用无效或有语法错误。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "65573814"
  多值参数不能为 Null。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>无法处理包含子报表的主报表  
- 必须使用相同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理包含子报表的报表。 将报表升级到报表定义架构的当前版本时，可能会同时更新主报表和子报表，也可能不会。 如果报表与其子报表的版本不兼容，则会显示以下消息：“无法处理子报表”。  
+ 必须使用相同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理包含子报表的报表。 将报表升级到报表定义架构的当前版本时，可能会同时更新主报表和子报表，也可能不会。 如果报表与其子报表的版本不兼容，则会出现以下消息：“无法处理子报表”。  
   
  必须更改主报表或子报表，以便使用相同版本的报表处理器来处理所有报表。 有关报表为何无法进行升级的信息，请参阅 [升级报表](../../reporting-services/install-windows/upgrade-reports.md)。  
   
@@ -96,11 +97,11 @@ ms.locfileid: "65573814"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>无法比较筛选器的数据类型  
  在筛选器公式中，定义筛选内容的筛选器表达式和筛选器值必须为相同数据类型才能进行比较。 如果出现以下错误之一，请修改字段表达式或筛选器值以使数据类型匹配：  
   
--   无法为 *report item name> 执行 \<report item type> 的处理* *\<* 。 无法比较 *type> 和 \<type> 类型的数据* *\<* 。 请检查 *report item name> 返回的数据类型\<* 。  
+-   无法为 \<report item name> 执行 \<report item type> 的处理   。 无法比较 \<type> 和 \<type> 类型的数据   。 请检查 \<report item name> 返回的数据类型  。  
   
--   无法计算 *property name>\<* 。  
+-   无法计算 \<property name>  。  
   
--   无法计算 *property name>\<* 。 它引用了一个数据集字段，该字段包含一个错误：*error string>\<* 。  
+-   无法计算 \<property name>  。 它引用了一个数据集字段，该字段包含一个错误：\<error string>  。  
   
  有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
@@ -109,13 +110,13 @@ ms.locfileid: "65573814"
   
  也可以将特定作用域的名称传递给聚合函数。 作用域可以引用数据集和数据区域的名称，也可以引用位于数据层次结构中较高位置的作用域的名称。 这适用于以下消息：  
   
--   *report item type>“\<report item name>”具有无效的作用域“* scope name>” *\<* *\<* 。 该作用域必须是当前作用域或包含在当前作用域内。  
+-   \<report item type>“\<report item name>”具有无效的作用域“\<scope name>”    。 该作用域必须是当前作用域或包含在当前作用域内。  
   
--   *report item type>“\<report item name>”的* property name> 表达式包含的作用域参数对聚合函数无效 *\<* *\<* 。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
+-   \<report item type>“\<report item name>”的 \<property name> 表达式包含的作用域参数对聚合函数无效    。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
   
  对于计算运行总计的聚合函数（**Previous**、 **RunningValue**或 **RowNumber**），可以将作用域参数指定为行组名称或列组名称，但不能同时指定二者。 这适用于以下错误消息：  
   
--   **report item type>“** report item name>”的数据单元中所用的 Previous、RunningValue 或 RowNumber 聚合函数同时引用了 **report item type> 的行和列中的分组作用域**  *\<* *\<* *\<* 。 **report item type> 内的所有 Previous、RunningValue 和 RowNumber 聚合函数的作用域参数均可引用数据行分组或数据列分组，但不能同时引用这二者**   *\<* 。  
+-   \<report item type>“\<report item name>”的数据单元中所用的 Previous、RunningValue 或 RowNumber 聚合函数同时引用了 \<report item type> 的行和列中的分组作用域       。 \<report item type> 内的所有 Previous、RunningValue 和 RowNumber 聚合函数的作用域参数均可引用数据行分组或数据列分组，但不能同时引用这二者     。  
   
  有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)和[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   

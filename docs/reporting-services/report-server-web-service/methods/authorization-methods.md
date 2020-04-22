@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a8c9ba25c3f9dfd03aa528b4d02f9e02e197546
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae203110efcb9cc6a649d8f0c4af8856c779a741
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509828"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488420"
 ---
 # <a name="authorization-methods"></a>授权方法
   可以使用这些方法管理报表服务器上的任务、角色和策略。  
@@ -35,7 +35,7 @@ ms.locfileid: "79509828"
 |<xref:ReportService2010.ReportingService2010.GetSystemPermissions%2A>|返回用户的系统权限。 此方法仅适用于本机模式。|  
 |<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|返回系统策略，包括这些策略与之关联的组和角色。 此方法仅适用于本机模式。|  
 |<xref:ReportService2010.ReportingService2010.InheritParentSecurity%2A>|删除与报表服务器数据库中特定项相关联的策略，并将该项的安全策略设置为其父级的策略。|  
-|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|返回一个布尔值，指示是否需要安全套接字层 (SSL) 协议才能使用 <xref:ReportService2010> 端点。|  
+|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|返回布尔值，指明是否必须有传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）协议才能使用 <xref:ReportService2010> 终结点。|  
 |<xref:ReportService2010.ReportingService2010.ListRoles%2A>|返回报表服务器管理的角色的名称和说明。|  
 |<xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A>|返回在调用时需要安全连接的 <xref:ReportExecution2005> 端点中简单对象访问协议 (SOAP) 方法的列表。 报表服务器的 SecureConnectionLevel  设置用于确定返回的方法。|  
 |<xref:ReportService2010.ReportingService2010.ListTasks%2A>|返回报表服务器管理的任务。|  

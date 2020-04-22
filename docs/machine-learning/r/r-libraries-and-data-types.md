@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117460"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486716"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 与 SQL Server 之间的数据类型映射
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ SQL Server 2016 R Services 和带有 R 的 SQL Server 机器学习服务与 Micr
 
 ## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>SQL Server 2016 与早期版本中数据类型的变化
 
-Microsoft SQL Server 2016 和 Microsoft Azure SQL 数据库对数据类型转换和其他一些操作做了改进。 其中的大多数改进都提高了处理浮点类型时的精度，同时对经典 **datetime** 类型的操作做了轻微的改变。
+Microsoft SQL Server 2016 及更高版本对数据类型转换和其他一些操作进行了改进。 其中的大多数改进都提高了处理浮点类型时的精度，同时对经典 **datetime** 类型的操作做了轻微的改变。
 
 使用 130 或更高的数据库兼容级别时，默认会使用这些改进。 但是，如果使用不同的兼容级别，或者使用旧版本连接到数据库，可能会看到数字精度的变化或其他结果。 
 
@@ -101,7 +101,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL 数据库对数据类型转换
 如果某个特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不受 R 支持，但你需要在 R 脚本中使用数据列，我们建议在 R 脚本中使用这些数据之前，使用 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数确保数据类型转换按预期执行。  
 
 > [!WARNING]
-> 如果在移动数据时使用 **rxDataStep** 删除不兼容的列，请注意，_RxSqlServerData_ 数据源类型不支持 _varsToKeep_ 和 **varsToDrop** 参数。
+> 如果在移动数据时使用 **rxDataStep** 删除不兼容的列，请注意，**RxSqlServerData** 数据源类型不支持 _varsToKeep_ 和 _varsToDrop_ 参数。
 
 
 ## <a name="examples"></a>示例
@@ -168,7 +168,7 @@ outputDataSet <- inputDataSet'
 -   **列 C4**。 列包含由 R 脚本生成的值且不会出现在原始数据中。
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>示例 2︰使用 R 进行动态列选择
+## <a name="example-2-dynamic-column-selection-using-r"></a>示例 2：使用 R 进行动态列选择
 
 以下示例演示如何使用 R 代码来检查无效的列类型。 该查询使用 SQL Server 系统视图获取指定表的架构，然后删除指定的类型无效的所有列。
 

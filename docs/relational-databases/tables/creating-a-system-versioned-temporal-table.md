@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 8797219e96083d65d2bad83c83c8aebba783b207
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809855"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299049"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的时态表
 
@@ -134,7 +134,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 - 更好的 DML 性能
 - 最低的维护成本
 
- 转换现有表时，建议使用 HIDDEN  子句隐藏新的 PERIOD  列（datetime2 列“SysStartTime”  和“SysEndTime”  ），以免影响不旨在处理新列的现有应用程序。
+ 转换现有表时，建议使用 HIDDEN  子句来隐藏新的 PERIOD  列（datetime2 类型列 SysStartTime  和 SysEndTime  ），以免影响不显式指定列名（例如，不含列列表的 SELECT * 或 INSERT）且不旨在处理新列的现有应用程序。
 
 ### <a name="adding-versioning-to-non-temporal-tables"></a>将版本控制添加到非临时表
 

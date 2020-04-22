@@ -1,7 +1,7 @@
 ---
 title: 创建和管理全文索引 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: a76112a515f33bc169883c60de68742239c8d4e1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80530945"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304404"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "80530945"
     |----------|-----------------|  
     |**常规**|显示全文索引的基本属性。 这些基本属性包括若干个可修改属性和多个不可更改属性，后者如数据库名称、表名和全文键列的名称。 可修改属性包括：<br /><br /> **全文索引非索引字表**<br /><br /> **全文索引已启用**<br /><br /> **更改跟踪**<br /><br /> **搜索属性列表**|  
     |**“列”**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[填充全文索引](populate-full-text-indexes.md)。|
-    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文索引属性”  对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 *database_name*.*table_name* 启动表增量填充）相关联。|  
+    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文检索属性”对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 database_name.table_name 启动表增量填充）相关联    。|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。   
   
@@ -117,15 +117,15 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  **示例**  
   
- 下例查询 `PK_Document_DocumentID` 索引是否用于强制实现全文键列的唯一性，如下所示：  
+ 下例查询 `PK_Document_DocumentNode` 索引是否用于强制实现全文键列的唯一性，如下所示：  
   
 ```sql  
 USE AdventureWorks  
 GO  
-SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentNode',  'IsFulltextKey' )  
 ```  
   
- 如果使用 `PK_Document_DocumentID` 索引来强制实现全文键列的唯一性，则此示例返回 1。 否则，它返回 0 或 NULL。 NULL 表示您使用的是无效索引名称，索引名称与表不对应，或表不存在，等等。  
+ 如果使用 `PK_Document_DocumentNode` 索引来强制实现全文键列的唯一性，则此示例返回 1。 否则，它返回 0 或 NULL。 NULL 表示您使用的是无效索引名称，索引名称与表不对应，或表不存在，等等。  
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>查找全文键列的标识符  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  下例返回全文键列的标识符或 NULL。 NULL 表示您使用的是无效索引名称，索引名称与表不对应，或表不存在，等等。  
   
-```sql  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -162,7 +162,7 @@ SELECT @key_column AS 'Unique Key Column';
 GO  
 ```  
   
- 此示例返回一个名为 `Unique Key Column`的结果集列，该结果集列显示单个行，该行包含 Document 表的唯一键列 DocumentID 的名称。 请注意，如果此查询包含无效的索引名称，索引名称与表不对应或表不存在等，它将返回 NULL。  
+ 此示例返回名为“`Unique Key Column`”的结果集列，其中显示一行，行内包含 Document 表的唯一键列 DocumentNode 的名称。 请注意，如果此查询包含无效的索引名称，索引名称与表不对应或表不存在等，它将返回 NULL。  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>索引 varbinary(max) 和 xml 列  
  如果 **varbinary(max)** 、 **varbinary**或 **xml** 列是全文索引列，则与任何其他全文索引列一样，可以使用全文谓词（CONTAINS 和 FREETEXT）以及函数（CONTAINSTABLE 和 FREETEXTTABLE）来查询该列。

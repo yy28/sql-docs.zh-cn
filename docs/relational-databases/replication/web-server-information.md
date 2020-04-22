@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a267600824313e55f49a175aee89891d7aad3dc0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bebf91748c10f1b33c199c3afc227cb8f16b4f88
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137026"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529171"
 ---
 # <a name="web-server-information"></a>Web 服务器信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68137026"
  如果在“发布属性”对话框的“FTP 快照和 Internet”页中指定了 Web 服务器地址，该地址将作为默认值显示在此文本框中   。 您可以接受此默认值，也可以为同步此订阅的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 服务器输入完全限定的 Web 服务器地址。  
   
  **各个订阅服务器将如何连接到 Web 服务器?**  
- 指定用于连接到 Web 服务器的身份验证的类型。 建议您将基本身份验证与安全套接字层 (SSL) 一起使用，以连接到 IIS 服务器。 如果选择了基本身份验证，请输入用于从订阅服务器连接到 IIS 服务器的登录名和密码。  
+ 指定用于连接到 Web 服务器的身份验证的类型。 建议结合使用基本身份验证与传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”），以连接到 IIS 服务器。 如果选择了基本身份验证，请输入用于从订阅服务器连接到 IIS 服务器的登录名和密码。  
   
 ## <a name="see-also"></a>另请参阅  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   

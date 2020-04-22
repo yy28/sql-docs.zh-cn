@@ -1,7 +1,7 @@
 ---
 title: Read（数据库引擎）| Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,21 +17,28 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 246c24d261879880a079191210841fefef62549f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000604"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633564"
 ---
-# <a name="read-database-engine"></a>Read（数据库引擎）
+# <a name="read-database-engine-by-using-csharp"></a>使用 C# 读取（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Read 从传入的 BinaryReader 中读取 SqlHierarchyId 的二进制表示形式，并将 SqlHierarchyId 对象设置为该值。    无法通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来调用 Read。 请改为使用 CAST 或 CONVERT。
   
 ## <a name="syntax"></a>语法  
-  
-```sql
+
+<!--
+This is not T-SQL, despite the ```sql colorizer specified.
+Neither should this be ```syntaxsql.
+Rather, this is C# (or C# syntax).  Same for the later code blocks.
+I am making this fix now, from ```sql to ```cs, on 2020/04/16.  GeneMi.
+-->
+
+```csharp
 void Read( BinaryReader r )   
 ```  
   
@@ -51,7 +58,7 @@ void Read( BinaryReader r )
   
 ## <a name="examples"></a>示例  
   
-```sql
+```csharp
 Byte[] encoding = new byte[] { 0x58 };  
 MemoryStream stream = new MemoryStream(encoding, false /*not writable*/);  
 BinaryReader br = new BinaryReader(stream);  

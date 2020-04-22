@@ -3,17 +3,17 @@ title: 配置适用于 SQL Server 2017 和 2019 的 Linux 存储库
 description: 检查并配置适用于 Linux 中 SQL Server 2019 和 SQL Server 2017 的源存储库。 源存储库会影响在安装和升级期间应用的 SQL Server 版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198424"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301698"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置存储库以便安装和升级 Linux 上的 SQL Server
 
@@ -158,13 +158,13 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 如有必要，删除旧的存储库。 基于之前配置的存储库类型，使用以下命令之一。
 
 > [!NOTE]
-> 自 SQL Server 2019 CU3 起，支持 Ubuntu 18.04。 如果使用的是 Ubuntu 16.04，请将以下路径更改为 `/ubuntu/16.04` 而不是 `/ubuntu/18.04`。
+> 自 SQL Server 2019 CU3 和 SQL Server 2017 CU20 起，开始支持 Ubuntu 18.04。 如果使用的是 Ubuntu 16.04，请将下面的路径更改为 `/ubuntu/16.04`（而不是 `/ubuntu/18.04`），并使用正确的[发行版代码名称](https://releases.ubuntu.com/)。
 
 | 存储库 | 要删除的命令 |
 |---|---|
 | **预览版 (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| 2019 CU  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 xenial main'` | 
-| 2019 GDR  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr xenial main'` |
+| 2019 CU  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic main'` | 
+| 2019 GDR  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr bionic main'` |
 | 2017 CU  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | 2017 GDR  | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -179,14 +179,16 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 > [!NOTE]
 > 以下用于 SQL Server 2019 的命令指向 RHEL 8 存储库。 RHEL 8 未预安装 SQL Server 所需的 python2。 有关详细信息，请参阅以下博客，了解如何安装 python2 并将其配置为默认解释器： https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
 >
-> 如果使用 RHEL 7，请将以下路径更改为 `/rhel/7` 而不是 `/rhel/8`。
+> 自 SQL Server 2017 CU20 起，开始支持 RHEL 8。
+>
+> 如果使用的是 RHEL 7 或 RHEL 8，请确保路径与 `/rhel/7` 或 `/rhel/8` 匹配。
 
 | 存储库 | 版本 | Command |
 |---|---|---|
 | 2019 CU  | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
 | 2019 GDR  | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
-| 2017 CU  | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| 2017 GDR  | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| 2017 CU  | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo` |
+| 2017 GDR  | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -208,7 +210,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 配置要用于 SQL Server 安装和升级的新存储库。
 
 > [!NOTE]
-> 自 SQL Server 2019 CU3 起，支持 Ubuntu 18.04。 以下用于 SQL Server 2019 的命令指向 Ubuntu 18.04 存储库。
+> 自 SQL Server 2019 CU3 和 SQL Server 2017 CU20 起，开始支持 Ubuntu 18.04。 以下命令指向 Ubuntu 18.04 存储库。
 >
 > 如果使用的是 Ubuntu 16.04，请将以下路径更改为 `/ubuntu/16.04` 而不是 `/ubuntu/18.04`。
 
@@ -224,8 +226,8 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
    |---|---|---|
    | 2019 CU  | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"` |
    | 2019 GDR  | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019-gdr.list)"` |
-   | 2017 CU  | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | 2017 GDR  | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | 2017 CU  | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"` |
+   | 2017 GDR  | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017-gdr.list)"` |
 
 3. 运行“apt-get 更新”  。
 

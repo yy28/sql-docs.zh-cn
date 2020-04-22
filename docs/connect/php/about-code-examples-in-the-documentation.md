@@ -1,5 +1,6 @@
 ---
-title: 文档中相关的代码示例 | Microsoft Docs
+title: 文档中相关的代码示例
+description: 在执行 Microsoft Drivers for PHP for SQL Server 文档中的代码示例时，有几点注意事项。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9da3b91dfa90ed9b28ec9518b5cdb012002d62ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c90f2f1a420f1ab40f99a2fe83c928890e37e621
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911783"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631888"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>文档中相关的代码示例
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80911783"
   
     有关如何下载免费版和试用版的 SQL Server 的信息，请参阅 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193)。  
   
-    有关如何下载和安装 AdventureWorks 数据库的信息，请参阅 [SQL Server 示例 Github 存储库中的 AdventureWorks 页](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)。
+    若要了解如何下载和安装 AdventureWorks 数据库，请参阅 [SQL Server 示例 GitHub 存储库中的 AdventureWorks 页](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)。
   
 -   本文档中的几乎所有代码示例都计划从命令行中运行，这可支持自动测试所有代码示例。 有关如何从命令行运行 PHP 的信息，请参阅 [从命令行使用 PHP](https://php.net/manual/en/features.commandline.php)。  
   
@@ -48,8 +49,8 @@ ms.locfileid: "80911783"
     die();  
     ```  
   
-    有关处理错误和警告的详细信息，请参阅 [处理错误和警告](../../connect/php/handling-errors-and-warnings.md)。  
+    有关处理错误和警告的详细信息，请参阅 [处理错误和警告](handling-errors-and-warnings.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[Microsoft Drivers for PHP for SQL Server 概述](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 概述](overview-of-the-php-sql-driver.md)
   

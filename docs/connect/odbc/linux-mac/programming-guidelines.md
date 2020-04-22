@@ -1,5 +1,6 @@
 ---
-title: 编程指南 (ODBC Driver for SQL Server) | Microsoft Docs
+title: 编程指南（ODBC 驱动程序）
+description: macOS 和 Linux 上的 Microsoft ODBC Driver for SQL Server 的编程功能基于 SQL Server Native Client (ODBC) 中的 ODBC。
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219210"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632787"
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -49,7 +50,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 尚未验证以下功能是否能在此版本的 macOS 和 Linux 上的 ODBC 驱动程序中正常使用：
 
 -   故障转移群集连接
--   [透明网络 IP 解析](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution)（低于 ODBC Driver 17 版本）
+-   [透明网络 IP 解析](../using-transparent-network-ip-resolution.md)（低于 ODBC Driver 17 版本）
 -   [高级驱动程序跟踪](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 以下功能在此版本的 macOS 和 Linux 上的 ODBC 驱动程序中不可用： 
@@ -108,7 +109,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 
 连接后，驱动程序将检测加载它的进程的当前区域设置。 如果驱动程序使用上述一种编码，则驱动程序会将该编码用于 SQLCHAR（窄字符）数据；否则，默认使用 UTF-8。 默认情况下，由于所有进程都在“C”区域设置中启动（并因此导致驱动程序默认为 UTF-8），如果应用程序需要使用上述一种编码，则它应在连接前使用 setlocale 函数设置适当的区域设置：可显式指定所需的区域设置，或通过使用空字符串（例如，`setlocale(LC_ALL, "")`）来使用环境的区域设置  。
 
-因此，在编码为 UTF-8 的典型 Linux 或 Mac 环境中，从 ODBC Driver 13 或 13.1 升级的 ODBC Driver 17 用户将不会察觉到任何差异。 但是，通过 `setlocale()` 使用上述列表中非 UTF-8 编码的应用程序需要对传入/传出驱动程序的数据使用该编码，而不是 UTF-8。
+因此，在编码为 UTF-8 的典型 Linux 或 macOS 环境中，从 ODBC 驱动程序 13 或 13.1 升级的 ODBC 驱动程序 17 用户将不会察觉到任何差异。 但是，通过 `setlocale()` 使用上述列表中非 UTF-8 编码的应用程序需要对传入/传出驱动程序的数据使用该编码，而不是 UTF-8。
 
 SQLWCHAR 数据必须是 UTF-16LE (Little Endian)。
 
@@ -147,8 +148,8 @@ Windows 与 Linux 和 macOS 上的几个版本的 iconv 库之间存在一些编
 3.  当驱动程序与高度多线程的应用程序一起使用时，unixODBC 的句柄验证可能会成为性能瓶颈。 在这种情况下，通过使用 `--enable-fastvalidate` 选项编译 unixODBC 可以显着提高性能。 但是，请注意，这可能导致将无效句柄传递给 ODBC API 的应用程序崩溃，而不是返回 `SQL_INVALID_HANDLE` 错误。
 
 ## <a name="see-also"></a>另请参阅  
-[常见问题解答](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[常见问题解答](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[此版本驱动程序中的已知问题](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[此版本驱动程序中的已知问题](known-issues-in-this-version-of-the-driver.md)
 
-[发行说明](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[发行说明](release-notes-odbc-sql-server-linux-mac.md)

@@ -1,5 +1,6 @@
 ---
 title: 适用于 SQL Server 的 Node.js 驱动程序 | Microsoft Docs
+description: tedious 模块是 TDS 协议的开放源代码 JavaScript 实现，由所有新式版本的 SQL Server 提供支持。
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b1bc3240a726d1a322d10a80e5841697d8fd898
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2ac747a2ab737fc5368fcf1beb22a15399bfb896
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923851"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631917"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>用于 SQL Server 的 Node.js 驱动程序
 
@@ -23,7 +24,7 @@ ms.locfileid: "80923851"
 
 繁琐的模块是 TDS 协议的 JavaScript 实现，由所有新式版本的 SQL Server 提供支持。 此驱动程序是 GitHub 上的开放源代码项目。  
   
-可以在 Windows、Linux 或 Mac 上使用 Node.js 连接到 SQL 数据库。  
+可以在 Windows、Linux 或 macOS 上使用 Node.js 连接到 SQL 数据库。  
   
 ## <a name="getting-started"></a>入门  
 * [步骤 1：配置用于 Node.js 开发的开发环境](step-1-configure-development-environment-for-node-js-development.md)  

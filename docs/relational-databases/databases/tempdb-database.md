@@ -2,7 +2,7 @@
 title: tempdb 数据库 | Microsoft Docs
 description: 本主题提供有关在 SQL Server 和 Azure SQL 数据库中配置和使用 tempdb 数据库的详细信息
 ms.custom: P360
-ms.date: 08/21/2019
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c324d19a0e5005261a1c5a14834ea2d9c2f4f73
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288491"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635346"
 ---
 # <a name="tempdb-database"></a>TempDB 数据库
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-TempDB 系统数据库是一个全局资源，可供连接到  **实例或 SQL 数据库的所有用户使用**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 tempdb 用于保留：  
+TempDB 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或 SQL 数据库的所有用户使用  。 tempdb 用于保留：  
   
 - 显式创建的临时用户对象  ，例如：全局或局部临时表及索引、临时存储过程、表变量、表值函数返回的表或游标。  
 - 由数据库引擎创建的内部对象  。 其中包括：
@@ -111,26 +111,26 @@ TempDB  中的操作是最小日志记录操作，以便回滚事务。 每次�
 
 |SLO|最大 TempDB 数据文件大小 (GB)|TempDB 数据文件数|最大 TempDB 数据大小 (GB)|
 |---|---:|---:|---:|
-|基本|13|1|13|
-|S0|13|1|13|
-|S1|13|1|13|
-|S2|13|1|13|
+|基本|13.9|1|13.9|
+|S0|13.9|1|13.9|
+|S1|13.9|1|13.9|
+|S2|13.9|1|13.9|
 |S3|32|1|32
 |S4|32|2|64|
 |S6|32|3|96|
 |S7|32|6|192|
 |S9|32|12|384|
 |S12|32|12|384|
-|P1|13|12|156|
-|P2|13|12|156|
-|P4|13|12|156|
-|P6|13|12|156|
-|P11|13|12|156|
-|P15|13|12|156|
-|高级弹性池（所有 DTU 配置）|13|12|156|
-|标准弹性池 (S0-S2)|13|12|156|
+|P1|13.9|12|166.7|
+|P2|13.9|12|166.7|
+|P4|13.9|12|166.7|
+|P6|13.9|12|166.7|
+|P11|13.9|12|166.7|
+|P15|13.9|12|166.7|
+|高级弹性池（所有 DTU 配置）|13.9|12|166.7|
+|标准弹性池 (S0-S2)|13.9|12|166.7|
 |标准弹性池（S3 及更高版本） |32|12|384|
-|基本弹性池（所有 DTU 配置）|13|12|156|
+|基本弹性池（所有 DTU 配置）|13.9|12|166.7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>基于 vCore 的服务层的 TempDB 大小
@@ -264,7 +264,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-如果启用内存优化的 TempDB 元数据后，服务器因任何原因未能启动，则可以使用 [-f](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) 启动选项以**最小配置**启动 SQL Server，从而绕过该功能。 这将使用户能够禁用该功能，然后在正常模式下重启 SQL Server。
+如果启用内存优化的 TempDB 元数据后，服务器因任何原因未能启动，则可以使用 **-f** 启动选项以[最小配置](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)启动 SQL Server，从而绕过该功能。 这将使用户能够禁用该功能，然后在正常模式下重启 SQL Server。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 TempDB 容量规划
 确定 TempDB 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生产环境中的适当大小取决于多种因素。 如本文中前面所述，这些因素包括现有工作负荷以及使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 建议你通过在 SQL Server 测试环境中执行下列任务来分析现有的工作负荷：

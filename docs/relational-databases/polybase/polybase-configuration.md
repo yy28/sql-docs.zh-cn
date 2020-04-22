@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 59d268e0af326a92693cb09cb8e786364cd1f874
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4c229d7e0dcb2111a6e9685eed5b7d07dbd0bbd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215896"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295568"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 配置和安全
 
@@ -24,7 +24,7 @@ ms.locfileid: "80215896"
 
 ## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Hadoop.RPC.Protection 设置
 
-在 Hadoop 群集中保护通信的常用方法是将 hadoop.rpc.protection 配置更改为“隐私”或“完整性”。 默认情况下，PolyBase 假定配置设置为“身份验证”。 要替代此默认设置，请将以下属性添加到 core-site.xml 文件。 通过更改此配置，可实现 hadoop 节点之间以及 SSL 到 SQL Server 的连接之间安全的数据传输。
+在 Hadoop 群集中保护通信的常用方法是将 hadoop.rpc.protection 配置更改为“隐私”或“完整性”。 默认情况下，PolyBase 假定配置设置为“身份验证”。 要替代此默认设置，请将以下属性添加到 core-site.xml 文件。 通过更改此配置，可以实现 hadoop 节点之间的安全数据传输，以及 TLS 与 SQL Server 的连接。
 
 ```xml
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->

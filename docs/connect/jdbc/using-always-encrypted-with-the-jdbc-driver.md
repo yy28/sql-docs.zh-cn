@@ -1,5 +1,6 @@
 ---
-title: 结合使用 JDBC 驱动程序和 Always Encrypted | Microsoft Docs
+title: 对 JDBC 驱动程序使用 Always Encrypted
+description: 了解如何在 Java 应用程序中结合使用 Always Encrypted 和 JDBC Driver for SQL Server 来加密服务器上的敏感数据。
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19656198dfc3d49eca3f33841b5333f8aa9a3f63
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 37250a846a7dbf712a61731c3ee996b1312d3b8c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924058"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634861"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 本页介绍如何使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和 Microsoft JDBC Driver for SQL Server 6.0（或更高版本）来开发 Java 应用程序。
 
-Always Encrypted 允许客户端对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（例如用于 SQL Server 的 Microsoft JDBC Driver 6.0 或更高版本）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此行为。 该驱动程序自动确定哪些查询参数与 Always Encrypted 数据库列相对应，并对这些参数的值进行加密，然后再将这些参数递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和 [JDBC 驱动程序的 Always Encrypted API 参考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
+Always Encrypted 允许客户端对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（例如用于 SQL Server 的 Microsoft JDBC Driver 6.0 或更高版本）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此行为。 该驱动程序自动确定哪些查询参数与 Always Encrypted 数据库列相对应，并对这些参数的值进行加密，然后再将这些参数递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和 [JDBC 驱动程序的 Always Encrypted API 参考](always-encrypted-api-reference-for-the-jdbc-driver.md)。
 
 ## <a name="prerequisites"></a>先决条件
 - 确保在开发计算机上安装 Microsoft JDBC Driver for SQL Server 6.0（或更高版本）。 
@@ -107,7 +108,7 @@ SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumn
 
 clientID  是 Azure Active Directory 实例中应用注册的应用程序 ID。 clientKey  是在该应用程序下注册的密钥密码，它提供对 Azure Key Vault 的 API 访问。
 
-在应用程序创建 SQLServerColumnEncryptionAzureKeyVaultProvider 实例后，应用程序必须使用 SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 方法向驱动程序注册实例。 强烈建议使用默认查找名称 AZURE_KEY_VAULT 注册实例，该名称可通过调用 SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API 获取。 使用默认名称，你可以使用 SQL Server Management Studio 或 PowerShell 等工具来预配和管理 Always Encrypted 密钥（这些工具使用默认名称来生成列主密钥的元数据对象）。 下面的示例演示如何注册 Azure Key Vault 提供程序。 有关 SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 方法的详细信息，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
+在应用程序创建 SQLServerColumnEncryptionAzureKeyVaultProvider 实例后，应用程序必须使用 SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 方法向驱动程序注册实例。 强烈建议使用默认查找名称 AZURE_KEY_VAULT 注册实例，该名称可通过调用 SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API 获取。 使用默认名称，你可以使用 SQL Server Management Studio 或 PowerShell 等工具来预配和管理 Always Encrypted 密钥（这些工具使用默认名称来生成列主密钥的元数据对象）。 下面的示例演示如何注册 Azure Key Vault 提供程序。 有关 SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 方法的详细信息，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](always-encrypted-api-reference-for-the-jdbc-driver.md)。
 
 ```java
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
@@ -168,7 +169,7 @@ JDBC 驱动程序附带 Java 密钥存储的内置密钥存储提供程序实现
 String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
 ```
 
-还可以使用 SQLServerDataSource 对象获取或设置这些设置。 有关详细信息，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
+还可以使用 SQLServerDataSource 对象获取或设置这些设置。 有关详细信息，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](always-encrypted-api-reference-for-the-jdbc-driver.md)。
 
 当这些凭据出现在连接属性中时，JDBC 驱动程序会自动实例化 SQLServerColumnEncryptionJavaKeyStoreProvider。
 
@@ -392,7 +393,7 @@ sendTimeAsDatetime  连接属性用于配置将 java.sql.Time 值发送到服务
 有关此属性的详细信息，请参阅[配置将 java.sql.Time 值发送到服务器的方式](configuring-how-java-sql-time-values-are-sent-to-the-server.md)。
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>配置将 String 值发送到服务器的方式
-sendStringParametersAsUnicode  连接属性用于配置将 String 值发送到 SQL Server 的方式。 如果设置为 true，则 String 参数将以 Unicode 格式发送到服务器。 如果设置为 false，则以非 Unicode 格式（例如 ASCII 或 MBCS 而不是 Unicode）发送 String 参数。 此属性的默认值为 true。 如果启用了 Always Encrypted 并对 char/varchar/varchar(max) 列进行了加密，则 sendStringParametersAsUnicode  的值必须设置为 false。 如果将此属性设置为 true，则当解密包含 Unicode 字符的加密 char/varchar/varchar(max) 列中的数据时，驱动程序将引发异常。 有关此属性的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。
+sendStringParametersAsUnicode  连接属性用于配置将 String 值发送到 SQL Server 的方式。 如果设置为 true，则 String 参数将以 Unicode 格式发送到服务器。 如果设置为 false，则以非 Unicode 格式（例如 ASCII 或 MBCS 而不是 Unicode）发送 String 参数。 此属性的默认值为 true。 如果启用了 Always Encrypted 并对 char/varchar/varchar(max) 列进行了加密，则 sendStringParametersAsUnicode  的值必须设置为 false。 如果将此属性设置为 true，则当解密包含 Unicode 字符的加密 char/varchar/varchar(max) 列中的数据时，驱动程序将引发异常。 有关此属性的详细信息，请参阅[设置连接属性](setting-the-connection-properties.md)。
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 为应用程序查询启用 Always Encrypted 后，你可以使用标准 JDBC API 来检索或修改加密数据库列中的数据。 如果你的应用程序具备所需的数据库权限，并且可以访问列主密钥，驱动程序将加密任何面向加密列的查询参数，并将从加密列检索到的数据解密。
@@ -542,9 +543,9 @@ catch (SQLException e) {
 
 始终加密支持对加密数据类型进行若干种转换。 有关受支持类型转换的详细列表，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 下面介绍可以执行哪些操作来避免数据类型转换错误。 请确保：
 
-- 传递面向加密列的参数的值时，请使用正确的 setter 方法。 确保参数的 SQL Server 数据类型与目标列的类型完全相同，或者支持将参数的 SQL Server 数据类型转换为列的目标类型。 已将 API 方法添加到 SQLServerPreparedStatement、SQLServerCallableStatement 和 SQLServerResultSet 类，以传递与特定 SQL Server 数据类型对应的参数。 例如，如果未对列进行加密，则可以使用 setTimestamp() 方法将参数传递给 datetime2 或 datetime 列。 但在加密列时，必须使用表示数据库中列的类型的确切方法。 例如，使用 setTimestamp() 将值传递给加密的 datetime2 列，并使用 setDateTime() 将值传递给加密的 datetime 列。 有关新 API 的完整列表，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
-- 对于面向列的 decimal 和 numeric SQL Server 数据类型的参数，其精度和小数位数与为目标列配置的精度和小数位数相同。 已将 API 方法添加到 SQLServerPreparedStatement、SQLServerCallableStatement 和 SQLServerResultSet，以接受精度和小数位数，以及表示十进制和数值数据类型的参数/列的数据值。 有关新的/重载 API 的完整列表，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。  
-- 在用于修改目标列的值的查询中，对于面向 datetime2、datetimeoffset 或 time SQL Server 数据类型的列的参数，秒的小数部分精度/小数位数不大于目标列的秒的小数部分精度/小数位数。 已将 API 方法添加到 SQLServerPreparedStatement、SQLServerCallableStatement 和 SQLServerResultSet 类，以接受秒的小数部分精度/小数位数，以及表示这些数据类型的参数的数据值。 有关新的/重载 API 的完整列表，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
+- 传递面向加密列的参数的值时，请使用正确的 setter 方法。 确保参数的 SQL Server 数据类型与目标列的类型完全相同，或者支持将参数的 SQL Server 数据类型转换为列的目标类型。 已将 API 方法添加到 SQLServerPreparedStatement、SQLServerCallableStatement 和 SQLServerResultSet 类，以传递与特定 SQL Server 数据类型对应的参数。 例如，如果未对列进行加密，则可以使用 setTimestamp() 方法将参数传递给 datetime2 或 datetime 列。 但在加密列时，必须使用表示数据库中列的类型的确切方法。 例如，使用 setTimestamp() 将值传递给加密的 datetime2 列，并使用 setDateTime() 将值传递给加密的 datetime 列。 有关新 API 的完整列表，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](always-encrypted-api-reference-for-the-jdbc-driver.md)。
+- 对于面向列的 decimal 和 numeric SQL Server 数据类型的参数，其精度和小数位数与为目标列配置的精度和小数位数相同。 已将 API 方法添加到 SQLServerPreparedStatement、SQLServerCallableStatement 和 SQLServerResultSet，以接受精度和小数位数，以及表示十进制和数值数据类型的参数/列的数据值。 有关新的/重载 API 的完整列表，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](always-encrypted-api-reference-for-the-jdbc-driver.md)。  
+- 在用于修改目标列的值的查询中，对于面向 datetime2、datetimeoffset 或 time SQL Server 数据类型的列的参数，秒的小数部分精度/小数位数不大于目标列的秒的小数部分精度/小数位数。 已将 API 方法添加到 SQLServerPreparedStatement、SQLServerCallableStatement 和 SQLServerResultSet 类，以接受秒的小数部分精度/小数位数，以及表示这些数据类型的参数的数据值。 有关新的/重载 API 的完整列表，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](always-encrypted-api-reference-for-the-jdbc-driver.md)。
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>由于连接属性不正确而导致的错误
 
@@ -574,7 +575,7 @@ ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customer
 
 当使用 Always Encrypted 时，强制加密功能强制执行参数加密。 如果使用强制加密并且 SQL Server 告知驱动程序参数不需加密，则使用该参数的查询会失败。 此属性提供针对安全攻击的额外保护，这些攻击涉及受损 SQL Server 向客户端提供不正确的加密元数据，这可能会导致数据泄漏。 SQLServerPreparedStatement 和 SQLServerCallableStatement 类中的 set* 方法和 SQLServerResultSet 类中的 update\* 方法将重载，以接受布尔参数来指定强制加密设置。 如果此参数的值为 false，驱动程序将不会对参数执行强制加密。 如果强制加密设置为 true，那么只有当目标列已加密且连接或语句已启用 Always Encrypted 时，才会发送查询参数。 使用此属性将提供额外的安全层，确保驱动程序不会错误地将需要加密的数据作为纯文本发送到 SQL Server。
 
-有关 SQLServerPreparedStatement 和 SQLServerCallableStatement 方法的详细信息，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
+有关 SQLServerPreparedStatement 和 SQLServerCallableStatement 方法的详细信息，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](always-encrypted-api-reference-for-the-jdbc-driver.md)  
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>控制 Always Encrypted 对性能的影响
 
@@ -607,7 +608,7 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
     - 对于有参数需要加密的单个查询，则设置 SQLServerStatementColumnEncryptionSetting.Enabled。 此设置将允许调用 sys.sp_describe_parameter_encryption，同时允许对从加密列中检索到的任何查询结果解密。
     - 对于其参数不需要加密但会从加密列检索数据的查询，则设置 SQLServerStatementColumnEncryptionSetting.ResultSet。 此设置将禁止调用 sys.sp_describe_parameter_encryption 和参数加密。 查询将能够解密来自加密列的结果。
 
-SQLServerStatementColumnEncryptionSetting 设置不能用于绕过加密，也不能用于获取对纯文本数据的访问权限。 有关如何在语句中配置列加密的详细信息，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。  
+SQLServerStatementColumnEncryptionSetting 设置不能用于绕过加密，也不能用于获取对纯文本数据的访问权限。 有关如何在语句中配置列加密的详细信息，请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](always-encrypted-api-reference-for-the-jdbc-driver.md)。  
 
 在以下示例中，将对数据库连接禁用 Always Encrypted。 应用程序发出的查询有一个面向未加密的 LastName 列的参数。 该查询从已加密的 SSN 和 BirthDate 列中检索数据。 在这种情况下，不需要调用 sys.sp_describe_parameter_encryption 来检索加密元数据。 但是，需要启用查询结果解密，以便应用程序从两个加密列接收纯文本值。 使用 SQLServerStatementColumnEncryptionSetting.ResultSet 设置可以确保这一点。
 
@@ -664,7 +665,7 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 
 - 请确保目标表的加密配置与源表的配置完全相同。 特别是，两个表必须对相同的列加密，并且必须使用相同的加密类型和相同的加密密钥对列加密。 如果任何目标列的加密方式与其相应的源列不同，你都不能在复制操作完成后对目标表中的数据进行解密。 数据将损坏。
 - 配置数据库到源表和目标表的连接，而不启用 Always Encrypted。
-- 设置 allowEncryptedValueModifications 选项。 有关详细信息，请参阅[对 JDBC 驱动程序使用大容量复制](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)。
+- 设置 allowEncryptedValueModifications 选项。 有关详细信息，请参阅[对 JDBC 驱动程序使用大容量复制](using-bulk-copy-with-the-jdbc-driver.md)。
 
 > [!NOTE]
 > 指定 AllowEncryptedValueModifications 时需谨慎，因为该选项可能会导致损坏数据库，因为用于 Microsoft JDBC Driver for SQL Server 不会检查数据是否确实已加密，也不会检查是否使用与目标列相同的加密类型、算法和密钥对数据进行了正确加密。

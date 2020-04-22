@@ -1,5 +1,6 @@
 ---
-title: 了解 XA 事务 | Microsoft Docs
+title: 了解 XA 事务
+description: Microsoft JDBC Driver for SQL Server 支持 Java 平台 Enterprise Edition/JDBC 2.0 可选分布式事务。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efd99a3bc59b18eb29cb03719212b4f00e0c40b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916993"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528731"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 
@@ -46,9 +47,9 @@ ms.locfileid: "80916993"
 
 - 将 XA 事务与 Microsoft 分布式事务处理协调器 (MS DTC) 一起使用时，你可能会注意到 MS DTC 的当前版本不支持紧密结合的 XA 分支行为。 例如，MS DTC 在 XA 分支事务 ID (XID) 与 MS DTC 事务 ID 之间具有一对一的映射，由松散耦合的 XA 分支执行的工作彼此之间是隔离的。  
   
-- MS DTC 还支持紧密耦合的 XA 分支，其中具有相同全局事务 ID (GTRID) 的多个 XA 分支会映射到单个 MS DTC 事务 ID。 通过该项支持，多个紧密耦合的 XA 分支可在资源管理器中查看彼此的更改，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+- MS DTC 还支持紧密耦合的 XA 分支，其中全局事务 ID (GTRID) 相同的多个 XA 分支映射到一个 MS DTC 事务 ID。 通过该项支持，多个紧密耦合的 XA 分支可在资源管理器中查看彼此的更改，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
   
-- 借助 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 标志，应用程序可使用紧密耦合的 XA 事务，其中这些事务具有不同的 XA 分支事务 ID (BQUAL)，但其全局事务 ID (GTRID) 和格式 ID (FormatID) 相同。 为了使用该功能，必须对 XAResource.start 方法的 flags 参数设置 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)：
+- 借助 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)标志，应用程序可以使用紧密耦合的 XA 事务，这些事务有不同的 XA 分支事务 ID (BQUAL)，但有相同的全局事务 ID (GTRID) 和格式 ID (FormatID)。 为了使用该功能，必须对 XAResource.start 方法的 flags 参数设置 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)：
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -140,19 +141,19 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 - `XADefaultTimeout = 0`、`XAMaxTimeout = 0`
   
-     意味着不使用默认超时值，并且在客户端上不强制执行最大超时。 在这种情况下，只有在客户端使用 XAResource.setTransactionTimeout 设置超时时，事务才有超时。  
+     意味着不使用默认超时值，并且在客户端上不强制执行最大超时。 在这种情况下，只有在客户端使用 XAResource.setTransactionTimeout 设置超时的情况下，事务才会有超时。  
   
 - `XADefaultTimeout = 60`、`XAMaxTimeout = 0`
   
-     意味着如果客户端不指定任何超时，所有事务将有 60 秒的超时。 如果客户端指定超时，将使用该超时值。 不强制执行最大值超时值。  
+     表示如果客户端不指定任何超时，所有事务的超时都为 60 秒。 如果客户端指定超时，将使用该超时值。 不强制执行最大值超时值。  
   
 - `XADefaultTimeout = 30`、`XAMaxTimeout = 60`
   
-     意味着如果客户端不指定任何超时，所有事务将有 30 秒的超时。 如果客户端指定了任何超时，则只要此时间小于 60 秒（最大值），就将使用它。  
+     表示如果客户端不指定任何超时，所有事务的超时都为 30 秒。 如果客户端指定了任何超时，则只要此时间小于 60 秒（最大值），就将使用它。  
   
 - `XADefaultTimeout = 0`、`XAMaxTimeout = 30`
   
-     意味着如果客户端不指定任何超时，所有事务将有 30 秒的超时（最大值）。 如果客户端指定了任何超时，则只要此时间小于 30 秒（最大值），就将使用它。  
+     表示如果客户端不指定任何超时，所有事务的超时都为 30 秒（最大值）。 如果客户端指定了任何超时，则只要此时间小于 30 秒（最大值），就将使用它。  
   
 ### <a name="upgrading-sqljdbc_xadll"></a>升级 sqljdbc_xa.dll
 

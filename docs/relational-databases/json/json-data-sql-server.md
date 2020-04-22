@@ -2,7 +2,6 @@
 title: 使用 JSON 数据
 ms.date: 05/14/2019
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: quickstart
 helpviewer_keywords:
@@ -11,14 +10,15 @@ helpviewer_keywords:
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: genemi
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9c9498c6bcef8bf07657d17565bd8b596668033
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288141"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485036"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
 
@@ -374,7 +374,7 @@ FOR JSON AUTO;
   
 ## <a name="test-drive-built-in-json-support-with-the-adventureworks-sample-database"></a>使用 AdventureWorks 示例数据库测试驱动内置 JSON 支持
 
-若要获取 AdventureWorks 示例数据库，请至少从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=49502)下载数据库文件和示例以及脚本文件。
+若要获取 AdventureWorks 示例数据库，请至少从 [GitHub](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) 下载数据库文件和示例以及脚本文件。
 
 将示例数据库还原到 SQL Server 2016 实例后，请提取示例文件，然后从 JSON 文件夹中打开“JSON Sample Queries procedures views and indexes.sql”文件  。 运行此文件中的脚本，将某些现有数据的格式重新设置为 JSON 数据，对 JSON 数据测试示例查询和报告，为 JSON 数据编制索引，然后导入和导出 JSON。  
   

@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e00888943ae196cfb5b579368a7b05d80c4f1182
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907237"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529102"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "72907237"
   
  从版本 5.0 开始，IIS 中支持 Web 同步。 IIS 版本 7.0 不支持配置 Web 同步向导。 从 SQL Server 2012 开始，要使用 IIS 服务器上的 Web 同步组件，我们建议用户随复制安装 SQL Server。 这可以是免费的 SQL Server Express 版本。  
   
- 需要使用 SSL 进行 Web 同步。 您将需要由证书颁发机构颁发的安全证书。 仅出于测试目的，可以使用自行颁发的安全证书。  
+ 必须配置 TLS，才能进行 Web 同步。 您将需要由证书颁发机构颁发的安全证书。 仅出于测试目的，可以使用自行颁发的安全证书。  
    
   
  **配置 IIS 以实现 Web 同步**  
@@ -144,7 +144,7 @@ ms.locfileid: "72907237"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器和发布服务器可位于同一台计算机上（这是合并复制的典型安装）。 但是，IIS 应该安装在单独的计算机上。  
   
--   使用安全套接字层 (SSL) 加密订阅服务器和运行 IIS 的计算机之间的连接。 这对 Web 同步是必需的。  
+-   使用传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”），对订阅服务器和正在运行 IIS 的计算机之间的连接进行加密。 这对 Web 同步是必需的。  
   
 -   对从订阅服务器到 IIS 的连接使用基本身份验证。 使用基本身份验证，IIS 服务器无需委托，就可以代表订阅服务器与发布服务器/分发服务器建立连接。 如果使用集成身份验证，则必须使用委托。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "72907237"
   
 -   如果复制拓扑中的服务器位于防火墙之后，则需要在防火墙中打开端口以便启用 Web 同步。  
   
-    -   订阅服务器计算机使用 SSL 通过 HTTPS（通常配置为使用端口 443）连接到运行 IIS 的计算机。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器还可以通过 HTTP（通常配置为使用端口 80）建立连接。  
+    -   订阅服务器计算机使用 TLS 通过 HTTPS（通常配置为使用端口 443）连接到正在运行 IIS 的计算机。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器还可以通过 HTTP（通常配置为使用端口 80）建立连接。  
   
     -   运行 IIS 的计算机通常通过端口 1433 连接到发布服务器或分发服务器（默认实例）。 当发布服务器或分发服务器是某台服务器上的命名实例，且该服务器具有另一个默认实例时，则通常通过端口 1500 连接到命名实例。  
   

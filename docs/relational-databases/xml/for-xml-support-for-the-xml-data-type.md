@@ -1,5 +1,6 @@
 ---
 title: xml 数据类型的 FOR XML 支持 | Microsoft Docs
+description: 了解如何对 xml 数据类型的 SQL 数据库列使用 FOR XML 查询。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7fdf9bda5ddf8f3fdd0012c8f8fffced6f8f9b19
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 87c9ee4bff2206508cb3100604c84219b1cea1d5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665316"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81387971"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 数据类型的 FOR XML 支持
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   如果 FOR XML 查询在 SELECT 子句中指定了 **xml** 类型的列，列值将映射为返回的 XML 中的元素，不管是否指定了 ELEMENTS 指令。 **xml** 类型的列中的任何 XML 声明都不是序列化的。  
   
- 例如，下列查询将从 `BusinessEntityID`xml`FirstName` 类型的 `LastName` 列中检索客户联系人信息（如 `AdditionalContactInfo`**和** 列以及电话号码）。  
+ 例如，下列查询将从 **xml** 类型的 `AdditionalContactInfo` 列中检索客户联系人信息（如 `BusinessEntityID``FirstName` 和 `LastName` 列以及电话号码）。  
   
 ```  
 USE AdventureWorks2012;  

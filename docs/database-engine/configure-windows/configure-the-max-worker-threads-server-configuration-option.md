@@ -1,7 +1,7 @@
 ---
 title: 配置“最大工作线程数”服务器配置选项 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776425"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488311"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>配置 max worker threads 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "75776425"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
--   当实际的查询请求数量少于 **max worker threads**中设置的数量时，每一个线程处理一个查询请求。 但是，如果实际的查询请求数量超过了 **max worker threads**中设置的数量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将工作线程集中到池中，这样下一个可用的工作线程就可以处理请求。  
+-   当实际的查询请求数量少于 **max worker threads**中设置的数量时，每一个线程处理一个查询请求。 不过，如果实际的查询请求数超过了“工作线程数上限”  中设置的数量，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就会将工作线程集中到池中，这样下一个可用的工作线程就可以处理请求了。  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
@@ -55,35 +55,43 @@ ms.locfileid: "75776425"
   
 -   当服务器上连接有大量客户端时，线程池有助于优化性能。 一般情况下，会为每个查询请求创建一个单独的操作系统线程。 但是，当到服务器的连接达到数以百计时，为每个查询请求使用一个线程会占用大量的系统资源。 **max worker threads** 选项使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以为更大数量的查询请求创建一个工作线程池，这将提高性能。  
   
--   下表显示了针对各种 CPU 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的组合自动配置的最大工作线程数。  
+-   下表显示了自动为 CPU、计算机体系结构和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的各种组合配置的工作线程数上限，计算公式如下：默认最大工作器数 **+ ((逻辑 CPU 数** * - 4) * 每 CPU 工作器数  )**。  
   
-    |CPU 数|32 位计算机|64 位计算机|  
-    |------------|------------|------------|  
-    |\<= 4 个处理器|256|512|  
-    |8 个处理器|288|576|  
-    |16 个处理器|352|704|  
-    |32 个处理器|480|960|  
-    |64 个处理器|736|1472|  
-    |128 个处理器|4224|4480|  
-    |256 个处理器|8320|8576| 
+    |CPU 数|32 位计算机（不高于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）|64 位计算机（不高于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1）|64 位计算机（自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起）|   
+    |------------|------------|------------|------------|  
+    |\<= 4|256|512|512|   
+    |8|288|576|576|   
+    |16|352|704|704|   
+    |32|480|960|960|   
+    |64|736|1472|2432|   
+    |128|1248|2496|4480|   
+    |256|2272|4544|8576|   
     
-    使用下列公式：
+    在不高于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 的版本中，“每 CPU 工作器数”  只取决于体系结构（32 位还是 64 位）：
     
-    |CPU 数|32 位计算机|64 位计算机|  
-    |------------|------------|------------| 
-    |\<= 4 个处理器|256|512|
-    |\> 4 到 \<64 个（含）处理器|256 +（（逻辑 CPU 位数 - 4）* 8）|512 +（（逻辑 CPU 位数 - 4）* 16）|
-    |\> 64 个处理器|256 + ((逻辑 CPU 位数 - 4) * 32)|512 + ((逻辑 CPU 位数 - 4) * 32)|
+    |CPU 数|32 位计算机<sup>1</sup>|64 位计算机|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4|256 +（（逻辑 CPU 位数 - 4）* 8）|512<sup>2</sup> + ((逻辑 CPU 数 - 4) * 16)|   
+    
+    自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，“每 CPU 工作器数”  取决于体系结构和处理器数（介于 4 和 64 之间还是大于 64）：
+    
+    |CPU 数|32 位计算机<sup>1</sup>|64 位计算机|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4 和 \<= 64|256 +（（逻辑 CPU 位数 - 4）* 8）|512<sup>2</sup> + ((逻辑 CPU 数 - 4) * 16)|   
+    |\> 64|256 + ((逻辑 CPU 位数 - 4) * 32)|512<sup>2</sup> + ((逻辑 CPU 数 - 4) * 32)|   
   
-    > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不再能够安装在 32 位操作系统上。 为了帮助运行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更低版本的客户，我们列出了 32 位计算机值。 建议对 32 位计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用最大工作线程数 1,024。  
+    <sup>1</sup>自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能再安装在 32 位操作系统上。 为了帮助运行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更低版本的客户，我们列出了 32 位计算机值。 建议对 32 位计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用最大工作线程数 1,024。
+    
+    <sup>2</sup>自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，对于内存小于 2GB 的计算机，“默认最大工作器数”  值除以 2。
   
-    > [!NOTE]  
+    > [!TIP]  
     > 有关使用 64 个以上的 CPU 的建议，请参考 [在具有超过 64 个 CPU 的计算机上运行 SQL Server 的最佳做法](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)。  
   
 -   如果所有工作线程因为长时间运行的查询而处于活动状态， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能停止响应，直到一个工作线程完成并变成可用。 虽然这不是缺点，但有时用户可能并不希望如此。 如果进程显示为停止响应并且不再处理新查询，则将使用专用管理员连接 (DAC) 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并关闭此进程。 为避免此种情况发生，请增大最大工作线程数。  
   
- “最大工作线程数”  服务器配置选项不会限制系统中可能生成的所有线程。 可用性组、Service Broker、锁管理器或其他任务所需的线程在此限制之外生成。 如果超过了配置的线程数，下列查询提供有关已生成附加线程的系统任务的信息。  
+ “工作线程数上限”  服务器配置选项不限制系统中可能生成的所有线程。 可用性组、Service Broker、锁管理器或其他任务所需的线程在此限制之外生成。 如果超过了配置的线程数，下列查询提供有关已生成附加线程的系统任务的信息。  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  

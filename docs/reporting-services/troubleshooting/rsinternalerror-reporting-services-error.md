@@ -1,5 +1,6 @@
 ---
 title: rsInternalError - Reporting Services 错误 | Microsoft Docs
+description: 在此错误参考页中，了解事件 ID“rsInternalError”：报表服务器上出现内部错误。 有关详细信息，请参阅错误日志。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e7257e1c7a24786e580ce8d2c2da9bd52ac5b86c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3f134f1c071b62c1c32f48855f76f62d5a1b0a69
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573998"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487234"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 错误
     

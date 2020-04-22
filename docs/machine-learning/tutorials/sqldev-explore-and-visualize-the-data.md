@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116100"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632107"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课：浏览并可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +67,11 @@ ms.locfileid: "81116100"
 > 自 SQL Server 2019 起，隔离机制已发生更改。 因此，需要为存储绘图文件的目录授予适当的权限。 有关如何设置这些权限的详细信息，请参阅 [Windows 上 SQL Server 2019 中的“文件权限”部分：机器学习服务的隔离更改](../install/sql-server-machine-learning-services-2019.md#file-permissions)。
 ::: moniker-end
 
-若要创建绘图，请使用 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，这是 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 中提供的增强型 R 函数之一。 这一步基于从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的数据绘制直方图。 可以将此函数包装在存储过程 PlotRxHistogram 中  。
+若要创建绘图，请使用 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，这是 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 中提供的增强型 R 函数之一。 这一步基于从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的数据绘制直方图。 可以将此函数包装在存储过程 RxPlotHistogram  中。
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器”中，右键单击 NYCTaxi_Sample 数据库，然后选择“新建查询”   。
 
-2. 粘贴下面的脚本，创建绘制直方图的存储过程。 将此示例命名为 *RPlotRxHistogram  。
+2. 粘贴下面的脚本，创建绘制直方图的存储过程。 此示例命名为“RxPlotHistogram”  。
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]

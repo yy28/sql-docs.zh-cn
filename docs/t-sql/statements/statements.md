@@ -1,7 +1,7 @@
 ---
 title: 语句 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
@@ -13,23 +13,29 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43d4405411005ab43e3f2b2fe9b2136a5793e8a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b130cf3de5e416282c08ce45059db1ea21505ce7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099989"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633521"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 语句
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-本参考主题总结了用于 Transact-SQL (T-SQL) 的语句的类别。 左侧导航栏中列出了所有语句。
+SQL 语句是工作的原子单元，要么完全成功，要么完全失败。 SQL 语句是一组指令，由标识符、参数、变量、名称、数据类型和成功编译的 SQL 保留字组成。 如果 `BeginTransaction` 命令未指定启动事务，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为 SQL 语句创建隐式  事务。 如果此语句成功，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会始终提交隐式事务；如果此命令失败，则会回滚隐式事务。  
+
+语句有很多种类型。 也许最重要的是 [SELECT](../queries/select-transact-sql.md)，它从数据库中检索行，并支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一个或多个表内选择一个或多个行或列。 本文总结了除 `SELECT` 语句外还用于 Transact-SQL (T-SQL) 的语句类别。 左侧导航栏中列出了所有语句。
 
 ## <a name="backup-and-restore"></a>备份和还原
+
 备份和还原语句提供创建备份和从备份中还原的方法。  有关详细信息，请参阅[备份和还原概述](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。
 
 ## <a name="data-definition-language"></a>数据定义语言
+
 数据定义语言 (DDL) 语句定义数据结构。 使用以下语句在数据库中创建、更改或删除数据结构。
+
 - ALTER
 - 排序规则
 - CREATE
@@ -40,6 +46,7 @@ ms.locfileid: "68099989"
 - UPDATE STATISTICS
 
 ## <a name="data-manipulation-language"></a>数据操作语言
+
 数据操作语言 (DML) 影响存储在数据库中的信息。 使用以下语句在数据库中插入、更新和更改行。
 
 - BULK INSERT
@@ -50,10 +57,13 @@ ms.locfileid: "68099989"
 - TRUNCATE TABLE
 
 ## <a name="permissions-statements"></a>权限语句
+
 权限语句决定哪些用户和登录名可以访问数据并执行操作。 有关身份验证和访问权限的详细信息，请参阅[安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。
 
 ## <a name="service-broker-statements"></a>Service Broker 语句
+
 Service Broker 是一项功能，可为消息和队列应用程序提供本机支持。 有关详细信息，请参阅 [Service Broker](../../relational-databases/service-broker/event-notifications.md)。
 
 ## <a name="session-settings"></a>会话设置
+
 SET 语句决定当前会话处理运行时设置的方式。 如需查看概述，请参阅 [SET 语句](set-statements-transact-sql.md)。

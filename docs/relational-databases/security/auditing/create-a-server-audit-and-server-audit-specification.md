@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8fe4348947203e54a889c9e7fa18067a0562feca
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952469"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635755"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "75952469"
      指定当“审核目标”  是文件时，要将审核数据写入的文件夹所在的位置。  
   
      **省略号 (...)**  
-     打开“定位文件夹 - server**name”对话框，以指定文件路径或创建要写入审核文件的文件夹** _\__ 。  
+     打开“定位文件夹 - server\_name”对话框，以指定文件路径或创建要写入审核文件的文件夹   。  
   
      **审核文件最大限制：**  
      **最大滚动更新文件数**  
@@ -164,14 +164,19 @@ ms.locfileid: "75952469"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
-        TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
+        TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
-  
+> [!NOTE]
+> 即使可以使用 UNC 路径作为审核文件目标，也要谨慎使用。 如果相应文件共享存在网络延迟，SQL Server 可能会出现性能降低，因为线程会先等待审核写入完成，再继续运行。 你可能会在 SQL Server 错误日志中看到各种错误消息，如 17894：
+>
+>   “2020-02-07 12:21:35.100 来自调度程序池‘XE 引擎主调度程序池’工作器 0x00000058E7300000 的服务器调度程序 (0x7954) 似乎在节点 0 上无法完成”。
+
+
 #### <a name="to-create-a-server-audit-specification"></a>创建服务器审核规范  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  

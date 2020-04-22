@@ -1,5 +1,6 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 的支持资源 | Microsoft 文档
+title: Microsoft Drivers for PHP 的支持资源
+description: 收录了在开发使用 Microsoft Drivers for PHP for SQL Server 的应用程序时有用的资源。
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 111700744e046547f43e88fbd02a214438a6b397
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ff0627dc43a0004534294158c1a43c6c1c21b529
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926877"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635345"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的支持资源
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,13 +26,13 @@ ms.locfileid: "80926877"
 本主题列出了在开发使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的应用程序时可能有用的资源。  
   
 ## <a name="ssdriverphp-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持资源  
-有关最新文档，请参阅适用于 [的](../../connect/php/microsoft-php-driver-for-sql-server.md) Microsoft PHP Driver for SQL Server [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。  
+有关最新文档，请参阅适用于 [的](microsoft-php-driver-for-sql-server.md) Microsoft PHP Driver for SQL Server [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。  
   
 若要获取对等支持，请访问 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp)。  
   
 若要提供反馈、提问或了解开发团队正在考虑什么，请访问 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [团队博客](https://blogs.msdn.microsoft.com/sqlphp/)。  
   
-[Github 上的 Microsoft SQL Server PHP 驱动程序源代码](https://github.com/Microsoft/msphpsql)  
+[GitHub 上的 Microsoft PHP Driver for SQL Server 源代码](https://github.com/Microsoft/msphpsql)  
   
 ## <a name="sql-server-and-transact-sql-support-resources"></a>SQL Server 和 Transact-SQL 支持资源
 可在 [SQL Server 文档](../../sql-server/index.yml)中找到 SQL Server 和 Transact-SQL 文档。
@@ -51,8 +52,7 @@ ms.locfileid: "80926877"
 有关 PHP 文档，请访问 [http://www.php.net/docs.php](http://www.php.net/docs.php)。  
   
 ## <a name="microsoft-customer-support"></a>Microsoft 客户支持  
-若有与 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 相关的支持问题，可以联系 [Microsoft 支持部门](https://support.microsoft.com/contactus/)，也可以在 [Github 项目页](https://github.com/Microsoft/msphpsql/issues)上提问。  
+若有与 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 相关的支持问题，可以联系 [Microsoft 支持部门](https://support.microsoft.com/contactus/)，也可以在 [GitHub 项目页](https://github.com/Microsoft/msphpsql/issues)上提问。  
   
 ## <a name="see-also"></a>另请参阅  
-[Microsoft Drivers for PHP for SQL Server 概述](../../connect/php/overview-of-the-php-sql-driver.md)
-  
+[Microsoft Drivers for PHP for SQL Server 概述](overview-of-the-php-sql-driver.md)

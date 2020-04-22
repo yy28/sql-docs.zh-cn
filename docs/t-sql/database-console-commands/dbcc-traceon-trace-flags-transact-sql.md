@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3296dad876dc0f3ce95a29dc1b9f21f38db7b0a5
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 713658238cf9e737b8fff9e6c239c8b5a644e039
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402595"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529371"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -97,6 +97,8 @@ ms.locfileid: "80402595"
 |**1448**|甚至在异步辅助数据库不确认接受更改的情况下，也使复制日志读取器前移。 甚至在此跟踪标志启用的情况下，日志读取器也始终等待同步辅助数据库。 日志读取器将不会超过同步辅助数据库的最小确认。 此跟踪标志应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，而不仅是可用性组、可用性数据库或日志读取器实例。 应用会立即生效，无需重新启动。 此跟踪标志可提前激活或在同步辅助数据库失败时激活。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/937041)。<br /><br />**作用域**：仅全局|   
 |**1462**|对异步可用性组禁用日志流压缩。 默认情况下，对异步可用性组启用此功能，以优化网络带宽。 有关详细信息，请参阅 [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)（调整可用性组的压缩）。<br /><br />**作用域**：仅全局| 
 |**1800**|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 和日志传送环境中，当主副本和次要副本日志文件使用扇区大小不同的磁盘时，启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化。 只需在符合以下条件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上启用此跟踪标志：事务日志文件位于扇区大小为 512 字节的磁盘上。 **无**需在扇区大小为 4k 的磁盘上启用。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3009974)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU13、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 CU3、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU5 及更高内部版本。<br /><br />**作用域：** 仅全局|
+| 1819 | 允许[备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)，以便在访问 Azure 块 blob 时利用代理服务器。 除了使用此跟踪标志外，还必须通过以下方法之一在服务器上设置 WinHTTP 代理配置： <br /><br />- Windows XP 或 Windows Server 2003 及更低版本上的 [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) 实用工具。 <br /> - Windows Vista 和 Windows Server 2008 或更高版本上的 [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) 实用工具。 <br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON) |
+|1802 |在数据库附加或拆离操作过程中，禁用 ACL 更改和模拟访问验证。 在附加数据库并遇到访问权限错误（如错误 5120）时，这可能很有用。<br /><br />**作用域**：仅全局| 
 |**2301**|启用高级决策支持优化。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/920093)。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON) |
 |**2312**|将查询优化器基数估计模型设置为 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本，而不考虑数据库兼容性级别。<br /><br />**注意：** 如果数据库兼容性级别低于 120，则启用跟踪标志 2312 将使用基数估计模型 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (120)。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/kb/2801413)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT FORCE_DEFAULT_CARDINALITY_ESTIMATION [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)| 
 |**2335**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询优化期间假定有固定数量的内存可用。 它不限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予用来执行查询的内存。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置的内存仍将由数据缓存、查询执行和其他使用者使用。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2413549)。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|

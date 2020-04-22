@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c48422e86cfd3f42e6634a3ca3be1d0dbc85f24
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710353"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528481"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,16 +128,16 @@ snapshot [ -?]
  应生成动态快照的位置。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- 建立连接时快照代理使用的安全套接字层 (SSL) 加密的等级。  
+ 是快照代理在建立连接时使用的传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）加密的级别。  
   
 |EncryptionLevel 值|说明|  
 |---------------------------|-----------------|  
-|**0**|指定不使用 SSL。|  
-|**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
-|**2**|指定使用 SSL，并验证证书。|  
+|**0**|指定不使用 TLS。|  
+|**1**|指定使用 TLS，但代理不验证 TLS/SSL 服务器证书是否由受信任的颁发者进行签名。|  
+|**2**|指定使用 TLS，并验证证书。|  
 
  > [!NOTE]  
- >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，“Server”参数应设置为 SQL Server 的完全限定名称。
+ >  有效的 TLS/SSL 证书是使用 SQL Server 的完全限定的域名进行定义。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，“Server”参数应设置为 SQL Server 的完全限定名称。
   
  有关详细信息，请参阅[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   

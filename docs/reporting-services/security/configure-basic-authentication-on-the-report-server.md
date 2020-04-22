@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573298"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625866"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
   默认情况下，Reporting Services 接受指定 Negotiate 和 NTLM 身份验证的请求。 如果部署中包括使用基本身份验证的客户端应用程序或浏览器，则必须将基本身份验证添加到支持的类型列表中。 此外，若要使用报表生成器，必须启用对报表生成器文件的匿名访问。  
@@ -25,7 +25,7 @@ ms.locfileid: "65573298"
   
  启用基本身份验证之前，请验证您的安全基础结构是否支持。 在基本身份验证模式下，报表服务器 Web 服务会将凭据传递给本地安全机构。 如果凭据指定本地用户帐户，则该用户将由报表服务器计算机上的本地安全机构进行身份验证，并获取对本地资源有效的安全令牌。 域用户帐户的凭据将转发给域控制器并由它进行身份验证。 生成的票证对网络资源有效。  
   
- 若要在将凭据传输到网络中的域控制器时降低凭据被截获的风险，则需要通道加密，如安全套接字层 (SSL)。 基本身份验证本身以明文形式传输用户名，以 Base-64 编码格式传输密码。 添加信道加密会使数据包不可读。 有关详细信息，请参阅 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 若要降低凭据在传输到网络中的域控制器时被截获的风险，必须使用通道加密，如传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）。 基本身份验证本身以明文形式传输用户名，以 Base-64 编码格式传输密码。 添加信道加密会使数据包不可读。 有关详细信息，请参阅[在本机模式报表服务器上配置 TLS 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
  启用基本身份验证后，请注意在将连接属性设置为向报表提供数据的外部数据源时，用户不能选择 **“Windows 集成安全性”** 选项。 该选项将在数据源属性页中显示为灰色。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65573298"
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-     该文件位于 *>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\<* 。  
+     该文件位于 \<>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  。  
   
 2.  查找 \<Authentication>  。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65573298"
   
      请注意，不能将 **Custom** 与其他身份验证类型一起使用。  
   
-5.  使用对环境有效的值替换 \<Realm> 或 **DefaultDomain> 的空值**\<  。  
+5.  使用对环境有效的值替换 \<Realm> 或 \<DefaultDomain> 的空值   。  
   
 6.  保存文件。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65573298"
   
 |元素|必选|有效值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果不指定值，将使用 3。|**2** = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> **3** = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意：  不 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]支持值 0（针对交互登录）和 1（针对批处理登录）。|  
+|LogonMethod|是<br /><br /> 如果不指定值，将使用 3。|**2** = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> **3** = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 不  支持值 0（对于交互登录）和 1（对于批处理登录）。|  
 |领域|可选|指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|  
 |默认域|可选|指定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果计算机是域的成员，则该域是默认域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|  
   

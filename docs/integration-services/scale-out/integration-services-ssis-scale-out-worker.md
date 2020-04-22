@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082074"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488240"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
 
@@ -30,10 +30,10 @@ Scale Out Worker 运行 Scale Out Worker 服务以从 Scale Out Master 中请求
 
 |配置  |说明  |默认值|
 |---------|---------|---------|
-|DisplayName|Scale Out Worker 的显示名称。 没有在  **2017 中使用。[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]**|计算机名称|
-|说明|Scale Out Worker 的说明。 没有在  **2017 中使用。[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]**|空|
+|DisplayName|Scale Out Worker 的显示名称。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。 |计算机名称|
+|说明|Scale Out Worker 的说明。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。 |空|
 |MasterEndpoint|连接到 Scale Out Master 的终结点。|该终结点在 Scale Out Worker 安装期间设置|
-|MasterHttpsCertThumbprint|用于对 Scale Out Master 进行身份验证的客户端 SSL 证书的指纹|客户端证书的指纹在 Scale Out Worker 安装期间指定。|
+|MasterHttpsCertThumbprint|用于验证 Scale Out Master 的客户端 TLS/SSL 证书的指纹|客户端证书的指纹在 Scale Out Worker 安装期间指定。|
 |WorkerHttpsCertThumbprint|用于对 Scale Out Worker 进行身份验证的 Scale Out Master 证书的指纹。|证书的指纹在 Scale Out Worker 安装期间自动创建并安装|
 |StoreLocation|Worker 证书的存储位置。|LocalMachine|
 |StoreName|Worker 证书所在位置的存储名称。|My|
@@ -59,7 +59,7 @@ Scale Out Worker 运行 Scale Out Worker 服务以从 Scale Out Master 中请求
 ## <a name="view-the-scale-out-worker-log"></a>查看 Scale Out Worker 日志
 Scale Out Worker 服务的日志文件位于 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent` 文件夹。
 
-在 `WorkerSettings.config` 的 `TasksRootFolder` 文件中配置每项单独任务的日志位置。 如果未指定值，则日志位于 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` 文件夹。 
+在 `TasksRootFolder` 的 `WorkerSettings.config` 文件中配置每项单独任务的日志位置。 如果未指定值，则日志位于 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` 文件夹。 
 
 [account] 参数是运行 Scale Out Worker 服务的帐户  。 默认情况下，该帐户为 `SSISScaleOutWorker140`。
 

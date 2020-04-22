@@ -9,12 +9,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 3a45b9164d2d81983e9a40f0395189979d4daa7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303138"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -86,7 +86,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/SourcePassword:**|**/sp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的密码。 |
 |**/SourceServerName:**|**/ssn**|{string}|定义承载源数据库的服务器的名称。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立与源数据库的连接的超时时间（以秒为单位）。 |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 SSL 对源数据库连接进行加密并绕过证书链来验证信任。 |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 TLS 对源数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/SourceUser:**|**/su**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的 SQL Server 用户。 |
 |**/TargetFile:**|**/tf**|{string}| 指定要用作操作（而不是数据库）目标的目标文件（即 .dacpac 文件）。 如果使用此参数，则其他目标参数应无效。 对于仅支持数据库目标的操作，此参数应该无效。| 
 |**/TenantId:**|**/tid**|{string}|表示 Azure AD 租户 ID 或域名。 此选项是支持来宾用户或已导入的 Azure AD 用户以及 outlook.com、hotmail.com 或 live.com 等 Microsoft 帐户的必需选项。 如果省略此参数，将使用 Azure AD 的默认租户 ID（假定经过身份验证的用户是此 AD 的本机用户）。 但是，在这种情况下，不支持在此 Azure AD 中托管的任何来宾或已导入的用户和/或 Microsoft 帐户，并且操作将失败。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
@@ -144,7 +144,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/SourcePassword:**|**/sp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的密码。 |
 |**/SourceServerName:**|**/ssn**|{string}|定义承载源数据库的服务器的名称。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立与源数据库的连接的超时时间（以秒为单位）。 |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 SSL 对源数据库连接进行加密并绕过证书链来验证信任。 |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 TLS 对源数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/SourceUser:**|**/su**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的 SQL Server 用户。 |
 |**/TargetConnectionString:**|**/tcs**|{string}|指定目标数据库的有效 SQL Server/Azure 连接字符串。 如果指定了此参数，则应该独立于所有其他目标参数来使用此参数。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|指定作为 sqlpackage.exe 操作目标的数据库的替代名称。 |
@@ -152,7 +152,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/TargetPassword:**|**/tp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的密码。 |
 |**/TargetServerName:**|**/tsn**|{string}|定义承载目标数据库的服务器的名称。 |
 |**/TargetTimeout:**|**/tt**|{int}|指定建立与目标数据库的连接的超时时间（以秒为单位）。 对于 Azure AD，建议此值大于或等于 30 秒。|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 SSL 对目标数据库连接进行加密并绕过检查证书链来验证信任。 |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 TLS 对目标数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/TargetUser:**|**/tu**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的 SQL Server 用户。 |
 |**/TenantId:**|**/tid**|{string}|表示 Azure AD 租户 ID 或域名。 此选项是支持来宾用户或已导入的 Azure AD 用户以及 outlook.com、hotmail.com 或 live.com 等 Microsoft 帐户的必需选项。 如果省略此参数，将使用 Azure AD 的默认租户 ID（假定经过身份验证的用户是此 AD 的本机用户）。 但是，在这种情况下，不支持在此 Azure AD 中托管的任何来宾或已导入的用户和/或 Microsoft 帐户，并且操作将失败。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否应使用通用身份验证。 如果设置为 True，则激活交互式身份验证协议以支持 MFA。 此选项还可用于在不使用 MFA 时进行 Azure AD 身份验证，方法是使用需要用户输入用户名和密码或集成身份验证（Windows 凭据）的交互式协议。 如果将 /UniversalAuthentication 设置为 True，则不能在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 如果将 /UniversalAuthentication 设置为 False，则必须在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
@@ -271,7 +271,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
 
 |参数|缩写|值|说明|
 |---|---|---|---|
-|**/Action:**|**/a**|Export|指定要执行的操作。 |
+|**/Action:**|**/a**|导出|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|指定诊断日志记录是否输出到控制台。 默认为 False。 |
 |**/DiagnosticsFile:**|**/df**|{string}|指定一个用于存储诊断日志的文件。 |
@@ -285,7 +285,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
 |**/SourcePassword:**|**/sp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的密码。 |
 |**/SourceServerName:**|**/ssn**|{string}|定义承载源数据库的服务器的名称。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立与源数据库的连接的超时时间（以秒为单位）。 |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 SSL 对源数据库连接进行加密并绕过证书链来验证信任。 |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 TLS 对源数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/SourceUser:**|**/su**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的 SQL Server 用户。 |
 |**/TargetFile:**|**/tf**|{string}| 指定要用作操作（而不是数据库）目标的目标文件（即 .dacpac 文件）。 如果使用此参数，则其他目标参数应无效。 对于仅支持数据库目标的操作，此参数应该无效。|
 |**/TenantId:**|**/tid**|{string}|表示 Azure AD 租户 ID 或域名。 此选项是支持来宾用户或已导入的 Azure AD 用户以及 outlook.com、hotmail.com 或 live.com 等 Microsoft 帐户的必需选项。 如果省略此参数，将使用 Azure AD 的默认租户 ID（假定经过身份验证的用户是此 AD 的本机用户）。 但是，在这种情况下，不支持在此 Azure AD 中托管的任何来宾或已导入的用户和/或 Microsoft 帐户，并且操作将失败。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
@@ -312,7 +312,7 @@ SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件�
 
 |参数|缩写|值|说明|
 |---|---|---|---|
-|**/Action:**|**/a**|Import|指定要执行的操作。 |
+|**/Action:**|**/a**|导入|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|指定诊断日志记录是否输出到控制台。 默认为 False。 |
 |**/DiagnosticsFile:**|**/df**|{string}|指定一个用于存储诊断日志的文件。 |
@@ -326,7 +326,7 @@ SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件�
 |**/TargetPassword:**|**/tp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的密码。 |
 |**/TargetServerName:**|**/tsn**|{string}|定义承载目标数据库的服务器的名称。 |
 |**/TargetTimeout:**|**/tt**|{int}|指定建立与目标数据库的连接的超时时间（以秒为单位）。 对于 Azure AD，建议此值大于或等于 30 秒。|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 SSL 对目标数据库连接进行加密并绕过检查证书链来验证信任。 |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 TLS 对目标数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/TargetUser:**|**/tu**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的 SQL Server 用户。 |
 |**/TenantId:**|**/tid**|{string}|表示 Azure AD 租户 ID 或域名。 此选项是支持来宾用户或已导入的 Azure AD 用户以及 outlook.com、hotmail.com 或 live.com 等 Microsoft 帐户的必需选项。 如果省略此参数，将使用 Azure AD 的默认租户 ID（假定经过身份验证的用户是此 AD 的本机用户）。 但是，在这种情况下，不支持在此 Azure AD 中托管的任何来宾或已导入的用户和/或 Microsoft 帐户，并且操作将失败。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否应使用通用身份验证。 如果设置为 True，则激活交互式身份验证协议以支持 MFA。 此选项还可用于在不使用 MFA 时进行 Azure AD 身份验证，方法是使用需要用户输入用户名和密码或集成身份验证（Windows 凭据）的交互式协议。 如果将 /UniversalAuthentication 设置为 True，则不能在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 如果将 /UniversalAuthentication 设置为 False，则必须在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
@@ -371,7 +371,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
 |**/SourcePassword:**|**/sp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的密码。 |
 |**/SourceServerName:**|**/ssn**|{string}|定义承载源数据库的服务器的名称。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立与源数据库的连接的超时时间（以秒为单位）。 |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 SSL 对源数据库连接进行加密并绕过证书链来验证信任。 |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 TLS 对源数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/SourceUser:**|**/su**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的 SQL Server 用户。 |
 |**/TargetConnectionString:**|**/tcs**|{string}|指定目标数据库的有效 SQL Server/Azure 连接字符串。 如果指定了此参数，则应该独立于所有其他目标参数来使用此参数。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|指定作为 sqlpackage.exe 操作目标的数据库的替代名称。 |
@@ -380,7 +380,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
 |**/TargetPassword:**|**/tp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的密码。 |
 |**/TargetServerName:**|**/tsn**|{string}|定义承载目标数据库的服务器的名称。 |
 |**/TargetTimeout:**|**/tt**|{int}|指定建立与目标数据库的连接的超时时间（以秒为单位）。 对于 Azure AD，建议此值大于或等于 30 秒。|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 SSL 对目标数据库连接进行加密并绕过检查证书链来验证信任。 |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 TLS 对目标数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/TargetUser:**|**/tu**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的 SQL Server 用户。 |
 |**/TenantId:**|**/tid**|{string}|表示 Azure AD 租户 ID 或域名。 此选项是支持来宾用户或已导入的 Azure AD 用户以及 outlook.com、hotmail.com 或 live.com 等 Microsoft 帐户的必需选项。 如果省略此参数，将使用 Azure AD 的默认租户 ID（假定经过身份验证的用户是此 AD 的本机用户）。 但是，在这种情况下，不支持在此 Azure AD 中托管的任何来宾或已导入的用户和/或 Microsoft 帐户，并且操作将失败。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否应使用通用身份验证。 如果设置为 True，则激活交互式身份验证协议以支持 MFA。 此选项还可用于在不使用 MFA 时进行 Azure AD 身份验证，方法是使用需要用户输入用户名和密码或集成身份验证（Windows 凭据）的交互式协议。 如果将 /UniversalAuthentication 设置为 True，则不能在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 如果将 /UniversalAuthentication 设置为 False，则必须在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
@@ -504,7 +504,7 @@ SqlPackage.exe 报告操作创建自注册数据库注册以来已对其做出�
 |**/TargetPassword:**|**/tp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的密码。 |
 |**/TargetServerName:**|**/tsn**|{string}|定义承载目标数据库的服务器的名称。 |
 |**/TargetTimeout:**|**/tt**|{int}|指定建立与目标数据库的连接的超时时间（以秒为单位）。 对于 Azure AD，建议此值大于或等于 30 秒。|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 SSL 对目标数据库连接进行加密并绕过检查证书链来验证信任。 |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 TLS 对目标数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/TargetUser:**|**/tu**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的 SQL Server 用户。 |
 |**/TenantId:**|**/tid**|{string}|表示 Azure AD 租户 ID 或域名。 此选项是支持来宾用户或已导入的 Azure AD 用户以及 outlook.com、hotmail.com 或 live.com 等 Microsoft 帐户的必需选项。 如果省略此参数，将使用 Azure AD 的默认租户 ID（假定经过身份验证的用户是此 AD 的本机用户）。 但是，在这种情况下，不支持在此 Azure AD 中托管的任何来宾或已导入的用户和/或 Microsoft 帐户，并且操作将失败。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否应使用通用身份验证。 如果设置为 True，则激活交互式身份验证协议以支持 MFA。 此选项还可用于在不使用 MFA 时进行 Azure AD 身份验证，方法是使用需要用户输入用户名和密码或集成身份验证（Windows 凭据）的交互式协议。 如果将 /UniversalAuthentication 设置为 True，则不能在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 如果将 /UniversalAuthentication 设置为 False，则必须在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
@@ -536,7 +536,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 |**/SourcePassword:**|**/sp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的密码。 |
 |**/SourceServerName:**|**/ssn**|{string}|定义承载源数据库的服务器的名称。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立与源数据库的连接的超时时间（以秒为单位）。 |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 SSL 对源数据库连接进行加密并绕过证书链来验证信任。 |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否使用 TLS 对源数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/SourceUser:**|**/su**|{string}|对于 SQL Server 身份验证方案，定义要用于访问源数据库的 SQL Server 用户。 |
 |**/TargetConnectionString:**|**/tcs**|{string}|指定目标数据库的有效 SQL Server/Azure 连接字符串。 如果指定了此参数，则应该独立于所有其他目标参数来使用此参数。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|指定作为 sqlpackage.exe 操作目标的数据库的替代名称。 |
@@ -545,7 +545,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 |**/TargetPassword:**|**/tp**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的密码。 |
 |**/TargetServerName:**|**/tsn**|{string}|定义承载目标数据库的服务器的名称。 |
 |**/TargetTimeout:**|**/tt**|{int}|指定建立与目标数据库的连接的超时时间（以秒为单位）。 对于 Azure AD，建议此值大于或等于 30 秒。|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 SSL 对目标数据库连接进行加密并绕过检查证书链来验证信任。 |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否使用 TLS 对目标数据库连接进行加密，并绕过证书链来验证信任。 |
 |**/TargetUser:**|**/tu**|{string}|对于 SQL Server 身份验证方案，定义要用于访问目标数据库的 SQL Server 用户。 |
 |**/TenantId:**|**/tid**|{string}|表示 Azure AD 租户 ID 或域名。 此选项是支持来宾用户或已导入的 Azure AD 用户以及 outlook.com、hotmail.com 或 live.com 等 Microsoft 帐户的必需选项。 如果省略此参数，将使用 Azure AD 的默认租户 ID（假定经过身份验证的用户是此 AD 的本机用户）。 但是，在这种情况下，不支持在此 Azure AD 中托管的任何来宾或已导入的用户和/或 Microsoft 帐户，并且操作将失败。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否应使用通用身份验证。 如果设置为 True，则激活交互式身份验证协议以支持 MFA。 此选项还可用于在不使用 MFA 时进行 Azure AD 身份验证，方法是使用需要用户输入用户名和密码或集成身份验证（Windows 凭据）的交互式协议。 如果将 /UniversalAuthentication 设置为 True，则不能在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 如果将 /UniversalAuthentication 设置为 False，则必须在 SourceConnectionString (/scs) 中指定 Azure AD 身份验证。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅 [SQL 数据库和 SQL 数据仓库的通用身份验证（对 MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|

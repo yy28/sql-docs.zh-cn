@@ -1,6 +1,6 @@
 ---
 title: 连接到可用性组侦听器
-description: 包含有关连接到 Always On 可用性组侦听器的信息，例如如何使用 SSL 和 Kerberos 连接到主要副本和只读次要副本。
+description: 介绍了如何连接到 AlwaysOn 可用性组侦听程序，包括如何连接到主要副本和只读次要副本、如何使用 TLS/SSL 和 Kerberos。
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433734"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528491"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>连接到 Always On 可用性组侦听器 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ SELECT @@SERVERNAME
 
 在登录期间，应用程序意向属性存储在客户端的会话中，然后 SQL Server 实例将处理该意向，并按照可用性组的配置和辅助副本中目标数据库的当前读写状态来确定执行什么操作。  
 
-例如，若要使用 SQL Server Management Studio 连接到只读副本，请选择“连接到服务器”对话框上的“选项”，选择“附加连接参数”选项卡，然后在文本框中指定 `ApplicationIntent=ReadOnly`    ：
+例如，若要使用 SQL Server Management Studio 连接到只读副本，请选择“连接到服务器”对话框上的“选项”，选择“附加连接参数”选项卡，然后在文本框中指定 `ApplicationIntent=ReadOnly`   ：
 
 ![SSMS 中的只读连接](media/listeners-client-connectivity-application-failover/read-only-intent-in-ssms.png)
   
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  **MultiSubnetFailover** 连接选项应设置为 **True** ，即使可用性组仅跨单子网也不例外。  这允许您预先配置新的客户端以支持进一步跨多个子网，而无需进一步更改客户端连接字符串，还可以优化单子网故障转移的故障转移性能。  在不需要 **MultiSubnetFailover** 连接选项时，它将提供更快进行子网故障转移的优势。  这是因为，客户端驱动程序将尝试为每个与可用性组关联的 IP 地址并行打开 TCP 套接字。  客户端驱动程序将等待第一个 IP 响应成功，一旦成功，就将其用于连接。  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> 侦听器和 SSL 证书  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> 侦听程序和 TLS/SSL 证书  
 
- 当连接到可用性组侦听器时，如果参与的 SQL Server 实例将 SSL 证书与会话加密结合使用，则正在连接的客户端驱动程序将需要支持 SSL 证书中的“主题备用名称”以便强制加密。  SQL Server 驱动程序对于证书“使用者可选名称”的支持计划用于 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)。  
+在连接到可用性组侦听程序时，如果参与的 SQL Server 实例将 TLS/SSL 证书与会话加密结合使用，连接的客户端驱动程序必须在 TLS/SSL 证书中支持“使用者替代名称”，才能强制执行加密。  SQL Server 驱动程序对于证书“使用者可选名称”的支持计划用于 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)。  
   
- 必须为故障转移群集中每个参与的服务器节点配置 X.509 证书，并在证书“使用者可选名称”中设置所有可用性组侦听程序的列表。  
-  
- 例如，如果 WSFC 具有三个可用性组侦听器，名称分别为 `AG1_listener.Adventure-Works.com`、 `AG2_listener.Adventure-Works.com`和 `AG3_listener.Adventure-Works.com`，则证书的“主题备用名称”应设置如下：  
-  
+必须为故障转移群集中每个参与的服务器节点配置 X.509 证书，并在证书“使用者可选名称”中设置所有可用性组侦听程序的列表。 
+
+证书值的格式为： 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+例如，你有以下值： 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+对于有一个可用性组的 WSFC，证书应同时有服务器和侦听程序的完全限定的域名 (FQDN)： 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+如果使用此配置，连接会在连接到实例 (`WIN2019\SQL2019`) 或侦听程序 (`Listener2019`) 时进行加密。 
+
+有一小部分客户可能也需要将 NetBIOS 添加到 SAN，具体视网络的配置方式而定。 在这种情况下，证书值应为： 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+如果 WSFC 有三个可用性组侦听程序，如：Listener1、Listener2、Listener3
+
+则证书值应为： 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> 侦听器和 Kerberos (SPN) 
 

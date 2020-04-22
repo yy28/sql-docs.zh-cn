@@ -3,17 +3,17 @@ title: SUSE：在 Linux 上安装 SQL Server
 description: 本快速入门介绍了如何在 SUSE Linux Enterprise Server 上安装 SQL Server 2017 或 SQL Server 2019，然后使用 sqlcmd 创建和查询数据库。
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 563b651a4f43257ad8c585f91a15d0b9cea1f2f3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487605"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306458"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门：在 SUSE Linux Enterprise Server 上安装 SQL Server 并创建数据库
 
@@ -184,13 +184,13 @@ ms.locfileid: "79487605"
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. 使用 unixODBC 开发人员包安装 **mssql-tools**。
+1. 使用 unixODBC 开发人员包安装 **mssql-tools**。 有关详细信息，请参阅[安装 Microsoft ODBC Driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. 为方便起见，向 PATH 环境变量添加 `/opt/mssql-tools/bin/`  。 这样可以在不指定完整路径的情况下运行这些工具。 运行以下命令以修改登录会话和交互式/非登录会话的路径  ：
+1. 为方便起见，向 PATH 环境变量添加 `/opt/mssql-tools/bin/` 。 这样可以在不指定完整路径的情况下运行这些工具。 运行以下命令以修改登录会话和交互式/非登录会话的路径  ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

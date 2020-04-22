@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6bc7dfadecfe24d5bd91b7dd12eaa3b68ef01753
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117080"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487676"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用 PREDICT T-SQL 函数本机评分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本机评分使用 [PREDICT T-SQL 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和 SQL Server 2017 中的本机 C++ 扩展功能生成近乎实时的新数据输入的预测值或分数  。 此方法提供尽可能最快的预测和预测工作负载处理速度，但是对平台和库有要求：只有 RevoScaleR 和 revoscalepy 中的函数才具有 C++ 实现。
 
-本机评分要求你具有已定型的模型。 在 SQL Server 2017 Windows 或 Linux 中，或在 Azure SQL 数据库中，可以调用 Transact-SQL 中的 PREDICT 函数，以针对作为输入参数提供的新数据调用本机评分。 PREDICT 函数返回所提供的数据输入的分数。
+本机评分要求你具有已定型的模型。 在 SQL Server 2017 Windows 或 Linux 中，可以在 Transact-SQL 中调用 PREDICT 函数，以对作为输入参数提供的新数据调用本机评分。 PREDICT 函数返回所提供的数据输入的分数。
 
 ## <a name="how-native-scoring-works"></a>本机评分的工作原理
 
@@ -36,7 +36,7 @@ ms.locfileid: "81117080"
 
 ## <a name="prerequisites"></a>先决条件
 
-PREDICT 在所有版本的 SQL Server 2017 数据库引擎上都可用，并且默认启用，包括 Windows 上的 SQL Server 机器学习服务、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) 或 Azure SQL 数据库。 无需安装 R、Python 或启用其他功能。
+PREDICT 在所有版本的 SQL Server 2017 及更高版本数据库引擎上都可用，并且默认启用，包括 Windows 上的 SQL Server 机器学习服务，以及 Windows 和 Linux 上的 SQL Server 2017 及更高版本。 无需安装 R、Python 或启用其他功能。
 
 + 必须使用下面列出的某个受支持的 rx 算法预定型该模型  。
 

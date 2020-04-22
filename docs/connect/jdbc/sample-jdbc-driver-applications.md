@@ -1,5 +1,6 @@
 ---
-title: 示例 JDBC 驱动程序应用程序 | Microsoft Docs
+title: 示例 JDBC 驱动程序应用程序
+description: JDBC Driver for SQL Server 示例应用程序展示了在使用 JDBC 驱动程序时可以使用的各种功能，以及可以遵循的良好编程做法。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a7b3befd16e81f8717adf710ec926f123761eb41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e55eb9d0e710ba41089dcb014e9e626343ea4e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928483"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634264"
 ---
 # <a name="sample-jdbc-driver-applications"></a>示例 JDBC 驱动程序应用程序
 
@@ -35,8 +36,8 @@ ms.locfileid: "80928483"
   
 | 主题                                                                                                        | 说明                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [连接和检索数据](../../connect/jdbc/connecting-and-retrieving-data.md)                       | 这些示例应用程序展示了如何连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 此外，还展示了各种用于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检索数据的方法。 |
-| [使用数据类型 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | 这些示例应用程序展示了如何使用 JDBC 驱动程序数据类型方法来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据。                                                                                           |
+| [连接和检索数据](connecting-and-retrieving-data.md)                       | 这些示例应用程序展示了如何连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 此外，还展示了各种用于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检索数据的方法。 |
+| [使用数据类型 &#40;JDBC&#41;](working-with-data-types-jdbc.md)                 | 这些示例应用程序展示了如何使用 JDBC 驱动程序数据类型方法来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据。                                                                                           |
 | [使用结果集](../../connect/jdbc/working-with-result-sets.md)                                   | 这些示例应用程序展示了如何使用结果集来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据。                                                                                                         |
 | [处理大型数据](../../connect/jdbc/working-with-large-data.md)                                     | 这些示例应用程序展示了如何使用自适应缓冲从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检索大值数据，同时免去服务器游标开销。                                                      |
 | [SQL 数据发现和分类](../../connect/jdbc/data-discovery-classification-sample.md) | 此示例应用程序展示了如何使用 JDBC 驱动程序从 ResultSet 对象检索 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中包含的数据发现和分类信息。                                      |

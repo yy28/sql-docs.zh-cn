@@ -1,5 +1,6 @@
 ---
-title: 步骤 1：配置 pyodbc Python 开发环境 | Microsoft Docs
+title: 步骤 1：配置 pyodbc Python 环境
+description: 本入门指南的第 1 步涉及在开发环境中安装 Python、Microsoft ODBC Driver for SQL Server 和 pyODBC。
 ms.custom: ''
 ms.date: 07/06/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7dd2063a527d782833f2abfcbd635de30aa27117
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ea669649767f55598190093b7c929f5bd8db27f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926779"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528511"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步骤 1：配置用于 pyodbc Python 开发的开发环境
 

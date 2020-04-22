@@ -1,6 +1,7 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安装教程 | Microsoft Docs
-ms.date: 12/12/2019
+title: 在 Linux 和 macOS 上安装 Drivers for PHP
+description: 这些说明介绍了如何在 Linux 或 macOS 上安装 Microsoft Drivers for PHP for SQL Server。
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 913b6d95a7bb9a690f0a8cdd7d8c88b29782f876
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 987534339a6eff11b775d9f54563d158fa5653e9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79058571"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529015"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安装教程
-以下说明假定一个干净的环境，并演示如何在 Ubuntu 16.04、18.04 和 19.10、RedHat 7 和 8、Debian 8、9 和 10、Suse 12 和 15、Alpine 3.11（实验版）以及 macOS 10.13、10.14 和 10.15 上安装 PHP 7.x、Microsoft ODBC 驱动程序、Apache Web 服务器和 Microsoft Drivers for PHP for SQL Server。 这些说明建议使用 PECL 安装驱动程序，但也可以从 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 项目页下载预生成的二进制文件，并按照[下载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的说明安装它们。 有关扩展加载以及为什么不将扩展添加到 php.ini 的说明，请参阅[加载驱动程序](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)部分。
+以下说明假定环境是干净的，展示了如何在 Ubuntu 16.04、18.04 和 19.10、RedHat 7 和 8、Debian 8、9 和 10、Suse 12 和 15、Alpine 3.11 以及 macOS 10.13、10.14 和 10.15 上安装 PHP 7.x、Microsoft ODBC 驱动程序、Apache Web 服务器和 Microsoft Drivers for PHP for SQL Server。 这些说明建议使用 PECL 安装驱动程序，但也可以从 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 项目页下载预生成的二进制文件，并按照[下载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的说明安装它们。 有关扩展加载以及为什么不将扩展添加到 php.ini 的说明，请参阅[加载驱动程序](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)部分。
 
-默认情况下，这些说明安装 PHP 7.4。 注意，一些受支持的 Linux 发行版默认为 PHP 7.1 或更早版本，而 SQL Server 的 PHP 驱动程序的最新版本不支持这些版本，请参阅每一节开头的说明，以安装 PHP 7.2 或 7.3。
+这些说明默认使用 `pecl install` 安装 PHP 7.4。 你可能需要先运行 `pecl channel-update pecl.php.net`。 注意，一些受支持的 Linux 发行版默认为 PHP 7.1 或更早版本，而 SQL Server 的 PHP 驱动程序的最新版本不支持这些版本，请参阅每一节开头的说明，以安装 PHP 7.2 或 7.3。
 
 还包括有关在 Ubuntu 上安装 PHP FastCGI 进程管理器 (PHP-FPM) 的说明。 如果使用的是 nginx Web 服务器而不是 Apache，则需要此服务。
 
@@ -308,13 +309,10 @@ sudo systemctl restart apache2
 ## <a name="installing-the-drivers-on-alpine-311"></a>在 Alpine 3.11 上安装驱动程序
 
 > [!NOTE]
-> Alpine 支持是实验性的。
-
-> [!NOTE]
-> PHP 的默认版本为 7.3。 Alpine 3.11 的其他存储库中不提供 PHP 的备用版本。 可以改为从源编译 PHP。
+> PHP 的默认版本为 7.3。 可以从 Alpine 3.11 的其他存储库中获取 PHP 的备用版本。 可以改为从源编译 PHP。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
-`edge/community` 存储库中提供了用于 Alpine 的 PHP 包。 将以下行添加到 `/etc/apt/repositories`，并将 `<mirror>` 替换为 Alpine 存储库镜像的 URL：
+可以在 `edge/community` 存储库中找到用于 Alpine 的 PHP 包。 请查看 Wiki 页上的[启用社区存储库](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository)。 将以下行添加到 `/etc/apt/repositories`，并将 `<mirror>` 替换为 Alpine 存储库镜像的 URL：
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -335,10 +333,7 @@ sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/10_pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/00_sqlsrv.ini
 ```
-可能需要定义区域设置：
-```
-export LC_ALL=C
-```
+
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步骤 4. 安装 Apache 并配置驱动程序加载
 ```
 sudo apk add php7-apache2 apache2
@@ -358,7 +353,7 @@ sudo rc-service apache2 restart
 ```
 
 > [!NOTE]
-> 若要安装 PHP 7.2 或 7.3，请在以下命令中分别用 php@7.4 或 php@7.2 替换 php@7.3。
+> 若要安装 PHP 7.2 或 7.3，请在以下命令中分别用 php@7.2 或 php@7.3 替换 php@7.4。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
 
@@ -406,7 +401,7 @@ sudo apachectl restart
 
 ## <a name="testing-your-installation"></a>测试安装
 
-若要测试此示例脚本，请在系统的文档根目录中创建名为“testsql.php”的文件。 这在 Ubuntu、Debian 和 Redhat 上为 `/var/www/html/`，在 SUSE 上为 `/srv/www/htdocs`，在 macOS 上为 `/var/www/localhost/htdocs`，在 macOS 上为 `/usr/local/var/www`。 将以下脚本复制到其中，酌情替换服务器、数据库、用户名和密码。 在 Alpine 3.11 上，你可能还需要在  **数组中将 CharacterSet**`$connectionOptions` 指定为“UTF-8”。
+若要测试此示例脚本，请在系统的文档根目录中创建名为“testsql.php”的文件。 这在 Ubuntu、Debian 和 Redhat 上为 `/var/www/html/`，在 SUSE 上为 `/srv/www/htdocs`，在 macOS 上为 `/var/www/localhost/htdocs`，在 macOS 上为 `/usr/local/var/www`。 将以下脚本复制到其中，酌情替换服务器、数据库、用户名和密码。
 ```
 <?php
 $serverName = "yourServername";

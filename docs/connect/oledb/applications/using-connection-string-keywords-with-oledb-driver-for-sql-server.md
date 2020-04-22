@@ -1,6 +1,6 @@
 ---
-title: 将连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序结合使用 | Microsoft Docs
-description: 将连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序结合使用
+title: 结合使用连接字符串关键字与 OLE DB 驱动程序
+description: 某些 OLE DB Driver for SQL Server API 使用连接字符串，这些字符串是标识特定连接属性的关键字和值的列表。
 ms.custom: ''
 ms.date: 02/28/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, connection string keywords
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: dfc30b7934a928f8e5129ad93c08275ccd7989e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c1e7a40207665515e164ba4449715f8443616c17
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78180053"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633895"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>将连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序结合使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "78180053"
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|“Address”的同义词  。|  
 |**Address**|SSPROP_INIT_NETWORKADDRESS|运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。 “Address”通常是服务器的网络名称，也可以是诸如管道、IP 地址或 TCP/IP 端口和套接字地址之类的其他名称  。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> 使用 OLE DB Driver for SQL Server 时，“Address”  的值优先于传递给连接字符串中的“Server”  的值。 另外请注意，`Address=;` 将连接到在 Server 关键字中指定的服务器，而 `Address= ;, Address=.;`、 `Address=localhost;` 和 `Address=(local);` 都会产生本地服务器的连接  。<br /><br /> Address 关键字的完整语法如下所示  ：<br /><br /> [_protocol_ **:** ]_Address_[ **,** _port &#124;\pipe\pipename_]<br /><br /> _protocol_ 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。 有关协议的详细信息，请参阅[配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果未指定协议  或“Network”  关键字，则 OLE DB Driver for SQL Server 将使用在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 中指定的协议顺序。<br /><br /> “port”是指定服务器上所要连接到的端口  。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。|   
 |**APP**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
-|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能值为 `ReadOnly` 和 `ReadWrite`。<br /><br /> 默认为 `ReadWrite`。 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能值为 `ReadOnly` 和 `ReadWrite`。<br /><br /> 默认为 `ReadWrite`。 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|可附加数据库的主文件的名称（包括完整路径名）。 若要使用 AttachDBFileName，还必须使用访问接口字符串 Database 关键字来指定数据库名称  。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会重新附加它（而是使用已附加的数据库作为连接的默认数据库）。|  
 |**身份验证**<a href="#table1_1"><sup id="table1_authmode">**1**</sup></a>|SSPROP_AUTH_MODE|指定使用的 SQL 或 Active Directory 身份验证。 有效值是：<br/><ul><li>`(not set)`设置用户帐户 ：身份验证模式由其他关键字确定。</li><li>`ActiveDirectoryPassword:`使用 Azure Active Directory 标识进行用户 ID 和密码身份验证。</li><li>`ActiveDirectoryIntegrated:` 使用 Azure Active Directory 标识进行集成身份验证。</li><br/>**注意：** `ActiveDirectoryIntegrated` 关键字还可用于对 SQL Server 进行 Windows 身份验证。 它将替换 `Integrated Security`（或 `Trusted_Connection`）身份验证关键字。 建议  使用 `Integrated Security`（或 `Trusted_Connection`）关键字或其相应属性的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `ActiveDirectoryIntegrated` 以启用新的加密和证书验证行为。<br/><br/><li>`ActiveDirectoryInteractive:` 使用 Azure Active Directory 标识进行交互式身份验证。 此方法支持 Azure 多重身份验证 (MFA)。 </li><li>`ActiveDirectoryMSI:` [托管服务标识 (MSI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) 身份验证。 对于用户分配的标识，用户 ID 应设置为用户标识的对象 ID。</li><li>`SqlPassword:` 使用用户 ID 和密码的身份验证。</li><br/>**注意：** 建议  使用 `SQL Server` 身份验证的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `SqlPassword` 以启用[新的加密和证书验证行为](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。</ul>|
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词  。|  
@@ -143,7 +143,7 @@ ms.locfileid: "78180053"
 |-------------|-----------------------------|-----------------|  
 |**访问令牌**<a href="#table2_1"><sup id="table2_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|用于对 Azure Active Directory 进行身份验证的访问令牌。 <br/><br/>**注意：** 指定此关键字的同时还指定 `UID`、`PWD`、`Trusted_Connection` 或 `Authentication` 连接字符串关键字或其相应属性/关键字的话会出现错误。|
 |**应用程序名称**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能值为 `ReadOnly` 和 `ReadWrite`。<br /><br /> 默认为 `ReadWrite`。 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能值为 `ReadOnly` 和 `ReadWrite`。<br /><br /> 默认为 `ReadWrite`。 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**身份验证**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_AUTH_MODE|指定使用的 SQL 或 Active Directory 身份验证。 有效值是：<br/><ul><li>`(not set)`设置用户帐户 ：身份验证模式由其他关键字确定。</li><li>`ActiveDirectoryPassword:`使用 Azure Active Directory 标识进行用户 ID 和密码身份验证。</li><li>`ActiveDirectoryIntegrated:` 使用 Azure Active Directory 标识进行集成身份验证。</li><br/>**注意：** `ActiveDirectoryIntegrated` 关键字还可用于对 SQL Server 进行 Windows 身份验证。 它将替换 `Integrated Security`（或 `Trusted_Connection`）身份验证关键字。 建议  使用 `Integrated Security`（或 `Trusted_Connection`）关键字或其相应属性的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `ActiveDirectoryIntegrated` 以启用新的加密和证书验证行为。<br/><br/><li>`ActiveDirectoryInteractive:` 使用 Azure Active Directory 标识进行交互式身份验证。 此方法支持 Azure 多重身份验证 (MFA)。 </li><li>`ActiveDirectoryMSI:` [托管服务标识 (MSI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) 身份验证。 对于用户分配的标识，用户 ID 应设置为用户标识的对象 ID。</li><li>`SqlPassword:` 使用用户 ID 和密码的身份验证。</li><br/>**注意：** 建议  使用 `SQL Server` 身份验证的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `SqlPassword` 以启用[新的加密和证书验证行为](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。</ul>|
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词  。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 已识别的值为 `true` 和 `false`。|  
@@ -157,7 +157,7 @@ ms.locfileid: "78180053"
 |**初始文件名**|SSPROP_INIT_FILENAME|可附加数据库的主文件的名称（包括完整路径名）。 若要使用 AttachDBFileName，还必须使用访问接口字符串 DATABASE 关键字来指定数据库名称  。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会重新附加它（而是使用已附加的数据库作为连接的默认数据库）。|  
 |**Integrated Security**|DBPROP_AUTH_INTEGRATED|接受 Windows 身份验证的值 `SSPI`。|  
 |**MARS Connection**|SSPROP_INIT_MARSCONNECTION|启用或禁用连接上的多个活动结果集 (MARS)。 已识别的值为 `true` 和 `false`。 默认为 `false`。|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性组或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 MultiSubnetFailover=True  。 MultiSubnetFailover=True 将配置适用于 SQL Server 的 OLE DB 驱动程序，以便更快地检测和连接到（当前）活动服务器。  可能值为 `True` 和 `False`。 默认为 `False`。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性组或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 MultiSubnetFailover=True  。 MultiSubnetFailover=True 将配置适用于 SQL Server 的 OLE DB 驱动程序，以便更快地检测和连接到（当前）活动服务器。  可能值为 `True` 和 `False`。 默认为 `False`。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的网络地址。<br /><br /> 若要详细了解有效的地址语法，请参阅本主题中的 Address 关键字说明  。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|用于与组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的网络库。|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|网络数据包大小。 默认值为 4096。|  
@@ -201,7 +201,7 @@ ms.locfileid: "78180053"
 |关键字|初始化属性|说明|  
 |-------------|-----------------------------|-----------------|  
 |**访问令牌**<a href="#table3_1"><sup id="table3_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|用于对 Azure Active Directory 进行身份验证的访问令牌。<br/><br/>**注意：** 指定此关键字的同时还指定 `UID`、`PWD`、`Trusted_Connection` 或 `Authentication` 连接字符串关键字或其相应属性/关键字的话会出现错误。|
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能值为 `ReadOnly` 和 `ReadWrite`。<br /><br /> 默认为 `ReadWrite`。 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能值为 `ReadOnly` 和 `ReadWrite`。<br /><br /> 默认为 `ReadWrite`。 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**应用程序名称**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
 |**身份验证**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_AUTH_MODE|指定使用的 SQL 或 Active Directory 身份验证。 有效值是：<br/><ul><li>`(not set)`设置用户帐户 ：身份验证模式由其他关键字确定。</li><li>`ActiveDirectoryPassword:`使用 Azure Active Directory 标识进行用户 ID 和密码身份验证。</li><li>`ActiveDirectoryIntegrated:` 使用 Azure Active Directory 标识进行集成身份验证。</li><br/>**注意：** `ActiveDirectoryIntegrated` 关键字还可用于对 SQL Server 进行 Windows 身份验证。 它将替换 `Integrated Security`（或 `Trusted_Connection`）身份验证关键字。 建议  使用 `Integrated Security`（或 `Trusted_Connection`）关键字或其相应属性的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `ActiveDirectoryIntegrated` 以启用新的加密和证书验证行为。<br/><br/><li>`ActiveDirectoryInteractive:` 使用 Azure Active Directory 标识进行交互式身份验证。 此方法支持 Azure 多重身份验证 (MFA)。 </li><li>`ActiveDirectoryMSI:` [托管服务标识 (MSI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) 身份验证。 对于用户分配的标识，用户 ID 应设置为用户标识的对象 ID。</li><li>`SqlPassword:` 使用用户 ID 和密码的身份验证。</li><br/>**注意：** 建议  使用 `SQL Server` 身份验证的应用程序将 `Authentication` 关键字（或其相应属性）的值设置为 `SqlPassword` 以启用[新的加密和证书验证行为](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。</ul>|
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词  。|  
@@ -216,7 +216,7 @@ ms.locfileid: "78180053"
 |**初始文件名**|SSPROP_INIT_FILENAME|可附加数据库的主文件的名称（包括完整路径名）。 若要使用 AttachDBFileName，还必须使用提供程序字符串 DATABASE 关键字来指定数据库名称   。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不重新附加它；而是使用已附加的数据库作为连接的默认数据库。|  
 |**Integrated Security**|DBPROP_AUTH_INTEGRATED|接受 Windows 身份验证的值 `SSPI`。|  
 |**MARS Connection**|SSPROP_INIT_MARSCONNECTION|如果服务器是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本，则启用或禁用连接上的多个活动结果集 (MARS)。 可能的值为 `true` 和 `false`。默认值为 `false`。|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性组或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 MultiSubnetFailover=True  。 MultiSubnetFailover=True 将配置适用于 SQL Server 的 OLE DB 驱动程序，以便更快地检测和连接到（当前）活动服务器。  可能值为 `True` 和 `False`。 默认为 `False`。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性组或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 MultiSubnetFailover=True  。 MultiSubnetFailover=True 将配置适用于 SQL Server 的 OLE DB 驱动程序，以便更快地检测和连接到（当前）活动服务器。  可能值为 `True` 和 `False`。 默认为 `False`。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 有关对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 OLE DB Driver for SQL Server 支持的详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的网络地址。<br /><br /> 若要详细了解有效的地址语法，请参阅本主题中的 Address 关键字说明  。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|用于与组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的网络库。|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|网络数据包大小。 默认值为 4096。|  
@@ -237,4 +237,4 @@ ms.locfileid: "78180053"
   
 ## <a name="see-also"></a>另请参阅  
 
- [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](building-applications-with-oledb-driver-for-sql-server.md)  

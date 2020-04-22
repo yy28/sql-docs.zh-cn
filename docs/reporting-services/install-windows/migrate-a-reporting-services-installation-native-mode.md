@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
-ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a5b217ba8733aa92c2255170d2ff1f750d996a7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262902"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487056"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>迁移 Reporting Services 安装（本机模式）
 
@@ -109,7 +109,7 @@ ms.locfileid: "68262902"
   
 * 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及更高版本中不支持 IP 地址限制。 如果使用 IP 地址限制，则必须在迁移之前重新设计报表解决方案，或使用诸如防火墙、路由器或网络地址转换 (NAT) 等技术来配置被禁止访问报表服务器的地址。  
   
-* 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及更高版本中不支持客户端安全套接字层 (SSL) 证书。 如果使用客户端 SSL 证书，则必须在迁移之前重新设计报表解决方案。  
+* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及更高版本不支持客户端传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）证书。 如果使用客户端 TLS 证书，必须在迁移前重新设计报表解决方案。  
   
 * 如果使用 Windows 集成身份验证之外的身份验证类型，则必须将 RSReportServer.config 文件中的 `<AuthenticationTypes>` 元素更新为支持的身份验证类型  。 支持的身份验证类型包括 NTLM、Kerberos、Negotiate 和 Basic。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及更高版本中不支持匿名、.NET Passport 和摘要式身份验证。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68262902"
   
     1. [部署自定义程序集](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [如何部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [如何：部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [部署数据处理扩展插件](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   

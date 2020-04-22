@@ -1,10 +1,11 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 发行说明 | Microsoft Docs
+title: Microsoft Drivers for PHP 发行说明
+description: 本页介绍了每个版本 Microsoft Drivers for PHP for SQL Server 的变更内容。
 ms.custom: ''
-ms.date: 03/05/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-dapugl, kenvh
+ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe4a5b0b9d336ad02cb7fdf8431f9e3754bd8d35
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e2dc190e617ce9a9ffc3c45a623cb82a78411046
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923805"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633853"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 发行说明
 
@@ -38,6 +39,26 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## <a name="581"></a>5.8.1
+
+此发行版只适用于 Linux 和 macOS。
+
+[GitHub 版本标记（Linux 和 macOS 包均在此处提供）](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.1)
+
+### <a name="version-information"></a>版本信息
+
+- 版本号：5.8.1
+- 发布日期：2020 年 4 月 15 日
+
+## <a name="whats-new-in-581"></a>5\.8.1 中的新变化
+
+| 新建项 | 详细信息 |
+| :------- | :------ |
+| Bug 修复 | 修复了 Alpine Linux 中的默认区域设置问题。 |
+| Bug 修复 | 删除了不必要的数据结构，以支持 Alpine Linux 中的客户端游标功能。 |
+| Bug 修复 | 修复了在 Alpine Linux 中两个驱动程序都启用时的日志记录问题。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="58"></a>5.8
 
@@ -131,7 +152,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 - 支持所有平台上的 Microsoft ODBC 驱动程序 17.2
 - 支持 macOS High Sierra（需要 ODBC 驱动程序 17 及更高版本）
-- 支持 Always Encrypted 的 Azure 密钥保管库以实现基本 CRUD 功能，例如，所有受支持的 Windows、Linux 或 macOS 平台都可以使用 Always Encrypted 功能[将 Always Encrypted 与用于 SQL Server 的 PHP 驱动程序结合使用](../../connect/php/using-always-encrypted-php-drivers.md)
+- 支持 Always Encrypted 的 Azure 密钥保管库以实现基本 CRUD 功能，例如，所有受支持的 Windows、Linux 或 macOS 平台都可以使用 Always Encrypted 功能[将 Always Encrypted 与用于 SQL Server 的 PHP 驱动程序结合使用](using-always-encrypted-php-drivers.md)
 - 支持 Ubuntu 18.04 LTS（需要 ODBC 驱动程序 17.2）
 - 同时还支持 Linux 或 macOS 中的连接弹性（需要 ODBC 驱动程序 17.2）
 
@@ -152,7 +173,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - 现在，版本 17 是所有平台上的默认设置
 - 支持 Ubuntu 17.10、Debian 9 和 Suse Enterprise Linux 12
 - 放弃了对 Ubuntu 15.10 的支持
-- 在 Windows 上支持带有 CRUD 功能的 Always Encrypted。 有关详细信息，请参阅[结合使用 Always Encrypted 和 PHP Driver for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- 在 Windows 上支持带有 CRUD 功能的 Always Encrypted。 有关详细信息，请参阅[结合使用 Always Encrypted 和 PHP Driver for SQL Server](using-always-encrypted-php-drivers.md)
   - 支持 Windows 证书存储
   - 仅 Microsoft ODBC 驱动程序 17 及更高版本支持 Always Encrypted
 - 支持 Linux 和 macOS 上的非 UTF8 区域设置
@@ -176,11 +197,11 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 支持 macOS Sierra 和 macOS El Capitan
 - 支持 Ubuntu 15.10 和 Debian 8
 - 放弃了对 Ubuntu 15.04 的支持
-- 通过透明网络 IP 解析支持 AlwaysOn 可用性组。 有关详细信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。
+- 通过透明网络 IP 解析支持 AlwaysOn 可用性组。 有关详细信息，请参阅 [Connection Options](connection-options.md)。
 - 添加了对 sql_variant 数据类型的支持，但有限制。
-- Windows 中的空闲连接弹性支持。 有关详细信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。
-- 适用于 Linux 和 macOS 的连接池支持。 有关详细信息，请参阅[连接池](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)。
-- 通过 ActiveDirectoryPassword 和 SqlPassword 支持 Azure Active Directory 身份验证。 有关详细信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。
+- Windows 中的空闲连接弹性支持。 有关详细信息，请参阅 [Connection Options](connection-options.md)。
+- 适用于 Linux 和 macOS 的连接池支持。 有关详细信息，请参阅[连接池](connection-pooling-microsoft-drivers-for-php-for-sql-server.md)。
+- 通过 ActiveDirectoryPassword 和 SqlPassword 支持 Azure Active Directory 身份验证。 有关详细信息，请参阅 [Connection Options](connection-options.md)。
 
 ## <a name="40"></a>4.0
 
@@ -231,17 +252,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## <a name="whats-new-in-30"></a>3\.0 中的新增功能  
 
 - 对 PHP 5.4 的支持。  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3 不支持 PHP 5.2。  
-- 添加了 AttachDBFileName 连接选项。 有关详细信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。  
-- 对 LocalDB 的支持，该功能已添加在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中。 有关详细信息，请参阅[支持 LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。
-- 添加了 AttachDBFileName 连接选项。 有关详细信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。  
-- 对高可用性、灾难恢复功能的支持。 有关详细信息，请参阅 [对高可用性和灾难恢复的支持](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。
-- 对客户端游标的支持（将结果集缓存到内存）。 有关详细信息，请参阅[游标类型（SQLSRV 驱动程序）](../../connect/php/cursor-types-sqlsrv-driver.md)和[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。
-- 添加了 PDO::ATTR_EMULATE_PREPARES 属性。 有关详细信息，请参阅 [PDO::prepare](../../connect/php/pdo-prepare.md)。  
+- 添加了 AttachDBFileName 连接选项。 有关详细信息，请参阅 [Connection Options](connection-options.md)。  
+- 对 LocalDB 的支持，该功能已添加在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中。 有关详细信息，请参阅[支持 LocalDB](php-driver-for-sql-server-support-for-localdb.md)。
+- 添加了 AttachDBFileName 连接选项。 有关详细信息，请参阅 [Connection Options](connection-options.md)。  
+- 对高可用性、灾难恢复功能的支持。 有关详细信息，请参阅 [对高可用性和灾难恢复的支持](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。
+- 对客户端游标的支持（将结果集缓存到内存）。 有关详细信息，请参阅[游标类型（SQLSRV 驱动程序）](cursor-types-sqlsrv-driver.md)和[游标类型（PDO_SQLSRV 驱动程序）](cursor-types-pdo-sqlsrv-driver.md)。
+- 添加了 PDO::ATTR_EMULATE_PREPARES 属性。 有关详细信息，请参阅 [PDO::prepare](pdo-prepare.md)。  
 
 ## <a name="whats-new-in-20"></a>2\.0 中的新增功能
 
-在版本 2.0 中，添加了对 PDO_SQLSRV 驱动程序的支持。 有关详细信息，请参阅 [PDO_SQLSRV 驱动程序参考](../../connect/php/pdo-sqlsrv-driver-reference.md)。  
+在版本 2.0 中，添加了对 PDO_SQLSRV 驱动程序的支持。 有关详细信息，请参阅 [PDO_SQLSRV 驱动程序参考](pdo-sqlsrv-driver-reference.md)。  
 
 ## <a name="see-also"></a>另请参阅
 
-[Microsoft Drivers for PHP for SQL Server 概述](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 概述](overview-of-the-php-sql-driver.md)

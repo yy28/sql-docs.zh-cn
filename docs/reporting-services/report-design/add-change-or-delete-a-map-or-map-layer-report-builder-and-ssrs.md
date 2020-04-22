@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080649"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488244"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当你向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
@@ -75,7 +75,7 @@ ms.locfileid: "77080649"
   
 1.  单击地图直到显示“地图”窗格。  
   
-2.  在工具栏上单击“添加层”  按钮，从下拉列表中单击要添加的层类型：“点”  、“线条”  或“多边形”  。  
+2.  依次单击工具栏中的“添加层”  按钮，以及下拉列表中的要添加的层类型：“点”  、“线”  或“多边形”  。  
   
     > [!NOTE]  
     >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要在“地图”窗格工具栏中启动向导，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
@@ -220,7 +220,7 @@ ms.locfileid: "77080649"
   
 3.  在“属性”窗格中，将 UseSecureConnection 设置为 **True**。  
   
- Bing 地图 Web 服务的连接将使用 HTTP SSL（安全套接字层）服务来检索此层的 Bing 地图图块。  
+ 必应地图 Web 服务的连接将使用 HTTP SSL 服务来检索此层的必应地图图块。 传输层安全性 (TLS) 旧称为“安全套接字层 (SSL)”。
   
 ##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> 为图块标签指定语言  
   

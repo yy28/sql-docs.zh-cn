@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903804"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488121"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
 
@@ -55,7 +55,7 @@ Scale Out Master 服务是一项 Windows 服务，负责与 Scale Out Worker 的
 |配置  |说明  |默认值  |
 |---------|---------|---------|
 |PortNumber|用于与 Scale Out Worker 进行通信的网络端口号。|8391|
-|SSLCertThumbprint|用于保护与 Scale Out Worker 之间通信的 SSL 证书的指纹。|SSL 证书的指纹在 Scale Out Master 安装期间指定|
+|SSLCertThumbprint|用于保护与 Scale Out 工作器之间通信的 TLS/SSL 证书的指纹。|在 Scale Out Master 安装期间指定的 TLS/SSL 证书的指纹|
 |SqlServerName|包含 SSISDB 目录的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的名称。 例如，ServerName\\InstanceName。|与 Scale Out Master 一起安装的 SQL Server 的名称。|
 |CleanupCompletedJobsIntervalInMs|清理已完成的执行作业的间隔时间（以毫秒为单位）。|43200000|
 |DealWithExpiredTasksIntervalInMs|处理过期的执行作业的间隔时间（以毫秒为单位）。|300000|

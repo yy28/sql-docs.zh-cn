@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3184d9dff106628e09491852690da9f667570ff0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fccf663b91dfba2c7b68da1c882c6c6f701e42f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579887"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636187"
 ---
 # <a name="configurationsetting-method---listsslcertificatebindings"></a>ConfigurationSetting 方法 - ListSSLCertificateBindings
-  返回计算机上已安装的 SSL 证书的列表。  
+  返回计算机上已安装的 TLS/SSL 证书的列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
     out Int32 length, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *LCID*  
  用于返回的错误消息的区域设置。  
   

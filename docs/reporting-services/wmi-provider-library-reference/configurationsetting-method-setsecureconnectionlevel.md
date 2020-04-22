@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5318d25ed1e6113e65f6e41d40add3ff0203856c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36b5efb8a1be107504cfcd7641b44c83924faa92
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581001"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629598"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting 方法 - SetSecureConnectionLevel
   设置报表服务器的安全连接级别。  
@@ -37,7 +37,7 @@ public void SetSecureConnectionLevel(Int32 Level,
     out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *Level*  
  表示安全连接级别的整数值。  
   
@@ -48,11 +48,11 @@ public void SetSecureConnectionLevel(Int32 Level,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="remarks"></a>备注  
- 调用时，报表服务器 SecureConnectionLevel 属性设置为指定的值。 值为 0 表示关闭了 SSL。 值大于或等于 1 标识打开了 SSL。  
+ 调用时，报表服务器 SecureConnectionLevel 属性设置为指定的值。 值为 0 表示禁用了 TLS。 值大于或等于 1 表示启用了 TLS。  
   
 -   设置该值时，将更改报表服务器配置文件中的 SecureConnectionLevel 元素，并将配置文件中的“URLRoot”  元素设置为使用 "https://"（如果指定的  级别大于或等于 1）或使用 "http://"（如果指定的  级别为 0）。  
   
- 在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中，SecureConnectionLevel 成为一个开关，默认值为 0。 对于任何通过 SetSecureConnectionLevel 方法 API 传递的大于或等于 1 的值，SSL 将被视为打开，并且在 rsreportserver.config 文件中相应地设置配置属性 SecureConnectionLevel。 将仍允许值为 2 和 3，以便向后兼容。  
+ 在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中，SecureConnectionLevel 成为一个开关，默认值为 0。 对于任何通过 SetSecureConnectionLevel 方法 API 传递的大于或等于 1 的值，TLS 被视为启用，且配置属性 SecureConnectionLevel 在 rsreportserver.config 文件中进行相应的设置。 将仍允许值为 2 和 3，以便向后兼容。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 736b0620ecf8f7f44611f98daa97b3cc89f3fc4f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710819"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529251"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步的安全体系结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "71710819"
  <sup>1</sup> 仅当所有计算机都位于同一域中或位于彼此建立了信任关系的多个域中时，才可以使用集成身份验证。  
   
 > [!NOTE]  
->  如果使用集成身份验证，则必须使用委托。 对于从订阅服务器到 IIS 的连接，建议使用基本身份验证和 SSL。  
+>  如果使用集成身份验证，则必须使用委托。 对于从订阅服务器到 IIS 的连接，建议结合使用基本身份验证和 TLS。  
   
 ## <a name="e-connection-to-the-publisher"></a>E. 连接到发布服务器  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器和合并复制协调器组件承载于运行 IIS 的计算机上。 这些组件可执行下列操作：  

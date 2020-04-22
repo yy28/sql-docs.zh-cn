@@ -1,5 +1,6 @@
 ---
-title: 使用 Azure Active Directory 身份验证进行连接 | Microsoft Docs
+title: 使用 Azure Active Directory 身份验证进行连接
+description: 了解如何开发结合使用 Azure Active Directory 身份验证功能与 Microsoft JDBC Driver for SQL Server 的 Java 应用程序。
 ms.custom: ''
 ms.date: 01/29/2020
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e46a8e4d290a5b8c23173153c6e72bd7730be4e7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73b377076dfea329ba82c0219c28bf9c955d7e7f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922459"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634808"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 
@@ -40,7 +41,7 @@ Microsoft JDBC Driver for SQL Server 中支持 Azure Active Directory 身份验�
 
 *   **accessToken**：借助此连接属性，可以使用访问令牌连接到 SQL 数据库。 accessToken 只能使用 DriverManager 类中 getConnection() 方法的 Properties 参数进行设置。 不能在连接 URL 中使用此属性。  
 
-有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)页上的 authentication 属性。  
+有关详细信息，请参阅[设置连接属性](setting-the-connection-properties.md)页上的 authentication 属性。  
 
 
 ## <a name="client-setup-requirements"></a>客户端安装要求
@@ -107,10 +108,10 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>使用 ActiveDirectoryIntegrated 身份验证模式进行连接
 自版本 6.4 起，Microsoft JDBC 驱动程序开始支持在多个平台（Windows、Linux 和 macOS）上使用 Kerberos 票证进行 ActiveDirectoryIntegrated 身份验证。
-有关详细信息，请参阅[在 Windows、Linux 和 Mac 上设置 Kerberos 票证](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)。 或者，在 Windows 上，mssql-jdbc_auth-\<version>-\<arch>.dll 也可用于通过 JDBC 驱动程序进行 ActiveDirectoryIntegrated 身份验证。
+有关详细信息，请参阅[在 Windows、Linux 和 macOS 上设置 Kerberos 票证](#set-kerberos-ticket-on-windows-linux-and-macos)。 或者，在 Windows 上，mssql-jdbc_auth-\<version>-\<arch>.dll 也可用于通过 JDBC 驱动程序进行 ActiveDirectoryIntegrated 身份验证。
 
 > [!NOTE]
->  如果使用的是旧版驱动程序，请查看这一[链接](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)，以了解使用此身份验证模式所必需的相应依赖项。 
+>  如果使用的是旧版驱动程序，请查看这一[链接](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)，以了解使用此身份验证模式所必需的相应依赖项。 
 
 下面的示例展示了如何使用 `authentication=ActiveDirectoryIntegrated` 模式。 在与 Azure Active Directory 联合的域加入计算机上运行此示例。 数据库中必须有包含的数据库用户，此用户表示你的 Azure AD 主体或你所属的一个组，且必须拥有 CONNECT 权限。 
 
@@ -156,7 +157,7 @@ public class AADIntegrated {
 You have successfully logged on as: <your domain user name>
 ```
 
-### <a name="set-kerberos-ticket-on-windows-linux-and-mac"></a>在 Windows、Linux 和 Mac 上设置 Kerberos 票证
+### <a name="set-kerberos-ticket-on-windows-linux-and-macos"></a>在 Windows、Linux 和 macOS 上设置 Kerberos 票证
 
 必须设置 Kerberos 票证，将当前用户关联到 Windows 域帐户。 下面概述了几个关键步骤。
 
@@ -172,7 +173,7 @@ JDK 附带 `kinit`，在与 Azure Active Directory 联合的域加入计算机�
 > [!NOTE]
 >  可能需要指定包含 `-Djava.security.krb5.conf` 的 `.ini` 文件，以便应用程序能够找到 KDC。
 
-#### <a name="linux-and-mac"></a>Linux 和 Mac
+#### <a name="linux-and-macos"></a>Linux 和 macOS
 
 ##### <a name="requirements"></a>要求
 访问 Windows 域加入计算机，以查询 Kerberos 域控制器。
@@ -190,7 +191,7 @@ JDK 附带 `kinit`，在与 Azure Active Directory 联合的域加入计算机�
 - **要提取的信息**：DC 名称（在此示例中为 `co1-red-dc-33.domain.company.com`）
 
 ##### <a name="step-2-configuring-kdc-in-krb5conf"></a>步骤 2：在 krb5.conf 中配置 KDC
-- **运行位置**：Linux/Mac
+- **运行位置**：Linux/macOS
 - **操作**：在选定编辑器中编辑 /etc/krb5.conf。 配置下列密钥
   ```
   [libdefaults]
@@ -207,7 +208,7 @@ JDK 附带 `kinit`，在与 Azure Active Directory 联合的域加入计算机�
 >  域必须全部大写。
 
 ##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>步骤 3：测试票证授予票证检索
-- **运行位置**：Linux/Mac
+- **运行位置**：Linux/macOS
 - **操作**：
   - 使用命令 `kinit username@DOMAIN.COMPANY.COM` 从 KDC 获取 TGT，然后会看到输入域密码的提示。
   - 使用 `klist` 查看可用票证。 如果 kinit 成功，应该会看到来自 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM 的票证。
@@ -285,7 +286,7 @@ You have successfully logged on as: <your user name>
     11. 在“密钥”部分下，创建密钥，具体方法为填写“名称”字段，选择密钥期限，然后保存配置（将“值”字段留空）。 保存后，“值”字段应该会自动填充，复制生成的值。 这是客户端密码。
     12. 在左侧面板中，单击“Azure Active Directory”。 在“应用注册”下，查找“终结点”选项卡。复制“OATH 2.0 令牌终结点”下的 URL（此为 STS URL）。
     
-    ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
+    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
 2. 以 Azure Active Directory 管理员身份登录 Azure SQL Server 的用户数据库，并使用 T-SQL 命令为应用程序主体预配包含的数据库用户。 若要详细了解如何创建 Azure Active Directory 管理员和包含的数据库用户，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。
 
     ```

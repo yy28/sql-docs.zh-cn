@@ -1,6 +1,6 @@
 ---
 title: 安装适用于 SQL Server 的 OLE DB 驱动程序 | Microsoft 文档
-description: 安装和卸载 OLE DB Driver for SQL Server
+description: 安装和卸载 OLE DB Driver for SQL Server。 必须有 msoledbsql.msi 安装程序，才能安装 OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 08f33d84ee8c035e1e1d3818e2a036f96af2a280
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b971b7e537cecc7e94c87e2692707594fda9aebc
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989308"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528381"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>安装适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

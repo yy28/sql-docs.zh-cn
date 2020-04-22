@@ -1,5 +1,6 @@
 ---
-title: 使用基本数据类型 | Microsoft Docs
+title: 使用基本 JDBC 数据类型
+description: Microsoft JDBC Driver for SQL Server 使用基本 JDBC 数据类型，将 SQL Server 数据类型转换为 Java 可以理解的格式。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4608bd48607244c50e7d6fd03b74919448fa074
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924065"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625559"
 ---
 # <a name="using-basic-data-types"></a>使用基本数据类型
 
@@ -32,7 +33,7 @@ ms.locfileid: "80924065"
 | bigint             | BIGINT                                             | long                         |
 | binary             | BINARY                                             | byte[]                       |
 | bit                | BIT                                                | boolean                      |
-| char               | CHAR                                               | String                       |
+| char               | CHAR                                               | 字符串                       |
 | date               | DATE                                               | java.sql.Date                |
 | datetime           | TIMESTAMP                                          | java.sql.Timestamp           |
 | datetime2          | TIMESTAMP                                          | java.sql.Timestamp           |
@@ -42,63 +43,63 @@ ms.locfileid: "80924065"
 | image              | LONGVARBINARY                                      | byte[]                       |
 | int                | INTEGER                                            | int                          |
 | money              | DECIMAL                                            | java.math.BigDecimal         |
-| nchar              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
-| ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
+| nchar              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | 字符串                       |
+| ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | 字符串                       |
 | numeric            | NUMERIC                                            | java.math.BigDecimal         |
-| nvarchar           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
-| nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
+| nvarchar           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | 字符串                       |
+| nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | 字符串                       |
 | real               | real                                               | FLOAT                        |
 | smalldatetime      | TIMESTAMP                                          | java.sql.Timestamp           |
 | smallint           | SMALLINT                                           | short                        |
 | smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
-| text               | LONGVARCHAR                                        | String                       |
+| text               | LONGVARCHAR                                        | 字符串                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
 | timestamp          | BINARY                                             | byte[]                       |
 | tinyint            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
-| uniqueidentifier   | CHAR                                               | String                       |
+| uniqueidentifier   | CHAR                                               | 字符串                       |
 | varbinary          | VARBINARY                                          | byte[]                       |
 | varbinary(max)     | VARBINARY                                          | byte[]                       |
-| varchar            | VARCHAR                                            | String                       |
-| varchar(max)       | VARCHAR                                            | String                       |
-| xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
-| sqlvariant         | SQLVARIANT                                         | Object                       |
+| varchar            | VARCHAR                                            | 字符串                       |
+| varchar(max)       | VARCHAR                                            | 字符串                       |
+| xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | 字符串<br /><br /> SQLXML    |
+| sqlvariant         | SQLVARIANT                                         | 对象                       |
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
 (1) 若要将 java.sql.Time 与时间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型一起使用，必须将 sendTimeAsDatetime 连接属性设置为 false  。  
   
-(2) 可以编程方式使用 [DateTimeOffset 类](../../connect/jdbc/reference/datetimeoffset-class.md)访问 datetimeoffset  的值。  
+(2) 可以编程方式使用 [DateTimeOffset 类](reference/datetimeoffset-class.md)访问 datetimeoffset  的值。  
   
-以下几部分提供了如何使用 JDBC 驱动程序和基本数据类型的示例。 有关如何在 Java 应用程序中使用基本数据类型的更多详细示例，请参阅[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)。  
+以下几部分提供了如何使用 JDBC 驱动程序和基本数据类型的示例。 有关如何在 Java 应用程序中使用基本数据类型的更多详细示例，请参阅[基本数据类型示例](basic-data-types-sample.md)。  
   
 ## <a name="retrieving-data-as-a-string"></a>以字符串格式检索数据
 
-如果必须从映射到任意 JDBC 基本数据类型的数据源检索数据，并以字符串的格式查看这些数据，或者如果不需要强类型的数据，则可以使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法，如下所示：  
+如果必须从映射到任意 JDBC 基本数据类型的数据源检索数据，并以字符串的格式查看这些数据，或者如果不需要强类型的数据，则可以使用 [SQLServerResultSet](reference/sqlserverresultset-class.md) 类的 [getString](reference/getstring-method-sqlserverresultset.md) 方法，如下所示：  
   
-[!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
+[!code[JDBC#UsingBasicDataTypes1](codesnippet/Java/using-basic-data-types_1.java)]  
   
 ## <a name="retrieving-data-by-data-type"></a>按数据类型检索数据
 
 如果必须从数据源检索数据，并且已知检索的数据类型，则应使用 SQLServerResultSet 类的任一 get\<Type> 方法（也称为 Getter 方法）  。 通过 get\<Type> 方法，可以使用列名或列索引，如下所示：  
   
-[!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
+[!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
 > 使用确定位数的 getUnicodeStream 和 getBigDecimal 方法已遭弃用，不受 JDBC 驱动程序支持。
 
 ## <a name="updating-data-by-data-type"></a>按数据类型更新数据
 
-如果必须更新数据源中字段的值，请使用 SQLServerResultSet 类的一种 update\<Type> 方法。 在下面的示例中，[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 方法与 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法结合使用，用于更新数据源中的数据：  
+如果必须更新数据源中字段的值，请使用 SQLServerResultSet 类的一种 update\<Type> 方法。 在下面的示例中，[updateInt](reference/updateint-method-sqlserverresultset.md) 方法与 [updateRow](reference/updaterow-method-sqlserverresultset.md) 方法结合使用，用于更新数据源中的数据：  
   
-[!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
+[!code[JDBC#UsingBasicDataTypes3](codesnippet/Java/using-basic-data-types_3.java)]  
   
 > [!NOTE]  
 > JDBC Driver 无法更新列名长度超过 127 个字符的 SQL Server 列。 如果尝试更新名称长度超过 127 个字符的列，将引发异常。  
   
 ## <a name="updating-data-by-parameterized-query"></a>通过参数化查询来更新数据
 
-如果必须通过使用参数化查询来更新数据源中的数据，可以使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的任一 set\<Type> 方法（也称为 setter 方法）来设置参数的数据类型  。 在下面的示例中，[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法用于预编译参数化查询，然后在调用 [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) 方法前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 方法来设置参数的字符串值。  
+如果必须通过使用参数化查询来更新数据源中的数据，可以使用 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 类的任一 set\<Type> 方法（也称为 setter 方法）来设置参数的数据类型  。 在下面的示例中，[prepareStatement](reference/preparestatement-method-sqlserverconnection.md) 方法用于预编译参数化查询，然后在调用 [executeUpdate](reference/executeupdate-method.md) 方法前，使用 [setString](reference/setstring-method-sqlserverpreparedstatement.md) 方法来设置参数的字符串值。  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   

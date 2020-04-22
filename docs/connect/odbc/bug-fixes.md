@@ -1,5 +1,6 @@
 ---
-title: 已修复的 bug 列表 | Microsoft Docs
+title: 已修复的 bug 列表
+description: 此页列出了自 Microsoft ODBC Driver 17 for SQL Server 起每个发行版中修复的缺陷。
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896775"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629710"
 ---
 # <a name="list-of-bugs-fixed"></a>已修复的 bug 列表
 
-此页包含从 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开始，每个版本中已修复的 bug 列表
+此页列出了自 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 起每个发行版中修复的缺陷。
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 bug 修复
 
@@ -30,10 +31,10 @@ ms.locfileid: "78896775"
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 bug 修复
 
-- 修复了 Linux/Mac 上的 AKV CMK 元数据哈希计算
+- 修复了 Linux/macOS 上的 AKV CMK 元数据哈希计算
 - 修复了加载 OpenSSL 1.0.0 时的错误
 - 修复了使用 ISO-8859-1 和 ISO-8859-2 代码页时的转换问题
-- 修复了 Mac 上的内部库名称以包含版本号
+- 修复了 macOS 上的内部库名称，以包含版本号
 - 修复了在使用单独的长度和指示器绑定时，null 指示器的设置
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 bug 修复
@@ -82,7 +83,7 @@ ms.locfileid: "78896775"
 - 修复了截断的 ADAL 错误消息
 - 修复了在将浮点数转换为整数时，32 位 Windows 上的罕见错误
 - 修复了以下问题：如果在启用 Always Encrypted 时将 double 插入小数字段，将返回数据截断错误
-- 修复了有关 MacOS 安装程序的警告
+- 修复了有关 macOS 安装程序的警告
 - 修复了以下问题：在同时启用连接复原和连接池的情况下，在会话恢复尝试期间将错误状态发送到 SQL Server，从而导致服务器删除会话
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 bug 修复
@@ -101,5 +102,5 @@ ms.locfileid: "78896775"
 - 修复了经过转义的下划线在 SQLTables 中不起作用的问题
 - 修复了以下 bug：在 Linux 上以宽字符形式返回希伯来语数据 (varchar) 时，该数据被截断
 - 修复了从 UTF-8 应用程序查询 Shift-JIS 编码的 char/varchar 的问题
-- 修复了以下 bug：使用 SQL_DRIVER_NAME 参数调用 SQLGetInfo 时，在 MacOS 上返回 Linux 样式文件名
+- 修复了以下缺陷：使用 SQL_DRIVER_NAME 参数调用 SQLGetInfo 在 macOS 上返回了 Linux 样式文件名
 - 修复了以下问题：通过 BCP 实用工具使用大小大于 32k 字节的输入文件将 Windows-1252 字符数据加载到 VARCHAR 列中会导致失败

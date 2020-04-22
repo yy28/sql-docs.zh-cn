@@ -1,5 +1,6 @@
 ---
 title: 安装 Microsoft ODBC Driver for SQL Server (Linux)
+description: 了解如何在 Linux 客户端上安装 Microsoft ODBC Driver for SQL Server 来启用数据库连接。
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61639d78617cf1b0611729d17010962766d1bf1c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a26c8282ec5afe00c3f23987fb82e3759c77c76e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902071"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487778"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>安装 Microsoft ODBC Driver for SQL Server (Linux)
 
@@ -427,13 +428,13 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-所有这些包都具有自己的依赖项，这些依赖性可能会显示在系统上，也可能不会显示。 有关此问题的常规解决方案，请参阅分发对应的包管理器文档：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) 和 [SUSE](https://en.opensuse.org/Portal:Zypper)
+所有这些包都具有自己的依赖项，这些依赖性可能会显示在系统上，也可能不会显示。 有关此问题的常规解决方案，请参阅发行版对应的包管理器文档：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) 和 [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 还有一种常见做法是，手动下载所有相关包并将其一起放置在安装计算机上，然后依次手动安装每个包，最后安装 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 包。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
 
-- 从 `msodbcsql``.rpm`[ 下载最新的 https://packages.microsoft.com/rhel/7/prod/ ](https://packages.microsoft.com/rhel/7/prod/)。
+- 从 [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) 下载最新的 `msodbcsql` `.rpm` 。
 - 安装依赖项和驱动程序
   
 ```bash
@@ -443,7 +444,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
-- 从 `msodbcsql``.deb`[ 下载最新的 https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)。
+- 从 [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/) 下载最新的 `msodbcsql` `.deb` 。
 - 安装依赖项和驱动程序
 
 ```bash
@@ -453,7 +454,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
 
-- 从 `msodbcsql``.rpm`[ 下载最新的 https://packages.microsoft.com/sles/12/prod/ ](https://packages.microsoft.com/sles/12/prod/)。
+- 从 [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) 下载最新的 `msodbcsql` `.rpm` 。
 - 安装依赖项和驱动程序。
 
 ```bash
@@ -518,7 +519,7 @@ Linux 上的 ODBC 驱动程序由以下组件构成：
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X 或 libmsodbcsql-13.X.so.X.X|包含该驱动程序所有功能的共享对象 (`so`) 动态库文件。 此文件安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/lib64/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/lib64/` 中。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/` 中| 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/include/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/include/` 中。 |
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：** 无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/include/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/include/` 中。 |
 |LICENSE.txt|包含最终用户许可协议条款的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/share/doc/msodbcsql/` 中。|
 |RELEASE_NOTES|包含发行说明的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/share/doc/msodbcsql/` 中。|
 
@@ -526,7 +527,7 @@ Linux 上的 ODBC 驱动程序由以下组件构成：
 
 驱动程序需要加载资源文件才能正常运行。 此文件称为 `msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`，具体取决于驱动程序版本。 `.rll` 文件的位置与驱动程序本身的位置（`so` 或 `dylib`）相对，如上表中所述。 自版本 17.1 开始，如果从相对路径加载失败，驱动程序还将尝试从默认目录加载 `.rll`。 Linux 上的默认资源文件路径是 `/opt/microsoft/msodbcsql17/share/resources/en_US/`。
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 如果无法使用 ODBC 驱动程序建立与 SQL Server 的连接，请参阅[解决连接问题](known-issues-in-this-version-of-the-driver.md#connectivity)上的“已知问题”一文。
 

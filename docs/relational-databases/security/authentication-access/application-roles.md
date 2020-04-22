@@ -21,12 +21,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 928e7eafe6de60c71f3a79cef89eb93d5521e2fe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903790"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305218"
 ---
 # <a name="application-roles"></a>应用程序角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "72903790"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的早期版本中，用户若要在启动应用程序角色后重新获取其原始安全上下文，唯一的方法就是断开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]连接，然后再重新连接。 从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始， **sp_setapprole** 有了一个可创建 Cookie 的选项。 Cookie 包含启用应用程序角色之前的上下文信息。 **sp_unsetapprole** 可以使用此 Cookie 将会话还原到其原始上下文。 有关此新选项和示例的信息，请参阅 [sp_setapprole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)授予的权限来访问这些数据库。  
   
 > [!IMPORTANT]  
->  **SqlClient** 不支持 ODBC **encrypt**选项。 通过网络传输机密信息时，请使用安全套接字层 (SSL) 或 IPSec 对通道进行加密。 如果必须使凭据在客户端应用程序中持久化，请使用加密 API 函数来加密凭据。 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更高版本中，参数 *password* 将作为单向哈希进行存储。  
+>  **SqlClient** 不支持 ODBC **encrypt**选项。 通过网络传输机密信息时，请使用传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）或 IPSec 对通道进行加密。 如果必须使凭据在客户端应用程序中持久化，请使用加密 API 函数来加密凭据。 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更高版本中，参数 *password* 将作为单向哈希进行存储。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1207c4c9688826b599548477a35ca123b9d39c28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b39009d020d906837f4ca4ae4091d12d83cc94c5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579939"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630632"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting 方法 - ListIPAddresses
   列出报表服务器计算机的 IP 地址。  
@@ -34,7 +34,7 @@ public void ListIPAddresses (out string[] IPAddress,
     out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *IPAddress[]*  
  [out] 计算机的 IP 地址列表。  
   
@@ -56,7 +56,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="remarks"></a>备注  
  *IPVersion* 字符串为 V4、V6。  
   
- 如果 *IsDhcpEnabled* 为 **True**， *IPAddress* 将是动态的。 不应用于 SSL 绑定。  
+ 如果 *IsDhcpEnabled* 为 **True**， *IPAddress* 将是动态的。 它不得用于 TLS 绑定。  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

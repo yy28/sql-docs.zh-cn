@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77429048"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486816"
 ---
 # <a name="install-sql-server-reporting-services"></a>安装 SQL Server Reporting Services
 
@@ -95,7 +95,7 @@ URL 预留由前缀、主机名、端口和虚拟目录组成：
 
 |组成部分|说明|
 |----------|-----------------|
-|前缀|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，则安装程序尝试创建使用 HTTPS 前缀的 URL 预留。|
+|前缀|默认的前缀为 HTTP。 如果你以前安装过传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）证书，安装程序会尝试创建使用 HTTP 前缀的 URL 预留。|
 |主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver.`|
 |端口|默认端口为 80。 如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 Web 门户时，必须将该端口显式添加至 URL 中。|
 |虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer（适用于报表服务器 Web 服务）和 Reports（适用于 Web 门户）。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 Web 门户，默认的虚拟目录为 reports  。|

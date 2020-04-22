@@ -1,6 +1,6 @@
 ---
 title: SQL 客户端编程的主页 | Microsoft Docs
-description: 中心页，其中收录了用于连接到 SQL Server 或 Azure SQL 数据库的多种语言和操作系统组合的下载内容和文档的带注释链接。
+description: 此页面收录了指向不同语言和操作系统的下载内容和文档的附注链接，可便于你连接到 SQL Server 或 Azure SQL 数据库。
 author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: df07130ea77578dd467add9d8a96cc331d5c127f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924887"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529041"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server 客户端编程的主页
 
@@ -23,19 +23,19 @@ ms.locfileid: "80924887"
 欢迎访问与 Microsoft SQL Server 和云中的 Azure SQL 数据库进行交互的客户端编程的主页。 本文提供了以下信息：
 
 - 列出并介绍了可用的语言和驱动程序组合。
-    - 介绍了操作系统 Linux（Ubuntu 及其他）、MacOS 和 Windows。
+  - 介绍了操作系统 Linux（Ubuntu 及其他）、macOS 和 Windows。
 - 收录了每个组合的详细文档的链接。
 - 适当时，显示某些语言的分层文档的区域和子区域。
 
 
-#### <a name="azure-sql-database"></a>Azure SQL 数据库
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 在任何给定语言中，用于连接到 SQL Server 和 Azure SQL 数据库的代码几乎完全相同。
 
 若要详细了解用于连接到 Azure SQL 数据库的连接字符串，请参阅：
 
 - [使用 .NET Core (C#) 查询 Azure SQL 数据库](/azure/sql-database/sql-database-connect-query-dotnet-core)。
-- 在目录中的前一篇文章中提到的关于其他语言的其他 Azure SQL 数据库。 例如，请参阅[使用 PHP 查询 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
+- 目录中前一篇文章附近关于其他语言的其他 Azure SQL 数据库文章。 例如，请参阅[使用 PHP 查询 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
 
 
 #### <a name="build-an-app-webpages"></a>“生成应用程序”网页
@@ -118,7 +118,7 @@ Entity Framework  是由两个单独的源代码分支共用的名称。 一个 
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft 第一次发布 EF 是在 2008 年 8 月。 2015 年 3 月，Microsoft 宣布了 EF 6.x 是 Microsoft 开发的最终版本。 Microsoft 将源代码发布到了公共域。<br /><br />EF 最初属于 .NET Framework。 但后来，EF 6.x 从 .NET Framework 中脱离。<br /><br />[Github 存储库 aspnet/EntityFramework6  中的 EF 6.x 源代码](https://github.com/aspnet/EntityFramework6) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft 第一次发布 EF 是在 2008 年 8 月。 2015 年 3 月，Microsoft 宣布了 EF 6.x 是 Microsoft 开发的最终版本。 Microsoft 将源代码发布到了公共域。<br /><br />EF 最初属于 .NET Framework。 但后来，EF 6.x 从 .NET Framework 中脱离。<br /><br />[GitHub 存储库 aspnet/EntityFramework6 中的 EF 6.x 源代码  ](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | 2016 年 6 月，Microsoft 发布了新开发的 EF Core。 EF Core 旨在提升灵活性和可移植性。 可运行 EF Core 的操作系统不止 Microsoft Windows。 EF Core 可以与之交互的数据库不止 Microsoft SQL Server 和其他关系数据库。<br /><br />**C&#x23; 代码示例：**<br />[Entity Framework Core 入门](https://docs.microsoft.com/ef/core/get-started/index)<br />[开始对现有数据库使用 .NET Framework 上的 EF Core](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
@@ -132,7 +132,7 @@ EF 及其相关技术非常强大，对于想要掌握整个领域的开发人�
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Java 徽标][image-ref-330-java] Java 和 JDBC
 
-Microsoft 提供了 Java Database Connectivity (JDBC) 驱动程序，可用于 SQL Server（当然也可用于 Azure SQL 数据库）。 它是 Type 4 JDBC 驱动程序，通过标准 JDBC 应用程序编程接口 (API) 提供数据库连接。
+Microsoft 提供了 Java Database Connectivity (JDBC) 驱动程序，可用于 SQL Server（或 Azure SQL 数据库）。 它是 Type 4 JDBC 驱动程序，通过标准 JDBC 应用程序编程接口 (API) 提供数据库连接。
 
 #### <a name="code-examples"></a>代码示例
 
@@ -162,9 +162,9 @@ JDBC 文档包括以下主要方面：
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node.js 徽标][image-ref-340-node] Node.js
 
-利用 Node.js，可以从 Windows、Linux 或 Mac 连接到 SQL Server。 Node.js 文档的根目录位于[此处](./node-js/index.md)。
+利用 Node.js，可以从 Windows、Linux 或 macOS 连接到 SQL Server。 Node.js 文档的根目录位于[此处](./node-js/index.md)。
 
-用于 SQL Server 的 Node.js 连接驱动程序是用 JavaScript 实现的。 此驱动程序使用 TDS 协议，所有新式版 SQL Server 都支持这种协议。 此驱动程序是 [Github 上](https://tediousjs.github.io/tedious/)的开放源代码项目。
+用于 SQL Server 的 Node.js 连接驱动程序是用 JavaScript 实现的。 此驱动程序使用 TDS 协议，所有新式版 SQL Server 都支持这种协议。 此驱动程序是 [GitHub 上的](https://tediousjs.github.io/tedious/)开放源代码项目。
 
 #### <a name="code-examples"></a>代码示例
 
@@ -179,7 +179,7 @@ JDBC 文档包括以下主要方面：
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>ODBC for C++ 
+## <a name="odbc-for-c"></a>ODBC for C++
 
 ![ODBC 徽标][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
@@ -201,7 +201,7 @@ JDBC 文档包括以下主要方面：
 | 区域 | 子区域 | 说明 |
 | :--- | :------ | :---------- |
 | [ODBC for C++](./odbc/index.md) | 文档的根目录。 |
-| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | 介绍了在 Linux 或 MacOS 操作系统上使用 ODBC。 |
+| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | 介绍了如何在 Linux 或 macOS 操作系统上使用 ODBC。 |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | 介绍了在 Windows 操作系统上使用 ODBC。 |
 | [管理](../odbc/admin/index.md) | &nbsp; | 用于管理 ODBC 数据源的管理工具。 |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Microsoft 创建和提供的各种 ODBC 驱动程序。 |
@@ -255,7 +255,7 @@ JDBC 文档包括以下主要方面：
 | :--- | :---------- |
 | [使用 Python 连接到 SQL Server](./python/index.md) | 文档的根目录。 |
 | [pymssql 驱动程序](./python/pymssql/index.md) | Microsoft 不维护或测试 pymssql 驱动程序。<br /><br />pymssql 连接驱动程序是连接到 SQL 数据库的简单接口，以供在 Python 程序中使用。 pymssql 在 FreeTDS 的基础之上构建，以提供连接到 Microsoft SQL Server 的 Python DB-API (PEP-249) 接口。 |
-| [pyodbc 驱动程序](./python/pyodbc/index.md)   | pyodbc 连接驱动程序是开放源代码 Python 模块，它使访问 ODBC 数据库变得非常简单。 它虽实现了 DB API 2.0 规范，但提供了更多 Pythonic 便利。 |
+| [pyodbc 驱动程序](./python/pyodbc/index.md)   | pyodbc 连接驱动程序是开放源代码 Python 模块，它简化了访问 ODBC 数据库的过程。 它虽实现了 DB API 2.0 规范，但提供了更多 Pythonic 便利。 |
 | &nbsp; | <br /> |
 
 
@@ -271,7 +271,7 @@ JDBC 文档包括以下主要方面：
 | :-- | :-- |
 | [使用 Ruby 连接到 SQL 的概念证明](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 专注于如何连接和查询 SQL Server 的小型代码示例。 |
 | [Azure SQL 数据库：使用 Ruby 进行查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL 数据库示例。 |
-| [创建在 MacOS 上使用 SQL Server 的 Ruby 应用程序](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 配置信息和代码示例。 |
+| [创建在 macOS 上使用 SQL Server 的 Ruby 应用程序](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 配置信息和代码示例。 |
 | &nbsp; | <br /> |
 
 
@@ -293,7 +293,7 @@ JDBC 文档包括以下主要方面：
 
 下面是网站上的详细信息的一些大纲式要点：
 
-#### <a name="java-on-ubuntu"></a>Ubuntu 上的 Java：
+#### <a name="java-on-ubuntu"></a>Ubuntu 上的 Java
 
 1. 设置你的环境
     - 步骤 1.1：安装 SQL Server
@@ -306,7 +306,7 @@ JDBC 文档包括以下主要方面：
 3. 让 Java 应用程序的速度提高 100 倍
     - 步骤 3.1：创建用于展示列存储索引的 Java 应用程序
 
-#### <a name="python-on-windows"></a>Windows 上的 Python：
+#### <a name="python-on-windows"></a>Windows 上的 Python
 
 1. 设置你的环境
     - 步骤 1.1：安装 SQL Server
@@ -325,13 +325,13 @@ JDBC 文档包括以下主要方面：
 
 下面的屏幕截图展示了 SQL 开发文档网站的外观。
 
-#### <a name="choose-a-language"></a>选择语言：
+#### <a name="choose-a-language"></a>选择语言
 
 ![SQL 开发网站 - 开始使用][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>选择操作系统：
+#### <a name="choose-an-operating-system"></a>选择操作系统
 
 ![SQL 开发网站 - Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 

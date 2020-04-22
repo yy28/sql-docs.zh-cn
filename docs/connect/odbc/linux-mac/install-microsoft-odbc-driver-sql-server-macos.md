@@ -1,5 +1,6 @@
 ---
 title: 安装 Microsoft ODBC Driver for SQL Server (macOS)
+description: 了解如何在 macOS 客户端上安装 Microsoft ODBC Driver for SQL Server 来启用数据库连接。
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61bbc198c695ba6e1a0b6a339bfb110108435de8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921918"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488515"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>安装 Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -59,7 +60,7 @@ macOS 上的 ODBC 驱动程序由以下组件构成：
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|包含该驱动程序所有功能的动态库 (`dylib`) 文件。 此文件安装在 `/usr/local/lib/` 中。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 ODBC Driver 17 的 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` 中和 ODBC Driver 13 的 `[driver .dylib directory]../share/msodbcsql/resources/en_US/` 中。 | 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/usr/local/include/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/include/msodbcsql/` 中。 |
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：** 无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/usr/local/include/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/include/msodbcsql/` 中。 |
 |LICENSE.txt|包含最终用户许可协议条款的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/local/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/share/doc/msodbcsql/` 中。 |
 |RELEASE_NOTES|包含发行说明的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/local/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/share/doc/msodbcsql/` 中。 |
 
@@ -67,7 +68,7 @@ macOS 上的 ODBC 驱动程序由以下组件构成：
 
 驱动程序需要加载资源文件才能正常运行。 此文件称为 `msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`，具体取决于驱动程序版本。 `.rll` 文件的位置与驱动程序本身的位置（`so` 或 `dylib`）相对，如上表中所述。 自版本 17.1 开始，如果从相对路径加载失败，驱动程序还将尝试从默认目录加载 `.rll`。 macOS 上的默认资源文件路径是 `/usr/local/share/msodbcsql17/resources/en_US/`
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 如果无法使用 ODBC 驱动程序建立与 SQL Server 的连接，请参阅[解决连接问题](known-issues-in-this-version-of-the-driver.md#connectivity)上的“已知问题”一文。
 

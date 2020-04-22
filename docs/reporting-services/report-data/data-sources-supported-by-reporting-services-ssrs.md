@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 支持的数据源 | Microsoft Docs
-ms.date: 03/17/2017
+ms.date: 04/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5af09901eed4711ced6ae8c389ede859554b38f1
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 9b84ba1a790a86d503ced41f6cd1a95e7bec4dc1
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002776"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528141"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -168,7 +168,9 @@ ms.locfileid: "81002776"
 ###  <a name="microsoft-sql-server-analysis-services-data-processing-extension"></a><a name="AnalysisServices"></a> Microsoft SQL Server Analysis Services 数据处理扩展插件  
  如果选择数据源类型“Microsoft SQL Server Analysis Services”  ，则选择的是扩展 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件。 此数据处理扩展插件针对基于 x86 和 x64 的平台进行了本机编译并在这些平台上运行。  
   
- 此数据访问接口使用 ADOMD.NET 对象模型创建使用 XML for Analysis (XMLA) 版本 1.1 的查询。 结果将以平展行集的形式返回。 有关详细信息，请参阅[针对 MDX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)、[针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)、[Analysis Services MDX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)和 [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
+ 此数据访问接口使用 ADOMD.NET 对象模型创建使用 XML for Analysis (XMLA) 版本 1.1 的查询。 结果将以平展行集的形式返回。 有关详细信息，请参阅[针对 MDX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)、[针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)、[Analysis Services MDX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)和 [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。 
+ 
+ 对于 Azure Analysis Services 数据源，请注意，必须禁用多重身份验证，才能使用凭据连接到数据源。 
   
  连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持多值参数，并将单元格和成员属性映射到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的扩展属性。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   

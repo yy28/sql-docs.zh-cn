@@ -1,5 +1,6 @@
 ---
 title: rsModelGenerationError - Reporting Services 错误 | Microsoft Docs
+description: 在此错误参考页中，了解事件 ID“rsModelGenerationError”：生成模型时出错。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 870f1fbc49e99e2cd43c6adb857137776c275550
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bfeb477ac1830d9604e3d794e96e807548639671
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574082"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487226"
 ---
 # <a name="rsmodelgenerationerror---reporting-services-error"></a>rsModelGenerationError - Reporting Services 错误
     

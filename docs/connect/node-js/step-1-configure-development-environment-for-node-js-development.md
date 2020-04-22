@@ -1,5 +1,6 @@
 ---
-title: 步骤 1：配置用于 Node.js 开发的开发环境 | Microsoft Docs
+title: 步骤 1：配置用于 Node.js 开发的开发环境
+description: 必须为开发环境配置必备项，才能使用 Node.js Driver for SQL Server 开发应用程序。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +11,23 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ba06f87c5ff4970d3d8686e7195d57dc076cc04
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 38337772d9ec9db2503637122d0d1b616dc6ef5f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923840"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528131"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>步骤 1：配置用于 Node.js 开发的开发环境
-必须为开发环境配置必备项，才能使用 Node.js Driver for SQL Server 开发应用程序。  最常见的方法是，使用节点包管理器 (npm) 安装 tedious 模块，但如果你愿意，也可以直接从 [Github](https://github.com/pekim/tedious) 下载 tedious 模块。  
+必须为开发环境配置必备项，才能使用 Node.js Driver for SQL Server 开发应用程序。  最常见的方法是，使用节点包管理器 (npm) 安装 tedious 模块，但如果你愿意，也可以直接从 [GitHub](https://github.com/pekim/tedious) 下载 tedious 模块。  
   
-请注意，Node.js 驱动程序使用 TDS 协议，SQL Server 和 Azure SQL 数据库中默认启用此协议。  这种方式无需任何其他配置。  
+Node.js 驱动程序使用 TDS 协议，此协议在 SQL Server 和 Azure SQL 数据库中默认启用。  这种方式无需任何其他配置。  
   
 ## <a name="windows"></a>Windows  
   
-1. **安装 Node.js 运行时和 npm 包管理器**  
+1. 安装 Node.js 运行时和 npm 包管理器。   
 a. 转到 [Node.js](https://nodejs.org/en/download/)  
-b.保留“数据库类型”设置，即设置为“共享”。 单击相应的 Windows 安装程序 msi 链接。   
+b. 单击相应的 Windows 安装程序 msi 链接。   
 c. 下载后，运行 msi 来安装 Node.js  
   
 2. **打开 cmd.exe**  
@@ -41,7 +42,7 @@ c. 下载后，运行 msi 来安装 Node.js
 > npm init  
 ```  
   
-5. **在项目中安装 tedious 模块。**  这是驱动程序用来与 SQL Server 通信的 TDS 协议的实现。  
+5. **在项目中安装 tedious 模块。**  tedious 是 TDS 协议的实现，用于与 SQL Server 通信。  
 ```  
 > npm install tedious  
 ```  
@@ -50,11 +51,11 @@ c. 下载后，运行 msi 来安装 Node.js
   
 1.  **打开终端**  
   
-2. **安装 Node.js 运行时**  
+2. 安装 Node.js 运行时。   
 ```  
 >sudo apt-get install node  
 ```  
-3. **安装 npm（节点包管理器）**  
+3. 安装 npm（节点包管理器）。   
 ```  
 > sudo apt-get install npm  
 ```  
@@ -69,17 +70,17 @@ c. 下载后，运行 msi 来安装 Node.js
 > sudo npm init  
 ```  
   
-6. **在项目中安装 tedious 模块。**  这是驱动程序用来与 SQL Server 通信的 TDS 协议的实现。  
+6. **在项目中安装 tedious 模块。**  tedious 是 TDS 协议的实现，用于与 SQL Server 通信。  
 ```  
 > sudo npm install tedious  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS  
   
-1. **安装 Node.js 运行时和 npm 包管理器**  
+1. 安装 Node.js 运行时和 npm 包管理器。   
 a. 转到 [Node.js](https://nodejs.org/en/download/)  
-b.保留“数据库类型”设置，即设置为“共享”。 单击相应的 Mac OS 安装程序链接。  
-c. 下载后，运行 dmg 来安装 Node.js  
+b. 单击相应的 macOS 安装程序链接。  
+c. 下载后，运行“dmg”来安装 Node.js  
   
 2. **打开终端**  
   
@@ -98,4 +99,3 @@ c. 下载后，运行 dmg 来安装 Node.js
 ```  
 > npm install tedious  
 ```  
-  
