@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729181"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728498"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保护主数据管理器 Web 应用程序
 
@@ -23,10 +23,9 @@ ms.locfileid: "73729181"
   您可以使用 HTTPS 保护 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序可以使用 HTTP 或 HTTPS，但不是同时使用这两者。  
+>  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序可以使用 HTTP 或 HTTPS，但不是同时使用这两者。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须是安装了 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的 Web 服务器上的管理员。  
@@ -45,7 +44,7 @@ ms.locfileid: "73729181"
   
 5.  从列表中选择 **https**。  
   
-6.  选择 SSL 证书。  
+6.  选择 TLS/SSL 证书。  
   
 7.  单击“确定”。   
   
@@ -66,6 +65,6 @@ ms.locfileid: "73729181"
 
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Master Data Services 创建主数据管理器 Web 应用程序&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+ [创建主数据管理器 Web 应用程序 &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

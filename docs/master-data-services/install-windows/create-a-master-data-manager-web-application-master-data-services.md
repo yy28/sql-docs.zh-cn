@@ -1,5 +1,5 @@
 ---
-title: 创建主数据管理器 web 应用程序
+title: 创建主数据管理器 Web 应用程序
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0c0bf0cacc1fa1a1d042633531840ba46d1fae2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5617adb01ffc566319905942376ecaa9b78065bb
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75253068"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728508"
 ---
-# <a name="create-a-master-data-manager-web-application-master-data-services"></a>创建主数据管理器 web 应用程序（Master Data Services）
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>创建主数据管理器 Web 应用程序（主数据服务）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序提供了一个接口，便于用户使用主数据，并供管理员用来配置和管理 MDS。  
   
  网站必须始终包含 Web 应用程序。 要创建 Web 应用程序，您必须：  
@@ -34,7 +33,7 @@ ms.locfileid: "75253068"
   
  在您创建 Web 应用程序之后，将其与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库相关联。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   有关承载 Web 应用程序的计算机的要求信息，请参阅 [Web 应用程序要求 (Master Data Services)](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "75253068"
   
 -   将 Web 应用程序与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库关联。 有关详细信息，请参阅 [将 Master Data Services 数据库与 Web 应用程序关联](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)。  
   
--   如果你想要通过使用安全套接字层 (SSL) 对内容进行加密，还可以配置承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的网站以便使用 HTTPS 绑定。 您必须使用 IIS 管理器之类的 Internet Information Services (IIS) 工具为 Web 服务器配置服务器证书，以及为站点配置 HTTPS 绑定和 SSL 设置。 有关详细信息，请参阅 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)。  
+-   或者，如果想要使用传输层安全[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]（TLS）（以前称为安全套接字层 （SSL））加密内容，请将承载 Web 应用程序的网站配置为使用 HTTPS 绑定。 您必须使用 Internet 信息服务 （IIS） 工具（如 IIS Manager）来配置 Web 服务器的服务器证书，并为站点配置 HTTPS 绑定和 TLS 设置。 有关详细信息，请参阅 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
