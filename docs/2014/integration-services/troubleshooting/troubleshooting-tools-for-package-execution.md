@@ -16,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637802"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087057"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用于在包完成和部署以后的执行过程中进行故障排除的功能和工具。  
@@ -52,9 +52,9 @@ ms.locfileid: "73637802"
   
 -   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，您还可以添加说明性信息以便更容易分析错误输出。  
   
-     **添加错误说明**。 使用脚本组件查找错误说明是很容易的。 有关详细信息，请参阅[增强脚本组件的错误输出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+     **添加错误的说明**。 使用脚本组件查找错误说明是很容易的。 有关详细信息，请参阅[增强脚本组件的错误输出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
-     **添加错误列的名称**。 在脚本组件中无法轻易查找与错误输出保存的列 ID 对应的列名，需要其他的步骤。 数据流中的每个列 ID 在该数据流任务中都是唯一的，并且设计时在包中保持不变。 建议采用下列方法向错误输出中添加列名。 有关如何使用此方法的示例，请参阅[将错误列名称添加到](https://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上的错误输出。  
+     **添加错误列的名称**。 在脚本组件中无法轻易查找与错误输出保存的列 ID 对应的列名，需要其他的步骤。 数据流中的每个列 ID 在该数据流任务中都是唯一的，并且设计时在包中保持不变。 建议采用下列方法向错误输出中添加列名。 
   
     1.  **创建列名称的查找表**。 创建另一个应用程序，该应用程序使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 对每个已保存的包、包中的每个数据流、数据流中的每个对象以及数据流对象中的每个输入和输出进行迭代。 应用程序应当将每一列的列 ID 和名称以及父数据流任务的 ID 和包的 ID 持久化到查找表。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "73637802"
   
     3.  **考虑捕获行计数数据**。 考虑另行创建一个表，用于存储行计数信息。其中，每个包执行实例均由其 ExecutionID 标识。 使用行计数转换在数据流的关键点将行计数保存到一系列变量中。 数据流结束后，请使用执行 SQL 任务将该系列值插入到表的行中，供以后分析和报告。  
   
-     有关此方法的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮书 [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)（Project REAL：Business Intelligence ETL 设计实践）中的 "ETL Auditing and Logging"（ETL 审核和日志记录）一节。  
+     有关此方法的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮书 [Project REAL：Business Intelligence ETL 设计实践](https://www.microsoft.com/download/details.aspx?id=14582)中的“ETL 审核和日志记录”一节。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用调试转储文件对包执行进行故障排除  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，可以创建提供包执行信息的调试转储文件。 有关详细信息，请参阅 [生成包执行的转储文件](generating-dump-files-for-package-execution.md)。  
@@ -111,8 +111,5 @@ ms.locfileid: "73637802"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)  
-  
-## <a name="related-content"></a>相关内容  
- dougbert.com 上的博客文章： [向错误输出中添加错误列名](https://go.microsoft.com/fwlink/?LinkId=261546)。  
   
   

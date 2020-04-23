@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9fe67c3fe0656924ea8e53c4c937a99b588b46b
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388499"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086877"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
   本教程教您如何创建两种报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 下图显示了将创建的报表。  
@@ -153,7 +153,7 @@ ms.locfileid: "81388499"
 2.  在“选择多维数据集”**** 对话框中，依次单击“Sales”和“确定”****。  
   
     > [!TIP]  
-    >  如果不想手动生成 MDX 查询，请单击 ![切换到设计模式](../analysis-services/media/rsqdicon-designmode.gif "切换到设计模式") 图标，将查询设计器切换到“查询”模式，将已完成的 MDX 粘贴到查询设计器，然后继续执行 [创建数据集](#DSkip)中的步骤 6。  
+    >  如果不想手动生成 MDX 查询，请单击 ![切换到设计模式](media/rsqdicon-designmode.gif "切换到设计模式") 图标，将查询设计器切换到“查询”模式，将已完成的 MDX 粘贴到查询设计器，然后继续执行 [创建数据集](#DSkip)中的步骤 6。  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
