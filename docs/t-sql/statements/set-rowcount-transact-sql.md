@@ -27,12 +27,12 @@ ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f79e7931e0e1fd04a699620f65c1dc2566347202
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e46257d1853ee8aa744c805be424b13f2f9f34bb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140233"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635742"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68140233"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 SET ROWCOUNT { number | @number_var }   
 ```  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
 ## <a name="examples"></a>示例  
  SET ROWCOUNT 在达到指定的行数后停止处理。 请注意，在下面的示例中有超过 500 行满足 `Quantity` 小于 `300` 的条件。 但是，应用 SET ROWCOUNT 后，您可以看到并未返回所有行。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT count(*) AS Count  
@@ -91,20 +91,20 @@ GO
   
  现在，将 `ROWCOUNT` 设置为 `4` 并返回所有行，以演示仅返回 4 行。  
   
-```  
+```sql
 SET ROWCOUNT 4;  
 SELECT *  
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
   
-(4 row(s) affected)
+-- (4 row(s) affected)
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT 在达到指定的行数后停止处理。 请注意，在下面的示例中共有 20 行满足 `AccountType = 'Assets'` 条件。 但是，应用 SET ROWCOUNT 后，您可以看到并未返回所有行。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 5;  
@@ -114,7 +114,7 @@ WHERE AccountType = 'Assets';
   
  若要返回所有行，请将 ROWCOUNT 设置为 0。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 0;  
