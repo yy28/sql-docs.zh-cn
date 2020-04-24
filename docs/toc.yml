@@ -10083,8 +10083,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: 开发
           href: sql-server/partner-dev-sql-server.md
-    - name: 帮助查看器的本地内容
-      href: sql-server/sql-server-help-installation.md
+    - name: 脱机 SQL Server 文档
+      href: sql-server/sql-server-offline-documentation.md
 - name: 参考
   items:
     - name: 已存档内容 (SQL 2005-2012) >
