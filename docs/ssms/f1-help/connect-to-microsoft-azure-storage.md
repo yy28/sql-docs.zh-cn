@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f10095fe581b00411199a63b4bd12a4b29346a26
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245015"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487436"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>连接到 Microsoft Azure 存储
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "75245015"
 1.  **存储帐户** - 指定存储帐户名称。
 
    >[!NOTE]
-   > 只能连接到[常规用途存储帐户](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services)。 连接到其他类型的存储帐户可能会导致如下错误：
+   > 只能连接到[常规用途存储帐户](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services)。 连接到其他类型的存储帐户可能会导致如下错误：
    >
    >  其中一个 HTTP 标头的值格式不正确。 (Microsoft.SqlServer.StorageClient)。
    >

@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df6819f9beaa78232227e0fadd3e7c7a2e56c801
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73530934"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634741"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 
@@ -86,7 +86,7 @@ ms.locfileid: "73530934"
 
 ## <a name="syntax"></a>语法
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  [ FROM <backup_device> [ ,...n ] ]
@@ -751,7 +751,7 @@ RESTORE DATABASE Sales
 
 ## <a name="syntax"></a>语法
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]
@@ -883,7 +883,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 ## <a name="syntax"></a>语法
 
-```sql
+```syntaxsql
 
 -- Restore the master database
 -- Use the Configuration Manager tool.
@@ -995,7 +995,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 数据库的完整备份从存储在 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 目录中的完整备份还原。 如果还原成功完成，则差异备份会还原到 SalesInvoices2013 数据库。 差异备份存储在 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` 目录中。
 
-```sql
+```syntaxsql
 RESTORE DATABASE SalesInvoices2013
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
     WITH BASE = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
@@ -1007,7 +1007,7 @@ RESTORE DATABASE SalesInvoices2013
 
 此示例将还原数据库备份 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 的标头信息。 该命令会为 Invoices2013Full 备份生成一行信息。
 
-```sql
+```syntaxsql
 RESTORE HEADERONLY
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
 [;]

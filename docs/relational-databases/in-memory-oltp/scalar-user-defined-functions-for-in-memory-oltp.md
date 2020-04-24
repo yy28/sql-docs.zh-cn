@@ -11,12 +11,12 @@ ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3914e8d5138dc2de4481276167165d1f4360c657
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111757"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487756"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>针对内存中 OLTP 的标量用户定义函数
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68111757"
   
  [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) 存储过程可用于本机编译标量用户定义函数。 它将导致使用元数据中存在的定义重新编译该函数。  
   
- 下面的示例演示 [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) 示例数据库中的标量 UDF。  
+ 下面的示例演示 [AdventureWorks2016CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) 示例数据库中的标量 UDF。  
   
 ```sql  
 CREATE FUNCTION [dbo].[ufnLeadingZeros_native](@Value int)   

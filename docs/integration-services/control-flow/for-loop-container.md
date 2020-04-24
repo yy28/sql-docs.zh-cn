@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294145"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488163"
 ---
 # <a name="for-loop-container"></a>For 循环容器
 
@@ -73,8 +73,6 @@ ms.locfileid: "71294145"
 ##  <a name="configure-the-for-loop-container"></a>配置 For 循环容器
 此过程介绍如何使用 **“For 循环编辑器”** 对话框配置 For 循环容器。  
   
- 有关 For 循环容器的示例，请参阅 bimonkey.com 上的 [不失败的 SSIS 循环](https://go.microsoft.com/fwlink/?LinkId=240295) 。  
-  
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，双击 For 循环容器，打开“For 循环编辑器”  。  
   
 2.  根据需要，修改 For 循环容器的名称和说明。  
@@ -121,7 +119,7 @@ ms.locfileid: "71294145"
   
  表达式中可以包含变量。 使用变量的优点是变量可在运行时更新，使得包管理起来更灵活、更容易。 表达式的最大长度为 4000 个字符。  
   
- 在表达式中指定变量时，必须在其前面加符号 @。 例如，对于名为 Counter  的变量，请在 For 循环容器使用的表达式中输入 @Counter。 如果变量上包含了命名空间属性，则您必须用方括号将变量和命名空间括起来。 例如，对于 MyNamespace 命名空间中的 Counter 变量，请键入 [ **]**  @MyNamespace::Counter。  
+ 在表达式中指定变量时，必须在其前面加符号 @。 例如，对于名为 Counter  的变量，请在 For 循环容器使用的表达式中输入 @Counter。 如果变量上包含了命名空间属性，则您必须用方括号将变量和命名空间括起来。 例如，对于 MyNamespace 命名空间中的 Counter 变量，请键入 [@MyNamespace::Counter]   。  
   
  For 循环容器使用的变量必须在 For 循环容器的范围内定义，或者在包容器层次结构中较高层次容器的范围内定义。 例如，For 循环容器可使用在其范围内定义的变量，也可使用在包范围内定义的变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   

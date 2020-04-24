@@ -10,18 +10,18 @@ manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69c68812e169d2831ffde71d2b21f9af8f418600
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244245"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486788"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何在您的项目中使用 Microsoft SQL Server 2012 对象
 
 在此示例中，你将向一个面向 Microsoft SQL Server 2012 的数据库项目中添加序列对象。  
   
-Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的架构绑定对象，它根据创建该序列时采用的规范生成一组数值。 这组数值以定义的间隔按升序或降序生成，并且可根据要求循环（重复）。  有关序列对象的详细信息，请参阅[序列号](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)。 有关 Microsoft SQL Server 2012 新增功能的信息，请参阅 [SQL Server 2012 中的新增功能](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)。  
+Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的架构绑定对象，它根据创建该序列时采用的规范生成一组数值。 这组数值以定义的间隔按升序或降序生成，并且可根据要求循环（重复）。  有关序列对象的详细信息，请参阅[序列号](../relational-databases/sequence-numbers/sequence-numbers.md)。 有关 Microsoft SQL Server 2012 新增功能的信息，请参阅 [SQL Server 2012 中的新增功能](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)。  
   
 > [!WARNING]  
 > 以下过程利用在[连接的数据库开发](../ssdt/connected-database-development.md)和[面向项目的脱机数据库开发](../ssdt/project-oriented-offline-database-development.md)部分中的之前过程中创建的实体。  

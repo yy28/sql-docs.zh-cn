@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 19935bbcaba9b856ff04b5c618de3b3643e48732
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117570"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486766"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能：结果和资源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -351,7 +351,7 @@ RevoScaleR 和 MicrosoftML 包都用于在涉及大型数据集的复杂 R 解�
 
 + 介绍恢复匹配解决方案的文章：[用于 SQL Server R Services 的优化提示和技巧](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ SQL 优化中用于恢复匹配解决方案的脚本：[GitHub 存储库](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ SQL 优化中用于恢复匹配解决方案的脚本：[GitHub 存储库](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)
 
 ### <a name="learn-about-windows-server-management"></a>了解 Windows Server 管理
 

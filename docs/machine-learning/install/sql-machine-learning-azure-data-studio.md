@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b090f7e630082fa93951db56deb16d8842f977ea
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118600"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487561"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>使用 SQL Server 机器学习服务在 Azure Data Studio 笔记本中运行 Python 和 R 脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-了解如何使用 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)在 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 笔记本中运行 Python 和 R 脚本。 Azure Data Studio 是一种跨平台数据库工具。
+了解如何使用 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)在 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 笔记本中运行 Python 和 R 脚本。 Azure Data Studio 是一种跨平台数据库工具。
 
 ## <a name="prerequisites"></a>先决条件
 

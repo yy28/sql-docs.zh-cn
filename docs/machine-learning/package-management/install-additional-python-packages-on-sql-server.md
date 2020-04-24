@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e4aaac1eb06d391cf73f32cda28b12419a2b5645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "81119110"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487102"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 Python 包
 
@@ -37,7 +37,7 @@ ms.locfileid: "81119110"
 
 ### <a name="other-considerations"></a>其他注意事项
 
-+ 包必须与你安装的 Python 版本兼容。 有关每个 SQL Server 版本中随附的 Python 版本的详细信息，请参阅[“什么是 SQL Server 机器学习服务（Python 和 R）？”中的 Python 和 R 版本](../what-is-sql-server-machine-learning.md#versions)
++ 包必须与你安装的 Python 版本兼容。 有关每个 SQL Server 版本中随附的 Python 版本的详细信息，请参阅[“什么是 SQL Server 机器学习服务（Python 和 R）？”中的 Python 和 R 版本](../sql-server-machine-learning-services.md#versions)
 
 + Python 包库位于 SQL Server 实例的“程序文件”文件夹中，默认情况下，在此文件夹中安装需要管理员权限。 有关详细信息，请参阅[包库位置](../package-management/python-package-information.md#default-python-library-location)。
 

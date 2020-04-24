@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 02a90a155bcfcc2ad2294fb03c4e8b832701e36c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039079"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632395"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ DBCC OPENTRAN 可帮助识别可能阻止日志截断的活动事务。 如果�
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
 DBCC OPENTRAN   
 [   
     ( [ database_name | database_id | 0 ] )   

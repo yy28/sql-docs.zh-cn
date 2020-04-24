@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 34ab0ad4011c0301aa22a437315d8a5a64e0e372
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118110"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487101"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装新的 R 包
 
@@ -250,4 +250,4 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 - 有关已安装的 R 包的信息，请参阅[获取 R 包信息](r-package-information.md)
 - 有关使用 R 包的帮助信息，请参阅[使用 R 包的技巧](tips-for-using-r-packages.md)
 - 有关安装 Python 包的信息，请参阅[通过 pip 安装 Python 包](install-additional-python-packages-on-sql-server.md)
-- 有关 SQL Server 机器学习服务的详细信息，请参阅[什么是 SQL Server 机器学习服务（Python 和 R）？](../what-is-sql-server-machine-learning.md)
+- 有关 SQL Server 机器学习服务的详细信息，请参阅[什么是 SQL Server 机器学习服务（Python 和 R）？](../sql-server-machine-learning-services.md)

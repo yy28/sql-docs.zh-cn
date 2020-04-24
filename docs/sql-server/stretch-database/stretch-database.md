@@ -10,12 +10,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbd815ee666f4f3a2fd144dd08161bbbf57d0fbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75623254"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488338"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "75623254"
  使用 SQL Server 2016 升级顾问的一项功能 - 延伸数据库顾问 - 可以识别符合延伸数据库条件的数据库和表。 有关详细信息，请参阅 [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。 若要了解有关潜在阻滞问题的详细信息，请参阅 [Stretch Database 的局限性](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
 
 ## <a name="test-drive-stretch-database"></a>试用 Stretch Database  
- **通过 AdventureWorks 示例数据库试用 Stretch Database。** 若要获取 AdventureWorks 示例数据库，必须从 [此处](https://www.microsoft.com/download/details.aspx?id=49502)。 将示例数据库还原到 SQL Server 2016 实例后，解压缩示例文件，然后从 Stretch DB 文件夹打开 Stretch DB Samples 文件。 运行此文件中的脚本来检查启用 Stretch Database 之前和之后数据使用的空间、跟踪数据迁移的进度，以及确认你是否可以继续在数据迁移期间和之后查询现有数据和插入新数据。  
+ **通过 AdventureWorks 示例数据库试用 Stretch Database。** 若要获取 AdventureWorks 示例数据库，必须从 [此处](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。 将示例数据库还原到 SQL Server 2016 实例后，解压缩示例文件，然后从 Stretch DB 文件夹打开 Stretch DB Samples 文件。 运行此文件中的脚本来检查启用 Stretch Database 之前和之后数据使用的空间、跟踪数据迁移的进度，以及确认你是否可以继续在数据迁移期间和之后查询现有数据和插入新数据。  
   
 ## <a name="next-step"></a>后续步骤  
  **确定适用于 Stretch Database 的数据库和表。** 下载数据迁移助手并运行评估，以标识为 Stretch Database 候选项的数据库和表。 有关详细信息，请参阅 [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  

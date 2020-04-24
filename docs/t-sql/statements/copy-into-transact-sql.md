@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903814"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631959"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL)（预览版）
 
@@ -36,7 +36,7 @@ ms.locfileid: "77903814"
 
 ## <a name="syntax"></a>语法  
 
-```
+```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
 FROM ‘<external_location>’ [,...n]
@@ -364,7 +364,7 @@ WITH (
 COPY 命令功能正式发布后，将具有更高的性能。 为了在公共预览期间获得最佳加载性能，请考虑在加载 CSV 时将你的输入拆分为多个文件。 目前，使用 INSERT SELECT 时，COPY 和 PolyBase 在性能方面不相上下。 
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>加载 CSV 文件时，COPY 命令的文件拆分指导是什么？
-下表概述了文件数量指导。 一旦达到推荐的文件数量，便能获得更大的文件，性能也就越高。 COPY 命令正式发布后，无需拆分未压缩的文件。 
+下表概述了文件数量指导。 一旦达到推荐的文件数量，便能获得更大的文件，性能也就越高。 
 
 | **DWU** | **文件数** |
 | :-----: | :--------: |

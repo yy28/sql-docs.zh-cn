@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd248b42f01a65aabcd1146d23c7b247d0053908
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053571"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488177"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68053571"
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a>每个谓词和函数的示例
 
-以下示例使用 AdventureWorks 示例数据库。 有关 AdventureWorks 的最终版本，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502)。 要运行示例查询，还需要设置全文搜索。 有关详细信息，请参阅[全文搜索入门](get-started-with-full-text-search.md)。 
+以下示例使用 AdventureWorks 示例数据库。 有关 AdventureWorks 的最终版本，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。 要运行示例查询，还需要设置全文搜索。 有关详细信息，请参阅[全文搜索入门](get-started-with-full-text-search.md)。 
 
 ### <a name="example---contains"></a>示例 - CONTAINS  
 下面的示例查找包含 `$80.99` 一词且价格为 `"Mountain"` 的所有产品：

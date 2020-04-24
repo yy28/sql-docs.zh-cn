@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f07c056e903f1036bfba15398f7cf54a1985f2d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 877b9ece1fb88f8e46b4d986645fe051fba5fdd7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116410"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487416"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Python 教程：在 SQL Server 机器学习服务中使用线性回归来预测雪橇租赁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在这个由四个部分组成的教程系列中，你将在 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)中使用 Python 和线性回归来预测雪橇租赁次数。 本教程使用 [Azure Data Studio 中的 Python Notebook](../../azure-data-studio/sql-notebooks.md)，你也可以使用自己的 Python 集成开发环境 (IDE)。
+在这个由四个部分组成的教程系列中，你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中使用 Python 和线性回归来预测雪橇租赁次数。 本教程使用 [Azure Data Studio 中的 Python Notebook](../../azure-data-studio/sql-notebooks.md)，你也可以使用自己的 Python 集成开发环境 (IDE)。
 
 假设你有一家雪橇租赁公司，你希望预测未来某个日期的雪橇租赁次数。 此信息可帮助你准备好库存、人员和设施。
 

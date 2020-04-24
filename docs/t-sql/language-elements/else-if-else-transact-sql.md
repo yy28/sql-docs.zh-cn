@@ -20,12 +20,12 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ff6cc86bb2b8df43ccf47beb144190567492fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075315"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634944"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68075315"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -58,14 +58,14 @@ IF Boolean_expression
 ### <a name="a-using-a-simple-boolean-expression"></a>A. 使用简单的布尔表达式  
  下面的示例具有一个为 True 的简单布尔表达式 (`1=1`)，因此打印第一条语句。  
   
-```  
+```sql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  下面的示例具有为 False 的简单布尔表达式 (`1=2`)，因此打印第二条语句。  
   
-```  
+```sql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  
@@ -74,7 +74,7 @@ GO
 ### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. 将查询用作布尔表达式的一部分  
  下面的示例执行属于布尔表达式一部分的查询。 由于 `Product` 表中有 10 辆符合 `WHERE` 子句条件的自行车，因此将执行第一条打印语句。 将 `> 5` 更改为 `> 15` 查看如何执行第二部分语句。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF   
@@ -87,7 +87,7 @@ GO
 ### <a name="c-using-a-statement-block"></a>C. 使用语句块  
  下面的示例执行属于布尔表达式一部分的查询，然后再根据布尔表达式的结果执行稍有不同的语句块。 每个语句块以 `BEGIN` 开头，并以 `END` 结束。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @AvgWeight decimal(8,2), @BikeCount int  
@@ -119,7 +119,7 @@ GO
 ### <a name="d-using-nested-ifelse-statements"></a>D. 使用嵌套的 IF...ELSE 语句  
  下面的示例演示如何将 IF …ELSE 语句可相互嵌套。 将 `@Number` 变量设置为 `5`、`50` 和 `500` 以测试每个语句。  
   
-```  
+```sql
 DECLARE @Number int;  
 SET @Number = 50;  
 IF @Number > 100  
@@ -139,7 +139,7 @@ GO
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E：将查询用作布尔表达式的一部分  
  下面的示例使用 `IF...ELSE`，根据 `DimProduct` 表中各项的权重来决定向用户显示两个响应中的哪一个响应。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DECLARE @maxWeight float, @productKey integer  

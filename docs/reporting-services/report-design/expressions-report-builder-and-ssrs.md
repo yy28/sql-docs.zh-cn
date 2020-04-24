@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 99314c9108ef0af50a3c43d83a5fcb69b9ccf14f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080359"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487606"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
   表达式在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 
@@ -110,6 +110,6 @@ ms.locfileid: "77080359"
 -   [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [教程：表达式简介](Tutorial:%20Introducing%20Expressions.md)
+-   [教程：表达式简介](../tutorial-introducing-expressions.md)
 -   [报表示例（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

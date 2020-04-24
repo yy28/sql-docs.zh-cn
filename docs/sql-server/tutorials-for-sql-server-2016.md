@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fde2b4aa622d420795422dd614ad313106dd586e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665394"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488343"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供有助于了解新技术和功能的教程。 针对早期版本的教程通常也适用于较新版本。 教程中涉及到新功能时，将指示完成此教程所需的最低版本。  
      
--   如果教程使用 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库之一，则应从 CodePlex 下载并使用最新版本。 有关详细信息，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502)。    
+-   如果教程使用 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库之一，则应从 CodePlex 下载并使用最新版本。 有关详细信息，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。    
 -   下载与 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 教程结合使用的 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 工作簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 报表，转至 [SQL Server 2012 的 Power View 示例](https://go.microsoft.com/fwlink/?LinkId=220734)。  
 - 签出 [sql-server-samples](../sample/world-wide-importers/wide-world-importers-documentation.md) GitHub 存储库中提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 示例。 
 

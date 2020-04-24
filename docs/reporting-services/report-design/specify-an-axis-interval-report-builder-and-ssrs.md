@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fecaea37ca01f7d005934c8b371d228bc0bb6b93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7467cc02ec7351edb879da18c20e0cf2af4bb099
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080939"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487703"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
 了解如何设置 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的轴间隔，以更改图表中类别 (x) 轴上的标签数目和刻度线数目。
@@ -22,7 +22,7 @@ ms.locfileid: "77080939"
 
 但在类别轴（通常为 x 轴）上，自动轴间隔有时会产生不带轴标签的类别。 可以在轴 Interval 属性中指定所需间隔数。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 根据结果集中的数据在运行时计算间隔数。 有关轴间隔计算方式的详细信息，请参阅 [设置图表上轴标签的格式](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
 
-若要尝试使用示例数据设置轴间隔，请参阅[教程：向报表添加柱形图（报表生成器）](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)。
+若要尝试使用示例数据设置轴间隔，请参阅[教程：向报表添加柱形图（报表生成器）](../tutorial-add-a-column-chart-to-your-report-report-builder.md)。
   
 > [!NOTE]  
 >  类别轴通常是水平轴（或 x 轴）。 但对于条形图来说，类别轴是指垂直轴（或 y 轴）。  

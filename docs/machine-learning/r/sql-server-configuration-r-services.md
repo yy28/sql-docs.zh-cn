@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cedc5c08f44da357da70f63b47676383f6f53675
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117340"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486701"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>进行 SQL Server 配置以供 R 使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ SQL Server 的优势之一是它能够并行处理大量的行。 此优势在�
 
 此外，还可以将输入数据作为单个查询发送，然后 SQL Server 会分析该查询。 如果可以为输入数据创建并行查询计划，则它会自动将分配给节点的数据分区，并同时执行所需的联接和聚合。
 
-如果有兴趣了解如何定义用于评分的存储过程的详细信息，请参阅 [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR) 上的示例项目，并查找文件“step5_score_for_matching.sql”。 示例脚本还会跟踪查询的开始和结束时间，并将时间写入 SQL 控制台，以便评估性能。
+如果有兴趣了解如何定义用于评分的存储过程的详细信息，请参阅 [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR) 上的示例项目，并查找文件“step5_score_for_matching.sql”。 示例脚本还会跟踪查询的开始和结束时间，并将时间写入 SQL 控制台，以便评估性能。
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>使用资源组的并发评分
 
@@ -214,7 +214,7 @@ SQL Server 的优势之一是它能够并行处理大量的行。 此优势在�
 
 - 每个工作负载组必须处理两个评分任务。 一旦一项任务完成数据读取并开始评分，另一项任务就可以开始从数据库中读取数据。
 
-若要查看此方案的 PowerShell 脚本，请在 [Github 项目](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)中打开文件 experiment.ps1。
+若要查看此方案的 PowerShell 脚本，请在 [Github 项目](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)中打开文件 experiment.ps1。
 
 ### <a name="storing-models-for-prediction"></a>存储模型以进行预测
 

@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3645b913b4e806d964a2da420d987ca10b2217f0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80380668"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297296"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -388,7 +388,7 @@ TEXTIMAGE_ON { filegroup"default" } 指示 text、ntext、image、xml、varchar(
 如果表中没有较大值列，则不允许使用 `TEXTIMAGE_ON`。 如果指定了 partition_scheme，则不能指定 `TEXTIMAGE_ON`  。 如果指定了 "default"，或者根本未指定 `TEXTIMAGE_ON`，较大值列则将存储在默认文件组中  。 以后不能对 `CREATE TABLE` 中指定的任何较大值列数据的存储进行更改。
 
 > [!NOTE]
-> Varchar(max)、nvarchar(max)、varbinary(max)、xml 和大型 UDT 值直接存储在数据行中（最大限制为 8,000 个字节，只要记录中可以容纳此值）。 如果记录中容纳不下该值，则指针存储在行内，其余内容存储在 LOB 存储空间中的行外。 0 是默认值，表示所有值都直接存储在数据行中。
+> Varchar(max)、nvarchar(max)、varbinary(max)、xml 和大型 UDT 值直接存储在数据行中（最大限制为 8,000 个字节，只要记录中可以容纳此值）。 如果记录中容纳不下该值，则指针存储在行内，其余内容存储在 LOB 存储空间内的行外。 0 是默认值，表示所有值都直接存储在数据行中。
 >
 > `TEXTIMAGE_ON` 仅更改“LOB 存储空间”的位置，不影响数据存储在行内的时间。 使用 sp_tableoption 的 large value types out of row 选项将整个 LOB 值存储在行外。
 >

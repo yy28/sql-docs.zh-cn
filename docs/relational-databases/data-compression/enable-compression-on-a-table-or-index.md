@@ -23,12 +23,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83cb5bb61d64cab7dc9d45b5aae871a863368f3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007167"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488006"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>对表或索引启用压缩功能
 
@@ -211,7 +211,7 @@ ms.locfileid: "68007167"
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例先执行存储过程 `sp_estimate_data_compression_savings` 以返回对象的估计大小（如果此对象使用的是 ROW 压缩设置）。 之后，此示例会对指定表中的所有分区启用 ROW 压缩。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW' ;  
@@ -229,7 +229,7 @@ ms.locfileid: "68007167"
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 之后，此示例将执行存储过程 `sp_estimate_data_compression_savings` 以返回指定索引 ID 的估计大小（如果要使用 PAGE 压缩设置）。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, index_id  

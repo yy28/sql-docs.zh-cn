@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fac9026b149380b024fa8b0ff4c98a906320d743
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941666"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634269"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941666"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
@@ -61,7 +61,8 @@ SET SHOWPLAN_TEXT { ON | OFF }
 |列名称|说明|  
 |-----------------|-----------------|  
 |**StmtText**|对于不是 PLAN_ROW 类型的行，该列包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 对于 PLAN_ROW 类型的行，此列包含对操作的说明。 此列包含物理运算符，也可以选择包含逻辑运算符。 该列的后面还可以跟有由物理运算符决定的说明。 有关物理运算符的详细信息，请参阅 [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md) 中的 Argument 列  。|  
-  
+|||
+
  有关可以在显示计划输出中看到的物理和逻辑运算符的详细信息，请参阅[显示计划逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
 ## <a name="permissions"></a>权限  
@@ -80,7 +81,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  下面是使用索引的查询：  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  
@@ -109,7 +110,7 @@ StmtText
   
  下面是不使用索引的查询：  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  

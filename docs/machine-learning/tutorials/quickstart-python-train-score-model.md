@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116290"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487311"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务在 Python 中创建预测模型并对其进行评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到 SQL Server 实例中的表，然后通过 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)使用此模型来通过新数据预测值。
+在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到 SQL Server 实例中的表，然后通过 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)使用此模型来通过新数据预测值。
 
 你将创建并执行 SQL 中运行的两个存储过程。 第一个存储过程使用经典 Iris 花卉数据集，并生成 Naïve Bayes 模型，用于根据花卉特征预测 Iris 种类。 第二个存储过程用于评分，它调用第一个过程中生成的模型，从而根据新数据输出一组预测。 通过将 Python 代码用于 SQL 存储过程，操作会包含在 SQL 中，可重复使用，并且可以由其他存储过程和客户端应用程序进行调用。
 
@@ -186,4 +186,4 @@ ms.locfileid: "81116290"
 
 有关 SQL Server 机器学习服务的详细信息，请参阅：
 
-- [什么是 SQL Server 机器学习服务（Python 和 R）？](../what-is-sql-server-machine-learning.md)
+- [什么是 SQL Server 机器学习服务（Python 和 R）？](../sql-server-machine-learning-services.md)

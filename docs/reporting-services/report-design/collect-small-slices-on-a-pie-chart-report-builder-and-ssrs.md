@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfcf8ddd7b77132a1658c2ea1d55f7a220c336d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c318bebf807846aed85f49770498c57a27ef4d3
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082255"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487976"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集饼图上的小切片（报表生成器和 SSRS）
 饼图切片过多可能显得混乱。 了解如何将饼图中的许多小切片收集到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的单个切片中。
  
  若要将若干小切片收集到一个切片中，请先确定用于收集小切片的阈值以饼图的百分比度量或为固定值。 
  
- 如果想先使用示例数据尝试此操作，可在[教程：向报表添加饼图（报告生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)的指导下将小切片收集到单个切片中。
+ 如果想先使用示例数据尝试此操作，可在[教程：向报表添加饼图（报告生成器）](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)的指导下将小切片收集到单个切片中。
  
  ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
@@ -79,7 +79,7 @@ ms.locfileid: "77082255"
 >  您不能设置辅助饼图的格式。 因此，强烈建议使用第一种方法收集饼图切片。  
   
 ## <a name="see-also"></a>另请参阅  
-* [教程：向报表添加饼图（报表生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [教程：向报表添加饼图（报表生成器）](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [饼图&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [在饼图外显示数据点标签（报表生成器和 SSRS）](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

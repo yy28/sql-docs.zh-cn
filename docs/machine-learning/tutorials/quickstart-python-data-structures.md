@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 03d578b2cd6419a676ed6bd1b581dd57107d4209
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116330"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487315"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 机器学习服务中使用 Python 处理数据结构和对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -214,4 +214,4 @@ SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数�
 有关在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅以下文章：
 
 - [在 Python 中创建预测模型并对其进行评分](quickstart-python-train-score-model.md)
-- [什么是 SQL Server 机器学习服务（Python 和 R）？](../what-is-sql-server-machine-learning.md)
+- [什么是 SQL Server 机器学习服务（Python 和 R）？](../sql-server-machine-learning-services.md)

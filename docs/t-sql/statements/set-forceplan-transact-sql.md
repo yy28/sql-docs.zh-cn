@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84060374e3d46dde985e32a549180d8492c72892
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af335cdb4342572184a7a6ced846d1792be39d5b
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929007"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634384"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67929007"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 SET FORCEPLAN { ON | OFF }  
 ```  
@@ -57,7 +57,7 @@ SET FORCEPLAN { ON | OFF }
 ## <a name="examples"></a>示例  
  以下示例执行四个表的联接。 由于启用了 `SHOWPLAN_TEXT` 设置，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回有关在启用 `SET FORCE_PLAN` 设置后如何以不同的方式处理查询的信息。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Make sure FORCEPLAN is set to OFF.  

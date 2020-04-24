@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982672"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634855"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "73982672"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -210,7 +210,7 @@ OR ALTER
   
  `Server1` 的分区视图通过以下方式进行定义：  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  一般情况下，如果视图为下列格式，则称其为分区视图：  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -253,7 +253,7 @@ FROM Tn;
   
          在表 `C1` 上定义的约束 `T1` 必须是以下格式：  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
     -   约束必须按照以下方式定义：`<col>` 的任何指定值最多只能满足一个 `C1, ..., Cn` 约束，从而使约束形成一组不联接或不重叠的间隔。 定义不联接的约束的列 `<col>` 称为分区列。 请注意，分区列在基础表中可能有不同的名称。 约束必须处于启用和信任状态，以使它们满足分区依据列的上述条件。 如果约束被禁用，则使用 ALTER TABLE 的 CHECK CONSTRAINT constraint_name 选项重新启用约束检查，并使用 WITH CHECK 选项对其进行验证  。  
   
          以下示例显示有效的约束集合：  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -356,7 +356,7 @@ FROM Tn;
 ### <a name="a-using-a-simple-create-view"></a>A. 使用简单 CREATE VIEW  
  以下示例使用简单 `SELECT` 语句创建视图。 当需要频繁地查询列的某种组合时，简单视图非常有用。 此视图的数据来自 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `HumanResources.Employee` 和 `Person.Person` 表。 这些数据提供有关 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的雇员的姓名和雇用日期信息。 对于负责跟踪工作年限的人员，可创建此视图，但是不能授予此人访问这些表中的所有数据的权限。  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -371,7 +371,7 @@ GO
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>C. 使用 WITH CHECK OPTION  
  以下示例显示名为 `SeattleOnly` 的视图，此视图引用了五个表，并允许进行数据修改，以便仅适用于居住在西雅图的雇员。  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>D. 使用视图中的内置函数  
  以下示例显示包含内置函数的视图定义。 使用函数时，必须为派生列指定一个列名。  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>E. 使用分区数据  
  以下示例将使用名称分别为 `SUPPLY1`、`SUPPLY2`、`SUPPLY3` 和 `SUPPLY4` 的表。 这些表对应于位于四个国家/地区的四个办事处的供应商表。  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -469,7 +469,7 @@ GO
 ### <a name="f-creating-a-simple-view"></a>F. 创建简单视图  
  下面的示例通过仅从源表选择某些列来创建视图。  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. 通过联接两个表来创建视图  
  以下示例通过搭配使用 `SELECT` 语句和 `OUTER JOIN` 来创建视图。 联接查询的结果将会填充视图。  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

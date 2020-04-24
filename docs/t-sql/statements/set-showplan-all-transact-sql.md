@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941695"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634275"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941695"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |类型 |节点类型。 对于每个查询的父节点，这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句类型（如 SELECT、INSERT、EXECUTE 等）。 对于表示执行计划的子节点，这是 PLAN_ROW 类型。|  
 |**Parallel**|**0** = 运算符没有以并行方式运行。<br /><br /> **1** = 运算符正在以并行方式运行。|  
 |**EstimateExecutions**|当前查询运行期间，预计将执行此运算符的次数。|  
-  
+|||
+
  *开销单位是基于内部时间度量，而不是时钟时间。 它们用于确定某个计划与其他相计划相比的相对开销。  
   
 ## <a name="permissions"></a>权限  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  第一个索引查询的 **EstimateRows** 和 **TotalSubtreeCost** 列中的值较小，这表示与非索引查询相比，该查询的处理速度快得多且使用的资源更少。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

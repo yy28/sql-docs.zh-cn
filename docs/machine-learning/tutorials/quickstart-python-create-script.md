@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1ae25eeb4890057074f78ec6a62c251cd097e22e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116350"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487349"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务运行简单的 Python 脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入门中，将使用 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)运行一组简单的 Python 脚本。 你将了解如何在 SQL Server 实例中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
+在本快速入门中，将使用 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)运行一组简单的 Python 脚本。 你将了解如何在 SQL Server 实例中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -250,4 +250,4 @@ GO
 
 - [使用 SQL Server 机器学习服务编写高级 Python 函数](quickstart-python-functions.md)
 - [通过 SQL Server 机器学习服务在 Python 中创建预测模型并对其进行评分](quickstart-python-train-score-model.md)
-- [什么是 SQL Server 机器学习服务（Python 和 R）？](../what-is-sql-server-machine-learning.md)
+- [什么是 SQL Server 机器学习服务（Python 和 R）？](../sql-server-machine-learning-services.md)
