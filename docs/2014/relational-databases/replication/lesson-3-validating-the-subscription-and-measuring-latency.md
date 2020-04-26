@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6968331bc7699334f61997ec6a16e521c158078a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721048"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>第 3 课：验证订阅和测量滞后时间
@@ -32,9 +32,9 @@ ms.locfileid: "62721048"
   
 3.  单击 **“跟踪令牌”** 选项卡。  
   
-4.  单击 **“插入跟踪器”** 。  
+4.  单击 **“插入跟踪器”**。  
   
-5.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”** 、 **“分发服务器到订阅服务器”** 、 **“总滞后时间”** 。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+5.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”**、 **“分发服务器到订阅服务器”**、 **“总滞后时间”**。 值为 "**挂起**" 表示令牌尚未到达给定点。  
   
 ## <a name="next-steps"></a>后续步骤  
  在本课中，您成功地使用跟踪令牌验证了正在将数据更改从发布服务器复制到订阅服务器。 您还可以在发布服务器的 **Product** 表中插入、更新或删除数据，并且可以在完成复制后，查询订阅服务器中的 **Product** 表以查看这些更改。  

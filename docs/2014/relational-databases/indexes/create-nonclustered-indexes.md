@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62651486"
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
@@ -40,9 +40,9 @@ ms.locfileid: "62651486"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Implementations"></a> 典型实现  
+###  <a name="typical-implementations"></a><a name="Implementations"></a>典型实现  
  可以通过下列方法实现非聚集索引：  
   
 -   **UNIQUE 约束**  
@@ -57,12 +57,12 @@ ms.locfileid: "62651486"
   
      对视图创建唯一的聚集索引后，便可以创建非聚集索引。 有关详细信息，请参阅 [创建索引视图](../views/views.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>使用表设计器创建非聚集索引  
   
@@ -74,15 +74,15 @@ ms.locfileid: "62651486"
   
 4.  在 "**表设计器**" 菜单上，单击 "**索引/键**"。  
   
-5.  在“索引/键”  对话框中，单击“添加”  。  
+5.  在“索引/键”**** 对话框中，单击“添加”****。  
   
-6.  从“选定的主/唯一键或索引”  文本框中选择新索引。  
+6.  从“选定的主/唯一键或索引”**** 文本框中选择新索引。  
   
 7.  在网格中，选择“创建为聚集”****，然后从该属性右侧的下拉列表中选择“否”****。  
   
-8.  单击“关闭”  。  
+8.  单击 **“关闭”** 。  
   
-9. 在 "**文件**" 菜单上，单击 "**保存**_table_name_。  
+9. 在“文件”**** 菜单上，单击“保存”**** 以保存 _table_name_。  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>使用对象资源管理器创建非聚集索引  
   
@@ -92,19 +92,19 @@ ms.locfileid: "62651486"
   
 3.  展开要为其创建非聚集索引的表。  
   
-4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”    。  
+4.  右键单击 "**索引**" 文件夹，指向 "**新建索引**"，然后选择 "**非聚集索引 ...**"。  
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在“索引键列”下，单击“添加…”   。  
+6.  在“索引键列”下，单击“添加…”********。  
   
-7.  在 "**从**_Table_name_中选择列" 对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
+7.  在“从 table_name 中选择列”****__ 对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
   
-8.  单击“确定”。   
+8.  单击" **确定**"。  
   
-9. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
+9. 在 **“新建索引”** 对话框中，单击 **“确定”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>对表创建非聚集索引  
   

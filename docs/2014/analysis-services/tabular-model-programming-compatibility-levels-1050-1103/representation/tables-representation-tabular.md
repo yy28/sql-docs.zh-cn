@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757703"
 ---
 # <a name="tables-representation-tabular"></a>表表示形式（表格）
@@ -27,7 +27,7 @@ ms.locfileid: "62757703"
   
  从过程角度来看，需要在定义任何其他对象之前先创建数据源视图。 数据源视图对象包含数据源中所有相关对象的映射。 关系模型的映射作为 .Net DataSet 对象嵌入数据源视图并存储在 DSV 的 Schema 属性中。  
   
- 下面的代码段假设你有一个 SQL 客户端连接字符串、一个 Select 语句字典，这些语句映射到你打算在表格模型中表示的关系模型中的所有表，并具有数据名称的变量 newDataSourceViewName源视图（通常为关系数据库的名称）。  
+ 下面的代码段假设你有一个 SQL 客户端连接字符串、一个 Select 语句字典，这些语句映射到你打算在表格模型中表示的关系模型中的所有表，并使用数据源视图的名称（通常是关系数据库的名称）的变量 newDataSourceViewName。  
   
 ```  
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80eb3fe73754a53d5a947c565ae945029d1cdff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62625941"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC 表值参数的用法
@@ -55,12 +55,12 @@ ms.locfileid: "62625941"
   
  应用程序将 SQLPutData 用于表值参数，以指示表值参数构成列的数据可用性。 为表值参数调用 SQLPutData 时， *DataPtr*必须始终为 null，并且*StrLen_or_Ind*必须是0或小于或等于为表值参数缓冲区指定的数组大小（SQLBindParameter 的*ColumnSize*参数）。 0 表示表值参数没有更多的行，驱动程序将继续处理下一个实际过程参数。 当*StrLen_or_Ind*不为0时，驱动程序将以与非表值参数绑定参数相同的方式处理表值参数构成列：每个表值参数列可以指定其实际数据长度（SQL_NULL_DATA），也可以在执行时通过其长度/指示器缓冲区指定数据。 如果要将字符或二进制值传递到块中，可以通过重复调用 SQLPutData 来传递表值参数列值。  
   
- 处理完所有表值参数列后，驱动程序将返回到表值参数以处理更多的表值参数数据行。 因此，对于执行时数据表值参数，驱动程序不遵循通常的顺序扫描绑定参数的方式。 在*StrLen_Or_IndPtr*等于0的情况下调用 SQLPutData 之前，将轮询绑定表值参数，此时驱动程序将跳过表值参数列并移至下一个实际的存储过程参数。  当 SQLPutData 传递的指示器值大于或等于1时，驱动程序将按顺序处理表值参数列和行，直到它具有所有绑定行和列的值。 然后驱动程序返回到表值参数。 在从 SQLParamData 接收表值参数的标记和对表值参数调用 SQLPutData （hstmt，NULL，n）之间，应用程序必须为表值参数设置表值参数构成列数据和指示器缓冲区内容要传递给服务器的下一行或多行。  
+ 处理完所有表值参数列后，驱动程序将返回到表值参数以处理更多的表值参数数据行。 因此，对于执行时数据表值参数，驱动程序不遵循通常的顺序扫描绑定参数的方式。 在*StrLen_Or_IndPtr*等于0的情况下调用 SQLPutData 之前，将轮询绑定表值参数，此时驱动程序将跳过表值参数列并移至下一个实际的存储过程参数。  当 SQLPutData 传递的指示器值大于或等于1时，驱动程序将按顺序处理表值参数列和行，直到它具有所有绑定行和列的值。 然后驱动程序返回到表值参数。 在从 SQLParamData 接收表值参数的标记和对表值参数调用 SQLPutData （hstmt，NULL，n）之间，应用程序必须为要传递给服务器的下一行或行设置表值参数构成列数据和指示器缓冲区内容。  
   
  此方案的示例代码在`demo_variable_TVP_binding`将[表值参数用于 ODBC&#41;&#40;](../native-client-odbc-how-to/use-table-valued-parameters-odbc.md)中。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>从系统目录中检索表值参数元数据  
- 当应用程序为具有表值参数参数的过程调用 SQLProcedureColumns 时，DATA_TYPE 作为 SQL_SS_TABLE 返回，TYPE_NAME 是表值参数的表类型的名称。 将两个附加列添加到 SQLProcedureColumns 返回的结果集中： SS_TYPE_CATALOG_NAME 返回定义表值参数的表类型的目录的名称，SS_TYPE_SCHEMA_NAME 返回架构的名称。其中定义了表值参数的表类型。 与 ODBC 规范一致，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 出现在以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中添加的所有驱动程序特定列之前以及 odbc 本身所强制的所有列之后。  
+ 当应用程序为具有表值参数参数的过程调用 SQLProcedureColumns 时，DATA_TYPE 作为 SQL_SS_TABLE 返回，TYPE_NAME 是表值参数的表类型的名称。 将两个附加列添加到 SQLProcedureColumns 返回的结果集： SS_TYPE_CATALOG_NAME 返回定义表值参数的表类型的目录的名称，SS_TYPE_SCHEMA_NAME 返回架构的名称，其中定义了表值参数的表类型。 与 ODBC 规范一致，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 出现在以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中添加的所有驱动程序特定列之前以及 odbc 本身所强制的所有列之后。  
   
  不仅将为表值参数填充这些新列，还将为 CLR 用户定义类型参数填充这些新列。 仍将填充 UDT 参数的现有架构和目录列，但是为数据类型提供所需的常见架构和目录列将简化未来的应用程序开发。 （请注意，XML 架构集合稍有不同，未包括在此更改中。）  
   

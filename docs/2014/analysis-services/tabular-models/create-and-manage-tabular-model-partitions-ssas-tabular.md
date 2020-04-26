@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067401"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>创建和管理表格模型分区（SSAS 表格）
@@ -31,9 +31,9 @@ ms.locfileid: "66067401"
 -   [删除分区](#bkmk_delete)  
   
 ## <a name="tasks"></a>任务  
- 若要为已部署的表格模型数据库创建和管理分区，您可以使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 若要查看“分区”对话框，请在 ** 中右键单击某一表，然后单击“分区”。**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]****  
+ 若要为已部署的表格模型数据库创建和管理分区，您可以使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 若要查看“分区”对话框，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击某一表，然后单击“分区”。********  
   
-###  <a name="bkmk_create_new"></a>创建新分区  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>创建新分区  
   
 1.  在 **“分区”** 对话框中，单击 **“新建”** 按钮。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66067401"
   
 4.  若要验证语句，请单击 **“检查语法”**。  
   
-###  <a name="bkmk_copy"></a>复制分区  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a>复制分区  
   
 1.  在 **“分区”** 对话框的 **“分区”** 列表中，选择您要复制的分区，然后单击 **“复制”** 按钮。  
   
@@ -51,19 +51,19 @@ ms.locfileid: "66067401"
   
 3.  在 **“SQL 语句”**，编辑 SQL 查询语句。  
   
-###  <a name="bkmk_merge"></a>合并两个或更多分区  
+###  <a name="to-merge-two-or-more-partitions"></a><a name="bkmk_merge"></a> 合并两个或更多分区  
   
 -   在 "**分区**" 对话框的 "**分区**" 列表中，使用 Ctrl + 单击选择要合并的分区，然后单击 "**合并**" 按钮。  
   
 > [!IMPORTANT]  
 >  合并分区不会更新分区元数据。 管理员必须为所得分区更改 SQL 语句，以确保处理操作处理合并分区中的所有数据。  
   
-###  <a name="bkmk_delete"></a>删除分区  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a>删除分区  
   
 -   在 **“分区”** 对话框的 **“分区”** 列表中，选择您要删除的分区，然后单击 **“删除”** 按钮。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的表格模型分区](partitions-ssas-tabular.md)   
- [&#40;SSAS 表格处理表格模型分区&#41;](process-tabular-model-partitions-ssas-tabular.md)  
+ [处理表格模型分区（SSAS 表格）](process-tabular-model-partitions-ssas-tabular.md)  
   
   

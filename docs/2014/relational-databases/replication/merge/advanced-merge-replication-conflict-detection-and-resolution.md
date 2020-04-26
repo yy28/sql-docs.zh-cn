@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63000346"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
@@ -38,9 +38,9 @@ ms.locfileid: "63000346"
   
 -   指定默认的基于优先级的解决机制，还是指定项目冲突解决程序。 项目冲突解决程序可以是：  
   
-    -   以托管代码编写的  业务逻辑处理程序。  
+    -   以托管代码编写的 ** 业务逻辑处理程序。  
   
-    -   基于 COM 的自定义冲突解决程序  。  
+    -   基于 COM 的*自定义解析程序*。  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]提供的基于 COM 的冲突解决程序。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "63000346"
   
 -   基于 COM 的自定义冲突解决程序  
   
-     合并复制提供了 API，通过该 API 可以用各种语言（如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）将冲突解决程序编写为 COM 对象。 有关详细信息，请参阅 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
+     合并复制提供了一个 API，用于将冲突解决程序编写为语言[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] （ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]例如或）中的 COM 对象。 有关详细信息，请参阅 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括许多基于 COM 的解决程序。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](advanced-merge-replication-conflict-com-based-resolvers.md)。  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包括许多基于 COM 的冲突解决程序。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
  有关如何选择适当类型的冲突解决程序的信息，请参阅[选择冲突解决程序](advanced-merge-replication-conflict-choose-a-resolver.md)。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "63000346"
   
  冲突查看器显示来自三个系统表的信息：  
   
--   复制会为合并项目中的每个表创建一个冲突表，该冲突表的名称格式为 **MSmerge_conflict_\<PublicationName>_\<ArticleName>** 。  
+-   复制会为合并项目中的每个表创建一个冲突表，该冲突表的名称格式为 **MSmerge_conflict_\<PublicationName>_\<ArticleName>**。  
   
      冲突表与其所依据的表具有相同的结构。 其中某个冲突表中的一行由冲突行的落选版本（冲突行的入选版本位于实际用户表中）组成。  
   

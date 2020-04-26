@@ -17,22 +17,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766190"
 ---
 # <a name="debugging-data-flow"></a>调试数据流
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]设计器还包括可用于对[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包中的数据流进行故障排除的功能和工具。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器包含可用于解决 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流问题的功能和工具。  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供数据查看器。  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供数据查看器。  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 转换提供行计数。  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 转换提供行计数。  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器在运行时提供进度报告。  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器在运行时提供进度报告。  
   
 ## <a name="data-viewers"></a>数据查看器  
  数据查看器显示数据流中两个组件间的数据。 当数据从数据源提取出来并首次进入数据流时、转换对数据进行更新前后以及数据加载到其目标之前，数据查看器均可显示数据。  
@@ -66,11 +64,11 @@ ms.locfileid: "62766190"
 |Color|说明|  
 |-----------|-----------------|  
 |无色|等待被数据流引擎调用。|  
-|独︹|正在执行转换、提取数据或加载数据。|  
+|Yellow|正在执行转换、提取数据或加载数据。|  
 |绿色|成功运行。|  
-|red|运行中出现错误。|  
+|红色|运行中出现错误。|  
   
 ## <a name="see-also"></a>另请参阅  
- [包开发的疑难解答工具](troubleshooting-tools-for-package-development.md)  
+ [包开发的故障排除工具](troubleshooting-tools-for-package-development.md)  
   
   

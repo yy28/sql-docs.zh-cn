@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067788"
 ---
 # <a name="add-a-table-ssas-tabular"></a>添加表（SSAS 表格）
@@ -29,8 +29,7 @@ ms.locfileid: "66067788"
 3.  在 **“选择表和视图”** 页上，从数据源中选择要添加到模型中的表。  
   
     > [!NOTE]  
-    >  
-  **“选择表和视图”** 页不会将以前导入的表显示为已选中。  如果使用此连接选择以前曾导入的表，且以前未曾为该表指定不同的友好名称，则将向该友好名称追加一个数字 1。 无需重新选择以前使用此连接导入的任何表。  
+    >  **“选择表和视图”** 页不会将以前导入的表显示为已选中。  如果使用此连接选择以前曾导入的表，且以前未曾为该表指定不同的友好名称，则将向该友好名称追加一个数字 1。 无需重新选择以前使用此连接导入的任何表。  
   
 4.  如有必要，请使用“预览和筛选”以便仅选择特定列或对要导入的数据应用筛选器****。  
   
@@ -41,6 +40,6 @@ ms.locfileid: "66067788"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;导入数据](../import-data-ssas-tabular.md)   
- [删除 &#40;SSAS 表格&#41;的表](delete-a-table-ssas-tabular.md)  
+ [删除表（SSAS 表格）](delete-a-table-ssas-tabular.md)  
   
   

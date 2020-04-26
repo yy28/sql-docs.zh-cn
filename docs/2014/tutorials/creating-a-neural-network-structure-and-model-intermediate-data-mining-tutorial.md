@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856333"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>创建神经网络结构和模型（数据挖掘中级教程）
@@ -42,7 +42,7 @@ ms.locfileid: "62856333"
   
  [处理所有模型](#bkmk_SeedProcess)  
   
-## 创建默认呼叫中心结构<a name="bkmk_defaul"></a>  
+## <a name="create-the-default-call-center-structure"></a>创建默认呼叫中心结构<a name="bkmk_defaul"></a>  
   
 1.  在的解决方案资源管理器[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，右键单击 "**挖掘结构**"，然后选择 "**新建挖掘结构**"。  
   
@@ -56,34 +56,34 @@ ms.locfileid: "62856333"
   
      由于逻辑回归模型基于神经网络，因此，您可以重用同一结构，添加新的挖掘模型。  
   
-6.  单击“下一步”。   
+6.  单击 **下一步**。  
   
      此时将显示 "**选择数据源视图**" 页。  
   
 7.  在 "**可用数据源视图**" `Call Center`下，选择，然后单击 "**下一步**"。  
   
-8.  在 "**指定表类型**" 页上，选中**FactCallCenter**表旁边的 "**事例**" 复选框。 不要为**DimDate**选择任何内容。 单击“下一步”。   
+8.  在 "**指定表类型**" 页上，选中**FactCallCenter**表旁边的 "**事例**" 复选框。 不要为**DimDate**选择任何内容。 单击 **下一步**。  
   
 9. 在 "**指定定型数据**" 页上，选择列 "FactCallCenterID" 旁边的 "**键**" **。**  
   
 10. 选中`Predict`和**输入**复选框。  
   
-11. 选中 "**键**" ****、"输入`Predict` " 和复选框，如下表所示：  
+11. 选中 "**键**" **Input**、"输入`Predict` " 和复选框，如下表所示：  
   
     |表/列|键/输入/预测|  
     |---------------------|-------------------------|  
     |AutomaticResponses|输入|  
     |AverageTimePerIssue|输入/预测|  
-    |Calls|输入|  
+    |Calls（调用次数）|输入|  
     |日期键|请勿使用|  
     |DayOfWeek|输入|  
-    |FactCallCenterID|密钥|  
+    |FactCallCenterID|键|  
     |IssuesRaised|输入|  
     |LevelOneOperators|输入/预测|  
     |LevelTwoOperators|输入|  
     |订单|输入/预测|  
     |ServiceGrade|输入/预测|  
-    |Shift|输入|  
+    |移位|输入|  
     |TotalOperators|请勿使用|  
     |WageType|输入|  
   
@@ -95,18 +95,18 @@ ms.locfileid: "62856333"
     |-------------|------------------|----------------|  
     |AutomaticResponses|连续|Long|  
     |AverageTimePerIssue|连续|Long|  
-    |Calls|连续|Long|  
-    |DayOfWeek|离散|文本|  
-    |FactCallCenterID|密钥|Long|  
+    |Calls（调用次数）|连续|Long|  
+    |DayOfWeek|离散|Text|  
+    |FactCallCenterID|键|Long|  
     |IssuesRaised|连续|Long|  
     |LevelOneOperators|连续|Long|  
     |LevelTwoOperators|连续|Long|  
     |订单|连续|Long|  
     |ServiceGrade|连续|Double|  
-    |Shift|离散|文本|  
-    |WageType|离散|文本|  
+    |移位|离散|Text|  
+    |WageType|离散|Text|  
   
-13. 在 "**创建测试集**" 页上，清除选项的 "文本" 框中要**测试的数据的百分比**。 单击“下一步”。   
+13. 在 "**创建测试集**" 页上，清除选项的 "文本" 框中要**测试的数据的百分比**。 单击 **下一步**。  
   
 14. 在 "**完成向导**" 页的 "**挖掘结构名称**" 中， `Call Center`键入。  
   
@@ -136,14 +136,14 @@ ms.locfileid: "62856333"
   
  默认模型（连续）  
   
-|值|支持|  
+|值|Support|  
 |-----------|-------------|  
 |Missing|0|  
 |0.09875|120|  
   
  以聚类分析方式装箱  
   
-|值|支持|  
+|值|Support|  
 |-----------|-------------|  
 |\<0.0748051948|34|  
 |0.0748051948-0.09716216215|27|  
@@ -153,7 +153,7 @@ ms.locfileid: "62856333"
   
  按等面积装箱  
   
-|值|支持|  
+|值|Support|  
 |-----------|-------------|  
 |\<0.07|26|  
 |0.07-0.00|22|  
@@ -181,12 +181,12 @@ ms.locfileid: "62856333"
   
  或者，您可以添加一个单独的派生列，将服务等级归类为预定义的目标范围，如**最佳**（ServiceGrade \<= 0.05）、**可接受**（0.10 > ServiceGrade > 0.05）和**差**（ServiceGrade >= 0.10），而不是使用数值。  
   
-###  <a name="bkmk_newColumn"></a>创建列的副本并更改离散化方法  
+###  <a name="create-a-copy-of-a-column-and-change-the-discretization-method"></a><a name="bkmk_newColumn"></a>创建列的副本并更改离散化方法  
  您将创建包含目标属性的挖掘列的副本 ServiceGrade，并更改数字的分组方式。 可以创建挖掘结构中任何列（包括可预测属性）的多个副本。  
   
  在本教程中，您将使用离散化的等面积方法并指定四个 Bucket。 此方法所产生的分组与您的业务用户所希望的目标值十分接近。  
   
-####  <a name="bkmk_ColumnCopy"></a>在挖掘结构中创建列的自定义副本  
+####  <a name="to-create-a-customized-copy-of-a-column-in-the-mining-structure"></a><a name="bkmk_ColumnCopy"></a>在挖掘结构中创建列的自定义副本  
   
 1.  在解决方案资源管理器中，双击刚刚创建的挖掘结构。  
   
@@ -210,20 +210,19 @@ ms.locfileid: "62856333"
   
      以下属性现在可用。 按下表所示更改属性值：  
   
-    |properties|默认值|新值|  
+    |属性|默认值|新值|  
     |--------------|-------------------|---------------|  
     |`DiscretizationMethod`|`Continuous`|`EqualAreas`|  
     |`DiscretizationBucketCount`|无值|4|  
   
     > [!NOTE]  
-    >  
-  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 的默认值实际为 0，这意味着算法将自动确定 Bucket 的最佳数量。 因此，如果希望将该属性的值重置为其默认值，请键入 0。  
+    >  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 的默认值实际为 0，这意味着算法将自动确定 Bucket 的最佳数量。 因此，如果希望将该属性的值重置为其默认值，请键入 0。  
   
 9. 在数据挖掘设计器中，单击 "**挖掘模型**" 选项卡。  
   
      请注意，在您添加挖掘结构列的副本时，该副本的用法标志将自动设置为 `Ignore`。 通常，当您向挖掘结构中添加列的副本时，您不会将该副本与原始列一起用于分析，否则算法会发现两列之间存在可能掩盖其他关系的密切关联。  
   
-##  <a name="bkmk_NewModel"></a>向挖掘结构添加新的挖掘模型  
+##  <a name="add-a-new-mining-model-to-the-mining-structure"></a><a name="bkmk_NewModel"></a>向挖掘结构添加新的挖掘模型  
  至此您已针对目标属性创建了一个新的分组，现在需要添加一个使用该离散化列的新挖掘模型。 完成后，CallCenter 挖掘结构将有两个挖掘模型：  
   
 -   挖掘模型 Call Center Default NN 将 ServiceGrade 值作为连续范围来处理。  
@@ -244,10 +243,10 @@ ms.locfileid: "62856333"
   
 6.  同样，找到 ServiceGrade Binned，将用法从 `Ignore` 改为 `Predict`。  
   
-##  <a name="bkmk_Alias2"></a>为目标列创建别名  
+##  <a name="create-an-alias-for-the-target-column"></a><a name="bkmk_Alias2"></a>为目标列创建别名  
  通常，您不能比较使用不同可预测属性的挖掘模型。 但是，您可以为挖掘模型列创建别名。 也就是说，您可以在挖掘模型中重命名列 ServiceGrade 装箱，使其具有与原始列相同的名称。 然后可以在一个准确性图表中直接比较这两个模型，即使数据是以不同的方式离散化的也是如此。  
   
-###  <a name="bkmk_Alias"></a>为挖掘模型中的挖掘结构列添加别名  
+###  <a name="to-add-an-alias-for-a-mining-structure-column-in-a-mining-model"></a><a name="bkmk_Alias"></a>为挖掘模型中的挖掘结构列添加别名  
   
 1.  在 "**挖掘模型**" 选项卡的 "**结构**" 下，选择 ServiceGrade 装箱。  
   
@@ -263,14 +262,14 @@ ms.locfileid: "62856333"
   
      "**属性**" 窗口应包含以下信息：  
   
-    |properties|值|  
+    |Property|“值”|  
     |--------------|-----------|  
-    |**说明**|Temporary column alias|  
-    |**识别**|ServiceGrade Binned|  
+    |**描述**|Temporary column alias|  
+    |**ID**|ServiceGrade Binned|  
     |**建模标志**||  
     |**名称**|Service Grade|  
     |**SourceColumn ID**|Service Grade 1|  
-    |**使用情况**|Predict|  
+    |**用法**|Predict|  
   
 5.  单击 "**挖掘模型**" 选项卡中的任意位置。  
   
@@ -281,16 +280,16 @@ ms.locfileid: "62856333"
     ||Microsoft 神经网络|Microsoft 神经网络|  
     |AutomaticResponses|输入|输入|  
     |AverageTimePerIssue|Predict|Predict|  
-    |Calls|输入|输入|  
+    |Calls（调用次数）|输入|输入|  
     |DayOfWeek|输入|输入|  
-    |FactCallCenterID|密钥|密钥|  
+    |FactCallCenterID|键|键|  
     |IssuesRaised|输入|输入|  
     |LevelOneOperators|输入|输入|  
     |LevelTwoOperators|输入|输入|  
     |订单|输入|输入|  
     |ServceGrade Binned|忽略|预测 (ServiceGrade)|  
     |ServiceGrade|Predict|忽略|  
-    |Shift|输入|输入|  
+    |移位|输入|输入|  
     |Total Operators|输入|输入|  
     |WageType|输入|输入|  
   
@@ -300,11 +299,11 @@ ms.locfileid: "62856333"
 > [!NOTE]  
 >  如果不为种子参数指定一个数值，SQL Server Analysis Services 将基于模型的名称来生成一个种子。 由于这些模型始终具有不同的名称，因此您必须设置一个种子值，以确保这两个模型按相同的顺序来处理数据。  
   
-###  <a name="bkmk_SeedProcess"></a>指定种子并处理模型  
+###  <a name="to-specify-the-seed-and-process-the-models"></a><a name="bkmk_SeedProcess"></a>指定种子并处理模型  
   
 1.  在 "**挖掘模型**" 选项卡中，右键单击名为呼叫中心-LR 的模型的列，然后选择 "**设置算法参数**"。  
   
-2.  在 HOLDOUT_SEED 参数所在的行中，单击 "**值**" 下的空单元， `1`然后键入。 单击“确定”。  对与此结构关联的每个模型重复此步骤。  
+2.  在 HOLDOUT_SEED 参数所在的行中，单击 "**值**" 下的空单元， `1`然后键入。 单击" **确定**"。 对与此结构关联的每个模型重复此步骤。  
   
     > [!NOTE]  
     >  选择哪个值作为种子无关紧要，关键是您需要对所有相关模型使用同一个种子。  
@@ -321,6 +320,6 @@ ms.locfileid: "62856333"
  [探索呼叫中心模型 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [挖掘结构（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

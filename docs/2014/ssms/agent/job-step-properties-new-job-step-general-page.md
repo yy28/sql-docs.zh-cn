@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510951"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>作业步骤属性：新建作业步骤（“常规”页）
@@ -28,16 +28,16 @@ ms.locfileid: "62510951"
  **步骤名称**  
  设置作业步骤的名称。  
   
- 类型   
+ **Type**  
  设置作业步骤使用的子系统。 显示的用于定义作业步骤的选项会根据所选子系统的不同而变化。  
   
- **运行方式**  
+ **运行身份**  
  为作业步骤设置代理帐户。 sysadmin 固定服务器角色的成员还可以指定“SQL 代理服务帐户”****。  
   
  **Database**  
  设置在其中运行作业步骤的数据库。 此选项并不适用于所有作业步骤类型。  
   
- **Command**  
+ **命令**  
  设置作业步骤运行的命令。  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 作业步骤的选项  
@@ -47,13 +47,13 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  将所选文本复制到剪贴板。  
   
  **粘贴**  
  粘贴剪贴板的内容。  
   
- **分析**  
+ **Parse**  
  检查命令的语法。  
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 脚本作业步骤的选项  
@@ -61,7 +61,7 @@ ms.locfileid: "62510951"
 > [!IMPORTANT]  
 >  在未来版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，将从 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
   
- **所以**  
+ **VBScript**  
  将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 脚本版本指定为作业步骤的语言。  
   
  **JScript**  
@@ -76,7 +76,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -92,7 +92,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -105,7 +105,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择脚本文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -115,7 +115,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -125,7 +125,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -138,7 +138,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -148,7 +148,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -158,7 +158,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -174,7 +174,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -193,7 +193,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **Copy**  
+ **复制**  
  复制选定的文本。  
   
  **粘贴**  
@@ -205,7 +205,7 @@ ms.locfileid: "62510951"
  指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 包的位置以及使用的身份验证方法。 选择此选项卡后，可以使用以下选项。  
   
  **包源**  
- 指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的存储位置。 选择以下之一：  
+ 指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的存储位置。 选择以下选项之一：  
   
 -   **SQL Server**  
   
@@ -219,12 +219,11 @@ ms.locfileid: "62510951"
  **使用 Windows 身份验证**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 身份验证登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
- **Use SQL Server Authentication**  
+ **使用 SQL Server 身份验证**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”**** 和“密码”****。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供身份验证是为了向后兼容。 为了增强安全性，请使用 Windows 身份验证（如果可能的话）。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供身份验证是为了向后兼容。 为了增强安全性，请使用 Windows 身份验证（如果可能的话）。  
   
  **包**  
  键入包的位置。  
@@ -244,10 +243,10 @@ ms.locfileid: "62510951"
  **删除**  
  删除包的配置文件。  
   
- **上移**  
+ **“上移”**  
  将所选的配置文件上移。  
   
- **向下移动**  
+ **“下移”**  
  将所选的配置文件下移。  
   
 ### <a name="command-files-tab"></a>“命令文件”选项卡  
@@ -262,10 +261,10 @@ ms.locfileid: "62510951"
  **删除**  
  删除所选的命令文件。  
   
- **上移**  
+ **“上移”**  
  将所选的命令文件上移。  
   
- **向下移动**  
+ **“下移”**  
  将所选的命令文件下移。  
   
 ### <a name="data-sources-tab"></a>“数据源”选项卡  
@@ -274,7 +273,7 @@ ms.locfileid: "62510951"
  **连接管理器**  
  查看数据源的名称。  
   
- **说明**  
+ **描述**  
  查看数据源的说明。  
   
  **连接字符串**  
@@ -283,10 +282,10 @@ ms.locfileid: "62510951"
 ### <a name="execution-options-tab"></a>“执行选项”选项卡  
  在此选项卡上查看或更改包的执行选项。  
   
- **验证警告时包失败**  
+ **发生验证警告时包失败**  
  如果希望在出现验证警告时包执行失败，请选择此选项。  
   
- **验证包而不执行**  
+ **验证但不执行包**  
  如果希望作业步骤验证但不执行包，请选择此选项。  
   
  **最大并发可执行文件数**  
@@ -340,7 +339,7 @@ ms.locfileid: "62510951"
  **验证包生成**  
  仅运行有特定内部版本号的包。 选择此选项后，如果包没有特定内部版本号，则作业步骤失败。  
   
- **构建**  
+ **生成**  
  键入包的内部版本号。  
   
  **验证包 ID**  

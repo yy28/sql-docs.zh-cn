@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823127"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>为 Forecasting 添加数据源视图（数据挖掘中级教程）
@@ -26,14 +26,14 @@ ms.locfileid: "62823127"
   
 2.  在“欢迎使用数据源视图向导”**** 页上，单击“下一步”****。  
   
-3.  在 "**选择数据源**" 页的 "**关系数据源**" 下， [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]选择数据源。 单击“下一步”。   
+3.  在 "**选择数据源**" 页的 "**关系数据源**" 下， [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]选择数据源。 单击 **下一步**。  
   
     > [!NOTE]  
     >  如果您没有此数据源，可以在[数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)中找到创建数据源的步骤。  
   
 4.  在 "**选择表和视图**" 页上，选择表 vTimeSeries （dbo），然后单击右箭头将其添加到数据源视图。  
   
-5.  单击“下一步”。   
+5.  单击 **下一步**。  
   
 6.  在 "**完成向导**" 页上，默认将数据源视图命名为[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 将名称更改为**salesbyregion.dsv**，然后单击 "**完成**"。  
   

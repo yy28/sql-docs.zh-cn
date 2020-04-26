@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea0abd8387b638ce7d51f0fb2f40424adce10187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267444"
 ---
 # <a name="sql-server-profiler-f1-help"></a>SQL Server Profiler 的 F1 帮助
-  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是从服务器捕获[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件的工具。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。  
+  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从服务器捕获 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。  
   
  下一部分包含 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]的上下文相关帮助主题。 按 F1 键或在对话框中单击 "**帮助**"，即可从用户界面访问这些主题。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 事件探查器](sql-server-profiler.md)   
+ [SQL Server Profiler](sql-server-profiler.md)   
  [服务器性能和活动监视](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

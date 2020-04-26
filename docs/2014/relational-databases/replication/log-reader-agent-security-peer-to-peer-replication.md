@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63000350"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>日志读取器代理的安全性（对等复制）
-  "**日志读取器代理安全**" 页允许您指定在每个对等方运行和建立连接所日志读取器代理用的帐户。 有关代理要求的权限及复制安全的最佳实践的信息，请参阅[复制代理安全模型](security/replication-agent-security-model.md)和[复制安全性最佳做法](security/replication-security-best-practices.md)。  
+  可以使用“日志读取器代理安全性”**** 页，指定日志读取器代理在各对等方运行和建立连接时使用的帐户。 有关代理要求的权限及复制安全的最佳做法的信息，请参阅[复制代理安全模型](security/replication-agent-security-model.md)和[复制安全最佳做法](security/replication-security-best-practices.md)。  
   
 > [!NOTE]  
 >  对于使用事务复制发布的每个数据库，都有一个日志读取器代理。 如果已经配置数据库的日志读取器代理（不管是在上一次运行此向导时针对发布配置的，还是针对同一数据库中另一个事务发布配置的），则不能在此向导中更改该代理使用的凭据。 如果指定新凭据，它们将被忽略。 若要更改凭据，请使用 **“发布属性”** 对话框。 有关详细信息，请参阅[查看和修改复制安全设置](security/view-and-modify-replication-security-settings.md)。  
@@ -37,14 +37,13 @@ ms.locfileid: "63000350"
  各对等方上用作发布数据库和订阅数据库的数据库。  
   
  **与分发服务器的连接**  
- 连接到分发服务器时所处的上下文。 与分发服务器的本地连接始终是使用运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的上下文建立的，因此，此字段将始终显示“模拟‘**域>\<<登录名\\’”\>** 或“模拟‘**计算机>\<<登录名\\’”\>**。  
+ 连接到分发服务器时所处的上下文。 与分发服务器的本地连接始终是使用运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的上下文建立的，因此，此字段将始终显示“模拟‘\<域>\\<登录名\>’”**** 或“模拟‘\<计算机>\\<登录名\>’”****。  
   
  **与发布服务器的连接**  
- 与发布服务器建立连接时所处的上下文。 可以使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或使用运行代理的 Windows 帐户的上下文来建立与发布服务器的连接。 此字段显示以下内容之一：“使用登录名‘**登录名>’”、“模拟‘\<域>**<登录名 **’”或“模拟‘\<计算机>\\<登录名\>’”。****\<\\\>** 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
+ 与发布服务器建立连接时所处的上下文。 可以使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或使用运行代理的 Windows 帐户的上下文来建立与发布服务器的连接。 此字段显示以下内容之一：“使用登录名‘\<登录名>’”、“模拟‘\<域>\\<登录名\>’”或“模拟‘\<计算机>\\<登录名\>’”。************ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理对等拓扑（复制 Transact-SQL 编程）](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [@loopback_detection](transactional/peer-to-peer-transactional-replication.md)  
+ [&#40;复制 Transact-sql 编程来管理对等拓扑&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [对等事务复制](transactional/peer-to-peer-transactional-replication.md)  
   
   

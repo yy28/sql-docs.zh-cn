@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3a765f23b4bfcdd4d8f0ff84ac8d363424882bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767441"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>步骤 1：复制 Lesson 3 包
@@ -28,7 +28,7 @@ ms.locfileid: "62767441"
   
 3.  在解决方案资源管理器中，右键单击“Lesson 3.dtsx”****，然后单击“复制”****。  
   
-4.  在解决方案资源管理器中，右键单击“SSIS 包”****，然后单击“粘贴”****。  
+4.  在解决方案资源管理器中，右键单击 " **SSIS 包**"，然后单击 "**粘贴**"。  
   
      默认情况下，复制的包命名为 Lesson 4.dtsx。  
   
@@ -44,17 +44,17 @@ ms.locfileid: "62767441"
   
 1.  依次打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 SSIS Tutorial 项目。  
   
-2.  在解决方案资源管理器中，右键单击“SSIS 包”****，然后单击“添加现有包”****。  
+2.  在解决方案资源管理器中，右键单击 " **SSIS 包**"，然后单击 "**添加现有包**"。  
   
 3.  在 "**添加现有包的副本**" 对话框的 "**包位置**" 中，选择 "**文件系统**"。  
   
-4.  单击浏览 (…) 按钮，导航到计算机上的“Lesson 3.dtsx”，然后单击“打开”********。  
+4.  单击浏览 **（...）** 按钮，导航到计算机上的第3课，并单击 "**打开**"。  
   
      要下载此教程的所有课程包，请执行以下操作：  
   
-    1.  导航到[Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  单击 **“下载”** 选项卡。  
+    2.  单击 "**下载**" 选项卡。  
   
     3.  单击 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 文件。  
   

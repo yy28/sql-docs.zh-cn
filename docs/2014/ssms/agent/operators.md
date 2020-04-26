@@ -24,15 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189021"
 ---
 # <a name="operators"></a>运算符
-  操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的功能。  
+  操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的功能。  
   
 ## <a name="operator-attributes-and-concepts"></a>运算符属性和概念  
  操作员的主要属性如下：  
@@ -76,7 +75,7 @@ ms.locfileid: "68189021"
   
          **抄送**：  
   
-         **到**：  
+         结束时间****：  
   
     > [!NOTE]  
     >  如果使用的是一个小容量的字母数字寻呼系统，则可以通过从寻呼通知中排除错误文本，缩短发送文本的长度。 每页限制在 64 个字符内就是一个小容量的字母数字寻呼系统。  
@@ -86,8 +85,7 @@ ms.locfileid: "68189021"
      此方式通过 **net send** 命令向操作员发送消息。 对于 **net send**，需要指定网络消息的收件人（计算机或用户）。  
   
     > [!NOTE]  
-    >  
-  **net send** 命令使用 Microsoft Windows Messenger。 若要成功发送警报，此服务必须同时在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机和操作员使用的计算机上运行。  
+    >  **net send** 命令使用 Microsoft Windows Messenger。 若要成功发送警报，此服务必须同时在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机和操作员使用的计算机上运行。  
   
 ## <a name="alerting-and-fail-safe-operators"></a>警报和防故障操作员  
  可以选择在发生警报时要通知的操作员。 例如，可以通过计划警报来指定操作员轮流接收通知， 如果星期一、星期三和星期五出现警报，则通知操作员 A；如果星期二、星期四和星期六出现警报，则通知操作员 B；  
@@ -100,10 +98,9 @@ ms.locfileid: "68189021"
   
      无法到达主要操作员的原因包括寻呼地址错误和操作员不在岗位。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理无法访问**msdb**数据库中的系统表。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理无法访问 **msdb** 数据库中的系统表。  
   
-     
-  **sysnotifications** 系统表可指定负责警报的操作员。  
+     **sysnotifications** 系统表可指定负责警报的操作员。  
   
  防故障操作员是一种安全性能。 在未将防故障职责重新分配给其他操作员或未完全删除防故障分配的情况下，无法删除已分配防故障职责的操作员。  
   
@@ -122,7 +119,7 @@ ms.locfileid: "68189021"
 |-|-|  
 |**任务**|**主题**|  
 |与创建操作员相关的任务|[创建操作员](create-an-operator.md)<br /><br /> [指定防故障操作员](designate-a-fail-safe-operator.md)|  
-|与分配警报相关的任务|[向操作员分配警报](assign-alerts-to-an-operator.md)<br /><br /> [定义对警报 &#40;SQL Server Management Studio 的响应&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [向操作员分配警报](assign-alerts-to-an-operator.md)|  
+|与分配警报相关的任务|[向操作员分配警报](assign-alerts-to-an-operator.md)<br /><br /> [定义对警报的响应 (SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [向操作员分配警报](assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)  

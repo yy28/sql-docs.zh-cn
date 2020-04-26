@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33e11dde29a9f2b016f5f70fa3c12bd728928f93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267418"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定跟踪文件的事件和数据列 (SQL Server Profiler)
@@ -39,11 +39,11 @@ ms.locfileid: "63267418"
 4.  若要在跟踪中包括事件，请选中每个事件类的 **“事件”** 列中的复选框，或者选中对应于事件的数据列。  
   
 > [!IMPORTANT]  
->  如果跟踪要与系统监视器或性能监视器数据关联，则必须在跟踪中包括“开始时间”**** 和“结束时间”**** 数据列。  
+>  如果跟踪要与系统监视器或性能监视器数据关联，则必须在跟踪中包括“开始时间”  和“结束时间”  数据列。  
   
  如果已选中对应于事件的复选框，在包括事件类时，跟踪中也将包括关联的数据列。 如果选中某个特定列的复选框，跟踪中将只包括该列。  
   
-1.  若要从某个事件类删除数据列，请从事件类行中的数据列清除复选框，或右键单击列标题并选择“取消选择列”**** 选项。  
+1.  若要从某个事件类删除数据列，请从事件类行中的数据列清除复选框，或右键单击列标题并选择“取消选择列”  选项。  
   
 2.  或者，对跟踪应用筛选器。 有关详细信息，请参阅[在跟踪中筛选事件 (SQL Server Profiler)](filter-events-in-a-trace-sql-server-profiler.md)  
   

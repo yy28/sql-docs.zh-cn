@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250551"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>使用预计算分区优化参数化筛选器的性能
@@ -53,7 +53,7 @@ ms.locfileid: "63250551"
   
 ### <a name="database-collation"></a>数据库排序规则  
   
--   如果使用了预计算分区，进行比较时始终使用数据库的排序规则，而不使用表或列的排序规则。 请考虑以下方案：  
+-   如果使用了预计算分区，进行比较时始终使用数据库的排序规则，而不使用表或列的排序规则。 请考虑下列方案：  
   
     -   具有区分大小写排序规则的数据库包含一个具有不区分大小写排序规则的表。  
   
@@ -67,6 +67,6 @@ ms.locfileid: "63250551"
  在将更改从订阅服务器上载到发布服务器时，尽管使用预计算分区会产生少量的性能开销，但大部分合并处理时间用于计算分区以及将更改从发布服务器下载到订阅服务器上，所以净的性能收益仍然很显著。 根据并发同步的订阅服务器的数目以及将行从一个分区移动到另一分区的每个同步的更新数目的不同，性能收益也会有所不同。  
   
 ## <a name="see-also"></a>另请参阅  
- [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)  
+ [参数化行筛选器](parameterized-filters-parameterized-row-filters.md)  
   
   

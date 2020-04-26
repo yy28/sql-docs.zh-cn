@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767473"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>步骤 4：测试第 2 课教程包
@@ -42,10 +42,10 @@ ms.locfileid: "62767473"
   
      包将运行。 可以在 "输出" 窗口中或通过单击 "**进度**" 选项卡来验证每个循环的状态。例如，可以看到1097行已从文件 Currency_VEB .txt 添加到目标表中。  
   
-2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”** 。  
+2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”**。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 5 课： 添加包部署模型的包配置](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [第 5 课：添加包部署模型的包配置](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [项目和包的执行](packages/run-integration-services-ssis-packages.md)  

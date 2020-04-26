@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695661"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>作业属性：新建作业（“步骤”页）
@@ -35,7 +35,7 @@ ms.locfileid: "62695661"
  **新建**  
  在所选作业步骤下创建新的作业步骤。  
   
- **&**  
+ **插入**  
  在所选作业步骤上方创建新的作业步骤。  
   
  **编辑**  

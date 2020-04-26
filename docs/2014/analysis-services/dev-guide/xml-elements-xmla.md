@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62731982"
 ---
 # <a name="xml-elements-xmla"></a>XML 元素 (XMLA)
@@ -26,7 +26,7 @@ ms.locfileid: "62731982"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|properties|说明|  
+|属性|描述|  
 |--------------|-----------------|  
 |[&#40;XMLA&#41;标头](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|介绍由应用程序或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例为管理协议级别的功能在 SOAP 信封的 SOAP 标头里发送的那些元素。|  
 |[XMLA &#40;方法&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|介绍应用程序为检索数据或元数据或为了对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例进行操作而在 SOAP 信封里发送给该实例的最顶端元素。|  
@@ -36,6 +36,6 @@ ms.locfileid: "62731982"
   
 ## <a name="see-also"></a>另请参阅  
  [XML 数据类型 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
- [Analysis Services 脚本语言开发 &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [使用 Analysis Services 脚本语言 (ASSL) 开发](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
   

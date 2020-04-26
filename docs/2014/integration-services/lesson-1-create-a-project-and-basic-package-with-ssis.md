@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767499"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 课：创建项目和基本包
@@ -58,8 +58,7 @@ ms.locfileid: "62767499"
  在使用平面文件源数据时，需要了解平面文件连接管理器如何解释平面文件数据，这一点很重要。 如果平面文件源是 Unicode 编码的，则平面文件连接管理将所有列定义为 [DT_WSTR]，默认列宽为 50。 如果平面文件源是 ANSI 编码的，则将列定义为 [DT_STR]，默认列宽为 50。 您可能必须更改这些默认设置，才能使字符串列类型与所使用的数据更相符。 为此，您需要查看将写入数据的目标的数据类型，然后在平面文件连接管理器中选择正确的类型。  
   
 ### <a name="looking-at-the-destination"></a>查看目标  
- 源数据的最终目标是 **AdventureWorksDW** 中的 **FactCurrency**事实数据表。 
-  **FactCurrency** 事实数据表有四列，并且与两个维度表有关系，如下表所示。  
+ 源数据的最终目标是 **AdventureWorksDW** 中的 **FactCurrency**事实数据表。 **FactCurrency** 事实数据表有四列，并且与两个维度表有关系，如下表所示。  
   
 |列名|数据类型|查找表|查找列|  
 |-----------------|---------------|------------------|-------------------|  
@@ -75,7 +74,7 @@ ms.locfileid: "62767499"
 |----------------------|----------------|-----------------|---------------|  
 |0|AdventureWorksDW2012|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
-|2|DimDate|FullDateAlternateKey|date|  
+|2|DimDate|FullDateAlternateKey|日期|  
 |3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>课程任务  
@@ -93,7 +92,7 @@ ms.locfileid: "62767499"
   
 -   [步骤 6：添加并配置查找转换](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [步骤 7：添加和配置 OLE DB 目标](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [步骤 7：添加并配置 OLE DB 目标](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 -   [步骤 8：使 Lesson 1 包更易理解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   

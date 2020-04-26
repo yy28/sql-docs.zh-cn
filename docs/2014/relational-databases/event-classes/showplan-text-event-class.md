@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6108a35d3f1c51f4d3dedbcf673be1d837091b71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62692076"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text 事件类
-  当执行 SQL 语句时[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，会发生显示计划文本事件类。 所包含的信息是 Showplan All、Showplan XML Statistics Profile 或 Showplan XML 事件类中可用信息的子集。  
+  Showplan Text 事件类在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时发生。 所包含的信息是 Showplan All、Showplan XML Statistics Profile 或 Showplan XML 事件类中可用信息的子集。  
   
  Showplan Text 事件类包含于跟踪时，开销量将显著妨碍性能。 若要最大限度地降低此开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪。 Showplan Text 将不会引起如其他 Showplan 事件类一样大的开销。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62692076"
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BinaryData|`image`|Showplan 文本的估计开销。|2|否|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在跟踪中捕获到 ServerName 数据列并且服务器可用，则将显示数据库的名称。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|`nvarchar`|正在其中运行用户语句的数据库的名称。|35|是|  
 |Event Class|`int`|事件类型 = 96。|27|否|  
 |EventSequence|`int`|给定事件在请求中的顺序。|51|否|  
@@ -60,8 +60,8 @@ ms.locfileid: "62692076"
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)   
- [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Showplan 逻辑运算符和物理运算符参考](../showplan-logical-and-physical-operators-reference.md)   
+ [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [显示计划逻辑运算符和物理运算符引用](../showplan-logical-and-physical-operators-reference.md)   
  [显示计划 All 事件类](showplan-all-event-class.md)   
  [显示计划 XML Statistics Profile 事件类](showplan-xml-statistics-profile-event-class.md)   
  [Showplan XML 事件类](showplan-xml-event-class.md)  

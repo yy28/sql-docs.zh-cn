@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721096"
 ---
 # <a name="lesson-3-configuring-distribution"></a>第 3 课：配置分发
@@ -37,7 +37,7 @@ ms.locfileid: "62721096"
   
 3.  在 "**分发服务器**" 页上，选择 **"**_\<ServerName>_ **" 将充当自己的分发服务器;SQL Server 将创建分发数据库和日志**，然后单击 "**下一步**"。  
   
-4.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未运行，则在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“代理启动”**** 页上，选择“是”****，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为自动启动。 单击“下一步”。   
+4.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未运行，则在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“代理启动”**** 页上，选择“是”**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，将 ** 代理服务配置为自动启动。 单击 **下一步**。  
   
 5.  在** \\ **"**快照文件夹**" 文本框中\< \<输入_Machine_Name>_ **\repldata (** ，其中*Machine_Name>* 是发布服务器的名称，然后单击 "**下一步**"。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62721096"
   
 1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开 "**安全性**"，右键单击 "**登录名**"，然后选择 "**新建登录名**"。  
   
-2.  在 "**常规**" 页上****，单击 " \<搜索"，在 "**输入要选择的对象名称**" 框中输入\< _Machine_Name>_ **\ repl_snapshot** ，其中*Machine_Name>* 是本地发布服务器的名称，单击 "**检查名称**"，然后单击 **"确定"**。  
+2.  在“常规”**** 页上单击“搜索”****，在“输入要选择的对象名称”**** 框中输入 \<_Machine_Name>_**\repl_snapshot**（其中 \<*Machine_Name>* 是本地发布服务器的名称），单击“检查名称”****，然后单击“确定”****。  
   
 3.  在 "**用户映射**" 页上，在 "**映射到此登录名的用户**" 列表[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]中，选择 "**分发**" 和 "数据库"。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62721096"
 7.  重复步骤 1 至 4，为本地 repl_merge 帐户创建登录名。 此登录名必须在 **distribution** 数据库和 **AdventureWorks** 数据库中拥有用户映射。  
   
 ## <a name="see-also"></a>另请参阅  
- [“配置分发”](configure-distribution.md)   
+ [配置分发](configure-distribution.md)   
  [复制代理安全模式](security/replication-agent-security-model.md)  
   
   

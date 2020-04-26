@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767349"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步骤 2：将项目转换为项目部署模型
@@ -51,6 +51,6 @@ ms.locfileid: "62767349"
 13. 单击“参数”选项卡，然后验证包现在是否包含用于 VarFolderName 的参数，以及值是否为第 5 课配置文件中为 New Sample Data 文件夹指定的相同路径。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 3：测试 Lesson 6 包](lesson-6-3-testing-the-lesson-6-package.md)  
+ [步骤 3：测试第 6 课包](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

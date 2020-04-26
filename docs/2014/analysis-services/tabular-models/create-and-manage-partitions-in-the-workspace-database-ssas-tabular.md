@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067462"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>创建和管理工作区数据库中的分区（SSAS 表格）
   分区将表分成多个逻辑部分。 然后，可单独处理（刷新）每个分区，也可与其他分区并行处理每个分区。 分区可以提高大型数据库的可扩展性和可管理性。 默认情况下，每个表都具有一个包含所有列的分区。 本主题中的任务说明如何使用中的 "**分区管理器**" 对话框在模型工作区数据库中创建和管理分区。[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
- 在将模型部署到其他 Analysis Services 实例后，数据库管理员可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在（已部署）模型中创建和管理分区。 有关详细信息，请参阅[创建和管理表格模型分区（SSAS 表格）](partitions-ssas-tabular.md)。  
+ 在将模型部署到其他 Analysis Services 实例后，数据库管理员可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在（已部署）模型中创建和管理分区。 有关详细信息，请参阅[创建和管理表格模型分区（SSAS 表格）](partitions-ssas-tabular.md)。  
   
  本主题包括以下任务：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66067462"
 ## <a name="tasks"></a>任务  
  若要创建和管理分区，您将使用 **“分区管理器”** 对话框。 若要查看 **“分区管理器”** 对话框，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“表”** 菜单，然后单击 **“分区”**。  
   
-###  <a name="bkmk_create_new"></a>创建新分区  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>创建新分区  
   
 1.  在模型设计器中，选择要为其定义分区的表。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66067462"
   
      若要使用 SQL 语句，请单击预览窗口右上角附近的“查询编辑器”按钮，然后将 SQL 查询语句键入或粘贴到查询窗口中。**** 若要验证您的语句，请单击 **“验证”**。 若要使用查询设计器，请单击 **“设计”**。  
   
-###  <a name="bkmk_copy"></a>复制分区  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a>复制分区  
   
 1.  在 **“分区管理器”** 的 **“表”** 列表框中，验证或选择包含要复制的分区的表。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067462"
   
 3.  在 **“分区名称”** 中，键入分区的新名称。  
   
-###  <a name="bkmk_delete"></a>删除分区  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a>删除分区  
   
 1.  在 **“分区管理器”** 的 **“表”** 列表框中，验证或选择包含要删除的分区的表。  
   

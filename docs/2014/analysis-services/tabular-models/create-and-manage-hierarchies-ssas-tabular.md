@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067499"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>创建和管理层次结构（SSAS 表格）
@@ -28,7 +28,7 @@ ms.locfileid: "66067499"
   
 -   [删除层次结构](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a>创建层次结构  
+##  <a name="create-a-hierarchy"></a><a name="bkmk_create"></a> 创建层次结构  
  您可以通过使用列和表上下文菜单，创建层次结构。 创建层次结构时，一个新的父级别将与您作为子级别选择的列一起出现。  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>从上下文菜单创建层次结构  
@@ -46,7 +46,7 @@ ms.locfileid: "66067499"
 > [!NOTE]  
 >  如果您多选度量值以及一个或多个列，或者如果您从多个表中选择列，则在上下文菜单中将禁用“创建层次结构”命令。  
   
-##  <a name="bkmk_edit"></a>编辑层次结构  
+##  <a name="edit-a-hierarchy"></a><a name="bkmk_edit"></a>编辑层次结构  
  您可以重命名层次结构，重命名子级别，更改子级别的顺序，添加附加列作为子级别，从层次结构中删除子级别，显示子级别的源名称（列名），以及在子级别与层次结构父级别同名的情况下隐藏子级别。  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>更改层次结构或子级别的名称  
@@ -85,7 +85,7 @@ ms.locfileid: "66067499"
   
 -   右键单击某一层次结构子级别，然后单击“显示源名称”。**** 此时将显示该子级别从其复制的列的名称。  
   
-##  <a name="bkmk_delete"></a>删除层次结构  
+##  <a name="delete-a-hierarchy"></a><a name="bkmk_delete"></a> 删除层次结构  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>删除层次结构及其子级别  
   
@@ -96,6 +96,6 @@ ms.locfileid: "66067499"
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的表格模型设计器](../tabular-model-designer-ssas-tabular.md)   
  [SSAS 表格&#41;&#40;层次结构](hierarchies-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;度量值](measures-ssas-tabular.md)  
+ [度量值（SSAS 表格）](measures-ssas-tabular.md)  
   
   

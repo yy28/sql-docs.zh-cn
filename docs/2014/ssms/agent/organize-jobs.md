@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53e0424f15818903e913fc41e4a5a4a3fdade41d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316553"
 ---
 # <a name="organize-jobs"></a>组织作业
@@ -30,11 +30,11 @@ ms.locfileid: "63316553"
   
 |||  
 |-|-|  
-|**说明**|**主题**|  
+|**描述**|**主题**|  
 |介绍如何创建作业类别。|[创建作业类别](create-a-job-category.md)|  
 |介绍如何删除作业类别。|[删除作业类别](delete-a-job-category.md)|  
 |介绍如何向作业类别分配一个作业。|[将作业分配到作业类别](assign-a-job-to-a-job-category.md)|  
-|介绍如何更改作业类别的成员身份。|[Change the Membership of a Job Category](change-the-membership-of-a-job-category.md)|  
+|介绍如何更改作业类别的成员身份。|[更改作业类别的成员身份](change-the-membership-of-a-job-category.md)|  
 |介绍如何列出类别信息。|[列出作业类别信息](list-job-category-information.md)|  
   
   

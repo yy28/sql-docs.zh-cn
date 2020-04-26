@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204809"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>创建预测结构和模型（数据挖掘中级教程）
@@ -32,7 +32,7 @@ ms.locfileid: "63204809"
   
 5.  在 "**选择数据源视图**" 页上的 "**可用数据源视图**" 下，选择**salesbyregion.dsv**。  
   
-6.  单击“下一步”。   
+6.  单击 **下一步**。  
   
 7.  在 "**指定表类型**" 页上，确保选中 "vTimeSeries" 表的 "**事例**" 列中的复选框，然后单击 "**下一步**"。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63204809"
   
      将 ModelRegion 列指定为**键**列，并将 ReportingDate 列自动指定为**key Time**列。 您只能拥有一种类型的键。  
   
-11. 单击“下一步”。   
+11. 单击 **下一步**。  
   
 12. 在 "**完成向导**" 页的 "**挖掘结构名称**" 中`Forecasting`，键入。  
   

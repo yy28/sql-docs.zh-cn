@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638229"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 扩展事件引擎
@@ -38,7 +38,7 @@ ms.locfileid: "62638229"
   
  注意以下事项：  
   
--   每个 Windows 进程都可以有一个或多个模块（**Win32 进程**、 **Win32 模块**）。 这些模块也称为“二进制模块”  或“可执行模块”  。  
+-   每个 Windows 进程都可以有一个或多个模块（**Win32 进程**、 **Win32 模块**）。 这些模块也称为“二进制模块” ** 或“可执行模块” **。  
   
 -   每个 Windows 进程模块都可以包含一个或多个扩展事件包（**包**），而扩展事件包则包含一个或多个扩展事件对象（**类型**、 **目标**、 **操作Action**、 **映射**、 **谓词**和 **事件**）。  
   

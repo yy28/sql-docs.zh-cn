@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653871"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server 代理主作业
@@ -26,12 +26,12 @@ ms.locfileid: "62653871"
   
  [Change the Scheduling Details for a SQL Server Agent Master Job](change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
- [Add Steps to a SQL Server Agent Master Job](../object/add-steps-to-a-sql-server-agent-master-job.md)  
+ [向 SQL Server 代理主作业添加步骤](../object/add-steps-to-a-sql-server-agent-master-job.md)  
   
- [Change Steps of a SQL Server Agent Master Job](change-steps-of-a-sql-server-agent-master-job.md)  
+ [更改 SQL Server 代理主作业的步骤](change-steps-of-a-sql-server-agent-master-job.md)  
   
- [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)  
+ [从 SQL Server 代理主作业中删除步骤](remove-steps-from-a-sql-server-agent-master-job.md)  
   
- [修改与 SQL Server 代理主作业关联的目标服务器&#40;&#41;](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+ [修改与 SQL Server 代理主作业关联的目标服务器](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
   

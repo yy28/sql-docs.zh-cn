@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757779"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 接口
@@ -81,10 +81,10 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  获取宿主应用程序使用的针对容器文档中嵌入流的标识符。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *out_pbstrStreamId*  
  指定流标识符的位置。  
   
@@ -103,7 +103,7 @@ HRESULT GetStreamIdentifier (
   
  DBPROP_MSMD_EMBEDDED_DATA 的可能值包括：  
   
-|名称|值|定义|  
+|名称|“值”|定义|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|没有可用的嵌入数据库|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|当前应用程序包含嵌入数据库|  
@@ -125,10 +125,10 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  设置包含嵌入流的文件的 URL。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *in_bstrURL*  
  指定包含文档的 URL。  
   
@@ -155,10 +155,10 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  设置一个标志，以便指示嵌入应用程序是否处于宿主环境中。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *in_ftHosted*  
  如果调用方在服务应用程序（例如 IIS）中承载，则为 TRUE。  
   
@@ -185,10 +185,10 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  设置嵌入应用程序使用的临时文件的路径。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *in_bstrPath*  
  宿主应用程序用于临时文件的路径。  
   
@@ -213,10 +213,10 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  取消当前嵌入的数据库操作  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  无。  
   
 #### <a name="return-value"></a>返回值  
@@ -244,10 +244,10 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  获取流的估计大小（以字节为单位）以便保存嵌入的对象。 从 `IPersistStream` 继承。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *in_bstrPath*  
  嵌入的数据库图像的估计大小（以字节为单位）。  
   
@@ -264,10 +264,10 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  确认自上次保存后嵌入的数据库是否已更改。 从 `IPersistStream` 继承。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  none  
   
 #### <a name="return-values"></a>返回值  
@@ -288,10 +288,10 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  将嵌入的数据库加载到本地或进程内引擎。 从 `IPersistStream` 继承。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *in_pStm*  
  指向从其加载嵌入的数据库的流接口的指针。  
   
@@ -314,10 +314,10 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  将本地或进程内数据库保存到容器文档中的嵌入流中。 从 `IPersistStream` 继承。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *in_pStm*  
  指向将嵌入的数据库保存到的流接口的指针。  
   

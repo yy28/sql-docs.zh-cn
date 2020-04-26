@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136284"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>创建计划并将计划附加到作业
@@ -75,8 +75,7 @@ ms.locfileid: "63136284"
  在将计划附加到作业后可更改计划的开始日期。  
   
 ## <a name="cpu-idle-schedules"></a>CPU 空闲计划  
- 若要最大限度地利用 CPU 资源，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理定义一个 CPU 空闲条件。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用 CPU 空闲条件设置来确定运行作业的最佳时间。 例如，可计划作业，使其在 CPU 空闲时间和业务量较低时重新生成索引。  
+ 若要最大限度地利用 CPU 资源，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理定义一个 CPU 空闲条件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用 CPU 空闲条件设置来确定运行作业的最佳时间。 例如，可计划作业，使其在 CPU 空闲时间和业务量较低时重新生成索引。  
   
  将作业定义为在 CPU 空闲时间运行之前，应确定正常处理过程中 CPU 的负荷。 若要执行此操作，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或性能监视器来监视服务器流量并收集统计信息。 然后，利用收集到的信息设置 CPU 空闲时间百分比和持续时间。  
   
@@ -86,10 +85,10 @@ ms.locfileid: "63136284"
   
 |||  
 |-|-|  
-|**说明**|**主题**|  
+|**描述**|**主题**|  
 |介绍如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业创建计划。|[Create a Schedule](create-a-schedule.md)|  
-|介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。|[Schedule a Job](schedule-a-job.md)|  
-|说明如何定义服务器的 CPU 空闲条件。|[设置 CPU 空闲时间和持续时间 &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。|[安排作业计划](schedule-a-job.md)|  
+|说明如何定义服务器的 CPU 空闲条件。|[设置 CPU 空闲时间和持续时间 (SQL Server Management Studio)](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_help_jobschedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   

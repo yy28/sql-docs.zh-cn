@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721157"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 课：为复制创建 Windows 帐户
@@ -25,13 +25,13 @@ ms.locfileid: "62721157"
   
 |代理|位置|帐户名|  
 |-----------|--------------|------------------|  
-|快照代理|发布者|\<*machine_name*> \ repl_snapshot|  
-|日志读取器代理|发布者|\<*machine_name*> \ repl_logreader|  
-|分发代理|发布服务器和订阅服务器|\<*machine_name*> \ repl_distribution|  
-|合并代理|发布服务器和订阅服务器|\<*machine_name*> \ repl_merge|  
+|快照代理|发布者|\<*machine_name*>\repl_snapshot|  
+|日志读取器代理|发布者|\<*machine_name*>\repl_logreader|  
+|分发代理|发布服务器和订阅服务器|\<*machine_name*>\repl_distribution|  
+|合并代理|发布服务器和订阅服务器|\<*machine_name*>\repl_merge|  
   
 > [!NOTE]  
->  在复制教程中，发布服务器和分发服务器共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 发布服务器和订阅服务器可以共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，但这不是必须的。 如果发布服务器和订阅服务器共享同一实例，则在订阅服务器上用于创建帐户的步骤不是必须的。  
+>  在复制教程中，发布服务器和分发服务器共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 发布服务器和订阅服务器可以共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，但这不是必须的。 如果发布服务器和订阅服务器共享同一实例，则在订阅服务器上用于创建帐户的步骤不是必须的。  
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>在发布服务器上为复制代理创建本地 Windows 帐户  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62721157"
   
 5.  重复上述步骤创建 repl_logreader、repl_distribution 和 repl_merge 帐户。  
   
-6.  单击“关闭”  。  
+6.  单击 **“关闭”** 。  
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>在订阅服务器上为复制代理创建本地 Windows 帐户  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62721157"
   
 5.  重复上述步骤创建 repl_merge 帐户。  
   
-6.  单击“关闭”  。  
+6.  单击 **“关闭”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
  您已经成功地为复制代理创建了 Windows 帐户。 接下来，您将配置快照文件夹。 请参阅 [第 2 课：准备快照文件夹](lesson-2-preparing-the-snapshot-folder.md)。  

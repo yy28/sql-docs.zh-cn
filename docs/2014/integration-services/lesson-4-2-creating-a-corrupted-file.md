@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767379"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>步骤 2：创建损坏的文件
@@ -28,9 +28,9 @@ ms.locfileid: "62767379"
   
      示例数据与 SSIS 课程包一起提供。 要下载示例数据和课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=267527)。  
+    1.  导航到[Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=267527)。  
   
-    2.  单击 **“下载”** 选项卡。  
+    2.  单击 "**下载**" 选项卡。  
   
     3.  单击 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 文件。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "62767379"
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>验证是否将在运行时发生错误  
   
-1.  在 **“调试”** 菜单中，单击 **“启动调试”** 。  
+1.  在 "**调试**" 菜单上单击 "**启动调试**"。  
   
      在数据流第三次迭代时，Lookup Currency Key 转换将尝试处理 Currency_BAD.txt 文件，并且该转换将失败。 转换失败将导致整个包失败。  
   
-2.  在 **“调试”** 菜单中，单击 **“停止调试”** 。  
+2.  在 **“调试”** 菜单中，单击 **“停止调试”**。  
   
 3.  在设计图面上，单击“执行结果”**** 选项卡。  
   

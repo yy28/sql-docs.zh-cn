@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076439"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>通过在数据源中生成非时间表来创建维度
@@ -31,7 +31,7 @@ ms.locfileid: "66076439"
   
 -   客户  
   
--   Date  
+-   日期  
   
 -   部门  
   
@@ -59,9 +59,9 @@ ms.locfileid: "66076439"
   
 -   销售汇总订单详细信息  
   
--   Sales Territory  
+-   销售区域  
   
--   场景  
+-   方案  
   
 -   源货币  
   

@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62773423"
 ---
 # <a name="view-a-list-of-modified-files"></a>查看已修改的文件列表
@@ -35,7 +35,7 @@ ms.locfileid: "62773423"
      **登记**  
      签入解决方案。  
   
-     **注释**  
+     **备注**  
      将纯文本注释与挂起的签入相关联。 对于项目的每一个版本，都会创建一个与之关联的注释，该注释存储在源代码管理数据库中。  
   
      **选项**  
@@ -45,7 +45,7 @@ ms.locfileid: "62773423"
   
          指定应将所做的更改写入源代码管理提供程序，但是这些文件应保持签出状态。  
   
-     **排序**  
+     **进行**  
      指定“项”列表中所显示的列的排序顺序。  
   
      **“列”**  

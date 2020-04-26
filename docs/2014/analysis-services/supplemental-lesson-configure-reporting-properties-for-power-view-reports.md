@@ -11,29 +11,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067962"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>为 Power View 报表配置报表属性
   在这一补充课程中，您将为 Adventure Works Internet Sales Model 项目设置报表属性。 通过报表属性，最终用户可以更轻松地在 Power View 中选择和显示模型数据。 您还可以设置属性以隐藏特定的列和表，并创建新数据以在图表中使用。  
   
- 在完成本课程并将模型重新部署到与 SharePoint 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 相集成的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 实例后，您可以针对模型创建数据源、指定数据连接信息、启动 Power View 并设计报表。  
+ 在完成本课程并将模型重新部署到与 SharePoint 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 相集成的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例后，您可以针对模型创建数据源、指定数据连接信息、启动 Power View 并设计报表。  
   
- 本课程不介绍如何创建和使用 Power View 报表。 本课程旨在向表格模型作者介绍一些属性和设置，它们影响模型数据在 Power View 中的出现方式。 若要了解有关创建 Power View 报表的详细信息，请参阅[教程：在 Power View 中创建示例报表](https://go.microsoft.com/fwlink/?LinkId=221204)。  
+ 本课程不介绍如何创建和使用 Power View 报表。 本课程旨在向表格模型作者介绍一些属性和设置，它们影响模型数据在 Power View 中的出现方式。 若要了解有关创建 Power View 报表的详细信息，请参阅 [教程：在 Power View 中创建示例报表](https://go.microsoft.com/fwlink/?LinkId=221204)。  
   
  学完本课的估计时间： **30 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  本补充课程是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，应已完成前面的课程。  
   
  为了完成这一特定的补充课程，您还必须具备以下各项：  
   
 -   通过本教程完成的 Adventure Works Internet Sales Model，已准备好部署或已部署到在表格模式下运行的 Analysis Services 实例。  
   
--   一个集成有在表格模式下运行的 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 以及 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 的 SharePoint 网站，配置为支持 Power View 报表。  
+-   一个集成有在表格模式下运行的 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 以及 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的 SharePoint 网站，配置为支持 Power View 报表。  
   
 -   您必须具有足够的权限，才能在 SharePoint 网站上创建指向 Adventure Works Internet Sales Model 的数据连接。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66067962"
   
 -   **添加新数据**-通过使用 DAX 公式在计算列中添加新数据，以更易于在图表中显示的格式创建日期信息。  
   
--   **隐藏对最终用户无用的表和列**-"**隐藏**" 属性控制是否在报表客户端中显示表和表列。 所隐藏的项仍然是模型的一部分，且保持可用于查询和计算。  
+-   **隐藏对最终用户无用的表和列** -“隐藏”**** 属性控制是否在报表客户端中显示表和表列。 所隐藏的项仍然是模型的一部分，且保持可用于查询和计算。  
   
 -   **启用一次单击的表**-默认情况下，如果最终用户在字段列表中单击某个表，则不会执行任何操作。 若要更改此行为，以便在单击表后会将该表添加到报表，需要针对您要在表中包含的每列设置“默认字段集”。 将对最终用户最可能要使用的表列设置此属性。  
   
--   **根据需要设置分组**-"**保留唯一行**" 属性确定列中的值是否应按其他字段（如标识符字段）中的值进行分组。 对于包含重复值的列（如“Customer Name”列，具有多个名为 John Smith 的客户），务必依据“行标识符”**** 字段进行分组（保留唯一行），以便向最终用户提供正确的结果。  
+-   **根据需要设置分组** -“保留唯一行”**** 属性确定列中的值是否应按其他字段（如标识符字段）中的值进行分组。 对于包含重复值的列（如“Customer Name”列，具有多个名为 John Smith 的客户），务必依据“行标识符”**** 字段进行分组（保留唯一行），以便向最终用户提供正确的结果。  
   
--   **设置数据类型和数据格式**-默认情况下，Power View 基于列数据类型应用规则，以确定字段是否可用作度量值。 因为 Power View 中的每个数据可视化还具有有关在何处可放置度量值和非度量值的规则，所以，务必在模型中设置此数据类型或覆盖默认值，以实现你希望向最终用户展示的行为。  
+-   **设置数据类型和数据格式** - 默认情况下，Power View 根据列数据类型应用规则，以确定字段是否可用作度量值。 因为 Power View 中的每个数据可视化还具有有关在何处可放置度量值和非度量值的规则，所以，务必在模型中设置此数据类型或覆盖默认值，以实现你希望向最终用户展示的行为。  
   
 -   **设置 "按列排序**" 属性-"**按列排序**" 属性指定列中的值是否应按其他字段中的值进行排序。 例如，在包含月份名称的 Month Calendar 列中，按列 Month Number 进行排序。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66067962"
   
 3.  在“默认字段集”**** 对话框的“表中的字段”**** 列表框中，按 Ctrl 并选择以下字段，然后单击“添加”****。  
   
-     **出生日期**、**客户备用 Id**、**名字**、**姓氏**。  
+     “Birth Date”****、“Customer Alternate Id”****、“First Name”****、“Last Name”****。  
   
 4.  在“默认字段，按顺序”**** 窗口中，使用“上移”和“下移”按钮确定以下顺序：  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66067962"
   
 7.  最后，对“Product”**** 表执行上述相同步骤，同时选择以下字段并按如下顺序排列。  
   
-     **产品备用 Id**，**产品名称**。  
+     “Product Alternate Id”****、“Product Name”****。  
   
 ## <a name="table-behavior"></a>表行为  
  通过使用“表行为”属性，您可以针对不同的可视化类型更改默认行为，并针对 Power View 报表中使用的表更改分组行为。 这样，就可以按图块、卡片和图表布局对标识信息（如名称、图像或标题）生成更好的默认位置。  
@@ -152,19 +152,19 @@ ms.locfileid: "66067962"
   
      **客户**  
   
-    |列|properties|值|  
+    |列|Property|“值”|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Birth Date|数据格式|短日期|  
   
-     **Date**  
+     **日期**  
   
     > [!NOTE]  
     >  因为我们在第 7 课“标记为日期表”中已经使用“标记为日期表”设置选择 Date 表作为模型日期表，并且选择 Date 表中的 Date 列作为要用作唯一标识符的列，所以，Date 列的“行标识符”属性将自动设置为 True 且无法更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅 SQL Server 联机丛书中的[指定“标记为日期表”以便用于时间智能（SSAS 表格）](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
   
-    |列|properties|值|  
+    |列|Property|“值”|  
     |------------|--------------|-----------|  
-    |Date|数据格式|短日期|  
+    |日期|数据格式|短日期|  
     |Day Number of Week|Hidden|True|  
     |Day Name|按列排序|Day Number of Week|  
     |Day of Week|Hidden|True|  
@@ -177,16 +177,16 @@ ms.locfileid: "66067962"
     |Fiscal Year|Hidden|True|  
     |Fiscal Semester|Hidden|True|  
   
-     **Geography**  
+     **地域**  
   
-    |列|properties|值|  
+    |列|Property|“值”|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
-     **Products**  
+     **产品**  
   
-    |列|properties|值|  
+    |列|Property|“值”|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|默认标签|True|  
@@ -197,20 +197,20 @@ ms.locfileid: "66067962"
   
      **Internet Sales**  
   
-    |列|properties|值|  
+    |列|Property|“值”|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
     |Promotion Id|Hidden|True|  
     |Currency Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
-    |Order Quantity|数据类型<br /><br /> 数据格式<br /><br /> 小数位数|十进制数<br /><br /> 十进制数<br /><br /> 0|  
+    |Order Quantity|数据类型<br /><br /> 数据格式<br /><br /> 小数位数|小数<br /><br /> 小数<br /><br /> 0|  
     |Order Date|数据类型|短日期|  
     |Due Date|数据类型|短日期|  
     |Ship Date|数据类型|短日期|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>重新部署 Adventure Works Internet Sales 表格模型  
- 因为您更改了模型，所以必须重新部署此模型。 必须重复在[第 14 课：部署](lesson-13-deploy.md)中执行的任务。  
+ 因为您更改了模型，所以必须重新部署此模型。 必须重复在 [第 14 课：部署](lesson-13-deploy.md)中执行的任务。  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>重新部署 Adventure Works Internet Sales 表格模型  
   

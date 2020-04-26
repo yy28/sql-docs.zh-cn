@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721135"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照初始化订阅
@@ -37,7 +37,7 @@ ms.locfileid: "62721135"
  如果快照传输在任一点中断，它将自动恢复并且不再重新发送已经全部传输的任何文件。 对于每个发布项目，快照代理的传递单位是 bcp 文件，因此已部分传递的文件必须全部重新传递。 不过，恢复快照可以大幅度减少传输的数据量，即便在连接不可靠的情况下也可以确保及时进行快照传递。  
   
 ## <a name="snapshot-options"></a>快照选项  
- 使用快照初始化订阅时有许多可用选项。 可以：  
+ 使用快照初始化订阅时有许多可用选项。 你可以：  
   
 -   指定一个备用快照文件夹位置，以替代默认的快照文件夹位置或者与之并存。 有关详细信息，请参阅 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "62721135"
   
 ## <a name="see-also"></a>另请参阅  
  [初始化订阅](initialize-a-subscription.md)   
- [保护快照文件夹](security/secure-the-snapshot-folder.md)  
+ [保护快照文件夹的安全](security/secure-the-snapshot-folder.md)  
   
   

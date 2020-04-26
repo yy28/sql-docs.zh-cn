@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfee215fef54f942bc7b47cff684cc35c509075c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067637"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>更改表、列或行筛选器映射（SSAS 表格）
@@ -25,7 +25,7 @@ ms.locfileid: "66067637"
  如果您将源更改为与当前表具有不同列的表，将显示一条消息以警告您列不相同。 然后，您必须选择要放在当前表中的列，并单击 **“保存”**。 您可以通过选中表左侧的复选框来替换整个表。  
   
 > [!NOTE]  
->  如果表有多个分区，则无法使用“编辑表属性”对话框更改行筛选器映射。 若要更改具有多个分区的表的行筛选器映射，请使用分区管理器。 有关详细信息，请参阅[分区（SSAS 表格）](partitions-ssas-tabular.md)。  
+>  如果表有多个分区，则无法使用“编辑表属性”对话框更改行筛选器映射。 若要更改具有多个分区的表的行筛选器映射，请使用分区管理器。 有关详细信息，请参阅 [分区（SSAS 表格）](partitions-ssas-tabular.md)。  
   
 #### <a name="to-change-table-column-or-row-filter-mappings"></a>更改表、列或行筛选器映射  
   
@@ -44,6 +44,6 @@ ms.locfileid: "66067637"
          如果您执行了错误的操作并需要重新开始，请单击 **“清除行筛选器”**。  
   
 ## <a name="see-also"></a>另请参阅  
- ["编辑表属性" 对话框 &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [“编辑表属性”对话框 (SSAS)](../edit-table-properties-dialog-box-ssas.md)  
   
   

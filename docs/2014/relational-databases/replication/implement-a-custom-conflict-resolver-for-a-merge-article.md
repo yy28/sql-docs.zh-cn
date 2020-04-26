@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721228"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
-  本主题说明如何使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]或[基于 COM 的自定义冲突解决](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)程序在中为合并项目实现自定义冲突解决程序。  
+  本主题说明如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或[基于 COM 的自定义解决程序](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为合并项目实现自定义冲突解决程序。  
   
  **本主题内容**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62721228"
   
      [基于 COM 的冲突解决程序](#COM)  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以编写自己的自定义冲突解决程序以作为每个发布服务器上的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 在同步过程中，如果在注册了冲突解决程序的项目中遇到冲突，则将调用此存储过程，并且合并代理会将有关冲突行的信息传递到该存储过程的所需参数中。 基于存储过程的自定义冲突解决程序将始终在发布服务器上创建。  
   
 > [!NOTE]  
@@ -44,7 +44,7 @@ ms.locfileid: "62721228"
   
 1.  在发布服务器的发布数据库或 **msdb** 数据库中，创建用于实现以下所需参数的新系统存储过程：  
   
-    |参数|数据类型|说明|  
+    |参数|数据类型|描述|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|`sysname`|冲突被解决的表的所有者名称。 这是发布数据库中的表的所有者。|  
     |**@tablename**|`sysname`|冲突被解决的表的名称。|  
@@ -69,9 +69,8 @@ ms.locfileid: "62721228"
   
 2.  执行[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，同时**@publication**指定**@article**、、的**resolver_info**值为**@property**，并为实现冲突解决程序逻辑的存储过程的名称**@value**。  
   
-##  <a name="COM"></a>使用基于 COM 的自定义冲突解决程序  
- 
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间实现了一个接口，可以利用该接口编写复杂的业务逻辑以处理事件并解决在合并复制同步过程中发生的冲突。 有关详细信息，请参阅[实现合并项目的业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)。 您也可以编写自己的基于本机代码的自定义业务逻辑以解决冲突。 使用诸如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 之类的产品，此逻辑可作为 COM 组件生成并编译到动态链接库 (DLL) 中。 此类基于 COM 的自定义冲突解决程序必须实现**ICustomResolver**接口，该接口是专为解决冲突而设计的。  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a>使用基于 COM 的自定义冲突解决程序  
+ <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间实现了一个接口，可以利用该接口编写复杂的业务逻辑以处理事件并解决在合并复制同步过程中发生的冲突。 有关详细信息，请参阅[实现合并项目的业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)。 您也可以编写自己的基于本机代码的自定义业务逻辑以解决冲突。 使用诸如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 之类的产品，此逻辑可作为 COM 组件生成并编译到动态链接库 (DLL) 中。 这类基于 COM 的自定义冲突解决程序必须实现 ICustomResolver 接口，该接口是专为解决冲突而设计的****。  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>创建和注册基于 COM 的自定义冲突解决程序  
   
@@ -115,7 +114,7 @@ ms.locfileid: "62721228"
   
 1.  在发布服务器上，执行[sp_enumcustomresolvers &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) ，并记下所需冲突解决程序的友好名称。  
   
-2.  执行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，指定， **@article**， **@publication**将的值指定为**** **@property**article_resolver，并为**@value**提供步骤1中项目冲突解决程序的友好名称。  
+2.  执行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，指定， **@article**， **@publication**将的值指定为**article_resolver** **@property**article_resolver，并为**@value**提供步骤1中项目冲突解决程序的友好名称。  
   
 #### <a name="viewing-a-sample-custom-resolver"></a>查看示例自定义冲突解决程序  
   
@@ -123,7 +122,7 @@ ms.locfileid: "62721228"
   
 2.  从下载的压缩 .cab 文件中提取文件。  
   
-3.  运行 **setup.exe**  
+3.  运行**setup.exe**  
   
     > [!NOTE]  
     >  选择安装选项时，仅需安装 **复制** 示例。 （默认安装路径为**C:\Program Files （x86） \Microsoft SQL Server 2000 Samples\1033\\**）  
@@ -140,6 +139,6 @@ ms.locfileid: "62721228"
 ## <a name="see-also"></a>另请参阅  
  [高级合并复制冲突的检测和解决](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [基于 COM 的自定义冲突解决程序](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [复制安全最佳做法](security/replication-security-best-practices.md)  
+ [复制安全最佳实践](security/replication-security-best-practices.md)  
   
   

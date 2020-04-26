@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467851"
 ---
 # <a name="utility-explorer-f1-help"></a>实用工具资源管理器的 F1 帮助
@@ -43,7 +43,7 @@ ms.locfileid: "62467851"
  [在 SQL Server 实用工具中监视 SQL Server 的实例](monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)   
+ [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)   
  [SQL Server 实用工具故障排除](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

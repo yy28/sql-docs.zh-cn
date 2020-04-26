@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667243"
 ---
 # <a name="programmatically-monitor-replication"></a>以编程方式监视复制
@@ -54,7 +54,7 @@ ms.locfileid: "62667243"
   
  [复制管理对象 (RMO)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>从分发服务器监视发布服务器、发布和订阅  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667243"
   
     -   将 **@shouldalert** 的值指定为 **@mode** 以启用监视阈值指标，或指定为 **2** 以禁用它。  
   
-##  <a name="RMO"></a> 复制管理对象 (RMO)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> 复制管理对象 (RMO)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>监视对订阅服务器上的合并发布的订阅  
   
@@ -268,19 +268,13 @@ ms.locfileid: "62667243"
   
         |值|说明|  
         |-----------|-----------------|  
-        |1|
-  `expiration` - 监视对事务发布的订阅是否即将过期。|  
-        |2|
-  `latency` - 监视对事务发布的订阅的性能。|  
-        |4|
-  `mergeexpiration` - 监视对合并发布的订阅是否即将过期。|  
+        |1|`expiration` - 监视对事务发布的订阅是否即将过期。|  
+        |2|`latency` - 监视对事务发布的订阅的性能。|  
+        |4|`mergeexpiration` - 监视对合并发布的订阅是否即将过期。|  
         |5|`mergeslowrunduration`-监视通过低带宽（拨号）连接进行的合并同步的持续时间。|  
-        |6|
-  `mergefastrunduration` - 监视通过高带宽 (LAN) 连接进行的合并同步的持续时间。|  
-        |7|
-  `mergefastrunspeed` - 监视通过高带宽 (LAN) 连接进行的合并同步的同步速率。|  
-        |8|
-  `mergeslowrunspeed` - 监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
+        |6|`mergefastrunduration` - 监视通过高带宽 (LAN) 连接进行的合并同步的持续时间。|  
+        |7|`mergefastrunspeed` - 监视通过高带宽 (LAN) 连接进行的合并同步的同步速率。|  
+        |8|`mergeslowrunspeed` - 监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
   
     -   *enable* - <xref:System.Boolean> 值。  
   

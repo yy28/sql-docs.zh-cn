@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721201"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
@@ -46,11 +46,11 @@ ms.locfileid: "62721201"
   
 -   **实现合并项目的业务逻辑处理程序，使用：**  
   
-     [复制编程方式](#ReplProg)  
+     [复制编程](#ReplProg)  
   
-     [复制管理对象 (RMO)](#RMOProcedure)  
+     [复制管理对象（RMO）](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> 使用复制编程  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> 使用复制编程  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>创建和部署业务逻辑处理程序  
   
@@ -110,9 +110,9 @@ ms.locfileid: "62721201"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>将业务逻辑处理程序用于现有的表项目  
   
-1.  执行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，指定， **@publication** **@article**，将的值指定为**** **@property**article_resolver，并为**@value**指定业务逻辑处理程序的友好名称。  
+1.  执行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，指定， **@publication** **@article**，将的值指定为**article_resolver** **@property**article_resolver，并为**@value**指定业务逻辑处理程序的友好名称。  
   
-###  <a name="TsqlExample"></a> 示例（复制编程方式）  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 示例（复制编程方式）  
  该示例演示了可创建审核日志的业务逻辑处理程序。  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -123,7 +123,7 @@ ms.locfileid: "62721201"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../snippets/tsql/SQL15/replication/howto/tsql/registerblh_10.sql#sp_registerblh_10)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
   
 #### <a name="to-create-a-business-logic-handler"></a>创建业务逻辑处理程序  
   
@@ -182,8 +182,7 @@ ms.locfileid: "62721201"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - 访问业务逻辑处理程序时使用的友好名称。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - 值为 `true`。  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - 值为 `true`。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>部署业务逻辑处理程序  
   
@@ -219,7 +218,7 @@ ms.locfileid: "62721201"
   
 6.  为 <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>设置业务逻辑处理程序的友好名称。 这是注册业务逻辑处理程序时指定的 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> 属性的值。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  此示例是一个业务逻辑处理程序，它记录有关订阅服务器上的插入、更新和删除操作的信息。  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -240,8 +239,8 @@ ms.locfileid: "62721201"
   
 ## <a name="see-also"></a>另请参阅  
  [为合并项目实现自定义冲突解决程序](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [调试业务逻辑处理程序（复制编程）](debug-a-business-logic-handler-replication-programming.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [调试业务逻辑处理程序 &#40;复制编程&#41;](debug-a-business-logic-handler-replication-programming.md)   
+ [复制安全最佳做法](security/replication-security-best-practices.md)   
  [复制管理对象概念](concepts/replication-management-objects-concepts.md)  
   
   

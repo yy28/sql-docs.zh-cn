@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721669"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
@@ -26,13 +26,13 @@ ms.locfileid: "62721669"
   
  **本主题内容**  
   
--   **若要为非 SQL Server 订阅服务器创建订阅，请使用：**  
+-   **为非 SQL Server 订阅服务器创建订阅，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  若要为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器创建订阅，请执行以下步骤：  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器上安装并配置适当的客户端软件和 OLE DB 访问接口。 有关详细信息，请参阅 [Oracle Subscribers](non-sql/oracle-subscribers.md) 和 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "62721669"
   
          在为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布之后，再创建快照，这样可以确保快照代理生成适合非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器的快照和初始化脚本。  
   
-3.  通过“发布属性 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PublicationName>”对话框为非 ** 订阅服务器启用发布。\<** 有关此步骤的详细信息，请参阅 [Publication Properties, Subscription Options](publication-properties-subscription-options.md) 。  
+3.  通过“发布属性 - \<PublicationName>”对话框为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布。**** 有关此步骤的详细信息，请参阅 [Publication Properties, Subscription Options](publication-properties-subscription-options.md) 。  
   
 4.  使用新建订阅向导创建订阅。 本主题提供了有关此步骤的详细信息。  
   
@@ -68,8 +68,7 @@ ms.locfileid: "62721669"
     > [!NOTE]  
     >  选择 **True** 会将 **pre_creation_cmd** 项目属性的值设置为“drop”。 此设置指定，如果复制与项目中某个表的名称相匹配，则复制应删除订阅服务器上对应的表。 如果要保留订阅服务器上的现有表，则可以对每个项目使用 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 存储过程，并为 **pre_creation_cmd**指定值“none”： `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
   
-5.  
-  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 系统将会提示为发布创建新快照。 如果不想在此时创建快照，可以在以后使用下一个“如何”过程中介绍的步骤创建快照。  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 系统将会提示为发布创建新快照。 如果不想在此时创建快照，可以在以后使用下一个“如何”过程中介绍的步骤创建快照。  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅  
   
@@ -91,7 +90,7 @@ ms.locfileid: "62721669"
   
      此向导并不验证此步骤中输入的数据源名称和步骤 9 中指定的凭据。 直到为订阅运行分发代理后复制才会使用它们。 请确保所有的值已通过使用客户端工具（如 Oracle 的 **sqlplus** ）连接到订阅服务器进行了测试。 有关详细信息，请参阅 [Oracle Subscribers](non-sql/oracle-subscribers.md) 和 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]在向导的 "**订阅服务器**" 页上，订阅服务器现在显示在 "**订阅数据库**" 列中具有只读 **（默认目标）** 的 "**订阅服务器**" 列中：  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 在该向导的 **“订阅服务器”** 页上，订阅服务器现在显示在 **“订阅服务器”** 列中，并在 **“订阅数据库”** 列中显示只读 **“(默认目标)”** ：  
   
     -   对于 Oracle，一个服务器最多只有一个数据库，因此不必指定数据库。  
   
@@ -138,11 +137,11 @@ ms.locfileid: "62721669"
   
 2.  右键单击发布，再单击 **“查看快照代理状态”**。  
   
-3.  在“查看快照代理状态 - **发布>”对话框中，单击“启动”。\<******  
+3.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。********  
   
  快照代理生成快照后，将显示一条消息，如“[100%] 已生成 17 个项目的快照”。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用复制存储过程以编程的方式创建对非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器的推送订阅。  
   
 > [!IMPORTANT]  
@@ -152,7 +151,7 @@ ms.locfileid: "62721669"
   
 1.  在发布服务器和分发服务器上安装非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器的最新 OLE DB 访问接口。 有关 OLE DB 访问接口的复制要求，请参阅 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)、 [Oracle Subscribers](non-sql/oracle-subscribers.md)和 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
   
-2.  在发布服务器的发布数据库中，通过执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_helppublication &#40;Transact-SQL&#41;[ 验证发布是否支持非 ](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) 订阅服务器。  
+2.  在发布服务器的发布数据库中，通过执行 [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) 验证发布是否支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。  
   
     -   如果 `enabled_for_het_sub` 的值为 1，则支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。  
   
@@ -163,7 +162,7 @@ ms.locfileid: "62721669"
   
 3.  在发布服务器的发布数据库中，执行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定**@publication**、 **@subscriber**、的值 **（默认目标）** **@destination_db**、的值为**push** **@subscription_type**，并将值3指定为**@subscriber_type** （指定 OLE DB 提供程序）。  
   
-4.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定以下项：  
+4.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列各项：  
   
     -   **@subscriber**和**@publication**参数。  
   
@@ -178,16 +177,16 @@ ms.locfileid: "62721669"
   
     -   的值为**0** **@subscriber_security_mode** ，并为**@subscriber_login**和**@subscriber_password**的 OLE DB 提供程序登录信息。  
   
-    -   该订阅的分发代理作业计划。 有关详细信息，请参阅[指定同步计划](specify-synchronization-schedules.md)。  
+    -   该订阅的分发代理作业计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   
     > [!IMPORTANT]  
-    >  用远程分发服务器在发布服务器上创建推送订阅时，为所有参数（包括 *job_login* 和 *job_password*）提供的值将以纯文本格式发送到分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用到数据库引擎 &#40;的加密连接 SQL Server 配置管理器&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+    >  用远程分发服务器在发布服务器上创建推送订阅时，为所有参数（包括 *job_login* 和 *job_password*）提供的值将以纯文本格式发送到分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [IBM DB2 订阅服务器](non-sql/ibm-db2-subscribers.md)   
  [Oracle 订阅服务器](non-sql/oracle-subscribers.md)   
  [其他非 SQL Server 订阅服务器](non-sql/other-non-sql-server-subscribers.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [复制安全最佳做法](security/replication-security-best-practices.md)  
+ [复制系统存储过程概念](concepts/replication-system-stored-procedures-concepts.md)   
+ [复制安全最佳实践](security/replication-security-best-practices.md)  
   
   

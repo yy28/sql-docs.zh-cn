@@ -10,10 +10,10 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62473635"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>针对 SQL Server 2014 的文档将移动到 Docs
@@ -41,7 +41,7 @@ MSDN 是*Microsoft 开发人员网络*的 initialism。
 - 必应和 Google 爬网将启动 delist 并绕过旧的 MSDN 地址。
 
 
-## <a name="after-the-move"></a>移动后
+## <a name="after-the-move"></a>迁移后
 
 移动到*文档*后，root SQL Server 2014 文档文章的地址将是：
 

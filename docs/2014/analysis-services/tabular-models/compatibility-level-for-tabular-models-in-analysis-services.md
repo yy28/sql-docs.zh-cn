@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067602"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>兼容级别（SSAS 表格 SP1）
@@ -25,8 +25,7 @@ ms.locfileid: "66067602"
 ## <a name="compatibility-level"></a>兼容级别  
  通常，应该先在开发和测试计算机上安装新版本和 Service Pack，然后再在生产计算机上安装。 在此类情况下，了解如何为新的表格模型项目以及已部署到生产环境中的表格模型项目设置兼容级别十分重要。  
   
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Analysis Services 实例支持以下兼容级别（数据库版本）：  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Analysis Services 实例支持以下兼容级别（数据库版本）：  
   
 -   SQL Server 2012 （1100）  
   
@@ -52,6 +51,6 @@ ms.locfileid: "66067602"
  您可以通过查看 "**数据库属性**" 中的 "**兼容级别**" 属性（中的 "新建" [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]）检查 SSMS 中表格模型数据库的兼容级别。  
   
 ### <a name="check-supported-compatibility-level-for-an-analysis-services-instance-in-ssms"></a>检查 SSMS 中 Analysis Services 实例支持的兼容级别  
- 你可以通过查看中 "**信息**" 页上的 "**支持的兼容级别**" 属性（ **Analysis Services 属性**中的[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]"新建"）来检查 SSMS 中支持的兼容级别。 支持的兼容级别 1103 指示安装了 SQL Server SP1 或更高版本。 不可更改支持的兼容性级别。  
+ 你可以通过查看中 "**信息**" 页上的 "**支持的兼容级别**" 属性（ **Analysis Services 属性**中的[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]"新建"）来检查 SSMS 中支持的兼容级别。 支持的兼容级别 1103 指示安装了 SQL Server SP1 或更高版本。 不能更改支持的兼容级别。  
   
   

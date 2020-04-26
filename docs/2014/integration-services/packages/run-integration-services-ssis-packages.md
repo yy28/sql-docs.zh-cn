@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a3ecbe615d60a703b66dff78cd77ddfde0a20d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767079"
 ---
 # <a name="execution-of-projects-and-packages"></a>项目和包的执行
@@ -35,8 +35,8 @@ ms.locfileid: "62767079"
 |工具|在 Integration Services 服务器上存储的包|在 SSIS 包存储区或 msdb 数据库中存储的包|在文件系统中存储的包，在属于 SSIS 包存储区的位置之外|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**SQL Server Data Tools**|否|否<br /><br /> 但是，你可以将现有包从包括 msdb 数据库的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区添加到项目中。 以此方式将现有包添加到项目中将在文件系统中生成该包的本地副本。|是|  
-|**SQL Server Management Studio，当您连接到承载 Integration Services 服务器的数据库引擎的实例时**<br /><br /> 有关详细信息，请参阅 [Execute Package Dialog Box](../execute-package-dialog-box.md)|是|否<br /><br /> 但是，可以从这些位置将包导入服务器。|否<br /><br /> 但是，可以从文件系统将包导入服务器。|  
-|**SQL Server Management Studio，当它连接到管理 SSIS 包存储区的 Integration Services 服务时**|否|是|否<br /><br /> 但是，可以从文件系统将包导入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中。|  
+|**SQL Server Management Studio，在您连接到承载 Integration Services 服务器的数据库引擎实例时**<br /><br /> 有关详细信息，请参阅 [Execute Package Dialog Box](../execute-package-dialog-box.md)|是|否<br /><br /> 但是，可以从这些位置将包导入服务器。|否<br /><br /> 但是，可以从文件系统将包导入服务器。|  
+|**SQL Server Management Studio，在它连接到管理 SSIS 包存储区的 Integration Services 服务时**|否|是|否<br /><br /> 但是，可以从文件系统将包导入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中。|  
 |**dtexec**<br /><br /> 有关详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。|是|是|是|  
 |**dtexecui**<br /><br /> 有关详细信息，请参阅[执行包实用工具 (DtExecUI) 用户界面参考](execute-package-utility-dtexecui-ui-reference.md)|否|是|是|  
 |**SQL Server 代理**<br /><br /> 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划运行包。<br /><br /> 有关详细信息，请参阅 [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md)。|是|是|是|  
@@ -45,7 +45,7 @@ ms.locfileid: "62767079"
 |<xref:Microsoft.SqlServer.Dts.Runtime> **托管 API，通过使用命名空间中的类型和成员**|目前不可用|是|是|  
   
 ## <a name="execution-and-logging"></a>执行和日志记录  
- 可以启用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包进行日志记录，这样就可以在日志文件中捕获运行时信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)。  
+ 可以启用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包进行日志记录，这样就可以在日志文件中捕获运行时信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)。  
   
  您可以使用操作报告监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器并在其上运行的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用这些报告。 有关详细信息，请参阅 [Reports for the Integration Services Server](../reports-for-the-integration-services-server.md)。  
   

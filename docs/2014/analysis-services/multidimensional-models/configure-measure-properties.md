@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076609"
 ---
 # <a name="configure-measure-properties"></a>配置度量值属性
@@ -56,10 +56,9 @@ ms.locfileid: "66076609"
 ## <a name="measure-properties"></a>度量值属性  
  度量值从其所属的度量值组中继承某些属性，除非这些属性在度量值级别被覆盖。 度量值属性确定度量值的聚合方式、它的数据类型、对用户的显示名称、度量值将在其中出现的显示文件夹、它的格式字符串、任何度量值表达式、基础源列和它对用户的可见性。  
   
-|properties|定义|  
+|属性|定义|  
 |--------------|----------------|  
-|`AggregateFunction`|必需。 确定度量值的聚合方式。 
-  `Sum` 是默认聚合。 有关详细信息，请参阅针对每个函数说明的 [Use Aggregate Functions](use-aggregate-functions.md) 。|  
+|`AggregateFunction`|必需。 确定度量值的聚合方式。 `Sum` 是默认聚合。 有关详细信息，请参阅针对每个函数说明的 [Use Aggregate Functions](use-aggregate-functions.md) 。|  
 |`DataType`|必需。 指定与度量值绑定的基础事实数据表中的列的数据类型。 默认情况下，此值从源列继承。|  
 |`Description`|提供度量值的说明，可以在客户端应用程序中显示该说明。|  
 |`DisplayFolder`|指定当用户连接到多维数据集时度量值将在其中显示的文件夹。 多维数据集有很多度量值时，可以使用显示文件夹来对度量值进行分类，从而改善用户的浏览体验。|  

@@ -19,16 +19,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 046058aa9c00cafb9a5ab9aac61b14d1d78668fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766472"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
   
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]是用于生成企业级数据集成和数据转换解决方案的平台。 使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可解决复杂的业务问题，具体表现为：复制或下载文件，发送电子邮件以响应事件，更新数据仓库，清除和挖掘数据以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象和数据。 这些包可以独立使用，也可以与其他包一起使用以满足复杂的业务需求。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可以提取和转换来自多种源（如 XML 数据文件、平面文件和关系数据源）的数据，然后将这些数据加载到一个或多个目标。<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包括一组丰富的内置任务和转换;用于构造包的工具;以及用于[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]运行和管理包的服务。 可以使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 图形工具来创建解决方案，而无需编写一行代码；也可以对各种 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型进行编程，通过编程方式创建包并编写自定义任务以及其他包对象的代码。<br /><br /> **按区域浏览内容**<br /> ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标")[新增功能](what-s-new-in-integration-services-in-sql-server-2016.md)<br /><br /> ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标")[向后兼容性](integration-services-backward-compatibility.md)<br /><br /> ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标") [Integration Services 功能和任务](../../2014/integration-services/integration-services-features-and-tasks.md)<br /><br /> ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标")[技术参考](../../2014/integration-services/technical-reference-integration-services.md)  
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]是用于生成企业级数据集成和数据转换解决方案的平台。 使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可解决复杂的业务问题，具体表现为：复制或下载文件，发送电子邮件以响应事件，更新数据仓库，清除和挖掘数据以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象和数据。 这些包可以独立使用，也可以与其他包一起使用以满足复杂的业务需求。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可以提取和转换来自多种源（如 XML 数据文件、平面文件和关系数据源）的数据，然后将这些数据加载到一个或多个目标。<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含一组丰富的内置任务和转换、用于构造包的工具以及用于运行和管理包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务。 可以使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 图形工具来创建解决方案，而无需编写一行代码；也可以对各种 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型进行编程，通过编程方式创建包并编写自定义任务以及其他包对象的代码。<br /><br /> **按区域浏览内容**<br /> ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标")[新增功能](what-s-new-in-integration-services-in-sql-server-2016.md)<br /><br /> ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标")[向后兼容性](integration-services-backward-compatibility.md)<br /><br /> ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标") [Integration Services 功能和任务](../../2014/integration-services/integration-services-features-and-tasks.md)<br /><br /> ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标")[技术参考](../../2014/integration-services/technical-reference-integration-services.md)  
   
  网络广播，[企业信息管理（EIM）：在 channel9.msdn.com 上汇集 SSIS、DQS 和 MDS](https://go.microsoft.com/fwlink/?LinkId=258672)。  
   

@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657700"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序为`SQLGetDiagField`指定了以下附加诊断字段。 这些字段支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序的大量错误报告功能，并且可以在连接的 ODBC 连接句柄和 ODBC 语句句柄上生成的所有诊断记录中使用。 这些字段在 sqlncli.h 中定义。  
   
-|诊断记录字段|说明|  
+|诊断记录字段|描述|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|报告生成错误的存储过程的行号。 只有 SQL_DIAG_SS_PROCNAME 返回值时，SQL_DIAG_SS_LINE 的值才有意义。 该值作为无符号 16 位整数返回。|  
 |SQL_DIAG_SS_MSGSTATE|错误消息的状态。 有关错误消息状态的信息，请参阅[RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)。 该值作为有符号 32 位整数返回。|  
@@ -34,8 +34,7 @@ ms.locfileid: "62657700"
   
  包含字符数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定诊断字段（即 SQL_DIAG_SS_PROCNAME 和 SQL_DIAG_SS_SRVNAME）将该数据作为以 Null 值结束的 ANSI 或 Unicode 字符串返回给客户端。 如有必要，应根据字符宽度调整字符计数。 或者，还可以使用可移植 C 数据类型（如 TCHAR 或 SQLTCHAR）确保正确的程序可变长度。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序报告标识最后尝试的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的以下额外动态函数代码。 动态函数代码在诊断记录集的标头（记录 0）中返回，因此可在每次执行时（成功或失败）使用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序报告标识最后尝试的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的以下额外动态函数代码。 动态函数代码在诊断记录集的标头（记录 0）中返回，因此可在每次执行时（成功或失败）使用。  
   
 |动态函数代码|源|  
 |---------------------------|------------|  

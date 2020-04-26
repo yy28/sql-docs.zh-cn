@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190824"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>创建市场篮结构和模型（数据挖掘中级教程）
@@ -35,7 +35,7 @@ ms.locfileid: "63190824"
   
 5.  选择 "**可用数据源视图**" 下的**订单**，然后单击 "**下一步**"。  
   
-6.  在 "**指定表类型**" 页上，在 vAssocSeqLineItems 表的行中选中 "**嵌套**" 复选框，并在嵌套表 vAssocSeqOrders 的行中选中 "**事例**" 复选框。 单击“下一步”。   
+6.  在 "**指定表类型**" 页上，在 vAssocSeqLineItems 表的行中选中 "**嵌套**" 复选框，并在嵌套表 vAssocSeqOrders 的行中选中 "**事例**" 复选框。 单击 **下一步**。  
   
 7.  在 "**指定定型数据**" 页上，清除可能选中的任何框。 通过选中 "OrderNumber" 旁边的 "**键**" 复选框，为事例表 vAssocSeqOrders 设置密钥。  
   
@@ -49,23 +49,22 @@ ms.locfileid: "63190824"
   
      ![对话框外观如何](../../2014/tutorials/media/tutorial-configassocmodel.gif "对话框外观如何")  
   
-10. 单击“下一步”。   
+10. 单击 **下一步**。  
   
 11. 在 "**指定列的内容和数据类型"** 页上，查看应如下表所示的选择，然后单击 "**下一步**"。  
   
     |列|内容类型|数据类型|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|离散|文本|  
-    |订单编号|密钥|文本|  
-    |区域|离散|文本|  
+    |IncomeGroup|离散|Text|  
+    |订单编号|键|Text|  
+    |区域|离散|Text|  
     |vAssocSeqLineItems|||  
-    |模型|密钥|文本|  
+    |“模型”|键|Text|  
   
-12. 在 "**创建测试集**" 页上，"**测试数据百分比**" 选项的默认值为30%。 将此更改为**0**。 单击“下一步”。   
+12. 在 "**创建测试集**" 页上，"**测试数据百分比**" 选项的默认值为30%。 将此更改为**0**。 单击 **下一步**。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 为测量模型精确度提供不同的图表。 但是，某些精确度图表类型（如提升图和交叉验证报告）旨在进行分类和估计。 关联预测不支持这些方法。  
+    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 为测量模型精确度提供不同的图表。 但是，某些精确度图表类型（如提升图和交叉验证报告）旨在进行分类和估计。 关联预测不支持这些方法。  
   
 13. 在 "**完成向导**" 页上的 "**挖掘结构名称**" `Association`中，键入。  
   
@@ -80,6 +79,6 @@ ms.locfileid: "63190824"
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 关联算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [内容类型 &#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [内容类型（数据挖掘）](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

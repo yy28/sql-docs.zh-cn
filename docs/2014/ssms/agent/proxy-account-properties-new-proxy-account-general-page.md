@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650198"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>代理帐户属性和新建代理帐户（“常规”页）
@@ -35,7 +35,7 @@ ms.locfileid: "62650198"
  **...**  
  启动“选择凭据”**** 对话框。  
   
- **说明**  
+ **描述**  
  键入代理的说明。  
   
  **对以下子系统有效**  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62662978"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support 事件类
@@ -31,7 +31,7 @@ ms.locfileid: "62662978"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 如果在跟踪中捕获 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 `ServerName` 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 如果在跟踪中捕获 `ServerName` 数据列而且服务器可用，则 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|`nvarchar`|正在其中运行用户语句的数据库的名称。|35|是|  
 |EventClass|`int`|事件类型 = 126。|27|否|  
 |EventSequence|`int`|给定事件在请求中的顺序。|51|否|  
@@ -39,10 +39,10 @@ ms.locfileid: "62662978"
 |IntegerData2|`int`|正在执行的语句的终止偏移量（字节）。|55|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
-|LoginSid|`image`|登录用户的安全标识号 (SID)。 可以在**server_principals sys.databases**目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
+|LoginSid|`image`|登录用户的安全标识号 (SID)。 你可以在 **sys.server_principals** 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  
-|Offset|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
+|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |ObjectID|`int`|不推荐使用的功能的 ID 号。|22|是|  
 |ObjectName|`nvarchar`|不推荐使用的功能的名称。|34|是|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|是|  
@@ -56,7 +56,7 @@ ms.locfileid: "62662978"
 |XactSequence|`bigint`|用于说明当前事务的标记。|50|是|  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [弃用公告事件类](deprecation-announcement-event-class.md)   
  [SQL Server 2014 中不推荐使用的数据库引擎功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   

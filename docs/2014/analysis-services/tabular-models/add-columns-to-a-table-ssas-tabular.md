@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067771"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>将列添加到表（SSAS 表格）
@@ -63,6 +63,6 @@ ms.locfileid: "66067771"
   
 ## <a name="see-also"></a>另请参阅  
  ["编辑表属性" 对话框 &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [更改 &#40;SSAS 表格&#41;的表、列或行筛选器映射](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [更改表、列或行筛选器映射（SSAS 表格）](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

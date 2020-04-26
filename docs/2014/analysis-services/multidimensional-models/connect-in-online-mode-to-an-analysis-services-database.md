@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076572"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>在联机模式下连接到 Analysis Services 数据库
@@ -34,12 +34,12 @@ ms.locfileid: "66076572"
   
      可以键入数据库名称，也可以查询服务器以查看服务器上的现有数据库。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
      现在可以直接编辑 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的所有对象。  
   
 ## <a name="see-also"></a>另请参阅  
  [在开发阶段使用 Analysis Services 项目和数据库](work-with-analysis-services-projects-and-databases-in-development.md)   
- [使用 SQL Server Data Tools &#40;SSDT 创建多维模型&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [使用 SQL Server Data Tools 创建多维模型 (SSDT)](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

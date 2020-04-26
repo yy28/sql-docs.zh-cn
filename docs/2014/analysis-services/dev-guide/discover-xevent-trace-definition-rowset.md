@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62731909"
 ---
 # <a name="discover_xevent_trace_definition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 行集
@@ -23,10 +23,9 @@ ms.locfileid: "62731909"
  **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- 
-  `DISCOVER_XEVENT_TRACE_DEFINITION` 行集包含以下列。  
+ `DISCOVER_XEVENT_TRACE_DEFINITION` 行集包含以下列。  
   
-|列名称|类型指示符|长度|说明|  
+|列名称|类型指示符|长度|描述|  
 |-----------------|--------------------|------------|-----------------|  
 |`Data`|`DBTYPE_WSTR`||XEvent 跟踪的 XML 定义。|  
   
@@ -37,14 +36,14 @@ ms.locfileid: "62731909"
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|“值”|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
-|String|DISCOVER_XEVENT_TRACE_DEFINITION|  
+|字符串|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>另请参阅  
  [XML for Analysis 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
  [使用 &#40;XEvents&#41; SQL Server 扩展事件监视 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [使用动态管理视图 &#40;Dmv&#41; 监视 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [使用动态管理视图 (DMV) 监视 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62999567"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合并同步期间执行业务逻辑
@@ -59,7 +59,7 @@ ms.locfileid: "62999567"
      如果应用程序需要覆盖特定数据值或操作，这比较有用。 例如，应用程序可能将行删除操作转换为一个特殊的更新操作，将行中 **status** 列的值设置为“已删除”，然后跟踪执行删除操作的客户端的标识。 这对于审核或工作流可能比较有用。  
   
 ### <a name="custom-conflict-resolution"></a>自定义冲突解决  
- 合并复制提供了冲突检测和冲突解决选项，从而允许针对冲突接受默认的解决策略或选择自定义解决。 有关详细信息，请参阅[高级合并复制冲突的检测和解决方法](advanced-merge-replication-conflict-detection-and-resolution.md)。 在处理冲突数据更改期间可以调用业务逻辑处理程序，它可以执行下列两种操作之一：  
+ 合并复制提供了冲突检测和冲突解决选项，从而允许针对冲突接受默认的解决策略或选择自定义解决。 有关详细信息，请参阅 [高级合并复制冲突的检测和解决](advanced-merge-replication-conflict-detection-and-resolution.md)。 在处理冲突数据更改期间可以调用业务逻辑处理程序，它可以执行下列两种操作之一：  
   
 -   接受默认解决  
   

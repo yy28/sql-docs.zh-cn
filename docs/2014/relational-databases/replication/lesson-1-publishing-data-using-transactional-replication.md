@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721090"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 课：使用事务复制发布数据
-  在本课中，您将使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建一个事务发布，以便在[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]示例数据库中发布**Product**表的筛选子集。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程 [准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)。  
+  在本课中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中发布“Product”表的筛选子集****。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程 [准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)。  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62721090"
   
 4.  在“发布类型”页上，选择“事务发布”****，然后单击“下一步”****。  
   
-5.  在“项目”页上，展开“表”**** 节点，选中“Product”**** 复选框，然后展开“Product”**** 并取消选中“ListPrice”**** 和“StandardCost”**** 复选框。 单击“下一步”。   
+5.  在“项目”页上，展开“表”**** 节点，选中“Product”**** 复选框，然后展开“Product”**** 并取消选中“ListPrice”**** 和“StandardCost”**** 复选框。 单击 **下一步**。  
   
 6.  在“筛选表行”页上，单击“添加”。****  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721090"
   
 10. 在“代理安全性”页上，清除“使用快照代理的安全设置”**** 复选框。  
   
-11. 单击 "快照代理的"**安全设置**" \<，在"**进程帐户**"框中输入_Machine_Name>_ **\ repl_snapshot** ，为此帐户提供密码，然后单击 **" 确定 "**。  
+11. 单击快照代理的“安全设置”****，在“进程帐户”**** 框中输入 \<_Machine_Name>_**\repl_snapshot**，为此帐户提供密码，然后单击“确定”****。  
   
 12. 重复上一步，将 repl_logreader 设置为日志读取器代理的进程帐户，然后单击“完成”。****  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62721090"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>查看快照的生成状态  
   
-1.  连接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器，展开服务器节点，然后展开 "**复制**" 文件夹。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”**** 文件夹。  
   
 2.  在“本地发布”**** 文件夹中，右键单击 **AdvWorksProductTrans**，再单击“查看快照代理状态”****。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62721090"
   
 ### <a name="to-add-the-distribution-agent-login-to-the-pal"></a>将分发代理登录名添加到 PAL  
   
-1.  连接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器，展开服务器节点，然后展开 "**复制**" 文件夹。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”**** 文件夹。  
   
 2.  在“本地发布”**** 文件夹中，右键单击 **AdvWorksProductTrans**，再单击“属性”****。  
   
@@ -76,14 +76,14 @@ ms.locfileid: "62721090"
   
 3.  选择“发布访问列表”**** 页，单击“添加”****。  
   
-4.  \In 在 "**添加发布访问**" 对话框中，选择 _<Machine_Name>_ **\ Repl_distribution**并单击 **"确定"**。 单击“确定”。   
+4.  \在“添加发布访问项”**** 对话框中，选择 _<Machine_Name>_**\repl_distribution**，再单击“确定”****。 单击" **确定**"。  
   
 ## <a name="next-steps"></a>后续步骤  
  您已成功创建了事务发布。 接下来，您将订阅此发布。 请参阅 [第 2 课：创建事务发布的订阅](lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [筛选已发布数据](publish/filter-published-data.md)   
- [Define an Article](publish/define-an-article.md)   
+ [定义项目](publish/define-an-article.md)   
  [创建并应用快照](create-and-apply-the-snapshot.md)  
   
   

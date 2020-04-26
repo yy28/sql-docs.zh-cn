@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667812"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
@@ -50,20 +50,20 @@ ms.locfileid: "62667812"
   
      [复制管理对象](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  停止系统时跟踪令牌也很有用，停止系统的过程涉及停止所有活动并验证所有节点均已收到所有尚未完成的更改。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
- 若要使用跟踪令牌，必须使用特定版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
+ 若要使用跟踪令牌，必须使用特定版本的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   
--   分发服务器必须是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本。  
+-   分发服务器必须是[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]或更高版本。  
   
 -   发布服务器必须是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本，或者是 Oracle 发布服务器。  
   
--   对于推送订阅，如果订阅服务器为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或更高版本，将从发布服务器、分发服务器和订阅服务器收集跟踪令牌统计信息。  
+-   对于推送订阅，如果订阅服务器为[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或更高版本，则从发布服务器、分发服务器和订阅服务器收集跟踪令牌统计信息。  
   
--   对于请求订阅，仅当订阅服务器为 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本时才从订阅服务器收集跟踪令牌统计信息。 如果订阅服务器为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]，将仅从发布服务器和分发服务器收集统计信息。  
+-   对于请求订阅，仅当订阅服务器为 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本时才从订阅服务器收集跟踪令牌统计信息。 如果订阅服务器为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]，将仅从发布服务器和分发服务器收集统计信息。  
   
  还有一些需要注意的问题和限制：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62667812"
   
 -   故障转移到辅助实例后，复制监视器无法调整 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的发布实例的名称，将继续在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的原始主实例名称下显示复制信息。 在故障转移之后，无法使用复制监视器输入跟踪令牌，但是可以在复制监视器中显示使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]在新发布服务器上输入的跟踪令牌。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 复制监视器  
+##  <a name="using-sql-server-replication-monitor"></a><a name="SSMSProcedure"></a>使用 SQL Server 复制监视器  
  有关启动复制监视器的信息，请参阅[启动复制监视器](start-the-replication-monitor.md)。  
   
 #### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>插入跟踪令牌并查看有关令牌的信息  
@@ -86,9 +86,9 @@ ms.locfileid: "62667812"
   
 2.  单击 **“跟踪令牌”** 选项卡。  
   
-3.  单击 **“插入跟踪器”** 。  
+3.  单击 **“插入跟踪器”**。  
   
-4.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”** 、 **“分发服务器到订阅服务器”** 、 **“总滞后时间”** 。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+4.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”**、 **“分发服务器到订阅服务器”**、 **“总滞后时间”**。 值为 "**挂起**" 表示令牌尚未到达给定点。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>查看有关以前插入的跟踪令牌的信息  
   
@@ -98,12 +98,12 @@ ms.locfileid: "62667812"
   
 3.  从 **“插入时间”** 下拉列表中选择时间。  
   
-4.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”** 、 **“分发服务器到订阅服务器”** 、 **“总滞后时间”** 。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+4.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”**、 **“分发服务器到订阅服务器”**、 **“总滞后时间”**。 值为 "**挂起**" 表示令牌尚未到达给定点。  
   
     > [!NOTE]  
     >  跟踪令牌信息的保留时间与其他历史数据的保留时间一样长，该时间由分发数据库的历史记录保持期来控制。 若要了解如何更改分发数据库属性，请参阅[查看和修改分发服务器和发布服务器属性](../view-and-modify-distributor-and-publisher-properties.md)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>若要将跟踪令牌发布到事务发布  
   
@@ -127,12 +127,12 @@ ms.locfileid: "62667812"
   
 2.  在发布服务器上，对发布数据库执行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql)，指定 **@publication** 以及步骤 2 中要删除的针对 **@tracer_id** 的跟踪 ID。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  本示例发送一个跟踪令牌记录并使用返回的已发送跟踪令牌的 ID 来查看滞后时间信息。  
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>若要将跟踪令牌发布到事务发布  
   

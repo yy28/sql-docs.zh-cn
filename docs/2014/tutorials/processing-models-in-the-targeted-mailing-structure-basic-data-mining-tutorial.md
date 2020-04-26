@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188224"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>处理 Targeted Mailing 结构中的模型（数据挖掘基础教程）
@@ -58,8 +58,7 @@ ms.locfileid: "63188224"
   
 2.  在 "**处理挖掘结构-目标邮件**" 对话框中，单击 "**运行**"。  
   
-     
-  **“处理进度”** 对话框将打开以显示有关模型处理的详细信息。 模型处理可能需要一些时间，具体取决于您的计算机。  
+     **“处理进度”** 对话框将打开以显示有关模型处理的详细信息。 模型处理可能需要一些时间，具体取决于您的计算机。  
   
 3.  模型处理完成后，在 **“处理进度”** 对话框中单击 **“关闭”** 。  
   
@@ -72,6 +71,6 @@ ms.locfileid: "63188224"
  [第4课：浏览目标邮件模型 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘 &#40;处理要求和注意事项&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

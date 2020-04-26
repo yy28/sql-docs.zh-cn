@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188219"
 ---
 # <a name="manage-events"></a>管理事件
@@ -33,20 +33,20 @@ ms.locfileid: "63188219"
 ## <a name="advantages-of-using-an-alerts-management-server"></a>使用警报管理服务器的优点  
  设置警报管理服务器的优势包括：  
   
--   **集中**。 可以从单台服务器对多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的事件进行集中控制，并获得这些事件的合并视图。  
+-   **集中性**。 可以从单台服务器对多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的事件进行集中控制，并获得这些事件的合并视图。  
   
--   **伸缩性**。 许多物理服务器可以作为一台逻辑服务器来管理。 可以根据需要在这个物理服务器组中添加或删除服务器。  
+-   **可伸缩性**。 许多物理服务器可以作为一台逻辑服务器来管理。 可以根据需要在这个物理服务器组中添加或删除服务器。  
   
 -   **效率**。 由于只需要定义一次警报和操作员，因此减少了配置时间。  
   
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>使用警报管理服务器的缺点  
  设置警报管理服务器的缺点包括：  
   
--   **流量增加**。 向警报管理服务器转发事件会增加网络通信流量。 可以通过将事件转发限于超过指定严重级别的事件来缓解这种通信流量增加。  
+-   **通信流量增加**。 向警报管理服务器转发事件会增加网络通信流量。 可以通过将事件转发限于超过指定严重级别的事件来缓解这种通信流量增加。  
   
--   **单点故障**。 如果警报管理服务器离线，则不会为管理的一组服务器中的任何事件发出警报。  
+-   **单个故障点**。 如果警报管理服务器离线，则不会为管理的一组服务器中的任何事件发出警报。  
   
--   **服务器负载**。 处理转发事件的警报会导致警报管理服务器上的处理负荷增加。  
+-   **服务器负荷**。 处理转发事件的警报会导致警报管理服务器上的处理负荷增加。  
   
 ## <a name="guidelines-for-using-an-alerts-management-server"></a>警报管理服务器使用准则  
  配置警报管理服务器时，请遵循以下准则：  

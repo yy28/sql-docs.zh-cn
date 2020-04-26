@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721181"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 课：使用合并复制发布数据
-  在本课中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]您将使用创建一个合并发布，以便在[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]示例数据库中发布**Employee**、 **SalesOrderHeader**和**SalesOrderDetail**表的子集。 这些表用参数化行筛选器进行筛选，以便每个订阅都包含唯一的数据分区。 你还要将合并代理使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到发布访问列表 (PAL) 中。 本教程要求你完成上一个教程， [准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)的学习。  
+  在本课中，你将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建合并复制以在 **示例数据库中发布**Employee **、** SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的子集。 这些表用参数化行筛选器进行筛选，以便每个订阅都包含唯一的数据分区。 你还要将合并代理使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到发布访问列表 (PAL) 中。 本教程要求你完成上一个教程， [准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)的学习。  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62721181"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>查看快照的生成状态  
   
-1.  连接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器，展开服务器节点，然后展开 "**复制**" 文件夹。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”**** 文件夹。  
   
 2.  在“本地发布”文件夹中，右键单击 **AdvWorksSalesOrdersMerge**，再单击“查看快照代理状态”****。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62721181"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>将合并代理登录名添加到 PAL  
   
-1.  连接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器，展开服务器节点，然后展开 "**复制**" 文件夹。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”**** 文件夹。  
   
 2.  在“本地发布”文件夹中，右键单击 **AdvWorksSalesOrdersMerge**，再单击“属性”****。  
   
@@ -107,14 +107,14 @@ ms.locfileid: "62721181"
   
 3.  选择“发布访问列表”**** 页，单击“添加”****。  
   
-4.  在 "添加发布访问" 对话框中，选择 " _<Machine_Name>_ **\ Repl_merge**并单击 **" 确定 "**。 单击“确定”。   
+4.  在“添加发布访问项”对话框中，选择 Machine_Name__**\repl_merge**，然后单击“确定”****。 单击" **确定**"。  
   
 ## <a name="next-steps"></a>后续步骤  
  您已成功创建了合并发布。 接下来，您将订阅此发布。 请参阅 [第 2 课：创建合并发布订阅](lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [筛选已发布数据](publish/filter-published-data.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [参数化行筛选器](merge/parameterized-filters-parameterized-row-filters.md)   
  [定义项目](publish/define-an-article.md)  
   
   

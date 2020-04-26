@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68186115"
 ---
 # <a name="start-sql-server-profiler"></a>启动 SQL Server Profiler
@@ -35,11 +35,9 @@ ms.locfileid: "68186115"
 1.  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的 **“工具”** 菜单上，单击 **SQL Server Profiler**。  
   
 ## <a name="starting-sql-server-profiler-in-management-studio"></a>在 Management Studio 中启动 SQL Server Profiler  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动的每个事件探查器会话处于自己的实例中，在关闭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的情况下仍继续运行。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动的每个事件探查器会话处于自己的实例中，在关闭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的情况下仍继续运行。  
   
- 可以从 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的多个位置启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，如以下过程中所示。 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在启动时将加载连接上下文、跟踪模板及其启动点的筛选上下文。  
+ 可以从 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的多个位置启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，如以下过程中所示。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在启动时将加载连接上下文、跟踪模板及其启动点的筛选上下文。  
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>从“工具”菜单启动 SQL Server Profiler  
   
@@ -49,7 +47,7 @@ ms.locfileid: "68186115"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的菜单栏上，单击 **“新建查询”**。  
   
-2.  在查询编辑器中右键单击，然后选择“在 SQL Server Profiler 中跟踪查询” ****。  
+2.  在查询编辑器中右键单击，然后选择“在 SQL Server Profiler 中跟踪查询”  。  
   
     > [!NOTE]  
     >  该连接上下文为编辑器连接，跟踪模板为 TSQL_SPs，应用的筛选器为 SPID = query window SPID。  
@@ -69,7 +67,7 @@ ms.locfileid: "68186115"
  若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]执行跟踪，用户还必须拥有 ALTER TRACE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 事件探查器](sql-server-profiler.md)   
+ [SQL Server Profiler](sql-server-profiler.md)   
  [使用 SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)  
   
   

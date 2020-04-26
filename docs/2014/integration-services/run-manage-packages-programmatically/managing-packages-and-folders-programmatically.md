@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6ede05e340cbd2822cd72ceee514f6ce31a2755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766849"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>以编程方式管理包和文件夹
   以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，您可能希望确定个别包或文件夹是否存在，或管理用于存储包的文件夹。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。  
   
-##  <a name="exists"></a>确定包或文件夹是否存在  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a>确定包或文件夹是否存在  
  若要以编程方式确定已保存的包是否存在，请先调用以下方法之一，然后尝试加载和运行该包：  
   
 |存储位置|调用的方法|  
@@ -41,10 +41,10 @@ ms.locfileid: "62766849"
   
 
   
-##  <a name="managing"></a>管理包和文件夹  
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a>管理包和文件夹  
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供其他用于管理包和存储包的文件夹的方法。  
   
-###  <a name="managing_rempkg"></a>删除包  
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a>删除包  
  若要以编程方式删除已保存的包，请调用以下方法之一：  
   
 |存储位置|调用的方法|  
@@ -54,7 +54,7 @@ ms.locfileid: "62766849"
   
 
   
-###  <a name="managing_create"></a>创建文件夹  
+###  <a name="creating-a-folder"></a><a name="managing_create"></a>创建文件夹  
  若要以编程方式创建存储文件夹，请调用以下方法之一：  
   
 |存储位置|调用的方法|  
@@ -64,7 +64,7 @@ ms.locfileid: "62766849"
   
 
   
-###  <a name="managing_remfldr"></a>删除文件夹  
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a>删除文件夹  
  若要以编程方式删除存储文件夹，请调用以下方法之一：  
   
 |存储位置|调用的方法|  
@@ -74,7 +74,7 @@ ms.locfileid: "62766849"
   
   
   
-###  <a name="managing_rename"></a>重命名文件夹  
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a>重命名文件夹  
  若要以编程方式重命名存储文件夹，请调用以下方法之一：  
   
 |存储位置|调用的方法|  
@@ -87,7 +87,7 @@ ms.locfileid: "62766849"
 ![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>另请参阅  
- [包管理（SSIS 服务）](../service/package-management-ssis-service.md)   
+ [包管理 &#40;SSIS 服务&#41;](../service/package-management-ssis-service.md)   
  [以编程方式枚举可用的包](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
   
   

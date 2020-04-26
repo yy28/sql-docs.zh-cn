@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067853"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>“表属性”对话框（SSAS - 表格）
@@ -29,8 +29,8 @@ ms.locfileid: "66067853"
 |术语|定义|  
 |----------|----------------|  
 |**名称**|显示表的名称。|  
-|**识别**|显示表的标识符。|  
-|**说明**|显示表的说明。|  
+|**ID**|显示表的标识符。|  
+|**描述**|显示表的说明。|  
 |**创建时间戳**|显示表的创建日期和时间。|  
 |**上次架构更新时间**|显示表的元数据的上次更新日期和时间。|  
 |**状态**|显示表的处理状态。 有关此属性的值的详细信息，请参阅 <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>。|  

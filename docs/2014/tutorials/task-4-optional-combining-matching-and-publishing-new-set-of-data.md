@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489274"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>任务 4（可选）：组合、匹配和发布新数据集
@@ -78,7 +78,7 @@ ms.locfileid: "65489274"
   
 22. 将工作表列映射到域，如下表中所示。  
   
-    |工作表列|域|  
+    |工作表列|Domain|  
     |----------------------|------------|  
     |Code（您上载了 Supplier ID 作为 MDS 中 Supplier 实体的代码）|Supplier ID|  
     |Name（您上载了 Supplier Name 作为 MDS 中 Supplier 实体的名称）|Supplier Name|  
@@ -88,7 +88,7 @@ ms.locfileid: "65489274"
   
 24. 输入**70%** 作为**供应商名称**的**权重**，输入**30%** 作为**联系电子邮件****的权重**，如图所示。  
   
-25. 单击“确定”。   
+25. 单击" **确定**"。  
   
 26. 匹配过程应为供应商标识一个重复项，**代码为： S1**。  
   

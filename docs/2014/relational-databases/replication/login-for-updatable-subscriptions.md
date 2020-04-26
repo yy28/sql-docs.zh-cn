@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63058090"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
@@ -42,19 +42,19 @@ ms.locfileid: "63058090"
  **登录**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]输入仅具有本主题中所述权限的登录名。  
   
- **权限**  
+ **密码**  
  为 **“登录名”** 中指定的登录名输入一个强密码。  
   
  **确认密码**  
  重新输入密码以确认密码输入正确。  
   
- **使用已定义的链接服务器或远程服务器。**  
+ **使用您指定的链接服务器或远程服务器。**  
  此选项需要使用您所定义的链接服务器或远程服务器。 有关详细信息，请参阅[链接服务器（数据库引擎）](../linked-servers/linked-servers-database-engine.md)和[远程服务器](../../database-engine/configure-windows/remote-servers.md)。 请确保用于链接服务器或远程服务器的登录名具有强密码，并且仅具有本主题中描述的权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [查看和修改复制安全设置](security/view-and-modify-replication-security-settings.md)   
  [事务复制的可更新订阅](transactional/updatable-subscriptions-for-transactional-replication.md)   
- [订阅发布](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

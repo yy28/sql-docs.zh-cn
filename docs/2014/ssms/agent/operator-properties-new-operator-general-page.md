@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211341"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>操作员属性和新建操作员（“常规”页）
@@ -26,7 +26,7 @@ ms.locfileid: "68211341"
  **名称**  
  更改操作员的名称。  
   
- **已启用**  
+ **Enabled**  
  启用操作员。 在未启用时，不会向操作员发送通知。  
   
  **电子邮件名称**  

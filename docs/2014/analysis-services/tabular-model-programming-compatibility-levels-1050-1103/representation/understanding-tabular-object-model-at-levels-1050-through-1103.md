@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62795338"
 ---
 # <a name="understanding-the-tabular-object-model"></a>了解表格对象模型
@@ -46,8 +46,7 @@ ms.locfileid: "62795338"
  计算度量值是在部署模型后根据请求计算的存储表达式。 就 AMO 对象而言，计算度量值具有一对多映射关系。 通过使用以下 AMO 对象来表示计算列：<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> 和 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 是主要的必需对象。 请注意，这并不意味着前面提到的 AMO 对象中的所有包含对象可在建模时使用。  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.AnalysisServices.Measure> 对象与表格模型中的计算度量值无关，在表格模型中不支持这些对象。  
+>  <xref:Microsoft.AnalysisServices.Measure> 对象与表格模型中的计算度量值无关，在表格模型中不支持这些对象。  
   
  有关如何创建和操作计算度量值表示形式的详细说明，请参阅[&#40;表格&#41;的计算度量值表示形式](tables-calculated-measure-representation.md)。  
   

@@ -11,19 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224600"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>浏览决策树模型（数据挖掘基础教程）
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树算法预测哪些列影响基于定型集中的其余列做出的自行车购买决策。  
   
 
   
-##  <a name="Decision_Tree_Tab"></a>决策树选项卡  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>决策树选项卡  
  在 "**决策树**" 选项卡上，可以查看数据集中每个可预测属性的决策树。  
   
  在这种情况下，模型只预测一列（自行车购买者），因此只有一个要查看的树。 如果有更多的树，可以使用**树**框选择另一个树。  
@@ -77,7 +76,7 @@ ms.locfileid: "63224600"
      将显示同一个电子表格，并在末尾处附加结构列。  
   
   
-###  <a name="Dependency_Network_Tab"></a>依赖关系网络选项卡  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>依赖关系网络选项卡  
  "**依赖关系网络**" 选项卡显示构成挖掘模型预测能力的属性之间的关系。 依赖关系网络查看器进一步证实了我们的发现：年龄和地区是预测自行车购买行为的重要因素。  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>在“依赖关系网络”选项卡中浏览模型  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63315080"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>探索呼叫中心模型（数据挖掘中级教程）
@@ -24,7 +24,7 @@ ms.locfileid: "63315080"
   
 -   [Microsoft 一般内容树查看器](#bkmk_genviewer) **：** 此标准查看器提供有关算法在生成模型时所发现的模式和统计信息的详细信息。  
   
-##  <a name="bkmk_NNviewer"></a>Microsoft 神经网络查看器  
+##  <a name="microsoft-neural-network-viewer"></a><a name="bkmk_NNviewer"></a>Microsoft 神经网络查看器  
  查看器有三个窗格-**输入**、**输出**和**变量**。  
   
  通过使用 "**输出**" 窗格，可以为可预测属性或依赖变量选择不同的值。 如果模型包含多个可预测属性，则可以从 "**输出属性**" 列表中选择属性。  
@@ -107,14 +107,14 @@ ms.locfileid: "63315080"
   
  但是，当您向下查看相关因素的列表时，会发现一些其他因素产生的影响更微妙、更难于解释。 例如，班次似乎影响服务，但提升分数和相关概率指示班次不是主要因素。  
   
-|Attribute|值|优先\< 0.07|优先 >= 0.12|  
+|属性|值|优先\< 0.07|优先 >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
 |Average Time Per Issue|89.087-120.000||分数：100<br /><br /> Value1 的概率：4.45%<br /><br /> Value2 的概率：51.94%<br /><br /> 用于 Value1：0.19 的提升<br /><br /> Value2 的提升：1.94|  
 |Average Time Per Issue|44.000-70.597|分数：92.35<br /><br /> Value1 的概率：60.06%<br /><br /> Value2 的概率：8.30%<br /><br /> Value1 的提升：2.61<br /><br /> Value2 的提升：0.31||  
   
  [返回页首](#bkmk_NNviewer)  
   
-##  <a name="bkmk_genviewer"></a>Microsoft 一般内容树查看器  
+##  <a name="microsoft-generic-content-tree-viewer"></a><a name="bkmk_genviewer"></a>Microsoft 一般内容树查看器  
  通过使用该查看器，您可以查看在处理模型时算法创建的更多详细信息。 **MicrosoftGeneric 内容树查看器**将挖掘模型表示为一系列节点，其中每个节点表示有关定型数据的已知知识。 该查看器可用于所有模型，但节点内容根据模型类型而不同。  
   
  对于神经网络模型或逻辑回归模型，您会发现 `marginal statistics node` 特别有用。 该节点包含有关数据中值分布的派生统计信息。 如果希望获取数据摘要而无需编写许多 T-SQL 查询，该信息会很有用。 前一主题中装箱值的图表派生自边际统计信息节点。  

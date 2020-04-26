@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250369"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用仅下载项目优化合并复制的性能
@@ -47,7 +47,7 @@ ms.locfileid: "63250369"
  通过了解应用程序的要求，可以在最大灵活性和最佳性能之间找到平衡点。 例如，在发布服务器和订阅服务器上都存在大量冲突和更改的应用程序将使用由标准项目组成的发布。 有些应用程序（如销售人员自动化应用程序）可能包含存在潜在冲突的项目以及作为查找表的其他项目，这些项目可以指定为仅下载项目。 数据输入应用程序（如销售点系统和现场人员自动化应用程序）通常以消除冲突的方式对数据进行严格的分区，使一个订阅服务器上的数据永远不会到另一个订阅服务器上。 在这些情况下，不重叠的分区、仅下载项目和预计算分区的组合可以提供最好的性能和最大的伸缩性。 有关不重叠分区和预计算分区的详细信息，请参阅 [参数化行筛选器](parameterized-filters-parameterized-row-filters.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [合并复制的项目选项](article-options-for-merge-replication.md)   
- [使用条件性删除跟踪优化合并复制性能](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
+ [用于合并复制的项目选项](article-options-for-merge-replication.md)   
+ [用条件性删除跟踪优化合并复制的性能](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638739"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 扩展事件包
@@ -70,7 +70,7 @@ ms.locfileid: "62638739"
 #### <a name="event-categorization"></a>事件分类  
  扩展事件使用与 Windows 事件跟踪 (ETW) 类似的事件分类模型。 两个事件属性将用于分类、通道和关键字。 使用这些属性可支持将扩展事件与 ETW 及其工具进行集成。  
   
- **Channel**  
+ **通道**  
   
  通道用于标识事件的用户。 下表对这些通道进行了说明。  
   
@@ -147,7 +147,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   type  
+-   类型  
   
  有关详细信息，请参阅 [sys.dm_xe_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)。  
   
@@ -214,7 +214,7 @@ where name = 'lock_mode'
  以此表为例，假定有一名为模式的列，且其值为 5。 此表指示 5 映射到 X，即表示锁类型为排他。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
+ [SQL Server 扩展事件会话](sql-server-extended-events-sessions.md)   
  [SQL Server 扩展事件引擎](sql-server-extended-events-engine.md)   
  [SQL Server 扩展事件目标](../../database-engine/sql-server-extended-events-targets.md)  
   

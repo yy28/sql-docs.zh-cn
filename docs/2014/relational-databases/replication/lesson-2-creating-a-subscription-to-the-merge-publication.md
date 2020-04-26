@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721027"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 课：创建合并发布订阅
@@ -58,7 +58,7 @@ ms.locfileid: "62721027"
   
 ### <a name="to-create-the-filtered-data-snapshot-for-the-subscription"></a>创建订阅的筛选数据快照  
   
-1.  连接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器，展开服务器节点，然后展开 "**复制**" 文件夹。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”**** 文件夹。  
   
 2.  在“本地发布”**** 文件夹中，右键单击“AdvWorksSalesOrdersMerge”**** 发布，然后单击“属性”****。  
   
@@ -76,6 +76,6 @@ ms.locfileid: "62721027"
 ## <a name="see-also"></a>另请参阅  
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [带有参数化筛选器的合并发布的快照](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

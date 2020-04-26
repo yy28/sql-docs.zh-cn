@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62931629"
 ---
 # <a name="choose-a-resolver"></a>选择冲突解决程序
@@ -34,7 +34,7 @@ ms.locfileid: "62931629"
   
 |冲突解决问题|建议|  
 |-------------------------------|--------------------|  
-|不同类别的用户要求不同的优先级值。|使用默认冲突解决程序并创建具有不同优先级值的服务器订阅。<br /><br /> -或-<br /><br /> 使用可以识别项目中授权值列的项目冲突解决程序帮助解决冲突。|  
+|不同类别的用户要求不同的优先级值。|使用默认冲突解决程序并创建具有不同优先级值的服务器订阅。<br /><br /> -或者-<br /><br /> 使用可以识别项目中授权值列的项目冲突解决程序帮助解决冲突。|  
 |要求首次更改入选冲突解决方案。|使用默认冲突解决程序并创建客户端订阅。|  
 |允许多个用户更改同一数据行，条件是不对同一列进行有冲突的更改。|使用启用了列级跟踪的默认冲突解决程序或项目冲突解决程序。|  
 |将对行内任意值的多次更改标记为冲突。|使用具有行级跟踪的默认冲突解决程序或项目冲突解决程序。|  

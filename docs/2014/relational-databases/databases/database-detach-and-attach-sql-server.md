@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762418"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
@@ -41,13 +41,13 @@ ms.locfileid: "62762418"
   
   
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
  文件访问权限可在很多数据库操作过程中设置，其中包括分离或附加数据库。  
   
 > [!IMPORTANT]  
->  建议您不要附加或还原来自未知或不可信源的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用未知或不受信任的源中的数据库之前，请在非生产服务器上的数据库上运行[DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) ，并检查数据库中的代码，例如存储过程或其他用户定义的代码。  
+>  建议您不要附加或还原来自未知或不可信源的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
   
-##  <a name="DetachDb"></a>分离数据库  
+##  <a name="detaching-a-database"></a><a name="DetachDb"></a> 分离数据库  
  分离数据库是指将数据库从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除，但使数据库在其数据文件和事务日志文件中保持不变。 之后，就可以使用这些文件将数据库附加到任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，包括分离该数据库的服务器。  
   
  如果存在下列任何情况，则不能分离数据库：  
@@ -59,7 +59,7 @@ ms.locfileid: "62762418"
   
 -   数据库中存在数据库快照。  
   
-     必须首先删除所有数据库快照，然后才能分离数据库。 有关详细信息，请参阅 [Drop a Database Snapshot &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
+     必须首先删除所有数据库快照，然后才能分离数据库。 有关详细信息，请参阅 [删除数据库快照 (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)实例。  
   
     > [!NOTE]  
     >  不能分离或附加数据库快照。  
@@ -84,7 +84,7 @@ ms.locfileid: "62762418"
   
 3.  再次分离数据库。  
   
-##  <a name="AttachDb"></a>附加数据库  
+##  <a name="attaching-a-database"></a><a name="AttachDb"></a> 附加数据库  
  您可以附加复制的或分离的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 附加[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]服务器实例时，会将目录文件从其以前的位置与其他数据库文件一起附加，这与中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]相同。 有关详细信息，请参阅 [全文搜索升级](../search/upgrade-full-text-search.md)。  
   
  附加数据库时，所有数据文件（MDF 文件和 NDF 文件）都必须可用。 如果任何数据文件的路径不同于首次创建数据库或上次附加数据库时的路径，则必须指定文件的当前路径。  
@@ -104,22 +104,22 @@ ms.locfileid: "62762418"
   
   
   
-###  <a name="Metadata"></a>附加数据库时的元数据更改  
- 分离再重新附加只读数据库后，会丢失有关当前差异基准的备份信息。 “差异基准” ** 是数据库或其文件或文件组子集中所有数据的最新完整备份。 如果没有基准备份信息， **master** 数据库会变得与只读数据库不同步，这样之后进行的差异备份可能会产生意外结果。 因此，如果对只读数据库使用差异备份，在重新附加数据库后，应通过进行完整备份来建立新的差异基准。 有关差异备份的信息，请参阅[差异备份 (SQL Server)](../backup-restore/differential-backups-sql-server.md)。  
+###  <a name="metadata-changes-on-attaching-a-database"></a><a name="Metadata"></a> 附加数据库时的元数据更改  
+ 分离再重新附加只读数据库后，会丢失有关当前差异基准的备份信息。 “差异基准”  是数据库或其文件或文件组子集中所有数据的最新完整备份。 如果没有基准备份信息， **master** 数据库会变得与只读数据库不同步，这样之后进行的差异备份可能会产生意外结果。 因此，如果对只读数据库使用差异备份，在重新附加数据库后，应通过进行完整备份来建立新的差异基准。 有关差异备份的信息，请参阅[差异备份 (SQL Server)](../backup-restore/differential-backups-sql-server.md)。  
   
  附加时，数据库会启动。 通常，附加数据库时会将数据库重置为它分离或复制时的状态。 但是，附加和分离操作都会禁用数据库的跨数据库所有权链接。 有关如何启用链接的详细信息，请参阅 [cross db ownership chaining 服务器配置选项](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 此外，附加数据库时，TRUSTWORTHY 均设置为 OFF。 有关如何将 TRUSTWORTHY 设置为 ON 的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  
   
 ### <a name="backup-and-restore-and-attach"></a>备份、还原及附加  
  与任何完全或部分脱机的数据库一样，不能附加正在还原文件的数据库。 如果停止了还原顺序，则可以附加数据库。 然后，可以重新启动还原顺序。  
   
-###  <a name="OtherServerInstance"></a> 将数据库附加到其他服务器实例  
+###  <a name="attaching-a-database-to-another-server-instance"></a><a name="OtherServerInstance"></a> 将数据库附加到其他服务器实例  
   
 > [!IMPORTANT]  
 >  无法在早期版本的 SQL Server 中附加由较新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建的数据库。  
   
- 将数据库附加到其他服务器实例时，为了给用户和应用程序提供一致的体验，您最好在其他服务器实例上为数据库重新创建部分或全部元数据（例如登录名和作业）。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](manage-metadata-when-making-a-database-available-on-another-server.md)。  
+ 将数据库附加到其他服务器实例时，为了给用户和应用程序提供一致的体验，您最好在其他服务器实例上为数据库重新创建部分或全部元数据（例如登录名和作业）。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **分离数据库**  
   
 -   [sp_detach_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
@@ -132,17 +132,17 @@ ms.locfileid: "62762418"
   
 -   [附加数据库](attach-a-database.md)  
   
--   [sp_attach_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
+-   [sp_attach_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
   
--   [sp_attach_single_file_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
+-   [sp_attach_single_file_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
   
  **使用分离和附加操作升级数据库**  
   
--   [使用分离和附加 &#40;Transact-sql&#41;升级数据库](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
+-   [使用分离和附加来升级数据库 (Transact-SQL)](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
   
  **使用分离和附加操作移动数据库**  
   
--   [使用分离和附加 &#40;Transact-sql&#41;移动数据库](move-a-database-using-detach-and-attach-transact-sql.md)  
+-   [使用分离和附加来移动数据库 (Transact-SQL)](move-a-database-using-detach-and-attach-transact-sql.md)  
   
  **删除数据库快照**  
   

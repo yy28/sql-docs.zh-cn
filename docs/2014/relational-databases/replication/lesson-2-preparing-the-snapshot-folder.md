@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721022"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>第 2 课：准备快照文件夹
@@ -34,11 +34,11 @@ ms.locfileid: "62721022"
   
 5.  在“文件共享”**** 对话框中，单击“共享”****，再单击“完成”****。  
   
-6.  在 **“安全性”** 选项卡上，单击 **“编辑”**。  
+6.  在 **“安全性”** 选项卡上，单击 **“编辑”** 。  
   
-7.  在“权限”**** 对话框中，单击“添加”****。 在 "**选择用户、计算机、服务帐户或组**" 文本框中，键入在第1课中创建的快照代理帐户的名称，如\< _Machine_Name>_ **\ repl_snapshot**， \<其中*Machine_Name>* 是发布服务器的名称。 单击“检查名称”****，然后单击“确定”****。  
+7.  在“权限”**** 对话框中，单击“添加”****。 在“选择用户、计算机、服务帐户或组”**** 文本框中，键入在第 1 课中创建的快照代理帐户的名称，例如 \<_Machine_Name>_**\repl_snapshot**，其中 \<*Machine_Name>* 是发布服务器的名称。 单击“检查名称”****，然后单击“确定”****。  
   
-8.  重复前面的\<步骤，以将分发代理的权限添加到_Machine_Name>_ **\ repl_distribution**，并将合并代理\< _Machine_Name>_ **\**repl_merge。  
+8.  重复上一步为分发代理和合并代理添加权限，其格式分别为 \<_Machine_Name>_**\repl_distribution** 和 \<_Machine_Name>_**\repl_merge**。  
   
 9. 验证是否允许以下权限：  
   

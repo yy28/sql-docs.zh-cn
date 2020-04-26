@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721370"
 ---
 # <a name="distribution-database"></a>分发数据库
@@ -26,9 +26,9 @@ ms.locfileid: "62721370"
   
 ## <a name="options"></a>选项  
  **分发数据库名称**  
- 为分发数据库输入名称。 分发数据库的默认名称为“distribution”。 如果指定名称，则该名称最多可为128个字符，在实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中必须唯一，并且必须符合标识符规则。 有关详细信息，请参阅 [Database Identifiers](../databases/database-identifiers.md)。  
+ 为分发数据库输入名称。 分发数据库的默认名称为“distribution”。 如果指定名称，名称最多可包含 128 个字符，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中必须是唯一的，并且必须符合标识符的规则。 有关详细信息，请参阅 [Database Identifiers](../databases/database-identifiers.md)。  
   
- 分发数据库**文件的文件夹**和**分发数据库日志文件的文件夹**  
+ **分发数据库文件的文件夹** / **分发数据库日志文件的文件夹**  
  输入分发数据库和日志文件的路径。 这些路径必须指向分发服务器的本地磁盘，并以本地驱动器号和冒号（如 C：）开头。 映射的驱动器号和网络路径无效。  
   
 > [!NOTE]  

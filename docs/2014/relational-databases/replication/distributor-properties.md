@@ -16,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721404"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>SQL Server 复制分发服务器属性
 本主题讨论 "**分发服务器属性**" 窗口中的 "**常规**"、"**发布服务器**" 和 "**分发数据库**" 页上的属性。 
 
 ## <a name="general"></a>常规
-  通过 "**分发服务器属性**" 对话框的 "**常规**" 页，可以添加和删除分发数据库，以及设置分发数据库属性。  
+  使用“分发服务器属性”**** 对话框的“常规”**** 页，可以添加和删除分发数据库，以及设置分发数据库属性。  
   
  分发数据库用于存储所有类型复制的元数据和历史记录数据，并存储事务复制的事务。 在许多情况下，单个分发数据库就能够满足需要。 不过，如果多个发布服务器使用单个分发服务器，则应考虑为每个发布服务器都创建一个分发数据库。 这样可确保通过每个分发数据库的数据流是不同的。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62721404"
  选择允许使用此分发服务器的服务器。 单击发布服务器旁边的属性按钮 **(...)** 可以查看和设置其他属性。  
   
  **添加**  
- 如果希望允许的服务器没有列出，请单击 **“添加”** 向可用发布服务器列表中添加一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器或 Oracle 发布服务器。 如果添加的服务器是使用此分发服务器作为远程分发服务器的第一个服务器，则系统将会提示您提供管理链接密码。  
+ 如果希望允许的服务器没有列出，请单击“添加”向可用发布服务器列表中添加 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器或 Oracle 发布服务器****。 如果添加的服务器是使用此分发服务器作为远程分发服务器的第一个服务器，则系统将会提示您提供管理链接密码。  
   
  **管理链接密码**  
  对于使用 **distributor_admin** 登录名在发布服务器和远程分发服务器之间进行的连接复制，使用此选项可以为其指定或更新密码：  
@@ -66,7 +66,7 @@ ms.locfileid: "62721404"
  有关分发服务器的安全性的详细信息，请参阅[保护分发服务器](security/secure-the-distributor.md)。  
 
 ## <a name="distribution-database"></a>分发数据库
- 您可以使用 "**分发数据库属性**" 对话框查看多个属性，以及为数据库设置事务保持期和历史记录保持期。  
+ 可使用“分发数据库属性”对话框查看数据库的多个属性，以及为数据库设置事务保持期和历史记录保持期****。  
   
 ### <a name="options"></a>选项  
  **名称**  
@@ -94,7 +94,7 @@ ms.locfileid: "62721404"
 
   
 ## <a name="see-also"></a>另请参阅  
- [“配置分发”](configure-distribution.md)   
+ [配置分发](configure-distribution.md)   
  [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)   
 
   

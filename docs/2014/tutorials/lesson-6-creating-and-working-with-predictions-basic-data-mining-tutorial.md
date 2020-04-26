@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185393"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>第 6 课：创建和使用预测（数据挖掘基础教程）
@@ -26,7 +26,7 @@ ms.locfileid: "63185393"
   
  本课程包含以下主题：  
   
- [&#40;数据挖掘基础教程创建预测&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [创建预测（数据挖掘基础教程）](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [对结构数据使用钻取 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63185393"
  [第5课：测试模型 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [&#40;数据挖掘基础教程创建预测&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [创建预测（数据挖掘基础教程）](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Analysis Services 数据挖掘的决策树模型的挖掘模型内容&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   

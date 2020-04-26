@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704617"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>新建作业计划：作业计划属性
@@ -33,17 +33,17 @@ ms.locfileid: "62704617"
  **计划类型**  
  选择计划的类型。  
   
- **已启用**  
+ **Enabled**  
  选中此项可以启用或禁用该计划。  
   
 ## <a name="recurring-schedule-types-options"></a>重复执行计划类型选项  
- **时发生**  
+ **执行**  
  选择重复执行计划的间隔。  
   
- **重复间隔**  
+ **执行间隔**  
  选择重复执行计划的间隔天数或星期数。 此选项对于每月重复执行计划不可用。  
   
- **即**  
+ **星期一**  
  设置作业在特定的星期一发生。 只用于每周重复执行计划。  
   
  **星期二**  
@@ -52,7 +52,7 @@ ms.locfileid: "62704617"
  **星期三**  
  设置作业在特定的星期三发生。 只用于每周重复执行计划。  
   
- **星期四**  
+ **日**  
  设置作业在特定的星期四发生。 只用于每周重复执行计划。  
   
  **星期五**  
@@ -70,10 +70,10 @@ ms.locfileid: "62704617"
  **每**  
  选择两次计划间隔的月数。 只用于每月重复执行计划。  
   
- **这些**  
+ **必须向**  
  为某月内特定一周的特定一天指定计划。 只用于每月重复执行计划。  
   
- **发生一次，时间为**  
+ **执行一次，时间为**  
  设置每天执行作业的时间。  
   
  **执行间隔**  
@@ -89,7 +89,7 @@ ms.locfileid: "62704617"
  指定计划将无限期地保持有效。  
   
 ## <a name="one-time-schedule-types-options"></a>一次性计划类型选项  
- **Date**  
+ **日期**  
  选择作业的计划运行日期。  
   
  **时间**  
@@ -97,6 +97,6 @@ ms.locfileid: "62704617"
   
 ## <a name="see-also"></a>另请参阅  
  [创建计划并将计划附加到作业](create-and-attach-schedules-to-jobs.md)   
- [Schedule a Job](schedule-a-job.md)  
+ [安排作业计划](schedule-a-job.md)  
   
   

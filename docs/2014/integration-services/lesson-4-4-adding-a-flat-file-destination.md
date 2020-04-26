@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767369"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>步骤 4：添加平面文件目标
@@ -48,7 +48,7 @@ ms.locfileid: "62767369"
   
      注意，除了源数据文件中的列以外，还存在三个新列：ErrorCode、ErrorColumn 和 ErrorDescription。 这三列由 Lookup Currency Key 转换的错误输出和获取错误说明转换中的脚本生成，可用于排查失败行的原因。  
   
-12. 单击“确定”。   
+12. 单击" **确定**"。  
   
 13. 在“平面文件目标编辑器”**** 中，清除“覆盖文件中的数据”**** 复选框。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62767369"
   
 14. 在“平面文件目标编辑器”**** 中，单击“映射”**** 来验证所有列是否正确。 您也可以选择重命名目标中的列。  
   
-15. 单击“确定”。   
+15. 单击" **确定**"。  
   
 ## <a name="next-steps"></a>后续步骤  
  [步骤 5：测试第 4 课教程包](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  

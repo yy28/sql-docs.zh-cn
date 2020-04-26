@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767556"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>步骤 7：添加和配置 OLE DB 目标
@@ -24,7 +24,7 @@ ms.locfileid: "62767556"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>添加和配置示例 OLE DB 目标  
   
-1.  在**SSIS 工具箱**中，展开**其他目标**，并将**OLE DB 目标**拖动到**数据流**选项卡的设计图面上。 **Lookup Date Key**  
+1.  在 " **SSIS 工具箱**" 中，**展开 "** **其他目标**"，然后将**OLE DB "目标**" 拖动到 "数据流" 选项卡的设计图面上。将 OLE DB 目标直接放置在**Lookup Date Key**转换的下面。  
   
 2.  单击“查找日期键”**** 转换，并将绿色箭头拖到新添加的“OLE DB 目标”**** 上，以便将两个组件连接在一起。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62767556"
   
 7.  在“表或视图的名称”**** 框中，键入或选择 **[dbo].[FactCurrencyRate]**。  
   
-8.  单击“新建”**** 按钮以创建新表。  将脚本中表的名称更改为 **NewFactCurrencyRate**。  单击“确定”。   
+8.  单击“新建”**** 按钮以创建新表。  将脚本中表的名称更改为 **NewFactCurrencyRate**。  单击" **确定**"。  
   
 9. 单击“确定”**** 后，该对话框将关闭，“表或视图的名称”**** 将自动更改为 **NewFactCurrencyRate**。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "62767556"
   
 11. 验证 **AverageRate**、 **CurrencyKey**、 **EndOfDayRate**以及 **DateKey** 输入列是否已正确映射到目标列。 如果映射了同名列，则说明映射正确。  
   
-12. 单击“确定”。   
+12. 单击" **确定**"。  
   
 13. 右键单击 **Sample OLE DB Destination** 目标，再单击“属性”****。  
   
-14. `LocaleID`在"属性"窗口中，验证属性是否设置为**英语（美国），** 属性`DefaultCodePage`设置为**1252**。  
+14. 在属性窗口中，验证属性是否`LocaleID`设置为 "**英语（美国）** "，并`DefaultCodePage`将属性设置为**1252**。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 8：使 Lesson 1 包更易理解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

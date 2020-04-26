@@ -19,17 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185978"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
-  
   **tablediff** 实用工具用于比较两个非收敛表中的数据，它对于排除复制拓扑中的非收敛故障非常有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
   
--   在充当复制发布服务器的实例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的源表与[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]充当复制订阅服务器的一个或多个实例中的目标表之间进行逐行比较。  
+-   在充当复制发布服务器的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的源表与充当复制订阅服务器的一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的目标表之间进行逐行比较。  
   
 -   通过只比较行数和架构可以执行快速比较。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "68185978"
  **-destinationschema** *destination_schema_name*  
  目标表的架构所有者。 默认情况下，表所有者假定为 dbo。  
   
- **-destinationpassword (** *destination_password*  
+ **-destinationpassword** *destination_password*  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到目标服务器时所使用的登录帐户的密码。  
   
 > [!IMPORTANT]  
@@ -126,7 +125,7 @@ ms.locfileid: "68185978"
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定目标表。  
   
  **-b** *large_object_bytes*  
- 大型对象数据类型列中要比较的字节数，这些数据类型包括：`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。 *large_object_bytes*默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
+ 大型对象数据类型列中要比较的字节数，这些数据类型包括：`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
   
  **-bf**  *number_of_statements*  
  使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 选项时要写入到当前 **脚本文件中的** 语句数。 当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句数超过 *number_of_statements*时，将创建一个新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
@@ -178,9 +177,8 @@ ms.locfileid: "68185978"
   
 |源数据类型|目标数据类型|  
 |----------------------|---------------------------|  
-|`tinyint`|
-  `smallint`、`int` 或 `bigint`|  
-|`smallint`|`int`或`bigint`|  
+|`tinyint`|`smallint`、`int` 或 `bigint`|  
+|`smallint`|`int` 或 `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -222,6 +220,6 @@ ms.locfileid: "68185978"
  若要使用 **-o** 或 **-f** 选项，必须对指定的文件目录位置拥有写入权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [比较复制的表 &#40;复制编程的差异&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
+ [比较所复制表的差异（复制编程）](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

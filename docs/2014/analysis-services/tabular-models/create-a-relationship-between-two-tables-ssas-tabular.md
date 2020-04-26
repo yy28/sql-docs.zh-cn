@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067541"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>创建两个表之间的关系（SSAS 表格）
@@ -49,7 +49,7 @@ ms.locfileid: "66067541"
   
 6.  对于 **“相关查找列”**，选择一列，此列具有与您为 **“列”** 选择的列中值匹配的唯一值。  
   
-7.  单击 **“创建”**。  
+7.  单击 **“创建”** 。  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>在数据视图中创建两个表之间的关系  
   
@@ -67,10 +67,10 @@ ms.locfileid: "66067541"
   
 5.  对于 **“相关查找列”**，选择一列，此列具有与您为 **“列”** 选择的列中值匹配的唯一值。  
   
-6.  单击 **“创建”**。  
+6.  单击 **“创建”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;中删除关系](delete-relationships-ssas-tabular.md)   
- [SSAS 表格&#41;&#40;关系](relationships-ssas-tabular.md)  
+ [关系（SSAS 表格）](relationships-ssas-tabular.md)  
   
   

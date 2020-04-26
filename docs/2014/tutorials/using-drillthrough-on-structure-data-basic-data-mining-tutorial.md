@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745538"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>对结构数据使用钻取（数据挖掘基础教程）
@@ -24,7 +24,7 @@ ms.locfileid: "62745538"
   
 1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的数据挖掘设计器的 "**挖掘模型**" 选项卡上，右键单击**TM_Decision_Tree**模型，然后选择 "**属性**"。  
   
-2.  在 “属性” 窗口中，单击 **AllowDrillthrough**，再选择 **True**。  
+2.  在“属性”窗口中，单击 **AllowDrillthrough**，再选择 **True**。  
   
 3.  在“挖掘模型”选项卡中，右键单击所需的模型，再选择“处理模型”****。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62745538"
  恭喜您！您已经完成了数据挖掘基础教程。 既然您已经熟练掌握了数据挖掘工具，我们建议您同时完成数据挖掘中级教程，中级教程将演示如何创建用于预测、市场篮分析以及顺序分析和聚类分析的模型。  
   
 ## <a name="previous-task-in-lesson"></a>课程中的前一个任务  
- [&#40;数据挖掘基础教程创建预测&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [创建预测（数据挖掘基础教程）](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [使用预测查询生成器创建预测查询](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

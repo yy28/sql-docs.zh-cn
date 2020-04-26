@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185424"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>第 5 课：测试模型（数据挖掘基础教程）
@@ -26,7 +26,7 @@ ms.locfileid: "63185424"
   
 1.  您将针对测试集进行预测，以查看模型对已知结果的准确程度。 你将使用*提升图*来度量其有效性。  
   
-     [利用提升图测试准确性 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+     [测试提升图的准确性（数据挖掘基础教程）](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 2.  您将针对筛选的数据子集来测试模型。 您可以在同一提升图中比较多个模型。  
   
@@ -35,19 +35,19 @@ ms.locfileid: "63185424"
  有关模型验证一般情况的详细信息，请参阅[数据挖掘概念](../../2014/analysis-services/data-mining/data-mining-concepts.md)。  
   
 ## <a name="first-task-in-lesson"></a>课程中的第一个任务  
- [利用提升图测试准确性 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [测试提升图的准确性（数据挖掘基础教程）](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>前一课  
  [第4课：浏览目标邮件模型 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一课  
- [第6课：创建和使用预测 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [第 6 课：创建和使用预测（数据挖掘基础教程）](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
  ["提升图" 选项卡 &#40;挖掘准确性图表视图&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
  [Analysis Services &#40;提升图表&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [测试和验证 &#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
  ["分类矩阵" 选项卡 &#40;挖掘准确性图表视图&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
- [分类矩阵 &#40;Analysis Services 数据挖掘&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [分类矩阵（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

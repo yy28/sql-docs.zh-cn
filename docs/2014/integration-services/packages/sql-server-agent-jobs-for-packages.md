@@ -16,27 +16,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767169"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
-  你可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理自动执行和计划包的执行。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
+  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以自动化和计划 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的执行。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
   
 ## <a name="sections-in-this-topic"></a>本主题的内容  
  本主题包含以下各节：  
   
--   [SQL Server 代理中的计划作业](#jobs)  
+-   [在 SQL Server 代理中计划作业](#jobs)  
   
 -   [计划 Integration Services 包](#packages)  
   
 -   [对计划的包进行故障排除](#trouble)  
   
-##  <a name="jobs"></a>SQL Server 代理中的计划作业  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理是安装的服务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，它使你能够通过运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业来自动执行和计划任务。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须处于运行状态，作业才能自动运行。 有关详细信息，请参阅 [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)。  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a>SQL Server 代理中的计划作业  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的服务，使您能够通过运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业自动执行任务和计划任务的执行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须处于运行状态，作业才能自动运行。 有关详细信息，请参阅 [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)。  
   
  在您连接到 **的实例时，** “SQL Server 代理” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 节点将出现在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的对象资源管理器中。  
   
@@ -48,20 +47,19 @@ ms.locfileid: "62767169"
   
  可以通过设置通知选项来增强作业，如指定在作业完成时向某个操作员发送电子邮件或添加警报。 有关详细信息，请参阅 [“警报”](../../ssms/agent/alerts.md)。  
   
-##  <a name="packages"></a>计划 Integration Services 包  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  在您创建一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以便计划 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包后，必须至少添加一个步骤，并将该步骤的类型设置为 **“SQL Server Integration Services 包”**。 一个作业可以包括多个步骤，并且每个步骤可以运行不同的包。  
   
- 从作业步骤中运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包类似于使用 **dtexec**(dtexec.exe) 和 **DTExecUI**(dtexecui.exe) 实用工具运行包。 可以在“新建作业步骤”**** 对话框中设置运行时选项，而不是使用命令行选项或“执行包实用工具”**** 对话框来设置包的运行时选项。 有关运行包的选项的详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。  
+ 从作业步骤中运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包类似于使用 **dtexec** (dtexec.exe) 和 **DTExecUI** (dtexecui.exe) 实用工具运行包。 可以在“新建作业步骤”**** 对话框中设置运行时选项，而不是使用命令行选项或“执行包实用工具”**** 对话框来设置包的运行时选项。 有关运行包的选项的详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。  
   
  有关详细信息，请参阅 [使用 SQL Server 代理计划包](../schedule-a-package-by-using-sql-server-agent.md)。  
   
  有关演示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行包的视频，请参阅 MSDN 库中的视频主页 [如何使用 SQL Server 代理自动执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141771)。  
   
-##  <a name="trouble"></a>有关  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤可能无法启动某个包，即便该包可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及从命令行成功运行。 该问题有一些常见的原因和一些推荐的解决方法。 有关详细信息，请参阅以下资源。  
+##  <a name="troubleshooting"></a><a name="trouble"></a>有关  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤可能无法启动某个包，即便该包可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及从命令行成功运行。 该问题有一些常见的原因和一些推荐的解决方法。 有关详细信息，请参阅以下资源。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)]知识库文章，[从 SQL Server 代理作业步骤调用 ssis 包时 ssis 包不运行](https://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章： [当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)  
   
 -   视频，[故障排除：使用 SQL Server 代理（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141772)在 MSDN Library 中执行包。  
   
@@ -95,8 +93,7 @@ ms.locfileid: "62767169"
   
 ## <a name="external-resources"></a>外部资源  
   
--   
-  [网站上的知识库文章：](https://support.microsoft.com/kb/918760)当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+-   [网站上的知识库文章：](https://support.microsoft.com/kb/918760)当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
 -   MSDN 库中的视频 [故障排除：使用 SQL Server 代理执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141772)  
   

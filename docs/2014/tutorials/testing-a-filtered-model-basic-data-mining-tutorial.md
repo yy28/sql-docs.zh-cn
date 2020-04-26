@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044062"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>测试筛选后的模型（数据挖掘基础教程）
@@ -37,7 +37,7 @@ ms.locfileid: "63044062"
   
 4.  在 "**模型名称**" 字段中`TM_Decision_Tree_Male`，键入。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
  然后为模型创建一个筛选器，用于根据客户的性别选择客户。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63044062"
   
 1.  右键单击`TM_Decision_Tree_Male`挖掘模型以打开快捷菜单。  
   
-     \- 或 -  
+     - 或 -  
   
      选择该模型。 在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
   
@@ -83,11 +83,11 @@ ms.locfileid: "63044062"
      你现在可以在 "**挖掘模型**" 选项卡中显示两个新模型。  
   
 ## <a name="evaluate-the-results"></a>评估结果  
- 查看结果并评估筛选后的模型的准确性，与您对前三个模型的操作非常相似。 有关详细信息，请参阅：  
+ 查看结果并评估筛选后的模型的准确性，与您对前三个模型的操作非常相似。 有关详细信息，请参见:  
   
  [浏览决策树模型 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [利用提升图测试准确性 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [测试提升图的准确性（数据挖掘基础教程）](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>浏览筛选后的模型  
   
@@ -129,15 +129,15 @@ ms.locfileid: "63044062"
  有关如何将筛选器应用于嵌套表的示例，请参阅[数据挖掘的中间教程 &#40;Analysis Services 数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)。  
   
 ## <a name="previous-task-in-lesson"></a>课程中的前一个任务  
- [利用提升图测试准确性 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [测试提升图的准确性（数据挖掘基础教程）](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一课  
- [第6课：创建和使用预测 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [第 6 课：创建和使用预测（数据挖掘基础教程）](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [中级数据挖掘教程 &#40;Analysis Services 数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [挖掘模型的筛选器 &#40;Analysis Services 数据挖掘&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

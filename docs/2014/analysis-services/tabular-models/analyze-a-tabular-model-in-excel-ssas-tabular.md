@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17d2b9fee3c4e733ed46f9b975e69f84f05b93f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067762"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>在 Excel 中分析表格模型（SSAS 表格）
@@ -45,12 +45,12 @@ ms.locfileid: "66067762"
   
 3.  若要使用透视，请在 **“透视”** 列表框中选择一个透视。  
   
-     必须使用“透视”对话框定义透视（非默认值）。 有关详细信息，请参阅[创建和管理透视表（SSAS 表格）](perspectives-ssas-tabular.md)。  
+     必须使用“透视”对话框定义透视（非默认值）。 有关详细信息，请参阅[创建和管理 &#40;SSAS 表格&#41;的透视](perspectives-ssas-tabular.md)。  
   
 > [!NOTE]  
 >  当您在模型设计器中更改模型项目时，Excel 中的数据透视表字段列表不会自动刷新。 若要刷新 Excel 中的数据透视表字段列表，请在 **“选项”** 功能区上单击 **“刷新”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 Excel 中分析 &#40;SSAS 表格&#41;](analyze-in-excel-ssas-tabular.md)  
+ [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)  
   
   

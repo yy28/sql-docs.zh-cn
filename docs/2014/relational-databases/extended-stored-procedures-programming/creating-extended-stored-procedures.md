@@ -16,16 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512631"
 ---
 # <a name="creating-extended-stored-procedures"></a>创建扩展存储过程
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
   
  扩展存储过程是带有原型的函数：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62512631"
   
  创建扩展存储过程 DLL 时需要这些文件。  
   
-|文件|说明|  
+|文件|描述|  
 |----------|-----------------|  
 |Srv.h|扩展存储过程 API 头文件|  
 |Opends60.lib|Opends60.dll 的导入库|  

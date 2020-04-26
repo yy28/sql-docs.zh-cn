@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721084"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>第 2 课：创建事务发布的订阅
@@ -24,7 +24,7 @@ ms.locfileid: "62721084"
   
 ### <a name="to-create-the-subscription"></a>创建订阅  
   
-1.  连接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器，展开服务器节点，然后展开 "**复制**" 文件夹。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”**** 文件夹。  
   
 2.  在“本地发布”**** 文件夹中，右键单击“AdvWorksProductTrans”**** 发布，然后单击“新建订阅”****。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62721084"
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>查看订阅的同步状态  
   
-1.  连接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器，展开服务器节点，然后展开 "**复制**" 文件夹。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”**** 文件夹。  
   
 2.  在“本地发布”**** 文件夹中，展开“AdvWorksProductTrans”**** 发布，右键单击“ProductReplica”**** 数据库中的订阅，然后单击“查看同步状态”****。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62721084"
   
 ## <a name="see-also"></a>另请参阅  
  [使用快照初始化订阅](initialize-a-subscription-with-a-snapshot.md)   
- [ssSDSFull](create-a-push-subscription.md)   
- [订阅发布](subscribe-to-publications.md)  
+ [创建推送订阅](create-a-push-subscription.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767601"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>步骤 9：测试 Lesson 1 教程包
@@ -41,11 +41,11 @@ ms.locfileid: "62767601"
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>运行 Lesson 1 教程包  
   
-1.  在 **“调试”** 菜单中，单击 **“启动调试”** 。  
+1.  在 "**调试**" 菜单上单击 "**启动调试**"。  
   
      包将开始运行，结果有 1097 个行被成功添加到 **AdventureWorksDW2012** 中的 **FactCurrency**事实数据表中。  
   
-2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”** 。  
+2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”**。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 2 课：添加循环](../integration-services/lesson-2-adding-looping-with-ssis.md)  

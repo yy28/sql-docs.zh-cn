@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473046"
 ---
 # <a name="post-download-instructions"></a>发布下载指令
@@ -26,7 +26,7 @@ ms.locfileid: "62473046"
  **指令类型**  
  指定要发布的下载指令的类型。  
   
- **说明**  
+ **描述**  
  查看下载指令的说明。  
   
  **轮询间隔**  
@@ -38,7 +38,7 @@ ms.locfileid: "62473046"
  **以下目标服务器**  
  选择此选项可以将下载指令发布到所选目标服务器。  
   
- **单击**  
+ **选择**  
  指定目标服务器应接收下载指令。  
   
  **目标服务器**  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678453"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>第 1 课：创建时序挖掘模型和挖掘结构
@@ -119,11 +119,9 @@ CREATE MINING MODEL [Mining Model Name]
     [Model Region] TEXT KEY  
     ```  
   
-     
-  `TIME KEY` 关键字指示 ReportingDate 列包含用于对值进行排序的时间步长值。 时间步长可以为日期和时间、整数或任何有序数据类型，只要值唯一且数据有序即可。  
+     `TIME KEY` 关键字指示 ReportingDate 列包含用于对值进行排序的时间步长值。 时间步长可以为日期和时间、整数或任何有序数据类型，只要值唯一且数据有序即可。  
   
-     
-  `TEXT` 和 `KEY` 关键字指示 ModelRegion 列包含额外的序列键。 只能有一个序列键，并且该列中的值必须是唯一的。  
+     `TEXT` 和 `KEY` 关键字指示 ModelRegion 列包含额外的序列键。 只能有一个序列键，并且该列中的值必须是唯一的。  
   
 4.  将  
   

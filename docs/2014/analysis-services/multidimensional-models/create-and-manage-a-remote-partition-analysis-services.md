@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076256"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>创建和管理远程分区 (Analysis Services)
@@ -27,14 +27,14 @@ ms.locfileid: "66076256"
   
  专用辅助数据库可存储一个（且仅一个）主数据库的远程分区，但主数据库可使用多个辅助数据库，条件是所有辅助数据库都在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的同一个远程实例上。 数据库中专用于远程分区的维度作为链接维度创建。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  在创建远程分区之前，必须满足以下条件：  
   
 -   您必须有第二个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例和专用数据库才能存储分区。 辅助数据库只有一个用途：它提供主数据库的远程分区存储。  
   
 -   两个服务器实例必须是相同版本。 两个数据库应该具有相同功能级别。  
   
--   两个实例都必须配置为进行 TCP 连接。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]不支持通过使用 HTTP 协议创建远程分区。  
+-   两个实例都必须配置为进行 TCP 连接。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不支持通过使用 HTTP 协议创建远程分区。  
   
 -   两个计算机上的防火墙设置都必须设置为接受外部连接。 有关设置防火墙的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66076256"
 5.  在主服务器上：在解决方案资源管理器中右键单击多维数据集名称，选择“处理”****，全面处理该多维数据集。  
   
 ## <a name="administering-remote-partitions"></a>管理远程分区  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]同时支持远程分区的并行处理和顺序处理。 定义了分区的主数据库将在参与多维数据集分区处理的所有实例之间协调事务。 然后，将处理报表发送给处理了某一分区的所有实例。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持远程分区的并行处理和顺序处理。 定义了分区的主数据库将在参与多维数据集分区处理的所有实例之间协调事务。 然后，将处理报表发送给处理了某一分区的所有实例。  
   
  包含远程分区的多维数据集可与其在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的单个实例上的分区一起管理。 但是，只能在定义了分区及其父多维数据集的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上查看和更新远程分区的元数据。 无法在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的远程实例上查看或更新远程分区。  
   
@@ -132,6 +132,6 @@ ms.locfileid: "66076256"
 >  尽管不向架构行集公开专用于存储远程分区的数据库，但使用分析管理对象 (AMO) 的应用程序仍可以通过使用 XML for Analysis Discover 命令来发现专用数据库。 通过使用 TCP 或 HTTP 客户端直接发送到专用数据库的所有 CREATE 或 DELETE 命令都将成功，但服务器将返回一个警告，指示该操作可能会损害这一紧密管理的数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [Analysis Services 多维数据 &#40;分区&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分区（Analysis Services - 多维数据）](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

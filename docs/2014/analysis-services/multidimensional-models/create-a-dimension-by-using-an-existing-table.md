@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076423"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用现有表创建维度
@@ -71,8 +71,7 @@ ms.locfileid: "66076423"
   
  向导提供了具有以下列的表来映射这些帐户类型：  
   
--   
-  **“源表帐户类型”** 列，列出来自数据源表的帐户类型。  
+-   **“源表帐户类型”** 列，列出来自数据源表的帐户类型。  
   
 -   “内置帐户类型”**** 列，列出服务器支持的相应标准帐户类型。 如果源数据使用标准名称，则向导会自动将源类型映射为服务器类型，然后使用此信息填充“内置帐户类型”**** 列。 如果服务器不映射帐户类型或您希望更改映射，可以从“内置帐户类型”**** 列的列表中选择其他类型。  
   

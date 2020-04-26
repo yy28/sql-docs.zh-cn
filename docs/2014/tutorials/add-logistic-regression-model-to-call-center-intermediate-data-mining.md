@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823274"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>向呼叫中心结构中添加逻辑回归模型（数据挖掘中级教程）
@@ -36,7 +36,7 @@ ms.locfileid: "62823274"
   
 4.  在 "**新建挖掘模型**" 对话框的 "**模型名称**" 中`Call Center - LR`，键入。  对于 "**算法名称**"，选择 " **Microsoft 逻辑回归**"。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
      新的挖掘模型将显示在 "**挖掘模型**" 选项卡中。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62823274"
   
 1.  在 "**挖掘模型**" 选项卡中，右键单击名为呼叫中心-LR 的模型的列，然后选择 "**设置算法参数**"。  
   
-2.  在 HOLDOUT_SEED 参数所在的行中，单击 "**值**" 下的空单元， `1`然后键入。 单击“确定”。   
+2.  在 HOLDOUT_SEED 参数所在的行中，单击 "**值**" 下的空单元， `1`然后键入。 单击" **确定**"。  
   
     > [!NOTE]  
     >  选择哪个值作为种子无关紧要，关键是您需要对所有相关模型使用同一个种子。  
@@ -69,6 +69,6 @@ ms.locfileid: "62823274"
  [&#40;中级数据挖掘教程为呼叫中心模型创建预测&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘 &#40;处理要求和注意事项&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

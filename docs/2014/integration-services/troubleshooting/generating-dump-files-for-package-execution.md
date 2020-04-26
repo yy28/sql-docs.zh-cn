@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8022532dcb038b7c9a5839acb0541337ac3d5001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766142"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>生成包执行的转储文件
@@ -42,7 +42,7 @@ ms.locfileid: "62766142"
   
 -   .tmp 调试转储文件。 这是一个文本格式文件。  
   
- 默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将这些文件存储在 *drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中\<* 。  
+ 默认情况下[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，将这些文件存储在文件夹、 * \<驱动器>：* \Program Files\Microsoft SQL server\110\shared\errordumps 文件夹中。  
   
  下表仅介绍 .tmp 文件中的某些部分。 .tmp 文件还包含该表中未列出的其他数据。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "62766142"
 |最近的消息|系统最近发出的消息。 包括每条消息的时间、类型、说明和线程 ID。|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         说明：该组件不存在、未注册、不可升级或缺少所需接口。 此组件的联系人信息为“”。|  
   
 ## <a name="related-content"></a>相关内容  
- [“执行包”对话框](../execute-package-dialog-box.md)  
+ [Execute Package Dialog Box](../execute-package-dialog-box.md)  
   
   

@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076293"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>通过生成时间表来创建时间维度
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，当源数据库中没有可用[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的时间表时，可以使用中的维度向导创建时间维度。 在 **“选择创建方法”** 页上选择下列选项之一可执行此操作。  
   
--   **在数据源中生成时间表**当您具有在基础数据源中创建对象的权限时，请选择此选项。 该向导将生成一个时间表并将此表存储在数据源中。 然后，该向导根据此时间表创建时间维度。  
+-   **在数据源中生成时间表** 如果您具有在基础数据源中创建对象的权限，可选择此选项。 该向导将生成一个时间表并将此表存储在数据源中。 然后，该向导根据此时间表创建时间维度。  
   
--   **在服务器上生成时间表**当您没有在基础数据源中创建对象的权限时，请选择此选项。 该向导将生成一个时间表并将此表存储在服务器上而不是数据源中。 （从服务器上的时间表创建的维度称为 "*服务器时间维度*"。）然后，该向导根据此表创建服务器时间维度。  
+-   **在服务器上生成时间表** 如果您没有在基础数据源中创建对象的权限，则选择此选项。 该向导将生成一个时间表并将此表存储在服务器上而不是数据源中。 （从服务器上的时间表创建的维度称为 "*服务器时间维度*"。）然后，该向导根据此表创建服务器时间维度。  
   
  创建时间维度时，需要指定时间段以及维度的开始日期和结束日期。 向导将使用指定的时间段创建时间属性。 处理维度时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会生成并存储支持指定日期和时间段所需的数据。 向导使用为时间维度创建的属性来建议维度的层次结构。 层次结构反映了不同时间段之间的关系，并且考虑了不同的日历。 例如，在标准日历层次结构中，“周”级别在“年”级别下显示，而不是在“月”级别下显示，因为各个年份中包含的周数非常平均，而各个月中包含的周数并不平均。 相反，在生产日历或报表日历层次结构中，各个月中包含的周数非常平均，因此“周”级别在“月”级别下显示。  
   

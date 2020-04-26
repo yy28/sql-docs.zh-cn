@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067513"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>创建和管理 KPI（SSAS 表格）
@@ -37,7 +37,7 @@ ms.locfileid: "66067513"
 > [!IMPORTANT]  
 >  在创建 KPI 前，您必须首先创建一个求值的基础度量值。 然后，您将该基础度量值扩展到 KPI。 另一主题 [创建和管理度量值（SSAS 表格）](measures-ssas-tabular.md)中有描述如何创建度量值。 KPI 也要求目标值。 该值可来自另一个预定义的度量值或绝对值。 一旦您将基础度量值扩展到 KPI 后，可以选择目标值并且在“关键绩效指标”对话框中定义状态阈值。  
   
-###  <a name="bkmk_create_KPI"></a>创建 KPI  
+###  <a name="to-create-a-kpi"></a><a name="bkmk_create_KPI"></a> 创建 KPI  
   
 1.  在度量值网格中，右键单击将充当基础度量值（值）的度量值，然后单击“创建 KPI”****。  
   
@@ -54,17 +54,17 @@ ms.locfileid: "66067513"
 5.  单击 **“说明”**，然后为“KPI”、“值”、“状态”和“目标”键入说明。  
   
 > [!TIP]  
->  您可以使用“在 Excel 中分析”功能测试您的 KPI。 有关详细信息，请参阅[在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)。  
+>  您可以使用“在 Excel 中分析”功能测试您的 KPI。 有关详细信息，请参阅本主题后面的 [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)中的“角色管理器”对话框定义角色的表格模型作者。  
   
-###  <a name="bkmk_edit_KPI"></a>编辑 KPI  
+###  <a name="to-edit-a-kpi"></a><a name="bkmk_edit_KPI"></a> 编辑 KPI  
   
 -   在度量值网格中，右键单击充当 KPI 的基础度量值（值）的度量值，然后单击“编辑 KPI 设置”****。  
   
-###  <a name="bkmk_delete"></a>删除 KPI 和基础度量值  
+###  <a name="to-delete-a-kpi-and-the-base-measure"></a><a name="bkmk_delete"></a> 删除 KPI 和基础度量值  
   
 -   在度量值网格中，右键单击充当 KPI 的基础度量值（值）的度量值，然后单击“删除”****。  
   
-###  <a name="bkmk_delete_KPI"></a>删除 KPI 但保留基础度量值  
+###  <a name="to-delete-a-kpi-but-keep-the-base-measure"></a><a name="bkmk_delete_KPI"></a>删除 KPI 但保留基础度量值  
   
 -   在度量值网格中，右键单击充当 KPI 的基础度量值（值）的度量值，然后单击“删除 KPI”****。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66067513"
 |用户界面部分|键命令|  
 |----------------|-----------------|  
 |KPI 基础度量值|ALT+B|  
-|KPI 状态|ALT+S|  
+|KPI 状态|Alt+S|  
 |度量|Alt+M|  
 |“绝对值”|ALT+A|  
 |“定义状态阈值”|ALT+U|  
@@ -85,6 +85,6 @@ ms.locfileid: "66067513"
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的 Kpi](kpis-ssas-tabular.md)   
  [&#40;SSAS 表格&#41;度量值](measures-ssas-tabular.md)   
- [&#40;SSAS 表格创建和管理度量值&#41;](create-and-manage-measures-ssas-tabular.md)  
+ [创建和管理度量值（SSAS 表格）](create-and-manage-measures-ssas-tabular.md)  
   
   

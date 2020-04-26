@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312881"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>使用替换数据进行时序预测（数据挖掘中级教程）
@@ -86,7 +86,7 @@ ms.locfileid: "63312881"
   
     1.  验证挖掘模型中的 ReportingDate 列是否已映射到输入数据中的 ReportingDate 列。  
   
-    2.  在 "**修改映射**" 对话框的 "模型列 AvgQty" 行中，单击 "**表列**"，然后选择 "T1000"。 单击“确定”。   
+    2.  在 "**修改映射**" 对话框的 "模型列 AvgQty" 行中，单击 "**表列**"，然后选择 "T1000"。 单击" **确定**"。  
   
          此步骤将在用于预测平均数量的模型中创建的列映射到用于销售数量的 T1000 系列的实际数据。  
   
@@ -162,6 +162,6 @@ AND
   
 ## <a name="see-also"></a>另请参阅  
  [时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries (DMX)](/sql/dmx/predicttimeseries-dmx)  
   
   

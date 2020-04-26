@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484714"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>任务 17：查看由 SSIS 包创建的 DQS 清理项目
@@ -40,13 +40,13 @@ ms.locfileid: "65484714"
   
 9. 在项目列表中，选择由 SSIS DQS 清理组件创建的项目。 项目的名称应采用以下格式： **cleanseandcurate.cleanse supplier data.guid （以红色表示）**。 您可能需要根据 "**创建日期**" 列对列表进行排序，并查找最新记录。  
   
-10. 单击“下一步”。   
+10. 单击 **下一步**。  
   
 11. 您在本教程前面部分的交互式清理中应熟悉 "**管理和查看结果**" 页。  
   
 12. 查看清理结果。 在下一页中，您还可以执行交互式清理，并将结果导出到 Excel 文件或数据库中。  
   
-13. 单击“下一步”。  在此 "**导出**" 页中，您可以将结果导出到 excel 文件、CSV 文件或 SQL 数据库。  
+13. 单击 **下一步**。 在此 "**导出**" 页中，您可以将结果导出到 excel 文件、CSV 文件或 SQL 数据库。  
   
 14. 单击 "**完成**" 完成活动。  
   
