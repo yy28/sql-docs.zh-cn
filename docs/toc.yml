@@ -216,10 +216,12 @@
               href: big-data-cluster/spark-history-server.md
         - name: 疑难解答
           items:
-            - name: Kubernetes 故障排除
+            - name: Kubernetes 疑难解答
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Active Directory 组范围
+            - name: Active Directory 集成
               href: big-data-cluster/troubleshoot-active-directory.md
+            - name: HDFS 管理权限
+              href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: 参考
       items:
         - name: BDC 合作伙伴
