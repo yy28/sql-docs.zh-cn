@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062141"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>警报属性-新建警报（"常规" 页）
@@ -29,14 +29,14 @@ ms.locfileid: "63062141"
  **启用**  
  启用警报。 如果未启用警报，则警报中指定的操作将不会发生。  
   
- 类型   
+ **类型**  
  选择警报的类型：  
   
--   **SQL Server 事件警报**响应 Windows 事件日志中[!INCLUDE[msCoName](../../includes/msconame-md.md)]的消息。  
+-   **SQL Server 事件警报** ，该警报用于响应 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志中的消息。  
   
--   **SQL Server 性能条件警报**响应性能计数器中的特定条件。  
+-   **SQL Server 性能条件警报** ，该警报用于响应性能计数器中的特定条件。  
   
--   **Wmi 事件警报**响应 WINDOWS MANAGEMENT INSTRUMENTATION （WMI）事件。  
+-   **WMI 事件警报** ，该警报用于响应 Windows Management Instrumentation (WMI) 事件。  
   
 ## <a name="sql-server-event-alert-options"></a>SQL Server 事件警报选项  
  **数据库名称**  
@@ -55,10 +55,10 @@ ms.locfileid: "63062141"
  指定要用于筛选事件的字符串。  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server 性能条件警报  
- **Object**  
+ **对象**  
  指定要监视的性能对象。  
   
- **计数器**  
+ **对抗**  
  指定位于要监视的性能对象内的计数器。  
   
  **实例**  
@@ -71,14 +71,14 @@ ms.locfileid: "63062141"
  指定计数器的值。  
   
 ## <a name="wmi-event-alert-options"></a>WMI 事件警报选项  
- **命名空间**  
+ **Namespace**  
  指定用于 WMI 查询语言 (WQL) 语句的命名空间。 仅支持运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的计算机上的命名空间。  
   
  **查询**  
  指定用于标识该警报所响应事件的 WQL 语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [Alerts](alerts.md)   
+ [提醒](alerts.md)   
  [将 WQL 与 WMI Provider for Server Events 结合使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [使用错误号创建警报](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  

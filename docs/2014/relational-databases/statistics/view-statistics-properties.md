@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015644"
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
@@ -37,14 +37,14 @@ ms.locfileid: "63015644"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  为了查看统计信息对象，用户必须是表所有者，或者是 `sysadmin` 固定服务器角色、`db_owner` 固定数据库角色或 `db_ddladmin` 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>查看统计信息属性  
   
@@ -56,11 +56,11 @@ ms.locfileid: "63015644"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  双击要查看其属性的统计信息对象，然后选择“属性”****。  
+5.  双击要查看其属性的统计信息对象，然后选择“属性”  。  
   
-6.  在“统计信息属性 - **statistics_name”** __ 对话框的“选择页”**** 窗格中，选择“详细信息”****。  
+6.  在“统计信息属性 - statistics_name”对话框的“选择页”窗格中，选择“详细信息”     。  
   
-     以下属性将显示在“统计信息属性 - ******statistics_name”对话框的“详细信息”** __ 页上。  
+     以下属性将显示在“统计信息属性 - statistics_name”对话框的“详细信息”页上    。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -76,10 +76,10 @@ ms.locfileid: "63015644"
      **名称**  
      统计信息对象的名称。  
   
-     **时更新**  
+     **已更新**  
      上一次更新统计信息的日期和时间。  
   
-     **各**  
+     **行**  
      上次更新统计信息时表或索引视图中的总行数。 如果筛选统计信息或者统计信息与筛选索引对应，该行数可能小于表中的行数。  
   
      **Rows Sampled**  
@@ -88,16 +88,16 @@ ms.locfileid: "63015644"
      **步骤**  
      直方图中的梯级数。 每个梯级都跨越一个列值范围，后跟上限列值。 直方图梯级是根据统计信息中的第一个键列定义的。 最大梯级数为 200。  
   
-     **密度**  
-     计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值**。 查询优化器不使用此 Density 值，显示此值的目的是为了与 SQL Server 2008 之前的版本实现向后兼容。  
+     **Density**  
+     计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值  。 查询优化器不使用此 Density 值，显示此值的目的是为了与 SQL Server 2008 之前的版本实现向后兼容。  
   
      **Average Key Length**  
      统计信息对象中所有键列的每个值的平均字节数。  
   
      **String Index**  
-     Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，并在统计信息对象的第一个键列上创建，其类型为**char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar （max）**、 **nvarchar （max）**、 **text**或**ntext**。  
+     Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)** 、 **nvarchar(max)** 、 **text**或 **ntext**类型，则基于其第一个键列创建字符串摘要统计信息。  
   
-     **筛选器表达式**  
+     **筛选表达式**  
      包含在统计信息对象中的表行子集的谓词。 NULL = 未筛选的统计信息。  
   
      **Unfiltered Rows**  
@@ -106,7 +106,7 @@ ms.locfileid: "63015644"
      下面的信息介绍结果集中为密度向量返回的列。  
   
      **All Density**  
-     密度为 1/非重复值**。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值则具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
+     密度为 1/非重复值  。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值则具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
   
      **Average Length**  
      存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。  
@@ -133,7 +133,7 @@ ms.locfileid: "63015644"
   
 7.  单击“确定”。   
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>查看统计信息属性  
   

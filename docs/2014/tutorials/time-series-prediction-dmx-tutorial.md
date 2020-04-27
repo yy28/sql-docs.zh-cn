@@ -11,21 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044174"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>时序预测 DMX 教程
   在本教程中，将学习如何创建时序挖掘结构，创建三个自定义时序挖掘模型，然后使用这些模型进行预测。  
   
- 挖掘模型基于 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 示例数据库（存储虚构公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的数据）中所包含的数据。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨国制造公司。  
+ 挖掘模型基于 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 示例数据库（存储虚构公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的数据）中所包含的数据。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨国制造公司。  
   
 ## <a name="tutorial-scenario"></a>教程方案  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 已经决定使用数据挖掘功能来生成销售预测。 它们已经生成了一些区域预测模型;有关详细信息，请参阅[第2课：生成预测方案 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。 但是，销售部门需要能够定期用新的销售数据更新数据挖掘模型。 它们还希望自定义模型来提供不同的预测。  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 已经决定使用数据挖掘功能来生成销售预测。 它们已经生成了一些区域预测模型;有关详细信息，请参阅[第2课：生成预测方案 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。 但是，销售部门需要能够定期用新的销售数据更新数据挖掘模型。 它们还希望自定义模型来提供不同的预测。  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供了多个可用于完成此任务的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]工具：  
   
@@ -33,9 +31,9 @@ ms.locfileid: "63044174"
   
 -   Microsoft 时序算法  
   
--   中的查询编辑器[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+-    中的查询编辑器  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)]时序算法创建可用于预测时间相关数据的模型。 数据挖掘扩展插件 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一种查询语言，可用来创建挖掘模型和预测查询。  
+  时序算法创建可用于预测时间相关数据的模型。 数据挖掘扩展插件 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一种查询语言，可用来创建挖掘模型和预测查询。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
  本教程假定您已经熟悉 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用来创建挖掘模型的对象。 如果以前未使用 DMX 创建挖掘结构或挖掘模型，请参阅[自行车购买者 DMX 教程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)。  
@@ -64,8 +62,7 @@ ms.locfileid: "63044174"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库  
+-    数据库  
   
  为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的正式示例数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[http://www.CodePlex.com/MSFTDBProdSamples](https://go.microsoft.com/fwlink/?LinkId=88417) Microsoft SQL Server 产品示例 "部分中的" Microsoft SQL Server 示例和社区项目 "主页。 单击 "**数据库**"，再单击 "**发布**" 选项卡，然后选择所需的数据库。  
   

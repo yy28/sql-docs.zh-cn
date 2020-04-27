@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3342af1de84e922ce63848c8fdffe5aa30ec309a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150501"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>设置 SQL Server 数据库警报 (Windows)
@@ -26,7 +26,7 @@ ms.locfileid: "63150501"
   
 ### <a name="to-set-up-a-sql-server-database-alert"></a>设置 SQL Server 数据库警报  
   
-1.  在“性能”窗口的导航树中，展开“性能日志和警报”****。  
+1.  在“性能”窗口的导航树中，展开 **“性能日志和警报”**。  
   
 2.  右键单击“警报”****，再单击“新建警报设置”****。  
   

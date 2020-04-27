@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3050ce285cc98386f6de6278bedd2520cb39ba36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061061"
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions 元素 (DTA)
@@ -48,7 +48,7 @@ ms.locfileid: "63061061"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[DTAInput 元素 (DTA)](dtainput-element-dta.md)|  
-|**子元素**|`ReportSet`element. 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `TuningLogTable`element. 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `NumberOfEvents`element. 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> [TuningTimeInMin 元素 (DTA)](tuningtimeinmin-element-dta.md)<br /><br /> [StorageBoundInMB 元素 (DTA)](storageboundinmb-element-dta.md)<br /><br /> `MaxKeyColumnsInIndex`element. 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `MaxColumnsInIndex`element. 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `MinPercentageImprovement`element. 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)<br /><br /> [TestServer 元素 (DTA)](server-element-dta.md)<br /><br /> [FeatureSet 元素 (DTA)](featureset-element-dta.md)<br /><br /> [分区元素 (DTA)](partitioning-element-dta.md)<br /><br /> [DropOnlyMode 元素 (DTA)](droponlymode-element-dta.md)<br /><br /> [KeepExisting 元素 (DTA)](keepexisting-element-dta.md)<br /><br /> [OnlineIndexOperation 元素 (DTA)](onlineindexoperation-element-dta.md)<br /><br /> [DatabaseToConnect 元素 (DTA)](databasetoconnect-element-dta.md)<br /><br /> `IgnoreConstantsInWorkload`element. 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `RetainShellDB`element. 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。|  
+|**子元素**|`ReportSet` 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `TuningLogTable` 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `NumberOfEvents` 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> [TuningTimeInMin 元素 (DTA)](tuningtimeinmin-element-dta.md)<br /><br /> [StorageBoundInMB 元素 (DTA)](storageboundinmb-element-dta.md)<br /><br /> `MaxKeyColumnsInIndex` 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `MaxColumnsInIndex` 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `MinPercentageImprovement` 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)<br /><br /> [TestServer 元素 (DTA)](server-element-dta.md)<br /><br /> [FeatureSet 元素 (DTA)](featureset-element-dta.md)<br /><br /> [分区元素 (DTA)](partitioning-element-dta.md)<br /><br /> [DropOnlyMode 元素 (DTA)](droponlymode-element-dta.md)<br /><br /> [KeepExisting 元素 (DTA)](keepexisting-element-dta.md)<br /><br /> [OnlineIndexOperation 元素 (DTA)](onlineindexoperation-element-dta.md)<br /><br /> [DatabaseToConnect 元素 (DTA)](databasetoconnect-element-dta.md)<br /><br /> `IgnoreConstantsInWorkload` 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。<br /><br /> `RetainShellDB` 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。|  
   
 ## <a name="example"></a>示例  
  有关`TuningOptions`元素的示例，请参阅[&#40;DTA&#41;的 XML 输入文件示例](xml-input-file-samples-dta.md)。  

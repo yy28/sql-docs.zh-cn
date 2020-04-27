@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057115"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
@@ -70,15 +70,15 @@ ms.locfileid: "63057115"
   
     -   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md)的最小和最大内存量。  
+    -   [复制代理可执行文件概念](concepts/replication-agent-executables-concepts.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理管理](agents/replication-agent-administration.md)   
- [错误和事件参考（复制）](errors-and-events-reference-replication.md)   
+ [&#40;复制&#41;的错误和事件参考](errors-and-events-reference-replication.md)   
  [复制分发代理](agents/replication-distribution-agent.md)   
  [复制日志读取器代理](agents/replication-log-reader-agent.md)   
  [复制合并代理](agents/replication-merge-agent.md)   
  [复制队列读取器代理](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [复制快照代理](agents/replication-snapshot-agent.md)  
   
   

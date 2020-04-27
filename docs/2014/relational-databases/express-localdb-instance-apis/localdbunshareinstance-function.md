@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128673"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 函数
@@ -37,11 +37,11 @@ HRESULT LocalDBUnShareInstance(
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *pInstanceSharedName*  
  [输入] 要取消共享的 LocalDB 实例的共享名称。  
   
- *dwFlags*  
+ dwFlags**  
  [输入] 保留供将来使用。 当前应设置为 0。  
   
 ## <a name="returns"></a>返回  

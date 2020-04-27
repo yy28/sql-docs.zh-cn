@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151105"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQLServer，Workload Group Stats 对象
@@ -40,8 +40,8 @@ ms.locfileid: "63151105"
 |Active parallel threads|当前使用的并行线程数。|  
   
 ## <a name="see-also"></a>另请参阅  
- [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)   
- [SQL Server，Resource Pool Stats 对象](sql-server-resource-pool-stats-object.md)   
+ [监视资源使用情况 &#40;系统监视器&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server，资源池统计信息对象](sql-server-resource-pool-stats-object.md)   
  [资源调控器](../resource-governor/resource-governor.md)  
   
   

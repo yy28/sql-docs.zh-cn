@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990638"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>为内存优化表配置内存
@@ -24,7 +24,7 @@ ms.locfileid: "62990638"
  使用 [估算内存优化表的内存需求](memory-optimized-tables.md) 中的信息估计数据库的持久内存优化表的内存中大小。 由于未为内存优化表保留索引，因此不包括索引大小。 确定此大小后，您需要提供大小为持久内存中表大小的四倍的磁盘空间。  
   
 ## <a name="storage-performance"></a>存储性能  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)]可以显著增加工作负荷吞吐量。 因此，确保 IO 不成为瓶颈非常重要。  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 会大大增加您的工作负荷吞吐量。 因此，确保 IO 不成为瓶颈非常重要。  
   
 -   在将基于磁盘的表迁移到内存优化表时，请确保事务日志位于可支持增加事务日志活动的存储介质上。 例如，如果存储介质以 100 MB/秒的速度支持事务日志操作，并且内存优化表产生 5 倍以上的性能，则事务日志的存储介质必须还能支持 5 倍的性能改进，从而防止事务日志活动成为性能瓶颈。  
   

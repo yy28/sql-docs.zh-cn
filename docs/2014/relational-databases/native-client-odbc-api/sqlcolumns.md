@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067707"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -31,7 +31,7 @@ ms.locfileid: "63067707"
   
  Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- 对于 ODBC 2。*x*应用程序未在*TableName*中使用`SQLColumns`通配符，则返回其名称与*TableName*匹配并且由当前用户拥有的所有表的相关信息。 如果当前用户拥有的表的名称与*tablename*参数匹配， `SQLColumns`则返回其他用户所拥有的、表名称与*tablename*参数匹配的所有表的相关信息。 对于 ODBC 2。** 使用通配符的`SQLColumns` x 应用程序返回其名称与*TableName*匹配的所有表。 对于 ODBC 3。*x*应用`SQLColumns`程序返回其名称与*TableName*匹配的所有表，而不考虑所有者或是否使用通配符。  
+ 对于 ODBC 2。*x*应用程序未在*TableName*中使用`SQLColumns`通配符，则返回其名称与*TableName*匹配并且由当前用户拥有的所有表的相关信息。 如果当前用户拥有的表的名称与*tablename*参数匹配， `SQLColumns`则返回其他用户所拥有的、表名称与*tablename*参数匹配的所有表的相关信息。 对于 ODBC 2。*x*使用通配符的`SQLColumns` x 应用程序返回其名称与*TableName*匹配的所有表。 对于 ODBC 3。*x*应用`SQLColumns`程序返回其名称与*TableName*匹配的所有表，而不考虑所有者或是否使用通配符。  
   
  下表列出了结果集返回的列：  
   
@@ -72,8 +72,7 @@ ms.locfileid: "63067707"
  有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>SQLColumns 对大型 CLR UDT 的支持  
- 
-  `SQLColumns` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLColumns` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns 对稀疏列的支持  
  已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将两个特定列添加到 SQLColumns 的结果集中：  

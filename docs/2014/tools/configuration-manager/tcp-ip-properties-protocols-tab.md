@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150460"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>TCP-IP 属性（"协议" 选项卡）
@@ -35,8 +35,7 @@ ms.locfileid: "63150460"
  指定 SQL Server 是否侦听所有绑定到计算机网卡的 IP 地址。 如果设置为“否”  ，则使用每个 IP 地址的各自属性对话框分别对每个 IP 地址进行配置。 如果设置为“是”  ，则 **IPAll** 属性框的设置将应用到所有的 IP 地址。 默认值为“是”  。  
   
  **No Delay**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会实施对此属性的更改。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会实施对此属性的更改。  
   
 ## <a name="see-also"></a>另请参阅  
  [选择网络协议](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

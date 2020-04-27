@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f862807f0ca273e4058263efee6ac326a74103e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046334"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>将 ADO 用于 SQL Server Native Client
@@ -30,10 +30,10 @@ ms.locfileid: "63046334"
 > [!NOTE]  
 >  如果要开发新的应用程序，则建议考虑使用用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 ADO.NET 和 .NET Framework 数据访问接口，而不是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client，以访问最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的所有新功能。 有关用于 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的详细信息，请参阅针对 ADO.NET 的 .NET Framework SDK 文档。  
   
- 为了使 ADO 能够使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口已进行了某些增强，这些增强扩展了 OLE DB 的核心功能。 借助这些增强功能，ADO 应用程序可使用更新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，还可使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的两个数据类型（xml 和 udt）********。 通过这些增强功能，还可探索对 varchar、nvarchar 和 varbinary 数据类型的强化************。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 将 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化属性添加到 DBPROPSET_SQLSERVERDBINIT 属性集以供 ADO 应用程序使用，以便以与 ADO 兼容的方式公开新数据类型。 此外， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序还定义了一个名`DataTypeCompatibility`为的新连接字符串关键字，该关键字是在连接字符串中设置的。  
+ 为了使 ADO 能够使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口已进行了某些增强，这些增强扩展了 OLE DB 的核心功能。 借助这些增强功能，ADO 应用程序可使用更新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，还可使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的两个数据类型（xml 和 udt）   。 通过这些增强功能，还可探索对 varchar、nvarchar 和 varbinary 数据类型的强化    。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 将 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化属性添加到 DBPROPSET_SQLSERVERDBINIT 属性集以供 ADO 应用程序使用，以便以与 ADO 兼容的方式公开新数据类型。 此外， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序还定义了一个名`DataTypeCompatibility`为的新连接字符串关键字，该关键字是在连接字符串中设置的。  
   
 > [!NOTE]  
->  现有 ADO 应用程序可以使用 SQLOLEDB 访问接口来访问和更新 XML、UDT 以及大型值文本和二进制字段值。 新的更大型的 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型分别作为 ADO 类型 adLongVarChar、adLongVarWChar 和 adLongVarBinary 返回************************。 XML 列作为 adLongVarChar 返回，而 UDT 列作为 adVarBinary 返回********。 但是，如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口 (SQLNCLI11) 而不是 SQLOLEDB，则需要确保将 `DataTypeCompatibility` 关键字设置为“80”，以便新数据类型能正确映射到 ADO 数据类型。  
+>  现有 ADO 应用程序可以使用 SQLOLEDB 访问接口来访问和更新 XML、UDT 以及大型值文本和二进制字段值。 新的更大型的 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型分别作为 ADO 类型 adLongVarChar、adLongVarWChar 和 adLongVarBinary 返回       。 XML 列作为 adLongVarChar 返回，而 UDT 列作为 adVarBinary 返回   。 但是，如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口 (SQLNCLI11) 而不是 SQLOLEDB，则需要确保将 `DataTypeCompatibility` 关键字设置为“80”，以便新数据类型能正确映射到 ADO 数据类型。  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>从 ADO 启用 SQL Server Native Client  
  若要启用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT，ADO 应用程序需要在其连接字符串中实现以下关键字：  
@@ -62,7 +62,7 @@ con.Open
  以下各节提供了有关如何将 ADO 与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序一起使用的示例。  
   
 ### <a name="retrieving-xml-column-data"></a>检索 XML 列数据  
- 本例中，使用记录集从  AdventureWorks 示例数据库中的 XML 列检索并显示数据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ****。  
+ 本例中，使用记录集从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AdventureWorks  示例数据库中的 XML 列检索并显示数据。  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -98,7 +98,7 @@ Set con = Nothing
 >  XML 列不支持记录集筛选。 如果使用，将返回错误。  
   
 ### <a name="retrieving-udt-column-data"></a>检索 UDT 列数据  
- 在该示例中，使用 Command 对象执行返回 UDT 的 SQL 查询，并更新 UDT 数据，然后将新数据插入数据库中****。 该示例假定已在数据库中注册 Point UDT****。  
+ 在该示例中，使用 Command 对象执行返回 UDT 的 SQL 查询，并更新 UDT 数据，然后将新数据插入数据库中  。 该示例假定已在数据库中注册 Point UDT  。  
   
 ```  
 Dim con As New ADODB.Connection  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990192"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
@@ -30,7 +30,7 @@ ms.locfileid: "62990192"
 >  若要卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，您必须是拥有“作为服务登录”权限的本地管理员。  
   
 > [!NOTE]  
->  若要卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供的删除节点功能分别删除每个节点。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点 &#40;安装程序&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+>  若要卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供的删除节点功能分别删除每个节点。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
  卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，请注意以下重要信息：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62990192"
   
 ### <a name="before-you-uninstall"></a>卸载之前  
   
-1.  **备份数据。** 尽管这不是必需的步骤，但您可能希望按照当前的状态保存数据库。 可能还希望保存对系统数据库所做的更改。 无论哪种情况，请确保先备份数据，再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 或者，将所有数据和日志文件的副本保存在 MSSQL 文件夹以外的文件夹中。 卸载期间 MSSQL 文件夹将被删除。  
+1.  **备份您的数据。** 尽管这不是必需的步骤，但您可能希望按照当前的状态保存数据库。 可能还希望保存对系统数据库所做的更改。 无论哪种情况，请确保先备份数据，再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 或者，将所有数据和日志文件的副本保存在 MSSQL 文件夹以外的文件夹中。 卸载期间 MSSQL 文件夹将被删除。  
   
      必须保存的文件包括以下数据库文件：  
   
@@ -72,19 +72,19 @@ ms.locfileid: "62990192"
   
 2.  **删除本地安全组。** 卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，应先删除用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的本地安全组。  
   
-3.  **停止所有**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **服务。**   建议先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，然后再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的本地安全组。 活动的连接可能会使卸载过程无法成功完成。  
+3.  停止所有** 服务**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ****。 建议先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，然后再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的本地安全组。 活动的连接可能会使卸载过程无法成功完成。  
   
 4.  **使用具有适当权限的帐户。** 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户或具有同等权限的帐户登录到服务器。 例如，可以使用本地 Administrators 组的成员帐户登录到服务器。  
   
-### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-uninstall-an-instance-of-ssnoversion"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  若要开始卸载过程，请转到 **“控制面板”** ，然后选择 **“程序和功能”**。  
   
 2.  右键单击** [!INCLUDE[msCoName](../../includes/msconame-md.md)] **并选择 "**卸载**"。 然后单击 **“删除”**。 此时将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。  
   
-     将运行安装程序支持规则以验证您的计算机配置。 若要继续，请单击 **“下一步”** 。  
+     将运行安装程序支持规则以验证您的计算机配置。 要继续，请单击“下一步”****。  
   
-3.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续，请单击 **“下一步”** 。  
+3.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 要继续，请单击“下一步”****。  
   
 4.  在“选择功能”页上指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中删除的功能。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62990192"
   
 1.  如果卸载过程没有成功完成，请尝试修复造成卸载失败的问题。 以下文章可帮助您了解卸载失败的原因：  
   
-    -   [如何识别安装程序日志文件中的 SQL Server 2008 安装问题](https://support.microsoft.com/kb/955396/en-us)  
+    -   [如何在安装日志文件中识别 SQL Server 2008 安装问题](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

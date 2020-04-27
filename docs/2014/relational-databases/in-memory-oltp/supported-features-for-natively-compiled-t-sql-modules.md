@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155715"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>本机编译的存储过程中支持的构造
@@ -38,7 +38,7 @@ ms.locfileid: "63155715"
   
  有关不支持的构造的完整信息以及有关如何处理本机编译的存储过程中不支持的某些功能的信息，请参阅 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)。 有关不支持的功能的详细信息，请参阅 [内存中 OLTP 不支持的 Transact-SQL 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
-##  <a name="pncsp"></a>本机编译的存储过程中的可编程性  
+##  <a name="programmability-in-natively-compiled-stored-procedures"></a><a name="pncsp"></a>本机编译的存储过程中的可编程性  
  支持以下各项：  
   
 -   BEGIN ATOMIC（位于存储过程的外层）、LANGUAGE、ISOLATION LEVEL、DATEFORMAT 和 DATEFIRST。  
@@ -63,7 +63,7 @@ ms.locfileid: "63155715"
   
      要优化性能，请对整个本机编译存储过程使用单个 TRY/CATCH 块。  
   
-##  <a name="so"></a> 支持的运算符  
+##  <a name="supported-operators"></a><a name="so"></a>支持的运算符  
  支持下列运算符。  
   
 -   [&#40;transact-sql&#41;](/sql/t-sql/language-elements/comparison-operators-transact-sql) （例如，>、 \<、>= 和 <=）的比较运算符在条件（如果）中受支持。  
@@ -78,7 +78,7 @@ ms.locfileid: "63155715"
   
 -   按位运算符 ~、&、| 和 ^  
   
-##  <a name="bfncsp"></a>本机编译的存储过程中的内置函数  
+##  <a name="built-in-functions-in-natively-compiled-stored-procedures"></a><a name="bfncsp"></a>本机编译的存储过程中的内置函数  
  内存优化表的默认约束中以及本机编译的存储过程中支持以下函数。  
   
 -   数学函数：ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE 和 TAN  
@@ -99,7 +99,7 @@ ms.locfileid: "63155715"
   
 -   系统函数：@@rowcount。 本机编译存储过程中的语句会更新 @@rowcount，因此，可使用本机编译存储过程中的 @@rowcount 来确定受在该本机编译存储过程中执行的上条语句影响的行数。 但是，@@rowcount 在本机编译存储过程执行开始和结束时会重置为 0。  
   
-##  <a name="qsancsp"></a>本机编译的存储过程中的查询外围应用  
+##  <a name="query-surface-area-in-natively-compiled-stored-procedures"></a><a name="qsancsp"></a>本机编译的存储过程中的查询外围应用  
  支持以下各项：  
   
 -   BETWEEN  
@@ -151,12 +151,12 @@ ms.locfileid: "63155715"
   
  这些限制不适用于针对内存优化表的解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问。  
   
-##  <a name="auditing"></a> 审核  
+##  <a name="auditing"></a><a name="auditing"></a>接入  
  在本机编译存储过程中支持过程级审核。 不支持语句级审核。  
   
  有关审核的详细信息，请参阅 [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
-##  <a name="tqh"></a>表、查询和联接提示  
+##  <a name="table-query-and-join-hints"></a><a name="tqh"></a>表、查询和联接提示  
  支持以下各项：  
   
 -   INDEX、FORCESCAN 和 FORCESEEK 提示，位于表提示语法或查询的 [OPTION Clause (Transact-SQL)](/sql/t-sql/queries/option-clause-transact-sql) 中。  
@@ -169,10 +169,10 @@ ms.locfileid: "63155715"
   
  有关详细信息，请参阅[提示 &#40;transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql)。  
   
-##  <a name="los"></a>排序限制  
+##  <a name="limitations-on-sorting"></a><a name="los"></a>排序限制  
  可以在使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
   
- 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：**消息 41398、级别 16、状态 1、程序 *\<procedureName>* 、行 *\<lineNumber>* ，TOP 运算符最多可返回 8192 行；已请求 *\<number>* 。**  
+ 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定的行数超过8192，则会收到错误消息：**消息41398，级别16，状态1，过程* \<procedureName>*，行* \<lineNumber>* TOP 运算符最多可返回8192行;请求的>数。 * \<* **  
   
  如果您没有 TOP 子句，则可以使用 ORDER BY 对任何数目的行进行排序。  
   
@@ -229,7 +229,7 @@ GO
  用于在 TOP N 中计算最差情形下支持的最大 N 的公式为： `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`。  
   
 ## <a name="see-also"></a>另请参阅  
- [本机编译存储过程](natively-compiled-stored-procedures.md)   
- [本机编译存储过程的迁移问题](migration-issues-for-natively-compiled-stored-procedures.md)  
+ [本机编译的存储过程](natively-compiled-stored-procedures.md)   
+ [本机编译的存储过程的迁移问题](migration-issues-for-natively-compiled-stored-procedures.md)  
   
   

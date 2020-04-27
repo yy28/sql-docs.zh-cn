@@ -14,22 +14,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990706"
 ---
 # <a name="extended-events"></a>扩展事件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展事件具有高度可缩放且高度可配置的体系结构，使用户能够收集故障排除所需的信息，或确定性能问题。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件具有高度可伸缩且高度可配置的体系结构，使用户能够按需收集解决性能问题或确定性能问题所需的信息。  
   
  可以在 Web 上的 [SQL Server 扩展事件](https://blogs.msdn.com/b/extended_events/)中找到有关扩展事件的详细信息。  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件的优点  
- 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（"**新建会话向导**" 和 "**新建会话**"）来创建、修改、显示和分析您的会话数据。  
+## <a name="benefits-of-ssnoversion-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件的优点  
+ 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（“新建会话向导”**** 和“新建会话”****），以便创建、修改、显示和分析你的会话数据。  
   
 ## <a name="extended-events-concepts"></a>扩展事件概念  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展事件（扩展事件）在现有概念（例如事件或事件使用者）的基础上，使用 Windows 事件跟踪的概念，并引入了新概念。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件 (Extended Events) 是在现有概念（例如事件或事件使用者）的基础上建立的，它使用了 Windows 事件跟踪的概念并引入了新概念。  
   
  下表描述了扩展事件中的概念。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62990706"
   
 -   扩展事件引擎是不识别事件的。 因此，该引擎可以将任何事件绑定到任何目标，因为该引擎不受事件内容约束。 有关扩展事件引擎的详细信息，请参阅 [SQL Server Extended Events Engine](sql-server-extended-events-engine.md)。  
   
--    事件与事件使用者不同，后者在扩展事件中称为“目标”。 也就是说任何目标可以接收任何事件。 此外，引发的任何事件均可供目标自动使用，这样可以记录或提供额外的事件上下文。 有关详细信息，请参阅 [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)。  
+-   ** 事件与事件使用者不同，后者在扩展事件中称为“目标”。 也就是说任何目标可以接收任何事件。 此外，引发的任何事件均可供目标自动使用，这样可以记录或提供额外的事件上下文。 有关详细信息，请参阅 [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)。  
   
 -   事件不同于在事件发生时要执行的操作。 因此，任何操作可以与任何事件相关联。  
   
@@ -73,14 +73,14 @@ ms.locfileid: "62990706"
   
 -   可以动态监视活动进程，同时对这些进程的影响最小。  
   
--   运行时不会对性能造成任何明显影响的默认系统运行状况会话。 该会话收集的系统数据可用于帮助解决性能问题。 有关详细信息，请参阅 [使用 system_health 会话](use-the-ssms-xe-profiler.md)。  
+-   运行时不会对性能造成任何明显影响的默认系统运行状况会话。 该会话收集的系统数据可用于帮助解决性能问题。 有关详细信息，请参阅[使用 System_health 会话](use-the-ssms-xe-profiler.md)。  
   
 ## <a name="extended-events-tasks"></a>扩展事件任务  
  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据定义语言 (DDL) 语句、动态管理视图和功能或目录视图，可以针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境创建简单或复杂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件排除故障解决方案。  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|使用 **“对象资源管理器”** 管理事件会话。|[在对象资源管理器中管理事件会话](../../ssms/object/object-explorer.md)|  
+|使用 **“对象资源管理器”** 管理事件会话。|[管理对象资源管理器中的事件会话](../../ssms/object/object-explorer.md)|  
 |介绍如何创建扩展事件会话。|[创建扩展事件会话](../../database-engine/create-an-extended-events-session.md)|  
 |介绍如何查看和刷新目标数据。|[查看事件会话数据](../../database-engine/view-event-session-data.md)|  
 |介绍如何使用扩展事件工具创建和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件会话。|[扩展事件工具](extended-events-tools.md)|  
@@ -93,7 +93,7 @@ ms.locfileid: "62990706"
 |介绍如何查看与各 SQL 跟踪事件及其关联列等效的扩展事件和操作。|[查看与 SQL 跟踪事件类等效的扩展事件](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |介绍如何找到在 CREATE EVENT SESSION 或 ALTER EVENT SESSION 中使用 ADD TARGET 参数时可设置的参数。|[获取 ADD TARGET 实参的可配置形参](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |介绍如何将现有 SQL 跟踪脚本转换为扩展事件会话。|[将现有 SQL 跟踪脚本转换为扩展事件会话](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|介绍如何确定持有锁的查询、查询的计划以及取锁时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆栈。|[确定持有锁的查询](determine-which-queries-are-holding-locks.md)|  
+|介绍如何确定持有锁的查询、查询的计划以及取锁时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆栈。|[确定哪些查询持有锁](determine-which-queries-are-holding-locks.md)|  
 |介绍如何识别影响数据库性能的锁来源。|[查找具有最多锁定的对象](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |介绍如何将扩展事件和 Windows 事件跟踪配合使用来监视系统活动。|[使用扩展事件监视系统活动](monitor-system-activity-using-extended-events.md)|  
   

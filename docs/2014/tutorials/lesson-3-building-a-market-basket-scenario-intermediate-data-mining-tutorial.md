@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c2f1c5a8ae897284f07c3fd6c65d9735099a41fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042781"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>第 3 课：生成市场篮方案（数据挖掘中级教程）
-  
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场部希望改进公司的网站以促进跨区销售。 作为网站更新的一部分，他们希望能够根据客户的在线购物篮中已有的其他产品来预测客户可能要购买的产品。 市场部还希望更好的了解客户购买行为，以便他们能够将网站设计为将可能被集中购买的项统一放置在一个位置上。 他们已经了解数据挖掘对于此类“ ** 市场蓝分析”尤其有用，并已经请您来开发一个数据挖掘模型。  
   
  在完成本课中的任务之后，您还会获得一个可显示客户历史交易中的商品分组的完整挖掘模型。 另外，您可以使用挖掘模型来预测客户可能希望购买的其他产品。  
@@ -56,7 +55,7 @@ ms.locfileid: "63042781"
   
  [第4课：生成顺序分析和聚类分析方案 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [第5课：生成神经网络和逻辑回归模型 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)   

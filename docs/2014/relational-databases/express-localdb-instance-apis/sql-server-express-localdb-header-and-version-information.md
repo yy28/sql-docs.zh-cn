@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128698"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 标头信息和版本信息
@@ -25,7 +25,7 @@ ms.locfileid: "63128698"
 ## <a name="localdb-versioning"></a>LocalDB 版本  
  对于每个主要 SQL Server 版本，LocalDB 安装将使用单组二进制代码。 这些 LocalDB 版本独立进行维护和修补。 这意味着，用户必须指定他或她将使用的 LocalDB 基准版本（也即主 SQL Server 版本）。 版本是使用 .NET Framework **system.web**类定义的标准版本格式指定的：  
   
- *主要版本号.次要版本号[.内部版本号[.修订号]]*  
+ *主要. 次要 [. 生成 [. 修订]]*  
   
  版本字符串（*主要*和*次要*）中的前两个数字是必需的。 版本字符串中的最后两个数字（*生成*和*修订*）是可选的，如果用户将其省略，则默认为零。这意味着，如果用户仅指定 "12.2" 作为 LocalDB 版本号，则会将其视为用户指定了 "12.2.0.0"。  
   
@@ -53,7 +53,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\120\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- 客户端提供程序必须在所有已安装的版本中找到最新**** 版本，并从关联`InstanceAPIPath`的值加载 sqluserinstance.dll DLL 文件。  
+ 客户端提供程序必须在所有已安装的版本中找到最新**SQLUserInstance**版本，并从关联`InstanceAPIPath`的值加载 sqluserinstance.dll DLL 文件。  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>64 位 Windows 上的 WOW64 模式  
  64 位 LocalDB 安装将有一组附加注册表项，以允许在 Windows 64 位上的 Windows 32 位 (WOW64) 模式下运行的 32 位应用程序使用 LocalDB。 具体而言，在 64 位 Windows 上，LocalDB MSI 将创建以下注册表项：  

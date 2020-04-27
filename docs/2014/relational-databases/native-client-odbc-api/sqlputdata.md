@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046622"
 ---
 # <a name="sqlputdata"></a>SQLPutData
@@ -31,8 +31,7 @@ ms.locfileid: "63046622"
  当使用版本6.5 或更低版本时，取消将向运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的服务器提供块数据的 SQLPutData 调用序列将导致列值的部分更新。 调用`text`SQLCancel `ntext`时引用`image`的、或列被设置为中间占位符值。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更低版本。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更低版本。  
   
 ## <a name="diagnostics"></a>诊断  
  对于 SQLPutData， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有一个 Native Client 特定的 SQLSTATE：  
@@ -62,8 +61,7 @@ ms.locfileid: "63046622"
  有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>SQLPutData 对大型 CLR UDT 的支持  
- 
-  `SQLPutData` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLPutData` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLPutData 函数](https://go.microsoft.com/fwlink/?LinkId=59365)   

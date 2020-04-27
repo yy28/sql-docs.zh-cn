@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151189"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
@@ -39,11 +39,11 @@ ms.locfileid: "63151189"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
--   sp_create_plan_guide 的参数必须以显示的顺序提供。 为 `sp_create_plan_guide` 的参数提供值时，所有参数名称都必须显式指定，或全部不指定。 例如，如果指定了 `@name =`，则也必须指定 `@stmt =`、`@type =` 等。 同样，如果省略了 `@name =` 并仅提供了参数值，则其余的参数名称也必须省略并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
+-   sp_create_plan_guide 的参数必须以显示的顺序提供。 为 `sp_create_plan_guide` 的参数提供值时，所有参数名称都必须显式指定，或全部不指定。 例如，如果指定了 `@name =`，则也必须指定 `@stmt =`、`@type =` 等。 同样，如果省略了 `@name =` 并仅提供了参数值，则其余的参数名称也必须省略并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
   
 -   您可以为相同的查询和批处理或模块创建多个 OBJECT 或 SQL 计划指南。 但是，在任何给定的时间只能启用一个计划指南。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "63151189"
   
 -   如果尝试删除或修改的函数、存储过程或 DML 触发器由某个计划指南引用，则不管该指南为启用状态还是禁用状态，都会导致错误。 尝试删除计划指南被引用并已为其定义触发器的表也将导致错误。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  若要创建类型为 OBJECT 的计划指南，需要拥有对被引用对象的 ALTER 权限。 若要创建类型为 SQL 或 TEMPLATE 的计划指南，需要拥有对当前数据库的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-plan-guide"></a>创建计划指南  
   
@@ -82,14 +82,13 @@ ms.locfileid: "63151189"
   
     -   作用域类型为 **SQL** 或 **TEMPLATE**。 如果为 **TEMPLATE**，则参数不能为 NULL。  
   
-    -   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用 sp_executesql 进行提交，并且指定了该参数的值，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在参数化某语句之后内部提交该语句。  
+    -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用 sp_executesql 进行提交，并且指定了该参数的值，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在参数化某语句之后内部提交该语句。  
   
 10. 在 **“提示”** 框中，输入要应用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的查询提示或查询计划。 若要指定一个或多个查询提示，请输入一个有效的 OPTION 子句。  
   
-11. 单击“确定”。   
+11. 单击" **确定**"。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-plan-guide"></a>创建计划指南  
   

@@ -24,18 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033722"
 ---
 # <a name="statistics"></a>统计信息
   查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在少数一些情况下，您需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
   
-##  <a name="DefinitionQOStatistics"></a> 组件和概念  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> 组件和概念  
  统计信息  
- 查询优化的统计信息是一些对象，这些对象包含与值在表或索引视图的一列或多列中的分布有关的统计信息。 查询优化器使用这些统计信息来估计查询结果中的*基数*或行数。 通过这些*基数估计*，查询优化器可以创建高质量的查询计划。 例如，查询优化器可以使用基数估计选择索引查找运算符而不是耗费更多资源的索引扫描运算符，从而提高查询性能。  
+ 查询优化的统计信息是一些对象，这些对象包含与值在表或索引视图的一列或多列中的分布有关的统计信息。 查询优化器使用这些统计信息来估计查询结果中的 *基数*或行数。 通过这些基数估计**，查询优化器可以创建高质量的查询计划。 例如，查询优化器可以使用基数估计选择索引查找运算符而不是耗费更多资源的索引扫描运算符，从而提高查询性能。  
   
  每个统计信息对象都在包含一个或多个表列的列表上创建，并且包括显示值在第一列中的分布的直方图。 在多列上的统计信息对象也存储与各列中的值的相关性有关的统计信息。 这些相关性统计信息（或 *密度*）根据列值的不同行的数目派生。 有关统计信息对象的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)。  
   
@@ -103,9 +103,9 @@ ORDER BY s.name;
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
-##  <a name="CreateStatistics"></a>何时创建统计信息  
+##  <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> 何时创建统计信息  
  查询优化器已通过以下方式创建统计信息：  
   
 1.  在创建索引时，查询优化器为表或视图上的索引创建统计信息。 这些统计信息将创建在索引的键列上。 如果索引是一个筛选索引，则查询优化器将在为该筛选索引指定的行的同一子集上创建筛选统计信息。 有关筛选索引的详细信息，请参阅[创建筛选索引](../indexes/create-filtered-indexes.md)和 [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)。  
@@ -118,8 +118,7 @@ ORDER BY s.name;
   
  在以下任何情况适用时，考虑使用 CREATE STATISTICS 语句创建统计信息：  
   
--   
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问建议创建统计信息。  
+-   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问建议创建统计信息。  
   
 -   查询谓词包含尚不位于相同索引中的多个相关列。  
   
@@ -192,11 +191,11 @@ GO
   
 -   使用 [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) 语句创建的统计信息。  
   
--   使用 sys.stats** 和 sys.stats_columns** 目录视图监视统计信息****。 **sys_stats**包括**is_temporary**列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
+-   使用 **sys.stats** 和 **sys.stats_columns** 目录视图监视统计信息。 **sys_stats** 包含 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
   
  因为临时统计信息存储在 `tempdb` 中，所以，重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
   
-##  <a name="UpdateStatistics"></a>更新统计信息的时间  
+##  <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> 何时更新统计信息  
  查询优化器确定统计信息何时可能过期，然后在查询计划需要统计信息时更新它们。 在某些情况下，将 AUTO_UPDATE_STATISTICS 设置为 ON 时，可以通过频繁更新统计信息来优化查询计划，并因此提高查询性能。 可以使用 UPDATE STATISTICS 语句或存储过程 sp_updatestats 来更新统计信息。  
   
  更新统计信息可确保查询使用最新的统计信息进行编译。 不过，更新统计信息会导致查询重新编译。 我们建议不要太频繁地更新统计信息，因为需要在改进查询计划和重新编译查询所用时间之间权衡性能。 具体的折衷方案取决于你的应用程序。  
@@ -226,7 +225,7 @@ GO
   
  索引的重新生成、碎片整理或重新组织之类的操作不会更改数据的分布。 因此，在执行 ALTER INDEX REBUILD、DBCC REINDEX、DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，您无需更新统计信息。 查询优化器将在您使用 ALTER INDEX REBUILD 或 DBCC DBREINDEX 对表或视图重新生成索引时更新统计信息，但是，此统计信息更新是重新创建索引的副产品。 在 DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，查询优化器并不更新统计信息。  
   
-##  <a name="DesignStatistics"></a>有效使用统计信息的查询  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> 高效使用统计信息的查询  
  某些查询实现（如查询谓词中的局部变量和复杂的表达式）可能导致查询计划不是最佳的。 遵循有关高效使用统计信息的查询设计指导原则可以避免这种情况。 有关查询谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](/sql/t-sql/queries/search-condition-transact-sql)。  
   
  您可以通过应用查询设计指导原则来改进查询计划，这些查询设计指导原则高效地使用统计信息，以便改进在查询谓词中使用的表达式、变量和函数的 *基数估计* 。 在查询优化器不知道表达式、变量或函数的值时，它并不知道在直方图中要查找的值，因此无法从直方图检索最佳的基数估计。 查询优化器而是为直方图中所有取样行，在每个不同值的平均行数的基础上执行基数估计。 这将导致不是最佳的基数估计并且可能影响查询性能。  
@@ -325,11 +324,11 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;创建统计信息](/sql/t-sql/statements/create-statistics-transact-sql)   
- [UPDATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql)   
- [sp_updatestats (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
- [DBCC SHOW_STATISTICS (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
- [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
- [DROP STATISTICS (Transact-SQL)](/sql/t-sql/statements/drop-statistics-transact-sql)   
+ [&#40;Transact-sql&#41;更新统计信息](/sql/t-sql/statements/update-statistics-transact-sql)   
+ [sp_updatestats &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
+ [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
+ [ALTER DATABASE SET Options &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [Transact-sql&#41;&#40;DROP STATISTICS](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
+ [Transact-sql&#41;&#40;ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql)   
  [创建筛选索引](../indexes/create-filtered-indexes.md)  

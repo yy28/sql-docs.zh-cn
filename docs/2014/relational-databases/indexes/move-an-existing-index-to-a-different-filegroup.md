@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036206"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
@@ -40,20 +40,20 @@ ms.locfileid: "63036206"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果表具有聚集索引，则将此聚集索引移动到新文件组的同时也会将表移动到该文件组。  
   
 -   不能通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]来移动使用 UNIQUE 或 PRIMARY KEY 约束创建的索引。 若要移动这些索引，请在 [中使用](/sql/t-sql/statements/create-index-transact-sql) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]语句以及 (DROP_EXISTING=ON) 选项。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>使用表设计器将现有索引移到其他文件组  
   
@@ -61,19 +61,19 @@ ms.locfileid: "63036206"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击您要移动的索引的表，然后选择****“设计”。  
+3.  右键单击您要移动的索引的表，然后选择  “设计”。  
   
-4.  在 "**表设计器**" 菜单上，单击 "**索引/键**"。  
+4.  在“表设计器”  菜单上，单击“索引/键”  。  
   
 5.  选择要移动的索引。  
   
-6.  在主网格中，展开 **“数据空间规范”**。  
+6.  在主网格中，展开 **“数据空间规范”** 。  
   
 7.  选择 **“文件组或分区方案名称”** 并从列表中选择要将索引移动到的文件组或分区方案。  
   
 8.  单击“关闭”  。  
   
-9. 在 "**文件**" 菜单上，选择 "**保存**_table_name_。  
+9. 在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>在“对象资源管理器”中将现有索引移到其他文件组  
   
@@ -85,9 +85,9 @@ ms.locfileid: "63036206"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要移动的索引，然后选择****“属性”。  
+5.  右键单击要移动的索引，然后选择  “属性”。  
   
-6.  在 **“选择页”** 下，选择 **“存储”**。  
+6.  在 **“选择页”** 下，选择 **“存储”** 。  
   
 7.  选择移动此索引的目标文件组。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "63036206"
   
      如果要移动聚集索引，则可以使用联机处理。 联机处理使并发用户可以在索引操作期间访问基础数据和非聚集索引。 有关详细信息，请参阅 [Perform Index Operations Online](perform-index-operations-online.md)。  
   
-     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本均提供并行索引操作功能。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 有关并行索引操作的详细信息，请参阅[配置并行索引操作](configure-parallel-index-operations.md)。  
+     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本均提供并行索引操作功能。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 有关并行索引操作的详细信息，请参阅 [配置并行索引操作](configure-parallel-index-operations.md)。  
   
 8.  单击“确定”。   
   
- “索引属性 - index_name” 对话框的“存储”页中提供以下信息******** __：  
+ “索引属性 - index_name”对话框的“存储”页面中提供了以下信息    ：  
   
- **文件**  
+ **文件组**  
  在指定的文件组中存储索引。 该列表仅显示标准 (row) 文件组。 默认情况下，将在该列表中选择相应数据库的 PRIMARY 文件组。  
   
  **Filestream 文件组**  
@@ -141,7 +141,7 @@ ms.locfileid: "63036206"
 > [!NOTE]  
 >  如果指定的值比可用 CPU 数大，则将使用实际的可用 CPU 数。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中  
   

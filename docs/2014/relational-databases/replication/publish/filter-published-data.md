@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62989087"
 ---
 # <a name="filter-published-data"></a>筛选已发布数据
@@ -93,10 +93,8 @@ ms.locfileid: "62989087"
 |-----------------|-------------------------------------|  
 |主键列|主键列对于事务发布中的所有表都是必需的。 主键对于合并发布中的表并不是必需的，但如果存在主键列，则无法筛选该列。|  
 |外键列|使用新建发布向导创建的所有发布。 可以使用 Transact-SQL 存储过程来筛选外键列。 有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。|  
-|
-  **rowguid** 列|合并发布<sup>1</sup>|  
-|
-  **msrepl_tran_version** 列|允许可更新订阅的快照或事务发布|  
+|**rowguid** 列|合并发布<sup>1</sup>|  
+|**msrepl_tran_version** 列|允许可更新订阅的快照或事务发布|  
 |不允许 NULL 且没有默认值或 IDENTITY 属性集的列。|允许可更新订阅的快照或事务发布|  
 |具有唯一约束或索引的列|允许可更新订阅的快照或事务发布|  
 |SQL Server 7.0 合并发布中的所有列|SQL Server 7.0 合并发布中不能筛选的列。|  
@@ -131,10 +129,7 @@ ms.locfileid: "62989087"
   
 -   事务复制允许您将索引视图按视图或表来复制。 如果将视图按表复制，则无法从表中筛选列。  
   
- 行筛选器未设计为跨数据库工作。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 `sp_replcmds` 的执行（执行筛选器）限制为数据库所有者 (`dbo`)。 
-  `dbo` 不具有跨数据库权限。 
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，`sp_replcmds` 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]会限制此逻辑的执行，使恶意`dbo`不能劫持此执行路径。 例如，恶意的 `dbo` 可能在 CDC 表上添加触发器，然后这些触发器会在调用 `sp_replcmds` 的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 `dbo` 可以提升其权限。  
+ 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 `sp_replcmds` 的执行（执行筛选器）限制为数据库所有者 (`dbo`)。 `dbo` 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，`sp_replcmds` 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]会限制此逻辑的执行，使恶意`dbo`不能劫持此执行路径。 例如，恶意的 `dbo` 可能在 CDC 表上添加触发器，然后这些触发器会在调用 `sp_replcmds` 的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 `dbo` 可以提升其权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](publish-data-and-database-objects.md)  

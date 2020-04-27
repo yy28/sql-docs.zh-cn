@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149710"
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Replay 功能完成分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]活动。 为了捕获此活动，使用“重播”**** 选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](replay-option-distributed-replay-administration-tool.md)。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”  选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](replay-option-distributed-replay-administration-tool.md)。  
   
  存储结果跟踪文件的位置由位于每个客户端上的客户端配置文件 `<ResultDirectory>` 中的 XML 元素 `DReplayClient.xml`指定。 每次重播时，都将覆盖客户端结果目录中的跟踪文件。  
   
@@ -80,6 +80,6 @@ ms.locfileid: "63149710"
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay 要求](distributed-replay-requirements.md)   
  [管理工具命令行选项 &#40;Distributed Replay 实用工具&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [配置 Distributed Replay](configure-distributed-replay.md)  
   
   

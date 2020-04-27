@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155573"
 ---
 # <a name="the-memory-optimized-filegroup"></a>内存优化的文件组
@@ -68,6 +68,6 @@ ms.locfileid: "63155573"
  
   
 ## <a name="see-also"></a>另请参阅  
-[创建和管理用于内存优化对象的存储](creating-and-managing-storage-for-memory-optimized-objects.md)     
+[创建和管理内存优化对象的存储](creating-and-managing-storage-for-memory-optimized-objects.md)     
 [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)    
   

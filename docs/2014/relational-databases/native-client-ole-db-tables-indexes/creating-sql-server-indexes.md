@@ -1,5 +1,5 @@
 ---
-title: 创建 SQL Server 索引 |Microsoft Docs
+title: 创建 SQL Server 索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bda39528b6bc04fbff6faa4c72d85a4eccd576c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046449"
 ---
 # <a name="creating-sql-server-indexes"></a>创建 SQL Server 索引
   Native Client OLE DB 提供程序公开**IIndexDefinition：： CreateIndex**函数，允许使用者定义表的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新索引。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 提供程序将表索引创建为索引或约束。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向表所有者、数据库所有者和某些管理角色的成员提供约束创建特权。 默认情况下，只有表所有者才能对表创建索引。 因此，CreateIndex 的成功或失败不仅取决于应用程序用户的访问权限，还取决于所创建索引的类型****。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 提供程序将表索引创建为索引或约束。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向表所有者、数据库所有者和某些管理角色的成员提供约束创建特权。 默认情况下，只有表所有者才能对表创建索引。 因此，CreateIndex 的成功或失败不仅取决于应用程序用户的访问权限，还取决于所创建索引的类型****。  
   
  在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串******。 pTableID 的 eKind 成员必须是 DBKIND_NAME****。  
   
@@ -39,13 +38,12 @@ ms.locfileid: "63046449"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并支持对索引中的值进行升序排序。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者在任何 DBINDEXCOLUMNDESC 结构中指定 DBINDEX_COL_ORDER_DESC，则 Native Client OLE DB 提供程序将返回 E_INVALIDARG。  
   
- **CreateIndex**解释索引属性，如下所示。  
+ CreateIndex 对索引属性的解释如下****。  
   
 |属性 ID|说明|  
 |-----------------|-----------------|  
 |DBPROP_INDEX_AUTOUPDATE|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值****。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE**。|  
-|DBPROP_INDEX_CLUSTERED|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：控制索引聚类分析。<br /><br /> VARIANT_TRUE： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序尝试对[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表创建聚集索引。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持对任何表最多创建一个聚集索引。<br /><br /> VARIANT_FALSE： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序尝试对[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表创建非聚集索引。|  
+|DBPROP_INDEX_CLUSTERED|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：控制索引聚类分析。<br /><br /> VARIANT_TRUE： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序尝试对[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表创建聚集索引。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持对任何表最多创建一个聚集索引。<br /><br /> VARIANT_FALSE： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序尝试对[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表创建非聚集索引。|  
 |DBPROP_INDEX_FILLFACTOR|R/W：读/写<br /><br /> 默认值：0<br /><br /> 说明：指定用于存储的索引页所占的百分比。 有关详细信息，请参阅[创建索引](/sql/t-sql/statements/create-index-transact-sql)。<br /><br /> 变量类型为 VT_I4。 该值必须大于或等于 1 且小于或等于 100。|  
 |DBPROP_INDEX_INITIALIZE|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值****。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE**。|  
 |DBPROP_INDEX_NULLCOLLATION|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值****。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE**。|  

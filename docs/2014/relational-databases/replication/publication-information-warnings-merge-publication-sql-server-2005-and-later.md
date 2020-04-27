@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021688"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>发布信息，警告（合并发布，SQL Server 2005 及更高版本）
-  "**警告**" 选项卡适用于运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本的分发服务器。 使用 **“警告”** 选项卡可以为所选发布执行下列任务：  
+  **“警告”** 选项卡适用于运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本的分发服务器。 使用 **“警告”** 选项卡可以为所选发布执行下列任务：  
   
 -   启用警告。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63021688"
 -   定义与警告关联的警报。  
   
 ## <a name="warnings-thresholds-and-alerts"></a>警告、阈值和警报  
- 默认情况下，复制监视器会为未初始化的订阅显示警告：在包含订阅信息的页的“状态” **** 列中，显示“未初始化的订阅” **** 状态作为警告。 对于合并发布，可以指定以下附加条件是否导致警告：  
+ 默认情况下，复制监视器会为未初始化的订阅显示警告：在包含订阅信息的页的 **“状态”** 列中，显示 **“未初始化的订阅”** 状态作为警告。 对于合并发布，可以指定以下附加条件是否导致警告：  
   
 -   订阅即将过期。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63021688"
  除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 通过单击 **“配置警报”** 并在 **“配置复制警报”** 对话框中提供信息，可以定义警报。  
   
 ## <a name="options"></a>选项  
- **已启用**  
+ **Enabled**  
  选择此项可以启用警告并指定阈值。  
   
  **警报**  
@@ -79,8 +79,8 @@ ms.locfileid: "63021688"
 ## <a name="see-also"></a>另请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
  [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)   
+ [用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   
- [在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

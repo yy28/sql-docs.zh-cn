@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63025722"
 ---
 # <a name="solution-explorer"></a>解决方案资源管理器
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 "解决方案资源管理器" 窗格提供称为 "项目" 的容器，用于管理数据库脚本、查询、数据连接和文件等项。 一个或多个彼此相关联的项目可以组合在一个容器中（称为解决方案）。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“解决方案资源管理器”窗格提供了称为“项目”的容器，用于管理数据库脚本、查询、数据连接和文件等项。 一个或多个彼此相关联的项目可以组合在一个容器中（称为解决方案）。  
   
  “解决方案”包含一个或多个项目，以及定义整个解决方案所需的文件和元数据。 “项目”是一组文件和相关的元数据（如连接信息）。 解决方案和项目所包含的“项”表示创建数据库解决方案所需的脚本、查询、连接信息和文件。  
   

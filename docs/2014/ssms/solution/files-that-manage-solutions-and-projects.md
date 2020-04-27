@@ -19,34 +19,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e8481c1cce3e43287c04678ddae10ac1b0703af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044321"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>用于管理解决方案和项目的文件
-  本主题介绍特定于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的文件类型。 默认情况下，所有的解决方案及其项目均创建于 \My Documents\SQL Server Management Studio Projects 中。  
+  本主题介绍了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 专用文件类型。 默认情况下，所有的解决方案及其项目均创建于 \My Documents\SQL Server Management Studio Projects 中。  
   
 ## <a name="management-studio-solution-files"></a>Management Studio 解决方案文件  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]使用不同于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]或[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的文件类型。 这意味着无法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Visual Studio 中打开 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 解决方案。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案文件使解决方案资源管理器可以显示一个图形界面，以便管理文件。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用的文件类型不同于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio。 这意味着无法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Visual Studio 中打开 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 解决方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案文件使解决方案资源管理器可以显示一个图形界面，以便管理文件。  
   
 |分机|文件类型|说明|创建者|  
 |---------------|---------------|-----------------|----------------|  
-|.ssmssln|
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案对象|为环境提供对[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]项目、项目项和解决方案的磁盘上位置的引用|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
+|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案对象|为环境提供对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 项目、项目项和解决方案在磁盘上的位置的引用|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
   
 ## <a name="management-studio-project-files"></a>Management Studio 项目文件  
- 解决方案包含用于管理解决方案中对象的解决方案文件，同样，项目包含项目文件。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为项目所创建的项目文件类型取决于创建项目时使用的模板。 下表介绍了为每个项目所创建的文件类型。  
+ 解决方案包含用于管理解决方案中对象的解决方案文件，同样，项目包含项目文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为项目所创建的项目文件类型取决于创建项目时使用的模板。 下表介绍了为每个项目所创建的文件类型。  
   
 |分机|项目模板|  
 |---------------|----------------------|  
-|.ssmssqlproj|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目|  
-|.ssmsasproj|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本项目|  
+|.ssmssqlproj|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目|  
+|.ssmsasproj|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本项目|  
   
 ## <a name="location-of-solution-level-files"></a>解决方案级文件的位置  
  默认情况下，解决方案级文件创建于使用该解决方案创建的第一个项目的物理目录中。 可以通过创建解决方案指定解决方案的目录，也可以在创建新项目时指定该目录。  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151445"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP-IP 属性（"IP 地址" 选项卡）
@@ -26,8 +26,7 @@ ms.locfileid: "63151445"
  当重新启动时[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，更改将生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅联机丛书中的“如何：启动和停止 SQL Server Browser 服务”。  
   
 ## <a name="static-vs-dynamic-ports"></a>静态端口与动态端口  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例侦听端口 1433 上传入的连接。 可以出于安全原因或客户端应用程序要求更改此端口。 默认情况下，命名实例（包含 SQL Server Express）被配置为侦听动态端口。 若要配置静态端口，请将 **“TCP 动态端口”** 框保留为空，并在 **“TCP 端口”** 框中提供一个可用的端口号。 有关打开防火墙中的端口的详细信息，请参阅联机丛书中的“配置 Windows 防火墙以允许 SQL Server 访问”。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例侦听端口 1433 上传入的连接。 可以出于安全原因或客户端应用程序要求更改此端口。 默认情况下，命名实例（包含 SQL Server Express）被配置为侦听动态端口。 若要配置静态端口，请将 **“TCP 动态端口”** 框保留为空，并在 **“TCP 端口”** 框中提供一个可用的端口号。 有关打开防火墙中的端口的详细信息，请参阅联机丛书中的“配置 Windows 防火墙以允许 SQL Server 访问”。  
   
 ## <a name="dynamic-ports"></a>动态端口  
  如果某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已配置为侦听动态端口，则在启动时，该实例将检查操作系统中的可用端口，并为该端口打开一个端点。 传入连接必须指定要连接的端口号。 由于每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时端口号都可能会改变，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务监视端口，并将传入连接指向该实例的当前端口。 使用动态端口会增加通过防火墙连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复杂性，因为重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时端口号可能会改变，从而需要更改防火墙设置。 若要避免通过防火墙连接的问题，请将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用静态端口。  
@@ -50,14 +49,12 @@ ms.locfileid: "63151445"
  **“TCP 动态端口”**  
  查看或更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听的端口。 默认情况下， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例侦听端口 1433。  
   
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]可以侦听同一 IP 地址的多个端口，端口以逗号分隔的格式列出：1433,1500,1501。 此字段最多允许 2047 个字符。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]可以侦听同一 IP 地址的多个端口，端口以逗号分隔的格式列出：1433,1500,1501。 此字段最多允许 2047 个字符。  
   
  若要配置单个 IP 地址以侦听多个端口，还必须将“TCP/IP 属性”对话框的“协议”选项卡上的“全部侦听”参数设置为“否”     。 有关详细信息，请参阅“如何：将数据库引擎配置为侦听多个 TCP 端口”（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）。  
   
 ## <a name="adding-or-removing-ip-addresses"></a>添加或删除 IP 地址  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器显示安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时可用的 IP 地址。 如果发生以下情况，可用的 IP 地址也会随之改变：添加或删除网卡、动态分配的 IP 地址过期、重新配置网络结构或计算机的物理位置发生改变（例如便携式计算机在另一座大楼连接到网络）。 若要更改 IP 地址，可以编辑 **“IP 地址”** 框，然后重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器显示安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时可用的 IP 地址。 如果发生以下情况，可用的 IP 地址也会随之改变：添加或删除网卡、动态分配的 IP 地址过期、重新配置网络结构或计算机的物理位置发生改变（例如便携式计算机在另一座大楼连接到网络）。 若要更改 IP 地址，可以编辑 **“IP 地址”** 框，然后重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  
  [选择网络协议](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

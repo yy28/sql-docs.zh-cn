@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150822"
 ---
 # <a name="plan-guides"></a>计划指南
@@ -125,12 +125,12 @@ sp_create_plan_guide
   
  对于基于 SQL 或 TEMPLATE 的计划指南， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过对 @module_or_batch 参数和 @params 参数的值逐个字符地进行比较来将这两个值与查询匹配。 这意味着必须提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在实际批处理中接收的文本完全相同的文本。  
   
- 当@type = ' SQL ' 且@module_or_batch设置为 NULL 时，的值@module_or_batch将设置为的@stmt值。这意味着，在提交到** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，必须以相同的格式（字符对字符）提供 statement_text 的值。 不会执行内部转换来帮助完成该匹配。  
+ 当@type = ' SQL ' 且@module_or_batch设置为 NULL 时，的值@module_or_batch将设置为的@stmt值。这意味着，在提交到*statement_text* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，必须以相同的格式（字符对字符）提供 statement_text 的值。 不会执行内部转换来帮助完成该匹配。  
   
  当常规（SQL 或 OBJECT）计划指南和 TEMPLATE 计划指南都适用于语句时，将只使用常规计划指南。  
   
 > [!NOTE]  
->  包含要对其创建计划指南的语句的批处理不能包含 USE *database* 语句。  
+>   包含要对其创建计划指南的语句的批处理不能包含 USE *database* 语句。  
   
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>计划指南对计划缓存的影响  
  对模块创建计划指南将会从计划缓存中删除该模块的查询计划。 对批处理创建类型为 OBJECT 或 SQL 的计划指南会删除具有相同哈希值的批处理的查询计划。 创建类型为 TEMPLATE 的计划指南会从该数据库中的计划缓存中删除所有单语句批处理。  
@@ -153,6 +153,6 @@ sp_create_plan_guide
  [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [sys. plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys. fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+ [sys.fn_validate_plan_guide (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

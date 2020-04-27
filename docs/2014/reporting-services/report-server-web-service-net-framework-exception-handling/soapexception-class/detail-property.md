@@ -14,25 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046003"
 ---
 # <a name="detail-property"></a>Detail 属性
-  
-  **“SoapException”** 类的“Detail”[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **** 属性具有以下 XML 结构：  
+  “SoapException”[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **** 类的“Detail”**** 属性具有以下 XML 结构：  
   
 ## <a name="elements"></a>元素  
- **仔细**  
+ Detail****  
  包含所有其他错误详细信息元素的顶级元素。  
   
  **错误**  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特定的错误代码。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特定的错误代码。  
   
- **HttpStatus**  
+ HttpStatus****  
  HTTP 状态代码。  
   
  **消息**  
@@ -41,29 +39,28 @@ ms.locfileid: "63046003"
  **HelpLink**  
  指向某网站的帮助链接 URL，在该网站中可以找到有关错误的更多信息。 有关详细信息，请参阅 [HelpLink 元素](helplink-element.md)。  
   
- **LinkID**  
+ LinkID****  
  分配给链接的 ID。  
   
  **ProductName**  
  产品的名称。 默认值为“Microsoft SQL Server Reporting Services”****。  
   
  **ProductVersion**  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的版本。 最大长度为 15 个字符。 版本号的格式应如下所示：8.00.0xxx.00。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的版本。 最大长度为 15 个字符。 版本号的格式应如下所示：8.00.0xxx.00。  
   
- **ProductLocaleId**  
+ ProductLocaleId****  
  应用程序的 INTL DLL 的区域设置 ID 或语言 ID（例如，0x41A）。  
   
  **OperatingSystem**  
  在其中安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的操作系统。 有效值包括：“0”**** 表示独立于操作系统，“1”**** 表示 [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]，“16”**** 表示 Windows XP。  
   
- **CountryLocaleId**  
+ CountryLocaleId****  
  操作系统的区域设置 ID 或语言 ID。 例如，对应于 Windows 法语版的值为 0x040c。  
   
- **详细信息**  
+ MoreInformation****  
  一个 XML 字符串，其中包含在运行方法时出现的嵌套异常。  
   
- **数据源**  
+ **源**  
  “MoreInformation”**** 的一个子元素。 错误的源。  
   
  **消息**  

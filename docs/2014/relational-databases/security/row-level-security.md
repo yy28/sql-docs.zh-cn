@@ -17,15 +17,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985765"
 ---
 # <a name="row-level-security"></a>行级安全性
-  行级别安全性使客户能够根据执行查询的用户的特征（例如，组成员身份或执行上下文），控制对数据库表中的行的访问。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 中现在提供行级别安全性。 有关此功能的当前描述，请参阅当前文档中的 [行级别安全性](https://msdn.microsoft.com/library/dn765131.aspx) 。  
+  行级别安全性使客户能够根据执行查询的用户的特征（例如，组成员身份或执行上下文），控制对数据库表中的行的访问。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 中现在提供行级别安全性。 有关此功能的当前描述，请参阅当前文档中的 [行级别安全性](https://msdn.microsoft.com/library/dn765131.aspx) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Azure SQL 数据库创建安全策略&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   

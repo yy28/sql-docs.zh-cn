@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc521d814065a5585ca90dd0006b6299b3aa4722
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128737"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance 函数
@@ -37,11 +37,11 @@ HRESULT LocalDBDeleteInstance(
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *pInstanceName*  
  [输入] 要删除的 LocalDB 实例的名称。  
   
- *dwFlags*  
+ dwFlags**  
  [输入] 保留供将来使用。 当前应设置为 0。  
   
 ## <a name="returns"></a>返回  

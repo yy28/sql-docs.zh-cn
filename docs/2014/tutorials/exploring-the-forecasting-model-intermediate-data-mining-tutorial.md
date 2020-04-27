@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62992273"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>浏览预测模型（数据挖掘中级教程）
@@ -28,8 +28,8 @@ ms.locfileid: "62992273"
   
 -   [Microsoft 一般内容查看器](#bkmk_Content)  
   
-##  <a name="bkmk_Charts"></a>图表选项卡  
- 时序**** 查看器的 " [!INCLUDE[msCoName](../includes/msconame-md.md)]图表" 选项卡以图形方式显示每个序列，包括历史数据和预测。 时序图中的每条线都代表产品、区域和可预测属性的一种唯一组合。  
+##  <a name="charts-tab"></a><a name="bkmk_Charts"></a>图表选项卡  
+ 时序**Charts**查看器的 " [!INCLUDE[msCoName](../includes/msconame-md.md)]图表" 选项卡以图形方式显示每个序列，包括历史数据和预测。 时序图中的每条线都代表产品、区域和可预测属性的一种唯一组合。  
   
  该查看器右侧的图例列出根据下拉列表中的所选内容提供的时序。 您可以选中和清除图例中的复选框，以便控制图形中显示的时序。  
   
@@ -87,8 +87,8 @@ ms.locfileid: "62992273"
   
  [返回页首](#bkmk_Charts)  
   
-##  <a name="bkmk_Model"></a>模型选项卡  
- 在**** 数据挖掘设计器[!INCLUDE[msCoName](../includes/msconame-md.md)]中的时序查看器的 "模型" 选项卡上，您可以使用树形图形式查看预测模型。  
+##  <a name="model-tab"></a><a name="bkmk_Model"></a>模型选项卡  
+ 在**Model**数据挖掘设计器[!INCLUDE[msCoName](../includes/msconame-md.md)]中的时序查看器的 "模型" 选项卡上，您可以使用树形图形式查看预测模型。  
   
  首先请注意，由于您的数据描述三个不同地区（欧洲、北美和太平洋地区）多个产品系列销售情况的两个不同的度量值（“金额”和“数量”），您所构建的模型实际包含 24 个不同的树，每个树表示由不同的地区、产品和可预测属性组合而成的销售模式的一个模型。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62992273"
   
 -   如果某一时序的树形图包含多个分支，这表示检测到的时序太过复杂，无法表示为单个公式。 相反，树关系图可能包含多个分支，每个分支标有导致树*拆分*的条件。 当树拆分时，每个分支表示不同的时间段，这些时间段内的趋势可描述为单个公式。  
   
-     例如，如果您查看图表图，并看到销售量在九月开始发生的突然跳转，并经历年末假期，则可以切换到 "**模型**" 视图，以查看趋势变化的准确日期。 树中表示 "九月前" 和 "九月之后" 的分支将包含不同的公式：一个公式以数学方式描述了拆分的销售趋势，另一个公式描述了九月的销售趋势年末假期。  
+     例如，如果您查看图表图，并看到销售量在九月开始发生的突然跳转，并经历年末假期，则可以切换到 "**模型**" 视图，以查看趋势变化的准确日期。 表示 "九月前" 和 "九月之后" 的树中的分支将包含不同的公式：一个公式以数学方式描述了拆分的销售趋势，另一个公式描述了九月到年末假期的销售趋势。  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>浏览时序模型的决策树  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62992273"
   
  [返回页首](#bkmk_Charts)  
   
-##  <a name="bkmk_Content"></a>可有可无一般内容树查看器  
+##  <a name="optional-generic-content-tree-viewer"></a><a name="bkmk_Content"></a>可有可无一般内容树查看器  
  除了时序的自定义查看器外， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]还提供了**MicrosoftGeneric 内容树查看器**，以用于所有数据挖掘模型。 此查看器具有以下优点：  
   
 -   **Microsoft 时序查看器**：此视图合并两个算法的结果。 尽管您可以分别查看每个序列，但您无法确定每种算法的结果是如何合并的。 此外，在此视图中，工具提示和挖掘图例只显示最重要的统计数据。  

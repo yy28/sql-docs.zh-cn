@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021950"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 订阅服务器
-  有关支持的非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]订阅服务器列表[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，请参阅[非 SQL Server 订阅服务器](non-sql-server-subscribers.md)。 本主题包含有关 ODBC 驱动程序和 OLE DB 访问接口要求的信息。  
+  有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]订阅服务器列表，请参阅 [Non-SQL Server Subscribers](non-sql-server-subscribers.md)。 本主题包含有关 ODBC 驱动程序和 OLE DB 访问接口要求的信息。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC 驱动程序要求  
  ODBC 驱动程序：  
@@ -40,15 +40,15 @@ ms.locfileid: "63021950"
 ## <a name="replicating-using-ole-db-interfaces"></a>使用 OLE DB 接口进行复制  
  OLE DB 访问接口必须为事务复制支持下列对象：  
   
--   **DataSource**对象  
+-   **DataSource** 对象  
   
--   **Session**对象  
+-   **Session** 对象  
   
--   **Command**对象  
+-   **Command** 对象  
   
--   **行集**对象  
+-   **Rowset** 对象  
   
--   **Error**对象  
+-   **Error** 对象  
   
 ### <a name="datasource-object-interfaces"></a>DataSource 对象接口  
  为了连接到数据源，需要下列接口：  
@@ -59,7 +59,7 @@ ms.locfileid: "63021950"
   
 -   `IDBProperties`  
   
- 如果访问接口支持 **IDBInfo** 接口，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用该接口检索信息（如引用的标识符字符、最大 SQL 语句长度，以及表名和列名中最大字符数）。  
+ 如果提供程序支持 **IDBInfo** 接口，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用该接口检索信息（如引用的标识符字符、最大 SQL 语句长度，以及表名和列名中最大字符数）。  
   
 ### <a name="session-object-interfaces"></a>会话对象接口  
  下列接口是必需的：  
@@ -89,7 +89,7 @@ ms.locfileid: "63021950"
   
 -   **ICommandWithParameters**  
   
- **IAccessor**是创建参数访问器所必需的。 如果访问接口支持**IColumnRowset**， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]则使用该接口来确定列是否为标识列。  
+ **IAccessor** 是创建参数访问器所必需的。 如果访问接口支持**IColumnRowset**， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]则使用该接口来确定列是否为标识列。  
   
 ### <a name="rowset-object-interfaces"></a>Rowset 对象接口  
  下列接口是必需的：  
@@ -100,7 +100,7 @@ ms.locfileid: "63021950"
   
 -   **IColumnsInfo**  
   
- 应用程序应打开在订阅数据库中创建的已复制表上的行集。 访问行集中的数据需要**IColumnsInfo**和**IAccessor** 。  
+ 应用程序应打开在订阅数据库中创建的已复制表上的行集。 访问行集中的数据需要**IColumnsInfo** 和 **IAccessor** 。  
   
 ### <a name="error-object-interfaces"></a>Error 对象接口  
  下列接口用于管理错误：  

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62961063"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 事件类
-  当对 OLE DB 提供程序的调用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回错误时，将在中发生 OLEDB Errors 事件类。 请在跟踪中包括此事件类，以便查看 OLE DB 访问接口中失败的 HRESULT。  
+  当对 OLE DB 提供程序的调用返回错误时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将发生 OLEDB Errors 事件类。 请在跟踪中包括此事件类，以便查看 OLE DB 访问接口中失败的 HRESULT。  
   
  当跟踪中包含 OLEDB Errors 事件类时，开销量取决于跟踪过程中 OLE DB 访问接口针对数据库发生错误的频率。 如果此类错误频繁发生，跟踪的性能可能会显著降低。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62961063"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
-|DatabaseID|`int`|由 USE *database*语句指定的数据库的 ID; 如果未对给定实例发出 use database 语句，则为默认*数据库*的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在跟踪中捕获到 ServerName 数据列并且服务器可用，则将显示数据库的名称。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database*语句指定的数据库的 ID; 如果未对给定实例发出 use database 语句，则为默认*数据库*的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|`nvarchar`|正在其中运行用户语句的数据库的名称。|35|是|  
 |错误|`int`|访问接口返回的 HRESULT。|31|是|  
 |EventClass|`int`|事件类型 = 61。|27|否|  
@@ -55,7 +55,7 @@ ms.locfileid: "62961063"
 |TransactionID|`bigint`|系统分配的事务 ID。|4|是|  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Transact-SQL 中的 OLE 自动化对象](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
   

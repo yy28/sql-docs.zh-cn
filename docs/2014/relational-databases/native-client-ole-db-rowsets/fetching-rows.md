@@ -1,5 +1,5 @@
 ---
-title: 提取行 |Microsoft Docs
+title: 提取行 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140472"
 ---
 # <a name="fetching-rows"></a>提取行
@@ -51,7 +51,7 @@ ms.locfileid: "63140472"
   
  若要从数据库提取行，使用者可调用某个方法，例如 IRowset::GetNextRows 或 IRowsetLocate::GetRowsAt********。 这些提取操作将行数据从服务器放入提供程序的行缓冲区中。 使用者不能直接访问提供程序的行缓冲区。 使用者使用 IRowset::GetData 从提供程序的缓冲区将数据复制到使用者缓冲区，并使用 IRowsetChange::SetData 将数据更改从使用者缓冲区复制到提供程序缓冲区********。  
   
- 使用者调用 GetData 方法，并传递行的句柄、取值函数的句柄和使用者分配的缓冲区的指针****。 工作**项转换数据**，并返回在用于创建访问器的绑定中指定的列。 使用者可以使用不同取值函数和缓冲区对某行多次调用 GetData，因此使用者可以获得相同数据的多个副本****。  
+ 使用者调用 GetData 方法，并传递行的句柄、取值函数的句柄和使用者分配的缓冲区的指针****。 GetData 转换数据，并返回在用于创建取值函数的绑定中指定的列****。 使用者可以使用不同取值函数和缓冲区对某行多次调用 GetData，因此使用者可以获得相同数据的多个副本****。  
   
  可以采用多种方式处理来自变长列的数据。 首先，可以将这样的列绑定到使用者的结构的有限部分。 这将导致当数据的长度超过缓冲区的长度时发生截断。 通过检查状态是否为 DBSTATUS_S_TRUNCATED，使用者可以确定是否已发生截断。 返回的长度始终是真实的字节长度，因此使用者还可以确定有多少数据被截断。  
   

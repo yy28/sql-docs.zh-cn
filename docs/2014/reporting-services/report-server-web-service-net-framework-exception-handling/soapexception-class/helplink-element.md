@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046019"
 ---
 # <a name="helplink-element"></a>HelpLink 元素
@@ -27,15 +27,14 @@ ms.locfileid: "63046019"
   
  下表列出 HelpLink**** URL 的参数。  
   
-|参数|值|  
+|参数|Value|  
 |--------------|-----------|  
-|**EvtSrc**|“Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings”|  
-|**E**|报表服务器错误代码，例如，rsReservedItem。|  
-|**ProdName**|“Microsoft SQL%20Server%20Reporting%20Services”。 产品名称的值已进行 URL 编码。|  
-|**ProdVer**|
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的版本号。 值 "8.00" 指示[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。|  
+|EvtSrc****|“Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings”|  
+|EvtID****|报表服务器错误代码，例如，rsReservedItem。|  
+|ProdName****|“Microsoft SQL%20Server%20Reporting%20Services”。 产品名称的值已进行 URL 编码。|  
+|ProdVer****|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的版本号。 值 "8.00" 指示[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。|  
   
- 下面的示例演示为**** 错误代码`rsReservedItem`返回的 HelpLink URL。 当用户尝试修改或删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的保留项时，将出现此错误。  
+ 下面的示例演示为**HelpLink**错误代码`rsReservedItem`返回的 HelpLink URL。 当用户尝试修改或删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的保留项时，将出现此错误。  
   
 ```  
 https://www.microsoft.com/products/ee/transform.aspx?  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032322"
 ---
 # <a name="parameter-and-result-metadata"></a>参数和结果元数据
@@ -40,7 +40,7 @@ ms.locfileid: "63032322"
 |SQL_DESC_TYPE_NAME|`date`|`time`|在 IRD 中为 `smalldatetime`，在 IPD 中为 `datetime2`|在 IRD 中为 `datetime`，在 IPD 中为 `datetime2`|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|空值|空值|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|空值|  
+|SQL_CA_SS_SERVER_TYPE|不适用|不适用|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|不适用|  
   
  有时，值范围中存在不连贯性。 例如，8,10..16 中缺少 9。 这是因为当小数精度大于零时添加了小数点。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63032322"
   
  SQL_CA_SS_VARIANT_SQL_TYPE 是一个新的描述符字段。 将此字段添加到 IRD 和 IPD 中是为了使应用程序能够指定与 `sqlvariant` (SQL_SSVARIANT) 列和参数关联的值类型。  
   
- SQL_CA_SS_SERVER_TYPE 是一个新的仅适用于 IPD 的字段，用于使应用程序能够控制如何将作为 SQL_TYPE_TYPETIMESTAMP（或具有 C 类型 SQL_C_TYPE_TIMESTAMP 的 SQL_SS_VARIANT）绑定的参数的值发送到服务器。 如果在调用 SQLExecute 或 SQLExecDirect 时，SQL_DESC_CONCISE_TYPE SQL_TYPE_TIMESTAMP （或 SQL_SS_VARIANT，C 类型为 SQL_C_TYPE_TIMESTAMP），则 SQL_CA_SS_SERVER_TYPE 的值将确定参数值的表格格式数据流（TDS）类型，如下所示：  
+ SQL_CA_SS_SERVER_TYPE 是一个新的仅适用于 IPD 的字段，用于使应用程序能够控制如何将作为 SQL_TYPE_TYPETIMESTAMP（或具有 C 类型 SQL_C_TYPE_TIMESTAMP 的 SQL_SS_VARIANT）绑定的参数的值发送到服务器。 如果在调用 SQLExecute 或 SQLExecDirect 时，SQL_DESC_CONCISE_TYPE 是 SQL_TYPE_TIMESTAMP （或 SQL_SS_VARIANT，而 C 类型为 SQL_C_TYPE_TIMESTAMP），则 SQL_CA_SS_SERVER_TYPE 的值将确定参数值的表格格式数据流（TDS）类型，如下所示：  
   
 |SQL_CA_SS_SERVER_TYPE 的值|SQL_DESC_PRECISION 的有效值|SQL_DESC_LENGTH 的有效值|TDS 类型|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  

@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012267"
 ---
 # <a name="accessing-the-soap-api"></a>访问 SOAP API
@@ -34,14 +34,12 @@ ms.locfileid: "63012267"
 ## <a name="referencing-the-reporting-services-wsdl"></a>引用 Reporting Services WSDL  
  若要成功调用某一 Web 服务，您必须知道如何访问该服务、该服务支持的操作、该服务预期的参数以及该服务返回的内容。 WSDL 在可由计算机读取或处理的 XML 文档中提供这些信息。  
   
- 该报表服务器 Web 服务在三个不同的端点中公开。 该 WSDL 文件的名称对于每个端点并不相同。 
-  <xref:ReportService2010> 端点包含一些方法，用于管理本机模式或 SharePoint 集成模式下报表服务器中的对象。 用于此端点的 WSDL 通过 `ReportService2010.asmx?wsdl.` 访问。  
+ 该报表服务器 Web 服务在三个不同的端点中公开。 该 WSDL 文件的名称对于每个端点并不相同。 <xref:ReportService2010> 端点包含一些方法，用于管理本机模式或 SharePoint 集成模式下报表服务器中的对象。 用于此端点的 WSDL 通过 `ReportService2010.asmx?wsdl.` 访问。  
   
 > [!NOTE]  
->  在 <xref:ReportService2005> 中不推荐使用 <xref:ReportService2006> 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
+>  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中不推荐使用 <xref:ReportService2005> 和 <xref:ReportService2006> 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
   
--   
-  <xref:ReportExecution2005> 端点允许开发人员以编程方式在报表服务器中处理和呈现报表。 用于此端点的 WSDL 通过 `ReportExecution2005.asmx?wsdl` 访问。  
+-   <xref:ReportExecution2005> 端点允许开发人员以编程方式在报表服务器中处理和呈现报表。 用于此端点的 WSDL 通过 `ReportExecution2005.asmx?wsdl` 访问。  
   
  WSDL 可由支持 SOAP 和 Web 服务的开发工具包（如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK）使用。  
   

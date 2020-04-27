@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150620"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>分别保存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
@@ -41,7 +41,7 @@ ms.locfileid: "63150620"
   
     -   单击“保存到文件”****，将跟踪内容捕获到文件中。 指定 **“设置最大文件大小”** 的值。  
   
-         也可以选择 **“启用文件滚动更新”** 和 **“服务器处理跟踪数据”**。  
+         （可选）选择 "**启用文件滚动更新**" 和 "**服务器处理跟踪数据**"。  
   
     -   单击“保存到表”****，将跟踪捕获到数据库表中。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "63150620"
 11. 若要在 SQL Server Management Studio 中查看 **Showplan XML Statistics Profile** 事件文件，请在 **“文件”** 菜单上，指向 **“打开”**，然后单击 **“文件”**。 导航到保存 **Showplan XML Statistics Profile** 事件文件的目录，以选择一个事件文件并将其打开。 **Showplan XML Statistics Profile** 事件文件的文件扩展名为 .SQLPlan。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 SQL Server Profiler 中通过显示计划结果来分析查询](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
+ [在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

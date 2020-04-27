@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046762"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 事件类
@@ -32,7 +32,7 @@ ms.locfileid: "63046762"
 |BinaryData|`image`|与在跟踪中捕获的事件类相关的二进制值。|2|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |CPU|`int`|事件所用的 CPU 时间。 单位为微秒，以 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]为开头。 单位为微秒，在早期版本中。|18|是|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在跟踪中捕获到 ServerName 数据列并且服务器可用，则将显示数据库的名称。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|`nvarchar`|正在其中运行用户语句的数据库的名称。|35|是|  
 |Duration|`bigint`|事件占用的时间量。 单位为微秒，以 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]为开头。 单位为微秒，在早期版本中。|13|是|  
 |EndTime|`datetime`|远程过程调用的结束时间。|15|是|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62999543"
 ---
 # <a name="name-not-found-dialog-box"></a>“找不到名称”对话框
@@ -26,18 +26,18 @@ ms.locfileid: "62999543"
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **更正此信息并重新搜索**  
- 选中该选项可允许使用“选择此对象类型”****、“对象类型”**** 和“输入对象名称”****。  
+ 选中该选项可允许使用“选择此对象类型”  、“对象类型”  和“输入对象名称”  。  
   
  **选择此对象类型**  
- 显示使用“对象类型”**** 按钮选择的对象类型。  
+ 显示使用“对象类型”  按钮选择的对象类型。  
   
  **对象类型**  
- 单击此项可打开“选择对象类型”**** 对话框，然后从列表中选择对象类型。  
+ 单击此项可打开“选择对象类型”  对话框，然后从列表中选择对象类型。  
   
  **输入对象名称**  
  包含未找到的对象的名称。 可以修改对象的名称，或者键入新的对象名称。  
   
- ******从选择中**删除*\<对象名称>*      
- 选中该选项可以关闭“找不到名称”对话框****，并从“选择对象”**** 对话框中删除该项。  
+ **Remove****从选择中**删除*\<对象名称>*      
+ 选中该选项可以关闭“找不到名称”对话框  ，并从“选择对象”  对话框中删除该项。  
   
   

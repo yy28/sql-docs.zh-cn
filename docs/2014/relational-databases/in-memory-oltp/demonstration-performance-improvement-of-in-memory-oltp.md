@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071782"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存中 OLTP 的性能改进
@@ -185,10 +185,10 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [用于演示内存中 OLTP 的 AdventureWorks 扩展](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
  [内存中 OLTP &#40;内存中优化&#41;](in-memory-oltp-in-memory-optimization.md)   
  [内存优化表](memory-optimized-tables.md)   
- [本机编译存储过程](natively-compiled-stored-procedures.md)   
+ [本机编译的存储过程](natively-compiled-stored-procedures.md)   
  [使用内存优化表的要求](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [创建过程和内存优化表](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [&#40;Transact-sql&#41;更改数据库文件和文件组选项](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [CREATE PROCEDURE 和内存优化表](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

@@ -17,10 +17,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63065545"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>使用 Named Pipes 创建有效的连接字符串
@@ -28,7 +28,7 @@ ms.locfileid: "63065545"
   
  若要创建一个有效的管道名称，必须执行以下操作：  
   
--   指定 **“别名”** 。  
+-   指定 **“别名”**。  
   
 -   选择 "**命名管道**" 作为**协议**。  
   

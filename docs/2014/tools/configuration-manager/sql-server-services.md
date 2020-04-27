@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b9f31035b2d87ca89154497c90089fb72d0987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150590"
 ---
 # <a name="sql-server-services"></a>SQL Server 服务
-  本部分包含 Configuration Manager 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "服务" 对话框的 F1 帮助主题。  
+  本节包含按 F1 后看到的有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 配置管理器中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“服务”对话框的帮助主题。  
   
 > [!NOTE]  
 >  如果在未承载资源的群集节点上打开 **SQL Server 配置管理器** ，将显示这些服务已停止。  

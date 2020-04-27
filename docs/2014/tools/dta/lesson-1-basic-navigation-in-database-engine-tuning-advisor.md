@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fb0e6219d06b83de9311099189dd1cbab31dd2f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63010750"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 课：数据库引擎优化顾问中的基本导航
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 课：数据库引擎优化顾问基本导览
   数据库引擎优化顾问提供了一种基于图形用户界面 (GUI) 的方式来查看优化会话和优化建议报表。 本课程将介绍如何启动工具以及如何配置显示。 在本课程的结尾，您将了解启动工具的各种方式以及如何配置其显示，从而支持定期执行的优化任务。  
   
  本课程包含以下主题：  

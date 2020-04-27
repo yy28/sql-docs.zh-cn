@@ -19,17 +19,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035648"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户故障排除 (SQL Server)
-  要登录到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，主体必须有一个有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证是否允许主体连接到该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 服务器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的登录名**server_principals**在 syslogins 目录视图和**** 兼容性视图中可见。  
+  要登录到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，主体必须有一个有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证是否允许主体连接到该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 服务器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的登录名**server_principals**在 syslogins 目录视图和**sys.syslogins**兼容性视图中可见。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名使用映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户访问各个数据库。 此规则有两种例外情况：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名使用映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户访问各个数据库。 此规则有两种例外情况：  
   
 -   guest 帐户。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63035648"
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名与数据库用户的映射关系的信息存储在数据库中。 其中包括数据库用户的名称以及对应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的 SID。 该数据库用户的权限用于在数据库中进行授权。  
   
- 在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户”  。 如果删除了对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则数据库用户可能会变为孤立用户。 另外，在数据库还原或附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他实例之后，数据库用户也可能变为孤立用户。 如果未在新服务器实例中提供数据库用户映射到的 SID，则该用户可能变为孤立用户。  
+ 在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户” ** 。 如果删除了对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则数据库用户可能会变为孤立用户。 另外，在数据库还原或附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他实例之后，数据库用户也可能变为孤立用户。 如果未在新服务器实例中提供数据库用户映射到的 SID，则该用户可能变为孤立用户。  
   
 > [!NOTE]  
 >  除非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在数据库中启用了**guest** ，否则登录名无法访问其缺少相应的数据库用户的数据库。 有关创建数据库用户帐户的信息，请参阅[CREATE user &#40;transact-sql&#41;](/sql/t-sql/statements/create-user-transact-sql)。  

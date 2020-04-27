@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067654"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
@@ -28,8 +28,8 @@ ms.locfileid: "63067654"
   
 |关键字|是否返回列表？|是否可选？|说明|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|空值|否|**SQLDataSources**返回的数据源的名称。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
-|DRIVER|空值|否|Microsoft？？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC driver name 为 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
+|DSN|不适用|否|**SQLDataSources**返回的数据源的名称。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
+|DRIVER|不适用|否|Microsoft？？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC driver name 为 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
   
 ## <a name="level-2"></a>级别 2  
   
@@ -46,14 +46,13 @@ ms.locfileid: "63067654"
 |关键字|是否返回列表？|是否可选？|说明|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库的名称。|  
-|LANGUAGE|是|是|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的区域语言。|  
+|LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的区域语言。|  
   
  **SQLBrowseConnect**忽略存储在 ODBC 数据源定义中的数据库和语言关键字的值。 如果传递到**SQLBrowseConnect**的连接字符串中指定的数据库或语言无效，则**SQLBrowseConnect**将返回 SQL_NEED_DATA 和3级连接属性。  
   
  以下属性（通过调用[SQLSetConnectAttr](sqlsetconnectattr.md)设置）确定由**SQLBrowseConnect**返回的结果集。  
   
-|Attribute|说明|  
+|特性|描述|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果将其设置为 SQL_MORE_INFO_YES，则**SQLBrowseConnect**将返回服务器属性的扩展字符串。<br /><br /> 下面是**SQLBrowseConnect**返回的扩展字符串示例： ServerName\InstanceName;聚集： No;版本：8.00.131<br /><br /> 在此字符串中，分号用于分隔与服务器有关的各部分信息， 逗号用于分隔不同的服务器实例。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定了服务器名称，则**SQLBrowseConnect**将返回指定服务器的信息。 如果 SQL_COPT_SS_BROWSE_SERVER 设置为 NULL，则**SQLBrowseConnect**将返回域中所有服务器的信息。<br /><br /> 由于网络问题， **SQLBrowseConnect**可能无法及时接收来自所有服务器的响应。 因此，每个请求所返回的服务器列表都可能不同。|  

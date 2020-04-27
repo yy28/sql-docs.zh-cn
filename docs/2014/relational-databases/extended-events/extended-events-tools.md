@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137052"
 ---
 # <a name="extended-events-tools"></a>扩展事件工具
@@ -31,9 +31,9 @@ ms.locfileid: "63137052"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序。 这是一个强大的工具，可用于创建、更改和管理扩展事件会话。 有关详细信息，请参阅 [对扩展事件使用 PowerShell 提供程序](use-the-powershell-provider-for-extended-events.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 列中的一个值匹配。 该工具可用于创建和执行在扩展事件主题中提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](../../ssms/object/object-explorer.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 该工具可用于创建和执行在扩展事件主题中提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](../../ssms/object/object-explorer.md)。  
   
- 除了您创建的会话之外，在服务器上存在一个默认的系统运行状况会话。 该会话收集的系统数据可用于帮助解决性能问题。 有关详细信息，请参阅 [使用 system_health 会话](use-the-ssms-xe-profiler.md)。  
+ 除了您创建的会话之外，在服务器上存在一个默认的系统运行状况会话。 该会话收集的系统数据可用于帮助解决性能问题。 有关详细信息，请参阅[使用 System_health 会话](use-the-ssms-xe-profiler.md)。  
   
 ## <a name="ddl-statements"></a>DDL 语句  
  请以下 DDL 语句可以创建、更改和删除扩展事件会话。  
@@ -83,9 +83,9 @@ ms.locfileid: "63137052"
 |[trace_xe_action_map (Transact-SQL)](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|映射到 SQL 跟踪列 ID 的每个扩展事件操作各占一行。|  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](../views/views.md)   
- [目录视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [SQL Server 扩展事件表 (Transact-SQL)](/sql/relational-databases/system-tables/system-tables-transact-sql)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](../views/views.md)   
+ [Transact-sql&#41;的目录视图 &#40;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
+ [&#40;Transact-sql&#41;SQL Server 扩展事件表](/sql/relational-databases/system-tables/system-tables-transact-sql)   
  [使用 system_health 会话](use-the-ssms-xe-profiler.md)   
  [对扩展事件使用 PowerShell 提供程序](use-the-powershell-provider-for-extended-events.md)  
   

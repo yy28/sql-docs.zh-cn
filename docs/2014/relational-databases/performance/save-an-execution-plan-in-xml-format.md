@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150865"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式保存执行计划
@@ -65,9 +65,9 @@ ms.locfileid: "63150865"
   
 4.  在“结果”**** 窗格中，右键单击包含查询计划的“Microsoft SQL Server XML 显示计划”****，然后单击“将结果另存为”****。  
   
-5.  在“保存 **网格或文本> 结果”** \<**** 对话框中的“保存类型”**** 框中，单击“所有文件(**.\*)”\***。  
+5.  在 "**保存** \<网格或文本>**结果**" 对话框的 "**保存类型**" 框中，单击 "**所有文件\*（\*.）**"。  
   
-6.  在“文件名”框中，提供“**名称>.sqlplan”格式的名称，然后单击“保存”**\<********。  
+6.  在 "**文件名" 框中**，提供名称，> 格式\<为 "** .sqlplan**"，然后单击 "**保存**"。  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>使用 SQL Server Management Studio 选项保存执行计划  
   
@@ -77,22 +77,22 @@ ms.locfileid: "63150865"
   
      此外，还可以在 **“文件”** 菜单上选择 **“将执行计划另存为”** 。  
   
-3.  在“另存为”**** 对话框中，确保将“保存类型”**** 设置为“执行计划文件(**.sqlplan)”\***。  
+3.  在“另存为”**** 对话框中，确保将“保存类型”**** 设置为“执行计划文件(\*.sqlplan)”****。  
   
-4.  在“文件名”框中，提供“**名称>.sqlplan”格式的名称，然后单击“保存”**\<********。  
+4.  在 "**文件名" 框中**，提供名称，> 格式\<为 "** .sqlplan**"，然后单击 "**保存**"。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中打开保存的 XML 查询计划  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“文件”** 菜单上，选择 **“打开”**，然后单击 **“文件”**。  
   
-2.  在“打开文件”**** 对话框中，将“文件类型”**** 设置为“执行计划文件(**.sqlplan)”\***，以筛选出保存的 XML 查询计划文件的列表。  
+2.  在“打开文件”**** 对话框中，将“文件类型”**** 设置为“执行计划文件(\*.sqlplan)”****，以筛选出保存的 XML 查询计划文件的列表。  
   
 3.  选择要查看的 XML 查询计划文件，然后单击 **“打开”**。  
   
      此外，还可以在 Windows 资源管理器中双击扩展名为 **.sqlplan**的文件。 该计划便会在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开。  
   
 ## <a name="see-also"></a>另请参阅  
- [SET SHOWPLAN_XML (Transact-SQL)](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [将 STATISTICS XML &#40;Transact-sql&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+ [将 SHOWPLAN_XML 设置 &#40;Transact-sql&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
+ [SET STATISTICS XML (Transact-SQL)](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

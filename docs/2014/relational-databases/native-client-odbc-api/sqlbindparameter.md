@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067813"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
@@ -31,7 +31,7 @@ ms.locfileid: "63067813"
   
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序，则在绑定输入参数时指定 SQL_PARAM_INPUT。 在绑定用 OUTPUT 关键字定义的存储过程参数时，只指定 SQL_PARAM_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT。  
   
- [](sqlrowcount.md)如果绑定参数数组的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数组元素导致语句执行出错，则 Native Client ODBC 驱动程序的 SQLRowCount 不可靠。 ODBC 语句属性 SQL_ATTR_PARAMS_PROCESSED_PTR 报告在发生错误前已处理的行数。 然后，如有必要，该应用程序将遍历其参数状态数组，以便发现成功执行的语句数目。  
+ [SQLRowCount](sqlrowcount.md)如果绑定参数数组的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数组元素导致语句执行出错，则 Native Client ODBC 驱动程序的 SQLRowCount 不可靠。 ODBC 语句属性 SQL_ATTR_PARAMS_PROCESSED_PTR 报告在发生错误前已处理的行数。 然后，如有必要，该应用程序将遍历其参数状态数组，以便发现成功执行的语句数目。  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 字符类型的绑定参数  
  如果传入的 SQL 数据类型为字符类型，则*ColumnSize*的大小以字符（而非字节）为单位。 如果数据字符串的长度大于8000，则应将*ColumnSize*设置为`SQL_SS_LENGTH_UNLIMITED`，以指示对 SQL 类型的大小没有限制。  
@@ -53,8 +53,7 @@ ms.locfileid: "63067813"
  有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>SQLBindParameter 对大型 CLR UDT 的支持  
- 
-  `SQLBindParameter` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLBindParameter` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC API 实现细节](odbc-api-implementation-details.md)   

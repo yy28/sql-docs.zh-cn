@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150707"
 ---
 # <a name="monitor-and-tune-for-performance"></a>监视和优化性能
@@ -73,12 +73,12 @@ ms.locfileid: "63150707"
 |[识别瓶颈](identify-bottlenecks.md)|介绍如何监视和跟踪服务器性能，以发现瓶颈。|  
 |[服务器性能和活动监视](server-performance-and-activity-monitoring.md)|介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 性能和活动监视工具。|  
 |[显示和保存执行计划](display-and-save-execution-plans.md)|介绍如何显示执行计划并将其保存到 XML 格式的文件中。|  
-|[Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)|查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。|  
+|[使用查询存储来监视性能](monitoring-performance-by-using-the-query-store.md)|查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。|  
   
 ## <a name="see-also"></a>另请参阅  
  [跨企业的自动化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [数据库引擎优化顾问](database-engine-tuning-advisor.md)   
- [监视资源使用情况（系统监视器）](../performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [监视资源使用情况 &#40;系统监视器&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

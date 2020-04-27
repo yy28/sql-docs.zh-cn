@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 18b166472cff011b3766645dde61f562c766ff2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140449"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg（扩展存储过程 API）
@@ -53,7 +53,7 @@ msglen
 ```  
   
 ## <a name="arguments"></a>参数  
- *srvproc*  
+ srvproc**  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
  *Msgnum*  
@@ -62,10 +62,10 @@ msglen
  *严重性*  
  指定错误的严重性。 严重性小于或等于 10 将被视为信息性消息；否则为错误消息。  
   
- *消息*  
+ *message*  
  指向要发送到客户端的 Unicode 字符串的指针。  
   
- *msglen*  
+ msglen**  
  指定消息的长度（以字符为单位）**。  
   
 ## <a name="returns"></a>返回  
@@ -86,6 +86,6 @@ msglen
 >  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  
- [扩展存储过程 API srv_sendmsg &#40;&#41;](srv-sendmsg-extended-stored-procedure-api.md)  
+ [srv_sendmsg（扩展存储过程 API）](srv-sendmsg-extended-stored-procedure-api.md)  
   
   

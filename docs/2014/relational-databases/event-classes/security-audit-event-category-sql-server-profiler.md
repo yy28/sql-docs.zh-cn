@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044206"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 事件类别 (SQL Server Profiler)
-  "**安全审核**" 事件类别包含安全审核事件。  
+  **Security Audit** 事件类别包含安全审核事件。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -50,9 +50,9 @@ ms.locfileid: "63044206"
 |[Audit Database Operation 事件类](audit-database-operation-event-class.md)|指示已发生各种操作（如检查点操作或订阅查询通知）。|  
 |[Audit Database Principal Impersonation 事件类](audit-database-principal-impersonation-event-class.md)|指示已在数据库范围中发生模拟。|  
 |[Audit Database Principal Management 事件类](audit-database-principal-management-event-class.md)|指示已在数据库中创建、更改或删除主体。|  
-|[Audit Database Scope GDR 事件类](audit-database-scope-gdr-event-class.md)|指示已为中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的用户的语句权限发出 GRANT、REVOKE 或 DENY。|  
+|[Audit Database Scope GDR 事件类](audit-database-scope-gdr-event-class.md)|指示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用户已针对语句权限发出 GRANT、REVOKE 或 DENY。|  
 |[Audit DBCC 事件类](audit-dbcc-event-class.md)|指示已发出 DBCC 命令。|  
-|[审核全文事件类](audit-fulltext-event-class.md)|指示全文事件已发生。|  
+|[Audit Fulltext 事件类](audit-fulltext-event-class.md)|指示全文事件已发生。|  
 |[Audit Login Change Password 事件类](audit-login-change-password-event-class.md)|指示用户已更改其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录密码。|  
 |[Audit Login Change Property 事件类](audit-login-change-property-event-class.md)|指示已使用 **sp_defaultdb**、 **sp_defaultlanguage**或 ALTER LOGIN 修改登录属性。|  
 |[Audit Login 事件类](audit-login-event-class.md)|指示用户已成功登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  

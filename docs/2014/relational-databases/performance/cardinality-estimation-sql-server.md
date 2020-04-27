@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151047"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "63151047"
 ## <a name="new-xevents"></a>新 XEvents  
  有两个新的 query_optimizer_estimate_cardinality XEvents 以便支持新查询计划。  
   
--   当查询优化器估计关系表达式上的基数时，将发生*query_optimizer_estimate_cardinality* 。  
+-   *query_optimizer_estimate_cardinality* 在查询优化器对关系表达式上的基数进行评估时发生。  
   
--   如果同时启用了跟踪标志2312和9481，同时试图同时强制执行新的和新的基数估算行为，则会发生*query_optimizer_force_both_cardinality_estimation*_behaviors。  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors 在启用跟踪标志 2312 以及 9481 时发生，并且尝试同时强制旧的和新的基数估计行为。  
   
 ## <a name="examples"></a>示例  
  下面的示例显示新基数估计中的一些更改。 用于估计基数的代码已重新编写。 相关逻辑十分复杂，并且无法提供所有更改的详尽列表。  

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131804"
 ---
 # <a name="overview-smo"></a>概述 (SMO)
@@ -32,8 +32,7 @@ ms.locfileid: "63131804"
   
 -   成批执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 对语句执行批处理以提高网络性能。  
   
--   捕获 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 允许将任意操作捕获到脚本中。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用此功能编写操作脚本，而不立即执行该操作。  
+-   捕获 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 允许将任意操作捕获到脚本中。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用此功能编写操作脚本，而不立即执行该操作。  
   
 -   使用 WMI 提供程序管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 可以通过编程方式启动、停止和暂停 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
@@ -74,11 +73,11 @@ ms.locfileid: "63131804"
   
  **实例类**  
   
- 实例类表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如服务器、数据库、表、触发器和存储过程。 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>类用于建立与实例的连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并控制发送给它的命令的捕获模式。  
+ 实例类表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如服务器、数据库、表、触发器和存储过程。  类用于与  实例建立连接，并且控制发送到它的命令的捕获模式。  
   
  SMO 实例对象所构成的层次结构代表了数据库服务器的层次结构。 顶部为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，其下为数据库，再下面是表、列、触发器等。 如果存在一个父级对多个子级的关系（如某个表具有一个或多个列）是符合逻辑的，那么子级将由对象集合来表示。 否则子级仅由对象来表示。  
   
- **实用程序类**  
+ **实用工具类**  
   
  实用工具类是为执行特定任务而显式创建的一组对象。 根据功能将它们划分为不同的对象层次结构：  
   
@@ -93,7 +92,7 @@ ms.locfileid: "63131804"
   
  在 SQL-DMO 中，对象枚举要求集合内的每个对象都完全实例化， 这会占用网络和内存空间，导致效率低下。 多数情况下，可以将对象实例化，而无需显式引用该对象的多数属性。  
   
- SMO 体系结构就内存占用而言更为有效，因为对象最初只是部分实例化，所以只从服务器请求尽量少的属性信息； 直到显式引用对象时才将对象完全实例化。 当请求在最初检索的属性集中不存在的某个属性或者调用的方法需要这样的属性时，才将对象完全实例化。 从部分实例化对象到完全实例化对象的转换对用户是透明的。 此外，从不检索某些占用大量内存空间的属性，除非显式引用该属性。 <xref:Microsoft.SqlServer.Management.Smo.Database>对象属性的<xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A>属性就是这样的一个示例。 不过，部分实例化确实需要更多的网络往返时间，所以可能对您的应用程序而言不是最佳执行选项。  
+ SMO 体系结构就内存占用而言更为有效，因为对象最初只是部分实例化，所以只从服务器请求尽量少的属性信息； 直到显式引用对象时才将对象完全实例化。 当请求在最初检索的属性集中不存在的某个属性或者调用的方法需要这样的属性时，才将对象完全实例化。 从部分实例化对象到完全实例化对象的转换对用户是透明的。 此外，从不检索某些占用大量内存空间的属性，除非显式引用该属性。  对象属性的  属性就是这样的例子。 不过，部分实例化确实需要更多的网络往返时间，所以可能对您的应用程序而言不是最佳执行选项。  
   
  您可以对实例化进行控制以适应系统环境。 尽管依赖延迟实例化可能在引用属性时触发许多服务器请求，但它将应用程序所需的内存空间降至最低。  
   
@@ -109,12 +108,11 @@ ms.locfileid: "63131804"
   
  WMI 提供程序对象由 SMO 包装。 这为 SMO 编程人员提供了与 SMO 类极为相似的简单对象模型，而无需了解命名空间所表示的编程模型以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 提供程序的详细信息。 WMI 提供程序支持您配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务、别名以及客户端和服务器网络库。  
   
- **脚本编写**  
+ **脚本**  
   
  在 SMO 中，脚本编写功能得到了增强，且已移入 `Scripter` 类。 `Scripter`类可发现依赖关系，了解对象之间的关系，并允许操作依赖关系层次结构。 主要的脚本编写对象为 `Scripter` 对象。 还有若干支持对象用于处理依赖关系并响应进度或错误事件。  
   
- 
-  `Scripter` 对象支持以下高级脚本编写选项：  
+ `Scripter` 对象支持以下高级脚本编写选项：  
   
 -   1 段式简单脚本编写（在一步中创建脚本）  
   
@@ -159,10 +157,9 @@ ms.locfileid: "63131804"
   
  SMO 中提供了新对象，这些对象表示针对全文搜索的增强。  
   
- **页面验证**  
+ **页验证**  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> 对象表示数据库页验证选项。  
+ <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> 对象表示数据库页验证选项。  
   
  **快照数据库**  
   
@@ -170,20 +167,18 @@ ms.locfileid: "63131804"
   
  **Service Broker**  
   
- 
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 及其功能由一组对象表示  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 及其功能由一组对象表示  
   
  **索引增强功能**  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引增强功能由 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象中的新增属性表示。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引增强功能由 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象中的新增属性表示。  
   
 ## <a name="smo-and-sql-dmo"></a>SMO 和 SQL-DMO  
  SMO 对象模型取代了 SQL-DMO。 SMO 支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 它支持更多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理任务并包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的许多新功能。 SMO 设计用于提高效率和加强控制。  
   
- DMO 库是一个 COM 对象模型，而 SMO 作为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集实现。 COM 组件是一些库，这些库向应用程序提供可重用的功能并且采用非托管应用程序编程方式。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]程序集提供可重用的[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]功能，用于编写托管代码应用程序。  
+ DMO 库是一个 COM 对象模型，而 SMO 作为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集实现。 COM 组件是一些库，这些库向应用程序提供可重用的功能并且采用非托管应用程序编程方式。  程序集提供可重用功能，供  编写托管代码应用程序。  
   
- 向 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 技术过渡的过程中，编写应用程序可采用部分托管代码和部分非托管代码。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]允许你使用 COM 组件进行交互，这需要一个主互操作程序集。 SQL-DMO 需要运行时包装，以便从基于 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的应用程序进行调用。  
+ 向 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 技术过渡的过程中，编写应用程序可采用部分托管代码和部分非托管代码。  支持与 COM 组件建立接口连接，这需要一个主互操作程序集。 SQL-DMO 需要运行时包装，以便从基于 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的应用程序进行调用。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制管理对象概念](../replication/concepts/replication-management-objects-concepts.md)  

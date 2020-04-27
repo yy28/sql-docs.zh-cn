@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150706"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>保存死锁图形（SQL Server 事件探查器）
@@ -41,7 +41,7 @@ ms.locfileid: "63150706"
   
     -   选中“保存到文件”**** 复选框以将跟踪捕获到文件中。 指定 **“设置最大文件大小”** 的值。  
   
-         还可以选择 "**启用文件滚动更新**" 和 "**服务器处理跟踪数据**"。  
+         也可以选择 **“启用文件滚动更新”** 和 **“服务器处理跟踪数据”**。  
   
     -   选中 **“保存到表”** 复选框以将跟踪捕获到数据库表中。  
   

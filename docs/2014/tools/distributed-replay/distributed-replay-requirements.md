@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149771"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay 要求
@@ -44,8 +44,7 @@ ms.locfileid: "63149771"
 -   一组遵循文件滚动更新命名约定（例如：`<TraceFile>.trc`、`<TraceFile>_1.trc`、`<TraceFile>_2.trc`、`<TraceFile>_3.trc`…`<TraceFile>_n.trc`）的滚动更新跟踪文件。  
   
 ### <a name="input-trace-events-and-columns"></a>输入跟踪事件和列  
- 输入跟踪数据必须包含特定的事件和列才能由 Distributed Replay 进行重播。 
-  **中的** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 模板包含所有必需的事件和列以及其他信息。 有关该模板的详细信息，请参阅 [Replay Requirements](../sql-server-profiler/replay-requirements.md)。  
+ 输入跟踪数据必须包含特定的事件和列才能由 Distributed Replay 进行重播。 **中的** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 模板包含所有必需的事件和列以及其他信息。 有关该模板的详细信息，请参阅 [Replay Requirements](../sql-server-profiler/replay-requirements.md)。  
   
 > [!WARNING]  
 >  如果你没有使用 **TSQL_Replay** 模板来捕获输入跟踪数据，或者未满足输入跟踪要求，则可能会收到意外的重播结果。  
@@ -104,11 +103,11 @@ ms.locfileid: "63149771"
   
 -   HostName  
   
--   二进制数据  
+-   Binary Data  
   
 -   SPID  
   
--   开始时间  
+-   Start Time  
   
 -   EndTime  
   
@@ -135,10 +134,9 @@ ms.locfileid: "63149771"
   
 |Distributed Replay 功能|每个重播环境的最大安装数|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Distributed Replay 控制器服务|1|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端服务|16（物理或虚拟计算机）|  
-|管理工具|不受限制|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器服务|1|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端服务|16（物理或虚拟计算机）|  
+|管理工具|无限制|  
   
 > [!NOTE]  
 >  虽然一台计算机上只能安装一个管理工具实例，但是您可以启动管理工具的多个实例。 多个管理工具发出的命令按照接收命令的顺序进行解析。  

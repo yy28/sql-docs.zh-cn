@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo：： GetErrorInfo （OLE DB） |Microsoft Docs
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9131c65236a0efffa19aab2bd10b1fd8e309653b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127789"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -36,10 +36,10 @@ OLECHAR**ppErrorStrings);
 ```  
   
 ## <a name="arguments"></a>参数  
- *ppSSErrorInfo*[out]  
+ ppSSErrorInfo[out]**  
  指向 SSERRORINFO 结构的指针。 如果方法失败或者不存在与该错误关联的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息，则访问接口不会分配任何内存，并且会确保 ppSSErrorInfo 参数在输出时为一个空指针**。  
   
- *ppErrorStrings*[out]  
+ ppErrorStrings[out]**  
  指向 Unicode 字符串指针的指针。 如果方法失败或者不存在与该错误关联的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息，则访问接口不会分配任何内存，并且会确保 ppErrorStrings 参数在输出时为一个空指针**。 如果使用 IMalloc::Free 方法释放 ppErrorStrings 参数，则会释放所返回的 SSERRORINFO 结构的三个单个字符串成员，因为内存是按块进行分配的******。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -47,7 +47,7 @@ OLECHAR**ppErrorStrings);
  方法成功。  
   
  E_INVALIDARG  
- *PpSSErrorInfo*或*ppErrorStrings*参数均为 NULL。  
+ ppSSErrorInfo** 或 ppErrorStrings** 参数为 NULL。  
   
  E_OUTOFMEMORY  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序无法分配足够的内存来完成请求。  
@@ -73,16 +73,13 @@ SSERRORINFO;
   
 |成员|说明|  
 |------------|-----------------|  
-|*pwszMessage*|来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的错误消息。 消息是通过 IErrorInfo::GetDescription 方法返回的****。|  
-|*pwszServer*|在其上发生了该错误的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
-|*pwszProcedure*|如果错误发生在存储过程中，则为生成该错误的存储过程的名称；否则，为空字符串。|  
-|*lNative*|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误号。 该错误号与在 ISQLErrorInfo::GetSQLInfo 方法的 plNativeError 参数中返回的错误号相同******。|  
-|*bState*|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的状态。|  
-|*bClass*|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的严重性。|  
-|*wLineNumber*|如果适用，为生成错误消息的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程的行。 如果与过程无关，则为默认值 1。|  
+|pwszMessage**|来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的错误消息。 消息是通过 IErrorInfo::GetDescription 方法返回的****。|  
+|pwszServer**|在其上发生了该错误的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
+|pwszProcedure**|如果错误发生在存储过程中，则为生成该错误的存储过程的名称；否则，为空字符串。|  
+|lNative**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误号。 该错误号与在 ISQLErrorInfo::GetSQLInfo 方法的 plNativeError 参数中返回的错误号相同******。|  
+|bState**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的状态。|  
+|bClass**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的严重性。|  
+|wLineNumber**|如果适用，为生成错误消息的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程的行。 如果与过程无关，则为默认值 1。|  
   
  结构中的指针引用在 ppErrorStrings 参数中返回的字符串中的地址**。  
   

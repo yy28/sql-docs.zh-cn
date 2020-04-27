@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044442"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 事件类
@@ -34,8 +34,7 @@ ms.locfileid: "63044442"
 |DatabaseName|`nvarchar`|正在运行用户语句的数据库的名称。|35|是|  
 |EventClass|`Int`|事件类型 = 200。|27|否|  
 |EventSequence|`int`|此事件的序列号。|51|否|  
-|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 表已创建：指示已在数据库中创建参数表。<br /><br /> 表删除尝试：指示数据库已尝试自动删除未使用的参数表以释放资源。<br /><br /> 表删除尝试失败：指示数据库已尝试删除未使用的参数表但失败。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将自动重新计划删除参数表以释放资源。<br /><br /> 表已删除：指示数据库已成功删除参数表。<br /><br /> 表已驻留：指示参数表标记为当前供内部处理使用。<br /><br /> 表已取消驻留：指示参数表不驻留。 内部处理已使用表完成。<br /><br /> 用户数已增加：指示引用参数表的查询通知订阅数已增加。<br /><br /> 用户数已减少：指示引用参数表的查询通知订阅数已减少。<br /><br /> LRU 计数器已重置：指示参数表的使用计数已重置。<br /><br /> 清除任务已启动：指示清除此参数表中的所有订阅的启动时间。 启动数据库或删除此参数表订阅下的表时执行此操作。<br /><br /> 清除任务已完成：指示清除此参数表中的所有订阅的完成时间。|21|是|  
+|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 表已创建：指示已在数据库中创建参数表。<br /><br /> 表删除尝试：指示数据库已尝试自动删除未使用的参数表以释放资源。<br /><br /> 表删除尝试失败：指示数据库已尝试删除未使用的参数表但失败。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将自动重新计划删除参数表以释放资源。<br /><br /> 表已删除：指示数据库已成功删除参数表。<br /><br /> 表已驻留：指示参数表标记为当前供内部处理使用。<br /><br /> 表已取消驻留：指示参数表不驻留。 内部处理已使用表完成。<br /><br /> 用户数已增加：指示引用参数表的查询通知订阅数已增加。<br /><br /> 用户数已减少：指示引用参数表的查询通知订阅数已减少。<br /><br /> LRU 计数器已重置：指示参数表的使用计数已重置。<br /><br /> 清除任务已启动：指示清除此参数表中的所有订阅的启动时间。 启动数据库或删除此参数表订阅下的表时执行此操作。<br /><br /> 清除任务已完成：指示清除此参数表中的所有订阅的完成时间。|21|是|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|否|  

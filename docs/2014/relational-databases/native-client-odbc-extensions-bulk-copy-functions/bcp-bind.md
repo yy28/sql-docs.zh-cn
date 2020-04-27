@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140560"
 ---
 # <a name="bcp_bind"></a>bcp_bind
@@ -69,7 +69,7 @@ idxServerCol
   
  如果数据中存在指示符，这些指示符则在内存中直接显示在数据之前。 在这种情况下， *pData*参数指向指示器变量，并且大容量复制使用指示器的宽度（ *cbIndicator*参数）正确地处理用户数据。  
   
- *cbIndicator*  
+ cbIndicator**  
  列数据的长度或 Null 指示符的长度（以字节为单位）。 有效指示器长度值是 0（不使用任何指示器时）、1、2、4 或 8。 指示符在内存中直接显示在任何数据之前。 例如，可以使用以下结构类型定义通过大容量复制将整数值插入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表：  
   
 ```  
@@ -148,7 +148,7 @@ bcp_bind(hdbc, szName, 0,
   
  调用此或任何其他大容量复制函数之前调用[bcp_init](bcp-init.md) 。 调用**bcp_init**会设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于大容量复制的目标表。 在调用**bcp_init**以便与**bcp_bind**和[bcp_sendrow](bcp-sendrow.md)一起使用时，指示数据文件的**bcp_init** _szDataFile_参数设置为 NULL;**bcp_init**_eDirection_参数设置为 DB_IN。  
   
- 为要复制**** 到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中的每个列单独 bcp_bind 调用。 进行必要的**bcp_bind**调用后，调用**bcp_sendrow**将数据从程序变量发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支持重新绑定列。  
+ 为要复制**bcp_bind**到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中的每个列单独 bcp_bind 调用。 进行必要的**bcp_bind**调用后，调用**bcp_sendrow**将数据从程序变量发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支持重新绑定列。  
   
  每当你想[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要提交已收到的行时，请调用[bcp_batch](bcp-batch.md)。 例如，对于每1000行或任何其他间隔，请调用一次**bcp_batch** 。  
   

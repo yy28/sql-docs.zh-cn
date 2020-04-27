@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137247"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 属性（SInstance 类）
@@ -37,11 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务器实例的[SInstance 类](sinstance-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 一个指定 `uint32` 实例的标志数的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 值。  
+ 一个指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的标志数的 `uint32` 值。  
   
 ## <a name="remarks"></a>备注  
   

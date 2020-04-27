@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044452"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
@@ -61,8 +61,7 @@ ms.locfileid: "63044452"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用配置管理器可以管理服务器和客户端网络协议，其中包括强制协议加密、查看别名属性或启用/禁用协议等功能。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器可以创建或删除别名、更改使用协议的顺序或查看服务器别名的属性，其中包括：  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器可以创建或删除别名、更改使用协议的顺序或查看服务器别名的属性，其中包括：  
   
 -   服务器别名 — 客户端所连接到的计算机的服务器别名。  
   
@@ -73,8 +72,7 @@ ms.locfileid: "63044452"
  虽然某些操作（例如启动和停止服务）应使用群集管理器，但使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器也可以查看有关故障转移群集实例的信息。  
   
 ### <a name="available-network-protocols"></a>可用的网络协议  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持共享内存、TCP/IP 和命名管道协议。 有关选择网络协议的信息，请参阅 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持 VIA、Banyan VINES 顺序包协议 (SPP)、多协议、AppleTalk 或 NWLink IPX/SPX 网络协议。 以前使用这些协议连接的客户端必须选择其他协议才能连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不能使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器来配置 WinSock 代理。 若要配置 WinSock 代理，请参阅 ISA Server 文档。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持共享内存、TCP/IP 和命名管道协议。 有关选择网络协议的信息，请参阅 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持 VIA、Banyan VINES 顺序包协议 (SPP)、多协议、AppleTalk 或 NWLink IPX/SPX 网络协议。 以前使用这些协议连接的客户端必须选择其他协议才能连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不能使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器来配置 WinSock 代理。 若要配置 WinSock 代理，请参阅 ISA Server 文档。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [管理服务操作指南主题（SQL Server 配置管理器）](../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  

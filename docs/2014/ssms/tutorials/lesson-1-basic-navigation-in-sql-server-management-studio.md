@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151519"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>第 1 课：SQL Server Management Studio 中的基本导航
@@ -22,7 +22,7 @@ ms.locfileid: "63151519"
   
  本课程包含以下主题：  
   
--   开始 SQL Server Management Studio  
+-   启动 SQL Server Management Studio  
   
 -   与已注册的服务器和对象资源管理器连接  
   
@@ -38,9 +38,9 @@ ms.locfileid: "63151519"
   
 -   还原默认的 SQL Server Management Studio 配置  
   
--   总结  
+-   摘要  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [启动 SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+ [开始 SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   
