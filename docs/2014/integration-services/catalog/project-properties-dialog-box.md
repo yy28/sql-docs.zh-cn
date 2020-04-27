@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771645"
 ---
 # <a name="project-properties-dialog-box"></a>“项目属性”对话框
@@ -33,7 +33,7 @@ ms.locfileid: "62771645"
   
 -   [设置“权限”页上的选项](#permissions)  
   
-##  <a name="open_dialog"></a> 打开“项目属性”对话框  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> 打开“项目属性”对话框  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62771645"
   
 5.  右键单击该项目，然后单击“属性”  。  
   
-##  <a name="general"></a> 设置“常规”页上的选项  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 设置“常规”页上的选项  
  使用“常规”页查看项目属性。  
   
  **名称**  
@@ -65,7 +65,7 @@ ms.locfileid: "62771645"
  **部署日期**  
  列出部署或重新部署项目的日期和时间。  
   
-##  <a name="permissions"></a> 设置“权限”页上的选项  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> 设置“权限”页上的选项  
  使用 **“权限”** 页可以查看和设置项目的显式权限。  
   
  浏览  

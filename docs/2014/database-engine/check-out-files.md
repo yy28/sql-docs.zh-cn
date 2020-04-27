@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786742"
 ---
 # <a name="check-out-files"></a>签出文件
@@ -45,7 +45,7 @@ ms.locfileid: "62786742"
      **“列”**  
      标识要显示的列及其显示顺序。  
   
-     **注释**  
+     **备注**  
      指定与该签出操作关联的注释。  
   
      **签出项时不显示“签出”对话框**  
@@ -55,7 +55,7 @@ ms.locfileid: "62786742"
      将签出的项在其源代码管理连接下显示为平面列表。  
   
      **编辑**  
-     修改项但不将其签出。仅**** 当你已[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]将配置为支持编辑签入文件时，才会显示 "编辑" 按钮。  
+     修改项但不将其签出。仅**Edit**当你已[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]将配置为支持编辑签入文件时，才会显示 "编辑" 按钮。  
   
      **名称**  
      显示可签出的项的名称。 选定的项旁边还会显示复选框。 如果不希望签出特定的项，请清除其复选框。  
@@ -63,7 +63,7 @@ ms.locfileid: "62786742"
      **选项**  
      单击按钮右侧的箭头时，显示源代码管理插件特定的签出选项。  
   
-     **排序**  
+     **进行**  
      对显示的列进行排序。  
   
      **树视图**  

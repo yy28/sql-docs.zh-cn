@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807421"
 ---
 # <a name="cross-container-transactions"></a>交叉容器事务
@@ -24,7 +24,7 @@ ms.locfileid: "62807421"
   
  引用内存优化表的任何解释型查询都被视为交叉容器事务的一部分，而无论是从显式或隐式事务中执行，还是在自动提交模式下执行。  
   
-##  <a name="isolation"></a>单个操作的隔离  
+##  <a name="isolation-of-individual-operations"></a><a name="isolation"></a>单个操作的隔离  
  每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事务都有一个隔离级别。 默认隔离级别为 Read Committed。 若要使用不同的隔离级别，可以使用 "[设置事务隔离级别 &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)设置隔离级别。  
   
  内存优化表和基于磁盘的表上的操作常常需要采用不同的隔离级别执行。 在事务中，可为一组语句或单个读取操作设置不同的隔离级别。  
@@ -99,7 +99,7 @@ commit
  到事务的逻辑结束时间，可以保证数据读取得到提交并保持稳定。  
   
  SERIALIZABLE  
- 对于所有由 T 执行的可序列化读取操作，都保证了可重复读取的所有保证，以及对所有可序列化读取操作的事务一致性其他事务写入的行。  
+ 对于所有由 T 执行的可序列化读取操作，都保证可重复读取和虚拟化一致性的所有保证。规避方法意味着扫描操作仅返回由 T 写入的其他行，但不返回其他事务写入的行。  
   
  请考虑以下事务：  
   
@@ -179,8 +179,7 @@ commit
 -   REPEATABLE READ 和 SERIALIZABLE 事务可以在 SNAPSHOT 隔离级别下访问内存优化表。  
   
 ## <a name="read-only-cross-container-transactions"></a>只读交叉容器事务  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中大多数只读事务将在提交时回滚。 由于没有要提交到数据库的更改，系统直接释放该事务所使用的资源。 对于基于磁盘的只读事务，此时会释放由该事务持有的所有锁。 对于只占用一个本机编译过程执行的只读内存优化事务，不会执行验证。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中大多数只读事务将在提交时回滚。 由于没有要提交到数据库的更改，系统直接释放该事务所使用的资源。 对于基于磁盘的只读事务，此时会释放由该事务持有的所有锁。 对于只占用一个本机编译过程执行的只读内存优化事务，不会执行验证。  
   
  该事务结束时，自动提交模式下的交叉容器只读事务直接回滚。 不执行任何验证。  
   

@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780346"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>SQL Server 2014 中不再使用的管理工具功能
   本主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不再提供的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]管理工具功能。  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中删除的功能  
+## <a name="features-removed-in-sscurrent"></a>在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中删除的功能  
  无  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中删除的功能  
+## <a name="features-removed-in-sssql11"></a>在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中删除的功能  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  SQL Server Compact Edition 代码编辑器已从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中删除。 已从对象资源管理器、解决方案资源管理器和模板资源管理器中删除对 SQL Server Compact Editor 的支持。 在 Microsoft Visual Studio 2010 Service Pack 1 或 Webmatrix 中使用 Transact-SQL 编辑器。  
@@ -38,8 +38,7 @@ ms.locfileid: "62780346"
  在此版本中，已删除网络发送和寻呼通知。 请勿在新应用程序或更新的应用程序中使用此功能。  
   
 ### <a name="data-tier-applications"></a>数据层应用程序  
- 
-  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的某些数据层应用程序 (DAC) 功能已经在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]删除。 但是，随 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 发布的数据层应用程序框架（DACfx 版本 3.0）却能够兼容 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以及 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。 早期版本的 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ，包括 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] （包含在 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]中）不支持 DAC 版本 3.0。 Visual Studio 2010 数据库项目不支持使用 DACfx 版本 3.0 或更高版本生成的 DAC 3.0 DACPAC 包或 DAC Export (BACPAC) 包。  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的某些数据层应用程序 (DAC) 功能已经在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]删除。 但是，随 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 发布的数据层应用程序框架（DACfx 版本 3.0）却能够兼容 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以及 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。 早期版本的 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ，包括 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] （包含在 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]中）不支持 DAC 版本 3.0。 Visual Studio 2010 数据库项目不支持使用 DACfx 版本 3.0 或更高版本生成的 DAC 3.0 DACPAC 包或 DAC Export (BACPAC) 包。  
   
  Microsoft 建议使用最新可用版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 数据库项目。  
   

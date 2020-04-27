@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770213"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>教程：使用 OData 源 [SSIS]
@@ -46,7 +46,7 @@ ms.locfileid: "62770213"
   
 6.  为 **“服务文档位置”** 输入 OData 服务 URL。 它可以是指向服务文档的 URL，也可以是指向特定馈送或实体的 URL。 对于本教程，请键入[http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)。  
   
-7.  确认为 **“身份验证”** 选择了 **“Windows 身份验证”** ，以便用于访问 OData 服务。 默认情况下会选择**Windows 身份验证**。 若要使用基本身份验证，请选择 **“使用此用户名和密码”**。  
+7.  确认为 **“身份验证”** 选择了 **“Windows 身份验证”** ，以便用于访问 OData 服务。 默认情况下将选择 **“Windows 身份验证”** 。 若要使用基本身份验证，请选择 **“使用此用户名和密码”**。  
   
 8.  对于连接单击 **“测试连接”** ，然后单击 **“确定”** 以便创建 OData 连接管理器的实例。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62770213"
   
 10. 从 **“集合”** 下拉列表中，选择 **Employees**。  
   
-11. 为 **“查询选项”** 输入任何其他 OData 查询选项或筛选器。 例如： $orderby=CompanyName&$top=100。 为了实现本教程教学目的，请输入 **$top=5**。  
+11. 为 **“查询选项”** 输入任何其他 OData 查询选项或筛选器。 示例： $orderby=CompanyName&$top=100。 为了实现本教程教学目的，请输入 **$top=5**。  
   
 12. 单击 **“预览”** 可预览数据。  
   

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805575"
 ---
 # <a name="create-custom-templates"></a>创建自定义模板
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]附带用于许多常见任务的模板，但模板的真正强大之处在于，能够为必须经常创建的复杂脚本创建自定义模板。 在本练习中，您将创建带有较少参数的简单脚本，但是模板也适用于较长的重复脚本。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 附带用于许多常见任务的模板，但模板的真正作用在于它能为必须频繁创建的复杂脚本创建自定义模板。 在本练习中，您将创建带有较少参数的简单脚本，但是模板也适用于较长的重复脚本。  
   
 ## <a name="using-custom-templates"></a>使用自定义模板  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62805575"
   
 8.  按 F5 执行此脚本，创建 **WorkOrdersForBlade** 过程。  
   
-9. 在对象资源管理器中，右键单击你的服务器，然后单击 "**新建查询**"。 系统将打开新的“查询编辑器”窗口。  
+9. 在对象资源管理器中，右键单击服务器，然后单击“新建查询”****。 系统将打开新的“查询编辑器”窗口。  
   
 10. 在查询编辑器中，键入 **EXECUTE dbo.WorkOrdersForBlade**，然后按 F5 执行查询。 确认“结果”**** 窗格返回 Blade 的工作订单列表。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62805575"
   
 2.  在“连接到数据库引擎”**** 对话框中，填写连接信息，然后单击“连接”****。 系统将打开新的“查询编辑器”窗口，其中包含“WorkOrderProc”**** 模板的内容。  
   
-3.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。  
+3.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。  
   
 4.  在 "**替换模板参数**" 对话框中，为`product_name` "值" 键入**FreeWheel** （覆盖默认内容），然后单击 **"确定"** 以关闭 "**替换模板参数**" 对话框，并在查询编辑器中修改脚本。  
   

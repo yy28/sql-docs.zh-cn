@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779132"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安装 SQL Server 的注意事项
@@ -30,7 +30,7 @@ ms.locfileid: "62779132"
   
  有关如何使用 SysPrep 安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的详细信息，请参阅[使用 sysprep 安装 SQL Server 2014](install-sql-server-using-sysprep.md)。  
   
-## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常见用途  
+## <a name="common-uses-for-ssnoversion-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常见用途  
  可以通过以下任意方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 功能：  
   
 -   通过使用“准备映像”步骤，可以在同一台计算机上准备一个或多个未配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 可以在同一台计算机上使用“完成映像”步骤配置这些已准备实例。  
@@ -56,7 +56,7 @@ ms.locfileid: "62779132"
   
     -   不能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本的已准备实例指定产品 ID。  
   
-## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
+## <a name="supported-ssnoversion-installations"></a>支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 SysPrep 支持所有功能，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的工具。  
   
  您可以为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或早期版本的并行安装准备多个实例。 这些实例的功能必须支持 SysPrep。  
@@ -71,10 +71,10 @@ ms.locfileid: "62779132"
   
  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]开始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 支持从命令行进行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 限制  
+## <a name="ssnoversion-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 限制  
  不支持修复已准备实例。 如果在“准备映像”或“完成映像”步骤中安装程序失败，您必须运行卸载。  
   
-##  <a name="BKMK_PrepareImage"></a> 准备映像  
+##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> 准备映像  
  “准备映像”步骤安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品和功能，但不配置安装。  
   
  可在此步骤中指定要安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品安装文件的安装位置。 你可以通过“安装中心”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**的“高级”** **页上的“SysPrep 部署的独立实例的映像准备”** **或从命令提示符准备**  的实例。  
@@ -85,7 +85,7 @@ ms.locfileid: "62779132"
   
  在已准备了该实例后， **“开始”** 菜单上的快捷方式可用于完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备实例的配置。  
   
-##  <a name="BKMK_CompleteImage"></a> 完成映像  
+##  <a name="complete-image"></a><a name="BKMK_CompleteImage"></a> 完成映像  
  可以使用以下方法之一来完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例：  
   
 -   使用“开始”菜单上的快捷方式。  

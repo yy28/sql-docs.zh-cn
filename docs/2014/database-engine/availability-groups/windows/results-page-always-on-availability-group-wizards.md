@@ -16,16 +16,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789008"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>“结果”页（AlwaysOn 可用性组向导）
   本帮助主题介绍 **“结果”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页可查看该向导的结果。  
   
-##  <a name="PageOptions"></a> 结果页选项  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> 结果页选项  
  **“摘要”** 网格包含以下列：  
   
  **名称**  
@@ -37,11 +37,11 @@ ms.locfileid: "62789008"
 |结果|说明|  
 |------------|-----------------|  
 |**错误**|指示验证步骤失败。 单击该链接可以查看错误消息。|  
-|**Success**|指示此验证步骤已成功完成。|  
+|**成功**|指示此验证步骤已成功完成。|  
   
 
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

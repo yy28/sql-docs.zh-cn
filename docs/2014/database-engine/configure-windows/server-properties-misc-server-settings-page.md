@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d726e1e79b1a3e24aea074c0821e1f8773b233c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809327"
 ---
 # <a name="server-properties-misc-server-settings-page"></a>服务器属性（“杂项服务器设置”页）
@@ -29,11 +29,11 @@ ms.locfileid: "62809327"
  **允许触发器激发其他触发器**  
  控制触发器是否可以执行启动另一个触发器的操作。 清除此选项后，触发器不能由另外一个触发器来激发。 选中此选项时，触发器可以由其他触发器来激发，级联等级最高为 32 级。  
   
- **使用查询调控器防止长时间运行的查询**  
+ **使用查询调控器防止查询长时间运行**  
  指定查询运行时间的上限。 查询开销是指在特定硬件配置中执行查询所需的估计占用时间（秒）。 查询调控器默认为关闭，允许运行所有查询。 如果选中此选项，则必须在下面的文本框中输入时间限制。 如果为该选项指定一个非零、非负的数值，则查询调控器将不允许执行估计开销超过该值的查询。  
   
  **将两位数的年份解释为介于**  
- 指定 100 年的日期范围，用于解释针两位数年份值。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会将两位数日期值解释为指定范围内的数字的结束年份。  
+ 指定 100 年的日期范围，用于解释针两位数年份值。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将两位数日期值解释为指定范围内以这两位数值结尾的年份。  
   
  在右侧的框中设置结束年份。 保存结束年份时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动在左侧的框中填充起始年份。  
   

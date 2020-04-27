@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 790e02374fe209576c963c5f1e9c6e63e8e2d16b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779785"
 ---
 # <a name="features-in-sql-server-management-studio"></a>SQL Server Management Studio 中的功能
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包括以下常用功能：  
   
 -   支持 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的多数管理任务。  
@@ -44,16 +43,14 @@ ms.locfileid: "62779785"
   
 -   从网上社区集成帮助。  
   
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 教程可以帮助您充分利用许多新功能，并可以快速提高效率。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 教程可以帮助您充分利用许多新功能，并可以快速提高效率。  
   
 -   具有筛选和自动刷新功能的新活动监视器。  
   
 -   集成的数据库邮件接口。  
   
 ## <a name="new-scripting-capabilities"></a>新的脚本撰写功能  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的代码编辑器组件包含集成的脚本编辑器，用来撰写 [!INCLUDE[tsql](../includes/tsql-md.md)]、MDX、DMX 和 XML/A。 主要功能包括：  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的代码编辑器组件包含集成的脚本编辑器，用来撰写 [!INCLUDE[tsql](../includes/tsql-md.md)]、MDX、DMX 和 XML/A。 主要功能包括：  
   
 -   工作时显示动态帮助以便快速访问相关的信息。  
   
@@ -67,11 +64,10 @@ ms.locfileid: "62779785"
   
 -   用于解决方案和脚本项目的集成源代码管理，随着脚本的演化可以存储和维护脚本的副本。  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]用于 MDX 语句的 IntelliSense 支持。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 用于 MDX 语句的 IntelliSense 支持。  
   
 ## <a name="object-explorer-features"></a>对象资源管理器功能  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的对象资源管理器组件是一种集成工具，可以查看和管理所有服务器类型的对象。 主要功能包括：  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的对象资源管理器组件是一种集成工具，可以查看和管理所有服务器类型的对象。 主要功能包括：  
   
 -   按完整名称或部分名称、架构或日期进行筛选。  
   
@@ -81,8 +77,8 @@ ms.locfileid: "62779785"
   
  有关详细信息，请参阅 [对象资源管理器](../ssms/object/object-explorer.md)。  
   
-## <a name="extensibility"></a>可扩展性  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]是基于 Visual Studio 独立 Shell 构建的，后者本身就支持扩展性（外接程序/插件）。 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]内可能引入 Visual Studio 扩展性服务来提供自定义功能，但是不支持这样的扩展性。  
+## <a name="extensibility"></a>扩展性  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 建立在 Visual Studio 隔离的 Shell 上，该 Shell 本身就支持扩展性（外接程序/插件）。 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]内可能引入 Visual Studio 扩展性服务来提供自定义功能，但是不支持这样的扩展性。  
   
  有一些用户和第三方开发了 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的扩展。 虽然我们没有对其进行禁止，但是请注意，我们不支持这种扩展性，因此可能存在向后/向前兼容性问题。 Microsoft 不会发布扩展 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的文档。 但是可利用社区博客和示例代码。  
   

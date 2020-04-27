@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770336"
 ---
 # <a name="pivot-transformation"></a>透视转换
@@ -45,7 +45,7 @@ ms.locfileid: "62770336"
   
  输入数据可能包含重复行，这会导致透视转换失败。 “重复行”表示在设置键列和透视列中具有相同值的行。 为了避免失败，可以将转换配置为将错误行重定向到错误输出或预先聚合值，以确保不存在重复行。  
   
-##  <a name="options"></a> “透视”对话框中的选项  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> “透视”对话框中的选项  
  可以通过设置 **“透视”** 对话框中的选项来配置透视操作。 若要打开“透视”对话框，请在  **中将透视转换添加到包，右键单击该组件，然后单击“编辑”。** [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]   
   
  以下列表介绍了 **“透视”** 对话框中的选项。  

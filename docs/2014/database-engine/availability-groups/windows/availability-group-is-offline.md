@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815420"
 ---
 # <a name="availability-group-is-offline"></a>可用性组处于脱机状态
@@ -30,7 +30,7 @@ ms.locfileid: "62815420"
 |**策略名称**|可用性组联机状态|  
 |**问题**|可用性组处于脱机状态。|  
 |**类别**|**严重**|  
-|**方面**|可用性组 (availability group)|  
+|**多**|可用性组 (availability group)|  
   
 ## <a name="description"></a>说明  
  此策略检查可用性组的联机或脱机状态。 当可用性组的群集资源处于脱机状态或可用性组不具有主副本时，此策略处于不正常状态并引发警报。  
@@ -38,7 +38,7 @@ ms.locfileid: "62815420"
  当可用性组的群集资源处于联机状态并且可用性组具有主副本时，此策略处于正常状态。  
   
 > [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性组处于脱机状态](https://go.microsoft.com/fwlink/p/?LinkId=220850) 中。  
+>   对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性组处于脱机状态](https://go.microsoft.com/fwlink/p/?LinkId=220850) 中。  
   
 ## <a name="possible-causes"></a>可能的原因  
  此问题可能由承载主副本的服务器实例中的失败或 Windows Server 故障转移群集 (WSFC) 可用性组资源脱机引起。 可用性组脱机可能有以下原因：  
@@ -74,6 +74,6 @@ ms.locfileid: "62815420"
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

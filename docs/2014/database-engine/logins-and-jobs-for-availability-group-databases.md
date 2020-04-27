@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774279"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>管理可用性组中数据库的登录名和作业 (SQL Server)
   您应当定期维护 AlwaysOn 可用性组的每个主数据库及其相应的辅助数据库上的同一组用户登录名和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业。 在为可用性组承载可用性副本的每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上，必须重新生成这些登录名和作业。  
   
--   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业**  
+-   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理作业**  
   
      您需要手动将相关作业从承载原始主副本的服务器实例复制到承载原始辅助副本的服务器实例上。 对于所有数据库，您需要在每个相关作业开始时添加逻辑，以使该作业仅在主数据库上执行，也就是说，仅在逻辑副本是数据库的主副本时执行。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "62774279"
      如果您的任何应用程序使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证或本地 Windows 登录名，请参阅本主题后面的 [使用 SQL Server 身份验证或本地 Windows 登录名的应用程序的登录名](../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md#SSauthentication)。  
   
     > [!NOTE]  
-    >  在服务器实例上未定义或错误定义了其相应 SQL Server 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户”  。 如果给定服务器实例上存在孤立用户，您可以随时设置用户登录名。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  
+    >  在服务器实例上未定义或错误定义了其相应 SQL Server 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户” ** 。 如果给定服务器实例上存在孤立用户，您可以随时设置用户登录名。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  
   
 -   **其他元数据**  
   
-     在承载某一给定可用性组的辅助副本的各服务器实例上，登录名和作业不是需要重新创建的唯一信息。 例如，您可能需要重新创建服务器配置设置、凭据、加密的数据、权限、复制设置、Service Broker 应用程序、触发器（在服务器级别）等。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+     在承载某一给定可用性组的辅助副本的各服务器实例上，登录名和作业不是需要重新创建的唯一信息。 例如，您可能需要重新创建服务器配置设置、凭据、加密的数据、权限、复制设置、Service Broker 应用程序、触发器（在服务器级别）等。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-##  <a name="SSauthentication"></a> 使用 SQL Server 身份验证或本地 Windows 登录名的应用程序的登录名  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> 使用 SQL Server 身份验证或本地 Windows 登录名的应用程序的登录名  
  如果某一应用程序使用 SQL Server 身份验证或本地 Windows 登录名，则不匹配的 SID 可能会阻止该应用程序的登录名在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的远程实例上解析。 不匹配的 SID 将导致该登录名成为远程服务器实例上的孤立用户。 当应用程序连接到发生故障转移后的镜像数据库或日志传送数据库，或是连接到从备份初始化的复制订阅服务器数据库时，就可能会发生此问题。  
   
  为了避免此问题，我们建议您在设置此类应用程序时采取预防措施，以便使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的远程实例承载的数据库。 预防措施包括将登录名和密码从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的本地实例传输到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的远程实例。 有关如何避免此问题的详细信息，请参阅知识库文章 918992（[如何在 SQL Server 实例间传输登录名和密码](https://support.microsoft.com/kb/918992/)）。  
@@ -55,11 +55,11 @@ ms.locfileid: "62774279"
   
  有关详细信息，请参阅 [与数据库镜像和日志传送有关的孤立用户](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) （数据库引擎博客）。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建登录名](../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Create a Database User](../relational-databases/security/authentication-access/create-a-database-user.md)。  
+-   [创建数据库用户](../relational-databases/security/authentication-access/create-a-database-user.md)。  
   
 -   [创建作业](../ssms/agent/create-a-job.md)  
   

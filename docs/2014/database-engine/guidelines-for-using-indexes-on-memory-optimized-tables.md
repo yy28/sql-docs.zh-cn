@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779221"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>在内存优化表上使用索引的指导原则
@@ -70,8 +70,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |Operation|内存优化、非聚集哈希索引|内存优化的非聚集索引|基于磁盘的索引|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |索引扫描，检索所有表行。|是|是|是|  
-|采用相等谓词 (=) 的索引查找。|是<br /><br /> （需要完整的键。）|是 <sup>1</sup>|是|  
-|对不相等谓词（>、<、 \<=、>=、BETWEEN）的索引查找。|否（索引扫描中的结果）|是 <sup>1</sup>|是|  
+|采用相等谓词 (=) 的索引查找。|是<br /><br /> （需要完整的键。）|是<sup>1</sup>|是|  
+|对不相等谓词（>、<、 \<=、>=、BETWEEN）的索引查找。|否（索引扫描中的结果）|是<sup>1</sup>|是|  
 |按与索引定义匹配的排序顺序检索行。|否|是|是|  
 |按与索引定义相反的排序顺序检索行。|否|否|是|  
   

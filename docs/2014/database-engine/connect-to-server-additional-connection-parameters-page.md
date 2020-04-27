@@ -13,15 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808668"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>连接到服务器（“其他连接参数”页）
-  
-  ** 的“连接到”**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框将最常用的连接字符串值作为选项提供。 使用“其他连接参数”**** 页可以将更多连接参数添加到连接字符串。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的“连接到”**** 对话框将最常用的连接字符串值作为选项提供。 使用“其他连接参数”**** 页可以将更多连接参数添加到连接字符串。  
   
 -   其他连接参数可以是任一 ODBC 连接参数。  
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782311"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>启用数据库引擎的加密连接（SQL Server 配置管理器）
@@ -55,58 +55,58 @@ ms.locfileid: "62782311"
   
 ##  <a name="SSMSProcedure"></a>  
   
-###  <a name="Provision"></a>在服务器上设置（安装）证书  
+###  <a name="to-provision-install-a-certificate-on-the-server"></a><a name="Provision"></a> 在服务器中提供（安装）证书  
   
 1.  在 "**开始**" 菜单上，单击 "**运行**"，然后在 " `MMC` **打开**" 框中键入，然后单击 **"确定"**。  
   
-2.  在 MMC 控制台的“文件”  菜单上，单击“添加/删除管理单元”  。  
+2.  在 MMC 控制台中的“文件”**** 菜单上，单击“添加/删除管理单元”****。  
   
-3.  在“添加/删除管理单元”  对话框中，单击“添加”  。  
+3.  在“添加/删除管理单元”**** 对话框中，单击“添加”****。  
   
-4.  在“添加独立管理单元”  对话框中，单击“证书”  ，再单击“添加”  。  
+4.  在“添加独立管理单元”**** 对话框中，单击“证书”****，再单击“添加”****。  
   
-5.  在“证书管理单元”  对话框中，单击“计算机帐户”  ，再单击“完成”  。  
+5.  在“证书管理单元”**** 对话框中，单击“计算机帐户”****，再单击“完成”****。  
   
-6.  在“添加独立管理单元”  对话框中，单击“关闭”  。  
+6.  在“添加独立管理单元”**** 对话框中，单击“关闭”****。  
   
-7.  在“添加/删除管理单元”  对话框中，单击“确定”  。  
+7.  在“添加/删除管理单元”**** 对话框中，单击“确定”****。  
   
-8.  在“证书”  管理单元中，依次展开“证书”  和“个人”  ，右键单击“证书”  ，指向“所有任务”  ，然后单击“导入”  。  
+8.  在“证书”**** 管理单元中，依次展开“证书”**** 和“个人”****，右键单击“证书”****，指向“所有任务”****，然后单击“导入”****。  
   
 9. 完成 **证书导入向导**，将证书添加到计算机中，然后关闭 MMC 控制台。 有关向计算机添加证书的详细信息，请参阅 Windows 文档。  
   
-###  <a name="Export"></a>导出服务器证书  
+###  <a name="to-export-the-server-certificate"></a><a name="Export"></a> 导出服务器证书  
   
-1.  在“证书”  管理单元中的“证书”   / “个人”  文件夹中找到证书，右键单击“证书”  ，指向“所有任务”  ，然后单击“导出”  。  
+1.  在“证书”**** 管理单元中的“证书”**** / “个人”**** 文件夹中找到证书，右键单击“证书”****，指向“所有任务”****，然后单击“导出”****。  
   
-2.  完成 **“证书导出向导”** ，将证书文件存储在方便的位置。  
+2.  完成 **“证书导出向导”**，将证书文件存储在方便的位置。  
   
-###  <a name="ConfigureServerConnections"></a>将服务器配置为接受加密连接  
+###  <a name="to-configure-the-server-to-accept-encrypted-connections"></a><a name="ConfigureServerConnections"></a> 将服务器配置为接受加密连接  
   
-1.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，右键单击“**服务器实例> 协议”，然后选择“属性”**   _\<_  。  
+1.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，右键单击“\<服务器实例> 协议”，然后选择“属性”************ __****。  
   
-2.  在 " ****_\<实例名称_的协议>**属性**" 对话框中的 "**证书**" 选项卡上，从 "**证书**" 框的下拉菜单中选择所需的证书，然后单击 **"确定"**。  
+2.  在 " **Protocols for**_\<实例名称_的协议>**属性**" 对话框中的 "**证书**" 选项卡上，从 "**证书**" 框的下拉菜单中选择所需的证书，然后单击 **"确定"**。  
   
-3.  在 **“标志”** 选项卡的 **“ForceEncryption”** 框中，选择 **“是”** ，然后单击 **“确定”** 关闭该对话框。  
+3.  在 **“标志”** 选项卡的 **“ForceEncryption”** 框中，选择 **“是”**，然后单击 **“确定”** 关闭该对话框。  
   
 4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
-###  <a name="ConfigureClientConnections"></a>将客户端配置为请求加密连接  
+###  <a name="to-configure-the-client-to-request-encrypted-connections"></a><a name="ConfigureClientConnections"></a> 将客户端配置为请求加密连接  
   
 1.  将原始证书或导出的证书文件复制到客户端计算机。  
   
-2.  在客户端计算机上，使用“证书”  管理单元来安装根证书或导出的证书文件。  
+2.  在客户端计算机上，使用“证书”**** 管理单元来安装根证书或导出的证书文件。  
   
 3.  在控制台窗格中，右键单击“SQL Server Native Client 配置”****，再单击“属性”****。  
   
-4.  在 **“标志”** 选项卡的 **“强制协议加密”** 框中，单击 **“是”** 。  
+4.  在 **“标志”** 选项卡的 **“强制协议加密”** 框中，单击 **“是”**。  
   
-###  <a name="EncryptConnection"></a>加密 SQL Server Management Studio 的连接  
+###  <a name="to-encrypt-a-connection-from-sql-server-management-studio"></a><a name="EncryptConnection"></a> 通过 SQL Server Management Studio 加密连接  
   
-1.  在对象资源管理器工具栏上，单击 **“连接”** ，再单击 **“数据库引擎”** 。  
+1.  在对象资源管理器工具栏上，单击 **“连接”**，再单击 **“数据库引擎”**。  
   
-2.  在 **“连接到服务器”** 对话框中，填写连接信息，然后单击 **“选项”** 。  
+2.  在 **“连接到服务器”** 对话框中，填写连接信息，然后单击 **“选项”**。  
   
-3.  在 **“连接属性”** 选项卡上，单击 **“加密连接”** 。  
+3.  在 **“连接属性”** 选项卡上，单击 **“加密连接”**。  
   
   

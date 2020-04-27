@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778819"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>全文目录属性（“填充计划”页）
@@ -31,7 +31,7 @@ ms.locfileid: "62778819"
  **填充类型**  
  查看或修改填充操作：完全、增量或优化操作。  
   
- **已启用**  
+ **Enabled**  
  选中或清除此复选框可以启用或禁用计划操作。  
   
  **说明**  

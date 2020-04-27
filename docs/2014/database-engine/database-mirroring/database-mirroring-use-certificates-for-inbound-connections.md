@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807555"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>允许数据库镜像端点将证书用于入站连接 (Transact-SQL)
@@ -164,9 +164,9 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [GRANT 终结点权限 (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
+ [&#40;Transact-sql&#41;授予终结点权限](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [设置加密的镜像数据库](set-up-an-encrypted-mirror-database.md)   
- [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
+ [数据库镜像端点 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [数据库镜像配置故障排除 (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

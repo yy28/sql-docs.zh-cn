@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771433"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>创建函数以检索变更数据
@@ -209,8 +209,8 @@ go
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|与更改的提交事务关联的 LSN。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果对源表的更新操作修改了两个不同的行，则更改表将包含四行（两行具有旧值，两行具有新值），每一行均具有相同的 **__$start_lsn** 值。|  
-|**__ $ seqval**|`binary(10)`|用于对事务中的行更改进行排序的序列值。|  
-|**__ $ 操作**|`int`|与更改关联的数据操作语言 (DML) 操作。 可以是以下值之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（执行更新操作前的值。）<br /><br /> 4 = 更新（执行更新操作后的值。）|  
+|**__$seqval**|`binary(10)`|用于对事务中的行更改进行排序的序列值。|  
+|**__ $ 操作**|`int`|与更改关联的数据操作语言 (DML) 操作。 可以是以下其中一个值：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（执行更新操作前的值。）<br /><br /> 4 = 更新（执行更新操作后的值。）|  
 |**__ $ update_mask**|`varbinary(128)`|基于变更表的列序号的位掩码，用于标识那些发生了变更的列。 如果需要确定哪些列发生了更改，则可检查此值。|  
 |**\<捕获的源表列>**|多种多样|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中最初未指定任何列，则将返回源表中的所有列。|  
   
@@ -219,6 +219,6 @@ go
 ## <a name="next-step"></a>下一步  
  在创建了用于查询变更数据的表值函数之后，下一步就是开始设计包中的数据流。  
   
- **下一主题：** [检索和了解变更数据](retrieve-and-understand-the-change-data.md)  
+ **下一个主题：** [检索和了解变更数据](retrieve-and-understand-the-change-data.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789547"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)
@@ -36,21 +36,21 @@ ms.locfileid: "62789547"
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="AGPrereqsRealAddress"></a>可用性组先决条件  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a>可用性组先决条件  
  若要允许备份作业在可用性组的主副本上运行，请使用下列 AlwaysOn 可用性组备份设置：  
   
-|properties|设置|  
+|属性|设置|  
 |--------------|-------------|  
 |可用性组的自动备份首选项|仅在主副本上|  
 |主副本的备份优先级。|>0|  
   
- **详细信息：**  
+ **参考信息：**  
   
  [查看可用性组属性 (SQL Server)](view-availability-group-properties-sql-server.md)  
   
  [配置可用性副本备份 (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a>日志传送先决条件  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a> 日志传送先决条件  
   
 -   日志传送主数据库必须驻留在承载可用性组的初始/当前主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "62789547"
   
  在您为可用性组创建了所有辅助数据库后，如果您想要在辅助副本上执行备份，则需要重新配置该可用性组的自动备份首选项。  
   
- **详细信息：**  
+ **参考信息：**  
   
- 将[日志传送配置转换为可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)（SQL Server 博客）  
+ [将日志传送配置转换为可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) （SQL Server 博客）  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **日志传送**  
   
 -   [将日志传送升级到 SQL Server 2014 &#40;Transact-sql&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -81,37 +81,37 @@ ms.locfileid: "62789547"
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [&#40;Transact-sql 创建可用性组&#41;](create-an-availability-group-transact-sql.md)  
+-   [创建可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md)  
   
--   [创建可用性组 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [创建可用性组 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)  
   
 -   [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [配置可用性副本备份 (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   **博客**  
+-   **博客：**  
   
      [将日志传送配置转换为可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
      [将日志传送主数据库和辅助数据库添加到现有可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
--   **白皮书**  
+-   **白皮书：**  
   
      [迁移指南：从之前组合数据库镜像和日志传送的部署迁移到 AlwaysOn 可用性组](https://msdn.microsoft.com/library/jj635217)  
   
-     [SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>另请参阅  
- [关于日志传送 (SQL Server)](../../log-shipping/about-log-shipping-sql-server.md)   
+ [关于 &#40;SQL Server 的日志传送&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [监视可用性组 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+ [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
   

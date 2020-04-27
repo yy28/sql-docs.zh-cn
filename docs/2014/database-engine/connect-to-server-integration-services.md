@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808698"
 ---
 # <a name="connect-to-server-integration-services"></a>连接到服务器 (Integration Services)
-  在连接到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]时，使用此对话框可以查看或指定选项。  
+  连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 时，可以使用此对话框查看或指定选项。  
   
 ## <a name="options"></a>选项  
  **服务器类型**  
@@ -38,10 +38,10 @@ ms.locfileid: "62808698"
  **用户名**  
  由于只有 Windows 身份验证可用于 [!INCLUDE[ssIS](../includes/ssis-md.md)]，因此此选项不可用。  
   
- **权限**  
+ **密码**  
  由于只有 Windows 身份验证可用于 [!INCLUDE[ssIS](../includes/ssis-md.md)]，因此此选项不可用。  
   
- **连接**  
+ **“连接”**  
  单击此项可连接到在上面选择的服务器。  
   
  **选项**  

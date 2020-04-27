@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774339"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>托管实例详细信息（SQL Server 实用工具）
@@ -38,11 +38,11 @@ ms.locfileid: "62774339"
   
  默认情况下，下面的列将显示与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个托管实例有关的运行状态信息。  
   
--   实例 CPU - 显示分配给此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的处理器使用率的运行状态。 根据为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰 &#40;SQL Server 实用工具&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   实例 CPU - 显示分配给此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的处理器使用率的运行状态。 根据为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      若要查看此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的处理器使用率历史记录，或者查看或更改策略限制，请单击 **“CPU 使用率”** 选项卡。  
   
--   计算机 CPU - 显示计算机处理器使用率的运行状态。 根据为计算机设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰 &#40;SQL Server 实用工具&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   计算机 CPU - 显示计算机处理器使用率的运行状态。 根据为计算机设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      若要查看此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的处理器使用率历史记录，或者查看或更改策略限制，请单击 **“CPU 使用率”** 选项卡。  
   
@@ -176,10 +176,10 @@ ms.locfileid: "62774339"
 -   Language：  
   
 ## <a name="see-also"></a>另请参阅  
- [已部署的数据层应用程序详细信息（SQL Server 实用工具）](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [已部署的数据层应用程序详细信息 &#40;SQL Server 实用工具&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [实用工具仪表板 &#40;SQL Server 实用工具&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [在 SQL Server 实用工具中监视 SQL Server 的实例](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [SQL Server 实用工具的功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [监视 SQL Server 实用工具中 SQL Server 的实例](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server 实用工具故障排除](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

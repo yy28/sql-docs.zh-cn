@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774182"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>故障转移到日志传送辅助服务器 (SQL Server)
@@ -46,13 +46,13 @@ ms.locfileid: "62774182"
 4.  同步辅助服务器之后，可以根据您的首选，通过恢复任一辅助数据库并将客户端重定向到该服务器实例来故障转移该辅助服务器。 恢复操作将使数据库处于一致的状态并使其联机。  
   
     > [!NOTE]  
-    >  辅助数据库可用时，应确保其元数据与原始主数据库的元数据一致。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+    >  辅助数据库可用时，应确保其元数据与原始主数据库的元数据一致。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 5.  恢复辅助数据库之后，可以将其重新配置为其他辅助数据库的主数据库。  
   
      如果其他辅助数据库不可用，请参阅[配置日志传送 (SQL Server)](configure-log-shipping-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [交换主日志传送服务器和辅助日志传送服务器的角色 (SQL Server)](change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62774182"
   
 ## <a name="see-also"></a>另请参阅  
  [日志传送表和存储过程](log-shipping-tables-and-stored-procedures.md)   
- [关于日志传送 (SQL Server)](about-log-shipping-sql-server.md)   
+ [关于 &#40;SQL Server 的日志传送&#41;](about-log-shipping-sql-server.md)   
  [结尾日志备份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   

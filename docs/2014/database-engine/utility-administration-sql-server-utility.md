@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773749"
 ---
 # <a name="utility-administration-sql-server-utility"></a>实用工具管理（SQL Server 实用工具）
@@ -62,7 +62,7 @@ ms.locfileid: "62773749"
 -   计算机卷空间使用率的默认最小值是 0%。  
   
  减少高度易失性资源中的策略违反干扰。 若要展开此功能的控件，请单击显示右侧的向下箭头。  
- 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
+ 有关详细信息，请参阅[减少 CPU 使用策略中的干扰 &#40;SQL Server 实用工具&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  “安全性”选项卡 - 显示有权管理 UCP 或从 UCP 进行读取的登录名。  
@@ -103,8 +103,8 @@ ms.locfileid: "62773749"
   
 ## <a name="see-also"></a>另请参阅  
  [实用工具仪表板 &#40;SQL Server 实用工具&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [已部署的数据层应用程序详细信息（SQL Server 实用工具）](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [托管实例详细信息（SQL Server 实用工具）](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [已部署的数据层应用程序详细信息 &#40;SQL Server 实用工具&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [托管实例详细 &#40;SQL Server 实用工具&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [在 SQL Server 实用工具中监视 SQL Server 的实例](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   

@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cf16c8afb363a1b7727b6da3a5f75bf966ab0d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812981"
 ---
 # <a name="validation-page-alwayson-availability-group-wizards"></a>“验证”页（AlwaysOn 可用性组向导）
   本帮助主题介绍 **“验证”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页可以验证您的环境是否支持您在向导前面的页面中做出的所有配置选择。  
   
-##  <a name="PageOptions"></a>验证页选项  
+##  <a name="validation-page-options"></a><a name="PageOptions"></a>验证页选项  
  **可用性组验证的结果。**  
  此网格显示每个已完成的验证步骤的结果。 网格列如下所示：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62812981"
 |------------|-----------------|  
 |**错误**|指示验证步骤失败。 单击该链接可以查看错误消息。|  
 |**跳过**|指示已通过该验证步骤，因为您所做的选择不需要验证。 单击该链接可以查看跳过某步骤的原因。|  
-|**Success**|指示此验证步骤已成功完成。|  
+|**成功**|指示此验证步骤已成功完成。|  
 |**警告**|指示可用性组配置可能存在问题。  单击该链接可以查看警告消息。|  
   
  **重新运行验证**  
@@ -48,7 +48,7 @@ ms.locfileid: "62812981"
   
 
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

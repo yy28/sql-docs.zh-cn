@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779188"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>全文目录属性（“表和视图”页）
@@ -57,8 +57,8 @@ ms.locfileid: "62779188"
 |**不跟踪更改**|如果此选项处于有效状态，则不会记录对目录中索引数据所做的更改。 管理员必须将 ALTER FULLTEXT INDEX 与 FULL POPULATION 或 INCREMENTAL POPULATION 一起使用以生成索引。|  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;创建全文目录](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
- [ALTER FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [&#40;Transact-sql&#41;更改全文目录](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [填充全文索引](../relational-databases/indexes/indexes.md)  
   
   

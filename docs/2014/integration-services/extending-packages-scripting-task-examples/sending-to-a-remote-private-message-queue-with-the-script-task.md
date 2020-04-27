@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4791e826adccb925241b02312900ea524f228e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768463"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>使用脚本任务向远程私有消息队列发送消息
@@ -42,9 +42,9 @@ ms.locfileid: "62768463"
   
 2.  创建一个[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]名为**MessageText**的变量`String` ，以将消息文本传递到脚本。 输入默认消息作为该变量的值。  
   
-3.  向设计图面添加一个脚本任务，并对其进行编辑。 在“脚本任务编辑器”的“脚本”选项卡中，将 ** 变量添加到 ReadOnlyVariables 属性中，使该变量在脚本内可用******`MessageText`****。  
+3.  向设计图面添加一个脚本任务，并对其进行编辑。 在“脚本任务编辑器”的“脚本”选项卡中，将  **变量添加到 ReadOnlyVariables 属性中，使该变量在脚本内可用**  `MessageText`  。  
   
-4.  单击“编辑脚本”，打开 **** Tools for Applications (VSTA) 脚本编辑器[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
+4.  单击“编辑脚本”，打开   Tools for Applications (VSTA) 脚本编辑器[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
   
 5.  在脚本项目中添加对 `System.Messaging` 命名空间的引用。  
   

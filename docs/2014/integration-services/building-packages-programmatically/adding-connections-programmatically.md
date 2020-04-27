@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772216"
 ---
 # <a name="adding-connections-programmatically"></a>以编程方式添加连接
@@ -41,7 +41,7 @@ ms.locfileid: "62772216"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- 这可将托管连接管理器对象转换为其基础连接对象。 如果您使用的是 C++，则需要调用 `QueryInterface` 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 方法，并请求基础连接对象的接口。  
+ 这可将托管连接管理器对象转换为其基础连接对象。 如果您使用的是 C++，则需要调用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象的 `QueryInterface` 方法，并请求基础连接对象的接口。  
   
  下表列出了随 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的连接管理器。 此外，还有 `package.Connections.Add("xxx")` 语句中使用的字符串。 若要获取所有连接管理器的列表，请参阅 [Integration Services (SSIS) 连接](../connection-manager/integration-services-ssis-connections.md)。  
   

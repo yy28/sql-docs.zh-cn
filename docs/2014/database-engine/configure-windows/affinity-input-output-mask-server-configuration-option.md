@@ -16,28 +16,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813675"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity I/O mask 服务器配置选项
-  为了执行多任务， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 和 Windows Server 2003 有时会在不同的处理器之间移动进程线程。 虽然从操作系统方面而言，这种活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个处理器分配给特定线程，则通过消除处理器的重新加载需要，可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。  
+  为了执行多任务， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 和 Windows Server 2003 有时会在不同的处理器之间移动进程线程。 虽然从操作系统方面而言，此活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个处理器分配给特定线程，则通过消除处理器的重新加载需要，可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过两个关联掩码选项来支持处理器关联：**关联掩码**（也称为**CPU 关联掩码**）和**关联 i/o 掩码**。 有关 **关联掩码** 选项的详细信息，请参阅 [关联掩码服务器配置选项](affinity-mask-server-configuration-option.md)。 对于包含33到64处理器的服务器的 CPU 和 i/o 相关性支持，需要分别使用[affinity64 Mask 服务器配置选项](affinity64-mask-server-configuration-option.md)和[Affinity64 输入-输出掩码服务器配置选项](affinity64-input-output-mask-server-configuration-option.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下两个关联掩码选项来支持处理器关联： **关联掩码** （也称为 **CPU 关联掩码**）和 **关联 I/O 掩码**。 有关 **关联掩码** 选项的详细信息，请参阅 [关联掩码服务器配置选项](affinity-mask-server-configuration-option.md)。 对于具有 33 至 64 个处理器的服务器，CPU 和 I/O 关联支持还要求分别使用 [affinity64 掩码服务器配置选项](affinity64-mask-server-configuration-option.md) 和 [affinity64 I/O 掩码服务器配置选项](affinity64-input-output-mask-server-configuration-option.md) 。  
   
 > [!NOTE]  
 >  对具有 33 到 64 个处理器的服务器的关联支持仅在 64 位操作系统上可用。  
   
- 
-  **关联 I/O 掩码** 选项将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 绑定到指定的 CPU 子集。 在高端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机事务处理 (OLTP) 环境中，此扩展可以提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程执行 I/O 的性能。 此增强功能不支持对各个磁盘或磁盘控制器的硬件关联。  
+ **关联 I/O 掩码** 选项将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 绑定到指定的 CPU 子集。 在高端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机事务处理 (OLTP) 环境中，此扩展可以提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程执行 I/O 的性能。 此增强功能不支持对各个磁盘或磁盘控制器的硬件关联。  
   
- 
-  **关联 I/O 掩码** 的值指定了在多处理器计算机中有哪些 CPU 可用于处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 操作。 该掩码是一个位图，其中最右边的位指定顺序最低的 CPU(0)，该位左边的位指定顺序次低的 CPU(1)，依此类推。 若要配置超过 32 个处理器，请同时设置 **关联 I/O 掩码** 和 **affinity64 I/O 掩码**。  
+ **关联 I/O 掩码** 的值指定了在多处理器计算机中有哪些 CPU 可用于处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 操作。 该掩码是一个位图，其中最右边的位指定顺序最低的 CPU(0)，该位左边的位指定顺序次低的 CPU(1)，依此类推。 若要配置超过 32 个处理器，请同时设置 **关联 I/O 掩码** 和 **affinity64 I/O 掩码**。  
   
- 
-  **关联 I/O 掩码** 值如下所示：  
+ **关联 I/O 掩码** 值如下所示：  
   
 -   在多处理器计算机中，1 字节 **关联 I/O 掩码** 最多可以涵盖 8 个 CPU。  
   
@@ -51,17 +48,17 @@ ms.locfileid: "62813675"
   
  关联 I/O 模式中某一位的值为 1，则指定相应的 CPU 可执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 操作；值为 0，则指定相应的 CPU 未安排任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 操作。 如果将所有位设置为零或不指定**关联 I/O 掩码**，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 将由任何可处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程的 CPU 执行。  
   
- 因为设置 “关联 I/O 掩码”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **** 选项是一项专用操作，所以建议只在需要时使用。 大多数情况下，Windows 2000 或 Windows Server 2003 的默认关联就可以提供最佳性能。  
+ 因为设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“关联 I/O 掩码”  选项是一项专用操作，所以建议只在需要时使用。 大多数情况下，Windows 2000 或 Windows Server 2003 的默认关联就可以提供最佳性能。  
   
- 指定**关联 I/O 掩码**选项后，必须将其与**关联掩码**配置选项一起使用。 请勿在“关联 I/O 掩码”**** 开关和“关联掩码”**** 选项中启用相同的 CPU。 每个 CPU 对应的位必须处于下列三种状态之一：  
+ 指定**关联 I/O 掩码**选项后，必须将其与**关联掩码**配置选项一起使用。 请勿在“关联 I/O 掩码”  开关和“关联掩码”  选项中启用相同的 CPU。 每个 CPU 对应的位必须处于下列三种状态之一：  
   
--   在“关联 I/O 掩码”**** 选项和“关联掩码”**** 选项中均为 0。  
+-   在“关联 I/O 掩码”  选项和“关联掩码”  选项中均为 0。  
   
--   在“关联 I/O 掩码”**** 选项中为 1，在“关联掩码”**** 选项中为 0。  
+-   在“关联 I/O 掩码”  选项中为 1，在“关联掩码”  选项中为 0。  
   
--   在“关联 I/O 掩码”**** 选项中为 0，在“关联掩码”**** 选项中为 1。  
+-   在“关联 I/O 掩码”  选项中为 0，在“关联掩码”  选项中为 1。  
   
- “关联 I/O 掩码”**** 选项是一个高级选项。 如果使用`sp_configure`系统存储过程来更改该设置，则仅当**show advanced options**设置为1时才能更改**关联 i/o 掩码**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，重新配置“关联 I/O 掩码”**** 选项要求重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ “关联 I/O 掩码”  选项是一个高级选项。 如果使用`sp_configure`系统存储过程来更改该设置，则仅当**show advanced options**设置为1时才能更改**关联 i/o 掩码**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，重新配置“关联 I/O 掩码”  选项要求重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 > [!CAUTION]  
 >  请不要在 Windows 操作系统中配置 CPU 关联后，还在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置关联掩码。 这些设置实现的效果相同，如果配置不一致，则可能会得到意外的结果。 最好使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 `sp_configure` 选项配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 关联。  

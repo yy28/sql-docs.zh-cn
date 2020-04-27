@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779404"
 ---
 # <a name="full-text-stoplist-properties"></a>全文非索引字表属性
@@ -28,7 +28,7 @@ ms.locfileid: "62779404"
 -   [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)  
   
 ## <a name="options"></a>选项  
- **Action**  
+ **操作**  
  指定要执行的操作。  
   
  **添加非索引字**  
@@ -50,11 +50,11 @@ ms.locfileid: "62779404"
  如果您选择的是 **“添加非索引字”**、 **“删除非索引字”** 或 **“删除所有非索引字”**，请从列表框中选择非索引字的语言。 这将列出该服务器实例支持的所有全文语言。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fulltext_stopwords (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
- [sys.fulltext_stoplists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)   
- [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)   
- [ALTER FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
- [CREATE FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [sys. fulltext_stopwords &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
+ [sys. fulltext_stoplists &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)   
+ [为全文搜索配置和管理非索引字和非索引字](../relational-databases/search/full-text-search.md)   
+ [更改全文非索引字表 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
+ [创建全文非索引字表 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [DROP FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   

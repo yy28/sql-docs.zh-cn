@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774319"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和阅读 SQL Server 安装程序日志文件
@@ -59,8 +59,7 @@ ms.locfileid: "62774319"
   
 -   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机的属性和配置  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品功能  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品功能  
   
 -   安装版本和安装包属性的说明  
   
@@ -142,14 +141,11 @@ ms.locfileid: "62774319"
   
  MSI 日志文件的类型：  
   
--   
-  \<Feature>_\<Architecture>\_\<Interaction>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log  
   
--   
-  \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
   
--   
-  \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>位置  
  MSI 日志文件位于% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log。  

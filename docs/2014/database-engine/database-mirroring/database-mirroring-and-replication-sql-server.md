@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807446"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>数据库镜像和复制 (SQL Server)
@@ -85,14 +85,13 @@ ms.locfileid: "62807446"
   
     -   合并代理（对于合并订阅）  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听程序（replisapi.dll：用于使用 Web 同步进行同步的合并订阅）  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听程序（replisapi.dll：用于使用 Web 同步进行同步的合并订阅）  
   
     -   SQL 合并 ActiveX 控件（对于与控件同步的合并订阅）  
   
      分发代理和分发 ActiveX 控件没有此参数，因为它们不连接到发布服务器。  
   
-     对代理参数所做的更改在下次启动代理时生效。 如果代理连续运行，则必须停止该代理，然后重新启动。 可以在代理配置文件中和从命令提示符指定参数。 有关详细信息，请参阅：  
+     对代理参数所做的更改在下次启动代理时生效。 如果代理连续运行，则必须停止该代理，然后重新启动。 可以在代理配置文件中和从命令提示符指定参数。 有关详细信息，请参见:  
   
     -   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -163,6 +162,6 @@ ms.locfileid: "62807446"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 复制](../../relational-databases/replication/sql-server-replication.md)   
- [日志传送和复制 &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
+ [日志传送和复制 (SQL Server)](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

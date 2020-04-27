@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771573"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
@@ -41,12 +41,11 @@ ms.locfileid: "62771573"
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源作为群集故障转移的一部分进行故障转移，则正在运行的包不重新启动。 您可以使用检查点来重新启动包。 有关详细信息，请参阅 [通过使用检查点重新启动包](../packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catalog-object-identifiers"></a>目录对象标识符  
- 在目录中创建新对象时，为该对象指定一个名称。 对象名称就是一个标识符。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了有关可在标识符中使用的字符的规则。 以下对象的名称必须遵循标识符规则。  
+ 在目录中创建新对象时，为该对象指定一个名称。 对象名称就是一个标识符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了有关可在标识符中使用的字符的规则。 以下对象的名称必须遵循标识符规则。  
   
 -   Folder  
   
--   Project  
+-   项目  
   
 -   环境  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62771573"
  **定期清理日志**  
  当此属性设置为 `True` 时，操作清除作业步骤将会运行。  
   
- **保持期（天）**  
+ **保持期(天)**  
  定义可允许的操作数据的最长保存时间（以天为单位）。 将删除较旧的数据。  
   
  最小值为一天。 最大值仅受[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int`数据的最大值的限制。 有关此数据类型的信息，请参阅 [int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)。  
@@ -112,8 +111,7 @@ ms.locfileid: "62771573"
  定义在目录中存储项目的多少个版本。 将删除较旧版本的项目。  
   
 ### <a name="encryption-algorithm"></a>加密算法  
- 
-  **“加密算法”** 属性可指定用于对敏感参数值进行加密的加密类型。 可以从下列加密类型中选择。  
+ **“加密算法”** 属性可指定用于对敏感参数值进行加密的加密类型。 可以从下列加密类型中选择。  
   
 -   AES_256（默认值）  
   
@@ -135,13 +133,13 @@ ms.locfileid: "62771573"
   
  若要更改 "**加密算法**" 属性设置， `SSISDB`请将数据库设置为单用户模式，然后调用 catalog. configure_catalog 存储过程。 将 ENCRYPTION_ALGORITHM 用于 *property_name* 参数。 有关支持的属性值，请参阅 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)。 有关该存储过程的详细信息，请参阅 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
   
- 有关单用户模式的详细信息，请参阅[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密和加密算法的信息，请参阅 [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)一节中的有关主题。  
+ 有关单用户模式的详细信息，请参阅 [将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密和加密算法的信息，请参阅 [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)一节中的有关主题。  
   
  数据库主密钥用于加密。 创建目录时会创建此密钥。 有关详细信息，请参阅 [创建 SSIS 目录](ssis-catalog.md)。  
   
  下表列出了 **“目录属性”** 对话框中显示的属性名称和数据库视图中对应的属性。  
   
-|属性名称（**“目录属性”** 对话框）|属性名称（数据库视图）|  
+|属性名称（"**目录属性**" 对话框）|属性名称（数据库视图）|  
 |---------------------------------------------------------|-------------------------------------|  
 |加密算法名称|ENCRYPTION_ALGORITHM|  
 |定期清理日志|OPERATION_CLEANUP_ENABLED|  
@@ -172,7 +170,7 @@ ms.locfileid: "62771573"
   
  若要使用 Transact-sql 管理权限，请调用[目录。 grant_permission &#40;Ssisdb 数据库&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)、[目录 deny_permission &#40;ssisdb 数据库&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database)和 revoke_permission &#40;ssisdb[数据库&#41;。 ](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database) 若要查看所有对象的当前主体的有效权限，请查询 [catalog.effective_object_permissions（SSISDB 数据库）](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database)。 本主题描述了不同类型的权限。 若要查看已显式分配给用户的权限，请查询 [catalog.explicit_object_permissions（SSISDB 数据库）](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database)。  
   
-## <a name="folders"></a>Folders  
+## <a name="folders"></a>文件夹  
  文件夹包含目录中的`SSISDB`一个或多个项目和环境。 可以使用 [catalog.folders（SSISDB 数据库）](/sql/integration-services/system-views/catalog-folders-ssisdb-database) 视图来访问有关目录中的文件夹的信息。 您可以使用以下存储过程管理文件夹。  
   
 -   [catalog.create_folder（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database)  
@@ -206,7 +204,7 @@ ms.locfileid: "62771573"
   
 -   [catalog.object_versions（SSISDB 数据库）](/sql/integration-services/system-views/catalog-object-versions-ssisdb-database)  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  您可以使用参数在包执行时为包属性赋值。 若要设置包或项目参数的值和清除这些值，请调用 [catalog.set_object_parameter_value（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database)和 [catalog.clear_object_parameter_value（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database)。 若要为执行实例设置参数的值，请调用 [catalog.set_execution_parameter_value（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)。 可以通过调用 [catalog.get_parameter_values（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database)来检索默认参数值。  
   
  以下视图显示了所有包和项目的参数，以及用于执行实例的参数值。  
@@ -275,8 +273,7 @@ ms.locfileid: "62771573"
   
 -   [catalog.event_message_context](/sql/integration-services/system-views/catalog-event-message-context)  
   
- 可以通过调用 [catalog.validate_project（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database)和 [catalog.validate_package（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database)存储过程验证项目和包。 
-  [catalog.validations（SSISDB 数据库）](/sql/integration-services/system-views/catalog-validations-ssisdb-database)视图提供了有关验证的详细信息，例如，验证中要考虑的服务器环境引用、验证是依赖项验证还是完整验证以及使用 32 位运行时还是 64 位运行时来运行包。  
+ 可以通过调用 [catalog.validate_project（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database)和 [catalog.validate_package（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database)存储过程验证项目和包。 [catalog.validations（SSISDB 数据库）](/sql/integration-services/system-views/catalog-validations-ssisdb-database)视图提供了有关验证的详细信息，例如，验证中要考虑的服务器环境引用、验证是依赖项验证还是完整验证以及使用 32 位运行时还是 64 位运行时来运行包。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

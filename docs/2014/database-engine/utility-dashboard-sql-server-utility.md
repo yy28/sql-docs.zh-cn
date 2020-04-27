@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773809"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>实用工具面板（SQL Server 实用工具）
@@ -24,13 +24,11 @@ ms.locfileid: "62773809"
   
 ## <a name="uielement-list"></a>UIElement 列表  
  托管实例运行状况  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的托管实例的运行状态显示在实用工具资源管理器内容窗格的左侧。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的托管实例的运行状态显示在实用工具资源管理器内容窗格的左侧。  
   
  托管实例的运行状况参数如下所示：  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的 CPU 使用率。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的 CPU 使用率。  
   
 -   数据库文件使用率。  
   
@@ -64,8 +62,7 @@ ms.locfileid: "62773809"
   
  数据层应用程序运行状况参数如下所示：  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的 CPU 使用率。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的 CPU 使用率。  
   
 -   数据库文件使用率。  
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778938"
 ---
 # <a name="full-text-index-properties-general-page"></a>全文索引属性（“常规”页）
@@ -86,7 +86,7 @@ ms.locfileid: "62778938"
  **表全文项计数**  
  指示成功执行了全文索引的行数。  
   
- 此属性对应于由 OBJECTPROPERTYEX `TableFulltextItemCount` 函数返回的 [!INCLUDE[tsql](../includes/tsql-md.md)] 属性。  
+ 此属性对应于由 OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] 函数返回的 `TableFulltextItemCount` 属性。  
   
  **已处理的表全文文档数**  
  显示自从全文索引开始以来已处理的行数。 在为进行全文搜索而正在编制索引的表中，将一个行的所有列视为要编制索引的文档的一部分。 已删除的行不被计数。  
@@ -119,14 +119,13 @@ ms.locfileid: "62778938"
   
 |||  
 |-|-|  
-|**True**|已启用|  
-|**False**|已禁用|  
+|**True**|启用|  
+|**False**|禁用|  
   
  **更改跟踪**  
  指定表是否启用了全文更改跟踪，如果启用，则是什么种类。 全文更改跟踪用于记录已设置全文索引的表或索引视图中已修改的行。 这些更改可以传播到全文索引。  
   
- 
-  **“更改跟踪”** 值如下：  
+ **“更改跟踪”** 值如下：  
   
 |||  
 |-|-|  
@@ -139,9 +138,9 @@ ms.locfileid: "62778938"
   
 |||  
 |-|-|  
-|**完全**|在表的完整填充期间，为所有行生成索引条目。|  
-|**式**|增量填充在全文索引中更新上次填充的当时或之后添加、删除或修改的行。 执行增量填充需要基表包含一个 `timestamp` 数据类型的列。|  
-|**时更新**|一旦修改基表中的数据，将更新全文索引。|  
+|**达到**|在表的完整填充期间，为所有行生成索引条目。|  
+|**增量**|增量填充在全文索引中更新上次填充的当时或之后添加、删除或修改的行。 执行增量填充需要基表包含一个 `timestamp` 数据类型的列。|  
+|**Update**|一旦修改基表中的数据，将更新全文索引。|  
   
 ## <a name="see-also"></a>另请参阅  
  [全文搜索入门](../relational-databases/search/get-started-with-full-text-search.md)  

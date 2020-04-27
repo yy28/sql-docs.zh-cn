@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771535"
 ---
 # <a name="project-versions-dialog-box"></a>“项目版本”对话框
@@ -30,7 +30,7 @@ ms.locfileid: "62771535"
   
 -   [还原项目版本](#restore)  
   
-##  <a name="open_dialog"></a> 打开“项目版本”对话框  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> 打开“项目版本”对话框  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 服务器。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62771535"
   
  在“项目版本”对话框中，“版本”表显示服务器上已部署的项目的版本列表，并显示部署版本的日期和时间、还原版本的日期和时间（如果被还原过）、版本说明以及版本标识符。   当前活动版本用表的 **“当前”** 列中的复选标记表示。  
   
-##  <a name="restore"></a> 还原项目版本  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> 还原项目版本  
  若要还原项目的以前版本，请在 **“版本”** 表中选择该版本，然后单击 **“还原到所选版本”** 。 项目将还原到所选版本，且该版本用 **“版本”** 表的 **“当前”** 列中的复选标记表示。  
   
   

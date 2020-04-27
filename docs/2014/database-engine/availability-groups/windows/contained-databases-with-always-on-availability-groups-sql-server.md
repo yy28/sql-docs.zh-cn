@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13dd6e87b6442b8c1b908ceb73d1e5c7f135308c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815327"
 ---
 # <a name="contained-databases-with-always-on-availability-groups-sql-server"></a>包含的数据库与 Always On 可用性组 (SQL Server)
@@ -29,11 +29,11 @@ ms.locfileid: "62815327"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   在将包含数据库添加到某一可用性组之前，请确保在承载该可用性组的可用性副本的每个服务器实例上 `contained database authentication` 服务器选项都设置为 `1`。 有关详细信息，请参阅 [contained database authentication 服务器配置选项](../../configure-windows/contained-database-authentication-server-configuration-option.md) 和 [服务器配置选项 (SQL Server)](../../configure-windows/server-configuration-options-sql-server.md)的相关信息。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [服务器配置选项 (SQL Server)](../../configure-windows/server-configuration-options-sql-server.md)  
   

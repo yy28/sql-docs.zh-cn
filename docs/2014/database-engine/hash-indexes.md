@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779477"
 ---
 # <a name="hash-indexes"></a>哈希索引
@@ -26,8 +26,7 @@ ms.locfileid: "62779477"
   
  用于哈希索引的哈希函数具有以下特征：  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拥有一个用于所有哈希索引的哈希函数。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拥有一个用于所有哈希索引的哈希函数。  
   
 -   哈希函数具有确定性。 同一索引键始终映射到哈希索引中的同一 Bucket。  
   
@@ -48,6 +47,6 @@ ms.locfileid: "62779477"
  有关内存优化表的索引的详细信息，请参阅[在内存优化表上使用索引的准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [内存优化的表的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+ [内存优化表上的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

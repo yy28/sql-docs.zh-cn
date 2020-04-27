@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770650"
 ---
 # <a name="script-component"></a>脚本组件
@@ -56,7 +56,7 @@ ms.locfileid: "62770650"
  在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 在元数据设计模式中，可以添加和修改脚本组件的输入和输出，但不能编写代码。 配置完所有的输入和输出后，即可切换至代码设计模式编写脚本。 脚本组件从输入和输出的元数据自动生成基代码。 如果在脚本组件生成基代码后更改元数据，则您的代码可能无法再编译，因为更新的基代码可能与您的代码不兼容。  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>编写组件使用的脚本  
- 脚本组件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]将 Tools for Applications （VSTA）用作编写脚本的环境。 您可以从 **“脚本转换编辑器”** 访问 VSTA。 有关详细信息，请参阅 [脚本转换编辑器（“脚本”页）](../../script-transformation-editor-script-page.md)。  
+ 脚本组件将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作编写脚本的环境。 您可以从 **“脚本转换编辑器”** 访问 VSTA。 有关详细信息，请参阅 [脚本转换编辑器（“脚本”页）](../../script-transformation-editor-script-page.md)。  
   
  脚本组件提供一个 VSTA 项目，其中包含一个名为 ScriptMain 的自动生成的类，表示组件元数据。 例如，如果将脚本组件用作具有三个输出的转换，则 ScriptMain 为每个输出都包含一种方法。 ScriptMain 是脚本的入口点。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "62770650"
 ### <a name="configuring-the-script-component-in-the-designer"></a>配置设计器中的脚本组件  
  有关可在 **“脚本转换编辑器”** 对话框中设置的属性的详细信息，请单击以下主题之一：  
   
--   [脚本转换编辑器 &#40;输入列 "页&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [脚本转换编辑器（“输入列”页）](../../script-transformation-editor-input-columns-page.md)  
   
--   [脚本转换编辑器 &#40;"输入和输出" 页&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [脚本转换编辑器（“输入和输出”页）](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [脚本转换编辑器 &#40;脚本页&#41;](../../script-transformation-editor-script-page.md)  
+-   [脚本转换编辑器（“脚本”页）](../../script-transformation-editor-script-page.md)  
   
--   [脚本转换编辑器 &#40;连接管理器页&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [脚本转换编辑器（“连接管理器”页）](../../script-transformation-editor-connection-managers-page.md)  
   
  有关如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
@@ -105,9 +105,9 @@ ms.locfileid: "62770650"
 ### <a name="configuring-the-script-component-programmatically"></a>以编程方式配置脚本组件  
  有关可在 **“属性”** 窗口中或以编程形式设置的属性的详细信息，请单击以下主题之一：  
   
--   [Common Properties](../../common-properties.md)  
+-   [通用属性](../../common-properties.md)  
   
--   [转换自定义属性](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请单击下列主题之一：  
   

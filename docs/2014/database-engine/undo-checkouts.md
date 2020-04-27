@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773393"
 ---
 # <a name="undo-checkouts"></a>撤消签出
@@ -48,7 +48,7 @@ ms.locfileid: "62773393"
      **选项**  
      单击按钮右侧的箭头时，显示源代码管理插件特定的撤消签出选项。  
   
-     **排序**  
+     **进行**  
      对显示列进行排序。  
   
      **树视图**  

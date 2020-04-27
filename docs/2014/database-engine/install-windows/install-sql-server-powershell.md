@@ -11,25 +11,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775437"
 ---
 # <a name="install-sql-server-powershell"></a>安装 SQL Server PowerShell
   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序检测到您已选择了包含 PowerShell 组件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，但未安装 Windows PowerShell 2.0，则该安装程序将停止运行。 您必须通过使用 Windows Management Framework 安装 PowerShell，然后重新运行安装程序。  
   
-## <a name="installing-includessnoversionincludesssnoversion-mdmd-powershell-support"></a>安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支持  
+## <a name="installing-ssnoversion-powershell-support"></a>安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支持  
  您通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装为 Windows PowerShell 提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的软件。 在您选择要求 PowerShell 支持的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能时，安装程序将检查是否安装了 Windows PowerShell 2.0。 如果存在 PowerShell 2.0，安装程序然后将安装以下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 组件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元。这些管理单元是 dll 文件，可用来实现两种类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows PowerShell 支持：  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元。这些管理单元是 dll 文件，用于实现两种类型的 Windows PowerShell 支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
   
     -   一组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet。 Cmdlet 是用来实现特定操作的命令。 例如， **Invoke-Sqlcmd** 可用于运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 XQuery 脚本，而这些脚本也可使用 **sqlcmd** 实用工具运行， **Invoke-PolicyEvaluation** 用于报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象是否符合基于策略的管理策略。  
   
     -   一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序。 通过该提供程序，可以使用类似于文件系统路径的路径，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的层次结构中导航。 每个对象都与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型中的一个类关联。 您可以使用该类的方法和属性来针对对象执行工作。 例如，如果通过 cd 切换到路径中的某个数据库对象，则可以使用 Microsoft.SqlServer.Managment.SMO.Database 类的方法和属性来管理该数据库。  
   
--   导**** 入到 Windows PowerShell 2.0 会话中以便加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理单元的 sqlps 模块。  
+-   导**sqlps**入到 Windows PowerShell 2.0 会话中以便加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理单元的 sqlps 模块。  
   
 -   不推荐使用的**sqlps**实用工具，用于启动 Windows PowerShell 2.0 会话并导入**sqlps**模块。  
   

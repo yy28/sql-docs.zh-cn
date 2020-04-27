@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812581"
 ---
 # <a name="check-in-files"></a>签入文件
@@ -38,7 +38,7 @@ ms.locfileid: "62812581"
      **“列”**  
      标识要显示的列及其显示顺序。  
   
-     **注释**  
+     **备注**  
      为签入操作添加相关注释。  
   
      **签入项时不显示“签入”对话框**  
@@ -53,7 +53,7 @@ ms.locfileid: "62812581"
      **选项**  
      单击按钮右侧的箭头时，显示源代码管理插件特定的签入选项。  
   
-     **排序**  
+     **进行**  
      对显示列进行排序。  
   
      **树视图**  

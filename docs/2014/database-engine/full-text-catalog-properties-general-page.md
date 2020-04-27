@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779660"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文目录属性（“常规”页）
@@ -38,13 +38,13 @@ ms.locfileid: "62779660"
   
 -   **正在进行爬网**  
   
--   **已暂停**  
+-   **暂停**  
   
 -   **已中止**  
   
--   **从中**  
+-   **恢复**  
   
--   **立即**  
+-   **关机**  
   
 -   **正在进行增量填充**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62779660"
  **区分重音**  
  查看或修改目录是否对变音标记敏感，如波形符（**~**）、锐音符号（**")**）或元音变音符（e **）。** 有效值是：  
   
--   **是**  
+-   **否**  
   
 -   **是**  
   

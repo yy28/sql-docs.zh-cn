@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e0417ddf5c4c09cfffa07b7b76918a89622aec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771797"
 ---
 # <a name="handling-events-programmatically"></a>以编程方式处理事件
@@ -37,7 +37,7 @@ ms.locfileid: "62771797"
 ## <a name="receiving-idtsevents-callbacks"></a>接收 IDTSEvents 回调  
  以编程方式生成和执行包的开发人员可以使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口在验证和执行过程中接收事件通知。 其方法是创建一个实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口的类，然后将此类作为参数提供给包的 `Validate` 和 `Execute` 方法。 运行时引擎随后会在事件发生时调用该类的这些方法。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 类是一个已实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口的类；因此，直接实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一种方法是从 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 继承并重写要响应的特定事件。 然后，将您的类作为参数提供给 `Validate` 的 `Execute` 和 <xref:Microsoft.SqlServer.Dts.Runtime.Package> 方法来接收事件回调。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 类是一个已实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口的类；因此，直接实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一种方法是从 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 继承并重写要响应的特定事件。 然后，将您的类作为参数提供给 <xref:Microsoft.SqlServer.Dts.Runtime.Package> 的 `Validate` 和 `Execute` 方法来接收事件回调。  
   
  以下代码示例演示从 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 继承的类，并重写 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 方法。 然后，将类作为 aparameter 提供给包`Validate`的`Execute`和方法。  
   
@@ -250,7 +250,7 @@ End Module
 ![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services (SSIS) 事件处理程序](../integration-services-ssis-event-handlers.md)   
- [在包中添加事件处理程序](../add-an-event-handler-to-a-package.md)  
+ [Integration Services &#40;SSIS&#41; 事件处理程序](../integration-services-ssis-event-handlers.md)   
+ [向包中添加事件处理程序](../add-an-event-handler-to-a-package.md)  
   
   

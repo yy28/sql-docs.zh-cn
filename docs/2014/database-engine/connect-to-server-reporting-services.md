@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808674"
 ---
 # <a name="connect-to-server-reporting-services"></a>连接到服务器 (Reporting Services)
-  在连接到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时，使用此对话框可以查看或指定选项。  
+  连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，可以使用此对话框查看或指定选项。  
   
 ## <a name="options"></a>选项  
  **服务器类型**  
@@ -34,7 +34,7 @@ ms.locfileid: "62808674"
  对于在 SharePoint 集成模式下运行的报表服务器，必须指定 SharePoint 站点。 可以指定与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]集成的站点集合中的任意站点。 您提供的 URL 必须包含 HTTP 或 HTTPS 前缀。 您必须有权访问 SharePoint 站点，才能在 Management Studio 中连接到该站点。 分配给您的权限级别将决定您可以查看和管理的项目。 有关详细信息，请参阅[连接到 Management Studio 中的报表服务器](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
   
  **身份验证**  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]可以配置为接受由你提供的自定义身份验证扩展插件处理的 Windows 身份验证请求或窗体身份验证请求。 请从以下身份验证模式中选择一个，以便在连接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时使用：  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可以配置为接受由你提供的自定义身份验证扩展插件处理的 Windows 身份验证请求或窗体身份验证请求。 请从以下身份验证模式中选择一个，以便在连接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时使用：  
   
  **Windows 身份验证模式（Windows 身份验证）**  
  使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 凭据连接到报表服务器实例。  
@@ -42,16 +42,16 @@ ms.locfileid: "62808674"
  **基本身份验证**  
  如果将 Reporting Services 安装配置为使用基本身份验证，则使用“基本身份验证”**** 进行连接。  
   
- **Forms 身份验证**  
+ **窗体身份验证**  
  如果将 Reporting Services 安装配置为使用自定义身份验证扩展插件，则使用“窗体身份验证”**** 进行连接。  
   
  **用户名**  
  输入用于连接的登录名。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可用。  
   
- **权限**  
+ **密码**  
  输入用户名的密码。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可编辑。  
   
- **连接**  
+ **“连接”**  
  单击此项可连接到在上面选择的服务器。  
   
  **选项**  

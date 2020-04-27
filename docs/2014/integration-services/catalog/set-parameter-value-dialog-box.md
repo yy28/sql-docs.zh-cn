@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771623"
 ---
 # <a name="set-parameter-value-dialog-box"></a>设置参数值对话框
@@ -26,7 +26,7 @@ ms.locfileid: "62771623"
   
 -   [配置选项](#option)  
   
-##  <a name="open_dialog"></a> 打开“设置参数值”对话框  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> 打开“设置参数值”对话框  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62771623"
   
 4.  右键单击包或项目，单击“配置”  ，然后单击“参数”  选项卡或“连接管理器”  选项卡中的省略号按钮。  
   
-##  <a name="option"></a> 配置选项  
+##  <a name="configure-the-options"></a><a name="option"></a> 配置选项  
  **Parameter**  
  列出参数名称。  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 45c72bc5b811fec8e5532d5d03d4552cc2e0d319
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786676"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled 服务器配置选项
@@ -47,7 +47,7 @@ RECONFIGURE;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [lightweight pooling 服务器配置选项](lightweight-pooling-server-configuration-option.md)   
+ [轻型池服务器配置选项](lightweight-pooling-server-configuration-option.md)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [lightweight pooling 服务器配置选项](lightweight-pooling-server-configuration-option.md)  

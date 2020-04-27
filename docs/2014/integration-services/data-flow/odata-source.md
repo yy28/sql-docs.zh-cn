@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771033"
 ---
 # <a name="odata-source"></a>OData 源
@@ -45,11 +45,11 @@ ms.locfileid: "62771033"
   
 -   [在运行时修改 OData 源查询](modify-odata-source-query-at-runtime.md)  
   
--   [OData 源编辑器 &#40;连接页&#41;](../odata-source-editor-connection-page.md)  
+-   [OData 源编辑器（“连接”页）](../odata-source-editor-connection-page.md)  
   
--   [OData 源编辑器 &#40;列 "页&#41;](../odata-source-editor-columns-page.md)  
+-   [OData 源编辑器（“列”页）](../odata-source-editor-columns-page.md)  
   
--   [OData 源编辑器 &#40;错误输出页&#41;](../odata-source-editor-error-output-page.md)  
+-   [OData 源编辑器（“错误输出”页）](../odata-source-editor-error-output-page.md)  
   
 -   [OData 源属性](odata-source-properties.md)  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788724"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>使用 AlwaysOn 面板 (SQL Server Management Studio)
@@ -51,32 +51,32 @@ ms.locfileid: "62788724"
   
  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  您必须连接到承载可用性组的主副本或辅助副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（服务器实例）。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 权限。  
   
-##  <a name="SSMSProcedure"></a>启动 AlwaysOn 面板  
+##  <a name="to-start-the-alwayson-dashboard"></a><a name="SSMSProcedure"></a>启动 AlwaysOn 面板  
   
 1.  在对象资源管理器中，连接到要运行 AlwaysOn 面板的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
 2.  展开“AlwaysOn 高可用性”**** 节点，右键单击“可用性组”**** 节点，然后单击“显示面板”****。  
   
-###  <a name="DashboardOptions"></a>更改 AlwaysOn 面板选项  
+###  <a name="to-change-alwayson-dashboard-options"></a><a name="DashboardOptions"></a>更改 AlwaysOn 面板选项  
  可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“选项”**** 对话框配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 面板行为，使其自动刷新和启用自动定义的 AlwaysOn 策略。  
   
-1.  从 **“工具”** 菜单中，单击 **“选项”** 。  
+1.  从 **“工具”** 菜单中，单击 **“选项”**。  
   
 2.  若要自动刷新面板，在 **“选项”** 对话框中，选择 **“启用自动刷新”**，输入以秒计的刷新间隔，然后输入要重试连接的次数。  
   
 3.  若要启用用户定义的策略，请选择“启用用户定义的 AlwaysOn 策略”****。  
   
-##  <a name="AvGroupsView"></a>可用性组摘要  
+##  <a name="availability-group-summary"></a><a name="AvGroupsView"></a>可用性组摘要  
  可用性组屏幕为所连接服务器实例承载其副本的每个可用性组都显示一行摘要。 此窗格显示以下列。  
   
  **可用性组名称**  
@@ -92,22 +92,22 @@ ms.locfileid: "62788724"
   
 -   **手动**。 指示没有副本处于自动故障转移模式。  
   
- **发放**  
+ **问题**  
  单击“问题”**** 链接可打开针对某一问题的故障排除文档。 有关所有 AlwaysOn 策略问题的列表，请参阅[AlwaysOn 可用性组的操作问题的 AlwaysOn 策略（SQL Server）](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
 > [!TIP]  
 >  单击列标题可按可用性组的名称、主实例、故障转移模式或问题对可用性组信息进行排序。  
   
-##  <a name="AvGroupDetails"></a>可用性组详细信息  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a>可用性组详细信息  
  将为您可以从摘要屏幕中选择的可用性组显示以下详细信息：  
   
  **可用性组状态**  
  显示可用性组的运行状况。  
   
- **主实例**  
+ **Primary instance**  
  正在承载可用性组的主副本的服务器实例的名称。  
   
- **故障转移模式**  
+ **Failover mode**  
  显示为副本配置的故障转移模式。 可能的故障转移模式值包括：  
   
 -   **自动**。 指示一个或多个副本处于自动故障转移模式。  
@@ -117,14 +117,13 @@ ms.locfileid: "62788724"
  **群集状态**  
  群集的名称和状态，所连接的服务器实例和可用性组都是该群集的成员节点。  
   
-##  <a name="AvReplicaDetails"></a>可用性副本详细信息  
- 
-  **“可用性副本”** 窗格显示以下列：  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a>可用性副本详细信息  
+ **“可用性副本”** 窗格显示以下列：  
   
  **名称**  
  承载可用性副本的服务器实例的名称。 默认情况下显示此列。  
   
- **职位**  
+ **Role**  
  指示可用性副本的当前角色，即“主”**** 或“辅助”****。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。 默认情况下显示此列。  
   
  **故障转移模式**  
@@ -135,24 +134,24 @@ ms.locfileid: "62788724"
 -   **手动**。 指示没有副本处于自动故障转移模式。  
   
  **同步状态**  
- 指示辅助副本当前是否与主副本同步。 默认情况下显示此列。 可能的值包括：  
+ 指示辅助副本当前是否与主副本同步。 默认情况下显示此列。 可能的值为：  
   
 -   **未同步**。 副本中的一个或多个数据库未同步或尚未联接到可用性组。  
   
 -   **正在同步**。 正在同步副本中的一个或多个数据库。  
   
--   已**同步**。 辅助副本中的所有数据库均与当前主副本（如果有）或上一个主副本上的相应主数据库同步。  
+-   **已同步**。 辅助副本中的所有数据库均与当前主副本（如果有）或上一个主副本上的相应主数据库同步。  
   
     > [!NOTE]  
     >  在性能模式中，数据库从不处于“已同步”状态。  
   
 -   **NULL**。 未知状态。 当本地服务器实例无法与 WSFC 故障转移群集通信（即本地节点不是 WSFC 仲裁的一部分）时，出现此值。  
   
- **发放**  
+ **问题**  
  列出问题名称。 默认情况下显示此值。 有关所有 AlwaysOn 策略问题的列表，请参阅[AlwaysOn 可用性组的操作问题的 AlwaysOn 策略（SQL Server）](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **可用性模式**  
- 指示用户为每个可用性副本分别设置的副本属性。 默认情况下隐藏此值。 可能的值包括：  
+ 指示用户为每个可用性副本分别设置的副本属性。 默认情况下隐藏此值。 可能的值为：  
   
 -   **异步**。 辅助副本从不与主副本同步。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "62788724"
  指示用于连接辅助副本的模式。  默认情况下隐藏此值。  
   
  **连接状态**  
- 指示辅助副本当前是否连接到主副本。 默认情况下隐藏此列。 可能的值包括：  
+ 指示辅助副本当前是否连接到主副本。 默认情况下隐藏此列。 可能的值为：  
   
 -   **断开连接**。 对于远程可用性副本，指示它与本地可用性副本已断开连接。 本地副本对于“已断开连接”状态的响应取决于它的角色，如下所示：  
   
@@ -176,35 +175,35 @@ ms.locfileid: "62788724"
 -   **已连接**。 远程可用性副本当前连接到本地副本。  
   
  **操作状态**  
- 指示辅助副本的当前操作状态。 默认情况下隐藏此值。 可能的值包括：  
+ 指示辅助副本的当前操作状态。 默认情况下隐藏此值。 可能的值为：  
   
  **0**。挂起故障转移  
   
- **1**. 挂起  
+ **1**。挂起  
   
- **2**. 联机  
+ **2**。联机  
   
- **3**. 脱机  
+ **3**。Offline  
   
- **4**. 失败  
+ **4**。失败  
   
- **5**. 失败，无仲裁  
+ **5**。失败，无仲裁  
   
  **NULL**。 副本不在本地  
   
- **上次连接错误号**  
+ **上一个连接错误编号**  
  上一个连接错误的编号。  默认情况下隐藏此值。  
   
  **上一个连接错误说明**  
  上一个连接错误的说明。  默认情况下隐藏此值。  
   
- **上次连接错误时间戳**  
+ **上一个连接错误时间戳**  
  上一个连接错误的时间戳。 默认情况下隐藏此值。  
   
 > [!NOTE]  
 >  有关可用性副本的性能计数器的信息，请参阅 [SQL Server，可用性副本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
-##  <a name="AvDbDetails"></a>对可用性组信息分组  
+##  <a name="to-group-availability-group-information"></a><a name="AvDbDetails"></a>对可用性组信息分组  
  若要对信息进行分组，请单击 **“分组依据”**，并选择下列选项之一：  
   
 -   **可用性副本**  
@@ -215,7 +214,7 @@ ms.locfileid: "62788724"
   
 -   **故障转移就绪**  
   
--   **发放**  
+-   **问题**  
   
  显示分组依据信息的窗格显示以下列：  
   
@@ -244,7 +243,7 @@ ms.locfileid: "62788724"
   
      在辅助副本上，指示存在为该副本进行的处于活动状态的数据移动。  
   
--   已**同步**。  
+-   **已同步**。  
   
      对于主数据库，指示至少同步了一个辅助数据库。  
   
@@ -301,7 +300,7 @@ ms.locfileid: "62788724"
  **日志发送速率（KB/秒）**  
  指示日志记录发送到辅助副本的速率（KB/秒）。默认情况下隐藏此值。  
   
- **重做队列大小（KB）**  
+ **重做队列大小 (KB)**  
  指示辅助副本的日志文件中尚未重做的日志记录量。 默认情况下隐藏此值。  
   
  **重做速率（KB/秒）**  
@@ -343,18 +342,18 @@ ms.locfileid: "62788724"
  **上次强化时间**  
  指示在辅助副本上，上次强制写入的 LSN 的日志块标识符的接收时间。 默认情况下隐藏此值。  
   
- **上次重做 LSN**  
+ **上次重做的 LSN**  
  指示在辅助数据库上上次重做的日志记录的实际 LSN。 默认情况下隐藏此值。  
   
  **上次重做时间**  
  指示在辅助数据库上重做最后一个日志记录的时间。 默认情况下隐藏此值。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用 AlwaysOn 策略查看可用性组的运行状况 &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [sys. dm_os_performance_counters &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
- [监视可用性组 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+ [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
   

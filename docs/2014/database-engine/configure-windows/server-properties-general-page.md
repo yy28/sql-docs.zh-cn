@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809340"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>服务器属性（“常规”页）— SQL Server Management Studio
-  使用此页可以查看有关[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装的只读信息。  
+  使用此页面可以查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的只读信息。  
   
 ## <a name="property-grid"></a>属性网格  
  查看所选服务器的属性，例如服务器名称、服务器操作系统或处理器数。  
@@ -30,7 +30,7 @@ ms.locfileid: "62809340"
  **名称**  
  显示服务器实例的名称。  
   
- **Products**  
+ **Product**  
  显示当前运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。  
   
  **操作系统**  
@@ -48,7 +48,7 @@ ms.locfileid: "62809340"
  **内存**  
  列出服务器上安装的内存量。  
   
- **款**  
+ **Processors**  
  显示安装的 CPU 数。  
   
  **根目录**  
@@ -58,10 +58,10 @@ ms.locfileid: "62809340"
  显示服务器支持的排序规则。 排序规则指定用于 Unicode 数据和非 Unicode 数据的特定代码页和排序顺序。  
   
  **已群集化**  
- 如果在 ** 故障转移群集中配置了该服务器实例，则显示“True”**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]；如果未群集该服务器实例，则显示“False”****。  
+ 如果在  **故障转移群集中配置了该服务器实例，则显示“True”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]；如果未群集该服务器实例，则显示“False”  。  
   
- **是否启用 HADR**  
- 如果启用 ** 功能，则显示“True”**[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]；如果禁用 ** 功能，则显示“False”**[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 有关启用或禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
+ **启用 HADR**  
+ 如果启用  **功能，则显示“True”** [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]；如果禁用  **功能，则显示“False”** [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 有关启用或禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 ## <a name="description-field"></a>说明字段  
  查看服务器属性的其他信息。  

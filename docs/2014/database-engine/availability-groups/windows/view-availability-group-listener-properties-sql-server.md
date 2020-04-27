@@ -15,22 +15,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788023"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>查看可用性组侦听器属性 (SQL Server)
   本主题说明如何使用 *或* 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中查看 AlwaysOn 可用性组侦听器 [!INCLUDE[tsql](../../../includes/tsql-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的属性。  
   
--   **若要查看侦听器属性，请使用：**  
+-   **若要查看侦听器属性，可使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **查看侦听器属性**  
   
 1.  在对象资源管理器中，连接到服务器实例（其上承载要查看其侦听器的可用性组的任何可用性副本）。 单击服务器名称以展开服务器树。  
@@ -39,11 +39,11 @@ ms.locfileid: "62788023"
   
 3.  展开可用性组节点，然后展开 **“可用性组侦听器”** 节点。  
   
-4.  右键单击要查看的侦听器，然后选择“属性”  命令。  
+4.  右键单击要查看的侦听器，然后选择“属性”**** 命令。  
   
 5.  这将打开 **“可用性组侦听器属性”** 对话框。 有关详细信息，请参阅本主题后面的 [可用性组侦听程序属性（对话框）](#AgListenerPropertiesDialog)。  
   
-###  <a name="AgListenerPropertiesDialog"></a> 可用性组侦听程序属性（对话框）  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a> 可用性组侦听程序属性（对话框）  
  **侦听器 DNS 名称**  
  可用性组侦听器的网络名称。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62788023"
   
  网格显示侦听器侦听的各个子网以及与该子网关联的 IP 地址。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看侦听器属性**  
   
  若要监视可用性组侦听器，请使用以下视图：  
@@ -87,7 +87,7 @@ ms.locfileid: "62788023"
 > [!NOTE]  
 >  有关使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 监视你的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 环境的详细信息，请参阅 [监视可用性组 (Transact-SQL)](monitor-availability-groups-transact-sql.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62788023"
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性组侦听器、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [监视可用性组 (Transact-SQL)](monitor-availability-groups-transact-sql.md)  
   
   

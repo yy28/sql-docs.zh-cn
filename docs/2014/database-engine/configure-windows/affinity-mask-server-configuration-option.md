@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814030"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 服务器配置选项
@@ -61,8 +61,7 @@ ms.locfileid: "62814030"
   
  您也可以不在由 Windows 2000 或 Windows Server 2003 操作系统分配了特定工作负荷的处理器上执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动。 如果将代表某个处理器的位设置为 1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎将会选择该处理器来进行线程分配。 如果将设置`affinity mask`为0（默认值），则 Microsoft Windows 2000 或 Windows Server 2003 计划算法会设置线程的关联。 如果将 `affinity mask` 设置为任一非零值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关联将把该值解释为一个位掩码，用于指定可选的处理器。  
   
- 通过防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程在某个特定的处理器上运行，Microsoft Windows 2000 或 Windows Server 2003 可以更好地评估 Windows 专用的系统进程处理。 例如，在运行两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（实例 A 和实例 B）的具有 8 个 CPU 的服务器上，系统管理员可以使用关联掩码选项将第一组的 4 个 CPU 分配给实例 A，将第二组的 4 个 CPU 分配给实例 B。若要配置 32 个以上的处理器，应同时设置关联掩码和 affinity64 掩码。 
-  `affinity mask` 的值如下：  
+ 通过防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程在某个特定的处理器上运行，Microsoft Windows 2000 或 Windows Server 2003 可以更好地评估 Windows 专用的系统进程处理。 例如，在运行两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（实例 A 和实例 B）的具有 8 个 CPU 的服务器上，系统管理员可以使用关联掩码选项将第一组的 4 个 CPU 分配给实例 A，将第二组的 4 个 CPU 分配给实例 B。若要配置 32 个以上的处理器，应同时设置关联掩码和 affinity64 掩码。 `affinity mask` 的值如下：  
   
 -   在多处理器计算机中，单字节 `affinity mask` 最多可以涵盖 8 个 CPU。  
   

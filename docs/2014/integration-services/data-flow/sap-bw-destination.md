@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770852"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目标
@@ -33,7 +33,7 @@ ms.locfileid: "62770852"
   
 -   [配置 SAP BW 目标](#bkmk_Configure_Destination)  
   
-##  <a name="bkmk_Prepare_Objects"></a> 准备目标所需的 SAP Netweaver BW 对象  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-destination-requires"></a><a name="bkmk_Prepare_Objects"></a> 准备目标所需的 SAP Netweaver BW 对象  
  SAP BW 目标要求 SAP Netweaver BW 系统中存在某些对象才能正常工作。 如果这些对象还不存在，必须按照下列步骤在 SAP Netweaver BW 系统中创建并配置这些对象。  
   
 > [!NOTE]  
@@ -55,12 +55,12 @@ ms.locfileid: "62770852"
   
  您也可以创建为将数据加载到 SAP Netweaver BW 系统提供支持所需要的更多 InfoObject、InfoCube、InfoSource 和 InfoPackage。  
   
-##  <a name="bkmk_Connect_Database"></a> 连接至 SAP Netweaver BW 系统  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> 连接至 SAP Netweaver BW 系统  
  为连接到 SAP Netweaver BW 版本 7 系统，SAP BW 目标会使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 包中的 SAP BW 连接管理器。 SAP BW 连接管理器是 SAP BW 目标唯一可以使用的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 连接管理器。  
   
  有关 SAP BW 连接管理器的详细信息，请参阅 [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)。  
   
-##  <a name="bkmk_Configure_Destination"></a> 配置 SAP BW 目标  
+##  <a name="configuring-the-sap-bw-destination"></a><a name="bkmk_Configure_Destination"></a> 配置 SAP BW 目标  
  可以使用下列方式配置 SAP BW 目标：  
   
 -   查找并选择用来加载数据的 InfoPackage。  

@@ -15,27 +15,23 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813190"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文搜索的行为更改
   本主题介绍全文搜索中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中全文搜索的行为更改  
+## <a name="behavior-changes-in-full-text-search-in-sssql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中全文搜索的行为更改  
  将很快提供相关信息。  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中全文搜索的行为更改  
- 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 为美国英语 (LCID 1033) 和英国英语 (LCID 2057) 安装了新版本的断字符和词干分析器。 但是，如果您想要保留这些组件的以前行为，您可以切换到其早期版本。 有关详细信息，请参阅[更改用于美国英语和英国英语的断字符](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
+## <a name="behavior-changes-in-full-text-search-in-sssql11"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中全文搜索的行为更改  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 为美国英语 (LCID 1033) 和英国英语 (LCID 2057) 安装了新版本的断字符和词干分析器。 但是，如果您想要保留这些组件的以前行为，您可以切换到其早期版本。 有关详细信息，请参阅 [更改用于美国英语和英国英语的断字符](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>安装了新的断字符和词干分析器  
- 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 更新全文搜索和语义搜索所使用的所有断字符和词干分析器。 为了保持索引内容和查询结果之间的一致性，建议您重新填充现有全文索引。  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 更新全文搜索和语义搜索所使用的所有断字符和词干分析器。 为了保持索引内容和查询结果之间的一致性，建议您重新填充现有全文索引。  
   
 1.  英语已有了新的断字符。 如果您必须保留先前行为，请参阅 [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
   
@@ -48,7 +44,7 @@ ms.locfileid: "62813190"
   
  如果您必须保持断字符和词干分析器的以前的行为，请参阅以下主题：  
   
--   [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)  
+-   [更改用于美国英语和英国英语的断字符](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)  
   
 -   [将搜索功能所使用的断字符还原到以前的版本](../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
   
@@ -98,8 +94,7 @@ ms.locfileid: "62813190"
   
 -   非索引字和非索引字表已替代干扰词和干扰词文件。 非索引字表是一种数据库对象，有助于简化非索引字的可管理性任务，并提高不同服务器实例和环境之间的完整性的一个数据库对象。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
--   
-  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和更高版本包括 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中存在的许多语言的新断字符。 只有英语、朝鲜语、泰语和中文（所有形式）的断字符保持不变。 对于其他语言，如果全文目录是在[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]数据库升级到[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]或更高版本时导入的，则全文目录中全文索引使用的一种或多种语言现在可能与新断字符关联，这些断字符的行为可能与导入的断字符的行为略有不同。 有关如何确保查询和全文索引内容之间的一致性的详细信息，请参阅[升级全文搜索](../relational-databases/search/upgrade-full-text-search.md)。  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和更高版本包括 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中存在的许多语言的新断字符。 只有英语、朝鲜语、泰语和中文（所有形式）的断字符保持不变。 对于其他语言，如果全文目录是在[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]数据库升级到[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]或更高版本时导入的，则全文目录中全文索引使用的一种或多种语言现在可能与新断字符关联，这些断字符的行为可能与导入的断字符的行为略有不同。 有关如何确保查询和全文索引内容之间的一致性的详细信息，请参阅[升级全文搜索](../relational-databases/search/upgrade-full-text-search.md)。  
   
 -   已添加一个新的 FDHOST 启动器 (MSSQLFDLauncher) 服务。 有关详细信息，请参阅[全文搜索入门](../relational-databases/search/get-started-with-full-text-search.md)。  
   

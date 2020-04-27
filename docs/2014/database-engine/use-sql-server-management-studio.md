@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773868"
 ---
 # <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
@@ -44,7 +44,7 @@ ms.locfileid: "62773868"
  [从 SQL Server Management Studio 连接到任何 SQL Server 组件](../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
  介绍如何连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例以及如何在没有连接的情况下执行某些任务。  
   
- [对象资源管理器](../ssms/object/object-explorer.md)  
+ [“对象资源管理器”](../ssms/object/object-explorer.md)  
  介绍对象资源管理器的功能。  
   
  [SQL Server Management Studio 中的用户帮助](../ssms/user-assistance-in-sql-server-management-studio.md)  
@@ -78,6 +78,6 @@ ms.locfileid: "62773868"
  介绍了 Visual Database Tools，您可以使用它来创建查询，设计或修改数据库结构或更新数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看或更改服务器属性 &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
+ [查看或更改服务器属性 (SQL Server)](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

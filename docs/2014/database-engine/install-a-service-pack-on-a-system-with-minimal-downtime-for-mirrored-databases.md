@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779591"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在系统上安装 Service Pack 并且尽量缩短镜像数据库停机时间
@@ -72,9 +72,9 @@ ms.locfileid: "62779591"
   
 ### <a name="to-change-a-session-from-high-performance-mode-to-high-safety-mode"></a>将会话从高性能模式更改为高安全模式  
   
-1.  如果镜像会话在高性能模式下运行，则在执行滚动更新之前，将运行模式更改为不带自动故障转移功能的高安全模式。 使用以下方法之一：  
+1.  如果镜像会话在高性能模式下运行，则在执行滚动更新之前，将运行模式更改为不带自动故障转移功能的高安全模式。 使用下列方法之一：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的**镜像页**将“操作模式”[](../relational-databases/databases/database-properties-mirroring-page.md)选项更改为“不带自动故障转移功能的高安全(同步)”****。 有关如何访问此页的详细信息，请参阅[启动配置数据库镜像安全向导 (SQL Server Management Studio)](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的[镜像页](../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”**** 选项更改为“不带自动故障转移功能的高安全(同步)”****。 有关如何访问此页的详细信息，请参阅[启动配置数据库镜像安全向导 (SQL Server Management Studio)](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
   
     -   在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中：将事务安全设置为 FULL。 有关详细信息，请参阅[更改数据库镜像会话中的事务安全 (Transact-SQL)](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "62779591"
   
 1.  可以选择使用下列方法之一返回高性能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的 **镜像页**将“操作模式”[](../relational-databases/databases/database-properties-mirroring-page.md)选项更改为“高性能(同步)”****。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的 [镜像页](../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”**** 选项更改为“高性能(同步)”****。  
   
     -   在[!INCLUDE[tsql](../includes/tsql-md.md)]中：使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
   
@@ -138,12 +138,12 @@ ms.locfileid: "62779591"
     -   [使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER DATABASE 数据库镜像 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [更改数据库数据库镜像 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [数据库镜像 (SQL Server)](database-mirroring/database-mirroring-sql-server.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
  [数据库镜像运行模式](database-mirroring/database-mirroring-operating-modes.md)   
- [数据库镜像会话期间的角色切换 (SQL Server)](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [启动数据库镜像监视器 (SQL Server Management Studio)](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [查看镜像数据库的状态 &#40;SQL Server Management Studio&#41;](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
+ [数据库镜像会话期间的角色切换 &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [开始数据库镜像监视器 &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [查看镜像数据库的状态 (SQL Server Management Studio)](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
   

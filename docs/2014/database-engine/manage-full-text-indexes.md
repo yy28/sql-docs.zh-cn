@@ -11,15 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775039"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文索引
      
-##  <a name="view"></a>查看和更改全文索引的属性  
+##  <a name="viewing-and-changing-the-properties-of-a-full-text-index"></a><a name="view"></a>查看和更改全文索引的属性  
   
 #### <a name="to-view-or-change-the-properties-of-a-full-text-index-in-management-studio"></a>在 Management Studio 中查看或更改全文索引的属性  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62775039"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。   
   
-##  <a name="props"></a>查看索引表和列的属性  
+##  <a name="viewing-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a>查看索引表和列的属性  
  一些 [!INCLUDE[tsql](../includes/tsql-md.md)] 函数（例如 OBJECTPROPERTYEX）可用来获取各种全文索引属性的值。 此信息可用于全文搜索的管理和故障排除。  
   
  下表列出了与索引表和列相关的全文属性及其相关 [!INCLUDE[tsql](../includes/tsql-md.md)] 函数。  
@@ -63,7 +63,7 @@ ms.locfileid: "62775039"
 |`TableFulltextPopulateStatus`|全文表的填充状态。|OBJECTPROPERTYEX|  
 |`TableHasActiveFulltextIndex`|表是否具有活动的全文索引。|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a>获取有关全文键列的信息  
+##  <a name="getting-information-about-the-full-text-key-column"></a><a name="key"></a>获取有关全文键列的信息  
  通常情况下，CONTAINSTABLE 或 FREETEXTTABLE 行集值函数的结果需要与基表相联接。 在这样的情况下，需要知道唯一键列名称。 可以查询给定的唯一索引是否作为全文键使用，并且可以获取全文键列的标识符。  
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>查询给定的唯一索引是否作为全文键列使用  
@@ -125,7 +125,7 @@ GO
   
  此示例返回一个名为 `Unique Key Column`的结果集列，该结果集列显示单个行，该行包含 Document 表的唯一键列 DocumentID 的名称。 请注意，如果此查询包含无效的索引名称，索引名称与表不对应或表不存在等，它将返回 NULL。  
   
-##  <a name="disable"></a>为表禁用或重新启用全文索引  
+##  <a name="disabling-or-re-enabling-a-table-for-full-text-indexing"></a><a name="disable"></a>为表禁用或重新启用全文索引  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，默认情况下所有由用户创建的数据库都启用了全文索引。 另外，在为表创建全文索引并将列添加到索引之后，就会自动为单个表启用全文索引。 从表的全文索引中删除最后一列时，会自动为表禁用全文索引。  
   
  对于具有全文索引的表，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]手动为表禁用或重新启用全文索引。  
@@ -138,7 +138,7 @@ GO
   
 3.  选择  “全文索引”，然后单击  “禁用全文索引”或  “启用全文索引”。  
   
-##  <a name="remove"></a>从表中删除全文索引  
+##  <a name="removing-a-full-text-index-from-a-table"></a><a name="remove"></a>从表中删除全文索引  
   
 #### <a name="to-remove-a-full-text-index-from-a-table"></a>从表中删除全文索引  
   

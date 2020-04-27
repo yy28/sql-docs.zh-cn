@@ -17,14 +17,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813652"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>数据库镜像或 AlwaysOn 可用性组不支持跨数据库事务 (SQL Server)
-  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]或数据库镜像不支持跨数据库事务和分布式事务。 这是因为以下原因无法保证事务的原子性/完整性：  
   
 -   对于跨数据库事务：每个数据库独立提交。 因此，即使对于单个可用性组中的数据库，在一个数据库提交事务后、但是在另一个数据库提交前可能发生故障转移。 对于数据库镜像，此问题很复杂，因为在故障转移后，镜像数据库所在的服务器实例通常不同于其他数据库的服务器实例，即使在两个相同伙伴之间对两个数据库进行镜像，也无法保证两个数据库同时进行故障转移。  

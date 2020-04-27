@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791962"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>维护 AlwaysOn 发布数据库 (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62791962"
   
  
   
-##  <a name="MaintainPublDb"></a> 在可用性组中维护已发布的数据库  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>在可用性组中维护已发布的数据库  
  维护 AlwaysOn 发布数据库与维护标准的发布数据库基本相同，但需要注意以下事项：  
   
 -   必须在主副本主机上进行管理。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，发布显示在主副本主机以及可读辅助副本的 **“本地发布”** 文件夹下。 在故障转移后，如果无法读取已提升为主副本的辅助副本，则您可能必须手动刷新 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 以反映更改。  
@@ -39,7 +39,7 @@ ms.locfileid: "62791962"
   
 -   若要在故障转移后在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中同步订阅，应将来自订阅服务器的请求订阅与来自活动发布服务器的推送订阅进行同步。  
   
-##  <a name="RemovePublDb"></a> 从可用性组中删除已发布的数据库  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> 从可用性组中删除已发布的数据库  
  如果从可用性组中删除了已发布的数据库，或者删除了包含已发布的成员数据库的可用性组，则应考虑以下问题。  
   
 -   如果从可用性组主要副本中删除原始发布服务器上的发布数据库，则必须在不`sp_redirect_publisher`指定*@redirected_publisher*参数值的情况下运行，以便删除发布服务器/数据库对的重定向。  
@@ -100,13 +100,13 @@ ms.locfileid: "62791962"
   
      此时，可保留或删除已发布的数据库的副本。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [为 AlwaysOn 可用性组配置复制 (SQL Server)](always-on-availability-groups-sql-server.md)  
   
 -   [复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [复制管理 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [复制订阅服务器和 AlwaysOn 可用性组 &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

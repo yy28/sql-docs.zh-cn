@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775004"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重命名承载 SQL Server 独立实例的计算机
@@ -47,7 +47,7 @@ ms.locfileid: "62775004"
   
  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，可使用新计算机名称连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 为确保 @@SERVERNAME 返回本地服务器实例更新后的名称，应根据自己的方案手动运行以下过程。 采用的过程取决于所更新的计算机承载的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是命名实例。  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>重命名托管独立实例的计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-ssnoversion"></a>重命名托管独立实例的计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   对于承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]默认实例的重命名计算机，请运行以下过程：  
   

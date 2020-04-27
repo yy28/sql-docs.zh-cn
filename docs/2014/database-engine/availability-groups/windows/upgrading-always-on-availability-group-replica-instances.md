@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812924"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停机时间和数据丢失最少的情况下升级和更新可用性组服务器
@@ -115,9 +115,9 @@ ms.locfileid: "62812924"
   
 |可用性组|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|主|||  
-|AG2||主||  
-|AG3|||主|  
+|AG1|基本|||  
+|AG2||基本||  
+|AG3|||基本|  
   
  按以下顺序执行负载平衡的滚动升级/更新可能在您的情况下是合适的：  
   
@@ -139,9 +139,9 @@ ms.locfileid: "62812924"
   
 |可用性组|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||主||  
-|AG2|主|||  
-|AG3|||主|  
+|AG1||基本||  
+|AG2|基本|||  
+|AG3|||基本|  
   
  根据您的特定实现，您的升级/更新路径可能不同，客户端应用程序经历的停机时间也可能不同。  
   

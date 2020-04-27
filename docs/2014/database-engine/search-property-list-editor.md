@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773665"
 ---
 # <a name="search-property-list-editor"></a>搜索属性列表编辑器
@@ -27,8 +27,7 @@ ms.locfileid: "62773665"
   
 ## <a name="options"></a>选项  
  **属性名称**  
- 指定要用来标识全文查询中的属性的名称。 属性名称可以包含内部空格。 
-  **“属性名称”** 的最大长度为 256 个字符。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 `System.Author` 或 `System.Contact.HomeAddress`。 **属性名称**必须唯一标识属性集中的属性。  
+ 指定要用来标识全文查询中的属性的名称。 属性名称可以包含内部空格。 **“属性名称”** 的最大长度为 256 个字符。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 `System.Author` 或 `System.Contact.HomeAddress`。 **“属性名称”** 必须唯一标识属性集中的属性。  
   
  开发人员使用属性名称来标识 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词中的属性。 因此，当添加属性时，务必指定一个在含义上表示该属性的值。  
   
@@ -57,8 +56,8 @@ ms.locfileid: "62773665"
  请参阅[ALTER SEARCH PROPERTY LIST &#40;transact-sql&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)。  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER SEARCH PROPERTY LIST (Transact-SQL)](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
- [使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [&#40;Transact-sql&#41;更改搜索属性列表](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
+ [用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

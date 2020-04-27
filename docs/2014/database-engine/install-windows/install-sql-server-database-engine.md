@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779358"
 ---
 # <a name="about-the-sql-server-database-engine"></a>关于 SQL Server 数据库引擎
@@ -24,9 +24,9 @@ ms.locfileid: "62779358"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在同一台计算机上最多存在 50 个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 若要创建典型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装，请参阅安装[向导中的安装 SQL Server 2014 &#40;安装&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
   
- **重要提示**对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
+ **重要提示** 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
   
- 在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“要安装的组件”页上选择** 数据库引擎” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，将安装下列功能：  
+ 当你在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导的 "要安装的组件" 页上选择** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库引擎**时，将安装以下功能：  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62779358"
 -   Data Quality Services - 一个可选组件  
   
     > [!NOTE]  
-    >  在此版本中，在安装程序中选中“Data Quality Services”复选框不会安装 Data Quality Services (DQS) 服务器  。 您必须执行其他安装后步骤以安装 DQS 服务器。 有关详细信息，请参阅 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
+    >  在此版本中，在安装程序中选中“Data Quality Services”复选框不会安装 Data Quality Services (DQS) 服务器****。 您必须执行其他安装后步骤以安装 DQS 服务器。 有关详细信息，请参阅 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
   
  下列附加功能是许多典型用户应用场景的可选项：  
   
@@ -61,8 +61,8 @@ ms.locfileid: "62779358"
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server 2014 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)   
- [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)   
- [高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [规划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)   
+ [高可用性解决方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
  [使用安装向导 &#40;安装程序升级到 SQL Server 2014&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

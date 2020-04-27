@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789454"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)
@@ -41,12 +41,12 @@ ms.locfileid: "62789454"
   
 -   [添加和管理可用性数据库](#DeployManageDbs)  
   
--   [监视可用性组运行状况](#MonitorTblshtAGs)  
+-   [监视可用性组的运行状况](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  有关描述如何使用 cmdlet 来[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]执行[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]任务的联机丛书中的主题的列表，请参阅[AlwaysOn 可用性组 &#40;&#41;SQL Server 概述的](overview-of-always-on-availability-groups-sql-server.md)"相关任务" 一节。  
   
-##  <a name="ConfiguringServerInstance"></a>为 AlwaysOn 可用性组配置服务器实例  
+##  <a name="configuring-a-server-instance-for-alwayson-availability-groups"></a><a name="ConfiguringServerInstance"></a>为 AlwaysOn 可用性组配置服务器实例  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "62789454"
 |`New-SqlHadrEndPoint`|在服务器实例上创建新的数据库镜像端点。 在主数据库和辅数据库之间移动数据时需要此端点。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|更改现有数据库镜像端点的属性，如名称、状态或身份验证属性。|支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 并缺少数据库镜像端点的服务器实例|  
   
-##  <a name="BnRcmdlets"></a> 备份和还原数据库和事务日志  
+##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a>备份和还原数据库和事务日志  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "62789454"
   
  有关使用这些 cmdlet 来准备辅助数据库的信息，请参阅[为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
-##  <a name="DeployManageAGs"></a> 创建和管理可用性组  
+##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a>创建和管理可用性组  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "62789454"
 |`Set-SqlAvailabilityGroup`|设置可用性组的属性；使可用性组联机/脱机|承载主副本的服务器实例|  
 |`Switch-SqlAvailabilityGroup`|启动下列形式之一的故障转移：<br /><br /> 可用性组的强制故障转移（可能会丢失数据）。<br /><br /> 可用性组的手动故障转移。|承载目标辅助副本的服务器实例|  
   
-##  <a name="AGlisteners"></a> 创建和管理可用性组侦听器  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a>创建和管理可用性组侦听器  
   
 |Cmdlet|说明|支持平台|  
 |------------|-----------------|------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "62789454"
 |`Set-SqlAvailabilityGroupListener`|修改现有可用性组侦听器的端口设置。|承载主副本的服务器实例|  
 |`Add-SqlAvailabilityGroupListenerStaticIp`|将一个静态 IP 地址添加到现有的可用性组侦听器配置。 此 IP 地址可以是带子网的 IPv4 地址或 IPv6 地址。|承载主副本的服务器实例|  
   
-##  <a name="DeployManageARs"></a> 创建和管理可用性副本  
+##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a>创建和管理可用性副本  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
@@ -90,7 +90,7 @@ ms.locfileid: "62789454"
 |**Remove-SqlAvailabilityReplica**|删除可用性副本。|承载主副本的服务器实例|  
 |`Set-SqlAvailabilityReplica`|设置可用性副本的属性。|承载主副本的服务器实例|  
   
-##  <a name="DeployManageDbs"></a> 添加和管理可用性数据库  
+##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a>添加和管理可用性数据库  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
@@ -99,7 +99,7 @@ ms.locfileid: "62789454"
 |`Resume-SqlAvailabilityDatabase`|恢复已挂起的可用性数据库的数据移动。|已挂起数据库所在的服务器实例。|  
 |`Suspend-SqlAvailabilityDatabase`|挂起可用性数据库的数据移动。|承载可用性副本的任何服务器实例。|  
   
-##  <a name="MonitorTblshtAGs"></a> 监视可用性组运行状况  
+##  <a name="monitoring-availability-group-health"></a><a name="MonitorTblshtAGs"></a>监视可用性组运行状况  
  以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet 支持您监视可用性组及其副本和数据库的运行状况。  
   
 > [!IMPORTANT]  

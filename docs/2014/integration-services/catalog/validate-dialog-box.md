@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771644"
 ---
 # <a name="validate-dialog-box"></a>“验证”对话框
@@ -31,7 +31,7 @@ ms.locfileid: "62771644"
   
 -   [设置“常规”页上的选项](#general)  
   
-##  <a name="open_dialog"></a> 打开“验证”对话框  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> 打开“验证”对话框  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62771644"
   
 5.  右键单击该包，然后单击“验证”  。  
   
-##  <a name="general"></a> 设置“常规”页上的选项  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 设置“常规”页上的选项  
  **环境**  
  选择要用于验证项目或包的环境。  
   

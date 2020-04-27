@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774911"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>新建或编辑服务器注册（“常规”选项卡）（Analysis Services – 多维数据）
@@ -26,7 +26,7 @@ ms.locfileid: "62774911"
   
 ## <a name="options"></a>选项  
  **服务器类型**  
- 从已注册的服务器中注册某服务器时，“服务器类型”**** 框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
+ 从“已注册的服务器”中注册某服务器时，“服务器类型”**** 框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
   
  **服务器名称**  
  选择要连接到的服务器实例。 默认情况下，显示上次连接到的服务器实例。  
@@ -37,7 +37,7 @@ ms.locfileid: "62774911"
  **用户名**  
  此选项在此版本中不可用。  
   
- **权限**  
+ **密码**  
  此选项在此版本中不可用。  
   
  **记住密码**  
@@ -49,10 +49,10 @@ ms.locfileid: "62774911"
  **已注册的服务器说明**  
  输入服务器的说明（可选）。  
   
- **考试**  
+ **测试**  
  单击此项可测试与“服务器名称”**** 中所选服务器的连接。  
   
- **把**  
+ **保存**  
  单击此项可保存已注册服务器的设置。  
   
   

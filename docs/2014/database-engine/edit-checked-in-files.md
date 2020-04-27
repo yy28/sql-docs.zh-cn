@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779601"
 ---
 # <a name="edit-checked-in-files"></a>编辑签入文件
@@ -27,7 +27,7 @@ ms.locfileid: "62779601"
   
 ### <a name="to-edit-checked-in-files"></a>编辑签入的文件  
   
-1.  在“工具”  菜单上，单击“选项”  。  
+1.  在“工具” **** 菜单上，单击“选项” ****。  
   
 2.  在 "**选项**" 对话框中，展开 "**源源代码**" 文件夹，然后单击 "**环境**"。  
   

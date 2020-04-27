@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789077"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>策略评估结果 (AlwaysOn)
@@ -25,7 +25,7 @@ ms.locfileid: "62789077"
   
 
   
-##  <a name="Options"></a>对话框选项  
+##  <a name="dialog-box-options"></a><a name="Options"></a>对话框选项  
  **检测到的问题**  
  为每个检测到的问题显示一行。 与问题相关联的图标提供可视指示器，以便按如下所示指示这一问题的严重性：  
   
@@ -37,12 +37,12 @@ ms.locfileid: "62789077"
  **说明**  
  此网格将显示所选问题的简短说明。  
   
- **更多信息**  
+ **详细信息**  
  单击此链接可打开所选问题的帮助主题。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
--   [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [使用 AlwaysOn 策略查看可用性组的运行状况 &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

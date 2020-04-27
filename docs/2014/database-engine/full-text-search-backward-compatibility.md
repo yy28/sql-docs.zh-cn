@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779257"
 ---
 # <a name="full-text-search-backward-compatibility"></a>全文搜索向后兼容性
@@ -29,9 +29,9 @@ ms.locfileid: "62779257"
 |[SQL Server 2014 中不推荐使用的全文搜索功能](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|此版本中不推荐使用的全文搜索功能。|  
 |[SQL Server 2014 中废弃的全文搜索功能](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|此版本中废弃的全文搜索功能。|  
 |[对全文搜索的重大更改](breaking-changes-to-full-text-search.md)|可能需要更改应用程序的全文搜索更改。|  
-|[对全文搜索的行为更改](../../2014/database-engine/behavior-changes-to-full-text-search.md)|全文搜索行为的其他更改。|  
+|[全文搜索的行为更改](../../2014/database-engine/behavior-changes-to-full-text-search.md)|全文搜索行为的其他更改。|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 数据库引擎的后向兼容性](sql-server-database-engine-backward-compatibility.md)  
+ [SQL Server 数据库引擎的向后兼容性](sql-server-database-engine-backward-compatibility.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812293"
 ---
 # <a name="change-server-authentication-mode"></a>更改服务器身份验证模式
@@ -39,22 +39,22 @@ ms.locfileid: "62812293"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  sa 帐户是一个广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 除非您的应用程序需要使用 sa 帐户，否则请不要启用它。 为 sa 登录名使用一个强密码非常重要。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-change-security-authentication-mode"></a>更改安全身份验证模式  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，右键单击服务器，再单击“属性”  。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，右键单击服务器，再单击“属性”****。  
   
-2.  在 **“安全性”** 页上的 **“服务器身份验证”** 下，选择新的服务器身份验证模式，再单击 **“确定”** 。  
+2.  在 **“安全性”** 页上的 **“服务器身份验证”** 下，选择新的服务器身份验证模式，再单击 **“确定”**。  
   
 3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框中，单击 **“确定”** 以确认需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-4.  在“对象资源管理器”中，右键单击服务器，并单击“重新启动”。  如果运行有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，则也必须重新启动该代理。  
+4.  在对象资源管理器中，右键单击你的服务器，然后单击 "**重新启动**"。 如果运行有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，则也必须重新启动该代理。  
   
 #### <a name="to-enable-the-sa-login"></a>启用 sa 登录名  
   
@@ -62,9 +62,9 @@ ms.locfileid: "62812293"
   
 2.  在 **“常规”** 页上，您可能需要为登录名创建密码并确认该密码。  
   
-3.  在 **“状态”** 页上的 **“登录”** 部分，单击 **“启用”** ，然后单击 **“确定”** 。  
+3.  在 **“状态”** 页上的 **“登录”** 部分，单击 **“启用”**，然后单击 **“确定”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **启用 sa 登录名**  
   
 1.  在“对象资源管理器”中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
@@ -83,8 +83,8 @@ ms.locfileid: "62812293"
   
 ## <a name="see-also"></a>另请参阅  
  [强密码](../../relational-databases/security/strong-passwords.md)   
- [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
+ [SQL Server 安装的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
+ [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
  [在系统管理员被锁定时连接到 SQL Server](connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
   

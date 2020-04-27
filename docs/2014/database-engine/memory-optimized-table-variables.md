@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774405"
 ---
 # <a name="memory-optimized-table-variables"></a>内存优化表变量
@@ -60,8 +60,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  该示例表明，内存优化的表类型的语法与基于磁盘的表类型相似，但具有以下不同：  
   
--   
-  `MEMORY_OPTIMIZED=ON` 指示表类型是内存优化表。  
+-   `MEMORY_OPTIMIZED=ON` 指示表类型是内存优化表。  
   
 -   该类型必须有至少一个索引。 与内存优化表一样，可以使用哈希索引和非聚集索引。  
   

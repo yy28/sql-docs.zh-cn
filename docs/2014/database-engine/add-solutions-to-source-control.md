@@ -14,17 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815699"
 ---
 # <a name="add-solutions-to-source-control"></a>在源代码管理中添加解决方案
   将解决方案添加到源代码管理中时，通常需要添加整个解决方案及其包含的所有项目。 可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将解决方案添加到源代码管理中。  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 项目完全驻留在本地磁盘上。 编辑、保存和生成项目均在本地进行。 将项目添加到源代码管理后，可以使用 "**签出**" 命令将项目的文件从源代码管理中签出。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 项目完全驻留在本地磁盘上。 编辑、保存和生成项目均在本地进行。 将项目添加到源代码管理后，可以使用 "**签出**" 命令将项目的文件从源代码管理中签出。  
   
 ### <a name="to-add-a-solution-to-source-control"></a>将解决方案添加到源代码管理  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807238"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>数据库镜像和数据库快照 (SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "62807238"
   
      此时，可以用编程的方式将新客户端连接定向至最新的快照。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建数据库快照 (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62807238"
 
   
 ## <a name="see-also"></a>另请参阅  
- [数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [数据库快照 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [将客户端连接到数据库镜像会话 (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

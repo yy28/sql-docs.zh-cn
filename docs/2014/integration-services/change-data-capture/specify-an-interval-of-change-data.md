@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771198"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
@@ -45,11 +45,9 @@ ms.locfileid: "62771198"
  如果在执行多个子包的主包中计算端点，则可使用父包变量配置将这些变量的值传递给各个子包。 有关详细信息，请参阅 [执行包任务](../control-flow/execute-package-task.md) 和 [在子包中使用变量和参数的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>计算变更数据的起始点和结束点  
- 为间隔端点设置包变量之后，即可计算这些端点的实际值并将这些值映射到相应的包变量中。 因为这些端点为 `datetime` 值，所以您必须使用可以计算或处理 `datetime` 值的函数。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言和 Transact-SQL 都具有可处理 `datetime` 值的函数：  
+ 为间隔端点设置包变量之后，即可计算这些端点的实际值并将这些值映射到相应的包变量中。 因为这些端点为 `datetime` 值，所以您必须使用可以计算或处理 `datetime` 值的函数。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言和 Transact-SQL 都具有可处理 `datetime` 值的函数：  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言中可处理 `datetime` 值的函数  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言中可处理 `datetime` 值的函数  
  -   [DATEADD（SSIS 表达式）](../expressions/dateadd-ssis-expression.md)  
   
 -   [DATEDIFF（SSIS 表达式）](../expressions/datediff-ssis-expression.md)  
@@ -73,7 +71,7 @@ ms.locfileid: "62771198"
   
  在了解变更间隔是固定的还是随机的之后，即可计算端点：  
   
--   **计算起始日期和时间**。 将上一次加载的结束日期和时间作为当前的起始日期和时间。 如果对增量加载使用固定间隔，则可使用 Transact-SQL 或 `datetime` 表达式语言的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 函数来计算此值。 否则，您可能需要保持两个执行之间的端点，并使用执行 SQL 任务或脚本任务来加载上一个端点。  
+-   **计算起始日期和时间**。 将上一次加载的结束日期和时间作为当前的起始日期和时间。 如果对增量加载使用固定间隔，则可使用 Transact-SQL 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言的 `datetime` 函数来计算此值。 否则，您可能需要保持两个执行之间的端点，并使用执行 SQL 任务或脚本任务来加载上一个端点。  
   
 -   **计算结束日期和时间**。 如果对增量加载使用固定间隔，则可将当前的结束日期和时间作为起始日期和时间的偏移量来计算。 同样，可以使用 Transact-sql 或`datetime` [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言的函数来计算此值。  
   

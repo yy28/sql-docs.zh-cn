@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771163"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服务
@@ -32,7 +32,7 @@ ms.locfileid: "62771163"
   
      本节介绍了可用于配置 Oracle CDC 服务的命令行命令。  
   
-##  <a name="BKMK_MSXDBCDC"></a> MSXDBCDC 数据库  
+##  <a name="the-msxdbcdc-database"></a><a name="BKMK_MSXDBCDC"></a> MSXDBCDC 数据库  
  MSXDBCDC (Microsoft External-Database CDC) 数据库是一种特殊的数据库，在您将 Oracle CDC 服务用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时需要此类数据库。  
   
  此数据库的名称无法更改。 如果名为 MSXDBCDC 的数据库在主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上存在并且包含并非 Oracle CDC 服务定义的其他表，则该主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将无法使用。  
@@ -63,7 +63,7 @@ ms.locfileid: "62771163"
   
 -   [dbo.xdbcdc_services](#BKMK_dboxdbcdc_services)  
   
-###  <a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
+###  <a name="dboxdbcdc_trace"></a><a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
  此表存储 Oracle CDC 服务的跟踪信息。 此表中存储的信息包括显著的状态更改和跟踪记录。  
   
  Oracle CDC 服务将错误记录和某些信息记录写入 Windows 事件日志以及跟踪表。 在某些情况下，该跟踪表可能无法访问，此时，可从事件日志访问错误信息。  
@@ -84,7 +84,7 @@ ms.locfileid: "62771163"
   
  Oracle CDC 实例将根据更改表保持策略删除旧的跟踪表行。  
   
-###  <a name="BKMK_dboxdbcdc_databases"></a> dbo.xdbcdc_databases  
+###  <a name="dboxdbcdc_databases"></a><a name="BKMK_dboxdbcdc_databases"></a> dbo.xdbcdc_databases  
  此表包含当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中用于 Oracle CDC 数据库的 CDC 服务的名称。 每个数据库都对应于一个 Oracle CDC 实例。 Oracle CDC 服务使用此表来确定哪些实例要启动或停止以及哪些实例要重新配置。  
   
  下表介绍在 **dbo.xdbcdc_databases** 表中包括的项。  
@@ -96,7 +96,7 @@ ms.locfileid: "62771163"
 |cdc_service_name|此项确定哪一 Oracle CDC 服务处理所选 Oracle 数据库。|  
 |已启用|指示 Oracle CDC 实例是处于活动状态 (1) 还是被禁用 (0)。 在 Oracle CDC 服务启动时，只启动标记有启用 (1) 的实例。<br /><br /> **注意**：Oracle CDC 实例可能会由于无法重试的错误而成为禁用的实例。 在此情况下，必须在解决错误后手动重新启动该实例。|  
   
-###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
+###  <a name="dboxdbcdc_services"></a><a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  此表列出了与主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关联的 CDC 服务。 此表由 CDC 设计器控制台用来确定为本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例配置的 CDC 服务的列表。 CDC 服务还使用该表确保只有一个正在运行的 Windows 服务处理给定的 Oracle CDC 服务名称。  
   
  下表介绍在 **dbo.xdbcdc_databases** 表中包括的捕获状态项。  
@@ -108,7 +108,7 @@ ms.locfileid: "62771163"
 |ref_count|此项对安装了同一个 Oracle CDC 服务的计算机的数目进行计数。 每增加一个同名的 Oracle CDC 服务，该计数就会递增，并且在删除此类服务时该计数将递减。 当该计数器达到零时，将删除此行。|  
 |active_service_node|当前正处理 CDC 服务的 Windows 节点的名称。 在该服务正确停止后，该列将设置为 Null，指示不再有处于活动状态的服务。|  
 |active_service_heartbeat|此项跟踪当前 CDC 服务以便确定该服务是否仍处于活动状态。<br /><br /> 此项将定期使用处于活动状态的 CDC 服务的当前数据库 UTC 时间戳进行更新。 默认时间间隔为 30 秒，但可以配置该时间间隔。<br /><br /> 在某一挂起的 CDC 服务检测到在经过了配置的时间间隔后检测信号未更新，则该挂起的服务将尝试接管处于活动状态的 CDC 服务角色。|  
-|选项|此项指定辅助选项，例如，跟踪或优化。 它是以 **name[=value][; ]** 的形式编写的。 该选项字符串使用与 ODBC 连接字符串相同的语义。 如果该选项为布尔值（值为 yes/no），则该值只能包含名称。<br /><br /> 跟踪具有以下可能值：<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> 关闭<br /><br /> \<类名> [，类名>]<br /><br /> 默认值是 **false**秒。<br /><br /> <br /><br /> **service_heartbeat_interval** 是服务更新 active_service_heartbeat 列的时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服务检查配置更改的轮询时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **sql_command_timeout** 是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的命令超时值。 默认值是 **1**秒。 最大值为 **3600**。|  
+|选项|此项指定辅助选项，例如，跟踪或优化。 它是以 **name[=value][; ]** 的形式编写的。 该选项字符串使用与 ODBC 连接字符串相同的语义。 如果该选项为布尔值（值为 yes/no），则该值只能包含名称。<br /><br /> 跟踪具有以下可能值：<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> 关闭<br /><br /> class name>[,class name>]\<<br /><br /> 默认值是 **false**秒。<br /><br /> <br /><br /> **service_heartbeat_interval** 是服务更新 active_service_heartbeat 列的时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服务检查配置更改的轮询时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **sql_command_timeout** 是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的命令超时值。 默认值是 **1**秒。 最大值为 **3600**。|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 数据库存储过程  
@@ -124,7 +124,7 @@ ms.locfileid: "62771163"
   
 -   [dbo.xdbcdc_stop(dbname)](#BKMK_dboxdbcdc_stop)  
   
-###  <a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db（数据库名称）  
+###  <a name="dboxcbcdc_reset_dbdatabase-name"></a><a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db（数据库名称）  
  此过程将清除 Oracle CDC 实例的数据。 在以下情况下将使用该过程：  
   
 -   重新启动数据捕获并且忽略以前的数据，例如以下源数据库恢复或以下某些 Oracle 事务日志不可用的非活动情况。  
@@ -145,7 +145,7 @@ ms.locfileid: "62771163"
   
  有关 CDC 表的详细信息，请参阅 CDC 设计器控制台的帮助系统中的“CDC 数据库”  。  
   
-###  <a name="BKMK_dboxdbcdc_disable_db"></a> dbo.xdbcdc_disable_db(dbname)  
+###  <a name="dboxdbcdc_disable_dbdbname"></a><a name="BKMK_dboxdbcdc_disable_db"></a> dbo.xdbcdc_disable_db(dbname)  
  **dbo.xcbcdc_disable_db** 过程执行以下任务：  
   
 -   删除 MSXDBCDC.xdbcdc_databases 表中所选 CDC 数据库的条目。  
@@ -154,29 +154,29 @@ ms.locfileid: "62771163"
   
  有关 CDC 表的详细信息，请参阅 CDC 设计器控制台的帮助系统中的“CDC 数据库”。  
   
-###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
+###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  **dbo.xcbcdc_add_service** 过程将一个条目添加到 **MSXDBCDC.xdbcdc_services** 表，并且以 1 为增量加到 **MSXDBCDC.xdbcdc_services** 表中该服务名称的 ref_count 列上。 当 **ref_count** 为 0 时，将删除该行。  
   
  要使用 dbo.xcbcdc_add_service**service name, username> 过程，用户必须是具有要命名的 CDC 实例数据库的 db_owner 数据库角色的成员，或者是具有 sysadmin 或 serveradmin 固定服务器角色的成员\<**    。  
   
-###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
+###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  **dbo.xdbcdc_start** 过程将一个开始请求发送到处理所选 CDC 实例的 CDC 服务，以便开始更改处理。  
   
  若要使用 **dbo.xcdcdc_start** 过程，用户必须是 CDC 数据库的 **db_owner** 数据库角色的成员，或者是 **实例的** sysadmin **或** serveradmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的成员。  
   
-###  <a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
+###  <a name="dboxdbcdc_stopdbname"></a><a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
  **dbo.xdbcdc_stop** 过程将一个停止请求发送到处理所选 CDC 实例的 CDC 服务，以便停止更改处理。  
   
  若要使用 **dbo.xcdcdc_stop** 过程，用户必须是 CDC 数据库的 **db_owner** 数据库角色的成员，或者是 **实例的** sysadmin **或** serveradmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的成员。  
   
-##  <a name="BKMK_CDCdatabase"></a> CDC 数据库  
+##  <a name="the-cdc-databases"></a><a name="BKMK_CDCdatabase"></a> CDC 数据库  
  在 CDC 服务中使用的每个 Oracle CDC 实例都与称作 CDC 数据库的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库在与 Oracle CDC 服务相关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中承载。  
   
  该 CDC 数据库包含特殊的 cdc 架构。 Oracle CDC 服务通过前缀为 **xdbcdc_** 的表名称使用此架构。 为安全和一致性目的使用此架构。  
   
  Oracle CDC 实例和 CDC 数据库都是使用 Oracle CDC 设计器控制台创建的。 有关 CDC 数据库的详细信息，请参阅您安装的 Oracle CDC 设计器控制台随附的文档。  
   
-##  <a name="BKMK_CommandConfigCDC"></a> 使用命令行配置 CDC 服务  
+##  <a name="using-the-command-line-to-configure-the-cdc-service"></a><a name="BKMK_CommandConfigCDC"></a> 使用命令行配置 CDC 服务  
  您可以从命令行操作 Oracle CDC 服务程序 (xdbcdcsvc.exe)。 该 CDC 服务程序是一种本机 32 位/64 位 Windows 可执行文件。  
   
  **另请参阅**  
@@ -192,7 +192,7 @@ ms.locfileid: "62771163"
   
 -   [删除](#BKMK_delete)  
   
-###  <a name="BKMK_config"></a> Config  
+###  <a name="config"></a><a name="BKMK_config"></a> Config  
  使用 `Config` 可从脚本更新 Oracle CDC 服务配置。 该命令可用于仅更新 CDC 服务配置的特定部分（例如，在不知道非对称密钥密码的情况下仅更新连接字符串）。 该命令必须由计算机管理员运行。 以下是 `Config` 命令的一个示例。  
   
 ```  
@@ -219,7 +219,7 @@ ms.locfileid: "62771163"
   
  **注意**：包含空格或双引号的任何参数都必须用双引号 (") 括起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"** ）。  
   
-###  <a name="BKMK_create"></a> 创建  
+###  <a name="create"></a><a name="BKMK_create"></a> 创建  
  使用 `Create` 可从脚本创建 Oracle CDC 服务配置。 该命令必须由计算机管理员运行。 以下是 `Create` 命令的一个示例：  
   
 ```  
@@ -245,7 +245,7 @@ ms.locfileid: "62771163"
   
  **注意**：包含空格或双引号的任何参数都必须用双引号 (") 括起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"** ）。  
   
-###  <a name="BKMK_delete"></a> 删除  
+###  <a name="delete"></a><a name="BKMK_delete"></a> 删除  
  使用 `Delete` 可从脚本完全删除 Oracle CDC 服务。 此命令必须由计算机管理员运行。 以下是 `Delete` 命令的一个示例。  
   
 ```  

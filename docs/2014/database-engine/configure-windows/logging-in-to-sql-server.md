@@ -22,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782110"
 ---
 # <a name="logging-in-to-sql-server"></a>登录到 SQL Server
-  您可以使用任何图形管理工具或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从命令提示符登录到实例。  
+  使用任何图形管理工具或从命令提示符处，都可以登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
  使用图形管理工具（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）登录到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例时，系统将会提示您提供服务器名称、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码（如果需要）。 如果使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则不必在每次访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时都提供 SQL Server 登录名。 相反地， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户自动登录。 如果在混合模式身份验证（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和Windows 身份验证模式）下运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录，则必须提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码。 请尽可能使用 Windows 身份验证。  
   
@@ -63,10 +63,8 @@ ms.locfileid: "62782110"
 |通过同时指定正在使用的 IP 地址和 TCP 端口（在此情况下为 2828）连接到命名实例。|192.168.17.28,2828|  
 |使用名称连接到强制 TCP 连接的默认实例。|tcp:APPHOST|  
 |使用名称连接到强制 TCP 连接的命名实例。|tcp:APPHOST\SQLEXPRESS|  
-|通过指定命名管道名称连接到默认实例。|
-  \\\APPHOST\pipe\unit\app|  
-|通过指定命名管道名称连接到命名实例。|
-  \\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
+|通过指定命名管道名称连接到默认实例。|\\\APPHOST\pipe\unit\app|  
+|通过指定命名管道名称连接到命名实例。|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |使用名称连接到强制命名管道连接的默认实例。|np:APPHOST|  
 |使用名称连接到强制命名管道连接的命名实例。|np:APPHOST\SQLEXPRESS|  
   
@@ -80,11 +78,11 @@ WHERE session_id = @@SPID;
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [&#40;命令提示符下登录到实例 SQL Server&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
+ [登录到 SQL Server 实例（命令提示符）](log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  以下资源可以帮助您解决连接问题。  
   
--   [如何排查连接到 SQL Server 数据库引擎](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [如何排除连接到 SQL Server 数据库引擎时的故障](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
 -   [解决 SQL 连接问题的步骤](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   

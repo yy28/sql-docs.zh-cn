@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809565"
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "62809565"
   
 -   在设置选项并发出 RECONFIGURE（在某些情况下为 RECONFIGURE WITH OVERRIDE）语句之后立即生效。  
   
-     -或-  
+     \- 或 -  
   
 -   执行以上操作并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之后生效。  
   
@@ -66,76 +66,76 @@ ms.locfileid: "62809565"
   
     |配置选项|最小值|最大值|默认|  
     |--------------------------|-------------------|-------------------|-------------|  
-    |[访问检查缓存桶计数](access-check-cache-server-configuration-options.md)（A）|0|16384|0|  
-    |[访问检查缓存配额](access-check-cache-server-configuration-options.md)（A）|0|2147483647|0|  
-    |即席[分布式查询](ad-hoc-distributed-queries-server-configuration-option.md)（A）|0|1|0|  
-    |[关联 i/o 掩码](affinity-input-output-mask-server-configuration-option.md)（A，RR）|-2147483648|2147483647|0|  
-    |[affinity64 i/o mask](affinity64-input-output-mask-server-configuration-option.md) （A，仅适用于64位版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）|-2147483648|2147483647|0|  
-    |[关联掩码](affinity-mask-server-configuration-option.md)（A）|-2147483648|2147483647|0|  
-    |[affinity64 mask](affinity64-mask-server-configuration-option.md) （A，RR），仅适用于64位版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
-    |[代理 xp](agent-xps-server-configuration-option.md) （A）|0|1|0<br /><br /> （当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时，更改为 1。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理设置为在安装过程中自动启动，则默认值为 0。）|  
-    |[允许更新](allow-updates-server-configuration-option.md)（已过时。 请勿使用。 将在重新配置期间导致错误。）|0|1|0|  
+    |[访问检查缓存桶计数](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
+    |[访问检查缓存配额](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
+    |[即席分布式查询](ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
+    |[affinity I/O mask](affinity-input-output-mask-server-configuration-option.md) （A，RR）|-2147483648|2147483647|0|  
+    |[affinity64 I/O mask](affinity64-input-output-mask-server-configuration-option.md) （A，仅适用于 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）|-2147483648|2147483647|0|  
+    |[affinity mask](affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
+    |[affinity64 mask](affinity64-mask-server-configuration-option.md) （A，RR），仅适用于 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
+    |[代理 XP](agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> （当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时，更改为 1。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理设置为在安装过程中自动启动，则默认值为 0。）|  
+    |[允许更新](allow-updates-server-configuration-option.md) （已过时。 请勿使用。 将在重新配置期间导致错误。）|0|1|0|  
     |[备份校验和默认值](../backup-checksum-default.md)|0|1|0|  
-    |[备份压缩默认值](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0|  
-    |[阻塞的进程阈值](blocked-process-threshold-server-configuration-option.md)（A）|0|86400|0|  
-    |[c2 审核模式](c2-audit-mode-server-configuration-option.md)（A，RR）|0|1|0|  
-    |[clr enabled](clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[已启用通用标准符合性](common-criteria-compliance-enabled-server-configuration-option.md)（A，RR）|0|1|0|  
-    |[contained database authentication](contained-database-authentication-server-configuration-option.md)|0||0|  
-    |[并行的开销阈值](configure-the-cost-threshold-for-parallelism-server-configuration-option.md)（A）|0|32767|5|  
-    |[cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
-    |[游标阈值](configure-the-cursor-threshold-server-configuration-option.md)（A）|-1|2147483647|-1|  
-    |[数据库邮件 xp](database-mail-xps-server-configuration-option.md) （A）|0|1|0|  
-    |[默认全文语言](configure-the-default-full-text-language-server-configuration-option.md)（A）|0|2147483647|1033|  
+    |[backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0|  
+    |[blocked process threshold](blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[c2 审核模式](c2-audit-mode-server-configuration-option.md) （A，RR）|0|1|0|  
+    |[CLR 已启用](clr-enabled-server-configuration-option.md)|0|1|0|  
+    |[common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) （A，RR）|0|1|0|  
+    |[已包含数据库身份验证](contained-database-authentication-server-configuration-option.md)|0||0|  
+    |[并行的开销阈值](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
+    |[跨数据库所有权链接](cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
+    |[cursor threshold](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
+    |[Database Mail XPs](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|2052|  
     |[默认语言](configure-the-default-language-server-configuration-option.md)|0|9999|0|  
-    |[默认跟踪已启用](default-trace-enabled-server-configuration-option.md)（A）|0|1|1|  
-    |[禁止从触发器返回结果](disallow-results-from-triggers-server-configuration-option.md)（A）|0|1|0|  
-    |[EKM provider enabled](ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
+    |[default trace enabled](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
+    |[disallow results from triggers](disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
+    |[已启用 EKM 提供程序](ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
     |[filestream_access_level](filestream-access-level-server-configuration-option.md)|0|2|0|  
-    |[填充因子](configure-the-fill-factor-server-configuration-option.md)（A，RR）|0|100|0|  
+    |[填充因子](configure-the-fill-factor-server-configuration-option.md) （A，RR）|0|100|0|  
     |ft crawl bandwidth (max)，请参阅 [ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
     |ft crawl bandwidth (min)，请参阅 [ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |ft notify bandwidth (max)，请参阅 [ft notify bandwidth](ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
     |ft notify bandwidth (min)，请参阅 [ft notify bandwidth](ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |[index create memory](configure-the-index-create-memory-server-configuration-option.md) （A，SC）|704|2147483647|0|  
-    |有[疑问的事务解析](in-doubt-xact-resolution-server-configuration-option.md)（A）|0|2|0|  
-    |[轻型池](lightweight-pooling-server-configuration-option.md)（A，RR）|0|1|0|  
-    |[锁](configure-the-locks-server-configuration-option.md)（A，RR，SC）|5000|2147483647|0|  
-    |[最大并行度](configure-the-max-degree-of-parallelism-server-configuration-option.md)（A）|0|32767|0|  
-    |[最大全文爬网范围](max-full-text-crawl-range-server-configuration-option.md)（A）|0|256|4|  
+    |[in-doubt xact resolution](in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
+    |[lightweight pooling](lightweight-pooling-server-configuration-option.md) （A，RR）|0|1|0|  
+    |[locks](configure-the-locks-server-configuration-option.md) （A，RR，SC）|5000|2147483647|0|  
+    |[max degree of parallelism](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
+    |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) （A，SC）|16|2147483647|2147483647|  
-    |[最大文本复制大小](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[最大工作线程数](configure-the-max-worker-threads-server-configuration-option.md)（A）|128|32767<br /><br /> （对于 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 1024；对于 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 2048。）|0<br /><br /> 零自动配置最大工作线程数，具体取决于处理器数，使用公式（256 + （*\<处理器>* -4） * 8）表示32位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，两次用于64位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-    |[介质保持期](configure-the-media-retention-server-configuration-option.md)（A，RR）|0|365|0|  
-    |[每个查询的最小内存](configure-the-min-memory-per-query-server-configuration-option.md)（A）|512|2147483647|1024|  
+    |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> （对于 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 1024；对于 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 2048。）|0<br /><br /> 零自动配置最大工作线程数，具体取决于处理器数，使用公式（256 + （*\<处理器>* -4） * 8）表示32位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，两次用于64位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+    |[media retention](configure-the-media-retention-server-configuration-option.md) （A，RR）|0|365|0|  
+    |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) （A，SC）|0|2147483647|0|  
     |[嵌套触发器](configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
-    |[网络数据包大小](configure-the-network-packet-size-server-configuration-option.md)（A）|512|32767|4096|  
-    |[Ole 自动化过程](ole-automation-procedures-server-configuration-option.md)（A）|0|1|0|  
-    |[打开对象](open-objects-server-configuration-option.md)（A，RR，已过时）|0|2147483647|0|  
-    |[针对即席工作负荷进行优化](optimize-for-ad-hoc-workloads-server-configuration-option.md)（A）|0|1|0|  
-    |[PH_timeout](ph-timeout-server-configuration-option.md) （A）|1|3600|60|  
-    |预计算[级别](precompute-rank-server-configuration-option.md)（A）|0|1|0|  
-    |[优先级提升](configure-the-priority-boost-server-configuration-option.md)（A，RR）|0|1|0|  
-    |[查询调控器开销限制](configure-the-query-governor-cost-limit-server-configuration-option.md)（A）|0|2147483647|0|  
-    |[查询等待](configure-the-query-wait-server-configuration-option.md)（A）|-1|2147483647|-1|  
-    |[恢复间隔](configure-the-recovery-interval-server-configuration-option.md)（A，SC）|0|32767|0|  
-    |[远程访问](configure-the-remote-access-server-configuration-option.md)（RR）|0|1|1|  
-    |[remote admin connections](remote-admin-connections-server-configuration-option.md)|0|1|0|  
+    |[network packet size](configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
+    |[Ole Automation Procedures](ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
+    |[open objects](open-objects-server-configuration-option.md) （A，RR，已过时）|0|2147483647|0|  
+    |[针对即席工作负荷进行优化](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
+    |[PH_timeout](ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[precompute rank](precompute-rank-server-configuration-option.md) (A)|0|1|0|  
+    |[priority boost](configure-the-priority-boost-server-configuration-option.md) （A，RR）|0|1|0|  
+    |[query governor cost limit](configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
+    |[查询等待](configure-the-query-wait-server-configuration-option.md) (A)|-1|2147483647|-1|  
+    |[恢复间隔](configure-the-recovery-interval-server-configuration-option.md) （A，SC）|0|32767|0|  
+    |[远程访问](configure-the-remote-access-server-configuration-option.md) (RR)|0|1|1|  
+    |[远程管理连接](remote-admin-connections-server-configuration-option.md)|0|1|0|  
     |[远程登录超时值](configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
-    |[远程过程事务](configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
-    |[远程查询超时](configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
-    |[Replication XPs 选项](replication-xps-server-configuration-option.md)（A）|0|1|0|  
-    |[启动扫描](configure-the-scan-for-startup-procs-server-configuration-option.md)过程（A，RR）|0|1|0|  
-    |[server trigger recursion](server-trigger-recursion-server-configuration-option.md)|0|1|1|  
-    |[设置工作集大小](set-working-set-size-server-configuration-option.md)（A，RR，已过时）|0|1|0|  
-    |[show advanced options](show-advanced-options-server-configuration-option.md)|0|1|0|  
-    |[SMO 和 Sql-dmo xp](smo-and-dmo-xps-server-configuration-option.md) （A）|0|1|1|  
-    |[转换干扰词](transform-noise-words-server-configuration-option.md)（A）|0|1|0|  
-    |[两位数年份截止](configure-the-two-digit-year-cutoff-server-configuration-option.md)（A）|1753|9999|2049|  
-    |[用户连接](configure-the-user-connections-server-configuration-option.md)（A，RR，SC）|0|32767|0|  
-    |[用户选项](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
-    |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) （A）|0|1|0|  
+    |[remote proc trans](configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
+    |[remote query timeout](configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
+    |[Replication XPs 选项](replication-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[scan for startup procs](configure-the-scan-for-startup-procs-server-configuration-option.md) （A，RR）|0|1|0|  
+    |[服务器触发器递归](server-trigger-recursion-server-configuration-option.md)|0|1|1|  
+    |[set working set size](set-working-set-size-server-configuration-option.md) （A，RR，已过时）|0|1|0|  
+    |[显示高级选项](show-advanced-options-server-configuration-option.md)|0|1|0|  
+    |[SMO 和 DMO XP](smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
+    |[transform noise words](transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
+    |[两位数年份截止](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
+    |[user connections](configure-the-user-connections-server-configuration-option.md) （A，RR，SC）|0|32767|0|  
+    |[user options](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
+    |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   

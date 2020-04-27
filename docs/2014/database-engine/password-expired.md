@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774740"
 ---
 # <a name="password-expired"></a>密码已过期
@@ -38,6 +38,6 @@ ms.locfileid: "62774740"
  [强密码](../relational-databases/security/strong-passwords.md)   
  [选择身份验证模式](../relational-databases/security/choose-an-authentication-mode.md)   
  [更改服务器身份验证模式](configure-windows/change-server-authentication-mode.md)   
- [更改 SQL Server &#40;SQL Server 配置管理器所使用的帐户的密码&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+ [更改 SQL Server 使用的帐户的密码（SQL Server 配置管理器）](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
   

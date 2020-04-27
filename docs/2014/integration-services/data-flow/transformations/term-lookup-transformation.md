@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770313"
 ---
 # <a name="term-lookup-transformation"></a>字词查找转换
@@ -78,8 +78,7 @@ ms.locfileid: "62770313"
   
  InputColumnType 属性设置为 0 或 2 的转换输出列包含列的 CustomLineageID 属性，该属性包含由上游数据流组件分配给列的沿袭标识符。  
   
- 字词查找转换还将两列添加到转换输出，默认名称分别为 `Term` 和 `Frequency`。 
-  `Term` 包含查找表中的字词，而 `Frequency` 包含引用表中的字词在输入数据集中出现的次数。 这些列不包含 CustomLineageID 属性。  
+ 字词查找转换还将两列添加到转换输出，默认名称分别为 `Term` 和 `Frequency`。 `Term` 包含查找表中的字词，而 `Frequency` 包含引用表中的字词在输入数据集中出现的次数。 这些列不包含 CustomLineageID 属性。  
   
  查找表必须是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 Access 数据库中的表。 如果将字词提取转换的输出保存到表，则可以使用此表作为引用表，但也可以使用其他表。 必须先将平面文件中、Excel 工作簿或其他源的文本导入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库或 Access 数据库，然后才能使用字词查找转换。  
   
@@ -95,17 +94,17 @@ ms.locfileid: "62770313"
   
  有关可在 **“字词查找转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [字词查找转换编辑器 &#40;引用表 "选项卡&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [字词查找转换编辑器（“引用表”选项卡）](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [字词查找转换编辑器（“字词查找”选项卡）](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [字词查找转换编辑器 &#40;高级 "选项卡&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [字词查找转换编辑器（“高级”选项卡）](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../../common-properties.md)  
+-   [通用属性](../../common-properties.md)  
   
--   [转换自定义属性](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../set-the-properties-of-a-data-flow-component.md)。  
   

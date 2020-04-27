@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779004"
 ---
 # <a name="get-dialog-box-source-control"></a>“获取”对话框（源代码管理）
@@ -31,7 +31,7 @@ ms.locfileid: "62779004"
 >  也可以右键单击解决方案资源管理器中的项来访问此对话框。  
   
 ## <a name="options"></a>选项  
- **Action**  
+ **操作**  
  指定对要提取的项执行的操作。  
   
  **“列”**  
@@ -49,7 +49,7 @@ ms.locfileid: "62779004"
  **选项**  
  在单击该按钮右侧的箭头时显示 Source Safe 插件特定的获取选项。  
   
- **排序**  
+ **进行**  
  对显示的列进行排序。  
   
  **树视图**  

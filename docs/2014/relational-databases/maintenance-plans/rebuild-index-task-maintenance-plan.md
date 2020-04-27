@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806979"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>“重新生成索引”任务（维护计划）
@@ -37,7 +37,7 @@ ms.locfileid: "62806979"
  **数据库**  
  指定受此任务影响的数据库。  
   
--   **所有数据库**  
+-   **“所有数据库”**  
   
      生成的维护计划将对除 tempdb 之外的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库运行维护任务。  
   
@@ -49,18 +49,18 @@ ms.locfileid: "62806979"
   
      生成的维护计划将对用户创建的所有数据库运行维护任务。 但不会对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据库运行任何维护任务。  
   
--   **这些特定数据库**  
+-   **特定数据库**  
   
      生成的维护计划将只对所选数据库运行维护任务。 如果选择此选项，则必须至少在列表中选择一个数据库。  
   
     > [!NOTE]  
     >  只能对兼容级别被设置为 80 或更高的数据库运行维护计划。 不显示兼容级别设置为 70 或更低的数据库。  
   
- **Object**  
+ **对象**  
  将“选择”**** 网格限制为显示表、显示视图或同时显示两者。  
   
- **选项**  
- 指定受此任务影响的表或索引。 在 **“对象”** 框中选择 “表和视图” 时不可用。  
+ **选择**  
+ 指定受此任务影响的表或索引。 在“对象”框中选择 **“表和视图”** 时不可用。  
   
  **使用默认可用空间重新组织页**  
  删除数据库中表上的索引，并使用在创建索引时指定的填充因子重新创建索引。  
@@ -75,9 +75,9 @@ ms.locfileid: "62806979"
  使用 `ONLINE` 选项，用户可以在索引操作期间访问基础表或聚集索引数据以及任何关联的非聚集索引。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- **查看 T-sql**  
+ **查看 T-SQL**  
  根据所选选项，查看针对此任务的服务器执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 > [!NOTE]  
@@ -90,29 +90,29 @@ ms.locfileid: "62806979"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **“刷新”**  
+ **全部**  
  刷新可用服务器的列表。  
   
- **输入用于登录到服务器的信息**  
+ **输入登录服务器所需的信息**  
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
  使用 Windows 身份验证连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
   
- **使用特定的用户名和密码**  
+ **使用特定用户名和密码**  
  使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
- **权限**  
+ **密码**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
+ [Transact-sql&#41;&#40;ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql)   
  [DBCC DBREINDEX &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
- [索引 SORT_IN_TEMPDB 选项](../indexes/indexes.md)   
+ [用于索引的 SORT_IN_TEMPDB 选项](../indexes/indexes.md)   
  [联机索引操作准则](../indexes/guidelines-for-online-index-operations.md)   
  [联机索引操作的工作方式](../indexes/how-online-index-operations-work.md)   
  [联机执行索引操作](../indexes/perform-index-operations-online.md)  

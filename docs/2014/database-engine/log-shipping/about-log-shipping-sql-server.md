@@ -26,18 +26,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774543"
 ---
 # <a name="about-log-shipping-sql-server"></a>关于日志传送 (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过日志传送，可以自动将事务日志备份从*主服务器*实例上的*主数据库*发送到单独*辅助服务器*实例上的一个或多个*辅助数据库*。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器 **”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用日志传送，可以自动将“主服务器”  实例上“主数据库”  内的事务日志备份发送到单独“辅助服务器”  实例上的一个或多个“辅助数据库”  。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器  ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
   
  **本主题内容：**  
   
--   [便利](#Benefits)  
+-   [优点](#Benefits)  
   
 -   [术语和定义](#TermsAndDefinitions)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62774543"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 优势  
+##  <a name="benefits"></a><a name="Benefits"></a> 优势  
   
 -   为单个主数据库以及一个或多个辅助数据库（每个数据库都位于单独的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上）提供灾难恢复解决方案。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774543"
   
 -   允许用户将延迟时间定义为：从主服务器备份主数据库日志到辅助服务器必须还原（应用）日志备份之间的时间。 例如，如果主数据库上的数据被意外更改，则较长的延迟会很有用。 如果很快发现意外更改，则通过延迟，您可以在辅助数据库反映此更改之前从其中检索仍未更改的数据。  
   
-##  <a name="TermsAndDefinitions"></a>术语和定义  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 术语和定义  
  主服务器 (primary server)  
  位于生产服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62774543"
 > [!TIP]  
 >  对于每个警报，您需要指定警报编号。 此外，请确保配置警报以便在引发警报时通知操作员。  
   
-##  <a name="ComponentsAndConcepts"></a>日志传送概述  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> 日志传送概述  
  日志传送由三项操作组成：  
   
 1.  在主服务器实例中备份事务日志。  
@@ -115,7 +115,7 @@ ms.locfileid: "62774543"
 ### <a name="a-typical-log-shipping-configuration"></a>典型日志传送配置  
  下图显示了具有主服务器实例、三个辅助服务器实例和一个监视服务器实例的日志传送配置。 此图阐释了备份作业、复制作业以及还原作业所执行步骤，如下所示：  
   
-1.  主服务器实例执行备份作业以在主数据库上备份事务日志。 然后，该服务器实例将日志备份放入主日志备份文件（此文件将被发送到备份文件夹中）。  在这个图中，备份文件夹位于共享目录“备份共享”中**。  
+1.  主服务器实例执行备份作业以在主数据库上备份事务日志。 然后，该服务器实例将日志备份放入主日志备份文件（此文件将被发送到备份文件夹中）。  在这个图中，备份文件夹位于共享目录“备份共享”中  。  
   
 2.  全部三个辅助服务器实例都执行其各自的复制作业，以将主日志备份文件复制到它本地的目标文件夹中。  
   
@@ -123,22 +123,21 @@ ms.locfileid: "62774543"
   
  主服务器实例和辅助服务器实例将它们自己的历史记录和状态发送到监视服务器实例。  
   
- ![显示备份、复制 & 还原作业的配置](../media/ls-typical-configuration.gif "显示备份、复制和还原作业的配置")  
+ ![显示备份、复制和还原作业的配置](../media/ls-typical-configuration.gif "显示备份、复制和还原作业的配置")  
   
-##  <a name="Interoperability"></a>交互  
+##  <a name="interoperability"></a><a name="Interoperability"></a> 互操作性  
  日志传送功能可以与下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能或组件一起使用：  
   
 -   [从日志传送迁移到 AlwaysOn 可用性组 &#40;SQL Server 的先决条件&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
--   [数据库镜像和日志传送 &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
+-   [数据库镜像和日志传送 (SQL Server)](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
--   [日志传送和复制 &#40;SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
+-   [日志传送和复制 (SQL Server)](log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 和数据库镜像是互斥的。 不能将数据库配置为同时用于这些互斥的功能。  
+>  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 和数据库镜像是互斥的。 不能将数据库配置为同时用于这些互斥的功能。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [将日志传送升级到 SQL Server 2014 &#40;Transact-sql&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

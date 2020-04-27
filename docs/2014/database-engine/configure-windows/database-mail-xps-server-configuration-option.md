@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e916fe3b76abfa8773a757cf2779e7d5cbf26b86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810539"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs 服务器配置选项
   使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 可能的值包括：  
   
--   **0**指示数据库邮件不可用（默认值）。  
+-   **0** 表示数据库邮件不可用（默认值）。  
   
--   **1**指示数据库邮件可用。  
+-   **1** 表示数据库邮件可用。  
   
  该设置立即生效，无需停止并重新启动服务器。  
   

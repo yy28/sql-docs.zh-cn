@@ -16,14 +16,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768020"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>运行 SQL Server 导入和导出向导
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导为在数据源之间复制数据和构造基本包提供了一种最为简单的方法。 有关该向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
   
  有关演示如何使用 SQL Server 导入和导出向导创建将 SQL Server 数据库中的数据导出到 Microsoft Excel 电子表格的包的视频，请参阅将[SQL Server 数据导出到 Excel （SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131024)。  
@@ -32,19 +31,19 @@ ms.locfileid: "62768020"
   
 -   在 "**开始**" 菜单上，指向 "**所有程序**"，指向 "**Microsoft SQL Server** "，然后单击 "**导入和导出数据**"。  
   
-     -或-  
+     \- 或 -  
   
      在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，右键单击 " **SSIS 包**" 文件夹，然后单击 " **SSISImport" 和 "导出向导**"。  
   
-     -或-  
+     \- 或 -  
   
      在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 "**项目**" 菜单上，单击 " **SSISImport" 和 "导出向导**"。  
   
-     -或-  
+     \- 或 -  
   
      在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务器类型，展开 "数据库"，右键单击某个数据库，指向 "**任务**"，然后单击 "**导入数据**" 或 "**导出数据**"。  
   
-     -或-  
+     \- 或 -  
   
      在命令提示符窗口中运行 DTSWizard.exe（位于 C:\Program Files\Microsoft SQL Server\100\DTS\Binn）。  
   
@@ -60,8 +59,7 @@ ms.locfileid: "62768020"
      可用数据源包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口、OLE DB 访问接口、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供程序、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供程序、Microsoft Office Excel、Microsoft Office Access 和平面文件源。 根据源的不同，需要设置身份验证模式、服务器名称、数据库名称和文件格式之类的选项。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支持 Oracle BLOB、CLOB、NCLOB、BFILE 和 UROWID 数据类型。 因此，OLE DB 源无法从包含具有上述数据类型的列的表中提取数据。  
+    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支持 Oracle BLOB、CLOB、NCLOB、BFILE 和 UROWID 数据类型。 因此，OLE DB 源无法从包含具有上述数据类型的列的表中提取数据。  
   
      可用数据目标包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据访问接口、OLE DB 访问接口、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、Excel、Access 和平面文件目标。  
   
@@ -71,7 +69,7 @@ ms.locfileid: "62768020"
   
     -   指示是否创建新的数据库并设置数据库属性。 下列属性无法配置，因此向导使用指定的默认值：  
   
-        |properties|值|  
+        |属性|Value|  
         |--------------|-----------|  
         |排序规则|Latin1_General_CS_AS_KS_WS|  
         |恢复模式|完全|  

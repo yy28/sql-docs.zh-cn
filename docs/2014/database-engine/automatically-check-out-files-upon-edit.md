@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791729"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>在编辑时自动签出
@@ -25,7 +25,7 @@ ms.locfileid: "62791729"
   
 ### <a name="to-configure-automatic-checkout"></a>配置自动签出  
   
-1.  在“工具”  菜单上，单击“选项”  。  
+1.  在“工具” **** 菜单上，单击“选项” ****。  
   
 2.  展开 "**源代码管理**" 文件夹，然后单击 "**环境**"。  
   

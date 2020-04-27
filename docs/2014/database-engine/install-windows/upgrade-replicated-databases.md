@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775312"
 ---
 # <a name="upgrade-replicated-databases"></a>升级复制数据库
@@ -89,9 +89,9 @@ ms.locfileid: "62775312"
  在从早期版本还原复制数据库的备份时，若要确保保留复制设置：请还原到与创建备份的服务器和数据库同名的服务器和数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [复制管理常见问题解答](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
- [副本后向兼容性](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [复制管理常见问题](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [复制向后兼容性](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
+ [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [升级到 SQL Server 2014](upgrade-sql-server.md)  
   
   

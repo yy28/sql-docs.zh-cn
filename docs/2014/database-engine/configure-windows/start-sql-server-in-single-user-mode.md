@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809051"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>在单用户模式下启动 SQL Server
@@ -63,7 +63,7 @@ ms.locfileid: "62809051"
  [启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [用于数据库管理员的诊断连接](diagnostic-connection-for-database-administrators.md)   
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
- [检查点 (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql)   
+ [Transact-sql&#41;的检查点 &#40;](/sql/t-sql/language-elements/checkpoint-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [数据库引擎服务启动选项](database-engine-service-startup-options.md)  
   

@@ -23,14 +23,13 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772273"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>提供有关 SQL Server 2014 的反馈
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 非常感谢您花费宝贵时间帮助我们改进 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 产品和文档。 您可以提供有关产品功能和用户界面的建议和错误报告，提交文档反馈，以及选择向 [!INCLUDE[msCoName](../includes/msconame-md.md)] 自动发送错误报告和使用情况数据以供分析。 此处分别介绍了以上三个反馈选项。  
   
 ## <a name="submitting-feedback-about-the-product"></a>提交有关产品的反馈  
@@ -53,12 +52,10 @@ ms.locfileid: "62772273"
 -   选中 "**工具"/"自定义 ...** " 命令的 "**工具栏**" 选项卡上的 "**帮助**" 复选框。  
   
 ## <a name="automatic-error-and-usage-reporting"></a>自动报告错误和使用情况  
- 可以将各个功能自动设置为报告错误并发送有关您如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 软件和服务的数据。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 将使用这些信息来改进 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 所有数据均保密。  
+ 可以将各个功能自动设置为报告错误并发送有关您如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 软件和服务的数据。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 将使用这些信息来改进 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 所有数据均保密。  
   
 ### <a name="managing-automatic-usage-reporting"></a>管理自动报告使用情况的功能  
- 自动报告使用情况允许您决定是否收集数据并将数据发送给 [!INCLUDE[msCoName](../includes/msconame-md.md)]。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用两个管道来报告使用情况数据。 两个管道报告的数据相似，但报告的是不同程序的数据，并且可以分别打开或关闭。 打开或关闭使用其中任何一个程序的管道，将会停止或开始从共享同一个管道的其他程序收集数据。  
+ 自动报告使用情况允许您决定是否收集数据并将数据发送给 [!INCLUDE[msCoName](../includes/msconame-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用两个管道来报告使用情况数据。 两个管道报告的数据相似，但报告的是不同程序的数据，并且可以分别打开或关闭。 打开或关闭使用其中任何一个程序的管道，将会停止或开始从共享同一个管道的其他程序收集数据。  
   
 -   一个管道用于报告所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]（联机丛书和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 工具中某些基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Visual Studio 的用户界面元素除外）的使用情况数据。 安装之后，也可以关闭（或打开）此管道。 为此，在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，打开一个基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的项目，然后，从“帮助”**** 菜单中选择“客户反馈选项”****。 在您已经打开一个基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的项目之前，此命令不会出现。  
   

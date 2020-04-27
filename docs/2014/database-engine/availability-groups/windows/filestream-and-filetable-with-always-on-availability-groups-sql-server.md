@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814136"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM 和 FileTable 与 AlwaysOn 可用性组 (SQL Server)
@@ -32,17 +32,17 @@ ms.locfileid: "62814136"
   
 -   [先决条件](#Prerequisites)  
   
--   [为 FILESTREAM 和 FileTable 访问使用虚拟网络名称（Vnn）](#vnn)  
+-   [为 FILESTREAM 和 FileTable 访问使用虚拟网络名称 (VNN)](#vnn)  
   
 -   [相关任务](#RelatedTasks)  
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   在将使用 FILESTREAM 的数据库（具有或不具有 FileTable）添加到某一可用性组之前，请确保在承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。 有关详细信息，请参阅 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)。  
   
-##  <a name="vnn"></a>为 FILESTREAM 和 FileTable 访问使用虚拟网络名称（Vnn）  
+##  <a name="using-virtual-network-names-vnns-for-filestream-and-filetable-access"></a><a name="vnn"></a>为 FILESTREAM 和 FileTable 访问使用虚拟网络名称（Vnn）  
  当您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上启用 FILESTREAM 时，将创建实例级别共享以便提供对 FILESTREAM 数据的访问。 可通过按以下格式使用计算机名称来访问此共享：  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -59,11 +59,9 @@ ms.locfileid: "62814136"
   
     1.  `\\<computer_name>\<filestream_share_name>`  
   
-    2.  
-  `\\<VNN1>\<filestream_share_name>` 。  
+    2.  `\\<VNN1>\<filestream_share_name>` 。  
   
-    3.  
-  `\\<VNN2>\<filestream_share_name>` 。  
+    3.  `\\<VNN2>\<filestream_share_name>` 。  
   
  这些 VNN 范围的共享也传播到所有辅助副本。  
   
@@ -77,13 +75,13 @@ ms.locfileid: "62814136"
   
  在该数据库不是某一可用性组的一部分时，如果您的应用程序尝试使用 VNN 范围的路径访问该共享，则该请求可能会成功。 在此情况下，虚拟网络名称将解析为计算机名称。 但是，强烈不推荐这一用法，因为如果删除该可用性组，该 VNN 范围的路径将会停止。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [启用 FileTable 的先决条件](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
  无。  
   
 ## <a name="see-also"></a>另请参阅  

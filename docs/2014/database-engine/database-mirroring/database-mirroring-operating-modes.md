@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807647"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
@@ -27,7 +27,7 @@ ms.locfileid: "62807647"
   
  
   
-##  <a name="TermsAndDefinitions"></a>术语和定义  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 术语和定义  
  此节介绍了几个术语，它们是本主题的核心。  
   
  高性能模式  
@@ -42,7 +42,7 @@ ms.locfileid: "62807647"
  Witness  
  仅用于高安全性模式，SQL Server 的一个可选实例，它能使镜像服务器识别是否要启动自动故障转移。 与这两个故障转移伙伴不同的是，见证服务器并不能用于数据库。 见证服务器的唯一角色是支持自动故障转移。  
   
-##  <a name="VisualElement"></a>异步数据库镜像（高性能模式）  
+##  <a name="asynchronous-database-mirroring-high-performance-mode"></a><a name="VisualElement"></a>异步数据库镜像（高性能模式）  
  此节介绍异步数据库镜像的工作原理，何时适合使用高性能模式以及在主体服务器发生故障时如何响应。  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ ms.locfileid: "62807647"
   
  下图显示了使用高性能模式的会话的配置。  
   
- ![会话的仅伙伴配置](../media/dbm-high-performance-mode.gif "会话的仅伙伴配置")  
+ ![会话的仅合作伙伴配置](../media/dbm-high-performance-mode.gif "会话的仅合作伙伴配置")  
   
  在高性能模式下，主体服务器向镜像服务器发送事务日志之后，就立即向客户端发送确认，而不会等待镜像服务器的确认。 事务不等待镜像服务器将日志写入磁盘便提交。 异步操作允许主体服务器的运行有一段最短事务滞后时间。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "62807647"
   
  
   
-###  <a name="WhenUseHighPerf"></a>何时适合高性能模式？  
+###  <a name="when-is-high-performance-mode-appropriate"></a><a name="WhenUseHighPerf"></a>何时适合高性能模式？  
  高性能模式在灾难恢复方案中非常有用，在这种方案中，主体服务器和镜像服务器之间的距离非常大，并且您不希望小错误影响主体服务器。  
   
 > [!NOTE]  
 >  日志传送可以作为数据库镜像的补充，最好用其替代异步数据库镜像。 有关日志传送优点的信息，请参阅[高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。 有关配合使用日志传送和数据库镜像的信息，请参阅[数据库镜像和日志传送 (SQL Server)](database-mirroring-and-log-shipping-sql-server.md)。  
   
-###  <a name="WitnessImpactOnHighPerf"></a>见证服务器对高性能模式的影响  
+###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> 见证服务器对高性能模式的影响  
  如果使用 Transact-SQL 配置高性能模式，则当 SAFETY 属性设置为 OFF 时，我们极力建议也将 WITNESS 属性设置为 OFF。 见证服务器可以与高性能模式共存，但是见证服务器没有优点并可导致风险。  
   
  当其中任何一个伙伴出现故障而导致见证服务器与会话断开连接时，数据库便无法使用。 这是因为，尽管高性能模式不需要见证服务器，但如果设置了见证服务器，则会话便需要由两个或多个服务器实例组成的仲裁。 如果会话将仲裁丢失，则不能为数据库服务。  
@@ -82,7 +82,7 @@ ms.locfileid: "62807647"
 > [!NOTE]  
 >  有关仲裁类型的信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
-###  <a name="WhenPrincipalFails"></a>对主体的故障做出响应  
+###  <a name="responding-to-failure-of-the-principal"></a><a name="WhenPrincipalFails"></a> 对主体服务器故障的响应  
  当主体服务器出现故障时，数据库所有者有多种选择，如下所示：  
   
 -   使数据库不可用，直到主体服务器再次变为可用。  
@@ -102,7 +102,7 @@ ms.locfileid: "62807647"
   
      强制服务会导致镜像服务器成为主体角色，并将其数据库的副本提供给客户端。 进行强制服务后，主体服务器未发送至镜像服务器的所有事务日志都将丢失。 因此，您应将强制服务的使用限制在以下两种情况：可以接受可能造成的数据丢失以及立即使用数据库对您很重要。 有关强制服务工作原理及最佳使用方法的信息，请参阅[数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
-##  <a name="Sync"></a>同步数据库镜像（高安全性模式）  
+##  <a name="synchronous-database-mirroring-high-safety-mode"></a><a name="Sync"></a>同步数据库镜像（高安全性模式）  
  此节介绍了同步数据库镜像的工作原理，包括替代高安全性模式（带自动故障转移和不带自动故障转移）在内，并且包含有关自动故障转移中见证服务器的角色的信息。  
   
  当事务安全设置为 FULL 时，数据库镜像会话便会在初始同步阶段后以高安全性模式同步运行。 此节介绍了为同步操作配置的数据库镜像会话的详细信息。  
@@ -132,21 +132,21 @@ ms.locfileid: "62807647"
   
 
   
-###  <a name="HighSafetyWithOutAutoFailover"></a>不带自动故障转移功能的高安全性模式  
+###  <a name="high-safety-mode-without-automatic-failover"></a><a name="HighSafetyWithOutAutoFailover"></a>不带自动故障转移功能的高安全性模式  
  下图显示了不带自动故障转移的高安全性模式的配置。 配置仅包括两个伙伴。  
   
- ![不使用见证服务器的伙伴通信](../media/dbm-high-protection-mode.gif "不使用见证服务器的伙伴通信")  
+ ![不使用见证服务器的合作伙伴通信](../media/dbm-high-protection-mode.gif "不使用见证服务器的合作伙伴通信")  
   
  当伙伴连接在一起并且数据库已同步时，支持手动故障转移。 如果镜像服务器实例出现故障，则主体服务器实例不会受到影响并且公开运行（即，未镜像数据）。 如果主体服务器丢失，则镜像会挂起，但可以将服务强制到镜像服务器（可能造成数据丢失）。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。  
   
-###  <a name="HighSafetyWithAutoFailover"></a>具有自动故障转移功能的高安全性模式  
+###  <a name="high-safety-mode-with-automatic-failover"></a><a name="HighSafetyWithAutoFailover"></a>具有自动故障转移功能的高安全性模式  
  自动故障转移通过确保在丢失一个服务器之后仍向数据库提供服务来提供高可用性。 自动故障转移要求会话具有第三个服务器实例（“见证服务器 **”），理想情况是见证服务器驻留在第三台计算机上。 下图显示了支持自动故障转移的高安全性模式会话的配置。  
   
- ![会话的见证服务器和伙伴双方](../media/dbm-high-availability-mode.gif "会话的见证服务器和伙伴双方")  
+ ![会话的见证服务器和合作伙伴双方](../media/dbm-high-availability-mode.gif "会话的见证服务器和合作伙伴双方")  
   
  与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器通过验证主体服务器是否已启用并运行来仅支持自动故障转移。 只有在镜像服务器和见证服务器与主体服务器断开连接之后而保持相互连接时，镜像服务器才启动自动故障转移。  
   
- 设置见证服务器时，会话需要“仲裁”（允许数据库可用的至少两个服务器实例之间的关系）**。 有关详细信息，请参阅[数据库镜像见证服务器](database-mirroring-witness.md)和[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 设置见证服务器时，会话需要 "*仲裁*"-至少两个服务器实例之间的关系，使数据库可用。 有关详细信息，请参阅[数据库镜像见证服务器](database-mirroring-witness.md)和[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  自动故障转移需要下列条件：  
   
@@ -167,7 +167,7 @@ ms.locfileid: "62807647"
 > [!NOTE]  
 >  如果您希望见证服务器在很长一段时间内保持断开，则我们建议您在见证服务器变为可用之前将其从会话中删除。  
   
-##  <a name="TsqlSettingsAndOpModes"></a>Transact-sql 设置和数据库镜像运行模式  
+##  <a name="transact-sql-settings-and-database-mirroring-operating-modes"></a><a name="TsqlSettingsAndOpModes"></a> Transact-SQL 设置和数据库镜像运行模式  
  此节从 ALTER DATABASE 设置和镜像数据库状态以及见证服务器（如果有）状态的角度介绍数据库镜像会话。 它针对主要或专门使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]（而不是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]）管理数据库镜像的用户。  
   
 > [!TIP]  
@@ -175,12 +175,12 @@ ms.locfileid: "62807647"
   
 
   
-###  <a name="TxnSafetyAndWitness"></a>事务安全和见证服务器状态如何影响运行模式  
+###  <a name="how-transaction-safety-and-witness-state-affect-the-operating-mode"></a><a name="TxnSafetyAndWitness"></a> 事务安全设置和见证服务器状态如何影响运行模式  
  会话的运行模式由会话的事务安全设置和见证服务器状态这二者决定。 数据库所有者可随时更改事务安全级别，并可添加或删除见证服务器。  
   
 
   
-####  <a name="TxnSafety"></a>事务安全  
+####  <a name="transaction-safety"></a><a name="TxnSafety"></a>事务安全  
  事务安全是镜像特定的数据库属性，用于确定数据库镜像会话是同步运行还是异步运行。 有两种安全级别：FULL 和 OFF。  
   
 -   SAFETY FULL  
@@ -199,7 +199,7 @@ ms.locfileid: "62807647"
   
  数据库所有者可以随时更改事务安全级别。  
   
-####  <a name="WitnessState"></a>见证服务器的状态  
+####  <a name="the-state-of-the-witness"></a><a name="WitnessState"></a>见证服务器的状态  
  如果已设置了见证服务器，则需要仲裁，因此见证服务器状态始终很重要。  
   
  如果见证服务器存在，则会具有以下两种状态之一：  
@@ -224,14 +224,14 @@ ms.locfileid: "62807647"
   
  <sup>2</sup>如果见证服务器在高性能模式下出现，则见证服务器不会参与会话。 但是，若要使数据库可用，必须至少有两个服务器实例保持连接。 因此，建议您在高性能模式会话中，始终将 WITNESS 属性设置为 OFF。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
-###  <a name="ViewWitness"></a>查看见证服务器的安全设置和状态  
+###  <a name="viewing-the-safety-setting-and-state-of-the-witness"></a><a name="ViewWitness"></a>查看见证服务器的安全设置和状态  
  若要针对数据库查看安全设置和见证服务器的状态，请使用 **sys.database_mirroring** 目录视图。 相关列如下所示：  
   
 |因素|列|说明|  
 |------------|-------------|-----------------|  
-|事务安全|**mirroring_safety_level**或**mirroring_safety_level_desc**|镜像数据库上用于更新的事务安全设置，如下所示：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= 数据库没有在线。|  
+|事务安全|**mirroring_safety_level** 或 **mirroring_safety_level_desc**|镜像数据库上用于更新的事务安全设置，如下所示：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= 数据库没有在线。|  
 |是否存在见证服务器？|**mirroring_witness_name**|数据库镜像见证服务器的名称或 NULL（指示不存在见证服务器）。|  
-|见证服务器状态|**mirroring_witness_state**或**mirroring_witness_state_desc**|给定伙伴上的数据库中的见证服务器状态：<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL = 不存在见证服务器或数据库没有在线。|  
+|见证服务器状态|**mirroring_witness_state** 或 **mirroring_witness_state_desc**|给定伙伴上的数据库中的见证服务器状态：<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL = 不存在见证服务器或数据库没有在线。|  
   
  例如，在主体服务器或镜像服务器上，输入：  
   
@@ -241,7 +241,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
  有关此目录视图的详细信息，请参阅 [sys.database_mirroring (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)。  
   
-###  <a name="FactorsOnLossOfPrincipal"></a>影响主体服务器丢失行为的因素  
+###  <a name="factors-affecting-behavior-on-loss-of-the-principal-server"></a><a name="FactorsOnLossOfPrincipal"></a>影响主体服务器丢失行为的因素  
  下表总结了丢失主体服务器时事务安全设置、数据库的状态以及见证服务器的状态对镜像会话行为的综合影响。  
   
 |事务安全|镜像数据库的镜像状态|见证服务器状态|主体丢失时的行为|  
@@ -251,7 +251,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 |OFF|SUSPENDED 或 DISCONNECTED|NULL（无见证服务器）|可以对镜像服务器进行强制服务（可能造成数据丢失）。|  
 |FULL|SYNCHRONIZING 或 SUSPENDED|NULL（无见证服务器）|可以对镜像服务器进行强制服务（可能造成数据丢失）。|  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [添加或替换数据库镜像见证服务器 (SQL Server Management Studio)](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
@@ -265,4 +265,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 ## <a name="see-also"></a>另请参阅  
  [监视数据库镜像 &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   
- [数据库镜像见证服务器](database-mirroring-witness.md)  
+ [Database Mirroring Witness](database-mirroring-witness.md)  

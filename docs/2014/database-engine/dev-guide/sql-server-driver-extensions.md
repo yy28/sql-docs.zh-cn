@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1cee588e7db1e219f3d2810e29bb77a68a21b7ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780838"
 ---
 # <a name="sql-server-driver-extensions"></a>SQL Server 驱动程序扩展
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序实现了允许 ODBC 应用程序访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的特定于驱动程序的函数。  
   
 ## <a name="in-this-section"></a>本节内容  

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 646d15dc3091323e6e7db2af757640122fb2f0fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779775"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>从 CLR 数据库对象进行 XML 序列化
@@ -33,7 +33,7 @@ ms.locfileid: "62779775"
   
 1.  运行 .NET Framework SDK 提供的**Sgen**工具，以创建包含源程序集的 XML 序列化程序的程序集。  
   
-2.  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句在 `CREATE ASSEMBLY` 中注册生成的程序集。  
+2.  使用 `CREATE ASSEMBLY` 语句在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册生成的程序集。  
   
  有关在执行 XML 序列化时可能收到的错误的信息，请参阅以下 Microsoft 支持部门文章： ["无法加载动态生成的序列化程序集"](https://support.microsoft.com/kb/913668)。  
   

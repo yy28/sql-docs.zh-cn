@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791901"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性副本属性（“常规”页）
@@ -27,7 +27,7 @@ ms.locfileid: "62791901"
   
 -   [查看可用性副本属性 (SQL Server)](view-availability-replica-properties-sql-server.md)  
   
--   [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **可用性组名称**  
@@ -36,14 +36,14 @@ ms.locfileid: "62791901"
  **服务器实例**  
  承载此副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器名称；对于非默认实例，则为其实例名称。  
   
- **职位**  
- **主要节点**  
+ **Role**  
+ **基本**  
  当前主副本。  
   
  **辅助副本**  
  当前辅助副本。  
   
- **从而**  
+ **正在解析**  
  当前该副本角色处于正在解析为主角色或辅助角色的进程中。  
   
  **可用性模式**  
@@ -57,7 +57,7 @@ ms.locfileid: "62791901"
   
  有关详细信息，请参阅[可用性模式（AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。  
   
- **故障转移模式**  
+ **Failover mode**  
  副本的故障转移模式，可为下列值之一：  
   
  **自动**  
@@ -78,7 +78,7 @@ ms.locfileid: "62791901"
  **可读辅助**  
  正在履行辅助角色的可用性副本（也就是辅助副本）是否可以接受来自客户端的连接，可为下列值之一：  
   
- **是**  
+ **否**  
  不允许与此副本的辅助数据库的直接连接。 它们不可用于读访问。 这是默认设置。  
   
  **仅限读意向**  
@@ -89,13 +89,13 @@ ms.locfileid: "62791901"
   
  有关详细信息，请参阅[活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
- **会话超时（秒）**  
+ **会话超时(秒)**  
  超时期限（秒）。 超时期限是指副本接收来自其他副本的消息而等待的最长时间，超过此时间，将主副本和辅助副本之间的连接视为已失败。 会话超时检测辅助副本是否与主副本相连接。 在检测到与辅助副本的连接失败时，主副本将辅助副本视为 NOT_SYNCHRONIZED。 在检测到与辅助副本的连接失败时，辅助副本只会尝试重新连接。  
   
 > [!NOTE]  
 >  会话超时不会导致自动故障转移。  
   
- **终结点 URL**  
+ **端点 URL**  
  用户指定的数据库镜像端点的字符串表示形式，该数据库镜像端点由用于数据同步的主副本和辅助副本之间的连接使用。 有关这些端点 URL 语法的信息，请参阅[在添加或修改可用性副本时指定端点 URL (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
 ## <a name="see-also"></a>另请参阅  

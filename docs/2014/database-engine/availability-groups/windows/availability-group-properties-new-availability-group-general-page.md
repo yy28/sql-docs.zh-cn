@@ -13,22 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815650"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>可用性组属性和新建可用性组（“常规”页）
-  本主题适用于 "**新建可用性组**" 对话框和 "**可用性组属性**" 对话框的 "**常规**" 选项卡。  
-  **“新建可用性组”** 对话框支持您无需使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]即创建新的可用性组。 
-  **“可用性组属性”** 对话框支持您查看和修改现有的可用性组的配置。  
+  本主题同时适用于“新建可用性组”对话框和“可用性组属性”对话框的“常规”选项卡************。  **“新建可用性组”** 对话框支持您无需使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]即创建新的可用性组。 **“可用性组属性”** 对话框支持您查看和修改现有的可用性组的配置。  
   
  **查看可用性组属性**  
   
 -   [查看可用性组属性 (SQL Server)](view-availability-group-properties-sql-server.md)  
   
--   [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **可用性组名称**  
@@ -48,14 +46,14 @@ ms.locfileid: "62815650"
  **服务器实例**  
  承载此副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器名称；对于非默认实例，则为其实例名称。  
   
- **职位**  
- **主要节点**  
+ **Role**  
+ **基本**  
  当前主副本。  
   
  **辅助副本**  
  当前辅助副本。  
   
- **从而**  
+ **正在解析**  
  当前该副本角色处于正在解析为主角色或辅助角色的进程中。  
   
  **可用性模式**  
@@ -90,7 +88,7 @@ ms.locfileid: "62815650"
  **可读辅助**  
  正在履行辅助角色的可用性副本（也就是辅助副本）是否可以接受来自客户端的连接，可为下列值之一：  
   
- **是**  
+ **否**  
  不允许与此副本的辅助数据库的直接连接。 它们不可用于读访问。 这是默认设置。  
   
  **仅限读意向**  
@@ -102,7 +100,7 @@ ms.locfileid: "62815650"
  **会话超时（秒）**  
  此副本上会话超时期限的秒数。  
   
- **终结点 URL**  
+ **端点 URL**  
  端点的 URL。 有关这些 URL 格式的信息，请参阅[在添加或修改可用性副本时指定终结点 URL (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
  **添加**  

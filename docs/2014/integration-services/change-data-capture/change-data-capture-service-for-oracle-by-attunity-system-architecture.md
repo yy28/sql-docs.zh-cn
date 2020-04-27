@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84ac0e6065fa3fb4845e0e3a47ce56816705e80d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771469"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service for Oracle by Attunity 系统体系结构
@@ -28,8 +28,7 @@ ms.locfileid: "62771469"
   
 -   Oracle 数据库：可以是运行支持的 Oracle 数据库版本的任何计算机。 这包括运行 Windows、Linux 或所安装的 Oracle 数据库版本支持的任何其他操作系统的任何计算机。 请注意，该关系图以复数形式显示此平台，因为单个 Oracle CDC 服务可以从多个源 Oracle 数据库捕获更改。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：可以是运行目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库（ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的支持的 SKU）的任何计算机。 一个 Oracle CDC 服务支持用于存储更改表和服务配置的一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目标。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平台还可以表示 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的群集实例或使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AlwaysOn **功能的** 的镜像实例。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：可以是运行目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库（ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的支持的 SKU）的任何计算机。 一个 Oracle CDC 服务支持用于存储更改表和服务配置的一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目标。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平台还可以表示 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的群集实例或使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AlwaysOn **功能的** 的镜像实例。  
   
 -   Oracle CDC 设计器：可以是能够访问源 Oracle 数据库和目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的任何支持的 Windows 计算机。  
   

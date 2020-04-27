@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781557"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Visual Basic .NET 入门
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 中的公共运行时库支持的一种托管编程语言。 本文档中的许多示例都是用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 编写的。 您可以使用 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 和 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 来开发 SMO 应用程序。  
   
 ## <a name="references-and-imports"></a>引用和导入  

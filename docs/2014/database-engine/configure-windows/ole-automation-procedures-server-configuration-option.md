@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f00c238dfb32089261c51936b3937b0657c58b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782025"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>Ole Automation Procedures 服务器配置选项
@@ -32,7 +32,7 @@ ms.locfileid: "62782025"
   
  当启用 OLE Automation Procedures 时，对 **sp_OACreate** 的调用将会启动 OLE 共享执行环境。  
   
- 可以使用 sp_configure 系统存储`Ole Automation Procedures`过程来查看和更改选项的当前值**** 。  
+ 可以使用 sp_configure 系统存储`Ole Automation Procedures`过程来查看和更改选项的当前值**sp_configure** 。  
   
 ## <a name="examples"></a>示例  
  以下示例显示了如何查看 OLE Automation Procedures 的当前设置。  

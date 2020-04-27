@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770983"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
@@ -42,13 +42,11 @@ ms.locfileid: "62770983"
   
  这个源使用 OLE DB 连接管理器连接到数据源，而该连接管理器则指定要使用的 OLE DB 访问接口。 有关详细信息，请参阅 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目也提供可据以创建 OLE DB 连接管理器的数据源对象，从而使 OLE DB 源可以使用数据源和数据源视图。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目也提供可据以创建 OLE DB 连接管理器的数据源对象，从而使 OLE DB 源可以使用数据源和数据源视图。  
   
  根据不同的 OLE DB 访问接口，对 OLE DB 源存在一些限制：  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支持 Oracle 数据类型 BLOB、CLOB、NCLOB、BFILE 或 UROWID，因此，OLE DB 源不能从包含这些数据类型列的表中提取数据。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支持 Oracle 数据类型 BLOB、CLOB、NCLOB、BFILE 或 UROWID，因此，OLE DB 源不能从包含这些数据类型列的表中提取数据。  
   
 -   IBM OLE DB DB2 访问接口和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB DB2 访问接口不支持使用调用存储过程的 SQL 命令。 如果使用这种命令，OLE DB 源将无法创建列元数据，这样一来，数据流中 OLE DB 源之后的数据流组件将没有可用的列数据，从而导致数据流执行失败。  
   
@@ -64,8 +62,7 @@ ms.locfileid: "62770983"
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>使用序号位置指定参数  
  如果没有返回参数名，则 **“设置查询参数”** 对话框中的 **“参数”** 列表中的参数列出顺序将控制运行时参数将映射哪个参数标记。 列表中的第一个参数将映射到 SQL 语句中的第一个 ?， 第二个参数映射到第二个 ?，以此类推。  
   
- 以下 SQL 语句选择 **数据库的** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 表中的行。 
-  **Mappings** 列表中的第一个参数映射到 **Color** 列的第一个参数，第二个参数映射到 **Size** 列。  
+ 以下 SQL 语句选择 **数据库的** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 表中的行。 **Mappings** 列表中的第一个参数映射到 **Color** 列的第一个参数，第二个参数映射到 **Size** 列。  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
@@ -93,15 +90,15 @@ ms.locfileid: "62770983"
   
  有关可以在 **“OLE DB 源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [OLE DB 源编辑器 &#40;"连接管理器" 页&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB 源编辑器（“连接管理器”页）](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB 源编辑器 &#40;列 "页&#41;](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB 源编辑器（“列”页）](../ole-db-source-editor-columns-page.md)  
   
--   [OLE DB 源编辑器 &#40;错误输出页&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [OLE DB 源编辑器（“错误输出”页）](../ole-db-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../common-properties.md)  
+-   [通用属性](../common-properties.md)  
   
 -   [OLE DB 自定义属性](ole-db-custom-properties.md)  
   
@@ -120,7 +117,7 @@ ms.locfileid: "62770983"
   
 ## <a name="see-also"></a>另请参阅  
  [OLE DB 目标](ole-db-destination.md)   
- [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 变量](../integration-services-ssis-variables.md)   
  [数据流](data-flow.md)  
   
   

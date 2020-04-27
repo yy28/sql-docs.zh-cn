@@ -16,14 +16,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773493"
 ---
 # <a name="view-project-history"></a>查看项目历史
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) 项目的历史记录包括对每个项目文件执行的所有操作（包括文件创建、添加、删除和恢复）的列表。  
   
 > [!NOTE]  
@@ -37,7 +36,7 @@ ms.locfileid: "62773493"
   
 2.  在 "**文件**" 菜单上，指向 "**源代码管理**"，然后单击 "**查看历史记录**"。  
   
-3.  在 " **** \<项目> 的历史记录" 对话框中，执行以下任一操作：  
+3.  在 " **History of** \<项目> 的历史记录" 对话框中，执行以下任一操作：  
   
     -   查看所选文件的源代码管理系统副本。  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806898"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>建立使用 Windows 身份验证的数据库镜像会话 (SQL Server Management Studio)
@@ -41,16 +41,16 @@ ms.locfileid: "62806898"
   
 1.  连接到主体服务器实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”** ，再选择要镜像的数据库。  
+2.  展开 **“数据库”**，再选择要镜像的数据库。  
   
-3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这将打开 "**数据库属性**" 对话框的 "**镜像**" 页。  
   
 4.  若要开始配置镜像，请单击 **“配置安全性”** 按钮以启动配置数据库镜像安全向导。  
   
     > [!NOTE]  
     >  在数据库镜像会话期间，仅可使用此向导添加或更改见证服务器实例。  
   
-5.  配置数据库镜像安全向导将在每个服务器实例上自动创建数据库镜像端点（如果不存在任何端点），并在与服务器实例角色（ **“主体”** 、 **“镜像服务器”** 或 **“见证服务器”** ）相对应的字段中输入服务器网络地址。  
+5.  配置数据库镜像安全向导将在每个服务器实例上自动创建数据库镜像端点（如果不存在任何端点），并在与服务器实例角色（**“主体”**、 **“镜像服务器”** 或 **“见证服务器”**）相对应的字段中输入服务器网络地址。  
   
     > [!IMPORTANT]  
     >  创建端点时，配置数据库镜像安全向导始终使用 Windows 身份验证。 在将此向导与基于证书的身份验证配合使用之前，必须已在每个服务器实例上始终将镜像端点配置为使用证书。 此外，此向导的 **“服务帐户”** 对话框中的所有字段必须保持为空。 有关创建数据库镜像终结点以使用证书的信息，请参阅[ CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)。  
@@ -71,23 +71,23 @@ ms.locfileid: "62806898"
   
     -   已指定主体服务器实例和镜像服务器实例的完全限定的 TCP 地址（在 **“服务器网络地址”** 部分）。  
   
-    -   如果运行模式设置为 **“带自动故障转移功能的高安全(同步)”** ，则还需指定见证服务器实例的完全限定的 TCP 地址。  
+    -   如果运行模式设置为 **“带自动故障转移功能的高安全(同步)”**，则还需指定见证服务器实例的完全限定的 TCP 地址。  
   
 8.  在镜像开始后，您可以更改运行模式，并可以通过单击 **“确定”** 来保存更改。 注意，仅当先指定了见证服务器地址时，才能利用自动故障转移切换到高安全模式。  
   
     > [!NOTE]  
-    >  若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”  字段。  
+    >  若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”**** 字段。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [暂停或恢复数据库镜像会话 (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)   
- [将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
- [删除数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
- [设置数据库镜像 (SQL Server)](setting-up-database-mirroring-sql-server.md)   
- [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [数据库镜像会话期间的角色切换 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [准备镜像数据库以进行镜像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [&#41;的数据库属性 &#40;镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [暂停或恢复数据库镜像会话 &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)   
+ [将镜像数据库设置为使用可信属性 &#40;Transact-sql&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
+ [删除数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [角色切换后登录名和作业的管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
+ [设置数据库镜像 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
+ [使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [添加或替换数据库镜像见证服务器 (SQL Server Management Studio)](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

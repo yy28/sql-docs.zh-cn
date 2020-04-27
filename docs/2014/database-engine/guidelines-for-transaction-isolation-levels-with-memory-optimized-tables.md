@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779152"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>内存优化表事务隔离级别准则
@@ -37,11 +37,9 @@ ms.locfileid: "62779152"
  基于磁盘的表允许隔离级别 SNAPSHOT 和 READ_COMMITTED_SNAPSHOT 进行多版本控制。 对于内存优化表，所有隔离级别都是基于多版本的，包括 REPEATABLE READ 和 SERIALIZABLE。  
   
 ## <a name="types-of-transactions"></a>事务的类型  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的每个查询都运行在事务的上下文中。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的每个查询都运行在事务的上下文中。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中有三种事务类型：  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中有三种事务类型：  
   
 -   自动提交事务。 如果没有活动的事务上下文，且在会话中未将隐式事务设置为 ON，则每个查询都有自己的事务上下文。 事务在语句开始执行时启动，在语句结束时完成。  
   
@@ -50,8 +48,7 @@ ms.locfileid: "62779152"
 -   隐式事务。 选项 IMPLICIT_TRANSACTIONS 设为 ON 时，每当用户执行一条语句且没有活动的事务上下文时，就会隐式启动事务。 该事务通过显式的 COMMIT 和 ROLLBACK 完成。  
   
 ## <a name="baseline-read-committed-isolation"></a>基准 READ COMMITTED 隔离  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的默认隔离级别为 READ COMMITTED。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的默认隔离级别为 READ COMMITTED。  
   
  隔离级别 READ COMMITTED 确保事务不会看到来自当前事务外的更改的任何未提交数据。 换言之，事务只读取已提交到数据库或已由当前事务更改的数据。  
   
