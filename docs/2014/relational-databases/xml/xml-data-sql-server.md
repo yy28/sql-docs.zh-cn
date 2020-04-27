@@ -14,17 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63232361"
 ---
 # <a name="xml-data-sql-server"></a>XML 数据 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一个强大的平台，以针对半结构化数据管理开发功能丰富的应用程序。 对 XML 的支持已集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有组件中，包括下面几项：  
   
--   
-  `xml` 数据类型。 可将 XML 值本机存储在根据 XML 架构集合类型化或保持非类型化的 `xml` 数据类型列中。 可为 XML 列编制索引。  
+-   `xml` 数据类型。 可将 XML 值本机存储在根据 XML 架构集合类型化或保持非类型化的 `xml` 数据类型列中。 可为 XML 列编制索引。  
   
 -   可以指定针对 `xml` 类型的列和变量中存储的 XML 数据的 XQuery 查询。  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225566"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
@@ -84,7 +84,7 @@ ms.locfileid: "63225566"
  讨论对 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的元数据发现功能进行的改进。  
   
  [SQL Server Native Client 11.0 中的 UTF-16 支持](utf-16-support-in-sql-server-native-client-11-0.md)  
- 讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 如果出现以下情况，`wchar` Native Client 将不会向缓冲区添加高代理项码位：在绑定列结果或输出参数时提供了一个固定长度缓冲区；写入到缓冲区中终止符之前的 `wchar` 字符是代理项对的高代理项码位；并且下一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 字符是一个低代理项码位。  
+ 讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 如果出现以下情况，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将不会向缓冲区添加高代理项码位：在绑定列结果或输出参数时提供了一个固定长度缓冲区；写入到缓冲区中终止符之前的 `wchar` 字符是代理项对的高代理项码位；并且下一个 `wchar` 字符是一个低代理项码位。  
   
  [对高可用性、灾难恢复的 SQL Server Native Client 支持](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  讨论如何配置应用程序以利用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中添加的高可用性和灾难恢复功能。  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63239028"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
@@ -26,7 +26,7 @@ ms.locfileid: "63239028"
   
 1.  使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)]或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]创建新的 Windows 应用程序。  
   
-     \-或  
+     \- 或 -  
   
      打开一个现有的 Windows 应用程序项目并添加一个新窗体。  
   
@@ -162,7 +162,7 @@ End Class
   
 5.  在“解决方案资源管理器”中右键单击 Sales Order Detail.rdl 文件，然后选择“重命名”****。 将该报表重命名为“Sales Order Detail.rdlc”，然后按 Enter****。  
   
-     如果解决方案资源管理器不可见，则可以通过选择 "**解决方案资源管理器**" 在 "**视图**" 菜单中打开它。  
+     如果“解决方案资源管理器”不可见，可以通过从“视图”菜单中选择“解决方案资源管理器”来将其打开********。  
   
     > [!NOTE]  
     >  将文件扩展名 rdl 重命名为 rdlc 后，便可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 的报表设计器编辑该报表。  

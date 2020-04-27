@@ -1,5 +1,5 @@
 ---
-title: 从客户端到服务器执行的转换 |Microsoft Docs
+title: 在客户端和服务器之间执行的转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63237968"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
@@ -27,7 +27,7 @@ ms.locfileid: "63237968"
   
  如果未调用 ICommandWithParameters：： SetParameterInfo，则 DBTYPE_DBTIMESTAMP 绑定转换为`datetime2`。  
   
-|转换后 -><br /><br /> 从|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|转换后 -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
 |DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> date|  
@@ -36,19 +36,19 @@ ms.locfileid: "63237968"
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|空值|空值|空值|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|空值|空值|1,10|  
-|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|空值|空值|1,16|  
-|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|空值|空值|空值|  
-|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|空值|空值|空值|  
-|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|空值|空值|空值|  
+|BYTES|-|-|-|-|-|-|-|不适用|空值|空值|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|不适用|空值|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|不适用|空值|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不适用|空值|空值|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不适用|空值|空值|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不适用|空值|空值|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
-|-|不支持任何转换。 如果调用 IAccessor：： CreateAccessor 时验证绑定，则会在*rgStatus*中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
-|空值|不适用。|  
+|-|不支持任何转换。 如果在调用 IAccessor::CreateAccessor 时验证绑定，则在 rgStatus** 中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
+|不适用|不适用。|  
 |1|如果提供的数据无效，则设置 DBSTATUS_E_CANTCONVERTVALUE。 在应用转换前验证输入数据，因此即使后续转换忽略某一部分，该部分仍然有效，以使转换成功完成。|  
 |2|忽略时间字段。|  
 |3|秒的小数部分必须为零，或者设置 DBSTATUS_E_DATAOVERFLOW。|  
@@ -59,7 +59,7 @@ ms.locfileid: "63237968"
 |8|将时间转换为 UTC。 如果在此转换过程中出现错误，则设置 DBSTATUS_E_CANTCONVERTVALUE。|  
 |9|字符串分析为 ISO 文字并转换为目标类型。 如果上述操作失败，该字符串则分析为 OLE 日期文字（还包含时间部分），并从 OLE 日期 (DBTYPE_DATE) 转换为目标类型。<br /><br /> 如果目标类型为 DBTIMESTAMP、`smalldatetime`、`datetime` 或 `datetime2`，字符串必须符合日期、时间或 `datetime2` 文字的语法或 OLE 可识别的语法。 如果字符串为日期文字，所有时间部分将设置为零。 如果字符串为时间文字，则将日期设置为当前日期。<br /><br /> 对于所有其他目标类型，字符串必须符合目标类型的文字语法。|  
 |10|如果截断秒的小数部分，且发生数据丢失，则设置 DBSTATUS_E_DATAOVERFLOW。 对于字符串转换，仅当该字符串符合 ISO 语法时才能执行溢出检查。 如果字符串为 OLE 日期文字，则舍入秒的小数部分。<br /><br /> 对于从 DBTIMESTAMP (datetime) 到 smalldatetime 的转换， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 将自行截断秒的值而不引发 DBSTATUS_E_DATAOVERFLOW 错误。|  
-|11|秒的小数部分的位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> 但是，如果源类型为 DBTIMESTAMP 且秒的小数部分为零，则不会生成秒的小数部分位数或小数点。 此行为确保使用早期 OLE DB 访问接口开发的应用程序的向后兼容性。<br /><br /> 列大小为 ~0 则表示 OLE DB 的大小不受限制（即 9 位数，除非应用 DBTIMESTAMP 的三位数规则）。<br /><br /> **DBTIME2** -8，10.. 18 （长度，以字符为长度）;0，1 .0 （缩放）<br /><br /> **DBTIMESTAMP** -19，21.. 29 （长度，以字符为长度）;0，1 .0 （缩放）<br /><br /> **DBTIMESTAMPOFFSET** -26，28.. 36 （长度，以字符为长度）;0，1 .0 （缩放）|  
+|11|秒的小数部分的位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> 但是，如果源类型为 DBTIMESTAMP 且秒的小数部分为零，则不会生成秒的小数部分位数或小数点。 此行为确保使用早期 OLE DB 访问接口开发的应用程序的向后兼容性。<br /><br /> 列大小为 ~0 则表示 OLE DB 的大小不受限制（即 9 位数，除非应用 DBTIMESTAMP 的三位数规则）。<br /><br /> **DBTIME2** - 8, 10..18（长度，以字符为单位）；0, 1..9（小数位数）<br /><br /> **DBTIMESTAMP** - 19, 21..29（长度，以字符为单位）；0, 1..9（小数位数）<br /><br /> **DBTIMESTAMPOFFSET** - 26, 28..36（长度，以字符为单位）；0, 1..9（小数位数）|  
 |12|将保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的 DBTYPE_DATE 转换语义。 秒的小数部分被截断为零。|  
 |13|将保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的 DBTYPE_FILETIME 转换语义。 如果使用 Windows FileTimeToSystemTime API，秒的小数部分精度则限制为 1 毫秒。|  
 |14|将保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的 `smalldatetime` 转换语义。 秒设置为零。|  
@@ -67,6 +67,6 @@ ms.locfileid: "63237968"
 |16|嵌入 SSVARIANT 客户端结构的指定类型值的转换行为与未嵌入 SSVARIANT 客户端结构的相同类型和相同值的行为相同。|  
   
 ## <a name="see-also"></a>另请参阅  
- [绑定和转换 &#40;OLE DB&#41;](conversions-ole-db.md)  
+ [绑定和转换 (OLE DB)](conversions-ole-db.md)  
   
   

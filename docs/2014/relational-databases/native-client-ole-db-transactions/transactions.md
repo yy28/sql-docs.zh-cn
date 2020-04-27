@@ -1,5 +1,5 @@
 ---
-title: 事务 |Microsoft Docs
+title: 事务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dca9b7a3289390b1d1e20e1b0d18c23b44b87617
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213896"
 ---
 # <a name="transactions"></a>事务
@@ -34,7 +34,7 @@ ms.locfileid: "63213896"
   
 -   [支持分布式事务](supporting-distributed-transactions.md)  
   
--   [&#40;OLE DB 的隔离级别&#41;](isolation-levels-ole-db.md)  
+-   [隔离级别 (OLE DB)](isolation-levels-ole-db.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  

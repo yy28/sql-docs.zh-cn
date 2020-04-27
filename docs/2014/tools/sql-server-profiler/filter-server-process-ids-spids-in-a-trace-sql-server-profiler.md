@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c6e740159d06a18d1ae2ef4fa9788246a4ca60e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250866"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>在跟踪中筛选服务器进程 ID (SPID) (SQL Server Profiler)
@@ -26,7 +26,7 @@ ms.locfileid: "63250866"
   
 ### <a name="to-filter-system-ids-in-a-trace"></a>在跟踪中筛选系统 ID  
   
-1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 SQL Server 实例。  
+1.  在 **“文件”** 菜单上，单击 **“新建跟踪”** ，再连接到 SQL Server 实例。  
   
      将出现“跟踪属性”对话框。 **“跟踪属性”** 对话框。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63250866"
   
 4.  根据需要，指定保存跟踪结果的目标文件或表。  
   
-5.  在“事件选择”**** 选项卡上，单击“SPID”**** 列标题以启动“编辑筛选器”**** 对话框。 还可以右键单击列标题，然后选择“编辑列筛选器”****。 如果 **SPID** 列不出现，请选中 **“显示所有列”** 框。  
+5.  在“事件选择”**** 选项卡上，单击“SPID”**** 列标题以启动“编辑筛选器”**** 对话框。 还可以右键单击列标题，然后选择“编辑列筛选器”  。 如果 **SPID** 列不出现，请选中 **“显示所有列”** 框。  
   
 6.  在 **“编辑筛选器”** 对话框中，展开相应的比较运算符，输入 SPID 作为比较的值。  
   

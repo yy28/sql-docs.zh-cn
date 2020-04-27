@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184404"
 ---
 # <a name="sequence-numbers"></a>序列号
@@ -54,7 +54,7 @@ ms.locfileid: "63184404"
   
  序列对象根据其定义生成数值，但序列对象不控制生成数值的方式。 在回滚事务时、在某个序列对象由多个表共享时或者在分配序列号且不在多个表中使用它们时，插入到表中的序列号可能具有间断。 当使用 CACHE 选项创建时，意外关机（如电源故障）可能导致缓存中的序列号丢失。  
   
- 如果在单个 `NEXT VALUE FOR` 语句中有多个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数的实例指定同一序列生成器，则所有这些实例返回该 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句所处理的指定行的相同值。 此行为与 ANSI 标准保持一致。  
+ 如果在单个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句中有多个 `NEXT VALUE FOR` 函数的实例指定同一序列生成器，则所有这些实例返回该 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句所处理的指定行的相同值。 此行为与 ANSI 标准保持一致。  
   
 ## <a name="typical-use"></a>典型用法  
  若要创建从 -2,147,483,648 到 2,147,483,647 且增量为 1 的整数序列号，请使用以下语句。  
@@ -387,7 +387,7 @@ GO
   
 ```  
   
- 使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的 `SELECT *` 语句将这个新列作为最后一列接收，而非作为第一列接收。 如果这样做是不可接受的，则您必须创建全新的表，将数据移到该表中，然后针对这个新表重新创建权限。  
+ 使用 `SELECT *` 的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句将这个新列作为最后一列接收，而非作为第一列接收。 如果这样做是不可接受的，则您必须创建全新的表，将数据移到该表中，然后针对这个新表重新创建权限。  
   
 ## <a name="related-content"></a>相关内容  
  [CREATE SEQUENCE (Transact-SQL)](/sql/t-sql/statements/create-sequence-transact-sql)  
@@ -396,6 +396,6 @@ GO
   
  [DROP SEQUENCE (Transact-SQL)](/sql/t-sql/statements/drop-sequence-transact-sql)  
   
- [IDENTITY（属性）(Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
+ [IDENTITY（属性）&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
   
   

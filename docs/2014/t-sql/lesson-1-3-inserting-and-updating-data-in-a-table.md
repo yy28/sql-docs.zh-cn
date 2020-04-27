@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250127"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>插入和更新表中的数据（教程）
@@ -84,7 +84,7 @@ ms.locfileid: "63250127"
     ```  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [读取表中的数据 &#40;教程&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [读取表中的数据（教程）](lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   

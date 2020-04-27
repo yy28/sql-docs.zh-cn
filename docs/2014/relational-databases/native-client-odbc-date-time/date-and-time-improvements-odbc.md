@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207003"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日期和时间改进 (ODBC)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了新的日期和时间数据类型。 本部分介绍如何将这些新类型作为本机客户端[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的扩展公开。 有关对新日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和时间数据类型的 Native Client 支持的概述，请参阅[日期和时间改进](../native-client/features/date-and-time-improvements.md)。 有关演示 ODBC 日期/时间支持的示例，请参阅[使用日期和时间类型](../native-client-odbc-how-to/use-date-and-time-types.md)。  
   
- 有关日期和时间数据类型的更多常规信息，请参阅[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)。  
+ 有关日期和时间数据类型的更多常规信息，请参阅 [datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [针对 ODBC 日期/时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
@@ -48,6 +48,6 @@ ms.locfileid: "63207003"
  列出了支持日期和时间增强功能的 ODBC 函数。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

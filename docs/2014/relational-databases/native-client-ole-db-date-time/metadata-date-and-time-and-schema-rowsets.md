@@ -1,5 +1,5 @@
 ---
-title: 日期和时间行集 |Microsoft Docs
+title: 日期和时间与架构行集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238016"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日期和时间以及架构行集
@@ -27,10 +27,10 @@ ms.locfileid: "63238016"
   
 |列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|清除|0|  
+|date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|设置|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|清除|0|  
-|datetime|DBTYPE_DBTIMESTAMP|清除|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|日期/时间|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|设置|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|设置|0..7|  
   
@@ -91,6 +91,6 @@ ms.locfileid: "63238016"
  对于数字和小数类型，OLE DB 仅定义了 MINIMUM_SCALE 和 MAXIMUM_SCALE，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 time、datetime2 和 datetimeoffset 使用这些列是非标准行为。  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE DB 的元数据 &#40;&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [元数据 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

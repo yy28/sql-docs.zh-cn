@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245715"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目标服务器（“目标服务器状态”选项卡）
@@ -35,7 +35,7 @@ ms.locfileid: "63245715"
  **未读指令**  
  查看目标服务器尚未收到的指令数。  
   
- **Status**  
+ **状态**  
  查看目标服务器的状态。  
   
  **强制轮询**  

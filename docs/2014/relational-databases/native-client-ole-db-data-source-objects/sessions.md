@@ -1,5 +1,5 @@
 ---
-title: 会话 |Microsoft Docs
+title: 会话 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228975"
 ---
 # <a name="sessions"></a>会话
@@ -186,6 +186,6 @@ EXIT:
 >  在前面的示例中，使用 IDBCreateCommand**** 接口的原因在于 ICommand**** 接口实现 GetDBSession**** 方法，该方法是命令或行集作用域中允许对象确定创建其会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据源对象 &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+ [数据源对象 (OLE DB)](data-source-objects-ole-db.md)  
   
   

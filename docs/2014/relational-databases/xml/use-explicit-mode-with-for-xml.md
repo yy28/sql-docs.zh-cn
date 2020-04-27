@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231278"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>将 EXPLICIT 模式与 FOR XML 一起使用
-  如主题[使用 FOR Xml 构造 xml](../xml/for-xml-sql-server.md)中所述，RAW 和 AUTO 模式并不提供对从查询结果生成的 xml 的形状的更多控制。 但是，对于要从查询结果生成 XML，EXPLICIT 模式会提供非常好的灵活性。  
+  如主题 [使用 FOR XML 构造 XML](../xml/for-xml-sql-server.md)中所述，使用 RAW 和 AUTO 模式不能很好地控制从查询结果生成的 XML 的形状。 但是，对于要从查询结果生成 XML，EXPLICIT 模式会提供非常好的灵活性。  
   
  必须以特定的方式编写 EXPLICIT 模式查询，以便将有关所需的 XML 的附加信息（如 XML 中的所需嵌套）显式指定为查询的一部分。 根据所请求的 XML，编写 EXPLICIT 模式查询可能会很烦琐。 您会发现 [使用 PATH 模式](../xml/use-path-mode-with-for-xml.md) （具有嵌套）相对编写 EXPLICIT 模式查询而言更加简单。  
   
  因为将所需的 XML 描述为 EXPLICIT 模式查询的一部分，所以必须确保生成的 XML 格式正确且有效。  
   
 ## <a name="rowset-processing-in-explicit-mode"></a>EXPLICIT 模式下的行集处理  
- EXPLICIT 模式会将由查询执行生成的行集转换为 XML 文档。 为使 EXPLICIT 模式生成 XML 文档，行集必须具有特定的格式。 这需要您编写 SELECT 查询以生成具有特定格式的行集（通用表 ****），以便处理逻辑随后可以生成所需的 XML。  
+ EXPLICIT 模式会将由查询执行生成的行集转换为 XML 文档。 为使 EXPLICIT 模式生成 XML 文档，行集必须具有特定的格式。 这需要您编写 SELECT 查询以生成具有特定格式的行集（通用表  ），以便处理逻辑随后可以生成所需的 XML。  
   
  首先，查询必须生成下列两个元数据列：  
   
@@ -113,7 +113,7 @@ ElementName!TagNumber!AttributeName!Directive
  *ElementName*  
  是所生成元素的通用标识符。 例如，如果将 **Customers** 指定为 *ElementName*，将生成 \<Customers> 元素。  
   
- *Tagnumber！！ directive*  
+ *TagNumber*  
  是分配给元素的唯一标记值。 在两个元数据列（ **Tag** 和 **Parent**）的帮助下，此值将确定所得到的 XML 中的元素的嵌套。  
   
  *AttributeName*  
@@ -123,21 +123,18 @@ ElementName!TagNumber!AttributeName!Directive
   
  如果指定了 *Directive*，则 *AttributeName* 可以为空。 例如 ElementName!TagNumber!!Directive。 在这种情况下，列值直接由 *ElementName*包含。  
   
- *指令*  
- *指令*是可选的，可以使用它来提供有关 XML 构造的其他信息。 *指令*有两个用途。  
+ *Directive*  
+ *Directive* 是可选的，可以使用它来提供有关 XML 构造的其他信息。 *Directive* 有两种用途。  
   
  一种用途是将值编码为 ID、IDREF 和 IDREFS。 可以将 **ID**、 **IDREF**和 **IDREFS** 关键字指定为 *Directives*。 这些指令将覆盖属性类型。 这使您能够创建文档内链接。  
   
- 同时，可以使用 *Directive* 来指示如何将字符串数据映射到 XML。 可以将 **hide**、 **element、elementxsinil**、 **xml**、 **xmltext**和 **cdata** 关键字用作 *Directive*。 
-  **hide** 指令会隐藏节点。 当仅为排序目的而检索值，但又不想让它们出现在所得到的 XML 中时，此指令非常有用。  
+ 同时，可以使用 *Directive* 来指示如何将字符串数据映射到 XML。 可以将 **hide**、 **element、elementxsinil**、 **xml**、 **xmltext**和 **cdata** 关键字用作 *Directive*。 **hide** 指令会隐藏节点。 当仅为排序目的而检索值，但又不想让它们出现在所得到的 XML 中时，此指令非常有用。  
   
- 
-  **element** 指令生成的结果中包含元素而不是属性。 包含的数据被编码为实体。 例如， **<** 字符变成&lt;。 对于 NULL 列值，不会生成任何元素。 如果要为 NULL 列值生成元素，可以指定 **elementxsinil** 指令。 这将生成具有属性 xsi:nil=TRUE 的元素。  
+ **element** 指令生成的结果中包含元素而不是属性。 包含的数据被编码为实体。 例如， **<** 字符变成 &lt;。 对于 NULL 列值，不会生成任何元素。 如果要为 NULL 列值生成元素，可以指定 **elementxsinil** 指令。 这将生成具有属性 xsi:nil=TRUE 的元素。  
   
  除不发生实体编码外， **xml** 指令与 **element** 指令相同。 请注意，可以将 **element** 指令与 **ID**、 **IDREF**或 **IDREFS**结合使用，然而不允许 **xml** 指令与除 **hide**指令之外的任何其他指令结合使用。  
   
- 
-  **cdata** 指令通过将数据与 CDATA 部分包装在一起来包含数据。 不对内容进行实体编码。 原始数据类型必须是文本类型（如 **varchar**、 **nvarchar**、 **text**或 **ntext**）。 此指令只适用于 **hide**。 当使用此指令时，不能指定 *AttributeName* 。  
+ **cdata** 指令通过将数据与 CDATA 部分包装在一起来包含数据。 不对内容进行实体编码。 原始数据类型必须是文本类型（如 **varchar**、 **nvarchar**、 **text**或 **ntext**）。 此指令只适用于 **hide**。 当使用此指令时，不能指定 *AttributeName* 。  
   
  大多数情况下，允许在这两个组之间组合指令，但不允许在它们自身当中组合指令。  
   
@@ -150,7 +147,7 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>本节内容  
  下列示例说明了 EXPLICIT 模式的用法。  
   
--   [示例：检索雇员信息](../xml/example-retrieving-employee-information.md)  
+-   [示例：检索员工信息](../xml/example-retrieving-employee-information.md)  
   
 -   [示例：指定 ELEMENT 指令](../xml/example-specifying-the-element-directive.md)  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192969"
 ---
 # <a name="create-a-multiserver-environment"></a>创建多服务器环境
@@ -60,7 +60,7 @@ ms.locfileid: "63192969"
   
 |说明|主题|  
 |-----------------|-----------|  
-|描述如何创建主服务器。|[Make a Master Server](make-a-master-server.md)|  
+|描述如何创建主服务器。|[设置主服务器](make-a-master-server.md)|  
 |描述如何创建目标服务器。|[设置目标服务器](make-a-target-server.md)|  
 |描述如何将目标服务器登记到主服务器。|[将目标服务器登记到主服务器](enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目标服务器从主服务器脱离。|[将目标服务器从主服务器脱离](defect-a-target-server-from-a-master-server.md)|  

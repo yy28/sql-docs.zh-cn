@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245997"
 ---
 # <a name="specify-job-responses"></a>指定作业响应
@@ -42,7 +42,7 @@ ms.locfileid: "63245997"
 |||  
 |-|-|  
 |**说明**|**主题**|  
-|描述如何向操作员通知作业状态。|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
+|描述如何向操作员通知作业状态。|[向操作员通知作业状态](notify-an-operator-of-job-status.md)|  
 |介绍如何将作业状态写入 Windows 应用程序日志。|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>另请参阅  

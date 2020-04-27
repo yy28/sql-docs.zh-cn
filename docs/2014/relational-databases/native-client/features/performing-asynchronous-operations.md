@@ -1,5 +1,5 @@
 ---
-title: 执行异步操作 |Microsoft Docs
+title: 执行异步操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246149"
 ---
 # <a name="performing-asynchronous-operations"></a>执行异步操作
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许应用程序执行异步数据库操作。 异步处理将使方法能够立即返回，而不会阻塞调用线程。 这使得多线程机制能提供更强大的功能和灵活性，而不需要开发人员显式创建线程或处理同步。 应用程序将在初始化数据库连接时或初始化由执行命令所生成的结果时请求异步处理。  
   
 ## <a name="opening-and-closing-a-database-connection"></a>打开和关闭数据库连接  
@@ -35,14 +34,14 @@ ms.locfileid: "63246149"
   
  此外，SSPROP_ISSAsynchStatus 属性已添加到 DBPROPSET_SQLSERVERROWSET 属性集。 支持 **ISSAsynchStatus** 接口的提供程序必须使用值 VARIANT_TRUE 实现此属性。  
   
- 可以调用**IDBAsynchStatus：： abort**或[ISSAsynchStatus：： abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md)来取消异步**初始化**调用。 使用者必须显式请求异步数据源初始化。 否则，必须等到数据源对象完全初始化之后，IDBInitialize::Initialize 才返回值****。  
+ 可调用 IDBAsynchStatus::Abort 或 [ISSAsynchStatus::Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) 来取消 Initialize 异步调用********。 使用者必须显式请求异步数据源初始化。 否则，必须等到数据源对象完全初始化之后，IDBInitialize::Initialize 才返回值****。  
   
 > [!NOTE]  
 >  用于连接池的数据源对象无法调用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序中的**ISSAsynchStatus**接口。 ISSAsynchStatus 接口不对入池数据源对象公开****。  
 >   
 >  如果应用程序显式强制使用游标引擎，则 IOpenRowset::OpenRowset 和 IMultipleResults::GetResult 不支持异步处理********。  
 >   
->  此外，远程处理代理/存根 dll （在 MDAC 2.8 中）无法调用 Native **** Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 ISSAsynchStatus 接口。 ISSAsynchStatus 接口不通过远程公开****。  
+>  此外，远程处理代理/存根 dll （在 MDAC 2.8 中）无法调用 Native **ISSAsynchStatus** Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 ISSAsynchStatus 接口。 ISSAsynchStatus 接口不通过远程公开****。  
 >   
 >  服务组件不支持 ISSAsynchStatus****。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "63246149"
  命令执行完毕后，可照常使用 IMultipleResults，但同步时有一个例外，即可能返回 DB_S_ASYNCHRONOUS，此情况下可使用 IDBAsynchStatus 或 ISSAsynchStatus 确定操作的完成时间************。  
   
 ## <a name="examples"></a>示例  
- 在以下示例中，应用程序调用非阻止方法，执行一些其他处理，然后返回以处理结果。 **ISSAsynchStatus：： WaitForAsynchCompletion**将等待内部事件对象，直到异步执行操作完成，或者通过*dwMilisecTimeOut*指定的时间量。  
+ 在以下示例中，应用程序调用非阻止方法，执行一些其他处理，然后返回以处理结果。 ISSAsynchStatus::WaitForAsynchCompletion 等待内部事件对象，直到异步执行操作完成，或超过了 dwMilisecTimeOut 指定的时间******。  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -105,7 +104,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **ISSAsynchStatus：： WaitForAsynchCompletion**将等待内部事件对象，直到异步执行操作完成或传递*dwMilisecTimeOut*值。  
+ ISSAsynchStatus::WaitForAsynchCompletion 等待内部事件对象，直到异步执行操作完成，或传递了 dwMilisecTimeOut 值******。  
   
  以下示例显示有多个结果集的异步处理：  
   

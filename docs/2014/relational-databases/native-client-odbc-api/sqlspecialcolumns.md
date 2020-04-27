@@ -15,17 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188738"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   请求行标识符（*IdentifierType* SQL_BEST_ROWID）时， **SQLSpecialColumns**为除 SQL_SCOPE_CURROW 以外的任何请求的作用域返回空的结果集（无数据行）。 生成的结果集指示仅在此作用域内这些列有效。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列。 **SQLSpecialColumns**结果集将所有列标识为 SQL_PC_NOT_PSEUDO。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列。 **SQLSpecialColumns**结果集将所有列标识为 SQL_PC_NOT_PSEUDO。  
   
  可以对静态游标执行**SQLSpecialColumns** 。 尝试对可更新的（键集驱动或动态）执行**SQLSpecialColumns**将返回 SQL_SUCCESS_WITH_INFO 指示游标类型已更改。  
   

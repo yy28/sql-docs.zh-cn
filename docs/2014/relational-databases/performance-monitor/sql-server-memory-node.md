@@ -11,17 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32a2296fdb68e640ce8ebfc8dd9cdb351666b337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250580"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server、内存节点
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的**Memory Node**对象提供了用于监视 NUMA 节点上的服务器内存使用情况的计数器。  
+  Microsoft **中的** “内存节点” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象在 NUMA 节点上提供监视服务器内存使用情况的计数器。  
   
 ## <a name="memory-node-counters"></a>内存节点计数  
- 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **内存节点** 计数器。  
+ 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“内存节点”计数器  。  
   
 |SQL Server Memory Manager 计数器|说明|  
 |----------------------------------------|-----------------|  
@@ -35,6 +35,6 @@ ms.locfileid: "63250580"
 ## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)   
  [SQL Server Buffer Manager 对象](sql-server-buffer-manager-object.md)   
- [sys. dm_os_performance_counters &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
+ [sys.dm_os_performance_counters (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
   

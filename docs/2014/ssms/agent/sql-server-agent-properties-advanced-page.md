@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246243"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>SQL Server 代理属性（“高级”页）
@@ -29,11 +29,11 @@ ms.locfileid: "63246243"
  **将事件转发到其他服务器**  
  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件转发到其他服务器。  
   
- **Server**  
+ **服务器**  
  选择要将事件转发到的服务器的名称。  
   
  **未处理的事件**  
- 仅将未处理的事件转发到指定的服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理仅转发没有警报响应的事件。  
+ 仅将未处理的事件转发到指定的服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理仅转发警报未对其响应的事件。  
   
  **所有事件**  
  转发所有事件。 当本地实例中的某个警报响应该事件时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将转发该事件并处理此警报。  

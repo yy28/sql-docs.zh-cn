@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241208"
 ---
 # <a name="retrieve-and-query-xml-data"></a>检索和查询 XML 数据
   本主题说明查询 XML 数据必须指定的查询选项。 它还说明了当 XML 实例存储在数据库中时未保留的部分。  
   
-##  <a name="features"></a> 未保留的 XML 实例的功能  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 未保留的 XML 实例的功能  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可保留 XML 实例的内容，但不会保留 XML 数据模型中认为是不重要的 XML 实例的某些方面。 这意味着检索到的 XML 实例可能与服务器中存储的实例不相同，但将包含同样的信息。  
   
 ### <a name="xml-declaration"></a>XML 声明  
@@ -40,7 +40,7 @@ FROM T1
   
  结果为 `<doc/>`。  
   
- 当在 `<?xml version='1.0'?>` 数据类型实例中存储 XML 数据时，不会保留 XML 声明（如 `xml`）。 这是设计的结果。 在将数据转换为类型`xml`后，XML 声明（）及其属性（版本/编码/独立）将丢失。 XML 声明被视为对 XML 分析器的指令。 XML 数据在内部存储为 ucs-2。 XML 实例中所有其他 PI 均被保留。  
+ 当在 `xml` 数据类型实例中存储 XML 数据时，不会保留 XML 声明（如 `<?xml version='1.0'?>`）。 这是设计的结果。 在将数据转换为类型`xml`后，XML 声明（）及其属性（版本/编码/独立）将丢失。 XML 声明被视为对 XML 分析器的指令。 XML 数据在内部存储为 ucs-2。 XML 实例中所有其他 PI 均被保留。  
   
   
 ### <a name="order-of-attributes"></a>属性的顺序  
@@ -86,7 +86,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> 设置所需的查询选项  
+##  <a name="setting-required-query-options"></a><a name="query"></a> 设置所需的查询选项  
  使用`xml`数据`xml`类型方法查询类型列或变量时，必须按所示设置以下选项。  
   
 |SET 选项|所需值|  

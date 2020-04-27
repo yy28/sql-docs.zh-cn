@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193063"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 数据类型和列 (SQL Server)
@@ -162,8 +162,7 @@ ms.locfileid: "63193063"
 ## <a name="limitations-of-the-xml-data-type"></a>xml 数据类型的限制  
  请注意以下适用于 `xml` 数据类型的一般限制：  
   
--   
-  `xml` 数据类型实例所占据的存储空间大小不能超过 2 GB。  
+-   `xml` 数据类型实例所占据的存储空间大小不能超过 2 GB。  
   
 -   不能用作 **sql_variant** 实例的子类型。  
   

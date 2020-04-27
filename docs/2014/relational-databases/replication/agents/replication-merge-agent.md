@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63216003"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
@@ -109,17 +109,17 @@ ms.locfileid: "63216003"
  **-?**  
  输出所有可用的参数。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 发布服务器的名称。 为** 该服务器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的默认实例指定 server_name。 为该服务器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的命名实例指定_server_name_**\\**_instance_name_ 。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name  。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
   
- **-发布**_发布_  
+ **-Publication** _publication_  
  发布的名称。 只有将发布设置为总是使快照可用于新订阅或重新初始化的订阅时，此参数才有效。  
   
- **-订阅服务器** _server_name_[**\\**_instance_name_]  
- 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的命名实例指定_server_name_**\\**_instance_name_ 。  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-SubscriberDB** _subscriber_database_  
  订阅服务器数据库的名称。  
@@ -136,8 +136,8 @@ ms.locfileid: "63216003"
  **-DefinitionFile** _def_path_and_file_name_  
  代理定义文件的路径。 代理定义文件中包含代理的命令提示符参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
- **-分发服务器** _server_name_[**\\**_instance_name_]  
- 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的命名实例指定_server_name_**\\**_instance_name_ 。 对于分发服务器（推送）分发，名称默认为本地计算机上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例的名称。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 对于分发服务器（推送）分发，名称默认为本地计算机上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例的名称。  
   
  **-DistributorLogin** _distributor_login_  
  分发服务器登录名。  
@@ -145,8 +145,8 @@ ms.locfileid: "63216003"
  **-DistributorPassword** _distributor_password_  
  分发服务器密码。  
   
- **-Distributorsecuritymode 指定**[ **0**| **1**]  
- 指定分发服务器的安全模式。 值**0**指示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]身份验证模式（默认值），值**1**指示 Windows 身份验证模式。  
+ **-DistributorSecurityMode** [ **0**| **1**]  
+ 指定分发服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式（默认设置），值 **1** 指示 Windows 身份验证模式。  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  将更改从发布服务器下载到订阅服务器时要在单个批次中处理的生成数。 生成的定义是每个项目中属于一个逻辑组的更改。 可靠的通信链接的默认值为 100。 不可靠的通信链接的默认值为 10。  
@@ -170,14 +170,13 @@ ms.locfileid: "63216003"
 |**2**|指定使用 SSL，并验证证书。|  
 
  > [!NOTE]  
- >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，“Server”参数应设置为 SQL Server 的完全限定名称。
+ >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，”Server”参数应设置为 SQL Server 的完全限定名称。
   
  有关详细信息，请参阅[SQL Server 复制安全性](../security/view-and-modify-replication-security-settings.md)。  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 `@subscriber_upload_options` 的 `sp_addmergearticle`。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 `@subscriber_upload_options` 的 `sp_addmergearticle`。  
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
   
@@ -195,16 +194,14 @@ ms.locfileid: "63216003"
  指定应为行计数验证使用何种行计数计算类型。 值 **1** （默认值）表示快速方法。 值 **0** 表示完全行计数方法。  
   
  **-FileTransferType** [**0**|**1**]  
- 指定文件传输类型。 
-  **
-  ** 值为 **0** ，表示 UNC（通用命名约定），值为 1，表示 FTP（文件传输协议）。  
+ 指定文件传输类型。  值为 **0** ，表示 UNC（通用命名约定），值为 1，表示 FTP（文件传输协议）。  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** （**发布**| 服务器**订阅**| **服务器）]**  
+ **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合并代理应使用的收敛级别，可以为以下值之一：  
   
 |ForceConvergenceLevel 值|说明|  
 |---------------------------------|-----------------|  
-|**0** （默认值）|默认值。 执行不具有附加收敛的标准合并。|  
+|**0** （默认值）|默认。 执行不具有附加收敛的标准合并。|  
 |**1**|强制所有生成进行收敛。|  
 |**2**|强制所有生成进行收敛并更正损坏的沿袭。 当指定此值时，请指定应更正何处的沿袭：发布服务器、订阅服务器，还是发布服务器和订阅服务器。|  
   
@@ -227,10 +224,10 @@ ms.locfileid: "63216003"
 |-------------------------------|-----------------|  
 |**0**|记录最终的代理状态消息、最终的会话详细信息和任何错误。|  
 |**1**|记录每个会话状态的增量会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。|  
-|**2**|默认值。 记录每个会话状态的增量会话详细信息和项目级别会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。 同时还会记录代理状态消息。|  
-|**3**|除了记录更多代理进度消息以外，与 **-HistoryVerboseLevel** = **2**相同。|  
+|**2**|默认。 记录每个会话状态的增量会话详细信息和项目级别会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。 同时还会记录代理状态消息。|  
+|**3**|除了将更多地记录代理进度消息之外，其他与 **-HistoryVerboseLevel** = **2**时相同。|  
   
- **-主机名** _host_name_  
+ **-Hostname** _host_name_  
  本地计算机的网络名。 默认为本地计算机名称。  
   
  **-InteractiveResolution** [**0**|**1**]  
@@ -251,7 +248,7 @@ ms.locfileid: "63216003"
  **-InternetProxyServer**  *internet_proxy_server*  
  指定当访问 *internet_url*中指定的 HTTP 资源时要使用的代理服务器。  
   
- **-Microsoft.sqlserver.replication.mergesynchronizationagent.internetsecuritymode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**|**1**]  
  指定在 Web 同步期间连接到 Web 服务器时所使用的 IIS 安全模式。 值为 **0** ，表示为基本身份验证，值为 **1** ，表示为 Windows 集成身份验证（默认）。  
   
  **-InternetTimeout** _internet_timeout_  
@@ -261,18 +258,18 @@ ms.locfileid: "63216003"
  指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器 ISAPI DLL 的 URL。 必须指定此属性。  
   
  **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
- 在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将合并代理标记为可疑。 默认值为**300**秒。  
+ 在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将合并代理标记为可疑。 默认值为 **300** 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 登录超时前等待的秒数。默认值为**15**秒。  
+ 登录超时前等待的秒数。  默认值为 15 秒。  
   
  **-MakeGenerationInterval** _make_generation_interval_seconds_  
- 等待创建生成或更改批的秒数或下载到客户端的秒数。 默认值为**1**秒。  
+ 等待创建生成或更改批的秒数或下载到客户端的秒数。 默认值为 **1** 秒。  
   
  Makegeneration 是准备要下载到订阅服务器的发布服务器更改的进程，这可能是下载期间的性能瓶颈。 如果 makegeneration 进程已按 **-MakeGenerationInterval**指定的间隔运行，则将为当前同步会话跳过该进程。 此操作将有助于同步并发，在订阅服务器不希望下载更改时尤为有用。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数目为 **MaxBcpThreads** 与在发布数据库的系统表 **sysmergeschemachange** 中列出的大容量复制请求数这二者中的较小者。 **MaxBcpThreads**的值必须大于0，并且没有硬编码的上限。 默认值为**1**。  
+ 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数目为 **MaxBcpThreads** 与在发布数据库的系统表 **sysmergeschemachange** 中列出的大容量复制请求数这二者中的较小者。 **MaxBcpThreads** 的值必须大于 0，并且不存在任何硬编码的上限。 默认值为 **1**。  
   
  **-MaxDownloadChanges** _number_of_download_changes_  
  指定应从发布服务器下载到订阅服务器的已更改行的最大数量。 下载的行数可能会由于以下原因大于指定的最大值：处理了所有生成或可能运行了并行的目标线程，这两种情况在第一次传递中均会处理至少 100 个更改。 默认情况下将发送所有已准备好下载的更改。  
@@ -283,15 +280,11 @@ ms.locfileid: "63216003"
  **-MetadataRetentionCleanup** [**0**|**1**]  
  指定是否基于发布的保持期从 [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql)、 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)、 [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql)、 [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql)和 [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) 中删除元数据。 默认值为 **1**，指示应执行清除操作。 值为 **0** 指示不应自动执行清除操作。  
   
- **-输出** _output_path_and_file_name_  
+ **-Output** _output_path_and_file_name_  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 指定输出是否应提供详细内容。 
-  **
-  **如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。 
-  **
-  ** 如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
+ 指定输出是否应提供详细内容。  如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-ParallelUploadDownload** [**0**|**1**]  
  指定合并代理是否应并行处理上载到发布服务器和下载到订阅服务器的更改，这对于具有高带宽的大容量环境很有用。 如果 **ParallelUploadDownload** 为 **1**，则启用并行处理。  
@@ -305,8 +298,8 @@ ms.locfileid: "63216003"
  **-ProfileName** _profile_name_  
  指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](replication-agent-profiles.md)。  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
- 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅[数据库镜像和复制 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
+ 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅 [数据库镜像和复制 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** _publisher_login_  
  发布服务器登录名。 如果 **PublisherSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
@@ -314,14 +307,14 @@ ms.locfileid: "63216003"
  **-PublisherPassword** _publisher_password_  
  发布服务器密码。 如果 **PublisherSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
- **-Publishersecuritymode 指定**[**0**|**1**]  
+ **-PublisherSecurityMode** [**0**|**1**]  
  指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  
   
  **-QueryTimeOut** _query_time_out_seconds_  
- 查询超时前等待的秒数。默认值为300秒。 当此值大于 1800 时，合并代理还将使用 `QueryTimeout` 的值来确定等待生成分区快照的时间。  
+ 查询超时前等待的秒数。默认值为 300 秒。 当此值大于 1800 时，合并代理还将使用 `QueryTimeout` 的值来确定等待生成分区快照的时间。  
   
  **-SrcThreads** _number_of_source_threads_  
- 指定合并代理用于枚举来自源的更改的源线程数。 在上载过程中，源是订阅服务器；在下载过程中，源是发布服务器。 默认值为**3**。  
+ 指定合并代理用于枚举来自源的更改的源线程数。 在上载过程中，源是订阅服务器；在下载过程中，源是发布服务器。 默认值为 **3**。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
  当运行的并发合并进程数达到**@max_concurrent_merge** **sp_addmergepublication**的属性设置的限制时，合并代理等待的最大秒数。 如果在达到最大秒数之后合并代理仍在等待，则合并代理将退出。 值 0 表示代理将无限期地等待，但是可以将其取消。  
@@ -354,27 +347,26 @@ ms.locfileid: "63216003"
  **-SubscriberConflictClean** [ **0**| **1**]  
  如果在同步期间清除了订阅服务器上的冲突表，则值 **1** 指示订阅服务器上的冲突表已清除。 此参数仅用于对使用分散冲突日志记录的发布的订阅。  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| ********| **** 5 6| **7**8]|   
+ **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
  指定合并代理所使用的订阅服务器连接的类型。 仅支持将此参数设置为默认值 **0** 。  
   
  **-SubscriptionType**[ **0**| **1**| **2**]  
  指定分发的订阅类型。 值为 **0** ，表示推送订阅（默认值），值为 **1** ，表示请求订阅，值为 **2** ，表示匿名订阅。  
   
- **-SyncToAlternate** [ **0 | 1**]  
- 指定合并代理是否在订阅服务器和备用发布服务器之间进行同步。 值为 **1** 表示它是备用发布服务器。 默认值为**0**。  
+ **-SyncToAlternate** [ **0|1**]  
+ 指定合并代理是否在订阅服务器和备用发布服务器之间进行同步。 值为 **1** 表示它是备用发布服务器。 默认值为 **0**。  
   
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
- 将订阅服务器上的更改上载到发布服务器时要在单个批次处理的生成数。 生成的定义是每个项目中属于一个逻辑组的更改。 可靠通信链接的默认值为**100**。 不可靠的通信链接的默认值为 **1**。  
+ 将订阅服务器上的更改上载到发布服务器时要在单个批次处理的生成数。 生成的定义是每个项目中属于一个逻辑组的更改。 可靠的通信链接的默认值为 **100**。 不可靠的通信链接的默认值为 **1**。  
   
  **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
- 将订阅服务器上的更改上载到发布服务器时要在单个批次中读取的更改数。 默认值为**100**。  
+ 将订阅服务器上的更改上载到发布服务器时要在单个批次中读取的更改数。 默认值为 **100**。  
   
  **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
- 将订阅服务器上的更改上载到发布服务器时要在单个批次中应用的更改数。 默认值为**100**。  
+ 将订阅服务器上的更改上载到发布服务器时要在单个批次中应用的更改数。 默认值为 **100**。  
   
  **-UseInprocLoader**  
- 通过让合并代理在将快照文件应用于订阅服务器时使用 BULK INSERT 命令，提高初始快照的性能。 不推荐使用此参数，因为它与 XML 数据类型不兼容。 如果不复制 XML 数据，则可以使用此参数。 此参数不能用于字符模式快照。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果使用此参数，订阅服务器上的  服务帐户必须具有快照 .bcp 数据文件所在目录的读取权限。 如果不使用此参数，则代理加载的 ODBC 驱动程序将从文件中读取，从而不使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的安全上下文。  
+ 通过让合并代理在将快照文件应用于订阅服务器时使用 BULK INSERT 命令，提高初始快照的性能。 不推荐使用此参数，因为它与 XML 数据类型不兼容。 如果不复制 XML 数据，则可以使用此参数。 此参数不能用于字符模式快照。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果使用此参数，订阅服务器上的  服务帐户必须具有快照 .bcp 数据文件所在目录的读取权限。 如果不使用此参数，则代理加载的 ODBC 驱动程序将从文件中读取，从而不使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的安全上下文。  
   
  **-Validate** [**0**|**1**|**2**|**3**]  
  指定是否应在合并会话结束时执行验证，以及如果要执行验证，应执行哪种类型的验证。 建议值为 **3** 。  
@@ -390,13 +382,12 @@ ms.locfileid: "63216003"
 >  如果订阅服务器与发布服务器上的数据类型不同，则使用二进制校验和或校验和进行的验证可能会错误地报告失败。 有关详细信息，请参阅[验证已复制的数据](../validate-data-at-the-subscriber.md)的“数据验证的注意事项”部分。  
   
  **-ValidateInterval** _validate_interval_  
- 在连续模式下对订阅进行验证的频率（单位为分钟）。 默认值为**60**分钟。  
+ 在连续模式下对订阅进行验证的频率（单位为分钟）。 默认值为 **60** 分钟。  
   
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
->  如果您安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理是通过本地系统帐户而非域用户帐户（默认值）运行，则该服务只能访问本地计算机。 如果以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理身份运行的合并代理已配置为在登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用 Windows 身份验证模式，则合并代理将失败。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。  
+>  如果您安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理是通过本地系统帐户而非域用户帐户（默认值）运行，则该服务只能访问本地计算机。 如果以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理身份运行的合并代理已配置为在登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用 Windows 身份验证模式，则合并代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。  
   
  若要启动合并代理，请从命令提示符下执行 **replmerg.exe** 。 有关信息，请参阅 [复制代理可执行文件](../concepts/replication-agent-executables-concepts.md)。  
   

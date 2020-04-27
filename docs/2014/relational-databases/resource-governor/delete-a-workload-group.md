@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63215789"
 ---
 # <a name="delete-a-workload-group"></a>删除工作负荷组
@@ -27,10 +27,10 @@ ms.locfileid: "63215789"
   
 -   **若要删除工作负荷组，请使用：** [对象资源管理器](#DelWGObjEx)、[Resource Governor 属性](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  如果工作负荷组中包含活动会话，则不能删除该组。  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  如果工作负荷组包含活动会话，则在调用 ALTER RESOURCE GOVERNOR RECONFIGURE 语句应用更改时，删除工作负荷组或将其移至其他资源池中会失败。 若要避免此问题，可以执行以下操作之一：  
   
 -   等待受影响组的所有会话均断开连接，然后重新运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。  
@@ -39,10 +39,10 @@ ms.locfileid: "63215789"
   
 -   重新启动服务器。 完成重新启动过程后，将不会创建已删除的组，并且已移动的组将使用新分配的资源池。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  删除工作负荷组需要 CONTROL SERVER 权限。  
   
-##  <a name="DelWGObjEx"></a> 使用对象资源管理器删除工作负荷组  
+##  <a name="delete-a-workload-group-using-object-explorer"></a><a name="DelWGObjEx"></a> 使用对象资源管理器删除工作负荷组  
  **使用对象资源管理器删除工作负荷组**  
   
 1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中包含 **“资源池”** 。  
@@ -53,7 +53,7 @@ ms.locfileid: "63215789"
   
 4.  在 **“删除对象”** 窗口的 **“要删除的对象”** 列表中，将列出工作负荷组。 若要删除工作负荷组，请单击 **“确定”** 。  
   
-##  <a name="DelWGRGProp"></a> 使用资源调控器属性删除工作负荷组  
+##  <a name="delete-a-workload-group-using-resource-governor-properties"></a><a name="DelWGRGProp"></a> 使用资源调控器属性删除工作负荷组  
  **使用“资源调控器属性”页删除工作负荷组**  
   
 1.  在对象资源管理器中，依次向下展开 **“管理”** 节点直至其中包括 **“资源池”** 。  
@@ -64,7 +64,7 @@ ms.locfileid: "63215789"
   
 4.  若要删除工作负荷组，请单击 **“确定”** 。  
   
-##  <a name="DelWGTSQL"></a> 使用 Transact-SQL 删除工作负荷组  
+##  <a name="delete-a-workload-group-using-transact-sql"></a><a name="DelWGTSQL"></a> 使用 Transact-SQL 删除工作负荷组  
  **使用 Transact-SQL 删除工作负荷组**  
   
 1.  运行 `DROP WORKLOAD GROUP` 语句，该语句指定要删除的工作负荷组的名称。  

@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238381"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
@@ -56,17 +56,13 @@ ms.locfileid: "63238381"
 ## <a name="remarks"></a>备注  
  某些操作不填充列的值，这是因为它可能不适用于此操作。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核可以为审核记录中的字符字段存储 4000 个数据字符。 当可审核操作返回的 **additional_information** 和 **statement** 值返回的字符超过 4000 个时， **sequence_no** 列用于将多个记录写入到单个审核操作的审核报表中以记录此数据。 过程如下：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核可以为审核记录中的字符字段存储 4000 个数据字符。 当可审核操作返回的 **additional_information** 和 **statement** 值返回的字符超过 4000 个时， **sequence_no** 列用于将多个记录写入到单个审核操作的审核报表中以记录此数据。 该过程如下所示：  
   
--   
-  **statement** 列分为 4000 个字符。  
+-   **statement** 列分为 4000 个字符。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核作为具有部分数据的审核记录的第一行写入。 所有其他字段在每一行中是重复的。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核作为具有部分数据的审核记录的第一行写入。 所有其他字段在每一行中是重复的。  
   
--   
-  **sequence_no** 值是递增的。  
+-   **sequence_no** 值是递增的。  
   
 -   此过程将一直重复，直至记录了所有数据为止。  
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200358"
 ---
 # <a name="log-long-running-queries-odbc"></a>记录长时间运行的查询 (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "63200358"
   
 3.  单击要记录其长时间运行的查询的数据源。  
   
-4.  单击“配置”****。  
+4.  单击 **“配置”**。  
   
 5.  在 Microsoft SQL Server 配置 DSN 向导 "中，导航到具有 **" 将长时间运行的查询保存到日志文件**"的页面。  
   

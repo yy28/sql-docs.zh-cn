@@ -13,24 +13,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 623507b4d9e52da376d4c83e4ee5c4d51b15dc39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186262"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>维护计划（“报告和记录”页）
-  使用 "**报告和记录**" 对话框可以配置在执行维护计划时生成的报告和日志。  
+  使用 **“报告和记录”** 对话框可以配置在执行维护计划时生成的报告和日志。  
   
 ## <a name="options"></a>选项  
  **生成文本文件报告**  
- 指定是否要[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]编写文本文件报告。  
+ 指定是否希望 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 写入文本文件报告。  
   
  **创建新文件**  
- 在每次执行维护计划时创建新的报告文件。 默认情况下，报告文件写入到承载包含此维护计划的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机，具体位置为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中建立的默认日志文件夹。 若要指定其它文件夹，请在“文件夹”**** 文本框中输入该文件夹的完整路径，或单击“浏览”按钮 (**...**) 并导航到所需的文件夹。  
+ 在每次执行维护计划时创建新的报告文件。 默认情况下，报告文件写入到承载包含此维护计划的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机，具体位置为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中建立的默认日志文件夹。 若要指定其它文件夹，请在“文件夹”  文本框中输入该文件夹的完整路径，或单击“浏览”按钮 ( **...** ) 并导航到所需的文件夹。  
   
  **追加到文件**  
- 将每次执行计划所生成的报告追加到在“文件名”**** 文本框中指定的文件。 还可以通过单击浏览按钮并从对话框中选择文件来指定文件。  
+ 将每次执行计划所生成的报告追加到在“文件名”  文本框中指定的文件。 还可以通过单击浏览按钮并从对话框中选择文件来指定文件。  
   
  **将报告发送给电子邮件收件人**  
  通过电子邮件传输维护计划执行的结果。 只有启用了数据库邮件并进行适当配置后，此选项才可用。  
@@ -44,11 +44,11 @@ ms.locfileid: "63186262"
  **在远程服务器上进行日志记录**  
  将维护计划历史记录记录到远程服务器。  
   
- **连接**  
+ **Connection**  
  指定在远程服务器上进行日志记录时使用的连接信息。  
   
  **新建**  
- 显示“连接属性”**** 对话框。 用于配置在远程服务器上进行日志记录时使用的新连接信息。  
+ 显示“连接属性”  对话框。 用于配置在远程服务器上进行日志记录时使用的新连接信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [维护计划](maintenance-plans.md)   

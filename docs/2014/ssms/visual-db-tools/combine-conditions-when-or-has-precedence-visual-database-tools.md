@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224495"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>在 OR 优先时组合条件 (Visual Database Tools)
@@ -38,7 +38,7 @@ ms.locfileid: "63224495"
   
 1.  在 [“条件”窗格](visual-database-tools.md)中，添加要搜索的数据列。 如果希望使用通过 AND 链接的两个或多个条件搜索同一列，则对于每个要搜索的值都必须将该数据列名添加到网格中一次。  
   
-2.  创建将由 OR 链接的条件，方法是将第一个条件输入到“筛选器”网格列中，然后将第二个（以及后续条件）输入单独的“或...”列中。 例如，若要用 OR 链接搜索 `job_lvl` 和 `status` 列的条件，请在“筛选器”`= 100`**列中为 ** 输入 `job_lvl`，在“或...”`= 'R'`**列中为 ** 输入 `status`。  
+2.  创建将由 OR 链接的条件，方法是将第一个条件输入到“筛选器”  网格列中，然后将第二个（以及后续条件）输入单独的“或...”  列中。 例如，若要用 OR 链接搜索 `job_lvl` 和 `status` 列的条件，请在“筛选器”`= 100`**列中为**  输入 `job_lvl`，在“或...”`= 'R'`**列中为**  输入 `status`。  
   
      在网格中输入这些值后，就会在 SQL 窗格内的语句中生成以下 WHERE 子句：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63224495"
     WHERE (job_lvl = 100) OR (status = 'R')  
     ```  
   
-3.  通过为每个 OR 条件输入一次 AND 条件来创建 AND 条件。 将每个项放在其所对应的 OR 条件所在的同一网格列中。 例如，若要添加搜索 `hire_date` 列并应用于两个 OR 条件的 AND 条件，请在“条件”列和“或...”`< '1/1/91'`**列中均输入 **。  
+3.  通过为每个 OR 条件输入一次 AND 条件来创建 AND 条件。 将每个项放在其所对应的 OR 条件所在的同一网格列中。 例如，若要添加搜索 `hire_date` 列并应用于两个 OR 条件的 AND 条件，请在“条件”列和“或...”`< '1/1/91'`**列中均输入** 。  
   
      在网格中输入这些值后，就会在 SQL 窗格内的语句中生成以下 WHERE 子句：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63224495"
     ```  
   
     > [!TIP]  
-    >  可通过添加一次 AND 条件，再使用“编辑”菜单中的“剪切”和“粘贴”命令对其他 OR 条件重复此操作来重复 AND 条件。  
+    >  可通过添加一次 AND 条件，再使用“编辑”  菜单中的“剪切”  和“粘贴”  命令对其他 OR 条件重复此操作来重复 AND 条件。  
   
  查询和视图设计器创建的 WHERE 子句等效于以下 WHERE 子句，后者使用括号指定 OR 优先于 AND：  
   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a161b009239db3c17acb64f8d8eeaaa61321cd9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195315"
 ---
 # <a name="managing-text-and-image-columns"></a>管理 Text 和 Image 列
@@ -34,13 +34,13 @@ ms.locfileid: "63195315"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [绑定与未绑定的 text 和 image 列](bound-vs-unbound-text-and-image-columns.md)  
+-   [绑定与未绑定的 Text 和 Image 列](bound-vs-unbound-text-and-image-columns.md)  
   
 -   [有日志记录的修改与无日志记录的修改](logged-vs-unlogged-modifications.md)  
   
 -   [执行时数据和 Text、ntext 或 Image 列](data-at-execution-and-text-ntext-or-image-columns.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

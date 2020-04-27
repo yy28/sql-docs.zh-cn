@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193339"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
@@ -201,8 +201,7 @@ ms.locfileid: "63193339"
   
  在此示例中，以下 Microsoft .NET Framework 托管 API 用于完成返回并呈现 FOR XML 查询结果：  
   
-1.  
-  `SqlConnection` 用于根据指定的连接字符串变量 strConn 的内容连接到 SQL Server。  
+1.  `SqlConnection` 用于根据指定的连接字符串变量 strConn 的内容连接到 SQL Server。  
   
 2.  然后，将 `SqlDataAdapter` 用作数据适配器，它将使用 SQL 连接和指定的 SQL 查询字符串执行 FOR XML 查询。  
   

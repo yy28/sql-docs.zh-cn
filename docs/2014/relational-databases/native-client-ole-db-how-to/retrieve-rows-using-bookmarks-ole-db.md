@@ -1,5 +1,5 @@
 ---
-title: 使用书签检索行（OLE DB） |Microsoft Docs
+title: 使用书签检索行 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0bfc6d28eb318bf36217a53873a48ab854d5f12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63218220"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用书签检索行 (OLE DB)
@@ -32,7 +32,7 @@ ms.locfileid: "63218220"
   
 2.  将行集 DBPROP_IRowsetLocate 属性设置为 VARIANT_TRUE。  
   
-3.  执行此命令。  
+3.  执行命令。  
   
 4.  对于将用作书签的列，请将绑定结构的 `dwFlag` 字段设置为 DBCOLUMNSINFO_ISBOOKMARK 标记。  
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209749"
 ---
 # <a name="move-a-workload-group"></a>移动工作负荷组
@@ -29,16 +29,16 @@ ms.locfileid: "63209749"
   
 -   若要移动工作负荷组，请使用  ：[SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  如果存在挂起的资源调控器配置操作，则无法移动工作负荷组。  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  如果存在挂起的资源调控器配置操作，则无法移动工作负荷组。 你可以通过查询 [sys.dm_resource_governor_configuration (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) 动态管理视图来获取 is_configuration_pending 的当前状态以确定是否存在配置挂起。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  移动工作负荷组需要 CONTROL SERVER 权限。  
   
-##  <a name="MoveWGSSMS"></a> 使用 SQL Server Management Studio 移动工作负荷组  
+##  <a name="move-a-workload-group-using-sql-server-management-studio"></a><a name="MoveWGSSMS"></a> 使用 SQL Server Management Studio 移动工作负荷组  
  **使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
@@ -55,7 +55,7 @@ ms.locfileid: "63209749"
   
 7.  如果创建或重新配置资源池或工作负荷组的操作失败，错误消息摘要将显示在属性页标题下方。 若要查看详细的错误消息，请单击错误信息上的向下箭头。  
   
-##  <a name="MoveWGTSQL"></a> 使用 Transact-SQL 移动工作负荷组  
+##  <a name="move-a-workload-group-using-transact-sql"></a><a name="MoveWGTSQL"></a> 使用 Transact-SQL 移动工作负荷组  
  **使用 Transact-SQL 移动工作负荷组**  
   
 1.  运行 `ALTER WORKLOAD GROUP` 语句，该语句指定要移动的工作负荷组的名称以及该组应移到的资源池。  

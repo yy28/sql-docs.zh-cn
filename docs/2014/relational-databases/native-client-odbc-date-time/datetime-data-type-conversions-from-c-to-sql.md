@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207015"
 ---
 # <a name="conversions-from-c-to-sql"></a>由 C 转换为 SQL
@@ -30,17 +30,17 @@ ms.locfileid: "63207015"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1、5、7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1、5、7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|空值|空值|1,10,11|空值|空值|空值|空值|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|不适用|不适用|1,10,11|不适用|不适用|不适用|不适用|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|空值|空值|空值|空值|1,10,11|空值|空值|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|空值|空值|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9，3|9,10|9,7,10|9,5,7,10|空值|空值|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9，3，4|9,4,10|9,10|9,5,10|空值|空值|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9、3、4、8|9,4,8,10|9,8,10|9,10|空值|空值|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|空值|空值|空值|空值|空值|空值|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|空值|空值|空值|空值|空值|空值|空值|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|空值|空值|空值|空值|空值|空值|空值|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|不适用|不适用|不适用|不适用|1,10,11|不适用|不适用|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|不适用|不适用|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9，3|9,10|9,7,10|9,5,7,10|不适用|不适用|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9，3，4|9,4,10|9,10|9,5,10|不适用|不适用|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9、3、4、8|9,4,8,10|9,8,10|9,10|不适用|不适用|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|不适用|不适用|不适用|不适用|不适用|不适用|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|不适用|不适用|不适用|不适用|不适用|不适用|不适用|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|不适用|不适用|不适用|不适用|不适用|不适用|不适用|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63207015"
 |11|如果数据的字节长度不等于 SQL 类型所需的结构的大小，则生成具有 SQLSTATE 22003 和消息“数值超出了范围”的诊断记录。|  
 |12|如果数据的字节长度为 4 或 8，则采用原始 TDS smalldatetime 或 datetime 格式将数据发送到服务器。 如果数据的字节长度与 SQL_TIMESTAMP_STRUCT 大小完全匹配，则将该数据转换为 datetime2 的 TDS 格式。|  
 |13|如果发生截断且丢失数据，则生成具有 SQLSTATE 22001 和消息“字符串数据，右端被截断”的诊断记录。<br /><br /> 小数位数（小数位数）根据以下内容从目标列的大小确定：<br /><br /> **键入：** SQL_C_TYPE_TIMESTAMP<br /><br /> 暗指的小数位数<br /><br /> 0<br /><br /> 19<br /><br /> 暗指的小数位数<br /><br /> 1. 9<br /><br /> 21..29<br /><br /> 但是，对于 SQL_C_TYPE_TIMESTAMP，如果秒的小数部分可以在不丢失数据的情况下由三位数表示，并且列大小为 23 或更大，则生成确切的三位数的秒小数部分。 此行为确保使用早期 ODBC 驱动程序开发的应用程序的向后兼容性。<br /><br /> 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许的秒的小数部分位数多达 9 位，这是 ODBC 允许的最大位数。<br /><br /> 列大小为零则暗指 ODBC 中可变长度字符类型的大小无限制（即 9 位，除非应用 SQL_C_TYPE_TIMESTAMP 的三位数规则）。 指定列大小为零且具有固定长度的字符类型是错误的。|  
-|空值|现有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更早版本的行为将保持。|  
+|不适用|现有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更早版本的行为将保持。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC&#41;&#40;的日期和时间改进](date-and-time-improvements-odbc.md)  

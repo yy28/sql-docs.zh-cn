@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249394"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>自定义和处理预测模型（数据挖掘中级教程）
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法提供了多个参数，这些参数影响模型创建方式和时间数据分析方式。 更改这些属性可以极大地影响挖掘模型进行预测的方式。  
   
  对于教程中的此任务，您将执行以下任务来修改模型：  
@@ -63,7 +62,7 @@ ms.locfileid: "63249394"
     > [!NOTE]  
     >  PREDICTION_SMOOTHING 参数仅在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 中可用。 因此，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard 中无法查看或更改 PREDICTION_SMOOTHING 参数的值。 但是，默认行为是使用两种算法并向它们分配相等的权重。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
 ## <a name="handling-missing-data-optional"></a>处理缺少的数据（可选）  
  在许多情况下，您的销售数据可能具有用 null 填充的空白，或者某个商店在报告期限之前没有完成报表，在序列末尾留有空白单元。 在这种情况下，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会引发以下错误，将不处理模型。  
@@ -107,6 +106,6 @@ ms.locfileid: "63249394"
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 时序算法技术参考](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft 时序算法](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [数据挖掘 &#40;处理要求和注意事项&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

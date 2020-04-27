@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200303"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>配置驱动程序性能数据 (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "63200303"
   
 3.  单击要记录其性能的数据源。  
   
-4.  单击“配置”****。  
+4.  单击 **“配置”**。  
   
 5.  在 Microsoft SQL Server 配置 DSN 向导 "中，导航到日志文件中包含" 将**ODBC 驱动程序统计信息记录到**"的页。  
   

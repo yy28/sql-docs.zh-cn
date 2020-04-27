@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250273"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server 复制订阅属性 
@@ -48,14 +48,13 @@ ms.locfileid: "63250273"
  确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器。 此选项用于双向事务复制。 有关详细信息，请参阅[双向事务复制](transactional/bidirectional-transactional-replication.md)。  
   
  **可更新订阅**  
- 确定是否将订阅服务器更改复制回发布服务器。 使用排队更新或立即更新可以复制更改。 
-  **“订阅服务器更新方法”** 选项用于确定要使用的方法。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)。  
+ 确定是否将订阅服务器更改复制回发布服务器。 使用排队更新或立即更新可以复制更改。 **“订阅服务器更新方法”** 选项用于确定要使用的方法。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
 ### <a name="options-for-merge-subscriptions"></a>用于合并订阅的选项  
  **分区定义(HOST_NAME)**  
  对于使用参数化筛选器的发布，合并复制将在同步过程中对以下两个系统函数中的一个函数求值（如果筛选器同时引用了这两个函数，则对这两个函数求值），以确定订阅服务器应接收的数据： **SUSER_SNAME()** 或 **HOST_NAME()**。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
   
- **订阅类型**和**优先级**  
+ **“订阅类型”** 和 **“优先级”**  
  显示订阅是客户端订阅还是服务器订阅（在创建订阅后不能更改）。 服务器订阅可以将数据重新发布到其他订阅服务器，并可以为服务器订阅分配冲突解决优先级。  
   
  如果在新建订阅向导中选择了服务器订阅类型，则会为该订阅服务器分配一个在冲突解决过程中使用的优先级。  
@@ -65,10 +64,9 @@ ms.locfileid: "63250273"
 
 
 ## <a name="subscriber-properties"></a>订阅服务器属性
-  订阅服务器上的 "**订阅属性**" 对话框允许您查看和设置请求订阅的属性。  
+  使用订阅服务器上的 **“订阅属性”** 对话框可以查看和设置请求订阅的属性。  
   
- 
-  **“订阅属性”** 对话框中的每一个属性都包含相应的说明。 单击一个属性可以查看该属性的说明（显示于对话框的底部）。 本主题提供众多属性的其他信息。 属性分为以下类别：  
+ **“订阅属性”** 对话框中的每一个属性都包含相应的说明。 单击一个属性可以查看该属性的说明（显示于对话框的底部）。 本主题提供众多属性的其他信息。 属性分为以下类别：  
   
 -   适用于所有订阅的属性。    
 -   适用于事务订阅的属性。   
@@ -86,10 +84,10 @@ ms.locfileid: "63250273"
  **快照位置**  
  确定在初始化或重新初始化过程中从中访问快照文件的位置。 该位置可以为下列值之一：  
   
--   **默认位置**：配置分发服务器时定义的默认位置。 有关详细信息，请参阅[指定默认快照位置](snapshot-options.md#snapshot-folder-locations)。    
--   **备用文件夹**：备用位置，可在 "**发布属性**" 对话框中指定。 有关详细信息，请参阅 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)。    
+-   **默认位置**：默认的位置，在配置分发服务器时定义。 有关详细信息，请参阅[指定默认快照位置](snapshot-options.md#snapshot-folder-locations)。    
+-   **备用文件夹**：备用位置，可以在 **“发布属性”** 对话框中指定。 有关详细信息，请参阅 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)。    
 -   **动态快照文件夹**：用于使用参数化行筛选器的合并发布的快照位置。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)。  
--   **FTP 文件夹**：文件传输协议（FTP）服务器可以访问的文件夹。 有关详细信息，请参阅[通过 FTP 传输快照](transfer-snapshots-through-ftp.md)。  
+-   **FTP 文件夹**：文件传输协议 (FTP) 服务器可以访问的文件夹。 有关详细信息，请参阅[通过 FTP 传输快照](transfer-snapshots-through-ftp.md)。  
   
  **快照文件夹**  
  如果为 **“快照位置”** 选项选择了 **“默认位置”** 之外的任何其他值，则必须指定快照文件夹的路径。  
@@ -108,14 +106,13 @@ ms.locfileid: "63250273"
   
 ### <a name="options-for-transactional-subscriptions"></a>用于事务订阅的选项  
  **可更新订阅**  
- 确定是否将订阅服务器更改复制回发布服务器。 使用排队更新或立即更新可以复制更改。 
-  **“订阅服务器更新方法”** 选项用于确定要使用的方法。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)。  
+ 确定是否将订阅服务器更改复制回发布服务器。 使用排队更新或立即更新可以复制更改。 **“订阅服务器更新方法”** 选项用于确定要使用的方法。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
 ### <a name="options-for-merge-subscriptions"></a>用于合并订阅的选项  
  **分区定义(HOST_NAME)**  
  对于使用参数化筛选器的发布，合并复制将在同步过程中对以下两个系统函数中的一个函数求值（如果筛选器同时引用了这两个函数，则对这两个函数求值），以确定订阅服务器应接收的数据： **SUSER_SNAME()** 或 **HOST_NAME()**。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
   
- **订阅类型**和**优先级**  
+ **“订阅类型”** 和 **“优先级”**  
  显示订阅是客户端订阅还是服务器订阅（在创建订阅后不能更改）。 服务器订阅可以将数据重新发布到其他订阅服务器，并可以为服务器订阅分配冲突解决优先级。  
   
  如果在新建订阅向导中选择了服务器订阅类型，则会为该订阅服务器分配一个在冲突解决过程中使用的优先级。  
@@ -124,7 +121,7 @@ ms.locfileid: "63250273"
  确定是否使用交互式冲突解决程序用户界面解决合并同步过程中的冲突。 这需要将 **“使用 Windows 同步管理器”** 的值设置为 **“启用”**。 有关详细信息，请参阅 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
   
  **Web 同步**  
- "**使用 Web 同步**" 确定是否连接到[!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services （IIS）服务器以同步订阅。 只有在为 Web 同步启用了发布时，此选项才可用。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)。  
+ **“使用 Web 同步”** 确定是否连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 服务器以同步订阅。 只有在为 Web 同步启用了发布时，此选项才可用。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)。  
   
  对于 **“使用 Web 同步”** ，如果选择 **True**，则请执行以下操作：  
   
@@ -137,6 +134,6 @@ ms.locfileid: "63250273"
 ## <a name="see-also"></a>另请参阅  
  [查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)   
  [查看和修改推送订阅属性](view-and-modify-push-subscription-properties.md)   
- [订阅发布](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

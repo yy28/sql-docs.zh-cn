@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224610"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>浏览市场篮模型（数据挖掘中级教程）
@@ -32,7 +32,7 @@ ms.locfileid: "63224610"
   
  对于本教程，你将从 "**依赖关系网络**" 选项卡开始，然后使用 "**规则**" 选项卡和 "**项集**" 选项卡来加深你对查看器中显示的关系的了解。 你还将使用**Microsoft 一般内容树查看器**来检索单个规则或项集的详细统计信息。  
   
-##  <a name="bkmk_DepNet"></a>依赖关系网络选项卡  
+##  <a name="dependency-network-tab"></a><a name="bkmk_DepNet"></a>依赖关系网络选项卡  
  利用 "**依赖关系网络**" 选项卡，您可以调查模型中不同项的交互。 查看器中的每个节点代表一个项，而节点之间的线条则代表规则。 通过选择节点，可以查看哪些其他节点预测选定项，还可以查看当前项预测哪些项。 在某些情况下，项之间存在双向关联，这意味着它们可以出现在同一事务中。 您可以参考选项卡底部的颜色图例来确定关联的方向。  
   
  连接两个项的线条意味着这些项很可能共同出现在同一事务中。 也就是说，客户很可能一起购买这些物品。 滑块与规则的概率关联。 上下移动滑块可以筛选出弱关联，弱关联意味着这些规则的概率很低。  
@@ -77,7 +77,7 @@ ms.locfileid: "63224610"
   
  [返回页首](#bkmk_DepNet)  
   
-##  <a name="bkmk_Itemsets"></a>项集选项卡  
+##  <a name="itemsets-tab"></a><a name="bkmk_Itemsets"></a>项集选项卡  
  接下来，您将更加详细地了解 Touring Tire 和 Touring Tire Tube 产品的模型所生成的规则和项集。 "**项集**" 选项卡显示与[!INCLUDE[msCoName](../includes/msconame-md.md)]关联算法发现的项集相关的三个重要信息片段：  
   
 -   **支持：** 在其中发生项集的事务的数目。  
@@ -134,7 +134,7 @@ ms.locfileid: "63224610"
   
  [返回页首](#bkmk_DepNet)  
   
-##  <a name="bkmk_Rules"></a>规则选项卡  
+##  <a name="rules-tab"></a><a name="bkmk_Rules"></a>规则选项卡  
  "**规则**" 选项卡显示与算法找到的规则相关的下列信息。  
   
 -   **概率：** 规则的*可能性*，定义为给定左侧项的右侧项的概率。  
@@ -171,7 +171,7 @@ ms.locfileid: "63224610"
   
  [返回页首](#bkmk_DepNet)  
   
-##  <a name="bkmk_ContentViewer"></a>一般内容树查看器  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_ContentViewer"></a>一般内容树查看器  
  此查看器可用于所有模型，无论算法和模型类型为何均为如此。 " **Microsoft 一般内容树查看器**" 可从 "**查看器**" 下拉列表中找到。  
   
  内容树是挖掘模型的表示形式，由一系列节点组成，其中每个节点都表示与数据的某一子集相关的已发现的知识。 节点可以包含一种模式、一组规则、一个群集或共享某些特性的日期范围的定义。 根据算法和可预测属性的类型的不同，节点的具体内容也会不同，但内容的通用表示形式是相同的。 您可以展开每个节点以查看详细信息的递增级别，并可以将任何节点的内容复制到剪贴板。  

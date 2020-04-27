@@ -1,5 +1,5 @@
 ---
-title: 从结果集中提取行（OLE DB） |Microsoft Docs
+title: 从结果集中提取行 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ea6619eede506326cdbb1442f86dc76c44e1765
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225515"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>从结果集中提取行 (OLE DB)
@@ -376,6 +376,6 @@ int ProcessResultSet() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [处理结果操作指南主题 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [处理结果操作指南主题 (OLE DB)](processing-results-how-to-topics-ole-db.md)  
   
   

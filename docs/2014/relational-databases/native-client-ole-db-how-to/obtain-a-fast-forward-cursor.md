@@ -1,5 +1,5 @@
 ---
-title: 获取 FAST_FORWARD 游标 |Microsoft Docs
+title: 获取 FAST_FORWARD 游标 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225553"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>获取 FAST_FORWARD 游标
@@ -33,7 +33,7 @@ ms.locfileid: "63225553"
   
 2.  将行集属性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 设置为 VARIANT_TRUE。  
   
-3.  执行此命令。  
+3.  执行命令。  
   
 ## <a name="example"></a>示例  
  以下示例显示如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置完属性后，将执行 SELECT 语句以检索并显示 AdventureWorks 数据库中 Purchasing.Vendor 表的 Name 列。 IA64 平台不支持此示例。  

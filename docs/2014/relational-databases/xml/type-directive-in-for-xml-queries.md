@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193284"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 查询中的 TYPE 指令
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)可通过指定 type 指令请求将 for xml 查询的结果作为`xml`数据类型返回。 这样您便可以在服务器上处理 FOR XML 查询的结果。 例如，可以对其指定 XQuery，将结果分配给`xml`类型变量，或编写[嵌套的 FOR XML 查询](use-nested-for-xml-queries.md)。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 XML 数据类型实例数据作为不同服务器构造（如使用 TYPE 指令的 FOR XML 查询，或在其中使用 `xml` 数据类型返回 SQL 表列和输出参数中的 XML 实例数据值的 FOR XML 查询）的结果返回到客户端。 在客户端应用程序代码中，ADO.NET 提供程序请求从服务器以二进制编码发送此 XML 数据类型信息。 但是，如果使用的是不带 TYPE 指令的 FOR XML，则 XML 数据将以字符串类型返回。 在任何情况下，客户端访问接口都始终能够处理其中任一种形式的 XML 内容。 请注意，不带 TYPE 指令的顶级 FOR XML 不能与游标一起使用。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 XML 数据类型实例数据作为不同服务器构造（如使用 TYPE 指令的 FOR XML 查询，或在其中使用 `xml` 数据类型返回 SQL 表列和输出参数中的 XML 实例数据值的 FOR XML 查询）的结果返回到客户端。 在客户端应用程序代码中，ADO.NET 提供程序请求从服务器以二进制编码发送此 XML 数据类型信息。 但是，如果使用的是不带 TYPE 指令的 FOR XML，则 XML 数据将以字符串类型返回。 在任何情况下，客户端访问接口都始终能够处理其中任一种形式的 XML 内容。 请注意，不带 TYPE 指令的顶级 FOR XML 不能与游标一起使用。  
   
 ## <a name="examples"></a>示例  
  以下示例说明了带 FOR XML 查询的 TYPE 指令的用法。  
@@ -74,7 +73,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>查询 FOR XML 查询的结果  
  FOR XML 查询返回 XML。 因此，可以将 `xml` 类型方法（如 `query()` 和 `value()`）应用于 FOR XML 查询返回的 XML 结果。  
   
- 在下面的查询中，`query()` 数据类型的 `xml` 方法用于查询 `FOR XML` 查询的结果。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
+ 在下面的查询中，`xml` 数据类型的 `query()` 方法用于查询 `FOR XML` 查询的结果。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -104,7 +103,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 在下面的查询中，`value()` 数据类型的 `xml` 方法用于检索 `SELECT...FOR XML` 查询返回的 XML 结果中的值。 有关详细信息，请参阅 [value() 方法（xml 数据类型）](/sql/t-sql/xml/value-method-xml-data-type)。  
+ 在下面的查询中，`xml` 数据类型的 `value()` 方法用于检索 `SELECT...FOR XML` 查询返回的 XML 结果中的值。 有关详细信息，请参阅 [value() 方法（xml 数据类型）](/sql/t-sql/xml/value-method-xml-data-type)。  
   
 ```  
 USE AdventureWorks2012;  

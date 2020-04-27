@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228559"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>执行包含表值参数的命令
@@ -29,12 +29,12 @@ ms.locfileid: "63228559"
 ## <a name="table-valued-parameter-specification"></a>指定表值参数  
  使用者可以指定表值参数的类型。 此信息包括表值参数的类型名称。 如果连接的当前默认架构中不存在该表值参数的用户定义表类型，则它还包括架构名称。 根据服务器的支持情况，使用者还可以指定可选的元数据信息（如列的排序），以及指定特定列的所有行都具有默认值。  
   
- 若要指定表值参数，使用者将调用 ISSCommandWithParameter：： SetParameterInfo，并选择性地调用 ISSCommandWithParameters：： SetParameterProperties。 对于表值参数，DBPARAMBINDINFO 结构中 pwszDataSourceType 字段的值为 DBTYPE_TABLE**。 ulParamSize 字段设为 ~0 以指示长度是未知的**。 可以通过 ISSCommandWithParameters：： SetParameterProperties 设置表值参数的特定属性，如架构名称、类型名称、列顺序和默认列。  
+ 要指定表值参数，使用者需要调用 ISSCommandWithParameter::SetParameterInfo，也可以选择调用 ISSCommandWithParameters::SetParameterProperties。 对于表值参数，DBPARAMBINDINFO 结构中 pwszDataSourceType 字段的值为 DBTYPE_TABLE**。 ulParamSize 字段设为 ~0 以指示长度是未知的**。 表值参数的特定属性（如架构名称、类型名称、列顺序和默认列）可以通过 ISSCommandWithParameters::SetParameterProperties 进行设置。  
   
 ## <a name="table-valued-parameter-binding"></a>绑定表值参数  
  表值参数可以是任意行集对象。 访问接口在执行期间从该对象中读取数据并将表值参数发送到服务器。  
   
- 若要绑定表值参数，使用者将调用 IAccessor：： CreateAccessor。 表值参数的 DBBINDING 结构的 wType 字段设置为 DBTYPE_TABLE**。 DBBINDING 结构的 pObject 成员为非 NULL 类型，并且 IID 的 pObject 成员设置为 IID_IRowset 或其他任何表值参数行集对象接口******。 DBBINDING 结构中其余字段的设置方式应与流式 BLOB 的对应字段的设置方式相同。  
+ 若要绑定表值参数，使用者可调用 IAccessor::CreateAccessor。 表值参数的 DBBINDING 结构的 wType 字段设置为 DBTYPE_TABLE**。 DBBINDING 结构的 pObject 成员为非 NULL 类型，并且 IID 的 pObject 成员设置为 IID_IRowset 或其他任何表值参数行集对象接口******。 DBBINDING 结构中其余字段的设置方式应与流式 BLOB 的对应字段的设置方式相同。  
   
  对于表值参数以及与表值参数关联的行集对象的绑定，存在如下限制：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63228559"
 -   对于具有 DBPROP_COL_AUTOINCREMENT 或 SSPROP_COL_COMPUTED 的列，数据将发送到服务器，除非还设置了 SSPROP_PARAM_TABLE_DEFAULT。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数 (OLE DB)](table-valued-parameters-ole-db.md)   
+ [表值参数 &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [使用表值参数 (OLE DB)](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

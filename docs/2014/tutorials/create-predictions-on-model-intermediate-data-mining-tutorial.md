@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217745"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>针对顺序分析和聚类分析模型创建预测（数据挖掘中级教程）
@@ -37,7 +37,7 @@ ms.locfileid: "63217745"
   
      此时将打开 "**选择挖掘模型**" 对话框。  
   
-4.  展开表示挖掘结构**顺序群集**的节点，并选择 "**包含区域**的模型序列"。 单击“确定”。  现在，请忽略“输入”窗格；您将在设置预测函数之后指定输入。  
+4.  展开表示挖掘结构**顺序群集**的节点，并选择 "**包含区域**的模型序列"。 单击" **确定**"。 现在，请忽略“输入”窗格；您将在设置预测函数之后指定输入。  
   
 5.  在网格中，单击 "**源**" 下的空单元格，然后选择 "**预测函数"。** 在 "**字段**" 下的单元中，选择 " **PredictSequence**"。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63217745"
   
  预期结果包含带有标题**表达式**的单个列。 **Expression**列包含一个嵌套表，其中包含三列，如下所示：  
   
-|$SEQUENCE|Line Number|模型|  
+|$SEQUENCE|Line Number|型号|  
 |---------------|-----------------|-----------|  
 |1||Mountain-200|  
   
@@ -151,13 +151,13 @@ NATURAL PREDICTION JOIN
   
 4.  在 "**嵌套表输入**" 对话框中，单击 "**添加**"。  
   
-5.  在新行中，单击下`Model`的框，然后从列表中选择 "旅行轮胎"。 单击“确定”。   
+5.  在新行中，单击下`Model`的框，然后从列表中选择 "旅行轮胎"。 单击" **确定**"。  
   
 6.  单击 "**结果**" 按钮查看预测。  
   
  该模型为选择 Touring Tire 作为第一件商品的所有客户推荐了其他商品。 您已经通过浏览模型了解到，客户经常同时购买 Touring Tire 和 Touring Tire Tube，因此这些建议看来不错。  
   
-|$SEQUENCE|Line Number|模型|  
+|$SEQUENCE|Line Number|型号|  
 |---------------|-----------------|-----------|  
 |1||Touring Tire Tube|  
 |2||Sport-100|  
@@ -201,6 +201,6 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>另请参阅  
  [顺序分析和聚类分析模型查询示例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [&#40;Analysis Services 的顺序分析和聚类分析模型的挖掘模型内容&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

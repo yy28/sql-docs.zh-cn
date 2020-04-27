@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226224"
 ---
 # <a name="about-dialog-box"></a>“关于”对话框
-  "**关于**" 对话框提供了产品信息，并允许您访问有关运行该产品的计算机的信息。 对于评估版， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]该项列出了在安装过期之前的剩余天数。 此对话框在“帮助”**** 菜单中。   
+  “关于”  对话框提供了产品信息，并可通过该对话框访问有关运行该产品的计算机信息。 在评估版本中，[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 项将列出安装过期前所剩余的天数。 此对话框在“帮助”  菜单中。  
   
 ## <a name="options"></a>选项  
  **组件名称**  

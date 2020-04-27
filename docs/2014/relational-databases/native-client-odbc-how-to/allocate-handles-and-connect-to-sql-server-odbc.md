@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225504"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>分配句柄并连接到 SQL Server (ODBC)
@@ -29,13 +29,13 @@ ms.locfileid: "63225504"
   
 2.  包含特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驱动程序的头文件 Odbcss.h。  
   
-3.  使用[](https://go.microsoft.com/fwlink/?LinkId=58396) SQL_HANDLE_ENV `HandleType`的调用 SQLAllocHandle 来初始化 ODBC 并分配环境句柄。  
+3.  使用[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) SQL_HANDLE_ENV `HandleType`的调用 SQLAllocHandle 来初始化 ODBC 并分配环境句柄。  
   
 4.  调用[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)并`Attribute`将设置为 SQL_ATTR_ODBC_VERSION `ValuePtr` ，并将设置为 SQL_OV_ODBC3，以指示应用程序将使用 ODBC 1.x 格式函数调用。  
   
 5.  也可以调用[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)来设置其他环境选项，或调用[SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)来获取环境选项。  
   
-6.  使用[](https://go.microsoft.com/fwlink/?LinkId=58396) SQL_HANDLE_DBC `HandleType`的调用 SQLAllocHandle 来分配连接句柄。  
+6.  使用[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) SQL_HANDLE_DBC `HandleType`的调用 SQLAllocHandle 来分配连接句柄。  
   
 7.  也可以调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)来设置连接选项，或调用[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)来获取连接选项。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63225504"
   
 11. 调用 SQLDisconnect 断开连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并使连接句柄可用于新连接。  
   
-12. 使用[](../native-client-odbc-api/sqlfreehandle.md) SQL_HANDLE_DBC `HandleType`的调用 SQLFreeHandle 来释放连接句柄。  
+12. 使用[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) SQL_HANDLE_DBC `HandleType`的调用 SQLFreeHandle 来释放连接句柄。  
   
 13. 调用 `SQLFreeHandle` 并在调用时将 `HandleType` 设为 SQL_HANDLE_ENV 以释放环境句柄。  
   

@@ -1,5 +1,5 @@
 ---
-title: 支持本地事务 |Microsoft Docs
+title: 支持本地事务 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b75104940cca183005f8a465ea19d0a517247c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213816"
 ---
 # <a name="supporting-local-transactions"></a>支持本地事务
@@ -35,26 +35,26 @@ ms.locfileid: "63213816"
   
 |参数|说明|  
 |---------------|-----------------|  
-|*isoLevel*[in]|用于该事务的隔离级别。 在本地事务中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持以下各项：<br /><br /> -ISOLATIONLEVEL_UNSPECIFIED<br />-ISOLATIONLEVEL_CHAOS<br />-ISOLATIONLEVEL_READUNCOMMITTED<br />-ISOLATIONLEVEL_READCOMMITTED<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_CURSORSTABILITY<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_SERIALIZABLE<br />-ISOLATIONLEVEL_ISOLATED<br />-ISOLATIONLEVEL_SNAPSHOT**注意：** 从开始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，无论是否为数据库启用了版本控制，ISOLATIONLEVEL_SNAPSHOT 对于*isoLevel*参数都有效。 但是，如果用户尝试执行语句，并且未启用版本支持和/或数据库不为只读，则将发生错误。 此外，如果在连接到 * 以前的 * 版本时将 ISOLATIONLEVEL_SNAPSHOT 指定为 isoLevel，将发生 XACT_E_ISOLATIONLEVEL 错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-|*isoFlags*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回除零以外的任何值的错误。|  
-|*pOtherOptions*[in]|如果不为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则 Native Client OLE DB 提供程序从接口请求 options 对象。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] options 对象的*ulTimeout*成员不为零，则 Native Client OLE DB 提供程序将返回 XACT_E_NOTIMEOUT。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序忽略*szDescription*成员的值。|  
-|*pulTransactionLevel*[out]|如果不为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则 Native Client OLE DB 提供程序将返回事务的嵌套级别。|  
+|** isoLevel[in]|用于该事务的隔离级别。 在本地事务中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持以下各项：<br /><br /> -ISOLATIONLEVEL_UNSPECIFIED<br />-ISOLATIONLEVEL_CHAOS<br />-ISOLATIONLEVEL_READUNCOMMITTED<br />-ISOLATIONLEVEL_READCOMMITTED<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_CURSORSTABILITY<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_SERIALIZABLE<br />-ISOLATIONLEVEL_ISOLATED<br />-ISOLATIONLEVEL_SNAPSHOT**注意：** 从开始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，无论是否为数据库启用了版本控制，ISOLATIONLEVEL_SNAPSHOT 对于*isoLevel*参数都有效。 但是，如果用户尝试执行语句，并且未启用版本支持和/或数据库不为只读，则将发生错误。 此外，如果在连接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本时将 ISOLATIONLEVEL_SNAPSHOT 指定为 isoLevel，将发生 XACT_E_ISOLATIONLEVEL 错误**。|  
+|** isoFlags[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回除零以外的任何值的错误。|  
+|** pOtherOptions[in]|如果不为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则 Native Client OLE DB 提供程序从接口请求 options 对象。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] options 对象的*ulTimeout*成员不为零，则 Native Client OLE DB 提供程序将返回 XACT_E_NOTIMEOUT。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序忽略*szDescription*成员的值。|  
+|** pulTransactionLevel[out]|如果不为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则 Native Client OLE DB 提供程序将返回事务的嵌套级别。|  
   
  对于本地事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**ITransaction：： Abort**参数，如下所示。  
   
 |参数|说明|  
 |---------------|-----------------|  
-|*pboidReason*[in]|忽略（如果设置）。 可以安全地为 NULL。|  
-|*fRetaining*[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将恢复为会话的自动提交模式。|  
-|*fAsync*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持异步中止。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值不为 FALSE，则 Native Client OLE DB 提供程序将返回 XACT_E_NOTSUPPORTED。|  
+|** pboidReason[in]|忽略（如果设置）。 可以安全地为 NULL。|  
+|** fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将恢复为会话的自动提交模式。|  
+|** fAsync[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持异步中止。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值不为 FALSE，则 Native Client OLE DB 提供程序将返回 XACT_E_NOTSUPPORTED。|  
   
  对于本地事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**ITransaction：： Commit**参数，如下所示。  
   
 |参数|说明|  
 |---------------|-----------------|  
-|*fRetaining*[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将恢复为会话的自动提交模式。|  
-|*grfTC*[in]|Native Client OLE DB 提供程序不支持异步和阶段[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一个返回。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序为除 XACTTC_SYNC 之外的任何值返回 XACT_E_NOTSUPPORTED。|  
-|*grfRM*[in]|必须为 0。|  
+|** fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将恢复为会话的自动提交模式。|  
+|** grfTC[in]|Native Client OLE DB 提供程序不支持异步和阶段[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一个返回。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序为除 XACTTC_SYNC 之外的任何值返回 XACT_E_NOTSUPPORTED。|  
+|** grfRM[in]|必须为 0。|  
   
  会话[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的 Native Client OLE DB 提供程序行集基于行集属性的值在本地提交或中止操作上保留 DBPROP_ABORTPRESERVE 和 DBPROP_COMMITPRESERVE。 默认情况下，这些属性都是 VARIANT_FALSE 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且会话上的所有 Native Client OLE DB 提供程序行集在中止或提交操作后将丢失。  
   

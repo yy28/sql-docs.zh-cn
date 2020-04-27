@@ -11,14 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195073"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的本地语言版本
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 Windows 操作系统支持的所有语言。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 操作系统所支持的所有语言。  
   
 ## <a name="cross-language-support"></a>跨语言支持  
   
@@ -26,13 +26,11 @@ ms.locfileid: "63195073"
   
 -   通过使用 Windows 多语言用户界面包 (MUI) 设置，具有相应语言的已本地化的操作系统或者支持的操作系统的英文版本支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本。 有关详细信息，请参阅 [Configure Operating System to Support Localized Versions](../../../2014/sql-server/install/local-language-versions-in-sql-server.md#BK_ConfigureOS)。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本只能升级到同一语言的本地化版本，并且不能升级到英文版本。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本只能升级到同一语言的本地化版本，并且不能升级到英文版本。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本也可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的英文实例并行安装。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本也可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的英文实例并行安装。  
   
-##  <a name="BK_ConfigureOS"></a>配置操作系统以支持本地化版本  
+##  <a name="configure-operating-system-to-support-localized-versions"></a><a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
  在支持的操作系统的英文版上，通过使用 Windows 多语言用户界面包 (MUI) 设置，支持使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本。  
   
  不过，在运行英语版操作系统（具有非英文 MUI 设置）的服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本之前，必须先验证某些操作系统设置。 需要验证下列操作系统设置是否匹配要安装的本地化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的语言：  
@@ -78,7 +76,7 @@ ms.locfileid: "63195073"
   
 2.  在 Control Panel 中，打开 **Regional and Language Options**。  
   
-3.  在“高级” **** 选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本” **** 选择一个值。  
+3.  在“高级”  选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本”  选择一个值。  
   
      此设置将使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装选择最佳默认排序规则。  
   

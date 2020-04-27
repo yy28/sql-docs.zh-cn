@@ -14,15 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205009"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 数据类型的 FOR XML 支持
-  如果 FOR XML 查询在 SELECT 子句中指定了 `xml` 类型的列，列值将映射为返回的 XML 中的元素，不管是否指定了 ELEMENTS 指令。 
-  `xml` 类型的列中的任何 XML 声明都不是序列化的。  
+  如果 FOR XML 查询在 SELECT 子句中指定了 `xml` 类型的列，列值将映射为返回的 XML 中的元素，不管是否指定了 ELEMENTS 指令。 `xml` 类型的列中的任何 XML 声明都不是序列化的。  
   
  例如，下面的查询`BusinessEntityID`从`FirstName` `LastName` `AdditionalContactInfo` `xml`类型为的列中检索客户联系人信息，如、和列，以及电话号码。  
   
@@ -147,8 +146,7 @@ for xml auto;
   
 -   含有单个 `xml` 类型列的表  
   
--   
-  `xml` 类型的实例  
+-   `xml` 类型的实例  
   
  例如，下面的用户定义函数返回含有单个 `xm`l 类型列的表：  
   

@@ -1,5 +1,5 @@
 ---
-title: Blob 和 OLE 对象 |Microsoft Docs
+title: BLOB 和 OLE 对象 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195215"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开了**ISequentialStream**接口，以支持使用者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **访问 ntext**、 **text**、 **image**、 **varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 和 xml 数据类型作为二进制大型对象（blob）。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据********。  
   
- 有关演示此功能的示例，请参阅[Set 大型 Data &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)。  
+ 有关演示此功能的示例，请参阅[设置大型数据 (OLE DB)](../native-client-ole-db-how-to/set-large-data-ole-db.md)。  
   
  当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者在访问器中提供用于数据修改的接口指针时，Native Client OLE DB 提供程序可以使用使用者实现的**IStorage**接口。  
   

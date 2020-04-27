@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233076"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>SQL Server 早期版本的新日期和时间功能 (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "63233076"
   
 |OLE DB 客户端类型|SQL Server 2005 类型|SQL Server 2008 （或更高版本）类型|结果转换（服务器到客户端）|参数转换（客户端到服务器）|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Date|OK|OK|  
+|DBTYPE_DBDATE|Datetime|日期|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零，则 IRowsetChange 将因字符串截断而失败。|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零，IRowsetChange 将失败，原因是字符串截断。<br /><br /> 日期将被忽略。|  
@@ -39,7 +39,7 @@ ms.locfileid: "63233076"
 |DBTYPE_DBTIMESTAMP|||失败-时间文本无效。|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 （3）|OK|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 （7）|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
+|DBTYPE_DBDATE|Smalldatetime|日期|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零，则 IRowsetChange 将因字符串截断而失败。|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零，IRowsetChange 将失败，原因是字符串截断。<br /><br /> 日期将被忽略。|  
@@ -55,7 +55,7 @@ ms.locfileid: "63233076"
   
 -   切换到 `datetime2`，因为这是首选的日期和时间数据类型。  
   
- 使用从 ICommandWithParameters：： GetParameterInfo 或架构行集获取的服务器元数据的应用程序通过 ICommandWithParameters：： SetParameterInfo 设置参数类型信息将在客户端转换期间失败，其中字符串源类型的表示形式大于目标类型的字符串表示形式。 例如，如果客户端绑定使用 DBTYPE_DBTIMESTAMP 并且服务器列是日期， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则 Native client 会将值转换为 "yyyy-mm-dd hh： mm： ss"，但服务器元数据将返回为。 `nvarchar(10)` 生成的溢出会导致 DBSTATUS_E_CATCONVERTVALUE。 IRowsetChange 的数据转换会出现类似的问题，因为行集元数据是通过结果集元数据设置的。  
+ 如果源类型的字符串表示形式大于目标类型的字符串表示形式，则使用通过 ICommandWithParameters：： GetParameterInfo 或架构行集获取的服务器元数据的应用程序通过 ICommandWithParameters：： SetParameterInfo 设置参数类型信息会失败。 例如，如果客户端绑定使用 DBTYPE_DBTIMESTAMP 并且服务器列是日期， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则 Native client 会将值转换为 "yyyy-mm-dd hh： mm： ss"，但服务器元数据将返回为。 `nvarchar(10)` 生成的溢出会导致 DBSTATUS_E_CATCONVERTVALUE。 IRowsetChange 的数据转换会出现类似的问题，因为行集元数据是通过结果集元数据设置的。  
   
 ### <a name="parameter-and-rowset-metadata"></a>参数和行集元数据  
  本部分介绍使用早于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的 Native Client 版本编译的客户端的参数、结果列和架构行集的元数据。  
@@ -68,7 +68,7 @@ ms.locfileid: "63233076"
 |date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|日期/时间|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19，21. 27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26，28. 34|~0|~0|  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63233076"
 |date|DBTYPE_WSTR|10|Null|Null|  
 |time|DBTYPE_WSTR|8, 10..16|Null|Null|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|日期/时间|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19，21. 27|Null|Null|  
 |datetimeoffset|DBTYPE_WSTR|26，28. 34|Null|Null|  
   
@@ -94,7 +94,7 @@ ms.locfileid: "63233076"
 |date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|日期/时间|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19，21. 27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26，28. 34|~0|~0|  
   
@@ -109,7 +109,7 @@ ms.locfileid: "63233076"
 |date|DBTYPE_WSTR|10|20|Null|  
 |time|DBTYPE_WSTR|8, 10..16|16，20. 32|Null|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Null|Null|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Null|Null|3|  
+|日期/时间|DBTYPE_DBTIMESTAMP|Null|Null|3|  
 |datetime2|DBTYPE_WSTR|19，21. 27|38，42。|Null|  
 |datetimeoffset|DBTYPE_WSTR|26，28. 34|52，56。|Null|  
   
@@ -121,7 +121,7 @@ ms.locfileid: "63233076"
 |date|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8, 10..16|16，20. 32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Null|Null|smalldatetime|  
-|datetime|DBTYPE_DBTIMESTAMP|Null|Null|datetime|  
+|日期/时间|DBTYPE_DBTIMESTAMP|Null|Null|datetime|  
 |datetime2|DBTYPE_WSTR|19，21. 27|38，42。|datetime2|  
 |datetimeoffset|DBTYPE_WSTR|26，28. 34|52，56。|datetimeoffset|  
   
@@ -166,6 +166,6 @@ ms.locfileid: "63233076"
  允许对新的日期/时间类型使用所有比较运算符，因为这些比较运算符显示为字符串类型，而不是显示为日期/时间类型。  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE DB &#40;的日期和时间改进&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和时间改进 (OLE DB)](date-and-time-improvements-ole-db.md)  
   
   

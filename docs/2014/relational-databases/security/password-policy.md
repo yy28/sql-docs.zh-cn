@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187966"
 ---
 # <a name="password-policy"></a>密码策略
@@ -75,7 +75,7 @@ ms.locfileid: "63187966"
   
     -   用当前的密码哈希值初始化密码历史记录。  
   
-    -   还将启用**帐户锁定持续时间**、**帐户锁定阈值**和**在此后重置帐户锁定计数器**。  
+    -   还将启用**帐户锁定时间**, **帐户锁定阈值**和 **在此后重置帐户锁定计数器** 。  
   
 -   如果 CHECK_POLICY 改为 OFF，则将出现以下行为：  
   
@@ -83,8 +83,7 @@ ms.locfileid: "63187966"
   
     -   清除密码历史记录。  
   
-    -   
-  `lockout_time` 的值被重置。  
+    -   `lockout_time` 的值被重置。  
   
  不支持策略选项的某些组合。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "63187966"
   
  [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)  
   
- [ALTER USER &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
+ [ALTER USER (Transact-SQL)](/sql/t-sql/statements/alter-user-transact-sql)  
   
  [创建登录名](authentication-access/create-a-login.md)  
   

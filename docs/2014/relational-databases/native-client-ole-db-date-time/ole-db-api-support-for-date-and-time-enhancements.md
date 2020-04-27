@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ef6334f6fe4671f2563add857f6dd58ce67a2840
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63237849"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API 对日期和时间增强功能的支持
@@ -30,11 +30,11 @@ ms.locfileid: "63237849"
 |ICommandWithParameters::SetParameterinfo|有关详细信息，请参阅[参数和行集元数据](metadata-parameter-and-rowset.md)。|  
 |IColumnsRowset::GetColumnsRowset|有关详细信息，请参阅[参数和行集元数据](metadata-parameter-and-rowset.md)。|  
 |IColumnsInfo::GetColumnInfo|有关详细信息，请参阅[参数和行集元数据](metadata-parameter-and-rowset.md)。|  
-|IDBSchemaRowset::GetRowset|有关受影响的架构行集的详细信息，请参阅[日期和时间以及架构行集](../native-client-ole-db-rowsets/rowsets.md)。|  
+|IDBSchemaRowset::GetRowset|若要详细了解受影响的架构行集，请参阅[日期和时间与架构行集](../native-client-ole-db-rowsets/rowsets.md)。|  
 |IRowsetFastLoad|此接口支持新的日期/时间类型，但对其接口没有任何更改。|  
-|ITableDefinition::CreateTable|有关详细信息，请参阅[对 OLE DB 日期和时间改进的数据类型支持](data-type-support-for-ole-db-date-and-time-improvements.md)。|  
+|ITableDefinition::CreateTable|有关详细信息，请参阅[针对 OLE DB 日期和时间改进的数据类型支持](data-type-support-for-ole-db-date-and-time-improvements.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE DB &#40;的日期和时间改进&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和时间改进 (OLE DB)](date-and-time-improvements-ole-db.md)  
   
   

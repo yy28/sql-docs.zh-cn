@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187102"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
@@ -33,7 +33,7 @@ ms.locfileid: "63187102"
   
 ## <a name="server-and-network"></a>服务器和网络  
   
--   设置分配给[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的最小和最大内存量。  
+-   设置分配给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的最小和最大内存量。  
   
      默认情况下， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 根据可用的系统资源动态改变它的内存要求。 为避免在复制活动期间出现低内存可用性的问题，请使用 **min server memory** 选项设置最小可用内存。 为避免将操作系统页写入磁盘以节省内存，也可以使用 **max server memory** 选项设置最大内存量。 有关详细信息，请参阅[服务器内存服务器配置选项](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63187102"
   
      LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 不推荐使用数据类型 `text`、`ntext` 和 `image`。 如果确实要包括 LOB，建议分别使用数据类型 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。  
   
-     对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件” **** 的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
+     对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件”  的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   
 ## <a name="publication-design"></a>发布设计  
   

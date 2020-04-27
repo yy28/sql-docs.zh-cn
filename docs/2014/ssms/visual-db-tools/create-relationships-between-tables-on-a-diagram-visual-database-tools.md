@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184276"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在关系图中创建表间的关系（可视化数据库工具）
@@ -28,17 +28,17 @@ ms.locfileid: "63184276"
   
 2.  将所选列拖动到相关的表中。  
   
-3.  显示两个对话框：“外键关系”**** 对话框和前景中显示的“表和列”**** 对话框。  
+3.  显示两个对话框：“外键关系”  对话框和前景中显示的“表和列”  对话框。  
   
 4.  **关系名称**具有系统提供的名称，格式为 FK_*localtable*_*foreigntable*。 您可以更改此值。  
   
-5.  验证“主键表”**** 是否指定了正确的表。  
+5.  验证“主键表”  是否指定了正确的表。  
   
 6.  网格列出了本地列及与其匹配的外部列。 您可以添加或删除表列或者更改映射。  
   
-7.  选择“确定”。****  
+7.  选择“确定”。   
   
-     此时将出现“外键关系”**** 对话框。 **所选关系**显示已创建的关系。  
+     此时将出现“外键关系”  对话框。 “选定的关系”  中显示了已创建的关系。  
   
 8.  在网格中更改关系的属性。  
   

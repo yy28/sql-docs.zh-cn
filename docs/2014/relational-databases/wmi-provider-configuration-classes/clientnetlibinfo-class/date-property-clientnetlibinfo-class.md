@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 31bb3835202d752a067fc47c8afac32b9107bd7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63191168"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 属性（ClientNetLibInfo 类）
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示有关客户端网络库的信息的 [ClientNetLibInfo 类](clientnetlibinfo-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

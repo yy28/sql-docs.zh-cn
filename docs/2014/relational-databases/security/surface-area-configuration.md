@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184536"
 ---
 # <a name="surface-area-configuration"></a>Surface Area Configuration
@@ -60,7 +60,7 @@ ms.locfileid: "63184536"
   
  若要定期检查某个方面的配置，请使用基于策略的管理。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](../policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
- 也可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 存储过程来设置`sp_configure`选项。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
+ 也可以使用 `sp_configure` 存储过程来设置[!INCLUDE[ssDE](../../includes/ssde-md.md)]选项。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
  若要更改 **的** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]属性，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的属性设置。 若要更改“预定事件和报表传递”  属性和“Web 服务和 HTTP 访问”  属性，请编辑 **RSReportServer.config** 配置文件。  
   

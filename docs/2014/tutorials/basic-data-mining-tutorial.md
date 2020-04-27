@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185571"
 ---
 # <a name="basic-data-mining-tutorial"></a>数据挖掘基础教程
@@ -51,11 +51,11 @@ ms.locfileid: "63185571"
  [第 3 课：添加和处理模型](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  在本课中，您将学习如何向结构中添加模型。 您创建的模型是用如下算法生成的：  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]决策树  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]群集  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Naive Bayes  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes  
   
  [第4课：浏览目标邮件模型 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  在本课中，您将学习如何使用查看器浏览和解释在每个模型中发现的内容。  
@@ -63,7 +63,7 @@ ms.locfileid: "63185571"
  [第5课：测试模型 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  在本课中，您将创建某个 Targeted Mailing 模型的副本，添加一个挖掘模型筛选器以将定型数据限制在特定客户集，然后评估该模型的可行性。  
   
- [第6课：创建和使用预测 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [第 6 课：创建和使用预测（数据挖掘基础教程）](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  在本数据挖掘基础教程的最后一课中，您将使用该模型预测哪些客户最有可能购买自行车。 随后，您将钻取到基础事例以获取联系信息。  
   
 ## <a name="requirements"></a>要求  
@@ -73,8 +73,7 @@ ms.locfileid: "63185571"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库。  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库。  
   
  为了增强安全性，示例数据库不随 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安装。 若要安装的正式数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请访问[Microsoft SQL 示例数据库](https://go.microsoft.com/fwlink/?LinkId=88417)页，并[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]选择。  
   
@@ -84,6 +83,6 @@ ms.locfileid: "63185571"
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘解决方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [挖掘模型任务和操作指南](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [利用 DMX 创建和查询数据挖掘模型：教程 &#40;Analysis Services 数据挖掘&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [使用 DMX 创建和查询数据挖掘模型：教程（Analysis Services - 数据挖掘）](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

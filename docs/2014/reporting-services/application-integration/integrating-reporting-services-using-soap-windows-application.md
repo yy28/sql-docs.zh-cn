@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb34dc31d65c9b0814a348232d0e2405d7676fda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63218348"
 ---
 # <a name="using-the-soap-api-in-a-windows-application"></a>在 Windows 应用程序中使用 SOAP API
@@ -93,8 +93,7 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  ReportViewer 控件有两个版本，一个用于各种 Windows 客户端应用程序，另一个用于 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序。 这两个控件都支持本地处理模式和远程处理模式。 在本地处理模式中，应用程序提供报表定义以及数据集报表处理和触发器报表处理。 在远程处理模式中，数据检索和报表处理在报表服务器上进行，而 ReportViewer 控件用于显示和报表导航。 使用此模式可以生成丰富的应用程序，小至桌面应用程序，大到企业级应用程序。  
   
- 
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 联机帮助中有关于 ReportViewer 控件的记载。 有关详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 产品文档。  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 联机帮助中有关于 ReportViewer 控件的记载。 有关详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 产品文档。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

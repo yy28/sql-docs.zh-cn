@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204608"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>汇总或聚合表中所有行的值 (Visual Database Tools)
@@ -51,13 +51,13 @@ FROM titles
   
 1.  请确保您要聚合的表已经包含在“关系图”窗格中。  
   
-2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“分组依据”  。 [查询和视图设计器](query-and-view-designer-tools-visual-database-tools.md)会在“条件”窗格的网格中添加一个“分组依据”  列。  
+2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“分组依据”****。 [查询和视图设计器](query-and-view-designer-tools-visual-database-tools.md)会在“条件”窗格的网格中添加一个“分组依据”**** 列。  
   
 3.  将要聚合的列添加到“条件”窗格中。 确保将该列标记为输出。  
   
      查询及视图设计器将自动为要汇总的列分配列别名。 您可以用更有意义的名称替换此别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
-4.  在“分组依据”  网格列中，选择适当的聚合函数，例如：**Sum**、**Avg**、**Min**、**Max** 和 **Count**。 如果只希望聚合结果集中的唯一行，请选择带 DISTINCT 选项的聚合函数，如 **Min Distinct**。 不要选择 **Group By**、 **Expression**或 **Where**，因为这些选项不适用于聚合所有行。  
+4.  在“分组依据”**** 网格列中，选择适当的聚合函数，例如：**Sum**、**Avg**、**Min**、**Max** 和 **Count**。 如果只希望聚合结果集中的唯一行，请选择带 DISTINCT 选项的聚合函数，如 **Min Distinct**。 不要选择 **Group By**、 **Expression**或 **Where**，因为这些选项不适用于聚合所有行。  
   
      查询和视图设计器将用指定的聚合函数替换 [“SQL”窗格](sql-pane-visual-database-tools.md) 内语句中的列名。 例如，SQL 语句可能类似以下形式：  
   
@@ -68,7 +68,7 @@ FROM titles
   
 5.  如果希望在查询中创建多个聚合，请重复第 3 和第 4 步。  
   
-     当向查询输出列表或排序依据列表中添加另一列时，查询和视图设计器会自动在网格的“分组依据”  列中填充 **Group By** 一词。 请选择适当的聚合函数。  
+     当向查询输出列表或排序依据列表中添加另一列时，查询和视图设计器会自动在网格的“分组依据”**** 列中填充 **Group By** 一词。 请选择适当的聚合函数。  
   
 6.  添加搜索条件（如果有的话），以指定要汇总的行子集。  
   

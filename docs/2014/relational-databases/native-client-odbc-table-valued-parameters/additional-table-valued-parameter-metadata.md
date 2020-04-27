@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200575"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他表值参数的元数据
@@ -34,7 +34,7 @@ ms.locfileid: "63200575"
 |DECIMAL_DIGITS|Smallint|Null|  
 |NUM_PREC_RADIX|Smallint|Null|  
 |NULLABLE|Smallint（非 NULL）|SQL_NULLABLE|  
-|注释|Varchar|Null|  
+|REMARKS|Varchar|Null|  
 |COLUMN_DEF|WVarchar(4000)|Null|  
 |SQL_DATA_TYPE|Smallint（非 NULL）|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|Null|  

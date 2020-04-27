@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d22ec44b7be6562c7186272b403a76cd562be62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192086"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>连接到 SQL Server 实例
@@ -37,8 +37,7 @@ ms.locfileid: "63192086"
   
  **在服务器对象构造函数中提供 SQL Server 实例名称**  
   
- 声明 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象变量并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名称作为字符串参数传递到构造函数中。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> 对象使用默认的连接设置建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。  
+ 声明 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象变量并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名称作为字符串参数传递到构造函数中。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象使用默认的连接设置建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。  
   
 ## <a name="connection-pooling"></a>连接池  
  通常不要求调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 对象的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 方法。 在需要时，SMO 会自动建立连接，并在操作完成后，将连接发布到连接池。 在调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法时，不释放与池的连接。 若要释放与池的连接，需要显式调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法。 此外，您可以通过设置 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> 对象的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 属性，请求非池的连接。  
@@ -49,7 +48,7 @@ ms.locfileid: "63192086"
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>连接到用于 RMO 的 SQL Server 实例  
  复制管理对象 (RMO) 用于连接到复制服务器的方法与 SMO 稍有不同。  
   
- RMO 编程对象要求通过使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 命名空间实现的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象，建立与 `Microsoft.SqlServer.Management.Common` 的实例的连接。 与服务器的这一连接独立于 RMO 编程对象建立。 然后，在实例创建期间或通过指派该对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性，将它传递到 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
+ RMO 编程对象要求通过使用 `Microsoft.SqlServer.Management.Common` 命名空间实现的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象，建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。 与服务器的这一连接独立于 RMO 编程对象建立。 然后，在实例创建期间或通过指派该对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性，将它传递到 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
   
 -   为指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象定义连接的所有属性。  
   

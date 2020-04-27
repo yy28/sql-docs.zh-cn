@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205263"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>创建 SQL Server Native Client ODBC 驱动程序应用程序
@@ -35,7 +35,7 @@ ms.locfileid: "63205263"
   
 |组件|函数|  
 |---------------|--------------|  
-|Application|调用 ODBC 函数以与 ODBC 数据源通信、提交 SQL 语句以及处理结果集。|  
+|应用程序|调用 ODBC 函数以与 ODBC 数据源通信、提交 SQL 语句以及处理结果集。|  
 |驱动程序管理器|管理应用程序和该应用程序使用的所有 ODBC 驱动程序之间的通信。|  
 |驱动程序|处理来自应用程序的所有 ODBC 函数调用、连接到数据源、将 SQL 语句从应用程序传递到数据源以及将结果返回给应用程序。 必要时，驱动程序将来自应用程序的 ODBC SQL 转换为数据源使用的本机 SQL。|  
 |数据源|包含驱动程序访问 DBMS 中数据的特定实例所需的所有信息。|  
@@ -82,21 +82,17 @@ ms.locfileid: "63205263"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的列属性。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的数据类型。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的数据类型。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的用户定义数据类型。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的用户定义数据类型。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的[SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md)类型。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序诊断字段。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的诊断动态函数代码。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的诊断动态函数代码。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的本机 C 数据类型的 C/C++ 类型定义（当列绑定到 C 数据类型 SQL_C_BINARY 时返回）。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的本机 C 数据类型的 C/C++ 类型定义（当列绑定到 C 数据类型 SQL_C_BINARY 时返回）。  
   
 -   SQLPERF 数据结构的类型定义。  
   
@@ -104,8 +100,7 @@ ms.locfileid: "63205263"
   
 -   调用分布式查询元数据 API 函数，以获取链接服务器及其目录的列表。  
   
- 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序的大容量复制功能的任何 C 或 c + + ODBC 应用程序必须与 sqlncli11 文件链接。 调用分布式查询元数据 API 函数的应用程序也必须与 sqlncli11.lib 文件链接。 Sqlncli.msi 和 sqlncli11 文件作为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发人员工具的一部分进行分发。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 和 Lib 目录应在编译器的 INCLUDE 和 LIB 路径中，具体如下所示：  
+ 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序的大容量复制功能的任何 C 或 c + + ODBC 应用程序必须与 sqlncli11 文件链接。 调用分布式查询元数据 API 函数的应用程序也必须与 sqlncli11.lib 文件链接。 Sqlncli.msi 和 sqlncli11 文件作为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发人员工具的一部分进行分发。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 和 Lib 目录应在编译器的 INCLUDE 和 LIB 路径中，具体如下所示：  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
@@ -121,6 +116,6 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
 -   [多线程应用程序](creating-a-driver-application-multithreaded-applications.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)  
   
   

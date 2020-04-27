@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204711"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>了解数据库关系图所有权 (Visual Database Tools)
@@ -36,6 +36,6 @@ ms.locfileid: "63204711"
   
 ## <a name="see-also"></a>另请参阅  
  [使用数据库关系图 &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
- [&#40;Visual Database Tools 设置数据库关系图设计器&#41;](visual-database-tools.md)  
+ [设置数据库关系图设计器 (Visual Database Tools)](visual-database-tools.md)  
   
   
