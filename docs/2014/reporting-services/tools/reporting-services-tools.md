@@ -22,19 +22,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c56f28a6f65b22d8fe334a1046f44f868c4453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099904"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]包含一组图形和脚本编写工具，它们支持在托管环境中开发和使用丰富的报表。 该工具集包括开发工具、配置和管理工具以及报表查看工具。 本主题简要介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的各工具以及如何访问该工具。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含支持在托管环境中开发和使用具有丰富功能的报表的一组图形和脚本编写工具。 该工具集包括开发工具、配置和管理工具以及报表查看工具。 本主题简要介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的各工具以及如何访问该工具。  
   
  如需立即找到工具，请参阅[教程：如何查找并启动 Reporting Services 工具 (SSRS)](tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
   
 ## <a name="tools-for-report-authoring"></a>报表创作工具  
- 下表列出了中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用于报表创作的可用工具。  
+ 下表列出了可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中创作报表的工具。  
   
 |工具|说明|如何访问|  
 |----------|-----------------|-------------------|  
@@ -70,14 +70,13 @@ ms.locfileid: "66099904"
   
 |工具|说明|如何访问|  
 |----------|-----------------|-------------------|  
-|报表服务器 Web 服务 URL|使用此工具可在一般的项导航页中浏览报表目录中的内容。<br /><br /> 有关详细信息，请参阅 [Report Server Web Service](../report-server-web-service/report-server-web-service.md)。|浏览者|  
-|报表管理器|**（仅限本机模式）** 使用此工具可通过 HTTP 连接来管理远程位置的单个 Report Server 实例。 您可以执行下列操作：<br /><br /> 查看、搜索、打印和订阅报表。<br /><br /> 创建、保护和维护文件夹层次结构，以便组织服务器上的项。<br /><br /> 配置基于角色的安全性，确定对项和操作的访问权限。<br /><br /> 配置报表执行属性、报表历史记录和报表参数。<br /><br /> 创建连接到 Microsoft SQL Server Analysis Services 数据源或 SQL Server 关系数据源或从其检索数据的报表模型。<br /><br /> 设置模型项安全性，以便可以访问模型中的特定实体，或将实体映射到事先创建的预定义点击链接型报表。<br /><br /> 创建共享计划和共享数据源，以提高计划和数据源连接的可管理性。<br /><br /> 创建可以将报表展开为大型收件人列表的数据驱动订阅。<br /><br /> 创建链接报表，以便按不同方式重用现有报表和重新确定其用途。<br /><br /> 启动报表生成器来创建可以在报表服务器上保存和运行的报表。<br /><br /> <br /><br /> 有关详细信息，请参阅[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。||  
-|RS 实用工具|此工具是可用于执行脚本操作的脚本主机。 
-  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 使用此工具可以运行   脚本，这些脚本可在报表服务器数据库之间复制数据、发布报表、在报表服务器数据库中创建项等。<br /><br /> 有关详细信息，请参阅[报表服务器命令提示实用工具 (SSRS)](report-server-command-prompt-utilities-ssrs.md)。|命令提示符|  
+|报表服务器 Web 服务 URL|使用此工具可在一般的项导航页中浏览报表目录中的内容。<br /><br /> 有关详细信息，请参阅 [Report Server Web Service](../report-server-web-service/report-server-web-service.md)。|浏览器|  
+|报表管理器|**（仅限本机模式）** 使用此工具可通过 HTTP 连接来管理远程位置的单个报表服务器实例。 您可以执行下列操作：<br /><br /> 查看、搜索、打印和订阅报表。<br /><br /> 创建、保护和维护文件夹层次结构，以便组织服务器上的项。<br /><br /> 配置基于角色的安全性，确定对项和操作的访问权限。<br /><br /> 配置报表执行属性、报表历史记录和报表参数。<br /><br /> 创建连接到 Microsoft SQL Server Analysis Services 数据源或 SQL Server 关系数据源或从其检索数据的报表模型。<br /><br /> 设置模型项安全性，以便可以访问模型中的特定实体，或将实体映射到事先创建的预定义点击链接型报表。<br /><br /> 创建共享计划和共享数据源，以提高计划和数据源连接的可管理性。<br /><br /> 创建可以将报表展开为大型收件人列表的数据驱动订阅。<br /><br /> 创建链接报表，以便按不同方式重用现有报表和重新确定其用途。<br /><br /> 启动报表生成器来创建可以在报表服务器上保存和运行的报表。<br /><br /> <br /><br /> 有关详细信息，请参阅[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。||  
+|RS 实用工具|此工具是可用于执行脚本操作的脚本主机。 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 使用此工具可以运行   脚本，这些脚本可在报表服务器数据库之间复制数据、发布报表、在报表服务器数据库中创建项等。<br /><br /> 有关详细信息，请参阅[报表服务器命令提示实用工具 (SSRS)](report-server-command-prompt-utilities-ssrs.md)。|命令提示符|  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 报表服务器](../reporting-services-report-server.md)   
- [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
+ [SSRS &#40;Reporting Services 概念&#41;](../reporting-services-concepts-ssrs.md)   
  [Reporting Services (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

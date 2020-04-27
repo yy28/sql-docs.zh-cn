@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 095929c60d586fa0ed6c857412a369171acdaa10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097924"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserver_configurationsetting"></a>SetUnattendedExecutionAccount 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -41,10 +41,10 @@ public void SetUnattendedExecutionAccount (string UserName,
 ```  
   
 ## <a name="parameters"></a>parameters  
- *用户名*  
+ *UserName*  
  用于无人参与执行的 Windows 帐户。  
   
- *权限*  
+ *密码*  
  指定帐户的密码。  
   
  *HRESULT*  
@@ -59,7 +59,7 @@ public void SetUnattendedExecutionAccount (string UserName,
  不能使用 SetUnattendedExecutionAccount 方法在报表服务器 Windows 服务的上下文中运行无人参与的执行。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

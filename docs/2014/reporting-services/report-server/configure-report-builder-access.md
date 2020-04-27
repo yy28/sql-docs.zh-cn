@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be19f42fa5e8a154d8f29e359b6a52395c6504d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104031"
 ---
 # <a name="configure-report-builder-access"></a>配置报表生成器访问权限
-  报表生成器是一种即席报表工具，它使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置为本机模式或 SharePoint 集成模式的 Report Server 进行安装。  
+  报表生成器是一个特别报告生成工具，该工具随为本机模式或 SharePoint 集成模式配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器一起安装。  
   
  报表生成器的访问权限取决于以下因素：  
   
@@ -34,13 +34,10 @@ ms.locfileid: "66104031"
   
  若要使用报表生成器，必须有已发布的报表模型可供使用。  
   
-## <a name="prerequisites"></a>必备条件  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均不提供报表生成器。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+## <a name="prerequisites"></a>先决条件  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均不提供报表生成器。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- 客户端计算机必须[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]安装了2.0。 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供运行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 应用程序的基础结构。  
+ 客户端计算机必须[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]安装了2.0。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供运行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 应用程序的基础结构。  
   
  必须使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 或更高版本。  
   
@@ -118,27 +115,27 @@ ms.locfileid: "66104031"
   
 1.  启动报表管理器。  
   
-2.  单击 **“网站设置”**。  
+2.  单击 **“网站设置”** 。  
   
 3.  单击 **“安全性”** 。  
   
-4.  如果要为其配置报表生成器访问权的用户或组已经分配有角色，则单击 **“编辑”**。  
+4.  如果要为其配置报表生成器访问权的用户或组已经分配有角色，则单击 **“编辑”** 。  
   
-     否则，单击 **“新建角色分配”**。 在“组或用户”中，按如下格式输入一个 Windows 域用户或组帐户：\<domain>\\<account\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
+     否则，单击 **“新建角色分配”** 。 在“组或用户”中，按如下格式输入一个 Windows 域用户或组帐户：\<domain>\\<account\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
   
-5.  选择 **“系统用户”**，然后单击 **“确定”**。  
+5.  选择 **“系统用户”** ，然后单击 **“确定”** 。  
   
-6.  单击 **“主页”**。  
+6.  单击 **“主页”** 。  
   
 7.  单击 **“文件夹设置”** 选项卡。  
   
-8.  单击“安全性”**** 选项卡。  
+8.  单击“安全”选项卡。   
   
-9. 如果要为其配置报表生成器访问权的用户或组已经分配有角色，则单击 **“编辑”**。  
+9. 如果要为其配置报表生成器访问权的用户或组已经分配有角色，则单击 **“编辑”** 。  
   
-     否则，单击 **“新建角色分配”**。 在“组或用户”中，按如下格式输入一个 Windows 域用户或组帐户：\<domain>\\<account\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
+     否则，单击 **“新建角色分配”** 。 在“组或用户”中，按如下格式输入一个 Windows 域用户或组帐户：\<domain>\\<account\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
   
-10. 选择 **“报表生成者”**，然后单击 **“应用”**。  
+10. 选择 **“报表生成者”** ，然后单击 **“应用”** 。  
   
 11. 重复这些步骤以便为其他用户或组创建或修改角色分配。  
   

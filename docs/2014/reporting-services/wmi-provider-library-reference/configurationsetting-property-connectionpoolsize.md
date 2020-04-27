@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24a180fde90ff406d40a0f0c89bf82dfe5138b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097864"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserver_configurationsetting"></a>ConnectionPoolSize 属性 (WMI MSReportServer_ConfigurationSetting)
@@ -45,7 +45,7 @@ public UInt32 ConnectionPoolSize;
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

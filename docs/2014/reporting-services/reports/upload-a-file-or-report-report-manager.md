@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102399"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上载文件或报表（报表管理器）
@@ -36,7 +36,7 @@ ms.locfileid: "66102399"
   
 1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
-2.  在报表管理器中，导航到 **“内容”** 页。 导航到要向其中添加项的文件夹。  
+2.  在报表管理器中，导航到 "**内容**" 页。 导航到要向其中添加项的文件夹。  
   
 3.  单击 **“上载文件”**。  
   

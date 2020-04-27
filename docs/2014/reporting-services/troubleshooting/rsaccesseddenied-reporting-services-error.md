@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bfaad65431cc71c8fa7a6ec5ba24e13fa7692e99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099225"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Reporting Services 错误
@@ -24,7 +24,7 @@ ms.locfileid: "66099225"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式 &#124; 纯模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | SharePoint 模式|  
   
 -   如果通过 URL 直接访问报表服务器时发生这种错误，则该例外情况将映射到 HTTP 401 错误。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66099225"
 |**产品名称**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**事件 ID**|rsAccessedDenied|  
 |**事件源**|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
-|**组件**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|组件 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |**消息正文**|为用户“mydomain\myAccount”授予的权限不足，无法执行此操作。 (rsAccessDenied) (ReportingServicesLibrary)|  
   
 ## <a name="user-action"></a>用户操作  
@@ -50,6 +50,6 @@ ms.locfileid: "66099225"
 ## <a name="see-also"></a>另请参阅  
  [角色分配](../security/role-assignments.md)   
  [授予对本机模式报表服务器的权限](../security/granting-permissions-on-a-native-mode-report-server.md)   
- [角色和权限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
+ [角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)  
   
   

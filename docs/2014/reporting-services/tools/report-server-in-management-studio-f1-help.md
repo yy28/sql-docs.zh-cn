@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100078"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio 中报表服务器的 F1 帮助
@@ -58,6 +58,6 @@ ms.locfileid: "66100078"
   
 ## <a name="see-also"></a>另请参阅  
  [功能参考（Reporting Services）](../feature-reference-reporting-services.md)   
- [简介 SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
+ [SQL Server Management Studio 简介](../../ssms/sql-server-management-studio-ssms.md)  
   
   

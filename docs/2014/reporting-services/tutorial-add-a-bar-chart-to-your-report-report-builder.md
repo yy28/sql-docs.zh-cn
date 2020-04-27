@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099201"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
@@ -30,7 +30,7 @@ ms.locfileid: "66099201"
   
  ![rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "rs_BarChartTutorial")  
   
-##  <a name="BackToTop"></a>你将学习的内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容  
  在本教程中，您将学习如何执行下列操作：  
   
 1.  [使用图表向导创建图表](#Chart)  
@@ -61,7 +61,7 @@ ms.locfileid: "66099201"
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Chart"></a>1. 使用图表向导创建图表报表  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. 使用图表向导创建图表报表  
  从 "**入门**" 对话框中，创建嵌入数据集，选择共享数据源，并使用图表向导创建条形图。  
   
 > [!NOTE]  
@@ -78,16 +78,16 @@ ms.locfileid: "66099201"
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在右窗格中，单击“图表向导”  。  
+3.  在右窗格中，单击“图表向导”****。  
   
-4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”    。  
+4.  在 "**选择数据集**" 页上，单击 "**创建数据集**"，然后单击 "**下一步**"。  
   
-5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”   。 您可能需要输入用户名和密码。  
+5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”********。 您可能需要输入用户名和密码。  
   
     > [!NOTE]  
     >  只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  在 "**设计查询**" 页上，单击 "**编辑为文本**"。  
+6.  在“设计查询”页上，单击“编辑为文本”********。  
   
 7.  将以下查询粘贴到查询窗格中：  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66099201"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2009, CAST(207000. AS money) AS SalesYear2008  
     ```  
   
-8.  （可选）单击“运行”按钮 ( **!** )，查看要用于图表的数据。  
+8.  （可选）单击“运行”按钮 (!)，查看要用于图表的数据****。  
   
-9. 单击“下一步”。   
+9. 单击“下一步”  。  
   
-##  <a name="ChartType"></a>2. 选择图表类型  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. 选择图表类型  
  可以从各种预定义的图表类型中进行选择。  
   
 #### <a name="to-add-a-column-chart"></a>添加柱形图  
@@ -129,7 +129,7 @@ ms.locfileid: "66099201"
   
 5.  将 SalesYear2008 拖动到 SalesYear2009 下的“值”窗格。 SalesYear2008 表示每个销售人员在 2008 年的销售总额。  
   
-6.  单击“下一步”。   
+6.  单击“下一步”  。  
   
 7.  在 "**选择样式**" 页上的 "样式" 窗格中，选择样式。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66099201"
   
  报表将显示每个销售人员在 2008 和 2009 年度销售情况的条形图。 条形图的长度对应于总销售额。  
   
-##  <a name="AllValues"></a>3. 修改垂直轴上的显示名称  
+##  <a name="3-modify-the-display-of-names-on-the-vertical-axis"></a><a name="AllValues"></a>3. 修改垂直轴上的显示名称  
  默认情况下，垂直轴上只显示某些值。 您可以更改图表以显示所有类别。  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>沿条形图的类别轴显示所有销售人员  
@@ -165,7 +165,7 @@ ms.locfileid: "66099201"
 > [!NOTE]  
 >  如果无法阅读垂直轴上的销售人员姓名，则可以增加图表的高度，或更改轴标签的格式选项。  
   
-###  <a name="CategoryExpression"></a>在垂直轴上显示姓氏和名字  
+###  <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>在垂直轴上显示姓氏和名字  
  可以更改类别表达式以将每个销售人员的姓氏包含在名字之后。  
   
 ##### <a name="to-change-the-category-expression"></a>更改类别表达式  
@@ -193,7 +193,7 @@ ms.locfileid: "66099201"
 > [!NOTE]  
 >  如果无法阅读垂直轴上的销售人员姓名，则可以增加图表的高度，或更改轴标签的格式选项。  
   
-##  <a name="Sort"></a>4. 更改垂直轴上的名称的排序顺序  
+##  <a name="4-change-the-sort-order-for-names-on-the-vertical-axis"></a><a name="Sort"></a>4. 更改垂直轴上的名称的排序顺序  
  当您对图表中的数据进行排序时，您是在更改类别轴上的值的顺序。  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>按字母顺序对条形图中的姓名进行排序  
@@ -204,13 +204,13 @@ ms.locfileid: "66099201"
   
 3.  在“类别组”区域中右键单击 [LastName]，然后单击“类别组属性”********。  
   
-4.  单击 **“排序”** 。 “更改排序选项”页将显示排序表达式的列表****。 默认情况下，此列表具有一个与原始类别组表达式相同的排序表达式。  
+4.  单击 **“排序”**。 “更改排序选项”页将显示排序表达式的列表****。 默认情况下，此列表具有一个与原始类别组表达式相同的排序表达式。  
   
 5.  在 "排序依据" 中，单击 "表达式" （**Fx**）按钮。  
   
 6.  键入以下表达式： `=Fields!LastName.Value & ", " & Fields!FirstName.Value`  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
 8.  返回 "**类别组属性**" 页，在 "**顺序**" 下拉列表中，选择 " **Z 到 A**"。这将选择反向字母顺序，以便按从上到下的顺序显示姓名。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "66099201"
   
  水平轴上的名称按逆序排序， **Alerca**位于顶部，而**Zeng**位于底部。  
   
-##  <a name="Legend"></a>5. 移动图例  
+##  <a name="5-move-the-legend"></a><a name="Legend"></a>5. 移动图例  
  为了提高图表值的可读性，可能需要移动图表图例。 例如，在水平显示图条的条形图中，可以更改图例的位置，将其放置在图表区的上方或下方。 这可为图条提供更大的水平空间。  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>在条形图的图表区下方显示图例  
@@ -239,7 +239,7 @@ ms.locfileid: "66099201"
   
 6.  单击 **“运行”** 以预览报表。  
   
-##  <a name="ChartTitle"></a>6. 为图表标题  
+##  <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. 为图表标题  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area-of-a-bar-chart"></a>更改条形图的图表区上方的图表标题  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66099201"
   
 4.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Horizontal"></a>7. 设置水平轴的格式和标签  
+##  <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7. 设置水平轴的格式和标签  
  默认情况下，水平轴采用常用格式显示值，将自动调整为适合图表的大小。  
   
 #### <a name="to-format-the-numbers-on-the-horizontal-axis"></a>设置水平轴上数字的格式  
@@ -278,7 +278,7 @@ ms.locfileid: "66099201"
   
  报表将在水平轴上以千为单位将销售额显示为货币，且没有小数位数。  
   
-##  <a name="Filter"></a>8. 添加筛选器以显示前五个值  
+##  <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8. 添加筛选器以显示前五个值  
  可以向图表添加筛选器，以指定数据集中哪些数据要包含于图表中或排除在图表外。  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>添加筛选器并显示前五个值  
@@ -291,7 +291,7 @@ ms.locfileid: "66099201"
   
 4.  单击 **“筛选器”** 。 “更改筛选器”页可以显示筛选器表达式的列表****。 默认情况下，此列表为空。  
   
-5.  单击“添加”  。 此时将显示一个新的空白筛选器。  
+5.  单击 **“添加”** 。 此时将显示一个新的空白筛选器。  
   
 6.  在 "**表达式**" 中，键入 **[Sum （SalesYear2009）]**。 此时将创建基础表达式 `=Sum(Fields!SalesYear2009.Value)`，可以查看是否单击了“fx”按钮****。  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66099201"
   
  图表将显示 2009 年销售数据中前五位销售人员的姓名。  
   
-##  <a name="Title"></a>9. 添加报表标题  
+##  <a name="9-add-a-report-title"></a><a name="Title"></a>9. 添加报表标题  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
   
@@ -331,13 +331,13 @@ ms.locfileid: "66099201"
   
 6.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Save"></a>10. 保存报表  
+##  <a name="10-save-the-report"></a><a name="Save"></a>10. 保存报表  
   
 #### <a name="to-save-the-report"></a>保存报表  
   
 1.  切换到报表设计视图。  
   
-2.  在**报表生成器**"按钮中，单击"**另存为**"。  
+2.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 3.  在“名称”中，键入 Sales Bar Chart********。  
   

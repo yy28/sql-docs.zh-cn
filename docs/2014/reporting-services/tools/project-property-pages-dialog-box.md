@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100043"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
-  使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请从 "**项目**" 菜单中，单击_ \<"报表项目名称>_**属性**"。  
+  使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”  菜单中，单击“_报表项目名称>\<_ 属性”  。  
   
- 定义配置属性后，可以从位于工具栏上的“解决方案配置”**** 下拉列表中选择配置。  
+ 定义配置属性后，可以从位于工具栏上的“解决方案配置”  下拉列表中选择配置。  
   
 ## <a name="options"></a>选项  
  **配置**  
@@ -35,7 +35,7 @@ ms.locfileid: "66100043"
  若要创建其他配置，请单击工具栏上的 **“配置管理器”** 。  
   
  **配置管理器**  
- 管理整个解决方案的配置或添加其他配置。 有关详细信息，请参阅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]文档。  
+ 管理整个解决方案的配置或添加其他配置。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文档。  
   
  **OutputPath**  
  键入或粘贴用于存储在报表生成验证、部署和预览过程中使用的报表定义的路径。 此路径必须与您用于项目的路径不同，并且它是一个相对路径（即项目路径下的一个子文件夹）。  
@@ -79,7 +79,7 @@ ms.locfileid: "66100043"
 ## <a name="see-also"></a>另请参阅  
  [发布报表](../publish-reports.md)   
  [将报表发布到 SharePoint 库](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [设置部署属性 (Reporting Services)](set-deployment-properties-reporting-services.md)   
+ [设置部署属性 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [报表设计器的 F1 帮助](report-designer-f1-help.md)  
   
   

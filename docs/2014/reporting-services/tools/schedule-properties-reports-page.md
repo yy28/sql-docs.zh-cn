@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099788"
 ---
 # <a name="schedule-properties-reports-page"></a>计划属性（“报表”页）
@@ -27,10 +27,10 @@ ms.locfileid: "66099788"
  若要打开此页， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]请启动，连接到 Report Server，打开 "**共享**计划" 文件夹，右键单击共享计划，选择 "**属性**"，然后单击 "**报表**"。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
+>  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2012 的各个[版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
   
 ## <a name="options"></a>选项  
- **文件夹**  
+ **Folder**  
  指定报表的路径。  
   
  **报告**  
@@ -39,7 +39,7 @@ ms.locfileid: "66099788"
 ## <a name="see-also"></a>另请参阅  
  [创建、修改和删除计划](../subscriptions/create-modify-and-delete-schedules.md)   
  [“计划”](../subscriptions/schedules.md)   
- [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 帮助中的报表服务器](report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
  [配置报表的常规属性 &#40;报表管理器&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   

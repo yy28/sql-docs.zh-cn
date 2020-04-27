@@ -22,14 +22,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099811"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
-  提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例**。  
+  提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66099811"
   
  此参数不带值。 但是，您必须在命令行中包含其他参数，才能选择包含要应用的密钥的文件。 您可以指定的参数包括 `-f` 和 `-p`。  
   
- **-d.ddd...e**  
+ **-d**  
  删除报表服务器数据库中的所有对称密钥实例和所有加密数据。 此参数不带值。  
   
  `-s`  
@@ -75,9 +75,8 @@ ms.locfileid: "66099811"
  `-j`  
  配置远程报表服务器实例，以共享本地报表服务器实例所用的报表服务器数据库。  
   
- **-r**  *installationID*  
- 删除特定报表服务器实例的对称密钥信息，从而从扩展部署中删除报表服务器。 
-  *installationID* 是 RSReportserver.config 文件中的 GUID 值。  
+ -r** installationID**  **  
+ 删除特定报表服务器实例的对称密钥信息，从而从扩展部署中删除报表服务器。 *installationID* 是 RSReportserver.config 文件中的 GUID 值。  
   
  `-f`  *文件*  
  指定一个指向存储对称密钥备份副本的文件的完全限定路径。  
@@ -86,7 +85,7 @@ ms.locfileid: "66099811"
   
  对于 **rskeymgmt -a**，存储在该文件中的对称密钥值将应用于报表服务器实例。  
   
- `-p`  *password*  
+ `-p`  *权限*  
  （`-f` 必需）指定用于备份或应用对称密钥的密码。 该值不能为空。  
   
  `-i`  
@@ -101,10 +100,10 @@ ms.locfileid: "66099811"
  `-u`  *用户帐户*  
  指定要加入扩展部署的远程计算机上的管理员帐户。 如果未指定帐户，则使用当前用户的凭据。  
   
- `-v`  *password*  
+ `-v`  *权限*  
  （`-u` 必需）指定要加入扩展部署的远程计算机上管理员帐户的密码。  
   
- **-t**  *trace*  
+ -t** trace**  **  
  将错误消息输出到跟踪日志。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。  
   
 ## <a name="permissions"></a>权限  
@@ -171,14 +170,13 @@ rskeymgmt -r <installationID>
 ## <a name="remarks"></a>备注  
  报表服务器对存储的凭据和连接信息进行加密。 公钥和对称密钥可用于对数据进行加密。 要运行报表服务器，报表服务器数据库必须具有有效的密钥。 你可以使用 **rskeymgmt** 来备份、删除或还原密钥。 如果无法还原密钥，此工具将为您提供一种方法，以删除不再使用的加密内容。  
   
- 
-  **rskeymgmt** 实用工具用于管理在安装或初始化期间定义的密钥集。 它通过远程过程调用 (RPC) 端点连接到本地报表服务器 Windows 服务。 必须运行报表服务器 Windows 服务才能使用此实用工具。  
+ **rskeymgmt** 实用工具用于管理在安装或初始化期间定义的密钥集。 它通过远程过程调用 (RPC) 端点连接到本地报表服务器 Windows 服务。 必须运行报表服务器 Windows 服务才能使用此实用工具。  
   
  有关加密密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)和[初始化报表服务器（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Reporting Services 报表服务器 &#40;本机模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [&#40;SSRS Configuration Manager 配置本机模式报表服务器扩展部署&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Reporting Services 报表服务器（本机模式）](../report-server/reporting-services-report-server-native-mode.md)   
  [报表服务器命令提示实用工具 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [配置和管理加密密钥（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

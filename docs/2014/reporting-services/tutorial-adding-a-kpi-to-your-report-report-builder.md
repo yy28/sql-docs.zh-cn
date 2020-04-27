@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a1b158b6fc504a0917e0c268846da93be3aa59b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098978"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
@@ -24,7 +24,7 @@ ms.locfileid: "66098978"
   
  ![rs_AddKPITutorial](../../2014/tutorials/media/rs-addkpitutorial.gif "rs_AddKPITutorial")  
   
-##  <a name="BackToTop"></a>你将学习的内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容  
  在本教程中，将学习如何通过基于单元值设置表单元的背景色来添加 KPI，以及添加和配置仪表和指示器。 还将学习如何编写设置表单元的背景色的表达式。  
   
  本教程包含下列过程：  
@@ -51,7 +51,7 @@ ms.locfileid: "66098978"
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Table"></a>1. 使用表或矩阵向导创建表报表和数据集  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1. 使用表或矩阵向导创建表报表和数据集  
  从 "**入门**" 对话框中，选择共享数据源，创建嵌入数据集，并在表中显示数据。  
   
 > [!NOTE]  
@@ -72,13 +72,13 @@ ms.locfileid: "66098978"
   
 4.  在“选择数据集”页上，单击“创建数据集”****。  
   
-5.  单击“下一步”。   
+5.  单击“下一步”  。  
   
 6.  在 "**选择数据源的连接**" 页上，选择现有数据源或浏览到 Report Server 并选择一个数据源。 如果没有可用数据源，或无权访问报表服务器，可以改用嵌入数据源。 有关详细信息，请参阅[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-7.  单击“下一步”。   
+7.  单击“下一步”  。  
   
-8.  在 "**设计查询**" 页上，单击 "**编辑为文本**"。  
+8.  在“设计查询”页上，单击“编辑为文本”********。  
   
 9. 复制并将以下查询粘贴到查询窗格中：  
   
@@ -115,9 +115,9 @@ ms.locfileid: "66098978"
        'SLR Camera' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-10. 单击“下一步”。   
+10. 单击“下一步”  。  
   
-##  <a name="CompleteWizard"></a>2. 在表或矩阵向导中组织数据、选择布局和样式  
+##  <a name="2-organize-data-choose-layout-and-style-from-the-table-or-matrix-wizard"></a><a name="CompleteWizard"></a>2. 在表或矩阵向导中组织数据、选择布局和样式  
  使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
   
 #### <a name="to-organize-data-into-groups-choose-a-layout-and-a-style"></a>若要将数据组织到组中，请选择布局和样式  
@@ -138,7 +138,7 @@ ms.locfileid: "66098978"
   
      步骤 4 和 5 首先按日期组织字段的值，然后按照该日期的所有销售组织字段的值。  
   
-6.  单击“下一步”。   
+6.  单击“下一步”  。  
   
      当您运行报表时，表将显示每个日期、每个日期的所有订单以及每个订单的所有产品、数量和销售额总计。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "66098978"
   
      在本教程中，创建的报表不会使用明细功能（用户可通过此功能来展开父组层次结构）来显示子组行和详细信息行。  
   
-10. 单击“下一步”。   
+10. 单击“下一步”  。  
   
 11. 在“选择样式”页的“样式”窗格中，选择样式。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "66098978"
   
  对于在特定日期销售的每个产品，表显示产品名称、销售数量及销售额总计。 此数据首先按销售日期组织，然后按子类别组织。  
   
-##  <a name="BackgroundColors"></a>3. 使用背景色显示 KPI  
+##  <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. 使用背景色显示 KPI  
  可将背景色设置为运行报表时计算的表达式。  
   
 #### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>使用背景色显示 KPI 的当前状态  
@@ -183,7 +183,7 @@ ms.locfileid: "66098978"
   
  在显示子类别销售额的小计行中，根据销售额总计的值，单元的背景色为红色、黄色或绿色。  
   
-##  <a name="Gauge"></a>4. 使用仪表显示 KPI  
+##  <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. 使用仪表显示 KPI  
  仪表显示数据集中的单个值。 本教程使用水平线性仪表，因为即使是在该仪表较小或在表单元内使用的情况下，其形状和简便性也使其易于读取。 有关详细信息，请参阅 [仪表（报表生成器和 SSRS）](report-design/gauges-report-builder-and-ssrs.md)。  
   
 #### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>使用仪表显示 KPI 的当前状态  
@@ -240,11 +240,11 @@ ms.locfileid: "66098978"
   
     4.  将**Enable**属性设置为`True`。 随即将在刻度的最大值之后显示一个刻度格。  
   
-    5.  将**** "边框`Lime`" 设置为。  
+    5.  将**BorderColor** "边框`Lime`" 设置为。  
   
 17. 单击 **“运行”** 以预览报表。  
   
-##  <a name="Indicator"></a>5. 使用指示器显示 KPI  
+##  <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. 使用指示器显示 KPI  
  指示器是以直观的形式传递数据值的小巧而简单的仪表。 由于指示器尺寸较小且具有简便性，其经常被用于表和矩阵中。 有关详细信息，请参阅[指示器（报表生成器和 SSRS）](report-design/indicators-report-builder-and-ssrs.md)。  
   
 #### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>使用指示器显示 KPI 的当前状态  
@@ -281,8 +281,8 @@ ms.locfileid: "66098978"
   
 11. 单击 **“运行”** 以预览报表。  
   
-##  <a name="Title"></a>6. 添加报表标题  
- 报表标题将出现在报表的顶部。 您可以将报表标题放在表头中，或者如果报表不使用表头，也可以将其放在表体顶部的文本框中。 您将使用自动放在表体顶部的文本框。  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. 添加报表标题  
+ 报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 您将使用自动放在表体顶部的文本框。  
   
  通过将不同的字体样式、大小和颜色应用于文本的短语和单个字符，可以进一步增强文本。 有关详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
@@ -296,12 +296,12 @@ ms.locfileid: "66098978"
   
 4.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Save"></a>7. 保存报表  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. 保存报表  
  将报表保存到报表服务器或计算机上。 如果不将报表保存到报表服务器上，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  单击 **“最近使用的站点和服务器”**。  
   
@@ -317,7 +317,7 @@ ms.locfileid: "66098978"
   
 #### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到要保存该报表的文件夹************。  
   

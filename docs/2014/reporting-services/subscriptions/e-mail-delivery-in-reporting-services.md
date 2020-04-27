@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100889"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
@@ -28,7 +28,7 @@ ms.locfileid: "66100889"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 模式 &#124; SharePoint 2010 和 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 模式 &#124; SharePoint 2010 和 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式|  
   
 ## <a name="e-mail-delivery-options"></a>电子邮件传递选项  
  报表服务器电子邮件传递可以通过以下方式传递报表：  
@@ -47,9 +47,9 @@ ms.locfileid: "66100889"
   
      如果您的浏览器支持 HTML 4.0 和 MHTML，并且您选择了 Web 存档呈现格式，那么报表将嵌入为邮件的一部分。 其他所有呈现格式（CSV、PDF 等）都将报表作为附件进行传递。 您可以在 RSReportServer 配置文件中禁用此功能。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在发送报表之前，不会检查附件或邮件的大小。 如果附件或邮件的大小超出邮件服务器允许的最大限制，则无法传递报表。 如果是大型报表，请选择其他传递选项（例如 URL 或通知）。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会检查附件或邮件的大小。 如果附件或邮件的大小超出邮件服务器允许的最大限制，则无法传递报表。 如果是大型报表，请选择其他传递选项（例如 URL 或通知）。  
   
- 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包含链接”，电子邮件将包含一个指向该报表的超链接****。  
+ 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包含链接”，电子邮件将包含一个指向该报表的超链接  。  
   
 ## <a name="role-based-e-mail-settings"></a>基于角色的电子邮件设置  
  订阅报表时，根据您的角色中包含的是“管理单独的订阅”任务，还是“管理所有订阅”任务，您所使用的电子邮件传递设置将有所不同。  
@@ -77,7 +77,7 @@ ms.locfileid: "66100889"
   
  有关如何配置 SharePoint 模式报表服务器的信息，请参阅以下内容：  
   
--   [&#40;SharePoint 2010 和 SharePoint 2013 为 Reporting Services 服务应用程序配置电子邮件&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2010 和 SharePoint 2013）](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [任务和权限](../security/tasks-and-permissions.md)   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104155"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
@@ -39,33 +39,33 @@ ms.locfileid: "66104155"
   
 #### <a name="to-open-port-80-on-windows-7-windows-server-2008-r2-windows-server-2012-and-2012-r2"></a>要在 Windows 7、Windows Server 2008 R2、Windows Server 2012 和 2012 R2 中打开端口 80  
   
-1.  在 **“开始”** 菜单上单击 **“控制面板”** ，单击 **“系统和安全”** ，然后单击 **“Windows 防火墙”** 。 不为“类别”视图配置控制面板，您只需要选择 **“Windows 防火墙”** 。  
+1.  在 **“开始”** 菜单上单击 **“控制面板”**，单击 **“系统和安全”**，然后单击 **“Windows 防火墙”**。 不为“类别”视图配置控制面板，您只需要选择 **“Windows 防火墙”**。  
   
-2.  单击“高级设置”  。  
+2.  单击“高级设置”****。  
   
-3.  单击 **“入站规则”** 。  
+3.  单击 **“入站规则”**。  
   
-4.  单击 "**操作**" 窗口中的 "**新建规则**"**。**  
+4.  在 **“操作”** 窗口中单击 **“新建规则”** 。****  
   
-5.  单击 **“端口”** 的 **“规则类型”** 。  
+5.  单击 **“端口”** 的 **“规则类型”**。  
   
-6.  单击“下一步”。   
+6.  单击“下一步”  。  
   
 7.  在 **“协议和端口”** 页上，单击 **TCP**。  
   
 8.  选择 **“特定本地端口”** ，然后键入值 **80**。  
   
-9. 单击“下一步”。   
+9. 单击“下一步”  。  
   
-10. 在 **“操作”** 页上，单击 **“允许连接”** 。  
+10. 在 **“操作”** 页上，单击 **“允许连接”**。  
   
-11. 单击“下一步”。   
+11. 单击“下一步”  。  
   
 12. 在 **“配置文件”** 页上，单击适合您的环境的选项。  
   
-13. 单击“下一步”。   
+13. 单击“下一步”  。  
   
-14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”    
+14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”********  
   
 15. 单击“完成”  。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66104155"
   
 2.  单击“允许程序通过 Windows 防火墙”****。  
   
-3.  单击“继续”****。  
+3.  单击 **“继续”** 。  
   
 4.  在 "例外" 选项卡上，单击 "**添加端口**"。  
   
@@ -96,14 +96,14 @@ ms.locfileid: "66104155"
 11. 重新启动计算机。  
   
 ## <a name="next-steps"></a>后续步骤  
- 打开端口后，必须在确认远程用户是否可以通过所打开的端口访问报表服务器之前，通过主文件夹或站点级别的角色分配授予用户访问报表服务器的权限。 如果用户不具有足够的权限，那么虽然可以正确地打开端口，但报表服务器连接仍会失败。 有关详细信息，请参阅 [ 联机丛书中的](../security/grant-user-access-to-a-report-server.md)授予用户对报表服务器的访问权限（报表管理器）[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 打开端口后，必须在确认远程用户是否可以通过所打开的端口访问报表服务器之前，通过主文件夹或站点级别的角色分配授予用户访问报表服务器的权限。 如果用户不具有足够的权限，那么虽然可以正确地打开端口，但报表服务器连接仍会失败。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[授予用户对报表服务器的访问权限（报表管理器）](../security/grant-user-access-to-a-report-server.md)。  
   
- 您还可以通过在其他计算机上启动报表管理器来验证是否正确打开了端口。 有关详细信息，请参阅 [ 联机丛书中的](../report-manager-ssrs-native-mode.md)报表管理器（SSRS 本机模式）[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 您还可以通过在其他计算机上启动报表管理器来验证是否正确打开了端口。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置报表服务器服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [创建报表服务器数据库（SSRS 配置管理器）](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [&#40;SSRS Configuration Manager 创建报表服务器数据库&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [配置报表服务器服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)  
   

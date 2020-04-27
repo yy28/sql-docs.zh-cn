@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099134"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 错误
@@ -55,7 +55,7 @@ ms.locfileid: "66099134"
   
 -   将可为 Null 的属性设置为`False`的参数在参数中检测到 null 值。  
   
--   数据区域的 Hidden 属性的表达式包含以下错误：对象引用未设置为某个对象的实例。  
+-   数据区域的 Hidden 属性的表达式包含以下错误：“对象引用未设置为某个对象的实例”。  
   
 -   表达式包含的函数调用无效或有语法错误。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66099134"
  多值参数不能为 Null。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>无法处理包含子报表的主报表  
- 必须使用相同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理包含子报表的报表。 将报表升级到报表定义架构的当前版本时，可能会同时更新主报表和子报表，也可能不会。 如果报表与其子报表的版本不兼容，则会显示以下消息：“无法处理子报表”。  
+ 必须使用相同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理包含子报表的报表。 将报表升级到报表定义架构的当前版本时，可能会同时更新主报表和子报表，也可能不会。 如果报表与其子报表的版本不兼容，则会出现以下消息：“无法处理子报表”。  
   
  必须更改主报表或子报表，以便使用相同版本的报表处理器来处理所有报表。 有关报表为何无法进行升级的信息，请参阅 [升级报表](../install-windows/upgrade-reports.md)。  
   
@@ -98,11 +98,11 @@ ms.locfileid: "66099134"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>无法比较筛选器的数据类型  
  在筛选器公式中，定义筛选内容的筛选器表达式和筛选器值必须为相同数据类型才能进行比较。 如果出现以下错误之一，请修改字段表达式或筛选器值以使数据类型匹配：  
   
--   无法为 *report item name> 执行 \<report item type> 的处理* *\<* 。 无法比较 *type> 和 \<type> 类型的数据* *\<* 。 请检查 *report item name> 返回的数据类型\<* 。  
+-   无法为 \<report item name> 执行 \<report item type> 的处理   。 无法比较 \<type> 和 \<type> 类型的数据   。 请检查 \<report item name> 返回的数据类型  。  
   
--   无法计算 *property name>\<* 。  
+-   无法计算 \<property name>  。  
   
--   无法计算 *property name>\<* 。 它引用了一个数据集字段，该字段包含一个错误：*error string>\<* 。  
+-   无法计算 \<property name>  。 它引用了一个数据集字段，该字段包含一个错误：\<error string>  。  
   
  有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
@@ -111,9 +111,9 @@ ms.locfileid: "66099134"
   
  也可以将特定作用域的名称传递给聚合函数。 作用域可以引用数据集和数据区域的名称，也可以引用位于数据层次结构中较高位置的作用域的名称。 这适用于以下消息：  
   
--   *report item type>“\<report item name>”具有无效的作用域“* scope name>” *\<* *\<* 。 该作用域必须是当前作用域或包含在当前作用域内。  
+-   \<report item type>“\<report item name>”具有无效的作用域“\<scope name>”    。 该作用域必须是当前作用域或包含在当前作用域内。  
   
--   *report item type>“\<report item name>”的* property name> 表达式包含的作用域参数对聚合函数无效 *\<* *\<* 。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
+-   \<report item type>“\<report item name>”的 \<property name> 表达式包含的作用域参数对聚合函数无效    。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
   
  对于计算运行总计的聚合函数（`Previous`、`RunningValue` 或 `RowNumber`），可以将作用域参数指定为行组名称或列组名称，但不能同时指定二者。 这适用于以下错误消息：  
   

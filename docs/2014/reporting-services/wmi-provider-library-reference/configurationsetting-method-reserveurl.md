@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098143"
 ---
 # <a name="reserveurl-method-wmi-msreportserver_configurationsetting"></a>ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -36,7 +36,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ```  
   
 ## <a name="parameters"></a>parameters  
- *Application*  
+ *应用程序*  
  为其保留相应 URL 的应用程序的名称。  
   
  *URLString*  
@@ -55,14 +55,14 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功；错误代码指示调用未成功。  
   
 ## <a name="remarks"></a>备注  
- *UrlString*不包括虚拟目录名称。 可以使用 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) 方法实现该目的。  
+ *UrlString* 不包括虚拟路径名称。 可以使用 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) 方法实现该目的。  
   
  针对当前 Windows 服务帐户创建 URL 预留。 更改 Windows 服务帐户需要手动更新所有的 URL 预留。  
   
  此方法将导致所有应用程序域进行硬回收。 此操作完成后，应用程序域将重新启动。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

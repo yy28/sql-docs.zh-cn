@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096321"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 子句中的列别名不能以表别名作为前缀
@@ -36,8 +36,7 @@ FROM Person.Contact p
 ORDER BY p.l  
 ```  
   
- 
-  [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] 不会将 `p.l` 子句中的 `ORDER BY` 与表中的某个有效列匹配。  
+ [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] 不会将 `p.l` 子句中的 `ORDER BY` 与表中的某个有效列匹配。  
   
 ### <a name="exception"></a>异常  
  如果 ORDER BY 子句中指定的带有前缀的列别名在指定的表中是有效的列名，则该查询在执行时不会出错；在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，该语句的语义可能有所不同。 例如，下面的语句中指定的列别名 (`id`) 在 `sysobjects` 表中是有效的列名。 在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中执行该语句时，对结果集排序之后将执行 `CAST` 操作。 也就是说，在排序操作中使用了 `name` 列。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中，`CAST` 操作是在排序操作之前执行的。 也就是说，在排序操作中使用了表中的 `id` 列，并以意外顺序返回了结果集。  

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101551"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 应用程序中设置报表服务器操作的权限
@@ -53,7 +53,7 @@ ms.locfileid: "66101551"
   
  利用“浏览用户信息”权限，报表服务器可以返回有关项目创建者和最后修改项目的用户的信息。 如果无此权限，报表服务器将返回以下错误。 对于浏览操作，错误为：“报表服务器遇到 SharePoint 错误。 ---> System.UnauthorizedAccessException：拒绝访问。” 对于发布操作，错误为“为用户‘\<domain>\\<user\>’授予的权限不足，无法执行此操作。”  
   
-##  <a name="permissionReports"></a> 查看和管理报表的权限  
+##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> 查看和管理报表的权限  
  报表定义权限是通过包含报表的库的列表权限来定义的，但如果要限制访问，则可以对单个报表设置权限。 下表提供了任务列表以及支持每个任务的权限列表。  
   
 |任务|权限|  
@@ -71,7 +71,7 @@ ms.locfileid: "66101551"
 |在报表历史记录中删除快照，并删除随着时间变化已签出和修改的报表定义的特定版本。|对要删除报表历史记录的报表所在的库拥有“删除版本”  权限。|  
 |在报表历史记录中查看快照，并查看随着时间变化已签出和修改的报表定义的特定版本。|对包含报表的库拥有“查看版本”  权限。|  
   
-##  <a name="permissionReportBuilder"></a> 创建报表和使用报表生成器的权限  
+##  <a name="permissions-for-creating-reports-and-using-report-builder"></a><a name="permissionReportBuilder"></a> 创建报表和使用报表生成器的权限  
  报表生成器是一种可用来创建特别报告的报表创作工具。 报表生成器将报表模型作为数据源使用，以支持即席数据浏览。 可以在报表生成器中加载模型，以便创建和运行报表，单击查看模型中的数据，也可以将报表保存到库中。 然后，拥有足够权限的用户可以打开同一报表，也可以执行即席数据浏览。  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "66101551"
   
  用来创建和使用订阅、报表历史记录以及对报表生成器报表设置报表或数据处理选项的权限与对标准报表定义文件执行同种操作所使用的权限相同。  
   
-##  <a name="permissionSharedSchedules"></a> 创建和管理共享计划的权限  
+##  <a name="permissions-for-creating-and-managing-shared-schedules"></a><a name="permissionSharedSchedules"></a> 创建和管理共享计划的权限  
  共享计划并不是存储在库中的文档。 为此，创建和管理这些计划要求拥有网站权限。 无法限制对特定共享计划的访问。 创建的任何共享计划都可供整个网站上拥有打开权限的任一用户使用。  
   
  下表列出了用于创建、管理和使用共享计划的各项任务及权限：  
@@ -102,7 +102,7 @@ ms.locfileid: "66101551"
 |创建、编辑或删除共享计划。|对站点拥有“管理网站”  权限。|  
 |为订阅处理或数据检索选择共享计划。|对包含库的站点拥有“打开”  权限。|  
   
-##  <a name="permissionSubscriptions"></a> 创建和管理订阅的权限  
+##  <a name="permissions-for-creating-and-managing-subscriptions"></a><a name="permissionSubscriptions"></a> 创建和管理订阅的权限  
  SharePoint 强制在订阅和查看权限之间实现依赖关系。 对于没有查看权限的报表，无法订阅。 如果授予订阅报表的权限，则将自动授予查看权限。  
   
  下表列出了用于创建、管理和使用订阅的各项任务及权限：  
@@ -113,7 +113,7 @@ ms.locfileid: "66101551"
 |选择共享计划与订阅配合使用。|对包含库的站点拥有“打开”  权限。|  
 |创建、编辑或删除整个站点上的任何订阅。|对站点拥有“管理通知”  权限。|  
   
-##  <a name="permissionDataSources"></a> 创建和管理共享数据源和报表模型的权限  
+##  <a name="permissions-for-creating-and-managing-shared-data-sources-and-report-models"></a><a name="permissionDataSources"></a> 创建和管理共享数据源和报表模型的权限  
  共享数据源 (.rsds) 文件包含可供多个报表和模型使用的数据源连接信息。 对于标准报表，使用 .rsds 文件来指定数据源连接信息是可选的。 对于模型驱动报表，使用 .rsds 文件是必需的。 报表模型始终使用 .rsds 文件连接到外部数据源。  
   
  可以设置共享数据源的属性，这些属性可决定各个用户是否可以查看或管理共享数据源。 查看或管理共享数据源的权限与报表查看权限不同；您可以在对 .rsds 文件本身没有查看权限的情况下查看使用 .rsds 文件的报表。  

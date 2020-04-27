@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c488316c1eaed822685577356e9df6f0cad9d174
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100357"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server Data Tools 中的部署和版本支持 (SSRS)
-  
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支持以下方案：  
   
 -   打开报表定义 (*.rdl) 和报表服务器项目 (\*.rptproj)。  
@@ -29,14 +28,14 @@ ms.locfileid: "66100357"
   
 -   将报表部署到报表服务器。  
   
-##  <a name="bkmk_ConfigurationandDeploymentProperties"></a>配置和部署属性  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]支持项目配置。 项目配置由一组属性组成，当作为预览或部署报表的一个步骤生成项目时，这些属性指定位置和行为。 若要了解有关项目配置的更多信息，请参阅 Visual Studio 文档。  
+##  <a name="configuration-and-deployment-properties"></a><a name="bkmk_ConfigurationandDeploymentProperties"></a> 配置和部署属性  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 支持项目配置。 项目配置由一组属性组成，当作为预览或部署报表的一个步骤生成项目时，这些属性指定位置和行为。 若要了解有关项目配置的更多信息，请参阅 Visual Studio 文档。  
   
  使用项目配置可以控制报表定义升级到与目标报表服务器兼容的架构版本。 项目配置控制的属性包括目标报表服务器、生成进程临时存储报表定义以便预览和部署的文件夹以及错误级别。  
   
  首先会生成报表，然后将其在报表设计器中以预览方式呈现，或者部署到报表服务器。  
   
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **“项目属性”** 对话框中设置配置属性。  
+ 可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的“项目属性”  对话框中设置配置属性。  
   
  生成和部署属性包括：  
   
@@ -44,17 +43,16 @@ ms.locfileid: "66100357"
   
 -   ErrorLevel 是一个生成属性，它标识报告为错误的生成问题的严重性。 严重级别小于或等于 ErrorLevel 的值的问题将报告为错误；否则，将问题报告为警告。 有关详细信息，请参阅[使用报表设计器设计报表 (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 中的“报表验证和错误级别”一节。  
   
--   TargetServerVersion 是一个部署属性，它标识在 TargetServerURL 属性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中指定的目标 Report Server 上安装的所需版本。  
+-   TargetServerVersion 是一个部署属性，它标识安装在目标报表服务器（在 TargetServerURL 属性中指定）上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的预期版本。  
   
- 当您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对话框中指定早期版本的 **“项目属性”** 时，报表不会自动恢复到早期版本。 同样，报表服务器项目可以包含来自两个不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的报表。 当部署报表服务器项目时，项目中的所有报表都将转换为在 TargetServerVersion 中指定的版本。  
+ 当你在“项目属性”对话框中指定早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  时，报表不会自动恢复到早期版本。 同样，报表服务器项目可以包含来自两个不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的报表。 当部署报表服务器项目时，项目中的所有报表都将转换为在 TargetServerVersion 中指定的版本。  
   
  您可以将多个项目配置添加到项目中；每个配置用于不同方案，例如，部署到不同版本的报表服务器。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](set-deployment-properties-reporting-services.md) 和[“项目属性页”对话框](project-property-pages-dialog-box.md)。  
   
-##  <a name="bkmk_SupportedVersions"></a>支持的版本  
+##  <a name="supported-versions"></a><a name="bkmk_SupportedVersions"></a> 支持的版本  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，是 32 位报表服务器项目开发环境，根据设计，它不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的计算机上运行，也不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的服务器上安装。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，是 32 位报表服务器项目开发环境，根据设计，它不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的计算机上运行，也不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的服务器上安装。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
   
  下表说明了可在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创作和发布报表的支持版本。  
   
@@ -69,12 +67,10 @@ ms.locfileid: "66100357"
 |报表服务器项目<br /><br /> 或<br /><br /> 报表服务器向导项目|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 架构|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]仅 Report Server|在本地将 2003 RDL 和 2005 RDL 升级到 2008 RDL 架构。|  
 |报表服务器项目<br /><br /> 或<br /><br /> 报表服务器向导项目|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|2005 RDL 架构|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Server||  
 |报表服务器项目|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|2003 RDL 架构|不支持||  
-|
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] RDLC 报表设计器|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]2008|2005 RDL 架构|不支持|不支持 2008 RDL 架构。|  
-|
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 查看器控件|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]2008|在本地模式中不支持 2008 RDL|空值|可以在服务器模式下的[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Server 上查看 2008 RDL 报表。|  
+|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] RDLC 报表设计器|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2005 RDL 架构|不支持|不支持 2008 RDL 架构。|  
+|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 查看器控件|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|在本地模式中不支持 2008 RDL|不适用|可以在服务器模式下的[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Server 上查看 2008 RDL 报表。|  
   
- 有关在以前版本的报表定义架构中打开报表的详细信息，请参阅[升级报表](../install-windows/upgrade-reports.md)。 有关特定报表定义架构的详细信息，请参阅 [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865)（报表定义语言规范）。  
+ 有关在以前版本的报表定义架构中打开报表的详细信息，请参阅 [升级报表](../install-windows/upgrade-reports.md)。 有关特定报表定义架构的详细信息，请参阅 [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865)（报表定义语言规范）。  
   
 ## <a name="see-also"></a>另请参阅  
  [发布数据源和报表](../reports/publishing-data-sources-and-reports.md)  

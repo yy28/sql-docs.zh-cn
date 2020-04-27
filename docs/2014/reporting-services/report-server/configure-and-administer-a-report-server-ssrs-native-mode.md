@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e31465f0f1099536e262442db894e5d6bfd6d37e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104002"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>配置和管理报表服务器（SSRS 本机模式）
@@ -59,7 +59,7 @@ ms.locfileid: "66104002"
  [配置报表生成器访问](configure-report-builder-access.md)   
  [Reporting Services 配置文件](reporting-services-configuration-files.md)   
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services 安全性和保护](../security/reporting-services-security-and-protection.md)   
+ [Reporting Services 安全和保护](../security/reporting-services-security-and-protection.md)   
  [Reporting Services 报表服务器（本机模式）](reporting-services-report-server-native-mode.md)  
   
   

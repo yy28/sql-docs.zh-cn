@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d29d41069d5daca25d53477326e864720aa87ca1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101197"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>SharePoint 与 2008 和 2008 R2 报表服务器集成
-  的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]版本引入了一种体系结构，在该体系结构中，SharePoint 模式现在基于 sharepoint 共享服务。 新功能的管理已在 SharePoint 管理中心的 "**管理服务**和**管理器服务应用程序**" 页上完成。 用于[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sharepoint 2010 的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]外接程序仍支持早期的 sharepoint 集成体系结构，以便可以将 sharepoint 2010 与 Report Server 的早期版本相集成。  
+   的  版本引入了一种体系结构，在此体系结构中，SharePoint 模式现在基于 SharePoint 共享服务。 新功能的管理已在 SharePoint 管理中心的 "**管理服务**和**管理器服务应用程序**" 页上完成。 用于[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sharepoint 2010 的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]外接程序仍支持早期的 sharepoint 集成体系结构，以便可以将 sharepoint 2010 与 Report Server 的早期版本相集成。  
   
  您将用于管理旧体系结构的“SharePoint 管理中心”页在以下位置提供：  
   

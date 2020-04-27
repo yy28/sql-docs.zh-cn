@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099128"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：向报表添加柱形图（报表生成器）
@@ -30,7 +30,7 @@ ms.locfileid: "66099128"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a>你将学习的内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容  
  在本教程中，您将学习如何执行下列操作：  
   
 1.  [使用图表向导创建图表](#Chart)  
@@ -59,7 +59,7 @@ ms.locfileid: "66099128"
 ## <a name="requirements"></a>要求  
  有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Chart"></a>1. 使用图表向导创建图表报表  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. 使用图表向导创建图表报表  
  从 "**入门**" 对话框中，使用图表向导创建嵌入数据集，选择共享数据源，并创建柱形图。  
   
 > [!NOTE]  
@@ -76,16 +76,16 @@ ms.locfileid: "66099128"
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在右窗格中，单击“图表向导”  。  
+3.  在右窗格中，单击“图表向导”****。  
   
-4.  在 "**选择数据集" 页**上，单击 "**创建数据集**"，然后单击 "**下一步**"。  
+4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”************。  
   
-5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”   。 您可能需要输入用户名和密码。  
+5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”********。 您可能需要输入用户名和密码。  
   
     > [!NOTE]  
     >  只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  在 "**设计查询**" 页上，单击 "**编辑为文本**"。  
+6.  在“设计查询”页上，单击“编辑为文本”********。  
   
 7.  将以下查询粘贴到查询窗格中：  
   
@@ -108,22 +108,22 @@ ms.locfileid: "66099128"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  （可选）单击“运行”按钮 ( **!** )，查看要用于图表的数据。  
+8.  （可选）单击“运行”按钮 (!)，查看要用于图表的数据****。  
   
 9. 单击“下一步”。   
   
-##  <a name="ChartType"></a>2. 选择图表类型  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. 选择图表类型  
  可以从各种预定义的图表类型中进行选择。  
   
 #### <a name="to-add-a-column-chart"></a>添加柱形图  
   
-1.  在“选择图表类型”页上，柱形图为默认图表类型****。 单击“下一步”。   
+1.  在“选择图表类型”页上，柱形图为默认图表类型****。 单击“下一步”  。  
   
 2.  在“排列图表字段”页上，将 SalesDate 字段拖到“类别”中********。 “类别”显示在水平轴上。  
   
 3.  将 Sales 字段拖到“值”中****。 “值”框显示 Sum(Sales)，因为销售总计值之和是对每个日期的合计****。 “值”显示在垂直轴上。  
   
-4.  单击“下一步”。   
+4.  单击“下一步”  。  
   
 5.  在 "**选择样式**" 页上的 "样式" 框中，选择样式。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66099128"
   
 8.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Horizontal"></a>3. 设置水平轴的格式和标签  
+##  <a name="3-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>3. 设置水平轴的格式和标签  
  默认情况下，水平轴采用常用格式显示值，将自动调整为适合图表的大小。  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>设置水平轴上的日期格式  
@@ -154,7 +154,7 @@ ms.locfileid: "66099128"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  在 "主页" 选项卡上，单击 "**运行**" 以预览报表。  
+7.  在“主文件夹”选项卡上，单击“运行”以预览报表****。  
   
  日期会以您选择的日期格式显示。 请注意，图表不会在水平轴上显示每个类别的标签。 默认情况下，仅包括适合放在轴旁边的标签。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "66099128"
   
  在图表上，标签将旋转并每隔三个日期显示一次标签。  
   
-##  <a name="Legend"></a>4. 移动图例  
+##  <a name="4-move-the-legend"></a><a name="Legend"></a>4. 移动图例  
  系统会根据类别和序列数据自动创建图例。  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>在柱形图的图表区域的下方移动图例  
@@ -203,7 +203,7 @@ ms.locfileid: "66099128"
   
 6.  单击 **“运行”** 以预览报表。  
   
-##  <a name="ChartTitle"></a>5. 为图表标题  
+##  <a name="5-title-the-chart"></a><a name="ChartTitle"></a>5. 为图表标题  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>更改图表区上方的图表标题  
   
@@ -213,7 +213,7 @@ ms.locfileid: "66099128"
   
 3.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Vertical"></a>6. 设置垂直轴的格式和标签  
+##  <a name="6-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>6. 设置垂直轴的格式和标签  
  默认情况下，垂直轴采用常用格式显示值，将自动调整为适合图表的大小。  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>将货币格式设置为垂直轴上的数字  
@@ -242,7 +242,7 @@ ms.locfileid: "66099128"
   
 12. 单击 **“运行”** 以预览报表。  
   
-##  <a name="Average"></a>7. 添加移动平均线  
+##  <a name="7-add-a-moving-average"></a><a name="Average"></a>7. 添加移动平均线  
   
 #### <a name="to-add-a-moving-average"></a>添加移动平均线  
   
@@ -266,7 +266,7 @@ ms.locfileid: "66099128"
   
  图表将显示一条线条，它按日期显示销售总计的移动平均线，每隔四天计算一次平均值。  
   
-##  <a name="Title"></a>8. 添加报表标题  
+##  <a name="8-add-a-report-title"></a><a name="Title"></a>8. 添加报表标题  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
   
@@ -290,13 +290,13 @@ ms.locfileid: "66099128"
   
 7.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Save"></a>9. 保存报表  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. 保存报表  
   
 #### <a name="to-save-the-report"></a>保存报表  
   
 1.  切换到报表设计视图。  
   
-2.  从“报表生成器”按钮，单击 **“另存为”** 。  
+2.  从 “报表生成器” 按钮，单击 **“另存为”**。  
   
 3.  在“名称”中，键入 Sales Order Column Chart********。  
   

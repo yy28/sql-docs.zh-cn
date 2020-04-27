@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcb4a2b4a542409e34eddac45b446cbff15c2821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101431"
 ---
 # <a name="select-the-report-type"></a>选择报表类型
   使用报表向导的此页可以选择表格报表或矩阵报表。  
   
 ## <a name="options"></a>选项  
- **表格**  
+ **式**  
  创建包含表的报表。 表是一种数据按列和行进行排列的数据区域。 表包含一组静态的列，表中的行数取决于数据集中的数据。  
   
  向导中的后续页提供了表定义选项。  
@@ -34,8 +34,8 @@ ms.locfileid: "66101431"
  向导中的后续页提供了矩阵定义选项。  
   
 ## <a name="see-also"></a>另请参阅  
- [表（报表生成器和 SSRS）](report-design/tables-report-builder-and-ssrs.md)   
- [矩阵（报表生成器和 SSRS）](report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [表 &#40;报表生成器和 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
+ [矩阵 &#40;报表生成器和 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [报表向导帮助](../../2014/reporting-services/report-wizard-help.md)  
   
   

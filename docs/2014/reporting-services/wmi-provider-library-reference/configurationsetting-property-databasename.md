@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f1c639d3f70555d9b656d1d077a761f81ae953e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097755"
 ---
 # <a name="databasename-property-wmi-msreportserver_configurationsetting"></a>DatabaseName 属性 (WMI MSReportServer_ConfigurationSetting)
@@ -39,14 +39,13 @@ public string DatabaseName;
 ```  
   
 ## <a name="property-values"></a>属性值  
- 
-  `String` 对象，其值表示报表服务器数据库的数据库实例名称。  
+ `String` 对象，其值表示报表服务器数据库的数据库实例名称。  
   
 ## <a name="example-code"></a>示例代码  
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

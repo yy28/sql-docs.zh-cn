@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101088"
 ---
 # <a name="subscriptions-page-report-manager"></a>“订阅”页（报表管理器）
@@ -39,7 +39,7 @@ ms.locfileid: "66101088"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的“常规”属性页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表的“常规”属性页。  
   
 4.  选择 **“订阅”** 选项卡。  
   
@@ -57,16 +57,13 @@ ms.locfileid: "66101088"
  单击此选项可查看或编辑说明。  
   
  **报告**  
- 从共享数据源打开此页时，此列标识为其定义了订阅的报表。 
-  **“文件夹”** 列用于标识报表位置。  
+ 从共享数据源打开此页时，此列标识为其定义了订阅的报表。 **“文件夹”** 列用于标识报表位置。  
   
  **说明**  
  显示订阅的说明。  
   
- **界限**  
- 标识导致订阅运行的条件。 
-  **TimedSubscription** 触发器基于定义订阅运行时间的计划。 
-  **SnapshotUpdated** 触发器基于对报表快照的更新操作。  
+ **触发器**  
+ 标识导致订阅运行的条件。 **TimedSubscription** 触发器基于定义订阅运行时间的计划。 **SnapshotUpdated** 触发器基于对报表快照的更新操作。  
   
  **所有者**  
  显示创建订阅的用户的名称。  
@@ -74,7 +71,7 @@ ms.locfileid: "66101088"
  **上次运行时间**  
  显示上次处理订阅的时间。  
   
- **Status**  
+ **状态**  
  显示订阅的状态。 通常，状态值为“新建”或订阅上次运行的日期和时间。  
   
  当订阅包括指向不再有效的加密值（即指向用于运行报表的已存储凭据）的指针时，将出现“错误数据”状态值。 在报表服务器上重新创建用于对数据进行加密和解密的对称密钥后，现有的加密值将无法使用。  

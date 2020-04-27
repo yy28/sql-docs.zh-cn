@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099091"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
@@ -22,7 +22,7 @@ ms.locfileid: "66099091"
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
   
-##  <a name="BackToTop"></a>你将学习的内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容  
  在本教程中，您将学习如何执行下列操作：  
   
 1.  [使用表或矩阵向导创建矩阵报表和数据集](#Setup)  
@@ -61,7 +61,7 @@ ms.locfileid: "66099091"
 ## <a name="requirements"></a>要求  
  有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Setup"></a>1. 使用表或矩阵向导创建矩阵报表和数据集  
+##  <a name="1-create-a-matrix-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. 使用表或矩阵向导创建矩阵报表和数据集  
  创建矩阵报表、数据源和数据集。  
   
 > [!NOTE]  
@@ -80,17 +80,17 @@ ms.locfileid: "66099091"
   
 3.  在右窗格中，单击“表或矩阵向导”****。  
   
-4.  单击 **“创建”**。  
+4.  单击“创建”。   
   
 5.  在“选择数据集”页上，单击“创建数据集”********。  
   
-6.  单击“下一步”。   
+6.  单击“下一步”  。  
   
 7.  在“选择数据源的连接”**** 页上，选择类型为“SQL Server”**** 的数据源。 从列表中选择一个数据源或浏览到报表服务器以选择一个数据源。  
   
-8.  单击“下一步”。   
+8.  单击“下一步”  。  
   
-9. 在 "**设计查询**" 页上，单击 "**编辑为文本**"。  
+9. 在“设计查询”页上，单击“编辑为文本”********。  
   
 10. 将以下查询粘贴到查询窗格中：  
   
@@ -120,9 +120,9 @@ ms.locfileid: "66099091"
   
 11. 在查询设计器工具栏上，单击 "**运行**（**！**）"。 结果集显示 11 行数据，这些数据显示针对四个商店的每个子类别销售的物品数量，并且结果集包含以下列：StoreID、Subcategory、Quantity。  
   
-12. 单击“下一步”。   
+12. 单击“下一步”  。  
   
-##  <a name="CompleteWizard"></a>2. 在表或矩阵向导中组织数据、选择布局和样式  
+##  <a name="2-organize-data-choose-layout-and-style-from-the-table-or-matrix-wizard"></a><a name="CompleteWizard"></a>2. 在表或矩阵向导中组织数据、选择布局和样式  
  使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -135,13 +135,13 @@ ms.locfileid: "66099091"
   
      已将销售量的值组织到按子类别分组的行中。 每个商店将对应一个列。  
   
-4.  单击“下一步”。   
+4.  单击“下一步”  。  
   
 5.  在 "**选择布局**" 页的 "**选项**" 下，验证是否选择了 "**显示小计和总计**"。  
   
      当您运行报表时，最后一列将显示所有商店的每个子类别的总数量，而最后一行将显示每个商店的所有子类别的总数量。  
   
-6.  单击“下一步”。   
+6.  单击“下一步”  。  
   
 7.  在 "**选择样式**" 页上的 "样式" 窗格中，选择样式。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "66099091"
   
  在此方案中，列标题显示的是商店标识符而不是商店名称。 接下来，您将添加表达式以便在包含商店标识符/商店名称对的数据集中查找商店名称。  
   
-##  <a name="Query"></a>3. 添加查询参数以创建报表参数  
+##  <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3. 添加查询参数以创建报表参数  
  当向查询添加查询参数时，报表生成器将自动创建单值报表参数，其中名称、提示符和数据类型使用默认属性。  
   
 #### <a name="to-add-a-query-parameter"></a>添加查询参数  
@@ -174,7 +174,7 @@ ms.locfileid: "66099091"
   
      `WHERE`子句将检索到的数据限制为查询参数*@StoreID*指定的存储区标识符。  
   
-4.  在查询设计器工具栏上，单击 "**运行**（**！**）"。 此时将打开“定义查询参数”对话框，提示用户为查询参数 ** 输入值***@StoreID*。  
+4.  在查询设计器工具栏上，单击 "**运行**（**！**）"。 此时将打开“定义查询参数”对话框，提示用户为查询参数 @StoreID 输入值******。  
   
 5.  在“参数值”**** 中，键入 **200**。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66099091"
   
  请注意，现在有一个名为*@StoreID*的报表参数。 默认情况下，参数的数据类型为**Text**。 由于商店标识符是一个整数，因此在下一个过程中将数据类型更改为 Integer。  
   
-##  <a name="ChangeDefaultProperties"></a>4. 更改报表参数的默认数据类型和其他属性  
+##  <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4. 更改报表参数的默认数据类型和其他属性  
  创建报表参数之后，可以调整属性的默认值。  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>更改报表参数的默认数据类型  
@@ -207,7 +207,7 @@ ms.locfileid: "66099091"
   
 7.  在报表查看器工具栏上，在 Store ID 的旁边键入 **200**，然后单击“查看报表”****。  
   
-##  <a name="AddDataset"></a>4a. 添加数据集以提供可用值和显示名称  
+##  <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4a. 添加数据集以提供可用值和显示名称  
  若要确保用户只能为参数键入有效值，可以创建一个从中选择值的值下拉列表。 值可以来自于您指定的数据集或列表。 可用值必须由具有不包含对参数的引用的查询的数据集提供。  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>为参数创建有效值数据集  
@@ -237,7 +237,7 @@ ms.locfileid: "66099091"
   
      “报表数据”窗格在 **Stores** 数据集节点下显示字段 StoreID 和 StoreName。  
   
-##  <a name="AvailableValues"></a>4b. 指定可用值以创建值的下拉列表  
+##  <a name="4b-specify-available-values-to-create-a-drop-down-list-of-values"></a><a name="AvailableValues"></a>4b. 指定可用值以创建值的下拉列表  
  在创建数据集以提供可用值之后，必须更改报表属性，以指定将哪个数据集和哪个字段用于填充报表查看器工具栏上的有效值下拉列表。  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>为参数提供数据集中的可用值  
@@ -252,7 +252,7 @@ ms.locfileid: "66099091"
   
 5.  在“标签字段”的下拉列表中，单击“StoreName”****。 标签字段指定值的显示名称。  
   
-6.  单击 **“常规”** 。  
+6.  单击 **“常规”**。  
   
 7.  在提示符下，键入**Store name？**  
   
@@ -268,7 +268,7 @@ ms.locfileid: "66099091"
   
  报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
-##  <a name="DefaultValues"></a>4c. 指定默认值，以便自动运行报表  
+##  <a name="4c-specify-default-values-so-the-report-runs-automatically"></a><a name="DefaultValues"></a>4c. 指定默认值，以便自动运行报表  
  可以为每个参数指定默认值，以便自动运行报表。  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>从数据集中指定默认值  
@@ -305,7 +305,7 @@ ms.locfileid: "66099091"
   
  对于*@StoreID*，报表查看器显示值 "Contoso Catalog Store"。 这是商店标识符**200**的显示名称。 报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
-##  <a name="NameValue"></a>4d. 从具有名称/值对的数据集查找值  
+##  <a name="4d-look-up-a-value-from-a-dataset-that-has-namevalue-pairs"></a><a name="NameValue"></a>4d. 从具有名称/值对的数据集查找值  
  数据集可以同时包含标识符和对应的名称字段。 若只有一个标识符，则可以在创建的包含名称/值对的数据集中查找对应的名称。  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>从数据集查找值  
@@ -332,7 +332,7 @@ ms.locfileid: "66099091"
   
  每个页顶部的文本框显示商店名称而不是商店标识符。  
   
-##  <a name="Expression"></a>5. 在报表中显示所选参数值  
+##  <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5. 在报表中显示所选参数值  
  当用户对报表有疑问时，此操作可帮助用户获知他们选择的参数值。 可以在报表中保留用户为每个参数的选定的值。 实现这一点的一种方式是在页脚的文本框中显示参数。  
   
 #### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>在页脚中显示所选参数值和标签  
@@ -353,7 +353,7 @@ ms.locfileid: "66099091"
   
 7.  预览报表。  
   
-##  <a name="Filter"></a>6. 在筛选器中使用报表参数  
+##  <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6. 在筛选器中使用报表参数  
  筛选器可帮助控制在从外部数据源检索到数据后在报表中使用哪些数据。 为了让用户能够帮助控制他们要看到的数据，可以在矩阵的筛选器中包含报表参数。  
   
 #### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>在矩阵筛选器中指定参数  
@@ -368,8 +368,7 @@ ms.locfileid: "66099091"
   
 5.  在 "**运算符**" 中`equals` ，验证是否选择了 "（=）"。  
   
-6.  在“值”中键入 ****。`[@StoreID]` 
-  `[@StoreID]` 是一个简单表达式语法，它表示 `=Parameters!StoreID.Value`。  
+6.  在“值”中键入 `[@StoreID]`。**** `[@StoreID]` 是一个简单表达式语法，它表示 `=Parameters!StoreID.Value`。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -381,7 +380,7 @@ ms.locfileid: "66099091"
   
  矩阵将显示与所选商店对应的数据。  
   
-##  <a name="Multivalued"></a>7. 更改报表参数以接受多个值  
+##  <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7. 更改报表参数以接受多个值  
  若要将一个参数从单值参数更改为多值参数，则必须更改查询和包含对该参数的引用的所有表达式（包括筛选器）。 多值参数是一个值数组。 在数据集查询中，查询语法必须一个值是否包含在一组值中。 在报表表达式中，表达式语法必须访问一个值数组而不是单个值。  
   
 #### <a name="to-change-a-parameter-from-single-to-multivalued"></a>将一个参数从单值参数更改为多值参数  
@@ -402,8 +401,7 @@ ms.locfileid: "66099091"
     WHERE StoreID IN (@StoreID)  
     ```  
   
-     
-  `IN` 运算符测试一个值是否包含在一组值中。  
+     `IN` 运算符测试一个值是否包含在一组值中。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -437,7 +435,7 @@ ms.locfileid: "66099091"
   
 19. 从下拉列表中，单击“全选”清除列表，再单击“Contoso Catalog Store”和“Contoso Asia Online Store”，然后单击“查看报表”********。  
   
-##  <a name="Boolean"></a>8. 为条件可见性添加布尔参数  
+##  <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. 为条件可见性添加布尔参数  
   
 #### <a name="to-add-a-boolean-parameter"></a>添加布尔参数  
   
@@ -449,7 +447,7 @@ ms.locfileid: "66099091"
   
 4.  在 "**数据类型**" 的下拉列表中，单击 "**布尔值**"。  
   
-5.  单击 **“默认值”** 。  
+5.  单击 **“默认值”**。  
   
 6.  单击“指定值”，然后单击“添加”********。  
   
@@ -461,7 +459,7 @@ ms.locfileid: "66099091"
   
 1.  在设计图面上，右键单击页脚中用于显示参数值的文本框，然后单击“文本框属性”****。  
   
-2.  单击 **“可见性”**。  
+2.  单击 **“可见性”** 。  
   
 3.  选择选项“基于表达式显示或隐藏”****，然后单击表达式按钮“Fx”****。  
   
@@ -483,7 +481,7 @@ ms.locfileid: "66099091"
   
  页脚中的文本框将显示所选的所有商店名称。  
   
-##  <a name="Title"></a>9. 添加报表标题  
+##  <a name="9-add-a-report-title"></a><a name="Title"></a>9. 添加报表标题  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
   
@@ -491,11 +489,11 @@ ms.locfileid: "66099091"
   
 2.  键入 Parameterized Product Sales，然后在文本框外部单击。  
   
-##  <a name="Save"></a>10. 保存报表  
+##  <a name="10-save-the-report"></a><a name="Save"></a>10. 保存报表  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  单击 **“最近使用的站点和服务器”**。  
   

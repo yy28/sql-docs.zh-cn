@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098475"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -43,7 +43,7 @@ out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>parameters  
- *用户名*  
+ *UserName*  
  通过此脚本授予权限时作为授予对象的用户的用户名或 Windows 安全标识符 (SID)。  
   
  *DatabaseName*  
@@ -77,18 +77,12 @@ out Int32 HRESULT);
   
 |被转换的帐户/SID|公用名|远程名称|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Local System|
-  \<Domain>\\<ComputerName\>$|  
-|.\LocalSystem|Local System|
-  \<Domain>\\<ComputerName\>$|  
-|ComputerName\LocalSystem|Local System|
-  \<Domain>\\<ComputerName\>$|  
-|LocalSystem|Local System|
-  \<Domain>\\<ComputerName\>$|  
-|(S-1-5-20)|Network Service|
-  \<Domain>\\<ComputerName\>$|  
-|NT AUTHORITY\NetworkService|Network Service|
-  \<Domain>\\<ComputerName\>$|  
+|(S-1-5-18)|Local System|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Local Service|错误 - 参见下方内容。|  
 |NT AUTHORITY\LocalService|Local Service|错误 - 参见下方内容。|  
   
@@ -105,8 +99,7 @@ out Int32 HRESULT);
 |"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
-|
-  \<MachineFQDN>|example.redmond.microsoft.com|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
 |\<IPAddress>|180.012.345,678|  
   
  如果将*如果 iswindowsuser*设置为`true`，则 WMI 提供程序会调用 LookupAccountName 来获取该帐户的 SID，然后调用 LookupAccountSID 来获取要放入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]脚本中的名称。 这样便可确保所使用的帐户名可通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 验证。  
@@ -120,7 +113,7 @@ out Int32 HRESULT);
  生成的脚本支持 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

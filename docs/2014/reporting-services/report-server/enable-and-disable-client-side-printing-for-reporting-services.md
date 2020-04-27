@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103933"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>启用和禁用 Reporting Services 的客户端打印
@@ -57,7 +57,7 @@ ms.locfileid: "66103933"
   
     4.  选择 **"启用 ActiveX 客户端打印控件的下载"**。  
   
-    5.  单击“确定”。   
+    5.  单击" **确定**"。  
   
 -   对于 SharePoint 模式报表服务器 ****：  
   
@@ -65,18 +65,17 @@ ms.locfileid: "66103933"
   
     2.  单击 **“管理服务应用程序”**。  
   
-    3.  单击您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的名称，然后单击 SharePoint 功能区中的 **“管理”** 。  
+    3.  单击[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序的名称，然后在 SharePoint 功能区中单击 "**管理**"。  
   
-    4.  单击 **“系统设置”** 。  
+    4.  单击 **“系统设置”**。  
   
-    5.  选择 **“启用客户端打印”**。 
-  **“启用客户端打印”** 选项位于页面的底部附近。  
+    5.  选择 **“启用客户端打印”**。 **“启用客户端打印”** 选项位于页面的底部附近。  
   
-    6.  单击“确定”。   
+    6.  单击" **确定**"。  
   
 -   编写脚本或代码，以将 Report Server 系统属性**EnableClientPrinting**设置为`false.`  
   
- 下面的示例脚本说明了一种禁用客户端打印功能的方法。 编译并运行以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 代码，以将 **EnableClientPrinting** 属性设置为 **False**。 在运行代码后，请重新启动 IIS。  
+ 下面的示例脚本说明了一种禁用客户端打印功能的方法。 编译并运行以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 代码，将 EnableClientPrinting**** 属性设置为 False****。 在运行代码后，请重新启动 IIS。  
   
 ### <a name="sample-script"></a>示例脚本  
   

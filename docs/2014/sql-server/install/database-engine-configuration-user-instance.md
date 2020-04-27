@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095882"
 ---
 # <a name="database-engine-configuration---user-instance"></a>数据库引擎配置 - 用户实例
@@ -30,7 +30,7 @@ ms.locfileid: "66095882"
  用户实例也称为子实例或客户端实例，是由父实例（作为服务运行的主实例，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）代表用户生成的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]实例。 用户实例作为用户进程在该用户的安全上下文下运行。 用户实例独立于父实例和该计算机上运行的任何其他用户实例。 用户实例功能也称为“作为正常用户运行”(RANU)。  
   
 > [!NOTE]  
->  设置过程中作为**sysadmin**固定服务器角色成员的登录名设置为模板数据库中的管理员。 除非被删除，否则它们是用户实例的 **sysadmin** 固定服务器角色的成员。  
+>  在安装过程中设置为 **sysadmin** 固定服务器角色的成员的登录名都设置为模板数据库中的管理员。 除非被删除，否则它们是用户实例的 **sysadmin** 固定服务器角色的成员。  
   
  将用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员角色中  
  默认情况下不启用此选项。 若要将当前安装用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员角色中，请选中此复选框。  

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096841"
 ---
 # <a name="accept-license-terms"></a>接受许可条款
@@ -28,12 +28,9 @@ ms.locfileid: "66096841"
  您可以打印许可协议或将其复制到剪贴板。 若要继续，请接受许可条款，然后单击 **“下一步”**。 若要关闭安装过程，请单击 **“取消”**。  
   
 ## <a name="customer-experience-improvement-program-ceip"></a>客户体验改善计划 (CEIP)  
- 如果启用 CEIP 报告，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将被配置为定期向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 发送报告。 报告将包含有关硬件配置和用户如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和组件的信息。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 将使用功能使用情况数据来改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此功能监视的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件包括以下各项：  
+ 如果启用 CEIP 报告，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将被配置为定期向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 发送报告。 报告将包含有关硬件配置和用户如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和组件的信息。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 将使用功能使用情况数据来改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此功能监视的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件包括以下各项：  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]
-  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -45,7 +42,7 @@ ms.locfileid: "66096841"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序  
   
  有关功能使用情况的信息将发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，在那里保存这些信息，且其访问将受到限制。  
   
@@ -53,8 +50,7 @@ ms.locfileid: "66096841"
   
  对于诸如安装、升级、修复等此类安装程序操作，仅在执行安装程序期间才收集和上载信息。  
   
- 对于所有其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，将每天针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有已启用实例收集一次信息。 收集时间默认为在午夜，以便最大程度上减小服务器的负载。 如果要更改收集时间，可以手动编辑控制收集时间的注册表项。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各个实例有自己的注册表项：  
+ 对于所有其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，将每天针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有已启用实例收集一次信息。 收集时间默认为在午夜，以便最大程度上减小服务器的负载。 如果要更改收集时间，可以手动编辑控制收集时间的注册表项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各个实例有自己的注册表项：  
   
  \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKLM\Software\\\MSSQL12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<INSTANCEID> \cpe\timeofreporting  
   
@@ -69,11 +65,9 @@ ms.locfileid: "66096841"
  错误报告  
  如果启用错误报告功能， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将配置为在下列任意 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 组件中发生错误时，自动发送报告到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理商  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -83,8 +77,7 @@ ms.locfileid: "66096841"
   
 -   复制  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 利用错误报告来改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能，并且对所有信息保密。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 利用错误报告来改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能，并且对所有信息保密。  
   
  有关错误的信息将通过安全 (https) 连接发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，在那里保存这些信息，且对其访问将受到限制。 另外，也可以将这些信息发送到您自己的“公司错误报告”服务器。  
   
@@ -100,8 +93,7 @@ ms.locfileid: "66096841"
   
 -   来自出错进程的内存或文件的信息。  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 无意收集您的文件、姓名、地址、电子邮件地址或任何其他私人信息。 但是，错误报告可能包含来自导致错误的进程的内存或文件中的个人信息。 虽然使用这些信息有可能确定您的身份，但 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不会将这些信息用于此目的。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 无意收集您的文件、姓名、地址、电子邮件地址或任何其他私人信息。 但是，错误报告可能包含来自导致错误的进程的内存或文件中的个人信息。 虽然使用这些信息有可能确定您的身份，但 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不会将这些信息用于此目的。  
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隐私保护和数据收集策略的详细信息，请参阅 [Microsoft SQL Server 隐私声明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)。  
   

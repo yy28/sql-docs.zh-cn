@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb7e3caa1fedf1e8a398a1c5abd91fdaa2263ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101321"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>“共享数据源属性”对话框 -&gt;“常规”
@@ -26,7 +26,7 @@ ms.locfileid: "66101321"
  **名称**  
  键入数据源的名称。 数据源名称在报表中必须是唯一的。 默认情况下，会为数据源分配一个常规名称，如 DataSource1 或 DataSource2。  
   
- 类型   
+ **类型**  
  选择数据处理扩展插件。 该列表显示所有已注册的扩展插件。  
   
  **连接字符串**  

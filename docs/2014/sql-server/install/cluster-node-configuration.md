@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd1abb5a1bdce0e758d4f36c861917064b20fee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096430"
 ---
 # <a name="cluster-node-configuration"></a>群集节点配置
@@ -26,6 +26,6 @@ ms.locfileid: "66096430"
 ## <a name="options"></a>选项  
  实例名称-使用下拉列表选择要修改的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例。 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **此节点的名称**-将用运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序的计算机的名称填充此字段。 这就是将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例中添加或删除的故障转移群集节点。  
+ **此节点的名称** - 将使用运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机名称填充此字段。 这就是将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例中添加或删除的故障转移群集节点。  
   
   

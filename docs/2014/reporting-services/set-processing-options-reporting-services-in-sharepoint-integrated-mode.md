@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d64015e0b1756033f3a3a0b7caf90262d7d43f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101339"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>设置处理选项（SharePoint 集成模式下的 Reporting Services）
@@ -30,7 +30,7 @@ ms.locfileid: "66101339"
 -   报表历史记录是以前运行的报表副本的集合。 您可以使用报表历史记录来维护一段时间以来的报表记录。 报表历史记录不适用于包含机密数据或个人数据的报表。 因此，报表历史记录只能包含使用单组特定凭据查询数据源的报表。此类凭据可以是已存储的凭据，也可以是在无人参与的情况下执行报表所用的凭据，并且对运行报表的所有用户都可用。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]与 SharePoint 的集成使用 SharePoint 的签出和签入内容管理功能将更新保存到[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型。 这包括创建报表快照。 因此，如果您在文档库上启用了版本控制，则当创建新的报表历史记录快照时，您将看到更新后的报表版本。 这是更新快照的副作用。 当更新快照时，它导致报表的 LastExecution 属性发生变化，而这会导致报表的版本发生变化。  
+    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 与 SharePoint 的集成使用 SharePoint 的签出和签入内容管理功能将更新保存到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内容类型。 这包括创建报表快照。 因此，如果您在文档库上启用了版本控制，则当创建新的报表历史记录快照时，您将看到更新后的报表版本。 这是更新快照的副作用。 当更新快照时，它导致报表的 LastExecution 属性发生变化，而这会导致报表的版本发生变化。  
   
 -   可以通过指定超时值来限制使用系统资源的方式。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66101339"
   
 -   [设置数据库超时](#bkmk_set_database_timeout)  
   
-##  <a name="bkmk_set_data_refresh"></a>设置数据刷新选项  
+##  <a name="to-set-data-refresh-options"></a><a name="bkmk_set_data_refresh"></a>设置数据刷新选项  
   
 1.  指向库中的报表。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66101339"
   
 7.  如果想要立刻创建用于报表的快照数据而不等待预定的数据处理开始执行，则应在 **“数据快照选项”** 中选择 **“保存此页时创建或更新快照”** 。  
   
-##  <a name="bkmk_set_report_caching"></a>设置报表缓存选项  
+##  <a name="to-set-report-caching-options"></a><a name="bkmk_set_report_caching"></a>设置报表缓存选项  
   
 1.  指向库中的报表。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66101339"
   
     -   创建自定义计划，在指定的时间清除缓存。  
   
-##  <a name="bkmk_set_processing"></a>设置处理超时值  
+##  <a name="to-set-processing-time-out-values"></a><a name="bkmk_set_processing"></a>设置处理超时值  
   
 1.  指向库中的报表。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66101339"
   
 3.  如果要使用在报表服务器级指定的值，请在“处理超时”中选择“使用站点默认设置”********。 如果要用无超时或不同的超时值来替代该值，请选择“不对报表处理时间设置超时”或“限制报表处理时间(秒)”********。  
   
-##  <a name="bkmk_set_report_history"></a>设置报表历史记录选项和限制  
+##  <a name="to-set-report-history-options-and-limits"></a><a name="bkmk_set_report_history"></a>设置报表历史记录选项和限制  
   
 1.  指向库中的报表。  
   
@@ -100,9 +100,9 @@ ms.locfileid: "66101339"
   
 4.  在 **“历史记录快照限制”** 中，如果要使用在报表服务器级指定的值，请选择 **“使用站点默认设置”** 。 否则，请选择 **“不限制快照数”** 或 **“将快照数限制在”** 以指定自定义值。  
   
-##  <a name="bkmk_set_database_timeout"></a>设置数据库超时  
+##  <a name="set-database-timeout"></a><a name="bkmk_set_database_timeout"></a>设置数据库超时  
   
-1.  使用 Windows PowerShell 设置 SharePoint 报表服务器的数据库超时。 有关详细信息，请参阅[用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 中的“获取并设置报表服务应用程序数据库的属性”一节。  
+1.  使用 Windows PowerShell 设置 SharePoint 报表服务器的数据库超时。 有关详细信息，请参阅[Reporting Services SharePoint 模式的 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)的 "获取并设置报表服务应用程序数据库的属性" 部分。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](report-server/set-report-processing-properties.md)   

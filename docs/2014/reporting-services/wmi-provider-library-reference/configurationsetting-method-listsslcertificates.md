@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098324"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificates 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -40,10 +40,10 @@ public void ListSSLCertificates(out string[] CertificateHash,
  *CertificateHash[]*  
  [out] 证书哈希。  
   
- *CertName []*  
+ *CertName[]*  
  [out] 证书名称。  
   
- *HostName []*  
+ *HostName[]*  
  [out] 证书的主机名。  
   
  *长度*  
@@ -58,7 +58,7 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

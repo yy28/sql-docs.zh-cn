@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca5d6ed8f1e8a92d22bd32e39c8afe946a0fcfee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095979"
 ---
 # <a name="connection-parameters"></a>连接参数
@@ -44,7 +44,7 @@ ms.locfileid: "66095979"
 > [!NOTE]  
 >  如果选择 "Windows 身份验证"，则将在 "**用户名**" 文本框中填充当前登录用户的用户名。  
   
- **权限**  
+ **密码**  
  输入指定用户的密码。  
   
 ## <a name="see-also"></a>另请参阅  

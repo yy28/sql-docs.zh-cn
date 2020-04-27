@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099034"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
@@ -26,7 +26,7 @@ ms.locfileid: "66099034"
   
  视频[如何：在表中创建迷你图（报表生成器视频）](https://technet.microsoft.com/bi/ff871942.aspx)演示如何使用迷你图创建相似的报表。  
   
-##  <a name="BackToTop"></a>你将学习的内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容  
  在本教程中，您将了解如何执行下列操作：  
   
  1. [创建含有表的报表](#CreateTable)  
@@ -53,13 +53,13 @@ ms.locfileid: "66099034"
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="CreateTable"></a>1. 创建含有表的报表  
+##  <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. 创建含有表的报表  
   
 #### <a name="to-create-a-report"></a>创建报表  
   
 1.  单击 **“开始”**，依次指向 **“程序”**、 **Microsoft SQL Server 2012 Report Builder**，再单击 **“报表生成器”**。  
   
-     此时将打开 "**入门**" 对话框。  
+     随即将打开“入门”**** 对话框。  
   
     > [!NOTE]  
     >  如果未显示 "**入门**" 对话框，请在 "**报表生成器**" 按钮中单击 "**新建**"。  
@@ -68,12 +68,12 @@ ms.locfileid: "66099034"
   
 3.  在右窗格中，单击“表或矩阵向导”****。  
   
-4.  在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”************。 将打开“选择数据源的连接”  页面。  
+4.  在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”************。 将打开“选择数据源的连接”**** 页面。  
   
     > [!NOTE]  
     >  本教程不需要具体数据；只需要与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库的连接。 如果已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到步骤 10。**** 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-5.  单击 **“新建”** 。 此时将打开 **“数据源属性”** 对话框。  
+5.  单击 **“新建”**。 此时将打开 **“数据源属性”** 对话框。  
   
 6.  在“名称”中，键入数据源的名称“Product Sales”********。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "66099034"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     返回至“选择数据源的连接”页  。  
+     返回至“选择数据源的连接”页****。  
   
-11. 若要验证是否能连接到数据源，请单击“测试连接”  。  
+11. 若要验证是否能连接到数据源，请单击“测试连接”****。  
   
      将显示消息“已成功地创建连接”。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66099034"
   
 13. 单击“下一步”。   
   
-##  <a name="Query"></a>2. 在表向导中创建查询  
+##  <a name="2-create-a-query-in-the-table-wizard"></a><a name="Query"></a>2. 在表向导中创建查询  
  在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
   
 > [!NOTE]  
@@ -150,17 +150,17 @@ ms.locfileid: "66099034"
   
      该查询运行并显示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**字段的结果集。  
   
-5.  单击“下一步”。   
+5.  单击“下一步”  。  
   
 6.  在“排列字段”页上，将 Sales 拖到“值”中************。  
   
-     **Sales**由 Sum 函数聚合。 值为 [Sum(Sales)]。  
+     **Sales** 由 Sum 函数聚合。 值为 [Sum(Sales)]。  
   
 7.  将 Product 拖到“行组”中********。  
   
 8.  将 SalesDate 拖到“列组”中********。  
   
-9. 单击“下一步”。   
+9. 单击“下一步”  。  
   
 10. 在“选择布局”页的“选项”下，确认已选择“显示小计和总计”************。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "66099034"
   
     3.  第三行将对表出现一次以显示总计。  
   
-11. 单击“下一步”。   
+11. 单击“下一步”  。  
   
 12. 在 **“选择样式”** 页的 **“样式”** 窗格中，选择 **“石板”**。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "66099034"
   
 15. 单击 **“运行”** 以预览报表。  
   
-##  <a name="Sparkline"></a>3. 添加迷你图  
+##  <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. 添加迷你图  
   
 #### <a name="to-add-a-sparkline-chart-to-a-table"></a>向表中添加迷你图  
   
@@ -216,7 +216,7 @@ ms.locfileid: "66099034"
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
-##  <a name="AlignSparklines"></a>4. 垂直和水平对齐迷你图  
+##  <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. 垂直和水平对齐迷你图  
  如果不使用相同的度量，则很难读取迷你图。 每个迷你图的水平轴和垂直轴都需要与其他部分匹配。  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>设置表中迷你图的对齐方式  
@@ -229,7 +229,7 @@ ms.locfileid: "66099034"
   
      Tablix1 显示在列表中。 这是唯一的选项。 该选项设置在各迷你图中条形相对于其他条形的高度。  
   
-4.  单击“确定”。   
+4.  单击" **确定**"。  
   
 5.  右键单击迷你图，然后单击“水平轴属性”****。  
   
@@ -237,13 +237,13 @@ ms.locfileid: "66099034"
   
      Tablix1 显示在列表中。 这是唯一的选项。 该选项设置在各迷你图中条形相对于其他条形的宽度。 如果某些迷你图中的条形比其他迷你图少，则这些迷你图将对于缺失的数据具有空白空间。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
 8.  单击“运行”，再次预览报表****。  
   
  请注意，所有条形现在与其他行中的条形对齐。  
   
-##  <a name="FormatCurrency"></a>5. （可选）将数据格式设置为货币  
+##  <a name="5-optional-format-data-as-currency"></a><a name="FormatCurrency"></a>5. （可选）将数据格式设置为货币  
  默认情况下，“Sales”字段的汇总数据显示为常规数字****。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值****。  
   
 #### <a name="to-format-a-currency-field"></a>设置货币字段格式  
@@ -260,7 +260,7 @@ ms.locfileid: "66099034"
   
  **Sales**的汇总值显示为货币。  
   
-##  <a name="FormatDates"></a>6. （可选）将数据格式设置为日期  
+##  <a name="6-optional-format-data-as-dates"></a><a name="FormatDates"></a>6. （可选）将数据格式设置为日期  
  默认情况下， **SalesDate**字段会同时显示日期和时间信息。 您可以设置其格式，使其只显示日期。  
   
 #### <a name="to-format-a-date-field-as-the-default-format"></a>将日期字段设置为默认格式  
@@ -271,13 +271,13 @@ ms.locfileid: "66099034"
   
 3.  在功能区上，在 "**主页**" 选项卡上的 "**数字**" 组中，从下拉列表中选择 "**日期**"。  
   
-     单元格会显示示例日期 **[2000/1/31]**。 如果看不到示例日期，请单击“数字”**** 组中的“占位符样式”****，然后单击“示例值”****。  
+     单元格将显示示例日期 **[1/31/2000]**。 如果看不到示例日期，请单击“数字”**** 组中的“占位符样式”****，然后单击“示例值”****。  
   
 4.  单击 **“运行”** 以预览报表。  
   
  **SalesDate**值以默认日期格式显示。  
   
-##  <a name="Width"></a>7. （可选）更改列宽  
+##  <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. （可选）更改列宽  
  默认情况下，表中的每个单元格都包含一个文本框。 在呈现页面时，文本框将垂直扩展以容纳文本。 在呈现的报表中，每个行将扩展到行中呈现的最高文本框的高度。 设计图面上的行的高度不会影响已呈现报表中的行的高度。  
   
  若要减少每个行占用的垂直空间量，请扩展列宽以容纳单个行的列中的文本框的预计内容。  
@@ -294,8 +294,8 @@ ms.locfileid: "66099034"
   
 4.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Title"></a>8. （可选）添加报表标题  
- 报表标题将出现在报表的顶部。 您可以将报表标题放在表头中，或者如果报表不使用表头，也可以将其放在表体顶部的文本框中。 在本教程中，您将使用自动放置在表体顶部的文本框。  
+##  <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. （可选）添加报表标题  
+ 报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本教程中，您将使用自动放置在表体顶部的文本框。  
   
  通过将不同的字体样式、大小和颜色应用于文本的短语和单个字符，可以进一步增强文本。 有关详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
@@ -317,12 +317,12 @@ ms.locfileid: "66099034"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>9. 保存报表  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. 保存报表  
  将报表保存到报表服务器或计算机上。 如果不将报表保存到报表服务器上，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  单击 **“最近使用的站点和服务器”**。  
   
@@ -338,7 +338,7 @@ ms.locfileid: "66099034"
   
 #### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到要保存该报表的文件夹************。  
   

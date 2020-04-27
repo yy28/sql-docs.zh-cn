@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098542"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>CreateSSLCertificateBinding 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -37,8 +37,8 @@ public void CreateSSLCertificateBinding(string application,
     int lcid, out string error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>parameters  
- *Application*  
+## <a name="parameters"></a>参数  
+ *应用程序*  
  应为其创建证书绑定的应用程序的名称。  
   
  *CertificateHash*  
@@ -80,7 +80,7 @@ public void CreateSSLCertificateBinding(string application,
 5.  指定某个主机名的 URL 预留已存在，但是该主机名与证书主机名不匹配。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

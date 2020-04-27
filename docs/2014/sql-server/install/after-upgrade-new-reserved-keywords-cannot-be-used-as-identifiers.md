@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096893"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>升级后，新的保留关键字不能用作标识符
@@ -52,7 +52,7 @@ ms.locfileid: "66096893"
 -   使用分隔标识符引用对象。 例如，语句`CREATE TABLE [MERGE] ([MERGE] int);`使用方括号分隔对象名称合并。  
   
 ## <a name="external-resources"></a>外部资源  
- [Transact-sql&#41;&#40;保留关键字](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [保留关键字 (Transact-SQL)](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)  
   

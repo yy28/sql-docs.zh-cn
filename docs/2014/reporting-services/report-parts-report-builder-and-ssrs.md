@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b07fb1c133bbed21fd74936a38b97fa1778e5ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104551"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
-  报表项（如表、矩阵、图表和图像）可以作为*报表部件*发布。 报表部件是单独发布到报表服务器上并且可以在其他报表中重复使用的报表项。 报表部件具有 .rsc 文件扩展名。  
+   表、矩阵、图表和图像等报表项可以作为“报表部件”发布。 报表部件是单独发布到报表服务器上并且可以在其他报表中重复使用的报表项。 报表部件具有 .rsc 文件扩展名。  
   
  通过报表部件，工作组现在可以充分利用其团队成员的不同特长和角色。 例如，如果您负责创建图表，则可以将您的图表保存为您和您的同事可以在其他报表中重复使用的单独的部件。 您可以将报表部件发布到报表服务器或者与报表服务器相集成的 SharePoint 站点上。 您可以在多个报表中重复使用这些报表部件，也可以在服务器上更新它们。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66104551"
   
  若要快速开始使用报表部件，请参阅视频[报表生成器3报表部件 SQL Server 2008 R2](https://technet.microsoft.com/edge/Video/ff711300)和[如何实现：使用 SQL Server 报表生成器创建可重复使用的报表部件](https://technet.microsoft.com/sqlserver/ff634166.aspx)。  
   
-##  <a name="ComponentWorkflow"></a>报表部件的生命周期  
+##  <a name="life-cycle-of-a-report-part"></a><a name="ComponentWorkflow"></a> 报表部件的生命周期  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  人员 A 创建一个含图表的报表，该图表依赖于某一嵌入数据集。  
@@ -45,7 +45,7 @@ ms.locfileid: "66104551"
   
 6.  人员 B 接受来自服务器的更新的图表。 这将覆盖人员 B 已对人员 B 的报表中的图表所做的更改。  
 
-##  <a name="PublishingComponents"></a>发布报表部件  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a>发布报表部件  
  在您发布报表部件时，报表生成器会向其分配一个不同于报表部件名称的唯一 ID。 报表生成器将保持该 ID，无论您对该报表部件进行何种更改。 该 ID 将您的报表中的原始报表项链接到该报表部件。 在其他报表作者重复使用该报表部件时，该 ID 也将其报表中的报表部件链接到报表服务器上的报表部件。  
   
  以下是您可以作为报表部件发布的报表项：  
@@ -54,11 +54,11 @@ ms.locfileid: "66104551"
   
 -   仪表  
   
--   映像  
+-   图像  
   
 -   地图  
   
--   parameters  
+-   参数  
   
 -   矩形  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66104551"
   
  您还可以在“属性”窗格中编辑说明。  
 
-##  <a name="ReusingComponents"></a>重复使用报表部件  
+##  <a name="reusing-report-parts"></a><a name="ReusingComponents"></a>重复使用报表部件  
  创建报表的最简单方式是从报表部件库将现有报表部件（如表或图表）添加到您的报表。 将报表部件添加到您的报表后，可以根据需要进行修改，或者接受来自服务器的更新。 更改您的报表中的报表项将不会对站点或服务器上发布的报表部件的实例产生影响，并且不会破坏报表中的实例与站点或服务器上的实例之间的关系 如果您具有足够的权限，则可以将更新的副本保存回站点或服务器。 如果其他人修改站点或服务器上的副本，您可以决定是将您的副本保持原样，还是更新该副本以便与站点或服务器上的副本相符。  
   
 ### <a name="searching-for-report-parts"></a>搜索报表部件  
@@ -92,9 +92,7 @@ ms.locfileid: "66104551"
  您可以采用缩略图或列表的形式查看搜索结果，并且可以按名称、创建日期和修改日期以及创建者对搜索结果进行排序。 有关详细信息，请参阅 [浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)。  
   
 ### <a name="what-comes-with-a-report-part"></a>报表部件所附带的内容  
- 将报表部件添加到报表时，还将添加它正常工作所需的所有内容。 例如，显示数据的任何对象依赖于一个数据集，即对某数据源的查询和连接。 它可能还具有一个或多个参数。 
-  *
-  *它所依赖的所有项是其“依赖项”，并且在您将某一报表部件添加到报表时，所有这些依赖项或者指向它们的指针都将与该报表部件一起包括。 数据集和参数将在您的报表的“报表数据”窗格中列出。  
+ 将报表部件添加到报表时，还将添加它正常工作所需的所有内容。 例如，显示数据的任何对象依赖于一个数据集，即对某数据源的查询和连接。 它可能还具有一个或多个参数。 ** 它所依赖的所有项是其“依赖项”，并且在您将某一报表部件添加到报表时，所有这些依赖项或者指向它们的指针都将与该报表部件一起包括。 数据集和参数将在您的报表的“报表数据”窗格中列出。  
   
  报表部件的数据集可嵌入在报表部件中，或者可以是报表部件指向的单独的共享数据集。 如果该数据集嵌入在报表部件中，则可以对其进行修改。 如果该数据集是共享数据集，则它是您需要具有相应权限的单独对象。 有关共享数据集和嵌入数据集的详细信息，请参阅[将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)。  
   
@@ -106,7 +104,7 @@ ms.locfileid: "66104551"
   
  在您添加另一个报表部件时，如果该报表部件使用的数据集与您的报表中已存在的某一数据集完全相同，则向导不会将该数据集的其他版本添加到您的报表；它会重定向该报表部件中的引用以便转到现有数据集。 有关详细信息，请参阅 [报表生成器中的报表部件和数据集](report-data/report-parts-and-datasets-in-report-builder.md)。  
 
-##  <a name="UpdatingComponents"></a>用服务器中的更改更新报表部件  
+##  <a name="updating-report-parts-with-changes-from-the-server"></a><a name="UpdatingComponents"></a> 通过来自服务器的更改更新报表部件  
  每次打开报表时，报表生成器都检查该报表中各报表部件的服务器实例是否已在服务器上进行了更新。 它还将检查报表部件的依赖项（如数据集和参数）的更改。 如果任何已发布的报表部件或其依赖关系已在服务器上进行了更新，则报表中的信息栏将显示已更新的数量。 您可以选择查看并接受或拒绝更新，或关闭信息栏。 如果您选择查看更新，则可以看到报表部件的缩略图、最后修改者以及最后修改时间。 然后，您可以接受任何或所有更新项。  
   
 > [!NOTE]  
@@ -122,17 +120,17 @@ ms.locfileid: "66104551"
   
  若要还原到服务器上的版本，只需删除在您的报表中具有的版本并且再次添加它。  
 
-##  <a name="RepublishingComponents"></a>更新已在服务器上的报表部件  
+##  <a name="updating-report-parts-already-on-the-server"></a><a name="RepublishingComponents"></a> 更新已在服务器上的报表部件  
  您可以选择更新服务器上的现有报表部件，或者将其作为新的报表部件发布而不替换现有的报表部件。 在您更新服务器上的报表部件时，它并不自动修改该报表部件在其他报表中的副本。 如果其他报表作者已将该报表部件添加到某一报表，则在他们下次打开该报表时向他们通知所做的更改。 他们可以选择接受或拒绝您的更改。  
   
  如果您选择将该报表部件作为新的报表部件发布，则报表生成器将为其提供一个新的唯一 ID，并且它将不再链接到原始报表部件。  
   
  如果数据集嵌入在该报表部件中，则每次您发布该报表部件时，该数据集都将显示在 **“发布报表部件”** 对话框中。 共享数据集不显示在 **“发布报表部件”** 对话框中。  
 
-##  <a name="RptPartsRptDesigner"></a>使用报表设计器中的报表部件  
+##  <a name="working-with-report-parts-in-report-designer"></a><a name="RptPartsRptDesigner"></a> 在报表设计器中使用报表部件  
  报表部件的工作方式与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器稍有不同。 在报表设计器中，发布是单向的：您可以从报表设计器发布报表部件，但不能在报表设计器中重复使用现有报表部件。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](report-design/report-parts-in-report-designer-ssrs.md)。  
   
-##  <a name="HowTo"></a>操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作指南主题  
  [发布和重新发布报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)  
   
  [浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

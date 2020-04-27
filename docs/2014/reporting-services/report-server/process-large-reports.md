@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103623"
 ---
 # <a name="process-large-reports"></a>处理大型报表
@@ -73,6 +73,6 @@ ms.locfileid: "66103623"
  [设置报表处理属性](set-report-processing-properties.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [报表服务器内容管理（SSRS 本机模式）](report-server-content-management-ssrs-native-mode.md)   
- [报表管理器预加载缓存 &#40;&#41;](preload-the-cache-report-manager.md)  
+ [预加载缓存（报表管理器）](preload-the-cache-report-manager.md)  
   
   

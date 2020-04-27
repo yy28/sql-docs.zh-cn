@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2a4ef9c25607226c3898c10c0ec9ff245de8a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104449"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>“报表属性”对话框 ->“代码”（报表生成器和 SSRS）
@@ -27,8 +27,8 @@ ms.locfileid: "66104449"
  键入要在报表中使用的方法。 必须编写[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]代码。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表设计器 &#40;SSRS 中的表达式中的自定义代码和程序集引用&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [报表和组变量集合引用（报表生成器和 SSRS）](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
+ [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [报表和组变量集合引用 &#40;报表生成器和 SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -13,25 +13,25 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 232ee51614a668b07263c3e3a4182f23652135bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099871"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>“Reporting Services 登录”对话框 (SSRS)
   使用 **“Reporting Services 登录”** 对话框可以提供向报表服务器发布报表时要使用的凭据。  
   
--   **注意**如果这是你首次将报表发布到 Report Server，因为设置了为项目设置**TargetServerURL**部署属性，请验证你指定的服务器名称是否类似于`http://localhost/reportserver`，而不`http://localhost/reports`是。 在本地服务器上指定 `reports` 目录而不是 `reportserver` 目录将间接打开此对话框。 有关设置 TargetServerURL 的详细信息，请参阅**设置部署属性 (Reporting Services)**[](set-deployment-properties-reporting-services.md)。  
+-   **注意**如果这是你首次将报表发布到 Report Server，因为设置了为项目设置**TargetServerURL**部署属性，请验证你指定的服务器名称是否类似于`http://localhost/reportserver`，而不`http://localhost/reports`是。 在本地服务器上指定 `reports` 目录而不是 `reportserver` 目录将间接打开此对话框。 有关设置 TargetServerURL 的详细信息，请参阅[设置部署属性 (Reporting Services)](set-deployment-properties-reporting-services.md)****。  
   
 ## <a name="options"></a>选项  
- **Server**  
+ **服务器**  
  显示报表服务器的名称。 例如，`http://localhost/reportserver` 。 如果报表服务器使用的不是默认端口 80，则需要包含端口号。 例如，`http://localhost:81/reportserver` 。  
   
  **用户名**  
  键入登录 Web 服务时要使用的用户名。  
   
- **权限**  
+ **密码**  
  键入登录 Web 服务时要使用的密码。  
   
 ## <a name="see-also"></a>另请参阅  

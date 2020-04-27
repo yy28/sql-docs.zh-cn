@@ -17,25 +17,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 31c5fa6b3ca1f42ea87fc1514f55ce325f8a021a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101991"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>授予用户对报表服务器的访问权限（报表管理器）
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的安全性向用户授予对报表服务器的访问权限。 在新安装的报表服务器上，只有作为本地 Administrators 组的成员的用户具有对报表服务器内容和操作的权限。 若要使其他用户可以使用报表服务器，必须创建将用户帐户或组帐户映射到指定任务集合的预定义角色的角色分配。  
   
- **SharePoint 模式报表服务器：** 对于配置为 SharePoint 集成模式的 Report Server，你可以使用 SharePoint 权限从 SharePoint 站点配置访问权限。 对 SharePoint 站点的权限级别确定对报表服务器内容和操作的访问权限。 您必须是站点管理员才能授予对 SharePoint 站点的权限。 有关详细信息，请参阅 [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
+ **SharePoint 模式报表服务器：** 对于配置为 SharePoint 集成模式的报表服务器，使用 SharePoint 权限从 SharePoint 站点配置访问权限。 对 SharePoint 站点的权限级别确定对报表服务器内容和操作的访问权限。 您必须是站点管理员才能授予对 SharePoint 站点的权限。 有关详细信息，请参阅 [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
   
- **本机模式报表服务器：** 本主题重点介绍为纯模式配置的 Report Server，以及如何使用报表管理器将用户分配到角色。 有两种类型的角色：  
+ **本机模式报表服务器：** 本主题侧重于配置为本机模式的报表服务器以及使用报表管理器向角色分配用户。 有两种类型的角色：  
   
 -   项级角色用于查看、添加和管理报表服务器内容、订阅、报表处理和报表历史记录。 可以对根节点（主文件夹）或位于该层次结构中的特定下级文件夹或项定义项级角色分配。  
   
 -   系统级角色授予对不限于任何特定项的站点范围操作的访问权限。 例如，使用报表生成器和使用共享计划。  
   
-     两种类型的角色互为补充，应结合使用。 因此，将用户添加到报表服务器的操作分为两个部分。 如果将用户分配到项级角色，则还应将该用户分配到系统级角色。 将用户分配到角色时，必须选择已定义的角色。 若要创建、修改或删除角色，请[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]使用。 有关详细信息，请参阅 [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)。  
+     两种类型的角色互为补充，应结合使用。 因此，将用户添加到报表服务器的操作分为两个部分。 如果将用户分配到项级角色，则还应将该用户分配到系统级角色。 将用户分配到角色时，必须选择已定义的角色。 若要创建、修改或删除角色，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 有关详细信息，请参阅 [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)。  
   
 ## <a name="before-you-start"></a>开始之前  
  在将用户添加到本机模式的报表服务器之前查看以下列表。  
@@ -44,7 +43,7 @@ ms.locfileid: "66101991"
   
 -   若要将此任务委托给其他用户，请创建将用户帐户映射到“内容管理员”和“系统管理员”角色的角色分配。 具有“内容管理员”和“系统管理员”权限的用户可以将用户添加到报表服务器。  
   
--   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，查看 "系统角色" 和 "用户角色" 的预定义角色，以便熟悉每个角色中的各种任务。 由于报表管理器中不显示任务说明，因此需要在开始添加用户之前熟悉角色。  
+-   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，查看“系统角色”和“用户角色”的预定义角色，以便熟悉每个角色中的各种任务。 由于报表管理器中不显示任务说明，因此需要在开始添加用户之前熟悉角色。  
   
 -   根据需要自定义这两个角色或定义其他角色以包括所需的任务集合。 例如，如果计划对单独的项使用自定义安全设置，则可能希望创建新的角色定义以授予对文件夹的查看访问权限。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "66101991"
   
 1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
-2.  单击 **“网站设置”**。  
+2.  单击 **“网站设置”** 。  
   
-3.  单击 **“安全性”** 。  
+3.  单击 **“安全”**。  
   
 4.  单击 **“新建角色分配”**。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66101991"
 4.  单击 **“新建角色分配”**。  
   
     > [!NOTE]  
-    >  如果某项当前从父项继承安全性，则在工具栏中单击 **“编辑项安全设置”** 可以更改安全设置。 然后，单击 **“新建角色分配”**。  
+    >   如果某项当前从父项继承安全性，则在工具栏中单击 **“编辑项安全设置”** 可以更改安全设置。 然后，单击 **“新建角色分配”**。  
   
 5.  在 "**组或用户名**" 中，按以下格式输入 Windows 域用户或组帐户\<： " \\域>\><帐户"。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
   

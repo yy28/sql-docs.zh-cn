@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101163"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>“快照选项”属性页（报表管理器）
@@ -32,7 +32,7 @@ ms.locfileid: "66101163"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的“常规”属性页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表的“常规”属性页。  
   
 4.  选择 **“快照选项”** 选项卡。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66101163"
  单击此选项可保存所做的更改。  
   
 ## <a name="see-also"></a>另请参阅  
- [向报表历史记录添加快照（报表管理器）](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [将快照添加到报表历史记录 &#40;报表管理器&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [创建、修改和删除报表历史记录中的快照](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  

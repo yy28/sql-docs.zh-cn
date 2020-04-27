@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd6b3cc87757a8d0edc9067bd2f8f0911ccef238
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100471"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>向报表项目中添加新报表或现有报表 (SSRS)
@@ -48,11 +48,11 @@ ms.locfileid: "66100471"
   
 ### <a name="to-add-a-new-blank-report"></a>添加新的空白报表  
   
-1.  在 **“项目”** 菜单上单击 **“添加新项”** 。  
+1.  在 **“项目”** 菜单上单击 **“添加新项”**。  
   
-2.  在 **“模板”** 上单击 **“报表”** 。  
+2.  在 **“模板”** 上单击 **“报表”**。  
   
-3.  单击“添加”  。  
+3.  单击 **“添加”** 。  
   
      一个新的空白报表随即添加到项目中并显示在设计图面上。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66100471"
   
 1.  从 "**项目**" 菜单中，单击 "**添加**"，然后单击 "**现有项**"。  
   
-2.  浏览到 .rdl 文件所在的位置并选择它，然后单击 **“添加”** 。  
+2.  浏览到 .rdl 文件所在的位置并选择它，然后单击 **“添加”**。  
   
      该报表随即添加到项目的 **“报表”** 文件夹下。 关闭并重新打开项目后，报表将按字母顺序排序。  
   

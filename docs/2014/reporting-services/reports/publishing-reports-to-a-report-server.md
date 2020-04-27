@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102484"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
@@ -48,9 +48,9 @@ ms.locfileid: "66102484"
  您可以发布单个报表，也可以发布包含多个报表的报表服务器项目。 有关发布报表的说明，请参阅[发布报表](../publish-reports.md)。  
   
 ### <a name="publishing-a-single-report"></a>发布单个报表  
- 如果不希望发布项目中的所有报表，可以选择只发布单个报表。 为此，请选择一种部署报表的配置（例如，“发布”配置），然后右键单击相应的报表，再单击“部署”  。  
+ 如果不希望发布项目中的所有报表，可以选择只发布单个报表。 为此，请选择一种部署报表的配置（例如，“发布”配置），然后右键单击相应的报表，再单击“部署”****。  
   
- 如果报表使用共享数据源，您还需要部署共享数据源，否则，部署的报表将不会运行。 右键单击该共享数据源，再单击“部署”  。  
+ 如果报表使用共享数据源，您还需要部署共享数据源，否则，部署的报表将不会运行。 右键单击该共享数据源，再单击“部署”****。  
   
  必须指定报表服务器的目标服务器 URL，并且可能需要更改将报表和共享数据源部署到的默认文件夹。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66102484"
  当您发布报表服务器项目时，将会发布该项目中的所有报表。 将使用相同的项目配置部署所有报表：部署到同一个报表服务器、该服务器上的同一个文件夹等等。 若要将报表发布到不同服务器，请逐个发布这些报表，或者只包含报表服务器项目中您要发布的报表。 一个解决方案可以包含多个报表服务器项目，而使用多个项目可能会使管理报表部署的过程变得更为简单，因为您可以使用不同的配置来部署不同的项目。  
   
 ## <a name="see-also"></a>另请参阅  
- [“项目属性页”对话框](../tools/project-property-pages-dialog-box.md)   
+ ["项目属性页" 对话框](../tools/project-property-pages-dialog-box.md)   
  [报表服务器内容管理（SSRS 本机模式）](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [升级报表](../install-windows/upgrade-reports.md)  
   

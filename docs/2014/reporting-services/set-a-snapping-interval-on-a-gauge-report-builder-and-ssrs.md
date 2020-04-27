@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101369"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>在仪表上设置对齐间隔（报表生成器和 SSRS）
@@ -39,8 +39,8 @@ ms.locfileid: "66101369"
 5.  将**SnappingInterval**设置为一个表示对齐间隔的值。 指针将与已指定的值的最接近舍入倍数对齐。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置仪表上刻度的格式（报表生成器和 SSRS）](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [设置仪表上指针的格式（报表生成器和 SSRS）](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [设置仪表上刻度的格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [设置仪表上的指针格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [仪表（报表生成器和 SSRS）](report-design/gauges-report-builder-and-ssrs.md)  
   
   

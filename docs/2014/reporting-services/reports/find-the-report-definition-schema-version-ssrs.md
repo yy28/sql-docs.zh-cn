@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102648"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>查找报表定义架构版本 (SSRS)
@@ -41,16 +41,15 @@ ms.locfileid: "66102648"
   
 1.  打开一个新项目。 您选择的项目版本决定 RDL 架构的版本。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，支持多个架构版本。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)中。  
   
-2.  在 **“项目”** 菜单上，单击 **“添加新项”** 。 
-  **“添加新项”** 对话框将会打开。  
+2.  在 **“项目”** 菜单上，单击 **“添加新项”**。 **“添加新项”** 对话框将会打开。  
   
 3.  在 **“模板”** 窗格中，单击 **“报表”**。  
   
 4.  在 **“名称”** 中，键入报表名称，或接受默认名称。  
   
-5.  单击“添加”  。 报表设计器将在“设计”视图中打开一个新的空白报表。  
+5.  单击 **“添加”** 。 报表设计器将在“设计”视图中打开一个新的空白报表。  
   
-6.  在 **“视图”** 菜单上，单击 **“代码”** 。 该报告定义将显示为一个 XML 文件。  
+6.  在 **“视图”** 菜单上，单击 **“代码”**。 该报告定义将显示为一个 XML 文件。  
   
      XML REPORT 元素指定架构命名空间。 例如，下面的 Report 元素指定报表设计器的命名空间以及报表定义的命名空间。  
   

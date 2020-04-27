@@ -16,15 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099553"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
-  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你必须指定报表服务器，并视需要指定报表文件夹和共享数据源，以便你可以将报表服务器项目中的项发布到报表服务器。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成、预览和部署报表所需的属性和值存储在报表服务器项目的项目配置中。 可以为这些项目属性创建多个命名集，从而方便地在属性集之间切换。 每个属性集都是一个配置。 例如，可拥有一个向测试服务器发布报表的配置，还可拥有另一个向生产服务器发布报表的配置。  
+  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你必须指定报表服务器，并视需要指定报表文件夹和共享数据源，以便你可以将报表服务器项目中的项发布到报表服务器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成、预览和部署报表所需的属性和值存储在报表服务器项目的项目配置中。 可以为这些项目属性创建多个命名集，从而方便地在属性集之间切换。 每个属性集都是一个配置。 例如，可拥有一个向测试服务器发布报表的配置，还可拥有另一个向生产服务器发布报表的配置。  
   
  使用配置管理器可以在项目配置中创建和管理项目属性集。 配置管理器是一项受 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]支持的功能， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 正是基于此功能。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66099553"
   
 10. 在 **TargetServerURL** 文本框中，键入目标报表服务器的 URL。 在发布报表之前，必须将此属性设置为有效的报表服务器 URL。 向在本机模式下运行的报表服务器发布时，请使用报表服务器虚拟目录的 URL（例如，http: *//server/reportserver* 或 https: *//server/reportserver*）。 这是报表服务器的虚拟目录，而不是报表管理器的虚拟目录。  
   
-     发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如 http://*servername*、http://*servername*/*site* 或 http://*servername*/*site*/*subsite*）。  
+     发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如，http://*servername*、http://*servername*/*站点*或 http://*servername*/*site*/*子*站点）。  
   
 ### <a name="to-set-configuration-manager-properties"></a>设置配置管理器属性  
   
@@ -85,8 +84,8 @@ ms.locfileid: "66099553"
  [发布数据源和报表](../reports/publishing-data-sources-and-reports.md)   
  [预览报表](../reports/previewing-reports.md)   
  [报表设计器 F1 帮助](report-designer-f1-help.md)   
- [SharePoint 模式下的报表服务器上已发布报表项的 URL 示例 (SSRS)](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [“项目属性页”对话框](project-property-pages-dialog-box.md)   
+ [SharePoint 模式下的报表服务器上已发布报表项的 URL 示例 &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ ["项目属性页" 对话框](project-property-pages-dialog-box.md)   
  [将报表发布到报表服务器](../reports/publishing-reports-to-a-report-server.md)  
   
   

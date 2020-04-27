@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099741"
 ---
 # <a name="schedule-properties-general-page"></a>计划属性（“常规”页）
@@ -29,7 +29,7 @@ ms.locfileid: "66099741"
  若要打开此页， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]请启动，连接到 Report Server，打开 "**共享**计划" 文件夹，右键单击共享计划，然后选择 "**属性**"。  
   
 > [!NOTE]  
->  并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本均提供此功能；并且在运行不具有此功能的版本时，此页将不会出现。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
+>  并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本均提供此功能；并且在运行不具有此功能的版本时，此页将不会出现。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2012 的各个[版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -41,7 +41,7 @@ ms.locfileid: "66099741"
  **此计划的结束日期**  
  为此计划指定过期日期。  
   
- 类型   
+ **类型**  
  指定重复执行模式是主要基于小时、天、周、月还是仅运行一次。  
   
  **小时(重复执行模式)**  
@@ -60,7 +60,7 @@ ms.locfileid: "66099741"
  指定只在特定的日期和时间运行一次的计划。  
   
 ## <a name="see-also"></a>另请参阅  
- [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 帮助中的报表服务器](report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
  [创建、修改和删除计划](../subscriptions/create-modify-and-delete-schedules.md)   
  [计划](../subscriptions/schedules.md)  

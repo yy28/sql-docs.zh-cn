@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102173"
 ---
 # <a name="security-properties-page-items-report-manager"></a>项的“安全性”属性页（报表管理器）
@@ -35,11 +35,11 @@ ms.locfileid: "66102173"
   
 3.  在下拉菜单中，执行以下步骤之一：  
   
-    -   单击 **“安全性”** 。 这会打开该项的“安全属性”页。  
+    -   单击 **“安全”**。 这会打开该项的“安全属性”页。  
   
     -   单击 **“管理”** 以打开该项的“常规属性”页。 然后，选择 **“安全性”** 选项卡。  
   
- **编辑项安全性**  
+ **编辑项安全设置**  
  单击此选项可更改为当前项定义安全性的方式。 如果编辑文件夹的安全性，则更改将应用于当前文件夹及其所有子文件夹的内容。  
   
  此按钮对于主文件夹不可用。  

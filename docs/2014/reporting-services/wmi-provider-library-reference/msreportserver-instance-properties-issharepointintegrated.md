@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 95e7bade956c791feceddc32f2a0423c331fe77f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097113"
 ---
 # <a name="issharepointintegrated-property-wmi-msreportserver_instance"></a>IsSharePointIntegrated 属性 (WMI MSReportServer_Instance)
@@ -36,7 +36,7 @@ public Boolean IsSharePointIntegrated;
  一个 `Boolean` 值，指示报表服务器是否处于 SharePoint 集成模式。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_Instance 成员](msreportserver-instance-members.md)   

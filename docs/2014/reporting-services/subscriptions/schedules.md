@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100748"
 ---
 # <a name="schedules"></a>计划
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了“共享计划”和“报表特定计划”，可帮助控制报表的处理和分发   。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了共享计划和报表特定计划，可帮助您控制报表的处理和分发。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  
   
  本主题内容：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66100748"
 -   [停止报表服务器服务的影响](#bkmk_stoppingservice)  
   
   
-##  <a name="bkmk_whatyoucando"></a> 可对计划执行的操作  
+##  <a name="what-you-can-do-with-schedules"></a><a name="bkmk_whatyoucando"></a> 可对计划执行的操作  
  可以使用本机模式下的报表管理器或 SharePoint 模式下的 SharePoint 站点管理页来创建和管理计划。 可以：  
   
 -   计划标准订阅或数据驱动订阅中的报表传递时间。  
@@ -66,9 +66,9 @@ ms.locfileid: "66100748"
  有关如何创建和管理计划的详细信息，请参阅 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供计划操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
+>  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供计划操作。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2012 的各个[版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
   
-##  <a name="bkmk_compare"></a> 共享计划和报表特定计划的区别  
+##  <a name="comparing-shared-and-report-specific-schedules"></a><a name="bkmk_compare"></a> 共享计划和报表特定计划的区别  
  两种类型的计划将产生相同的输出：  
   
 -   **共享计划** 是可移植的多用途项，包含有现成的计划信息。 由于共享计划是系统级的项，因此创建共享计划需要具有系统级权限。 由于这个原因，您的报表服务器上的可用共享计划通常都是由报表服务器管理员或内容管理员创建的。 共享计划是使用报表管理器或 SharePoint 站点设置在报表服务器上存储和管理的。  
@@ -83,14 +83,14 @@ ms.locfileid: "66100748"
   
 -   **报表特定计划** 在特定的报表、订阅或报表执行操作的上下文中定义，用于确定缓存过期或快照更新的时间。 当您定义订阅或设置报表执行属性时，同时也会创建这些计划。 如果共享计划不能提供所需的频率或重复执行模式，则可以创建报表特定计划。 若要禁止报表运行，必须手动编辑报表特定计划。 报表特定计划可以由各个用户创建。  
   
-##  <a name="bkmk_configuredatasources"></a> 配置数据源  
+##  <a name="configure-the-data-sources"></a><a name="bkmk_configuredatasources"></a> 配置数据源  
  必须先将报表数据源配置为使用存储的凭据或无人参与的报表处理帐户，才能计划报表的数据或订阅处理。 如果使用存储的凭据，则只能存储一组凭据，运行该报表的所有用户都将使用这组凭据。 凭据可以是 Windows 用户帐户，也可以是数据库用户帐户。  
   
  无人参与的报表处理帐户是在报表服务器上配置的特殊用途的帐户。 当计划操作需要检索外部文件或处理时，报表服务器可以使用该帐户连接到远程计算机。 如果配置该帐户，则可以使用它连接到向报表提供数据的外部数据源。  
   
  若要指定存储的凭据或无人参与的报表处理帐户，请编辑该报表的数据源属性。 如果报表使用共享数据源，则改为编辑共享数据源。  
   
-##  <a name="bkmk_credentials"></a> 存储凭据和处理帐户  
+##  <a name="store-credentials-and-processing-accounts"></a><a name="bkmk_credentials"></a> 存储凭据和处理帐户  
  您对计划的处理权限取决于您的角色分配中的任务。 如果使用预定义角色，则作为“内容管理员”和“系统管理员”的用户可以创建和管理任何计划。 如果您使用自定义角色分配，角色分配必须包括支持计划操作的任务。  
   
 |要执行此操作|包括此任务|本机模式预定义角色|SharePoint 模式组|  
@@ -102,7 +102,7 @@ ms.locfileid: "66100748"
   
  有关本地模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中安全性的详细信息，请参阅 [预定义角色](../security/role-definitions-predefined-roles.md)、 [授予对本机模式报表服务器的权限](../security/granting-permissions-on-a-native-mode-report-server.md) 和 [任务和权限](../security/tasks-and-permissions.md)。 对于 SharePoint 模式，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
-##  <a name="bkmk_how_scheduling_works"></a> 计划和传递处理的工作方式  
+##  <a name="how-scheduling-and-delivery-processing-works"></a><a name="bkmk_how_scheduling_works"></a> 计划和传递处理的工作方式  
  计划和传递处理器提供以下功能：  
   
 -   维护报表服务器数据库中的事件和通知队列。 对于扩展部署，将在部署中的所有报表服务器之间共享该队列。  
@@ -127,19 +127,19 @@ ms.locfileid: "66100748"
   
  Reporting Services 维护一个针对所有计划操作的事件队列。 它定期轮询队列，检查是否有新事件。 默认情况下，每隔 10 秒扫描一次队列。 通过修改 RSReportServer.config 文件中的 `PollingInterval`、`IsNotificationService` 和 `IsEventService` 配置设置可以更改此间隔。 SharePoint 模式还将 RSreporserver.config 用于这些设置，并且值应用于所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
   
-##  <a name="bkmk_serverdependencies"></a> 服务器依赖关系  
+##  <a name="server-dependencies"></a><a name="bkmk_serverdependencies"></a> 服务器依赖关系  
  计划和传递处理器需要启动报表服务器服务和 SQL Server 代理。 必须通过基于策略的管理中 "Reporting Services" 方面`ScheduleEventsAndReportDeliveryEnabled`的 "**外围应用配置**器" 的属性启用 "计划和传递处理" 功能。 SQL Server 代理和报表服务器服务必须都在运行，才能执行计划的操作。  
   
 > [!NOTE]  
 >  可以使用 **Reporting Services 的外围应用配置器** 方面临时或永久停止计划操作。 虽然可以创建并部署自定义传递扩展插件，但是计划和传递处理器本身不是可扩展的。 该工具管理事件和通知的方式是不可更改的。 关于关闭功能的详细信息，请参阅 **Turn Reporting Services Features On or Off** 中的 [“预定的事件和传递”](../report-server/turn-reporting-services-features-on-or-off.md)一节。  
   
-###  <a name="bkmk_stoppingagent"></a> 停止 SQL Server 代理的影响  
+###  <a name="effects-of-stopping-the-sql-server-agent"></a><a name="bkmk_stoppingagent"></a> 停止 SQL Server 代理的影响  
  默认情况下，计划的报表处理将使用 SQL Server 代理。 如果停止该服务，除非通过 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法以编程的方式添加请求，否则将不会向队列中添加新的处理请求。 重新启动该服务时，将继续进行创建报表处理请求的作业。 对于过去在 SQL Server 代理脱机期间可能已经发生的报表处理作业，报表服务器不会尝试重新创建这些作业。 如果 SQL Server 代理停止一个星期的时间，则该星期的所有计划操作都将丢失。  
   
 > [!NOTE]  
 >  对于 SQL Server 代理提供给 Reporting Services 的功能，可以使用通过 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法向队列中添加计划事件的自定义代码来替代。  
   
-###  <a name="bkmk_stoppingservice"></a> 停止报表服务器服务的影响  
+###  <a name="effects-of-stopping-the-report-server-service"></a><a name="bkmk_stoppingservice"></a> 停止报表服务器服务的影响  
  如果停止报表服务器服务，SQL Server 代理会继续向队列中添加报表处理请求。 来自 SQL Server 代理的状态信息将指示作业成功。 但是，由于报表服务器服务已停止，因此实际上不会发生报表处理。 在您重新启动报表服务器服务之前，请求将在队列中一直累积。 重新启动报表服务器服务后，将按顺序处理队列中的所有报表处理请求。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098609"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>BackupEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -43,10 +43,10 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
 ```  
   
 ## <a name="parameters"></a>parameters  
- *权限*  
+ *密码*  
  用于在加密密钥返回之前对其进行加密的字符串。  
   
- *KeyFile []*  
+ *KeyFile[]*  
  [out] 包含已加密的加密密钥的数组。  
   
  *长度*  
@@ -62,7 +62,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

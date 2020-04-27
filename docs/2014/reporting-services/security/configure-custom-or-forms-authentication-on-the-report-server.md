@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102134"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
@@ -83,7 +83,7 @@ ms.locfileid: "66102134"
   
 12. 将 `PassThroughCookies` 元素结构添加到配置文件中。 有关详细信息，请参阅 [配置报表管理器以便传递自定义身份验证 Cookie](configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
   
-13. 保存文件。  
+13. 保存该文件。  
   
 14. 如果配置了扩展部署，请对该部署中的其他报表服务器重复以上所有步骤。  
   

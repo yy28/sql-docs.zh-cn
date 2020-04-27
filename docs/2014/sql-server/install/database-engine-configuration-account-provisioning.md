@@ -11,27 +11,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095865"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>数据库引擎配置 - 帐户设置
   使用此页可以设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式，并添加 Windows 用户或组作为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的管理员。  
   
-## <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>有关运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的注意事项  
+## <a name="considerations-for-running-sscurrent"></a>有关运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的注意事项  
  在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将 **BUILTIN\Administrators** 组设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的登录名，本地 Administrators 组的成员可以使用其管理员凭据登录。 使用提升的权限并不是最佳做法。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，未将 **BUILTIN\Administrators** 组设置为登录名。 因此，您应为每个管理用户创建一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，并在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新实例的过程中将该登录名添加到 sysadmin 固定服务器角色中。 对于用来运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的 Windows 帐户，您也应该执行这些操作。 这些作业包括复制代理作业。  
   
 ## <a name="options"></a>选项  
- **安全模式**-选择 "Windows 身份验证" 或 "混合模式身份验证" 进行安装。  
+ **安全模式** - 选择“Windows 身份验证”或“混合模式身份验证”用于安装。  
   
- **Windows 主体设置**-在的早期版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，windows Builtin\Administrator 本地组被置于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 服务器角色中，有效授予 windows 管理员对实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]访问权限。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的 sysadmin 服务器角色中未设置 Builtin\Administrator 组， 而是改为由您在安装过程中为新安装显式设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员。  
+ **Windows 主体设置** - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本中，Windows Builtin\Administrator 本地组放入了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 服务器角色中，有效授予了 Windows 管理员对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的访问权限。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的 sysadmin 服务器角色中未设置 Builtin\Administrator 组， 而是改为由您在安装过程中为新安装显式设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员。  
   
 > [!IMPORTANT]  
 >  您在安装过程中必须为新安装显式设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员。 直到您完成此步骤之后，安装程序才允许您继续操作。  
   
- **指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理员**-必须为实例至少指定一个 Windows 主体。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“当前用户”** 按钮。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。  
+ **指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员** - 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例至少指定一个 Windows 主体。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“当前用户”** 按钮。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。  
   
  完成列表的编辑后，单击 **“确定”**，然后在配置对话框中验证管理员列表。 完成此列表后，请单击 **“下一步”**。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66095865"
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]切勿设置空白或弱 sa 密码。  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]切勿设置空密码或弱 sa 密码。  
   
  **混合模式（Windows 身份验证[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或身份验证）**  
  允许用户使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接。 通过 Windows 用户帐户进行连接的用户可以使用经过 Windows 验证的信任连接。  
@@ -55,14 +55,13 @@ ms.locfileid: "66095865"
  如果必须选择“混合模式身份验证”并且要求使用 SQL 登录名以适应早期应用程序，则必须为所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户设置强密码。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供身份验证只是为了向后兼容。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证只是为了向后兼容。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  **输入密码**  
  输入并确认系统管理员 (sa) 登录名。 密码是抵御入侵者的第一道防线，因此设置强密码对于系统安全是绝对必要的。 切勿设置空密码或弱 sa 密码。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密码可包含 1 到 128 个字符，包括字母、符号和数字的任意组合。 如果选择“混合模式身份验证”，则必须输入强 sa 密码才能进入安装向导的下一页。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密码可包含 1 到 128 个字符，包括字母、符号和数字的任意组合。 如果选择“混合模式身份验证”，则必须输入强 sa 密码才能进入安装向导的下一页。  
   
  **强密码指南**  
  强密码不易被人猜出，也不能轻易地使用计算机程序进行黑客攻击。 强密码不能使用禁止的条件或字词，这些条件或字词包括：  

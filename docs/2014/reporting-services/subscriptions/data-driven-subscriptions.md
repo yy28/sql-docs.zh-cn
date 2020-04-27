@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100867"
 ---
 # <a name="data-driven-subscriptions"></a>数据驱动订阅
@@ -46,7 +46,7 @@ ms.locfileid: "66100867"
   
 -   有关支持数据驱动订阅功能的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的详细信息，请参阅[SQL Server 2012 的各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（https://go.microsoft.com/fwlink/?linkid=232473)。  
   
--   对于订阅数据，请选择可为报表服务器提供架构信息的数据源。 支持的数据源类型的示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包括关系数据、Oracle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、包数据、ODBC 数据源和 OLE DB 数据源。 有关订阅方数据源要求的详细信息，请参阅 [使用外部数据源提供订阅方数据（数据驱动订阅）](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
+-   对于订阅数据，请选择可为报表服务器提供架构信息的数据源。 支持的数据源类型的示例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据、Oracle、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包数据、ODBC 数据源以及 OLE DB 数据源。 有关订阅方数据源要求的详细信息，请参阅 [使用外部数据源提供订阅方数据（数据驱动订阅）](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
 ## <a name="working-with-data-driven-subscriptions"></a>处理数据驱动订阅  
  以下主题介绍有关数据驱动订阅的详细信息：  
@@ -54,13 +54,13 @@ ms.locfileid: "66100867"
 |主题|说明|  
 |------------|-----------------|  
 |[Create, Modify, and Delete a Data-Driven Subscription](data-driven-subscriptions.md)|介绍如何创建、修改和删除数据驱动订阅。|  
-|[将外部数据源用于订阅服务器数据 &#40;数据驱动订阅&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|介绍有关可用于数据驱动订阅的数据源的信息。|  
-|[创建数据驱动订阅 &#40;SSRS 教程&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|逐步介绍如何创建数据驱动订阅。|  
+|[使用外部数据源提供订阅方数据（数据驱动订阅）](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|介绍有关可用于数据驱动订阅的数据源的信息。|  
+|[创建数据驱动订阅（SSRS 教程）](../create-a-data-driven-subscription-ssrs-tutorial.md)|逐步介绍如何创建数据驱动订阅。|  
 |[缓存报表 (SSRS)](../report-server/caching-reports-ssrs.md)|介绍如何对数据驱动订阅使用 Null 传递提供程序来预先加载缓存。|  
   
 ## <a name="see-also"></a>另请参阅  
  [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [创建数据驱动订阅页 &#40;报表管理器&#41;](../create-data-driven-subscription-page-report-manager.md)   
- [报表管理器预加载缓存 &#40;&#41;](../report-server/preload-the-cache-report-manager.md)  
+ [预加载缓存（报表管理器）](../report-server/preload-the-cache-report-manager.md)  
   
   

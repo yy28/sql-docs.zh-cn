@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103470"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>报告服务器执行日志和 ExecutionLog3 视图
@@ -25,7 +25,7 @@ ms.locfileid: "66103470"
   
  配置为 SharePoint 模式的报表服务器也可以利用 SharePoint ULS 日志。 有关详细信息，请参阅 [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> 查看日志信息  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> 查看日志信息  
  报表服务器执行日志将报表执行情况的有关数据记录在内部数据库表中。 表中的信息可从 SQL Server 视图获得。  
   
  报表执行日志存储于默认名为 **ReportServer**的报表服务器数据库中。 SQL 视图提供执行日志信息。 “2”和“3”视图已在最近的版本中添加，并且包含新字段或者所包含字段的名称比以前版本更友好。 较旧的视图仍保留在产品中，这样，依赖于它们的自定义应用程序将不会受到影响。 如果您不依赖于较旧的视图，例如 ExecutionLog，则建议您使用最新视图 ExecutionLog**3**。  
@@ -44,7 +44,7 @@ ms.locfileid: "66103470"
   
 -   [日志字段 (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> 针对 SharePoint 模式报表服务器的配置设置  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> 针对 SharePoint 模式报表服务器的配置设置  
  您可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的系统设置启用或禁用报表执行日志记录。  
   
  默认情况下，日志条目保留 60 天。 超过此日期的条目将于每日凌晨 2:00 删 除。 对于成熟的安装，在任何给定时间都只保留 60 天的信息。  
@@ -71,7 +71,7 @@ ms.locfileid: "66103470"
   
 2.  将 **ExecutionLogLevel** 更改为 **verbose**。 该字段是文本输入字段，其两个可能的值是 **verbose** 和 **normal**。  
   
-##  <a name="bkmk_native"></a> 针对本机模式报表服务器的配置设置  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> 针对本机模式报表服务器的配置设置  
  从 SQL Server Management Studio 的“服务器属性”页，您可以启用或禁用报表执行日志记录。 **EnableExecutionLogging** 是高级属性。  
   
  默认情况下，日志条目保留 60 天。 超过此日期的条目将于每日凌晨 2:00 删 除。 对于成熟的安装，在任何给定时间都只保留 60 天的信息。  
@@ -98,7 +98,7 @@ ms.locfileid: "66103470"
   
 2.  在“用户定义”部分中，将 ExecutionLogLevel 更改为 verbose    。 该字段是文本输入字段，其两个可能的值是 **verbose** 和 **normal**。  
   
-##  <a name="bkmk_executionlog3"></a> 日志字段 (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> 日志字段 (ExecutionLog3)  
  此视图在基于 XML 的 **AdditionalInfo** 列中添加了其他性能诊断节点。 AdditionalInfo 列包含 1 对多的其他字段的 XML 结构信息。 下面是一个示例 Transact SQL 语句，从视图 ExecutionLog3 检索行。 该示例假定报表服务器数据库名为 **ReportServer**：  
   
 ```  
@@ -114,22 +114,22 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|存储报表或报表项的位置的路径。|  
 |UserName|用户标识符。|  
 |ExecutionID|与请求关联的内部标识符。 同一用户会话的请求共享相同的执行 ID。|  
-|RequestType|可能的值：<br />**交互**<br />**订阅**<br /><br /> <br /><br /> 分析按 RequestType=Subscription 筛选的日志数据和按 TimeStart 排序的数据可揭示大量使用订阅的时间段，这样您可能要将某些报表订阅修改为其他时间。|  
+|RequestType|可能的值：<br />**Interactive (交互)**<br />**订阅**<br /><br /> <br /><br /> 分析按 RequestType=Subscription 筛选的日志数据和按 TimeStart 排序的数据可揭示大量使用订阅的时间段，这样您可能要将某些报表订阅修改为其他时间。|  
 |格式|呈现格式。|  
 |parameters|用于执行报表的参数值。|  
-|ItemAction|可能的值：<br /><br /> **Render**<br /><br /> **排序**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **运行**<br /><br /> **RenderEdit**|  
+|ItemAction|可能的值：<br /><br /> **Render**<br /><br /> **进行**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **执行**<br /><br /> **RenderEdit**|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
 |TimeEnd||  
 |TimeDataRetrieval|用于检索数据的毫秒数。|  
 |TimeProcessing|用于处理报表的毫秒数。|  
 |TimeRendering|用于呈现报表的毫秒数。|  
-|源|报表执行的源。 可能的值：<br /><br /> **实时**<br /><br /> **Cache**：指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> **快照**<br /><br /> **History**<br /><br /> **即席**：指示基于动态生成的报表模型的钻取报表，或使用 Report Server 进行处理和呈现的客户端上预览的报表生成器报表。<br /><br /> **Session**：指示已建立的会话内的跟进请求。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**：指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
+|源|报表执行的源。 可能的值：<br /><br /> **推出**<br /><br /> **Cache**：指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> **快照**<br /><br /> **History**<br /><br /> **即席**：指示基于动态生成的报表模型的钻取报表，或使用 Report Server 进行处理和呈现的客户端上预览的报表生成器报表。<br /><br /> **Session**：指示已建立的会话内的跟进请求。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**：指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
 |状态|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
 |AdditionalInfo|包含与执行有关的附加信息的 XML 属性包。 对于每一行，内容可以不同。|  
   
-##  <a name="bkmk_additionalinfo"></a> AdditionalInfo 字段  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> AdditionalInfo 字段  
  AdditionalInfo 字段是包含与执行有关的其他信息的 XML 属性包或结构。 对于日志中的每一行，内容可以不同。  
   
  下表显示标准日志记录和详细日志记录模式下 AddtionalInfo 字段的内容示例：  
@@ -297,7 +297,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> 日志字段 (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a>日志字段（ExecutionLog2）  
  此视图添加了几个新字段并且重命名了其他几个字段。 下面是一个示例 Transact SQL 语句，从视图 ExecutionLog2 检索行。 该示例假定报表服务器数据库名为 **ReportServer**：  
   
 ```  
@@ -315,7 +315,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |ExecutionID||  
 |RequestType|请求类型（用户或系统）。|  
 |格式|呈现格式。|  
-|parameters|用于执行报表的参数值。|  
+|参数|用于执行报表的参数值。|  
 |ReportAction|可能的值：Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
 |TimeEnd||  
@@ -328,7 +328,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|查询返回的结果行数。|  
 |AdditionalInfo|包含与执行有关的附加信息的 XML 属性包。|  
   
-##  <a name="bkmk_executionlog"></a> 日志字段 (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a>日志字段（ExecutionLog）  
  下面是一个示例 Transact SQL 语句，从视图 ExecutionLog 检索行。 该示例假定报表服务器数据库名为 **ReportServer**：  
   
 ```  
@@ -346,7 +346,7 @@ select * from ExecutionLog order by TimeStart DESC
 |UserName|用户标识符。|  
 |RequestType|可能的值：<br /><br /> True = 订阅请求<br /><br /> False = 交互请求|  
 |格式|呈现格式。|  
-|parameters|用于执行报表的参数值。|  
+|参数|用于执行报表的参数值。|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
 |TimeEnd||  
 |TimeDataRetrieval|检索数据、处理报表以及呈现报表所用的毫秒数。|  
@@ -358,7 +358,7 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|查询返回的结果行数。|  
   
 ## <a name="see-also"></a>另请参阅  
- [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [打开 SharePoint 跟踪日志 &#40;ULS Reporting Services 事件&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   
  [错误和事件参考 (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

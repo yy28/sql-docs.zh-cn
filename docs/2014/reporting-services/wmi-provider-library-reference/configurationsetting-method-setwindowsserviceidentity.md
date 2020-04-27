@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097879"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>SetWindowsServiceIdentity 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -44,10 +44,10 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *UseBuiltInAccount*  
  指示指定的帐户是否是内置 Windows 帐户。  
   
- *账号*  
+ *帐户*  
  要用于运行 Windows 服务的 Windows 帐户，格式为“DOMAIN\alias”。  
   
- *权限*  
+ *密码*  
  帐户的密码。  
   
  *HRESULT*  
@@ -66,7 +66,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *帐户*参数中指定的帐户需要`LogonAsService` Windows 中的权限。 该方法可将此权限授予指定的帐户。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

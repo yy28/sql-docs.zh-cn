@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe9af16c34fa70bb8fcda0dcaae64a39786e3cd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102409"
 ---
 # <a name="row-visibility-dialog-box"></a>“行可见性”对话框
@@ -36,7 +36,7 @@ ms.locfileid: "66102409"
  **基于表达式显示或隐藏**  
  选择此选项可以利用表达式来使初始可见性具有可变性。  
   
- 键入计算结果为 `Boolean` 值的表达式，值为 `True` 时表示隐藏该项，值为 `False` 时表示显示该项。 单击 "表达式" （**fx**）按钮可编辑表达式。  
+ 键入计算结果为 `Boolean` 值的表达式，值为 `True` 时表示隐藏该项，值为 `False` 时表示显示该项。 单击“表达式” (**fx**) 按钮可编辑表达式。  
   
  **可以通过此报表项切换显示**  
  选择此选项可以显示一个切换图像，用户可以使用该图像在 HTML 报表查看器中显示或隐藏此报表项。  
@@ -46,7 +46,7 @@ ms.locfileid: "66102409"
 ## <a name="see-also"></a>另请参阅  
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
  [向项 &#40;报表生成器和 SSRS 添加展开或折叠操作&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)   
+ [映像 &#40;报表生成器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [报表设计器的 F1 帮助](tools/report-designer-f1-help.md)  
   
   

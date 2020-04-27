@@ -19,17 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f020dd812b53e531a3f4634ccba0d2cba980b89e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103801"
 ---
 # <a name="monitoring-report-server-performance"></a>监视报表服务器性能
   使用性能监视工具可监视报表服务器的性能以评估服务器活动，查看趋势，诊断系统瓶颈以及收集可以帮您确定当前系统配置是否充分的数据。 若要优化服务器性能，可指定回收报表服务器应用程序域的频率。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。  
   
 ## <a name="sources-of-performance-data"></a>性能数据的来源  
- 结合使用以下技术和工具，可以获得有关系统运行情况的综合信息。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows Server 操作系统通过以下工具提供性能信息：  
+ 结合使用以下技术和工具，可以获得有关系统运行情况的综合信息。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 操作系统通过以下工具提供性能信息：  
   
 -   任务管理器  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66103801"
   
  您可以使用性能控制台和事件查看器来创建有关报表处理与资源消耗情况的日志和警报。 有关由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]生成的 Windows 事件的信息，请参阅 [Windows 应用程序日志](windows-application-log.md)。 有关性能控制台的信息，请参阅本主题稍后部分中的“Windows 性能计数器”。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实用工具还提供有关用于缓存和会话管理的 Report Server 数据库和临时数据库的信息。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具还提供有关用于缓存和会话管理的报表服务器数据库和临时数据库的信息。  
   
 ## <a name="windows-performance-counters"></a>Windows 性能计数器  
  通过监视各具体的性能计数器，您可以：  
@@ -57,7 +57,7 @@ ms.locfileid: "66103801"
 -   验证对系统配置所做的更改是否具有所需的性能效果。  
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 性能对象  
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]包括下列性能对象：  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包括下列性能对象：  
   
 -   **MSRS 2011 Web 服务**和`MSRS 2011 SharePoint Mode Web Service`监视 Report Server 性能。 这些性能对象包括一系列用于跟踪报表服务器处理的计数器，这些处理通常通过交互式报表查看操作启动。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，这些计数器就会重置。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66103801"
  如果单台计算机上有多个报表服务器实例，则可以同时监视多个实例或分别监视各个实例。 选择要在添加计数器时包括的实例。 有关使用性能控制台 (perfmon.msc) 和添加计数器的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 产品文档。  
   
 ## <a name="other-performance-counters"></a>其他性能计数器  
- 仅为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、`MSRS 2008 Web Service` 和 `MSRS 2008 Windows Service` 提供自定义 `ReportServer:Service` 性能计数器。 下列性能对象为报表服务器提供附加的性能监视数据。  
+ 仅为 `MSRS 2008 Web Service`、`MSRS 2008 Windows Service` 和 `ReportServer:Service` 提供自定义 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能计数器。 下列性能对象为报表服务器提供附加的性能监视数据。  
   
 |性能对象|说明|  
 |------------------------|-----------|  
@@ -93,7 +93,7 @@ ms.locfileid: "66103801"
   
 ## <a name="see-also"></a>另请参阅  
  [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)   
- [Reporting Services 报表服务器 &#40;本机模式&#41;](reporting-services-report-server-native-mode.md)   
+ [Reporting Services 报表服务器（本机模式）](reporting-services-report-server-native-mode.md)   
  [Reporting Services 工具](../tools/reporting-services-tools.md)  
   
   

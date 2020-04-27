@@ -13,19 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a49f56c4e898b0189ce0f8bf5008873e13dc6223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099559"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>服务器属性（“安全性”页）- Reporting Services
   使用此页可以关闭有可能会危及报表服务器安全的功能。 关闭这些功能将限制某个功能，但是可以通过缓解特定的威胁来改进报表服务器的总体安全性。  
   
- 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”  。 单击 **“安全性”** 将此页打开。  
+ 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”****。 单击 **“安全性”** 将此页打开。  
   
 ## <a name="options"></a>选项  
- **为报表数据源启用 Windows 集成安全性**  
+ **对报表数据源启用 Windows 集成安全性**  
  指定是否可以使用请求报表的用户的 Windows 安全令牌与报表数据源建立连接。  
   
  如果关闭此功能，报表数据源属性页中的 Windows 集成安全性功能将不可用。 如果为数据源配置了 Windows 集成安全性，随后又关闭了此功能，报表服务器将立即更新所有的数据源连接属性以提示输入凭据。  
@@ -38,7 +38,7 @@ ms.locfileid: "66099559"
  如果关闭此选项，则会缓解恶意用户通过用 `LoadReportDefinition` 请求使报表服务器重载来启动拒绝服务攻击的威胁。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置报表服务器属性 (Management Studio)](set-report-server-properties-management-studio.md)   
+ [设置报表服务器属性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
  [为报表数据源指定凭据和连接信息](..[Management Studio F1 帮助中的/Report-data/specify-credential-and-connection-information-for-report-data-sources.md 报表服务器](report-server-in-management-studio-f1-help.md)  
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098094"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>SetDatabaseConnection 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -58,10 +58,10 @@ public void BackupEncryptionKey(string Server,
   
 -   2 - Windows 服务  
   
- *用户名*  
+ *UserName*  
  连接报表服务器数据库时所用的帐户名。  
   
- *权限*  
+ *密码*  
  连接报表服务器数据库时所用的密码。  
   
  *HRESULT*  
@@ -71,11 +71,11 @@ public void BackupEncryptionKey(string Server,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="remarks"></a>备注  
- 当 CredentialsType 参数设置为 0 (Windows) 时，必须设置 UserName 和 Password 参数******。 UserName 参数的格式必须为“domain\username”，相应的值必须代表有效的 Windows 登录名**。  
+ 当 CredentialsType 参数设置为 0 (Windows) 时，必须设置 UserName 和 Password 参数    。 UserName 参数的格式必须为“domain\username”，相应的值必须代表有效的 Windows 登录名  。  
   
- 如果将 CredentialsType 参数设置为 1 (*)，则 UserName 参数传递的值必须符合 * 登录名的要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果将 CredentialsType 参数设置为 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，则 UserName 参数传递的值必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的要求****。  
   
- 如果将 CredentialsType 参数设置为 2（Windows 服务），则报表服务器将使用集成安全性连接到报表服务器数据库，并且忽略 UserName 和 Password 参数******。 报告服务器 Web 服务将使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帐户或应用程序池的帐户及 Windows 服务帐户访问报表服务器数据库。  
+ 如果将 CredentialsType 参数设置为 2（Windows 服务），则报表服务器将使用集成安全性连接到报表服务器数据库，并且忽略 UserName 和 Password 参数    。 报告服务器 Web 服务将使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帐户或应用程序池的帐户及 Windows 服务帐户访问报表服务器数据库。  
   
  调用后，SetDatabaseConnection 方法将加密凭据和数据库信息并将它们存储在指定报表服务器的配置文件中。  
   
@@ -86,7 +86,7 @@ public void BackupEncryptionKey(string Server,
  SetDatabaseConnection 方法不会向指定的帐户授予权限。 您必须为需要访问报表服务器数据库的每一帐户调用 [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) 方法，然后运行所生成的脚本。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

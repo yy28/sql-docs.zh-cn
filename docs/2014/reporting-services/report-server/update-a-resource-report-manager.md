@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103059"
 ---
 # <a name="update-a-resource-report-manager"></a>更新资源（报表管理器）
@@ -35,7 +35,7 @@ ms.locfileid: "66103059"
   
 5.  单击 **“替换”** 以打开 **“导入资源”** 页。  
   
-6.  单击“浏览”  。  
+6.  单击“浏览”****。  
   
 7.  选择要用于替换当前资源的文件。 您可以使用资源文件的更新版本，或指定其他名称或其他文件类型的文件。  
   

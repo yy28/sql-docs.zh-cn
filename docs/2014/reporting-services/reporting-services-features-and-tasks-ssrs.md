@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20c37fac040290a057bc03cbeb27cc43246efec2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102912"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能和任务 (SSRS)
@@ -49,7 +49,7 @@ ms.locfileid: "66102912"
  [Reporting Services 工具](tools/reporting-services-tools.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [新增功能 &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
   
   

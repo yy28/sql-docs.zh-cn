@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102512"
 ---
 # <a name="publishing-data-sources-and-reports"></a>发布数据源和报表
@@ -35,7 +35,7 @@ ms.locfileid: "66102512"
  [将报表发布到报表服务器](publishing-reports-to-a-report-server.md)  
  说明如何将报表发布到报表服务器。  
   
- [SharePoint 模式下的报表服务器上已发布报表项的 URL 示例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  说明如何将报表发布到 SharePoint 站点。  
   
 ## <a name="see-also"></a>另请参阅  
@@ -43,7 +43,7 @@ ms.locfileid: "66102512"
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [页面布局和呈现 &#40;报表生成器和 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [查找、查看和管理报表（报表生成器和 SSRS）](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [查找、查看和管理 &#40;报表生成器和 SSRS 的报表 &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表 &#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [打印报表（报表生成器和 SSRS）](../report-builder/print-reports-report-builder-and-ssrs.md)  
   

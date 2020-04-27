@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101374"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>“选择颜色”对话框（报表生成器和 SSRS）
@@ -29,11 +29,11 @@ ms.locfileid: "66101374"
  **颜色选择器**  
  从三个用于指定颜色选择方式的选项中进行选择：  
   
--   **选取器-彩色圆圈**使用色相/饱和度/亮度（HSB）颜色值选择颜色。  
+-   **选取器 - 色环** 使用“色调/饱和度/亮度”(HSB) 颜色值选择颜色。  
   
--   **选取器-颜色正方形**使用 "红/绿/蓝" （RGB）颜色值选择颜色。  
+-   **选取器 - 色块** 使用“红/绿/蓝”(RGB) 颜色值选择颜色。  
   
--   **调色板-标准颜色**从预定义的颜色值列表中选择一种颜色。  
+-   **调色板 - 标准颜色** 从预定义的颜色值列表中选择颜色。  
   
  **色环**  
  用于 HSB 颜色，因为 HSB 值映射到柱面坐标系。 色调是实际的颜色，饱和度是颜色纯度，亮度是相对的明暗。  
@@ -56,7 +56,7 @@ ms.locfileid: "66101374"
  **Red**  
  代表 RGB 颜色中红色部分的十进制值。 使用数字调整框可更改值或键入一个介于 0 到 255 之间的值。  
   
- **绿色**  
+ **钩**  
  代表 RGB 颜色中绿色部分的十进制值。 使用数字调整框可更改值或键入一个介于 0 到 255 之间的值。  
   
  **蓝色**  
@@ -78,7 +78,7 @@ ms.locfileid: "66101374"
  在窗格的左半部分显示当前颜色，并在窗格的右半部分以交互方式显示您所选择的新颜色。 如果没有默认颜色，窗格的左半部分为白色。 绝大多数 RDL 属性没有默认颜色。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [&#40;报表生成器和 SSRS 的格式设置报表项&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [设置文本和占位符的格式（报表生成器和 SSRS）](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

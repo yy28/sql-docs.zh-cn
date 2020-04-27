@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100107"
 ---
 # <a name="preview-view"></a>“预览”视图
@@ -36,13 +36,13 @@ ms.locfileid: "66100107"
  **显示或隐藏参数区域**  
  选择此选项可以为带有参数的报表显示或隐藏参数框。  
   
- **首页**  
+ **第一页**  
  选择此选项可以转到报表的第一页。  
   
  **上一页**  
  选择此选项可以转到报表的上一页。  
   
- **当前页**  
+ **当前页面**  
  显示报表的当前页。  
   
  **总页数**  
@@ -60,10 +60,10 @@ ms.locfileid: "66100107"
  **停止呈现**  
  选择此选项可以停止呈现进程。  
   
- **“刷新”**  
+ **全部**  
  选择此选项可以刷新数据缓存并再次运行报表。  
   
- **出来**  
+ **打印**  
  选择此选项可以打印报表。  
   
  **打印布局**  
@@ -72,10 +72,10 @@ ms.locfileid: "66100107"
  **页面设置**  
  选择此选项可以方便地更改页属性和打印属性。 使用“打印布局”可以在打印之前查看更改。  
   
- **Export**  
+ **导出**  
  选择此选项可以采用特定格式导出呈现的报表。  
   
- **Zoom**  
+ **缩放**  
  选择缩放系数可以放大或缩小报表。  
   
  **搜索文本**  

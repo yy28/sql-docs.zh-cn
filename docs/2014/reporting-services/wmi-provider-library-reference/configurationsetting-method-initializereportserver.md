@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098348"
 ---
 # <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>InitializeReportServer 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -60,10 +60,10 @@ public void InitializeReportServer(string InstallationID,
   
  必须对已能访问安全信息的报表服务器调用 *InitializeReportServer* 方法，以便此方法可以解密加密密钥。 然后，所产生的已加密的加密密钥将存储在报表服务器数据库中。  
   
- 如果在调用 InitializeReportServer [](configurationsetting-property-isinitialized.md)方法时，Report Server 的`true` IsInitialized 属性设置为，则该方法将返回 success，而不会尝试对加密密钥进行加密。  
+ 如果在调用 InitializeReportServer [IsInitialized](configurationsetting-property-isinitialized.md)方法时，Report Server 的`true` IsInitialized 属性设置为，则该方法将返回 success，而不会尝试对加密密钥进行加密。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

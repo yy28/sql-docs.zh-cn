@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100993"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
@@ -26,7 +26,7 @@ ms.locfileid: "66100993"
  创建订阅的用户拥有该订阅。 每个用户都可以修改或删除自己所拥有的订阅。  
   
 > [!NOTE]  
->  从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 开始，你可以以编程方式传递订阅所有权。 没有可用于传递订阅所有权的用户界面。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 开始，你可以以编程方式传递订阅所有权。 没有可用于传递订阅所有权的用户界面。 有关详细信息，请参阅<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  根据**rsreportserver.config**配置文件设置，用户可能能够向订阅添加更多用户（例如，经理添加其直接下属的电子邮件地址，以便每个人都能接收报表的副本）。 是否支持此功能取决于在定义单独的订阅时“收件人:”字段是否可见。 有关详细信息，请参阅[为电子邮件传递配置报表服务器 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66100993"
   
 -   [删除订阅](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a>创建订阅  
+##  <a name="to-create-a-subscription"></a><a name="bkmk_create_subscription"></a>创建订阅  
  若要创建订阅，请选择对您的报表服务器部署有效的工具和方法：  
   
 -   本主题中的内容说明如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表管理器在本机模式报表服务器上创建订阅。 定义订阅之后，可以在报表管理器中通过“我的订阅”页或特定报表的 **“订阅”** 选项卡访问订阅。  
@@ -61,7 +61,7 @@ ms.locfileid: "66100993"
   
  本主题不介绍如何创建数据驱动订阅。 有关如何创建数据驱动的订阅的说明，请参阅[创建数据驱动订阅（SSRS 教程）](../create-a-data-driven-subscription-ssrs-tutorial.md)或在报表管理器中“创建数据驱动的订阅”页的联机帮助。  
   
-###  <a name="bkmk_create_fileshare_subscription"></a>创建文件共享订阅  
+###  <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a>创建文件共享订阅  
   
 1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66100993"
   
 8.  在“呈现格式”中，为文件传递选择一种报表输出格式。 选择与要用来打开报表的桌面应用程序相对应的格式。 避免使用不以单数据流呈现报表的格式，也不要使用引入静态文件不支持的交互的格式（例如 HTML 4.0）。  
   
-9. 在 "**用户名**" 和 "**密码**" 文本框中，指定访问文件共享所需的凭据，使用 " * \<>* \\ * \<* 用户名" 的 "格式">。  
+9. 在“用户名”和“密码”文本框中，指定访问文件共享所需的凭据，用户名的格式为 \<domain>\\\<user name>     。  
   
 10. 指定覆盖选项。 如果单击 **“如果存在旧版本，则不覆盖该文件”**，则若检测到现有文件，将不进行传递。 如果单击 **“添加更新的版本时文件名递增”**，则报表服务器将在文件名末尾追加数字，以便将其与现有的同名文件区分开。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66100993"
   
  报表作为静态文件传递。 如果报表包含交互功能（例如，指向其他行和列的链接），则这些功能不可用。  
   
-###  <a name="bkmk_create_email_subscription"></a>创建电子邮件订阅  
+###  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a>创建电子邮件订阅  
   
 1.  在报表管理器中的 **“内容”** 页上，导航到要订阅的报表。 单击报表以打开它。  
   
@@ -106,10 +106,10 @@ ms.locfileid: "66100993"
   
 3.  在 "**传递者**" 中选择 "**电子邮件**"。 如果此传递类型不可用，则您尚未为电子邮件订阅配置报表服务器。  
   
-4.  在 "**收件人" 文本框中**，"收件人：" 字段中的收件人姓名使用您的域用户帐户自行寻址。 报表服务器配置设置决定“收件人”字段是否使用你的用户帐户自行填写地址。**** 有关更改配置设置电子邮件地址的详细信息，请参阅[为电子邮件传递配置报表服务器 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
+4.  在 "**收件人" 文本框中**，"收件人：" 字段中的收件人姓名使用您的域用户帐户自行寻址。 报表服务器配置设置决定“收件人”字段是否使用你的用户帐户自行填写地址。  有关更改配置设置电子邮件地址的详细信息，请参阅[为电子邮件传递配置报表服务器 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
     > [!NOTE]  
-    >  根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 还可以在“抄送”、“密件抄送”和“答复”文本框中键入其他电子邮件地址************。 这要求您具有管理所有订阅的权限。  
+    >  根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 还可以在“抄送”、“密件抄送”和“答复”文本框中键入其他电子邮件地址    。 这要求您具有管理所有订阅的权限。  
   
 5.  按如下说明选择传递选项：  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66100993"
   
 9. 对于参数化报表，请指定要用于此订阅的报表的参数。 这些参数可以与用于按需运行报表的参数或其他预定操作中使用的参数不同。  
   
-##  <a name="bkmk_modify_subscription"></a>修改订阅  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a>修改订阅  
  您可以随时修改订阅。 在修改正在处理的订阅时，如果更新的设置在传递扩展插件接收订阅数据之前就已保存到报表服务器数据库中，则订阅将使用更新的设置。 否则，使用现有设置。  
   
  若要定位订阅，请使用 **“我的订阅”** 页或查看与报表关联的订阅定义。 您既不能直接搜索订阅，也不能根据所有者名称、触发器信息、状态信息等来搜索订阅。  
@@ -151,7 +151,7 @@ ms.locfileid: "66100993"
 > [!NOTE]  
 >  报表服务器管理员无法从一个位置管理在给定的报表服务器上正在使用的所有单独的订阅。 但是，报表服务器管理员可以访问每个单独的订阅来进行修改或删除。  
   
-##  <a name="bkmk_delete_subscription"></a>删除订阅  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a>删除订阅  
  删除订阅”  
   
 1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  

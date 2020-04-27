@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101811"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>创建、删除或修改角色 (Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "66101811"
   
  若要创建、修改或删除角色，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 只能删除未使用的角色。  
   
- 若要将所创建的角色分配给用户或组，请使用报表管理器。 有关详细信息，请参阅[授予用户对报表服务器的访问权限 &#40;报表管理器&#41;](grant-user-access-to-a-report-server.md)。  
+ 若要将所创建的角色分配给用户或组，请使用报表管理器。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)。  
   
 > [!NOTE]  
 >  如果报表服务器配置为 SharePoint 集成模式，并且已连接到与该报表服务器集成的 SharePoint 站点，则可以查看和修改控制对报表服务器内容和操作的访问权限的权限级别。  
@@ -78,6 +78,6 @@ ms.locfileid: "66101811"
 ## <a name="see-also"></a>另请参阅  
  [在 Management Studio 中连接到报表服务器](../tools/connect-to-a-report-server-in-management-studio.md)   
  （create-and-manage-role-assignments.md）   
- [SQL Server Management Studio &#40;SSRS 中的 Reporting Services&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [SQL Server Management Studio 中的 Reporting Services (SSRS)](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

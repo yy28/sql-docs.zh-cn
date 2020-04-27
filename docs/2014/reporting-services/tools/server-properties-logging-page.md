@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099532"
 ---
 # <a name="server-properties-logging-page"></a>服务器属性（“日志记录”页）
@@ -32,10 +32,10 @@ ms.locfileid: "66099532"
  指定天数，报表执行日志中超过此天数的日志条目将被切除。 默认值为 60 天。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置报表服务器属性 (Management Studio)](set-report-server-properties-management-studio.md)   
+ [设置报表服务器属性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   
- [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 帮助中的报表服务器](report-server-in-management-studio-f1-help.md)   
  [报告服务器执行日志和 ExecutionLog3 视图](../report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
   

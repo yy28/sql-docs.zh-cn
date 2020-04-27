@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098743"
 ---
 # <a name="view-page-reports-report-manager"></a>报表的“视图”页（报表管理器）
@@ -29,8 +29,7 @@ ms.locfileid: "66098743"
  并非所有报表功能在所有导出格式中都可用。 如果将 HTML 报表导出到另一种格式，则可能会看到报表外观上的一些差异。 此外，如果报表中包括交互功能（例如超链接、书签或文档结构图），这些功能在新格式中可能不可用或无法正常使用。  
   
 ## <a name="generating-data-feeds-from-report-data"></a>基于报表数据生成数据馈送  
- 可以从报表生成数据馈送。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成两个 Atom 兼容文档：一个 Atom 服务文档，其中列出报表提供的数据馈送和包含报表数据的数据馈送。 数据馈送由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 以标准化的 Atom 1.0 兼容格式生成，这种格式是可读的，并可以与使用 Atom 兼容数据馈送的应用程序进行交换。 例如， [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 客户端可以使用从报表生成的数据馈送。  
+ 可以从报表生成数据馈送。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成两个 Atom 兼容文档：一个 Atom 服务文档，其中列出报表提供的数据馈送和包含报表数据的数据馈送。 数据馈送由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 以标准化的 Atom 1.0 兼容格式生成，这种格式是可读的，并可以与使用 Atom 兼容数据馈送的应用程序进行交换。 例如， [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 客户端可以使用从报表生成的数据馈送。  
   
 ## <a name="running-parameterized-reports"></a>运行参数化报表  
  如果报表包含输入字段和 **“查看报表”** 按钮，则该报表为参数化报表。 若要查看参数化报表，需要提供相应的值以用于运行报表。  

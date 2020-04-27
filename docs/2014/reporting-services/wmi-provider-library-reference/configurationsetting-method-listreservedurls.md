@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098269"
 ---
 # <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>ListReservedURLs 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -37,16 +37,16 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ```  
   
 ## <a name="parameters"></a>parameters  
- *Application []*  
+ *Application[]*  
  [out] 具有 URL 预留的应用程序。  
   
- *UrlString []*  
+ *UrlString[]*  
  [out] 已保留的 URL。  
   
- *帐户 []*  
+ *Account[]*  
  [out] 与 URL 预留的帐户关联的帐户名。  
   
- *AccountSID []*  
+ *AccountSID[]*  
  [out] 与 URL 预留的帐户关联的帐户 SID。  
   
  *长度*  
@@ -61,7 +61,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

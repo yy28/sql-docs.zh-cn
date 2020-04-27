@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101146"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>指定图像作为仪表的指针（报表生成器和 SSRS）
@@ -57,9 +57,9 @@ ms.locfileid: "66101146"
 10. 在**TransparentColor**中，选择要从图像中删除的颜色值。 这将使指针的外观无缝地融入仪表。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置仪表上指针的格式（报表生成器和 SSRS）](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [设置仪表上的指针格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [向报表添加仪表 &#40;报表生成器和 SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
- [设置线条、颜色和图像的格式（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)   
+ [设置线条、颜色和图像的格式 &#40;报表生成器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [仪表（报表生成器和 SSRS）](report-design/gauges-report-builder-and-ssrs.md)  
   
   

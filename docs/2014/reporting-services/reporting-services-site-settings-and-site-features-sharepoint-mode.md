@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb2544db775987ff44e54b10163812ac53620a9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102798"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Reporting Services 网站设置和网站功能（SharePoint 模式）
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 模式具有几个网站级自定义功能和站点功能，可以从 SharePoint 站点设置页进行管理。 这些设置适用于整个网站并影响所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式具有几个网站级自定义功能和可以从“SharePoint 网站设置”页管理的网站功能。 这些设置适用于整个网站并影响所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  
   
 |网站设置|说明|  
 |------------------|-----------------|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]站点设置|本主题中介绍了适用于网站的设置。|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 网站设置|本主题中介绍了适用于网站的设置。|  
 |管理数据警报|管理数据警报功能。|  
 |报表服务器文件同步|默认情况下停用的网站级功能。<br /><br /> 在文档库中直接添加或更新文件时，将报表服务器文件（.rdl、.rsds、.smdl、.rsd、.rsc、.rdlx）从 SharePoint 文档库同步到报表服务器。<br /><br /> 有关详细信息，请参阅 [在 SharePoint 管理中心中激活报表服务器文件同步功能](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)|  
   

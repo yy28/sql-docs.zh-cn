@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103398"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器 HTTP 日志文件记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
   
  默认情况下，不启用 HTTP 日志记录。 若要启用 HTTP 日志记录，请修改**reportingservicesservice.exe.config**配置文件以在安装中使用此功能。  
@@ -30,7 +29,7 @@ ms.locfileid: "66103398"
   
 |||  
 |-|-|  
-|**文件名**|默认情况下，日志文件名是<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
+|**文件名称**|默认情况下，日志文件名是<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
 |**文件位置**|文件被写入以下位置：<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**文件格式**|该文件是 EN-US 格式。 它是 ASCII 文本文件。|  
 |**创建和保留文件**|当您在配置文件中启用了日志、重新启动服务以及报表服务器处理 HTTP 请求时，会创建 HTTP 日志。 如果您配置了相应的设置但并未看到日志文件，请打开报表或启动报表服务器应用程序（如报表管理器）以生成 HTTP 请求从而创建日志文件。<br /><br /> 在各服务重新启动并且随后发生对报表服务器的 HTTP 请求时，会创建日志文件的新实例。<br /><br /> 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。|  
@@ -55,7 +54,7 @@ ms.locfileid: "66103398"
 ```  
   
 ## <a name="log-file-fields"></a>日志文件字段  
- 下表对在日志中可用的字段进行了说明： 该字段列表是可配置的；您可以通过 `HTTPTraceSwitches` 配置设置来指定要包括哪些字段。 如果**** 未指定`HTTPTraceSwitches`，则默认列指定是否将自动包含在日志文件中的字段。  
+ 下表对在日志中可用的字段进行了说明： 该字段列表是可配置的；您可以通过 `HTTPTraceSwitches` 配置设置来指定要包括哪些字段。 如果**Default**未指定`HTTPTraceSwitches`，则默认列指定是否将自动包含在日志文件中的字段。  
   
 |字段|说明|默认|  
 |-----------|-----------------|-------------|  

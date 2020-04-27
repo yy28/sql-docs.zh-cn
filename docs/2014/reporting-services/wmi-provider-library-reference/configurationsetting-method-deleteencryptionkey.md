@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbf0eee13a113dff42a22da3703e60b3869b757f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098533"
 ---
 # <a name="deleteencryptionkey-method-wmi-msreportserver_configurationsetting"></a>DeleteEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -54,11 +54,10 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  返回 HRESULT，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="remarks"></a>备注  
- 
-  *DeleteEncryptionKey* 方法用于从密钥表中删除可访问报表服务器数据库中安全信息的任何报表服务器的条目。 如果指定的 *InstallationID* 参数与该数据库中的安装 ID 不对应，该方法将返回错误。  
+ *DeleteEncryptionKey* 方法用于从密钥表中删除可访问报表服务器数据库中安全信息的任何报表服务器的条目。 如果指定的 *InstallationID* 参数与该数据库中的安装 ID 不对应，该方法将返回错误。  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

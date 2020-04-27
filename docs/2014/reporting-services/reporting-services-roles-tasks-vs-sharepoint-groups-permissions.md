@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102810"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services 中的角色和任务与 SharePoint 组和权限的比较
@@ -30,7 +30,7 @@ ms.locfileid: "66102810"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Sharepoint 模式 &#124; SharePoint 2010 和 SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]本机模式|  
+|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式 &#124; SharePoint 2010 和 SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式|  
   
  **本主题内容：**  
   
@@ -40,58 +40,38 @@ ms.locfileid: "66102810"
   
 -   [比较本机模式任务和 SharePoint 权限](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a>比较权限工具和术语  
- **本机模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]本机模式权限对象（角色和任务）是在中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]创建的，并且在中为单个用户配置报表管理器。  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> 比较权限工具和术语  
+ **本机模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式权限对象（角色和任务）在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中创建并在报表管理器中为各用户配置。  
   
- **Sharepoint 模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sharepoint 模式使用 sharepoint 权限功能。 SharePoint 组和权限从以下“站点设置” **** 页进行管理。  
+ **SharePoint 模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式使用 SharePoint 权限功能。 SharePoint 组和权限从以下“站点设置”  页进行管理。  
   
  下表比较 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式与 SharePoint 之间权限相关的对象和概念。  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]本机模式|SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式|SharePoint|  
 |---------------------------------------------|----------------|  
-|**角色：** 例如 "内容管理器"。|**组：** 例如，默认的 "查看者" 组。|  
-|---|**权限级别组：** 例如，"查看者" 组的 "仅查看"。|  
-|**任务：** 例如 "管理报表"。|**权限：** 例如，在 "仅查看" 组中，有 "查看项"、"查看版本" 和 "查看应用程序" 页的列表相关权限。|  
+|**角色：** 例如“内容管理员”。|**组：** 例如默认的“查看者”组。|  
+|---|**权限级别组：** 例如，“查看组”组的“仅查看”。|  
+|**任务：** 例如“管理报表”。|**权限：** 例如，在“仅查看”组中，有“查看项”、“查看版本”和“查看应用程序页”权限相关的列表。|  
   
  有关 SharePoint 权限的详细信息，请参阅 sharepoint [Server 中的用户权限和权限级别](/sharepoint/sites/user-permissions-and-permission-levels)，以及[在 Sharepoint 2013 中确定权限级别和组](https://technet.microsoft.com/library/cc262690.aspx)。  
   
-##  <a name="bkmk_compare_roles_groups"></a>比较本机模式角色与 SharePoint 组  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> 比较本机模式角色与 SharePoint 组  
  下表将在本机模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的预定义角色定义与标准 SharePoint 组进行比较。 如果 SharePoint 组与您需要的特定角色不匹配，可以在 SharePoint 中创建自定义组并分配权限级别。  
   
  **注意**：可用的默认 SharePoint 组取决于用于创建 SharePoint 站点的站点模板。  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]职位|SharePoint 组|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 角色|SharePoint 组|  
 |--------------------------------------|-----------------------|  
-|**浏览器**<br /><br /> 查看|
-  **
-  ** 使用“访问者”组授予查看报表的权限。 
-  **
-  ** “访问者”组拥有“读取”级权限，通过这些权限，组成员能够查看页面、列表项和文档。|  
-|**内容管理员**<br /><br /> 拥有对所有项和项级操作的全部权限，包括设置安全性的权限。|
-  **
-  ** 使用“所有者”组授予管理 SharePoint 站点上的报表服务器项的完全控制权限。 
-  **
-  ** “所有者”组拥有“完全控制”权限，通过这些权限，组成员能够更改网站内容、页面或功能。 “完全控制”访问权限应仅限于站点管理员。|  
-|**我的报表**|没有等同的组。 在 SharePoint 模式下运行的 Report Server 不支持**我的报表**。 如果希望使用等同功能，可以使用 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 中的“我的站点”功能。|  
-|**发布者**<br /><br /> 添加、更新、查看、删除报表、报表模型、共享数据源和资源。|
-  **
-  ** 使用“成员”组授予在 SharePoint 站点上添加项、编辑项以及更新对依赖项的引用的权限。 
-  **
-  ** “成员”组拥有“参与讨论”级权限，通过这些权限，组成员能够查看页面、添加和更新项以及提交更改以待批准。|  
-|**报表生成器**<br /><br /> 在报表生成器中查看报表、自行管理单个订阅以及打开报表。|没有与“报表生成器”报表定义相对应的现成预定义权限级别或 SharePoint 组。 
-  **
-  ** 默认情况下，属于“成员”组或“所有者”组的用户拥有使用报表生成器的权限。 **** 如果希望更多用户能够使用报表生成器，应创建自定义安全设置以提供类似于报表生成器角色所提供的权限级别。 有关详细信息，请参阅 [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)。|  
-|-|
-  **
-  ** 使用“查看者”组授予查看呈现的报表的权限。 
-  **
-  ** “查看者”组无法下载或查看报表项的内容。<br /><br /> **注意：** 从 SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]开始，**查看者**组无权创建订阅。|  
-|**系统用户**和**系统管理员**|这些角色对于在 SharePoint 模式下运行的报表服务器并不是必需的。 **系统用户**和**系统管理员**对应于 SharePoint 场或 Web 应用程序级别权限。 报表服务器不提供任何要求该级别授权的功能。|  
+|**浏览器**<br /><br /> 查看| 使用“访问者”组授予查看报表的权限。  “访问者”组拥有“读取”级权限，通过这些权限，组成员能够查看页面、列表项和文档。|  
+|**内容管理员**<br /><br /> 拥有对所有项和项级操作的全部权限，包括设置安全性的权限。| 使用“所有者”组授予管理 SharePoint 站点上的报表服务器项的完全控制权限。  “所有者”组拥有“完全控制”权限，通过这些权限，组成员能够更改网站内容、页面或功能。 “完全控制”访问权限应仅限于站点管理员。|  
+|**我的报表**|没有等同的组。  在 SharePoint 模式下运行的报表服务器不支持“我的报表”。 如果希望使用等同功能，可以使用 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 中的“我的站点”功能。|  
+|**发布者**<br /><br /> 添加、更新、查看、删除报表、报表模型、共享数据源和资源。| 使用“成员”组授予在 SharePoint 站点上添加项、编辑项以及更新对依赖项的引用的权限。  “成员”组拥有“参与讨论”级权限，通过这些权限，组成员能够查看页面、添加和更新项以及提交更改以待批准。|  
+|**报表生成器**<br /><br /> 在报表生成器中查看报表、自行管理单个订阅以及打开报表。|没有与“报表生成器”报表定义相对应的现成预定义权限级别或 SharePoint 组。  默认情况下，属于“成员”组或“所有者”组的用户拥有使用报表生成器的权限。  如果希望更多用户能够使用报表生成器，应创建自定义安全设置以提供类似于报表生成器角色所提供的权限级别。 有关详细信息，请参阅 [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)。|  
+|-| 使用“查看者”组授予查看呈现的报表的权限。  “查看者”组无法下载或查看报表项的内容。<br /><br /> **注意：** 从 SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 开始，“查看者”组不具有创建订阅的权限  。|  
+| “系统用户”和“系统管理员” |这些角色对于在 SharePoint 模式下运行的报表服务器并不是必需的。  “系统用户”和“系统管理员”  对应于 SharePoint 场或 Web 应用程序级权限。 报表服务器不提供任何要求该级别授权的功能。|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a>比较本机模式任务和 SharePoint 权限  
- 下表将比较 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式任务与 SharePoint 权限。 
-  **
-  ** “类型”列指示本机模式任务与系统角色或标准角色和项是否相关。 系统角色管理系统级别的权限，例如共享计划。  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> 比较本机模式任务和 SharePoint 权限  
+ 下表将比较 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式任务与 SharePoint 权限。  “类型”列指示本机模式任务与系统角色或标准角色和项是否相关。 系统角色管理系统级别的权限，例如共享计划。  
   
 |本机模式任务|角色类型|等效 SharePoint 权限|  
 |----------------------|---------------|--------------------------------------|  
@@ -123,7 +103,7 @@ ms.locfileid: "66102810"
 |查看共享计划|系统|打开项。|  
   
 ## <a name="see-also"></a>另请参阅  
- [为 sharepoint 站点上的报表服务器项设置权限 &#40;Reporting Services 在 SharePoint 集成模式下&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [在 SharePoint Web 应用程序中设置报表服务器操作的权限](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [在 SharePoint 站点上授予对报表服务器项的权限](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定义](security/role-definitions.md)   

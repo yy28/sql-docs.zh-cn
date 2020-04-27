@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096439"
 ---
 # <a name="cluster-network-configuration"></a>群集网络配置
@@ -26,7 +26,7 @@ ms.locfileid: "66096439"
 ## <a name="options"></a>选项  
  **故障转移群集网络名称-这是用于在网络上标识故障转移群集实例的名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **网络设置**-指定故障转移群集实例的 ip 类型和 ip 地址。  
+ **网络设置** - 指定故障转移群集实例的 IP 类型和 IP 地址。  
   
  在“添加节点”和“删除节点”操作期间， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集的现有 IP 地址的只读列表。  
   

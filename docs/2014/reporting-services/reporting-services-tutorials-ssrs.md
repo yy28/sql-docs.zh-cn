@@ -13,19 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35532f3889836aa1a84858fb547f2764b1d4a902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102691"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 教程 (SSRS)
   本部分包含的[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]教程。  
   
- [创建数据驱动订阅 &#40;SSRS 教程&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供数据驱动订阅，以便您可以基于将接收报表的订阅服务器的动态列表自定义报表的分发。 数据驱动订阅通常由报表服务器管理员创建和维护。 要创建数据驱动订阅，必须要具备生成查询的专业技术，了解包含订阅服务器数据的数据源，同时还要拥有对报表服务器的提升权限。  
+ [创建数据驱动订阅（SSRS 教程）](create-a-data-driven-subscription-ssrs-tutorial.md)  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供数据驱动订阅功能，这样，你便可根据将接收报表的订阅服务器的动态列表，自定义报表的分发。 数据驱动订阅通常由报表服务器管理员创建和维护。 要创建数据驱动订阅，必须要具备生成查询的专业技术，了解包含订阅服务器数据的数据源，同时还要拥有对报表服务器的提升权限。  
   
- [创建基本表报表 &#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [创建基本表报表（SSRS 教程）](create-a-basic-table-report-ssrs-tutorial.md)  
  按照本教程中的步骤来学习如何创建第一个报表。 本教程将向您演示如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 来创建数据连接（数据源）、定义简单查询（数据集）和配置包含您的数据的数据区域。  
   
  [使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教程访问报表服务器 Web 服务&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  

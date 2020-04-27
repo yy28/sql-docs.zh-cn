@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100915"
 ---
 # <a name="pause-report-and-subscription-processing"></a>暂停报表和订阅处理
@@ -47,8 +47,8 @@ ms.locfileid: "66100915"
  如果报表或订阅按照某个共享计划运行，您可以通过暂停该计划来阻止这些报表或订阅的处理。 在恢复计划之前，会延迟由该计划驱动的所有报表和订阅处理。 有关详细信息，请参阅[暂停和恢复共享计划](schedules.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 报表服务器 &#40;本机模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Reporting Services 报表服务器（本机模式）](../report-server/reporting-services-report-server-native-mode.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
- ["安全属性" 页，项 &#40;报表管理器&#41;](../security-properties-page-items-report-manager.md)  
+ [项的“安全性”属性页（报表管理器）](../security-properties-page-items-report-manager.md)  
   
   

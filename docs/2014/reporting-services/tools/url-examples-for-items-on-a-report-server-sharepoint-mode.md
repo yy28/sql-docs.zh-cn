@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099448"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "66099448"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 服务器站点或子站点的 URL  
  部署报表或报表数据源时，必须使用 SharePoint 站点和子站点的 URL（如果有）。 在该 URL 中，站点名紧接在服务器名之后，例如 http://*servername/site* 或 http://*servername/site/subsite*。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]在2007或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 应用程序中，站点和子站点经常对应于主站点上的选项卡。 若要找到站点名或子站点名，请单击 **“主文件夹”**，然后单击 **“所有网站内容”**。 滚动到底部并查找 **“站点和工作区”**。 站点列表将显示在此部分中。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 应用程序中，站点和子站点经常对应于主站点上的选项卡。 若要找到站点名或子站点名，请单击 **“主文件夹”** ，然后单击 **“所有网站内容”** 。 滚动到底部并查找 **“站点和工作区”** 。 站点列表将显示在此部分中。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 库的 URL  
  向 SharePoint 库中部署报表或相关项时，必须使用 SharePoint 库的 URL。 要用于库的 URL 根据所使用的 SharePoint 版本而不同。  
@@ -60,7 +60,7 @@ ms.locfileid: "66099448"
   
  在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如，http://*servername/site/* Documents。  
   
- 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口********。 文件地址中包含发布操作所需的 URL 值。  
+ 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口   。 文件地址中包含发布操作所需的 URL 值。  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 站点上的项的完全限定 URL  
  始终通过完全限定的 URL 对存储在 SharePoint 库中的项进行寻址，这种完全限定的 URL 以 Web 应用程序开头 (http://*server*) 作为根节点，并以所引用的文件名结束。  
@@ -98,16 +98,11 @@ ms.locfileid: "66099448"
 |------------|-----------------|  
 |SharePoint 服务器。|http://TestServer|  
 |SharePoint 服务器站点或子站点。|http://TestServer/toplevelsite/subsite|  
-|
-  **
-  ** 或 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 部署的 Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 示例报表。|http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl|  
-|
-  **或** 实例的 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 文件夹中的 Company Sales 示例报表。|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
-|
-  **
-  ** 或 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 实例的“报表中心” [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 中的 Company Sales 示例报表。|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
+| 或 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 部署的 Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 示例报表。|http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl|  
+|**或** 实例的 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 文件夹中的 Company Sales 示例报表。|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
+| 或 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 实例的“报表中心” [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 中的 Company Sales 示例报表。|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a>从创作工具发布到 SharePoint 库  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> 从创作工具发布到 SharePoint 库  
  使用报表创作工具向库中发布报表和相关文件时，在添加文件之前会对文件进行验证。 如果通过使用 SharePoint 库的 **“上载”** 操作来上载报表和相关文件，则不进行验证检查。 直到通过管理、编辑和运行报表来访问时，您才会知道文件是否有效。  
   
 > [!NOTE]  
