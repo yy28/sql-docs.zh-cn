@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057090"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 目标编辑器（“映射”页）
@@ -34,7 +34,7 @@ ms.locfileid: "66057090"
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 可以通过选择“**忽略>”\<** 以从输出中排除列来移除映射。  
+ 查看选定的输入列。 您可以通过选择** \<"忽略>** 从输出中排除列来移除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  

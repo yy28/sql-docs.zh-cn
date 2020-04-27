@@ -15,27 +15,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71eabff4c4caf79718fee8e29c675636b6034205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056811"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>“包角色”对话框 UI 参考
-  可以使用 ** 中的“包角色”**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** 数据库中存储的包。  
+  可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包角色”**** 对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于  msdb 数据库中存储的包[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ****。  
   
  若要了解有关 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 数据库级角色及其权限的详细信息，请参阅 [Integration Services 角色（SSIS 服务）](security/integration-services-roles-ssis-service.md)。  
   
  该对话框中列出的角色是 **msdb** 系统数据库的当前数据库角色。 如果未选择任何角色，将应用默认的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 角色。 默认情况下，读取者角色包括 **db_ssisadmin**、 **db_ssisoperator**以及创建包的用户。 作为以上任一角色的成员的用户或创建该包的用户，可以枚举、查看、导出和运行包。 默认情况下，写入者角色包括 **db_ssisadmin** 和创建包的用户。 作为此角色的成员的用户和创建该包的用户，可以导入、删除和更改包。  
   
- 
-  **sysssispackages** 表中的 **ownersid** 列列出了创建包的用户的唯一安全标识符。  
+ **sysssispackages** 表中的 **ownersid** 列列出了创建包的用户的唯一安全标识符。  
   
 ## <a name="options"></a>选项  
  **包名称**  
  指定包的名称。  
   
- **读取者角色**  
+ **读者角色**  
  从列表中选择一个角色。  
   
  **写入者角色**  

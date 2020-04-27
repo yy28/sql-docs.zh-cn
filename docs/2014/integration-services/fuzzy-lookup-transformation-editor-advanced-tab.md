@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26a7efa42215f1bc456cf4a4c47b3a71c62b94e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058346"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>模糊查找转换编辑器（“高级”选项卡）
@@ -28,7 +28,7 @@ ms.locfileid: "66058346"
   
 ## <a name="options"></a>选项  
  **每次查找输出的最大匹配数**  
- 指定为每个输入行返回的最大匹配转换数。 默认值为**1**。  
+ 指定为每个输入行返回的最大匹配转换数。 默认值为 **1**。  
   
  **相似性阈值**  
  使用滑块在组件级别设置相似性阈值。 该值越接近 1，查找值与源值的相似性必须越接近，才能视为匹配。 由于需要考虑的候选记录更少，因此增加阈值可以提高匹配的速度。  

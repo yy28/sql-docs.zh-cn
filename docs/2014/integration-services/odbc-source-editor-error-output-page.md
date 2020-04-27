@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057130"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>ODBC 源编辑器（“错误输出”页）
@@ -29,9 +29,9 @@ ms.locfileid: "66057130"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”  选项卡上，双击 ODBC 源。  
+-   在“数据流”**** 选项卡上，双击 ODBC 源。  
   
--   在 **“ODBC 源编辑器”** 中，单击 **“错误输出”** 。  
+-   在 **“ODBC 源编辑器”** 中，单击 **“错误输出”**。  
   
 ## <a name="options"></a>选项  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66057130"
  将引起错误或截断的行定向到 ODBC 源的错误输出。 有关详细信息，请参阅 [ODBC Source](data-flow/odbc-source.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC 源编辑器（“连接管理器”页）](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [ODBC 源编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [ODBC 源编辑器（“列”页）](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

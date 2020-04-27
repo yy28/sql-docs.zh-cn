@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055725"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>使用数据流路径编辑器设置路径属性
@@ -32,7 +32,7 @@ ms.locfileid: "66055725"
   
 4.  在 **“数据流路径编辑器”** 中，单击 **“常规”**。 然后，可以编辑默认的路径名称并提供路径说明。 还可以修改 PathAnnotation 属性。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

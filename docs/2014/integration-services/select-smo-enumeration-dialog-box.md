@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055952"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>“选择 SMO 枚举”对话框
   可以使用“选择 SMO 枚举”**** 对话框，指定要在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上枚举的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 并选择枚举类型。  
   
 ## <a name="options"></a>选项  
- **列举**  
+ **枚举**  
  展开服务器，再选择 SMO 对象。  
   
  **对象**  
@@ -37,10 +37,10 @@ ms.locfileid: "66055952"
  **人名**  
  使用“名称”枚举类型。  
   
- **Urn**  
+ **URN**  
  使用 URN 枚举类型。  
   
- **机构**  
+ **位置**  
  使用“位置”枚举类型。 此选项仅适用于文件。  
   
 ## <a name="see-also"></a>另请参阅  

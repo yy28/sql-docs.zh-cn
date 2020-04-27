@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056791"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>执行 SQL 任务中的参数和返回代码
@@ -38,13 +38,13 @@ ms.locfileid: "66056791"
   
 -   [在 WHERE 子句中使用参数](#WHERE_clauses)  
   
--   [对存储过程使用参数](#Stored_procedures)  
+-   [在存储过程中使用参数](#Stored_procedures)  
   
 -   [获取返回代码的值](#Return_codes)  
   
 -   [在执行 SQL 任务编辑器中配置参数和返回代码](#Configure_parameters_and_return_codes)  
   
-##  <a name="Parameter_names_and_markers"></a>使用参数名称和标记  
+##  <a name="using-parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>使用参数名称和标记  
  执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如， [!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器类型要求 SQL 命令使用格式** \@为 varParameter**的参数标记，而 OLE DB 连接类型需要问号（？）参数标记。  
   
  在变量与参数之间的映射中可以用作参数名的名称也因连接管理器类型而异。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器类型使用前缀为 \@ 的用户定义的名称，而 OLE DB 连接管理器类型则要求使用从 0 开始的序数数值作为参数名。  
@@ -59,11 +59,9 @@ ms.locfileid: "66056791"
 |EXCEL 和 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 ### <a name="using-parameters-with-adonet-and-ado-connection-managers"></a>在 ADO.NET 和 ADO 连接管理器中使用参数  
- 
-  [!INCLUDE[vstecado](../includes/vstecado-md.md)] 和 ADO 连接管理器对使用参数的 SQL 命令有特定要求：  
+ [!INCLUDE[vstecado](../includes/vstecado-md.md)] 和 ADO 连接管理器对使用参数的 SQL 命令有特定要求：  
   
--   
-  [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器要求 SQL 命令将参数名称用作参数标记。 这意味着变量可以直接映射到参数。 例如，变量 `@varName` 映射到名为 `@parName` 的参数，并向参数 `@parName`提供值。  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器要求 SQL 命令将参数名称用作参数标记。 这意味着变量可以直接映射到参数。 例如，变量 `@varName` 映射到名为 `@parName` 的参数，并向参数 `@parName`提供值。  
   
 -   ADO 连接管理器要求 SQL 命令将问号 (?) 用作参数标记。 但是，您可以使用任何用户定义名称（整数值除外）作为参数名称。  
   
@@ -81,7 +79,7 @@ ms.locfileid: "66056791"
   
  使用 OLE DB 连接管理器时，不能使用参数化的子查询，这是因为执行 SQL 任务不能通过 OLE DB 访问接口得到参数信息。 但是，您可以使用表达式将参数值串联到查询字符串中，并设置该任务的 SqlStatementSource 属性。  
   
-##  <a name="Date_and_time_data_types"></a>将参数用于日期和时间数据类型  
+##  <a name="using-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a>将参数用于日期和时间数据类型  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>在 ADO.NET 和 ADO 连接管理器中使用日期和时间参数  
  读取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 类型 `time` 和 `datetimeoffset` 的数据时，使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 或 ADO 连接管理器的执行 SQL 任务有以下附加要求：  
@@ -105,7 +103,7 @@ ms.locfileid: "66056791"
   
 -   具有相应数据类型的输出参数，如下表中所示。  
   
-    |`Output`参数类型|Date 数据类型|  
+    |`Output` 参数类型|Date 数据类型|  
     |-------------------------------|--------------------|  
     |DBDATE|`date`|  
     |DBTIME2|`time`|  
@@ -121,16 +119,16 @@ ms.locfileid: "66056791"
   
 -   具有适当数据类型的 `output` 参数，如下表中所示。  
   
-    |`Output`参数类型|Date 数据类型|  
+    |`Output` 参数类型|Date 数据类型|  
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> -或-<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> \- 或 -<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
     |SQL_SS_TIMESTAMPOFFSET|`datetimeoffset`|  
   
  如果数据未存储在相应的输入或输出参数中，包将失败。  
   
-##  <a name="WHERE_clauses"></a>在 WHERE 子句中使用参数  
+##  <a name="using-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a>在 WHERE 子句中使用参数  
  SELECT、INSERT、UPDATE 和 DELETE 命令经常包含 WHERE 子句以指定筛选器，这些筛选器定义源表中的每行要用于 SQL 命令所必须满足的条件。 参数在 WHERE 子句中提供筛选值。  
   
  可以使用参数标记来动态提供参数值。 可以在 SQL 语句中使用哪些参数标记和参数名称的规则取决于执行 SQL 所使用的连接管理器的类型。  
@@ -149,10 +147,9 @@ ms.locfileid: "66056791"
   
 -   ADO 连接类型可以使用任何两个参数名称，例如 Param1 和 Param2，但是这两个参数必须按其在参数列表中的序数位置进行映射。  
   
--   
-  [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接类型使用参数名 \@parmMinProductID 和 \@parmMaxProductID。  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接类型使用参数名 \@parmMinProductID 和 \@parmMaxProductID。  
   
-##  <a name="Stored_procedures"></a>对存储过程使用参数  
+##  <a name="using-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>对存储过程使用参数  
  运行存储过程的 SQL 命令也可以使用参数映射。 与参数化查询的规则一样，参数标记和参数名称的使用规则取决于执行 SQL 所使用的连接管理器的类型。  
   
  下表按连接管理器类型列出了 EXEC 命令的示例。 示例运行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]存储过程。 该存储过程使用`@StartProductID`和`@CheckDate` `input`参数。  
@@ -168,7 +165,7 @@ ms.locfileid: "66056791"
   
  有关在 Transact-SQL 存储过程中使用输入和输出参数的详细信息，请参阅 [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)。  
   
-##  <a name="Return_codes"></a>获取返回代码的值  
+##  <a name="getting-values-of-return-codes"></a><a name="Return_codes"></a>获取返回代码的值  
  存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要在执行 SQL 任务中实现返回代码，需要使用 `ReturnValue` 类型的参数。  
   
  下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 `input` 参数。 对于所有参数类型（`Input`、 `Output`和`ReturnValue`），使用参数标记和参数名称的规则是相同的。  
@@ -186,7 +183,7 @@ ms.locfileid: "66056791"
   
  有关在 Transact-SQL 存储过程中使用返回代码的详细信息，请参阅 [RETURN (Transact-SQL)](/sql/t-sql/language-elements/return-transact-sql)。  
   
-##  <a name="Configure_parameters_and_return_codes"></a>在执行 SQL 任务中配置参数和返回代码  
+##  <a name="configuring-parameters-and-return-codes-in-the-execute-sql-task"></a><a name="Configure_parameters_and_return_codes"></a>在执行 SQL 任务中配置参数和返回代码  
  有关可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中设置的参数和返回代码的属性的详细信息，请单击以下主题：  
   
 -   [执行 SQL 任务编辑器 &#40;参数映射页&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  

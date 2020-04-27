@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054869"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>传输 SQL Server 对象任务编辑器（“对象”页）
@@ -52,19 +52,19 @@ ms.locfileid: "66054869"
  **ExistingData**  
  指定将数据复制到目标服务器的方式。 此属性具有下表所列的选项：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**全部**|将覆盖目标服务器上的数据。|  
 |**附加**|从源服务器复制的数据将追加到目标服务器上的现有数据中。|  
   
 > [!NOTE]  
->  只有在 **CopyData** 设置为 **True** 时， **ExistingData**选项才可用。  
+>   只有在 **CopyData** 设置为 **True** 时， **ExistingData**选项才可用。  
   
  **CopySchema**  
  选择在传输 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象任务过程中是否复制架构。  
   
 > [!NOTE]  
->  **CopySchema**仅适用于[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+>  **CopySchema** 仅适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **UseCollation**  
  选择对象的传输是否应包含源服务器上指定的排序规则。  
@@ -79,7 +79,7 @@ ms.locfileid: "66054869"
  展开 **ObjectsToCopy** 以指定应从源数据库复制到目标数据库的对象。  
   
 > [!NOTE]  
->  仅当**CopyAllObjects**设置为**False**时， **ObjectsToCopy**才可用。  
+>  **ObjectsToCopy** 设置为 **ObjectsToCopy** 时， **ObjectsToCopy**选项才可用。  
   
  只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]支持用于复制以下类型的对象的选项：  
   
@@ -212,8 +212,8 @@ ms.locfileid: "66054869"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
  [&#40;常规页传输 SQL Server 对象任务编辑器&#41;](general-page-of-integration-services-designers-options.md)   
- [“表达式”页](expressions/expressions-page.md)   
- [用于大容量导入或大容量导出的数据格式 &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [表达式页](expressions/expressions-page.md)   
+ [用于批量导入或导出的数据格式 (SQL Server)](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [安装 SQL Server 的安全注意事项](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

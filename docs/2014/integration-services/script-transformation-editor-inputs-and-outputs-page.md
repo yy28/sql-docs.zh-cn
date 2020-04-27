@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056067"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>脚本转换编辑器（“输入和输出”页）
@@ -33,9 +33,9 @@ ms.locfileid: "66056067"
  **输入和输出**  
  在左侧选择输入或输出即可在右侧的表中查看其属性。 选择不同的输入或输出，可编辑的属性也有所不同。 显示的许多属性是只读的。 有关各个属性的详细信息，请参阅以下主题：  
   
- [Common Properties](../../2014/integration-services/common-properties.md)  
+ [通用属性](../../2014/integration-services/common-properties.md)  
   
- [转换自定义属性](data-flow/transformations/transformation-custom-properties.md)  
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)  
   
  **添加输出**  
  将其他输出添加到列表中。  

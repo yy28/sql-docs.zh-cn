@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057342"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 源编辑器（“列”页）
@@ -26,7 +26,7 @@ ms.locfileid: "66057342"
  **可用外部列**  
  查看数据源中可用源列的列表。 使用列表中的复选框可向页底部的表添加或删除列。 所选列会添加到输出中。  
   
- **“外部列”**  
+ **外部列**  
  查看您选择包含在输出中的源列。  
   
  **输出列**  

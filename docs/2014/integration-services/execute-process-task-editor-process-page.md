@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059033"
 ---
 # <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）
@@ -40,15 +40,15 @@ ms.locfileid: "66059033"
  键入包含可执行文件的文件夹的路径，或单击浏览 (…) 按钮定位到该文件夹****。  
   
  **StandardInputVariable**  
- 选择为进程提供输入的变量，或单击“\<新建变量...>”创建一个新变量****：  
+ 选择一个变量来提供进程的输入，或者单击 " \<**新建变量 ...** "> 创建新的变量：  
   
  **相关主题：**  [添加变量](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- 选择用于捕获进程输出的变量，或单击“\<新建变量...>”创建一个新变量****。  
+ 选择要捕获进程输出的变量，或单击 " \<**新建变量 ...** "> 创建新变量。  
   
  **StandardErrorVariable**  
- 选择用于捕获进程错误输出的变量，或单击“\<新建变量...>”创建一个新变量****。  
+ 选择要捕获处理器的错误输出的变量，或单击 " \<**新建变量 ...** "> 创建新变量。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指示在进程退出代码与 **SuccessValue**中指定的值不同时任务是否失败。  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056012"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>选择目标位置（SSIS 包升级向导）
@@ -41,26 +41,26 @@ ms.locfileid: "66056012"
  **包源**  
  指定存储升级包的位置。 此选项具有下表所列的值。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**文件系统**|指示将升级的包将保存到本地计算机上的文件夹中。|  
 |**SSIS 包存储区**|指示升级的包将保存到 Integration Services 包存储区中。 包存储区由一组 Integration Services 服务管理的文件系统文件夹组成。 有关详细信息，请参阅[包管理（SSIS 服务）](service/package-management-ssis-service.md)。<br /><br /> 选择此值将显示相应的动态选项 **“包源”** 。|  
 |**Microsoft SQL Server**|指示升级的包将保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的现有实例中。<br /><br /> 选择此值将显示相应的动态选项 **“包源”** 。|  
   
- **文件夹**  
+ **Folder**  
  键入要保存升级包的文件夹的名称，或单击“浏览”**** 找到该文件夹。  
   
- **“浏览”**  
+ **浏览**  
  浏览找到将保存已升级包的文件夹。  
   
 ## <a name="package-source-dynamic-options"></a>包源动态选项  
   
 ### <a name="package-source--ssis-package-store"></a>包源 = SSIS 包存储区  
- **Server**  
+ **服务器**  
  键入要保存升级包的服务器的名称，或在列表中选择服务器。  
   
 ### <a name="package-source--microsoft-sql-server"></a>包源 = Microsoft SQL Server  
- **Server**  
+ **服务器**  
  键入要保存升级包的服务器的名称，或在列表中选择此服务器。  
   
  **使用 Windows 身份验证**  
@@ -72,7 +72,7 @@ ms.locfileid: "66056012"
  **用户名**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到服务器时使用的用户名。  
   
- **权限**  
+ **密码**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到服务器时使用的密码。  
   
 ## <a name="see-also"></a>另请参阅  

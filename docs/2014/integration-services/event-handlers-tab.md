@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059285"
 ---
 # <a name="event-handlers-tab"></a>“事件处理程序”选项卡
@@ -40,7 +40,7 @@ ms.locfileid: "66059285"
  此外，通过右键单击设计图面，然后在菜单上单击“添加批注”****，以添加批注。  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services (SSIS) 事件处理程序](integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;SSIS&#41; 事件处理程序](integration-services-ssis-event-handlers.md)   
  [控制流](control-flow/control-flow.md)   
  [SSIS 设计器](ssis-designer.md)   
  [Integration Services (SSIS) 事件处理程序](integration-services-ssis-event-handlers.md)  

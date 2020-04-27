@@ -14,42 +14,39 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055641"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>设置 Integration Services 服务的属性
     
 > [!IMPORTANT]  
->  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]支持服务以便与的早期版本向后兼容[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
+>  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理并监视 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的包。 首次安装[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务将启动，并且服务的启动类型设置为 "自动"。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理并监视 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的包。 首次安装[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务将启动，并且服务的启动类型设置为 "自动"。  
   
  安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务后，可以使用 SQL Server 配置管理器或 Services MMC 管理单元设置其属性。  
   
- 若要配置该服务的其他重要功能（包括在何处存储和管理包），则必须修改服务的配置文件。 有关详细信息，请参阅[配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)。  
+ 若要配置该服务的其他重要功能（包括在何处存储和管理包），则必须修改服务的配置文件。 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)的早期版本向后兼容。  
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>使用 SQL Server 配置管理器设置 Integration Services 服务的属性  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”** 和 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 **“Microsoft SQL Server”** 和 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
 2.  在“SQL Server 配置管理器”管理单元中，在服务列表中找到 **SQL Server Integration Services**，右键单击 **SQL Server Integration Services**，然后单击“属性”。********  
   
-3.  在 **“SQL Server Integration Services 属性”** 对话框中，可以执行下列操作：  
+3.  在 " **SQL Server Integration Services 属性**" 对话框中，您可以执行以下操作：  
   
     -   单击 **“登录”** 选项卡以查看诸如帐户名等登录信息。  
   
     -   单击 **“服务”** 选项卡以查看有关服务的信息（例如，主机计算机的名称），并指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的启动模式。  
   
         > [!NOTE]  
-        >  
-  **
-  **“高级”选项卡不包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的信息。  
+        >  ****“高级”选项卡不包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的信息。  
   
-4.  单击“确定”。   
+4.  单击" **确定**"。  
   
 5.  在“文件”菜单上，单击“退出”以关闭“SQL Server 配置管理器”管理单元。************  
   
@@ -61,7 +58,7 @@ ms.locfileid: "66055641"
   
 3.  在“服务”管理单元中，在服务列表中找到 **SQL Server Integration Services**，右键单击 **SQL Server Integration Services**，再单击“属性”。********  
   
-4.  在 " **SQL Server Integration Services 属性**" 对话框中，可以执行以下操作：  
+4.  在 **“SQL Server Integration Services 属性”** 对话框中，可以执行下列操作：  
   
     -   单击 "**常规**" 选项卡。若要启用该服务，请选择 "手动" 或 "自动" 启动类型。 若要禁用该服务，请选择 **“启动类型”** 框中的“禁用”。 选择“禁用”不会停止当前正在运行的服务。  
   
@@ -71,10 +68,9 @@ ms.locfileid: "66055641"
   
     -   单击 **“恢复”** 选项卡可查看服务失败时计算机的默认反应。 您可以修改这些选项以满足您环境的要求。  
   
-    -   单击 **“依赖项”** 选项卡可查看依赖服务的列表。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务没有任何依赖项。  
+    -   单击 **“依赖项”** 选项卡可查看依赖服务的列表。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务没有任何依赖项。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
 6.  另外，如果启动类型为“手动”或“自动”，还可以右键单击 **SQL Server Integration Services**，然后单击“启动”、“停止”或“重新启动”。****  
   

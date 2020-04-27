@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058359"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊分组转换编辑器（“列”选项卡）
@@ -57,10 +57,10 @@ ms.locfileid: "66058359"
  **数字**  
  指定比较列数据时前导数字和尾随数字的重要性。 例如，如果前导数字重要，则“123 Main Street”将不会与“456 Main Street”分组在一起。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
-|**但**|前导数字和尾随数字都不重要。|  
-|**前导**|只有前导数字重要。|  
+|**两者均未选中**|前导数字和尾随数字都不重要。|  
+|**Leading**|只有前导数字重要。|  
 |**加**|只有尾随数字重要。|  
 |**LeadingAndTrailing**|前导数字和尾随数字都重要。|  
   

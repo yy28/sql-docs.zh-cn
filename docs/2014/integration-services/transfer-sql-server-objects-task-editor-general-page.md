@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054886"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>传输 SQL Server 对象任务编辑器（“常规”页）
@@ -40,7 +40,7 @@ ms.locfileid: "66054886"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
- [传输 SQL Server 对象任务编辑器（“对象”页）](../../2014/integration-services/transfer-sql-server-objects-task-editor-objects-page.md)   
+ [传输 SQL Server 对象任务编辑器 &#40;对象 "页&#41;](../../2014/integration-services/transfer-sql-server-objects-task-editor-objects-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

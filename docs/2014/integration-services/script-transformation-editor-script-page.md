@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056054"
 ---
 # <a name="script-transformation-editor-script-page"></a>脚本转换编辑器（“脚本”页）
@@ -30,7 +30,7 @@ ms.locfileid: "66056054"
  **属性**  
  查看和修改脚本转换的属性。 显示的许多属性是只读的。 您可以修改以下属性：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**说明**|说明脚本转换的用途。|  
 |**LocaleID**|指定区域设置，以便为排序以及日期和时间转换提供区域特定的信息。|  
@@ -39,7 +39,7 @@ ms.locfileid: "66056054"
 |**ReadOnlyVariables**|以逗号分隔的形式键入一列可供脚本转换只读访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
 |**ReadWriteVariables**|以逗号分隔的形式键入一列可供脚本转换读/写访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
 |**ScriptLanguage**|选择脚本组件要使用的脚本语言。<br /><br /> 若要设置脚本组件和脚本任务的默认脚本语言，请使用 **“选项”** 对话框的 **“常规”** 页上的 **“脚本语言”** 选项。 有关详细信息，请参阅 [General Page](general-page-of-integration-services-designers-options.md)。|  
-|**UserComponentTypeName**|指定 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 类和支持 `Microsoft.SqlServer.TxScript` 基础结构的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程序集。|  
+|**UserComponentTypeName**|指定 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 类和支持 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 基础结构的 `Microsoft.SqlServer.TxScript` 程序集。|  
   
  **编辑脚本**  
  使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications （VSTA）创建或修改脚本。  

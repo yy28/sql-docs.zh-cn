@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058491"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 连接管理器编辑器
@@ -39,7 +39,7 @@ ms.locfileid: "66058491"
  **用户名**  
  提供用于访问 FTP 服务器的用户名。 此属性的默认值为“匿名”。 ****  
   
- **权限**  
+ **密码**  
  提供用于访问 FTP 服务器的密码。  
   
  **超时值(秒)**  

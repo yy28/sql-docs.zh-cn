@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056432"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>执行 SQL 任务中的结果集
@@ -33,7 +33,7 @@ ms.locfileid: "66056432"
   
 -   [在执行 SQL 任务编辑器中配置结果集](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a>指定结果集类型  
+##  <a name="specifying-a-result-set-type"></a><a name="Result_set_type"></a>指定结果集类型  
  执行 SQL 任务支持下列结果集类型：  
   
 -   查询不返回结果时使用的 **“无”** 结果集。 例如，该结果集用于在表中添加、更改和删除记录的查询。  
@@ -46,7 +46,7 @@ ms.locfileid: "66056432"
   
  如果“执行 SQL 任务”使用了 **“完整结果集”** 结果集并且查询返回多个行集，则该任务仅返回第一个行集。 如果该行集生成一个错误，则该任务将报告这个错误。 如果其他行集生成错误，则该任务不会报告这些错误。  
   
-##  <a name="Populate_variable_with_result_set"></a>使用结果集填充变量  
+##  <a name="populating-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a>使用结果集填充变量  
  如果结果集类型为单行、行集或 XML，则可以将查询返回的结果集绑定到用户定义的变量。  
   
  如果结果集类型为“单行” ****，则可以使用列名作为结果集名称，将返回结果中的列绑定到一个变量，也可以使用列列表中列的序号位置作为结果集名称。 例如，查询 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的结果集名称可以是 **Color** 或 **0**。 如果查询返回多个列，而您要访问所有列中的值，则必须将每列绑定到一个不同的变量。 如果使用数字作为结果集名称，将列映射到变量，则数字将反映列在查询的列列表中显示的顺序。 例如，在查询 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，对 **Color** 列使用 0，对 **ListPrice** 列使用 1。 使用列名作为结果集名称的功能将依赖于所配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
@@ -72,16 +72,15 @@ ms.locfileid: "66056432"
   
  您可在执行 SQL 任务作用域或包作用域内定义变量。 如果变量的作用域为包，则结果集可用于包中的其他任务和容器，并可用于执行包或执行 DTS 2000 包任务所运行的所有包。  
   
- 如果将变量映射到“单行”**** 结果集，则在满足以下条件时，SQL 语句返回的非字符串值将转换为字符串：  
+ 如果将变量映射到“单行” **** 结果集，则在满足以下条件时，SQL 语句返回的非字符串值将转换为字符串：  
   
--   
-  **TypeConversionMode** 属性设置为 true。 在属性窗口中或通过使用“执行 SQL 任务编辑器” **** 设置属性值。  
+-   **TypeConversionMode** 属性设置为 true。 在属性窗口中或通过使用“执行 SQL 任务编辑器” **** 设置属性值。  
   
 -   转换不会导致数据截断。  
   
  有关将结果集加载到变量的信息，请参阅 [在执行 SQL 任务中将结果集映射到变量](control-flow/execute-sql-task.md)。  
   
-##  <a name="Configure_result_sets"></a>在执行 SQL 任务中配置结果集  
+##  <a name="configuring-result-sets-in-the-execute-sql-task"></a><a name="Configure_result_sets"></a>在执行 SQL 任务中配置结果集  
  有关可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中设置的结果集的属性的详细信息，请单击下列主题：  
   
 -   [&#40;"结果集" 页上执行 SQL 任务编辑器&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  

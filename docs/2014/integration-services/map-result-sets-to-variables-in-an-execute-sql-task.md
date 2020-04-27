@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057761"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将结果集映射到变量
@@ -57,7 +57,7 @@ ms.locfileid: "66057761"
   
      通常，可以将列名用作结果集名称，也可以将列列表中的列的序号位置用作结果集名称。 使用列名作为结果集名称的功能将依赖于配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
   
-11. 单击“确定”。   
+11. 单击" **确定**"。  
   
 ## <a name="see-also"></a>另请参阅  
  [执行 SQL 任务](control-flow/execute-sql-task.md)   

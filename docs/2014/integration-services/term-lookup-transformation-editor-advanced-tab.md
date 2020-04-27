@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 692cde14a9cc8add332a4bbf6abe9518d3de642f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055212"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>字词查找转换编辑器（“高级”选项卡）
@@ -28,7 +28,7 @@ ms.locfileid: "66055212"
   
 ## <a name="options"></a>选项  
  **使用区分大小写的字词查找**  
- 指示查找是否区分大小写。 默认为 `False`。  
+ 指示查找是否区分大小写。 默认值为 `False`。  
   
  **配置错误输出**  
  使用 [配置错误输出](../../2014/integration-services/configure-error-output.md) 对话框可以为导致错误的行指定错误处理方式选项。  

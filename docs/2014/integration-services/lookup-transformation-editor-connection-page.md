@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057952"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>查找转换编辑器（“连接”页）
@@ -37,20 +37,20 @@ ms.locfileid: "66057952"
   
  在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”**、 **“部分缓存”** 或 **“无缓存”** 以及 **“OLE DB 连接管理器”** 时，下列选项可用：  
   
- **“无缓存”**  
+ **OLE DB 连接管理器**  
  从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”**** 创建一个新连接。  
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
+ 通过使用“配置 OLE DB 连接管理器”**** 对话框创建新的连接。  
   
  **使用表或视图**  
- 从列表中选择现有表或视图，或单击“新建”**** 创建新表。  
+ 从列表中选择现有表或视图，或单击 "**新建**" 创建新表。  
   
 > [!NOTE]  
 >  在此处选择的表名将由在 **“查找转换编辑器”** 的 **“高级”** 页上指定的 SQL 语句覆盖和替换。 有关详细信息，请参阅 [查找转换编辑器（“高级”页）](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)。  
   
  **新建**  
- 通过使用“创建表”  对话框创建一个新表。  
+ 通过使用“创建表”**** 对话框创建一个新表。  
   
  **使用 SQL 查询的结果**  
  选择该选项后，可以通过浏览找到预先存在的查询、生成一个新查询、检查查询语法，然后预览查询结果。  
@@ -58,21 +58,21 @@ ms.locfileid: "66057952"
  **生成查询**  
  通过使用“查询生成器”**** 可以创建要运行的 Transact-SQL 语句，查询生成器是一个用于通过浏览数据来创建查询的图形工具。  
   
- **“浏览”**  
+ **浏览**  
  使用此选项可以找到保存为文件的预先存在的查询。  
   
  **分析查询**  
  检查查询的语法。  
   
  **预览**  
- 使用“预览查询结果”  对话框预览结果。 此选项最多可以显示 200 行。  
+ 使用“预览查询结果”**** 对话框预览结果。 此选项最多可以显示 200 行。  
   
 ## <a name="external-resources"></a>外部资源  
  blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="see-also"></a>另请参阅  
  [查找转换编辑器 &#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [查找转换编辑器（“列”页）](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [查找转换编辑器 &#40;列 "页&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [查找转换编辑器 &#40;高级页面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [查找转换编辑器 &#40;错误输出页&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [模糊查找转换](data-flow/transformations/fuzzy-lookup-transformation.md)  

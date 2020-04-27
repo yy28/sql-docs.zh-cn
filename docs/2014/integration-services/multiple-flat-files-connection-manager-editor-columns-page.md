@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057499"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>多平面文件连接管理器编辑器（“列”页）
@@ -39,36 +39,36 @@ ms.locfileid: "66057499"
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**回车换行符**|行由回车符和换行符的组合分隔。|  
 |**回车**|行由回车符分隔。|  
-|**换行符**|行由换行符分隔。|  
+|**{LF}**|行由换行符分隔。|  
 |**分号 {;}**|行由分号分隔。|  
-|**冒号 {：}**|行由冒号分隔。|  
+|**冒号 {:}**|行由冒号分隔。|  
 |**跟{,}**|行由逗号分隔。|  
 |**选项卡 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}**|行由竖线分隔。|  
+|**竖线 {&#124;}**。|行由竖线分隔。|  
   
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**回车换行符**|列由回车符和换行符的组合分隔。|  
 |**回车**|列由回车符分隔。|  
-|**换行符**|列由换行符分隔。|  
+|**{LF}**|列由换行符分隔。|  
 |**分号 {;}**|列由分号分隔。|  
-|**冒号 {：}**|列由冒号分隔。|  
+|**冒号 {:}**|列由冒号分隔。|  
 |**跟{,}**|列由逗号分隔。|  
 |**选项卡 {t}**|列由制表符分隔。|  
-|**竖线 {&#124;}**|列由竖线分隔。|  
+|**竖线 {&#124;}**。|列由竖线分隔。|  
   
  **重置列**  
  通过单击“重置列”**** 可以删除除原始列之外的所有列。  
   
 ### <a name="format--fixed-width"></a>格式 = 固定宽度  
- **文字**  
+ **字体**  
  选择用于显示预览数据的字体。  
   
  **源数据列**  
@@ -85,7 +85,7 @@ ms.locfileid: "66057499"
 > [!NOTE]  
 >  右边未对齐是指文件中除最后一列之外每一列的宽度都固定。 它由行分隔符分隔。  
   
- **文字**  
+ **字体**  
  选择用于显示预览数据的字体。  
   
  **源数据列**  
@@ -94,16 +94,16 @@ ms.locfileid: "66057499"
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**回车换行符**|行由回车符和换行符的组合分隔。|  
 |**回车**|行由回车符分隔。|  
-|**换行符**|行由换行符分隔。|  
+|**{LF}**|行由换行符分隔。|  
 |**分号 {;}**|行由分号分隔。|  
-|**冒号 {：}**|行由冒号分隔。|  
+|**冒号 {:}**|行由冒号分隔。|  
 |**跟{,}**|行由逗号分隔。|  
 |**选项卡 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}**|行由竖线分隔。|  
+|**竖线 {&#124;}**。|行由竖线分隔。|  
   
  **重置列**  
  通过单击“重置列”**** 可以删除除原始列之外的所有列。  
@@ -112,6 +112,6 @@ ms.locfileid: "66057499"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [多平面文件连接管理器编辑器 &#40;常规页面&#41;](general-page-of-integration-services-designers-options.md)   
  [多平面文件连接管理器编辑器 &#40;高级页面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [多平面文件连接管理器编辑器 &#40;预览页面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [多平面文件连接管理器编辑器（“预览”页）](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

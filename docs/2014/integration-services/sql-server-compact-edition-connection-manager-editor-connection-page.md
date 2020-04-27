@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055427"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 连接管理器编辑器（“连接”页）
@@ -30,14 +30,14 @@ ms.locfileid: "66055427"
  **输入数据库文件名和路径**  
  输入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的路径和文件名。  
   
- **“浏览”**  
- 通过使用“选择 SQL Server Compact Edition 数据库”[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**对话框找到所需的 ** Compact 数据库文件。  
+ **浏览**  
+ 通过使用“选择 SQL Server Compact Edition 数据库”**** 对话框找到所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库文件。  
   
  **输入数据库密码**  
  输入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的密码。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL Server Compact Edition 连接管理器编辑器 &#40;所有页面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+ [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
   

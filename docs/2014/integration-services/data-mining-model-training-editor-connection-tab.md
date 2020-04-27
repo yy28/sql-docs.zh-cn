@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059879"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>数据挖掘模型定型编辑器（“连接”选项卡）
@@ -27,8 +27,8 @@ ms.locfileid: "66059879"
  若要了解有关数据挖掘模型定型目标的详细信息，请参阅 [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md)。  
   
 ## <a name="options"></a>选项  
- **“ODBC 目标编辑器”**  
- 从现有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**按钮创建新的 ** 连接。  
+ **连接管理器**  
+ 从现有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”**** 按钮创建新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接。  
   
  **新建**  
  通过使用“添加 Analysis Services 连接管理器”**** 对话框创建一个新连接。  
@@ -44,6 +44,6 @@ ms.locfileid: "66059879"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [数据挖掘模型定型编辑器 &#40;列 "选项卡&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [数据挖掘模型定型编辑器（“列”选项卡）](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

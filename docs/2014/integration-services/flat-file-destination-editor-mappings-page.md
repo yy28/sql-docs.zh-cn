@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058680"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>平面文件目标编辑器（“映射”页）
@@ -41,6 +41,6 @@ ms.locfileid: "66058680"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- ["平面文件目标编辑器" &#40;连接管理器页&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [平面文件目标编辑器（“连接管理器”页）](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

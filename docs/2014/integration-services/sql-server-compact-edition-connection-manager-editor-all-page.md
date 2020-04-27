@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055466"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 连接管理器编辑器（“全部”页）
@@ -53,14 +53,14 @@ ms.locfileid: "66055466"
   
  “模式”选项包含四个值，如下表所述：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**只读**|指定对数据库的只读访问。|  
-|**读写**|指定对数据库的读/写权限。|  
+|**“读写”**|指定对数据库的读/写权限。|  
 |**排他**|指定对数据库的排他访问。|  
 |**共享读取**|指定其他用户可以同时读取该数据库。|  
   
- **持久性安全信息**  
+ **Persist Security Info**  
  指定安全信息是否作为连接字符串的一部分返回。 此选项的默认值为 **False**。  
   
  **临时文件目录**  
@@ -69,11 +69,11 @@ ms.locfileid: "66055466"
  **数据源**  
  指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的名称。  
   
- **权限**  
+ **密码**  
  输入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的密码。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL Server Compact Edition 连接管理器编辑器 &#40;连接页&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+ [SQL Server Compact Edition 连接管理器编辑器（“连接”页）](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054954"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>传输登录名任务编辑器（“常规”页）
@@ -37,7 +37,7 @@ ms.locfileid: "66054954"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
- [传输登录名任务编辑器（“登录名”页）](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   
+ [传输登录名任务编辑器 &#40;登录页&#41;](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055139"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>字词提取转换编辑器（“字词提取”选项卡）
@@ -33,7 +33,7 @@ ms.locfileid: "66055139"
  **术语**  
  为将包含所提取的字词的输出列提供名称。  
   
- **分值**  
+ **分数**  
  为将包含每个所提取字词的分数的输出列提供名称。  
   
  **配置错误输出**  

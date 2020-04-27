@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056183"
 ---
 # <a name="script-task-editor-general-page"></a>脚本任务编辑器（“常规”页）
@@ -39,7 +39,7 @@ ms.locfileid: "66056183"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [脚本任务编辑器 &#40;脚本页&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [脚本任务示例](extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

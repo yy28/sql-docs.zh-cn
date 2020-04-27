@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055041"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>传输错误消息任务编辑器（“消息”页）
@@ -39,19 +39,19 @@ ms.locfileid: "66055041"
   
  此属性具有下表所列的选项：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**True**|复制所有用户定义消息。|  
 |**False**|仅复制指定的用户定义消息。|  
   
  **ErrorMessagesList**  
- 单击浏览按钮 (...) 以选择要复制的错误消息****。  
+ 单击浏览按钮 **（...）** 以选择要复制的错误消息。  
   
 > [!NOTE]  
 >  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  
   
  **ErrorMessageLanguagesList**  
- 单击浏览按钮 (...) 以选择将用户定义的错误消息发送到目标服务器所使用的语言****。 在目标服务器上必须存在 us_english（代码页 1033）版本的消息，才能将其他语言版本的消息传输到目标服务器。  
+ 单击浏览按钮 **（...）** 以选择要将用户定义的错误消息复制到目标服务器的语言。 在目标服务器上必须存在 us_english（代码页 1033）版本的消息，才能将其他语言版本的消息传输到目标服务器。  
   
 > [!NOTE]  
 >  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  

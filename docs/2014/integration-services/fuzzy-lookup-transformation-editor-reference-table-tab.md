@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058309"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>模糊查找转换编辑器（“引用表”选项卡）
@@ -33,11 +33,11 @@ ms.locfileid: "66058309"
  若要了解有关模糊查找转换的详细信息，请参阅 [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)。  
   
 ## <a name="options"></a>选项  
- **“无缓存”**  
+ **OLE DB 连接管理器**  
  从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”**** 创建一个新连接。  
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
+ 通过使用“配置 OLE DB 连接管理器”**** 对话框创建新的连接。  
   
  **生成新索引**  
  指定转换应创建新的索引以用于查找。  
@@ -57,7 +57,7 @@ ms.locfileid: "66058309"
 > [!NOTE]  
 >  如果在 **“模糊查找转换编辑器”** 的 **“引用表”** 选项卡中选择 **“维护存储的索引”**，则转换将使用托管存储过程维护索引。 这些托管存储过程使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的公共语言运行时 (CLR) 集成功能。 默认情况下，不启用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 CLR 集成。 若要使用 **“维护存储的索引”** 功能，必须启用 CLR 集成。 有关详细信息，请参阅 [Enabling CLR Integration](../relational-databases/clr-integration/clr-integration-enabling.md)。  
 >   
->  由于“维护存储索引”选项需要 CLR 集成，所以只有在选择已启用 CLR 集成的 **实例上的引用表时，此功能才能发挥作用**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
+>  由于 **“维护存储的索引”** 选项需要 CLR 集成，所以只有在选择已启用 CLR 集成的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上的引用表时，此功能才能发挥作用。  
   
  **使用现有索引**  
  指定转换应使用现有索引来执行查找。  
@@ -67,7 +67,7 @@ ms.locfileid: "66058309"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [模糊查找转换编辑器（“列”选项卡）](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [&#40;高级 "选项卡的" 模糊查找转换编辑器 "&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [模糊查找转换编辑器 &#40;列 "选项卡&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [模糊查找转换编辑器（“高级”选项卡）](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

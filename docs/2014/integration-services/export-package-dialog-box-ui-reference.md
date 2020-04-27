@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058913"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>“导出包”对话框 UI 参考
@@ -34,7 +34,7 @@ ms.locfileid: "66058913"
   
  **SSIS 包存储**  
   
- **Server**  
+ **服务器**  
  键入服务器名称或从列表中选择一个服务器。  
   
  **身份验证**  
@@ -49,19 +49,19 @@ ms.locfileid: "66058913"
  **用户名**  
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请提供用户名。  
   
- **权限**  
+ **密码**  
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
  **包路径**  
- 键入包路径，或单击浏览按钮 (…)，然后定位存储包的文件夹****。  
+ 键入包路径，或单击浏览按钮 **（...）** 并找到要在其中存储包的文件夹。  
   
  **保护级别**  
- 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别********。 有关详细信息，请参阅[“包和项目保护级别”对话框](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
+ 单击浏览按钮 **（...）** ，然后在 "**包保护级别**" 对话框中更新保护级别。 有关详细信息，请参阅 [“包和项目保护级别”对话框](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [保存包的副本](../../2014/integration-services/save-copy-of-package.md)   
  ["导入包" 对话框 UI 参考](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [保存包](save-packages.md)   
- [&#40;SSIS 服务导入和导出包&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [导入和导出包（SSIS 服务）](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

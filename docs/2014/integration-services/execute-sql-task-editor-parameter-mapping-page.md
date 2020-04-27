@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059043"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>执行 SQL 任务编辑器（“参数映射”页）
@@ -28,11 +28,11 @@ ms.locfileid: "66059043"
   
 ## <a name="options"></a>选项  
  **变量名称**  
- 通过单击“添加”添加了参数映射之后，请从列表中选择系统变量或用户定义的变量，或单击“**新建变量...>”以使用“添加变量”对话框添加新变量**\<********。  
+ 通过单击“添加”添加了参数映射之后，请从列表中选择系统变量或用户定义的变量，或单击“\<新建变量...>”以使用“添加变量”对话框添加新变量************。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)  
+ **相关主题：** [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)  
   
- **方向键**  
+ **方向**  
  选择参数的方向。 将每个变量映射到输入参数、输出参数或返回代码。  
   
  **数据类型**  

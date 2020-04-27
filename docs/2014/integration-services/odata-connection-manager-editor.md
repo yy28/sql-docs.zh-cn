@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057374"
 ---
 # <a name="odata-connection-manager-editor"></a>“OData 连接管理器编辑器”
@@ -27,7 +27,7 @@ ms.locfileid: "66057374"
  连接管理器的名称。  
   
  **服务文档位置**  
- OData 服务的 URL。 例如： http://services.odata.org/V3/Northwind/Northwind.svc/ 。  
+ OData 服务的 URL。 例如： http://services.odata.org/V3/Northwind/Northwind.svc/。  
   
  **身份验证**  
  为“身份验证”选择“Windows 身份验证”或使用“使用此用户名和密码”************。 如果选择第二个选项，请输入 **“用户名”** 和 **“密码”**。  

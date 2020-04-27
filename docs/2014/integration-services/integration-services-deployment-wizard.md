@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058008"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 部署向导
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 部署向导使用项目部署模型将项目部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上的 SSISDB 目录。  
   
  若要从[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]打开的项目启动部署向导，请从 "**项目**" 菜单中选择 "**部署**"。 若[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]要在中启动该向导，请在对象资源管理器中展开**Integration Services 目录** > **SSISDB**节点，右键单击 "**项目**" 文件夹，然后单击 "**部署项目**"。  

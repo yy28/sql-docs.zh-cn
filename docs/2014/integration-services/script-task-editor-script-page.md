@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056191"
 ---
 # <a name="script-task-editor-script-page"></a>脚本任务编辑器（“脚本”页）
@@ -37,19 +37,19 @@ ms.locfileid: "66056191"
   
  若要设置脚本任务的默认脚本语言，请使用 **“选项”** 对话框的 **“常规”** 页上的 **“脚本语言”** 选项。 有关详细信息，请参阅 [General Page](general-page-of-integration-services-designers-options.md)。  
   
- **EntryPoint**  
- 指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 运行时作为脚本任务代码入口点调用的方法。 指定的方法必须在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) 项目的 ScriptMain 类中。ScriptMain 类是脚本模板生成的默认类。  
+ **入口**  
+ 指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 运行时作为脚本任务代码入口点调用的方法。 指定的方法必须在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications （VSTA）项目的 ScriptMain 类中，ScriptMain 类是脚本模板生成的默认类。  
   
  若要更改 VSTA 项目中方法的名称，则必须更改 **EntryPoint** 属性的值。  
   
  **ReadOnlyVariables**  
- 以逗号分隔的形式键入一列可供脚本使用的只读变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量   。  
+ 以逗号分隔的形式键入一列可供脚本使用的只读变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量********。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  
   
  **ReadWriteVariables**  
- 以逗号分隔的形式键入一列可供脚本使用的读/写变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量   。  
+ 以逗号分隔的形式键入一列可供脚本使用的读/写变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量********。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  
@@ -61,9 +61,9 @@ ms.locfileid: "66056191"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [常规页](general-page-of-integration-services-designers-options.md)   
  [脚本任务编辑器 &#40;常规 "页面&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [脚本任务示例](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)   
  [添加、删除、更改包中用户定义变量的作用域](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

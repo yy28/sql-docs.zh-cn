@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059893"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>数据挖掘模型定型编辑器（“列”选项卡）
@@ -41,6 +41,6 @@ ms.locfileid: "66059893"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [数据挖掘模型定型编辑器 &#40;连接 "选项卡&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [数据挖掘模型定型编辑器（“连接”选项卡）](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

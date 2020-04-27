@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057319"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 源编辑器（“连接”页）
@@ -40,11 +40,11 @@ ms.locfileid: "66057319"
  **查询选项**  
  为查询指定选项。  例如：$top=5。  
   
- **Feed url**  
+ **馈送 url**  
  基于在此对话框中选择的选项显示只读馈送 URL。  
   
  **预览**  
- 通过使用“预览”**** 对话框预览结果。 **预览**最多可以显示20行。  
+ 通过使用“预览”**** 对话框预览结果。 **“预览”** 最多可以显示 20 行。  
   
 ## <a name="dynamic-options"></a>动态选项  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66057319"
  从下拉列表中选择集合。  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>使用集合或资源路径 = 资源路径  
- **资源路径**  
+ **Resource path**  
  键入资源路径。 例如：Employees  
   
 ## <a name="see-also"></a>另请参阅  

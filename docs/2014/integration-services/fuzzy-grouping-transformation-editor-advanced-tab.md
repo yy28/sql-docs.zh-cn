@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058370"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊分组转换编辑器（“高级”选项卡）
@@ -31,12 +31,10 @@ ms.locfileid: "66058370"
   
 ## <a name="options"></a>选项  
  **输入键列名**  
- 指定包含每个输入行的唯一表示符的输出列名称。 
-  `_key_in` 列包含的值可唯一标识每个行。  
+ 指定包含每个输入行的唯一表示符的输出列名称。 `_key_in` 列包含的值可唯一标识每个行。  
   
  **输出键列名**  
- 对于一组重复的行，指定包含其规范行的唯一标识符的输出列名称。 
-  `_key_out` 列对应于规范数据行的 `_key_in` 值。  
+ 对于一组重复的行，指定包含其规范行的唯一标识符的输出列名称。 `_key_out` 列对应于规范数据行的 `_key_in` 值。  
   
  **相似性计分列名**  
  指定包含相似性得分的列的名称。 相似性得分是介于 0 和 1 之间的值，用于指示输入行与规范行的相似性。 得分越接近 1，行与规范行的匹配程度越高。  

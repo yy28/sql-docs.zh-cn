@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055113"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>传输数据库任务编辑器（“数据库”页）
@@ -53,7 +53,7 @@ ms.locfileid: "66055113"
   
  此属性具有下表所列的选项：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**True**|覆盖目标服务器数据库。|  
 |**False**|不覆盖目标服务器数据库。|  
@@ -61,7 +61,7 @@ ms.locfileid: "66055113"
 > [!CAUTION]  
 >  如果为 **DestinationOverwrite** 指定 **True**，则会覆盖目标服务器数据库中的数据，这可能导致数据丢失。 若要避免数据丢失，请在执行传输数据库任务之前将目标服务器数据库备份到其他位置。  
   
- **Action**  
+ **操作**  
  指定该任务是将数据库“复制”到目标服务器还是“移动”到目标服务器********。  
   
  **方法**  
@@ -82,7 +82,7 @@ ms.locfileid: "66055113"
   
  此属性具有下表所列的选项：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**True**|重新附加源数据库。|  
 |**False**|不重新附加源数据库。|  
@@ -91,7 +91,7 @@ ms.locfileid: "66055113"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
  [传输数据库任务编辑器 &#40;常规 "页面&#41;](general-page-of-integration-services-designers-options.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [SMO 连接管理器](connection-manager/smo-connection-manager.md)  
   
   

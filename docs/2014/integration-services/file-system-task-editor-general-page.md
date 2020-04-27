@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058805"
 ---
 # <a name="file-system-task-editor-general-page"></a>文件系统任务编辑器（“常规”页）
@@ -26,7 +26,7 @@ ms.locfileid: "66058805"
   
  若要了解此任务，请参阅 [File System Task](control-flow/file-system-task.md)。  
   
- 必须通过设置 SourceConnection 和 DestinationConnection 属性来指定源和目标连接管理器。 您可以提供指向任务将其用作源或目标的文件的文件连接管理器的名称，如果文件路径存储在变量中，则可以提供变量的名称。 若要使用变量来存储文件路径，必须先将源连接的 IsSourcePathVariable 选项和目标连接的 IsDestinationPatheVariable 选项设置为 **True**。 然后，您可以选择使用现有的系统或用户定义变量，也可以创建新变量。 在 **“添加变量”** 对话框中，可以配置和指定变量的作用域。 该作用域必须是文件系统任务或父容器。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)和[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)。  
+ 必须通过设置 SourceConnection 和 DestinationConnection 属性来指定源和目标连接管理器。 您可以提供指向任务将其用作源或目标的文件的文件连接管理器的名称，如果文件路径存储在变量中，则可以提供变量的名称。 若要使用变量来存储文件路径，必须先将源连接的 IsSourcePathVariable 选项和目标连接的 IsDestinationPatheVariable 选项设置为 **True**。 然后，您可以选择使用现有的系统或用户定义变量，也可以创建新变量。 在 **“添加变量”** 对话框中，可以配置和指定变量的作用域。 该作用域必须是文件系统任务或父容器。 有关详细信息，请参阅[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)和[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)。  
   
 > [!NOTE]  
 >  若要覆盖`SourceConnection`为和`DestinationConnection`属性选择的变量，请为 "**源**" 和 "**目标**" 属性输入表达式。 在 **“文件系统任务编辑器”** 的 **“表达式”** 页上输入表达式。 例如，若要设置任务作为目标的文件路径，您可能要在某些情况下使用变量 A 并在另一些情况下使用变量 B。  
@@ -40,7 +40,7 @@ ms.locfileid: "66058805"
  **IsDestinationPathVariable**  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **DestinationVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项`DestinationConnection`。|  
@@ -60,7 +60,7 @@ ms.locfileid: "66058805"
  **操作**  
  选择要执行的文件系统操作。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**复制目录**|复制目录。 选择此值将显示源和目标的动态选项。|  
 |**复制文件**|复制文件。 选择此值将显示源和目标的动态选项。|  
@@ -76,7 +76,7 @@ ms.locfileid: "66058805"
  `IsSourcePathVariable`  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|值||  
+|Value||  
 |-----------|-|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **SourceVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 **DestinationVariable**。|  
@@ -93,7 +93,7 @@ ms.locfileid: "66058805"
  `DestinationConnection`  
  在列表中选择一个文件连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
   
- **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>IsSourcePathVariable 动态选项  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66058805"
  `SourceConnection`  
  在列表中选择一个文件连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
   
- **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Operation 动态选项  
   
@@ -115,10 +115,10 @@ ms.locfileid: "66058805"
  **Hidden**  
  指示文件或目录是否可见。  
   
- **ReadOnly**  
+ **只读**  
  指示文件是否是只读的。  
   
- **存档**  
+ **Archive**  
  指示文件或目录可以用于存档。  
   
  **系统**  

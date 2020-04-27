@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059723"
 ---
 # <a name="data-profile-viewer-f1-help"></a>数据配置文件查看器 F1 帮助
@@ -31,13 +31,13 @@ ms.locfileid: "66059723"
  **打开**  
  单击可查找包含数据事件探查任务输出的已保存文件。  
   
- **配置文件**窗格  
+ **“配置文件”** 窗格  
  展开“配置文件”窗格中的树可以查看输出中包含的配置文件。**** 选择一个配置文件可以查看该配置文件的结果。  
   
- **消息**窗格  
+ “消息”窗格****  
  显示状态消息。  
   
- **深化**窗格  
+ “明细”**** 窗格  
  如果数据事件探查任务使用的数据源可用，则可显示与输出中的值匹配的数据行。  
   
  例如，如果在查看针对美国各州的列的列值分布配置文件的输出，则 **“详细值分布”** 窗格可能包含值为 "WA" 的行。 双击“详细值分布”窗格中的行可以在明细窗格中查看该州列中值为 "WA" 的数据行。****  
@@ -78,7 +78,7 @@ ms.locfileid: "66059723"
  **Null 计数**  
  显示进行事件探查的列为 Null 值的行数。  
   
- **空百分比**  
+ **Null 百分比**  
  显示进行事件探查的列为 Null 值的行数百分比。  
   
  **行计数**  
@@ -91,7 +91,7 @@ ms.locfileid: "66059723"
  显示表或视图中的行数。  
   
 #### <a name="pattern-distribution-pane"></a>“模式分布”窗格  
- **化**  
+ **模式**  
  显示为进行事件探查的列计算的模式。  
   
  **一定**  
@@ -100,10 +100,10 @@ ms.locfileid: "66059723"
 ### <a name="profile-type--column-statistics-profile"></a>配置文件类型 = 列统计信息配置文件  
   
 #### <a name="column-statistics-profile---column-pane"></a>列统计信息配置文件 - \<列> 窗格  
- **最低**  
+ **短**  
  显示在进行事件探查的列中发现的最小值。  
   
-  最大值  
+ **最佳**  
  显示在进行事件探查的列中发现的最大值。  
   
  **平均值**  
@@ -115,7 +115,7 @@ ms.locfileid: "66059723"
 ### <a name="profile-type--column-value-distribution-profile"></a>配置文件类型 = 列值分布配置文件  
   
 #### <a name="column-value-distribution-profile---column-pane"></a>列值分布配置文件 - \<列> 窗格  
- **非重复值的数目**  
+ **非重复值数目**  
  显示在进行事件探查的列中发现的非重复值的计数。  
   
  **行计数**  
@@ -137,7 +137,7 @@ ms.locfileid: "66059723"
  **键列**  
  显示为作为候选键进行事件探查所选择的列。  
   
- **密钥长度**  
+ **键强度**  
  显示候选键列或候选键列组合的强度（按百分比）。 键强度小于 100% 指示存在重复值。  
   
 #### <a name="key-violations-pane"></a>“键冲突”窗格  
@@ -150,7 +150,7 @@ ms.locfileid: "66059723"
 ### <a name="profile-type--functional-dependency-profile"></a>配置文件类型 = 函数依赖关系配置文件  
   
 #### <a name="functional-dependency-profile-pane"></a>“函数依赖关系配置文件”窗格  
- **决定列**  
+ **“决定列”**  
  显示选择作为决定列的单个列或多个列。 在相同的美国邮政编码应总对应相同的州的示例中，邮政编码列就是决定列。  
   
  **依赖列**  
@@ -182,10 +182,10 @@ ms.locfileid: "66059723"
 ### <a name="profile-type--value-inclusion-profile"></a>配置文件类型 = 值包含配置文件  
   
 #### <a name="value-inclusion-profile-pane"></a>“值包含配置文件”窗格  
- **子集端列**  
+ **“子集端列”**  
  显示进行事件探查的列或列组合，以确定它们是否包含在超集列中。  
   
- **超集端列**  
+ **“超集端列”**  
  显示进行事件探查的列或列组合，以确定它们是否包含子集列中的值。  
   
  **包含强度**  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056949"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>“包和项目保护级别”对话框
@@ -31,7 +31,7 @@ ms.locfileid: "66056949"
  **“包保护级别”**  
  从列表中选择保护级别。  
   
- **权限**  
+ **密码**  
  如果使用“使用密码加密敏感数据”**** 或“使用密码加密所有数据”**** 保护级别，请键入密码。  
   
  **重新键入密码**  

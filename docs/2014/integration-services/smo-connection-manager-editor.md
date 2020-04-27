@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055598"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 连接管理器编辑器
@@ -30,19 +30,19 @@ ms.locfileid: "66055598"
  **服务器名称**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的名称，或者从列表中选择服务器名称。  
   
- **“刷新”**  
+ **全部**  
  刷新网络可检测到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用实例的列表。  
   
  **使用 Windows 身份验证**  
  使用 Windows 身份验证连接所选的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。  
   
- **Use SQL Server Authentication**  
+ **使用 SQL Server 身份验证**  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接所选的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。  
   
  **用户名**  
  如果选择了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，那么请输入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户名。  
   
- **权限**  
+ **密码**  
  如果选择了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，那么请输入密码。  
   
  **测试连接**  

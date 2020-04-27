@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfda61e5a57dabd62289f32d04d6367695b070b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057173"
 ---
 # <a name="odbc-source-editor-columns-page"></a>ODBC 源编辑器（“列”页）
-  可以使用“ODBC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列   。  
+  可以使用“ODBC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列********。  
   
  若要了解有关 ODBC 源的详细信息，请参阅 [ODBC Source](data-flow/odbc-source.md)。  
   
@@ -29,9 +29,9 @@ ms.locfileid: "66057173"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击 ODBC 源。  
+2.  在“数据流”**** 选项卡上，双击 ODBC 源。  
   
-3.  在 **“ODBC 源编辑器”** 中，单击 **“列”** 。  
+3.  在 **“ODBC 源编辑器”** 中，单击 **“列”**。  
   
 ## <a name="options"></a>选项  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66057173"
  输入每个输出列的唯一名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 输入的名称显示在 SSIS 设计器中。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC 源编辑器（“连接管理器”页）](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [ODBC 源编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [ODBC 源编辑器（“错误输出”页）](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

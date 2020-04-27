@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057046"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 源编辑器（“连接管理器”页）
@@ -43,7 +43,7 @@ ms.locfileid: "66057046"
 3.  单击 **“连接管理器”**。  
   
 ## <a name="static-options"></a>静态选项  
- **“无缓存”**  
+ **OLE DB 连接管理器**  
  从列表中选择一个现有连接管理器，或通过单击“新建”**** 创建一个新连接。  
   
  **新建**  
@@ -60,7 +60,7 @@ ms.locfileid: "66057046"
 |变量中的 SQL 命令|在变量中指定 SQL 查询文本。|  
   
  **预览**  
- 通过使用“数据视图”**** 对话框预览结果。 **预览**最多可以显示200行。  
+ 通过使用“数据视图”**** 对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
 >  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 SQL OLE DB 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
@@ -79,13 +79,13 @@ ms.locfileid: "66057046"
  **SQL 命令文本**  
  输入 SQL 查询的文本，通过单击“生成查询”**** 来生成查询，或通过单击“浏览”**** 定位到包含查询文本的文件。  
   
- **参数**  
+ **Parameters**  
  如果已经在参数化查询文本中使用 ? 作为参数占位符输入了参数化查询，请使用 **“设置查询参数”** 对话框将查询输入参数映射到包变量。  
   
  **生成查询**  
  使用“查询生成器”**** 对话框可直观地构造 SQL 查询。  
   
- **“浏览”**  
+ **浏览**  
  使用“打开”**** 对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  

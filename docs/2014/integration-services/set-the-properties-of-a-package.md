@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055803"
 ---
 # <a name="set-the-properties-of-a-package"></a>设置包的属性
@@ -39,14 +39,14 @@ ms.locfileid: "66055803"
   
     -   右键单击控制流设计图面背景中的任意位置，然后单击“属性”****。  
   
-    -   在 **“视图”** 菜单上，单击 **“属性窗口”** 。  
+    -   在 **“视图”** 菜单上，单击 **“属性窗口”**。  
   
 4.  在 **“属性”** 窗口中编辑包属性。  
   
 5.  在 **“文件”** 菜单上单击 **“保存选定项”** ，保存已更新的包。  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS&#41; 包](../../2014/integration-services/integration-services-ssis-packages.md)   
  [设置包属性](set-package-properties.md)  
   
   

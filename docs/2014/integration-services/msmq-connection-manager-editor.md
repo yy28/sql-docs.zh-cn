@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057634"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 连接管理器编辑器
@@ -36,19 +36,17 @@ ms.locfileid: "66057634"
  **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
- **通道**  
+ **路径**  
  键入消息队列的完整路径。 路径的格式取决于队列的类型。  
   
 |队列类型|示例路径|  
 |----------------|-----------------|  
-|公共|
-  \<computer name>\\<queue name\>|  
-|Private|
-  \<computer name>\Private$\\<queue name\>|  
+|公共|\<computer name>\\<queue name\>|  
+|Private|\<computer name>\Private$\\<queue name\>|  
   
  可以用“.”代表本地计算机。  
   
- **考试**  
+ **测试**  
  在配置 MSMQ 连接管理器之后，单击“测试”确定该连接是否可用。****  
   
 ## <a name="see-also"></a>另请参阅  

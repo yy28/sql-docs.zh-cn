@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059572"
 ---
 # <a name="derived-column-transformation-editor"></a>派生列转换编辑器
@@ -44,15 +44,15 @@ ms.locfileid: "66059572"
   
  此属性的值可以使用属性表达式来指定。  
   
- **相关主题**： [Integration Services SSIS 表达式 &#40;ssis&#41; 表达式](expressions/integration-services-ssis-expressions.md)、[运算符 &#40;ssis 表达式&#41;](expressions/operators-ssis-expression.md)和[函数](expressions/functions-ssis-expression.md)&#40;  
+ **相关主题**：[Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](expressions/functions-ssis-expression.md)  
   
  **数据类型**  
- 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
+ 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
  **长度**  
  如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动计算表达式的值并设置字符串数据的列长度。 该列的值是只读的。  
   
- **Precision**  
+ **精度**  
  如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动根据数据类型来设置数值数据的精度。 该列的值是只读的。  
   
  **缩放**  

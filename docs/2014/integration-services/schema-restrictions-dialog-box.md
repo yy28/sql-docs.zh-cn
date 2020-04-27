@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056149"
 ---
 # <a name="schema-restrictions-dialog-box"></a>“架构限制”对话框
@@ -31,9 +31,9 @@ ms.locfileid: "66056149"
  **变量**  
  使用变量来定义限制。 在列表中选择变量，或单击 "**新建变量 ...** " 创建新变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：** [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
- **文本**  
+ **Text**  
  提供文本来定义限制。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058523"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach 循环编辑器（“常规”页）
@@ -38,7 +38,7 @@ ms.locfileid: "66058523"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach 循环编辑器 &#40;收集页面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach 循环编辑器 &#40;的 "变量映射" 页&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [Foreach 循环容器](control-flow/foreach-loop-container.md)   
  [For 循环容器](control-flow/for-loop-container.md)  
   

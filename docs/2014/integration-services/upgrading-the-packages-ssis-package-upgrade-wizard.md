@@ -13,15 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054739"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>升级包（SSIS 包升级向导）
-  可以使用 **“升级包”** 页查看包升级的进度以及中断升级过程。 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导会逐一升级所选包。  
+  可以使用 **“升级包”** 页查看包升级的进度以及中断升级过程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导会逐一升级所选包。  
   
  **查看保存到 SQL Server 数据库或包存储区的升级包**  
   
@@ -35,16 +34,16 @@ ms.locfileid: "66054739"
  **消息窗格**  
  在升级过程中显示进度消息和摘要信息。  
   
- **Action**  
+ **操作**  
  查看升级中的操作。  
   
- **Status**  
+ **状态**  
  查看每个操作的结果。  
   
  **消息**  
  查看每个操作生成的错误消息。  
   
- **Stop**  
+ **停止**  
  停止包升级。  
   
  **报告**  

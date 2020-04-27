@@ -17,14 +17,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56ab8cb5fbfcd4562aa48ba80a83204a8ca97ad8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058899"
 ---
 # <a name="expression-builder-integration-services"></a>表达式生成器 (Integration Services)
-  
   **“表达式生成器”** 对话框提供了一个图形用户界面，用于生成属性表达式使用的表达式。 可以从 **设计器中的自定义任务对话框访问** “表达式生成器” [!INCLUDE[ssIS](../includes/ssis-md.md)] 对话框，也可以从 **中的** “属性” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口访问该对话框。  
   
  可以使用 **“表达式生成器”** 对话框执行以下任务：  

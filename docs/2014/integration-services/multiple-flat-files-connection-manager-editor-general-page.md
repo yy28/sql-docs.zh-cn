@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057475"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>多平面文件连接管理器编辑器（“常规”页）
@@ -36,10 +36,10 @@ ms.locfileid: "66057475"
  **文件名**  
  键入要在“多平面文件连接”中使用的路径和文件名。 可以通过使用通配符指定多个文件，如示例“C:\\*.txt”中一样，也可以通过使用竖线 (|) 来分隔多个文件名。 所有文件的数据格式必须相同。  
   
- **“浏览”**  
+ **浏览**  
  通过定位文件来指定要在“多平面文件连接”中使用的文件名。 您可以选择多个文件。 所有文件的数据格式必须相同。  
   
- **区域设置**  
+ **Locale**  
  指定与排序以及日期和时间转换设置相关的区域设置。  
   
  **Unicode**  
@@ -48,10 +48,10 @@ ms.locfileid: "66057475"
  **代码页**  
  指定非 Unicode 文本的代码页。  
   
- **形式**  
+ **格式**  
  指示是否使用带分隔符、固定宽度或右边未对齐的格式。 所有文件的数据格式必须相同。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |带分隔符|各列之间由在 **“列”** 页上指定的分隔符隔开。|  
 |固定宽度|列的宽度固定，通过在 **“列”** 页上拖动标记线即可指定列的宽度。|  
@@ -63,16 +63,16 @@ ms.locfileid: "66057475"
  **标题行分隔符**  
  从标题行的分隔符列表中选择，或输入分隔符文本。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**回车换行符**|标题行由回车符和换行符的组合分隔。|  
 |**回车**|标题行由回车符分隔。|  
-|**换行符**|标题行由换行符分隔。|  
+|**{LF}**|标题行由换行符分隔。|  
 |**分号 {;}**|标题行由分号分隔。|  
-|**冒号 {：}**|标题行由冒号分隔。|  
+|**冒号 {:}**|标题行由冒号分隔。|  
 |**跟{,}**|标题行由逗号分隔。|  
 |**选项卡 {t}**|标题行由制表符分隔。|  
-|**竖线 {&#124;}**|标题行由竖线分隔。|  
+|**竖线 {&#124;}**。|标题行由竖线分隔。|  
   
  **要跳过的标题行数**  
  指定要跳过的标题行数（如果有的话）。  
@@ -84,6 +84,6 @@ ms.locfileid: "66057475"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [多平面文件连接管理器编辑器 &#40;列 "页&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [多平面文件连接管理器编辑器 &#40;高级页面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [多平面文件连接管理器编辑器 &#40;预览页面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [多平面文件连接管理器编辑器（“预览”页）](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056704"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>分区处理目标编辑器（“连接管理器”页）
-  可以使用 **“分区处理目标编辑器”** 对话框的 **“连接管理器”** 页，指定与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例之间的连接。  
+  使用“分区处理目标编辑器”对话框的“连接管理器”页面，可以指定与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例之间的连接********。  
   
  若要了解有关分区处理目标的详细信息，请参阅 [Partition Processing Destination](data-flow/partition-processing-destination.md)。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66056704"
 >  此处所述的任何不适用于 Analysis Services 表格模型。  你无法将输入列映射到表格模型的分区列。 您可以改用 [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) 处理分区。  
   
 ## <a name="options"></a>选项  
- **“ODBC 目标编辑器”**  
+ **连接管理器**  
  从列表中选择一个现有连接管理器，或通过单击“新建”**** 创建一个新连接。  
   
  **新建**  
@@ -42,7 +42,7 @@ ms.locfileid: "66056704"
  **处理方法**  
  选择处理方法。 此选项的默认值为 **“完全”**。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |添加(增量式)|对分区执行增量处理。|  
 |完全|对分区执行完全处理。|  
@@ -51,6 +51,6 @@ ms.locfileid: "66056704"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [分区处理目标编辑器 &#40;映射 "页面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [分区处理目标编辑器 &#40;高级页面&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [分区处理目标编辑器（“高级”页）](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

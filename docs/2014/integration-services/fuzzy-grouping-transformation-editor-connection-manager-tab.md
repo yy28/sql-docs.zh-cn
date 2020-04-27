@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058341"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>模糊分组转换编辑器（“连接管理器”选项卡）
@@ -30,11 +30,11 @@ ms.locfileid: "66058341"
  若要了解有关模糊分组转换的详细信息，请参阅 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)。  
   
 ## <a name="options"></a>选项  
- **“无缓存”**  
+ **OLE DB 连接管理器**  
  使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。****  
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
+ 通过使用“配置 OLE DB 连接管理器”**** 对话框创建新的连接。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

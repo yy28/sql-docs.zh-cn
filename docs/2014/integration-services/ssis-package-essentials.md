@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055419"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 包基本要素
@@ -51,7 +51,7 @@ ms.locfileid: "66055419"
 1.  MSDN.Microsoft.com 上的视频 [创建基本包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131023)  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS&#41; 包](../../2014/integration-services/integration-services-ssis-packages.md)   
  [优先约束](control-flow/precedence-constraints.md)  
   
   

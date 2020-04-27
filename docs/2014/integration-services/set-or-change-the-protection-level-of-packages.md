@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055845"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>设置或更改包的保护级别
@@ -30,7 +30,7 @@ ms.locfileid: "66055845"
  本主题中的过程介绍如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 dtutil 命令提示实用工具来更改 `ProtectionLevel` 属性。  
   
 > [!NOTE]  
->  除了本主题中的过程外，当导入或导出包时，您通常可以设置或更改包的 `ProtectionLevel` 属性。 当使用 `ProtectionLevel` 导入和导出向导保存包时，您也可以更改包的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 属性。  
+>  除了本主题中的过程外，当导入或导出包时，您通常可以设置或更改包的 `ProtectionLevel` 属性。 当使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导保存包时，您也可以更改包的 `ProtectionLevel` 属性。  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中设置或更改包的保护级别  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66055845"
   
 2.  在主题[Dtutil 实用工具](dtutil-utility.md) `ProtectionLevel`中`Encrypt`查看选项的映射，然后确定要用作所选属性的值的相应整数。  
   
-3.  打开命令提示符窗口。  
+3.  打开“命令提示符”窗口。  
   
 4.  在命令提示符下，导航到您要为其设置 `ProtectionLevel` 属性的包所在的文件夹。  
   
@@ -73,6 +73,6 @@ ms.locfileid: "66055845"
          如果您在批文件中使用类似的命令，则请输入文件占位符“%f”作为批文件中的“%%f”。  
   
 ## <a name="see-also"></a>另请参阅  
- [dtutil 实用工具](dtutil-utility.md)  
+ [Encrypt](dtutil-utility.md)  
   
   

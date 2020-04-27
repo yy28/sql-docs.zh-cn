@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056023"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>选择包（SSIS 包升级向导）
@@ -36,7 +36,7 @@ ms.locfileid: "66056023"
 > [!NOTE]  
 >  还可以在升级包后更改目标包名称。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，打开升级的包并更改包名称。  
   
- **权限**  
+ **密码**  
  指定用于解密选定升级包的密码。  
   
  **应用于所选内容**  

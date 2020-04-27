@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057228"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC 目标编辑器（“映射”页）
@@ -33,13 +33,13 @@ ms.locfileid: "66057228"
  可用目标列的列表。 将目标列拖放到某一可用输入列以映射这些列。  
   
 ### <a name="input-column"></a>输入列  
- 查看选定的输入列。 可以通过选择“**忽略>”\<** 以从输出中排除列来移除映射。  
+ 查看选定的输入列。 您可以通过选择** \<"忽略>** 从输出中排除列来移除映射。  
   
 ### <a name="destination-column"></a>目标列  
  查看所有可用目标列（包括映射和未映射的列）。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC 目标编辑器（“连接管理器”页）](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [ODBC 目标编辑器（“错误输出”页）](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

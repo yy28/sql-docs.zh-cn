@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059576"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
@@ -50,29 +50,29 @@ ms.locfileid: "66059576"
   
      有关包升级的详细信息，请参阅 [升级 Integration Services 包](install-windows/upgrade-integration-services-packages.md) 和 [使用 SSIS 包升级向导升级 Integration Services 包](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
-3.  将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关详细信息，请参阅下面的说明： [将项目部署到 Integration Services 服务器](#deploy)。  
+3.  将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关详细信息，请参阅下面的说明：[将项目部署到 Integration Services 服务器](#deploy)。  
   
 4.  （可选）创建已部署项目的环境。 有关详细信息，请参阅 [创建和映射服务器环境](../../2014/integration-services/create-and-map-a-server-environment.md)。  
   
-##  <a name="convert"></a>将项目转换为项目部署模型  
+##  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a>将项目转换为项目部署模型  
   
 1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”****。  
   
-     -或-  
+     \- 或 -  
   
      从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”**** 节点并选择“导入包”****。  
   
-2.  完成该向导。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)。  
+2.  完成向导。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)。  
   
-##  <a name="deploy"></a>将项目部署到 Integration Services 服务器  
+##  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a>将项目部署到 Integration Services 服务器  
   
 1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]并打开项目，然后从 **“项目”** 菜单，选择 **“部署”** 以便启动 **“Integration Services 部署向导”**。  
   
-     -或-  
+     \- 或 -  
   
      在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，展开 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > SSISDB**** 节点，并查找想要部署的项目的项目文件夹。 右键单击“项目”**** 文件夹，然后单击“部署项目”****。  
   
-     -或-  
+     \- 或 -  
   
      在命令提示符下，从 **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn** 运行 **isdeploymentwizard.exe**。 在 64 位计算机上， **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**中还有 32 位版本的工具。  
   
@@ -82,6 +82,6 @@ ms.locfileid: "66059576"
   
      单击 **“Integration Services 目录”** 以便选择已部署到 SSISDB 目录的项目。  
   
-3.  完成该向导。 有关详细信息，请参阅 [Integration Services Deployment Wizard](../../2014/integration-services/integration-services-deployment-wizard.md)。  
+3.  完成向导。 有关详细信息，请参阅 [Integration Services Deployment Wizard](../../2014/integration-services/integration-services-deployment-wizard.md)。  
   
   

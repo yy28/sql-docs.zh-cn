@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056258"
 ---
 # <a name="save-a-package-to-the-file-system"></a>将包保存到文件系统
@@ -38,7 +38,7 @@ ms.locfileid: "66056258"
     >  可以在“属性”窗口中验证保存包的路径及文件名。  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS&#41; 包](../../2014/integration-services/integration-services-ssis-packages.md)   
  [保存一个包副本](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

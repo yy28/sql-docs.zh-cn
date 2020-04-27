@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059615"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>使用部署实用工具部署包
@@ -30,7 +30,7 @@ ms.locfileid: "66059615"
  可以使用包安装向导安装包。 若要启动向导，在将部署文件夹复制到服务器之后，请双击部署实用工具文件。 此文件名为 \<项目名称>.SSISDeploymentManifest，可以在目标计算机上的部署文件夹找到它。  
   
 > [!NOTE]  
->  如果并行安装了不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，根据你部署的包的版本，可能会遇到错误。 因为 .SSISDeploymentManifest 文件扩展名对于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的所有版本是相同的，因此可能出现此错误。 针对最近安装的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本双击该文件调用安装程序 (dtsinstall.exe)，它的版本可能与部署实用工具文件的版本不同。 若要解决这个问题，请从命令行运行正确的 dtsinstall.exe 版本，并且提供部署实用工具文件的路径。  
+>  如果并行安装了不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，根据你部署的包的版本，可能会遇到错误。 因为 .SSISDeploymentManifest 文件扩展名对于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的所有版本是相同的，因此可能出现此错误。 针对最近安装的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本双击该文件调用安装程序 (dtsinstall.exe)，它的版本可能与部署实用工具文件的版本不同。 若要解决这个问题，请从命令行运行正确的 dtsinstall.exe 版本，并且提供部署实用工具文件的路径。  
   
  包安装向导指导您完成将包安装到文件系统或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的步骤。 可以按下列方式配置安装：  
   

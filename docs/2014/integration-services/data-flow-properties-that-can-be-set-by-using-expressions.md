@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059934"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用表达式设置的数据流属性
@@ -35,15 +35,14 @@ ms.locfileid: "66059934"
   
  若要为本主题中列出的数据流对象的其中一个属性指定属性表达式，请在设计器的 **“控制流”** 图面上选择该数据流任务，或选择设计器的 **“数据流”** 选项卡但不选择任何单个组件或路径，以此方式显示数据流任务的 **“属性”** 窗口。 选择“表达式”**** 属性，然后单击省略号 (...) 以显示“属性表达式编辑器”**** 对话框。 下拉“属性”**** 列表以选择某个属性，然后在“表达式”**** 文本框中键入一个表达式，或者单击省略号 (...) 以显示“表达式生成器”**** 对话框。  
   
- 
-  **“属性”** 列表仅显示那些已位于设计器的 **“数据流”** 图面上的数据流对象的可用属性。 因此，不能使用 **“属性”** 列表来查看那些支持属性表达式的数据流对象的所有可能的属性。 例如，如果您将 ADO NET 源放置在设计器图面上，则**属性**列表将包含`[ADO NET Source].[SqlCommand]`属性的项。 该列表还显示了数据流任务自身的许多属性。  
+ **“属性”** 列表仅显示那些已位于设计器的 **“数据流”** 图面上的数据流对象的可用属性。 因此，不能使用 **“属性”** 列表来查看那些支持属性表达式的数据流对象的所有可能的属性。 例如，如果您将 ADO NET 源放置在设计器图面上，则**属性**列表将包含`[ADO NET Source].[SqlCommand]`属性的项。 该列表还显示了数据流任务自身的许多属性。  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>支持属性表达式的数据流对象的属性  
  下面的列表中的属性值可以使用属性表达式来指定。  
   
 ### <a name="data-flow-sources"></a>数据流源  
   
-|数据流对象|properties|  
+|数据流对象|属性|  
 |----------------------|--------------|  
 |ADO NET 源|TableOrViewName 属性<br /><br /> SqlCommand 属性|  
 |XML 源|XMLData 属性<br /><br /> XMLSchemaDefinition 属性|  
@@ -51,7 +50,7 @@ ms.locfileid: "66059934"
 ### <a name="data-flow-transformations"></a>数据流转换  
  有关这些自定义属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)。  
   
-|数据流对象|properties|  
+|数据流对象|属性|  
 |----------------------|--------------|  
 |有条件拆分转换|FriendlyExpression 属性|  
 |派生列转换|FriendlyExpression 属性|  
@@ -67,12 +66,12 @@ ms.locfileid: "66059934"
   
 ### <a name="data-flow-destinations"></a>数据流目标  
   
-|数据流对象|properties|  
+|数据流对象|属性|  
 |----------------------|--------------|  
 |ADO NET 目标|TableOrViewName 属性<br /><br /> BatchSize 属性<br /><br /> CommandTimeout 属性|  
 |平面文件目标|Header 属性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]压缩目标|TableName 属性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]位置|BulkInsertTableName 属性<br /><br /> BulkInsertFirstRow 属性<br /><br /> BulkInsertLastRow 属性<br /><br /> BulkInsertOrder 属性<br /><br /> Timeout 属性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Compact 目标|TableName 属性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]目标|BulkInsertTableName 属性<br /><br /> BulkInsertFirstRow 属性<br /><br /> BulkInsertLastRow 属性<br /><br /> BulkInsertOrder 属性<br /><br /> Timeout 属性|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66059934"
  pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)。  
   
 ## <a name="see-also"></a>另请参阅  
- [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)   
+ [使用包中的属性表达式](expressions/use-property-expressions-in-packages.md)   
  [通用属性](../../2014/integration-services/common-properties.md)   
  [转换自定义属性](data-flow/transformations/transformation-custom-properties.md)   
  [路径属性](../../2014/integration-services/path-properties.md)  

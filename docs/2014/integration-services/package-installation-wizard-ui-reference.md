@@ -22,17 +22,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056828"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>包安装向导 UI 参考
   可以使用 **“包安装向导”** 部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目（包括包、所包含的杂项文件以及所有包的依赖关系）。  
   
- 在部署包之前，可以先创建配置，然后再将其与包一起进行部署。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在运行时使用配置来动态更新包和包对象的属性。 例如，通过提供将值映射到包含连接字符串的属性的配置，可在运行时动态设置 OLE DB 连接的连接字符串。  
+ 在部署包之前，可以先创建配置，然后再将其与包一起进行部署。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在运行时使用配置来动态更新包和包对象的属性。 例如，通过提供将值映射到包含连接字符串的属性的配置，可在运行时动态设置 OLE DB 连接的连接字符串。  
   
  只有在生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目并创建部署实用工具后，方可运行包安装向导。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)。  
   
@@ -44,10 +43,10 @@ ms.locfileid: "66056828"
  **不再显示此起始页**  
  选择此选项可以在下次运行向导时跳过起始页。  
   
- **一个**  
+ **下一页**  
  转到向导的下一页。  
   
- **“完成”**  
+ **完成**  
  跳到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ## <a name="configure-packages-page"></a>“配置包”页  
@@ -59,72 +58,72 @@ ms.locfileid: "66056828"
   
  **相关主题：** [创建包配置](../../2014/integration-services/create-package-configurations.md)  
   
- **通道**  
+ **路径**  
  查看要配置的属性的路径。  
   
- 类型   
+ **类型**  
  查看属性的数据类型。  
   
  **值**  
  指定配置的值。  
   
- **一个**  
+ **下一页**  
  转到向导的下一页。  
   
- **“完成”**  
+ **完成**  
  跳到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ## <a name="confirm-installation-page"></a>“确认安装”页  
  可以使用 **“确认安装”** 页开始安装包，查看状态以及查看向导用于从指定项目中安装文件的信息。  
   
- **一个**  
+ **下一页**  
  安装包及其相关文件，并在完成安装后转到下一个向导页。  
   
- **Status**  
+ **状态**  
  显示包的安装进度。  
   
- **“完成”**  
+ **完成**  
  转到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ## <a name="deploy-ssis-packages-page"></a>“部署 SSIS 包”页  
  可以使用 **“部署 SSIS 包”** 页指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其依赖关系的安装位置。  
   
 ### <a name="options"></a>选项  
- **文件系统部署**  
+ **部署到文件系统**  
  将包及其依赖关系部署到文件系统内指定的文件夹中。  
   
- **SQL Server 部署**  
+ **部署到 SQL Server**  
  将包及其依赖关系部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例中。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在服务器之间共享包，请使用此选项。 将所有包依赖关系安装在文件系统内指定的文件夹中。  
   
  **安装后验证包**  
  指示安装后是否验证包。  
   
- **一个**  
+ **下一页**  
  转到向导的下一页。  
   
- **“完成”**  
+ **完成**  
  跳到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ## <a name="packages-validation-page"></a>“包验证”页  
  可以使用 **“包验证”** 页查看包验证的进度和结果。  
   
- **一个**  
+ **下一页**  
  转到向导的下一页。  
   
 ## <a name="select-installation-folder-page"></a>“选择安装文件夹”页  
  可以使用 **“选择安装文件夹”** 页，指定在文件系统中安装包及其依赖关系的文件夹。  
   
 ### <a name="options"></a>选项  
- **文件夹**  
+ **Folder**  
  指定包及其依赖关系要复制到的路径和文件夹。  
   
- **“浏览”**  
+ **浏览**  
  使用“查找文件夹”**** 对话框找到目标文件夹。  
   
- **一个**  
+ **下一页**  
  转到向导的下一页。  
   
- **“完成”**  
+ **完成**  
  跳到“完成包安装向导”页。 如果已经复查完前面向导页中的选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ## <a name="specify-target-sql-server-page"></a>“指定目标 SQL Server”页  
@@ -137,13 +136,13 @@ ms.locfileid: "66056828"
  **使用 Windows 身份验证**  
  指定是否使用 Windows 身份验证来登录到服务器。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
- **Use SQL Server Authentication**  
+ **使用 SQL Server 身份验证**  
  指定包是否应使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证来登录到服务器。 如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
  **用户名**  
  指定用户名。  
   
- **权限**  
+ **密码**  
  指定密码。  
   
  **包路径**  
@@ -157,16 +156,16 @@ ms.locfileid: "66056828"
  **依靠服务器存储进行加密**  
  选择此项可以使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的安全功能来帮助保护包。  
   
- **一个**  
+ **下一页**  
  转到向导的下一页。  
   
- **“完成”**  
+ **完成**  
  跳到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ## <a name="finish-the-package-installation-page"></a>“完成包安装”页  
  可以使用 **“完成包安装向导”** 页查看包安装结果的摘要。 此页提供了如所部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的名称、已安装的包、配置文件和安装位置等之类的详细信息。  
   
- **“完成”**  
+ **完成**  
  单击“完成”**** 即可退出该向导。  
   
 ## <a name="see-also"></a>另请参阅  

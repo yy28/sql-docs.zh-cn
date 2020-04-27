@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057799"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将查询参数映射到变量
@@ -101,7 +101,7 @@ ms.locfileid: "66057799"
     > [!IMPORTANT]  
     >  参数映射的顺序必须与参数在 SQL 语句中出现的顺序相同。  
   
-14. 单击“确定”。   
+14. 单击" **确定**"。  
   
 ## <a name="see-also"></a>另请参阅  
  [执行 SQL 任务](control-flow/execute-sql-task.md)   

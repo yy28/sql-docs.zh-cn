@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059204"
 ---
 # <a name="excel-source-editor-columns-page"></a>Excel 源编辑器（“列”页）
@@ -30,7 +30,7 @@ ms.locfileid: "66059204"
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
- **“外部列”**  
+ **外部列**  
  按任务读取外部（源）列的顺序查看这些列。 首先在上面讨论的表中清除所选择的列，然后以不同的顺序从列表中选择外部列，即可更改顺序。  
   
  **输出列**  

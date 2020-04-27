@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9837eb1c58facb76eef5885012920b294674f7fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055289"
 ---
 # <a name="standard-parse"></a>Standard Parse
@@ -26,6 +26,6 @@ ms.locfileid: "66055289"
  标准分析支持国际数据的数据类型转换，且快速分析不支持数据格式时应使用标准分析。 有关自动化数据类型转换 API 的详细信息，请参阅 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=79427)中的“Data Type Conversion APIs”（数据类型转换 API）。  
   
 ## <a name="see-also"></a>另请参阅  
- [快速分析](../../2014/integration-services/fast-parse.md)  
+ [Fast Parse](../../2014/integration-services/fast-parse.md)  
   
   

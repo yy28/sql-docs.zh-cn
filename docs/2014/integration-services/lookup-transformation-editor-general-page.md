@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057834"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>查找转换编辑器（“常规”页）
@@ -37,17 +37,15 @@ ms.locfileid: "66057834"
  **缓存连接管理器**  
  将查找转换功能配置为使用缓存连接管理器。 只有当选择了“完全缓存”选项时，此选项才可用。  
   
- **“无缓存”**  
+ **OLE DB 连接管理器**  
  将查找转换功能配置为使用 OLE DB 连接管理器。  
   
- **指定如何处理没有匹配项的行**  
+ **指定如何处理无匹配项的行**  
  选择一个选项来处理在引用数据集内没有任何匹配项的行。  
   
- 如果选中 **“将行重定向到无匹配输出”**，则行将重定向到无匹配输出，并且将不作为错误处理。 
-  **“查找转换编辑器”** 对话框的 **“错误输出”** 页上的 **“错误”** 选项不可用。  
+ 如果选中 **“将行重定向到无匹配输出”**，则行将重定向到无匹配输出，并且将不作为错误处理。 **“查找转换编辑器”** 对话框的 **“错误输出”** 页上的 **“错误”** 选项不可用。  
   
- 如果选中 **“指定如何处理无匹配项的行”** 列表框中的任何其他选项，则行将作为错误处理。 
-  **“错误输出”** 页上的 **“错误”** 选项不可用。  
+ 如果选中 **“指定如何处理无匹配项的行”** 列表框中的任何其他选项，则行将作为错误处理。 **“错误输出”** 页上的 **“错误”** 选项不可用。  
   
 ## <a name="external-resources"></a>外部资源  
  blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
@@ -55,8 +53,8 @@ ms.locfileid: "66057834"
 ## <a name="see-also"></a>另请参阅  
  [缓存连接管理器](connection-manager/cache-connection-manager.md)   
  [查找转换编辑器 &#40;连接页&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [查找转换编辑器（“列”页）](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [查找转换编辑器 &#40;列 "页&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [查找转换编辑器 &#40;高级页面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [查找转换编辑器 &#40;错误输出页&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+ [查找转换编辑器（“错误输出”页）](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

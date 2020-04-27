@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058936"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>导出列转换编辑器（“错误输出”页）
@@ -50,6 +50,6 @@ ms.locfileid: "66058936"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [导出列转换编辑器 &#40;列 "页&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
+ [导出列转换编辑器（“列”页）](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   
   

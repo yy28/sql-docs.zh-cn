@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057202"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 目标编辑器（“错误输出”页）
@@ -30,9 +30,9 @@ ms.locfileid: "66057202"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开包含 ODBC 目标的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”  选项卡上，双击 ODBC 目标。  
+-   在“数据流”**** 选项卡上，双击 ODBC 目标。  
   
--   在 **“ODBC 目标编辑器”** 中，单击 **“错误输出”** 。  
+-   在 **“ODBC 目标编辑器”** 中，单击 **“错误输出”**。  
   
 ## <a name="options"></a>选项  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66057202"
  将引起错误或截断的行定向到 ODBC 目标的错误输出。 有关详细信息，请参阅 ODBC 目标。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC 目标编辑器（“连接管理器”页）](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [ODBC 目标编辑器（“映射”页）](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   
   

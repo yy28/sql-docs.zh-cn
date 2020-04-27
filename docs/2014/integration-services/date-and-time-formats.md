@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059649"
 ---
 # <a name="date-and-time-formats"></a>日期和时间格式
@@ -52,7 +52,7 @@ ms.locfileid: "66059649"
   
  快速分析将数据输出为 DT_DBDATE。 对截断格式的日期值进行填充。 例如，YYYY 变为 YYYY0101。  
   
- 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
+ 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
 ## <a name="time-data-type"></a>时间数据类型  
  快速分析支持时间数据的下列字符串格式：  
@@ -80,7 +80,7 @@ ms.locfileid: "66059649"
     |-HH|指示为得出本地时间而从 UTC 减去的小时数的截断格式。|  
     |Z|值为 0 表示采用 UTC 表示时间。|  
   
-     所有时间和日期/时间数据的格式都可以包括时区元素。 不过，如果数据的类型不是 DT_DBTIMESTAMPOFFSET，系统将忽略该时区值。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
+     所有时间和日期/时间数据的格式都可以包括时区元素。 不过，如果数据的类型不是 DT_DBTIMESTAMPOFFSET，系统将忽略该时区值。 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
      在包括时区元素的格式中，时间元素和时区元素之间没有空格，如下面的示例所示：  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66059649"
   
  快速分析将字符串输出为 DT_DBTIME 和 DT_DBTIME2。 对截断格式的时间值进行填充。 例如，HH:MI 变为 HH:MM:00.000。  
   
- 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
+ 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
 ## <a name="datetime-data-type"></a>日期/时间数据类型  
  快速分析支持日期/时间数据的下列字符串格式：  
@@ -128,6 +128,6 @@ ms.locfileid: "66059649"
 |日期|添加 01，表示一个月中的第几天。|  
 |月份|添加 01，表示一年中的第几个月。|  
   
- 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
+ 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
   

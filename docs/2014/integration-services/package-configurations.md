@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056886"
 ---
 # <a name="package-configurations"></a>包配置
@@ -44,7 +44,7 @@ ms.locfileid: "66056886"
   
 -   配置可以使包更加灵活。 例如，配置可以更新在属性表达式中使用的变量的值。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]支持多种不同的存储包配置的方法，例如 XML 文件、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库中的表以及环境和包变量。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持几种不同的存储包配置（例如 XML 文件、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表以及环境变量和包变量）的方法。  
   
  每个配置都是一个属性/值对。 XML 配置文件和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型可以包括多个配置。  
   
@@ -55,8 +55,7 @@ ms.locfileid: "66056886"
   
  在实用工具加载和运行包时，事件的发生顺序如下：  
   
-1.  
-  **dtexec** 实用工具加载包。  
+1.  **dtexec** 实用工具加载包。  
   
 2.  该实用工具应用设计时在包中指定的配置，并根据在包中指定的顺序应用。 （唯一的例外是父包变量配置。 该实用工具仅应用一次这些配置，并且是在过程的后面应用。）  
   
@@ -68,8 +67,7 @@ ms.locfileid: "66056886"
   
 6.  该实用工具运行包。  
   
- 
-  **dtexec** 实用工具应用配置的方式会影响以下命令行选项：  
+ **dtexec** 实用工具应用配置的方式会影响以下命令行选项：  
   
 -   在运行时，可以使用 **/Connection** 或 **/Set** 选项从在设计时指定的位置之外的某个位置加载包配置。  
   
@@ -92,8 +90,7 @@ ms.locfileid: "66056886"
 |环境变量|环境变量包含配置。|  
 |注册表项|注册表项包含配置。|  
 |父包变量|包中的变量包含配置。 此配置类型通常用于更新子包中的属性。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据表|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表包含配置。 表可以包括多个配置。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表包含配置。 表可以包括多个配置。|  
   
 ### <a name="xml-configuration-files"></a>XML 配置文件  
  如果选择 **“XML 配置文件”** 配置类型，您可以创建一个新的配置文件；重用现有文件并添加新的配置；也可以重用现有文件但覆盖现有文件的内容。  
@@ -104,7 +101,7 @@ ms.locfileid: "66056886"
   
 -   包含有关每个配置的信息的配置元素。 此元素包括的特性有属性路径和属性的配置值等。  
   
- 下列 XML 代码说明了 XML 配置文件的语法。 此示例显示了一个名为 `MyVar` 的整数变量的 Value 属性配置。  
+ 下列 XML 代码说明了 XML 配置文件的语法。 此示例显示了一个名为 `MyVar`的整数变量的 Value 属性配置。  
   
 ```  
 <?xml version="1.0"?>  
@@ -147,7 +144,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  您为配置提供的名称就是在 **ConfigurationFilter** 列中存储的值。  
   
 ## <a name="direct-and-indirect-configurations"></a>直接配置和间接配置  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供直接和间接配置。 如果直接指定配置， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会在配置项和包对象属性之间创建直接链接。 如果源的位置不更改，则直接配置是较好的选择。 例如，如果确定包中的所有部署都使用相同的文件路径，则可以指定一个 XML 配置文件。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了直接配置和间接配置。 如果直接指定配置， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会在配置项和包对象属性之间创建直接链接。 如果源的位置不更改，则直接配置是较好的选择。 例如，如果确定包中的所有部署都使用相同的文件路径，则可以指定一个 XML 配置文件。  
   
  间接配置使用环境变量。 配置不直接指定配置设置，而是指向环境变量，环境变量又包含配置值。 如果对于包的每个部署，配置的位置都可以更改，则使用间接配置是较好的选择。  
   

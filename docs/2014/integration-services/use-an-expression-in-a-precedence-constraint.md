@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 672d9c363f64037f5f40f51fc7c6cb1c4c3bc674
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054750"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>在优先约束中使用表达式
@@ -31,8 +31,7 @@ ms.locfileid: "66054750"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  在“控制流”选项卡的设计图面上双击优先约束。**** 
-  **“优先约束编辑器”** 将打开。  
+4.  在“控制流”选项卡的设计图面上双击优先约束。**** **“优先约束编辑器”** 将打开。  
   
 5.  在 **“求值运算”** 列表中选择 **“表达式”**、 **“表达式和约束”** 或者 **“表达式或约束”** 。  
   

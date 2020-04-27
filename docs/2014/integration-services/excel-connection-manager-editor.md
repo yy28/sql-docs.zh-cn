@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059271"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 连接管理器编辑器
@@ -36,7 +36,7 @@ ms.locfileid: "66059271"
 > [!WARNING]  
 >  当您选择一个指向新的/不存在的文件的**Excel 连接**，然后单击**Excel 工作表名称**的 "**新建**" 时， **excel 目标编辑器**会自动创建该 excel 文件。  
   
- **“浏览”**  
+ **浏览**  
  使用 "**打开**" 对话框可以导航到 excel 文件所在的文件夹或要在其中创建新文件的文件夹。  
   
  **Excel 版本**  
@@ -49,7 +49,7 @@ ms.locfileid: "66059271"
 |Excel 4。0|文件是使用 Excel 4.0 创建的。|  
 |Excel 5。0|文件是使用 Excel 95 (7.0) 创建的。|  
   
- **首行包含列名称**  
+ **第一行包含列名称**  
  指定所选工作表中的第一行数据是否包含列名称。 此选项的默认值为 **True**。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055833"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>发送邮件任务编辑器（“邮件”页）
@@ -35,7 +35,7 @@ ms.locfileid: "66055833"
   
  **相关主题：** [SMTP 连接管理器](connection-manager/smtp-connection-manager.md)  
   
- **从**  
+ **From**  
  指定发件人的电子邮件地址。  
   
  **自**  
@@ -44,7 +44,7 @@ ms.locfileid: "66055833"
  **字幕**  
  指定也可以收到邮件副本的各个人员的电子邮件地址，用分号分隔。  
   
- **框**  
+ **密件抄送**  
  指定将收到邮件的隐蔽副本 (Bcc) 的各个人员的电子邮件地址，用分号分隔。  
   
  **主题**  
@@ -53,13 +53,13 @@ ms.locfileid: "66055833"
  **MessageSourceType**  
  选择消息的源类型。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为邮件正文。 选择此值将显示动态选项 **MessageSource**。|  
 |**文件连接**|将源设置为包含邮件正文的文件。 选择此值将显示动态选项 **MessageSource**。|  
 |**变量**|将源设置为包含消息正文的变量。 选择此值将显示动态选项 **MessageSource**。|  
   
- **大事**  
+ **Priority**  
  设置邮件的优先级。  
   
  **附件**  
@@ -78,7 +78,7 @@ ms.locfileid: "66055833"
  **MessageSource**  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器****。  
   
- **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = 变量  
  **MessageSource**  

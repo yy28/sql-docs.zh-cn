@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055672"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>设置任务或容器的属性
@@ -32,12 +32,12 @@ ms.locfileid: "66055672"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  在“控制流”选项卡的设计图面上，右键单击任务或容器，然后单击“属性”   。  
+4.  在“控制流”选项卡的设计图面上，右键单击任务或容器，然后单击“属性”********。  
   
 5.  在 **“属性”** 窗口中，更新属性值。  
   
     > [!NOTE]  
-    >  大部分属性可以通过直接在文本框中键入值或者从列表中选择值的方式进行设置。 但是，某些属性比较复杂，并且具有自定义的属性编辑器。 若要设置属性，请在文本框中单击，然后单击生成按钮 (…) 打开自定义编辑器  。  
+    >  大部分属性可以通过直接在文本框中键入值或者从列表中选择值的方式进行设置。 但是，某些属性比较复杂，并且具有自定义的属性编辑器。 若要设置属性，请在文本框中单击，然后单击生成按钮 (…) 打开自定义编辑器****。  
   
 6.  也可以创建属性表达式来动态更新任务或容器的属性。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66055672"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  在“控制流”选项卡的设计图面上，右键单击任务或容器，然后单击“编辑”以打开相应的任务或容器编辑器   。  
+4.  在“控制流”选项卡的设计图面上，右键单击任务或容器，然后单击“编辑”以打开相应的任务或容器编辑器********。  
   
      有关如何配置 For 循环容器的信息，请参阅[配置 For 循环容器](control-flow/for-loop-container.md)。  
   

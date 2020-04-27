@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054728"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子包中使用变量和参数的值
@@ -74,11 +74,11 @@ ms.locfileid: "66054728"
   
 2.  在 **“控制流”** 选项卡的设计图面上单击任何位置。  
   
-3.  在 **SSIS** 菜单上，单击 **“包配置”** 。  
+3.  在 **SSIS** 菜单上，单击 **“包配置”**。  
   
 4.  在 **“包配置组织程序”** 对话框中，选择 **“启用包配置”**，再单击 **“添加”**。  
   
-5.  在包配置向导的欢迎页中，单击 **“下一步”**。  
+5.  在包配置向导的 "欢迎" 页上，单击 "**下一步"。**  
   
 6.  在“选择配置类型”页上的 **“配置类型”** 列表中，选择 **“父包变量”** ，并执行下列操作之一：  
   
@@ -89,11 +89,11 @@ ms.locfileid: "66054728"
   
     -   选择“配置位置存储在一个环境变量中”****，然后在“环境变量列表”**** 中选择包含变量名称的环境变量。  
   
-7.  单击“下一步”。   
+7.  单击“下一步”  。  
   
 8.  在“选择目标属性”页上，展开 **“变量”** 节点，并展开要配置的变量的 **“属性”** 节点，然后单击要由配置设置的属性。  
   
-9. 单击“下一步”。   
+9. 单击“下一步”  。  
   
 10. （可选）在“完成向导”页上，修改配置的默认名称，并检查配置信息。  
   
@@ -101,12 +101,12 @@ ms.locfileid: "66054728"
   
 12. 在 **“包配置组织程序”** 对话框中， **“配置”** 框将列出新配置。  
   
-13. 单击“关闭”  。  
+13. 单击“**关闭**”。  
   
 ## <a name="see-also"></a>另请参阅  
  [包配置](../../2014/integration-services/package-configurations.md)   
  [创建包配置](../../2014/integration-services/create-package-configurations.md)   
- [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)   
  [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)  
   
   

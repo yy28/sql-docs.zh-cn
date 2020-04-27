@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059243"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目标编辑器（“连接管理器”页）
   使用 **“Excel 目标编辑器”** 对话框的 **“连接管理器”** 页可以指定数据源信息和预览结果。 Excel 目标将数据加载到 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿中的工作表或指定范围。  
   
 > [!NOTE]  
->  Excel `CommandTimeout`目标的属性在**excel 目标编辑器**中不可用，但可以使用**高级编辑器**进行设置。 此外，某些快速加载选项仅在**高级编辑器**中可用。 有关这些属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 目标”部分。  
+>  Excel `CommandTimeout`目标的属性在**excel 目标编辑器**中不可用，但可以使用**高级编辑器**进行设置。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 目标”部分。  
   
  若要了解有关 Excel 目标的详细信息，请参阅 [Excel Destination](data-flow/excel-destination.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66059243"
 |选项|说明|  
 |------------|-----------------|  
 |表或视图|将数据加载到 Excel 数据源中的工作表或指定范围。|  
-|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息**：[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息：**[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL 命令|使用 SQL 查询将数据加载到 Excel 目标中。|  
   
  **Excel 表的名称**  
@@ -52,7 +52,7 @@ ms.locfileid: "66059243"
  单击“新建”将启动“创建表”对话框。******** 当您单击 **“确定”** 时，此对话框将创建 **“Excel 连接管理器”** 指向的 Excel 文件。  
   
  **查看现有数据**  
- 使用“预览查询结果”  对话框预览结果。 预览最多可以显示 200 行。  
+ 使用“预览查询结果”**** 对话框预览结果。 预览最多可以显示 200 行。  
   
 > [!WARNING]  
 >  如果你选择的“Excel 连接管理器”指向的 Excel 文件不存在，则单击此按钮时你将看到一条错误消息。****  
@@ -74,7 +74,7 @@ ms.locfileid: "66059243"
  **生成查询**  
  使用“查询生成器”**** 对话框可直观地构造 SQL 查询。  
   
- **“浏览”**  
+ **浏览**  
  使用“打开”**** 对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  

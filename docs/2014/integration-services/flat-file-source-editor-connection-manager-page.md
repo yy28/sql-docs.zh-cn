@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058684"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>平面文件源编辑器（“连接管理器”页）
@@ -40,7 +40,7 @@ ms.locfileid: "66058684"
  通过使用“平面文件连接管理器编辑器”**** 对话框创建新的连接管理器。  
   
  **在数据流中保留源中的空值**  
- 指定提取数据时是否保留空值。 此属性的默认值为**false**。 当此值为 F`alse` 时，平面文件源使用每列的相应默认值替换源数据中的空值，例如，对于字符串列使用空字符串，对于数值列使用零。  
+ 指定提取数据时是否保留空值。 此属性的默认值为 **false**。 当此值为 F`alse` 时，平面文件源使用每列的相应默认值替换源数据中的空值，例如，对于字符串列使用空字符串，对于数值列使用零。  
   
  **预览**  
  通过使用“数据视图”**** 对话框预览结果。 预览最多可以显示 200 行。  

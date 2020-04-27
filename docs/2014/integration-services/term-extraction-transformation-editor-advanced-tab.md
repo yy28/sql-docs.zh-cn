@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055271"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
@@ -36,7 +36,7 @@ ms.locfileid: "66055271"
  **名词和名词短语**  
  指定转换既提取名词也提取名词短语。  
   
- **率**  
+ **频率**  
  指定分数为字词的频率。  
   
  **TFIDF**  
@@ -49,7 +49,7 @@ ms.locfileid: "66055271"
  指定短语的最大长度（字）。 此选项仅影响名词短语。 默认值为 12。  
   
  **使用区分大小写的字词提取**  
- 指定是否将提取设置为区分大小写。 默认为 `False`。  
+ 指定是否将提取设置为区分大小写。 默认值为 `False`。  
   
  **配置错误输出**  
  使用[“配置错误输出” ](../../2014/integration-services/configure-error-output.md) 对话框可以为导致错误的行指定错误处理方式。  

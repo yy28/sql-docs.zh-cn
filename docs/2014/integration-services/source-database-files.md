@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055539"
 ---
 # <a name="source-database-files"></a>源数据库文件
@@ -26,21 +26,21 @@ ms.locfileid: "66055539"
   
 ## <a name="options"></a>选项  
  **源文件**  
- 源服务器上要传输的数据库文件的名称。 **源文件**为只读。  
+ 源服务器上要传输的数据库文件的名称。 **“源文件”** 是只读的。  
   
  **源文件夹**  
- 源服务器上包含要传输的数据库文件的文件夹。 **源文件夹**为只读。  
+ 源服务器上包含要传输的数据库文件的文件夹。 **“源文件夹”** 是只读的。  
   
  **网络文件共享**  
- 源服务器上要从中传输数据库文件的网络共享文件夹。 在脱机模式下传输数据库时，请使用**网络文件共享**，方法是在 "**传输数据库任务编辑器**" 对话框的 "**数据库**" 页中指定**databaseoffline 以**for **Method** 。  
+ 源服务器上要从中传输数据库文件的网络共享文件夹。 通过在 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页中为 **“方法”** 指定 **DatabaseOffline** 以脱机模式传输数据库时，可以使用 **“网络文件共享”** 。  
   
- 输入网络文件共享位置，或单击浏览按钮“(…)”可查找网络文件共享位置****。  
+ 输入网络文件共享位置，或单击浏览按钮 **（...）** 以找到网络文件共享位置。  
   
  以脱机模式传输数据库时，数据库文件在传输到目标服务器之前将被复制到源服务器上的 **“网络文件共享”** 位置。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [传输数据库任务编辑器 &#40;常规 "页面&#41;](general-page-of-integration-services-designers-options.md)   
- [传输数据库任务编辑器 &#40;数据库 "页&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [传输数据库任务编辑器（“数据库”页）](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

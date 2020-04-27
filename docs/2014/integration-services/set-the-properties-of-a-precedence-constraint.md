@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055743"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>设置优先约束的属性
@@ -39,8 +39,7 @@ ms.locfileid: "66055743"
   
 4.  双击优先约束。  
   
-     
-  **“优先约束编辑器”** 将打开。  
+     **“优先约束编辑器”** 将打开。  
   
 5.  在“求值运算”下拉列表中，选择求值运算。****  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66055743"
     |LogicalAnd|设置`LogicalAnd`此项可指定在多个可执行文件位于或链接到受约束的可执行文件时，优先约束与其他优先约束一起计算|  
     |名称|更新优先约束的名称。|  
     |ShowAnnotation|指定要使用的批注类型。 选择 **Never** 可以禁用批注；选择 **AsNeeded** 可以启用按需批注；选择 **ConstraintName** 可以使用 Name 属性的值自动进行批注；选择 **ConstraintDescription** 可以使用 Description 属性的值自动进行批注；选择 **ConstraintOptions** 可以使用 Value 和 Expression 属性的值自动进行批注。|  
-    |值|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
+    |Value|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
   
 5.  关闭“属性”窗口。  
   

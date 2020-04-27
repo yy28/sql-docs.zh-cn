@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057551"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多平面文件连接管理器编辑器（“高级”页）
@@ -38,22 +38,22 @@ ms.locfileid: "66057551"
  **配置各列的属性**  
  选择左窗格中的列可在右窗格中查看列的属性。 请参阅下表以了解数据类型属性的说明。 列出的部分属性仅对某些平面文件格式是可配置的。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |**ColumnType**|表示列是由分隔符分隔、还是固定宽度，或是右边未对齐。 此属性为只读。 在右边未对齐的文件中，除最后一列之外的每一列的宽度都固定，而最后一列由行分隔符终止。|  
 |**OutputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 在数据流任务中，此值用于设置平面文件源的输出列宽。<br /><br /> 注意：在对象模型中，此属性的名称为 MaximumWidth。|  
-|**数据类型**|从可用数据类型的列表中进行选择。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
-|**TextQualified**|指示是否使用文本限定符限定文本数据。 有效值是：<br /><br /> **True**：平面文件中的文本数据是限定的。<br /><br /> **False**：平面文件中的文本数据是不限定的。|  
+|**DataType**|从可用数据类型的列表中进行选择。 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
+|**TextQualified**|指示是否使用文本限定符限定文本数据。 有效值是：<br /><br /> **True**：平面文件中的文本数据是限定的。<br /><br /> **False**：平面文件中的文本数据是不受限定的。|  
 |**名称**|提供列名。 默认为带编号的列列表，不过，您也可以任选一个唯一的描述性名称。|  
-|**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR} {LF}** -列由回车符和换行符的组合分隔<br /><br /> **{CR}** -列由回车符分隔<br /><br /> **{LF}** -列由换行符分隔<br /><br /> **分号 {;}**-列由分号分隔<br /><br /> **冒号 {：}** -列由冒号分隔<br /><br /> **逗号{,} ** -列由逗号分隔<br /><br /> **选项卡 {t}** -列由选项卡分隔<br /><br /> **竖线 {&#124;}** -列由竖线分隔|  
-|**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
-|**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意**在对象模型中，此属性的名称为 ColumnWidth。|  
+|**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
+|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR} {LF}** -列由回车符和换行符的组合分隔<br /><br /> **{CR}** -列由回车符分隔<br /><br /> **{LF}** -列由换行符分隔<br /><br /> **分号 {;}**-列由分号分隔<br /><br /> **冒号 {：}** -列由冒号分隔<br /><br /> **逗号 {,}** - 列由逗号分隔<br /><br /> **选项卡 {t}** -列由选项卡分隔<br /><br /> **竖线 {&#124;}** - 列由竖线分隔|  
+|**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
+|**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   
  **新建**  
  单击“新建”**** 添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
-|值|说明|  
+|Value|描述|  
 |-----------|-----------------|  
 |**添加列**|在列表末尾添加新列。|  
 |**在其前插入**|在所选列前面插入新列。|  
@@ -63,12 +63,12 @@ ms.locfileid: "66057551"
  选择一列，然后单击“删除”**** 来删除该列。  
   
  **建议类型**  
- 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。**** 有关详细信息，请参阅[“提供列类型建议”对话框 UI 参考](connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。**** 有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [多平面文件连接管理器编辑器 &#40;常规页面&#41;](general-page-of-integration-services-designers-options.md)   
  [多平面文件连接管理器编辑器 &#40;列 "页&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [多平面文件连接管理器编辑器 &#40;预览页面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [多平面文件连接管理器编辑器（“预览”页）](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

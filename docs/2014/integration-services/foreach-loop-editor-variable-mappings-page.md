@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058526"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach 循环编辑器（“变量映射”页）
@@ -31,17 +31,17 @@ ms.locfileid: "66058526"
  选择现有变量，或单击 " \<**新建变量 ...** "> 创建新变量。  
   
 > [!NOTE]  
->  映射一个变量之后，“变量”**** 列表中会自动增加一行。  
+>   映射一个变量之后， **“变量”** 列表中会自动增加一行。  
   
  **相关主题**： [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
- **编入**  
+ **索引**  
  如果使用的是 Foreach Item 枚举器，请指定集合值中要映射到变量的列的索引。 对于其他枚举器类型，索引是只读的。  
   
 > [!NOTE]  
 >  索引以 0 为基数。  
   
- **相关主题**：[通过使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **相关主题**： [使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **删除**  
  选择一个变量，再单击“删除”****。  
@@ -50,7 +50,7 @@ ms.locfileid: "66058526"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach 循环编辑器 &#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
  [Foreach 循环编辑器 &#40;收集页面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [For 循环容器](control-flow/for-loop-container.md)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056343"
 ---
 # <a name="save-a-package-as-a-package-template"></a>将包另存为包模板
@@ -41,11 +41,11 @@ ms.locfileid: "66056343"
   
 2.  在解决方案资源管理器中，右键单击项目，指向“添加”，然后单击“新建项”。********  
   
-3.  在“添加新项 —**项目名称>”对话框中，单击要用作模板的包\<**。  
+3.  在 "**添加新项-\<项目名称>** " 对话框中，单击要用作模板的包。  
   
      模板列表包括名为“新建 SSIS 包”的默认包模板。 包图标将标识可以用作包模板的模板。  
   
-4.  单击“添加”  。  
+4.  单击 **“添加”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [在 SQL Server Data Tools 中创建包](create-packages-in-sql-server-data-tools.md)   
