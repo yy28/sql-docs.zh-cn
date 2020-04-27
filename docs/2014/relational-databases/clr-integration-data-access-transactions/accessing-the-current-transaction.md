@@ -15,15 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920021"
 ---
 # <a name="accessing-the-current-transaction"></a>访问当前事务
-  如果在输入运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的公共语言运行时 (CLR) 代码时某事务是活动的，则该事务通过 `System.Transactions.Transaction` 类公开。 
-  `Transaction.Current` 属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 将在调用 `Transaction.Current` 方法时自动检查 `Connection.Open`，并在该事务中以透明方式登记连接（除非在连接字符串中将 `Enlist` 关键字设置为 false）。  
+  如果在输入运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的公共语言运行时 (CLR) 代码时某事务是活动的，则该事务通过 `System.Transactions.Transaction` 类公开。 `Transaction.Current` 属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 将在调用 `Transaction.Current` 方法时自动检查 `Connection.Open`，并在该事务中以透明方式登记连接（除非在连接字符串中将 `Enlist` 关键字设置为 false）。  
   
  在以下情形中，可能需要直接使用 `Transaction` 对象：  
   

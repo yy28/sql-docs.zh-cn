@@ -13,24 +13,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893038"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>列映射（SQL Server 导入和导出向导）
   使用 "**列映射**" 对话框可以编辑转换参数。  
   
 > [!NOTE]  
->  如果选中了“表复制”选项，则不必复制表中的所有列。 对于要跳过的**** 列，请选择** \<** 此对话框的 "目标" 列中的 "忽略>。  
+>  如果选中了“表复制”选项，则不必复制表中的所有列。 对于要跳过的**Destination**列，请选择** \<** 此对话框的 "目标" 列中的 "忽略>。  
   
  若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解用于启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
  SQL Server 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="options"></a>选项  
- **数据源**  
+ **源**  
  标识所选的源表、视图或查询。  
   
  **目标**  
@@ -59,22 +59,22 @@ ms.locfileid: "62893038"
   
  此列表包含以下列：  
   
- **数据源**  
+ **源**  
  查看可以为其设置转换参数的各个源列。  
   
  **目标**  
  指定在复制操作期间是否忽略列。 对于要跳过的列，您可以通过** \<** 选择此列中的 "忽略>来只复制列的子集。 在映射列之前，必须忽略所有不会被映射的列。  
   
- 类型   
+ **类型**  
  为列选择数据类型。  
   
- **Nullable**  
+ **可以为 Null**  
  指定列是否允许 Null 值。  
   
  **大小**  
  指定列中的字符数。  
   
- **Precision**  
+ **精度**  
  指定所显示数据的精度（指数字的位数）。  
   
  **缩放**  

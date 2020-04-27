@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919295"
 ---
 # <a name="assembly-properties-general-page"></a>程序集属性（“常规”页）
@@ -35,7 +35,7 @@ ms.locfileid: "62919295"
  **程序集的路径**  
  键入程序集文件的路径。  
   
- **“浏览”**  
+ **浏览**  
  导航到要添加的程序集。 如果不想键入程序集文件的路径，请单击 "**浏览**"。  
   
 ## <a name="additional-properties-grid"></a>附加属性网格  

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874931"
 ---
 # <a name="designing-assemblies"></a>设计程序集
@@ -57,8 +57,7 @@ ms.locfileid: "62874931"
  同时，指定 UNSAFE 将允许程序集中的代码执行 CLR 验证工具认为是非安全类型的操作。 这些操作可能以非控制的方式访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程空间中的内存缓冲区。 UNSAFE 程序集也可能破坏 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或公共语言运行时的安全系统。 有经验的开发人员或管理员应仅向高度可信的程序集授予 UNSAFE 权限。 只有**sysadmin**固定服务器角色的成员才可以创建不安全的程序集。  
   
 ## <a name="restrictions-on-assemblies"></a>对程序集的限制  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对程序集中的托管代码有一些限制，以便确保可以以可靠和可伸缩的方式运行它们。 这意味着在 SAFE 和 EXTERNAL_ACCESS 程序集不允许可能危及服务器可靠性的某些操作。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对程序集中的托管代码有一些限制，以便确保可以以可靠和可伸缩的方式运行它们。 这意味着在 SAFE 和 EXTERNAL_ACCESS 程序集不允许可能危及服务器可靠性的某些操作。  
   
 ### <a name="disallowed-custom-attributes"></a>禁止的自定义属性  
  不能用以下自定义属性批注程序集：  

@@ -28,14 +28,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922561"
 ---
 # <a name="clr-hosted-environment"></a>CLR 宿主环境
-  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 公共语言运行时 (CLR) 是执行很多现代编程语言的环境，这些语言包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++。 CLR 具有收集垃圾的内存、抢先线程化、元数据服务（类型反射）、代码可验证和代码访问安全性等特点。 CLR 使用元数据来完成以下任务：查找和加载类、在内存中安排实例、解析方法调用、生成本机代码、强制安全性以及设置运行时上下文边界。  
   
  CLR 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作为运行时环境以不同的方式处理内存、线程和同步。 本主题说明如何集成这两种运行时以便统一管理所有系统资源， 还涉及如何集成 CLR 代码访问安全性 (CAS) 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性以为用户代码提供安全可靠的执行环境。  
@@ -59,9 +58,7 @@ ms.locfileid: "62922561"
  不应允许用户代码执行损害数据库引擎进程完整性的操作，例如弹出请求用户响应的消息框或退出进程。 用户代码应不能覆盖数据库引擎内存缓冲区或内部数据结构。  
   
 ###### <a name="scalability"></a>可伸缩性  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 具有用于计划和内存管理的不同内部模型。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持协作、非抢先的线程模型，在此模型中，线程将定期或在等待锁或 I/O 时主动生成执行。 CLR 则支持抢先的线程化模型。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内运行的用户代码可以直接调用操作系统线程化基元，就不能很好地与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 任务计划程序集成，可能降低系统的可伸缩性。 CLR 不区分虚拟内存和物理内存，但是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 直接管理物理内存并要求在可配置的限制范围内使用物理内存。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 具有用于计划和内存管理的不同内部模型。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持协作、非抢先的线程模型，在此模型中，线程将定期或在等待锁或 I/O 时主动生成执行。 CLR 则支持抢先的线程化模型。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内运行的用户代码可以直接调用操作系统线程化基元，就不能很好地与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 任务计划程序集成，可能降低系统的可伸缩性。 CLR 不区分虚拟内存和物理内存，但是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 直接管理物理内存并要求在可配置的限制范围内使用物理内存。  
   
  不同的线程化、计划和内存管理的模型给需要支持成千上万的并发用户会话的关系数据库管理系统 (RDBMS) 带来了集成挑战。 体系结构应确保直接调用线程化、内存和同步基元的应用程序编程接口 (API) 的用户代码不损害系统的可伸缩性。  
   
@@ -106,15 +103,13 @@ ms.locfileid: "62922561"
 ###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>可伸缩性：公共线程化、计划和同步  
  CLR 调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于创建线程的 API，以便运行用户代码以及供自己内部使用。 为了在多个线程间同步，CLR 调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 同步对象。 这使得 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计划程序在线程等待某同步对象时可以计划其他任务。 例如，在 CLR 启动垃圾收集时，所有线程均要等待垃圾收集完成。 因为 CLR 线程和它们要等待的同步对象对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计划程序是已知的，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以安排运行不涉及 CLR 的其他数据库任务的线程。 这也使得 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以检测由 CLR 同步对象所持有的锁造成的死锁并采用传统技术消除死锁。  
   
- 托管代码在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中以抢先方式运行。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计划程序可以检测和停止在较长时间内仍未生成的线程。 将 CLR 线程挂钩到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 线程这个功能暗示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计划程序可以标识 CLR 中“逃逸”的线程并管理其优先级。 挂起此类逃逸线程并将它们放回队列中。 在一段规定的时间内不允许运行重复标识为逃逸线程的线程，以便执行其他工作线程。  
+ 托管代码在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中以抢先方式运行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计划程序可以检测和停止在较长时间内仍未生成的线程。 将 CLR 线程挂钩到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 线程这个功能暗示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计划程序可以标识 CLR 中“逃逸”的线程并管理其优先级。 挂起此类逃逸线程并将它们放回队列中。 在一段规定的时间内不允许运行重复标识为逃逸线程的线程，以便执行其他工作线程。  
   
 > [!NOTE]  
 >  将自动生成访问数据或分配足够内存来触发垃圾收集的长时间运行的托管代码。 对于不访问数据或分配足够内存来触发垃圾收集的长时间运行的托管代码，应通过调用 .NET Framework 的 System.Thread.Sleep() 函数显式生成它。  
   
 ###### <a name="scalability-common-memory-management"></a>可伸缩性：公共内存管理  
- CLR 调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于分配和取消分配内存的基元。 由于在系统使用的内存总量中考虑了 CLR 使用的内存，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以确保不超过配置的内存限制，并确保 CLR 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会彼此争用内存。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在系统内存受限制时还可以拒绝 CLR 内存请求，并且在其他任务需要内存时可以请求 CLR 减少内存使用量。  
+ CLR 调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于分配和取消分配内存的基元。 由于在系统使用的内存总量中考虑了 CLR 使用的内存，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以确保不超过配置的内存限制，并确保 CLR 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会彼此争用内存。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在系统内存受限制时还可以拒绝 CLR 内存请求，并且在其他任务需要内存时可以请求 CLR 减少内存使用量。  
   
 ###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>可靠性：应用程序域和无法恢复的异常  
  .NET Framework API 中的托管代码遇到严重异常（如内存不足或堆栈溢出）时，并不是总能从这类故障中恢复并确保实现的一致和正确的语义。 这些 API 会引发线程中止异常来应对这类故障。  
@@ -122,13 +117,12 @@ ms.locfileid: "62922561"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中驻留时，按以下方式处理这类线程中止：CLR 在发生线程中止的应用程序域中检测所有共享状态。 CLR 通过检查同步对象的存在来做到这点。 如果应用程序域中存在共享状态，则卸载应用程序域本身。 卸载应用程序域将停止当前在该应用程序域中运行的数据库事务。 由于共享状态的存在可能将这类严重异常的影响扩大到触发异常的用户会话之外的其他用户会话，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 采取了一些措施来减少共享状态出现的可能性。 有关详细信息，请参阅 .NET Framework 文档。  
   
 ###### <a name="security-permission-sets"></a>安全性：权限集  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许用户指定部署到数据库中的代码的可靠性和安全性要求。 当程序集上载到数据库中时，程序集作者可为该程序集指定以下三个权限集中的一个：SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许用户指定部署到数据库中的代码的可靠性和安全性要求。 当程序集上载到数据库中时，程序集作者可为该程序集指定以下三个权限集中的一个：SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
   
 |||||  
 |-|-|-|-|  
 |权限集|SAFE|EXTERNAL_ACCESS|UNSAFE|  
-|代码访问安全性|仅执行|执行和访问外部资源|Unrestricted|  
+|代码访问安全性|仅执行|执行和访问外部资源|非受限|  
 |编程模型限制|是|是|无限制|  
 |可验证性要求|是|是|否|  
 |调用本机代码的能力|否|否|是|  
@@ -139,17 +133,14 @@ ms.locfileid: "62922561"
   
  EXTERNAL_ACCESS 提供了一个中间安全选项，允许代码访问数据库外部的资源，而且仍然具有与 SAFE 相同的可靠性。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用宿主级 CAS 策略层设置宿主策略，该宿主策略根据存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目录中的权限集授予三个权限集之一。 在数据库内运行的托管代码始终获取这些代码访问权限集中的一个。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用宿主级 CAS 策略层设置宿主策略，该宿主策略根据存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目录中的权限集授予三个权限集之一。 在数据库内运行的托管代码始终获取这些代码访问权限集中的一个。  
   
 ### <a name="programming-model-restrictions"></a>编程模型限制  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中托管代码的编程模型涉及编写这样的函数、过程和类型：它们一般不需要使用跨多个调用保持的状态或在多个用户会话之间共享状态。 而且，如前文所述，共享状态的存在可导致能够影响应用程序的可伸缩性和可靠性的严重异常。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中托管代码的编程模型涉及编写这样的函数、过程和类型：它们一般不需要使用跨多个调用保持的状态或在多个用户会话之间共享状态。 而且，如前文所述，共享状态的存在可导致能够影响应用程序的可伸缩性和可靠性的严重异常。  
   
  出于上述考虑，我们劝阻大家不要使用在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用的类的静态变量和静态数据成员。 对于 SAFE 和 EXTERNAL_ACCESS 程序集，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在执行 CREATE ASSEMBLY 时检查程序集的元数据，并在发现使用了静态数据成员和变量时使此类程序集的创建失败。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 还不允许调用使用 `SharedState`、`Synchronization` 和 `ExternalProcessMgmt` 宿主保护属性批注的 .NET Framework API。 这将防止 SAFE 和 EXTERNAL_ACCESS 程序集调用能够启用共享状态、执行同步和影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程的完整性的任何 API。 有关详细信息，请参阅[CLR 集成编程模型限制](database-objects/clr-integration-programming-model-restrictions.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 还不允许调用使用 `SharedState`、`Synchronization` 和 `ExternalProcessMgmt` 宿主保护属性批注的 .NET Framework API。 这将防止 SAFE 和 EXTERNAL_ACCESS 程序集调用能够启用共享状态、执行同步和影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程的完整性的任何 API。 有关详细信息，请参阅[CLR 集成编程模型限制](database-objects/clr-integration-programming-model-restrictions.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [CLR 集成安全性](security/clr-integration-security.md)   

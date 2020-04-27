@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921790"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>恢复数据库但不还原数据 (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921790"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  FROM **=backup_device> 子句不用于仅恢复还原，因为不需要任何备份**\<  。  
+>  From **=** \< *backup_device>* 子句不用于仅恢复还原，因为不需要任何备份。  
   
  **示例**  
   
@@ -89,10 +89,10 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## <a name="see-also"></a>另请参阅  
- [联机还原 (SQL Server)](online-restore-sql-server.md)   
- [段落还原 (SQL Server)](piecemeal-restores-sql-server.md)   
- [文件还原（简单恢复模式）](file-restores-simple-recovery-model.md)   
- [文件还原（完整恢复模式）](file-restores-full-recovery-model.md)   
+ [联机还原 &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [逐段还原 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
+ [文件还原 &#40;简单恢复模式&#41;](file-restores-simple-recovery-model.md)   
+ [文件还原 &#40;完整恢复模式&#41;](file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

@@ -19,22 +19,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902434"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
   当数据进入包中的数据流时，提取这些数据的源会将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 为数值数据分配数值数据类型，为字符串数据分配字符数据类型，为日期分配日期数据类型。 其他数据，如 GUID 和二进制大型对象块 (BLOB)，也要分配相应的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 如果数据的数据类型无法转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，则会发生错误。  
   
- 某些数据流组件在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]数据类型和的托管数据类型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]之间转换数据类型。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和托管数据类型之间的映射的详细信息，请参阅 [在数据流中使用数据类型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
+ 某些数据流组件可在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的托管数据类型之间转换数据类型。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和托管数据类型之间的映射的详细信息，请参阅 [在数据流中使用数据类型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   
  下表列出了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 表中的一些数据类型提供了适用的精度和小数位数信息。 有关精度和小数位数的详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](/sql/t-sql/data-types/precision-scale-and-length-transact-sql)。  
   
 |数据类型|说明|  
 |---------------|-----------------|  
-|DT_BOOL|布尔值。|  
+|DT_BOOL|一个布尔值。|  
 |DT_BYTES|二进制数据值。 长度可变，且最大长度为 8000 字节。|  
 |DT_CY|货币值。 此数据类型为八字节有符号整数，其小数位数为 4，最大精度为 19。|  
 |DT_DATE|由年、月、日、小时、分钟、秒和小数秒组成的日期结构。  小数秒的固定小数位数为 7。<br /><br /> DT_DATE 数据类型是使用 8 字节浮点数字来实现的。 日以整数增量表示，从 1899 年 12 月 30 日开始，午夜时间为零点。 小时值以数字的小数部分的绝对值表示。 但是，浮点值无法表示所有实数值；因此，可以在 DT_DATE 中显示的日期的范围受到限制。<br /><br /> 另一方面，DT_DBTIMESTAMP 以内部具有单独的年、月、日、小时、分钟、秒和毫秒字段的结构表示。 此数据类型对其能够表示的日期有较大的范围限制。|  
@@ -60,15 +60,14 @@ ms.locfileid: "62902434"
 |DT_UI4|四字节无符号整数。|  
 |DT_UI8|八字节无符号整数。|  
 |DT_WSTR|以 Null 值结束的 Unicode 字符串，最大长度为 4000 个字符。 （如果列值包含其他 Null 终止符，则字符串将在第一个 Null 值出现的位置截断。）|  
-|DT_IMAGE|最大大小为 2<sup>31</sup>-1 （2147483647）字节的二进制值。 .|  
+|DT_IMAGE|最大大小为 2<sup>31</sup>-1 （2147483647）字节的二进制值。 。|  
 |DT_NTEXT|最大长度为 2<sup>30</sup> -1 （1073741823）个字符的 Unicode 字符串。|  
 |DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 字符串，最大长度为 2<sup>31</sup>-1 （2147483647）个字符。|  
   
 ## <a name="conversion-of-data-types"></a>数据类型的转换  
  如果列中的数据不必是源数据类型分配的全角形式，那么最好更改列的数据类型。 使每个数据行尽可能窄有助于优化传输数据时的性能，因为每行越窄，数据从源移动到目标就越快。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含一组完整的数值数据类型，这样可以使数据类型近似匹配于数据大小。 例如，如果数据类型为 DT_UI8 的列中的值始终为 0 到 3000 之间的整数，则可以将数据类型更改为 DT_UI2。 同样，如果数据类型为 DT_CY 的列改用整数数据类型可以满足包数据要求，则可以将数据类型更改为 DT_I4。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含一组完整的数值数据类型，这样可以使数据类型近似匹配于数据大小。 例如，如果数据类型为 DT_UI8 的列中的值始终为 0 到 3000 之间的整数，则可以将数据类型更改为 DT_UI2。 同样，如果数据类型为 DT_CY 的列改用整数数据类型可以满足包数据要求，则可以将数据类型更改为 DT_I4。  
   
  可以按以下方法更改列的数据类型：  
   
@@ -227,10 +226,10 @@ ms.locfileid: "62902434"
 |DT_DATE|||||||  
 |DT_DBDATE|[date (Transact-SQL)](/sql/t-sql/data-types/date-transact-sql)|[date (Transact-SQL)](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||timestamp|time|time|  
-|DT_DBTIME2|[time &#40;transact-sql&#41;](/sql/t-sql/data-types/time-transact-sql)（p）|[time &#40;transact-sql&#41;](/sql/t-sql/data-types/time-transact-sql) （p）|||||  
-|DT_DBTIMESTAMP|[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)， [smalldatetime &#40;transact-sql&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)， [smalldatetime &#40;transact-sql&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  
+|DT_DBTIME2|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql) (p)|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
+|DT_DBTIMESTAMP|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)[smalldatetime (Transact-SQL)](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)[smalldatetime (Transact-SQL)](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  
 |DT_DBTIMESTAMP2|[datetime2 (Transact-SQL)](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 (Transact-SQL)](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  
-|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;transact-sql&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)（p）|[datetimeoffset &#40;transact-sql&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) （p）||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIMESTAMPOFFSET|[datetimeoffset (Transact-SQL)](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)|[datetimeoffset (Transact-SQL)](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
@@ -238,7 +237,7 @@ ms.locfileid: "62902434"
 |DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
 |DT_I4|int|int|Long||INTEGER|INTEGER|  
 |DT_I8|bigint|bigint|||BIGINT|BIGINT|  
-|DT_NUMERIC|decimal、numeric|decimal、numeric|小数|NUMBER、INT|decimal、numeric|decimal、numeric|  
+|DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
 |DT_R4|real|real|Single||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
 |DT_STR|char、varchar||VarChar||char、varchar|char、varchar|  

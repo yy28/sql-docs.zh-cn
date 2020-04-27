@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890753"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>步骤 1：复制第 5 课包
@@ -48,13 +48,13 @@ ms.locfileid: "62890753"
   
 3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
   
-4.  依次单击“浏览(...)”按钮和计算机上的 Lesson 5.dtsx，然后单击“打开”****。  
+4.  单击计算机上的 "浏览" （...）按钮，然后单击 "**打开**"。  
   
      要下载此教程的所有课程包，请执行以下操作：  
   
-    1.  导航到[Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  单击 **“下载”** 选项卡。  
+    2.  单击 "**下载**" 选项卡。  
   
     3.  单击 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 文件。  
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922150"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整数据库还原（完整恢复模式）
@@ -32,7 +32,7 @@ ms.locfileid: "62922150"
  还原数据库时，特别是在完整恢复模式或大容量日志恢复模式下，您应使用一个还原顺序。 *还原顺序* 由通过一个或多个还原阶段来移动数据的一个或多个还原操作组成。  
   
 > [!IMPORTANT]  
->  建议您不要附加或还原来自未知或不可信源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用未知或不受信任的源中的数据库之前，请在非生产服务器上的数据库上运行[DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) ，并检查数据库中的代码，例如存储过程或其他用户定义的代码。  
+>  建议您不要附加或还原来自未知或不可信源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
   
  **本主题内容：**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62922150"
 > [!NOTE]  
 >  有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)中的“兼容性支持”部分。  
   
-##  <a name="PointOfFailure"></a> 将数据库还原到故障点  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> 将数据库还原到故障点  
  通常，将数据库恢复到故障点分为下列基本步骤：  
   
 1.  备份活动事务日志（称为日志尾部）。 此操作将创建结尾日志备份。 如果活动事务日志不可用，则该日志部分的所有事务都将丢失。  
@@ -72,8 +72,8 @@ ms.locfileid: "62922150"
 > [!NOTE]  
 >  计划将数据库备份还原到其它服务器实例时，请参阅 [通过备份和还原来复制数据库](../databases/copy-databases-with-backup-and-restore.md)。  
   
-###  <a name="TsqlSyntax"></a> 基本 TRANSACT-SQL RESTORE 语法  
- 上图中还原顺序的基本 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语法如下：  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本 TRANSACT-SQL RESTORE 语法  
+ 上图中还原顺序的基本[restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)]语法如下：  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62922150"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> 示例：恢复到故障点 (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> 示例：恢复到故障点 (Transact-SQL)  
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例显示了将数据库还原到故障点的还原顺序中的基本选项。 此示例将创建数据库的结尾日志备份。 接下来，此示例将还原完整数据库备份和日志备份，然后还原结尾日志备份。 此示例将在最后的单独步骤中恢复数据库。  
   
 > [!NOTE]  
@@ -121,7 +121,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> 将数据库还原到日志备份中的某个时间点  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> 将数据库还原到日志备份中的某个时间点  
  在完整恢复模式下，完整的数据库还原通常可恢复到日志备份中的某个时间点、标记的事务或 LSN。 但是，在大容量日志恢复模式下，如果日志备份包含大容量更改，则不能进行时点恢复。  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>时点还原方案示例  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  有关时间点存储的示例，请参阅 [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)中的“兼容性支持”部分。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **还原完整数据库备份**  
   
 -   [还原数据库备份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
@@ -171,17 +171,17 @@ GO
   
 -   [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [包含标记的事务的相关数据库的恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [包含标记事务的相关数据库恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [恢复到日志序列号 (SQL Server)](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
- [sp_addumpdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [完整数据库备份 (SQL Server)](full-database-backups-sql-server.md)   
- [差异备份 (SQL Server)](differential-backups-sql-server.md)   
+ [&#40;SQL Server 应用事务日志备份&#41;](transaction-log-backups-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [完全数据库备份 &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [差异备份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)  
   

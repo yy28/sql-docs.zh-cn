@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891053"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>步骤 2：启用和配置包配置
@@ -22,7 +22,7 @@ ms.locfileid: "62891053"
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>创建映射到 Directory 属性的新的包级别变量  
   
-1.  在 ** 设计器中，单击“控制流”**[!INCLUDE[ssIS](../includes/ssis-md.md)]选项卡的背景。 这会将要创建的变量的作用域设置为包。  
+1.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击“控制流”**** 选项卡的背景。 这会将要创建的变量的作用域设置为包。  
   
 2.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 菜单中，选择“变量”  。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62891053"
   
 7.  返回到“控制流”  选项卡，然后双击“文件夹中的 Foreach 文件”  容器。  
   
-8.  在“Foreach 循环编辑器”的“集合”页上，依次单击“表达式”和省略号按钮 (…)****************。  
+8.  在 " **Foreach 循环编辑器**" 的 "**集合**" 页上，单击 "**表达式**"，然后单击省略号按钮 **（...）**。  
   
 9. 在 "**属性表达式编辑器**" 中，单击**属性**列表，然后选择`Directory`。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "62891053"
   
 2.  出现警告提示时单击“确定”****，转换完成后，在“转换为包部署模型”**** 对话框中单击“确定”****。  
   
-3.  在 ** 设计器中，单击“控制流”**[!INCLUDE[ssIS](../includes/ssis-md.md)]选项卡的背景。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击“控制流”**** 选项卡的背景。  
   
-4.  在 **SSIS** 菜单上，单击 **“包配置”** 。  
+4.  在 **SSIS** 菜单上，单击 **“包配置”**。  
   
 5.  在“包配置组织程序”**** 对话框中，选择“启用包配置”****，然后单击“添加”****。  
   
-6.  在包配置向导的 "欢迎" 页上，单击 "**下一步**"。  
+6.  在包配置向导的欢迎页中，单击“下一步”****。  
   
 7.  在“选择配置类型”  页上，确认“配置类型”  已设置为“XML 配置文件”  。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62891053"
   
 15. 单击“完成”  。  
   
-16. 单击“关闭”  。  
+16. 单击“**关闭**”。  
   
 17. 向导将创建一个名为 Ssistutorial.dtsconfig. Datatransferconfig.dtsconfig 的配置文件，该配置文件包含变量`value`的配置设置，后者又设置了`Directory`枚举器的属性。  
   

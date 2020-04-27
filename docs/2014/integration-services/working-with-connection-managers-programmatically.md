@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877698"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以编程方式使用连接管理器
@@ -61,15 +61,15 @@ ms.locfileid: "62877698"
 |MULTIFILE|多文件连接管理器|`System.String`|其中一个文件的路径。|  
 |MULTIFLATFILE|多平面文件连接管理器|`System.String`|其中一个文件的路径。|  
 |SMOServer|SMO 连接管理器|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|SMTP 连接管理器|`System.String`|例如： `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|SMTP 连接管理器|`System.String`|例如：`SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|WMI 连接管理器|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 连接管理器|`System.Data.SqlServerCe.SqlCeConnection`||  
   
 ![Integration Services 图标（小）](media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>另请参阅  
- [在脚本任务中连接数据源](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
- [在脚本组件中连接数据源](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
+ [连接到脚本任务中的数据源](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
+ [在脚本组件中连接到数据源](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [在自定义任务中连接数据源](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
   
   

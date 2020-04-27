@@ -16,26 +16,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916869"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
-  **Tempdb**系统数据库是一个全局资源，可供连接到实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所有用户使用，并用于保存以下内容：  
+  **tempdb** 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有用户使用，并可用于保存下列各项：  
   
 -   显式创建的临时用户对象，例如全局或局部临时表、临时存储过程、表变量或游标。  
   
--   
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]创建的内部对象，例如，用于存储假脱机或排序的中间结果的工作表。  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]创建的内部对象，例如，用于存储假脱机或排序的中间结果的工作表。  
   
 -   由使用已提交读（使用行版本控制隔离或快照隔离事务）的数据库中数据修改事务生成的行版本。  
   
 -   由数据修改事务为实现联机索引操作、多个活动的结果集 (MARS) 以及 AFTER 触发器等功能而生成的行版本。  
   
- 
-  **tempdb** 中的操作是最小日志记录操作。 这将使事务产生回滚。 **** 每次启动时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都会重新创建 tempdb，以便系统始终以干净的数据库副本开头。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此， **tempdb**中永远不会有任何内容从一个会话保存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到另一个会话。 不允许对**tempdb**进行备份和还原操作。  
+ **tempdb** 中的操作是最小日志记录操作。 这将使事务产生回滚。 **tempdb**每次启动时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都会重新创建 tempdb，以便系统始终以干净的数据库副本开头。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此， **tempdb**中永远不会有任何内容从一个会话保存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到另一个会话。 不允许对**tempdb**进行备份和还原操作。  
   
 ## <a name="physical-properties-of-tempdb"></a>tempdb 的物理属性  
  下表列出了 **tempdb** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  

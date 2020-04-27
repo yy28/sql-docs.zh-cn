@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62913547"
 ---
 # <a name="create-scripts-using-templates"></a>使用模板创建脚本
@@ -30,7 +30,7 @@ ms.locfileid: "62913547"
   
 3.  在“连接到数据库引擎”**** 对话框中，填写连接信息，然后单击“连接”****。 此时将打开一个新查询编辑器窗口，其中包含“创建数据库”**** 模板的内容。  
   
-4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。  
+4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。  
   
 5.  在“指定模板参数的值”**** 对话框中，“值”**** 列包含一个 **Database_Name** 参数的建议值。 在“数据库名称”**** 参数框中，键入 **Marketing**，然后单击“确定”****。 请注意“Marketing”插入脚本中的几个位置。  
   

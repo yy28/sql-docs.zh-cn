@@ -33,14 +33,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874439"
 ---
 # <a name="clr-user-defined-types"></a>CLR 用户定义类型
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于创建基于以 .NET Framework 公共语言运行时 (CLR) 创建的程序集而编写的数据库对象。 数据库对象包括触发器、存储过程、函数、聚合函数和类型，它们可以利用 CLR 提供的丰富的编程模型。  
   
 > [!NOTE]  
@@ -48,8 +47,7 @@ ms.locfileid: "62874439"
   
  从开始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，你可以使用用户定义的类型（udt）来扩展服务器的标量类型系统，从而能够在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中存储 CLR 对象。 UDT 可以包含多个元素，还可以有行为，这使它们与由单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型组成的传统别名数据类型区分开来。  
   
- 因为 UDT 作为整体供系统访问，所以其对复杂数据类型的使用可能会对性能有负面影响。 通常，使用传统的行和表可以对复杂数据进行最佳建模。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 UDT 非常适合以下各项：  
+ 因为 UDT 作为整体供系统访问，所以其对复杂数据类型的使用可能会对性能有负面影响。 通常，使用传统的行和表可以对复杂数据进行最佳建模。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 UDT 非常适合以下各项：  
   
 -   日期、时间、货币和扩展数字类型  
   

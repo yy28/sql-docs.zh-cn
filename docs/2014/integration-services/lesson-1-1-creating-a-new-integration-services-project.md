@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891756"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>步骤 1：创建新的 Integration Services 项目
@@ -35,13 +35,13 @@ ms.locfileid: "62891756"
   
 3.  在“新建项目”**** 对话框中，展开“已安装的模板”**** 下的“商业智能”**** 节点，并在“模板”**** 窗格中选择“Integration Services 项目”****。  
   
-4.  在“名称”**** 框中，将默认名称更改为 **SSIS Tutorial**。 或者，清除“创建解决方案的目录”  复选框。  
+4.  在“名称”**** 框中，将默认名称更改为 **SSIS Tutorial**。 或者，清除“创建解决方案的目录”**** 复选框。  
   
 5.  接受默认位置，或单击“浏览”****，以浏览并找到要使用的文件夹。 在“项目位置”**** 对话框中，单击文件夹，再单击“选择文件夹”****。  
   
-6.  单击“确定”。   
+6.  单击" **确定**"。  
   
-     默认情况下，将创建一个名为 **Package.dtsx** 的空包，并将该包添加到项目中的“SSIS 包”之下。  
+     默认情况下，将创建一个名为 **Package.dtsx**的空包，并将该包添加到项目中的“SSIS 包”之下。  
   
 7.  在“解决方案资源管理器”**** 工具栏中，右键单击“Package.dtsx”****，再单击“重命名”****，将默认包重命名为 **Lesson 1.dtsx**。  
   

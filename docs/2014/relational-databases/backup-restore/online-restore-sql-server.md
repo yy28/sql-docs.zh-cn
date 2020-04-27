@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876178"
 ---
 # <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "62876178"
     > [!NOTE]  
     >  或者，也可以在开始还原顺序前手动使文件脱机。 有关详细信息，请参阅本主题后面的“使数据库或文件脱机”。  
   
-##  <a name="taking_db_or_file_offline"></a>使数据库或文件脱机  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> 使数据库或文件脱机  
  如果不想使用联机还原，则可以使用以下方法之一，在启动还原顺序之前使数据库脱机：  
   
 -   在任何恢复模式下，您都可以使用以下 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 语句使数据库脱机：  
@@ -91,7 +91,7 @@ ms.locfileid: "62876178"
   
 -   [示例：只读文件的联机还原（完整恢复模式）](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [还原文件和文件组 (SQL Server)](restore-files-and-filegroups-sql-server.md)  
   
@@ -101,13 +101,13 @@ ms.locfileid: "62876178"
   
 -   [恢复数据库但不还原数据 (Transact-SQL)](recover-a-database-without-restoring-data-transact-sql.md)  
   
--   [删除失效的文件组 &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
+-   [删除失效文件组 (SQL Server)](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [文件还原（完整恢复模式）](file-restores-full-recovery-model.md)   
- [文件还原（简单恢复模式）](file-restores-simple-recovery-model.md)   
- [还原页 (SQL Server)](restore-pages-sql-server.md)   
- [段落还原 (SQL Server)](piecemeal-restores-sql-server.md)   
+ [文件还原 &#40;完整恢复模式&#41;](file-restores-full-recovery-model.md)   
+ [文件还原 &#40;简单恢复模式&#41;](file-restores-simple-recovery-model.md)   
+ [&#40;SQL Server 还原页面&#41;](restore-pages-sql-server.md)   
+ [逐段还原 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)  
   
   

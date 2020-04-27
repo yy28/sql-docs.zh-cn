@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889210"
 ---
 # <a name="set-package-properties"></a>设置包属性
@@ -64,7 +64,7 @@ ms.locfileid: "62889210"
 ## <a name="properties-by-category"></a>按类别排列的属性  
  下表列出了按类别排列的包属性。  
   
-###  <a name="Checkpoints"></a> 检查点  
+###  <a name="checkpoints"></a><a name="Checkpoints"></a> 检查点  
  使用此类别中的属性可以从包控制流中的某一故障点重新启动包，而不是从包控制流的开始处重新运行包。 有关详细信息，请参阅 [通过使用检查点重新启动包](packages/restart-packages-by-using-checkpoints.md)。  
   
 |properties|说明|  
@@ -76,10 +76,10 @@ ms.locfileid: "62889210"
 > [!NOTE]  
 >  dtexec 的 `/CheckPointing on` 选项等同于将包的 `SaveCheckpoints` 属性设置为 True 并将 `CheckpointUsage` 属性设置为“Always”。 有关详细信息，请参阅 [dtexec Utility](packages/dtexec-utility.md)。  
   
-###  <a name="Execution"></a>操作  
+###  <a name="execution"></a><a name="Execution"></a> 执行  
  此类别中的属性可配置包对象的运行时行为。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |`DelayValidation`|指示是否将包验证推迟至包运行之时进行。 此属性的默认值为 `False`。|  
 |**禁用**|指示包是否已禁用。 此属性的默认值为 `False`。|  
@@ -90,16 +90,16 @@ ms.locfileid: "62889210"
 |`MaximumErrorCount`|包停止运行前可以出现的最大错误数。 此属性的默认值为**1**。|  
 |`PackagePriorityClass`|包线程的 Win32 线程优先级类。 其值分别为 `Default`、`AboveNormal`、`Normal`、`BelowNormal`、`Idle`。 此属性的默认值为 `Default`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPriorityClass>。|  
   
-###  <a name="ForcedExecutionValue"></a>强制执行值  
+###  <a name="forced-execution-value"></a><a name="ForcedExecutionValue"></a>强制执行值  
  此类别中的属性用于配置包的可选执行值。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |`ForcedExecutionValue`|如果 ForceExecutionValue 设置为`True`，则为指定包返回的可选执行值的值。 此属性的默认值为 **0**。|  
 |`ForcedExecutionValueType`|ForcedExecutionValue 的数据类型。 此属性的默认值为 `Int32`。|  
 |`ForceExecutionValue`|指定容器的可选执行值是否应强制包含特定值的布尔值。 此属性的默认值为 `False`。|  
   
-###  <a name="Identification"></a>标识  
+###  <a name="identification"></a><a name="Identification"></a>标识  
  此类别中的属性提供诸如包的唯一标识符和名称等信息。  
   
 |properties|说明|  
@@ -112,40 +112,40 @@ ms.locfileid: "62889210"
 |`Name`|包的名称。|  
 |`PackageType`|包类型。 其值为：`Default`、`DTSDesigner`、`DTSDesigner100`、`DTSWizard`、`SQLDBMaint` 和 `SQLReplication`。 此属性的默认值为 `Default`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   
-###  <a name="Misc"></a>Misc  
+###  <a name="misc"></a><a name="Misc"></a>Misc  
  此类别中的属性用于访问包所使用的配置和表达式，以及提供有关包的区域设置和日志记录模式的信息。 有关详细信息，请参阅 [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |`Configurations`|包使用的配置集合。 单击浏览按钮 (…) 可以查看和配置包配置****。|  
 |`Expressions`|单击浏览按钮 (…) 可以为包属性创建表达式****。<br /><br /> 注意：你可以为对象模型包含的所有包属性（而不仅仅是属性窗口中列出的属性）创建属性表达式。<br /><br /> 有关详细信息，请参阅 [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 `Expressions`。 单击表达式文本框中的浏览按钮 (…) 可以修改和计算表达式****。|  
 |`ForceExecutionResult`|包的执行结果。 其值为：`None`、`Success`、`Failure` 和 `Completion`。 此属性的默认值为 `None`。 有关详细信息，请参阅 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult。|  
 |`LocaleId`|Microsoft Win32 区域设置。 此属性的默认值为本地计算机上操作系统的区域设置。|  
 |`LoggingMode`|指定包日志记录行为的值。 具体的值为 `Disabled`、`Enabled` 和 `UseParentSetting`。 此属性的默认值为 `UseParentSetting`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  
-|`OfflineMode`|指示该包是否处于脱机模式下。 此属性为只读。 该属性在项目级设置。 通常， [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器将尝试连接包使用的每个数据源以验证与源和目标相关联的元数据。 您可以从 **“SSIS”** 菜单中启用 **“脱机工作”** （即使在打开包之前也可以）以阻止这些连接尝试和数据源不可用时导致的验证错误。 还可以启用“脱机工作” **** 以加快设计器中操作的速度，并仅在需要验证包时禁用此选项。|  
+|`OfflineMode`|指示该包是否处于脱机模式下。 此属性为只读。 该属性在项目级设置。 通常， [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器将尝试连接包使用的每个数据源以验证与源和目标相关联的元数据。 您可以从 **“SSIS”** 菜单中启用 **“脱机工作”** （即使在打开包之前也可以）以阻止这些连接尝试和数据源不可用时导致的验证错误。 您还可以启用 **“脱机工作”** 以加快设计器中操作的速度，而仅在需要验证包的时候再禁用此选项。|  
 |`SuppressConfigurationWarnings`|指示是否取消配置生成的警告。 此属性的默认值为 `False`。|  
 |`UpdateObjects`|指示当包所含对象的更新版本可用时，是否更新包以使用更新版本的对象。 例如，如果此属性设置为 `True`，则会更新包含大容量插入任务的包，以使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的更新版本的大容量插入任务。 此属性的默认值为 `False`。|  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  此类别中的属性用于设置包的保护级别。 有关详细信息，请参阅 [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md)。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |`PackagePassword`|要求密码的包保护级别（`EncryptSensitiveWithPassword`和`EncryptAllWithPassword`）的密码。|  
 |`ProtectionLevel`|包的保护级别。 这些值为`DontSaveSensitive`、 `EncryptSensitiveWithUserKey` `EncryptSensitiveWithPassword` `EncryptAllWithPassword`、、和**ServerStorage**。 此属性的默认值为 `EncryptSensitiveWithUserKey`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>。|  
   
-###  <a name="Transactions"></a>记录  
+###  <a name="transactions"></a><a name="Transactions"></a>记录  
  此类别中的属性用于配置包的隔离级别和事务选项。 有关详细信息，请参阅 [Integration Services 事务](integration-services-transactions.md)。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
-|`IsolationLevel`|包事务的隔离级别。  此属性的默认值为 `Serializable`。 有效值为 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> 仅当 `IsolationLevel` 属性的值设为 `TransactionOption` 时，系统才将 `Required` 属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 `IsolationLevel` 属性的值：<br /><br /> 子容器的 `TransactionOption` 属性的值为 `Supported`。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 `IsolationLevel` 属性的值。 在以下条件成立时，容器将开始新的事务：<br /><br /> 容器的`TransactionOption`属性的值为`Required`。<br />父级已开始一个事务。<br /><br /> <br /><br /> 注意：`Snapshot` 属性的 `IsolationLevel` 值与包事务不兼容。 因此，您无法使用 `IsolationLevel` 属性将包事务的隔离级别设为 `Shapshot`。 而是使用 SQL 查询将包事务设为 `Snapshot`。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。<br /><br /> 有关 `IsolationLevel` 属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
+|`IsolationLevel`|包事务的隔离级别。  此属性的默认值为 `Serializable`。 有效值为 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> 仅当 `IsolationLevel` 属性的值设为 `TransactionOption` 时，系统才将 `Required` 属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 `IsolationLevel` 属性的值：<br /><br /> 子容器的 `TransactionOption` 属性的值为 `Supported`。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 `IsolationLevel` 属性的值。 在以下条件成立时，容器将开始新的事务：<br /><br /> 容器的`TransactionOption`属性的值为`Required`。<br />父级已开始一个事务。<br /><br /> <br /><br /> 注意：`IsolationLevel` 属性的 `Snapshot` 值与包事务不兼容。 因此，您无法使用 `IsolationLevel` 属性将包事务的隔离级别设为 `Shapshot`。 而是使用 SQL 查询将包事务设为 `Snapshot`。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。<br /><br /> 有关 `IsolationLevel` 属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |`TransactionOption`|包的事务参与情况。 其值为：`NotSupported`、`Supported`、`Required`。 此属性的默认值为 `Supported`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
   
-###  <a name="Version"></a>版本  
+###  <a name="version"></a><a name="Version"></a>版本  
  此类别中的属性用于提供包对象的版本信息。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |`VersionBuild`|包的内部版本号。|  
 |`VersionComments`|包的版本注释。|  

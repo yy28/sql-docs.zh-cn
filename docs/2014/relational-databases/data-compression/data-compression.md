@@ -23,14 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873556"
 ---
 # <a name="data-compression"></a>Data Compression
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持针对行存储表和索引的行和页压缩，并且支持针对列存储表和索引的列存储和列存储存档压缩。  
   
  对于行存储表和索引，使用数据压缩功能可帮助减小数据库的大小。 除了节省空间之外，数据压缩还可以帮助提高 I/O 密集型工作负荷的性能，因为数据存储在更少的页中，查询需要从磁盘读取的页更少。 但是，在与应用程序交换数据时，在数据库服务器上需要额外的 CPU 资源来压缩和解压缩数据。 您可以在以下数据库对象上配置行和页压缩：  
@@ -100,12 +99,10 @@ ms.locfileid: "62873556"
   
 -   由于大小的关系，大值数据类型有时不与普通行数据存储在一起，而是存储在特殊用途的页上。 对于单独存储的数据，数据压缩不可用。  
   
--   
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现 vardecimal 存储格式的表在升级后会保留该设置。 可以向具有 vardecimal 存储格式的表应用行压缩。 但是，因为行压缩是 vardecimal 存储格式的超集，所以不必保留 vardecimal 存储格式。 将 vardecimal 存储格式与行压缩一起使用时，十进制值不会进一步压缩。 可以向具有 vardecimal 存储格式的表应用页压缩；但是，vardecimal 存储格式列可能不会实现进一步的压缩。  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现 vardecimal 存储格式的表在升级后会保留该设置。 可以向具有 vardecimal 存储格式的表应用行压缩。 但是，因为行压缩是 vardecimal 存储格式的超集，所以不必保留 vardecimal 存储格式。 将 vardecimal 存储格式与行压缩一起使用时，十进制值不会进一步压缩。 可以向具有 vardecimal 存储格式的表应用页压缩；但是，vardecimal 存储格式列可能不会实现进一步的压缩。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 vardecimal 存储格式；但是，由于行级压缩可实现同样的目标，因此不推荐使用 vardecimal 存储格式。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 vardecimal 存储格式；但是，由于行级压缩可实现同样的目标，因此不推荐使用 vardecimal 存储格式。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用列存储和列存储存档压缩  
   
@@ -113,7 +110,7 @@ ms.locfileid: "62873556"
 |-|  
 |**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
-### <a name="basics"></a>基础  
+### <a name="basics"></a>基础知识  
  列存储表和索引始终使用列存储压缩进行存储。 您可以通过配置称作存档压缩的附加压缩，进一步减少列存储数据的大小。  为了执行存档压缩， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对数据运行 Microsoft XPRESS 压缩算法。 通过使用以下数据压缩类型添加或删除存档压缩：  
   
 -   使用 `COLUMNSTORE_ARCHIVE` 数据压缩可使用存档压缩来压缩列存储数据。  
@@ -174,8 +171,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression`和`data_compression_desc`列包含列存储和 COLUMNSTORE_ARCHIVE。  
   
- 
-  [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 过程不会应用在列存储索引中。  
+ [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 过程不会应用在列存储索引中。  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>压缩对已分区表和已分区索引的影响  
  如果对已分区表和已分区索引使用数据压缩，则应注意以下事项：  
@@ -262,7 +258,7 @@ REBUILD PARTITION = ALL WITH (
  [&#40;Transact-sql&#41;创建分区方案](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
  [&#40;Transact-sql&#41;创建分区函数](/sql/t-sql/statements/create-partition-function-transact-sql)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)  
   

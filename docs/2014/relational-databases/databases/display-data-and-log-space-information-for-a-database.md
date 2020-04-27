@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917323"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>显示数据库的数据和日志空间信息
@@ -41,14 +41,14 @@ ms.locfileid: "62917323"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  执行 **sp_spaceused** 的权限授予 **public** 角色。 只有 **db_owner** 固定数据库角色的成员可以指定 **@updateusage** 参数。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-display-data-and-log-space-information-for-a-database"></a>若要显示数据库的数据和日志空间信息  
   
@@ -56,9 +56,9 @@ ms.locfileid: "62917323"
   
 2.  展开 **“数据库”** 。  
   
-3.  右键单击某数据库，依次指向“报表”  和“标准报表”  ，然后单击“磁盘使用情况”  。  
+3.  右键单击某数据库，依次指向“报表”**** 和“标准报表”****，然后单击“磁盘使用情况”****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-display-data-and-log-space-information-for-a-database-by-using-sp_spaceused"></a>使用 sp_spaceused 显示数据库的数据和日志空间信息  
   
@@ -94,9 +94,9 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
- [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [sp_spaceused (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
- [向数据库中添加数据文件或日志文件](add-data-or-log-files-to-a-database.md)   
+ [sys. database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sp_spaceused &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
+ [向数据库添加数据文件或日志文件](add-data-or-log-files-to-a-database.md)   
  [删除数据库中的数据文件或日志文件](delete-data-or-log-files-from-a-database.md)  
   
   

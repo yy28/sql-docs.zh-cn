@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62914354"
 ---
 # <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
@@ -57,7 +57,7 @@ ms.locfileid: "62914354"
 |服务器实例上运行的查询工作负荷很重。|请在负荷较轻的情况下再次尝试运行此查询。|  
   
 ## <a name="see-also"></a>另请参阅  
- [设置用于全文筛选器后台程序启动器的服务帐户](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [设置全文筛选器后台程序启动器的服务帐户](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [全文搜索](../search/full-text-search.md)   
  [sp_help_fulltext_system_components &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [配置和管理断字符和词干分析器以便搜索](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

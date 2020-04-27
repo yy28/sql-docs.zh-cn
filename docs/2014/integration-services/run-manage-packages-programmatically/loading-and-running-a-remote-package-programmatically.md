@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889619"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以编程方式加载和运行远程包
@@ -29,16 +29,16 @@ ms.locfileid: "62889619"
   
  或者，您也可以从安装了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本地计算机运行远程包。 有关详细信息，请参阅[以编程方式加载和运行本地包](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)。  
   
-##  <a name="top"></a>在远程计算机上运行远程包  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a>在远程计算机上运行远程包  
  如上所述，可以用多种方法在远程服务器上运行远程包：  
   
 -   [使用 SQL Server 代理以编程方式运行远程包](#agent)  
   
 -   [使用 Web 服务或远程组件以编程方式运行远程包](#service)  
   
- 本主题中使用的几乎所有加载和保存包的方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 本主题中演示的用于执行**sp_start_job**存储过程的 ADO.NET 方法例外，该方法只需要对的引用`System.Data`。 在新项目中添加对 `Microsoft.SqlServer.ManagedDTS` 程序集的引用后，请使用 <xref:Microsoft.SqlServer.Dts.Runtime> 或 `using` 语句导入 `Imports` 命名空间。  
+ 本主题中使用的几乎所有加载和保存包的方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 本主题中演示的用于执行**sp_start_job**存储过程的 ADO.NET 方法例外，该方法只需要对的引用`System.Data`。 在新项目中添加对 `Microsoft.SqlServer.ManagedDTS` 程序集的引用后，请使用 `using` 或 `Imports` 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
-###  <a name="agent"></a>使用 SQL Server 代理以编程方式在服务器上运行远程包  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a>使用 SQL Server 代理以编程方式在服务器上运行远程包  
  下面的代码示例演示如何以编程方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器上运行远程包。 该示例代码调用系统存储过程 sp_start_job，该存储过程启动一个  **代理作业**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该存储过程启动的作业名为 `RunSSISPackage`，并且此作业位于远程计算机上。 然后 `RunSSISPackage` 作业在远程计算机上运行包。  
   
 > [!NOTE]  
@@ -145,7 +145,7 @@ namespace LaunchSSISPackageAgent_CS
   
  
   
-###  <a name="service"></a>使用 Web 服务或远程组件以编程方式运行远程包  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a>使用 Web 服务或远程组件以编程方式运行远程包  
  上面的以编程方式在服务器上运行包的解决方案不需要服务器上的任何自定义代码。 但是，您可能更倾向于不依赖 SQL Server 代理来执行包的解决方案。 下面的示例演示可在服务器上创建用于在本地启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的 Web 服务，以及可用于从客户端计算机调用 Web 服务的测试应用程序。 如果你更倾向于创建远程组件而不是 Web 服务，则可在远程组件中使用同一代码逻辑，只需很少的更改。 但是，与 Web 服务相比，远程组件可能需要更广泛的配置。  
   
 > [!IMPORTANT]  
@@ -425,7 +425,7 @@ namespace LaunchSSISPackageSvcTestCS
 ![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>另请参阅  
- [了解本地和远程执行之间的区别](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [了解本地执行与远程执行之间的差异](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [以编程方式加载和运行本地包](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [加载本地包的输出](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   

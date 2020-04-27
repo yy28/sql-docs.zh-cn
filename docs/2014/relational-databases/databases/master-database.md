@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917040"
 ---
 # <a name="master-database"></a>master 数据库
@@ -28,7 +28,7 @@ ms.locfileid: "62917040"
   
 |文件|逻辑名称|物理名称|文件增长|  
 |----------|------------------|-------------------|-----------------|  
-|主数据|master|master.mdf|以 10% 的速度自动增长到磁盘充满为止。|  
+|主数据|主|master.mdf|以 10% 的速度自动增长到磁盘充满为止。|  
 |日志|mastlog|mastlog.ldf|以 10% 的速度自动增长到最大 2 TB。|  
   
  有关如何移动 **master** 数据和日志文件的信息，请参阅 [移动系统数据库](system-databases.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "62917040"
   
 -   更改排序规则。 默认排序规则为服务器排序规则。  
   
--   更改数据库所有者。 **主节点**归**sa**所有。  
+-   更改数据库所有者。 **master** 的所有者是 **sa**。  
   
 -   创建全文目录或全文索引。  
   

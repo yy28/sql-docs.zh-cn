@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922929"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>应用事务日志备份 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62922929"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Requirements"></a>还原事务日志备份的要求  
+##  <a name="requirements-for-restoring-transaction-log-backups"></a><a name="Requirements"></a>还原事务日志备份的要求  
  若要应用事务日志备份，必须满足下列要求：  
   
 -   **为还原顺序准备足够的日志备份：** 您必须备份足够的日志记录才能完成还原顺序。 必要的日志备份（需要时包含 [结尾日志备份](tail-log-backups-sql-server.md) ）必须在还原顺序开始之前可用。  
@@ -50,7 +50,7 @@ ms.locfileid: "62922929"
     > [!TIP]  
     >  最佳方法是还原所有日志备份 (RESTORE LOG *database_name* WITH NORECOVERY)。 还原上一次日志备份后，用单独的操作恢复数据库 (RESTORE DATABASE *database_name* WITH RECOVERY)。  
   
-##  <a name="RecoveryAndTlogs"></a>恢复和事务日志  
+##  <a name="recovery-and-transaction-logs"></a><a name="RecoveryAndTlogs"></a>恢复和事务日志  
  当您完成还原操作并恢复数据库后，恢复将回滚所有未完成的事务。 此步骤称为“撤消阶段” **。 回滚对还原数据库的完整性是必需的。 回滚后，数据库将进入联机状态，不能再将其他事务日志备份应用到数据库。  
   
  例如，一系列事务日志备份包含一个运行时间长的事务。 该事务的起点记录在第一个事务日志备份中，终点记录在第二个事务日志备份中。 第一个事务日志备份中没有任何关于提交或回滚操作的记录。 如果在应用第一个事务日志备份后运行恢复操作，则运行时间长的事务被视为未完成，并且将回滚事务的第一个事务日志备份中记录的数据修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许在此点后应用第二个事务日志备份。  
@@ -58,7 +58,7 @@ ms.locfileid: "62922929"
 > [!NOTE]  
 >  某些情况下可以在日志还原期间显式添加文件。  
   
-##  <a name="PITrestore"></a>使用日志备份还原到故障点  
+##  <a name="using-log-backups-to-restore-to-the-point-of-failure"></a><a name="PITrestore"></a>使用日志备份还原到故障点  
  假设有下列事件顺序。  
   
 |时间|事件|  
@@ -95,7 +95,7 @@ ms.locfileid: "62922929"
 > [!NOTE]  
 >  某些情况下，您还可以使用事务日志将数据库还原到特定的时间点。 有关详细信息，请参阅 [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **应用事务日志备份**  
   
 -   [还原事务日志备份 (SQL Server)](restore-a-transaction-log-backup-sql-server.md)  
@@ -108,7 +108,7 @@ ms.locfileid: "62922929"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
--   [包含标记的事务的相关数据库的恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [包含标记事务的相关数据库恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [恢复到日志序列号 (SQL Server)](recover-to-a-log-sequence-number-sql-server.md)  
   

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874483"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>CLR 用户定义聚合的要求
@@ -38,8 +38,7 @@ ms.locfileid: "62874483"
   
 |方法|语法|说明|  
 |------------|------------|-----------------|  
-|`Init`|public void Init （）;|查询处理器使用此方法初始化聚合的计算。 对于查询处理器正在聚合的每个组调用此方法一次。 查询处理器可以选择重用聚合类的同一实例来计算多个组的聚合。 
-  `Init` 方法应在上一次使用此实例后根据需要执行清除，并允许重新启动新的聚合计算。|  
+|`Init`|public void Init （）;|查询处理器使用此方法初始化聚合的计算。 对于查询处理器正在聚合的每个组调用此方法一次。 查询处理器可以选择重用聚合类的同一实例来计算多个组的聚合。 `Init` 方法应在上一次使用此实例后根据需要执行清除，并允许重新启动新的聚合计算。|  
 |`Accumulate`|公共 void 累积（输入类型值 [，输入类型值，...]）;|表示该函数的参数的一个或多个参数。 *input_type*应是等效于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `CREATE AGGREGATE`语句中*input_sqltype*指定的本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的托管数据类型。 有关详细信息，请参阅[映射 CLR 参数数据](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。<br /><br /> 对于用户定义类型 (UDT)，input-type 与 UDT 类型相同。 查询处理器使用此方法累计聚合值。 对于正在聚合的组中的每个值调用此方法一次。 查询处理器仅在为聚合类的指定实例调用 `Init` 方法之后才调用此方法。 此方法的实现应更新实例的状态以反映正在传递的参数值的累计。|  
 |`Merge`|公共 void Merge （udagg_class 值）;|此方法可以将此聚合的另一实例与当前实例合并。 查询处理器使用此方法合并聚合的多个部分计算。|  
 |`Terminate`|public return_type Terminate （）;|此方法完成聚合计算并返回聚合的结果。 *Return_type*应为托管[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，该类型是`CREATE AGGREGATE`语句中指定的*return_sqltype*的托管等效项。 *Return_type*也可以是用户定义的类型。|  

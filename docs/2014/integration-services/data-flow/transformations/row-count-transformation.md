@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d991ee94e04be0ea72450b8e3e4649c339d1c2a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900201"
 ---
 # <a name="row-count-transformation"></a>行计数转换
   行计数转换在行通过数据流时对行进行计数，并将最终计数结果存储在一个变量中。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包可以使用行计数来更新脚本、表达式和属性表达式中使用的[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]变量。 （例如，存储行计数的变量可更新电子邮件中的消息正文，以便包含行数。）行计数转换使用的变量必须已经存在，并且必须在带有行计数转换的数据流所属的数据流任务作用域内。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包可使用行计数来更新脚本、表达式和属性表达式中使用的变量。 （例如，存储行计数的变量可更新电子邮件中的消息正文，以便包含行数。）行计数转换使用的变量必须已经存在，并且必须在带有行计数转换的数据流所属的数据流任务作用域内。  
   
  只有在最后一行已通过转换后，转换才会在变量中存储行计数值。 因此，该变量值并不即时更新以在包含行计数转换的数据流中使用更新值。 您可以在单独的数据流中使用更新的变量。  
   

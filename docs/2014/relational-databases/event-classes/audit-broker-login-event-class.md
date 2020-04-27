@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912102"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 事件类
@@ -48,7 +48,7 @@ ms.locfileid: "62912102"
 |**SPID**|**int**|SQL Server 为与客户端相关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
 |**State**|**int**|指示 SQL Server 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
-|**TargetUserName**|**nvarchar**|登录状态。 可取值为：<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> **注意**ISC = 启动安全上下文。 ASC = 接受安全上下文|39|否|  
+|**TargetUserName**|**nvarchar**|登录状态。 即以下函数之一：<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> **注意**ISC = 启动安全上下文。 ASC = 接受安全上下文|39|否|  
 |**TransactionID**|**bigint**|系统为事务分配的 ID。|4|否|  
   
  下表列出了此事件类的子类值。  

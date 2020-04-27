@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875710"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>包含标记事务的相关数据库恢复
@@ -54,8 +54,7 @@ ms.locfileid: "62875710"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- 事务日志记录了标记名（事务名）、说明、数据库、用户、`datetime` 信息和日志序列号 (LSN)。 
-  `datetime` 信息与标记名一起用于唯一地标识标记。  
+ 事务日志记录了标记名（事务名）、说明、数据库、用户、`datetime` 信息和日志序列号 (LSN)。 `datetime` 信息与标记名一起用于唯一地标识标记。  
   
  有关如何将标记插入跨多个数据库的事务的信息，请参阅 [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](use-marked-transactions-to-recover-related-databases-consistently.md)。  
   

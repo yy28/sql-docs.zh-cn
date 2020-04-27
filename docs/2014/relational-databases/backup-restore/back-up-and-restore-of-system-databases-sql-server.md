@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0259f14bb814fd4157af95e4ce92f462d1fab68a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877264"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>系统数据库的备份和还原 (SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "62877264"
   
 -   某些情况下，恢复模型数据库时发生的问题可能需要重新生成系统数据库或替换模型数据库的 mdf 和 ldf 文件。 有关详细信息，请参阅 [重新生成系统数据库](../databases/system-databases.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)  
   

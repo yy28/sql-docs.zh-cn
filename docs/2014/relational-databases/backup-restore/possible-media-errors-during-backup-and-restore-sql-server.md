@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876104"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在备份和还原期间可能的介质错误 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62876104"
   
   
   
-##  <a name="BckChecksums"></a> 备份校验和  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> 备份校验和  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持三种校验和：页校验和、日志块校验和以及备份校验和。 生成备份校验和时，BACKUP 将验证从数据库读取的数据是否与数据库中存在的任意校验和或页残缺指示一致。  
   
  BACKUP 语句选择性地计算备份流的备份校验和；如果给定页上存在页校验和或残缺页信息，则当备份该页时，BACKUP 还将验证它的校验和、残缺页状态以及 ID。 创建备份校验和时，备份操作不会向页中添加任何校验和。 将在这些页位于数据库中时对其进行备份，备份不会修改这些页。  
@@ -75,7 +75,7 @@ ms.locfileid: "62876104"
   
 4.  发出一条消息，说明已成功生成备份，但备份中包含页错误。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **启用或禁用备份校验和**  
   
 -   [在备份或还原期间启用或禁用备份校验和 (SQL Server)](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

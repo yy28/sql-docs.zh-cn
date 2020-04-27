@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62878279"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 教程：创建简单的 ETL 包
@@ -39,7 +39,7 @@ ms.locfileid: "62878279"
   
  若要使用本教程，系统中必须安装下列组件：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]带有**AdventureWorksDW2012**数据库的。 为了增强安全性，默认情况下不会安装示例数据库。 要下载 **AdventureWorksDW2012** 数据库，请参阅 [Adventure Works for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=275026)。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 **数据库的** 。 为了增强安全性，默认情况下不会安装示例数据库。 要下载 **AdventureWorksDW2012** 数据库，请参阅 [Adventure Works for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=275026)。  
   
     > [!IMPORTANT]  
     >  附加数据库 (\*.mdf file) 时，默认情况下 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将搜索 .ldf 文件。 在 **“附加数据库”** 对话框中单击“确定”前，您必须手动删除 .ldf 文件。  
@@ -48,9 +48,9 @@ ms.locfileid: "62878279"
   
 -   示例数据。 示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 要下载示例数据和课程包，请执行以下操作：  
   
-    1.  导航到[Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  单击 **“下载”** 选项卡。  
+    2.  单击 "**下载**" 选项卡。  
   
     3.  单击 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 文件。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62878279"
  [第 4 课：添加错误流重定向](lesson-4-add-error-flow-redirection-with-ssis.md)  
  在本课中，将扩展第 3 课中创建的包，以便利用新增的错误输出配置。  
   
- [第 5 课： 添加包部署模型的包配置](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [第 5 课：添加包部署模型的包配置](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  在本课中，将扩展第 4 课中创建的包，利用新增的包配置选项。  
   
  [第 6 课：对项目部署模型使用参数](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

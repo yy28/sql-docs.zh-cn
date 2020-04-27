@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c617e4f7c069a869935fa4ed83d28c02d0b0b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917625"
 ---
 # <a name="database-mail-external-program"></a>数据库邮件外部程序
@@ -30,14 +30,14 @@ ms.locfileid: "62917625"
   
 -   [与配置数据库邮件外部程序相关的任务](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> 数据库邮件外部程序概念  
+##  <a name="database-mail-external-program-concepts"></a><a name="ComponentsAndConcepts"></a> 数据库邮件外部程序概念  
  该外部程序启动后，使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并开始处理电子邮件。 如果达到指定的超时期限时没有邮件要发送，该程序将退出。 可以使用数据库邮件配置向导或数据库邮件存储过程配置该程序退出前等待的时间。 有关详细信息，请参阅 [sysmail_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql)的服务帐户的安全上下文中运行。  
   
  外部程序将信息存储在 **msdb** 数据库的系统表中。 如果该外部程序无法与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信，就将错误记录在 Microsoft Windows 应用程序事件日志中。 如果在 **数据库邮件配置向导** 的 **“配置系统参数”** 对话框中将日志记录级别设置为 **“详细”** ，则还会记录其他消息。  
   
  请注意，为了提高效率，该外部程序会缓存帐户和配置文件信息。 因此，对帐户和配置文件所做的配置更改在几分钟内可能不会反映在该外部程序中。  
   
-##  <a name="RelatedTasks"></a> 与配置数据库邮件外部程序相关的任务  
+##  <a name="tasks-related-to-configuring-database-mail-external-program"></a><a name="RelatedTasks"></a> 与配置数据库邮件外部程序相关的任务  
   
 |配置任务|主题链接|  
 |------------------------|----------------|  

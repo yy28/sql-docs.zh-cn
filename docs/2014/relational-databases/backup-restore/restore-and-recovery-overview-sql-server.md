@@ -21,29 +21,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921010"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
-  若要从故障中恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，数据库管理员必须按照逻辑正确并且有意义的还原顺序还原一组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]还原和恢复支持从整个数据库、数据文件或数据页的备份还原数据，如下所示：  
+  若要从故障中恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，数据库管理员必须按照逻辑正确并且有意义的还原顺序还原一组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原和恢复支持从整个数据库、数据文件或数据页的备份还原数据，如下所示：  
   
--   数据库（“数据库完整还原”**）  
+-   数据库（“数据库完整还原”  ）  
   
      还原和恢复整个数据库，并且数据库在还原和恢复操作期间处于脱机状态。  
   
--   数据文件（“文件还原”**）  
+-   数据文件（“文件还原”  ）  
   
      还原和恢复一个数据文件或一组文件。 在文件还原过程中，包含相应文件的文件组在还原过程中自动变为脱机状态。 访问脱机文件组的任何尝试都会导致错误。  
   
--   数据页（“页面还原”**）  
+-   数据页（“页面还原”  ）  
   
      在完整恢复模式或大容量日志恢复模式下，可以还原单个数据库。 可以对任何数据库执行页面还原，而不管文件组数为多少。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原对所有支持的操作系统都有效，不管它们是 64 位还是 32 位系统。 有关支持的操作系统的信息，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)中的“兼容性支持”部分。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原对所有支持的操作系统都有效，不管它们是 64 位还是 32 位系统。 有关支持的操作系统的信息，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)中的“兼容性支持”部分。  
   
  **本主题内容：**  
   
@@ -53,15 +52,14 @@ ms.locfileid: "62921010"
   
 -   [简单恢复模式下的还原限制](#RMsimpleScenarios)  
   
--   [在大容量日志恢复模式下还原](#RMblogRestore)  
+-   [在大容量日志恢复模式下进行还原](#RMblogRestore)  
   
--   [数据库恢复顾问（SQL Server Management Studio）](#DRA)  
+-   [数据库恢复顾问 (SQL Server Management Studio)](#DRA)  
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="RestoreScenariosOv"></a>还原方案概述  
- 
-  *中的“还原方案*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ”是从一个或多个备份还原数据、继而恢复数据库的过程。 支持的还原方案取决于数据库的恢复模式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本。  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a>还原方案概述  
+ *中的“还原方案*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ”是从一个或多个备份还原数据、继而恢复数据库的过程。 支持的还原方案取决于数据库的恢复模式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本。  
   
  下表介绍了不同恢复模式所支持的可行还原方案。  
   
@@ -83,13 +81,13 @@ ms.locfileid: "62921010"
   
 -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，还原文件或页面的操作可能会允许数据库中的其他数据在还原操作期间仍保持联机状态。  
   
-##  <a name="RMsAndSupportedRestoreOps"></a>恢复模式和支持的还原操作  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a>恢复模式和支持的还原操作  
  可用于数据库的还原操作取决于所用的恢复模式。 下表简要说明了每种恢复模式是否支持给定的还原方案以及适用范围。  
   
 |还原操作|完整恢复模式|大容量日志恢复模式|简单恢复模式|  
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |数据恢复|完整还原（如果日志可用）。|某些数据将丢失。|自上次完整备份或差异备份后的任何数据将丢失。|  
-|时间点还原|日志备份所涵盖的任何时间。|日志备份包含任何大容量日志更改时不允许。|不支持。|  
+|时点还原|日志备份所涵盖的任何时间。|日志备份包含任何大容量日志更改时不允许。|不支持。|  
 |文件还原**\***|完全支持。|通常.**\*\***|仅对只读辅助文件可用。|  
 |页面还原**\***|完全支持。|通常.**\*\***|无。|  
 |逐段（文件组级）还原**\***|完全支持。|通常.**\*\***|仅对只读辅助文件可用。|  
@@ -101,7 +99,7 @@ ms.locfileid: "62921010"
 > [!IMPORTANT]  
 >  无论数据库的恢复模式如何， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法从早于创建该备份的版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本还原。  
   
-##  <a name="RMsimpleScenarios"></a>简单恢复模式下的还原方案  
+##  <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a>简单恢复模式下的还原方案  
  简单恢复模式对还原操作有下列限制：  
   
 -   文件还原和段落还原仅对只读辅助文件组可用。 有关这些还原方案的信息，请参阅 [文件还原（简单恢复模式）](file-restores-simple-recovery-model.md) 和[段落还原 (SQL Server)](piecemeal-restores-sql-server.md)。  
@@ -115,7 +113,7 @@ ms.locfileid: "62921010"
 > [!IMPORTANT]  
 >  无论数据库的恢复模式如何， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法从早于创建该备份的版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本还原。  
   
-##  <a name="RMblogRestore"></a>在大容量日志恢复模式下还原  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a>在大容量日志恢复模式下还原  
  本节讨论特定于大容量日志恢复模式的还原注意事项，大容量日志恢复模式专门用于补充完整恢复模式。  
   
 > [!NOTE]  
@@ -142,12 +140,12 @@ ms.locfileid: "62921010"
   
  有关如何执行联机还原的信息，请参阅[联机还原 (SQL Server)](online-restore-sql-server.md)。  
   
-##  <a name="DRA"></a>数据库恢复顾问（SQL Server Management Studio）  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a>数据库恢复顾问（SQL Server Management Studio）  
  数据库恢复顾问简化了制定还原计划的过程，可以很轻松地实现最优的正确还原顺序。 很多已知数据库还原问题和客户所要求的增强功能已得到解决。 数据库恢复顾问引入的主要增强功能包括：  
   
--   **还原计划算法：** 用于构造还原计划的算法经过了重大改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更高。  
+-   **还原计划算法：**  用于制定还原计划的算法已得到明显改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更高。  
   
--   **时间点还原：** 数据库恢复顾问极大地简化了将数据库还原到给定的时间点的情况。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+-   **时间点还原：**  数据库恢复顾问极大地简化了将数据库还原到给定时间点的过程。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
  有关详细信息，请参阅下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可管理性博客中有关数据库恢复顾问的信息：  
   
@@ -155,7 +153,7 @@ ms.locfileid: "62921010"
   
 -   [恢复顾问：使用 SSMS 创建/还原拆分备份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
  无。  
   
 ## <a name="see-also"></a>另请参阅  

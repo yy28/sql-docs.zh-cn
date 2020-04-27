@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892432"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>步骤 2：添加并配置日志记录
@@ -22,13 +22,13 @@ ms.locfileid: "62892432"
   
 ### <a name="to-add-logging-to-the-package"></a>向包中添加日志记录  
   
-1.  在 **SSIS** 菜单上，单击 **“日志记录”** 。  
+1.  在 **SSIS** 菜单上，单击 **“日志记录”**。  
   
 2.  在“配置 SSIS 日志”**** 对话框的“容器”**** 窗格中，确保选中了最前面的代表第 3 课包的对象。  
   
 3.  在“提供程序和日志”**** 选项卡的“提供程序类型”**** 框中，选择“用于文本文件的 SSIS 日志提供程序”****，然后单击“添加”****。  
   
-     Integration Services 将新的文本文件日志提供程序添加到具有默认名称的**文本文件的 SSIS 日志提供**程序的包中。 现在便可对新的日志提供程序进行配置。  
+     Integration Services 将向包中添加一个默认名称为“用于文本文件的 SSIS 日志提供程序”**** 的新文本文件日志提供程序。 现在便可对新的日志提供程序进行配置。  
   
 4.  在 "**名称**" 列中`Lesson 3 Log File`，键入。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "62892432"
   
 12. 单击“基本”**** 隐藏信息类别。  
   
-13. 在 "**提供程序和日志**" 选项卡**** 上的 "名称`Lesson 3 Log File`" 列中，选择。 为包创建日志提供程序后，可以选择取消选择它以临时关闭日志记录，而不必删除后再重新创建日志提供程序。  
+13. 在 "**提供程序和日志**" 选项卡**Name**上的 "名称`Lesson 3 Log File`" 列中，选择。 为包创建日志提供程序后，可以选择取消选择它以临时关闭日志记录，而不必删除后再重新创建日志提供程序。  
   
-14. 单击“确定”。   
+14. 单击" **确定**"。  
   
 ## <a name="next-steps"></a>后续步骤  
  [步骤 3：测试第 3 课教程包](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  

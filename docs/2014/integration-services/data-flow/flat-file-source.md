@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902430"
 ---
 # <a name="flat-file-source"></a>平面文件源
@@ -55,15 +55,15 @@ ms.locfileid: "62902430"
   
  有关可在 **“平面文件源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   ["平面文件源编辑器" &#40;连接管理器页&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [平面文件源编辑器（“连接管理器”页）](../flat-file-source-editor-connection-manager-page.md)  
   
--   ["平面文件源编辑器 &#40;列" 页&#41;](../flat-file-source-editor-columns-page.md)  
+-   [平面文件源编辑器（“列”页）](../flat-file-source-editor-columns-page.md)  
   
--   ["平面文件源编辑器" &#40;"错误输出" 页&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [平面文件源编辑器（“错误输出”页）](../flat-file-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../common-properties.md)  
+-   [通用属性](../common-properties.md)  
   
 -   [平面文件自定义属性](flat-file-custom-properties.md)  
   

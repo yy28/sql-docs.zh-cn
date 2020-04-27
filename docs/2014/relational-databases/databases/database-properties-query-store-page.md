@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917198"
 ---
 # <a name="database-properties-query-store-page"></a>数据库属性（查询存储页）
@@ -24,7 +24,7 @@ ms.locfileid: "62917198"
   
 ||  
 |-|  
-|**适用**于： [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
+|**适用于**： [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
 ## <a name="options"></a>选项  
  启用  
@@ -63,7 +63,7 @@ ms.locfileid: "62917198"
  查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可使用此查询存储数据库属性页面，或者使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 选项来配置查询存储。 查询存储通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 对话框来呈现信息。 有关查询存储的详细信息，请参阅 [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [查询存储存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
+ [查询存储存储过程 &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
  [查询存储目录视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
   
   

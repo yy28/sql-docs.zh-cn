@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874029"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
@@ -39,17 +39,17 @@ ms.locfileid: "62874029"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   仅限 Windows Unicode 的排序规则只能与 COLLATE 子句一起使用，以便将排序规则应用于列级别和表达式级别数据上的 `nchar`、`nvarchar` 和 `ntext` 数据类型。 它们不能与 COLLATE 子句一起使用以更改数据库或服务器实例的排序规则。  
   
 -   如果指定的排序规则或者被引用的对象所使用的排序规则使用 Windows 不支持的代码页，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将显示错误。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
--   你可以在 [Windows Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql) 和 [SQL Server Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)中找到支持的排序规则名称，或者可以使用 [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql) 系统函数。  
+-   你可以在 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql) 和 [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)中找到支持的排序规则名称，或者可以使用 [sys.fn_helpcollations (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql) 系统函数。  
   
 -   更改数据库排序规则时，需要更改下列内容：  
   
@@ -61,28 +61,28 @@ ms.locfileid: "62874029"
   
 -   可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 语句的 COLLATE 子句来更改在用户数据库中创建的任何新对象的排序规则。 使用此语句不能更改任何现有用户定义的表中列的排序规则。 使用 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句可以更改这些列的排序规则。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  CREATE DATABASE  
- 需要**master**数据库中的 create database 权限，或需要 CREATE any DATABASE 或 ALTER any database 权限。  
+ 需要对 **master** 数据库的 CREATE DATABASE 权限，或者需要 CREATE ANY DATABASE 或 ALTER ANY DATABASE 权限。  
   
  ALTER DATABASE  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>设置或更改数据库排序规则  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”** 。  
   
-2.  如果您正在创建一个新数据库，则右键单击 **“数据库”** ，然后单击 **“新建数据库”**。 如果您不希望使用默认排序规则，则单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
+2.  如果您正在创建一个新数据库，则右键单击 **“数据库”** ，然后单击 **“新建数据库”** 。 如果您不希望使用默认排序规则，则单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
   
-     或者，如果数据库已经存在，则右键单击所需数据库，然后单击 **“属性”**。 单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
+     或者，如果数据库已经存在，则右键单击所需数据库，然后单击 **“属性”** 。 单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
   
-3.  在完成后，单击 **“确定”**。  
+3.  在完成后，单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>设置数据库排序规则  
   
@@ -135,15 +135,15 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [排序规则和 Unicode 支持](collation-and-unicode-support.md)   
- [sys. fn_helpcollations &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
- [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [Transact-sql&#41;SQL Server 排序规则 &#40;名称](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [Windows 排序规则名称 &#40;Transact-sql&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [sys.fn_helpcollations (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
+ [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)   
  [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)   
- [排序规则优先级 &#40;Transact-sql&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [排序规则优先级 (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

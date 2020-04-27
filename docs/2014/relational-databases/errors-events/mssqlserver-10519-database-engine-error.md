@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bb9c6f7fddc9ba0d4430b42ba5472a59c29e3cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916232"
 ---
 # <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
@@ -33,8 +33,7 @@ ms.locfileid: "62916232"
 |消息正文|无法创建计划指南 '%.\*ls'，因为 `@hints` 中指定的提示无法应用于 `@stmt` 或 `@statement_start_offset` 指定的语句。 请确保提示可以应用于该语句。|  
   
 ## <a name="explanation"></a>说明  
- 
-  `@hints` 中指定的语句无法应用于 `@stmt` 或 `@statement_start_offset` 指定的语句。  
+ `@hints` 中指定的语句无法应用于 `@stmt` 或 `@statement_start_offset` 指定的语句。  
   
 ## <a name="user-action"></a>用户操作  
  请指定可以应用于该语句的提示。  

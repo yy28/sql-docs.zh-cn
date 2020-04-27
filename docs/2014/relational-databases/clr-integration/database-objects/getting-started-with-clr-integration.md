@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874123"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 集成入门
@@ -102,8 +102,7 @@ C:\Windows\Microsoft.NET\Framework\(version)
 C:\Windows\Microsoft.NET\Framework\v2.0.31113  
 ```  
   
- 一旦将 .NET Framework 目录添加到路径后，您可以使用以下命令将该存储过程示例编译到某一程序集中。 
-  `/target` 选项可用于将其编译到某一程序集中。  
+ 一旦将 .NET Framework 目录添加到路径后，您可以使用以下命令将该存储过程示例编译到某一程序集中。 `/target` 选项可用于将其编译到某一程序集中。  
   
  对于 Visual C# 源文件：  
   
@@ -143,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- 一旦创建该存储过程后，就可以像用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编写的普通存储过程一样运行该存储过程。 运行以下命令：  
+ 一旦创建该存储过程后，就可以像用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编写的普通存储过程一样运行该存储过程。 执行以下命令：  
   
 ```  
 DECLARE @J nchar(25)  

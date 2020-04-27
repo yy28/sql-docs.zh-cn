@@ -19,18 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917464"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>通过备份和还原来复制数据库
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过还原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本创建的用户数据库备份来创建新数据库。 但是， **无法还原使用**早期版本创建的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份。 此外，任何早期版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都无法还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用与早期版本不同的默认路径。 因此，若要还原在早期版本的默认位置中创建的数据库备份，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 有关移动数据库文件的详细信息，请参阅本主题中后面的“移动数据库文件”。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用与早期版本不同的默认路径。 因此，若要还原在早期版本的默认位置中创建的数据库备份，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅[SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 有关移动数据库文件的详细信息，请参阅本主题中后面的“移动数据库文件”。  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>使用备份和还原复制数据库的一般步骤  
  使用备份和还原将数据库复制到其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，源计算机和目标计算机可以是运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何平台。  
@@ -93,7 +92,7 @@ ms.locfileid: "62917464"
  在其他计算机上还原数据库时，启动还原操作的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录用户或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户将自动成为新数据库的所有者。 还原数据库时，系统管理员或新数据库所有者可以更改数据库所有权。 若要防止未经授权的数据库还原操作，请使用介质集或备份集密码。  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>还原到另一个服务器实例时管理元数据  
- 将数据库还原到另一个服务器实例上时，为了给用户和应用程序提供一致的体验，您可能需要在另一个服务器实例上为数据库重新创建部分或全部元数据（例如登录和作业）。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](manage-metadata-when-making-a-database-available-on-another-server.md)。  
+ 将数据库还原到另一个服务器实例上时，为了给用户和应用程序提供一致的体验，您可能需要在另一个服务器实例上为数据库重新创建部分或全部元数据（例如登录和作业）。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
  **查看备份集中的数据文件和日志文件**  
   
@@ -115,11 +114,11 @@ ms.locfileid: "62917464"
   
  **重新启动中断的还原操作**  
   
--   [&#40;Transact-sql&#41;重启中断的还原操作](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [重新启动中断的还原操作 (Transact-SQL)](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
  **更改数据库的所有者**  
   
--   [sp_changedbowner &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
+-   [sp_changedbowner (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
  **使用 SQL Server 管理对象 (SMO) 复制数据库**  
   
@@ -134,7 +133,7 @@ ms.locfileid: "62917464"
 ## <a name="see-also"></a>另请参阅  
  [将数据库复制到其他服务器](copy-databases-to-other-servers.md)   
  [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [RESTORE FILELISTONLY &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

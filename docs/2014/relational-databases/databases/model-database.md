@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916943"
 ---
 # <a name="model-database"></a>model 数据库
@@ -89,7 +89,7 @@ ms.locfileid: "62916943"
   
 -   更改排序规则。 默认排序规则为服务器排序规则。  
   
--   更改数据库所有者。 **模型**由**sa**所有。  
+-   更改数据库所有者。 **模型** 的所有者是 **sa**。  
   
 -   删除数据库。  
   

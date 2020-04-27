@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62931507"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>第 2 课：生成 Targeted Mailing 结构（数据挖掘基础教程）
-  
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场部希望通过向目标特定客户发送邮件的方式来提高销售量。 公司的数据库包含一个现有客户列表和一个潜在的新客户列表。 公司希望通过调查现有客户的特征来发现适用于潜在客户的模式。 例如，他们可能会使用过去的趋势预测哪些潜在客户最有可能购买自行车[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，或为未来市场营销活动创建客户群。  
   
  在本课程中，您将使用**数据挖掘向导**来创建目标邮件结构。 完成本课程中的任务之后，您将创建一个具有一个模型的挖掘结构。 由于创建结构涉及到很多步骤和重要的概念，因此我们将此过程分成以下三个任务：  

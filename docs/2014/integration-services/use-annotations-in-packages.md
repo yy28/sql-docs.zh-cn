@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 912a4fda72d0a760264106fca1f886663523397e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62926219"
 ---
 # <a name="use-annotations-in-packages"></a>在包中使用批注
@@ -32,6 +32,6 @@ ms.locfileid: "62926219"
   
 ### <a name="to-add-an-annotation-to-a-package"></a>将批注添加到包  
   
--   [向包中添加批注](../../2014/integration-services/add-an-annotation-to-a-package.md)  
+-   [将批注添加到包](../../2014/integration-services/add-an-annotation-to-a-package.md)  
   
   

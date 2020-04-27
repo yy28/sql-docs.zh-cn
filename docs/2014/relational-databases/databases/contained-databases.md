@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917566"
 ---
 # <a name="contained-databases"></a>包含的数据库
@@ -45,9 +45,9 @@ ms.locfileid: "62917566"
   
 -   [限制](#Limitations)  
   
--   [标识数据库包含关系](#Identifying)  
+-   [标识数据库包含](#Identifying)  
   
-##  <a name="Concepts"></a>部分包含的数据库概念  
+##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a>部分包含的数据库概念  
  完全包含的数据库包括定义数据库所需的所有数据库设置和元数据，它与安装数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例没有配置依赖关系。 在以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，将一个数据库与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例隔离开来可能会很耗时，并且要求该数据库与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间的关系的详细知识。 通过部分包含的数据库，可以轻松地将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库与其他数据库隔离开来。  
   
  包含数据库将根据包含情况来考虑功能。 任何只依赖于数据库内部功能的用户定义实体均被视为处于完全包含状态。 任何依赖于数据库外部功能的用户定义实体均被视为处于非包含状态。 （有关详细信息，请参阅本主题后面的 [包含](#containment) 部分。）  
@@ -67,13 +67,12 @@ ms.locfileid: "62917566"
  具有设置为 **NONE**的包含的数据库。 版本早于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的所有数据库均属于非包含数据库。 默认情况下，所有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本数据库的包含都设置为 **NONE**。  
   
  部分包含数据库  
- 部分包含数据库是一种包含数据库，可允许存在跨越数据库边界的某些功能。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括确定何时跨越包含边界的功能。  
+ 部分包含数据库是一种包含数据库，可允许存在跨越数据库边界的某些功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括确定何时跨越包含边界的功能。  
   
  包含的用户  
  包含数据库有两种用户类型。  
   
--   **包含密码的包含数据库用户**  
+-   **具有密码的包含数据库用户**  
   
      具有密码的包含数据库用户由数据库进行身份验证。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "62917566"
   
  数据库边界之外是“管理模型” **，这与实例级别的功能和管理有关。 位于数据库边界之外的实体示例包括：系统表（如 **sys.endpoints**）、映射到登录名的用户，以及另一个数据库中由特定名称（包含三部分）引用的用户表。  
   
-##  <a name="containment"></a>包含  
+##  <a name="containment"></a><a name="containment"></a> 包含  
  完全位于数据库内部的用户实体被视为“包含” ** 实体。 任何位于数据库之外的实体或任何需要与数据库之外的功能进行交互的实体均被视为“非包含” ** 实体。  
   
  一般而言，用户实体分为以下几种包含类别：  
@@ -102,7 +101,7 @@ ms.locfileid: "62917566"
   
 -   非包含用户实体（跨越数据库边界的用户实体），例如 sys.server_principals 或服务器主体（登录名）本身。 任何使用这些实体的代码或任何引用这些实体的功能都是非包含实体。  
   
-###  <a name="partial"></a>部分包含的数据库  
+###  <a name="partially-contained-database"></a><a name="partial"></a>部分包含的数据库  
  包含数据库的功能目前只在部分包含状态下可用。 部分包含数据库是一种允许使用非包含功能的包含数据库。  
   
  使用 [sys.dm_db_uncontained_entities](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) 和 [sys.sql_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 视图可返回有关非包含对象或功能的信息。 通过确定数据库元素的包含状态，可以发现必须替换或更改哪些对象或功能才能提升包含。  
@@ -112,7 +111,7 @@ ms.locfileid: "62917566"
   
  部分包含数据库与非包含数据库之间在行为方面的最大区别在于排序规则。 有关排序规则问题的详细信息，请参阅 [Contained Database Collations](contained-database-collations.md)。  
   
-##  <a name="benefits"></a>使用部分包含数据库的好处  
+##  <a name="benefits-of-using-partially-contained-databases"></a><a name="benefits"></a>使用部分包含数据库的好处  
  与非包含数据库关联的某些问题和复杂性可通过使用部分包含数据库加以解决。  
   
 ### <a name="database-movement"></a>数据库移动  
@@ -134,7 +133,7 @@ ms.locfileid: "62917566"
 ### <a name="database-administration"></a>数据库管理  
  通过在数据库中维护数据库设置，而非在 master 数据库中进行维护，使每个数据库所有者都可以更好地控制其数据库，而不必向数据库所有者授予 **sysadmin** 权限。  
   
-##  <a name="Limitations"></a>限制  
+##  <a name="limitations"></a><a name="Limitations"></a> 限制  
  部分包含数据库不允许以下功能。  
   
 -   部分包含数据库不能使用复制、更改数据捕获或更改跟踪。  
@@ -150,9 +149,8 @@ ms.locfileid: "62917566"
 > [!WARNING]  
 >  目前允许临时存储过程。 因为临时存储过程违反包含，所以，预计在将来的包含数据库版本中将不再支持临时存储过程。  
   
-##  <a name="Identifying"></a>标识数据库包含  
- 可以借助两个工具来帮助识别数据库的包含状态。 
-  [sys.dm_db_uncontained_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) 是可以显示数据库中所有潜在的非包含实体的视图。 在运行时识别出任何实际的非包含实体时将 database_uncontained_usage 事件将发生。  
+##  <a name="identifying-database-containment"></a><a name="Identifying"></a> 标识数据库包含关系  
+ 可以借助两个工具来帮助识别数据库的包含状态。 [sys.dm_db_uncontained_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) 是可以显示数据库中所有潜在的非包含实体的视图。 在运行时识别出任何实际的非包含实体时将 database_uncontained_usage 事件将发生。  
   
 ### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  此视图显示数据库中有可能成为非包含实体的所有实体（如跨数据库边界的那些实体）。 这包括可能在数据库模型外部使用对象的那些用户实体。 但是，由于直到运行时才能确定某些实体（例如那些使用动态 SQL 的实体）的包含关系，所以此视图中显示的某些实体实际上可能并不是非包含实体。 有关详细信息，请参阅 [sys.dm_db_uncontained_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql)。  
@@ -161,7 +159,7 @@ ms.locfileid: "62917566"
  在运行时标识出非包含实体时将发生此 XEvent。 这包括源自客户端代码的实体。 此 XEvent 仅针对实际的非包含实体发生。 但是，该事件仅在运行时发生。 因此，此 XEvent 将不能识别您尚未运行的任何非包含用户实体。  
   
 ## <a name="related-content"></a>相关内容  
- [包含的数据库 &#40;的已修改功能&#41;](modified-features-contained-database.md)  
+ [经过修改的功能（包含的数据库）](modified-features-contained-database.md)  
   
  [包含数据库的排序规则](contained-database-collations.md)  
   

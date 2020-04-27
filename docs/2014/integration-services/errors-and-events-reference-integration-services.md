@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899445"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>错误和事件参考 (Integration Services)
@@ -42,7 +42,7 @@ ms.locfileid: "62899445"
 |DTS_E_CONNECTIONNOTFOUND|指示由于找不到指定的连接管理器而导致包无法运行。|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|指示 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器必须连接到数据源，以便为源或目标检索新的或更新的元数据，同时还指示它无法连接到数据源。|  
 |DTS_E_MULTIPLECACHEWRITES|指示由于“缓存转换”转换正在尝试将数据写入内存中的缓存中而导致包无法运行。 但是，另一个“缓存转换”转换已将数据写入内存中的缓存中。|  
-|DTS_E_PRODUCTLEVELTOLOW|指示由于未安装的适当版本[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]而无法运行包。|  
+|DTS_E_PRODUCTLEVELTOLOW|指示由于未安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的适当版本而无法运行包。|  
 |DTS_E_READNOTFILLEDCACHE|指示在“缓存转换”转换将数据写入缓存的同时，查找转换尝试从内存中的缓存中读取数据。|  
 |DTS_E_UNPROTECTXMLFAILED|指示系统没有解密受保护的 XML 节点。|  
 |DTS_E_WRITEWHILECACHEINUSE|指示在查找转换从内存中的缓存中读取数据的同时，“缓存转换”转换尝试将数据写入内存中的缓存中。|  

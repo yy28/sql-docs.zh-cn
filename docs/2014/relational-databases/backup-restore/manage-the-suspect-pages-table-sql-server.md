@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921950"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62921950"
   
  如果 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 在试图读取某个数据页时遇到下列错误之一，该页面将被视为“可疑”：  
   
--   由操作系统发出的循环冗余检查（CRC）导致的[823 错误](../errors-events/mssqlserver-823-database-engine-error.md)，如磁盘错误（某些硬件错误）  
+-   由操作系统发出的循环冗余检查 (CRC) 导致的 [823 错误](../errors-events/mssqlserver-823-database-engine-error.md) ，如磁盘错误（某些硬件错误）  
   
 -   [824 错误](../errors-events/mssqlserver-824-database-engine-error.md)，如页撕裂（任何逻辑错误）  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62921950"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   **suspect_pages 表中记录的错误**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62921950"
   
      数据库管理员还可以插入或更新记录。 例如，如果数据库管理员知道某个特定的可疑页实际上没问题但想要暂时保留记录，更新行可能就很有用。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  任何拥有 **msdb** 访问权限的人员都可以读取 **suspect_pages** 表中的数据。 任何拥有 suspect_pages 表的 UPDATE 权限的人员都可以更新它的记录。 **msdb** 上的 **db_owner** 固定数据库角色或 **sysadmin** 固定服务器角色的成员都可以插入、更新和删除记录。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>管理 suspect_pages 表  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921950"
   
 4.  在查询窗口中，编辑、更新或删除所需的行。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>管理 suspect_pages 表  
   

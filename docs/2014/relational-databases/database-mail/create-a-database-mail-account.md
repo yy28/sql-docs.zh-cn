@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917724"
 ---
 # <a name="create-a-database-mail-account"></a>创建数据库邮件帐户
@@ -29,15 +29,15 @@ ms.locfileid: "62917724"
   
 -   **跟进：** [用于配置数据库邮件的后续步骤](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   确定用于发送电子邮件的服务器名称和简单邮件传输协议 (SMTP) 服务器的端口号。如果 SMTP 服务器需要身份验证，请确定 SMTP 服务器的用户名和密码。  
   
 -   （可选）还可以指定服务器的类型和服务器的端口号。 发送邮件的服务器类型始终为 SMTP。 默认情况下，大多数 SMTP 服务器使用端口 25。  
   
-##  <a name="SSMSProcedure"></a> 使用数据库邮件配置向导  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> 使用数据库邮件配置向导  
  **使用向导创建数据库邮件帐户**  
   
 -   在对象资源管理器中，连接到您要在其上配置数据库邮件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后展开服务器树。  
@@ -54,7 +54,7 @@ ms.locfileid: "62917724"
   
 -   在 **“完成该向导”** 页上，检查要执行的操作，然后单击 **“完成”** 以完成创建新帐户。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **使用 Transact-SQL 创建数据库邮件帐户**  
   
  执行存储过程 **msdb.dbo.sysmail_add_account_sp** 以创建帐户，并指定以下信息：  
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：用于配置数据库邮件的后续步骤  
+##  <a name="follow-up-next-steps-to-configuring-the-database-mail"></a><a name="FollowUp"></a> 跟进：用于配置数据库邮件的后续步骤  
   
 -   [创建数据库邮件配置文件](create-a-database-mail-profile.md)  
   

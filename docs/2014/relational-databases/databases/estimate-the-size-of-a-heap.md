@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916741"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估计堆的大小
@@ -40,7 +40,7 @@ ms.locfileid: "62916741"
   
      ***Num_Variable_Cols***  = 可变长度列数  
   
-     Max_Var_Size ***= 所有可变长度列的最大总字节大小***  
+     ***Max_Var_Size***  = 所有可变长度列的最大总字节大小  
   
 3.  保留行中称为 Null 位图的部分以管理列的为空性。 计算其大小：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62916741"
   
      ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
   
-     添加到 Max_Var_Size ***中的字节用于跟踪每个可变长度列*** 。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Size*** 值，从而对整个表大小得出一个更准确的估计。  
+     添加到 ***Max_Var_Size*** 中的字节用于跟踪每个可变长度列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Size*** 值，从而对整个表大小得出一个更准确的估计。  
   
     > [!NOTE]  
     >  您可以组合 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 列，使得定义的表的总宽度超过 8,060 字节。 对于`varchar`、或`nvarchar,``varbinary` `sql_variant`列，这些列中每一列的长度仍必须在8000字节以内。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
@@ -63,7 +63,7 @@ ms.locfileid: "62916741"
   
 5.  计算总的行大小：  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
   
      公式中的值 4 是数据行的行标题开销。  
   
@@ -75,13 +75,13 @@ ms.locfileid: "62916741"
   
 7.  计算存储所有行所需的页数：  
   
-     ***Num_Pages***  = ****** Num_Rows / ***Rows_Per_Page***  
+     ***Num_Pages***  = ***Num_Rows***Num_Rows / ***Rows_Per_Page***  
   
      估计的页数应向上舍入到最接近的整数。  
   
 8.  计算在堆中存储数据所需的空间量（每页的总字节为 8192）：  
   
-     堆大小（字节） = 8192 x ***Num_Pages***  
+     堆大小（字节）= 8192 x ***Num_Pages***  
   
  此计算不考虑以下因素：  
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920685"
 ---
 # <a name="transaction-log-backups-sql-server"></a>事务日志备份 (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62920685"
   
  **本主题内容：**  
   
--   [一系列日志备份的工作原理](#LogBackupSequence)  
+-   [日志备份顺序的工作方式](#LogBackupSequence)  
   
 -   [建议](#Recommendations)  
   
@@ -37,8 +37,8 @@ ms.locfileid: "62920685"
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a>一系列日志备份的工作原理  
- 事务日志备份“日志链”  的序列与数据备份无关。 例如，假设有下列事件顺序。  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>一系列日志备份的工作原理  
+ 事务日志备份“日志链” ** 的序列与数据备份无关。 例如，假设有下列事件顺序。  
   
 |时间|事件|  
 |----------|-----------|  
@@ -50,7 +50,7 @@ ms.locfileid: "62920685"
   
  在下午 8:00 创建的事务日志备份 包含从下午 4:00 到下午 8:00 的事务日志记录， 跨越创建完整数据库备份的时间点（下午 6:00）。 事务日志备份序列是连续的，从创建初始完整数据库备份的时间（上午 8:00） 到创建最后事务日志备份的时间（下午 8:00）。 有关如何应用这些日志备份的信息，请参阅 [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md).中的示例。  
   
-##  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   如果事务日志损坏，则最新有效备份以后执行的工作将丢失。 因此，我们强烈建议您将日志文件存储在容错的存储设备中。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62920685"
   
 -   默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地备份日志，这些成功消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **创建事务日志备份**  
   
 -   [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)  
@@ -67,7 +67,7 @@ ms.locfileid: "62920685"
   
  若要计划备份作业，请参阅 [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
  无。  
   
 ## <a name="see-also"></a>另请参阅  

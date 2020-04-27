@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917078"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62917078"
     > [!NOTE]  
     >  如果尝试在不指定日志文件的情况下附加数据库，则附加操作将会在日志文件的原始位置中查找文件。 如果原始位置还有一份日志，则附加该日志。 若要避免使用原始日志文件，请指定新日志文件的路径，或在日志文件复制到新位置之后，删除其原始副本。  
   
-3.  附加复制的文件。 有关详细信息，请参阅[附加数据库](attach-a-database.md)。  
+3.  附加复制的文件。 有关详细信息，请参阅 [Attach a Database](attach-a-database.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例创建了[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]语句的副本，这些语句在连接到附加到的服务器实例的查询编辑器窗口中执行。  

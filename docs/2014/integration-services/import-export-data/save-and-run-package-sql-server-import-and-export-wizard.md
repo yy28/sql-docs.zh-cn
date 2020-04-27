@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894761"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>保存并执行包（SQL Server 导入和导出向导）
   使用 "**保存并执行包**" 对话框可以立即运行包，将其保存到稍后运行。  
   
 > [!NOTE]  
->  如果在包完成运行前停止包，即使选中了 "**保存**" 复选框，也不会保存包。  
+>   如果在包完成运行前停止包，即使选中了 **“保存”** 复选框，也不会保存该包。  
   
  若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解用于启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62894761"
 > [!NOTE]  
 >  仅当选择了 "**保存 SSIS 包**" 选项时，此选项才可用。  
   
- **权限**  
+ **密码**  
  键入密码。  
   
 > [!NOTE]  

@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918817"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
@@ -36,15 +36,15 @@ ms.locfileid: "62918817"
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为使用其中一个系统服务帐户（Local System、Network Service 或 Local Service）运行，且创建管理数据仓库的实例与数据收集器的实例不同，则必须将收集组配置为使用代理将数据上载到管理数据仓库。  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  请确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在运行。  
   
 2.  在对象资源管理器中，展开 **“管理”** 节点。  
   
-3.  右键单击“数据收集”****，展开“任务”****，然后单击“配置管理数据仓库”****。  
+3.  右键单击“数据收集”  ，展开“任务”  ，然后单击“配置管理数据仓库”  。  
   
-4.  使用 [配置管理数据仓库向导](#Wizard) 创建一个管理数据仓库，配置登录名，启用数据收集，然后启动 **“系统数据收集组”**。  
+4.  使用 [配置管理数据仓库向导](#Wizard) 创建一个管理数据仓库，配置登录名，启用数据收集，然后启动 **“系统数据收集组”** 。  
   
      若要配置多个实例，请继续执行步骤 5。  
   
@@ -55,19 +55,19 @@ ms.locfileid: "62918817"
   
     -   使用配置管理数据仓库向导为现有的管理数据仓库配置数据收集。  
   
-    -   右键单击“数据收集”****，然后单击“属性”****。 在 **“常规”** 选项卡上，指定现有的管理数据仓库以及安装该管理数据仓库的服务器。  
+    -   右键单击“数据收集”  ，然后单击“属性”  。 在 **“常规”** 选项卡上，指定现有的管理数据仓库以及安装该管理数据仓库的服务器。  
   
 6.  重复步骤 5 直至将使用该数据收集的所有数据库实例均配置为将数据上载到共享的管理数据仓库。  
   
-####  <a name="Wizard"></a>配置管理数据仓库向导  
- **欢迎页**  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> 配置管理数据仓库向导  
+ **“欢迎”页**  
   
  欢迎页是配置数据收集向导的起始页。 是否显示此页是可选的。  
   
  **不再显示此起始页。**  
  选择此选项可在下一次启动配置数据收集向导时不显示该页。  
   
- **"配置管理数据仓库存储" 页**  
+ **“配置管理数据仓库存储”页**  
   
  使用此页可选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库服务器和管理数据仓库。 管理数据仓库是将存储收集的数据的关系数据库。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918817"
   
  只有在配置数据收集组时， **“新建”** 选项才可用。  
   
- **"映射登录名和用户" 页**  
+ **“映射登录名和用户”页**  
   
  使用此页可以将登录名映射到管理数据仓库的数据库用户角色。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62918817"
   
  可通过为某个登录名选中 **“映射”** 复选框来指定该登录名。  
   
- **数据库角色成员身份：**  *\<数据仓库名称>*  
+ **数据库角色成员身份：** *\<data warehouse name>*  
  通过单击以下一个或多个选项旁边的复选框，选择登录名映射到的管理数据仓库角色：  
   
 -   **mdw_admin**  
@@ -103,23 +103,23 @@ ms.locfileid: "62918817"
 -   **mdw_writer**  
   
  **新建登录名**  
- 打开“登录名 - 新建”**** 对话框并为管理数据仓库创建新的登录名。  
+ 打开“登录名 - 新建”  对话框并为管理数据仓库创建新的登录名。  
   
- **完成向导页面**  
+ **“完成向导”页**  
   
  使用此页可验证和完成数据收集配置。 显示在查看窗口中的树用于说明将应用的配置以及单击 **“完成”** 时将执行的操作。  
   
- **"配置数据收集向导进度" 页**  
+ **“配置数据收集向导进度”页**  
   
  使用此页可查看每个配置步骤的结果。  
   
  **详细信息**  
- 每个配置步骤在“详细信息”**** 网格中显示为一行。 每一行均包含描述相应步骤的 **“操作”** 列和指示该步骤成功或失败的 **“状态”** 列。 如果有错误，则在 **“消息”** 列中会显示消息。  
+ 每个配置步骤在“详细信息”  网格中显示为一行。 每一行均包含描述相应步骤的 **“操作”** 列和指示该步骤成功或失败的 **“状态”** 列。 如果有错误，则在 **“消息”** 列中会显示消息。  
   
  **Stop**  
  停止向导的处理。  
   
- **报告**  
+ **Report**  
  查看数据收集配置的报告。 提供了以下报告选项：  
   
 -   查看报告  
@@ -134,8 +134,8 @@ ms.locfileid: "62918817"
  关闭向导。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_syscollector_enable_collector &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
- [sp_syscollector_disable_collector &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
+ [sp_syscollector_enable_collector (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [sp_syscollector_disable_collector (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
  [数据收集](data-collection.md)   
  [管理数据收集](manage-data-collection.md)  
   

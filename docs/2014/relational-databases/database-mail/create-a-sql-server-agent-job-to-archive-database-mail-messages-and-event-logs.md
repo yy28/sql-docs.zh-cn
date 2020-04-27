@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917589"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
@@ -29,21 +29,21 @@ ms.locfileid: "62917589"
   
 -   **使用以下方法存档数据库邮件和日志：** [SQL Server 代理](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  用于存储存档数据的新表可以位于特殊的存档数据库中。 另外，还可将行导出到文本文件中。  
  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
  在生产环境中，可能需要进一步添加错误检查，并在作业失败的情况下向操作员发送电子邮件。  
   
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  只有 **sysadmin** 固定服务器角色的成员才能执行本主题中介绍的存储过程。  
   
   
-###  <a name="Process_Overview"></a> 过程概述  
+###  <a name="overview-of-the-process"></a><a name="Process_Overview"></a> 过程概述  
   
 -   第一个过程创建一个名为“存档数据库邮件”的作业，其中包含下列步骤。  
   

@@ -21,22 +21,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894588"
 ---
 # <a name="using-variables-in-the-script-task"></a>在脚本任务中使用变量
   通过变量，脚本任务可以与包中的其他对象交换数据。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services-ssis-variables.md)。  
   
- 脚本任务使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 对象的 `Dts` 属性，从包中的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 对象读取数据或向其中写入数据。  
+ 脚本任务使用 `Dts` 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 属性，从包中的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 对象读取数据或向其中写入数据。  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 类的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 属性的类型为 `Object`。 由于脚本任务启用了 `Option Strict`，因此在使用 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 属性之前，必须先将其转换为适当的类型。  
+>  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 类的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 属性的类型为 `Object`。 由于脚本任务启用了 `Option Strict`，因此在使用 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 属性之前，必须先将其转换为适当的类型。  
   
- 可以在“脚本任务编辑器”中向 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 列表添加现有变量，以使它们可用于自定义脚本  。 请注意，变量名称区分大小写。 在脚本内，您可以通过 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 对象的 `Dts` 属性访问这两种类型的变量。 使用 `Value` 属性可以从单个变量读取数据或向其中写入数据。 脚本任务在脚本读取和修改变量的值时，透明地管理锁定。  
+ 可以在“脚本任务编辑器”中向 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 列表添加现有变量，以使它们可用于自定义脚本  。 请注意，变量名称区分大小写。 在脚本内，您可以通过 `Dts` 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 属性访问这两种类型的变量。 使用 `Value` 属性可以从单个变量读取数据或向其中写入数据。 脚本任务在脚本读取和修改变量的值时，透明地管理锁定。  
   
  在代码中使用某个变量之前，可以使用 <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> 属性返回的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 方法来检查该变量是否存在。  
   
@@ -118,7 +117,7 @@ public class ScriptMain
 ![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services (SSIS) 变量](../../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 变量](../../integration-services-ssis-variables.md)   
  [在包中使用变量](../../use-variables-in-packages.md)  
   
   

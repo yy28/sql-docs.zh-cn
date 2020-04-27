@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919950"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中注册用户定义类型
@@ -64,8 +64,7 @@ ms.locfileid: "62919950"
 ### <a name="using-create-assembly"></a>使用 ASSEMBLY  
  使用 CREATE ASSEMBLY 语法可以在要使用 UDT 的数据库中注册程序集。 经过注册的程序集不具有任何依赖关系。  
   
- 不允许在给定数据库中创建同一程序集的多个版本。 不过，可以基于给定数据库的区域性创建同一程序集的多个版本。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中注册的不同程序集名称来区分程序集的多个区域性版本。 有关详细信息，请参阅 .NET Framework SDK 中的“创建和使用具有强名称的程序集”。  
+ 不允许在给定数据库中创建同一程序集的多个版本。 不过，可以基于给定数据库的区域性创建同一程序集的多个版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中注册的不同程序集名称来区分程序集的多个区域性版本。 有关详细信息，请参阅 .NET Framework SDK 中的“创建和使用具有强名称的程序集”。  
   
  在权限集设置为 SAFE 或 EXTERNAL_ACCESS 的情况下执行 CREATE ASSEMBLY 时，将检查程序集，确保其可验证并且是类型安全的。 如果未指定权限集，则假定为 SAFE。 不检查权限集为 UNSAFE 的代码。 有关程序集的权限集的详细信息，请参阅[设计程序集](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
@@ -172,10 +171,10 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **assembly_id**  
  为程序集定义的标识符。 此编号分配到与同一程序集相关的所有对象。  
   
- **路径名**  
+ **name**  
  对象的名称。  
   
- file_id   
+ **file_id**  
  标识每个对象的数字，其中第一个与给定**assembly_id**关联的对象的值为1。 如果有多个对象与同一个**assembly_id**相关联，则每个后续**file_id**值将递增1。  
   
  **content**  

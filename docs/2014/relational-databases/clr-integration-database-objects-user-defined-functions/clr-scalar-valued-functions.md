@@ -18,21 +18,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919593"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 标量值函数
-  标量值函数 (SVF) 返回单个值，例如字符串、整数或位值。您可以使用任何 .NET Framework 编程语言以托管代码形式创建标量值用户定义函数。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码可访问这些函数。 有关 CLR 集成的优点以及如何在托管代码和[!INCLUDE[tsql](../../includes/tsql-md.md)]之间进行选择的信息，请参阅[clr 集成概述](../clr-integration/clr-integration-overview.md)。  
+  标量值函数 (SVF) 返回单个值，例如字符串、整数或位值。您可以使用任何 .NET Framework 编程语言以托管代码形式创建标量值用户定义函数。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码可访问这些函数。 有关 CLR 集成的优点以及如何在托管代码和[!INCLUDE[tsql](../../includes/tsql-md.md)]之间进行选择的信息，请参阅[clr 集成概述](../clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 标量值函数的要求  
  在 .NET Framework 程序集中 .NET Framework  SVF 将实现为类的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]输入参数和从 SVF 返回的类型可以是支持的任何标量数据类型，但、、、、 `varchar`、 `char`、 `rowversion`、 `text`或`ntext` `table` `cursor`除外`image` `timestamp`。 SVF 必须确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和实现方法的返回数据类型相匹配。 有关类型转换的详细信息，请参阅[映射 CLR 参数数据](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
- 使用 .NET Framework 语言实现 .NET Framework SVF 时，可以指定 `SqlFunction` 自定义属性以包括有关此函数的其他信息。 
-  `SqlFunction` 属性可以指示该函数是否访问或修改数据、是否为确定性函数以及是否涉及浮点运算。  
+ 使用 .NET Framework 语言实现 .NET Framework SVF 时，可以指定 `SqlFunction` 自定义属性以包括有关此函数的其他信息。 `SqlFunction` 属性可以指示该函数是否访问或修改数据、是否为确定性函数以及是否涉及浮点运算。  
   
  标量值用户定义函数可以是确定性函数也可以是不确定性函数。 如果使用一组特定的输入参数调用某个确定性函数，则该确定性函数始终返回相同的结果。 如果使用一组特定的输入参数调用某个不确定性函数，则该不确定性函数返回的结果可能会不同。  
   
@@ -84,11 +82,9 @@ End Class
   
  代码的第一行引用 `Microsoft.SqlServer.Server` 以访问属性并引用 `System.Data.SqlClient` 以访问 ADO.NET 命名空间。 （此命名空间包含 `SqlClient`，即 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。）  
   
- 接下来，该函数收到 `SqlFunction` 自定义属性，它位于 `Microsoft.SqlServer.Server` 命名空间中。 该自定义属性指示用户定义函数 (UDF) 是否使用进程内访问接口来读取服务器中的数据。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许 UDF 更新、插入或删除数据。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以优化执行不使用进程内访问接口的 UDF。 它是通过将 `DataAccessKind` 设置为 `DataAccessKind.None` 来指示的。 在下一行中，目标方法为公共静态方法（在 Visual Basic .NET 中为 shared）。  
+ 接下来，该函数收到 `SqlFunction` 自定义属性，它位于 `Microsoft.SqlServer.Server` 命名空间中。 该自定义属性指示用户定义函数 (UDF) 是否使用进程内访问接口来读取服务器中的数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许 UDF 更新、插入或删除数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以优化执行不使用进程内访问接口的 UDF。 它是通过将 `DataAccessKind` 设置为 `DataAccessKind.None` 来指示的。 在下一行中，目标方法为公共静态方法（在 Visual Basic .NET 中为 shared）。  
   
- 然后，`SqlContext` 类（位于 `Microsoft.SqlServer.Server` 命名空间中）可以通过已建立的与 `SqlCommand` 实例间的连接访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象。 虽然这里未使用当前事务上下文，但它也可通过 `System.Transactions` 应用程序编程接口 (API) 获取。  
+ 然后，`SqlContext` 类（位于 `Microsoft.SqlServer.Server` 命名空间中）可以通过已建立的与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例间的连接访问 `SqlCommand` 对象。 虽然这里未使用当前事务上下文，但它也可通过 `System.Transactions` 应用程序编程接口 (API) 获取。  
   
  开发人员如果编写过使用 `System.Data.SqlClient` 命名空间中所含类型的客户端应用程序，对函数体中大部分代码行应较熟悉。  
   
@@ -132,12 +128,10 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 ```  
   
 > [!NOTE]  
->  
-  `/t:library` 指示应生成一个库，而非可执行程序。 可执行程序无法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行注册。  
+>  `/t:library` 指示应生成一个库，而非可执行程序。 可执行程序无法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行注册。  
   
 > [!NOTE]  
->  
-  `/clr:pure` 中不再支持执行使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 编译的 Visual C++ 数据库对象。 例如，此类数据库对象包含标量值函数。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不再支持执行使用 `/clr:pure` 编译的 Visual C++ 数据库对象。 例如，此类数据库对象包含标量值函数。  
   
  用于注册程序集和 UDF 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询及示例调用如下：  
   

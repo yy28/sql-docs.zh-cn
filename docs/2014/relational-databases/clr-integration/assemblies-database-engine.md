@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920781"
 ---
 # <a name="assemblies-database-engine"></a>程序集（数据库引擎）
@@ -26,8 +26,7 @@ ms.locfileid: "62920781"
   
  程序集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]是用于部署函数、存储过程、触发器、用户定义聚合和用户定义类型（以[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]公共语言运行时（CLR）托管的一种托管代码语言，而不是在中[!INCLUDE[tsql](../../../includes/tsql-md.md)]）的 DLL 文件。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的程序集对象引用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 公共语言运行时中创建的托管应用程序模块（.dll 文件）。 程序集包含类元数据和托管代码。 将程序集上载到 SQL Server 实例是创建以下任何一个数据库对象的第一步：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的程序集对象引用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 公共语言运行时中创建的托管应用程序模块（.dll 文件）。 程序集包含类元数据和托管代码。 将程序集上载到 SQL Server 实例是创建以下任何一个数据库对象的第一步：  
   
 -   CLR 函数。 有关详细信息，请参阅[创建 CLR 函数](../user-defined-functions/create-clr-functions.md)。  
   
@@ -39,8 +38,7 @@ ms.locfileid: "62920781"
   
 -   用户定义类型。 有关详细信息，请参阅[使用用户定义类型](../native-client/features/using-user-defined-types.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中程序集可以执行下列功能：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中程序集可以执行下列功能：  
   
 -   包含可以实现已列出的一个或多个 CLR 数据库对象的功能的托管代码。  
   
@@ -59,6 +57,6 @@ ms.locfileid: "62920781"
 |[获取有关程序集的信息](assemblies-getting-information.md)|列出了可以查询程序集的有关元数据的目录视图和函数。|  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 &#40;CLR&#41; 集成编程概念](common-language-runtime-clr-integration-programming-concepts.md)  
+ [公共语言运行时 (CLR) 集成编程概念](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

@@ -21,26 +21,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62927052"
 ---
 # <a name="security-overview-integration-services"></a>安全性概述 (Integration Services)
-  中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的安全性由多个层组成，它们提供丰富而灵活的安全环境。 这些安全层使用数字签名、包属性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色和操作系统权限。 其中的大部分安全功能属于标识和访问控制类别。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含多层，这些层提供了丰富灵活的安全环境。 这些安全层使用数字签名、包属性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色和操作系统权限。 其中的大部分安全功能属于标识和访问控制类别。  
   
 ## <a name="identity-features"></a>标识功能  
  通过在包中实现标识功能，可达到以下目的：  
   
- **确保你只打开和运行来自受信任源的包**。  
+ **确保只打开和运行来自可信源的包**。  
   
  为了确保只打开和运行来自可信源的包，必须首先标识包的源。 可以通过使用证书对包进行签名来标识源。 然后，在打开或运行包时，可以让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 检查数字签名是否存在以及数字签名的有效性。 有关详细信息，请参阅 [使用数字签名标识包的源](identify-the-source-of-packages-with-digital-signatures.md)。  
   
 ## <a name="access-control-features"></a>访问控制功能  
  通过在包中实现标识功能，可达到以下目的：  
   
- **确保只有经过授权的用户才能打开和运行包**。  
+ **确保只由授权用户打开和运行包**。  
   
  为了确保只由授权用户打开和运行包，必须控制对以下信息的访问：  
   
@@ -57,8 +57,7 @@ ms.locfileid: "62927052"
   
  设置包的 ProtectionLevel 属性时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动检测敏感属性，并根据指定的包保护级别处理这些属性。 例如，将包的 ProtectionLevel 属性设置为使用密码加密敏感信息的级别。 对于此包， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动加密所有敏感属性的值，并且不会在未提供正确密码的情况下显示相应的数据。  
   
- 通常，如果属性包含如密码或连接字符串这样的信息或属性对应变量或任务生成的 XML 节点， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会将这些属性标识为敏感。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 认为属性是否敏感，主要取决于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件（连接管理器或任务）的开发人员是否将该属性指定为敏感。 用户不能向被视为敏感的属性列表添加属性，也不能从该列表删除属性。如果您编写自定义任务、连接管理器或数据流组件，则可以指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 应该将哪些属性视为敏感属性。  
+ 通常，如果属性包含如密码或连接字符串这样的信息或属性对应变量或任务生成的 XML 节点， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会将这些属性标识为敏感。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 认为属性是否敏感，主要取决于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件（连接管理器或任务）的开发人员是否将该属性指定为敏感。 用户不能向被视为敏感的属性列表添加属性，也不能从该列表删除属性。如果您编写自定义任务、连接管理器或数据流组件，则可以指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 应该将哪些属性视为敏感属性。  
   
  有关详细信息，请参阅 [Access Control for Sensitive Data in Packages](access-control-for-sensitive-data-in-packages.md)。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62927052"
 #### <a name="saving-packages-to-the-msdb-database"></a>将包保存到 msdb 数据库  
  将包保存到 msdb 数据库有助于提供服务器级、数据库级和表级的安全性。 在 msdb 数据库中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包将存储在 sysssispackages 表中。 由于包保存到 msdb 数据库的 sysssispackages 和 sysdtspackages 表中，因此在您备份 msdb 数据库时将自动备份这些包。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]还可以通过应用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]数据库级角色来保护存储在 msdb 数据库中的包。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包括三个固定数据库级角色 db_ssisadmin、db_ssisltduser 和 db_ssisoperator 控制对包的访问。 每个包都可以有关联的读取者角色和写入者角色。 还可以定义要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用的自定义数据库级别的角色。 只能对保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 msdb 数据库中的包实现角色。 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](integration-services-roles-ssis-service.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以通过应用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据库级别的角色，保护 msdb 数据库中存储的包。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括三个用于控制对包访问的固定数据库级别的角色：db_ssisadmin、db_ssisltduser、和 db_ssisoperator。 每个包都可以有关联的读取者角色和写入者角色。 还可以定义要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用的自定义数据库级别的角色。 只能对保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的 msdb 数据库中的包实现角色。 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](integration-services-roles-ssis-service.md)。  
   
 #### <a name="saving-packages-to-the-file-system"></a>将包保存到文件系统  
  如果将包存储到文件系统而不是 msdb 数据库中，请确保包文件和包含包文件的文件夹的安全。  
@@ -88,7 +87,7 @@ ms.locfileid: "62927052"
  有关配置的详细信息，请参阅 [Package Configurations](../package-configurations.md)。  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>控制对 Integration Services 服务的访问  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务列出存储的包。 若要防止未经授权的用户查看有关存储在本地和远程计算机上的包的信息，从而获取私有信息，请限制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的计算机的访问。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务列出所存储的包。 若要防止未经授权的用户查看有关存储在本地和远程计算机上的包的信息，从而获取私有信息，请限制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的计算机的访问。  
   
  有关详细信息，请参阅 [访问 Integration Services 服务](../access-to-the-integration-services-service.md)。  
   

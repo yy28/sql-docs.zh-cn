@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901789"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
@@ -29,12 +29,11 @@ ms.locfileid: "62901789"
  如果在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中运行包，您可以将数据查看器附加到一个路径，以此来查看数据流中的数据。 数据查看器可配置为在网格中显示数据。 数据查看器是个很有用的调试工具。 有关详细信息，请参阅 [Debugging Data Flow](../troubleshooting/debugging-data-flow.md)。  
   
 ## <a name="configuration-of-the-path"></a>路径的配置  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供 **“数据流路径编辑器”** 对话框，用于设置路径属性、查看通过该路径的数据列的元数据以及配置数据查看器。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供 **“数据流路径编辑器”** 对话框，用于设置路径属性、查看通过该路径的数据列的元数据以及配置数据查看器。  
   
  可配置的路径属性有路径的名称、说明和批注。 还可以用编程的方式配置路径。 有关详细信息，请参阅 [以编程方式连接数据流组件](../building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
   
- 路径批注显示路径源的名称或 **设计器中** “数据流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡的设计图面上的路径名称。 路径批注与可以添加到数据流、控制流和事件处理程序的批注类似， 唯一区别是路径批注附加到路径，而其他批注则显示在 **设计器的**“数据流” **、**“控制流” **和**“事件处理程序” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上。  
+ 路径批注显示路径源的名称或 **设计器中** “数据流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡的设计图面上的路径名称。 路径批注与可以添加到数据流、控制流和事件处理程序的批注类似， 唯一区别是路径批注附加到路径，而其他批注则显示在 **设计器的**“数据流” **、** “控制流” **和**“事件处理程序” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上。  
   
  元数据显示前一组件的输出中每一列的名称、数据类型、精度、小数位数、长度、代码页和源组件。 源组件是创建此列的数据流组件。 这可能是数据流中的第一个组件，也可能不是。 例如，Union All 和排序转换创建自己的列，并且是其输出列的源。 反之，复制列转换则可以不加更改地传递列，或者通过复制输入列来创建新列。 复制列转换仅是新列的源组件。  
   

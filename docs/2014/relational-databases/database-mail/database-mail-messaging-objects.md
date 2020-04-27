@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917699"
 ---
 # <a name="database-mail-messaging-objects"></a>数据库邮件消息处理对象
   **msdb** 数据库是数据库邮件主机数据库。 此数据库包含数据库邮件的存储过程和消息处理对象。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中带有数据库邮件配置向导，可用来启用数据库邮件、创建和管理配置文件和帐户以及配置数据库邮件选项。  
   
-##  <a name="ComponentsAndConcepts"></a>**msdb** 数据库中的对象  
+##  <a name="objects-in-msdb-database"></a><a name="ComponentsAndConcepts"></a>**msdb** 数据库中的对象  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] msdb **msdb** 。 不过，数据库邮件不使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 网络。 因此，用户不必创建 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点即可使用数据库邮件。 外部数据库邮件进程使用标准的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信。  
   
  如果启用了数据库邮件，它将在 **msdb** 数据库中显示下列对象。  

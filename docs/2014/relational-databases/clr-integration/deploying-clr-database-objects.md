@@ -16,15 +16,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920838"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 数据库对象
-  部署是分发要在其他计算机上安装并运行的已完成应用程序或模块的过程。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 开发公共语言运行时 (CLR) 数据库对象，并将这些对象部署到测试服务器。 或者，也可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 再分发文件替代 Visual Studio 对托管数据库对象进行编译。 编译完之后，可以使用 Visual Studio 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，将包含 CLR 数据库对象的程序集部署到测试服务器。 请注意，Visual Studio .NET 2003 无法用于 CLR 集成编程或部署。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含预先安装的 .NET Framework，而 Visual Studio .NET 2003 无法使用 .NET Framework 2.0 程序集。  
+  部署是分发要在其他计算机上安装并运行的已完成应用程序或模块的过程。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 开发公共语言运行时 (CLR) 数据库对象，并将这些对象部署到测试服务器。 或者，也可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 再分发文件替代 Visual Studio 对托管数据库对象进行编译。 编译完之后，可以使用 Visual Studio 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，将包含 CLR 数据库对象的程序集部署到测试服务器。 请注意，Visual Studio .NET 2003 无法用于 CLR 集成编程或部署。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含预先安装的 .NET Framework，而 Visual Studio .NET 2003 无法使用 .NET Framework 2.0 程序集。  
   
  在测试服务器上测试并验证了 CLR 方法后，便可以使用部署脚本将这些方法分发到生产服务器。 可以手动生成部署脚本，或使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 生成（请参阅本主题后面的过程）。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62920838"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  随后，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例中创建过程、函数、聚合、用户定义类型或触发器。 如果 `HelloWorld` 程序集在 `HelloWorld` 类中包含名为 `Procedures` 的方法，则可以将如下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 添加到查询中，以在 `hello` 中创建名为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的过程。  
+1.  随后，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例中创建过程、函数、聚合、用户定义类型或触发器。 如果 `HelloWorld` 程序集在 `HelloWorld` 类中包含名为 `Procedures` 的方法，则可以将如下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 添加到查询中，以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建名为 `hello` 的过程。  
   
  `CREATE PROCEDURE hello`  
   
@@ -93,11 +92,11 @@ ms.locfileid: "62920838"
   
 4.  在 "**选择脚本选项**" 窗格中，单击 "**下一步**"，或更改选项，然后单击 "**下一步**"。  
   
-5.  在 "**选择对象类型**" 窗格中，选择要部署的数据库对象的类型。 单击“下一步”。   
+5.  在 "**选择对象类型**" 窗格中，选择要部署的数据库对象的类型。 单击“下一步”  。  
   
 6.  对于在 "**选择对象类型**" 窗格中选择的每个对象类型，将显示 " ** \<选择类型>** " 窗格。 在此窗格中，可以从在指定数据库中注册的该数据库对象类型的所有实例中进行选择。 选择一个或多个对象，然后单击 "**下一步**"。  
   
-7.  选择了所有所需的数据库对象类型后，将出现 "**输出选项**" 窗格。 选择 "**将脚本保存到文件**" 并指定脚本的文件路径。 选择“**下一页**”。 查看您的选择，然后单击 "**完成**"。 部署脚本将保存到指定的文件路径。  
+7.  选择了所有所需的数据库对象类型后，将出现 "**输出选项**" 窗格。 选择 "**将脚本保存到文件**" 并指定脚本的文件路径。 选择“**下一步**”。 查看您的选择，然后单击 "**完成**"。 部署脚本将保存到指定的文件路径。  
   
 ## <a name="post-deployment-scripts"></a>后期部署脚本  
  您可以运行后期部署脚本。  
@@ -107,6 +106,6 @@ ms.locfileid: "62920838"
  单击“部署”时，Visual Studio 将在项目部署完成之后运行此脚本。  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 &#40;CLR&#41; 集成编程概念](common-language-runtime-clr-integration-programming-concepts.md)  
+ [公共语言运行时 (CLR) 集成编程概念](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

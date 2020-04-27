@@ -18,16 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919538"
 ---
 # <a name="using-systemtransactions"></a>使用 System.Transactions
-  
-  `System.Transactions` 命名空间提供与 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成完全集成的新事务框架。 
-  `System.Transactions.TransactionScope` 类通过在分布式事务中隐式登记连接，使代码块成为事务代码。 您必须在 `Complete` 标记的代码块的末尾调用 `TransactionScope` 方法。 如果未调用 `Dispose` 方法，将在程序执行离开代码块时调用 `Complete` 方法，从而导致停止使用该事务。 如果已引发导致代码离开范围的异常，则将该事务视为停止使用。  
+  `System.Transactions` 命名空间提供与 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成完全集成的新事务框架。 `System.Transactions.TransactionScope` 类通过在分布式事务中隐式登记连接，使代码块成为事务代码。 您必须在 `Complete` 标记的代码块的末尾调用 `TransactionScope` 方法。 如果未调用 `Dispose` 方法，将在程序执行离开代码块时调用 `Complete` 方法，从而导致停止使用该事务。 如果已引发导致代码离开范围的异常，则将该事务视为停止使用。  
   
  建议您使用 `using` 块，以便确保在退出 `Dispose` 块时对 `TransactionScope` 对象调用 `using` 方法。 提交或回滚挂起事务失败可能会严重降低性能，因为 `TransactionScope` 的默认超时值为 1 分钟。 如果未使用 `using` 语句，必须在 `Try` 块中执行所有工作，并在 `Dispose` 块中显式调用 `Finally` 方法。  
   
@@ -44,8 +42,7 @@ ms.locfileid: "62919538"
 ## <a name="example"></a>示例  
  若要使用 `System.Transactions`，必须引用 System.Transactions.dll 文件。  
   
- 下面的代码演示如何创建可根据两个不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例进行提升的事务。 这些实例由两个不同的 `System.Data.SqlClient.SqlConnection` 对象表示，它们包装在 `TransactionScope` 块中。 该代码创建带有 `TransactionScope` 语句的 `using` 块，并打开第一个在 `TransactionScope` 中自动登记的连接。 该事务最初作为轻型事务登记，而不是完全分布式事务。 代码假定存在条件逻辑（为简洁起见，已省略该逻辑）。 代码仅在需要时打开第二个连接，并在 `TransactionScope` 中登记。 打开该连接后，事务将自动提升为完全分布式事务。 该代码随后调用 `TransactionScope.Complete`，这将提交事务。 当退出连接的 `using` 语句时，代码释放两个连接。 
-  `TransactionScope.Dispose` 的 `TransactionScope` 块终止时，将自动调用 `using` 的 `TransactionScope` 方法。 如果在 `TransactionScope` 块的任一点引发异常，则不会调用 `Complete`，并且分布式事务将在释放 `TransactionScope` 时回滚。  
+ 下面的代码演示如何创建可根据两个不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例进行提升的事务。 这些实例由两个不同的 `System.Data.SqlClient.SqlConnection` 对象表示，它们包装在 `TransactionScope` 块中。 该代码创建带有 `TransactionScope` 语句的 `using` 块，并打开第一个在 `TransactionScope` 中自动登记的连接。 该事务最初作为轻型事务登记，而不是完全分布式事务。 代码假定存在条件逻辑（为简洁起见，已省略该逻辑）。 代码仅在需要时打开第二个连接，并在 `TransactionScope` 中登记。 打开该连接后，事务将自动提升为完全分布式事务。 该代码随后调用 `TransactionScope.Complete`，这将提交事务。 当退出连接的 `using` 语句时，代码释放两个连接。 `TransactionScope.Dispose` 的 `TransactionScope` 块终止时，将自动调用 `using` 的 `TransactionScope` 方法。 如果在 `TransactionScope` 块的任一点引发异常，则不会调用 `Complete`，并且分布式事务将在释放 `TransactionScope` 时回滚。  
   
  Visual Basic  
   

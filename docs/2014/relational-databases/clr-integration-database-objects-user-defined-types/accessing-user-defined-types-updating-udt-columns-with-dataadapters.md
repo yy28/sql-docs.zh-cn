@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919646"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>使用 DataAdapter 更新 UDT 列
@@ -67,8 +67,7 @@ da.Fill(datTable);
   
 -   为 `InsertCommand` 对象提供自定义 `UpdateCommand`、`DeleteCommand` 和 `SqlDataAdapter` 对象。  
   
--   使用命令生成器 (`System.Data.SqlClient.SqlCommandBuilder`) 为您自动创建 INSERT、UPDATE 和 DELETE 命令。 为启用冲突检测功能，请向包含 UDT 的 `timestamp` 表添加 `rowversion` 列（别名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）。 
-  `timestamp` 数据类型允许您对表中的行添加版本戳，并确保它在数据库中唯一。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
+-   使用命令生成器 (`System.Data.SqlClient.SqlCommandBuilder`) 为您自动创建 INSERT、UPDATE 和 DELETE 命令。 为启用冲突检测功能，请向包含 UDT 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表添加 `timestamp` 列（别名为 `rowversion`）。 `timestamp` 数据类型允许您对表中的行添加版本戳，并确保它在数据库中唯一。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
   
  请注意，除非基础表包含 `SqlCommandBuilder` 列，否则 `timestamp` 不会考虑对 UDT 执行冲突检测。 可以比较 UDT，也可以不比较，因此，当使用“比较原始值”选项生成命令时，不会在 WHERE 子句中包含 UDT。  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893592"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
@@ -24,8 +24,7 @@ ms.locfileid: "62893592"
   
  若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="options"></a>选项  
  **数据源**  
@@ -43,19 +42,19 @@ ms.locfileid: "62893592"
  **使用 Windows 身份验证**  
  指定包是否应使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证登录数据库。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
- **Use SQL Server Authentication**  
+ **使用 SQL Server 身份验证**  
  指定包是否应使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
  **用户名**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，指定数据库连接的用户名。  
   
- **权限**  
+ **密码**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，提供数据库连接的密码。  
   
  **Database**  
  从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库列表中选择。  
   
- **“刷新”**  
+ **全部**  
  通过单击“刷新”****，还原可用数据库的列表。  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>数据源 = .NET Framework Data Provider for SQL Server  
@@ -67,13 +66,13 @@ ms.locfileid: "62893592"
  **初始目录**  
  键入源数据库的名称。  
   
- **集成安全性**  
- 若要使用 Windows 集成身份验证进行连接，请指定 `True`（建议）；若要使用 `False` 身份验证进行连接，请指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果指定 `False`，则必须输入用户 ID 和密码。 默认值是 `False`。  
+ **Integrated Security**  
+ 若要使用 Windows 集成身份验证进行连接，请指定 `True`（建议）；若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定 `False`。 如果指定 `False`，则必须输入用户 ID 和密码。 默认值为 `False`。  
   
  **用户 ID**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，指定数据库连接的用户名。  
   
- **权限**  
+ **密码**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，提供数据库连接的密码。  
   
  选择此访问接口时所列出的其他选项并不是成功连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源数据库所必需。 有关这些附加选项的说明，请参阅 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 软件开发包中有关用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的文档。  
@@ -84,10 +83,10 @@ ms.locfileid: "62893592"
 >  仅当要连接到使用 Excel 2003 或更早版本的数据源时，才选择 " **Microsoft Excel** "。 若要连接到使用 Excel 2007 的数据源，请选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 提供程序**，单击 "**属性**"，然后在 "**数据链接属性**" 对话框的`Excel 12.0` "**全部**" 选项卡上，输入作为 "**扩展属性**" 的值。  
   
  **Excel 文件路径**  
- 指定要从其中导入数据的电子表格的路径和文件名。 例如， **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**。 或单击 **“浏览”** 。  
+ 指定要从其中导入数据的电子表格的路径和文件名。 例如， **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**。 或单击 **“浏览”**。  
   
- **“浏览”**  
- 通过使用“打开”  对话框定位电子表格。  
+ **浏览**  
+ 通过使用“打开”**** 对话框定位电子表格。  
   
  **Excel 版本**  
  选择存储源数据的 Excel 的版本。  
@@ -100,16 +99,16 @@ ms.locfileid: "62893592"
 > [!NOTE]  
 >  仅当要连接到使用 Access 2003 或更早版本的数据库时，才选择 " **Microsoft Access** "。 若要连接到使用 Access 2007 的数据库，请改为选择**Microsoft Office 12.0 访问数据库引擎 OLE DB 提供程序**。  
   
- **文件名**  
- 指定要从其中导入数据的数据库文件的路径和文件名。 例如，**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb**。 或单击 **“浏览”** 。  
+ **文件名称**  
+ 指定要从其中导入数据的数据库文件的路径和文件名。 例如，**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb**。 或单击 **“浏览”**。  
   
- **“浏览”**  
+ **浏览**  
  通过使用“打开”**** 对话框定位数据库文件。  
   
  **用户名**  
  当工作组信息文件与数据库关联时，为数据库连接指定一个有效的用户名。  
   
- **权限**  
+ **密码**  
  当工作组信息文件与数据库关联时，为数据库连接提供相应的用户密码。 但是，如果对于所有用户都使用一个密码保护数据库，则必须在 **“数据链接属性”** 对话框（可通过单击 **“高级”** 访问）中提供此值。  
   
  **高级**  
@@ -118,12 +117,12 @@ ms.locfileid: "62893592"
 ### <a name="data-source--flat-file-source"></a>数据源 = 平面文件源  
  有关平面文件数据源的选项的信息，请参阅以下主题：  
   
- [平面文件连接管理器编辑器 &#40;"常规" 页&#41;](../general-page-of-integration-services-designers-options.md)  
+ [平面文件连接管理器编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
- [平面文件连接管理器编辑器 &#40;列 "页&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+ [平面文件连接管理器编辑器（“列”页）](../flat-file-connection-manager-editor-columns-page.md)  
   
- ["平面文件连接管理器编辑器" &#40;"高级" 页&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+ [平面文件连接管理器编辑器（“高级”页）](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [平面文件连接管理器编辑器 &#40;预览页面&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [平面文件连接管理器编辑器（“预览”页）](../flat-file-connection-manager-editor-preview-page.md)  
   
   

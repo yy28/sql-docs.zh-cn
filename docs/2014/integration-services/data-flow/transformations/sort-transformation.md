@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba1f3598abb8877721ff77d3dabcc8af8e0b94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899880"
 ---
 # <a name="sort-transformation"></a>排序转换
@@ -47,9 +47,9 @@ ms.locfileid: "62899880"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../../common-properties.md)  
+-   [通用属性](../../common-properties.md)  
   
--   [转换自定义属性](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  有关如何设置组件属性的详细信息，请参阅 [设置数据流组件属性](../set-the-properties-of-a-data-flow-component.md)。  

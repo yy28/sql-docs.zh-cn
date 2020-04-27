@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899951"
 ---
 # <a name="use-a-recordset-destination"></a>使用记录集目标
-  记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的 `Object` 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  
+  记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 `Object` 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  
   
  可以在很多不同情况下使用记录集目标。 下面是一些示例：  
   
@@ -70,23 +70,19 @@ ms.locfileid: "62899951"
   
     1.  创建名为 `BonusRecordset` 的变量，然后将其类型设置为 `Object`。  
   
-         
-  `BonusRecordset` 变量保存记录集。  
+         `BonusRecordset` 变量保存记录集。  
   
     2.  创建名为 `EmailAddress` 的变量，然后将其类型设置为 `String`。  
   
-         
-  `EmailAddress` 变量保存销售人员的电子邮件地址。  
+         `EmailAddress` 变量保存销售人员的电子邮件地址。  
   
     3.  创建名为 `FirstName` 的变量，然后将其类型设置为 `String`。  
   
-         
-  `FirstName` 变量保存销售人员的名字。  
+         `FirstName` 变量保存销售人员的名字。  
   
     4.  创建名为 `Bonus` 的变量，然后将其类型设置为 `Double`。  
   
-         
-  `Bonus` 变量保存销售人员的奖金额。  
+         `Bonus` 变量保存销售人员的奖金额。  
   
 #### <a name="to-configure-the-connection-managers"></a>配置连接管理器  
   

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919171"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>对常规连接和上下文连接的限制
@@ -30,16 +30,13 @@ ms.locfileid: "62919171"
   
 -   上下文连接中不支持多个活动结果集 (MARS)。  
   
--   
-  `SqlBulkCopy` 类不能在上下文连接中工作。  
+-   `SqlBulkCopy` 类不能在上下文连接中工作。  
   
 -   不支持上下文连接中的更新批处理  
   
--   
-  `SqlNotificationRequest` 不能用于对上下文连接执行的命令。  
+-   `SqlNotificationRequest` 不能用于对上下文连接执行的命令。  
   
--   不支持取消正在对上下文连接运行的命令。 
-  `SqlCommand.Cancel` 方法会自行忽略请求。  
+-   不支持取消正在对上下文连接运行的命令。 `SqlCommand.Cancel` 方法会自行忽略请求。  
   
 -   使用“context connection=true”时，不能使用任何其他连接字符串关键字。  
   

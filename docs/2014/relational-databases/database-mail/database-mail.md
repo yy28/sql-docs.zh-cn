@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917959"
 ---
 # <a name="database-mail"></a>数据库邮件
@@ -26,7 +26,7 @@ ms.locfileid: "62917959"
   
  
   
-##  <a name="Benefits"></a>使用数据库邮件的优点  
+##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> 使用数据库邮件的优点  
  数据库邮件旨在实现可靠性、灵活性、安全性和兼容性。  
   
 ### <a name="reliability"></a>可靠性  
@@ -75,14 +75,14 @@ ms.locfileid: "62917959"
   
 
   
-##  <a name="VisualElement"></a>数据库邮件体系结构  
+##  <a name="database-mail-architecture"></a><a name="VisualElement"></a> 数据库邮件体系结构  
  数据库邮件的设计基于使用 Service Broker 技术的排队体系结构。 当用户执行 **sp_send_dbmail**时，存储过程将向邮件队列中插入一项，并创建一条包含该电子邮件信息的记录。 在邮件队列中插入新项将启动数据库邮件外部进程 (DatabaseMail.exe)。 该外部进程会读取电子邮件的信息并将电子邮件发送到相应的一台或多台电子邮件服务器。 该外部进程还会在状态队列中插入一项，来指示发送操作的结果。 在状态队列中插入新项将启动内部存储过程，该过程将更新电子邮件信息的状态。 除存储已发送（或未发送）的电子邮件信息外，数据库邮件还在系统表中记录所有电子邮件的附件。 数据库邮件视图提供了供排除故障使用的邮件状态，使用存储过程可以对数据库邮件队列进行管理。  
   
  ![msdb 将消息发送至 SMTP 邮件服务器](../../database-engine/media/databasemail.gif "msdb 将消息发送至 SMTP 邮件服务器")  
   
 
   
-##  <a name="ComponentsAndConcepts"></a>数据库邮件组件简介  
+##  <a name="introduction-to-database-mail-components"></a><a name="ComponentsAndConcepts"></a> 数据库邮件组件简介  
  数据库邮件由以下主要组件构成：  
   
 -   配置和安全组件  
@@ -91,8 +91,7 @@ ms.locfileid: "62917959"
   
 -   邮件处理组件  
   
-     
-  **msdb** 数据库是邮件主机数据库，包含数据库邮件用于发送电子邮件的消息处理对象。 这些对象包括 **sp_send_dbmail** 存储过程和保存邮件信息的数据结构。  
+     **msdb** 数据库是邮件主机数据库，包含数据库邮件用于发送电子邮件的消息处理对象。 这些对象包括 **sp_send_dbmail** 存储过程和保存邮件信息的数据结构。  
   
 -   数据库邮件可执行文件  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62917959"
   
      数据库邮件将日志记录信息记录在 **msdb** 数据库和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序事件日志中。  
   
- **将代理配置为使用数据库邮件：**  
+ **配置代理以使用数据库邮件：**  
   
  SQL Server 代理可配置为使用数据库邮件。 对于作业完成时的警报通知和自动通知，这是必需的。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62917959"
   
  
   
-##  <a name="RelatedContent"></a>数据库邮件组件主题  
+##  <a name="database-mail-component-topics"></a><a name="RelatedContent"></a> 数据库邮件组件主题  
   
 -   [数据库邮件配置对象](database-mail-configuration-objects.md)  
   

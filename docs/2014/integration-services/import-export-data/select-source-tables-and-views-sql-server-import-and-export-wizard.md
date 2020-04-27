@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892665"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>选择源表和源视图（SQL Server 导入和导出向导）
   使用 "**选择源表和视图**" 页可以指定要从数据源复制到目标的表和视图。  
   
 > [!NOTE]  
->  如果选中了“表复制”选项，则不必复制表中的所有列。 选择目标表后，请单击 "编辑映射" 以显示 "**列映射**" 对话框。 对于要跳过的**** 列，请选择** \<** "**列映射**" 对话框的 "目标" 列中的 "忽略>。  
+>  如果选中了“表复制”选项，则不必复制表中的所有列。 选择目标表后，请单击 "编辑映射" 以显示 "**列映射**" 对话框。 对于要跳过的**Destination**列，请选择** \<** "**列映射**" 对话框的 "目标" 列中的 "忽略>。  
   
  若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62892665"
 ## <a name="options"></a>选项  
   
 ### <a name="tables-and-views-list"></a>表和视图列表  
- **数据源**  
+ **源**  
  使用这些复选框，可以从可用表和视图的列表中进行选择，以复制到目标。 如果选择了源表或源视图并且不执行其他操作，将从源不加更改地复制架构和数据。  
   
  **目标**  

@@ -17,14 +17,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889830"
 ---
 # <a name="performance-counters"></a>性能计数器
-  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装一组性能计数器，可用于监视数据流引擎的性能。 例如，可以监视 "Buffers spooled" 计数器，以确定在运行包时数据缓冲区是否正在临时写入磁盘。 此交换会降低性能并指示计算机内存不足。  
   
 > [!NOTE]  
@@ -49,7 +48,7 @@ ms.locfileid: "62889830"
   
  您可以使用 Microsoft 管理控制台 (MMC) 管理单元“性能”来创建一个捕获性能计数器的日志。  
   
- 有关如何提高性能的信息，请参阅[数据流性能特点](../data-flow/data-flow-performance-features.md)。  
+ 有关如何提高性能的信息，请参阅 [数据流性能特点](../data-flow/data-flow-performance-features.md)。  
   
 ## <a name="obtain-performance-counter-statistics"></a>获取性能计数器统计信息  
  对于部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，你可以通过使用 [dm_execution_performance_counters （SSISDB 数据库）](/sql/integration-services/functions-dm-execution-performance-counters)函数获取性能计数器统计信息。  
@@ -74,7 +73,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   codeplex.com 上的工具 [Business Intelligence Development Studio 的 SSIS 性能可视化（CodePlex 项目）](https://go.microsoft.com/fwlink/?LinkId=146626)。  
   
--   msdn.microsoft.com 上的视频[测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=150497)。  
+-   msdn.microsoft.com 上的视频 [测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=150497)。  
   
 -   support.microsoft.com 上的支持文章 [升级到 Windows Server 2008 后性能监视器中不再提供 SSIS 性能计数器](https://go.microsoft.com/fwlink/?LinkId=235319)。  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62913671"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>升级 SQL Server 故障转移群集
@@ -42,11 +42,11 @@ ms.locfileid: "62913671"
   
 -   有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](always-on-failover-cluster-instances-sql-server.md)。  
   
-## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集  
+## <a name="upgrading-a-ssnoversion-multi-subnet-failover-cluster"></a>升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集  
  不能直接将非多子网[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集升级到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]多子网故障转移群集。 有关详细信息，请参阅[升级 SQL Server 故障转移群集实例（安装程序）](upgrade-a-sql-server-failover-cluster-instance-setup.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [支持的版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [&#40;安装程序升级 SQL Server 故障转移群集实例&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)   
  [Install SQL Server 2014 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891282"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>步骤 5：测试第 4 课教程包
@@ -38,9 +38,9 @@ ms.locfileid: "62891282"
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>运行第 4 课教程包  
   
-1.  在 **“调试”** 菜单中，单击 **“启动调试”** 。  
+1.  在 "**调试**" 菜单上单击 "**启动调试**"。  
   
-2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”** 。  
+2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”**。  
   
 ### <a name="to-verify-the-contents-of-the-erroroutputtxt-file"></a>验证 ErrorOutput.txt 文件的内容  
   

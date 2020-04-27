@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917441"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
@@ -39,18 +39,18 @@ ms.locfileid: "62917441"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   用户定义的数据类型别名必须符合标识符的规则。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求在当前数据库中具有 CREATE TYPE 权限，以及具有对 *schema_name*的 ALTER 权限。 如果未指定 *schema_name* ，则将应用用于确定当前用户的架构的默认名称解析规则。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>创建用户定义数据类型  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62917441"
   
 7.  如果希望为新数据类型别名绑定默认值或规则，请在 **“绑定”** 区域中，填写 **“默认值”** 框或 **“规则”** 框。 默认值和规则不能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建。 改用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模板资源管理器中提供了创建默认值和规则的示例代码。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名  
   

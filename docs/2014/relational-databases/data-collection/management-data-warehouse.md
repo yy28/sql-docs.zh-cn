@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918335"
 ---
 # <a name="management-data-warehouse"></a>管理数据仓库
@@ -109,7 +109,7 @@ ms.locfileid: "62918335"
   
  通过阅读有关各表相应的数据收集器存储过程的文档，您可获得有关数据库表列的数据类型和内容的详细信息。  
   
-### <a name="best-practices"></a>最佳实践  
+### <a name="best-practices"></a>最佳方案  
  使用管理数据仓库时，建议遵循以下最佳做法：  
   
 -   除非添加新的收集器类型，否则不要更改管理数据仓库表的元数据。  
@@ -126,8 +126,8 @@ ms.locfileid: "62918335"
 |更新了“快照架构”部分中表的列表。 增加了 snapshots.os_memory_clerks、snapshots.sql_process_and_system_memory 和 snapshots.io_virtual_file_stats。 删除了 snapshots.os_process_memory 和 snapshots.distinct_query_stats。|  
   
 ## <a name="see-also"></a>另请参阅  
- [管理数据仓库存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
- [数据收集器存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
+ [管理数据仓库存储过程 &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [&#40;Transact-sql&#41;的数据收集器存储过程](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [数据收集](data-collection.md)   
  [查看收集组报表 (SQL Server Management Studio)](view-a-collection-set-report-sql-server-management-studio.md)  
   

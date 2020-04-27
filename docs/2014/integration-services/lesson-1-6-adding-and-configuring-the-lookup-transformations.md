@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891545"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>步骤 6：添加并配置查找转换
-  在配置用于从源文件中提取数据的平面文件源后，下一个任务是定义获取 **CurrencyKey** 和 **DateKey** 值所需的查找转换。 查找转换通过将指定输入列中的数据联接到引用数据集中的列来执行查找。 引用数据集可以是现有的表或视图，也可以是新表或 SQL 语句的结果。 在本教程中，查找转换使用 OLE DB 连接管理器连接到包含引用数据集的源数据的数据库。  
+  在配置用于从源文件中提取数据的平面文件源后，下一个任务是定义获取 **CurrencyKey** 和 **DateKey**值所需的查找转换。 查找转换通过将指定输入列中的数据联接到引用数据集中的列来执行查找。 引用数据集可以是现有的表或视图，也可以是新表或 SQL 语句的结果。 在本教程中，查找转换使用 OLE DB 连接管理器连接到包含引用数据集的源数据的数据库。  
   
 > [!NOTE]  
->  还可以配置查找转换，以连接到包含引用数据集的缓存。 有关详细信息，请参阅[查找转换](data-flow/transformations/lookup-transformation.md)。  
+>  还可以配置查找转换，以连接到包含引用数据集的缓存。 有关详细信息，请参阅 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)。  
   
  对于本教程，您将向包中添加以下两个查找转换组件并对其进行配置：  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62891545"
 12. 在属性窗口中，验证属性是否`LocaleID`设置为 "**英语（美国）** "，并将 " **DefaultCodePage** " 属性设置为 " **1252**"。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 7：添加和配置 OLE DB 目标](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [步骤 7：添加并配置 OLE DB 目标](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [查找转换](data-flow/transformations/lookup-transformation.md)  

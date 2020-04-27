@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875760"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>恢复到日志序列号 (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62875760"
   
  您可以使用日志序列号 (LSN) 定义还原操作的恢复点。 但是，这是为工具供应商提供的专用功能，不太可能广泛使用。  
   
-##  <a name="LSNs"></a> 日志序列号的概述  
+##  <a name="overview-of-log-sequence-numbers"></a><a name="LSNs"></a> 日志序列号的概述  
  RESTORE 顺序期间，在内部使用 LSN 跟踪数据还原到的时间点。 还原备份后，数据被还原到与进行备份的时间点相对应的 LSN。 差异和日志备份将还原的数据库推到稍后的时间，该时间与一个更高的 LSN 相对应。  
   
  事务日志中的每个记录都由一个日志序列号 (LSN) 唯一标识。 LSN 是这样排序的：如果 LSN2 大于 LSN1，则 LSN2 所标识的日志记录描述的更改发生在日志记录 LSN1 描述的更改之后。  
@@ -52,7 +52,7 @@ ms.locfileid: "62875760"
   
 -   [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)  
   
--   [sys. database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql);[sys. master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+-   [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)； [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
 -   [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
@@ -83,7 +83,7 @@ WITH STOPATMARK = 'lsn:15000000040000037'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [还原数据库备份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -98,7 +98,7 @@ GO
 -   [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
+ [&#40;SQL Server 应用事务日志备份&#41;](transaction-log-backups-sql-server.md)   
  [事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

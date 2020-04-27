@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62898855"
 ---
 # <a name="identifiers-ssis"></a>标识符 (SSIS)
@@ -112,7 +112,7 @@ ms.locfileid: "62898855"
 > [!IMPORTANT]  
 >  必须将命名空间与限定的变量名二者的组合放在方括号中，表达式计算器才能识别该变量。  
   
- 如果**用户**命名空间中的**计数**值为10，并且 MyNamespace 中的**count**值**** 为2，则表达式的计算结果`true`为，因为表达式计算器识别了两个不同的变量。  
+ 如果**用户**命名空间中的**计数**值为10，并且 MyNamespace 中的**count**值**MyNamespace**为2，则表达式的计算结果`true`为，因为表达式计算器识别了两个不同的变量。  
   
  如果变量名不唯一，将不会发生错误。 相反，表达式计算器将仅使用变量的一个实例来计算表达式并返回错误的结果。 例如，下面的表达式用于比较两个单独**Count**变量的值（10和2），但表达式的计算结果为， `false`因为表达式计算器两次使用同一个**Count**变量实例。  
   

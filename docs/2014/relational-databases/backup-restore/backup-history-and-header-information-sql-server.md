@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922222"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>备份历史记录和标头信息 (SQL Server)
@@ -64,7 +64,7 @@ ms.locfileid: "62922222"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="BnRHistoryTables"></a> 备份和还原历史记录表  
+##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> 备份和还原历史记录表  
  本部分介绍 **msdb** 系统数据库中存储备份和还原元数据的历史记录表。  
   
 |历史记录表|说明|  
@@ -81,7 +81,7 @@ ms.locfileid: "62922222"
 > [!NOTE]  
 >  执行还原时，会修改备份历史记录表和还原历史记录表。  
   
-##  <a name="TsqlStatementsForBackupHistory"></a> 用于访问备份历史记录的 Transact-SQL 语句  
+##  <a name="transact-sql-statements-for-accessing-backup-history"></a><a name="TsqlStatementsForBackupHistory"></a> 用于访问备份历史记录的 Transact-SQL 语句  
  还原信息语句与特定备份历史记录表中存储的信息存在对应关系。  
   
 > [!IMPORTANT]  
@@ -93,7 +93,7 @@ ms.locfileid: "62922222"
 |[RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset](/sql/relational-databases/system-tables/backupset-transact-sql)|在特定的备份设备上检索所有备份集的所有备份标头信息。 执行 RESTORE HEADERONLY 的结果是一个结果集。<br /><br /> 有关详细信息，请参阅本主题后面的“查看备份标头信息”部分。|  
 |[RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)|[backupmediaset](/sql/relational-databases/system-tables/backupmediaset-transact-sql)|返回一个结果集，其中包含有关指定备份设备中的备份介质的信息。<br /><br /> 有关详细信息，请参阅本主题后面的“查看介质标头信息”部分。|  
   
-##  <a name="ListDbTlogFiles"></a> 数据库和事务日志文件  
+##  <a name="database-and-transaction-log-files"></a><a name="ListDbTlogFiles"></a> 数据库和事务日志文件  
  列出备份中的数据库文件和事务日志文件时，显示的信息包括逻辑名称、物理名称、文件类型（数据库文件或日志文件）、文件组成员资格、文件大小（字节）、允许的文件最大大小和预定义的文件增长大小（字节）。 在下列情况下，这些信息对于在还原数据库备份之前确定数据库备份中文件的名称很有用：  
   
 -   丢失了包含数据库中一个或多个文件的磁盘驱动器。  
@@ -104,7 +104,7 @@ ms.locfileid: "62922222"
   
      列出备份中的文件使您能够确定哪些文件受到影响。 例如，备份中包含必须还原到驱动器 E 的文件，而目标服务器没有驱动器 E。还原此文件时，必须将此文件重新定位至其他位置，例如驱动器 Z。  
   
-##  <a name="MediaHeader"></a> 介质标头信息  
+##  <a name="media-header-information"></a><a name="MediaHeader"></a> 介质标头信息  
  查看介质标头时显示有关介质本身的信息，而不显示有关介质上的备份的信息。 显示的介质标头信息包括介质名称、说明、创建介质标头的软件的名称以及介质标头的写入日期。  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ ms.locfileid: "62922222"
   
  有关详细信息，请参阅本主题后面的 [介质标头信息和备份标头信息的比较](#CompareMediaHeaderBackupHeader)。  
   
-##  <a name="BackupHeader"></a> 备份标头信息  
+##  <a name="backup-header-information"></a><a name="BackupHeader"></a> 备份标头信息  
  查看备份标头时，将显示有关介质上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份集的信息。 显示的信息包括使用的备份设备类型、备份类型（数据库备份、事务备份、文件备份还是差异数据库备份）以及备份开始和停止的日期/时间。 这些信息对确定还原磁带上的哪个备份集或确定介质上包含哪些备份很有用。  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ms.locfileid: "62922222"
   
  若要还原特定的备份集，请指定要还原的备份集的位置编号。 例如，若要还原第二个备份集，请指定 2 作为要还原的备份集。  
   
-##  <a name="CompareMediaHeaderBackupHeader"></a> 介质标头信息和备份标头信息的比较  
+##  <a name="comparison-of-media-header-and-backup-header-information"></a><a name="CompareMediaHeaderBackupHeader"></a> 介质标头信息和备份标头信息的比较  
  可以下图为例了解备份标头和介质标头信息在查看方法上的区别。 获取介质标头信息只需要从磁带开头检索信息。 获取备份标头信息则需要扫描整个磁带以查看每个备份集的标头。  
   
  ![包含三个 SQL Server 备份集的媒体集](../../database-engine/media/bnr-media-label.gif "包含三个 SQL Server 备份集的媒体集")  
@@ -139,10 +139,10 @@ ms.locfileid: "62922222"
   
  有关如何查看备份设备上所有备份集的备份标头信息的信息，请参阅本主题前面的“查看备份标头信息”。  
   
-##  <a name="Verification"></a> 验证备份  
+##  <a name="backup-verification"></a><a name="Verification"></a> 验证备份  
  尽管验证备份不是必需的，但却很有用。 验证备份可以检查备份在物理上是否完好无损，以确保备份中的所有文件都是可读、可还原的，并且在您需要使用它时可以还原备份。 了解验证备份时不会验证备份中数据的结构是非常重要的。 但是，如果备份是使用 WITH CHECKSUMS 创建的，则使用 WITH CHECKSUMS 验证备份可以很好地表明备份中数据的可靠性。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **从备份中删除旧行并还原历史记录表**  
   
 -   [sp_delete_backuphistory (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql)  

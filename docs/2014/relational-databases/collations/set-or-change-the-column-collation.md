@@ -14,17 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918973"
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
   可以覆盖 `char`、`varchar`、`text`、`nchar`、`nvarchar` 和 `ntext` 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
   
--   
-  [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 和 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句。 例如：  
+-   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 和 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句。 例如：  
   
     ```  
     CREATE TABLE dbo.MyTable  
@@ -56,7 +55,7 @@ ms.locfileid: "62918973"
  使用 **tempdb**时， [COLLATE](/sql/t-sql/statements/collations) 子句包括了 *database_default* 选项，以此来指定对于该连接，临时表中的列使用当前用户数据库的默认排序规则而非 **tempdb**的排序规则。  
   
 ## <a name="collations-and-text-columns"></a>排序规则和文本列  
- 如果 `text` 列的排序规则不同于数据库默认排序规则的代码页，则可以在该列中插入值或更新该列中的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将值隐式转换为列的排序规则。  
+ 如果 `text` 列的排序规则不同于数据库默认排序规则的代码页，则可以在该列中插入值或更新该列中的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会隐式地将这些值转换为该列的排序规则。  
   
 ## <a name="collations-and-tempdb"></a>排序规则和 tempdb  
  每次启动 **时，都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。该数据库与 **model** 数据库具有相同的默认排序规则。 这通常与实例的默认排序规则相同。 如果为创建的用户数据库指定的默认排序规则与 **model**的排序规则不同，则该用户数据库与 **tempdb**的默认排序规则也不同。 所有临时存储过程或临时表都创建和存储在 **tempdb**中。 这意味着临时表中的所有隐式列以及临时存储过程中的所有强制默认常量、变量和参数都具有与可比较对象（在永久表和存储过程中创建）不同的排序规则。  

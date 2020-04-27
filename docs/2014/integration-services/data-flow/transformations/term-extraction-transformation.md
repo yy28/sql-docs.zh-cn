@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899930"
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
@@ -173,17 +173,17 @@ ms.locfileid: "62899930"
   
  有关可在 **“字词提取转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [字词提取转换编辑器 &#40;字词提取选项卡&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [字词提取转换编辑器（“字词提取”选项卡）](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [字词提取转换编辑器 &#40;排除选项卡&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [字词提取转换编辑器（“排除”选项卡）](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [字词提取转换编辑器 &#40;高级 "选项卡&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [字词提取转换编辑器（“高级”选项卡）](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../../common-properties.md)  
+-   [通用属性](../../common-properties.md)  
   
--   [转换自定义属性](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../set-the-properties-of-a-data-flow-component.md)。  
   

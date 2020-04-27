@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921936"
 ---
 # <a name="file-restores-full-recovery-model"></a>文件还原（完整恢复模式）
@@ -54,7 +54,7 @@ ms.locfileid: "62921936"
   
   
   
-##  <a name="Overview"></a> 从文件备份还原损坏的文件  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> 从文件备份还原损坏的文件  
   
 1.  在还原一个或多个损坏的文件前，请尝试创建 [结尾日志备份](tail-log-backups-sql-server.md)。  
   
@@ -120,7 +120,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [示例：主文件组和一个其他文件组的脱机还原（完整恢复模式）](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **还原文件和文件组**  
   
 -   [将文件还原到新位置 (SQL Server)](restore-files-to-a-new-location-sql-server.md)  

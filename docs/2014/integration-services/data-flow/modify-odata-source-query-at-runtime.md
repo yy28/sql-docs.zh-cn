@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901184"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在运行时修改 OData 源查询
-  可以通过将表达式添加到 [OData 源] 来在运行时修改 OData 源查询 **。 [Query]** 属性。  
+  可以通过向数据流任务的“[OData 源].[查询]”**** 属性添加表达式，在运行时修改 OData 源查询。  
   
  请注意，列必须保持与设计时使用的内容相同；否则执行包时会出现错误。 请务必在使用 $select 查询选项时指定相同的列（采用相同顺序）。 使用 $select 选项的更安全替代方法是直接从源组件 UI 中取消选择不需要的列。  
   
@@ -54,13 +54,13 @@ ms.locfileid: "62901184"
   
 3.  单击 .。。（省略号）按钮以显示 "**属性表达式编辑器**"。  
   
-4.  选择“[OData 源].[查询]”  属性。  
+4.  选择“[OData 源].[查询]”**** 属性。  
   
 5.  单击 .。。**表达式**的 "（省略号）" 按钮。  
   
-6.  输入 **“表达式”** 。  
+6.  输入**表达式**。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
 > [!WARNING]  
 >  请注意，当使用此方法时，需要确保设置的值为正确编码的 URL。 从用户输入接收值时（例如，通过参数设置各个查询选项值），必须确保值已验证，以避免潜在的 SQL 注入类型攻击。  

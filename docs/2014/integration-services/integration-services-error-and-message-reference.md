@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892655"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
@@ -43,9 +43,8 @@ ms.locfileid: "62892655"
   
 -   [数据流组件错误消息 (DTSBC_E_*)](#msgPipeline)  
   
-##  <a name="msgError"></a> 错误消息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 `DTS_E_` 开头。  
+##  <a name="error-messages"></a><a name="msgError"></a> 错误消息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 `DTS_E_` 开头。  
   
 |十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -231,7 +230,7 @@ ms.locfileid: "62892655"
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|没有与执行此查询相关联的结果行集。 未正确指定结果。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|没有正确生成调试转储文件。 hresult 为 0x%1!8.8X!。|  
 |0xC0016001|-1073651711|DTS_E_INVALIDURL|指定的 URL 无效。 如果服务器或代理 URL 为空或格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 无效。 如果指定了 http 和 https 之外的其他方案，或者该 URL 的格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 无效。 如果指定了 http 和 https 之外的其他方案，或者该 URL 的格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|无法建立与服务器 %1 的连接。 如果该服务器不存在，或代理设置不正确，会出现此错误。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|与服务器的连接已重置或终止。 请稍后再试。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|对“%1”的登录尝试失败。 如果提供的登录凭据不正确，会出现此错误。 请验证登录凭据。|  
@@ -790,7 +789,7 @@ ms.locfileid: "62892655"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|必须指定至少一个源文件。|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|在源数据库“%2”中找不到文件“%1”。|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|在符合 U.S. FIPS 140-2 标准的系统中不允许请求的操作。|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|执行查询“%1”失败，错误如下:“%2”。 失败的原因可能有:查询本身有问题、未正确设置“ResultSet”属性、未正确设置参数或未正确建立连接。|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|执行查询“%1”失败，错误如下:“%2”。 失败的原因可能有: 查询本身有问题、未正确设置 "ResultSet" 属性、未正确设置参数或未正确建立连接。|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|从该 xml 文件中读取存储过程名称时出错。|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|传输存储过程任务的数据节点无效。|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|连接“%1”不属于“SMOServer”类型。|  
@@ -1114,7 +1113,7 @@ ms.locfileid: "62892655"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|值 %1!d! 超出了范围。 小数位数必须在 %3!d! 到 %4!d! 的范围内。 小数位数不得超出精度范围，而且不能为负。|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|值 %1!d! 为 "NULL" 函数中数据类型为 %2 的长度参数指定的值 %1!d! 是负数，这是无效的。 长度必须为正数。|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|不能将负值赋予 %1。|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|“%2”的自定义属性“%1”不能设置为 True。  列数据类型必须是下列类型之一：DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4、DT_UI8、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAMPOFFSET、DT_DATE、DT_DBDATE、DT_DBTIME、DT_DBTIME2 或 DT_FILETIME。|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|“%2”的自定义属性“%1”不能设置为 True。  列数据类型必须为下列类型之一: DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4、DT_UI8、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAMPOFFSET、DT_DATE、DT_DBDATE、DT_DBTIME、DT_DBTIME2 或 DT_FILETIME。|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|不能重新附加“%1”。 请删除路径，添加一个新路径，然后再附加它。|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|函数“%1”需要 %2!d! 个参数，而不是 %3!d! 个参数。 已识别出函数名称，但参数个数无效。|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|函数“%1”需要 %2!d! 个参数，而不是 %3!d! 个参数。 已识别出函数名称，但参数个数无效。|  
@@ -1237,7 +1236,7 @@ ms.locfileid: "62892655"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|查找转换收到了用户的取消请求。|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|由于达到 4 GB 的限制，已停止处理字符或二进制大型对象 (LOB) 数据。|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|无法加载托管管道组件“%1”。  异常是: %2。|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS 错误代码 DTS_E_OLEDB_EXCEL_NOT_SUPPORTED:SSIS 的 64 位版本不支持 Excel 连接管理器，因为没有可用的 OLE DB 提供程序。|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS 错误代码 DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: 因为没有可用的 OLE DB 访问接口，所以在 SSIS 的 64 位版本中不支持 Excel 连接管理器。|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|缓存文件损坏，或文件不是使用缓存连接管理器创建的。  请提供一个有效的缓存文件。|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|SQL 命令的设置不正确。 请检查 SQLCommand 属性。|  
 |0xC0202002|-1071636478|DTS_E_COMERROR|已获得 COM 错误对象信息。  源:“%1” 错误代码:0x%2!8.8X!  说明:“%3”。|  
@@ -1993,7 +1992,7 @@ ms.locfileid: "62892655"
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|%2 的自定义属性“%1”只能用于 ansi 文件。|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|%2 的自定义属性“%1”只能用于 DT_BYTES。|  
 |0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册。 错误代码:0x%1!8.8X!。|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册 -- 可能是由于没有可用的 64 位访问接口。  错误代码:0x%1!8.8X!。|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册 -- 可能是由于没有可用的 64 位访问接口。  错误代码: 0x%1!8.8X!。|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|缓存列“%1”映射至多个列。 请删除重复的列映射。|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|%1 未映射到有效的缓存列。|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|由于数据类型不匹配，无法映射输入列“%1”和缓存列“%2”。|  
@@ -2018,9 +2017,8 @@ ms.locfileid: "62892655"
 |||DTS_E_GETCATMANAGERFAILED|由于错误 0x%1!8.8X!“%2!s!”，无法创建 COM 组件类别管理器 。|  
 |||DTS_E_COMPONENTINITFAILED|由于错误 0x%2!8.8X!“%3!s!”，组件 %1!s! 无法初始化 “%3!s!”。|  
   
-##  <a name="msgWarning"></a> 警告消息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告消息的符号名称以 `DTS_W_` 开头。  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> 警告消息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告消息的符号名称以 `DTS_W_` 开头。  
   
 |十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2126,7 +2124,7 @@ ms.locfileid: "62892655"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|找不到组件 %2 的“%1”值。 找不到该组件的 CurrentVersion 值。 如果该组件没有设置其注册表信息，以在 DTSInfo 部分中包含 CurrentVersion 值，将出现此错误。 组件开发期间会出现此消息；或者，如果组件未正确注册，则在包中使用它时也会出现此消息。|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|缓冲区管理器无法获取临时文件名。|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|缓冲区管理器无法在路径“%1”下创建临时文件。 临时存储区将不再考虑使用该路径。|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告：无法打开全局共享内存以与性能 DLL 通信；数据流性能计数器不可用。  若要解决此问题，请以管理员的身份或在系统控制台上运行此包。|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告: 无法打开全局共享内存以与性能 DLL 通信；数据流性能计数器不可用。  若要解决此问题，请以管理员的身份或在系统控制台上运行此包。|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|文件结尾存在不完整的行。|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|在读取标题行时到达了数据文件的结尾。 请确保标题行分隔符和要跳过的标题行数是正确的。|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|无法从 OLE DB 访问接口检索列代码页信息。  如果该组件支持“%1”属性，将使用来自该属性的代码页。  如果当前的字符串代码页值不正确，请更改该属性的值。  如果该组件不支持该属性，将使用来自该组件的区域设置 ID 的代码页。|  
@@ -2165,9 +2163,8 @@ ms.locfileid: "62892655"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|没有输入列映射到 %1。|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|表“%1”已更改。 新列可能已添加到该表。|  
   
-##  <a name="msgInfo"></a> 信息性消息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 信息性消息的符号名称以 `DTS_I_` 开头。  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> 信息性消息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 信息性消息的符号名称以 `DTS_I_` 开头。  
   
 |十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2265,9 +2262,8 @@ ms.locfileid: "62892655"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1 已将缓存写到文件“%2”。|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 目标“%1”的“最大插入提交大小”属性设置为 0。 此属性设置会导致正在运行的包停止响应。 有关详细信息，请参阅 OLE DB 目标编辑器(“连接管理器”页)的 F1 帮助主题。|  
   
-##  <a name="msgGeneral"></a> 常规消息和事件消息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 `DTS_MSG_` 开头。  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> 常规消息和事件消息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 `DTS_MSG_` 开头。  
   
 |十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2305,9 +2301,8 @@ ms.locfileid: "62892655"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|事件名称: %1<br /><br /> 消息: %9<br /><br /> 操作员: %2<br /><br /> 源名称: %3<br /><br /> 源 ID: %4<br /><br /> 执行 ID: %5<br /><br /> 开始时间: %6<br /><br /> 结束时间: %7<br /><br /> 数据代码: %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|事件名称: %1<br /><br /> 消息: %9<br /><br /> 操作员: %2<br /><br /> 源名称: %3<br /><br /> 源 ID: %4<br /><br /> 执行 ID: %5<br /><br /> 开始时间: %6<br /><br /> 结束时间: %7<br /><br /> 数据代码: %8|  
   
-##  <a name="msgSuccess"></a> 成功消息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功消息的符号名称以 `DTS_S_` 开头。  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> 成功消息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功消息的符号名称以 `DTS_S_` 开头。  
   
 |十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2315,9 +2310,8 @@ ms.locfileid: "62892655"
 |0x40005|262149|DTS_S_TRUNCATED|该字符串值被截断。 缓冲区接收到的字符串对该列而言太长，因而已被缓冲区截断。|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|在对表达式求值期间发生了截断。 在求值期间发生了截断，其中可能包含中间步骤中的任何点。|  
   
-##  <a name="msgPipeline"></a> 数据流组件错误消息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 `DTSBC_E_` 开头，其中“BC”指的是大多数 Microsoft 数据流组件都从中派生的本机基类。  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> 数据流组件错误消息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的符号名称以 `DTSBC_E_` 开头，其中“BC”指的是大多数 Microsoft 数据流组件都从中派生的本机基类。  
   
 |十六进制代码|十进制代码|符号名称|说明|  
 |----------------------|------------------|-------------------|-----------------|  

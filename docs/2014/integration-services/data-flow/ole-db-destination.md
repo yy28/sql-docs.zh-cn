@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901481"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
@@ -51,19 +51,17 @@ ms.locfileid: "62901481"
 >  如果用 **设计器中的** “OLE DB 目标编辑器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对话框创建 OLE DB 目标要向其插入数据的目标表，可能需要手动选择新创建的表。 当 OLE DB 访问接口（如 OLE DB Provider for DB2）自动将架构标识符添加到表名称时，需要进行手动选择。  
   
 > [!NOTE]  
->  
-  **“OLE DB 目标编辑器”** 对话框生成的 CREATE TABLE 语句可能需要修改，具体取决于目标类型。 例如，某些目标不支持 CREATE TABLE 语句所使用的数据类型。  
+>  **“OLE DB 目标编辑器”** 对话框生成的 CREATE TABLE 语句可能需要修改，具体取决于目标类型。 例如，某些目标不支持 CREATE TABLE 语句所使用的数据类型。  
   
  此目标使用 OLE DB 连接管理器连接数据源，该连接管理器指定要使用的 OLE DB 访问接口。 有关详细信息，请参阅 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目还提供了可从中创建 OLE DB 连接管理器的数据源对象，使数据源和数据源视图可用于 OLE DB 目标。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目还提供了可从中创建 OLE DB 连接管理器的数据源对象，使数据源和数据源视图可用于 OLE DB 目标。  
   
  OLE DB 目标包括输入列和目标数据源中的列之间的映射。 您不必将输入列映射到所有目标列，但有时如果没有将输入列映射到目标列可能会出错，具体取决于目标列的属性。 例如，如果目标列不允许出现 Null 值，则必须将输入列映射到该列。 另外，映射的列的数据类型必须是兼容的。 例如，不能将数据类型为字符串的输入列映射到数据类型为数值的目标列。  
   
  OLE DB 目标具有一个常规输入和一个错误输出。  
   
- 有关数据类型的详细信息，请参阅 [Integration Services Data Types](integration-services-data-types.md)。  
+ 有关数据类型的详细信息，请参阅[Integration Services 数据类型](integration-services-data-types.md)。  
   
 ## <a name="fast-load-options"></a>快速加载选项  
  如果 OLE DB 目标使用快速加载数据访问模式，则可以在用户界面“OLE DB 目标编辑器”**** 中为目标指定以下快速加载选项：  
@@ -91,8 +89,7 @@ ms.locfileid: "62901481"
 |FIRE_TRIGGERS|指定是否在插入表上激发触发器。 选项的格式为 **FIRE_TRIGGERS**。 出现该选项说明要激发触发器。|  
 |ORDER|指定输入数据如何排序。 选项格式为 ORDER \<列名称> ASC&#124;DESC。 可以列出任何列数，是否包括排序顺序是可选的。 如果省略排序顺序，则插入操作假定数据不排序。<br /><br /> 注意：如果使用 ORDER 选项根据表中的聚集索引对输入数据排序，则性能可以得到提高。|  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字传统上采用大写字母键入，但并不区分大小写。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字传统上采用大写字母键入，但并不区分大小写。  
   
  若要了解快速加载选项的详细信息，请参阅[BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
@@ -104,15 +101,15 @@ ms.locfileid: "62901481"
   
  有关可在 **“OLE DB 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [OLE DB 目标编辑器 &#40;"连接管理器" 页&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [OLE DB 目标编辑器（“连接管理器”页）](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [OLE DB 目标编辑器 &#40;映射 "页&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [OLE DB 目标编辑器（“映射”页）](../ole-db-destination-editor-mappings-page.md)  
   
--   [OLE DB 目标编辑器 &#40;错误输出页&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [OLE DB 目标编辑器（“错误输出”页）](../ole-db-destination-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../common-properties.md)  
+-   [通用属性](../common-properties.md)  
   
 -   [OLE DB 自定义属性](ole-db-custom-properties.md)  
   

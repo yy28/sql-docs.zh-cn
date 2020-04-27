@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a80526b0f4a1b9f122ff79bbbb5a5a8ac08a2d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893103"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>创建数据库（SQL Server 导入和导出向导）
@@ -35,7 +35,7 @@ ms.locfileid: "62893103"
  **数据文件名**  
  查看数据文件的名称。 它是由以前提供的数据库名称派生而来的。  
   
- **日志文件名称**  
+ **日志文件名**  
  查看日志文件的名称。 它是由以前提供的数据库名称派生而来的。  
   
  **初始大小（数据文件）**  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891535"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>步骤 5：添加并配置平面文件源
@@ -36,7 +36,7 @@ ms.locfileid: "62891535"
   
 6.  单击“列”**** 并验证列名是否正确。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
 8.  右键单击“平面文件源”并单击“属性”****。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "62891535"
   
 ## <a name="see-also"></a>另请参阅  
  [平面文件源](data-flow/flat-file-source.md)   
- [平面文件连接管理器编辑器 &#40;"常规" 页&#41;](general-page-of-integration-services-designers-options.md)  
+ [平面文件连接管理器编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)  
   
   

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900219"
 ---
 # <a name="lookup-transformation"></a>查找转换
@@ -59,7 +59,7 @@ ms.locfileid: "62900219"
   
 -   如果引用表中有多个匹配项，则查找转换只返回查找查询返回的第一个匹配项。 如果发现多个匹配项，则仅当转换被配置为将所有引用数据集加载到缓存中时查找转换才生成错误或警告。 在这种情况下，如果查找转换在填充缓存时检测到多个匹配项，则该查找转换将生成警告。  
   
- 联接可以是组合联接，即可以将转换输入中的多个列联接到引用数据集中的列。 除了 DT_R4、DT_R8、DT_TEXT、DT_NTEXT 或 DT_IMAGE 外，转换支持联接其他任何数据类型的列。 有关详细信息，请参阅 [Integration Services 数据类型](../integration-services-data-types.md)。  
+ 联接可以是组合联接，即可以将转换输入中的多个列联接到引用数据集中的列。 除了 DT_R4、DT_R8、DT_TEXT、DT_NTEXT 或 DT_IMAGE 外，转换支持联接其他任何数据类型的列。 有关详细信息，请参阅[Integration Services 数据类型](../integration-services-data-types.md)。  
   
  通常，将来自引用数据集的值添加到转换输出中。 例如，查找转换可以使用输入列的值从表中提取产品名，然后将产品名添加到转换输出中。 来自引用表的值可以替换列值，也可以添加到新列中。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62900219"
   
 -   ***在多个包之间共享缓存文件。有关详细信息，请参阅***  [在完全缓存模式下使用缓存连接管理器实现查找转换](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***。***  
   
--   使用包部署缓存文件。 ***然后，你可以在多台计算机上使用该数据。*** 有关详细信息，请参阅 [为查找转换创建和部署缓存](create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
+-   使用包部署缓存文件。 ***随后即可在多台计算机上使用该数据。*** 有关详细信息，请参阅 [为查找转换创建和部署缓存](create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
 -   使用原始文件源从缓存文件中读取数据。 随后即可使用其他数据流组件来转换或移动数据。 有关详细信息，请参阅 [Raw File Source](../raw-file-source.md)。  
   
@@ -114,8 +114,7 @@ ms.locfileid: "62900219"
   
      此缓存选项与 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]中查找转换的无缓存选项兼容。  
   
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在比较字符串时所用的方式不同。 如果查找转换配置为在查找转换运行之前将引用数据集加载到缓存中，则 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 将在缓存中执行查找比较。 否则，查找操作将使用参数化 SQL 语句并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将执行查找比较。 这意味着，根据缓存类型的不同，查找转换可能会从同一查找表中返回不同数量的匹配项。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在比较字符串时所用的方式不同。 如果查找转换配置为在查找转换运行之前将引用数据集加载到缓存中，则 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 将在缓存中执行查找比较。 否则，查找操作将使用参数化 SQL 语句并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将执行查找比较。 这意味着，根据缓存类型的不同，查找转换可能会从同一查找表中返回不同数量的匹配项。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关详细信息，请参阅以下主题：  

@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874646"
 ---
 # <a name="retrieving-udt-data"></a>检索 UDT 数据
@@ -374,8 +374,7 @@ class GetRawBytes
  可以在 ADO.NET 代码中将 UDT 作为输入参数和输出参数使用。  
   
 ## <a name="using-udts-in-query-parameters"></a>在查询参数中使用 UDT  
- 设置 `SqlParameter` 对象的 `System.Data.SqlClient.SqlCommand` 时可以将 UDT 用作参数值。 
-  `SqlDbType.Udt` 对象的 `SqlParameter` 枚举用于指示对 `Add` 集合调用 `Parameters` 方法时参数为 UDT。 `SqlCommand`对象`UdtTypeName`的属性用于指定数据库中使用*schema_name object_name*语法的 UDT 的完全限定名称。 虽然这不是必需的，但使用完全限定名称可以避免代码出现混乱。  
+ 设置 `SqlParameter` 对象的 `System.Data.SqlClient.SqlCommand` 时可以将 UDT 用作参数值。 `SqlDbType.Udt` 对象的 `SqlParameter` 枚举用于指示对 `Add` 集合调用 `Parameters` 方法时参数为 UDT。 `SqlCommand`对象`UdtTypeName`的属性用于指定数据库中使用*schema_name object_name*语法的 UDT 的完全限定名称。 虽然这不是必需的，但使用完全限定名称可以避免代码出现混乱。  
   
 > [!NOTE]  
 >  UDT 程序集的本地副本必须对客户端项目可用。  

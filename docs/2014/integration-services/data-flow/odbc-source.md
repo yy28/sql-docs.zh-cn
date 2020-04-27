@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901102"
 ---
 # <a name="odbc-source"></a>ODBC 源
@@ -80,7 +80,7 @@ ms.locfileid: "62901102"
   
  打开 **“高级编辑器”** 对话框：  
   
--   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 ODBC 源，然后选择 **“显示高级编辑器”** 。  
+-   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 ODBC 源，然后选择 **“显示高级编辑器”**。  
   
  有关可在“高级编辑器”对话框中设置的属性的详细信息，请参阅 [ODBC Source Custom Properties](odbc-source-custom-properties.md)。  
   
@@ -94,6 +94,6 @@ ms.locfileid: "62901102"
   
 -   [使用 ODBC 源提取数据](odbc-source.md)  
   
--   [ODBC 源自定义属性](odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890542"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>第 6 课：对项目部署模型使用参数
@@ -27,7 +27,7 @@ ms.locfileid: "62890542"
  再次运行包时，Integration Services 服务使用参数填充变量的值，而变量又会更新 Directory 属性。 结果，包将遍历该参数值指定的新数据文件夹中的文件，而不是遍历在包配置文件中设置的文件夹。  
   
 > [!IMPORTANT]  
->  本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012** 的详细信息，请参阅[安装 SQL Server 示例和示例数据库的注意事项](https://technet.microsoft.com/library/ms161556%28v=sql.105%29)。  
+>  本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [安装 SQL Server 示例和示例数据库的注意事项](https://technet.microsoft.com/library/ms161556%28v=sql.105%29)。  
   
 ## <a name="lesson-tasks"></a>课程任务  
  本课程包含以下任务：  
@@ -36,7 +36,7 @@ ms.locfileid: "62890542"
   
 2.  [步骤 2：将项目转换为项目部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [步骤 3：测试 Lesson 6 包](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [步骤 3：测试第 6 课包](lesson-6-3-testing-the-lesson-6-package.md)  
   
 4.  [步骤 4：部署第 6 课包](lesson-6-4-deploying-the-lesson-6-package.md)  
   

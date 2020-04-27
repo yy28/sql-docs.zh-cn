@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892747"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>保存 SSIS 包（SQL Server 导入和导出向导）
@@ -36,7 +36,7 @@ ms.locfileid: "62892747"
  **说明**  
  为包提供说明。 最好按照包的用途对其进行说明，使其一目了然，便于维护。  
   
- **靶**  
+ **目标**  
  查看以前为目标文件指定的目标对象（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或文件）  
   
 ## <a name="target-dynamic-options"></a>目标动态选项  
@@ -48,20 +48,20 @@ ms.locfileid: "62892747"
  **使用 Windows 身份验证**  
  在选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标后，指定是否使用 Windows 集成身份验证连接到服务器。 这是首选的身份验证方法。  
   
- **Use SQL Server Authentication**  
+ **使用 SQL Server 身份验证**  
  在选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标后，指定是否使用 SQL Server 身份验证连接到服务器。  
   
  **用户名**  
  在选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，并且指定 SQL Server 身份验证后，键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名。  
   
- **权限**  
+ **密码**  
  在选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，并且指定 SQL Server 身份验证后，键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密码。  
   
 ### <a name="target--file-system"></a>目标 = 文件系统  
- **文件名**  
+ **文件名称**  
  选择了文件目标后，请键入目标文件的路径，或使用 "**浏览**" 按钮。  
   
- **“浏览”**  
+ **浏览**  
  选择文件目标后，使用 "**保存包**" 对话框浏览到目标文件。  
   
 ## <a name="see-also"></a>另请参阅  
