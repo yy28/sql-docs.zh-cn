@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211672"
 ---
 # <a name="modify-data-through-a-view"></a>通过视图修改数据
@@ -38,28 +38,28 @@ ms.locfileid: "68211672"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   请参阅 [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql) 中的“可更新的视图”一节。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对目标表的 UPDATE、INSERT 或 DELETE 权限（取决于执行的操作）。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>通过视图修改表数据  
   
-1.  在 **“对象资源管理器”** 中，展开包含视图的数据库，然后展开 **“视图”**。  
+1.  在 **“对象资源管理器”** 中，展开包含视图的数据库，然后展开 **“视图”** 。  
   
-2.  右键单击该视图，然后选择“编辑前 200 行”****。  
+2.  右键单击该视图，然后选择“编辑前 200 行”  。  
   
 3.  可能需要在 **SQL** 窗格中修改 SELECT 语句以返回要修改的行。  
   
-4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”****。 若要更改一个或多个列中的数据，请修改列中的数据。  
+4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”  。 若要更改一个或多个列中的数据，请修改列中的数据。  
   
     > [!IMPORTANT]  
     >  如果视图引用多个基表，则不能删除行。 只能更新属于单个基表的列。  
@@ -69,7 +69,7 @@ ms.locfileid: "68211672"
     > [!IMPORTANT]  
     >  如果视图引用多个基表，则不能插入行。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-update-table-data-through-a-view"></a>通过视图更新表数据  
   

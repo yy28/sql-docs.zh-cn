@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102261"
 ---
 # <a name="search-page-report-manager"></a>“搜索”页（报表管理器）
@@ -53,7 +53,7 @@ ms.locfileid: "66102261"
   
  不支持布尔运算符，例如加号字符 (+)。  
   
- **“详细信息视图”**  
+ **详细信息视图**  
  单击以在一个列表中显示“搜索结果”页，其中包含有关各项的附加信息，如项类型、名称、说明、项所在的文件夹以及上次运行该项的时间。 在 **“详细信息视图”** 中，可以使用 **“删除”** 和 **“移动”** 按钮删除和重新定位文件夹中的项。  
   
  悬停在某个项之上，单击下拉箭头以打开下拉菜单，从中可以访问和配置所选项的属性。  

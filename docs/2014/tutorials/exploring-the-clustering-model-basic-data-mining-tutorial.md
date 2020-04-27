@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280424"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>浏览聚类分析模型（数据挖掘基础教程）
   聚[!INCLUDE[msCoName](../includes/msconame-md.md)]类分析算法将事例分组为包含类似特征的分类。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 分类查看器提供了以下选项卡，用于浏览聚类分析挖掘模型：  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 分类查看器提供了以下选项卡，用于浏览聚类分析挖掘模型：  
   
 
   
-##  <a name="ClusterDiagramTab"></a>分类关系图选项卡  
+##  <a name="cluster-diagram-tab"></a><a name="ClusterDiagramTab"></a>分类关系图选项卡  
  “分类关系图”选项卡显示挖掘模型中的所有分类。 分类之间的线条表示“接近程度”，其明暗度取决于分类之间的相似程度。 每个分类的实际颜色表示分类中变量和状态的出现频率。  
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>在“分类关系图”选项卡中浏览模型  
@@ -54,12 +53,11 @@ ms.locfileid: "63280424"
   
      选择某个分类时，将此分类连接到其他分类的线条将突出显示，以便您方便地查看此分类的所有关系。 如果该分类处于未选定状态，则可以通过线条的暗度来确定关系图中所有分类之间关系的紧密程度。 如果明暗度较浅或无明暗度，则表示分类的相似程度较低。  
   
-9. 使用网络左侧的滑块，可筛选掉强度较低的链接，找出关系最接近的分类。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场部可能希望将相似的分类组合在一起，以便确定提供目标邮件的最佳方法。  
+9. 使用网络左侧的滑块，可筛选掉强度较低的链接，找出关系最接近的分类。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场部可能希望将相似的分类组合在一起，以便确定提供目标邮件的最佳方法。  
   
 
   
-##  <a name="ClusterProfilesTab"></a>群集配置文件选项卡  
+##  <a name="cluster-profiles-tab"></a><a name="ClusterProfilesTab"></a>群集配置文件选项卡  
  "**分类配置文件**" 选项卡提供了`TM_Clustering`模型的总体视图。 "**分类配置文件**" 选项卡包含模型中每个分类的列。 第一列列出至少与一个分类关联的属性。 查看器的其余部分包含每个分类的某个属性的状态分布。 离散变量的分布以彩色条显示，并显示在 "**直方图条**" 列表中显示的最大栏数。 连续属性以菱形图显示，表示每个分类中的平均偏差和标准偏差。  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>在“分类剖面图”选项卡中浏览模型  
@@ -86,7 +84,7 @@ ms.locfileid: "63280424"
   
 
   
-##  <a name="ClusterCharacteristicsTab"></a>分类特征选项卡  
+##  <a name="cluster-characteristics-tab"></a><a name="ClusterCharacteristicsTab"></a>分类特征选项卡  
  使用 "**分类特征**" 选项卡，可以更详细地查看组成群集的特征。 您可以一次浏览一个分类，而不是比较所有分类的特征（就像在“分类剖面图”选项卡中那样）。 例如，如果从**群集**列表中选择 "高" "**自行车购买**者"，则可以看到此群集中的客户的特征。 尽管显示方式与分类剖面图查看器不同，但查找结果却是相同的。  
   
 > [!NOTE]  
@@ -94,7 +92,7 @@ ms.locfileid: "63280424"
   
 
   
-##  <a name="ClusterDiscriminationTab"></a>分类对比选项卡  
+##  <a name="cluster-discrimination-tab"></a><a name="ClusterDiscriminationTab"></a>分类对比选项卡  
  利用 "**分类对比**" 选项卡，可以浏览区分不同分类的特征。 从 "**分类 1** " 列表中选择两个群集，然后从 "**分类 2** " 列表中选择两个群集后，查看器将计算这些分类之间的差异，并显示最大程度地区分分类的属性列表。  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>在“分类对比”选项卡中浏览模型  

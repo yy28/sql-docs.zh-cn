@@ -14,19 +14,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7ea763aa9c0bd187b2207dc50a1f678c295f3b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483392"
 ---
 # <a name="create-a-collection-master-data-services"></a>创建集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要创建叶成员和合并成员的平面列表时，可以创建集合。 集合无需包括来自实体的所有成员。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须有权访问 "**资源管理器**" 功能区域。  
+-   **** 您必须有权访问“资源管理器”功能区域。  
   
 -   对于实体的集合模型对象，您必须至少具有 **“更新”** 权限。  
   
@@ -34,15 +34,11 @@ ms.locfileid: "65483392"
   
 ### <a name="to-create-a-collection"></a>创建集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型” **** 列表中选择模型。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 **** 主页上，从“模型”列表中，选择模型。  
   
-2.  
-  **
-  ** 从“版本”列表中，选择某一版本。  
+2.  **** 从“版本”列表中，选择某一版本。  
   
-3.  
-  **
-  **单击“资源管理器”。  
+3.  单击 **“资源管理器”**。  
   
 4.  从菜单栏中，指向“集合”****，然后单击“entity_name”**。  
   
@@ -54,15 +50,15 @@ ms.locfileid: "65483392"
   
 8.  还可以在 **“说明”** 框中键入对集合的说明。  
   
-9. 单击“确定”。   
+9. 单击" **确定**"。  
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [将成员添加到集合 &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [将成员添加到集合 (Master Data Services)](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   
  [&#40;Master Data Services 中删除成员或集合&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [创建显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+ [创建显式层次结构 (Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

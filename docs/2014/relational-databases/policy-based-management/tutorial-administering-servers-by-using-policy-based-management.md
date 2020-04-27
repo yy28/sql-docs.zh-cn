@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63256057"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教程：使用基于策略的管理来管理服务器
@@ -35,7 +35,7 @@ ms.locfileid: "63256057"
  该课程创建一个策略，用于定义并强制执行表命名标准。  
   
 ## <a name="requirements"></a>要求  
- 本课程要求您了解数据库和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的基础知识。  
+ 本课程要求您了解数据库和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的基础知识。  
   
  若要使用本教程，您的系统必须安装了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   

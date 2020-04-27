@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478857"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>“Master Data Services 服务器配置”页（配置管理器）
@@ -27,6 +27,6 @@ ms.locfileid: "65478857"
 |控件名称|说明|  
 |------------------|-----------------|  
 |**Windows PowerShell**|显示在本地计算机上安装的 Windows PowerShell 的版本。 Windows PowerShell 1.0 版或更高版本是使用主数据服务配置管理器所必需的。|  
-|**Internet Information Services**|显示在本地计算机上安装的 Internet Information Services (IIS) 的版本。 IIS 7.0 版或更高版本是使用主数据服务配置管理器所必需的。|  
+|**Internet 信息服务**|显示在本地计算机上安装的 Internet Information Services (IIS) 的版本。 IIS 7.0 版或更高版本是使用主数据服务配置管理器所必需的。|  
   
   

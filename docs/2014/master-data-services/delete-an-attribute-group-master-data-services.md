@@ -14,23 +14,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479563"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>删除属性组 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您不再需要在 **的** “资源管理器” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能区域中显示属性组选项卡时，可以删除属性组。  
   
--   **注意**存在属性组时，不属于属性组的属性将不会显示在**资源管理器**中。 不存在属性组时，显示所有属性。  
+-   **注意** 存在属性组时，不属于属性组的属性将不在 **“资源管理器”** 中显示。 不存在属性组时，显示所有属性。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 ### <a name="to-delete-an-attribute-group"></a>删除属性组  
   
@@ -54,6 +54,6 @@ ms.locfileid: "65479563"
   
 ## <a name="see-also"></a>另请参阅  
  [属性组 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [创建属性组 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
+ [创建属性组 (Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

@@ -15,20 +15,17 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482843"
 ---
 # <a name="exporting-data-master-data-services"></a>导出数据 (Master Data Services)
-  
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 您可以通过创建订阅视图将  数据导出到订阅系统。 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 然后，任何订阅系统都可以在  数据库中查看发布的数据。 有关视图的详细信息，请参阅[视图](../relational-databases/views/views.md)。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 您可以通过创建订阅视图将  数据导出到订阅系统。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 然后，任何订阅系统都可以在  数据库中查看发布的数据。 有关视图的详细信息，请参阅[视图](../relational-databases/views/views.md)。  
   
 ## <a name="subscription-view-formats"></a>订阅视图格式  
- 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中创建某一视图时，从  提供的一组标准视图格式中进行选择。 可以使用这些格式创建显示以下内容的视图：  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中创建某一视图时，从  提供的一组标准视图格式中进行选择。 可以使用这些格式创建显示以下内容的视图：  
   
 -   所有叶成员及其属性。  
   
@@ -43,19 +40,18 @@ ms.locfileid: "65482843"
 -   某一实体的所有显式层次结构中的成员，采用父子或级别格式。  
   
 ## <a name="subscription-views-can-become-out-of-date"></a>订阅视图可能会过期  
- 在您创建针对某一实体或层次结构的订阅视图后，对关联的模型对象的更改不能自动反映在视图中。 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 您可能需要在中重新生成一个订阅视图，以便反映对模型对象的更改。 在对象模型更改时， **“导出”** 页上的 **“已更改”** 列将更新为 **True** 。 **True**指示您应该编辑订阅视图并保存它，这将重新生成该视图。  
+ 在您创建针对某一实体或层次结构的订阅视图后，对关联的模型对象的更改不能自动反映在视图中。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 您可能需要在中重新生成一个订阅视图，以便反映对模型对象的更改。 在对象模型更改时， **“导出”** 页上的 **“已更改”** 列将更新为 **True** 。 **True** 指示您应该编辑订阅视图并且保存它，这将重新生成该视图。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
 |创建主数据的订阅视图。|[&#40;Master Data Services 创建订阅视图&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
-|删除现有订阅视图。|[&#40;Master Data Services 中删除订阅视图&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
+|删除现有订阅视图。|[删除订阅视图 &#40;Master Data Services&#41; ](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [订阅视图格式 &#40;Master Data Services&#41;](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
+-   [订阅视图格式 (Master Data Services)](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
   
 -   [视图](../relational-databases/views/views.md)  
   

@@ -11,15 +11,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316012"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>第 2 课：添加 Web 引用
-  Web 服务发现是客户端查找 Web 服务并获取其服务说明的过程。 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的 Web 服务发现过程涉及询问网站是否遵循预定算法。 此过程的目的是查找服务说明，它是使用 Web 服务描述语言 (WSDL) 的一个 XML 文档。  
+  Web 服务发现是客户端查找 Web 服务并获取其服务说明的过程。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的 Web 服务发现过程涉及询问网站是否遵循预定算法。 此过程的目的是查找服务说明，它是使用 Web 服务描述语言 (WSDL) 的一个 XML 文档。  
   
  服务说明介绍了哪些服务可用，以及如何与这些服务进行交互。 没有服务说明，就不可能通过编程方式与 Web 服务进行交互。  
   
@@ -43,10 +42,9 @@ ms.locfileid: "63316012"
   
 6.  单击 "**添加引用**" 以添加目标 web 服务的 web 引用。  
   
-     
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 将下载服务说明并生成一个代理类，以在您的应用程序和报表服务器 Web 服务之间进行连接。 您还需要添加对 <xref:System.Web.Services> 命名空间的引用，Web 引用才能正常工作。  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 将下载服务说明并生成一个代理类，以在您的应用程序和报表服务器 Web 服务之间进行连接。 您还需要添加对 <xref:System.Web.Services> 命名空间的引用，Web 引用才能正常工作。  
   
-7.  在 "项目" 菜单上，单击 "**添加引用**"。  
+7.  在“项目”菜单上，单击“添加引用”****。  
   
 8.  在 "**添加引用**" 对话框的 " **.net** " 选项卡中，选择 " **System.web**"，然后单击 **"确定"**。  
   

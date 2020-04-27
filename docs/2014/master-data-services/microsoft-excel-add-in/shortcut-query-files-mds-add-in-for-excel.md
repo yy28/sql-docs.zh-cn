@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482661"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>快捷查询文件（用于 Excel 的 MDS 外接程序）
@@ -45,15 +45,15 @@ ms.locfileid: "65482661"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|将活动工作表的内容另存为一个快捷查询文件。|[保存快捷查询文件 &#40;MDS Add-in for Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|通过电子邮件发送表示活动工作表内容的快捷查询文件。|[通过电子邮件发送快捷查询文件 &#40;MDS Add-in for Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|将活动工作表的内容另存为一个快捷查询文件。|[保存快捷查询文件（用于 Excel 的 MDS 外接程序）](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|通过电子邮件发送表示活动工作表内容的快捷查询文件。|[以电子邮件形式发送快捷查询文件（用于 Excel 的 MDS 外接程序）](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [连接 &#40;MDS Add-in for Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [连接（用于 Excel 的 MDS 外接程序）](connections-mds-add-in-for-excel.md)  
   
--   [Master Data Services Add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [用于 Microsoft Excel 的 Master Data Services 外接程序](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [安全 &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [安全性 (Master Data Services)](../security-master-data-services.md)  
   
   

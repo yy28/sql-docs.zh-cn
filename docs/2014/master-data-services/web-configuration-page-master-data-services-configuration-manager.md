@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481208"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>“Web 配置”页（Master Data Services 配置管理器）
@@ -34,7 +34,7 @@ ms.locfileid: "65481208"
   
 |控件名称|说明|  
 |------------------|-----------------|  
-|**单击**|打开 **“连接到服务器”** 对话框，从中连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择要与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库。|  
+|**选择**|打开 **“连接到服务器”** 对话框，从中连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择要与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库。|  
 |**SQL Server 实例**|显示承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例的名称。 在您连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择某一数据库之前，此项为空。|  
 |**Database**|显示与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库的名称。 在您连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择某一数据库之前，此项为空。|  
   

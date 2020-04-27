@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101929"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点上授予对报表服务器项的权限
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)]提供内置安全功能，您可以使用这些功能授予对从 SharePoint 站点和库访问的 Report Server 项的访问权限。 如果已为用户分配权限，则在 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和报表服务器之间配置集成设置后，这些用户就会立即拥有访问报表服务器项和操作的权限。 您可以使用现有权限上载报表定义和其他文档、查看报表、创建订阅以及管理项。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供了内置安全功能。使用这些功能，可以授予对从 SharePoint 站点和库访问的报表服务器项的访问权限。 如果已为用户分配权限，则在 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和报表服务器之间配置集成设置后，这些用户就会立即拥有访问报表服务器项和操作的权限。 您可以使用现有权限上载报表定义和其他文档、查看报表、创建订阅以及管理项。  
   
  如果您尚未分配权限，或者您对 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]中的安全功能并不熟悉，请遵循以下指南：  
   
@@ -42,11 +42,11 @@ ms.locfileid: "66101929"
   
 -   安全对象包括站点、列表、库、文件夹和文档。  
   
--   权限是对执行特定任务的授权。 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]提供了33预定义的权限，您可以将这些权限合并为一个权限级别。  
+-   权限是对执行特定任务的授权。 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供了 33 种预定义的权限，并且您可以将这些权限合并为一个权限级别。  
   
 -   权限级别是针对某安全对象（如站点、库、列表、文件夹、项或文档）、可以授予用户或 SharePoint 组的一组权限。 它相当于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的角色定义。 有五个预定义的权限级别。 您可以对其进行自定义或根据需要创建新的权限级别。  
   
--   SharePoint 组是可在 SharePoint 站点上创建的用户组，用于管理对该站点的权限并为站点成员提供电子邮件分发列表。 SharePoint 组由 Windows 用户帐户和组帐户组成；如果您使用窗体身份验证，则 SharePoint 组由用户登录名组成。 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]提供三个组。 您可以对其进行自定义或根据需要创建新的权限级别。  
+-   SharePoint 组是可在 SharePoint 站点上创建的用户组，用于管理对该站点的权限并为站点成员提供电子邮件分发列表。 SharePoint 组由 Windows 用户帐户和组帐户组成；如果您使用窗体身份验证，则 SharePoint 组由用户登录名组成。 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供了三个组。 您可以对其进行自定义或根据需要创建新的权限级别。  
   
 -   权限继承允许子站点、列表和库以及项继承父站点的安全设置。 您可以使用继承的权限访问存储在 SharePoint 库中的报表服务器项。 使用权限继承和预定义的 SharePoint 组有助于简化部署，并且可以立即访问大多数报表服务器操作。  
   
@@ -58,20 +58,15 @@ ms.locfileid: "66101929"
  服务器管理员或网站集管理员可设置确定其他站点所有者是否可以设置权限的选项。 根据您拥有的权限级别，您可能无法创建或自定义 SharePoint 组或权限级别。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>使用预定义的 SharePoint 组和权限级别  
- 
-  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 产品文档建议你使用标准 SharePoint 组（即“Site name 所有者”、“Site name 成员”和“Site name 访问者”）并在站点级分配权限** ****** ****** ****。 为其分配权限的多数用户都应是 Site name 访问者或 Site name 成员组的成员** ****** ****。 对父站点的权限可在整个站点层次结构中得到继承。 您可以对需要其他限制的特定项中断权限继承。  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 产品文档建议使用标准 SharePoint 组（即“Site name 所有者”、“Site name 成员”和“Site name 访问者”）并在站点级分配权限       。 为其分配权限的多数用户都应是 Site name 访问者或 Site name 成员组的成员     。 对父站点的权限可在整个站点层次结构中得到继承。 您可以对需要其他限制的特定项中断权限继承。  
   
  下列 SharePoint 组拥有以下预定义的权限级别：  
   
--   “所有者” **** 组拥有“完全控制”权限，通过这些权限，组成员可以更改站点内容、页面或功能。 “完全控制”访问权限应仅限于站点管理员。  
+-   “所有者”  组拥有“完全控制”权限，通过这些权限，组成员可以更改站点内容、页面或功能。 “完全控制”访问权限应仅限于站点管理员。  
   
--   
-  **
-  ** “成员”组拥有“参与讨论”级别权限，此权限允许组成员查看页面、编辑项、提交更改以待审批、添加项以及从列表中删除项。  
+-    “成员”组拥有“参与讨论”级别权限，此权限允许组成员查看页面、编辑项、提交更改以待审批、添加项以及从列表中删除项。  
   
--   
-  **
-  ** “访问者”组拥有“读取”级权限，通过这些权限，组成员能够查看页面、列表项和文档。  
+-    “访问者”组拥有“读取”级权限，通过这些权限，组成员能够查看页面、列表项和文档。  
   
  SharePoint 组拥有的权限级别可提供对许多报表服务器操作的快速访问。 如果您发现内置安全设置未提供所需访问级别，可创建自定义组或权限级别。  
   
@@ -90,7 +85,7 @@ ms.locfileid: "66101929"
  说明特别报告功能的权限要求并提供使功能可用的建议方法。  
   
  [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
- 简要介绍了 SharePoint 组与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的预定义角色定义之间的比较。  
+ 简要介绍了 SharePoint 组与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的预定义角色定义之间的比较。  
   
  [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  提供有关创建有权启动报表生成器和设置模型项安全性的新 SharePoint 组的说明。 此主题还包含有关为任意报表服务器项或操作设置自定义权限的通用原则。  

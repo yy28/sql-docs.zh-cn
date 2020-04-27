@@ -14,31 +14,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480977"
 ---
-# <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
+# <a name="configure-advanced-settings-for-dqs-log-files"></a>为 DQS 日志文件配置高级设置
   本主题介绍如何为 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志文件配置高级设置，例如设置日志文件的滚动文件大小限制、设置事件的时间戳模式等。  
   
 > [!NOTE]  
 >  这些活动不能使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]执行，并且仅面向高级用户。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
   
 -   您的 Windows 用户帐户必须是 SQL Server 实例中 sysadmin 固定服务器角色的成员，才能修改 DQS_MAIN 中 A_CONFIGURATION 表的配置设置。  
   
 -   您必须以正在修改 DQLog.Client.xml 文件以便配置 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志记录的计算机上 Administrators 组成员的身份登录。  
   
-##  <a name="DQSServer"></a>配置数据质量服务器日志设置  
- 
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志设置在 DQS_MAIN 数据库的 A_CONFIGURATION 表中 **ServerLogging** 行的 **VALUE** 列中以 XML 格式提供。 您可以运行以下 SQL 查询以便查看配置信息：  
+##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>配置数据质量服务器日志设置  
+ [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志设置在 DQS_MAIN 数据库的 A_CONFIGURATION 表中 **ServerLogging** 行的 **VALUE** 列中以 XML 格式提供。 您可以运行以下 SQL 查询以便查看配置信息：  
   
 ```  
 select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
@@ -94,7 +93,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-4.  按 F5 执行这些语句。 检查 **“结果”** 窗格以验证是否已成功执行这些语句。  
+4.  按 F5 执行这些语句。 检查 "**结果**" 窗格以验证语句是否已成功执行。  
   
 5.  若要应用对 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志记录配置进行的更改，您必须运行以下 Transact-SQL 语句。 打开新的“查询编辑器”窗口，然后粘贴以下 Transact-SQL 语句：  
   
@@ -108,13 +107,12 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-6.  按 F5 执行这些语句。 检查 **“结果”** 窗格以验证是否已成功执行这些语句。  
+6.  按 F5 执行这些语句。 检查 "**结果**" 窗格以验证语句是否已成功执行。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志记录设置配置动态生成并且存储于 DQS_MAIN.Log 文件中，该文件通常位于 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log 下（如果您安装了 SQL Server 的默认实例）。 但是，将不会保存在此文件中直接进行的更改，它们将会被 DQS_MAIN 数据库中 A_CONFIGURATION 表的配置设置覆盖。  
+>  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志记录设置配置动态生成并且存储于 DQS_MAIN.Log 文件中，该文件通常位于 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log 下（如果您安装了 SQL Server 的默认实例）。 但是，将不会保存在此文件中直接进行的更改，它们将会被 DQS_MAIN 数据库中 A_CONFIGURATION 表的配置设置覆盖。  
   
-##  <a name="DQSClient"></a>配置 Data Quality Client 日志设置  
+##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>配置 Data Quality Client 日志设置  
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]日志设置配置文件 dqlog.client.xml 通常在 C:\PROGRAM Files\Microsoft SQL server\120\tools\binn\dq\config。中提供XML 文件的内容类似于您之前为[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]日志配置设置修改的 xml 文件。 配置 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志设置：  
   
 1.  以管理员身份运行任何 XML 编辑工具或记事本。  

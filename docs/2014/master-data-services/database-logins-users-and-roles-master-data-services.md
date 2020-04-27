@@ -18,14 +18,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e9352910554e5f946f21eae3b51a7d87ff1106bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479756"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>数据库登录名、用户和角色 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]包括在承载[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库的实例上自动安装的登录名、用户和角色。 不应对这些登录名、用户和角色做任何修改。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括在承载 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 数据库的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例上自动安装的登录名、用户和角色。 不应对这些登录名、用户和角色做任何修改。  
   
 ## <a name="logins"></a>登录名  
   
@@ -36,14 +36,14 @@ ms.locfileid: "65479756"
   
 ## <a name="msdb-users"></a>msdb 用户  
   
-|用户|说明|  
+|User|说明|  
 |----------|-----------------|  
 |`mds_clr_user`|未使用。<br /><br /> 映射到 mds_dlp_login。|  
 |`mds_email_user`|用于通知。<br /><br /> 映射到 mds_email_login。<br /><br /> 是角色 DatabaseMailUserRole 的成员。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 数据库用户  
   
-|用户|说明|  
+|User|说明|  
 |----------|-----------------|  
 |`mds_email_user`|用于通知。<br /><br /> 具有针对 mdm 架构的 SELECT 权限。<br /><br /> 具有针对 mdm.MemberGetCriteria 用户定义的表类型的 EXECUTE 权限。<br /><br /> 具有针对 mdm.udpNotificationQueueActivate 存储过程的 EXECUTE 权限。|  
 |**mds_schema_user**|拥有 mdm 和 mdq 架构。 默认架构为 mdm。<br /><br /> 不具有映射到它的登录名。|  
@@ -51,19 +51,19 @@ ms.locfileid: "65479756"
   
 ## <a name="master-data-services-database-role"></a>Master Data Services 数据库角色  
   
-|角色|说明|  
+|Role|说明|  
 |----------|-----------------|  
 |`mds_exec`|此角色包含创建 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] Web 应用程序并且为应用程序池指定帐户时在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中指定的帐户。 mds_exec 角色具有：<br /><br /> 所有架构的**EXECUTE**权限。<br /><br /> 对这些表的**ALTER**、 **INSERT**和**SELECT**权限：<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> 对这些表的**SELECT**权限：<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> 针对以下视图的**SELECT**权限：<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>架构  
   
-|角色|说明|  
+|Role|说明|  
 |----------|-----------------|  
 |`mdm`|包含除了在 mdq 架构中包含的函数之外的所有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库和 Service Broker 对象。|  
 |`mdq`|包含与基于正则表达式或相似性筛选成员结果相关的以及用于设置通知电子邮件格式的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库函数。|  
 |**stg**|包含与临时过程有关的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库表、存储过程和视图。 不要删除任何这些对象。 有关临时过程的详细信息，请参阅[数据导入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库对象安全 &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+ [数据库对象安全性 &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

@@ -11,20 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd6342542da7528fef633ba02a430a8ba2ef5857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483064"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的 Master Data Services 功能
   本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
 ## <a name="staging-process"></a>临时过程  
- 中[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]使用的临时过程在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web 应用程序中不再可用;但在中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]仍可用。  
+  中使用的临时过程在 Web 应用程序将不再可用，但是仍可在  中使用。  
   
- 
-  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的临时错误将不再显示在 UI 中。 在临时过程中填充的错误代码在临时表中仍然可用，可在此处找到： [https://msdn.microsoft.com/library/ff487022.aspx](https://msdn.microsoft.com/library/ff487022.aspx)。  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的临时错误将不再显示在 UI 中。 在临时过程中填充的错误代码在临时表中仍然可用，可在此处找到： [https://msdn.microsoft.com/library/ff487022.aspx](https://msdn.microsoft.com/library/ff487022.aspx)。  
   
  临时表（tblStgMember、tblStgMemberAttribute 和 tblStgRelationship）在数据库中仍然可用。 用于启动临时过程的存储过程 (mdm.udpStagingSweep) 在数据库中仍然可用。  
   

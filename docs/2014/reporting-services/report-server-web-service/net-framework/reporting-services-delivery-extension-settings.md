@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260750"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 传递扩展插件设置
@@ -38,34 +38,34 @@ ms.locfileid: "63260750"
 ## <a name="e-mail-delivery-settings"></a>电子邮件传递设置  
  下表列出用于使用报表服务器电子邮件的订阅的电子邮件传递设置。  
   
-|设置|值|  
+|设置|Value|  
 |-------------|-----------|  
-|TO |在电子邮件的 `To` 行中出现的电子邮件地址。 多个电子邮件地址之间用分号分隔。 必需。|  
-|CC |在电子邮件的 `Cc` 行中出现的电子邮件地址。 多个电子邮件地址之间用分号分隔。 可选。|  
-|BCC |在电子邮件的 `Bcc` 行中出现的电子邮件地址。 多个电子邮件地址之间用分号分隔。 可选。|  
-|ReplyTo |在电子邮件的 `Reply-To` 标题中出现的电子邮件地址。 该值必须为单个电子邮件地址。 可选。|  
+|**自**|在电子邮件的 `To` 行中出现的电子邮件地址。 多个电子邮件地址之间用分号分隔。 必需。|  
+|**字幕**|在电子邮件的 `Cc` 行中出现的电子邮件地址。 多个电子邮件地址之间用分号分隔。 可选。|  
+|**框**|在电子邮件的 `Bcc` 行中出现的电子邮件地址。 多个电子邮件地址之间用分号分隔。 可选。|  
+|**ReplyTo**|在电子邮件的 `Reply-To` 标题中出现的电子邮件地址。 该值必须为单个电子邮件地址。 可选。|  
 |`IncludeReport`|指示是否在电子邮件传递中包括报表的值。 如果值为 `true`，则指示在电子邮件的正文中传递报表。|  
 |**RenderFormat**|要用于生成呈现的报表的呈现扩展插件的名称。 该名称必须与在报表服务器上安装的可见呈现扩展插件之一相符。 如果该 `IncludeReport` 设置设置为 `true` 值，则该值是必需的。|  
-|**大事**|电子邮件按其发送的优先级。 有效值为 `LOW`、`NORMAL` 和 `HIGH`。 默认值是 `NORMAL`。|  
+|**Priority**|电子邮件按其发送的优先级。 有效值为 `LOW`、`NORMAL` 和 `HIGH`。 默认值为 `NORMAL`。|  
 |**主题**|电子邮件的主题行中的文本。|  
-|**注释**|包括在电子邮件的正文中的文本。|  
-|**IncludeLink**|指示是否在电子邮件正文中包括指向报表的链接的值。|  
+|**备注**|包括在电子邮件的正文中的文本。|  
+|IncludeLink****|指示是否在电子邮件正文中包括指向报表的链接的值。|  
   
 ## <a name="file-share-delivery-settings"></a>文件共享传递设置  
  下表列出用于订阅的文件共享传递设置。  
   
-|设置|值|  
+|设置|Value|  
 |-------------|-----------|  
 |**名字**|保存到磁盘的文件的名称。|  
-|**FILEEXTN**|指示是否为所呈现报表包括文件扩展名。 该值为 `true` 或 `false`。|  
+|FILEEXTN****|指示是否为所呈现报表包括文件扩展名。 该值为 `true` 或 `false`。|  
 |**通道**|要将报表保存到的文件夹路径或 UNC 文件共享路径。|  
-|**RENDER_FORMAT**|保存到磁盘的报表的格式。|  
+|RENDER_FORMAT****|保存到磁盘的报表的格式。|  
 |**用户名**|访问网络资源或磁盘所需的用户名。|  
 |**权限**|访问网络资源或磁盘所需的密码。|  
-|**WRITEMODE**|访问磁盘时要使用的写入模式。 有效值为 `None`、`Overwrite` 和 `AutoIncrement`。|  
+|WRITEMODE****|访问磁盘时要使用的写入模式。 有效值为 `None`、`Overwrite` 和 `AutoIncrement`。|  
   
 ## <a name="see-also"></a>另请参阅  
- [技术参考 (SSRS)](../../technical-reference-ssrs.md)   
- [使用 Web 服务和.NET Framework 构建应用程序](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [SSRS&#41;&#40;技术参考](../../technical-reference-ssrs.md)   
+ [使用 Web 服务和 .NET Framework 生成应用程序](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

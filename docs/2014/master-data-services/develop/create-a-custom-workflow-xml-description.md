@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a71ee85fc4dce4abd7d8ef91a8f22529ce8d5a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483017"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>自定义工作流 XML 说明 (Master Data Services)
@@ -64,19 +64,18 @@ ms.locfileid: "65483017"
   
 |标记|说明|  
 |---------|-----------------|  
-|\<类型>|在 ** 的“工作流类型”文本框中输入的文本，用于标识要加载的自定义工作流程序集**[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|  
-|\<A>|由 ** 中的“消息中包括成员数据”复选框控制的一个布尔值**[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。 值 1 表示发送 \<MemberData> 部分；否则表示未发送 \<MemberData> 部分。|  
-|<Server_URL>|在 ** 中的“工作流站点”文本框中输入的文本**[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|  
-|<Action_ID>|在 ** 中的“工作流名称”文本框中输入的文本**[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|  
-|
-  \<MemberData>|包含触发工作流操作的成员的数据。 仅当 \<SendData> 的值为 1 时才包括此项。|  
+|\<Type>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的“工作流类型”文本框中输入的文本，用于标识要加载的自定义工作流程序集****。|  
+|\<SendData>|由 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“消息中包括成员数据”复选框控制的一个布尔值****。 值 1 表示发送 \<MemberData> 部分；否则表示未发送 \<MemberData> 部分。|  
+|<Server_URL>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“工作流站点”文本框中输入的文本****。|  
+|<Action_ID>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“工作流名称”文本框中输入的文本****。|  
+|\<MemberData>|包含触发工作流操作的成员的数据。 仅当 \<SendData> 的值为 1 时才包括此项。|  
 |\<输入*xxx*>|这组标记包含有关创建成员的元数据，例如，何时创建该成员或该成员的创建者。|  
 |\<LastChg*xxx*>|这组标记包含有关对成员所作最后更改的元数据，例如，所作更改及更改者。|  
-|\<名称>|已更改的成员的第一个属性。 此示例成员仅包含 Name 和 Code 属性。|  
-|\<代码>|已更改的成员的下一个属性。 如果此示例成员包含更多属性，它们将遵循这一属性。|  
+|\<Name>|已更改的成员的第一个属性。 此示例成员仅包含 Name 和 Code 属性。|  
+|\<Code>|已更改的成员的下一个属性。 如果此示例成员包含更多属性，它们将遵循这一属性。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Master Data Services 创建自定义工作流 &#40;&#41;](create-a-custom-workflow-master-data-services.md)   
- [&#40;Master Data Services 的自定义工作流示例&#41;](create-a-custom-workflow-example.md)  
+ [自定义工作流示例 &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)  
   
   

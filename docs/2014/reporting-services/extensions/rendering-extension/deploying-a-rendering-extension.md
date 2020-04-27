@@ -14,18 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298600"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署呈现扩展插件
   在编写 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表呈现扩展插件并将其编译为 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库之后，需要使其变得可供报表服务器和报表设计器发现。 为此，请将此扩展插件复制到适当的目录并向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加条目。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>配置文件呈现扩展插件元素  
- 将呈现扩展插件编译为 .DLL 后，您可以在 rsreportserver.config 文件中添加一个条目。 默认情况下，该文件位于 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer。 父元素为 \<Render>。 在 Render 元素之下是用于每个呈现扩展插件的 Extension 元素。 
-  `Extension` 元素包含两个属性，即 Name 和 Type。  
+ 将呈现扩展插件编译为 .DLL 后，您可以在 rsreportserver.config 文件中添加一个条目。 默认情况下，该文件位于 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer。 父元素为 \<Render>。 在 Render 元素之下是用于每个呈现扩展插件的 Extension 元素。 `Extension` 元素包含两个属性，即 Name 和 Type。  
   
  下表描述了呈现扩展插件的`Extension`元素的属性：  
   

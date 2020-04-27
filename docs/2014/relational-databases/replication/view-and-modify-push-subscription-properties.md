@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212010"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>查看和修改推送订阅属性
@@ -35,12 +35,12 @@ ms.locfileid: "68212010"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [复制管理对象 (RMO)](#RMOProcedure)  
+     [复制管理对象（RMO）](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以从下列位置查看和修改发布服务器的推送订阅属性：  
   
--   “订阅属性 - **发布服务器>：\<PublicationDatabase>”对话框，可从 \< 中获取。** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+-   “订阅属性 - \<发布服务器>：\<PublicationDatabase>”对话框，可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中获取。****  
   
 -   **“所有订阅”** 选项卡，该选项卡可以从复制监视器中找到。 有关启动复制监视器的信息，请参阅[启动复制监视器](monitor/start-the-replication-monitor.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68212010"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  展开相应的发布，右键单击订阅，然后单击 **“属性”** 。  
+3.  展开相应的发布，右键单击订阅，然后单击 **“属性”**。  
   
 4.  根据需要修改属性，然后单击 **“确定”** 。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "68212010"
   
 2.  单击 **“所有订阅”** 选项卡。  
   
-3.  右键单击订阅，然后单击 **“属性”** 。  
+3.  右键单击订阅，然后单击 **“属性”**。  
   
-4.  根据需要修改属性，然后单击 **“确定”** 。  
+4.  根据需要修改属性，然后单击 **“确定”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式修改推送订阅和访问其属性。 所用的存储过程取决于订阅所属的发布的类型。  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>查看快照或事务发布的推送订阅的属性  
@@ -77,7 +77,7 @@ ms.locfileid: "68212010"
   
 1.  在发布服务器上，对发布数据库执行 [sp_changesubscriber](/sql/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql)，同时指定 **@subscriber** 及任何参数。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)。 **@publication** **@article** **@property** **@value** **** 将、 **@subscriber**、、的值指定为，将订阅属性更改为，并将新值指定为。 **@destination_db** 这将更改推送订阅的安全设置。  
+2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)。 **@publication** **@article** **@property** **@value** **all**将、 **@subscriber**、、的值指定为，将订阅属性更改为，并将新值指定为。 **@destination_db** 这将更改推送订阅的安全设置。  
   
 3.  （可选）若要更改订阅的 Data Transformation Services (DTS) 包属性，请在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) 。 为**@jobid**指定分发代理作业的 ID，并指定以下 DTS 包属性：  
   
@@ -96,15 +96,15 @@ ms.locfileid: "68212010"
   
 1.  在发布服务器上，对发布数据库执行 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)。 指定**@publication**和**@subscriber**。  
   
-2.  在发布服务器上，执行[sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)， **@subscriber**并指定。  
+2.  在发布服务器上，执行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，同时指定 **@subscriber**访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>更改合并发布的推送订阅的属性  
   
 1.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)。 指定**@publication**、 **@subscriber**、 **@subscriber_db**、要更改为**@property**的订阅属性，并将新值指定**@value**为。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  用于查看或修改推送订阅属性的 RMO 类取决于订阅推送订阅的发布的类型。  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>查看或修改快照发布或事务发布的推送订阅的属性  
@@ -141,7 +141,7 @@ ms.locfileid: "68212010"
   
 ## <a name="see-also"></a>另请参阅  
  [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [订阅发布](subscribe-to-publications.md)  
+ [复制安全最佳做法](security/replication-security-best-practices.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

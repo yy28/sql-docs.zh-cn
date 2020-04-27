@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479555"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>创建自定义工作流 (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用业务规则创建基本工作流解决方案，如自动更新和验证数据，并根据指定的条件发送电子邮件通知。 当您需要的处理比内置工作流操作提供的处理更复杂时，请使用自定义工作流。 自定义工作流是您创建的 .NET 程序集。 在调用您的工作流程序集时，您的代码可以执行您的情况所需要的任何操作。 例如，如果您的工作流要求复杂的事件处理（如多层审批或复杂的决策树），您可以配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 来启动自定义工作流，以便分析数据和确定将其发送到何处以待审批。  
   
 ## <a name="how-custom-workflows-are-processed"></a>如何处理自定义工作流  
@@ -26,8 +25,7 @@ ms.locfileid: "65479555"
   
 1.  您使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 来验证启动工作流的实体。  
   
-2.  
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 将满足业务规则条件的成员发送到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中的 Service Broker 队列。  
+2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 将满足业务规则条件的成员发送到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中的 Service Broker 队列。  
   
 3.  SQL Server MDS Workflow Integration Service 定期调用 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中的存储过程。  
   
@@ -89,10 +87,7 @@ ms.locfileid: "65479555"
     </setting>  
     ```  
   
-     
-  \<值> 标记的内部文本的格式为 \<工作流标记>=\<程序集限定工作流类型名称>。 
-  \<工作流标记> 是在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中创建业务规则时，用于定义工作流处理程序程序集的名称。 
-  \<程序集限定工作流类型名称> 是工作流类的命名空间限定名称、后跟一个逗号，然后是程序集的显示名称。 如果您的程序集采用强名称，则还必须包括版本信息及其 PublicKeyToken。 如果已为不同类型的工作流创建了多个工作流处理程序，则可以包含多个 \<setting> 标记。  
+     \<值> 标记的内部文本的格式为 \<工作流标记>=\<程序集限定工作流类型名称>。 \<工作流标记> 是在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中创建业务规则时，用于定义工作流处理程序程序集的名称。 \<程序集限定工作流类型名称> 是工作流类的命名空间限定名称、后跟一个逗号，然后是程序集的显示名称。 如果您的程序集采用强名称，则还必须包括版本信息及其 PublicKeyToken。 如果已为不同类型的工作流创建了多个工作流处理程序，则可以包含多个 \<setting> 标记。  
   
 > [!NOTE]  
 >  根据服务器的配置，在尝试保存 Microsoft.MasterDataServices.Workflow.exe.config 文件时，可能会显示一条“拒绝访问”错误。 如果发生这种情况，则暂时禁用服务器上的用户帐户控制 (UAC)。 为此，打开“控制面板”，单击“系统与安全”****。 在“操作中心”下，单击“更改用户帐户控制设置”********。 在“用户帐户控制设置”对话框中，将滑动条移动到底部以不再接收通知****。 重新启动您的计算机，然后重复前面的步骤以编辑您的配置文件。 保存该文件之后，将您的 UAC 设置重置为默认级别。  
@@ -106,7 +101,7 @@ ms.locfileid: "65479555"
   
 3.  向 mds_workflow_service 用户授予执行工作流处理程序程序集的权限。 为此，将 mds_workflow_service 用户添加到工作流处理程序程序集“属性”的“安全性”选项卡，然后向 mds_workflow_service 用户授予 READ 权限和 EXECUTE 权限********。  
   
-4.  向 mds_workflow_service 用户授予执行 SQL Server MDS Workflow Integration Service 可执行文件的权限。 为此，将 mds_workflow_service 用户添加到 Microsoft.MasterDataServices.Workflow.exe（位于 **安装文件夹>\Master Data Services\WebApplication\bin 中）的“属性”的“安全性”选项卡中，并向 mds_workflow_service 用户授予 READ 权限和 EXECUTE 权限******\<。  
+4.  向 mds_workflow_service 用户授予执行 SQL Server MDS Workflow Integration Service 可执行文件的权限。 为此，将 mds_workflow_service 用户添加到 Microsoft.MasterDataServices.Workflow.exe（位于 \<安装文件夹>\Master Data Services\WebApplication\bin 中）的“属性”的“安全性”选项卡中，并向 mds_workflow_service 用户授予 READ 权限和 EXECUTE 权限********。  
   
 5.  通过使用 .NET 安装实用工具（名为 InstallUtil.exe）来安装 SQL Server MDS Workflow Integration Service。 InstallUtil.exe 位于 .NET 安装文件夹中，如 C:\Windows\Microsoft.NET\Framework\v4.0.30319\\。 通过在提升的命令提示符中输入以下命令安装 SQL Server MDS Workflow Integration Service：  
   
@@ -151,7 +146,7 @@ ms.locfileid: "65479555"
 3.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，更新您的成员，并再次应用业务规则。 控制台窗口中将显示详细日志。  
   
 ### <a name="view-the-service-broker-queue"></a>查看 Service Broker 队列  
- 包含作为工作流一部分传递的主数据的 Service Broker 队列为：mdm.microsoft/mdm/queue/externalaction。 队列位于 ** 数据库的 Service Broker 节点下的 SQL Management Studio 的“对象资源管理器”中**[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 请注意，如果此服务已正确清除队列，则此队列将为空。  
+ 包含作为工作流一部分传递的主数据的 Service Broker 队列为：mdm.microsoft/mdm/queue/externalaction。 队列位于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库的 Service Broker 节点下的 SQL Management Studio 的“对象资源管理器”中****。 请注意，如果此服务已正确清除队列，则此队列将为空。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Master Data Services 的自定义工作流示例&#41;](create-a-custom-workflow-example.md)   

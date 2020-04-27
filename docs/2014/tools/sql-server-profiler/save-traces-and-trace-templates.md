@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267431"
 ---
 # <a name="save-traces-and-trace-templates"></a>保存跟踪和跟踪模板
@@ -47,26 +47,26 @@ ms.locfileid: "63267431"
 >  拥有 SHOWPLAN、ALTER TRACE 或 VIEW SERVER STATE 权限的用户可以对显示计划输出中捕获的查询进行查看。 这些查询可能包含敏感信息，例如密码。 因此，建议仅将这些权限授予有权查看敏感信息的一类用户，例如 **db_owner** 固定数据库角色的成员或 **sysadmin** 固定服务器角色的成员。 此外，建议您最好将包含显示计划相关事件的显示计划文件或跟踪文件保存到使用 NTFS 文件系统的某个位置，并且只允许有权查看敏感信息的用户对之进行访问。  
   
 ## <a name="saving-templates"></a>保存模板  
- 跟踪的模板定义包括事件类、数据列、筛选器和用于创建跟踪的所有其他属性（捕获的事件数据除外）。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]提供针对常见跟踪任务和特定任务的预定义系统模板，如创建数据库引擎优化顾问可用于优化物理数据库设计的工作负荷。 还可以创建和保存用户定义模板。  
+ 跟踪的模板定义包括事件类、数据列、筛选器和用于创建跟踪的所有其他属性（捕获的事件数据除外）。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 提供针对常见跟踪任务和特定任务的预定义系统模板，如创建可供数据库引擎优化顾问用来优化物理数据库设计的工作负荷。 还可以创建和保存用户定义模板。  
   
 ### <a name="importing-and-exporting-templates"></a>导入和导出模板  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]允许你在服务器之间导入和导出模板。 导出模板会将现有模板的副本移到指定目录。 导入模板会复制指定的模板。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中查看这些模板时，可以通过模板名称后的“(user)”使它们区别于系统模板。 您无法覆盖或直接修改预定义系统模板。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 允许在服务器之间导入和导出模板。 导出模板会将现有模板的副本移到指定目录。 导入模板会复制指定的模板。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中查看这些模板时，可以通过模板名称后的“(user)”使它们区别于系统模板。 您无法覆盖或直接修改预定义系统模板。  
   
 ### <a name="analyzing-performance-with-templates"></a>使用模板分析性能  
  如果您经常监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用模板分析性能。 模板每次都捕获相同的事件数据，并使用同一跟踪定义监视相同的事件。 您不需要在每次创建跟踪时都定义事件类和数据列。 此外，可以将模板提供给其他用户，供其监视特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 例如，支持提供商可以向客户提供一个模板。 客户使用该模板捕获所需的事件数据，然后将数据发送给支持提供商供其分析。  
   
  **将跟踪保存到文件**  
   
- [将跟踪结果保存到文件 &#40;SQL Server Profiler&#41;](save-trace-results-to-a-file-sql-server-profiler.md)  
+ [将跟踪结果保存到文件 (SQL Server Profiler)](save-trace-results-to-a-file-sql-server-profiler.md)  
   
  [sp_trace_create (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)  
   
 ## <a name="see-also"></a>另请参阅  
- [将跟踪结果保存到表 &#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)   
+ [将跟踪结果保存到表 (SQL Server Profiler)](save-trace-results-to-a-table-sql-server-profiler.md)   
  [创建跟踪模板 (SQL Server Profiler)](create-a-trace-template-sql-server-profiler.md)   
  [从正在运行的跟踪中派生模板 (SQL Server Profiler)](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [从跟踪文件或跟踪表派生模板 (SQL Server Profiler)](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [导出跟踪模板 (SQL Server Profiler)](export-a-trace-template-sql-server-profiler.md)   
- [导入跟踪模板 &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
+ [导入跟踪模板 (SQL Server Profiler)](import-a-trace-template-sql-server-profiler.md)  
   
   

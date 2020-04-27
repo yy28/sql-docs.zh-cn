@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482575"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
@@ -26,30 +26,30 @@ ms.locfileid: "65482575"
 > [!NOTE]  
 >  您还应限制使用特殊字符（符号、连字符等）。  
   
--   [Models](#models)  
+-   [模型](#models)  
   
 -   [实体](#entities)  
   
 -   [显式层次结构](#exhierarchies)  
   
--   [属性](#attributes)  
+-   [特性](#attributes)  
   
 -   [成员](#members)  
   
-##  <a name="models"></a>机型  
+##  <a name="models"></a><a name="models"></a>机型  
  如果创建的模型的名称设置为 "**名称**"，请不要选择 "**使用与模型相同的名称创建实体**"，因为**名称**不能用于实体名称。  
   
-##  <a name="entities"></a>条目  
+##  <a name="entities"></a><a name="entities"></a>条目  
  对于实体名称，不能使用 **Name** 或 **Code**。  
   
-##  <a name="exhierarchies"></a>显式层次结构  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>显式层次结构  
  对于显式层次结构名称，不能使用 **Name** 或 **Code**。  
   
-##  <a name="attributes"></a>属性  
+##  <a name="attributes"></a><a name="attributes"></a>属性  
   
--   **识别**  
+-   **ID**  
   
--   **代码**  
+-   **编写**  
   
 -   **名称**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65482575"
   
 -   **Version_ID**  
   
-##  <a name="members"></a>组员  
+##  <a name="members"></a><a name="members"></a>组员  
  对于成员，不能对**Code**属性值使用**MDMMemberStatus**或**ROOT** 。  
   
 ## <a name="see-also"></a>另请参阅  

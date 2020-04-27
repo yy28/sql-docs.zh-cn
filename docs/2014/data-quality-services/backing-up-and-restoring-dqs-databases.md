@@ -11,18 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481156"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库
   本主题说明如何备份和还原 DQS 数据库。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   您必须知道或记住您在 DQS 服务器安装过程中提供的数据库主密钥的密码。  
   
@@ -30,15 +30,15 @@ ms.locfileid: "65481156"
   
 -   确保没有用户已登录 DQS 服务器。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
   
 -   您的 Windows 用户帐户必须为 SQL Server 实例中 sysadmin 固定服务器角色的成员，才能执行备份和还原操作。  
   
 -   您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能终止 DQS 中任何正在运行的活动或停止任何正在运行的过程。  
   
-##  <a name="BackupRestore"></a>备份和还原 DQS 数据库  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a> 备份和还原 DQS 数据库  
   
 1.  启动 Microsoft SQL Server Management Studio 并连接到适当的 SQL Server 实例。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "65481156"
   
     ```  
   
-12. 按 F5 执行这些语句。 检查 **“结果”** 窗格以验证是否已成功执行这些语句。  
+12. 按 F5 执行这些语句。 检查 "**结果**" 窗格以验证语句是否已成功执行。  
   
 ## <a name="see-also"></a>另请参阅  
- [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
+ [管理 DQS 数据库](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

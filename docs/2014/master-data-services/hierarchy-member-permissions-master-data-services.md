@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482956"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
@@ -37,10 +37,10 @@ ms.locfileid: "65482956"
 |权限|说明|  
 |----------------|-----------------|  
 |**只读**|显示成员，但是用户不能更改它们。 用户也无法在成员所属的任何显式层次结构或集合中移动成员。<br /><br /> 注意：如果将**只读**权限分配给**Root**，则**root**下的成员是只读的;但是，在显式层次结构和集合中，用户可以将成员移到**根节点**，并可以将新成员添加到**根**。|  
-|**时更新**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
-|**拒绝**|不显示成员。|  
+|**Update**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
+|**注销**|不显示成员。|  
   
- 在 **“层次结构成员”** 选项卡上，分配的权限不立即生效。 应用该权限的频率取决于 **数据库中“系统设置”表的** “成员安全处理间隔设置” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。 可以按照[立即应用成员权限 & #40;Master Data Services & #41;](immediately-apply-member-permissions-master-data-services.md)中的以下步骤立即应用成员权限。  
+ 在 **“层次结构成员”** 选项卡上，分配的权限不立即生效。 应用该权限的频率取决于 **数据库中“系统设置”表的** “成员安全处理间隔设置” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。 可以按照 [立即应用成员权限 (Master Data Services)](immediately-apply-member-permissions-master-data-services.md)中的以下步骤立即应用成员权限。  
   
 > [!NOTE]  
 >  不能将层次结构成员权限分配给递归层次结构、具有显式顶端的派生层次结构和具有隐藏级别的层次结构。  
@@ -60,6 +60,6 @@ ms.locfileid: "65482956"
  [如何 Master Data Services &#40;确定权限&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [立即 &#40;Master Data Services 应用成员权限&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [立即应用成员权限 (Master Data Services)](immediately-apply-member-permissions-master-data-services.md)  
   
   

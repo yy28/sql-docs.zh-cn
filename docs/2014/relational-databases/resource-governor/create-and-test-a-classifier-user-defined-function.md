@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212002"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>创建和测试分类器用户定义函数
@@ -118,8 +118,7 @@ ms.locfileid: "68212002"
 4.  创建分类器函数，它使用时间函数以及可根据查找表中的时间计算的值。 有关在分类器函数中使用查找表的信息，请参阅本主题中的“在分类器函数中使用查找表的最佳做法”。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了一组扩展的日期和时间数据类型和函数。 有关详细信息，请参阅[日期和时间数据类型和功能 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
+    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了一组扩展的日期和时间数据类型和函数。 有关详细信息，请参阅[日期和时间数据类型和功能 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -264,10 +263,10 @@ ms.locfileid: "68212002"
         >  我们强烈建议遵循如上最佳做法。 如有任何问题妨碍您遵循这些最佳做法，我们建议您与 Microsoft 支持部门联系，以求主动防止未来出现任何问题。  
   
 ## <a name="see-also"></a>另请参阅  
- [资源调控器](resource-governor.md)   
- [启用资源调控器](enable-resource-governor.md)   
- [资源调控器资源池](resource-governor-resource-pool.md)   
- [资源调控器工作负荷组](resource-governor-workload-group.md)   
+ [Resource Governor](resource-governor.md)   
+ [启用 Resource Governor](enable-resource-governor.md)   
+ [Resource Governor 资源池](resource-governor-resource-pool.md)   
+ [Resource Governor 工作负荷组](resource-governor-workload-group.md)   
  [使用模板配置 Resource Governor](configure-resource-governor-using-a-template.md)   
  [查看 Resource Governor 属性](view-resource-governor-properties.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   

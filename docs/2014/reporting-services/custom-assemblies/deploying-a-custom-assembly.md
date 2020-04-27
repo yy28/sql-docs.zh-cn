@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abaa60d696975616631aea210c32bfcea63f6767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264733"
 ---
 # <a name="deploying-a-custom-assembly"></a>部署自定义程序集
-  若要在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]部署自定义程序集，请将程序集放在报表设计器和 Report Server 的应用程序文件夹中。 默认情况下，将在 `Execution` 中向自定义程序集授予 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 权限。 若要向自定义程序集授予超过执行权限的特权，需要对报表服务器编辑 rssrvpolicy.config 配置文件，并对报表设计器预览窗口编辑 rspreviewpolicy.config 配置文件。 也可以选择将自定义程序集安装到全局程序集缓存 (GAC) 中。  
+  若要在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]部署自定义程序集，请将程序集放在报表设计器和 Report Server 的应用程序文件夹中。 默认情况下，将在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中向自定义程序集授予 `Execution` 权限。 若要向自定义程序集授予超过执行权限的特权，需要对报表服务器编辑 rssrvpolicy.config 配置文件，并对报表设计器预览窗口编辑 rspreviewpolicy.config 配置文件。 也可以选择将自定义程序集安装到全局程序集缓存 (GAC) 中。  
   
 > [!NOTE]  
 >  报表设计器有两种预览模式：“预览”选项卡以及在以 `DebugLocal` 模式下启动报表项目时启动的弹出式预览窗口。 “预览”选项卡使用 `FullTrust` 权限集执行所有报表表达式，它不应用安全策略设置。 弹出式预览窗口旨在模拟报表服务器的功能，因此具有策略配置文件，您或管理员必须修改该文件才能在报表设计器中使用自定义程序集。 此弹出式预览还锁定自定义程序集。 因此，您需要关闭预览窗口，才能修改或更新自定义程序集代码。  

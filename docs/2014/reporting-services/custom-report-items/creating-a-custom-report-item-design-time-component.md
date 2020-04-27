@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265134"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
@@ -86,9 +86,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>修改组件属性  
- 可以通过多种方式在设计环境下修改 `CustomData` 属性。 可以使用 <xref:System.ComponentModel.BrowsableAttribute> 属性浏览器修改任何由设计时组件公开且以 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性标记的特性。 另外，还可通过以下方式修改属性：将相应项拖动到自定义报表项的设计图面，或者在设计环境下右键单击该控件，然后在快捷菜单上选择“属性”以显示自定义属性窗口****。  
+ 可以通过多种方式在设计环境下修改 `CustomData` 属性。 可以使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器修改任何由设计时组件公开且以 <xref:System.ComponentModel.BrowsableAttribute> 属性标记的特性。 另外，还可通过以下方式修改属性：将相应项拖动到自定义报表项的设计图面，或者在设计环境下右键单击该控件，然后在快捷菜单上选择“属性”以显示自定义属性窗口****。  
   
- 以下代码示例显示的是已应用 `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData` 属性的 <xref:System.ComponentModel.BrowsableAttribute> 特性：  
+ 以下代码示例显示的是已应用 <xref:System.ComponentModel.BrowsableAttribute> 属性的 `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData` 特性：  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -190,8 +190,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Design-Time Attributes for Components（组件的设计时属性）  
   
--   
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的组件  
+-   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的组件  
   
 -   Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features（演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件）  
   
@@ -199,6 +198,6 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [自定义报表项体系结构](custom-report-item-architecture.md)   
  [创建自定义报表项运行时组件](creating-a-custom-report-item-run-time-component.md)   
  [自定义报表项类库](custom-report-item-class-libraries.md)   
- [如何部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
+ [如何：部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
   
   

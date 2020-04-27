@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488946"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>任务 7：将 DQS 清理转换添加到数据流
@@ -48,13 +48,13 @@ ms.locfileid: "65488946"
   
 11. 在底部窗格中，使用 "**域**" 列中的下拉列表映射这些列：  
   
-    |列|域|  
+    |列|Domain|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
     |ContactEmailAddress|联系人电子邮件|  
     |Address Line|Address Line|  
     |城市|城市|  
-    |状态|状态|  
+    |State|State|  
     |国家/地区|国家/地区|  
     |Zip Code|Zip|  
   

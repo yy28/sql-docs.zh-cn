@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478987"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>创建基于域的属性（用于 Excel 的 MDS 外接程序）
@@ -23,14 +23,14 @@ ms.locfileid: "65478987"
  这些值可以已处于工作表中，也可以来自某一现有实体。  
   
 > [!NOTE]  
->  如果用户在该约束列键入某个值，而不是从列表中进行选择，则在用户发布时将在 **$InputStatus$** 列中显示错误。  
+>   如果用户在该约束列键入某个值，而不是从列表中进行选择，则错误在发布时将显示在 **$InputStatus$** 列中。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../administrators-master-data-services.md)。  
   
 -   模型和实体必须已经存在。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65478987"
   
 6.  如果您在前一步骤中选择 **“所选列”** ，则在 **“新实体名称”** 框中键入新实体的名称。 该名称可与列（属性）名称相同。  
   
-7.  单击“确定”。  列中的每个单元现在都有一个可供用户从中选择的值列表。  
+7.  单击" **确定**"。 列中的每个单元现在都有一个可供用户从中选择的值列表。  
   
 ## <a name="next-steps"></a>后续步骤  
   
@@ -61,6 +61,6 @@ ms.locfileid: "65478987"
 ## <a name="see-also"></a>另请参阅  
  [基于域的属性 &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
  [创建实体 &#40;MDS Add-in for Excel&#41;](create-an-entity-mds-add-in-for-excel.md)   
- [构建模型 &#40;MDS Add-in for Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [生成模型（用于 Excel 的 MDS 外接程序）](building-a-model-mds-add-in-for-excel.md)  
   
   

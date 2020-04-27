@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278350"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
@@ -86,7 +86,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`发布服务器的初始同步模式。 *sync_mode*为**nvarchar （10）**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**native** （默认值）|生成所有表的本机模式大容量复制程序输出。|  
 |**字符**|生成所有表的字符模式大容量复制程序输出。 需要支持[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]和非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。|  
@@ -162,7 +162,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`指定应使用预计算分区来优化同步过程。 *use_partition_groups*为**nvarchar （5）**，可以是下列值之一：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**true**|发布使用预计算分区。|  
 |**false**|发布不使用预计算分区。|  
@@ -172,7 +172,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level`指示发布的向后兼容性。 *backward_comp_level*为**nvarchar （6）**，可以是下列值之一：  
   
-|值|版本|  
+|Value|版本|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,10 +200,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`指定保持期设置的保持期的单位 *。* *retention_period_unit*为**nvarchar （10）**，可以是下列值之一。  
   
-|值|版本|  
+|Value|版本|  
 |-----------|-------------|  
 |**day** （默认值）|按天指定保持期。|  
-|**周日**|按周指定保持期。|  
+|week |按周指定保持期。|  
 |month |按月指定保持期。|  
 |**year**|按年指定保持期。|  
   
@@ -216,11 +216,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`指定存储冲突记录的位置。 *conflict_logging*为**nvarchar （15）**，可以为以下值之一：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**器**|在发布服务器上存储冲突记录。|  
-|**订阅服务器**|在导致冲突的订阅服务器上存储冲突记录。 
-  [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器不支持此值。|  
+|**订阅服务器**|在导致冲突的订阅服务器上存储冲突记录。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器不支持此值。|  
 |**全部**|在发布服务器和订阅服务器上都存储冲突记录。|  
 |NULL（默认值）|在所有其他情况下 **，如果值** *backward_comp_level*为**90rtm** ，则自动将*conflict_logging* **设置为。**|  
   

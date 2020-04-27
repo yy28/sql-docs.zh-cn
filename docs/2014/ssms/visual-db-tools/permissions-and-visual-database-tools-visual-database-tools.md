@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63268494"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>权限和 Visual Database Tools (Visual Database Tools)
@@ -25,6 +25,6 @@ ms.locfileid: "63268494"
  如果数据库权限允许您查看数据库结构但不允许您修改数据库结构，则可以使用更改脚本来设计您的修改，而不将修改传输到数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [多用户环境 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [多用户环境 (Visual Database Tools)](visual-database-tools.md)  
   
   

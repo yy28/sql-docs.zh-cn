@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264884"
 ---
 # <a name="custom-report-item-class-libraries"></a>自定义报表项类库
@@ -131,7 +131,7 @@ ms.locfileid: "63264884"
 |`Fields`|要拖放的字段 (`Microsoft.ReportDesigner.Field`) 的集合。|  
   
 ## <a name="see-also"></a>另请参阅  
- [报表定义语言 (SSRS)](../reports/report-definition-language-ssrs.md)   
+ [&#40;SSRS&#41;的报表定义语言](../reports/report-definition-language-ssrs.md)   
  [创建自定义报表项运行时组件](creating-a-custom-report-item-run-time-component.md)   
  [创建自定义报表项设计时组件](creating-a-custom-report-item-design-time-component.md)  
   

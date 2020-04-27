@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b5b343a32480d7d8ae59e9fa27fbe7d1f531213
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106014"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多个页中显示行标题和列标题（报表生成器和 SSRS）
@@ -33,17 +33,17 @@ ms.locfileid: "66106014"
   
 ### <a name="to-display-row-headers-on-multiple-pages"></a>在多个页上显示行标题  
   
-1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
+1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”** 。  
   
-2.  在 **“行标题”** 中，选择 **“在每一页上重复标题行”**。  
+2.  在 **“行标题”** 中，选择 **“在每一页上重复标题行”** 。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="to-display-column-headers-on-multiple-pages"></a>在多个页上显示列标题  
   
-1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
+1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”** 。  
   
-2.  在 **“列标题”** 中，选择 **“在每一页上重复标题列”**。  
+2.  在 **“列标题”** 中，选择 **“在每一页上重复标题列”** 。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66106014"
   
 3.  单击与在滚动时要使其保持可见的静态成员（行或列）相对应的静态成员。 “属性”窗格显示 **“Tablix 成员”** 属性。  
   
-     如果未显示“属性”窗格，请单击报表生成器窗口顶部的“视图”选项卡，然后单击“属性”********。  
+     如果未显示“属性”窗格，请单击报表生成器窗口顶部的“视图”选项卡，然后单击“属性”   。  
   
 4.  在“属性”窗格中，将 **RepeatOnNewPage** 设置为 True。  
   
@@ -70,8 +70,8 @@ ms.locfileid: "66106014"
 ## <a name="see-also"></a>另请参阅  
  [查找、查看和管理报表（报表生成器和 SSRS）](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表 &#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [控制分页符、标题、列和行 &#40;报表生成器和 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [使用组 &#40;报表生成器和 SSRS 显示标头和组尾&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [控制分页符、标题、列和行（报表生成器和 SSRS）](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [与组一起显示组头和组尾（报表生成器和 SSRS）](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [在滚动报表时保持标题可见（报表生成器和 SSRS）](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
   

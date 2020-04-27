@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287810"
 ---
 # <a name="examples-using-auto-mode"></a>示例：使用 AUTO 模式
@@ -167,8 +167,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
  `...`  
   
 ## <a name="example-returning-binary-data"></a>示例：返回二进制数据  
- 此查询返回 `ProductPhoto` 表中的产品照片。 
-  `ThumbNailPhoto` 是 `varbinary(max)` 表中的 `ProductPhoto` 列。 默认情况下， `AUTO` 模式向二进制数据返回一个引用，该引用为执行查询的数据库的虚拟根目录的相对 URL。 必须指定 `ProductPhotoID` 键属性，才能标识图像。 如此示例中所示，检索图像引用时，还必须在 `SELECT` 子句中指定表的主键，才能唯一标识行。  
+ 此查询返回 `ProductPhoto` 表中的产品照片。 `ThumbNailPhoto` 是 `ProductPhoto` 表中的 `varbinary(max)` 列。 默认情况下， `AUTO` 模式向二进制数据返回一个引用，该引用为执行查询的数据库的虚拟根目录的相对 URL。 必须指定 `ProductPhotoID` 键属性，才能标识图像。 如此示例中所示，检索图像引用时，还必须在 `SELECT` 子句中指定表的主键，才能唯一标识行。  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  

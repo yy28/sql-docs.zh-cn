@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255313"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>验证合并订阅服务器的分区信息
@@ -34,7 +34,7 @@ ms.locfileid: "63255313"
  合并代理验证分区时，除了对筛选表达式使用的所有函数返回的值验证分区之外，代理还会检查快照的生成是否先于令其无效的更改，如元数据清除操作或架构更改。 如果分区快照太旧，合并代理将返回一个错误，并且必须根据当前常规快照为此订阅服务器重新生成分区快照。  
   
 ## <a name="see-also"></a>另请参阅  
- [复制管理常见问题解答](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [复制管理常见问题](administration/frequently-asked-questions-for-replication-administrators.md)   
  [复制管理的最佳做法](administration/best-practices-for-replication-administration.md)   
  [重新初始化订阅](reinitialize-subscriptions.md)   
  [验证已复制的数据](validate-data-at-the-subscriber.md)  

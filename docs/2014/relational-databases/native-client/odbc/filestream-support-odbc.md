@@ -14,14 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206593"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支持 (ODBC)
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支持增强的 FILESTREAM 功能。 有关此功能的详细信息，请参阅[FILESTREAM 支持](../features/filestream-support.md)。 有关演示对 FILESTREAM 的 ODB 支持的示例，请参阅[使用 Filestream 以增量方式发送和接收数据 &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
   
  若要发送和`varbinary(max)`接收大于 2 GB 的值，应用程序必须使用 SQLBindParameter （ *ColumnSize*设置为`SQL_SS_LENGTH_UNLIMITED`）绑定参数，并将*StrLen_or_IndPtr*的内容设置`SQL_DATA_AT_EXEC`为之前 SQLExecDirect 或 SQLExecute。  
@@ -100,7 +99,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>插入  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  

@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211213"
 ---
 # <a name="creating-a-database-tutorial"></a>创建数据库（教程）
@@ -41,7 +41,7 @@ ms.locfileid: "68211213"
 >  在单个批处理中提交多条语句时，可以用关键字 GO 分隔各语句。 当批处理只包含一条语句时，GO 是可选的。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [创建表 &#40;教程&#41;](lesson-1-2-creating-a-table.md)  
+ [创建表（教程）](lesson-1-2-creating-a-table.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  

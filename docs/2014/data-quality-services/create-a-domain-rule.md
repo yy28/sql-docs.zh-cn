@@ -14,26 +14,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481035"
 ---
 # <a name="create-a-domain-rule"></a>创建域规则
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建域规则。 域规则是用于验证、更正和标准化域值的条件。 域规则必须在域中保持正确，这样才能认为域值是准确的并且符合业务要求。 域规则可以包含用于验证域值、但不用于更正数据质量项目中的数据的验证规则。 规则还包含应用于有效数据并用于数据更正的标准化规则。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  若要创建一个域规则，您必须具有知识库以及在域管理活动中打开的域。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建域规则。  
   
-##  <a name="Build"></a>生成域规则  
+##  <a name="build-domain-rules"></a><a name="Build"></a> 生成域规则  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65481035"
   
 6.  选择 **“活动”** 可指定将运行该规则（默认设置），取消选中则可以阻止该规则运行。  
   
-7.  在“生成规则”窗格中，从该规则的条件框的下拉列表中选择一个条件****。  
+7.  在 "**生成规则**" 窗格中，从 "规则的子句" 框的下拉列表中选择一个条件。  
   
 8.  如果该条件需要某个值，则在关联的文本框中输入该值。  
   
@@ -70,13 +70,13 @@ ms.locfileid: "65481035"
   
 16. 继续执行下面的测试过程。  
   
-##  <a name="Test"></a>测试域规则  
+##  <a name="test-domain-rules"></a><a name="Test"></a>测试域规则  
   
 1.  在选定一条规则后，单击 **“对测试数据运行所选域规则”** 图标。  
   
 2.  在“测试域规则”对话框中，单击 **“为域规则添加新的测试字词”** 图标。 输入要测试的值。 根据需要输入其他值。 选择一个值，然后根据需要单击 **“删除所选测试字词”** 图标。  
   
-3.  单击 "对**所有字词测试域规则**" 图标。  
+3.  单击 **“对所有字词测试域规则”** 图标。  
   
 4.  检查每个字词的有效性。 对勾意味着“正确”、叉号意味着“错误”、三角形意味着“无效”。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65481035"
   
 7.  继续执行下面的应用过程。  
   
-##  <a name="Apply"></a>应用域规则  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a>应用域规则  
   
 1.  单击 **“应用所有规则”** 可将规则应用于域中的值。 在您单击 **“应用所有规则”** 后，将显示一个弹出窗口，指示该规则在某些状态下会影响多少个值。 如果您仍想要应用该规则，则单击 **“是”** ；否则单击 **“否”** 。 如果您单击 **“是”**，则单击 **确定** 可关闭结果弹出窗口。  
   
@@ -97,10 +97,10 @@ ms.locfileid: "65481035"
   
 3.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](../../2014/data-quality-services/end-the-domain-management-activity.md)中所述。  
   
-##  <a name="FollowUp"></a>跟进：在创建域规则后  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>跟进：在创建域规则后  
  在创建域规则后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="Conditions"></a>域规则条件  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>域规则条件  
  下表介绍可在域规则中应用的条件，并且提供说明如何应用条件的示例。  
   
  在应用某一域规则并且域值未能通过该规则时，该值将被指定为“无效”。 如果导致该值无效的规则被删除、停用或者规则已更改以致该值可通过该规则后，指定为“无效”的值将更改为“正确”。 如果您手动将某个值指定为“无效”（在域管理活动的“域值”选项卡中），并且删除、停用或更改了该值未能通过的规则，则根据手动指定的内容，该值仍将被指定为“无效”。  

@@ -18,10 +18,10 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "70810397"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
@@ -60,12 +60,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`指示何时执行作业的值。 *freq_type*的数据值为**int**，默认值为**0**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每天一次|  
+|**4**|每日|  
 |**8**|每周|  
-|**16**|每月|  
+|**超过**|每月一次|  
 |**32**|每月，相对于*freq_interval*|  
 |**64**|SQL 代理服务启动时运行|  
 |**128**|计算机处于空闲状态时运行（ [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)中不支持） |  
@@ -84,7 +84,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`指定*freq_subday_interval*的单位。 *freq_subday_type*的数据值为**int**，默认值为**0**，可以是下列值之一。  
   
-|值|说明（单位）|  
+|Value|说明（单位）|  
 |-----------|--------------------------|  
 |**0x1**|在指定的时间|  
 |**0x2**|秒|  
@@ -95,13 +95,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`如果*freq_interval*为32（每月相对），则为每月*freq_interval*的作业。 *freq_relative_interval*的数据值为**int**，默认值为**0**，可以是下列值之一。 如果*freq_type*不等于32，则将忽略*freq_relative_interval* 。  
   
-|值|说明（单位）|  
+|Value|说明（单位）|  
 |-----------|--------------------------|  
 |**1**|第一个|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**超过**|最后一个|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`作业的计划执行之间的周数或月数。 仅当*freq_type*为**8**、 **16**或**32**时才使用*freq_recurrence_factor* 。 *freq_recurrence_factor*的值为**int**，默认值为**0**。  
   
@@ -132,11 +132,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  无  
   
 ## <a name="remarks"></a>备注  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

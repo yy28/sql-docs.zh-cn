@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482539"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
@@ -70,20 +70,20 @@ ms.locfileid: "65482539"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建模型来组织您的主数据。|[创建模型 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|创建模型来组织您的主数据。|[创建模型 (Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)|  
 |更改现有模型的名称。|[更改模型名称 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
-|删除现有模型。|[删除 &#40;Master Data Services 的模型&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
+|删除现有模型。|[删除模型 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
 -   [Master Data Services 概述](master-data-services-overview-mds.md)  
   
--   [实体 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
+-   [实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [属性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [&#40;Master Data Services 部署模型&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+-   [部署模型 (Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
--   [&#40;Master Data Services 的模型对象权限&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+-   [模型对象权限 (Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

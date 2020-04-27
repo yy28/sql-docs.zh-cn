@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 935e60e0dadb55268fc31d92592d21b0c1df41cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260827"
 ---
 # <a name="report-server-system-properties"></a>报表服务器系统属性
@@ -27,23 +27,19 @@ ms.locfileid: "63260827"
   
 |properties|说明|  
 |--------------|-----------------|  
-|SiteName|在用户界面上显示的报表服务器站点的名称。 默认值是 `Microsoft Report Server`。 此属性可以是空字符串。 最大长度为 8,000 个字符。|  
+|SiteName|在用户界面上显示的报表服务器站点的名称。 默认值为 `Microsoft Report Server`。 此属性可以是空字符串。 最大长度为 8,000 个字符。|  
 |SystemSnapshotLimit|为报表存储的快照的最大数目。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则无快照限制。|  
-|SystemReportTimeout|在报表服务器命名空间中托管的所有报表的默认报表处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则处理期间命名空间中的报表不会超时。 默认值是 `1800`。|  
-|UseSessionCookies|指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值是 `true`。|  
-|SessionTimeout|会话保持活动状态的时间长度（以秒为单位）。 默认值是 `600`。|  
+|SystemReportTimeout|在报表服务器命名空间中托管的所有报表的默认报表处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则处理期间命名空间中的报表不会超时。 默认值为 `1800`。|  
+|UseSessionCookies|指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值为 `true`。|  
+|SessionTimeout|会话保持活动状态的时间长度（以秒为单位）。 默认值为 `600`。|  
 |EnableMyReports|指示是否启用“我的报表”功能。 值为 `true` 表示已启用该功能。|  
-|MyReportsRole|对用户的“我的报表”文件夹创建安全策略时所用角色的名称。 默认值是 `My Reports Role`。|  
-|EnableExecutionLogging|指示报表执行日志记录是否处于启用状态。 默认值是 `true`。|  
-|ExecutionLogDaysKept|在执行日志中保留报表执行信息的天数。 此属性的有效值包括 `0` 到 `2`、`147`、`483` 和 `647`。 如果值为 `0`，则不从执行日志表中删除项。 默认值是 `60`。|  
-|SnapshotCompression|定义如何压缩快照。 默认值是 `SQL`。 有效值如下：<br /><br /> 
-  `SQL` = 在存储到报表服务器数据库中时压缩快照。 这是当前的行为。<br /><br /> **None** = 不压缩快照。<br /><br /> 
-  `All` = 针对所有的存储选项（包括报表服务器数据库或文件系统）压缩快照。|  
-|EnableClientPrinting|确定是否可从报表服务器下载 RSClientPrint ActiveX 控件。 有效值为`true`和`false`。 默认值是 `true`。 有关此控件所需的其他设置的详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。|  
-|EnableIntegratedSecurity|确定报表数据源连接是否支持集成安全性。 默认为 `True`。 有效值如下：<br /><br /> 
-  `True` = 启用集成安全性。<br /><br /> 
-  `False` = 不启用集成安全性。 将不运行配置为使用集成安全性的报表数据源。|  
-|EnableRemoteErrors|包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 `true` 和 `false`。 默认值是 `false`。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../report-server/enable-remote-errors-reporting-services.md)。|  
+|MyReportsRole|对用户的“我的报表”文件夹创建安全策略时所用角色的名称。 默认值为 `My Reports Role`。|  
+|EnableExecutionLogging|指示报表执行日志记录是否处于启用状态。 默认值为 `true`。|  
+|ExecutionLogDaysKept|在执行日志中保留报表执行信息的天数。 此属性的有效值包括 `0` 到 `2`、`147`、`483` 和 `647`。 如果值为 `0`，则不从执行日志表中删除项。 默认值为 `60`。|  
+|SnapshotCompression|定义如何压缩快照。 默认值为 `SQL`。 有效值如下：<br /><br /> `SQL` = 在存储到报表服务器数据库中时压缩快照。 这是当前的行为。<br /><br /> **None** = 不压缩快照。<br /><br /> `All` = 针对所有的存储选项（包括报表服务器数据库或文件系统）压缩快照。|  
+|EnableClientPrinting|确定是否可从报表服务器下载 RSClientPrint ActiveX 控件。 有效值为`true`和`false`。 默认值为 `true`。 有关此控件所需的其他设置的详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。|  
+|EnableIntegratedSecurity|确定报表数据源连接是否支持集成安全性。 默认值为 `True`。 有效值如下：<br /><br /> `True` = 启用集成安全性。<br /><br /> `False` = 不启用集成安全性。 将不运行配置为使用集成安全性的报表数据源。|  
+|EnableRemoteErrors|包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 `true` 和 `false`。 默认值为 `false`。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../report-server/enable-remote-errors-reporting-services.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>   

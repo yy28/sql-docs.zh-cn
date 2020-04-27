@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273735"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
@@ -78,8 +78,8 @@ ms.locfileid: "63273735"
   
     |**列名称**|**数据类型**|**允许 Null 值**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|已选中|  
-    |`T1col2`|`varchar(50)`|已选中|  
+    |`T1col1`|`int`|checked|  
+    |`T1col2`|`varchar(50)`|checked|  
     |`T1col3`|`float`|已选中|  
   
 4.  右键单击 `T1col1` 并选择“设置主键”****。  
@@ -101,7 +101,7 @@ ms.locfileid: "63273735"
   
      此时将显示“CHECK 约束”**** 对话框。  
   
-2.  单击“添加”  。  
+2.  单击 **“添加”** 。  
   
      “选定的 CHECK 约束”**** 列表中将出现一个新约束，默认名称为 `CK_Table1`。  
   
@@ -111,10 +111,9 @@ ms.locfileid: "63273735"
   
 4.  键入 `T1col3 > 5` ，然后单击 **“确定”**。  
   
-     
-  `Table1` 现在有了一个约束，即输入到 `T1col3` 中的所有值都必须大于 5。  
+     `Table1` 现在有了一个约束，即输入到 `T1col3` 中的所有值都必须大于 5。  
   
-5.  单击“关闭”  。  
+5.  单击“**关闭**”。  
   
 #### <a name="to-create-relationships-between-tables"></a>在表之间创建关系  
   
@@ -123,8 +122,8 @@ ms.locfileid: "63273735"
     |**列名**|**数据类型**|**允许 Null 值**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|未选中|  
-    |`T2col2`|`varchar(50)`|已选中|  
-    |`T2col3`|`xml`|已选中|  
+    |`T2col2`|`varchar(50)`|checked|  
+    |`T2col3`|`xml`|checked|  
   
     > [!NOTE]  
     >  外键关系的主键方上的列必须参与主键或唯一约束。  
@@ -146,7 +145,7 @@ ms.locfileid: "63273735"
   
      此时将显示“索引/键”**** 对话框。  
   
-2.  单击“添加”  。  
+2.  单击 **“添加”** 。  
   
      “选定的主/唯一键或索引”**** 列表中将出现一个新索引，并使用类似 `IX_Table1` 的默认名称。  
   
@@ -174,11 +173,11 @@ ms.locfileid: "63273735"
   
      此时将显示“XML 索引”**** 对话框。  
   
-3.  单击“添加”  。  
+3.  单击 **“添加”** 。  
   
      将向“选定的 XML 索引”**** 列表中添加一个具有默认值的 XML 索引。  
   
-4.  单击“关闭”  。  
+4.  单击“**关闭**”。  
   
     > [!NOTE]  
     >  XML 索引是按列创建的。 第一个 XML 索引是主索引，所有其他索引都是辅助索引。  
@@ -192,7 +191,7 @@ ms.locfileid: "63273735"
   
      此时将显示“保存”**** 对话框。 如果选中了“表受到影响时警告”****，则会列出有关新表或更改的表的信息。  
   
-2.  单击“确定”。   
+2.  单击" **确定**"。  
   
 3.  如果发生了任何错误，则会出现“保存后的通知”**** 对话框，显示错误及其原因。 修复错误并再次保存关系图。  
   

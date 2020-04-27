@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63284464"
 ---
 # <a name="save-queries-visual-database-tools"></a>保存查询 (Visual Database Tools)
@@ -27,10 +27,10 @@ ms.locfileid: "63284464"
   
 1.  创建查询。  
   
-2.  从“文件”**** 菜单上单击“保存 <query_name>”****。  
+2.  从“文件”  菜单上单击“保存 <query_name>”  。  
   
     > [!NOTE]  
-    >  将为新创建的查询分配系统名称。 若要自行选择查询名称，请选择“将 <query_name> 另存为”****。  
+    >  将为新创建的查询分配系统名称。 若要自行选择查询名称，请选择“将 <query_name> 另存为”  。  
   
 3.  查询将保存到解决方案资源管理器中项目的“查询”文件夹中。  
   

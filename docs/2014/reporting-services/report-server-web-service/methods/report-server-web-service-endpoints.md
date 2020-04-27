@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283490"
 ---
 # <a name="report-server-web-service-endpoints"></a>报表服务器 Web 服务端点
@@ -33,7 +33,7 @@ ms.locfileid: "63283490"
 >  当报表服务器配置为 SharePoint 集成模式时，<xref:ReportService2005> API 将返回 `rsOperationNotSupportedSharePointMode` 错误。 如果报表服务器配置为本机模式，<xref:ReportService2006> API 将返回 `rsOperationNotSupportedNativeMode` 错误。 同样，在非预期模式中使用 <xref:ReportService2010> 中的模式特定 API 时，API 将返回相应的错误。  
   
 > [!NOTE]  
->  在 <xref:ReportService2005> 中不推荐使用 <xref:ReportService2006> 和 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
+>  在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中不推荐使用 <xref:ReportService2005> 和 <xref:ReportService2006> 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
   
  如果将报表服务器配置为本机模式或 SharePoint 集成模式，则可以使用以下 URL 之一访问管理端点的 WSDL：  
   
@@ -85,6 +85,6 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthenticati
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 Web 服务和.NET Framework 构建应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [使用 Web 服务和 .NET Framework 生成应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

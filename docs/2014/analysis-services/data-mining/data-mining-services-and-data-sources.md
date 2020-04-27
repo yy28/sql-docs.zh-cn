@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217130"
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
@@ -61,9 +61,9 @@ ms.locfileid: "79217130"
   
 -   因为数据挖掘是由服务器提供的服务，所以必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例提供对数据源的访问权限。  访问权限包含两个方面：位置和标识。  
   
-     **位置**意味着，如果使用仅存储在计算机上的数据生成一个模型，然后将该模型部署到服务器，则该模型将无法处理，因为找不到该数据源。 若要解决此问题，您可能需要将数据传入运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的同一 SQL Server 实例，或将文件移至共享位置。  
+     **位置** 意味着，如果使用仅存储在计算机上的数据生成一个模型，然后将该模型部署到服务器，则该模型会因找不到数据源而无法处理。 若要解决此问题，您可能需要将数据传入运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的同一 SQL Server 实例，或将文件移至共享位置。  
   
-     **标识**表示上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的服务必须能够用适当的凭据打开数据文件或数据源。 例如，在生成模型时，您可能已具有查看数据的不受限权限，而正在处理和更新服务器上的模型的用户可能具有对数据的受限访问权限或不具有对数据的访问权限，这会导致无法处理或影响模型内容。 用于连接到远程数据源的帐户必须至少具有对数据的读取权限。  
+     **标识** 表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 上的服务必须能使用相应的凭据打开数据文件或数据源。 例如，在生成模型时，您可能已具有查看数据的不受限权限，而正在处理和更新服务器上的模型的用户可能具有对数据的受限访问权限或不具有对数据的访问权限，这会导致无法处理或影响模型内容。 用于连接到远程数据源的帐户必须至少具有对数据的读取权限。  
   
 -   移动模型时，上述要求将适用：您必须设置对旧数据源的位置的适当访问权、复制数据源或配置新数据源。 此外，您必须传输登录名和角色，或设置权限以允许在新位置处理和更新数据挖掘对象。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "79217130"
 -   `AllowAdHocOpenRowsetQueries`控制对直接加载到服务器内存空间的 OLE DB 提供程序的即席访问。  
   
     > [!IMPORTANT]  
-    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值是 `false`。 但是，即使此属性设置为 `false`，用户仍可以继续创建单独查询，并且可以对允许的数据源使用 OPENQUERY。  
+    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值为 `false`。 但是，即使此属性设置为 `false`，用户仍可以继续创建单独查询，并且可以对允许的数据源使用 OPENQUERY。  
   
--   **AllowedProvidersInOpenRowset**如果启用了即席访问，则指定提供程序。 通过输入一个以逗号分隔的 ProgID 列表，您可以指定多个访问接口。  
+-   **AllowedProvidersInOpenRowset** 指定启用即席访问时的访问接口。 通过输入一个以逗号分隔的 ProgID 列表，您可以指定多个访问接口。  
   
--   **MaxConcurrentPredictionQueries**控制由预测导致的服务器上的负载。 默认值 0 允许对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 执行不受限制的查询，对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 最多执行五次并发查询。 超出限制的查询将被序列化，并且可能超时。  
+-   **MaxConcurrentPredictionQueries** 控制服务器上由预测引起的负载。 默认值 0 允许对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 执行不受限制的查询，对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 最多执行五次并发查询。 超出限制的查询将被序列化，并且可能超时。  
   
  服务器还提供了控制可使用哪些数据挖掘算法（包括对算法的所有限制）以及所有数据挖掘服务的默认值的其他属性。 但是，没有任何设置可以专门控制对数据挖掘存储过程的访问。 有关详细信息，请参阅 [Data Mining Properties](../server-properties/data-mining-properties.md)。  
   
@@ -93,15 +93,15 @@ ms.locfileid: "79217130"
 ## <a name="programmatic-access-to-data-mining-objects"></a>对数据挖掘对象的编程访问  
  您可以使用下列对象模型创建与 Analysis Services 数据库的连接和处理数据挖掘对象：  
   
- **ADO**使用 OLE DB 连接到 Analysis Services 服务器。 使用 ADO 时，客户端仅限于架构行集查询和 DMX 语句。  
+ **ADO** 使用 OLE DB 连接到 Analysis Services 服务器。 使用 ADO 时，客户端仅限于架构行集查询和 DMX 语句。  
   
- **ADO.NET**与 SQL Server 提供程序的交互比其他提供程序更好。 使用数据适配器存储动态行集。 使用数据集对象，该数据集对象是作为数据表存储的服务器数据的缓存，可将该服务器数据更新或另存为 XML 格式。  
+ **ADO.NET** 与其他访问接口相比，可以更好地与 SQL Server 访问接口进行交互。 使用数据适配器存储动态行集。 使用数据集对象，该数据集对象是作为数据表存储的服务器数据的缓存，可将该服务器数据更新或另存为 XML 格式。  
   
- **ADOMD.NET**为处理数据挖掘和 OLAP 而优化的托管数据访问接口。 ADOMD.NET 速度比 ADO.NET 更快，并且更能有效地利用内存。 您还可以通过 ADOMD.NET 检索有关服务器对象的元数据。 建议用于客户端应用程序，除非 .NET 不可用。  
+ **ADOMD.NET** 为处理数据挖掘和 OLAP 而优化的托管数据访问接口。 ADOMD.NET 速度比 ADO.NET 更快，并且更能有效地利用内存。 您还可以通过 ADOMD.NET 检索有关服务器对象的元数据。 建议用于客户端应用程序，除非 .NET 不可用。  
   
- **服务器 ADOMD**直接在服务器上访问 Analysis Services 对象的对象模型。 供 Analysis Services 存储过程使用；不能用于客户端。  
+ **Server ADOMD** 用于在服务器上直接访问 Analysis Services 对象的对象模型。 供 Analysis Services 存储过程使用；不能用于客户端。  
   
- **AMO**替换决策支持对象（DSO）的 Analysis Services 的管理界面。 与使用其他接口相比，在使用 AMO 时，循环访问对象等操作需要更高的权限。 这是因为 AMO 直接访问元数据，而 ADOMD.NET 和其他接口仅访问数据库架构。  
+ 替换决策支持对象 (DSO) 的 Analysis Services 的**AMO** 管理接口。 与使用其他接口相比，在使用 AMO 时，循环访问对象等操作需要更高的权限。 这是因为 AMO 直接访问元数据，而 ADOMD.NET 和其他接口仅访问数据库架构。  
   
 ### <a name="browse-and-query-access-to-servers"></a>对服务器的浏览和查询访问权限  
  可通过在 OLAP/数据挖掘模式下使用 Analysis Service 实例来执行所有类型的预测，但具有下列限制：  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 49ba35fb0ecb5ed70fe737a10ce9a700d4e4c816
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106589"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>添加、移动或删除文本框（报表生成器和 SSRS）
@@ -38,11 +38,11 @@ ms.locfileid: "66106589"
   
 ### <a name="to-add-a-text-box-in-a-list"></a>向列表中添加文本框  
   
-1.  在报表设计视图的 **“插入”** 选项卡上，单击 **“列表”** 。  
+1.  在报表设计视图的 **“插入”** 选项卡上，单击 **“列表”**。  
   
 2.  在设计图面上，单击并拖动一个框以将其调整到所需列表大小。 此外，也可以单击设计图面来创建默认大小的列表。  
   
-3.  在 **“插入”** 选项卡上，单击 **“文本框”** 。  
+3.  在 **“插入”** 选项卡上，单击 **“文本框”**。  
   
 4.  在设计图面上，在步骤 1 中添加的列表的内部，单击一个框，然后将该框调整为所需文本框大小。 此外，也可以在设计图面上单击列表内部，以创建默认大小的文本框。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66106589"
 6.  在“属性”窗格中，验证 **Parent** 属性是否为自动添加到列表数据区域的矩形。  
   
     > [!NOTE]  
-    >  如果“属性”窗格不可见，请选中“视图”  选项卡上的“属性”  。  
+    >  如果“属性”窗格不可见，请选中“视图”**** 选项卡上的“属性”****。  
   
 ### <a name="to-move-a-text-box"></a>移动文本框  
   
@@ -67,13 +67,13 @@ ms.locfileid: "66106589"
   
 ### <a name="to-delete-a-text-box"></a>删除文本框  
   
-1.  在报表设计视图中，右键单击文本框内的任意空白区域以选中该文本框，然后单击“删除”  。 此外，也可以单击文本框内的任意空白区域，再按 Delete。  
+1.  在报表设计视图中，右键单击文本框内的任意空白区域以选中该文本框，然后单击“删除”****。 此外，也可以单击文本框内的任意空白区域，再按 Delete。  
   
     > [!NOTE]  
     >  如果在文本框中单击并处于编辑模式，请按 ESC 以选择文本框。  
   
 ## <a name="see-also"></a>另请参阅  
- [文本框（报表生成器和 SSRS）](text-boxes-report-builder-and-ssrs.md)   
+ [文本框 &#40;报表生成器和 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
  [键盘快捷键（报表生成器）](../report-builder/keyboard-shortcuts-report-builder.md)  
   
