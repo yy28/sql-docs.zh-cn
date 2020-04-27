@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013879"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的默认映射 (SQLXML 4.0)
@@ -161,7 +161,7 @@ ms.locfileid: "66013879"
 </xsd:schema>  
 ```  
   
- 在 `xml` 中已引入了 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据类型。  
+ 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中已引入了 `xml` 数据类型。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
@@ -205,7 +205,7 @@ ctions">
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SQLXML 4.0 的批注的架构安全注意事项&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [XML 数据 (SQL Server)](../xml/xml-data-sql-server.md)   
+ [XML Data &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)   
  [SQLXML 4.0 中的 xml 数据类型支持](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

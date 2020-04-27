@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013018"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 中的 DiffGrams 简介
@@ -59,7 +59,7 @@ ms.locfileid: "66013018"
 ## <a name="diffgram-annotations"></a>DiffGram 批注  
  这些批注在 DiffGram 命名空间 **"urn：架构-microsoft-com： xml-DiffGram-01"** 中定义：  
   
- **识别**  
+ **id**  
  此属性用于对中的** \<** 元素进行配对>和** \<DataInstance>** 块。  
   
  **hasChanges**  
@@ -73,9 +73,9 @@ ms.locfileid: "66013018"
   
 |Operation|说明|  
 |---------------|-----------------|  
-|Insert|当元素出现在** \<DataInstance>** 块中，但在** \<>** 块中未指定，并且在元素上指定了**diffgr： hasChanges**特性（**diffgr： hasChanges =** insert）时，DiffGram 指示插入操作。 在这种情况下，DiffGram 会将在** \<DataInstance>** 块中指定的记录实例插入到数据库中。<br /><br /> 如果未指定**diffgr： hasChanges**属性，处理逻辑将忽略元素，并且不执行任何插入操作。 有关工作示例，请参阅[SQLXML 4.0&#41;的 DiffGram 示例 &#40;](diffgram-examples-sqlxml-4-0.md)。|  
+|插入|当元素出现在** \<DataInstance>** 块中，但在** \<>** 块中未指定，并且在元素上指定了**diffgr： hasChanges**特性（**diffgr： hasChanges =** insert）时，DiffGram 指示插入操作。 在这种情况下，DiffGram 会将在** \<DataInstance>** 块中指定的记录实例插入到数据库中。<br /><br /> 如果未指定**diffgr： hasChanges**属性，处理逻辑将忽略元素，并且不执行任何插入操作。 有关工作示例，请参阅[SQLXML 4.0&#41;的 DiffGram 示例 &#40;](diffgram-examples-sqlxml-4-0.md)。|  
 |更新|如果\<before> 块中有一个元素在** \<DataInstance>** 块中有一个对应的元素（即，这两个元素具有相同的值的**diffgr： id**属性），并且使用** \<DataInstance>** 块中元素上**修改**的值指定**diffgr： hasChanges**属性，则 DiffGram 指示更新操作。<br /><br /> 如果未对** \<DataInstance>** 块中的元素指定**diffgr： hasChanges**属性，则处理逻辑将返回错误。 有关工作示例，请参阅[SQLXML 4.0&#41;的 DiffGram 示例 &#40;](diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果在** \<>块之前**指定了**diffgr： parentid** ，则由**parentID**指定的元素的父子关系用于确定更新记录的顺序。|  
-|删除|当元素出现在** \<before>** 块中，但不在相应** \<的 DataInstance>** 块中时，DiffGram 指示删除操作。 在这种情况下，DiffGram 将从数据库中删除在** \<前面>** 块中指定的记录实例。 有关工作示例，请参阅[SQLXML 4.0&#41;的 DiffGram 示例 &#40;](diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果在** \<>块之前**指定了**diffgr： parentid** ，则由**parentID**指定的元素的父子关系用于确定删除记录的顺序。|  
+|Delete|当元素出现在** \<before>** 块中，但不在相应** \<的 DataInstance>** 块中时，DiffGram 指示删除操作。 在这种情况下，DiffGram 将从数据库中删除在** \<前面>** 块中指定的记录实例。 有关工作示例，请参阅[SQLXML 4.0&#41;的 DiffGram 示例 &#40;](diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果在** \<>块之前**指定了**diffgr： parentid** ，则由**parentID**指定的元素的父子关系用于确定删除记录的顺序。|  
   
 > [!NOTE]  
 >  参数无法传递到 DiffGrams。  

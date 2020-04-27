@@ -14,19 +14,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054292"
 ---
 # <a name="add-metadata-master-data-services"></a>添加元数据 (Master Data Services)
   在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，将用户定义的元数据添加到**元数据**模型，以描述模型对象。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须有权访问 "**资源管理器**" 功能区域。  
+-   **** 您必须有权访问“资源管理器”功能区域。  
   
 -   对于**元数据**模型，您必须对要添加的元数据实体或叶成员类型具有 "**添加**" 权限。  
   
@@ -36,13 +36,9 @@ ms.locfileid: "66054292"
   
 1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]主页上的 "**模型**" 列表中，选择 "**元数据**" 模型。  
   
-2.  
-  **
-  ** 从“版本”列表中，选择某一版本。  
+2.  **** 从“版本”列表中，选择某一版本。  
   
-3.  
-  **
-  **单击“资源管理器”。  
+3.  单击 **“资源管理器”**。  
   
 4.  从菜单栏中，指向 "**实体**"，然后单击要添加的元数据实体。  
   

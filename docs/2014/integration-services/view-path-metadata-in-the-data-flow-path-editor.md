@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054489"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>在数据流路径编辑器中查看路径元数据
@@ -37,7 +37,7 @@ ms.locfileid: "66054489"
   
 6.  若要复制元数据，请单击 **“复制到剪贴板”**。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 路径](data-flow/integration-services-paths.md)   

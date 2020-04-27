@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013671"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定关系 (SQLXML 4.0)
@@ -59,13 +59,13 @@ ms.locfileid: "66013671"
  **parent-key**  
  指定父项的父键。 如果父键由多列组成，则指定值时应在各值之间使用空格。 在为多列键指定的值与为对应的子键指定的值之间存在位置映射。  
   
- **子**  
+ **子代**  
  指定子关系（表）。  
   
  **child-key**  
  在引用父项中父键的子项中指定子键。 如果子键由多个属性（列）组成，则指定子键值时应在各值之间使用空格。 在为多列键指定的值与为对应的父键指定的值之间存在位置映射。  
   
- **Inverse**  
+ **反转**  
  在** \<sql： relationship>** 上指定的此属性由 updategram 使用。 有关详细信息，请参阅[在 sql： relationship 上指定 sql：反向特性](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
  必须`sql:key-fields`在包含子元素的元素中指定批注，该元素具有在元素和子元素之间定义的** \<sql： relationship>** ，且不提供父元素中指定的表的主键。 即使架构未指定** \<sql： relationship>**，也必须指定`sql:key-fields`来生成适当的层次结构。 有关详细信息，请参阅[使用 sql： key-字段标识键列](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  

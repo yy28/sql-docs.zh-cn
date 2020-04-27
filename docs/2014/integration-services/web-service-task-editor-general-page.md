@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054543"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
@@ -28,15 +28,15 @@ ms.locfileid: "66054543"
   
 ## <a name="options"></a>选项  
  **HTTPConnection**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器****。  
+ 在列表中选择一个连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
   
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
   
- **相关主题：**  [Http 连接管理器](connection-manager/http-connection-manager.md)、 [http 连接管理器编辑器 &#40;Server 页面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **相关主题：**  [HTTP 连接管理器](connection-manager/http-connection-manager.md)、[HTTP 连接管理器编辑器（“服务器”页）](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- 键入计算机本地上 WSDL 文件的完全限定路径，或单击浏览按钮 (…) 并定位到该文件****。  
+ 键入计算机本地的 WSDL 文件的完全限定路径，或单击浏览按钮 **（...）** 找到此文件。  
   
  如果您已经将该 WSDL 文件手动下载到计算机，请选择此文件。 但是，如果尚未下载该 WSDL 文件，请执行以下步骤：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66054543"
 -   单击 **“下载 WSDL”** 下载实际 WSDL 文件，并覆盖空文件。  
   
     > [!NOTE]  
-    >  在“WSDLFile”**** 框中提供现有本地文件的名称后，才会启用“下载 WSDL”**** 选项。  
+    >   当您在 **WSDLFile** 框中提供现有本地文件的名称后， **“下载 WSDL”** 选项才会启用。  
   
  **OverwriteWSDLFile**  
  指示是否可以覆盖 Web 服务任务的 WSDL 文件。  

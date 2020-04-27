@@ -10,14 +10,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014253"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  `CurvePolygon`是由外部边界环和零个或多个内部环定义的界定闭合封闭曲面  
+   是由一个外部边界环以及零个或多个内环界定的在拓扑结构上闭合的图面。  
   
 > [!IMPORTANT]  
 >  有关中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]引入的空间功能的详细说明和示例（包括`CurvePolygon`子类型），请下载白皮书[SQL Server 2012 中的新的空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
@@ -28,8 +28,7 @@ ms.locfileid: "66014253"
   
 -   该 `CurvePolygon` 实例的内部是外环和所有内环之间的空间。  
   
- 
-  `CurvePolygon` 实例不同于 `Polygon` 实例，因为 `CurvePolygon` 实例可以包含以下圆弧线段：`CircularString` 和 `CompoundCurve`。  
+ `CurvePolygon` 实例不同于 `Polygon` 实例，因为 `CurvePolygon` 实例可以包含以下圆弧线段：`CircularString` 和 `CompoundCurve`。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 实例  
  下图显示有效的 `CurvePolygon` 图形：  
@@ -56,7 +55,7 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` 已被接受，即使在起点和终点具有不同的 Z 值时也是如此，因为 Z 值被忽略。 `@g5`接受，即使`geography`类型实例无效。  
+ `@g3` 已被接受，即使在起点和终点具有不同的 Z 值时也是如此，因为 Z 值被忽略。  已被接受，即使  类型实例无效时也是如此。  
   
  下面的示例引发 `System.FormatException`。  
   
@@ -78,7 +77,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  每个环都必须是可接受的曲线类型。  
   
- `CurvePolygon`实例还需要满足特定的条件，具体取决于它们`geometry`是`geography`还是数据类型。  
+  实例根据其是  还是  数据类型，也需要满足特定的条件。  
   
 #### <a name="geometry-data-type"></a>geometry 数据类型  
  一个有效的 **geometryCurvePolygon** 实例必须具有以下属性：  

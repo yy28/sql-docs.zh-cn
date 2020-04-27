@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66015093"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>排除全文索引故障
      
-##  <a name="failure"></a> 排除全文索引故障  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> 排除全文索引故障  
  填充或维护全文索引时，由于下面描述的原因，全文索引器可能无法对一个或多个行编制索引。 这些行级别的错误不会干扰填充的进行。 索引器会跳过这些行，这意味着您无法查询这些行中包含的内容。  
   
  在以下情况下，可能会发生索引失败：  
@@ -54,7 +54,7 @@ ms.locfileid: "66015093"
   
 
   
-##  <a name="state"></a> 对事务日志进行还原后全文索引处于不一致状态  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> 对事务日志进行还原后全文索引处于不一致状态  
  还原数据库的事务日志时可能会看到一条警告，指示全文索引处于不一致状态。 导致不一致的原因是在备份数据库之后，针对表的全文索引被修改了。 若要使全文索引处于一致状态，必须对表执行完全填充（爬网）。 有关详细信息，请参阅 [填充全文索引](../indexes/indexes.md)。  
   
 

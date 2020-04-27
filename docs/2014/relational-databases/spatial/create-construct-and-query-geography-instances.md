@@ -15,230 +15,221 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014299"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
-  地理空间数据类型 `geography` 表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
+  地理空间数据类型 `geography` 表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
   
- 
-  `geography` 类型已进行预定义，可在每个数据库中使用。 您可以创建 `geography` 类型的表列并对 `geography` 数据进行操作，就像使用其他系统提供的数据类型一样。  
+ `geography` 类型已进行预定义，可在每个数据库中使用。 您可以创建 `geography` 类型的表列并对 `geography` 数据进行操作，就像使用其他系统提供的数据类型一样。  
   
-##  <a name="creating"></a>创建或构建新的地域实例  
+##  <a name="creating-or-constructing-a-new-geography-instance"></a><a name="creating"></a> 创建或构建新的地域实例  
   
-###  <a name="existing"></a>从现有实例创建新的地域实例  
- 
-  `geography` 数据类型提供了许多内置方法，您可以使用这些方法基于现有实例创建新的 `geography` 实例。  
+###  <a name="creating-a-new-geography-instance-from-an-existing-instance"></a><a name="existing"></a> 从现有实例创建新的地域实例  
+ `geography` 数据类型提供了许多内置方法，您可以使用这些方法基于现有实例创建新的 `geography` 实例。  
   
  **在地域周围创建缓冲区**  
- [STBuffer &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stbuffer-geography-data-type)  
+ [STBuffer（geography 数据类型）](/sql/t-sql/spatial-geography/stbuffer-geography-data-type)  
   
  **在地域周围创建缓冲区，允许公差**  
- [BufferWithTolerance &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/bufferwithtolerance-geography-data-type)  
+ [BufferWithTolerance（geography 数据类型）](/sql/t-sql/spatial-geography/bufferwithtolerance-geography-data-type)  
   
  **通过两个地域实例的交集创建地域**  
- [STIntersection &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stintersection-geography-data-type)  
+ [STIntersection（geography 数据类型）](/sql/t-sql/spatial-geography/stintersection-geography-data-type)  
   
  **通过两个地域的实例并集创建地域**  
- [STUnion &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stunion-geography-data-type)  
+ [STUnion（geography 数据类型）](/sql/t-sql/spatial-geography/stunion-geography-data-type)  
   
- **从一个地理位置不重叠的点创建地理位置**  
- [STDifference &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
+ **通过一个地域中没有与另一个地域发生重叠的点创建地域**  
+ [STDifference（geography 数据类型）](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
   
-###  <a name="wkt"></a>从熟知文本输入构造地域实例  
- 
-  `geography` 数据类型提供了若干种用开放地理空间联盟 (OGC) WKT 表示形式生成地域的内置方法。 WKT 标准是一种允许地域数据以文本形式交换的文本字符串。  
+###  <a name="constructing-a-geography-instance-from-well-known-text-input"></a><a name="wkt"></a> 从熟知文本输入构造地域实例  
+ `geography` 数据类型提供了若干种用开放地理空间联盟 (OGC) WKT 表示形式生成地域的内置方法。 WKT 标准是一种允许地域数据以文本形式交换的文本字符串。  
   
  **用 WKT 输入构造任意类型的地域实例**  
  [STGeomFromText（geography 数据类型）](/sql/t-sql/spatial-geography/stgeomfromtext-geography-data-type)  
   
- [分析地理数据类型 &#40;&#41;](/sql/t-sql/spatial-geography/parse-geography-data-type)  
+ [Parse（geography 数据类型）](/sql/t-sql/spatial-geography/parse-geography-data-type)  
   
  **用 WKT 输入构造地域 Point 实例**  
- [STPointFromText &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stpointfromtext-geography-data-type)  
+ [STPointFromText（geography 数据类型）](/sql/t-sql/spatial-geography/stpointfromtext-geography-data-type)  
   
  **用 WKT 输入构造地域 MultiPoint 实例**  
- [STMPointFromText &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stmpointfromtext-geography-data-type)  
+ [STMPointFromText（geography 数据类型）](/sql/t-sql/spatial-geography/stmpointfromtext-geography-data-type)  
   
  **用 WKT 输入构造地域 LineString 实例**  
  STLineFromText（geography 数据类型）  
   
  **用 WKT 输入构造地域 MultiLineString 实例**  
- [STMLineFromText &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stmlinefromtext-geography-data-type)  
+ [STMLineFromText（geography 数据类型）](/sql/t-sql/spatial-geography/stmlinefromtext-geography-data-type)  
   
  **用 WKT 输入构造地域 Polygon 实例**  
- [STPolyFromText &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stpolyfromtext-geography-data-type)  
+ [STPolyFromText（geography 数据类型）](/sql/t-sql/spatial-geography/stpolyfromtext-geography-data-type)  
   
  **用 WKT 输入构造地域 MultiPolygon 实例**  
- [STMPolyFromText &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stmpolyfromtext-geography-data-type)  
+ [STMPolyFromText（geography 数据类型）](/sql/t-sql/spatial-geography/stmpolyfromtext-geography-data-type)  
   
  **用 WKT 输入构造地域 GeometryCollection 实例**  
- [STGeomCollFromText &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
+ [STGeomCollFromText（geography 数据类型）](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
   
-###  <a name="wkb"></a>从众所周知的二进制输入构造地域实例  
+###  <a name="constructing-a-geography-instance-from-well-known-binary-input"></a><a name="wkb"></a> 从熟知二进制输入构造地域实例  
  WKB 是 OGC 规定的一种二进制格式，该格式允许 `Geography` 数据在客户端应用程序和 SQL 数据库之间进行交换。 以下函数接受使用 WKB 输入构造地域实例：  
   
  **用 WKB 输入构造任意类型的地域实例**  
- [STGeomFromWKB &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  
+ [STGeomFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  
   
  **用 WKB 输入构造地域 Point 实例**  
- [STPointFromWKB &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stpointfromwkb-geography-data-type)  
+ [STPointFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stpointfromwkb-geography-data-type)  
   
  **用 WKB 输入构造地域 MultiPoint 实例**  
- [STMPointFromWKB &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stmpointfromwkb-geography-data-type)  
+ [STMPointFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stmpointfromwkb-geography-data-type)  
   
  **用 WKB 输入构造地域 LineString 实例**  
- [STLineFromWKB &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stlinefromwkb-geography-data-type)  
+ [STLineFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stlinefromwkb-geography-data-type)  
   
  **用 WKB 输入构造地域 MultiLineString 实例**  
- [STMLineFromWKB &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stmlinefromwkb-geography-data-type)  
+ [STMLineFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stmlinefromwkb-geography-data-type)  
   
  **用 WKB 输入构造地域 Polygon 实例**  
- [STPolyFromWKB &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stpolyfromwkb-geography-data-type)  
+ [STPolyFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stpolyfromwkb-geography-data-type)  
   
  **用 WKB 输入构造地域 MultiPolygon 实例**  
- [STMPolyFromWKB &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stmpolyfromwkb-geography-data-type)  
+ [STMPolyFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stmpolyfromwkb-geography-data-type)  
   
  **用 WKB 输入构造地域 GeometryCollection 实例**  
- [STGeomCollFromWKB &#40;Geography 数据类型&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB （geography 数据类型）  
+ [STGeomCollFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type) STGeomCollFromWKB（geography 数据类型）  
   
-###  <a name="gml"></a>从 GML 文本输入构造地域实例  
- `geography`数据类型提供了一个方法，该方法`geography`可从 GML （ `geography`实例的 XML 表示形式）生成实例。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
+###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> 用 GML 文本输入构造地域实例  
+ `geography`数据类型提供了一个方法，该方法`geography`可从 GML （ `geography`实例的 XML 表示形式）生成实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
  有关地域标记语言的详细信息，请参阅 OGC 规范： [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)（OGC 规范，地域标记语言）。  
   
  **用 GML 输入构造任意类型的地域实例**  
- [GeomFromGML &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
+ [GeomFromGML（geography 数据类型）](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
   
-##  <a name="returning"></a>从地域实例返回熟知文本和熟知二进制  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geography-instance"></a><a name="returning"></a> 从地域实例返回熟知文本和熟知二进制  
  可以使用以下方法返回 WKT 或 WKB 格式的 `geography` 实例：  
   
  **返回地域实例的 WKT 表示形式**  
- [STAsText &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stastext-geography-data-type)  
+ [STAsText（geography 数据类型）](/sql/t-sql/spatial-geography/stastext-geography-data-type)  
   
- [ToString &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/tostring-geography-data-type)  
+ [ToString（geography 数据类型）](/sql/t-sql/spatial-geography/tostring-geography-data-type)  
   
- **返回包括任何 Z 值和 M 值的 geography 实例的 WKT 表示形式**  
+ **返回包括任何 Z 值和 M 值的地域实例的 WKT 表示形式**  
  [AsTextZM（geography 数据类型）](/sql/t-sql/spatial-geography/astextzm-geography-data-type)  
   
- **返回 geography 实例的 WKB 表示形式**  
- [STAsBinary &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stasbinary-geography-data-type)  
+ **返回地域实例的 WKB 表示形式**  
+ [STAsBinary（geography 数据类型）](/sql/t-sql/spatial-geography/stasbinary-geography-data-type)  
   
- **返回 geography 实例的 GML 表示形式**  
- [AsGml &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
+ **返回地域实例的 GML 表示形式**  
+ [AsGml（geography 数据类型）](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
-##  <a name="query"></a>查询地域实例的属性和行为  
+##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> 查询地域实例的属性和行为  
  所有`geography`实例都具有多个可通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的方法进行检索的属性。 下列主题定义了地域类型的属性和行为，并为查询每种图形定义了方法。  
   
-###  <a name="valid"></a>有效性、实例类型和 GeometryCollection 信息  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有效性、实例类型和 GeometryCollection 信息  
  构造`geography`实例后，可以使用以下方法返回实例类型，或者，如果它是`GeometryCollection`实例，则返回特定`geography`的实例。  
   
  **返回地域的实例类型**  
- [STGeometryType &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
+ [STGeometryType（geography 数据类型）](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
   
  **确定地域是否为给定的实例类型**  
- [InstanceOf &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/instanceof-geography-data-type)  
+ [InstanceOf（geography 数据类型）](/sql/t-sql/spatial-geography/instanceof-geography-data-type)  
   
- **确定地域实例的实例类型格式是否正确**  
- [STNumGeometries &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stnumgeometries-geography-data-type)  
+ **确定地域实例对其实例类型而言格式是否正确**  
+ [STNumGeometries（geography 数据类型）](/sql/t-sql/spatial-geography/stnumgeometries-geography-data-type)  
   
  **返回 GeometryCollection 实例中的特定地域**  
- [STGeometryN &#40;Geography 数据类型&#41;](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN （geography 数据类型）  
+ [STGeometryN（geography 数据类型）](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN（geography 数据类型）  
   
-###  <a name="number"></a>点数  
+###  <a name="number-of-points"></a><a name="number"></a> 点数  
  所有非`geography`空实例都由*点*组成。 这些点表示球体的纬度和经度坐标，在其上可绘制 `geography` 实例。 数据类型 `geography` 提供了许多用于查询实例点的内置方法。  
   
- **返回构成实例的点数**  
+ **返回构成实例的点数。**  
  [STNumPoints（geography 数据类型）](/sql/t-sql/spatial-geography/stnumpoints-geography-data-type)  
   
  **返回实例中的特定点**  
  [STPointN（geometry 数据类型）](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)  
   
  **返回实例的起始点**  
- [STStartPoint &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/ststartpoint-geography-data-type)  
+ [STStartPoint（geography 数据类型）](/sql/t-sql/spatial-geography/ststartpoint-geography-data-type)  
   
  **返回实例的终点**  
- [STEndpoint &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
+ [STEndpoint（geography 数据类型）](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
-###  <a name="dimension"></a>维数  
+###  <a name="dimension"></a><a name="dimension"></a> 维度  
  非空 `geography` 实例可以为零维、一维或二维。 零维`geography`实例（例如`Point`和`MultiPoint`）没有长度或面积。 一维对象（例如 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString`）具有长度。 二维实例（如`Polygon, CurvePolygon`、和`MultiPolygon`）具有面积和长度。 空实例将报告 -1 维，并且 `GeometryCollection` 报告其内容的最大维度。  
   
  **返回实例的维度**  
- [STDimension &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
+ [STDimension（geography 数据类型）](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
   
  **返回实例的长度**  
  [STLength（geography 数据类型）](/sql/t-sql/spatial-geography/stlength-geography-data-type)  
   
  **返回实例的面积**  
- [STArea &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
+ [STArea（geography 数据类型）](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
-###  <a name="empty"></a>空白处  
+###  <a name="empty"></a><a name="empty"></a> Empty  
  *空*`geography`实例不包含任何点。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 实例的长度为 0。 空的 `Polygon, CurvePolygon` 和 `MultiPolygon` 实例的面积为 0。  
   
  **确定实例是否为空**  
- [STIsEmpty &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
+ [STIsEmpty（geography 数据类型）](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
-###  <a name="closure"></a>结束  
- *闭合*`geography`的实例是一个图形，其起点和终点是相同的。 
-  `Polygon` 实例被视为闭合的。 
-  `Point` 实例不是闭合的。  
+###  <a name="closure"></a><a name="closure"></a> 闭合  
+ *闭合*`geography`的实例是一个图形，其起点和终点是相同的。 `Polygon` 实例被视为闭合的。 `Point` 实例不是闭合的。  
   
  环是一个简单、闭合的 `LineString` 实例。  
   
- **确定实例是否已关闭**  
- [STIsClosed &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stisclosed-geography-data-type)  
+ **确定实例是否闭合**  
+ [STIsClosed（geography 数据类型）](/sql/t-sql/spatial-geography/stisclosed-geography-data-type)  
   
- **返回多边形实例中的环数**  
- [NumRings &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/numrings-geography-data-type)  
+ **返回多边形实例的环数**  
+ [NumRings（geography 数据类型）](/sql/t-sql/spatial-geography/numrings-geography-data-type)  
   
  **返回地域实例的指定环**  
- [RingN &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/ringn-geography-data-type)  
+ [RingN（geography 数据类型）](/sql/t-sql/spatial-geography/ringn-geography-data-type)  
   
-###  <a name="srid"></a>空间引用 ID （SRID）  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> 空间引用标识符 (SRID)  
  空间引用标识符 (SRID) 是指定 `geography` 实例所在的椭球坐标系的标识符。 两个拥有不同 SRID 的 `geography` 实例是不可比的。  
   
  **设置或返回实例的 SRID**  
- [STSrid &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stsrid-geography-data-type)  
+ [STSrid（geography 数据类型）](/sql/t-sql/spatial-geography/stsrid-geography-data-type)  
   
  此属性可以进行修改。  
   
-##  <a name="rel"></a>确定地域实例之间的关系  
- 
-  `geography` 数据类型提供了许多内置方法，您可以使用这些方法确定两个 `geography` 实例之间的关系。  
+##  <a name="determining-relationships-between-geography-instances"></a><a name="rel"></a> 确定地域实例之间的关系  
+ `geography` 数据类型提供了许多内置方法，您可以使用这些方法确定两个 `geography` 实例之间的关系。  
   
  **确定两个实例是否包含相同的点集**  
- [STEquals &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  
+ [STEquals（geometry 数据类型）](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  
   
- **确定两个实例是否不相交**  
- [STDisjoint &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stdisjoint-geometry-data-type)  
+ **确定两个实例是否不相接**  
+ [STDisjoint（geometry 数据类型）](/sql/t-sql/spatial-geometry/stdisjoint-geometry-data-type)  
   
  **确定两个实例是否相交**  
  [STIntersects（geography 数据类型）](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)  
   
- **确定两个实例相交的点或点**  
- [STIntersection &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stintersection-geography-data-type)  
+ **确定两个实例的交点**  
+ [STIntersection（geography 数据类型）](/sql/t-sql/spatial-geography/stintersection-geography-data-type)  
   
  **确定两个地域实例中点之间的最短距离**  
- [STDistance &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)  
+ [STDistance（geography 数据类型）](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)  
   
- **确定两个地理实例之间的点的差异**  
- [STDifference &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
+ **确定两个地域实例之间点的不同**  
+ [STDifference（geography 数据类型）](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
   
- **派生一个 geography 实例与另一个实例进行比较的对称差异或唯一点**  
- [STSymDifference &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
+ **派生一个地域实例相比于另一个地域实例的余集或唯一点**  
+ [STSymDifference（geography 数据类型）](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
   
-##  <a name="supportedsrid"></a>地域实例必须使用支持的 SRID  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持基于 EPSG 标准的 SRID。 必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的支持 `geography` 的 SRID 执行计算或将方法用于地域空间数据。 SRID 必须与 **sys.spatial_reference_systems** 目录视图中显示的 SRID 中的一个匹配。 如前所述，在使用 `geography` 数据类型对空间数据执行计算时，结果将取决于在创建数据时使用的是哪个椭圆体，因为为每个椭圆体都分配了一个特定空间引用标识符 (SRID)。  
+##  <a name="geography-instances-must-use-supported-srid"></a><a name="supportedsrid"></a> 地域实例必须使用支持的 SRID  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持基于 EPSG 标准的 SRID。 必须使用 `geography` 实例的支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SRID 执行计算或将方法用于地域空间数据。 SRID 必须与 **sys.spatial_reference_systems** 目录视图中显示的 SRID 中的一个匹配。 如前所述，在使用 `geography` 数据类型对空间数据执行计算时，结果将取决于在创建数据时使用的是哪个椭圆体，因为为每个椭圆体都分配了一个特定空间引用标识符 (SRID)。  
   
- 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用方法时，`geography` 使用等于 4326 的默认 SRID，它将映射到 WGS 84 空间引用系统。 如果要使用 WGS 84（或 SRID 4326）之外的某个空间引用系统中的数据，您需要确定地域空间数据的特定 SRID。  
+ 对 `geography` 实例使用方法时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用等于 4326 的默认 SRID，它将映射到 WGS 84 空间引用系统。 如果要使用 WGS 84（或 SRID 4326）之外的某个空间引用系统中的数据，您需要确定地域空间数据的特定 SRID。  
   
-##  <a name="examples"></a> 示例  
+##  <a name="examples"></a><a name="examples"></a> 示例  
  以下示例说明如何添加和查询地理数据。  
   
 -   第一个示例创建了带有标识列和 `geography` 列 `GeogCol1`的表。 第三列将 `geography` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geography`实例，一行包含 `Polygon` 实例。  

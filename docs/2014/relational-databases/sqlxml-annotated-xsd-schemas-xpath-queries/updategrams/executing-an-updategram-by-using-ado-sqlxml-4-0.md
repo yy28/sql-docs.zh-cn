@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014834"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 执行 Updategram (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "66014834"
   
 -   最后，执行该命令 (updategram)。  
   
- 下面是示例代码：  
+ 以下是示例代码：  
   
 ```vb  
 Private Sub Form_Load()  

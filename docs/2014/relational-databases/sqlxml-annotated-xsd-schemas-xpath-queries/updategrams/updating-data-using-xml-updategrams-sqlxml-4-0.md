@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014676"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新数据 (SQLXML 4.0)
@@ -59,8 +59,7 @@ ms.locfileid: "66014676"
  `<updg:after>`  
  ** \<>块后**的中的元素说明在应用更新后， ** \<** 如何查看在之前>块中指定的记录。  
   
- 
-  `mapping-schema` 属性用于标识要由 Updategram 使用的映射架构。 如果 updategram 指定映射架构，则在** \<之前>** 和** \<>块之后**指定的元素和属性名称必须与架构中的名称匹配。 该映射架构将这些元素或属性名称映射到数据库表和列名称。  
+ `mapping-schema` 属性用于标识要由 Updategram 使用的映射架构。 如果 updategram 指定映射架构，则在** \<之前>** 和** \<>块之后**指定的元素和属性名称必须与架构中的名称匹配。 该映射架构将这些元素或属性名称映射到数据库表和列名称。  
   
  如果 Updategram 不指定架构，则 Updategam 将使用默认映射。 在默认映射中，updategram 中指定的** \<ElementName>** 映射到数据库表，并且子元素或属性映射到数据库列。  
   

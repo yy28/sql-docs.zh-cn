@@ -19,22 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013811"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
-  可以基于某些限制值来限制从数据库查询返回的行。 
-  `sql:limit-field` 和 `sql:limit-value` 批注用于标识包含限制值的数据库列和指定用于筛选返回的数据的特定限制值。  
+  可以基于某些限制值来限制从数据库查询返回的行。 `sql:limit-field` 和 `sql:limit-value` 批注用于标识包含限制值的数据库列和指定用于筛选返回的数据的特定限制值。  
   
- 
-  `sql:limit-field` 批注用于标识包含限制值的列；对于每个映射的元素或属性允许该批注。  
+ `sql:limit-field` 批注用于标识包含限制值的列；对于每个映射的元素或属性允许该批注。  
   
- 
-  `sql:limit-value` 批注用于指定在 `sql:limit-field` 批注所指定的列中的受限制值。 
-  `sql:limit-value` 批注是可选的。 如果未指定 `sql:limit-value`，将采用 NULL 值。  
+ `sql:limit-value` 批注用于指定在 `sql:limit-field` 批注所指定的列中的受限制值。 `sql:limit-value` 批注是可选的。 如果未指定 `sql:limit-value`，将采用 NULL 值。  
   
 > [!NOTE]  
 >  使用 `sql:limit-field`（其中映射的 SQL 列为 `real` 类型）时，SQLXML 4.0 对 `sql:limit-value` 执行转换（如作为 `nvarchar` 指定值在 XML 架构中指定）。 这要求使用纯科学记数法指定小数限制值。 有关详细信息，请参阅下面的示例 B。  

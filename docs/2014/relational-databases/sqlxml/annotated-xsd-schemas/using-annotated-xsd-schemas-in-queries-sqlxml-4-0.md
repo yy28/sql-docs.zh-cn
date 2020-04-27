@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c435ff3bacecb101784695fe42b8b2158625e058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014469"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查询中使用带批注的 XSD 架构 (SQLXML 4.0)
@@ -116,11 +116,9 @@ ms.locfileid: "66014469"
   
  该模板还指定了两个 XPath 查询。 每个** \<xpath 查询>** 元素都通过指定`mapping-schema`属性来唯一标识映射架构。  
   
- 在模板中指定内联架构时，还必须在`sql:is-mapping-schema` ** \<xsd： schema>** 元素上指定批注。 
-  `sql:is-mapping-schema` 取布尔值（0=false，1=true）。 带有 sql：的内联架构**为-映射-schema = "1"** 被视为内联批注的架构，不在 XML 文档中返回。  
+ 在模板中指定内联架构时，还必须在`sql:is-mapping-schema` ** \<xsd： schema>** 元素上指定批注。 `sql:is-mapping-schema` 取布尔值（0=false，1=true）。 带有 sql：的内联架构**为-映射-schema = "1"** 被视为内联批注的架构，不在 XML 文档中返回。  
   
- 
-  `sql:is-mapping-schema` 批注属于模板命名空间 `urn:schemas-microsoft-com:xml-sql`。  
+ `sql:is-mapping-schema` 批注属于模板命名空间 `urn:schemas-microsoft-com:xml-sql`。  
   
  若要测试该示例，请在本地目录中保存该模板 (InlineSchemaTemplate.xml)，然后创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 以执行该模板。 有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../using-ado-to-execute-sqlxml-4-0-queries.md)。  
   

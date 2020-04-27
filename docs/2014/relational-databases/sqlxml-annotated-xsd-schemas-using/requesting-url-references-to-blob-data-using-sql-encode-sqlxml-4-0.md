@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013733"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>使用 sql:encode 请求 BLOB 数据的 URL 引用 (SQLXML 4.0)
@@ -31,13 +31,11 @@ ms.locfileid: "66013733"
   
  如果希望在稍后使用返回的数据引用 (URI) 来检索二进制格式的 BLOB 数据，请指定 `sql:encode` 批注。 您可以针对简单类型的属性或元素指定 `sql:encode`。  
   
- 指定 `sql:encode` 批注以指示应返回字段的 URL，而非字段的值。 
-  `sql:encode` 根据主键来在 URL 中生成单一选择。 可以使用`sql:key-fields`批注指定主键。  
+ 指定 `sql:encode` 批注以指示应返回字段的 URL，而非字段的值。 `sql:encode` 根据主键来在 URL 中生成单一选择。 可以使用`sql:key-fields`批注指定主键。  
   
  可以为 `sql:encode` 批注分配“url”或“default”值。 值为“default”将返回 Base 64 编码格式的数据。  
   
- 
-  `sql:encode` 批注不能与 `sql:use-cdata` 一起使用，也不能用于 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 属性类型。 它也不能用于 XSD**固定**属性。  
+ `sql:encode` 批注不能与 `sql:use-cdata` 一起使用，也不能用于 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 属性类型。 它也不能用于 XSD**固定**属性。  
   
 > [!NOTE]  
 >  BLOB 类型的列不能用作键或外键的一部分。  

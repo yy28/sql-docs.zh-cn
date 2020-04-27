@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f131dc8fa36ad8ab8d9284012e25b44ecd209dcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014896"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>在 .NET 环境中使用 SQLXML 大容量加载
@@ -148,6 +148,6 @@ ms.locfileid: "66014896"
      这将创建可用于 .NET Framework 项目中的托管包装 DLL (SQLXMLBULKLOADLib.dll)。 在 .NET Framework 中，您添加对新创建的 DLL 的项目引用。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQLXML 4.0&#41;执行 XML 数据的大容量加载](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [对 XML 数据执行大容量加载 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

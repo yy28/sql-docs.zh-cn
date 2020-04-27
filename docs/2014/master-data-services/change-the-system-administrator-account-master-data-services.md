@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054141"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>更改系统管理员帐户 (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66054141"
 > [!WARNING]  
 >  当您完成此过程后，将删除旧系统管理员用户帐户。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   必须将新管理员的用户名添加到[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的“用户”列表中。 有关详细信息，请参阅[Add a User &#40;Master Data Services&#41;](add-a-user-master-data-services.md)。  
@@ -49,6 +49,6 @@ ms.locfileid: "66054141"
 5.  运行查询。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理员 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+ [管理员 (Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054483"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 连接管理器编辑器
@@ -36,7 +36,7 @@ ms.locfileid: "66054483"
  **服务器名称**  
  提供要进行 WMI 连接的服务器的名称。  
   
- **命名空间**  
+ **Namespace**  
  指定 WMI 命名空间。  
   
  **使用 Windows 身份验证**  
@@ -45,10 +45,10 @@ ms.locfileid: "66054483"
  **用户名**  
  如果不使用 Windows 身份验证，则必须提供连接所用的用户名。  
   
- **权限**  
+ **密码**  
  如果不使用 Windows 身份验证，则必须提供连接所用的密码。  
   
- **考试**  
+ **测试**  
  测试连接管理器设置。  
   
 ## <a name="see-also"></a>另请参阅  

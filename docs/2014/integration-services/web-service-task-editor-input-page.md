@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054519"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服务任务编辑器（“输入”页）
@@ -34,12 +34,12 @@ ms.locfileid: "66054519"
  从列表中为要执行的任务选择 Web 方法。  
   
  **WebMethodDocumentation**  
- 键入对 Web 方法的说明，或单击浏览按钮 (…)，再在“Web 方法文档”对话框中键入说明********。  
+ 键入对 Web 方法的说明，或单击 "浏览" 按钮 **（...）** ，然后在 " **Web 方法文档**" 对话框中键入说明。  
   
  **名称**  
  列出为 Web 方法提供的输入名称。  
   
- 类型   
+ **类型**  
  列出输入的数据类型。  
   
 > [!NOTE]  

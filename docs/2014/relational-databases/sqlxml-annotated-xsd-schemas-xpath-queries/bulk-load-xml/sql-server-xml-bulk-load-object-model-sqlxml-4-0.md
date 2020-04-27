@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013285"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大容量加载对象模型 (SQLXML 4.0)
@@ -57,9 +57,9 @@ ms.locfileid: "66013285"
  在此属性设置为 TRUE 时，XML 大容量加载检查每个插入的值的约束（这意味着约束冲突将导致错误）。  
   
 > [!NOTE]  
->  若要将此属性保留为 "FALSE"，您必须对目标表具有**ALTER TABLE**权限。 有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+>  若要将此属性保留为 "FALSE"，您必须对目标表具有**ALTER TABLE**权限。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
   
- 默认值为 FALSE。 在该值设置为 FALSE 时，XML 大容量加载在插入操作期间将忽略这些约束。 在当前实现中，您必须按照映射架构中的主键和外键关系的顺序定义表。 也就是说，具有主键的表必须在具有外键的相应表之前定义；否则，XML 大容量加载将失败。  
+ 默认值是 FALSE。 在该值设置为 FALSE 时，XML 大容量加载在插入操作期间将忽略这些约束。 在当前实现中，您必须按照映射架构中的主键和外键关系的顺序定义表。 也就是说，具有主键的表必须在具有外键的相应表之前定义；否则，XML 大容量加载将失败。  
   
  请注意，如果 ID 传播正在进行，则此选项不适用并且约束检查将保持。 这将在 `KeepIdentity=False` 并且存在定义的关系（即，父级是标识字段并且在生成子级时值将提供给子级）发生。  
   
@@ -84,21 +84,21 @@ ms.locfileid: "66013285"
  在设置为 TRUE 时，在插入操作期间触发器将照常触发。  
   
 > [!NOTE]  
->  若要将此属性保留为 "FALSE"，您必须对目标表具有**ALTER TABLE**权限。 有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+>  若要将此属性保留为 "FALSE"，您必须对目标表具有**ALTER TABLE**权限。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
   
  请注意，如果 ID 传播正在进行，则此选项不适用并且触发器将保持。 这将在 `KeepIdentity=False` 并且存在定义的关系（即，父级是标识字段并且在生成子级时值将提供给子级）发生。  
   
  ForceTableLock  
  指定在大容量加载期间，XML 大容量加载将数据复制到的表是否应被锁定。 此属性是一个布尔属性。 在此属性设置为 TRUE 时，XML 大容量加载要求在大容量加载期间执行表锁定。 在此属性设置为 FALSE 时，XML 大容量加载在每次将记录插入到表中时要求表锁定。  
   
- 默认值为 FALSE。  
+ 默认值是 FALSE。  
   
  IgnoreDuplicateKeys  
  指定尝试在某一键列中插入重复值时应采取什么后续操作。 如果此属性设置为 TRUE 并且尝试在某一键列中插入具有重复值的记录，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将不插入该记录。 但它将插入随后的记录；这样，大容量加载操作将不会失败。 如果此属性设置为 FALSE，则尝试在某一键列中插入重复值时大容量加载将失败。  
   
  当 IgnoreDuplicateKeys 属性设置为 TRUE 时，将为表中插入的每个记录发出 COMMIT 语句。 这将降低性能。 仅当 Transaction 属性设置为 FALSE 时，才能将属性设置为 TRUE，因为事务行为是使用文件实现的。  
   
- 默认值为 FALSE。  
+ 默认值是 FALSE。  
   
  KeepIdentity  
  指定如何处理源文件中标识类型列的值。 此属性是一个布尔属性。 在此属性设置为 TRUE 时，XML 大容量加载将在源文件中指定的值分配给标识列。 在该属性设置为 FALSE 时，大容量加载操作将忽略在源文件中指定的标识列值。 在此情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将某一值分配给标识列。  
@@ -108,12 +108,12 @@ ms.locfileid: "66013285"
  此属性的值适用于在大容量加载中涉及的所有列。 默认值为 TRUE。  
   
 > [!NOTE]  
->  若要将此属性保留为 TRUE，您必须对目标表具有**ALTER TABLE**权限。 否则，它必须设置为 FALSE 的值。 有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+>  若要将此属性保留为 TRUE，您必须对目标表具有**ALTER TABLE**权限。 否则，它必须设置为 FALSE 的值。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
   
  KeepNulls  
  指定哪些值将用于在 XML 文档中缺少相应属性或子元素的列。 此属性是一个布尔属性。 当此属性设置为 TRUE 时，XML 大容量加载将 Null 值分配给该列。 它并不分配在服务器上设置的该列的默认值（如果有）。 此属性的值适用于在大容量加载中涉及的所有列。  
   
- 默认值为 FALSE。  
+ 默认值是 FALSE。  
   
  SchemaGen  
  指定是否在执行大容量加载操作前创建必需的表。 此属性是一个布尔属性。 如果该属性设置为 TRUE，则创建在映射架构中标识的表（数据库必须存在）。 如果数据库中已存在一个或多个表，则 SGDropTables 属性将确定是否删除并重新创建这些预先存在的表。  
@@ -129,12 +129,12 @@ ms.locfileid: "66013285"
  SGDropTables  
  指定是否应删除并重新创建现有表。 当 SchemaGen 属性设置为 TRUE 时，将使用此属性。 如果 SGDropTables 为 FALSE，则保留现有表。 在此属性为 TRUE 时，将删除并重新创建现有表。  
   
- 默认值为 FALSE。  
+ 默认值是 FALSE。  
   
  SGUseID  
  指定映射架构中作为 `id` 类型标识的属性是否可用于在创建表时创建 PRIMARY KEY 约束。 当 SchemaGen 属性设置为 TRUE 时，使用此属性。 如果 SGUseID 为 TRUE，则 SchemaGen 实用程序`dt:type="id"`会使用一个属性，该属性被指定为主键列并在创建表时添加适当的 primary key 约束。  
   
- 默认值为 FALSE。  
+ 默认值是 FALSE。  
   
  TempFilePath  
  指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （仅当 Transaction 属性设置为 TRUE 时，此属性才有用。）必须确保用于 XML 大[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
@@ -145,11 +145,11 @@ ms.locfileid: "66013285"
 > [!NOTE]  
 >  如果要将二进制数据（如 node.js、bin .xml XML 数据类型加载到二进制文件、图像[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型），则必须将 Transaction 属性设置为 FALSE。  
   
- 默认值为 FALSE。  
+ 默认值是 FALSE。  
   
  XMLFragment  
  指定源数据是否是 XML 片断。 XML 片段是没有单个顶级（根）元素的 XML 文档。 此属性是一个布尔属性。 如果源文件由 XML 片断构成，则此属性必须设置为 TRUE。  
   
- 默认值为 FALSE。  
+ 默认值是 FALSE。  
   
   

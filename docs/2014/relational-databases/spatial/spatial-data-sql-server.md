@@ -18,28 +18,27 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014058"
 ---
 # <a name="spatial-data-sql-server"></a>空间数据 (SQL Server)
   空间数据表示有关物理位置和几何对象形状的信息。 这些对象可能是点位置或更复杂的对象，例如国家/地区、道路或湖泊。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持两种空间数据类型： `geometry`数据类型和`geography`数据类型。  
+  支持两种空间数据类型： 数据类型和  数据类型。  
   
--   `geometry`类型表示欧氏（平面）坐标系中的数据。  
+-    类型表示欧几里得（平面）坐标系中的数据。  
   
--   
-  `geography` 类型表示圆形地球坐标系中的数据。  
+-   `geography` 类型表示圆形地球坐标系中的数据。  
   
  这两种数据类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中都是作为 .NET 公共语言运行时 (CLR) 数据类型实现的。  
   
 > [!IMPORTANT]  
 >  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例，请下载白皮书 [SQL Server 2012 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
-##  <a name="reltasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相关任务  
  [创建、构造和查询几何图形实例](create-construct-and-query-geometry-instances.md)  
  介绍可用于 geometry 数据类型实例的方法。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66014058"
  [空间数据类型概述](spatial-data-types-overview.md)  
  介绍空间数据类型。  
   
--   [Point](point.md)  
+-   [点](point.md)  
   
 -   [LineString](linestring.md)  
   

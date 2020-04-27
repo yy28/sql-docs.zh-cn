@@ -16,14 +16,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054598"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>查看和停止在 Integration Services 服务器上运行的包
-  
   `SSISDB` 数据库在对用户不可见的内部表中存储执行历史记录。 不过，它通过您可以查询的公共视图公开您所需的信息。 它还提供存储过程，您可以调用这些存储过程以执行与包相关的常见任务。  
   
  通常，您在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的服务器上管理 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对象。 不过，您还可以查询数据库视图和直接调用存储过程，或者编写调用托管 API 的自定义代码。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和托管 API 查询视图并调用存储过程以便执行其许多任务。 例如，您可以查看当前正在服务器上运行的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的列表，并且在需要时请求包停止运行。  
@@ -51,7 +50,7 @@ ms.locfileid: "66054598"
  请参阅 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间及其类。  
   
 ## <a name="viewing-the-history-of-packages-that-have-run"></a>查看已运行的包的历史记录  
- 若要查看在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中已运行的包的历史记录，请使用 **“全部执行”** 报表。 有关“全部执行”  报表和其他标准报表的详细信息，请参阅 [Integration Services 服务器的报告](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
+ 若要查看在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中已运行的包的历史记录，请使用 **“全部执行”** 报表。 有关“全部执行”**** 报表和其他标准报表的详细信息，请参阅 [Integration Services 服务器的报告](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
   
  有关可用于查看正在运行的包的历史记录的其他方法的信息，请参阅以下主题。  
   
@@ -63,6 +62,6 @@ ms.locfileid: "66054598"
   
 ## <a name="see-also"></a>另请参阅  
  [项目和包的执行](packages/run-integration-services-ssis-packages.md)   
- [包执行的疑难解答报告](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [对包执行进行故障排除的报告](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

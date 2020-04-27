@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014211"
 ---
 # <a name="multilinestring"></a>MultiLineString
@@ -62,8 +62,7 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
   
 1.  组成 `MultiLineString` 实例的所有实例必须是有效的 `LineString` 实例。  
   
-2.  组成 `LineString` 实例的任何两个 `MultiLineString` 实例在某个间隔内都不会重叠。 
-  `LineString` 实例只能与其自身或其他 `LineString` 实例在有限数量的点相交或接触。  
+2.  组成 `LineString` 实例的任何两个 `MultiLineString` 实例在某个间隔内都不会重叠。 `LineString` 实例只能与其自身或其他 `LineString` 实例在有限数量的点相交或接触。  
   
  以下示例显示三个有效的 `MultiLineString` 实例和一个无效的 `MultiLineString` 实例。  
   
@@ -75,8 +74,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- 
-  `@g4` 无效，因为第二个 `LineString` 实例与第一个 `LineString` 实例在某个间隔重叠。 它们在无限数量的点处接触。  
+ `@g4` 无效，因为第二个 `LineString` 实例与第一个 `LineString` 实例在某个间隔重叠。 它们在无限数量的点处接触。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建了一个包含两个 `geometry``MultiLineString` 元素且 SRID 为 0 的简单 `LineString` 实例。  

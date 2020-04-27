@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054299"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 源编辑器（“连接管理器”页）
@@ -30,10 +30,10 @@ ms.locfileid: "66054299"
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |XML 文件位置|从 XML 文件检索数据。|  
-|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息**：[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息：**[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |来自变量的 XML 数据|从变量检索 XML 数据。|  
   
  **使用内联架构**  
@@ -42,7 +42,7 @@ ms.locfileid: "66054299"
  **XSD 位置**  
  键入 XSD 架构文件的路径和文件名，或者可以单击“浏览”**** 定位该文件。  
   
- **“浏览”**  
+ **浏览**  
  使用“打开”**** 对话框定位到 XSD 架构文件。  
   
  **生成 XSD**  
@@ -54,7 +54,7 @@ ms.locfileid: "66054299"
  **XML 位置**  
  键入 XML 数据文件的路径和文件名，或者通过单击“浏览”**** 查找文件。  
   
- **“浏览”**  
+ **浏览**  
  使用“打开”**** 对话框定位到 XML 数据文件。  
   
 ### <a name="data-access-mode--xml-file-from-variable"></a>数据访问模式 = 来自变量的 XML 文件  

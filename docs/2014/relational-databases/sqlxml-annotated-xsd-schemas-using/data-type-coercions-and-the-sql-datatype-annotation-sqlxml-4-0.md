@@ -22,37 +22,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013946"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>数据类型强制和 sql:datatype 批注 (SQLXML 4.0)
   在 XSD 架构中，`xsd:type` 属性指定元素或属性的 XSD 数据类型。 在 XSD 架构用于从数据库中提取数据时，指定的数据类型用于将数据格式化。  
   
- 除了在架构中指定 XSD 类型之外，还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批注来指定 Microsoft `sql:datatype` 数据类型。 
-  `xsd:type` 和 `sql:datatype` 属性控制 XSD 数据类型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之间的映射。  
+ 除了在架构中指定 XSD 类型之外，还可以使用 `sql:datatype` 批注来指定 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 `xsd:type` 和 `sql:datatype` 属性控制 XSD 数据类型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之间的映射。  
   
 ## <a name="xsdtype-attribute"></a>xsd:type 属性  
- 可以使用 `xsd:type` 属性指定映射到某列的属性或元素的 XML 数据类型。 
-  `xsd:type` 影响从服务器返回的文档以及执行的 XPath 查询。 针对包含 `xsd:type` 的映射架构执行 XPath 查询时，XPath 使用在处理该查询时指定的数据类型。 有关 XPath 使用`xsd:type`方式的详细信息，请参阅[将 XSD 数据类型映射到 xpath 数据类型 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)。  
+ 可以使用 `xsd:type` 属性指定映射到某列的属性或元素的 XML 数据类型。 `xsd:type` 影响从服务器返回的文档以及执行的 XPath 查询。 针对包含 `xsd:type` 的映射架构执行 XPath 查询时，XPath 使用在处理该查询时指定的数据类型。 有关 XPath 使用`xsd:type`方式的详细信息，请参阅[将 XSD 数据类型映射到 xpath 数据类型 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)。  
   
  在返回的文档中，所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型都转换为字符串表示形式。 某些数据类型需要其他转换。 下表列出用于各种 `xsd:type` 值的转换。  
   
 |XSD 数据类型|SQL Server 转换|  
 |-------------------|---------------------------|  
-|Boolean|CONVERT(bit, COLUMN)|  
-|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|Decimal|CONVERT(money, COLUMN)|  
+|布尔|CONVERT(bit, COLUMN)|  
+|日期|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |时间|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |其他|无其他转换|  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的某些值可能与使用 `xsd:type` 指定的 XML 数据类型不兼容，这可能是由于无法转换（例如无法将 "XYZ" 转换为 `decimal` 数据类型），或是由于值超出了该数据类型的范围（例如，将 -100000 转换为 `UnsignedShort` XSD 类型）。 不兼容的类型转换可能导致无效的 XML 文档或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的某些值可能与使用 `xsd:type` 指定的 XML 数据类型不兼容，这可能是由于无法转换（例如无法将 "XYZ" 转换为 `decimal` 数据类型），或是由于值超出了该数据类型的范围（例如，将 -100000 转换为 `UnsignedShort` XSD 类型）。 不兼容的类型转换可能导致无效的 XML 文档或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误。  
   
 ## <a name="mapping-from-sql-server-data-types-to-xsd-data-types"></a>从 SQL Server 数据类型映射到 XSD 数据类型  
  下表显示从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型到 XSD 数据类型的显式映射。 如果您知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型，此表将提供可以在 XSD 架构中指定的相应 XSD 类型。  
@@ -87,10 +84,9 @@ ms.locfileid: "66013946"
 |`uniqueidentifier`|`string`|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 批注  
- 
-  `sql:datatype` 批注用于指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型；在以下情况下必须指定此批注：  
+ `sql:datatype` 批注用于指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型；在以下情况下必须指定此批注：  
   
--   从`dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD `dateTime`、 `date`或`time`类型大容量加载到列中。 在这种情况下，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识 `sql:datatype="dateTime"` 列数据类型。 此规则也适用于 updategram。  
+-   从`dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD `dateTime`、 `date`或`time`类型大容量加载到列中。 在这种情况下，必须使用 `sql:datatype="dateTime"` 标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列数据类型。 此规则也适用于 updategram。  
   
 -   你要大容量地加载到类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier`的列中，并且 XSD 值是包含大括号（{和}）的 GUID。 指定 `sql:datatype="uniqueidentifier"` 时，在将值插入列之前从值中删除大括号。 如果未指定 `sql:datatype`，将发送包含大括号的值并且插入或更新失败。  
   

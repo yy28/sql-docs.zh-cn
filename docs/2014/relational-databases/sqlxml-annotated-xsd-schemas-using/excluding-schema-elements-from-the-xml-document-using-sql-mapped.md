@@ -23,20 +23,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013863"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>使用 sql:mapped 从生成的 XML 文档中排除架构元素 (SQLXML 4.0)
   由于是默认映射，XSD 架构中的每个元素和属性都映射到数据库表/视图和列。 如果要在 XSD 架构中创建不映射到任何数据库表（视图）或列并且不在 XML 中显示的元素，可以指定 `sql:mapped` 批注。  
   
- 如果架构不能修改或者架构用于验证来自其他源的 XML，并且架构还包含尚未存储在数据库中的数据，则 `sql:mapped` 批注尤为有用。 
-  `sql:mapped` 批注不同于 `sql:is-constant`，因为未映射的元素和属性不出现在 XML 文档中。  
+ 如果架构不能修改或者架构用于验证来自其他源的 XML，并且架构还包含尚未存储在数据库中的数据，则 `sql:mapped` 批注尤为有用。 `sql:mapped` 批注不同于 `sql:is-constant`，因为未映射的元素和属性不出现在 XML 文档中。  
   
- 
-  `sql:mapped` 批注接受布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
+ `sql:mapped` 批注接受布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  

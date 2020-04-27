@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054470"
 ---
 # <a name="web-service-task-editor-output-page"></a>Web 服务任务编辑器（“输出”页）
@@ -30,7 +30,7 @@ ms.locfileid: "66054470"
  **OutputType**  
  选择存储结果时所使用的存储类型。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**文件连接**|将结果存储在文件中。 选择此值将显示动态选项 **File**。|  
 |**变量**|将结果存储在变量中。 选择此值将显示动态选项 **Variable**。|  
@@ -38,10 +38,10 @@ ms.locfileid: "66054470"
 ## <a name="outputtype-dynamic-options"></a>OutputType 动态选项  
   
 ### <a name="outputtype--file-connection"></a>OutputType = 文件连接  
- **文件**  
+ **File**  
  在列表中选择一个文件连接管理器， \<或单击 "**新建连接 ...** "> 创建新的连接管理器。  
   
- **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = 变量  
  **变量**  

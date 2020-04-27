@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014010"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 创建 CDATA 节 (SQLXML 4.0)
@@ -31,11 +31,9 @@ ms.locfileid: "66014010"
   
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的数据库有时可能包含由 XML 分析器视为标记字符的字符;例如，尖括号（\<和 >）、小于或等于符号（<=）以及与号（&）都被视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
   
- 
-  `sql:use-cdata` 批注用于指定应当将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的数据包含在 CDATA 节中，就是说，它指示是否应当将由 `sql:field` 指定的列中的值包含在 CDATA 节中。 可以仅对映射到数据库列的元素指定 `sql:use-cdata` 批注。  
+ `sql:use-cdata` 批注用于指定应当将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的数据包含在 CDATA 节中，就是说，它指示是否应当将由 `sql:field` 指定的列中的值包含在 CDATA 节中。 可以仅对映射到数据库列的元素指定 `sql:use-cdata` 批注。  
   
- 
-  `sql:use-cdata` 批注接受布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
+ `sql:use-cdata` 批注接受布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
   
  该批注不能与 `sql:url-encode` 一起使用，也不能对 ID、IDREF、IDREFS、NMTOKEN 和 NMTOKENS 属性类型使用。  
   

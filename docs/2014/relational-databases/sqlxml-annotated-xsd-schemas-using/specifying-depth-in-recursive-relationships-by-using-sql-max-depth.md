@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013660"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 指定递归关系中的深度
@@ -229,8 +229,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>sql:max-depth 批注  
  在由递归关系组成的架构中，必须在架构中显式指定递归的深度。 若要成功生成可返回所请求的结果的相应 FOR XML EXPLICIT 查询，则必须这样做。  
   
- 使用该架构中的 `sql:max-depth` 批注可以指定此架构中所描述的递归关系中的递归深度。 
-  `sql:max-depth` 批注的值是指示递归数的正整数（1 到 50）：值为 1 将使递归停止于指定了 `sql:max-depth` 批注的元素；值为 2 则使递归停止于指定了 `sql:max-depth` 的元素的下一级；以此类推。  
+ 使用该架构中的 `sql:max-depth` 批注可以指定此架构中所描述的递归关系中的递归深度。 `sql:max-depth` 批注的值是指示递归数的正整数（1 到 50）：值为 1 将使递归停止于指定了 `sql:max-depth` 批注的元素；值为 2 则使递归停止于指定了 `sql:max-depth` 的元素的下一级；以此类推。  
   
 > [!NOTE]  
 >  在基础实现中，针对映射架构指定的 XPath 查询将转换为 SELECT .。。FOR XML EXPLICIT 查询。 该查询需要您指定一个有限的递归深度。 为 `sql:max-depth` 指定的值越高，所生成的 FOR XML EXPLICIT 查询越大。 这可能会使检索时间变长。  
