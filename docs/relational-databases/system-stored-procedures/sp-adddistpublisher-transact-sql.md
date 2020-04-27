@@ -16,10 +16,10 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771390"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
@@ -53,12 +53,12 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @security_mode = ] security_mode`实现的安全模式。 此参数仅供复制代理用于连接到排队更新订阅的发布服务器或非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *security_mode*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**0**|分发服务器中的复制代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器。|  
 |**1** （默认值）|分发服务器中的复制代理使用 Windows 身份验证连接到发布服务器。|  
   
-`[ @login = ] 'login'`登录名。 如果*security_mode*为**0**，则此参数是必需的。 *login*的值为**sysname**，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
+`[ @login = ] 'login'`登录名。 如果*security_mode*为**0**，则此参数是必需的。 login 的数据类型为 sysname，默认值为 NULL******。 复制代理使用该参数连接到发布服务器。  
   
 `[ @password = ] 'password']`密码。 *password*的值为**sysname**，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
@@ -79,14 +79,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @thirdparty_flag = ] thirdparty_flag`发布服务器是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时为。 *thirdparty_flag*是**bit**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据.|  
 |**1**|非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
   
 `[ @publisher_type = ] 'publisher_type'`当发布服务器不[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是时指定发布服务器类型。 *publisher_type* sysname，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> （默认值）|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。|  
 |**联手**|指定标准的 Oracle 发布服务器。|  
@@ -111,7 +111,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [配置分发](../../relational-databases/replication/configure-distribution.md)  
   
   

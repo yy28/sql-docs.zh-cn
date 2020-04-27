@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247115"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>数据库实验助手概述
@@ -113,6 +113,6 @@ DEA 具有支持 internet 的功能，该功能可将遥测信息发送给 Micro
 
 DEA 由[Microsoft 隐私声明](https://aka.ms/dea-privacy)控制。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [工作负载比较过程的概述](database-experimentation-assistant-get-started.md)，其中介绍了在两个环境中比较工作负荷时所涉及的过程。

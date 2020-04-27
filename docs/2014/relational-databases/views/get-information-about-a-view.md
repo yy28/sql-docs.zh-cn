@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211641"
 ---
 # <a name="get-information-about-a-view"></a>获取有关视图的信息
@@ -46,14 +46,14 @@ ms.locfileid: "68211641"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  使用 `sp_helptext` 返回视图的定义需要 **public** 角色的成员身份。 使用 `sys.sql_expression_dependencies` 查找视图的所有依赖关系需要对该数据库的 VIEW DEFINITION 权限以及对数据库的 `sys.sql_expression_dependencies` 的 SELECT 权限。 系统对象定义（如 SELECT OBJECT_DEFINITION 中返回的对象定义）是公开可见的。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>使用对象资源管理器获取视图属性  
   
@@ -175,7 +175,7 @@ ms.locfileid: "68211641"
   
 4.  选择“[视图名称] 依赖的对象”  可以显示由该视图引用的对象。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>获取视图的定义和属性  
   

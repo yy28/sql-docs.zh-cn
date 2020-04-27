@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 报表服务器（本机模式）| Microsoft Docs
-ms.date: 06/06/2019
+ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826901"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086836"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
   配置为本机模式的报表服务器将作为应用程序服务器运行，并专门通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件提供所有处理和管理功能。  
@@ -50,9 +50,13 @@ ms.locfileid: "66826901"
 -   报表服务器计算机上的本地 Administrator 组中的成员身份。 如果安装包括在远程计算机上运行的服务器功能，则在要通过远程连接来管理这些服务器时，必须对这些计算机具有管理员权限。  
   
 -   对承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库管理员权限。  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 -   如果要在域控制器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则您必须是域管理员。  
-  
+
+::: moniker-end
+
 ##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> 管理内容  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表、模型、文件夹、资源和共享数据源的管理。 通过属性和安全设置，所有这些项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。  
   

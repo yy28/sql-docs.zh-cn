@@ -15,10 +15,10 @@ ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 966112716bfb484a9615c973ee397de04787862c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728267"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>基于域的属性 (Master Data Services)
@@ -38,21 +38,21 @@ ms.locfileid: "73728267"
  您可以将同一实体用作多个实体的基于域的属性。 例如，您可以创建名为 YesNoIndicator 的一个实体，该实体具有成员 Yes、No 和 Maybe。 您可以创建名为 InStock 的基于域的属性并且使用 YesNoIndicator 实体作为源。 还可以创建名为 Approved 的另一个基于域的属性并且使用 YesNoIndicator 实体作为源。 只要您希望用户从 YesNoIndicator 实体的成员列表中进行选择，就可以将该实体用作基于域的属性。  
   
 ## <a name="domain-based-attributes-form-derived-hierarchies"></a>基于域的属性构成派生层次结构  
- 基于域的属性关系是用于派生层次结构的基础。 有关详细信息，请参阅[派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)。  
+ 基于域的属性关系是用于派生层次结构的基础。 有关详细信息，请参阅 [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建来自现有实体的基于域的新属性。|[创建基于域的属性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|创建新实体。|[创建实体 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
+|创建来自现有实体的基于域的新属性。|[创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|创建新实体。|[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [派生层次结构 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
--   [实体 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
+-   [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
   

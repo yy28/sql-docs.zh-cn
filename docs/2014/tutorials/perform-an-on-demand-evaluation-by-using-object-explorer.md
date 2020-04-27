@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210947"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>通过使用对象资源管理器执行按需评估
@@ -23,7 +23,7 @@ ms.locfileid: "68210947"
 > [!NOTE]  
 >  您还可以通过已注册的服务器评估单个实例上的策略。 有关详细信息，请参阅[使用已注册的服务器执行按需评估](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  本课基于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本。  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "68210947"
   
 3.  在 "**评估策略**" 对话框中的 "**源**" 框旁，单击省略号（**...**）按钮。  
   
-4.  在 "**选择源**" 对话框中，可以选择 "**文件**" 或 "**服务器**" 作为要评估的策略文件的源。 如果单击 "**服务器**"，则可以对以前导入到本地或远程服务器上基于策略的管理的任何最佳实践策略执行按需评估。 在本教程中，您将单击 "**文件**"，然后选择您要评估的各个策略文件。 为此，请按照下列步骤进行操作：  
+4.  在 "**选择源**" 对话框中，可以选择 "**文件**" 或 "**服务器**" 作为要评估的策略文件的源。 如果单击 "**服务器**"，则可以对以前导入到本地或远程服务器上基于策略的管理的任何最佳实践策略执行按需评估。 在本教程中，您将单击 "**文件**"，然后选择您要评估的各个策略文件。 要实现这一点，请执行下列操作：  
   
     1.  单击 "**文件**"。  
   

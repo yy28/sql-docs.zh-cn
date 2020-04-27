@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207051"
 ---
 # <a name="prepared-execution"></a>准备好的执行
@@ -31,8 +31,7 @@ ms.locfileid: "68207051"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过改进的算法来检测和重复使用**SQLExecDirect**的执行计划，从而减少了直接执行和准备好的执行之间的性能差异。 这使直接执行的语句也具备了准备好的执行的某些性能优势。 有关详细信息，请参阅[直接执行](direct-execution.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 还提供针对准备好的执行的本机支持。 执行计划建立在**SQLPrepare**上，并在调用**SQLExecute**时执行。 由于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在**SQLPrepare**上生成临时存储过程不是必需的，因此**tempdb**中的系统表不会产生额外的开销。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 还提供针对准备好的执行的本机支持。 执行计划建立在**SQLPrepare**上，并在调用**SQLExecute**时执行。 由于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在**SQLPrepare**上生成临时存储过程不是必需的，因此**tempdb**中的系统表不会产生额外的开销。  
   
  出于性能方面的原因，语句准备将延迟，直到调用**SQLExecute**或执行元属性操作（如 ODBC 中的[SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md)或[SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) ）。 此选项为默认行为。 正在准备的语句如有任何错误，需等到执行该语句或执行元属性操作后才会发现。 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的语句属性 SQL_SOPT_SS_DEFER_PREPARE 设置为 SQL_DP_OFF 可以关闭此默认行为。  
   

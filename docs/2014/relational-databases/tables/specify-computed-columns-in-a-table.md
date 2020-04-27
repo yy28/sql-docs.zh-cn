@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211807"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
@@ -36,22 +36,22 @@ ms.locfileid: "68211807"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Limitations"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 限制和局限  
   
 -   计算列不能用作 DEFAULT 或 FOREIGN KEY 约束定义，也不能与 NOT NULL 约束定义一起使用。 但是，如果计算列值由具有确定性的表达式定义，并且索引列中允许使用计算结果的数据类型，则可将该列用作索引中的键列，或用作 PRIMARY KEY 或 UNIQUE 约束的一部分。 例如，如果表中包含整数列 a 和 b，则可以对计算列 a + b 创建索引。但不能对计算列 a+DATEPART(dd, GETDATE()) 创建索引，因为在以后的调用中，其值可能发生更改。  
   
 -   计算列不能作为 INSERT 或 UPDATE 语句的目标。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-###  <a name="NewColumn"></a> 添加新的计算列  
+###  <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> 添加新的计算列  
   
 1.  在 **“对象资源管理器”** 中，展开要添加新计算列的表。 右键单击“列”  ，再选择“新建列”  。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68211807"
   
 5.  从“持久化”  子属性的下拉菜单上选择“是”  或“否”  ，以指示该数据是否持久。  
   
-6.  在“文件”  菜单上，单击“保存”  以保存表名  。  
+6.  在“文件”菜单上，单击“保存表名称”********__。  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>将计算列定义添加到现有列中  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211807"
   
 3.  添加一个新列，然后按照前面的步骤添加新计算列以指定新计算列公式。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-add-a-computed-column-when-creating-a-table"></a>创建表时添加计算列  
   
@@ -133,6 +133,6 @@ ms.locfileid: "68211807"
   
     ```  
   
-     有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+     有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
   
 ###  <a name="TsqlExample"></a>  

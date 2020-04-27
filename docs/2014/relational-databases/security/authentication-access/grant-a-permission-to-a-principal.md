@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011956"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>向主体授予权限
@@ -36,21 +36,21 @@ ms.locfileid: "63011956"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  请考虑以下可以使管理权限更简单的最佳做法。  
   
 -   将权限授予角色，而不是单独的登录名或用户。 当某个用户由其他人取代时，可从角色中删除离开的用户，并向角色中添加新用户。 与该角色关联的许多权限都将自动应用于新用户。 如果组织中的多个用户需要相同的权限，将他们都添加到角色即可为他们授予相同的权限。  
   
 -   对类似的安全对象（表、视图和过程）进行配置，使它们属于同一个架构，然后向架构授予权限。 例如，工资架构可能拥有多个表、视图和存储过程。 通过授予针对该架构的访问权限，可以同时授予执行工资功能所需的所有权限。 有关可向哪些安全对象授予权限的详细信息，请参阅 [Securables](../securables.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  授权者（或使用 AS 选项指定的主体）必须具有使用 GRANT OPTION 授予的权限本身，或具有隐含授予该权限的更高权限。 **sysadmin** 固定服务器角色成员可以授予任何权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>向主体授予权限  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63011956"
   
 6.  完成后，单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-grant-permission-to-a-principal"></a>向主体授予权限  
   

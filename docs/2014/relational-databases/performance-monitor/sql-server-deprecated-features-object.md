@@ -16,14 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206964"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 对象提供一个计数器来监视指定为不推荐使用的功能。 在每个事例中计数器都提供一个使用计数，列出自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次启动以来遇到不推荐使用的功能的次数。  
   
  下表描述了 SQL Server Deprecated Features 计数器实例。  
@@ -98,8 +97,7 @@ ms.locfileid: "68206964"
 |不包含 COUNT_BIG(*) 的索引视图选择列表|聚集索引视图的选择列表必须包含 COUNT_BIG (\*)。|  
 |INDEX_OPTION|遇到选项两侧没有括号的 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 语法。 请重写语句以使用当前语法。 每次查询时发生。|  
 |INDEXKEY_PROPERTY|遇到 INDEXKEY_PROPERTY 语法。 请重写语句以查询 sys.index_columns。 每次编译时发生。|  
-|间接 TVF 提示|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除对通过视图执行的多语句表值函数 (TVF) 调用的间接应用表提示。|  
+|间接 TVF 提示|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除对通过视图执行的多语句表值函数 (TVF) 调用的间接应用表提示。|  
 |将 NULL 插入 TIMESTAMP 列|NULL 值已插入到 TIMESTAMP 列。 请改用默认值。 每次编译时发生。|  
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。|  

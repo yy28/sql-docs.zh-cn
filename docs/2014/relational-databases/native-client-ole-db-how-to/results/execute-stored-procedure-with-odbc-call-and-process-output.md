@@ -14,14 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206695"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>执行存储过程（使用 ODBC CALL 语法）以及处理返回代码和输出参数 (OLE DB)
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 `IMultipleResults::GetResult` 返回 DB_S_NORESULT 时或 `IMultipleResults` 接口完全释放时（以二者中最先发生的为准）可用。  
   
 > [!IMPORTANT]  
@@ -33,8 +32,7 @@ ms.locfileid: "68206695"
   
 2.  通过使用 DBBINDING 结构数组创建一组绑定（每个参数标记一个）。  
   
-3.  通过使用 `IAccessor::CreateAccessor` 方法为定义的参数创建取值函数。 
-  `CreateAccessor` 将从一组绑定创建取值函数。  
+3.  通过使用 `IAccessor::CreateAccessor` 方法为定义的参数创建取值函数。 `CreateAccessor` 将从一组绑定创建取值函数。  
   
 4.  填写 DBPARAMS 结构。  
   
@@ -356,6 +354,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [处理结果操作指南主题 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [处理结果操作指南主题 (OLE DB)](processing-results-how-to-topics-ole-db.md)  
   
   

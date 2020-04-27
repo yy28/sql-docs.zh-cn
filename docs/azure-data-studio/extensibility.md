@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ca24836766307584c43e1636bb33f5bd198f585
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76928008"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107888"
 ---
 # <a name="getting-started-with-name-sos-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 扩展性入门
 
@@ -239,7 +239,7 @@ Dashboard.tabs 用于在仪表板页面内创建选项卡部分。 它需要对�
                 "icon": {
                     "light": "./icons/tab1Icon.svg",
                     "dark": "./icons/tab1Icon_dark.svg"
-                }
+                },
                 "container": {
                     ...
                 }
@@ -250,7 +250,7 @@ Dashboard.tabs 用于在仪表板页面内创建选项卡部分。 它需要对�
                 "icon": {
                     "light": "./icons/tab2Icon.svg",
                     "dark": "./icons/tab2Icon_dark.svg"
-                }
+                },
                 "container": {
                     ...
                 }

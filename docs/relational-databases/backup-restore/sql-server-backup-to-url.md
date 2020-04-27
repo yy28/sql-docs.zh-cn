@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8679d1e430ff2755aac32721ff40184cbe0a3c6a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 8263000b7a6fb166657e48777cc0d8c4c007ddd2
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529051"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087367"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "81529051"
 
 - 如果服务器通过代理服务器访问 Azure，你必须使用跟踪标志 1819，然后通过以下方法之一设置 WinHTTP 代理配置：
    - Windows XP 或 Windows Server 2003 及更低版本上的 [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) 实用工具。 
-   - Windows Vista 和 Windows Server 2008 或更高版本上的 [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) 实用工具。 
+   - Windows Vista 和 Windows Server 2008 或更高版本上的 [netsh.exe](/windows/win32/winsock/netsh-exe) 实用工具。 
   
 ## <a name="supported-arguments--statements"></a>支持的参数和语句
 

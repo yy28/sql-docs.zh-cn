@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51e5ec3832d497f342c4fc3132a75261f6c3c154
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022690"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>新对等方的初始化（对等复制）
-  使用 "**新建对等方初始化**" 页可以指定如何初始化对等数据库。 （在完成此向导之前，必须初始化对等方。）对等端手动初始化，或使用事务复制提供的**initialize with backup**功能初始化。 （对等事务复制不支持使用快照初始化对等方。）如果必须使用不同的方法初始化不同的对等方，则必须通过多次运行向导来单独添加对等方。  
+  可以使用 **“新对等方初始化”** 页指定如何初始化对等数据库。 （在完成此向导之前，必须初始化对等方。）对等端手动初始化，或使用事务复制提供的**initialize with backup**功能初始化。 （对等事务复制不支持使用快照初始化对等方。）如果必须使用不同的方法初始化不同的对等方，则必须通过多次运行向导来单独添加对等方。  
   
 ## <a name="options"></a>选项  
  **指定如何初始化新的对等数据库**  
- 所有已发布对象的架构和数据必须存在于每个对等方。 选择以下选项之一：  
+ 所有已发布对象的架构和数据必须存在于每个对等方。 选择下列选项之一：  
   
 -   如果已经手动为已发布的对象创建了架构，或者已经还原了备份，并且在此备份后第一个发布数据库的数据未更改，则可以选择第一个选项。 如果手动创建了架构，则必须确保每个对等方存在所有所需的数据。 此选项对应于订阅属性 **sync_type** 的 **replication support only**值。  
   
@@ -36,16 +36,16 @@ ms.locfileid: "63022690"
   
     |新建节点|第一个节点|其他节点|选项|  
     |--------------|----------------|----------------------|------------|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|已禁用|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|禁用|  
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|无|已禁用|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|已禁用|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|无|已启用|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|无|启用|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|无|已启用|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|已启用|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|无|已启用|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|无|启用|  
   
 ## <a name="see-also"></a>另请参阅  
- [管理对等拓扑（复制 Transact-SQL 编程）](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [@loopback_detection](transactional/peer-to-peer-transactional-replication.md)  
+ [&#40;复制 Transact-sql 编程来管理对等拓扑&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [对等事务复制](transactional/peer-to-peer-transactional-replication.md)  
   
   

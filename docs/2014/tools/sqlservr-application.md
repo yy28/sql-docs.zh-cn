@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211014"
 ---
 # <a name="sqlservr-application"></a>sqlservr 应用程序
-  **Sqlservr.exe**应用程序在命令提示符下启动、停止、暂停和继续[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例。  
+  sqlservr  应用程序可以在命令提示符下启动、停止、暂停和继续 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,31 +55,28 @@ ms.locfileid: "68211014"
 >  使用此选项时，将无法通过使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务管理器或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net stop **命令停止** 。如果注销计算机，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将停止。）  
   
  **-d** _master_path_  
- 指出 **master** 数据库文件的完全限定路径。 
-  **-d** 与 *master_path*之间没有空格。 如果没有提供此选项，则使用现有的注册表参数。  
+ 指出 **master** 数据库文件的完全限定路径。 **-d** 与 *master_path*之间没有空格。 如果没有提供此选项，则使用现有的注册表参数。  
   
  **-f**  
  以最小配置启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 在配置值的设置（例如，过度分配内存）妨碍服务器启动时，这非常有用。  
   
  **-e** _error_log_path_  
- 指示错误日志文件的完全限定路径。 如果未指定，则默认位置为默认实例的* \<驱动器>*： \Program Files\Microsoft sql Server\MSSQL\Log\Errorlog; 对于命名实例，默认位置为* \<驱动器>*： \Program Files\Microsoft sql Server\MSSQL $*instance_name*\Log\Errorlog。 在 **-e** 和 *error_log_path* 之间没有空格。  
+ 指示错误日志文件的完全限定路径。 如果未指定，则默认位置为默认实例的* \<驱动器>*： \Program Files\Microsoft sql Server\MSSQL\Log\Errorlog; 对于命名实例，默认位置为* \<驱动器>*： \Program Files\Microsoft sql Server\MSSQL $*instance_name*\Log\Errorlog。 在 **-e** 和 *error_log_path*之间没有空格。  
   
  **-l** _master_log_path_  
- 指示 **master** 数据库事务日志文件的完全限定路径。 
-  **-l** 与 *master_log_path*之间没有空格。  
+ 指示 **master** 数据库事务日志文件的完全限定路径。 **-l** 与 *master_log_path*之间没有空格。  
   
  **-m**  
- 指示以单用户模式启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果以单用户模式启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，则只有一个用户可以连接。 确保将已完成事务定期从磁盘缓存写入数据库设备的 CHECKPOINT 机制将不启动。 通常情况下，在遇到需要修复系统数据库这样的问题时才使用该选项。启用 **sp_configure allow updates** 选项。 默认情况下，"**允许更新**" 处于禁用状态。  
+ 指示以单用户模式启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果以单用户模式启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，则只有一个用户可以连接。 确保将已完成事务定期从磁盘缓存写入数据库设备的 CHECKPOINT 机制将不启动。 通常情况下，在遇到需要修复系统数据库这样的问题时才使用该选项。启用 **sp_configure allow updates** 选项。 默认情况下， **allow updates** 被禁用。  
   
  **-n**  
  用于启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例。 如果不设置 **-s** 参数，则尝试启动默认实例。 必须先在命令提示符处切换到实例的相应 BINN 目录，然后才能启动 **sqlservr.exe**。 例如，如果 Instance1 为其二进制文件使用了 \mssql$Instance1，则用户必须位于 \mssql$Instance1\binn 目录中才能启动 **sqlservr.exe -s instance1**。 如果用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **选项启动** 实例，则最好也使用 **-e** 选项，否者将不会记录 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。  
   
  **-T** _trace #_  
- 指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动时，指定的跟踪标志 (*trace#* ) 应同时生效。 跟踪标记用于以非标准行为启动服务器。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
+ 指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动时，指定的跟踪标志 (*trace#*) 应同时生效。 跟踪标记用于以非标准行为启动服务器。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
 > [!IMPORTANT]  
->  指定跟踪标志时，请使用 **-T** 来传递跟踪标志号。 
-  **接受小写的 t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 通常用于设置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持工程师所需的其他内部跟踪标志。  
+>  指定跟踪标志时，请使用 **-T** 来传递跟踪标志号。 **接受小写的 t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 通常用于设置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持工程师所需的其他内部跟踪标志。  
   
  **-v**  
  显示服务器的版本号。  
@@ -103,11 +100,10 @@ ms.locfileid: "68211014"
  使用低于默认值的值可以增加缓冲池和线程堆栈可用的内存量；在不使用很多扩展存储过程、分布式查询或自动化对象的系统中，这种方法可提高需要大量内存的工作负荷的性能。  
   
 ## <a name="remarks"></a>备注  
- 多数情况下，sqlservr.exe 程序只用于故障排除或主要维护。 在命令提示符下使用 sqlservr.exe 启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不作为服务启动，因此无法使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **命令停止** 。 用户可以连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具将显示服务的状态，以便 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器正确指示服务已停止。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]可以连接到服务器，但它还表明服务已停止。  
+ 多数情况下，sqlservr.exe 程序只用于故障排除或主要维护。 在命令提示符下使用 sqlservr.exe 启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不作为服务启动，因此无法使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **命令停止** 。 用户可以连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具将显示服务的状态，以便 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器正确指示服务已停止。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以与服务器连接，但它也可以指示服务已停止。  
   
 ## <a name="compatibility-support"></a>兼容性支持  
- 
-  **不支持**  -h [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]参数。 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本的 32 位实例使用此参数以便为热添加内存元数据保留虚拟内存地址空间。 有关详细信息，请参阅 [SQL Server 2014 中不再使用的 SQL Server 功能](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)。  
+ **不支持**  -h [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]参数。 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本的 32 位实例使用此参数以便为热添加内存元数据保留虚拟内存地址空间。 有关详细信息，请参阅 [SQL Server 2014 中不再使用的 SQL Server 功能](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎服务启动选项](../database-engine/configure-windows/database-engine-service-startup-options.md)  

@@ -14,10 +14,10 @@ ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728181"
 ---
 # <a name="entity-permissions-master-data-services"></a>实体权限 (Master Data Services)
@@ -35,21 +35,21 @@ ms.locfileid: "73728181"
  具有对实体的权限时，您可以添加和删除实体的成员、其显式层次结构和集合。  
   
 > [!NOTE]  
->  这些权限仅应用到用户界面的“资源管理器”**** 功能区域。  
+>   这些权限仅应用到用户界面的 **“资源管理器”** 功能区域。  
   
 |权限|说明|  
 |----------------|-----------------|  
 |**读取**|用户可以读取成员、属性、层次结构成员身份或集合成员身份。|  
 |**创建**|用户可以创建成员，并在创建过程中指定属性值。|  
-|**时更新**|用户可以更新成员、属性、层次结构成员身份或集合成员身份。|  
+|**Update**|用户可以更新成员、属性、层次结构成员身份或集合成员身份。|  
 |**删除**|用户可以删除成员。|  
-|**拒绝**|拒绝对实体的所有访问。|  
+|**注销**|拒绝对实体的所有访问。|  
   
  读取、创建、更新和删除权限可以彼此合并。 当分配创建、更新和删除权限时，将自动分配读取权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Master Data Services 分配模型对象权限&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [&#40;Master Data Services 的模型对象权限&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [实体 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
+ [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
   

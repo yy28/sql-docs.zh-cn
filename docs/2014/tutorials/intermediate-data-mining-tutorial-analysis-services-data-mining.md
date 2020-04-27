@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017180"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>数据挖掘中级教程（Analysis Services - 数据挖掘）
@@ -52,13 +52,13 @@ ms.locfileid: "63017180"
   
  您将为每个地区生成单独的模型，而且还生成一个可用于进行交叉预测的通用模型。  
   
- [第3课：生成市场篮方案 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 课：生成市场篮方案（数据挖掘中级教程）](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  在本课中，您将添加一个新的数据源视图，并学习如何处理嵌套表及其键。 您将基于此数据创建一个可用作市场篮方案一部分的挖掘模型。 您还将浏览用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法生成的挖掘模型。  
   
  [第4课：生成顺序分析和聚类分析方案 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  在本课中，您将创建一个可用作顺序分析和聚类分析方案一部分的挖掘模型， 还将学习如何利用通过 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的挖掘模型。  
   
- [第5课：生成神经网络和逻辑回归模型 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  在本课中，您将使用 Microsoft 神经网络和 Microsoft 逻辑回归算法创建若干相关的挖掘模型。 您还将学习如何使用数据源视图来基于模型浏览数据。  
   
 ## <a name="requirements"></a>要求  
@@ -68,7 +68,7 @@ ms.locfileid: "63017180"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]带有[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]数据库的。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 。  
   
  为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的正式数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请访问[Microsoft SQL 示例数据库](https://go.microsoft.com/fwlink/?LinkId=88417)页，并选择相应的示例数据库版本。  
   

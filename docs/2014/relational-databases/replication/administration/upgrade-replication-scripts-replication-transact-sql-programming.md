@@ -20,14 +20,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd3f6498cbfb4ef8cf38e27879d619472a6693ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210769"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升级复制脚本（复制 Transact-SQL 编程）
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)]脚本文件可用于以编程方式配置复制拓扑。 有关详细信息，请参阅[复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)。  
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件可用于以编程方式配置复制拓扑。 有关详细信息，请参阅[复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)。  
   
 > [!IMPORTANT]  
 >  虽然不需要升级由 `sysadmin` 角色的成员执行的脚本，我们仍建议您按照本主题中的说明修改现有脚本。 按照 [Replication Agent Security Model](../security/replication-agent-security-model.md)主题的“代理所需权限”部分的说明为每个复制代理指定一个具有最低权限的帐户。  
@@ -40,11 +40,11 @@ ms.locfileid: "68210769"
   
 -   **sp_addpushsubscription_agent**：  
   
-     现在应执行[sp_addpushsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) ，以显式添加作业，并提供在分发服务器上运行分发代理**@job_login**作业**@job_password**所使用的 Windows 凭据（和）。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，当创建推送订阅时会自动执行此操作。  
+     现在应执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) 来显式添加作业，并提供用于在分发服务器上运行分发代理作业的 Windows 凭据（**@job_login** 和 **@job_password**）。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，当创建推送订阅时会自动执行此操作。  
   
 -   **sp_addmergepushsubscription_agent**：  
   
-     现在应执行[sp_addmergepushsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) ，以显式添加作业，并提供在分发服务器上运行合并代理**@job_login**作业**@job_password**所使用的 Windows 凭据（和）。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，当创建推送订阅时会自动执行此操作。  
+     现在应执行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) 来显式添加作业，并提供用于在分发服务器上运行合并代理作业的 Windows 凭据（**@job_login** 和 **@job_password**）。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，当创建推送订阅时会自动执行此操作。  
   
 -   **sp_addpullsubscription_agent**：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68210769"
   
 ### <a name="to-upgrade-scripts-that-configure-a-snapshot-or-transactional-publication"></a>升级用于配置快照发布或事务发布的脚本  
   
-1.  在现有脚本中的 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 前面，针对发布服务器上的发布数据库执行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 指定日志读取器代理为**@job_name**和**@job_password**运行的 Windows 凭据。 如果代理在连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]发布服务器时将使用身份验证，则还必须将的值指定为**@publisher_security_mode** **0** ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并将登录**@publisher_login**信息**@publisher_password**指定给和。 这样，便为发布数据库创建了一个日志读取器代理作业。  
+1.  在现有脚本中的 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 前面，针对发布服务器上的发布数据库执行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 指定日志读取器代理为**@job_name**和**@job_password**运行的 Windows 凭据。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password**。 这样，便为发布数据库创建了一个日志读取器代理作业。  
   
     > [!NOTE]  
     >  此步骤仅针对事务发布，无需对快照发布执行该步骤。  
@@ -81,7 +81,7 @@ ms.locfileid: "68210769"
   
 3.  （可选）更新 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 的执行，以便对用于实现新复制功能的参数设置任何非默认的值。  
   
-4.  在 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 后面，针对发布服务器上的发布数据库执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定**@publication**和用于为**@job_name**和**@job_password**运行快照代理的 Windows 凭据。 如果代理在连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]发布服务器时将使用身份验证，则还必须将的值指定为**@publisher_security_mode** **0** ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并将登录**@publisher_login**信息**@publisher_password**指定给和。 此操作将为发布创建一个快照代理作业。  
+4.  在 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 后面，针对发布服务器上的发布数据库执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定**@publication**和用于为**@job_name**和**@job_password**运行快照代理的 Windows 凭据。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password**。 此操作将为发布创建一个快照代理作业。  
   
 5.  （可选）更新 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 的执行，以便对用于实现新复制功能的参数设置任何非默认的值。  
   
@@ -89,15 +89,15 @@ ms.locfileid: "68210769"
   
 1.  在执行用于创建订阅的存储过程之后，请确保执行用于创建分发代理作业的存储过程以同步订阅。 所用的存储过程将取决于订阅类型。  
   
-    -   对于请求订阅，请将 sp_addpullsubscription_agent 的执行更新[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) ，以便为**@job_name**和**@job_password**在订阅服务器上提供分发代理运行时所使用的 Windows 凭据。 此操作将在执行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建请求订阅](../create-a-pull-subscription.md)。  
+    -   对于请求订阅，请更新 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) 的执行，为 **@job_name** 和 **@job_password** 提供用于在订阅服务器上运行分发代理的 Windows 凭据。 此操作将在执行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建请求订阅](../create-a-pull-subscription.md)。  
   
-    -   对于推送订阅，请在发布服务器上执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定**@subscriber**、 **@subscriber_db**、 **@publication**、用于**@job_name**在分发服务器上运行分发代理的 Windows 凭据**@job_password**，并指定此代理作业的计划。 有关详细信息，请参阅[指定同步计划](../specify-synchronization-schedules.md)。 此操作将在执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建推送订阅](../create-a-push-subscription.md)。  
+    -   对于推送订阅，请在发布服务器上执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定**@subscriber**、 **@subscriber_db**、 **@publication**、用于**@job_name**在分发服务器上运行分发代理的 Windows 凭据**@job_password**，并指定此代理作业的计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)。 此操作将在执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建推送订阅](../create-a-push-subscription.md)。  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>升级用于配置合并发布的脚本  
   
 1.  （可选）在现有脚本中，更新 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 的执行，以便对用于实现新复制功能的参数设置任何非默认的值。  
   
-2.  在 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 后面，针对发布服务器上的发布数据库执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定**@publication**和用于为**@job_name**和**@job_password**运行快照代理的 Windows 凭据。 如果代理在连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]发布服务器时将使用身份验证，则还必须将的值指定为**@publisher_security_mode** **0** ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并将登录**@publisher_login**信息**@publisher_password**指定给和。 此操作将为发布创建一个快照代理作业。  
+2.  在 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 后面，针对发布服务器上的发布数据库执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定**@publication**和用于为**@job_name**和**@job_password**运行快照代理的 Windows 凭据。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password**。 此操作将为发布创建一个快照代理作业。  
   
 3.  （可选）更新 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的执行，以便对用于实现新复制功能的参数设置任何非默认的值。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "68210769"
   
 1.  执行完用于创建订阅的存储过程后，请确保执行用于创建合并代理作业的存储过程以同步订阅。 所用的存储过程将取决于订阅类型。  
   
-    -   对于请求订阅，请将 sp_addmergepullsubscription_agent 的执行更新[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) ，以便为**@job_name**和**@job_password**在订阅服务器上提供合并代理运行时所使用的 Windows 凭据。 此操作将在执行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建请求订阅](../create-a-pull-subscription.md)。  
+    -   对于请求订阅，请更新 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) 的执行，为 **@job_name** 和 **@job_password** 提供用于在订阅服务器上运行合并代理的 Windows 凭据。 此操作将在执行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建请求订阅](../create-a-pull-subscription.md)。  
   
-    -   对于推送订阅，请在发布服务器上执行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定**@subscriber**、 **@subscriber_db**、 **@publication**、分发服务器上的合并代理针对**@job_name**和**@job_password**运行的 Windows 凭据，以及此代理作业的计划。 有关详细信息，请参阅[指定同步计划](../specify-synchronization-schedules.md)。 此操作将在执行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建推送订阅](../create-a-push-subscription.md)。  
+    -   对于推送订阅，请在发布服务器上执行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定**@subscriber**、 **@subscriber_db**、 **@publication**、分发服务器上的合并代理针对**@job_name**和**@job_password**运行的 Windows 凭据，以及此代理作业的计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)。 此操作将在执行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建推送订阅](../create-a-push-subscription.md)。  
   
 ## <a name="example"></a>示例  
  下面是一个用于创建 Product 表的事务发布的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 脚本示例。 此发布支持以排队更新作为故障转移的立即更新。 为了方便阅读，删除了默认参数。  
@@ -189,12 +189,12 @@ ms.locfileid: "68210769"
   
 ## <a name="see-also"></a>另请参阅  
  [Create a Publication](../publish/create-a-publication.md)   
- [ssSDSFull](../create-a-push-subscription.md)   
+ [创建推送订阅](../create-a-push-subscription.md)   
  [Create a Pull Subscription](../create-a-pull-subscription.md)   
  [查看和修改复制安全设置](../security/view-and-modify-replication-security-settings.md)   
  [MSSQL_ENG021797](../mssql-eng021797.md)   
  [MSSQL_ENG021798](../mssql-eng021798.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [升级复制数据库](../../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

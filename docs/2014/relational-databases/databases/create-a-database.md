@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872253"
 ---
 # <a name="create-a-database"></a>创建数据库
@@ -42,42 +42,42 @@ ms.locfileid: "62872253"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   在一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例中最多可以指定 32,767 个数据库。  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   CREATE DATABASE 语句必须以自动提交模式（默认事务管理模式）运行，不允许在显式或隐式事务中使用。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
--   创建、修改或删除用户数据库时，应备份[master](master-database.md)数据库。  
+-   创建、修改或删除用户数据库后，应备份 [master](master-database.md) 数据库。  
   
 -   在创建数据库时，请根据数据库中预期的最大数据量，创建尽可能大的数据文件。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对 master 数据库的 CREATE DATABASE 权限，或需要 CREATE ANY DATABASE/ALTER ANY DATABASE 权限。  
   
  为了控制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机上的磁盘使用，通常只有少数登录帐户才有创建数据库的权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-database"></a>创建数据库  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
+1.  在**对象资源管理器**中，连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
-2.  右键单击“数据库”  ，然后单击“新建数据库”  。  
+2.  右键单击 "**数据库**"，然后单击 "**新建数据库**"。  
   
 3.  在 **“新建数据库”** 中，输入数据库名称。  
   
 4.  若要通过接受所有默认值创建数据库，请单击 **“确定”**；否则，请继续后面的可选步骤。  
   
-5.  若要更改所有者名称，请单击 (…) 选择其他所有者****。  
+5.  若要更改所有者名称，请单击 "（**...**）" 以选择另一个所有者。  
   
     > [!NOTE]  
     >  “使用全文检索”**** 选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  
@@ -100,7 +100,7 @@ ms.locfileid: "62872253"
   
 12. 若要创建数据库，请单击 **“确定”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-database"></a>创建数据库  
   
@@ -132,9 +132,9 @@ GO
  有关更多示例，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Database Files and Filegroups](database-files-and-filegroups.md)   
+ [数据库文件和文件组](database-files-and-filegroups.md)   
  [数据库分离和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [向数据库中添加数据文件或日志文件](add-data-or-log-files-to-a-database.md)  
   
   

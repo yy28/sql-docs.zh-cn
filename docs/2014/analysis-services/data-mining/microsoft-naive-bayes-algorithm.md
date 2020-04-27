@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174456"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
@@ -55,7 +55,7 @@ ms.locfileid: "78174456"
 
  Naive Bayes 模型的要求如下：
 
--   **单个键列**每个模型必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。
+-   **单键列** 每个模型都必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。
 
 -   **输入列**在 Naive Bayes 模型中，所有列都必须是离散或离散化的列。 有关离散化列的信息，请参阅[数据挖掘&#41;&#40;离散化方法](discretization-methods-data-mining.md)。
 
@@ -65,12 +65,12 @@ ms.locfileid: "78174456"
 
      相反，在浏览模型或数据集时，该算法能够识别各个变量之间的相关性对于标识输入之间的关系会很有用。
 
--   **至少一个可预测列**可预测属性必须包含离散或离散化值。
+-   **至少有一个可预测列** 可预测属性必须包含离散或离散化值。
 
      可以将可预测列的值视为输入。 在浏览新数据集时，此操作对于查找列之间的关系会很有用。
 
 ## <a name="viewing-the-model"></a>查看模型
- 您可以使用 **Microsoft Naive Bayes 查看器**浏览模型。 该查看器显示输入属性与可预测属性之间的关系。 该查看器还提供了每个分类的详细配置文件、将每个分类与其他分类区分开来的属性列表以及整个定型数据集的特征。 有关详细信息，请参阅[使用 Microsoft Naive Bayes 查看器浏览模型](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。
+ 您可以使用 **Microsoft Naive Bayes 查看器**浏览模型。 该查看器显示输入属性与可预测属性之间的关系。 该查看器还提供了每个分类的详细配置文件、将每个分类与其他分类区分开来的属性列表以及整个定型数据集的特征。 有关详细信息，请参阅 [使用 Microsoft Naive Bayes 查看器浏览模型](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。
 
  如果希望了解更多详细信息，可在 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)中浏览该模型。 有关模型中存储的信息类型的详细信息，请参阅 [Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)。
 

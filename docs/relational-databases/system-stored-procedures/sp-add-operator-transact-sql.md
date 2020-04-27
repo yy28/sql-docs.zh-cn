@@ -18,10 +18,10 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "74095503"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
@@ -81,13 +81,13 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @pager_days = ] pager_days`一个数字，用于指示操作员可用于页面的日期（受限于指定的开始/结束时间）。 *pager_days*为**tinyint**，默认值为**0** ，表示运算符从不可用于接收页面。 有效值为**0**至**127**。 *pager_days*是通过添加所需日期的各个值来计算的。 例如，从星期一到星期五是**2**+**4**+**8**+**16**+**32** = **62**。 下表列出了一周中每天的值。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
 |**4**|星期二|  
 |**8**|星期三|  
-|**16**|星期四|  
+|**超过**|星期四|  
 |**32**|星期五|  
 |**64**|星期六|  
   
@@ -106,15 +106,13 @@ sp_add_operator [ @name = ] 'name'
   
  电子邮件系统支持寻呼，如果想使用寻呼，则该系统必须有将电子邮件发送到寻呼程序的功能。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员才能**sp_add_operator**执行。  
   
 ## <a name="examples"></a>示例  
- 下面的示例设置 `danwi` 的操作员信息。 操作员已被启用。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理通过寻呼在星期一到星期五的上午 8 点 至下午 5 点发送通知。  
+ 下面的示例设置 `danwi` 的操作员信息。 操作员已被启用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理通过寻呼在星期一到星期五的上午 8 点 至下午 5 点发送通知。  
   
 ```  
 USE msdb ;  

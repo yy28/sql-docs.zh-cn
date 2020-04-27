@@ -16,10 +16,10 @@ ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: a50b989afef382a8315c29ea5257ad9b103e124c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769216"
 ---
 # <a name="sp_addlogreader_agent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769216"
   为给定数据库添加日志读取器代理。 此存储过程在发布服务器上对发布数据库执行。  
   
 > [!IMPORTANT]  
->  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用到数据库引擎 &#40;的加密连接 SQL Server 配置管理器&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+>  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,7 +78,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ## <a name="remarks"></a>备注  
  **sp_addlogreader_agent**用于事务复制。  
   
- 如果在创建**** 使用数据库的发布之前将已启用复制的数据库升级到此版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须执行 Sp_addlogreader_agent 才能添加日志读取器代理。  
+ 如果在创建**sp_addlogreader_agent**使用数据库的发布之前将已启用复制的数据库升级到此版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须执行 Sp_addlogreader_agent 才能添加日志读取器代理。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_addlogreader_agent**。  

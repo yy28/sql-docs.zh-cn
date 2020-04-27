@@ -13,10 +13,10 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729298"
 ---
 # <a name="edit-an-entity-master-data-services"></a>编辑实体 (Master Data Services)
@@ -25,12 +25,12 @@ ms.locfileid: "73729298"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以编辑实体。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-edit-an-entity"></a>编辑实体  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73729298"
   
 8.  选中或取消选中“自动创建代码值” **** 复选框。  
   
-     有关详细信息，请参阅[自动创建代码 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
+     有关详细信息，请参阅[自动创建代码 (Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)  
   
 9. 选中或取消选中“启用数据压缩” **** 复选框。 默认情况下，系统将打开行压缩。  
   
@@ -74,6 +74,6 @@ ms.locfileid: "73729298"
 ## <a name="see-also"></a>另请参阅  
  [显式层次结构 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [删除实体 &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
- [实体 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
+ [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
   

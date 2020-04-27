@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2e0ed6f2976f0b0f0b93f91f70f82ba30822c87c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633874"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728454"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver for SQL Server 发行说明
 
@@ -256,8 +256,8 @@ GeneMi (and CraigG).  2019/03/30.
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
-| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 添加了对 [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 和 [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) 的支持。 | 连接到 Microsoft SQL Server 2016 或更高版本时即可使用这些新增支持。 |
-| 存在与对 Always Encrypted 和 Azure Active Directory 的支持相对应的连接池关键字和属性。 | [ODBC Driver for SQL Server 中识别驱动程序的连接池](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)中介绍了这些关键字和属性。 |
+| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 添加了对 [Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) 和 [Azure Active Directory](../using-azure-active-directory.md) 的支持。 | 连接到 Microsoft SQL Server 2016 或更高版本时即可使用这些新增支持。 |
+| 存在与对 Always Encrypted 和 Azure Active Directory 的支持相对应的连接池关键字和属性。 | [ODBC Driver for SQL Server 中识别驱动程序的连接池](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)中介绍了这些关键字和属性。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13

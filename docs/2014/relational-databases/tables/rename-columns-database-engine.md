@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211817"
 ---
 # <a name="rename-columns-database-engine"></a>重命名列（数据库引擎）
@@ -38,17 +38,17 @@ ms.locfileid: "68211817"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  重命名列将不会自动重命名对该列的引用。 您必须手动修改引用已重命名列的任何对象。 例如，如果您重命名表列，并且触发器中引用了该列，则必须修改触发器以反映新的列名。 请使用 [sys.sql_expression_dependencies](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql) 在重命名对象之前列出对象的依赖关系。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对对象的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-rename-a-column-using-object-explorer"></a>使用对象资源管理器重命名列  
   
@@ -64,12 +64,12 @@ ms.locfileid: "68211817"
   
 2.  在 **“列名”** 下，选择要更改的名称，并键入新名称。  
   
-3.  在“文件”  菜单上，单击“保存”  以保存表名  。  
+3.  在“文件”菜单上，单击“保存表名称”********__。  
   
 > [!NOTE]  
 >  您也可以在 **“列属性”** 选项卡中更改列名。选择要更改名称的列，并为 **“名称”** 键入新值。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **重命名列**  
   
 #### <a name="to-rename-a-column"></a>重命名列  
@@ -87,6 +87,6 @@ ms.locfileid: "68211817"
     GO  
     ```  
   
- 有关详细信息，请参阅 [sp_rename (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_rename ](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql)。  
   
   

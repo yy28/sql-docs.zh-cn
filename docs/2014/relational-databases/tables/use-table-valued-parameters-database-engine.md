@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211765"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用表值参数（数据库引擎）
@@ -42,7 +42,7 @@ ms.locfileid: "68211765"
   
  [示例](#Example)  
   
-##  <a name="Benefits"></a> 优势  
+##  <a name="benefits"></a><a name="Benefits"></a> 优势  
  就像其他参数一样，表值参数的作用域也是存储过程、函数或动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文本。 同样，表类型变量也与使用 DECLARE 语句创建的其他任何局部变量一样具有作用域。 可以在动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句内声明表值变量，并且可以将这些变量作为表值参数传递到存储过程和函数。  
   
  表值参数具有更高的灵活性，在某些情况下，可比临时表或其他传递参数列表的方法提供更好的性能。 表值参数具有以下优势：  
@@ -63,23 +63,23 @@ ms.locfileid: "68211765"
   
 -   在用于存储过程时像临时表一样被缓存。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，对于参数化查询，表值参数也被缓存。  
   
-##  <a name="Restrictions"></a> 限制  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 限制  
  表值参数有下面的限制：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不维护表值参数列的统计信息。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不维护表值参数列的统计信息。  
   
 -   表值参数必须作为输入 READONLY 参数传递到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程。 不能在例程体中对表值参数执行诸如 UPDATE、DELETE 或 INSERT 这样的 DML 操作。  
   
 -   不能将表值参数用作 SELECT INTO 或 INSERT EXEC 语句的目标。 表值参数可以在 SELECT INTO 的 FROM 子句中，也可以在 INSERT EXEC 字符串或存储过程中。  
   
-##  <a name="BulkInsert"></a>表值参数与 BULK INSERT 操作  
+##  <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a>表值参数与 BULK INSERT 操作  
  表值参数的使用方法与其他基于数据集的变量的使用方法相似；但是，频繁使用表值参数将比大型数据集要快。 大容量操作的启动开销比表值参数大，与之相比，表值参数在插入数目少于 1000 的行时具有很好的执行性能。  
   
  重用的表值参数可从临时表缓存中受益。 这一表缓存功能可比对等的 BULK INSERT 操作提供更好的伸缩性。 使用小型行插入操作时，可以通过使用参数列表或批量语句（而不是 BULK INSERT 操作或表值参数）来获得小的性能改进。 但是，这些方法在编程上不太方便，并且随着行的增加，性能会迅速下降。  
   
  表值参数在执行性能上与对等的参数阵列实现相当甚至更好。  
   
-##  <a name="Example"></a>实例  
+##  <a name="example"></a><a name="Example"></a>实例  
  下面的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 并演示如何执行以下操作：创建表值参数类型，声明变量来引用它，填充参数列表，然后将值传递到存储过程。  
   
 ```  
@@ -121,11 +121,11 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE TYPE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-type-transact-sql)   
- [DECLARE @local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [sys.types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
+ [DECLARE @local_variable (Transact-SQL)](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
  [sys. parameters &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
  [sys. parameter_type_usages &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
- [&#40;Transact-sql&#41;创建过程](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)   
  [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)  
   
   

@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75501911"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087417"
 ---
 # <a name="power-query-source-preview"></a>Power Query 源（预览版）
 
@@ -70,7 +70,7 @@ ms.locfileid: "75501911"
 
 ![PQ 源连接管理器编辑器类型](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-部分源（Oracle  、DB2  、MySQL  、PostgreSQL  、Teradata  、Sybase  ）需要额外安装 ADO.NET 驱动程序，此驱动程序可以从 [Power Query 必备组件](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a)一文中获取。 可以使用自定义安装界面将其安装在 Azure-SSIS IR 上，具体请参阅[自定义 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
+部分源（Oracle  、DB2  、MySQL  、PostgreSQL  、Teradata  、Sybase  ）需要额外安装 ADO.NET 驱动程序，此驱动程序可以从 [Power Query 必备组件](/power-bi/desktop-data-source-prerequisites)一文中获取。 可以使用自定义安装界面将其安装在 Azure-SSIS IR 上，具体请参阅[自定义 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
 
 对于“数据源路径”  ，可以输入数据源特定的属性，从而构成没有身份验证信息的连接字符串。 例如，SQL  数据源路径的格式为 `<Server>;<Database>`。 可以选择“编辑”  按钮，将值分配给构成路径的数据源特定属性。
 

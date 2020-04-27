@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211730"
 ---
 # <a name="about-change-data-capture-sql-server"></a>关于变更数据捕获 (SQL Server)
@@ -107,9 +107,9 @@ ms.locfileid: "68211730"
  数据库引擎服务或 SQL Server 代理服务在 NETWORK SERVICE 帐户下运行时，变更数据捕获无法正常工作。 这可能导致错误 22832。  
   
 ## <a name="see-also"></a>另请参阅  
- [跟踪数据更改 (SQL Server)](../track-changes/track-data-changes-sql-server.md)   
- [启用和禁用变更数据捕获 (SQL Server)](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
- [处理变更数据 (SQL Server)](../track-changes/work-with-change-data-sql-server.md)   
+ [跟踪 SQL Server &#40;的数据更改&#41;](../track-changes/track-data-changes-sql-server.md)   
+ [启用和禁用变更数据捕获 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
+ [使用更改数据 &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   
  [管理和监视变更数据捕获 (SQL Server)](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

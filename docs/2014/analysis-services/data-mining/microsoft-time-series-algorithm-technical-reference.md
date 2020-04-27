@@ -28,14 +28,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03b4264e421756fb1234a306f3834ca89a97489b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174594"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法包括两个用于分析时序的独立的算法：
 
 -   ARTXP 算法是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中引入的，针对预测序列中的下一个可能值进行了优化。
@@ -47,30 +46,22 @@ ms.locfileid: "78174594"
  本主题提供以下方面的附加信息：每个算法的实现原理，以及可以如何通过设置参数来微调分析和预测结果对算法进行自定义。
 
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Microsoft 时序算法的实现
- [!INCLUDE[msCoName](../../includes/msconame-md.md)]研究开发了在 SQL Server 2005 中使用的原始 ARTXP 算法，使实现基于[!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法。 因此，该 ARTXP 算法可描述为用于表示周期性时序数据的自动回归树模型。 此算法将数目可变的过去项与要预测的每个当前项相关。 名称 ARTXP 派生自以下事实，即自动回归树方法（一种 ART 算法）应用于多个未知的先前状态。 有关 ARTXP 算法的详细说明，请参阅 [序分析的自动回归树模型](https://go.microsoft.com/fwlink/?LinkId=45966)。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 研究院开发了在 SQL Server 2005 中使用的原始 ARTXP 算法，并且将该实现基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法。 因此，该 ARTXP 算法可描述为用于表示周期性时序数据的自动回归树模型。 此算法将数目可变的过去项与要预测的每个当前项相关。 名称 ARTXP 派生自以下事实，即自动回归树方法（一种 ART 算法）应用于多个未知的先前状态。 有关 ARTXP 算法的详细说明，请参阅 [序分析的自动回归树模型](https://go.microsoft.com/fwlink/?LinkId=45966)。
 
  该 ARIMA 算法已添加到 SQL Server 2008 的 Microsoft 时序算法中，用于提高长期预测的准确性。 它是 Box 和 Jenkins 描述的用于计算自动回归集成变动平均值的过程的实现。 通过 ARIMA 方法，可以确定按时间顺序进行的观察中的依赖关系，并且可以将随机冲量作为模型的一部分纳入。 该 ARIMA 方法还支持倍乘季节性。 想要了解有关 ARIMA 算法的详细信息的读者最好阅读 Box 和 Jenkins 在论坛上发布的内容；本节旨在提供关于 ARIMA 算法如何在 Microsoft 时序算法中实施的特定详细信息。
 
  默认情况下，Microsoft 时序算法通过使用 ARIMA 和 ARTXP 这两种算法并混合所得到的结果来改进预测准确性。 如果您想要仅使用特定的方法，则可以将算法参数设置为仅使用 ARTXP 或仅使用 ARIMA，或者控制对算法结果进行组合的方式。 请注意，ARTXP 算法支持交叉预测，但 ARIMA 算法不支持。 因此，只有在使用混合算法或将模型配置为仅使用 ARTXP 时，交叉预测才可用。
 
 ## <a name="understanding-arima-difference-order"></a>理解 ARIMA 差分阶数
- 
-  *
-  * 本节介绍理解 ARIMA 模型所需的一些术语，并且论述在 Microsoft 时序算法中的特定“差分”实现方式。 有关这些项和概念的完整解释，我们建议您参阅 Box 和 Jenkins 的著述。
+ ** 本节介绍理解 ARIMA 模型所需的一些术语，并且论述在 Microsoft 时序算法中的特定“差分”实现方式。 有关这些项和概念的完整解释，我们建议您参阅 Box 和 Jenkins 的著述。
 
 -   项是数学方程式中的一个组成部分。 例如，多项式方程式中的项可以包括变量和常量的组合。
 
--   
-  *
-  * 在 Microsoft 时序算法中包括的 ARIMA 公式使用“自动回归” ** 和“移动平均值”这两个项。
+-   ** 在 Microsoft 时序算法中包括的 ARIMA 公式使用“自动回归” ** 和“移动平均值”这两个项。
 
--   
-  *
-  * 时序模型可以是“静态的” ** 或“非静态的”。 *固定模型*是恢复为平均值的模型，但它们可能具有循环，而*非静态*模型不具有平衡的焦点，并且受到*冲量*或外部变量引入的更大差异或变化的限制。
+-   ** 时序模型可以是“静态的” ** 或“非静态的”。 ** “静态模型” ** 是还原为平均值的那些模型（尽管它们可能具有循环），而“非静态模型” ** 不具有平衡焦点，需要承受“充量”或外部变量引入的更大差异或变化。
 
--   
-  *
-  * “差分”的目标是使时序稳定且变得静态。
+-   ** “差分”的目标是使时序稳定且变得静态。
 
 -   “差分阶数”  ** 表示为时序取的值之间的差分的次数。
 
@@ -91,15 +82,13 @@ ms.locfileid: "78174594"
  最后要注意的是，上述公式为简化的情况，没有季节性提示。 如果提供季节性提示，则对于每个季节性提示，单独的 AR 多项式项将添加到方程式的左侧，并且将应用相同的策略以便消除可能导致差分序列不稳定的项。
 
 ## <a name="customizing-the-microsoft-time-series-algorithm"></a>自定义 Microsoft 时序算法
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持以下参数，这些参数会影响所生成挖掘模型的行为、性能和精确性。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持以下参数，这些参数会影响所生成挖掘模型的行为、性能和精确性。
 
 > [!NOTE]
 >  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 时序算法；但是，仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中才支持某些高级功能，包括用于自定义时序分析的参数。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)。
 
 ### <a name="detection-of-seasonality"></a>季节性检测
- ARIMA 和 ARTXP 算法都支持季节性检测或周期检测。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在定型之前使用快速傅立叶变换检测季节性。 但是，您可以通过设置算法参数，影响季节性检测以及时序分析的结果。
+ ARIMA 和 ARTXP 算法都支持季节性检测或周期检测。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在定型之前使用快速傅立叶变换检测季节性。 但是，您可以通过设置算法参数，影响季节性检测以及时序分析的结果。
 
 -   通过更改 AUTODETECT_SEASONALITY** 的值，可以影响生成的时间段的可能数目。
 
@@ -147,19 +136,16 @@ ms.locfileid: "78174594"
 |*FORECAST_METHOD*|指定要用于分析和预测的算法。 可能值为 ARTXP、ARIMA 或 MIXED。 默认值为 MIXED。|
 |*HISTORIC_MODEL_COUNT*|指定将要生成的历史模型的数量。 默认值为 1。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|
 |*HISTORICAL_MODEL_GAP*|指定两个连续的历史模型之间的时间间隔。 默认值为 10。 该值表示时间单位数，其中单位由模型定义。<br /><br /> 例如，如果将此值设置为 g，则将以 g、2*g、3\*g（依此类推）的时间间隔为被时间段截断的数据生成历史模型。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|
-|*INSTABILITY_SENSITIVITY*|控制预测方差超过特定阈值的点，在该点后 ARTXP 算法将禁止预测。 默认值为 1。<br /><br /> 注意：此参数不适用于仅使用 ARIMA 的模型。<br /><br /> 默认值 1 提供与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]相同的行为。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 监视每个预测的规范化标准偏差。 对于任何预测，只要该值超过阈值，时序算法就会返回 NULL 并停止预测过程。<br /><br /> 值 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 将停止不稳定的检测。 这意味着无论方差为多少，都可以创建无限个预测。<br /><br /> 注意：此参数只能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中进行修改。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅使用默认值 1。|
+|*INSTABILITY_SENSITIVITY*|控制预测方差超过特定阈值的点，在该点后 ARTXP 算法将禁止预测。 默认值为 1。<br /><br /> 注意：此参数不适用于仅使用 ARIMA 的模型。<br /><br /> 默认值 1 提供与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]相同的行为。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 监视每个预测的规范化标准偏差。 对于任何预测，只要该值超过阈值，时序算法就会返回 NULL 并停止预测过程。<br /><br /> 值 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 将停止不稳定的检测。 这意味着无论方差为多少，都可以创建无限个预测。<br /><br /> 注意：此参数只能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中进行修改。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅使用默认值 1。|
 |*MAXIMUM_SERIES_VALUE*|指定用于预测的最大值。 此参数与*MINIMUM_SERIES_VALUE*一起使用，以将预测约束为某个预期范围。 例如，您可以指定任何一天的预测销售数量决不应超过库存产品数量。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|
 |*MINIMUM_SERIES_VALUE*|指定可以预测的最小值。 此参数与 MAXIMUM_SERIES_VALUE** 一起用于将预测约束到某一预期范围。 例如，可以指定预测的销售额决不应为负数。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|
 |*MINIMUM_SUPPORT*|指定在每个时序树中生成一个拆分所需的最小时间段数。 默认值为 10。|
-|*MISSING_VALUE_SUBSTITUTION*|指定如何填补历史数据中的空白。 默认情况下，不允许数据中存在空白。 如果数据中包含多个序列，则序列也不能有参差不齐的边缘。 也就是说，所有序列都应具有相同的起点和终点。 对时序模型执行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 时，`PREDICTION JOIN` 还使用此参数的值来填补新数据中的空白。 下表将列出此参数的可能值：<br /><br /> 无：默认值。 用沿定型模型曲线绘制的值来替换缺失值。<br /><br /> 上一个：重复前一时间段中的值。<br /><br /> 平均值：使用定型时所用的时间段的变动平均值。<br /><br /> 数值常量：使用指定的数字来替换所有缺失值。|
-|*PERIODICITY_HINT*|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。<br /><br /> 方括号 [] 中的 n 是可选项，并且可以按需多次重复。 例如，若要为按月提供的数据提供多个周期提示，则可以输入 {12, 3, 1} 来检测年度、季度和月的模式。 但是，周期对模型质量有重大影响。 如果给出的提示与实际周期不同，则会对结果造成不良影响。<br /><br /> 默认为 {1}。<br /><br /> 注意：需要大括号。 另外，此参数具有字符串数据类型。 因此，如果在数据挖掘扩展插件 (DMX) 语句中键入此参数，则必须用引号将数字和大括号括起来。|
-|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> 
-  [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]：指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 0.5：（默认值）指定对于预测，应同时使用这两种算法，并混合结果。<br /><br /> 1：指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> <br /><br /> 注意：使用*FORECAST_METHOD*参数控制培训。|
+|*MISSING_VALUE_SUBSTITUTION*|指定如何填补历史数据中的空白。 默认情况下，不允许数据中存在空白。 如果数据中包含多个序列，则序列也不能有参差不齐的边缘。 也就是说，所有序列都应具有相同的起点和终点。 对时序模型执行 `PREDICTION JOIN` 时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还使用此参数的值来填补新数据中的空白。 下表将列出此参数的可能值：<br /><br /> 无：默认值。 用沿定型模型曲线绘制的值来替换缺失值。<br /><br /> 上一个：重复前一时间段中的值。<br /><br /> 平均值：使用定型时所用的时间段的变动平均值。<br /><br /> 数值常量：使用指定的数字来替换所有缺失值。|
+|*PERIODICITY_HINT*|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。<br /><br /> 方括号 [] 中的 n 是可选项，并且可以按需多次重复。 例如，若要为按月提供的数据提供多个周期提示，则可以输入 {12, 3, 1} 来检测年度、季度和月的模式。 但是，周期对模型质量有重大影响。 如果给出的提示与实际周期不同，则会对结果造成不良影响。<br /><br /> 默认值为 {1}。<br /><br /> 注意：需要大括号。 另外，此参数具有字符串数据类型。 因此，如果在数据挖掘扩展插件 (DMX) 语句中键入此参数，则必须用引号将数字和大括号括起来。|
+|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]：指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 0.5：（默认值）指定对于预测，应同时使用这两种算法，并混合结果。<br /><br /> 1：指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> <br /><br /> 注意：使用*FORECAST_METHOD*参数控制培训。|
 
 ### <a name="modeling-flags"></a>建模标志
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。
 
 |建模标志|说明|
 |-------------------|-----------------|
@@ -170,8 +156,7 @@ ms.locfileid: "78174594"
  时序模型中必须包含一个含有唯一值的 Key Time 列、输入列以及至少一个可预测列。
 
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持特定的输入列内容类型、可预测列内容类型和建模标志，如下表所列。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持特定的输入列内容类型、可预测列内容类型和建模标志，如下表所列。
 
 |列|内容类型|
 |------------|-------------------|

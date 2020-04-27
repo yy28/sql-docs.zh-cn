@@ -13,10 +13,10 @@ ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258524"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>工作负载比较过程概述
@@ -63,6 +63,6 @@ SQL Server A/B 测试的第二个阶段是重播在两个目标服务器上捕�
 - 如果缺少一个或多个组件，则当你尝试生成新的分析报表（需要 Internet 连接）时，会显示包含下载链接的 "先决条件" 页面。
 - 若要查看在工具的早期版本中生成的报表，必须先更新该架构。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - 若要了解如何生成跟踪文件以及服务器上发生的事件日志，请参阅文章[在数据库实验助手中捕获跟踪](database-experimentation-assistant-capture-trace.md)。

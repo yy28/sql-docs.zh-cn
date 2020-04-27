@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625559"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728373"
 ---
 # <a name="using-basic-data-types"></a>使用基本数据类型
 
@@ -101,20 +101,20 @@ ms.locfileid: "81625559"
 
 如果必须通过使用参数化查询来更新数据源中的数据，可以使用 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 类的任一 set\<Type> 方法（也称为 setter 方法）来设置参数的数据类型  。 在下面的示例中，[prepareStatement](reference/preparestatement-method-sqlserverconnection.md) 方法用于预编译参数化查询，然后在调用 [executeUpdate](reference/executeupdate-method.md) 方法前，使用 [setString](reference/setstring-method-sqlserverpreparedstatement.md) 方法来设置参数的字符串值。  
   
-[!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
+[!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-若要详细了解参数化查询，请参阅[使用包含参数的 SQL 语句](../../connect/jdbc/using-an-sql-statement-with-parameters.md)。  
+若要详细了解参数化查询，请参阅[使用包含参数的 SQL 语句](using-an-sql-statement-with-parameters.md)。  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>向存储过程传递参数
 
 如果必须向存储过程传递类型参数，则可使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的任一 set\<Type> 方法通过索引或名称来设置此参数。 在下面的示例中，[prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法用于设置对存储过程的调用，然后在调用 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法之前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 方法设置调用的参数。  
   
-[!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
+[!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 > 在此实例中，将返回一个结果集，包含此存储过程的运行结果。
 
-若要详细了解结合使用 JDBC 驱动程序与存储过程和输入参数，请参阅[使用包含输入参数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)。  
+若要详细了解结合使用 JDBC 驱动程序与存储过程和输入参数，请参阅[使用包含输入参数的存储过程](using-a-stored-procedure-with-input-parameters.md)。  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>从存储过程检索参数
 

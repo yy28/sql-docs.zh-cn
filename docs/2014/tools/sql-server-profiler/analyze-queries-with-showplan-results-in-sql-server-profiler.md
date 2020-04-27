@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0eb13d2997c9b2b29c85489f30a161a96f64c70c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211100"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
@@ -26,21 +26,20 @@ ms.locfileid: "68211100"
   
  可以用下列一种方法从跟踪中提取显示计划事件：  
   
--   在跟踪配置时，使用 "**事件提取设置**" 选项卡。请注意，只有在 "**事件选择**" 选项卡上选择一个显示计划事件后，此选项卡才会出现。  
+-   在配置跟踪时，使用 **“事件提取设置”** 选项卡。注意，此选项卡只有在选择了 **“事件选择”** 选项卡上的一个显示计划事件后才会显示。  
   
 -   使用 **“文件”** 菜单上的 **“提取 SQL Server 事件”** 选项。  
   
--   通过右键单击特定事件并选择“提取事件数据”****，提取并保存单个事件。  
+-   通过右键单击特定事件并选择“提取事件数据”  ，提取并保存单个事件。  
   
 ## <a name="showplan-events"></a>显示计划事件  
  下表中列出并说明了显示计划跟踪事件。  
   
 |事件名称|说明|  
 |----------------|-----------------|  
-|**Performance statistics**|指明编写的显示计划第一次保存到缓存中、何时对其重新编写以及何时将其从计划缓存中删除。 
-  **TextData** 列包含 XML 格式的显示计划。 有关详细信息，请参阅 [Performance Statistics 事件类](../../relational-databases/event-classes/performance-statistics-event-class.md)。|  
-|**全部显示计划**|显示查询计划，列出已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的完整编写时详细信息。 例如，可能显示估计开销值和列列表。 有关详细信息，请参阅 [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md)。|  
-|**Showplan All For Query Compile**|当查询在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上编译或重新编译时发生。 它是 **Showplan All** 事件的编译时对等事件。 当执行查询时，会发生**全部显示计划**。 显示**计划：所有查询编译**都是在编译查询时进行的。 有关详细信息，请参阅 [Showplan All for Query Compile Event Class](../../relational-databases/event-classes/showplan-all-for-query-compile-event-class.md)。|  
+|**Performance statistics**|指明编写的显示计划第一次保存到缓存中、何时对其重新编写以及何时将其从计划缓存中删除。 **TextData** 列包含 XML 格式的显示计划。 有关详细信息，请参阅 [Performance Statistics 事件类](../../relational-databases/event-classes/performance-statistics-event-class.md)。|  
+|**Showplan All**|显示查询计划，列出已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的完整编写时详细信息。 例如，可能显示估计开销值和列列表。 有关详细信息，请参阅 [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md)。|  
+|**Showplan All For Query Compile**|当查询在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上编译或重新编译时发生。 它是 **Showplan All** 事件的编译时对等事件。 **Showplan All** 在执行查询时发生。 编写查询时发生**Showplan All For Query Compile** 。 有关详细信息，请参阅 [Showplan All for Query Compile Event Class](../../relational-databases/event-classes/showplan-all-for-query-compile-event-class.md)。|  
 |**Showplan Statistics Profile**|显示查询计划，列出正在执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的完整运行时详细信息（包括通过每个操作传递的实际行数）。 有关详细信息，请参阅 [Showplan Statistics Profile Event Class](../../relational-databases/event-classes/showplan-statistics-profile-event-class.md)。|  
 |**Showplan Text**|将正在执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的查询计划树显示为二进制数据。 有关详细信息，请参阅 [Showplan Text Event Class](../../relational-databases/event-classes/showplan-text-event-class.md)。|  
 |**Showplan Text (Unencoded)**|将正在执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的查询计划树显示为文本。 除了此事件类显示文本而不是二进制数据以外，此事件类显示的信息与 Showplan Text 相同。 有关详细信息，请参阅 [Showplan Text (Unencoded) 事件类](../../relational-databases/event-classes/showplan-text-unencoded-event-class.md)。|  
@@ -49,6 +48,6 @@ ms.locfileid: "68211100"
 |**Showplan XML Statistics Profile**|显示查询计划，列出 XML 格式的完整运行时详细信息。 例如，此事件类捕获通过已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的每个运算符的行数。 有关详细信息，请参阅 [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Performance 事件类别](../../relational-databases/event-classes/performance-event-category.md)  
+ [“性能”事件类别](../../relational-databases/event-classes/performance-event-category.md)  
   
   

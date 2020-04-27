@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211180"
 ---
 # <a name="creating-views-and-stored-procedures"></a>创建视图和存储过程
-  由于 Mary 可以访问**TestData**数据库，因此你可能需要创建一些数据库对象（如视图和存储过程），然后向 Mary 授予对它们的访问权限。 视图是存储的 SELECT 语句，而存储过程是以批处理方式执行的一条或多条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  
+  既然 Mary 可以访问 **TestData** 数据库，你可能希望创建一些数据库对象（如视图和存储过程），再将它们的访问权限授予 Mary。 视图是存储的 SELECT 语句，而存储过程是以批处理方式执行的一条或多条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  
   
  视图像表那样进行查询，但不接受参数。 存储过程比视图更复杂。 存储过程可以同时具有输入参数和输出参数，并可以包括控制代码流的语句，如 IF 和 WHILE 语句。 将存储过程用于数据库中的所有重复操作，是一个良好的编程做法。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68211180"
  [授予访问数据库对象的权限](lesson-2-4-granting-access-to-a-database-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/create-view-transact-sql)   
+ [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql)   
  [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

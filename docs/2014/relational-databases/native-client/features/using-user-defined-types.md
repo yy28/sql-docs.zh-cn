@@ -1,5 +1,5 @@
 ---
-title: 使用用户定义类型 |Microsoft Docs
+title: 使用用户定义类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,20 +22,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206614"
 ---
 # <a name="using-user-defined-types"></a>使用用户定义类型
-  
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 介绍了用户定义类型 (UDT)。 UDT 可将对象和自定义数据结构存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中，从而扩展了 SQL 类型系统。 UDT 可以包含多种数据类型并且可具有行为，这使它们不同于由单一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系统数据类型构成的传统别名数据类型。 使用生成可验证代码的 .NET 公共语言运行时 (CLR) 所支持的任何语言都可以定义 UDT， 这包括 Microsoft Visual c #<sup>？</sup> 并 Visual Basic<sup>？</sup> NET. 数据公开为 .NET 类或结构的字段和属性，行为则由类或结构的方法来定义。  
   
  UDT 可用作表的列定义、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 批处理中的变量，还可用作 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数或存储过程的参数。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持将 udt 作为二进制类型和元数据信息，这使你可以将 udt 作为对象进行管理。 UDT 列公开为 DBTYPE_UDT，且其元数据通过核心 OLE DB 接口 IColumnRowset 和新增的 **ISSCommandWithParameters** 接口公开[](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持将 udt 作为二进制类型和元数据信息，这使你可以将 udt 作为对象进行管理。 UDT 列公开为 DBTYPE_UDT，且其元数据通过核心 OLE DB 接口 IColumnRowset 和新增的 [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口公开****。  
   
 > [!NOTE]  
 >  IRowsetFind::FindNextRow 方法不适用于 UDT 数据类型****。 如果将 UDT 用作搜索列类型，则返回 DB_E_BADCOMPAREOP。  
@@ -43,26 +42,26 @@ ms.locfileid: "68206614"
 ### <a name="data-bindings-and-coercions"></a>数据绑定和强制  
  下表说明将所列数据类型与某一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 一同使用时出现的绑定和强制。 使用 DBTYPE_UDT 的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开 UDT 列。 可以通过适当的架构行集获取元数据，这样即可将您自行定义的类型作为对象来管理。  
   
-|数据类型|到服务器<br /><br /> **UDT**|到服务器<br /><br /> **非 UDT**|从服务器<br /><br /> **UDT**|从服务器<br /><br /> **非 UDT**|  
+|数据类型|到服务器<br /><br /> **UDT**|到服务器<br /><br /> **non-UDT**|从服务器<br /><br /> **UDT**|从服务器<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|支持<sup>6</sup>|错误<sup>1</sup>|支持<sup>6</sup>|错误<sup>5</sup>|  
 |DBTYPE_BYTES|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|支持<sup>3、6</sup>|N/A<sup>2</sup>|支持<sup>4、6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|支持<sup>3、6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|支持<sup>3、6</sup>|N/A<sup>2</sup>|支持<sup>4、6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_WSTR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4,6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_BSTR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_STR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4,6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|不支持|N/A<sup>2</sup>|不支持|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3、6</sup>|N/A<sup>2</sup>|空值|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3,6</sup>|N/A<sup>2</sup>|不适用|N/A<sup>2</sup>|  
   
- <sup>1</sup>如果使用**ICommandWithParameters：： SetParameterInfo**指定了除 DBTYPE_UDT 之外的服务器类型，并且 DBTYPE_UDT 访问器类型，则在执行该语句时将发生错误（DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）。 否则，数据发送到服务器，但服务器会返回错误，指明不存在将 UDT 转换为参数的数据类型的隐式转换。  
+ <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo 指定 DBTYPE_UDT 之外的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错（DB_E_ERRORSOCCURRED；参数状态为 DBSTATUS_E_BADACCESSOR）****。 否则，数据发送到服务器，但服务器会返回错误，指明不存在将 UDT 转换为参数的数据类型的隐式转换。  
   
  <sup>2</sup>超出了本主题的范围。  
   
- <sup>3</sup>将数据从十六进制字符串转换为二进制数据。  
+ <sup>3</sup>从十六进制字符串转换为二进制数据。  
   
  <sup>4</sup>从二进制数据转换为十六进制字符串。  
   
- <sup>5</sup>验证可以在创建访问器时进行，也可以在提取时出现 DB_E_ERRORSOCCURRED，将绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
+ <sup>5</sup>可能在创建取值函数时或在提取时执行验证，错误为 DB_E_ERRORSOCCURRED，且绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
   
  <sup>6</sup>可使用 BY_REF。  
   

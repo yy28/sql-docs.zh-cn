@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022205"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server 附带的 OLE DB 提供程序支持对 IBM DB2/AS 400、DB2/MVS 和 Db2/通用数据库的推送订阅。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server 附带的 OLE DB 访问接口对 IBM DB2/AS 400、DB2/MVS 和 DB2/通用数据库进行的推送订阅。  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>配置 IBM DB2 订阅服务器  
  若要配置 IBM DB2 订阅服务器，请按下列步骤进行操作：  
@@ -39,11 +39,11 @@ ms.locfileid: "63022205"
   
 2.  为订阅服务器创建连接字符串。 可以在任何文本编辑器中创建连接字符串，但是建议您使用数据访问工具来创建。 在数据访问工具中创建字符串：  
   
-    1.  依次单击 **“开始”**、 **“程序”**、 **“Microsoft OLE DB Provider for DB2”**、 **“数据访问工具”**。  
+    1.  依次单击 **“开始”** 、 **“程序”** 、 **“Microsoft OLE DB Provider for DB2”** 、 **“数据访问工具”** 。  
   
     2.  在 **“数据访问工具”** 中，按照步骤提供 DB2 服务器的相关信息。 当使用此工具完成操作后，就创建了一个包含相关连接字符串的通用数据链接 (UDL)（复制实际使用的不是 UDL，而是连接字符串）。  
   
-    3.  访问连接字符串：右键单击数据访问工具中的 UDL 并选择 **“显示连接字符串”**。  
+    3.  访问连接字符串：右键单击数据访问工具中的 UDL 并选择 **“显示连接字符串”** 。  
   
      连接字符串类似于（使用换行符是为了方便阅读）：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63022205"
   
 -   如果要在订阅服务器上预创建表，而不是让复制创建这些表，请使用“仅支持复制”选项。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]允许比 DB2 更长的表名和列名：  
+-   与 DB2 相比，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许使用更长的表名称和列名称：  
   
     -   如果发布数据库中有表的名称长度超过订阅服务器上 DB2 版本所支持的长度，请为 destination_table 项目属性指定一个备用名称。 有关创建发布时设置属性的详细信息，请参阅[创建发布](../publish/create-a-publication.md)和[定义项目](../publish/define-an-article.md)。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63022205"
 |`smalldatetime`|TIMESTAMP|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|空值|  
+|`sql_variant`|不适用|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR （0）<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -167,6 +167,6 @@ ms.locfileid: "63022205"
   
 ## <a name="see-also"></a>另请参阅  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [订阅发布](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

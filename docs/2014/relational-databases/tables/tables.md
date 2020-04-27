@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211780"
 ---
 # <a name="tables"></a>表
@@ -39,7 +39,7 @@ ms.locfileid: "68211780"
  临时表存储在中`tempdb`。 临时表有两种类型：本地表和全局表。 它们在名称、可见性以及可用性上有区别。 本地临时表的名称以单个数字符号 (#) 打头；它们仅对当前的用户连接是可见的；当用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时被删除。 全局临时表的名称以两个数字符号 (##) 打头，创建后对任何用户都是可见的，当所有引用该表的用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时将被删除。  
   
  系统表  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将定义服务器配置及其所有表的数据存储在一组特殊的表中，这些表称为系统表。 用户不能直接查询或更新系统表。 可以通过系统视图查看系统表中的信息。 有关详细信息，请参阅[系统视图 &#40;transact-sql&#41;](/sql/t-sql/language-reference)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将定义服务器配置及其所有表的数据存储在一组特殊的表中，这组表称为系统表。 用户不能直接查询或更新系统表。 可以通过系统视图查看系统表中的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](/sql/t-sql/language-reference)。  
   
  宽表  
  宽表使用 [稀疏列](use-sparse-columns.md) ，从而将表可以包含的总列数增大为 30,000 列。 稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 宽表已定义了一个 [列集](use-column-sets.md)，列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 索引数和统计信息数也分别增大为 1,000 和 30,000。 宽表行的最大大小为 8,019 个字节。 因此，任何特定行中的大部分数据都应为 NULL。 宽表中非稀疏列和计算列的列数之和仍不得超过 1,024。  
@@ -64,9 +64,9 @@ ms.locfileid: "68211780"
 |表任务|主题|  
 |-----------------|-----------|  
 |介绍如何创建表。|[创建表（数据库引擎）](create-tables-database-engine.md)|  
-|介绍如何删除表。|[删除 &#40;数据库引擎的表&#41;](delete-tables-database-engine.md)|  
+|介绍如何删除表。|[删除表（数据库引擎）](delete-tables-database-engine.md)|  
 |介绍如何创建包含现有表中的一些列或所有列的表。|[复制表](duplicate-tables.md)|  
-|介绍如何重命名表。|[数据库引擎 &#40;重命名表&#41;](rename-tables-database-engine.md)|  
+|介绍如何重命名表。|[重命名表（数据库引擎）](rename-tables-database-engine.md)|  
 |介绍如何查看表的属性。|[查看表定义](view-the-table-definition.md)|  
 |介绍如何确定诸如视图或存储过程等其他对象是否取决于表。|[查看表的依赖关系](view-the-dependencies-of-a-table.md)|  
   
@@ -74,11 +74,11 @@ ms.locfileid: "68211780"
   
 |列任务|主题|  
 |------------------|-----------|  
-|介绍如何向现有表中添加列。|[向表中添加列 &#40;数据库引擎&#41;](add-columns-to-a-table-database-engine.md)|  
+|介绍如何向现有表中添加列。|[向表中添加列（数据库引擎）](add-columns-to-a-table-database-engine.md)|  
 |介绍如何从表中删除列。|[从表中删除列](delete-columns-from-a-table.md)|  
-|介绍如何更改列的名称。|[重命名列 &#40;数据库引擎&#41;](rename-columns-database-engine.md)|  
-|介绍如何通过仅复制列定义或者复制定义和数据将列从一个表复制到另一个表。|[将列从一个表复制到另一个 &#40;数据库引擎&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
-|介绍如何通过更改数据类型或其他属性来修改列定义。|[数据库引擎&#41;修改列 &#40;](modify-columns-database-engine.md)|  
+|介绍如何更改列的名称。|[重命名列（数据库引擎）](rename-columns-database-engine.md)|  
+|介绍如何通过仅复制列定义或者复制定义和数据将列从一个表复制到另一个表。|[将列从一个表复制到另一个表（数据库引擎）](copy-columns-from-one-table-to-another-database-engine.md)|  
+|介绍如何通过更改数据类型或其他属性来修改列定义。|[修改列（数据库引擎）](modify-columns-database-engine.md)|  
 |介绍如何更改列的显示顺序。|[更改表中的列顺序](change-column-order-in-a-table.md)|  
 |介绍如何在表中创建计算列。|[指定表中的计算列](specify-computed-columns-in-a-table.md)|  
 |介绍如何指定列的默认值。 如果未提供其他值，则使用此值。|[指定列的默认值](specify-default-values-for-columns.md)|  

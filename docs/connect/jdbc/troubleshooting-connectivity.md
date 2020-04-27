@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: adb1203276e64f21f1834fc0ce0f0b5bb12a9321
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 12abdfd169aaea9f2108d2b4776eb99cc4bd2ce7
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528331"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728387"
 ---
 # <a name="troubleshooting-connectivity"></a>连接性疑难解答
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "81528331"
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，JDBC 驱动程序要求安装带有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（默认为不启用）。 在安装或配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，应确保将此选项包含在内。  
   
 ## <a name="see-also"></a>另请参阅  
- [诊断 JDBC 驱动程序问题](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
- [通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [诊断 JDBC 驱动程序问题](diagnosing-problems-with-the-jdbc-driver.md)   
+ [通过 JDBC 驱动程序连接到 SQL Server](connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

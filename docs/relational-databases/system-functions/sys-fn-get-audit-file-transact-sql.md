@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "77507517"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
@@ -85,26 +85,26 @@ fn_get_audit_file ( file_pattern,
   
 | 列名称 | 类型 | 说明 |  
 |-------------|------|-------------|  
-| action_id | **varchar （4）** | 操作的 ID。 不可为 Null。 |  
+| action_id | **varchar(4)** | 操作的 ID。 不可为 Null。 |  
 | additional_information | **nvarchar(4000)** | 仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  模块名称将被解析为对无效的 xml 字符（ `'\<'`如`'>'`、 `'/'`、 `'_x'`、）进行转义。 它们将被转义为`_xHHHH\_`。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。 |
 | affected_rows | **bigint** | **适用**于：仅限 AZURE SQL DB<br /><br /> 受执行语句影响的行数。 |  
 | application_name | **nvarchar(128)** | **适用于**： AZURE SQL DB + SQL Server （从2017开始）<br /><br /> 执行导致审核事件的语句的客户端应用程序的名称 |  
 | audit_file_offset | **bigint** | **适用**于：仅 SQL Server<br /><br /> 包含审核记录的文件中的缓冲区偏移量。 不可为 null。 |  
-| audit_schema_version | **int** | 始终为1 |  
-| class_type | **varchar （2）** | 发生审核的可审核实体的类型。 不可为 null。 |  
+| audit_schema_version | **int** | 始终为 1 |  
+| class_type | **varchar(2)** | 发生审核的可审核实体的类型。 不可为 null。 |  
 | client_ip | **nvarchar(128)** | **适用于**： AZURE SQL DB + SQL Server （从2017开始）<br /><br />    客户端应用程序的源 IP |  
-| connection_id | GUID | **适用**于： AZURE SQL 数据库和托管实例<br /><br /> 服务器中的连接 ID |
-| data_sensitivity_information | nvarchar(4000) | **适用**于：仅限 AZURE SQL DB<br /><br /> 根据数据库中的已分类列，由审核查询返回的信息类型和敏感度标签。 了解有关[AZURE SQL 数据库数据发现和分类的](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification)详细信息 |
+| connection_id | GUID | **适用**于： AZURE SQL 数据库和托管实例<br /><br /> 服务器中的连接的 ID |
+| data_sensitivity_information | nvarchar(4000) | **适用**于：仅限 AZURE SQL DB<br /><br /> 受审核查询根据数据库中分类的列返回的信息类型和敏感度标签。 详细了解 [Azure SQL 数据库数据发现和分类](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | 发生此操作的数据库上下文。 可以为 Null。 对于在服务器级别发生的审核，返回 NULL。 |  
 | database_principal_id | **int** |在其中执行操作的数据库用户上下文 ID。 不可为 null。 如果此不适用，则返回0。 例如，如果是服务器操作，则返回 0。|
 | database_principal_name | **sysname** | 当前用户。 可以为 Null。 如果不可用，则返回 NULL。 |  
-| duration_milliseconds | **bigint** | **适用**于： AZURE SQL 数据库和托管实例<br /><br /> 查询执行持续时间（毫秒） |
+| duration_milliseconds | **bigint** | **适用**于： AZURE SQL 数据库和托管实例<br /><br /> 查询执行持续时间，以毫秒为单位 |
 | event_time | **datetime2** | 触发可审核操作的日期和时间。 不可为 null。 |  
-| file_name | **varchar （260）** | 作为记录来源的审核日志文件的路径和名称。 不可为 null。 |
+| file_name | **varchar(260)** | 作为记录来源的审核日志文件的路径和名称。 不可为 null。 |
 | is_column_permission | **bit** | 标志，用于指示是否为列级别权限。 不可为 null。 当 permission_bitmask = 0 时返回 0。<br /> 1 = true<br /> 0 = false |
 | object_id | **int** | 发生审核的实体的 ID。 其中包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 不可为 null。 如果实体是服务器本身或者没有在对象级别执行审核，则返回 0。 例如，对于 Authentication，则返回 NULL。 |  
 | object_name | **sysname** | 发生审核的实体的名称。 其中包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 可以为 Null。 如果实体是 Server 自身或者没有在对象级别执行审核，则返回 NULL。 例如，对于 Authentication，则返回 NULL。 |
-| permission_bitmask | **varbinary （16）** | 在某些操作中，这是授予、拒绝或撤消的权限。 |
+| permission_bitmask | **varbinary(16)** | 在某些操作中，这是授予、拒绝或撤消的权限。 |
 | response_rows | **bigint** | **适用**于： AZURE SQL 数据库和托管实例<br /><br /> 在结果集中返回的行数。 |  
 | schema_name | **sysname** | 发生此操作的架构上下文。 可以为 Null。 对于在架构外发生的审核，返回 NULL。 |  
 | sequence_group_id | **varbinary** | **适用**于：仅 SQL Server （从2016开始）<br /><br />  唯一标识符 |  
@@ -179,25 +179,25 @@ fn_get_audit_file ( file_pattern,
 有关设置 Azure SQL 数据库审核的信息，请参阅[SQL 数据库审核入门](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)。
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.server_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建服务器审核规范](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT 规范 &#40;Transact-sql&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT 规范 &#40;Transact-sql&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [创建数据库审核规范 &#40;Transact-sql&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT 规范 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT 规范 &#40;Transact-sql&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-sql&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys. server_audits &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys. server_file_audits &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys. server_audit_specifications &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys. server_audit_specification_details &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys. database_audit_specifications &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys. database_audit_specification_details &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys. dm_server_audit_status &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys. dm_audit_actions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys. dm_audit_class_type_map &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [创建服务器审核和服务器审核规范](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   
