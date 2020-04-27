@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108171"
 ---
 # <a name="new-linked-report-page-report-manager"></a>“新建链接报表”页（报表管理器）
@@ -39,7 +39,7 @@ ms.locfileid: "66108171"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的“常规”属性页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表的“常规”属性页。  
   
 4.  在项工具栏中，单击 **“创建链接报表”**。  
   

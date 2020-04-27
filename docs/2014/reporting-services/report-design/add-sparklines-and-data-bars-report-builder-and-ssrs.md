@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1dbb3fd9ec10c5e1ca11a7e150f0d8a4c0fec883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106521"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>添加迷你图和数据条（报表生成器和 SSRS）
@@ -31,25 +31,25 @@ ms.locfileid: "66106521"
   
 2.  在您的表或矩阵中插入列。 有关详细信息，请参阅[插入或删除列（报表生成器和 SSRS）](insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
-3.  在 **“插入”** 选项卡上，单击 **“迷你图”** 或 **“数据条”** ，然后单击新列中的单元。  
+3.  在 **“插入”** 选项卡上，单击 **“迷你图”** 或 **“数据条”**，然后单击新列中的单元。  
   
     > [!NOTE]  
     >  不能将迷你图放置于表的详细信息组中。 它们必须处于与组相关联的单元中。  
   
-4.  在“更改迷你图/数据条类型”  对话框中，单击所需的迷你图或数据条类型，然后单击“确定”  。  
+4.  在“更改迷你图/数据条类型”**** 对话框中，单击所需的迷你图或数据条类型，然后单击“确定”****。  
   
 5.  单击该迷你图或数据条。  
   
      将打开 **“图表数据”** 窗格。  
   
-6.  在“值”  区域中，单击“添加字段”  加号 ( **+** )，然后单击要将其值制成图表的字段。  
+6.  在“值”**** 区域中，单击“添加字段”**** 加号 (**+**)，然后单击要将其值制成图表的字段。  
   
-7.  在“类别组”  区域中，单击“添加字段”  加号 ( **+** )，然后单击要依据其值分组的字段。  
+7.  在“类别组”**** 区域中，单击“添加字段”**** 加号 (**+**)，然后单击要依据其值分组的字段。  
   
      对于迷你图和数据条，通常不向 **“序列组”** 区域添加字段，因为每行只需要一个序列。  
   
 ## <a name="see-also"></a>另请参阅  
- [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

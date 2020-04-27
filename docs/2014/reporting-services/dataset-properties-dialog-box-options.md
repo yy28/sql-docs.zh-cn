@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 778365e8fc7f40700b0f8c1683260f15c860a32a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109413"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>“数据集属性”对话框 -&gt;“选项”
@@ -25,7 +25,7 @@ ms.locfileid: "66109413"
   
 ## <a name="options"></a>选项  
  **排序规则**  
- 选择用于决定在对数据排序时所用的排序规则顺序的区域设置。 **默认值**指示 Report Server 应在报表运行时尝试从数据提供程序派生该值。 如果无法派生该值，则将从计算机的区域设置派生默认值。  
+ 选择用于决定在对数据排序时所用的排序规则顺序的区域设置。 **“默认值”** 指示报表服务器在报表运行时将尝试从数据访问接口派生该值。 如果无法派生该值，则将从计算机的区域设置派生默认值。  
   
  **区分大小写**  
  选择一个用于决定是否区分大小写的值。 此选项指示数据是否区分大小写。 可以将**区分大小写**设置**为 True**、 **False**或**Auto**。默认值为 "**自动**"，指示 Report Server 应在报表运行时尝试从数据提供程序派生该值。 如果数据提供程序不支持区分大小写的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
@@ -45,8 +45,8 @@ ms.locfileid: "66109413"
 ## <a name="see-also"></a>另请参阅  
  [设置报表或文本框的区域设置 &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Windows 排序规则名称 &#40;Transact-sql&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
- [Transact-sql&#41;SQL Server 排序规则 &#40;名称](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [聚合函数 &#40;报表生成器和 SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
+ [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
+ [聚合函数（报表生成器和 SSRS）](report-design/report-builder-functions-aggregate-function.md)  
   
   

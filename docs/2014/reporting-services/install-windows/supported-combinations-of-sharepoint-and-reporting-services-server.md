@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f0997cb73a156e54b22ad280fa5d6eb0ec7d73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108653"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>支持的 SharePoint 和 Reporting Services 服务器及外接程序的组合 (SQL Server 2014)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器可在 SharePoint 模式下安装，并且可与 SharePoint 部署集成。 在报表服务器、SharePoint 的 Reporting Services 外接程序和 SharePoint 产品的所有组合中，并非所有功能都受支持。 本主题概述支持的组合。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，集成是组合以下各项的结果：  
   
 -   为 SharePoint 模式配置的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的版本。  
@@ -49,9 +48,9 @@ ms.locfileid: "66108653"
 |6|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|是|  
 |7|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2010|是|  
 |8|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|SharePoint 2010|是|  
-|9|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP2|SharePoint 2007|是|  
-|10|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]R2|SharePoint 2010|是|  
-|11|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|是|  
+|9|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|是|  
+|10|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] R2|SharePoint 2010|是|  
+|11|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|是|  
   
  有关[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]功能和 Report Server 模式的详细信息，请参阅[Reporting Services 报表服务器](../reporting-services-report-server.md)。  
   
@@ -63,11 +62,11 @@ ms.locfileid: "66108653"
   
 -   SQL Server 2012（或更高版本）报表服务器不支持 SQL Server 2008 R2 外接程序。 SharePoint 2010 必备组件安装程序会自动安装 SQL Server 2008 R2 外接程序。 必须在安装外接程序的更新版本前卸载它。 不支持外接程序的就地升级。  
   
--   **升级：** 安装了[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序的 sharepoint 2010 无法就地升级到 sharepoint 2013。 SharePoint 2013 需要 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 外接程序和报表服务器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或更高版本。 有关升级的详细信息，请参阅 [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)。  
+-   **升级：** 装有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的 SharePoint 2010 无法就地升级到 SharePoint 2013。 SharePoint 2013 需要 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 外接程序和报表服务器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或更高版本。 有关升级的详细信息，请参阅 [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)  
+ [升级和迁移 Reporting Services](upgrade-and-migrate-reporting-services.md)  
   
   

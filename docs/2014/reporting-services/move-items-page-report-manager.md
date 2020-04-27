@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108216"
 ---
 # <a name="move-items-page-report-manager"></a>“移动项”页（报表管理器）
@@ -60,7 +60,7 @@ ms.locfileid: "66108216"
   
 2.  悬停在该项之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开项的“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开项的“常规属性”页。  
   
 4.  在项工具栏中，单击 **“移动”**。  
   

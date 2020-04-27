@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107930"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "66107930"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV 呈现  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> CSV 呈现  
  当使用默认设置进行呈现时，CSV 报表具有以下特征：  
   
 -   默认字段分隔符字符串是逗号 (,)。  
@@ -65,7 +65,7 @@ ms.locfileid: "66107930"
   
  下表说明了呈现报表项时这些报表项的外观：  
   
-|Item|呈现行为|  
+|项|呈现行为|  
 |----------|------------------------|  
 |文本框|呈现文本框的内容。 在默认模式下，会根据项的格式设置属性对其进行格式化。 在兼容模式下，可以根据设备信息设置对格式进行更改。 有关 CSV 呈现模式的详细信息，请参阅下文。|  
 |表|呈现方式为扩展该表，在只保留最起码的格式的情况下为每一行和每一列都分别创建行和列。 小计行和小计列没有列标题或行标题。 不支持钻取报表。|  
@@ -96,7 +96,7 @@ ms.locfileid: "66107930"
   
  
   
-##  <a name="RenderingModes"></a> 呈现器模式  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> 呈现器模式  
  CSV 呈现扩展插件可在两种模式下运行：一种模式针对 Excel 进行了优化，另一种模式针对要求严格遵守 RFC 4180 中的 CSV 规范的第三方应用程序进行了优化。 根据所用模式的不同，对等数据区域的处理方式也有所不同。  
   
 ### <a name="default-mode"></a>默认模式  
@@ -120,7 +120,7 @@ ms.locfileid: "66107930"
 #### <a name="formatting"></a>格式设置  
  值未经过格式化。  
   
-##  <a name="Interactivity"></a> 交互  
+##  <a name="interactivity"></a><a name="Interactivity"></a>互动  
  此呈现器生成的两种 CSV 格式都不支持交互。 不会呈现以下交互元素：  
   
 -   超链接  
@@ -139,16 +139,16 @@ ms.locfileid: "66107930"
   
 
   
-##  <a name="DeviceInfo"></a> 设备信息设置  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>设备信息设置  
  您可以通过更改设备信息设置来更改相应呈现器的某些默认设置，包括呈现使用的模式、用作分隔符的字符以及用作文本限定符默认字符串的字符。 有关详细信息，请参阅 [CSV Device Information Settings](../csv-device-information-settings.md)。  
   
   
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
- [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;报表生成器和 SSRS 中的分页&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [呈现行为 &#40;报表生成器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同报表呈现扩展插件的交互功能 &#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [&#40;报表生成器和 SSRS 呈现报表项&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

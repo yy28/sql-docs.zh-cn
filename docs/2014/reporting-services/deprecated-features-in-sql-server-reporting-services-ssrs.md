@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109344"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 的 SQL Server Reporting Services 中不推荐使用的功能
@@ -27,18 +27,18 @@ ms.locfileid: "66109344"
   
  本主题内容：  
   
--   [SQL Server 2014 Reporting Services 弃用的功能](#bkmk_2014)  
+-   [SQL Server 2014 Reporting Services 中弃用的功能](#bkmk_2014)  
   
 -   [SQL Server 2012 SP1 Reporting Services 中不推荐使用的功能](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services 弃用的功能](#bkmk_2012)  
+-   [SQL Server 2012 Reporting Services 中弃用的功能](#bkmk_2012)  
   
 -   [SQL Server 2008 R2 Reporting Services 中不推荐使用的功能](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services 弃用的功能  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services 弃用的功能  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中不支持的功能  
- 的**下一**版本将不支持以下[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的 **下一个** 版本将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>HTML 呈现扩展插件的设备信息设置  
  不推荐使用 HTML 呈现扩展插件的以下设备信息设置。  
@@ -64,8 +64,7 @@ ms.locfileid: "66109344"
  有关 HTML 呈现扩展插件的详细信息，请参阅 [HTML Device Information Settings](html-device-information-settings.md)  
   
 #### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Microsoft Word 和 Microsoft Excel 1997-2003 呈现  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表呈现为 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003 二进制交换文件格式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]包含以[!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 开放 XML 格式呈现的扩展。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表呈现为 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003 二进制交换文件格式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]包含以[!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 开放 XML 格式呈现的扩展。  
   
 #### <a name="report-definition-language-rdl-2005-and-earlier"></a>报表定义语言 (RDL) 2005 和更早版本  
  不推荐使用报表定义语言 (RDL) 2005 和更早版本。 有关 RDL 的详细信息，请参阅[报表定义语言 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)。  
@@ -96,21 +95,19 @@ ms.locfileid: "66109344"
  有关不推荐使用的 Web 部件的详细信息，请参阅 [使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx)  
   
 ### <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 未来版本中不支持的功能  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的下一版本仍支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能，但以后的版本将删除这些功能。 具体是哪一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本现在还未确定。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的下一版本仍支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能，但以后的版本将删除这些功能。 具体是哪一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本现在还未确定。  
   
  没有在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services 弃用的功能  
- 本节介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中不推荐使用的 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]功能。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的下一版本仍支持以下 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能，但以后的版本将删除这些功能。 具体是哪一 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本现在还未确定。  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services 弃用的功能  
+ 本节介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中不推荐使用的 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]功能。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的下一版本仍支持以下 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能，但以后的版本将删除这些功能。 具体是哪一 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本现在还未确定。  
   
 ### <a name="sharepoint-web-parts"></a>SharePoint Web 部件  
  不推荐使用安装 cab 文件 **RSWebParts.cab** 和可以从该 cab 文件解压缩的 SharePoint Web 部件。 不推荐使用的 Web 部件是报表资源管理器 (**SPExplorer.dwp**) 和报表查看器 (**SPViewer.dwp**)。  
   
  有关不推荐使用的 Web 部件的详细信息，请参阅 [使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx)  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services 弃用的功能  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services 弃用的功能  
  本节介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中不推荐使用的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]功能。  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>HTML 呈现扩展插件的设备信息设置  
@@ -137,8 +134,7 @@ ms.locfileid: "66109344"
  有关 HTML 呈现扩展插件的详细信息，请参阅 [HTML Device Information Settings](html-device-information-settings.md)  
   
 ### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Microsoft Word 和 Microsoft Excel 1997-2003 呈现  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表呈现为 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003 二进制交换文件格式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]包含以[!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 开放 XML 格式呈现的扩展。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表呈现为 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003 二进制交换文件格式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]包含以[!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 开放 XML 格式呈现的扩展。  
   
 ### <a name="report-definition-language-rdl-2005-and-earlier"></a>报表定义语言 (RDL) 2005 和更早版本  
  不推荐使用报表定义语言 (RDL) 2005 和更早版本。 有关 RDL 的详细信息，请参阅[报表定义语言 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)。  
@@ -163,7 +159,7 @@ ms.locfileid: "66109344"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 弃用的功能  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 弃用的功能  
   
 > [!NOTE]  
 >  因为 SQL Server 2008 R2 是 SQL Server 2008 的次版本升级，所以，我们建议您也查看 SQL Server 2008 部分的内容。  

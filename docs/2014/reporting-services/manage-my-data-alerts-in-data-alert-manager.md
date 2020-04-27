@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07c75779d05d22e09e7823b5d0b3bffc2ca7acc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108308"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在数据警报管理器中管理我的数据警报
   SharePoint 用户可以查看他们所创建的数据警报列表以及与这些警报有关的信息。 用户还可以删除其警报，打开警报定义以便在数据警报设计器中进行编辑，以及运行其警报。 下图显示数据警报管理器中可用于用户的功能。  
   
- ![SharePoint 用户的警报管理器功能](media/rs-alertmanageriw.gif "SharePoint 用户的警报管理器功能")  
+ ![面向 SharePoint 用户的警报管理器功能](media/rs-alertmanageriw.gif "面向 SharePoint 用户的警报管理器功能")  
   
 ### <a name="to-view-a-list-of-your-alerts"></a>查看您的警报列表  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66108308"
      创建警报实例，并立即发送数据警报消息，而不考虑数据警报设计器中指定的计划选项。 例如，配置为每周发送的警报，并且仅当结果更改时才发送。  
   
 ## <a name="see-also"></a>另请参阅  
- [用于警报管理员的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 数据警报](../ssms/agent/alerts.md)  
   
   

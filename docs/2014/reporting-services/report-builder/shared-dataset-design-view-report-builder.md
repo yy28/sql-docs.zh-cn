@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107589"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
@@ -24,7 +24,7 @@ ms.locfileid: "66107589"
   
  有关使用报表中的数据的详细信息，请参阅[将数据添加到报表 &#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
   
-##  <a name="Ribbon"></a>功能区  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a>功能区  
  功能区可帮助您快速查找完成任务所需的命令。 命令通过以下逻辑组进行组织：连接、数据集和查询设计器。  
   
 ### <a name="connection"></a>连接  
@@ -61,7 +61,7 @@ ms.locfileid: "66107589"
   
 
   
-##  <a name="DesignSurface"></a>查询设计器图面  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a>查询设计器图面  
  查询设计器可帮助您使用外部数据源所要求的语法来生成查询。  
   
  有些数据源类型提供了图形查询设计器，您可以使用这些设计器来浏览外部数据源中的元数据。 您还可以通过互动方式将名称从元数据窗格拖动到查询设计图面，或通过互动方式选择要使用的名称。  
@@ -72,7 +72,7 @@ ms.locfileid: "66107589"
   
 
   
-##  <a name="Results"></a>查看查询结果  
+##  <a name="viewing-query-results"></a><a name="Results"></a>查看查询结果  
  在共享数据集设计视图中，您要生成一个将在处理报表时通过数据连接检索数据的查询。  
   
  运行此查询可查看通过数据连接获取的示例数据，从而验证该查询是否返回您需要的数据类型。 结果集中的列来自通过数据连接获取的数据架构的元数据。 列名成为数据集字段集合。 您在查询结果集中看到的数据值是设计时数据。 在将共享数据集另存为报表服务器上的共享数据集定义后，仅查询文本得到保存。 查询结果集中的数据不会被保存。  
@@ -86,18 +86,18 @@ ms.locfileid: "66107589"
   
  如果报表中包含参数，则只有在所有参数都具有默认值的情况下，该报表才能自动运行。 如果某个参数没有默认值，当运行报表时，必须为该参数选择一个值，然后在 **“运行”** 选项卡上单击 **“查看报表”** 。  
   
- 有关详细信息，请参阅[报表参数 &#40;报表生成器和报表设计器&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 
   
-##  <a name="Save"></a>保存共享数据集  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a>保存共享数据集  
  若要保存生成的查询，请在 **“报表生成器”** 按钮上单击 **“保存”** 或 **“另存为”**。 导航到报表服务器上的相应文件夹，然后保存共享数据集定义。 在您将共享数据集保存到报表服务器后，其他用户才能使用此共享数据集。  
   
 
   
 ## <a name="see-also"></a>另请参阅  
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [对数据进行筛选、分组和排序 &#40;报表生成器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

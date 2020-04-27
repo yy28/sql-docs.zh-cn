@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 905aa453c8a6cac78e8423d071672d6431e3c3c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109200"
 ---
 # <a name="expression-dialog-box"></a>“表达式”对话框
@@ -29,8 +29,7 @@ ms.locfileid: "66109200"
   
  若要打开“表达式”对话框，请单击对话框中的表达式 (**fx**) 按钮，或者从“属性”窗格的快捷菜单或下拉列表中选择“表达式”********。 有关详细信息，请参阅[在报表中使用表达式 &#40;报表生成器和 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)。  
   
- 
-  **“表达式”** 对话框包含代码窗口、类别树、类别项、说明窗格和示例窗格。  
+ **“表达式”** 对话框包含代码窗口、类别树、类别项、说明窗格和示例窗格。  
   
  “表达式”**** 对话框是上下文相关的；根据你所使用的表达式类别，各类别项和说明也会相应地变化。 表达式对话框支持 IntelliSense、语句完成、函数调用示例和语法着色功能，从而便于您检测语法错误。  
   
@@ -48,13 +47,13 @@ ms.locfileid: "66109200"
  **内置字段**  
  提供的列表包含可以在表达式中使用的全局集合中的项。 某些集合只有在报表发布到服务器后才受支持。 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
- **参数**  
+ **Parameters**  
  提供报表参数的列表。  
   
  **字段（** _ \<所选数据集>_ **）**  
  显示在数据集类别中选择的数据集的字段列表。 双击某字段可将该字段复制到“表达式”**** 框。  
   
- **集**  
+ **数据集**  
  提供可用数据集的列表并显示数据集的成员字段。  
   
  **变量**  
@@ -90,13 +89,13 @@ ms.locfileid: "66109200"
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
- [在报表中使用表达式（报表生成器和 SSRS）](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [设置数字和日期格式（报表生成器和 SSRS）](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [参数集合引用（报表生成器和 SSRS）](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [组表达式示例（报表生成器和 SSRS）](report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [表达式在报表中使用 &#40;报表生成器和 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [设置数字和日期格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [参数集合引用 &#40;报表生成器和 SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [组表达式示例 &#40;报表生成器和 SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [筛选器公式示例 &#40;报表生成器和 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [表达式中的数据类型（报表生成器和 SSRS）](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [表达式中的内置集合（报表生成器和 SSRS）](report-design/built-in-collections-in-expressions-report-builder.md)   
- [添加表达式 &#40;报表生成器和 SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
+ [表达式中的数据类型 &#40;报表生成器和 SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [表达式中的内置集合 &#40;报表生成器和 SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
+ [添加表达式（报表生成器和 SSRS）](report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   

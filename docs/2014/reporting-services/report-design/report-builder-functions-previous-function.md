@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 540bf8367ba32fbebe4e27ee6e2cd3e1aa01ae0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105203"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous 函数（报表生成器和 SSRS）
@@ -38,24 +38,23 @@ Previous(expression, scope)
  (`String`) 可选。 组或数据区域的名称，或者为 null （`Nothing`在中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]为），它指定要从中检索*expression*指定的以前值的作用域。  
   
 ## <a name="return-type"></a>返回类型  
- 返回`Variant`或`Binary`。  
+ 返回 `Variant` 或 `Binary`。  
   
 ## <a name="remarks"></a>备注  
- 
-  `Previous` 函数返回在应用所有排序和筛选之后，指定作用域内计算的表达式的前一个值。  
+ `Previous` 函数返回在应用所有排序和筛选之后，指定作用域内计算的表达式的前一个值。  
   
  如果*expression*不包含聚合，则`Previous`函数默认为报表项的当前作用域。  
   
  在详细信息组中，使用 `Previous` 可以在详细信息行的前一实例中指定字段引用的值。  
   
 > [!NOTE]  
->  `Previous`函数只支持详细信息组中的字段引用。 例如，在详细信息组的文本框中， `=Previous(Fields!Quantity.Value)` 将返回上一行中 `Quantity` 字段的数据。 在第一行中，此表达式返回一个 Null（在 `Nothing` 中为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）。  
+>  `Previous`函数只支持详细信息组中的字段引用。 例如，在详细信息组的文本框中， `=Previous(Fields!Quantity.Value)` 将返回上一行中 `Quantity` 字段的数据。 在第一行中，此表达式返回一个 Null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`）。  
   
  如果*expression*包含使用默认作用域的聚合函数， `Previous`则聚合聚合函数调用中指定的作用域的前一个实例内的数据。  
   
  如果*expression*包含指定非默认作用域的聚合函数，则该`Previous`函数的*作用域*参数必须是聚合函数调用中指定的作用域的包含作用域。  
   
- 在 expression `Level`参数`InScope`中`Aggregate`不`Previous`能使用函数、和**。 不支持将 *recursive* 参数指定给任何聚合函数。  
+ 在 expression `Level`参数`InScope`中`Aggregate`不`Previous`能使用函数、和*expression*。 不支持将 *recursive* 参数指定给任何聚合函数。  
   
  有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)和[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   

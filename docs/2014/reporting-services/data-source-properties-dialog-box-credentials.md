@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed5b58aa9a4fe81a55e602fb61f673bf10059ee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109463"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>“数据源属性”对话框 ->“凭据”
@@ -33,10 +33,10 @@ ms.locfileid: "66109463"
  **用户名**  
  键入登录数据源时要使用的用户名。  
   
- **权限**  
+ **密码**  
  键入登录数据源时要使用的密码。  
   
- **提示输入凭据**  
+ **提示凭据**  
  选择此选项可以在运行报表时提示输入凭据。  
   
  **输入提示字符串**  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d282636b58352f0ffad1083077bdab9769bd6fdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105605"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>将多个数据区域链接到同一数据集（报表生成器和 SSRS）
@@ -27,11 +27,11 @@ ms.locfileid: "66105605"
   
  具有多个行组的表可以显示为一个具有多个类别组的柱形图。 有关详细信息，请参阅[在矩阵和图表中显示相同数据（报表生成器）](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)。 有关呈现同一报表数据集的不同视图的表和图表的示例，请参阅 AdventureWorks 报表示例中的 Product Line Sales 报表。 由于表和图表都链接到该报表中的同一数据集，因此，当在对 Top Employees 表排序的过程中单击 Employee Name 的交互式排序按钮时，Top Employees 图表还会自动显示新的排序顺序。 有关下载此示例报表和其他内容的详细信息， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]请参阅[报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
- 具有多个行组和列组的矩阵可以使用具有类别组和序列组的面积图、条形图或柱形图以最佳方式显示。 请对矩阵中的列组和图表中的类别组使用相同的组表达式，并对矩阵中的行组和图表中的序列组使用相同的表达式。 必须牢记组实例数影响图表的可读性。 您可以根据范围值定义组，以便减少图表中的组实例数。 有关详细信息，请参阅[组表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)。  
+ 具有多个行组和列组的矩阵可以使用具有类别组和序列组的面积图、条形图或柱形图以最佳方式显示。 请对矩阵中的列组和图表中的类别组使用相同的组表达式，并对矩阵中的行组和图表中的序列组使用相同的表达式。 必须牢记组实例数影响图表的可读性。 您可以根据范围值定义组，以便减少图表中的组实例数。 有关详细信息，请参阅 [组表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [列出 &#40;报表生成器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)  
   
   

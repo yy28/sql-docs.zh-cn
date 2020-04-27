@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108984"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>“图像属性”对话框 -&gt;“大小”（报表生成器和 SSRS）
@@ -51,7 +51,7 @@ ms.locfileid: "66108984"
 ## <a name="see-also"></a>另请参阅  
  ["图像属性" 对话框-"常规" &#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
- [图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)   
- [报表生成器对话框、窗格和向导的帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [映像 &#40;报表生成器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -13,26 +13,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb8d81c9c47f00ed84036accf86768d084072c4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109493"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>报表生成器中的数据连接、数据源和连接字符串
   为了在报表中包含数据，您需要创建数据连接和数据集。 数据连接包括有关如何访问外部数据源的信息。 数据集包含一个查询命令，用于指定通过使用数据连接要包含哪些数据。  
   
-1.  **"报表数据" 窗格中的数据源**创建嵌入数据源或添加共享数据源后，数据源将显示在 "报表数据" 窗格中。  
+1.  **“报表数据”窗格中的数据源** 在创建嵌入数据源或添加共享数据源后，会在“报表数据”窗格中显示一个数据源。  
   
-2.  **"连接" 对话框**使用 "连接" 对话框可以生成连接字符串或粘贴连接字符串。  
+2.  **“连接”对话框** 使用“连接”对话框可以生成连接字符串或粘贴连接字符串。  
   
-3.  **数据连接信息**将连接字符串传递给数据扩展插件。  
+3.  **数据连接信息** 将连接字符串传递给数据扩展插件。  
   
-4.  **凭据**凭据与连接字符串分开管理。  
+4.  **凭据** 凭据与连接字符串是分开管理的。  
   
-5.  **数据扩展插件/数据访问接口**连接到数据可以通过多个数据访问层。  
+5.  **数据扩展插件/数据访问接口** 对数据的连接可通过多个数据访问层。  
   
-6.  **外部数据源**从关系数据库、多维数据库、SharePoint 列表、Web 服务或报表模型检索数据。  
+6.  **外部数据源** 检索来自关系数据库、多维数据库、SharePoint 列表、Web 服务或报表模型的数据。  
   
  有关详细信息，请参阅 Reporting Services 中的[嵌入和共享数据连接或数据源 &#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)和[数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
@@ -43,15 +43,14 @@ ms.locfileid: "66109493"
   
  ![rs_DataSourcesStory](media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
-##  <a name="ConnectionString"></a>连接字符串示例  
+##  <a name="connection-string-examples"></a><a name="ConnectionString"></a>连接字符串示例  
  数据连接包括一个连接字符串，它通常由外部数据源的所有者提供。 下表列出了不同外部数据源类型的连接字符串示例：  
   
 |**数据源**|**示例**|**说明**|  
 |---------------------|-----------------|---------------------|  
 |本地服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库|`data source="(local)";initial catalog=AdventureWorks2012`|将数据源类型设置为 `SQL Server`。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例数据库|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|将数据源类型设置为 `SQL Server`。|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 数据库|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|将数据源类型设置为 `SQL Server`。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例数据库|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|将数据源类型设置为 `SQL Server`。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 数据库|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|将数据源类型设置为 `SQL Server`。|  
 |本地服务器上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库|`data source=localhost;initial catalog=Adventure Works DW 2012`|将数据源类型设置为 `SQL Server Analysis Services`。|  
 |SharePoint 列表|`data source=http://MySharePointWeb/MySharePointSite/`|将数据源类型设置为 `SharePoint List`。|  
 ||||  
@@ -60,16 +59,16 @@ ms.locfileid: "66109493"
 |SAP NetWeaver BI 数据源|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|将数据源类型设置为 `SAP NetWeaver BI`。|  
 |Hyperion Essbase 数据源|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|将数据源类型设置为 `Hyperion Essbase`。|  
 |Teradata 数据源|`data source=`* \<NN>。\<NNN>。\<NNN>。N \<>*`;`|将数据源类型设置为 `Teradata`。 连接字符串是包含四个字段的 Internet 协议 (IP) 地址，其中每个字段可以包含一至三位数。|  
-|Teradata 数据源|`Database=`数据库名称>`; data source=`>。 * \<* * \<** \<NNN>。\<NNN>。N \<* NN*>*`;Use X Views=False;Restrict to Default Database=True`|与前一示例类似，将数据源类型设置为 `Teradata`。 请仅使用在 Database 标记中指定的默认数据库，不要自动发现数据关系。|  
+|Teradata 数据源|`Database=` *database name>\<* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<NNN**>*`;Use X Views=False;Restrict to Default Database=True`|与前一示例类似，将数据源类型设置为 `Teradata`。 请仅使用在 Database 标记中指定的默认数据库，不要自动发现数据关系。|  
 |XML 数据源、Web 服务|`data source=http://adventure-works.com/results.aspx`|将数据源类型设置为 `XML`。 连接字符串是支持 Web 服务定义语言 (WSDL) 的 Web 服务的 URL。|  
 |XML 数据源、XML 文档|`http://localhost/XML/Customers.xml`|将数据源类型设置为 `XML`。 其连接字符串是一个指向 XML 文档的 URL。|  
-|XML 数据源、嵌入的 XML 文档|*空白处*|将数据源类型设置为 `XML`。 XML 数据嵌入在报表定义中。|  
+|XML 数据源、嵌入的 XML 文档|*空*|将数据源类型设置为 `XML`。 XML 数据嵌入在报表定义中。|  
   
  有关每种连接类型的详细信息，请参阅[从外部数据源 &#40;ssrs&#41;](report-data/add-data-from-external-data-sources-ssrs.md)和[支持的数据源 Reporting Services &#40;Ssrs&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)中添加数据。  
   
 
   
-##  <a name="Creating"></a>创建数据源  
+##  <a name="creating-data-sources"></a><a name="Creating"></a>创建数据源  
  若要创建嵌入数据源，您必须具有一个连接字符串和访问数据所需的凭据。 此信息通常来自数据源的所有者。 数据连接作为数据源的一部分保存在报表定义中。 凭据和连接是分开管理的。 有关分步说明，请参阅[添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  

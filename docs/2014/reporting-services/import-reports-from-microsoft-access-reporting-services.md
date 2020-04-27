@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 862d8b90f3c91dffda35971677db7fdc231c1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108931"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>从 Microsoft Access 导入报表 (Reporting Services)
@@ -26,8 +26,7 @@ ms.locfileid: "66108931"
  使用导入功能时，将导入数据库或项目文件中的所有报表。 如果 Access 文件中包含多个报表，您可能需要创建一个单独的报表项目，以便将报表导入到其中，然后在主报表项目中打开各个 RDL 文件。 将报表导入到报表设计器后，可以对报表进行编辑。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 并不支持所有的 Access 报表对象。 未转换的项将显示在 "**任务列表**" 窗口中。 有关详细信息，请参阅[支持的 Access 报表功能 &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md)。  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 并不支持所有的 Access 报表对象。 未转换的项将显示在 "**任务列表**" 窗口中。 有关详细信息，请参阅[支持的 Access 报表功能 &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md)。  
   
 ### <a name="to-import-reports-from-microsoft-access"></a>从 Microsoft Access 导入报表  
   

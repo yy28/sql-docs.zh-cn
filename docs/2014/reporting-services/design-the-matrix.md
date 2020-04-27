@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109298"
 ---
 # <a name="design-the-matrix"></a>设计矩阵
@@ -29,20 +29,20 @@ ms.locfileid: "66109298"
  **显示字段**  
  显示已经为页面、组或详细信息分配的字段。 单击 **“删除”** 可将字段从列表中删除。  
   
- **第**  
+ **分页**  
  查看在页面级别中显示的字段的列表。 若要更改这些字段的顺序，请选择一个字段，再单击上移按钮或下移按钮。  
   
  **“列”**  
  查看以矩阵列形式显示的字段的列表。 若要更改这些字段的顺序，请选择一个字段，再单击上移按钮或下移按钮。  
   
- **各**  
+ **行**  
  查看以矩阵行形式显示的字段的列表。 若要更改这些字段的顺序，请选择一个字段，再单击上移按钮或下移按钮。  
   
  **详细信息**  
  查看在矩阵的详细信息部分中所显示字段的列表。 若要更改这些字段的顺序，请选择一个字段，再单击上移按钮或下移按钮。  
   
 ## <a name="see-also"></a>另请参阅  
- [矩阵（报表生成器和 SSRS）](report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [矩阵 &#40;报表生成器和 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [报表向导帮助](../../2014/reporting-services/report-wizard-help.md)  
   
   

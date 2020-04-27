@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c66e8e8ce302044cac8caf488ca27a0c0c07651e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107801"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一些交互式报告功能，利用这些功能，可以在运行时处理报表。 并非所有的报表呈现格式都支持整套交互功能。 您可以通过下表了解每项交互功能在处理特定格式时的工作原理。  
   
 > [!NOTE]  
@@ -111,9 +110,9 @@ ms.locfileid: "66107801"
   
 ## <a name="see-also"></a>另请参阅  
  [导出报表 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [交互式排序、文档结构图和链接（报表生成器和 SSRS）](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [矩阵（报表生成器和 SSRS）](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [交互式排序、文档结构图和链接 &#40;报表生成器和 SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [矩阵 &#40;报表生成器和 SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [表、矩阵和列表 &#40;报表生成器和 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [图表&#40;报表生成器和 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

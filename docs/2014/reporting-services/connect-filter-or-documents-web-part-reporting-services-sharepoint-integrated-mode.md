@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109719"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>连接筛选器或文档 Web 部件（SharePoint 集成模式下的 Reporting Services）
@@ -35,17 +35,17 @@ ms.locfileid: "66109719"
   
 2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”**。  
   
-3.  单击 "**添加 Web 部件**"。  
+3.  单击 **“添加 Web 部件”**。  
   
 4.  在 "**所有 Web 部件**的"**杂项**"类别中，选择**SQL Server Reporting Services 报表查看器**"。  
   
-5.  单击“添加”  。 Web 部件将添加到区域的顶部。  
+5.  单击 **“添加”** 。 Web 部件将添加到区域的顶部。  
   
-6.  在同一 Web 部件页或仪表板中的其他区域上，单击 "**添加 Web 部件**"。  
+6.  在同一 Web 部件页或面板中的另一区域上，单击 **“添加 Web 部件”**。  
   
-7.  在 "**所有 Web 部件**的"**筛选器**"部分中，选择一个 Web 部件。  
+7.  在 **“所有 Web 部件”** 的 **“筛选器”** 部分，选择一个 Web 部件。  
   
-8.  单击“添加”  。 Web 部件将添加到区域的顶部。  
+8.  单击 **“添加”** 。 Web 部件将添加到区域的顶部。  
   
 9. 在包含 web 部件的区域中，单击 web 部件的 "**编辑**" 菜单，依次指向 "**连接**"、"**将筛选器值发送到**"，然后选择 "**报表查看器** - *报表名称*"。  
   
@@ -57,21 +57,21 @@ ms.locfileid: "66109719"
   
 2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”**。  
   
-3.  单击 "**添加 Web 部件**"。  
+3.  单击 **“添加 Web 部件”**。  
   
-4.  在 "**所有 Web 部件**的"**列表和库**"部分中，选择"**文档 "。**  
+4.  在 **“所有 Web 部件”** 的 **“列表和库”** 部分中，选择 **“文档”**。  
   
-5.  单击“添加”  。 Web 部件将添加到区域的顶部。  
+5.  单击 **“添加”** 。 Web 部件将添加到区域的顶部。  
   
 6.  在工具窗格的底部，单击 **“应用”** ，然后单击 **“确定”** 关闭窗格。  
   
-7.  在同一 Web 部件页或仪表板中的其他区域上，单击 "**添加 Web 部件**"。  
+7.  在同一 Web 部件页或面板中的另一区域上，单击 **“添加 Web 部件”**。  
   
-8.  在 "**所有 Web 部件**的"**杂项**"类别中，选择**SQL Server Reporting Services 报表查看器"。**  
+8.  在 **“所有 Web 部件”** 的 **“杂项”** 类别中，选择 **“SQL Server Reporting Services 报表查看器”.**  
   
-9. 单击“添加”  。 Web 部件将添加到区域的顶部。  
+9. 单击 **“添加”** 。 Web 部件将添加到区域的顶部。  
   
-10. 在包含 Web 部件的区域中，单击 Web 部件的 "**编辑**" 菜单，依次指向 "**连接**"、"**从获取报表定义**"，然后选择 "**文档**"。  
+10. 在包含 Web 部件的区域中，单击 Web 部件的 **“编辑”** 菜单，依次指向 **“连接”**、 **“获取报表定义于”**，然后选择 **“文档”**。  
   
 11. 签入更改并保存此页。  
   

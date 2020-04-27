@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107999"
 ---
 # <a name="query-builder-report-wizard"></a>查询生成器（报表向导）
@@ -37,7 +37,7 @@ ms.locfileid: "66107999"
  **编辑为文本**  
  在基于文本的查询设计器和图形查询设计器之间切换（如果二者都适用于该查询）。  
   
- **Import**  
+ **导入**  
  打开“导入查询”**** 对话框，显示任何可用报表的 .rdl 和 .sql 文件。 可以按原样使用导入的查询，也可以在查询生成器中进行修改。  
   
  **!用**  
@@ -46,14 +46,14 @@ ms.locfileid: "66107999"
  **命令类型**  
  指定 Text、StoredProcedure 或 TableDirect。 命令类型是否可用取决于您指定的数据处理扩展插件。  
   
- **查询窗格**  
+ **“查询”窗格**  
  键入查询。  
   
  **结果窗格**  
  显示查询返回的结果集。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [报表向导帮助](../../2014/reporting-services/report-wizard-help.md)  
   
   

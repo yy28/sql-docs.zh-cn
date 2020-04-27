@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108390"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 课：创建数据筛选器
@@ -41,7 +41,7 @@ ms.locfileid: "66108390"
   
 4.  在 "**表达式**" 字段中`ProductID` ，单击下拉列表中的。 筛选器即应用于此列。  
   
-5.  在 "运算符"**=** 下拉列表中单击**** 等于（）运算符。  
+5.  在 "运算符"**=** 下拉列表中单击**Operator**等于（）运算符。  
   
 6.  单击 "**值**" 字段旁边的 "表达式" 按钮，在 "**类别**" 区域中单击 "**参数**" `productid` ，然后在 "**值**" 区域中双击。 “为以下项设置表达式: 值”字段现在应包含类似于 =Parameters!productid.Value 的表达式   。  
   

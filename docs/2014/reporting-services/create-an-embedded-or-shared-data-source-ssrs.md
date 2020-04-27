@@ -13,15 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109659"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>创建嵌入数据源或共享数据源 (SSRS)
-  报表数据源指定名称和连接信息。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持两种类型的数据源，分别是嵌入数据源和共享数据源。 嵌入数据源在报表定义中定义并只由该报表使用。 共享数据源被定义为一个单独项并可由多个报表使用。 有关详细信息，请参阅[嵌入和共享的数据连接或数据源 &#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)。  
+  报表数据源指定名称和连接信息。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持两种类型的数据源，分别是嵌入数据源和共享数据源。 嵌入数据源在报表定义中定义并只由该报表使用。 共享数据源被定义为一个单独项并可由多个报表使用。 有关详细信息，请参阅[嵌入和共享的数据连接或数据源 &#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)。  
   
  在报表生成器中，浏览到报表服务器或 SharePoint 站点并选择数据源，或者创建嵌入数据源。 不能在报表生成器中创建共享数据源。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66109659"
 1.  在 "报表数据" 窗格的工具栏上，单击 "**新建**"，然后单击 "**数据源**"。 此时将打开 **“数据源属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果“报表数据”窗格不可见，请单击“视图”**** 菜单上的“报表数据”****。  
+    >   如果“报表数据”窗格不可见，请单击 **“视图”** 菜单上的 **“报表数据”** 。  
   
 2.  在 **“名称”** 文本框中，键入数据源的名称，或接受默认值。 此数据源名称在报表内部使用。 为便于识别，建议数据源名称包含在连接字符串中指定的数据库的名称。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66109659"
   
 4.  对于共享数据源，验证是否选择了 "**使用共享数据源引用**"。  
   
-    1.  单击 **“新建”** 。 在 **“共享数据源属性”** 对话框中，执行步骤 2 和 3 创建新数据源。  
+    1.  单击 **“新建”**。 在 **“共享数据源属性”** 对话框中，执行步骤 2 和 3 创建新数据源。  
   
     2.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -91,6 +90,6 @@ ms.locfileid: "66109659"
  [将嵌入数据源转换为共享 &#40;报表生成器和 SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
  [将报表或模型绑定到共享数据源 &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [配置报表的数据源属性 &#40;报表管理器&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Reporting Services &#40;SSRS 支持的数据源&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services 支持的数据源 (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

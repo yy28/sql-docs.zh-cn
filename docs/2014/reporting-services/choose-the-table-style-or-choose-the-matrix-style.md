@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 137d9d4adf1377d730bac2fc6e847f97d02c2c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109817"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>选择表样式或选择矩阵样式
@@ -25,7 +25,7 @@ ms.locfileid: "66109817"
  您还可以添加其他样式模板。  
   
 ## <a name="see-also"></a>另请参阅  
- [表、矩阵和列表（报表生成器和 SSRS）](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [表、矩阵和列表 &#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [报表向导帮助](../../2014/reporting-services/report-wizard-help.md)  
   
   

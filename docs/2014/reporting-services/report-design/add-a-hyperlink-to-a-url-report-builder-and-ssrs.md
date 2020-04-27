@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106819"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
@@ -23,14 +23,14 @@ ms.locfileid: "66106819"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 如果您和您的用户有权使用对报表服务器的 URL 请求来查看某一报表服务器上的报表，则您还可以指定指向这些报表的 URL。 例如，可以指定一个报表，并在用户首次查看该报表时隐藏文档结构图。 有关详细信息，请参阅 [ 联机丛书中 ](../url-access-ssrs.md)Reporting Services 文档[中的 ](https://go.microsoft.com/fwlink/?linkid=121312)URL 访问 (SSRS)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果您和您的用户有权使用对报表服务器的 URL 请求来查看某一报表服务器上的报表，则您还可以指定指向这些报表的 URL。 例如，可以指定一个报表，并在用户首次查看该报表时隐藏文档结构图。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的 [URL 访问 (SSRS)](../url-access-ssrs.md)。  
   
  还可以向具有 **“操作”** 属性的任何项的 URL 添加超链接，例如图表中的文本框、图像或计算序列。 用户单击该报表项时，将执行您所定义的操作。 有关详细信息，请参阅[“操作属性”对话框（报表生成器和 SSRS）](../action-properties-dialog-box-report-builder-and-ssrs.md)和[指定外部项的路径（报表生成器和 SSRS）](specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
  若要快速开始使用，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
->  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 msdn.microsoft.com 上 [](../security/secure-reports-and-resources.md)联机丛书[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的[保护报表和资源](https://go.microsoft.com/fwlink/?LinkId=154888)。  
+>  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 msdn.microsoft.com 上 [联机丛书](../security/secure-reports-and-resources.md) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][保护报表和资源](https://go.microsoft.com/fwlink/?LinkId=154888) 。  
   
 ### <a name="to-add-a-hyperlink"></a>添加超链接  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66106819"
 7.  若要测试该链接，请单击 **“运行”** 以预览报表，然后单击对其设置此链接的报表项。  
   
 ## <a name="see-also"></a>另请参阅  
- [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [交互式排序、文档结构图和链接 &#40;报表生成器和 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [创建文档结构图（报表生成器和 SSRS）](create-a-document-map-report-builder-and-ssrs.md)  
   
   

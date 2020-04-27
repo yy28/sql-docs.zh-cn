@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104468"
 ---
 # <a name="report-manager-f1-help"></a>报表管理器的 F1 帮助
@@ -80,7 +80,7 @@ ms.locfileid: "66104468"
   
 -   [“报表历史记录”页](../../2014/reporting-services/report-history-page-report-manager.md)  
   
--   [搜索结果页](../../2014/reporting-services/search-page-report-manager.md)  
+-   [“搜索结果”页](../../2014/reporting-services/search-page-report-manager.md)  
   
 -   [“安全性”页（站点设置）](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   

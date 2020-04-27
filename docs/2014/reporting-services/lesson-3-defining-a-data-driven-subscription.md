@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108510"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
@@ -23,7 +23,7 @@ ms.locfileid: "66108510"
 > [!NOTE]  
 >  开始操作之前，请确认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务正在运行。 如果该代理服务未运行，则无法保存订阅。  
   
- 本课程假设您已经完成了第 1 课和第 2 课，并且报表数据源使用存储的凭据。  有关详细信息，请参阅[第 2 课：修改报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+ 本课程假设您已经完成了第 1 课和第 2 课，并且报表数据源使用存储的凭据。  有关详细信息，请参阅 [第 2 课：修改报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
  本主题内容：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66108510"
   
 -   [步骤 6 - 计划订阅](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a>启动数据驱动订阅向导  
+##  <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>启动数据驱动订阅向导  
   
 1.  在报表管理器中，单击 **“主文件夹”**，导航到包含 **Sales Orders** 报表的文件夹。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66108510"
   
 3.  单击 "**新建数据驱动订阅**"。 如果看不到此按钮，则说明您不具备“内容管理员”权限。  
   
-##  <a name="bkmk_definesubscription"></a>步骤 1-定义说明  
+##  <a name="step-1---define-a-description"></a><a name="bkmk_definesubscription"></a>步骤 1-定义说明  
   
 1.  在说明中键入 **销售订单传递** 。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108510"
   
 3.  选中 **“仅为此订阅指定”**，然后单击 **“下一步”**。  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a>步骤 2-定义与订阅服务器数据源的连接  
+##  <a name="step-2---define-a-connection-to-the-subscriber-data-source"></a><a name="bkmk_defineconnectiontosubscriber"></a>步骤 2-定义与订阅服务器数据源的连接  
   
 1.  选择 **“Microsoft SQL Server”** 作为数据源类型。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66108510"
     ```  
   
     > [!NOTE]  
-    >  Subscribers 是在第 1 课中创建的数据库。  
+    >   订阅服务器是您在第 1 课中创建的数据库。  
   
 3.  单击 **“安全存储在报表服务器中的凭据”**。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66108510"
   
 5.  选择 **“在与数据源建立连接时用作 Windows 凭据”**，再单击 **“下一步”**。  
   
-##  <a name="bkmk_definequery"></a>步骤 3-定义检索订阅服务器数据的查询  
+##  <a name="step-3---define-a-query-to-retrieve-subscriber-data"></a><a name="bkmk_definequery"></a>步骤 3-定义检索订阅服务器数据的查询  
   
 1.  在查询框中，键入以下查询：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108510"
   
 3.  单击 **“验证”**，再单击 **“下一步”**。  
   
-##  <a name="bkmk_set_deliveryoptions"></a>步骤 4-设置传递选项  
+##  <a name="step-4---set-delivery-options"></a><a name="bkmk_set_deliveryoptions"></a>步骤 4-设置传递选项  
   
 1.  对于 **“文件名”**，请选择 **“从数据库获取该值”**。 选择字段 **Order**。  
   
@@ -107,13 +107,13 @@ ms.locfileid: "66108510"
   
 7.  对于 **“密码”**，请选择 **“指定静态值”**。 键入您的密码。 请务必仔细键入密码。 向导不会对密码进行验证。  
   
-8.  单击“下一步”   
+8.  单击“下一步”。  
   
-##  <a name="bkmk_configure_parameter"></a>步骤 5-将参数值配置为非常报告输出  
+##  <a name="step-5---configure-a-parameter-value-to-very-report-output"></a><a name="bkmk_configure_parameter"></a>步骤 5-将参数值配置为非常报告输出  
   
-1.  对于 **OrderNumber**，请选择 **“从数据库获取该值”**。 在“值”中，选择 **Order**。 单击“下一步”   
+1.  对于 **OrderNumber**，请选择 **“从数据库获取该值”**。 在“值”中，选择 **Order**。 单击“下一步”。  
   
-##  <a name="bkmk_schedule_subscription"></a>步骤 6-计划订阅  
+##  <a name="step-6---to-schedule-a-subscription"></a><a name="bkmk_schedule_subscription"></a>步骤 6-计划订阅  
   
 1.  单击 **“根据为此订阅创建的计划”**，再单击 **“下一步”**。  
   
@@ -138,10 +138,10 @@ ms.locfileid: "66108510"
  此步骤将结束“定义数据驱动订阅”教程。 若要详细了解其他[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]教程，请参阅[SSRS&#41;Reporting Services 教程 &#40;](../reporting-services/reporting-services-tutorials-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建数据驱动订阅 &#40;SSRS 教程&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [创建数据驱动订阅（SSRS 教程）](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [创建、修改和删除数据驱动订阅](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [将外部数据源用于订阅服务器数据 &#40;数据驱动订阅&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [使用外部数据源提供订阅方数据（数据驱动订阅）](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

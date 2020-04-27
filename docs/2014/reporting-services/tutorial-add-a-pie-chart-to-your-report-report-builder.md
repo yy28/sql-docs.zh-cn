@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099051"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
@@ -26,8 +26,8 @@ ms.locfileid: "66099051"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a>你将学习的内容  
- 在本教程中，将了解如何：  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容  
+ 在本教程中，您将学习如何执行以下操作：  
   
 1.  [使用图表向导创建饼图](#Chart)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66099051"
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Chart"></a>1. 使用图表向导创建饼图  
+##  <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. 使用图表向导创建饼图  
  从“入门”对话框中使用图表向导创建嵌入数据集，选择共享数据源，并创建饼图。  
   
 > [!NOTE]  
@@ -68,16 +68,16 @@ ms.locfileid: "66099051"
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在右窗格中，单击“图表向导”  。  
+3.  在右窗格中，单击“图表向导”****。  
   
-4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”    。  
+4.  在 "**选择数据集**" 页上，单击 "**创建数据集**"，然后单击 "**下一步**"。  
   
-5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”   。 您可能需要输入用户名和密码。  
+5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”********。 您可能需要输入用户名和密码。  
   
     > [!NOTE]  
     >  只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  在 **“设计查询”** 页中，单击 **“编辑为文本”** 。  
+6.  在 "**设计查询**" 页上，单击 "**编辑为文本**"。  
   
 7.  将以下查询粘贴到查询窗格中：  
   
@@ -92,22 +92,22 @@ ms.locfileid: "66099051"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  （可选）单击“运行”按钮 ( **!** )，查看要用于图表的数据。  
+8.  （可选）单击“运行”按钮 (!)，查看要用于图表的数据****。  
   
-9. 单击“下一步”。   
+9. 单击“下一步”  。  
   
-##  <a name="ChartType"></a>2. 选择图表类型  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. 选择图表类型  
  可以从各种预定义的图表类型中进行选择。  
   
 #### <a name="to-add-a-pie-chart"></a>添加饼图  
   
-1.  在 "**选择图表类型**" 页上，单击 "**饼图**"，然后单击 "**下一步**"。 将打开“排列图表字段”  页。  
+1.  在 "**选择图表类型**" 页上，单击 "**饼图**"，然后单击 "**下一步**"。 将打开“排列图表字段”**** 页。  
   
-     在“排列图表字段”  页上，将“Product”字段拖到“类别”  窗格中。 类别定义了饼图上的切片数。 在本示例中，将有 8 个切片，每个产品对应一个切片。  
+     在“排列图表字段”**** 页上，将“Product”字段拖到“类别”**** 窗格中。 类别定义了饼图上的切片数。 在本示例中，将有 8 个切片，每个产品对应一个切片。  
   
-2.  将“Sales”字段拖到“值”  窗格中。 Sales 表示子类别的销售量。 “值”  窗格显示 `[Sum(Sales)]`，因为该图表显示的是每个产品的销售总额。  
+2.  将“Sales”字段拖到“值”**** 窗格中。 Sales 表示子类别的销售量。 “值”**** 窗格显示 `[Sum(Sales)]`，因为该图表显示的是每个产品的销售总额。  
   
-3.  单击“下一步”。   
+3.  单击“下一步”  。  
   
 4.  在 "**选择样式**" 页上的 "样式" 窗格中，选择样式。  
   
@@ -123,25 +123,25 @@ ms.locfileid: "66099051"
   
  报表会显示具有 8 个切片的饼图，每个产品对应一个切片。 每个切片的大小表示该产品在 2004 年的销售额。 其中有三个切片非常薄。  
   
-##  <a name="Percentages"></a>3. 在每个切片中显示百分比  
+##  <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. 在每个切片中显示百分比  
  在饼图的每个切片上，可以显示此切片占整个饼图的百分比。  
   
 #### <a name="to-display-percentages-in-each-slice-of-the-pie-chart"></a>在饼图的每个切片中显示百分比  
   
 1.  切换到报表设计视图。  
   
-2.  右键单击饼图，然后单击“显示数据标签”  。 数据标签会显示在图表上。  
+2.  右键单击饼图，然后单击“显示数据标签”****。 数据标签会显示在图表上。  
   
 3.  右键单击标签，然后单击 "**序列标签属性**"。  
   
 4.  在 "标签数据" 的下拉框中，选择 " **#PERCENT**"。  
   
-     若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值，请在“确认操作”  对话框中单击“是”  。  
+     若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值，请在“确认操作”**** 对话框中单击“是”****。  
   
 5.  可有可无若要指定标签显示的小数位数，请键入`#PERCENT{Pn}` ，其中*n*是要显示的小数位数。 例如，若要不显示小数位数，请`#PERCENT{P0}`键入。  
   
     > [!NOTE]  
-    >  设置百分比格式时，“序列标签属性”  对话框中的“数字格式”  不起作用。 它将标签的格式设置为百分比，但不会计算每一切片占饼图的百分比。  
+    >  设置百分比格式时，“序列标签属性”**** 对话框中的“数字格式”**** 不起作用。 它将标签的格式设置为百分比，但不会计算每一切片占饼图的百分比。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66099051"
   
  报表会显示每个饼图切片占总体的百分比。  
   
-##  <a name="CombineSlices"></a>4. 将小型切片合并为一个切片  
+##  <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. 将小型切片合并为一个切片  
  在饼图所包含的切片中，有三个切片非常小。 可以将多个小型切片合并为一个表示所有这些小型切片的大型切片。  
   
 #### <a name="to-combine-any-slices-on-the-pie-chart-smaller-than-5-percent-into-one-slice"></a>将饼图上所有小于 5% 的切片组合为一个切片  
@@ -162,17 +162,17 @@ ms.locfileid: "66099051"
   
 4.  在 **“常规”** 部分，展开 **CustomAttributes** 节点。  
   
-5.  将“CollectedStyle”  属性设置为“SingleSlice”  。  
+5.  将“CollectedStyle”**** 属性设置为“SingleSlice”****。  
   
-6.  确保将“CollectedThreshold”  属性设置为“5”。  
+6.  确保将“CollectedThreshold”**** 属性设置为“5”。  
   
-7.  确保将“CollectedThresholdUsePercent”  属性设置为“True”  。  
+7.  确保将“CollectedThresholdUsePercent”**** 属性设置为“True”****。  
   
 8.  在功能区上的 "**主页**" 选项卡上，单击 "**运行**" 以预览报表。  
   
  现在，在图例中已存在类别“其他”。 新饼图切片将所有小于 5% 的切片组合成一个占整个饼图 6% 的切片。  
   
-##  <a name="DrawingEffect"></a>5. 自定义绘图效果  
+##  <a name="5-customize-the-drawing-effect"></a><a name="DrawingEffect"></a>5. 自定义绘图效果  
  在图表向导中，饼图的默认样式为“海蓝色”，这将呈现凹陷绘图效果。 可以在运行改向导后更改此样式。  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>向饼图添加绘制效果  
@@ -196,7 +196,7 @@ ms.locfileid: "66099051"
   
  ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
-##  <a name="Title"></a>6. 添加报表标题  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. 添加报表标题  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
   
@@ -218,15 +218,15 @@ ms.locfileid: "66099051"
   
 6.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Save"></a>7. 保存报表  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. 保存报表  
   
 #### <a name="to-save-the-report"></a>保存报表  
   
 1.  切换到报表设计视图。  
   
-2.  从“报表生成器”按钮，单击 **“另存为”** 。  
+2.  从 “报表生成器” 按钮，单击 **“另存为”**。  
   
-3.  在“名称”  中，键入“Sales Pie Chart”  。  
+3.  在“名称”**** 中，键入“Sales Pie Chart”****。  
   
 4.  单击“保存”  。  
   

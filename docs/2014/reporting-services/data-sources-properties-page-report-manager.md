@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109422"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>“数据源”属性页（报表管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "66109422"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的 "**常规**属性" 页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表的 "**常规**属性" 页。  
   
 4.  选择 **“数据源”** 选项卡。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66109422"
  **共享数据源**  
  指定报表的共享数据源。 有关创建新数据源的详细信息，请参阅[创建、删除或修改共享数据源 &#40;报表管理器&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)。  
   
- **“浏览”**  
+ **浏览**  
  单击 **“浏览”** 可以打开“选择数据源”页（用于选择共享数据源）。 有关详细信息，请参阅 "[数据源选择" 页 &#40;报表管理器&#41;](../../2014/reporting-services/data-source-selection-page-report-manager.md)。  
   
  **自定义数据源**  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109086"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>报表的“常规”属性页（报表管理器）
@@ -29,7 +29,7 @@ ms.locfileid: "66109086"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的“常规”属性页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表的“常规”属性页。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -55,7 +55,7 @@ ms.locfileid: "66109086"
  **创建链接报表**  
  单击此选项可打开“新建链接报表”页。 有关此页和链接报表的详细信息，请参阅[&#40;报表管理器&#41;的 "新建链接报表" 页](../../2014/reporting-services/new-linked-report-page-report-manager.md)。  
   
- **把**  
+ **保存**  
  单击此选项可提取报表定义的只读副本。 根据计算机上所定义的文件关联，文件将在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他应用程序中打开。 大多数情况下，报表将以 XML 文件形式打开。  
   
  您打开的副本与最初发布到报表服务器的原始报表定义相同。 在报表发布后对其设置的任何属性（例如参数和数据源属性）不会反映在您打开的文件中。  

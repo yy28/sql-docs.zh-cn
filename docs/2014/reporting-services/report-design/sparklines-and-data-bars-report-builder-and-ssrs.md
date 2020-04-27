@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28b981dfe725a42228f287bc7a02df836030f3d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104954"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>迷你图和数据条（报表生成器和 SSRS）
@@ -25,7 +25,7 @@ ms.locfileid: "66104954"
   
  ![rs_SparklineExample](../media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- 若要快速开始使用迷你图，请参阅[教程：向报表添加迷你图（报表生成器）](../tutorial-add-a-sparkline-to-your-report-report-builder.md)和视频[如何：在表中创建迷你图](https://go.microsoft.com/fwlink/?LinkId=197092)以及[报表生成器中的迷你图、条形图和指示器](https://technet.microsoft.com/bi/video/ff877165)。  
+ 若要快速开始使用迷你图，请参阅 [教程：向报表添加迷你图（报表生成器）](../tutorial-add-a-sparkline-to-your-report-report-builder.md) 和视频 [如何：在表中创建迷你图](https://go.microsoft.com/fwlink/?LinkId=197092) 以及 [报表生成器中的迷你图、条形图和指示器](https://technet.microsoft.com/bi/video/ff877165) 。  
   
 > [!NOTE]  
 >  您可以将迷你图和数据条连同它们的父表、矩阵或列表作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -33,20 +33,20 @@ ms.locfileid: "66104954"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="KindsofSparklines"></a>迷你图类型  
+##  <a name="types-of-sparklines"></a><a name="KindsofSparklines"></a> 迷你图的类型  
  您几乎可以像常规图表一样创建任意类型的迷你图。 一般情况下，不能生成三维迷你图。 您可以生成以下完整图表的迷你图版本：  
   
--   [柱形图 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)：基本、堆积和100% 堆积柱形图。  
+-   [柱形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)：基本柱形图、堆叠柱形图和百分比堆叠柱形图。  
   
--   [折线图 &#40;报表生成器和 SSRS&#41;](line-charts-report-builder-and-ssrs.md)：除三维折线图之外的所有内容。  
+-   [折线图（报表生成器和 SSRS）](line-charts-report-builder-and-ssrs.md)：除三维折线图之外的所有图。  
   
--   [面积图 &#40;报表生成器和 SSRS&#41;](area-charts-report-builder-and-ssrs.md)：除3d 面积图以外的所有内容  
+-   [分区图（报表生成器和 SSRS）](area-charts-report-builder-and-ssrs.md)：除三维分区图之外的所有图  
   
--   [饼图 &#40;报表生成器和 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)：和圆环图（平面和三维），但不包括漏斗图和棱锥图之类的其他形状。  
+-   [饼图（报表生成器和 SSRS）](pie-charts-report-builder-and-ssrs.md)：圆环图（平面和三维均可），但不包括漏斗图和棱锥图之类的其他形状。  
   
--   [范围图 &#40;报表生成器和 SSRS&#41;](range-charts-report-builder-and-ssrs.md)： stock、k 线图、误差线和盒须图。  
+-   [范围图（报表生成器和 SSRS）](range-charts-report-builder-and-ssrs.md)：股价图、K 线图、误差线和盒须图。  
   
-##  <a name="DataBars"></a>数据条  
+##  <a name="data-bars"></a><a name="DataBars"></a>数据条  
  数据条通常表示单个数据点，尽管它们也可以像常规条形图一样表示多个数据点。 它们通常包含无类别的若干序列，或者具有序列分组。  
   
  ![rs_DataBars](../media/rs-databars.gif "rs_DataBars")  
@@ -55,11 +55,11 @@ ms.locfileid: "66104954"
   
  您可以生成以下完整图表的数据条版本：  
   
--   [条形图 &#40;报表生成器和 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)：基本、堆积和100百分比堆积条形图。  
+-   [条形图（报表生成器和 SSRS）](bar-charts-report-builder-and-ssrs.md)：基本条形图、堆叠条形图和百分比堆叠条形图。  
   
--   [柱形图 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)：基本、堆积和100% 堆积柱形图。 柱形图可以是迷你图或数据条。  
+-   [柱形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)：基本柱形图、堆叠柱形图和百分比堆叠柱形图。 柱形图可以是迷你图或数据条。  
 
-##  <a name="AlignDatainTableMatrix"></a>在表或矩阵中对齐迷你图数据  
+##  <a name="aligning-sparkline-data-in-a-table-or-matrix"></a><a name="AlignDatainTableMatrix"></a> 在表或矩阵中对齐迷你图数据  
  在您将一个迷你图插入到表或矩阵中时，将每个迷你图中的数据点与该列中其他迷你图的数据点对齐通常十分重要。 否则，很难比较不同行中的数据。 例如，为您的公司中的不同销售人员按月比较销售数据时，您需要对齐月份。 如果某个员工在四月外出，则该员工在该月可能会没有销售数据。 您想要看到该月的差距，并且看到后续月份的数据与其他员工的数据对齐。 为此，您可以对齐水平轴。 有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)中关于迷你图的部分，另请参阅[在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)。  
   
  同样，为了可以跨多行进行比较，数据还必须垂直对齐，这意味着一个迷你图或数据条中条和线条的高度必须相对于所有其他迷你图或数据条中条和线条的高度。 否则，将不能彼此比较这些行。  
@@ -68,19 +68,17 @@ ms.locfileid: "66104954"
   
  在此图像中，柱形图显示每个雇员每天的销售额。 请注意，对于雇员没有销售额数据的那些天，该图留空并对齐后面的天。 这是一个水平对齐的示例。 还要注意的是，对于某些员工，每个条都比较短，并且没有条达到单元的顶部。 这是一个垂直对齐的示例；如果没有垂直对齐，则在没有较高的条的行中，短条将扩展以便填充单元的高度。  
 
-##  <a name="UnderstandScope"></a>理解提供给迷你图或数据条的数据  
- 
-  *
-  * 在您向表或矩阵添加迷你图或数据条时，这称作在一个数据区域内“嵌套”另一个数据区域。 嵌套意味着提供给迷你图或数据条的数据由表或矩阵所基于的数据集控制，或者由将其放置于表或矩阵中的位置控制。 有关详细信息，请参阅 [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)。  
+##  <a name="understanding-the-data-supplied-to-a-sparkline-or-data-bar"></a><a name="UnderstandScope"></a> 理解提供给迷你图或数据条的数据  
+ ** 在您向表或矩阵添加迷你图或数据条时，这称作在一个数据区域内“嵌套”另一个数据区域。 嵌套意味着提供给迷你图或数据条的数据由表或矩阵所基于的数据集控制，或者由将其放置于表或矩阵中的位置控制。 有关详细信息，请参阅 [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)。  
   
-##  <a name="ConvertSparklinetoChart"></a>将迷你图或数据条转换为完整图表  
+##  <a name="converting-a-sparkline-or-data-bar-to-a-full-chart"></a><a name="ConvertSparklinetoChart"></a>将迷你图或数据条转换为完整图表  
  因为迷你图和数据条只是一种图表，所以，在你决定想要具备整个图表功能时，可以通过右键单击图表并单击“转换为整个图表”****，将迷你图或数据条转换为整个图表。 执行此操作时，将自动添加轴线、标签、刻度线和图例。  
   
 > [!NOTE]  
 >  通过一次单击不能将整个图表转换为迷你图或数据栏。 但是，只需通过删除不在迷你图和数据条中的所有图表元素，即可从完整图表生成迷你图或数据条。  
 
-##  <a name="HowTo"></a>操作指南主题  
- [&#40;报表生成器和 SSRS 添加迷你图和数据条&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作指南主题  
+ [添加迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
  [在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
@@ -91,13 +89,13 @@ ms.locfileid: "66104954"
   
  [向图表添加空点 &#40;报表生成器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
- [添加或删除图表 &#40;报表生成器和 SSRS 的边距&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [在图表中添加或删除边距（报表生成器和 SSRS）](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [更改图表类型 &#40;报表生成器和 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
+ [更改图表类型（报表生成器和 SSRS）](change-a-chart-type-report-builder-and-ssrs.md)  
   
  [使用调色板 &#40;报表生成器和 SSRS 来定义图表上的颜色&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
- [在序列上显示工具提示 &#40;报表生成器和 SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
+ [在序列上显示工具提示（报表生成器和 SSRS）](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
  [指定对数刻度（报表生成器和 SSRS）](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
@@ -106,7 +104,7 @@ ms.locfileid: "66104954"
  [对多个形状图指定一致的颜色（报表生成器和 SSRS）](shape-charts-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [教程：向报表添加迷你图 &#40;报表生成器&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
  [报表生成器中的迷你图、条形图和指示器（视频）](https://technet.microsoft.com/bi/video/ff877165)   
  [如何：在表中创建迷你图（视频）](https://go.microsoft.com/fwlink/?LinkId=197092)  

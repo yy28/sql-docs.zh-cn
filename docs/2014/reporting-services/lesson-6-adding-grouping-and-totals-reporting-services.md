@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108404"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 课：添加分组和总计 (Reporting Services)
   向报表中添加分组和总计以便组织和汇总数据。  
   
  有关向报表添加运行总计的信息，请参阅：向[Reporting Services （SSRS）报表添加总计](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)。  
@@ -34,7 +34,7 @@ ms.locfileid: "66108404"
   
 -   [将报表发布到报表服务器（可选）](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a>对报表中的数据进行分组  
+##  <a name="to-group-data-in-a-report"></a><a name="bkmk_groupdata"></a>对报表中的数据进行分组  
   
 1.  单击 **“设计”** 选项卡。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66108404"
   
      ![先按日期后按订单分组的表](../../2014/tutorials/media/rs-basictablegroupspreview.gif "先按日期后按订单分组的表")  
   
-##  <a name="bkmk_addtotals"></a>向报表添加总计  
+##  <a name="to-add-totals-to-a-report"></a><a name="bkmk_addtotals"></a>向报表添加总计  
   
 1.  切换到“设计”视图。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66108404"
   
      ![设计视图：带有订单总计的基本表](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "设计视图：带有订单总计的基本表")  
   
-##  <a name="bkmk_adddailytotal"></a>向报表添加每日总计  
+##  <a name="to-add-a-daily-total-to-a-report"></a><a name="bkmk_adddailytotal"></a>向报表添加每日总计  
   
 1.  右键单击 Order 单元，指向“添加总计”****，并单击“晚于”****。  
   
      这会添加一个新行，其中包含每天的数量和美元量的总和，以及 Order 列中的标签 "**Total**"。  
   
-2.  在同一单元格中的单词**Total**之前键入单词，使**其每****日汇总**一次。  
+2.  在相同单元中，在 **Total** 单词之前键入 **Daily** 单词，使其显示为 **Daily Total**。  
   
 3.  选定 **Daily Total** 单元、两个 **Sum** 单元及其之间的空单元。  
   
@@ -94,11 +94,11 @@ ms.locfileid: "66108404"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a>向报表添加总计  
+##  <a name="to-add-a-grand-total-to-a-report"></a><a name="bkmk_addgrandtotal"></a>向报表添加总计  
   
 1.  右键单击“Date”单元，指向“添加总计”****，并单击“晚于”****。  
   
-     这将添加一个新行，其中包含整个报表的数量和美元金额的总和，以及**** `Date`列中的总标签。  
+     这将添加一个新行，其中包含整个报表的数量和美元金额的总和，以及**Total** `Date`列中的总标签。  
   
 2.  在相同单元中，在 **Total** 单词之前键入 **Grand** 单词，使其显示为 **Grand Total**。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66108404"
   
      ![预览：带有总计的基本表](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "预览：带有总计的基本表")  
   
-##  <a name="bkmk_publishreport"></a>将报表发布到报表服务器（可选）  
+##  <a name="to-publish-the-report-to-the-report-server-optional"></a><a name="bkmk_publishreport"></a>将报表发布到报表服务器（可选）  
   
 1.  一个可选步骤是将已完成的报表发送到本机模式报表服务器上，以便您可以从报表管理器查看该报表。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66108404"
   
 3.  在**TargetServerURL**中，键入 Report Server 名称的名称，例如**http://\<servername>/reportserver**  
   
-4.  单击 **"确定"**  
+4.  单击 **“确定”**  
   
 5.  在工具栏上，单击 **“生成”** ，然后单击 **“部署教程”**。  
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104633"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文本框（报表生成器和 SSRS）
@@ -39,7 +39,7 @@ ms.locfileid: "66104633"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a>增大和收缩文本框  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> 扩大和收缩文本框  
  默认情况下，文本框的大小是固定的。 您可以允许文本框基于其内容垂直收缩或扩展。 有关详细信息，请参阅 [允许文本框扩大或收缩（报表生成器和 SSRS）](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)的详细信息。  
   
 ## <a name="orienting-a-text-box"></a>确定文本框的方向  
@@ -55,17 +55,17 @@ ms.locfileid: "66104633"
   
  若要快速开始更改文本方向，请参阅教程中有关旋转文本的部分[：设置文本格式 &#40;报表生成器&#41;](../tutorial-format-text-report-builder.md)。 有关详细信息，请参阅[设置文本框方向 &#40;报表生成器和 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)。  
   
-##  <a name="HowTo"></a> 操作指南主题  
- [添加、移动或删除文本框 &#40;报表生成器和 SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作指南主题  
+ [添加、移动或删除文本框（报表生成器和 SSRS）](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [设置文本框中文本的格式（报表生成器和 SSRS）](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [设置文本框方向 &#40;报表生成器和 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [设置文本框方向（报表生成器和 SSRS）](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [允许文本框扩大或收缩 &#40;报表生成器和 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [允许文本框扩大或收缩（报表生成器和 SSRS）](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [设置文本和占位符的格式（报表生成器和 SSRS）](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [设置文本和占位符的格式 &#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [设置数字和日期格式（报表生成器和 SSRS）](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

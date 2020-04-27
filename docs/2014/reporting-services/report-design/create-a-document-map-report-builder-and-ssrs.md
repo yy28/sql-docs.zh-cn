@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106169"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "66106169"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> 文档结构图和呈现扩展插件  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> 文档结构图和呈现扩展插件  
  文档结构图专门用于 HTML 呈现扩展插件（如预览和报表查看器）。 其他呈现扩展插件具有不同的呈现文档结构图的方式：  
   
 -   PDF 将文档结构图呈现为“书签”窗格。  
@@ -112,13 +112,13 @@ ms.locfileid: "66106169"
 4.  将此 URL 粘贴到报表管理器中，然后按 Enter。 将运行报表，并隐藏文档结构图。  
   
 > [!NOTE]  
->  有关下载示例报表的详细信息，请[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]参阅[报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+>   有关下载示例报表的详细信息，请参阅 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
 >   
 >  有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
   
  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表管理器 &#40;报表生成器和 SSRS 中查找和查看报表&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [在报表管理器中查找和查看报表（报表生成器和 SSRS）](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

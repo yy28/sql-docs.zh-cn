@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109111"
 ---
 # <a name="general-properties-page-models-report-manager"></a>模型的“常规”属性页（报表管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "66109111"
   
 2.  悬停在该模型之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该模型的“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该模型的“常规属性”页。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -54,7 +54,7 @@ ms.locfileid: "66109111"
  **移动**  
  单击此选项可在报表服务器文件夹层次结构中重新定位模型。 单击此按钮将打开“移动项”页，可以在该页浏览文件夹以选择新的文件夹位置。 有关详细信息，请参阅报表管理器&#41;上的 "[移动项" 页 &#40;](../../2014/reporting-services/move-items-page-report-manager.md)。  
   
- **把**  
+ **保存**  
  单击此选项可保存模型定义的只读副本。 根据计算机上所定义的文件关联，文件将在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他应用程序中打开。 大多数情况下，模型将以 XML 文件形式打开。  
   
  您打开的副本与最初发布到报表服务器的原始模型定义相同。 在模型发布后对其设置的任何属性（如数据源属性）不会反映在您打开的文件中。  

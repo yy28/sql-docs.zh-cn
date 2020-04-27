@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b51e18e4b652dde230c9f5421e27d219695987e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106343"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>更改行高或列宽（报表生成器和 SSRS）
@@ -41,7 +41,7 @@ ms.locfileid: "66106343"
   
      ![表中的已选单元](../media/table-selectcell.png "表中的已选单元")  
   
-2.  在显示的“属性” **** 窗格中，修改“高度” **** 属性，然后单击“属性” **** 窗格外部的任意位置。  
+2.  在显示的“属性”  窗格中，修改“高度”  属性，然后单击“属性”  窗格外部的任意位置。  
   
      ![所选表单元的“属性”窗格](../media/cell-propertiespane.png "所选表单元的“属性”窗格")  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66106343"
 3.  在“属性”窗格中，将 CanGrow 设置为 **False**。  
   
     > [!NOTE]  
-    >  如果没有看到“属性”窗格，请单击“视图”菜单上的“属性”********。  
+    >  如果没有看到“属性”窗格，请单击“视图”菜单上的“属性”   。  
   
 ### <a name="to-change-column-width"></a>更改列宽  
   
@@ -65,11 +65,11 @@ ms.locfileid: "66106343"
 3.  单击以抓住列边缘，然后向左或向右移动列边缘，从而调整列宽。  
   
 ## <a name="see-also"></a>另请参阅  
- [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix 数据区域 &#40;报表生成器和 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tablix 数据区域单元、行和列 &#40;报表生成器&#41; 和 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
- [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
- [列表（报表生成器和 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [表 &#40;报表生成器和 SSRS&#41;](tables-report-builder-and-ssrs.md)   
+ [矩阵 &#40;报表生成器和 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
+ [列出 &#40;报表生成器和 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a66d262efe80c027daf94247482e3bb2826e92a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109359"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>“定义查询参数”对话框（报表生成器）
@@ -30,6 +30,6 @@ ms.locfileid: "66109359"
  键入要用于查询参数的值。  
   
 ## <a name="see-also"></a>另请参阅  
- [查询设计器 &#40;报表生成器&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
+ [查询设计器（报表生成器）](../../2014/reporting-services/query-designers-report-builder.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 教程：创建基本表报表（报表生成器）| Microsoft Docs
+title: 教程：生成基本表报表（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93213609abbc3e274cc61207d02b3828f9b90d7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099026"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：生成基本表报表（报表生成器）
   本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
   
-##  <a name="BackToTop"></a>你将学习的内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容  
  在本教程中，您将了解如何执行下列操作：  
   
 1.  [从“入门”创建新的报表](#CreateTable)  
@@ -54,14 +54,14 @@ ms.locfileid: "66099026"
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="CreateTable"></a>1. 从入门创建新报表  
+##  <a name="1-create-a-new-report-from-getting-started"></a><a name="CreateTable"></a>1. 从入门创建新报表  
  从 "**入门**" 对话框创建表报表。 有两类模式：报表设计模式和共享数据集设计模式。 在报表设计模式中，您可以在“报表数据”窗格中指定数据，在设计图面上指定报表布局。 在共享数据集设计模式中，可以创建与他人共享的数据集查询。 在本教程中，您将使用报表设计模式。  
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
   
 1.  单击 **“开始”**，依次指向 **“程序”**、 **Microsoft SQL Server 2012 Report Builder**，再单击 **“报表生成器”**。  
   
-     此时将打开 "**入门**" 对话框。  
+     随即将打开“入门”**** 对话框。  
   
     > [!NOTE]  
     >  如果未显示 "**入门**" 对话框，请在 "**报表生成器**" 按钮中单击 "**新建**"。  
@@ -70,16 +70,16 @@ ms.locfileid: "66099026"
   
 3.  在右窗格中，确认已选中“表或矩阵向导”****。  
   
-##  <a name="DataConnection"></a>1a. 在表向导中指定数据连接  
+##  <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. 在表向导中指定数据连接  
  数据连接包含要连接到外部数据源（如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库）的信息。 通常会从数据源所有者处获取连接信息以及要使用的凭据类型。 若要指定数据连接，可以从报表服务器使用共享数据源或创建仅在此报表中使用的嵌入数据源。  
   
  在本教程中，您将使用嵌入数据源。 若要了解有关使用共享数据源的详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 #### <a name="to-create-an-embedded-data-source"></a>创建嵌入数据源  
   
-1.  在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”************。 将打开“选择数据源的连接”  页面。  
+1.  在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”************。 将打开“选择数据源的连接”**** 页面。  
   
-2.  单击 **“新建”** 。 此时将打开 **“数据源属性”** 对话框。  
+2.  单击 **“新建”**。 此时将打开 **“数据源属性”** 对话框。  
   
 3.  在 "**名称**" 中，键入数据源的 "**产品销售额**"。  
   
@@ -97,17 +97,17 @@ ms.locfileid: "66099026"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     返回至“选择数据源的连接”页  。  
+     返回至“选择数据源的连接”页****。  
   
-8.  若要验证是否能连接到数据源，请单击“测试连接”  。  
+8.  若要验证是否能连接到数据源，请单击“测试连接”****。  
   
      将显示消息“已成功地创建连接”。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-10. 单击“下一步”。   
+10. 单击“下一步”  。  
   
-##  <a name="Query"></a>1b. 在表向导中创建查询  
+##  <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. 在表向导中创建查询  
  在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
   
 > [!NOTE]  
@@ -161,9 +161,9 @@ ms.locfileid: "66099026"
   
      在结果集中，列标题基于查询中的名称。 在数据集中，列标题会成为字段名称并保存在报表中。 完成向导后，可以使用“报表数据”窗格查看数据集字段集合。  
   
-4.  单击“下一步”。   
+4.  单击“下一步”  。  
   
-##  <a name="Groups"></a>1c. 在表向导中将数据组织到组中  
+##  <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1c. 在表向导中将数据组织到组中  
  在选择要进行分组的字段时，可以设计一个表格，其中的行和列显示了详细数据和聚合数据。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -188,9 +188,9 @@ ms.locfileid: "66099026"
   
      步骤 4 和 5 首先按日期组织字段的值，然后按照该日期的产品子类别组织字段的值。  
   
-6.  单击“下一步”。   
+6.  单击“下一步”  。  
   
-##  <a name="Subtotals"></a>1d. 在表向导中添加小计行和合计行  
+##  <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1d. 在表向导中添加小计行和合计行  
  创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
   
 #### <a name="to-add-subtotals-and-totals"></a>添加小计和总计  
@@ -213,9 +213,9 @@ ms.locfileid: "66099026"
   
 3.  清除“展开/折叠组”选项****。 在本教程中，创建的报表不会使用明细功能（用户可通过此功能来展开父组层次结构）来显示子组行和详细信息行。  
   
-4.  单击“下一步”。   
+4.  单击“下一步”  。  
   
-##  <a name="Style"></a>1e. 在表向导中选择样式  
+##  <a name="1e-choose-a-style-in-the-table-wizard"></a><a name="Style"></a>1e. 在表向导中选择样式  
  样式指定字形、颜色集和边框样式。  
   
 #### <a name="to-specify-a-table-style"></a>指定表样式  
@@ -230,7 +230,7 @@ ms.locfileid: "66099026"
   
  表将添加到设计图面中。 该表有 5 列、5 行。 “行组”窗格显示三个行组：SalesDate、Subcategory 和 Details。 详细信息数据是由数据集查询检索的所有数据。  
   
-##  <a name="FormatCurrency"></a>2. 将数据格式设置为货币  
+##  <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2. 将数据格式设置为货币  
  默认情况下，Sales 字段的汇总数据将显示总数。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值****。  
   
 #### <a name="to-format-a-currency-field"></a>设置货币字段格式  
@@ -247,7 +247,7 @@ ms.locfileid: "66099026"
   
  Sales 的汇总值会以货币形式显示。  
   
-##  <a name="FormatDate"></a>3. 将数据格式设置为日期  
+##  <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3. 将数据格式设置为日期  
  默认情况下，SalesDate 字段会同时显示日期和时间信息。 您可以设置其格式，使其只显示日期。  
   
 #### <a name="to-format-a-date-field-as-the-default-format"></a>将日期字段设置为默认格式  
@@ -258,7 +258,7 @@ ms.locfileid: "66099026"
   
 3.  在功能区上，在 "**主页**" 选项卡上的 "**数字**" 组中，从下拉列表中选择 "**日期**"。  
   
-     单元格会显示示例日期 **[2000/1/31]**。 如果看不到示例日期，请单击“数字”**** 组中的“占位符样式”****，然后单击“示例值”****。  
+     单元格将显示示例日期 **[1/31/2000]**。 如果看不到示例日期，请单击“数字”**** 组中的“占位符样式”****，然后单击“示例值”****。  
   
 4.  单击 **“运行”** 以预览报表。  
   
@@ -286,7 +286,7 @@ ms.locfileid: "66099026"
   
  SalesDate 值将显示月份名而非月份数字。  
   
-##  <a name="Width"></a>4. 更改列宽  
+##  <a name="4-change-column-widths"></a><a name="Width"></a>4. 更改列宽  
  默认情况下，表中的每个单元格都包含一个文本框。 在呈现页面时，文本框将垂直扩展以容纳文本。 在呈现的报表中，每个行将扩展到行中呈现的最高文本框的高度。 设计图面上的行的高度不会影响已呈现报表中的行的高度。  
   
  若要减少每个行占用的垂直空间量，请扩展列宽以容纳单个行的列中的文本框的预计内容。  
@@ -303,8 +303,8 @@ ms.locfileid: "66099026"
   
 4.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Title"></a>5. 添加报表标题  
- 报表标题将出现在报表的顶部。 您可以将报表标题放在表头中，或者如果报表不使用表头，也可以将其放在表体顶部的文本框中。 在本教程中，您将使用自动放置在表体顶部的文本框。  
+##  <a name="5-add-a-report-title"></a><a name="Title"></a>5. 添加报表标题  
+ 报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本教程中，您将使用自动放置在表体顶部的文本框。  
   
  通过将不同的字体样式、大小和颜色应用于文本的短语和单个字符，可以进一步增强文本。 有关详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
@@ -326,12 +326,12 @@ ms.locfileid: "66099026"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>6. 保存报表  
+##  <a name="6-save-the-report"></a><a name="Save"></a>6. 保存报表  
  将报表保存到报表服务器或计算机上。 如果不将报表保存到报表服务器上，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  单击 **“最近使用的站点和服务器”**。  
   
@@ -347,7 +347,7 @@ ms.locfileid: "66099026"
   
 #### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到要保存该报表的文件夹************。  
   
@@ -355,7 +355,7 @@ ms.locfileid: "66099026"
   
 4.  单击“保存”  。  
   
-##  <a name="Export"></a>7. 导出报表  
+##  <a name="7-export-the-report"></a><a name="Export"></a>7. 导出报表  
  可以将报表导出为不同的格式，如 Microsoft Excel 和以逗号分隔的值 (CSV)。 有关详细信息，请参阅[导出报表 &#40;报表生成器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)。  
   
  在本教程中，您将报表导出为 Excel 格式，并设置报表的属性以便为工作簿选项卡提供自定义名称。  

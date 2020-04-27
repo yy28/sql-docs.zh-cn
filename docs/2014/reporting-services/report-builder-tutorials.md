@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107973"
 ---
 # <a name="tutorials-report-builder"></a>教程（报表生成器）
@@ -68,8 +68,8 @@ ms.locfileid: "66107973"
  按照本教程中的步骤，学习如何使用表达式连接、计算和查找字段值并显示在报表中。 您还将学习如何使用表达式有条件地显示不同图像和指示器状态。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表设计视图（报表生成器）](report-builder/report-design-view-report-builder.md)   
+ [报表设计视图 &#40;报表生成器&#41;](report-builder/report-design-view-report-builder.md)   
  [SQL Server 2014 中的报表生成器](report-builder/report-builder-in-sql-server-2016.md)   
- [教程：脱机创建快速图表报表 &#40;报表生成器&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [教程：脱机创建快速图表报表（报表生成器）](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

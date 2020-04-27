@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109941"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014 中 SQL Server Reporting Services 的行为更改
@@ -41,10 +41,10 @@ ms.locfileid: "66109941"
   
 -   [SQL Server 2008 R2 Reporting Services 行为更改](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 行为更改  
+##  <a name="sssql14-reporting-services-behavior-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 行为更改  
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中没有 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]行为上的更改。  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 行为更改  
+##  <a name="sssql11-reporting-services-behavior-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 行为更改  
  本节介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的行为更改。  
   
 ### <a name="view-items-permission-will-not-download-shared-datasets-sharepoint-mode"></a>“查看项”权限将不会下载共享数据集（SharePoint 模式）  
@@ -67,16 +67,15 @@ ms.locfileid: "66109941"
 ### <a name="report-server-configuration-and-management-tools"></a>报表服务器配置和管理工具  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>配置管理器不用于 SharePoint 模式  
- **新行为：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager 不再支持 SharePoint 模式报表服务器。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的配置现在可以通过使用 SharePoint 管理中心来完成，因此 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器不再支持 SharePoint 模式。 配置管理器现在仅用于本机模式报表服务器。  
+ **新行为：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager 不再支持 SharePoint 模式报表服务器。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的配置现在可以通过使用 SharePoint 管理中心来完成，因此 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器不再支持 SharePoint 模式。 配置管理器现在仅用于本机模式报表服务器。  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>无法将服务器从一种模式更改为另一种模式  
- **新行为：** 你无法更改服务器模式。 如果您以本机模式安装了报表服务器，则无法将其更改或重新配置为 SharePoint 模式。 如果在 SharePoint 模式中进行安装，则可以将报表服务器更改为本机模式。  
+ **新行为：** 无法更改服务器模式。 如果您以本机模式安装了报表服务器，则无法将其更改或重新配置为 SharePoint 模式。 如果在 SharePoint 模式中进行安装，则可以将报表服务器更改为本机模式。  
   
- **以前的行为：** 客户在 SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]模式下安装 Report Server。 如果客户想要将报表服务器切换为本机模式，可以打开 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器，通过创建新的本机模式数据库或连接到现有的本机模式数据库，来切换为本机模式。 客户还可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器从 SharePoint 模式切换为本机模式。  
+ **先前行为：** 客户在 SharePoint 模式中安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器。 如果客户想要将报表服务器切换为本机模式，可以打开 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器，通过创建新的本机模式数据库或连接到现有的本机模式数据库，来切换为本机模式。 客户还可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器从 SharePoint 模式切换为本机模式。  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 行为更改  
- 本节介绍 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的行为更改。  
+##  <a name="sql-server-2008-r2-reporting-services-behavior-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 行为更改  
+ 本节介绍中的[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]行为更改。  
   
 > [!NOTE]  
 >  因为 SQL Server 2008 R2 是 SQL Server 2008 的次版本升级，所以，我们建议您也查看 SQL Server 2008 部分的内容。  
@@ -84,12 +83,11 @@ ms.locfileid: "66109941"
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Reporting Services WMI 提供程序库中的 SecureConnectionLevel 属性  
  在的[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]WMI 提供程序库中， **SecureConnectionLevel**属性允许`0``1`、、`2``3`、的值， `0`指示对于任何 web 服务方法均不需要安全套接字层（ssl）， `3`指示所有 web 服务方法均需要 ssl， `1`并`2`指示需要 ssl 的 web 服务方法的子集。 在[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，这些值将只有两个可能的含义：  
   
--   
-  `0` 指示对于任何 Web 服务方法均不需要 SSL。  
+-   `0` 指示对于任何 Web 服务方法均不需要 SSL。  
   
 -   正整数指示对于所有 Web 服务方法均需要 SSL。  
   
- 此更改将影响报表服务器响应 Web 服务调用的方式。 <xref:ReportService2005.ReportingService2005.ListSecureMethods%2A>例如，如果**SecureConnectionLevel**设置为0， <xref:ReportService2005.ReportingService2005>并且中的所有方法均设置为**** `1`、或`2` `3`，则返回 nothing。  
+ 此更改将影响报表服务器响应 Web 服务调用的方式。 <xref:ReportService2005.ReportingService2005.ListSecureMethods%2A>例如，如果**SecureConnectionLevel**设置为0， <xref:ReportService2005.ReportingService2005>并且中的所有方法均设置为**SecureConnectionLevel** `1`、或`2` `3`，则返回 nothing。  
   
 ## <a name="see-also"></a>另请参阅  
  [新增功能 &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   

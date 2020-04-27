@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97a6c14b9486b2cc82d514bd7a7fa8210bc22204
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107937"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>“转换 CRI”对话框（报表生成器）
@@ -30,11 +30,11 @@ ms.locfileid: "66107937"
   
  某些 CRI 可以转换为采用新的报表定义格式的报表项。 打开报表时，系统会提示您是否升级报表。 使用以下信息可以决定是否转换该报表中的 CRI：  
   
--   **是**选择 **"是"** 将转换报表中的所有 cri （如果可能）。 无法升级 CRI 中不受支持的功能，也不能从报表定义文件中删除它们。 有关不支持的功能的列表，请参阅 [升级报表](../install-windows/upgrade-reports.md)。 查看报表时，可能看到 CRI 在报表中的显示方式存在差异。  
+-   **是** 选择 **“是”** 将转换报表中所有可以转换的 CRI。 无法升级 CRI 中不受支持的功能，也不能从报表定义文件中删除它们。 有关不支持的功能的列表，请参阅 [升级报表](../install-windows/upgrade-reports.md)。 查看报表时，可能看到 CRI 在报表中的显示方式存在差异。  
   
--   **否**如果您不希望转换报表中的 Cri，请选择 "**否**"。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”**。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
+-   **否** ：如果不希望转换报表中的 CRI，请选择 **“否”** 。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”** 。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
   
- 在任一情况下，报表将升级到新的报表定义格式，并将原始报表的备份副本另存为* \<报表名称>* `-` "。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
+ 在这两种情况下，报表都会升级为新的报表定义格式，且原始报表的备份副本会另存为 \<报表名称> `-` Backup.rdl  。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
   
  如果不保存报表，则原始报表将保持不变。 但是，不能在比 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 更高的版本中或在使用此报表定义格式的报表创作环境中编辑该报表。 对于报表的原始版本，通过使用报表管理器将它上载到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器，可以继续运行它。 有关详细信息，请参阅[上传文件或报表（报表管理器）](../reports/upload-a-file-or-report-report-manager.md)。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "66107937"
  若要标识报表、报表服务器或报表创作环境的当前报表定义格式，请参阅[查找报表定义架构版本 (SSRS)](../reports/find-the-report-definition-schema-version-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表生成器对话框、窗格和向导的帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

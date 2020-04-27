@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108421"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 课：将 ReportViewer 控件添加到应用程序
@@ -22,11 +22,11 @@ ms.locfileid: "66108421"
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>向应用程序添加 ReportViewer 控件  
   
-1.  在“解决方案资源管理器”中，右键单击 Default.aspx，然后单击“视图设计器”    。  
+1.  在“解决方案资源管理器”中，右键单击 Default.aspx，然后单击“视图设计器”************。  
   
 2.  从 "**工具箱**" 窗口的 " **AJAX 扩展**" 组中，将一个**ScriptManager**控件拖到设计图面。  
   
-3.  从“报表”组中，将一个 ReportViewer 控件拖到设计图面上的 ScriptManager 控件下    。  
+3.  从“报表”组中，将一个 ReportViewer 控件拖到设计图面上的 ScriptManager 控件下************。  
   
 4.  通过单击 **ReportViewer** 控件右上角的箭头，打开 **ReportViewer Tasks** 窗口。  
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f807060994c2225dc1e6605344bbb3bd5d2709e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106243"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用筛选器（报表生成器和 SSRS）
@@ -46,15 +46,15 @@ ms.locfileid: "66106243"
 ## <a name="examples-with-report-parameters"></a>报表参数的示例  
  下表提供包括单值或多值参数引用的筛选表达式的示例。  
   
-|参数类型|（筛选）表达式|操作员|值|数据类型|  
+|参数类型|（筛选）表达式|运算符|Value|数据类型|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |单值|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
 |多值|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
   
 ## <a name="see-also"></a>另请参阅  
- [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)   
- [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [报表参数 &#40;报表生成器和报表设计器&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [添加数据集筛选器、数据区域筛选器和组筛选器 &#40;报表生成器和 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [表达式在报表中使用 &#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)  
   

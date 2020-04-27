@@ -11,15 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7efb713b5dbf9a3f19118bb3572ccd35778aad19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109651"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>使用 ReportViewer 创建带有参数的钻取 (RDLC) 报表（SSRS 教程）
-  
-  [钻取](https://technet.microsoft.com/library/ff519554.aspx)报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 本教程将详细介绍以下在 [本地模式报表](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)中使用参数和查询创建钻取报表的课程。  
+  [钻取](https://technet.microsoft.com/library/ff519554.aspx) 报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 本教程将详细介绍以下在 [本地模式报表](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)中使用参数和查询创建钻取报表的课程。  
   
 ## <a name="requirements"></a>要求  
  若要使用本演练，必须具有访问**AdventureWorks2008**示例数据库的权限。 本演练中使用的查询也可用于**AdventureWorks2012**数据库。 有关如何获取**AdventureWorks2008**示例数据库的详细信息，请参阅演练：安装适用于 Microsoft Visual Studio 2010[的 AdventureWorks 数据库](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)。  
@@ -37,10 +36,10 @@ ms.locfileid: "66109651"
  [第6课：将 ReportViewer 控件添加到应用程序](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)   
  [第7课：在父报表上添加钻取操作](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)   
  [第8课：创建数据筛选器](../reporting-services/lesson-8-create-a-data-filter.md)   
- [Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
+ [第 9 课：生成并运行应用程序](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 教程 (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Reporting Services 的教程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
  [使用报表设计器设计报表 (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

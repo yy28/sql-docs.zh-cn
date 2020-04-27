@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d7afc644d96c895164aa954cc4813762cc4ef32d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107838"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
-  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成 Atom 服务文档，该文档列出报表中可用的数据馈送以及来自报表中的数据区域的数据馈送。 使用此扩展插件生成与 Atom 兼容的数据馈送，这些馈送是可读的，并可以与使用从报表生成的数据馈送的应用程序进行交换。 例如，可以使用 Atom 呈现扩展插件生成可在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]客户端中使用的数据馈送。  
   
  Atom 服务文档为报表中的每个数据区域至少列出一个数据馈送。 根据数据区域的类型以及数据区域显示的数据， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可以自数据区域生成多个数据馈送。 例如，矩阵或图表可以提供多个数据馈送。 Atom 呈现扩展插件创建 Atom 服务文档时，将为每个数据馈送创建一个唯一标识符，在 URL 中使用该标识符可以访问数据馈送的内容。  
@@ -33,7 +32,7 @@ ms.locfileid: "66107838"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a>作为数据馈送的报表  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a> 作为数据馈送的报表  
  可以将生产报表作为数据馈送导出，或者可以创建主要目的是以数据馈送的形式向应用程序提供数据的报表。 将报表用作数据馈送为您在以下情况下提供了另一种向应用程序提供数据的方式：当数据不易通过客户端数据访问接口访问时，或者您更喜欢隐藏数据源的复杂性以使数据的使用更为简便时。 将报表用作数据馈送的另一个优点是：您可以使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 功能（如 Report Manager、安全、计划和报表快照）来管理用来提供数据馈送的报表。  
   
  若要充分利用 Atom 呈现扩展插件，您应该理解报表是如何呈现到数据馈送中的。 如果使用现有报表，则若能预测这些报表能够生成的数据馈送将很有用；如果编写报表的目的是专门用作数据馈送，则重要的是能够包括数据并优化报表布局以充分利用数据馈送。  
@@ -42,7 +41,7 @@ ms.locfileid: "66107838"
   
 
   
-##  <a name="AtomServiceDocument"></a>Atom 服务文档（.atomsvc 文件）  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a> Atom 服务文档（.atomsvc 文件）  
  Atom 服务文档指定针对一个或多个数据馈送的连接。 该连接至少是指向生成馈送的数据服务的简单 URL。  
   
  使用 Atom 呈现扩展插件呈现报表数据时，Atom 服务文档将列出可用于报表的数据馈送。 该文档为报表中的每个数据区域至少列出一个数据馈送。 表和仪表都只生成一个数据馈送；但矩阵、列表和图表可能生成多个数据馈送，具体取决于它们所显示的数据。  
@@ -63,9 +62,8 @@ ms.locfileid: "66107838"
   
 
   
-##  <a name="DataFeeds"></a>数据馈送  
- 数据馈送是一个 XML 文件，它具有一致的不随时间变化的表格格式，以及在每次运行报表时都可能不同的可变数据。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 生成的数据馈送采用与 ADO.NET Data Services 生成的数据馈送相同的格式。  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a>数据馈送  
+ 数据馈送是一个 XML 文件，它具有一致的不随时间变化的表格格式，以及在每次运行报表时都可能不同的可变数据。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 生成的数据馈送采用与 ADO.NET Data Services 生成的数据馈送相同的格式。  
   
  数据馈送包含两部分：标题和数据。 Atom 规范中定义了各部分中的元素。 标题包括用于数据馈送的字符编码架构之类的信息。  
   
@@ -128,7 +126,7 @@ ms.locfileid: "66107838"
   
 
   
-##  <a name="FlatteningReportData"></a>平展报表数据  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a> 平展报表数据  
  Atom 呈现器将报表数据提供为 XML 格式的平展行集。 用于平展数据表的规则与用于 CSV 呈现器的规则相同，只有以下几点例外：  
   
 -   范围中的项平展到详细信息级别。 不同于 CSV 呈现器，顶级文本框显示在写入数据馈送的每个条目中。  
@@ -151,7 +149,7 @@ ms.locfileid: "66107838"
   
 
   
-##  <a name="AtomRendering"></a>Atom 呈现规则  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a> Atom 呈现规则  
  Atom 呈现扩展插件在呈现数据馈送时忽略以下信息：  
   
 -   格式设置和布局  
@@ -166,7 +164,7 @@ ms.locfileid: "66107838"
   
 -   线条  
   
--   映像  
+-   图像  
   
 -   自动小计  
   
@@ -174,7 +172,7 @@ ms.locfileid: "66107838"
   
  下表说明了呈现报表项时这些报表项的外观：  
   
-|Item|呈现行为|  
+|项|呈现行为|  
 |----------|------------------------|  
 |表|呈现方式为扩展该表，在只保留最起码的格式的情况下为每一行和每一列都分别创建行和列。 小计行和小计列没有列标题或行标题。 不支持钻取报表。|  
 |矩阵|呈现方式为扩展该矩阵，在只保留最起码的格式的情况下为每一行和每一列都分别创建行和列。 小计行和小计列没有列标题或行标题。|  
@@ -189,7 +187,7 @@ ms.locfileid: "66107838"
   
 
   
-##  <a name="DeviceInfo"></a> 设备信息设置  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>设备信息设置  
  您可以更改此呈现器的某些默认设置，包括要使用的编码架构。 有关详细信息，请参阅 [ATOM Device Information Settings](../atom-device-information-settings.md)。  
   
 

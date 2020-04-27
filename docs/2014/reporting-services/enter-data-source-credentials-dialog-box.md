@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109239"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>“输入数据源凭据”对话框
@@ -27,7 +27,7 @@ ms.locfileid: "66109239"
  **用户名**  
  键入登录数据源时要使用的用户名。  
   
- **权限**  
+ **密码**  
  键入登录数据源时要使用的密码。  
   
 ## <a name="see-also"></a>另请参阅  

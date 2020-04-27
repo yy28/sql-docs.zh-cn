@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108233"
 ---
 # <a name="model-item-security-page-report-manager"></a>“模型项安全性”页（报表管理器）
@@ -29,7 +29,7 @@ ms.locfileid: "66108233"
   
  可以针对模型内的实体、文件夹和单个字段定义模型项安全性。 由于模型中存在大量可保护的项，因此可以将权限继承内置到模型中，以便可以通过数量相对较少的角色分配来保护大量项。 权限继承基于以下内容：  
   
--   模型  
+-   型号  
   
 -   根节点  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66108233"
   
 2.  悬停在该模型之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该模型的“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该模型的“常规属性”页。  
   
 4.  选择 **“模型项安全性”** 选项卡。  
   

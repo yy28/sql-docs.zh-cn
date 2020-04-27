@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107302"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的元素路径语法 (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107302"
 |&#124; （垂直条）|分隔语法项。 只能选择其中一项。|  
 |`[ ] (brackets)`|可选语法项。 不要键入方括号。|  
 |**{ }** （大括号）|分隔语法项的参数。|  
-|[  ...*n*]|指示前面的项可以重复 *n* 次。 匹配项由逗号分隔。|  
+|[**,**...*n*]|指示前面的项可以重复*n*次。 匹配项由逗号分隔。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -76,27 +76,22 @@ XMLLocalName :: =
 |----------|----------------|  
 |Element path|定义为了使用 XML 数据源检索数据集的字段数据而要在 XML 文档中遍历的节点序列。|  
 |`ElementNode`|XML 文档中的 XML 节点。 节点由标记指定，并与其他节点之间存在层次结构关系。 例如，\<Customers> 是根元素节点。 \<Customer> 是 \<Customers> 的子元素。|  
-|`XMLName`|节点的名称。 例如，Customers 节点的名称为 Customers。 
-  `XMLName` 可以使用命名空间标识符作为前缀，以唯一命名每个节点。|  
+|`XMLName`|节点的名称。 例如，Customers 节点的名称为 Customers。 `XMLName` 可以使用命名空间标识符作为前缀，以唯一命名每个节点。|  
 |`Encoding`|指示此元素的 `Value` 是编码的 XML，它需要解码并作为此元素的子元素。|  
-|`FieldList`|定义要用于检索数据的元素和属性集。<br /><br /> 如果未指定，则所有属性和子元素都将用作字段。 如果指定了空字段列表 ( **{}** )，则不使用来自该节点的任何字段。<br /><br /> 
-  `FieldList` 不可以同时包含 `Value` 以及 `Element` 或 `ElementNode`。|  
+|`FieldList`|定义要用于检索数据的元素和属性集。<br /><br /> 如果未指定，则所有属性和子元素都将用作字段。 如果指定了空字段列表（**{}**），则不会使用此节点中的任何字段。<br /><br /> `FieldList` 不可以同时包含 `Value` 以及 `Element` 或 `ElementNode`。|  
 |`Field`|指定作为数据集字段检索的数据。|  
-|`Attribute`|
-  `ElementNode` 中的“名称-值”对。 \<例如，在元素 NODE Customer ID = "1" > 中， `ID`是一个属性，并`@ID(Integer)`在相应的数据字段`ID`中将 "1" 作为整数类型返回。|  
-|`Value`|元素的值。 
-  `Value` 只能在元素路径的最后一个 `ElementNode` 中使用。 例如，由于返回\<> 是一个叶节点，因此如果将其包含在元素路径的末尾， `Return {@}`则的值为。 `Chair`|  
+|`Attribute`|`ElementNode` 中的“名称-值”对。 \<例如，在元素 NODE Customer ID = "1" > 中， `ID`是一个属性，并`@ID(Integer)`在相应的数据字段`ID`中将 "1" 作为整数类型返回。|  
+|`Value`|元素的值。 `Value` 只能在元素路径的最后一个 `ElementNode` 中使用。 例如，由于返回\<> 是一个叶节点，因此如果将其包含在元素路径的末尾， `Return {@}`则的值为。 `Chair`|  
 |`Element`|命名子元素的值。 例如，Customers {}/Customer {}/LastName 仅检索 LastName 元素的值。|  
 |`Type`|用于从此元素创建的字段的可选数据类型。|  
-|`NamespacePrefix`|
-  `NamespacePrefix` 在 XML 查询元素中定义。 如果不存在 XML 查询元素，则将忽略 XML `ElementPath` 中的命名空间。 如果存在 XML 查询元素，则 XML `ElementPath` 具有可选属性 `IgnoreNamespaces`。 如果 IgnoreNamespaces 为`true`，则 XML `ElementPath`和 xml 文档中的命名空间将被忽略。 有关详细信息，请参阅[用于 XML 报表数据的 XML 查询语法 (SSRS)](report-data-ssrs.md)。|  
+|`NamespacePrefix`|`NamespacePrefix` 在 XML 查询元素中定义。 如果不存在 XML 查询元素，则将忽略 XML `ElementPath` 中的命名空间。 如果存在 XML 查询元素，则 XML `ElementPath` 具有可选属性 `IgnoreNamespaces`。 如果 IgnoreNamespaces 为`true`，则 XML `ElementPath`和 xml 文档中的命名空间将被忽略。 有关详细信息，请参阅[用于 XML 报表数据的 XML 查询语法 (SSRS)](report-data-ssrs.md)。|  
   
 ## <a name="example---no-namespaces"></a>示例 - 无命名空间  
  以下示例使用 XML 文档 Customers.xml。 此表以此 XML 文档作为数据源，在此基础上显示了元素路径语法的示例，以及在定义数据集的查询中使用相应元素路径所得到的结果。  
   
  请注意，当元素路径为空时，查询将使用默认元素路径：指向叶节点集合的第一个路径。 在第一个示例中，将元素路径保留为空等效于指定元素路径 /Customers/Customer/Orders/Order。 将在结果集中返回沿该路径分布的所有节点值和属性，并且节点名和属性名将显示为数据集字段。  
   
--   *空白处*  
+-   *空*  
   
     |订单|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
     |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
@@ -183,7 +178,7 @@ XMLLocalName :: =
   
 2.  为 XML 数据源创建新的数据集。  
   
-3.  在 **“数据集属性”** 对话框中，单击 **“查询设计器”** 。 基于文本的查询设计器对话框打开。  
+3.  在 **“数据集属性”** 对话框中，单击 **“查询设计器”**。 基于文本的查询设计器对话框打开。  
   
 4.  在查询窗格中，输入以下两行：  
   
@@ -201,15 +196,15 @@ XMLLocalName :: =
   
      `<Query>`  
   
-8.  单击“运行查询(!)”  。  
+8.  单击“运行查询(!)”****。  
   
      结果集的以下列中显示 4 行数据： `xmlns`、 `Customer.ID`、 `FirstName`、 `LastName`、 `ID`、 `Qty`、 `Order`。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [XML 连接类型 (SSRS)](xml-connection-type-ssrs.md)   
- [Reporting Services 教程 (SSRS)](../reporting-services-tutorials-ssrs.md)   
+ [XML 连接类型 &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
+ [Reporting Services 的教程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   

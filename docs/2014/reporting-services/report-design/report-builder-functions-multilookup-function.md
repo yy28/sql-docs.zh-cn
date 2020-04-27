@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105204"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 函数（报表生成器和 SSRS）
@@ -47,11 +47,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  返回 `VariantArray`，如果没有匹配项，则返回 `Nothing`。  
   
 ## <a name="remarks"></a>备注  
- 使用 `Multilookup` 从名称-值对（每对具有 1 对 1 的关系）的数据集中检索一组值。 
-  `MultiLookup` 等同于对一组名称或键调用 `Lookup`。 例如，对于基于主键标识符的多值参数，可以在表中使用文本框表达式中的 `Multilookup` 来检索未绑定到该参数或该表的数据集中的相关值。  
+ 使用 `Multilookup` 从名称-值对（每对具有 1 对 1 的关系）的数据集中检索一组值。 `MultiLookup` 等同于对一组名称或键调用 `Lookup`。 例如，对于基于主键标识符的多值参数，可以在表中使用文本框表达式中的 `Multilookup` 来检索未绑定到该参数或该表的数据集中的相关值。  
   
- 
-  `Multilookup` 执行下列操作：  
+ `Multilookup` 执行下列操作：  
   
 -   计算当前作用域中源表达式的结果并生成变体对象的数组。  
   
@@ -63,7 +61,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  存在以下限制：  
   
--   `Multilookup`在应用所有筛选表达式后计算  
+-   在应用所有筛选表达式后计算 `Multilookup` 的结果  
   
 -   只支持一个级别的查找。 源、目标或结果表达式不能包含对查找函数的引用。  
   
@@ -71,8 +69,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   源、目标和结果表达式不能包含对报表或组变量的引用。  
   
--   
-  `Multilookup` 不能作为以下报表项的表达式：  
+-   `Multilookup` 不能作为以下报表项的表达式：  
   
     -   数据源的动态连接字符串。  
   

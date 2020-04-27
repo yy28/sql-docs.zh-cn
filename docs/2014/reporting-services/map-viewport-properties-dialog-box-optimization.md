@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108279"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>“地图视区属性”对话框 -&gt;“优化”
@@ -28,7 +28,7 @@ ms.locfileid: "66108279"
  单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  
   
 ## <a name="options"></a>选项  
- **“性能”**  
+ **性能**  
  滑动指针使之靠近 **“性能”** 可简化地图并减少其显示细节。  
   
  **质量**  
@@ -39,6 +39,6 @@ ms.locfileid: "66108279"
   
 ## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](report-design/maps-report-builder-and-ssrs.md)   
- [报表故障排除：地图报表 &#40;报表生成器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：地图报表（报表生成器和 SSRS）](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

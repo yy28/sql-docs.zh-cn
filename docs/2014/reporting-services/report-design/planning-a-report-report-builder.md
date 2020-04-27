@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c659362e7b5ddba500c2e48df1b11a27a4bf0a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105463"
 ---
 # <a name="planning-a-report-report-builder"></a>规划报表 (报表生成器)
   利用报表生成器可创建多种类型的报表。 例如，可以创建显示摘要或详细销售数据、营销和销售趋势的报表、操作报表或面板。 还可以为销售订单、产品目录或套用信函等创建利用丰富格式文本的报表。 所有这些报表都是在报表生成器中使用相同基本构造块的不同组合创建的。 若要创建有用且易于理解的报表，报表生成器可帮助首先进行规划。 开始创建报表之前最好考虑以下几个问题：  
   
--   **您希望报表的显示格式是什么？**  
+-   **要以何种格式显示报表？**  
   
      您可以在报表管理器等浏览器中联机呈现报表，也可以将它们导出为 Excel、Word 或 PDF 等其他格式。 报表采用的最终格式是需要考虑的重要因素，因为并非所有功能在所有导出格式中都可用。 有关详细信息，请参阅[导出报表 &#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66105463"
   
      报表生成器提供了许多报表项，您可以将其添加到报表中以使报表更易于阅读、突出显示关键信息、帮助用户导航报表等。 了解要如何显示报表才能确定是否需要文本框、矩形、图像和线条等报表项。 您还可能希望显示或隐藏项，添加文档结构图（包括钻取报表或子报表），或者链接到其他报表。 有关详细信息，请参阅[图像、文本框、矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)和[交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)。  
   
--   **希望读者看到哪些数据？是否应为不同的受众筛选数据或格式？**  
+-   **希望读者看到哪些数据？是否应针对不同用户筛选数据或格式？**  
   
-     您可能希望将报表范围缩小到特定用户或位置，或者缩小到特定时间段。 若要筛选报表数据，请使用参数来检索并只显示所需的数据。 有关详细信息，请参阅[报表参数 &#40;报表生成器和报表设计器&#41;](report-parameters-report-builder-and-report-designer.md)。  
+     您可能希望将报表范围缩小到特定用户或位置，或者缩小到特定时间段。 若要筛选报表数据，请使用参数来检索并只显示所需的数据。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 -   **是否需要创建自己的计算？**  
   

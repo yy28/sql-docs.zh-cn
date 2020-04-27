@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109265"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>嵌入和共享的数据连接或数据源（报表生成器和 SSRS）
@@ -48,15 +48,15 @@ ms.locfileid: "66109265"
   
  在报表设计器中，您不能浏览到报表服务器上的共享数据源。 在解决方案资源管理器中，您可以将共享数据源作为项目的一部分创建，并选择是否将它们部署到报表服务器。 您只能选择在本地使用它们，因为您的计算机或报表服务器要求的凭据存在差异。 有关详细信息，请参阅 [ Reporting Services 中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
- 以下图标指示 Report Server 文件夹层次结构中的共享数据源项：![共享数据源图标](media/hlp-16datasource.png "Shared data source icon")  
+ 以下图标指示 Report Server 文件夹层次结构中的共享数据源项：![共享数据源图标](media/hlp-16datasource.png "共享数据源图标")  
   
 ## <a name="embedded-data-sources"></a>嵌入数据源  
  嵌入数据源是保存在报表定义中的数据连接。 只有嵌入数据源连接信息所嵌入的报表才能使用这些信息。 若要定义并管理嵌入数据源，请使用 **“数据源属性”** 对话框。  
   
-##  <a name="Comparing"></a>比较嵌入数据源和共享数据源  
+##  <a name="comparing-embedded-and-shared-data-sources"></a><a name="Comparing"></a>比较嵌入数据源和共享数据源  
  下表总结了嵌入数据源和共享数据源之间的差异：  
   
-|说明|嵌入<br /><br /> 数据源|共享<br /><br /> 数据源|  
+|说明|嵌入<br /><br /> “数据源”|Shared<br /><br /> “数据源”|  
 |-----------------|------------------------------|----------------------------|  
 |数据连接嵌入在报表定义中。|![可用](media/greencheck.gif "可用")||  
 |指向报表服务器上的数据连接的指针嵌入在报表定义中。||![可用](media/greencheck.gif "可用")|  
@@ -72,6 +72,6 @@ ms.locfileid: "66109265"
  [报表创作概念 &#40;报表生成器和 SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Reporting Services &#40;SSRS 支持的数据源&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [嵌入数据集和共享数据集 &#40;报表生成器和 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105224"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 函数（报表生成器和 SSRS）
@@ -30,7 +30,7 @@ ms.locfileid: "66105224"
 LookupSet(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *source_expression*  
  (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ID.Value` 。  
   
@@ -49,8 +49,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>备注  
  使用 `LookupSet` 从名称/值对（每对具有 1 对多的关系）的指定数据集中检索一组值。 例如，对于表中的客户标识符，可以使用 `LookupSet` 从未绑定到该数据区域的数据集检索该客户的所有相关电话号码。  
   
- 
-  `LookupSet` 执行下列操作：  
+ `LookupSet` 执行下列操作：  
   
 -   计算当前作用域中源表达式的结果。  
   
@@ -72,8 +71,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   源、目标和结果表达式不能包含对报表或组变量的引用。  
   
--   
-  `LookupSet` 不能作为以下报表项的表达式：  
+-   `LookupSet` 不能作为以下报表项的表达式：  
   
     -   数据源的动态连接字符串。  
   

@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109692"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供数据驱动订阅功能，这样您便可根据动态订阅服务器数据自定义报表的分发。 数据驱动订阅专门用于下列情况：  
   
 -   向大型收件人池分发报表，该池的成员身份可能随着分发的不同而有所变化。 例如，向当前的所有客户分发月报表。  
@@ -37,10 +36,10 @@ ms.locfileid: "66109692"
  [第 1 课：创建示例订阅服务器数据库](lesson-1-creating-a-sample-subscriber-database.md)  
  在这一课中，您将学习如何创建包含订阅服务器信息的本地 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。  
   
- [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
+ [第 2 课：修改报表数据源属性](lesson-2-modifying-the-report-data-source-properties.md)  
  在这一课中，您将学习如何修改报表数据源属性以便能够以无人参与的方式运行报表。 无人参与的处理要求存储凭据。 您还将修改报表数据集以便包括订阅服务器数据提供的参数。  
   
- [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
+ [第 3 课：定义数据驱动订阅](lesson-3-defining-a-data-driven-subscription.md)  
  在这一课中，您将学习如何定义数据驱动订阅。 这一课引导您完成数据驱动订阅向导中的每一页。  
   
 ## <a name="requirements"></a>要求  
@@ -68,6 +67,6 @@ ms.locfileid: "66109692"
   
 ## <a name="see-also"></a>另请参阅  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [创建基本表报表 &#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [创建基本表报表（SSRS 教程）](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

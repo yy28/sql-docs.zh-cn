@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101753"
 ---
 # <a name="role-definitions"></a>角色定义
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，“角色**定义”** 是一组任务的命名集合，这些任务定义了可在报表服务器上执行的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  
+  在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中， *role * * 定义*是一组任务的命名集合，用于定义 Report Server 上可用的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>使用角色授予对报表服务器的访问权限  
  角色只有在角色分配中使用时才有效。 有关角色如何提供安全性的详细信息，请参阅 [角色分配](role-assignments.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "66101753"
  角色定义既可以是项级定义也可以是系统级定义。 “项级角色定义”** 说明了与在报表服务器上存储和管理的项（如报表、文件夹和模型）相关的任务。 可以包含在项级角色定义中的任务如：管理报表、查看文件夹和管理单独的订阅。 “系统角色定义” ** 包含应用于整个站点的任务。 可以包含在系统角色中的任务如：查看报表服务器属性。  
   
 ## <a name="predefined-roles"></a>预定义角色  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]包含与不同级别的用户交互对应的预定义角色。 下面的列表包含可以使用的预定义角色：  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含与不同级别的用户交互所对应的预定义角色。 下面的列表包含可以使用的预定义角色：  
   
 -   为访问报表服务器内容创建角色分配时可以使用以下项级角色定义：内容管理员、发布者、浏览者、报表生成者和我的报表。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66101753"
   
  若要创建角色定义，请[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]使用。 有关详细信息，请参阅 [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)。  
   
- 在创建角色定义后，可以通过在角色分配中选择该角色定义来使用它。 有关详细信息，请参阅[授予用户对报表服务器的访问权限 &#40;报表管理器&#41;](grant-user-access-to-a-report-server.md)。  
+ 在创建角色定义后，可以通过在角色分配中选择该角色定义来使用它。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)。  
   
 ## <a name="customize-or-delete-a-role-definition"></a>修改或删除角色定义  
  可以修改预定义角色，也可以用自定义角色替换它们。 若要修改角色，请向角色定义中添加任务或从角色定义中删除任务。 不能对角色重命名。 您所进行的任何更改都会立即应用到包含该角色定义的所有角色分配中。  
@@ -57,8 +57,8 @@ ms.locfileid: "66101753"
 ## <a name="see-also"></a>另请参阅  
  [任务和权限](tasks-and-permissions.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)   
- [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)   
- [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)   
+ [创建、删除或修改角色 &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
+ [授予用户对报表服务器的访问权限 &#40;报表管理器&#41;](grant-user-access-to-a-report-server.md)   
  [修改或删除角色分配 &#40;报表管理器&#41;](role-assignments-modify-or-delete.md)   
  [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   

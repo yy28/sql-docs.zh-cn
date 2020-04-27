@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105791"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>设置报表项的格式（报表生成器和 SSRS）
@@ -30,7 +30,7 @@ ms.locfileid: "66105791"
   
  C. 包含文本标签和占位符的文本框。  
   
- 通过选择要对其设置格式的项，然后打开该项的“属性”对话框，可以更改格式设置选项。 例如，如果要对整个文本框的内容或文本框中的选定文字设置格式，则只需右键单击该项，再选择“文本框属性”****。 然后，便可应用所需的格式设置样式。  
+ 通过选择要对其设置格式的项，然后打开该项的“属性”对话框，可以更改格式设置选项。 例如，如果要对整个文本框的内容或文本框中的选定文字设置格式，则只需右键单击该项，再选择“文本框属性”  。 然后，便可应用所需的格式设置样式。  
   
  若要快速开始使用，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。  
   
@@ -41,16 +41,16 @@ ms.locfileid: "66105791"
  [设置文本和占位符的格式（报表生成器和 SSRS）](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  介绍如何设置文本的格式以及如何自定义文本框中不同文本块的格式选项。  
   
- [将 HTML 导入到报表中 &#40;报表生成器和 SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [将 HTML 导入报表（报表生成器和 SSRS）](importing-html-into-a-report-report-builder-and-ssrs.md)  
  介绍如何在报表中插入和使用 HTML。  
   
  [设置数字和日期格式（报表生成器和 SSRS）](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
- 介绍如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的标准和自定义格式设置字符串。  
+ 介绍如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持的标准和自定义格式设置字符串。  
   
  [设置线条、颜色和图像的格式（报表生成器和 SSRS）](images-report-builder-and-ssrs.md)  
  介绍如何设置报表项和数据区域中的线条、网格线、颜色和图像的格式。  
   
- [设置报表或文本框的区域设置 &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [设置报表或文本框的区域设置 (Reporting Services)](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  描述如何更改按语言和区域而不同的数据显示格式的设置，例如日期、货币和数值。  
   
 ## <a name="see-also"></a>另请参阅  

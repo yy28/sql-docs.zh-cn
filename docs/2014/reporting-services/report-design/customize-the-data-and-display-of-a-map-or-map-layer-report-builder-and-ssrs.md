@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106099"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
@@ -56,7 +56,7 @@ ms.locfileid: "66106099"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Map"></a> 更改地图的选项  
+##  <a name="change-options-for-the-map"></a><a name="Map"></a> 更改地图的选项  
  在地图报表项上，可以控制以下内容：  
   
 -   添加多个标题。  
@@ -73,7 +73,7 @@ ms.locfileid: "66106099"
   
  
   
-##  <a name="Viewport"></a> 更改视区的选项  
+##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> 更改视区的选项  
  使用视区选项可以更改报表中显示的地图的视图。  
   
  空间数据源提供的区域可能大于报表中您需要显示的区域。 可以使用视区来设置中心、缩放级别以及裁剪地图的区域。  
@@ -94,7 +94,7 @@ ms.locfileid: "66106099"
   
 
   
-##  <a name="Legends"></a> 更改图例的选项  
+##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> 更改图例的选项  
  图例可帮助用户解释地图上的数据。  
   
  默认情况下，您为层指定的所有规则会向第一个图例添加项。 此外，所有颜色规则都在色阶中显示值。  
@@ -107,7 +107,7 @@ ms.locfileid: "66106099"
   
 
   
-##  <a name="Layer"></a> 更改层的选项  
+##  <a name="change-options-for-the-layer"></a><a name="Layer"></a> 更改层的选项  
  若要显示地图的层，请单击地图以选择对应的层。 “地图”窗格将出现。 若要更改层的选项，请右键单击该层并使用快捷方式菜单。  
   
  层可以为三种类型之一，具体取决于由空间数据源返回的空间数据：多边形层、线条层或点层。  
@@ -124,7 +124,7 @@ ms.locfileid: "66106099"
   
  有关层的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
-##  <a name="DataGrouping"></a> 更改层的数据分组  
+##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> 更改层的数据分组  
  您可以自定义为您自己的形状聚合空间数据的方式。 若要设置某一层的组属性，请在“地图”窗格中选择该层，并且在该层的“属性”窗格中，单击“组”，然后单击省略号 (…) 以便打开“组”属性  。 在该对话框中，您可以指定组表达式、创建组变量并且筛选用于分组的数据。  
   
  组表达式指定如何为层上的每个地图元素聚合与空间数据具有一定关系的分析数据。 默认情况下，组表达式是为空间数据与分析数据之间的关系指定的一组匹配字段。 例如，对于显示某个国家或地区的城市位置和人口规模的气泡地图，匹配字段必须包括城市名称 [City] 和区域名称 [Region]，因为可能有多个城市具有相同的名称。 相应的组表达式包括两个字段：[City] 和 [Region]。  
@@ -133,7 +133,7 @@ ms.locfileid: "66106099"
   
  
   
-##  <a name="MapElements"></a> 更改层上地图元素的选项  
+##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> 更改层上地图元素的选项  
  地图元素是层上的点、线条或多边形，它们基于空间数据。 对于地图元素，可以设置以下选项。 这些选项适用于层上的所有地图元素，无论这些元素是否为嵌入的元素：  
   
 -   标签、标签可见性、标签偏移量和格式。  
@@ -150,7 +150,7 @@ ms.locfileid: "66106099"
   
 
   
-##  <a name="Precedence"></a> 了解显示选项优先级  
+##  <a name="understanding-display-option-precedence"></a><a name="Precedence"></a> 了解显示选项优先级  
  当您要控制地图层上点、线条或多边形的显示外观时，必须了解可以在何处设置显示选项，以及哪些选项的优先级较高。 下面的显示选项按从低到高的顺序列出。 在该列表中，较高的显示选项覆盖较低的显示选项：  
   
 -   层选项。  

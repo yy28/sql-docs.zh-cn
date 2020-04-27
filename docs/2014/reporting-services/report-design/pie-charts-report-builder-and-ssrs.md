@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105485"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>饼图（报表生成器和 SSRS）
@@ -37,7 +37,7 @@ ms.locfileid: "66105485"
   
 -   **三维饼图**。 应用了三维样式的饼图。  
   
--   **3D 分离型饼图**。 应用了三维样式的分离型饼图。  
+-   **三维分离型饼图**。 应用了三维样式的分离型饼图。  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>针对饼图显示的数据注意事项  
   
@@ -86,9 +86,9 @@ ms.locfileid: "66105485"
 -   将小切片收集到增补饼图中。 第二个饼图不会显示在设计器中。 而在报表处理期间，图表会基于数据点的值计算是否需要显示第二个饼图。 如果需要显示第二个饼图，则值将会添加到另一个饼图中。  
   
 ## <a name="see-also"></a>另请参阅  
- [在饼图外显示数据点标签 &#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [在饼图外显示数据点标签（报表生成器和 SSRS）](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [在饼图上显示百分比值 &#40;报表生成器和 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [在饼图上显示百分比值（报表生成器和 SSRS）](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [教程：向报表添加饼图（报表生成器）](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [设置图表上图例的格式（报表生成器和 SSRS）](chart-legend-formatting-report-builder.md)   
  [图表中的空点和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

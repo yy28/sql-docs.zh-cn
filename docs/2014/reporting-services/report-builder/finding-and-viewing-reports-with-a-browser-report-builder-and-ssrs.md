@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1e620bb0fd5cbf5ff6541fd1aa4a3552bd2eb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107859"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用浏览器查找和查看报表（报表生成器和 SSRS）
@@ -49,7 +49,7 @@ ms.locfileid: "66107859"
 -   一种文件扩展名表示一种资源。 文件扩展名用于标识资源的 MIME 类型。 例如，.jpg 表示 JPEG 格式的图像。  
   
 ## <a name="typing-the-url-address-of-a-report"></a>键入报表的 URL 地址  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持对 Report Server 上的特定项的 URL 访问。 相应的 URL 必须包含报表的完全限定路径以及用来呈现报表的命令。 如果相应报表包含参数，您还必须指定打开此报表所需的所有值。 如果您键入的报表 URL 在路径、参数值或呈现扩展插件中包含空格，则必须在该 URL 中加入 URL 编码字符才能获得预期的结果。 下例是一个在路径名称、参数和呈现扩展插件中包含空格编码的报表 URL：  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持通过 URL 访问报表服务器上的特定项。 相应的 URL 必须包含报表的完全限定路径以及用来呈现报表的命令。 如果相应报表包含参数，您还必须指定打开此报表所需的所有值。 如果您键入的报表 URL 在路径、参数值或呈现扩展插件中包含空格，则必须在该 URL 中加入 URL 编码字符才能获得预期的结果。 下例是一个在路径名称、参数和呈现扩展插件中包含空格编码的报表 URL：  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
@@ -58,6 +58,6 @@ ms.locfileid: "66107859"
  有关通过 URL 访问报表的详细信息，包括有关 URL 构造方式的信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表管理器 &#40;报表生成器和 SSRS 中查找和查看报表&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [在报表管理器中查找和查看报表（报表生成器和 SSRS）](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

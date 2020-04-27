@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106251"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>图表（报表生成器和 SSRS）
@@ -39,7 +39,7 @@ ms.locfileid: "66106251"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningChart"></a> 设计图表  
+##  <a name="designing-a-chart"></a><a name="DesigningChart"></a> 设计图表  
  将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击设计图面上的图表时，“图表数据”窗格将出现，并且具有三个区域（类别组、序列组和值）。 如果该报表具有共享的或嵌入的数据集，则数据集中的字段将显示在“报表数据”窗格中。 将数据集中的字段拖到适当区域中。 默认情况下，将字段添加到图表的某一区域中时， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 会计算字段的聚合。 您还可以使用序列分组动态生成序列。 图表还与矩阵密切相关。  
   
  ![rs_chartwSeriesCategories](../media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
@@ -49,7 +49,7 @@ ms.locfileid: "66106251"
   
   
   
-##  <a name="SimilarMatrix"></a>与矩阵的相似之处  
+##  <a name="similarities-to-a-matrix"></a><a name="SimilarMatrix"></a>与矩阵的相似之处  
  考虑图表的工作方式的方法之一就是将图表与矩阵进行比较。  
   
  ![从工具箱添加的新矩阵，选中](../media/rs-matrixtemplatenewselected.gif "从工具箱添加的新矩阵，选中")  
@@ -64,7 +64,7 @@ ms.locfileid: "66106251"
   
  
   
-##  <a name="AddingData"></a> 向图表添加数据  
+##  <a name="adding-data-to-the-chart"></a><a name="AddingData"></a> 向图表添加数据  
  假定您具有一个显示“按名称的销售情况”的报表。 您将“全名”字段拖放到“类别组”区域中并将“销售量”字段拖放到“值”区域中。  
   
  在您将“销售量”字段添加到“值”区域中时，数据字段的文本将出现在图例中，并且数值字段的数据将会聚合为一个值。 默认情况下，是使用内置函数 Sum 来聚合值的。 “图表数据”窗格将为您的字段包含一个简单表达式。 在我们的示例中，将针对字段表达式 `[Sum(Sales)]` 显示 `=Sum(Fields!Sales.Value)`。 如果未指定任何组，则图表将仅显示一个数据点。 为了显示多个数据点，必须通过添加分组字段来对数据进行分组。 将“名称”字段添加到“类别组”区域中时，与字段的名称相同的分组字段将会自动添加到图表。 添加定义沿 x 和 y 轴的值的字段后，图表将有足够的信息以正确绘制数据。  
@@ -75,7 +75,7 @@ ms.locfileid: "66106251"
   
   
   
-##  <a name="GroupsInChart"></a> 图表中的类别组和序列组  
+##  <a name="category-and-series-groups-in-a-chart"></a><a name="GroupsInChart"></a> 图表中的类别组和序列组  
  图表支持嵌套的类别组和序列组。 图表不显示详细信息数据。 可通过将数据集字段拖到所选图表的类别和序列放置区向图表添加组。  
   
  形状图（例如饼图）支持类别组和嵌套类别组。 其他图（例如条形图）支持类别组和序列组。 可以嵌套组，但要确保类别或序列的数目不会使图表中信息的表示不清楚。  
@@ -85,14 +85,14 @@ ms.locfileid: "66106251"
   
   
   
-##  <a name="DatasetConsiderations"></a> 创建图表前有关数据集的注意事项  
+##  <a name="dataset-considerations-before-creating-a-chart"></a><a name="DatasetConsiderations"></a> 创建图表前有关数据集的注意事项  
  图表提供了数据的摘要视图。 但是，对于较大的数据集，图表上的信息可能会变得模糊或不可读。 缺少数据点或数据点为 Null，数据类型不适合图表类型，以及具有诸如组合图表和表之类功能的高级应用程序都会影响图表的可读性。 在设计图表之前，应该先仔细准备和了解数据，以便可以快速高效地设计图表。  
   
  可以在报表中包含所需数量的图表。 像其他任何数据区域（如矩阵或表）一样，图表也绑定到单个数据集。 若要在同一图表上显示多个数据集，则可先创建在 SQL 查询中使用 JOIN 或 UNION 语句的另一数据集，然后再将数据添加到图表。 有关 JOIN 和 UNION 语句的详细信息，请参阅联机丛书或另一个 SQL 参考。  
   
  如果详细信息数据不是必要的或没有任何用处，请考虑在数据集查询中预先聚合数据。 若要更清楚地显示每个数据点，请减少数据集中的类别数。 您可以筛选数据集或者向查询添加能减少返回行数的条件。  
   
-##  <a name="BestPractices"></a> 在图表中显示数据的最佳实践  
+##  <a name="best-practices-when-displaying-data-in-a-chart"></a><a name="BestPractices"></a> 在图表中显示数据的最佳实践  
  当所显示的元素数目能够清晰地呈现基础信息情况时，图表的效果达到最佳。 对于一些类似散点图这样的图表，大量的数据点是有益的；而类似饼图这样的其他图表，数据点较少时效果更佳。 请根据数据集中的值和希望显示此信息的方式来仔细选择图表类型。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)。  
   
  可以使用以下几种方法合并图表上的数据：  
@@ -107,7 +107,7 @@ ms.locfileid: "66106251"
   
   
   
-##  <a name="AggregateValues"></a> 聚合图表上数据字段中的值  
+##  <a name="aggregating-values-from-a-data-field-on-the-chart"></a><a name="AggregateValues"></a> 聚合图表上数据字段中的值  
  默认情况下，将字段添加到图表的“值”区域中时， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 会计算字段的聚合。 如果将某一字段拖到图表上，但未将该字段拖到特定区域中，则图表将基于字段的数据类型来确定该字段是属于类别 (x) 轴还是属于值 (y) 轴。 使用 SUM 函数可聚合拖放到“值”区域中的数值字段。 如果值字段的数据类型是“值”区域中的字符串，则图表将无法显示数值，即使字段中有数字，因此图表会显示 COUNT 函数。 若要避免该行为，请确保使用的字段是数值数据类型的，而不是包含格式化数字的字符串。 可以使用 Visual Basic 表达式以将字符串值转换为使用 `CDbl` 或 `CInt` 常量的数值数据类型。 例如，以下复杂表达式会转换名为 `MyField` 且包含格式为字符串的数值的字段。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
@@ -116,7 +116,7 @@ ms.locfileid: "66106251"
   
   
   
-##  <a name="InThisSection"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>本节内容  
  [向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  介绍向报表添加图表时最先执行的步骤。  
   
@@ -148,11 +148,11 @@ ms.locfileid: "66106251"
  介绍用于处理图表的技巧。  
   
 ## <a name="see-also"></a>另请参阅  
- [图像、文本框、矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)   
- [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)   
- [教程：向报表添加柱形图（报表生成器）](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [教程：向报表添加饼图（报表生成器）](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [图像、文本框、矩形和线条 &#40;报表生成器和 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [交互式排序、文档结构图和链接 &#40;报表生成器和 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [嵌套数据区域 &#40;报表生成器和 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [教程：向报表添加柱形图 &#40;报表生成器&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [教程：向报表添加饼图 &#40;报表生成器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [教程：向报表添加条形图（报表生成器）](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

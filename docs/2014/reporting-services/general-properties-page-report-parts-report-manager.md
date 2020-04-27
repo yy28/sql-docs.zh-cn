@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109090"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>报表部件的“常规”属性页（报表管理器）
@@ -58,7 +58,7 @@ ms.locfileid: "66109090"
  **在列表视图中隐藏**  
  选择此选项可对正在报表管理器中使用列表视图模式的用户隐藏报表部件。 列表视图模式是浏览报表服务器文件夹层次结构时的默认视图格式。 虽然可以在列表视图中隐藏项，但不能在详细信息视图中隐藏项。 如果希望限制访问项，必须创建角色分配。  
   
- 类型   
+ **类型**  
  报表部件的类型。 只读。  
   
  **应用**  
@@ -80,7 +80,7 @@ ms.locfileid: "66109090"
  [管理报表部件](report-design/managing-report-parts.md)   
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  ["内容" 页 &#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)   
+ [报表部件 &#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [报表管理器 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [报表生成器中的报表部件和数据集](report-data/report-parts-and-datasets-in-report-builder.md)  
   

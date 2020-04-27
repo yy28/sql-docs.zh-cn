@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109621"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>“创建数据驱动订阅”页（报表管理器）
@@ -36,7 +36,7 @@ ms.locfileid: "66109621"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的 "**常规**属性" 页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表的 "**常规**属性" 页。  
   
 4.  选择 **“订阅”** 选项卡，然后单击 **“新建数据驱动订阅”**。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66109621"
   
  如果数据源使用 Windows 身份验证，请在指定连接时选择 **“用作 Windows 凭据”** 。  
   
- 如果所使用的数据源不对用户连接进行身份验证（例如，如果数据源是 XML 文件），则无需选择“凭据”。 此选项要求您以前配置过无人参与的执行帐户。 有关详细信息，请参阅[Configuration Manager&#41;&#40;SSRS 配置无人参与的执行帐户](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 如果所使用的数据源不对用户连接进行身份验证（例如，如果数据源是 XML 文件），则无需选择“凭据”。 此选项要求您以前配置过无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="specify-a-query-page-3"></a>指定查询（第 3 页）  
  使用此页可以输入用来检索订阅服务器数据的查询。 为了实现最佳效果，在数据驱动的订阅中使用该查询之前，请先在 SQL Server Management Studio 中运行该查询。 之后可以检查查询结果，验证它是否包含所需的信息。 对于查询结果，请注意下面的几个要点：  
@@ -105,10 +105,10 @@ ms.locfileid: "66109621"
 #### <a name="set-delivery-options-for-file-share-delivery"></a>为文件共享传递设置传递选项  
  通常将使用文件共享传递扩展插件，因为它不需要预先配置。 如果使用的是文件共享传递扩展插件，则可以通过下表来了解可以设置的选项：  
   
- **文件名**  
+ **文件名称**  
  指定报表的文件名。 文件共享传递扩展插件以静态应用程序文件形式将报表传递到共享文件夹。 在多数情况下，应当使用数据库中的值来创建文件名。 根据写入模式的设置方式，使用静态值将导致每个新传递覆盖上一个传递。  
   
- **通道**  
+ **路径**  
  指定一个可以通过网络连接访问的共享文件夹。 若要验证文件夹是否可访问，请在 "开始" 菜单上单击 "**运行**"，然后按\\ \\以下格式\> \\输入文件夹\>路径：<computername<共享。  
   
  **呈现格式**  
@@ -123,7 +123,7 @@ ms.locfileid: "66109621"
  **用户名**  
  输入有权按以下格式将文件添加到共享文件夹的域用户帐户： \<域>\\<用户名。\>  
   
- **权限**  
+ **密码**  
  输入帐户的密码。  
   
 ## <a name="set-parameters-page-5"></a>设置参数（第 5 页）  
@@ -153,10 +153,10 @@ ms.locfileid: "66109621"
  **日历**  
  可以将计划定义为在所选日期的具体时间运行。 您可以按以下方式指定日期： * \<每天>*、每个工作日和每* \<个数字>* 天。 选择一个选项会禁用其他选项，即使其他天已显示为选中状态也是如此。  
   
- **两**  
+ 每周****  
  将计划定义为在每周的具体时间运行。 时间间隔可以是完整的周（例如，每两周）或一周中的几天。  
   
- **次**  
+ **每月一次**  
  将计划定义为每月运行一次。 在一个月中，您可以基于某种模式选择一天（如每个月最后一个星期日）或选择特定日期（如 1 和 15，表示每个月的第 1 天和第 15 天）。 可以通过使用逗号和连字符指定多个日期和范围，例如 1, 5, 7-12, 21。  
   
  **一次**  
@@ -171,7 +171,7 @@ ms.locfileid: "66109621"
 ## <a name="see-also"></a>另请参阅  
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [创建数据驱动订阅 &#40;SSRS 教程&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [创建数据驱动订阅（SSRS 教程）](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  

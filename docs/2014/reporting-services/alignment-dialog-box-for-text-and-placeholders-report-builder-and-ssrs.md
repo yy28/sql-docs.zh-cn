@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110042"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>文本和占位符的“对齐”对话框（报表生成器和 SSRS）
@@ -27,18 +27,18 @@ ms.locfileid: "66110042"
   
 ## <a name="options"></a>选项  
  **横向**  
- 指定一个值或键入一个计算结果为文本在选定单元或数据区域中的水平放置位置的表达式。 单击 "**表达式**" （*fx*）按钮可编辑表达式。  
+ 指定一个值或键入一个计算结果为文本在选定单元或数据区域中的水平放置位置的表达式。 单击“表达式”**** (*fx*) 按钮可编辑表达式。  
   
--   **常规**显示由计算的[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]文本。 有关常规文本对齐计算方式的详细信息，请参阅 [设置文本和占位符的格式（报表生成器和 SSRS）](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)。  
+-   **常规** 显示由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]计算的文本。 有关常规文本对齐计算方式的详细信息，请参阅 [设置文本和占位符的格式（报表生成器和 SSRS）](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)。  
   
--   **左**按左对齐方式显示文本。  
+-   **左** 按左对齐方式显示文本。  
   
--   **中心**按居中对齐方式显示文本。  
+-   **居中** 按居中对齐方式显示文本。  
   
--   **向右**将文本显示为右对齐。  
+-   **右** 按右对齐方式显示文本。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [&#40;报表生成器和 SSRS 的格式设置报表项&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
  [将 HTML 添加到报表中 &#40;报表生成器和 SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [设置文本框中文本的格式（报表生成器和 SSRS）](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106633"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）
@@ -27,12 +27,12 @@ ms.locfileid: "66106633"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> 选择设置筛选器的时间  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> 选择设置筛选器的时间  
  无法在数据源中筛选数据时，请为报表项指定筛选器。 例如，当数据源不支持查询参数、您必须运行存储过程且无法修改查询或者参数化报表快照显示不同用户的自定义数据时，请使用报表筛选器。  
   
  在检索报表数据集之前或之后都可以对该报表数据进行筛选。 若要在检索之前筛选数据，请更改每个数据集的查询。 筛选查询中的数据时，可在数据源中筛选数据，这样可以减少必须在报表中检索和处理的数据量。 若要在检索之后筛选数据，请在报表中创建筛选表达式。 可以为数据集、数据区域或组（包括详细信息组）设置筛选表达式。 还可以在筛选表达式中包含参数，从而提供一种为特定值或特定用户筛选数据的方式。例如，对标识查看报表的用户的值进行筛选。  
   
-##  <a name="Where"></a> 选择设置筛选器的位置  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> 选择设置筛选器的位置  
  筛选器的设置位置应根据您希望在报表中获得的效果来确定。 在运行时，报表处理器按以下顺序应用筛选器：先对数据集，再对数据区域，最后对组，在每个组层次结构中按自上而下的顺序。 在表、矩阵或列表中，对行组、列组和相邻组分别应用各自的筛选器。 在图表中，对类别组和序列组分别应用各自的筛选器。 报表处理器应用筛选器时，会按每个报表项 **“属性”** 对话框的 **“筛选器”** 页上定义的顺序应用所有筛选器公式，这等效于使用布尔 AND 操作组合所有筛选器公式。  
   
  下面的列表比较对不同报表项设置筛选器的效果：  
@@ -47,14 +47,14 @@ ms.locfileid: "66106633"
   
 -   **对图表数据区域中的序列组或类别组** ：如果希望组表达式包含或排除某些值以控制图表中出现的值，则可对序列组或类别组设置筛选器。  
   
-##  <a name="FilterEquations"></a>了解筛选器公式  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a>了解筛选器公式  
  在运行时，报表处理器会将值转换为指定数据类型，然后使用指定运算符来比较表达式和值。 下面列出筛选器公式的每个部分：  
   
--   **表达式**定义要筛选的内容。 通常为数据集字段。  
+-   **表达式** ：定义对其进行筛选的内容。 通常为数据集字段。  
   
--   **数据类型**指定报表处理器在运行时计算筛选器公式时使用的数据类型。 您所选择的数据类型必须是报表定义架构支持的数据类型之一。  
+-   **数据类型** ：指定在运行时报表处理器计算筛选器公式时所用的数据类型。 您所选择的数据类型必须是报表定义架构支持的数据类型之一。  
   
--   **运算符**定义如何比较筛选器公式的两个部分。  
+-   **运算符** ：定义如何比较筛选器公式的两个部分。  
   
 -   `Value`定义要在比较中使用的表达式。  
   
@@ -76,18 +76,18 @@ ms.locfileid: "66106633"
   
  必须指定数据类型时，你可以在表达式的 Value 部分指定你自己的转换。  
   
-### <a name="operator"></a>操作员  
+### <a name="operator"></a>运算符  
  下表列出了可在筛选器公式中使用的运算符，以及报表处理器用于计算筛选器公式的内容。  
   
-|操作员|操作|  
+|运算符|操作|  
 |--------------|------------|  
 |**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|将表达式与一个值进行比较。|  
 |**TopN、BottomN**|将表达式与一个 `Integer` 值进行比较。|  
 |**TopPercent、BottomPercent**|将表达式与一个 `Integer` 或 `Float` 值进行比较。|  
-|**Between**|测试表达式是否在两个值之间（含这两个值）。|  
+|**之间**|测试表达式是否在两个值之间（含这两个值）。|  
 |**中**|测试表达式是否包含在一组值中。|  
   
-### <a name="value"></a>值  
+### <a name="value"></a>Value  
  Value 表达式指定筛选器公式的最后一部分。 报表处理器会将计算后的表达式转换为指定的数据类型，然后计算整个筛选器公式以确定表达式中指定的数据是否通过了筛选器的筛选。  
   
  若要转换为非标准 CLR 数据类型的数据类型，必须修改表达式以显式转换为该数据类型。 您可使用 **“表达式”** 对话框的 **“常见函数”** 下的 **“转换”** 中列出的转换函数。 例如，对于 `ListPrice` 字段，该字段表示 **数据源中以** money [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型存储的数据，数据处理扩展插件将以 <xref:System.Decimal> 数据类型返回该字段值。 若要将筛选器设置为仅使用报表货币中大于 **$50000.00** 的值，则可使用表达式 `=CDec(50000.00)`将该值转换为 Decimal 类型。  
@@ -95,7 +95,7 @@ ms.locfileid: "66106633"
  此值还可以包括参数引用，以允许用户以交互方式选择作为筛选依据的值。  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [表达式在报表中使用 &#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)  
   
   

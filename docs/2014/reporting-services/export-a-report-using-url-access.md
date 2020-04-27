@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69f340855e37ffde49aec0af096c094a142659d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109187"
 ---
 # <a name="export-a-report-using-url-access"></a>使用 URL 访问导出报表
@@ -38,7 +38,7 @@ http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport
  如果未在 URL 中纳入 *Format* 参数，则报表服务器将检测浏览器，并将相应报表呈现为合适的 HTML 格式。  
   
 ## <a name="see-also"></a>另请参阅  
- [URL 访问 (SSRS)](url-access-ssrs.md)   
+ [&#40;SSRS&#41;的 URL 访问](url-access-ssrs.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)  
   
   

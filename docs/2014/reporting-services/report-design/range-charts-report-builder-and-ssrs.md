@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e44e658d2aaf8be9a9e591f627f60798f6ba4121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105401"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>范围图（报表生成器和 SSRS）
@@ -29,11 +29,11 @@ ms.locfileid: "66105401"
   
 ## <a name="variations"></a>变体  
   
--   **平滑范围**。 平滑范围图显示的是曲线而不是直线。  
+-   **平滑范围图**。 平滑范围图显示的是曲线而不是直线。  
   
--   **列范围**。 柱形范围图使用柱形图而不是面积图来显示范围。  
+-   **柱形范围图**。 柱形范围图使用柱形图而不是面积图来显示范围。  
   
--   **条形范围**。 条形范围图使用条形图而不是面积图来显示范围。  
+-   **条形范围图**。 条形范围图使用条形图而不是面积图来显示范围。  
   
 ## <a name="data-considerations-for-range-charts"></a>范围图的数据注意事项  
   

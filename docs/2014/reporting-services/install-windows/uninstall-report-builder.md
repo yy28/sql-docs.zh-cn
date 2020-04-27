@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108661"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>卸载报表生成器的独立版本（报表生成器）
@@ -26,19 +26,19 @@ ms.locfileid: "66108661"
   
 ### <a name="to-uninstall-report-builder-from-the-control-panel"></a>从控制面板卸载报表生成器  
   
-1.  在 **“开始”** 菜单上，单击 **“控制面板”** 。  
+1.  在 **“开始”** 菜单上，单击 **“控制面板”**。  
   
-2.  在“控制面板”中，单击 **“程序和功能”** 。  
+2.  在“控制面板”中，单击 **“程序和功能”**。  
   
-3.  在“名称”[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]列表中找到 **** 报表生成器并单击它。  
+3.  在“名称”**** 列表中找到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表生成器并单击它。  
   
-4.  单击 **“卸载”** 。  
+4.  单击“卸载”****。  
   
-5.  如果提示需要确认卸载报表生成器，请单击 **“是”** 。  
+5.  如果提示需要确认卸载报表生成器，请单击 **“是”**。  
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>从命令行卸载报表生成器  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
+1.  在 **“开始”** 菜单上，单击 **“运行”**。  
   
 2.  在 "**打开**" 文本框中，键入`cmd.`  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66108661"
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-1.  按 **Enter**。  
+1.  按 Enter****。  
   
 ## <a name="see-also"></a>另请参阅  
  [安装、卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   

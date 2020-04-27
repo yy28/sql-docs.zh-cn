@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108892"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
   
 -   通过网络为使用数据库身份验证的报表发送连接请求，或连接到不需要或不使用身份验证的外部报表数据源。 有关详细信息，请参阅 SQL Server 联机丛书中的 [为报表数据源指定凭据和连接信息](../../integration-services/connection-manager/data-sources.md) 。  
   
@@ -44,22 +44,22 @@ ms.locfileid: "66108892"
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到要配置的报表服务器实例。 有关说明，请参阅 [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在“执行帐户”页上，选择 **“指定执行帐户”**。  
+2.  在“执行帐户”页上，选择 **“指定执行帐户”** 。  
   
-3.  键入帐户和密码，再次键入密码，然后单击 **“应用”**。  
+3.  键入帐户和密码，再次键入密码，然后单击 **“应用”** 。  
   
 ### <a name="using-rsconfig-utility"></a>使用 RSCONFIG 实用工具  
  设置帐户的另一种方法是使用 **rsconfig** 实用工具。 若要指定帐户，请使用 **rsconfig** 的 **-e**参数。 为 **rsconfig** 指定 **-e** 参数可强制该实用工具将帐户信息写入到配置文件中。 您无需指定 RSreportserver.config 的路径。请按照以下步骤来配置该帐户。  
   
 1.  创建或选择一个有权访问为报表服务器提供数据或服务的计算机和服务器的域帐户。 您应使用权限受到限制（如只读权限）的帐户。  
   
-2.  打开命令提示符窗口：在 **“开始”** 菜单上，单击 **“运行”**，键入 **cmd**，再单击 **“确定”**。  
+2.  打开命令提示符窗口：在 **“开始”** 菜单上，单击 **“运行”** ，键入 **cmd**，再单击 **“确定”** 。  
   
 3.  键入以下命令，为本地报表服务器实例配置该帐户：  
   
-     **\<rsconfig>-p\<password>**  
+     rsconfig -e -u**域/用户名> -p\<密码>\<**  
   
- **rsconfig-e**支持其他参数。 若要获取有关语法的详细信息和查看命令示例，请参阅 SQL Server 联机丛书中的 [rsconfig 配置工具 (SSRS)](../tools/rsconfig-utility-ssrs.md)。  
+ **rsconfig -e** 支持其他参数。 若要获取有关语法的详细信息和查看命令示例，请参阅 SQL Server 联机丛书中的 [rsconfig 配置工具 (SSRS)](../tools/rsconfig-utility-ssrs.md)。  
   
 ### <a name="how-account-information-is-stored"></a>帐户信息的存储方式  
  设置帐户后，将在本地或远程报表服务器实例上的 RSreportserver.config 文件中以加密值的形式指定以下设置：  

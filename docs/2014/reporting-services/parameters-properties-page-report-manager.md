@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108122"
 ---
 # <a name="parameters-properties-page-report-manager"></a>“参数”属性页（报表管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "66108122"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的“常规”属性页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表的“常规”属性页。  
   
 4.  选择 "**参数**" 选项卡。如果 "**参数**" 选项卡不可见，则该报表不包含参数。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66108122"
   
  如果随后指定向用户显示提示符，则默认值就成为用户可以使用或修改的初始值。 如果您不提示输入参数值，则该值将由运行报表的所有用户使用。  
   
- **Null**  
+ **无效**  
  选中此复选框可以指定 Null 作为默认值。 Null 值表示即使用户不提供参数值，报表也会运行。 如果此栏中没有复选框，则参数不接受 Null 值。  
   
  **隐藏**  

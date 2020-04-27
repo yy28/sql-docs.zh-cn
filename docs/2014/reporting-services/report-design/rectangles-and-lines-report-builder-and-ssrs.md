@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f447d05501949df0fd0860ed7799fca2932714fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105384"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>矩形和线条（报表生成器和 SSRS）
@@ -23,14 +23,14 @@ ms.locfileid: "66105384"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RectanglesLinesReportParts"></a> 将矩形和线条作为报表部件  
+##  <a name="rectangles-and-lines-as-report-parts"></a><a name="RectanglesLinesReportParts"></a> 将矩形和线条作为报表部件  
  您可以将矩形与它们所包含的项作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  不能将该矩形中的报表项作为报表部件发布。 当用户向报表添加该矩形时，他们将获取该矩形及其包含的项。  
   
 
   
-##  <a name="RectangleAsContainer"></a> 将矩形用作容器  
+##  <a name="using-a-rectangle-as-a-container"></a><a name="RectangleAsContainer"></a>使用矩形作为容器  
  可以将矩形用作其他项的容器。 移动矩形时，其中包含的项也将随之一起移动。 矩形中的项在其 **Parent** 属性中显示该矩形的名称。 有关使用矩形作为容器的详细信息，请参阅[添加矩形或容器（报表生成器和 SSRS）](add-a-rectangle-or-container-report-builder-and-ssrs.md)和[在矩阵和图表中显示相同数据（报表生成器）](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)。  
   
 > [!NOTE]  
@@ -40,12 +40,12 @@ ms.locfileid: "66105384"
   
 
   
-##  <a name="ReportBorder"></a> 添加报表边框  
+##  <a name="adding-a-report-border"></a><a name="ReportBorder"></a> 添加报表边框  
  通过向表头、表尾和表体本身添加边框（而不是添加线条或矩形），可以为报表添加边框。 有关详细信息，请参阅 [向报表添加边框（报表生成器和 SSRS）](add-a-border-to-a-report-report-builder-and-ssrs.md)的详细信息。  
   
 
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作指南主题  
  [向报表添加边框（报表生成器和 SSRS）](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
  [添加矩形或容器（报表生成器和 SSRS）](add-a-rectangle-or-container-report-builder-and-ssrs.md)  

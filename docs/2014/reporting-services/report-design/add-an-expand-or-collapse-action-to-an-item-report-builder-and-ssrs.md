@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106745"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>为项添加展开或折叠操作（报表生成器和 SSRS）
@@ -42,7 +42,7 @@ ms.locfileid: "66106745"
 3.  在相应的组窗格中，单击要隐藏其关联行或列的行组或列组的名称。 该组即被选中，并且“属性”窗格会显示 **“Tablix 成员”** 属性。  
   
     > [!NOTE]  
-    >  如果未看见“属性”窗格，请单击功能区上的“查看”，然后单击“属性”********。  
+    >   如果未看见“属性”窗格，请单击功能区上的 **“查看”** ，然后单击 **“属性”**。  
   
 4.  在`Hidden`中，选择以下选项之一来设置首次运行报表时该报表项的可见性：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66106745"
   
 1.  在报表设计视图中，右键单击要显示或隐藏的报表项，然后单击* \<"报表项">* "**属性**"。 此时将打开报表项>**属性**"对话框的" * \<报表项*"。  
   
-2.  单击 **“可见性”**。  
+2.  单击 **“可见性”** 。  
   
 3.  在 **“在报表最初运行时”** 中，选择以下选项之一来设置首次运行报表时该报表项的可见性：  
   
@@ -97,6 +97,6 @@ ms.locfileid: "66106745"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;报表生成器和 SSRS 的深化操作&#41;](drilldown-action-report-builder-and-ssrs.md)   
- [隐藏项 &#40;报表生成器和 SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [隐藏项（报表生成器和 SSRS）](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106269"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>图表类型（报表生成器和 SSRS）
@@ -30,7 +30,7 @@ ms.locfileid: "66106269"
   
  可在创建图表之后更改图表类型。 有关详细信息，请参阅[更改图表类型（报表生成器和 SSRS）](change-a-chart-type-report-builder-and-ssrs.md)。  
   
- 许多这些类型的图表示例都可用作示例报表。 有关下载示例报表的详细信息，请[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]参阅[报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 许多这些类型的图表示例都可用作示例报表。  有关下载示例报表的详细信息，请参阅 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 |图表类型|显示比率数据|显示股票数据|显示线性数据|显示多值数据|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -48,8 +48,8 @@ ms.locfileid: "66106269"
 |[股价图（报表生成器和 SSRS）](stock-charts-report-builder-and-ssrs.md)||![可用](../media/greencheck.gif "可用")||![可用](../media/greencheck.gif "可用")|  
   
 ## <a name="see-also"></a>另请参阅  
- [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [图表中的空点和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [图表中的空和 Null 数据点 &#40;报表生成器和 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

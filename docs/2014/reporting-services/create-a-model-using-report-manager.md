@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109664"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用报表管理器创建模型
@@ -82,6 +82,6 @@ ms.locfileid: "66109664"
 ## <a name="see-also"></a>另请参阅  
  [授予对本机模式报表服务器的权限](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Reporting Services 中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [新数据源页 &#40;报表管理器&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+ [“新建数据源”页（报表管理器）](../../2014/reporting-services/new-data-source-page-report-manager.md)  
   
   

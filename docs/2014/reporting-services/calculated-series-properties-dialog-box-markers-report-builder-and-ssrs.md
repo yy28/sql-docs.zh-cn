@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109891"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>“计算序列属性”对话框 -&gt;“标记”（报表生成器和 SSRS）
@@ -40,12 +40,12 @@ ms.locfileid: "66109891"
  选择要在数据点上显示的标记的边框颜色。  
   
 ## <a name="see-also"></a>另请参阅  
- [图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)   
- [设置图表上序列颜色的格式（报表生成器和 SSRS）](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [使用调色板定义图表上的颜色（报表生成器和 SSRS）](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [设置图表上序列颜色的格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [设置图表上轴标签的格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [使用调色板 &#40;报表生成器和 SSRS 来定义图表上的颜色&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [&#40;报表生成器和 SSRS 在辅助轴上绘制数据&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [设置图表上数据点的格式（报表生成器和 SSRS）](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [设置图表上数据点的格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [向图表添加移动平均线（报表生成器和 SSRS）](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

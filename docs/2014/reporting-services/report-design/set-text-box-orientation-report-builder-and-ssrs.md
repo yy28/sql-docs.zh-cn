@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6acffc286e913d35846b2eeb156cf1980b42fab3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104981"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>设置文本框方向（报表生成器和 SSRS）
@@ -36,12 +36,12 @@ ms.locfileid: "66104981"
 4.  在 "属性" 窗格中找到 "WritingMode" 属性，然后在下拉列表中选择要应用到文本框的文本方向。  
   
     > [!NOTE]  
-    >  对“属性”窗格中的属性进行分类时，WritingMode 位于“本地化”类别中  。  
+    >  对“属性”窗格中的属性进行分类时，WritingMode 位于“本地化”类别中****。  
   
 5.  在列表框中，选择 **Horizontal**、 **Vertical**或 **Rotate270**。  
   
 ## <a name="see-also"></a>另请参阅  
- [文本框（报表生成器和 SSRS）](text-boxes-report-builder-and-ssrs.md)   
+ [文本框 &#40;报表生成器和 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)  
   
   

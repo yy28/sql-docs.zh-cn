@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107414"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>配置报表的数据源属性（报表管理器）
@@ -28,7 +28,7 @@ ms.locfileid: "66107414"
   
 1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
-2.  在报表管理器中，导航到 **“内容”** 页。 导航到要配置报表特定数据源的报表，然后打开该报表。  
+2.  在报表管理器中，导航到 "**内容**" 页。 导航到要配置报表特定数据源的报表，然后打开该报表。  
   
 3.  单击 "**属性**" 选项卡。此时将打开 "**常规**属性" 页。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "66107414"
  [创建、修改和删除共享数据源 &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [管理报表数据源](manage-report-data-sources.md)   
  [创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- ["数据源" 属性页 &#40;报表管理器&#41;](../data-sources-properties-page-report-manager.md)  
+ [“数据源”属性页（报表管理器）](../data-sources-properties-page-report-manager.md)  
   
   

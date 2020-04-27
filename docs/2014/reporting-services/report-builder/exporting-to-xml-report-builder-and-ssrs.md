@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107903"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>导出到 XML（报表生成器和 SSRS）
@@ -23,10 +23,10 @@ ms.locfileid: "66107903"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> 报表项  
+##  <a name="report-items"></a><a name="ReportItems"></a> 报表项  
  下表对各报表项的呈现形式进行了说明：  
   
-|Item|呈现行为|  
+|项|呈现行为|  
 |----------|------------------------|  
 |报表|呈现为 XML 文档的顶级元素。|  
 |数据区域|呈现为其容器的元素中的某个元素。 数据区域包括表、矩阵和列表，它们将数据显示为文本和图表、数据条、迷你图、仪表以及形象地展现数据的指示器。|  
@@ -53,25 +53,22 @@ ms.locfileid: "66107903"
   
 -   将忽略`Images, lines, and custom report items`。  
   
-##  <a name="DataTypes"></a> 数据类型  
+##  <a name="data-types"></a><a name="DataTypes"></a>数据类型  
  为文本框元素或属性分配的 XSD 数据类型将基于文本框显示的值。  
   
 |如果所有文本框值都是|分配的数据类型为|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|
-  `Decimal`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:decimal**|  
-|
-  `Float`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:float**|  
-|
-  `Double`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd： dateTime**|  
-|`Time`|**xsd： string**|  
-|`Boolean`|**xsd：布尔值**|  
-|`String`, `Char`|**xsd： string**|  
-|其他|**xsd： string**|  
+|`Decimal`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:decimal**|  
+|`Float`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:float**|  
+|`Double`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd:dateTime**|  
+|`Time`|**xsd:string**|  
+|`Boolean`|**xsd:boolean**|  
+|`String`, `Char`|**xsd:string**|  
+|其他|**xsd:string**|  
   
-##  <a name="XMLSpecificRenderingRules"></a>特定于 XML 的呈现规则  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a>特定于 XML 的呈现规则  
  下面一节将说明 XML 呈现扩展插件是如何解释报表内的报表项的。  
   
 ### <a name="report-body"></a>表体  
@@ -79,7 +76,7 @@ ms.locfileid: "66107903"
   
  在该报表元素中还将包含 XML 命名空间定义和架构引用属性。 变量将以粗体形式注明：  
   
- \<**报表**xmlns = "**SchemaName**" xmlns： xsi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi：**schemaLocation**= "**SchemaNameReportURL**&amp;rc% 3aSchema = true" Name = "ReportName" >  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  变量的值如下所示：  
   
@@ -108,7 +105,7 @@ ms.locfileid: "66107903"
 ### <a name="custom-report-items"></a>自定义报表项  
  CustomReportItems (CRI) 对于呈现扩展插件来说不可见。 如果报表中存在自定义报表项，则呈现扩展插件将把该自定义报表项呈现为常规报表项。  
   
-### <a name="images"></a>映像  
+### <a name="images"></a>图像  
  不会呈现图像。  
   
 ### <a name="lines"></a>线条  
@@ -151,20 +148,20 @@ ms.locfileid: "66107903"
   
  如果 DataElementOutput 属性的值等于 Output，则重复项的表头将呈现为详细信息元素的子级。  
   
-##  <a name="CustomFormatsXSLTransformations"></a>自定义格式和 XSL 转换  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a>自定义格式和 XSL 转换  
  使用 XSL 转换 (XSLT) 可以将 XML 呈现扩展插件生成的 XML 文件转换为几乎任意格式的文件。 您可以使用此功能来生成现有呈现扩展插件尚不支持的格式的数据。 在尝试创建自己的呈现扩展插件之前，请首先考虑使用 XML 呈现扩展插件和 XSLT。  
   
-##  <a name="DuplicateName"></a>名称重复  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a>名称重复  
  如果在同一范围内存在重复的数据元素名称，呈现器将显示一个错误消息。  
   
-##  <a name="XSLTTransformations"></a>XSLT 转换  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>XSLT 转换  
  XML 呈现器可将服务器端 XSLT 转换应用到原始 XML 数据。 应用 XSLT 后，呈现器将输出转换后的内容而不是原始 XML 数据。 转换是在服务器而不是客户端上进行的。  
   
  应用到输出的 XSLT 可通过报表的 DataTransform 属性在报表定义文件中定义，或者使用 XSLT *DeviceInfo* 参数进行定义。 如果设置了以上值中的任意一个值，则每次使用 XML 呈现器时都会发生转换。 当使用订阅时，则必须在 RDL DataTransform 属性中定义 XSLT。  
   
  如果同时使用了 DataTransform 定义属性和设备信息设置来指定 XSLT 文件，则会先执行在 DataTransform 中指定的 XSLT 转换，然后执行由设备信息设置指定的 XSLT 转换。  
   
-###  <a name="DeviceInfo"></a> 设备信息设置  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>设备信息设置  
  您可以通过更改如下设备信息设置来更改此呈现器的某些默认设置：  
   
 -   应用于 XML 的转换 (XSLT)。  
@@ -184,8 +181,8 @@ ms.locfileid: "66107903"
  有关详细信息，请参阅 [XML Device Information Settings](../xml-device-information-settings.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
- [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;报表生成器和 SSRS 中的分页&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [呈现行为 &#40;报表生成器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同报表呈现扩展插件的交互功能 &#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [&#40;报表生成器和 SSRS 呈现报表项&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

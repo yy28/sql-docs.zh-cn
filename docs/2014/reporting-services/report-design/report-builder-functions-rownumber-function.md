@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105172"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 函数（报表生成器和 SSRS）
@@ -32,8 +32,7 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>parameters  
  *作用域*  
- (`String`) 数据集、数据区域或组的名称，也可以为 Null（在 `Nothing` 中为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），它指定在其中计算行数的上下文。 
-  `Nothing` 指定最外层的上下文，通常为报表数据集。  
+ (`String`) 数据集、数据区域或组的名称，也可以为 Null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`），它指定在其中计算行数的上下文。 `Nothing` 指定最外层的上下文，通常为报表数据集。  
   
 ## <a name="remarks"></a>备注  
  `RowNumber`返回指定范围内的行数的运行值，正如[RunningValue](report-builder-functions-runningvalue-function.md)返回聚合函数的运行值一样。 指定作用域时，需要指定何时将行计数重新设置为 1。  

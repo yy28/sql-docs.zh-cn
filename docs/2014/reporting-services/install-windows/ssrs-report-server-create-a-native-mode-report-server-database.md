@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108676"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>创建本机模式报表服务器数据库（SSRS 配置管理器）
@@ -34,7 +34,7 @@ ms.locfileid: "66108676"
   
  如果在本机模式的默认配置下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则安装报表服务器实例时会自动创建和配置报表服务器数据库。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器查看或修改安装程序为您配置的设置。  
   
-##  <a name="rsdbrequirements"></a>开始之前  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> 开始之前  
  创建或配置报表服务器数据库是一个多步骤过程。 创建报表服务器数据库之前，请考虑要如何指定下列各项：  
   
  选择数据库服务器  
@@ -49,7 +49,7 @@ ms.locfileid: "66108676"
  确定报表服务器凭据  
  确定报表服务器与报表服务器数据库的连接方式。 凭据类型包括域用户帐户、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户帐户或报表服务器服务帐户。  
   
- 这些凭据经过加密并存储在 RSReportServer.config 文件中。 报表服务器将这些凭据用于与报表服务器数据库进行的连接。 如果您要使用 Windows 用户帐户或数据库用户帐户，请确保指定已经存在的帐户。 尽管 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器将创建登录名并设置必要的权限，但不会为您创建帐户。 有关详细信息，请参阅[配置报表服务器数据库连接 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+ 这些凭据经过加密并存储在 RSReportServer.config 文件中。 报表服务器将这些凭据用于与报表服务器数据库进行的连接。 如果您要使用 Windows 用户帐户或数据库用户帐户，请确保指定已经存在的帐户。 尽管 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器将创建登录名并设置必要的权限，但不会为您创建帐户。 有关详细信息，请参阅 [配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)中支持的版本。  
   
  确定报表服务器语言  
  选择要为报表服务器指定的语言。 当用户使用不同语言版本的浏览器连接到服务器时，预定义的角色名称、说明和“我的报表”文件夹不会以不同的语言显示。  
@@ -79,7 +79,7 @@ ms.locfileid: "66108676"
   
 2.  在“数据库”页上，单击 **“更改数据库”**。  
   
-3.  单击 "**创建新的 Report Server 数据库**"，然后单击 "**下一步**"。  
+3.  单击 **“创建新的报表服务器数据库”**，然后单击 **“下一步”**。  
   
 4.  连接到您将用于创建和承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66108676"
   
     3.  单击 **“测试连接”** 以验证与服务器的连接。  
   
-    4.  单击“下一步”。   
+    4.  单击“下一步”  。  
   
 5.  指定用于创建数据库的属性。 有关如何使用这些属性的详细信息，请参阅本主题中的 [开始之前](#rsdbrequirements) ：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66108676"
   
     3.  报表服务器模式始终设置为 **“本机”**。  
   
-    4.  单击“下一步”。   
+    4.  单击“下一步”  。  
   
 6.  指定报表服务器用来连接到报表服务器数据库的凭据。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66108676"
   
          如果希望报表服务器使用其自身的服务帐户进行连接，则选择 **“服务凭据”** 。 使用此选项，该服务器将使用集成安全性进行连接；凭据不进行加密或存储。  
   
-    2.  单击“下一步”。   
+    2.  单击“下一步”  。  
   
 7.  检查“摘要”页上的信息以确保设置正确，然后单击 **“下一步”**。  
   

@@ -18,22 +18,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4858b9844c4b07d270c615d30089d104bb7ba76a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108724"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>配置和管理加密密钥（SSRS 配置管理器）
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用加密密钥来保护存储在 Report Server 数据库中的凭据和连接信息。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，通过一组用于保护敏感数据的公钥、私钥和对称密钥支持加密。 安装或配置报表服务器时，在报表服务器初始化期间会创建对称密钥，报表服务器使用此对称密钥对存储在报表服务器中的敏感数据进行加密。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在报表服务器数据库中存储敏感数据的每个报表服务器实例，都要创建一个公钥私钥对。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的凭据和连接信息。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，通过一组用于保护敏感数据的公钥、私钥和对称密钥支持加密。 安装或配置报表服务器时，在报表服务器初始化期间会创建对称密钥，报表服务器使用此对称密钥对存储在报表服务器中的敏感数据进行加密。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在报表服务器数据库中存储敏感数据的每个报表服务器实例，都要创建一个公钥私钥对。  
   
  管理加密密钥包括创建对称密钥的备份副本以及了解密钥的还原、删除或更改的时间和方式。 如果迁移报表服务器安装或配置扩展部署，则必须拥有对称密钥的备份副本，以便可以将其应用于新的安装。  
   
 > [!IMPORTANT]  
 >  定期更改 Reporting Services 加密密钥是确保安全的好办法。 建议在升级 Reporting Services 主版本后立即更改密钥。 升级后更改密钥将使在升级周期外更改 Reporting Services 加密密钥所导致的额外服务中断降到最低程度。  
   
- 若要管理对称密钥，可以使用 Reporting Services 配置工具或 **rskeymgmt** 实用工具。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包括的工具仅用于管理对称密钥（公钥和私钥由操作系统管理）。 Reporting Services 配置工具和 **rskeymgmt** 实用工具都支持以下任务：  
+ 若要管理对称密钥，可以使用 Reporting Services 配置工具或 **rskeymgmt** 实用工具。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包括的工具仅用于管理对称密钥（公钥和私钥由操作系统管理）。 Reporting Services 配置工具和 **rskeymgmt** 实用工具都支持以下任务：  
   
 -   备份对称密钥的副本，以便可以使用该副本来恢复报表服务器安装或作为计划迁移的一部分。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66108724"
  [备份和还原 Reporting Services 加密密钥](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  介绍如何备份加密密钥以及如何还原备份以恢复或迁移报表服务器安装。  
   
- [将加密的报表服务器数据存储 &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  介绍报表服务器的加密。  
   
  [删除和重新创建加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
@@ -62,6 +61,6 @@ ms.locfileid: "66108724"
  介绍如何添加和删除加密密钥以控制在扩展部署中包括哪些报表服务器。  
   
 ## <a name="see-also"></a>另请参阅  
- [将加密的报表服务器数据存储 &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

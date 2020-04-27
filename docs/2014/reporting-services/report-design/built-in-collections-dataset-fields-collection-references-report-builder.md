@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106453"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>数据集字段集合引用（报表生成器和 SSRS）
@@ -32,15 +32,15 @@ ms.locfileid: "66106453"
   
  若要在设计图面（而非数据区域的一部分）的文本框中直接显示字段集合的汇总值，必须指定数据集名称作为聚合函数的作用域。 例如，对于名为 `SalesData`的数据集，以下表达式指定了字段 `Sales`所有值的总计： `=Sum(Fields!Sales,"SalesData")`。  
   
- 使用“表达式”对话框定义简单字段引用时，可以在“类别”窗格中选择字段集合，并查看“字段”窗格中的可用字段列表********。 每个字段都具有多个属性，包括 Value 和 IsMissing。 其余属性是数据集可能可用的预定义扩展字段属性，具体取决于数据源类型。  
+ 使用“表达式”对话框定义简单字段引用时，可以在“类别”窗格中选择字段集合，并查看“字段”窗格中的可用字段列表   。 每个字段都具有多个属性，包括 Value 和 IsMissing。 其余属性是数据集可能可用的预定义扩展字段属性，具体取决于数据源类型。  
   
 ### <a name="detecting-nulls-for-a-dataset-field"></a>检测数据集字段的 Null 值  
- 若要检测为 Null（在 `Nothing` 中为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）的字段值，可使用函数 `IsNothing`。 当以下表达式放置在表详细信息行的文本框中时，将测试字段 `MiddleName` 。如果值为 Null，则显示文本“No Middle Name”，如果值不为 Null，则使用该字段值本身：  
+ 若要检测为 Null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`）的字段值，可使用函数 `IsNothing`。 当以下表达式放置在表详细信息行的文本框中时，将测试字段 `MiddleName` 。如果值为 Null，则显示文本“No Middle Name”，如果值不为 Null，则使用该字段值本身：  
   
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>在运行时检测动态字段的缺失字段  
- 默认情况下，字段集合中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` *\<table>，其中表定义会发生变化*。  
+ 默认情况下，字段集合中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` *table>\<* ，其中表定义会发生变化。  
   
 > [!NOTE]  
 >  IsMissing 可针对任何类型的数据源检测在设计时和运行时数据集架构中的更改。 IsMissing 不能用于检测多维数据集中的空成员，并且与`EMPTY`和`NON EMPTY`的 MDX 查询语言概念无关。  
@@ -88,7 +88,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>使用扩展字段属性  
  扩展字段属性是由数据处理扩展插件为字段定义的其他属性，这些属性由数据集的数据源类型确定。 扩展字段属性可以是预定义的，也可以特定于某个数据源类型。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
- 如果指定了该字段不支持的属性，则表达式的计算结果为 `null`（在 `Nothing` 中为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）。 如果数据访问接口不支持扩展字段属性，或在执行查询时找不到该字段，则对于 `null` 和 `Nothing` 类型的属性，属性值为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]（在 `String` 中为 `Object`）；对于 `Integer` 类型的属性，属性值为零 (0)。 数据处理扩展插件可以通过优化包括此语法的查询来充分利用预定义属性。  
+ 如果指定了该字段不支持的属性，则表达式的计算结果为 `null`（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`）。 如果数据访问接口不支持扩展字段属性，或在执行查询时找不到该字段，则对于 `null` 和 `Nothing` 类型的属性，属性值为 `String`（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Object`）；对于 `Integer` 类型的属性，属性值为零 (0)。 数据处理扩展插件可以通过优化包括此语法的查询来充分利用预定义属性。  
   
 ## <a name="see-also"></a>另请参阅  
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 076a0179871775984799fc8ce5366a220f812867
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108260"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 设备信息设置
@@ -26,8 +26,8 @@ ms.locfileid: "66108260"
 |设置|值|  
 |-------------|-----------|  
 |**JavaScript**|指示是否在所呈现报表中支持 JavaScript。|  
-|**OutlookCompat**|指示是否呈现可改善报表在 Outlook 中的外观的额外元数据。 默认值是 `true`。|  
-|**MHTML 片段**|指示是否创建一个 MHTML 片段以取代完整 MHTML 文档。 MHTML 片段包含 TABLE 元素中的报表内容，并忽略 HTML 和 BODY 元素。 默认值是 `false`。|  
+|**OutlookCompat**|指示是否呈现可改善报表在 Outlook 中的外观的额外元数据。 默认值为 `true`。|  
+|**MHTML 片段**|指示是否创建一个 MHTML 片段以取代完整 MHTML 文档。 MHTML 片段包含 TABLE 元素中的报表内容，并忽略 HTML 和 BODY 元素。 默认值为 `false`。|  
 |**DataVisualizationFitSizing**|指示 tablix 内数据可视化调整大小行为。 这包括图表、仪表和地图。<br /><br /> 可能的值包括 **“近似”** 和 **“精确”** 。<br /><br /> 默认值为 **“近似”** 。 如果从 **rsreportserver.config** 文件删除该设置，则默认行为为 **“精确”** 。<br /><br /> 启用 **“精确”** 可能会影响性能，因为确定精确大小所需的处理时间可能更长。|  
   
 ## <a name="see-also"></a>另请参阅  

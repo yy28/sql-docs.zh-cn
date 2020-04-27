@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098847"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
@@ -26,7 +26,7 @@ ms.locfileid: "66098847"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a>你将学习的内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容  
  在本教程中，您将学习如何执行下列操作：  
   
 1.  [使用表向导或矩阵向导创建表报表和数据集](#Setup)  
@@ -58,7 +58,7 @@ ms.locfileid: "66098847"
 ## <a name="requirements"></a>要求  
  有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Setup"></a>1. 使用表或矩阵向导创建表报表和数据集  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. 使用表或矩阵向导创建表报表和数据集  
  创建表报表、数据源和数据集。 在设计表的布局时，将只包含若干字段。 完成向导后，您将手动添加列。 使用该向导可以方便地对表进行布局和应用样式。  
   
 > [!NOTE]  
@@ -85,13 +85,13 @@ ms.locfileid: "66098847"
   
 4.  在“选择数据集”页上，单击“创建数据集”********。  
   
-5.  单击“下一步”。   
+5.  单击“下一步”  。  
   
 6.  在“选择数据源的连接”**** 页上，选择类型为“SQL Server”**** 的数据源。 从列表中选择一个数据源或浏览到报表服务器以选择一个数据源。  
   
-7.  单击“下一步”。   
+7.  单击“下一步”  。  
   
-8.  在 "**设计查询**" 页上，单击 "**编辑为文本**"。  
+8.  在“设计查询”页上，单击“编辑为文本”********。  
   
 9. 将以下查询粘贴到查询窗格中：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66098847"
   
 10. 在查询设计器工具栏上，单击 "**运行**（**！**）"。 结果集显示 20 行的数据并包括以下列：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
   
-11. 单击“下一步”。   
+11. 单击“下一步”  。  
   
 12. 在“排列字段”页上，将以下字段按指定顺序从“可用字段”列表拖到“值”列表************。  
   
@@ -150,13 +150,13 @@ ms.locfileid: "66098847"
   
      Sum 不再应用于 YTDPurchase。  
   
-15. 单击“下一步”。   
+15. 单击“下一步”  。  
   
 16. 在“选择布局”**** 页上，单击“下一步”****。  
   
 17. 在 "**选择样式**" 页上，单击 "**石板**"，然后单击 "**完成**"。  
   
-##  <a name="UpdateNames"></a>2. 更新数据源和数据集的默认名称  
+##  <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. 更新数据源和数据集的默认名称  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>更新数据源的默认名称  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66098847"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a>3. 显示名字、初始名称和姓氏  
+##  <a name="3-display-first-name-initial-and-last-name"></a><a name="Concatenate"></a>3. 显示名字、初始名称和姓氏  
  在表达式中使用 **Left** 函数和 **Concatenate** (**&**) 运算符（其计算结果为包括首字母和姓氏的名称）。 你可以逐步生成表达式，也可以跳过一些步骤，将表达式从教程复制/粘贴到“表达式”**** 对话框中。  
   
 #### <a name="to-add-the-name-column"></a>添加 Name 列  
@@ -205,7 +205,7 @@ ms.locfileid: "66098847"
   
      此表达式将从 **FirstName** 值提取一个字符，从左侧开始计数。  
   
-9. 键入 **""& &**  
+9. 键入 **&" "&**  
   
 10. 在“值”**** 列表中，双击 **LastName**。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66098847"
   
 12. 单击 **“运行”** 以预览报表。  
   
-##  <a name="Gender"></a>4. 使用图像显示性别  
+##  <a name="4-use-images-to-display-gender"></a><a name="Gender"></a>4. 使用图像显示性别  
  使用图像可以显示人员的性别，并且通过使用第三个图像标识未知性别值。 您将向报表添加三个隐藏的图像和一个用于显示这些图像的新列，然后基于“性别”字段的值确定在列中显示的图像。  
   
  在使报表成为条纹形式报表时，若要将颜色应用于包含图像的表单元，需要添加一个矩形，然后将图像添加到该矩形。 您需要使用矩形，因为背景色可以应用于矩形，但不能应用于图像。  
@@ -296,7 +296,7 @@ ms.locfileid: "66098847"
   
 14. 单击 **“运行”** 以预览报表。  
   
-##  <a name="Lookup"></a>5. 查找国家/地区名称  
+##  <a name="5-look-up-countryregion-name"></a><a name="Lookup"></a>5. 查找国家/地区名称  
  创建 CountryRegion 数据集，使用“Lookup”**** 函数显示国家/地区的名称，而非国家/地区的标识符。  
   
 #### <a name="to-create-the-countryregion-dataset"></a>创建 CountryRegion 数据集  
@@ -370,7 +370,7 @@ ms.locfileid: "66098847"
   
 11. 单击 **“运行”** 以预览报表。  
   
-##  <a name="Count"></a>6. 统计自上次购买以来的天数  
+##  <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. 统计自上次购买以来的天数  
  添加一个列，然后使用**Now**函数或`ExecutionTime`内置全局变量来计算自上一次购买以来的天数。  
   
 #### <a name="to-add-the-days-ago-column"></a>添加 Days Ago 列  
@@ -406,8 +406,7 @@ ms.locfileid: "66098847"
 14. 在“项”**** 列表中，双击 **Now**。  
   
     > [!WARNING]  
-    >  在生产报表中，不应在报表呈现过程中会多次计算的表达式中（例如，在报表的详细信息行中）使用 **Now** 函数。 
-  **Now** 的值随行变化，不同的值会影响表达式的计算结果，这将导致结果略微不一致。 应改用 `ExecutionTime` 提供的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全局变量。  
+    >  在生产报表中，不应在报表呈现过程中会多次计算的表达式中（例如，在报表的详细信息行中）使用 **Now** 函数。 **Now** 的值随行变化，不同的值会影响表达式的计算结果，这将导致结果略微不一致。 应改用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供的 `ExecutionTime` 全局变量。  
   
 15. 如果鼠标光标不是紧接 `Now(` 之后，请将光标置于其后。  
   
@@ -417,9 +416,8 @@ ms.locfileid: "66098847"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a>7. 使用指示器显示销售额比较  
- 添加一个新列，并使用指示器显示某个人的年初至今（YTD）采购量是高于还是低于平均 YTD 采购量。 
-  **Round** 函数从值中去掉小数部分。  
+##  <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. 使用指示器显示销售额比较  
+ 添加一个新列，并使用指示器显示某个人的年初至今（YTD）采购量是高于还是低于平均 YTD 采购量。 **Round** 函数从值中去掉小数部分。  
   
  该指示器及其状态的配置需要许多步骤。 如果需要，在 "配置指示器" 过程中，您可以跳过此教程并将已完成的表达式从本教程复制/粘贴到 "**表达式**" 对话框中。  
   
@@ -523,7 +521,7 @@ ms.locfileid: "66098847"
   
 38. 单击 **“运行”** 以预览报表。  
   
-##  <a name="GreenBar"></a>8. 使报表成为 "绿色条" 报表  
+##  <a name="8-make-the-report-a-green-bar-report"></a><a name="GreenBar"></a>8. 使报表成为 "绿色条" 报表  
  使用参数指定要应用于报表的交替行的颜色，使报表成为条纹形式的报表。  
   
 #### <a name="to-add-a-parameter"></a>添加参数  
@@ -542,25 +540,25 @@ ms.locfileid: "66098847"
   
 6.  单击“指定值”****。  
   
-7.  单击“添加”  。  
+7.  单击 **“添加”** 。  
   
-8.  在 "**标签**" 框中，键入：**黄色**  
+8.  在“标签”**** 框中，键入 **Yellow**  
   
 9. 在“值”**** 框中，键入 **Yellow**  
   
-10. 单击“添加”  。  
+10. 单击 **“添加”** 。  
   
 11. 在“标签”**** 框中，键入“绿色”****  
   
 12. 在“值”**** 框中，键入“淡绿色”****  
   
-13. 单击“添加”  。  
+13. 单击 **“添加”** 。  
   
 14. 在“标签”**** 框中，键入“蓝色”****  
   
 15. 在“值”**** 框中，键入“浅蓝色”****  
   
-16. 单击“添加”  。  
+16. 单击 **“添加”** 。  
   
 17. 在“标签”**** 框中，键入“粉色”****  
   
@@ -632,15 +630,15 @@ ms.locfileid: "66098847"
   
 1.  如果不是在“开始”**** 选项卡上，请单击“开始”**** 返回到设计视图。  
   
-2.  单击 **“运行”** 。  
+2.  单击“运行”****。  
   
 3.  在“选择颜色”**** 下拉列表中，选择报表上非白色条的颜色。  
   
-4.  单击 **“查看报表”** 。  
+4.  单击“查看报表”****。  
   
      该报表呈现，报表行交替呈现您所选的背景。  
   
-##  <a name="DateFormat"></a>可有可无设置日期列的格式  
+##  <a name="optional-format-date-column"></a><a name="DateFormat"></a>可有可无设置日期列的格式  
  设置包含日期的“Last Purchase”**** 列的格式。  
   
 #### <a name="to-format-date-column"></a>若要设置日期列的格式  
@@ -653,7 +651,7 @@ ms.locfileid: "66098847"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a>可有可无添加报表标题  
+##  <a name="optional-add-a-report-title"></a><a name="Title"></a>可有可无添加报表标题  
  为报表添加标题。  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
@@ -674,14 +672,14 @@ ms.locfileid: "66098847"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>可有可无保存报表  
+##  <a name="optional-save-the-report"></a><a name="Save"></a>可有可无保存报表  
  您可以将报表保存到报表服务器、SharePoint 库或本地计算机。 有关详细信息，请参阅[保存报表（报表生成器）](report-builder/saving-reports-report-builder.md)。  
   
  在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  
   
 #### <a name="to-save-the-report-to-a-report-server"></a>将报表保存到报表服务器  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  单击 **“最近使用的站点和服务器”**。  
   
@@ -697,7 +695,7 @@ ms.locfileid: "66098847"
   
 #### <a name="to-save-the-report-to-your-computer"></a>将报表保存到计算机  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  单击 **“桌面”**、 **“我的文档”** 或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
   
@@ -709,8 +707,8 @@ ms.locfileid: "66098847"
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
  [指标 &#40;报表生成器和 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [图像、文本框、矩形和线条（报表生成器和 SSRS）](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
- [表（报表生成器和 SSRS）](report-design/tables-report-builder-and-ssrs.md)   
+ [图像、文本框、矩形和线条 &#40;报表生成器和 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [表 &#40;报表生成器和 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

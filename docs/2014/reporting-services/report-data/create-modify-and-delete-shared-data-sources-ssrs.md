@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107403"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>创建、修改和删除共享数据源 (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66107403"
   
  共享数据源由以下几个部分组成：  
   
-|部分|说明|  
+|组成部分|说明|  
 |----------|-----------------|  
 |名称|名称用于在报表服务器文件夹层次结构中标识该项。|  
 |说明|说明在您查看文件夹的内容时在报表管理器中与该项一起出现。|  
@@ -47,9 +47,9 @@ ms.locfileid: "66107403"
   
  有关创建共享数据源的详细信息，请参阅：  
   
--   [&#40;SSRS 创建嵌入数据源或共享数据源&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [创建嵌入数据源或共享数据源 (SSRS)](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
--   [在 SharePoint 集成模式下创建和管理共享数据源 &#40;Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
+-   [创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
  在报表服务器上创建共享数据源后，可通过创建角色分配来控制对该共享数据源的访问、将该共享数据源移到其他位置、对其重命名，或使之脱机以防止在对外部数据源执行维护操作时处理报表。 如果您在报表服务器文件夹层次结构中对共享数据源项重命名，或将其移到其他位置，则引用该共享数据源的所有报表或订阅中的路径信息都会相应更新。 如果使共享数据源脱机，则直到您重新启用该数据源后所有报表、模型和订阅才会运行。  
   
@@ -76,6 +76,6 @@ ms.locfileid: "66107403"
  [嵌入和共享的数据连接或数据源 &#40;报表生成器和 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  ["数据源" 属性页 &#40;报表管理器&#41;](../data-sources-properties-page-report-manager.md)   
  [创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [配置报表的数据源属性 &#40;报表管理器&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [配置报表的数据源属性（报表管理器）](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

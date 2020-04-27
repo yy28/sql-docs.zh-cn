@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6d973d4628e9c80b47c4fea0ef3476dbd05131f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107444"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>将报表或模型绑定到共享数据源 (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66107444"
   
      将打开“属性”选项卡。  
   
-2.  单击“数据源”****。  
+2.  单击 **“数据源”**。  
   
 3.  单击 **“浏览”**，然后导航到要绑定报表或模型的数据源。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66107444"
   
 ### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-sharepoint-integrated-mode"></a>将报表或模型绑定到在 SharePoint 集成模式下运行的报表服务器上的共享数据源  
   
-1.  如果尚未打开库，请在“快速启动”栏上单击其名称。 如果未显示库的名称，请单击 **“查看所有网站内容”** ，然后单击库的名称。  
+1.  如果尚未打开库，请在“快速启动”栏上单击其名称。 如果未显示库的名称，请单击 **“查看所有网站内容”**，然后单击库的名称。  
   
 2.  指向报表或模型，然后单击向下箭头。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66107444"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-10. 单击“关闭”  。  
+10. 单击“**关闭**”。  
   
 ## <a name="see-also"></a>另请参阅  
  [报表管理器 &#40;上传文件或报表&#41;](../reports/upload-a-file-or-report-report-manager.md)   
@@ -70,6 +70,6 @@ ms.locfileid: "66107444"
  [在 SharePoint 集成模式下创建和管理共享数据源 &#40;Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Reporting Services &#40;SSRS 支持的数据源&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

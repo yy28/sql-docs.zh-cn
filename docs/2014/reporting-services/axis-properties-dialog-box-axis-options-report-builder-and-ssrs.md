@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109963"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）
@@ -44,10 +44,10 @@ ms.locfileid: "66109963"
   
  当轴设置为使用对数刻度时，在框中键入要使用的对数底数。 默认情况下，图表对轴的对数刻度使用底数 10。 当轴是数轴时，此选项仅能用于 Y 轴。  
   
- **最低**  
+ **短**  
  键入一个表示 X 轴最小值的表达式或值。 如果省略此参数，最小值将由数据集返回的数据决定。  
   
-  最大值  
+ **最佳**  
  键入一个表示 X 轴最大值的表达式或值。 如果省略此参数，最大值将由数据集返回的数据决定。  
   
  **间隔**  
@@ -60,13 +60,13 @@ ms.locfileid: "66109963"
  键入一个表达式或选择一个值，以添加或去除图表元素与图表边之间的边距。 如果将此选项设置为 **“自动”**，则会添加侧边距。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)   
- [设置图表上序列颜色的格式（报表生成器和 SSRS）](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [指定轴间隔（报表生成器和 SSRS）](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [设置图表上轴标签的格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [设置图表上序列颜色的格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [指定轴间隔 &#40;报表生成器和 SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [将轴标签的格式设置为日期或货币 &#40;报表生成器和 SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [&#40;报表生成器和 SSRS 在辅助轴上绘制数据&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [迷你图和数据条 &#40;报表生成器和 SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [添加或删除图表 &#40;报表生成器和 SSRS 的边距&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [在图表中添加或删除边距（报表生成器和 SSRS）](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

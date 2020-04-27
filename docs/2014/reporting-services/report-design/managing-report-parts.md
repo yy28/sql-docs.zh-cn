@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105591"
 ---
 # <a name="managing-report-parts"></a>管理报表部件
@@ -51,7 +51,7 @@ ms.locfileid: "66105591"
   
  (*) 表明它是在此版本中新推出的。  
   
-|properties|说明|报表部件<br /><br /> 库搜索条件|  
+|属性|说明|报表部件<br /><br /> 库搜索条件|  
 |--------------|-----------------|---------------------------------------------|  
 |名称|这是用户可在报表部件库中搜索的条件之一。|是|  
 |说明|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|是|  
@@ -71,11 +71,11 @@ ms.locfileid: "66105591"
 |-------------|-----------|  
 |添加、删除、编辑项属性，管理安全性，以及下载报表部件|内容管理员<br /><br /> 我的报表|  
 |添加、删除和下载报表部件|发布者|  
-|搜索和重用|浏览者<br /><br /> 报表生成器|  
+|搜索和重用|浏览器<br /><br /> 报表生成器|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>SharePoint 集成模式下的服务器  
   
-|操作|角色|  
+|操作|Role|  
 |-------------|----------|  
 |添加、删除、编辑项属性，管理安全性，以及下载报表部件|完全控制|  
 |添加、删除、编辑项属性，以及下载报表部件|设计<br /><br /> 参与|  

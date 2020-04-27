@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108425"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66108425"
   
 -   [更改文本样式和列宽](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a>设置日期格式  
+##  <a name="format-the-date"></a><a name="bkmk_format_date"></a>设置日期格式  
  默认情况下，Date 字段显示日期和时间信息。 您可以设置其格式，使其只显示日期。  
   
 #### <a name="to-format-a-date-field"></a>设置日期字段格式  
@@ -45,7 +45,7 @@ ms.locfileid: "66108425"
   
 6.  预览报表以查看对 `[Date]` 字段的更改，然后更改回设计视图。  
   
-##  <a name="bkmk_format_currency"></a>设置货币格式  
+##  <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>设置货币格式  
  LineTotal 字段显示常规数字。 请设置其格式，以使其显示货币形式的数字。  
   
 #### <a name="to-format-a-currency-field"></a>设置货币字段格式  
@@ -70,7 +70,7 @@ ms.locfileid: "66108425"
   
 6.  预览报表以查看对 `[LineTotal]` 字段的更改，然后更改回设计视图。  
   
-##  <a name="bkmk_change_textstyle"></a>更改文本样式和列宽  
+##  <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>更改文本样式和列宽  
  还可以更改标题行的格式设置，以使其与报表中的数据行区分开来。 最后，您将调整列的宽度。  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>设置标题行和表列的格式  
@@ -95,7 +95,7 @@ ms.locfileid: "66108425"
  您已成功地设置了列标题以及日期和货币值的格式。 接下来，您将向报表中添加分组和总计。 请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置数字和日期格式（报表生成器和 SSRS）](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [设置数字和日期格式 &#40;报表生成器和 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

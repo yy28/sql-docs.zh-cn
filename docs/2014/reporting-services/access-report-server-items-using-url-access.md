@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb841d8014bd1a66d533c10c4740c016bb13e737
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110100"
 ---
 # <a name="access-report-server-items-using-url-access"></a>使用 URL 访问报表服务器项
-  本主题介绍如何使用*rs： Command*=*值*访问 Report Server 数据库或 SharePoint 站点中不同类型的目录项。  
+  本主题介绍如何使用 rs:Command=Value 访问报表服务器数据库或 SharePoint 站点中不同类型的目录项   。  
   
- 不必添加此参数字符串。 如果您省略此字符串，报表服务器将会计算项类型，并且自动选择适当的参数值。 但是，在 URL 中使用*rs： Command*=*Value*字符串可以提高 Report Server 的性能。  
+ 不必添加此参数字符串。 如果您省略此字符串，报表服务器将会计算项类型，并且自动选择适当的参数值。 但是，在 URL 中使用 rs:Command=Value 字符串可改进报表服务器的性能   。  
   
  请注意下面示例中的 `_vti_bin` 代理语法。 有关使用代理语法的详细信息，请参阅 [URL Access Parameter Reference](url-access-parameter-reference.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66110100"
  您所看到的用户界面类似于由 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS) 使用的目录浏览模式。 报表服务器的版本号（包括内部版本号）也将显示在文件夹列表之下。  
   
 ## <a name="see-also"></a>另请参阅  
- [URL 访问 (SSRS)](url-access-ssrs.md)   
+ [&#40;SSRS&#41;的 URL 访问](url-access-ssrs.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107783"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>键盘快捷键（报表生成器）
@@ -39,7 +39,7 @@ ms.locfileid: "66107783"
 |打开报表。|Ctrl+O|  
 |保存报表。|Ctrl+S、Alt+S|  
 |在报表生成器的各区域之间移动，例如功能区、设计图面、“分组”窗格、“属性”窗格和“数据”窗格。|F6、Shift+F6|  
-|移动到功能区。|Alt|  
+|移动到功能区。|ALT|  
 |移动到功能区上的“主文件夹”选项卡。|ALT+H|  
 |移动到功能区上的“插入”选项卡。|Alt+I|  
 |移动到功能区上的“视图”选项卡。|Alt+V|  
@@ -59,7 +59,7 @@ ms.locfileid: "66107783"
 |复制|Ctrl+C、Alt+H+C|  
 |剪切|Ctrl+X、Alt+H+X|  
 |粘贴|Ctrl+V、Alt+H+V|  
-|全选。|CTRL+A|  
+|全选。|CTRL + A|  
 |撤消|Ctrl+Z、Alt+Z|  
 |重做|Ctrl+Y、Alt+Y|  
 |放大。|Ctrl+加号 (+)|  
@@ -93,7 +93,7 @@ ms.locfileid: "66107783"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2014 中的报表生成器](report-builder-in-sql-server-2016.md)   
- [报表设计视图（报表生成器）](report-design-view-report-builder.md)   
- [词汇表 &#40;报表生成器&#41;](glossary-report-builder.md)  
+ [报表设计视图 &#40;报表生成器&#41;](report-design-view-report-builder.md)   
+ [词汇表（报表生成器）](glossary-report-builder.md)  
   
   

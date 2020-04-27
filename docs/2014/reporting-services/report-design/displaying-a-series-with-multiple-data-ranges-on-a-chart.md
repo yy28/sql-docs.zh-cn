@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c226cc9603aa687616d54fa95ee82c7f2b86792
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105996"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>在图表中显示包含多个数据区域的序列（报表生成器和 SSRS）
@@ -26,9 +26,9 @@ ms.locfileid: "66105996"
   
  有几种不同的方法可以改善可读性：  
   
--   **启用刻度分隔**线。 如果数据分成了两个或更多数据区域组，则可以使用刻度分隔线来删除各数据区域之间的空白。 刻度分隔线是在绘图区绘制的一个条带，表示序列中高值和低值之间的中断。  
+-   **启用刻度分隔线**。 如果数据分成了两个或更多数据区域组，则可以使用刻度分隔线来删除各数据区域之间的空白。 刻度分隔线是在绘图区绘制的一个条带，表示序列中高值和低值之间的中断。  
   
--   **筛选掉不必要的值**。 如果您具有的数据点使重要数据区域在图表中显示时变得模糊，则可以使用报表筛选器删除不需要的数据点。 有关如何在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中向图表添加筛选器的详细信息，请参阅[添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)。  
+-   **筛选出不需要的值**。 如果您具有的数据点使重要数据区域在图表中显示时变得模糊，则可以使用报表筛选器删除不需要的数据点。 有关如何在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中向图表添加筛选器的详细信息，请参阅[添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
 -   **将每个数据区域绘制为不同的序列，以便进行多序列比较**。 如果具有两个以上数据区域，可以考虑将数据区域分隔为不同的序列。 有关详细信息，请参阅 [图表中的多个序列（报表生成器和 SSRS）](multiple-series-on-a-chart-report-builder-and-ssrs.md)。  
   
@@ -62,10 +62,10 @@ ms.locfileid: "66105996"
   
 ## <a name="see-also"></a>另请参阅  
  [图表上的多个序列 &#40;报表生成器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
- [图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）](chart-effects-3d-bevel-and-other-report-builder.md)   
- [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [设置图表格式 &#40;报表生成器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [图表中的三维效果、凹凸效果和其他效果 &#40;报表生成器和 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [图表 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ ["轴属性" 对话框-"轴选项" &#40;报表生成器和 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

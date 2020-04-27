@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107699"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
@@ -50,8 +50,8 @@ ms.locfileid: "66107699"
   
 ## <a name="see-also"></a>另请参阅  
  [导出报表 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [页眉和页脚（报表生成器和 SSRS）](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [图像（报表生成器和 SSRS）](../report-design/images-report-builder-and-ssrs.md)   
+ [页眉和页脚 &#40;报表生成器和 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [映像 &#40;报表生成器和 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

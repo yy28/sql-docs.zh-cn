@@ -13,14 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110132"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>摘要：将表转换为层次结构
-  
   `hierarchyid` 数据类型可以采用精简格式存储层次结构关系。 正确的索引可以通过层次结构级别、层次结构子树或传统单独查找方式有效地返回数据。  
   
  在本课中，您使用了两种分层方法。 下一课将说明如何使用更多此类方法查询和操作分层数据。  

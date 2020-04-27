@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107619"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>“报表生成器选项”对话框 -&gt;“设置”（报表生成器）
@@ -34,10 +34,10 @@ ms.locfileid: "66107619"
  不需要重新启动报表生成器，此设置就能生效。  
   
  **显示此数量的最近的站点和服务器**  
- 指定显示在“打开报表”  和“存为报表”  对话框中的最近使用的站点和连接的数量。  
+ 指定显示在“打开报表”**** 和“存为报表”**** 对话框中的最近使用的站点和连接的数量。  
   
  **显示此数量的最近的共享数据集和数据源连接**  
- 指定显示在“数据集属性”  对话框和数据区域向导“选择数据源的连接”  页中的最近的共享数据集和数据源连接的数量。  
+ 指定显示在“数据集属性”**** 对话框和数据区域向导“选择数据源的连接”**** 页中的最近的共享数据集和数据源连接的数量。  
   
  **显示此数量的最近的文档**  
  指定在单击“报表生成器”按钮后显示的最近用过的文档的数量。  
@@ -46,6 +46,6 @@ ms.locfileid: "66107619"
  清除最近访问的站点、服务器、共享数据集、共享数据源连接和文档的当前列表。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表生成器对话框、窗格和向导的帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

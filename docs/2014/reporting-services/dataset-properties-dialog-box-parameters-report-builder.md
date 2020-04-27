@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109384"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>“数据集属性”对话框 -&gt;“参数”（报表生成器）
@@ -42,7 +42,7 @@ ms.locfileid: "66109384"
  在列表中向下移动所选的参数。  
   
  **参数名称**  
- 键入添加到“数据集属性”  对话框“查询”  选项卡上数据集中的查询参数的名称。  
+ 键入添加到“数据集属性”**** 对话框“查询”**** 选项卡上数据集中的查询参数的名称。  
   
  **参数值**  
  仅限嵌入数据集。  
@@ -65,7 +65,7 @@ ms.locfileid: "66109384"
   
  选择此选项可在共享数据集定义中将此参数标记为只读。 在将共享数据集添加到报表时，该参数不出现在属性中。 在报表服务器上缓存共享数据集时，不能更改该值。  
   
- **Nullable**  
+ **可以为 Null**  
  仅限共享数据集。  
   
  选择此选项可允许 Null 值。  
@@ -79,11 +79,11 @@ ms.locfileid: "66109384"
  [报表生成器对话框、窗格和向导的帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  ["数据集属性" 对话框-> "查询 &#40;报表生成器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
- [教程：向报表添加参数（报表生成器）](tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [报表参数（报表生成器和报表设计器）](report-design/report-parameters-report-builder-and-report-designer.md)   
- [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [教程：向报表添加参数 &#40;报表生成器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [报表参数 &#40;报表生成器和报表设计器&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [查询设计器 &#40;报表生成器&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
- [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

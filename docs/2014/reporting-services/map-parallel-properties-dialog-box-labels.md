@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108249"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>“地图纬线属性”对话框 -&gt;“标签”
@@ -25,7 +25,7 @@ ms.locfileid: "66108249"
   
 -   **平面.** X 坐标。  
   
--   **地区性.** 当前投影的纬度。  
+-   **地理：** 当前投影的纬度。  
   
  单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "66108249"
  **位置**  
  选择标签相对于视区的显示位置（顶部、中心和底部）。 默认位置为 **“近端”**。  
   
--   **接近**在顶部显示标签。  
+-   **近端** 在顶部显示标签。  
   
--   **四分之一**在顶部和中心之间的一半方向上显示标签。  
+-   **四分之一** 在顶部和中心之间的一半位置处显示标签。  
   
--   **中心**在中心显示标签。  
+-   **居中** 在中心显示标签。  
   
--   **四分之三**在中心和底部之间的一半方向上显示标签。  
+-   **四分之三** 在中心和底部之间的一半位置处显示标签。  
   
--   **远**在底部显示标签。  
+-   **远端** 在底部显示标签。  
   
 ## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](report-design/maps-report-builder-and-ssrs.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104639"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
@@ -23,7 +23,7 @@ ms.locfileid: "66104639"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a>报表定义大小问题  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a>报表定义大小问题  
  使用这一部分可以帮助解决与报表定义大小相关的问题。  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>如何减少报表定义大小？  
@@ -49,7 +49,7 @@ ms.locfileid: "66104639"
   
   
   
-##  <a name="Spatial"></a>空间数据问题  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a>空间数据问题  
  使用这一部分可以帮助解决与空间数据相关的问题。  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>在设计图面上，我看到了示例空间数据  
@@ -102,7 +102,7 @@ ms.locfileid: "66104639"
   
   
   
-##  <a name="Viewport"></a>视区中心和视图问题  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a>视区中心和视图问题  
  使用这一部分可以帮助解决与视区选项相关的问题。  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>无法对嵌入的地图元素设置居中和视图。  
@@ -126,7 +126,7 @@ ms.locfileid: "66104639"
   
   
   
-##  <a name="Layers"></a>层问题  
+##  <a name="layer-issues"></a><a name="Layers"></a>层问题  
  使用这一部分可以帮助解决与层选项相关的问题。  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>我看不到地图中的一层或多层。  
@@ -148,7 +148,7 @@ ms.locfileid: "66104639"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>我对地图层设置了一个筛选器，但它不起作用。  
  若要对某层筛选数据，必须在筛选器表达式中指定数据类型。 请验证您已指定正确的基础数据类型，以便筛选器公式正确地计算指定的条件。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](filter-equation-examples-report-builder-and-ssrs.md)。  
   
-##  <a name="Legend"></a>图例、色阶和规则问题  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a>图例、色阶和规则问题  
  使用这一部分可以帮助解决与规则、图例和色阶选项相关的问题。  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>如何控制地图图例中的值？  
@@ -172,8 +172,7 @@ ms.locfileid: "66104639"
 -   有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>对于色阶，值 NaN 是什么含义？  
- 
-  `NaN` 表示“非数字”。 色阶值应为数字值。 对于与色阶关联的规则，检查分布设置和图例文本值。 如果您创建了自定义分布范围，请验证您对第一个范围指定了下限，而对最后范围指定了上限。  
+ `NaN` 表示“非数字”。 色阶值应为数字值。 对于与色阶关联的规则，检查分布设置和图例文本值。 如果您创建了自定义分布范围，请验证您对第一个范围指定了下限，而对最后范围指定了上限。  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>当我运行报表时，不显示色阶。  
  当地图层为整个层的多边形、线条或点或嵌入地图元素指定颜色规则时，色阶向用户显示信息。 如果没有地图元素指定颜色规则，或者如果地图规则是使用图例而非颜色地图指定的，则呈现的报表中不显示颜色地图。  
@@ -182,7 +181,7 @@ ms.locfileid: "66104639"
   
   
   
-##  <a name="Tile"></a>磁贴问题  
+##  <a name="tile-issues"></a><a name="Tile"></a>磁贴问题  
  使用这一部分可以帮助解决与图块背景选项相关的问题。  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>我看不到 Bing 地图图块背景。  
@@ -199,14 +198,13 @@ ms.locfileid: "66104639"
  有关添加图块层的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ### <a name="how-do-i-control-the-text-on-a-tile-layer"></a>如何控制图块层上的文本？  
- 
-  **“道路”** 和 **“混合”** 视图均包含文本。 文本是来自 Bing 地图 Web 服务的图块的组成部分。  
+ **“道路”** 和 **“混合”** 视图均包含文本。 文本是来自 Bing 地图 Web 服务的图块的组成部分。  
   
  若要包含没有文本的图块层，请选择 **“空中”** 视图。  
   
   
   
-##  <a name="Tooltip"></a>工具提示和标签问题  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a>工具提示和标签问题  
  使用这一部分可以帮助解决与标签或工具提示选项相关的问题。  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>当我将标签或工具提示设置为表达式时，获得一个有关数据集作用域的表达式错误。  

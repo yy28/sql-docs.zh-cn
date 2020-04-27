@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107439"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在关系查询设计器中生成查询（报表生成器和 SSRS）
@@ -65,11 +65,11 @@ ms.locfileid: "66107439"
   
 1.  在关系查询设计器中，确认您已选择字段且这些字段显示在 **“所选字段”** 窗格中。  
   
-2.  在“应用的筛选器”窗格工具栏中，单击 **“添加筛选器”**。 此时将显示一个新的筛选器行。  
+2.  在“应用的筛选器”窗格工具栏中，单击 **“添加筛选器”** 。 此时将显示一个新的筛选器行。  
   
-3.  在“字段名称”中，单击以显示字段的下拉列表，然后单击要作为筛选依据的字段名称****。 例如，若要按数量进行筛选，则单击包含项数的字段。  
+3.  在“字段名称”中，单击以显示字段的下拉列表，然后单击要作为筛选依据的字段名称  。 例如，若要按数量进行筛选，则单击包含项数的字段。  
   
-4.  在“运算符”中，单击以显示运算符的下拉列表，然后选择要在筛选器中使用的比较运算符****。  
+4.  在“运算符”中，单击以显示运算符的下拉列表，然后选择要在筛选器中使用的比较运算符  。  
   
 5.  在 **“值”** 中，键入要作为筛选依据的值。 例如，若要针对大于 100 的数量进行筛选，则键入 100。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107439"
   
 ### <a name="to-view-a-query-result-set"></a>查看查询结果集  
   
-1.  在查询设计器工具栏中，单击“运行查询(!)”****。  
+1.  在查询设计器工具栏中，单击“运行查询(!)”  。  
   
     > [!NOTE]  
     >  查询设计器使用设计时凭据运行查询并检索结果集。 有关详细信息，请参阅 [在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
@@ -92,11 +92,11 @@ ms.locfileid: "66107439"
   
 ## <a name="see-also"></a>另请参阅  
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
- [从外部数据源添加数据 &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
+ [从外部数据源中添加数据 (SSRS)](add-data-from-external-data-sources-ssrs.md)   
  [查询设计器 &#40;报表生成器&#41;](../query-designers-report-builder.md)   
- [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [报表设计视图（报表生成器）](../report-builder/report-design-view-report-builder.md)   
- [共享数据集设计视图 &#40;报表生成器&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
+ [共享数据集设计视图（报表生成器）](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Reporting Services 查询设计器](../reporting-services-query-designers.md)  
   
   

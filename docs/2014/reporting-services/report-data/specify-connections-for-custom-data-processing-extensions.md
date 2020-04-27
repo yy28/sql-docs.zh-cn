@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 734eca26e94b4b879590c889c6c3c479c155c7be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107046"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>指定用于自定义数据处理扩展插件的连接
@@ -60,7 +60,7 @@ ms.locfileid: "66107046"
   
 1.  配置无人参与的执行帐户。 使用 `IDbConnection` 建立连接时，需要配置此帐户。 建立连接时，报表服务器将模拟此帐户。  
   
-2.  将报表上的数据源属性配置为使用 **“无凭据”**。  
+2.  将报表上的数据源属性配置为使用 **“无凭据”** 。  
   
 3.  将用于连接到数据源的凭据放置在连接字符串中。  
   
@@ -77,12 +77,12 @@ ms.locfileid: "66107046"
 |无凭据|如果指定了无人参与的执行帐户，则连接字符串将确定使用的凭据。<br /><br /> 如果未定义无人参与的执行帐户，则报表服务器将无法进行连接。|  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSRS Configuration Manager 配置无人参与的执行帐户&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [实现数据处理扩展插件](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
  [创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [配置报表的数据源属性 &#40;报表管理器&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [配置报表的数据源属性（报表管理器）](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

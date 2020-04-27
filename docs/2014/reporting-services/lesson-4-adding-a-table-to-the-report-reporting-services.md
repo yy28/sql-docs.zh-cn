@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3bb152b749041451cdb3a3294c24d8b172c49a99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108453"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 课：向报表添加表 (Reporting Services)
@@ -39,7 +39,7 @@ ms.locfileid: "66108453"
   
 5.  将 Product 字段从“报表数据”窗格拖到表的第三列中****。  
   
-6.  将 Qty 字段拖到第三列的右边缘，直到显示一个垂直光标且鼠标指针带有加号 [+] 为止。 释放鼠标按钮后，将为 `[Qty]` 创建第四列。  
+6.  将 Qty 字段拖到第三列的右边缘，直到显示一个垂直光标且鼠标指针带有加号 [+] 为止。 释放鼠标按钮后，将为 `[Qty]`创建第四列。  
   
 7.  请以相同方式添加 LineTotal 字段，并创建第五列。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66108453"
  您已成功地向报表添加了表数据区域、向数据区域添加了字段，并成功地预览了报表。 接下来，将设置列标题以及日期和货币值的格式。 请参阅[第 5 课：设置报表格式 (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [表（报表生成器和 SSRS）](report-design/tables-report-builder-and-ssrs.md)   
+ [表 &#40;报表生成器和 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

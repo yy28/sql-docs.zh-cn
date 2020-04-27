@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108192"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>“我的订阅”页（报表管理器）
@@ -50,18 +50,16 @@ ms.locfileid: "66108192"
  **说明**  
  显示订阅的说明。 单击说明可以查看或编辑报表的订阅信息。  
   
- **文件夹**  
+ **Folder**  
  显示包含在订阅中指定的报表的文件夹。 单击文件夹名称可以查看该文件夹的内容。  
   
- **界限**  
- 标识导致订阅运行的条件。 
-  **TimedSubscription** 触发器基于定义订阅运行时间的计划。 
-  **SnapshotUpdated** 触发器基于对报表快照的更新操作。  
+ **触发器**  
+ 标识导致订阅运行的条件。 **TimedSubscription** 触发器基于定义订阅运行时间的计划。 **SnapshotUpdated** 触发器基于对报表快照的更新操作。  
   
  **上次运行时间**  
  显示上次处理订阅的时间。  
   
- **Status**  
+ **状态**  
  显示订阅的状态。 通常，状态值为“新建”或订阅上次运行的日期和时间。  
   
  当订阅包括指向不再有效的加密值（即指向用于运行报表的已存储凭据）的指针时，将出现“错误数据”状态值。 在报表服务器上重新创建用于对数据进行加密和解密的对称密钥后，现有的加密值将无法使用。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107914"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>导出到 PDF 文件（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "66107914"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> 嵌入字体  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> 嵌入字体  
  如有可能，PDF 呈现扩展插件会在 PDF 文件中嵌入显示报表所需的每个字体的子集。 因此报表服务器上必须安装有报表中使用的字体。 当报表服务器以 PDF 格式生成报表时，它将使用报表引用的字体中所存储的信息在 PDF 文件内创建字符映射。 如果报表服务器上未安装所引用的字体，生成的 PDF 文件可能不会包含正确的映射，因而在查看该 PDF 文件时可能不会正常显示。  
   
  满足以下条件时，将在 PDF 文件中嵌入字体：  
@@ -57,24 +57,21 @@ ms.locfileid: "66107914"
   
  嵌入 PDF 文件的字体包含在“字体”属性中，该属性随文件一起作为元数据保存。  
   
-##  <a name="Metadata"></a> 元数据  
+##  <a name="metadata"></a><a name="Metadata"></a>新元  
  除了报表布局外，PDF 呈现扩展插件会将以下元数据写入 PDF 文档信息字典。  
   
 |PDF 属性|创建自|  
 |------------------|------------------|  
-|`Title`|
-  `Name` RDL 元素的 `Report` 属性。|  
-|`Author`|
-  `Author` RDL 元素。|  
-|`Subject`|
-  `Description` RDL 元素。|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]产品名称和版本。|  
+|`Title`|`Name` RDL 元素的 `Report` 属性。|  
+|`Author`|`Author` RDL 元素。|  
+|`Subject`|`Description` RDL 元素。|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 产品的名称和版本。|  
 |`Producer`|呈现扩展插件的名称和版本。|  
 |`CreationDate`|报表执行时间，以 PDF `datetime` 格式表示。|  
   
   
   
-##  <a name="Interactivity"></a> 交互  
+##  <a name="interactivity"></a><a name="Interactivity"></a>互动  
  PDF 支持一些交互元素。 下面是对一些特定行为的说明。  
   
 ### <a name="show-and-hide"></a>显示和隐藏  
@@ -96,7 +93,7 @@ ms.locfileid: "66107914"
   
   
   
-##  <a name="Compression"></a>折叠  
+##  <a name="compression"></a><a name="Compression"></a>折叠  
  图像压缩基于图像的原始文件类型。 默认情况下，PDF 呈现扩展插件会压缩 PDF 文件。  
   
  为了尽可能保留 PDF 文件中所包含图像的任何压缩状态，JPEG 图像存储为 JPEG，所有其他图像类型都存储为 BMP。  
@@ -106,16 +103,16 @@ ms.locfileid: "66107914"
   
   
   
-##  <a name="DeviceInfo"></a> 设备信息设置  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>设备信息设置  
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置。 有关详细信息，请参阅 [PDF Device Information Settings](../pdf-device-information-settings.md)。  
   
   
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
- [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;报表生成器和 SSRS 中的分页&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [呈现行为 &#40;报表生成器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同报表呈现扩展插件的交互功能 &#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [&#40;报表生成器和 SSRS 呈现报表项&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

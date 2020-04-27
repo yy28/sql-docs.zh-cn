@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f918d6583f01473e061792406821b13a4856cea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109479"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>“数据源属性”对话框 ->“常规”
@@ -30,7 +30,7 @@ ms.locfileid: "66109479"
  **嵌入连接**  
  如果不想使用共享数据源，则请选择此选项。  
   
- 类型   
+ **类型**  
  选择数据处理扩展插件。 该列表显示所有已注册的扩展插件。  
   
  **连接字符串**  

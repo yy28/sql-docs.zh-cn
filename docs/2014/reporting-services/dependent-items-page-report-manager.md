@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109325"
 ---
 # <a name="dependent-items-page-report-manager"></a>“依赖项”页（报表管理器）
@@ -29,7 +29,7 @@ ms.locfileid: "66109325"
   
 2.  悬停在该项之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该数据源的“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该数据源的“常规属性”页。  
   
 4.  选择 **“依赖项”** 选项卡。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66109325"
  **编辑**  
  单击“属性”图标可以访问报表或模型的属性页。  
   
- 类型   
+ **类型**  
  显示项类型的图标。  
   
  **修改日期**  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab4f9b06758d29ff1f988f37b95ce92206f34d39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107679"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>将报表保存到 SharePoint 库（报表生成器）
@@ -24,17 +24,17 @@ ms.locfileid: "66107679"
   
 ### <a name="to-save-a-report-to-a-sharepoint-site"></a>将报表保存到 SharePoint 站点  
   
-1.  从“报表生成器”按钮，单击 **“保存”** 。 此时，将打开“另存为”“**报表项>”对话框** _\<_ 。  
+1.  从“报表生成器”按钮，单击 **“保存”**。 此时将打开 "**另存为**_\<报表项>_ " 对话框。  
   
     > [!NOTE]  
     >  如果正在重新保存报表，会自动将其重新保存到以前的位置。 使用 **“另存为”** 选项可以更改位置。  
   
 2.  或者，单击 **“最近使用的站点和服务器”** 以显示最近使用的报表服务器和 SharePoint 站点的列表。  
   
-3.  找到 SharePoint 站点，然后单击 **“保存”** 。  
+3.  找到 SharePoint 站点，然后单击 **“保存”**。  
   
     > [!NOTE]  
-    >  如果超过 10 小时未对已更改的报表进行保存，则该报表将断开与服务器的连接，而且未保存。 如果发生这种情况，请在右下角的状态栏中单击“断开连接”，然后单击“连接”   。 最近的服务器将位于可用服务器列表中。 选择该服务器，并且报表将重新连接。  
+    >  如果超过 10 小时未对已更改的报表进行保存，则该报表将断开与服务器的连接，而且未保存。 如果发生这种情况，请在右下角的状态栏中单击“断开连接”，然后单击“连接”********。 最近的服务器将位于可用服务器列表中。 选择该服务器，并且报表将重新连接。  
   
 ## <a name="see-also"></a>另请参阅  
  [查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  

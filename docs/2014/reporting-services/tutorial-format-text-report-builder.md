@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098902"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
@@ -28,7 +28,7 @@ ms.locfileid: "66098902"
   
  您在本教程中创建的报表的增强版本可用作示例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 报表生成器报表。 有关下载此示例报表和其他内容的详细信息，请参阅[报表生成器示例报表](https://go.microsoft.com/fwlink/?LinkId=184851)。  
   
-##  <a name="BackToTop"></a>你将学习的内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容  
   
 ### <a name="set-up-the-report"></a>设置报表  
  1. [创建具有数据源和数据集的空白报表](#CreateReport)  
@@ -53,7 +53,7 @@ ms.locfileid: "66098902"
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="CreateReport"></a>创建具有数据源和数据集的空白报表  
+##  <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>创建具有数据源和数据集的空白报表  
   
 #### <a name="to-create-a-blank-report"></a>创建空白报表  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66098902"
   
 3.  单击 **“使用我的报表中嵌入的连接”**。  
   
-4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = **servername>****\<**  
+4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = \<servername>********  
   
     > [!NOTE]  
     >  Expression \<servername> （例如 report001)）指定安装了 SQL Server 数据库引擎实例的计算机。 本教程不需要具体数据；只需要与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库的连接。 如果你已经具有在“数据源连接”**** 下列出的某一数据源连接，则可以选择该连接并且转到下一过程“创建数据集”。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -134,7 +134,7 @@ ms.locfileid: "66098902"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a>向报表添加字段 Design Surface  
+##  <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>向报表添加字段 Design Surface  
  如果您希望来自您的数据集的字段出现在报表中，则第一感可能是要将其直接拖到设计图面。 本练习指出为什么无法这样做以及相应替代步骤。  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>向报表添加字段（获得错误结果）  
@@ -143,7 +143,7 @@ ms.locfileid: "66098902"
   
      报表生成器创建一个文本框，其中包含一个表达式，表示为\<Expr>。  
   
-2.  单击 **“运行”** 。  
+2.  单击“运行”****。  
   
      请注意，只有一条记录**Fernando Ross**，它按字母顺序排列查询中的第一条记录。 该字段并不重复以便显示该字段中的其他记录。  
   
@@ -157,8 +157,7 @@ ms.locfileid: "66098902"
     =First(Fields!FullName.Value, "TextDataSet")  
     ```  
   
-     
-  `First` 函数设计为只检索字段中的第一个值，这就是您所看到的内容。  
+     `First` 函数设计为只检索字段中的第一个值，这就是您所看到的内容。  
   
      将该字段直接拖到设计图面上创建了一个文本框。 文本框本身并非数据区域，因此它们不显示来自报表数据集的数据。 数据区域（例如表、矩阵和列表）中的文本框显示数据。  
   
@@ -172,7 +171,7 @@ ms.locfileid: "66098902"
   
      此时，报表生成器将创建一个文本框，表达式 `[FullName]` 将位于该文本框中。  
   
-3.  单击 **“运行”** 。  
+3.  单击“运行”****。  
   
      请注意，此时该框将重复以便显示查询中的所有记录。  
   
@@ -190,7 +189,7 @@ ms.locfileid: "66098902"
   
 7.  选择列表框并按 Delete 键。  
   
-##  <a name="AddTable"></a>向报表添加表 Design Surface  
+##  <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>向报表添加表 Design Surface  
  创建此表，以便您可以在其中放置超链接和旋转后的文本。  
   
 #### <a name="to-add-a-table-to-the-report"></a>将表添加到报表中  
@@ -219,9 +218,9 @@ ms.locfileid: "66098902"
   
 11. 选定这三个单元后，右键单击其中一个单元格，然后单击 "**删除行**"。  
   
-12. 单击 **“运行”** 。  
+12. 单击“运行”****。  
   
-##  <a name="AddHyperlink"></a>向报表添加超链接  
+##  <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>向报表添加超链接  
  在本节中，您将向前一节中的表中的文本添加超链接。  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>向报表添加超链接  
@@ -242,13 +241,13 @@ ms.locfileid: "66098902"
   
 8.  在 "**主页**" 选项卡的 "**字体**" 部分中，单击 "**下划线**" 按钮，然后单击 "**颜色**" 按钮旁的下拉箭头，然后单击 "**蓝色**"。  
   
-9. 单击 **“运行”** 。  
+9. 单击“运行”****。  
   
      文本现在看起来像链接了。  
   
 10. 单击某一链接。 如果计算机已连接到 Internet，则浏览器将打开到报表生成器的帮助主题。  
   
-##  <a name="RotateText"></a>旋转报表中的文本  
+##  <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>旋转报表中的文本  
  在本节中，您将旋转前一节的表中的某些文本。  
   
 #### <a name="to-rotate-text"></a>旋转文本  
@@ -259,22 +258,22 @@ ms.locfileid: "66098902"
   
 3.  在“开始”**** 选项卡上的“字体”**** 部分中，单击“加粗”**** 按钮。  
   
-4.  如果“属性”窗格未打开，请在“视图”选项卡上选中“属性”复选框   。  
+4.  如果“属性”窗格未打开，请在“视图”选项卡上选中“属性”复选框********。  
   
 5.  在 "属性" 窗格中找到 "WritingMode" 属性。  
   
     > [!NOTE]  
-    >  对“属性”窗格中的属性进行分类时，WritingMode 位于“本地化”类别中  。 请确保您选择的是单元，而非文本。 WritingMode 是文本框的属性，而非文本的属性。  
+    >  对“属性”窗格中的属性进行分类时，WritingMode 位于“本地化”类别中****。 请确保您选择的是单元，而非文本。 WritingMode 是文本框的属性，而非文本的属性。  
   
 6.  在列表框中，单击 " **Rotate270**"。  
   
 7.  在 "**主页**" 选项卡上的 "**段落**" 部分中，单击**中间**和中间按钮，以在单元格的中间**垂直和水平**位置查找文本。  
   
-8.  单击 "运行（**！**）"。  
+8.  单击“运行”(**!**)。  
   
  现在， `[Territory]` 单元中的文本将从单元的底部到顶部垂直放置。  
   
-##  <a name="FormatHTML"></a>用 HTML 格式显示文本  
+##  <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>用 HTML 格式显示文本  
   
 #### <a name="to-display-text-formatted-as-html"></a>以 HTML 格式显示文本  
   
@@ -308,13 +307,13 @@ ms.locfileid: "66098902"
   
 6.  在 "**常规**" 页上的 "**标记类型**" 下，单击 " **Html-将 html 标记解释为样式**"。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
 8.  单击“运行” (**!**) 以预览报表。  
   
  文本框中的文本将显示为标题、段落和带项目符号的列表。  
   
-##  <a name="FormatCurrency"></a>设置货币格式  
+##  <a name="format-currency"></a><a name="FormatCurrency"></a>设置货币格式  
   
 #### <a name="to-format-numbers-as-currency"></a>将数字设为货币格式  
   
@@ -332,14 +331,14 @@ ms.locfileid: "66098902"
   
  报表现在将显示设置了格式的数据并且更易于阅读。  
   
-##  <a name="Save"></a>保存报表  
+##  <a name="save-the-report"></a><a name="Save"></a>保存报表  
  您可以将报表保存到报表服务器、SharePoint 库或本地计算机。  
   
  在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  单击 **“最近使用的站点和服务器”**。  
   
@@ -355,7 +354,7 @@ ms.locfileid: "66098902"
   
 #### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上  
   
-1.  在**报表生成器**"按钮中，单击"**另存为**"。  
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
 2.  单击 **“桌面”**、 **“我的文档”** 或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
   
@@ -368,7 +367,7 @@ ms.locfileid: "66098902"
   
 ## <a name="see-also"></a>另请参阅  
  [教程 &#40;报表生成器&#41;](report-builder-tutorials.md)   
- [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [&#40;报表生成器和 SSRS 的格式设置报表项&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [SQL Server 2014 中的报表生成器](report-builder/report-builder-in-sql-server-2016.md)  
   
   
