@@ -48,10 +48,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062599"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>算法参数（SQL Server 数据挖掘外接程序）
@@ -70,7 +70,7 @@ ms.locfileid: "66062599"
   
  下表列出了有关参数，对它们的功能进行了说明，并提供了指向更详细的技术信息的链接。  
   
-|参数名称|使用位置|说明|  
+|参数名称|适用范围|说明|  
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Microsoft 时序算法|指定一个介于 0 和 1 之间的数字值，用于检测周期。 如果将此值设置为更接近于 1 的数，则允许查找许多接近周期的模式并允许自动生成周期提示。 处理大量的周期提示可能会导致模型定型时间明显加长，模型更准确。 如果将此值设置为更接近于 0 的数，则只检测周期性强的数据的周期。<br /><br /> 默认值为 0.6。|  
 |CLUSTER_COUNT|Microsoft Clustering Algorithm<br /><br /> Microsoft 顺序分析和聚类分析算法|指定将由算法生成的大致分类数。 如果无法基于相应的数据生成该大致数目的分类，则算法将生成尽可能多的分类。 如果将 CLUSTER_COUNT 设置为 0，则算法将使用试探性方法最准确地确定要生成的分类数。<br /><br /> 默认值为 10。|  
@@ -105,7 +105,7 @@ ms.locfileid: "66062599"
 |MINIMUM_SUPPORT|Microsoft 时序算法|指定在每个时序树中生成一个拆分所需的最小时间段数。<br /><br /> 默认值为 10。|  
 |MISSING_VALUE_SUBSTITUTION|Microsoft 时序算法|指定用于填充历史数据中空白的方法。 默认情况下，数据中不允许存在不规则的空白或参差不齐的边缘。 以下是可用来填充不规则空白或边缘的方法：使用以前的值、使用平均值或使用特定数值常量。|  
 |MODELLING_CARDINALITY|Microsoft Clustering Algorithm|指定在聚类分析过程中构建的示例模型数。<br /><br /> 默认值为 10。|  
-|PERIODICITY_HINT|Microsoft 时序算法|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。 方括号 [] 中的 n 是可选项，可以根据需要重复多次。<br /><br /> 默认为 {1}。|  
+|PERIODICITY_HINT|Microsoft 时序算法|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。 方括号 [] 中的 n 是可选项，可以根据需要重复多次。<br /><br /> 默认值为 {1}。|  
 |PREDICTION_SMOOTHING|Microsoft 时序算法|控制 ARTXP 和 ARIMA 时序的混合算法。 仅当 FORECAST_METHOD 参数设置为 MIXED 时，该指定值才有效。 值必须介于 0 到 1 之间。 如果值为 0，则模型仅使用 ARTXP。 如果值为 1，则模型仅使用 ARIMA。 值越接近 0，则 ARTXP 的重要性就越高。 值越接近 1，则 ARIMA 的重要性就越高。|  
 |SAMPLE_SIZE|Microsoft Clustering Algorithm|如果 CLUSTERING_METHOD 参数设置为其中一个可缩放聚类分析方法，请指定算法在每个传递中使用的事例数。 如果将 SAMPLE_SIZE 参数设置为 0，则会在单个传递中对整个数据集进行聚类分析操作， 从而导致内存和性能发生问题。<br /><br /> 默认值为 50000。|  
 |SAMPLE_SIZE|Microsoft 逻辑回归算法<br /><br /> Microsoft Neural Network Algorithm|指定用来给模型定型的事例数。 算法提供程序将使用该数字或不包含在 HOLDOUT_PERCENTAGE 参数指定的维持百分比中的总的事例百分比，取两者中较小值。<br /><br /> 换言之，如果将 HOLDOUT_PERCENTAGE 设置为 30，则算法将使用该参数的值或等于事例总数百分之七十的值，取两者中较小值。<br /><br /> 默认值为 10000。|  
@@ -113,7 +113,7 @@ ms.locfileid: "66062599"
 |SPLIT_METHOD|Microsoft 决策树算法|确定用于拆分节点的方法。 可用选项有：Binary (1)、Complete (2) 或 Both (3)。<br /><br /> 默认值为 3。|  
 |STOPPING_TOLERANCE|Microsoft 聚类分析算法技术参考|指定一个值，它可确定何时达到收敛而且算法完成建模。 当分类概率中的整体变化小于 STOPPING_TOLERANCE 参数与模型大小之比时，即达到收敛。<br /><br /> 默认值为 10。|  
   
-### <a name="comments"></a>注释  
+### <a name="comments"></a>说明  
  有关算法的更多详细信息，请参阅 SQL Server 联机丛书。  
   
 ## <a name="see-also"></a>另请参阅  

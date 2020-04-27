@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056567"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>原始文件目标编辑器（“连接管理器”页）
@@ -26,17 +26,17 @@ ms.locfileid: "66056567"
   
 -   [打开原始文件目标编辑器](#open)  
   
--   [设置“连接管理器”选项卡上的选项](#connection)  
+-   [设置 "连接管理器" 选项卡上的选项](#connection)  
   
 -   [设置“列”选项卡上的选项](#mapping)  
   
-##  <a name="open"></a> 打开原始文件目标编辑器  
+##  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a>打开原始文件目标编辑器  
   
 1.  将原始文件目标添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]包。  
   
-2.  右键单击该组件，然后单击 **“编辑”** 。  
+2.  右键单击该组件，然后单击 **“编辑”**。  
   
-##  <a name="connection"></a> 设置“连接管理器”选项卡上的选项  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **访问模式**  
  选择指定文件名的方式。 选择 **“文件名”** 可以直接输入文件名和路径，选择 **“变量中的文件名”** 可以指定包含文件名的变量。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66056567"
   
  单击 **“生成初始原始文件”** 时，将显示一个消息框。 单击 **“确定”** 可继续创建文件。 单击 **“取消”** 可选择 **“列”** 页上的其他列列表。  
   
-##  <a name="mapping"></a> 设置“列”选项卡上的选项  
+##  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a>设置 "列" 选项卡上的选项  
  **可用输入列**  
  选择要写入原始文件的一个或多个输入列。  
   

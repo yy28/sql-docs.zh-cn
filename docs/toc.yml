@@ -218,8 +218,10 @@
           items:
             - name: Kubernetes 疑难解答
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Active Directory 集成
+            - name: Active Directory 域组范围
               href: big-data-cluster/troubleshoot-active-directory.md
+            - name: Active Directory DNS
+              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
             - name: HDFS 管理权限
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: 参考

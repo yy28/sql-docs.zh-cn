@@ -19,22 +19,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de1226d675859312e1ccaf908141586f865c8946
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63028384"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC 数据源
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源名称 (DSN) 标识 ODBC 数据源，此数据源包含 ODBC 应用程序连接到特定服务器上的某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库所需要的所有信息。 您可以通过两种方法定义 ODBC 数据源名称：  
   
 -   在客户端计算机上，打开 "控制面板" 中的 "管理工具"，然后双击 "**数据源（ODBC）**"。 此时将打开 ODBC 数据源管理器，您可以用它来创建 DSN。  
   
 -   在 ODBC 应用程序中，调用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源包含：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源包含：  
   
 -   数据源的名称。  
   

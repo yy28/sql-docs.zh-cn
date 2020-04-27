@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022595"
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
@@ -26,23 +26,22 @@ ms.locfileid: "63022595"
   
 2.  对于将发布的表，直接（而不是通过角色）将对每个表的 SELECT 权限授予第一步创建的 Oracle 管理用户。  
   
-3.  请在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分发服务器上安装 Oracle 客户端软件和 OLE DB 提供程序，然后停止并[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]重新启动实例。 如果分发服务器运行在 64 位平台上，则必须使用 64 位版本的 Oracle OLE DB 访问接口。  
+3.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装 Oracle 客户端软件和 OLE DB 提供程序，然后停止并重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果分发服务器运行在 64 位平台上，则必须使用 64 位版本的 Oracle OLE DB 访问接口。  
   
 4.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上将 Oracle 数据库配置为发布服务器。  
   
  有关 Oracle 发布服务器可以发布的对象的列表，请参阅 [Oracle 发布服务器的设计注意事项和限制](design-considerations-and-limitations-for-oracle-publishers.md)。  
   
 > [!NOTE]  
->  您必须是 **sysadmin** 固定服务器角色的成员，才能启用发布服务器或分发服务器以及创建 Oracle 发布或来自 Oracle 发布的订阅。  
+>   您必须是 **sysadmin** 固定服务器角色的成员，才能启用发布服务器或分发服务器以及创建 Oracle 发布或来自 Oracle 发布的订阅。  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>在 Oracle 数据库中创建复制管理用户架构  
- 您必须创建一个用户架构，使复制代理在该用户架构的上下文中连接到 Oracle 数据库并执行操作。 必须授予此架构多种权限，下一部分列出了这些权限。 此架构拥有由 Oracle 发布服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制进程创建的所有对象，但公共同义词 **MSSQLSERVERDISTRIBUTOR**除外。 有关在 Oracle 数据库中创建的对象的详细信息，请参阅 [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)。  
+ 您必须创建一个用户架构，使复制代理在该用户架构的上下文中连接到 Oracle 数据库并执行操作。 必须授予此架构多种权限，下一部分列出了这些权限。 此架构拥有由 Oracle 发布服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制进程创建的所有对象，但公共同义词 MSSQLSERVERDISTRIBUTOR 除外****。 有关在 Oracle 数据库中创建的对象的详细信息，请参阅 [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)。  
   
 > [!NOTE]  
->  删除 **MSSQLSERVERDISTRIBUTOR** 公共同义词和用 **CASCADE** 选项配置的 Oracle 复制用户，会删除 Oracle 发布服务器上的所有复制对象。  
+>   删除 **MSSQLSERVERDISTRIBUTOR** 公共同义词和用 **CASCADE** 选项配置的 Oracle 复制用户，会删除 Oracle 发布服务器上的所有复制对象。  
   
- 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装后，该脚本位于以下目录中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]： * \<drive>*：\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \mssql\install\oracleadmin.sql。 
-  [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
+ 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装后，该脚本位于以下目录中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]： * \<drive>*：\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \mssql\install\oracleadmin.sql。 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
   
  使用具有 DBA 权限的帐户连接到 Oracle 数据库并执行此脚本。 此脚本将提示输入复制管理用户架构的用户名和密码以及用于创建对象的默认表空间（此表空间必须已存在于 Oracle 数据库中）。 有关为对象指定其他表空间的信息，请参阅[管理 Oracle 表空间](manage-oracle-tablespaces.md)。 可以任选用户名和强密码，但要将它们记下来，因为以后将 Oracle 数据库配置为发布服务器时会提示您输入此信息。 建议只将此架构用于复制所需的对象，而不要在此架构下创建要发布的表。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "63022595"
   
  成功连接到 Oracle 发布服务器后，请尝试使用与您所创建的复制管理用户架构关联的帐户和密码登录数据库。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务所使用的 Windows 帐户下运行时必须执行下列操作：  
   
-1.  单击 **“开始”**，然后单击 **“运行”**。  
+1.  单击 **“启动”** ，再单击 **“运行”** 。  
   
 2.  键入 `cmd` ，然后单击 **“确定”**。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "63022595"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     例如： `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     例如：`sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  如果网络配置成功，将成功登录，并显示 `SQL` 提示符。  
   
@@ -131,8 +130,8 @@ ms.locfileid: "63022595"
   
 ## <a name="see-also"></a>另请参阅  
  [Oracle 发布服务器的管理注意事项](administrative-considerations-for-oracle-publishers.md)   
- [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
- [有关 Oracle 发布的术语词汇表](glossary-of-terms-for-oracle-publishing.md)   
- [Oracle 发布概述](oracle-publishing-overview.md)  
+ [Oracle 发布服务器的数据类型映射](data-type-mapping-for-oracle-publishers.md)   
+ [Oracle 发布的术语词汇表](glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

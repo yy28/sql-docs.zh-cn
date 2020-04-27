@@ -1,5 +1,5 @@
 ---
-title: 使用大值类型 |Microsoft Docs
+title: 使用大值类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206992"
 ---
 # <a name="using-large-value-types"></a>使用大值类型
@@ -33,7 +33,7 @@ ms.locfileid: "68206992"
  以前，只有诸如 text、ntext 和 image 之类的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可以达到这样的长度************。 **Varchar**、 **nvarchar**和**varbinary**的**max**说明符使这些数据类型成为冗余的。 但是，由于仍然提供长数据类型，因而大多数 OLE DB 和 ODBC 数据访问组件的接口将保持不变。 为了实现与先前版本的向后兼容，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口中的 DBCOLUMNFLAGS_ISLONG 标志和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序中的 SQL_LONGVARCHAR 仍然可以继续使用。 针对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本编写的访问接口和驱动程序可以继续使用这些字词将新类型设置为最大长度不受限制。  
   
 > [!NOTE]  
->  还可以将 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型指定为存储过程的输入和输出参数类型、函数返回类型或者用在 **CAST 和 CONVERT** 函数中********[](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
+>  还可以将 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型指定为存储过程的输入和输出参数类型、函数返回类型或者用在 [CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql) 函数中************。  
   
 > [!NOTE]  
 >  如果复制数据，则可能需要将 "[最大文本复制大小" 服务器配置选项](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)配置为-1。  
@@ -43,7 +43,7 @@ ms.locfileid: "68206992"
   
  如果列中的 varchar(max)、varbinary(max) 和 nvarchar(max) 数据类型的 max 大小设置为不受限制，则这些数据类型会通过返回列数据类型的核心 OLE DB 架构行集和接口表示为 ISLONG****************。  
   
- 命令对象的 IAccessor**** 实现已更改为允许绑定为 DBTYPE_IUNKNOWN。 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 设置为 Null，则提供程序将向使用者返回 ISequentialStream 接口，以便使用者可以对输出变量之外的 varchar(max)、nvarchar(max) 或 varbinary(max) 数据进行流式处理******************。  
+ 命令对象的**IAccessor**实现已更改为允许作为 DBTYPE_IUNKNOWN 绑定。 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 设置为 Null，则提供程序将向使用者返回 ISequentialStream 接口，以便使用者可以对输出变量之外的 varchar(max)、nvarchar(max) 或 varbinary(max) 数据进行流式处理******************。  
   
  将在所有结果行之后返回经过流式处理的输出参数值。 如果应用程序尝试通过调用 IMultipleResults::GetResult 移动到下一个结果集并且没有使用返回的所有输出参数值，则将返回 DB_E_OBJECTOPEN****。  
   

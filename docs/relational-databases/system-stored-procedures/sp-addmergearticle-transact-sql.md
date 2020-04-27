@@ -16,10 +16,10 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72174007"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
@@ -81,7 +81,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`项目的类型。 *type*的数据类型为**sysname**，默认值为**table**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**table** （默认值）|具有架构和数据的表。 复制会监视该表以确定要复制的数据。|  
 |**func schema only**|仅具有架构的函数。|  
@@ -101,9 +101,9 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`指定应用快照时，如果订阅服务器上存在该表，系统将执行的操作。 *pre_creation_cmd*为**nvarchar （10）**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
-|**内容**|如果订阅服务器上已存在该表，则不执行任何操作。|  
+|**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 |**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
 |**drop** （默认值）|删除该表，然后重新创建一个表。 需要它来支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器。|  
 |**去**|截断目标表。|  
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`给定项目的架构生成选项的位图。 *schema_option*为**binary （8）**，可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)其中一个或多个值的乘积。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**0x00**|禁用快照代理的脚本，并使用在*creation_script*中定义的提供的架构预创建脚本。|  
 |**0x01**|生成对象创建（CREATE TABLE、CREATE PROCEDURE 等）。 这是存储过程项目的默认值。|  
@@ -148,7 +148,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x40000000**|复制权限。|  
 |**0x80000000**|尝试删除不属于发布的任何对象的依赖关系。|  
 |**0x100000000**|如果 FILESTREAM 属性是在**varbinary （max）** 列上指定的，则使用此选项复制该属性。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 不管如何设置此架构选项， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支持将包含 FILESTREAM 列的表复制到订阅服务器。 请参阅相关选项**0x800000000**。|  
-|**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和 datetime2）转换为早期版本支持的数据类型。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和 datetime2）转换为早期版本支持的数据类型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 |**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建对象的详细信息，请参阅[在应用快照之前和之后执行脚本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关选项**0x100000000**。|  
 |**0x1000000000**|将公共语言运行时（CLR）用户定义类型（Udt）转换为**varbinary （max）** ，以使类型为 UDT 的列能够复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
@@ -167,8 +167,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!IMPORTANT]  
 >  为提高性能，建议您不要在参数化行筛选子句中对列名应用函数，如 `LEFT([MyColumn]) = SUSER_SNAME()`。 如果在筛选子句中使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)并重写 HOST_NAME 值，则可能需要使用[convert](../../t-sql/functions/cast-and-convert-transact-sql.md)转换数据类型。 有关此情况的最佳实践的详细信息，请参阅[参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的 "重写 HOST_NAME （）值" 部分。  
   
-`[ @article_resolver = ] 'article_resolver'`基于 COM 的冲突解决程序，用于解决表项目中的冲突或为执行表项目中的自定义业务逻辑而调用的 .NET Framework 程序集。 *article_resolver*的值为**varchar （255）**，默认值为 NULL。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 自定义冲突解决程序中列出了此参数的可用值。 如果提供的值并不属于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用指定的冲突解决程序代替系统提供的冲突解决程序。 使用**sp_enumcustomresolvers**枚举可用自定义冲突解决程序的列表。 有关详细信息，请参阅[在合并同步期间执行业务逻辑](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)和[高级合并复制冲突检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+`[ @article_resolver = ] 'article_resolver'`基于 COM 的冲突解决程序，用于解决表项目中的冲突或为执行表项目中的自定义业务逻辑而调用的 .NET Framework 程序集。 *article_resolver*的值为**varchar （255）**，默认值为 NULL。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 自定义冲突解决程序中列出了此参数的可用值。 如果提供的值并不属于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用指定的冲突解决程序代替系统提供的冲突解决程序。 使用**sp_enumcustomresolvers**枚举可用自定义冲突解决程序的列表。 有关详细信息，请参阅[在合并同步期间执行业务逻辑](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)和[高级合并复制冲突检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 `[ @resolver_info = ] 'resolver_info'`用于指定自定义冲突解决程序所需的其他信息。 某些 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序需要提供列作为冲突解决程序的输入。 *resolver_info*为**nvarchar （255）**，默认值为 NULL。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
@@ -207,14 +206,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`启用或禁用对项目使用交互式冲突解决程序。 *allow_interactive_resolver*为**nvarchar （5）**，默认值为 FALSE。 **如果为 true** ，则允许对项目使用交互式冲突解决程序;**false**会禁用它。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器不支持交互式冲突解决程序。  
+>  [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器不支持交互式冲突解决程序。  
   
 `[ @fast_multicol_updateproc = ] 'fast_multicol_updateproc'`此参数已弃用，并且保持为脚本的向后兼容性。  
   
 `[ @check_permissions = ] check_permissions`是在合并代理将更改应用于发布服务器时验证的表级权限的位图。 如果合并进程使用的发布服务器登录名/用户帐户没有正确的表权限，则无效更改将被记录为冲突。 *check_permissions*为**int**，可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)以下一个或多个值的乘积。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**0x00** （默认值）|不检查权限。|  
 |**0x10**|检查了发布服务器上的权限后，才能上载订阅服务器上的插入操作。|  
@@ -255,7 +253,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @partition_options = ] partition_options`定义项目中数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，将启用性能优化。 *partition_options*为**tinyint**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|项目的筛选是静态的，或者不会为每个分区生成一个唯一数据子集（即“重叠”分区）。|  
 |**1**|分区是重叠的，订阅服务器中执行的数据操作语言 (DML) 更新不能更改行所属的分区。|  
@@ -269,7 +267,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @subscriber_upload_options = ] subscriber_upload_options`定义对具有客户端订阅的订阅服务器上所做的更新的限制。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。 *subscriber_upload_options*为**tinyint**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|无限制。 将订阅服务器上所做的更改上载到发布服务器。|  
 |**1**|允许在订阅服务器上进行更改，但不将更改上载到发布服务器。|  
@@ -282,9 +280,9 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`指定如何处理项目的标识范围管理。 *identityrangemanagementoption*的数据值为**nvarchar （10）**，可以为以下值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
-|**内容**|禁用标识范围管理。|  
+|**无**|禁用标识范围管理。|  
 |**手动**|使用 NOT FOR REPLICATION 标记标识列，以启用手动标识范围处理。|  
 |**自动**|指定自动管理标识范围。|  
 |NULL（默认值）|如果*auto_identity_range*的值不为**true**，则默认值为 "**无**"。|  
@@ -336,7 +334,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**数据表**|**** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]具有本机模式快照的0x0C034FD1 及更高版本的兼容发布。<br /><br /> **** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用字符模式快照的0x08034FF1 及更高版本的兼容发布。|  
+|**table**|**0x0C034FD1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]具有本机模式快照的0x0C034FD1 及更高版本的兼容发布。<br /><br /> **0x08034FF1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用字符模式快照的0x08034FF1 及更高版本的兼容发布。|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
@@ -350,17 +348,17 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**和**0x2000**|  
 |**indexed view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
 |**proc schema only**|**0x01**和**0x2000**|  
-|**数据表**|所有选项。|  
+|**table**|所有选项。|  
 |**view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 要求具有**sysadmin**固定服务器角色或**db_owner**固定数据库角色的成员身份。  
+ 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [定义项目](../../relational-databases/replication/publish/define-an-article.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [sp_changemergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   

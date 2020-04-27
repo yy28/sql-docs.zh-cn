@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174592"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 决策树算法
@@ -38,16 +38,12 @@ ms.locfileid: "78174592"
  如果将多个列设置为可预测列，或输入数据中包含设置为可预测的嵌套表，则该算法将为每个可预测列生成一个单独的决策树。
 
 ## <a name="example"></a>示例
- 
-  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 公司的市场部希望标识以前的客户的某些特征，这些特征可能指示这些客户将来是否有可能购买其产品。 
-  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库存储描述其以前客户的人口统计信息。 通过使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法分析这些信息，市场部可以生成一个模型，该模型根据有关特定客户的已知列的状态（如人口统计或以前的购买模式）预测该客户是否会购买产品。
+ [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 公司的市场部希望标识以前的客户的某些特征，这些特征可能指示这些客户将来是否有可能购买其产品。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库存储描述其以前客户的人口统计信息。 通过使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法分析这些信息，市场部可以生成一个模型，该模型根据有关特定客户的已知列的状态（如人口统计或以前的购买模式）预测该客户是否会购买产品。
 
 ## <a name="how-the-algorithm-works"></a>算法的原理
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法通过在树中创建一系列拆分来生成数据挖掘模型。 这些拆分以“ ** 节点”来表示。 每当发现输入列与可预测列密切相关时，该算法便会向该模型中添加一个节点。 该算法确定拆分的方式不同，主要取决于它预测的是连续列还是离散列。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法通过在树中创建一系列拆分来生成数据挖掘模型。 这些拆分以“ ** 节点”来表示。 每当发现输入列与可预测列密切相关时，该算法便会向该模型中添加一个节点。 该算法确定拆分的方式不同，主要取决于它预测的是连续列还是离散列。
 
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法使用“ ** 功能选择”来指导如何选择最有用的属性。 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法均使用功能选择来改善分析的性能和质量。 功能选择对防止不重要的属性占用处理器时间意义重大。 如果在设计数据挖掘模型时使用过多的输入或可预测属性，则可能需要很长的时间来处理该模型，甚至导致内存不足。 用于确定是否拆分树的方法包括“平均信息量”** 和 Bayesian 网络的行业标准度量。** 有关用于选择有意义的属性以及对这些属性计分和排列的方法的详细信息，请参阅[功能选择（数据挖掘）](feature-selection-data-mining.md)。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法使用“ ** 功能选择”来指导如何选择最有用的属性。 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法均使用功能选择来改善分析的性能和质量。 功能选择对防止不重要的属性占用处理器时间意义重大。 如果在设计数据挖掘模型时使用过多的输入或可预测属性，则可能需要很长的时间来处理该模型，甚至导致内存不足。 用于确定是否拆分树的方法包括“平均信息量”** 和 Bayesian 网络的行业标准度量。** 有关用于选择有意义的属性以及对这些属性计分和排列的方法的详细信息，请参阅[功能选择（数据挖掘）](feature-selection-data-mining.md)。
 
  数据挖掘模型中的一个常见问题是该模型对定型数据中的细微差异过于敏感，在这种情况下，它会被*过度拟合*或*过度定型*。 过度拟合模型无法推广到其他数据集。 为避免模型对任何特定的数据集过度拟合， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法使用一些技术来控制树的生长。 有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法工作方式的更深入说明，请参阅 [Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)。
 
@@ -76,11 +72,11 @@ ms.locfileid: "78174592"
 
  决策树模型的要求如下：
 
--   **单个键列**每个模型必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。
+-   **单键列** 每个模型都必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。
 
--   **可预测列**至少需要一个可预测列。 可以在模型中包括多个可预测属性，并且这些可预测属性的类型可以不同，可以是数值型或离散型。 不过，增加可预测属性的数目可导致处理时间增加。
+-   **可预测列** 至少需要一个可预测列。 可以在模型中包括多个可预测属性，并且这些可预测属性的类型可以不同，可以是数值型或离散型。 不过，增加可预测属性的数目可导致处理时间增加。
 
--   **输入列**需要输入列，这些列可以是离散的，也可以是连续的。 增加输入属性的数目会影响处理时间。
+-   **输入列** 需要输入列，可为离散型或连续型。 增加输入属性的数目会影响处理时间。
 
  有关决策树模型支持的内容类型和数据类型的更多详细信息，请参阅 [Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)。
 

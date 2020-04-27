@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070877"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>对查询结果进行排序和分组 (Visual Database Tools)
@@ -35,28 +35,28 @@ ms.locfileid: "63070877"
  若要了解有关创建这种查询的详细信息，请参阅下表中所列的主题：  
   
 ## <a name="in-this-section"></a>本节内容  
- [&#40;Visual Database Tools&#41;对行进行排序](visual-database-tools.md)  
+ [对行进行排序 (Visual Database Tools)](visual-database-tools.md)  
  介绍各种对行进行排序的方法并解释为什么使用这些方法。  
   
- [&#40;Visual Database Tools&#41;折叠行组](collapse-groups-of-rows-visual-database-tools.md)  
+ [折叠行组 (Visual Database Tools)](collapse-groups-of-rows-visual-database-tools.md)  
  介绍折叠行的各种方法，例如计算或消除重复项。  
   
- [使用 ORDER BY &#40;Visual Database Tools 进行排序&#41;](sort-with-order-by-visual-database-tools.md)  
+ [使用 ORDER BY 排序 (Visual Database Tools)](sort-with-order-by-visual-database-tools.md)  
  介绍按指定顺序返回结果的步骤。  
   
- [在 Visual Database Tools &#40;按升序或降序排序&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
+ [按升序或降序进行排序 (Visual Database Tools)](sort-in-ascending-or-descending-order-visual-database-tools.md)  
  介绍更改或设置排序方向的步骤。  
   
- [在 Visual Database Tools &#40;查询中对多个列进行排序&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
+ [对查询中的多个列进行排序 (Visual Database Tools)](sort-multiple-columns-in-queries-visual-database-tools.md)  
  介绍设置多个列的结果集顺序的步骤。  
   
- [将查询结果中的行分组 &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
+ [对查询结果中的行进行分组 (Visual Database Tools)](group-rows-in-query-results-visual-database-tools.md)  
  介绍通过将数据分组来创建摘要信息子集的步骤。  
   
- [&#40;Visual Database Tools 指定组的条件&#41;](specify-conditions-for-groups-visual-database-tools.md)  
+ [为组指定条件 (Visual Database Tools)](specify-conditions-for-groups-visual-database-tools.md)  
  介绍创建适用于成组行的搜索条件的步骤。  
   
- [将输出列重新排序 &#40;Visual Database Tools&#41;](reorder-output-columns-visual-database-tools.md)  
+ [重新排列输出列 (Visual Database Tools)](reorder-output-columns-visual-database-tools.md)  
  介绍更改当前排序设置的步骤。  
   
 ## <a name="related-sections"></a>相关章节  

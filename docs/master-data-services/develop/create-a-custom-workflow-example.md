@@ -11,18 +11,17 @@ ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: c15f708a6deb8da2b0ea32efc70635ef50124621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729286"
 ---
 # <a name="create-a-custom-workflow---example"></a>创建自定义工作流 - 示例
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，当创建一个自定义工作流类库时，创建一个实现 Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender 接口的类。 该接口包含一种方法：<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>，该方法是在工作流启动时由 SQL Server MDS Workflow Integration Service 调用的。 
-  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法包含两个参数：workflowType 包含在 * 中“工作流类型”文本框中输入的文本；dataElement 包含触发工作流业务规则项的元数据和项数据*****[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]**。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，当创建一个自定义工作流类库时，创建一个实现 Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender 接口的类。 该接口包含一种方法：<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>，该方法是在工作流启动时由 SQL Server MDS Workflow Integration Service 调用的。 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法包含两个参数：workflowType 包含在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中“工作流类型”文本框中输入的文本；dataElement 包含触发工作流业务规则项的元数据和项数据********。  
   
 ## <a name="custom-workflow-example"></a>自定义工作流示例  
  以下代码示例说明如何实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法以从触发工作流业务规则的元素的 XML 数据中提取 Name、Code 和 LastChgUserName 属性，以及如何调用存储过程以将这些属性插入到其他数据库中。 有关项数据 XML 的示例和其包含的标记的说明，请参阅[自定义工作流 XML 说明 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)。  
@@ -73,6 +72,6 @@ namespace MDSWorkflowTestLib
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Master Data Services 创建自定义工作流 &#40;&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
+ [创建自定义工作流 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
   
   

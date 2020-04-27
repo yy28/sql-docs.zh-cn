@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212094"
 ---
 # <a name="specify-a-merge-article-resolver"></a>指定合并项目冲突解决程序
@@ -36,15 +36,15 @@ ms.locfileid: "68212094"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   合并复制允许使用下列类型的项目冲突解决程序：  
   
     -   默认冲突解决程序。 默认冲突解决程序的行为取决于订阅是客户端订阅还是服务器订阅。 有关如何指定订阅类型的详细信息，请参阅[指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio)](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)。  
   
-    -   您编写的自定义冲突解决程序，可以是业务逻辑处理程序（以托管代码编写）或基于 COM 的自定义冲突解决程序。 有关详细信息，请参阅[高级合并复制冲突的检测和解决方法](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)。 如果需要实现针对复制的每一行而非只是针对冲突行执行的自定义逻辑，请参阅 [为合并项目实现业务逻辑处理程序](../implement-a-business-logic-handler-for-a-merge-article.md)中指定合并项目冲突解决程序。  
+    -   您编写的自定义冲突解决程序，可以是业务逻辑处理程序（以托管代码编写）或基于 COM 的自定义冲突解决程序。 有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)。 如果需要实现针对复制的每一行而非只是针对冲突行执行的自定义逻辑，请参阅 [为合并项目实现业务逻辑处理程序](../implement-a-business-logic-handler-for-a-merge-article.md)中指定合并项目冲突解决程序。  
   
     -   基于 COM 的标准冲突解决程序，包含[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在中。  
   
@@ -54,19 +54,18 @@ ms.locfileid: "68212094"
   
     -   订阅服务器，对于请求订阅  
   
-    -   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 服务器，对于使用 Web 同步的请求订阅  
+    -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 服务器，对于使用 Web 同步的请求订阅  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 注册冲突解决程序之后，在“项目属性 - **项目>”对话框（可在新建发布向导和“发布属性 - **发布>”对话框中使用）的“冲突解决程序”选项卡上指定项目应使用该冲突解决程序。**\<****\<** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 注册冲突解决程序之后，在“项目属性 - \<项目>”对话框（可在新建发布向导和“发布属性 - \<发布>”对话框中使用）的“冲突解决程序”选项卡上指定项目应使用该冲突解决程序。************ 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-resolver"></a>指定冲突解决程序  
   
-1.  在新建发布向导或“发布属性 - **发布>”** **对话框的“项目”\<** 页上，选择一个表。  
+1.  在新建发布向导或“发布属性 - \<发布>”**** 对话框的“项目”**** 页上，选择一个表。  
   
 2.  单击 **“项目属性”**，再单击 **“设置突出显示的表项目的属性”**。  
   
-3.  在“项目属性 - **项目>”页上，单击“冲突解决程序”选项卡。\<******  
+3.  在“项目属性 - \<项目>”页上，单击“冲突解决程序”选项卡。********  
   
 4.  选择 **“使用自定义冲突解决程序（已在分发服务器上注册）”**，然后在列表中单击冲突解决程序。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "68212094"
   
 7.  对需要冲突解决程序的每个项目重复此过程。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>注册自定义冲突解决程序  
   
@@ -84,7 +83,7 @@ ms.locfileid: "68212094"
   
     -   作为业务逻辑处理程序的基于托管代码的冲突解决程序。 有关详细信息，请参阅[实现合并项目的业务逻辑处理程序](../implement-a-business-logic-handler-for-a-merge-article.md)。  
   
-    -   基于存储过程的冲突解决程序和基于 COM 的冲突解决程序。 有关详细信息，请参阅 [为合并项目实现自定义冲突解决程序](../implement-a-custom-conflict-resolver-for-a-merge-article.md)。  
+    -   基于存储过程的冲突解决程序和基于 COM 的冲突解决程序。 有关详细信息，请参阅为[合并项目实现自定义冲突解决程序](../implement-a-custom-conflict-resolver-for-a-merge-article.md)。  
   
 2.  若要确定所需冲突解决程序是否已注册，请在发布服务器上对任意数据库执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)。 这将显示自定义冲突解决程序的说明以及在分发服务器上注册的每个基于 COM 的冲突解决程序的类标识符 (CLSID)，或者显示在分发服务器上注册的每个业务逻辑处理程序的托管程序集相关信息。  
   
@@ -98,8 +97,7 @@ ms.locfileid: "68212094"
     -   将自定义冲突解决程序 DLL 复制到分发服务器（对于推送订阅）或订阅服务器（对于请求订阅）。  
   
         > [!NOTE]  
-        >  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 自定义冲突解决程序位于 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM 目录中。  
+        >  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 自定义冲突解决程序位于 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM 目录中。  
   
     -   使用 regsvr32.exe 向操作系统注册自定义冲突解决程序 DLL。 例如，从命令提示符处执行以下命令可注册 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 累加性冲突解决程序：  
   
@@ -136,7 +134,7 @@ ms.locfileid: "68212094"
   
 2.  在分发服务器上执行 [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql)。 为提供**@article_resolver**步骤1中自定义冲突解决程序的完整名称。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  本示例创建了一个新项目，并指定当发生冲突时，将使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平均化冲突解决程序计算 **UnitPrice** 列的平均值。  
   
  [!code-sql[HowTo#sp_addmerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_addmerge_resolver)]  

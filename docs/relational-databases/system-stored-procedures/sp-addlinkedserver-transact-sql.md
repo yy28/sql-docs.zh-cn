@@ -18,10 +18,10 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad01313933cb2e04bf22257bcdd0eb93a1a755e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72313753"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 ## <a name="arguments"></a>参数  
 [ @server = ]* \'服务器\' *          
-要创建的链接服务器的名称。 *服务器*的值为**sysname**，无默认值。  
+要创建的链接服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
 [ @srvproduct = ]* \'product_name\' *          
 要添加为链接服务器的 OLE DB 数据源的产品名称。 *product_name*为**nvarchar （** 128 **）**，默认值为 NULL。 如果不需要指定**SQL Server**、 *provider_name*、 *data_source*、*位置*、 *provider_string*和*目录*。  
@@ -86,20 +86,16 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 |远程 OLE DB 数据源|OLE DB 访问接口|product_name|provider_name|data_source|location|provider_string|目录|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> （默认值）||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序||**SQLNCLI**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的网络名称（用于默认实例）|||数据库名称（可选）|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> （默认值）||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序||**SQLNCLI**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的网络名称（用于默认实例）|||数据库名称（可选）|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序||**SQLNCLI**|*servername 实例名称*\\ *（对于*特定实例）|||数据库名称（可选）|  
-|Oracle，版本 8 及更高版本|Oracle Provider for OLE DB|任意|**OraOLEDB.Oracle**|用于 Oracle 数据库的别名||||  
-|Access/Jet|Microsoft OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Jet 数据库文件的完整路径||||  
-|ODBC 数据源|Microsoft OLE DB Provider for ODBC|任意|**MSDASQL**|ODBC 数据源的系统 DSN||||  
-|ODBC 数据源|[!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC 的 OLE DB 提供程序|任意|**MSDASQL**|||ODBC 连接字符串||  
-|文件系统|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|任意|**MSIDXS**|索引服务目录名称||||  
-|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 电子表格|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Jet 的 OLE DB 提供程序|任意|**Microsoft.Jet.OLEDB.4.0**|Excel 文件的完整路径||Excel 5。0||  
-|IBM DB2 数据库|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|任意|**DB2OLEDB**|||请[!INCLUDE[msCoName](../../includes/msconame-md.md)]参阅 DB2 文档 OLE DB 提供程序。|DB2 数据库的目录名称|  
+|Oracle，版本 8 及更高版本|Oracle Provider for OLE DB|Any|**OraOLEDB.Oracle**|用于 Oracle 数据库的别名||||  
+|Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet 数据库文件的完整路径||||  
+|ODBC 数据源|Microsoft OLE DB Provider for ODBC|Any|**MSDASQL**|ODBC 数据源的系统 DSN||||  
+|ODBC 数据源|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|Any|**MSDASQL**|||ODBC 连接字符串||  
+|文件系统|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|Any|**MSIDXS**|索引服务目录名称||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 电子表格|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel 文件的完整路径||Excel 5。0||  
+|IBM DB2 数据库|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|Any|**DB2OLEDB**|||请[!INCLUDE[msCoName](../../includes/msconame-md.md)]参阅 DB2 文档 OLE DB 提供程序。|DB2 数据库的目录名称|  
   
  <sup>1</sup>通过这种设置链接服务器的方式，可以强制链接服务器的名称与的远程实例的网络名称相同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用*data_source*指定服务器。  
   
@@ -288,7 +284,7 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. 添加[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]作为链接服务器，以便用于云和本地数据库上的分布式查询  
+### <a name="g-add-a-sssdsfull-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. 添加[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]作为链接服务器，以便用于云和本地数据库上的分布式查询  
  您可以添加一个 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 作为链接服务器，然后将它用于跨本地数据库和云数据库的分布式查询。 这是跨本地企业网络和 Azure 云的数据库混合解决方案的组件。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Box 产品包含 "分布式查询" 功能，通过该功能，您可以编写查询，将来自本地数据源和数据的数据与定义为链接服务器的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]远程源（包括来自非数据源的数据）组合在一起。 每个 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（虚拟 master 除外）可以添加为单个链接服务器，然后在您的数据库应用程序中像任何其他数据库一样直接使用它。  
@@ -333,9 +329,9 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

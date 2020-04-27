@@ -20,14 +20,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174506"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 逻辑回归算法技术参考
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的一种变体，其中， *HIDDEN_NODE_RATIO* 参数设置为 0。 这样设置以后，所创建的神经网络模型就不包含隐藏层，因此等效于逻辑回归。
 
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法的实现
@@ -45,7 +44,7 @@ ms.locfileid: "78174506"
  所有 Analysis Services 数据挖掘算法均会自动使用功能选择来改善分析效果以及减轻处理工作量。 逻辑回归模型中用于功能选择的方法由属性的类型确定。 由于逻辑回归基于 Microsoft 神经网络算法，因此，其所使用的功能选择方法为适用于神经网络的功能选择方法集的子集。 有关详细信息，请参阅[功能选择（数据挖掘）](feature-selection-data-mining.md)。
 
 ### <a name="scoring-inputs"></a>计分输入
- 在神经网络模型或逻辑回归模型的上下文中，*计分*表示将数据中的值转换为一组使用相同刻度的值，因此可以相互进行比较。 例如，假设 Income 的输入范围为 0 到 100,000，而 [Number of Children] 的输入范围为 0 到 5。 您可以使用转换处理来“计分” ** 或比较所有输入的重要程度，而不用考虑值之间的差异。
+ 在神经网络模型或逻辑回归模型中，“计分”** 表示将数据中的值转换为一组使用同一刻度值的值，从而可相互进行比较。 例如，假设 Income 的输入范围为 0 到 100,000，而 [Number of Children] 的输入范围为 0 到 5。 您可以使用转换处理来“计分” ** 或比较所有输入的重要程度，而不用考虑值之间的差异。
 
  对于定型集中显示的每个状态，模型均会生成一个输入。 对于离散输入或离散化输入，只要定型集中出现缺失状态，就会创建一个额外的输入，以表示“Missing”状态。 对于连续输入，至多创建两个节点：一个用于缺失值（如果出现在定型数据中），一个用于现有值，即非 Null 值。 每个输入都使用 z 分数规范化方法（x-y）/StdDev。
 
@@ -92,8 +91,7 @@ WHERE NODE_TYPE = 23
  有关详细信息，请参阅 [逻辑回归模型查询示例](logistic-regression-model-query-examples.md)。
 
 ## <a name="customizing-the-logistic-regression-algorithm"></a>自定义逻辑回归算法
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法支持多个参数，这些参数可影响所生成的挖掘模型的行为、性能以及准确性。 您还可以通过对用作输入的列设置建模标志来修改模型。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法支持多个参数，这些参数可影响所生成的挖掘模型的行为、性能以及准确性。 您还可以通过对用作输入的列设置建模标志来修改模型。
 
 ### <a name="setting-algorithm-parameters"></a>设置算法参数
  下表介绍可用于 Microsoft 逻辑回归算法的参数。
@@ -139,8 +137,7 @@ WHERE NODE_TYPE = 23
  一个逻辑回归模型必须包含一个键列、输入列和至少一个可预测列。
 
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法支持下表所示的特定输入列内容类型、可预测列内容类型和建模标志。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法支持下表所示的特定输入列内容类型、可预测列内容类型和建模标志。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。
 
 |列|内容类型|
 |------------|-------------------|

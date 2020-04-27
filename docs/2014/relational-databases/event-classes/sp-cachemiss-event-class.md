@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050923"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss 事件类
-  SP:CacheMiss 事件类表明未在缓存中找到过程。 如果 SP： cachemiss 事件类事件类经常发生，则它可能指示应该提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更多内存，从而增加过程缓存的大小。  
+  SP:CacheMiss 事件类表明未在缓存中找到过程。 如果 SP:CacheMiss 事件类频繁出现，则可能指示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要更多内存，从而提高过程缓存的大小。  
   
 ## <a name="spcachemiss-event-class-data-columns"></a>SP:CacheMiss 事件类的数据列  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63050923"
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)   
- [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SP:CacheInsert 事件类](sp-cacheinsert-event-class.md)  
   
   

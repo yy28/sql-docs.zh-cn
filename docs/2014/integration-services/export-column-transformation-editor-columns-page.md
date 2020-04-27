@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059013"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>导出列转换编辑器（“列”页）
@@ -34,16 +34,16 @@ ms.locfileid: "66059013"
  从包含文件路径和文件名的输入列的列表中进行选择。 所有行都应包含 **“提取列”** 和 **“文件路径列”** 的定义。  
   
  **允许追加**  
- 指定转换是否将数据追加到现有文件。 默认为 `false`。  
+ 指定转换是否将数据追加到现有文件。 默认值为 `false`。  
   
  **强制截断**  
- 指定转换在写入数据之前是否删除现有文件的内容。 默认为 `false`。  
+ 指定转换在写入数据之前是否删除现有文件的内容。 默认值为 `false`。  
   
  **写入 BOM**  
  指定是否将字节顺序标记 (BOM) 写入文件。 只有在数据具有 `DT_NTEXT` 或 DT_WSTR 数据类型，并且未将数据追加到现有数据文件时，才会写入 BOM。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- ["导出列转换编辑器 &#40;错误输出" 页&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [导出列转换编辑器（“错误输出”页）](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

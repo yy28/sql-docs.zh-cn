@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010160"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
@@ -25,25 +25,25 @@ ms.locfileid: "66010160"
 > [!NOTE]  
 >  不能在 64 位操作系统上运行的 32 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上启用 FILESTREAM。  
   
-##  <a name="enabling"></a> 启用 FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> 启用 FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>启用和更改 FILESTREAM 设置  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
-2.  在服务列表中，右键单击“SQL Server 服务”  ，然后单击“打开”  。  
+2.  在服务列表中，右键单击“SQL Server 服务”****，然后单击“打开”****。  
   
-3.  在“SQL Server 配置管理器”  管理单元中，找到要在其中启用 FILESTREAM 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+3.  在“SQL Server 配置管理器”**** 管理单元中，找到要在其中启用 FILESTREAM 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-4.  右键单击该实例，然后单击“属性”  。  
+4.  右键单击该实例，然后单击“属性”****。  
   
 5.  在 **“SQL Server 属性”** 对话框中，单击 **“FILESTREAM”** 选项卡。  
   
-6.  选中“针对 Transact-SQL 访问启用 FILESTREAM”  复选框。  
+6.  选中“针对 Transact-SQL 访问启用 FILESTREAM”**** 复选框。  
   
-7.  如果要在 Windows 中读取和写入 FILESTREAM 数据，请单击“针对文件 I/O 流访问启用 FILESTREAM”  。 在 **“Windows 共享名”** 框中输入 Windows 共享的名称。  
+7.  如果要在 Windows 中读取和写入 FILESTREAM 数据，请单击“针对文件 I/O 流访问启用 FILESTREAM”****。 在 **“Windows 共享名”** 框中输入 Windows 共享的名称。  
   
-8.  如果远程客户端必须访问存储在此共享中的 FILESTREAM 数据，请选择 **“允许远程客户端针对 FILESTREAM 数据启用流访问”** 。  
+8.  如果远程客户端必须访问存储在此共享中的 FILESTREAM 数据，请选择 **“允许远程客户端针对 FILESTREAM 数据启用流访问”**。  
   
 9. 单击“应用”  。  
   
@@ -56,15 +56,15 @@ ms.locfileid: "66010160"
     RECONFIGURE  
     ```  
   
-12. 单击“执行”  。  
+12. 单击“执行” ****。  
   
 13. 重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
 
   
-##  <a name="best"></a>最佳做法  
+##  <a name="best-practices"></a><a name="best"></a>最佳做法  
   
-###  <a name="config"></a>物理配置和维护  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> 物理配置和维护  
  设置 FILESTREAM 存储卷时，请考虑下列准则：  
   
 -   禁用 FILESTREAM 计算机系统中的短文件名。 创建短文件名需要花费相当长的时间。 若要禁用短文件名，请使用 Windows **fsutil** 实用工具。  
@@ -88,7 +88,7 @@ ms.locfileid: "66010160"
   
 
   
-###  <a name="database"></a>物理数据库设计  
+###  <a name="physical-database-design"></a><a name="database"></a> 物理数据库设计  
  设计 FILESTREAM 数据库时，应考虑下列准则：  
   
 -   FILESTREAM 列必须附带相应`uniqueidentifier`的 ROWGUID 列。 这些类型的表还必须附带唯一索引。 此索引通常不是聚集索引。 如果数据库业务逻辑需要聚集索引，则必须确保该索引中存储的值不是随机的。 随机值将导致每次向表中添加行或从表中删除行时，索引都会重新排序。  

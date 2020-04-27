@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060884"
 ---
 # <a name="conditional-split-transformation-editor"></a>有条件拆分转换编辑器
@@ -36,12 +36,12 @@ ms.locfileid: "66060884"
  **输出名称**  
  提供输出名称。 默认为带编号的名称示例列表，不过，您也可以任选一个唯一的描述性名称。  
   
- **状态**  
+ **条件**  
  键入表达式，或通过从可用的列、变量、函数和运算符的列表中拖动相应项来生成表达式。  
   
  此属性的值可以使用属性表达式来指定。  
   
- **相关主题：**[Integration Services SSIS 表达式 &#40;ssis&#41; 表达式](expressions/integration-services-ssis-expressions.md)、[运算符 &#40;ssis 表达式&#41;](expressions/operators-ssis-expression.md)和[函数](expressions/functions-ssis-expression.md)&#40;   
+ **相关主题：**  [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](expressions/functions-ssis-expression.md)  
   
  **默认输出名称**  
  为默认输出键入名称，或使用默认名称。  

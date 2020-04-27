@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055563"
 ---
 # <a name="smtp-connection-manager-editor"></a>SMTP 连接管理器编辑器
@@ -45,7 +45,7 @@ ms.locfileid: "66055563"
 > [!NOTE]  
 >  使用 Microsoft Exchange 作为 SMTP 服务器时，可能需要将 "**使用 Windows 身份验证**" 设置`True`为。 Exchange 服务器可以配置为不支持未经身份验证的 SMTP 连接。  
   
- **启用安全套接字层（SSL）**  
+ **启用安全套接字层 (SSL)**  
  如果选中此选项，则在发送电子邮件时，将使用安全套接字层 (SSL) 来加密通信。  
   
 ## <a name="see-also"></a>另请参阅  

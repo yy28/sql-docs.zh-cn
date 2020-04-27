@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211385"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>作业属性和新建作业（“常规”页）
@@ -38,13 +38,13 @@ ms.locfileid: "68211385"
  **说明**  
  更改作业的说明。  
   
- **已启用**  
+ **Enabled**  
  启用作业。 虽然可以使用 **sp_start_job** 存储过程启动作业，但是如果不启用作业，作业将不会响应计划或警报。  
   
- **数据源**  
+ **源**  
  显示作业的主服务器。 仅在“作业属性”-“常规”**** 页上可用。  
   
- **创建时间**  
+ **建立**  
  显示作业的创建日期和时间。 仅在“作业属性”-“常规”**** 页上可用。  
   
  **上次修改时间**  
@@ -57,7 +57,7 @@ ms.locfileid: "68211385"
  查看作业的历史记录。 仅在“作业属性”-“常规”**** 页上可用。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行作业](implement-jobs.md)   
+ [实现作业](implement-jobs.md)   
  [作业类别：管理作业类别](job-categories-manage-job-categories.md)  
   
   

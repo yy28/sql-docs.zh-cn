@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056703"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>分区处理目标编辑器（“映射”页）
@@ -45,6 +45,6 @@ ms.locfileid: "66056703"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [分区处理目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [分区处理目标编辑器 &#40;高级页面&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [分区处理目标编辑器（“高级”页）](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

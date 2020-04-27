@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042612"
 ---
-# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>课程 2：定期评估最佳实践策略
+# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>第 2 课：定期评估最佳做法策略
   您可以对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例配置最佳实践策略的定期评估。 若要配置定义运行的最佳实践策略，您必须将这些策略导入到目标实例中。  
   
  若要将计划的策略部署到多个服务器中，您可以将这些策略导入到一个实例，为每个策略配置计划，将计划的策略导出到某一文件夹，然后通过已注册的服务器将计划的策略部署到目标实例。  

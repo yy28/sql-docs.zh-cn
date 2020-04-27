@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892532"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;model &gt; （DMX）
@@ -35,13 +35,13 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *表达式列表*  
  相关列标识符（从模型中派生）或表达式的以逗号分隔的列表。  
   
- *model*  
+ *模式*  
  模型标识符。  
   
  *条件列表*  
  一个限制条件，用于限制从列列表返回的值。  
   
- *表达式*  
+ *expression*  
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
@@ -136,6 +136,6 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>另请参阅  
  [选择 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

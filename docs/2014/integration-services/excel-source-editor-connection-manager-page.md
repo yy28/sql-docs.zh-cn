@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059171"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Excel 源编辑器（“连接管理器”页）
@@ -30,7 +30,7 @@ ms.locfileid: "66059171"
  若要了解有关 Excel 源的详细信息，请参阅 [Excel Source](data-flow/excel-source.md)。  
   
 ## <a name="static-options"></a>静态选项  
- **“无缓存”**  
+ **OLE DB 连接管理器**  
  从列表中选择现有的 Excel 连接管理器，或单击“新建”**** 创建新连接。  
   
  **新建**  
@@ -39,7 +39,7 @@ ms.locfileid: "66059171"
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |表或视图|从 Excel 文件的工作表或指定范围中检索数据。|  
 |表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息：** [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -63,13 +63,13 @@ ms.locfileid: "66059171"
  **SQL 命令文本**  
  输入 SQL 查询的文本，通过单击“生成查询”**** 来生成查询，或通过单击“浏览”**** 浏览至包含查询文本的文件。  
   
- **参数**  
+ **Parameters**  
  如果已经在参数化查询文本中使用 ? 作为参数占位符输入了参数化查询，请使用 **“设置查询参数”** 对话框将查询输入参数映射到包变量。  
   
  **生成查询**  
  使用“查询生成器”**** 对话框可直观地构造 SQL 查询。  
   
- **“浏览”**  
+ **浏览**  
  使用“打开”**** 对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  

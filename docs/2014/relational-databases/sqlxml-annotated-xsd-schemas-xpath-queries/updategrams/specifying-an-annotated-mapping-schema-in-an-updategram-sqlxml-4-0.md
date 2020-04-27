@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014665"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 updategram 中指定带批注的映射架构 (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "66014665"
 ## <a name="dealing-with-data-types"></a>处理数据类型  
  如果`image`架构指定了、 `binary`或`varbinary` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型（通过使用`sql:datatype`），并且未指定 xml 数据类型，则 updategram 将假定 xml 数据类型为。 `binary base 64` 如果数据类型为 `bin.base`，则必须显式指定类型（`dt:type=bin.base` 或 `type="xsd:hexBinary"`）。  
   
- 如果架构指定了 `dateTime`、`date` 或 `time` XSD 数据类型，则还必须使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指定对应的 `sql:datatype="dateTime"` 数据类型。  
+ 如果架构指定了 `dateTime`、`date` 或 `time` XSD 数据类型，则还必须使用 `sql:datatype="dateTime"` 指定对应的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。  
   
  处理类型的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `money`参数时，必须在映射架构`sql:datatype="money"`中的相应节点上显式指定。  
   
@@ -154,8 +154,7 @@ ms.locfileid: "66014665"
 </xsd:schema>  
 ```  
   
- 以下 updategram 使用此 XSD 架构为订单43860添加新的订单详细记录（在** \<后>** 块中为** \<OD>** 元素）。 
-  `mapping-schema` 属性用于指定 updategram 中的映射架构。  
+ 以下 updategram 使用此 XSD 架构为订单43860添加新的订单详细记录（在** \<后>** 块中为** \<OD>** 元素）。 `mapping-schema` 属性用于指定 updategram 中的映射架构。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -235,11 +234,9 @@ ms.locfileid: "66014665"
   
  此示例假设以下表位于**tempdb**数据库中：  
   
--   
-  `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 为主键。  
+-   `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 为主键。  
   
--   
-  `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是引用 `CustomerID` 表中的 `Cust` 主键的外键。  
+-   `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是引用 `CustomerID` 表中的 `Cust` 主键的外键。  
   
  updategram 使用以下 XSD 架构将记录插入到 Cust 和 Ord 表中：  
   

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013334"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>记录生成过程 (SQLXML 4.0)
@@ -218,8 +218,7 @@ ms.locfileid: "66013334"
 ## <a name="exceptions-to-the-record-generation-rule"></a>记录生成规则的例外情况  
  如果节点属于 IDREF 或 IDREFS 类型，则在它进入作用域时，XML 大容量加载不为该节点生成记录。 您必须确保在架构的同一位置存在记录的完整描述。 忽略 `dt:type="nmtokens"` 批注，就像忽略 IDREFS 类型一样。  
   
- 例如，请看下面的 XSD 架构，该架构描述** \<Customer>** 和** \<Order>** 元素。 Customer>元素包含 IDREFS 类型的**OrderList**属性。 ** \<** 
-  `<sql:relationship>` 标记指定客户和订单列表之间的一对多关系。  
+ 例如，请看下面的 XSD 架构，该架构描述** \<Customer>** 和** \<Order>** 元素。 Customer>元素包含 IDREFS 类型的**OrderList**属性。 ** \<** `<sql:relationship>` 标记指定客户和订单列表之间的一对多关系。  
   
  以下是架构：  
   

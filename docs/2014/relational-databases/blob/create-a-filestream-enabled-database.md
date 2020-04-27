@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010318"
 ---
 # <a name="create-a-filestream-enabled-database"></a>创建启用了 FILESTREAM 的数据库
@@ -33,7 +33,7 @@ ms.locfileid: "66010318"
     > [!NOTE]  
     >  对于此脚本，C:\Data 目录必须存在。  
   
-3.  若要生成数据库，请单击 **“执行”** 。  
+3.  若要生成数据库，请单击 **“执行”**。  
   
 ## <a name="example"></a>示例  
  下面的代码示例创建一个名为 `Archive`的数据库。 该数据库包含三个文件组： `PRIMARY`、 `Arch1`和 `FileStreamGroup1`。 `PRIMARY` 和 `Arch1` 是不能包含 FILESTREAM 数据的常规文件组。 `FileStreamGroup1` 是 `FILESTREAM` 文件组。  

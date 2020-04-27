@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012652"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定轴 (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012652"
     child::Customer  
     ```  
   
-     在下面的 XPath 查询中，`child` 为轴。 
-  `Customer` 是节点测试。  
+     在下面的 XPath 查询中，`child` 为轴。 `Customer` 是节点测试。  
   
 -   `parent`  
   
@@ -52,8 +51,7 @@ ms.locfileid: "66012652"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     这与指定 `child::Customer` 的作用相同。 在此 XPath 查询中，`child` 和 `parent` 为轴。 
-  `Customer` 和 `Order` 是节点测试。  
+     这与指定 `child::Customer` 的作用相同。 在此 XPath 查询中，`child` 和 `parent` 为轴。 `Customer` 和 `Order` 是节点测试。  
   
 -   `attribute`  
   

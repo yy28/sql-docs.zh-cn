@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206820"
 ---
 # <a name="using-cursors-odbc"></a>使用游标 (ODBC)
@@ -46,8 +46,7 @@ ms.locfileid: "68206820"
 |定位更新|UPDATE 或 DELETE 中的 WHERE CURRENT OF 子句|**SQLSetPos**|  
 |关闭游标|关闭*cursor_name*解除分配|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实现的服务器游标支持 ODBC 游标模型的功能。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序使用服务器游标以支持 ODBC API 的游标功能。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实现的服务器游标支持 ODBC 游标模型的功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序使用服务器游标以支持 ODBC API 的游标功能。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -67,11 +66,11 @@ ms.locfileid: "68206820"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [CLOSE (Transact-SQL)](/sql/t-sql/language-elements/close-transact-sql)   
- [游标](../../relational-databases/cursors.md)   
- [DEALLOCATE (Transact-SQL)](/sql/t-sql/language-elements/deallocate-transact-sql)   
- [DECLARE CURSOR (Transact-SQL)](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [FETCH (Transact-SQL)](/sql/t-sql/language-elements/fetch-transact-sql)   
+ [CLOSE &#40;Transact-sql&#41;](/sql/t-sql/language-elements/close-transact-sql)   
+ [指针](../../relational-databases/cursors.md)   
+ [释放 &#40;Transact-sql&#41;](/sql/t-sql/language-elements/deallocate-transact-sql)   
+ [&#40;Transact-sql 声明游标&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
+ [FETCH &#40;Transact-sql&#41;](/sql/t-sql/language-elements/fetch-transact-sql)   
  [OPEN (Transact-SQL)](/sql/t-sql/language-elements/open-transact-sql)  
   
   

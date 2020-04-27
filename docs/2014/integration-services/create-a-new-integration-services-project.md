@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060216"
 ---
 # <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目
@@ -29,12 +29,11 @@ ms.locfileid: "66060216"
   
 1.  打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。  
+2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
   
 3.  在 **“新建项目”** 对话框中，从 **“模板”** 窗格选择 **“Integration Services 项目”** 模板。  
   
-     
-  **“Integration Services 项目”** 模板创建包含单个空包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
+     **“Integration Services 项目”** 模板创建包含单个空包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
 4.  （可选）编辑项目名称和位置。  
   

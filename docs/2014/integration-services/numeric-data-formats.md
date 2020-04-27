@@ -16,17 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057389"
 ---
 # <a name="numeric-data-formats"></a>数字数据格式
   快速分析提供了一组简单、快捷、不受区域设置影响的数据分析例程。 快速分析仅支持有限的一组整数数据类型格式。  
   
 ## <a name="integer-data-types"></a>整数数据类型  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的整数数据类型有：DT_I1、DT_UI1、DT_I2、DT_UI2、DT_I4、DT_UI4、DT_I8 和 DT_UI8。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的整数数据类型有：DT_I1、DT_UI1、DT_I2、DT_UI2、DT_I4、DT_UI4、DT_I8 和 DT_UI8。 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
  快速分析支持下列整数数据类型的格式：  
   

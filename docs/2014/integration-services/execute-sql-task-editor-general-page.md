@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058992"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>执行 SQL 任务编辑器（“常规”页）
@@ -39,7 +39,7 @@ ms.locfileid: "66058992"
 > [!NOTE]  
 >  如果存储过程通过为要建立的连接和要完成的事务提供比 **TimeOut**指定秒数更长的时间来模拟睡眠功能，则将不会超时。 但是，执行查询的存储过程始终受 **TimeOut**指定时间的限制。  
   
- **CodePage**  
+ **Ansi**  
  指定在转换变量中的 Unicode 值时要使用的代码页。 默认值为本地计算机的代码页。  
   
 > [!NOTE]  
@@ -48,13 +48,13 @@ ms.locfileid: "66058992"
  **TypeConversionMode**  
  在您将此属性设置为 `Allowed` 时，“执行 SQL 任务”将尝试将输出参数和查询结果转换为结果赋值给的变量的数据类型。 这适用于 **单行** 结果集类型。  
   
- **集中**  
+ **ResultSet**  
  指定运行 SQL 语句预期的结果类型。 从 **“单行”**、 **“完整结果集”**、 **XML**或 **“无”** 中选择。  
   
  **ConnectionType**  
  选择连接数据源要使用的连接管理器的类型。 可用的连接类型包括 **OLE DB**、 **ODBC**、 **ADO**、 **ADO.NET** 和 **SQLMOBILE**。  
   
- **相关主题：** [OLE DB 连接管理](connection-manager/ole-db-connection-manager.md)器、 [ODBC 连接管理器](connection-manager/odbc-connection-manager.md)、 [ADO 连接管理器](connection-manager/ado-connection-manager.md) [、](connection-manager/ado-net-connection-manager.md) [SQL Server Compact Edition 连接](connection-manager/sql-server-compact-edition-connection-manager.md)管理器  
+ **相关主题：** [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[ODBC 连接管理器](connection-manager/odbc-connection-manager.md)、[ADO 连接管理器](connection-manager/ado-connection-manager.md)、[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 连接管理器](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **连接**  
  从已定义的连接管理器的列表中选择连接。 若要创建新连接，请\<选择 "**新建连接 ...** ">。  
@@ -64,11 +64,11 @@ ms.locfileid: "66058992"
   
  根据执行 SQL 任务所用的连接管理器类型，必须在参数化 SQL 语句中使用特定的参数标记。  
   
- **相关主题：** 运行[执行 SQL 任务](control-flow/execute-sql-task.md)中的参数化 SQL 命令部分  
+ **相关主题：**[执行 SQL 任务](control-flow/execute-sql-task.md)中的“运行参数化 SQL 命令”部分  
   
  此属性具有下表所列的选项。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为某个 Transact-SQL 语句。 选择此值将显示动态选项 **SQLStatement**。|  
 |**文件连接**|选择包含 Transact-SQL 语句的文件。 设置此选项将显示动态选项 **FileConnection**。|  
@@ -82,7 +82,7 @@ ms.locfileid: "66058992"
   
  **相关主题：**  [准备好的执行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
- **“浏览”**  
+ **浏览**  
  使用“打开”**** 对话框定位包含 SQL 语句的文件。 选择一个文件，将文件内容作为 SQL 语句复制到 **SQLStatement** 属性中。  
   
  **生成查询**  
@@ -95,15 +95,15 @@ ms.locfileid: "66058992"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = 直接输入  
  **SQLStatement**  
- 在选项框中键入要执行的 SQL 语句，或者单击浏览按钮 (…)，在“输入 SQL 查询”对话框中键入 SQL 语句，还可以单击“生成查询”，使用“查询生成器”对话框编写 SQL 语句************。  
+ 在选项框中键入要执行的 SQL 语句，或单击浏览按钮（...）在 "**输入 Sql 查询**" 对话框中键入 sql 语句，或者单击 "**生成查询**"，使用 "**查询生成器**" 对话框编写该语句。  
   
- **相关主题：** [查询生成器](../../2014/integration-services/query-builder.md)  
+ **相关主题：** [“查询生成器”](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 文件连接  
  **文件连接**  
- 选择现有文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器****。  
+ 选择现有文件连接管理器，或单击\<"**新建连接 ...** "> 创建新的连接管理器。  
   
- **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 变量  
  **SourceVariable**  

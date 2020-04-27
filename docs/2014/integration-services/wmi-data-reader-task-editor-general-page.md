@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054408"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>WMI 数据读取器任务编辑器（“常规”页）
@@ -39,7 +39,7 @@ ms.locfileid: "66054408"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [WMI 数据读取器任务编辑器 &#40;WMI 选项 "页&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [WMI 事件观察器任务](control-flow/wmi-event-watcher-task.md)  
   
   

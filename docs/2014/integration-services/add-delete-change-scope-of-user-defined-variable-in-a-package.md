@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061988"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>添加、删除、更改包中用户定义变量的作用域
@@ -24,8 +24,7 @@ ms.locfileid: "66061988"
   
  有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)区域之下。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了可在运行时提供系统信息的系统变量，这些系统变量可在包和事件处理程序等容器中使用。 您无法删除系统变量。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了可在运行时提供系统信息的系统变量，这些系统变量可在包和事件处理程序等容器中使用。 您无法删除系统变量。  
   
 ### <a name="to-add-a-variable"></a>添加变量  
   
@@ -41,13 +40,13 @@ ms.locfileid: "66061988"
   
     -   若要设置任务或容器的范围，请在 **“控制流”** 选项卡或 **“事件处理程序”** 选项卡的设计图面上，单击一个任务或容器。  
   
-4.  在 **SSIS** 菜单上单击 **“变量”** 。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
+4.  在 **SSIS** 菜单上单击 **“变量”**。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
 5.  在 **“变量”** 窗口中，单击 **“添加变量”** 图标。 新的变量将添加到该列表中。  
   
 6.  也可以单击 **“网格选项”** 图标，选择要在 **“变量网格选项”** 对话框中显示的其他列，然后单击 **“确定”**。  
   
-7.  或者，设置变量属性。 有关详细信息，请参阅 [设置用户定义变量的属性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)。  
+7.  或者，设置变量属性。 有关详细信息，请参阅 [设置用户定义变量的属性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)定义。  
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -57,11 +56,11 @@ ms.locfileid: "66061988"
   
 2.  在解决方案资源管理器中，右键单击该包将其打开。  
   
-3.  在 **SSIS** 菜单上单击 **“变量”** 。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
+3.  在 **SSIS** 菜单上单击 **“变量”**。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
 4.  选择要删除的变量，然后单击 **“删除变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”********。  
+     如果在 "变量" 窗口中没有看到该变量，请单击 "**网格选项**"，然后选择 "**显示所有作用域的变量**"。  
   
 5.  如果 **“确认删除变量”** 对话框打开，请单击 **“是”** 确认删除。  
   
@@ -73,18 +72,18 @@ ms.locfileid: "66061988"
   
 2.  在解决方案资源管理器中，右键单击该包将其打开。  
   
-3.  在 **SSIS** 菜单上单击 **“变量”** 。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
+3.  在 **SSIS** 菜单上单击 **“变量”**。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
 4.  选择该变量，然后单击 **“移动变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”********。  
+     如果在 "变量" 窗口中没有看到该变量，请单击 "**网格选项**"，然后选择 "**显示所有作用域的变量**"。  
   
 5.  在 **“选择新作用域”** 对话框中，选择包或包中的容器、任务或事件处理程序，以更改变量作用域。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)   
  [使用包中的变量](../../2014/integration-services/use-variables-in-packages.md)   
  [设置用户定义变量的属性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [在子包中使用变量和参数的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

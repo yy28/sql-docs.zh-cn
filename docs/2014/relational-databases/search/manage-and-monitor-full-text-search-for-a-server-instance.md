@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011171"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
@@ -29,7 +29,7 @@ ms.locfileid: "66011171"
   
 -   配置用户数据库以进行全文搜索。 这涉及为数据库创建一个或多个全文目录并对每个要对其执行全文查询的表或索引视图定义一个全文索引。  
   
-##  <a name="props"></a> 查看和更改全文搜索的服务器属性  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> 查看和更改全文搜索的服务器属性  
  可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例的全文属性。  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>查看和更改全文搜索的服务器属性  
@@ -67,7 +67,7 @@ ms.locfileid: "66011171"
         > [!NOTE]  
         >  也可以使用 [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** 操作来设置全文升级选项。  
   
-##  <a name="metadata"></a> 查看其他全文服务器属性  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> 查看其他全文服务器属性  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数可用来获取全文搜索的各种服务器级属性的值。 此信息可用于全文搜索的管理和故障排除。  
   
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器实例全文属性及其相关的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数。  
@@ -78,7 +78,7 @@ ms.locfileid: "66011171"
 |`LoadOSResources`|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中是否注册并使用了操作系统断字符和筛选器。|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|指定全文引擎是否只加载已签名的二进制文件。|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a>监视全文搜索活动  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> 监视全文搜索活动  
  有几个动态管理视图和函数可用来监视服务器实例上的全文搜索活动。  
   
  **查看与正在进行填充活动的全文目录有关的信息**  
@@ -89,7 +89,7 @@ ms.locfileid: "66011171"
   
 -   [sys.dm_fts_fdhosts (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
- **查看有关正在进行的索引填充的信息**  
+ **查看与正在进行的索引填充有关的信息**  
   
 -   [sys.dm_fts_index_population (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66011171"
   
 -   [sys.dm_fts_memory_buffers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **查看可供全文爬网或全文爬网范围的全文收集组件使用的共享内存池**  
+ **查看可供全文爬网或全文爬网范围的全文收集器组件使用的共享内存池**  
   
 -   [sys.dm_fts_memory_pools (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66011171"
   
 -   [sys.dm_fts_outstanding_batches (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **查看与正在进行的填充相关的特定范围的相关信息**  
+ **查看与正在进行的填充操作有关的特定范围的相关信息**  
   
 -   [sys.dm_fts_population_ranges (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: 向 SQL Server 表中添加列 |Microsoft Docs
+title: 向 SQL Server 表添加列 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32e78feae791788e0aad87079546ea8c7d49e734
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046492"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>向 SQL Server 表添加列
@@ -29,7 +29,7 @@ ms.locfileid: "63046492"
   
 -   如果 DBPROP_COL_AUTOINCREMENT 为 VARIANT_TRUE，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
   
--   如果相应列是使用  timestamp 数据类型定义的，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ****。  
+-   如果相应列是使用  timestamp[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **** 数据类型定义的，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
   
 -   对于任何其他列定义，DBPROP_COL_NULLABLE 都必须为 VARIANT_TRUE。  
   

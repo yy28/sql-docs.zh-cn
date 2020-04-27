@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8b09ee01da2dde8e8bf50fbda21c1c8bca1689d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011939"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 导入批量数据 (SQL Server)
@@ -44,34 +44,34 @@ ms.locfileid: "66011939"
   
 -   [批量导入和导出 XML 文档的示例 (SQL Server)](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [大容量导入数据时保留标识值 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [批量导入数据时保留标识值 (SQL Server)](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [在批量导入期间保留 Null 或使用默认值 (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)  
   
 -   [使用格式化文件批量导入数据 (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [使用字符格式导入或导出数据 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用字符格式导入或导出数据 (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用本机格式导入或导出数据 &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 字符格式导入或导出数据 (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 -   [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
 -   [使用格式化文件将表列映射到数据文件字段 (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET （BULK ...）才能  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…)函数  
  通过调用 OPENROWSET 函数并指定 BULK 选项，访问 OPENROWSET 大容量行集提供程序。 使用 OPENROWSET(BULK...) 函数可以通过 OLE DB 访问接口连接到远程数据源（如数据文件）以访问远程数据。  
   
  若要大容量导入数据，请从 INSERT 语句中的 SELECT...FROM 子句调用 OPENROWSET(BULK...)。 大容量导入数据的基本语法如下：  
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- 在 INSERT 语句中使用时，OPENROWSET(BULK...) 支持表提示。 BULK 子句除了接受 TABLOCK 等常规表提示之外，还可以接受下列专用表提示：IGNORE_CONSTRAINTS（仅忽略 CHECK 约束）、IGNORE_TRIGGERS、KEEPDEFAULTS 和 KEEPIDENTITY。 有关详细信息，请参阅[表提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)。  
+ 在 INSERT 语句中使用时，OPENROWSET(BULK...) 支持表提示。 除了常规表提示（例如 TABLOCK），BULK 子句还可以接受以下专用表提示：IGNORE_CONSTRAINTS（仅忽略 CHECK 约束）、IGNORE_TRIGGERS、KEEPDEFAULTS 和 KEEPIDENTITY。 有关详细信息，请参阅[表提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)。  
   
  有关 BULK 选项的更多使用信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66011939"
   
 -   [批量导入和导出 XML 文档的示例 (SQL Server)](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [大容量导入数据时保留标识值 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [批量导入数据时保留标识值 (SQL Server)](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [在批量导入期间保留 Null 或使用默认值 (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
 -   [使用格式化文件批量导入数据 (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [使用字符格式导入或导出数据 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用字符格式导入或导出数据 (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
@@ -99,13 +99,12 @@ ms.locfileid: "66011939"
   
  例如，假设用户使用 Windows 身份验证登录到某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 对于能够使用 BULK INSERT 或 OPENROWSET 将数据从数据文件导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的用户，用户帐户需要具有数据文件的读取权限。 有了数据文件的访问权限，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程没有访问该文件的权限，用户也可以将数据从文件导入表中。 用户无需将文件访问权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows，使得一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可以通过转发已经过身份验证的 Windows 用户的凭据来连接到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这种安排称为“模拟” ** 或“委托” **。 在使用 BULK INSERT 或 OPENROWSET 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本是如何处理用户模拟的安全性的。 用户模拟允许数据文件保存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程或用户所在的计算机以外的另一台计算机上。 例如，如果 **Computer_A** 上的用户具有对 **Computer_B**上的数据文件的访问权限，而且凭据委托已设置妥当，则用户可以连接到运行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **上的**实例，访问 **Computer_B**中的数据文件以及将数据从该文件大容量导入到 **Computer_C**中的表中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows，使得一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可以通过转发已经过身份验证的 Windows 用户的凭据来连接到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这种安排称为“模拟”  或“委托”  。 在使用 BULK INSERT 或 OPENROWSET 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本是如何处理用户模拟的安全性的。 用户模拟允许数据文件保存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程或用户所在的计算机以外的另一台计算机上。 例如，如果 **Computer_A** 上的用户具有对 **Computer_B**上的数据文件的访问权限，而且凭据委托已设置妥当，则用户可以连接到运行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **上的**实例，访问 **Computer_B**中的数据文件以及将数据从该文件大容量导入到 **Computer_C**中的表中。  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>从远程数据文件中大容量导入  
- 若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 从其他计算机中大容量导入数据，必须在两台计算机之间共享数据文件。 若要指定共享数据文件，请使用它的通用命名约定（UNC）名称，该名称采用一般** \\**形式，即_Servername_**\\**_共享_**\\**_路径_**\\**_Filename_。 此外，用来访问该数据文件的帐户必须具有读取远程磁盘上的文件所需的权限。  
+ 若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 从其他计算机中大容量导入数据，必须在两台计算机之间共享数据文件。 指定共享数据文件时，请使用它的通用命名约定 (UNC) 名称，其一般形式为 **\\\\** _服务器名_ **\\** _共享名_ **\\** _路径_ **\\** _文件名_。 此外，用来访问该数据文件的帐户必须具有读取远程磁盘上的文件所需的权限。  
   
- 例如，下面的 `BULK INSERT` 语句会将名为 `SalesOrderDetail` 的数据文件中的数据大容量导入到 `AdventureWorks` 数据库的 `newdata.txt`表。 此数据文件驻留在系统 `\dailyorders` 的 `salesforce` 网络共享目录下的 `computer2` 共享文件夹中。  
+ 例如，下面的 `BULK INSERT` 语句会将名为 `SalesOrderDetail` 的数据文件中的数据大容量导入到 `AdventureWorks` 数据库的 `newdata.txt`表。 此数据文件驻留在系统 `\dailyorders` 的 `salesforce` 网络共享目录下的 `computer2`共享文件夹中。  
   
 ```  
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
@@ -118,11 +117,11 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
- [SELECT 子句 &#40;Transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
- [大容量导入和导出数据 &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [SELECT 子句 (Transact-SQL)](/sql/t-sql/queries/select-clause-transact-sql)   
+ [批量导入和导出数据 (SQL Server)](bulk-import-and-export-of-data-sql-server.md)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
- [FROM (Transact-SQL)](/sql/t-sql/queries/from-transact-sql)   
+ [FROM &#40;Transact-sql&#41;](/sql/t-sql/queries/from-transact-sql)   
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)  
   

@@ -16,17 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011289"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库在默认情况下支持全文索引。 不过，若要对表使用全文索引，必须对要使用全文引擎访问的表列设置全文索引功能。  
   
-##  <a name="configure"></a>配置数据库以进行全文搜索  
+##  <a name="configuring-a-database-for-full-text-search"></a><a name="configure"></a>配置数据库以进行全文搜索  
  对于任何应用场景，数据库管理员都要执行以下基本步骤来将数据库中的表列配置为可以进行全文搜索：  
   
 1.  创建全文目录。  
@@ -43,7 +42,7 @@ ms.locfileid: "66011289"
   
  全文搜索通过使用以下“语言组件”** 支持多种语言：断字符和词干分析器、包含非索引字（也称为“干扰词”）的非索引字表及同义词库文件。 在某些情况下，同义词库文件和非索引字表需要由数据库管理员配置。 给定同义词库文件支持使用相应语言的所有全文索引，给定非索引字表可以根据您的需要与尽可能多的全文索引相关联。  
   
-##  <a name="setup"></a>设置全文目录和索引  
+##  <a name="setting-up-a-full-text-catalog-and-index"></a><a name="setup"></a>设置全文目录和索引  
  这涉及以下基本步骤：  
   
 1.  创建全文目录来存储全文索引。  
@@ -63,7 +62,7 @@ ms.locfileid: "66011289"
 |在同一个数据库内分组为一个或多个全文目录。|不分组。|  
   
   
-##  <a name="options"></a>选择全文索引的选项  
+##  <a name="choosing-options-for-a-full-text-index"></a><a name="options"></a>选择全文索引的选项  
  本节涵盖以下内容：  
   
 -   选择列语言  
@@ -100,8 +99,7 @@ ms.locfileid: "66011289"
   
   
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>将非索引字表与全文索引关联  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了非索引字表。 “非索引字表” ** 是非索引字（也称为“干扰词”）的列表。 非索引字表与每个全文索引相关联，因而该非索引字表中的词会应用于对该索引的全文查询。 默认情况下，系统非索引字表与新的全文索引相关联。 不过，您也可以创建和使用您自己的非索引字表。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了非索引字表。 “非索引字表”  是非索引字（也称为“干扰词”）的列表。 非索引字表与每个全文索引相关联，因而该非索引字表中的词会应用于对该索引的全文查询。 默认情况下，系统非索引字表与新的全文索引相关联。 不过，您也可以创建和使用您自己的非索引字表。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
  例如，以下[CREATE 全文非索引字表](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句通过从系统非索引字表进行复制来创建一个名为 myStoplist3 的新的全文非索引字表：  
   
@@ -131,8 +129,8 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  通常，如果正在进行完全填充，则返回的结果为 1。  
   
   
-##  <a name="example"></a>示例：设置全文搜索  
- 下面的示例由两部分组成，首先对 AdventureWorks 数据库创建名为 `AdvWksDocFTCat` 的全文目录，然后对 `Document` 中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表创建全文索引。 此语句将在安装过程中指定的默认位置创建全文目录。 将在默认目录下创建名为 `AdvWksDocFTCat` 的文件夹。  
+##  <a name="example-setting-up-full-text-search"></a><a name="example"></a>示例：设置全文搜索  
+ 下面的示例由两部分组成，首先对 AdventureWorks 数据库创建名为 `AdvWksDocFTCat` 的全文目录，然后对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中的 `Document` 表创建全文索引。 此语句将在安装过程中指定的默认位置创建全文目录。 将在默认目录下创建名为 `AdvWksDocFTCat` 的文件夹。  
   
 1.  为了创建名为 `AdvWksDocFTCat`的全文目录，此示例使用了 [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) 语句：  
   
@@ -166,13 +164,13 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
      此示例中定义的 TYPE COLUMN 指定表中的类型列，该列包含“Document”列（为二进制类型）的每一行中文档的类型。 "类型" 列将用户提供的文件扩展名（".doc"、".xls" 等）存储在给定行中的文档中。 全文引擎使用给定行中的文件扩展名调用正确的筛选器，以用于分析该行中的数据。 在该筛选器对该行的二进制数据进行分析后，指定的断字符将分析其内容（在此示例中，使用的是英国英语的断字符）。 请注意，仅在进行索引时，或者在对全文索引启用了自动更改跟踪的情况下用户在基表中插入或更新列时，才会执行筛选过程。 有关详细信息，请参阅 [配置和管理搜索筛选器](configure-and-manage-filters-for-search.md)。  
   
   
-##  <a name="tasks"></a>常见任务  
+##  <a name="common-tasks"></a><a name="tasks"></a>常见任务  
   
 ### <a name="to-create-a-full-text-catalog"></a>创建全文目录  
   
 -   [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
--   [创建和管理全文索引目录](create-and-manage-full-text-catalogs.md)  
+-   [创建和管理全文目录](create-and-manage-full-text-catalogs.md)  
   
 ### <a name="to-view-the-indexes-of-a-table-or-view"></a>查看表（或视图）的索引  
   
@@ -182,7 +180,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 -   [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)  
   
--   [&#40;Visual Database Tools 打开表设计器&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
+-   [打开表设计器 (Visual Database Tools)](../../ssms/visual-db-tools/visual-database-tools.md)  
   
 ### <a name="to-create-a-full-text-index"></a>创建全文索引  
   
@@ -204,9 +202,9 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;创建全文目录](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
- [CREATE FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [创建全文非索引字表 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
  [填充全文索引](populate-full-text-indexes.md)   
  [FULLTEXTCATALOGPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)   

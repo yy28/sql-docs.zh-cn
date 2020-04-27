@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae113a84c55c17c3ba4827fb9368435200a6f190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057487"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多平面文件连接管理器编辑器（“预览”页）
@@ -43,6 +43,6 @@ ms.locfileid: "66057487"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [多平面文件连接管理器编辑器 &#40;常规页面&#41;](general-page-of-integration-services-designers-options.md)   
  [多平面文件连接管理器编辑器 &#40;列 "页&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [多平面文件连接管理器编辑器 &#40;高级页面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+ [多平面文件连接管理器编辑器（“高级”页）](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
   

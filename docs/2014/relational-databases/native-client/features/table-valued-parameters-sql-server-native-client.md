@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206626"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>表值参数 (SQL Server Native Client)
@@ -25,7 +25,7 @@ ms.locfileid: "68206626"
   
  有关表值参数和 ODBC 的信息，请参阅[odbc&#41;&#40;表值参数](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
- 有关表值参数和 OLE DB 的信息，请参阅[表值参数 &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)。  
+ 有关表值参数和 OLE DB 的信息，请参阅[表值参数 (OLE DB)](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)  

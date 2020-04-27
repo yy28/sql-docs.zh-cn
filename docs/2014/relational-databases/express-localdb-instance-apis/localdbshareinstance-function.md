@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 63407b3bf1a2860ad3f8c35b5cd8ecc4a4b125c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032321"
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance 函数
@@ -39,7 +39,7 @@ HRESULT LocalDBShareInstance(
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *pOwnerSID*  
  [输入] 实例所有者的 SID。  
   
@@ -49,7 +49,7 @@ HRESULT LocalDBShareInstance(
  *pInstanceSharedName*  
  [输入] 要共享的 LocalDB 实例的共享名称。  
   
- *dwFlags*  
+ dwFlags**  
  [输入] 保留供将来使用。 当前应设置为 0。  
   
 ## <a name="returns"></a>返回  

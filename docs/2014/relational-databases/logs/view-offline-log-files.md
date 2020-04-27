@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144593"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
@@ -45,7 +45,7 @@ ms.locfileid: "63144593"
   
 -   [SqlErrorLogFile 类](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) （本主题显示如何检索有关指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件的信息。）  
   
-##  <a name="BeforeYouBegin"></a> 权限  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> 权限  
  若要连接到脱机日志文件，您必须在本地和远程计算机上同时具有以下权限：  
   
 -   针对 **Root\Microsoft\SqlServer\ComputerManagement12** WMI 命名空间的读取访问权限。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。 有关详细信息，请参阅本节后面的“验证 WMI 权限”过程。  
@@ -74,7 +74,7 @@ ms.locfileid: "63144593"
   
     3.  输入远程计算机名称，然后单击 **“确定”** 。  
   
-3.  右键单击 " **Wmi 控制（本地）** " 或 " **Wmi 控制（***RemoteComputerName***）**"，然后单击 "**属性**"。  
+3.  右键单击“WMI 控制(本地)”**** 或 **“WMI 控制(***RemoteComputerName***)”**，然后单击“属性”****。  
   
 4.  在 **“WMI 控制属性”** 对话框中，单击 **“安全”** 选项卡。  
   

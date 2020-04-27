@@ -1,5 +1,5 @@
 ---
-title: 大型 CLR 用户定义类型 |Microsoft Docs
+title: 大型 CLR 用户定义类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07147f530cf9860514ad6fb830205d14361d539f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033530"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 用户定义类型
@@ -29,7 +29,7 @@ ms.locfileid: "63033530"
   
  对于 OLE DB，对大型 UDT 的支持包括能够通过使用 ISequentialStream 绑定在服务器之间传送 UDT 值。  
   
- 小于或等于 8,000 字节的 UDT 在行为上与 SQL Server 2005 中相同。 对于 OLE DB，仍可以使用 ISequentialStream 绑定流式传输小型 Udt。  
+ 小于或等于 8,000 字节的 UDT 在行为上与 SQL Server 2005 中相同。 对于 OLE DB，仍可以通过使用 ISequentialStream 绑定来流式传输小型 UDT。  
   
  有时候，本机代码将必须理解 CLR UDT 的内容，但将不必实例化托管对象。 在此情况下，您可以使用自定义序列化将服务器上的 UDT 值转换为客户端的已知格式。  
   

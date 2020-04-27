@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058263"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 连接管理器编辑器（“代理”页）
@@ -42,10 +42,10 @@ ms.locfileid: "66058263"
  **用户名**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
- **权限**  
+ **密码**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
- **域**  
+ **Domain**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **代理跳过列表**  
@@ -59,6 +59,6 @@ ms.locfileid: "66058263"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 连接管理器编辑器 &#40;服务器页面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [HTTP 连接管理器编辑器（“服务器”页）](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

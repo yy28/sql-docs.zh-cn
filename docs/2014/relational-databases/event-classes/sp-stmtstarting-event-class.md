@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7acd72b5386eed5e78ddcd2fe1cd0344905fa833
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050973"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting 事件类
@@ -47,14 +47,14 @@ ms.locfileid: "63050973"
 |ObjectID|`int`|系统分配的对象 ID。|22|是|  
 |ObjectName|`nvarchar`|引用的对象名。|34|是|  
 |ObjectType|`int`|表示事件中涉及的对象类型的值。 此值对应于 sys.objects 目录视图中的类型列。 有关值的信息，请参阅 [ObjectType 跟踪事件列](objecttype-trace-event-column.md)。|28|是|  
-|Offset|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
+|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|是|  
 |ServerName|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SourceDatabaseID|`int`|对象所在数据库的 ID。|62|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
-|状态|`int`|指示在重新编译后是否执行语句。<br /><br /> 1 = 已重新编译|30|是|  
+|State|`int`|指示在重新编译后是否执行语句。<br /><br /> 1 = 已重新编译|30|是|  
 |TextData|`ntext`|依赖于跟踪中捕获的事件类的文本值。|1|是|  
 |TransactionID|`bigint`|系统分配的事务 ID。|4|是|  
 |XactSequence|`bigint`|用于说明当前事务的标记。|50|是|  

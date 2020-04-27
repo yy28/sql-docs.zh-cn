@@ -11,10 +11,10 @@ ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2e204b5021cb2928988331c73750821225a4192d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728433"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>创建主数据管理器 Web 服务代理类
@@ -28,10 +28,10 @@ ms.locfileid: "81728433"
   
 1.  在文本编辑器中打开 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.配置文件。 此文件位于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装路径的 WebApplication 文件夹中。  
   
-2.  查找 \<serviceBehaviors> 下的 mdsWsHttpBehavior 部分********。 对于**\<服务元数据>** 元素，将**httpGetEnabled**设置为**true**。  
+2.  查找 \<serviceBehaviors> 下的 mdsWsHttpBehavior 部分********。 对于** \<serviceMetadata>** 元素，请将**httpGetEnabled**设置为**true**。  
   
     > [!NOTE]  
-    >  如果要通过传输层安全 （TLS）启用 Web 服务（以前称为安全套接字层 （SSL），请将**httpsGetEnabled**设置为**true，** 在 Web.config 文件的**mdsWsHttpBehavior**部分。 您还需要更改**mdsWsHTTPBinding，** 以便它也可以配置为 TLS，并注释掉非 TLS 部分。  
+    >  如果要启用基于传输层安全性（TLS）的 Web 服务，以前称为安全套接字层（SSL），请在 web.config 文件的**mdsWsHttpBehavior**节中将**httpsGetEnabled**设置为**true** 。 还需要更改**mdsWsHTTPBinding** ，以便将其配置为 TLS，并注释掉非 tls 部分。  
   
 3.  保存对文件的更改。  
   
@@ -39,10 +39,10 @@ ms.locfileid: "81728433"
     “你已创建服务”开头的页面。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>通过使用 Visual Studio 创建代理类  
- 如果已安装了 Visual Studio 2010，则生成代理类的最简方法是将“服务引用”添加到项目中****。 服务引用的地址为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，后面追加 /service/service.svc。 例如：`https://yourserver/MDS/service/service.svc`。 有关详细信息，请参阅[如何添加、更新或删除服务引用](https://go.microsoft.com/fwlink/?LinkId=221167)。  
+ 如果已安装了 Visual Studio 2010，则生成代理类的最简方法是将“服务引用”添加到项目中****。 服务引用的地址为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，后面追加 /service/service.svc。 例如： `https://yourserver/MDS/service/service.svc`。 有关详细信息，请参阅[如何添加、更新或删除服务引用](https://go.microsoft.com/fwlink/?LinkId=221167)。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>使用 Svcutil.exe 创建代理类  
- 您必须安装或[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]安装[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows SDK 才能在计算机上安装 Svcutil.exe。 如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，必须使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令提示符运行该命令。 有关详细信息，请参阅 [ServiceModel 元数据实用工具 (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 和[根据服务元数据生成 WCF 客户端](https://go.microsoft.com/fwlink/?LinkId=164821)。  
+ 必须[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]安装或[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK，才能在计算机上安装 svcutil.exe。 如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，必须使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令提示符运行该命令。 有关详细信息，请参阅 [ServiceModel 元数据实用工具 (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 和[根据服务元数据生成 WCF 客户端](https://go.microsoft.com/fwlink/?LinkId=164821)。  
   
  若要使用 Svcutil.exe 创建一组 C# 代理类，请使用如下命令：  
   

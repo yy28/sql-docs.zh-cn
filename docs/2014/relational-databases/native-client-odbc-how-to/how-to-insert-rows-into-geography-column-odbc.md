@@ -11,13 +11,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206807"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何在 Geography 列中插入行 (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：在 Geography 列中插入行 (ODBC)
   此示例使用两个不同的绑定（SQLCCHAR 和 SQLCBINARY）从 WellKnownBinary (WKB) 中向具有地理位置列的表中插入两行。 然后从该表中选择一行并使用 ::STAsText() 显示它。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，应用程序将以下内容显示到控制台：POINT(56.4595 -2.9842)。  
   
  此示例不需要 ODBC 数据源，但它默认情况下运行在 SQL Server 的本地实例上。  

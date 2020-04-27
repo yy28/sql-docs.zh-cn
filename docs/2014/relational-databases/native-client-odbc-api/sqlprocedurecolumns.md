@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046708"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
@@ -51,7 +51,7 @@ ms.locfileid: "63046708"
 |DECIMAL_DIGITS|表值参数中的列数。|  
 |NUM_PREC_RADIX|Null|  
 |NULLABLE|SQL_NULLABLE|  
-|注释|Null|  
+|REMARKS|Null|  
 |COLUMN_DEF|NULL。 表类型可能没有默认值。|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
 |SQL_DATEIME_SUB|Null|  
@@ -72,8 +72,7 @@ ms.locfileid: "63046708"
  有关更多常规信息，请参阅[ODBC&#41;&#40;日期和时间改进](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns 对大型 CLR UDT 的支持  
- 
-  `SQLProcedureColumns` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLProcedureColumns` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLProcedureColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59363)   

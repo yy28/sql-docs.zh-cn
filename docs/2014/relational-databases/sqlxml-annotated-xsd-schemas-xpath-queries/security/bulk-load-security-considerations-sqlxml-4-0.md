@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 559c54c263f685350badc5d7e0232d0d0354443a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010558"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大容量加载安全性注意事项 (SQLXML 4.0)
@@ -54,6 +54,6 @@ ms.locfileid: "66010558"
 -   如果用户设置错误日志文件以便让 SQLXML 将错误写入其中，则在每次执行大容量加载时将以来自最后一个大容量加载进程的数据覆盖该文件。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQLXML 4.0&#41;执行 XML 数据的大容量加载](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [对 XML 数据执行大容量加载 &#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

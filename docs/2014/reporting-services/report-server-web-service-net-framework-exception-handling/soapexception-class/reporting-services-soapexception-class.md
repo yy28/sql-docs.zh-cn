@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f6efdfac89014116957990ef2db21cf52e76a4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046024"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 类
@@ -29,8 +29,8 @@ ms.locfileid: "63046024"
   
 |公共属性|说明|  
 |---------------------|-----------------|  
-|**Actor**|导致了异常的代码。 该值是指向 Web 服务方法的 URL。|  
-|**仔细**|应用程序特定的错误信息。 该值由报表服务器设置并且采用 XML 格式。 有关详细信息，请参阅 [Detail 属性](detail-property.md)和[使用 Detail 属性处理特定错误](../best-practices/using-the-detail-property-to-handle-specific-errors.md)。|  
+|Actor****|导致了异常的代码。 该值是指向 Web 服务方法的 URL。|  
+|Detail****|应用程序特定的错误信息。 该值由报表服务器设置并且采用 XML 格式。 有关详细信息，请参阅 [Detail 属性](detail-property.md)和[使用 Detail 属性处理特定错误](../best-practices/using-the-detail-property-to-handle-specific-errors.md)。|  
 |**HelpLink**|指向与错误相关联的帮助文件的 URL 或 URN。 该值通常由 Web 服务设置并且它设置指向 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 帮助和支持的 URL。 因为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 针对发生的错误支持多个帮助链接，所以，报表服务器将帮助链接信息设置为 Detail 属性的一部分****。 有关详细信息，请参阅 [HelpLink 元素](helplink-element.md)。|  
 |**消息**|描述错误的描述性的本地化消息。 此文本可能出现在应用程序用户界面中。|  
   

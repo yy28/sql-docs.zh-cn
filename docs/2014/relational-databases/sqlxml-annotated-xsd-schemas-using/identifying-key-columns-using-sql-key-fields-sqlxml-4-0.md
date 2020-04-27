@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013823"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 标识键列 (SQLXML 4.0)
@@ -34,8 +34,7 @@ ms.locfileid: "66013823"
 > [!NOTE]  
 >  若要确保正确的嵌套，建议您为映射到表的元素指定 `sql:key-fields`。 所生成的 XML 对于基础结果集的排序敏感。 如果不指定 `sql:key-fields`，则所生成的 XML 的格式可能不正确。  
   
- 
-  `sql:key-fields` 的值用于标识唯一标识关系中的行的列。 如果需要多个列才能唯一标识某行，则用空格分隔列值。  
+ `sql:key-fields` 的值用于标识唯一标识关系中的行的列。 如果需要多个列才能唯一标识某行，则用空格分隔列值。  
   
  如果元素包含的`sql:key-fields` ** \<sql： relationship>** 是在元素和子元素之间定义的，但未提供父元素中指定的表的主键，则必须使用批注。  
   

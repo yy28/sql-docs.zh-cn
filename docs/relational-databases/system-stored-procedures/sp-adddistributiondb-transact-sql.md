@@ -16,10 +16,10 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771350"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
@@ -75,13 +75,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`连接到分发服务器时使用的安全模式。 *security_mode*的值为**int**，默认值为1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证;**1**指定 Windows 集成身份验证。  
   
-`[ @login = ] 'login'`连接到分发服务器以创建分发数据库时使用的登录名。 如果*security_mode*设置为**0**，则这是必需的。 *login*的值为**sysname**，默认值为 NULL。  
+`[ @login = ] 'login'`连接到分发服务器以创建分发数据库时使用的登录名。 如果*security_mode*设置为**0**，则这是必需的。 login 的数据类型为 sysname，默认值为 NULL******。  
   
 `[ @password = ] 'password'`连接到分发服务器时使用的密码。 如果*security_mode*设置为**0**，则这是必需的。 *password*的值为**sysname**，默认值为 NULL。  
   
 `[ @createmode = ] createmode`*createmode*的数据值为**int**，默认值为1，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** （默认值）|"创建数据库" 或 "使用现有数据库"，并应用**instdist**文件以在分发数据库中创建复制对象。|  
@@ -168,7 +168,7 @@ GO
  [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [配置分发](../../relational-databases/replication/configure-distribution.md)  
   
   

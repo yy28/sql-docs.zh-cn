@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042610"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>测试提升图的准确性（数据挖掘基础教程）
@@ -26,7 +26,7 @@ ms.locfileid: "63042610"
   
 -   [配置准确性图表参数](#BKMK_Selecting)  
   
-##  <a name="BKMK_InputData"></a>选择输入数据  
+##  <a name="choosing-the-input-data"></a><a name="BKMK_InputData"></a>选择输入数据  
  测试挖掘模型准确性的第一步是选择将用于测试的数据源。 您将根据测试数据测试模型的准确性，然后将它们与外部数据一起使用。  
   
 #### <a name="to-select-the-data-set"></a>选择数据集  
@@ -37,7 +37,7 @@ ms.locfileid: "63042610"
   
      有关其他选项的详细信息，请参阅[选择准确性图表类型和设置图表选项](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)。  
   
-##  <a name="BKMK_Selecting"></a>设置准确性图表参数  
+##  <a name="setting-accuracy-chart-parameters"></a><a name="BKMK_Selecting"></a>设置准确性图表参数  
  若要创建准确性图表，必须定义三个内容：  
   
 -   应在准确性图表中包含哪些模型？  

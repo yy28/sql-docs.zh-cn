@@ -15,17 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011906"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>批量导入数据时保留标识值 (SQL Server)
   包含标识值的数据文件可以大容量导入到的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 默认情况下，将忽略导入的数据文件中标识列的值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动分配唯一值。 这些唯一值基于在表创建期间指定的种子和增量值。  
   
- 如果该数据文件表中的标识符列不包含值，则使用格式化文件来指定导入数据时应跳过表中的标识符列。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动为此列分配唯一值。  
+ 如果该数据文件表中的标识符列不包含值，则使用格式化文件来指定导入数据时应跳过表中的标识符列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动为此列分配唯一值。  
   
  若要防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在将数据行大容量导入到表中时分配标识值，请使用相应的保留标识命令限定符。 在您指定保留标识限定符后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在该数据文件中使用标识值。 这些限定符如下：  
   
@@ -56,7 +55,7 @@ GO
 SELECT * FROM HumanResources.myDepartment;  
 ```  
   
- 作为 ** 基础的 **Department`myDepartment` 表的 IDENTITY_INSERT 设置为 OFF。 因此，必须指定 KEEPIDENTITY 或 **-E**，才能将数据导入标识列。  
+ 作为 `myDepartment` 基础的 **Department** 表的 IDENTITY_INSERT 设置为 OFF。 因此，必须指定 KEEPIDENTITY 或 **-E**，才能将数据导入标识列。  
   
 ### <a name="sample-data-file"></a>示例数据文件  
  大容量导入示例中使用的数据文件包含从本机格式的 `HumanResources.Department` 表中大容量导出的数据。 若要创建数据文件，请在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示符下输入以下内容：  
@@ -75,8 +74,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  有关创建格式化文件的详细信息，请参阅[创建格式化文件 (SQL Server)](create-a-format-file-sql-server.md)。  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. 使用 bcp 并保留标识值  
- 下面的示例说明如何在使用 `bcp` 大容量导入数据时保留标识值。 
-  `bcp` 命令使用格式化文件 `myDepartment-f-n-x.Xml`，并包含下列开关：  
+ 下面的示例说明如何在使用 `bcp` 大容量导入数据时保留标识值。 `bcp` 命令使用格式化文件 `myDepartment-f-n-x.Xml`，并包含下列开关：  
   
 |限定符|说明|  
 |----------------|-----------------|  
@@ -132,11 +130,11 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [在批量导入期间保留 Null 或使用默认值 (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [准备用于大容量导出或导入的数据 &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [准备用于批量导出或导入的数据 (SQL Server)](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **使用格式化文件**  
   
@@ -150,25 +148,25 @@ GO
   
 -   [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- **使用数据格式进行批量导入或批量导出**  
+ **使用数据格式进行大容量导入或大容量导出**  
   
 -   [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [使用字符格式导入或导出数据 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用字符格式导入或导出数据 (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用本机格式导入或导出数据 &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 字符格式导入或导出数据 (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
  **在使用 bcp 时指定数据格式以获得兼容性**  
   
-1.  [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+1.  [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [使用 bcp &#40;SQL Server 指定数据文件中的前缀长度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [使用 bcp &#40;SQL Server 指定文件存储类型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   

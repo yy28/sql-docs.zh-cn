@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211117"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
@@ -43,17 +43,17 @@ ms.locfileid: "68211117"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|描述|  
 |--------------------|-----------------|  
-|**数据类型和长度**|`string`，长度不受限制。|  
+|**数据类型和长度**|，无限长。|  
 |**默认值**|无。|  
-|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须为父元素 `EventString` 指定子元素 `File`、`Database` 或 `Workload`，但只能使用一种类型。 例如，如果指定了具有 `EventString` 元素的工作负荷，则不能在相同的 XML 输入文件中指定具有 `File` 元素的工作负荷。|  
+|**匹配项**|如果未指定其他类型的工作负荷，则必须使用一次。 必须为父元素 `EventString` 指定子元素 `File`、`Database` 或 `Workload`，但只能使用一种类型。 例如，如果指定了具有 `EventString` 元素的工作负荷，则不能在相同的 XML 输入文件中指定具有 `File` 元素的工作负荷。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[&#40;DTA&#41;的工作负荷元素](workload-element-dta.md)|  
+|**父元素**|[工作负荷元素 (DTA)](workload-element-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011069"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
   可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函数中使用邻近词 (NEAR) 来搜索相互邻近的字词或短语。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以按任意顺序或您指定的顺序搜索词或短语。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]同时支持以前的[通用邻近词](#Generic_NEAR)（现已不推荐使用）和[自定义邻近词](#Custom_NEAR)，这是中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的新术语。  
   
-##  <a name="Custom_NEAR"></a>自定义邻近词  
+##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>自定义邻近词  
  自定义邻近词引入了下列新功能：  
   
 -   可以指定第一个搜索词与最后一个搜索词之间存在的非搜索词的最大数目或最大距离**，以作为构成匹配项的条件。  
@@ -77,7 +77,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  请注意，对于从右向左阅读的语言（例如阿拉伯语或希伯来语），全文引擎会以相反的顺序应用指定词。 此外， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象资源管理器会自动颠倒从右到左语言中指定的文字显示顺序。  
   
 > [!NOTE]  
->  有关详细信息，请参阅本主题后面的“[有关邻近搜索的更多考虑因素](#Additional_Considerations)”。  
+>   有关详细信息，请参阅本主题后面的“[有关邻近搜索的更多考虑因素](#Additional_Considerations)”。  
   
 ### <a name="how-maximum-distance-is-measured"></a>最大距离的测量方式  
  特定的最大距离（例如 10 或 25）决定在给定字符串的第一个搜索词与最后一个搜索词之间可以出现多少个非搜索词（包括非索引字）。 例如， `NEAR((dogs, cats, "hunting mice"), 3)` 将返回以下行，其中非搜索词的总数为 3（“`enjoy`”、“`but`”和“`avoid`”)：  
@@ -125,7 +125,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a>邻近搜索的其他注意事项  
+##  <a name="additional-considerations-for-proximity-searches"></a><a name="Additional_Considerations"></a>邻近搜索的其他注意事项  
  本节讨论了对通用邻近搜索和自定义邻近搜索都有影响的考虑因素：  
   
 -   搜索词的重叠匹配项  
@@ -147,17 +147,16 @@ GO
   
      当 NEAR 在 CONTAINSTABLE 函数中使用时，文档中相对于文档长度的匹配项数以及每个匹配项中第一个与最后一个搜索词之间的距离会影响每个文档的排名。 对于通用邻近词，如果匹配的搜索词之间相隔的距离 > 50 个逻辑词，则对文档返回的排名为 0。 对于没有指定一个整数作为最大距离的自定义邻近词，只有其包含的匹配项的相隔距离 > 100 个逻辑词时，文档才会得到 0 排名。 有关自定义邻近搜索排名的详细信息，请参阅 [Limit Search Results with RANK](limit-search-results-with-rank.md)。  
   
--   
-  **transform noise words** 服务器选项  
+-   **transform noise words** 服务器选项  
   
      如果在邻近搜索中指定了非索引字，则 **transform noise words** 的值会影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理非索引字的方式。 有关详细信息，请参阅 [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。  
   
 
   
-##  <a name="Generic_NEAR"></a>不推荐使用的通用邻近词  
+##  <a name="the-deprecated-generic-proximity-term"></a><a name="Generic_NEAR"></a>不推荐使用的通用邻近词  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]建议使用[自定义邻近词](#Custom_NEAR)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我们建议您使用 [自定义邻近词](#Custom_NEAR)。  
   
  通用邻近词表明指定的搜索词必须全部出现在一个文档中匹配项才能返回，而与搜索词之间非搜索词的数目（距离**）无关。 基本语法为：  
   
@@ -172,7 +171,7 @@ GO
 > [!NOTE]  
 >  有关 <generic_proximity_term> 语法的信息，请参阅 [CONTAINS (Transact-SQL)](/sql/t-sql/queries/contains-transact-sql)。  
   
- 有关详细信息，请参阅本主题后面的“[有关邻近搜索的更多考虑因素](#Additional_Considerations)”。  
+  有关详细信息，请参阅本主题后面的“[有关邻近搜索的更多考虑因素](#Additional_Considerations)”。  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>将通用邻近词与其他词组合使用  
  可以使用 AND (&), OR (|) 或 AND NOT (&!) 将一个通用邻近词与另一个通用邻近词、简单词或前缀词组合使用。 例如：  
@@ -227,7 +226,7 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 ## <a name="see-also"></a>另请参阅  
  [CONTAINSTABLE (Transact-SQL)](/sql/relational-databases/system-functions/containstable-transact-sql)   
- [查询与全文搜索](query-with-full-text-search.md)   
+ [使用全文搜索查询](query-with-full-text-search.md)   
  [CONTAINS (Transact-SQL)](/sql/t-sql/queries/contains-transact-sql)  
   
   

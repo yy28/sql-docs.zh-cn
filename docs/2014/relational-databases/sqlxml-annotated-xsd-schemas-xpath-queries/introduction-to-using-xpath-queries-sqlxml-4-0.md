@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012713"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
@@ -89,10 +89,9 @@ ms.locfileid: "66012713"
 ## <a name="supported-functionality"></a>支持的功能  
  下表显示了 SQLXML 4.0 中实现的 XPath 语言功能。  
   
-|Feature|Item|示例查询链接|  
+|功能|项|示例查询链接|  
 |-------------|----------|----------------------------|  
-|Axes|
-  `attribute`、`child`、`parent` 和 `self` 轴|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定轴](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
+|Axes|`attribute`、`child`、`parent` 和 `self` 轴|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定轴](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |包含连续谓词和嵌套谓词的布尔值谓词||[&#40;SQLXML 4.0&#41;在 XPath 查询中指定算术运算符](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |所有关系运算符|=、！ =、<、 \<=、>、>=|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定关系运算符](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算术运算符|+、-、*、div|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定算术运算符](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -104,7 +103,7 @@ ms.locfileid: "66012713"
 ## <a name="unsupported-functionality"></a>不支持的功能  
  下表显示了 SQLXML 4.0 中未实现的 XPath 语言功能。  
   
-|Feature|Item|  
+|功能|项|  
 |-------------|----------|  
 |Axes|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |数值谓词||  

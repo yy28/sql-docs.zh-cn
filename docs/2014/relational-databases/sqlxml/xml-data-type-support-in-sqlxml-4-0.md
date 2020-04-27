@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012169"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 中的 xml 数据类型支持
@@ -42,11 +42,9 @@ ms.locfileid: "66012169"
   
 -   仅对 XSD 架构支持映射 `xml` 列。 XDR 架构不支持映射 `xml` 列。  
   
--   SQLXML 4.0 依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的 XML 分析支持。 
-  `xml` 列可以映射为类型化的 XML 或非类型化的 XML。 在任一种情况下，SQLXML 4.0 都不验证输入 XML。  如果输入 XML 无效或格式不正确，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将向 SQLXML 报告此情况，并将服务器返回的任何相关的错误信息传播给用户。  
+-   SQLXML 4.0 依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的 XML 分析支持。 `xml` 列可以映射为类型化的 XML 或非类型化的 XML。 在任一种情况下，SQLXML 4.0 都不验证输入 XML。  如果输入 XML 无效或格式不正确，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将向 SQLXML 报告此情况，并将服务器返回的任何相关的错误信息传播给用户。  
   
--   SQLXML 4.0 依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的对于 DTD 的有限支持。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在 `xml` 数据类型的数据中使用内部 DTD，而内部 DTD 可用来提供默认值和将实体引用替换为其扩展的内容。 SQLXML 将 XML 数据“按原样”（包括内部 DTD）传递到服务器。 可以通过使用第三方工具将 DTD 转换为 XML 架构 (XSD)，然后使用内联 XSD 架构将数据加载到数据库中。  
+-   SQLXML 4.0 依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的对于 DTD 的有限支持。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在 `xml` 数据类型的数据中使用内部 DTD，而内部 DTD 可用来提供默认值和将实体引用替换为其扩展的内容。 SQLXML 将 XML 数据“按原样”（包括内部 DTD）传递到服务器。 可以通过使用第三方工具将 DTD 转换为 XML 架构 (XSD)，然后使用内联 XSD 架构将数据加载到数据库中。  
   
 -   SQLXML 4.0 不会基于的行为保留 XML 声明处理指令（例如） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 而是将 XML 声明视为针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 分析器的指令，并且，在将数据转换到 `xml` 数据类型之后，此声明的属性（version、encoding 和 standalone）将丢失。 XML 数据在内部存储为 UCS-2。 将保留 XML 实例中的所有其他处理指令；在 `xml` 列中允许使用这些指令，并且 SQLXML 支持它们。  
   

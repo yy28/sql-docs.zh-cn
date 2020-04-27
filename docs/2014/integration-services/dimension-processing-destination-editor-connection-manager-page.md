@@ -15,19 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059437"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>维度处理目标编辑器（“连接管理器”页）
-  可以使用 **“维度处理目标编辑器”** 对话框的 **“连接管理器”** 页指定与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例之间的连接。  
+  可以使用“维度处理目标编辑器”对话框的“连接管理器”页面指定与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例之间的连接********。  
   
  若要了解有关维度处理目标的详细信息，请参阅 [Dimension Processing Destination](data-flow/dimension-processing-destination.md)。  
   
 ## <a name="options"></a>选项  
- **“ODBC 目标编辑器”**  
+ **连接管理器**  
  从列表中选择现有连接管理器，或单击“新建”**** 创建新的连接管理器。  
   
  **新建**  
@@ -39,15 +39,15 @@ ms.locfileid: "66059437"
  **处理方法**  
  选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”**。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**添加(增量式)**|对维度执行增量处理。|  
-|**完全**|对维度执行完全处理。|  
-|**时更新**|对维度执行更新处理。|  
+|**达到**|对维度执行完全处理。|  
+|**Update**|对维度执行更新处理。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [维度处理目标编辑器 &#40;映射 "页面&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [维度处理目标编辑器 &#40;高级页面&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [维度处理目标编辑器（“高级”页）](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f45e6124dbbad79802e290f935ccc6f3f45cee0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144398"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>客户端连接中的服务主体名称 (SPN) (ODBC)
@@ -23,7 +23,7 @@ ms.locfileid: "63144398"
 ## <a name="connection-string-keywords"></a>连接字符串关键字  
  客户端应用程序使用以下连接字符串关键字可指定 SPN。  
   
-|关键字|值|  
+|关键字|Value|  
 |-------------|-----------|  
 |`ServerSPN`|服务器的 SPN。 默认值是空字符串，这将导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用默认的驱动程序生成的 SPN。|  
 |`FailoverPartnerSPN`|故障转移伙伴的 SPN。 默认值是空字符串，这将导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用默认的驱动程序生成的 SPN。|  
@@ -51,6 +51,6 @@ ms.locfileid: "63144398"
 -   [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)  
   
   

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127115"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield（扩展存储过程 API）
@@ -52,13 +52,13 @@ len
 ```  
   
 ## <a name="arguments"></a>参数  
- *srvproc*  
+ srvproc**  
  标识数据库连接的指针。  
   
  *定义域*  
  指定连接将返回的数据。  
   
-|值|返回|  
+|Value|返回|  
 |-----------|-------------|  
 |SRV_APPLNAME|客户端建立连接时提供的应用程序名称。|  
 |SRV_BCPFLAG|一个标志，如果客户端正在准备执行大容量复制操作，则为 TRUE；否则为 FALSE。|  
@@ -76,7 +76,7 @@ len
 |SRV_SPID|srvproc 的服务器线程 ID**。 对于扩展存储过程，此值与 sys.sysprocesses的 kpid 列相同，并且它可能随时间的推移而发生变化********。|  
 |SRV_SPROC_CODEPAGE|服务器用于解释多字节数据的代码页。|  
 |SRV_STATUS|srvproc 的当前状态：正在运行或已关闭**|  
-|SRV_TYPE|srvproc 的连接类型**。 如果返回服务器，srvproc 则来自 * 的实例*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果返回客户端，srvproc 则来自 DB-Library 或 ODBC 客户端**。|  
+|SRV_TYPE|srvproc 的连接类型**。 如果返回服务器，srvproc 则来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例**。 如果返回客户端，srvproc 则来自 DB-Library 或 ODBC 客户端**。|  
 |SRV_USER|连接的用户名。|  
 |||  
   

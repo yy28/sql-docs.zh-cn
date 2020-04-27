@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011914"
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
-  "*主体*" 是可以请求[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体定义的范围（Windows、服务器或数据库）以及主体是否不可分或是一个集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。  
+  “主体”  是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体定义的范围（Windows、服务器或数据库）以及主体是否不可分或是一个集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。  
   
  **Windows 级别的主体**  
   
@@ -59,8 +59,7 @@ ms.locfileid: "63011914"
 -   应用程序角色  
   
 ## <a name="the-sql-server-sa-login"></a>SQL Server sa 登录名  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sa 登录名是服务器级的主体。 默认情况下，该登录名是在安装实例时创建的。 从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，sa 的默认数据库为“master”。 这是对早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的行为的更改。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sa 登录名是服务器级的主体。 默认情况下，该登录名是在安装实例时创建的。 从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，sa 的默认数据库为“master”。 这是对早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的行为的更改。  
   
 ## <a name="public-database-role"></a>public 数据库角色  
  每个数据库用户都属于 public 数据库角色。 当尚未对某个用户授予或拒绝对安全对象的特定权限时，则该用户将继承授予该安全对象的 public 角色的权限。  
@@ -71,26 +70,19 @@ ms.locfileid: "63011914"
 ## <a name="certificate-based-sql-server-logins"></a>基于证书的 SQL Server 登录名  
  名称由双井号 (##) 括起来的服务器主体仅供内部系统使用。 下列主体是在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时从证书创建的，不应删除。  
   
--   
-  \##MS_SQLResourceSigningCertificate##  
+-   \##MS_SQLResourceSigningCertificate##  
   
--   
-  \##MS_SQLReplicationSigningCertificate##  
+-   \##MS_SQLReplicationSigningCertificate##  
   
--   
-  \##MS_SQLAuthenticatorCertificate##  
+-   \##MS_SQLAuthenticatorCertificate##  
   
--   
-  \##MS_AgentSigningCertificate##  
+-   \##MS_AgentSigningCertificate##  
   
--   
-  \##MS_PolicyEventProcessingLogin##  
+-   \##MS_PolicyEventProcessingLogin##  
   
--   
-  \##MS_PolicySigningCertificate##  
+-   \##MS_PolicySigningCertificate##  
   
--   
-  \##MS_PolicyTsqlExecutionLogin##  
+-   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>guest 用户  
  每个数据库包括一个 **guest**。 授予 **guest** 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 不能删除**guest**用户，但可通过撤消该用户的`CONNECT`权限将其禁用。 可以`CONNECT`通过在 master 或 tempdb 以外`REVOKE CONNECT FROM GUEST`的任何数据库中执行来撤消权限。  
@@ -103,19 +95,19 @@ ms.locfileid: "63011914"
   
 -   [管理登录名、用户和架构操作指南主题](managing-logins-users-and-schemas-how-to-topics.md)  
   
--   [服务器级别角色](server-level-roles.md)  
+-   [服务器级角色](server-level-roles.md)  
   
--   [数据库级角色](database-level-roles.md)  
+-   [数据库级别的角色](database-level-roles.md)  
   
 -   [应用程序角色](application-roles.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [保护 SQL Server](../securing-sql-server.md)   
  [sys. database_principals &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
- [sys.server_principals (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
+ [sys. server_principals &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
  [sys. sql_logins &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
- [sys.database_role_members (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
+ [sys. database_role_members &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
  [服务器级别角色](server-level-roles.md)   
- [数据库级角色](database-level-roles.md)  
+ [数据库级别的角色](database-level-roles.md)  
   
   

@@ -15,17 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046682"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序报告的结果集中的 USERTYPE 列`SQLGetTypeInfo`。 USERTYPE 报告 DB-Library 数据类型定义，这对需要将现有 DB-Library 应用程序移植到 ODBC 的开发人员很有用。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将标识视为属性，而 ODBC 将它视为数据类型。 若要解决此不`SQLGetTypeInfo`匹配，将返回数据类型： **intidentity**、 **smallintidentity**、 **tinyintidentity**、 **decimalidentity**和**numericidentity**。 `SQLGetTypeInfo`结果集列 AUTO_UNIQUE_VALUE 报告这些数据类型的值为 TRUE。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将标识视为属性，而 ODBC 将它视为数据类型。 若要解决此不`SQLGetTypeInfo`匹配，将返回数据类型： **intidentity**、 **smallintidentity**、 **tinyintidentity**、 **decimalidentity**和**numericidentity**。 `SQLGetTypeInfo`结果集列 AUTO_UNIQUE_VALUE 报告这些数据类型的值为 TRUE。  
   
  对于**varchar**、 **nvarchar**和**varbinary**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序会分别针对 COLUMN_SIZE 值继续报告8000、4000和8000，即使它实际上是不受限制的。 这是为了确保向后兼容性。  
   
@@ -44,8 +43,7 @@ ms.locfileid: "63046682"
  有关更多常规信息，请参阅[ODBC&#41;&#40;日期和时间改进](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>SQLGetTypeInfo 对大型 CLR UDT 的支持  
- 
-  `SQLGetTypeInfo` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLGetTypeInfo` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLGetTypeInfo 函数](https://go.microsoft.com/fwlink/?LinkId=59356)   

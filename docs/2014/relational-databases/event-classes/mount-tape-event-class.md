@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63023447"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 事件类
@@ -30,7 +30,7 @@ ms.locfileid: "63023447"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充。|10|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对指定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果在跟踪中捕获到 ServerName 数据列并且服务器可用，则将显示数据库的名称。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对指定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|`nvarchar`|正在其中运行用户语句的数据库的名称。|35|是|  
 |Duration|`bigint`|事件占用的时间（微秒）。|13|是|  
 |EndTime|`datetime`|对于 Mount Request 事件，表示超时发生时的装入超时时间；否则，表示事件本身的时间（在此类情况下，StartTime 表示相应装入请求的时间）。|15|是|  
@@ -47,10 +47,10 @@ ms.locfileid: "63023447"
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
-|TextData|`ntext`|*物理设备名称*[（*逻辑设备名称*）]。 仅当在 sys.backup_devices 目录视图中定义了逻辑设备名称时，它才会显示出来。|1|是|  
+|TextData|`ntext`|物理设备名称** [ ( 逻辑设备名称** ) ]。 仅当在 sys.backup_devices 目录视图中定义了逻辑设备名称时，它才会显示出来。|1|是|  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

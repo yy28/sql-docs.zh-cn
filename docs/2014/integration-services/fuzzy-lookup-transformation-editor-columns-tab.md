@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 063248c6b91aebf6198323487aa30ddd1c9cb6ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058333"
 ---
 # <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>模糊查找转换编辑器（“列”选项卡）
@@ -48,6 +48,6 @@ ms.locfileid: "66058333"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [模糊查找转换编辑器 &#40;引用表 "选项卡&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
- [&#40;高级 "选项卡的" 模糊查找转换编辑器 "&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [模糊查找转换编辑器（“高级”选项卡）](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

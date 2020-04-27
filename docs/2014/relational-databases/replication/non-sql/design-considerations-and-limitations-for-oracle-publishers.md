@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022516"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 发布服务器的设计注意事项和限制
-  在设计上，从 Oracle 数据库中进行发布与从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中进行发布几乎一样。 不过，还应注意下列限制和问题：  
+  从 Oracle 数据库中进行发布旨在与从[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库中进行发布几乎相同。 不过，还应注意下列限制和问题：  
   
 -   “Oracle Gateway”选项的性能优于“Oracle Complete”选项；但是，此选项不能用于在多个事务发布中发布同一个表。 一个表最多只能出现在一个事务发布中，但可以出现在任意多个快照发布中。 如果需要在多个事务发布中发布同一个表，请选择“Oracle Complete”选项。  
   
@@ -168,6 +168,6 @@ ms.locfileid: "63022516"
 ## <a name="see-also"></a>另请参阅  
  [Oracle 发布服务器的管理注意事项](administrative-considerations-for-oracle-publishers.md)   
  [配置 Oracle 发布服务器](configure-an-oracle-publisher.md)   
- [Oracle 发布概述](oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010431"
 ---
 # <a name="access-filetables-with-transact-sql"></a>使用 Transact-SQL 访问 FileTable
   说明 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据操作语言 (DML) 命令如何与 FileTable 一起使用。  
   
-##  <a name="BasicsInsert"></a> FileTable 上的 INSERT 操作  
+##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> FileTable 上的 INSERT 操作  
  下列注意事项适用于 FileTable 上的 **INSERT** 操作：  
   
 -   所有文件属性列具有 NOT NULL 约束。 如果没有显式设置值，则提供适当的默认值。  
@@ -31,7 +31,7 @@ ms.locfileid: "66010431"
   
 -   该应用程序可以通过提供指向 **GetPathLocator (Transact-SQL)** 函数的文件系统路径，来获取文件或目录的 [path_locator](/sql/relational-databases/system-functions/getpathlocator-transact-sql)。  
   
-##  <a name="BasicsUpdate"></a> FileTable 上的 UPDATE 操作  
+##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable 上的 UPDATE 操作  
  下列注意事项适用于 FileTable 上的 **UPDATE** 操作：  
   
 -   允许更新任何用户定义的数据。  
@@ -40,14 +40,14 @@ ms.locfileid: "66010431"
   
 -   可以对 **file_stream** 列中的 FILESTREAM 数据进行更新，且不会影响任何其他列（包括时间戳）。  
   
-##  <a name="BasicsDelete"></a> FileTable 上的 DELETE 操作  
+##  <a name="delete-operations-on-filetables"></a><a name="BasicsDelete"></a> FileTable 上的 DELETE 操作  
  下列注意事项适用于 FileTable 上的 **DELETE** 操作：  
   
 -   删除行还将从文件系统中删除相应的文件或目录。  
   
 -   如果该行与包含其他文件或目录的目录相对应，则删除行操作将失败。  
   
-##  <a name="BasicsConstraints"></a> 针对 FileTable 的 DML 操作强制执行的约束  
+##  <a name="constraints-that-are-enforced-for-dml-operations-on-filetables"></a><a name="BasicsConstraints"></a> 针对 FileTable 的 DML 操作强制执行的约束  
  系统定义的约束确保 DML 操作不破坏文件命名空间层次结构的完整性。 强制执行的约束包括：  
   
 -   当您设置或更改文件或目录的 **名称** 时：  

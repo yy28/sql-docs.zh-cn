@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013846"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的显式映射 (SQLXML 4.0)
@@ -52,8 +52,7 @@ ms.locfileid: "66013846"
 ```  
   
 ## <a name="sql-field"></a>sql-field  
- 
-  `sql-field` 批注将元素或属性映射至数据库列。 添加 `sql:field` 批注，以便将架构中的 XML 节点映射至数据库列。 不能在空内容元素上指定 `sql:field`。  
+ `sql-field` 批注将元素或属性映射至数据库列。 添加 `sql:field` 批注，以便将架构中的 XML 节点映射至数据库列。 不能在空内容元素上指定 `sql:field`。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  

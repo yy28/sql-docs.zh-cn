@@ -1,5 +1,5 @@
 ---
-title: 调用存储过程（OLE DB） |Microsoft Docs
+title: 调用存储过程 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206578"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>调用存储过程 (OLE DB)
@@ -43,7 +43,7 @@ ms.locfileid: "68206578"
   
 1.  在 DBPARAMBINDINFO 结构的数组中填写参数信息，即，参数名、参数数据类型特定于访问接口的名称或者标准数据类型名称，等等。 数组中的每个结构都描述一个参数。 然后将此数组传递给 SetParameterInfo 方法****。  
   
-2.  调用 ICommandWithParameters::SetParameterInfo 方法以向访问接口描述参数****。 **SetParameterInfo**指定每个参数的本机数据类型。 **SetParameterInfo**参数是：  
+2.  调用 ICommandWithParameters::SetParameterInfo 方法以向访问接口描述参数****。 SetParameterInfo 指定每个参数的本机数据类型****。 SetParameterInfo 参数包括****：  
   
     -   要设定其类型信息的参数的数量。  
   
@@ -82,8 +82,7 @@ ms.locfileid: "68206578"
   
 -   远程过程调用 (RPC) 转义序列。  
   
--   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE 语句。  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE 语句。  
   
 ### <a name="odbc-call-escape-sequence"></a>ODBC CALL 转义序列  
  如果知道参数信息，可调用 ICommandWithParameters::SetParameterInfo 方法向访问接口描述参数****。 否则，在使用 ODBC CALL 语法调用存储过程时，访问接口将调用一个 Helper 函数来查找存储过程的参数信息。  
@@ -105,7 +104,7 @@ ms.locfileid: "68206578"
   
  如果使用 RPC 转义序列执行存储过程，则访问接口不会调用任何 Helper 函数来确定参数信息（使用 ODBC CALL 语法时则会调用 Helper 函数）。 RPC 语法比 ODBC CALL 语法简单，因此命令的分析速度更快，从而提高了性能。 在这种情况下，需要通过执行 ICommandWithParameters::SetParameterInfo 来提供参数信息****。  
   
- RPC 转义序列要求您具有返回值。 如果存储过程不返回值，则服务器默认返回 0。 此外，您无法对存储过程打开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标。 存储过程是隐式准备的，对 ICommandPrepare::Prepare 的调用会失败****。 因为无法准备 RPC 调用，所以您不能查询列元数据；IColumnsInfo::GetColumnInfo 和 IColumnsRowset::GetColumnsRowset 将返回 DB_E_NOTPREPARED。  
+ RPC 转义序列要求您具有返回值。 如果存储过程不返回值，则服务器默认返回 0。 此外，您无法对存储过程打开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标。 存储过程是隐式准备的，对 ICommandPrepare::Prepare 的调用会失败****。 由于无法准备 RPC 调用，因此也就无法查询列元数据；IColumnsInfo::GetColumnInfo 和 IColumnsRowset::GetColumnsRowset 会返回 DB_E_NOTPREPARED。  
   
  如果知道所有参数元数据，建议采用 RPC 转义序列方式执行存储过程。  
   
@@ -115,12 +114,12 @@ ms.locfileid: "68206578"
 {rpc SalesByCategory}  
 ```  
   
- 有关演示 RPC 转义序列的示例应用程序，请参阅[执行存储过程 &#40;使用 Rpc 语法&#41; 并处理返回代码和输出参数 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
+ 有关展示 RPC 转义序列的示例应用程序，请参阅[执行存储过程（使用 RPC 语法）并处理返回代码和输出参数 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 语句  
  与 [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) 语句相比，ODBC CALL 转义序列和 RPC 转义序列是调用存储过程的首选方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用的 RPC 机制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]来优化命令处理。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
   
- 下面是一个  EXECUTE 语句的示例[!INCLUDE[tsql](../../../includes/tsql-md.md)] ****：  
+ 下面是  EXECUTE[!INCLUDE[tsql](../../../includes/tsql-md.md)] **** 语句示例：  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

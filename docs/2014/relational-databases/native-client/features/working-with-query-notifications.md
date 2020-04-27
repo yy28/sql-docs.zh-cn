@@ -22,14 +22,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206598"
 ---
 # <a name="working-with-query-notifications"></a>使用查询通知
-  
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中引入了查询通知。 查询通知建立在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的 Service Broker 基础结构之上，并允许在数据发生更改时向应用程序发送通知。 对提供数据库信息的缓存且需要在源数据发生更改时收到通知的应用程序（如 Web 应用程序）而言，以上功能特别有用。  
   
  查询通知使您可以在查询的基础数据发生更改时请求在指定的超时期限内发送通知。 通知请求指定通知选项，其中包括服务名称、消息正文和服务器的超时值。 通知是通过 Service Broker 队列传递的，应用程序可以轮询该队列以获取可用通知。  
@@ -96,7 +95,7 @@ RECEIVE * FROM MyQueue
   
  如果队列为空，该语句将立即返回空的结果集；否则会返回所有队列通知。  
   
- 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 为非 NULL 和非空，当执行其中的每个命令时，将向服务器发送包含上面定义的三个属性的查询通知 TDS 头。 如果其中任一属性为 Null（或空），则不会发送头，并引发 DB_E_ERRORSOCCURRED（或者如果两个属性均标记为可选，则引发 DB_S_ERRORSOCCURRED），同时将状态值设置为 DBPROPSTATUS_BADVALUE。 在执行/准备期间进行验证。 类似地，当设置查询通知属性以便连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本时，将引发 DB_S_ERRORSOCCURED。 在这种情况下，状态值为 DBPROPSTATUS_NOTSUPPORTED。  
+ 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 为非 NULL 和非空，当执行其中的每个命令时，将向服务器发送包含上面定义的三个属性的查询通知 TDS 头。 如果其中任一属性为 Null（或空），则不会发送头，并引发 DB_E_ERRORSOCCURRED（或者如果两个属性均标记为可选，则引发 DB_S_ERRORSOCCURRED），同时将状态值设置为 DBPROPSTATUS_BADVALUE。 在执行/准备期间进行验证。 类似地，当设置查询通知属性以便连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本时，将引发 DB_S_ERRORSOCCURED。 在这种情况下，状态值为 DBPROPSTATUS_NOTSUPPORTED。  
   
  启动订阅不能保证将成功传递后续消息。 此外，不会检查指定服务名称的有效性。  
   
@@ -132,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  如果发出批处理或存储过程订阅请求，则会针对批处理或存储过程内执行的每个语句发出单独的订阅请求。 EXECUTE 语句不会注册通知，但是会将通知请求发送到已执行的命令。 如果为批处理，则上下文将适用于已执行的语句，并且应用上述相同规则。  
   
- 提交通知的查询，该查询由同一用户在同一数据库上下文中提交，并且具有相同的模板、相同的参数值、相同的通知 ID 以及与现有活动订阅相同的送达位置，将续订现有订阅，并重置新指定的超时。这意味着，如果针对相同的查询请求通知，则仅发送一条通知。 这将适用于批处理中的重复查询，也适用于存储过程中调用多次的查询。  
+ 提交通知的查询，该查询由同一用户在同一数据库上下文中提交，并且具有相同的模板、相同的参数值、相同的通知 ID 以及与现有活动订阅相同的送达位置，将续订现有订阅，并重置新指定的超时值。这意味着，如果针对相同的查询请求通知，则仅发送一条通知。 这将适用于批处理中的重复查询，也适用于存储过程中调用多次的查询。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)  

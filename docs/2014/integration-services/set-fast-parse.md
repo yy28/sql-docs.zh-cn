@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d41b15325586733ab54a37f4c3f007ce0253eaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055817"
 ---
 # <a name="set-fast-parse"></a>设置快速分析
@@ -22,7 +22,7 @@ ms.locfileid: "66055817"
   
 ### <a name="to-set-fast-parse"></a>设置快速分析  
   
-1.  右键单击平面文件源或数据转换，然后单击“显示高级编辑器”。   
+1.  右键单击平面文件源或数据转换，然后单击“显示高级编辑器”。****  
   
 2.  在 **“高级编辑器”** 对话框中，单击 **“输入属性和输出属性”** 选项卡。  
   
@@ -30,6 +30,6 @@ ms.locfileid: "66055817"
   
 4.  在属性窗口中，展开 "**自定义属性**" 节点，然后将`FastParse`属性设置`True`为。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
   

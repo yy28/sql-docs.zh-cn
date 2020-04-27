@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021910"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
   本主题列出配置和使用 Oracle 发布服务器时可能会引发的一系列问题。  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>引发关于 Oracle 客户端和网络软件的错误  
- 必须为安装了[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Oracle 客户端网络软件的目录（以及所有子目录）授予在其下运行的帐户的 "读取" 和 "执行" 权限。 如果未授予权限或者未正确安装 Oracle 客户端组件，您将接收到下列错误消息：  
+ 用来在分发服务器上运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的帐户必须具有对 Oracle 客户端网络软件安装目录（以及所有子目录）的读取和执行权限。 如果未授予权限或者未正确安装 Oracle 客户端组件，您将接收到下列错误消息：  
   
  “用 [Microsoft OLE DB Provider for Oracle] 与服务器连接失败。 找不到 Oracle 客户端和网络组件。 这些组件由 Oracle 公司提供，属于 Oracle 7.3.3 版本或更高版本的客户端软件安装。 访问接口在安装这些组件前无法运行。”  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63021910"
   
 -   “Oracle 服务器实例‘\<*OraclePublisherName*>'’以前配置为将‘\<*SQLServerDistributorName*>’作为其分发服务器。 若要开始使用‘\<*NewSQLServerDistributorName*>’作为其分发服务器，必须删除 Oracle 服务器实例上的当前复制配置，而这将删除该服务器实例上的所有发布。”  
   
--   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>.\<*DistributionDatabaseName>*’上的发布服务器‘*\<OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词 '*\<SynonymName>*' 以重新创建。 "  
+-   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>.\<*DistributionDatabaseName>* ’上的发布服务器‘ *\<OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘ *\<SynonymName>* ’，以便重新创建。”  
   
  删除 Oracle 发布服务器时，会自动清除 Oracle 数据库中的复制对象。 但是，在某些情况下需要手动清除 Oracle 复制对象。 手动清除复制创建的 Oracle 复制对象：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021910"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>引发关于重复链接服务器登录名的 SQL Server 错误 21642  
  在初始配置 Oracle 发布服务器时，会为发布服务器和分发服务器之间的连接创建一个链接服务器项。 该链接服务器的名称与 Oracle TNS 服务名称相同。 如果尝试创建具有相同名称的链接服务器，则会显示以下错误消息：  
   
- “异类发布服务器需要链接服务器。 已存在名为 "*\<LinkedServerName>*" 的链接服务器。 请删除链接服务器或另选一个发布服务器名称。”  
+ “异类发布服务器需要链接服务器。 名为‘ *\<LinkedServerName>* ’的链接服务器已存在。 请删除链接服务器或另选一个发布服务器名称。”  
   
  如果尝试直接创建链接服务器，或者预先删除了 Oracle 发布服务器和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器之间的关系，而当前在尝试重新配置它，就会出现此错误。 如果尝试重新配置发布服务器时收到此错误，请用 [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql) 删除链接服务器。  
   
@@ -101,11 +101,11 @@ ms.locfileid: "63021910"
   
  尝试在分发服务器上找到 SQL\*PLUS。 对于 Oracle 10g 客户端安装，此可执行文件的名称为 sqlplus.exe。 它通常安装在 %ORACLE_HOME%/bin 中。 若要验证 SQL\*PLUS 的路径是否显示在系统路径中，请检查系统变量 **Path** 的值：  
   
-1.  右键单击 **“我的电脑”**，再单击 **“属性”**。  
+1.  右键单击 **“我的电脑”** ，再单击 **“属性”** 。  
   
-2.  单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
+2.  单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
   
-3.  在 **“环境变量”** 对话框的 **“系统变量”** 列表中，选择 **Path** 变量，然后单击 **“编辑”**。  
+3.  在 **“环境变量”** 对话框的 **“系统变量”** 列表中，选择 **Path** 变量，然后单击 **“编辑”** 。  
   
 4.  在 **“编辑系统变量”** 对话框中：如果 **“变量值”** 文本框中未包含 sqlplus.exe 所在文件夹的路径，请编辑字符串以包含该路径。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63021910"
   
  如果已安装 Oracle OLEDB 访问接口，请确保已将其注册。 若要注册访问接口 DLL，请从安装 DLL 的目录中执行以下命令，然后停止并重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例：  
   
-1.  `regsvr32 OraOLEDB10.dll`或`regsvr32 OraOLEDB.dll`。  
+1.  `regsvr32 OraOLEDB10.dll` 或 `regsvr32 OraOLEDB.dll`。  
   
 ## <a name="sql-server-error-21626-or-error-21627-is-raised"></a>引发 SQL Server 错误 21626 或错误 21627  
  为了验证是否正确配置了 Oracle 发布环境， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会尝试使用在配置过程中指定的登录凭据连接到 Oracle 发布服务器。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器不能连接到 Oracle 发布服务器，则会显示以下错误消息：  
@@ -143,8 +143,7 @@ ms.locfileid: "63021910"
  如果显示此错误消息，请通过使用在 Oracle 发布服务器的配置过程中指定的登录名和密码直接运行 SQL*PLUS，验证与 Oracle 数据库的连接。 有关详细信息，请参阅本主题前面的“SQL Server 分发服务器无法连接到 Oracle 数据库实例”部分。  
   
 ## <a name="sql-server-error-21628-is-raised"></a>引发 SQL Server 错误 21628  
- 对于 64 位分发服务器，Oracle 发布操作使用用于 Oracle 的 Oracle OLEDB 访问接口 (OraOLEDB.Oracle)。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将创建注册表项，以允许 Oracle 访问接口与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一起在进程中运行。 如果读取或写入此注册表项时出现问题，则显示以下错误消息：  
+ 对于 64 位分发服务器，Oracle 发布操作使用用于 Oracle 的 Oracle OLEDB 访问接口 (OraOLEDB.Oracle)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将创建注册表项，以允许 Oracle 访问接口与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一起在进程中运行。 如果读取或写入此注册表项时出现问题，则显示以下错误消息：  
   
  “无法更新分发服务器 '%s'的注册表，以允许 Oracle OLEDB 访问接口 OraOLEDB.Oracle 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一起在进程中运行。 请确保当前登录名有权修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拥有的注册表项。”  
   
@@ -152,17 +151,17 @@ ms.locfileid: "63021910"
   
  查看并修改注册表设置：  
   
-1.  单击 **“开始”**，然后单击 **“运行”**。  
+1.  单击 **“启动”** ，再单击 **“运行”** 。  
   
-2.  在 "**运行**" 对话框中，键入**regedit**，然后单击 **"确定"**。  
+2.  在 **“运行”** 对话框中，键入 **regedit**，然后单击 **“确定”** 。  
   
-3.  导航到 HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\*\<InstanceName>* \providers。  
+3.  导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers。  
   
      Providers 下应该包含一个名为 OraOLEDB.Oracle 的文件夹。 在此文件夹中应该有一个名为 **AllowInProcess**的 DWORD 值，它的值为 **1**。  
   
 4.  如果发现 **AllowInProcess** 被设置为 **0**，请将其更新为 **1**：  
   
-    1.  右键单击该注册表项，然后单击 **“修改”**。  
+    1.  右键单击该注册表项，然后单击 **“修改”** 。  
   
     2.  在 **“编辑字符串”** 对话框的 **“数值数据”** 字段中，键入 **1** 。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "63021910"
   
  “与 Oracle 发布服务器‘%s’管理员登录名关联的权限不足。”  
   
- 若要验证授予用户的权限，请执行以下查询： `SELECT * from session_privs`。 输出应如下所示：  
+ 若要验证授予用户的权限，请执行以下查询： `SELECT * from session_privs`。 输出应与以下内容类似：  
   
  `PRIVILEGE`  
   
@@ -232,11 +231,11 @@ ms.locfileid: "63021910"
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>进行了需要重新配置发布服务器的更改  
  对复制元数据表或过程的更改需要删除并重新配置发布服务器。 若要重新配置发布服务器，必须用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、Transact-SQL 或 RMO 删除发布服务器并再次配置它。 有关配置发布服务器的信息，请参阅[配置 Oracle 发布服务器](configure-an-oracle-publisher.md)。  
   
- **删除 Oracle 发布服务器（** SQL Server Management Studio **）**  
+ **删除 Oracle 发布服务器 (** SQL Server Management Studio **)**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中连接到 Oracle 发布服务器的分发服务器并展开服务器节点。  
   
-2.  右键单击 **“复制”**，然后单击 **“分发服务器属性”**。  
+2.  右键单击 **“复制”** ，然后单击 **“分发服务器属性”** 。  
   
 3.  在 **“分发服务器属性”** 对话框中的 **“发布服务器”** 页上，清除 Oracle 发布服务器的复选框。  
   

@@ -21,19 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127036"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 键盘快捷键
-  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下，它使用[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]方案，使用基于[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷方式。 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”** 。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
   
 > [!NOTE]  
->  若要仅显示标题，请单击此页顶部的“全部折叠”****。  
+>  若要仅显示标题，请单击此页顶部的“全部折叠”  。  
   
 ## <a name="menu-activation-keyboard-shortcuts"></a>菜单激活键盘快捷键  
   
@@ -49,16 +47,16 @@ ms.locfileid: "63127036"
 |显示 **“添加新项”** 对话框，用于向当前项目添加新文件|Ctrl+Shift+A|Ctrl+Shift+A|  
 |显示 **“添加现有项”** 对话框，用于向当前项目添加现有文件|SHIFT+ALT+A|SHIFT+ALT+A|  
 |显示查询设计器|Ctrl+Shift+Q|Ctrl+Shift+Q|  
-|关闭菜单或对话框，取消操作|ESC|ESC|  
+|关闭菜单或对话框，取消操作|Esc|Esc|  
   
 ## <a name="windows-management-and-toolbar-keyboard-shortcuts"></a>窗口管理和工具栏键盘快捷键  
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |关闭当前 MDI 子窗口|Ctrl+F4|Ctrl+F4|  
-|关闭菜单或对话框，取消正在进行中的操作，或者将焦点放置于当前文档窗口|ESC|ESC|  
+|关闭菜单或对话框，取消正在进行中的操作，或者将焦点放置于当前文档窗口|Esc|Esc|  
 |Print|Ctrl+P|Ctrl+P|  
-|退出|Alt + F4|Alt + F4|  
+|退出|Alt+F4|Alt+F4|  
 |切换全屏模式|Shift+Alt+Enter|Shift+Alt+Enter|  
 |关闭当前工具窗口|Shift+Esc|Shift+Esc|  
 |循环显示下一个 MDI 子窗口|Ctrl+F6|Ctrl+Tab|  
@@ -67,12 +65,10 @@ ms.locfileid: "63127036"
 |在编辑器处于代码视图或服务器代码视图中时将插入点移到位于代码编辑器顶部的下拉条|Ctrl+F2|无等效项|  
 |移到当前工具窗口工具栏|Shift+Alt|Shift+Alt|  
 |显示 IDE 导航器，并选中第一个工具窗口|Alt+F7|无等效项|  
-|移到下一个工具窗口|Alt+F6<br /><br /> 或<br /><br /> 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 F6|Alt+F6|  
+|移到下一个工具窗口|Alt+F6<br /><br /> 或<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 F6|Alt+F6|  
 |移到上一个工具窗口|Shift+Alt+F7|Shift+Alt+F7|  
 |移到单个文档的拆分窗格视图的下一个窗格|F6|F6|  
-|移到上一个选定窗口|Shift+Alt+F6<br /><br /> 或<br /><br /> 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 Shift+F6|Shift+Alt+F6|  
+|移到上一个选定窗口|Shift+Alt+F6<br /><br /> 或<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 Shift+F6|Shift+Alt+F6|  
 |移到单个文档的拆分窗格视图的上一个窗格|Shift+F6|F6|  
 |显示停靠菜单|Alt+减号 (-)|无等效项|  
 |显示一个弹出窗口，其中列出所有打开的窗口|Ctrl+Alt+向下键|无等效项|  
@@ -101,11 +97,11 @@ ms.locfileid: "63127036"
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |左移光标|向左键|向左键|  
-|右移光标|向右箭头|向右箭头|  
+|右移光标|向右键|向右键|  
 |上移光标|向上键|向上键|  
 |下移光标|向下键|向下键|  
 |将光标移到行首|Home|Home|  
-|将光标移到行尾|End|End|  
+|将光标移到行尾|END|END|  
 |将光标移到文档开头|Ctrl+Home|Ctrl+Home|  
 |将光标移到文档末尾|Ctrl+End|Ctrl+End|  
 |将光标上移一个屏幕|Page Up|Page Up|  
@@ -185,12 +181,12 @@ ms.locfileid: "63127036"
 |向上滚动一行文本|Ctrl+向上键|Ctrl+向上键|  
 |向下滚动一行文本|Ctrl+向下键|Ctrl+向下键|  
 |撤消上一个编辑操作|CTRL+Z<br /><br /> 或<br /><br /> Alt+退格键|CTRL+Z|  
-|恢复上一个撤消的操作|Ctrl+Shift+Z<br /><br /> 或<br /><br /> CTRL+Y<br /><br /> 或<br /><br /> Alt+Shift+Backspace|Ctrl+Shift+Z<br /><br /> 或<br /><br /> CTRL+Y<br /><br /> 或<br /><br /> Alt+Shift+Backspace|  
+|恢复上一个撤消的操作|Ctrl+Shift+Z<br /><br /> 或<br /><br /> Ctrl+Y<br /><br /> 或<br /><br /> Alt+Shift+Backspace|Ctrl+Shift+Z<br /><br /> 或<br /><br /> Ctrl+Y<br /><br /> 或<br /><br /> Alt+Shift+Backspace|  
 |保存选定项|Ctrl+S|Ctrl+S|  
 |全部保存|Ctrl+Shift+S|Ctrl+Shift+S|  
 |关闭|Ctrl+F4|Ctrl+F4|  
 |Print|Ctrl+P|Ctrl+P|  
-|退出|Alt + F4|Alt + F4|  
+|退出|Alt+F4|Alt+F4|  
 |在浏览器中打开当前文件|Ctrl+Shift+W|无等效项|  
 |删除当前文件中的所有文本|Ctrl+Shift+Del|Ctrl+Shift+Del|  
 |显示 **“转到行”** 对话框|Ctrl+G|Ctrl+G|  
@@ -209,10 +205,10 @@ ms.locfileid: "63127036"
 |显示估计的执行计划|Ctrl+Shift+Alt+L|Ctrl+L|  
 |取消正在执行的查询|Alt+Break|Alt+Break|  
 |在查询输出中包括实际执行计划|Ctrl+Shift+Alt+M|Ctrl+M|  
-|以网格方式输出结果|CTRL+SHIFT+D|CTRL+D|  
+|以网格方式输出结果|Ctrl+Shift+D|Ctrl+D|  
 |以文本格式输出结果|CTRL+T|CTRL+T|  
 |将结果输出到文件|Ctrl+Shift+T|Ctrl+Shift+F|  
-|显示或隐藏查询结果窗格|CTRL+R|CTRL+R|  
+|显示或隐藏查询结果窗格|Ctrl+R|Ctrl+R|  
 |显示查询结果窗格|Ctrl+Shift+Alt+R||  
 |在查询和结果窗格之间切换|F6|F6|  
 |将结果网格和标题复制到剪贴板|Ctrl+Shift+C|无等效项|  
@@ -221,16 +217,16 @@ ms.locfileid: "63127036"
 |从查询编辑器窗口显示“查询设计器”对话框|Ctrl+Shift+Q|无等效项|  
 |运行 `sp_help` 系统存储过程|Alt+F1|Alt+F1|  
 |运行 `sp_who` 系统存储过程|CTRL+1|CTRL+1|  
-|运行 `sp_lock` 系统存储过程|CTRL+2|CTRL+2|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|CTRL+3|CTRL+3|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+4|Ctrl+4|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+5|Ctrl+5|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+6|Ctrl+6|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+8|Ctrl+8|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+9|Ctrl+9|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+0|Ctrl+0|  
+|运行 `sp_lock` 系统存储过程|Ctrl+2|Ctrl+2|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|CTRL+3|CTRL+3|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+4|Ctrl+4|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+5|Ctrl+5|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+6|Ctrl+6|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+8|Ctrl+8|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+9|Ctrl+9|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+0|Ctrl+0|  
   
 ## <a name="text-manipulation-in-code-editor-keyboard-shortcuts"></a>代码编辑器中的文本操作键盘快捷键  
   
@@ -274,7 +270,7 @@ ms.locfileid: "63127036"
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |开始或继续调试|Alt+F5|Alt+F5|  
-|停止调试|SHIFT+F5|SHIFT+F5|  
+|停止调试|Shift+F5|Shift+F5|  
 |逐语句|F11|F11|  
 |逐过程|F10|F10|  
 |跳出|SHIFT+F11|SHIFT+F11|  
@@ -291,9 +287,9 @@ ms.locfileid: "63127036"
 |显示 **“断点”** 窗口|Ctrl+Alt+B|Ctrl+Alt+B|  
 |全部中断|Ctrl+Alt+Break|Ctrl+Alt+Break|  
 |遇到函数时断开|Ctrl+B|无等效项|  
-|显示“监视 1” **** 窗口|CTRL+ALT+W, 1|无等效项|  
-|显示“监视 2” **** 窗口|CTRL+ALT+W, 2|CTRL+ALT+W, 1|  
-|显示“监视 3” **** 窗口|CTRL+ALT+W, 3|CTRL+ALT+W, 3|  
+|显示“监视 1”  窗口|CTRL+ALT+W, 1|无等效项|  
+|显示“监视 2”  窗口|CTRL+ALT+W, 2|CTRL+ALT+W, 1|  
+|显示“监视 3”  窗口|CTRL+ALT+W, 3|CTRL+ALT+W, 3|  
 |显示 **“监视4”** 窗口|Ctrl+Alt+W，4|Ctrl+Alt+W，4|  
 |显示 **“自动变量”** 窗口|Ctrl+Alt+V，A|Ctrl+Alt+V，A|  
 |显示 **“局部变量”** 窗口|Ctrl+Alt+V，L|Ctrl+Alt+V，L|  
@@ -307,7 +303,7 @@ ms.locfileid: "63127036"
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|列出成员|CTRL+J|Ctrl+空格键<br /><br /> 或<br /><br /> CTRL+J|  
+|列出成员|Ctrl+J|Ctrl+空格键<br /><br /> 或<br /><br /> Ctrl+J|  
 |完成单词|Ctrl+空格键<br /><br /> 或<br /><br /> Alt+向右键|Alt+向右键|  
 |显示快速信息|Ctrl+K、Ctrl+I|无等效项|  
 |显示参数信息|Ctrl+Shift+空格键|Ctrl+Shift+空格键|  
@@ -331,7 +327,7 @@ ms.locfileid: "63127036"
 |移到拆分窗格视图中的上一个文档窗格|Shift+F6|Shift+F6|  
 |后退，显示查看历史记录中的上一页|Alt+向左键|Alt+向左键|  
 |前进，显示查看历史记录中的下一页|Alt+向右键|Alt+向右键|  
-|关闭菜单或对话框，取消正在进行中的操作，或者将焦点放置于当前窗口中|ESC|无等效项|  
+|关闭菜单或对话框，取消正在进行中的操作，或者将焦点放置于当前窗口中|Esc|无等效项|  
   
 ## <a name="solution-explorer-keyboard-shortcuts"></a>解决方案资源管理器键盘快捷键  
   
@@ -367,7 +363,7 @@ ms.locfileid: "63127036"
 |显示 **“查找”** 对话框的 **“在文件中查找”** 选项卡。|||  
 |显示所选符号的定义。|F12|无等效项|  
 |显示所选符号的引用列表。|Shift+F12|无等效项|  
-|显示 **“替换”** 对话框|CTRL+H|CTRL+H|  
+|显示 **“替换”** 对话框|Ctrl+H|Ctrl+H|  
 |启动渐进式搜索。 键入要搜索的字符，或者按 Ctrl+I 搜索上次搜索的字符|CTRL+I|CTRL+I|  
 |查找上一个搜索文本的下一个匹配项|F3|F3|  
 |查找搜索文本的上一个匹配项|SHIFT+F3|SHIFT+F3|  
@@ -385,9 +381,9 @@ ms.locfileid: "63127036"
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|剪切（删除当前选定项并将其放入剪贴板）|CTRL+X<br /><br /> 或<br /><br /> Shift+Delete|CTRL+X<br /><br /> 或<br /><br /> Shift+Delete|  
+|剪切（删除当前选定项并将其放入剪贴板）|Ctrl+X<br /><br /> 或<br /><br /> Shift+Delete|Ctrl+X<br /><br /> 或<br /><br /> Shift+Delete|  
 |剪切所有所选行，或者剪切当前行（如果没有选定任何内容）。|Ctrl+L<br /><br /> 或<br /><br /> CTRL+SHIFT+L|无等效项|  
-|复制到剪贴板|CTRL+C<br /><br /> 或<br /><br /> Ctrl+Insert|CTRL+C<br /><br /> 或<br /><br /> Ctrl+Insert|  
+|复制到剪贴板|Ctrl+C<br /><br /> 或<br /><br /> Ctrl+Insert|Ctrl+C<br /><br /> 或<br /><br /> Ctrl+Insert|  
 |在插入点从剪贴板粘贴|CTRL+V<br /><br /> 或<br /><br /> Shift+Insert|CTRL+V<br /><br /> 或<br /><br /> Shift+Insert|  
 |从剪贴板环在插入点处粘贴某一项并且自动选择粘贴的项|Ctrl+Shift+V<br /><br /> 或<br /><br /> Ctrl+Shift+Insert|无等效项|  
   
@@ -397,7 +393,7 @@ ms.locfileid: "63127036"
 |------------|-----------------------------|---------------------------------|  
 |刷新|无等效项|F5|  
 |在 **“选择日志”** 窗格和 **“日志文件摘要”** 窗格之间移动|无等效项|F6|  
-|移到 **“日志文件摘要”** 窗格|无等效项|ALT+S|  
+|移到 **“日志文件摘要”** 窗格|无等效项|Alt+S|  
 |加载新日志|无等效项|CTRL+SHIFT+L|  
 |导出日志|无等效项|Ctrl+Shift+E|  
 |筛选日志|无等效项|Ctrl+Shift+F|  
@@ -414,7 +410,7 @@ ms.locfileid: "63127036"
 |循环切换面板|F6|F6|  
 |展开或折叠选定的窗格|Ctrl 和 + 或 -|Ctrl 和 + 或 -|  
 |展开或折叠所有窗格|+ 或 -|+ 或 -|  
-|复制网格中全部选定的行|CTRL+C|CTRL+C|  
+|复制网格中全部选定的行|Ctrl+C|Ctrl+C|  
 |复制单元|Ctrl+Shift+C|Ctrl+Shift+C|  
 |下拉以便在网格中筛选|Alt+向下键|Alt+向下键|  
 |在活动监视器中上下滚动|Ctrl+Alt+向上键/向下键|Ctrl+Alt+向上键/向下键|  
@@ -440,10 +436,10 @@ ms.locfileid: "63127036"
 |------------|-----------------------------|---------------------------------|  
 |取消或停止当前正在运行的查询|CTRL+T|CTRL+T|  
 |显示 **“查询设计器”** 的关系图窗格|CTRL+1|CTRL+1|  
-|显示 **“查询设计器”** 的条件窗格|CTRL+2|CTRL+2|  
+|显示 **“查询设计器”** 的条件窗格|Ctrl+2|Ctrl+2|  
 |显示 **“查询设计器”** 的 SQL 窗格|CTRL+3|CTRL+3|  
 |显示 **“查询设计器”** 的结果窗格|Ctrl+4|Ctrl+4|  
-|运行 **“查询设计器”** 中指定的查询|CTRL+R|CTRL+R|  
+|运行 **“查询设计器”** 中指定的查询|Ctrl+R|Ctrl+R|  
 |在处于结果窗格中时，将焦点移到停靠在设计器底部的工具条上|Ctrl+G|Ctrl+G|  
 |在 **“查询设计器”** 中启用 JOIN 模式|Ctrl+Shift+J|Ctrl+Shift+J|  
   
@@ -453,7 +449,7 @@ ms.locfileid: "63127036"
 |------------|-----------------------------|---------------------------------|  
 |在设计图面上以 8 为增量向下移动所选控件|向下键|无等效项|  
 |在设计图面上以 8 为增量向左移动所选控件|向左键|无等效项|  
-|在设计图面上以 8 为增量向右移动所选控件|向右箭头|无等效项|  
+|在设计图面上以 8 为增量向右移动所选控件|向右键|无等效项|  
 |在设计图面上以 8 为增量向上移动所选控件|向上键|无等效项|  
 |以 8 为增量增加所选控件的高度|Shift+向下键|无等效项|  
 |以 8 为增量减少所选控件的宽度|Shift+向左键|无等效项|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149848"
 ---
 # <a name="column-element-for-index-dta"></a>索引的列元素 (DTA)
@@ -45,18 +45,18 @@ ms.locfileid: "63149848"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**出现次数**|最多可以为 `Index` 元素指定 1024 列。|  
+|**匹配项**|最多可以为 `Index` 元素指定 1024 列。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[Index 元素 &#40;DTA&#41;](index-element-dta.md)|  
-|**子元素**|[&#40;DTA&#41;的列的名称元素](name-element-for-column-dta.md)|  
+|**父元素**|[索引元素 (DTA)](index-element-dta.md)|  
+|**子元素**|[列的名称元素 (DTA)](name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[用户指定配置 (DTA) 的 XML 输入文件示例](xml-input-file-sample-with-user-specified-configuration-dta.md)。  

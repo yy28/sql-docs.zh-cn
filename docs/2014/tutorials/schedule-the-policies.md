@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033499"
 ---
 # <a name="schedule-the-policies"></a>计划策略
@@ -38,7 +38,7 @@ ms.locfileid: "63033499"
     > [!NOTE]  
     >  若要在运行计划的策略之后查看评估结果，请打开目标实例上的“策略历史记录”日志。 若要打开日志，请右键单击 "**策略管理**"，然后单击 "**查看历史记录**"。  
   
-## <a name="summary"></a>总结  
+## <a name="summary"></a>摘要  
  您配置了要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的单个实例上运行的计划的策略。 如果您想要将计划的策略部署到多个实例上，则继续执行本教程中的下一个任务。  
   
 ## <a name="next-steps"></a>后续步骤  

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013391"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大容量加载简介 (SQLXML 4.0)
@@ -40,8 +40,7 @@ ms.locfileid: "66013391"
   
 -   带批注的 XSD 架构和 XDR 架构。 有关带批注的 XSD 架构的详细信息，请参阅[&#40;SQLXML 4.0&#41;中带批注的 Xsd 架构简介](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 有关带批注的 XDR 架构的信息，请参阅[SQLXML 4.0&#41;中 &#40;弃用的带批注 Xdr 架构](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量插入机制，例如 [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT 语句和 bcp 实用工具。 有关详细信息，请参阅[&#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)和[bcp 实用工具](../../../tools/bcp-utility.md)BULK INSERT。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量插入机制，例如 [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT 语句和 bcp 实用工具。 有关详细信息，请参阅[&#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)和[bcp 实用工具](../../../tools/bcp-utility.md)BULK INSERT。  
   
 ## <a name="streaming-of-xml-data"></a>XML 数据流式处理  
  由于源 XML 文档可能很大，因此无法将整个文档读入内存以进行大容量加载处理。 XML 大容量加载而是将 XML 数据解释为流并读取它。 当该实用工具读取数据时，该工具标识数据库表，并根据 XML 数据源生成相应记录，然后再将这些记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便插入。  

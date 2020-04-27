@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174416"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 线性回归算法
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的一种变体，有助于计算依赖变量和独立变量之间的线性关系，然后使用该关系进行预测。
 
  该关系采用的表示形式是最能代表数据序列的线的公式。 例如，以下关系图中的线是数据最可能的线性表示形式。
@@ -40,17 +39,16 @@ ms.locfileid: "78174416"
  尽管有许多计算线性回归的方法，而且这些方法不需要数据挖掘工具，但是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法计算线性回归的优势在于可以自动计算并测试变量之间所有可能的关系。 您不必选择计算方法，如计算最小平方法。 但对于结果受多个因素影响的应用场景，线性回归可能会过分简化其中的关系。
 
 ## <a name="how-the-algorithm-works"></a>算法的原理
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的一种变体。 如果选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法，将会调用带有参数的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法特例，这些参数不但会限定算法行为，而且还会要求输入数据的类型。 另外，在线性回归模型中，整个数据集都用于计算初始传递中的关系，而标准决策树模型则不断将数据拆分为更小的子集或树。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的一种变体。 如果选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法，将会调用带有参数的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法特例，这些参数不但会限定算法行为，而且还会要求输入数据的类型。 另外，在线性回归模型中，整个数据集都用于计算初始传递中的关系，而标准决策树模型则不断将数据拆分为更小的子集或树。
 
 ## <a name="data-required-for-linear-regression-models"></a>线性回归模型所需的数据
  在准备用于线性回归模型的数据时，应该了解特定算法的要求。 这包括所需数据量以及数据使用方式。 此模型类型的要求如下：
 
--   **单个键列**每个模型必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。
+-   **单键列** 每个模型都必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。
 
--   **可预测列**至少需要一个可预测列。 可以在一个模型中包含多个可预测属性，但是这些可预测属性必须是连续数值数据类型。 不能将 datetime 数据类型用作可预测属性，即使数据的本机存储是数值类型。
+-   **可预测列** 至少需要一个可预测列。 可以在一个模型中包含多个可预测属性，但是这些可预测属性必须是连续数值数据类型。 不能将 datetime 数据类型用作可预测属性，即使数据的本机存储是数值类型。
 
--   **输入列**输入列必须包含连续数值数据，并为其分配适当的数据类型。
+-   **输入列** ：输入列必须包含连续数值数据，并且向其分配相应的数据类型。
 
  有关详细信息，请参阅 [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)。
 

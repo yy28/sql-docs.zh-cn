@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149998"
 ---
 # <a name="prepare-the-input-trace-data"></a>准备输入跟踪数据
-  你必须通过从 distributed replay 管理工具启动[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]预处理阶段来准备输入跟踪数据，然后才能使用 Distributed Replay 功能开始分布式重播。 在预处理阶段，分布式重播控制器处理跟踪数据并生成一个中间文件：  
+  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能开始分布式重播之前，必须先从 Distributed Replay 管理工具启动预处理阶段以准备输入跟踪数据。 在预处理阶段，分布式重播控制器处理跟踪数据并生成一个中间文件：  
   
  ![Distributed Replay 预处理阶段](../../database-engine/media/preprocess.gif "Distributed Replay 预处理阶段")  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63149998"
   
 ### <a name="to-prepare-the-input-trace-data"></a>准备输入跟踪数据  
   
-1.  **（可选）修改预处理配置设置**：若要修改预处理配置设置（例如是否筛选系统会话或配置最长空闲时间），则必须修改基于 XML 的预处理配置文件`<PreprocessModifiers>`的元素`DReplay.exe.preprocess.config`。 在修改预处理配置文件时，建议您修改副本而非原始文件。 若要修改设置，请执行以下步骤：  
+1.  **（可选）修改预处理配置设置**：若要修改预处理配置设置（例如，是否筛选系统会话或配置最长空闲时间），你必须修改基于 XML 的预处理配置文件 `<PreprocessModifiers>` 的 `DReplay.exe.preprocess.config`元素。 在修改预处理配置文件时，建议您修改副本而非原始文件。 若要修改设置，请执行以下步骤：  
   
     1.  制作默认预处理配置文件 `DReplay.exe.preprocess.config`的副本并重命名此新文件。 默认预处理配置文件位于管理工具安装文件夹。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63149998"
   
      有关预处理配置文件的详细信息，请参阅 [配置 Distributed Replay](configure-distributed-replay.md)。  
   
-2.  **启动预处理阶段**：若要准备输入跟踪数据，则必须运行具有**预处理**选项的管理工具。 有关详细信息，请参阅[预处理选项（Distributed Replay 管理工具）](preprocess-option-distributed-replay-administration-tool.md)。  
+2.  **启动预处理阶段**：若要准备输入跟踪数据，你必须使用 **preprocess** 选项运行管理工具。 有关详细信息，请参阅[预处理选项（Distributed Replay 管理工具）](preprocess-option-distributed-replay-administration-tool.md)。  
   
     1.  打开 Windows 命令提示符实用工具 (`CMD.exe`)，然后导航到分布式重播管理工具 (`DReplay.exe`) 的安装位置。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "63149998"
 3.  预处理阶段完成后，中间文件将存储在控制器的工作目录中。 若要启动事件重播阶段，必须使用 **replay** 选项运行管理工具。 有关详细信息，请参阅 [重播跟踪数据](replay-trace-data.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay 要求](distributed-replay-requirements.md)   
- [管理工具命令行选项 &#40;Distributed Replay 实用工具&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [SQL Server 分布式重播](sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [管理工具命令行选项（Distributed Replay 实用工具）](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [配置 Distributed Replay](configure-distributed-replay.md)  
   
   

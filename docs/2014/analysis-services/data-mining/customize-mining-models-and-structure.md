@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174441"
 ---
 # <a name="customize-mining-models-and-structure"></a>自定义挖掘模型和结构
@@ -41,8 +41,7 @@ ms.locfileid: "78174441"
  关于要在模型中使用哪些数据列以及如何使用和处理这些数据的所做决策会大大影响分析结果。 以下主题给出的信息有助于理解这些选择。
 
 ### <a name="using-feature-selection"></a>使用功能选择
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的大多数数据挖掘算法使用名为“ ** 功能选择”的进程只选择对向模型中进行添加最为有用的属性。 减少列和属性的数目可以提高模型的性能和质量。 可用的功能选择方法随所选算法的不同而不同。
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的大多数数据挖掘算法使用名为“ ** 功能选择”的进程只选择对向模型中进行添加最为有用的属性。 减少列和属性的数目可以提高模型的性能和质量。 可用的功能选择方法随所选算法的不同而不同。
 
  [&#40;数据挖掘&#41;的功能选择](feature-selection-data-mining.md)。
 
@@ -102,7 +101,7 @@ ms.locfileid: "78174441"
 |CLUSTER_SEED|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)|
 |CLUSTERING_METHOD|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)|
 |COMPLEXITY_PENALTY|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
-|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志 &#40;数据挖掘&#41;](modeling-flags-data-mining.md)|
+|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志（数据挖掘）](modeling-flags-data-mining.md)|
 |FORECAST_METHOD|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
 |HIDDEN_NODE_RATIO|[Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)|
 |HISTORIC_MODEL_COUNT|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|

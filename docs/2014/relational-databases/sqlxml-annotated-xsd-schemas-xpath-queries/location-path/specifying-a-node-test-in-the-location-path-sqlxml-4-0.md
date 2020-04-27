@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012667"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路径中指定节点测试 (SQLXML 4.0)
@@ -44,8 +44,7 @@ ms.locfileid: "66012667"
 ## <a name="abbreviated-syntax-for-the-axes"></a>轴的缩写语法  
  支持以下位置路径的缩写语法：  
   
--   
-  `attribute::` 可缩写为 `@`。  
+-   `attribute::` 可缩写为 `@`。  
   
      位置路径 `Customer[@CustomerID="ALFKI"]` 与 `child::Customer[attribute::CustomerID="ALFKI"]` 相同。  
   
@@ -53,7 +52,6 @@ ms.locfileid: "66012667"
   
      因此，`child` 为默认轴。 位置路径 `Customer/Order` 与 `child::Customer/child::Order` 相同。  
   
--   
-  `self::node()` 可缩写为一个句点 (.)，`parent::node()` 可缩写为两个句点 (..)。  
+-   `self::node()` 可缩写为一个句点 (.)，`parent::node()` 可缩写为两个句点 (..)。  
   
   

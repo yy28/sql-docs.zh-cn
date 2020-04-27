@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus （OLE DB） |Microsoft Docs
+title: ISSAsynchStatus (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aeb6c6c789bfe1ca2af5616fb0a1ef9785700224
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127760"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
@@ -28,9 +28,9 @@ ms.locfileid: "63127760"
   
 |方法|说明|  
 |------------|-----------------|  
-|[ISSAsynchStatus：： Abort &#40;OLE DB&#41;](issasynchstatus-abort-ole-db.md)|取消异步执行的操作。|  
-|[ISSAsynchStatus：： GetStatus &#40;OLE DB&#41;](issasynchstatus-getstatus-ole-db.md)|返回异步执行操作的状态。|  
-|[ISSAsynchStatus：： WaitForAsynchCompletion &#40;OLE DB&#41;](issasynchstatus-waitforasynchcompletion-ole-db.md)|一直等待，直到异步执行的操作完成或发生超时。|  
+|[ISSAsynchStatus::Abort &#40;OLE DB&#41;](issasynchstatus-abort-ole-db.md)|取消异步执行的操作。|  
+|[ISSAsynchStatus::GetStatus &#40;OLE DB&#41;](issasynchstatus-getstatus-ole-db.md)|返回异步执行操作的状态。|  
+|[ISSAsynchStatus::WaitForAsynchCompletion &#40;OLE DB&#41;](issasynchstatus-waitforasynchcompletion-ole-db.md)|一直等待，直到异步执行的操作完成或发生超时。|  
   
 ## <a name="remarks"></a>备注  
  ISSAsynchStatus::GetStatus 方法的 ISSAsynchStatus 实现与 IDBAsynchStatus::GetStatus 方法大体相同，不同之处在于如果中止对数据源对象的初始化，前者将返回 E_UNEXPECTED，而不是 DB_E_CANCELED（但是 ISSAsynchStatus::WaitForAsynchCompletion 将返回 DB_E_CANCELED）****************。 这是因为在中止操作后，数据源对象不会仍处于常态，以便进一步尝试初始化操作。  
@@ -41,7 +41,7 @@ ms.locfileid: "63127760"
   
 -   **IOpenRowset::OpenRowset**  
   
--   **IMultipleResults：： GetResult**  
+-   **IMultipleResults::GetResult**  
   
 ## <a name="see-also"></a>另请参阅  
  [接口 &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   

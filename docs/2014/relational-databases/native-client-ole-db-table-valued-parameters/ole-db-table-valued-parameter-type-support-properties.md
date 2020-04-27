@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046532"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 表值参数类型支持（属性）
   本主题提供有关与表值参数行集对象相关联的 OLE DB 属性和属性集的信息。  
   
 ## <a name="properties"></a>属性  
- 下面列出了通过表值参数行集对象上的 IRowsetInfo::GetProperties 方法公开的属性。 请注意，所有表值参数行集属性都是只读的。 因此，尝试通过 IOpenRowset：： OpenRowset 或 ITableDefinitionWithConstraints：： CreateTableWithConstraints 方法将任何属性设置为其非默认值将导致错误，并且不会创建任何对象。  
+ 下面列出了通过表值参数行集对象上的 IRowsetInfo::GetProperties 方法公开的属性。 请注意，所有表值参数行集属性都是只读的。 因此，尝试通过 IOpenRowset::OpenRowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 方法将任何属性设置为其非默认值将导致错误，并且不会创建任何对象。  
   
  在此处未列出在表值参数行集对象中未实现的属性。 有关属性的完整列表，请参阅 Windows 数据访问组件中的 OLE DB 文档。  
   
-|属性 ID|值|  
+|属性 ID|Value|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -74,14 +74,14 @@ ms.locfileid: "63046532"
  以下属性集支持表值参数。  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- 如果需要，此属性由使用者在创建表值参数行集对象的过程中，通过将 ITableDefinitionWithConstraints：： CreateTableWithConstraints 用于每个列的 DBCOLUMNDESC 结构。  
+ 在通过 DBCOLUMNDESC 结构（如果需要）为每一列使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 来创建表值参数行集对象的过程中，使用者将使用此属性。  
   
 |属性 ID|属性值|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 类型：VT_BOOL<br /><br /> 说明：在设置为 VARIANT_TRUE 时，指示该列是计算列。 VARIANT_FALSE 指示它不是计算列。|  
   
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 这些属性由使用者读取，同时在对 ISSCommandWithParameters：： GetParameterProperties 的调用中发现表值参数类型信息，并在设置有关表值参数的特定属性时由使用者设置通过 ISSCommandWithParameters：： SetParameterProperties。  
+ 这些属性由使用者在对 ISSCommandWithParameters::GetParameterProperties 的调用中发现表值参数类型信息时读取，并且由使用者在通过 ISSCommandWithParameters::SetParameterProperties 设置有关表值参数的特定属性时设置。  
   
  下表详细说明了这些属性。  
   

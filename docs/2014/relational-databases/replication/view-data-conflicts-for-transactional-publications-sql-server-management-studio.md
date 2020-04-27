@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144402"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>查看事务发布的数据冲突 (SQL Server Management Studio)
@@ -56,14 +56,14 @@ ms.locfileid: "63144402"
   
     -   在上部网格中选择一行或多行，再单击 **“删除”**，即从冲突元数据表中删除相应行。  
   
-    -   单击属性按钮（**...**）可以查看有关冲突中涉及的列的详细信息。  
+    -   单击属性按钮 (...) 查看有关冲突所涉及的列的详细信息****。  
   
     -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”**。 输入一个值，或单击浏览按钮 (**...**)，然后导航到相应文件。 单击 **“确定”** 关闭 **“选项”** 对话框。  
   
 6.  关闭复制冲突查看器。  
   
 ## <a name="see-also"></a>另请参阅  
- [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
+ [对等事务复制](transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

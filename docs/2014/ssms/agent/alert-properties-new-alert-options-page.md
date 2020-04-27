@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061260"
 ---
 # <a name="alert-properties-new-alert-options-page"></a>警报属性：新建警报（“选项”页）
@@ -26,7 +26,7 @@ ms.locfileid: "63061260"
  **电子邮件**  
  在电子邮件通知中包括事件错误文本（如果有的话）。  
   
- **接收**  
+ **寻呼程序**  
  在寻呼程序通知中包括事件错误文本（如果有的话）。  
   
  **Net send**  

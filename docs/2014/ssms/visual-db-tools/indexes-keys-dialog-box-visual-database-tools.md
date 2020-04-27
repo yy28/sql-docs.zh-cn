@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015409"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>“索引和键”对话框 (Visual Database Tools)
@@ -91,9 +91,9 @@ ms.locfileid: "63015409"
  **忽略重复的键**  
  指定在大容量插入操作过程中插入具有与现有键值相同的键值的行时的行为。 如果选择：  
   
--   如果**是** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，则会发出警告，忽略有问题的传入行，并尝试插入剩余行。  
+-   **是**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将发出警告，忽略有问题的传入行，并尝试插入剩余行。  
   
--   **不** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]会发出错误消息并回滚整个大容量插入操作。  
+-   **否**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将发出错误信息并回滚整个大容量插入操作。  
   
  **包含列**  
  显示一个用逗号分隔的列表，其中列出用于组成索引键的所有列的名称。 只能为非聚集索引指定子键列。 此属性对 XML 索引是隐藏的。  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211392"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>将目标服务器登记到主服务器
@@ -40,7 +40,7 @@ ms.locfileid: "68211392"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>登记目标服务器  
   
@@ -50,13 +50,13 @@ ms.locfileid: "68211392"
   
 3.  完成目标服务器向导，它将指导您完成该进程。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>登记目标服务器  
   
 1.  使用 `sp_msx_enlist` 存储过程。  有关详细信息，请参阅[sp_msx_enlist &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a>使用 SQL Server 管理对象（SMO）  
+##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>使用 SQL Server 管理对象（SMO）  
   
 ## <a name="see-also"></a>另请参阅  
  [企业范围的自动化管理](automated-administration-across-an-enterprise.md)  
