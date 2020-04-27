@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e16dc91040596b1d083226683abe76a7e2e2c4ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107064"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 列表查询设计器（报表生成器）
@@ -56,28 +56,28 @@ ms.locfileid: "66107064"
  [查询结果](#QueryResults)  
  显示自动生成的查询的结果集示例数据。  
   
-###  <a name="DatabaseView"></a>"SharePoint 列表" 窗格  
+###  <a name="sharepoint-lists-pane"></a><a name="DatabaseView"></a> “SharePoint 列表”窗格  
  “SharePoint 列表”窗格显示您有权查看的数据库对象的元数据，该元数据取决于数据源连接和凭据。 层次结构视图显示按数据库架构组织的数据库对象。 展开每个架构的节点可查看表、视图、存储过程及表值函数。 展开表或视图可显示列。  
   
-###  <a name="SelectedFields"></a>"所选字段" 窗格  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> “所选字段”窗格  
  “所选字段”窗格显示您为 SharePoint 列表项选择的列表项字段。 此窗格中显示的字段将成为报表数据集的字段集合。 创建数据集和查询后，使用“报表数据”窗格可查看报表数据集的字段集合。 这些字段表示当您查看报表时可在表、图表及其他报表项中显示的数据。  
   
  若要在此窗格中添加或删除字段，请在“SharePoint 列表”窗格中选中或清除针对表或视图字段的复选框。  
   
-###  <a name="AppliedFilters"></a>应用的筛选器窗格  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> “应用的筛选器”窗格  
  “应用的筛选器”窗格显示用于限制在运行时检索的数据行数的条件。 此窗格中指定的条件用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] WHERE 子句。 如果选择了参数选项，则会自动创建报表参数。 通过基于查询参数的报表参数，用户可为查询指定值，以便控制报表中的数据。  
   
  显示以下列：  
   
--   **字段名称**显示要将条件应用于的字段的名称。  
+-   **字段名称** ：显示应用该条件的字段的名称。  
   
--   **运算符**显示要在筛选表达式中使用的操作。  
+-   **运算符** ：显示要在筛选表达式中使用的运算。  
   
--   **值**显示要在筛选表达式中使用的值。  
+-   **值** ：显示要在筛选表达式中使用的值。  
   
--   **参数**显示用于向查询添加查询参数的选项。 使用“数据集属性”可查看查询参数与报表参数之间的关系。  
+-   **参数** ：显示用于为查询添加查询参数的选项。 使用“数据集属性”可查看查询参数与报表参数之间的关系。  
   
-###  <a name="QueryResults"></a>查询结果窗格  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> “查询结果”窗格  
  “查询结果”窗格显示由其他窗格中的选项指定并且自动生成的查询的结果。 结果集中的列是您在“所选字段”窗格中指定的字段，行数据受限于您在“应用的筛选器”窗格中指定的筛选器。  
   
  此数据表示在运行查询时数据源中的值。 此数据未保存在报表定义中。报表中的实际数据是在处理报表时进行检索的。  
@@ -90,11 +90,11 @@ ms.locfileid: "66107064"
 |按钮|说明|  
 |------------|-----------------|  
 |**编辑为文本**|切换到基于文本的查询设计器，可查看自动生成的查询，也可以修改查询。|  
-|**Import**|从文件或报表中导入现有的查询。 支持 .sql 和 .rdl 文件类型。|  
+|**导入**|从文件或报表中导入现有的查询。 支持 .sql 和 .rdl 文件类型。|  
 |**运行查询**|运行查询。 “查询结果”窗格显示结果集。|  
 |**显示隐藏字段**|在显示字段还是隐藏字段之间切换，这些字段是由 SharePoint 自动生成的（如用于 SharePoint 链接项的 ProgId 和 Level），但通常不在报表中使用。 隐藏这些字段可使字段列表更短且易于使用。|  
   
 ## <a name="see-also"></a>另请参阅  
- [查询设计器 &#40;报表生成器&#41;](../query-designers-report-builder.md)  
+ [查询设计器（报表生成器）](../query-designers-report-builder.md)  
   
   

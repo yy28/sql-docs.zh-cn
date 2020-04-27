@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104651"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 数据区域单元、行和列（报表生成器和 SSRS）
@@ -42,11 +42,11 @@ ms.locfileid: "66104651"
 |----------|-----------------|  
 |![详细信息行的 3 条平行线的行控点](../media/rs-icontablix-detailsrow.gif "详细信息行的 3 条平行线的行控点")|仅表示行组层次结构中的详细信息组|  
 |![详细信息行和一个外部组的行控点](../media/rs-icontablix-groupwithdetails.gif "详细信息行和一个外部组的行控点")|一个外部组和详细信息子组|  
-|![用于显示嵌套组的两个平行方括号](../media/rs-icontablix-nestedgroupnodetails.gif "用于显示嵌套组的两个平行方括号")|一个外部组和一个内部组；没有任何详细信息组|  
-|![2个方括号 & 三个用于嵌套 & 详细信息的堆积线条](../media/rs-icontablix-nestedgroupwithdetails.gif "2 个方括号、3 条堆积线表示嵌套的详细信息")|一个外部组、一个内部组和详细信息子组|  
-|![一个带有脚注行的外部组，一个内部组](../media/rs-icontablix-nestedgroupwithparentfooter.gif "一个带有脚注行的外部组，一个内部组")|一个具有表示总计的组尾行的外部组和一个内部组|  
-|![外部组方括号、内部组方括号、详细信息](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部组方括号、内部组方括号、详细信息")|一个具有表示总计的组尾行的外部组和一个内部组，以及一个详细信息行|  
-|![父标头和表尾以及子组](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "父标头和表尾以及子组")|一个具有表示标签的组头和表示总计的组尾的外部组和一个内部组；没有任何详细信息组|  
+|![用于显示嵌套组的两个平行括号](../media/rs-icontablix-nestedgroupnodetails.gif "用于显示嵌套组的两个平行括号")|一个外部组和一个内部组；没有任何详细信息组|  
+|![用于表示嵌套和详细信息的 2 个括号、3 个堆积折线图](../media/rs-icontablix-nestedgroupwithdetails.gif "用于表示嵌套和详细信息的 2 个括号、3 个堆积折线图")|一个外部组、一个内部组和详细信息子组|  
+|![一个带有组尾行的外部组，一个内部组](../media/rs-icontablix-nestedgroupwithparentfooter.gif "一个带有组尾行的外部组，一个内部组")|一个具有表示总计的组尾行的外部组和一个内部组|  
+|![外部组括号、内部组括号、详细信息](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部组括号、内部组括号、详细信息")|一个具有表示总计的组尾行的外部组和一个内部组，以及一个详细信息行|  
+|![父组头、父组尾和子组](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "父组头、父组尾和子组")|一个具有表示标签的组头和表示总计的组尾的外部组和一个内部组；没有任何详细信息组|  
   
 ### <a name="group-rows"></a>组行  
  位于组内的行对于每个唯一组值只重复一次，并且通常用于聚合汇总。 位于组外的行对于该组只重复一次，并用于标签或小计。 选择 tablix 单元时，tablix 数据区域内的行控点、列控点和方括号显示该单元所属的组。 下图显示了以下可视化提示：  
@@ -67,7 +67,7 @@ ms.locfileid: "66104651"
 ### <a name="grouping-pane"></a>“分组”窗格  
  “分组”窗格显示设计图面上当前所选 tablix 数据区域的行组和列组。 下图显示了该 tablix 数据区域的“分组”窗格。  
   
- ![嵌套行和列组的分组窗格](../media/rs-basictablixdesigngroupingpanedefaultview.gif "嵌套行和列组的分组窗格")  
+ ![嵌套行组和列组的分组窗格](../media/rs-basictablixdesigngroupingpanedefaultview.gif "嵌套行组和列组的分组窗格")  
   
  “行组”窗格显示父组 Category 和子组 Subcat。 “列组”窗格显示父组 Geography 和子组 CountryRegion，还显示 Geography 组的相邻组 Year。 在“行组”窗格中选择 Subcat 组时，组图条变为深橙色，并在设计图面上选择相应的行组成员单元。  
   

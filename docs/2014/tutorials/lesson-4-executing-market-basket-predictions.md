@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312112"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>第 4 课：执行市场篮预测
@@ -125,8 +125,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-     此语句使用 `UNION` 语句来指定三种产品，这三种产品必须与预测的产品一起包含在购物车中。 
-  `SELECT` 语句中的 Model 列对应于嵌套产品表中所包含的模型列。  
+     此语句使用 `UNION` 语句来指定三种产品，这三种产品必须与预测的产品一起包含在购物车中。 `SELECT` 语句中的 Model 列对应于嵌套产品表中所包含的模型列。  
   
      现在，完整的语句应该如下所示：  
   
@@ -198,8 +197,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-     此语句使用 `UNION` 语句来指定三种产品，这三种产品必须与预测的产品一起包含在购物车中。 
-  `[Model]` 语句中的 `SELECT` 列对应于嵌套产品表中的列。  
+     此语句使用 `UNION` 语句来指定三种产品，这三种产品必须与预测的产品一起包含在购物车中。 `SELECT` 语句中的 `[Model]` 列对应于嵌套产品表中的列。  
   
      现在，完整的语句应该如下所示：  
   

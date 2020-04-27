@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108499"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 课：定义用于父报表的数据连接和数据表
@@ -32,7 +32,7 @@ ms.locfileid: "66108499"
   
 4.  在 "**选择你的数据连接**" 页上，单击 "**新建连接**"。  
   
-5.  如果是首次在 Visual Studio 中创建数据源，可看到“选择数据源”页****。 在“数据源”框中，选择“Microsoft SQL Server”********。  
+5.  如果这是你首次在 Visual Studio 中创建数据源，你将看到 "**选择数据源**" 页。 在“数据源”框中，选择“Microsoft SQL Server”********。  
   
 6.  在“添加连接”对话框中，执行以下步骤****：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66108499"
   
          默认的 SQL Server Express 实例为 **(local)\sqlexpress**。  
   
-    2.  在“登录到服务器”部分中，选择使你可访问数据的选项****。 默认情况下，**使用 Windows 身份验证**。  
+    2.  在“登录到服务器”部分中，选择使你可访问数据的选项****。 “使用 Windows 身份验证”为默认选项****。  
   
     3.  在 "**选择或输入数据库名称**" 下拉列表中，单击 " **AdventureWorks2008**"。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108499"
   
 7.  如果在第 6 (b) 步中选择了“使用 SQL Server 身份验证”，则选择一个选项，决定是在字符串中加入敏感数据还是在应用程序代码中设置该信息****。  
   
-8.  在 "将**连接字符串保存到应用程序配置文件**中" 页上，键入连接字符串的名称，或接受默认的**AdventureWorks2008ConnectionString**。 单击“下一步”。   
+8.  在 "将**连接字符串保存到应用程序配置文件**中" 页上，键入连接字符串的名称，或接受默认的**AdventureWorks2008ConnectionString**。 单击“下一步”  。  
   
 9. 在 "**选择命令类型**" 页上，选择 "**使用 SQL 语句**"，然后单击 "**下一步**"。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66108499"
   
      配置 ADO.NET DataTable 对象作为报表的数据源现已完毕。 在 Visual Studio 中的“数据集设计器”页上，应看到所添加的 DataTable 对象，并列出在查询中指定的列。 DataSet1 由根据查询从 Product 表获得的数据组成。  
   
-12. 保存文件。  
+12. 保存该文件。  
   
 13. 若要预览数据，请在 "**数据**" 菜单上单击 "**预览数据**"，然后单击 "**预览**"。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109115"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>资源的“常规”属性页（报表管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "66109115"
   
 2.  悬停在该资源之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该资源的“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该资源的“常规属性”页。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -43,7 +43,7 @@ ms.locfileid: "66109115"
  **在列表视图中隐藏**  
  选择此选项可对正在报表管理器中使用列表视图模式的用户隐藏资源。 列表视图模式是浏览报表服务器文件夹层次结构时的默认视图格式。 在列表视图中，项的名称和说明可跨越页面。 备用格式为详细信息视图。 详细信息视图省略了说明，但包含项的其他信息。 虽然可以在列表视图中隐藏项，但不能在详细信息视图中隐藏项。 如果希望限制访问项，必须创建角色分配。  
   
- 类型   
+ **类型**  
  指定资源的 MIME 类型。 此属性为只读。  
   
  **应用**  
@@ -62,6 +62,6 @@ ms.locfileid: "66109115"
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  ["视图" 页，报表管理器的资源 &#40;&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [报表管理器 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
- ["安全属性" 页，项 &#40;报表管理器&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [项的“安全性”属性页（报表管理器）](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

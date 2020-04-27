@@ -13,14 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 127eeec7f3abe52e247dadb284a5ca7b91ed1cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110093"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>摘要：管理层次结构表中的数据
-  
   `hierarchyid` 数据类型使您可以轻松地创建反映分层数据的表，然后再创建深度优先和广度优先的索引以有效地访问此表。 使用分层方法来查询和操作数据。  
   
 ## <a name="return-to-the-start-of-the-tutorial"></a>返回到教程的起始位置  

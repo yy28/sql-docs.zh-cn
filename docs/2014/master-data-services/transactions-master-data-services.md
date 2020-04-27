@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478514"
 ---
 # <a name="transactions-master-data-services"></a>事务 (Master Data Services)
@@ -43,8 +43,7 @@ ms.locfileid: "65478514"
 >  管理员可以查看所有用户的所有事务，除非他们在“版本权限”**** 功能区域应用了只读权限级别。 例如，如果为管理员设置了只读权限和更新权限级别，管理员将无法查看其他用户事务，因为只读权限将优先于更新权限。
 
 ## <a name="system-settings"></a>系统设置  
- 
-  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有一个设置影响在暂存记录时是否记录事务。 该设置只影响 SQL Server 2008 R2。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的“系统设置”表中调整此设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](system-settings-master-data-services.md)。  
+ [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有一个设置影响在暂存记录时是否记录事务。 该设置只影响 SQL Server 2008 R2。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的“系统设置”表中调整此设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](system-settings-master-data-services.md)。  
   
  在将数据导入此版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中时，您可以指定是否在启动存储过程时记录事务。 有关详细信息，请参阅[临时存储过程 (Master Data Services)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)。  
   
@@ -57,12 +56,12 @@ ms.locfileid: "65478514"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|通过撤消事务来撤消操作（仅限管理员）。|[撤消事务 &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|通过撤消事务来撤消操作（仅限管理员）。|[撤消事务 (Master Data Services)](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [管理员 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [管理员 (Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [批注 &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [批注 (Master Data Services)](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

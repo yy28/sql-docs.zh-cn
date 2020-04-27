@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108739"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>初始化报表服务器（SSRS 配置管理器）
@@ -68,9 +68,9 @@ ms.locfileid: "66108739"
 >  还可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序以编程的方式初始化报表服务器。 有关详细信息，请参阅 [联机丛书中的](../tools/access-the-reporting-services-wmi-provider.md) 访问 Reporting Services WMI 提供程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>如何确认报表服务器初始化  
- 要确认报表服务器初始化，请通过在命令窗口中键入 http://**servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令\<**。 如果发生 `RSReportServerNotActivated` 错误，则表示初始化失败。  
+ 要确认报表服务器初始化，请通过在命令窗口中键入 http://\<servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令****。 如果发生 `RSReportServerNotActivated` 错误，则表示初始化失败。  
   
 ## <a name="see-also"></a>另请参阅  
- [将加密的报表服务器数据存储 &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

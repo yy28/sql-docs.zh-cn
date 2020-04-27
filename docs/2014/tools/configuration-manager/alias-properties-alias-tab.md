@@ -13,15 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035296"
 ---
-# <a name="ltaliasgt-properties-alias-tab"></a>
-  &lt;Alias&gt; 属性（“别名”选项卡）
-  别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“**别名>属性”****\<** 对话框中的“别名”**** 页查看或指定别名连接字符串的元素。  
+# <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 属性（“别名”选项卡）
+  别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“**别名>属性”** **\<** 对话框中的“别名”  页查看或指定别名连接字符串的元素。  
   
 ## <a name="options"></a>选项  
  **别名**  
@@ -30,11 +29,11 @@ ms.locfileid: "63035296"
  **管道名称** / **端口号**  
  连接字符串的其他元素。 此框的名称随所选协议的不同而变化。 请参阅下列主题中的示例。  
   
- **协议**  
+ 协议   
  连接所用的协议。  
   
  **Server**  
- 要连接到的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。  
+ 所连接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 Shared Memory 协议创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

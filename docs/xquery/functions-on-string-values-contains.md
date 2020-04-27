@@ -16,10 +16,10 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899032"
 ---
 # <a name="functions-on-string-values---contains"></a>基于字符串值的函数 - contains
@@ -35,10 +35,10 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ```  
   
 ## <a name="arguments"></a>参数  
- *$arg 1*  
+ *$arg1*  
  要测试的字符串值。  
   
- *$arg 2*  
+ *$arg2*  
  要查找的子字符串。  
   
 ## <a name="remarks"></a>备注  
@@ -48,8 +48,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
  contains() 函数使用 XQuery 默认的 Unicode 码位排序规则来进行字符串比较。  
   
- 为 *$arg 2*指定的子字符串值必须小于或等于4000个字符。 如果指定的值超过4000个字符，则会出现动态错误条件，并且 contains （）函数返回一个空序列，而不是布尔值**True**或**False**。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会对 XQuery 表达式生成动态错误。  
+ 为 *$arg 2*指定的子字符串值必须小于或等于4000个字符。 如果指定的值超过4000个字符，则会出现动态错误条件，并且 contains （）函数返回一个空序列，而不是布尔值**True**或**False**。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会对 XQuery 表达式生成动态错误。  
   
  为了实现不区分大小写的比较，可以使用[大写](../xquery/functions-on-string-values-upper-case.md)或小写函数。  
   

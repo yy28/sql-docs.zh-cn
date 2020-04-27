@@ -11,20 +11,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312564"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>选择键盘快捷键方案
   如果不使用标准 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 键盘方案，您可以配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以使用与 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]兼容的键盘方案。  
   
-## <a name="changing-to-the-includevs_dev10_longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>切换到 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 键盘方案  
+## <a name="changing-to-the-vs_dev10_long-keyboard-scheme"></a>切换到 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 键盘方案  
   
-#### <a name="to-apply-includevs_dev10_longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>应用与 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 兼容的键盘方案  
+#### <a name="to-apply-vs_dev10_long-compatible-keyboard-scheme"></a>应用与 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 兼容的键盘方案  
   
-1.  在“工具”  菜单上，单击“选项”  。  
+1.  在“工具” **** 菜单上，单击“选项” ****。  
   
 2.  展开“环境”****，再单击“键盘”****。  
   

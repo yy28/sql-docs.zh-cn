@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103918"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>创建、删除或修改文件夹（报表管理器）
@@ -41,7 +41,7 @@ ms.locfileid: "66103918"
   
 5.  如果不希望在 **“内容”** 页的默认视图中显示该文件夹，请选择 **“在列表视图中隐藏”** 。 只有在用户单击了 **“内容”** 页上的 **“显示详细信息”** 时，才可以看到该文件夹。  
   
-6.  单击“确定”。   
+6.  单击" **确定**"。  
   
 ### <a name="to-delete-a-folder"></a>删除文件夹  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66103918"
   
 2.  悬停在该项之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 此时将打开“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”**。 此时将打开“常规属性”页。  
   
 4.  若要更改该文件夹位置，请单击 **“移动”**。 键入目标文件夹的位置，或从树中选择目标文件夹，再单击 **“确定”**。  
   

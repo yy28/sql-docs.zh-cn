@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109227"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>启用和禁用 RDL 沙盒
@@ -65,15 +65,13 @@ ms.locfileid: "66109227"
 |**MaxResourceSize**|外部资源允许的最大 KB 数。<br /><br /> 默认值：100|  
 |**MaxStringResultLength**|RDL 表达式的返回值中允许的最大字符数。<br /><br /> 默认值：1000|  
 |**MaxArrayResultLength**|RDL 表达式的数组返回值中允许的最大项数。<br /><br /> 默认值：100|  
-|**各种**|在 RDL 表达式内允许的成员的列表。|  
-|**禁止**|RDL 表达式中允许的一个类型或一组类型。|  
-|**命名空间**|
-  **Allow** 的属性，它是包含应用于 Value 的一个或多个类型的命名空间。 此属性不区分大小写。|  
-|`AllowNew`|Allow 的布尔属性，控制是否允许在 RDL 表达式中或 RDL **Class> 元素中创建该类型的新实例****\<**。<br /><br /> 注意： `RDLSandboxing`启用后，无论的设置如何，都不能在 RDL 表达式中创建新数组`AllowNew`。|  
-|**值**|
-  **Allow** 的值，作为在 RDL 表达式中要允许的类型的名称。 值**\*** 指示命名空间中的所有类型都是允许的。 此属性不区分大小写。|  
+|**类型**|在 RDL 表达式内允许的成员的列表。|  
+|**Allow**|RDL 表达式中允许的一个类型或一组类型。|  
+|**Namespace**|**Allow** 的属性，它是包含应用于 Value 的一个或多个类型的命名空间。 此属性不区分大小写。|  
+|`AllowNew`|Allow 的布尔属性，控制是否允许在 RDL 表达式中或 RDL \<Class> 元素中创建该类型的新实例********。<br /><br /> 注意： `RDLSandboxing`启用后，无论的设置如何，都不能在 RDL 表达式中创建新数组`AllowNew`。|  
+|**值**|**Allow** 的值，作为在 RDL 表达式中要允许的类型的名称。 值**\*** 指示命名空间中的所有类型都是允许的。 此属性不区分大小写。|  
 |**成员**|对于包含在>元素的** \<类型**中的类型的列表，为在 RDL 表达式中不允许的成员名称的列表。|  
-|**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 注意：在为某一成员指定了 **Deny** 后，不允许所有类型的具有此名称的所有成员。|  
+|**注销**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 注意：在为某一成员指定了 **Deny** 后，不允许所有类型的具有此名称的所有成员。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>当启用 RDL 沙盒处理时使用表达式  
  您可以修改 RDL 沙盒处理功能，以便通过以下方式管理表达式使用的资源：  
@@ -150,7 +148,7 @@ ms.locfileid: "66109227"
 -   在您更新报表服务器以处理更高版本的 RDL 架构时，因为新成员可能已添加到 RDL 类型中。  
   
 ### <a name="working-with-operators-and-new"></a>使用运算符和 New  
- 默认情况下，[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 以外的所有 `New` .NET Framework 语言运算符都始终是允许的。 `New`运算符`AllowNew` **由\<Allow>** 元素上的属性控制。 始终允许使用其他语言运算符（如默认集合访问`!`器[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]运算符和 .NET Framework 强制转换`CInt`宏，如）。  
+ 默认情况下，`New` 以外的所有 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 语言运算符都始终是允许的。 `New`运算符`AllowNew` **由\<Allow>** 元素上的属性控制。 始终允许使用其他语言运算符（如默认集合访问`!`器[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]运算符和 .NET Framework 强制转换`CInt`宏，如）。  
   
  不支持将运算符添加到阻止列表（包括自定义运算符）。 要排除某一类型的运算符，必须执行以下操作：  
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108570"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -34,7 +34,7 @@ ms.locfileid: "66108570"
   
 -   [验证本机模式安装](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a> 验证 SharePoint 模式安装  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> 验证 SharePoint 模式安装  
   
 #### <a name="to-verify-the-reporting-services-service"></a>验证 Reporting Services 服务  
   
@@ -68,13 +68,13 @@ ms.locfileid: "66108570"
   
 1.  从文档库中，单击 SharePoint 功能区中的 **“文档”** 。  
   
-2.  单击 **“新建文档”** ，然后单击 **“报表生成器报表”** 。 如果看不到此选项，请回顾以前向库中添加报表服务器内容类型的过程。  
+2.  单击 **“新建文档”** ，然后单击 **“报表生成器报表”**。 如果看不到此选项，请回顾以前向库中添加报表服务器内容类型的过程。  
   
 #### <a name="create-a-basic-report"></a>创建基本报表  
   
 1.  在 SharePoint 文档库中，创建一个仅包含文本框的基本 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表，例如标题。 该报表不包含任何数据源或数据集。 目的是验证能否打开报表生成器和预览基本报表。  
   
-2.  将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅 [启动报表生成器 (Report Builder)](https://technet.microsoft.com/library/ms159221.aspx)。  
+2.  将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅 [启动报表生成器（报表生成器）](https://technet.microsoft.com/library/ms159221.aspx)。  
   
 #### <a name="reporting-services-samples"></a>Reporting Services 示例  
   
@@ -82,14 +82,14 @@ ms.locfileid: "66108570"
   
 2.  从 CodePlex 下载 Adventure Works 示例数据库和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报告。 有关详细信息，请参阅 [AdventureWorks 报表示例](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home)。  
   
-##  <a name="bkmk_nativemode"></a> 验证本机模式安装  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> 验证本机模式安装  
  如果使用默认配置安装本机模式的报表服务器，安装程序将安装并部署该服务器。 可以执行几个简单的测试来验证安装程序是否部署了报表服务器。 只有本地管理员才能执行这些步骤。 若要让其他用户执行测试，必须为这些用户配置报表服务器访问权限。  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>验证报表服务器已安装并正常运行  
   
 1.  运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到您刚安装的报表服务器实例。 “Web 服务 URL”页包括指向报表服务器 Web 服务的链接。 单击该链接可验证您是否可以访问该服务器。 如果未配置报表服务器数据库，请先进行配置，再单击该链接。  
   
-2.  打开“服务”控制台应用程序并验证报表服务器服务是否正在运行。 若要查看报表服务器服务的状态，请单击“开始”，指向“控制面板”，双击“管理工具”，再双击“服务”     。 出现服务列表后，滚动到“报表服务器 (MSSQLSERVER)”  。 该服务的状态应为 **“已启动”** 。  
+2.  打开“服务”控制台应用程序并验证报表服务器服务是否正在运行。 若要查看报表服务器服务的状态，请单击“开始”，指向“控制面板”，双击“管理工具”，再双击“服务”****************。 出现服务列表后，滚动到“报表服务器 (MSSQLSERVER)”****。 该服务的状态应为 **“已启动”**。  
   
 3.  打开浏览器，在地址栏中键入报表服务器的 URL。 该地址由安装过程中为报表服务器指定的服务器名称和虚拟目录名组成。 默认情况下，报表服务器虚拟目录的名称为 **ReportServer**。 你可以使用以下 URL 来验证 Report Server 安装： http://*\<计算机名称>*/ReportServer*\<_instance 名称>*。 如果将报表服务器安装为命名实例，URL 将有所不同。 有关 URL 格式的详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理器）](configure-report-server-urls-ssrs-configuration-manager.md)。 如果你在 Windows Vista 或 Windows Server 2008 上是本地管理员，请参阅[为本地管理配置本机模式报表服务器 (SSRS)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66108570"
 2.  如果安装了报表示例，请打开示例报表项目文件并将报表发布到报表服务器。  
   
 ## <a name="see-also"></a>另请参阅  
- [排除 Reporting Services 安装故障](troubleshoot-a-reporting-services-installation.md)   
+ [排查 Reporting Services 安装问题](troubleshoot-a-reporting-services-installation.md)   
  [Reporting Services 错误的原因和解决方法](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

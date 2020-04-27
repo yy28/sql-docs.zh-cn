@@ -17,10 +17,10 @@ ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918188"
 ---
 # <a name="move-method-ado"></a>Move 方法 (ADO)
@@ -33,11 +33,11 @@ ms.locfileid: "67918188"
 recordset.Move NumRecords, Start  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *NumRecords*  
  一个有符号**长**表达式，指定当前记录位置移动的记录数。  
   
- *开始*  
+ *Start*  
  可选。 计算结果为书签的**字符串**值或**变量**。 还可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
 ## <a name="remarks"></a>备注  

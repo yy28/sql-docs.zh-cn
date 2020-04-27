@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103589"
 ---
 # <a name="preload-the-cache-report-manager"></a>预加载缓存（报表管理器）
@@ -84,7 +84,7 @@ ms.locfileid: "66103589"
     data source=<servername>; initial catalog=Subscribers  
     ```  
   
-8.  单击“下一步”。   
+8.  单击“下一步”  。  
   
 9. 指定检索订阅服务器数据的查询或命令。 对于处理时间很长的查询，可以根据需要延长超时期限。 例如：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66103589"
     Select * from UserInfo  
     ```  
   
-10. 单击 **“验证”**。 在继续之前，必须验证查询。 在出现 **“查询验证成功”** 消息时，单击 **“下一步”**。  
+10. 单击 **“验证”** 。 在继续之前，必须验证查询。 在出现 **“查询验证成功”** 消息时，单击 **“下一步”**。  
   
 11. 由于不能为 Null 传递提供程序配置传递扩展插件设置，请单击 **“下一步”**。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "66103589"
   
 ## <a name="see-also"></a>另请参阅  
  [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
- [创建数据驱动订阅 &#40;SSRS 教程&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [创建数据驱动订阅（SSRS 教程）](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [性能、快照、缓存 &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
  [设置报表处理属性](set-report-processing-properties.md)   
  [缓存报表 (SSRS)](caching-reports-ssrs.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105214"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 函数（报表生成器和 SSRS）
@@ -30,7 +30,7 @@ ms.locfileid: "66105214"
 Lookup(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *source_expression*  
  (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ProdID.Value` 。  
   
@@ -49,8 +49,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>备注  
  使用 `Lookup` 从指定的数据集中为名称-值对（每对具有 1 对 1 关系）检索值。 例如，对于表中的 ID 字段，可以使用 `Lookup` 从未绑定到该数据区域的数据集检索对应的名称字段。  
   
- 
-  `Lookup` 执行下列操作：  
+ `Lookup` 执行下列操作：  
   
 -   计算当前作用域中源表达式的结果。  
   
@@ -72,8 +71,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   源、目标和结果表达式不能包含对报表或组变量的引用。  
   
--   
-  `Lookup` 不能作为以下报表项的表达式：  
+-   `Lookup` 不能作为以下报表项的表达式：  
   
     -   数据源的动态连接字符串。  
   

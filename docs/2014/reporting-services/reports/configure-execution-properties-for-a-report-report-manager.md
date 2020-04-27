@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102713"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>配置报表的执行属性（报表管理器）
@@ -49,8 +49,8 @@ ms.locfileid: "66102713"
 ## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](../report-server/set-report-processing-properties.md)   
  [打开并关闭报表 &#40;报表管理器&#41;](../reports/open-and-close-a-report-report-manager.md)   
- ["内容" 页 &#40;报表管理器&#41;](../contents-page-report-manager.md)   
+ [“内容”页（报表管理器）](../contents-page-report-manager.md)   
  [报表服务器内容管理（SSRS 本机模式）](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [处理选项属性页 &#40;报表管理器&#41;](../processing-options-properties-page-report-manager.md)  
+ [“处理选项”属性页（报表管理器）](../processing-options-properties-page-report-manager.md)  
   
   

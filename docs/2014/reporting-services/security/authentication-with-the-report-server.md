@@ -17,18 +17,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102191"
 ---
 # <a name="authentication-with-the-report-server"></a>针对报表服务器的身份验证
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] （SSRS）提供了多个可配置选项，用于针对 Report Server 对用户和客户端应用程序进行身份验证。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 提供了几个可配置的选项，用于对报表服务器验证用户和客户端应用程序。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的早期版本中，所有身份验证支持都是由 IIS 提供的。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本开始，不再使用 IIS。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在内部处理所有身份验证请求。  
+>  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的早期版本中，所有身份验证支持都是由 IIS 提供的。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本开始，不再使用 IIS。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在内部处理所有身份验证请求。  
   
  请求对报表服务器内容或操作进行访问的所有用户或应用程序都必须首先进行身份验证，然后才允许访问。  
   
@@ -50,10 +49,8 @@ ms.locfileid: "66102191"
 |---------------------------|-----------------|  
 |匿名|报表服务器将不接受来自匿名用户的未经身份验证的请求，但包含自定义身份验证扩展插件的那些部署除外。<br /><br /> 如果对配置为使用基本身份验证的报表服务器启用报表生成器访问，则报表生成器将接受未经身份验证的请求。<br /><br /> 对于所有其他情况，在匿名请求到达 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]前将拒绝该请求，同时生成 HTTP 状态 401 拒绝访问错误。 客户端收到 401 拒绝访问错误后必须使用有效的身份验证类型重新表述该请求。|  
 |单一登录技术 (SSO)|在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中不提供对单一登录技术的本机支持。 如果希望使用单一登录技术，则必须创建自定义身份验证扩展插件。<br /><br /> 报表服务器宿主环境不支持 ISAPI 筛选器。 如果您使用的 SSO 技术以 ISAPI 筛选器形式实现，请考虑使用 RSASecueID 或 RADIUS 协议的 ISA Server 内置支持。 另外，还可以创建 ISA Server ISAPI 或 RS 的 HTTPModule，但是建议您直接使用 ISA Server。|  
-|Passport|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支持。|  
-|Digest|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支持。|  
+|Passport|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支持。|  
+|摘要|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支持。|  
   
 ## <a name="configuration-of-authentication-settings"></a>身份验证设置的配置  
  保留报表服务器 URL 后，身份验证设置将配置为使用默认的安全设置。 如果错误地修改了这些设置，则报表服务器将返回 HTTP 401 拒绝访问错误，该错误针对无法通过身份验证的 HTTP 请求。 选择身份验证类型要求您已了解在网络中是如何支持 Windows 身份验证。 必须指定至少一种身份验证类型。 可为 RSWindows 指定多种身份验证类型。 RSWindows 身份验证`RSWindowsBasic`类型（ `RSWindowsNTLM` `RSWindowsKerberos`即、、、和**RSWindowsNegotiate**）与 Custom 互相排斥。  

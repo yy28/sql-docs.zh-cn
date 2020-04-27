@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104289"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）
@@ -38,11 +38,11 @@ ms.locfileid: "66104289"
   
 2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”**。  
   
-3.  单击 "**添加 Web 部件**"。  
+3.  单击 **“添加 Web 部件”**。  
   
 4.  在 Web 部件类别列表中，选择 **“杂项”** 类别，然后选择 **“SQL Server Reporting Services 报表查看器”**。  
   
-5.  单击“添加”  。 Web 部件将添加到区域的顶部。 可以将其拖至区域中的其他位置。  
+5.  单击 **“添加”** 。 Web 部件将添加到区域的顶部。 可以将其拖至区域中的其他位置。  
   
 6.  在查看器中，单击 **“单击此处打开工具窗格”**。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66104289"
 ## <a name="see-also"></a>另请参阅  
  [SharePoint 站点上的报表查看器 Web 部件](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [自定义报表查看器 Web 部件](../customize-the-report-viewer-web-part.md)   
- [在 SharePoint 站点上授予对报表服务器项的权限](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [授予对 SharePoint 站点上的报表服务器项的权限](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [安装或卸载用于 SharePoint 的 Reporting Services 外接程序 &#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 556abc4ff00df4393c756f62072254e417653f40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101869"
 ---
 # <a name="role-assignments"></a>角色分配
@@ -34,7 +34,7 @@ ms.locfileid: "66101869"
   
  角色分配在文件夹层次结构中可以继承。 文件夹中包含的所有报表、共享数据源、资源和子文件夹将自动继承为文件夹定义的角色分配。 您可以通过为各项分别定义角色分配来覆盖继承的安全性。 文件夹层次结构的所有部分都必须至少由一个角色分配进行保护。 不能创建不安全的项，而且在处理设置时应采用安全的方式，以避免创建不安全的项。  
   
- 下图显示了一个角色分配，它将一个组和一个特定用户映射到文件夹 B 的“发布者”  角色：  
+ 下图显示了一个角色分配，它将一个组和一个特定用户映射到文件夹 B 的“发布者” **** 角色：  
   
  ![角色分配关系图](../media/report-securityarch.gif "角色分配关系图")  
 角色分配关系图  
@@ -61,8 +61,8 @@ ms.locfileid: "66101869"
  有关提供默认安全性的预定义角色分配的详细信息，请参阅 [预定义角色](role-definitions-predefined-roles.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)   
- [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)   
+ [创建、删除或修改角色 &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
+ [授予用户对报表服务器的访问权限 &#40;报表管理器&#41;](grant-user-access-to-a-report-server.md)   
  [修改或删除角色分配 &#40;报表管理器&#41;](role-assignments-modify-or-delete.md)   
  [为 sharepoint 站点上的报表服务器项设置权限 &#40;Reporting Services 在 SharePoint 集成模式下&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)  

@@ -13,16 +13,16 @@ ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120273"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys. fn_db_backup_file_snapshots （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  返回与数据库文件关联的 Azure 快照。 如果找不到指定的数据库，或者如果数据库文件未存储在 Microsoft Azure Blob 存储服务中，则不会返回任何行。 将此系统函数与**sys. sp_delete_backup_file_snapshot**系统存储过程结合使用，以标识和删除孤立的备份快照。 有关详细信息，请参阅[Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+  返回与数据库文件关联的 Azure 快照。 如果找不到指定的数据库，或者如果数据库文件未存储在 Microsoft Azure Blob 存储服务中，则不会返回任何行。 将此系统函数与**sys. sp_delete_backup_file_snapshot**系统存储过程结合使用，以标识和删除孤立的备份快照。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,13 +44,13 @@ sys.fn_db_backup_file_snapshots
 |-----------------|---------------|-----------------|  
 |file_id|**int**|数据库的文件 ID。 不可为 null。|  
 |snapshot_time|**nvarchar(260)**|REST API 返回快照时的时间戳。 如果不存在快照，则返回 NULL。|  
-|snapshot_url|**nvarchar （360）**|文件快照的完整 URL。 如果不存在快照，则返回 NULL。|  
+|snapshot_url|**nvarchar(360)**|文件快照的完整 URL。 如果不存在快照，则返回 NULL。|  
   
 ## <a name="permissions"></a>权限  
  需要对数据库拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_delete_backup_file_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)   
- [sp_delete_backup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
+ [sp_delete_backup (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   
   

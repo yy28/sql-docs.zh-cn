@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102530"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>将报表发布到 SharePoint 库
@@ -30,9 +30,9 @@ ms.locfileid: "66102530"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开现有的或新的报表服务器项目。  
   
-2.  在 **“项目”** 菜单中单击 **“属性”** 。 “_项目>属性页”对话框即会打开\<_  。  
+2.  在 **“项目”** 菜单中单击 **“属性”**。 此时将打开 " _ \<项目>_**属性页**" 对话框。  
   
-3.  在 **“配置”** 列表中，选择要用于生成并发布报表的解决方案生成配置的名称。 当前配置以“活动”状态列出（**配置>）** *\<* 。  
+3.  在 **“配置”** 列表中，选择要用于生成并发布报表的解决方案生成配置的名称。 当前配置列出为**活动**（*\<配置>*）。  
   
 4.  如果想在项目中发布共享数据源，并覆盖以前发布的共享数据源，请将 **OverwriteDataSources** 设置为 **True**。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "66102530"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-9. 在解决方案资源管理器中，右键单击要发布的报表，然后单击“部署”  。 报表将发布到 **TargetReportFolder**中指定的位置。 部署错误将显示在输出窗口中。  
+9. 在解决方案资源管理器中，右键单击要发布的报表，然后单击“部署”****。 报表将发布到 **TargetReportFolder**中指定的位置。 部署错误将显示在输出窗口中。  
   
 ## <a name="see-also"></a>另请参阅  
- [“项目属性页”对话框](../tools/project-property-pages-dialog-box.md)   
- [设置部署属性 (Reporting Services)](../tools/set-deployment-properties-reporting-services.md)   
+ ["项目属性页" 对话框](../tools/project-property-pages-dialog-box.md)   
+ [设置部署属性 &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [将报表发布到报表服务器](publishing-reports-to-a-report-server.md)   
- [SharePoint 模式下的报表服务器上已发布报表项的 URL 示例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [SharePoint 模式下的报表服务器上已发布报表项的 URL 示例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [将 Office 数据连接 (.odc) 用于报表（SharePoint 集成模式下的 Reporting Services）](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

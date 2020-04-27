@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e685ecda39e0487eb4b469920820fa6e4a10daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264901"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>使用具有强名称的自定义程序集
@@ -37,7 +37,7 @@ ms.locfileid: "63264901"
 [assembly:AllowPartiallyTrustedCallers]  
 ```  
   
- 仅当由具有强名称的程序集在程序集级别应用时， **AllowPartiallyTrustedCallersAttribute**才有效。 有关在程序集级别应用属性的详细信息，请参阅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文档中的 "应用属性"。  
+ AllowPartiallyTrustedCallersAttribute 仅当被具有强名称的程序集在程序集级别应用时才生效****。 有关在程序集级别应用属性的详细信息，请参阅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文档中的 "应用属性"。  
   
 > [!CAUTION]  
 >  当存在 AllowPartiallyTrustedCallersAttribute 时，将阻止默认的 FullTrustLinkDemand 安全检查，同时可以从任何其他部分受信任的程序集调用该程序集********。 所有安全检查（包括类级别或方法级别的声明性安全属性）都必须显式声明。  

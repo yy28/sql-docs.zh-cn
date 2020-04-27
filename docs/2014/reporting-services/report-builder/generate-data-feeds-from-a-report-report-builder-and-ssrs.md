@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceca9ef914afeab3420bbd35c46c582c112644dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107852"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>从报表生成数据馈送（报表生成器和 SSRS）
@@ -24,7 +24,7 @@ ms.locfileid: "66107852"
   
  Atom 服务文档为每个数据馈送包含一个唯一标识符，在 URL 中使用该标识符可以查看数据馈送的内容。  
   
- 有关详细信息，请参阅 [基于报表生成数据馈送（报表生成器和 SSRS）](generating-data-feeds-from-reports-report-builder-and-ssrs.md)中处理数据。  
+ 有关详细信息，请参阅[从报表生成数据馈送 &#40;报表生成器和 SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -50,7 +50,7 @@ ms.locfileid: "66107852"
     > [!NOTE]  
     >  默认情况下，文档名称就是报表名称。  
   
-7.  确认文档类型为 **“ATOMSVC 文件”** ，然后单击 **“保存”** 。  
+7.  确认文档类型为 **“ATOMSVC 文件”**，然后单击 **“保存”**。  
   
 8.  或者，在浏览器或者文本编辑器或 XML 编辑器中打开该 .atomsvc 文件。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66107852"
     > [!NOTE]  
     >  默认情况下，文档名称就是报表名称。 如果该 Atom 服务文档具有多个数据馈送，默认情况下它们全都使用相同的名称，即报表名称。 为了区分它们，请重命名这些数据馈送以便使用有意义的名称。  
   
-5.  确认文档类型为 **“ATOM 文件”** ，然后单击 **“保存”** 。  
+5.  确认文档类型为 **“ATOM 文件”**，然后单击 **“保存”**。  
   
 6.  或者，在浏览器或者文本编辑器或 XML 编辑器中打开该 .atom 文件。  
   

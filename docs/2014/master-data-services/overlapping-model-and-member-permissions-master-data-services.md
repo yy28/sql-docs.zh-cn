@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482731"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
@@ -26,7 +26,7 @@ ms.locfileid: "65482731"
   
  如果成员具有不同于其相应模型对象的权限，适用以下规则：  
   
--   **Deny**替代所有其他权限。  
+-   **“拒绝”** 覆盖所有其他权限。  
   
 -   **只读**替代**更新**。  
   
@@ -69,6 +69,6 @@ ms.locfileid: "65482731"
   
 ## <a name="see-also"></a>另请参阅  
  [如何 Master Data Services &#40;确定权限&#41;](how-permissions-are-determined-master-data-services.md)   
- [重叠的用户和组权限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [重叠的用户和组权限 (Master Data Services)](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

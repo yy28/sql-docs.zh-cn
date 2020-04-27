@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110049"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>使用层次结构方法查询层次结构表
@@ -40,7 +40,7 @@ ms.locfileid: "66110049"
   
      结果同时列出 Sariya 和 Wanida。 Sariya 的列出原因是她是 0 级后代。 Wanida 是 1 级后代。  
   
-2.  也可以使用 [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) 方法查询此信息。 `GetAncestor`采用要尝试返回的级别的参数。 由于 Wanida 位于 Sariya 下面一级，因此使用 `GetAncestor(1)` ，如以下代码所示：  
+2.  也可以使用 [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) 方法查询此信息。 `GetAncestor` 对尝试返回的级别采用了一个参数。 由于 Wanida 位于 Sariya 下面一级，因此使用 `GetAncestor(1)` ，如以下代码所示：  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  

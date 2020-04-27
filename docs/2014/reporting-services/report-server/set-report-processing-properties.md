@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103241"
 ---
 # <a name="set-report-processing-properties"></a>设置报表处理属性
@@ -56,9 +56,9 @@ ms.locfileid: "66103241"
  如果存在以上条件，则报表服务器将在订阅的下次计划运行时间禁用此订阅。 若要重新激活订阅，请打开订阅，再进行保存。 打开订阅后，报表服务器会将订阅参数值更新成为快照指定的参数值。 有关订阅的详细信息，请参阅[订阅和传递 (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [在 SharePoint 集成模式下 &#40;Reporting Services 设置处理选项&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [配置报表 &#40;的执行属性报表管理器&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
+ [SSRS &#40;Reporting Services 概念&#41;](../reporting-services-concepts-ssrs.md)   
  [如何向报表历史记录添加快照](add-a-snapshot-to-report-history-report-manager.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

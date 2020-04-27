@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103762"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>修改 Reporting Services 配置文件 (RSreportserver.config)
@@ -35,7 +35,7 @@ ms.locfileid: "66103762"
   
 -   [编辑 Reporting Services 配置文件](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> 读取和使用配置值  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> 读取和使用配置值  
  当启动服务时或保存配置文件时，报表服务器会读取配置文件。 在当前的应用程序域过期之后，新值和修订后的值会在新应用程序域中生效。 如有可能，仍在当前应用程序域中处理的请求将能够完成。 但是，有几个设置要求立即执行应用程序域回收操作。 在这种情况下，所有正在进行的请求都将在新的应用程序域中重新启动。  
   
  如果报表服务器检测到无效值，则报表服务器会在 Windows 应用程序日志中记录一个错误，报表服务器将无法启动或者将使用默认值，具体取决于错误的类型：  
@@ -46,13 +46,13 @@ ms.locfileid: "66103762"
   
  所有的配置文件更改（包括成功的更改）都将记录在报表服务器的跟踪日志文件中。 仅将错误记录到应用程序事件日志中。  
   
-##  <a name="bkmk_default_values"></a> 关于默认值  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> 关于默认值  
  大多数配置设置都具有在报表服务器内部指定的默认值。 如果用户定义的值无效或者未指定，报表服务器将使用这些默认值。 如果由于配置设置无效而必须使用默认值，则错误将写入跟踪日志文件中。  
   
-##  <a name="bkmk_delete_config_settings"></a> 删除配置设置  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> 删除配置设置  
  对于具有默认值的配置设置，从配置文件中删除该设置将没有任何效果。 大多数配置设置实际上都是在内部定义和配置的。 如果从配置文件中删除项目，则内部副本仍将可用并使用为其定义的默认值。  
   
-##  <a name="bkmk_edit_configuation_file"></a> 编辑 Reporting Services 配置文件  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> 编辑 Reporting Services 配置文件  
   
 1.  查找要编辑的配置文件：  
   
@@ -86,14 +86,14 @@ ms.locfileid: "66103762"
   
     -   [在 RSReportServer.Config 中自定义呈现扩展插件参数](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
-5.  保存文件。  
+5.  保存该文件。  
   
 6.  检查跟踪日志文件，确认没有错误发生。 如果看到错误情况，则说明错误地指定了某个设置或它的值。 请检查 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) ，了解引起错误的任何设置的有效值。 有关查看跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](report-server-service-trace-log.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Rsreportserver.config 配置文件](rsreportserver-config-configuration-file.md)   
- [ReportingServicesService 配置文件](reportingservicesservice-configuration-file.md)   
- [RSReportDesigner 配置文件](rsreportdesigner-configuration-file.md)   
+ [Reportingservicesservice.exe.config 配置文件](reportingservicesservice-configuration-file.md)   
+ [Rsreportdesigner.config 配置文件](rsreportdesigner-configuration-file.md)   
  [部署数据处理扩展插件](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [部署传递扩展插件](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [部署呈现扩展插件](../extensions/rendering-extension/deploying-a-rendering-extension.md)   

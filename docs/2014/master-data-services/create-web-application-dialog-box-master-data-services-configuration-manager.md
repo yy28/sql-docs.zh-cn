@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65e057224a8456f893b38e106e6b7f75d03d237a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483237"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>“创建 Web 应用程序”对话框（Master Data Services 配置管理器）
@@ -34,17 +34,15 @@ ms.locfileid: "65483237"
   
 |控件名称|说明|  
 |------------------|-----------------|  
-|**名称**|为新的应用程序池键入唯一的友好名称，或者使用默认名称。 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序将添加到这个应用程序池。<br /><br /> 应用程序池提供的边界可防止一个应用程序池中的应用程序影响另一个应用程序池中的应用程序。|  
+|**名称**|为新的应用程序池键入唯一的友好名称，或者使用默认名称。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序将添加到这个应用程序池。<br /><br /> 应用程序池提供的边界可防止一个应用程序池中的应用程序影响另一个应用程序池中的应用程序。|  
 |**用户名**|键入来自 Active Directory 的域名和用户名。 此帐户是 Web 应用程序运行所在的应用程序池的标识。 此帐户应该与创建 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库时指定为服务帐户的帐户相同。<br /><br /> 此帐户添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 mds_exec 数据库角色，以便访问数据库。 有关详细信息，请参阅[数据库登录、用户和角色 (Master Data Services)](database-logins-users-and-roles-master-data-services.md)。 它还会被添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows 组 **MDS_ServiceAccounts**，该组有权访问文件系统中的临时编译目录 **MDSTempDir**。 有关详细信息，请参阅[文件夹和文件权限 (Master Data Services)](../../2014/master-data-services/folder-and-file-permissions-master-data-services.md)。|  
-|**权限**|键入指定用户帐户的密码。|  
-|**确认密码**|重新键入指定用户帐户的密码。 
-  **“密码”** 字段和 **“确认密码”** 字段必须包含相同的密码。|  
+|**密码**|键入指定用户帐户的密码。|  
+|**确认密码**|重新键入指定用户帐户的密码。 **“密码”** 字段和 **“确认密码”** 字段必须包含相同的密码。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Web 配置页 &#40;Master Data Services 配置管理器&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
  [为 Master Data Services 设置数据库和网站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Web 应用程序要求 &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
- [&#40;Master Data Services 创建主数据管理器 Web 应用程序&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+ [创建主数据管理器 Web 应用程序 &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

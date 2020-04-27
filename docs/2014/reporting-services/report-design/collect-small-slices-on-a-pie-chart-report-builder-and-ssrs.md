@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 517f5c5dddd809ee71037a95d04109a005968132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106215"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集饼图上的小切片（报表生成器和 SSRS）
@@ -36,7 +36,7 @@ ms.locfileid: "66106215"
   
 3.  在 **“常规”** 部分，展开 **CustomAttributes** 节点。  
   
-4.  将 CollectedStyle 属性设置为 **SingleSlice**。  
+4.  将“CollectedStyle”属性设置为“SingleSlice”****。  
   
 5.  设置收集的阈值和阈值的类型。 以下示例是收集阈值的常见设置方法。  
   
@@ -76,8 +76,8 @@ ms.locfileid: "66106215"
 >  您不能设置辅助饼图的格式。 因此，强烈建议使用第一种方法收集饼图切片。  
   
 ## <a name="see-also"></a>另请参阅  
- [饼图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [饼图 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [设置图表上数据点的格式 &#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [在饼图外显示数据点标签 &#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [在饼图上显示百分比值 &#40;报表生成器和 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [向图表添加三维效果（报表生成器和 SSRS）](chart-effects-add-3d-effects-report-builder.md)  

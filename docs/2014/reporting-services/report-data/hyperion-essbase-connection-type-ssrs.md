@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a0c38487f58a6db6e80d48c2b39b09e3ed93106
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107272"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66107272"
   
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a>连接字符串  
+##  <a name="connection-string"></a><a name="Connection"></a> 连接字符串  
  下面的连接字符串示例指定使用端口 13080 的服务器上的 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源以及使用 SOAP 的 Internet 上的 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA)，并连接到示例目录：  
   
 ```  
@@ -32,7 +32,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
   
-##  <a name="Credentials"></a>凭据  
+##  <a name="credentials"></a><a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。  
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
@@ -40,14 +40,14 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  有关详细信息，请参阅[Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
   
   
-##  <a name="Query"></a>请求  
+##  <a name="queries"></a><a name="Query"></a> 查询  
  可以通过下列方式指定查询：  
   
 -   以交互方式生成查询。 在设计模式或查询模式下使用图形查询设计器，可浏览外部数据源中的元数据和生成采用多维表达式 (MDX) 语法的查询。  
   
-    -   **设计视图**将维度、成员、成员属性、度量值和 Kpi 从元数据浏览器拖至 "**数据**" 窗格，以生成 MDX 查询。 将计算成员从“计算成员”窗格拖至“数据”窗格，以定义附加数据集字段。  
+    -   **设计视图** 将维度、成员、成员属性、度量值和 KPI 从元数据浏览器拖至 **“数据”** 窗格，以生成 MDX 查询。 将计算成员从“计算成员”窗格拖至“数据”窗格，以定义附加数据集字段。  
   
-    -   **查询视图**将维度、成员、成员属性、度量值和 Kpi 从元数据浏览器拖到 "查询" 窗格，以生成 MDX 查询。 在“查询”窗格中可以直接编辑 MDX 文本。 将计算成员从“计算成员”窗格拖至“查询”窗格，以定义附加数据集字段。  
+    -   **查询视图** 将维度、成员、成员属性、度量值和 KPI 从元数据浏览器拖至“查询”窗格，以生成 MDX 查询。 在“查询”窗格中可以直接编辑 MDX 文本。 将计算成员从“计算成员”窗格拖至“查询”窗格，以定义附加数据集字段。  
   
      有关详细信息，请参阅 [Hyperion Essbase 查询设计器用户界面（报表生成器）](../hyperion-essbase-query-designer-user-interface-report-builder.md)。  
   
@@ -55,19 +55,17 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  在设计时，运行查询以查看结果集。 生成查询后，在“报表数据”窗格中查看从元数据生成的数据集字段集合。 报告运行时，将从外部数据源返回实际数据。  
   
- 
-  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据处理扩展插件支持扩展数据集字段属性。 这些值可从外部数据源获得，但在“报表数据”窗格中不显示。 有关详细信息，请参阅本主题后面的 [扩展字段属性](#Extended) 。  
+ [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据处理扩展插件支持扩展数据集字段属性。 这些值可从外部数据源获得，但在“报表数据”窗格中不显示。 有关详细信息，请参阅本主题后面的 [扩展字段属性](#Extended) 。  
   
   
-##  <a name="Parameters"></a> Parameters  
+##  <a name="parameters"></a><a name="Parameters"></a>Parameters  
  若要包括查询参数，请在查询设计器的筛选区域创建一个筛选器，并将该筛选器标记为参数。 系统将为每个筛选器自动创建一个数据集以提供可用值。 默认情况下，这些数据集不显示在“报表数据”窗格中。 有关详细信息，请参阅[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
- 默认情况下，每个报表参数的数据类型均为 **Text**。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅[报表参数 &#40;报表生成器和报表设计器&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 默认情况下，每个报表参数的数据类型均为 **Text**。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
-##  <a name="Extended"></a>扩展字段属性  
- 
-  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除了通过数据处理扩展插件为数据集字段定义的 `Value` 和 `IsMissing` 之外的其他属性。 扩展属性包括预定义属性和自定义属性。 预定义属性是对多个数据源通用的属性。 自定义属性对于每个数据源都是唯一的。  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> 扩展字段属性  
+ [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除了通过数据处理扩展插件为数据集字段定义的 `Value` 和 `IsMissing` 之外的其他属性。 扩展属性包括预定义属性和自定义属性。 预定义属性是对多个数据源通用的属性。 自定义属性对于每个数据源都是唯一的。  
   
  扩展字段属性不作为可拖至报表布局的项出现在“报表数据”窗格中。 不过，您可以将该属性的父字段拖至报表中，然后将默认属性由 `Value` 更改为要使用的属性。  
   
@@ -78,11 +76,11 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>预定义的字段属性  
- 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 `UniqueName`。 若要在文本框中包含唯一名称值，请使用 expression `=Fields!` * \<FieldName>。 * `.UniqueName`  
+ 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 `UniqueName`。 若要在文本框中包含唯一名称值，请使用表达式 `=Fields!` *\<FieldName>* `.UniqueName`。  
   
  下表提供了可以用于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的预定义字段属性的列表。  
   
-|**属性**|类型 |**Description 或预期值**|  
+|**属性**|类型 |**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|指定字段的数据值。<br /><br /> 对于维度属性，它映射到 MEMBER_CAPTION。 对于度量值，它映射到数据值。|  
 |`IsMissing`|`Boolean`|指示是否在结果数据集中找到了该字段。|  
@@ -103,28 +101,28 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  下表显示了可用于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的自定义字段属性。  
   
-|**属性**|类型 |**Description 或预期值**|  
+|**属性**|**类型**|**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
 |`FORMAT_STRING`|`String`|针对度量值定义，是可作为 String 类型的 `FormattedValue`。|  
   
   
-##  <a name="Remarks"></a> 备注  
- 不是所有的报表传递模式都受到此数据访问接口的支持。 此数据处理扩展插件不支持通过数据驱动订阅传递报表。 有关详细信息，请参阅 [](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) 联机丛书 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中  文档中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [使用外部数据源提供订阅方数据（数据驱动订阅）](https://go.microsoft.com/fwlink/?linkid=121312)。  
+##  <a name="remarks"></a><a name="Remarks"></a> 备注  
+ 不是所有的报表传递模式都受到此数据访问接口的支持。 此数据处理扩展插件不支持通过数据驱动订阅传递报表。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ 联机丛书 ](https://go.microsoft.com/fwlink/?linkid=121312) 中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的[使用外部数据源提供订阅方数据（数据驱动订阅）](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
  有关详细信息，请参阅 [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)（使用具有 Hyperion Essbase 的 SQL Server 2005 Reporting Services）。  
   
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明：  
   
  [添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [向数据集添加筛选器 &#40;报表生成器和 SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [向数据集添加筛选器（报表生成器和 SSRS）](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a>相关章节  
+##  <a name="related-sections"></a><a name="Related"></a>相关部分  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
@@ -139,16 +137,16 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关数据集查询生成的字段集合的信息。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)的文档中， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [Reporting Services &#40;SSRS&#41;支持的数据源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
- [将 SQL Server 2005 Reporting Services 用于 Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
+ [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  提供有关使用此数据扩展插件的详细信息。  
   
   
 ## <a name="see-also"></a>另请参阅  
- [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [报表参数 &#40;报表生成器和报表设计器&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [对数据进行筛选、分组和排序 &#40;报表生成器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

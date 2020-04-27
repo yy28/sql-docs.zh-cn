@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e5f295637db0e138caf324e3126707b9e0ea774
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899512"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers （Transact-sql）
@@ -26,13 +26,13 @@ ms.locfileid: "67899512"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar （32）**|查询此 DMS 工作线程所属的部分。<br /><br /> request_id、step_index 和 dms_step_index 构成此视图的键。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
+|request_id|**nvarchar(32)**|查询此 DMS 工作线程所属的部分。<br /><br /> request_id、step_index 和 dms_step_index 构成此视图的键。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |step_index|**int**|查询步骤此 DMS 辅助角色所属的部分。<br /><br /> request_id、step_index 和 dms_step_index 构成此视图的键。|请参阅 dm_pdw_request_steps sys.databases 中的 step_index [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
 |dms_step_index|**int**|此工作线程正在运行的 DMS 计划中的步骤。<br /><br /> request_id、step_index 和 dms_step_index 构成此视图的键。||  
 |pdw_node_id|**int**|正在运行辅助角色的节点。|请参阅 dm_pdw_nodes sys.databases 中的 node_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
-|distribution_id|**整形**|正在运行辅助进程的分发（如果有）。|请参阅 pdw_distributions sys.databases 中的 distribution_id [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)。|  
-|type|**nvarchar （32）**|此项表示的 DMS 工作线程的类型。|"DIRECT_CONVERTER"、"DIRECT_READER"、"FILE_READER"、"HASH_CONVERTER"、"HASH_READER"、"ROUNDROBIN_CONVERTER"、"EXPORT_READER"、"EXTERNAL_READER"、"EXTERNAL_WRITER"、"PARALLEL_COPY_READER"、"REJECT_WRITER"、"WRITER"|  
-|status|**nvarchar （32）**|DMS 工作线程的状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|distribution_id|**Int**|正在运行辅助进程的分发（如果有）。|请参阅 pdw_distributions sys.databases 中的 distribution_id [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)。|  
+|类型|**nvarchar(32)**|此项表示的 DMS 工作线程的类型。|"DIRECT_CONVERTER"、"DIRECT_READER"、"FILE_READER"、"HASH_CONVERTER"、"HASH_READER"、"ROUNDROBIN_CONVERTER"、"EXPORT_READER"、"EXTERNAL_READER"、"EXTERNAL_WRITER"、"PARALLEL_COPY_READER"、"REJECT_WRITER"、"WRITER"|  
+|status|**nvarchar(32)**|DMS 工作线程的状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|读取或写入吞吐量。|大于或等于0。 如果查询在执行之前已取消或失败，则为 NULL。|  
 |bytes_processed|**bigint**|此工作线程处理的总字节数。|大于或等于0。 如果查询在执行之前已取消或失败，则为 NULL。|  
 |rows_processed|**bigint**|为此辅助角色读取或写入的行数。|大于或等于0。 如果查询在执行之前已取消或失败，则为 NULL。|  

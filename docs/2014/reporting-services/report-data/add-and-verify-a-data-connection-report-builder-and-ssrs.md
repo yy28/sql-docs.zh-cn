@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107519"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>添加和验证数据连接或数据源（报表生成器和 SSRS）
@@ -31,16 +31,16 @@ ms.locfileid: "66107519"
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>创建对共享数据源的引用  
   
-1.  在“报表数据”窗格的工具栏上，单击 **“新建”** ，然后单击 **“数据源”**。 此时将打开 **“数据源属性”** 对话框。  
+1.  在“报表数据”窗格的工具栏上，单击 **“新建”** ，然后单击 **“数据源”** 。 此时将打开 **“数据源属性”** 对话框。  
   
 2.  在 **“名称”** 文本框中，键入数据源的名称。  
   
     > [!NOTE]  
     >  此名称保存在本地报表定义中， 它不是报表服务器上共享数据源的名称。  
   
-3.  选择 **“使用共享连接或报表模型”**。 将显示最近使用的共享数据源和报表模型的列表。 若要从报表服务器选择一个共享数据源，请单击 **“浏览”** 并找到报表服务器上包含共享数据源的文件夹。  
+3.  选择 **“使用共享连接或报表模型”** 。 将显示最近使用的共享数据源和报表模型的列表。 若要从报表服务器选择一个共享数据源，请单击 **“浏览”** 并找到报表服务器上包含共享数据源的文件夹。  
   
-4.  选择该共享数据源，然后单击 **“打开”**。  
+4.  选择该共享数据源，然后单击 **“打开”** 。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66107519"
   
 1.  在“报表数据”窗格的工具栏上，双击该数据源。 此时将打开 **“数据源属性”** 对话框。  
   
-2.  单击 **“测试连接”** 。  
+2.  单击 **“测试连接”**。  
   
 3.  如果连接成功，则显示以下消息：“已成功地创建连接”。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -92,8 +92,8 @@ ms.locfileid: "66107519"
   
 ## <a name="see-also"></a>另请参阅  
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
- [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [查找、查看和管理报表（报表生成器和 SSRS）](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [查找、查看和管理 &#40;报表生成器和 SSRS 的报表 &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
   

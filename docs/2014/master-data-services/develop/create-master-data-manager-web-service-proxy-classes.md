@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c44e1830b1f04b1a7686bf7db1efea4549ae143e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479542"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>创建主数据管理器 Web 服务代理类
-  
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务可让您通过任何能访问 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 网站的计算机以编程方式使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的功能。 在开始编写访问 Web 服务的代码之前，必须先生成代理类。 您用于执行 Web 服务操作的主代理类是 <xref:Microsoft.MasterDataServices.ServiceClient> 类，它可实现 <xref:Microsoft.MasterDataServices.IService> 接口。  
   
 ## <a name="enable-web-service-metadata-publishing"></a>启用 Web 服务元数据发布  
@@ -37,7 +36,7 @@ ms.locfileid: "65479542"
     “你已创建服务”开头的页面。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>通过使用 Visual Studio 创建代理类  
- 如果已安装了 Visual Studio 2010，则生成代理类的最简方法是将“服务引用”添加到项目中****。 服务引用的地址为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，后面追加 /service/service.svc。 例如： http://yourserver/MDS/service/service.svc 。 有关详细信息，请参阅[如何添加、更新或删除服务引用](https://go.microsoft.com/fwlink/?LinkId=221167)。  
+ 如果已安装了 Visual Studio 2010，则生成代理类的最简方法是将“服务引用”添加到项目中****。 服务引用的地址为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，后面追加 /service/service.svc。 例如： http://yourserver/MDS/service/service.svc。 有关详细信息，请参阅[如何添加、更新或删除服务引用](https://go.microsoft.com/fwlink/?LinkId=221167)。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>使用 Svcutil.exe 创建代理类  
  必须[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]安装或[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK，才能在计算机上安装 svcutil.exe。 如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，必须使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令提示符运行该命令。 有关详细信息，请参阅 [ServiceModel 元数据实用工具 (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 和[根据服务元数据生成 WCF 客户端](https://go.microsoft.com/fwlink/?LinkId=164821)。  
@@ -53,11 +52,11 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
  其中：  
   
--   *servername*：*port*是承载[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]的计算机的名称和端口号。  
+-   servername:port 是承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的计算机名称和端口号****。  
   
--   *virtual_path*是 INTERNET INFORMATION SERVICES （IIS） [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]中的虚拟路径。  
+-   virtual_path 是 Internet 信息服务 (IIS) 中 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的虚拟路径**。  
   
--   *proxy_name*是生成的代理文件的名称。  
+-   proxy_name 是生成的代理文件名称**。  
   
 ## <a name="see-also"></a>另请参阅  
  [分类的 Web 服务操作 &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  

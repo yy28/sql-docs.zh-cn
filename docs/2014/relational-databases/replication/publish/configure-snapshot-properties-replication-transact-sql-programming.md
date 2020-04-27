@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021339"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>配置快照属性（复制 Transact-SQL 编程）
@@ -26,7 +26,7 @@ ms.locfileid: "63021339"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>在创建快照发布或事务发布时配置快照属性  
   
-1.  在发布服务器上，执行 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 为**@publication**指定发布名称，为指定一个值**@repl_freq**，**并为指定**以下一个或多个快照相关参数： ****  
+1.  在发布服务器上，执行 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 为**@publication**指定发布名称，为指定一个值**@repl_freq**，**并为指定**以下一个或多个快照相关参数： **snapshot**  
   
     -   **@alt_snapshot_folder**-如果此发布的快照可从该位置访问，而不是在快照默认文件夹中访问，请指定路径。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63021339"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>创建合并发布时配置快照属性  
   
-1.  在发布服务器上，执行 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)。 为**@publication**指定发布名称，为指定一个值**@repl_freq**，**并为指定**以下一个或多个快照相关参数： ****  
+1.  在发布服务器上，执行 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)。 为**@publication**指定发布名称，为指定一个值**@repl_freq**，**并为指定**以下一个或多个快照相关参数： **snapshot**  
   
     -   **@alt_snapshot_folder**-如果此发布的快照可从该位置访问，而不是在快照默认文件夹中访问，请指定路径。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63021339"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>修改现有快照发布或事务发布的快照属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 将的值指定**** 为 1 **@force_invalidate_snapshot** ，并为**@property**指定以下值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 将的值指定**1**为 1 **@force_invalidate_snapshot** ，并为**@property**指定以下值之一：  
   
     -   **alt_snapshot_folder** -还为**@value**的备用快照文件夹指定新路径。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63021339"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>修改现有合并发布的快照属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 将的值指定**** 为 1 **@force_invalidate_snapshot** ，并为**@property**指定以下值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 将的值指定**1**为 1 **@force_invalidate_snapshot** ，并为**@property**指定以下值之一：  
   
     -   **alt_snapshot_folder** -还为**@value**的备用快照文件夹指定新路径。  
   

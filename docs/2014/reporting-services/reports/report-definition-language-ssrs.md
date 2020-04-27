@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6480a8cefee9b71149c61bf952896a739526cf55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102499"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
@@ -37,29 +37,26 @@ ms.locfileid: "66102499"
   
 -   支持其他命名空间和自定义元素的可扩展开放式架构。  
   
-##  <a name="bkmk_RDL_Specifications"></a>RDL 规范  
+##  <a name="rdl-specifications"></a><a name="bkmk_RDL_Specifications"></a>RDL 规范  
  若要下载特定架构版本的规范，请参阅 [报表定义语言规范](https://go.microsoft.com/fwlink/?linkid=116865)。  
   
-##  <a name="bkmk_RDL_XML_Schema_Definition"></a>RDL XML 架构定义  
+##  <a name="rdl-xml-schema-definition"></a><a name="bkmk_RDL_XML_Schema_Definition"></a>RDL XML 架构定义  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用 XML 架构定义（XSD）文件验证报表定义语言（RDL）文件。 架构定义 RDL 元素可在 .rdl 文件中什么位置出现的规则。 元素包括其数据类型和基数，即允许的出现次数。 元素可以是简单的，也可以是复杂的。 简单元素没有子元素或属性。 复杂元素具有子元素以及可选具有属性。  
   
- 例如，此架构包含 RDL 元素 `ReportParameters`，它为复杂类型 `ReportParametersType`。 根据约定，元素的复杂类型是元素名称后跟单词 `Type`。 
-  `ReportParameters` 元素可由 `Report` 元素（复杂类型）包含，并可以包含 `ReportParameter` 元素。 
-  `ReportParameterType` 是只能为下列值之一的简单类型：`Boolean`、`DateTime`、`Integer`、`Float` 或 `String`。 有关 XML 架构数据类型的详细信息，请参阅 [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)（XML 架构第 2 部分：数据类型第二版）。  
+ 例如，此架构包含 RDL 元素 `ReportParameters`，它为复杂类型 `ReportParametersType`。 根据约定，元素的复杂类型是元素名称后跟单词 `Type`。 `ReportParameters` 元素可由 `Report` 元素（复杂类型）包含，并可以包含 `ReportParameter` 元素。 `ReportParameterType` 是只能为下列值之一的简单类型：`Boolean`、`DateTime`、`Integer`、`Float` 或 `String`。 有关 XML 架构数据类型的详细信息，请参阅 [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)（XML 架构第 2 部分：数据类型第二版）。  
   
  可在 ReportDefinition.xsd 文件中找到 RDL XSD，该文件位于产品 CD-ROM 的 Extras 文件夹中。 此外，还可通过以下 URL 在报表服务器上获取：http://servername/reportserver/reportdefinition.xsd。  
   
-##  <a name="bkmk_Creating_RDL"></a>创建 RDL  
+##  <a name="creating-rdl"></a><a name="bkmk_Creating_RDL"></a>创建 RDL  
  由于 RDL 的开放式和可扩展特性，可以创建基于其 XML 架构生成 RDL 的各种工具和应用程序。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供用于生成 RDL 文件的多种工具。 有关详细信息，请参阅 [Reporting Services 工具](../tools/reporting-services-tools.md)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供用于生成 RDL 文件的多种工具。 有关详细信息，请参阅 [Reporting Services 工具](../tools/reporting-services-tools.md)。  
   
- 从应用程序生成 RDL 的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]最简单方法之一是使用<xref:System.Xml>命名空间和<xref:System.Linq>命名空间的类。 尤其是可以使用 **XmlTextWriter** 类编写 RDL。 使用 **XmlTextWriter**，可以在任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应用程序中从头到尾生成完整的报表定义。 开发人员还可以通过添加具有自定义属性的自定义报表项来扩展 RDL。 有关 **XmlTextWriter** 类和 <xref:System.Xml> 命名空间的更多信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发人员指南。 有关语言集成查询 (LINQ) 的详细信息，请在 MSDN 上搜索 "LINQ to XML"。  
+ 从应用程序生成 RDL 的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]最简单方法之一是使用<xref:System.Xml>命名空间和<xref:System.Linq>命名空间的类。 尤其是可以使用 **XmlTextWriter** 类编写 RDL。 使用 **XmlTextWriter**，可以在任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应用程序中从头到尾生成完整的报表定义。 开发人员还可以通过添加具有自定义属性的自定义报表项来扩展 RDL。 有关 XmlTextWriter**** 类和 <xref:System.Xml> 命名空间的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发人员指南。 有关语言集成查询 (LINQ) 的详细信息，请在 MSDN 上搜索 "LINQ to XML"。  
   
  报表定义文件的标准文件扩展名为 .rdl。 还可以开发具有扩展名 .rdlc 的客户端报表定义文件。 两种扩展名的 MIME 类型都为 text/xml。 有关报表的详细信息，请参阅 [Reporting Services 报表 &#40;SSRS&#41;](reporting-services-reports-ssrs.md)。  
   
-##  <a name="bkmk_RDL_Types"></a>RDL 类型  
+##  <a name="rdl-types"></a><a name="bkmk_RDL_Types"></a>RDL 类型  
  下表列出了在 RDL 元素和属性中使用的类型。  
   
 |类型|说明|  
@@ -78,16 +75,16 @@ ms.locfileid: "66102499"
 |`UnsignedInt`|具有无符号整数 (uint32) 值的属性。|  
 |`Variant`|具有任何简单 XML 类型的属性。|  
   
-##  <a name="bkmk_RDL_Data_Types"></a>RDL 数据类型  
+##  <a name="rdl-data-types"></a><a name="bkmk_RDL_Data_Types"></a>RDL 数据类型  
  DataType 枚举定义 RDL 中的属性、表达式或参数的数据类型。 下表显示公共语言运行时 (CLR) 数据类型是如何与 RDL 数据类型相对应的。  
   
 |**CLR 类型**|**相应的数据类型**|  
 |-----------------------|---------------------------------|  
-|Boolean|Boolean|  
+|布尔|布尔|  
 |DateTime、DateTimeOffset|DateTime|  
 |Int16、Int32、UInt16、Byte、SByte|Integer|  
 |Single、Double|Float|  
-|String、Char、GUID、Timespan|String|  
+|String、Char、GUID、Timespan|字符串|  
   
 ## <a name="see-also"></a>另请参阅  
  [查找报表定义架构版本 &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   

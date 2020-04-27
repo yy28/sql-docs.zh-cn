@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109874"
 ---
 # <a name="choose-link-page-report-manager"></a>“选择链接”页（报表管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "66109874"
   
 2.  悬停在链接报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”** 。 这会打开该链接报表的 **“常规”** 属性页。  
+3.  在下拉菜单中，单击 **“管理”**。 这会打开该链接报表的 **“常规”** 属性页。  
   
 4.  在 **“常规”** 选项卡上的属性页中单击 **“更改链接”**。  
   

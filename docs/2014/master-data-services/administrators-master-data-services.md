@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480009"
 ---
 # <a name="administrators-master-data-services"></a>管理员 (Master Data Services)
@@ -33,14 +33,12 @@ ms.locfileid: "65480009"
   
  每个模型可以有多个管理员。 每个用户可以是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 部署中一个、多个或所有模型的模型管理员。  
   
- 可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中或通过编程方式将用户配置为模型管理员。 有关详细信息，请参阅[创建模型管理员 (Master Data Services)](create-a-model-administrator-master-data-services.md)。  
+ 可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中或通过编程方式将用户配置为模型管理员。 有关详细信息，请参阅 [创建模型管理员 (Master Data Services)](create-a-model-administrator-master-data-services.md)。  
   
 ## <a name="master-data-services-system-administrator"></a>Master Data Services 系统管理员  
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系统管理员只有一个。 系统管理员是在创建[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库时为**管理员帐户**指定的用户。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系统管理员只有一个。 系统管理员是在创建[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库时为**管理员帐户**指定的用户。  
   
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系统管理员：  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系统管理员：  
   
 -   自动对所有功能区域具有访问权限。  
   
@@ -52,13 +50,13 @@ ms.locfileid: "65480009"
   
 |管理员类型|说明|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系统管理员|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中分配的权限对于管理员的访问权限没有影响。<br /><br /> 自动对所有模型具有 "**更新**" 权限。<br /><br /> 自动对所有功能区域具有访问权限。<br /><br /> 在 tblUser 中， **ID**列中的值为**1**。|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系统管理员|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中分配的权限对于管理员的访问权限没有影响。<br /><br /> 自动对所有模型具有 "**更新**" 权限。<br /><br /> 自动对所有功能区域具有访问权限。<br /><br /> 在 tblUser 中， **ID**列中的值为**1**。|  
 |模型管理员|在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中分配的权限确定用户是否为模型管理员。<br /><br /> 基于显式分配的权限或者从组继承的权限，用户可以是模型管理员。<br /><br /> 仅适用于具有分配给顶级模型对象的 "**更新**" 权限且没有其他权限的模型的管理员。<br /><br /> 仅对向其分配访问权限的功能区域具有访问权限。<br /><br /> 在 tblUser 中， **ID**列中的值不是**1**。|  
   
 ## <a name="see-also"></a>另请参阅  
  [创建模型管理员 &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)   
  [更改系统管理员帐户 &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
  [创建 Master Data Services 数据库](install-windows/create-a-master-data-services-database.md)   
- [通知 &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+ [通知 (Master Data Services)](../../2014/master-data-services/notifications-master-data-services.md)  
   
   

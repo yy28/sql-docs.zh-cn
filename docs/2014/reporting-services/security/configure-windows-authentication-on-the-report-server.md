@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102122"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>在报表服务器上配置 Windows 身份验证
@@ -45,9 +45,7 @@ ms.locfileid: "66102122"
  以下说明针对本机模式报表服务器。 如果在 SharePoint 集成模式下部署报表服务器，则必须使用指定 Windows 集成安全性的默认身份验证设置。 报表服务器使用默认 Windows 身份验证扩展插件中的内部功能支持 SharePoint 集成模式下的报表服务器。  
   
 ## <a name="extended-protection-for-authentication"></a>身份验证的扩展保护  
- 自 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，提供了对针对验证的扩展保护的支持。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能支持使用渠道绑定和服务绑定来加强对身份验证的保护。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能需要用于支持扩展保护的操作系统。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置由 RSReportServer.config 文件中的设置确定。 可以通过编辑此文件或使用 WMI API 来更新此文件。 有关详细信息，请参阅[Reporting Services 针对验证的扩展保护](extended-protection-for-authentication-with-reporting-services.md)。  
+ 自 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，提供了对针对验证的扩展保护的支持。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能支持使用渠道绑定和服务绑定来加强对身份验证的保护。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能需要用于支持扩展保护的操作系统。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置由 RSReportServer.config 文件中的设置确定。 可以通过编辑此文件或使用 WMI API 来更新此文件。 有关详细信息，请参阅 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)。  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>将报表服务器配置为使用 Windows 集成安全性  
   
@@ -78,7 +76,7 @@ ms.locfileid: "66102122"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \</Authentication>  
+     \</身份验证>  
   
      第三个 XML 结构指定 Windows 集成安全性中使用的所有安全包：  
   
@@ -115,7 +113,7 @@ ms.locfileid: "66102122"
   
 8.  重新启动报表服务器以清除当前打开的任何会话。  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a>在连接到报表服务器时解决 Kerberos 身份验证错误  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a> 连接到报表服务器时解决 Kerberos 身份验证错误  
  在为 Negotiate 或 Kerberos 身份验证配置的报表服务器上，如果出现 Kerberos 身份验证错误，则客户端与报表服务器的连接将失败。 已知在以下情况下会出现 Kerberos 身份验证错误：  
   
 -   报表服务器服务作为 Windows 域用户帐户运行并且您没有为该帐户注册服务主体名称 (SPN)。  
@@ -168,8 +166,7 @@ ms.locfileid: "66102122"
     rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
     ```  
   
--   
-  \<Explicit> 之下的值将包含在 Active Directory 中为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务帐户配置的 SPN。  
+-   \<Explicit> 之下的值将包含在 Active Directory 中为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务帐户配置的 SPN。  
   
  如果不希望继续使用扩展保护，则将配置值重新设置为默认值，然后重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务帐户。  
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63288880"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>示例：指定 ID 和 IDREFS 指令
@@ -36,10 +36,9 @@ ms.locfileid: "63288880"
 </Customer>  
 ```  
   
- < `SalesOrderIDList` > 元素的 `Customer` 属性是一个多值属性，它引用 < `SalesOrderID` > 元素的 `SalesOrder` 属性。 若要建立此链接，必须将 `SalesOrderID` 属性声明为 `ID` 类型，并且必须将 < `SalesOrderIDList`> 元素的 `Customer` 属性声明为 `IDREFS` 类型。 因为一个客户可请求多个订单，所以使用 `IDREFS` 类型。  
+ < `SalesOrderIDList` > 元素的 `Customer` 属性是一个多值属性，它引用 < `SalesOrderID` > 元素的 `SalesOrder` 属性。 若要建立此链接，必须将 `SalesOrderID` 属性声明为 `ID` 类型，并且必须将 < `Customer`> 元素的 `SalesOrderIDList` 属性声明为 `IDREFS` 类型。 因为一个客户可请求多个订单，所以使用 `IDREFS` 类型。  
   
- 
-  `IDREFS` 类型的元素也有多个值。 因此，必须使用单独的 SELECT 子句来重复使用相同的标记、父级和键列信息。 然后，`ORDER BY` 必须确保组成 `IDREFS` 值的行的序列成组显示在它们的父元素下。  
+ `IDREFS` 类型的元素也有多个值。 因此，必须使用单独的 SELECT 子句来重复使用相同的标记、父级和键列信息。 然后，`ORDER BY` 必须确保组成 `IDREFS` 值的行的序列成组显示在它们的父元素下。  
   
  下面是生成所需的 XML 的查询。 该查询使用 `ID` 和 `IDREFS` 指令来覆盖列名称（`SalesOrder!2!SalesOrderID!ID`、 `Customer!1!SalesOrderIDList!IDREFS`）中的类型。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcaad5c420af766d6c43bd5d57adeb6ce444257f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105255"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last 函数（报表生成器和 SSRS）
@@ -43,8 +43,7 @@ Last(expression, scope)
 ## <a name="remarks"></a>备注  
  在指定作用域中应用所有的排序和筛选后，`Last` 函数返回一组数据中的最后一个值。  
   
- 
-  `Last` 函数只能用在当前作用域（默认）相关的组筛选表达式中。  
+ `Last` 函数只能用在当前作用域（默认）相关的组筛选表达式中。  
   
  您还可以在页眉中使用 `Last` 函数，返回 `ReportItems` 集合中属于某页面的最后一个值，以便在页面中生成显示首项和尾项的字典样式标题。  
   

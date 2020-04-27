@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109223"
 ---
 # <a name="error-page-report-manager"></a>“错误”页（报表管理器）
@@ -32,7 +32,7 @@ ms.locfileid: "66109223"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;本机模式下配置报表管理器&#41;](report-server/configure-web-portal.md)   
- [错误和事件参考 (Reporting Services)](troubleshooting/errors-and-events-reference-reporting-services.md)   
+ [错误和事件参考 &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

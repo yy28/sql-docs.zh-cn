@@ -19,35 +19,35 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480925"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>为 DQS 日志文件配置严重级别
   本主题介绍如何通过使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 为 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) 中的不同活动和模块配置严重级别。 严重级别定义 DQS 中发生的事件的强度。 DQS 事件具有以下严重级别，这些级别按严重程度递减列出：  
   
--   **严重**：可能会导致严重/意外结果的关键运行时错误。  
+-   **严重**：可能会导致严重/意外结果的重大的运行时错误。  
   
 -   **错误**：其他运行时错误。  
   
--   **警告**：有关可能导致错误的事件的警告。  
+-   **警告**：可能会导致错误的事件的有关警告。  
   
--   **信息**：有关不是错误或警告的一般事件的信息。 例如，一个 DQS 过程已开始。  
+-   **信息**：与一般事件有关的并非错误或警告的信息。 例如，一个 DQS 过程已开始。  
   
--   **调试**：有关事件的详细信息（详细）。  
+-   **调试**：有关事件的详细信息。  
   
  通过为不同的 DQS 活动和模块配置严重级别，可筛选要记入日志的信息，以及筛选要为各 DQS 活动或模块写入 DQS 日志文件的信息。 例如，如果您将某一 DQS 活动的严重级别设为 **“警告”**，则只有与该 DQS 活动关联的警告和更高级别严重程度的消息（错误和严重）将被记入日志。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能配置日志严重性设置。  
   
-##  <a name="ConfigureActivity"></a>在活动级别配置严重级别  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>在活动级别配置严重级别  
  您可以在 DQS 中为以下活动配置日志严重性设置：域管理、知识发现、匹配策略、数据清理、数据匹配和引用数据服务。 为此，请执行以下操作：  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
@@ -61,9 +61,9 @@ ms.locfileid: "65480925"
     > [!NOTE]  
     >  默认情况下，将为每个活动选择 **“错误”** 。 这意味着，默认情况下对于每个活动，错误和严重消息将写入 DQS 日志文件。  
   
-5.  单击“关闭”  。  
+5.  单击“**关闭**”。  
   
-##  <a name="ConfigureModule"></a>在模块级别配置严重级别（高级）  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>在模块级别配置严重级别（高级）  
  通过 **“日志设置”** 选项卡中的 **“高级”** 部分，您可以在模块级别配置日志严重性设置。 模块是在 DQS 中的某一特性内实现不同功能的 DQS 系统程序集。 例如，域管理活动包含不同功能，例如定义域规则、定义规则条件、为复合域定义跨域规则等。  
   
  有时，活动级别的粒度级别是不足够的。 您可能要调查某个活动内的特定模块中发生的问题。 它有助于选择在模块级别配置日志严重级别，以便更准确地隔离和跟踪问题。  
@@ -86,9 +86,9 @@ ms.locfileid: "65480925"
   
 4.  如果需要，为其他模块重复步骤 2 和 3。 您还可以通过单击 **“添加模块”** 和 **“删除模块”** 图标，向网格中添加或删除行。  
   
-5.  单击“关闭”  。  
+5.  单击“**关闭**”。  
   
 ## <a name="see-also"></a>另请参阅  
- [Configure Advanced Settings for DQS Log Files](../../2014/data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
+ [为 DQS 日志文件配置高级设置](../../2014/data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

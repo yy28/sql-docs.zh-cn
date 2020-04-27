@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3be08f0962b7440d5cd0812ad365a752aa1b89d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103305"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
@@ -34,13 +34,12 @@ ms.locfileid: "66103305"
   
 -   [管理内容](#bkmk_managecontent)  
   
--   [保护和管理资源](#bkmk_manageresources)  
+-   [保护资源的安全和管理资源](#bkmk_manageresources)  
   
 -   [从报表引用图像资源](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a>本机模式摘要  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式安装由几个需要管理和维护的服务器端功能组成。 这些服务器功能包括：  
+##  <a name="summary-of-native-mode"></a><a name="bkmk_sum"></a>本机模式摘要  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式安装由几个需要管理和维护的服务器端功能组成。 这些服务器功能包括：  
   
 -   报表服务器 Web 服务（在报表服务器服务中运行）。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66103305"
   
 -   如果要在域控制器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则您必须是域管理员。  
   
-##  <a name="bkmk_managecontent"></a>管理内容  
+##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> 管理内容  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表、模型、文件夹、资源和共享数据源的管理。 通过属性和安全设置，所有这些项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。  
   
 > [!NOTE]  
@@ -80,10 +79,9 @@ ms.locfileid: "66103305"
   
  通过以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)。  
   
- 用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或报表管理器。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 报表管理器用于授予用户对报表服务器项和操作的访问权限，查看和使用报表以及其他内容类型，以及查看和使用所有共享项和报表分发功能。  
+ 用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或报表管理器。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 报表管理器用于授予用户对报表服务器项和操作的访问权限，查看和使用报表以及其他内容类型，以及查看和使用所有共享项和报表分发功能。  
   
-##  <a name="bkmk_manageresources"></a>保护和管理资源  
+##  <a name="securing-and-managing-a-resource"></a><a name="bkmk_manageresources"></a>保护和管理资源  
  资源是指存储在报表服务器上但不由报表服务器处理的托管项。 通常，资源为报表用户提供外部内容。 例如描述报表中所使用业务规则的 .jpg 文件或 HTML 文件中的图像。 JPG 或 HTML 文件存储在报表服务器上，但报表服务器会将文件直接传递到浏览器，而不会首先对其进行处理。  
   
  若要向报表服务器中添加资源，请上载或发布文件：  
@@ -99,7 +97,7 @@ ms.locfileid: "66103305"
   
  在报表服务器文件夹层次结构中，资源与报表、共享数据源、共享计划和文件夹都以命名项的形式显示在一起。 您可以搜索、查看、保护资源和设置资源属性，就像对报表服务器上存储的任何其他项一样。 若要查看或管理资源，您的角色分配中必须拥有查看资源或管理资源的任务。  
   
-##  <a name="bkmk_referenceimage"></a>从报表引用图像资源  
+##  <a name="referencing-an-image-resource-from-a-report"></a><a name="bkmk_referenceimage"></a>从报表引用图像资源  
  资源可以包含报表中引用的图像。 如果报表要求包括使用外部图像，则可以考虑将图像存储为资源的以下好处：  
   
 -   在报表服务器数据库中集中存储。 如果将报表服务器数据库及其内容移到其他计算机，则外部图像会与报表保存在一起。 无需跟踪不同计算机的磁盘上存储的图像文件。  

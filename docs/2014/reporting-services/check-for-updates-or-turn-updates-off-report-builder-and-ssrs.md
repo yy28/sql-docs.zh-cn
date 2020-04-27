@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109861"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>检查更新或关闭更新（报表生成器和 SSRS）
@@ -36,7 +36,7 @@ ms.locfileid: "66109861"
 -   右键单击报表之外或表体中的设计图面，然后单击 "**检查更新**"。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)   
+ [报表部件 &#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [发布和重新发布报表部件 &#40;报表生成器和 SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [浏览查找报表部件和设置默认文件夹 &#40;报表生成器和 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [&#40;报表生成器和 SSRS 的报表部件疑难解答&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

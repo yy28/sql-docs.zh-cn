@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109605"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>创建、删除或修改共享数据源（报表管理器）
@@ -28,14 +28,14 @@ ms.locfileid: "66109605"
   
  下面的图标表示报表管理器文件夹层次结构中的共享数据源：  
   
- ![共享数据源图标](media/hlp-16datasource.png "Shared data source icon")  
+ ![共享数据源图标](media/hlp-16datasource.png "共享数据源图标")  
 共享数据源图标  
   
 ### <a name="to-create-a-shared-data-source"></a>创建共享数据源  
   
 1.  启动 [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。  
   
-2.  在报表管理器中，导航到 **“内容”** 页。  
+2.  在报表管理器中，导航到 "**内容**" 页。  
   
 3.  单击 **“新建数据源”**。 此时，将打开 **“新建数据源”** 页。  
   
@@ -70,14 +70,13 @@ ms.locfileid: "66109605"
     > [!NOTE]  
     >  对于 XML 数据源类型，不支持“测试连接”按钮。  
   
-10. 单击 **"确定"**  
+10. 单击 **“确定”**  
   
 ### <a name="to-modify-a-shared-data-source"></a>修改共享数据源  
   
 1.  在报表管理器中，导航到“内容”页。  
   
-2.  导航到共享数据源项，悬停在该项上，单击下拉列表，然后从上下文菜单中单击“管理”****。 
-  **“属性”** 页将打开。  
+2.  导航到共享数据源项，悬停在该项上，单击下拉列表，然后从上下文菜单中单击“管理”****。 **“属性”** 页将打开。  
   
 3.  修改数据源，再单击 **“应用”**。  
   
@@ -102,6 +101,6 @@ ms.locfileid: "66109605"
  ["内容" 页 &#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [创建、修改和删除共享数据源 &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [管理报表数据源](report-data/manage-report-data-sources.md)   
- [配置报表的数据源属性 &#40;报表管理器&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [配置报表的数据源属性（报表管理器）](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

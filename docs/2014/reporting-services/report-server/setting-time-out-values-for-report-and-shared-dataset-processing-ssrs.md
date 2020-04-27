@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103213"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>为报表和共享数据集处理设置超时值 (SSRS)
@@ -55,9 +55,9 @@ ms.locfileid: "66103213"
 >  可以在 RSReportServer.config 文件中设置 `RunningRequestsDbCycle` 设置，以更改计算正在运行的作业的频率。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services 报表服务器 &#40;本机模式&#41;](reporting-services-report-server-native-mode.md)   
- [管理运行中的进程](../subscriptions/manage-a-running-process.md)   
+ [在 SharePoint 集成模式下 &#40;Reporting Services 设置处理选项&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Reporting Services 报表服务器（本机模式）](reporting-services-report-server-native-mode.md)   
+ [管理正在运行的进程](../subscriptions/manage-a-running-process.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)  
   
   

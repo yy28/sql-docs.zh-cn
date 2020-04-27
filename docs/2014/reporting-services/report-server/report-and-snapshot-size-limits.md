@@ -18,28 +18,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103540"
 ---
 # <a name="report-and-snapshot-size-limits"></a>报表和快照的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理员可以通过本主题提供的信息了解在将报表发布到报表服务器、运行时呈现报表以及将报表保存到文件系统时报表的大小限制。 本主题还提供了有关如何度量报表服务器数据库大小的实践指南，并介绍了快照大小对服务器性能的影响。  
   
 ## <a name="maximum-size-for-published-reports-and-models"></a>已发布报表和模型的最大大小  
- 在报表服务器上，报表和模型的大小基于发布到报表服务器的报表定义 (.rdl) 和报表模型 (.smdl) 文件的大小。 报表服务器不限制发布的报表或模型的大小。 但是， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]会为发布到服务器的项施加最大大小。 默认情况下，大小限制为 4 MB。 如果将超出此限制的文件上载或发布到报表服务器，就会收到 HTTP 异常。 在这种情况下，可以通过增大 Machine.config 文件中 `maxRequestLength` 元素的值来修改该默认值。  
+ 在报表服务器上，报表和模型的大小基于发布到报表服务器的报表定义 (.rdl) 和报表模型 (.smdl) 文件的大小。 报表服务器不限制发布的报表或模型的大小。 不过，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 规定了发布到服务器的项的大小上限。 默认情况下，大小限制为 4 MB。 如果将超出此限制的文件上载或发布到报表服务器，就会收到 HTTP 异常。 在这种情况下，可以通过增大 Machine.config 文件中 `maxRequestLength` 元素的值来修改该默认值。  
   
  尽管报表模型可能很大，但报表定义很少超过 4 MB。 比较常见的报表大小以千字节 (KB) 为单位。 但是，如果包括嵌入的图像，则这些图像的编码可能会造成报表定义过大（超过 4 MB 的默认值）。  
   
- 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 对发布的文件实施最大限制，以减小拒绝服务攻击对服务器的威胁。 增大上限的值会破坏此限制所提供的某些保护。 请在确信增大该值所获得的好处大于任何其他安全隐患时才这样做。  
+ [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 对发布的文件实施最大限制，以减小拒绝服务攻击对服务器的威胁。 增大上限的值会破坏此限制所提供的某些保护。 请在确信增大该值所获得的好处大于任何其他安全隐患时才这样做。  
   
  请记住，为 `maxRequestLength` 元素设置的值必须大于要强制实施的实际大小限制。 当在 SOAP 信封中封装所有参数，以及对某些参数（如 <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> 和 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 方法中的 Definition 参数）应用 Base64 编码之后，HTTP 请求大小会不可避免地增加，因此您需要设置较大的值以考虑这种情况。 Base64 编码会将原始数据增大约 33%。 因此，为 `maxRequestLength` 元素指定的值需要比实际可用项目大小高出约 33%。 例如，如果为 `maxRequestLength` 指定 64 MB 的值，则实际上可以预计发布到报表服务器的报表文件的最大大小约为 48 MB。  
   
 ## <a name="report-size-in-memory"></a>内存中的报表大小  
- 运行报表时，报表大小等于报表中返回的数据量加上输出流的大小。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对呈现报表的大小无最大限制。 系统内存决定大小的上限（默认情况下，在呈现报表时，报表服务器将使用所有可用的已配置内存），但您可以指定配置设置以设置内存阈值和内存管理策略。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。  
+ 运行报表时，报表大小等于报表中返回的数据量加上输出流的大小。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对呈现报表的大小无最大限制。 系统内存决定大小的上限（默认情况下，在呈现报表时，报表服务器将使用所有可用的已配置内存），但您可以指定配置设置以设置内存阈值和内存管理策略。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。  
   
  任何报表的大小都会因返回的数据量以及对报表使用的呈现格式而存在很大的差异。 参数化报表可能较大也可能较小，具体取决于参数值对查询结果的影响方式。 您选择的报表输出格式将通过以下方式影响报表大小：  
   
@@ -83,7 +81,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](set-report-processing-properties.md)   
- [报表服务器数据库（SSRS 本机模式）](report-server-database-ssrs-native-mode.md)   
+ [报表服务器数据库 &#40;SSRS 本机模式&#41;](report-server-database-ssrs-native-mode.md)   
  [处理大型报表](process-large-reports.md)  
   
   

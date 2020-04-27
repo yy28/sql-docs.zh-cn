@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265861"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>创建自定义报表项运行时组件
@@ -56,8 +56,7 @@ void EvaluateReportItemInstance(CustomReportItem customReportItem);
 }  
 ```  
   
- 实现 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 接口后，将为您生成两个方法存根：<xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> 和 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A>。 先调用的是 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> 方法，该方法用于设置定义属性和创建 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Image> 对象，后者将包含用于呈现相应项的定义属性和实例属性。 
-  <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A> 方法在定义对象被计算后调用，该方法可提供将用于呈现相应项的实例对象。  
+ 实现 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 接口后，将为您生成两个方法存根：<xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> 和 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A>。 先调用的是 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> 方法，该方法用于设置定义属性和创建 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Image> 对象，后者将包含用于呈现相应项的定义属性和实例属性。 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A> 方法在定义对象被计算后调用，该方法可提供将用于呈现相应项的实例对象。  
   
  以下示例是用于将相应控件名称呈现为图像的自定义报表项的实现示例。  
   
@@ -151,6 +150,6 @@ namespace Microsoft.Samples.ReportingServices
  [自定义报表项体系结构](custom-report-item-architecture.md)   
  [创建自定义报表项设计时组件](creating-a-custom-report-item-design-time-component.md)   
  [自定义报表项类库](custom-report-item-class-libraries.md)   
- [如何部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
+ [如何：部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
   
   

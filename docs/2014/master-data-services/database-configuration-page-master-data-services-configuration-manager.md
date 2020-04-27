@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f5f11ba4154b70c5aa1fd0ae0e7579c746ce744
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483187"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>“数据库配置”页（Master Data Services 配置管理器）
@@ -29,8 +29,7 @@ ms.locfileid: "65483187"
 |------------------|-----------------|  
 |**SQL Server 实例**|显示所选 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的名称。 在您连接到某一实例并选择或创建某一 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库之前，此项为空。|  
 |**Master Data Services 数据库**|显示所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的名称。 在您连接到某一实例并选择或创建某一 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库之前，此项为空。|  
-|**Master Data Services 数据库版本**|
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库架构的版本。|  
+|**Master Data Services 数据库版本**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库架构的版本。|  
 |**创建数据库**|打开 **“创建数据库”** 向导，从中您可以连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并为该实例创建 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。|  
 |**选择数据库**|打开 **“连接到数据库”** 对话框，在其中连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。|  
 |**升级数据库**|打开向导，您可以在其中升级指定的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。 仅当指定的数据库需要升级时，此按钮才会启用。|  
@@ -39,10 +38,10 @@ ms.locfileid: "65483187"
 ## <a name="system-settings"></a>系统设置  
  为与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库相关联的所有 Web 应用程序和 Web 服务编辑系统设置。  
   
- 这些设置在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中提供，并存储在数据库的系统设置表 (mdm.tblSystemSetting) 中。 有关所有设置的列表，请参阅[系统设置 (Master Data Services)](system-settings-master-data-services.md)。  
+ 这些设置在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中提供，并存储在数据库的系统设置表 (mdm.tblSystemSetting) 中。 有关所有设置的列表，请参阅[系统设置 (Master Data Services)](system-settings-master-data-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [为 Master Data Services 设置数据库和网站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [数据库要求 &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
+ [数据库要求 (Master Data Services)](install-windows/database-requirements-master-data-services.md)  
   
   

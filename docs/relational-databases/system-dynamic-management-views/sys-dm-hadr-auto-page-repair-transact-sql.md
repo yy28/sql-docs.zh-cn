@@ -21,10 +21,10 @@ ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900690"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "67900690"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id |**int**|此行对应的数据库的 ID。|  
-|file_id |**int**|页所在文件的 ID。|  
+|**database_id**|**int**|此行对应的数据库的 ID。|  
+|**file_id**|**int**|页所在文件的 ID。|  
 |**page_id**|**bigint**|文件中页的 ID。|  
-|**错误类型**|**int**|错误类型。 值可以是：<br /><br /> **-** 1 = 所有硬件823错误<br /><br /> 1 = 错误的校验和或页撕裂以外的 824 错误（例如，错误的页 ID）<br /><br /> 2 = 错误的校验和<br /><br /> 3 = 页撕裂|  
+|**error_type**|**int**|错误类型。 值可以是：<br /><br /> **-** 1 = 所有硬件823错误<br /><br /> 1 = 错误的校验和或页撕裂以外的 824 错误（例如，错误的页 ID）<br /><br /> 2 = 错误的校验和<br /><br /> 3 = 页撕裂|  
 |**page_status**|**int**|页修复尝试的状态：<br /><br /> 2 = 排队等候来自伙伴的请求。<br /><br /> 3 = 请求已发送到伙伴。<br /><br /> 4 = 已成功修复页面。<br /><br /> 5 = 上一次尝试时无法修复页面/自动页修复将再次尝试修复页面。|  
 |**modification_time**|**datetime**|页状态最后发生更改的时间。|  
   

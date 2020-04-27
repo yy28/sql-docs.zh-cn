@@ -12,10 +12,10 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904888"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>使用示例控制台脚本文件（MySQLToSQL）
@@ -54,7 +54,7 @@ ms.locfileid: "67904888"
   
     有关生成报表的详细信息，请参阅[&#40;MySQLToSQL&#41;中生成报表](../../ssma/mysql/generating-reports-mysqltosql.md)。  
   
-    **本票**  
+    **注意：**  
   
     -   确保将变量值 file 命令行参数传递到控制台应用程序，并以用户指定的值更新 VariableValueFileSample。  
   
@@ -73,19 +73,19 @@ ms.locfileid: "67904888"
 -   **ConversionAndDataMigrationSample：**  
      使用此示例，用户可以执行端到端迁移，从转换到数据迁移。 下面列出了需要更改的必需属性值的列表：  
   
-    **命令名称**  
+    **命令名：**  
   
     `map-schema`  
   
     将源数据库映射到目标架构的架构。  
   
-    **Attribute**  
+    **属性**  
   
     -   `source-schema:`指定需要转换的源数据库。  
   
     -   `sql-server-schema`：指定要迁移到的目标数据库  
   
-    **命令名称**  
+    **命令名：**  
   
     `convert-schema`  
   
@@ -93,11 +93,11 @@ ms.locfileid: "67904888"
   
     2.  如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`convert-schema`控制台脚本文件的命令示例4中所示。  
   
-    **Attribute**  
+    **属性**  
   
     `object-name`：指定需要转换的源数据库/对象名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`  
   
-    **命令名称**  
+    **命令名：**  
   
     `synchronize-target`  
   
@@ -105,11 +105,11 @@ ms.locfileid: "67904888"
   
     2.  如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`synchronize-target`控制台脚本文件的命令示例3中所示。  
   
-    **Attribute**  
+    **属性**  
   
     `object-name:`指定需要创建的 sql server 数据库/对象名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`  
   
-    **命令名称**  
+    **命令名：**  
   
     `migrate-data`  
   
@@ -117,7 +117,7 @@ ms.locfileid: "67904888"
   
     2.  如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`migrate-data`控制台脚本文件的命令示例2中所示。  
   
-    **Attribute**  
+    **属性**  
   
     `object-name:`指定需要迁移的源数据库/表名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`  
   

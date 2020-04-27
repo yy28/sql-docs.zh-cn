@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a47169bc3c628e4bf33fb9ed6a19e612320b585c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105269"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 函数（报表生成器和 SSRS）
@@ -41,11 +41,9 @@ First(expression, scope)
  视表达式的类型而定。  
   
 ## <a name="remarks"></a>备注  
- 
-  `First` 函数返回在指定作用域中应用所有排序和筛选后的一组数据的第一个值。  
+ `First` 函数返回在指定作用域中应用所有排序和筛选后的一组数据的第一个值。  
   
- 
-  `First` 函数只能用在当前作用域（默认）相关的组筛选表达式中。  
+ `First` 函数只能用在当前作用域（默认）相关的组筛选表达式中。  
   
  您还可以在页眉中使用 `First` 函数，返回 `ReportItems` 集合中属于某页面的第一个值，以便在页面中生成显示首项和尾项的字典样式标题。  
   

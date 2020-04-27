@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480149"
 ---
 # <a name="attributes-master-data-services"></a>属性 (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "65480149"
   
  ![表示为表的 Master Data Services 实体](../../2014/master-data-services/media/mds-conc-entity-table.gif "表示为表的 Master Data Services 实体")  
   
- 创建包含很多属性的实体时，可以将属性组织为属性组。 有关详细信息，请参阅[属性组 (Master Data Services)](attribute-groups-master-data-services.md)。  
+ 创建包含很多属性的实体时，可以将属性组织为属性组。 有关详细信息，请参阅 [属性组 (Master Data Services)](attribute-groups-master-data-services.md)。  
   
 ## <a name="required-attributes"></a>必需的属性  
  创建实体时，将自动创建 Name 和 Code 属性。 Code 需要一个值，并且必须在实体中是唯一的。 不能删除 Name 和 Code 属性。  
@@ -42,7 +42,7 @@ ms.locfileid: "65480149"
   
 -   自由格式的属性，允许针对文本、数字、日期或链接的自由格式的输入。  
   
--   基于域的属性，由实体填充。 有关详细信息，请参阅[基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)。  
+-   基于域的属性，由实体填充。 有关详细信息，请参阅 [基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)。  
   
 -   文件属性，用于存储文件、文档或图像。 文件属性旨在通过要求文件具有特定的扩展名，帮助确保数据的一致性。 文件属性不一定能够防止恶意用户上载不同类型的文件。  
   
@@ -78,25 +78,25 @@ ms.locfileid: "65480149"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新的自由格式的文本属性。|[Master Data Services 创建文本属性 &#40;&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|创建新的自由格式的数字属性。|[创建数字属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|创建新的自由格式的链接属性。|[创建链接属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|创建新的文件属性。|[创建文件属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
-|创建新的基于域的属性。|[创建基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|创建新的自由格式的文本属性。|[创建文本属性 (Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|创建新的自由格式的数字属性。|[创建数字属性 (Master Data Services)](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|创建新的自由格式的链接属性。|[创建链接属性 (Master Data Services)](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|创建新的文件属性。|[创建文件属性 (Master Data Services)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|创建新的基于域的属性。|[创建基于域的属性 (Master Data Services)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |更改现有属性的名称。|[更改属性名称 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|向更改跟踪组添加现有属性。|[将属性添加到更改跟踪组 &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|向更改跟踪组添加现有属性。|[向更改跟踪组添加属性 (Master Data Services)](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |删除现有属性。|[删除属性 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |更改属性的顺序。|[更改属性的顺序](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [属性组 &#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
+-   [属性组 (Master Data Services)](attribute-groups-master-data-services.md)  
   
 -   [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [叶权限 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [叶权限 (Master Data Services)](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [&#40;Master Data Services 的合并权限&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   

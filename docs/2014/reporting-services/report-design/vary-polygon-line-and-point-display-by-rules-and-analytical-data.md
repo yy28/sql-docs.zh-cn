@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104621"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）
@@ -43,7 +43,7 @@ ms.locfileid: "66104621"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Rules"></a> 了解规则  
+##  <a name="understanding-rules"></a><a name="Rules"></a> 了解规则  
  可以设置四种规则类型，以允许报表处理器自动调整层上地图元素的显示属性。 地图元素类型（多边性、线条或点）不同，规则也将随之不同。  
   
 -   **多边形：** 改变多边形颜色。  
@@ -54,7 +54,7 @@ ms.locfileid: "66104621"
   
 -   **点：** 对于为每个点显示的标记，改变标记颜色、标记大小和标记类型。  
   
-##  <a name="Color"></a> 了解颜色规则  
+##  <a name="understanding-color-rules"></a><a name="Color"></a> 了解颜色规则  
  颜色规则应用于多边形、线条和表示点或多边形中心点的标记的填充颜色。  
   
  颜色规则支持四个选项：  
@@ -76,28 +76,28 @@ ms.locfileid: "66104621"
   
  若要使某些值不显示在色阶中，请清除每层上每个颜色规则的色阶选项。  
   
-##  <a name="Width"></a> 了解线条宽度规则  
+##  <a name="understanding-line-width-rules"></a><a name="Width"></a> 了解线条宽度规则  
  宽度规则应用于线条。 宽度规则支持二个选项：  
   
 -   使用默认线条宽度： 指定线条宽度（磅）。  
   
 -   使用线条宽度实现数据的可视化效果： 设置线条的最小和最大宽度，指定要用于改变宽度的数据字段，然后指定要应用于该数据的分布选项。  
   
-##  <a name="Size"></a> 了解标记大小规则  
+##  <a name="understanding-marker-size-rules"></a><a name="Size"></a> 了解标记大小规则  
  大小规则应用于表示点或多边形中心点的标记。 大小规则支持二个选项：  
   
 -   使用默认标记大小： 指定大小（磅）。  
   
 -   使用大小实现数据的可视化效果： 设置标记的最小和最大大小，指定要用于改变大小的数据字段，然后指定要应用于该数据的分布选项。  
   
-##  <a name="Marker"></a> 了解标记类型规则  
+##  <a name="understanding-marker-type-rules"></a><a name="Marker"></a> 了解标记类型规则  
  标记类型规则应用于表示点或多边形中心点的标记。 标记类型规则支持二个选项：  
   
 -   使用默认标记类型： 指定可用标记类型之一。  
   
 -   使用标记实现数据的可视化效果： 指定一组标记并指定它们的使用顺序。 标记类型包括 `Circle`、`Diamond`、`Pentagon`、`PushPin`、`Rectangle`、`Star`、`Triangle`、`Trapezoid` 和 `Wedge`。  
   
-##  <a name="Distribution"></a> 了解分布选项  
+##  <a name="understanding-distribution-options"></a><a name="Distribution"></a> 了解分布选项  
  若要创建值的分布，可以将数据分成若干范围。 指定分布类型、子范围数以及范围的最小值和最大值。  
   
  在以下列表中，假定你有三个地图元素和六个具有以下值的相关分析值：1、10、200、2000、4777、8999，范围为 1 到 9999。  
@@ -112,7 +112,7 @@ ms.locfileid: "66104621"
   
  分布值由规则使用，以改变地图元素显示值。  
   
-##  <a name="Legends"></a> 了解图例和图例项  
+##  <a name="understanding-legends-and-legend-items"></a><a name="Legends"></a> 了解图例和图例项  
  自动从您为每个层指定的规则创建图例项。 规则选项控制创建多少个项以及在哪个图例中显示。 默认情况下，所有规则的所有项目都将添加到第一个图例。 若要将项移出第一个图例，请创建所需数目的其他图例，对于每个规则指定要用于显示规则所确定的项的图例。 若要基于规则隐藏项，请指定空白图例名称。  
   
  若要控制图例显示的位置，请使用“图例属性”对话框来指定相对于地图视区的位置。 有关详细信息，请参阅 [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  

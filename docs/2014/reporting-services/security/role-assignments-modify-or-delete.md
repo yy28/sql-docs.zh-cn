@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101961"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>修改或删除角色分配（报表管理器）
@@ -38,9 +38,9 @@ ms.locfileid: "66101961"
   
 1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
-2.  单击 **“网站设置”**。  
+2.  单击 **“网站设置”** 。  
   
-3.  单击 **“安全性”** 。 将按帐户名列出当前为服务器或扩展部署定义的所有系统级角色分配。  
+3.  单击 **“安全”**。 将按帐户名列出当前为服务器或扩展部署定义的所有系统级角色分配。  
   
 4.  查找要修改或删除的角色分配。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "66101961"
  （create-and-manage-role-assignments.md）   
  [角色分配](role-assignments.md)   
  ["站点设置" 页 &#40;报表管理器&#41;](../site-settings-page-report-manager.md)   
- [新系统角色分配： "编辑系统角色分配" 页 &#40;报表管理器&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [“新建系统角色分配: 编辑系统角色分配”页（报表管理器）](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

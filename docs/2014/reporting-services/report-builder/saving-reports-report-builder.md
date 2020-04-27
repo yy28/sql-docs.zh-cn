@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107633"
 ---
 # <a name="saving-reports-report-builder"></a>保存报表（报表生成器）
@@ -28,9 +28,9 @@ ms.locfileid: "66107633"
   
 -   使用报表历史记录功能将所呈现报表的各个版本作为历史记录副本保存。  
   
- 若要了解有关直接在报表服务器上查看和管理报表的详细信息，请参阅 msdn.microsoft.com 上[](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)联机丛书[中的](../report-server/reporting-services-report-server-native-mode.md)查找、查看和管理报表（报表生成器和 SSRS）和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Reporting Services 报表服务器（本机模式）](https://go.microsoft.com/fwlink/?LinkId=154888)。  
+ 若要了解有关直接在报表服务器上查看和管理报表的详细信息，请参阅 msdn.microsoft.com 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)中的[查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)和 [Reporting Services 报表服务器（本机模式）](../report-server/reporting-services-report-server-native-mode.md)。  
   
-##  <a name="SavingReportDefinitions"></a>保存报表定义  
+##  <a name="saving-report-definitions"></a><a name="SavingReportDefinitions"></a>保存报表定义  
  尽管可以将报表保存到您的计算机，但是将报表保存到报表服务器更有利。  
   
  将报表保存到报表服务器具有以下优势：  
@@ -51,22 +51,22 @@ ms.locfileid: "66107633"
   
 
   
-##  <a name="ExportingAndSavingReports"></a> 导出和保存报表  
+##  <a name="exporting-and-saving-reports"></a><a name="ExportingAndSavingReports"></a> 导出和保存报表  
  如果只有少量要存档的报表，可以考虑导出报表并将其另存为文件。 在将报表导出到其他应用程序（如 PDF 或 Excel）后，您可以将其另存为文件，并放在网络上受保护的共享目录中。 或者，如果希望在报表服务器数据库中保留报表的所有副本（不论何种格式），则可以将已保存的 PDF 或 Excel 文件作为资源项上载。 有关导出报表的详细信息，请参阅将[报表导出 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)并[将文件或报表 &#40;报表管理器&#41;上传](../reports/upload-a-file-or-report-report-manager.md)。  
   
 
   
-##  <a name="UsingFileShareDelivery"></a> 使用文件共享传递  
+##  <a name="using-file-share-delivery"></a><a name="UsingFileShareDelivery"></a> 使用文件共享传递  
  如果有大量要存档的报表，则可以创建订阅，将报表直接传递到文件系统。 对于这种方法，您必须为每个报表创建订阅，选择存储这些报表的共享文件夹，并制订用于指定文件创建时间的计划。 一旦定义订阅，报表服务器即可在无人参与的情况下运行报表，并且使用提供的计划存档报表文件。 如果只是偶尔存档报表，您也可以创建一次性的计划。 有关订阅和文件共享传递的详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“Reporting Services 中的文件传递”。  
   
 
   
-##  <a name="UsingReportHistory"></a> 使用报表历史记录  
+##  <a name="using-report-history"></a><a name="UsingReportHistory"></a> 使用报表历史记录  
  您还可以使用报表历史记录功能创建历史记录副本。 随后，您可以备份报表服务器数据库，将备份内容存储在安全的位置，以备将来使用。 所有报表历史记录（连同报表、共享数据源项、文件夹、订阅和共享计划）都存储在报表服务器数据库中。 您可以通过创建备份来维护报表历史记录和元数据（如指定报表接收人的订阅信息）的永久副本。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“管理报表历史记录”。  
   
 
   
-##  <a name="HowTo"></a> 操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作指南主题  
   
 -   [将报表保存到报表服务器（报表生成器）](save-reports-to-a-report-server-report-builder.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "66107633"
 
   
 ## <a name="see-also"></a>另请参阅  
- [报表、报表部件和报表定义（报表生成器和 SSRS）](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [报表、报表部件和报表定义 &#40;报表生成器和 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [安装、卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   
- [查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [查找、查看和管理 &#40;报表生成器和 SSRS 的报表 &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [打印报表（报表生成器和 SSRS）](print-reports-report-builder-and-ssrs.md)  
   

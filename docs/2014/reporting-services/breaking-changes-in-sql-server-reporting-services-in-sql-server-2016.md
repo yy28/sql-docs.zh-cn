@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109930"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 的 SQL Server Reporting Services 中的重大更改
@@ -32,10 +32,10 @@ ms.locfileid: "66109930"
   
 -   [SQL Server 2008 R2 Reporting Services 中的重大更改](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 重大更改  
+##  <a name="sssql14-reporting-services-breaking-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 重大更改  
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中没有针对 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的重大更改。  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 重大更改  
+##  <a name="sssql11-reporting-services-breaking-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 重大更改  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>SharePoint 模式服务器引用要求 SharePoint 网站  
  您不能在 URL 路径中使用虚拟名称来直接浏览或引用报表服务器。 例如：  
@@ -60,17 +60,15 @@ ms.locfileid: "66109930"
   
 -   在 SharePoint 模式下将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] WMI 提供程序用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的自定义应用程序。  
   
--   
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器、rskeymgmt.exe 和 rsconfig.exe。 代替使用这些实用工具配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，使用 SharePoint 管理中心和 PowerShell。  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器、rskeymgmt.exe 和 rsconfig.exe。 代替使用这些实用工具配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，使用 SharePoint 管理中心和 PowerShell。  
   
 -   SQL Server Management Studio：客户无法使用类似于 <machine_name>/<instance_name> 的语法来引用服务器。 从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 版本开始，建议的方法是使用 SharePoint 站点 URL。 例如， **http://<sharepoint_server>/<sharePoint_site>**。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，SharePoint 站点 URL 是唯一支持的语法。  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>报表模型设计器在 SQL Server Data Tools 中不提供  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 不再支持报表模型项目。 在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]中将不提供报表模型设计器。 无法在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中创建新的报表模型项目或打开现有项目，并且无法创建或更新报表模型。 若要更新报表模型，可以使用 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或更早的工具。 您可以继续使用报表模型作为在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 工具（例如报表生成器和报表设计器）中创作的报表中的数据源。 你用来创建查询以便从报表模型提取报表数据的查询设计器将继续在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中提供。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 不再支持报表模型项目。 在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]中将不提供报表模型设计器。 无法在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中创建新的报表模型项目或打开现有项目，并且无法创建或更新报表模型。 若要更新报表模型，可以使用 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或更早的工具。 您可以继续使用报表模型作为在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 工具（例如报表生成器和报表设计器）中创作的报表中的数据源。 你用来创建查询以便从报表模型提取报表数据的查询设计器将继续在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中提供。  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 重大更改  
- 本节介绍 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的重大更改。  
+##  <a name="sql-server-2008-r2-reporting-services-breaking-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 重大更改  
+ 本部分介绍中的[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]重大更改。  
   
 > [!NOTE]  
 >  因为 SQL Server 2008 R2 是 SQL Server 2008 的次版本升级，所以，我们建议您也查看 SQL Server 2008 部分的内容。  

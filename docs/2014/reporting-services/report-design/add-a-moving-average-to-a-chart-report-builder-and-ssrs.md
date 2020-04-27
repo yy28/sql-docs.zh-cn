@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 016eeebb679ee16e07a99e44a3740efaae413483
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106831"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>向图表添加移动平均线（报表生成器和 SSRS）
@@ -41,8 +41,8 @@ ms.locfileid: "66106831"
     >  期间是用来计算移动平均值的天数。 如果未在 X 轴上指定日期／时间值，该期间将由用于计算移动平均值的数据点的数量来表示。 如果只有一个数据点，移动平均值公式将不会进行计算。 移动平均值从第二个点处开始计算。 如果您指定 **“从第一点开始”** 选项，则图表将从第一个点处的移动平均值开始。 如果只有一个数据点，则计算出的移动平均值中的点将与原始序列中的第一个点一致。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
+ [设置图表格式 &#40;报表生成器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [向图表添加空点 &#40;报表生成器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
   

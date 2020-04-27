@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d190d55c45530adde1b41658c975bbfc19c0b91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482629"
 ---
 # <a name="navigational-access-master-data-services"></a>导航访问权限 (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65482629"
   
  在您向某一实体、其叶成员或其合并成员分配权限时，导航访问权限意味着您可以读取或更新所有成员的名称和代码。 您还可以读取模型名称。  
   
- **属性**  
+ **特性**  
   
  在您向某一属性分配权限时，导航访问权限意味着您可以读取或更新实体中所有成员的名称和代码。 您还可以读取模型名称。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "65482629"
  在您向集合分配权限时，您可以读取或更新名称、代码、说明和所有者 ID。 您还可以读取模型名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [如何 Master Data Services &#40;确定权限&#41;](how-permissions-are-determined-master-data-services.md)  
+ [如何确定权限 (Master Data Services)](how-permissions-are-determined-master-data-services.md)  
   
   

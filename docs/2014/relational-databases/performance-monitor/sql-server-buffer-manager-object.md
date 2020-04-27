@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250763"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server Buffer Manager 对象
-  **Buffer Manager**对象提供了计数器，用于监视[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如何使用：  
+  **Buffer Manager** 对象提供了计数器，用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用以下项：  
   
 -   存储数据页的内存。  
   
@@ -35,18 +35,17 @@ ms.locfileid: "63250763"
   
 -   是否可以通过添加更多内存或增加数据缓存或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部结构的可用内存来提高查询性能。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要从磁盘读取数据的频率。 与其他操作（例如内存访问）相比，物理 I/O 会消耗大量时间。 尽可能减少物理 I/O 可以提高查询性能。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要从磁盘读取数据的频率。 与其他操作（例如内存访问）相比，物理 I/O 会消耗大量时间。 尽可能减少物理 I/O 可以提高查询性能。  
   
 ## <a name="buffer-manager-performance-objects"></a>缓冲区管理器性能对象  
- 下表描述了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** 性能对象。  
+ 下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Buffer Manager 性能对象  。  
   
 |SQL Server Buffer Manager 计数器|说明|  
 |----------------------------------------|-----------------|  
 |**缓冲区缓存命中率**|指示在缓冲区高速缓存中找到而不需要从磁盘中读取的页的百分比。 该比率是缓存命中总次数与过去几千页访问以来的缓存查找总次数之比。 经过很长时间后，该比率的变化很小。 由于从缓存中读取数据比从磁盘中读取数据的开销小得多，一般希望该比率高一些。 通常，可以通过增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的可用内存量或使用缓冲池扩展功能来提高缓冲区缓存命中率。|  
 |**Checkpoint pages/sec**|指示由要求刷新所有脏页的检查点或其他操作每秒刷新到磁盘的页数。|  
-|**数据库页**|指示缓冲池中包含数据库内容的页数。|  
-|**扩展已分配页面**|缓冲池扩展文件中非空闲高速缓存页的总数。|  
+|**Database pages**|指示缓冲池中包含数据库内容的页数。|  
+|**Extension allocated pages**|缓冲池扩展文件中非空闲高速缓存页的总数。|  
 |**Extension free pages**|缓冲池扩展文件中空闲高速缓存页的总数。|  
 |**Extension in use as percentage**|缓冲区管理器页占用的缓冲池扩展分页文件的百分比。|  
 |**Extension outstanding IO counter**|缓冲池扩展文件的 I/O 队列长度。|  
@@ -58,15 +57,15 @@ ms.locfileid: "63250763"
 |**Lazy writes/sec**|指示缓冲区管理器惰性编写器每秒写入的缓冲区数。 “惰性编写器”** 是一个系统进程，用于成批刷新过期的脏缓冲区（包含更改的缓冲区，必须将这些更改写回磁盘，才能将缓冲区重用于其他页），并使它们可用于用户进程。 惰性编写器不需要为创建可用缓冲区而频繁执行检查点。|  
 |**Page life expectancy**|指示页面在没有引用的情况下，在此节点的缓冲池中停留的时间（以秒计）。|  
 |**Page lookups/sec**|指示每秒要求在缓冲池中查找页的请求数。|  
-|**每秒页读取数**|指示每秒发生的物理数据库页读取数。 此统计信息显示的是所有数据库间的物理页读取总数。 由于物理 I/O 的开销大，可以通过使用更大的数据缓存、智能索引、更有效的查询或更改数据库设计等方法，将开销降到最低。|  
-|**每秒页写入数**|指示每秒发出的物理数据库页写入数。|  
+|**Page reads/sec**|指示每秒发生的物理数据库页读取数。 此统计信息显示的是所有数据库间的物理页读取总数。 由于物理 I/O 的开销大，可以通过使用更大的数据缓存、智能索引、更有效的查询或更改数据库设计等方法，将开销降到最低。|  
+|**Page writes/sec**|指示每秒发出的物理数据库页写入数。|  
 |**Readahead pages/sec**|指示每秒为预期使用读取的页数。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server：缓冲区节点](sql-server-buffer-node.md)   
- [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ [服务器内存服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server，计划缓存对象](sql-server-plan-cache-object.md)   
- [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)   
+ [监视资源使用情况 &#40;系统监视器&#41;](monitor-resource-usage-system-monitor.md)   
  [sys. dm_os_performance_counters &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)  
   

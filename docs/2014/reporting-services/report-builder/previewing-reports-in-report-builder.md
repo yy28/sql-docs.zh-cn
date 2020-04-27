@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107789"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
-  当您创建报表时，经常预览报表以验证报表显示您所需的内容会非常有用。 若要预览报表，请单击 **“运行”** 。 报表将在预览模式下呈现。  
+  当您创建报表时，经常预览报表以验证报表显示您所需的内容会非常有用。 若要预览报表，请单击 **“运行”**。 报表将在预览模式下呈现。  
   
  报表生成器通过在连接到报表服务器时使用编辑会话改进了预览体验。 编辑会话创建数据缓存，并使缓存中的数据集可用于重复性的报表预览。 编辑会话并不是一种您可以直接与之交互的功能，但了解何时刷新缓存的数据集将帮助您改进预览报表时的性能并理解报表呈现变快或变慢的原因。  
   
@@ -77,10 +77,10 @@ ms.locfileid: "66107789"
   
 ## <a name="see-also"></a>另请参阅  
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [设置报表项的格式（报表生成器和 SSRS）](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](../report-design/charts-report-builder-and-ssrs.md)   
- [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [&#40;报表生成器和 SSRS 的格式设置报表项&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [表、矩阵和列表 &#40;报表生成器和 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
+ [表、矩阵和列表 &#40;报表生成器和 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [保存报表（报表生成器）](saving-reports-report-builder.md)  
   
   

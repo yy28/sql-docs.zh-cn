@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481204"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>选项（“查询结果”和“依赖关系服务”页）
@@ -28,13 +28,13 @@ ms.locfileid: "65481204"
   
 2.  [配置选项](#options)  
   
-##  <a name="open_dialog"></a>打开 "选项" （"查询结果/依赖关系服务" 页）对话框  
+##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>打开 "选项" （"查询结果/依赖关系服务" 页）对话框  
   
 1.  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，单击 "**工具**" 菜单上的 "**选项**"。  
   
 2.  展开****“查询结果”，然后单击****“依赖关系服务”。  
   
-##  <a name="options"></a> 配置选项  
+##  <a name="configure-the-options"></a><a name="options"></a>配置选项  
   
 ### <a name="options"></a>选项  
  **依赖关系服务服务器**  
@@ -48,8 +48,8 @@ ms.locfileid: "65481204"
  **用户名**  
  如果使用 SQL Server 身份验证，请提供用户名。  
   
- **权限**  
+ **密码**  
  如果使用 SQL Server 身份验证，请提供密码。  
   
- **考试**  
+ **测试**  
  单击此选项可对连接进行测试。

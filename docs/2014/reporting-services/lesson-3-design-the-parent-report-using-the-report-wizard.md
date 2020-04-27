@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108486"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 课：使用报表向导设计父报表
@@ -30,14 +30,14 @@ ms.locfileid: "66108486"
   
      随后将启动报表向导。  
   
-4.  在“数据集属性”页上的“数据源”框中，选择在**第 2 课：定义用于父报表的数据连接和数据表**中创建的 DataSet1********[](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
-    随后将自动用你在上面创建的 DataTable 更新“可用数据集”框********。  
+4.  在“数据集属性”  页上的“数据源”  框中，选择在以下课程中创建的 DataSet1：  [第 2 课：定义用于父报表的数据连接和数据表](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
+    随后将自动用你在上面创建的 DataTable 更新“可用数据集”框   。  
   
-5.  单击“下一步”。   
+5.  单击“下一步”  。  
   
 6.  在“排列字段”页中，执行以下操作  ：  
   
-    1.  将“ProductID”、“Name”、“ProductNumber”、“SafetyStockLevel”和“ReorderLevel”从“可用字段”拖至“值”框中****************************。  
+    1.  将“ProductID”、“Name”、“ProductNumber”、“SafetyStockLevel”和“ReorderLevel”从“可用字段”拖至“值”框中        。  
   
     2.  单击**sum （ProductID）**、 **sum （SafetyStockLevel）**、 **sum （ReorderLevel）** 旁的箭头，并清除**sum**选项。  
   

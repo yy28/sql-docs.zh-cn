@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108080"
 ---
 # <a name="plan-for-map-report-support"></a>计划地图报表支持
@@ -50,6 +50,6 @@ ms.locfileid: "66108080"
  有关详细信息，请[&#40;报表生成器和 SSRS&#41;的映射](report-design/maps-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表故障排除：地图报表 &#40;报表生成器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：地图报表（报表生成器和 SSRS）](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

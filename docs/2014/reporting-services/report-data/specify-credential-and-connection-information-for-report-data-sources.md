@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107041"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
@@ -126,10 +126,10 @@ ms.locfileid: "66107041"
   
  上述情况下，报表服务器使用一个您必须事先定义的无人参与的执行帐户连接到远程数据源。 由于报表服务器不能使用它的服务凭据连接到远程服务器，因此必须指定一个可由报表服务器用于建立连接的帐户。 有关创建此帐户的详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-##  <a name="DataSourceConfigurationConnections"></a>数据源配置和网络连接  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a>数据源配置和网络连接  
  下表显示了如何针对特定的凭据类型和数据处理扩展插件组合建立连接。 如果要使用自定义数据处理扩展插件，请参阅 [指定用于自定义数据处理扩展插件的连接](specify-connections-for-custom-data-processing-extensions.md)。  
   
-|类型 |**网络连接的上下文**|**数据源类型**<br /><br /> **（SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase）**|  
+|**类型**|**网络连接上下文**|**数据源类型**<br /><br /> **（SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase）**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |集成安全性|模拟当前用户|对于所有数据源类型，均使用当前的用户帐户进行连接。|  
 |Windows 凭据|模拟指定的用户|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：使用模拟用户帐户进行连接。|  
@@ -145,6 +145,6 @@ ms.locfileid: "66107041"
  [管理报表数据源](../../integration-services/connection-manager/data-sources.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
  [创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [配置报表的数据源属性 &#40;报表管理器&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [配置报表的数据源属性（报表管理器）](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

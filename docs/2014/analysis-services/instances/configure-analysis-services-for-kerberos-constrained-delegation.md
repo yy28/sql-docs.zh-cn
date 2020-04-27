@@ -11,44 +11,44 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cfceb6b2314f9e57d6d383312d9f9373f7df1621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67832923"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 约束委派配置 Analysis Services
   在配置 Analysis Services 以使用 Kerberos 身份验证时，您很可能希望实现以下两个结果中的一个或全部两个：在查询数据时让 Analysis Services 模拟某个用户标识；或者让 Analysis Services 将某个用户标识委托给下级服务。 每个方案都具有稍有不同的配置要求。 这两个方案都要求进行验证，以便确保正确完成配置。  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一款诊断工具，可帮助解决与 Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
+>  ** [!INCLUDE[msCoName](../../includes/msconame-md.md)]的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kerberos Configuration Manager**是一种诊断工具，可帮助解决与 Kerberos 相关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
  本主题包含以下各节：  
   
--   [允许 Analysis Services 模拟用户标识](#bkmk_impersonate)  
+-   [允许 Analysis Services 模拟某个用户标识](#bkmk_impersonate)  
   
--   [为受信任的委派配置 Analysis Services](#bkmk_delegate)  
+-   [配置 Analysis Services 以实现可信委托](#bkmk_delegate)  
   
--   [测试模拟或委托的标识](#bkmk_test)  
+-   [测试模拟的标识或委托的标识](#bkmk_test)  
   
 > [!NOTE]  
 >  如果与 Analysis Services 的连接是单跃点，或者您的解决方案使用 SharePoint Secure Store Service 或 Reporting Services 提供的存储的凭据，则委托不是必需的。 如果所有连接都是从 Excel 到 Analysis Services 数据库的直接连接或是以存储的凭据为基础，则可以直接使用 Kerberos（或 NTLM）而无需配置约束委托。  
 >   
 >  如果用户标识必须流经多个计算机连接（称为 "双跃点"），则需要 Kerberos 约束委派。 在 Analysis Services 数据访问针对用户标识是有条件的，并且连接请求来自某一委托服务，则使用下一节中的核对清单确保 Analysis Services 能够模拟原始调用方。 有关 Analysis Services 身份验证流的详细信息，请参阅 [Microsoft BI 身份验证和身份委托](https://go.microsoft.com/fwlink/?LinkID=286576)。  
 >   
->  Microsoft 始终建议使用约束委托而非非约束委托作为保障安全的最佳做法。 由于非约束委托允许服务标识在 *任何* 下游计算机、服务或应用程序上模拟另一个用户（正好与那些经由约束委托明确定义的服务相反），因此是一个主要的安全风险。  
+>  作为一项最佳安全配置，Microsoft 始终建议约束委派而不是非约束委派。 由于非约束委托允许服务标识在 *任何* 下游计算机、服务或应用程序上模拟另一个用户（正好与那些经由约束委托明确定义的服务相反），因此是一个主要的安全风险。  
   
-##  <a name="bkmk_impersonate"></a>允许 Analysis Services 模拟用户标识  
+##  <a name="allow-analysis-services-to-impersonate-a-user-identity"></a><a name="bkmk_impersonate"></a>允许 Analysis Services 模拟用户标识  
  为了允许上级服务（例如 Reporting Services、IIS 或 SharePoint）模拟 Analysis Services 上的用户标识，您必须针对这些服务配置 Kerberos 约束委派。 在此方案中，Analysis Services 使用委托服务提供的标识模拟当前用户，并且基于该用户标识的角色成员身份返回结果。  
   
 |任务|说明|  
 |----------|-----------------|  
-|步骤 1：确认帐户是否适合委托|请确保用于运行服务的帐户在 Active Directory 中具有正确的属性。 Active Directory 中的服务帐户不得标记为敏感帐户，也不得明确从委托方案中排除。 有关详细信息，请参阅 [理解用户帐户](https://go.microsoft.com/fwlink/?LinkId=235818)。<br /><br /> ** \* \*重要\*提示**通常，所有帐户和服务器都必须属于同一个林中的同一个 Active Directory 域或受信任的域。 但是，因为 Windows Server 2012 支持跨域边界的委托，如果域功能级别是 Windows Server 2012，您可以配置跨域边界的 Kerberos 约束委派。 另一种替代方法是，配置 Analysis Services 进行 HTTP 访问并对客户端连接使用 IIS 身份验证方法。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。|  
+|步骤 1：确认帐户是否适合委托|请确保用于运行服务的帐户在 Active Directory 中具有正确的属性。 Active Directory 中的服务帐户不得标记为敏感帐户，也不得明确从委托方案中排除。 有关详细信息，请参阅 [理解用户帐户](https://go.microsoft.com/fwlink/?LinkId=235818)。<br /><br /> ** \* \*重要\*提示**通常，所有帐户和服务器都必须属于同一个林中的同一个 Active Directory 域或受信任的域。 但是，因为 Windows Server 2012 支持跨域边界的委托，如果域功能级别是 Windows Server 2012，您可以配置跨域边界的 Kerberos 约束委派。 另一种替代方法是，配置 Analysis Services 进行 HTTP 访问并对客户端连接使用 IIS 身份验证方法。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。|  
 |步骤 2：注册 SPN|在设置约束委派前，您必须为 Analysis Services 实例注册服务主体名称 (SPN)。 在为中间层服务配置 Kerberos 约束委派时，将需要 Analysis Services SPN。 有关说明，请参阅 [SPN registration for an Analysis Services instance](spn-registration-for-an-analysis-services-instance.md) 。<br /><br /> 服务主体名称 (SPN) 指定域中为 Kerberos 身份验证配置的服务的唯一标识。 使用集成安全性的客户端连接通常请求 SPN 作为 SSPI 身份验证的一部分。 该请求被转发到 Active Directory 域控制器 (DC)，并且由 KDC 授予一个票证（如果客户端提供的 SPN 在 Active Directory 中有匹配的 SPN 注册）。|  
-|步骤 3：配置约束委派|在验证要使用的帐户和为这些帐户注册 SPN 后，下一步是为约束委派配置上级服务（例如 IIS、Reporting Services 或 SharePoint Web 服务），并且将 Analysis Services SPN 作为允许委托的特定服务列出。<br /><br /> 在 SharePoint 中运行的服务（例如 SharePoint 模式下的 Excel Services 或 Reporting Services）常常承载使用 Analysis Services 多维或表格数据的工作簿和报表。 为这些服务配置约束委派是一个常见的配置任务，并且是支持从 Excel Services 执行数据刷新所必需的。 以下链接提供 SharePoint 服务以及其他服务的说明，这些服务可能存在针对 Analysis Services 数据的下游数据连接请求：<br /><br /> [Excel services 的标识委托（Sharepoint server 2010）](https://go.microsoft.com/fwlink/?LinkId=299826)或[如何为 Kerberos 身份验证配置 sharepoint server 2010 中的 excel Services](https://support.microsoft.com/kb/2466519)<br /><br /> [PerformancePoint Services 的标识委托（SharePoint Server 2010）](https://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [SQL Server Reporting Services 的标识委托（SharePoint Server 2010）](https://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> 对于 IIS 7.0，请参阅 [配置 Windows 身份验证 (IIS 7.0)](https://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) 或 [如何配置 SQL Server 2008 Analysis Services 和 SQL 服务器 2005 Analysis Services 使用 Kerberos 身份验证](https://support.microsoft.com/kb/917409)。|  
+|步骤 3：配置约束委派|在验证要使用的帐户和为这些帐户注册 SPN 后，下一步是为约束委派配置上级服务（例如 IIS、Reporting Services 或 SharePoint Web 服务），并且将 Analysis Services SPN 作为允许委托的特定服务列出。<br /><br /> 在 SharePoint 中运行的服务（例如 SharePoint 模式下的 Excel Services 或 Reporting Services）常常承载使用 Analysis Services 多维或表格数据的工作簿和报表。 为这些服务配置约束委派是一个常见的配置任务，并且是支持从 Excel Services 执行数据刷新所必需的。 以下链接提供 SharePoint 服务以及其他服务的说明，这些服务可能存在针对 Analysis Services 数据的下游数据连接请求：<br /><br /> [Excel Services 的标识委托 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299826) 或 [如何配置 SharePoint Server 2010 中的 Excel Services 的 Kerberos 身份验证](https://support.microsoft.com/kb/2466519)<br /><br /> [针对 PerformancePoint Services 的标识委托 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [针对 SQL Server Reporting Services 的标识委托 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> 对于 IIS 7.0，请参阅 [配置 Windows 身份验证 (IIS 7.0)](https://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) 或 [如何配置 SQL Server 2008 Analysis Services 和 SQL 服务器 2005 Analysis Services 使用 Kerberos 身份验证](https://support.microsoft.com/kb/917409)。|  
 |步骤 4：测试连接|测试时，请基于不同标识从远程计算机连接，并使用与业务用户相同的应用程序来查询 Analysis Services。 您可以使用 SQL Server Profiler 来监视连接。 您应该会看到发出请求的用户标识。 有关详细信息，请参阅本节中的 [测试模拟的标识或委托的标识](#bkmk_test) 。|  
   
-##  <a name="bkmk_delegate"></a>为受信任的委派配置 Analysis Services  
+##  <a name="configure-analysis-services-for-trusted-delegation"></a><a name="bkmk_delegate"></a>为受信任的委派配置 Analysis Services  
  通过将 Analysis Services 配置为使用 Kerberos 约束委派，可允许服务模拟下级服务（例如关系数据库引擎）上的客户端标识，然后就可以像直接连接客户端一样查询数据。  
   
  针对 Analysis Services 的委托方案被限制为针对 `DirectQuery` 模式配置的表格模型。 这是 Analysis Services 可以将委托的凭据传递到其他服务的唯一情形。 在所有其他情形中（如在前一节中提到的 SharePoint 情形），Analysis Services 位于委托链的接受端。 有关 DirectQuery 的详细信息，请参阅[DirectQuery 模式（SSAS 表格）](../tabular-models/directquery-mode-ssas-tabular.md)。  
@@ -98,7 +98,7 @@ ms.locfileid: "67832923"
   
 7.  通过基于不同标识从远程客户端计算机进行连接来测试委托是否成功和查询表格模型。 您应在 SQL Server Profiler 中看到针对请求的用户标识。  
   
-##  <a name="bkmk_test"></a>测试模拟或委托的标识  
+##  <a name="test-for-impersonated-or-delegated-identity"></a><a name="bkmk_test"></a>测试模拟或委托的标识  
  使用 SQL Server Profiler 可监视正查询数据的用户的标识。  
   
 1.  在 Analysis Services 实例上启动 **SQL Server Profiler** ，然后开始一个新跟踪。  
@@ -116,6 +116,6 @@ ms.locfileid: "67832923"
  [使用 Kerberos 的相互身份验证](https://go.microsoft.com/fwlink/?LinkId=299283)   
  [连接到 Analysis Services](connect-to-analysis-services.md)   
  [Analysis Services 实例的 SPN 注册](spn-registration-for-an-analysis-services-instance.md)   
- [连接字符串属性 &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)  
+ [连接字符串属性 (Analysis Services)](connection-string-properties-analysis-services.md)  
   
   

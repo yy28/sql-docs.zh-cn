@@ -14,10 +14,10 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910611"
 ---
 # <a name="adox-properties"></a>ADOX 属性
@@ -25,9 +25,9 @@ ms.locfileid: "67910611"
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|指示目录所属的 ADO**连接**对象。|  
-|[属性](../../../ado/reference/adox-api/attributes-property-adox.md)|介绍列特性。|  
-|[群集](../../../ado/reference/adox-api/clustered-property-adox.md)|指示索引是否为聚集索引。|  
-|[Command](../../../ado/reference/adox-api/command-property-adox.md)|指定可用于创建或执行该过程的 ADO**命令**对象。|  
+|[特性](../../../ado/reference/adox-api/attributes-property-adox.md)|介绍列特性。|  
+|[聚集](../../../ado/reference/adox-api/clustered-property-adox.md)|指示索引是否为聚集索引。|  
+|[命令](../../../ado/reference/adox-api/command-property-adox.md)|指定可用于创建或执行该过程的 ADO**命令**对象。|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|指示对象的创建日期。|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|指示上次修改对象的日期。|  
@@ -38,11 +38,11 @@ ms.locfileid: "67910611"
 |[名称](../../../ado/reference/adox-api/name-property-adox.md)|指示对象的名称。|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|指示列中数值的小数位数。|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|指定表或列的父目录，以提供对特定于访问接口的属性的访问。|  
-|[Precision](../../../ado/reference/adox-api/precision-property-adox.md)|指示列中数据值的最大精度。|  
+|[精度](../../../ado/reference/adox-api/precision-property-adox.md)|指示列中数据值的最大精度。|  
 |[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|指示索引是否表示表的主键。|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|指示相关表中相关列的名称（仅限键列）。|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|指示相关表的名称。|  
-|[次序](../../../ado/reference/adox-api/sortorder-property-adox.md)|指示列的排序顺序（仅限索引列）。|  
+|[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|指示列的排序顺序（仅限索引列）。|  
 |[类型（列）](../../../ado/reference/adox-api/type-property-column-adox.md)|指示列的数据类型。|  
 |[类型（键）](../../../ado/reference/adox-api/type-property-key-adox.md)|指示密钥的数据类型。|  
 |[类型（表）](../../../ado/reference/adox-api/type-property-table-adox.md)|指示表的类型。|  

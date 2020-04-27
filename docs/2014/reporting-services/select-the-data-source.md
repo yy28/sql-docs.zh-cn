@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dab6158ba2d0854868bf60f2a73efce594b2cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101439"
 ---
 # <a name="select-the-data-source"></a>选择数据源
@@ -32,7 +32,7 @@ ms.locfileid: "66101439"
  **名称**  
  键入用于连接到数据源的名称。 数据源名称在报表中必须是唯一的。  
   
- 类型   
+ **类型**  
  选择您正在使用的数据源类型（例如，如果您使用的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]是数据库，则选择[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]）。  
   
  **连接字符串**  
@@ -49,7 +49,7 @@ ms.locfileid: "66101439"
  [嵌入和共享的数据连接或数据源 &#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services 报表服务器](../../2014/reporting-services/reporting-services-report-server.md)   
- [RSReportDesigner 配置文件](report-server/rsreportdesigner-configuration-file.md)   
+ [Rsreportdesigner.config 配置文件](report-server/rsreportdesigner-configuration-file.md)   
  [Reporting Services 中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [报表向导帮助](../../2014/reporting-services/report-wizard-help.md)  
   

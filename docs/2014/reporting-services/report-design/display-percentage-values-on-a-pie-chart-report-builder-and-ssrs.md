@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3beb87611f258d0c028b0a02b5d226864314620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106028"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>在饼图上显示百分比值（报表生成器和 SSRS）
@@ -42,8 +42,8 @@ ms.locfileid: "66106028"
 2.  在 "**图例**" `#PERCENT`的 "**自定义图例文本**" 属性中键入。  
   
 ## <a name="see-also"></a>另请参阅  
- [饼图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [设置图表上图例的格式（报表生成器和 SSRS）](chart-legend-formatting-report-builder.md)   
+ [饼图 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [设置图表上图例的格式 &#40;报表生成器和 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [在饼图外显示数据点标签 &#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   

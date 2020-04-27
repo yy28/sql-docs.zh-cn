@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104379"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>“报表属性”对话框 ->“页面设置”
@@ -33,16 +33,16 @@ ms.locfileid: "66104379"
  **纵向**  
  指定报表的页面方向。 纵向指示页面在垂直方向较长。  
   
- **横向**  
+ **纵向**  
  指定报表的页面方向。 横向指示页面在水平方向较长。  
   
  **纸张大小**  
  从列表选择大小，该列表将在“宽度”和“高度”控件中自动输入维度。 也可以选择 **“自定义大小”** ，然后更改“宽度”和“高度”控件，以反映希望使用的大小。  
   
- 宽度   
+ **宽度**  
  显示在“纸张类型”**** 列表中选择的纸张大小的宽度。  
   
- 高度   
+ **高**  
  显示在“纸张类型”**** 列表中选择的纸张大小的高度。  
   
  **返回页首**  
@@ -58,7 +58,7 @@ ms.locfileid: "66104379"
  设置报表的右边缘与报表行的右边缘之间的距离。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 中的分页（报表生成器和 SSRS）](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;报表生成器和 SSRS 中的分页&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [报表设计提示（报表生成器和 SSRS）](report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

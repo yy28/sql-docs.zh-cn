@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107723"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
@@ -31,10 +31,10 @@ ms.locfileid: "66107723"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a>以 MHTML 格式呈现  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a>以 MHTML 格式呈现  
  HTML 呈现扩展插件还可以将报表呈现为 MHTML 格式（聚合 HTML 文档的 MIME 封装）。 MHTML 扩展了 HTML 以实现在 HTML 文档中嵌入图像等编码对象。 使用 MHTML 呈现扩展插件后，可将图像、文档或其他二进制文件等资源作为报表 HTML 内的 MIME 结构嵌入单个文件中。 MHTML 报表也可用于嵌入到电子邮件中，因为所有资源都包含在报表中。 虽然实际上呈现 MHTML 的是 HTML 呈现扩展插件，但此功能也可称为 MHTML 呈现扩展插件。  
   
-##  <a name="BrowserSupport"></a>浏览器支持  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> 浏览器支持  
  此呈现扩展插件支持以下浏览器版本：  
   
 -   Internet Explorer 5.5 和更高版本  
@@ -45,7 +45,7 @@ ms.locfileid: "66107723"
   
  出于跨浏览器的考虑，呈现的报表可能因浏览器的不同而稍有差别。 例如，文本框包含名为 WritingMode 的属性。 Firefox 不支持此属性。  
   
-##  <a name="HTMLSpecificRenderingRules"></a>特定于 HTML 的呈现规则  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> 特定于 HTML 的呈现规则  
  呈现时将应用下列特定于 HTML 的规则：  
   
 -   呈现器生成一个 HTML 表结构，以包含每个 `ReportItems` 集合（如果存在多个集合）中的所有项。  
@@ -62,7 +62,7 @@ ms.locfileid: "66107723"
   
 -   所有坐标和报表项尺寸的单位均转换为毫米。 其他所有尺寸（包括样式属性）均保留其原始单位。 小于 0.2mm 的尺寸差和位置差均视为 0mm。  
   
-##  <a name="Interactivity"></a> 交互  
+##  <a name="interactivity"></a><a name="Interactivity"></a>互动  
  HTML 支持一些交互元素。 下面是对一些特定行为的说明。  
   
 ### <a name="show-and-hide"></a>显示和隐藏  
@@ -85,12 +85,12 @@ ms.locfileid: "66107723"
   
  其他搜索和查找功能由 ReportViewer Web 窗体控件提供。  
   
-##  <a name="DeviceInfo"></a> 设备信息设置  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>设备信息设置  
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置（包括以哪个模式呈现）。 有关详细信息，请参阅 [HTML Device Information Settings](../html-device-information-settings.md)。  
 
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
- [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;报表生成器和 SSRS 中的分页&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [呈现行为 &#40;报表生成器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同报表呈现扩展插件的交互功能 &#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [&#40;报表生成器和 SSRS 呈现报表项&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

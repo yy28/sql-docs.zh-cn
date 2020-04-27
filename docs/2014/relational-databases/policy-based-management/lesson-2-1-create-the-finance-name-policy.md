@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792915"
 ---
 # <a name="create-the-finance-name-policy"></a>创建 Finance Name 策略
-  在此任务中，您将创建一个名为 "财务" 的数据库，然后创建要求所有表以字母 " **fintbl 开头**" 开头的条件。 然后，将创建一个策略和策略类别，强制 Finance 数据库中的表执行某一命名标准。  
+  在本任务中，将创建一个名为 Finance 的数据库，然后创建一个要求所有表以字母 **fintbl**开头的条件。 然后，将创建一个策略和策略类别，强制 Finance 数据库中的表执行某一命名标准。  
   
 ### <a name="to-create-the-finance-database"></a>创建 Finance 数据库  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67792915"
   
 1.  在对象资源管理器中，展开“管理”****，右键单击“策略管理”****，然后单击“管理类别”****。  
   
-2.  在 "**管理策略类别**" 对话框中的 "**名称**" `Finance`下，键入空白框，然后清除 "托管**数据库订阅**"。 "强制**数据库订阅**" 将强制实例中的每个数据库订阅属于该策略类别的策略。 在本课中，只有 Finance 数据库应订阅 Finance Name 策略。  
+2.  在 "**管理策略类别**" 对话框中的 "**名称**" `Finance`下，键入空白框，然后清除 "托管**数据库订阅**"。 “托管数据库订阅”**** 将强制实例中的每个数据库订阅属于该策略类别的策略。 在本课中，只有 Finance 数据库应订阅 Finance Name 策略。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

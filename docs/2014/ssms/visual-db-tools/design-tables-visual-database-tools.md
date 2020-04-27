@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316152"
 ---
 # <a name="design-tables-visual-database-tools"></a>设计表 (Visual Database Tools)
   表设计器的整个窗口都用于单个表的设计。 本部分中的主题介绍如何使用表设计器创建和修改数据库表：  
   
 ## <a name="in-this-section"></a>本节内容  
- [&#40;Visual Database Tools 打开表设计器&#41;](visual-database-tools.md)  
+ [打开表设计器 (Visual Database Tools)](visual-database-tools.md)  
  打开新的或现有的数据库表。  
   
- [&#40;Visual Database Tools 表设计器中保存工作&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
+ [在表设计器中保存工作 (Visual Database Tools)](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
  保存对表设计器中特定表或所有打开的表做出的更改。  
   
   

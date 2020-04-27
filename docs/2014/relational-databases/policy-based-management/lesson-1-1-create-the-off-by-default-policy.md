@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792926"
 ---
 # <a name="create-the-off-by-default-policy"></a>创建 Off By Default 策略
@@ -28,7 +28,7 @@ ms.locfileid: "67792926"
   
 3.  在“方面”**** 框中，确认选择了“外围应用配置器”**** 方面。  
   
-4.  在“表达式”**** 区域中，在“字段”**** 框中选择“**DatabaseMailEnabled”\@**，在“运算符”**** 框中选择“**”=**，然后在“值”**** 框中选择“False”****。  
+4.  在“表达式”**** 区域中，在“字段”**** 框中选择“\@DatabaseMailEnabled”****，在“运算符”**** 框中选择“=”****，然后在“值”**** 框中选择“False”****。  
   
 5.  在“说明”**** 页上输入条件说明，然后单击“确定”**** 以创建条件。  
   

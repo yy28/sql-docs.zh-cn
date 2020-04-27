@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c96ae889017eab71378b91eeb1a9ea1881fb25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103501"
 ---
 # <a name="rename-a-report-server-computer"></a>重命名报表服务器计算机
-  重命名计算机将导致相应地更改 Web 服务器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称（如果是在同一台计算机上）。 在某些情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，在计算机名称更改后可能无法访问。 请使用本主题中提供的步骤在计算机名称更改之后重新配置报表服务器。  
+  重命名计算机将导致相应地更改 Web 服务器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称（如果是在同一台计算机上）。 在某些情况下，在计算机名称发生更改之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能无法访问。 请使用本主题中提供的步骤在计算机名称更改之后重新配置报表服务器。  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>重命名 SQL Server 数据库引擎  
  如果要重命名运行报表服务器数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，请执行下列操作：  
@@ -29,7 +29,7 @@ ms.locfileid: "66103501"
   
 2.  打开“数据库安装”页。  
   
-3.  在 **“服务器名称”** 中，键入或选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名称，再单击 **“连接”**。  
+3.  在 **“服务器名称”** 中，键入或选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名称，再单击 **“连接”** 。  
   
 4.  单击“应用”  。  
   
@@ -48,8 +48,8 @@ ms.locfileid: "66103501"
 ## <a name="see-also"></a>另请参阅  
  [Rsreportserver.config 配置文件](rsreportserver-config-configuration-file.md)   
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services 报表服务器 &#40;本机模式&#41;](reporting-services-report-server-native-mode.md)   
+ [Reporting Services 报表服务器（本机模式）](reporting-services-report-server-native-mode.md)   
  [启动和停止报表服务器服务](start-and-stop-the-report-server-service.md)   
- [rsconfig 实用工具 &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)  
+ [rsconfig 实用工具 (SSRS)](../tools/rsconfig-utility-ssrs.md)  
   
   

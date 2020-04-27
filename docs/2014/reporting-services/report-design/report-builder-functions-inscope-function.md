@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105253"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 函数（报表生成器和 SSRS）
@@ -41,8 +41,7 @@ InScope(scope)
   
  *Scope* 不能是表达式。  
   
- 
-  `InScope` 函数通常用在具有动态作用域的数据区域中。 例如，`InScope` 可在数据区域单元格的钻取链接中使用，以便提供不同的报表名称和不同的参数集，具体取决于所单击的单元格。 应用示例如下：  
+ `InScope` 函数通常用在具有动态作用域的数据区域中。 例如，`InScope` 可在数据区域单元格的钻取链接中使用，以便提供不同的报表名称和不同的参数集，具体取决于所单击的单元格。 应用示例如下：  
   
 -   如果单击的单元格位于 `ProductDetail` 组，则以下在钻取链接中用作报表名称的表达式将打开 `Month` 报表；否则将打开 `ProductSummary` 报表。  
   
@@ -50,7 +49,7 @@ InScope(scope)
     =Iif(InScope("Month"), "ProductDetail", "ProductSummary")  
     ```  
   
--   仅当单击的单元位于 `Omit` 组时，以下在钻取报表参数的 `Product` 属性中使用的表达式才会将参数传递到目标报表。  
+-   仅当单击的单元位于 `Product` 组时，以下在钻取报表参数的 `Omit` 属性中使用的表达式才会将参数传递到目标报表。  
   
     ```  
     =Not(InScope("Product"))  

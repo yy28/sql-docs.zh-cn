@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482804"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>加载数据（用于 Excel 的 MDS 外接程序）
@@ -31,7 +31,7 @@ ms.locfileid: "65482804"
  可以在加载前筛选数据，以限制要下载的数据量。 这包括选择要加载的属性（列）、属性的显示顺序，以及要处理的成员（数据行）。 有关详细信息，请参阅[在加载前筛选数据 &#40;MDS Add-in for Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)。  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>自动连接和加载常用数据  
- 如果总要连接同一服务器并加载相同的一组数据，您可以创建快捷查询文件，其中包含连接和筛选器信息。 有关查询文件的详细信息，请参阅[快捷查询文件（用于 Excel 的 MDS 外接程序）](shortcut-query-files-mds-add-in-for-excel.md)。  
+ 如果总要连接同一服务器并加载相同的一组数据，您可以创建快捷查询文件，其中包含连接和筛选器信息。 有关查询文件的详细信息，请参阅 [快捷查询文件（用于 Excel 的 MDS 外接程序）](shortcut-query-files-mds-add-in-for-excel.md)。  
   
 ## <a name="refreshing-data"></a>刷新数据  
  在您加载 MDS 存储库中的数据后，其他用户可能更新这些数据。 可以检索此数据，而不会丢失对非 MDS 数据所做的更改。 有关详细信息，请参阅[刷新数据（用于 Excel 的 MDS 外接程序）](refreshing-data-mds-add-in-for-excel.md)。  
@@ -42,16 +42,16 @@ ms.locfileid: "65482804"
 |----------------------|-----------|  
 |将 MDS 数据加载到 Excel 中之前先对其进行筛选。|[在加载 &#40;MDS Add-in for Excel 前筛选数据&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |将 MDS 数据加载到 Excel 中。|[将数据从 MDS 加载到 Excel](export-data-to-excel-from-master-data-services.md)|  
-|下载数据前更改列的顺序。|[重新排列列 &#40;MDS Add-in for Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
+|下载数据前更改列的顺序。|[对列重新排序（用于 Excel 的 MDS 外接程序）](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [连接 &#40;MDS Add-in for Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [连接（用于 Excel 的 MDS 外接程序）](connections-mds-add-in-for-excel.md)  
   
--   [快捷查询文件 &#40;MDS Add-in for Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [快捷查询文件（用于 Excel 的 MDS 外接程序）](shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Master Data Services Add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [用于 Microsoft Excel 的 Master Data Services 外接程序](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [安全 &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [安全性 (Master Data Services)](../security-master-data-services.md)  
   
   

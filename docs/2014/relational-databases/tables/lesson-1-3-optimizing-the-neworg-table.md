@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110064"
 ---
 # <a name="optimizing-the-neworg-table"></a>优化 NewOrg 表
   在使用[现有层次结构数据填充表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)任务中创建的`hierarchyid` **NewOrd**表包含所有雇员信息，并使用数据类型表示层次结构。 此任务添加了新的索引，以便支持对 `hierarchyid` 列的搜索。  
   
 ## <a name="clustered-index"></a>聚集索引  
- 列（**OrgNode**）是 NewOrg 表的主键。 **** `hierarchyid` 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”**** 列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
+ 列（**OrgNode**）是 NewOrg 表的主键。 **NewOrg** `hierarchyid` 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”**** 列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
   
 ## <a name="nonclustered-index"></a>非聚集索引  
  此步骤将创建两个非聚集索引，用于支持典型搜索。  
@@ -95,7 +95,7 @@ ms.locfileid: "66110064"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **雇员 id**优先索引：行以**雇员 id**顺序存储。  
+     **EmployeeID**优先索引：各行按照 **EmployeeID** 顺序存储。  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   

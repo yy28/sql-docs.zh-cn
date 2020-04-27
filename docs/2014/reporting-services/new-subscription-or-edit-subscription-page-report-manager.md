@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 968362b2835c0e76f2a44c44e6cd427af863e8e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108140"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>“新建订阅”或“编辑订阅”页（报表管理器）
@@ -44,7 +44,7 @@ ms.locfileid: "66108140"
  **传递者**  
  选择用于分发报表的传递扩展插件。 根据选定的传递扩展插件，会显示下列设置：  
   
--   电子邮件订阅提供了电子邮件用户所熟悉的字段（例如， **“收件人”**、 **“主题”** 和 **“优先级”** 字段）。 指定 **“包括报表”** 可以嵌入或附加报表，而指定 **“包括链接”** 可以将 URL 包括在报表中。 指定 **“呈现格式”** 可以选择附加报表或嵌入报表的显示格式。  
+-   电子邮件订阅提供了电子邮件用户所熟悉的字段（例如，"发**到**"、"**主题**" 和 "**优先级**" 字段）。 指定 **“包括报表”** 可以嵌入或附加报表，而指定 **“包括链接”** 可以将 URL 包括在报表中。 指定 **“呈现格式”** 可以选择附加报表或嵌入报表的显示格式。  
   
 -   文件共享订阅提供了允许您指定目标位置的字段。 您可以将任何报表传递到文件共享位置。 但是，支持交互式功能的报表（包括支持深化以及支持行和列的矩阵报表）将以静态文件的形式呈现。 无法查看静态文件中的深化行和深化列。 必须以通用命名约定（UNC）格式指定文件共享名（例如， \\\mycomputer\public\myreportfiles）。 不能在路径名的末尾包含反斜杠。 报表文件将以基于呈现格式的文件格式进行传递（例如，如果选择 **Excel**，则报表以 .xls 文件格式进行传递）。  
   
