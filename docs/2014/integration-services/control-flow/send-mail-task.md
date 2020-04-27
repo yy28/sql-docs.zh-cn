@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830391"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
@@ -69,9 +69,9 @@ ms.locfileid: "62830391"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [&#40;常规页发送邮件任务编辑器&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [发送邮件任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [&#40;邮件页发送邮件任务编辑器&#41;](../send-mail-task-editor-mail-page.md)  
+-   [发送邮件任务编辑器（“邮件”页）](../send-mail-task-editor-mail-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

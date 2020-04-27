@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842532"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>对内存优化哈希索引的常见性能问题进行故障排除
@@ -73,6 +73,6 @@ WITH (MEMORY_OPTIMIZED = ON)
  请注意，如果对于某一给定的索引键值存在许多重复行，则内存优化的哈希索引不会达到最佳性能：在该示例中，如果针对 o_id 列的唯一值的数目远小于该表中的行数，则在 (o_id) 上添加索引并非最佳选择；将索引 index PK_od 的类型从哈希更改为非聚集应该是更好的解决方法。 有关详细信息，请参阅 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [内存优化的表的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [内存优化表上的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829463"
 ---
 # <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务
@@ -106,7 +106,7 @@ ms.locfileid: "62829463"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [&#40;常规页传输 SQL Server 对象任务编辑器&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [传输 SQL Server 对象任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
 -   [传输 SQL Server 对象任务编辑器（“对象”页）](../transfer-sql-server-objects-task-editor-objects-page.md)  
   

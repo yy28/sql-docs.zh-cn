@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830146"
 ---
 # <a name="transfer-database-task"></a>传输数据库任务
@@ -71,9 +71,9 @@ ms.locfileid: "62830146"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [传输数据库任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [传输数据库任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [传输数据库任务编辑器 &#40;数据库 "页&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [传输数据库任务编辑器（“数据库”页）](../transfer-database-task-editor-databases-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

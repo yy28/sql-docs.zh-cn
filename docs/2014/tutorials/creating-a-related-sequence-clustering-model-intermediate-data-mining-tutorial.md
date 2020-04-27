@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62855869"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>创建相关的顺序分析和聚类分析模型（数据挖掘中级教程）
@@ -34,7 +34,7 @@ ms.locfileid: "62855869"
   
      对于本教程，请键入名称`Sequence Clustering`。  
   
-4.  单击“确定”。   
+4.  单击" **确定**"。  
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>从挖掘模型中删除列  
   
@@ -68,6 +68,6 @@ ms.locfileid: "62855869"
  [对顺序分析和聚类分析模型创建预测 &#40;中间数据挖掘教程&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘 &#40;处理要求和注意事项&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

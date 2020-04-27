@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842396"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>系统视图、存储过程、内存中 OLTP 的 DMV 和等待类型
@@ -24,14 +24,14 @@ ms.locfileid: "62842396"
   
 |系统视图|说明|内存中 OLTP 功能|  
 |-----------------|-----------------|-----------------------------|  
-|[sys. data_spaces &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|检查文件组是否包含内存优化的数据。|以下列显示其他值： **type**和**type_desc**。|  
+|[sys.data_spaces (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|检查文件组是否包含内存优化的数据。|以下列显示其他值： **type**和**type_desc**。|  
 |[sys.indexes (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|检查内存优化表中是否存在索引。|以下列显示其他值： **type**和**type_desc**。|  
-|[sys. parameters &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|检查参数是否非 Null（这样可更高效地执行本机编译存储过程）。|**is_nullable**列。|  
+|[sys.parameters (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|检查参数是否非 Null（这样可更高效地执行本机编译存储过程）。|**is_nullable**列。|  
 |[sys. all_sql_modules &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|检查存储过程是否是本机编译存储过程。|**uses_native_compilation**列。|  
 |[sys.sql_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|检查存储过程是否是本机编译存储过程。|**uses_native_compilation**列。|  
 |[sys. table_types &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|检查表是否经过内存优化。|**is_memory_optimized**列。|  
 |[sys.tables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|检查表是否经过内存优化，并检查表的持久性设置。|**持续**性、 **durability_desc**和**is_memory_optimized**列。|  
-|[sys. hash_indexes &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|显示内存优化表的哈希索引。|特定的内存中 OLTP。|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|显示内存优化表的哈希索引。|特定的内存中 OLTP。|  
   
 ### <a name="metadata-functions"></a>元数据函数  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62842396"
 ## <a name="wait-types"></a>等待类型  
  存在几个支持内存中 OLTP 的等待类型。  
   
- 有关详细信息，请参阅 XTPPROC 中**WAIT_XTP**带前缀的等待类型和[dm_os_wait_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)主题中的**** 。  
+ 有关详细信息，请参阅 XTPPROC 中**WAIT_XTP**带前缀的等待类型和[dm_os_wait_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)主题中的**XTPPROC** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [内存中 OLTP &#40;内存中优化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   

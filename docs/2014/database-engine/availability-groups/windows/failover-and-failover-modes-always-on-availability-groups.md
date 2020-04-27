@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814480"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
@@ -32,15 +32,15 @@ ms.locfileid: "62814480"
   
  “故障转移模式”** 属性指定某一给定可用性副本支持的故障转移形式。 对于某一给定的可用性副本，可能的故障转移模式取决于该副本的[可用性模式](availability-modes-always-on-availability-groups.md)，如下所示：  
   
--   **同步提交副本**支持两个设置-自动或手动。 “自动”设置支持自动故障转移和手动故障转移。 为了防止丢失数据，自动故障转移和计划的故障转移要求故障转移目标为同步提交的辅助副本且处于正常同步状态（这表示故障转移目标上的每个辅助数据库与相应的主数据库同步）。 只要某一辅助副本不满足这两个条件，它就仅支持强制故障转移。 请注意，强制故障转移还支持角色处于“正在解析”状态的副本。  
+-   同步提交副本支持两种设置：自动或手动****。 “自动”设置支持自动故障转移和手动故障转移。 为了防止丢失数据，自动故障转移和计划的故障转移要求故障转移目标为同步提交的辅助副本且处于正常同步状态（这表示故障转移目标上的每个辅助数据库与相应的主数据库同步）。 只要某一辅助副本不满足这两个条件，它就仅支持强制故障转移。 请注意，强制故障转移还支持角色处于“正在解析”状态的副本。  
   
--   **异步提交副本**仅支持手动故障转移模式。 此外，因为它们永远不会同步，所以它们仅支持强制故障转移。  
+-   **异步提交副本** 仅支持手动故障转移模式。 此外，因为它们永远不会同步，所以它们仅支持强制故障转移。  
   
 > [!NOTE]  
 >  故障转移后，需要访问主数据库的客户端应用程序必须连接到新的主副本。 此外，如果新的辅助副本配置为允许只读访问，则只读客户端应用程序可以连接到它。 有关客户端如何连接到可用性组的信息，请参阅[可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)。  
   
   
-##  <a name="TermsAndDefinitions"></a>术语和定义  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>术语和定义  
  自动故障转移 (automatic failover)  
  在丢失主副本时自动发生的故障转移。 仅当当前主副本和一个辅助副本同时配置为使用自动故障转移模式，并且辅助副本当前已同步时，才支持自动故障转移。  如果主副本或辅助副本的故障转移模式设置为手动，则不能发生自动故障转移。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62814480"
  [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]  
  在给定的可用性组内，其运行状态当前为联机的所有可用性副本的集合，而不考虑可用性模式和故障转移模式。 仅在当前没有辅助副本与主要副本同步时， [!INCLUDE[ssFosEntire](../../../includes/ssfosentire-md.md)]才会变为相关。  
   
-##  <a name="Overview"></a>故障转移概述  
+##  <a name="overview-of-failover"></a><a name="Overview"></a>故障转移概述  
  下表概述了在不同的可用性和故障转移模式下支持的故障转移形式。 对于每个对，有效的可用性模式和故障转移模式由主副本的模式和一个或多个辅助副本的模式的交集决定。  
   
 ||异步提交模式|同步提交模式（手动故障转移模式）|同步提交模式（自动故障转移模式）|  
@@ -99,16 +99,16 @@ ms.locfileid: "62814480"
   
  ![主副本配置对故障转移的影响](../../media/aoag-failoversetexample.gif "主副本配置对故障转移的影响")  
   
-##  <a name="AutomaticFailover"></a>自动故障转移  
+##  <a name="automatic-failover"></a><a name="AutomaticFailover"></a>自动故障转移  
  在主副本变得不可用之后，自动故障转移将导致合格的辅助副本自动转换为主角色。 当承载主副本的 WSFC 节点对于承载辅助副本的节点而言为本地节点时，自动故障转移最适合。 这是因为数据同步最适合于计算机之间的低消息延迟时间情况以及因为客户端连接可以保持为本地。  
   
   
-###  <a name="RequiredConditions"></a>自动故障转移所需的条件  
+###  <a name="conditions-required-for-an-automatic-failover"></a><a name="RequiredConditions"></a>自动故障转移所需的条件  
  仅在以下条件下才发生自动故障转移：  
   
 -   存在自动故障转移集。 此自动故障转移集由主要副本和次要副本（自动故障转移目标**）构成，主要副本和次要副本都配置为同步提交模式并且设置为自动故障转移。 HYPERLINK“file:///C:\\\Users\\\marshow\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\6fe88e12-4df1-4025-ba24-7579635ccecf\\\HTM\\\html\\\29e0ac5d-eb58-4801-82b9-e278f08db920”如果主要副本设置为手动故障转移，即使次要副本设置为自动故障转移，也无法发生自动故障转移。  
   
-     有关详细信息，请参阅[可用性模式 &#40;AlwaysOn 可用性组&#41;](availability-modes-always-on-availability-groups.md)。  
+     有关详细信息，请参阅[可用性模式（AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。  
   
 -   自动故障转移目标具有正常运行的同步状态（这指示故障转移目标上的每个辅助数据库都与其相应的主数据库同步）。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62814480"
   
 -   主副本已变得不可用，并且由灵活的故障转移策略定义的故障转移条件级别已得到满足。 有关故障转移条件级别的信息，请参阅 [针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](flexible-automatic-failover-policy-availability-group.md)。  
   
-###  <a name="HowAutoFoWorks"></a>自动故障转移的工作原理  
+###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a>自动故障转移的工作原理  
  自动故障转移将启动以下操作序列：  
   
 1.  如果承载当前主副本的服务器实例仍在运行，则它会将主数据库的状态更改为“已断开连接”并断开所有客户端的连接。  
@@ -137,7 +137,7 @@ ms.locfileid: "62814480"
   
 4.  然后，当承载先前主副本的服务器实例重新启动时，它将识别出其他可用性副本现在拥有主角色。 以前的主副本将转换为辅助角色，并且其数据库将成为辅助数据库。 新的辅助副本连接到当前主副本，并尽快将其数据库更新为当前主数据库。 只要新的辅助副本重新同步了其数据库，就可以再次执行故障转移，但按反向执行。  
   
-###  <a name="EnableAutoFo"></a>配置自动故障转移  
+###  <a name="to-configure-automatic-failover"></a><a name="EnableAutoFo"></a>配置自动故障转移  
  可用性副本可以配置为支持在任何一点进行自动故障转移。  
   
  **配置自动故障转移**  
@@ -148,7 +148,7 @@ ms.locfileid: "62814480"
   
 3.  更改可用性组的灵活故障转移策略，以指定可以导致自动故障转移的故障类别，此功能为可选的。 有关详细信息，请参阅[配置灵活的故障转移策略以控制自动故障转移的条件（AlwaysOn 可用性组）](configure-flexible-automatic-failover-policy.md)HYPERLINK“file:///C:\\\Users\\\marshow\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\6a8d98a9-6e6a-40d1-9809-efa9013d7452\\\HTM\\\html\\\1ed564b4-9835-4245-ae35-9ba67419a4ce”和[故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)。  
   
-##  <a name="ManualFailover"></a>计划的手动故障转移（无数据丢失）  
+##  <a name="planned-manual-failover-without-data-loss"></a><a name="ManualFailover"></a>计划的手动故障转移（无数据丢失）  
  在数据库管理员针对承载目标辅助副本的服务器实例发出手动故障转移命令后，手动故障转移将导致已同步的辅助副本转换为主角色。 为了支持手动故障转移，辅助副本和当前主副本必须同时配置为同步提交模式（如果有）。 可用性副本上的每个辅助数据库都必须加入到可用性组中，并与其对应的主数据库同步（也即，必须同步辅助副本）。 这可确保对先前主数据库提交的每个事务也对新的主数据库提交。 因此，新的主数据库与旧的主数据库完全相同。  
   
  下图说明计划的故障转移的各个阶段：  
@@ -162,7 +162,7 @@ ms.locfileid: "62814480"
  ![计划的手动故障转移图释](../../media/aoag-plannedmanualfailover.gif "计划的手动故障转移图释")  
   
   
-###  <a name="ManualFailoverConditions"></a>手动故障转移所需的条件  
+###  <a name="conditions-required-for-a-manual-failover"></a><a name="ManualFailoverConditions"></a> 手动故障转移所需条件  
  为了支持手动故障转移，当前主副本必须设置为同步提交模式，而辅助副本必须：  
   
 -   配置为同步提交模式。  
@@ -171,7 +171,7 @@ ms.locfileid: "62814480"
   
  若要手动对可用性组执行故障转移，您必须连接到将成为新的主副本的辅助副本。  
   
-###  <a name="ManualFailoverHowWorks"></a>计划的手动故障转移的工作原理  
+###  <a name="how-a-planned-manual-failover-works"></a><a name="ManualFailoverHowWorks"></a>计划的手动故障转移的工作原理  
  计划的手动故障转移（必须在目标辅助副本上启动）将启动以下操作序列：  
   
 1.  为了确保在原始主数据库上不发生任何新的用户事务，WSFC 群集向主副本发送要求脱机的请求。  
@@ -192,22 +192,22 @@ ms.locfileid: "62814480"
   
  执行故障转移后，客户端必须重新连接到当前的主数据库。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)概念。  
   
-###  <a name="ManualFailoverDuringUpgrades"></a>升级期间维护可用性  
+###  <a name="maintaining-availability-during-upgrades"></a><a name="ManualFailoverDuringUpgrades"></a>升级期间维护可用性  
  当您升级硬件或软件时，可用性组的数据库管理员可以使用手动故障转移来维护数据库可用性。 若要将可用性组用于软件升级，承载目标辅助副本的服务器实例和/或计算机节点必须已经收到升级。 有关详细信息，请参阅 [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](upgrading-always-on-availability-group-replica-instances.md)。  
   
-##  <a name="ForcedFailover"></a>强制故障转移（可能造成数据丢失）  
+##  <a name="forced-failover-with-possible-data-loss"></a><a name="ForcedFailover"></a>强制故障转移（可能造成数据丢失）  
  强制执行可用性组的故障转移（可能丢失数据）是一种灾难恢复方法，可使你使用次要副本作为热备用服务器。因为强制执行故障转移可能面临数据丢失的风险，因此应审慎使用它。 建议仅当您必须立即将服务还原到可用性数据库并愿意承担数据丢失的风险时，才执行强制故障转移。 有关强制故障转移的先决条件和建议，以及使用强制故障转移从灾难性故障中恢复的示例应用场景的详细信息，请参阅 [执行可用性组的强制手动故障转移 (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
 > [!WARNING]  
 >  强制故障转移要求 WSFC 群集具有仲裁。 有关配置仲裁和强制仲裁的信息，请参阅 [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
   
-###  <a name="ForcedFailoverHowWorks"></a>强制故障转移的工作原理  
+###  <a name="how-forced-failover-works"></a><a name="ForcedFailoverHowWorks"></a>强制故障转移的工作原理  
  强制故障转移会启动一个将主角色转换为角色处于辅助或正在解析状态的目标副本的过程。 故障转移目标成为新的主副本，并立即将其数据库副本提供给客户端。 当以前的主副本变得可用时，它将转换为辅助角色，并且其数据库将成为辅助数据库。  
   
  所有辅助数据库（包括现在变得可用的以前的主数据库）将挂起。 根据挂起的辅助数据库以前的数据同步状态，它可能适合于补救该主数据库的未能提交的数据。 在配置为只读访问的辅助副本上，您可以查询辅助数据库以手动发现丢失的数据。 然后，您可以对新的主数据库发出 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句来进行必要的更改。  
   
-###  <a name="ForcedFailoverRisks"></a>强制故障转移的风险  
+###  <a name="risks-of-forcing-failover"></a><a name="ForcedFailoverRisks"></a>强制故障转移的风险  
  一定要注意，强制故障转移可能会造成数据丢失。 这是因为目标副本无法与主副本进行通信，从而不能保证两个数据库同步。 强制故障转移启动新的恢复分叉。 因为原始主数据库和辅助数据库位于不同的恢复分叉上，所以每个数据库现在包含另一个数据库不包含的数据：每个原始主数据库包含任何尚未从其发送队列发送到以前的辅助数据库的更改（未发送的日志）；以前的辅助数据库包含任何强制故障转移之后发生的更改。  
   
  如果因为主副本出现故障而强制进行故障转移，则潜在的数据丢失取决于是否在出现故障之前已将所有事务日志发送到辅助副本。 在异步提交模式下，可能会始终存在累积的未发送日志。 在同步提交模式下，可能仅在辅助数据库同步之前会出现这种情况。  
@@ -223,14 +223,14 @@ ms.locfileid: "62814480"
   
  辅助数据库仅跟踪两个恢复分叉，因此，如果您执行多个强制故障转移，则确实已与先前的强制故障转移启动数据同步的任何辅助数据库都可能无法恢复运行。 如果发生这种情况，则需要从可用性组中删除无法恢复的所有辅助数据库，还原到正确的时间点，然后重新加入可用性组。 还原不能跨多个恢复分叉执行，因此请确保在执行多个强制故障转移后执行日志备份。  
   
-###  <a name="WhyFFoPostForcedQuorum"></a>强制仲裁后需要强制故障转移的原因  
+###  <a name="why-forced-failover-is-required-after-forcing-quorum"></a><a name="WhyFFoPostForcedQuorum"></a> 强制仲裁后需要强制故障转移的原因  
  在对 WSFC 群集强制执行仲裁（强制仲裁**）后，你需要在每个可用性组上执行强制故障转移（可能会丢失数据）。 强制故障转移是必需的，因为 WSFC 群集的真实状态值可能已丢失。 在强制仲裁后需要防止常规故障转移，因为在重新配置的 WSFC 群集上未同步的辅助副本很可能显示为“已同步”。  
   
  例如，请考虑在三个节点上承载可用性组的一个 WSFC 群集：节点 A 承载主副本，节点 B 和节点 C 分别承载一个辅助副本。 节点 C 断开了与 WSFC 群集的连接，而此时该节点上的本地辅助副本处于同步状态。  但是节点 A 和节点 B 仍可以正常仲裁，可用性组仍处于联机状态。 在节点 A 上，主副本继续接受更新，在节点 B 上，辅助副本继续与主副本同步。 节点 C 上的辅助副本就会变得不同步，并且越来越滞后于主副本。 但是，由于节点 C 已断开连接，该副本仍错误地处于同步状态。  
   
- 如果仲裁丢失，然后在节点 A 上强制执行，则 WSFC 群集上可用性组的同步状态应是正确的（节点 C 上的辅助副本显示为未同步状态）。 但是，如果在节点 C 上强制执行仲裁，则可用性组的同步状态将是不正确的。 群集上的同步状态将恢复为节点 C 断开连接时所处的状态（节点 C 上的辅助副本“错误地”显示为同步状态）**。 由于计划的手动故障转移确保了数据的安全性，在强制仲裁后它们不允许将可用性组恢复为联机状态。  
+ 如果仲裁丢失，然后在节点 A 上强制执行，则 WSFC 群集上可用性组的同步状态应是正确的（节点 C 上的辅助副本显示为未同步状态）。 但是，如果在节点 C 上强制执行仲裁，则可用性组的同步状态将是不正确的。 节点 C 断开连接时，群集上的同步状态将恢复为，在节点 C 上的辅助副本*错误地*显示为 "已同步"。 由于计划的手动故障转移确保了数据的安全性，在强制仲裁后它们不允许将可用性组恢复为联机状态。  
   
-###  <a name="TrackPotentialDataLoss"></a>跟踪可能的数据丢失  
+###  <a name="tracking-potential-data-loss"></a><a name="TrackPotentialDataLoss"></a>跟踪可能的数据丢失  
  WSFC 群集正常仲裁时，您可以估计数据库上当前可能的数据丢失量。 对于给定的辅助副本，当前可能的数据丢失量取决于本地辅助数据库滞后相应主数据库的程度。 因为滞后程度随时间而变化，我们建议您定期跟踪未同步的辅助数据库可能的数据丢失情况。 跟踪滞后情况涉及比较每个主数据库和辅助数据库的上次提交 LSN 和上次提交时间，如下所示：  
   
 1.  连接到主副本。  
@@ -244,7 +244,7 @@ ms.locfileid: "62814480"
 > [!IMPORTANT]  
 >  WSFC 群集缺乏仲裁或强制执行了仲裁时，`last_commit_lsn` 和 `last_commit_time` 为 NULL。 有关在强制仲裁后如何避免数据丢失的信息，请参阅 [执行可用性组的强制手动故障转移 (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
-###  <a name="ForcedFailoverManagingDataLoss"></a>管理可能的数据丢失  
+###  <a name="managing-the-potential-data-loss"></a><a name="ForcedFailoverManagingDataLoss"></a>管理可能的数据丢失  
  强制故障转移后，所有辅助数据库都将挂起。 这包括以前的主数据库（在以前的主副本返回到联机状态并且发现它现在是辅助副本后）。 您必须单独在每个辅助副本上手动恢复每个挂起的数据库。  
   
  以前的主副本可用后，假设其数据库没有损坏，则可以尝试管理可能的数据丢失。 管理潜在数据丢失的可用方法取决于原始主副本是否已连接到新的主副本。 假设原始主副本可以访问新的主实例，则会自动透明地进行重新连接。  
@@ -278,7 +278,7 @@ ms.locfileid: "62814480"
 > [!WARNING]  
 >  在其任何辅助数据库被挂起时，事务日志截断在主数据库上被延迟。 此外，只要任何本地数据库保持挂起状态，同步提交辅助副本的同步运行状况就无法转换到“正常”。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置故障转移行为**  
   
 -   [更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -291,11 +291,11 @@ ms.locfileid: "62814480"
   
 -   [执行可用性组的计划手动故障转移 (SQL Server)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [执行可用性组的强制手动故障转移 (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
 -   [使用故障转移可用性组向导 (SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [管理可用性组数据库的登录名和作业 &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
+-   [管理可用性组中数据库的登录名和作业 (SQL Server)](../../logins-and-jobs-for-availability-group-databases.md)  
   
  **配置 WSFC 仲裁配置**  
   
@@ -305,7 +305,7 @@ ms.locfileid: "62814480"
   
 -   [在无仲裁情况下强制启动 WSFC 群集](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -317,6 +317,6 @@ ms.locfileid: "62814480"
  [Windows Server 故障转移群集 &#40;WSFC&#41; 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [数据库镜像不支持跨数据库事务或 AlwaysOn 可用性组 &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
  [故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [用于 &#40;SQL Server 的可用性组自动故障转移的灵活的故障转移策略&#41;](flexible-automatic-failover-policy-availability-group.md)  
+ [针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](flexible-automatic-failover-policy-availability-group.md)  
   
   

@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843702"
 ---
 # <a name="set-source-control-options"></a>设置源代码管理选项
@@ -34,7 +34,7 @@ ms.locfileid: "62843702"
   
 ### <a name="to-set-source-control-options"></a>设置源代码管理选项  
   
-1.  在“工具”  菜单上，单击“选项”  。  
+1.  在“工具” **** 菜单上，单击“选项” ****。  
   
 2.  在 "**选项**" 对话框中，展开 "**源代码管理**"，然后单击 "**插件选择**" 页。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "62843702"
   
 3.  为要使用的每个源代码管理角色设置登录凭据。 只有当安装了源代码管理插件时，此页才可用。  
   
-     **角色说明**  
+     **角色描述**  
      选择这些角色之一，将自动选择相应的源代码管理选项。  
   
-    |角色|说明|  
+    |Role|说明|  
     |----------|-----------------|  
     |**Visual SourceSafe**|指定您要使用[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 用户最常使用的设置。|  
     |**独立开发人员**|指定您是在独立工作。|  
@@ -69,14 +69,12 @@ ms.locfileid: "62843702"
   
 5.  在 "**源代码管理环境设置**" 框中，选择要设置源代码管理选项的角色。  
   
-     
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将自动为您选定的角色选择默认的源代码管理选项。 如果清除了任何默认选项，则 "**源代码管理环境设置**" 框将显示 "**自定义**" 选项，以指示你已自定义了最初选择的角色。  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将自动为您选定的角色选择默认的源代码管理选项。 如果清除了任何默认选项，则 "**源代码管理环境设置**" 框将显示 "**自定义**" 选项，以指示你已自定义了最初选择的角色。  
   
      **源代码管理环境设置**  
-     指定要使用的角色。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 定义了以下角色。  
+     指定要使用的角色。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 定义了以下角色。  
   
-    |角色|说明|  
+    |Role|说明|  
     |----------|-----------------|  
     |**Visual SourceSafe**|指定您要使用[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 用户最常使用的设置。|  
     |**独立开发人员**|指定您是在独立工作。|  

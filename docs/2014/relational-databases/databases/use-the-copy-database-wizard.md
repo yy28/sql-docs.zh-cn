@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871134"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用复制数据库向导
@@ -67,11 +67,11 @@ ms.locfileid: "62871134"
   
 -   **跟进，在升级之后：**  
   
-     [升级 SQL Server 数据库后](#FollowUp)  
+     [在升级 SQL Server 数据库之后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   在 Express 版本中未提供复制数据库向导。  
   
@@ -91,21 +91,21 @@ ms.locfileid: "62871134"
   
 -   分离和附加方法可分离数据库，移动或复制数据库 .mdf、.ndf、.ldf 文件，并在新的位置重新附加该数据库。 对于分离和附加方法，若要避免数据丢失或不一致，不能将活动会话附加到正在移动或复制的数据库。 如果存在活动会话，复制数据库向导不会执行移动或复制操作。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象方法，由于数据库从不会脱机，因此允许活动会话。  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  确保在目标服务器上启动了 SQL Server 代理。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   为了确保升级后的数据库具有最佳性能，请对升级后的数据库运行 sp_updatestats（更新统计信息）。  
   
--   将数据库复制到另一个服务器实例时，为了给用户和应用程序提供一致的体验，您最好在另一个服务器实例上重新创建该数据库的部分或全部元数据（例如登录名和作业）。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](manage-metadata-when-making-a-database-available-on-another-server.md)。  
+-   将数据库复制到另一个服务器实例时，为了给用户和应用程序提供一致的体验，您最好在另一个服务器实例上重新创建该数据库的部分或全部元数据（例如登录名和作业）。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须是源服务器和目标服务器上 **sysadmin** 固定服务器角色的成员。  
   
-##  <a name="Copy_Move"></a>复制、移动或升级数据库  
+##  <a name="copy-move-or-upgrade-databases"></a><a name="Copy_Move"></a>复制、移动或升级数据库  
   
 1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的对象资源管理器中，展开 "**数据库**"，右键单击数据库，指向 "**任务**"，然后单击 "**复制数据库**"。  
   
@@ -117,16 +117,16 @@ ms.locfileid: "62871134"
      **使用 Windows 身份验证**  
      允许用户通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户进行连接。  
   
-     **Use SQL Server Authentication**  
+     **使用 SQL Server 身份验证**  
      允许用户通过提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证用户名和密码进行连接。  
   
      **用户名**  
      输入连接所使用的用户名。 只有选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接时，此选项才可用。  
   
-     **权限**  
+     **密码**  
      输入登录名的密码。 只有选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接时，此选项才可用。  
   
-     **一个**  
+     **下一页**  
      连接到服务器并验证用户。 此过程将检查用户是否是所选计算机上 **sysadmin** 固定服务器角色的成员。  
   
 3.  从 **“选择目标服务器”** 页，指定数据库移动或复制的目标服务器。 如果将源服务器和目标服务器设置为同一个服务器实例，则将会创建一个数据库的副本。 在此情况下，必须稍后在向导中重命名数据库。 仅当目标服务器上不存在名称冲突时，源数据库名称才能用于复制或移动的数据库。 如果存在名称冲突，则必须在目标服务器上手动解决冲突问题，然后才能在此处使用源数据库名称。  
@@ -140,16 +140,16 @@ ms.locfileid: "62871134"
      **使用 Windows 身份验证**  
      允许用户通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户进行连接。  
   
-     **Use SQL Server Authentication**  
+     **使用 SQL Server 身份验证**  
      允许用户通过提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证用户名和密码进行连接。  
   
      **用户名**  
      输入连接所使用的用户名。 只有选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，此选项才可用。  
   
-     **权限**  
+     **密码**  
      输入登录名的密码。 只有选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，此选项才可用。  
   
-     **一个**  
+     **下一页**  
      连接到服务器并验证用户。 此过程检查用户是否对所选计算机拥有上述权限。  
   
 4.  从 **“选择传输方法”** 页，选择传输方法。  
@@ -174,19 +174,19 @@ ms.locfileid: "62871134"
      **移动**  
      将数据库移动到目标服务器。  
   
-     **Copy**  
+     **复制**  
      将数据库复制到目标服务器。  
   
-     **数据源**  
+     **源**  
      显示源服务器上的数据库。  
   
-     **Status**  
+     **状态**  
      如果可以移动数据库，则显示 **"确定"** 。 否则将显示无法移动该数据库的原因。  
   
-     **“刷新”**  
+     **全部**  
      刷新数据库列表。  
   
-     **一个**  
+     **下一页**  
      开始验证过程，然后转到下一屏幕。  
   
 6.  从“配置目标数据库” **** 页，更改数据库名称（如果适用）并指定数据库文件的位置和名称。 在移动或复制每个数据库时都会出现此页。  
@@ -208,7 +208,7 @@ ms.locfileid: "62871134"
      **用户定义的错误消息**  
      在移动或复制操作中包括用户定义的错误消息。  
   
-     **端点**  
+     **终结点**  
      包括源数据库中定义的端点。  
   
      **全文目录**  
@@ -254,10 +254,10 @@ ms.locfileid: "62871134"
      **立即运行**  
      单击 "**下一步**" 后开始移动或复制操作。  
   
-     **“计划”**  
+     **计划**  
      以后启动移动操作或复制操作。 当前的计划设置显示在说明框中。 若要更改该计划，请单击 **“更改”**。  
   
-     **转**  
+     **更改**  
      打开 "**新建作业计划**" 对话框。  
   
      **Integration Services 代理帐户**  
@@ -265,21 +265,20 @@ ms.locfileid: "62871134"
   
      若要为[!INCLUDE[ssIS](../../includes/ssis-md.md)]包执行创建代理帐户，请在对象资源管理器中展开 " **SQL Server 代理**"，展开 "**代理**"，右键单击 " **SSIS 包执行**"，然后单击 "**新建代理**"。  
   
-     
-  **sysadmin** 固定服务器角色的成员可以选择 **“SQL Server 代理服务帐户”**，该帐户拥有必要的权限。  
+     **sysadmin** 固定服务器角色的成员可以选择 **“SQL Server 代理服务帐户”**，该帐户拥有必要的权限。  
   
 11. 从 **“完成该向导”** 页，查看所选选项的摘要。 单击 **“上一步”** 可以更改选项。 单击 **“完成”** 将创建数据库。 在传输过程中， **“正在执行操作”** 页会监视与 **“复制数据库向导”** 的执行有关的状态信息。  
   
-     **Action**  
+     **操作**  
      列出要执行的每项操作。  
   
-     **Status**  
+     **状态**  
      指示操作总体来说是成功还是失败。  
   
      **消息**  
      提供每个步骤返回的任何消息。  
   
-##  <a name="FollowUp"></a>跟进：在升级 SQL Server 数据库后  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> 跟进：在升级 SQL Server 数据库之后  
  使用复制数据库向导将数据库从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”**** 或“重新生成”****，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”**** 时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”**** 属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
  如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  

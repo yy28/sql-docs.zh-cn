@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62835943"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer for Oracle by Attunity
@@ -48,7 +48,7 @@ ms.locfileid: "62835943"
   
 -   [高级连接属性](advanced-connection-properties.md)  
   
--   [用于运行脚本的 Oracle 凭据](oracle-credentials-for-running-script.md)  
+-   [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
   
 -   [Oracle 补充日志记录脚本](oracle-supplemental-logging-script.md)  
   

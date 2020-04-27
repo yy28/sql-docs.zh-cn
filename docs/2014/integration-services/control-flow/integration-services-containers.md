@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831255"
 ---
 # <a name="integration-services-containers"></a>Integration Services 容器
-  容器是中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的对象，可为包和服务提供对任务的结构。 它们支持包中的重复控制流，并且将任务和容器分组为有意义的工作单元。 除了任务，容器还可以包含其他容器。  
+  容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中为包提供结构和为任务提供服务的对象。 它们支持包中的重复控制流，并且将任务和容器分组为有意义的工作单元。 除了任务，容器还可以包含其他容器。  
   
  包将容器用于下列用途：  
   
@@ -35,8 +35,7 @@ ms.locfileid: "62831255"
 -   将必须作为一个单元成功或失败的任务和容器分组到一起。 例如，包可以将在数据库表中删除和添加行的任务分组到一起，然后当其中一个任务失败时提交或回滚所有任务。  
   
 ## <a name="container-types"></a>容器类型  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供四种用于生成包的容器。 下表列出了容器类型。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供四种用于生成包的容器。 下表列出了容器类型。  
   
 |容器|说明|  
 |---------------|-----------------|  
@@ -59,8 +58,7 @@ ms.locfileid: "62831255"
 |`FailPackageOnFailure`|指定如果容器中出现错误包是否失败的布尔值。 此属性的默认值为 `False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>。|  
 |`FailParentOnFailure`|指定如果容器中出现错误父容器是否失败的布尔值。 此属性的默认值为 `False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>。|  
 |`ForcedExecutionValue`|如果 `ForceExecutionValue` 设置为 `True`，则为包含容器的可选执行值的对象。 此属性的默认值为 **0**。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>。|  
-|`ForcedExecutionValueType`|
-  `ForcedExecutionValue` 的数据类型。 此属性的默认值为 `Int32`。|  
+|`ForcedExecutionValueType`|`ForcedExecutionValue` 的数据类型。 此属性的默认值为 `Int32`。|  
 |`ForceExecutionResult`|指定运行包或容器的强制结果的值。 其值为：`None`、`Success`、`Failure` 和 `Completion`。 此属性的默认值为 `None`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>。|  
 |`ForceExecutionValue`|指定容器的可选执行值是否应强制包含特定值的布尔值。 此属性的默认值为 `False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>。|  
 |`ID`|容器 GUID，该属性是在创建包时分配的。 此属性为只读。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  

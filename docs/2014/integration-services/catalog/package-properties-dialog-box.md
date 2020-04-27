@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836328"
 ---
 # <a name="package-properties-dialog-box"></a>“包属性”对话框
@@ -31,7 +31,7 @@ ms.locfileid: "62836328"
   
 -   [配置选项](#options)  
   
-##  <a name="open_dialog"></a> 打开“包属性”对话框  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> 打开“包属性”对话框  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62836328"
   
 5.  右键单击该包，然后选择“属性”  。  
   
-##  <a name="options"></a> 配置选项  
+##  <a name="configure-the-options"></a><a name="options"></a> 配置选项  
  使用 **“常规”** 页可以查看所选包的属性。  
   
  “常规”  页上的所有属性都是只读的。  
@@ -57,7 +57,7 @@ ms.locfileid: "62836328"
  列出包 ID。  
   
  **入口点**  
- 值 `True` 表示直接启动包。 值 `False` 表示该包由另一个包通过执行包任务启动。 默认值是 `True`。  
+ 值 `True` 表示直接启动包。 值 `False` 表示该包由另一个包通过执行包任务启动。 默认值为 `True`。  
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中为父包和子包设置此属性，方法是在解决方案资源管理器中右键单击包，然后单击“入口点包”  。  
   

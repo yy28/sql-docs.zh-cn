@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b8648b9166ffa192ca21233ab6add38260a7dea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871144"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>查看数据库快照 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "62871144"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **查看数据库快照**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，然后展开该实例。  
@@ -44,7 +44,7 @@ ms.locfileid: "62871144"
   
 3.  展开 **“数据库快照”** ，然后选择要查看的快照。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看数据库快照**  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
@@ -53,7 +53,7 @@ ms.locfileid: "62871144"
   
 3.  若要列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的数据库快照，对于非 NULL 值请查询 **sys.databases** 目录视图的 [source_database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建数据库快照 (Transact-SQL)](create-a-database-snapshot-transact-sql.md)  
   

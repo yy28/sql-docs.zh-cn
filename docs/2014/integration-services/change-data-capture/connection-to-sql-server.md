@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 09d597cb7776362c44ca53e8d544f66608d8d37c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836997"
 ---
 # <a name="connection-to-sql-server"></a>连接到 SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "62836997"
 ### <a name="server-name"></a>服务器名称  
  键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的服务器的名称。  
   
-### <a name="authentication"></a>Authentication  
+### <a name="authentication"></a>身份验证  
  选择以下方案之一：  
   
 -   Windows 身份验证  

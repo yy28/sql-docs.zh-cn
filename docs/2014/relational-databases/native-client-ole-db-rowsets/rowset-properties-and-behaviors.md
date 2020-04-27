@@ -1,5 +1,5 @@
 ---
-title: 行集属性和行为 |Microsoft Docs
+title: 行集属性和行为 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 36a2af059b75e6ca86dcb8354b1e2c9f8d2abe54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62826627"
 ---
 # <a name="rowset-properties-and-behaviors"></a>行集属性和行为
@@ -41,7 +41,7 @@ ms.locfileid: "62826627"
 |DBPROP_COLUMNRESTRICT|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者无法更改行集中的列时，Native Client OLE DB 提供程序将属性设置为 VARIANT_TRUE。 可以更新行集中的其他列，并且可以删除行本身。<br /><br /> 当此属性为 VARIANT_TRUE 时，使用者将检查 DBCOLUMNINFO 结构的 dwFlags 成员，确定能否写入单独列的值**。 对于可修改的列，dwFlags 展现 DBCOLUMNFLAGS_WRITE**。|  
 |DBPROP_COMMANDTIMEOUT|R/W：读/写<br /><br /> 默认值：0<br /><br /> 说明：默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序在**ICommand：： Execute**方法上不会超时。|  
 |DBPROP_COMMITPRESERVE|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：行集在某个提交操作后的行为由此属性确定。<br /><br /> VARIANT_TRUE： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序保留有效的行集。<br /><br /> VARIANT_FALSE： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序在提交操作之后使行集失效。 行集对象的功能几乎丢失。 它仅支持 IUnknown 操作，且仅可释放未完成的行和取值函数句柄****。|  
-|DBPROP_DEFERRED|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：设置为时 VARIANT_TRUE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序尝试将服务器游标用于行集。 **Text**、 **ntext**和**image**列不会从服务器返回，直到应用程序对其进行访问。|  
+|DBPROP_DEFERRED|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：设置为时 VARIANT_TRUE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序尝试将服务器游标用于行集。 在应用程序访问 Text、ntext 和 image 列之前，不从服务器中返回这些列************。|  
 |DBPROP_DELAYSTORAGEOBJECTS|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持在存储对象上立即更新模式。<br /><br /> 对连续流对象中的数据所做的更改将立即提交到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 将基于行集事务模式提交修改。|  
 |DBPROP_HIDDENCOLUMNS|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> **说明：** 隐藏列计数<br /><br /> 如果 DBPROP_UNIQUEROWS 为 VARIANT_TRUE，则 DBPROP_HIDDENCOLUMNS 属性返回由访问接口添加的唯一标识行集中各行的其他“隐藏”列的数量。 这些列由 IColumnsInfo::GetColumnInfo 和 IColumnsRowset::GetColumnsRowset 返回********。 但是，它们不包含在 pcColumns 参数（由 IColumnsInfo::GetColumnInfo 返回）返回的行计数中******。<br /><br /> 要确定 IColumnsInfo::GetColumnInfo 返回的 prgInfo 结构的总列数（包括隐藏列），需将 DBPROP_HIDDENCOLUMNS 的值添加到从 pcColumns 的 IColumnsInfo::GetColumnInfo 中返回的列计数************。 如果 DBPROP_UNIQUEROWS 为 VARIANT_FALSE，则 DBPROP_HIDDENCOLUMNS 为零。|  
 |DBPROP_IAccessor DBPROP_IColumnsInfo DBPROP_IConvertType DBPROP_IRowset DBPROP_IRowsetInfo|R/W：只读<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持所有行集中的这些接口。|  
@@ -76,8 +76,7 @@ ms.locfileid: "62826627"
 |DBPROP_REPORTMULTIPLECHANGES|此行集属性不是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现的。 尝试读取或写入属性值将生成错误。|  
 |DBPROP_RETURNPENDINGINSERTS|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：调用提取行的方法时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不返回挂起的插入行。|  
 |DBPROP_ROWRESTRICT|R/W：只读<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序行集不支持基于行的访问权限。 如果对行集公开 IRowsetChange 接口，使用者可调用 SetData 方法********。|  
-|DBPROP_ROWSET_ASYNCH|R/W：读/写<br /><br /> 默认值：0<br /><br /> 说明：为异步行集处理而提供。 此属性位于行集属性组和 DBPROPSET_ROWSET 属性集中。 类型为 VT_14。<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持的位掩码中的唯一值是 `DBPROPVAL_ASYNCH_INITIALIZE`。|  
+|DBPROP_ROWSET_ASYNCH|R/W：读/写<br /><br /> 默认值：0<br /><br /> 说明：为异步行集处理而提供。 此属性位于行集属性组和 DBPROPSET_ROWSET 属性集中。 类型为 VT_14。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持的位掩码中的唯一值是 `DBPROPVAL_ASYNCH_INITIALIZE`。|  
 |DBPROP_ROWTHREADMODEL|R/W：只读<br /><br /> 默认值：DBPROPVAL_RT_FREETHREAD<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持从单个使用者的多个执行线程访问其对象。|  
 |DBPROP_SERVERCURSOR|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：设置后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标将用于支持行集。 有关详细信息，请参阅[行集和 SQL Server 游标](rowsets-and-sql-server-cursors.md)。|  
 |DBPROP_SERVERDATAONINSERT|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：插入的服务器数据。<br /><br /> VARIANT_TRUE：在将插入传输到服务器时，访问接口将从服务器检索数据以更新本地行缓存。<br /><br /> VARIANT_FALSE：访问接口不针对新插入的行检索服务器值。|  

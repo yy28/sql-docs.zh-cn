@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f79a882e3a3e4520cb8cfcd4468f3c908b79abf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833743"
 ---
 # <a name="http-connection-manager"></a>HTTP 连接管理器
-  利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。 包含的 Web 服务任务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用此连接管理器。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+  利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服务任务使用此连接管理器。  
   
  将 HTTP 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 HTTP 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包的 `Connections` 集合。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62833743"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [HTTP 连接管理器编辑器 &#40;服务器页面&#41;](../http-connection-manager-editor-server-page.md)  
+-   [HTTP 连接管理器编辑器（“服务器”页）](../http-connection-manager-editor-server-page.md)  
   
--   [HTTP 连接管理器编辑器 &#40;代理页面&#41;](../http-connection-manager-editor-proxy-page.md)  
+-   [HTTP 连接管理器编辑器（“代理”页）](../http-connection-manager-editor-proxy-page.md)  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>。  
   

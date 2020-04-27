@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827190"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件类
@@ -33,12 +33,12 @@ ms.locfileid: "62827190"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Null|52|是|  
 |BinaryData|`image`|Null|2|是|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在跟踪中捕获到 ServerName 数据列并且服务器可用，则将显示数据库的名称。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |EventSequence|`int`|给定事件在请求中的顺序。|51|否|  
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 0 = 当前未存在于缓存中的新批处理 SQL 文本。<br /><br /> 下列 EventSubClass 类型是在即席批查询的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> 1 个类型 0 的查询|21|是|  
 |IntegerData2|`int`|Null|55|是|  
 |ObjectID|`int`|Null|22|是|  
-|Offset|`int`|Null|61|是|  
+|偏移量|`int`|Null|61|是|  
 |PlanHandle|`Image`|Null|65|是|  
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
@@ -52,13 +52,13 @@ ms.locfileid: "62827190"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|重新编译此计划的累积次数。|52|是|  
 |BinaryData|`image`|已编译计划的二进制 XML。|2|是|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在跟踪中捕获到 ServerName 数据列并且服务器可用，则将显示数据库的名称。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |EventSequence|`int`|给定事件在请求中的顺序。|51|否|  
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
-|EventSubClass|`int`|事件子类的类型。<br /><br /> 1 = 存储过程中的查询已编译。<br /><br /> 下列 EventSubClass 类型是在存储过程的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的存储过程：<br /><br /> *n*个类型1的数字|21|是|  
+|EventSubClass|`int`|事件子类的类型。<br /><br /> 1 = 存储过程中的查询已编译。<br /><br /> 下列 EventSubClass 类型是在存储过程的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的存储过程：<br /><br /> *n* 个类型 1 的查询|21|是|  
 |IntegerData2|`int`|存储过程内语句的结尾。<br /><br /> 对于存储过程的结尾，此值为 -1。|55|是|  
 |ObjectID|`int`|系统分配的对象 ID。|22|是|  
-|Offset|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
+|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取存储过程的 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
@@ -76,13 +76,13 @@ ms.locfileid: "62827190"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|重新编译此计划的累积次数。|52|是|  
 |BinaryData|`image`|已编译计划的二进制 XML。|2|是|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在跟踪中捕获到 ServerName 数据列并且服务器可用，则将显示数据库的名称。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |EventSequence|`int`|给定事件在请求中的顺序。|51|否|  
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
-|EventSubClass|`int`|事件子类的类型。<br /><br /> 2 = 临时 SQL 语句中的查询已编译。<br /><br /> 下列 EventSubClass 类型是在即席批查询的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> *n*个类型2的数字|21|是|  
+|EventSubClass|`int`|事件子类的类型。<br /><br /> 2 = 临时 SQL 语句中的查询已编译。<br /><br /> 下列 EventSubClass 类型是在即席批查询的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> *n* 个类型 2 的查询|21|是|  
 |IntegerData2|`int`|批处理内语句的结尾。<br /><br /> 对于批处理的结尾，此值为 -1。|55|是|  
-|ObjectID|`int`|空值|22|是|  
-|Offset|`int`|批处理中的语句的起始偏移量。<br /><br /> 对于批处理的开始，此值为 0。|61|是|  
+|ObjectID|`int`|不适用|22|是|  
+|偏移量|`int`|批处理中的语句的起始偏移量。<br /><br /> 对于批处理的开始，此值为 0。|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄。 可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取批查询 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
@@ -99,13 +99,13 @@ ms.locfileid: "62827190"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|重新编译此计划的累积次数。|52|是|  
 |BinaryData|`image`|Null|2|是|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在跟踪中捕获到 ServerName 数据列并且服务器可用，则将显示数据库的名称。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |EventSequence|`int`|给定事件在请求中的顺序。|51|否|  
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 3 = 保存在缓存中的某一查询已被破坏，与此计划相关的历史性能数据也将被破坏。<br /><br /> 下列 EventSubClass 类型是在跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> 1 个类型 3 的查询（当从缓存中刷新查询时）<br /><br /> 对于有 *n* 次查询的存储过程：<br />1 个类型 3 的查询（当从缓存中刷新查询时）。|21|是|  
 |IntegerData2|`int`|存储过程或批处理中的语句的结尾。<br /><br /> 对于存储过程或批处理的结尾，此值为 -1。|55|是|  
 |ObjectID|`int`|Null|22|是|  
-|Offset|`int`|存储过程或批查询中的语句的起始偏移量。<br /><br /> 对于存储过程或批处理的开始，此值为 0。|61|是|  
+|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。<br /><br /> 对于存储过程或批处理的开始，此值为 0。|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取存储过程或批查询 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
@@ -125,7 +125,7 @@ ms.locfileid: "62827190"
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 4 = 缓存的存储过程已从缓存中删除，与它关联的历史性能数据也即将销毁。|21|是|  
 |IntegerData2|`int`|Null|55|是|  
 |ObjectID|`int`|存储过程的 ID。 与 sys.procedures 中的 object_id 列相同。|22|是|  
-|Offset|`int`|Null|61|是|  
+|偏移量|`int`|Null|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取所执行的存储过程 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
@@ -145,7 +145,7 @@ ms.locfileid: "62827190"
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 5 = 缓存的触发器已从缓存中删除，与它关联的历史性能数据也即将销毁。|21|是|  
 |IntegerData2|`int`|Null|55|是|  
 |ObjectID|`int`|触发器的 ID。 与 sys.triggers/sys.server_triggers 目录视图中的 object_id 列相同。|22|是|  
-|Offset|`int`|Null|61|是|  
+|偏移量|`int`|Null|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取触发器的 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
@@ -155,7 +155,7 @@ ms.locfileid: "62827190"
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)   
- [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [查询编译事件类的显示计划 XML](showplan-xml-for-query-compile-event-class.md)   
  [动态管理视图和函数 (Transact-SQL)](../views/views.md)  
   

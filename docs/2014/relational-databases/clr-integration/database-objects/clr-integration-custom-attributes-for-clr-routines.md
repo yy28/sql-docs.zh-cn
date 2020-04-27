@@ -23,42 +23,37 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873810"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR 例程的自定义属性
   列出的属性可应用于公共语言运行时（CLR）例程、用户定义的类型以及在中[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]注册的用户定义聚合。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在 `Microsoft.SqlServer.Server` 命名空间中定义。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 特性  
- 
-  `SqlUserDefinedAggregate` 属性指示方法应注册为用户定义聚合。 必须使用此属性注释每个用户定义聚合。  
+ `SqlUserDefinedAggregate` 属性指示方法应注册为用户定义聚合。 必须使用此属性注释每个用户定义聚合。  
   
  有关详细信息，请参阅[SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)。  
   
 ## <a name="the-sqlfunction-attribute"></a>SqlFunction 属性  
- 
-  `SqlFunction` 属性指示方法应注册为包含相应函数属性集的函数。  
+ `SqlFunction` 属性指示方法应注册为包含相应函数属性集的函数。  
   
  有关详细信息，请参阅[SqlFunctionAttribute](https://go.microsoft.com/fwlink/?LinkId=128019)。  
   
 ## <a name="the-sqlfacet-attribute"></a>SqlFacet 特性  
- 
-  `SqlFacet` 属性用于返回有关用户定义类型 (UDT) 表达式的返回类型的信息。  
+ `SqlFacet` 属性用于返回有关用户定义类型 (UDT) 表达式的返回类型的信息。  
   
  有关详细信息，请参阅[SqlFacetAttribute](https://go.microsoft.com/fwlink/?LinkId=128020)。  
   
 ## <a name="the-sqlprocedure-attribute"></a>SqlProcedure 属性  
- 
-  `SqlProcedure` 属性指示方法应注册为存储过程。 此属性仅由 Visual Studio 用于将指定的方法自动注册为存储过程；[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不使用此属性。  
+ `SqlProcedure` 属性指示方法应注册为存储过程。 此属性仅由 Visual Studio 用于将指定的方法自动注册为存储过程；[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不使用此属性。  
   
  有关详细信息，请参阅[SqlProcedureAttribute](https://go.microsoft.com/fwlink/?LinkId=128021)。  
   
 ## <a name="the-sqltrigger-attribute"></a>SqlTrigger 特性  
- 
-  `SqlTrigger` 属性指示方法应注册为触发器。  
+ `SqlTrigger` 属性指示方法应注册为触发器。  
   
  有关详细信息，请参阅[SqlTriggerContext](https://go.microsoft.com/fwlink/?LinkId=128022)和[SqlTriggerAttribute](https://go.microsoft.com/fwlink/?LinkId=203898)。  
   
@@ -68,8 +63,7 @@ ms.locfileid: "62873810"
  有关详细信息，请参阅[SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024)。  
   
 ## <a name="the-sqlmethod-attribute"></a>SqlMethod 属性  
- 
-  `SqlMethod` 特性用于指示 UDT 的某方法或属性的确定性和数据访问属性。  
+ `SqlMethod` 特性用于指示 UDT 的某方法或属性的确定性和数据访问属性。  
   
  有关详细信息，请参阅[SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025)。  
   

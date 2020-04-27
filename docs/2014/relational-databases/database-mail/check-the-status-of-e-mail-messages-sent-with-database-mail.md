@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872322"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>检查使用数据库邮件发送的电子邮件的状态
@@ -29,14 +29,14 @@ ms.locfileid: "62872322"
   
 -   若要查看通过数据库邮件发送的电子邮件的状态，请使用：  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  数据库邮件保留发送的电子邮件的副本，并在 **msdb**数据库的 **sysmail_allitems**、 **sysmail_sentitems**、 **sysmail_unsentitems** 、 **sysmail_faileditems** 视图中显示它们。 数据库邮件外部程序记录活动，并通过 Windows 应用程序事件日志以及 **msdb** 数据库的 **sysmail_event_log** 视图显示日志。 若要检查电子邮件的状态，请对此视图运行查询。 电子邮件可以处于下列四种可能的状态之一： **sent**、 **unsent**、 **retrying**和 **failed**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看通过数据库邮件发送的电子邮件的状态**  
   
 > [!NOTE]  
->  有关此过程的示例，请参阅本节后面的[示例 (Transact-SQL)](#TsqlExample)。  
+>  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
   
 1.  从 **sysmail_allitems** 表中选择，按 **mailitem_id** 或 **sent_status**指定要检查的邮件。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62872322"
   
      默认情况下，外部程序不会记录有关发送成功的邮件的信息。 若要记录所有邮件，请使用 **“数据库邮件配置向导”** 的 **“配置系统参数”** 页，将日志级别设置为“详细”。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例列出了有关发送到 `danw` 的所有电子邮件（外部程序无法成功发送）的信息。 该语句列出了邮件的主题、外部程序发送邮件失败的日期和时间以及来自数据库邮件日志的错误消息。  
   
 ```  

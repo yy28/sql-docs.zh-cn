@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830119"
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
@@ -65,7 +65,7 @@ ms.locfileid: "62830119"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [传输错误消息任务编辑器 &#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [传输错误消息任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
 -   [传输错误消息任务编辑器（“消息”页）](../transfer-error-messages-task-editor-messages-page.md)  
   

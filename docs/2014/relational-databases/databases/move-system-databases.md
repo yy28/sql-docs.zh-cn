@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871534"
 ---
 # <a name="move-system-databases"></a>移动系统数据库
@@ -50,7 +50,7 @@ ms.locfileid: "62871534"
 > [!IMPORTANT]  
 >  如果移动系统数据库并且随后重新生成 master 数据库，则必须再次移动系统数据库，因为重新生成操作会在默认位置安装所有系统数据库。  
   
-##  <a name="Intro"></a>**本主题中的**  
+##  <a name="in-this-topic"></a><a name="Intro"></a>**本主题中的**  
   
 -   [计划的重定位和计划的磁盘维护过程](#Planned)  
   
@@ -58,13 +58,13 @@ ms.locfileid: "62871534"
   
 -   [移动 master 数据库](#master)  
   
--   [移动资源数据库](#Resource)  
+-   [移动 Resource 数据库](#Resource)  
   
 -   [跟进：移动所有系统数据库后](#Follow)  
   
 -   [示例](#Examples)  
   
-##  <a name="Planned"></a>计划的重定位和计划的磁盘维护过程  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 预先安排的重定位与预定的磁盘维护过程  
  若要将移动系统数据库数据或日志文件的操作作为预先安排的重定位或预定的维护操作的一部分，请按照下列步骤操作。 此过程适用于除 master 和 Resource 数据库以外的所有系统数据库。  
   
 1.  对于要移动的每个文件，请运行以下语句。  
@@ -73,11 +73,11 @@ ms.locfileid: "62871534"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或关闭系统以执行维护。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或关闭系统以执行维护。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  将文件移动到新位置。  
   
-4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或服务器。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或服务器。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 5.  通过运行以下查询来验证文件更改。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62871534"
   
 2.  通过发送测试邮件来验证数据库邮件是否正常运行。  
   
-##  <a name="Failure"></a>故障恢复过程  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> 故障恢复过程  
  如果由于硬件故障而必须移动文件，则请按照下列步骤将文件重新定位到一个新位置。 此过程适用于除 master 和 Resource 数据库以外的所有系统数据库。  
   
 > [!IMPORTANT]  
@@ -123,7 +123,7 @@ ms.locfileid: "62871534"
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+     有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  对于要移动的每个文件，请使用 **sqlcmd** 命令或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 运行以下语句。  
   
@@ -149,14 +149,14 @@ ms.locfileid: "62871534"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a>移动 master 数据库  
+##  <a name="moving-the-master-database"></a><a name="master"></a> 移动 master 数据库  
  若要移动 master 数据库，请按下列步骤进行操作。  
   
 1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”** 和 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
 2.  在“SQL Server 服务”**** 节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)**），并选择“属性”****。  
   
-3.  在“SQL Server (instance_name) 属性”********** 对话框中，单击“启动参数”**** 选项卡。  
+3.  在 " **SQL Server （***instance_name***）属性**" 对话框中，单击 "**启动参数**" 选项卡。  
   
 4.  在“现有参数”框中，选择 –d 参数以移动 master 数据文件****。 单击 **“更新”** 以保存更改。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "62871534"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  通过右键单击实例名称并选择“停止”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**来停止 ** 实例。  
+6.  通过右键单击实例名称并选择“停止”**** 来停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 7.  将 master.mdf 和 mastlog.ldf 文件移动到新位置。  
   
@@ -193,10 +193,10 @@ ms.locfileid: "62871534"
     GO  
     ```  
   
-##  <a name="Resource"></a>移动资源数据库  
- Resource 数据库的位置是 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\。 无法移动该数据库。  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a>移动资源数据库  
+ 资源数据库的位置是\<*驱动器*>： \Program Files\Microsoft SQL Server\MSSQL\<version>。\< *instance_name*> \mssql\binn\\instance_name。 无法移动该数据库。  
   
-##  <a name="Follow"></a>跟进：移动所有系统数据库后  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 后续操作：移动所有系统数据库后  
  如果已将所有系统数据库都移到新的驱动器/卷或移到使用不同驱动器盘符的另一个服务器，请进行下列更新。  
   
 -   更改 SQL Server 代理日志路径。 如果不更新此路径，SQL Server 代理将无法启动。  
@@ -221,7 +221,7 @@ ms.locfileid: "62871534"
   
 4.  先停止然后启动 SQL Server 服务以完成更改。  
   
-##  <a name="Examples"></a> 示例  
+##  <a name="examples"></a><a name="Examples"></a> 示例  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. 移动 tempdb 数据库  
  作为预先安排的重定位的一部分，下面的示例将 `tempdb` 数据和日志文件移动到一个新位置。  
@@ -272,7 +272,7 @@ ms.locfileid: "62871534"
  [移动用户数据库](move-user-databases.md)   
  [移动数据库文件](move-database-files.md)   
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [重新生成系统数据库](system-databases.md)  
   
   

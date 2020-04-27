@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831765"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
@@ -54,9 +54,9 @@ ms.locfileid: "62831765"
 ## <a name="creating-sql-statements"></a>创建 SQL 语句  
  此任务使用的 SQL 语句的源可以是包含语句的任务属性、到包含一个或多个语句的文件的连接，或者是包含语句的变量的名称。 必须用源数据库管理系统 (DBMS) 的方言编写 SQL 语句。 有关详细信息，请参阅 [Integration Services (SSIS) 查询](../integration-services-ssis-queries.md)。  
   
- 如果 SQL 语句存储在某个文件中，则该任务使用文件连接管理器来连接到该文件。 有关详细信息，请参阅[文件连接管理器](../connection-manager/file-connection-manager.md)。  
+ 如果 SQL 语句存储在某个文件中，则该任务使用文件连接管理器来连接到该文件。 有关详细信息，请参阅 [File Connection Manager](../connection-manager/file-connection-manager.md)。  
   
- 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用 **“执行 SQL 任务编辑器”** 对话框来键入 SQL 语句，也可使用 **“查询生成器”**（用于创建 SQL 查询的图形用户界面）键入。 有关详细信息，请参阅[执行 SQL 任务编辑器（常规页）](../execute-sql-task-editor-general-page.md)和[查询生成器](../query-builder.md)。  
+ 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用 **“执行 SQL 任务编辑器”** 对话框来键入 SQL 语句，也可使用 **“查询生成器”** （用于创建 SQL 查询的图形用户界面）键入。 有关详细信息，请参阅[执行 SQL 任务编辑器（常规页）](../execute-sql-task-editor-general-page.md)和[查询生成器](../query-builder.md)。  
   
 > [!NOTE]  
 >  执行 SQL 任务可能无法成功分析在执行 SQL 任务外编写的有效 SQL 语句。  

@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef8d3920f4565be7a44d29a974612991b73efeec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833719"
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
-  FTP 连接管理器使得包可以连接到文件传输协议 (FTP) 服务器。 包含的 FTP 任务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用此连接管理器。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+  FTP 连接管理器使得包可以连接到文件传输协议 (FTP) 服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 FTP 任务使用此连接管理器。  
   
  将 FTP 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建可以在运行时决定 FTP 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包中的 `Connections` 集合。  
   

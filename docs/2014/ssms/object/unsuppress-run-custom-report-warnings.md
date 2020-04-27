@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62824387"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>启用运行自定义报表警告
@@ -24,11 +24,11 @@ ms.locfileid: "62824387"
   
  默认情况下，在运行自定义报表之前会显示“运行自定义报表”  对话框。 如果选中“请不要再显示此警告”  复选框，将不再显示此对话框。 此外，在默认情况下，如果打开一个自定义报表然后单击链接打开另外一个自定义报表，则也将显示此“运行自定义报表”  对话框。 此对话框显示钻取自定义报表文件的填写路径。 如果选中“请不要再显示此警告”  复选框，将不再显示此对话框。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>启用主自定义报表警告对话框  
   
-1.  连接到\<*服务器*>\\\<** \\ \>共享驱动器> \documents 和 Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.**<>|  
+1.  连接到\<*服务器*>\\\<*Drive* \\ \>共享驱动器> \documents 和 Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.*Share*<>|  
   
 2.  右键单击`reports.xml`，然后单击 "**编辑**"。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62824387"
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>启用钻取自定义报表警告对话框  
   
-1.  连接到\<*服务器*>\\\<** \\ \>共享驱动器> \documents 和 Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.**<>|  
+1.  连接到\<*服务器*>\\\<*Drive* \\ \>共享驱动器> \documents 和 Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.*Share*<>|  
   
 2.  右键单击`reports.xml`，然后单击 "**编辑**"。  
   

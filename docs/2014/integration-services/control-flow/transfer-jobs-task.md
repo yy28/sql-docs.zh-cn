@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829893"
 ---
 # <a name="transfer-jobs-task"></a>传输作业任务
@@ -64,7 +64,7 @@ ms.locfileid: "62829893"
   
 -   [传输作业任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [传输作业任务编辑器 &#40;作业 "页面&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [传输作业任务编辑器（“作业”页）](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

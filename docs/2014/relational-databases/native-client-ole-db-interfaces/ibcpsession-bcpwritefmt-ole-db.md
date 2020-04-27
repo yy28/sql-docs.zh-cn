@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPWriteFmt （OLE DB） |Microsoft Docs
+title: IBCPSession::BCPWriteFmt (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62826839"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
@@ -41,8 +41,8 @@ const wchar_t *pwszFormatFile);
   
  若要加载已保存的格式化文件，请使用 [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) 方法。  
   
-## <a name="arguments"></a>参数  
- *pwszFormatFile*[in]  
+## <a name="arguments"></a>自变量  
+ pwszFormatFile**[in]  
  包含数据文件格式值的文件的路径和文件名。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -50,7 +50,7 @@ const wchar_t *pwszFormatFile);
  方法成功。  
   
  E_FAIL  
- 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 接口。  
+ 出现特定于提供程序的错误;有关详细信息，请使用[ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)接口。  
   
  E_OUTOFMEMORY  
  内存不足错误。  

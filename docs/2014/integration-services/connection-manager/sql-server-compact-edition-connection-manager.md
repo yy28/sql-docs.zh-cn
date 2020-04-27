@@ -15,15 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 752c825cb34fbf2afe5d2306afbd562a49f74b7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833142"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 连接管理器
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 连接管理器使包能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 Compact 目标[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用此连接管理器将数据加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的表中。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 连接管理器使包能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 目标使用该连接管理器将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库中的表。  
   
 > [!NOTE]  
 >  在 64 位计算机上，必须以 32 位模式运行连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据源的包。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 数据源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Provider 只在 32 位版本中提供。  
@@ -47,9 +46,9 @@ ms.locfileid: "62833142"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [SQL Server Compact Edition 连接管理器编辑器 &#40;连接页&#41;](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+-   [SQL Server Compact Edition 连接管理器编辑器（“连接”页）](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
--   [SQL Server Compact Edition 连接管理器编辑器 &#40;所有页面&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
+-   [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)项目。  
   

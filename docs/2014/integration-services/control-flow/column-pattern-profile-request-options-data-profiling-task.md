@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832604"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>列模式信息配置文件请求选项（数据事件探查任务）
@@ -71,7 +71,7 @@ ms.locfileid: "62832604"
 ## <a name="request-properties-options"></a>请求属性选项  
  对于 **“列模式配置文件请求”**， **“请求属性”** 窗格显示下列选项组：  
   
--   **Data**，其中包含**TableOrView**和**Column**选项  
+-   **Data**，它包含 **TableOrView** 选项和 **Column** 选项  
   
 -   **常规**  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62832604"
  有关详细信息，请参阅本主题中的“Column 选项”部分。  
   
 #### <a name="tableorview-options"></a>TableOrView 选项  
- **模式**  
+ **架构**  
  指定选定表所属的架构。 此选项是只读的。  
   
  **表**  
@@ -100,7 +100,7 @@ ms.locfileid: "62832604"
   
 #### <a name="column-options"></a>Column 选项  
  **IsWildCard**  
- 指定是否已**选择\*（）** 通配符。 如果已选择 **(**)** 来对所有列进行事件探查，则此选项设置为 \*True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已**选择\*（）** 通配符。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **（\*）** 来对所有列进行事件探查，则此选项为空白。 此选项是只读的。  
@@ -109,7 +109,7 @@ ms.locfileid: "62832604"
  此选项不适用于列模式配置文件。  
   
 ### <a name="general-options"></a>常规选项  
- **RequestID**  
+ **Id**  
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
 ### <a name="options"></a>选项  
@@ -122,7 +122,7 @@ ms.locfileid: "62832604"
  **CaseSensitive**  
  指示模式是否应区分大小写。 此选项的默认值为 **False**。  
   
- **分隔符**  
+ **限定符**  
  列出标记化文本时应视为与词之间的空格等效的字符。 在默认情况下，“分隔符”**** 列表包含下列字符：空格、水平制表符 (\t)、换行符 (\n) 和回车符 (\r)。 可以指定其他分隔符，但不能删除默认分隔符。  
   
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
@@ -144,6 +144,6 @@ ms.locfileid: "62832604"
   
 ## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)   
- [单个表快速配置文件窗体 &#40;数据事件探查任务&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+ [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)  
   
   

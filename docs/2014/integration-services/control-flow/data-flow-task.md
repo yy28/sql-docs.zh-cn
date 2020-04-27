@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832447"
 ---
 # <a name="data-flow-task"></a>数据流任务
@@ -44,9 +44,7 @@ ms.locfileid: "62832447"
  ![数据流](../media/mw-dts-09.gif "数据流")  
   
 ## <a name="log-entries"></a>日志项  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 还提供了可用于多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。 数据流任务包括下列自定义日志项：  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 还提供了可用于多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。 数据流任务包括下列自定义日志项：  
   
 |日志项|说明|  
 |---------------|-----------------|  
@@ -73,7 +71,7 @@ ms.locfileid: "62832447"
 ### <a name="sample-messages-from-a-data-flow-task"></a>来自数据流任务的示例消息  
  下表列出了非常简单的包的日志条目示例消息。 该包使用 OLE DB 源来从表中提取数据，使用排序转换来排序数据，并使用 OLE DB 目标将数据写入其他表。  
   
-|日志项|消息|  
+|日志项|Messages|  
 |---------------|--------------|  
 |`BufferSizeTuning`|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |`OnPipelinePostEndOfRowset`|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  
@@ -94,7 +92,7 @@ ms.locfileid: "62832447"
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB 源和排序转换之间的路径中的 `ID` 属性值。|1185|  
 |**PathName**|路径的 `Name` 属性值。|OLE DB 源输出|  
-|**Id**|排序转换的`ID`属性的值。|1180|  
+|**ComponentID**|排序转换的`ID`属性的值。|1180|  
 |**ComponentName**|排序转换的 `Name` 属性值。|排序|  
 |**InputID**|排序转换的输入的 `ID` 属性值。|1181|  
 |**InputName**|排序转换的输入的 `Name` 属性值。|对输入进行排序|  

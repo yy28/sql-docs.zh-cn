@@ -27,21 +27,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831431"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 任务
-  任务是一些控制流元素，它定义包控制流中执行的工作单元。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包由一个或多个任务[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]组成。 如果包中包含多个任务，则它们将按照优先约束在控制流中进行连接和排序。  
+  任务是一些控制流元素，它定义包控制流中执行的工作单元。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包由一个或多个任务组成。 如果包中包含多个任务，则它们将按照优先约束在控制流中进行连接和排序。  
   
  您还可使用支持 COM 的编程语言（如 Visual Basic）或 .NET 编程语言（如 C#）编写自定义任务。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器是中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]用于处理包的图形工具，它提供了用于创建包控制流的设计界面，还提供了用于配置任务的自定义编辑器。 您还[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]可以对对象模型进行编程以编程方式创建包。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中用于处理包的图形工具，可提供用于创建包控制流的设计界面，以及用于配置任务的自定义编辑器。 你还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型进行编程，以便通过编程方式创建包。  
   
 ## <a name="types-of-tasks"></a>任务的类型  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包括以下类型的任务。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包括下列类型的任务。  
   
  数据流任务  
  数据流任务用于运行数据流以提取数据、应用列级转换和加载数据。  
@@ -68,8 +68,7 @@ ms.locfileid: "62831431"
  此外，您还可以使用支持 COM 的编程语言（如 Visual Basic）或 .NET 编程语言（如 C#）编写自定义任务。 如果希望在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中访问自定义任务，那么你可以为该任务创建和注册一个用户接口。 有关详细信息，请参阅 [开发自定义任务](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="configuration-of-tasks"></a>任务的配置  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包可以只包含单个任务，如在包运行时删除数据库表中记录的执行 SQL 任务。 但是，包通常包含多个任务，而且每个任务都被设置为在包控制流上下文中运行。 事件处理程序是为响应运行时事件而运行的工作流，该程序中也可包含任务。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包可以只包含单个任务，如在包运行时删除数据库表中记录的执行 SQL 任务。 但是，包通常包含多个任务，而且每个任务都被设置为在包控制流上下文中运行。 事件处理程序是为响应运行时事件而运行的工作流，该程序中也可包含任务。  
   
  有关使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器向包添加任务的详细信息，请参阅 [在控制流中添加或删除任务或容器](add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   

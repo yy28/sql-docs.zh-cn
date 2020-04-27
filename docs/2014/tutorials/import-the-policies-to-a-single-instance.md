@@ -11,16 +11,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62865096"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>将策略导入到单个实例
   在此任务中，您将要计划的最佳实践策略导入到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的单个实例上的基于策略的管理中。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  您必须在运行 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 或更高版本的服务器上执行此过程。  
   
 ### <a name="import-the-best-practices-policies-for-the-database-engine"></a>为数据库引擎导入最佳实践策略  

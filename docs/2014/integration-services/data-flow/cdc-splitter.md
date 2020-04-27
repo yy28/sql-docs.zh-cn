@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828233"
 ---
 # <a name="cdc-splitter"></a>CDC 拆分器
@@ -25,7 +25,7 @@ ms.locfileid: "62828233"
 |操作的值|输出|说明|  
 |------------------------|------------|-----------------|  
 |1|删除|删除的行|  
-|2|Insert|插入的行（使用“净值且具有合并”  CDC 模式时不可用）|  
+|2|插入|插入的行（使用“净值且具有合并”  CDC 模式时不可用）|  
 |3|更新|更新前的行（仅在使用“全部且具有旧值”  CDC 模式时可用）|  
 |4|更新|更新后的行（与更新前相同）|  
 |5|更新|合并行（仅在使用“净值且具有合并”  CDC 模式时可用）|  

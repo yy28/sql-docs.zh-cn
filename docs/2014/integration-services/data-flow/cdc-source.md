@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828120"
 ---
 # <a name="cdc-source"></a>CDC 源
@@ -75,24 +75,20 @@ use <cdc-enabled-database-name>
   
  其中：  
   
--   
-  \<cdc-enabled-database-name> 是包含更改表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。  
+-   \<cdc-enabled-database-name> 是包含更改表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。  
   
--   
-  \<value-from-state-cs> 是在 CDC 状态变量中以 CS/\<value-from-state-cs>/（CS 表示 Current-processing-range-Start）形式出现的值。  
+-   \<value-from-state-cs> 是在 CDC 状态变量中以 CS/\<value-from-state-cs>/（CS 表示 Current-processing-range-Start）形式出现的值。  
   
--   
-  \<value-from-state-ce> 是在 CDC 状态变量中以 CE/\<value-from-state-cs>/（CE 表示 Current-processing-range-End）形式出现的值。  
+-   \<value-from-state-ce> 是在 CDC 状态变量中以 CE/\<value-from-state-cs>/（CE 表示 Current-processing-range-End）形式出现的值。  
   
--   
-  \<mode> 是 CDC 处理模式。 处理模式具有以下值之一： **“全部”**、 **“全部且具有旧值”**、 **“净值”**、 **“具有更新掩码的净值”** 和 **“净值且具有合并”**。  
+-   \<mode> 是 CDC 处理模式。 处理模式具有以下值之一： **“全部”**、 **“全部且具有旧值”**、 **“净值”**、 **“具有更新掩码的净值”** 和 **“净值且具有合并”**。  
   
  此脚本可通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中复现问题（在其中可以轻松地复现和标识错误），有助于标识问题。  
   
 #### <a name="sql-server-error-message"></a>SQL Server 错误消息  
  下面是可以由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的消息：  
   
- **为过程或函数提供的参数数目不足。 fn_cdc_get_net_changes_\<。>。**  
+ 为过程或函数 cdc.fn_cdc_get_net_changes_\<..> 提供的参数数目不足****。  
   
  此错误并不表示缺少参数。 这意味着 CDC 状态变量中的开始或结束 LSN 值无效。  
   

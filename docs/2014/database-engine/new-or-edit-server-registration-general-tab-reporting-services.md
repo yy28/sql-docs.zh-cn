@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844263"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>新建或编辑服务器注册（“常规”选项卡）(Reporting Services)
@@ -26,7 +26,7 @@ ms.locfileid: "62844263"
   
 ## <a name="options"></a>选项  
  **服务器类型**  
- 从已注册的服务器中注册某服务器时，“服务器类型”**** 框是只读的，它与“已注册的服务器”**** 窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
+ 从已注册的服务器注册服务器时，"**服务器类型**" 框是只读的，并且与 "**已注册的服务器**" 窗格中显示的服务器类型匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
   
  **服务器名称**  
  指定要连接到的报表服务器实例。 在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，可以通过报表服务器的实例名访问该服务器。 您安装的每个 SQL Server 实例都可以有一个报表服务器实例。 如果使用默认实例，请键入 SQL Server 实例的名称。 如果使用命名实例，请以 MSSQL$InstanceName 格式指定要连接到报表服务器的命名实例。  
@@ -40,13 +40,13 @@ ms.locfileid: "62844263"
  **基本身份验证**  
  如果将 Reporting Services 安装配置为使用基本身份验证，则使用“基本身份验证”**** 进行连接。  
   
- **Forms 身份验证**  
+ **窗体身份验证**  
  如果将 Reporting Services 安装配置为使用自定义身份验证扩展插件，则使用“窗体身份验证”**** 进行连接。  
   
  **用户名**  
  输入用于连接的登录名。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可用。  
   
- **权限**  
+ **密码**  
  输入用户名的密码。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可编辑。  
   
  **记住密码**  
@@ -61,10 +61,10 @@ ms.locfileid: "62844263"
  **已注册的服务器说明**  
  输入服务器的说明（可选）。  
   
- **考试**  
+ **测试**  
  单击此项可测试与“服务器名称”**** 中所选服务器的连接。  
   
- **把**  
+ **保存**  
  单击此项可保存已注册服务器的设置。  
   
   

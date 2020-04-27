@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9f9969630f8fe9f665a04575af8670ddb1af1b3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62835547"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
@@ -38,7 +38,7 @@ ms.locfileid: "62835547"
   
      也可以右键单击要使用的 CDC 服务，然后选择所需操作。 请参阅 [你可以做什么与 CDC 服务](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> 使用 CDC 服务可以做什么  
+##  <a name="what-can-you-do-with-a-cdc-service"></a><a name="BKMK_WhatcandowithCDCService"></a> 使用 CDC 服务可以做什么  
  您可在使用 CDC 服务时执行以下操作。  
   
 ### <a name="delete-the-service"></a>删除服务  

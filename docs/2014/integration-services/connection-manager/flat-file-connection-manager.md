@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833806"
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
@@ -71,13 +71,13 @@ ms.locfileid: "62833806"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [平面文件连接管理器编辑器 &#40;"常规" 页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [平面文件连接管理器编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [平面文件连接管理器编辑器 &#40;列 "页&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+-   [平面文件连接管理器编辑器（“列”页）](../flat-file-connection-manager-editor-columns-page.md)  
   
--   ["平面文件连接管理器编辑器" &#40;"高级" 页&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [平面文件连接管理器编辑器（“高级”页）](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [平面文件连接管理器编辑器 &#40;预览页面&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [平面文件连接管理器编辑器（“预览”页）](../flat-file-connection-manager-editor-preview-page.md)  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)项目。  
   

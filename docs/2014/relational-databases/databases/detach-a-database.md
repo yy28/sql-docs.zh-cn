@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871952"
 ---
 # <a name="detach-a-database"></a>分离数据库
@@ -39,17 +39,17 @@ ms.locfileid: "62871952"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  有关限制和局限的列表，请参阅 [数据库分离和附加 (SQL Server)](database-detach-and-attach-sql-server.md)中分离数据库。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-detach-a-database"></a>分离数据库  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62871952"
 > [!NOTE]  
 >  新分离的数据库将一直显示在对象资源管理器的 **“数据库”** 节点中，直到刷新该视图。 可以随时刷新视图：单击对象资源管理器窗格，然后从菜单栏依次选择 **“视图”** 和 **“刷新”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-detach-a-database"></a>分离数据库  
   

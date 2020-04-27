@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833555"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 存储连接管理器
@@ -35,6 +35,6 @@ ms.locfileid: "62833555"
   
 4.  单击 **“确定”** 关闭对话框。  
   
-5.  你可以看到你在“属性”  窗口中创建的连接管理器的属性。  
+5.  你可以看到你在“属性” **** 窗口中创建的连接管理器的属性。  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856166"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>创建目标邮件挖掘模型结构（数据挖掘基础教程）
@@ -35,11 +35,11 @@ ms.locfileid: "62856166"
     > [!NOTE]  
     >  如果收到警告，告知无法找到数据挖掘算法，则项目属性可能配置不正确。 当项目尝试从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器检索数据挖掘算法列表却找不到服务器时，就会出现此警告。 默认情况下[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ，将使用**localhost**作为服务器。 如果要使用其他实例或命名实例，则必须更改项目属性。 有关详细信息，请参阅[创建 Analysis Services 项目 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)。  
   
-5.  单击“下一步”。   
+5.  单击“下一步”  。  
   
 6.  在 "**选择数据源视图**" 页上的 "**可用数据源视图**" 窗格中，选择 "**目标邮件**"。 您可以单击 "**浏览**" 以在数据源视图中查看表，然后单击 "**关闭**" 以返回到向导。  
   
-7.  单击“下一步”。   
+7.  单击“下一步”  。  
   
 8.  在 "**指定表类型**" 页上，选中 "vTargetMail" 的 "**事例**" 列中的复选框以将其用作事例表，然后单击 "**下一步**"。 稍后您将使用 ProspectiveBuyer 表进行测试，不过现在可以忽略它。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "62856166"
   
     -   **FirstName**  
   
-    -   **LastName**  
+    -   **姓**  
   
      确保这些行仅选择了左侧列中的复选标记。 这些列将添加到结构中，但不会包含在模型中。 但是，模型生成后，它们将可用于钻取和测试。 有关钻取的详细信息，请参阅[钻取查询 &#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
-14. 单击“下一步”。   
+14. 单击“下一步”  。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [指定数据类型和内容类型 &#40;基本数据挖掘教程&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  

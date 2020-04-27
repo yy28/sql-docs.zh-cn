@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827078"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed 事件类
@@ -40,7 +40,7 @@ ms.locfileid: "62827078"
 |写入|`int`|逻辑写入数。|17|是|  
 |GroupID|`int`|分类工作负荷组的 ID。|66|是|  
 |错误|`int`|如果用户定义的分类器函数无法执行，则为最后一个错误号。|31|是|  
-|状态|`int`|最后一个错误的状态。|30|是|  
+|State|`int`|最后一个错误的状态。|30|是|  
 |TargetUserName|`sysname`|如果系统无法找到相应的活动组，则为用户定义的分类器函数的返回值（工作负荷组名）。 否则，此列设为 NULL.|39|是|  
 |ObjectName|`nvarchar(256)`|用户定义的分类器函数的两部分名称。 例如，dbo.classifier。|34|是|  
   

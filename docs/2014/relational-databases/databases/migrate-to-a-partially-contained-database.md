@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871723"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -32,7 +32,7 @@ ms.locfileid: "62871723"
   
 -   [将用户迁移为包含的数据库用户](#users)  
   
-##  <a name="prepare"></a> 准备迁移数据库  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> 准备迁移数据库  
  在考虑将数据库迁移到部分包含的数据库模型时，请复查以下各项。  
   
 -   您应该了解部分包含的数据库模型。 有关详细信息，请参阅 [Contained Databases](contained-databases.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "62871723"
   
 -   监视 **database_uncontained_usage** XEvent 以了解何时使用非包含的功能。  
   
-##  <a name="enable"></a> 启用包含的数据库  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> 启用包含的数据库  
  必须先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例上启用包含的数据库，然后才能创建包含的数据库。  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>使用 Transact-SQL 启用包含的数据库  
@@ -69,7 +69,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="convert"></a> 将数据库转换为部分包含的数据库  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> 将数据库转换为部分包含的数据库  
  通过更改 **CONTAINMENT** 选项可以将数据库转换为包含的数据库。  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>使用 Transact-SQL 将数据库转换为部分包含的数据库  
@@ -91,7 +91,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> 将用户迁移为包含的数据库用户  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> 将用户迁移为包含的数据库用户  
  以下示例将所有基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户迁移到具有密码的包含数据库用户。 该示例不包括未启用的登录名。 必须在包含的数据库中执行该示例。  
   
 ```sql  

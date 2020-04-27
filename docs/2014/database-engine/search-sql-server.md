@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843713"
 ---
 # <a name="search-sql-server"></a>搜索 (SQL Server)
@@ -28,6 +28,6 @@ ms.locfileid: "62843713"
  标识文本或文档中的关键短语，发现相似或相关的文档，并提供解释文档相似或相关程度的信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
+ [二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

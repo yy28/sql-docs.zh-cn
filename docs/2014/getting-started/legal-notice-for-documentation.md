@@ -17,24 +17,23 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62837517"
 ---
 # <a name="legal-notice-for-documentation"></a>文档法律声明
-  本文档“按原样”提供。 本文档表达的信息和观点，包括 URL 和其他 Internet Web 站点参考，若有更改，恕不通知。 您应承担使用本文档所带来的风险。  
+  本文档“按原样”提供。 本文档中表达的信息和视图（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 您应承担使用本文档所带来的风险。  
   
- 在此介绍的一些示例仅为解释提供，并且纯属虚构。 没有计划产生实际关联或联系，也不应妄加推断。  
+ 本书中提及的一些示例仅用于说明，纯属虚构。 不存在任何实际关联或联系，请勿妄加推断。  
   
- 本文档不向您提供对任何 Microsoft 产品中的任何知识产权的任何法律权利。 可复制本文档，将其用于内部、参考用途。  
+ 本文档未向你提供针对任何 Microsoft 产品的任何知识产权的任何法律权限。 可以复制本文档并将其用于进行内部参考。  
   
  © 2013 Microsoft。 保留所有权利。  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 支持和升级文档策略  
- 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 软件文档包括 Microsoft 发布的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 联机丛书、安装文档、开发人员参考文档、教程、自述文件、已知问题文档、示例代码、示例数据库和知识库文章，这些文档都包含与 SQL Server 的特征和功能相关的内容。 本支持和升级策略适用于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 文档，包括 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本和 Service Pack 的自述文件；自述文件被视为 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 联机丛书的扩展。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 软件文档包括 Microsoft 发布的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 联机丛书、安装文档、开发人员参考文档、教程、自述文件、已知问题文档、示例代码、示例数据库和知识库文章，这些文档都包含与 SQL Server 的特征和功能相关的内容。 本支持和升级策略适用于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 文档，包括 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本和 Service Pack 的自述文件；自述文件被视为 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 联机丛书的扩展。  
   
  本文档中包含的示例主要用于说明概念以及特定语句或子句的合理用法。 大多数示例不包括完整的生产系统通常所包含的全部代码，因为其中删除了某些常用的数据验证和错误处理，以便使示例突出特定的概念或语句。 对这些示例或所包括的源代码，我们不提供技术支持。  
   

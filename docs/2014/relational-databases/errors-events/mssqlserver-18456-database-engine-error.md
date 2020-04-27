@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869592"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
@@ -75,7 +75,7 @@ ms.locfileid: "62869592"
   
  存在其他错误状态，并表示一个意外的内部处理错误。  
   
- **其他异常可能的原因**  
+ **其他不常见的可能原因**  
   
  错误原因 **：尝试使用 SQL 身份验证登录失败。服务器仅配置为 Windows 身份验证。** 可能会在下列情况下返回。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62869592"
 ## <a name="examples"></a>示例  
  在此示例中，身份验证错误状态为 8。 这表示密码不正确。  
   
-|Date|源|消息|  
+|日期|源|消息|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|登录|错误: 18456，严重性: 14，状态: 8。|  
 |2007-12-05 20:12:56.34|登录|用户‘<user_name>’登录失败。 [客户端\<： ip 地址>]|  

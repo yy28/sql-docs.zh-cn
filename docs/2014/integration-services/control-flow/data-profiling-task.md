@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831879"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
@@ -75,18 +75,12 @@ ms.locfileid: "62831879"
 |-------------|------------------------|  
 |列统计信息配置文件|numeric 类型或 `datetime` 类型的列（`mean` 列无 `stddev` 和 `datetime`）|  
 |列 Null 比率配置文件|所有列**|  
-|列值分布配置文件|
-  `integer` 类型、`char` 类型和 `datetime` 类型的列|  
-|列长度分布配置文件|
-  `char` 类型的列|  
-|列模式配置文件|
-  `char` 类型的列|  
-|候选键配置文件|
-  `integer` 类型、`char` 类型和 `datetime` 类型的列|  
-|函数依赖关系配置文件|
-  `integer` 类型、`char` 类型和 `datetime` 类型的列|  
-|包含配置文件|
-  `integer` 类型、`char` 类型和 `datetime` 类型的列|  
+|列值分布配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
+|列长度分布配置文件|`char` 类型的列|  
+|列模式配置文件|`char` 类型的列|  
+|候选键配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
+|函数依赖关系配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
+|包含配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
   
  \*在以前的有效数据类型表中`integer`，、 `char` `datetime`、和`numeric`类型包括以下特定的数据类型：  
   
@@ -110,9 +104,9 @@ ms.locfileid: "62831879"
 ## <a name="features-of-the-data-profiling-task"></a>数据事件探查任务的功能  
  数据事件探查任务具有以下便利的配置选项：  
   
--   **通配符列**在配置配置文件请求时，该任务接受 **（\*）** 通配符代替列名称。 这简化了配置并更易于发现不熟悉的数据的特征。 当任务运行时，该任务对具有适当的数据类型的各列进行事件探查。  
+-   **通配符列** 在配置配置文件请求时，该任务接受用 **(\*)** 通配符代替列名称。 这简化了配置并更易于发现不熟悉的数据的特征。 当任务运行时，该任务对具有适当的数据类型的各列进行事件探查。  
   
--   **快速配置文件**你可以选择 "快速配置文件" 来快速配置该任务。 快速配置文件使用所有默认配置文件和默认设置对表或视图进行事件探查。  
+-   **“快速配置文件”** You can select “快速配置文件” to configure the task quickly. 快速配置文件使用所有默认配置文件和默认设置对表或视图进行事件探查。  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>数据事件探查任务可用的自定义日志记录消息  
  下表列出了数据事件探查任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
@@ -122,7 +116,7 @@ ms.locfileid: "62831879"
 |**DataProfilingTaskTrace**|提供有关任务状态的说明性信息。 日志记录消息包含以下信息：<br /><br /> 开始处理请求<br /><br /> 查询开始<br /><br /> 查询结束<br /><br /> 完成计算请求|  
   
 ## <a name="output-and-its-schema"></a>输出及其架构  
- 数据事件探查任务将所选的配置文件输出到根据 DataProfile.xsd 架构进行组织的 XML。 可以指定是将此 XML 输出保存到文件还是保存到包变量。 可以在[https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)中联机查看此架构。 可以从网页上保存该架构的副本。 然后，可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他架构编辑器、在 XML 编辑器或在文本编辑器（如记事本）中查看该架构的本地副本。  
+ 数据事件探查任务将所选的配置文件输出到根据 DataProfile.xsd 架构进行组织的 XML。 可以指定是将此 XML 输出保存到文件还是保存到包变量。 可以在 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) 中在线查看此架构。 可以从网页上保存该架构的副本。 然后，可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他架构编辑器、在 XML 编辑器或在文本编辑器（如记事本）中查看该架构的本地副本。  
   
  此数据质量信息架构可能对以下操作有用：  
   
@@ -130,7 +124,7 @@ ms.locfileid: "62831879"
   
 -   生成处理数据质量信息的自定义工具。  
   
- 目标命名空间在架构中将标识为[https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 目标命名空间在架构中被标识为 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>在包的条件工作流中的输出  
  数据事件探查组件不包含内置功能，无法根据数据事件探查任务的输出在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的工作流中实现条件逻辑。 但是，您只要在脚本任务中进行少量的编程工作即可轻松地添加此逻辑。 此代码将对 XML 输出执行 XPath 查询，然后将结果保存在包变量中。 用于将脚本任务连接到后续任务的优先约束可以使用表达式来确定工作流。 例如，脚本任务检测某一列中 null 值超过阈值的百分比。 如果此条件为 true，则可能需要中断包并解决此问题，然后再继续执行。  
@@ -139,25 +133,25 @@ ms.locfileid: "62831879"
  使用 **“数据事件探查任务编辑器”** 配置数据事件探查任务。 此编辑器有以下两页：  
   
  [“常规”页](../general-page-of-integration-services-designers-options.md)  
- 在“常规”**** 页上，可指定输出文件或变量。 还可以选择 **“快速配置文件”** 对任务进行快速配置，以便使用默认的设置来计算配置文件。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](data-profiling-task.md)。  
+ 在“常规”  页上，可指定输出文件或变量。 还可以选择 **“快速配置文件”** 对任务进行快速配置，以便使用默认的设置来计算配置文件。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](data-profiling-task.md)。  
   
- ["配置文件请求" 页](data-profiling-task-editor-profile-requests-page.md)  
- 在“配置文件请求”**** 页上，可指定数据源，选择要计算的数据配置文件并对其进行配置。 有关可以配置的各种配置文件的详细信息，请参阅以下主题：  
+ [“配置文件请求”页](data-profiling-task-editor-profile-requests-page.md)  
+ 在“配置文件请求”  页上，可指定数据源，选择要计算的数据配置文件并对其进行配置。 有关可以配置的各种配置文件的详细信息，请参阅以下主题：  
   
--   [候选键配置文件请求选项 &#40;数据事件探查任务&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候选键配置文件请求选项（数据事件探查任务）](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [列长度分布配置文件请求选项 &#40;数据事件探查任务&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [列长度分布配置文件请求选项（数据事件探查任务）](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [列 Null 比率配置文件请求选项 &#40;数据事件探查任务&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [列 Null 比率配置文件请求选项（数据事件探查任务）](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [数据事件探查任务 &#40;列模式配置文件请求选项&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [列模式配置文件请求选项（数据事件探查任务）](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [列统计信息配置文件请求选项 &#40;数据事件探查任务&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [列统计信息配置文件请求选项（数据事件探查任务）](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [列值分布配置文件请求选项 &#40;数据事件探查任务&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [列值分布配置文件请求选项（数据事件探查任务）](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [函数依赖关系配置文件请求选项 &#40;数据事件探查任务&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [函数依赖关系配置文件请求选项（数据事件探查任务）](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [值包含配置文件请求选项 &#40;数据事件探查任务&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [值包含配置文件请求选项（数据事件探查任务）](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

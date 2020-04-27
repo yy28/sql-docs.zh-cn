@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62868878"
 ---
 # <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
@@ -48,7 +48,7 @@ ms.locfileid: "62868878"
  如果不能备份日志尾部，则使用 RESTORE 语句中的 WITH STOPAT 或 WITH REPLACE 子句。  
   
 ## <a name="see-also"></a>另请参阅  
- [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [&#40;完整恢复模式将 SQL Server 数据库还原到某个时间点&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [在数据库损坏时备份事务日志 &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
  [备份事务日志 &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [结尾日志备份 (SQL Server)](../backup-restore/tail-log-backups-sql-server.md)  

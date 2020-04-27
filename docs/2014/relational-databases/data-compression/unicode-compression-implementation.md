@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872965"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 压缩的实现
@@ -27,8 +27,7 @@ ms.locfileid: "62872965"
  Unicode 压缩支持固定长度 `nchar(n)` 和 `nvarchar(n)` 数据类型。 存储于行外或 `nvarchar(max)` 列中的数据值不压缩。  
   
 > [!NOTE]  
->  
-  `nvarchar(max)` 不支持 Unicode 压缩，即使数据存储于行内。 但是，此数据类型仍可以从页压缩中受益。  
+>  `nvarchar(max)` 不支持 Unicode 压缩，即使数据存储于行内。 但是，此数据类型仍可以从页压缩中受益。  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>从 SQL Server 的早期版本升级  
  在某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，将不会对任何数据库对象（无论是压缩的还是未压缩的）进行与 Unicode 压缩相关的更改。 在数据库升级后，对象会受到影响，如下所示：  

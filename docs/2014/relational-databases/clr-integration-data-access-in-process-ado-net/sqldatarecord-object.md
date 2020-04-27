@@ -14,18 +14,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874685"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 对象
-  
   `SqlDataRecord` 对象表示一行数据及其相关元数据。  
   
- 托管存储过程可以发送到并非来自于 `SqlDataReader` 的客户端结果集。 
-  `SqlDataRecord` 类以及 `SendResultsStart` 对象的 `SendResultsRow`、`SendResultsEnd` 和 `SqlPipe` 方法允许存储过程将自定义结果集发送到客户端。  
+ 托管存储过程可以发送到并非来自于 `SqlDataReader` 的客户端结果集。 `SqlDataRecord` 类以及 `SendResultsStart` 对象的 `SendResultsRow`、`SendResultsEnd` 和 `SqlPipe` 方法允许存储过程将自定义结果集发送到客户端。  
   
  有关详细信息，请参阅`Microsoft.SqlServer.Server.SqlDataRecord` .NET Framework SDK 文档中的类参考文档。  
   

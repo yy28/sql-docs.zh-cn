@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874025"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>模拟和连接凭据
@@ -31,8 +31,7 @@ ms.locfileid: "62874025"
   
  默认情况下，连出至 Windows 的 SQL Server 进程会获得 SQL Server Windows 服务帐户的安全上下文。 但可以将 CLR 函数映射到代理标识上，以便其出站连接具有的安全上下文不同于 Windows 服务帐户的安全上下文。  
   
- 在某些情况下，最好使用 `SqlContext.WindowsIdentity` 属性来模拟调用方，而非作为服务帐户运行。 
-  `WindowsIdentity` 实例表示调用调用代码的客户端的标识，并且仅在客户端使用 Windows 身份验证时才可用。 在已获得 `WindowsIdentity` 实例后，可以调用 `Impersonate` 来更改线程的安全令牌，然后代表客户端打开 ADO.NET 连接。  
+ 在某些情况下，最好使用 `SqlContext.WindowsIdentity` 属性来模拟调用方，而非作为服务帐户运行。 `WindowsIdentity` 实例表示调用调用代码的客户端的标识，并且仅在客户端使用 Windows 身份验证时才可用。 在已获得 `WindowsIdentity` 实例后，可以调用 `Impersonate` 来更改线程的安全令牌，然后代表客户端打开 ADO.NET 连接。  
   
  调用 SQLContext 后，无法访问本地数据并且无法访问系统数据。 若要再次访问数据，必须调用 WindowsImpersonationContext。  
   

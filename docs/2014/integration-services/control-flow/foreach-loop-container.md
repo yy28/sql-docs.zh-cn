@@ -18,22 +18,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831570"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]提供以下枚举器类型：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了下列枚举器类型：  
   
 -   Foreach ADO 枚举器，用于枚举表中的行。 例如，可以获取 ADO 记录集中的行。  
   
      数据集目标将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 `Object` 的包变量中。 您通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 为 Foreach ADO 枚举器指定的变量必须为 Object 数据类型。 有关记录集目标的详细信息，请参阅 [Use a Recordset Destination](../data-flow/recordset-destination.md)。  
   
--   Foreach ADO.NET 架构行集枚举器，用于枚举有关数据源的架构信息。 例如，可以枚举并获取[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库中表的列表。  
+-   Foreach ADO.NET 架构行集枚举器，用于枚举有关数据源的架构信息。 例如，可枚举并获取一组 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的表。  
   
 -   Foreach 文件枚举器，用于枚举文件夹中的文件。 该枚举器可遍历子文件夹。 例如，可读取 Windows 文件夹及其子文件夹中所有具有 *.log 文件扩展名的文件。  
   

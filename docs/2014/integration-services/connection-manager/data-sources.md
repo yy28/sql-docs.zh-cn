@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fa4a428c1d1f290ceadee19d21f3b8f0b8bd942
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833837"
 ---
 # <a name="data-sources"></a>“数据源”
@@ -40,7 +40,7 @@ ms.locfileid: "62833837"
   
  将引用数据源对象的连接管理器添加到包之后，便可以在该包中使用数据源对象。 可以在生成包控制流和数据流之前将其添加到包中，也可以作为构造控制流和数据流的一个步骤来添加。  
   
- 数据源对象表示对数据源的简单连接，通过它可以访问它所引用的数据存储区中的对象。 例如，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AdventureWorks 示例数据库的数据源对象包括来自该数据库的所有 60 个表。  
+ 数据源对象表示对数据源的简单连接，通过它可以访问它所引用的数据存储区中的对象。 例如，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AdventureWorks 示例数据库的数据源对象包括来自该数据库的所有 60 个表。  
   
  在数据源和引用它的连接管理器之间没有依赖关系。 即使数据源不再是项目的一部分，包仍然有效，因为有关该数据源的信息（例如其连接类型和连接字符串）已包括在包定义中。  
   

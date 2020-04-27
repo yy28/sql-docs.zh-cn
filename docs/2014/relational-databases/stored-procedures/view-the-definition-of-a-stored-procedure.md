@@ -16,25 +16,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856506"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>查看存储过程的定义
     
-##  <a name="Top"></a> 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“对象资源管理器”菜单选项或在查询编辑器中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]来查看存储过程的定义。 本主题介绍如何在对象资源管理器中查看过程的定义，以及如何在查询编辑器中使用系统存储过程、系统函数和对象目录视图来查看过程的定义。  
+##  <a name="you-can-view-the-definition-of-a-stored-procedure-in-ssmanstudiofull-using-object-explorer-menu-options-or-in-the-query-editor-using-tsql-this-topic-describes-how-to-view-the-definition-of-procedure-in-object-explorer-and-by-using-a-system-stored-procedure-system-function-and-object-catalog-view-in-the-query-editor"></a><a name="Top"></a> 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“对象资源管理器”菜单选项或在查询编辑器中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]来查看存储过程的定义。 本主题介绍如何在对象资源管理器中查看过程的定义，以及如何在查询编辑器中使用系统存储过程、系统函数和对象目录视图来查看过程的定义。  
   
 -   **开始之前：** [安全性](#Security)  
   
 -    要查看过程的定义，请使用：[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  系统存储过程：`sp_helptext`  
  要求 **公共** 角色具有成员身份。 系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  
   
@@ -44,14 +44,14 @@ ms.locfileid: "62856506"
  对象目录视图：`sys.sql_modules`  
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)。  
   
-##  <a name="Procedures"></a> 如何查看存储过程的定义  
+##  <a name="how-to-view-the-definition-of-a-stored-procedure"></a><a name="Procedures"></a> 如何查看存储过程的定义  
  您可以使用以下项之一：  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **在对象资源管理器中查看过程的定义**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
@@ -62,7 +62,7 @@ ms.locfileid: "62856506"
   
 4.  选择“新建查询编辑器窗口”  。 这将显示过程定义。  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中查看过程的定义**  
   
  系统存储过程：`sp_helptext`  

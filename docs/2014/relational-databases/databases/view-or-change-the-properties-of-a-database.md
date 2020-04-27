@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10ad92286011f6f81fbaff5ab4908007e16bdd45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870947"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>查看或更改数据库的属性
@@ -39,28 +39,28 @@ ms.locfileid: "62870947"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   当 AUTO_CLOSE 为 ON 时，由于该数据库不可用于检索数据，因此 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目录视图中的某些列和 DATABASEPROPERTYEX 函数将返回 NULL。 若要解决此问题，请执行 USE 语句打开数据库。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-properties-of-a-database"></a>查看或更改数据库的属性  
   
-1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在**对象资源管理器**中，连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
 2.  展开“数据库”****，右键单击要查看的数据库，再单击“属性”****。  
   
 3.  在 **“数据库属性”** 对话框中，选择一个页以查看相应的信息。 例如，选择 **“文件”** 页可以查看数据和日志文件信息。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-a-property-of-a-database-by-using-databasepropertyex"></a>使用 DATABASEPROPERTYEX 查看数据库的属性  
   
@@ -112,11 +112,11 @@ GO
  [!code-sql[DatabaseDDL#AlterDatabase9](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase9)]  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [ALTER DATABASE SET HADR (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)   
- [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
- [ALTER DATABASE 数据库镜像 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
- [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)   
+ [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [ALTER DATABASE SET HADR &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)   
+ [ALTER DATABASE SET Options &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [更改数据库数据库镜像 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [ALTER DATABASE 兼容级别 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)   
  [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
   

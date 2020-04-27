@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856136"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>向表中添加列（数据库引擎）
@@ -38,17 +38,17 @@ ms.locfileid: "62856136"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  使用 ALTER TABLE 语句向表添加列会自动将这些列添加到该表的末尾。 如果您希望该表中的列采用特定顺序，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 但请注意，这并非数据库设计的最佳做法。 最佳做法是指定在应用程序级别和查询级别返回列的顺序。 您不应依赖于使用 SELECT * 基于在表中定义列的顺序以预期顺序返回所有列。 请始终按照您希望它们出现的顺序在您的查询和应用程序中按名称指定列。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>用表设计器向表中插入列  
   
@@ -61,16 +61,16 @@ ms.locfileid: "62856136"
 4.  按 Tab 键转到 **“数据类型”** 单元格，再从下拉列表中选择数据类型。 它也是必需设置的值，如果您没有作出选择，它将被赋以默认值。  
   
     > [!NOTE]  
-    >  可以在“选项”**** 对话框中的“数据库工具”**** 之下更改默认值。  
+    >   可以在 **“选项”** 对话框中的 **“数据库工具”** 之下更改默认值。  
   
 5.  在 **“列属性”** 选项卡上继续定义任何其他列属性。  
   
     > [!NOTE]  
-    >  列属性的默认值在你创建新列时添加，但你可以在“列属性”**** 选项卡中更改这些值。  
+    >   列属性的默认值在您创建新列时添加，但您可以在 **“列属性”** 选项卡中更改这些值。  
   
-6.  在你添加完列后，从“文件” **** 菜单中，选择“保存” ****_table name_。  
+6.  添加完列后，从“文件”菜单中，选择“保存”_表名称_********。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-insert-columns-into-a-table"></a>向表中插入列  
   
@@ -84,6 +84,6 @@ ms.locfileid: "62856136"
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-##  <a name="FollowUp"></a>有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+##  <a name="for-more-information-see-alter-table-40transact-sql41"></a><a name="FollowUp"></a>有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829490"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 数据读取器任务
@@ -84,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [WMI 数据读取器任务编辑器 &#40;WMI 选项 "页&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [WMI 数据读取器任务编辑器（“WMI 选项”页）](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

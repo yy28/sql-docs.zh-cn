@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827139"
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
@@ -44,10 +44,9 @@ ms.locfileid: "62827139"
   
  下列关系图显示包含错误输出的简单数据流。  
   
- ![具有错误输出的数据流](../media/mw-dts-11.gif "具有错误输出的数据流")  
+ ![包含错误输出的数据流](../media/mw-dts-11.gif "包含错误输出的数据流")  
   
- 除数据列外，错误输出还包含 **ErrorCode** 列和 **ErrorColumn** 列。 
-  **ErrorCode** 列标识错误，而 **ErrorColumn** 列则包含错误列的沿袭标识符。 若要查看这些列的元数据，请单击将错误输出连接到数据流中下一个组件的路径。 在某些环境下， **ErrorColumn** 列的值会设置为零。 当错误条件影响到整行而不是单列时，就会发生该情况。 例如，在查找转换中的查找失败时。  
+ 除数据列外，错误输出还包含 **ErrorCode** 列和 **ErrorColumn** 列。 **ErrorCode** 列标识错误，而 **ErrorColumn** 列则包含错误列的沿袭标识符。 若要查看这些列的元数据，请单击将错误输出连接到数据流中下一个组件的路径。 在某些环境下， **ErrorColumn** 列的值会设置为零。 当错误条件影响到整行而不是单列时，就会发生该情况。 例如，在查找转换中的查找失败时。  
   
  有关详细信息，请参阅 [数据流](data-flow.md) 和 [Integration Services 路径](integration-services-paths.md)。  
   

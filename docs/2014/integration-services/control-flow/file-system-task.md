@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831742"
 ---
 # <a name="file-system-task"></a>文件系统任务
@@ -62,7 +62,7 @@ ms.locfileid: "62831742"
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅以下主题：  
   
--   [文件系统任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [文件系统任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62831742"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包括用于下载和上传数据文件以及管理服务器上目录的任务。 有关详细信息，请参阅 [FTP Task](ftp-task.md)。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一个可下载和上载数据文件以及管理服务器上目录的任务。 有关详细信息，请参阅 [FTP Task](ftp-task.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   

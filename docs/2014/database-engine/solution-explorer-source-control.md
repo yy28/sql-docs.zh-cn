@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843096"
 ---
 # <a name="solution-explorer-source-control"></a>解决方案资源管理器源代码管理
@@ -33,14 +33,13 @@ ms.locfileid: "62843096"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- 源代码管理是指以下系统：在该系统中，使用中心服务器软件存储和跟踪文件版本，并控制对文件的访问。 典型的源代码管理系统包括源代码管理提供程序以及两个或多个源代码管理客户端。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可与源代码管理服务集成在一起。 也就是说，可将该工具用作源代码管理提供程序的客户端。 您无需离开环境就可以轻松管理个人项目和团队项目。 源代码管理提供程序不包含在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中。  
+ 源代码管理是指以下系统：在该系统中，使用中心服务器软件存储和跟踪文件版本，并控制对文件的访问。 典型的源代码管理系统包括源代码管理提供程序以及两个或多个源代码管理客户端。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可与源代码管理服务集成在一起。 也就是说，可将该工具用作源代码管理提供程序的客户端。 您无需离开环境就可以轻松管理个人项目和团队项目。 源代码管理提供程序不包含在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中。  
   
 #### <a name="to-select-a-source-control-provider"></a>选择源代码管理提供程序  
   
 1.  安装源代码管理提供程序的客户端部分。  
   
-2.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 **“工具”** 菜单中，单击 **“选项”** 。  
+2.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 **“工具”** 菜单中，单击 **“选项”**。  
   
 3.  在 "**选项**" 对话框中，展开 "**源代码管理**"，然后单击 "**插件选择**" 页。  
   

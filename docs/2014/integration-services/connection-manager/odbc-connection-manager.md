@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833739"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 连接管理器
@@ -42,7 +42,7 @@ ms.locfileid: "62833739"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题之一：  
   
--   [ODBC 连接管理器用户界面参考](../odbc-connection-manager-ui-reference.md)  
+-   [ODBC 连接管理器 UI 参考](../odbc-connection-manager-ui-reference.md)  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)项目。  
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828890"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建包
@@ -37,14 +37,13 @@ ms.locfileid: "62828890"
   
      如果现有包中包括了您希望重用的功能，则可以通过复制并粘贴其他包中的对象，在新包中更快地生成控制流和数据流。 有关在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中使用复制和粘贴的详细信息，请参阅 [重用包对象](reuse-of-package-objects.md)。  
   
-     如果通过复制现有包或使用自定义包作为模板来创建新包，则现有包的名称和 GUID 也会被复制。 应当更新新包的名称和 GUID，以便将它与原始包区分开来。 例如，如果包有相同的 GUID，则难以识别日志数据属于哪个包。 您可以通过使用 `ID` 中的“属性”窗口，重新生成 `Name` 属性中的 GUID 以及更新 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 属性的值。 有关详细信息，请参阅 [设置包属性](set-package-properties.md) 和 [dtutil 实用工具](dtutil-utility.md)。  
+     如果通过复制现有包或使用自定义包作为模板来创建新包，则现有包的名称和 GUID 也会被复制。 应当更新新包的名称和 GUID，以便将它与原始包区分开来。 例如，如果包有相同的 GUID，则难以识别日志数据属于哪个包。 您可以通过使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“属性”窗口，重新生成 `ID` 属性中的 GUID 以及更新 `Name` 属性的值。 有关详细信息，请参阅 [设置包属性](set-package-properties.md) 和 [dtutil 实用工具](dtutil-utility.md)。  
   
 -   使用已指定为模板的自定义包。  
   
 -   运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导  
   
-     
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导创建一个用于简单导入或导出的完整包。 此向导可以配置连接、源和目标，以及添加允许您立即运行导入或导出所需的任何数据转换。 您还可以保存包以便以后再次运行该包，或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中完善和增强该包。 但是，如果保存该包，则必须先将该包添加到现有的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中，然后才能更改该包或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中运行该包。  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导创建一个用于简单导入或导出的完整包。 此向导可以配置连接、源和目标，以及添加允许您立即运行导入或导出所需的任何数据转换。 您还可以保存包以便以后再次运行该包，或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中完善和增强该包。 但是，如果保存该包，则必须先将该包添加到现有的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中，然后才能更改该包或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中运行该包。  
   
  下列过程说明如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中创建或删除包。  
   

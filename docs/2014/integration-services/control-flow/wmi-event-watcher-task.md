@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829507"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
@@ -91,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [WMI 事件观察器任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [WMI 事件观察器任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [WMI 事件观察器任务编辑器 &#40;WMI 选项 "页&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [WMI 事件观察器任务编辑器（“WMI 选项”页）](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

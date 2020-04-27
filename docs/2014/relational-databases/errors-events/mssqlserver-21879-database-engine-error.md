@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869174"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
@@ -33,8 +33,7 @@ ms.locfileid: "62869174"
 |消息正文|无法查询重定向服务器“%s”以找到原始发布服务器“%s”和发布服务器数据库“%s”来确定远程服务器的名称；错误 %d，错误消息“%s”。|  
   
 ## <a name="explanation"></a>说明  
- 
-  `sp_validate_redirected_publisher` 使用其创建的临时链接服务器连接到重定向发布服务器，以便发现远程服务器的名称。 在链接服务器查询失败时，将返回错误 21879。 对请求远程服务器名称的调用通常是首次使用临时链接服务器，因此如果存在连接问题，则这些问题可能首先会与此调用一起出现。 在远程服务器上，此远程调用只执行选择 `@@servername`。  
+ `sp_validate_redirected_publisher` 使用其创建的临时链接服务器连接到重定向发布服务器，以便发现远程服务器的名称。 在链接服务器查询失败时，将返回错误 21879。 对请求远程服务器名称的调用通常是首次使用临时链接服务器，因此如果存在连接问题，则这些问题可能首先会与此调用一起出现。 在远程服务器上，此远程调用只执行选择 `@@servername`。  
   
  用于查询重定向发布服务器的链接服务器使用在为原始发布服务器调用 `sp_adddistpublisher` 时提供的安全模式、登录名和密码。  
   

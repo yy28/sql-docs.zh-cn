@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871124"
 ---
 # <a name="system-databases"></a>系统数据库
@@ -34,17 +34,17 @@ ms.locfileid: "62871124"
 |[tempdb 数据库](tempdb-database.md)|一个工作空间，用于保存临时对象或中间结果集。|  
   
 ## <a name="modifying-system-data"></a>修改系统数据  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持用户直接更新系统对象（如系统表、系统存储过程和目录视图）中的信息。 实际上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一整套管理工具，用户可以使用这些工具充分管理他们的系统以及数据库中的所有用户和对象。 其中包括：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持用户直接更新系统对象（如系统表、系统存储过程和目录视图）中的信息。 实际上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一整套管理工具，用户可以使用这些工具充分管理他们的系统以及数据库中的所有用户和对象。 其中包括：  
   
 -   管理实用工具，如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 -   SQL-SMO API。 此工具使程序员获得在其应用程序中管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全部功能。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]脚本和存储过程。 它们可以使用系统存储过程和 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本和存储过程。 它们可以使用系统存储过程和 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句。  
   
- 这些工具保护应用程序不受系统对象更改的影响。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有时需要更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新版本中的系统表，以支持添加到该版本中的新功能。 但应用程序在发出直接引用系统表的 SELECT 语句时，通常依赖于旧的系统表格式。 站点可能在重写从系统表中进行选择的应用程序之后，才能升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]考虑使用系统存储过程、DDL 和 SQL-SMO 发布接口，并使用来保持这些接口的向后兼容性。  
+ 这些工具保护应用程序不受系统对象更改的影响。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有时需要更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新版本中的系统表，以支持添加到该版本中的新功能。 但应用程序在发出直接引用系统表的 SELECT 语句时，通常依赖于旧的系统表格式。 站点可能在重写从系统表中进行选择的应用程序之后，才能升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 考虑了系统存储过程、DDL 和 SQL-SMO 发布的接口，力求维持这些接口的向后兼容性。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持对系统表定义的触发器，因为它们可能会修改系统的操作。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持对系统表定义触发器，因为触发器可能会更改系统的操作。  
   
 > [!NOTE]  
 >  系统数据库不能位于 UNC 共享目录中。  
@@ -60,7 +60,7 @@ ms.locfileid: "62871124"
   
 -   应用程序中使用的数据 API（如 ADO、OLE DB 或 ODBC）的目录函数、方法、特性或属性。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]系统存储过程和内置函数。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 系统存储过程和内置函数。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [备份和还原系统数据库 (SQL Server)](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872203"
 ---
 # <a name="create-a-database-mail-profile"></a>创建数据库邮件配置文件
@@ -26,25 +26,25 @@ ms.locfileid: "62872203"
   
 
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
- 为配置文件创建一个或多个数据库邮件帐户。 有关创建数据库邮件帐户的详细信息，请参阅[创建数据库邮件帐户](create-a-database-mail-account.md)。  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+ 为配置文件创建一个或多个数据库邮件帐户。 有关创建数据库邮件帐户的详细信息，请参阅 [创建数据库邮件帐户](create-a-database-mail-account.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  公共配置文件允许有权访问 **msdb** 数据库的任意用户使用该配置文件发送电子邮件。 专用配置文件可由用户或角色来使用。 授予角色访问配置文件的权限可创建更易维护的体系结构。 若要发送邮件，您必须是 **msdb** 数据库中的 **DatabaseMailUserRole** 的成员，并且至少有权访问一个数据库邮件配置文件。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  创建配置文件帐户和执行存储过程的用户应是 sysadmin 固定服务器角色的成员。  
   
 
   
-##  <a name="SSMSProcedure"></a>使用数据库邮件配置向导  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> 使用数据库邮件配置向导  
  **创建数据库邮件配置文件**  
   
 -   在对象资源管理器中，连接到您要在其上配置数据库邮件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后展开服务器树。  
   
--   展开 "**管理**" 节点  
+-   展开 **“管理”** 节点  
   
 -   双击数据库邮件以打开数据库邮件配置向导。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62872203"
   
 ## <a name="using-transact-sql"></a>“使用 Transact-SQL”  
   
-###  <a name="PrivateProfile"></a>创建数据库邮件专用配置文件  
+###  <a name="to-create-a-database-mail-private-profile"></a><a name="PrivateProfile"></a>创建数据库邮件专用配置文件  
   
 -   连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62872203"
   
      *@profile_name*= '*配置文件的名称*'  
   
-     *@ principal_name* = '*数据库用户或角色的名称*'  
+     *@ principal_name* = '数据库用户或角色的名称**'  
   
      *@is_default*= '*默认配置文件状态*'  
   
@@ -154,7 +154,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  
   
-###  <a name="PublicProfile"></a>创建数据库邮件公用配置文件  
+###  <a name="to-create-a-database-mail-public-profile"></a><a name="PublicProfile"></a>创建数据库邮件公用配置文件  
   
 -   连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -186,7 +186,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@profile_name*= '*配置文件的名称*'  
   
-     *@ principal_name* = '**public**或**0**'  
+     *@ principal_name* = '**公共** 或 **0**'  
   
      *@is_default*= '*默认配置文件状态*'  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ecaffb9e40024eca7cbeac77f4b50058e5440cee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870606"
 ---
 # <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
@@ -33,8 +33,7 @@ ms.locfileid: "62870606"
 |消息正文|无法创建计划指南 '%.\*ls'，因为 `@type` 指定为 '%ls'，而参数 '%ls' 为 NULL。 此类型要求该参数的值为非 NULL 值。 请为该参数指定非 NULL 值，或将该类型更改为允许该参数为 NULL 值的类型。|  
   
 ## <a name="explanation"></a>说明  
- 
-  `@type` 中指定的类型要求指定参数的值为非 NULL 值；但您指定的是 NULL 值。  
+ `@type` 中指定的类型要求指定参数的值为非 NULL 值；但您指定的是 NULL 值。  
   
 ## <a name="user-action"></a>用户操作  
  请为该参数指定非 NULL 值，或将该类型更改为允许该参数为 NULL 值的类型。  

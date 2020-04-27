@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872051"
 ---
 # <a name="contained-database-collations"></a>包含数据库的排序规则
@@ -85,8 +85,7 @@ JOIN #T2
   
  无法解决等于运算中“Latin1_General_100_CI_AS_KS_WS_SC”与“Chinese_Simplified_Pinyin_100_CI_AS”之间的排序规则冲突。  
   
- 通过显式排列临时表可修复此问题。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 `DATABASE_DEFAULT` 子句提供了 `COLLATE` 关键字，使操作在一定程度上得到了简化。  
+ 通过显式排列临时表可修复此问题。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 `DATABASE_DEFAULT` 子句提供了 `COLLATE` 关键字，使操作在一定程度上得到了简化。  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -121,8 +120,7 @@ END;
   
  数据库排序规则将得到保留，但只能用作用户数据的默认排序规则。 默认情况下，数据库排序规则等于 model 数据库排序规则，但用户可通过`CREATE`或`ALTER DATABASE`命令更改为非包含数据库。  
   
- 
-  `CATALOG_DEFAULT` 子句中提供了一个新关键字 `COLLATE`。 此关键字用作包含数据库和非包含数据库中当前元数据排序规则的快捷方式。 换言之，在非包含数据库中，`CATALOG_DEFAULT` 将返回当前的数据库排序规则，因为元数据是按数据库排序规则排列的。 在包含数据库中，这两个值可能是不同的，因为用户可以更改数据库排序规则，以使其不同于目录排序规则。  
+ `CATALOG_DEFAULT` 子句中提供了一个新关键字 `COLLATE`。 此关键字用作包含数据库和非包含数据库中当前元数据排序规则的快捷方式。 换言之，在非包含数据库中，`CATALOG_DEFAULT` 将返回当前的数据库排序规则，因为元数据是按数据库排序规则排列的。 在包含数据库中，这两个值可能是不同的，因为用户可以更改数据库排序规则，以使其不同于目录排序规则。  
   
  下表总结了非包含数据库和包含数据库中各个对象的行为：  
   

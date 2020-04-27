@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 432d48bbe848d6f66e9f3dae5365abe10d8deb62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833835"
 ---
 # <a name="excel-connection-manager"></a>Excel 连接管理器
@@ -57,6 +57,6 @@ ms.locfileid: "62833835"
   
 -   [使用 Foreach 循环容器，循环遍历 Excel 文件和表](../control-flow/foreach-loop-container.md)  
   
--   [使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel](../load-data-to-from-excel-with-ssis.md)
+-   [使用 SQL Server Integration Services (SSIS) 将数据导入 Excel 或从 Excel 导出数据](../load-data-to-from-excel-with-ssis.md)
   
   
