@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074785"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>嵌套 select 和子多维数据集中的计算成员
@@ -27,7 +27,7 @@ ms.locfileid: "66074785"
   
 |||  
 |-|-|  
-|值|说明|  
+|Value|说明|  
 |0|计算成员不允许在嵌套 select 或子多维数据集中使用。<br /><br /> 如果引用计算成员，则在对嵌套 select 或子多维数据集进行计算时，将引发错误。|  
 |1|计算成员允许在嵌套 select 或子多维数据集中使用，但在返回子空间中不引入祖先成员。|  
 |2|计算成员允许在嵌套 select 或子多维数据集中使用，并且在返回子空间中引入祖先成员。 此外，在选择计算成员时允许使用混合粒度。|  
@@ -81,7 +81,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|(null)|(null)|(null)|(null)|(null)|  
-|美国|(null)|(null)|(null)|(null)|(null)|  
+|United States|(null)|(null)|(null)|(null)|(null)|  
 |Washington|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
   
@@ -107,7 +107,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
-|美国|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
+|United States|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
 |Oregon|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |Portland|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |97205|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
@@ -124,6 +124,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [查询中的嵌套 select 语句](subselects-in-queries.md)   
- [&#40;XMLA&#41;支持的 XMLA 属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
+ [支持的 XMLA 属性 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

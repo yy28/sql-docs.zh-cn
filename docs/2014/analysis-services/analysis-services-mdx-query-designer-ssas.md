@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062509"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX 查询设计器 (SSAS)
@@ -34,7 +34,7 @@ ms.locfileid: "66062509"
   
  下图列出了设计模式的窗格。  
   
- ![Analysis Services MDX 查询设计器，设计视图](media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 查询设计器，设计视图")  
+ ![Analysis Services MDX 查询设计器的设计视图](media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 查询设计器的设计视图")  
   
  下表列出了查询模式下的窗格：  
   
@@ -46,13 +46,13 @@ ms.locfileid: "66062509"
 |“筛选器”窗格|用于选择维度和相关的层次结构，以筛选源中的数据并限制返回的数据。|  
 |“数据”窗格|在从“元数据”窗格向“计算成员”窗格拖动项目时，显示结果集的列标题。 如果选中 **“自动执行”** 按钮，则可自动更新结果集。|  
   
- 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果选中工具栏上的 "**自动执行**" （![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")）切换按钮，则每次将元数据对象拖到 "数据" 窗格时，查询设计器都将运行查询。 您可以使用工具栏上的 "**运行**" （![运行查询](media/rsqdicon-run.gif "运行查询")）按钮手动运行查询。  
+ 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果工具栏上的“自动执行”****（![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")）切换按钮处于选中状态，那么每当你将元数据对象拖到“数据”窗格时，查询设计器都会运行查询。 可以使用工具栏上的“运行”****（![运行查询](media/rsqdicon-run.gif "运行查询")）按钮来手动运行查询。  
   
  在此模式下创建 MDX 查询时，下面的附加属性将会自动包含到查询中：  
   
- **成员属性**MEMBER_CAPTION，MEMBER_UNIQUE_NAME  
+ **成员属性** MEMBER_CAPTION, MEMBER_UNIQUE_NAME  
   
- **单元属性**VALUE、BACK_COLOR、FORE_COLOR、FORMATTED_VALUE、FORMAT_STRING、FONT_NAME、FONT_SIZE、FONT_FLAGS  
+ **单元属性** VALUE、BACK_COLOR、FORE_COLOR、FORMATTED_VALUE、FORMAT_STRING、FONT_NAME、FONT_SIZE、FONT_FLAGS  
   
  若要指定您自己的附加属性，则必须在查询模式下，手动编辑 MDX 查询。  
   
@@ -64,19 +64,19 @@ ms.locfileid: "66062509"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>设计模式下的图形 MDX 查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表列出了这些按钮及其功能。  
   
-|按钮|说明|  
+|Button|说明|  
 |------------|-----------------|  
 |**编辑为文本**|不可用于此数据源类型。|  
-|**Import**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
+|**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
 |![更改为 MDX 查询视图](media/rsqdicon-commandtypemdx.gif "更改为 MDX 查询视图")|切换到命令类型 MDX。|  
 |![刷新结果数据](media/rsqdicon-refresh.gif "刷新结果数据")|刷新数据源的元数据。|  
 |![添加计算成员](media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。|  
-|![切换显示空单元](media/rsqdicon-showemptycells.gif "切换显示空单元")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
+|![切换显示空单元](media/rsqdicon-showemptycells.gif "切换为显示空单元格")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
 |![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
-|![显示聚合按钮](media/rsqdicon-showaggregations.gif "显示聚合按钮")|在“数据”窗格中显示聚合。|  
-|![删除](media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|  
+|![“显示聚合”按钮](media/rsqdicon-showaggregations.gif "“显示聚合”按钮")|在“数据”窗格中显示聚合。|  
+|![删除](media/rsqdicon-delete.gif "Delete")|通过查询在“数据”窗格中删除选定列。|  
 |![“查询参数”对话框图标](media/iconqueryparameter.gif "“查询参数”对话框图标")|显示 **“查询参数”** 对话框。 指定查询参数的值时，会自动创建一个同名参数。|  
-|![准备查询按钮](media/rsqdicon-preparequery.gif "准备查询按钮")|准备查询。|  
+|![“准备查询”按钮](media/rsqdicon-preparequery.gif "“准备查询”按钮")|准备查询。|  
 |![运行查询](media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|  
 |![取消查询](media/rsqdicon-cancel.gif "取消查询")|取消查询。|  
 |![切换到设计模式](media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|  
@@ -86,7 +86,7 @@ ms.locfileid: "66062509"
   
  下图列出了查询模式的窗格。  
   
- ![Analysis Services MDX 查询设计器，查询视图](media/rsqd-dsawas-mdx-querymode.gif "Analysis Services MDX 查询设计器，查询视图")  
+ ![Analysis Services MDX 查询设计器的查询视图](media/rsqd-dsawas-mdx-querymode.gif "Analysis Services MDX 查询设计器的查询视图")  
   
  下表列出了查询模式下的窗格：  
   
@@ -110,10 +110,10 @@ ms.locfileid: "66062509"
   
 -   **添加计算成员**（![添加计算成员](media/rsqdicon-addcalculatedmember.gif "添加计算成员")）  
   
--   **显示空单元格**（![切换以显示空单元格](media/rsqdicon-showemptycells.gif "切换显示空单元")）  
+-   **显示空单元格**（![切换为显示空单元格](media/rsqdicon-showemptycells.gif "切换为显示空单元格")）  
   
 -   **自动执行**（![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")）  
   
--   **显示聚合**（"![显示聚合" 按钮](media/rsqdicon-showaggregations.gif "显示聚合按钮")）  
+-   **显示聚合**![“显示聚合”按钮](media/rsqdicon-showaggregations.gif "“显示聚合”按钮")  
   
   

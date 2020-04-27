@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078903"
 ---
 # <a name="modifying-measures"></a>修改度量值
@@ -22,7 +22,7 @@ ms.locfileid: "66078903"
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>修改多维数据集的度量值  
   
-1.  切换到 ** 教程多维数据集的多维数据集设计器的“多维数据集结构”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，然后在“度量值”**** 窗格中展开“Internet Sales”**** 度量值组，右键单击“订单数量”****，然后单击“属性”****。  
+1.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器的“多维数据集结构”**** 选项卡，然后在“度量值”**** 窗格中展开“Internet Sales”**** 度量值组，右键单击“订单数量”****，然后单击“属性”****。  
   
 2.  在“属性”窗口中，单击“自动隐藏”**** 图钉图标使“属性”窗口保持打开状态。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66078903"
   
 5.  选择下列度量值之一： 可以通过在按住 Ctrl 键的同时单击各个度量值的方式来选择多个度量值：  
   
-    -   **单价**  
+    -   **Unit Price**  
   
     -   **Extended Amount**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66078903"
   
 10. 在“属性”窗口中，单击“自动隐藏”**** 图标隐藏“属性”窗口，然后在“多维数据集结构”**** 选项卡的工具栏上单击“显示度量值树”****。  
   
-11. 在“文件”  菜单上，单击“全部保存”  。  
+11. 在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [修改“客户”维度](lesson-3-2-modifying-the-customer-dimension.md)  

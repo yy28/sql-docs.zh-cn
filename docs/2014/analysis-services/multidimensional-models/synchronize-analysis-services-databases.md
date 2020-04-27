@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072853"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]包含一个数据库同步功能，该功能[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过将源服务器上的数据库中的数据和元数据复制到目标服务器上的数据库，使两个数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一个数据同步功能，该功能通过将数据和元数据从源服务器上的数据库复制到目标服务器上的数据库，使两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
   
 -   将数据库从临时服务器部署到生产服务器。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66072853"
 > [!NOTE]  
 >  以下针对以前版本的 Analysis Services 撰写的白皮书仍适用于使用 SQL Server 2012 生成的可缩放多维解决方案。 有关详细信息，请参阅 [使用 Analysis Services 缩放查询](https://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用只读数据库缩放 Analysis Services 查询](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  在启动数据库同步的目标服务器上，您必须是具有 Analysis Services 服务器管理员角色的成员。 在源服务器上，您的 Windows 用户帐户必须拥有源数据库上的完全控制权限。 如果以交互方式同步数据库，请注意同步在 Windows 用户标识的安全上下文中运行。 如果帐户被拒绝访问特定对象，则操作将排除这些对象。 有关服务器管理员角色和数据库权限的详细信息，请参阅[&#40;Analysis Services 授予服务器管理员权限&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[&#40;Analysis Services&#41;授予数据库权限](grant-database-permissions-analysis-services.md)。  
   
  两个服务器上的 TCP 端口 2383 必须都打开，默认实例之间才能建立远程连接。 有关在 Windows 防火墙中创建例外的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
@@ -81,7 +81,7 @@ ms.locfileid: "66072853"
   
 3.  指定源服务器和源数据库。 在“选择要同步的数据库”页上，在 **“源服务器”** 和 **“源数据库”** 中键入源服务器和源数据库的名称。 例如，如果从测试环境部署到生产服务器，则源是临时服务器上的数据库。  
   
-     **目标服务器**显示在 " [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **源数据库**" 中所选数据库中的数据和元数据进行同步时所用实例的名称。  
+     **“目标服务器”** 显示同步 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “源数据库” **中所选数据库中的数据和元数据时所使用的** 实例的名称。  
   
      同步将在具有相同名称的源数据库和目标数据库上发生。 如果目标服务器已经有与源数据库共享相同名称的数据库，则使用源的元数据和数据更新目标数据库。 如果该数据库不存在，将在目标服务器上创建它。  
   
@@ -108,8 +108,7 @@ ms.locfileid: "66072853"
      **大小**  
      显示本地分区的估计大小。  
   
-     
-  **“所选位置中的分区”** 选项显示一个网格，对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “位置” **中所选行的** “源文件夹” **列中指定的源**实例所在位置存储的本地分区进行了说明。  
+     **“所选位置中的分区”** 选项显示一个网格，对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “位置” **中所选行的** “源文件夹” **列中指定的源**实例所在位置存储的本地分区进行了说明。  
   
      **Cube**  
      显示包含该分区的多维数据集的名称。  
@@ -155,8 +154,7 @@ ms.locfileid: "66072853"
      **大小**  
      显示该位置中存储的远程分区的估计大小。  
   
-     
-  **“所选位置中的分区”** 显示一个网格，对在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上指定位置（在 **“位置”** 中所选行的 **“源文件夹”** 列指定）存储的远程分区进行了说明。 该网格包含以下列：  
+     **“所选位置中的分区”** 显示一个网格，对在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上指定位置（在 **“位置”** 中所选行的 **“源文件夹”** 列指定）存储的远程分区进行了说明。 该网格包含以下列：  
   
      **Cube**  
      显示包含该分区的多维数据集的名称。  

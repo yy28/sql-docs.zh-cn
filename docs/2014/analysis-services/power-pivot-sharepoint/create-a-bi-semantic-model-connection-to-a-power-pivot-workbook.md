@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071636"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>创建与 PowerPivot 工作簿的 BI 语义模型连接
@@ -28,13 +28,13 @@ ms.locfileid: "66071636"
   
  [创建连接](#bkmk_create)  
   
- [配置针对 BI 语义模型连接的 SharePoint 的权限](#bkmk_permissions)  
+ [配置针对 BI 语义模型连接的 SharePoint 权限](#bkmk_permissions)  
   
  [配置针对工作簿的 SharePoint 权限](#bkmk_userdb)  
   
  [后续步骤](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>查看先决条件  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>查看先决条件  
  您必须具有“参与讨论”权限或更高权限以创建 BI 语义模型连接文件。  
   
  您必须具有支持 BI 语义模型连接内容类型的库。 有关详细信息，请参阅[将 BI 语义模型连接内容类型添加到库 &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "66071636"
   
  参与连接序列的所有计算机和用户都必须处于同一个域或可信域（双向信任）中。  
   
-##  <a name="bkmk_create"></a>创建连接  
+##  <a name="create-a-connection"></a><a name="bkmk_create"></a>创建连接  
   
 1.  在将包含 BI 语义模型连接的库中，单击 SharePoint 功能区上的 **“文档”** 。 单击“新建文档”上的向下箭头，然后选择 **“BISM 连接文件”** 以便打开“新建 BI 语义模型连接”页。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071636"
   
      或者，如果您具有针对工作簿的 SharePoint 权限，则要执行一个附加的验证步骤，以便确保该位置有效。 如果您没有对数据的访问权限，则会向您提供一个无需验证响应即保存 BI 语义模型连接的选项。  
   
-##  <a name="bkmk_permissions"></a>配置针对 BI 语义模型连接的 SharePoint 权限  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>配置针对 BI 语义模型连接的 SharePoint 权限  
  为了能够使用 BI 语义模型连接作为 Excel 工作簿或 Reporting Services 报表的数据源，需要针对 SharePoint 库中 BI 语义模型连接项的 **“读取”** 权限。 该“读取”权限级别包括 **“打开项”** 权限，该权限支持将 BI 语义模型连接信息下载到 Excel 桌面应用程序。  
   
  有几种方法可在 SharePoint 中授予权限。 下面的说明解释如何新建一个名为 **BISM Users** 的具有“读取” **** 权限级别的组。  
@@ -88,12 +88,12 @@ ms.locfileid: "66071636"
   
 4.  单击 **“删除用户权限”**。  
   
-##  <a name="bkmk_userdb"></a>配置针对工作簿的 SharePoint 权限  
+##  <a name="configure-sharepoint-permissions-on-the-workbook"></a><a name="bkmk_userdb"></a>配置针对工作簿的 SharePoint 权限  
  如果您在一个 Excel 工作簿内使用某一 PowerPivot 数据库，则针对该 Excel 工作簿的 SharePoint 权限将确定通过 BI 语义模型连接进行的数据访问。 为了将工作簿用作外部数据源，访问该工作簿的所有用户都必须对工作簿具有读取权限。  
   
  如果你使用了前一部分中的说明创建了 **BISM Users** 组，则 **BISM Users** 组成员的用户和组帐户将拥有该工作簿以及 BI 语义模型连接文件的足够权限，并且假定该工作簿使用继承的权限。  
   
-##  <a name="bkmk_next"></a>后续步骤  
+##  <a name="next-steps"></a><a name="bkmk_next"></a>后续步骤  
  创建了 BI 语义模型连接并且确保其安全后，可以将该连接指定为数据源。 有关详细信息，请参阅 [在 Excel 或 Reporting Services 中使用 BI 语义模型连接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081451"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>编辑现有数据源连接（SSAS 表格）
@@ -61,9 +61,7 @@ ms.locfileid: "66081451"
   
 2.  单击 **“表”** 菜单，然后单击 **“表属性”**。  
   
-     
-  **“表名”** 框中将显示所选表的名称。 
-  **“源名称”** 框包含外部数据源中的表的名称。 如果源和模型中对列的命名方式不同，则可通过选择 **“源”** 或 **“模型”** 选项在这两组列名之间进行切换。  
+     **“表名”** 框中将显示所选表的名称。 **“源名称”** 框包含外部数据源中的表的名称。 如果源和模型中对列的命名方式不同，则可通过选择 **“源”** 或 **“模型”** 选项在这两组列名之间进行切换。  
   
 3.  若要更改用作数据源的表，请为 **“源名称”** 选择当前表之外的其他表。  
   
@@ -81,6 +79,6 @@ ms.locfileid: "66081451"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;处理数据](process-data-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;支持的数据源](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

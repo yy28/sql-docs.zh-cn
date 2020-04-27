@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080619"
 ---
 # <a name="import-data-ssas-tabular"></a>导入数据（SSAS 表格）
@@ -42,6 +42,6 @@ ms.locfileid: "66080619"
 |[从多维数据源导入 &#40;SSAS 表格&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|说明如何从多维 SQL Server Analysis Services 多维数据集导入数据。|  
 |[从数据馈送导入 &#40;SSAS 表格&#41;](import-from-a-data-feed-ssas-tabular.md)|说明如何从数据馈送（如 Microsoft Reporting Services 报表或 Azure DataMarket 数据集）导入数据。|  
 |[从文本文件导入 &#40;SSAS 表格&#41;](import-from-a-text-file-ssas-tabular.md)|说明如何从 Microsoft Excel 工作簿或文本文件中导入数据。|  
-|[将数据复制并粘贴 &#40;SSAS 表格&#41;](copy-and-paste-data-ssas-tabular.md)|说明如何使用“粘贴”和“追加粘贴”将数据添加到模型设计器中的现有表。|  
+|[复制并粘贴数据（SSAS 表格）](copy-and-paste-data-ssas-tabular.md)|说明如何使用“粘贴”和“追加粘贴”将数据添加到模型设计器中的现有表。|  
   
   

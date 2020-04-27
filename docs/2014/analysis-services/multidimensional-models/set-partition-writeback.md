@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072896"
 ---
 # <a name="set-partition-writeback"></a>设置分区写回
@@ -33,7 +33,7 @@ ms.locfileid: "66072896"
 >  仅对 SQL Server 关系数据库和数据市场支持写回，并且写回仅适用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维模型。  
   
 ## <a name="how-to-write-enable-a-partition"></a>如何对分区执行写启用  
- 通过在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的多维数据集设计器中对分区本身执行写启用操作，可以对分区的度量值组执行写启用。  
+ 通过在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的多维数据集设计器中对分区本身执行写启用操作，可以对分区的度量值组执行写启用。  
   
 -   在多维数据集设计器中的“分区”选项卡上，右键单击一个分区，然后选择“写回设置”。****  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66072896"
   
  将写回数据表转换为分区还会对分区禁用写功能。 分区单元的所有无限制读/写策略和读/写权限都将禁用，而且最终用户将无法更改显示的多维数据集数据。 （被禁用无限制读/写策略或读/写权限的最终用户仍然能够浏览多维数据集。）读取权限和有条件读取权限不受影响。  
   
- 若要将写回数据转换为分区，请使用“转换到分区”对话框，可以通过右键单击 ** 中可写入的分区的写回表来访问该对话框。**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 您将指定分区的名称，并指定是在以后为分区设计聚合，还是在创建分区时为其设计聚合。 若要在选择分区时创建聚合，则必须选择复制现有分区中的聚合设计。 这通常（但不必须）是当前的写回分区。 还可以选择在创建分区时对其进行处理。  
+ 若要将写回数据转换为分区，请使用“转换到分区”对话框，可以通过右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可写入的分区的写回表来访问该对话框。**** 您将指定分区的名称，并指定是在以后为分区设计聚合，还是在创建分区时为其设计聚合。 若要在选择分区时创建聚合，则必须选择复制现有分区中的聚合设计。 这通常（但不必须）是当前的写回分区。 还可以选择在创建分区时对其进行处理。  
   
 ## <a name="see-also"></a>另请参阅  
  [启用写入的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   

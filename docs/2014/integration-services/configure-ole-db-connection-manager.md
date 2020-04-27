@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060550"
 ---
 # <a name="configure-ole-db-connection-manager"></a>配置 OLE DB 连接管理器
@@ -34,7 +34,7 @@ ms.locfileid: "66060550"
  查看所选 OLE DB 数据连接的属性和值。  
   
  **新建**  
- 使用“连接管理器”  对话框来创建 OLE DB 数据连接。  
+ 使用“连接管理器”**** 对话框来创建 OLE DB 数据连接。  
   
  **删除**  
  选择一个数据连接，然后使用“删除”**** 按钮来删除该连接。  

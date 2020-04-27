@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060670"
 ---
 # <a name="configure-data-viewer-general-tab"></a>配置数据查看器（“常规”选项卡）
@@ -30,7 +30,7 @@ ms.locfileid: "66060670"
  **名称**  
  为数据查看器提供唯一的名称。  
   
- 类型   
+ **类型**  
  列出数据查看器的类型。 单击类型可以显示示例图表。  
   
  **说明**  

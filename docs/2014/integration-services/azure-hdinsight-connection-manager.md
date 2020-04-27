@@ -14,18 +14,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dfeade50b36e39f9a4bfa354f71a6bca53e03c16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061371"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 连接管理器
 Azure HDInsight 连接管理器  可实现 SSIS 包与 Azure HDInsight 群集的连接。
 
-若要创建和配置 Azure HDInsight 连接管理器  ，请执行以下步骤：
+若要创建和配置 Azure HDInsight 连接管理器****，请执行以下步骤：
 
-1. 在“添加 SSIS 连接管理器”  对话框中，选择“AzureHDInsight”  ，然后单击“添加”  。
-2. 在“Azure HDInsight 连接管理器编辑器”  对话框中，为要连接到的 HDInsight 群集指定群集 DNS 名称  （不带协议前缀）、用户名  和密码  。
+1. 在“添加 SSIS 连接管理器”**** 对话框中，选择“AzureHDInsight”****，然后单击“添加” ****。
+2. 在“Azure HDInsight 连接管理器编辑器”**** 对话框中，为要连接到的 HDInsight 群集指定群集 DNS 名称****（不带协议前缀）、用户名**** 和密码****。
 3. 单击 **“确定”** 关闭对话框。
-4. 你可以看到你在“属性”  窗口中创建的连接管理器的属性。
+4. 你可以看到你在“属性” **** 窗口中创建的连接管理器的属性。

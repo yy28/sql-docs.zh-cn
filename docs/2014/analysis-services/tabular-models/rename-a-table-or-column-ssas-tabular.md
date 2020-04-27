@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066687"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>重命名表或列（SSAS 表格）
@@ -58,6 +58,6 @@ ms.locfileid: "66066687"
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的表和列](tables-and-columns-ssas-tabular.md)   
  [从 PowerPivot &#40;SSAS 表格&#41;导入](import-from-power-pivot-ssas-tabular.md)   
- [从 SSAS 表格&#41;Analysis Services 导入 &#40;](import-from-analysis-services-ssas-tabular.md)  
+ [从 Analysis Services 导入（SSAS 表格）](import-from-analysis-services-ssas-tabular.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078939"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>第 2 课：定义和部署多维数据集
@@ -23,7 +23,7 @@ ms.locfileid: "66078939"
  可以使用多维数据集向导，通过单个步骤定义一个多维数据集及其维度。 也可以先定义一个或多个维度，然后使用多维数据集向导定义一个使用这些维度的多维数据集。 如果要设计一个复杂的解决方案，通常是先定义维度。 有关详细信息，请参阅 [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md) 或 [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)。  
   
 > [!NOTE]  
->  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866)下载本教程中的示例项目。  
+>  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  
   
  本课程包含以下任务：  
   
@@ -55,6 +55,6 @@ ms.locfileid: "66078939"
  [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)   
  [配置 Analysis Services 项目属性 &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [&#40;SSDT 生成 Analysis Services 项目&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [&#40;SSDT 部署 Analysis Services 项目&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 项目 (SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

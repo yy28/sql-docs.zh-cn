@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071814"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>配置最大文件上载大小 (PowerPivot for SharePoint)
@@ -44,11 +44,11 @@ ms.locfileid: "66071814"
   
      您可以指定的最大值是 2 GB（或“管理中心”中指定的 2047 MB）。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>为 SharePoint Web 应用程序配置最大文件大小  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理 Web 应用程序”**。  
+1.  在管理中心的 "应用程序管理" 中，单击 "**管理 web 应用程序**"。  
   
     > [!NOTE]  
     >  仅当在 Excel Services 中增加过“工作簿最大大小”时，才执行以下步骤。  
@@ -57,12 +57,12 @@ ms.locfileid: "66071814"
   
 3.  在“Web 应用程序”功能区上，单击“常规设置”按钮上的向下箭头。  
   
-4.  单击 "**常规设置**"。  
+4.  单击 **“常规设置”**。  
   
 5.  滚动到 **“最大上载大小”**。  
   
 6.  将该属性设置为与 Excel Services 中的“工作簿最大大小”相同或更大的数值。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
   

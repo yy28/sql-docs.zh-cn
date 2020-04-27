@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9f0f960c531fac8bae8f03479bacd507ffc3078
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074602"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>在查询中建立多维数据集上下文 (MDX)
@@ -59,6 +59,6 @@ FROM [Adventure Works]
  您可以使用 MDX [LookupCube](/sql/mdx/lookupcube-mdx) 函数从多维数据集上下文以外的多维数据集中检索数据。 另外，可以使用诸如 [Filter](/sql/mdx/filter-mdx) 之类的函数在对查询求值时对上下文进行临时限制。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

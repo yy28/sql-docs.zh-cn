@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15b9f9203075734dd84d7b601574f66bc401e700
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066798"
 ---
 # <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>在工作区数据库中处理分区（SSAS 表格）
@@ -22,13 +22,13 @@ ms.locfileid: "66066798"
   
  在将模型部署到其他 Analysis Services 实例后，数据库管理员可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、脚本或 IS 包在（已部署）模型中创建和管理分区。 有关详细信息，请参阅[创建和管理表格模型分区（SSAS 表格）](partitions-ssas-tabular.md)。  
   
-###  <a name="bkmk_create_new"></a>处理分区  
+###  <a name="to-process-a-partition"></a><a name="bkmk_create_new"></a> 处理分区  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，依次单击“模型”菜单、“处理”（“刷新”）和“处理分区”。************  
   
 2.  在 **“模式”** 列表框中，选择以下处理模式之一：  
   
-    |模式|说明|  
+    |“模式”|说明|  
     |----------|-----------------|  
     |**处理默认值**|检测分区对象的处理状态，执行必要的处理，将未处理的分区对象或部分处理的分区对象交付为已完全处理的分区对象。 为空表和分区加载数据；生成或重新生成层次结构、计算列和关系。|  
     |**处理全部**|处理分区对象及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。|  
@@ -40,6 +40,6 @@ ms.locfileid: "66066798"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;分区](partitions-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;创建和管理工作区数据库中的分区](workspace-database-ssas-tabular.md)  
+ [创建和管理工作区数据库中的分区（SSAS 表格）](workspace-database-ssas-tabular.md)  
   
   

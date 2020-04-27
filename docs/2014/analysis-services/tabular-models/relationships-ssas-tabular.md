@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066702"
 ---
 # <a name="relationships-ssas-tabular"></a>关系（SSAS 表格）
@@ -29,7 +29,7 @@ ms.locfileid: "66066702"
   
  本主题的内容：  
   
--   [便利](#what)  
+-   [优点](#what)  
   
 -   [关系的要求](#requirements)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66066702"
   
 -   [相关任务](#bkmk_related_tasks)  
   
-##  <a name="what"></a> 优势  
+##  <a name="benefits"></a><a name="what"></a>便利  
  关系是两个数据表之间的连接，它基于每个表中的一列或多列。 要理解关系为何有用，可以想像一下在业务中跟踪客户订单数据。 可以在具有以下结构的一个表中跟踪所有数据：  
   
 |CustomerID|名称|EMail|DiscountRate|OrderID|OrderDate|Products|数量|  
@@ -83,18 +83,18 @@ ms.locfileid: "66066702"
   
  在关系数据库中，有几种类型的键 **，键通常是具有指定属性的列。 在关系数据库中，可以使用以下四种类型的键：  
   
--   *主键*：唯一标识表中的行，如 Customers 表中的 CustomerID。  
+-   *主键*：唯一标识表中的一行，如 Customers 表中的 CustomerID。  
   
--   *备用键*（或*候选键*）：主键之外的唯一列。 例如，Employees 表可能存储雇员 ID 和社会保障号，这两者都是唯一的。  
+-   *备用键* （或 *候选键*）：主键之外的唯一列。 例如，Employees 表可能存储雇员 ID 和社会保障号，这两者都是唯一的。  
   
--   *外键*：引用另一个表中的唯一列的列，如 Orders 表中的 customerid，它引用 Customers 表中的 customerid。  
+-   *外键*：引用另一表中唯一列的列，如 Orders 表中的 CustomerID（可引用 Customers 表中的 CustomerID）。  
   
--   *组合键*：由多个列组成的键。 表格模型中不支持组合键。 有关详细信息，请参阅本主题中的“组合键和查找列”。  
+-   组合键**：由多列组成的键。 表格模型中不支持组合键。 有关详细信息，请参阅本主题中的“组合键和查找列”。  
   
  在表格模型中，主键或备用键称为“相关查找列” ** 或“查找列” **。 如果表既有主键又有备用键，则主键和备用键都可作为查找列。 外键称为“源列” ** 或简单地称为“列” **。 在我们的示例中，将在 Orders 表的 CustomerID（列）和 Customers 表的 CustomerID（查找列）之间定义关系。 如果从关系数据库导入数据，默认情况下，模型设计器会从一个表中选择外键，从另一个表中选择相应的主键。 但是，您可以将具有唯一值的任意列用作查找列。  
   
 ### <a name="types-of-relationships"></a>关系类型  
- Customers 与 Orders 之间的关系是“一对多关系”**。 每个客户都可以有多个订单，但一个订单不能有多个客户。 其他关系类型为“一对一” ** 和“多对多” **。 为每个客户定义一个折扣率的 CustomerDiscounts 表与 Customers 表具有一对一关系。 Products 和 Customers 之间的直接关系就是多对多关系的一个示例，在这种关系中，一个客户可以购买多种产品，同一种产品可由很多客户购买。 在用户界面中，模型设计器不支持多对多关系。 有关详细信息，请参阅本主题中的[多对多关系](#bkmk_many_to_many)。  
+ Customers 与 Orders 之间的关系是“一对多关系”**。 每个客户都可以有多个订单，但一个订单不能有多个客户。 其他关系类型还有“一对一”** 和“多对多”**。 为每个客户定义一个折扣率的 CustomerDiscounts 表与 Customers 表具有一对一关系。 Products 和 Customers 之间的直接关系就是多对多关系的一个示例，在这种关系中，一个客户可以购买多种产品，同一种产品可由很多客户购买。 在用户界面中，模型设计器不支持多对多关系。 有关详细信息，请参阅本主题中的[多对多关系](#bkmk_many_to_many)。  
   
  下表显示了三个表之间的关系：  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66066702"
 ### <a name="relationships-and-performance"></a>关系和性能  
  在创建任何关系之后，对于任何公式，如果它们使用新创建的关系中所涉及的各表中的列，模型设计器通常必须对其进行重新计算。 处理可能需要一些时间，这取决于数据量和关系的复杂度。  
   
-##  <a name="requirements"></a>关系的要求  
+##  <a name="requirements-for-relationships"></a><a name="requirements"></a>关系的要求  
  创建关系时，模型设计器必须遵守几项要求：  
   
 ### <a name="single-active-relationship-between-tables"></a>表之间的单个活动关系  
@@ -137,7 +137,7 @@ ms.locfileid: "66066702"
   
  如果要在模型设计器中创建两个表之间的关系，并且存在多个定义主键和外键的列，必须先组合这些值创建一个键列，然后才能创建关系。 您可以在导入数据之前执行此操作，也可以在模型设计器中通过创建计算列来执行此操作。  
   
-###  <a name="bkmk_many_to_many"></a>多对多关系  
+###  <a name="many-to-many-relationships"></a><a name="bkmk_many_to_many"></a>多对多关系  
  表格模型不支持多对多关系，您不能在模型设计器中添加“联接表” ** 。 但可以使用 DAX 函数为多对多关系建模。  
   
 ### <a name="self-joins-and-loops"></a>自联接和循环  
@@ -153,7 +153,7 @@ ms.locfileid: "66066702"
   
  如果您试图创建的关系会导致创建循环，则会生成错误。  
   
-##  <a name="detection"></a>关系的推理  
+##  <a name="inference-of-relationships"></a><a name="detection"></a>关系的推理  
  在某些情况下，表之间的关系会自动链接。 例如，如果在以下前两组表之间创建关系，则会推断出其他两个表之间存在一个关系，进而自动建立一个关系。  
   
  Products 和 Category -- 手动创建  
@@ -164,17 +164,17 @@ ms.locfileid: "66066702"
   
  为使关系自动链接，关系方向必须相同，如上所示。 例如，如果初始关系是在 Sales 和 Products 以及 Sales 和 Customers 之间，则不会推断出关系。 这是因为 Products 和 Customers 之间的关系是多对多关系。  
   
-##  <a name="bkmk_detection"></a>导入数据时检测关系  
+##  <a name="detection-of-relationships-when-importing-data"></a><a name="bkmk_detection"></a>导入数据时检测关系  
  从关系数据源表中导入时，表导入向导将基于源架构数据检测这些源表中的现有关系。 如果导入相关的表，则将在模型中复制这些关系。  
   
-##  <a name="bkmk_manually_create"></a>手动创建关系  
+##  <a name="manually-create-relationships"></a><a name="bkmk_manually_create"></a>手动创建关系  
  尽管单个关系数据源中的表之间的大多数关系将会被自动检测到并且在表格模型中创建，但还有许多必须手动创建模型表之间的关系的情况。  
   
  如果您的模型中包含来自多个数据源的数据，则可能需要手动关系。 例如，您可以从关系数据源导入 Customers、CustomerDiscounts 和 Orders 表。 在源中的这些表之间存在的关系将在模型中自动创建。 然后，您可以添加来自不同源的其他表，例如，从 Microsoft Excel 工作簿中的 Geography 表导入区域数据。 然后，您可以手动在 Customers 表中的某一列和 Geography 表中的某一列之间创建关系。  
   
  若要手动在表格模型中创建关系，您可以使用关系图视图中的模型设计器或使用“管理关系”对话框。 关系图视图以图形格式显示表以及表之间的关系。 您可以单击一个表中的某一列，将该列拖放到其他表中以便轻松地在两个表之间以正确顺序创建关系。 “管理关系”对话框会以简单的表格式显示表之间的关系。 了解如何手动创建关系，请参阅 [创建两个表之间的关系（SSAS 表格）](create-a-relationship-between-two-tables-ssas-tabular.md)所述。  
   
-##  <a name="bkmk_dupl_errors"></a>重复的值和其他错误  
+##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>重复的值和其他错误  
  如果选择了在关系中不能使用的列，该列旁边将出现一个红色的 X。 您可以将光标暂停在错误图标之上，以查看提供有关该问题的详细信息的消息。 导致无法在所选列之间创建关系的问题包括：  
   
 |问题或消息|解决方法|  
@@ -182,15 +182,15 @@ ms.locfileid: "66066702"
 |无法创建关系，因为这两个选定的列包含重复值。|若要创建有效的关系，您所选的一对列中应至少有一列必须包含唯一值。<br /><br /> 您可以编辑列来删除重复值，也可以反转列的顺序，以便将包含唯一值的列用作 **“相关查找列”**。|  
 |该列包含 Null 值或空值。|对于 Null 值，无法将数据列相互联接。 对于每一行，关系中所用的两列都必须具有值。|  
   
-##  <a name="bkmk_related_tasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 相关任务  
   
 |主题|说明|  
 |-----------|-----------------|  
-|[在两个表之间创建关系 &#40;SSAS 表格&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|介绍如何手动创建两个表之间的关系。|  
-|[&#40;SSAS 表格&#41;中删除关系](relationships-ssas-tabular.md)|描述如何删除关系和删除关系带来的后果。|  
+|[创建两个表之间的关系（SSAS 表格）](create-a-relationship-between-two-tables-ssas-tabular.md)|介绍如何手动创建两个表之间的关系。|  
+|[删除关系（SSAS 表格）](relationships-ssas-tabular.md)|描述如何删除关系和删除关系带来的后果。|  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的表和列](tables-and-columns-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;导入数据](../import-data-ssas-tabular.md)  
+ [导入数据（SSAS 表格）](../import-data-ssas-tabular.md)  
   
   

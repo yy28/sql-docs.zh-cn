@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075779"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
@@ -146,11 +146,11 @@ ms.locfileid: "66075779"
   
 3.  创建一个数据透视表，它使用以下内容：  
   
-    -   **销售额**作为值  
+    -   作为值的**Sales Amount**  
   
     -   列上的**Sales Reason Name**  
   
-    -   行的**销售订单号**  
+    -   行上的 **“销售订单号”**  
   
 4.  分析结果。 因为我们在使用示例数据，所以，最初的印象是所有销售订单都具有完全相同的值。 但是，如果您向下滚动，则会开始看到数据变化。  
   
@@ -176,14 +176,14 @@ ms.locfileid: "66075779"
   
 4.  避免在多个多对多关系中使用链接度量值组（尤其是在这些关系处于不同多维数据集中时）。 这样做可能导致不明确的聚合。 有关详细信息，请参阅 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)（包含多对多关系的多维数据集中链接度量值的不正确数量）。  
   
-##  <a name="bkmk_Learn"></a>了解更多信息  
+##  <a name="learn-more"></a><a name="bkmk_Learn"></a>了解更多信息  
  使用以下链接可获取帮助您掌握这些概念的其他信息。  
   
  [如何在 Analysis Services 中定义多对多维度](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [多对多革命2。0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [多对多变革 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [教程： SQL Server Analysis Services 的多对多维度示例](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [教程：针对 SQL Server Analysis Services 的多对多维度示例](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>另请参阅  
  [维度关系](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

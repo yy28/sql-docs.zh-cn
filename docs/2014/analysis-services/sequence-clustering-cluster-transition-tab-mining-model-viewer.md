@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069082"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类转换”选项卡（挖掘模型查看器）
@@ -24,7 +24,7 @@ ms.locfileid: "66069082"
   
  使用此顺序分析和聚类分析模型视图可查看模式。 在关系图中，链接表示转换的概率，节点则表示序列状态。  
   
- **有关详细信息：** [microsoft 顺序分析和聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)、[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **有关详细信息，请参阅 ** [Microsoft 顺序分析和聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)和[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -48,7 +48,7 @@ ms.locfileid: "66069082"
  **复制整个图形**  
  将完整的关系图复制到剪贴板。  
   
- **群集**  
+ **聚集**  
  选择要在查看器中显示的分类。 默认情况下，“总体(全部)”**** 处于选中状态，这意味着整个模型中的状态和转换都包含在图形中。 在选择某个特定分类时，仅显示该分类中的状态和转换。  
   
  **提示：** 可以使用 "**分类关系图**" 选项卡重命名群集。只需选择一个分类，右键单击，然后选择 "**重命名**"。 通过使用更具说明性的标签来对分类进行重命名，可使得在 **“状态转换”** 选项卡中比较分类变得更容易。  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077846"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>元数据（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -34,7 +34,7 @@ ms.locfileid: "66077846"
  显示可用于在“浏览器”**** 中创建查询或数据视图的所有函数、运算符和常量的列表。 若要使用某个函数，找到所需的函数，然后将其拖入查询区域。 语法定义将添加到文本中。  
   
 > [!WARNING]  
->  在图形设计视图中工作时，“函数”**** 列表不可用。  
+>   在图形设计视图中工作时， **“函数”** 列表不可用。  
   
  当使用表格模型时，函数列表将包含 MDX 函数和 DAX 函数。 否则，该列表仅包含 MDX。 多维模型无法直接使用 DAX 函数，尽管可以在对象定义中包括 DAX 表达式。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66077846"
 |------------|-----------------|  
 |**添加到查询**|单击此选项可以将选定的对象添加到查询生成区域的下部窗格中。|  
 |**添加到筛选器**|单击此选项可以将所选的维度、属性、层次结构或级别添加至 **“浏览器”** 的筛选区域。<br /><br /> 注意：只有在选择了维度、属性、层次结构或级别时，才会启用此选项。|  
-|**Copy**|单击此选项可以将所选项添加到剪贴板。<br /><br /> 注意：此选项复制对象的完全限定名称。|  
+|**复制**|单击此选项可以将所选项添加到剪贴板。<br /><br /> 注意：此选项复制对象的完全限定名称。|  
   
 ## <a name="see-also"></a>另请参阅  
  [工具栏 &#40;浏览器选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

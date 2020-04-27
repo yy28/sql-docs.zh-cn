@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076242"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>创建 Analysis Services 项目 (SSDT)
@@ -31,7 +31,7 @@ ms.locfileid: "66076242"
   
  本主题包含以下各节：  
   
- [使用 "Analysis Services 项目" 模板创建新项目](#bkmk_NewUsingTemplate)  
+ [使用 Analysis Services 项目模板创建新项目](#bkmk_NewUsingTemplate)  
   
  [使用现有 Analysis Services 数据库创建新项目](#bkmk_NewUsingWizard)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66076242"
   
  [Analysis Services 项模板](#bkmk_ItemTemplates)  
   
-##  <a name="bkmk_NewUsingTemplate"></a>使用 "Analysis Services 项目" 模板创建新项目  
+##  <a name="create-a-new-project-using-the-analysis-services-project-template"></a><a name="bkmk_NewUsingTemplate"></a>使用 "Analysis Services 项目" 模板创建新项目  
  使用这些说明可以创建一个空的项目，您可在其中定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，然后将它们作为新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库部署。  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“文件”**，指向 **“新建”**，然后单击 **“项目”**。 在 **“新建项目”** 对话框的 **“项目类型”** 窗格中，选择 **“商业智能项目”**。  
@@ -58,13 +58,13 @@ ms.locfileid: "66076242"
   
 5.  若要将新项目添加到现有解决方案，请在“解决方案”**** 下拉列表中选择“添加到解决方案”****。  
   
-     -或-  
+     \- 或 -  
   
      若要创建新的解决方案，请在“解决方案”**** 下拉列表中选择“创建新解决方案”****。 若要为新解决方案创建新的文件夹，请选择 **“创建解决方案的目录”**。 在 **“解决方案名称”** 中，键入新解决方案的名称。  
   
-6.  单击“确定”。   
+6.  单击" **确定**"。  
   
-##  <a name="bkmk_NewUsingWizard"></a>使用现有 Analysis Services 数据库创建新项目  
+##  <a name="create-a-new-project-using-an-existing-analysis-services-database"></a><a name="bkmk_NewUsingWizard"></a> 使用现有的 Analysis Services 数据库创建新项目  
  使用导入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库向导可以基于现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的对象创建项目。 在基于现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，此数据库的元数据将在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目中打开。 可以在项目中修改这些对象，而不会影响原始对象，然后可以将这些对象部署到相同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（如果部署属性指定该数据库）或部署到新创建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以进行比较测试。 直到部署更改之后，所做的更改才会影响现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
   
  还可以使用导入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库模板从生产数据库创建项目，自部署完原始 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目后已直接对此生产数据库进行了更改。  
@@ -75,7 +75,7 @@ ms.locfileid: "66076242"
   
 2.  在 **“新建项目”** 对话框的 **“Visual Studio 已安装的模板”** 类别中，选择 **“导入 Analysis Services 数据库”**。  
   
-3.  为项目和解决方案输入属性信息，包括文件的名称和位置。 单击“确定”。   
+3.  为项目和解决方案输入属性信息，包括文件的名称和位置。 单击" **确定**"。  
   
 4.  在 **“欢迎使用导入 Analysis Services 数据库向导”** 页上，单击 **“下一步”**。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66076242"
   
 7.  打开“解决方案资源管理器”窗口查看项目内容。  
   
-##  <a name="bkmk_AddtoExistingSolution"></a>将 Analysis Services 项目添加到现有解决方案  
+##  <a name="add-an-analysis-services-project-to-an-existing-solution"></a><a name="bkmk_AddtoExistingSolution"></a> 将 Analysis Services 项目添加到现有解决方案中  
  如果您已具有包含某一业务应用程序的所有源文件的解决方案，则可以将新的 Analysis Services 项目添加到该解决方案。  
   
  将现有项目添加到某一解决方案会将该项目与该解决方案相关联，但不是复制。 如果该 Analysis Services 项目已在其他解决方案中创建，则项目文件将与用于创建它的原始解决方案一起保留。 这意味着，您通过任何一个解决方案对项目进行的任何更改都将作用于同一组源文件。 如果此行为并非您的预期行为，则应该首先将项目文件复制或移动到新的解决方案文件夹，然后将项目添加到该解决方案。  
@@ -98,7 +98,7 @@ ms.locfileid: "66076242"
   
 2.  选择要添加到解决方案的 .dwproj 文件。  
   
-##  <a name="bkmk_buildDeploy"></a>生成并部署解决方案  
+##  <a name="build-and-deploy-the-solution"></a><a name="bkmk_buildDeploy"></a> 生成和部署场解决方案  
  默认情况下， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将项目部署到本地计算机上的默认 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 您可以使用 **项目的** “属性页” [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对话框更改此部署目标，进而更改 **“服务器”** 配置属性。  
   
 > [!NOTE]  
@@ -110,7 +110,7 @@ ms.locfileid: "66076242"
   
  在项目完成后，您可以使用部署向导来将生成解决方案时生成的部署脚本部署到目标实例以进行测试、临时处理和部署。  
   
-##  <a name="bkmk_ProjectFolders"></a>Analysis Services 项目文件夹  
+##  <a name="analysis-services-project-folders"></a><a name="bkmk_ProjectFolders"></a>Analysis Services 项目文件夹  
  每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目都包含下列文件夹，这些文件夹用于组织项目中的项。  
   
 |Folder|说明|  
@@ -122,24 +122,20 @@ ms.locfileid: "66076242"
 |挖掘结构|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的挖掘结构。 您可以使用挖掘模型向导创建这些对象并可在挖掘模型设计器中对其进行编辑。|  
 |角色|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的数据库角色。 您可以在角色设计器中创建和管理角色。|  
 |程序集|包含了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 项目对 COM 库和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .NET Framework 程序集的引用。 您可以使用 **“添加引用”** 对话框来创建引用。|  
-|其他|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 文件类型以外的任何其他类型文件。 使用此文件夹可以添加所有杂项文件，例如包含项目注释的文本文件。|  
+|杂项|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 文件类型以外的任何其他类型文件。 使用此文件夹可以添加所有杂项文件，例如包含项目注释的文本文件。|  
   
-##  <a name="bkmk_FileTypes"></a>Analysis Services 文件类型  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 解决方案可以包含多种文件类型，具体取决于解决方案中包括的项目以及解决方案的各个项目中包括的项。 通常， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 解决方案中各项目的文件都存储在解决方案文件夹中，每个项目各有单独的文件夹。  
+##  <a name="analysis-services-file-types"></a><a name="bkmk_FileTypes"></a> Analysis Services 文件类型  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 解决方案可以包含多种文件类型，具体取决于解决方案中包括的项目以及解决方案的各个项目中包括的项。 通常， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 解决方案中各项目的文件都存储在解决方案文件夹中，每个项目各有单独的文件夹。  
   
 > [!NOTE]  
 >  将某个对象的文件复制到一个项目文件夹不会将该对象添加到该项目。 您必须在 **中使用项目的上下文菜单中的** “添加” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 命令来将现有的对象定义添加到项目中。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的项目文件夹可以包含下表中列出的文件类型。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的项目文件夹可以包含下表中列出的文件类型。  
   
 |文件类型|说明|  
 |---------------|-----------------|  
-|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目定义文件 (.dwproj)|包含了有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中定义和包含的项、配置和程序集引用的元数据。|  
-|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目用户设置 (.dwproj.user)|包含了特定用户的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目配置信息。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目定义文件 (.dwproj)|包含了有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中定义和包含的项、配置和程序集引用的元数据。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目用户设置 (.dwproj.user)|包含了特定用户的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目配置信息。|  
 |数据源文件 (.ds)|包含了用于定义数据源的元数据的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 元素。|  
 |数据源视图文件 (.dsv)|包含了用于定义数据源视图的元数据的 ASSL 元素。|  
 |多维数据集文件 (.cube)|包含了用于定义多维数据集（包括度量值组、度量值和多维数据集维度）的元数据的 ASSL 元素。|  
@@ -149,16 +145,15 @@ ms.locfileid: "66076242"
 |数据库文件 (.database)|包含了用于定义数据库的元数据（包括帐户类型、翻译和数据库权限）的 ASSL 元素。|  
 |数据库角色文件 (.role)|包含了用于定义数据库角色（包括角色成员）的元数据的 ASSL 元素。|  
   
-##  <a name="bkmk_ItemTemplates"></a>Analysis Services 项模板  
+##  <a name="analysis-services-item-templates"></a><a name="bkmk_ItemTemplates"></a>Analysis Services 项模板  
  在使用 **“添加新项”** 对话框向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加新项时，您可以选择使用项模板，项模板是演示如何执行指定操作的一个预定义脚本或语句。  
   
  下表中列出的项模板可从 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “添加新项” **对话框的** 项目项类别中获得。  
   
 |类别|项模板|说明|  
 |--------------|-------------------|-----------------|  
-|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目项|Cube|启动多维数据集向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的多维数据集。|  
-||数据源|启动数据源向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的数据源。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目项|多维数据集|启动多维数据集向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的多维数据集。|  
+||“数据源”|启动数据源向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的数据源。|  
 ||“数据源视图”|启动数据源视图向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的数据源视图。|  
 ||数据库角色|向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新数据库角色，然后为此新数据库角色显示角色设计器。|  
 ||维度|启动维度向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的数据库维度。|  
@@ -167,6 +162,6 @@ ms.locfileid: "66076242"
 ## <a name="see-also"></a>另请参阅  
  [配置 Analysis Services 项目属性 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [&#40;SSDT 生成 Analysis Services 项目&#41;](build-analysis-services-projects-ssdt.md)   
- [&#40;SSDT 部署 Analysis Services 项目&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 项目 (SSDT)](deploy-analysis-services-projects-ssdt.md)  
   
   

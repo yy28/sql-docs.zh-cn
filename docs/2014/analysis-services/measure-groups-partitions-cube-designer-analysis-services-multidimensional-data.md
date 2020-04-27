@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077908"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>度量值组（“分区”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“分区”** 选项卡上的 **“度量值组”** 窗格，管理与多维数据集中的各个度量值组关联的分区。  
   
 ## <a name="options"></a>选项  
- **“度量值组”**  
+ **分区**  
  显示包含支持所选度量值组的一系列分区的网格。 该网格包含以下列：  
   
  **序号**  
@@ -34,7 +34,7 @@ ms.locfileid: "66077908"
  **分区名称**  
  键入所选分区的名称。  
   
- **数据源**  
+ **源**  
  键入为所选分区提供事实数据表数据的表名称（对于表绑定）或查询（对于查询绑定）。  
   
  单击 **...** 按钮可以显示 **“分区源”** 对话框并定义所选分区的源。  
@@ -71,7 +71,7 @@ ms.locfileid: "66077908"
 |**写回设置**|单击此项可以显示“启用/禁用写回”**** 对话框，以便指定包含所选分区的度量值组的写回设置。|  
 |**基于使用情况的优化**|单击此项可显示 **基于使用情况的优化向导** ，并基于现有使用模式为所选分区创建聚合设计。<br /><br /> 注意：如果选择了写回分区，则将禁用此选项。|  
 |**进程**|单击此项可以显示 **“处理”** 对话框，以便处理所选分区。|  
-|**Copy**|此选项已禁用。|  
+|**复制**|此选项已禁用。|  
 |**粘贴**|此选项已禁用。|  
 |**属性**|选择此项可以在 **中显示所选分区的** “属性” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 窗口。|  
   

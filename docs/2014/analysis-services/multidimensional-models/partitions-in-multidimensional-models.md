@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073333"
 ---
 # <a name="partitions-in-multidimensional-models"></a>多维模型中的分区
@@ -42,15 +42,15 @@ ms.locfileid: "66073333"
 ## <a name="partition-merging-and-editing"></a>分区合并和编辑  
  如果两个分区使用同样的聚合设计，则可以将两个分区合并为一个。 例如，如果有一个按月分区的库存维度，则在每个日历月月末，可以将该月分区与现有的年初至今分区合并。 这样一来，就可对当前月分区进行快速处理和分析，而该年剩下的月只需要在合并时重新处理。 此类重新处理需要较长的处理时间，运行效率也可能较低。 有关管理分区合并过程的详细信息，请参阅 [在 Analysis Services 中合并分区（SSAS - 多维）](merge-partitions-in-analysis-services-ssas-multidimensional.md)。 若要使用多维数据集设计器中的 "**分区**" 选项卡编辑多维数据集分区，请参阅[编辑或删除 Analysis Services 多维&#41;&#40;分区](edit-or-delete-partitions-analyisis-services-multidimensional.md)。  
   
-## <a name="related-topics"></a>相关主题  
+## <a name="related-topics"></a>“相关主题”  
   
 |主题|说明|  
 |-----------|-----------------|  
-|[创建和管理本地分区 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|包含有关如何使用筛选器或不含重复数据的不同事实表对数据分区的信息。|  
-|[将分区存储 &#40;Analysis Services 多维&#41;](set-partition-storage-analysis-services-multidimensional.md)|说明如何为分区配置存储。|  
+|[创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)|包含有关如何使用筛选器或不含重复数据的不同事实表对数据分区的信息。|  
+|[设置分区存储（Analysis Services - 多维）](set-partition-storage-analysis-services-multidimensional.md)|说明如何为分区配置存储。|  
 |[编辑或删除分区 &#40;Analysis Services 多维&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|说明如何查看和编辑分区。|  
-|[&#40;SSAS Analysis Services 中合并分区-多维&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|包含有关如何合并分区的信息，这些分区具有不同的事实表或数据切片而不含重复数据。|  
+|[在 Analysis Services 中合并分区（SSAS - 多维）](merge-partitions-in-analysis-services-ssas-multidimensional.md)|包含有关如何合并分区的信息，这些分区具有不同的事实表或数据切片而不含重复数据。|  
 |[设置分区写回](set-partition-writeback.md)|提供有关对分区启用写操作的说明。|  
-|[创建和管理远程分区 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|说明如何创建和管理远程分区。|  
+|[创建和管理远程分区 (Analysis Services)](create-and-manage-a-remote-partition-analysis-services.md)|说明如何创建和管理远程分区。|  
   
   

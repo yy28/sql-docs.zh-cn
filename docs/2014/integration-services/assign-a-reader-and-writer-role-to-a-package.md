@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793df21782fd3bcb06ad8cbe91c3ba325b2f8a95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061522"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>将读取者角色和写入者角色分配给包
@@ -30,6 +30,6 @@ ms.locfileid: "66061522"
   
 4.  在 **“包角色”** 对话框中，从 **“读取者角色”** 列表中选择一个读取者角色，并从 **“写入者角色”** 列表中选择一个写入者角色。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
   

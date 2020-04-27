@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079024"
 ---
 # <a name="adding-attributes-to-dimensions"></a>向维度添加属性
@@ -72,7 +72,7 @@ ms.locfileid: "66079024"
   
     -   **PostalCode**  
   
-6.  在“文件”菜单上，单击“全部保存”  。  
+6.  在“文件”  菜单上，单击“全部保存” ****。  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>向“产品”维度中添加属性  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66079024"
   
     -   **StandardCost**  
   
-    -   **彩色**  
+    -   **颜色**  
   
     -   **SafetyStockLevel**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079024"
   
     -   **SizeRange**  
   
-    -   **重现**  
+    -   **重量**  
   
     -   **DaysToManufacture**  
   
@@ -118,9 +118,9 @@ ms.locfileid: "66079024"
   
     -   **EndDate**  
   
-    -   **Status**  
+    -   **状态**  
   
-5.  在“文件”菜单上，单击“全部保存”  。  
+5.  在“文件”  菜单上，单击“全部保存” ****。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [检查多维数据集和维度属性](lesson-2-4-reviewing-cube-and-dimension-properties.md)  

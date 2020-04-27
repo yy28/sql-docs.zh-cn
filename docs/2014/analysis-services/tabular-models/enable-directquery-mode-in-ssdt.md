@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067198"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>启用 DirectQuery 设计模式（SSAS 表格）
@@ -41,6 +41,6 @@ ms.locfileid: "66067198"
 4.  如果有错误，则在 Visual Studio 中打开**错误列表**并解决任何会阻止模型切换到 DirectQuery 模式的问题。  
   
 ## <a name="see-also"></a>另请参阅  
- [DirectQuery 模式 &#40;SSAS 表格&#41;](directquery-mode-ssas-tabular.md)  
+ [DirectQuery 模式（SSAS 表格）](directquery-mode-ssas-tabular.md)  
   
   

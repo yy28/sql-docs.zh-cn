@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077495"
 ---
 # <a name="actions-in-multidimensional-models"></a>多维模型中的操作
   操作是指最终用户针对所选多维数据集或其个部分启动的操作。 操作可以通过将所选项目作为参数来启动应用程序，也可以检索有关所选项目的信息。 有关操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](actions-analysis-services-multidimensional-data.md)。  
   
- 使用多维数据集设计器的 **“操作”** 选项卡可以为多维数据集生成操作。 指定以下项：  
+ 使用多维数据集设计器的 **“操作”** 选项卡可以为多维数据集生成操作。 指定下列各项：  
   
  **名称**  
  选择用于标识操作的名称。  
@@ -37,7 +37,7 @@ ms.locfileid: "66077495"
   
 -   单元  
   
--   Cube  
+-   多维数据集  
   
 -   维度成员  
   
@@ -67,16 +67,16 @@ ms.locfileid: "66077495"
   
  对于 **“操作表达式”**，请指定运行操作时所传递的参数。 该语法的计算结果必须为字符串，并且必须包含以 MDX 编写的表达式。 例如，MDX 表达式可以指示该语法所包含的多维数据集的一部分。 MDX 表达式在传递参数之前得到取值。 MDX 生成器也可以帮助生成 MDX 表达式。  
   
- **其他属性**  
+ **附加属性**  
  选择属性。 下表总结了可用的属性。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
-|**调用**|指定如何运行操作。 “交互”（默认）指定在用户访问对象时运行操作。 可能的设置是：<br /><br /> Batch<br /><br /> 交互<br /><br /> 处于打开状态|  
-|**Application**|说明操作的应用程序。|  
+|**调用**|指定如何运行操作。 “交互”（默认）指定在用户访问对象时运行操作。 可能的设置是：<br /><br /> Batch<br /><br /> Interactive (交互)<br /><br /> 处于打开状态|  
+|**应用程序**|说明操作的应用程序。|  
 |**说明**|说明操作。|  
 |**Caption**|提供为操作显示的标题。 如果标题是 MDX，请将`True` for **CAPTION**指定为 mdx。|  
-|**True**|如果标题是 MDX，请指定 `True`，如果不是，则指定 `False`。|  
+|**标题是 MDX**|如果标题是 MDX，请指定 `True`，如果不是，则指定 `False`。|  
   
 > [!NOTE]  
 >  必须使用 Analysis Services 脚本语言 (ASSL) 或分析管理对象 (AMO)，才能定义 HTML 和命令行操作类型。 有关详细信息，请参阅 [Action 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)、[Type 元素 (Action) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 和 [AMO OLAP 高级对象的编程](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)。  
@@ -87,7 +87,7 @@ ms.locfileid: "66077495"
  **报表服务器**  
  下表说明的属性是为报表服务器指定的。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |**服务器名称**|运行报表服务器的计算机的名称。|  
 |**服务器路径**|报表服务器所显示的路径。|  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077422"
 ---
 # <a name="define-a-default-member"></a>定义默认成员
@@ -44,6 +44,6 @@ ms.locfileid: "66077422"
  当层次结构中的各级别自然聚合时，您可以为层次结构中的任意属性定义默认成员，而不考虑该层次结构中的其他属性。 例如，在层次结构的国家/地区-市/县中，可以定义 "城市" 的默认成员，如 [City]。[蒙特利尔]，而不是为州或国家/地区定义默认成员。  
   
 ## <a name="see-also"></a>另请参阅  
- [为属性层次结构配置 &#40;所有&#41; 级别](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [配置属性层次结构的“(全部)”级别](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85d085472a8d904efb2b33b942ba9f0a67326fed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067249"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>删除表（SSAS 表格）
@@ -33,6 +33,6 @@ ms.locfileid: "66067249"
 -   如果您使用该表创建了任何计算列，则也删除该表中的列；其他表中使用已删除表中的列的任何计算列将显示一个错误。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSAS 表格&#41;的表和列](tables-and-columns-ssas-tabular.md)  
+ [表和列（SSAS 表格）](tables-and-columns-ssas-tabular.md)  
   
   

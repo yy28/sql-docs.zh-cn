@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061692"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 源编辑器（“连接管理器”页）
@@ -48,7 +48,7 @@ ms.locfileid: "66061692"
 |SQL 命令|使用 SQL 查询从 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 数据源中检索数据。|  
   
  **预览**  
- 通过使用“数据视图”**** 对话框预览结果。 **预览**最多可以显示200行。  
+ 通过使用“数据视图”**** 对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
 >  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
@@ -66,7 +66,7 @@ ms.locfileid: "66061692"
  **生成查询**  
  使用“查询生成器”**** 对话框可直观地构造 SQL 查询。  
   
- **“浏览”**  
+ **浏览**  
  使用“打开”**** 对话框可定位到包含 SQL 查询文本的文件。  
   
 ## <a name="see-also"></a>另请参阅  

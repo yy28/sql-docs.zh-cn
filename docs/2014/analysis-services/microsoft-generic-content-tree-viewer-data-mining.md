@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ba3b64847e2f63a96533a0f57cee41208176a7b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077812"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 一般内容树查看器（数据挖掘）
-  
   **“Microsoft 一般内容树查看器”** 以标准化 HTML 表格式显示有关数据挖掘模式的内容的详细信息。 此视图很有用，因为它将公开模型的基础结构，以及有关系数、值的分布等项的详细信息。  
   
  表中显示的实际内容因使用的算法而异，可能包括列、规则、属性、特性、节点和公式。 有关模型内容以及如何解释每个模型类型信息的详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](data-mining/mining-model-content-analysis-services-data-mining.md)。  

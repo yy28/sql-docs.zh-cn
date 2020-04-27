@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062932"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>操作组织程序（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的 **“操作组织程序”** 窗格，访问指定多维数据集中包含的操作。  
   
 ## <a name="options"></a>选项  
- **列出**  
+ **成员列表**  
  显示操作的名称。  
   
  选择一个操作将显示 **操作窗体编辑器**；选择钻取操作将显示 **钻取操作窗体编辑器**，或选择报表操作以显示 **报表操作窗体编辑器**。  

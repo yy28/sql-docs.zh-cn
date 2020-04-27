@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94ab489420b4661cea27b942c39dff91a219a38d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076707"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>更改分区源以使用不同的事实数据表
@@ -32,6 +32,6 @@ ms.locfileid: "66076707"
  可以使用包含重复数据的不同事实数据表，但建议不要这样做。 因为在此情况下，您必须在分区中使用筛选器，以确保一个分区使用的数据不被任何其他分区使用。 有关详细信息，请参阅 [创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建和管理本地分区 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)  
   
   

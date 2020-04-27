@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066894"
 ---
 # <a name="partitions-ssas-tabular"></a>分区（SSAS 表格）
@@ -22,11 +22,11 @@ ms.locfileid: "66066894"
   
  本主题的内容：  
   
--   [便利](#bkmk_benefits)  
+-   [优点](#bkmk_benefits)  
   
 -   [相关任务](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> 优势  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>便利  
  表格模型中的分区将一个表划分为各个逻辑分区对象。 然后，每个分区可独立于其他分区进行处理。 例如，表可能包含某些行集，这些行集的数据很少更改；但是也包含另一些行集，这些行集的数据则经常更改。 在这些情况中，如果您只想处理某一部分数据，没有必要处理所有数据。 通过分区，您可以将需要经常处理的那部分数据与很少处理的那部分数据分开。  
   
  有效的模型设计利用分区来消除 Analysis Services 服务器上不必要的处理和后续处理器负载，而同时可确保以足够的频率处理和刷新数据，以反映数据源中最新的数据。 在模型创建期间如何实现和利用分区可能与如何为已部署的模型实现和利用分区有很大不同。 请记住在模型创建阶段，您可能只使用将最终包含在已部署的模型中的数据的一个子集。  
@@ -44,15 +44,15 @@ ms.locfileid: "66066894"
 ### <a name="partitions-in-a-deployed-model-database"></a>已部署的模型数据库中的分区  
  部署模型时，已部署的模型数据库的分区将显示为 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的数据库对象。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的“分区”对话框为已部署的模型创建、编辑、合并和删除分区。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中管理已部署的模型的分区不在本主题讨论范围内。 若要了解管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的分区的相关信息，请参阅[创建和管理表格模型分区（SSAS 表格）](create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
   
-##  <a name="bkmk_related_tasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 相关任务  
   
 |主题|说明|  
 |-----------|-----------------|  
-|[&#40;SSAS 表格&#41;创建和管理工作区数据库中的分区](workspace-database-ssas-tabular.md)|说明如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的分区管理器在模型工作区数据库中创建和管理分区。|  
+|[创建和管理工作区数据库中的分区（SSAS 表格）](workspace-database-ssas-tabular.md)|说明如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的分区管理器在模型工作区数据库中创建和管理分区。|  
 |[&#40;SSAS 表格中处理工作区数据库中的分区&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|说明如何在模型工作区数据库中处理（刷新）分区。|  
   
 ## <a name="see-also"></a>另请参阅  
  [DirectQuery 模式 &#40;SSAS 表格&#41;](directquery-mode-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;处理数据](../process-data-ssas-tabular.md)  
+ [处理数据（SSAS 表格）](../process-data-ssas-tabular.md)  
   
   

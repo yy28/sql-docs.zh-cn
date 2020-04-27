@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078371"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>第 8 课：创建关键绩效指标
   在本课中，您将创建关键绩效指标 (KPI)。 KPI 用来衡量由基度量值定义的某个值的绩效（与同样由度量值或绝对值定义的目标值进行对比）。**** 在报告客户端应用程序中，KPI 可以为业务专业人员提供一种快速简单的方法来了解业务成功摘要情况或查明趋势。 若要了解详细信息，请参阅 [KPI（SSAS 表格）](tabular-models/kpis-ssas-tabular.md)。  
   
- 本课预计完成时间：**15 分钟**  
+ 学完本课的估计时间： **15 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
- 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，须已完成上一课：[第 7 课：创建度量值](lesson-6-create-measures.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，须已完成上一课： [第 7 课：创建度量值](lesson-6-create-measures.md)。  
   
 ## <a name="create-key-performance-indicators"></a>创建关键绩效指标  
   
@@ -81,6 +81,6 @@ ms.locfileid: "66078371"
 7.  在“选择图标样式”中，选择菱形（红色）、三角形（黄色）、圆形（绿色）图标类型，并单击“确定”。********  
   
 ## <a name="next-step"></a>下一步  
- 若要继续学习本教程，请转到下一课：[第 9 课：创建透视](lesson-8-create-perspectives.md)。  
+ 若要继续学习本教程，请转到下一课： [第 9 课：创建透视](lesson-8-create-perspectives.md)。  
   
   

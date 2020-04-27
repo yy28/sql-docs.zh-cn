@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059957"
 ---
 # <a name="data-flow-path-editor-general-page"></a>数据流路径编辑器（“常规”页）
@@ -30,7 +30,7 @@ ms.locfileid: "66059957"
  **名称**  
  为路径提供唯一的名称。  
   
- **识别**  
+ **ID**  
  路径的沿袭标识符。 此属性为只读。  
   
  **IdentificationString**  

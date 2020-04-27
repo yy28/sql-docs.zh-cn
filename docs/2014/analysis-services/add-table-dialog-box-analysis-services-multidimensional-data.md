@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062805"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>“添加表”对话框（Analysis Services - 多维数据）
@@ -32,7 +32,7 @@ ms.locfileid: "66062805"
 |**视图**|使用 **“视图”** 选项卡可以显示并选择要添加的视图。|  
 |**函数**|使用 **“函数”** 选项卡可以显示并选择要添加的函数或存储过程。|  
 |**同义词**|使用 **“同义词”** 选项卡可以显示并选择要添加的同义词。|  
-|**“刷新”**|单击此项将重新加载该对话框上的所有选项卡。|  
+|**全部**|单击此项将重新加载该对话框上的所有选项卡。|  
 |**添加**|单击此项将添加当前所选项。 **注意：** 仅当选择了项时，才会启用此选项。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078460"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>定义度量值组中的维度粒度
@@ -38,7 +38,7 @@ ms.locfileid: "66078460"
   
 4.  右键单击“关系图”**** 窗格中的任意位置并选择“添加/删除表”****，以将 **FactSalesQuota** 表添加到“关系图”**** 窗格中。  
   
-     注意，**SalesTerritory**表通过 **Employee** 表链接到 **FactSalesQuota** 表。  
+     注意， **SalesTerritory** 表通过 **Employee** 表链接到 **FactSalesQuota** 表。  
   
 5.  检查 **FactSalesQuota** 表中的列，然后浏览此表中的数据。  
   
@@ -60,16 +60,15 @@ ms.locfileid: "66078460"
   
 12. 从`Sales Quotas`度量值组中删除 "**日历季度**" 度量值。  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]检测到作为包含度量值的列的 "日历季度" 度量值的列。 但是，在本主题后面部分，您将使用该列和 CalendarYear 列包含的值将“销售配额”度量值组链接到“日期”维度。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 检测出“日历季度”度量值下的列是包含度量值的列。 但是，在本主题后面部分，您将使用该列和 CalendarYear 列包含的值将“销售配额”度量值组链接到“日期”维度。  
   
 13. 在 "**度量**值" 窗格中，右键`Sales Quotas`单击度量值组，然后单击 "**新建度量值**"。  
   
      将打开“新建度量值”**** 对话框，其中包含使用类型为 **Sum** 的度量值的可用源列。  
   
-14. 在 "**新建度量值**" 对话框中，选择 "**使用情况**" 列表中的`SalesQuotas` "**非重复计数**"，确认在 "**源表**" 列表中选择 "EmployeeKey"，在 "**源列**" 列表中选择 " **** "，然后单击 **"确定"**  
+14. 在 "**新建度量值**" 对话框中，选择 "**使用情况**" 列表中的`SalesQuotas` "**非重复计数**"，确认在 "**源表**" 列表中选择 "EmployeeKey"，在 "**源列**" 列表中选择 " **EmployeeKey** "，然后单击 **"确定"**  
   
-     注意，将在名为“销售配额 1”**** 的新度量值组中创建该度量值。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的非重复计数度量值在它们自己的度量值组中创建，以最大程度地提高处理性能。  
+     注意，将在名为“销售配额 1”**** 的新度量值组中创建该度量值。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的非重复计数度量值在它们自己的度量值组中创建，以最大程度地提高处理性能。  
   
 15. 将 "**员工密钥非重复计数**度量值" 的 "**名称**" 属性`Sales Person Count`的值更改为`#,#` ，然后键入作为 "**格式字符串**" 属性的值。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66078460"
   
 1.  在“生成”**** 菜单上，单击“部署 Analysis Services 教程”****。  
   
-2.  在部署成功完成后，在 ** 教程多维数据集的多维数据集设计器中单击“浏览器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，再单击“重新连接”**** 按钮。  
+2.  在部署成功完成后，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中单击“浏览器”**** 选项卡，再单击“重新连接”**** 按钮。  
   
 3.  单击 Excel 快捷方式，然后单击“启用”****。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66078460"
   
 10. 将 **Date.Fiscal Date** 用户层次结构拖到行标签  
   
-11. 在数据透视表中，单击“行标签”旁的向下箭头。 取消选中除 **FY 2008** 之外的所有年份。  
+11. 在数据透视表中，单击“行标签”旁的向下箭头。 取消选中除 **FY 2008**之外的所有年份。  
   
      请注意，只有**月**级别的**2007 年7月**的成员显示，而不是显示**月**、 **2007**、 **8 月、2007**、 **9**月和9月的2007成员，并且只显示该`Date`级别的**年7月 2007 1**日，而不是所有31天。 出现此行为是因为事实数据表中数据的粒度处于季度级别， `Date`维度的粒度为每日级别。 在本主题的下一个任务中，您可以对此行为进行更改。  
   
@@ -139,7 +138,7 @@ ms.locfileid: "66078460"
   
 9. 验证是否选中了“具体化”**** 复选框。  
   
-10. 单击“确定”。   
+10. 单击" **确定**"。  
   
 11. 单击 "**销售区域**" 维度和 "**销售配额 1** " 度量值组相交处的单元，然后单击浏览按钮（**...**）。此时将打开 "**定义关系**" 对话框。  
   
@@ -153,7 +152,7 @@ ms.locfileid: "66078460"
   
 16. 验证是否选中了“具体化”**** 复选框。  
   
-17. 单击“确定”。   
+17. 单击" **确定**"。  
   
 18. 删除`Date`多维数据集维度。  
   
@@ -188,19 +187,19 @@ ms.locfileid: "66078460"
   
 3.  在“创建属性关系”对话框中，“源属性”是“日历季度”************。 将“相关属性”设置为“会计季度”********。  
   
-4.  单击“确定”。   
+4.  单击" **确定**"。  
   
      请注意，将出现一条警告消息`Date` ，指出该维度包含一个或多个冗余属性关系，在将非键属性用作粒度属性时，可能会导致数据无法聚合。  
   
 5.  请删除“月份名称”**** 属性和“会计季度”**** 属性之间的属性关系。  
   
-6.  在“文件”  菜单上，单击“全部保存”  。  
+6.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="browsing-the-measures-in-the-sales-quota-measure-group-by-date"></a>按日期浏览“销售配额”度量值组中的度量值  
   
 1.  在“生成”**** 菜单上，单击“部署 Analysis Services 教程”****。  
   
-2.  部署成功完成后，在 ** 教程多维数据集的多维数据集设计器中单击“浏览器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，再单击“重新连接”****。  
+2.  部署成功完成后，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中单击“浏览器”**** 选项卡，再单击“重新连接”****。  
   
 3.  单击 Excel 快捷方式，然后单击“启用”****。  
   
@@ -226,6 +225,6 @@ ms.locfileid: "66078460"
 ## <a name="see-also"></a>另请参阅  
  [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定义常规关系和常规关系属性](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [使用数据源视图设计器中的关系图 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [使用数据源视图设计器中的关系图 (Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

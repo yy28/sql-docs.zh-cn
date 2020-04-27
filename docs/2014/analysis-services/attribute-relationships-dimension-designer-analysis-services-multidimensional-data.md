@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063191"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>属性关系（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“属性关系”** 选项卡，创建、修改或删除所选维度的属性关系。  
   
 ## <a name="panes"></a>窗格  
- 
-  **“属性关系”** 页包含以下窗格：  
+ **“属性关系”** 页包含以下窗格：  
   
- [工具栏](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  使用工具栏可以执行维度设计器的“属性关系”**** 选项卡上的操作。  
   
  [属性关系图](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  

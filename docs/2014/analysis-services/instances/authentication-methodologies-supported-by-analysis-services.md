@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080335"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支持的身份验证方法
@@ -34,7 +34,7 @@ ms.locfileid: "66080335"
   
  有关 BI 和 Analysis Services 身份验证流的详细信息，请参阅 [Microsoft BI 身份验证和标识委托](https://go.microsoft.com/fwlink/?LinkID=286576)。  
   
-##  <a name="bkmk_auth"></a>了解身份验证备用方案  
+##  <a name="understanding-your-authentication-alternatives"></a><a name="bkmk_auth"></a>了解身份验证备用方案  
  连接到 Analysis Services 数据库需要 Windows 用户或组标识和关联的权限。 该标识可能是需要查看报表的任何人使用的常规用途登录名，但是更可能包含单个用户的标识。  
   
  通常，表格或多维模型基于发出请求的用户将具有不同的数据访问级别（按对象或在数据本身内）。 为满足此要求，您可以使用 NTLM、Kerberos、EffectiveUserName 或基本身份验证。 所有这些技术都提供了使用每个连接传递不同用户标识的方法。 但是，这些选项的大部分受单跃点的限制。 只有具有委托的 Kerberos 允许原始用户标识跨多个计算机连接流到远程服务器上的后端数据存储区。  
@@ -70,7 +70,7 @@ ms.locfileid: "66080335"
   
  对于匿名身份验证，您可以将匿名用户标识设置为某一特定的 Windows 用户帐户（默认为 IUSR_GUEST）或者某一应用程序池标识。 该匿名用户帐户将用于 Analysis Services 连接，并且必须对 Analysis Services 实例具有数据访问权限。 使用此方法时，在连接上只使用与匿名帐户关联的用户标识。 如果您的应用程序要求额外标识管理，您需要选择其他方法或使用您提供的标识管理解决方案进行补充。  
   
- 只有在针对 HTTP 访问配置 Analysis Services，使用 IIS 和 msmdpump.dll 建立连接后，基本身份验证和匿名用户才可用。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+ 只有在针对 HTTP 访问配置 Analysis Services，使用 IIS 和 msmdpump.dll 建立连接后，基本身份验证和匿名用户才可用。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
  **存储的凭据**  
   

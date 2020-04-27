@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073384"
 ---
 # <a name="parent-child-hierarchy"></a>父子层次结构
@@ -49,7 +49,7 @@ ms.locfileid: "66073384"
 ## <a name="data-members"></a>数据成员  
  通常，维度中的叶成员包含直接派生自基础数据源的数据，而非叶成员包含派生自对子成员所执行的聚合的数据。  
   
- 但是在父子层次结构中，一些非叶成员除了包含基于子成员聚合的数据外，还可能包含派生自基础数据源的数据。 对于父子层次结构中的这些非叶成员，可为其创建包含基础事实数据表数据的特殊的系统生成子成员。 这些特殊子成员称为“数据成员 **”，它们包含一个与非叶成员直接相关、且与通过该非叶成员后代计算出来的汇总值无关的值。 有关数据成员的详细信息，请参阅[父子层次结构中的属性](parent-child-dimension-attributes.md)。  
+ 但是在父子层次结构中，一些非叶成员除了包含基于子成员聚合的数据外，还可能包含派生自基础数据源的数据。 对于父子层次结构中的这些非叶成员，可为其创建包含基础事实数据表数据的特殊的系统生成子成员。 这些特殊子成员称为“数据成员 **”，它们包含一个与非叶成员直接相关、且与通过该非叶成员后代计算出来的汇总值无关的值。 有关数据成员的详细信息，请参阅 [父子层次结构中的属性](parent-child-dimension-attributes.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [父子层次结构中的属性](parent-child-dimension-attributes.md)   

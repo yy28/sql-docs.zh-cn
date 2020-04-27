@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070040"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>示例数据（SQL Server 数据挖掘外接程序）
@@ -70,7 +70,7 @@ ms.locfileid: "66070040"
 ## <a name="related-options"></a>相关选项  
  在向导中前进时，将有以下选项：  
   
-|选项|注释|  
+|选项|说明|  
 |-------------|--------------|  
 |“选择源数据”对话框（Excel 数据挖掘客户端）|选择包含数据的 Excel 范围或表。 如果要使用外部数据，则可使用关系数据，但这些数据必须包括在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源中。 T|  
 |“选择抽样类型”页（Excel 数据挖掘客户端）|如果您使用外部数据源，则会限制您只能使用随机抽样选项。 此外，还必须通过使用 "**行计数**" 选项来指定要在最终数据集中创建的行数。 不能指定源数据的百分比。|  

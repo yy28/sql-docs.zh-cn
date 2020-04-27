@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071122"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理面板和使用情况数据
@@ -32,10 +32,10 @@ ms.locfileid: "66071122"
   
  [为 PowerPivot 管理面板创建自定义报表](#reports)  
   
-##  <a name="prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="prereq"></a>先决条件  
  您必须是服务管理员才能为您管理的 PowerPivot 服务应用程序打开 PowerPivot 管理面板。  
   
-##  <a name="items"></a>仪表板各部分的概述  
+##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a> “面板”各个部分的概述  
  PowerPivot 管理面板包含用于深化到特定信息类别的 Web 部件和嵌入式报表。 下面的列表介绍面板的每个部分：  
   
 |仪表板|说明|  
@@ -46,9 +46,9 @@ ms.locfileid: "66071122"
 |工作簿活动 - 列表|有关数据访问频率的报表。 您可以了解每天或每周与 PowerPivot 数据源建立连接的频率。|  
 |数据刷新 - 最近的活动|有关数据刷新作业（包括运行失败的作业）的状态的报表。 此报表针对在应用程序级别执行的数据刷新操作提供了一个组合视图。 管理员可以快速查看为整个 PowerPivot 服务应用程序定义的数据刷新作业的数目。|  
 |数据刷新 - 最近的失败|列出未成功完成数据刷新的 PowerPivot 工作簿。|  
-|报表|包含指向可以在 Excel 中打开的报表的链接。|  
+|报告|包含指向可以在 Excel 中打开的报表的链接。|  
   
-##  <a name="open"></a>打开 PowerPivot 管理面板  
+##  <a name="open-powerpivot-management-dashboard"></a><a name="open"></a>打开 PowerPivot 管理面板  
  面板中一次显示一个 PowerPivot 服务应用程序的信息。 您可以从两个不同的位置打开管理面板。  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>从“常规应用程序设置”打开面板  
@@ -72,7 +72,7 @@ ms.locfileid: "66071122"
   
 3.  单击要查看管理面板报表的 PowerPivot 服务应用程序的名称。  
   
-##  <a name="sourcedata"></a>面板中的源数据  
+##  <a name="source-data-in-dashboards"></a><a name="sourcedata"></a> 面板中的源数据  
  面板、报表和 Web 部件显示的数据来自于一个内部数据模型，而该数据模型则从系统和 PowerPivot 应用程序数据库请求这些数据。 这个内部数据模型嵌入在一个承载于管理中心站点的 PowerPivot 工作簿中。 该数据模型的结构是固定的。 虽然可以使用 PowertPivot 工作簿作为数据源来创建新报表，但您不得以破坏使用该数据源的预定义报表的方式修改结构。  
   
  有关如何收集数据的详细信息，请参阅以下主题：  
@@ -81,12 +81,12 @@ ms.locfileid: "66071122"
   
 -   [为 &#40;配置使用情况数据收集 PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- 为了捕获有关 PowerPivot 服务器系统的数据，请验证为每个 PowerPivot 服务应用程序启用了事件消息传递、数据刷新历史记录和其他使用情况历史记录。 在服务器正常操作过程中收集的服务器和使用情况数据是最终完成此内部数据模型的源数据。 **注意：** 如果关闭事件或使用情况历史记录，复合报表将不完整或错误。  
+ 为了捕获有关 PowerPivot 服务器系统的数据，请验证为每个 PowerPivot 服务应用程序启用了事件消息传递、数据刷新历史记录和其他使用情况历史记录。 在服务器正常操作过程中收集的服务器和使用情况数据是最终完成此内部数据模型的源数据。 **注意：** 如果您关闭事件或使用情况历史记录，则组合报表将会不完整或出错。  
   
-##  <a name="edit"></a>编辑 PowerPivot 面板  
+##  <a name="edit-powerpivot-dashboard"></a><a name="edit"></a>编辑 PowerPivot 面板  
  如果您具有面板开发或自定义方面的专业知识，则可以编辑此面板以加入新的 Web 部件。 还可以编辑包含在面板中的 Web 部件属性。  
   
-##  <a name="reports"></a>为 PowerPivot 管理面板创建自定义报表  
+##  <a name="create-custom-reports-for-powerpivot-management-dashboard"></a><a name="reports"></a>为 PowerPivot 管理面板创建自定义报表  
  出于报告目的，PowerPivot 使用情况数据和历史记录保留在一个与面板一起创建和配置的内部 PowerPivot 工作簿中。 如果默认报表未提供所需信息，您可以在 Excel 中基于该工作簿创建自定义报表。 如果您以后升级或卸载 PowerPivot 解决方案文件，该工作簿和您创建的任何自定义报表都会保留。 工作簿和报表存储在管理中心站点的 PowerPivot 管理库中。 默认情况下此库不可见，但您可以使用“网站操作”下的“查看所有网站内容”操作来查看此库。  
   
  为帮助开始进行自定义报表制作，PowerPivot 管理面板提供了一个 Office 数据连接 (.odc) 文件连接到源工作簿。 例如，您可以在 Excel 中使用 .odc 文件来创建其他报表。  
@@ -140,7 +140,7 @@ ms.locfileid: "66071122"
   
     5.  在文件路径中，指定 .odc 文件。  
   
-    6.  单击 **“打开”** 。 此时，将使用指向包含使用情况数据的 PowerPivot 工作簿的连接字符串启动“表导入向导”。  
+    6.  单击“打开”  。 此时，将使用指向包含使用情况数据的 PowerPivot 工作簿的连接字符串启动“表导入向导”。  
   
     7.  单击 **“测试连接”** 以确认您具有访问权限。  
   

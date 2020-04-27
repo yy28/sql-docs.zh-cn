@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079275"
 ---
 # <a name="defining-a-data-source-view"></a>定义数据源视图
@@ -28,7 +28,7 @@ ms.locfileid: "66079275"
   
 2.  在“欢迎使用数据源视图向导”**** 页上，单击“下一步”****。 此时将显示“选择数据源”**** 页。  
   
-3.  已选中“关系数据源”**** 下的 **Adventure Works DW 2012** 数据源。 单击“下一步”。   
+3.  已选中“关系数据源”**** 下的 **Adventure Works DW 2012** 数据源。 单击“下一步”  。  
   
     > [!NOTE]  
     >  若要创建一个基于多个数据源的数据源视图，必须先定义一个基于单一数据源的数据源视图。 此数据源将被称为主数据源。 随后，可以添加来自辅助数据源的表和视图。 在基于多个数据源中的相关表设计包含属性的维度时，可能需要将 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据源定义为主数据源，以使用其分布式查询引擎功能。  
@@ -52,11 +52,11 @@ ms.locfileid: "66079275"
   
 5.  单击**>** 此选项可将所选表添加到 "**包含的对象**" 列表。  
   
-6.  单击“下一步”   
+6.  单击“下一步”。  
   
 7.  在“名称”字段中，确保显示 **Adventure Works DW 2012**，然后单击“完成”****。  
   
-     此时，**Adventure Works DW 2012** 数据源视图将显示在解决方案资源管理器的“数据源视图”**** 文件夹中。 数据源视图的内容还将显示在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的数据源视图设计器中。 此设计器包含以下元素：  
+     此时，**Adventure Works DW 2012** 数据源视图将显示在解决方案资源管理器的“数据源视图”**** 文件夹中。 数据源视图的内容还将显示在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的数据源视图设计器中。 此设计器包含以下元素：  
   
     -   “关系图”**** 窗格，其中将以图形方式显示各个表及其相互关系。  
   

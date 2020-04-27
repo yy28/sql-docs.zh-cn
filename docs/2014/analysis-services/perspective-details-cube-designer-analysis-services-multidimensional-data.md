@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072062"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>透视详细信息（“透视”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -26,7 +26,7 @@ ms.locfileid: "66072062"
  **多维数据集对象**  
  显示特定多维数据集（可以包含在透视中）中所包含对象和属性的层次列表。  
   
- **对象类型**  
+ “对象类型”   
  显示可以包含在透视中的多维数据集中的对象类型或属性名称。  
   
  **透视名称**  

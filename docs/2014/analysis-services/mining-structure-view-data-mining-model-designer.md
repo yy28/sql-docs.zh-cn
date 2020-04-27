@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077671"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>“挖掘结构”视图（数据挖掘模型设计器）
   可以使用 **“挖掘结构”** 视图修改和处理挖掘结构，以及处理与其关联的所有挖掘模型。  
   
- 
-  **“挖掘结构”** 视图具有以下工具和对话框：  
+ **“挖掘结构”** 视图具有以下工具和对话框：  
   
 -   ["新建挖掘模型" 对话框 &#40;挖掘结构视图&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
   
@@ -35,6 +34,6 @@ ms.locfileid: "66077671"
  [挖掘模型视图 &#40;数据挖掘模型设计器&#41;](mining-models-view-data-mining-model-designer.md)   
  [挖掘模型查看器 &#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [挖掘准确性图表设计器 &#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [&#40;数据挖掘的预测查询生成器&#41;](prediction-query-builder-data-mining.md)  
+ [预测查询生成器（数据挖掘）](prediction-query-builder-data-mining.md)  
   
   

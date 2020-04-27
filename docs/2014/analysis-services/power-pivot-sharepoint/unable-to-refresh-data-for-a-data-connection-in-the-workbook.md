@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070934"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新：PowerPivot 数据
@@ -32,7 +32,7 @@ ms.locfileid: "66070934"
 ## <a name="explanation-and-resolution"></a>说明和解决方法  
  Excel Services 无法连接到或加载 PowerPivot 数据。 在下列情况下会出现此错误：  
   
- **方案1：服务未启动**  
+ **应用场景 1：服务未启动**  
   
  SQL Server Analysis Services (PowerPivot) 实例未启动。 到期的密码将导致服务停止运行。 有关更改密码的详细信息，请参阅[配置 PowerPivot 服务帐户](configure-power-pivot-service-accounts.md)和[启动或停止 PowerPivot for SharePoint 服务器](start-or-stop-a-power-pivot-for-sharepoint-server.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66070934"
   
  如果您的目标是在脱机状态下使用 PowerPivot for SharePoint，则在计算机上安装域控制器将非常有用。 有关如何脱机使用 PowerPivot 的详细说明，请参阅中的 "从网络中[http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)获取 PowerPivot 服务器" 博客条目。  
   
- **方案4：服务器不稳定**  
+ **应用场景 4：服务器不稳定**  
   
  一个或多个服务可能处于不一致的状态。 在某些情况下，运行 IISRESET 将会解决该问题。  
   

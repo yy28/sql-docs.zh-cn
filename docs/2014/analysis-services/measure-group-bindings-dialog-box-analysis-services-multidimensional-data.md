@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077860"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>“度量值组绑定”对话框（Analysis Services - 多维数据）
@@ -28,7 +28,7 @@ ms.locfileid: "66077860"
  **度量值组表**  
  显示所选度量值组的事实数据表的名称。  
   
- **属性**  
+ **特性**  
  显示属性和维度表的网格。 选择一个属性可以在 **“关系”** 中为所选属性创建或修改其属性。 该网格包含以下列：  
   
 |选项|定义|  

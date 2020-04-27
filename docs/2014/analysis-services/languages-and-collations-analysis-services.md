@@ -19,15 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079382"
 ---
 # <a name="languages-and-collations-analysis-services"></a>语言和排序规则 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 
-  `Language` 和 `Collation` 属性最初是在安装期间的实例级别设置的，但之后可在对象层次结构的不同级别进行更改。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 `Language` 和 `Collation` 属性最初是在安装期间的实例级别设置的，但之后可在对象层次结构的不同级别进行更改。  
   
  在多维模型中（仅限），可以在数据库或多维数据集上设置这些属性，也可以在为多维数据集中的对象创建的翻译上设置这些属性。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66079382"
   
 -   [Analysis Services 中的 GB18030 支持](#bkmk_gb18030)  
   
-##  <a name="bkmk_object"></a>支持语言和排序规则属性的对象  
+##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>支持语言和排序规则属性的对象  
  `Language`和`Collation`属性通常一起公开-你可以在其中设置`Language`，还可以设置`Collation`。  
   
  你可在这些对象上设置 `Language` 和 `Collation`：  
@@ -72,19 +71,17 @@ ms.locfileid: "66079382"
   
  当你将翻译添加到多维数据集或维度时，将创建翻译对象。 `Language`是翻译定义的一部分。 而另一方面，`Collation` 则设置在多维数据集或更高级别上，并由所有翻译共享。 这在包含翻译的多维数据集的 XMLA 中很明显，你可从中发现多个语言属性（每个翻译一个属性），但只有一个排序规则。 注意：对维度属性翻译例外，你可覆盖多维数据集排序规则以指定与源列匹配的属性排序规则（数据库引擎支持各列上的排序规则，通常配置各翻译以从不同源列获取成员数据）。 但是，对于所有其他翻译，`Language` 自行使用，无需 `Collation` 推论。 有关详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
   
-##  <a name="bkmk_lang"></a>Analysis Services 中的语言支持  
- 
-  `Language` 属性设置在处理过程中使用的对象的区域设置、查询并使用 `Captions` 和 `Translations` 以支持多语情景。 区域设置基于语言标识符（如英语）和区域（如美国或澳大利亚），其进一步优化了数据和时间表示方法。  
+##  <a name="language-support-in-analysis-services"></a><a name="bkmk_lang"></a> Analysis Services 中的语言支持  
+ `Language` 属性设置在处理过程中使用的对象的区域设置、查询并使用 `Captions` 和 `Translations` 以支持多语情景。 区域设置基于语言标识符（如英语）和区域（如美国或澳大利亚），其进一步优化了数据和时间表示方法。  
   
  在实例级别，该属性在安装过程中设置，并基于 Windows Server 操作系统的语言（37 种语言中的一种，假设安装了语言包）。 你无法更改安装程序中的语言。  
   
  安装后，可以使用 Management Studio 中的服务器属性页或在 msmdsrv.ini 配置文件中覆盖 `Language`。 你可从更多语言选择，包括 Windows 客户端支持的所有语言。 当在服务器的实例级别上设置时，`Language` 决定后续部署的所有数据库的区域设置。 例如，如果你将 `Language` 设置为德语，那么部署到实例的所有数据库将具有语言属性 1031，即德语的 LCID。  
   
-###  <a name="bkmk_lcid"></a>Language 属性的值是区域设置标识符（LCID）  
+###  <a name="value-of-the-language-property-is-a-locale-identifier-lcid"></a><a name="bkmk_lcid"></a> 语言属性的值是区域设置标识符 (LCID)  
  有效值包括出现在下拉列表中的任何 LCID。 在 Management Studio 和 SQL Server Data Tools 中，LCID 通过等效的字符串表示。 每当显示 `Language` 属性时，出现相同的语言，无论是什么工具。 具有相同的语言列表可确保你可在整个模型中一致地实施和测试翻译。  
   
- 虽然 Analysis Services 按名称列出了语言，为属性存储的实际值是 LCID。 当通过编程方式或 msmdsrv.ini 文件设置语言属性时，请使用 [区域设置标识符 (LCID)](http://en.wikipedia.org/wiki/Locale) 作为值。 LCID 是 32 位的值，其包含标识特定语言的语言 ID、排序 ID 和保留位。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 LCID 指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例和对象的所选语言。  
+ 虽然 Analysis Services 按名称列出了语言，为属性存储的实际值是 LCID。 当通过编程方式或 msmdsrv.ini 文件设置语言属性时，请使用 [区域设置标识符 (LCID)](http://en.wikipedia.org/wiki/Locale) 作为值。 LCID 是 32 位的值，其包含标识特定语言的语言 ID、排序 ID 和保留位。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 LCID 指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例和对象的所选语言。  
   
  你可使用十六进制或十进制格式设置 LCID。 此`Language`属性的有效值的一些示例包括：  
   
@@ -99,18 +96,16 @@ ms.locfileid: "66079382"
  要查看更完整的列表，请参阅 [Microsoft 分配的语言 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 有关更多背景信息，请参阅[代码页](/windows/desktop/Intl/code-pages)。  
   
 > [!NOTE]  
->  
-  `Language` 属性不决定返回系统消息的语言或哪些字符串出现在用户界面中。 错误、警告和消息本地化为 Office 和 Office 365 中支持的所有语言，并当客户端连接指定其中一种支持区域设置时自动使用。  
+>  `Language` 属性不决定返回系统消息的语言或哪些字符串出现在用户界面中。 错误、警告和消息本地化为 Office 和 Office 365 中支持的所有语言，并当客户端连接指定其中一种支持区域设置时自动使用。  
   
-##  <a name="bkmk_collations"></a>Analysis Services 中的排序规则支持  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 仅使用 Windows 和二进制排序规则。 它不使用旧的 SQL Server 排序规则。 在整个多维数据集中，使用一个排序规则，属性级别的翻译除外。 有关定义属性翻译的详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
+##  <a name="collation-support-in-analysis-services"></a><a name="bkmk_collations"></a> Analysis Services 中的排序规则支持  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 仅使用 Windows 和二进制排序规则。 它不使用旧的 SQL Server 排序规则。 在整个多维数据集中，使用一个排序规则，属性级别的翻译除外。 有关定义属性翻译的详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
   
- 排序规则控制双语言脚本中所有字符串的大小写规则，对象标识符除外。 如果你在对象标识符中使用大写和小写字符，请注意对象标识符的大小写规则不是由排序规则决定，而是由 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]决定。 对于由英语脚本构成的对象标识符，对象标识符始终不区分大小写，无论排序规则是什么。 西里尔字母和其他双语言相反（总是区分大小写）。 有关详细信息，请参阅 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 。  
+ 排序规则控制双语言脚本中所有字符串的大小写规则，对象标识符除外。 如果你在对象标识符中使用大写和小写字符，请注意对象标识符的大小写规则不是由排序规则决定，而是由 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]决定。 对于由英语脚本构成的对象标识符，对象标识符始终不区分大小写，无论排序规则是什么。 西里尔字母和其他双语言相反（总是区分大小写）。 有关详细信息，请参阅 [全球化提示和最佳实践 (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md) 。  
   
  Analysis Services 中的排序规则与 SQL Server 关系数据库引擎的排序规则兼容，假设你以你为每个服务选择的排序选项维护奇偶校验。 例如，如果关系数据库区分重音，你应以相同方式配置多维数据集。 排序规则设置若不同，则会出现问题。 有关示例和解决方法，请参阅 [基于排序规则，Unicode 字符串中的空格有不同处理结果](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)。 有关排序规则和数据库引擎的详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
-###  <a name="bkmk_collationtype"></a>排序规则类型  
+###  <a name="collation-types"></a><a name="bkmk_collationtype"></a> 排序规则类型  
  Analysis Services 支持两种排序规则：  
   
 -   **Windows 排序规则**  
@@ -121,8 +116,8 @@ ms.locfileid: "66079382"
   
      二进制排序规则按 Unicode 码位排序，不是根据语言值。 例如，当针对 Unicode 数据使用二进制排序规则时，Latin1_General_BIN 和 Japanese_BIN 会生成相同的排序结果。 语言排序可能产生 aAbBcCdD 这样的结果，但二进制排序将是 ABCDabcd，因为所有大写字符的码位都高于小写字符的码位。  
   
-###  <a name="bkmk_sortorder"></a>排序顺序选项  
- 排序选项用于优化基于区分大小写、重音、假名和全半角的排序和比较规则。 例如，`Collation` 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 配置属性的默认值为 Latin1_General_AS_CS，指定使用 Latin1_General 排序规则，并且使用区分重音、区分大小写的排序顺序。  
+###  <a name="sort-order-options"></a><a name="bkmk_sortorder"></a> 排序顺序选项  
+ 排序选项用于优化基于区分大小写、重音、假名和全半角的排序和比较规则。 例如，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的 `Collation` 配置属性的默认值为 Latin1_General_AS_CS，指定使用 Latin1_General 排序规则，并且使用区分重音、区分大小写的排序顺序。  
   
  注意：BIN 和 BIN2 与其他排序选项相斥，如果你要使用 BIN 或 BIN2，应清除排序选项“区分重音”。 类似地，如果选中“BIN2”，则不可使用“区分大小写”、“不区分大小写”、“区分重音”、“不区分重音”、“区分假名”以及“区分全半角”等选项。  
   
@@ -131,12 +126,12 @@ ms.locfileid: "66079382"
 |排序顺序（后缀）|排序顺序说明|  
 |---------------------------|----------------------------|  
 |二进制 (_BIN) 或 BIN2 (_BIN2)|SQL Server 中有两种二进制排序规则：旧的 BIN 排序规则和新的 BIN2 排序规则。 在 BIN2 排序规则中，所有字符根据其码位排序。 在 BIN 排序规则中，仅第一个字符按照码位排序，其余字符根据其字节值排序。 （由于 Intel 平台是一个 little endian 体系结构，因此 Unicode 码字符始终以字节对调的形式存储。）<br /><br /> 对于 Unicode 数据类型的二进制排序规则，数据排序将不考虑区域设置。 例如，对 Unicode 数据应用 Latin_1_General_BIN 和 Japanese_BIN，会得到完全相同的排序结果。<br /><br /> 二进制排序顺序既区分大小写，也区分重音。 二进制排序顺序的速度也最快。|  
-|区分大小写 (_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 通过指定 _CI，可以显式设置不区分大小写。 特定于排序规则的大小写设置不适用于对象标识符，例如维度、多维数据集和其他对象的 ID。 有关详细信息，请参阅 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 。|  
+|区分大小写 (_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 通过指定 _CI，可以显式设置不区分大小写。 特定于排序规则的大小写设置不适用于对象标识符，例如维度、多维数据集和其他对象的 ID。 有关详细信息，请参阅 [全球化提示和最佳实践 (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md) 。|  
 |区分重音 (_AS)|区分重音字符和非重音字符。 例如，“a”和“ấ”视为不同字符。 如果未选择此项，在排序时， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将字母的重音形式和非重音形式视为相同。 通过指定 _AI，可以显式设置不区分重音。|  
 |区分假名 (_KS)|区分日语中的两种假名字符类型：平假名和片假名。 如果未选中该选项，则就排序而言， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将平假名字符和片假名字符视为相同。 没有用于不区分假名排序的排序顺序后缀。|  
 |区分全半角 (_WS)|区分字符的单字节形式和双字节形式。 如果未选择此项， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将在排序时把同一字符的单字节形式和双字节形式视为相同。 没有用于不区分全半角排序的排序顺序后缀。|  
   
-##  <a name="bkmk_defaultLang"></a>更改实例上的默认语言或排序规则  
+##  <a name="change-the-default-language-or-collation-on-the-instance"></a><a name="bkmk_defaultLang"></a> 更改实例上的默认语言或排序规则  
  默认语言和排序规则在安装过程中设置，但可在安装后配置过程中进行更改。 更改实例级别的排序规则并不简单，需要满足以下要求：  
   
 -   服务重启。  
@@ -157,7 +152,7 @@ ms.locfileid: "66079382"
   
 4.  重启服务。  
   
-##  <a name="bkmk_cube"></a>更改多维数据集上的语言或排序规则  
+##  <a name="change-the-language-or-collation-on-a-cube"></a><a name="bkmk_cube"></a> 更改多维数据集上的语言或排序规则  
   
 1.  在解决方案资源管理器中，在多维数据集设计器中双击多维数据集将其打开。  
   
@@ -167,7 +162,7 @@ ms.locfileid: "66079382"
   
      在多维数据集中的对象上嵌入替代语言和排序规则属性的唯一方法是通过翻译。 有关详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
   
-##  <a name="bkmk_XMLA"></a>使用 XMLA 更改数据模型中的语言和排序规则  
+##  <a name="change-language-and-collation-within-a-data-model-using-xmla"></a><a name="bkmk_XMLA"></a> 使用 XMLA 更改数据模型中的语言和排序规则  
  创建对象后，继承语言和排序规则设置一次。 对这些属性的后续更改必须手动完成。 快速更改排序规则多个对象的一个方法是在 XMLA 脚本上使用 ALTER 命令。  
   
  默认情况下，排序规则在数据库级别设置一次。 在剩下的对象层次结构中，继承是隐含的。 如果在多维数据集的对象上显式设置 `Collation`（允许在单独的维度属性上进行此操作），该设置将在 XMLA 定义中显示。 否则，仅存在顶级排序规则属性。  
@@ -182,10 +177,10 @@ ms.locfileid: "66079382"
   
 4.  重新处理多维数据集。  
   
-##  <a name="bkmk_enablefast1033"></a>通过 EnableFast1033Locale 提高英语区域设置的性能  
+##  <a name="boost-performance-for-english-locales-through-enablefast1033locale"></a><a name="bkmk_enablefast1033"></a> 通过 EnableFast1033Locale 加快英语区域设置的性能  
  如果使用英语（美国）语言标识符（0x0409 或 1033）作为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的默认语言，则可以通过设置 `EnableFast1033Locale` 配置属性（一个只能用于该语言标识符的高级配置属性）获得更高的性能。 将该属性的值设置为 **true** 可使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用更快的字符串哈希算法和比较算法。 有关设置配置属性的详细信息，请参阅[在 Analysis Services 中配置服务器属性](server-properties/server-properties-in-analysis-services.md)。  
   
-##  <a name="bkmk_gb18030"></a>Analysis Services 中的 GB18030 支持  
+##  <a name="gb18030-support-in-analysis-services"></a><a name="bkmk_gb18030"></a> Analysis Services 中的 GB18030 支持  
  GB18030 是在中华人民共和国用于对中文字符进行编码的一个单独标准。 在 GB18030 中，字符长度可以是 1 个字节、2 个字节或 4 个字节。 在 Analysis Services 中，处理来自外部源的数据时没有数据转换。 数据仅存储为 Unicode。 在查询时，当查询结果中返回文本数据时，通过 Analysis Services 客户端库（具体指 MSOLAP.dll OLE DB 提供程序）根据客户端 OS 设置执行 GB18030 转换。 数据库引擎还支持 GB18030。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="see-also"></a>另请参阅  

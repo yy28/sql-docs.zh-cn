@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070723"
 ---
 # <a name="preview-selected-table-ssas"></a>预览选择的表 (SSAS)
-  
   **“表导入向导”** 的这一页可用于预览所选表中的数据，选择要在数据导入中包括的列，并且筛选所选列中的数据。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
  不是表中的所有行都显示。 但是，在导入过程中，您设置的筛选器将应用于表中的所有数据。  

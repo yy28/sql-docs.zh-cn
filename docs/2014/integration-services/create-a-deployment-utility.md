@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060232"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
@@ -29,7 +29,7 @@ ms.locfileid: "66060232"
   
  下表列出了部署实用工具属性。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |AllowConfigurationChange|一个指定在部署过程中是否可以更新配置的值。|  
 |CreateDeploymentUtility|一个指定在生成项目时是否创建包部署实用工具的值。 此属性必须为 `True` 才能创建部署实用工具。|  
@@ -47,13 +47,13 @@ ms.locfileid: "66060232"
   
 3.  在** \<项目名称> 属性页**"对话框中，单击"**部署实用工具**"。  
   
-4.  若要在部署包时更新包配置，请**** 将 AllowConfigurationChanges `True`设置为。  
+4.  若要在部署包时更新包配置，请**AllowConfigurationChanges**将 AllowConfigurationChanges `True`设置为。  
   
 5.  将 `CreateDeploymentUtility` 设置为 `True`。  
   
 6.  还可以通过修改 `DeploymentOutputPath` 属性来更新部署实用工具的位置。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
 8.  在解决方案资源管理器中，右键单击该项目，再单击****“生成”。  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a754ac9650c94511e8576a8a05e0b81fb38138a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073089"
 ---
 # <a name="restore-options"></a>还原选项
@@ -36,6 +36,6 @@ ms.locfileid: "66073089"
  ["还原数据库" 对话框 &#40;Analysis Services 多维数据&#41;](../restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [备份和还原 Analysis Services 数据库](backup-and-restore-of-analysis-services-databases.md)   
  [&#40;XMLA&#41;Restore 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
- [&#40;XMLA&#41;备份、还原和同步数据库](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [备份、还原和同步数据库 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

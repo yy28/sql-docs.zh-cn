@@ -96,14 +96,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068873"
 ---
 # <a name="olap-properties"></a>OLAP 属性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
  **适用于：** 仅限多维服务器模式  
   
@@ -327,7 +327,7 @@ ms.locfileid: "66068873"
   
      请注意，这些缓存使用的内存被认为是不可收缩的，将在考虑 **TotalMemoryLimit**时包括这些内存。  
   
--   影响服务器上的所有数据库。 **DimensionPropertyCachesize**是服务器范围的属性。 更改此属性会影响当前实例上运行的所有数据库。  
+-   影响服务器上的所有数据库。 **DimensionPropertyCachesize** 是服务器范围内的属性。 更改此属性会影响当前实例上运行的所有数据库。  
   
  用于估计维度缓存要求的方法：  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078094"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>“提升图”选项卡（“挖掘准确性图表”视图）
@@ -39,12 +39,12 @@ ms.locfileid: "66078094"
   
  如果在 **“列映射”** 选项卡中选择了连续的可预测列，则利润图不可用。  
   
- **Copy**  
+ **复制**  
  将图表复制到剪贴板。  
   
 ## <a name="see-also"></a>另请参阅  
  [挖掘准确性图表设计器 &#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [测试和验证任务以及操作方法 &#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [测试和验证 &#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073813"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 脚本 (MDX)
@@ -36,7 +36,7 @@ ms.locfileid: "66073813"
   
  默认 MDX 脚本还包含用来创建命名集、赋值以及计算成员（在多维数据集设计器中创建）的脚本命令：  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]直接将脚本命令添加到默认 MDX 脚本中。  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 直接将脚本命令添加到默认 MDX 脚本中。  
   
 -   对于多维数据集中的每个命名集，默认 MDX 脚本中都有一个对应的 CREATE SET 语句。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66073813"
   
 -   [计算](/sql/mdx/mdx-scripting-calculate)  
   
--   [&](/sql/mdx/mdx-scripting-freeze)  
+-   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
 -   [内](/sql/mdx/mdx-scripting-scope)  
   
@@ -91,6 +91,6 @@ ms.locfileid: "66073813"
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 语言参考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [MDX 脚本编写基础 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 脚本编写基础知识 (Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)  
   
   

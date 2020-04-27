@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069073"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>服务器配置实用工具（Excel 数据挖掘外接程序）
@@ -22,7 +22,7 @@ ms.locfileid: "66069073"
   
 
   
-##  <a name="bkmk_step1"></a>步骤1：连接到 Analysis Services  
+##  <a name="step-1-connect-to-analysis-services"></a><a name="bkmk_step1"></a>步骤1：连接到 Analysis Services  
  选择提供数据挖掘算法并存储您的数据挖掘模型的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器。  
   
  在创建连接以启用数据挖掘时，应选择可使用数据挖掘模型进行试验的服务器。 我们建议您在服务器上创建新数据库并将该数据库专用于数据挖掘，或请求管理员为您准备数据挖掘服务器。 这样您可以构建模型而不会影响其他服务的性能。  
@@ -35,7 +35,7 @@ ms.locfileid: "66069073"
  **身份验证**  
  指定身份验证方法。 Windows 身份验证对于连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是必需的，除非您的管理员配置了通过 HTTPPump 访问服务器。  
   
-##  <a name="bkmk_step2"></a>步骤2：允许临时模型  
+##  <a name="step-2-allow-temporary-models"></a><a name="bkmk_step2"></a>步骤2：允许临时模型  
  在您可以使用外接程序前，必须更改 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器属性以允许创建临时挖掘模型。  
   
  临时挖掘模型也称为 "*会话模型*"。 这是因为只能在当前会话处于打开状态时存储模型。 关闭到服务器的连接后，将结束会话，会话期间所使用的所有模型都会被删除。  
@@ -44,7 +44,7 @@ ms.locfileid: "66069073"
   
  该向导首先检测您指定的服务器上的设置。 如果服务器已经允许临时挖掘模型，则可以单击 "**下一步**" 继续。 该向导还提供有关如何在指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器上启用临时挖掘模型的说明，或如何向 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员发送请求的说明。  
   
-##  <a name="bkmk_step3"></a>步骤3：为外接程序用户创建数据库  
+##  <a name="step-3-create-database-for-add-in-users"></a><a name="bkmk_step3"></a>步骤3：为外接程序用户创建数据库  
  在设置和配置向导的此页上，您可以创建专用于数据挖掘的新数据库，或选择现有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。  
   
 > [!WARNING]  
@@ -66,7 +66,7 @@ ms.locfileid: "66069073"
  **Database**  
  如果您选择了使用现有数据库的选项，必须从列表中选择该数据库名称。  
   
-##  <a name="bkmk_step4"></a>步骤4：向外接程序用户授予适当的权限  
+##  <a name="step-4-give-add-in-users-appropriate-permissions"></a><a name="bkmk_step4"></a>步骤4：向外接程序用户授予适当的权限  
  您必须确保您（和其他任何将使用外接程序的用户）拥有浏览、编辑、处理或创建数据挖掘结构和模型所必需的权限。  
   
  默认情况下，使用外接程序时需要进行集成的 Windows 身份验证。  

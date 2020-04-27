@@ -14,18 +14,18 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061285"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
-“Azure SQL DW 上传任务”**** 使 SSIS 包可将本地数据上传到 Azure SQL 数据仓库 (DW) 中的表。 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。 上传过程遵循有效的 PolyBase 方法。 具体而言，数据首先将上传到 Azure Blob 存储，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户才可使用此任务。
+“Azure SQL DW 上传任务” **** 使 SSIS 包可将本地数据上传到 Azure SQL 数据仓库 (DW) 中的表。 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。 上传过程遵循有效的 PolyBase 方法。 具体而言，数据首先将上传到 Azure Blob 存储，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户才可使用此任务。
 
-若要添加“Azure SQL DW 上传任务”  ，请将其从 SSIS 工具栏拖放到设计器画布中，双击或右键单击它，然后单击“编辑”  ，查看任务编辑器对话框。
+若要添加“Azure SQL DW 上传任务” ****，请将其从 SSIS 工具栏拖放到设计器画布中，双击或右键单击它，然后单击“编辑” **** ，查看任务编辑器对话框。
 
-在“常规”  页上配置以下属性。
+在“常规” **** 页上配置以下属性。
 
 字段|说明
 -----|-----------
@@ -42,12 +42,12 @@ RetainFiles|指定是否保留已上传到 Azure 存储的文件。
 CompressionType|指定将文件上传到 Azure 存储时使用的压缩格式。 本地源不受影响。
 CompressionLevel|指定用于压缩格式的压缩级别。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 连接管理器。
-TableName|指定目标表的名称。 可选择现有的表名称，或通过选择“**新建表...>”\<** 创建一个新表。
+TableName|指定目标表的名称。 选择现有表名，或通过选择** \<"新建表 ..." >** 创建一个新表名。
 TableDistribution|指定新表的分发方法。 已为 **TableName**指定新的表名称时适用。
 HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH**时适用。
 
-根据是上传到新表还是现有表，看到的“映射”**** 页面会有所不同。 如果是前者，请在待创建目标表中配置要映射到的源列及其对应名称。 如果是后者，请配置源和目标列之间的映射关系。
+根据是上传到新表还是现有表，看到的“映射” **** 页面会有所不同。 如果是前者，请在待创建目标表中配置要映射到的源列及其对应名称。 如果是后者，请配置源和目标列之间的映射关系。
 
-在“列”  页上，配置每个源列的数据类型属性。
+在“列” **** 页上，配置每个源列的数据类型属性。
 
-“T-SQL”  页显示用于将数据从 Azure Blob 存储加载到 Azure SQL DW 的 T-SQL。 T-SQL 从其他页面的配置中自动生成，并在任务执行的过程中执行。 若要满足特定需求，可通过单击“编辑”  按钮选择手动编辑已生成的 T-SQL。 之后可单击“重置”  按钮还原为自动生成的 T-SQL。
+“T-SQL” **** 页显示用于将数据从 Azure Blob 存储加载到 Azure SQL DW 的 T-SQL。 T-SQL 从其他页面的配置中自动生成，并在任务执行的过程中执行。 若要满足特定需求，可通过单击“编辑” **** 按钮选择手动编辑已生成的 T-SQL。 之后可单击“重置” **** 按钮还原为自动生成的 T-SQL。

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061055"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>CDC 源编辑器（“连接管理器”页）
@@ -25,7 +25,7 @@ ms.locfileid: "66061055"
  有关 CDC 源的详细信息，请参阅 [CDC Source](data-flow/cdc-source.md)。  
   
 ## <a name="task-list"></a>任务列表  
- **打开 "CDC 源编辑器" 连接管理器页**  
+ **打开“CDC 源编辑器”的“连接管理器”页**  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开具有 CDC 源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
@@ -35,11 +35,10 @@ ms.locfileid: "66061055"
   
 ## <a name="options"></a>选项  
  **ADO.NET 连接管理器**  
- 从列表中选择现有连接管理器，或单击“新建”  创建新的连接。 该连接必须是指向为 CDC 启用的并且所选更改表位于其中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的连接。  
+ 从列表中选择现有连接管理器，或单击“新建”**** 创建新的连接。 该连接必须是指向为 CDC 启用的并且所选更改表位于其中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的连接。  
   
  **新建**  
- 单击 **“新建”** 。 
-  **“配置 ADO.NET 连接管理器编辑器”** 对话框打开，可在其中创建新的连接管理器。  
+ 单击 **“新建”**。 **“配置 ADO.NET 连接管理器编辑器”** 对话框打开，可在其中创建新的连接管理器。  
   
  **CDC 表**  
  选择您要读取并馈送到下游 SSIS 组件以便处理的捕获更改所在的 CDC 源表。  
@@ -47,18 +46,18 @@ ms.locfileid: "66061055"
  **捕获实例**  
  选择或键入具有要读取的 CDC 表的“CDC 捕获实例”的名称。  
   
- 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 读取的实际表是 CDC 表 cdc .**capture-instance>_CT\<** 。  
+ 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 从中读取的实际表是 CDC 表**cdc。\<捕获-实例>_CT**。  
   
  **CDC 处理模式**  
  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
   
 -   **所有**：返回当前 CDC 范围中的更改，但没有 **“更新前”** 值。  
   
--   **全部且具有旧值**：返回当前 CDC 处理范围中的更改，包括旧值（“更新前”  ）。 对于每个更新操作将会有两行，一个针对更新前值，一个针对更新后值。  
+-   **全部且具有旧值**：返回当前 CDC 处理范围中的更改，包括旧值（“更新前”****）。 对于每个更新操作将会有两行，一个针对更新前值，一个针对更新后值。  
   
 -   **净值**：对于当前 CDC 处理范围中修改的每个源行，仅返回一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
   
--   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$**column-name>\<_Changed 的布尔值列（指示当前更改行中已更改的列）\_** 。  
+-   **Net with 更新掩码**：此模式类似于常规的 Net 模式，但它还添加了命名模式为 **__ $\<列\_** 的布尔值列>_Changed，用于指示当前更改行中已更改的列。  
   
 -   **净值且具有合并**：此模式类似于一般的净值模式，但具有合并到单个合并操作中的插入和更新操作 (UPSERT)。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66061055"
  有关详细信息，请参阅 [CDC Source Custom Properties](data-flow/cdc-source-custom-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [CDC 源编辑器（“列”页）](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [CDC 源编辑器 &#40;列 "页&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
  [CDC 源编辑器（“错误输出”页）](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

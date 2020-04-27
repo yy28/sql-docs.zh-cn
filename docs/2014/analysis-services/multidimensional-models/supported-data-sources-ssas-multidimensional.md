@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072859"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>支持的数据源（SSAS 多维）
   本主题介绍可以在多维模型中使用的数据源的类型。  
   
-##  <a name="bkmk_supported_ds"></a>支持的数据源  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>支持的数据源  
  可以从下表的数据源中检索数据。 在您安装 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]时，安装程序不安装对每种数据源列出的访问接口。 某些访问接口可能已随其他应用程序安装在您的计算机上；否则您需要下载并安装这些访问接口。  
   
 > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "66072859"
 |源|版本|文件类型|提供程序<sup>1</sup>|  
 |Access 数据库|Microsoft Access 2007、2010、2013。|.accdb 或 .mdb|Microsoft Jet 4.0 OLE DB 访问接口|  
 |SQL Server 关系数据库<sup>5</sup>|Microsoft SQL Server 2005，2008，2008 R2，2012，2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>，SQL Server 并行数据仓库（PDW） <sup>3</sup>|（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 11.0 Client OLE DB 访问接口<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
-|Oracle 关系数据库|Oracle 9i、10g、11g。|（不适用）|Oracle OLE DB 访问接口<br /><br /> 用于 Oracle 客户端的 .NET Framework 数据访问接口<br /><br /> 用于 SQL Server 的 .NET Framework 数据提供程序<br /><br /> MSDAORA OLE DB 提供程序<sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Oracle 关系数据库|Oracle 9i、10g、11g。|（不适用）|Oracle OLE DB 访问接口<br /><br /> 用于 Oracle 客户端的 .NET Framework 数据访问接口<br /><br /> 用于 SQL Server 的 .NET Framework 数据访问接口<br /><br /> MSDAORA OLE DB 提供程序<sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 关系数据库|Teradata V2R6、V12|（不适用）|TDOLEDB OLE DB 访问接口<br /><br /> Teradata 的 .NET 数据访问接口|  
 |Informix 关系数据库|V11.10|（不适用）|Informix OLE DB 访问接口|  
 |IBM DB2 关系数据库|8.1|（不适用）|DB2OLEDB|  

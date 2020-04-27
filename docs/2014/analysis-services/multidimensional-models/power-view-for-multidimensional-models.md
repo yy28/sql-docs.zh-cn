@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0548709be4a95bf67b295fe90e06843feb7ec48c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073299"
 ---
 # <a name="power-view-for-multidimensional-models"></a>用于多维模型的 Power View
   Microsoft SQL Server 2014 Analysis Services 多维模型通过使用 Microsoft Power View 支持即席数据分析、探索和可视化。  
   
-## <a name="in-this-section"></a>在本节中  
+## <a name="in-this-section"></a>本节内容  
   
 -   [了解多维模型的 Power View](power-view-for-multidimensional-models.md)  
   

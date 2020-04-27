@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060431"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用默认优先约束来连接任务和容器
@@ -32,7 +32,7 @@ ms.locfileid: "66060431"
   
 1.  打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在“工具”  菜单上，单击“选项”  。  
+2.  在“工具” **** 菜单上，单击“选项” ****。  
   
 3.  在 **“选项”** 对话框中，展开 **“商业智能设计器”** ，再展开 **“Integration Services 设计器”**。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66060431"
   
 5.  在下拉列表中，选择“对新形状使用‘失败’约束”或“对新形状使用‘完成’约束”。********  
   
-6.  单击“确定”。   
+6.  单击" **确定**"。  
   
 #### <a name="to-create-a-default-precedence-constraint"></a>创建默认优先约束  
   

@@ -15,17 +15,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062612"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>“算法参数”对话框（“挖掘模型”视图）
   可以使用 **“算法参数”** 对话框调整专用于选定模型的算法参数。 当更改算法参数时，将通常更改挖掘模型的结果。 每个参数对结果的影响方式取决于您使用的算法和数据。 有关详细信息，请参阅 [自定义挖掘模型和结构](data-mining/customize-mining-models-and-structure.md)。  
   
 ## <a name="options"></a>选项  
- **参数**  
+ **Parameters**  
  列出选定挖掘模型可用的参数。  
   
  下表对可用列进行了说明：  

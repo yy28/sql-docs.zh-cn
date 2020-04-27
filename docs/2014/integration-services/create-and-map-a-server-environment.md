@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060151"
 ---
 # <a name="create-and-map-a-server-environment"></a>创建和映射服务器环境
@@ -28,7 +28,7 @@ ms.locfileid: "66060151"
 > [!IMPORTANT]  
 >  对于给定的执行，只能使用单个服务器环境中包含的值来执行包。  
   
- 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅[SSIS 目录](catalog/ssis-catalog.md)中的**服务器环境、服务器变量和服务器环境引用**部分。  
+ 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 [SSIS Catalog](catalog/ssis-catalog.md) 中的“服务器环境、服务器变量和服务器环境引用”**** 一节。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>创建和使用服务器环境  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66060151"
   
 5.  在 **“变量”** 页上，执行以下操作以便添加变量。  
   
-    1.  选择变量的 **“类型”** 。 变量名称**不**需要与映射到该变量的项目参数的名称匹配。  
+    1.  选择变量的 **“类型”** 。 变量的名称 **无需** 匹配您将映射到该变量的项目参数的名称。  
   
     2.  输入变量的可选 **“说明”** 。  
   
     3.  输入环境变量的 **“值”** 。  
   
-         有关环境变量名称的规则的信息，请参阅 **SSIS Catalog** 中的“环境变量”[](catalog/ssis-catalog.md)一节。  
+         有关环境变量名称的规则的信息，请参阅 [SSIS Catalog](catalog/ssis-catalog.md) 中的“环境变量”**** 一节。  
   
     4.  通过选中或取消选中 **“敏感”** 复选框，指示该变量是否包含敏感值。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66060151"
   
 13. 若要将环境变量映射到连接管理器属性，请执行以下操作。 将在 SSIS 服务器上为连接管理器属性自动生成参数。  
   
-    1.  在“参数”页上的“连接管理器”选项卡中，单击“值”字段旁边的浏览按钮************。  
+    1.  在 **“参数”** 页上的 **“连接管理器”** 选项卡中，单击 **“值”** 字段旁边的浏览按钮。  
   
     2.  单击 **“使用环境变量”**，然后选择已创建的环境变量。  
   

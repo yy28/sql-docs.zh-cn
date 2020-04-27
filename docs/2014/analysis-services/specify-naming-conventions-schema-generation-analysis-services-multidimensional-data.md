@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068344"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定命名约定（架构生成向导）（Analysis Services - 多维数据）
@@ -28,10 +28,10 @@ ms.locfileid: "66068344"
   
 |选项|说明|  
 |------------|-----------------|  
-|**机**|指定用于分隔对象名称中的字词的字符。 在 **“值”** 列中，选择 **“下划线”**、 **“空格”** 或 **“无”**。 默认值为 **“下划线”**。|  
+|**Separator**|指定用于分隔对象名称中的字词的字符。 在 **“值”** 列中，选择 **“下划线”**、 **“空格”** 或 **“无”**。 默认值为 **“下划线”**。|  
 |**主键列前缀**|指定每个主键列名称的前缀字符串。 默认值为 **PK**。|  
 |**外键列前缀**|指定每个外键列名称的前缀字符串。 默认值为 **FK**。|  
-|**属性名称后缀**|指定追加到每个属性列名称的字符串。 默认值为**Name**。|  
+|**属性名称后缀**|指定追加到每个属性列名称的字符串。 默认值为 **Name**。|  
 |**自定义汇总后缀**|指定追加到每个汇总列名称的字符串。 默认值为 **CustomRollup**。|  
 |**自定义汇总属性后缀**|指定追加到每个汇总属性列名称的字符串。 默认值为 **CustomRollupProperties**。|  
 |**一元运算符后缀**|指定追加到每个一元运算符列名称的字符串。 默认值为 **UnaryOperator**。|  

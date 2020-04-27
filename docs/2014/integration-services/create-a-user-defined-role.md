@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0277b936ddd4884f8a6b9b47b9184766dac9954b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060239"
 ---
 # <a name="create-a-user-defined-role"></a>创建用户定义的角色
@@ -25,7 +25,7 @@ ms.locfileid: "66060239"
   
 2.  在 **“视图”** 菜单上，单击 **“对象资源管理器”** 。  
   
-3.  在对象资源管理器工具栏上，单击 **“连接”** ，再单击 **“数据库引擎”** 。  
+3.  在对象资源管理器工具栏上，单击 **“连接”**，再单击 **“数据库引擎”**。  
   
 4.  在 **“连接到服务器”** 对话框中，提供服务器名，并选择身份验证模式。 可以使用句点 (.)、(local) 或 `localhost` 来指示本地服务器。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "66060239"
   
 10. 还可以单击 **“扩展属性”** ，配置任何扩展属性。  
   
-11. 单击“确定”。   
+11. 单击" **确定**"。  
   
   

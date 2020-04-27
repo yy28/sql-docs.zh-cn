@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065031"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>使用查询编辑器创建扩展事件会话
@@ -35,7 +35,7 @@ ms.locfileid: "66065031"
   
  有关如何使用新建会话向导创建扩展事件会话的信息，请参阅[使用向导（对象资源管理器）创建扩展事件会话](../ssms/object/object-explorer.md)。 有关如何使用新建会话 UI 创建扩展事件会话的信息，请参阅[使用新建会话创建扩展事件会话](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)。  
   
-##  <a name="BeforeYouBegin"></a> 权限  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> 权限  
  若要创建扩展事件会话，您必须具有 ALTER ANY EVENT SESSION 权限。  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>使用查询编辑器创建扩展事件会话  
@@ -219,7 +219,7 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [&#40;Transact-sql&#41;创建事件会话](/sql/t-sql/statements/create-event-session-transact-sql)   
  [SQL Server 扩展事件目标](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [SQL Server 扩展事件包](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067017"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>从 PowerPivot 导入（SSAS 表格）
@@ -42,12 +42,12 @@ ms.locfileid: "66067017"
   
 2.  在 "**新建项目**" 对话框中的 "**已安装的模板**" 下，单击 "**商业智能**"，然后单击 "**从 PowerPivot 导入**"。  
   
-3.  在  ****“名称”中，键入项目的名称，然后指定位置和解决方案名称，再单击 ****“确定”。  
+3.  在 "**名称**" 中，键入项目的名称，然后指定位置和解决方案名称，然后单击 **"确定"**。  
   
 4.  在 **“打开”** 对话框中，选择包含您要导入的模型元数据和数据的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 文件，然后单击 **“打开”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [工作区数据库 &#40;SSAS 表格&#41;](workspace-database-ssas-tabular.md)   
- [将数据复制并粘贴 &#40;SSAS 表格&#41;](../copy-and-paste-data-ssas-tabular.md)  
+ [复制并粘贴数据（SSAS 表格）](../copy-and-paste-data-ssas-tabular.md)  
   
   

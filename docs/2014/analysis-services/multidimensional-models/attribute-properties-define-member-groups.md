@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2da7f19fa9626792a117ffa0108a28c50f32c5f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077300"
 ---
 # <a name="define-member-groups"></a>定义成员组
@@ -34,6 +34,6 @@ ms.locfileid: "66077300"
   
 2.  在“属性”**** 中，右键单击要对其成员进行分组的属性，再单击“属性”****。  
   
-3.  从 **DiscretizationMethod** 旁边的下拉列表中，选择对成员分组时所用的方法。 有关 **DiscretizationMethod** 设置的详细信息，请参阅[对属性成员分组（离散化）](attribute-properties-group-attribute-members.md)。  
+3.  从 **DiscretizationMethod**旁边的下拉列表中，选择对成员分组时所用的方法。 有关 **DiscretizationMethod** 设置的详细信息，请参阅[对属性成员分组（离散化）](attribute-properties-group-attribute-members.md)。  
   
   

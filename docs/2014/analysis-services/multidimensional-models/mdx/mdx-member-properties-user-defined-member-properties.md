@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074263"
 ---
 # <a name="user-defined-member-properties-mdx"></a>用户定义的成员属性 (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "66074263"
   
 -   若要通过用户界面添加用户定义的成员属性，请使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中的维度设计器。 有关详细信息，请参阅 [定义属性关系](../attribute-relationships-define.md)。  
   
--   若要通过编程方式添加用户定义的成员属性，您的应用程序可以使用 Analysis Manager 对象 (AMO) 或者结合使用 XML for Analysis (XMLA) 和 Analysis Services 脚本语言 (ASSL)。 有关详细信息，请参阅[属性关系](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+-   若要通过编程方式添加用户定义的成员属性，您的应用程序可以使用 Analysis Manager 对象 (AMO) 或者结合使用 XML for Analysis (XMLA) 和 Analysis Services 脚本语言 (ASSL)。 有关详细信息，请参阅 [属性关系](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 ## <a name="retrieving-user-defined-member-properties"></a>检索用户定义的成员属性  
  您可以使用`PROPERTIES`关键字或[properties](/sql/mdx/properties-mdx)函数检索用户定义的成员属性。  
@@ -37,8 +37,7 @@ ms.locfileid: "66074263"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- 
-  `PROPERTIES` 关键字出现在轴规范的集表达式之后。 例如，以下 MDX 查询中的 `PROPERTIES` 关键字将检索用户定义成员属性 `List Price` 和 `Dealer Price`，并显示在标识一月份售出产品的集表达式之后。  
+ `PROPERTIES` 关键字出现在轴规范的集表达式之后。 例如，以下 MDX 查询中的 `PROPERTIES` 关键字将检索用户定义成员属性 `List Price` 和 `Dealer Price`，并显示在标识一月份售出产品的集表达式之后。  
   
 ```  
 SELECT   
@@ -69,6 +68,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;MDX&#41;使用成员属性](mdx-member-properties.md)   
- [MDX&#41;&#40;属性](/sql/mdx/properties-mdx)  
+ [属性 (MDX)](/sql/mdx/properties-mdx)  
   
   

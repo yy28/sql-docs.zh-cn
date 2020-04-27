@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067325"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>删除关系（SSAS 表格）
@@ -53,6 +53,6 @@ ms.locfileid: "66067325"
   
 ## <a name="see-also"></a>另请参阅  
  [SSAS 表格&#41;&#40;关系](relationships-ssas-tabular.md)   
- [在两个表之间创建关系 &#40;SSAS 表格&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [创建两个表之间的关系（SSAS 表格）](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

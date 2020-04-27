@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078783"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 课：修改度量值、属性和层次结构
   在定义初始多维数据集后，即可开始提高多维数据集的有用性和友好性。 您可以通过添加在不同级别支持导航和聚合的层次结构、通过将格式应用于特定的度量值以及通过定义计算和关系，实现上述目的。  
   
 > [!NOTE]  
->  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866)下载本教程中的示例项目。  
+>  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  
   
  本课程包含以下任务：  
   
@@ -42,6 +42,6 @@ ms.locfileid: "66078783"
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
- [&#40;艾德作品的多维建模教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多维建模（Adventure Works 教程）](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

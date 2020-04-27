@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073449"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>父子维度中的一元运算符
@@ -40,7 +40,7 @@ ms.locfileid: "66073449"
   
  空值和在表中没找到的其他值将被视为使用加号 (+) 一元运算符。 因为没有运算符优先级，所以成员在一元运算符列存储的顺序决定了求值的顺序。 若要更改求值的顺序，请创建新的特性，并将其“类型” **** 属性设置为“顺序” ****，然后在其“源列” **** 属性中分配对应于求值顺序的顺序号。 还必须按该属性对属性的成员排序。 有关如何使用商业智能向导对属性成员排序的信息，请参阅 [定义维度的排序](bi-wizard-define-the-ordering-for-a-dimension.md)。  
   
- 可以使用 **UnaryOperatorColumn** 属性指定一个命名计算，以返回一元运算符作为该属性的所有成员的文字字符。 此操作就像在命名计算中键入文字字符（例如， `'*'` ）一样简单。 这会对属性的所有成员用乘法运算符（星号 (*)）来替换默认的运算符（加号 (+)）。 有关详细信息，请参阅[在数据源视图中定义命名计算 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)。  
+ 可以使用 **UnaryOperatorColumn** 属性指定一个命名计算，以返回一元运算符作为该属性的所有成员的文字字符。 此操作就像在命名计算中键入文字字符（例如， `'*'` ）一样简单。 这会对属性的所有成员用乘法运算符（星号 (*)）来替换默认的运算符（加号 (+)）。 有关详细信息，请参阅[在数据源视图中定义命名计算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)。  
   
  在维度设计器的 **“浏览器”** 选项卡中，可以查看层次结构中每个成员旁边的一元运算符。 还可以在处理启用写入的维度时更改一元运算符。 如果维度没有启用写入，则必须使用工具直接修改数据源。  
   

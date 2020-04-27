@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081698"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>维度（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -28,7 +28,7 @@ ms.locfileid: "66081698"
   
  展开一个多维数据集维度，选择 " ** \<编辑维度>** " 以显示维度设计器，然后编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
   
- **属性**  
+ **特性**  
  单击此项可以显示可用的多维数据集维度及其相关联的多维数据集属性。  
   
  展开一个多维数据集维度，选择 " ** \<编辑维度>** " 以显示维度设计器，然后编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "66081698"
  单击此项可以为多维数据集重命名所选的多维数据集维度。  
   
 > [!NOTE]  
->  在“维度”**** 窗格中重命名多维数据集维度，将不会重命名多维数据集维度所基于的数据库维度。  
+>   在 **“维度”** 窗格中重命名多维数据集维度，将不会重命名多维数据集维度所基于的数据库维度。  
   
 > [!NOTE]  
 >  只有选择了维度，才会显示此选项。  
@@ -58,18 +58,18 @@ ms.locfileid: "66081698"
  单击此项可以从多维数据集中删除所选的多维数据集维度。  
   
 > [!NOTE]  
->  从“维度”**** 窗格中删除多维数据集维度，将不会删除多维数据集维度所基于的数据库维度。  
+>   从 **“维度”** 窗格中删除多维数据集维度，将不会删除多维数据集维度所基于的数据库维度。  
   
 > [!NOTE]  
 >  只有选择了维度，才会显示此选项。  
   
- **上移**  
+ **“上移”**  
  单击此项可以将所选的多维数据集数据库上移一个位置。  
   
 > [!NOTE]  
 >  只有选择了维度，才会显示此选项。  
   
- **向下移动**  
+ **“下移”**  
  单击此项可以将所选的多维数据集数据库属性下移一个位置。  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ ms.locfileid: "66081698"
 >  只有选择了维度，才会显示此选项。  
   
  **属性**  
- 单击此项可以为所选的多维数据集维度、多维数据集层次结构或多维数据集属性显示 ** 的“属性”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口。  
+ 单击此项可以为所选的多维数据集维度、多维数据集层次结构或多维数据集属性显示 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“属性”**** 窗口。  
   
 ## <a name="see-also"></a>另请参阅  
  ["多维数据集结构" 选项卡、多维数据集设计器&#41; &#40;的工具栏 &#40;Analysis Services 多维数据&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

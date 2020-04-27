@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3290bc5892280cda5e8042de79ff581b305e8ec3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074039"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>用查询轴和切片器轴限定查询 (MDX)
@@ -35,6 +35,6 @@ ms.locfileid: "66074039"
   
 ## <a name="see-also"></a>另请参阅  
  [使用成员、元组和集 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

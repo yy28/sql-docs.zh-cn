@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076899"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>向维度中添加帐户智能
@@ -40,21 +40,19 @@ ms.locfileid: "66076899"
   
  在第二个 **“定义帐户智能”** 页中，具有两个列：  
   
--   
-  **“源表帐户类型”** 列，列出向导从维度表中获取的帐户类型。  
+-   **“源表帐户类型”** 列，列出向导从维度表中获取的帐户类型。  
   
--   
-  **“服务器帐户类型”** 列，标识由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 识别的对应帐户类型。 下表列出了由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 识别的帐户类型以及每个类型的默认聚合。 如果维度表与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用相同的帐户类型名称，则会自动进行选择。  
+-   **“服务器帐户类型”** 列，标识由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 识别的对应帐户类型。 下表列出了由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 识别的帐户类型以及每个类型的默认聚合。 如果维度表与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用相同的帐户类型名称，则会自动进行选择。  
   
     |服务器帐户类型|聚合|说明|  
     |-------------------------|-----------------|-----------------|  
     |**统计**|`None`|某事物的计算比率，或者未在某段时间内聚合的某事物的计数。 该帐户类型不会使用换算规则在各种货币之间进行换算。|  
     |**负债**|`LastNonEmpty`|在特定时间所拖欠的现金或事物的价值。 该帐户类型不会随时间而积累，因此，不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。 该帐户类型使用“期末”汇率在各种货币之间进行换算。|  
     |**资产**|`LastNonEmpty`|在特定时间所拥有的现金或事物的价值。 该帐户类型随时间而积累，因此，不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。 该帐户类型使用“期末”汇率在各种货币之间进行换算。|  
-    |**Balance**|`LastNonEmpty`|在特定时间某事物的计数。 该帐户类型随时间而积累，但不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。|  
-    |**流**|`Sum`|某事物的增量计数。 该帐户类型随时间而聚合为 `Sum`，但不会使用货币换算规则进行换算。|  
+    |**平衡表**|`LastNonEmpty`|在特定时间某事物的计数。 该帐户类型随时间而积累，但不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。|  
+    |**流向**|`Sum`|某事物的增量计数。 该帐户类型随时间而聚合为 `Sum`，但不会使用货币换算规则进行换算。|  
     |**费用**|`Sum`|所花费的现金或事物的价值。 该帐户类型随时间而聚合为 `Sum`，并可使用平均汇率在各种货币之间进行换算。|  
-    |**帐**|`Sum`|所收到的现金或事物的价值。 该帐户类型随时间而聚合为 `Sum`，并可使用平均汇率在各种货币之间进行换算。|  
+    |**收入**|`Sum`|所收到的现金或事物的价值。 该帐户类型随时间而聚合为 `Sum`，并可使用平均汇率在各种货币之间进行换算。|  
   
     > [!NOTE]  
     >  如果需要，您可以将维度中的多个帐户类型映射到某个特定的服务器帐户类型。  

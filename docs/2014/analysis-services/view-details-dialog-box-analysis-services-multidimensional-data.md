@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065446"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>“查看详细信息”对话框（Analysis Services - 多维数据）
@@ -24,7 +24,7 @@ ms.locfileid: "66065446"
   
 -   双击“处理进度”对话框的“状态树视图”中的某项；或选择“处理进度”对话框的“状态树视图”中的某项，再单击“查看详细信息”********************。  
   
--   在 ** 中双击“部署进度”窗口的“状态树视图”中的某项******[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中双击“部署进度”窗口的“状态树视图”中的某项********。  
   
 ## <a name="options"></a>选项  
  **详细信息**  

@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2dd3659aed11e4e1cee791fcb5e541471320c82a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075902"
 ---
 # <a name="database-storage-location"></a>数据库存储位置
   通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于这些情况， `DbStorageLocation`数据库属性使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 能够指定本地磁盘或网络设备中的数据库位置。  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation 数据库属性  
- 
-  `DbStorageLocation` 数据库属性指定了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建和管理所有数据库数据和元数据文件的文件夹。 除数据库元数据文件之外（它存储在服务器数据文件夹中），所有元数据文件都存储在 `DbStorageLocation` 文件夹中。 在设置 `DbStorageLocation` 数据库属性的值时，需考虑两个重要的注意事项：  
+ `DbStorageLocation` 数据库属性指定了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建和管理所有数据库数据和元数据文件的文件夹。 除数据库元数据文件之外（它存储在服务器数据文件夹中），所有元数据文件都存储在 `DbStorageLocation` 文件夹中。 在设置 `DbStorageLocation` 数据库属性的值时，需考虑两个重要的注意事项：  
   
 -   必须将 `DbStorageLocation` 数据库属性设置为现有 UNC 文件夹路径或空字符串。 空字符串是服务器数据文件夹的默认值。 如果该文件夹不存在，则在执行 `Create`、`Attach`、或 `Alter` 命令时会产生错误。  
   
@@ -34,9 +33,7 @@ ms.locfileid: "66075902"
 >  建议您设置 UNC 路径以使用存储区域网络 (SAN)、基于 iSCSI 的网络或本地附加的磁盘。 网络共享的任何 UNC 路径或任何长滞后时间远程存储解决方案导致不支持的安装.  
   
 ### <a name="dbstoragelocation-compared-to-storagelocation"></a>相对于 StorageLocation 的 DbStorageLocation  
- 
-  `DbStorageLocation` 指定了所有数据库数据和元数据文件所在的文件夹，而 `StorageLocation` 指定了多维数据集的一个或多个分区所在的文件夹。 
-  `StorageLocation` 可以独立于 `DbStorageLocation` 进行设置。 这是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 根据预期的结果做出的决定，很多时候一个属性或另一个属性的使用会重叠。  
+ `DbStorageLocation` 指定了所有数据库数据和元数据文件所在的文件夹，而 `StorageLocation` 指定了多维数据集的一个或多个分区所在的文件夹。 `StorageLocation` 可以独立于 `DbStorageLocation` 进行设置。 这是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 根据预期的结果做出的决定，很多时候一个属性或另一个属性的使用会重叠。  
   
 ## <a name="dbstoragelocation-usage"></a>DbStorageLocation 用法  
  在`DbStorageLocation`数据库命令序列、 `Create` `Detach` / `Attach` `Backup` /数据库命令序列或`Synchronize`数据库命令中，将数据库属性用作数据库命令的`Restore`一部分。 更改 `DbStorageLocation` 数据库属性被认为是数据库对象的结构更改。 这意味着必须重新创建所有元数据并且重新处理数据。  
@@ -51,6 +48,6 @@ ms.locfileid: "66075902"
  [DbStorageLocation 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
  [&#40;XMLA&#41;创建元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
  [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
- [&#40;XMLA&#41;同步元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
+ [Synchronize 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

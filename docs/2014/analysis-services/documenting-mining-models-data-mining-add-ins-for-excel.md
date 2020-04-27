@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081591"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>记录挖掘模型（Excel 数据挖掘外接程序）
@@ -57,12 +57,12 @@ ms.locfileid: "66081591"
 |-|-|-|  
 |**元数据**|模型名称<br /><br /> 模型说明<br /><br /> 算法名称<br /><br /> 上次处理日期||  
 |**模型结果**|关联|项集计数<br /><br /> 规则计数|  
-||群集功能|分类计数<br /><br /> 对每个分类的支持|  
+||聚类分析|分类计数<br /><br /> 对每个分类的支持|  
 ||决策树|树数<br /><br /> 每个树中的节点数|  
 ||线性回归|树数（始终为 1）<br /><br /> 节点数（始终为 1）|  
 ||Naïve Bayes|重要属性|  
 ||神经网络|输入节点数<br /><br /> 输出节点数<br /><br /> 隐藏节点数|  
-||顺序分析和聚类分析|群集数|  
+||顺序分析和聚类分析|分类数|  
   
 ### <a name="complete-report"></a>完整报表  
  完整报表包含摘要报表中的所有内容，此外还有模型中使用的数据列的详细信息以及分析的结果：  
@@ -71,7 +71,7 @@ ms.locfileid: "66081591"
 |-|-|-|  
 |**元数据**|模型元数据|算法参数和值|  
 ||列元数据|列名称<br /><br /> 使用情况<br /><br /> 数据类型<br /><br /> 内容类型<br /><br /> 值（离散值的列表或值的范围）|  
-|**模型统计信息**|连续列|均值值<br /><br /> 最小值<br /><br /> 最大值<br /><br /> 均方根误差<br /><br /> 平均绝对误差<br /><br /> 对数评分<br /><br /> 回归公式（仅用于线性回归模型）|  
+|**模型统计信息**|连续列|平均值<br /><br /> 最小值<br /><br /> 最大值<br /><br /> 均方根误差<br /><br /> 平均绝对误差<br /><br /> 对数评分<br /><br /> 回归公式（仅用于线性回归模型）|  
 ||离散列|传递计数<br /><br /> 失败计数<br /><br /> 对数评分<br /><br /> 提升|  
   
 > [!NOTE]  

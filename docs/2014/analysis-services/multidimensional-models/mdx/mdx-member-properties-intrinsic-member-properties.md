@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074207"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>内部成员属性 (MDX)
-  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 公开您可以包含在查询中的维度成员的内部属性，以返回要在自定义应用程序中使用的额外数据或元数据，或帮助进行模型调查或构建。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
   
  内部属性包括 `ID`、`KEY`、`KEYx` 和 `NAME`，这些是每个成员在任意级别公开的属性。 您还可以返回位置信息，如 `LEVEL_NUMBER` 或 `PARENT_UNIQUE_NAME` 等等。  
@@ -32,9 +31,7 @@ ms.locfileid: "66074207"
 > [!NOTE]  
 >  如果提供程序符合 2.6 1999 年3月 OLE DB 规范的 OLAP 部分， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]则支持本主题中列出的内部成员属性。  
 >   
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供程序可能支持其他内部成员属性。 有关其他访问接口支持的内部成员属性的详细信息，请参阅这些访问接口附带的文档。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供程序可能支持其他内部成员属性。 有关其他访问接口支持的内部成员属性的详细信息，请参阅这些访问接口附带的文档。  
   
 ## <a name="types-of-member-properties"></a>成员属性的类型  
  支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的内部成员属性有两种类型：  
@@ -62,7 +59,7 @@ ms.locfileid: "66074207"
 ## <a name="context-sensitive-member-properties"></a>上下文相关的成员属性  
  所有维度成员和级别成员都支持一列上下文相关的内部成员属性。 下表列出了这些上下文相关的属性。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |`ID`|在内部维护的成员 ID。|  
 |`Key`|以原始数据类型表示的成员键的值。 MEMBER_KEY 用于向后兼容。  对于非组合键，MEMBER_KEY 具有与 KEY0 相同的值；对于组合键，MEMBER_KEY 属性为 null。|  
@@ -92,7 +89,7 @@ ms.locfileid: "66074207"
 > [!NOTE]  
 >  MEMBERS 架构行集中的列支持下表中列出的内部成员属性。 有关`MEMBERS`架构行集的详细信息，请参阅[MDSCHEMA_MEMBERS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |`CATALOG_NAME`|此成员所属的多维数据集的名称。|  
 |`CHILDREN_CARDINALITY`|成员具有的子级的个数。 它可以是一个估计值，所以不应依赖它进行确切计数。 访问接口应尽可能返回最精确的估计值。|  
@@ -104,7 +101,7 @@ ms.locfileid: "66074207"
 |`IS_DATAMEMBER`|一个指示成员是否为数据成员的布尔值。|  
 |`IS_PLACEHOLDERMEMBER`|用来指明成员是否为占位符的布尔值。|  
 |`KEYx`|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 可用于组合键和非组合键。<br /><br /> 如果键不是组合键，则 KEY0 与 `Key` 等效。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立引用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 请注意，`KEYx` 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅 [简单的 MDX 小组件：Key0、Key1、Key2](https://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|`LCID`*x*|区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
+|`LCID` x |区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
 |`LEVEL_NUMBER`|成员距层次结构的根的距离。 根级别为零。|  
 |`LEVEL_UNIQUE_NAME`|成员所属的级别的唯一名称。 对于通过限定生成唯一名称的访问接口，此名称的各组成部分之间用分隔符分隔。|  
 |`MEMBER_CAPTION`|与成员相关的标签或标题。 标题主要用于显示目的。 如果不存在标题，查询将返回 `MEMBER_NAME`。|  
@@ -136,7 +133,7 @@ ms.locfileid: "66074207"
 ### <a name="example"></a>示例  
  以下示例显示返回内部属性的 MDX 查询。  
   
- **示例1：在查询中使用上下文相关的内部属性**  
+ **示例 1：在查询中使用上下文相关的内部属性**  
   
  以下示例返回每个产品类别的父 ID、键和名称。 请注意属性如何公开为度量值。 这允许您在运行查询时在单元集中查看属性，而非在 SSMS 的“成员属性”对话框中查看。 您可能运行类似的查询以从部署的多维数据集检索成员元数据。  
   
@@ -154,7 +151,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **示例2：非上下文相关的内部属性**  
+ **示例 2：非上下文相关的内部属性**  
   
  以下示例是非上下文相关的内部属性的完整列表。 在 SSMS 中运行查询后，单击各个成员可以在“成员属性”对话框中查看属性。  
   
@@ -192,7 +189,7 @@ FROM [Adventure Works]
 WHERE [Employee].[Employee Department].[Department].&[Sales]  
 ```  
   
- **示例3：将成员属性作为结果集中的数据返回**  
+ **示例 3：将成员属性作为结果集中的数据返回**  
   
  下面的示例为指定区域设置的 Adventure Works 多维数据集中 Product 维度的产品类别成员返回翻译后的标题。  
   
@@ -219,6 +216,6 @@ FROM [Adventure Works]
  [MDX&#41;&#40;属性](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
  [&#40;MDX&#41;使用成员属性](mdx-member-properties.md)   
- [Mdx 函数引用 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX 函数引用 (MDX)](/sql/mdx/mdx-function-reference-mdx)  
   
   

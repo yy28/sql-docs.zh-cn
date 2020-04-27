@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062262"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>分析关键影响因素（Excel 表分析工具）
@@ -40,7 +40,7 @@ ms.locfileid: "66062262"
   
 4.  （可选）单击 "**选择要用于分析的列**"。 在 "**高级列选择**" 对话框中，选择最有可能包含相关数据的列。 若要改进性能和精确性，请取消选择诸如 ID 或名称等对模式分析不重要的列。 单击 **"确定"** 关闭 "**高级列选择**" 对话框。  
   
-5.  单击 **“运行”** 。  
+5.  单击“运行”****。  
   
      "**分析关键影响因素**" 工具可对数据进行分析，以确定最佳设置，并自动设置所有参数。  
   

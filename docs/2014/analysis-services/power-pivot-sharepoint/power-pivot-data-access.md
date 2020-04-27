@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071245"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot 数据访问
@@ -28,7 +28,7 @@ ms.locfileid: "66071245"
   
  在 SharePoint 场上，Excel Services 使用本地 MSOLAP OLE DB 访问接口来连接到 PowerPivot 数据。 该访问接口向场中的 PowerPivot for SharePoint 服务器发出连接请求。 该服务器将加载数据，运行查询，并且返回结果集。  
   
-##  <a name="queryproc"></a>查询 SharePoint 中的 PowerPivot 数据  
+##  <a name="querying-powerpivot-data-in-sharepoint"></a><a name="queryproc"></a>查询 SharePoint 中的 PowerPivot 数据  
  在查看 SharePoint 库中的 PowerPivot 工作簿时，分别由场内的 Analysis Services 服务器实例来检测、提取和处理该工作簿内的 PowerPivot 数据，同时由 Excel Services 来呈现表示层。 在带有 PowerPivot 外接程序的浏览器窗口或 Excel 2010 桌面应用程序中，您可以查看经过完全处理的工作簿。  
   
  下图说明了场对查询处理请求的处理流程。 由于 PowerPivot 数据是 Excel 2010 工作簿的一部分，因此当用户打开 SharePoint 库中的一个 Excel 工作簿并与包含 PowerPivot 数据的数据透视表或数据透视图进行交互时，就会产生查询处理请求。  

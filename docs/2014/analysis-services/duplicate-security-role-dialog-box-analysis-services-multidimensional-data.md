@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081501"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>“Analysis Services 重复的安全角色”对话框（Analysis Services - 多维数据）
@@ -30,6 +30,6 @@ ms.locfileid: "66081501"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Analysis Services 多维数据 &#40;安全角色&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [安全角色（Analysis Services - 多维数据）](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

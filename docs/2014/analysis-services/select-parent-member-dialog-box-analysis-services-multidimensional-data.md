@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d8407f04061075bb19aa0207595dc1fffab92c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069307"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>“选择父成员”对话框（Analysis Services - 多维数据）
@@ -28,7 +28,7 @@ ms.locfileid: "66069307"
 >  在某些情况下（例如，在“树”**** 中选择的层次结构是为没有指定任何（全部）级别的属性定义的），则可能没有可选择的父成员。  
   
 ## <a name="options"></a>选项  
- **树**  
+ **视图**  
  选择要为计算成员使用的父成员。  
   
 ## <a name="see-also"></a>另请参阅  

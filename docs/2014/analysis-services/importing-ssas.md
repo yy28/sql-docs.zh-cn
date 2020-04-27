@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 411901f318d08109d6f7c7ce724d76e1039dfa7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080513"
 ---
 # <a name="importing-ssas"></a>导入 (SSAS)
-  
   **“表导入向导”** 的这一页可用于查看导入操作的进度。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -30,7 +29,7 @@ ms.locfileid: "66080513"
 |列|说明|  
 |------------|-----------------|  
 |**工作项**|显示要导入的表或视图的名称。|  
-|**Status**|指示表或视图是否已成功导入以及已导入的行数。|  
+|**状态**|指示表或视图是否已成功导入以及已导入的行数。|  
 |**消息**|如果表或视图的导入失败，则显示指向详细信息的链接。 在“详细信息”窗口中显示此信息。<br /><br /> 若要再次尝试导入表或视图，请退出该向导，然后再次运行它。|  
   
  **停止导入**  

@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59a6bb7d661e7761e2c28259bf8d95ae05545fa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072078"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>分区（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器的 **“分区”** 选项卡，为多维数据集中的每个度量值组创建和修改分区，包括存储、主动缓存和写回设置。  
   
- 
-  **“分区”** 选项卡包含以下窗格：  
+ **“分区”** 选项卡包含以下窗格：  
   
 ## <a name="panes"></a>窗格  
- **工具栏**  
+ **Toolbar**  
  使用工具栏可以执行该选项卡上的常见操作。  
   
  **度量值组**  

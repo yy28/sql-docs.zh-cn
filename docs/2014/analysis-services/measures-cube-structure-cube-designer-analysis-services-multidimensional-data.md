@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077915"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>度量值（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -62,8 +62,8 @@ ms.locfileid: "66077915"
   
 |选项|定义|  
 |------------|----------------|  
-|**树**|在树视图中显示度量值组和度量值。|  
-|**格**|在网格中显示度量值组和度量值。|  
+|**视图**|在树视图中显示度量值组和度量值。|  
+|**Grid**|在网格中显示度量值组和度量值。|  
   
  **重命名**  
  选择此选项可重命名所选度量值组或度量值。  
@@ -71,13 +71,13 @@ ms.locfileid: "66077915"
  **删除**  
  选择此选项可显示“删除对象”对话框，以便删除“度量值”窗格中的所选对象********。  
   
- **上移**  
+ **“上移”**  
  选择此选项可将所选度量值组或度量值上移一个位置。  
   
 > [!NOTE]  
 >  如果无法向上移动所选项，将禁用此选项。  
   
- **向下移动**  
+ **“下移”**  
  选择此选项可将所选度量值组或度量值下移一个位置。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "66077915"
  单击此项可显示 **链接对象向导** ，链接来自其他多维数据集的度量值组和维度，并向所选多维数据集导入操作、KPI 和计算。  
   
  **属性**  
- 选择此选项可以为所选度量值组或度量值显示 **“属性”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口。  
+ 选择此选项可以为所选度量值组或度量值显示 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]“属性”**** 窗口。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置度量值属性](multidimensional-models/configure-measure-properties.md)   

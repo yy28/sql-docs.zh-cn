@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071633"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>无法加载文件或程序集 &#39;3.5.0.0，Version =，Culture = 中立，PublicKeyToken = b77a5c561934e089&#39; 或其依赖项之一。 系统找不到指定的文件。
@@ -38,7 +38,7 @@ ms.locfileid: "66071633"
   
 1.  请参阅 SharePoint 2010 的硬件和软件要求文档，[确定硬件和软件要求（sharepoint 2010）](https://go.microsoft.com/fwlink/?LinkId=169734) （https://go.microsoft.com/fwlink/?LinkId=169734)。  
   
-2.  在 **“安装必备软件”** 中，找到用于与您正在使用的操作系统相对应的 ADO.NET Data Services 3.5 的链接。  
+2.  在 "**安装必备软件**" 中，找到与所使用的操作系统相对应的 ADO.NET Data Services 3.5 的链接。  
   
 3.  单击该链接并且运行安装该服务的安装程序。  
   

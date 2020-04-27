@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070593"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>利润图（SQL Server 数据挖掘外接程序）
@@ -30,7 +30,7 @@ ms.locfileid: "66070593"
 ## <a name="configuring-the-profit-chart"></a>配置利润图  
  准确性图表仅对预测正确与否的概率进行评估，但利润图则同时包含有关根据预测采取措施的结果的现实认知。 为此，运行向导时您要考虑指定下列因素：  
   
--   **人口数**  
+-   **总数**  
   
      数据集中用于创建提升图的事例数。 例如，潜在客户数。  
   

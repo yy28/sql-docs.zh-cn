@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067083"
 ---
 # <a name="hierarchies-ssas-tabular"></a>层次结构（SSAS 表格）
@@ -22,13 +22,13 @@ ms.locfileid: "66067083"
   
  本主题的内容：  
   
--   [便利](#bkmk_benefits)  
+-   [优点](#bkmk_benefits)  
   
 -   [定义层次结构](#bkmk_define)  
   
 -   [相关任务](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> 优势  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>便利  
  表可以包括几十甚至数百个其名称不寻常并且没有明显顺序的列。 这可能导致报表客户端字段列表显得未排序，从而使用户很难找到报表中的数据和在报表中包含数据。 层次结构可以提供复杂数据结构的简单、直观的视图。  
   
  例如，在日期表中，您可以创建日历层次结构。 日历年用作最顶层的父级，月、周和日作为子级包括（日历年->月->周->日）。 此层次结构显示了从日历年到日的逻辑关系。 然后，客户端用户可以从字段列表中选择“日历年”，以便包含某一数据透视表中的所有级别；或者展开层次结构，并且仅选择要在该数据透视表中包含的特定级别。  
@@ -37,9 +37,9 @@ ms.locfileid: "66067083"
   
  层次结构可包括在透视中。 透视定义某一模型的可查看子集，借此您可以将注意力集中在该模型中的特定业务或特定应用上。 例如，透视可以向用户提供仅由满足其特定报表要求所需的数据项构成的可查看列表（层次结构）。 有关详细信息，请参阅 [透视表（SSAS 表格）](perspectives-ssas-tabular.md)。  
   
- 层次结构的用途不是为了作为一种安全机制，而是作为一个可为用户提供更好体验的工具。 特定层次结构的所有安全性都从基础模型继承。 层次结构无法让用户访问该用户尚未拥有访问权的模型对象。 必须先解决模型数据库的安全性，然后才能通过层次结构访问模型中的对象。 安全角色可用于保护模型元数据和数据。 有关详细信息，请参阅[角色（SSAS 表格）](roles-ssas-tabular.md)。  
+ 层次结构的用途不是为了作为一种安全机制，而是作为一个可为用户提供更好体验的工具。 特定层次结构的所有安全性都从基础模型继承。 层次结构无法让用户访问该用户尚未拥有访问权的模型对象。 必须先解决模型数据库的安全性，然后才能通过层次结构访问模型中的对象。 安全角色可用于保护模型元数据和数据。 有关详细信息，请参阅 [角色（SSAS 表格）](roles-ssas-tabular.md)中创建的表格模型项目。  
   
-##  <a name="bkmk_define"></a>定义层次结构  
+##  <a name="defining-hierarchies"></a><a name="bkmk_define"></a>定义层次结构  
  可以通过在关系图视图中使用模型设计器来创建和管理层次结构。 在数据视图的模型设计器中不支持创建和管理层次结构。 若要在“关系图视图”中查看模型设计器，请单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
   
  若要创建某一层次结构，请在要指定为父级别的列上右键单击，然后单击“创建层次结构”****。 您可以多选要包含的任何数目的列（在单个表内），或者可在以后通过单击列并将列拖到父级别，将列作为子级别添加。 当选择多个列时，列会基于基数自动按某一顺序放置。 您可以通过单击并将某一列（级别）拖动到其他顺序，或者通过使用上下文菜单中的向上和向下导航控件，更改该顺序。 在将列作为子级别添加时，您可以通过将该列拖放到父级别，使用自动检测。  
@@ -48,17 +48,17 @@ ms.locfileid: "66067083"
   
  默认情况下，新的层次结构将命名为 hierarchy1、hierarchy2，依此类推。您应更改层次结构名称以便反映父子关系的特性，使其更易于为用户识别。  
   
- 创建层次结构后，可以使用“在 Excel 中分析”功能来测试其效能。 有关详细信息，请参阅[在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)。  
+ 创建层次结构后，可以使用“在 Excel 中分析”功能来测试其效能。 有关详细信息，请参阅本主题后面的 [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)中的“角色管理器”对话框定义角色的表格模型作者。  
   
-##  <a name="bkmk_related_tasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 相关任务  
   
 |任务|说明|  
 |----------|-----------------|  
-|[&#40;SSAS 表格&#41;创建和管理层次结构](hierarchies-ssas-tabular.md)|介绍如何通过在关系图视图中使用模型设计器来创建和管理层次结构。|  
+|[创建和管理层次结构（SSAS 表格）](hierarchies-ssas-tabular.md)|介绍如何通过在关系图视图中使用模型设计器来创建和管理层次结构。|  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的表格模型设计器](../tabular-model-designer-ssas-tabular.md)   
  [SSAS 表格&#41;&#40;透视](perspectives-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;的角色](roles-ssas-tabular.md)  
+ [角色（SSAS 表格）](roles-ssas-tabular.md)  
   
   

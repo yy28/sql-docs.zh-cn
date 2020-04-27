@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061076"
 ---
 # <a name="cache-connection-manager-editor"></a>缓存连接管理器编辑器
@@ -29,13 +29,13 @@ ms.locfileid: "66061076"
   
  “缓存连接管理器编辑器”**** 对话框包含以下选项卡：  
   
--   [“常规”选项卡](#generaltab)  
+-   [常规选项卡](#generaltab)  
   
--   [“列”选项卡](#columnstab)  
+-   [列选项卡](#columnstab)  
   
  若要了解有关缓存连接管理器的详细信息，请参阅[缓存连接管理器](connection-manager/cache-connection-manager.md)。  
   
-##  <a name="generaltab"></a>常规选项卡  
+##  <a name="general-tab"></a><a name="generaltab"></a>常规选项卡  
  “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件********。  
   
 ### <a name="options"></a>选项  
@@ -57,18 +57,17 @@ ms.locfileid: "66061076"
   
 -   从缓存文件读取数据。  
   
- **文件名**  
+ **文件名称**  
  键入缓存文件的路径和文件名。  
   
- **“浏览”**  
+ **浏览**  
  定位缓存文件。  
   
  **刷新元数据**  
  删除缓存连接管理器中的列元数据，然后用所选缓存文件中的列元数据重新填充缓存连接管理器。  
   
-##  <a name="columnstab"></a>列选项卡  
- 
-  **“缓存连接管理器编辑器”** 对话框的 **“列”** 选项卡用于配置缓存中各列的属性。  
+##  <a name="columns-tab"></a><a name="columnstab"></a>列选项卡  
+ **“缓存连接管理器编辑器”** 对话框的 **“列”** 选项卡用于配置缓存中各列的属性。  
   
 ### <a name="options"></a>选项  
  **列**  
@@ -84,7 +83,7 @@ ms.locfileid: "66061076"
 > [!NOTE]  
 >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。  
   
- 类型   
+ **类型**  
  指定列的数据类型。  
   
  `Length`  

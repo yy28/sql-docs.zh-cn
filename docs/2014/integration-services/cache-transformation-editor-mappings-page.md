@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061179"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>缓存转换编辑器（“映射”页）
@@ -47,6 +47,6 @@ ms.locfileid: "66061179"
  查看每个可用的目标列。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;连接管理器页的缓存转换编辑器&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [缓存转换编辑器（“连接管理器”页）](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

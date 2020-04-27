@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072382"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>使用数据源视图设计器中的关系图 (Analysis Services)
@@ -37,11 +37,11 @@ ms.locfileid: "66072382"
   
  [在关系图中查找表](#bkmk_findtables)  
   
- [在关系图中排列对象](#bkmk_arrangeobjects)  
+ [排列关系图中的对象](#bkmk_arrangeobjects)  
   
- [保留对象排列方式](#bkmk_preserve)  
+ [保留对象排列](#bkmk_preserve)  
   
-##  <a name="bkmk_add"></a>添加关系图  
+##  <a name="add-a-diagram"></a><a name="bkmk_add"></a> 添加关系图  
  创建 DSV 时自动创建 DSV 关系图。 在 DSV 存在后，您可以创建其他关系图、删除它们或隐藏特定对象以创建更便于管理的 DSV 表示形式。  
   
  若要创建新关系图，请右键单击“关系图组织程序”**** 窗格中的任意地方，再单击“新建关系图”****。  
@@ -52,14 +52,14 @@ ms.locfileid: "66072382"
   
  您可以将相关表和命名查询分组到单独的关系图中以便用于业务，这样可以使包含许多表、视图和命名查询的数据源视图更易于理解。 同一个表或命名查询可以包含在多个关系图中， \<"所有表"> 关系图中除外。 在 " \<所有表"> 关系图中，数据源视图中包含的所有对象都只显示一次。  
   
-##  <a name="bkmk_edit"></a>编辑或删除关系图  
+##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>编辑或删除关系图  
  使用关系图时，要特别注意用于添加和删除对象的命令。 例如，从关系图中删除对象时会将它从 DSV 中删除。 如果您只想将其从关系图中删除，请改用 **“隐藏表”** 。  
   
  ![“关系图”工作区的右键单击菜单的屏幕快照](../media/ssas-olapdsv-diagram.gif "“关系图”工作区的右键单击菜单的屏幕快照")  
   
  尽管您可以逐个隐藏对象，但是使用“显示相关表”命令可将所有相关对象重新显示在关系图中。 若要控制将哪些对象返回到工作区，请从“表”窗格中拖动它们。  
   
-##  <a name="bkmk_findtables"></a>在关系图中查找表  
+##  <a name="find-tables-in-a-diagram"></a><a name="bkmk_findtables"></a>在关系图中查找表  
  如果架构很大，则在 **“关系图”** 窗格中滚动到特定表可能很困难。 但是，下列工具将使在关系图中查找表变得容易。  
   
 -   在 **“表”** 窗格中滚动表列表。  
@@ -74,14 +74,14 @@ ms.locfileid: "66072382"
   
      您可以在“筛选器”框中键入字符串和通配符以查看关系图中的表的子集。  
   
-##  <a name="bkmk_arrangeobjects"></a>排列关系图中的对象  
+##  <a name="arrange-objects-in-a-diagram"></a><a name="bkmk_arrangeobjects"></a> 在关系图中排列对象  
  虽然数据源视图设计器可以定义多个关系图，从而使得 DSV 更易于理解，但是，包含大量表的关系图可能难以读取，并且手动重新排列表的布局也是一个乏味的过程。 根据当前关系图中表与表之间的关系，数据源视图设计器可以使用矩形布局或对角线布局，自动重新排列当前关系图中的表。  
   
 -   在矩形布局中，将在表与表之间（而不是列与列之间）绘制关系线。 表与表之间绘制有水平和垂直的关系线。  
   
 -   在对角线布局中，将在表中相关列之间尽可能直接地绘制关系线。 多列之间的关系将附加到表中的第一个相关列。 如果表中的列不可见，则会在表的顶部绘制关系线。  
   
-##  <a name="bkmk_preserve"></a>保留对象排列  
+##  <a name="preserve-object-arrangement"></a><a name="bkmk_preserve"></a>保留对象排列  
  在按所需方式手动排列表后，在关系图中添加更多表可能导致关系图刷新，从而删除最近对对象布局所做的所有修改。  
   
  在添加表（此操作会使关系图组织程序移动其他表以便容纳新表）时，更有可能出现此行为。 它随后重新绘制关系图以确保正确表示所有表和连接线。 此时，对特定对象的位置进行的所有手动调整都可能丢失。  
@@ -90,6 +90,6 @@ ms.locfileid: "66072382"
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
- [数据源视图设计器 &#40;Analysis Services 多维数据&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [数据源视图设计器（Analysis Services - 多维数据）](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

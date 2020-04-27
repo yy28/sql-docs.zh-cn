@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069105"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类关系图”选项卡（挖掘模型查看器）
-  
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类关系图”** 选项卡提供顺序分析和聚类分析模型包含的所有分类的图形化视图。  
   
  可以使用此顺序分析和聚类分析模型视图，从每个分类深入到支持事例（如果已启用钻取）。 还可以为分类指定说明性名称并更改明暗度变量，以直观的形式评估值分布。  
   
- **有关详细信息：** [microsoft 顺序分析和聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)、[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **有关详细信息，请参阅 ** [Microsoft 顺序分析和聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)和[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -60,7 +59,7 @@ ms.locfileid: "66069105"
  **改善布局**  
  对关系图中的分类进行重新排序以改善布局。  
   
- **密度**  
+ **Density**  
  密度栏图形的外观及其包含的值依赖于你在“明暗度变量”**** 中选择的属性。  
   
 -   如果未将任何属性状态选定为明暗度变量，则默认情况下应用于每个分类的密度明暗度表示对相应分类的支持（与事例总体相比）。  

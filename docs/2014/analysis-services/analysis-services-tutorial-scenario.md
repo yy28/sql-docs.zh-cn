@@ -11,15 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062443"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教程方案
-  本教程基于 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，这是一家虚构的公司。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]是一家大型跨国制造公司，为北美、欧洲和亚洲的商业市场生成并分发金属和组合自行车。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 公司总部设在华盛顿州的伯瑟尔市，雇佣了 500 名工人。 此外，在 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场中还活跃着一些地区销售团队。  
+  本教程基于 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，这是一家虚构的公司。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨国制造公司，生产金属复合材料的自行车，产品远销北美、欧洲和亚洲市场。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 公司总部设在华盛顿州的伯瑟尔市，雇佣了 500 名工人。 此外，在 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场中还活跃着一些地区销售团队。  
   
  在最近几年中， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 购买了位于墨西哥的小型生产厂 Importadores Neptuno。 Importadores Neptuno 为 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 产品系列生产多种关键子组件。 这些子组件将被运送到伯瑟尔市进行最后的产品装配。 在 2005 年，Importadores Neptuno 转型成为专注于旅游登山车系列产品的独立制造商和销售商。  
   
@@ -64,6 +63,6 @@ ms.locfileid: "66062443"
  Analysis Services 教程中的课程提供生成满足上述所有目标的多维数据集数据库的指南。 若要开始，请继续第一课： [第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;艾德作品的多维建模教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多维建模（Adventure Works 教程）](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

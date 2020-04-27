@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078193"
 ---
 # <a name="lesson-10-create-hierarchies"></a>第 10 课：创建层次结构
-  在本课中，您将创建层次结构。 层次结构是按级别排列的列组；例如，“地理区域”层次结构可以包含“国家/地区”、“省/市/自治区”、“县”和“城市”的子级别。 层次结构在报告客户端应用程序字段列表中可以与其他列分开显示，这使得客户端用户更容易在其中导航以及将其包括在报表中。 若要了解详细信息，请参阅[层次结构（SSAS 表格）](tabular-models/hierarchies-ssas-tabular.md)。  
+  在本课中，您将创建层次结构。 层次结构是按级别排列的列的分组；例如，地理层次结构可能具有针对国家/地区、省/市/自治区、县和市的子级别。 层次结构在报告客户端应用程序字段列表中可以与其他列分开显示，这使得客户端用户更容易在其中导航以及将其包括在报表中。 若要了解详细信息，请参阅[层次结构（SSAS 表格）](tabular-models/hierarchies-ssas-tabular.md)。  
   
  若要创建层次结构，可使用“关系图视图”** 中的模型设计器。 在数据视图的模型设计器中不支持创建和管理层次结构。  
   
  本课预计完成时间：**20 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
- 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，应该已完成上一课：[第 9 课：创建透视](lesson-8-create-perspectives.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，应该已完成上一课： [第 9 课：创建透视](lesson-8-create-perspectives.md)。  
   
 ## <a name="create-hierarchies"></a>创建层次结构  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66078193"
 5.  在`Category`层次结构中，右键单击 "**产品类别名称**" 列，然后单击 "**重命名**" `Category`，然后键入。  
   
     > [!NOTE]  
-    >  重命名层次结构中的某个列不会重命名表中的该列。 层次结构中的列只是表中的该列的一种表示形式。  
+    >  重命名层次结构中的某个列不会重命名表中的该列。 层次结构中的列只是表中该列的表示形式。  
   
 6.  在`Product`表中，右键单击 "**产品子类别名称**" 列，然后在上下文菜单中指向 "**添加到层次结构**"，然后`Category`单击 "添加"。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66078193"
   
     |列|重命名为：|  
     |------------|----------------|  
-    |Calendar Year|年龄|  
+    |Calendar Year|年|  
     |Calendar Semester|Semester|  
     |Calendar Quarter|季度|  
     |Month Calendar|月份|  
@@ -73,7 +73,7 @@ ms.locfileid: "66078193"
   
     |列|重命名为：|  
     |------------|----------------|  
-    |Fiscal Year|年龄|  
+    |Fiscal Year|年|  
     |Fiscal Semester|Semester|  
     |Fiscal Quarter|季度|  
     |Month Calendar|月份|  
@@ -83,11 +83,11 @@ ms.locfileid: "66078193"
   
     |列|重命名为：|  
     |------------|----------------|  
-    |Calendar Year|年龄|  
+    |Calendar Year|年|  
     |Week Number Of Year|Week|  
     |Day Of Week|日期|  
   
 ## <a name="next-steps"></a>后续步骤  
- 若要继续学习本教程，请转到下一课：[第 11 课：创建分区](lesson-10-create-partitions.md)。  
+ 若要继续学习本教程，请转到下一课： [第 11 课：创建分区](lesson-10-create-partitions.md)。  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067131"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>筛选表中的数据（SSAS 表格）
@@ -33,7 +33,7 @@ ms.locfileid: "66067131"
   
 2.  在“自动筛选”菜单中，执行以下操作之一：  
   
-    -   在列值的列表中，选择或清除一个或多个要按其进行筛选的值，然后单击 **"确定"**。  
+    -   在列值的列表中，选择或清除作为筛选依据的一个或多个值，然后单击 **“确定”**。  
   
          如果值的数目极多，则可能无法在列表中显示各个项。 此时您将看到消息“项过多，无法显示。”  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66067131"
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格中对数据进行筛选和排序&#41;](../filter-and-sort-data-ssas-tabular.md)   
  [SSAS 表格&#41;&#40;透视](perspectives-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;的角色](roles-ssas-tabular.md)  
+ [角色（SSAS 表格）](roles-ssas-tabular.md)  
   
   

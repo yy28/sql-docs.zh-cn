@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064683"
 ---
 # <a name="browsing-a-clustering-model"></a>浏览聚类分析模型
   使用 "**浏览**" 打开聚类分析模型时，该模型将显示在交互式查看器中，类似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的聚类分析查看器。 该查看器可帮助您浏览已创建的分类并了解分类特征。 您还可以将各个段与其他段或填充进行比较和对比。  
   
-##  <a name="BKMK_Tabs"></a>浏览模型  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>浏览模型  
  "**浏览**" 窗口包含以下工具，可帮助您了解聚类分析模型并探索底层数据组的属性：  
   
 -   [分类关系图](#BKMK_ClusterDiagram)  
@@ -38,7 +38,7 @@ ms.locfileid: "66064683"
   
  若要对聚类分析模型进行试验，可以使用示例数据工作簿的 "培训" 选项卡上的示例数据，并使用 "群集" 向导生成聚类分析模型[&#40;用于 Excel 的数据挖掘外接程序&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)和所有默认值。  
   
-###  <a name="BKMK_ClusterDiagram"></a>分类关系图  
+###  <a name="cluster-diagram"></a><a name="BKMK_ClusterDiagram"></a>分类关系图  
  "**分类关系图**" 选项卡显示挖掘模型中的所有分类。 在这里，可以查看数据集中有多少个不同分组，以及这些分组之间的远近。  
   
 ##### <a name="explore-the-cluster-diagram"></a>探索分类关系图  
@@ -85,7 +85,7 @@ ms.locfileid: "66064683"
   
  [返回页首](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a>群集配置文件  
+###  <a name="cluster-profiles"></a><a name="BKMK_ClusterProfiles"></a>群集配置文件  
  通过 "**分类配置文件**" 选项卡，您可以一目了然地比较所有分类的构成。 要熟悉模型，这里是很好的起点。 如果您在探索特定分类并且需要查找相关分类，稍后此视图也非常有用。  
   
  **群集配置文件**还可让你更好地了解群集之间的不同之处。 因此，您可能会发现使用此视图为每个分类提供说明性名称十分方便。  
@@ -132,7 +132,7 @@ ms.locfileid: "66064683"
   
      ![重命名分类以使图表更易于使用](media/dm13-cluster-rename.gif "重命名分类以使图表更易于使用")  
   
- **技巧**  
+ **提示**  
   
 -   单击列标题，可以将列中的属性按照其对分类的重要性来进行排序。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66064683"
   
  [返回页首](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a>分类特征  
+###  <a name="cluster-characteristics"></a><a name="BKMK_ClusterCharacteristics"></a> 分类特征  
  通过“分类特征”视图，您实际上可以探索单个分类，以了解哪些属性最能概括此组数据的特征。  
   
 ##### <a name="explore-the-cluster-characteristics"></a>探索分类特征  
@@ -177,7 +177,7 @@ ms.locfileid: "66064683"
   
      请注意，新的分类特征图表将会添加到其自己的工作表中。 您可以将它移动到与其他配置文件相同的工作表中，以便更轻松地比较它们，您将在下一步中执行此操作。  
   
- **技巧**  
+ **提示**  
   
 -   请注意，超过65个群集中的客户的主要特性是他们不购买您的产品！ 如果需要了解原因，可以浏览各分类并比较各组，也可以使用适合探索原因与结果的算法来创建一个相关模型，如决策树模型或 Naïve Bayes 模型。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66064683"
   
  [返回页首](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a>分类对比  
+###  <a name="cluster-discrimination"></a><a name="BKMK_ClusterDiscrimination"></a>分类对比  
  您可以使用 "**分类对比**" 选项卡来比较两个分类之间的属性，或在群集与数据集中的所有其他情况之间进行比较。  
   
  为了突出显示此查看器的功能，我们会将其与基于 "**分类特征**" 视图创建的 Excel 中的并排表进行比较。  
@@ -216,7 +216,7 @@ ms.locfileid: "66064683"
   
      除使用 Excel 外，建议您尝试将分类查看器用于 Visio，这样不仅可以查看数据点，还可以广泛修改和增强图形。 有关详细信息，请参阅[分类关系图演练 &#40;数据挖掘外接程序&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md)。  
   
- **技巧**  
+ **提示**  
   
  深入了解客户组后，请尝试使用 "[假设方案 &#40;表分析工具" excel&#41;](what-if-scenario-table-analysis-tools-for-excel.md)或 "[目标查找" 方案 &#40;excel&#41;工具的表分析工具](goal-seek-scenario-table-analysis-tools-for-excel.md)，以浏览模型中可能会更改以影响结果的因素。  
   

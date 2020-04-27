@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077591"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>操作（Analysis Services - 多维数据）
@@ -40,8 +40,7 @@ ms.locfileid: "66077591"
   
  条件是操作事件发生时计算的 `Boolean` MDX 表达式。 如果条件的计算结果为 `true` 时，则将执行操作。 否则，不执行操作。  
   
- 类型是要执行的操作的类型。 
-  <xref:Microsoft.AnalysisServices.Action> 是一个抽象类；因此，若要使用该类，你必须使用任一派生类。 预定义了两种类型的操作：钻取和报告。 这两种类型的操作具有相应的派生类： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他操作包含在 <xref:Microsoft.AnalysisServices.StandardAction> 类中。  
+ 类型是要执行的操作的类型。 <xref:Microsoft.AnalysisServices.Action> 是一个抽象类；因此，若要使用该类，你必须使用任一派生类。 预定义了两种类型的操作：钻取和报告。 这两种类型的操作具有相应的派生类： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他操作包含在 <xref:Microsoft.AnalysisServices.StandardAction> 类中。  
   
  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，操作是指可供客户端应用程序呈现和使用的存储 MDX 语句。 换言之，操作是指在服务器中定义并存储的客户端命令。 操作还包含了指定客户端应用程序应当何时以及如何显示和处理 MDX 语句的信息。 由操作指定的动作可以通过将操作中的信息用作参数来启动应用程序，也可以基于操作所提供的条件来检索信息。  
   

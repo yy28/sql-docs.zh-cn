@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eabb28250699305952d1d0746dc9487a1a25271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076721"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>配置 Analysis Services 项目属性 (SSDT)
@@ -29,7 +29,7 @@ ms.locfileid: "66076721"
 ## <a name="property-description"></a>属性说明  
  下表说明每个项目的属性，列出其默认值，并提供有关更改属性值的信息。  
   
-|properties|默认设置|说明|  
+|属性|默认设置|说明|  
 |--------------|---------------------|-----------------|  
 |生成/部署服务器版本|用于部署项目的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|指定最终要将项目部署到其中的服务器的版本。 当多个开发人员共同处理项目时，这些开发人员需要了解服务器版本，以便知道要将哪些功能合并到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。|  
 |生成/部署服务器版本|用于开发项目的版本|指定最终要将项目部署到其中的服务器的版本。|  
@@ -51,6 +51,6 @@ ms.locfileid: "66076721"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSDT 生成 Analysis Services 项目&#41;](build-analysis-services-projects-ssdt.md)   
- [&#40;SSDT 部署 Analysis Services 项目&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 项目 (SSDT)](deploy-analysis-services-projects-ssdt.md)  
   
   

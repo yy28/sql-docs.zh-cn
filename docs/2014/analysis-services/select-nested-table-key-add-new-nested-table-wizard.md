@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6af62200b5d640c67321165eae941986e18892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069352"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>选择嵌套表键（添加新的嵌套表向导）
   可以使用 **“选择嵌套表键”** 页选择要用作嵌套表的键的属性。  
   
- **有关详细信息：** [数据挖掘向导 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息，请参阅** [数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
- **属性**  
+ **特性**  
  选择要用作嵌套表的键列的属性。 选择的所有属性必须在层次结构中，或者必须启用了其属性层次结构。  
   
 ## <a name="see-also"></a>另请参阅  

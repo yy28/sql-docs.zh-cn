@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38ebc261b8d1c5a2a134de7085c2e6f34a704b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066291"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>表格建模（SSAS 表格）
@@ -25,9 +25,9 @@ ms.locfileid: "66066291"
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用新的表格模型项目模板创建表格模型。 您可以从多个源导入数据，然后通过添加关系、计算列、度量值、KPI 和层次结构来丰富模型。 然后可以将模型部署到客户端报告应用程序可以连接到的 Analysis Services 实例。 可以在 SQL Server Management Studio 中管理已部署的模型，就像管理多维模型一样。 还可以对它们进行分区以便优化处理，并使用基于角色的安全性保护行级数据安全。  
   
 ## <a name="in-this-section"></a>本节内容  
- [&#40;SSAS 表格&#41;的表格模型解决方案](../tabular-model-solutions-ssas-tabular.md)  
+ [表格模型解决方案（SSAS 表格）](../tabular-model-solutions-ssas-tabular.md)  
   
- [&#40;SSAS 表格&#41;的表格模型数据库](tabular-model-databases-ssas-tabular.md)  
+ [表格模型数据库（SSAS 表格）](tabular-model-databases-ssas-tabular.md)  
   
  [表格模型数据访问](tabular-model-data-access.md)  
   

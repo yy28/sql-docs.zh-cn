@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068701"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>设置或更改 DirectQuery 的首选连接方法
@@ -38,11 +38,11 @@ ms.locfileid: "66068701"
   
 3.  在 **“属性”** 窗格中，将属性 **DirectQueryMode**更改为支持 DirectQuery 使用的以下值之一：  
   
-    -   **带有 DirectQuery 的 InMemory**：如果使用此选项，则部署模型，但必须先处理缓存，然后才能对模型运行查询。  
+    -   **InMemory 以及 DirectQuery**：如果您使用此选项，则部署模型，但您必须首先处理缓存，然后才能对模型运行查询。  
   
-    -   **DirectQuery 以及 InMemory**：如果使用此选项，则客户端可以使用缓存（如果已处理）。 如果您使用此设置部署模型并且未处理缓存，则某些客户端在尝试连接到模型时势必会收到错误消息。  
+    -   **DirectQuery 以及 InMemory**：如果您使用此选项，则缓存将可供客户端使用（如果已处理缓存）。 如果您使用此设置部署模型并且未处理缓存，则某些客户端在尝试连接到模型时势必会收到错误消息。  
   
-    -   **仅限 DirectQuery**：如果使用此选项，则部署元数据，但模型中没有数据。 尝试使用内存中模式进行连接的客户端将会收到错误消息，指示模型不存在或尚未处理。  
+    -   **仅限 DirectQuery**：如果您使用此选项，则部署元数据，但模型对其中的数据没有影响。 尝试使用内存中模式进行连接的客户端将会收到错误消息，指示模型不存在或尚未处理。  
   
 4.  如果存在错误，则在 Visual Studio 中，打开 **“错误列表”** ，并且解决将阻止模型部署在 DirectQuery 模式下的任何问题。  
   

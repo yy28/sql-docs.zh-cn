@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062894"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>操作（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡，查看和编辑所选多维数据集的操作，包括钻取操作和报表操作。  
   
 ## <a name="panes"></a>窗格  
- **工具栏**  
+ **Toolbar**  
  使用工具栏可以执行此选项卡上的常规操作。有关此窗格的详细信息，请参阅[Toolbar &#40;操作 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **操作组织程序**  

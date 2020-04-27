@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065573"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基于使用情况的优化向导的 F1 帮助
@@ -38,8 +38,7 @@ ms.locfileid: "66065573"
   
 -   保存并根据需要处理分区、度量值组或多维数据集，以生成定义的聚合。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的聚合设计向导基于对分区结构的统计分析设计聚合，可生成受存储大小或估计性能提升范围限制的聚合设计。 您可以使用聚合设计向导改进分区的总体性能，但是并不能针对业务用户的特定需要设计聚合。 基于使用情况的优化向导可以针对这些特定需要设计聚合，但前提是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的查询日志包含了构造此类查询所需的足够信息。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的聚合设计向导基于对分区结构的统计分析设计聚合，可生成受存储大小或估计性能提升范围限制的聚合设计。 您可以使用聚合设计向导改进分区的总体性能，但是并不能针对业务用户的特定需要设计聚合。 基于使用情况的优化向导可以针对这些特定需要设计聚合，但前提是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的查询日志包含了构造此类查询所需的足够信息。  
   
  通常，可以同时使用这两个向导来改进在部署时和一段时间后的性能。 在完成分区（或包含分区的多维数据集或度量值组）的初期部署后，应当首先使用聚合设计向导，以改进整体性能。 经过一段时间（在此期间您已在查询日志中记录了业务用户对分区的所有查询）之后，则可以使用基于使用情况的优化向导来进一步完善聚合设计，以便更好地满足业务用户的性能和查询要求。  
   

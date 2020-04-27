@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074797"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
@@ -46,10 +46,10 @@ ms.locfileid: "66074797"
   
 |术语|定义|  
 |----------|----------------|  
-|目标|返回 KPI 的目标值的 MDX 数值表达式或计算。|  
-|值|返回 KPI 的实际值的 MDX 数值表达式。|  
-|状态|表示特定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
-|趋势|评估一段时间内 KPI 值的 MDX 表达式。 趋势可为任意基于时间的条件，其可用于特定业务上下文中。<br /><br /> 使用走向 MDX 表达式，业务用户可以确定 KPI 是随时间升高还是随时间降低。|  
+|目标|一个返回 KPI 目标值的 MDX 数值表达式或计算。|  
+|Value|一个返回 KPI 实际值的 MDX 数值表达式。|  
+|状态|一个表示指定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
+|趋势|评估一段时间内 KPI 值的 MDX 表达式。 走向可以是任何基于时间的条件，该条件在特定的业务上下文中很有用。<br /><br /> 使用走向 MDX 表达式，业务用户可以确定 KPI 是随时间升高还是随时间降低。|  
 |状态指示器|一个提供 KPI 状态快速指示的可见元素。 该元素的显示内容由评估状态的 MDX 表达式的值确定。|  
 |走向指示器|一个提供 KPI 走向的快速指示的可见元素。 该元素的显示内容由评估走向的 MDX 表达式的值确定。|  
 |显示文件夹|KPI 所在的文件夹将在用户浏览多维数据集时显示出来。|  
@@ -60,7 +60,7 @@ ms.locfileid: "66074797"
 ## <a name="parent-kpis"></a>父级 KPI  
  一个单位可以跟踪不同级别的不同商务跃点。 例如，仅使用两个或三个 KPI 即可测定整个公司的业务绩效，但是这些公司范围内的 KPI 可能基于三个或四个由整个公司内的业务单元跟踪的其他 KPI。 同样，公司内的业务单元可以使用不同的统计信息来计算相同的 KPI，其结果汇总到公司范围内的 KPI 中。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]允许您定义 Kpi 之间的父子关系。 这种父子关系允许使用子级 KPI 的结果来计算父级 KPI 的结果。 客户端应用程序也可以使用此关系来正确显示父级和子级 KPI。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可让你定义 KPI 之间的父子关系。 这种父子关系允许使用子级 KPI 的结果来计算父级 KPI 的结果。 客户端应用程序也可以使用此关系来正确显示父级和子级 KPI。  
   
 ## <a name="weights"></a>权重  
  还可以将权重分配给子级 KPI。 当计算父级 KPI 的值时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可使用权重按比例调整子级 KPI 的结果。  

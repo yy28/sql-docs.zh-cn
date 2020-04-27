@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067013"
 ---
 # <a name="measures-ssas-tabular"></a>度量值（SSAS 表格）
@@ -22,7 +22,7 @@ ms.locfileid: "66067013"
   
  本主题的内容：  
   
--   [便利](#bkmk_understanding)  
+-   [优点](#bkmk_understanding)  
   
 -   [使用度量值网格定义度量值](#bkmk_def_mg)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66067013"
   
 -   [相关任务](#bkmk_rel_tasks)  
   
-##  <a name="bkmk_understanding"></a> 优势  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a>便利  
  度量值可以基于标准聚合函数，如 AVERAGE、COUNT 或 SUM；或者，您可以使用 DAX 定义自己的公式。 除了公式之外，每个度量值都具有属性（由度量值数据类型定义），如“名称”、“表详细信息”、“格式”和“小数位数”。  
   
  在模型中定义度量值后，用户可以将它们添加到报表或数据透视表。 根据透视和角色，度量值将与其关联表一起显示在字段列表中，可供模型的所有用户使用。 度量值通常在事实表中创建，但是可以独立于与之关联的表。  
@@ -59,9 +59,9 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Cameras and Camcorders|$620,623,675.75|  
 |计算机|$392,999,044.59|  
 |Tv and Video|$946,989,702.51|  
-|**总计**|**$4691673731.53**|  
+|**总计**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a>使用度量值网格定义度量值  
+##  <a name="defining-measures-by-using-the-measure-grid"></a><a name="bkmk_def_mg"></a>使用度量值网格定义度量值  
  通过使用模型设计器中的度量值网格在设计时创建度量值。 每个表各有一个度量值网格。 默认情况下，度量值网格在模型设计器中显示在每个表的下方。 也可以选择不查看度量值网格来查找特定表。 若要切换表的度量值网格的显示，请单击 "**表**" 菜单，然后单击 "**显示度量值网格**"。  
   
  在度量值网格中，您可以通过以下方式创建度量值：  
@@ -79,30 +79,30 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  如果为模型定义了透视，不会自动将度量值添加到这些透视中。 您必须使用“透视”对话框手动将度量值添加到透视。 有关详细信息，请参阅 [透视表（SSAS 表格）](perspectives-ssas-tabular.md)。  
   
-##  <a name="bkmk_properties"></a>度量值属性  
+##  <a name="measure-properties"></a><a name="bkmk_properties"></a>度量值属性  
  每个度量值具有定义它的属性。 可以在“属性”窗口中编辑度量值属性以及关联的列属性。 度量值具有以下属性：  
   
-|properties|默认设置|说明|  
+|属性|默认设置|说明|  
 |--------------|---------------------|-----------------|  
 |**说明**|空白|度量值的说明。 该说明将不与度量值一起显示在报告客户端中。|  
-|**形式**|从公式表达式中引用的列的数据类型自动确定。|度量值的格式。 例如，货币或百分比。|  
+|**格式**|从公式表达式中引用的列的数据类型自动确定。|度量值的格式。 例如，货币或百分比。|  
 |**公式**|创建度量值时在编辑栏中输入的公式。|度量值的公式。|  
-|**度量值名称**|使用“自动求和”时，度量值名称将位于后跟冒号的列名之前。 如果输入自定义公式，请键入名称并且后跟冒号，然后键入该公式。|显示在报告客户端的字段列表中的度量值名称。|  
+|**“度量值名称”**|使用“自动求和”时，度量值名称将位于后跟冒号的列名之前。 如果输入自定义公式，请键入名称并且后跟冒号，然后键入该公式。|显示在报告客户端的字段列表中的度量值名称。|  
   
-##  <a name="bkmk_KPI"></a>在 KPI 中使用度量值  
+##  <a name="using-a-measure-in-a-kpi"></a><a name="bkmk_KPI"></a>在 KPI 中使用度量值  
  KPI（关键绩效指标）由“基础”值（由度量值定义）定义，用于与“目标”值（也由度量值或绝对值定义）进行对比****。 KPI 还包括以图形格式显示的“状态” **，这是一种计算，其中会根据各阈值之间的目标值对基础值进行评估。 业务专业人员通常使用 KPI 来确定关键业务度量的趋势。  
   
  任何度量值都可以作为 KPI 的基础度量值。 若要创建 KPI，请在度量值网格中右键单击某度量值，然后单击“创建 KPI”****。 将显示“关键绩效指标”对话框，您可以在此指定目标值（由度量值或绝对值定义）、定义状态阈值和图形类型。 有关详细信息，请参阅 [KPI（SSAS 表格）](kpis-ssas-tabular.md)。  
   
-##  <a name="bkmk_rel_tasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> 相关任务  
   
 |主题|说明|  
 |-----------|-----------------|  
-|[&#40;SSAS 表格创建和管理度量值&#41;](measures-ssas-tabular.md)|说明如何使用模型设计器中的度量值网格创建和管理度量值。|  
+|[创建和管理度量值（SSAS 表格）](measures-ssas-tabular.md)|说明如何使用模型设计器中的度量值网格创建和管理度量值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的 Kpi](kpis-ssas-tabular.md)   
  [创建和管理 Kpi &#40;SSAS 表格&#41;](create-and-manage-kpis-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;计算列](ssas-calculated-columns.md)  
+ [计算列（SSAS 表格）](ssas-calculated-columns.md)  
   
   

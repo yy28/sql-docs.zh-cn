@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073668"
 ---
 # <a name="measures-and-measure-groups"></a>度量值和度量值组
@@ -32,7 +32,7 @@ ms.locfileid: "66073668"
   
  本主题将介绍 [Measures](#bkmk_measure) 和 [Measure Groups](#bkmk_mg)。 它还包含以下表格，以及指向有关创建和配置度量值和度量值组的过程步骤的链接。  
   
-|**连接**|**说明**|  
+|**链接**。|**说明**|  
 |--------------|---------------------|  
 |[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)|选择多种方法中的其中一种来创建度量值和度量值组。|  
 |[配置度量值属性](configure-measure-properties.md)|如果使用多维数据集向导来启动多维数据集，则在聚合值之前可能需要更改聚合方法、应用数据格式、在客户端应用程序中设置该度量值的可见性，或添加度量值表达式以处理数据。|  
@@ -41,7 +41,7 @@ ms.locfileid: "66073668"
 |[定义半累加性行为](define-semiadditive-behavior.md)|半累加性行为是指对某些维度有效而对其他维度无效的聚合。 常见示例为银行帐户余额。 你可能想按客户和地域（而不是时间）来聚合余额。 例如，您可能不想连续数日从相同帐户添加余额。 若要定义半累加性行为，请使用“添加商业智能向导”。|  
 |[链接度量值组](linked-measure-groups.md)|重用同一数据库中或不同 Analysis Services 数据库中其他多维数据集的现有度量值组。|  
   
-##  <a name="bkmk_measure"></a>措施  
+##  <a name="measures"></a><a name="bkmk_measure"></a>措施  
  度量值表示一个列，其中包含可以聚合的可计量数据（通常是数值）。 度量值表示组织活动的一些方面，这些方面以货币术语（如收入、利润或成本）表示，按计数（库存水平、员工数、客户或订单），或者按采用业务逻辑的更复杂的计算表示。  
   
  每个多维数据集必须至少具有一个度量值，不过大多数都有很多个度量值，有时达到数百个。 从结构上来说，度量值通常映射到事实数据表中的源列，该列提供用于加载度量值的值。 或者，你还可以用 MDX 定义度量值。  
@@ -60,7 +60,7 @@ ms.locfileid: "66073668"
   
  为了尽量减少在客户端应用程序遇到这些行为的机会，你可在同一数据库中生成多个多维数据集或透视，并确保每个多维数据集或透视仅包含相关对象。 需要检查的关系位于度量值组（映射到事实数据表）和维度之间。  
   
-##  <a name="bkmk_mg"></a>度量值组  
+##  <a name="measure-groups"></a><a name="bkmk_mg"></a>度量值组  
  在多维数据集中，度量值按照其基础事实数据表分组为多个度量值组。 度量值组用于使维度和度量值相互关联。 度量值组还可用于将非重复计数作为其聚合行为的度量值。 将每个非重复计数度量值放入自己的度量值组后，可优化聚合处理。  
   
  一个简单的 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象包含组名、存储模式和处理模式等基本信息。 它还包含其组成部分；度量值、维度和构成度量值组的分区。  

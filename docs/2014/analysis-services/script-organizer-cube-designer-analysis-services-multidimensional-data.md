@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069925"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>脚本组织程序（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -31,10 +31,10 @@ ms.locfileid: "66069925"
   
  单击 **“工具栏”** 窗格或上下文菜单中的 **“上移”** 或 **“下移”** ，可以更改计算的执行顺序。  
   
- 类型   
+ **类型**  
  显示将计算标识为计算成员、命名集或脚本命令的图标。  
   
- **Command**  
+ **命令**  
  显示命令的名称（对于计算成员和命名集）或计算的第一行（对于脚本命令）。  
   
  选择命令，可以显示适用于该命令的“脚本编辑器”、“计算成员窗体编辑器”或“命名集窗体编辑器”（在窗体视图中），或将“脚本编辑器”窗格的内容滚动到多维数据集脚本中该命令的位置（在脚本视图中）。****************  
@@ -47,8 +47,8 @@ ms.locfileid: "66069925"
 |**新建计算成员**|选择此项可显示 **计算成员窗体编辑器** 并创建新的计算成员。 有关**计算成员窗体编辑器**的详细信息，请参阅[计算成员窗体编辑器 &#40;计算 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**新建命名集**|选择此项可显示 **命名集窗体编辑器** 并创建新的命名集。 有关**命名集窗体编辑器**的详细信息，请参阅[命名集窗体编辑器 &#40;计算 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**新建脚本命令**|选择此项可显示 **脚本编辑器** 并创建新的脚本命令。 有关 "**脚本编辑器**" 的详细信息，请参阅[脚本编辑器 &#40;计算 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)。|  
-|**上移**|选择此项可以将所选计算上移一个位置。<br /><br /> 注意：如果无法进一步移动所选计算，将禁用此选项。|  
-|**向下移动**|选择此项可以将所选计算下移一个位置。<br /><br /> 注意：如果无法进一步移动所选计算，将禁用此选项。|  
+|**“上移”**|选择此项可以将所选计算上移一个位置。<br /><br /> 注意：如果无法进一步移动所选计算，将禁用此选项。|  
+|**“下移”**|选择此项可以将所选计算下移一个位置。<br /><br /> 注意：如果无法进一步移动所选计算，将禁用此选项。|  
 |**删除**|选择此项将删除所选计算。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -32,10 +32,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065061"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>使用向导创建扩展事件会话（对象资源管理器）
@@ -49,7 +49,7 @@ ms.locfileid: "66065061"
   
 ### <a name="use-the-following-new-session-wizard-pages-to-create-an-event-session"></a>使用以下“新建会话”向导页可以创建事件会话  
   
--   [介绍](#BKMK_Welcome)  
+-   [简介](#BKMK_Welcome)  
   
 -   [设置会话属性](#BKMK_SetSessionProperties)  
   
@@ -63,25 +63,25 @@ ms.locfileid: "66065061"
   
 -   [指定会话数据存储](#BKMK_SpecifySessionDataOutput)  
   
--   [总结](#BKMK_Summary)  
+-   [摘要](#BKMK_Summary)  
   
 -   [创建事件会话](#BKMK_CreateEventSession)  
   
-##  <a name="BKMK_Welcome"></a>产品介绍  
+##  <a name="introduction"></a><a name="BKMK_Welcome"></a>产品介绍  
  在 **“简介”** 页上，执行以下操作：  
   
 -   在“新建会话”向导的 **“简介”** 页上，单击 **“下一步”**。  
   
      如果要多次使用该向导并且不想每次启动该向导时都阅读此简介，则选中“不再显示此页”**** 复选框。  
   
-##  <a name="BKMK_SetSessionProperties"></a>设置会话属性  
+##  <a name="set-session-properties"></a><a name="BKMK_SetSessionProperties"></a>设置会话属性  
  在 **“设置会话属性”** 页上，执行以下操作：  
   
 -   在 **“会话名称”** 框中，键入事件会话的有意义的名称。  
   
      如果您想要在启动服务器时启动会话，则选中 **“在服务器启动时启动事件会话”** 复选框，然后单击 **“下一步”**。  
   
-##  <a name="BKMK_ChooseTemplate"></a>选择模板  
+##  <a name="choose-template"></a><a name="BKMK_ChooseTemplate"></a>选择模板  
  在 **“选择模板”** 页上，执行以下操作：  
   
 -   选择“使用此事件会话模板”**** 选项可以从为常见问题设计的一组预先配置的模板中进行选择。 从下拉列表中选择你要使用的模板，然后单击“下一步”****。  
@@ -90,7 +90,7 @@ ms.locfileid: "66065061"
   
 -   如果你不想使用任何预先配置的模板，则选择“不使用模板”**** 选项，然后单击“下一步”****。  
   
-##  <a name="BKMK_SelectEventsToCapture"></a>选择要捕获的事件  
+##  <a name="select-events-to-capture"></a><a name="BKMK_SelectEventsToCapture"></a>选择要捕获的事件  
  在 **“选择要捕获的事件“** 页上，执行以下操作：  
   
 1.  从 **”事件库“** 中选择要使用的事件，然后单击向右箭头。 您可以通过使用 Shift+单击或 Ctrl+单击在事件库中选择多个事件。  
@@ -104,7 +104,7 @@ ms.locfileid: "66065061"
     > [!NOTE]  
     >  默认情况下将隐藏来自 **“调试”** 渠道的事件。 若要显示调试事件，请从“渠道”**** 下拉列表中选择“调试”****。  
   
-##  <a name="BKMK_CaptureGlobalFields"></a>捕获全局字段  
+##  <a name="capture-global-fields"></a><a name="BKMK_CaptureGlobalFields"></a>捕获全局字段  
  使用全局字段（也称作操作）可以关联所选事件的单个或多个操作。 如果您在 **“选择模板”** 页上选择了某个模板，则在该模板中定义的所有全局字段都将显示在此页上。  
   
  在 **“捕获全局字段“** 页上，执行以下操作：  
@@ -116,7 +116,7 @@ ms.locfileid: "66065061"
     > [!NOTE]  
     >  所选操作将按 **“名称”** 排序，这样，您可以按字母顺序查看关联的操作。 您可以通过单击字段名称旁的列标题，按照说明或者启用/禁用状态进行排序。  
   
-##  <a name="BKMK_SetSessionEventFilters"></a>设置会话事件筛选器  
+##  <a name="set-session-event-filters"></a><a name="BKMK_SetSessionEventFilters"></a>设置会话事件筛选器  
  您可以应用筛选器（也称作谓词）来限制要捕获的事件。 在 **“设置事件筛选器”** 页上，执行以下操作：  
   
 1.  如果你未在使用预先配置的模板，则创建你的筛选条件，然后单击“下一步”****。  
@@ -130,7 +130,7 @@ ms.locfileid: "66065061"
     > [!NOTE]  
     >  在您为筛选器配置组子句时，在保存结果后多余的括号将从筛选器中删除。 例如，如果您创建一个筛选器分组 **Clause 1** 和 **Clause 2**，则括号会将这两个子句括起来。 在您保存筛选器后，多余的括号将被删除。 删除这些括号不会影响筛选器逻辑。  
   
-##  <a name="BKMK_SpecifySessionDataOutput"></a>指定会话数据存储  
+##  <a name="specify-session-data-storage"></a><a name="BKMK_SpecifySessionDataOutput"></a>指定会话数据存储  
  使用 **“指定会话数据存储”** 页可以指定您要收集数据以便进行分析的方式。 SQL Server 扩展事件使用目标进行数据输出。 目标存储事件数据并且可以执行各种操作，例如写入文件和聚合事件数据。 决定您要收集数据以便进行分析的方式，并且在 **“指定会话数据存储”** 页上，执行以下操作：  
   
 1.  对于大型数据集和创建历史记录，请选中 **“将数据保存到文件以便以后分析”** 复选框，然后执行以下操作：  
@@ -153,7 +153,7 @@ ms.locfileid: "66065061"
   
     4.  在“要保留的事件数目(按类型)”**** 框中，通过使用向上和向下箭头输入或选择你要保留的事件数目（按类型）。  
   
-##  <a name="BKMK_Summary"></a>小结  
+##  <a name="summary"></a><a name="BKMK_Summary"></a>摘要  
  在 **“摘要”** 页上，执行以下操作：  
   
 1.  请确保您的选择是正确的。 展开事件会话节点以便确认您的所有选择都包括在事件会话中。  
@@ -162,7 +162,7 @@ ms.locfileid: "66065061"
   
 3.  单击 **“完成”** 以便创建事件会话。  
   
-##  <a name="BKMK_CreateEventSession"></a>创建事件会话  
+##  <a name="create-event-session"></a><a name="BKMK_CreateEventSession"></a>创建事件会话  
  在 **“创建事件会话”** 页上，在已成功创建您的事件会话后，执行以下操作：  
   
 1.  单击 **“在会话创建后立即启动事件会话”** 以便在您关闭向导后启动会话。 您必须在创建会话后立即启动事件会话，以便能够查看实时数据。  

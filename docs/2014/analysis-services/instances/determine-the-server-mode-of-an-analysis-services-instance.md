@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080054"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>确定 Analysis Services 实例的服务器模式
@@ -36,12 +36,11 @@ ms.locfileid: "66080054"
 >  不要更改 `DeploymentMode` 属性的值。 不支持在安装服务器后手动更改该属性。  
   
 ## <a name="about-the-deploymentmode-property"></a>关于 DeploymentMode 属性  
- 
-  `DeploymentMode` 属性确定 Analysis Services 服务器实例的操作上下文。 此属性在对话框、消息和文档中称为 "服务器模式"。 此属性基于您安装 Analysis Services 的方式由安装程序启动。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
+ `DeploymentMode` 属性确定 Analysis Services 服务器实例的操作上下文。 此属性在对话框、消息和文档中称为 "服务器模式"。 此属性基于您安装 Analysis Services 的方式由安装程序启动。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
   
  此属性的有效值包括以下项：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |0|这是默认值。 它指定多维模式，用于支持使用 MOLAP、HOLAP 和 ROLAP 存储以及数据挖掘模型的多维数据库。|  
 |1|指定 Analysis Services 实例已作为 PowerPivot for SharePoint 部署的一部分安装。 不要更改作为 PowerPivot for SharePoint 安装的一部分的 Analysis Services 实例的部署模式属性。 如果您更改该模式，PowerPivot 数据将不再在该服务器上运行。|  
@@ -56,6 +55,6 @@ ms.locfileid: "66080054"
  [连接到 Analysis Services](connect-to-analysis-services.md)   
  [&#40;SSAS 表格&#41;的表格模型解决方案](../tabular-model-solutions-ssas-tabular.md)   
  [&#40;SSAS&#41;的多维模型解决方案](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [挖掘模型 &#40;Analysis Services 数据挖掘&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [挖掘模型（Analysis Services - 数据挖掘）](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

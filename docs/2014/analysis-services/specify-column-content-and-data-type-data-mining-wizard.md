@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068471"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>指定列内容和数据类型（数据挖掘向导）
@@ -24,7 +24,7 @@ ms.locfileid: "66068471"
   
  数据类型指定列中所包含数据的类型的更多详细信息，以及在定型过程中将如何使用数据。 某些内容类型需要某种特定的数据类型，反过来也是这样。 根据创建挖掘模型时所使用的算法，可能还需要指定特定数据类型。 有关挖掘模型和结构中的内容类型和数据类型的信息，请参阅[内容类型（数据挖掘）](data-mining/content-types-data-mining.md)。  
   
- **有关详细信息：** [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[挖掘模型列](data-mining/mining-model-columns.md)、[数据挖掘向导 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：** [挖掘结构（Analysis Services - 数据挖掘）](data-mining/mining-structures-analysis-services-data-mining.md)、[挖掘模型列](data-mining/mining-model-columns.md)、[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **挖掘模型结构**  
@@ -38,7 +38,7 @@ ms.locfileid: "66068471"
   
 |选项|说明|  
 |------------|-----------------|  
-|密钥|指定该列包含事例序列的唯一标识符。|  
+|键|指定该列包含事例序列的唯一标识符。|  
 |键序列|指定该列包含序列标识符。|  
 |键时间|指定该列包含用于标识日期或时序的日期或其他唯一连续数值。|  
   

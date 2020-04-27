@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074072"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>创建查询作用域的命名集 (MDX)
@@ -43,8 +43,7 @@ FROM <SELECT subcube clause>
   
 ```  
   
- 在 WITH 关键字的语法中， `Set_Identifier` 参数包含命名集的别名。 
-  `Set_Expression` 参数包含命名集别名所指代的集表达式。  
+ 在 WITH 关键字的语法中， `Set_Identifier` 参数包含命名集的别名。 `Set_Expression` 参数包含命名集别名所指代的集表达式。  
   
 ## <a name="with-keyword-example"></a>WITH 关键字示例  
  下列 MDX 查询将检查 `FoodMart 2000`（Microsoft SQL Server 2000 Analysis Services 示例数据库）中各种 Chardonnay 酒和 Chablis 酒的单位销售额。 尽管就结果集而言此查询相当简单，但是在必须维护这种查询的情况下，它就显得冗长且难处理。  
@@ -95,6 +94,6 @@ FROM Sales
   
 ## <a name="see-also"></a>另请参阅  
  [SELECT 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [&#40;MDX 创建会话作用域的命名集&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [创建会话作用域的命名集 (MDX)](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

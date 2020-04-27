@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080409"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>“插入函数”对话框 (SSAS)
-  
   **“插入函数”** 对话框可用于从生成公式时可使用的函数列表中进行选择。 若要从模型设计器访问该对话框，请在各表之上的公式栏中，单击函数 (**fx**) 按钮。 有关如何选择要在公式中使用的函数的详细信息，请参阅“DAX 简介和生成公式”。  
   
 |||  
 |-|-|  
-|Item|说明|  
+|项|说明|  
 |**选择类别**|如果您大致确定所需函数的类型，则从列表中选择一个类别；或者选择 **“全部”** 以便查看函数的字母顺序列表。|  
 |**选择函数**|显示所选类别中函数的列表。|  
 |**说明**|显示函数功能的说明以及任何必需或可选参数，例如列名和表达式。|  
@@ -33,11 +32,11 @@ ms.locfileid: "66080409"
 ## <a name="function-categories"></a>函数类别  
  数据分析表达式 (DAX) 在“插入函数”**** 对话框中提供以下类型的函数类别：  
   
- All  
+ 全部  
   
  日期和时间  
   
- “筛选器”  
+ 筛选器  
   
  逻辑  
   
@@ -45,13 +44,12 @@ ms.locfileid: "66080409"
   
  统计  
   
- 文本  
+ Text  
   
 ## <a name="measures-and-formulas"></a>度量值和公式  
- 
-  **“插入函数”** 对话框仅在您生成公式时可用。 您可以在计算列或者数据透视表或数据透视图中创建计算。 您生成的明确用于数据透视表中的公式也称作“度量值” **。 有关详细信息，请参阅[创建计算列（SSAS 表格）](tabular-models/ssas-calculated-columns-create-a-calculated-column.md)和[创建和管理度量值（SSAS 表格）](tabular-models/measures-ssas-tabular.md)。  
+ **“插入函数”** 对话框仅在您生成公式时可用。 您可以在计算列或者数据透视表或数据透视图中创建计算。 您生成的明确用于数据透视表中的公式也称作“度量值” **。 有关详细信息，请参阅[创建计算列（SSAS 表格）](tabular-models/ssas-calculated-columns-create-a-calculated-column.md)和[创建和管理度量值（SSAS 表格）](tabular-models/measures-ssas-tabular.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSAS 表格&#41;计算](tabular-models/calculations-ssas-tabular.md)  
+ [计算（SSAS 表格）](tabular-models/calculations-ssas-tabular.md)  
   
   

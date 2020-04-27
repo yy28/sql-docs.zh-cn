@@ -18,15 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061896"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>将表达式添加到优先约束
-  优先约束可用表达式定义两个可执行文件之间的约束：优先可执行文件和受约束的可执行文件。 可执行文件可以是任务或容器。 表达式可以单独使用，也可以与优先可执行文件的执行结果结合使用。 可执行文件的执行结果或者为成功，或者为失败。 配置优先约束的执行结果时，可以将执行结果设置为 `Success`、`Failure` 或 `Completion`。 
-  `Success` 要求优先可执行文件成功；`Failure` 要求优先可执行文件失败；而 `Completion` 则指示无论优先任务成功或失败，受约束的可执行文件都应运行。 有关详细信息，请参阅 [优先约束](control-flow/precedence-constraints.md)。  
+  优先约束可用表达式定义两个可执行文件之间的约束：优先可执行文件和受约束的可执行文件。 可执行文件可以是任务或容器。 表达式可以单独使用，也可以与优先可执行文件的执行结果结合使用。 可执行文件的执行结果或者为成功，或者为失败。 配置优先约束的执行结果时，可以将执行结果设置为 `Success`、`Failure` 或 `Completion`。 `Success` 要求优先可执行文件成功；`Failure` 要求优先可执行文件失败；而 `Completion` 则指示无论优先任务成功或失败，受约束的可执行文件都应运行。 有关详细信息，请参阅 [优先约束](control-flow/precedence-constraints.md)。  
   
  表达式的值必须为 `True` 或 `False`，并且此表达式必须为有效的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 表达式。 此表达式可以使用文字、系统变量和自定义变量以及 [!INCLUDE[ssIS](../includes/ssis-md.md)] 表达式语法提供的函数和运算符。 例如，表达式 `@Count == SQRT(144) + 10` 使用了变量 `Count`、SQRT 函数以及等号 (==) 和加号 (+) 运算符。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)。  
   
@@ -47,10 +46,10 @@ ms.locfileid: "66061896"
   
 |求值运算|约束的计算结果为|表达式的计算结果为|受约束的可执行文件运行|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|约束|True|空值|True|  
-|约束|False|空值|False|  
-|表达式|空值|True|True|  
-|表达式|空值|False|False|  
+|约束|True|不适用|True|  
+|约束|False|不适用|False|  
+|表达式|不适用|True|True|  
+|表达式|不适用|False|False|  
 |约束和表达式|True|True|True|  
 |约束和表达式|True|False|False|  
 |约束和表达式|False|True|False|  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075429"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>删除数据源视图 (Analysis Services)
@@ -34,6 +34,6 @@ ms.locfileid: "66075429"
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
- [在数据源视图中更改属性 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中更改属性 (Analysis Services)](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

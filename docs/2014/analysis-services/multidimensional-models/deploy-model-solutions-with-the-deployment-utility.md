@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075359"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>使用部署实用工具部署模型解决方案
@@ -33,15 +33,14 @@ ms.locfileid: "66075359"
     {[/s[:logfile]] | [/a] | [[/o[:output_script_file]] [/d]]}  
 ```  
   
-##  <a name="Arguments"></a> 参数  
+##  <a name="arguments"></a><a name="Arguments"></a>形参  
  *ASdatabasefile*  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署脚本 (.asdatabase) 文件所在文件夹的完整路径。 当您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中部署一个项目时生成此文件。 该文件位于项目的 bin 文件夹中。 .asdatabase 文件包含要部署的对象定义的位置。 如果不指定路径，则使用当前文件夹。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署脚本 (.asdatabase) 文件所在文件夹的完整路径。 当您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中部署一个项目时生成此文件。 该文件位于项目的 bin 文件夹中。 .asdatabase 文件包含要部署的对象定义的位置。 如果不指定路径，则使用当前文件夹。  
   
  **/s**  
  以静默模式运行此实用工具，不显示任何对话框。 有关各种模式的详细信息，请参阅本主题后面的 [模式](#Modes)部分。  
   
- *日志*  
+ *logfile*  
  日志文件的完整路径和文件名。 将在指定的日志文件中记录跟踪事件。 如果日志文件已经存在，则其内容将被替换。  
   
  **/a**  
@@ -59,19 +58,17 @@ ms.locfileid: "66075359"
  如果使用 **/o** 参数，则指定此实用工具不应连接到目标实例。 由于未与部署目标连接，因此仅根据从输入文件检索到的信息生成输出脚本。  
   
 > [!NOTE]  
->  
-  **/d** 参数只在输出模式下使用。 在应答模式或静默模式下，将忽略此参数。 有关各种模式的详细信息，请参阅本主题后面的 [模式](#Modes)部分。  
+>  **/d** 参数只在输出模式下使用。 在应答模式或静默模式下，将忽略此参数。 有关各种模式的详细信息，请参阅本主题后面的 [模式](#Modes)部分。  
   
 ## <a name="remarks"></a>备注  
- 
-  **Microsoft.AnalysisServices.Deployment** 实用工具将使用一组文件，这些文件可以提供对象定义、部署目标、部署选项和配置设置。同时，该实用工具将使用指定的部署选项和配置设置，尝试将对象定义部署到指定的部署目标。 如果在应答文件中或在输出模式下调用此实用工具，此工具可提供一个用户界面。 有关如何使用为此实用工具提供的用户界面创建应答文件的详细信息，请参阅 [使用部署向导部署模型解决方案](deploy-model-solutions-using-the-deployment-wizard.md)。  
+ **Microsoft.AnalysisServices.Deployment** 实用工具将使用一组文件，这些文件可以提供对象定义、部署目标、部署选项和配置设置。同时，该实用工具将使用指定的部署选项和配置设置，尝试将对象定义部署到指定的部署目标。 如果在应答文件中或在输出模式下调用此实用工具，此工具可提供一个用户界面。 有关如何使用为此实用工具提供的用户界面创建应答文件的详细信息，请参阅 [使用部署向导部署模型解决方案](deploy-model-solutions-using-the-deployment-wizard.md)。  
   
  该实用工具位于 \Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio 文件夹中。  
   
-##  <a name="Modes"></a>交货  
+##  <a name="modes"></a><a name="Modes"></a> 模式  
  此实用工具可以在下表列出的模式下运行。  
   
-|模式|说明|  
+|“模式”|说明|  
 |----------|-----------------|  
 |静默模式|不会显示任何用户界面，部署所需要的全部信息均由输入文件提供。 在静默模式下，此实用工具不显示进度。 但可使用可选的日志文件捕获进度和错误信息供以后查看。|  
 |应答模式|显示部署向导用户界面，并将用户响应保存到指定的输入文件供以后部署。 不会在应答模式下进行部署。 应答模式的唯一用途是捕获用户响应|  
@@ -89,6 +86,6 @@ ms.locfileid: "66075359"
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>另请参阅  
- [命令提示实用工具引用 &#40;数据库引擎&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [命令提示实用工具参考（数据库引擎）](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

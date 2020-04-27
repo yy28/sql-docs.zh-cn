@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070126"
 ---
 # <a name="row-filters-role-designertabular-model"></a>行筛选器（角色设计器）（表模型）
@@ -37,6 +37,6 @@ ms.locfileid: "66070126"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的表格模型角色](tabular-models/roles-ssas-tabular.md)   
- [使用 SSMS &#40;SSAS 表格&#41;管理角色](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [使用 SSMS 管理角色（SSAS 表格）](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

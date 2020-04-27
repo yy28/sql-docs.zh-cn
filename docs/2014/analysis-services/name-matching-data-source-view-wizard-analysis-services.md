@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072398"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>名称匹配（数据源视图向导）(Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66072398"
  **外键匹配**  
  选择用于在数据源中的表与视图之间创建逻辑关系的条件。 匹配字符串中将忽略非字母数字字符。 例如，“Customer ID”、“Customer_ID”和“CustomerID”相互匹配。 选择下表中的选项之一可在指定条件下创建关系：  
   
-|选择|执行的创建操作|  
+|Select|执行的创建操作|  
 |------------|---------------|  
 |**与主键同名**|对于任何表，只要其中包含的任意一列的名称与所选表的主键列名相匹配，就创建与该表之间的逻辑关系。|  
 |**与目标表同名**|对于任何表，只要其中包含的任意一列的名称与所选表的名称相匹配，就创建与该表之间的逻辑关系。|  

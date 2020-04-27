@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081084"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>常规（数据库设计器）（Analysis Services - 多维数据）
@@ -69,7 +69,7 @@ ms.locfileid: "66081084"
   
  若要添加新的帐户类型，请单击 " ** \<添加新帐户类型">**。  
   
- **Alias**  
+ **A**  
  设置帐户类型的默认名称，以供商业智能向导使用。 如果此列为空，则将使用默认的 **“名称”** 列。  
   
  **聚合函数**  

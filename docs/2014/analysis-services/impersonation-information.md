@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080646"
 ---
 # <a name="impersonation-information"></a>模拟信息
@@ -31,7 +31,7 @@ ms.locfileid: "66080646"
   
  只有选定了 **“使用特定名称和密码”** ，才启用此选项。  
   
- **权限**  
+ **密码**  
  键入所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象将使用的用户帐户的密码。  
   
  只有选定了 **“使用特定名称和密码”** ，才启用此选项。  

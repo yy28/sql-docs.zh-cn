@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081669"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>维度用法（多维数据集设计器）（Analysis Services - 多维数据）
@@ -26,8 +26,8 @@ ms.locfileid: "66081669"
   
 |窗格|定义|  
 |----------|----------------|  
-|**工具栏**|使用工具栏可以执行此选项卡上的常规操作。有关此窗格的详细信息，请参阅[Toolbar &#40;维度用法 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)。|  
-|**格**|使用该网格可以查看和编辑多维数据集中多维数据集维度和度量值组之间的维度关系。 有关此窗格的详细信息，请参阅[网格（“维度用法”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
+|**Toolbar**|使用工具栏可以执行此选项卡上的常规操作。有关此窗格的详细信息，请参阅[Toolbar &#40;维度用法 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)。|  
+|**Grid**|使用该网格可以查看和编辑多维数据集中多维数据集维度和度量值组之间的维度关系。 有关此窗格的详细信息，请参阅[网格（“维度用法”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
  [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

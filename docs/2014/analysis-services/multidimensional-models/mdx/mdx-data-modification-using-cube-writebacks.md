@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074219"
 ---
 # <a name="using-cube-writebacks-mdx"></a>使用多维数据集写回 (MDX)
@@ -117,6 +117,6 @@ USE_EQUAL_ALLOCATION
 -   更改写回中包含的维度的维度粒度。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;MDX&#41;修改数据](mdx-data-modification-modifying-data.md)  
+ [修改数据 (MDX)](mdx-data-modification-modifying-data.md)  
   
   

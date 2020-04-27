@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079453"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 窗体编辑器（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -46,7 +46,7 @@ ms.locfileid: "66079453"
   
  将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。  
   
- **Status**  
+ **状态**  
  展开此项可以查看“状态图形”和“状态表达式”选项。********  
   
  **状态图形**  
@@ -65,7 +65,7 @@ ms.locfileid: "66079453"
 > [!NOTE]  
 >  小于1和更高1的值是可行的，但可能无法由第三方客户端应用程序正确解释。  
   
- **趋势**  
+ **预测**  
  展开此项可以查看“走向图”和“走向表达式”******** 选项。  
   
  **走向图**  
@@ -84,7 +84,7 @@ ms.locfileid: "66079453"
 > [!NOTE]  
 >  小于1和更高1的值是可行的，但可能无法由第三方客户端应用程序正确解释。  
   
- **其他属性**  
+ **附加属性**  
  展开此项可以查看“显示文件夹”、“父级 KPI”、“当前时间成员”、“权重”和“说明”选项。********************  
   
  **显示文件夹**  
@@ -106,7 +106,7 @@ ms.locfileid: "66079453"
 > [!IMPORTANT]  
 >  MDX 表达式必须在与“关联的度量值组”中指定的度量值组关联的时间维度内返回唯一的成员名称。****  
   
- **重现**  
+ **重量**  
  展开此项可以查看或编辑 KPI 加权系数的 MDX 表达式。  
   
  将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。  

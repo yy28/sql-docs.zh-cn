@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072011"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>在管理中心中针对网站集激活 PowerPivot 功能集成
@@ -24,7 +24,7 @@ ms.locfileid: "66072011"
   
  对于支持 PowerPivot 查询处理的每个网站集，您必须激活 PowerPivot 集成。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  您必须是网站集管理员。  
   
 ## <a name="activate-powerpivot-features"></a>激活 PowerPivot 功能  
@@ -33,7 +33,7 @@ ms.locfileid: "66072011"
   
      默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着，你通常可以通过输入 http://\<计算机名称> 打开根网站集来访问 SharePoint 站点。  
   
-2.  单击 **“网站设置”**。  
+2.  单击 **“网站设置”** 。  
   
 3.  在“网站集管理”中，单击 **“网站集功能”**。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66072011"
   
 5.  单击“激活”  。  
   
-6.  通过打开每个站点并单击 "**网站操作**" 对其他网站集重复上述操作。  
+6.  通过打开各站点并单击 **“网站操作”**，对于其他网站集重复上述操作。  
   
 ## <a name="see-also"></a>另请参阅  
  [管理中心中的 PowerPivot 服务器管理和配置](power-pivot-server-administration-and-configuration-in-central-administration.md)   

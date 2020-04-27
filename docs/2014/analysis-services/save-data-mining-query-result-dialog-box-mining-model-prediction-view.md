@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070022"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>“保存数据挖掘查询结果”对话框（“挖掘模型预测”视图）
@@ -33,7 +33,7 @@ ms.locfileid: "66070022"
  **新建**  
  打开“数据源向导”。****  
   
- **表名**  
+ **表名称**  
  键入新表的名称。  
   
  **如果已存在，则覆盖**  
@@ -57,6 +57,6 @@ ms.locfileid: "66070022"
 ## <a name="see-also"></a>另请参阅  
  [&#40;数据挖掘的预测查询生成器&#41;](prediction-query-builder-data-mining.md)   
  [数据挖掘查询接口](data-mining/data-mining-query-tools.md)   
- [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [数据挖掘扩展插件 (DMX) 语句引用](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

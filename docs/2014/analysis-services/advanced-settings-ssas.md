@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ac2ff0a1617e2228d6b7b5f2651380b3a08ea17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062733"
 ---
 # <a name="advanced-settings-ssas"></a>高级设置 (SSAS)
-  
   **“表导入向导”** 的这一对话框可用于指定您要连接到的平面文件的编码和区域设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -28,8 +27,7 @@ ms.locfileid: "66062733"
 |||  
 |-|-|  
 |术语|定义|  
-|**编码**|指定要使用的编码类型：ANSI 或 Unicode。<br /><br /> 
-  **Unicode** 值对应于 UTF-16 编码。|  
-|**区域设置**|指定区域设置，以便为排序以及日期和时间格式提供语言特定的信息。|  
+|**编码**|指定要使用的编码类型：ANSI 或 Unicode。<br /><br /> **Unicode** 值对应于 UTF-16 编码。|  
+|**Locale**|指定区域设置，以便为排序以及日期和时间格式提供语言特定的信息。|  
   
   

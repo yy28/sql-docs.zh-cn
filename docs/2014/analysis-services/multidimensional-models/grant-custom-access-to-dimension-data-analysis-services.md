@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075063"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授予对维度数据的自定义访问权限 (Analysis Services)
@@ -41,7 +41,7 @@ ms.locfileid: "66075063"
   
  基本维度安全性最容易；只需选择要在角色中包括或去除的维度属性和属性层次结构即可。 高级安全性更复杂，要求擅长 MDX 脚本编写。 下面将介绍这两种方法。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  并非所有度量值或维度成员都可用于自定义访问方案。 如果某个角色限制访问默认度量值或成员，或者限制访问属于度量值表达式的度量值，则连接将失败。  
   
  **检查对维度安全性的阻碍：默认度量值、默认成员和度量值表达式中使用的度量值**  
@@ -58,7 +58,7 @@ ms.locfileid: "66075063"
   
 1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，在对象资源管理器中展开相应数据库的 "**角色**"，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
-     此角色应已具有对多维数据集的读取访问权限。 有关详细信息，请参阅 [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 。  
+     此角色应已具有对多维数据集的读取访问权限。 有关详细信息，请参阅 [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md) 。  
   
 2.  在 "**维度数据** | " "**基本**" 上，选择要为其设置权限的维度。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "66075063"
   
      或者，你可以“取消选择所有成员” **** 以撤消所有访问权限，然后选择要允许的成员。 在未来处理操作中，新成员将不可见，直到手动编辑维度数据安全性以允许对其进行访问。  
   
-5.  （可选） **** 单击 "高级`Visual Totals` " 以启用此属性层次结构。 此选项根据通过该角色可用的成员重新计算聚合。  
+5.  （可选） **Advanced**单击 "高级`Visual Totals` " 以启用此属性层次结构。 此选项根据通过该角色可用的成员重新计算聚合。  
   
     > [!NOTE]  
     >  应用剪裁维度成员的权限时，不会自动重新计算聚合合计。 假设在`All`应用权限之前，属性层次结构的成员返回的计数为200。 应用拒绝访问某些成员的权限之后， `All`即使对用户可见的成员值要少得多，也仍会返回200。 为了避免混淆多维数据集的使用者，可以将`All`成员配置为仅是角色成员的成员的聚合，而不是属性层次结构的所有成员的聚合。 若要调用此行为，可以在`Visual Totals`配置维度安全性时在 "**高级**" 选项卡上启用。 启用后，将在查询时间计算聚合，而不是从预先计算的聚合中检索。 这对查询性能有显著影响，因此仅在必要时使用。  
   
 ## <a name="hiding-measures"></a>隐藏度量值  
- 在 [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)中，已介绍了完全隐藏度量值的所有可视方面（不只其单元数据）要求具有对维度成员的权限。 本节将介绍如何拒绝访问度量值的对象元数据。  
+ 在 [授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)中，已介绍了完全隐藏度量值的所有可视方面（不只其单元数据）要求具有对维度成员的权限。 本节将介绍如何拒绝访问度量值的对象元数据。  
   
 1.  在**维度数据** | "**基本**" 上，向下滚动到 "维度" 列表，直到到达多维数据集维度，然后选择 "**度量值维度**"。  
   
@@ -86,10 +86,9 @@ ms.locfileid: "66075063"
 ## <a name="advanced-dimension-security"></a>高级维度安全性  
  如果您具备 MDX 专业知识，另一种方法则是编写 MDX 表达式，设置允许或拒绝访问的成员的标准。 单击 "**创建角色** | **维度数据** | " "**高级**" 以提供该脚本。  
   
- 可以使用 MDX 生成器编写 MDX 语句。 有关详细信息，请参阅 [MDX 生成器（Analysis Services -多维数据）](../mdx-builder-analysis-services-multidimensional-data.md)。 
-  **“高级”** 选项卡包含以下选项：  
+ 可以使用 MDX 生成器编写 MDX 语句。 有关详细信息，请参阅 [MDX 生成器（Analysis Services -多维数据）](../mdx-builder-analysis-services-multidimensional-data.md)。 **“高级”** 选项卡包含以下选项：  
   
- **Attribute**  
+ **属性**  
  选择要管理成员安全性的属性。  
   
  **允许的成员集**  
@@ -114,7 +113,7 @@ ms.locfileid: "66075063"
   
  例如，假设数据库角色指定 `Male` 为 `Gender` 属性的默认成员。 除非查询在显式包含 `Gender` 特性的同时又为此特性指定了其他成员，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将返回仅包含男性客户的数据集。 有关设置默认成员的详细信息，请参阅 [定义默认成员](attribute-properties-define-a-default-member.md)。  
   
- **启用视觉对象合计**  
+ **启用直观合计**  
  VisualTotals 属性指示是根据所有单元值还是仅根据数据库角色可见的单元值来计算显示的聚合单元值。  
   
  默认情况下，VisualTotals 属性处于禁用状态（设置`False`为）。 此默认设置可以最大程度地利用性能，因为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以快速计算所有单元值的合计值，而不必花时间选择要计算的单元值。  
@@ -130,6 +129,6 @@ ms.locfileid: "66075063"
  [&#40;Analysis Services 授予多维数据集或模型权限&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [授予对单元数据的自定义访问权限 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
  [授予对数据挖掘结构和模型的权限 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予对数据源对象的权限 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授予数据源对象的权限 (Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

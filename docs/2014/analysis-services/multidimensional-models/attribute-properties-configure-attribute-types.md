@@ -18,30 +18,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077411"
 ---
 # <a name="configure-attribute-types"></a>配置属性类型
   在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，特性类型可帮助根据业务功能对特性进行分类。 特性类型的数目很多，其中的大部分都可由客户端应用程序用来显示或支持特性。 但是，某些特性类型对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还有特定的含义。 例如，一些特性类型在时间维度的各种日历中用于标识代表时间段的特性。  
   
-##  <a name="setting_attibute_types"></a>设置特性类型  
- 特性的 `Type` 属性值将确定该特性的特性类型。 在定义维度或特性时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的若干个向导可以对特性类型进行设置。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 向导在维度中添加功能时，也会设置特性类型。 例如，当商业智能向导添加帐户智能时，该向导将几个特性类型应用于维度中的特性，以标识包含维度中的名称、代码、编号和帐户结构的特性。 商业智能向导还可使用属性类型，例如用于货币换算。 有关详细信息，请参阅 [创建货币类型维度](database-dimensions-create-a-currency-type-dimension.md)。  
+##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a> 设置特性类型  
+ 特性的 `Type` 属性值将确定该特性的特性类型。 在定义维度或特性时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的若干个向导可以对特性类型进行设置。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 向导在维度中添加功能时，也会设置特性类型。 例如，当商业智能向导添加帐户智能时，该向导将几个特性类型应用于维度中的特性，以标识包含维度中的名称、代码、编号和帐户结构的特性。 商业智能向导还可使用属性类型，例如用于货币换算。 有关详细信息，请参阅 [创建货币类型维度](database-dimensions-create-a-currency-type-dimension.md)。  
   
  下表列出了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中可用的特性类型。 这些表将特性类型划分成以下类别：  
   
 |术语|定义|  
 |----------|----------------|  
-|[常规属性类型](#general_attribute_types)|这些值可用于所有特性，使用它们只是为了针对客户端应用程序对特性进行归类。|  
+|[常规特性类型](#general_attribute_types)|这些值可用于所有特性，使用它们只是为了针对客户端应用程序对特性进行归类。|  
 |[帐户维度特性类型](#account_dimension_attribute_types)|这些值用于标识属于帐户维度的特性。 有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](database-dimensions-finance-account-of-parent-child-type.md)。|  
-|[货币维度属性类型](#currency_dimension_attribute_types)|这些值用于标识属于货币维度的特性。 有关货币维度的详细信息，请参阅 [创建货币类型维度](database-dimensions-create-a-currency-type-dimension.md)。|  
-|[渐变维度属性](#slowly_changing_dimension_attribute_types)|这些值用于标识属于渐变维度的特性。|  
-|[时间维度属性](#time_dimension_attribute_types)|这些值用于标识属于时间维度的特性。 有关时间维度的详细信息，请参阅 [创建日期类型维度](database-dimensions-create-a-date-type-dimension.md)。|  
+|[货币维度特性类型](#currency_dimension_attribute_types)|这些值用于标识属于货币维度的特性。 有关货币维度的详细信息，请参阅 [创建货币类型维度](database-dimensions-create-a-currency-type-dimension.md)。|  
+|[渐变维度特性](#slowly_changing_dimension_attribute_types)|这些值用于标识属于渐变维度的特性。|  
+|[时间维度特性](#time_dimension_attribute_types)|这些值用于标识属于时间维度的特性。 有关时间维度的详细信息，请参阅 [创建日期类型维度](database-dimensions-create-a-date-type-dimension.md)。|  
   
-###  <a name="general_attribute_types"></a>常规属性类型  
+###  <a name="general-attribute-types"></a><a name="general_attribute_types"></a>常规属性类型  
   
 |特性类型值|说明|  
 |--------------------------|-----------------|  
@@ -153,7 +152,7 @@ ms.locfileid: "66077411"
 |`WebUrl`|表示 URL 地址。|  
 |`WebXmlOrXsl`|表示 XML 或 XSL 内容。|  
   
-###  <a name="account_dimension_attribute_types"></a>帐户维度特性类型  
+###  <a name="account-dimension-attribute-types"></a><a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
 |特性类型值|说明|  
 |--------------------------|-----------------|  
@@ -162,7 +161,7 @@ ms.locfileid: "66077411"
 |`AccountNumber`|表示帐户的编号。|  
 |`AccountType`|表示帐户的类型。 此特性类型用于标识 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的帐户类型维度中的帐户成员的聚合函数。|  
   
-###  <a name="currency_dimension_attribute_types"></a>货币维度特性类型  
+###  <a name="currency-dimension-attribute-types"></a><a name="currency_dimension_attribute_types"></a> 货币维度特性类型  
   
 |特性类型值|说明|  
 |--------------------------|-----------------|  
@@ -171,7 +170,7 @@ ms.locfileid: "66077411"
 |`CurrencyName`|表示货币的名称。 有关货币换算的详细信息，请参阅[货币换算 (Analysis Services)](../currency-conversions-analysis-services.md)。|  
 |`CurrencySource`|表示货币换算的源货币。 此特性类型通常应用于货币维度的键特性，在货币换算中使用。 有关货币换算的详细信息，请参阅[货币换算 (Analysis Services)](../currency-conversions-analysis-services.md)。|  
   
-###  <a name="slowly_changing_dimension_attribute_types"></a>渐变维度特性类型  
+###  <a name="slowly-changing-dimension-attribute-types"></a><a name="slowly_changing_dimension_attribute_types"></a> 渐变维度特性类型  
   
 |特性类型值|说明|  
 |--------------------------|-----------------|  
@@ -180,7 +179,7 @@ ms.locfileid: "66077411"
 |**ScdStartDate**|表示渐变维度中的成员的有效开始日期。|  
 |`ScdStatus`|表示渐变维度中的成员的有效状态。|  
   
-###  <a name="time_dimension_attribute_types"></a>时间维度属性类型  
+###  <a name="time-dimension-attribute-types"></a><a name="time_dimension_attribute_types"></a> 时间维度特性类型  
   
 |特性类型值|说明|  
 |--------------------------|-----------------|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068761"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>设置聚合选项（基于使用情况的优化向导）
@@ -32,10 +32,10 @@ ms.locfileid: "66068761"
  **单击停止**  
  通过在设计过程中单击“停止”****，可以限制聚合设计。  
   
- **开始**  
+ **Start**  
  开始聚合设计进程。  
   
- **Stop**  
+ **停止**  
  结束聚合设计进程。  
   
  **重置**  

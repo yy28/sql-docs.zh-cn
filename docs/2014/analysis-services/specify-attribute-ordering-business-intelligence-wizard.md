@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068534"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>指定属性顺序（商业智能向导）
   可以使用 **“指定属性顺序”** 页指定所选维度中的属性的排序依据属性和排序条件。  
   
 ## <a name="options"></a>选项  
- **Attribute**  
+ **属性**  
  显示维度可用的属性。  
   
  **排序依据属性**  
@@ -31,13 +31,13 @@ ms.locfileid: "66068534"
   
  若要创建新的排序属性，请选择** \<"新建属性">**，并在 "**选择列**" 对话框中选择新属性所基于的列。  
   
- **条件**  
+ **据**  
  指定“排序依据属性”**** 中用于对相应“属性”**** 中的成员进行排序的条件。 下表列出了可用的条件：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**名称**|按 **“排序依据属性”** 中属性的成员名称对 **“属性”** 进行排序。|  
-|**Key**|按 **“排序依据属性”** 中属性的成员键对 **“属性”** 进行排序。|  
+|**密钥**|按 **“排序依据属性”** 中属性的成员键对 **“属性”** 进行排序。|  
   
 ## <a name="see-also"></a>另请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   

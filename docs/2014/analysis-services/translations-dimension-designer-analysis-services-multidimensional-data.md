@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065731"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>翻译（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“翻译”** 选项卡为维度定义和管理翻译，以及为维度定义和管理层次结构和属性。  
   
 ## <a name="panes"></a>窗格  
- 
-  **“翻译”** 选项卡包含以下窗格：  
+ **“翻译”** 选项卡包含以下窗格：  
   
- [工具栏](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
  使用工具栏可以执行维度设计器的“翻译”**** 选项卡中的常规操作。  
   
  [翻译详细信息](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  

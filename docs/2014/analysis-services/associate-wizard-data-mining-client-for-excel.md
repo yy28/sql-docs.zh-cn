@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062306"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>关联向导（Excel 数据挖掘客户端）
@@ -84,8 +84,7 @@ ms.locfileid: "66062306"
 9. 该向导分析所有可能存在的组合，然后创建一个报表，其中包含项集和规则。  
   
 ## <a name="more-about-association-models"></a>有关关联模型的详细信息  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联规则算法可检查定型数据以查找同时出现在某个事务中的项。 每组项*构成一个项*集。 然后，该算法计算每个项集的出现次数，并计算每个项集在所有事务中的相对重要性。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联规则算法可检查定型数据以查找同时出现在某个事务中的项。 每组项*构成一个项*集。 然后，该算法计算每个项集的出现次数，并计算每个项集在所有事务中的相对重要性。  
   
  该算法将使用项集的此信息来生成可用于预测关联或提出建议的规则。 例如，规则可能为“如果用户购买了作者 1 和作者 2 的书各一本，则该用户可能还将购买一本作者 3 的书”。 会根据关联的程度为每个建议指定一个概率。  
   

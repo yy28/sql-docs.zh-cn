@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060819"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在数据流组件中配置错误输出
@@ -65,7 +65,7 @@ ms.locfileid: "66060819"
   
 6.  为每列设置 **“截断”** 选项。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
   
@@ -82,12 +82,12 @@ ms.locfileid: "66060819"
   
 4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”****。  
   
-5.  单击“输入和输出属性”**** 选项卡并展开“**组件名称> 错误输出”\<**，然后展开“输出列”****。  
+5.  单击 "**输入和输出属性**" 选项卡，展开** \<"组件名称> 错误输出**"，然后展开 "**输出列**"。  
   
 6.  单击某列，然后更新其属性。  
   
     > [!NOTE]  
-    >  列的列表中包括组件输入中的列、由以前的错误输出添加的 **ErrorCode** 和 **ErrorColumn** 列，以及由此组件添加的 **ErrorCode** 和 **ErrorColumn** 列。  
+    >   列的列表中包括组件输入中的列、由以前的错误输出添加的 **ErrorCode** 和 **ErrorColumn** 列，以及由此组件添加的 **ErrorCode** 和 **ErrorColumn** 列。  
   
 7.  单击“确定”****。  
   

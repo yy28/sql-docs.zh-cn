@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76d25aabd5b24cdbcc72d3c356168a040a83081a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073053"
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>设置数据源属性（SSAS 多维）
@@ -48,10 +48,10 @@ ms.locfileid: "66073053"
 |**最大连接数**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接到数据源所允许的最大连接数。 如果需要更多的连接，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在连接可用前等待。 默认值为 10。 限制连接数目可确保不会因 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 请求而导致外部数据源重载。|  
 |**相互**|指定与关系数据库的连接发出的 SQL 命令的锁定和行版本控制行为。 有效值为 ReadCommitted 或 Snapshot。 默认值是 ReadCommitted，它指定必须在读取数据前提交数据，从而防止脏读。 快照指定读取的内容来自以前提交的数据的快照。 有关 SQL Server 中隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。|  
 |**托管提供程序**|如果数据源使用托管提供程序，则显示托管提供程序的名称，例如 System.Data.SqlClient、System.Data.OracleClient。<br /><br /> 如果数据源未使用托管提供程序，则此属性显示一个空字符串。<br /><br /> 该属性在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中为只读。 若要更改对连接使用的访问接口，请编辑连接字符串。|  
-|**模拟信息**|指定在连接到使用 Windows 身份验证的数据源时 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 运行所基于的 Windows 标识。 选项包含使用一组预定义的 Windows 凭据、服务帐户、当前用户的标识或者在您的模型包含多个数据源对象时可能会很有用的继承选项。 有关详细信息，请参阅[设置模拟选项（SSAS - 多维）](set-impersonation-options-ssas-multidimensional.md)。<br /><br /> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，有效的值列表包含以下值：<br /><br /> **ImpersonateAccount** （使用特定的 Windows 用户名和密码连接到数据源）。<br /><br /> **ImpersonateServiceAccount** （使用服务帐户的安全标识连接到数据源）。 这是默认值。<br /><br /> **ImpersonateCurrentUser** （使用当前用户的安全标识连接到数据源）。 此选项仅对于从外部数据仓库或数据库检索数据的数据挖掘查询有效；对于用于在多维数据库中进行处理、加载或写回的数据连接，不要选择此选项。<br /><br /> **继承**或**默认值**（使用包含此数据源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象的数据库的模拟设置）。 数据库属性包括模拟选项。|  
+|**模拟信息**|指定在连接到使用 Windows 身份验证的数据源时 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 运行所基于的 Windows 标识。 选项包含使用一组预定义的 Windows 凭据、服务帐户、当前用户的标识或者在您的模型包含多个数据源对象时可能会很有用的继承选项。 有关详细信息，请参阅[设置模拟选项（SSAS - 多维）](set-impersonation-options-ssas-multidimensional.md)。<br /><br /> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，有效的值列表包含以下值：<br /><br /> **ImpersonateAccount** （使用特定的 Windows 用户名和密码连接到数据源）。<br /><br /> **ImpersonateServiceAccount** （使用服务帐户的安全标识连接到数据源）。 这是默认值。<br /><br /> **ImpersonateCurrentUser** （使用当前用户的安全标识连接到数据源）。 此选项仅对于从外部数据仓库或数据库检索数据的数据挖掘查询有效；对于用于在多维数据库中进行处理、加载或写回的数据连接，不要选择此选项。<br /><br /> “继承”**** 或“默认值”****（使用包含此数据源对象的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的模拟设置）。 数据库属性包括模拟选项。|  
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源](data-sources-in-multidimensional-models.md)   
- [&#40;SSAS 多维&#41;创建数据源](create-a-data-source-ssas-multidimensional.md)  
+ [创建数据源（SSAS 多维）](create-a-data-source-ssas-multidimensional.md)  
   
   

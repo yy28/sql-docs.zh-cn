@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062369"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中分析（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
-  **在 Excel 中分析**为多维数据集开发人员提供了一种快速查看项目对最终用户的外观的方法。 使用 **“在 Excel 中分析”** 功能可以打开 Microsoft Excel、创建到模型工作区数据库的数据源连接，以及自动将数据透视表添加到工作表。 此功能将取代 Office Web Control，后者在以前版本的“浏览器”选项卡中提供了一个嵌入的数据透视表。  
+  **“在 Excel 中分析”** 为多维数据集开发人员提供了一种快速检查项目将如何呈现给最终用户的方式。 使用 **“在 Excel 中分析”** 功能可以打开 Microsoft Excel、创建到模型工作区数据库的数据源连接，以及自动将数据透视表添加到工作表。 此功能将取代 Office Web Control，后者在以前版本的“浏览器”选项卡中提供了一个嵌入的数据透视表。  
   
  **查看多维数据集数据：**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66062369"
   
  有关 **“在 Excel 中分析”** 功能的详细信息，请参阅以下资源：  
   
- [在 Excel 中分析 &#40;SSAS 表格&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [在 Excel 中分析（SSAS 表格）](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [在 Excel 中分析表格模型 &#40;SSAS 表格&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [在 Excel 中分析表格模型（SSAS 表格）](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [浏览多维数据集中的数据和元数据](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   

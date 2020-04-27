@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061043"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 源编辑器（“错误输出”页）
@@ -68,7 +68,7 @@ ms.locfileid: "66061043"
  错误或截断数据行定向到 CDC 源的错误输出。 在此情况下使用 CDC 源错误处理。 有关详细信息，请参阅 [CDC Source](data-flow/cdc-source.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [CDC 源编辑器（“连接管理器”页）](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [CDC 源编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [CDC 源编辑器（“列”页）](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   
   

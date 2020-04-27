@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068056"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>标准视图（多维数据集设计器的“聚合”选项卡）
@@ -27,7 +27,7 @@ ms.locfileid: "66068056"
 |选项|说明|  
 |------------|-----------------|  
 |**设计聚合**|单击以显示 **“聚合设计向导”**。|  
-|**基于使用情况的优化**|单击以显示 "**基于使用情况的优化**向导"。|  
+|**基于使用情况的优化**|单击以显示 **“基于使用情况的优化向导”** 。|  
 |**分配聚合设计**|单击以显示 **“分配聚合设计”** 对话框。|  
 |**删除**|单击以删除选定的聚合设计。|  
 |**属性**|单击以查看聚合的属性。|  

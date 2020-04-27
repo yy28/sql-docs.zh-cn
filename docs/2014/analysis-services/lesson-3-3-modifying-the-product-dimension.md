@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078834"
 ---
 # <a name="modifying-the-product-dimension"></a>修改“产品”维度
@@ -47,7 +47,7 @@ ms.locfileid: "66078834"
   
 5.  单击 **"确定"** 以`ProductLineName`创建命名计算。 您可能需要等待。  
   
-6.  在“文件”  菜单上，单击“全部保存”  。  
+6.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="modifying-the-namecolumn-property-of-an-attribute"></a>修改某个特性的 NameColumn 属性  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66078834"
   
      层次结构的名称现在`Product Model Lines`为。  
   
-5.  在“文件”  菜单上，单击“全部保存”  。  
+5.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="specifying-folder-names-and-all-member-names"></a>指定文件夹名称与“全部”级别成员名称  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66078834"
   
     -   **类**  
   
-    -   **彩色**  
+    -   **颜色**  
   
     -   **生产天数**  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66078834"
   
     -   **样式**  
   
-    -   **重现**  
+    -   **重量**  
   
 2.  在属性窗口的**AttributeHierarchyDisplayFolder**属性字段中，键入`Stocking`。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "66078834"
   
     -   **开始日期**  
   
-    -   **Status**  
+    -   **状态**  
   
 6.  在属性窗口的 " **AttributeHierarchyDisplayFolder** " 属性单元中， `History`键入。  
   
@@ -147,10 +147,10 @@ ms.locfileid: "66078834"
   
      单击空白区域，即可修改“产品”维度自身的属性。 还可以单击“属性”**** 窗格中位于属性列表顶部的“产品”****。  
   
-9. 在“文件”  菜单上，单击“全部保存”  。  
+9. 在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="defining-attribute-relationships"></a>定义属性关系  
- 如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可加快维度、分区和查询处理的速度。 有关详细信息，请参阅[定义属性关系](multidimensional-models/attribute-relationships-define.md)和[属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+ 如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可加快维度、分区和查询处理的速度。 有关详细信息，请参阅 [定义属性关系](multidimensional-models/attribute-relationships-define.md) 和 [属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 #### <a name="to-define-attribute-relationships"></a>定义属性关系  
   
@@ -162,15 +162,15 @@ ms.locfileid: "66078834"
   
      因为各成员之间的关系会随时间变化，所以在“关系类型”列表中，将关系类型设置保留为“柔性”********。 例如，产品型号可能会最终移动到另一个产品系列中。  
   
-4.  单击“确定”。   
+4.  单击" **确定**"。  
   
-5.  在“文件”  菜单上，单击“全部保存”  。  
+5.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="reviewing-product-dimension-changes"></a>检查“产品”维度更改  
   
 #### <a name="to-review-the-product-dimension-changes"></a>检查“产品”维度更改  
   
-1.  在 ** 的“生成”菜单上，单击“部署 Analysis Services 教程”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。  
   
 2.  在收到“部署成功完成”**** 消息后，单击“产品”**** 维度的“维度设计器”**** 的“浏览器”**** 选项卡，然后单击设计器工具栏上的“重新连接”按钮。  
   
@@ -184,6 +184,6 @@ ms.locfileid: "66078834"
 ## <a name="see-also"></a>另请参阅  
  [在数据源视图中定义命名计算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [创建用户定义的层次结构](multidimensional-models/user-defined-hierarchies-create.md)   
- [为属性层次结构配置 &#40;所有&#41; 级别](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [配置属性层次结构的“(全部)”级别](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

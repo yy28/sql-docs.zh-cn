@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075622"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在数据源视图中定义逻辑关系 (Analysis Services)
@@ -43,11 +43,11 @@ ms.locfileid: "66075622"
   
  [在表、命名查询或视图之间添加关系](#bkmk_addRel)  
   
- [在“关系图”窗格中查看或修改关系](#bkmk_diagrampane)  
+ [在 "关系图" 窗格中查看或修改关系](#bkmk_diagrampane)  
   
- [在“表”窗格中查看或修改关系](#bkmk_tablespane)  
+ [在 "表" 窗格中查看或修改关系](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a>添加表、命名查询或视图之间的关系  
+##  <a name="to-add-a-relationship-between-tables-named-queries-or-views"></a><a name="bkmk_addRel"></a>添加表、命名查询或视图之间的关系  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中添加逻辑关系的数据源视图。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66075622"
   
     4.  还可以在 **“说明”** 框中键入对该关系的说明。  
   
-##  <a name="bkmk_diagrampane"></a>在 "关系图" 窗格中查看或修改关系  
+##  <a name="to-view-or-modify-a-relationship-in-the-diagram-pane"></a><a name="bkmk_diagrampane"></a> 在“关系图”窗格中查看或修改关系  
   
 -   在“数据源视图设计器”的“关系图”窗格中，右键单击要查看的关系，再单击“编辑关系”（或者仅双击关系箭头）************。  使用 **“编辑属性关系”** 对话框可修改关系。  
   
-##  <a name="bkmk_tablespane"></a>在 "表" 窗格中查看或修改关系  
+##  <a name="to-view-or-modify-a-relationship-in-the-tables-pane"></a><a name="bkmk_tablespane"></a> 在“表”窗格中查看或修改关系  
   
 1.  在 **“数据源视图设计器”** 的 **“表”** 窗格中，查找包含要查看或修改的关系的表、视图或命名查询，然后将其展开。  
   

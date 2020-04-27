@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065844"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻译详细信息（“翻译”选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -32,47 +32,43 @@ ms.locfileid: "66065844"
  **默认语言**  
  以默认语言设置维度对象的名称。  
   
- **对象类型**  
+ “对象类型”   
  显示将翻译的属性。 只能翻译已指定值的对象和属性。 可以翻译以下属性：  
   
 -   维度  
   
-     
-  `Caption` 和 `AttributeAllMember` 属性  
+     `Caption` 和 `AttributeAllMember` 属性  
   
--   Attribute  
+-   属性  
   
-     
-  `Caption`、`AttributeHierarchyDisplayFolder` 和 `NamingTemplate` 属性  
+     `Caption`、`AttributeHierarchyDisplayFolder` 和 `NamingTemplate` 属性  
   
     > [!NOTE]  
     >  只有父属性才具有 `NamingTemplate` 属性。  
   
 -   层次结构  
   
-     
-  `Caption` 和 `AllMemberName` 属性  
+     `Caption` 和 `AllMemberName` 属性  
   
 -   级别  
   
-     `Caption`知识产权  
+     `Caption` 属性  
   
  **\<语言>**  
  在所选语言中键入或选择维度对象的属性值。 单击省略号按钮 (**...**) 可打开其他对话框，具体取决于所编辑的属性：  
   
--   `NamingTemplate`知识产权  
+-   `NamingTemplate` 属性  
   
      显示[“级别命名模板”对话框（Analysis Services - 多维数据）](level-naming-template-dialog-box-analysis-services-multidimensional-data.md)。  
   
--   
-  `Caption` 属性（针对特性）  
+-   `Caption` 属性（针对特性）  
   
      显示[“翻译属性数据”对话框（Analysis Services - 多维数据）](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)。  
   
 ## <a name="shortcut-menu"></a>快捷菜单  
  右键单击“翻译详细信息”窗格中的翻译，所显示的快捷菜单中以下选项可用：****  
   
- **新建翻译**  
+ **新翻译**  
  选择此项将显示 **“选择语言”** 对话框并创建一个新翻译。 该翻译将在 **“翻译详细信息”** 网格中显示为一个新列。  
   
  **删除翻译**  
@@ -91,7 +87,7 @@ ms.locfileid: "66065844"
  在“翻译详细信息”网格中修改属性时，选择此项将显示“翻译属性数据”对话框，并可以修改现有标题列。********  
   
 > [!NOTE]  
->  只有在“翻译详细信息”**** 网格中选择了包含属性标题列的翻译列中的某个单元时，才会启用该选项。  
+>   只有在 **“翻译详细信息”** 网格中选择了包含属性标题列的翻译列中的某个单元时，才会启用该选项。  
   
  **删除标题列**  
  选择此项将删除在“翻译详细信息”网格中所选属性的标题列。****  

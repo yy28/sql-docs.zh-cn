@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061746"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目标编辑器（“映射”页）
@@ -40,13 +40,13 @@ ms.locfileid: "66061746"
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 可以通过选择“**忽略>”\<** 以从输出中排除列来移除映射。  
+ 查看选定的输入列。 您可以通过选择** \<"忽略>** 从输出中排除列来移除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  
   
 ## <a name="see-also"></a>另请参阅  
  [ADO NET 目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 目标编辑器 &#40;错误输出页&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+ [ADO NET 目标编辑器（“错误输出”页）](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

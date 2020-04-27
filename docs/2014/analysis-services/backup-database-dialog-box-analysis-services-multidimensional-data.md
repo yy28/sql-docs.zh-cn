@@ -13,21 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064382"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>“备份数据库”对话框（Analysis Services - 多维数据）
-  可以使用 ** 中的**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]“备份数据库”对话框，使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 备份文件 (.abf) 格式将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库备份到备份文件中。  
+  可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的****“备份数据库”对话框，使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 备份文件 (.abf) 格式将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库备份到备份文件中。  
   
 > [!IMPORTANT]  
 >  对于每个备份文件，运行备份命令的用户必须对每个文件的指定备份位置拥有写入权限。 此外，用户必须具有以下角色之一：针对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的服务器角色成员，或对要备份的数据库拥有完全控制（管理员）权限的数据库角色成员。  
   
  **显示“备份数据库”对话框**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 ** 实例的“数据库”文件夹或“对象资源管理器”中的数据库，然后单击“备份”。**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]********  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”文件夹或“对象资源管理器”中的数据库，然后单击“备份”。************  
   
 ## <a name="options"></a>选项  
  **脚本**  
@@ -48,17 +48,17 @@ ms.locfileid: "66064382"
  **Database**  
  显示当前所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的名称。  
   
- **备份文件**  
+ **“备份文件”**  
  键入要使用的备份文件的完整路径和文件名。  
   
- **“浏览”**  
+ **浏览**  
  单击可显示“文件另存为”对话框，并选择要使用的备份文件的路径和文件名。**** 有关“文件另存为”**** 对话框的详细信息，请参阅[“文件另存为”对话框（Analysis Services - 多维数据）](save-file-as-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **允许覆盖文件**  
  选择此选项可覆盖现有备份文件或远程备份文件（如果存在）。  
   
 > [!NOTE]  
->  如果未选择此选项，并且“备份文件”中指定的备份文件或“远程备份文件”中指定的远程备份文件存在，则会出现错误。********  
+>   如果未选择此选项，并且 **“备份文件”** 中指定的备份文件或 **“远程备份文件”** 中指定的远程备份文件存在，则会出现错误。  
   
  **应用压缩**  
  选择此选项可压缩备份文件和远程备份文件（如果指定）的内容。  
@@ -66,17 +66,17 @@ ms.locfileid: "66064382"
  **加密备份文件**  
  选择此选项可使用“密码”中所提供密码加密备份文件。****  
   
- **权限**  
+ **密码**  
  键入加密备份文件和远程备份文件（如果指定）时所使用的密码。  
   
 > [!NOTE]  
->  只有在选择“加密备份文件”时，才会启用此选项。****  
+>   只有在选择 **“加密备份文件”** 时，才会启用此选项。  
   
  **确认密码**  
  键入在“密码”中所输入的密码，以确认备份文件和远程备份文件（如果指定）的密码。****  
   
 > [!NOTE]  
->  只有在选择“加密备份文件”时，才会启用此选项。****  
+>   只有在选择 **“加密备份文件”** 时，才会启用此选项。  
   
  **备份远程分区**  
  选择此选项可将远程分区的位置信息和数据包含在备份文件中。  
@@ -89,7 +89,7 @@ ms.locfileid: "66064382"
   
 |列|说明|  
 |------------|-----------------|  
-|**Server**|显示管理远程分区的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。|  
+|**服务器**|显示管理远程分区的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。|  
 |**Database**|显示包含远程分区的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。|  
 |**分区列表**|显示 **“数据库”** 中显示的数据库所包含的远程分区列表。|  
 |**“远程备份文件”**|键入要使用的远程备份文件的完整路径和文件名，或单击省略号按钮 (**...**) 以显示“文件另存为”对话框，再选择要使用的远程备份文件的路径和文件名。**** 有关“文件另存为”**** 对话框的详细信息，请参阅[“文件另存为”对话框（Analysis Services - 多维数据）](save-file-as-dialog-box-analysis-services-multidimensional-data.md)。|  

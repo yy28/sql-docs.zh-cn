@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080733"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>授予对存储过程的权限 (Analysis Services)
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的存储过程或程序集是使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET 编程语言编写的外部例程，扩展了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的功能。 通过程序集，开发人员可以利用跨语言集成、异常处理、版本支持、部署支持以及调试支持。  
   
  你必须是服务器管理员才能注册程序集。 请参阅[&#40;Analysis Services&#41;授予服务器管理员权限](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
@@ -26,8 +25,7 @@ ms.locfileid: "66080733"
 ## <a name="security-context-for-stored-procedure-execution"></a>存储过程执行的安全上下文  
  任何用户都可以调用存储过程。 根据存储过程配置方式的不同，该过程既可以在调用它的用户的上下文中运行，也可以在匿名用户的上下文中运行。 由于匿名用户没有安全上下文，因此可使用此功能将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例配置为允许进行匿名访问。  
   
- 在用户调用存储过程之后但在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 运行存储过程之前，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会评估存储过程内的操作。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据授予用户的权限和用于运行过程的权限集的交集来评估存储过程内的操作。 如果存储过程包含任意无法由用户的数据库角色执行的操作，则不会执行该操作。  
+ 在用户调用存储过程之后但在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 运行存储过程之前，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会评估存储过程内的操作。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据授予用户的权限和用于运行过程的权限集的交集来评估存储过程内的操作。 如果存储过程包含任意无法由用户的数据库角色执行的操作，则不会执行该操作。  
   
  下面便是用于运行存储过程的权限集：  
   

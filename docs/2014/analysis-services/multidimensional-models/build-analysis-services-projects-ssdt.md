@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076772"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>生成 Analysis Services 项目 (SSDT)
@@ -43,10 +43,10 @@ ms.locfileid: "66076772"
   
 |文件（在 bin 文件夹中）|说明|  
 |-----------------------------|-----------------|  
-|*项目名称*. .asdatabase|包含在部署脚本文件中定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中对象的元数据的 ASSL 元素。 部署引擎使用此文件来将对象部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
-|*项目名称*. .configsettings|包含部署过程中使用的配置设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些设置（例如用于数据源的连接字符串）。|  
-|*项目名称*. .deploymenttargets|包含部署过程中使用的目标设置，您可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些目标设置（例如服务器名称和数据库名称）。|  
-|*项目名称*. d|包含在部署过程中使用的各种选项设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些选项设置（例如存储位置）|  
+|*Projectname*.asdatabase|包含在部署脚本文件中定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中对象的元数据的 ASSL 元素。 部署引擎使用此文件来将对象部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
+|*Projectname*.configsettings|包含部署过程中使用的配置设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些设置（例如用于数据源的连接字符串）。|  
+|*Projectname*.deploymenttargets|包含部署过程中使用的目标设置，您可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些目标设置（例如服务器名称和数据库名称）。|  
+|*Projectname*.deploymentoptions|包含在部署过程中使用的各种选项设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些选项设置（例如存储位置）|  
 |*Assemblyname*/*dllname。*.dll|用于每个被引用程序集的各个文件夹；每个文件夹包含程序集、被引用程序集以及输出调试信息的所有关联 .pdb 文件的 DLL。|  
   
 |文件（在 obj 文件夹中）|说明|  
@@ -59,6 +59,6 @@ ms.locfileid: "66076772"
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 脚本语言 &#40;ASSL&#41; 参考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [&#40;SSDT 部署 Analysis Services 项目&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 项目 (SSDT)](deploy-analysis-services-projects-ssdt.md)  
   
   

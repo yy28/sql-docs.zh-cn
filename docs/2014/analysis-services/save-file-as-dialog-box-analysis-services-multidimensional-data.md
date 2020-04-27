@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070051"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>“文件另存为”对话框（Analysis Services - 多维数据）
-  
   **“文件另存为”** 对话框显示一组可用文件的列表，这些文件位于为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例定义的日志和数据文件夹中。 您可以选择一个列出的文件，如果需要的话，您也可以指定另一个文件夹和文件。 通过执行以下操作之一，可以显示 **“文件另存为”** 对话框：  
   
 -   单击 **“备份数据库”** 对话框上的 **“浏览”** 。  
@@ -34,11 +33,11 @@ ms.locfileid: "66070051"
  **所选路径**  
  键入以修改从“选择文件夹”**** 中选定的路径，或者选择一个“选择文件夹”**** 中没有列出的文件。  
   
- **文件名**  
+ **文件名称**  
  键入以修改从“选择文件夹”**** 中选定的文件，或者选择一个“选择文件夹”**** 中没有列出的文件。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- ["备份数据库" 对话框 &#40;Analysis Services 多维数据&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
+ [“备份数据库”对话框（Analysis Services - 多维数据）](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

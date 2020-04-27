@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066053"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -32,7 +32,7 @@ ms.locfileid: "66066053"
   
 -   列出  
   
-     显示当前维度的属性列表。 这是默认值。  
+     显示当前维度的属性列表。 这是默认设置。  
   
 -   树  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66066053"
  **查找表**  
  显示“查找表”**** 对话框，以便在“数据源视图”**** 窗格中查找表。  
   
- **Zoom**  
+ **缩放**  
  单击该按钮可以循环选择缩放百分比，或选择可用的缩放选项。  
   
  **显示**  

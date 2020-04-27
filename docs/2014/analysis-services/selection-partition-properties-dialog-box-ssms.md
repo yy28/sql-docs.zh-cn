@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069214"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>选择（“分区属性”对话框）(SSMS)
   在 SQL Server Management Studio 中，对于要在 **“常规”** 、 **“主动缓存”** 或 **“错误配置”** 窗格中查看或修改属性的度量值组，可以使用 **“分区属性”** 对话框的 **“选择”** 页选择分区。  
   
 ## <a name="options"></a>选项  
- **格**  
+ **Grid**  
  显示包含所选分区的度量值组的分区。  
   
  选择要在 **“常规”**、 **“主动缓存”** 或 **“错误配置”** 页中查看其属性的分区。  
@@ -33,8 +33,8 @@ ms.locfileid: "66069214"
 |列|说明|  
 |------------|-----------------|  
 |**名称**|显示分区的名称。|  
-|**数据源**|显示用于为分区提供源数据的表或查询。|  
-|**Aggregations**|显示用于描述分区所使用的聚合设计的字符串。|  
+|**源**|显示用于为分区提供源数据的表或查询。|  
+|**聚合**|显示用于描述分区所使用的聚合设计的字符串。|  
   
 ## <a name="see-also"></a>另请参阅  
  ["分区属性" 对话框 &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077582"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多维建模（Adventure Works 教程）
@@ -36,7 +36,7 @@ ms.locfileid: "66077582"
   
  在此教程中随附应用场景说明，以便您可以更好地理解这些课程的上下文。 有关详细信息，请参阅 [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  要完成本教程的所有课程，您将需要示例数据、示例项目文件以及软件。 有关如何查找和安装本教程的必备组件的说明，请参阅 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md)。  
   
  此外，必须具有下列权限才能成功完成本教程：  
@@ -56,7 +56,7 @@ ms.locfileid: "66077582"
 |[第 4 课：定义高级属性和维度属性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分钟|  
 |[第 5 课：定义维度和度量值组之间的关系](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分钟|  
 |[第 6 课：定义计算](lesson-6-defining-calculations.md)|45 分钟|  
-|[第7课：定义关键绩效指标 &#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 分钟|  
+|[第 7 课：定义关键绩效指标 (KPI)](lesson-7-defining-key-performance-indicators-kpis.md)|30 分钟|  
 |[第 8 课：定义操作](lesson-8-defining-actions.md)|30 分钟|  
 |[第 9 课：定义透视和翻译](lesson-9-defining-perspectives-and-translations.md)|30 分钟|  
 |[第 10 课：定义管理角色](lesson-10-defining-administrative-roles.md)|15 分钟|  

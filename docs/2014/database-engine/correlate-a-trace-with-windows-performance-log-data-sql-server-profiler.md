@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065050"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)
@@ -29,14 +29,13 @@ ms.locfileid: "66065050"
   
 1.  在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]中，打开保存的跟踪文件或跟踪表。 不能关联仍在收集事件数据的运行中的跟踪。 为实现与系统监视器数据的准确关联，跟踪必须同时包含 **StartTime** 和 **EndTime** 数据列。  
   
-2.  在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **“文件”** 菜单上，单击 **“导入性能数据”**。  
+2.  在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **“文件”** 菜单上，单击“导入性能数据”****。  
   
 3.  在 **“打开”** 对话框中，选择包含性能日志的文件。 必须在捕获跟踪数据的同一时间段捕获性能日志数据。  
   
 4.  在 **“性能计数器限制”** 对话框中，选中与要显示在跟踪旁边的系统监视器对象和计数器相对应的复选框。 单击“确定”****。  
   
-5.  在跟踪事件窗口中选择一个事件，或者使用箭头键在跟踪事件窗口的几个相邻行中导航。 
-  **“系统监视器数据”** 窗口中的红色竖线指明与所选跟踪事件关联的性能日志数据。  
+5.  在跟踪事件窗口中选择一个事件，或者使用箭头键在跟踪事件窗口的几个相邻行中导航。 **“系统监视器数据”** 窗口中的红色竖线指明与所选跟踪事件关联的性能日志数据。  
   
 6.  在系统监视器图形中单击一个相关点。 将选中时间最接近的相应跟踪行。 若要扩大时间范围，请在系统监视器图形中按住并拖动鼠标指针。  
   
@@ -50,8 +49,7 @@ ms.locfileid: "66065050"
   
 4.  在 **“常规”** 选项卡中，单击 **“添加计数器”**。  
   
-5.  在 **“性能对象”** 列表中，选择要监视的性能对象。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 性能对象名称以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 开头，命名实例以 MSSQL$*instanceName*开头。  
+5.  在 **“性能对象”** 列表中，选择要监视的性能对象。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 性能对象名称以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 开头，命名实例以 MSSQL$*instanceName*开头。  
   
 6.  添加 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例所需的所有计数器和其他重要值（例如处理器时间和磁盘时间）。  
   

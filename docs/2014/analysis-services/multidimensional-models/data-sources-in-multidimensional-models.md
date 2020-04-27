@@ -19,17 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076035"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>多维模型中的数据源
   您导入或加载到多维模型中的所有数据都来自外部数据源。 通常源数据来自用于报告目的数据仓库，但它也可以来自可直接访问或通过媒介（如 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包）间接访问的任意关系数据库。  
   
- 
-  **中的** “数据源” [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象指定与外部数据源的直接连接。 除了物理位置之外，数据源对象还指定连接字符串、数据访问接口、凭据和控制连接行为的其他属性。  
+ **中的** “数据源” [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象指定与外部数据源的直接连接。 除了物理位置之外，数据源对象还指定连接字符串、数据访问接口、凭据和控制连接行为的其他属性。  
   
  在下列操作期间使用数据源对象提供的信息：  
   
@@ -56,15 +55,15 @@ ms.locfileid: "66076035"
 |主题|说明|  
 |-----------|-----------------|  
 |[支持 &#40;SSAS 多维&#41;的数据源](supported-data-sources-ssas-multidimensional.md)|介绍可以在多维模型中使用的数据源的类型。|  
-|[&#40;SSAS 多维&#41;创建数据源](create-a-data-source-ssas-multidimensional.md)|说明如何将数据源对象添加到多维模型。|  
-|[删除解决方案资源管理器 &#40;SSAS 多维数据源中的数据源&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此过程可从多维模型中删除数据源对象。|  
-|[设置数据源属性 &#40;SSAS 多维&#41;](set-data-source-properties-ssas-multidimensional.md)|描述每个属性，并说明如何设置每个属性。|  
-|[设置 &#40;SSAS 的模拟选项-多维&#41;](set-impersonation-options-ssas-multidimensional.md)|说明如何在“模拟信息”对话框中配置选项。|  
+|[创建数据源（SSAS 多维）](create-a-data-source-ssas-multidimensional.md)|说明如何将数据源对象添加到多维模型。|  
+|[在解决方案资源管理器中删除数据源（SSAS 多维）](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此过程可从多维模型中删除数据源对象。|  
+|[设置数据源属性（SSAS 多维）](set-data-source-properties-ssas-multidimensional.md)|描述每个属性，并说明如何设置每个属性。|  
+|[设置模拟选项（SSAS - 多维）](set-impersonation-options-ssas-multidimensional.md)|说明如何在“模拟信息”对话框中配置选项。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 多维数据 &#40;的数据库对象&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [逻辑体系结构 &#40;Analysis Services 多维数据&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
- [数据源和绑定 &#40;SSAS 多维&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
+ [数据源和绑定（SSAS 多维）](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

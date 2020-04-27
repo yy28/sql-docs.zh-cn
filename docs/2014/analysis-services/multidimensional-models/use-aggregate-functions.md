@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072717"
 ---
 # <a name="use-aggregate-functions"></a>使用聚合函数
@@ -28,10 +28,10 @@ ms.locfileid: "66072717"
   
  可在多维数据集定义之一中分配或更改聚合方法，方式为通过 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]，或通过 MDX。 有关详细说明，请参阅[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)或[聚合 (MDX)](/sql/mdx/aggregate-mdx)。  
   
-##  <a name="AggFunction"></a>聚合函数  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]提供用于聚合度量值组中包含的维度的度量值的函数。 聚合函数的 *累加性* 可确定度量值如何在多维数据集的所有维度中进行聚合。 聚合函数具有三个级别的累加性：  
+##  <a name="aggregate-functions"></a><a name="AggFunction"></a>聚合函数  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 提供了几种函数，用来针对包含在度量值组中的维度聚合度量值。 聚合函数的 *累加性* 可确定度量值如何在多维数据集的所有维度中进行聚合。 聚合函数具有三个级别的累加性：  
   
- 累加性  
+ 加法  
  累加性度量值也称为完全累加性度量值，可针对包含度量值的度量值组中包括的所有维度进行聚合，没有任何限制。  
   
  半累加性  
@@ -44,8 +44,8 @@ ms.locfileid: "66072717"
   
 |聚合函数|累加性|返回值|  
 |--------------------------|----------------|--------------------|  
-|`Sum`|累加性|对所有子成员的值求和。 这是默认的聚合函数。|  
-|`Count`|累加性|检索所有子成员的计数。|  
+|`Sum`|加法|对所有子成员的值求和。 这是默认的聚合函数。|  
+|`Count`|加法|检索所有子成员的计数。|  
 |`Min`|半累加性|检索所有子成员的最低值。|  
 |`Max`|半累加性|检索所有子成员的最高值。|  
 |`DistinctCount`|非累加性|检索所有唯一子成员的计数。 有关详细信息，请参阅下一节中的 [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) 。|  
@@ -57,7 +57,7 @@ ms.locfileid: "66072717"
 |`FirstNonEmpty`|半累加性|检索第一个非空子成员的值。|  
 |`LastNonEmpty`|半累加性|检索最后一个非空子成员的值。|  
   
-##  <a name="bkmk_distinct"></a>关于非重复计数度量值  
+##  <a name="about-distinct-count-measures"></a><a name="bkmk_distinct"></a> About Distinct Count Measures  
  “聚合函数” **** 属性值为 **Distinct Count** 的度量值称为非重复计数度量值。 非重复计数度量值可以用于对维度的最低级别成员在事实数据表中的出现次数进行计数。 由于计数具有非重复性，因此，如果某个成员出现多次，则仅对此成员进行一次计数。 非重复计数度量值始终位于专用的度量值组中。 将非重复计数度量值放入其自己的度量值组是内置到设计器中作为性能优化技术的最佳做法。  
   
  非重复计数度量值通常用于确定对于某个维度的每个成员，另一维度有多少不同的最低级别成员共享事实数据表中的。 例如，在“销售额”多维数据集中，对于每个客户和客户组，购买了多少不同的产品？ （即，对于“客户”维度的每个成员，“产品”维度有多少不同的最低级别成员共享事实数据表中的行？）或者，例如在“Internet 站点访问”多维数据集中，对于每个站点访问者和站点访问者组，访问了 Internet 站点上有多少不同的页？ （即，对于“站点访问者”维度的每个成员，“页”维度有多少不同的最低级别成员共享事实数据表中的行？）在上述每个示例中，第二个维度的最低级别成员由非重复计数度量值进行计数。  

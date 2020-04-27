@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0275a071c5548de7086844e48cec7eff3bb72d31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074542"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>在 MDX 中生成计算成员 (MDX)
@@ -29,17 +29,17 @@ ms.locfileid: "66074542"
   
  可以指定让计算成员使用下列上下文之一：  
   
--   **查询作用域**若要创建定义为 MDX 查询的一部分并且其作用域限制为查询的计算成员，请使用 WITH 关键字。 然后，就可以在 MDX SELECT 语句中使用该计算成员。 通过这种方法，更改用 WITH 关键字创建的计算成员时就不会打乱 SELECT 语句。  
+-   **查询作用域** ：若要创建一个计算成员，该计算成员被定义为 MDX 查询的一部分并且其作用域因此被限制在该查询内，请使用 WITH 关键字。 然后，就可以在 MDX SELECT 语句中使用该计算成员。 通过这种方法，更改用 WITH 关键字创建的计算成员时就不会打乱 SELECT 语句。  
   
      有关如何使用 WITH 关键字创建计算成员的详细信息，请参阅[创建查询作用域的计算成员 (MDX)](mdx-calculated-members-query-scoped-calculated-members.md)。  
   
--   **会话作用域**若要创建一个计算成员，使其作用域比查询上下文更广（即，其作用域为 MDX 会话的生存期），请使用 CREATE MEMBER 语句。 使用 CREATE MEMBER 语句定义的计算成员可供该会话中的所有 MDX 查询使用。 例如，CREATE MEMBER 语句对于需要在多种查询中大量重用同一个集的客户端应用程序会非常有用。  
+-   **会话作用域** ：若要创建一个计算成员，使其作用域比查询上下文更广（即，其作用域为 MDX 会话的生存期），请使用 CREATE MEMBER 语句。 使用 CREATE MEMBER 语句定义的计算成员可供该会话中的所有 MDX 查询使用。 例如，CREATE MEMBER 语句对于需要在多种查询中大量重用同一个集的客户端应用程序会非常有用。  
   
      有关如何使用 CREATE MEMBER 语句在会话中创建计算成员的详细信息，请参阅[创建会话作用域的计算成员 (MDX)](mdx-calculated-members-session-scoped-calculated-members.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE MEMBER 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
  [Mdx 函数引用 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [SELECT 语句 (MDX)](/sql/mdx/mdx-data-manipulation-select)  
   
   

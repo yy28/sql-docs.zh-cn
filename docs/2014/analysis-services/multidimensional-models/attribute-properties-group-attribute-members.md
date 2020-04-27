@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077269"
 ---
 # <a name="group-attribute-members-discretization"></a>对属性成员分组（离散化）
@@ -34,7 +34,7 @@ ms.locfileid: "66077269"
   
  特性的 `DiscretizationMethod` 属性控制成员的分组方式。  
   
-|`DiscretizationMethod`将|说明|  
+|`DiscretizationMethod` 设置|说明|  
 |--------------------------------------|-----------------|  
 |`None`|显示成员。|  
 |`Automatic`|选择最佳数据表示法： `EqualAreas` 方法或 `Clusters` 方法。|  
@@ -52,8 +52,7 @@ ms.locfileid: "66077269"
 ## <a name="naming-template"></a>命名模板  
  当创建成员组时，会自动生成成员组的名称。 除非您指定了一个命名模板，否则使用默认的命名模板。 通过在某个特性的 `Format` 属性的 `NameColumn` 选项中指定命名模板，可以更改此命名方法。 可以针对列绑定（用于特性的 `Translations` 属性）的 `NameColumn` 集合中指定的每种语言重新定义不同的命名模板。  
   
- 
-  `Format` 设置使用以下字符串表达式来定义命名模板：  
+ `Format` 设置使用以下字符串表达式来定义命名模板：  
   
  `<Naming template> ::= <First definition> [;<Intermediate definition>;<Last definition>]`  
   
@@ -63,17 +62,13 @@ ms.locfileid: "66077269"
   
  `<Last definition> ::= <Name expression>`  
   
- 
-  `<First definition>` 参数只应用于第一个成员组或由离散化方法生成的成员组。 如果未提供可选参数 `<Intermediate definition>` 和 `<Last definition>` ，则 `<First definition>` 参数将用于为该属性生成的所有度量值组。  
+ `<First definition>` 参数只应用于第一个成员组或由离散化方法生成的成员组。 如果未提供可选参数 `<Intermediate definition>` 和 `<Last definition>` ，则 `<First definition>` 参数将用于为该属性生成的所有度量值组。  
   
- 
-  `<Last definition>` 参数只应用于由离散化方法生成的最后一个成员组。  
+ `<Last definition>` 参数只应用于由离散化方法生成的最后一个成员组。  
   
- 
-  `<Intermediate bucket name>` 参数应用于每个成员组，而不是由离散化方法生成的第一个或最后一个成员组。 如果生成的成员组仅为两个或更少，则忽略此参数。  
+ `<Intermediate bucket name>` 参数应用于每个成员组，而不是由离散化方法生成的第一个或最后一个成员组。 如果生成的成员组仅为两个或更少，则忽略此参数。  
   
- 
-  `<Bucket name>` 参数是一个字符串表达式，可以合并一组变量以将成员或成员组信息表示为成员组名称的一部分：  
+ `<Bucket name>` 参数是一个字符串表达式，可以合并一组变量以将成员或成员组信息表示为成员组名称的一部分：  
   
 |变量|说明|  
 |--------------|-----------------|  

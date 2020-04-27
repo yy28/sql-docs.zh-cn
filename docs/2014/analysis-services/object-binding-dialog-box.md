@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072189"
 ---
 # <a name="object-binding-dialog-box"></a>“对象绑定”对话框
-  使用 **中的** “对象绑定” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，可以定义 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的属性与数据源视图中的表或列之间的绑定。 在 ** 的“属性”****窗口中，通过从 ** 对象的下列属性值的下拉列表中选择“(新建)”[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**，可以显示“对象绑定”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]对话框：  
+  使用 **中的** “对象绑定” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，可以定义 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的属性与数据源视图中的表或列之间的绑定。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“属性”**** 窗口中，通过从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的下列属性值的下拉列表中选择“(新建)”****，可以显示“对象绑定”**** 对话框：  
   
 -   NameColumn  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66072189"
  指示将在数据源视图中定义新列，然后将列绑定与其相关联。  
   
 > [!NOTE]  
->  如果选中此选项，则必须在部署 ** 对象之前运行“架构生成向导”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+>  如果选中此选项，则必须在部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象之前运行“架构生成向导”****。  
   
  行绑定  
  将对象绑定到事实数据表中的行，用于支持基于事实数据表中已处理行数的计数度量值。  

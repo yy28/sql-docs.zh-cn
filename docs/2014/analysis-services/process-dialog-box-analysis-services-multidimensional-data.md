@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070748"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>“处理”对话框（Analysis Services - 多维数据）
@@ -39,7 +39,7 @@ ms.locfileid: "66070748"
  **Object Name**  
  显示要处理的对象的名称。 名称左侧的图标指示对象类型。  
   
- 类型   
+ **类型**  
  显示要处理的对象的类型。  
   
  **处理选项**  
@@ -60,7 +60,7 @@ ms.locfileid: "66070748"
  **更改设置**  
  单击此项可打开****“更改设置”对话框，并更改用于控制所选对象的处理方式的设置，包括批处理设置、写回设置、维度键错误设置。 有关“更改设置”**** 对话框的详细信息，请参阅[“更改设置”对话框（Analysis Services - 多维数据）](change-settings-dialog-box-analysis-services-multidimensional-data.md)。  
   
- **运行**  
+ **用**  
  单击此项可处理对象。  
   
 ## <a name="see-also"></a>另请参阅  

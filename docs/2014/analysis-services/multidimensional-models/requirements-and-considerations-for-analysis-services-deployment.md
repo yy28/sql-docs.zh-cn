@@ -22,17 +22,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073165"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的要求和注意事项
   解决方案的性能和可用性取决于许多因素，包括基础硬件的性能、服务器部署的拓扑结构、您的解决方案特性（例如，具有跨多个服务器分布的分区或者使用要求对关系引擎的直接访问权限的 ROLAP 存储区）、服务级别协议和您的数据模型的复杂程度。  
   
 ## <a name="memory-and-processor-requirements"></a>内存和处理器要求  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在以下情况下需要更多的内存和处理器资源：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在以下情况下需要更多的内存和处理器资源：  
   
 -   处理大型或复杂多维数据集时。 与小型或简单的多维数据集相比，它们需要更多的内存和处理器资源。  
   
@@ -44,20 +44,18 @@ ms.locfileid: "66073165"
   
 -   同时访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 资源的用户数增加时。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可用的内存和处理器资源量随不同的 SQL Server 版本、操作系统、硬件功能以及是使用虚拟还是物理处理器而变化。 有关详细信息，请访问以下链接：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可用的内存和处理器资源量随不同的 SQL Server 版本、操作系统、硬件功能以及是使用虚拟还是物理处理器而变化。 有关详细信息，请访问以下链接：  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
  [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
- [最大容量规范 &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
+ [最大容量规范 (Analysis Services)](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
 ## <a name="disk-space-requirements"></a>磁盘空间要求  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安装的不同方面和与对象处理相关的任务需要不同的磁盘空间大小。 以下列表描述了这些要求。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安装的不同方面和与对象处理相关的任务需要不同的磁盘空间大小。 以下列表描述了这些要求。  
   
  多维数据集  
  与有小事实数据表的多维数据集相比，有大型事实数据表的多维数据集需要更多的磁盘空间。 同样，尽管是在更小的程度内，与有较少维度成员的多维数据集相比，有很多大型维度的多维数据集需要更多的磁盘空间。 通常，可以预计 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库所需的空间量是存储在基础关系数据库中的相同数据所需空间量的大约 20%。  
@@ -71,7 +69,7 @@ ms.locfileid: "66073165"
  对象处理  
  在处理过程中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将它正在处理事务中进行处理的对象的副本存储在磁盘上，直到处理完成。 处理完成后，经过处理的对象副本将替换原始对象。 因此，您必须为要处理的每个对象的第二个副本提供足够的额外磁盘空间。 例如，如果计划在单个事务中处理整个多维数据集，则需要足够的硬盘空间来存储整个多维数据集的第二个副本。  
   
-##  <a name="BKMK_Availability"></a>可用性注意事项  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>可用性注意事项  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 环境中，由于硬件或软件故障，多维数据集或挖掘模型可能对查询不可用。 多维数据集还可能由于需要被处理而不可用。  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>一旦硬件或软件发生故障时提供可用性  
@@ -88,7 +86,7 @@ ms.locfileid: "66073165"
   
  若要透明处理对源数据的增量更新，请启用主动缓存。 主动缓存将以新的源数据更新多维数据集，而不需要手动处理，并且不会影响多维数据集的可用性。 有关详细信息，请参阅[主动缓存（分区）](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
-##  <a name="BKMK_Scalability"></a>可伸缩性注意事项  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>可伸缩性注意事项  
  同一台计算机[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的多个和实例可能导致性能问题。 若要解决这些问题，一个选项可能是增加服务器的处理器、内存和磁盘资源。 但是，可能还需要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例分散到多个计算机。  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>将 Analysis Services 分散到多个计算机  

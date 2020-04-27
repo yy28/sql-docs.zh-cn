@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075940"
 ---
 # <a name="create-a-date-type-dimension"></a>创建日期类型维度
@@ -40,7 +40,7 @@ ms.locfileid: "66075940"
  服务器时间维度  
  如果没有要将时间相关属性绑定到的维度表，则可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 基于时间段定义一个服务器时间维度。 若要定义由服务器时间维度表示的层次结构、级别和成员，应当在创建维度时选择标准时间段。  
   
- 服务器时间维度中的属性具有特殊的时间-属性绑定。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用与日期相关的属性类型（例如年、月或日）来定义时间维度中的属性成员。  
+ 服务器时间维度中的属性具有特殊的时间-属性绑定。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用与日期相关的属性类型（例如，年、月或天）来定义时间维度中的属性成员。  
   
  在多维数据集中包含了服务器时间维度之后，可通过在多维数据集向导的 **“定义维度用法”** 页中指定一个关系，以建立度量值组和服务器时间维度之间的关系。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66075940"
   
  可以在维度设计器中手动构造这些不同的日历。 但是，在创建时间维度或服务器时间维度时，维度向导会提供几个层次结构模板，可用于自动生成若干种类型的日历。 下表说明了可通过维度向导生成的各种日历。  
   
-|日历|说明|  
+|Calendar|说明|  
 |--------------|-----------------|  
 |标准日历|十二个月的公历，从 1 月 1 日开始，到 12 月 31 日结束。<br /><br /> 无论使用维度向导创建时间维度还是服务器时间维度，在定义了表示维度的时间段属性之后，该向导都会生成一个标准日历的层次结构。 如果使用维度向导创建服务器时间维度，则可将标准日历的开始日期调整为 1 月 1 日以外的某一天。|  
 |会计日历|十二个月会计日历。 如果选择该日历，则要为单位使用的会计日历指定开始的月份和日期。<br /><br /> 注意：只有在使用维度向导创建服务器时间维度时，该日历才可用。|  

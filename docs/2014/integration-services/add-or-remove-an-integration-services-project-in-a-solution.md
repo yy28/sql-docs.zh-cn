@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061843"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>在解决方案中添加或删除 Integration Services 项目
@@ -43,7 +43,7 @@ ms.locfileid: "66061843"
   
 3.  或者，编辑项目的名称和位置。  
   
-4.  单击“确定”。   
+4.  单击" **确定**"。  
   
 #### <a name="to-add-an-existing-integration-services-project-to-a-solution"></a>将现有 Integration Services 项目添加到解决方案中  
   

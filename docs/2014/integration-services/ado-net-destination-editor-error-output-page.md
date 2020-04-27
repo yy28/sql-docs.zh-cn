@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061769"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 目标编辑器（“错误输出”页）
@@ -58,6 +58,6 @@ ms.locfileid: "66061769"
   
 ## <a name="see-also"></a>另请参阅  
  [ADO NET 目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 目标编辑器 &#40;映射 "页面&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [ADO NET 目标编辑器（“映射”页）](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

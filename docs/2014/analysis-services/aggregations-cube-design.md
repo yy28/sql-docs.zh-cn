@@ -11,20 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062659"
 ---
 # <a name="aggregations-cube-design"></a>聚合（多维数据集设计）
   可以使用多维数据集设计器中的 **“聚合”** 选项卡创建和修改聚合设计。  
   
- 
-  **“聚合”** 选项卡包含以下窗格：  
+ **“聚合”** 选项卡包含以下窗格：  
   
 ## <a name="panes"></a>窗格  
- **工具栏**  
+ **Toolbar**  
  使用工具栏可以执行该选项卡上的常见操作。  
   
  **标准视图**  

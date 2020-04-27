@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070321"
 ---
-# <a name="lesson-3-rename-columns"></a>第 3 课：重命名列
+# <a name="lesson-3-rename-columns"></a>第 3 课：对列重命名
   在本课中，您将重命名您导入的每个表中的很多列。 通过重命名，您可以更易于识别列，且更易于在模型设计器中以及通过用户在客户端应用程序中选择字段来进行导航列。 若要了解详细信息，请参阅[重命名表或列（SSAS 表格）](tabular-models/rename-a-table-or-column-ssas-tabular.md)。  
   
 > [!IMPORTANT]  
@@ -25,7 +25,7 @@ ms.locfileid: "66070321"
   
  本课预计完成时间：**20 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  本主题是表格建模教程的一部分，应当按顺序完成。 执行本课中的任务之前，须已完成上一课： [第 2 课：添加数据](lesson-2-add-data.md)。  
   
 ## <a name="rename-columns"></a>对列重命名  
@@ -69,11 +69,11 @@ ms.locfileid: "66070321"
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|上下班路程|  
   
-     **Date**  
+     **日期**  
   
     |源名称|友好名称|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|日期|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070321"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Geography**  
+     **地域**  
   
     |源名称|友好名称|  
     |-----------------|-------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "66070321"
     |PostalCode|邮政编码|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Products**  
+     **产品**  
   
     |源名称|友好名称|  
     |-----------------|-------------------|  

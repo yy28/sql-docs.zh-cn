@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060840"
 ---
 # <a name="configure-adonet-connection-manager"></a>配置 ADO.NET 连接管理器
@@ -34,7 +34,7 @@ ms.locfileid: "66060840"
  查看所选 ADO.NET 数据连接的属性和值。  
   
  **新建**  
- 通过使用“连接管理器”对话框创建 ADO.NET 数据连接。   
+ 通过使用“连接管理器”对话框创建 ADO.NET 数据连接。****  
   
  **删除**  
  选择某个连接，然后可以使用“删除”按钮将其删除。****  

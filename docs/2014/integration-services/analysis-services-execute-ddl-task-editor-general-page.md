@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061545"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 执行 DDL 任务编辑器（“常规”页）
@@ -39,9 +39,9 @@ ms.locfileid: "66061545"
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services &#40;DDL 页中执行 DDL 任务编辑器&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [控制流](control-flow/control-flow.md)   
  [Analysis Services 脚本语言 &#40;ASSL&#41; 参考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [XML for Analysis &#40;XMLA&#41; 引用](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [XML for Analysis (XMLA) 参考](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

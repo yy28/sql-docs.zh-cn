@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061193"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大容量插入任务编辑器（“选项”页）
@@ -27,7 +27,7 @@ ms.locfileid: "66061193"
  若要了解如何使用大容量插入，请参阅[大容量插入任务](control-flow/bulk-insert-task.md)和 [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
 ## <a name="options"></a>选项  
- **CodePage**  
+ **Ansi**  
  指定数据文件中数据的代码页。  
   
  **DataFileType**  
@@ -52,7 +52,7 @@ ms.locfileid: "66061193"
 |**激发触发器**|选择此项将激发对表上的触发器的任意插入、更新或删除操作。|  
   
  **SortedData**  
- 指定大容量插入语句中的 ORDER BY 子句。 所提供的列名必须是目标表中的有效列。 默认为 `false`。 这意味着 ORDER BY 子句将不对数据进行排序。  
+ 指定大容量插入语句中的 ORDER BY 子句。 所提供的列名必须是目标表中的有效列。 默认值为 `false`。 这意味着 ORDER BY 子句将不对数据进行排序。  
   
  **MaxErrors**  
  指定在取消大容量插入操作之前可以发生的最大错误数量。 如果值为 0，则指示对错误的数量没有限制。  
@@ -64,7 +64,7 @@ ms.locfileid: "66061193"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [大容量插入任务编辑器 &#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
  [大容量插入任务编辑器 &#40;连接页&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [控制流](control-flow/control-flow.md)  
   
   

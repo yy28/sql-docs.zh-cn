@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29e569ec781d0015017d3009746c3299f0865c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074359"
 ---
 # <a name="manipulating-data-mdx"></a>操作数据 (MDX)
@@ -29,9 +29,9 @@ ms.locfileid: "66074359"
 
 |主题|说明|  
 |-----------|-----------------|  
-|[使用钻取检索源数据 &#40;MDX&#41;](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|介绍如何使用 MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) 语句检索适用于多维数据源中的某个单元的源数据行集。|  
-|[使用 RollupChildren 函数 &#40;MDX&#41;](mdx-data-manipulation-rollupchildren-function.md)|讨论 MDX [RollupChildren](/sql/mdx/rollupchildren-mdx)的影响
-|[了解传递顺序和求解次序 &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|详细说明求解次序的概念，并介绍了此功能如何影响 MDX 表达式、语句和脚本。|  
+|[使用 DRILLTHROUGH 检索源数据 (MDX)](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|介绍如何使用 MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) 语句检索适用于多维数据源中的某个单元的源数据行集。|  
+|[使用 RollupChildren 函数 (MDX)](mdx-data-manipulation-rollupchildren-function.md)|讨论 MDX [RollupChildren](/sql/mdx/rollupchildren-mdx)的影响
+|[理解传递顺序和求解次序 (MDX)](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|详细说明求解次序的概念，并介绍了此功能如何影响 MDX 表达式、语句和脚本。|  
 
 <!-- ??
 

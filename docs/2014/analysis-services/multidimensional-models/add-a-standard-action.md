@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077473"
 ---
 # <a name="add-a-standard-action"></a>添加标准操作
@@ -34,7 +34,7 @@ ms.locfileid: "66077473"
         |---------------------------------------------|---------------------------------------------------|  
         |属性成员|唯一有效的选择是单个属性层次结构。 该操作的目标类型将是出现的属性的所有成员（也就是说，该操作也将适用于用户定义的层次结构）。|  
         |单元|所有单元是可用的唯一选择。 如果您选择 **“单元”** 作为目标类型，则可以在 **“条件”** 中键入一个表达式，以便限制操作与之关联的单元。|  
-        |Cube|CURRENTCUBE 是唯一可用选择。 该操作与当前多维数据集相关联。|  
+        |多维数据集|CURRENTCUBE 是唯一可用选择。 该操作与当前多维数据集相关联。|  
         |维度成员|选择单个维度。 该操作将与维度的所有成员相关联。|  
         |层次结构|选择单个层次结构。 该操作将仅与层次结构对象相关联。 只有在其 **AttributeHierarchyEnabled** 和 **AttributeHierarchyVisible** 属性设置为 **True**后，属性层次结构才出现在列表中。|  
         |层次结构成员|选择单个层次结构。 该操作将与所选层次结构的所有成员相关联。 只有在其 **AttributeHierarchyEnabled** 和 **AttributeHierarchyVisible** 属性设置为 **True**后，属性层次结构才出现在列表中。|  
@@ -63,7 +63,7 @@ ms.locfileid: "66077473"
   
         |选项|说明|  
         |------------|-----------------|  
-        |交互|该操作由用户交互触发。|  
+        |Interactive (交互)|该操作由用户交互触发。|  
         |Batch|该操作将作为批处理操作运行。|  
         |处于打开状态|在用户打开多维数据集时该操作运行。|  
   

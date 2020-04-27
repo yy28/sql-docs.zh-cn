@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079428"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI（多维数据集设计器）（Analysis Services - 多维数据）
@@ -37,7 +37,7 @@ ms.locfileid: "66079428"
   
 |窗格|定义|  
 |----------|----------------|  
-|**工具栏**|在窗体视图和浏览器视图中使用工具栏可以执行此选项卡上的常规操作。有关此窗格的详细信息，请参阅[Toolbar &#40;Kpi "选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
+|**Toolbar**|在窗体视图和浏览器视图中使用工具栏可以执行此选项卡上的常规操作。有关此窗格的详细信息，请参阅[Toolbar &#40;Kpi "选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**KPI 组织程序**|在窗体视图中使用 **“KPI 组织程序”** 窗格可以按有序的格式显示多维数据集中包含的 KPI。 有关此窗格的详细信息，请参阅 [KPI 组织程序（“KPI”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**计算工具**|使用窗体视图中的 **“计算工具”** 窗格，可以显示可用于多维数据集的元数据、函数和工具。 有关此窗格的详细信息，请参阅[计算工具（“KPI”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**KPI 窗体编辑器**|在窗体视图中使用“KPI 窗体编辑器”窗格可以编辑多维数据集中包含的 KPI。 有关此窗格的详细信息，请参阅 [KPI 窗体编辑器（“KPI”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  

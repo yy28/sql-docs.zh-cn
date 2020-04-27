@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068808"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>设置聚合选项（聚合设计向导）
@@ -35,10 +35,10 @@ ms.locfileid: "66068808"
  **不设计聚合(0%)**  
  指定聚合设计不包含聚合。 使用此选项可以清除分区、度量值组或多维数据集的现有聚合设计。  
   
- **开始**  
+ **Start**  
  启动聚合设计进程。  
   
- **Stop**  
+ **停止**  
  结束聚合设计进程。  
   
  **重置**  

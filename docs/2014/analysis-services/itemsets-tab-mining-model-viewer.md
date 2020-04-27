@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079562"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>“项集”选项卡（挖掘模型查看器）
   可以使用 **“项集”** 窗格查看关联规则挖掘模型包含的频繁项集。 由于关联模型可包含多个项集，因此，查看器中提供了一些控件，帮助您筛选在查看器中显示的项集。  
   
- **有关详细信息：** [microsoft 关联算法](data-mining/microsoft-association-algorithm.md)、[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **有关详细信息：** [Microsoft 关联算法](data-mining/microsoft-association-algorithm.md)、[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  

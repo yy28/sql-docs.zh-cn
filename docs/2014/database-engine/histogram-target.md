@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064703"
 ---
 # <a name="histogram-target"></a>直方图目标
@@ -53,7 +53,7 @@ ms.locfileid: "66064703"
   
  等待类型值可以划分为三个槽，具有以下值和槽计数：  
   
-|值|槽计数|  
+|Value|槽计数|  
 |-----------|----------------|  
 |file_io|2|  
 |网络|2|  
@@ -103,8 +103,8 @@ WHERE xe.name = 'session_name'
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 扩展事件目标](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [sys. dm_xe_session_targets &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [&#40;Transact-sql&#41;创建事件会话](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

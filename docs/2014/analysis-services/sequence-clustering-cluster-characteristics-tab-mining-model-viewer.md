@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069169"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类特征”选项卡（挖掘模型查看器）
-  
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类特征”** 选项卡提供了定义序列分类的特征的详细列表。 这些特征可包括简单属性-值对以及状态间的转换。  
   
  可以使用此顺序分析和聚类分析模型视图，来深化到分类内容并查看代表分类的序列。  
   
- **有关详细信息：** [microsoft 顺序分析和聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)、[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **有关详细信息，请参阅 ** [Microsoft 顺序分析和聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)和[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -37,7 +36,7 @@ ms.locfileid: "66069169"
  **查看器**  
  选择用于浏览选定挖掘模型的查看器。 您可以使用自定义查看器或 **“Microsoft 一般内容树查看器”**。 还可以使用插件查看器（如果有）。  
   
- **群集**  
+ **聚集**  
  选择要查看的分类。  
   
  **群集>\<的特征**  
@@ -45,11 +44,11 @@ ms.locfileid: "66069169"
   
  例如，在基于市场篮分析的顺序分析和聚类分析模型中，一个分类可以让客户选择销售项，然后在不再购买其他项的情况下结束事务（这是此模型最主要的特点）。 在试图分析服务器失败的顺序分析和聚类分析模型中，分类的主要特征可能是一系列高频率错误事件。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**变量**|此列指示特征是一个值还是一个转换。<br /><br /> 如果特征是一个值，则 "**变量**" 列包含属性名称。<br /><br /> 如果特征表示状态转换，则 "**变量**" 列会包含文本 "转换"。|  
 |**值**|此列的值取决于特征是一个简单属性-值对，还是一个表示项或事件的常见序列的状态转换。<br /><br /> 如果特征是一个值，则 "**值**" 列会包含状态。<br /><br /> 如果特征表示状态转换，则 "**值**" 列包含状态转换的说明。|  
-|**发生**|该列会显示一个栏，用于指示此特征（简单属性-值对或某些状态组合）是当前分类的成员的相对概率。<br /><br /> 可以将鼠标悬停在该栏的上方，来显示特征的频率值。|  
+|**概率**|该列会显示一个栏，用于指示此特征（简单属性-值对或某些状态组合）是当前分类的成员的相对概率。<br /><br /> 可以将鼠标悬停在该栏的上方，来显示特征的频率值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

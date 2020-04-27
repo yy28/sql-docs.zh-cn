@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060878"
 ---
 # <a name="configure-a-foreach-loop-container"></a>配置 Foreach 循环容器
@@ -65,14 +65,14 @@ ms.locfileid: "66060878"
   
     -   若要使用 Foreach SMO 枚举器，请选择一个现有的 ADO.NET 连接，或在 **“连接”** 列表中，单击 **“新建连接”** ，然后键入需要的字符串或单击 **“浏览”**。 如果选择单击 **“浏览”**，则请在 **“选择 SMO 枚举”** 对话框中，选择要枚举的对象类型和枚举类型，然后单击 **“确定”**。  
   
-6.  也可单击“集合”页上的“表达式”文本框中的浏览按钮 (…) 来创建可用于更新属性值的表达式************。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
+6.  还可以单击 "**集合**" 页上 "**表达式**" 文本框中的浏览按钮 **（...）** ，以创建用于更新属性值的表达式。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
   
     > [!NOTE]  
-    >  在“属性”**** 列表中列出的属性因枚举器而异。  
+    >   在 **“属性”** 列表中列出的属性因枚举器而异。  
   
 7.  也可以单击 **“变量映射”** ，将对象属性映射到集合值，然后进行下列操作：  
   
-    1.  在“变量”**** 列表中选择变量，或单击 **“新建变量”>\<** 创建新的变量。  
+    1.  在 "**变量**" 列表中，选择变量，或单击 " ** \<新建变量">** 创建新变量。  
   
     2.  如果要添加新变量，那么请在 **“添加变量”** 对话框中设置该变量的属性，然后单击 **“确定”**。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66060878"
   
 8.  也可以单击 **“表达式”** ，然后在 **“表达式”** 页上，为 Foreach 循环容器的属性创建属性表达式。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
   
-9. 单击“确定”。   
+9. 单击" **确定**"。  
   
 ## <a name="see-also"></a>另请参阅  
  [Foreach 循环容器](control-flow/foreach-loop-container.md)  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079622"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重命名 Analysis Services 实例
@@ -28,8 +28,7 @@ ms.locfileid: "66079622"
 > [!IMPORTANT]  
 >  重命名该实例时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具将以提升的权限运行，更新与该实例关联的 Windows 服务名称、安全帐户和注册表项。 为确保执行这些操作，请务必以本地系统管理员身份运行此工具。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具不会修改为原始实例创建的程序文件夹。 请不要修改该程序文件夹名称以便与要重命名的实例匹配。 更改程序文件夹名称会妨碍安装程序修复或卸载安装软件。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具不会修改为原始实例创建的程序文件夹。 请不要修改该程序文件夹名称以便与要重命名的实例匹配。 更改程序文件夹名称会妨碍安装程序修复或卸载安装软件。  
   
 > [!NOTE]  
 >  群集环境中不支持 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具。  
@@ -58,7 +57,7 @@ ms.locfileid: "66079622"
   
      如果您使用虚拟帐户来设置服务，则需要更新数据库登录名或文件权限。 虚拟帐户基于实例名称，所以如果您将该实例重命名，虚拟帐户也会同时更新。 这意味着您为之前实例创建的所有以前的登录名或权限都不再有效。  
   
-     下例对此进行了说明。 假设你使用默认虚拟帐户将表格模式服务器安装为名为 "表格" 的实例，从而导致以下配置：  
+     下面的示例进行了这方面的演示。 假设你使用默认虚拟帐户将表格模式服务器安装为名为 "表格" 的实例，从而导致以下配置：  
   
     1.  实例名称 = \<服务器> \tabular  
   

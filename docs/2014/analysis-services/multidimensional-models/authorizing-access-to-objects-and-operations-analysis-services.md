@@ -20,20 +20,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077015"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>授予对对象和操作的访问权限 (Analysis Services)
-  非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员创建这些数据库角色，授予对[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象的读取或读/写权限，然后将[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组分配给每个角色。  
+  非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员创建这些数据库角色，从而授予对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的读取或读/写权限，然后向每个角色分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过将与用户或组所属的每个数据库角色关联的权限相结合，确定特定 Windows 用户或组的有效权限。 因此，如果一个数据库角色没有授予用户或组对维度、度量值或属性的查看权限，但另一个数据库角色授予了该用户或组此项权限，则该用户或组将有权查看对象。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 通过将与用户或组所属的每个数据库角色关联的权限组合起来，以此确定特定 Windows 用户或组的有效权限。 因此，如果一个数据库角色没有授予用户或组对维度、度量值或属性的查看权限，但另一个数据库角色授予了该用户或组此项权限，则该用户或组将有权查看对象。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器管理员角色的成员和具有“完全控制”（管理员）权限的数据库角色成员可以访问数据库中的所有数据和元数据，并且查看特定对象时无需额外权限。 而且，不能拒绝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器角色的成员访问任何数据库中任何对象，也不能拒绝在数据库中具有“完全控制”（管理员）权限的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库角色的成员访问该数据库中的任何对象。 可通过具有较少权限的单独角色对专门的管理操作（如处理）进行授权。 有关详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器管理员角色的成员和具有“完全控制”（管理员）权限的数据库角色成员可以访问数据库中的所有数据和元数据，并且查看特定对象时无需额外权限。 而且，不能拒绝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器角色的成员访问任何数据库中任何对象，也不能拒绝在数据库中具有“完全控制”（管理员）权限的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库角色的成员访问该数据库中的任何对象。 可通过具有较少权限的单独角色对专门的管理操作（如处理）进行授权。 有关详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
   
 ## <a name="list-roles-defined-for-your-database"></a>列出为你的数据库所定义的角色  
  管理员可以在 SQL Server Management Studio 中运行一个简单的 DMV 查询，获取在服务器上定义的全部角色的列表。  
@@ -55,7 +54,7 @@ ms.locfileid: "66077015"
   
  作为第一步，请决定谁将具有服务器级别的管理员权限。 安装过程中，安装 SQL Server 的本地管理员根据要求需指定一个或多个 Windows 账户作为 Analysis Services 服务器管理员。 服务器管理员具有对服务器的全部可能的权限，包括查看、修改和删除服务器上的任何对象，或查看关联数据的权限。 安装完成后，服务器管理员可以添加或删除账户以更改此角色的成员身份。 有关此权限级别的详细信息，请参阅[授予服务器管理员权限 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 。  
   
- **步骤2：数据库管理**  
+ **步骤 2：数据库管理**  
   
  接下来，创建了表格或多维解决方案后，将其作为数据库部署至服务器。 服务器管理员可以通过定义具有对所讨论数据库的完全控制权限的角色来委托数据库管理任务。 此角色的成员可以处理或查询该数据库中的对象，以及创建其他角色以访问数据库自身内的多维数据集、维度和其他对象。 有关详细信息，请参阅[授予数据库权限 (Analysis Services)](grant-database-permissions-analysis-services.md)。  
   
@@ -70,12 +69,11 @@ ms.locfileid: "66077015"
   
  **步骤 4（可选）：允许或拒绝访问内部多维数据集对象**  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为设置单个对象的权限提供了安全设置，其中包括数据模型中的维度成员和单元。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 和[授予单元格数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为设置单个对象的权限提供了安全设置，其中包括数据模型中的维度成员和单元。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 和[授予单元格数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)。  
   
  你还可以根据用户标识更改权限。 通常这称为动态安全，可使用 [UserName (MDX)](/sql/mdx/username-mdx) 函数实现  
   
-## <a name="best-practices"></a>最佳做法  
+## <a name="best-practices"></a>最佳实践  
  要更好地管理权限，建议采取类似于以下所述的方法：  
   
 1.  按函数（例如，dbadmin、cubedeveloper、processadmin）创建角色，这样，维护这些角色的任何人都可以一眼看出角色所允许的权限。 正如其他地方所述，你可以在模型定义中定义角色，从而在后续解决方案的部署中保留这些角色。  

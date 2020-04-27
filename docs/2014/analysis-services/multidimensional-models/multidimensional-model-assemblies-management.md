@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073528"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
@@ -73,22 +73,20 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  为了保持对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]早期版本的向后兼容，下面的语法也可以接受：  
   
- *AssemblyName*！*FullClassName*！*ProcedureName*（*Argument1*， *Argument2*，...）  
+ *AssemblyName*!*FullClassName*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
  如果 COM 库支持多个接口，则接口 ID 还可用于解析过程名称，如下所示：  
   
- *AssemblyName*！*InterfaceID*！*ProcedureName*（*Argument1*， *Argument2*，...）  
+ *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
 ## <a name="security"></a>安全性  
  程序集的安全性基于 .NET Framework 安全模式，这是一个代码访问安全模式。 .NET Framework 支持代码访问安全机制，此机制假设：运行时可承载完全可信和部分可信的代码。 .NET Framework 代码访问安全性所保护的资源通常由要求具有相应权限才能访问资源的托管代码所包装。 仅当调用堆栈中的所有调用方（在程序集层）均具有相应资源权限时，此权限要求才得到满足。  
   
  对于程序集，执行权限随 `PermissionSet` 对象的 `Assembly` 属性传递。 托管代码接收的权限由有效的安全策略确定。 非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主环境中已有三个有效的策略级别：企业、计算机和用户。 代码接收的有效权限列表由这三个级别获得的权限交集所确定。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]承载 CLR 时向其提供宿主级别的安全策略级别;此策略是在始终有效的三个策略级别下的附加策略级别。 会为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建的每个应用程序域设置此策略。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如果是 CLR 的宿主，它将为其提供宿主级别的安全策略级别，此策略是低于始终有效的三个策略级别的附加策略级别。 会为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建的每个应用程序域设置此策略。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主级别策略组合了用于系统程序集的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定策略和用于用户程序集的用户指定策略。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主策略的用户指定部分基于程序集所有者，此所有者将为每个程序集指定三个权限存储桶中的一个：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主级别策略组合了用于系统程序集的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定策略和用于用户程序集的用户指定策略。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主策略的用户指定部分基于程序集所有者，此所有者将为每个程序集指定三个权限存储桶中的一个：  
   
 |权限设置|说明|  
 |------------------------|-----------------|  
@@ -96,8 +94,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |`ExternalAccess`|提供和 `Safe` 设置相同的访问权限，以及访问外部系统资源的附加功能。 此权限存储桶无法保证安全性（尽管有可能保证这种情况的安全），但可以保证可靠性。|  
 |`Unsafe`|无限制。 对运行于此权限集下的托管代码无法提供安全性或可靠性保证。 任何权限，甚至管理员提供的自定义权限都将授予在此信任级别运行的代码。|  
   
- 当 CLR 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]承载时，基于堆栈审核的权限检查在本机 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 代码的边界停止。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程序集中的任何托管代码始终属于前面列出的三种权限类别中的一种。  
+ 当 CLR 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]承载时，基于堆栈审核的权限检查在本机 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 代码的边界停止。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程序集中的任何托管代码始终属于前面列出的三种权限类别中的一种。  
   
  COM（或非托管）程序集例程不支持 CLR 安全模式。  
   
@@ -108,12 +105,10 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   如果某个中间 EXECUTE AS 更改了执行上下文，使之不再是原始调用方的上下文，则访问外部资源的尝试将失败。  
   
- 
-  `ImpersonationMode` 属性可设置为 `ImpersonateCurrentUser` 或 `ImpersonateAnonymous`。 默认设置 `ImpersonateCurrentUser` 在当前用户的网络登录帐户下运行程序集。 如果使用`ImpersonateAnonymous`设置，则执行上下文对应于服务器上 IUSER_*servername*的 Windows 登录用户帐户。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
+ `ImpersonationMode` 属性可设置为 `ImpersonateCurrentUser` 或 `ImpersonateAnonymous`。 默认设置 `ImpersonateCurrentUser` 在当前用户的网络登录帐户下运行程序集。 如果使用`ImpersonateAnonymous`设置，则执行上下文对应于服务器上 IUSER_*servername*的 Windows 登录用户帐户。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
   
 ### <a name="application-domains"></a>应用程序域  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不直接显示应用程序域。 由于一组程序集运行于同一个应用程序域中，因此应用程序域可以在执行期间使用 .NET Framework 中的 `System.Reflection` 命名空间或以其他方式发现彼此，并且可以用后期绑定的方式调用这些程序集。 此类调用将受到基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 授权的安全性所使用的权限检查的约束。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不直接显示应用程序域。 由于一组程序集运行于同一个应用程序域中，因此应用程序域可以在执行期间使用 .NET Framework 中的 `System.Reflection` 命名空间或以其他方式发现彼此，并且可以用后期绑定的方式调用这些程序集。 此类调用将受到基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 授权的安全性所使用的权限检查的约束。  
   
  不应依赖于在同一应用程序域中查找程序集，因为应用程序域边界和每个域中的程序集都是由此实现而定义的。  
   

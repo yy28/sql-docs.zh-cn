@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079674"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server 代理来计划 SSAS 管理任务
@@ -24,7 +24,7 @@ ms.locfileid: "66079674"
   
  本主题是一个演练，演示了如何使用 SQL Server 代理通过两种方式运行 XMLA 脚本。 第一个示例演示如何计划对单个维度的处理。 第二个示例演示如何将处理任务并入按计划运行的单个脚本。 若要完成此演练，您需要满足下列先决条件。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  必须安装 SQL Server 代理服务。  
   
  默认情况下，作业在服务帐户下运行。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中，SQL Server 代理的默认帐户为 NT Service\SQLAgent $\<instancename>。 若要执行备份或处理任务，此帐户必须是 Analysis Services 实例的系统管理员。 有关详细信息，请参阅[&#40;Analysis Services&#41;授予服务器管理员权限](grant-server-admin-rights-to-an-analysis-services-instance.md)。  
@@ -34,10 +34,9 @@ ms.locfileid: "66079674"
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>示例 1：处理计划任务中的维度  
  此示例演示如何创建和计划处理维度的作业。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计划任务是嵌入在 SQL Server 代理作业中的 XMLA 脚本。 该作业经过计划，按照所需时间和频率运行。 由于 SQL Server 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一部分，因此要同时使用数据库引擎和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来创建和计划管理任务。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计划任务是嵌入在 SQL Server 代理作业中的 XMLA 脚本。 该作业经过计划，按照所需时间和频率运行。 由于 SQL Server 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一部分，因此要同时使用数据库引擎和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来创建和计划管理任务。  
   
-###  <a name="bkmk_CreateScript"></a>创建用于处理 SQL Server 代理作业中的维度的脚本  
+###  <a name="create-a-script-for-processing-a-dimension-in-a-sql-server-agent-job"></a><a name="bkmk_CreateScript"></a>创建用于处理 SQL Server 代理作业中的维度的脚本  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 打开数据库文件夹并查找维度。 右键单击维度，然后选择“处理”****。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66079674"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a>创建和计划维度处理作业  
+###  <a name="create-and-schedule-the-dimension-processing-job"></a><a name="bkmk_ProcessJob"></a>创建和计划维度处理作业  
   
 1.  连接到数据库引擎实例，然后打开对象资源管理器。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66079674"
   
 6.  在 **“新建作业步骤”** 对话框的 **“步骤名称”** 中，输入步骤名称。  
   
-7.  在“服务器”**** 中，为 ** 的默认实例键入“localhost”**[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，并为命名实例键入“localhost”**\\**\<实例名称**>。  
+7.  在“服务器”**** 中，为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的默认实例键入“localhost”****，并为命名实例键入“localhost”\\****\<实例名称**>。  
   
      如果您将从远程计算机运行作业，请使用将运行作业的服务器和实例的名称。 对于默认实例\<，请使用格式*服务器名称*>， \<为命名实例使用*服务器名称*>\\<*实例名称*>。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66079674"
   
 9. 在“命令”**** 中，右键单击并选择“粘贴”****。 上一步中生成的 XMLA 脚本应显示在命令窗口中。  
   
-10. 单击“确定”。   
+10. 单击" **确定**"。  
   
 11. 在 **“选择页”** 下，单击 **“计划”**，然后单击 **“新建”**。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66079674"
 ## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>示例 2：批处理计划任务中的维度和分区  
  此示例中的过程演示如何创建和计划一个作业，该作业将批处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库维度并处理依赖于聚合维度的多维数据集分区。 有关批处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的详细信息，请参阅[批处理 (Analysis Services)](../multidimensional-models/batch-processing-analysis-services.md)。  
   
-###  <a name="bkmk_BatchProcess"></a>创建用于批处理 SQL Server 代理作业中的维度和分区的脚本  
+###  <a name="create-a-script-for-batch-processing-a-dimension-and-partition-in-a-sql-server-agent-job"></a><a name="bkmk_BatchProcess"></a>创建用于批处理 SQL Server 代理作业中的维度和分区的脚本  
   
 1.  通过使用相同的数据库，展开“维度”****，右键单击“客户”**** 维度，然后选择“处理”****。  
   
@@ -184,7 +183,7 @@ ms.locfileid: "66079674"
   
 12. 此步骤会将 XMLA 脚本复制到 Windows 剪贴板中。 可以将 XMLA 脚本保留在剪贴板中、将其保存到文件中或将其粘贴到记事本或其他文本编辑器中。  
   
-###  <a name="bkmk_Scheduling"></a>创建和计划批处理作业  
+###  <a name="create-and-schedule-the-batch-processing-job"></a><a name="bkmk_Scheduling"></a>创建和计划批处理作业  
   
 1.  连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，然后打开对象资源管理器。  
   
@@ -206,7 +205,7 @@ ms.locfileid: "66079674"
   
 10. 在“命令”**** 中，右键单击并选择“粘贴”****。  
   
-11. 单击“确定”。   
+11. 单击" **确定**"。  
   
 12. 在 **“计划”** 页上，单击 **“新建”**。  
   

@@ -16,19 +16,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060499"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>配置 Integration Services 服务（SSIS 服务）
     
 > [!IMPORTANT]  
->  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]支持服务以便与的早期版本向后兼容[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
+>  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用某个配置文件中的设置。 默认情况下，此配置文件的名称为 Msdtssrvr.ini.xml，文件位于文件夹%ProgramFiles%\Microsoft SQL Server\120\dts\binn。中。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用某个配置文件中的设置。 默认情况下，此配置文件的名称为 Msdtssrvr.ini.xml，文件位于文件夹%ProgramFiles%\Microsoft SQL Server\120\dts\binn。中。  
   
  通常，您不必对此配置文件进行任何更改，也不必更改文件的默认位置。 但是，如果包存储在 [!INCLUDE[ssDE](../includes/ssde-md.md)]的某个命名实例或远程实例中，或存储在 [!INCLUDE[ssDE](../includes/ssde-md.md)]的多个实例中，则必须修改该配置文件。 此外，如果您将配置文件移到默认位置之外的位置，则必须修改指定该文件位置的注册表项。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66060499"
   
 -   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务所管理的文件系统中的包位于%ProgramFiles%\Microsoft SQL Server\120\DTS\Packages. 中。  
   
- 此配置文件还指定哪个 msdb 数据库包含将由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理的包。 默认情况下，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为管理[!INCLUDE[ssDE](../includes/ssde-md.md)]实例的 msdb 数据库中的包，该实例与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 同时安装。 如果未同时安装[!INCLUDE[ssDE](../includes/ssde-md.md)]实例，则 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务可配置为管理本地默认[!INCLUDE[ssDE](../includes/ssde-md.md)]实例的 msdb 数据库中的包。  
+ 此配置文件还指定哪个 msdb 数据库包含将由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理的包。 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的 msdb 数据库中的包，该实例与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]同时安装。 如果未同时安装 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例，则 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务可配置为管理本地默认 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例的 msdb 数据库中的包。  
   
 ### <a name="default-configuration-file-example"></a>默认配置文件示例  
  下面的示例显示了指定以下设置的默认配置文件：  
@@ -77,8 +76,7 @@ ms.locfileid: "66060499"
  可以通过修改配置文件来达到以下目的：允许包在服务停止时继续运行；在对象资源管理器中显示其他根文件夹；或者指定文件系统中的一个不同文件夹或其他文件夹由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务进行管理。 例如，可以创建 `SqlServerFolder` 类型的其他根文件夹来管理其他[!INCLUDE[ssDE](../includes/ssde-md.md)]实例的 msdb 数据库中的包。  
   
 > [!NOTE]  
->  某些字符在文件夹名称中无效。 文件夹名称的有效字符由 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类 **System.IO.Path** 和 **GetInvalidFilenameChars** 字段决定。 
-  **GetInvalidFilenameChars** 字段提供了不能在传递给 **Path** 类成员的路径字符串参数中指定的特定于平台的字符数组。 无效的字符集会因文件系统的不同而不同。 通常，无效字符为引号 (")、小于号 (<) 字符和竖线 (|) 字符。  
+>  某些字符在文件夹名称中无效。 文件夹名称的有效字符由 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类 **System.IO.Path** 和 **GetInvalidFilenameChars** 字段决定。 **GetInvalidFilenameChars** 字段提供了不能在传递给 **Path** 类成员的路径字符串参数中指定的特定于平台的字符数组。 无效的字符集会因文件系统的不同而不同。 通常，无效字符为引号 (")、小于号 (<) 字符和竖线 (|) 字符。  
   
  但是，您必须修改配置文件，才能管理存储在 [!INCLUDE[ssDE](../includes/ssde-md.md)]的某个命名实例或远程实例中的包。 如果不更新配置文件，则无法在 **中使用** 对象资源管理器 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 来查看存储在该命名实例或远程实例的 msdb 数据库中的包。 如果尝试使用 **对象资源管理器** 查看这些包，将收到以下错误消息：  
   
@@ -124,9 +122,8 @@ ms.locfileid: "66060499"
   
   
 > [!CAUTION]  
->  如果注册表编辑不当，可能会导致严重问题并需要重新安装操作系统。 [!INCLUDE[msCoName](../includes/msconame-md.md)]无法保证可以解决因注册表编辑不当而导致的问题。 编辑注册表之前，请备份所有重要数据。 有关如何备份、还原和编辑注册表的信息，请参阅 [!INCLUDE[msCoName](../includes/msconame-md.md)] 知识库文章 [Microsoft Windows 注册表说明](https://support.microsoft.com/kb/256986)。  
+>  如果注册表编辑不当，可能会导致严重问题并需要重新安装操作系统。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 不能保证可以解决因注册表编辑不当而导致的问题。 编辑注册表之前，请备份所有重要数据。 有关如何备份、还原和编辑注册表的信息，请参阅 [!INCLUDE[msCoName](../includes/msconame-md.md)] 知识库文章 [Microsoft Windows 注册表说明](https://support.microsoft.com/kb/256986)。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务在启动时加载配置文件。 对注册表项进行任何更改都需要重新启动服务。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务在启动时加载配置文件。 对注册表项进行任何更改都需要重新启动服务。  
   
   

@@ -18,20 +18,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074959"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授予维度的权限 (Analysis Services)
   维度安全用于设置维度对象（而非其数据）的权限。 通常，允许或拒绝访问处理操作是在设置维度权限时的主要目标。  
   
- 但是，也许你的目标不是控制处理操作，而是控制维度的数据访问或其包含的属性和层次结构。 例如，具有不同地区销售部门的公司可能想要部门外人员不得接触销售绩效信息。 为了允许或拒绝不同组成人员访问某部分的维度数据，可以对属性和维度成员设置权限。 请注意，你无法拒绝对单个维度对象本身的访问，仅可拒绝对其数据的访问。 如果近期目标是允许或拒绝访问维度中的成员（包括对单个属性结构层次的访问权限），请参阅 [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) 了解更多信息。  
+ 但是，也许你的目标不是控制处理操作，而是控制维度的数据访问或其包含的属性和层次结构。 例如，具有不同地区销售部门的公司可能想要部门外人员不得接触销售绩效信息。 为了允许或拒绝不同组成人员访问某部分的维度数据，可以对属性和维度成员设置权限。 请注意，你无法拒绝对单个维度对象本身的访问，仅可拒绝对其数据的访问。 如果近期目标是允许或拒绝访问维度中的成员（包括对单个属性结构层次的访问权限），请参阅 [授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 了解更多信息。  
   
  本主题的剩余部分包含对维度对象本身设置的权限，其中包括：  
   
--   读取或读/写权限（只可从读取或读/写选择；指定“无”不是选项）。 如上所述，如果目标是限制对维度数据的访问权限，请参阅 [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) 了解详细信息。  
+-   读取或读/写权限（只可从读取或读/写选择；指定“无”不是选项）。 如上所述，如果目标是限制对维度数据的访问权限，请参阅 [授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 了解详细信息。  
   
 -   处理权限（当方案要求需要对单独的对象设置自定义权限的处理策略时，执行此项）  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66074959"
   
      默认情况下，权限设置为“读取” ****。  
   
-     尽管“读/写”**** 权限可用，但我们推荐不要使用此权限。 **读/写**用于已弃用的维度写回方案。 请参阅[SQL Server 2014 中不推荐使用的 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md)。  
+     尽管“读/写”**** 权限可用，但我们推荐不要使用此权限。 “读/写”**** 用于维度写回情形下，而这已不推荐使用。 请参阅[SQL Server 2014 中不推荐使用的 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md)。  
   
      此外，还可以对单独的维度对象设置“读取定义” **** 和“处理” **** 权限，前提是这些权限还未在数据库级别进行设置。 请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md) 和[授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 获取详细信息。  
   
@@ -72,6 +72,6 @@ ms.locfileid: "66074959"
  [&#40;Analysis Services 授予多维数据集或模型权限&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [授予对数据挖掘结构和模型的权限 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [授予对维度数据的自定义访问 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授予对单元数据的自定义访问权限 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076943"
 ---
 # <a name="batch-processing-analysis-services"></a>批处理 (Analysis Services)
@@ -28,11 +28,11 @@ ms.locfileid: "66076943"
   
  本主题包含下列部分：  
   
- [在 SQL Server Data Tools 中执行批处理](#bkmk_ssdt)  
+ [SQL Server Data Tools 中的批处理](#bkmk_ssdt)  
   
  [在 Management Studio 中使用 XMLA 执行批处理](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a>SQL Server Data Tools 中的批处理  
+##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a> 在 SQL Server Data Tools 中执行批处理  
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中处理对象前，必须部署包含对象的项目。 有关详细信息，请参阅[部署 Analysis Services 项目 (SSDT)](deploy-analysis-services-projects-ssdt.md)。  
   
 1.  打开 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
@@ -53,9 +53,9 @@ ms.locfileid: "66076943"
   
 9. 在 **“处理选项”** 下，进行下列设置：  
   
-    -   "**处理顺序**" 设置为 "**顺序**"，而 "**事务模式**" 设置为**一个事务**。  
+    -   将 **“处理顺序”** 设置为 **“按顺序”**，将 **“事务模式”** 设置为 **“一项事务”**。  
   
-    -   **写回表选项**设置为 "**使用现有**"。  
+    -   **“写回表选项”** 设置为 **“使用现有的”**。  
   
     -   在 **“受影响的对象”** 下，选中 **“处理受影响的对象”** 复选框。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66076943"
   
 14. 单击 **“处理对象”** 屏幕上的 **“关闭”** 。  
   
-##  <a name="bkmk_xmla"></a>在 Management Studio 中使用 XMLA 进行批处理  
+##  <a name="batch-processing-using-xmla-in-management-studio"></a><a name="bkmk_xmla"></a>在 Management Studio 中使用 XMLA 进行批处理  
  您可以创建一个执行批处理的 XMLA 脚本。 首先在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中为每个对象生成一个 XMLA 脚本，然后将这些脚本并入以交互方式运行或在计划任务内运行的一个 XMLA 查询。  
   
  有关分步说明，请参阅 **使用 SQL Server 代理来计划 SSAS 管理任务** 中的 [示例 2](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  

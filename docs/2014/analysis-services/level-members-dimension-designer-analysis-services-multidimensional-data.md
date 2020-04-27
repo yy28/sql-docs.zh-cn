@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078113"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>级别和成员（“浏览器”选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -40,7 +40,7 @@ ms.locfileid: "66078113"
  **当前级别**  
  显示当前在“树”**** 中所选成员所属的级别。  
   
- **树**  
+ **视图**  
  显示当前所选的层次结构和语言的成员。  
   
  如果在工具栏窗格的 **“成员属性”** 选项中选择了成员属性，那么每个成员的属性将显示为一列。  
@@ -119,7 +119,7 @@ ms.locfileid: "66078113"
  **折叠成员**  
  折叠“树”**** 中所选的成员。  
   
- **回**  
+ **写回**  
  选择此项将启用写回模式。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061104"
 ---
 # <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
@@ -25,7 +25,7 @@ ms.locfileid: "66061104"
   
  您还可以在 catalog.catalog_property 视图中查看目录属性，并且通过使用 catalog.configure_catalog 存储过程设置属性。 有关详细信息，请参阅 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)和 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
   
- 有关如何创建 SSISDB 目录的信息，请参阅[创建 SSIS 目录](catalog/ssis-catalog.md)。  
+ 有关如何创建 SSISDB 目录的信息，请参阅 [创建 SSIS 目录](catalog/ssis-catalog.md)。  
   
  **您希望做什么？**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66061104"
   
 -   [配置选项](#options)  
   
-##  <a name="open_dialog"></a>打开 "目录属性" 对话框  
+##  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a>打开 "目录属性" 对话框  
   
 1.  打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
@@ -41,14 +41,14 @@ ms.locfileid: "66061104"
   
 3.  在对象资源管理器中，展开“Integration Services”**** 节点，右键单击“SSISDB”****，然后单击“属性”****。  
   
-##  <a name="options"></a> 配置选项  
+##  <a name="configure-the-options"></a><a name="options"></a>配置选项  
   
 ### <a name="options"></a>选项  
  下表描述该对话框中的某些属性以及 catalog.catalog_property 视图中的相应属性。  
   
 |属性名称（“目录属性”对话框）|属性名称（catalog.catalog_property 视图）|说明|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|加密算法名称|ENCRYPTION_CLEANUP_ENABLED|指定用于对于目录中的敏感参数值进行加密的加密类型。 下面是可能的值：<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** （默认值）|  
+|加密算法名称|ENCRYPTION_CLEANUP_ENABLED|指定用于对于目录中的敏感参数值进行加密的加密类型。 下面是可能的值：<br /><br /> **3DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** （默认值）|  
 |验证超时（秒）|VALIDATION_TIMEOUT|指定项目验证或包验证可运行的最大秒数，超过该秒数后运行将停止。 默认值为 300 秒。<br /><br /> 执行验证是一个异步操作。 项目或包越大，验证所用的时间就会越长。<br /><br /> 有关验证项目和包的信息，请参阅 [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md)。|  
 |定期清理日志|OPERATION_CLEANUP_ENABLED|将该属性设置为 True 可指示 SQL Server 代理作业“操作清除”运行。 否则，将该属性设置为 False。|  
 |保持期(天)|RETENTION_WINDOW|指定可允许操作数据的最长时间（天）。 早于该指定天数的数据将由 SQL 代理作业“操作清除”删除。|  

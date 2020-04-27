@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063101"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性关系图（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -60,7 +60,7 @@ ms.locfileid: "66063101"
 > [!NOTE]  
 >  如果单击此属性，维度设计器会将属性关系图中的形状返回到该设计器使用的默认布局中。  
   
- **Zoom**  
+ **缩放**  
  显示可用的缩放选项列表。  
   
 ### <a name="attribute-shortcut-menu"></a>属性快捷菜单  

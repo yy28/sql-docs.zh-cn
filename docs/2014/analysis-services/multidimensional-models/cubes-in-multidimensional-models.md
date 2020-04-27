@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076107"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多维模型中的多维数据集
@@ -35,11 +35,11 @@ ms.locfileid: "66076107"
 |-------------|-----------------|  
 |维度|[多维模型中的维度](dimensions-in-multidimensional-models.md)|  
 |度量值和度量值组|[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)|  
-|“度量值组”|[多维模型中的分区](partitions-in-multidimensional-models.md)|  
+|分区|[多维模型中的分区](partitions-in-multidimensional-models.md)|  
 |透视|[多维模型中的透视](perspectives-in-multidimensional-models.md)|  
-|层次结构|[创建用户定义的层次结构](user-defined-hierarchies-create.md)|  
+|层次结构|[创建用户定义层次结构](user-defined-hierarchies-create.md)|  
 |操作|[多维模型中的操作](actions-in-multidimensional-models.md)|  
-|关键绩效指标 (KPI)|[多维模型中的关键绩效指标 &#40;Kpi&#41;](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|关键绩效指标 (KPI)|[多维模型中的关键绩效指标 (KPI)](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |“新建命名集”|[多维模型中的计算](calculations-in-multidimensional-models.md)|  
 |翻译|[多维模型中的翻译](translations-in-multidimensional-models-analysis-services.md)|  
   

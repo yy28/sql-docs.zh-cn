@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079203"
 ---
 # <a name="lesson-11-create-partitions"></a>第 11 课：创建分区
-  在本课中，您将创建分区，以便将 Internet Sales 表划分为可独立于其他分区进行处理（刷新）的更小逻辑部分。 默认情况下，模型中包含的每个表都有一个分区，其中包含表的所有列和行。 对于 Internet Sales 表，我们希望按年份划分数据;每个表的5年的一个分区。  可以独立处理每个分区。 若要了解详细信息，请参阅[分区（SSAS 表格）](tabular-models/partitions-ssas-tabular.md)。  
+  在本课中，您将创建分区，以便将 Internet Sales 表划分为可独立于其他分区进行处理（刷新）的更小逻辑部分。 默认情况下，模型中包含的每个表都有一个分区，其中包含表的所有列和行。 对于 Internet Sales 表，我们希望按年份划分数据;每个表的5年的一个分区。  然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区（SSAS 表格）](tabular-models/partitions-ssas-tabular.md)。  
   
- 本课预计完成时间：**15 分钟**  
+ 学完本课的估计时间： **15 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
- 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，应该已完成上一课：[第 10 课：创建层次结构](lesson-9-create-hierarchies.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，应该已完成上一课： [第 10 课：创建层次结构](lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>创建分区  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66079203"
   
      本语句指定分区应包含以下行中的所有数据：对于这些行，OrderDate 对应于在 WHERE 子句中指定的 2005 日历年。  
   
-6.  单击 **“验证”**。  
+6.  单击 **“验证”** 。  
   
      请注意，此时将显示一条警告，指出某些列在源中不存在。 这是因为在[第3课：重命名列](rename-columns.md)时，在模型中将 Internet Sales 表中的这些列重命名为不同于源中相同列。  
   
@@ -150,9 +150,9 @@ ms.locfileid: "66079203"
   
      如果系统提示您输入模拟凭据，则输入您在第 2 课的第 6 步中指定的 Windows 用户名和密码。  
   
-     然后，将出现 "**数据处理**" 对话框，并显示每个分区的进程详细信息。 请注意，为每个分区传输的行数不同。 这是因为每个分区仅包括 SQL 语句的 WHERE 子句中指定的年份的那些行。 对于 2010 年份没有数据。  
+     然后，将出现 "**数据处理**" 对话框，并显示每个分区的进程详细信息。 请注意，为每个分区传输的行数不同。 这是因为，每个分区值包含您在 SQL 语句的 WHERE 子句中指定的年份的那些行。 对于 2010 年份没有数据。  
   
 ## <a name="next-steps"></a>后续步骤  
- 若要继续学习本教程，请转到下一课：[第 12 课：创建角色](lesson-11-create-roles.md)。  
+ 若要继续学习本教程，请转到下一课： [第 12 课：创建角色](lesson-11-create-roles.md)。  
   
   

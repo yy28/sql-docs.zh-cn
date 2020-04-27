@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078964"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
@@ -26,8 +26,8 @@ ms.locfileid: "66078964"
   
  本课预计完成时间：**20 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
- 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课中的任务之前，应该已完成上一课：[第1课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，应该已完成上一课： [第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>创建连接  
   
@@ -60,18 +60,18 @@ ms.locfileid: "66078964"
   
     |源名称|友好名称|  
     |-----------------|-------------------|  
-    |DimDate|Date|  
+    |DimDate|日期|  
     |DimGeography|地理位置|  
     |DimProduct|Products|  
     |DimProductCategory|产品类别|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
   
-     **不要**单击 "**完成**"。  
+     **请不要**单击“完成”****。  
   
  现在已连接到数据库，选择了要导入的表，并向表提供了友好名称，请转到下一部分：[导入之前对表数据进行筛选](#FilterData)。  
   
-##  <a name="FilterData"></a>筛选表数据  
+##  <a name="filter-the-table-data"></a><a name="FilterData"></a>筛选表数据  
  您正在从数据库中导入的 DimCustomer 表包含来自原始 SQL Server Adventure Works 数据库的数据子集。 您将从 DimCustomer 表中筛选掉不必要的某些列。 如果可能，您希望筛选掉将不使用的数据，以便节省模型使用的内存中空间。  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>导入之前对表数据进行筛选  
@@ -87,7 +87,7 @@ ms.locfileid: "66078964"
     |**SpanishOccupation**|  
     |**FrenchOccupation**|  
   
-     因为这些列的值与 Internet 销售分析无关，因此不需要导入这些列。 消除不必要的列将使您的模型变小。  
+     因为这些列的值与互联网销售分析无关，所以不需要导入这些列。 消除不必要的列将使您的模型变小。  
   
 3.  确认已选中所有其他列，然后单击“确定”****。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "66078964"
   
 4.  通过针对每个表中的以下各列清除复选框，筛选其余的表：  
   
-    |Date|  
+    |日期|  
     |----------|  
-    |**日期键**|  
+    |**DateKey**|  
     |**SpanishDayNameOfWeek**|  
     |**FrenchDayNameOfWeek**|  
     |**SpanishMonthName**|  
@@ -140,7 +140,7 @@ ms.locfileid: "66078964"
   
  既然您已预览并筛选掉了不必要的数据，您可以导入数据了。 转到下一部分： **导入选择的表和列数据**。  
   
-##  <a name="Import"></a>导入所选的表和列数据  
+##  <a name="import-the-selected-tables-and-column-data"></a><a name="Import"></a>导入所选的表和列数据  
  现在您可以导入所选数据。 向导将导入表数据以及各个表之间的关系。 将使用您指定的友好名称在模型中创建新表和列，并且不会导入您筛选掉的数据。  
   
 #### <a name="to-import-the-selected-tables-and-column-data"></a>导入所选的表和列数据  
@@ -152,7 +152,7 @@ ms.locfileid: "66078964"
     > [!TIP]  
     >  若要查看在导入的表之间自动创建的关系，请在“数据准备”**** 行上单击“详细信息”****。  
   
-2.  单击“关闭”  。  
+2.  单击“**关闭**”。  
   
      该向导将关闭并且模型设计器将可见。 每个表都已作为新的选项卡添加到模型设计器中。  
   

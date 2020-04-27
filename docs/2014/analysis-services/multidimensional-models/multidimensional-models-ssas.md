@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2839ecff951a9f1547a05b60f6957ed5976bee9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073490"
 ---
 # <a name="multidimensional-modeling-ssas"></a>多维建模 (SSAS)
@@ -26,13 +26,13 @@ ms.locfileid: "66073490"
  使用 Analysis Services 多维数据库所带来的另一个重要好处是，可与常用的 BI 报表工具（如 Excel、Reporting Services 和 PerformancePoint）以及自定义应用程序和第三方解决方案集成。  
   
 ## <a name="in-this-section"></a>本节内容  
- [&#40;SSAS&#41;的多维模型解决方案](multidimensional-model-solutions-ssas.md)  
+ [多维模型解决方案 (SSAS)](multidimensional-model-solutions-ssas.md)  
   
- [多维模型数据库 &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [多维模型数据库 (SSAS)](multidimensional-model-databases-ssas.md)  
   
  [多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)  
   
- [角色和权限 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
+ [角色和权限 (Analysis Services)](roles-and-permissions-analysis-services.md)  
   
  [用于多维模型的 Power View](power-view-for-multidimensional-models.md)  
   

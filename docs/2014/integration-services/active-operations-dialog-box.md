@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062223"
 ---
 # <a name="active-operations-dialog-box"></a>“活动操作”对话框
@@ -27,22 +27,22 @@ ms.locfileid: "66062223"
   
  **您希望做什么？**  
   
-1.  [打开 "活动操作" 对话框](#open_dialog)  
+1.  [打开“活动操作”对话框](#open_dialog)  
   
 2.  [配置选项](#options)  
   
-##  <a name="open_dialog"></a> 打开“活动操作”对话框  
+##  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a>打开 "活动操作" 对话框  
   
 1.  打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
 2.  连接 Microsoft SQL Server 数据库引擎  
   
-3.  在对象资源管理器中，展开 **Integration Services** 节点，右键单击 **SSISDB**，然后单击 **“活动操作”** 。  
+3.  在对象资源管理器中，展开 **Integration Services** 节点，右键单击 **SSISDB**，然后单击 **“活动操作”**。  
   
-##  <a name="options"></a> 配置选项  
+##  <a name="configure-the-options"></a><a name="options"></a>配置选项  
   
 ### <a name="options"></a>选项  
- 类型   
+ **类型**  
  指定操作的类型。 下面是 "**类型**" 字段的可能值以及 transact-sql `catalog.operations`视图的 "operations_type" 列中的相应值。  
   
 |||  
@@ -58,7 +58,7 @@ ms.locfileid: "66062223"
 |验证包|301|  
 |配置目录|1000|  
   
- **Stop**  
+ **停止**  
  单击以停止当前正在运行的操作。  
   
   

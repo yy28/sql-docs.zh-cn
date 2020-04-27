@@ -15,20 +15,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064632"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>浏览器（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器的 **“浏览器”** 选项卡浏览维度的维度数据和元数据。 如果为当前所选维度启用了维度写回，则使用此视图可以更改该维度的成员数据。  
   
 ## <a name="panes"></a>窗格  
- 
-  **“浏览器”** 选项卡包含以下窗格：  
+ **“浏览器”** 选项卡包含以下窗格：  
   
- [工具栏](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  使用工具栏可以执行维度设计器的“浏览器”**** 选项卡中的普通操作。  
   
  [级别和成员](level-members-dimension-designer-analysis-services-multidimensional-data.md)  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061143"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>大容量插入任务编辑器（“常规”页）
@@ -40,7 +40,7 @@ ms.locfileid: "66061143"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [大容量插入任务编辑器 &#40;连接页&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [大容量插入任务编辑器 &#40;选项 "页面&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [控制流](control-flow/control-flow.md)  
   

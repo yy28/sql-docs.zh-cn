@@ -16,24 +16,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062614"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>“分析服务器属性”对话框 (Analysis Services)
-  可以使用 ** 中的“分析服务器属性”**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框，为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例设置常规、语言/排序规则和安全设置。 通过在“对象资源管理器”中右键单击某个 ** 实例，再从上下文菜单中选择“属性”，可以显示“分析服务器属性”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]******** 对话框。 
-  **“分析服务器属性”** 对话框包含下列属性。  
+  可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“分析服务器属性”**** 对话框，为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例设置常规、语言/排序规则和安全设置。 通过在“对象资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，再从上下文菜单中选择“属性”，可以显示“分析服务器属性”************ 对话框。 **“分析服务器属性”** 对话框包含下列属性。  
   
 ## <a name="information-properties"></a>信息属性  
  使用此页可查看服务器模式、版本和兼容性级别。 每个实例均在表格或多维服务器模式下进行安装，且能够加载表格或多维模型。 如果您需要支持这两种模式，则必须安装两个实例。  
   
  **支持的兼容级别**等效于 AMO `DefaultCompatibilityLevel`中的属性。 它是只读的，且基于安装期间指定的服务器部署模式。 服务器在执行因服务器模式或版本而异的操作（如将表格数据库的备份还原到表格服务器实例上）时会检查此属性。 请不要将其与表格模型或多维模型的数据库兼容模式混淆，它们具有类似的名称和值。 此服务器属性的有效值包括：  
   
--   对于多维和数据挖掘模式， **1100**是部署模式0的默认兼容级别。  
+-   对于多维模式和数据挖掘模式，**1100** 是部署模式 0 的默认兼容级别。  
   
--   **** 对于支持表格模式或[!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]的安装，1103是部署模式1或2的默认兼容级别。  
+-   对于支持表格模式或**的安装，** 1103 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]是部署模式 1 或 2 的默认兼容级别。  
   
  在支持命名空间的客户端请求 DISCOVER_XML_METADATA 时，服务器将返回此值。 有关详细信息，请参阅 [DISCOVER_XML_METADATA 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset) 。  
   
@@ -67,28 +66,28 @@ ms.locfileid: "66062614"
 ## <a name="language-collation-properties"></a>语言排序规则属性  
  使用此页可设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的默认语言和排序规则选项。 下面的列表包含每个选项的简短说明。 有关详细信息，请参阅 [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) 。  
   
--   **Binary**用于根据为每个字符定义的位模式对数据进行排序和比较。 二进制排序顺序区分大小写，即先小写字母后大写字母，并区分重音。 这是最快的排序顺序。  
+-   **“二进制”** 用于根据为每个字符定义的位模式对数据进行排序和比较。 二进制排序顺序区分大小写，即先小写字母后大写字母，并区分重音。 这是最快的排序顺序。  
   
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将遵循字典中定义的相关语言或字母表的排序和比较规则。  
   
     > [!NOTE]  
     >  如果选择此选项，将会禁用“区分大小写”、“区分重音”、“区分假名”和“区分全半角”选项****************。  
   
--   **二进制 2**用于根据为每个字符定义的位模式对 Unicode 数据进行排序和比较。 二进制排序顺序区分大小写，即先小写字母后大写字母，并区分重音。 这是最快的排序顺序。  
+-   **“二进制 2”** 用于根据为每个字符定义的位模式对 Unicode 数据进行排序和比较。 二进制排序顺序区分大小写，即先小写字母后大写字母，并区分重音。 这是最快的排序顺序。  
   
--   "**区分大小写**" 用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分大小写字母。  
+-   “区分大小写”**** 用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分大小写字母。  
   
      如果未选择此选项， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将认为大写字母和小写字母是一样的。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]如果未选择 "**区分大小写**"，则不会定义小写字母是否根据大写字母进行排序。  
   
--   "**区分重音**" 用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分重音和非重音字符。 例如，“a”和“á”将被视为不同的字符。  
+-   “区分重音”**** 用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分重音和非重音字符。 例如，“a”和“á”将被视为不同的字符。  
   
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将字母的重音形式和非重音形式视为相同。  
   
--   "**区分假名**" 用于根据为相关语言或字母表提供的字典规则对数据进行比较，并区分日语的两种假名字符类型：平假名和片假名。  
+-   “区分假名”**** 用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分日语中的两种假名字符类型：平假名和片假名。  
   
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将平假名字符和片假名字符视为相同。  
   
--   "**区分全半角**" 用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分单字节字符（半角）与双字节字符（全角）表示的相同字符。  
+-   “区分全半角”**** 用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分以单字节字符（半角）和双字节字符（全角）表示的相同字符。  
   
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将同一字符的单字节形式和双字节形式视为相同。  
   
@@ -100,6 +99,6 @@ ms.locfileid: "66062614"
  [在 Analysis Services 中配置服务器属性](server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [角色和权限 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
- [语言和排序规则 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
+ [语言和排序规则 (Analysis Services)](languages-and-collations-analysis-services.md)  
   
   

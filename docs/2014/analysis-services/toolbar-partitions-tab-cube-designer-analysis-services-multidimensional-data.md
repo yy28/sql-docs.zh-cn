@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c64e45800b168a45a674dc74a5f192e5e9f8389
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066086"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“分区”选项卡，多维数据集设计器）（Analysis Services - 多维数据）

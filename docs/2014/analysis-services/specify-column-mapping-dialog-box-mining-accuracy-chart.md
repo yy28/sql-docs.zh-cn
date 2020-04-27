@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068423"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>“指定列映射”对话框（挖掘准确性图表）
   可以使用 **“指定列映射”** 选项卡，从外部数据源中选择表以及将列映射到数据挖掘模型。 随后即可使用外部数据测试挖掘模型的准确性并在准确性图表中显示结果。  
   
- **有关详细信息**，请[&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **有关详细信息，请参阅** [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>选项  
  **挖掘结构**  
@@ -43,7 +43,7 @@ ms.locfileid: "66068423"
  **选择事例表**  
  单击此项将打开“选择表”**** 对话框，在其中可选择数据源视图。  
   
- **注意**只有在尚未选择事例表时，才会显示此按钮。 若要启用该按钮以便可以选择其他事例表，请选择所有现有表并单击 **“删除表”**，以清除该列表。  
+ **注意** 只有在尚未选择事例表时，才会显示此按钮。 若要启用该按钮以便可以选择其他事例表，请选择所有现有表并单击 **“删除表”**，以清除该列表。  
   
  **选择嵌套表**  
  打开“选择表”**** 对话框。 只有在已选择事例表的情况下，才会显示此按钮。 如果关联的挖掘结构不包含嵌套表，则禁用此按钮。  

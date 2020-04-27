@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075229"
 ---
 # <a name="specifying-processing-options"></a>指定处理选项
@@ -29,7 +29,7 @@ ms.locfileid: "66075229"
 ## <a name="reviewing-the-processing-options-for-deployment"></a>检查部署的处理选项  
  D \<*文件> 中存储的*配置设置如下所示：  
   
--   **处理方法**此设置控制部署后是否处理部署的对象以及将执行的处理的类型。 有以下三个处理选项：  
+-   **处理方法** 此设置将控制在部署后是否处理部署的对象以及将执行的处理的类型。 有以下三个处理选项：  
   
     -   默认处理（默认值）  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66075229"
   
     -   无  
   
--   **写回表选项**如果在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中启用了写回，则此设置定义如何处理写回。 有以下三个写回表选项：  
+-   **写回表选项** 如果在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中启用了写回，则此设置可定义处理写回的方式。 有以下三个写回表选项：  
   
     -   默认情况下，如果存在写回表，则使用该表。 如果写回表不存在，则将创建一个新的写回表。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66075229"
   
     -   不管写回表是否已存在，都将创建新的写回表。 在这种情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导将删除任何现有的表，并用新的写回表来替换现有的表。  
   
--   **事务部署**此设置控制元数据更改和进程命令的部署是在单个事务中还是在单独的事务中进行。  
+-   **事务性部署** 此设置控制元数据更改和进程命令的部署是在单个事务中进行还是在多个单独的事务中进行。  
   
     -   如果此选项为 `True`（默认值），则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在单个事务中部署所有元数据更改和所有进程命令。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "66075229"
   
 -   以交互方式运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导。 在 **“处理选项”** 页上，为要部署的项目指定处理选项。  
   
-     -或-  
+     \- 或 -  
   
 -   在命令提示符下运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导，并设置向导，使其以应答文件模式运行。 有关应答文件模式的详细信息，请参阅 [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md)。  
   
-     -或-  
+     \- 或 -  
   
 -   \<使用任意文本编辑器修改*项目名称*> d 文件。  
   

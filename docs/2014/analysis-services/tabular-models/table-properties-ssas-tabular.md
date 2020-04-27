@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97d6731c5e85c3b37facc7172ecacbd2c7c74176
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066464"
 ---
 # <a name="table-properties-ssas-tabular"></a>表属性（SSAS 表格）
@@ -24,32 +24,32 @@ ms.locfileid: "66066464"
   
  本主题的内容：  
   
--   [表的属性](#bkmk_properties)  
+-   [表属性](#bkmk_properties)  
   
 -   [配置表属性设置](#bkmk_config_prop)  
   
-##  <a name="bkmk_properties"></a>表属性  
+##  <a name="table-properties"></a><a name="bkmk_properties"></a>表属性  
  **基本**  
   
-|properties|默认设置|说明|  
+|属性|默认设置|说明|  
 |--------------|---------------------|-----------------|  
 |**连接名称**|\<连接名称>|与表的数据源的连接的名称。<br /><br /> 若要编辑连接，请单击该按钮。|  
 |**Hidden**|False|指定是否在报表客户端字段列表中隐藏表。|  
-|**“度量值组”**||表的分区不能显示在 **“属性”** 窗口中。 若要查看、创建或编辑分区，请单击该按钮以打开分区管理器。|  
+|**分区**||表的分区不能显示在 **“属性”** 窗口中。 若要查看、创建或编辑分区，请单击该按钮以打开分区管理器。|  
 |**源数据**||表的源数据不能显示在 **“属性”** 窗口中。 若要查看或编辑源数据，请单击该按钮以打开“编辑表属性”对话框。|  
 |**表说明**||表的文本说明。<br /><br /> 在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]中，如果最终用户将光标置于字段列表的此表上方，则说明将以工具提示的形式出现。|  
-|**表名**|\<友好名称>|指定表的友好名称。 当您使用“表导入向导”导入表时或在导入后的任意时间，可以指定表名。 模型中的表名可以不同于源的相关表名。 表的友好名称显示在报表客户端应用程序的字段列表以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的模型数据库中。|  
+|**表名称**|\<友好名称>|指定表的友好名称。 当您使用“表导入向导”导入表时或在导入后的任意时间，可以指定表名。 模型中的表名可以不同于源的相关表名。 表的友好名称显示在报表客户端应用程序的字段列表以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的模型数据库中。|  
   
  **报表属性**  
   
  有关报表属性的详细说明和配置信息，请参阅 [Power View 报表属性（SSAS 表格）](properties-ssas-tabular.md)。  
   
-|properties|默认设置|说明|  
+|属性|默认设置|说明|  
 |--------------|---------------------|-----------------|  
 |**默认字段集**|||  
 |表行为|||  
   
-###  <a name="bkmk_config_prop"></a>配置表属性设置  
+###  <a name="to-configure-table-property-settings"></a><a name="bkmk_config_prop"></a>配置表属性设置  
   
 1.  在模型设计器中的数据视图中，单击某个表（选项卡）；或在关系图视图中，单击某个表头。  
   

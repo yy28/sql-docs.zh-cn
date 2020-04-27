@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079338"
 ---
 # <a name="defining-a-data-source"></a>定义数据源
@@ -44,7 +44,7 @@ ms.locfileid: "66079338"
   
 8.  单击 **“确定”**，然后单击 **“下一步”**。  
   
-9. 在该向导的“模拟信息”**** 页上，可以定义 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用于连接数据源的安全凭据。 在选中“Windows 身份验证”时，模拟会影响用于连接数据源的 Windows 帐户。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不支持模拟来处理 OLAP 对象。 选择“使用服务帐户”****，然后单击“下一步”****。  
+9. 在该向导的“模拟信息”**** 页上，可以定义 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用于连接数据源的安全凭据。 在选中“Windows 身份验证”时，模拟会影响用于连接数据源的 Windows 帐户。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不支持模拟来处理 OLAP 对象。 选择“使用服务帐户”****，然后单击“下一步”****。  
   
 10. 在“完成向导”**** 页上，接受默认名称 **Adventure Works DW 2012**，然后单击“完成”**** 以创建新数据源。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "66079338"
  [定义数据源视图](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSAS 多维&#41;创建数据源](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [创建数据源（SSAS 多维）](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

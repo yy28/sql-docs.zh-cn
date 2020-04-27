@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077623"
 ---
 # <a name="model-tab-mining-model-viewers"></a>“模型”选项卡（挖掘模型查看器）
@@ -24,7 +24,7 @@ ms.locfileid: "66077623"
   
  使用此时序模型视图可提取有关时序分析的有用信息，包括图形的公式、ARIMA 术语和系数。  
   
- **有关详细信息，请查看** [microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)、[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)  
+ **有关详细信息，请参阅 ** [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)、[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)和 [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -51,7 +51,7 @@ ms.locfileid: "66077623"
  **缩放关系图以适应窗口**  
  缩小关系图，直到屏幕可容纳整个关系图。  
   
- **树**  
+ **视图**  
  从下拉列表中选择一个树以在查看器中显示  
   
  如果时序模型包含多个系列，每个系列将表示为一个单独的树。 例如，如果您在一段时间内为 [Quantity] 和 [Sales Amount] 创建预测，则将为每个可预测属性创建一个单独的系列。  

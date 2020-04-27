@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064672"
 ---
 # <a name="browsing-a-decision-trees-model"></a>浏览决策树模型
   使用 "**浏览**" 打开分类模型时，该模型将显示在交互式决策树查看器中，类似于[!INCLUDE[msCoName](../includes/msconame-md.md)]中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的决策树查看器。 该查看器将分类结果显示为一个图形，图形设计可以突出将一组数据与其他数据区分开来的条件。 您还可以深化到树的各个子集并检索基础数据。  
   
-##  <a name="bkmk_Top"></a>浏览模型  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>浏览模型  
  基于决策树算法的模型有很多有趣的信息值得探索。 "**浏览**" 窗口包括以下选项卡和窗格，可帮助您了解使用图形的模式并预测结果：  
   
 -   [决策树](#BKMK_DecisionTree)  
@@ -36,7 +36,7 @@ ms.locfileid: "66064672"
   
  要尝试使用决策树模型，可以使用示例数据工作簿中“定型数据”（或“源数据”）选项卡上的示例数据，并使用“Bike Buyer”作为可预测属性生成决策树模型。  
   
-###  <a name="BKMK_DecisionTree"></a>决策树  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>决策树  
  此视图旨在帮助您了解和探索导致某一结果的因素。  
   
  决策树图形可像下面这样从左到右读取：  
@@ -103,7 +103,7 @@ ms.locfileid: "66064672"
   
      ![关联模型的依赖关系网络图形](media/dm13-dec-tree-background-no.gif "关联模型的依赖关系网络图形")  
   
- **技巧**  
+ **提示**  
   
 -   如果您的数据可以分为多个序列，会为要建模的每组数据生成一个不同的模型。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66064672"
   
  [返回页首](#bkmk_Top)  
   
-###  <a name="BKMK_DNetwork"></a>依赖关系网络  
+###  <a name="dependency-network"></a><a name="BKMK_DNetwork"></a>依赖关系网络  
  "**依赖关系网络**" 视图显示模型中的输入属性和可预测属性之间的连接。  
   
 1.  单击并拖动查看器左侧的滑块  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c7ddd5311232ae12b3eb9f66adc0cd1f5714b32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081011"
 ---
 # <a name="general-storage-options-dialog-box-analysis-services---multidimensional-data"></a>常规（“存储选项”对话框）（Analysis Services - 多维数据）
@@ -31,11 +31,11 @@ ms.locfileid: "66081011"
 |----------|----------------|  
 |**存储模式**|选择对象要使用的存储模式。<br /><br /> **MOLAP**<br /> 对象使用多维 OLAP (MOLAP) 存储。<br /><br /> **HOLAP**<br /> 对象使用混合 OLAP (HOLAP) 存储。<br /><br /> **ROLAP**<br /> 对象使用关系 OLAP (ROLAP) 存储。|  
 |**启用主动缓存**|启用主动缓存。<br /><br /> 注意：如果未选择此选项，则将禁用除“存储模式” **** 外的所有选项。|  
-|**当数据更改时更新缓存**|使用在 **“通知”** 选项卡中选择的通知方法，可以在收到通知时更新对象的 MOLAP 映像。 有关“通知”选项卡的详细信息，请参阅**通知（“存储选项”对话框）（Analysis Services - 多维数据）**。[](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)<br /><br /> 注意：除非选择“启用主动缓存” **** ，否则将禁用此选项。|  
+|**当数据更改时更新缓存**|使用在 **“通知”** 选项卡中选择的通知方法，可以在收到通知时更新对象的 MOLAP 映像。 有关“通知”选项卡的详细信息，请参阅[通知（“存储选项”对话框）（Analysis Services - 多维数据）](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。****<br /><br /> 注意：除非选择“启用主动缓存” **** ，否则将禁用此选项。|  
 |**静默间隔**|设置在主动缓存开始为对象创建新的 MOLAP 映像之前，对象处于无任何活动状态的最小时间间隔和时间单位。<br /><br /> 注意：除非选择“当数据更改时更新缓存” **** ，否则将禁用此选项。|  
 |**静默覆盖间隔**|设置在收到对象的通知之后，不管当前对象的活动状态如何，主动缓存开始为对象创建新的 MOLAP 映像之前的最大时间间隔和时间单位。 在达到此间隔后接收的通知不会取消此间隔所触发的 MOLAP 映像进程。<br /><br /> 注意：除非选择“当数据更改时更新缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为**HOLAP**，则不应设置此选项。|  
 |**放弃过时缓存**|指定开始创建新的 MOLAP 缓存和删除现有 MOLAP 缓存之间间隔的时间段。<br /><br /> 注意：除非选择“启用主动缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为 HOLAP，则不应设置此选项。|  
-|**滞后时间**|为开始创建新的 MOLAP 缓存和删除现有 MOLAP 缓存之间间隔的时间段选择时间间隔和时间单位。<br /><br /> 注意：除非选择“放弃过时缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为**HOLAP**，则不应设置此选项。|  
+|**延迟**|为开始创建新的 MOLAP 缓存和删除现有 MOLAP 缓存之间间隔的时间段选择时间间隔和时间单位。<br /><br /> 注意：除非选择“放弃过时缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为**HOLAP**，则不应设置此选项。|  
 |**定期更新缓存**|不管是否收到通知，都将定期更新 MOLAP 映像。<br /><br /> 注意：除非选择“启用主动缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为**HOLAP**，则不应设置此选项。|  
 |**重新生成间隔**|选择在创建[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]新的 MOLAP 映像之后，该时间段的时间间隔和时间单位，无论有无通知，都将再次为对象启动 MOLAP 映像进程。 在达到此间隔后接收的通知不会取消此间隔所触发的 MOLAP 映像进程。<br /><br /> 注意：除非选择“定期更新缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为**HOLAP**，则不应设置此选项。|  
 |**立即联机**|使对象立即联机。 如果设置此选项，则在重新生成 MOLAP 缓存时，对象将使用基础 ROLAP 存储区来解析查询。 如果未设置此选项，则只有在完成对象的 MOLAP 缓存之后，对象才会联机。|  

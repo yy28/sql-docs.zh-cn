@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080524"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>从关系数据源导入（SSAS 表格）
-  通过使用表导入向导，你可以从各种关系数据库导入数据。 该向导在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的“模型”菜单中提供 **** 。 若要连接到数据源，必须在计算机上安装适当的访问接口。 有关支持的数据源和提供程序的详细信息，请参阅[支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)。  
+  通过使用表导入向导，你可以从各种关系数据库导入数据。 该向导在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的“模型”菜单中提供 **** 。 若要连接到数据源，必须在计算机上安装适当的访问接口。 有关支持的数据源和提供程序的详细信息，请参阅 [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)。  
   
  “表导入向导”支持从以下数据源中导入数据：  
   
@@ -60,6 +60,6 @@ ms.locfileid: "66080524"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;导入数据](import-data-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;支持的数据源](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

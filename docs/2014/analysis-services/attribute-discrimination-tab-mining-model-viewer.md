@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063125"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>“属性对比”选项卡（挖掘模型查看器）
   可以使用 **“属性对比”** 选项卡，比较输入属性的状态并查看这些状态与结果属性相关的方式。 两个所选的可预测属性状态之间差别最大的属性值会首先列出。  
   
- **有关详细信息**，请查看[Microsoft Naive Bayes 算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 microsoft Naive Bayes 查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **有关详细信息，请参阅 ** [Microsoft Naive Bayes 算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 Microsoft Naive Bayes 查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -34,7 +34,7 @@ ms.locfileid: "66063125"
  **查看器**  
  选择用于浏览所选挖掘模型的查看器。 对于每个模型，您可以选择自定义查看器或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。  
   
- **Attribute**  
+ **属性**  
  选择一个可预测属性。  
   
  **值 1**  
@@ -46,11 +46,10 @@ ms.locfileid: "66063125"
  **值1的\<对比分数> 和\<值 2>**  
  图形包含以下列，这些列说明了目标属性与输入属性的特定状态关联的方式。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
-|**属性**|挖掘模型中的输入属性。|  
-|**值**|
-  **“属性”** 中列出的属性的状态。|  
+|**特性**|挖掘模型中的输入属性。|  
+|**值**|**“属性”** 中列出的属性的状态。|  
 |**优选\<值 1>**|条形指示当前属性和值是否倾向于“值 1” **** 中所选的目标结果。|  
 |**优选\<值 2>**|条形指示当前属性和值是否倾向于 **“值 2”** 中所选的目标结果。|  
   

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060169"
 ---
 # <a name="create-package-configurations"></a>创建包配置
@@ -58,11 +58,11 @@ ms.locfileid: "66060169"
   
  在此示例中，配置将更新以下属性：  
   
--   用户定义变量 `TodaysDate` 的 RaiseChangedEvent 属性。  
+-   用户定义变量 `TodaysDate`的 RaiseChangedEvent 属性。  
   
 -   包的 MaximumErrorCount、LoggingMode 和 LocaleID 属性。  
   
--   用户定义变量 `varTableName` 在“我的 SQL 任务”的作用域内的 Value 属性。  
+-   用户定义变量 `varTableName`在“我的 SQL 任务”的作用域内的 Value 属性。  
   
  “\Package”表示根，句点 (.) 分隔用于定义配置所更新属性的路径的对象。 变量和属性的名称用括号括起。 配置中始终使用术语“包”，而与包名称无关；但是，路径中的所有其他对象都使用其用户定义名称。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66060169"
   
 3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“控制流”**、 **“数据流”**、 **“事件处理程序”** 或 **“包资源管理器”** 选项卡。  
   
-4.  在 **SSIS** 菜单上，单击 **“包配置”** 。  
+4.  在 **SSIS** 菜单上，单击 **“包配置”**。  
   
 5.  在 **“包配置组织程序”** 对话框中，选择 **“启用包配置”**，再单击 **“添加”**。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66060169"
   
 10. 查看 **“包配置组织程序”** 对话框中的配置。  
   
-11. 单击“关闭”  。  
+11. 单击“**关闭**”。  
   
 ## <a name="external-resources"></a>外部资源  
   

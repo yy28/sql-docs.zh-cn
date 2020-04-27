@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078982"
 ---
 # <a name="browsing-the-cube"></a>浏览多维数据集
@@ -28,11 +28,11 @@ ms.locfileid: "66078982"
   
 ### <a name="to-browse-the-deployed-cube"></a>浏览部署的多维数据集  
   
-1.  切换到 ** 中的“产品”维度的“维度设计器”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 为此，请双击解决方案资源管理器的“维度”**** 节点的“产品”**** 维度。  
+1.  切换到 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“产品”维度的“维度设计器”****。 为此，请双击解决方案资源管理器的“维度”**** 节点的“产品”**** 维度。  
   
-2.  单击 "**浏览器**" 选项卡**** 以显示`Product Key`属性层次结构的 "所有" 成员。 在第 3 课中，你将定义“产品”维度的用户层次结构，利用此结构可浏览该维度。  
+2.  单击 "**浏览器**" 选项卡**All**以显示`Product Key`属性层次结构的 "所有" 成员。 在第 3 课中，你将定义“产品”维度的用户层次结构，利用此结构可浏览该维度。  
   
-3.  切换到 ** 中的“多维数据集设计器”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 为此，请在“解决方案资源管理器”的“多维数据集”**** 节点中，双击“Analysis Services 教程”**** 多维数据集。  
+3.  切换到 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“多维数据集设计器”****。 为此，请双击解决方案资源管理器的 "**多维数据集**" 节点中的**Analysis Services 教程**多维数据集。  
   
 4.  选择“浏览器”**** 选项卡，然后在设计器的工具栏上单击“重新连接”**** 图标。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "66078982"
  [第 3 课：修改度量值、属性和层次结构](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 查询编辑器 &#40;Analysis Services 多维数据&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+ [MDX 查询编辑器（Analysis Services - 多维数据）](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

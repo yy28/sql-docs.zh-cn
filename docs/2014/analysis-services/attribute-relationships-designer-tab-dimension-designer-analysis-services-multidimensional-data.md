@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062265"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性关系（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -29,8 +29,7 @@ ms.locfileid: "66062265"
 2.  在工具栏上，单击 **“显示列表视图”** 图标。  
   
 ## <a name="using-the-attribute-relationships-list"></a>使用“属性关系”列表  
- 
-  **“属性关系”** 列表显示维度中的所有属性关系。  
+ **“属性关系”** 列表显示维度中的所有属性关系。  
   
  若要查找属性关系图中的特定属性关系，可在列表中双击该属性。 该属性（又称特性）关系将在属性关系图中突出显示，其属性将显示在“属性”窗口中。  
   

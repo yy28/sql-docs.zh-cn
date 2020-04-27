@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061694"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 源编辑器（“列”页）
@@ -36,7 +36,7 @@ ms.locfileid: "66061694"
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
- **“外部列”**  
+ **外部列**  
  按照外部（源）列在您配置使用此源中数据的组件时的显示顺序，查看外部（源）列。  
   
  **输出列**  

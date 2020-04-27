@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073206"
 ---
 # <a name="remote-processing-analysis-services"></a>远程处理 (Analysis Services)
   可在远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上运行计划处理或无人参与的处理，其中在一台计算机上发出处理请求，而在同一网络上的另一台计算机上执行该请求。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   如果在每台计算机上运行的 SQL Server 版本不同，则客户端库必须与处理模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例版本一致。 例如，如果在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 实例上进行处理，则发起请求的计算机必须具有与 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]对应的客户端库。 请参阅 [用于 Analysis Services 连接的数据访问接口](../instances/data-providers-used-for-analysis-services-connections.md)。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66073206"
 -   先解决任何现有的本地处理错误，然后再尝试进行远程处理。 确认在处理请求位于本地时，可成功地从外部关系数据源检索数据。 有关指定用于检索数据的凭据的说明，请参阅[设置模拟选项（SSAS-多维）](set-impersonation-options-ssas-multidimensional.md)。  
   
 ## <a name="on-demand-remote-processing"></a>按需远程处理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]接受来自具有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员权限的用户或应用程序帐户发出的处理请求。 如果您是管理员，请确认您可连接到远程实例并可通过远程连接手动处理数据库。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接受从具有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员权限的用户或应用程序帐户发出的处理请求。 如果您是管理员，请确认您可连接到远程实例并可通过远程连接手动处理数据库。  
   
 1.  在将用于安排处理的计算机上，启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66073206"
   
 -   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   如果不可能授予**sysadmin**权限， [SQL Server 代理组件](../../ssms/agent/sql-server-agent.md#Components)会推荐其他固定服务器角色。  
+-   如果不可能授予[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) 权限，则 **SQL Server Agent Components** 建议另外的固定服务器角色。  
   
  在配置帐户权限后，请继续进行以下这些步骤。  
   
@@ -95,6 +95,6 @@ ms.locfileid: "66073206"
  [用 SQL Server 代理计划 SSAS 管理任务](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [批处理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)   
- [&#41;XMLA &#40;处理对象](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
+ [处理对象 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

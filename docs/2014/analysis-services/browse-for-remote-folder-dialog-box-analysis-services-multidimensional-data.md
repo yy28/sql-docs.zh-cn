@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064532"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>“查找远程文件夹”对话框（Analysis Services - 多维数据）
-  
   **“查找远程文件夹”** 对话框显示为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例定义的可用日志和数据文件夹的列表。 您可以选择列出的文件夹，也可以根据需要指定其他文件夹。 通过执行下列步骤之一，可以显示 **“查找远程文件夹”** 对话框：  
   
 -   在分区向导中，在“处理位置和存储位置”**** 页上单击省略号按钮 (**...**)。  

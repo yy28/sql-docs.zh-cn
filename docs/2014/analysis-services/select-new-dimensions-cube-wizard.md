@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0362322d63e351ab7547a6bb19511c2c10d1df95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069335"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>选择新维度（多维数据集向导）
   可以使用 **“选择新维度”** 页选择要创建的新维度。  
   
 ## <a name="options"></a>选项  
- **维度**  
+ **Dimensions**  
  选择要创建的维度。 默认情况下，会选中所有维度。  
   
  树的根节点表示将要创建的新维度。 用于创建维度的相关表显示在维度节点下。  

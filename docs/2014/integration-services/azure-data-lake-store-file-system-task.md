@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 69a521cb72e68141f5706f5187a0288a3f44f241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061378"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 文件系统任务
@@ -26,7 +26,7 @@ ms.locfileid: "66061378"
 
 若要将 Azure Data Lake Store 文件系统任务添加到某个包，请将它从 SSIS 工具箱拖到设计器画布中。 然后双击该任务，或右键单击该任务，然后选择 "**编辑**"，以打开 "任务编辑器" 对话框。
 
-“操作”  属性指定要执行的文件系统操作。 支持下列操作:
+“操作”**** 属性指定要执行的文件系统操作。 支持下列操作:
 
 * **CopyToADLS：** 将文件上载到 ADLS。
 * **CopyFromADLS：** 从 ADLS 下载文件。

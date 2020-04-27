@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081310"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>浏览数据（SQL Server 数据挖掘外接程序）
@@ -28,7 +28,7 @@ ms.locfileid: "66081310"
   
  如果数据包含连续数值数据，可以在下面两种视图间切换：  
   
--   **线形图。** 此图对 X 轴上的数据值和 y 轴上的事例数进行了图表绘制。  
+-   **线图。** 此图对 X 轴上的数据值和 y 轴上的事例数进行了图表绘制。  
   
 -   **条形图。** 条形图将值按照每个值的事例数进行分组。  
   

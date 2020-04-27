@@ -24,14 +24,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068885"
 ---
 # <a name="memory-properties"></a>内存属性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器内存属性。 有关设置这些属性的指南，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  介于 1 和 100 之间的值表示 **“物理总内存”** 或 **“虚拟地址空间”** 的百分比（以二者中少者计）。 超过 100 的值表示内存限制（以字节为单位）。  
@@ -58,7 +57,7 @@ ms.locfileid: "66068885"
   
  零（**0**）禁用分页。 如果内存不足，处理将失败，同时显示内存不足错误。 如果禁用分页，必须向服务帐户授予 Windows 特权。 有关说明，请参阅[配置服务帐户 (Analysis Services)](../instances/configure-service-accounts-analysis-services.md)。  
   
- **1**为默认值。 该属性支持使用操作系统页文件 (pagefile.sys) 分页到磁盘。  
+ **1** 为默认值。 该属性支持使用操作系统页文件 (pagefile.sys) 分页到磁盘。  
   
  在 `VertiPaqPagingPolicy` 设置为 1 时，处理不大可能由于内存限制而失败，因为服务器将尝试使用您指定的方法对磁盘进行分页。 设置 `VertiPaqPagingPolicy` 属性并不会确保内存错误永远不会发生。 在下列条件下仍然可能会发生内存不足错误：  
   

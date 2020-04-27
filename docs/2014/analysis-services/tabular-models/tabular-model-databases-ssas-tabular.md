@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066420"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>表格模型数据库（SSAS 表格）
@@ -24,20 +24,20 @@ ms.locfileid: "66066420"
  与多维数据库相比，表格模型数据库更易于生成，特别是在您具有关系数据库后台时。 否则，管理任务与多维数据库的数据库管理很类似（如果不是完全相同的话）。 相同的工具和方法将适用。  
   
 ## <a name="related-content"></a>相关内容  
- [&#40;SSAS 表格&#41;的表格模型解决方案](../tabular-model-solutions-ssas-tabular.md)  
+ [表格模型解决方案（SSAS 表格）](../tabular-model-solutions-ssas-tabular.md)  
   
  [表格模型数据访问](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [处理数据库、表或分区](process-database-table-or-partition-analysis-services.md)  
   
- [&#40;SSAS 表格&#41;的表格模型角色](tabular-model-roles-ssas-tabular.md)  
+ [表格模型角色（SSAS 表格）](tabular-model-roles-ssas-tabular.md)  
   
- [&#40;SSAS 表格&#41;的表格模型分区](tabular-model-partitions-ssas-tabular.md)  
+ [表格模型分区（SSAS 表格）](tabular-model-partitions-ssas-tabular.md)  
   
  [为表格模型数据库配置内存中或 DirectQuery 访问](enable-directquery-mode-in-ssms.md)  
   
- [&#40;SSAS 连接到表格模型数据库&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [连接到表格模型数据库 (SSAS)](connect-to-a-tabular-model-database-ssas.md)  
   
  [从 PowerPivot 还原](restore-from-power-pivot.md)  
   

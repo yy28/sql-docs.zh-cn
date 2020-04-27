@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080353"
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services 实例管理
@@ -22,15 +22,12 @@ ms.locfileid: "66080353"
   
  每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例都作为 Windows 服务 (Msmdsrv.exe) 在定义的登录帐户的安全上下文中运行。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 默认实例的服务名称为 MSSQLServerOLAPService。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 默认实例的服务名称为 MSSQLServerOLAPService。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每个命名实例的服务名称为 MSOLAP$InstanceName。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每个命名实例的服务名称为 MSOLAP$InstanceName。  
   
 > [!NOTE]  
->  如果安装了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的多个实例，则安装程序也会安装重定向程序服务，该服务与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行了集成。 重定向程序服务负责将客户端定向到适当的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]命名实例。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务始终在本地服务帐户的安全上下文中运行，本地服务帐户是 Windows 针对不访问本地计算机外部资源的服务而使用的受限的用户帐户。  
+>  如果安装了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的多个实例，则安装程序也会安装重定向程序服务，该服务与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行了集成。 重定向程序服务负责将客户端定向到适当的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]命名实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务始终在本地服务帐户的安全上下文中运行，本地服务帐户是 Windows 针对不访问本地计算机外部资源的服务而使用的受限的用户帐户。  
   
  多实例意味着您可以通过在相同的硬件上安装多个服务器实例来进行扩展。 尤其对于 Analysis Services，这还意味着可以通过在相同服务器上安装多个实例（每个实例都配置为在特定模型下运行），从而支持不同的服务器模式。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "66080353"
   
 |链接|任务说明|  
 |----------|----------------------|  
-|[安装后的配置 &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|描述完成或修改 Analysis 的安装所必需的任务和可选任务。|  
+|[安装后配置 (Analysis Services)](post-install-configuration-analysis-services.md)|描述完成或修改 Analysis 的安装所必需的任务和可选任务。|  
 |[连接到 Analysis Services](connect-to-analysis-services.md)|描述用于建立或清除连接的连接字符串属性、客户端库、身份验证方法和步骤。|  
 |[监视 Analysis Services 实例](monitor-an-analysis-services-instance.md)|说明用于监视服务器实例的工具和技术，包括如何使用性能监视器和 SQL Server Profiler。|  
 |[在 Analysis Services 中编写管理任务脚本](../script-administrative-tasks-in-analysis-services.md)|解释如何自动执行多个管理任务，包括处理。|  

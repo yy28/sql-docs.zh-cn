@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071969"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>将 BI 语义模型连接内容类型添加到库 (PowerPivot for SharePoint)
@@ -23,7 +23,7 @@ ms.locfileid: "66071969"
 > [!NOTE]  
 >  如果您已使用 SharePoint 数据连接库，则 BI 语义模型连接内容类型将自动添加到该库模板中。 如果您使用的数据连接库已让您创建新的 BI 语义模型连接文档，则可以跳过本节中的这些步骤。  
   
-##  <a name="bkmk_addtype"></a>将内容类型添加到文档库  
+##  <a name="add-the-content-type-to-a-document-library"></a><a name="bkmk_addtype"></a> 向文档库添加内容类型  
  您必须至少具有“管理列表”权限才能添加和配置内容类型。 此权限是“设计”权限级别和更高级别中所固有的。  
   
  包含文档库的站点必须具有 PowerPivot for SharePoint 功能激活。 有关详细信息，请参阅[在管理中心为网站集激活 PowerPivot 功能集成](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
@@ -38,7 +38,7 @@ ms.locfileid: "66071969"
   
 5.  在“内容类型”的“允许内容类型的管理?”部分中， 单击 **“是”**。  
   
-6.  单击“确定”。   
+6.  单击" **确定**"。  
   
 7.  在“内容类型”部分中，单击 **“从现有网站内容类型添加”**。 如果您看不到此页，则返回网站，在“库工具”中单击 **“库”** ，然后单击 **“库设置”**。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66071969"
   
 10. 在“可用网站内容类型”中，单击 **“BI 语义模型连接文件”**，然后单击 **“添加”** 将所选内容类型移至“要添加的内容类型”列表中。  
   
-11. 单击“确定”。   
+11. 单击" **确定**"。  
   
 12. 若要验证您是否添加了此连接类型，请返回到库，然后单击库功能区的“文档”区域上的 **“新建文档”** 。 您应该会在“新建文档”列表中看到 **“BI 语义模型连接文件”** 。  
   

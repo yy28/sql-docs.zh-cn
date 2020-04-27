@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075358"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>指定分区和角色部署选项
@@ -50,7 +50,7 @@ ms.locfileid: "66075358"
   
 -   保留目标数据库中现有的角色和角色成员，不部署任何新的角色。  
   
--   **注意**保留现有角色和成员时，与这些角色关联的权限将重置为 "无"。 安全权限包含在这些权限保护的对象中，而非包含在与这些权限关联的安全角色中。 有关如何通过使用 Analysis Services 部署向导来处理此行为的详细信息，请参阅 Microsoft 知识库中的 "保留角色和成员"。  
+-   **请注意** 保留现有角色和成员时，与这些角色关联的权限将重置为无。 安全权限包含在这些权限保护的对象中，而非包含在与这些权限关联的安全角色中。 有关如何通过使用 Analysis Services 部署向导来处理此行为的详细信息，请参阅 Microsoft 知识库中的 "保留角色和成员"。  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>修改分区和角色部署选项  
  可能需要使用不同于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] \<*项目名称*> d 文件中存储的分区和角色选项来部署项目。 例如，你可能想要保留现有的分区、角色和角色成员，而不是替换\<*项目名称*> d 文件中指定的所有现有分区、角色和成员。  
@@ -61,11 +61,11 @@ ms.locfileid: "66075358"
   
 -   以交互方式运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导，然后在 **“分区和角色部署选项”** 页上，为分区和角色指定新的部署选项。  
   
-     -或-  
+     \- 或 -  
   
 -   在命令提示符下运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导，并将该向导设置为以应答文件模式运行。 （有关应答文件模式的详细信息，请参阅[运行 Analysis Services 部署向导](running-the-analysis-services-deployment-wizard.md)。）  
   
-     -或-  
+     \- 或 -  
   
 -   \<在任何文本编辑器中打开*项目名称*> d，并手动更改选项。  
   

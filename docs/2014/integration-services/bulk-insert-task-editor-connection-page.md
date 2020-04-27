@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061223"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大容量插入任务编辑器（“连接”页）
@@ -28,29 +28,29 @@ ms.locfileid: "66061223"
   
 ## <a name="options"></a>选项  
  **连接**  
- 在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接****。  
+ 在列表中选择一个 OLE DB 连接管理器，或\<单击 "**新建连接 ...** "> 创建新连接。  
   
  **相关主题：** [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  键入目标表或视图的名称，或在列表中选择表或视图。  
   
- **形式**  
+ **格式**  
  选择大容量插入任务的格式源。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**使用文件**|选择包含格式规范的文件。 选择此选项将显示动态选项 **FormatFile**。|  
 |**指定**|指定格式。 选择此选项将显示动态选项`RowDelimiter`和。 `ColumnDelimiter`|  
   
- **文件**  
- 在列表中选择一个文件或平面文件连接管理器，或单击“\<新建连接…>”，创建一个新连接****。  
+ **File**  
+ 在列表中选择文件或平面文件连接管理器，或单击\<"**新建连接 ...** "> 创建新连接。  
   
  文件位置与在此任务的连接管理器中指定的 SQL Server 数据库引擎有关。 该文本文件必须可被服务器本地硬盘上的 SQL Server 数据库引擎访问，或可通过 SQL Server 的共享驱动器或映射的驱动器访问。 SSIS 运行时不访问该文件。  
   
  如果通过使用平面文件连接管理器来访问源文件，则大容量插入任务不会使用在平面文件连接管理器中指定的格式。 相反，大容量插入任务将使用在格式化文件中指定的格式，或者使用该任务的 RowDelimite 和 ColumnDelimiter 属性的值。  
   
- **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接](../../2014/integration-services/file-connection-manager-editor.md)管理器编辑器，[平面文件连接](connection-manager/flat-file-connection-manager.md)管理器，平面文件连接管理器[编辑器 &#40;常规页&#41;](general-page-of-integration-services-designers-options.md)，平面文件连接管理器编辑器[&#40;列页&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)，[平面文件连接管理器编辑器 &#40;高级页&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)、[平面文件连接管理器](connection-manager/flat-file-connection-manager.md)、[平面文件连接管理器编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)、[平面文件连接管理器编辑器（“列”页）](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)、[平面文件连接管理器编辑器（“高级”页）](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **刷新表**  
  刷新表和视图的列表。  
@@ -72,7 +72,7 @@ ms.locfileid: "66061223"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [大容量插入任务编辑器 &#40;常规页&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
  [大容量插入任务编辑器 &#40;选项 "页面&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [“表达式”页](expressions/expressions-page.md)   
+ [表达式页](expressions/expressions-page.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [控制流](control-flow/control-flow.md)  
   

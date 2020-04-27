@@ -39,17 +39,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069033"
 ---
 # <a name="general-properties"></a>常规属性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
- **适用于：** 多维和表格服务器模式，除非另有说明  
+ **适用于：** 多维和表格服务器模式，除非另外说明。  
   
 ## <a name="non-specific-category"></a>非特定类别  
  `AdminTimeout`  
@@ -77,14 +76,12 @@ ms.locfileid: "66069033"
  `CoordinatorCancelCount`  
  有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。  
   
- 
-  `CoordinatorCancelCount` 在表格服务器模式下将被忽略。  
+ `CoordinatorCancelCount` 在表格服务器模式下将被忽略。  
   
  `CoordinatorExecutionMode`  
  有符号 32 位整数属性，用于定义服务器将尝试的最大并行操作（包括处理操作和查询操作）数。 零 (0) 指示服务器将基于内部算法来决定。 正数指示最大操作总数。 如果是符号相反的负数，则指示每个处理器的最大操作数。  
   
- 
-  `CoordinatorExecutionMode` 在表格服务器模式下将被忽略。  
+ `CoordinatorExecutionMode` 在表格服务器模式下将被忽略。  
   
  此属性的默认值为 -4，指示将服务器限制为每个处理器 4 个并行操作。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
@@ -102,7 +99,7 @@ ms.locfileid: "66069033"
   
  此属性的有效值包括以下项：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |0|这是默认值。 它指定多维模式，用于支持使用 MOLAP、HOLAP 和 ROLAP 存储以及数据挖掘模型的多维数据库。|  
 |1|指定 Analysis Services 实例已作为 PowerPivot for SharePoint 部署的一部分安装。 不要更改作为 PowerPivot for SharePoint 安装的一部分的 Analysis Services 实例的部署模式属性。 如果您更改该模式，PowerPivot 数据将不再在该服务器上运行。|  
@@ -134,8 +131,7 @@ ms.locfileid: "66069033"
  有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
 > [!IMPORTANT]  
->  
-  `ForceCommitTimeout` 适用于多维数据集处理命令和写回操作。  
+>  `ForceCommitTimeout` 适用于多维数据集处理命令和写回操作。  
   
  `IdleConnectionTimeout`  
  一个整数属性，指定处于非活动状态的连接的超时值（秒）。  

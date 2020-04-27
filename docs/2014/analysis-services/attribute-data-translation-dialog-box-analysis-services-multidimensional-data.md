@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063064"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>“翻译属性数据”对话框（Analysis Services - 多维数据）
@@ -29,7 +29,7 @@ ms.locfileid: "66063064"
 -   在**维度设计器**的“翻译”选项卡上，右键单击“翻译详细信息”窗格，再选择“新建标题列”或“编辑标题列”。****************  
   
 ## <a name="options"></a>选项  
- **Attribute**  
+ **属性**  
  显示所选属性。  
   
  **语言**  

@@ -11,19 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074713"
 ---
 # <a name="cube-space"></a>多维数据集空间
   “多维数据集空间”是多维数据集属性层次结构的成员与多维数据集的度量值的乘积。 因此，多维数据集空间由多维数据集中所有属性层次结构成员和多维数据集的度量值的组合乘积确定，并且定义多维数据集的最大大小。 需要特别注意的是，此空间包括属性层次结构成员的所有可能组合；甚至包括在真实世界可能会认定为不可能的组合，例如城市是巴黎而国家/地区是英国、西班牙、日本、印度或其他地方的组合。  
   
 ## <a name="autoexists-and-cube-space"></a>Autoexists 和多维数据集空间  
- 
-  *
-  * “autoexists”的概念将此多维数据集空间限制为那些实际存在的单元。 维度中属性层次结构的成员可能不与相同维度中其他属性层次结构的成员共存。  
+ ** “autoexists”的概念将此多维数据集空间限制为那些实际存在的单元。 维度中属性层次结构的成员可能不与相同维度中其他属性层次结构的成员共存。  
   
  例如，某多维数据集具有 City 属性层次结构、Country 属性层次结构和 Internet Sales Amount 度量值，则此多维数据集的空间仅包含那些共存的成员。 例如，如果 City 属性层次结构包含城市 New York、London、Paris、Tokyo 和 Melbourne，而 Country 属性层次结构包含国家（地区）United States、United Kingdom、France、Japan 和 Australia，则该多维数据集的空间不包含 Paris 和 United States 相交处的空间（单元）。  
   
@@ -100,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  在前面的查询中，Customer 维度中的 Customer Geography 用户定义的层次结构用于定义先前使用属性层次结构定义的多维数据集空间中的位置。 可以使用属性层次结构或用户定义的层次结构来定义多维数据集空间中的同一个位置。  
   
-##  <a name="AttribRelationships"></a>属性关系和多维数据集空间  
+##  <a name="attribute-relationships-and-cube-space"></a><a name="AttribRelationships"></a>属性关系和多维数据集空间  
  定义相关属性间的属性关系（通过促进相应聚合的创建）将提高查询性能，并影响与属性层次结构成员一同显示的相关属性层次结构的成员。 例如，您定义了包含 City 属性层次结构的成员的元组并且该元组未显式定义 Country 属性层次结构成员时，您可能希望默认 Country 属性层次结构成员是 Country 属性层次结构的相关成员。 不过，只有定义了 City 属性层次结构和 Country 属性层次结构之间的属性关系时，才会出现上述预期结果。  
   
  以下示例返回未显式包含在查询中的相关属性层次结构的成员。  
@@ -137,6 +135,6 @@ FROM [Adventure Works]
  [使用成员、元组和集 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [直观合计和非直观合计](visual-totals-and-non-visual-totals.md)   
  [Mdx 语言参考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [MDX&#41; 引用 &#40;多维表达式](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

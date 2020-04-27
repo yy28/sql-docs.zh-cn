@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b21230ddff5a3db043b533a4f921a30b02da739b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062297"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>“程序集属性”对话框（Analysis Services - 多维数据）
@@ -27,12 +27,12 @@ ms.locfileid: "66062297"
 |术语|定义|  
 |----------|----------------|  
 |**名称**|键入内容即可更改程序集引用的名称。<br /><br /> 注意：更改此值不会更改程序集引用所表示引用的程序集的名称，但会更改 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例或数据库在表示程序集引用时所使用的名称。|  
-|**识别**|显示程序集引用所引用的程序集的标识符。|  
+|**ID**|显示程序集引用所引用的程序集的标识符。|  
 |**说明**|键入内容即可更改程序集引用的名称。|  
 |**创建时间戳**|显示程序集引用的创建日期和时间。|  
 |**上次架构更新时间**|显示上次更新程序集引用的元数据的日期和时间。|  
-|类型 |显示程序集引用的类型。 将显示以下值：<br /><br /> **.Net 程序集**：程序集引用引用[!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework 程序集。<br /><br /> **COM DLL**：程序集引用引用 COM 库。|  
-|**数据源**|显示程序集引用的源。 此属性通常包含程序集引用所引用的程序集的完整路径和文件名。|  
+|**类型**|显示程序集引用的类型。 将显示以下值：<br /><br /> **.Net 程序集**：程序集引用引用[!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework 程序集。<br /><br /> **COM DLL**：程序集引用引用 COM 库。|  
+|**源**|显示程序集引用的源。 此属性通常包含程序集引用所引用的程序集的完整路径和文件名。|  
 |**权限集**|选择用来确定对程序集引用的访问权限的权限集。 有关此属性的可用值的详细信息，请参阅<xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>。|  
 |**模拟信息**|选择在访问程序集引用时要使用的模拟信息。 有关此属性的可用值的详细信息，请参阅 [ImpersonationInfo 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)|  
   

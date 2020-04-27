@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074551"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>创建会话作用域的计算成员 (MDX)
@@ -52,6 +52,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;MDX 创建查询作用域的计算成员&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [创建查询作用域的计算成员 (MDX)](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

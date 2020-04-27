@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062876"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>将模型添加到结构（Excel 数据挖掘外接程序）
@@ -44,7 +44,7 @@ ms.locfileid: "66062876"
   
 4.  建议您还可以单击 "**参数**" 按钮打开 "**算法参数**" 对话框并自定义算法的参数。 此选项是创建自定义挖掘模型的最简便方法。  
   
-5.  单击“下一步”。   
+5.  单击“下一步”  。  
   
 6.  在 "**选择列**" 对话框中，查看列的列表，如有必要，请将列的用法更改为以下值之一：  
   
@@ -82,19 +82,18 @@ ms.locfileid: "66062876"
   
          有关详细信息，请参阅[挖掘模型钻取](data-mining/drillthrough-on-mining-models.md)。  
   
-10. 单击 "**完成**" 保存更改。 执行此操作时，新模型会部署到服务器并进行处理。  
+10. 单击“完成”**** 以保存所做的更改。 执行此操作时，新模型会部署到服务器并进行处理。  
   
 ### <a name="related-options"></a>相关选项  
   
-|选项|注释|  
+|选项|说明|  
 |------------|--------------|  
 |"**选择结构或模型**" 对话框|选择一种现有挖掘结构作为生成新模型的基础。  选取的结构必须位于当前连接上。 如果不是，则使用 "[连接到源数据" &#40;Excel&#41;工具的数据挖掘客户端来](connect-to-source-data-data-mining-client-for-excel.md)更改连接。|  
-|"**选择挖掘算法**" 对话框|数据挖掘算法列表的内容取决于所连接的服务器。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在 Standard 和 Enterprise 版本中提供不同的算法。 管理员还可能添加了自定义算法。<br /><br /> 如果看不到任何算法，请验证是否已连接到的实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。|  
+|"**选择挖掘算法**" 对话框|数据挖掘算法列表的内容取决于所连接的服务器。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在 Standard 和 Enterprise 版本中提供不同的算法。 管理员还可能添加了自定义算法。<br /><br /> 如果看不到任何算法，请验证是否已连接到的实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。|  
 |**算法参数**对话框|在这些设置中，可以使用特定于分析方法的参数自定义每个算法。 还可以设置种子以确保模型的结果可以在多个定型过程间重新生成。<br /><br /> 有关详细信息，请参阅[&#40;SQL Server 数据挖掘外接程序&#41;的算法参数](algorithm-parameters-sql-server-data-mining-add-ins.md)。|  
 |**设置列模型标志**对话框|建模标志可通过指定缺失数据的处理方式来改进模型。 有关详细信息，请参阅[建模标志（数据挖掘）](data-mining/modeling-flags-data-mining.md)。|  
   
-###  <a name="Bkmk_mdlcolumn"></a>设置列用法  
+###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>设置列用法  
  向现有挖掘结构添加新的模型时，必须指定该模型将如何使用挖掘结构中的每个数据列。 您可能会发现，此向导中的选项比挖掘结构上的选项更详细。 为什么？  
   
  原因在于，使用向导一起创建模型和结构时，许多控制算法对数据的使用方式的选项会自动设置。 但是，向现有模型添加新模型时，需要手动查看这些选项，并指定数据是否应用于分析、数据类型是否正确等。  

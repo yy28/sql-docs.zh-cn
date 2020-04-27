@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060134"
 ---
 # <a name="create-parameters"></a>Create Parameters
@@ -37,13 +37,13 @@ ms.locfileid: "66060134"
   
 3.  为列表自身中或 **“属性”** 窗口中的 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
   
-    |properties|说明|  
+    |属性|说明|  
     |--------------|-----------------|  
     |名称|参数的名称。|  
     |数据类型|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
     |敏感|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |必选|需要首先指定并非设计默认值的值，包才能执行。|  
+    |必须|需要首先指定并非设计默认值的值，包才能执行。|  
     |说明|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
     > [!NOTE]  
@@ -71,13 +71,13 @@ ms.locfileid: "66060134"
   
 4.  为 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。  
   
-    |properties|说明|  
+    |属性|说明|  
     |--------------|-----------------|  
     |名称|参数的名称。|  
     |数据类型|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
     |敏感|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |必选|需要首先指定并非设计默认值的值，包才能执行。|  
+    |必须|需要首先指定并非设计默认值的值，包才能执行。|  
     |说明|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
 5.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件的配置中。 保存项目文件以将对参数值的所有更改提交到磁盘。  

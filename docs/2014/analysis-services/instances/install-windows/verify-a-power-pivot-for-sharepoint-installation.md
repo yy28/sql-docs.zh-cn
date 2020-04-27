@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079869"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>验证 PowerPivot for SharePoint 安装
   您在 SharePoint 场中安装的 PowerPivot for SharePoint 实例通过 SharePoint 管理中心进行管理。 至少，您可以检查管理中心和 SharePoint 网站上的页面以便确认 PowerPivot 服务器组件和功能可用。 但是，若要完全验证某一安装，您必须具有可发布到 SharePoint 并从库中访问的 PowerPivot 工作簿。 出于测试目的，您可以发布已包含 PowerPivot 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  
   
-##  <a name="verifyinstall"></a>验证管理中心集成  
+##  <a name="verify-central-administration-integration"></a><a name="verifyinstall"></a> 验证管理中心集成  
  若要验证 PowerPivot 与管理中心的集成，请执行以下操作：  
   
 1.  在 "开始" 菜单上，单击 "**所有程序**"，打开 "Microsoft SharePoint 2010 产品"，然后单击 " **SharePoint 2010 管理中心**"。  
@@ -37,7 +37,7 @@ ms.locfileid: "66079869"
   
     4.  在 **“将该网站添加到区域中”** 中，键入您的网站的 URL，然后单击 **“添加”**。  
   
-    5.  单击“关闭”****，并单击“确定”****。  
+    5.  单击“关闭”****，然后单击“确定”****。  
   
         > [!NOTE]  
         >  SharePoint 安装文档包含有关解决代理服务器错误和禁用 Internet Explorer 安全增强配置的附加说明，以便您可以下载和安装更新。 有关详细信息，请参阅 Microsoft 网站上 **Deploy a single server with SQL Server** （部署单台带有 SQL Server 的服务器）中的 [Perform additional tasks](https://go.microsoft.com/fwlink/?LinkId=177754) “执行附加任务”部分。  
@@ -70,7 +70,7 @@ ms.locfileid: "66079869"
 ## <a name="verify-data-access-on-the-server"></a>验证服务器上的数据访问。  
  若要验证服务器上的 PowerPivot 数据访问，请执行以下操作：  
   
-1.  [下载](https://go.microsoft.com/fwlink/?LinkID=219108)Reporting Services 教程附带的野炊数据示例。 您将使用此下载中的示例工作簿来验证 PowerPivot 数据访问。 解压缩文件。  
+1.  [下载](https://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教程附带的“野餐”数据示例。 您将使用此下载中的示例工作簿来验证 PowerPivot 数据访问。 解压缩文件。  
   
 2.  将 Excel 工作簿 (.xlsx) 上载到“共享文档”。 该工作簿包含嵌入的 PowerPivot 数据。  
   

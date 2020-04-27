@@ -13,27 +13,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080416"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>“输入选择”选项卡（“挖掘准确性图表”视图）
   可以使用 **“挖掘准确性图表”** 设计器的 **“输入选择”** 选项卡，指定用于测试模型和生成准确性图表的数据源。  
   
- **有关详细信息**，请[&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **有关详细信息，请参阅** [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>选项  
  **同步预测**  **列和值**  
  选中此项可以协调网格中的可预测属性，这样在模型定型期间，即使这些属性具有不同名称，也会从相同的可预测挖掘结构列中派生。  
   
- **注意**默认情况下，此选项处于选中状态。 只有在您知道两个挖掘结构列派生自同一基础关系源或多维源并且这两列包含相同的状态或具有相同的离散程度时，才可清除此框。  
+ **注意** 默认情况下此选项处于选中状态。 只有在您知道两个挖掘结构列派生自同一基础关系源或多维源并且这两列包含相同的状态或具有相同的离散程度时，才可清除此框。  
   
  **选择要在提升图中显示的可预测的挖掘模型列**  
  包含的列用于控制提升图中包括的模型以及提升图使用这些模型的方式的网格。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**显示**|选中要在图表中显示的挖掘模型中每个可预测列名称旁边的框。<br /><br /> 如果图表因过于复杂而不便查看，请清除一列或多列旁边的框以简化该图表。<br /><br /> 注意：至少应选择一列，否则无法创建准确性图表。|  
 |**挖掘模型**|列出挖掘结构中包含的挖掘模型。|  
@@ -43,7 +43,7 @@ ms.locfileid: "66080416"
  **选择要用于准确性图表的数据集**  
  其中包含用于指定准确性测试数据的三个选项的选项组。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**使用挖掘模型测试事例**|使用在对挖掘结构进行分区时创建的测试集，并应用为模型定义的筛选器。 有关模型筛选器的信息，请参阅 [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**使用挖掘结构测试事例**|使用在对挖掘结构进行分区时创建的测试集。|  
@@ -61,7 +61,7 @@ ms.locfileid: "66080416"
   
  有关详细信息，请参阅[“指定列映射”对话框（挖掘准确性图表）](specify-column-mapping-dialog-box-mining-accuracy-chart.md)。  
   
- **筛选器表达式**  
+ **筛选表达式**  
  显示使用筛选器编辑器生成的筛选条件。  
   
  **打开筛选器编辑器**  
@@ -71,6 +71,6 @@ ms.locfileid: "66080416"
  [测试和验证任务以及操作方法 &#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [挖掘准确性图表设计器 &#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [对挖掘模型应用筛选器](data-mining/apply-a-filter-to-a-mining-model.md)   
- [挖掘模型的筛选器 &#40;Analysis Services 数据挖掘&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

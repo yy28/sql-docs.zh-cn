@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 579af162998ffaa7c9483a6e6d29a87f98e96fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077882"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>MDX 查询编辑器（Analysis Services - 多维数据）
@@ -42,13 +42,13 @@ ms.locfileid: "66077882"
   
 |术语|定义|  
 |----------|----------------|  
-|**连接**|打开 **“连接到服务器”** 对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。|  
+|**“连接”**|打开 **“连接到服务器”** 对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。|  
 |**取消**|断开 MDX 查询编辑器与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例之间的连接。|  
 |**更改连接**|打开 **“连接到服务器”** 对话框，以便与其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。|  
 |**使用当前连接新建查询**|使用当前“MDX 查询编辑器”窗口的连接信息，打开新的“MDX 查询编辑器”窗口。|  
 |**可用数据库**|将连接更改到同一实例上的其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。|  
-|**运行**|执行所选的代码，如果没有选择任何代码，则执行 MDX 查询编辑器中的全部代码。|  
-|**分析**|检查所选代码的语法。 如果没有选择任何代码，则检查整个“MDX 查询编辑器”窗口的语法。|  
+|**执行**|执行所选的代码，如果没有选择任何代码，则执行 MDX 查询编辑器中的全部代码。|  
+|**Parse**|检查所选代码的语法。 如果没有选择任何代码，则检查整个“MDX 查询编辑器”窗口的语法。|  
 |**取消执行查询**|向服务器发送取消请求。 有些查询不能立即取消，而必须等待适当的取消条件。 如果取消查询，在回滚事务时可能发生延迟。|  
   
 ## <a name="mdx-query-editor-window"></a>MDX 查询编辑器窗口  
@@ -56,7 +56,7 @@ ms.locfileid: "66077882"
   
 |术语|定义|  
 |----------|----------------|  
-|**查询编辑器窗口**|键入要由 MDX 查询编辑器执行的 MDX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**：将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除选定内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**：将剪贴板的内容粘贴到当前所选内容。<br /><br /> **连接**：打开 "**连接到服务器**" 对话框，以便与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例建立连接。<br /><br /> **断开连接**：断开当前查询编辑器与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例的连接。<br /><br /> **断开所有查询**：断开所有当前打开的查询编辑器的连接。<br /><br /> **更改连接**：打开 "**连接到服务器**" 对话框，以便与其他[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例建立连接。<br /><br /> **在对象资源管理器中打开服务器**：在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **对象资源管理器**中打开当前查询编辑器连接到的实例。<br /><br /> **Execute**：执行所选代码，如果没有选择任何代码，则执行当前查询编辑器中的整个代码。<br /><br /> "**属性" 窗口**：显示当前查询窗口的中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 "**属性**" 窗口。<br /><br /> **查询选项**：显示 "**查询选项**" 对话框。|  
+|**查询编辑器窗口**|键入要由 MDX 查询编辑器执行的 MDX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**：将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除选定内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**：将剪贴板的内容粘贴到当前所选内容。<br /><br /> **连接**：打开“连接到服务器” **** 对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **断开连接**：断开当前查询编辑器与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例的连接。<br /><br /> **断开所有查询**：断开所有当前打开的查询编辑器的连接。<br /><br /> **更改连接**：打开 "**连接到服务器**" 对话框，以便与其他[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例建立连接。<br /><br /> **在对象资源管理器中打开服务器**：在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **对象资源管理器**中打开当前查询编辑器连接到的实例。<br /><br /> **Execute**：执行所选代码，如果没有选择任何代码，则执行当前查询编辑器中的整个代码。<br /><br /> "**属性" 窗口**：显示当前查询窗口的中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 "**属性**" 窗口。<br /><br /> **查询选项**：显示 "**查询选项**" 对话框。|  
 |**元数据窗口**|显示当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的元数据。|  
 |**Cube**|在当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中选择一个多维数据集，以显示与 **“元数据”** 选项卡中的多维数据集关联的元数据。|  
 |**元数据**|显示在 **“多维数据集”** 中选定的多维数据集的元数据，包括度量值组和度量值、关键绩效指标 (KPI)、维度、层次结构、级别、成员和成员属性。 若要检索对象的完全限定键，请执行下列操作之一：<br /><br /> 将该对象从 **“元数据”** 选项卡拖到查询窗格。<br /><br /> 右键单击该对象并选择“复制”，再右键单击查询窗格并选择“粘贴”。********|  

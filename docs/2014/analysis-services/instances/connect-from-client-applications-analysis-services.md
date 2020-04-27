@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a646d152abaa3c352bf5ca1c576760e1715c3578
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080205"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
   如果您不熟悉 Analysis Services，则在了解了本主题中的信息之后，您就可以通过常用工具和应用程序连接到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
   
--   [使用 SQL Server Management Studio (SSMS) 连接](#bkmk_SSMS)  
+-   [使用 SQL Server Management Studio （SSMS）进行连接](#bkmk_SSMS)  
   
 -   [使用 Excel 进行连接](#bkmk_excel)  
   
@@ -34,9 +34,9 @@ ms.locfileid: "66080205"
   
 -   [配置 Windows 防火墙以允许 Analysis Services 访问](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [授权对对象和操作的访问 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授予对对象和操作的访问权限 (Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
-##  <a name="bkmk_SSMS"></a>使用 SQL Server Management Studio （SSMS）进行连接  
+##  <a name="connect-using-sql-server-management-studio-ssms"></a><a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 进行连接  
  在 SSMS 中连接到 Analysis Services 时，能够以交互方式管理服务器实例和数据库。 还可以运行 XMLA 或 MDX 查询以便执行管理任务或检索数据。 与只在发出查询时才加载数据库的其他工具和应用程序相比，SSMS 会在您连接服务器时加载所有数据库，前提是您拥有查看数据库的权限。 这意味着，如果您在服务器上保存有大量的表格数据库，所有这些数据库都会在您使用 SSMS 连接时加载至系统内存。  
   
  您可以通过在特定用户标识下运行 SSMS、然后作为该用户连接到 Analysis Services，对权限进行测试。  
@@ -67,7 +67,7 @@ ms.locfileid: "66080205"
     Provider=MSOLAP; Data Source=SERVERNAME; Initial Catalog=AdventureWorks2012; Roles=READER  
     ```  
   
-##  <a name="bkmk_excel"></a>使用 Excel 进行连接  
+##  <a name="connect-using-excel"></a><a name="bkmk_excel"></a>使用 Excel 进行连接  
  Microsoft Excel 通常用于对业务数据进行分析。 作为 Excel 安装的一部分，Office 将安装 Analysis Services OLE DB 访问接口 (MSOLAP DLL)、ADOMD.NET 和其他数据访问接口，使您能够更轻松地使用网络服务器上的数据。 如果您使用的是较新版本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和较旧版本的 Excel，则很可能需要在连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的每台工作站上安装较新的数据提供程序。 有关详细信息，请参阅 [用于 Analysis Services 连接的数据提供程序](data-providers-used-for-analysis-services-connections.md) 。  
   
  在设置与 Analysis Services 多维数据集或表格模型数据库的连接时，Excel 会将连接信息保存到 .odc 文件中以供将来使用。 该连接是在当前 Windows 用户的安全上下文中创建的。 为了能成功连接，该用户帐户必须具有数据库的读取权限。  
@@ -88,19 +88,19 @@ ms.locfileid: "66080205"
   
  有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](https://go.microsoft.com/fwlink/?linkID=215150)。  
   
-##  <a name="bkmk_SSDT"></a>使用 SQL Server Data Tools 进行连接  
+##  <a name="connect-using-sql-server-data-tools"></a><a name="bkmk_SSDT"></a>使用 SQL Server Data Tools 进行连接  
  SQL Server Data Tools 用于生成 BI 解决方案，包括 Analysis Services 模型、Reporting Services 报表和 SSIS 包。 在生成报表或包时，您可能需要指定与 Analysis Services 的连接。  
   
  下面的链接说明如何从报表服务器项目或 Integration Services 项目连接到 Analysis Services：  
   
--   [MDX &#40;Analysis Services 连接类型&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+-   [针对 MDX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
 -   [Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
 > [!NOTE]  
 >  在使用 SQL Server Data Tools 处理现有 Analysis Services 项目时，请记住您可以使用本地或版本控制项目脱机连接，或者在联机模式下进行连接以便在数据库正运行时更新 Analysis Services 对象。 有关详细信息，请参阅 [Connect in Online Mode to an Analysis Services Database](../multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)。 更常见的情况是，来自 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的连接将处于项目模式下，这样一来，只有在您显式部署项目时才能将更改部署到数据库。  
   
-##  <a name="bkmk_tshoot"></a>测试连接  
+##  <a name="test-connections"></a><a name="bkmk_tshoot"></a>测试连接  
  您可以使用 SQL Server Profiler 来监视与 Analysis Services 的连接。 Audit Login 和 Audit Logout 事件提供连接证据。 标识列指示进行连接所基于的安全上下文。  
   
 1.  在 Analysis Services 实例上启动 **SQL Server Profiler** ，然后开始一个新跟踪。  
@@ -119,7 +119,7 @@ ms.locfileid: "66080205"
   
      若要进行测试，请在远程计算机上使用 Excel 或 SSMS，并且指定 Analysis Services 实例使用的 IP 地址和端口。 如果您可以连接，则防火墙规则对实例是有效的并且实例允许远程连接。  
   
-     此外，在使用 TCP/IP 作为连接协议时，请记住 Analysis Services 要求客户端连接源自相同的域或可信域。 如果连接穿过了安全边界，您很可能需要配置 HTTP 访问。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+     此外，在使用 TCP/IP 作为连接协议时，请记住 Analysis Services 要求客户端连接源自相同的域或可信域。 如果连接穿过了安全边界，您很可能需要配置 HTTP 访问。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
 -   某些工具可以连接，而其他工具却不能？ 该问题可能是客户端库的版本错误导致的。 您可以从 SQL Server 功能包下载页获取客户端库。  
   
@@ -131,6 +131,6 @@ ms.locfileid: "66080205"
  [连接到 Analysis Services](connect-to-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](authentication-methodologies-supported-by-analysis-services.md)   
  [模拟 &#40;SSAS 表格&#41;](../tabular-models/impersonation-ssas-tabular.md)   
- [&#40;SSAS 多维&#41;创建数据源](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [创建数据源（SSAS 多维）](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

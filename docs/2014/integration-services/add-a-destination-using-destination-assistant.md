@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66e48903776824b0e540b854a5704ceef3a9782e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062072"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>使用目标助手添加目标
@@ -28,7 +28,7 @@ ms.locfileid: "66062072"
   
 3.  在 **“类型”** 列表中，选择目标的类型。  
   
-4.  在“连接管理器”**** 列表中选择现有连接管理器，或选择“**New>”\<** 创建新的连接管理器。  
+4.  在“连接管理器”列表中选择现有连接管理器，或选择“\<新建>”，创建新的连接管理器********。  
   
 5.  如果您选择现有连接管理器，则单击 **“确定”** 以便关闭 **“添加新目标”** 对话框。 您应该会看到添加到数据流的目标管理器和连接管理器。  
   

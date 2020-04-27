@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070183"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>“结果”窗格（“挖掘模型预测”视图）
-  
   **“结果”** 窗格显示在预测查询生成器的 **“设计”** 视图中设计的数据挖掘预测查询的结果。 您可以将结果网格中的所选内容或整个网格复制到剪贴板。  
   
 ## <a name="options"></a>选项  
@@ -39,6 +38,6 @@ ms.locfileid: "66070183"
 ## <a name="see-also"></a>另请参阅  
  [&#40;数据挖掘的预测查询生成器&#41;](prediction-query-builder-data-mining.md)   
  [数据挖掘查询接口](data-mining/data-mining-query-tools.md)   
- [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [数据挖掘扩展插件 (DMX) 语句引用](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

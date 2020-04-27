@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060045"
 ---
 # <a name="data-conversion-transformation-editor"></a>数据转换编辑器
@@ -40,12 +40,12 @@ ms.locfileid: "66060045"
  为每一个新列键入一个别名。 默认为 `Copy of` 后接输入列名。不过，你也可以任选一个唯一的描述性名称。  
   
  **数据类型**  
- 从列表中选择可用的数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
+ 从列表中选择可用的数据类型。 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
  **长度**  
  设置字符串数据的列长度。  
   
- **Precision**  
+ **精度**  
  设置数字数据的精度。  
   
  **缩放**  

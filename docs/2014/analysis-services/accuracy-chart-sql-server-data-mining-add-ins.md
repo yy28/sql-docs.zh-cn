@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062991"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>准确性图表（SQL Server 数据挖掘外接程序）
@@ -49,12 +49,12 @@ ms.locfileid: "66062991"
   
 2.  在 "**准确性和验证**" 组中，单击 "**准确性图表**"。  
   
-3.  在 "**选择结构或模型**" 对话框中，选择要评估的模型。 单击“下一步”。   
+3.  在 "**选择结构或模型**" 对话框中，选择要评估的模型。 单击“下一步”  。  
   
     > [!NOTE]  
     >  必须选择与要测试的数据最相匹配的模型。  
   
-4.  在 "**指定要预测的列和要预测的值**" 对话框中，选择要预测的列和目标值（如果适用）。 单击“下一步”。   
+4.  在 "**指定要预测的列和要预测的值**" 对话框中，选择要预测的列和目标值（如果适用）。 单击“下一步”  。  
   
      例如，在上面的示例中，您可以选择用来建立顾客答复模型的列，并将目标值指定为“可能购买”。  
   

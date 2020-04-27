@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070205"
 ---
 # <a name="restrict-rows-partition-wizard"></a>限制行（分区向导）
   可以使用 **“限制行”** 页，限制从指定表中检索、聚合并包括到分区中的行。  
   
 > [!NOTE]  
->  只有在“指定源信息”**** 页中选择了单个表时，才会显示此页。  
+>   只有在 **“指定源信息”** 页中选择了单个表时，才会显示此页。  
   
 > [!CAUTION]  
->  如果在“指定源信息”**** 页上的“可用表”**** 中指定了由另一个分区使用的表，则必须在“限制行”**** 页中提供查询，否则在多维数据集中会出现数据重复的风险。  
+>   如果在 **“指定源信息”** 页上的 **“可用表”** 中指定了由另一个分区使用的表，则必须在 **“限制行”** 页中提供查询，否则在多维数据集中会出现数据重复的风险。  
   
 ## <a name="options"></a>选项  
  **指定查询以限制行**  
@@ -44,6 +44,6 @@ ms.locfileid: "66070205"
  验证“查询”**** 中的语句是否为有效的 SQL 语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [Analysis Services 多维数据 &#40;分区&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分区（Analysis Services - 多维数据）](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

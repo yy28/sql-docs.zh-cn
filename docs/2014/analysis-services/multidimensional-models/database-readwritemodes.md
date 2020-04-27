@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075864"
 ---
 # <a name="database-readwritemodes"></a>数据库 ReadWriteMode
   通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将读/写数据库更改为只读数据库，或者恰好相反。 通常根据业务需要进行相应的更改，例如：为制定解决方案和提高性能，在多个服务器之间共享同一数据库文件夹。 在`ReadWriteMode`这些情况下，数据库属性使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以轻松地更改数据库运行模式。  
   
 ## <a name="readwritemode-database-property"></a>ReadWriteMode 数据库属性  
- `ReadWriteMode`数据库属性指定数据库是处于读/写模式还是处于只读模式。 只可能有两个属性值。 在数据库处于只读模式时，不能对数据库应用更改或更新。 但是，在数据库处于读/写模式时，可能会出现更改和更新。 `ReadWriteMode`数据库属性被定义为只读属性;仅可通过`Attach`命令进行设置。  
+  数据库属性指定了数据库是处于读/写模式还是只读模式。 只可能有两个属性值。 在数据库处于只读模式时，不能对数据库应用更改或更新。 但是，在数据库处于读/写模式时，可能会出现更改和更新。  数据库属性被定义为只读属性；只能通过  命令设置该属性。  
   
  在数据库处于只读模式时，存在一些限制，它们会影响数据库的允许操作的普通集合。 有关受限操作的信息，请参阅下表。  
   
@@ -36,8 +36,7 @@ ms.locfileid: "66075864"
 |后台操作|禁用将修改数据库的所有后台操作。 这包括迟缓处理和主动缓存。|  
   
 ## <a name="readwritemode-usage"></a>ReadWriteMode 用法  
- 
-  `ReadWriteMode` 数据库属性将用作 `Attach` 数据库命令的一部分。 `Attach`命令允许将数据库属性设置为`ReadWrite`或`ReadOnly`。 因为 `ReadWriteMode` 数据库属性被定义为只读，所以不能直接更新该属性值。 通过将 `ReadWriteMode` 属性设置为 `ReadWrite` 可创建数据库。 不能在只读模式下创建数据库。  
+ `ReadWriteMode` 数据库属性将用作 `Attach` 数据库命令的一部分。  命令允许将数据库属性设置为  或 。 因为 `ReadWriteMode` 数据库属性被定义为只读，所以不能直接更新该属性值。 通过将 `ReadWriteMode` 属性设置为 `ReadWrite` 可创建数据库。 不能在只读模式下创建数据库。  
   
  若要在`ReadWriteMode`和`ReadWrite` `ReadOnly`之间切换数据库属性，必须发出一系列`Detach/Attach`命令。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073733"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>直观合计和非直观合计
@@ -36,11 +36,11 @@ ms.locfileid: "66073733"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**所有产品**|**Accessories**|**Bikes**|**服装**|**组件**|  
-|**All Resellers**|**$80450596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
+||**All Products**|**Accessories**|**Bikes**|**服装**|**组件**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
-|**仓库**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8133313.11**|  
+|**仓库**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>针对行和列的非直观合计  
  要生成一个仅具有“附件”和“服装”产品、“增值分销商”和“仓库分销商”数据的表，但仍保留总合计，则使用 NON VISUAL 编写如下语句：  
@@ -61,8 +61,8 @@ ms.locfileid: "66073733"
   
 |||||  
 |-|-|-|-|  
-||**所有产品**|**Accessories**|**服装**|  
-|**All Resellers**|**$80450596.98**|**$571,297.93**|**$1,777,840.84**|  
+||**All Products**|**Accessories**|**服装**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**仓库**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
@@ -103,6 +103,6 @@ ms.locfileid: "66073733"
  [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [基本 MDX 查询 &#40;MDX&#41;](mdx-query-the-basic-query.md)   
  [用查询轴和切片器轴限定查询 &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [在查询 &#40;MDX&#41;中建立多维数据集上下文](establishing-cube-context-in-a-query-mdx.md)  
+ [在查询中建立多维数据集上下文 (MDX)](establishing-cube-context-in-a-query-mdx.md)  
   
   

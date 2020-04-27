@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa3e1544f625183df3240359aa22b117144244d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072994"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>设置多维数据库属性 (Analysis Services)
@@ -35,18 +35,17 @@ ms.locfileid: "66072994"
 ## <a name="database-properties"></a>数据库属性  
  除了上述属性之外，您还可以在“属性”窗口中配置许多数据库属性。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |聚合前缀|用于数据库中所有分区的聚合名的常用前缀。 有关详细信息，请参阅 [AggregationPrefix 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl)。|  
 |排序规则|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例时，除非在此处提供其他值，否则数据库将继承“排序规则”服务器属性。|  
 |DataSourceImpersonationInfo|为数据库中的所有数据源对象指定默认模拟模式。 这是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务在处理对象、同步服务器以及执行 OpenQuery 和 SystemOpenSchema 数据挖掘语句时使用的模式。|  
-|估计大小|提供磁盘上数据库文件的估计大小。 如果数据存储在多个位置，此估计值将仅限于数据库文件夹下存储的数据文件。<br /><br /> 
-  `EstimatedSize` 也可用作估算内存的基础。 由于将数据库加载到内存时创建的附加数据结构，内存需求通常大于磁盘上的数据大小。<br /><br /> 要进一步估计内存需求，您也可以使用任务管理器查看在处理数据库之前和之后的 Analysis Services 进程内存并查看内存使用率，通过内存使用率来了解数据库的内存需求。|  
+|估计大小|提供磁盘上数据库文件的估计大小。 如果数据存储在多个位置，此估计值将仅限于数据库文件夹下存储的数据文件。<br /><br /> `EstimatedSize` 也可用作估算内存的基础。 由于将数据库加载到内存时创建的附加数据结构，内存需求通常大于磁盘上的数据大小。<br /><br /> 要进一步估计内存需求，您也可以使用任务管理器查看在处理数据库之前和之后的 Analysis Services 进程内存并查看内存使用率，通过内存使用率来了解数据库的内存需求。|  
 |语言|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例时，除非在此处提供其他值，否则数据库将继承“语言”服务器属性。|  
 |MasterDataSource ID|用于远程分区。 有关详细信息，请参阅 [Remote Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
  ["数据库属性" 对话框 &#40;SSAS-多维&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
- [配置 Analysis Services 项目属性 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
+ [配置 Analysis Services 项目属性 (SSDT)](configure-analysis-services-project-properties-ssdt.md)  
   
   

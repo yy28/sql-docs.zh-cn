@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066995"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI（SSAS 表格）
@@ -22,15 +22,15 @@ ms.locfileid: "66066995"
   
  本主题的内容：  
   
--   [便利](#bkmk_benefits)  
+-   [优点](#bkmk_benefits)  
   
 -   [示例](#bkmk_example)  
   
--   [创建和编辑 KPI](#bkmk_create)  
+-   [创建和编辑 Kpi](#bkmk_create)  
   
 -   [相关任务](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> 优势  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>便利  
  在业务术语中，关键绩效指标 (KPI) 是一个用于度量业务目标的可计量度量值。 经常会在一段时间内评估 KPI。 例如，组织的销售部门可以使用 KPI 来根据预计的毛利润来度量每月毛利润。 会计部门可以度量每月的支出与收入之比以便评估成本，而人力资源部门可以度量每季度员工流失情况。 这两个都是 KPI 的示例。 业务专业人员经常使用以业务计分卡形式分组在一起的 KPI 获取迅速且精确的业务绩效历史摘要或标识趋势。  
   
  表格模型中的 KPI 包括：  
@@ -44,7 +44,7 @@ ms.locfileid: "66066995"
  **状态阈值**  
  状态阈值按下限和上限之间的范围或按固定值定义。 状态阈值在显示时含一个图形，可帮助用户轻松地确定与目标值相比基础值的状态。  
   
-##  <a name="bkmk_example"></a>实例  
+##  <a name="example"></a><a name="bkmk_example"></a>实例  
  Adventure Works 的销售经理想要创建一个数据透视表，她可以使用该数据透视表快速显示销售人员是否满足针对给定期间（年）的销售定额。 对于每个销售雇员，她希望该数据透视表显示以美元表示的实际销售额、以美元表示的销售配额量，以及显示每个销售员工是低于、等于还是高于其销售定额的状态的简单图形显示。 她希望能够按年对数据进行切片。  
   
  为实现此目的，销售经理会登记其组织的 BI 解决方案开发人员的帮助，以便将销售 KPI 添加到 AdventureWorks 表格模型中。 该销售经理然后使用 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 连接到作为数据源的 Adventure Works 表格模型，并且创建了一个数据透视表，其中包含字段（度量值和 KPI）和切片器以便分析销售人员是否满足其定额。  
@@ -74,19 +74,19 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  该销售经理可以按年对实际销售额、销售定额和每位销售员工的状态执行切片操作。 她可以分析多年中的销售趋势，以便确定是否需要调整某位销售人员的销售定额。  
   
-##  <a name="bkmk_create"></a>创建和编辑 Kpi  
+##  <a name="create-and-edit-kpis"></a><a name="bkmk_create"></a>创建和编辑 Kpi  
  为了在模型设计器中创建 KPI，您将使用“关键绩效指标”对话框。 因为 KPI 必须与某一度量值相关联，所以，您将通过以下方式创建 KPI：扩展求值结果为某一基础值的度量值，然后或者创建求值结果为目标值的度量值，或者输入绝对值。 在定义了基础度量值（值）和目标值之后，您可以定义基础值和目标值之间的状态阈值参数。 使用可选的图标、条、图形或颜色以图形格式显示该状态。 然后，可以将基础值和目标值以及状态以可以对其他数据字段执行切片操作的值的形式添加到报表或数据透视表中。  
   
  若要查看“关键绩效指标”对话框，请在表的度量值网格中，右键单击将充当基础值的度量值，然后单击 **“创建 KPI”**。 在某一度量值已作为基础值扩展到 KPI 后，一个图标将出现在度量值网格中的该度量值名称旁，以便将该度量值标识为与某一 KPI 相关联。  
   
-##  <a name="bkmk_related_tasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 相关任务  
   
 |主题|说明|  
 |-----------|-----------------|  
-|[创建和管理 Kpi &#40;SSAS 表格&#41;](kpis-ssas-tabular.md)|说明如何使用基础度量值、目标度量值和状态阈值创建 KPI。|  
+|[创建和管理 KPI（SSAS 表格）](kpis-ssas-tabular.md)|说明如何使用基础度量值、目标度量值和状态阈值创建 KPI。|  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;度量值](measures-ssas-tabular.md)   
- [SSAS 表格&#41;&#40;透视](perspectives-ssas-tabular.md)  
+ [透视表（SSAS 表格）](perspectives-ssas-tabular.md)  
   
   

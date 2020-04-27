@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b1d0c01be4901e771278c82c4277c280aeb43ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074521"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>在 MDX 中生成单元计算 (MDX)
@@ -34,11 +34,11 @@ ms.locfileid: "66074521"
   
  就创建作用域而言，计算单元类似于命名集和计算成员，因为可以为会话或单个查询的生存期临时创建计算单元，或将计算单元作为多维数据集的一部分在全局作用域内使用：  
   
--   **查询作用域**若要创建定义为 MDX 查询的一部分并且其作用域限制为查询的计算单元，请使用 WITH 关键字。 然后可以在 MDX SELECT 语句中使用该计算单元。 使用这种方法，可以更改使用 `WITH` 关键字创建的计算单元，而不会打乱 SELECT 语句。  
+-   **查询作用域：** 若要创建定义为 MDX 查询的一部分的计算单元（计算单元的作用域因此局限于该查询），请使用 WITH 关键字。 然后可以在 MDX SELECT 语句中使用该计算单元。 使用这种方法，可以更改使用 `WITH` 关键字创建的计算单元，而不会打乱 SELECT 语句。  
   
-     有关如何使用 WITH 关键字创建计算成员的详细信息，请参阅[创建查询作用域的单元计算 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)。  
+     有关如何使用 WITH 关键字创建计算成员的详细信息，请参阅 [创建查询作用域的单元计算 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)。  
   
--   **会话作用域**若要创建一个计算成员，使其作用域比查询上下文更广（即，其作用域为 MDX 会话的生存期），请使用 CREATE CELL CALCULATION 或 ALTER CUBE 语句。  
+-   **会话作用域：** 若要创建作用域比查询的上下文更广（也就是说，其作用域是 MDX 会话的生存期）的计算成员，请使用 CREATE CELL CALCULATION 或 ALTER CUBE 语句。  
   
      有关如何使用 CREATE CELL CALCULATION 或 ALTER CUBE 语句在会话中创建计算单元的详细信息，请参阅 [创建会话作用域的计算单元](mdx-cell-calculations-session-scoped-calculated-cells.md)  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66074521"
  [ALTER CUBE 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
  [&#40;MDX 创建单元计算语句&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
  [&#40;MDX&#41;创建查询作用域的单元计算](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

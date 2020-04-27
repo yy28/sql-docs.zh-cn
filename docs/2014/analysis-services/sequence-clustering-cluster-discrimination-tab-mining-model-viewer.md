@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069138"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类对比”选项卡（挖掘模型查看器）
-  
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类对比”** 选项卡将比较顺序分析和聚类分析模型中的所选分类。  
   
  可以使用此顺序分析和聚类分析模型视图，比较两个分类并查看哪些状态和转换是不同的。  
   
- **有关详细信息：** [microsoft 顺序分析和聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)、[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **有关详细信息，请参阅 ** [Microsoft 顺序分析和聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)和[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -50,11 +49,10 @@ ms.locfileid: "66069138"
   
  总体上而言，某个特定分类可能包含多个状态：例如，常见状态可能为依次购买 Water Bottle 和 Water Bottle Cage。 但是，相应的顺序可能存在于包含更重要的定义特征的其他分类中。 例如，另一个分类最主要的特点可能是事务时间非常短，并且分析表明，Water Bottle 和 Water Bottle Cage 项可能通常分组到此分类中，但并不总是这样。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**变量**|挖掘模型中的属性。|  
-|**值**|
-  **“变量”** 中列出的属性的状态。|  
+|**值**|**“变量”** 中列出的属性的状态。|  
 |**优先\<分类 1>**|包含一个阴影条，指示 **“变量”** 和 **“值”** 中列出的属性和状态倾向于 **“分类 1”** 中的所选分类的程度。|  
   
 ## <a name="see-also"></a>另请参阅  

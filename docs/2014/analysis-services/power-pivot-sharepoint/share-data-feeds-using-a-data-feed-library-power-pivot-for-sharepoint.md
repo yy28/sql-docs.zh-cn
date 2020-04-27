@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071144"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>使用数据馈送库共享数据馈送 (PowerPivot for SharePoint)
@@ -39,7 +39,7 @@ ms.locfileid: "66071144"
 > [!NOTE]  
 >  虽然数据馈送用于将 Web 数据添加到你在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中创建的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]数据源，但可以读取 Atom 馈送的任何客户端应用程序都可以处理数据服务文档。  
   
-##  <a name="prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="prereq"></a>先决条件  
  您必须具有将查询处理[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]添加[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]到 SharePoint 场的 PowerPivot for SharePoint 部署。 通过 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包可部署数据馈送支持。  
   
  您必须具有支持数据服务文档内容类型的 SharePoint 库。 建议将默认数据馈送库用于此目的，但您可以手动将内容类型添加到任何库。 有关详细信息，请参阅[创建或自定义数据馈送库 &#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "66071144"
   
  您必须对 SharePoint 站点具有“参与讨论”权限，才能在 SharePoint 库中创建或管理数据服务文档。  
   
-##  <a name="createdsdoc"></a>创建数据服务文档  
+##  <a name="create-a-data-service-document"></a><a name="createdsdoc"></a>创建数据服务文档  
  数据服务文档是一个持续的请求，用于根据请求从以馈送格式提供数据的联机数据源或应用程序获得数据流。 当您创建数据服务文档时，应指定一个指针，该指针指向一个或多个以 Atom 联合格式提供 XML 表格数据且 URL 可寻址的数据服务。  
   
  一个文档可以指定多个数据馈送。 如果您要通过单个导入操作从同一服务（或甚至从不同服务）检索一组数据负载，则这非常有用。  
@@ -83,7 +83,7 @@ ms.locfileid: "66071144"
   
  若要使用数据服务文档，可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中打开 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 工作簿，并在“导入数据”向导中选择 **“从数据馈送”** 选项。 当系统提示时，用户将指定数据服务文档的 SharePoint URL 以开始数据导入操作。 有关详细信息，请参阅[使用数据馈送 &#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。  
   
-##  <a name="securedsdoc"></a>保护数据服务文档  
+##  <a name="secure-a-data-service-document"></a><a name="securedsdoc"></a>保护数据服务文档  
  数据服务文档继承包含它的库的权限。 对项设置的权限将确定用户是否可以打开、修改或删除数据服务文档。  
   
  若要在 PowerPivot 客户端应用程序中将数据服务文档用作数据馈送进行导入，用户只需对文档具有查看权限。 查看权限足以在导入向导中解析 URL。  
@@ -99,17 +99,17 @@ ms.locfileid: "66071144"
 |在 SharePoint 场中，作为计划的任务刷新数据，而无需任何用户输入。|不适用。 PowerPivot 服务使用嵌入的 HTTP 连接信息，直接连接到提供馈送的数据服务和应用程序。 PowerPivot 服务不使用数据服务文档。|  
 |删除库中的数据服务文档|对于库的“参与讨论”权限。|  
   
-##  <a name="modifydsdoc"></a>修改数据服务文档  
+##  <a name="modify-a-data-service-document"></a><a name="modifydsdoc"></a>修改数据服务文档  
  您可以在数据服务文档中添加、编辑或删除各个“URL-表”项。 在保存所做的更改后，在新的导入操作中选择此服务文档的用户将获取您指定的数据馈送。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用文档以前版本的工作簿不受您所做的任何更改的影响。 这是因为在初始导入操作中，只读取一次数据服务文档。 在导入过程中，复制服务 URL 和表名称并将其存储在工作簿内部。 然后，这些内部值在后续的刷新操作中用于获取更新后的数据。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿不受您所做更改的影响。 这是因为在初始导入操作中，只读取一次数据服务文档。 在导入过程中，复制服务 URL 和表名称并将其存储在工作簿内部。 然后，这些内部值在后续的刷新操作中用于获取更新后的数据。  
   
  因为 SharePoint 站点上的数据服务文档与包含导入馈送的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿之间不存在永久链接，所以，修改数据服务文档的任何部分都不会影响现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。  
   
 > [!IMPORTANT]  
 >  尽管只读取一次数据服务文档，但可以定期访问提供实际数据的数据服务以获取更新的馈送。 有关如何刷新数据的详细信息，请参阅[PowerPivot 数据刷新](power-pivot-data-refresh.md)。  
   
-##  <a name="usedsdoc"></a>下一步：使用数据服务文档  
+##  <a name="next-step-use-a-data-service-document"></a><a name="usedsdoc"></a>下一步：使用数据服务文档  
  若要使用在 SharePoint 库中创建的数据服务文档，可以使用 PowerPivot 数据源中的 "**从数据馈送**导入" 选项。 有关说明，请参阅[使用数据馈送 &#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。  
   
 ## <a name="see-also"></a>另请参阅  

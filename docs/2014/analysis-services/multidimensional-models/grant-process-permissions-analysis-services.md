@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074891"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授予处理权限 (Analysis Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66074891"
 > [!IMPORTANT]  
 >  其角色只有处理权限的用户将不能够使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 来连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和处理对象。 这些工具要求 `Read Definition` 访问对象元数据的权限。 没有功能使用任一工具时，则必须使用 XMLA 脚本来执行处理操作。  
 >   
->  我们建议同时授予 `Read Definition` 权限以便进行检测。 具有 `Read Definition` 和 `Process Database` 权限的用户可交互地处理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象。 有关详细信息，请参阅 [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
+>  我们建议同时授予 `Read Definition` 权限以便进行检测。 具有 `Read Definition` 和 `Process Database` 权限的用户可交互地处理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象。 有关详细信息，请参阅 [授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>设置数据库级别的处理权限  
  此部分解释了如何通过非管理员为数据库中的所有多维数据集、维度、挖掘结构和挖掘模型启用处理。  
@@ -93,6 +93,6 @@ ms.locfileid: "66074891"
  [处理数据库、表或分区](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)   
  [授予数据库权限 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [授予对对象元数据的读取定义权限 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077685"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>“挖掘模型属性”对话框（Analysis Services - 数据挖掘）
@@ -29,7 +29,7 @@ ms.locfileid: "66077685"
 |术语|定义|  
 |----------|----------------|  
 |**名称**|显示挖掘模型的名称。|  
-|**识别**|显示挖掘模型的标识符。|  
+|**ID**|显示挖掘模型的标识符。|  
 |**说明**|显示挖掘模型的说明。|  
 |**创建时间戳**|显示挖掘模型的创建日期和时间。|  
 |**上次架构更新时间**|显示上次更新挖掘模型的元数据的日期和时间。|  

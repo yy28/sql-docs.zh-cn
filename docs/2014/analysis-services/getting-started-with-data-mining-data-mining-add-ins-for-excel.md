@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080939"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>数据挖掘入门（Excel 数据挖掘外接程序）
@@ -32,7 +32,7 @@ ms.locfileid: "66080939"
   
  您选择的分析方法取决于您的目标。 数据挖掘外接程序支持以下类型的分析：  
   
--   监督式和非监督式学习  
+-   监督的学习和无人监督的学习  
   
 -   聚类分析（分段）  
   
