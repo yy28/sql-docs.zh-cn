@@ -15,20 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62711432"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
-  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例 (FCI) 都利用 Windows Server 故障转移群集 (WSFC) 来作为平台技术。  WSFC 使用一种基于仲裁的方法来监视群集的整体运行状况，并且最大限度地提高节点级别的容错能力。 理解 WSFC 仲裁模式和节点投票配置对于 AlwaysOn 高可用性和灾难恢复解决方案的设计、操作和故障排除十分重要。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例 (FCI) 都利用 Windows Server 故障转移群集 (WSFC) 来作为平台技术。  WSFC 使用一种基于仲裁的方法来监视群集的整体运行状况，并且最大限度地提高节点级别的容错能力。 理解 WSFC 仲裁模式和节点投票配置对于 AlwaysOn 高可用性和灾难恢复解决方案的设计、操作和故障排除十分重要。  
   
  **本主题内容：**  
   
--   [由仲裁进行的群集运行状况检测](#ClusterHealthDetectionbyQuorum)  
+-   [仲裁的群集运行状况检测](#ClusterHealthDetectionbyQuorum)  
   
 -   [仲裁模式](#QuorumModes)  
   
@@ -40,30 +38,24 @@ ms.locfileid: "62711432"
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="ClusterHealthDetectionbyQuorum"></a>仲裁的群集运行状况检测  
+##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> 由仲裁进行的群集运行状况检测  
  WSFC 群集中的每个节点都参与周期性信号通信，以便与其他节点共享该节点的运行状况。 未响应的节点被认为是处于故障状态。  
   
- 
-  *
-  * “仲裁”节点集是 WSFC 群集中的大多数投票节点和见证服务器。 
-  *
-  *WSFC 群集的总体运行状况和状态是由定期“仲裁投票”确定的。  仲裁的存在意味着群集运行状况正常，且能提供节点级别的容错能力。  
+ ** “仲裁”节点集是 WSFC 群集中的大多数投票节点和见证服务器。 ** WSFC 群集的总体运行状况和状态是由定期“仲裁投票”确定的。  仲裁的存在意味着群集运行状况正常，且能提供节点级别的容错能力。  
   
  没有仲裁并不指示群集未在正常状况下运行。  必须维护整体 WSFC 群集运行状况，以便确保运行状况辅助节点可用于要故障转移到的主节点。  如果仲裁投票失败，作为一项预防措施，WSFC 群集将被设为脱机。  这也将导致停止所有向群集注册的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
 > [!IMPORTANT]  
 >  如果 WSFC 群集因为仲裁失败而被设为脱机，则需要手动干预以便将其重新联机。  
 >   
->  有关详细信息，请参阅：[通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
+>  有关详细信息，请参阅： [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
   
-##  <a name="QuorumModes"></a>仲裁模式  
- 
-  *
-  * “仲裁模式”是在 WSFC 群集级别配置的，指示用于仲裁投票的方法。  故障转移群集管理器实用工具将会基于群集中的节点数来建议仲裁模式。  
+##  <a name="quorum-modes"></a><a name="QuorumModes"></a>仲裁模式  
+ ** “仲裁模式”是在 WSFC 群集级别配置的，指示用于仲裁投票的方法。  故障转移群集管理器实用工具将会基于群集中的节点数来建议仲裁模式。  
   
  以下仲裁模式可用于确定构成投票仲裁的元素：  
   
--   **节点多数。** 群集中超过一半的投票节点必须投票赞成群集处于正常状态。  
+-   **节点的大多数。** 群集中超过一半的投票节点必须投票赞成群集处于正常状态。  
   
 -   **节点和文件共享的大多数。** 与节点的大多数仲裁模式相似，只有远程文件共享也配置为投票见证除外，并且从任何节点到该共享的连接也作为赞成投票计数。  超过一半的可能投票必须赞成群集处于正常状态。  
   
@@ -74,12 +66,10 @@ ms.locfileid: "62711432"
 -   **仅磁盘。** 共享磁盘群集资源指定为见证，并且从任何节点到该共享磁盘的连接也作为赞成投票计数。  
   
 > [!TIP]  
->  在将非对称存储配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 时，如果您具有奇数数目的投票节点，则通常应该使用节点的大多数仲裁模式；如果您具有偶数数目的投票节点，则通常应该使用节点和文件共享的大多数仲裁模式。  
+>  在将非对称存储配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时，如果您具有奇数数目的投票节点，则通常应该使用节点的大多数仲裁模式；如果您具有偶数数目的投票节点，则通常应该使用节点和文件共享的大多数仲裁模式。  
   
-##  <a name="VotingandNonVotingNodes"></a>投票和非投票节点  
- 默认情况下，WSFC 群集中的每个节点都作为群集仲裁的成员包括；每个节点都具有用于确定群集整体运行状况的单个投票，并且每个节点都将持续尝试建立仲裁。  
-  *
-  *到目前为止对仲裁的论述已谨慎地将对群集运行状况进行投票的一组 WSFC 群集节点划分为“投票节点”。  
+##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> 投票和非投票节点  
+ 默认情况下，WSFC 群集中的每个节点都作为群集仲裁的成员包括；每个节点都具有用于确定群集整体运行状况的单个投票，并且每个节点都将持续尝试建立仲裁。  ** 到目前为止对仲裁的论述已谨慎地将对群集运行状况进行投票的一组 WSFC 群集节点划分为“投票节点”。  
   
  在一个 WSFC 群集中没有单独的节点可以明确确定该群集作为一个整体是正常运行还是非正常运行。  在任意给定时刻，从各节点的角度来说，其他一些节点可能好像脱机，或者好像处于故障转移中，或者好像由于网络通信失败而无法响应。  仲裁投票的一个关键功能是确定 WSFC 群集中每个节点的明显表现出来的状态是否真的就是这些节点的实际状态。  
   
@@ -99,7 +89,7 @@ ms.locfileid: "62711432"
 >   
 >  [KB2494036](https://support.microsoft.com/kb/2494036)：提供了一个修补程序，可让你配置在[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]和中没有仲裁投票的群集节点[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
-##  <a name="RecommendedAdjustmentstoQuorumVoting"></a>建议的仲裁投票调整  
+##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> 建议的仲裁投票调整  
  在启用或禁用某一给定 WSFC 节点的投票时，应遵循以下准则：  
   
 -   **默认为不投票。** 假定在没有明确理由的情况下每个节点都不应投票。  
@@ -119,20 +109,20 @@ ms.locfileid: "62711432"
 > 
 >  -   承载主副本的群集节点不具有投票  
 > -   辅助副本配置用于自动故障转移并且其群集节点不具有投票。  
-> -   托管可用性副本的所有群集节点上均未安装[KB2494036](https://support.microsoft.com/kb/2494036) 。 此修补程序是在多站点部署中为群集节点添加或删除投票所必需的。 但在单站点部署中，此修补程序通常不是必需的并且您可以放心地忽略该警告。  
+> -   [KB2494036](https://support.microsoft.com/kb/2494036) 未安装在承载可用性副本的所有群集节点上。 此修补程序是在多站点部署中为群集节点添加或删除投票所必需的。 但在单站点部署中，此修补程序通常不是必需的并且您可以放心地忽略该警告。  
 > 
 > [!TIP]
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]公开多个系统动态管理视图（Dmv），可帮助你管理与 WSFC 群集配置和节点仲裁投票相关的设置。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公开若干系统动态管理视图 (DMV)，可帮助你管理 WSFC 群集配置和节点仲裁投票相关的设置。  
 > 
 >  有关详细信息，请参阅：[sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql)[sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)[sys.dm_os_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql) 和 [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [查看群集仲裁 NodeWeight 设置](view-cluster-quorum-nodeweight-settings.md)  
   
 -   [配置群集仲裁 NodeWeight 设置](configure-cluster-quorum-nodeweight-settings.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

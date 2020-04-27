@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754457"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>设置数据库镜像 (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62754457"
   
  
   
-##  <a name="PrepareInstances"></a> 准备服务器实例以承载镜像服务器  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> 准备服务器实例以承载镜像服务器  
  对于每个数据库镜像会话：  
   
 1.  主体服务器、镜像服务器和见证服务器（如果有）都必须由位于单独的主机系统中的独立服务器实例承载。 每个服务器实例都需要数据库镜像端点。 如果您需要创建一个数据库镜像端点，请确保其他服务器实例无法访问该端点。  
@@ -48,7 +48,7 @@ ms.locfileid: "62754457"
   
 3.  在将承载镜像数据库的服务器实例上，设置镜像数据库所需的环境的其余部分。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-##  <a name="EstablishUsingWinAuthentication"></a> 概述：建立数据库镜像会话  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> 概述：建立数据库镜像会话  
  以下是建立镜像会话的基本步骤：  
   
 1.  通过对每个还原操作使用 RESTORE WITH NORECOVERY 还原以下备份来创建镜像数据库：  
@@ -99,7 +99,7 @@ ms.locfileid: "62754457"
   
  
   
-##  <a name="InThisSection"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本节内容  
  [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)  
  概述了在恢复挂起的会话之前创建或准备镜像数据库的步骤。 同时还提供了指向操作指南主题的链接。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62754457"
  [设置用于数据库镜像或 AlwaysOn 可用性组 &#40;SQL Server 的登录帐户&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  说明了创建使用本地服务器实例以外的帐户的远程服务器实例登录。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **SQL Server Management Studio**  
   
 -   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  

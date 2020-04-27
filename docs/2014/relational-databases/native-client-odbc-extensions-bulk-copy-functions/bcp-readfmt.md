@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688672"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
@@ -59,7 +59,7 @@ szFormatFile
   
  或者，大容量复制实用工具（**bcp**）可以将用户定义的数据格式保存在可由`bcp_readfmt`引用的文件中。 有关**bcp**实用工具和**bcp**数据格式文件的结构的详细信息，请参阅[批量导入和导出数据 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
- Bcp_control `BCPDELAYREADFMT`的*eOption*参数的值修改[](bcp-control.md) bcp_readfmt 的行为。  
+ Bcp_control `BCPDELAYREADFMT`的*eOption*参数的值修改[bcp_control](bcp-control.md) bcp_readfmt 的行为。  
   
 > [!NOTE]  
 >  格式化文件必须由**bcp**实用工具版本4.2 或更高版本生成。  

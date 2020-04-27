@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721649"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
@@ -101,8 +101,7 @@ ms.locfileid: "62721649"
   
  如果您是首次使用发布服务器，还必须配置分发服务器和快照共享。 每台订阅服务器中的合并代理都必须对快照共享具有读取权限。 有关详细信息，请参阅[配置分发](configure-distribution.md)和[保护快照文件夹的安全](security/secure-the-snapshot-folder.md)。  
   
- 
-  `gen` 是 websync xml 文件中的一个保留字。 不要尝试发布包含名为 `gen` 的列的表。  
+ `gen` 是 websync xml 文件中的一个保留字。 不要尝试发布包含名为 `gen` 的列的表。  
   
 ## <a name="configuring-the-subscription"></a>配置订阅  
  启用发布并配置 IIS 后，创建请求订阅并指定该请求订阅应通过使用 IIS 进行同步。 （仅请求订阅支持 Web 同步。）  

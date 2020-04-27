@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714914"
 ---
 # <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程
@@ -46,6 +46,6 @@ ms.locfileid: "62714914"
 -   [从数据访问应用程序调用本机编译的存储过程](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+ [内存优化表](memory-optimized-tables.md)  
   
   

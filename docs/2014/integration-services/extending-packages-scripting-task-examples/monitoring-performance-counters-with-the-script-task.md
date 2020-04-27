@@ -20,21 +20,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5de911200c7fbe91c912c7ac7a321f79226b6452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768503"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>使用脚本任务监视性能计数器
-  管理员可能需要监视对大量数据执行复杂转换的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的性能。 
-  **
-  ** 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]System.Diagnostics 命名空间不但提供使用现有性能计数器的类，还提供用于创建你自己的性能计数器的类。  
+  管理员可能需要监视对大量数据执行复杂转换的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的性能。   的 System.Diagnostics 命名空间不但提供使用现有性能计数器的类，还提供用于创建自己性能计数器的类[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。  
   
- 性能计数器存储应用程序的性能信息，您可以利用这些信息分析软件在一段时间内的性能。 使用“性能监视器”**** 工具可以在本地或远程监视性能计数器。 您可以将性能计数器的值存储在变量中，用于以后在包中进行控制流分支跳转。  
+ 性能计数器存储应用程序的性能信息，您可以利用这些信息分析软件在一段时间内的性能。 使用“性能监视器”  工具可以在本地或远程监视性能计数器。 您可以将性能计数器的值存储在变量中，用于以后在包中进行控制流分支跳转。  
   
- 除了使用性能计数器，还可以通过 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 属性引发 `Dts` 事件。 
-  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 事件向 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时返回增量进度和完成的百分比信息。  
+ 除了使用性能计数器，还可以通过 `Dts` 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 属性引发 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 事件。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 事件向 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时返回增量进度和完成的百分比信息。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  

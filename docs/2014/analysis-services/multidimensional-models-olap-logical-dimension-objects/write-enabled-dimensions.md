@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727433"
 ---
 # <a name="write-enabled-dimensions"></a>启用写操作的维度
@@ -30,8 +30,7 @@ ms.locfileid: "62727433"
   
  维度中的数据通常为只读数据。 但在某些情况下，可能需要为维度启用写操作。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，允许业务用户修改维度内容并查看对维度层次结构所做的更改的即时影响。 基于单个表的任何维度均可启用写操作。 在启用写操作的维度中，业务用户和管理员都可以更改、移动、添加和删除维度中的属性成员。 这些更新统称为*维度写回*。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持对所有维度属性的维度写回，维度的任何成员均可修改。 对于启用写操作的多维数据集或分区，更新存储在独立于多维数据集的源表的写回表中。 不过，对于启用写操作的维度，更新直接记录在维度的表中。 同样，如果启用写操作的维度包括在具有多个分区的多维数据集中（其中，某些数据源或所有数据源具有维度表的副本），则在写回过程中只更新原始维度表。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持对所有维度属性的维度写回，维度的任何成员均可修改。 对于启用写操作的多维数据集或分区，更新存储在独立于多维数据集的源表的写回表中。 不过，对于启用写操作的维度，更新直接记录在维度的表中。 同样，如果启用写操作的维度包括在具有多个分区的多维数据集中（其中，某些数据源或所有数据源具有维度表的副本），则在写回过程中只更新原始维度表。  
   
  启用写操作的维度和启用写操作的多维数据集拥有互不相同而又相互补充的功能。 启用写操作的维度使业务用户可以更新成员，而启用写操作的多维数据集则使业务用户可以更新单元值。 虽然这两个功能是互补的，但您不必同时使用它们。 维度不必包括在多维数据集中即可进行维度写回。 启用写操作的维度也可以包括在没有启用写操作的多维数据集中。 可使用不同的过程对维度和多维数据集启用写操作和维护它们的安全性。  
   
@@ -63,6 +62,6 @@ ms.locfileid: "62727433"
 ## <a name="see-also"></a>另请参阅  
  [数据库维度属性](database-dimension-properties.md)   
  [启用写入的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Analysis Services 多维数据 &#40;维度&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [维度（Analysis Services - 多维数据）](dimensions-analysis-services-multidimensional-data.md)  
   
   

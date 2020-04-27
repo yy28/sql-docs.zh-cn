@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736350"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>将列从一个表复制到另一个表 (数据库引擎)
@@ -37,17 +37,17 @@ ms.locfileid: "62736350"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  当将具有别名数据类型的列从一个数据库复制到另一个数据库时，别名数据类型在目标数据库中可能不可用。 在这种情况下，将为该列分配该数据库中可用的匹配度最高的基数据类型。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>将列定义从一个表复制到另一个表  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736350"
      若要在同一个表内复制行，则可将源表作为目标表添加。  
   
     > [!NOTE]  
-    >  **查询设计器**无法事先确定可以更新哪些表和视图。 因此， **“选择插入结果的目标表”** 对话框中的表列表将显示正在查询的数据连接中的所有可用表和视图，甚至显示不能将行复制到其中的表和视图。  
+    >  **查询设计器** 无法事先确定可以更新哪些表和视图。 因此， **“选择插入结果的目标表”** 对话框中的表列表将显示正在查询的数据连接中的所有可用表和视图，甚至显示不能将行复制到其中的表和视图。  
   
 5.  右键单击“关系图”窗格的主题，然后在快捷菜单中单击“将表添加到关系图”****。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "62736350"
   
      如果未指定搜索条件，则源表中的所有行都会复制到目标表中。  
   
-10. 若要复制摘要信息，请指定 **“分组依据”** 选项。 有关详细信息，请参阅[汇总或聚合表中所有行的值 (Visual Database Tools)](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md)。  
+10. 如果要复制摘要信息，请指定 "**分组依据**" 选项。 有关详细信息，请参阅[汇总或聚合表中所有行的值 (Visual Database Tools)](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md)。  
   
 11. 单击 **“执行 SQL”** 按钮以运行该查询。  
   
-     在执行“插入结果”查询时，不会在 [“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指出已复制的行数。  
+     执行 "插入结果" 查询时，不会在 "结果"[窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指出已复制的行数。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>将列定义从一个表复制到另一个表  
   

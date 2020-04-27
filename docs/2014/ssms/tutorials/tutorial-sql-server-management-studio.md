@@ -23,17 +23,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753429"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>教程：SQL Server Management Studio
-  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 教程向您介绍用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的图形界面。 此外，它还允许您部署、监视和升级应用程序使用的数据层组件，如数据库和数据仓库。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 还提供用于编辑和调试脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 语言编辑器。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 教程向您介绍用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的图形界面。 此外，它还允许您部署、监视和升级应用程序使用的数据层组件，如数据库和数据仓库。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 还提供用于编辑和调试脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 语言编辑器。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
  本教程将帮助您理解 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中提供的信息以及如何利用这些功能。 请注意，本教程适用于除 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 外所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本随附的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的完整安装。 针对 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的基本安装和针对 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 随附的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装的功能与本教程中所示的功能稍有不同。  
@@ -56,8 +53,7 @@ ms.locfileid: "62753429"
   
  若要使用本教程，您的系统必须安装以下组件：  
   
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或带有 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库的更高版本。 为了增强安全性，默认情况下不会安装示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](http://sqlserversamples.codeplex.com)。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或带有 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库的更高版本。 为了增强安全性，默认情况下不会安装示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](http://sqlserversamples.codeplex.com)。  
   
 -   Internet Explorer 9.0 或更高版本。  
   

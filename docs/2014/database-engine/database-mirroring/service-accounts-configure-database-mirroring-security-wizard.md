@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754388"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>服务帐户（配置数据库镜像安全向导）
@@ -34,25 +34,25 @@ ms.locfileid: "62754388"
 -   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  
   
 ## <a name="options"></a>选项  
- **作主**  
+ **主体**  
  指定主体服务器实例的服务帐户。 以大写形式输入域名：  
   
  *DOMAINNAME*\\*用户名*  
   
- **制作**  
+ **镜像**  
  指定镜像服务器实例的服务帐户。 以大写形式输入域名：  
   
  *DOMAINNAME*\\*用户名*  
   
- **Witness**  
+ **见证**  
  指定见证服务器实例的服务帐户。 以大写形式输入域名：  
   
  *DOMAINNAME*\\*用户名*  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [启动数据库镜像监视器 (SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
+ [&#41;的数据库属性 &#40;镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [开始数据库镜像监视器 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [设置用于数据库镜像或 AlwaysOn 可用性组 &#40;SQL Server 的登录帐户&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
   

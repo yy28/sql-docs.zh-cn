@@ -11,16 +11,16 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678456"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 属性（“AlwaysOn 高可用性”选项卡）
   使用 **** 配置管理器的 **“SQL Server 属性”** 对话框中的“AlwaysOn 高可用性” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 选项卡，可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启用或禁用“AlwaysOn 可用性组”功能。 启用 AlwaysOn 可用性组是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  若要启用 AlwaysOn 可用性组，服务器实例必须满足以下先决条件：  
   
 -   该服务器实例必须驻留在 Windows Server 故障转移群集 (WSFC) 节点上。  

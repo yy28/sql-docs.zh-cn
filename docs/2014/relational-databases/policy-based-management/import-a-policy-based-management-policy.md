@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e4978471f25c1bf38d841e11f560a6bd99dac53e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705312"
 ---
 # <a name="import-a-policy-based-management-policy"></a>导入基于策略的管理策略
@@ -34,17 +34,17 @@ ms.locfileid: "62705312"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 附带可用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的策略。 默认情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中未安装这些策略；不过，可以从默认安装位置 C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033 导入这些策略。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-import-a-policy-instance"></a>导入策略实例  
   

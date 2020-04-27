@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2d799eff20ebe060fd68e0c55015f4c401edfff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736314"
 ---
 # <a name="change-column-order-in-a-table"></a>更改表中的列顺序
@@ -34,7 +34,7 @@ ms.locfileid: "62736314"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-change-the-column-order"></a>更改列顺序  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62736314"
   
 3.  将列拖动到表中的另一个位置。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **更改列顺序**  
   
  无法使用 Transact-SQL 语句执行此任务。  

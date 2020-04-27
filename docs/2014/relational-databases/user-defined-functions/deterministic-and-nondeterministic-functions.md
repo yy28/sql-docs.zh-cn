@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714724"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
@@ -46,9 +46,9 @@ ms.locfileid: "62714724"
 |ATN2|FLOOR|SIN|  
 |CEILING|ISNULL|SQUARE|  
 |COALESCE|ISNUMERIC|SQRT|  
-|COS|日志|TAN|  
-|COT|LOG10|年|  
-|DATALENGTH|月||  
+|COS|LOG|TAN|  
+|COT|LOG10|YEAR|  
+|DATALENGTH|MONTH||  
 |DATEADD|NULLIF||  
   
  下列函数并非始终是确定性函数，但是在以确定性方式指定后，可用于索引视图或计算列的索引。  

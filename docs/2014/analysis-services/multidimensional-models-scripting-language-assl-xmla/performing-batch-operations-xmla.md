@@ -20,33 +20,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702064"
 ---
 # <a name="performing-batch-operations-xmla"></a>执行批处理操作 (XMLA)
   您可以使用 XML for Analysis （XMLA）中的[批处理](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)命令，使用单个 xmla [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法运行多个 xmla 命令。 可以作为单个事务或者每个命令为一个事务，以串行或并行方式运行 `Batch` 命令中包含的多个命令。 你还可以在用于`Batch`处理多个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象的命令中指定连线外绑定和其他属性。  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>运行事务性和非事务性 Batch 命令  
- 
-  `Batch` 以下列两种方式之一执行命令：  
+ `Batch` 以下列两种方式之一执行命令：  
   
  **事务性**  
- 如果将`Transaction` `Batch`命令的属性设置为 true，则`Batch`命令将命令中包含的所有命令都包含`Batch`在一个事务中。 **  
+ 如果将`Transaction` `Batch`命令的属性设置为 true，则`Batch`命令将命令中包含的所有命令都包含`Batch`在一个事务中。 *transactional*  
   
- 如果事务批次中有任何命令失败[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，则回滚命令中`Batch`运行的命令，该命令将在失败的命令`Batch`之前运行，并且该命令会立即结束。 
-  `Batch` 命令中尚未运行的任何命令都不再执行。 
-  `Batch` 命令结束后，`Batch` 命令将报告失败命令发生的所有错误。  
+ 如果事务批次中有任何命令失败[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，则回滚命令中`Batch`运行的命令，该命令将在失败的命令`Batch`之前运行，并且该命令会立即结束。 `Batch` 命令中尚未运行的任何命令都不再执行。 `Batch` 命令结束后，`Batch` 命令将报告失败命令发生的所有错误。  
   
  **处理**  
- 如果该`Transaction`特性设置为 false，则该`Batch`命令将在单独的事务中`Batch`运行该命令所包含的每个命令-非*事务性*批处理。 如果非事务性批处理中的任一命令失败，`Batch` 命令会继续执行失败命令后的命令。 
-  `Batch` 命令尝试运行 `Batch` 命令包含的所有命令后，`Batch` 命令将报告发生的所有错误。  
+ 如果该`Transaction`特性设置为 false，则该`Batch`命令将在单独的事务中`Batch`运行该命令所包含的每个命令-非*事务性*批处理。 如果非事务性批处理中的任一命令失败，`Batch` 命令会继续执行失败命令后的命令。 `Batch` 命令尝试运行 `Batch` 命令包含的所有命令后，`Batch` 命令将报告发生的所有错误。  
   
- 
-  `Batch` 命令中包含的各命令返回的所有结果以这些命令包含在 `Batch` 命令中的顺序返回。 
-  `Batch` 命令返回的结果根据 `Batch` 命令是事务性的还是非事务性的而不同。  
+ `Batch` 命令中包含的各命令返回的所有结果以这些命令包含在 `Batch` 命令中的顺序返回。 `Batch` 命令返回的结果根据 `Batch` 命令是事务性的还是非事务性的而不同。  
   
 > [!NOTE]  
 >  如果`Batch`命令包含不返回输出的命令（如[Lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)命令），并且该命令成功运行，则该命令将`Batch`返回 results 元素中的空[根](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla)元素。 空的 `root` 元素可确保 `Batch` 命令中包含的每个命令都与该命令的结果的相应 `root` 元素匹配。  
@@ -65,15 +59,13 @@ ms.locfileid: "62702064"
   
  若要以并行方式运行命令，请添加要以并行方式运行`Batch`命令的[并行](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/parallel-element-xmla)属性的命令。 目前， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]只能并行运行连续的顺序[过程](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)命令。 属性中包含的`Parallel`任何其他 XMLA 命令（如[Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)或[Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)）都将按顺序运行。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 尝试以并行方式运行包含在 `Process` 属性中的所有 `Parallel` 命令，但是不保证包含的所有 `Process` 命令都能以并行方式运行。 实例会分析每个 `Process` 命令，如果实例确定命令不能以并行方式执行，则 `Process` 命令将以串行方式执行。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 尝试以并行方式运行包含在 `Process` 属性中的所有 `Parallel` 命令，但是不保证包含的所有 `Process` 命令都能以并行方式运行。 实例会分析每个 `Process` 命令，如果实例确定命令不能以并行方式执行，则 `Process` 命令将以串行方式执行。  
   
 > [!NOTE]  
 >  若要以并行方式执行命令，`Transaction` 命令的 `Batch` 属性必须设置为 true，因为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅支持每个连接一个活动事务且非事务性批处理在单独的事务中执行每个命令。 如果在非事务性批处理中包含 `Parallel` 属性，则将出现错误。  
   
 ### <a name="limiting-parallel-execution"></a>限制并行执行  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例并行运行尽可能多的 `Process` 命令，直到达到运行实例的计算机的限制。 将 `Process` 属性的 `maxParallel` 特性设为指示可并发执行的最大 `Parallel` 命令数，可限制同时执行的 `Process` 命令数。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例并行运行尽可能多的 `Process` 命令，直到达到运行实例的计算机的限制。 将 `Process` 属性的 `maxParallel` 特性设为指示可并发执行的最大 `Parallel` 命令数，可限制同时执行的 `Process` 命令数。  
   
  例如，`Parallel` 属性按列出的顺序包含以下命令：  
   
@@ -112,11 +104,9 @@ ms.locfileid: "62702064"
 -   命令 8 和 9 以并行方式在命令 7 完成后运行。  
   
 ## <a name="using-the-batch-command-to-process-objects"></a>使用 Batch 命令处理对象  
- 
-  `Batch` 命令包含多个专门用于支持处理多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的可选属性和特性：  
+ `Batch` 命令包含多个专门用于支持处理多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的可选属性和特性：  
   
--   
-  `ProcessAffectedObjects` 命令的 `Batch` 特性指示实例是否还应对作为 `Process` 命令中包含的处理特定对象的 `Batch` 命令的结果而需要重新处理的所有对象进行处理。  
+-   `ProcessAffectedObjects` 命令的 `Batch` 特性指示实例是否还应对作为 `Process` 命令中包含的处理特定对象的 `Batch` 命令的结果而需要重新处理的所有对象进行处理。  
   
 -   [Bindings](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla)属性包含`Process` `Batch`命令中的所有命令所使用的一系列外绑定。  
   

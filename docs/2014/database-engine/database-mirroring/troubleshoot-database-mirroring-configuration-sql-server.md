@@ -16,19 +16,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754205"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>数据库镜像配置故障排除 (SQL Server)
   本主题提供有关信息以帮助您解决设置数据库镜像会话时遇到的问题。  
   
 > [!NOTE]  
->  请确保满足所有 [数据库镜像的先决条件](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
+>   请确保满足所有 [数据库镜像的先决条件](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
   
-|问题|总结|  
+|问题|摘要|  
 |-----------|-------------|  
 |错误消息 1418|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息指示无法到达服务器网络地址或该地址不存在，同时建议您确认网络地址名称并重新发出命令。 有关详细信息，请参阅 [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) 主题。|  
 |[帐户](#Accounts)|介绍了正确配置运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的帐户的相关要求。|  
@@ -37,10 +37,10 @@ ms.locfileid: "62754205"
 |[网络访问](#NetworkAccess)|记录了允许每个服务器实例通过 TCP 访问其他一个或多个服务器实例的端口的要求。|  
 |[镜像数据库准备](#MirrorDbPrep)|概述了准备镜像数据库以开始镜像的要求。|  
 |[失败的创建文件操作](#FailedCreateFileOp)|说明如何响应失败的创建文件操作。|  
-|[使用 Transact-SQL 开始镜像](#StartDbm)|描述 ALTER DATABASE *database_name* SET PARTNER **= '***partner_server***'** 语句所需的顺序。|  
+|[使用 Transact-SQL 开始镜像](#StartDbm)|说明 ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 语句所需的顺序。|  
 |[跨数据库事务](#CrossDbTxns)|自动故障转移可能导致自动不正确地解决有疑问的事务。 因此，数据库镜像不支持跨数据库事务。|  
   
-##  <a name="Accounts"></a> 帐户  
+##  <a name="accounts"></a><a name="Accounts"></a> 帐户  
  必须正确配置运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的帐户。  
   
 1.  帐户是否具有正确的权限？  
@@ -51,7 +51,7 @@ ms.locfileid: "62754205"
   
 2.  如果使用本地系统帐户将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务运行，则必须使用证书进行身份验证。 有关详细信息，请参阅[使用数据库镜像终结点证书 (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
-##  <a name="Endpoints"></a> Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  必须正确配置端点。  
   
 1.  确保每个服务器实例（主体服务器、镜像服务器和见证服务器，如果有的话）都有数据库镜像端点。 有关详细信息，请参阅 [sys.database_mirroring_endpoints (Transact SQL)](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)，并根据身份验证的形式，参阅[为 Windows 身份验证创建数据库镜像终结点 (Transact SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)或 [使用数据库镜像终结点证书 (Transact SQ)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
@@ -108,13 +108,13 @@ ms.locfileid: "62754205"
   
     ```  
   
-##  <a name="SystemAddress"></a> 系统地址  
+##  <a name="system-address"></a><a name="SystemAddress"></a> 系统地址  
  对于数据库镜像配置中服务器实例的系统名称，可以使用明确标识系统的任何名称。 服务器地址可以是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址（最好是静态 IP 地址）。 保证使用完全限定域名的有效性。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a>网络访问  
  必须允许每个服务器实例都能通过 TCP 访问其他一个或多个服务器实例的端口。 当服务器实例位于相互不信任的不同域（不可信的域）中时，这尤为重要。 这会限制服务器实例之间大部分的通信。  
   
-##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
+##  <a name="mirror-database-preparation"></a><a name="MirrorDbPrep"></a>镜像数据库准备  
  无论是首次开始镜像还是在删除镜像后再次开始镜像，都要验证镜像数据库是否可以进行镜像。  
   
  在镜像服务器上创建镜像数据库时，请确保指定相同数据库名称 WITH NORECOVERY 来还原主体数据库备份。 此外，还必须再次使用 WITH NORECOVERY 应用进行该备份之后创建的所有日志备份。  
@@ -128,7 +128,7 @@ ms.locfileid: "62754205"
   
  有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
-##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
+##  <a name="failed-create-file-operation"></a><a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  在不影响镜像会话的情况下添加文件要求该文件路径同时存在于两个服务器上。 因此，如果在创建镜像数据库时移动了数据库文件，则随后在镜像数据库上的添加文件操作可能会失败，并可能会导致镜像挂起。  
   
  修复此问题：  
@@ -141,8 +141,8 @@ ms.locfileid: "62754205"
   
  有关详细信息，请参阅[删除数据库镜像 (SQL Server)](database-mirroring-sql-server.md)、[为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)、[使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](database-mirroring-establish-session-windows-authentication.md)、[使用数据库镜像端点证书 (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)，或[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)。  
   
-##  <a name="StartDbm"></a> 使用 Transact-SQL 开始镜像  
- 发出 ALTER DATABASE *database_name* SET PARTNER **= '***partner_server***'** 语句的顺序非常重要。  
+##  <a name="starting-mirroring-by-using-transact-sql"></a><a name="StartDbm"></a>使用 Transact-sql 开始镜像  
+ 发出 ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 语句的顺序非常关键。  
   
 1.  第一个语句必须在镜像服务器上运行。 发出此语句时，镜像服务器不会尝试联系任何其他服务器实例。 相反，镜像服务器指示其数据库先进行等待，直到主体服务器与镜像服务器建立联系。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62754205"
 > [!NOTE]  
 >  有关使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动镜像的信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)。  
   
-##  <a name="CrossDbTxns"></a> 跨数据库事务  
+##  <a name="cross-database-transactions"></a><a name="CrossDbTxns"></a>跨数据库事务  
  在具有自动故障转移功能的高安全性模式下镜像数据库时，自动故障转移可能会导致自动解析并且可能错误解析有疑问的事务。 如果提交跨数据库事务时在任一数据库中进行自动故障转移，则数据库之间可能发生逻辑上的不一致。  
   
  自动故障转移可能影响的跨数据库事务类型包括：  
@@ -165,7 +165,7 @@ ms.locfileid: "62754205"
  有关详细信息，请参阅[数据库镜像或 AlwaysOn 可用性组不支持跨数据库事务 (SQL Server)](../availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置数据库镜像 (SQL Server)](setting-up-database-mirroring-sql-server.md)   
+ [设置数据库镜像 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](transport-security-database-mirroring-always-on-availability.md)  
   
   

@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727573"
 ---
 # <a name="partition-storage-modes-and-processing"></a>分区存储模式和处理
@@ -50,8 +50,7 @@ ms.locfileid: "62727573"
  在 ROLAP 存储模式下，分区的聚合将存储在关系数据库（在分区数据源中指定）的索引视图中。 与 MOLAP 存储模式不同，ROLAP 不会将源数据的副本存储到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件夹中。 当不能从查询缓存中获得结果时，则会访问数据源中的索引视图以回答查询。 使用 ROLAP 存储的查询响应速度通常比使用 MOLAP 或 HOLAP 存储模式更慢。 使用 ROLAP 时的处理时间通常也较长。 但是，使用不经常执行查询的大型数据集（例如纯粹的历史记录数据）时，用户可以使用 ROLAP 实时查看数据并可节省存储空间。  
   
 > [!NOTE]  
->  使用 ROLAP 时，如果联接与 GROUP BY 子句结合使用，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可能返回与未知成员相关的不正确信息。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将消除相关的完整性错误，而不是返回未知成员值。  
+>  使用 ROLAP 时，如果联接与 GROUP BY 子句结合使用，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可能返回与未知成员相关的不正确信息。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将消除相关的完整性错误，而不是返回未知成员值。  
   
  如果分区使用 ROLAP 存储模式并且其源数据存储在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将试图创建索引视图以包含分区的聚合。 如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 无法创建索引视图，便也无法创建聚合表。 尽管 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会处理在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上创建索引视图的会话要求，但 ROLAP 分区及其架构中的表必须满足以下条件才能让 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为聚合创建索引视图：  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62727573"
 -   创建索引视图的会话的以下选项必须为 OFF：NUMERIC_ROUNDABORT。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对此进行设置。  
   
 ## <a name="holap"></a>HOLAP  
- HOLAP 存储模式结合了 MOLAP 和 ROLAP 二者的特性。 像 MOLAP 一样，HOLAP 导致分区的聚合存储在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的多维结构中。 HOLAP 不会使源数据的副本存储起来。 就只访问分区聚合中的汇总数据的查询而言，HOLAP 与 MOLAP 相同。 访问源数据的查询（例如，如果您想要深化到没有聚合数据的原子多维数据集单元），则必须从关系数据库检索数据，并且如果源数据存储在 MOLAP structur电邮. 在 HOLAP 存储模式下，通常用户执行各查询所用的时间明显不同，具体取决于是根据缓存或聚合解析查询还是根据源数据本身解析查询。  
+ HOLAP 存储模式结合了 MOLAP 和 ROLAP 二者的特性。 像 MOLAP 一样，HOLAP 导致分区的聚合存储在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的多维结构中。 HOLAP 不会使源数据的副本存储起来。 就只访问分区聚合中的汇总数据的查询而言，HOLAP 与 MOLAP 相同。 访问源数据的查询（例如，如果您想要深化到没有聚合数据的原子多维数据集单元），则必须从关系数据库检索数据，并且如果源数据存储在 MOLAP 结构中，就不会像在数据库中一样快。 在 HOLAP 存储模式下，通常用户执行各查询所用的时间明显不同，具体取决于是根据缓存或聚合解析查询还是根据源数据本身解析查询。  
   
  按 HOLAP 存储的分区小于相应按 MOLAP 存储的分区（因为前者不包含源数据），而比 ROLAP 分区响应涉及汇总数据的查询要快。 一般情况下，HOLAP 存储模式适用于多维数据集中要求快速响应基于大量源数据的汇总的查询的分区。 但是，当用户生成必须涉及叶级数据的查询时（例如，计算中值），通常最好选择 MOLAP。  
   
 ## <a name="see-also"></a>另请参阅  
  [主动缓存 &#40;分区&#41;](partitions-proactive-caching.md)   
  [同步 Analysis Services 数据库](../multidimensional-models/synchronize-analysis-services-databases.md)   
- [Analysis Services 多维数据 &#40;分区&#41;](partitions-analysis-services-multidimensional-data.md)  
+ [分区（Analysis Services - 多维数据）](partitions-analysis-services-multidimensional-data.md)  
   
   

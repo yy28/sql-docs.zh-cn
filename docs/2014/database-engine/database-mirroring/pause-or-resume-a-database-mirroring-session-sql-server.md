@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754588"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>暂停或恢复数据库镜像会话 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754588"
   
      [安全性](#Security)  
   
--   **若要 ReplaceThisText，请使用：**  
+-   **若要替换此文本，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,18 +40,18 @@ ms.locfileid: "62754588"
   
 -   **跟进：**  [暂停或恢复数据库镜像之后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  您可以随时挂起数据库镜像会话，这可能提高瓶颈期间的性能，之后您可以随时恢复挂起的会话。  
   
 > [!CAUTION]  
 >  在强制服务后，当原始的主体服务器重新连接时，镜像将挂起。 在这种情况下，恢复镜像可能会导致原始主体服务器上的数据丢失。 有关管理潜在的数据丢失的信息，请参阅[数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  若要暂停或恢复数据库镜像会话，请使用 **“数据库属性镜像”** 页。  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>暂停或恢复数据库镜像  
@@ -60,7 +60,7 @@ ms.locfileid: "62754588"
   
 2.  展开 **“数据库”** 并选择数据库。  
   
-3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这将打开 "**数据库属性**" 对话框的 "**镜像**" 页。  
   
 4.  若要暂停会话，请单击 **“暂停”**。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754588"
   
 5.  若要恢复会话，请单击 **“恢复”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-pause-database-mirroring"></a>暂停数据库镜像  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62754588"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a>跟进：暂停或恢复数据库镜像之后  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a> 跟进：暂停或恢复数据库镜像之后  
   
 -   **暂停数据库镜像之后**  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62754588"
   
      恢复数据库镜像会将镜像数据库置于 SYNCHRONIZING 状态。 如果安全级别为 FULL，镜像将达到与主体相同的状态，镜像数据库将进入 SYNCHRONIZED 状态。 此时，可以进行故障转移。 如果见证服务器存在并且设置为 ON，则可以进行自动故障转移。 在缺少见证服务器的情况下，可以进行手动故障转移。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [删除数据库镜像 (SQL Server)](remove-database-mirroring-sql-server.md)  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754239"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>决定哈希索引的正确存储桶数
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  用于评估哈希索引运行状况的两个关键指标是：  
   
  *empty_bucket_percent*  
- *empty_bucket_percent*指示哈希索引中的空 bucket 数。  
+ *empty_bucket_percent* 指示哈希索引中空 Bucket 的数目。  
   
  如果 *empty_bucket_percent* 小于 10%，则该 Bucket 计数可能过低。 理想状态下， *empty_bucket_percent* 应该为 33% 或更高。 如果 Bucket 计数与索引键值的数目匹配，则由于哈希分布，大约 1/3 的 Bucket 是空的。  
   
  *avg_chain_length*  
- *avg_chain_length*指示哈希桶中行链的平均长度。  
+ *avg_chain_length* 指示哈希桶中行链的平均长度。  
   
  如果 *avg_chain_length* 大于 10 并且 *empty_bucket_percent* 大于 10%，则可能有许多重复索引键值并且非聚集索引可能更适合。 理想的平均链长度应该是 1。  
   
@@ -186,6 +186,6 @@ GO
 -   在优化点查找的性能时，Bucket 计数最好是唯一索引值的两倍甚至三倍。 较高的 Bucket 计数意味着内存使用量的增加，并且也意味着全文检索扫描所需时间的增加。  
   
 ## <a name="see-also"></a>另请参阅  
- [内存优化的表的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+ [内存优化表上的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

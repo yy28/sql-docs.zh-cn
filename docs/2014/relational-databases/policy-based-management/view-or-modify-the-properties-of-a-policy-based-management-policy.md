@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676935"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>查看或修改基于策略的管理策略的属性
@@ -35,20 +35,20 @@ ms.locfileid: "62676935"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>查看对象的所有策略的属性  
   
-1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”****，然后选择“查看”****。 有关 "**查看策略-**_object_name_ " 对话框中可用选项的详细信息，请参阅 "[查看策略" 对话框](view-policies-dialog-box.md)。  
+1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”****，然后选择“查看”****。 若要深入了解“查看策略 - object_name”对话框中的可用选项息，请参阅[查看策略对话框](view-policies-dialog-box.md)****__。  
   
-2.   完成后，单击“关闭”。  
+2.  **** 完成后，单击“关闭”。  
   
 #### <a name="to-view-or-modify-a-specific-policys-properties"></a>查看或修改特定策略的属性  
   
@@ -56,15 +56,15 @@ ms.locfileid: "62676935"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”** 。  
+3.  单击加号以便展开 **“策略管理”**。  
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要查看或修改的策略，然后选择“属性”****。 有关 "**打开策略-**_policy_name_ " 对话框中可用选项的详细信息，请参阅 "[创建新策略" 或 "打开策略" 对话框，"常规" 页](../../integration-services/general-page-of-integration-services-designers-options.md)和 "[创建新策略" 或 "打开策略" 对话框，"说明" 页](create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+5.  右键单击要查看或修改的策略，然后选择“属性”****。 若要深入了解“打开策略 - policy_name”对话框中的可用选项，请参阅[创建新策略或打开策略对话框，“常规”页](../../integration-services/general-page-of-integration-services-designers-options.md)和[创建新策略或打开策略对话框，“说明”页](create-new-policy-or-open-policy-dialog-box-description-page.md)****__。  
   
-6.  完成后，单击 **“确定”** 。  
+6.  完成后，单击“确定”****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-a-policys-properties"></a>查看策略属性  
   

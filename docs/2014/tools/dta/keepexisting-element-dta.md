@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735629"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 元素 (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62735629"
   
 |特征|说明|  
 |--------------------|-----------------|  
-|**数据类型和长度**|
-  `string`，服务器强制执行的长度限制。|  
+|**数据类型和长度**|`string`，服务器强制执行的长度限制。|  
 |**允许的值**|**NONE**<br /> 无现有结构。<br /><br /> **ALL**<br /> 所有现有结构。<br /><br /> **ALIGNED**<br /> 所有分区对齐结构。<br /><br /> **CL_IDX**<br /> 表中的所有聚集索引。<br /><br /> **IDX**<br /> 表中的所有聚集索引和非聚集索引。<br /><br /> 只能将这些值中的一个用于此元素。|  
 |**默认值**|无。|  
 |**出现次数**|可选。 对于每个 `TuningOptions` 元素只能使用一次。|  

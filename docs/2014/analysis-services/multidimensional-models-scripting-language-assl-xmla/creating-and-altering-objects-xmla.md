@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702303"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>创建和更改对象 (XMLA)
@@ -38,7 +38,7 @@ ms.locfileid: "62702303"
   
 -   度量值组  
   
--   “度量值组”  
+-   分区  
   
 -   透视  
   
@@ -55,8 +55,7 @@ ms.locfileid: "62702303"
 ## <a name="creating-objects"></a>创建对象  
  使用 `Create` 方法创建对象时，必须首先标识包含要创建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的父对象。 可以通过在`Create`命令的[ParentObject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)属性中提供对象引用来标识父对象。 每一个对象引用都包含为 `Create` 命令唯一标识父对象时所需的对象标识符。 有关对象引用的详细信息，请参阅[&#40;XMLA&#41;定义和标识对象](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)。  
   
- 例如，若要为某一多维数据集创建新的度量值组，则必须提供对该多维数据集的对象引用。 
-  `ParentObject` 属性中多维数据集的对象引用同时包含数据库标识符和多维数据集标识符，因为同一多维数据集标识符可能用于不同的数据库上。  
+ 例如，若要为某一多维数据集创建新的度量值组，则必须提供对该多维数据集的对象引用。 `ParentObject` 属性中多维数据集的对象引用同时包含数据库标识符和多维数据集标识符，因为同一多维数据集标识符可能用于不同的数据库上。  
   
  [ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla)元素包含用于定义要创建的主要对象的 Analysis Services 脚本语言（ASSL）元素。 有关 ASSL 的详细信息，请参阅[&#40;ASSL&#41;Analysis Services 脚本编写语言进行开发](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。  
   
@@ -73,11 +72,9 @@ ms.locfileid: "62702303"
 ## <a name="altering-objects"></a>更改对象  
  使用`Alter`方法修改对象时，必须先通过在`Alter`命令的[对象](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)属性中提供对象引用来标识要修改的对象。 每一个对象引用都包含为 `Alter` 命令唯一标识该对象时所需的对象标识符。 有关对象引用的详细信息，请参阅[&#40;XMLA&#41;定义和标识对象](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)。  
   
- 例如，若要修改某一多维数据集的结构，必须提供对该多维数据集的对象引用。 
-  `Object` 属性中多维数据集的对象引用同时包含数据库标识符和多维数据集标识符，因为同一多维数据集标识符可能用于不同的数据库上。  
+ 例如，若要修改某一多维数据集的结构，必须提供对该多维数据集的对象引用。 `Object` 属性中多维数据集的对象引用同时包含数据库标识符和多维数据集标识符，因为同一多维数据集标识符可能用于不同的数据库上。  
   
- 
-  `ObjectDefinition` 元素包含用于定义要修改的主要对象的 ASSL 元素。 有关 ASSL 的详细信息，请参阅[&#40;ASSL&#41;Analysis Services 脚本编写语言进行开发](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。  
+ `ObjectDefinition` 元素包含用于定义要修改的主要对象的 ASSL 元素。 有关 ASSL 的详细信息，请参阅[&#40;ASSL&#41;Analysis Services 脚本编写语言进行开发](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。  
   
  如果将 `AllowCreate` 命令的 `Alter` 属性设置为 True，则当指定的主要对象不存在时，会创建该对象。 否则，如果指定的主要对象尚不存在，则会出现错误。  
   
@@ -145,8 +142,8 @@ ms.locfileid: "62702303"
 </Alter>  
 ```  
   
-### <a name="comments"></a>注释  
- `Alter`命令`ObjectExpansion`的属性已设置为*ObjectProperties*。 此设置允许从[](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)中`ObjectDefinition`定义的数据源中排除 ImpersonationInfo 元素（次要对象）。 因此，该数据源的模拟信息仍设置为在第一个示例中所指定的服务帐户。  
+### <a name="comments"></a>说明  
+ `Alter`命令`ObjectExpansion`的属性已设置为*ObjectProperties*。 此设置允许从[ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)中`ObjectDefinition`定义的数据源中排除 ImpersonationInfo 元素（次要对象）。 因此，该数据源的模拟信息仍设置为在第一个示例中所指定的服务帐户。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;XMLA 的 Execute 方法&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   

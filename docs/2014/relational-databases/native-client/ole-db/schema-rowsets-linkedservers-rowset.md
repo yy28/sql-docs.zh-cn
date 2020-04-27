@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 行集（OLE DB） |Microsoft Docs
+title: LINKEDSERVERS 行集 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667332"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 行集 (OLE DB)
-  LINKEDSERVERS 行集用于枚举可以参与 ** 分布式查询的组织数据源**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源****。  
   
  LINKEDSERVERS 行集包含以下列****。  
   
@@ -37,6 +37,6 @@ ms.locfileid: "62667332"
  行集按 SRV_NAME 排序，并支持对 SRV_NAME 的单个限制。  
   
 ## <a name="see-also"></a>另请参阅  
- [架构行集支持 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [架构行集支持 (OLE DB)](schema-rowset-support-ole-db.md)  
   
   

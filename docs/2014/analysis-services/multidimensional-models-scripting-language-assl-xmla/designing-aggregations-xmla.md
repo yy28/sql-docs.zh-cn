@@ -19,20 +19,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702118"
 ---
 # <a name="designing-aggregations-xmla"></a>设计聚合 (XMLA)
   聚合设计与特定度量值组的分区相关联，以确保分区在存储聚合时使用相同的结构。 使用分区的相同存储结构使你能够轻松定义以后可以使用[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令合并的分区。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
- 若要为聚合设计定义聚合，可以使用 XML for Analysis （XMLA）中的[DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla)命令。 
-  `DesignAggregations` 命令拥有一些属性，这些属性可标识要用作引用的聚合设计以及如何基于该引用控制设计过程。 使用 `DesignAggregations` 命令及其属性，可以采用迭代方式设计聚合或成批设计聚合，并可查看生成的设计统计信息，以评估设计过程。  
+ 若要为聚合设计定义聚合，可以使用 XML for Analysis （XMLA）中的[DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla)命令。 `DesignAggregations` 命令拥有一些属性，这些属性可标识要用作引用的聚合设计以及如何基于该引用控制设计过程。 使用 `DesignAggregations` 命令及其属性，可以采用迭代方式设计聚合或成批设计聚合，并可查看生成的设计统计信息，以评估设计过程。  
   
 ## <a name="specifying-an-aggregation-design"></a>指定聚合设计  
- 命令的 Object 属性必须包含对现有聚合设计的对象引用。 [](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) `DesignAggregations` 该对象引用包含数据库标识符、多维数据集标识符、度量值组标识符和聚合设计标识符。 如果该聚合设计不存在，则会出现错误。  
+ 命令的 Object 属性必须包含对现有聚合设计的对象引用。 [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) `DesignAggregations` 该对象引用包含数据库标识符、多维数据集标识符、度量值组标识符和聚合设计标识符。 如果该聚合设计不存在，则会出现错误。  
   
 ## <a name="controlling-the-design-process"></a>控制设计过程  
  您可以使用 `DesignAggregations` 命令的下列属性控制用于为聚合设计定义聚合的算法：  
@@ -54,12 +53,11 @@ ms.locfileid: "62702118"
   
  如果您迭代式地设计聚合，则只需要在第一个 `DesignAggregations` 命令中传递目标查询，这是因为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例存储这些目标查询，并在执行后续 `DesignAggregations` 命令时使用这些查询。 在迭代进程的第一个`DesignAggregations` 命令中传递目标查询后，任何在 `DesignAggregations` 属性中包含目标查询的后续 `Queries` 命令都会生成错误。  
   
- 
-  `Query` 元素包含一个以逗号分隔的值，该值包含以下参数：  
+ `Query` 元素包含一个以逗号分隔的值，该值包含以下参数：  
   
- *Frequency*、*Dataset*[，*dataset*...]  
+ *Frequency*,*Dataset*[,*Dataset*...]  
   
- *率*  
+ *频率*  
  与该查询此前执行的次数对应的加权系数。 如果该`Query`元素表示一个新查询，则*Frequency*值表示设计进程用于评估该查询的加权系数。 在设计进程中，随着频率值变大，该查询的权重也会增加。  
   
  *数据集*  
@@ -70,8 +68,7 @@ ms.locfileid: "62702118"
 > [!NOTE]  
 >  某些属性与数据集无关。 有关排除的属性的详细信息，请参阅[&#40;XMLA&#41;的 Query 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)。  
   
- 包含聚合设计的度量值组中的每个维度都由`Query`元素中的*数据集*值表示。 
-  *Dataset* 值的顺序必须与包括在度量值组中的维度的顺序一致。  
+ 包含聚合设计的度量值组中的每个维度都由`Query`元素中的*数据集*值表示。 *Dataset* 值的顺序必须与包括在度量值组中的维度的顺序一致。  
   
 ## <a name="designing-aggregations-using-iterative-or-batch-processes"></a>使用迭代过程或批处理过程设计聚合  
  您可以根据设计过程所要求的交互性，将 `DesignAggregations` 命令用作迭代过程或批处理过程的一部分。  
@@ -111,7 +108,7 @@ ms.locfileid: "62702118"
 |优化|Double|在将控制权返还给客户端应用程序之前，命令获得的性能提高百分比估计值。|  
 |存储|Long integer|在将控制权返还给客户端应用程序之前，命令占用的存储空间的估计字节数。|  
 |Aggregations|Long integer|在将控制权返还给客户端应用程序之前，命令定义的聚合数。|  
-|LastStep|Boolean|指示行集中的数据是否表示设计过程的最后一步。 如果命令的 `Materialize` 属性设置为 true，则此列的值设置为 true。|  
+|LastStep|布尔|指示行集中的数据是否表示设计过程的最后一步。 如果命令的 `Materialize` 属性设置为 true，则此列的值设置为 true。|  
   
  在迭代和批处理设计过程中，您都可以使用每个 `DesignAggregations` 命令执行完毕之后所返回的行集中包含的设计统计信息。 在迭代设计过程中，您可以使用设计统计信息来确定并显示进度。 以批处理方式设计聚合时，您可以使用设计统计信息来确定命令所创建的聚合数。  
   

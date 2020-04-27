@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62746111"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>使用从 RDL 架构生成的类更新报表（SSRS 教程）
@@ -63,7 +63,7 @@ ms.locfileid: "62746111"
 ## <a name="tasks"></a>任务  
  [第 1 课：创建 RDL 架构 Visual Studio 项目](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [第 2 课：使用 xsd 工具从 RDL 架构生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [第 2 课：使用 XSD 工具从 RDL 架构生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
  [第 3 课：从报表服务器加载报表定义](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   

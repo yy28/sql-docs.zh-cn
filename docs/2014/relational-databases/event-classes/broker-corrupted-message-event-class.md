@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664082"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件类
@@ -48,10 +48,9 @@ ms.locfileid: "62664082"
 |**RoleName**|**nvarchar**|接收此消息的端点的角色。 取下列值之一。<br /><br /> **发起方**：<br />                  接收端点为会话的发起方。<br /><br /> **目标**：<br />                  接收端点为会话的目标。|38|否|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
 |**严重性**|**int**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的错误的严重性。|29|否|  
-|**SPID**|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
+|**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
-|**状态**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
+|**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
 |**TextData**|**ntext**|检测到的损坏说明。|1|是|  
 |**事务 ID**|**bigint**|系统为事务分配的 ID。|4|否|  
   

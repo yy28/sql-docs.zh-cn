@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd49c3264857a92a9ca029a25894a5afdbeab381
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62760992"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>对 INSERT 和 UPDATE 语句禁用 CHECK 约束
@@ -37,14 +37,14 @@ ms.locfileid: "62760992"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>为 INSERT 和 UPDATE 语句禁用 CHECK 约束  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62760992"
   
 4.  单击“关闭”  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>为 INSERT 和 UPDATE 语句禁用 CHECK 约束  
   

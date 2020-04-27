@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d34125b7b750daa1da25c9e8788172b5d9ca2c35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62710599"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>第 4 课：生成顺序分析和聚类分析方案（数据挖掘中级教程）
-  
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场部需要了解客户浏览 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 网站的方式。 公司认为存在一个顺序模式，客户以这种模式将产品放入其购物篮中。 它们希望分析购买序列的顺序，以了解客户如何向其购物篮中添加相关产品。 然后可使用上述信息简化网站的流程，这样便可引导客户购买更多的产品。  
   
  完成本课程中的任务时，您已经创建了一个挖掘模型，该模型使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法预测客户将放入购物篮中的下一个产品。 您将试用两个版本的模型：一个模型仅分析购物篮中产品的顺序，另一个模型中包含一些其他可用来进行聚类分析的客户统计信息。 最后，您将使用这些模型创建预测，以向客户推荐产品。  
@@ -47,11 +46,11 @@ ms.locfileid: "62710599"
   
  [第2课： &#40;中级数据挖掘教程构建预测方案&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [第3课：生成市场篮方案 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 课：生成市场篮方案（数据挖掘中级教程）](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
  第 4 课：顺序分析和聚类分析方案（数据挖掘中级教程）  
   
- [第5课：生成神经网络和逻辑回归模型 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)   

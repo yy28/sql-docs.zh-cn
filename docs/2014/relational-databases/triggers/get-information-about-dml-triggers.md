@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62698759"
 ---
 # <a name="get-information-about-dml-triggers"></a>获取有关 DML 触发器的信息
@@ -39,11 +39,11 @@ ms.locfileid: "62698759"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  **sys.sql.modules**, **sys.object**, **sys.triggers**, **sys.events**, **sys.trigger_events**  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62698759"
  **sys.sql_expression_dependencies**  
  要求对数据库具有 VIEW DEFINITION 权限，并对数据库的 **sys.sql_expression_dependencies** 具有 SELECT 权限。 默认情况下，SELECT 权限仅授予 **db_owner** 固定数据库角色的成员。 将 SELECT 和 VIEW DEFINITION 权限授予其他用户时，被授权者可以查看数据库中的所有依赖关系。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>查看 DML 触发器的定义  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62698759"
   
 6.  若要关闭 **“对象依赖关系”** 窗口，请单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>查看 DML 触发器的定义  
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754195"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允许部分可信任的调用方
@@ -39,7 +39,7 @@ IPermission permThatFailed) at
 Microsoft.Samples.SqlServer.TestResultSet.Test()  
 ```  
   
- 建议所有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册的程序集（添加到全局程序集缓存中的那些程序集除外）使用 `AllowPartiallyTrustedCallers` 属性进行标记，以便由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加载的程序集可以相互访问。 应当首先彻底检查要加载到全局程序集缓存中的程序集的安全性，然后再添加 `AllowPartiallyTrustedCallers` 属性，因为之后该程序集将可用于来自意外上下文的部分可信任的调用方。 程序集不应注册为完全可信任（在 `UNSAFE` 中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限集注册）。  
+ 建议所有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册的程序集（添加到全局程序集缓存中的那些程序集除外）使用 `AllowPartiallyTrustedCallers` 属性进行标记，以便由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加载的程序集可以相互访问。 应当首先彻底检查要加载到全局程序集缓存中的程序集的安全性，然后再添加 `AllowPartiallyTrustedCallers` 属性，因为之后该程序集将可用于来自意外上下文的部分可信任的调用方。 程序集不应注册为完全可信任（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 `UNSAFE` 权限集注册）。  
   
  有关详细信息，请参阅 .NET Framework 软件开发包中的“通过部分可信任的代码使用库”部分。  
   

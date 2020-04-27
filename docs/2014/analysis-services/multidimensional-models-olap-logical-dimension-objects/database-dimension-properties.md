@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728488"
 ---
 # <a name="database-dimension-properties"></a>数据库维度属性
   在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，维度的特征是由维度的元数据根据各种维度属性的设置以及维度所包含的属性或层次结构来定义的。 下表说明了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的维度属性。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|指定维度中属性的“全部”成员的名称。|  
 |`Collation`|确定维度使用的排序规则。|  
@@ -38,7 +38,7 @@ ms.locfileid: "62728488"
 |`MiningModelID`|包含数据挖掘维度所关联的挖掘模型的 ID。 此属性仅适用于挖掘模型维度。|  
 |`Name`|指定维度的名称。|  
 |`ProactiveCaching`|定义维度的主动缓存设置。|  
-|`ProcessingGroup`|指定处理组。 值为 ByAttribute 或 ByTable。 默认为 `ByAttribute`。|  
+|`ProcessingGroup`|指定处理组。 值为 ByAttribute 或 ByTable。 默认值为 `ByAttribute`。|  
 |`ProcessingMode`|指示是否应该在处理期间或处理之后对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行聚合以及为其建立索引。|  
 |`ProcessingPriority`|确定在后台操作期间（例如惰性聚合、索引或群集）维度的处理优先级。|  
 |`Source`|标识维度绑定到的数据源视图。|  
@@ -55,6 +55,6 @@ ms.locfileid: "62728488"
  [属性和属性层次结构](attributes-and-attribute-hierarchies.md)   
  [用户层次结构](user-hierarchies.md)   
  [维度关系](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Analysis Services 多维数据 &#40;维度&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [维度（Analysis Services - 多维数据）](dimensions-analysis-services-multidimensional-data.md)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754680"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
@@ -25,14 +25,14 @@ ms.locfileid: "62754680"
   
  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-remove-database-mirroring"></a>删除数据库镜像  
   
@@ -40,13 +40,13 @@ ms.locfileid: "62754680"
   
 2.  展开 **“数据库”** 并选择数据库。  
   
-3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这将打开 "**数据库属性**" 对话框的 "**镜像**" 页。  
   
 4.  在 **“选择页”** 窗格中，单击 **“镜像”**。  
   
 5.  若要删除镜像，请单击 **“删除镜像”**。 此时，将显示一个提示，要求您进行确认。 如果单击 **“是”**，会话将停止，并从数据库中删除镜像。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要删除数据库镜像，请使用 **“数据库属性”**， 即使用 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
 #### <a name="to-remove-database-mirroring"></a>删除数据库镜像  
@@ -69,12 +69,12 @@ ms.locfileid: "62754680"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a>跟进：删除数据库镜像  
+##  <a name="follow-up-removing-database-mirroring"></a><a name="FollowUp"></a> 跟进：在删除数据库镜像之后  
   
 > [!NOTE]  
 >  有关删除镜像的影响的信息，请参阅[删除数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。  
   
--   **如果打算在数据库上重新启动镜像**  
+-   **如果您打算在数据库上重新启动镜像**  
   
      重新启动镜像之前，必须将在删除镜像后对主体数据库执行的日志备份全部应用到镜像数据库中。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62754680"
     > [!IMPORTANT]  
     >  如果恢复该数据库，则两个同名的不同数据库处于联机状态。 因此，需要确保客户端仅可访问其中一个数据库，通常为最新的主体数据库。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [暂停或恢复数据库镜像会话 (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
@@ -102,8 +102,8 @@ ms.locfileid: "62754680"
 -   [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [设置数据库镜像 (SQL Server)](setting-up-database-mirroring-sql-server.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [设置数据库镜像 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

@@ -19,17 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727693"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>聚合和聚合设计
-  <xref:Microsoft.AnalysisServices.AggregationDesign>对象定义一组可在多个分区间共享的聚合定义。  
+   对象定义一组可在多个分区间共享的聚合定义。  
   
- 
-  <xref:Microsoft.AnalysisServices.Aggregation> 对象表示某一维度粒度级别上的度量值组数据的汇总。  
+ <xref:Microsoft.AnalysisServices.Aggregation> 对象表示某一维度粒度级别上的度量值组数据的汇总。  
   
  简单 <xref:Microsoft.AnalysisServices.Aggregation> 对象由基本信息和维度组成。 基本信息包括聚合的名称、ID、批注和说明。 维度是包含维度的粒度属性列表的 <xref:Microsoft.AnalysisServices.AggregationDimension> 对象的集合。  
   

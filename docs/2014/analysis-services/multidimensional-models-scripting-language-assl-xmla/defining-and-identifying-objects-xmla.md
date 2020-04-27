@@ -19,18 +19,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727540"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>定义和标识对象 (XMLA)
   在 XML for Analysis (XMLA) 命令中，将使用对象标识符和对象引用标识对象，并使用 Analysis Services 脚本语言 (ASSL) 元素 XMLA 命令定义对象。  
   
 ## <a name="object-identifiers"></a>对象标识符  
- 对象通过使用在的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上定义的对象的唯一标识符进行标识。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建对象时，可以显式指定对象标识符，也可以由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例确定。 可以使用[发现](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)方法检索对象标识符，以便执行后续`Discover`或[执行](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法调用。  
+ 对象通过使用在的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上定义的对象的唯一标识符进行标识。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建对象时，可以显式指定对象标识符，也可以由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例确定。 可以使用[发现](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)方法检索对象标识符，以便执行后续`Discover`或[执行](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法调用。  
   
 ## <a name="object-references"></a>对象引用  
  一些 XMLA 命令（如[删除](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/delete-element-xmla)或[处理](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)）使用对象引用以明确的方式引用对象。 对象引用包含要对其执行命令的对象的对象标识符以及该对象的祖先的对象标识符。 例如，分区的对象引用包含分区的对象标识符，以及该分区的父度量值组、多维数据集和数据库的对象标识符。  

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0af2ec4471dc24af0fdb02576adad312ed35069f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62740697"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert（扩展存储过程 API）
@@ -49,10 +49,10 @@ desttype
 ```  
   
 ## <a name="arguments"></a>参数  
- *srctype*  
+ srctype**  
  指示要转换的数据的数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
- *desttype*  
+ desttype**  
  指示源数据要转换成的目标数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
 ## <a name="returns"></a>返回  
@@ -65,6 +65,6 @@ desttype
 >  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  
- [扩展存储过程 API srv_convert &#40;&#41;](srv-convert-extended-stored-procedure-api.md)  
+ [srv_convert（扩展存储过程 API）](srv-convert-extended-stored-procedure-api.md)  
   
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689066"
 ---
 # <a name="bcp_init"></a>bcp_init
@@ -77,7 +77,7 @@ eDirection
 ## <a name="remarks"></a>备注  
  调用任何其他大容量复制函数之前调用**bcp_init** 。 **bcp_init**对工作站和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之间的大容量数据复制执行必要的初始化。  
   
- **Bcp_init**函数必须与支持使用大容量复制函数的 ODBC 连接句柄一起提供。 若要启用句柄，请使用 SQLSetConnectAttr，将 SQL_COPT_SS_BCP [](../native-client-odbc-api/sqlsetconnectattr.md)设置为在已分配但未连接的连接句柄上 SQL_BCP_ON。 尝试对已连接的句柄分配属性将导致错误。  
+ **Bcp_init**函数必须与支持使用大容量复制函数的 ODBC 连接句柄一起提供。 若要启用句柄，请使用 SQLSetConnectAttr，将 SQL_COPT_SS_BCP [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)设置为在已分配但未连接的连接句柄上 SQL_BCP_ON。 尝试对已连接的句柄分配属性将导致错误。  
   
  指定数据文件时， **bcp_init**会检查数据库源或目标表的结构，而不是数据文件。 **bcp_init**根据数据库表、视图或 SELECT 结果集中的每一列指定数据文件的数据格式值。 此指定包括每一列的数据类型、数据中是否存在长度或 Null 指示符和终止符字节字符串以及固定长度的数据类型的宽度。 **bcp_init**设置这些值，如下所示：  
   

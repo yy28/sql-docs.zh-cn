@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bda582c7b9171e89a43b6870b3b6c2df139b7b11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670460"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>从查询中删除表 (Visual Database Tools)
@@ -30,13 +30,13 @@ ms.locfileid: "62670460"
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>移除表或表结构对象  
   
--   在“关系图”**** 窗格中，选择表、视图、用户定义函数、同义词或查询，再按 Delete；或者右键单击该对象，然后在显示的对话框中选择“删除”****。 您可一次选择和移除多个对象。  
+-   在“关系图”  窗格中，选择表、视图、用户定义函数、同义词或查询，再按 Delete；或者右键单击该对象，然后在显示的对话框中选择“删除”  。 您可一次选择和移除多个对象。  
   
      -或-  
   
 -   在 **SQL 窗格**中删除对该对象的所有引用。  
   
- 当移除表或表值对象时，查询和视图设计器将自动删除涉及该表或表值对象的联接，并在“SQL 窗格”**** 和“条件窗格”**** 中删除对该对象的列的引用。 但是，如果查询包含涉及该对象的复杂表达式，则只有在移除对该对象的所有引用后才会自动移除该对象。  
+ 当移除表或表值对象时，查询和视图设计器将自动删除涉及该表或表值对象的联接，并在“SQL 窗格”  和“条件窗格”  中删除对该对象的列的引用。 但是，如果查询包含涉及该对象的复杂表达式，则只有在移除对该对象的所有引用后才会自动移除该对象。  
   
 ## <a name="see-also"></a>另请参阅  
  [在 Visual Database Tools &#40;向查询中添加表&#41;](visual-database-tools.md)   

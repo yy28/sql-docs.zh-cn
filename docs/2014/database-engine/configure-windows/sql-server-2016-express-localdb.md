@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62756986"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -38,7 +38,7 @@ ms.locfileid: "62756986"
   
  SqlLocalDb 实用工具可以创建的`LocalDB`新实例，启动和停止实例`LocalDB`，并包含可帮助您管理`LocalDB`的选项。  有关 SqlLocalDb 实用工具的详细信息，请参阅 [SqlLocalDB 实用工具](../../tools/sqllocaldb-utility.md)。  
   
- 的实例排序规则`LocalDB`设置为 SQL_Latin1_General_CP1_CI_AS 并且无法更改。 一般支持数据库级、列级和表达式级排序规则。 包含数据库遵循 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)所定义的元数据和 tempdb 排序规则。  
+ 的实例排序规则`LocalDB`设置为 SQL_Latin1_General_CP1_CI_AS 并且无法更改。 一般支持数据库级、列级和表达式级排序规则。 包含的数据库遵循 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) 所定义的元数据和 tempdb 排序规则。  
   
 ### <a name="restrictions"></a>限制  
  `LocalDB`不能是合并复制订阅服务器。  
@@ -90,7 +90,7 @@ REM Gather information about the instance of LocalDB
 |名称|"LocalDBApp1"|  
 |版本|\<当前版本>|  
 |共享名称|""|  
-|所有者|"\<你的 Windows 用户>"|  
+|“所有者”|"\<你的 Windows 用户>"|  
 |自动创建|否|  
 |状态|“正在运行”|  
 |上次启动时间|\<日期和时间>|  

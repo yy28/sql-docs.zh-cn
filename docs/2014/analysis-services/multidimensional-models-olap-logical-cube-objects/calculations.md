@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702685"
 ---
 # <a name="calculations"></a>“新建命名集”
@@ -31,8 +31,7 @@ ms.locfileid: "62702685"
   
  可以为任何维度（包括度量值维度）定义计算成员。 在度量值维度中创建的计算成员称为计算度量值。  
   
- 尽管计算成员通常基于多维数据集中已存在的数据，但是可以通过将数据与算术运算符、数字和函数进行组合而创建复杂的表达式。 还可以使用 MDX 函数（例如，LookupCube）来访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内其他多维数据集中的数据。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括标准化 Visual Studio 函数库，可以使用存储过程从除当前 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以外的源中检索数据。 有关存储过程的详细信息，请参阅[定义存储过程](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)。  
+ 尽管计算成员通常基于多维数据集中已存在的数据，但是可以通过将数据与算术运算符、数字和函数进行组合而创建复杂的表达式。 还可以使用 MDX 函数（例如，LookupCube）来访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内其他多维数据集中的数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括标准化 Visual Studio 函数库，可以使用存储过程从除当前 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以外的源中检索数据。 有关存储过程的详细信息，请参阅[定义存储过程](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)。  
   
  例如，假设货运公司的行政人员希望基于每体积单位的利润确定运输哪种类型的货物利润更高。 他们使用包含“货物”、“船队”和“时间”维度以及 Price_to_Ship、Cost_to_Ship 和 Volume_in_Cubic_Meters 度量值的“发运”多维数据集；但是，该多维数据集中未包含盈利率的度量值。 通过在下列表达式中合并现有度量值，可以在多维数据集中创建一个计算成员来作为度量值，并将它命名为 Profit_per_Cubic_Meter：  
   

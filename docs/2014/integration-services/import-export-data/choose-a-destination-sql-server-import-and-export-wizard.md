@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768021"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>选择目标（SQL Server 导入和导出向导）
@@ -24,8 +24,7 @@ ms.locfileid: "62768021"
   
  若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解用于启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="static-options"></a>静态选项  
  **目标**  
@@ -46,32 +45,32 @@ ms.locfileid: "62768021"
  **使用 Windows 身份验证**  
  指定包是否应使用 Microsoft Windows 身份验证登录数据库。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
- **Use SQL Server Authentication**  
+ **使用 SQL Server 身份验证**  
  指定包是否应使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
  **用户名**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，指定数据库连接的用户名。  
   
- **权限**  
+ **密码**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，提供数据库连接的密码。  
   
  **Database**  
  从的指定实例上的数据库列表中进行选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或单击 "**新建**" 创建新的数据库。  
   
- **“刷新”**  
+ **全部**  
  通过单击“刷新”****，还原可用数据库的列表。  
   
  **新建**  
  使用 "**创建数据库**" 对话框创建新的目标数据库。  
   
 ### <a name="destination--flat-file-destination"></a>目标 = 平面文件目标  
- **文件名**  
+ **文件名称**  
  指定要存储数据的文件的路径和文件名。 或者，单击 **“浏览”** 定位文件。  
   
- **“浏览”**  
+ **浏览**  
  使用“打开”**** 对话框定位文件。  
   
- **区域设置**  
+ **Locale**  
  指定定义字符排序顺序以及日期和时间格式的区域设置 ID (LCID)。  
   
  **Unicode**  
@@ -80,10 +79,10 @@ ms.locfileid: "62768021"
  **代码页**  
  指定所需使用的语言的代码页。  
   
- **形式**  
+ **格式**  
  指示是否使用带分隔符、固定宽度或右边未对齐的格式。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |带分隔符|各列之间由在 **“列”** 页上指定的分隔符隔开。|  
 |固定宽度|列的宽度固定。|  
@@ -103,7 +102,7 @@ ms.locfileid: "62768021"
  **Excel 文件路径**  
  指定要在其中存储数据的工作簿的路径和文件名（例如，C:\MyData.xls、 \\\Sales\Database\Northwind.xls）。 或者，单击 **“浏览”** 定位工作簿。  
   
- **“浏览”**  
+ **浏览**  
  使用 "**打开**" 对话框定位到 Excel 工作簿。  
   
  **Excel 版本**  
@@ -117,16 +116,16 @@ ms.locfileid: "62768021"
 > [!NOTE]  
 >  仅当要连接到使用 Access 2003 或更早版本的数据库时，才选择 " **Microsoft Access** "。 若要连接到使用 Access 2007 的数据库，请选择 " **Microsoft Office 12.0 访问数据库引擎 OLE DB 提供程序**"。  
   
- **文件名**  
+ **文件名称**  
  指定要在其中存储数据的数据库文件的路径和文件名（例如，C:\MyData.mdb、 \\\Sales\Database\Northwind.mdb）。 或者，单击 **“浏览”** 定位数据库文件。  
   
- **“浏览”**  
+ **浏览**  
  使用 "**打开**" 对话框浏览到数据库文件。  
   
  **用户名**  
  当工作组信息文件与数据库关联时，为数据库连接指定一个有效的用户名。  
   
- **权限**  
+ **密码**  
  当工作组信息文件与数据库关联时，为数据库连接提供相应的用户密码。 但是，如果对于所有用户都使用一个密码保护数据库，则必须在 **“数据链接属性”** 对话框（可通过 **“高级”** 按钮访问）中提供此值。  
   
  **高级**  

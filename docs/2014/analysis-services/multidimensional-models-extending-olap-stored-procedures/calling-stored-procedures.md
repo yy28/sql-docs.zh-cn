@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727753"
 ---
 # <a name="calling-stored-procedures"></a>调用存储过程
@@ -65,8 +65,7 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>用 Call 语句调用存储过程  
  使用 MDX `Call` 语句，可以在 MDX 查询的上下文以外调用存储过程。  
   
- 可以使用此方法实例化存储查询的副作用，或让应用程序获得存储查询的结果。 
-  `Call` 语句的通常用法是使用分析管理对象 (AMO) 来执行没有返回结果的管理函数。 例如，以下命令将调用一个存储过程：  
+ 可以使用此方法实例化存储查询的副作用，或让应用程序获得存储查询的结果。 `Call` 语句的通常用法是使用分析管理对象 (AMO) 来执行没有返回结果的管理函数。 例如，以下命令将调用一个存储过程：  
   
 ```  
 Call MyStoredProcedure(a,b,c)  

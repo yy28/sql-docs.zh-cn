@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62711442"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
@@ -39,7 +39,7 @@ ms.locfileid: "62711442"
   
  [SQL Server 复制对象](#Replication)  
   
-##  <a name="Engine"></a>[!INCLUDE[ssDE](../includes/ssde-md.md)]对象  
+##  <a name="ssde-objects"></a><a name="Engine"></a>[!INCLUDE[ssDE](../includes/ssde-md.md)]对象  
  下表指定在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中定义的或在 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中引用的各种对象的最大大小和最大数量。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]对象|最大大小/ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数字（32位）|最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|  
@@ -50,10 +50,8 @@ ms.locfileid: "62711442"
 |每个索引键的字节数<br /><br /> 注意：任何索引键中的最大字节数不能超过 900 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 可以使用最大大小合计超过 900 的可变长度列定义键，前提是这些列中所插入行的数据都不超过 900 字节。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，可将非键列包含于非聚集索引中以避免最大索引键大小 900 字节的限制。|900|900|  
 |每个外键的字节数|900|900|  
 |每个主键的字节数|900|900|  
-|每行的字节数<br /><br /> 注意：<br />        
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持行溢出存储，行溢出存储使长度可变的列可以被推送到行外。 只有 24 字节的根存储在推送出行外的可变长度列的主记录中；因此，此版本中的有效行限制高于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的有效行限制。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书中的“行溢出数据超过 8 KB”这一主题。|8,060|8,060|  
-|内存优化表中的每行字节数<br /><br /> 注意：<br />        
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存中 OLTP 不支持行溢出存储。 可变长度列不会推送到行外。 这将您可在内存优化表中指定的可变长度列的最大宽度限制为最大行大小。 有关详细信息，请参阅 [内存优化表中的表和行大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|不支持|8,060|  
+|每行的字节数<br /><br /> 注意：<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持行溢出存储，行溢出存储使长度可变的列可以被推送到行外。 只有 24 字节的根存储在推送出行外的可变长度列的主记录中；因此，此版本中的有效行限制高于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的有效行限制。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书中的“行溢出数据超过 8 KB”这一主题。|8,060|8,060|  
+|内存优化表中的每行字节数<br /><br /> 注意：<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存中 OLTP 不支持行溢出存储。 可变长度列不会推送到行外。 这将您可在内存优化表中指定的可变长度列的最大宽度限制为最大行大小。 有关详细信息，请参阅 [内存优化表中的表和行大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|不支持|8,060|  
 |存储过程源文本中的字节数|批处理大小中的较小者或 250 MB|批处理大小中的较小者或 250 MB|  
 |每个 `varchar(max)`、`varbinary(max)`、`xml`、`text` 或 `image` 列的字节数|2^31-1|2^31-1|  
 |每个 `ntext` 或 `nvarchar(max)` 列的字符数|2^30-1|2^30-1|  
@@ -85,7 +83,7 @@ ms.locfileid: "62711442"
 |每个连接的锁数|每个服务器的最大锁数|每个服务器的最大锁数|  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> 注意：此值用于静态锁分配。 动态锁仅受内存限制。|最多 2,147,483,647|仅受内存限制|  
 |嵌套存储过程级别数<br /><br /> 注意：如果存储过程访问的数据库超过64个或交叉的数据库超过2个，则会收到错误。|32|32|  
-|嵌套子查询|32|32|  
+|嵌套子查询个数|32|32|  
 |嵌套触发器层数|32|32|  
 |每个表的非聚集索引数|999|999|  
 |存在以下任意子句的情况下 GROUP BY 子句中的非重复表达式数目：CUBE、ROLLUP、GROUPING SETS、WITH CUBE、WITH ROLLUP|32|32|  
@@ -103,11 +101,10 @@ ms.locfileid: "62711442"
 |用户连接|32,767|32,767|  
 |XML 索引|249|249|  
   
-##  <a name="Utility"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实用工具对象  
+##  <a name="ssnoversion-utility-objects"></a><a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具对象  
  下表指定了在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具中测试的各种对象的最大大小和最大数量。  
   
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具对象|最大大小/ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数字（32位）|最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具对象|最大大小/ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数字（32位）|最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|  
 |----------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的计算机数（物理计算机或虚拟计算机）|100|100|  
 |每台计算机的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例数|5|5|  
@@ -121,21 +118,20 @@ ms.locfileid: "62711442"
   
  * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实用工具支持的托管实例的最大数量可能因服务器的硬件配置而异。 有关入门信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 并非在每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中均提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实用工具控制点。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-##  <a name="DAC"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据层应用程序对象  
+##  <a name="ssnoversion-data-tier-application-objects"></a><a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序对象  
  下表指定在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序 (DAC) 中测试的各种对象的最大大小和最大数量。  
   
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 对象|最大大小/ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数字（32位）|最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 对象|最大大小/ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数字（32位）|最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|  
 |------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
 |每个 DAC 的数据库数|1|1|  
 |每个 DAC 的对象数*|受数据库中对象数或可用内存限制。|受数据库中对象数或可用内存限制。|  
   
  *限制中包含的对象类型为用户、表、视图、存储过程、用户定义函数、用户定义数据类型、数据库角色、架构和用户定义表类型。  
   
-##  <a name="Replication"></a>复制对象  
+##  <a name="replication-objects"></a><a name="Replication"></a> 复制对象  
  下表指定了在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 复制中定义的各种对象的最大大小和最大数量。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]复制对象|最大大小/数量 － SQL Server（32 位）|最大大小/数量 SQL Server（64 位）|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 复制对象|最大大小/数量 － SQL Server（32 位）|最大大小/数量 SQL Server（64 位）|  
 |--------------------------------------------------|---------------------------------------------------|---------------------------------------------------|  
 |项目（合并发布）|256|256|  
 |项目（快照发布或事务发布）|32,767|32,767|  
@@ -152,6 +148,6 @@ ms.locfileid: "62711442"
 ## <a name="see-also"></a>另请参阅  
  [安装 SQL Server 2014 的硬件和软件要求](install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [系统配置检查器的检查参数](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
- [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [SQL Server 实用工具的功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

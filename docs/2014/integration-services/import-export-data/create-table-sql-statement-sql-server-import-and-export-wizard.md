@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767999"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Create Table SQL 语句（SQL Server 导入和导出向导）
@@ -36,7 +36,7 @@ ms.locfileid: "62767999"
 > [!NOTE]  
 >  如果要在 SQL 语句中包括回车符，请按 Ctrl+Enter。 如果只按 Enter，则对话框将关闭。  
   
- **自动生成**  
+ **生成**  
  如果已修改了 SQL 语句，通过单击“自动生成”**** 可以还原默认的 SQL 语句。  
   
   

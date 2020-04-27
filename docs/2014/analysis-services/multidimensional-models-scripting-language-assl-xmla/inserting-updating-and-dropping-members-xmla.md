@@ -20,18 +20,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727161"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>插入、更新和删除成员 (XMLA)
   您可以使用 XML for Analysis （XMLA）中的[Insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)、 [update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)和[Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)命令分别从启用写的维度中插入、更新或删除成员。 有关启用了写功能的维度的详细信息，请参阅[启用写功能的维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
   
 ## <a name="inserting-new-members"></a>插入新成员  
- 
-  `Insert` 命令可将新成员插入启用写操作的维度的指定特性中。  
+ `Insert` 命令可将新成员插入启用写操作的维度的指定特性中。  
   
  构造 `Insert` 命令之前，应提供要插入的新成员的以下信息：  
   
@@ -45,8 +44,7 @@ ms.locfileid: "62727161"
   
 -   不作为该维度内的其他特性实现的所有适用特性属性的值。 此类特性属性包括一元运算符、翻译、自定义汇总、自定义汇总属性以及已跳过的级别。  
   
- 
-  `Insert` 命令仅具有两个属性：  
+ `Insert` 命令仅具有两个属性：  
   
 -   [对象](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)属性，它包含要在其中插入成员的维度的对象引用。 该对象引用包含维度的数据库标识符、多维数据集标识符和维度标识符。  
   
@@ -56,9 +54,7 @@ ms.locfileid: "62727161"
     >  必须包括 `Attribute` 元素的所有属性。 否则，可能会出错。  
   
 ## <a name="updating-existing-members"></a>更新现有成员  
- 
-  `Update` 命令可在已启用写操作的维度中根据指定特性中现有成员与其他特性中其他成员的关系更新现有成员。 
-  `Update` 命令可将成员移到维度所包含层次结构中的其他级别，并可用于重新组织父特性所定义的父子层次结构。  
+ `Update` 命令可在已启用写操作的维度中根据指定特性中现有成员与其他特性中其他成员的关系更新现有成员。 `Update` 命令可将成员移到维度所包含层次结构中的其他级别，并可用于重新组织父特性所定义的父子层次结构。  
   
  构造 `Update` 命令之前，应提供要更新的成员的以下信息：  
   
@@ -70,15 +66,11 @@ ms.locfileid: "62727161"
   
 -   不作为该维度内的其他特性实现的所有适用特性属性的值。 此类特性属性包括一元运算符、翻译、自定义汇总、自定义汇总属性以及已跳过的级别。  
   
- 
-  `Update` 命令仅具有三个必需属性：  
+ `Update` 命令仅具有三个必需属性：  
   
--   
-  `Object` 属性，它包含对要在其中更新成员的维度的对象引用。 该对象引用包含维度的数据库标识符、多维数据集标识符和维度标识符。  
+-   `Object` 属性，它包含对要在其中更新成员的维度的对象引用。 该对象引用包含维度的数据库标识符、多维数据集标识符和维度标识符。  
   
--   
-  `Attributes` 属性，它包含用于标识要在其中更新成员的特性的一个或多个 `Attribute` 元素。 
-  `Attribute` 元素可标识一个特性，并为已标识特性中更新的单个成员提供名称、值、翻译、一元运算符、自定义汇总、自定义汇总属性以及已跳过的级别。  
+-   `Attributes` 属性，它包含用于标识要在其中更新成员的特性的一个或多个 `Attribute` 元素。 `Attribute` 元素可标识一个特性，并为已标识特性中更新的单个成员提供名称、值、翻译、一元运算符、自定义汇总、自定义汇总属性以及已跳过的级别。  
   
     > [!NOTE]  
     >  必须包括 `Attribute` 元素的所有属性。 否则，可能会出错。  
@@ -102,19 +94,14 @@ ms.locfileid: "62727161"
   
 -   要删除的现有成员的键。 如果某特性使用一个组合键，则该键可能需要多个值。  
   
- 
-  `Drop` 命令仅具有两个必需属性：  
+ `Drop` 命令仅具有两个必需属性：  
   
--   
-  `Object` 属性，它包含对要在其中删除成员的维度的对象引用。 该对象引用包含维度的数据库标识符、多维数据集标识符和维度标识符。  
+-   `Object` 属性，它包含对要在其中删除成员的维度的对象引用。 该对象引用包含维度的数据库标识符、多维数据集标识符和维度标识符。  
   
--   
-  `Where` 属性，它包含用于约束要在其中删除成员的特性的一个或多个 `Attribute` 元素。 
-  `Where` 属性对于将 `Drop` 命令限制于某成员的特定实例来说至关重要。 如果不指定 `Where` 命令，则将删除给定成员的所有实例。 例如，您希望从 Redmond 中删除三个客户。 若要删除这三个客户，您必须提供 `Where` 属性，该属性将标识 Customer 特性中要删除的三个成员，以及要在其中删除三个客户的 City 特性的 Redmond 成员。 如果 `Where` 属性仅指定 City 特性的 Redmond 成员，则 `Drop` 命令将删除与 Redmond 关联的每个客户。 如果 `Where` 属性仅指定 Customer 特性中的三个成员，则 `Drop` 命令会将这三个客户全部删除。  
+-   `Where` 属性，它包含用于约束要在其中删除成员的特性的一个或多个 `Attribute` 元素。 `Where` 属性对于将 `Drop` 命令限制于某成员的特定实例来说至关重要。 如果不指定 `Where` 命令，则将删除给定成员的所有实例。 例如，您希望从 Redmond 中删除三个客户。 若要删除这三个客户，您必须提供 `Where` 属性，该属性将标识 Customer 特性中要删除的三个成员，以及要在其中删除三个客户的 City 特性的 Redmond 成员。 如果 `Where` 属性仅指定 City 特性的 Redmond 成员，则 `Drop` 命令将删除与 Redmond 关联的每个客户。 如果 `Where` 属性仅指定 Customer 特性中的三个成员，则 `Drop` 命令会将这三个客户全部删除。  
   
     > [!NOTE]  
-    >  
-  `Attribute` 命令中包含的 `Drop` 元素必须仅包含 `AttributeName` 和 `Keys` 属性。 否则，可能会出错。  
+    >  `Attribute` 命令中包含的 `Drop` 元素必须仅包含 `AttributeName` 和 `Keys` 属性。 否则，可能会出错。  
   
 ### <a name="dropping-members-in-parent-attributes"></a>删除父特性中的成员  
  设置[DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla)属性指示还应使用父成员删除父成员的后代。 如果将此值设置为 False，则父成员的直接后代将提升到该父成员先前所处的级别。  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cc127a8bafc9ad2f53465caeca013d5033e5c396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702978"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET 服务器功能
@@ -26,8 +26,7 @@ ms.locfileid: "62702978"
  使用 ADOMD.NET 服务器对象，可以创建用户定义的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]函数（UDF）或存储过程。 这些进程内方法是通过使用多维表达式 (MDX)、数据挖掘扩展插件 (DMX) 或 SQL 之类的语言创建的查询语句调用的。 这些进程内方法还可提供附加功能而不会有网络通信的延迟。  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 对象仅支持 DMX。  
+>  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 对象仅支持 DMX。  
   
 ## <a name="what-is-a-udf"></a>什么是 UDF？  
  *UDF*是一种具有以下特征的方法：  

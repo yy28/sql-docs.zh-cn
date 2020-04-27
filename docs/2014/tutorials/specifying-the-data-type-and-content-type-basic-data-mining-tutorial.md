@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720055"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>指定数据类型和内容类型（数据挖掘基础教程）
@@ -30,29 +30,29 @@ ms.locfileid: "62720055"
   
     |列|内容类型|数据类型|  
     |------------|------------------|---------------|  
-    |**地址 Line1**|**离散**|**文本**|  
-    |**地址第二行**|**离散**|**文本**|  
-    |**年**|**持续**|**Long**|  
-    |**Bike Buyer**|**离散**|**Long**|  
-    |**上下班路程**|**离散**|**文本**|  
-    |**CustomerKey**|**Key**|**Long**|  
-    |**DateLastPurchase**|**持续**|**Date**|  
-    |**电子邮件地址**|**离散**|**文本**|  
-    |**English Education**|**离散**|**文本**|  
-    |**English Occupation**|**离散**|**文本**|  
-    |**FirstName**|**离散**|**文本**|  
-    |**性别**|**离散**|**文本**|  
-    |**Geography Key**|**离散**|**文本**|  
-    |**House Owner Flag**|**离散**|**文本**|  
-    |**姓氏**|**离散**|**文本**|  
-    |**婚姻状况**|**离散**|**文本**|  
-    |**Number Cars Owned**|**离散**|**Long**|  
-    |**Number Children At Home**|**离散**|**Long**|  
-    |**区域**|**离散**|**文本**|  
-    |**Total Children**|**离散**|**Long**|  
-    |**Yearly Income**|**持续**|**仔细**|  
+    |**地址 Line1**|**离散**|**Text**|  
+    |**地址第二行**|**离散**|**Text**|  
+    |**年**|**持续**|**漫长**|  
+    |**Bike Buyer**|**离散**|**漫长**|  
+    |**上下班路程**|**离散**|**Text**|  
+    |**CustomerKey**|**密钥**|**漫长**|  
+    |**DateLastPurchase**|**持续**|**日期**|  
+    |**电子邮件地址**|**离散**|**Text**|  
+    |**English Education**|**离散**|**Text**|  
+    |**English Occupation**|**离散**|**Text**|  
+    |**FirstName**|**离散**|**Text**|  
+    |**性别**|**离散**|**Text**|  
+    |**Geography Key**|**离散**|**Text**|  
+    |**House Owner Flag**|**离散**|**Text**|  
+    |**姓氏**|**离散**|**Text**|  
+    |**婚姻状况**|**离散**|**Text**|  
+    |**Number Cars Owned**|**离散**|**漫长**|  
+    |**在家子女数**|**离散**|**漫长**|  
+    |**区域**|**离散**|**Text**|  
+    |**Total Children**|**离散**|**漫长**|  
+    |**Yearly Income**|**持续**|**双精度**|  
   
-3.  单击“下一步”。   
+3.  单击“下一步”  。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [为结构指定测试数据集 &#40;数据挖掘基础教程&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
@@ -62,6 +62,6 @@ ms.locfileid: "62720055"
   
 ## <a name="see-also"></a>另请参阅  
  [内容类型 &#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [数据挖掘 &#40;的数据类型&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [数据类型（数据挖掘）](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

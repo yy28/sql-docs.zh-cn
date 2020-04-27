@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb2a08d874dd022fdad3646ea263d34dd65b9739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62677025"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>查看 SQL Server 对象的基于策略的管理方面
@@ -32,21 +32,21 @@ ms.locfileid: "62677025"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-all-of-the-facets-in-an-object"></a>查看对象的所有方面  
   
-1.  在对象资源管理器中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、实例对象、数据库或数据库对象，然后单击“Facet”  。  
+1.  在对象资源管理器中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、实例对象、数据库或数据库对象，然后单击“Facet”****。  
   
-2.  在“查看 Facet - object_name”对话框的“方面”列表中，选择某一方面，查看其属性    。 有关此对话框上可用选项的详细信息，请参阅 [View Facets Dialog Box](view-facets-dialog-box.md)。  
+2.  在 "**查看方面**_object_name_ " 对话框中的 "**方面**" 列表中，选择要查看其属性的方面。 有关此对话框上可用选项的详细信息，请参阅 [View Facets Dialog Box](view-facets-dialog-box.md)。  
   
-3.  完成后，单击 **“确定”** 。  
+3.  完成后，单击“确定”****。  
   
   

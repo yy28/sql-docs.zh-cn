@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689030"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -43,7 +43,7 @@ fIsMaxType
 ```  
   
 ## <a name="arguments"></a>参数  
- *令牌*  
+ *token*  
  指示 BCP 类型标记的值。  
   
  *定义域*  
@@ -59,44 +59,44 @@ fIsMaxType
   
 |BCP 类型名称|MaxType|输出|  
 |-------------------|-------------|------------|  
-|`SQLDECIMAL`|任一个|**Decimal**|  
-|`SQLNUMERIC`|任一个|**加法**|  
-|`SQLINT1`|任一个|**tinyint**|  
-|`SQLINT2`|任一个|**smallint**|  
-|`SQLINT4`|任一个|**int**|  
-|`SQLMONEY`|任一个|**money**|  
-|`SQLFLT8`|任一个|**float**|  
-|`SQLDATETIME`|任一个|**datetime**|  
-|`SQLBITN`|任一个|**bit-null**|  
-|`SQLBIT`|任一个|**bit**|  
+|`SQLDECIMAL`|之前或之后|**decimal**|  
+|`SQLNUMERIC`|之前或之后|**numeric**|  
+|`SQLINT1`|之前或之后|**tinyint**|  
+|`SQLINT2`|之前或之后|**smallint**|  
+|`SQLINT4`|之前或之后|**int**|  
+|`SQLMONEY`|之前或之后|**money**|  
+|`SQLFLT8`|之前或之后|**float**|  
+|`SQLDATETIME`|之前或之后|**datetime**|  
+|`SQLBITN`|之前或之后|**bit-null**|  
+|`SQLBIT`|之前或之后|**bit**|  
 |`SQLBIGCHAR`|否|**char**|  
 |`SQLCHARACTER`|否|**char**|  
 |`SQLBIGVARCHAR`|否|**varchar**|  
 |`SQLVARCHAR`|否|**varchar**|  
-|`SQLTEXT`|任一个|**text**|  
+|`SQLTEXT`|之前或之后|**text**|  
 |`SQLBIGBINARY`|否|**binary**|  
 |`SQLBINARY`|否|**二进制**|  
 |`SQLBIGVARBINARY`|否|**Varbinary**|  
 |`SQLVARBINARY`|否|**Varbinary**|  
-|`SQLIMAGE`|任一个|**图像**|  
-|`SQLINTN`|任一个|**int-null**|  
-|`SQLDATETIMN`|任一个|**datetime-null**|  
-|`SQLMONEYN`|任一个|**money-null**|  
-|`SQLFLTN`|任一个|**float-null**|  
-|`SQLAOPSUM`|任一个|**Sum**|  
-|`SQLAOPAVG`|任一个|**Avg**|  
-|`SQLAOPCNT`|任一个|**Count**|  
-|`SQLAOPMIN`|任一个|**Min**|  
-|`SQLAOPMAX`|任一个|**数量**|  
-|`SQLDATETIM4`|任一个|**smalldatetime**|  
-|`SQLMONEY4`|任一个|**Smallmoney**|  
-|`SQLFLT4`|任一个|**实际上**|  
-|`SQLUNIQUEID`|任一个|**uniqueidentifier**|  
+|`SQLIMAGE`|之前或之后|**映像**|  
+|`SQLINTN`|之前或之后|**int-null**|  
+|`SQLDATETIMN`|之前或之后|**datetime-null**|  
+|`SQLMONEYN`|之前或之后|**money-null**|  
+|`SQLFLTN`|之前或之后|**float-null**|  
+|`SQLAOPSUM`|之前或之后|**长度**|  
+|`SQLAOPAVG`|之前或之后|**Avg**|  
+|`SQLAOPCNT`|之前或之后|**Count**|  
+|`SQLAOPMIN`|之前或之后|**Min**|  
+|`SQLAOPMAX`|之前或之后|**数量**|  
+|`SQLDATETIM4`|之前或之后|**smalldatetime**|  
+|`SQLMONEY4`|之前或之后|**Smallmoney**|  
+|`SQLFLT4`|之前或之后|**实际上**|  
+|`SQLUNIQUEID`|之前或之后|**uniqueidentifier**|  
 |`SQLNCHAR`|否|**Nchar**|  
 |`SQLNVARCHAR`|否|**Nvarchar**|  
-|`SQLNTEXT`|任一个|**Ntext**|  
-|`SQLVARIANT`|任一个|**sql_variant**|  
-|`SQLINT8`|任一个|**Bigint**|  
+|`SQLNTEXT`|之前或之后|**Ntext**|  
+|`SQLVARIANT`|之前或之后|**sql_variant**|  
+|`SQLINT8`|之前或之后|**Bigint**|  
 |`SQLCHARACTER`|是|**varchar(max)**|  
 |`SQLBIGCHAR`|是|**varchar(max)**|  
 |`SQLBIGVARCHAR`|是|**varchar(max)**|  
@@ -108,7 +108,7 @@ fIsMaxType
 |`SQLNCHAR`|是|**nvarchar(max)**|  
 |`SQLNVARCHAR`|是|**nvarchar(max)**|  
 |`SQLXML`|是|**Xml**|  
-|`SQLUDT`|任一个|**Udt**|  
+|`SQLUDT`|之前或之后|**Udt**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 对日期和时间增强功能的支持  
  有关日期/时间类型的令牌参数值，请参阅 sqlncli.msi [OLE DB 和 ODBC&#41;的增强日期和时间 &#40;类型的大容量复制更改](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中表的 "Type in" 列。 返回值位于“文件存储类型”列的对应行中。  

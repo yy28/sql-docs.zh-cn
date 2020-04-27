@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754030"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
@@ -35,23 +35,23 @@ ms.locfileid: "62754030"
   
 -   [设置和管理警告阈值](#SetUpManageWarningThresholds)  
   
--   [使用镜像数据库的警报](#UseAlerts)  
+-   [将警报用于镜像数据库](#UseAlerts)  
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> 性能指标和警告阈值  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> 性能指标和警告阈值  
  下表列出可为其配置警告的性能指标，说明相应的警告阈值并列出相应的数据库镜像监视器标签。  
   
 |性能指标|警告阈值|数据库镜像监视器标签|  
 |------------------------|-----------------------|--------------------------------------|  
 |未发送日志|指定未发送日志达到多少 KB 后，在主体服务器实例上生成一个警告。 此警告有助于根据 KB 度量数据丢失的可能性，尤其与高性能模式相关。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|**如果未发送日志超出了阈值，则发出警告**|  
-|未还原日志|指定未还原日志达到多少 KB 后，会在镜像服务器实例上生成一个警告。 此警告可以帮助度量故障转移时间。 “故障转移时间  ”主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间。<br /><br /> 注意：对于自动故障转移，系统识别错误所需的时间与故障转移时间无关。<br /><br /> 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|**如果未还原日志超出了阈值，则发出警告**|  
+|未还原日志|指定未还原日志达到多少 KB 后，会在镜像服务器实例上生成一个警告。 此警告可以帮助度量故障转移时间。 “故障转移时间** ”主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间。<br /><br /> 注意：对于自动故障转移，系统识别错误所需的时间与故障转移时间无关。<br /><br /> 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|**如果未还原日志超出了阈值，则发出警告**|  
 |最早的未发送事务|指定在主体服务器实例上生成警告之前，发送队列中可以累积的事务的分钟数。 此警告有助于根据时间度量数据丢失的可能性，尤其与高性能模式相关。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|  
 |镜像提交开销|指定在主体服务器上生成警告之前，每个事务可允许的平均延迟的毫秒数。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。 该值只适用于高安全模式。|**如果镜像提交开销超过了阈值则发出警告**|  
   
  对于上述任何一个性能指标，系统管理员都可以指定镜像数据库的阈值。 有关详细信息，请参阅本主题后面的 [设置和管理警告阈值](#SetUpManageWarningThresholds)。  
   
-##  <a name="SetUpManageWarningThresholds"></a> 设置和管理警告阈值  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> 设置和管理警告阈值  
  系统管理员可以为关键镜像性能指标配置一个或多个警告阈值。 我们建议为伙伴双方都设置给定警告的阈值，以确保即使出现数据库故障转移的情况，警告也会一直保留。 每个伙伴的适当阈值都取决于该伙伴系统的性能。  
   
  可以使用下列任意一项配置和管理警告阈值：  
@@ -73,7 +73,7 @@ ms.locfileid: "62754030"
     |[sp_dbmmonitordropalert (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|删除指定性能指标的警告。|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>发送到 Windows 事件日志的性能阈值事件  
- 如果为性能指标定义了警告阈值，则在更新状态表时，将针对阈值计算最新的值。 如果已达到阈值，则更新过程“sp_dbmmonitorupdate”会针对指标生成一个信息性事件（“性能阈值事件”），然后将此事件写入  **Windows 事件日志**  [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 下表列出性能阈值事件的 ID。  
+ 如果为性能指标定义了警告阈值，则在更新状态表时，将针对阈值计算最新的值。 如果已达到阈值，则更新过程**sp_dbmmonitorupdate**将为指标生成一个信息事件-*性能阈值事件*，并将事件写入[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志。 下表列出性能阈值事件的 ID。  
   
 |性能指标|事件 ID|  
 |------------------------|--------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "62754030"
 >   
 >  。  
   
-##  <a name="UseAlerts"></a> 将警报用于镜像数据库  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a>使用镜像数据库的警报  
  监视镜像数据库的一个重要组成部分就是针对重要的数据库镜像事件配置警报。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可生成下列数据库镜像事件类型：  
   
 -   性能阈值事件  
@@ -110,7 +110,7 @@ ms.locfileid: "62754030"
 > [!IMPORTANT]  
 >  对于所有镜像会话，我们极力建议您将数据库配置为针对任意状态更改事件发送警报。 除非专门通过手动配置更改来实现状态更改，否则会出现危及数据安全的情况。 为了帮助保护数据，请找出状态发生意外更改的原因并予以纠正。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **使用 SQL Server Management Studio 创建警报**  
   
 -   [使用错误号创建警报](../../ssms/agent/create-an-alert-using-an-error-number.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "62754030"
 -   [sp_dbmmonitorupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [监视数据库镜像 (SQL Server)](monitoring-database-mirroring-sql-server.md)  
   
   

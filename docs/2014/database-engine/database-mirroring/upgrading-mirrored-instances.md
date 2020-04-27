@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754272"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>在升级服务器实例时最大限度地减少镜像数据库的停机时间
@@ -53,7 +53,7 @@ ms.locfileid: "62754272"
  滚动升级的具体步骤取决于镜像配置的运行模式。 不过基本阶段是相同的。  
   
 > [!NOTE]  
->  有关运行模式的详细信息，请参阅 [数据库镜像运行模式](database-mirroring-operating-modes.md)。  
+>   有关运行模式的信息，请参阅 [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)。  
   
  下图是显示各个运行模式的滚动升级基本阶段的流程图。 该图后面的内容介绍了对应的步骤。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62754272"
     > [!IMPORTANT]  
     >  如果镜像服务器与主体服务器在地理位置上存有一定距离，则可能不适宜进行滚动升级。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的**镜像页**将“操作模式”[](../../relational-databases/databases/database-properties-mirroring-page.md)选项更改为“不带自动故障转移功能的高安全(同步)”****。 有关如何访问此页的详细信息，请参阅[启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的[镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”**** 选项更改为“不带自动故障转移功能的高安全(同步)”****。 有关如何访问此页的详细信息，请参阅[启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)。  
   
     -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：将事务安全设置为 FULL。 有关详细信息，请参阅[更改数据库镜像会话中的事务安全 &#40;transact-sql&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62754272"
   
      此步骤的目的是让其他服务器实例在其作为伙伴的每个镜像会话中成为镜像服务器。  
   
-     **故障转移到已升级的服务器实例后的限制。**  
+     **在出现故障时转移到已升级的服务器实例后的限制。**  
   
      在从早期服务器实例故障转移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例后，数据库会话将挂起。 直到升级完其他伙伴后，此会话才能继续。 但主体服务器仍然接受连接，并允许对主体数据库进行数据访问和修改。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62754272"
   
 1.  可以选择使用下列方法之一返回高性能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的 **镜像页**将“操作模式”[](../../relational-databases/databases/database-properties-mirroring-page.md)选项更改为“高性能(同步)”****。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的 [镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”**** 选项更改为“高性能(同步)”****。  
   
     -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中：使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
   
@@ -141,14 +141,14 @@ ms.locfileid: "62754272"
     -   [使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER DATABASE 数据库镜像 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [更改数据库数据库镜像 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [查看镜像数据库的状态 &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
- [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [在系统上安装 Service Pack，并且镜像数据库的停机时间最短](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
- [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [数据库镜像会话期间的角色切换 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [在数据库镜像会话中强制服务 &#40;Transact-sql&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
- [启动数据库镜像监视器 (SQL Server Management Studio)](start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [开始数据库镜像监视器 &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
  [数据库镜像运行模式](database-mirroring-operating-modes.md)  
   
   

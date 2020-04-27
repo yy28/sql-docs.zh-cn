@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f588b8a4305f44eceb8a8f6ab351bc940fbfef5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754943"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>包括见证服务器（配置数据库镜像安全向导）
@@ -32,12 +32,12 @@ ms.locfileid: "62754943"
  **是**  
  单击此项可将见证服务器实例包括在安全配置中。 对于具有自动故障转移的高安全性模式，见证服务器是必需的，因为如果主体服务器实例失败，见证服务器将提供到镜像服务器实例的自动故障转移。  
   
- **是**  
+ **否**  
  单击此项可在不包括见证服务器的情况下配置安全性。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [数据库镜像见证服务器](database-mirroring-witness.md)  
+ [&#41;的数据库属性 &#40;镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)  
   
   

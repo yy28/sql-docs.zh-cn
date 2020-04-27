@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12a7ae2db2d0e1c91e85eeb4a2c2691579c2da70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745548"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg（扩展存储过程 API）
@@ -73,34 +73,34 @@ msglen
 ```  
   
 ## <a name="arguments"></a>参数  
- *srvproc*  
+ srvproc**  
  指向作为特定客户端连接句柄（在这里为接收语言请求的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- *msgtype*  
+ msgtype**  
  SRV_MSG_INFO 或 SRV_MSG_ERROR，具体取决于服务器发送的是信息性消息还是错误消息。  
   
- *msgnum*  
+ msgnum**  
  4 字节消息编号。  
   
- *班级*  
+ *class*  
  指定错误严重性。 严重性小于或等于 10 将被视为信息性消息。  
   
- *状态*  
+ *state*  
  提供当前消息的错误状态编号。 错误状态编号提供有关错误上下文的信息。 有效的状态编号介于 0 到 255 之间。  
   
- *rpcname*  
+ rpcname**  
  当前不受支持。  
   
- *rpcnamelen*  
+ rpcnamelen**  
  当前不受支持。  
   
- *linenum*  
+ linenum**  
  消息应用到的语言命令批处理中的行号。 行号从 1 开始。 如果 linenum 不适用于消息，则设置为 0**。  
   
- *消息*  
+ *message*  
  指向要发送到客户端的字符串的指针。  
   
- *msglen*  
+ msglen**  
  指定消息的长度（以字节为单位）**。 如果消息以 null 值结束，则将 msglen 设置为 SRV_NULLTERM****。  
   
 ## <a name="returns"></a>返回  

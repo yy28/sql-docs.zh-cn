@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727643"
 ---
 # <a name="cube-properties"></a>多维数据集属性
@@ -46,7 +46,7 @@ ms.locfileid: "62727643"
   
  有关如何设置多维数据集属性的详细信息，请参阅[多维数据集设计器 &#40;Analysis Services 多维数据&#41;](../cube-designer-analysis-services-multidimensional-data.md)。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |`AggregationPrefix`|指定用于聚合名称的通用前缀。|  
 |`Collation`|指定以下划线分隔的区域设置标识符 (LCID) 和比较标志，例如 Latin1_General_C1_AS。|  
@@ -59,8 +59,8 @@ ms.locfileid: "62727643"
 |`Name`|指定多维数据集的用户友好名称。|  
 |`ProactiveCaching`|定义多维数据集的主动缓存设置。|  
 |`ProcessingMode`|指示在处理期间或之后是否进行索引和聚合。 选项为**常规**或`lazy`。|  
-|`ProcessingPriority`|确定在后台操作（例如，惰性聚合和索引）期间多维数据集的处理优先级。 默认值为**0**。|  
-|`ScriptCacheProcessingMode`|指示在处理期间或之后是否生成脚本缓存。 选项为**** "常规`lazy`" 和。|  
+|`ProcessingPriority`|确定在后台操作（例如，惰性聚合和索引）期间多维数据集的处理优先级。 默认值为 **0**。|  
+|`ScriptCacheProcessingMode`|指示在处理期间或之后是否生成脚本缓存。 选项为**regular** "常规`lazy`" 和。|  
 |`ScriptErrorHandlingMode`|确定错误处理。 选项是 `IgnoreNone` 或 `IgnoreAll`|  
 |`Source`|显示用于多维数据集的数据源视图|  
 |`StorageLocation`|指定多维数据集的文件系统存储位置。 如果未指定任何位置，则从包含多维数据集对象的数据库中继承位置。|  

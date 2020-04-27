@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720097"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>为结构指定测试数据集（数据挖掘基础教程）
@@ -29,7 +29,7 @@ ms.locfileid: "62720097"
   
 2.  有关**测试数据集的最大事例数**，请`1000`键入。  
   
-3.  单击“下一步”。   
+3.  单击“下一步”  。  
   
 ## <a name="specifying-drillthrough"></a>指定钻取  
  可以针对模型和结构启用钻取。 此对话框中的复选框可对命名模型启用钻取功能。 在处理了该模型后，您将能够从定型数据中检索用于创建模型的详细信息。  

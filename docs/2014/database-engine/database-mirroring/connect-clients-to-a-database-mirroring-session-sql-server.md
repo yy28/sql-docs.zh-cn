@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755355"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
   若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
   
- ##  <a name="InitialConnection"></a>建立到数据库镜像会话的初始连接  
+ ##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> 建立到数据库镜像会话的初始连接  
  对于到镜像数据库的初始连接，客户端必须提供一个至少提供服务器实例名称的连接字符串。 这个必需的服务器名称应标识当前主体服务器实例，并称为“初始伙伴名称” **。  
   
  另外，连接字符串还可以提供另一个服务器实例的名称，此名称应标识当前镜像服务器实例，以便在首次连接尝试期间初始伙伴不可用的情况下使用。 第二个名称称为“故障转移伙伴名称” **。  
@@ -152,7 +152,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a>连接重试算法（用于 TCP/IP 连接）  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> 连接重试算法（用于 TCP/IP 连接）  
  对于 TCP/IP 连接，在两个伙伴名称都在缓存中时，数据访问接口遵循连接重试算法。 不论是初次与会话建立连接，还是在中断已建立连接后重新连接，这都适用。 打开连接之后，还需要一些时间完成预登录和登录的步骤。  
   
 > [!NOTE]  
@@ -172,7 +172,7 @@ Server=123.34.45.56,4724;
   
  例如，如果使用默认的登录超时期限 15 秒，则 *LoginTimeout* *= 15*。 在这种情况下，前三轮中分配的重试时间如下：  
   
-|Round|*RetryTime*计算|每次尝试的重试时间|  
+|Round|*RetryTime* 计算|每次尝试的重试时间|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 +(0.08 &#42; 15)************|1.2 秒|  
 |2|1.2 +(0.08 &#42; 15)************|2.4 秒|  
@@ -201,14 +201,13 @@ Server=123.34.45.56,4724;
   
  ![重试延迟时间算法](../media/dbm-retry-delay-algorithm.gif "重试延迟时间算法")  
   
-##  <a name="Reconnecting"></a>重新连接到数据库镜像会话  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> 重新连接到数据库镜像会话  
  如果已建立的到数据库镜像会话的连接因某种原因（例如，由于数据库镜像故障转移）而失败，但应用程序尝试重新连接到初始服务器，则数据访问接口可以尝试使用客户端缓存中存储的故障转移伙伴名称进行重新连接。 但是，重新连接不是自动进行的， 应用程序必须能够识别错误。 然后，应用程序需要关闭失败的连接并使用相同的连接字符串属性打开新连接。 此时，数据访问接口将连接重定向到故障转移伙伴。 如果由此名称标识的服务器实例当前为主体服务器，则连接尝试通常都会成功。 如果不确定事务已提交还是回滚，则应用程序必须检查事务的状态，检查方法与重新连接到独立服务器实例时所用的方法相同。  
   
  重新连接类似于连接字符串为其提供故障转移伙伴名称的初始连接。 如果首次连接尝试失败，则连接尝试会反复轮流使用初始伙伴名称和故障转移伙伴名称，直到客户端连接到主体服务器或数据访问接口超时。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 验证它是否连接到主体服务器实例，但不验证此实例是否为连接字符串初始伙伴名称中指定的服务器实例的伙伴。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 验证它是否连接到主体服务器实例，但不验证此实例是否为连接字符串初始伙伴名称中指定的服务器实例的伙伴。  
   
  如果连接使用 TCP/IP，则连接重试算法将确定为每一轮连接尝试所分配的时间。  
   
@@ -221,7 +220,7 @@ Server=123.34.45.56,4724;
   
  重定向到故障转移伙伴之后，客户端在通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] USE 语句以使用其他数据库时可能会出现意外结果。 如果当前主体服务器实例（故障转移伙伴）具有不同于原始主体服务器（初始伙伴）的一组数据库，则会出现这种情况。  
   
-##  <a name="StalePartnerName"></a>过时故障转移伙伴名称的影响  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> 已过时故障转移伙伴名称的影响  
  数据库管理员可以随时更改故障转移伙伴。 因此，客户端提供的故障转移伙伴名称可能已过时**。 例如，假设名为 Partner_B 的故障转移伙伴已由另一个服务器实例 Partner_C 替换。 现在，如果客户端提供 Partner_B 作为故障转移伙伴名称，则该名称已过时。 如果客户端提供的故障转移伙伴名称已过时，数据访问接口的行为与客户端未提供故障转移伙伴名称时的行为相同。  
   
  例如，假设客户端使用一个连接字符串连续进行四次连接尝试。 在此连接字符串中，初始伙伴名称为 Partner_A，故障转移伙伴名称为 Partner_B：  
@@ -243,7 +242,7 @@ Server=123.34.45.56,4724;
 |手动将服务故障转移到 Partner_C（从客户端断开连接）。|Partner_C|Partner_B|客户端最初尝试连接到 Partner_A，然后又尝试连接到 Partner_B，但均未成功。 最后，连接请求超时，无法成功连接。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)  
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [数据库镜像期间可能出现的故障](possible-failures-during-database-mirroring.md)  
   
   

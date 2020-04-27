@@ -21,21 +21,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768886"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>执行计划和缓冲区分配
   在执行之前，数据流任务会先检查其组件，并为每一个组件序列生成一个执行计划。 本节提供有关执行计划、如何查看执行计划以及如何基于执行计划分配输入和输出缓冲区的详细信息。  
   
 ## <a name="understanding-the-execution-plan"></a>了解执行计划  
- 执行计划包含源线程和工作线程，每个线程均包含指定源线程的输出工作列表或指定工作线程的输入和输出工作列表的工作列表。 执行计划中的源线程表示数据流中的源组件，并在执行计划中由*SourceThread * * n*标识，其中*n*是源线程的从零开始的编号。  
+ 执行计划包含源线程和工作线程，每个线程均包含指定源线程的输出工作列表或指定工作线程的输入和输出工作列表的工作列表。 执行计划中的源线程表示数据流中的源组件，并在执行计划中由 SourceThread**n 标识，其中 n 为从零开始的源线程编号****。  
   
  每个源线程都会创建一个缓冲区，设置一个侦听器，并对源组件调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法。 执行从源线程开始，数据也从这里开始出现，因为源组件开始向数据流任务为其提供的输出缓冲区中添加行。 源线程开始运行之后，会在工作线程之间平衡分配工作量。  
   
- 工作线程可能同时包含输入工作列表和输出工作列表，并在执行计划中标识为*WorkThread * * n*，其中*n*是从零开始的工作线程编号。 当图形中包含具有异步输出的组件时，这些线程将包含输出工作列表。  
+ 工作线程可能同时包含输入工作列表和输出工作列表，并在执行计划中被标识为 WorkThread**n，其中 n 为从零开始的工作线程编号****。 当图形中包含具有异步输出的组件时，这些线程将包含输出工作列表。  
   
  下面的示例执行计划表示了一个数据流，该数据流包含一个源组件、一个具有异步输出的转换和一个目标组件，它们依次连接。 在此示例中，WorkThread0 包含一个输出工作列表，因为转换组件有一个异步输出。  
   

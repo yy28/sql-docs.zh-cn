@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704870"
 ---
 # <a name="resource-governor"></a>Resource Governor
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Resource Governor 是一项功能，可用于管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]工作负荷和系统资源消耗。 可以通过 Resource Governor 指定各种限制，对可供传入应用程序请求使用的 CPU、物理 IO 和内存量进行限制。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源调控器是一项可用于管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工作负荷和系统资源使用情况的功能。 可以通过 Resource Governor 指定各种限制，对可供传入应用程序请求使用的 CPU、物理 IO 和内存量进行限制。  
   
 ## <a name="benefits-of-resource-governor"></a>资源调控器的优势  
  利用资源调控器，您可以通过指定传入请求的资源消耗限制来管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工作负荷和资源。 在资源调控器上下文中，工作负荷是一组大小相似的查询或请求，可以且应该视为单个实体。 这并不是必需的，但是工作负荷的资源使用模式越统一，通过资源调控器可能获得的益处越多。 资源限制可以实时重新配置，对正在执行的工作负荷影响非常小。  
@@ -75,7 +75,7 @@ ms.locfileid: "62704870"
   
 -   资源池提供并限制应用程序所需的资源，例如，Application 3。  
   
- ![资源调控器功能组件](../../database-engine/media/rg-basic-funct-components.gif "资源调控器功能组件")  
+ ![Resource Governor 功能组件](../../database-engine/media/rg-basic-funct-components.gif "Resource Governor 功能组件")  
   
 ## <a name="resource-governor-tasks"></a>资源调控器任务  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62704870"
 |说明如何禁用资源调控器。|[禁用资源调控器](disable-resource-governor.md)|  
 |说明如何创建、更改和删除资源池。|[资源调控器资源池](resource-governor-resource-pool.md)|  
 |说明如何创建、更改、移动和删除工作负荷组。|[资源调控器工作负荷组](resource-governor-workload-group.md)|  
-|说明如何创建和测试分类器用户定义函数。|[资源调控器分类器函数](resource-governor-classifier-function.md)|  
-|说明如何使用模板配置资源调控器。|[使用模板配置资源调控器](configure-resource-governor-using-a-template.md)|  
-|说明如何查看资源调控器属性。|[查看资源调控器属性](view-resource-governor-properties.md)|  
+|说明如何创建和测试分类器用户定义函数。|[Resource Governor Classifier Function](resource-governor-classifier-function.md)|  
+|说明如何使用模板配置资源调控器。|[使用模板配置 Resource Governor](configure-resource-governor-using-a-template.md)|  
+|说明如何查看资源调控器属性。|[查看 Resource Governor 属性](view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎实例 (SQL Server)](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  

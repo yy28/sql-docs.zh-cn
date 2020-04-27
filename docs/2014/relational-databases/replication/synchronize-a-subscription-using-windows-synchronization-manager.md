@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745756"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows 同步管理器同步订阅（Windows 同步管理器）
   如果[!INCLUDE[msCoName](../../includes/msconame-md.md)] 与同步管理器在同一台计算机上运行，那么只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 同步管理器同步对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布的订阅（也可用来同步脱机文件和网页）。 若要使用同步管理器：  
   
-1.  在“订阅属性 - **订阅服务器>: \<订阅数据库>”\<** 对话框中，启用使用 Windows 同步管理器对请求订阅进行同步的选项。 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)。  
+1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”**** 对话框中，启用使用 Windows 同步管理器对请求订阅进行同步的选项。 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)。  
   
 2.  通过 Windows 的 **“开始”** 菜单访问同步管理器。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745756"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>启用使用 Windows 同步管理器对请求订阅进行同步的选项  
   
-1.  在“订阅属性 - **订阅服务器>:** 订阅数据库>” **\<对话框的“常规”\<** 页上，针对“使用 Windows 同步管理器”  选项选择值“启用”  。  
+1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”**** 对话框的“常规”**** 页上，针对“使用 Windows 同步管理器”**** 选项选择值“启用”****。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -42,21 +42,21 @@ ms.locfileid: "62745756"
   
 1.  使用下列方法之一启动同步管理器：  
   
-    -   在 Internet Explorer 中，单击 **“工具”** ，再单击 **“同步”** 。  
+    -   在 Internet Explorer 中，单击 **“工具”**，再单击 **“同步”**。  
   
-    -   单击 **“开始”** ，指向 **“程序”** 或 **“所有程序”** ，然后指向 **“附件”** ，再单击 **“同步”** 。  
+    -   单击 **“开始”**，指向 **“程序”** 或 **“所有程序”**，然后指向 **“附件”**，再单击 **“同步”**。  
   
-    -   单击 **“开始”** ，再单击 **“运行”** 在 "**运行**" 对话框中， `mobsync.exe`在 "**打开**" 字段中键入，然后单击 **"确定"**。  
+    -   单击 "**开始**"，然后单击 "**运行"。** 在 "**运行**" 对话框中， `mobsync.exe`在 "**打开**" 字段中键入，然后单击 **"确定"**。  
   
 2.  在 **“要同步的项”** 对话框中，选择要同步的订阅。 将在计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例下列出订阅。  
   
-3.  单击 **“同步”** 。  
+3.  单击 **“同步”**。  
   
 ### <a name="to-reinitialize-a-pull-subscription-with-synchronization-manager"></a>使用同步管理器重新初始化请求订阅  
   
-1.  在 **“要同步的项”** 对话框中，选择订阅，然后单击 **“属性”** 。  
+1.  在 **“要同步的项”** 对话框中，选择订阅，然后单击 **“属性”**。  
   
-2.  在 **“SQL Server 订阅属性”** 对话框中，单击 **“重新初始化订阅”** 。  
+2.  在 **“SQL Server 订阅属性”** 对话框中，单击 **“重新初始化订阅”**。  
   
 3.  单击 **“是”** 。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "62745756"
   
 ### <a name="to-set-properties-for-a-pull-subscription-in-synchronization-manager"></a>在同步管理器中设置请求订阅的属性  
   
-1.  在 **“要同步的项”** 对话框中，选择订阅，然后单击 **“属性”** 。  
+1.  在 **“要同步的项”** 对话框中，选择订阅，然后单击 **“属性”**。  
   
 2.  在下列选项卡上查看和修改属性：  
   
     -   **标识**  
   
-    -   **“订阅服务器登录”** 、 **“分发服务器登录”** 和 **“发布服务器登录”** （仅适用于合并复制）  
+    -   **“订阅服务器登录”**、 **“分发服务器登录”** 和 **“发布服务器登录”** （仅适用于合并复制）  
   
     -   **“Web 服务器信息”** （适用于运行 SQL Server 2005 或更高版本的订阅服务器中的合并订阅）  
   
@@ -87,9 +87,9 @@ ms.locfileid: "62745756"
   
 ### <a name="to-remove-a-pull-subscription-from-synchronization-manager"></a>从同步管理器中删除请求订阅  
   
-1.  在 **“要同步的项”** 对话框中，选择订阅，然后单击 **“属性”** 。  
+1.  在 **“要同步的项”** 对话框中，选择订阅，然后单击 **“属性”**。  
   
-2.  在 **“SQL Server 订阅属性”** 对话框中，单击 **“删除订阅”** 。  
+2.  在 **“SQL Server 订阅属性”** 对话框中，单击 **“删除订阅”**。  
   
 3.  从 **“删除订阅”** 对话框中选择一个选项。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62745756"
      选定的行然后应用于发布服务器和/或订阅服务器，并在后续同步过程中传播到拓扑中的其他节点。  
   
 > [!NOTE]  
->  所做的编辑只有在属于为解决冲突而选择的行时才生效。 例如，如果在 **“发布服务器”** 下进行编辑，然后单击 **“接受订阅服务器”** ，那么所做的编辑将被忽略。  
+>  所做的编辑只有在属于为解决冲突而选择的行时才生效。 例如，如果在 **“发布服务器”** 下进行编辑，然后单击 **“接受订阅服务器”**，那么所做的编辑将被忽略。  
   
 ## <a name="see-also"></a>另请参阅  
  [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  

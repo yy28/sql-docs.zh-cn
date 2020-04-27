@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736390"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 约定
@@ -135,12 +135,10 @@ ms.locfileid: "62736390"
   
 -   保留内部空格。  
   
- 
-  `Name` 和 `ID` 属性对字符串元素中的有效字符具有特殊限制。 有关`Name`和`ID`约定的其他信息，请参阅[ASSL 对象和对象特性](assl-objects-and-object-characteristics.md)。  
+ `Name` 和 `ID` 属性对字符串元素中的有效字符具有特殊限制。 有关`Name`和`ID`约定的其他信息，请参阅[ASSL 对象和对象特性](assl-objects-and-object-characteristics.md)。  
   
  `DateTime`  
- .NET Framework `DateTime`中的结构。 `DateTime`值不能为 NULL。 
-  `DataTime` 数据类型支持的最早日期为 1601 年 1 月 1 日，程序员可将该日期作为 `DateTime.MinValue`。 该最早支持日期指示缺少 `DateTime` 值。  
+ .NET Framework `DateTime`中的结构。  值不能为 NULL。 `DataTime` 数据类型支持的最早日期为 1601 年 1 月 1 日，程序员可将该日期作为 `DateTime.MinValue`。 该最早支持日期指示缺少 `DateTime` 值。  
   
  `Boolean`  
  仅具有两个值的枚举，例如 {true, false} 或 {0, 1}。  
@@ -152,7 +150,7 @@ ms.locfileid: "62736390"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|""（空字符串）|  
-|`Integer`或`Long`|0（零）|  
+|`Integer` 或 `Long`|0（零）|  
 |`Timestamp`|12:00:00 AM、1/1/0001 （对应于具有0刻度的`System.DateTime` .net 框架）|  
   
  存在但为空的元素被解释为具有 Null 字符串值，而非默认值。  

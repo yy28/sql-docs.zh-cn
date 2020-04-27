@@ -16,17 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62715084"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 实现细节
   本节介绍了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时呈现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定行为的 ODBC 函数。 此处只介绍部分 ODBC 函数。 各个单独的主题只讨论 ODBC 函数的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定问题， 它们不提供 ODBC 函数的完整参考资料。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范，如果您使用 Windows 7 SDK，则符合 ODBC 3.8 规范。 有关综合性 ODBC 引用，请联机查看[Odbc 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范，如果您使用 Windows 7 SDK，则符合 ODBC 3.8 规范。 有关综合性 ODBC 引用，请联机查看[Odbc 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

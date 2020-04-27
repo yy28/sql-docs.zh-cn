@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754081"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>已部署的数据层应用程序详细信息（SQL Server 实用工具）
@@ -46,11 +46,11 @@ ms.locfileid: "62754081"
   
 -   名称 - 数据层应用程序名称。  
   
--   应用程序 CPU - 显示此数据层应用程序的处理器使用率的运行状态。 根据为数据层应用程序设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰 &#40;SQL Server 实用工具&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   应用程序 CPU - 显示此数据层应用程序的处理器使用率的运行状态。 根据为数据层应用程序设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”**** 选项卡。  
   
--   计算机 CPU - 显示计算机处理器使用率的运行状态。 根据为计算机设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰 &#40;SQL Server 实用工具&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   计算机 CPU - 显示计算机处理器使用率的运行状态。 根据为计算机设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”**** 选项卡。  
   
@@ -166,9 +166,9 @@ ms.locfileid: "62754081"
 -   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
 ## <a name="see-also"></a>另请参阅  
- [托管实例详细信息（SQL Server 实用工具）](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [托管实例详细 &#40;SQL Server 实用工具&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [实用工具仪表板 &#40;SQL Server 实用工具&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [在 SQL Server 实用工具中监视 SQL Server 的实例](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [监视 SQL Server 实用工具中 SQL Server 的实例](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [SQL Server 实用工具的功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

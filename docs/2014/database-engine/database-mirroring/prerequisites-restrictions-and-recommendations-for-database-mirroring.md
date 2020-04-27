@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754603"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>数据库镜像的前提条件、限制和建议
@@ -37,14 +37,14 @@ ms.locfileid: "62754603"
   
 
   
-##  <a name="DbmSupport"></a>支持数据库镜像  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a>支持数据库镜像  
  有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中数据库镜像支持的详细信息，请参阅 [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  请注意，数据库镜像可使用任意支持的数据库兼容级别。 有关支持的兼容级别的信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
   
 
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   若要建立镜像会话，伙伴双方和见证服务器（如果有）必须在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62754603"
   
 
   
-##  <a name="Restrictions"></a> 限制  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 限制  
   
 -   只能镜像用户数据库。 不能镜像 **master**、 **msdb**、 **tempdb**或 **model** 数据库。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62754603"
   
 
   
-##  <a name="RecommendationsForPartners"></a>配置伙伴服务器的建议  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a>配置伙伴服务器的建议  
   
 -   应该在可以处理相同工作负荷的类似系统上运行伙伴。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62754603"
   
 
   
-##  <a name="RecommendationsForDeploying"></a>部署数据库镜像的建议  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a>部署数据库镜像的建议  
  使用异步操作可获得最佳的数据库镜像性能。 如果镜像会话使用同步操作，则当该会话的工作负荷生成大量事务日志数据时，可能会降低性能。  
   
  在测试环境中，应当研究所有运行模式以评估数据库镜像的执行效率。 但是，在生产环境中部署镜像之前，务必要了解网络在实际环境中的运行方式。  
@@ -124,9 +124,9 @@ ms.locfileid: "62754603"
 
   
 ## <a name="see-also"></a>另请参阅  
- [设置数据库镜像 (SQL Server)](setting-up-database-mirroring-sql-server.md)   
+ [设置数据库镜像 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [数据库镜像配置故障排除 (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

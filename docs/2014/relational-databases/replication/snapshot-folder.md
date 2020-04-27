@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4346b7752c9d4ace22a50cb1b4768c0c7d5df1fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676525"
 ---
 # <a name="snapshot-folder"></a>快照文件夹
@@ -29,12 +29,11 @@ ms.locfileid: "62676525"
  输入用来存储快照文件的文件夹的路径。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您将网络共享作为快照文件夹的位置。 其他计算机上的代理无法访问本地路径（以驱动器号开头的路径，如 C:\\）。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您将网络共享作为快照文件夹的位置。 其他计算机上的代理无法访问本地路径（以驱动器号开头的路径，如 C:\\）。  
   
 ## <a name="see-also"></a>另请参阅  
  [备用快照文件夹位置](alternate-snapshot-folder-locations.md)   
- [“配置分发”](configure-distribution.md)   
+ [配置分发](configure-distribution.md)   
  [配置发布和分发](configure-publishing-and-distribution.md)   
  [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)   
  [使用快照初始化订阅](initialize-a-subscription-with-a-snapshot.md)  

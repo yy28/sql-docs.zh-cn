@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761436"
 ---
 # <a name="delete-tables-database-engine"></a>删除表（数据库引擎）
@@ -42,9 +42,9 @@ ms.locfileid: "62761436"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   不能删除被 FOREIGN KEY 约束引用的表。 必须先删除引用 FOREIGN KEY 约束或引用表。 如果要在同一个 DROP TABLE 语句中删除引用表以及包含主键的表，则必须先列出引用表。  
   
@@ -56,12 +56,12 @@ ms.locfileid: "62761436"
   
 -   任何引用已删除表的视图或存储过程都必须显式删除或修改，以便删除对该表的引用。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要拥有该表所属架构的 ALTER 权限、该表的 CONTROL 权限或 **db_ddladmin** 固定数据库角色中的成员身份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-a-table-from-the-database"></a>从数据库中删除表  
   
@@ -69,12 +69,12 @@ ms.locfileid: "62761436"
   
 2.  右键单击该表，再从快捷菜单中选择“删除”  。  
   
-3.  此时，将显示一个消息框，提示您确认删除。 单击 **“是”** 。  
+3.  此时，将显示一个消息框，提示您确认删除。 单击“是”  。  
   
     > [!NOTE]  
     >  删除一个表将自动移除与该表之间的所有关系。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-table-in-query-editor"></a>在查询编辑器中删除表  
   

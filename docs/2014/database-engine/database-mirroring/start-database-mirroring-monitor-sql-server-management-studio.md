@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a48c6620d4395cd44aac6f43cd1817cfebf785e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754900"
 ---
 # <a name="start-database-mirroring-monitor-sql-server-management-studio"></a>启动数据库镜像监视器 (SQL Server Management Studio)
@@ -31,19 +31,19 @@ ms.locfileid: "62754900"
   
 1.  连接到主体服务器实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”** ，再选择要监视的数据库。  
+2.  展开 **“数据库”**，再选择要监视的数据库。  
   
-3.  右键单击数据库，选择“任务”  ，再单击“启动数据库镜像监视器”  。  
+3.  右键单击数据库，选择“任务” ****，再单击“启动数据库镜像监视器” ****。  
   
 4.  在 **“数据库镜像监视器”** 对话框中，单击 **“注册镜像数据库”** 以注册一个或多个镜像数据库。  
   
     > [!NOTE]  
-    >  在一个伙伴上注册数据库时，会自动在另一个伙伴上注册此数据库。 如果监视器已具有另一个伙伴实例的连接凭据，则可以使用这些凭据进行连接。 否则，监视器尝试使用 Windows 身份验证进行连接。 如果要更改用于连接到任一服务器实例的凭据，则单击 **“当单击‘确定’后，显示‘管理服务器连接’对话框”** 。  
+    >  在一个伙伴上注册数据库时，会自动在另一个伙伴上注册此数据库。 如果监视器已具有另一个伙伴实例的连接凭据，则可以使用这些凭据进行连接。 否则，监视器尝试使用 Windows 身份验证进行连接。 如果要更改用于连接到任一服务器实例的凭据，则单击 **“当单击‘确定’后，显示‘管理服务器连接’对话框”**。  
   
  有关数据库镜像监视器的详细信息，请参阅 [数据库镜像监视器概述](database-mirroring-monitor-overview.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
   
   

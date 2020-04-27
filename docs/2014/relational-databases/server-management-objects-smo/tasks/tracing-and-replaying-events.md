@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62724786"
 ---
 # <a name="tracing-and-replaying-events"></a>跟踪和重播事件
   在 SMO 中，`Trace` 命名空间中的 `Replay` 和 <xref:Microsoft.SqlServer.Management.Trace> 对象提供对 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 功能（用于监视 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的实例）的编程访问。 您可以捕获有关每个事件的数据并将其保存到文件或表中供以后分析。 例如，可以监视生产环境，了解哪些过程由于执行速度太慢影响了性能。  
   
- 和对象提供一组对象，这些对象可用于在实例上创建跟踪[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `Trace` `Replay` 可以在您自己的应用程序中使用这些对象为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 手动创建跟踪。 此外，可以使用 SMO `Trace` 对象读取 SQL 跟踪文件和表，这些文件和表是通过监视 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 或 DTS 日志记录而创建的。  
+  和  对象提供一组对象，可用于针对  的实例创建跟踪。 可以在您自己的应用程序中使用这些对象为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 手动创建跟踪。 此外，可以使用 SMO `Trace` 对象读取 SQL 跟踪文件和表，这些文件和表是通过监视 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 或 DTS 日志记录而创建的。  
   
  SMO `Trace` 对象支持您执行以下功能：  
   
@@ -55,9 +55,7 @@ ms.locfileid: "62724786"
   
  SMO 跟踪对象驻留在 <xref:Microsoft.SqlServer.Management.Trace> 命名空间中，该命名空间要求引用 Microsoft.SQLServer.ConnectionInfo.dll 文件。  
   
- 
-  `Trace` 和 `Replay` 对象需要通过 <xref:Microsoft.SqlServer.Management.Common.ServerConnection><xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。 
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象驻留在 <xref:Microsoft.SqlServer.Management.Common> 命名空间中，该命名空间要求引用 Microsoft.SQLServer.ConnectionInfo.dll 文件。  
+ `Trace` 和 `Replay` 对象需要通过 <xref:Microsoft.SqlServer.Management.Common.ServerConnection><xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象驻留在 <xref:Microsoft.SqlServer.Management.Common> 命名空间中，该命名空间要求引用 Microsoft.SQLServer.ConnectionInfo.dll 文件。  
   
 > [!NOTE]  
 >  64 位平台不支持 `Trace` 和 `Replay` 对象。  

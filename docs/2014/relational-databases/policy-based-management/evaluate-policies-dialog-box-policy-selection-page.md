@@ -13,35 +13,35 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705126"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>“评估策略”对话框，“策略选择”页
   此对话框用于评估基于策略的管理策略。 选择 **“评估结果”** 页后，可以将策略应用于目标集中不符合这些策略的项。  
   
 ## <a name="options"></a>选项  
- **数据源**  
+ **源**  
  指定策略的来源。 若要更改来源，请单击“浏览”按钮 (**...**) 以打开“选择源”**** 对话框。  
   
  **文件**  
  键入包含基于策略的管理策略的文件的路径，或者使用“浏览”按钮 (**...**) 选择文件。  
   
- **Server**  
+ **服务器**  
  选择此选项可连接到包含所需策略的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。  
   
- **策略：策略**  
+ **策略: 策略**  
  单击可打开指定策略的“策略”对话框。  
   
- **策略：类别**  
+ **策略: 类别**  
  策略的类别。 此框是只读的。  
   
- **策略：方面**  
+ **策略: 方面**  
  策略所实现的方面。 此框是只读的。  
   
- **诂**  
+ **评估**  
  在评估模式下运行策略。 这会为目标集生成符合报告，但不会重新配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或强制要求以后符合策略。  
   
 ## <a name="possible-errors"></a>可能出现的错误  
@@ -50,8 +50,7 @@ ms.locfileid: "62705126"
   
      由于任何以下原因，目标集可能为空：  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上没有策略所指定类型的目标。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上没有策略所指定类型的目标。  
   
     -   服务器限制可能排除包含目标的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   

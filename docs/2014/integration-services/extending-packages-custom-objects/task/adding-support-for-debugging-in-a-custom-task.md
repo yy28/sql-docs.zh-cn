@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768533"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>在自定义任务中添加对调试的支持
@@ -87,8 +87,7 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend 接口  
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口定义了运行时引擎在暂停或继续执行任务时调用的方法。 
-  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口是由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口实现的，其 `Suspend` 和 `ResumeExecution` 方法通常由自定义任务重写。 当运行时引擎收到任务的 `OnBreakpointHit` 事件时，它会调用每个正在运行的任务的 `Suspend` 方法，通知任务暂停执行。 当客户端继续执行时，运行时引擎会调用挂起的任务的 `ResumeExecution` 方法。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口定义了运行时引擎在暂停或继续执行任务时调用的方法。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口是由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口实现的，其 `Suspend` 和 `ResumeExecution` 方法通常由自定义任务重写。 当运行时引擎收到任务的 `OnBreakpointHit` 事件时，它会调用每个正在运行的任务的 `Suspend` 方法，通知任务暂停执行。 当客户端继续执行时，运行时引擎会调用挂起的任务的 `ResumeExecution` 方法。  
   
  挂起和继续执行任务涉及暂停和继续任务的执行线程。 在托管代码中，您可以使用 .NET Framework 的 `ManualResetEvent` 命名空间中的 `System.Threading` 类来实现。  
   

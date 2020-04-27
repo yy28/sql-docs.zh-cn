@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688794"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -52,10 +52,10 @@ cbRow
  *hdbc*  
  支持大容量复制的 ODBC 连接句柄。  
   
- *知识产权*  
+ *property*  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
- *pField*  
+ pField**  
  指向字段终止符值的指针。  
   
  *cbField*  
@@ -77,7 +77,7 @@ cbRow
   
  下表列出了 property 参数的常量**。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE，并将`BCP_FMT_TYPE`属性设置为`SQLCHARACTER`bcp_setcolfmt。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 bcp_setcolfmt `BCP_FMT_TYPE`属性设置为`SQLNCHAR`的。|  

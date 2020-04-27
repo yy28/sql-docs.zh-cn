@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62726113"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 个性化设置扩展
@@ -30,21 +30,18 @@ ms.locfileid: "62726113"
   
 -   **快速分发**与[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]其他软件开发人员共享个性化设置扩展，无需深入了解如何查找此扩展功能的详细规范。  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展具有多种用途。 例如，您的公司的销售涉及到多种货币。 您可创建一个计算成员，以本地货币返回访问此多维数据集的人员的总销售额。 首先要此成员创建为个性化设置扩展。 然后，将此计算成员与一组用户共享。 共享后，这些用户一连接到服务器就可以立即访问该计算成员。 即使用户使用的接口不是用于创建该计算成员的接口，也可以访问该计算成员。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展具有多种用途。 例如，您的公司的销售涉及到多种货币。 您可创建一个计算成员，以本地货币返回访问此多维数据集的人员的总销售额。 首先要此成员创建为个性化设置扩展。 然后，将此计算成员与一组用户共享。 共享后，这些用户一连接到服务器就可以立即访问该计算成员。 即使用户使用的接口不是用于创建该计算成员的接口，也可以访问该计算成员。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展是对现有托管程序集体系结构的简单、精致的修改，在[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer>整个对象模型、多维表达式（MDX）语法和架构行集中公开。  
   
 ## <a name="logical-architecture"></a>逻辑体系结构  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展的体系结构以托管程序集体系结构以及以下四个基本元素为基础：  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展的体系结构以托管程序集体系结构以及以下四个基本元素为基础：  
   
  [PlugInAttribute] 自定义属性  
  启动服务时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]将加载所需的程序集，并确定哪些<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>类具有自定义属性。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将定义自定义属性作为描述代码及影响运行时行为的方式。 有关详细信息，请参阅 MSDN 上的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]开发人员指南中的 "[属性概述](https://go.microsoft.com/fwlink/?LinkId=82929)" 主题。  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将定义自定义属性作为描述代码及影响运行时行为的方式。 有关详细信息，请参阅 MSDN 上的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]开发人员指南中的 "[属性概述](https://go.microsoft.com/fwlink/?LinkId=82929)" 主题。  
   
  对于具有<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自定义属性的所有类[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，将调用其默认构造函数。 在启动时调用所有构造函数会提供一个共用位置，从该位置可不受任何用户活动干扰地生成新对象。  
   
@@ -68,30 +65,24 @@ ms.locfileid: "62726113"
  所有对象的创作和管理都是独立于此体系结构，是对象的开发人员的唯一责任。  
   
 ## <a name="infrastructure-foundations"></a>基础结构基础  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展基于现有组件。 下面简要列出了提供个性化设置扩展功能的增强功能和改进功能。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展基于现有组件。 下面简要列出了提供个性化设置扩展功能的增强功能和改进功能。  
   
 ### <a name="assemblies"></a>程序集  
  可以将自定义属性 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 添加到自定义程序集，用以标识 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展类。  
   
 ### <a name="changes-to-the-adomdserver-object-model"></a>对 AdomdServer 对象模型的更改  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer> 对象模型中的下列对象已得到增强或已添加到模型。  
+ <xref:Microsoft.AnalysisServices.AdomdServer> 对象模型中的下列对象已得到增强或已添加到模型。  
   
 #### <a name="new-adomdconnection-class"></a>新增 AdomdConnection 类  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 类是新增的，并通过属性和事件公开多个性化设置扩展。  
+ <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 类是新增的，并通过属性和事件公开多个性化设置扩展。  
   
  **属性**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>，只读字符串值，表示当前连接的会话 ID。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>，只读字符串值，表示当前连接的会话 ID。  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>，对与当前会话关联的客户端区域性的只读引用。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>，对与当前会话关联的客户端区域性的只读引用。  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>，对表示当前用户的标识接口的只读引用。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>，对表示当前用户的标识接口的只读引用。  
   
  **事件**  
   
@@ -100,26 +91,20 @@ ms.locfileid: "62726113"
 -   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing>  
   
 #### <a name="new-properties-in-the-context-class"></a>上下文类中的新增属性  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context> 类具有两个新增属性：  
+ <xref:Microsoft.AnalysisServices.AdomdServer.Context> 类具有两个新增属性：  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>，对新增服务器对象的只读引用。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>，对新增服务器对象的只读引用。  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>，对新增 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 对象的只读引用。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>，对新增 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 对象的只读引用。  
   
 #### <a name="new-server-class"></a>新增服务器类  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server> 类是新增的，并通过类属性和事件公开多个性化设置扩展。  
+ <xref:Microsoft.AnalysisServices.AdomdServer.Server> 类是新增的，并通过类属性和事件公开多个性化设置扩展。  
   
  **属性**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>，表示服务器名称的只读字符串值。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>，表示服务器名称的只读字符串值。  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>，对与服务器关联的全局区域性的只读引用。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>，对与服务器关联的全局区域性的只读引用。  
   
  **事件**  
   
@@ -128,16 +113,15 @@ ms.locfileid: "62726113"
 -   <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>  
   
 #### <a name="adomdcommand-class"></a>AdomdCommand 类  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 类现在支持以下 MDX 命令：  
+ <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 类现在支持以下 MDX 命令：  
   
--   [CREATE MEMBER 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [&#40;MDX&#41;更新成员语句](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [DROP MEMBER 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [CREATE SET 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET 语句 (MDX)](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [DROP SET 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   

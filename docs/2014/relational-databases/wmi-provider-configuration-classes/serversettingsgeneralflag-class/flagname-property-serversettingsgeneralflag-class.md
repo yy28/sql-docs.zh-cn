@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4f56e11e7c6e60a1a0144de7d42cc726323e80e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735717"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName 属性（ServerSettingsGeneralFlag 类）
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务器设置的常规标志的 [ServerSettingsGeneralFlag 类](serversettingsgeneralflag-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

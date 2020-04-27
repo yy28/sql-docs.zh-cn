@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0da9467d293c0081309accd99fb46d7589fb4b8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736571"
 ---
 # <a name="xmla-concepts"></a>XMLA 概念
@@ -24,18 +24,14 @@ ms.locfileid: "62736571"
   
  XML for Analysis (XMLA) 是一种基于简单对象访问协议 (SOAP) 的 XML 协议，它是专为对驻留在 Web 上的任何标准多维数据源的通用数据访问而设计的。 XMLA 还无需部署向组件对象模型（COM）或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 接口公开的客户端组件。 如果与服务器之间的往返通信要占用大量时间和资源，并且对数据源的有状态连接会限制服务器上的用户连接数，则 XMLA 会针对 Internet 进行优化。  
   
- XMLA 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的本机协议，用于客户端应用程序和实例之间的所有交互[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 完全支持 XML for Analysis 1.1，并且还提供了支持元数据管理、会话管理和锁定功能的扩展。 与 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例进行通信时，分析管理对象 (AMO) 和 ADOMD.NET 都使用 XMLA 协议。  
+ XMLA 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的本机协议，用于客户端应用程序和实例之间的所有交互[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 完全支持 XML for Analysis 1.1，并且还提供了支持元数据管理、会话管理和锁定功能的扩展。 与 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例进行通信时，分析管理对象 (AMO) 和 ADOMD.NET 都使用 XMLA 协议。  
   
 ## <a name="handling-xmla-communications"></a>处理 XMLA 通信  
  XMLA 开放标准介绍了以下两种常规访问方法：`Discover` 和 `Execute`。 这些方法使用 XML 支持的松散耦合客户端和服务器体系结构处理有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的传入和传出信息。  
   
- 
-  `Discover` 方法可从 Web 服务获取信息和元数据。 此信息可包含可用数据源的列表以及任何数据源访问接口的相关信息。 属性可定义并定形从数据源中获取的数据。 
-  `Discover` 方法是定义多种类型的信息的常用方法，客户端应用程序可能需要从 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的数据源中获取这些信息。 属性和泛型接口可提供可扩展性，而无需重写客户端应用程序中的现有函数。  
+ `Discover` 方法可从 Web 服务获取信息和元数据。 此信息可包含可用数据源的列表以及任何数据源访问接口的相关信息。 属性可定义并定形从数据源中获取的数据。 `Discover` 方法是定义多种类型的信息的常用方法，客户端应用程序可能需要从 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的数据源中获取这些信息。 属性和泛型接口可提供可扩展性，而无需重写客户端应用程序中的现有函数。  
   
- 
-  `Execute` 方法使应用程序能够对 XMLA 数据源运行特定于访问接口的命令。  
+ `Execute` 方法使应用程序能够对 XMLA 数据源运行特定于访问接口的命令。  
   
  尽管 XMLA 协议是针对 Web 应用程序进行优化的，但它还可用于面向 LAN 的应用程序。 下列应用程序可从基于此 XML 的 API 中获益：  
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: af3ecc685ab9b6bc9e608d9d9ecec4aefb5d53d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714465"
 ---
 # <a name="sha-property-securitycertificate-class"></a>SHA 属性（SecurityCertificate 类）
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  表示安全证书的 [SecurityCertificate Class] SecurityCertificate-class.md）对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

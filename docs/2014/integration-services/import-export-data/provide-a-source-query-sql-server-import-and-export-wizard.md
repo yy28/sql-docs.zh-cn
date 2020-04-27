@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a028c880d87e21e1fcc63ffc605e7d375619dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767859"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供源查询（SQL Server 导入和导出向导）
@@ -36,13 +36,13 @@ FROM Sales.SalesPerson
 WHERE CommissionPct > 0.015  
 ```  
   
- **分析**  
+ **Parse**  
  检查“SQL 语句”**** 文本框中 SQL 语句的语法。  
   
 > [!NOTE]  
 >  如果检查语句的语法所需的时间超过超时值（30 秒），则将停止分析并生成错误。 在成功完成分析之前，您将无法跳过向导的这一页。 一种解决方案是基于查询创建数据库视图，然后从向导查询该视图，而不是直接输入查询文本。  
   
- **“浏览”**  
+ **浏览**  
  使用 "**打开**" 对话框选择包含 SQL 语句的文件。 选择一个文件可以将该文件中的文本复制到 **“查询语句”** 文本框中。  
   
   

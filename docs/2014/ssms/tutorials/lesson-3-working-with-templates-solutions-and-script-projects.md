@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753014"
 ---
 # <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>第 3 课：使用模板、解决方案和脚本项目
@@ -28,7 +28,7 @@ ms.locfileid: "62753014"
   
 -   将脚本另存为项目和解决方案  
   
--   总结  
+-   摘要  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [使用模板创建脚本](lesson-3-1-create-scripts-using-templates.md)  

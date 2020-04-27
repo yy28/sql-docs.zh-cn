@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691597"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>创建事务发布的可更新订阅 (Management Studio)
@@ -35,22 +35,22 @@ ms.locfileid: "62691597"
 2. 展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。
 3. 右键单击为更新订阅启用的事务发布，然后单击“新建订阅”。****
 4. 按照向导中的页，为订阅指定选项，如分发代理应在何处运行。
-5. 在**新建订阅向导**的 "**可更新订阅**" 页上，确保选择 "**复制**"。
+5. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。************
 6. 从“在发布服务器提交”下拉列表中选择一个选项：****
 
     *  若要使用立即更新订阅，请选择“同时提交更改”。**** 如果选择此选项，并且发布允许排队更新订阅（使用新建发布向导所创建发布的默认设置），则订阅属性 **update_mode** 将设置为“故障转移”。**** 此模式使您以后在必要时能够切换到排队更新。
-    *  若要使用排队更新订阅，请选择“对更改进行排队并在可能时提交”。**** 如果选择此选项，并且发布允许立即更新订阅（使用新建发布向导创建的发布的默认设置），并且订阅服务器运行 SQL Server 2005 或更高版本，则订阅属性**update_mode**设置为排队故障转移。 此模式使您以后在必要时能够切换到立即更新。
+    *  若要使用排队更新订阅，请选择“对更改进行排队并在可能时提交”。**** 如果选择此选项且发布允许立即更新订阅（使用新建发布向导所创建发布的默认设置），而且订阅服务器运行的是 SQL Server 2005 或更高版本，则订阅属性 **update_mode** 将设置为排队故障转移。 此模式使您以后在必要时能够切换到立即更新。
 
     有关切换更新模式的详细信息，请参阅[切换可更新事务性订阅的更新模式](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。
 
-7. 对于使用立即更新或将**update_mode**设置为**排队故障转移**的订阅，将显示 "**用于可更新订阅的登录名**" 页。 在“用于可更新订阅的登录名”页上，指定链接服务器，通过此服务器可与发布服务器建立连接，以便立即更新订阅。**** 连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 选择以下选项之一：
+7. 对于使用立即更新或将 **update_mode** 设置为**排队故障转移**的订阅，显示“用于可更新订阅的登录名”页。**** 在“用于可更新订阅的登录名”页上，指定链接服务器，通过此服务器可与发布服务器建立连接，以便立即更新订阅。**** 连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 选择下列选项之一：
 
     * **创建使用 SQL Server 身份验证进行连接的链接服务器。** 如果尚未在订阅服务器和发布服务器之间定义远程服务器或链接服务器，则选择此选项。 复制会为您创建链接服务器。 所指定的帐户在发布服务器上必须已经存在。
-    * **使用已定义的链接服务器或远程服务器。** 如果已使用 [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)、[sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)、SQL Server Management Studio 或其他方法在订阅服务器和发布服务器之间定义了远程服务器或链接服务器，请选择此选项。
+    * **使用您指定的链接服务器或远程服务器。** 如果已使用 [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)、[sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)、SQL Server Management Studio 或其他方法在订阅服务器和发布服务器之间定义了远程服务器或链接服务器，请选择此选项。
 
-    有关链接服务器帐户所需权限的信息，请参阅**在此处输入链接说明**的[排队更新订阅](../security/secure-the-subscriber.md)部分。
+    有关链接服务器帐户所需权限的信息，请参阅[在此处输入链接说明](../security/secure-the-subscriber.md)的**排队更新订阅**部分。
 
-8. 完成该向导。
+8. 完成向导。
 
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>从订阅服务器配置可更新订阅
 
@@ -62,22 +62,22 @@ ms.locfileid: "62691597"
 5. 在 **“连接到服务器”** 对话框中连接到发布服务器。
 6. 在“发布”页上，选择为更新订阅启用的事务发布。****
 7. 按照向导中的页，为订阅指定选项，如分发代理应在何处运行。
-8. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。********
+8. 在新建订阅向导的 "**可更新订阅**" 页上，确保选择 "**复制**"。
 9. 从“在发布服务器提交”下拉列表中选择一个选项：****
 
     * 若要使用立即更新订阅，请选择“同时提交更改”。**** 如果选择此选项，并且发布允许排队更新订阅（使用新建发布向导所创建发布的默认设置），则订阅属性 **update_mode** 将设置为“故障转移”。**** 此模式使您以后在必要时能够切换到排队更新。
-    * 若要使用排队更新订阅，请选择“对更改进行排队并在可能时提交”。**** 如果选择此选项且发布允许立即更新订阅（使用新建发布向导所创建发布的默认设置），而且订阅服务器运行的是 SQL Server 2005 或更高版本，则订阅属性 **update_mode** 将设置为排队**故障转移**。 此模式使您以后在必要时能够切换到立即更新。
+    * 若要使用排队更新订阅，请选择“对更改进行排队并在可能时提交”。**** 如果选择此选项，并且发布允许立即更新订阅（使用新建发布向导创建的发布的默认设置），并且订阅服务器运行 SQL Server 2005 或更高版本，则订阅属性**update_mode**设置为排队**故障转移**。 此模式使您以后在必要时能够切换到立即更新。
 
     有关切换更新模式的详细信息，请参阅[切换可更新事务性订阅的更新模式](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。
 
-10. 对于使用立即更新或将 **update_mode** 设置为排队**故障转移**的订阅，显示“用于可更新订阅的登录名”页。**** 在“用于可更新订阅的登录名”页上，指定链接服务器，通过此服务器可与发布服务器建立连接，以便立即更新订阅。**** 连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 选择以下选项之一：
+10. 对于使用立即更新或将**update_mode**设置为排队**故障转移**的订阅，将显示 "**用于可更新订阅的登录名**" 页。 在“用于可更新订阅的登录名”页上，指定链接服务器，通过此服务器可与发布服务器建立连接，以便立即更新订阅。**** 连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 选择下列选项之一：
 
     * **创建使用 SQL Server 身份验证进行连接的链接服务器。** 如果尚未在订阅服务器和发布服务器之间定义远程服务器或链接服务器，则选择此选项。 复制会为您创建链接服务器。 所指定的帐户在发布服务器上必须已经存在。
-    * **使用已定义的链接服务器或远程服务器。** 如果已使用 [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)、[sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)、SQL Server Management Studio 或其他方法在订阅服务器和发布服务器之间定义了远程服务器或链接服务器，请选择此选项。
+    * **使用您指定的链接服务器或远程服务器。** 如果已使用 [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)、[sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)、SQL Server Management Studio 或其他方法在订阅服务器和发布服务器之间定义了远程服务器或链接服务器，请选择此选项。
 
-    有关链接服务器帐户所需权限的信息，请参阅**在此处输入链接说明**的[排队更新订阅](../security/secure-the-subscriber.md)部分。
+    有关链接服务器帐户所需权限的信息，请参阅[在此处输入链接说明](../security/secure-the-subscriber.md)的**排队更新订阅**部分。
 
-11. 完成该向导。
+11. 完成向导。
 
 ## <a name="create-an-immediate-updating-pull-subscription"></a>创建立即更新请求订阅
 
@@ -93,19 +93,15 @@ ms.locfileid: "62691597"
 
 3. 在订阅服务器上，执行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)。 指定 `@publisher` 和 `@publication`，并为 `@update_mode`指定以下值之一：
 
-    * 
-  `sync tran` - 使订阅支持立即更新。
-    * 
-  `failover` - 支持对订阅进行立即更新，并将排队更新作为故障转移选项。
+    * `sync tran` - 使订阅支持立即更新。
+    * `failover` - 支持对订阅进行立即更新，并将排队更新作为故障转移选项。
 
     > [!NOTE]  
->  
-  `failover` 要求发布也支持排队更新订阅。 
+>  `failover` 要求发布也支持排队更新订阅。 
  
-4. 在订阅服务器上，执行 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定以下项：
+4. 在订阅服务器上，执行 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定下列各项：
 
-    * 
-  `@publisher`、 `@publisher_db`和 `@publication` 参数。 
+    * `@publisher`、 `@publisher_db`和 `@publication` 参数。 
     * 订阅服务器中的分发代理运行时所使用的 Microsoft Windows 凭据： `@job_login` 和 `@job_password`。 
 
     > [!NOTE]  
@@ -116,13 +112,11 @@ ms.locfileid: "62691597"
 
 5. 在订阅服务器上的订阅数据库中，执行 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)。 指定 `@publisher`、 `@publication`、发布数据库的名称 `@publisher_db`，以及为 `@security_mode`指定以下值之一： 
 
-    * 
-  `0` - 表示在发布服务器上执行更新时使用 SQL Server 身份验证。 此选项需要为 `@login` 和 `@password`指定发布服务器上的一个有效登录名。
-    * 
-  `1` - 在连接到发布服务器时，使用在订阅服务器上执行更改的用户的安全上下文。 请参阅 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) ，了解与此安全模式相关的限制。
+    * `0` - 表示在发布服务器上执行更新时使用 SQL Server 身份验证。 此选项需要为 `@login` 和 `@password`指定发布服务器上的一个有效登录名。
+    * `1` - 在连接到发布服务器时，使用在订阅服务器上执行更改的用户的安全上下文。 请参阅 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) ，了解与此安全模式相关的限制。
     * `2`-使用通过[sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)创建的、用户定义的现有链接服务器登录名。
 
-6. 在发布服务器上， [](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)执行 sp_addsubscription `@publication`将`@subscriber`、 `@destination_db`、、的值指定为`@subscription_type`，并为在步骤3中指定相同的`@update_mode`值。
+6. 在发布服务器上， [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)执行 sp_addsubscription `@publication`将`@subscriber`、 `@destination_db`、、的值指定为`@subscription_type`，并为在步骤3中指定相同的`@update_mode`值。
 
 这会在发布服务器上注册请求订阅。 
 
@@ -141,18 +135,15 @@ ms.locfileid: "62691597"
 
 3. 在发布服务器上，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 `@publication`、 `@subscriber`和 `@destination_db`，并为 `@update_mode`指定以下值之一：
 
-    * 
-  `sync tran` - 支持立即更新。
-    * 
-  `failover` - 支持立即更新，并且将排队更新作为故障转移选项。
+    * `sync tran` - 支持立即更新。
+    * `failover` - 支持立即更新，并且将排队更新作为故障转移选项。
 
     > [!NOTE]  
->  
-  `failover` 要求发布也支持排队更新订阅。 
+>  `failover` 要求发布也支持排队更新订阅。 
  
 4. 在发布服务器上，执行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列参数：
 
-    * `@subscriber`、 `@subscriber_db`和`@publication`。 
+    * `@subscriber`、 `@subscriber_db`和 `@publication`。 
     * 分发服务器中的分发代理运行时所使用的 Windows 凭据： `@job_login` 和 `@job_password`。 
 
     > [!NOTE]  
@@ -163,10 +154,8 @@ ms.locfileid: "62691597"
 
 5. 在订阅服务器上的订阅数据库中，执行 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)。 指定 `@publisher`、 `@publication`、发布数据库的名称 `@publisher_db`，以及为 `@security_mode`指定以下值之一： 
 
-     * 
-  `0` - 表示在发布服务器上执行更新时使用 SQL Server 身份验证。 此选项需要为 `@login` 和 `@password`指定发布服务器上的一个有效登录名。
-     * 
-  `1` - 在连接到发布服务器时，使用在订阅服务器上执行更改的用户的安全上下文。 请参阅 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) ，了解与此安全模式相关的限制。
+     * `0` - 表示在发布服务器上执行更新时使用 SQL Server 身份验证。 此选项需要为 `@login` 和 `@password`指定发布服务器上的一个有效登录名。
+     * `1` - 在连接到发布服务器时，使用在订阅服务器上执行更改的用户的安全上下文。 请参阅 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) ，了解与此安全模式相关的限制。
      * `2`-使用通过[sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)创建的、用户定义的现有链接服务器登录名。
 
 
@@ -184,18 +173,15 @@ ms.locfileid: "62691597"
 
 3. 在订阅服务器上，执行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)。 指定 `@publisher` 和 `@publication`，并为 `@update_mode`指定以下值之一：
 
-    * 
-  `queued tran` - 支持订阅进行排队更新。
-    * 
-  `queued failover` - 支持排队更新，并将立即更新作为故障转移选项。
+    * `queued tran` - 支持订阅进行排队更新。
+    * `queued failover` - 支持排队更新，并将立即更新作为故障转移选项。
 
     > [!NOTE]  
->  
-  `queued failover` 要求发布也支持立即更新订阅。 若要故障转移到立即更新，必须使用 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) 定义将订阅服务器上的更改复制到发布服务器所用的凭据。
+>  `queued failover` 要求发布也支持立即更新订阅。 若要故障转移到立即更新，必须使用 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) 定义将订阅服务器上的更改复制到发布服务器所用的凭据。
  
 4. 在订阅服务器上，执行 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定下列参数：
 
-    * @publisher、 `@publisher_db`和`@publication`。 
+    * @publisher、 `@publisher_db`和 `@publication`。 
     * 订阅服务器中的分发代理运行时所使用的 Windows 凭据： `@job_login` 和 `@job_password`。 
 
     > [!NOTE]  
@@ -223,17 +209,15 @@ ms.locfileid: "62691597"
 
 3. 在发布服务器上，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 `@publication`、 `@subscriber`和 `@destination_db`，并为 `@update_mode`指定以下值之一：
 
-    * 
-  `queued tran` - 支持订阅进行排队更新。
-    * 
-  `queued failover` - 支持排队更新，并将立即更新作为故障转移选项。
+    * `queued tran` - 支持订阅进行排队更新。
+    * `queued failover` - 支持排队更新，并将立即更新作为故障转移选项。
 
     > [!NOTE]  
 >  queued failover 选项要求发布也支持立即更新订阅。 若要故障转移到立即更新，必须使用 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) 定义将订阅服务器上的更改复制到发布服务器所用的凭据。
 
 4. 在发布服务器上，执行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列参数：
 
-    * `@subscriber`、 `@subscriber_db`和`@publication`。 
+    * `@subscriber`、 `@subscriber_db`和 `@publication`。 
     * 分发服务器中的分发代理运行时所使用的 Windows 凭据： `@job_login` 和 `@job_password`。 
 
     > [!NOTE]  
@@ -315,11 +299,11 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>设置排队更新冲突解决选项 (SQL Server Management Studio)
-  在 "**发布属性- \<发布>** " 对话框的 "**订阅选项**" 页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。  
+  在“发布属性 - \<发布>”**** 对话框的“订阅选项”**** 页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>设置排队更新冲突解决选项  
   
-1.  在“发布属性 - **发布>”****对话框的“订阅选项”\<** 页上，为“冲突解决策略”**** 选项选择以下值之一：    
+1.  在“发布属性 - \<发布>”**** 对话框的“订阅选项”**** 页上，为“冲突解决策略”**** 选项选择以下值之一：    
     -   **保留发布服务器更改**    
     -   **保留订阅服务器更改**    
     -   **重新初始化订阅**    

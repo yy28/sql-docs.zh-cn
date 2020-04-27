@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721045"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新编译存储过程
@@ -37,9 +37,9 @@ ms.locfileid: "62721045"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   在首次编译或重新编译过程时，该过程的查询计划针对该数据库及其对象的当前状态进行优化。 如果数据库对其数据或结构进行了重要更改，则重新编译过程会进行更新并针对这些更改优化过程的查询计划。 这样可以提高过程的处理性能。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62721045"
   
 -   如果过程的中某些查询定期使用非典型值或临时值，则可通过使用这些查询中的 RECOMPILE 查询提示来改善过程性能。 由于仅使用此查询提示的查询将进行重新编译，而不是整个过程进行重新编译，因此将模仿 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句级重新编译行为。 但除了使用过程的当前参数值外，RECOMPILE 查询提示还在编译该语句时使用存储过程中本地变量的值。 有关详细信息，请参阅 [查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  `WITH RECOMPILE`选  
  如果在创建过程定义时使用此选项，则要求数据库中的 CREATE PROCEDURE 权限，还必须具有对架构（在其下创建过程）的 ALTER 权限。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62721045"
  `sp_recompile`系统存储过程  
  需要具有对指定过程的 ALTER 权限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程  
   

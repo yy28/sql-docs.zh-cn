@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a74adba783f1a52bdd404e11f0f747234c47f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754381"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>设置加密的镜像数据库
@@ -35,11 +35,11 @@ ms.locfileid: "62754381"
 
 ## <a name="see-also"></a>另请参阅
 
-[sp_control_dbmasterkey_password &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
+[sp_control_dbmasterkey_password (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
 
 [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql)
 
-[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)
+[ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql)
 
 [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)
 

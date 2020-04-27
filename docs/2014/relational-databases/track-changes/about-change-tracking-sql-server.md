@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670913"
 ---
 # <a name="about-change-tracking-sql-server"></a>关于更改跟踪 (SQL Server)
@@ -68,9 +68,9 @@ ms.locfileid: "62670913"
  使用更改跟踪也可以获取与每个行所做更改相关的信息。 例如，导致更改（插入、更新或删除）的 DML 操作的类型或作为更新操作的一部分而更改的列。  
   
 ## <a name="see-also"></a>另请参阅  
- [启用和禁用更改跟踪 (SQL Server)](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [处理更改跟踪 (SQL Server)](../track-changes/work-with-change-tracking-sql-server.md)   
- [管理更改跟踪 (SQL Server)](../track-changes/manage-change-tracking-sql-server.md)   
+ [启用和禁用更改跟踪 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [使用更改跟踪 &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
+ [管理更改跟踪 &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [跟踪数据更改 (SQL Server)](../track-changes/track-data-changes-sql-server.md)  
   
   

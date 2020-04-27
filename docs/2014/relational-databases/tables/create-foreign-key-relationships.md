@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761617"
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
@@ -36,9 +36,9 @@ ms.locfileid: "62761617"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   外键约束并不仅仅可以与另一表的主键约束相链接，它还可以定义为引用另一个表中 UNIQUE 约束的列。  
   
@@ -60,14 +60,14 @@ ms.locfileid: "62761617"
   
 -   仅当 FOREIGN KEY 约束引用的主键也定义为类型 `varchar(max)` 时，才能在此约束中使用类型为 `varchar(max)` 的列。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  使用外键创建新表需要在数据库中具有 CREATE TABLE 权限，并对在其中创建表的架构具有 ALTER 权限。  
   
  在某一现有表中创建外键需要对该表具有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>在表设计器中创建外键关系  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62761617"
   
 3.  在“外键关系”**** 对话框中，单击“添加”****。  
   
-     关系显示在**所选关系**列表中，其格式为系统提供的名称，格式\<为 FK_*tablename*>_\<*tablename*>，其中*tablename*是外键表的名称。  
+     “选定的关系”**** 列表中将以系统提供的名称显示关系，格式为 FK_\<*tablename*>_\<*tablename*>，其中 *tablename* 是外键表的名称。  
   
 4.  在 **“选定的关系”** 列表中单击该关系。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62761617"
   
 7.  在下方的网格中，选择要分配给表的主键的列。 在每列左侧的相临网格单元格中，选择外键表的相应外键列。  
   
-     **表设计器**建议关系的名称。 若要更改此名称，请编辑 **“关系名”** 文本框的内容。  
+     **表设计器** 将为此关系提供一个建议名称。 若要更改此名称，请编辑 **“关系名”** 文本框的内容。  
   
 8.  选择 **“确定”** 以创建该关系。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>在新表中创建外键  
   

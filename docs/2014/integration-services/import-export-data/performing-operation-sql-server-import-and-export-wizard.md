@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767899"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在执行操作（SQL Server 导入和导出向导）
@@ -27,10 +27,10 @@ ms.locfileid: "62767899"
  SQL Server 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="options"></a>选项  
- **Action**  
+ **操作**  
  显示整个操作过程中的每一步操作。  
   
- **Status**  
+ **状态**  
  显示操作是成功还是失败。  
   
  **消息**  
@@ -39,7 +39,7 @@ ms.locfileid: "62767899"
  **筛选器**  
  选择是否只希望显示错误、警告或成功的操作。 可以通过选择 "**显示所有操作**" 来恢复为默认显示。  
   
- **Stop**  
+ **停止**  
  如果需要，使用 "**停止**" 按钮中断操作。  
   
  **报告**  

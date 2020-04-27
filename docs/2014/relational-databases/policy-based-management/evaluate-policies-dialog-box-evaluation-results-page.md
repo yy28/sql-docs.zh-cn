@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705134"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>“评估策略”对话框，“评估结果”页
@@ -36,14 +36,14 @@ ms.locfileid: "62705134"
  针对此目标进行策略评估。  
   
  **目标详细信息: 详细信息**  
- 链接到显示策略评估详细信息的  “结果详细视图”对话框。  
+ 链接到显示策略评估详细信息的****“结果详细视图”对话框。  
   
  **目标详细信息: 消息**  
  出现错误时可以链接到有关信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)   
- [“评估策略”对话框，“策略选择”页](evaluate-policies-dialog-box-policy-selection-page.md)   
+ ["评估策略" 对话框，"策略选择" 页](evaluate-policies-dialog-box-policy-selection-page.md)   
  [“结果详细视图”对话框](results-detailed-view-dialog-box.md)  
   
   

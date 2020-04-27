@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736611"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 对象和对象特征
@@ -45,7 +45,7 @@ ms.locfileid: "62736611"
   
 -   度量值组  
   
--   “度量值组”  
+-   分区  
   
 -   透视  
   
@@ -63,8 +63,7 @@ ms.locfileid: "62736611"
   
 -   `LastSchemaUpdate`  
   
--   
-  `LastProcessed`（视具体情况而定）  
+-   `LastProcessed`（视具体情况而定）  
   
 > [!NOTE]  
 >  作为主要对象的对象分类将影响 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例处理该对象的方式和以对象定义语言处理该对象的方式。 但是，此分类不保证 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 管理和开发工具允许这些对象的独立创建、修改或删除。  
@@ -74,7 +73,7 @@ ms.locfileid: "62736611"
   
 -   层次结构和级别  
   
--   属性  
+-   特性  
   
 -   度量值组  
   
@@ -85,8 +84,7 @@ ms.locfileid: "62736611"
 -   Aggregations  
   
 ## <a name="object-expansion"></a>对象扩展  
- 
-  `ObjectExpansion` 限制可用于控制服务器返回的 ASSL XML 扩展的程度。 此限制具有下表所列的选项。  
+ `ObjectExpansion` 限制可用于控制服务器返回的 ASSL XML 扩展的程度。 此限制具有下表所列的选项。  
   
 |枚举值|允许\<Alter>|说明|  
 |-----------------------|---------------------------|-----------------|  
@@ -98,11 +96,8 @@ ms.locfileid: "62736611"
  此 ASSL 参考部分介绍了*updateoptions.expandfull*的表示形式。 所有其他 `ObjectExpansion` 级别都派生自此级别。  
   
 ## <a name="object-processing"></a>对象处理  
- ASSL 包含只读元素或属性（例如 `LastProcessed`），这些元素或属性可从 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例读取，但在向该实例提交命令脚本时将被忽略。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 忽略只读元素的已修改值，并且不发出警告或错误。  
+ ASSL 包含只读元素或属性（例如 `LastProcessed`），这些元素或属性可从 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例读取，但在向该实例提交命令脚本时将被忽略。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 忽略只读元素的已修改值，并且不发出警告或错误。  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 还会忽略不适当或不相关的属性，并且不会引发验证错误。 例如，X 元素只应在 Y 元素有特定值时才存在。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例忽略 X 元素，而不会根据 Y 元素的值验证该元素。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 还会忽略不适当或不相关的属性，并且不会引发验证错误。 例如，X 元素只应在 Y 元素有特定值时才存在。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例忽略 X 元素，而不会根据 Y 元素的值验证该元素。  
   
   

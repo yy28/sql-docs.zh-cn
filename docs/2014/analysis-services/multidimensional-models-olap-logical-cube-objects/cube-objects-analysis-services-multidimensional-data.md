@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702635"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>多维数据集对象（Analysis Services - 多维数据）
@@ -33,7 +33,7 @@ ms.locfileid: "62702635"
 |||  
 |-|-|  
 |主题||  
-|[Analysis Services 多维数据 &#40;操作&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[操作（Analysis Services - 多维数据）](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[聚合和聚合设计](aggregations-and-aggregation-designs.md)||  
 |[“新建命名集”](calculations.md)||  
 |[多维数据集单元 &#40;Analysis Services 多维数据&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
@@ -41,9 +41,9 @@ ms.locfileid: "62702635"
 |[多维数据集存储 &#40;Analysis Services 多维数据&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[多维数据集翻译](cube-translations.md)||  
 |[维度关系](dimension-relationships.md)||  
-|[多维模型中的关键绩效指标 &#40;Kpi&#41;](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[多维模型中的关键绩效指标 (KPI)](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[度量值和度量值组](../multidimensional-models/measures-and-measure-groups.md)||  
-|[Analysis Services 多维数据 &#40;分区&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[分区（Analysis Services - 多维数据）](partitions-analysis-services-multidimensional-data.md)||  
 |[透视](perspectives.md)||  
   
   

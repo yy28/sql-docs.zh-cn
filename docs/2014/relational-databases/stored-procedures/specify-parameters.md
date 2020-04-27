@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736360"
 ---
 # <a name="specify-parameters"></a>指定参数
@@ -60,13 +60,13 @@ GO
 ## <a name="specifying-parameter-names"></a>指定参数名称  
  创建过程并声明参数名时，参数名必须以一个 \@ 字符开头，并且必须在过程范围内是唯一的。  
   
- 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 my_proc**** 需要使用三个参数，分别名为 **first\@**、**second\@** 和 **third\@**，可以将传递到此过程的值赋给参数名，如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 my_proc  需要使用三个参数，分别名为 **first\@** 、**second\@** 和 **third\@** ，可以将传递到此过程的值赋给参数名，如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  如果在形式** \@参数 =**_值_中提供了一个参数值，则必须以这种方式提供所有后续参数。 如果参数值不是以 " ** \@参数 =**_值_" 形式传递的，则必须按 CREATE PROCEDURE 语句中列出的参数的顺序（从左到右）提供值。  
+>  如果以 **\@parameter =** _value_ 格式提供参数值，必须按此格式提供所有后续参数。 如果未按格式 **\@parameter =** _value_ 传递参数值，必须按 CREATE PROCEDURE 语句中所列参数顺序（从左到右）提供值。  
 > 
 > [!WARNING]
->  使用参数的形式参数** \@=**_值_格式的任何参数都将导致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成错误并阻止过程执行。  
+>  任何采用 **\@parameter =** _value_ 格式传入的参数如果拼写错误，就会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成错误，并阻止过程执行。  
   
 ## <a name="specifying-parameter-data-types"></a>指定参数数据类型  
  在 CREATE PROCEDURE 语句中声明时，必须使用数据类型定义参数。 参数的数据类型确定了在调用过程时该参数所接受值的类型和范围。 例如，如果用 `tinyint` 数据类型定义参数，则在传入该参数时只接受 0 到 255 之间的数值。 如果用与数据类型不兼容的值执行过程，将返回一个错误。  

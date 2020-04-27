@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676047"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>第 1 课：创建 Web 服务客户端项目
@@ -22,7 +22,7 @@ ms.locfileid: "62676047"
   
 ### <a name="to-create-a-console-application"></a>创建控制台应用程序  
   
-1.  在 "**文件**" 菜单上，指向 "**新建**"，然后单击 "**项目**" 以打开 "**新建项目**" 对话框。  
+1.  在“文件”**** 菜单上指向“新建”****，然后单击“项目”**** 打开“新建项目”**** 对话框。  
   
 2.  在左窗格中的 "**已安装的模板**" 下，单击 " **Visual Basic** " 或 " **Visual c #** " 节点，然后从展开的列表中选择一类项目类型。  
   

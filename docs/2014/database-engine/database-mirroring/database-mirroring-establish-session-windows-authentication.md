@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755512"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)
@@ -63,9 +63,9 @@ ms.locfileid: "62755512"
   
 4.  若要将主体服务器设置为镜像数据库中的伙伴，请连接到镜像服务器，然后执行下面的语句：  
   
-     更改数据库 *<database_name>* 设置伙伴**=** _<server_network_address_>  
+     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
   
-     其中 *<database_name>* 是要镜像的数据库的名称（此名称在两个伙伴上相同）， *<server_network_address>* 是主体服务器的服务器网络地址。  
+     其中，*<database_name>* 是要镜像的数据库的名称（此名称在两个伙伴上相同），*<server_network_address>* 是主体服务器的服务器网络地址。  
   
      服务器网络地址的语法如下：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62755512"
   
 5.  若要将镜像服务器设置为主体数据库中的伙伴，请连接到主体服务器，然后执行下面的语句：  
   
-     更改数据库 *<database_name>* 设置伙伴**=** _<server_network_address_>  
+     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
   
      有关详细信息，请参阅步骤 4。  
   
@@ -210,15 +210,15 @@ ms.locfileid: "62755512"
 >  有关显示安全设置、准备镜像数据库、设置伙伴以及添加见证服务器的完整示例的信息，请参阅[设置数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [设置数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [允许使用 Windows 身份验证 &#40;SQL Server 对数据库镜像端点进行网络访问&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [准备镜像数据库以进行镜像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [为 Windows 身份验证创建数据库镜像端点 &#40;Transact-sql&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [数据库镜像和日志传送 &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
- [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [数据库镜像和复制 (SQL Server)](database-mirroring-and-replication-sql-server.md)   
- [设置数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
+ [数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [数据库镜像和复制 &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
+ [设置数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [指定服务器网络地址 &#40;数据库镜像&#41;](specify-a-server-network-address-database-mirroring.md)   
  [数据库镜像运行模式](database-mirroring-operating-modes.md)  
   

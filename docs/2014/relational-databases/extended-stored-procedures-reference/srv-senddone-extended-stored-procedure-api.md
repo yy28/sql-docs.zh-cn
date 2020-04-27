@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745518"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone（扩展存储过程 API）
@@ -55,10 +55,10 @@ count
 ```  
   
 ## <a name="arguments"></a>参数  
- *srvproc*  
+ srvproc**  
  指向作为特定客户端连接句柄（在这里为接收语言请求的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- *状态值*  
+ *status*  
  各种 status 标志的 2 字节字段**。 通过与 status 标志值一起使用 AND 和 OR 逻辑运算符，可以设置多个标志**。 下表列出了可能的 status 标志**。  
   
 |状态标志|说明|  

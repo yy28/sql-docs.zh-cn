@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62677013"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>查看或修改基于策略的管理条件的属性
-  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看或修改基于策略的管理条件的属性。  
+  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或修改基于策略的管理条件的属性。  
   
  **本主题内容**  
   
@@ -35,14 +35,14 @@ ms.locfileid: "62677013"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-modify-a-conditions-properties"></a>查看或修改条件的属性  
   
@@ -50,15 +50,15 @@ ms.locfileid: "62677013"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”** 。  
+3.  单击加号以便展开 **“策略管理”**。  
   
 4.  单击加号以便展开 **“条件”** 文件夹。  
   
-5.  右键单击要查看或编辑的条件，然后选择“属性”****。 有关 "**打开条件-**_condition_name_ " 对话框中可用选项的详细信息，请参阅 "[创建新条件" 或 "打开条件" 对话框，"常规" 页](../../integration-services/general-page-of-integration-services-designers-options.md)、"[打开条件" 对话框、"依赖策略" 页](open-condition-dialog-box-dependent-policies-page.md)、"[创建新条件" 或 "打开条件" 对话框、"说明" 页](create-new-condition-or-open-condition-dialog-box-description-page.md)和 "[高级编辑 &#40;条件&#41;" 对话框](advanced-edit-condition-dialog-box.md)。  
+5.  右键单击要查看或编辑的条件，然后选择“属性”****。 若要深入了解“打开条件 - condition_name”对话框中的可用选项，请参阅[“创建新条件”或“打开条件”对话框，“常规”页](../../integration-services/general-page-of-integration-services-designers-options.md)、[“打开条件”对话框，“依赖策略”页](open-condition-dialog-box-dependent-policies-page.md)、[“创建新条件”或“打开条件”对话框，“说明”页](create-new-condition-or-open-condition-dialog-box-description-page.md)和[“高级编辑”（条件）对话框](advanced-edit-condition-dialog-box.md)****__。  
   
-6.  完成后，单击 **“确定”** 。  
+6.  完成后，单击“确定”****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-a-conditions-properties"></a>查看条件的属性  
   

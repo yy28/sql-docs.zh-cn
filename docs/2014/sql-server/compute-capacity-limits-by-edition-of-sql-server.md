@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714756"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   本主题讨论不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的计算能力限制，以及在具有超线程处理器的物理和虚拟化环境中计算能力限制有何不同。  
   
- ![符合计算机能力限制](../../2014/getting-started/media/compute-capacity-limits.gif "符合计算机能力限制")  
+ ![映射到计算能力限制](../../2014/getting-started/media/compute-capacity-limits.gif "映射到计算能力限制")  
   
  下表描述了上图中所用的符号：  
   
@@ -80,13 +80,13 @@ ms.locfileid: "62714756"
   
  下表指定每个版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的单个实例的计算能力限制：  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本|单个实例使用的最大计算能力 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|单个实例使用的最大计算能力（AS、RS）1|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|单个实例使用的最大计算能力 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|单个实例使用的最大计算能力（AS、RS）1|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition：基于内核的许可<sup>1</sup>|操作系统支持的最大值|操作系统支持的最大值|  
 |开发人员|操作系统支持的最大值|操作系统支持的最大值|  
-|计算|操作系统支持的最大值|操作系统支持的最大值|  
+|评估|操作系统支持的最大值|操作系统支持的最大值|  
 |商业智能|限制为 4 个插槽或 16 核，取二者中的较小值|操作系统支持的最大值|  
-|Standard|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|  
+|标准|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|  
 |Web|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|  
 |Express|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
 |Express with Tools|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  

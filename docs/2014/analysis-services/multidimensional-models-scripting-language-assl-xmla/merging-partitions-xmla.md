@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702047"
 ---
 # <a name="merging-partitions-xmla"></a>合并分区 (XMLA)
@@ -37,10 +37,9 @@ ms.locfileid: "62702047"
  运行该`MergePartitions`命令时，将在[source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)属性中指定的源分区中存储的聚合数据添加到[目标](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)属性中指定的目标分区。  
   
 > [!NOTE]  
->  
-  `Source` 属性可包含多个分区对象引用。 但是，`Target` 属性则没有此功能。  
+>  `Source` 属性可包含多个分区对象引用。 但是，`Target` 属性则没有此功能。  
   
- 若要成功合并，在 `Source` 和 `Target` 中指定的分区必须包含在相同的度量值组，并使用相同的聚合设计。 否则会出错。  
+ 若要成功合并，在 `Source` 和 `Target` 中指定的分区必须包含在相同的度量值组，并使用相同的聚合设计。 否则，将会出错。  
   
  在 `Source` 中指定的分区将在成功执行 `MergePartitions` 命令后删除。  
   

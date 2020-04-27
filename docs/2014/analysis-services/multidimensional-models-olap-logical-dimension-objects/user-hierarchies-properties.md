@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727312"
 ---
 # <a name="user-hierarchy-properties"></a>用户层次结构属性
   下表说明了用户定义层次结构的属性。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |AllMemberName|包含以默认语言显示的层次结构的“全部”成员的标题。|  
 |AllowDuplicateNames|确定层次结构中是否允许重复的名称。 值为 True 和 False。 默认值为 True。|  

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62743213"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>更改数据库的目标恢复时间 (SQL Server)
@@ -23,23 +23,23 @@ ms.locfileid: "62743213"
 > [!NOTE]  
 >  如果长时间运行的事务导致过多 UNDO 时间，则可能超过给定数据库的目标恢复时间设置为该数据库指定的上限。  
   
--   **开始之前：**  [限制和限制](#Restrictions)、[安全性](#Security)  
+-   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **若要更改目标恢复时间，请使用：**  [SQL Server Management Studio](#SSMSProcedure)或[transact-sql](#TsqlProcedure)  
+-   **要更改目标恢复时间，请使用：** [SQL Server Management Studio](#SSMSProcedure) 或 [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a>  
   
 > [!CAUTION]  
 >  为间接检查点配置的数据库上的联机事务工作负荷可能导致性能下降。 间接检查点确保损坏页的数量低于特定阙值，以便在目标恢复时间内完成数据库恢复。 与利用损坏页数量的间接检查点相反，恢复间隔配置选项使用事务数量来确定恢复时间。 当在接收大量 DML 操作的数据库上启用了间接检查点时，后台写入线程可以开始积极刷新磁盘的脏缓冲区，以确保执行恢复所需的时间在数据库所设目标恢复时间范围内。 这可能造成某些系统上出现额外的 I/O 活动，如果磁盘子系统在 I/O 阙值之上或附近运行，则这会导致性能瓶颈。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **更改目标恢复时间**  
   
 1.  在 **“对象资源管理器”** 中，连接到某个 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，再展开该实例。  
@@ -50,14 +50,14 @@ ms.locfileid: "62743213"
   
 4.  在 **“恢复”** 面板的 **“目标恢复时间(秒)”** 字段中，指定要作为此数据库恢复时间上限的秒数。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **更改目标恢复时间**  
   
 1.  连接到数据库所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 2.  按如下所示使用以下 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)语句：  
   
-     TARGET_RECOVERY_TIME **=** _target_recovery_time_ {SECONDS |）  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      大于 0（默认值）时，指定在发生崩溃的情况下指定数据库的恢复时间上限。  

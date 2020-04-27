@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754669"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>从数据库镜像会话删除见证服务器 (SQL Server)
@@ -30,22 +30,22 @@ ms.locfileid: "62754669"
   
      [安全性](#Security)  
   
--   **若要替换删除见证服务器，请使用：**  
+-   **删除见证服务器，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**  [在删除见证服务器之后](#FollowUp)  
+-   **跟进：**  [删除见证服务器之后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-remove-the-witness"></a>删除见证服务器  
   
@@ -53,14 +53,14 @@ ms.locfileid: "62754669"
   
 2.  展开 **“数据库”**，并选择要删除其见证服务器的数据库。  
   
-3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这将打开 "**数据库属性**" 对话框的 "**镜像**" 页。  
   
 4.  若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。  
   
     > [!NOTE]  
-    >  如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”  字段。  
+    >  如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”**** 字段。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-remove-the-witness"></a>删除见证服务器  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754669"
   
 3.  发出以下语句：  
   
-     [更改数据库](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *DATABASE_NAME*将见证服务器设置为关闭  
+     [ALTER DATABASE database_name SET WITNESS OFF](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) **  
   
      其中， *database_name* 为镜像数据库的名称。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62754669"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a>跟进：在删除见证服务器之后  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a>跟进：在删除见证服务器之后  
  关闭见证服务器将根据事务安全设置更改 [运行模式](database-mirroring-operating-modes.md)：  
   
 -   如果事务安全设置为 FULL（默认值），则会话将使用不带自动故障转移的高安全同步模式。  
@@ -90,16 +90,16 @@ ms.locfileid: "62754669"
 > [!TIP]  
 >  数据库的事务安全性设置记录在每个伙伴的 [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) 目录视图中的 **mirroring_safety_level** 和 **mirroring_safety_level_desc** 列内。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 -   [添加或替换数据库镜像见证服务器 (SQL Server Management Studio)](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER DATABASE 数据库镜像 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [更改数据库数据库镜像 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [&#40;Transact-sql&#41;更改数据库镜像会话中的事务安全](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [使用 Windows 身份验证添加数据库镜像见证服务器 &#40;Transact-sql&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
- [数据库镜像见证服务器](database-mirroring-witness.md)  
+ [Database Mirroring Witness](database-mirroring-witness.md)  
   
   

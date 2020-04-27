@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 83a92633a4c466e72c8cc2de0cc1c220e88e01bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755166"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>镜像服务器实例（配置数据库镜像安全向导）
@@ -33,11 +33,11 @@ ms.locfileid: "62755166"
   
 ## <a name="options"></a>选项  
  **镜像服务器实例**  
- 如果已指定镜像服务器实例（在“数据库属性”对话框的“镜像”页中），则将显示该实例；有关详细信息，请参阅**数据库属性（“镜像”页）******[](../../relational-databases/databases/database-properties-mirroring-page.md)。  
+ 如果已指定镜像服务器实例（在“数据库属性”对话框的“镜像”页中），则将显示该实例；有关详细信息，请参阅[数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)********。  
   
  否则，请输入镜像服务器实例的名称。 注意，镜像服务器实例不能与主体服务器实例相同。  
   
- **连接**  
+ **“连接”**  
  如果尚未指定镜像服务器实例，请单击“连接”****。 这将显示 **“连接到服务器”** 对话框，在其中可以指定服务器实例并建立连接。  
   
  如果已经指定实例，但向导缺少一个具有足够权限检查端点存在性的连接，请单击 **“连接”**。 这将显示“连接到服务器”**** 对话框，其中列出了你预先选择的服务器实例，而且此时你已无法更换该实例。 指定具有足够权限的域帐户，并连接到服务器实例。  
@@ -55,7 +55,7 @@ ms.locfileid: "62755166"
     > [!NOTE]  
     >  端口号是必需的。  
   
- **端点名称**  
+ **终结点名称**  
  如果此服务器实例存在镜像端点，则端点名称将显示在此处。 如果端点不存在，则可以指定端点的名称。  
   
  **加密通过此端点发送的数据**  
@@ -64,10 +64,10 @@ ms.locfileid: "62755166"
  若要禁用加密，请清除此复选框。 若要重新启用加密，请选中此复选框。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
- [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [启动数据库镜像监视器 (SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [数据库镜像端点 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [&#41;的数据库属性 &#40;镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [为 Windows 身份验证创建数据库镜像端点 &#40;Transact-sql&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [开始数据库镜像监视器 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)  
   
   
