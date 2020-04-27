@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011670"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
@@ -37,8 +37,8 @@ ms.locfileid: "66011670"
   
     |批量操作的方向|转换|  
     |---------------------------------|----------------|  
-    |Export|将数据转换为字符表示形式。 如果进行显式请求，字符列的数据将转换为所请求的代码页。 如果未指定代码页，将通过使用客户端计算机的 OEM 代码页对字符数据进行转换。|  
-    |Import|必要时将字符数据转换为本机表示形式，并将字符数据从客户端的代码页转换到目标列的代码页。|  
+    |导出|将数据转换为字符表示形式。 如果进行显式请求，字符列的数据将转换为所请求的代码页。 如果未指定代码页，将通过使用客户端计算机的 OEM 代码页对字符数据进行转换。|  
+    |导入|必要时将字符数据转换为本机表示形式，并将字符数据从客户端的代码页转换到目标列的代码页。|  
   
 -   为避免在转换期间丢失扩展字符，请使用 Unicode 字符格式或指定代码页。  
   
@@ -51,10 +51,10 @@ ms.locfileid: "66011670"
   
  下列命令行选项支持字符格式：  
   
-|Command|选项|说明|  
+|Command|选项|描述|  
 |-------------|------------|-----------------|  
 |**bcp**|**-c**|使**bcp**实用工具使用字符数据。<sup>1</sup>|  
-|BULK INSERT|DATAFILETYPE **= ' char '**|在批量导入数据时使用字符格式。|  
+|BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  
   
  <sup>1</sup>若要将字符（**-c**）数据加载到与早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端兼容的格式，请使用 **-V**开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |限定符|说明|  
 |----------------|-----------------|  
 |**-c**|指定字符格式。|  
-|**-t**`,`|将逗号 (`,`) 指定为字段终止符。<br /><br /> 注意：默认的字段终止符是制表符 (\t)。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。|  
+|**-t** `,`|将逗号 (`,`) 指定为字段终止符。<br /><br /> 注意：默认的字段终止符是制表符 (\t)。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则需要指定 **-U** 和 **-P** 才能成功登录。|  
   
  下面的示例将 `myTestCharData` 表中的字符格式数据大容量导出到使用逗号 (,) 作为字段终止符且名为 `myTestCharData-c.Dat` 的新数据文件。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示符下输入：  
@@ -125,16 +125,16 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
- **使用数据格式进行批量导入或批量导出**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
+ **使用数据格式进行大容量导入或大容量导出**  
   
 -   [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [使用本机格式导入或导出数据 &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 字符格式导入或导出数据 (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   

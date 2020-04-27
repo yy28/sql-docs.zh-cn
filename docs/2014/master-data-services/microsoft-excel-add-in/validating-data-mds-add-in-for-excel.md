@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478811"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>验证数据（用于 Excel 的 MDS 外接程序）
@@ -38,7 +38,7 @@ ms.locfileid: "65478811"
 |------------|-----------------|  
 |错误|行中的一个或多个值未通过针对 MDS 管理员定义的业务规则的验证。|  
 |未验证|行中的值尚未根据业务规则进行验证。|  
-|Success|行中的所有值都已根据业务规则通过了验证。|  
+|成功|行中的所有值都已根据业务规则通过了验证。|  
   
 ## <a name="input-statuses"></a>输入状态  
  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，以下输入状态是可能的  
@@ -54,8 +54,8 @@ ms.locfileid: "65478811"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|确定哪些值未通过定义的业务规则。|[&#40;MDS Add-in for Excel 应用业务规则&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
-|为了帮助纠正验证错误，请查看某一成员发生的所有事务。|[查看成员的所有批注或事务 &#40;MDS Add-in for Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
+|确定哪些值未通过定义的业务规则。|[应用业务规则（用于 Excel 的 MDS 外接程序）](apply-business-rules-mds-add-in-for-excel.md)|  
+|为了帮助纠正验证错误，请查看某一成员发生的所有事务。|[查看成员的所有批注或事务（用于 Excel 的 MDS 外接程序）](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相关内容  
   

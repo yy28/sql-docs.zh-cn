@@ -17,13 +17,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011888"
 ---
-# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>在批量导入中按最小方式记录日志的前提条件
   对于完整恢复模式下的数据库，大容量导入执行的所有行插入操作都会完整地记录在事务日志中。 如果使用完整恢复模式，大型数据导入会导致填充事务日志的速度很快。 相反，对于简单恢复模式或大容量日志恢复模式，大容量导入操作的最小日志记录减少了大容量导入操作填满日志空间的可能性。 另外，最小日志记录的效率也比按完整方式记录日志高。  
   
 > [!NOTE]  
@@ -62,20 +62,20 @@ ms.locfileid: "66011888"
 > [!NOTE]  
 >  启用事务复制时，将完全记录 BULK INSERT 操作，即使处于大容量日志恢复模式下。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
--   [查看或更改数据库的恢复模式 &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
+-   [查看或更改数据库的恢复模式 (SQL Server)](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
 
   
 ## <a name="see-also"></a>另请参阅  
- [恢复模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)   
+ [恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)   
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Transact-sql&#41;&#40;表提示](/sql/t-sql/queries/hints-transact-sql-table)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+ [表提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)   
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)  
   
   

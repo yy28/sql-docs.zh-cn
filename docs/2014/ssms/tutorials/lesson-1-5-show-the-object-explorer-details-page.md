@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282030"
 ---
 # <a name="show-the-object-explorer-details-page"></a>显示“对象资源管理器详细信息”页
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]可以为对象资源管理器中所选的每个对象显示一个报表。 该报表称为“对象资源管理器详细信息”页，它由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建，并可在文档窗口中打开。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以为对象资源管理器中选定的每个对象显示一个报表。 该报表称为“对象资源管理器详细信息”页，它由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建，并可在文档窗口中打开。  
   
 ## <a name="showing-the-object-explorer-details-page"></a>显示“对象资源管理器详细信息”页  
   

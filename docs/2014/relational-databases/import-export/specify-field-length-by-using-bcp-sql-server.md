@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011840"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
   字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如，`int` 数据类型占 4 个字节。 如果为前缀长度指定了0，则**bcp**命令会提示输入字段长度、默认字段长度以及字段长度对包含`char`数据的数据文件中数据存储的影响。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示输入字段长度  
- 如果某个交互式 **bcp** 命令包含不带格式化文件开关 (**-f**) 或数据格式开关（**-n**、**-c**、**-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
+ 如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f**) 或数据格式开关（ **-n**、 **-c**、 **-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
   
  `Enter length of field <field_name> [<default>]:`  
   
@@ -36,14 +36,13 @@ ms.locfileid: "66011840"
 > [!NOTE]  
 >  在你以交互方式指定 **bcp** 命令中的所有字段后，该命令会提示你将自己对每个字段的响应保存到一个非 XML 格式化文件中。 有关非 XML 格式文件的详细信息，请参阅[ 非 XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
- 
-  **bcp** 命令是否提示输入字段长度取决于若干因素，如下所示：  
+ **bcp** 命令是否提示输入字段长度取决于若干因素，如下所示：  
   
 -   当复制非固定长度的数据类型并指定前缀长度为 0 时， **bcp** 命令会提示输入字段长度。  
   
 -   当将非字符数据转换为字符数据时， **bcp** 会建议一个足以存储该数据的默认字段长度。  
   
--   如果文件存储类型为非字符类型，则 **bcp** 命令不会提示输入字段长度。 数据以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机数据表示形式（本机格式）存储。  
+-   如果文件存储类型为非字符类型，则 **bcp** 命令不会提示输入字段长度。 数据将以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机数据表示形式（本机格式）存储。  
   
 ## <a name="using-default-field-lengths"></a>使用默认字段长度  
  通常， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 会建议你接受 **bcp**建议的默认字段长度值。 如果已创建了字符模式数据文件，则使用默认字段长度可确保数据不会被截断，并且不会发生数字溢出错误。  
@@ -91,8 +90,7 @@ ms.locfileid: "66011840"
  \*有关`decimal`和`numeric`数据类型的详细信息，请参阅[decimal 和 numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
   
 > [!NOTE]  
->  
-  `tinyint` 类型的列的值介于 0 到 255 之间；表示该范围内的任意数值所需的最大字符数是三（用于表示 100 到 255 之间的值）。  
+>  `tinyint` 类型的列的值介于 0 到 255 之间；表示该范围内的任意数值所需的最大字符数是三（用于表示 100 到 255 之间的值）。  
   
 ### <a name="default-field-lengths-for-native-file-storage"></a>本机文件存储的默认字段长度  
  下表列出了要存储为本机文件存储类型的数据的默认字段长度。 可为空值的数据与非空数据的长度相同，并且字符数据始终以字符格式存储。  
@@ -125,9 +123,9 @@ ms.locfileid: "66011840"
 ## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [使用 bcp &#40;SQL Server 指定数据文件中的前缀长度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [使用 bcp &#40;SQL Server 指定文件存储类型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
+ [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)   
+ [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)   
  [在批量导入期间保留 Null 或使用默认值 (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
   

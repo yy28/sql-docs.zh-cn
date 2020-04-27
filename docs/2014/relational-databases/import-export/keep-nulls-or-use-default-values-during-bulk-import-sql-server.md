@@ -21,17 +21,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011895"
 ---
-# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>在大容量导入期间保留 Null 或使用默认值 (SQL Server)
-  默认情况下，将数据导入表中时， **bcp** 命令和 BULK INSERT 语句将使用为表中的列定义的所有默认值。 例如，如果数据文件中包含一个空字段，则会加载该列的默认值。 
-  **bcp** 命令和 BULK INSERT 语句都允许指定保留 NULL 值。  
+# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或使用默认值 (SQL Server)
+  默认情况下，将数据导入表中时， **bcp** 命令和 BULK INSERT 语句将使用为表中的列定义的所有默认值。 例如，如果数据文件中包含一个空字段，则会加载该列的默认值。 **bcp** 命令和 BULK INSERT 语句都允许指定保留 NULL 值。  
   
- 相反，常规 INSERT 语句会保留空值而不会插入默认值。 INSERT ... SELECT * FROM OPENROWSET(BULK...) 语句的基本行为与常规 INSERT 相同，但前者还支持插入默认值的 表提示 。  
+ 相反，常规 INSERT 语句会保留空值而不会插入默认值。 INSERT ... SELECT * FROM OPENROWSET(BULK...) 语句的基本行为与常规 INSERT 相同，但前者还支持插入默认值的表提示。  
   
 > [!NOTE]  
 >  有关跳过某个表列的格式化文件示例，请参阅[使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)。  
@@ -67,8 +66,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
  有关创建格式化文件的详细信息，请参阅 [创建格式化文件 (SQL Server)](create-a-format-file-sql-server.md)。  
   
 ### <a name="sample-data-file"></a>示例数据文件  
- 该示例使用示例数据文件 `MyTestEmptyField2-c.Dat`，它的第二个字段中不包含值。 
-  `MyTestEmptyField2-c.Dat` 数据文件包含下列记录。  
+ 该示例使用示例数据文件 `MyTestEmptyField2-c.Dat`，它的第二个字段中不包含值。 `MyTestEmptyField2-c.Dat` 数据文件包含下列记录。  
   
 ```  
 1,,DataField3  
@@ -110,7 +108,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |------------|-----------------|  
 |`-f`|指定命令使用格式化文件。|  
 |`-k`|指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。|  
-|`-T`|指定 bcp 实用工具使用可信连接来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|`-T`|指定 bcp 实用工具使用可信连接来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
   
  在 Windows 命令提示符下输入。  
   
@@ -173,11 +171,11 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
--   [大容量导入数据时保留标识值 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [批量导入数据时保留标识值 (SQL Server)](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [准备用于大容量导出或导入的数据 &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [准备用于批量导出或导入的数据 (SQL Server)](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **使用格式化文件**  
   
@@ -191,25 +189,25 @@ GO
   
 -   [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- **使用数据格式进行批量导入或批量导出**  
+ **使用数据格式进行大容量导入或大容量导出**  
   
 -   [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [使用字符格式导入或导出数据 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用字符格式导入或导出数据 (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用本机格式导入或导出数据 &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 字符格式导入或导出数据 (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
  **在使用 bcp 时指定数据格式以获得兼容性**  
   
--   [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)  
   
--   [使用 bcp &#40;SQL Server 指定数据文件中的前缀长度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [使用 bcp &#40;SQL Server 指定文件存储类型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   

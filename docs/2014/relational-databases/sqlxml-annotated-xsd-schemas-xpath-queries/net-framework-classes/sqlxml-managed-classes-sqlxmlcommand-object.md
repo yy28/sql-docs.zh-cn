@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010735"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 对象（SQLXML 托管类）
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  标识命令的类型。 此属性用于指定您要执行的命令的类型。 下表中的值确定命令的类型。 有关工作示例，请参阅[在 .Net 环境中访问 SQLXML 功能](accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |SqlXmlCommandType|执行某一 SQL 命令（例如 `SELECT * FROM Employees FOR XML AUTO`）。|  
 |SqlXmlCommandType|执行某一 XPath 命令（例如 `Employees[@EmployeeID=1]`）。|  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011149"
 ---
 # <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
@@ -35,7 +35,7 @@ ms.locfileid: "66011149"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 按排名对匹配项进行排序，并且最多只返回指定数目的行。 这样可以大幅度提高性能。 例如，对于正常情况下会从一个包含一百万行的表中返回 100,000 行的查询，如果只要求返回前 100 行，此查询的处理速度会更快。  
   
-##  <a name="examples"></a> 使用 RANK 限制搜索结果的示例  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> 使用 RANK 限制搜索结果的示例  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>示例 A：仅搜索前三个匹配项  
  下面的示例使用 CONTAINSTABLE 仅返回前三个匹配项。  
@@ -90,7 +90,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> 搜索查询结果如何进行排名  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> 搜索查询结果如何进行排名  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的全文搜索可以生成可选分数（或排名值），该分数（或排名值）指示全文查询返回的数据的相关性。 对于每一行计算此排名值，并且可将此排名值用作排序条件按相关性对给定查询的结果集排序。 此排名值仅指示结果集中各行相关性的相对顺序。 实际的值并不重要，并且每次运行查询时实际值通常都不同。 此排名值在不同的查询之间没有任何意义。  
   
 ### <a name="statistics-for-ranking"></a>排名统计信息  
@@ -143,8 +143,7 @@ GO
   
  诸如 `IndexRowCount` 之类的统计信息可能会大不相同。 例如，如果一个目录的主索引有二十亿行，那么对一个新文档的索引将被编制为内存中的中间索引，而基于该内存中索引内的文档数对该文档的排名可能与主索引中的文档排名不同。 因此，建议在完成产生大量要创建索引或重新创建索引的行的任意填充后，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这些索引合并为一个主索引。 全文引擎也会根据参数（例如中间索引的数目和大小）自动合并索引。  
   
- 
-  `MaxOccurrence` 值被规范化到 32 个范围的其中一个内。 举例来说，这意味着 50 个字长的文档与 100 个字长的文档的处理方式相同。 下面是用于规范化的表。 由于文档长度位于相邻表值32和128之间的范围内，因此它们被有效地视为具有相同的长度、128（32 < `docLength` <= 128）。  
+ `MaxOccurrence` 值被规范化到 32 个范围的其中一个内。 举例来说，这意味着 50 个字长的文档与 100 个字长的文档的处理方式相同。 下面是用于规范化的表。 由于文档长度位于相邻表值32和128之间的范围内，因此它们被有效地视为具有相同的长度、128（32 < `docLength` <= 128）。  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

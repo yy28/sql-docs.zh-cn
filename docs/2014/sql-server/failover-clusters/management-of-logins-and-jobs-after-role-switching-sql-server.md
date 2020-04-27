@@ -13,21 +13,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63252859"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切换后登录名和作业的管理 (SQL Server)
-  在为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库部署高可用性或灾难恢复解决方案时，必须重现为**master**或**msdb**数据库中的数据库存储的相关信息。 通常，相关信息包括主/主体数据库的作业以及连接到数据库所需的用户或进程的登录名。 您应该在承载辅助/镜像数据库的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上复制此信息。 如果可能，角色切换后最好在新的主/主体数据库中以编程方式重新生成此信息。  
+  在为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署高可用性或灾难恢复解决方案时，重新生成为 master 或 msdb 数据库中的数据库存储的相关信息十分重要********。 通常，相关信息包括主/主体数据库的作业以及连接到数据库所需的用户或进程的登录名。 您应该在承载辅助/镜像数据库的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上复制此信息。 如果可能，角色切换后最好在新的主/主体数据库中以编程方式重新生成此信息。  
   
 ## <a name="logins"></a>登录名  
  在承载数据库副本的每个服务器实例上，您都应该重新生成有权访问主体数据库的登录名。 当主/主体角色切换时，只有其登录名在新的主/主体服务器实例上存在的用户才可以访问新的主/主体数据库。 其登录名未在新的主/主体服务器实例上定义的用户是孤立用户，并且无法访问该数据库。  
   
  如果某个用户是孤立用户，请在新的主/主体服务器实例上创建该登录名，并且运行 [sp_change_users_login](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](troubleshoot-orphaned-users-sql-server.md)。  
   
-###  <a name="SSauthentication"></a> 使用 SQL Server 身份验证或本地 Windows 登录名的应用程序的登录名  
+###  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> 使用 SQL Server 身份验证或本地 Windows 登录名的应用程序的登录名  
  如果某一应用程序使用 SQL Server 身份验证或本地 Windows 登录名，则不匹配的 SID 可能会阻止该应用程序的登录名在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程实例上解析。 不匹配的 SID 将导致该登录名成为远程服务器实例上的孤立用户。 当应用程序连接到发生故障转移后的镜像数据库或日志传送数据库，或是连接到从备份初始化的复制订阅服务器数据库时，就可能会发生此问题。  
   
  为了避免此问题，我们建议您在设置此类应用程序时采取预防措施，以便使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程实例承载的数据库。 预防措施包括将登录名和密码从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例传输到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程实例。 有关如何避免此问题的详细信息，请参阅知识库文章 918992 —[如何在 SQL Server 实例间传输登录名和密码](https://support.microsoft.com/kb/918992/)。  
@@ -43,11 +43,10 @@ ms.locfileid: "63252859"
  如果以前的主/主体服务器实例可用，则应该在该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上删除原始作业。 请注意，当前镜像数据库上的作业失败，因为它处于 RESTORING 状态，以致不可用。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的不同实例的配置可能不同，如具有不同的驱动器号等。 每个伙伴的作业必须允许任何这类不同的配置。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的不同实例的配置可能不同，如具有不同的驱动器号等。 每个伙伴的作业必须允许任何这类不同的配置。  
   
 ## <a name="see-also"></a>另请参阅  
- [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [孤立用户故障排除 (SQL Server)](troubleshoot-orphaned-users-sql-server.md)  
   
   

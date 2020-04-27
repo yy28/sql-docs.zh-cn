@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65092043"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
@@ -37,8 +37,7 @@ ms.locfileid: "65092043"
   
 -   您可以根据经常执行的查询类型和硬件配置，提高查询性能。 例如，在两个或更多的已分区表中的分区列相同时，查询优化器可以更快地处理这些表之间的同等联接查询，因为可以联接这些分区本身。  
   
-     当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 针对 I/O 操作执行数据排序时，它会首先按分区对数据进行排序。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次访问一个驱动器，这样可能会降低性能。 为了提高数据排序性能，可以通过设置 RAID 将多个磁盘中的分区数据文件条带化。 这样一来，尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍按分区对数据进行排序，但它可以同时访问每个分区的所有驱动器。  
+     当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 针对 I/O 操作执行数据排序时，它会首先按分区对数据进行排序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次访问一个驱动器，这样可能会降低性能。 为了提高数据排序性能，可以通过设置 RAID 将多个磁盘中的分区数据文件条带化。 这样一来，尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍按分区对数据进行排序，但它可以同时访问每个分区的所有驱动器。  
   
      此外，您可以通过对在分区级别而不是整个表启用锁升级来提高性能。 这可以减少表上的锁争用。  
   
@@ -104,7 +103,7 @@ ms.locfileid: "65092043"
 |||  
 |-|-|  
 |**任务**|**主题**|  
-|说明如何创建分区函数和分区方案，然后如何将它们应用于表和索引。|[创建已分区表和已分区索引](create-partitioned-tables-and-indexes.md)|  
+|说明如何创建分区函数和分区方案，然后如何将它们应用于表和索引。|[创建已分区表和索引](create-partitioned-tables-and-indexes.md)|  
 |||  
   
 ## <a name="related-content"></a>相关内容  
@@ -114,10 +113,10 @@ ms.locfileid: "65092043"
   
 -   [如何实现自动滑动窗口](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [大容量加载到已分区表中](https://msdn.microsoft.com/library/cc966380.aspx)  
+-   [大容量加载到已分区表](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [对已分区表和索引的查询处理增强功能](https://msdn.microsoft.com/library/ms345599.aspx)  
+-   [关于已分区表和索引的查询处理增强功能](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [构建大规模关系数据仓库的前10大最佳做法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [生成大型关系数据仓库的前 10 大最佳做法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011661"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
@@ -55,15 +55,14 @@ ms.locfileid: "66011661"
   
      bcp 实用工具使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部二进制数据格式将表中的非字符数据写入数据文件中。  
   
--   
-  `char` 数据或 `varchar` 数据  
+-   `char` 数据或 `varchar` 数据  
   
      在每个或`char` `varchar`字段的开头， **bcp**都添加前缀长度。  
   
     > [!IMPORTANT]  
     >  使用本机模式时，默认情况下， **bcp**实用工具将字符从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]转换为 OEM 字符，然后将这些字符复制到数据文件。 **Bcp**实用工具将数据文件中的字符转换为 ANSI 字符，然后将这些字符大容量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入到表中。 在执行这些转换过程中，可能丢失扩展字符数据。 对于扩展字符，请使用 Unicode 本机格式或指定代码页。  
   
--   `sql_variant`数据  
+-   `sql_variant` 数据  
   
      如果 `sql_variant` 数据以 SQLVARIANT 存储在本机格式数据文件中，则数据会保留其所有特征。 记录每个数据值的数据类型的元数据与数据值一起存储。 此元数据用于在目标 `sql_variant` 列中重新创建具有相同数据类型的数据值。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66011661"
   
  下列命令行选项支持本机格式：  
   
-|Command|选项|说明|  
+|Command|选项|描述|  
 |-------------|------------|-----------------|  
 |**bcp**|**-n**|使**bcp**实用工具使用数据的本机数据类型。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **= '** native **'**|使用本机数据类型或宽本机数据类型的数据。 注意，如果格式化文件指定了数据类型，则不需要 DATAFILETYPE。|  
@@ -146,24 +145,24 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
- **使用数据格式进行批量导入或批量导出**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
+ **使用数据格式进行大容量导入或大容量导出**  
   
 -   [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [使用字符格式导入或导出数据 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用字符格式导入或导出数据 (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 字符格式导入或导出数据 (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [sql_variant &#40;Transact-sql&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
- [从早期版本的 SQL Server 导入本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
+ [sql_variant (Transact-SQL)](/sql/t-sql/data-types/sql-variant-transact-sql)   
+ [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+ [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   

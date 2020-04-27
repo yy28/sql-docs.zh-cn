@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010939"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>设置用于全文筛选器后台程序启动器的服务帐户
@@ -26,20 +26,20 @@ ms.locfileid: "66010939"
  SQL 全文筛选器后台程序启动器服务是可识别实例的服务，它与特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例相关联。 SQL 全文筛选器后台程序启动器服务将服务帐户信息传播到每个筛选器后台程序主机进程。  
   
   
-##  <a name="setting"></a>设置服务帐户  
+##  <a name="setting-the-service-account"></a><a name="setting"></a>设置服务帐户  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>为全文搜索设置 SQL 全文筛选器后台程序启动器服务帐户  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
 2.  在**SQL Server 配置管理器**中，单击 " **SQL Server 服务**"，右键单击***`instance name`* SQL 全文筛选器守护程序启动器（）**，然后单击 "**属性**"。  
   
 3.  单击此对话框的“登录”**** 选项卡，选择或输入用于运行由 SQL 全文筛选器后台程序启动器服务创建的每个进程的帐户。  
   
-4.  关闭此对话框之后，单击“重新启动”  以重新启动 SQL 全文筛选器后台程序启动器服务。  
+4.  关闭此对话框之后，单击“重新启动”**** 以重新启动 SQL 全文筛选器后台程序启动器服务。  
   
   
-##  <a name="error"></a>如果 SQL 全文筛选器守护程序启动器服务未启动  
+##  <a name="if-the-sql-full-text-filter-daemon-launcher-service-does-not-start"></a><a name="error"></a>如果 SQL 全文筛选器守护程序启动器服务未启动  
  如果 SQL 全文筛选器后台程序启动器服务未启动，可能是由以下一种或多种情况引起的：  
   
 -   与 SQL 全文筛选器后台程序启动器服务帐户关联的密码已过期。  

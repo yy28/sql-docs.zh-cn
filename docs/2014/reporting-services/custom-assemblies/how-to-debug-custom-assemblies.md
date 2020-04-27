@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265063"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>如何调试自定义程序集
+# <a name="how-to-debug-custom-assemblies"></a>如何：调试自定义程序集
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]提供了一些调试工具，这些工具可帮助您分析您的自定义程序集代码和查找其中的[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]错误。 要使用的最佳工具取决于您试图完成的任务。 此示例使用 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]。  
   
  设计、开发和测试 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 自定义程序集的建议方式是创建包含您的测试报表和自定义程序集的解决方案。  
@@ -50,7 +50,7 @@ ms.locfileid: "63265063"
   
      “项目属性页”对话框会打开****。  
   
-9. 单击“生成”选项卡（如果处于 C# 项目中）或“编译”选项卡（如果处于 ** 项目中）******[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。  
+9. 单击“生成”选项卡（如果处于 C# 项目中）或“编译”选项卡（如果处于 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目中）********。  
   
 10. 在 "**生成**/**编译**" 页上，输入报表设计器文件夹的路径。 默认情况下，在“输出路径”文本框中是 C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE****。 这将在执行您的报表之前将自定义程序集的更新的版本直接生成和部署到报表设计器中。  
   

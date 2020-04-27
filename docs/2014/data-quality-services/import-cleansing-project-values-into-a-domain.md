@@ -13,29 +13,29 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c5661d490f4669968b6d8198a7565fb5e5c8c218
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484298"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以将在清理过程中从数据质量清理项目或包含 DQS 清理组件的集成服务包中收集的数据质量知识，导入到域中。 这样可确保可信知识不丢失，而且可以不断地改进知识库。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   若要将清理项目值导入到域中，该域必须已在 Data Quality Client 的清理项目中或包含 DQS 清理组件的集成服务包中使用。  
   
 -   Data Quality Client 中的清理项目或包含 DQS 清理组件的集成服务包必须已成功完成。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须具有 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能将在清理过程中收集的数据质量知识导入到域中。  
   
-##  <a name="Import"></a>导入清理项目值  
+##  <a name="import-cleansing-project-values"></a><a name="Import"></a> 导入清理项目值  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65484298"
 4.  单击 **“域值”** 选项卡，在图标栏中单击 **“导入值”** 图标，然后单击 **“导入项目值”**。 此时将显示 **“导入项目值”** 对话框，其中包含使用该域进行清理的数据质量项目以及集成服务包的列表。  
   
     > [!NOTE]  
-    >  如果尚未使用域或其任何链接域创建项目，或者项目没有完成，则 **“导入项目值”** 选项将不可用。  
+    >   如果尚未使用域或其任何链接域创建项目，或者项目没有完成，则 **“导入项目值”** 选项将不可用。  
   
 5.  在 **“导入项目值”** 对话框中：  
   
@@ -56,10 +56,9 @@ ms.locfileid: "65484298"
   
     -   如果选择 **“从‘新建’选项卡中添加值”** ，则除了 **“正确”** 和 **“已更正”** 选项卡中的值之外，还将导入新建选项卡中的值。  
   
-    -   单击“确定”。   
+    -   单击" **确定**"。  
   
-6.  您将返回到 **“域值”** 选项卡；在值成功导入后，将显示一条消息。 
-  **“值”** 表中将显示已导入的值，因此也是首次进入域中的值。  
+6.  您将返回到 **“域值”** 选项卡；在值成功导入后，将显示一条消息。 **“值”** 表中将显示已导入的值，因此也是首次进入域中的值。  
   
 7.  取消选择 **“仅显示新内容”** 以显示域中的所有值。  
   
@@ -70,12 +69,12 @@ ms.locfileid: "65484298"
 10. 单击“完成”  。  
   
     > [!NOTE]  
-    >  有关使用 **“域值”** 选项卡上的值的详细信息，请参阅 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
+    >   有关使用 **“域值”** 选项卡上的值的详细信息，请参阅 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
   
-##  <a name="FollowUp"></a>跟进：将项目值导入到域后  
+##  <a name="follow-up-after-importing-project-values-into-a-domain"></a><a name="FollowUp"></a> 跟进：将项目值导入到域后  
  将在清理过程中收集的数据质量知识导入到域中后，您可以对该域和值执行其他域管理任务。 有关详细信息，请参阅[管理域](../../2014/data-quality-services/managing-a-domain.md)。  
   
-##  <a name="Values"></a>要导入的值  
+##  <a name="values-that-will-be-imported"></a><a name="Values"></a> 要导入的值  
  下面的值将从项目导入到域中：  
   
 -   仅字符串值导入到域中。  
@@ -94,7 +93,7 @@ ms.locfileid: "65484298"
   
 -   域中因基于字词的关系而导致的更正值将作为正确值（不是错误）导入。  
   
-##  <a name="ValuesNot"></a>不会导入的值  
+##  <a name="values-that-will-not-be-imported"></a><a name="ValuesNot"></a> 不会导入的值  
  下面的值将不会从项目导入到域中：  
   
 -   不会导入 **“清理”** 活动的 **“管理和查看结果”** 页上 **“建议”** 和 **“无效”** 选项卡上的值。  

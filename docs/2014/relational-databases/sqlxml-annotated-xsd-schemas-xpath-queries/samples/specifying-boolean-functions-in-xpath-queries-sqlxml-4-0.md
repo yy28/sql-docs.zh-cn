@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d0960fa50551b3279f97b289892d7b544c5a9e6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012384"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔函数 (SQLXML 4.0)
@@ -35,8 +35,7 @@ ms.locfileid: "66012384"
 /child::Customer[not(child::Order)]  
 ```  
   
- 
-  `child` 轴为默认轴。 因此，可以将该查询指定为：  
+ `child` 轴为默认轴。 因此，可以将该查询指定为：  
   
 ```  
 /Customer[not(Order)]  
@@ -84,8 +83,7 @@ ms.locfileid: "66012384"
 /child::Customer[child::Order=false()]  
 ```  
   
- 
-  `child` 轴为默认轴。 因此，可以将该查询指定为：  
+ `child` 轴为默认轴。 因此，可以将该查询指定为：  
   
 ```  
 /Customer[Order=false()]  

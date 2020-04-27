@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 38bee43ed5b727bca552c1b44010dd692012d823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012964"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram 示例 (SQLXML 4.0)
@@ -347,7 +347,7 @@ ms.locfileid: "66012964"
   
 -   ** \<** ** \<DataInstance>** 块包含 Customer>元素（**diffgr： id = "Customer3"**）和** \<Order>** 元素（**diffgr： id = "Order3"**）。 这两个元素都不指定**diffgr： hasChanges**属性。 因此，DiffGram 处理逻辑将忽略这些元素。  
   
--   \< ** \<** ** \<** **** **DataInstance>块包含一个 Customer>元素（diffgr： id = "Customer4"）和 Order>元素（diffgr： id = "Order4"），该元素在 before \<**> 块中没有对应的元素。**** ** \<DataInstance**中的这些元素>块指定**diffgr： hasChanges = "insert"**。 因此，将在 Cust 表和 Ord 表中添加一条新记录。  
+-   \< ** \<** ** \<** **diffgr:id="Customer4"** **DataInstance>块包含一个 Customer>元素（diffgr： id = "Customer4"）和 Order>元素（diffgr： id = "Order4"），该元素在 before \<**> 块中没有对应的元素。**diffgr:id="Order4"** ** \<DataInstance**中的这些元素>块指定**diffgr： hasChanges = "insert"**。 因此，将在 Cust 表和 Ord 表中添加一条新记录。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011549"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
@@ -27,12 +27,11 @@ ms.locfileid: "66011549"
 > [!NOTE]  
 >  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，全文引擎位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中，而不是位于单独的服务中。 通过将全文引擎集成到数据库引擎中，可提高全文可管理性和总体性能，并进一步优化了混合查询。  
   
- 每个表只允许有一个全文索引。 若要对某个表创建全文索引，该表必须具有一个唯一且非 Null 的列。 你可以对以下类型的列创建全文索引：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)`，从而可对这些列进行全文搜索。 对数据类型为 `varbinary`、`varbinary(max)`、`image` 或 `xml` 的列创建全文索引需要您指定类型列。 
-  *类型列*是用来存储每行中文档的文件扩展名（.doc、.pdf、xls 等）的表列。  
+ 每个表只允许有一个全文索引。 若要对某个表创建全文索引，该表必须具有一个唯一且非 Null 的列。 你可以对以下类型的列创建全文索引：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)`，从而可对这些列进行全文搜索。 对数据类型为 `varbinary`、`varbinary(max)`、`image` 或 `xml` 的列创建全文索引需要您指定类型列。 *类型列*是用来存储每行中文档的文件扩展名（.doc、.pdf、xls 等）的表列。  
   
  创建和维护全文索引的过程称为“填充”  （也称为“爬网”  ）。 有三种类型的全文索引填充：完全填充、基于更改跟踪的填充和基于时间戳的增量式填充。 有关详细信息，请参阅 [填充全文索引](populate-full-text-indexes.md)。  
   
-##  <a name="tasks"></a>常见任务  
+##  <a name="common-tasks"></a><a name="tasks"></a>常见任务  
  **创建全文索引**  
   
 -   [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
@@ -47,12 +46,12 @@ ms.locfileid: "66011549"
   
  [本主题内容](#top)  
   
-##  <a name="structure"></a>全文索引结构  
+##  <a name="full-text-index-structure"></a><a name="structure"></a>全文索引结构  
  对全文索引的结构的良好了解将帮助您了解全文引擎的工作方式。 本主题使用 **中的** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 表的以下摘录部分作为示例表。 此摘录部分仅显示该表的两个列（ **DocumentID** 列和 **Title** 列）和三行。  
   
  对于本示例，我们假定已对“标题”**** 列创建全文索引。  
   
-|DocumentID|标题|  
+|DocumentID|Title|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -64,7 +63,7 @@ ms.locfileid: "66011549"
   
  还要注意，已从全文索引中删除关键字“and”。 这样做是因为“and”是非索引字，从全文索引中删除非索引字可以大幅节省磁盘空间，并因此提高查询性能。 有关非索引字的详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- **片段1**  
+ **Fragment 1**  
   
 |关键字|ColId|DocId|出现次数|  
 |-------------|-----------|-----------|----------------|  
@@ -83,28 +82,26 @@ ms.locfileid: "66011549"
 |3|1|2|7|  
 |安装|1|3|4|  
   
- 
-  **Keyword** 列包含在创建索引时提取的单个标记的表示形式。 断字符可确定组成标记的词。  
+ **Keyword** 列包含在创建索引时提取的单个标记的表示形式。 断字符可确定组成标记的词。  
   
  “ColId”**** 列包含的值对应于已建立全文索引的特定列。  
   
  `DocId`列包含八字节整数的值，该值映射到全文索引表中的特定全文键值。 如果全文键不是整数数据类型，则需要此映射。 在这种情况下，全文键值和`DocId`值之间的映射将保留在一个名为 DocId 映射表的单独表中。 若要查询这些映射，请使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系统存储过程。 若要满足搜索条件，则上述表中的 DocId 值需要与 DocId Mapping 表联接，以便从所查询的基表中检索行。 如果基表的全文键值是整数类型，则该值直接充当 DocId，而不需要映射。 因此，使用整数全文键值有助于优化全文查询。  
   
- 
-  **Occurrence** 列包含整数值。 对于每个 DocId 值，均有一个 Occurrence 值的列表对应于该 DocId 值中特定关键字的相对字偏移量。 位置值用于确定短语或邻近匹配项，例如具有相邻位置值的短语。 它们还用于计算相关性分数，例如记分时可能会用某个关键字在 DocId 中的出现次数。  
+ **Occurrence** 列包含整数值。 对于每个 DocId 值，均有一个 Occurrence 值的列表对应于该 DocId 值中特定关键字的相对字偏移量。 位置值用于确定短语或邻近匹配项，例如具有相邻位置值的短语。 它们还用于计算相关性分数，例如记分时可能会用某个关键字在 DocId 中的出现次数。  
   
  [本主题内容](#top)  
   
-##  <a name="fragments"></a>全文索引片段  
+##  <a name="full-text-index-fragments"></a><a name="fragments"></a>全文索引片段  
  逻辑全文索引通常拆分到多个内部表中。 每个内部表称为一个全文索引碎片。 这些碎片中的某一些可能包含比其他碎片更新的数据。 例如，如果用户更新其 DocId 是 3 的以下行，并且该表可自动跟踪更改，则会创建新的碎片。  
   
-|DocumentID|标题|  
+|DocumentID|Title|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
  在下面的示例（显示 Fragment 2）中，碎片中包含比 Fragment 1 中更新的关于 DocId 3 的数据。 因此，当用户查询“Rear Reflector”时，会将 Fragment 2 中的数据用于 DocId 3。 每个碎片都用一个创建时间戳来标记，可以使用 [sys.fulltext_index_fragments](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql) 目录视图查询该时间戳。  
   
- **片段2**  
+ **Fragment 2**  
   
 |关键字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  

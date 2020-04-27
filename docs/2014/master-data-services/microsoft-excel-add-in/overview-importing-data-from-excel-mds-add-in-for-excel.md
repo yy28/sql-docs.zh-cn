@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479035"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>发布数据（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，要想与其他用户共享数据，可将数据发布到 MDS 存储库。 数据一经发布，即可供该外接程序的其他用户下载。  
   
- 发布数据时，已添加或更新的所有数据都会发布到 MDS 存储库。 已删除的数据不会发布，必须单独删除数据。 有关详细信息，请参阅[删除行（用于 Excel 的 MDS 外接程序）](delete-a-row-mds-add-in-for-excel.md)。  
+ 发布数据时，已添加或更新的所有数据都会发布到 MDS 存储库。 已删除的数据不会发布，必须单独删除数据。 有关详细信息，请参阅 [删除行（用于 Excel 的 MDS 外接程序）](delete-a-row-mds-add-in-for-excel.md)。  
   
 > [!NOTE]  
 >  发布不能用于创建新实体。 有关创建实体的详细信息，请参阅[创建实体（用于 Excel 的 MDS 外接程序）](create-an-entity-mds-add-in-for-excel.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "65479035"
   
 -   您可以查看其他用户对成员执行的事务。 还可以查看对成员执行的所有事务，即便不再对特定属性拥有权限。  
   
- 您可以查看对成员执行的所有事务。 有关详细信息，请参阅[查看成员的所有批注或事务（用于 Excel 的 MDS 外接程序）](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)。  
+ 您可以查看对成员执行的所有事务。 有关详细信息，请参阅 [查看成员的所有批注或事务（用于 Excel 的 MDS 外接程序）](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)。  
   
 > [!IMPORTANT]  
 >  如果您输入的批注超过 500 个字符，该批注将被自动截断。  
@@ -52,12 +52,12 @@ ms.locfileid: "65479035"
 |任务说明|主题|  
 |----------------------|-----------|  
 |将数据从活动工作表发布回 MDS 存储库。|[将数据从 Excel 发布到 MDS &#40;MDS Add-in for Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|同时从 MDS 存储库和工作表中删除行。|[删除行 &#40;MDS Add-in for Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|同时从 MDS 存储库和工作表中删除行。|[删除行（用于 Excel 的 MDS 外接程序）](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [刷新数据 &#40;MDS Add-in for Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
+-   [刷新数据（用于 Excel 的 MDS 外接程序）](refreshing-data-mds-add-in-for-excel.md)  
   
--   [Master Data Services Add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [用于 Microsoft Excel 的 Master Data Services 外接程序](master-data-services-add-in-for-microsoft-excel.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489093"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>任务 6：从 Cleanse Supplier List 项目导入值
@@ -32,16 +32,16 @@ ms.locfileid: "65489093"
   
 5.  注意，此时将导入所有电子邮件以及您在交互式清理过程中所做的两处更正内容。 滚动以查看这两处更正内容。  
   
-    |值|更正为|  
+    |Value|更正为|  
     |-----------|----------------|  
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
 6.  重复前面的步骤，为**Country**域导入项目值，并注意添加了一个新条目，以将**美国**更正为**美国**（包含 ""）。  
   
-    |值|更正为|  
+    |Value|更正为|  
     |-----------|----------------|  
-    |United State|美国|  
+    |United State|United States|  
   
 7.  若要查看旧的域值，请清除 "**仅显示新**的" 复选框。  
   

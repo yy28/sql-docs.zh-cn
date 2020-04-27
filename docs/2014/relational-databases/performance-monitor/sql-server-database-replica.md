@@ -16,14 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9ea811d8fcc598342781111aa559795888a889b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250765"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server，数据库副本
-  
   **SQLServer:Database Replica** 性能对象包含的性能计数器报告有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中 AlwaysOn 可用性组的辅助数据库的信息。 此对象仅在承载辅助副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上有效。  
   
 |计数器名称|说明|有关视图…|  
@@ -41,9 +40,9 @@ ms.locfileid: "63250765"
 |**Transaction Delay**|等待未终止的提交确认的延迟时间（毫秒）。|主副本|  
   
 ## <a name="see-also"></a>另请参阅  
- [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)   
+ [监视资源使用情况 &#40;系统监视器&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server，可用性副本](sql-server-availability-replica.md)   
- [SQL Server，Databases 对象](sql-server-databases-object.md)   
+ [SQL Server，数据库对象](sql-server-databases-object.md)   
  [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

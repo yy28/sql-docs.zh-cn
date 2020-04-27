@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287361"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用嵌套 AUTO 模式查询生成同级
@@ -144,8 +144,7 @@ FOR XML AUTO, TYPE
   
 -   将先前的查询添加到 `FROM` 子句。 查询结果返回为表。 注意添加的 `XmlCol` 别名。  
   
--   `SELECT` 子句对 `XmlCol` 子句中返回的 `FROM` 指定 XQuery。 
-  `query()` 数据类型的 `xml` 方法用于指定 XQuery。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
+-   `SELECT` 子句对 `XmlCol` 子句中返回的 `FROM` 指定 XQuery。 `query()` 数据类型的 `xml` 方法用于指定 XQuery。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

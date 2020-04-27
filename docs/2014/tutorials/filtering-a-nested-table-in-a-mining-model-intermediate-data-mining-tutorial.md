@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267481"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>筛选挖掘模型中的嵌套表（数据挖掘中级教程）
   创建并浏览模型后，您决定将精力集中在客户数据的某个子集上。 例如，您可能希望仅分析包含特定项的购物篮，或者可能希望仅分析在某个时间段内没有购买任何物品的客户的人口统计信息。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了筛选挖掘模型中所使用数据的功能。 此功能非常有用，因为您无需设置新的数据源视图即可使用不同的数据。 在数据挖掘基础教程中，您学习了如何通过对事例表应用条件来筛选平面表中的数据。 在此任务中，您将创建一个应用于嵌套表的筛选器。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了筛选挖掘模型中所使用数据的功能。 此功能非常有用，因为您无需设置新的数据源视图即可使用不同的数据。 在数据挖掘基础教程中，您学习了如何通过对事例表应用条件来筛选平面表中的数据。 在此任务中，您将创建一个应用于嵌套表的筛选器。  
   
 ## <a name="filters-on-nested-vs-case-tables"></a>针对嵌套表和针对事例表的筛选器  
  如果您的数据源视图包含一个事例表和一个嵌套表，如 Association 模型中使用的数据源视图，则可以筛选事例表中的值、筛选嵌套表中是否存在某个值，或者这两者的组合。  
@@ -32,7 +31,7 @@ ms.locfileid: "63267481"
   
 1.  在的[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]"**挖掘模型**" 选项卡中，右键`Association`单击该模型，然后选择 "**新建挖掘模型**"。  
   
-2.  对于 "**型号名称**" `Association Filtered`，请键入。 对于 "**算法名称**"，请选择 " **Microsoft 关联规则**"。 单击“确定”。   
+2.  对于 "**型号名称**" `Association Filtered`，请键入。 对于 "**算法名称**"，请选择 " **Microsoft 关联规则**"。 单击" **确定**"。  
   
 3.  在关联筛选模型的列中，单击 "IncomeGroup" 行，并将值从 "**忽略**" 更改为 "**输入**"。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "63267481"
   
 11. 在 "**筛选器**" 对话框中，在 "**挖掘结构列**" 下的`Model`第一行中，选择。  
   
-12. 对于 "**运算符**"，选择 "**不为 NULL**"。 将 "**值**" 文本框留空。 单击“确定”。   
+12. 对于 "**运算符**"，选择 "**不为 NULL**"。 将 "**值**" 文本框留空。 单击" **确定**"。  
   
      "**模型筛选器**" 对话框的 "**表达式**" 文本框中的筛选条件会自动更新，以在嵌套表中包含新的条件。 完成的表达式如下：  
   
@@ -112,6 +111,6 @@ ms.locfileid: "63267481"
   
 ## <a name="see-also"></a>另请参阅  
  [模型筛选器语法和示例 &#40;Analysis Services 数据挖掘&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [挖掘模型的筛选器 &#40;Analysis Services 数据挖掘&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

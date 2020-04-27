@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012574"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>在位置路径中指定选择谓词 (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012574"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 在此 XPath 查询中，`child` 和 `attribute` 是轴名称。 `Customer``Customer`是节点测试（如果是** \<元素节点>**，则为 TRUE，因为** \<元素>** 是`child`轴的主要节点类型）。 
-  `attribute::CustomerID="ALFKI"` 是谓词。 在谓词中， `attribute`是轴， `CustomerID`是节点测试（如果**CustomerID**是上下文节点的属性，则为 TRUE，因为** \<属性>** 是`attribute`轴的主要节点类型）。  
+ 在此 XPath 查询中，`child` 和 `attribute` 是轴名称。 `Customer``Customer`是节点测试（如果是** \<元素节点>**，则为 TRUE，因为** \<元素>** 是`child`轴的主要节点类型）。 `attribute::CustomerID="ALFKI"` 是谓词。 在谓词中， `attribute`是轴， `CustomerID`是节点测试（如果**CustomerID**是上下文节点的属性，则为 TRUE，因为** \<属性>** 是`attribute`轴的主要节点类型）。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -55,9 +54,7 @@ ms.locfileid: "66012574"
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- 在此 XPath 表达式中，`child` 和 `attribute` 是轴名称。 
-  `Customer`、`Order` 和 `SalesOrderID` 是节点测试。 
-  `attribute::OrderID="1"` 是谓词。  
+ 在此 XPath 表达式中，`child` 和 `attribute` 是轴名称。 `Customer`、`Order` 和 `SalesOrderID` 是节点测试。 `attribute::OrderID="1"` 是谓词。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -74,8 +71,7 @@ child::Customer[child::ContactName]
   
  此示例假设 " ** \<联系人姓名">** 是 XML 文档中** \<Customer>** 元素的子元素，在带批注的 XSD 架构中称为以*元素为中心的映射*。  
   
- 在此 XPath 表达式中，`child` 是轴名称。 `Customer``Customer`是节点测试（如果是** \<元素>** 节点，则为 TRUE，因为** \<元素>** 是`child`轴的主要节点类型）。 
-  `child::ContactName` 是谓词。 在谓词中， `child`是轴， `ContactName`是节点测试（如果`ContactName`是** \<元素>** "节点），则为 TRUE。  
+ 在此 XPath 表达式中，`child` 是轴名称。 `Customer``Customer`是节点测试（如果是** \<元素>** 节点，则为 TRUE，因为** \<元素>** 是`child`轴的主要节点类型）。 `child::ContactName` 是谓词。 在谓词中， `child`是轴， `ContactName`是节点测试（如果`ContactName`是** \<元素>** "节点），则为 TRUE。  
   
  此表达式仅返回具有** \<"联系人">** 元素子级的上下文节点的** \<Customer>** 元素子级。  
   
@@ -94,8 +90,7 @@ child::Customer[not(child::ContactName)]
   
  此示例假设 " ** \<联系人姓名">** 是 XML 文档中** \<Customer>** 元素的子元素，并且数据库中不需要 "联系人姓名" 字段。  
   
- 在本示例中，`child` 是轴。 `Customer`是节点测试（如果`Customer`是\<元素> 节点），则为 TRUE。 
-  `not(child::ContactName)` 是谓词。 在谓词中， `child`是轴， `ContactName`是节点测试（如果`ContactName`是\<元素> "节点），则为 TRUE。  
+ 在本示例中，`child` 是轴。 `Customer`是节点测试（如果`Customer`是\<元素> 节点），则为 TRUE。 `not(child::ContactName)` 是谓词。 在谓词中， `child`是轴， `ContactName`是节点测试（如果`ContactName`是\<元素> "节点），则为 TRUE。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -110,8 +105,7 @@ Customer[not(ContactName)]
 child::Customer[attribute::CustomerID]  
 ```  
   
- 在此示例中`child` ，是轴， `Customer`是节点测试（如果`Customer`是> 节点\<的元素，则为 TRUE）。 
-  `attribute::CustomerID` 是谓词。 在谓词中， `attribute`是轴， `CustomerID`是谓词（如果`CustomerID`是>节点的** \<属性**，则为 TRUE）。  
+ 在此示例中`child` ，是轴， `Customer`是节点测试（如果`Customer`是> 节点\<的元素，则为 TRUE）。 `attribute::CustomerID` 是谓词。 在谓词中， `attribute`是轴， `CustomerID`是谓词（如果`CustomerID`是>节点的** \<属性**，则为 TRUE）。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -120,8 +114,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>选择谓词：示例 6  
- 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 可以支持谓词中包含叉积的 XPath 查询，如以下示例中所示：  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 可以支持谓词中包含叉积的 XPath 查询，如以下示例中所示：  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

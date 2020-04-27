@@ -11,18 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482886"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]是由 Internet Information Services （IIS）托管的 web 应用程序。 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 仅适用于 Internet Explorer (IE) 7 或更高版本。 IE 7 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是 Internet Information Services (IIS) 托管的 Web 应用程序。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 仅适用于 Internet Explorer (IE) 7 或更高版本。 IE 7 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
   
- 使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可以创建和配置 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序。 
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上配置 IIS，因此适用于初始 Web 配置任务。 例如，配置具有单个 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 环境，或在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的扩展部署中配置第一个 Web 应用程序。 使用 IIS 工具来执行一些更复杂的任务，如在扩展部署中配置多个 Web 服务器。  
+ 使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可以创建和配置 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上配置 IIS，因此适用于初始 Web 配置任务。 例如，配置具有单个 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 环境，或在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的扩展部署中配置第一个 Web 应用程序。 使用 IIS 工具来执行一些更复杂的任务，如在扩展部署中配置多个 Web 服务器。  
   
 > [!NOTE]  
 >  您安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 组件的任何计算机必须具有许可证。 有关详细信息，请参阅“最终用户许可协议 (EULA)”。  
@@ -32,15 +30,14 @@ ms.locfileid: "65482886"
 ### <a name="operating-system"></a>操作系统  
  下面的 Windows 操作系包括 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序和 Web 服务所需的 Internet Information Services (IIS) 功能。  
   
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]开发人员（64位） x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Enterprise （64位） x64|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence（64 位）x64|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer（64 位）x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise（64 位）x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence（64 位）x64|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
-|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional、Enterprise 和 Ultimate<br /><br /> Windows 8.0 Professional、Enterprise 和 Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional、Enterprise 和 Ultimate<br /><br /> Windows 8.0 Professional、Enterprise 和 Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
  有关的版本支持的 Windows 操作系统的完整列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
- 在使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从此处[安装 Silverlight 5](https://go.microsoft.com/fwlink/?LinkId=243096)。  
+ 在使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从[此处安装 Silverlight 5](https://go.microsoft.com/fwlink/?LinkId=243096)。  
   
 ### <a name="role-and-role-services-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>角色和角色服务（Windows Server 2008 或 Windows Server 2008 R2、Windows 7 操作系统）  
  在 Windows Server 2008 R2 中，可以使用 **“服务器管理器”**（在 Microsoft 管理控制台 (MMC) 中提供）来安装 **“Web 服务器(IIS)”** 角色和以下必需的角色服务。  
@@ -70,7 +67,7 @@ ms.locfileid: "65482886"
   
 ||  
 |-|  
-|.NET Framework 3.0 功能<br /><br /> WCF 激活<br /><br /> HTTP 激活<br /><br /> 非 HTTP 激活<br /><br /> Windows 进程激活服务<br /><br /> 进程模型<br /><br /> .NET 环境<br /><br /> 配置 API|  
+|.NET Framework 3.0 功能<br /><br /> WCF 激活<br /><br /> HTTP 激活<br /><br /> 非 HTTP 激活<br /><br /> Windows Process Activation Service<br /><br /> 进程模型<br /><br /> .NET 环境<br /><br /> 配置 API|  
   
 ### <a name="features-windows-server-2012-or-windows-8-operating-systems"></a>功能 （Windows Server 2012 或 Windows 8 操作系统）  
  在 Windows Server 2012 中，可以使用 **“服务器管理器”** 来安装以下必需的功能。  
@@ -80,7 +77,7 @@ ms.locfileid: "65482886"
   
 ||  
 |-|  
-|.NET Framework 3.5（包括 .NET 2.0 和 3.0）<br /><br /> .NET Framework 4.5 高级服务<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 激活 [注意：这是必需的。]<br /><br /> TCP 端口共享<br /><br /> Windows 进程激活服务<br /><br /> 进程模型<br /><br /> .NET 环境<br /><br /> 配置 API|  
+|.NET Framework 3.5（包括 .NET 2.0 和 3.0）<br /><br /> .NET Framework 4.5 高级服务<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 激活 [注意：这是必需的。]<br /><br /> TCP 端口共享<br /><br /> Windows Process Activation Service<br /><br /> 进程模型<br /><br /> .NET 环境<br /><br /> 配置 API|  
   
 ### <a name="accounts-and-permissions"></a>帐户和权限  
   
@@ -92,6 +89,6 @@ ms.locfileid: "65482886"
 ## <a name="see-also"></a>另请参阅  
  [安装 Master Data Services](install-master-data-services.md)   
  [&#40;Master Data Services 创建主数据管理器 Web 应用程序&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
- [Web 配置页 &#40;Master Data Services 配置管理器&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
+ [“Web 配置”页（Master Data Services 配置管理器）](../web-configuration-page-master-data-services-configuration-manager.md)  
   
   

@@ -13,14 +13,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee3582e7de37b99cd7f665f563e789259954b722
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478484"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 配置参考 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]使用 web.config 文件来包含配置设置，这些设置使 Internet Information Services （IIS）能够承载[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web 应用程序和 web 服务。 此 Web.config 文件位于 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安装路径的 WebApplication 文件夹。 有关路径和权限的详细信息，请参阅[文件夹和文件权限 (Master Data Services)](folder-and-file-permissions-master-data-services.md)。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 使用 Web.config 文件来包含使 Internet Information Services (IIS) 能够承载 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务的配置设置。 此 Web.config 文件位于 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安装路径的 WebApplication 文件夹。 有关路径和权限的详细信息，请参阅[文件夹和文件权限 (Master Data Services)](folder-and-file-permissions-master-data-services.md)。  
   
 ## <a name="webconfig-elements"></a>Web.Config 元素  
  Web.config 文件除了包含标准 IIS、.NET Framework [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 、ASP.NET 和 Windows Communication Foundation （WCF）配置元素外，还包含一个自定义元素** \<masterDataServices>**。 下表描述了 Web.config 文件中包括的元素。  
@@ -52,7 +52,7 @@ ms.locfileid: "65478484"
   
 ### <a name="elements-and-attributes"></a>元素和属性  
   
-|Item|说明|  
+|项|说明|  
 |----------|-----------------|  
 |`instance`|子元素。 包含指定 Web 服务和数据库连接字符串信息的属性。|  
 |`virtualPath`|属性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的虚拟路径。 这对应于 IIS `path` applicationhost.config 文件中** \<site>** 元素下的** \<应用程序>** 元素的特性。|  

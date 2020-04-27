@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63269892"
 ---
 # <a name="work-with-change-data-sql-server"></a>处理变更数据 (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "63269892"
   
  系统提供了几个函数，以帮助确定用于查询 TVF 的相应 LSN 值。 [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) 函数返回与捕获实例有效性间隔关联的最小 LSN。 有效性间隔是指更改数据当前可供其捕获实例使用的时间间隔。 [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 函数返回有效性间隔中的最大 LSN。 [sys.fn_cdc_map_time_to_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql) 和 [sys.fn_cdc_map_lsn_to_time](/sql/relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql) 函数可帮助将 LSN 值置于常规时间线上。 由于变更数据捕获使用闭合查询间隔，因此，有时需要按顺序生成下一个 LSN 值，以确保在连续查询窗口中不会出现重复更改。 [sys.fn_cdc_increment_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql) 和 [sys.fn_cdc_decrement_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql) 函数在需要对 LSN 值进行增量调整时非常有用。  
   
-##  <a name="LSN"></a> 验证 LSN 界限  
+##  <a name="validating-lsn-boundaries"></a><a name="LSN"></a> 验证 LSN 界限  
  对于要在 TVF 查询中使用的 LSN 界限，我们建议在使用之前对其进行验证。 如果端点为 Null 或位于捕获实例有效性间隔之外，则会强制变更数据捕获 TVF 返回一个错误。  
   
  例如，如果用于定义查询间隔的参数无效，或超出范围，或行筛选器选项无效，则针对所有更改的查询将返回以下错误。  
@@ -62,7 +62,7 @@ ms.locfileid: "63269892"
 > [!NOTE]  
 >  若要在 SQL Server Management Studio 中查找变更数据捕获模板，请在“视图”  菜单上单击“模板资源管理器”  ，展开 **“SQL Server 模板”** ，然后展开 **“变更数据捕获”** 文件夹。  
   
-##  <a name="Functions"></a> 查询函数  
+##  <a name="query-functions"></a><a name="Functions"></a> 查询函数  
  根据所跟踪的源表的特性以及配置其捕获实例的方式，将生成一个或两个查询更改数据的 TVF。  
   
 -   函数 [cdc.fn_cdc_get_all_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 返回在指定间隔内发生的所有更改。 将始终生成此函数。 返回的项将始终进行排序：先按更改的事务提交 LSN 进行排序，然后按事务内的更改顺序值进行排序。 根据所选的行筛选器选项，在更新时将返回最终行（行筛选器选项为“all”），或者在更新时返回新值和旧值（行筛选器选项为“all update old”）。  
@@ -76,7 +76,7 @@ ms.locfileid: "63269892"
   
  从查询函数中返回的更新掩码是一种简洁表示形式，用于标识某一更改数据行中所有更改的列。 通常，只有捕获列的小型子集需要此信息。 有多个函数可以帮助从掩码中提取信息，以使其更便于应用程序直接使用。 函数 [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) 可返回给定捕获实例的命名列的序号位置，而函数 [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) 则可以基于函数调用中传递的序号返回所提供的掩码中该位的奇偶性。 在请求更改数据时，可以结合使用这两个函数从掩码中有效地提取并返回信息。 有关如何使用这些函数的说明，请参阅“使用 All With Mask 枚举净更改”模板。  
   
-##  <a name="Scenarios"></a> 查询函数应用场景  
+##  <a name="query-function-scenarios"></a><a name="Scenarios"></a> 查询函数应用场景  
  以下部分介绍使用 cdc.fn_cdc_get_all_changes_ < capture_instance > 和 cdc.fn_cdc_get_net_changes_ < capture_instance > 查询函数查询变更数据捕获数据的常用应用场景。  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>查询捕获实例有效性间隔中的所有更改  

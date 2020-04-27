@@ -15,21 +15,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5d6c941283f02fd83e873d51e300add886ba5d73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479925"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>创建版本标志 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建要分配给某一版本的标志。 该标志可以指示用户或订阅系统应使用的版本。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-version-flag"></a>创建版本标志  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65479925"
   
 3.  在 **“管理版本标志”** 页上，从 **“模型”** 字段中，选择要为其创建标志的模型。  
   
-4.  单击“添加”  。  
+4.  单击 **“添加”** 。  
   
 5.  在 **“名称”** 框中，键入名称。  
   
@@ -51,10 +51,10 @@ ms.locfileid: "65479925"
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [将标志分配给版本 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [向版本分配标志 (Master Data Services)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [版本 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [更改版本标志名称 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
+ [更改版本标志名称 (Master Data Services)](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

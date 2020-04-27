@@ -19,15 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011968"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
     
-##  <a name="top"></a>可以将 XML 文档大容量导入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到数据库中，也可以从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中大容量导出 XML 文档。 本主题提供了这两种情况的示例。  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>可以将 XML 文档大容量导入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到数据库中，也可以从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中大容量导出 XML 文档。 本主题提供了这两种情况的示例。  
   
  若要将数据从一个数据文件大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区视图，可以使用以下工具或命令：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66011968"
   
 -   E. [大容量导出 XML 数据](#bulk_export_xml_data)  
   
-###  <a name="binary_byte_stream"></a>的. 以二进制字节流的形式大容量导入 XML 数据  
+###  <a name="a-bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a> A. 以二进制字节流的形式大容量导入 XML 数据  
  在从文件大容量导入 XML 数据时，如果文件中包含要应用的编码声明，则应在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 选项。 SINGLE_BLOB 选项可确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 分析器根据 XML 声明中指定的编码方案导入数据。  
   
 #### <a name="sample-table"></a>示例表  
@@ -99,9 +99,9 @@ SELECT * FROM OPENROWSET(
   
 -   使用非 Unicode XML 编码方案匹配或解析数据库排序规则设置。  
   
- [&#91;Top&#93;](#top)  
+ [[返回页首]](#top)  
   
-###  <a name="existing_row"></a>B. 将 XML 数据大容量导入现有行中  
+###  <a name="b-bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> B. 将 XML 数据大容量导入现有行中  
  此示例使用 `OPENROWSET` 大容量行集提供程序向示例表 `T`中的现有行添加一个 XML 实例。  
   
 > [!NOTE]  
@@ -134,9 +134,9 @@ WHERE IntCol = 1;
 GO  
 ```  
   
- [&#91;Top&#93;](#top)  
+ [[返回页首]](#top)  
   
-###  <a name="file_contains_dtd"></a>Ansi-c. 从包含 DTD 的文件中大容量导入 XML 数据  
+###  <a name="c-bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> C. 从包含 DTD 的文件中大容量导入 XML 数据  
   
 > [!IMPORTANT]  
 >  若非您的 XML 环境有特殊要求，建议不要启用对文档类型定义 (DTD) 的支持。 启用 DTD 支持会增加服务器的可攻击外围应用，并且可能会使它受到拒绝服务攻击。 如果必须启用 DTD 支持，可以通过仅处理可信的 XML 文档来降低安全风险。  
@@ -180,14 +180,13 @@ INSERT T1
   
  执行 `INSERT` 语句后，会将 DTD 从 XML 中提取出来，并存储到 `T1` 表中。  
   
- [&#91;Top&#93;](#top)  
+ [[返回页首]](#top)  
   
-###  <a name="field_terminator_in_format_file"></a>2-d. 使用格式化文件显式指定字段终止符  
+###  <a name="d-specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> D. 使用格式化文件显式指定字段终止符  
  下面的示例说明如何大容量导入 XML 文档 `Xmltable.dat`。  
   
 #### <a name="sample-data-file"></a>示例数据文件  
- 
-  `Xmltable.dat` 中的文档包含两个 XML 值，每行一个。 第一个 XML 值的编码为 UTF-16，第二个值的编码为 UTF-8。  
+ `Xmltable.dat` 中的文档包含两个 XML 值，每行一个。 第一个 XML 值的编码为 UTF-16，第二个值的编码为 UTF-8。  
   
  下面的十六进制转储显示了此数据文件的内容：  
   
@@ -213,7 +212,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 ```  
   
 #### <a name="sample-table"></a>示例表  
- 大容量导入或导出 XML 文档时，应使用不可能出现在任何文档中的[字段终止符](specify-field-and-row-terminators-sql-server.md);例如，一系列四个 null （`\0`），后跟字母`z`：。 `\0\0\0\0z`  
+ 大容量导入或导出 XML 文档时，应当使用在任何文档中都不可能出现的 [字段终止符](specify-field-and-row-terminators-sql-server.md) ；例如，在连续四个 Null (`\0`) 后紧跟字母 `z`： `\0\0\0\0z`。  
   
  此示例说明如何为 `xTable` 示例表使用此字段终止符。 若要创建此示例表，请使用下列 `CREATE TABLE` 语句：  
   
@@ -244,9 +243,9 @@ WITH (FORMATFILE = 'C:\Xmltable.fmt');
 GO  
 ```  
   
- [&#91;Top&#93;](#top)  
+ [[返回页首]](#top)  
   
-###  <a name="bulk_export_xml_data"></a>电邮. 大容量导出 XML 数据  
+###  <a name="e-bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> E. 大容量导出 XML 数据  
  下面的示例使用 `bcp` 命令和同一个 XML 格式化文件从上一示例所创建的表中大容量导出 XML 数据。 在下面的 `bcp` 命令中， `<server_name>` 和 `<instance_name>` 代表必须使用相应的值替换的占位符：  
   
 ```  
@@ -254,17 +253,15 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保存 XML 编码。 因此，在导出 XML 数据时，XML 字段的原始编码将不可用。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导出 XML 数据时，使用 UTF-16 编码。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保存 XML 编码。 因此，在导出 XML 数据时，XML 字段的原始编码将不可用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导出 XML 数据时，使用 UTF-16 编码。  
   
- [&#91;Top&#93;](#top)  
+ [[返回页首]](#top)  
   
 ## <a name="see-also"></a>另请参阅  
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
- [SELECT 子句 &#40;Transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
+ [SELECT 子句 (Transact-SQL)](/sql/t-sql/queries/select-clause-transact-sql)   
  [bcp 实用工具](../../tools/bcp-utility.md)   
- [大容量导入和导出数据 &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [批量导入和导出数据 (SQL Server)](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f0f192dbf931d5ad80c594b376973ee2db3f31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63297508"
 ---
 # <a name="name-element-for-database-dta"></a>数据库的名称元素 (DTA)
@@ -37,8 +37,7 @@ ms.locfileid: "63297508"
   
 |特征|说明|  
 |--------------------|-----------------|  
-|**数据类型和长度**|
-  `string`，长度没有限制。|  
+|**数据类型和长度**|`string`，长度没有限制。|  
 |**默认值**|无。|  
 |**出现次数**|每个 `Database` 元素必须出现一次。|  
   

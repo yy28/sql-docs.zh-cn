@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 238cf52a52e53aa4ee2712e0bd6abf43a6c5e128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479387"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>创建主数据管理器 Web 应用程序 (Master Data Services)
-  
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序提供了一个接口，便于用户使用主数据，并供管理员用来配置和管理 MDS。  
   
  网站必须始终包含 Web 应用程序。 要创建 Web 应用程序，您必须：  
@@ -31,7 +30,7 @@ ms.locfileid: "65479387"
   
  在您创建 Web 应用程序之后，将其与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库相关联。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   有关承载 Web 应用程序的计算机的要求信息，请参阅 [Web 应用程序要求 (Master Data Services)](web-application-requirements-master-data-services.md)。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "65479387"
   
 4.  在 **“创建网站”** 对话框中，指定新网站的信息。 有关对话框中的用户界面 (UI) 选项的详细信息，请参阅 [创建网站对话框（Master Data Services 配置管理器）](../create-website-dialog-box-master-data-services-configuration-manager.md)。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在现有网站中创建主数据管理器 Web 应用程序  
  在现有网站中创建 Web 应用程序时，您可以选择 Web 应用程序的虚拟路径和别名。 将该 Web 应用程序添加到新的应用程序池中。  
@@ -70,7 +69,7 @@ ms.locfileid: "65479387"
   
 5.  在 **“创建 Web 应用程序”** 对话框中，指定新 Web 应用程序的信息。 有关对话框中的用户界面 (UI) 选项的详细信息，请参阅 [创建 Web 应用程序对话框（Master Data Services 配置管理器）](../create-web-application-dialog-box-master-data-services-configuration-manager.md)。  
   
-6.  单击“确定”。   
+6.  单击" **确定**"。  
   
 ## <a name="next-steps"></a>后续步骤  
   

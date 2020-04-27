@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43e7067f00e21f57d64f2206fb1008f21d77dd4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010701"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定显式转换函数 (SQLXML 4.0)
@@ -28,8 +28,7 @@ ms.locfileid: "66010701"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 显式转换函数  
- 
-  `number()` 函数将参数转换为数字。  
+ `number()` 函数将参数转换为数字。  
   
  假设**ContactID**的值是非数字的，则以下查询会将**ContactID**转换为数字，并将其与值4进行比较。 然后，该查询将返回上下文节点的所有** \<Employee>** 元素子级，其中**ContactID**属性的数值为4：  
   
@@ -78,8 +77,7 @@ ms.locfileid: "66010701"
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 显式转换函数  
- 
-  `string()` 函数将参数转换为字符串。  
+ `string()` 函数将参数转换为字符串。  
   
  以下查询将**ContactID**转换为字符串，并将其与字符串值 "4" 进行比较。 该查询将返回上下文节点的所有** \<雇员>** 元素子级，其中**ContactID**的字符串值为 "4"：  
   

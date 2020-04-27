@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2cc9c9576a6ae2f70f2d54d48471339ec07d0e61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480537"
 ---
 # <a name="importing-and-exporting-knowledge"></a>导入和导出知识
@@ -34,7 +34,7 @@ ms.locfileid: "65480537"
 |将整个知识库导入到 .dqs 数据文件中|[从 .dqs 文件导入知识库](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |将值从 Excel 文件导入到域|[将值从 Excel 文件导入到域](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |将域从 Excel 文件中导入到知识库中|[在知识发现中从 Excel 文件中导入域](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
-|将在清理过程中收集的知识导入到知识库中|[将清理项目值导入域](../../2014/data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
+|将在清理过程中收集的知识导入到知识库中|[将清理项目值导入到域中](../../2014/data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

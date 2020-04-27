@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012077"
 ---
-# <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>用于大容量导入或导出的数据格式 (SQL Server)
+# <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>用于批量导入或导出的数据格式 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以接受字符数据格式或本机二进制数据格式的数据。 当在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他应用程序（例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel）或其他数据库服务器（例如，Oracle 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）之间移动数据时，请使用字符格式。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间传输数据时才可以使用本机格式。  
   
  **本主题内容：**  
@@ -29,7 +29,7 @@ ms.locfileid: "66012077"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> 用于大容量导入或导出的数据格式  
+##  <a name="data-formats-for-bulk-import-or-export"></a><a name="ComponentsAndConcepts"></a> 用于大容量导入或导出的数据格式  
  下表列出了不同数据显示方式和操作的源或目标一般适合使用的数据格式。  
   
 |Operation|本机|Unicode 本机|字符|Unicode 字符|  
@@ -43,7 +43,7 @@ ms.locfileid: "66012077"
   
  <sup>1</sup>使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp**时从大容量导出数据的最快方法。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   

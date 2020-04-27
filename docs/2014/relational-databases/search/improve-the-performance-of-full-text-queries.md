@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011268"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
@@ -26,8 +26,7 @@ ms.locfileid: "66011268"
   
 -   使用 [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)重新组织全文目录。 请务必在性能测试之前执行此操作，因为它会导致该目录中全文索引的主合并。  
   
--   仅选择较小的列作为全文键列。 尽管支持 900 个字节的列，但我们建议在全文索引中使用更小的键列。 
-  `int` 和 `bigint` 可提供最佳性能。  
+-   仅选择较小的列作为全文键列。 尽管支持 900 个字节的列，但我们建议在全文索引中使用更小的键列。 `int` 和 `bigint` 可提供最佳性能。  
   
 -   使用整数型全文键可以避免与 **docid** 映射表联接。 因此，整数型全文键可以使查询性能获得数量级的提升，并改进爬网性能。 如果全文键也是聚集索引键，可能会进一步提高性能。  
   

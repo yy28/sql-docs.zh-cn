@@ -11,19 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478927"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>加载前筛选数据（用于 Excel 的 MDS 外接程序）
   在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，当您想要限制要加载到 Excel 中的数据的大小或范围时，可以筛选数据。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须有权访问 "**资源管理器**" 功能区域。  
+-   **** 您必须有权访问“资源管理器”功能区域。  
   
 ### <a name="to-filter-data-before-loading"></a>加载前筛选数据  
   
@@ -53,6 +53,6 @@ ms.locfileid: "65478927"
 ## <a name="see-also"></a>另请参阅  
  [MDS Add-in for Excel&#41;中加载数据 &#40;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  ["筛选器" 对话框 &#40;MDS Add-in for Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
- [重新排列列 &#40;MDS Add-in for Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
+ [对列重新排序（用于 Excel 的 MDS 外接程序）](reorder-columns-mds-add-in-for-excel.md)  
   
   

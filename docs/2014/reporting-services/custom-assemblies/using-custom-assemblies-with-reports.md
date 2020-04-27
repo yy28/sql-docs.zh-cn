@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e79f48f4e4a2eb5fbc83c353461709658caf2509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265658"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>将自定义程序集用于报表
@@ -43,7 +43,7 @@ ms.locfileid: "63265658"
  [初始化自定义程序集对象](initializing-custom-assembly-objects.md)  
  介绍如何初始化从报表调用的自定义程序集对象的值。  
   
- [如何调试自定义程序集](how-to-debug-custom-assemblies.md)  
+ [如何：调试自定义程序集](how-to-debug-custom-assemblies.md)  
  介绍如何调试您的自定义程序集代码。  
   
 ## <a name="see-also"></a>另请参阅  

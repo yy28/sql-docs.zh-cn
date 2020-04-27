@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011381"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
@@ -24,9 +24,9 @@ ms.locfileid: "66011381"
   
  统计语义搜索使用全文搜索创建的索引并创建其他索引。 作为全文搜索上的此依赖关系的结果，您可在定义新的全文索引或更改现有全文索引时创建一个新的语义索引。 可以按本主题中所述使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的全文索引向导和其他对话框创建新的语义索引。  
   
-##  <a name="BasicEnabling"></a>创建语义索引  
+##  <a name="creating-a-semantic-index"></a><a name="BasicEnabling"></a>创建语义索引  
   
-###  <a name="reqenable"></a>创建语义索引的要求和限制  
+###  <a name="requirements-and-restrictions-for-creating-a-semantic-index"></a><a name="reqenable"></a>创建语义索引的要求和限制  
   
 -   可以对任何支持全文索引的数据库对象创建索引，包括表和索引视图。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66011381"
   
 -   如果为缺少语言模型的列指定语言，创建索引将失败并返回错误消息。  
   
-###  <a name="HowToEnableCreate"></a>如何：在没有全文索引时创建语义索引  
+###  <a name="how-to-create-a-semantic-index-when-there-is-no-full-text-index"></a><a name="HowToEnableCreate"></a>如何：在没有全文索引时创建语义索引  
  使用 **CREATE FULLTEXT INDEX** 语句创建新的全文索引时，可以通过指定关键字 **STATISTICAL_SEMANTICS** 作为列定义的一部分在列级别启用语义索引。 还可以在使用全文索引向导创建新的全文索引时启用语义索引。  
   
  **使用 Transact-SQL 创建新的语义索引**  
@@ -115,7 +115,7 @@ GO
  **使用 SQL Server Management Studio 创建新的语义索引**  
  运行全文索引向导并在“选择表列”  页为每个要创建语义索引的列启用“统计语义”  。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](use-the-full-text-indexing-wizard.md)。  
   
-###  <a name="HowToEnableAlter"></a>如何：在存在现有全文索引时创建语义索引  
+###  <a name="how-to-create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a>如何：在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
   
  **使用 Transact-SQL 添加语义索引**  
@@ -144,15 +144,15 @@ GO
  **使用 SQL Server Management Studio 添加语义索引**  
  可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
   
-###  <a name="addreq"></a>更改现有索引的要求和限制  
+###  <a name="requirements-and-restrictions-for-altering-an-existing-index"></a><a name="addreq"></a>更改现有索引的要求和限制  
   
 -   正在填充索引时，不能更改现有索引。 有关监视索引填充进度的详细信息，请参阅 [管理和监视语义搜索](manage-and-monitor-semantic-search.md)。  
   
 -   在 **ALTER FULLTEXT INDEX** 语句的单次调用中，不能将索引添加到列以及更改或删除同一列的索引。  
   
-##  <a name="dropping"></a>删除语义索引  
+##  <a name="dropping-a-semantic-index"></a><a name="dropping"></a>删除语义索引  
   
-###  <a name="drophow"></a>如何：删除语义索引  
+###  <a name="how-to-drop-a-semantic-index"></a><a name="drophow"></a>如何：删除语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
  **使用 Transact-SQL 删除语义索引**  
@@ -183,7 +183,7 @@ GO
  **使用 SQL Server Management Studio 删除语义索引**  
  可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
   
-###  <a name="dropreq"></a>删除语义索引的要求和限制  
+###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a>删除语义索引的要求和限制  
   
 -   保留语义索引时不能从列删除全文索引。 对于文档相似性结果，语义索引依赖于全文索引。  
   
@@ -191,9 +191,9 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>检查是否在数据库对象上启用了语义搜索  
   
-###  <a name="HowToCheckEnabled"></a>如何：检查是否在数据库对象上启用了语义搜索  
+###  <a name="how-to-check-whether-semantic-search-is-enabled-on-database-objects"></a><a name="HowToCheckEnabled"></a>如何：检查是否在数据库对象上启用了语义搜索  
  **是否为数据库启用了语义搜索？**  
- 查询 **DATABASEPROPERTYEX (Transact-SQL)** 元数据函数的 [IsFullTextEnabled](/sql/t-sql/functions/databasepropertyex-transact-sql) 属性。  
+ 查询 [DATABASEPROPERTYEX (Transact-SQL)](/sql/t-sql/functions/databasepropertyex-transact-sql) 元数据函数的 **IsFullTextEnabled** 属性。  
   
  返回值 1 表示为数据库启用了全文搜索和语义搜索；返回值 0 表示未启用它们。  
   
@@ -203,7 +203,7 @@ GO
 ```  
   
  **是否为表启用了语义搜索？**  
- 查询 **OBJECTPROPERTYEX (Transact-SQL)** 元数据函数的 [TableFullTextSemanticExtraction](/sql/t-sql/functions/objectproperty-transact-sql) 属性。  
+ 查询 [OBJECTPROPERTYEX (Transact-SQL)](/sql/t-sql/functions/objectproperty-transact-sql) 元数据函数的 **TableFullTextSemanticExtraction** 属性。  
   
  返回值 1 表示为表启用了语义搜索；返回值 0 表示未启用它。  
   
@@ -215,7 +215,7 @@ GO
  **是否为列启用了语义搜索？**  
  若要确定是否为特定列启用了语义搜索：  
   
--   查询 **COLUMNPROPERTY (Transact-SQL)** 元数据函数的 [StatisticalSemantics](/sql/t-sql/functions/columnproperty-transact-sql) 属性。  
+-   查询 [COLUMNPROPERTY (Transact-SQL)](/sql/t-sql/functions/columnproperty-transact-sql) 元数据函数的 **StatisticalSemantics** 属性。  
   
      返回值 1 表示为列启用了语义搜索；返回值 0 表示未启用它。  
   
@@ -233,13 +233,13 @@ GO
     GO  
     ```  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”  。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”****。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
   
      值 True 表示除了启用全文索引外，还为指定的列启用了语义索引。  
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>确定可对哪些内容编制索引以进行语义搜索  
   
-###  <a name="HowToCheckLanguages"></a>如何：检查语义搜索支持的语言  
+###  <a name="how-to-check-which-languages-are-supported-for-semantic-search"></a><a name="HowToCheckLanguages"></a>如何：检查语义搜索支持的语言  
   
 > [!IMPORTANT]  
 >  语义索引比全文索引支持的语言少。 因此，您可以对某些列编制索引以进行全文搜索，但不能进行语义搜索。  
@@ -256,7 +256,7 @@ GO
 |语言|LCID|  
 |--------------|----------|  
 |德语|1031|  
-|英语(美国)|1033|  
+|英语(美国)|2052|  
 |法语|1036|  
 |意大利语|1040|  
 |葡萄牙语（巴西）|1046|  
@@ -266,16 +266,16 @@ GO
 |葡萄牙语(葡萄牙)|2070|  
 |西班牙语|3082|  
   
-###  <a name="doctypes"></a>如何：确定可以为哪些文档类型编制索引  
+###  <a name="how-to-determine-which-document-types-can-be-indexed"></a><a name="doctypes"></a>如何：确定可以为哪些文档类型编制索引  
  查询目录视图 [sys.fulltext_document_types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
   
  如果您要为其编制索引的文档类型不在所支持类型的列表中，则可能必须查找、下载和安装其他筛选器。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a>最佳做法：考虑为全文索引和语义索引创建单独的文件组  
+##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a>最佳做法：考虑为全文索引和语义索引创建单独的文件组  
  如果磁盘空间分配成问题，请考虑为全文索引和语义索引创建单独的文件组。 在全文索引所在的文件组中创建语义索引。 完全填充的语义索引可能包含大量数据。  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="IssueNoResults"></a>问题：搜索特定列时未返回结果  
+##  <a name="problem-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a>问题：搜索特定列时未返回结果  
  **是否为 Unicode 语言指定了非 Unicode LCID？**  
  可能对非 Unicode 列类型启用了语义索引，而该列的 LCID 用于只有 Unicode 词的语言，如用于俄语的 LCID 1049。 在这种情况下，将不从此列的语义索引返回结果。  
   

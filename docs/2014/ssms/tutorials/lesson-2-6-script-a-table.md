@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316397"
 ---
 # <a name="script-a-table"></a>编写表脚本
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]可以创建脚本来选择、插入、更新和删除表，以及创建、更改、删除或执行存储过程。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以创建脚本，用于选择、插入、更新和删除表，以及用于创建、更改、删除或执行存储过程。  
   
  有时您可能需要使用具有多个选项的脚本，如删除一个过程后再创建一个过程，或者创建一个表后再更改一个表。 若要创建组合的脚本，请将第一个脚本保存到“查询编辑器”窗口中，并将第二个脚本保存到剪贴板上，这样就可以在窗口中将第二个脚本粘贴到第一个脚本之后。  
   

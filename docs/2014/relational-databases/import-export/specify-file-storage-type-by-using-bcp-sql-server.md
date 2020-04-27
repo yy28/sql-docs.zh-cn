@@ -17,23 +17,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011822"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>使用 bcp 指定文件存储类型 (SQL Server)
-  *文件存储类型*描述如何将数据存储在数据文件中。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 `smallint` 形式复制 `int`。 用户定义的数据类型将按其基类型导出。  
+  “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 `smallint` 形式复制 `int`。 用户定义的数据类型将按其基类型导出。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>用于文件存储类型的 bcp 提示符  
- 如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的文件存储类型，如下所示：  
+ 如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、 **-c**、 **-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的文件存储类型，如下所示：  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
  您对此提示符的响应取决于要执行的任务，如下所示：  
   
--   若要以尽可能大的压缩存储的格式（本机数据格式）将数据从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例批量导出到数据文件中，请接受 **bcp**提供的默认文件存储类型。 有关本机文件存储类型的列表，请参阅本主题后面所述的“本机文件存储类型”。  
+-   若要以尽可能大的压缩存储（本机数据格式）将数据从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例批量导出到数据文件中，请接受 bcp 提供的默认文件存储类型  。 有关本机文件存储类型的列表，请参阅本主题后面所述的“本机文件存储类型”。  
   
 -   若要以字符格式将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例大容量导出到数据文件中，请指定 `char` 作为表中所有列的文件存储类型。  
   
@@ -45,12 +45,12 @@ ms.locfileid: "66011822"
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text`<sup>2</sup>|`T`[`ext`]|  
+    |`text` <sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image`<sup>2</sup>|`I`[`mage`]|  
-    |`datetime`|**d [ate]**|  
+    |`image` <sup>2</sup>|`I`[`mage`]|  
+    |`datetime`|**d[ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
     |`date`|`de`|  
@@ -58,19 +58,19 @@ ms.locfileid: "66011822"
     |`datetimeoffset`|`do`|  
     |`decimal`|`n`|  
     |`numeric`|`n`|  
-    |`float`|**f [loat]**|  
+    |`float`|**f[loat]**|  
     |`real`|`r`|  
-    |`Int`|**i [nt]**|  
+    |`Int`|**i[nt]**|  
     |`bigint`|`B[igint]`|  
-    |`smallint`|**s [mallint]**|  
-    |`tinyint`|**t [inyint]**|  
-    |`money`|**m [oney]**|  
+    |`smallint`|**s[mallint]**|  
+    |`tinyint`|**t[inyint]**|  
+    |`money`|**m[oney]**|  
     |`smallmoney`|`M`|  
     |`bit`|`b[it]`|  
     |`uniqueidentifier`|`u`|  
     |`sql_variant`|`V[ariant]`|  
     |`timestamp`|`x`|  
-    |`UDT`（用户定义数据类型）|`U`|  
+    |`UDT`（用户定义的数据类型）|`U`|  
     |`XML`|`X`|  
   
      <sup>1</sup>字段长度、前缀长度和终止符的交互确定在数据文件中为导出为`char`文件存储类型的非字符数据分配的存储空间量。  
@@ -86,11 +86,11 @@ ms.locfileid: "66011822"
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text`<sup>2</sup>|SQLCHAR|  
-|`ntext`<sup>2</sup>|SQLNCHAR|  
+|`text` <sup>2</sup>|SQLCHAR|  
+|`ntext` <sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image`<sup>2</sup>|SQLBINARY|  
+|`image` <sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -128,8 +128,8 @@ ms.locfileid: "66011822"
 ## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [使用 bcp &#40;SQL Server 指定字段长度&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [使用 bcp &#40;SQL Server 指定数据文件中的前缀长度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+ [使用 bcp 指定字段长度 (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)   
+ [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)   
+ [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

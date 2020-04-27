@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011583"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>配置和管理搜索筛选器
@@ -43,7 +43,7 @@ EXEC sp_help_fulltext_system_components 'filter';
 -   [sys.fulltext_index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fulltext_index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
+ [sys. fulltext_index_columns &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
  [FILESTREAM 与其他 SQL Server 功能的兼容性](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   
   

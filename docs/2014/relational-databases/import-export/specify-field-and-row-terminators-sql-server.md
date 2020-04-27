@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011846"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
@@ -95,13 +95,12 @@ ms.locfileid: "66011846"
 ### <a name="examples"></a>示例  
  此示例使用字符格式将 `AdventureWorks``HumanResources.Department` 表中的数据批量导出至 `Department-c-t.txt` 数据文件，其中将逗号用作字段终止符，将换行符 (\n) 用作行终止符。  
   
- 
-  **bcp** 命令包含以下开关。  
+ **bcp** 命令包含以下开关。  
   
 |开关|说明|  
 |------------|-----------------|  
 |**-c**|指定将数据字段作为字符数据加载。|  
-|**-t**`,`|指定逗号 (,) 作为字段终止符。|  
+|**-t** `,`|指定逗号 (,) 作为字段终止符。|  
 |**-r** \n|指定行终止符作为换行符。 这是默认的行终止符，因此将其指定为可选。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则需要指定 **-U** 和 **-P** 才能成功登录。|  
   
@@ -128,8 +127,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|说明|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='*`field_terminator`*'**|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
-    |ROWTERMINATOR **='*`row_terminator`*'**|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
+    |FIELDTERMINATOR **= '*`field_terminator`*'**|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
+    |ROWTERMINATOR **= '*`row_terminator`*'**|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
   
      有关详细信息，请参阅 [BULK INSERT (Transact SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
@@ -171,8 +170,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |选项|Attribute|  
 |------------|---------------|  
 |DATAFILETYPE **= '`char`'**|指定将数据字段作为字符数据加载。|  
-|FIELDTERMINATOR **= '**`,`**'**|将逗号 (`,`) 指定为字段终止符。|  
-|ROWTERMINATOR **= '**`\n`**'**|指定行终止符作为换行符。|  
+|FIELDTERMINATOR **='** `,` **'**|将逗号 (`,`) 指定为字段终止符。|  
+|ROWTERMINATOR **='** `\n` **'**|指定行终止符作为换行符。|  
   
  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查询编辑器中，执行以下代码：  
   
@@ -192,8 +191,8 @@ GO
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [使用 bcp &#40;SQL Server 指定字段长度&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [使用 bcp &#40;SQL Server 指定数据文件中的前缀长度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [使用 bcp &#40;SQL Server 指定文件存储类型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [使用 bcp 指定字段长度 (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)   
+ [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

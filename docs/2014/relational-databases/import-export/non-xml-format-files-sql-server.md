@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011879"
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式化文件 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66011879"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 非 XML 格式化文件的优点  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> 非 XML 格式化文件的优点  
   
 -   通过在 **bcp** 命令中指定 **format** 选项，可以自动创建非 XML 格式化文件。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66011879"
 > [!NOTE]  
 >  XML 格式化文件与非 XML 格式化文件相比具有一些优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
-##  <a name="Structure"></a> 非 XML 格式化文件的结构  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> 非 XML 格式化文件的结构  
  非 XML 格式化文件是具有特殊结构的文本文件。 非 XML 格式化文件包含了有关每个表列的文件存储类型、前缀长度、字段长度和字段终止符的信息。  
   
  下图显示了一个示例非 XML 格式化文件的格式化文件字段。  
@@ -58,8 +58,7 @@ ms.locfileid: "66011879"
   
 |格式化文件字段|说明|  
 |------------------------|-----------------|  
-|版本|该版本号仅可由 **bcp**识别，而无法由 [!INCLUDE[tsql](../../includes/tsql-md.md)]识别。 
-  **bcp** 实用工具的版本号：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注意：读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如， [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** 可以读取由 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**生成的 10.0 版格式化文件，但 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** 无法读取由 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**生成的 12.0 版格式化文件。|  
+|版本|该版本号仅可由 **bcp**识别，而无法由 [!INCLUDE[tsql](../../includes/tsql-md.md)]识别。 **bcp** 实用工具的版本号：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注意：读取格式化文件所用的 bcp 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高  。 例如， [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** 可以读取由 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**生成的 10.0 版格式化文件，但 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** 无法读取由 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**生成的 12.0 版格式化文件。|  
 |列数|数据文件中字段的数目。 该数目必须在所有行中都相同。|  
   
  其他格式化文件字段说明需要大容量导入或导出的数据字段。 每个数据字段都需在格式化文件中占单独一行。 每个格式化文件行均包含下表中说明的格式化文件字段的值。  
@@ -78,7 +77,7 @@ ms.locfileid: "66011879"
 > [!NOTE]  
 >  您可以修改格式化文件，以便从字段编号或顺序与表列的编号或顺序不同的数据文件进行大容量导入。 有关详细信息，请参阅本主题后面的 [相关任务](#RelatedTasks) 列表。  
   
-##  <a name="Examples"></a> 非 XML 格式化文件的示例  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> 非 XML 格式化文件的示例  
  下面的示例显示了一个以前创建的非 XML 格式化文件 (`myDepartmentIdentical-f-c.fmt`)。 该文件描述了 `HumanResources.Department` 示例数据库中的 `AdventureWorks2012` 表中每一列的字符数据字段。  
   
  生成的格式化文件 `myDepartmentIdentical-f-c.fmt`包含以下信息：  
@@ -95,7 +94,7 @@ ms.locfileid: "66011879"
 > [!NOTE]  
 >  有关显示与该非 XML 格式化文件示例相关的格式化文件字段的说明，请参阅本主题前面的 [非 XML 格式化文件的结构](#Structure)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建格式化文件 (SQL Server)](create-a-format-file-sql-server.md)  
   

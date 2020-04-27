@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482764"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>更改属性类型（用于 Excel 的 MDS 外接程序）
@@ -25,12 +25,12 @@ ms.locfileid: "65482764"
 > [!NOTE]  
 >  不能更新“名称”**** 或“代码”**** 列的类型或长度。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../administrators-master-data-services.md)。  
   
 -   必须存在现有的模型、实体和属性。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65482764"
   
 4.  在 **“特性属性”** 对话框中，根据需要更新设置。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
 ## <a name="what-happens-when-you-change-the-attribute-type"></a>在更改属性类型时会发生什么情况？  
  如果属性有任何依赖项，例如属性由任何 MDS 业务规则引用或属性包含在订阅视图中，则您更改属性的数据类型时，MDS 将：  
@@ -74,6 +74,6 @@ ms.locfileid: "65482764"
   
 ## <a name="see-also"></a>另请参阅  
  [属性 &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
- [构建模型 &#40;MDS Add-in for Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [生成模型（用于 Excel 的 MDS 外接程序）](building-a-model-mds-add-in-for-excel.md)  
   
   

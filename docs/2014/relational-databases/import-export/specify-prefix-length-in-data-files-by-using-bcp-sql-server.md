@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011758"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66011758"
 > [!IMPORTANT]  
 >  使用本机格式时，请使用长度前缀而不要使用字段终止符。 本机格式数据可能会与终止符相冲突，因为本机格式数据文件是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部二进制数据格式存储的。  
   
-##  <a name="PrefixLengthsExport"></a> 大容量导出时的前缀长度  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> 大容量导出时的前缀长度  
   
 > [!NOTE]  
 >  导出字段时前缀长度提示中提供的默认值指明的是该字段的最有效前缀长度。  
@@ -83,7 +83,7 @@ ms.locfileid: "66011758"
   
  <sup>1</sup>在`ntext`的`text` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未来版本`image`中将删除、和数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请`nvarchar(max)`改用`varchar(max)`、和`varbinary(max)` 。  
   
-##  <a name="PrefixLengthsImport"></a>大容量导入的前缀长度  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> 大容量导入时的前缀长度  
  大容量导入数据时，前缀长度为最初创建数据文件时指定的值。 如果数据文件不是由 **bcp** 命令创建，那么可能没有长度前缀字符。 在这种情况下，将前缀长度指定为 0。  
   
 > [!NOTE]  
@@ -92,8 +92,8 @@ ms.locfileid: "66011758"
 ## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [使用 bcp &#40;SQL Server 指定字段长度&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [使用 bcp &#40;SQL Server 指定文件存储类型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [使用 bcp 指定字段长度 (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)   
+ [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)   
+ [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

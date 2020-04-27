@@ -20,22 +20,22 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65995085"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files （Transact-sql）
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-此目录视图提供数据库中的外部语言扩展文件的列表。 **R**和**Python**是保留名称，不能用这些特定名称创建外部语言。
+此目录视图提供数据库中的外部语言扩展文件的列表。 “R”和“Python”是保留名称，不能使用这些特定名称创建外部语言   。
 
 从 file_spec 创建外部语言时，此视图中列出了该扩展本身及其属性。 此视图将包含每个语言每个操作系统一个条目。
 
 ## <a name="sysexternal_languages"></a>sys.external_languages
 
-目录视图 sys.databases 列出了数据库中每个外部语言扩展的行 external_language_files。 parameters
+目录视图 sys.databases 列出了数据库中每个外部语言扩展的行 external_language_files。 参数
 
 |列名称 |数据类型 | 说明|
 |------|------|------|
@@ -47,7 +47,7 @@ ms.locfileid: "65995085"
 |parameters|nvarchar(4000)|外部语言 prameters|
 |environment_variables |nvarchar(4000)|外部语言环境变量|
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [创建外部语言](../../t-sql/statements/create-external-language-transact-sql.md)  

@@ -25,16 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011181"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
   创建和维护全文索引涉及使用称为“填充”  （也称为“爬网”  ）的过程填充索引。  
   
-##  <a name="types"></a>填充类型  
+##  <a name="types-of-population"></a><a name="types"></a>填充类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持以下填充类型：完全填充、基于更改跟踪的自动或手动填充和基于时间戳的增量填充。  
   
 ### <a name="full-population"></a>完全填充  
@@ -70,7 +70,7 @@ ms.locfileid: "66011181"
   
      如果您指定 CHANGE_TRACKING MANUAL，全文引擎将对全文索引使用手动填充。 完成首次完全填充之后，当修改基表中的数据时将跟踪更改。 但是，在执行更改全文索引之前，它们不会传播到全文索引 .。。开始更新填充语句。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-     **开始跟踪具有手动填充的更改**  
+     **启动使用手动填充的跟踪更改**  
   
     -   [创建全文索引](/sql/t-sql/statements/create-fulltext-index-transact-sql).。。CHANGE_TRACKING 手动  
   
@@ -91,8 +91,7 @@ ms.locfileid: "66011181"
   
  增量填充要求索引表必须具有 `timestamp` 数据类型的列。 如果 `timestamp` 列不存在，则无法执行增量填充。 对不含 `timestamp` 列的表请求增量填充会导致完全填充操作。 另外，如果影响表全文索引的任意元数据自上次填充以来发生了变化，则增量填充请求将作为完全填充来执行。 这包括更改任何列、索引或全文索引定义所引起的元数据更改。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 `timestamp` 列标识自上次填充后发生更改的行。 然后，增量填充在全文索引中更新上次填充的当时或之后添加、删除或修改的行。 如果对表进行大量插入操作，则使用增量填充会较使用手动填充有效。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 `timestamp` 列标识自上次填充后发生更改的行。 然后，增量填充在全文索引中更新上次填充的当时或之后添加、删除或修改的行。 如果对表进行大量插入操作，则使用增量填充会较使用手动填充有效。  
   
  在填充结束时，全文引擎将记录新的 `timestamp` 值。 该值是 SQL 收集器遇到的最大 `timestamp` 值。 以后再启动增量填充时，将会使用此值。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66011181"
   
 
   
-##  <a name="examples"></a>填充全文索引的示例  
+##  <a name="examples-of-populating-full-text-indexes"></a><a name="examples"></a>填充全文索引的示例  
   
 > [!NOTE]  
 >  本节中的示例使用 `Production.Document` 示例数据库的 `HumanResources.JobCandidate` 或 `AdventureWorks` 表。  
@@ -168,7 +167,7 @@ GO
   
 
   
-##  <a name="create"></a>创建或更改增量填充计划  
+##  <a name="creating-or-changing-a-schedule-for-incremental-population"></a><a name="create"></a>创建或更改增量填充计划  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>在 Management Studio 中创建或更改增量填充计划  
   
@@ -180,7 +179,7 @@ GO
   
  右键单击对其定义了全文索引的表，选择  “全文索引”，然后在  “全文索引”上下文菜单中单击  “属性”。 此时将打开“全文索引属性”  对话框。  
   
-1.  在 "**选择页**" 窗格中，选择 "计划"。  
+1.  在 **“选择页”** 窗格中，选择“计划”。  
   
      使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动对全文索引基表或索引视图的表增量填充。  
   
@@ -189,12 +188,12 @@ GO
   
      选项如下：  
   
-    -   若要创建新计划，请单击“新建”。****  
+    -   若要创建新计划，请单击 **“新建”**。  
   
          此时将打开“新建全文索引表计划”**** 对话框，你可以在此对话框中创建计划。 若要保存计划，请单击 **“确定”**。  
   
         > [!IMPORTANT]  
-        >  在退出“全文索引属性”** 对话框之后，SQL Server 代理作业（对 *database_name*.**table_name** 启动表增量填充）将与新计划相关联。 如果您针对该全文索引创建多个计划，则这些计划都将使用同一作业。  
+        >  在退出“全文索引属性”**** 对话框之后，SQL Server 代理作业（对 *database_name*.*table_name* 启动表增量填充）将与新计划相关联。 如果您针对该全文索引创建多个计划，则这些计划都将使用同一作业。  
   
     -   若要更改某个计划，请选择该计划并单击 **“编辑”**。  
   
@@ -209,7 +208,7 @@ GO
   
 
   
-##  <a name="crawl"></a>排除全文填充（爬网）中的错误  
+##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>排除全文填充（爬网）中的错误  
  如果在爬网期间发生了错误，全文搜索的爬网日志功能会创建并维护一个爬网日志，该日志是一个纯文本文件。 每个爬网日志都对应于某一个全文目录。 默认情况下，给定实例（此处为第一个实例）的爬网日志位于 %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG 文件夹中。 爬网日志文件遵循以下命名方案：  
   
  SQLFT0000500008.2\<DatabaseID>\<FullTextCatalogID>。日志 [\<n>]  

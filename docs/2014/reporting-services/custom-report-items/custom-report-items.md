@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264777"
 ---
 # <a name="custom-report-items"></a>自定义报表项
@@ -44,7 +44,7 @@ ms.locfileid: "63264777"
  [创建自定义报表项设计时组件](creating-a-custom-report-item-design-time-component.md)  
  描述如何创建自定义报表项设计时组件。  
   
- [如何部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
+ [如何：部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
  描述如何部署自定义报表项。  
   
  [自定义报表项类库](custom-report-item-class-libraries.md)  

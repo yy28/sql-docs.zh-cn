@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 937485df231bcff089157bd8fee05ebd913a4ff4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63459858"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER 的协议属性（“标志”选项卡）
-  当服务器上装有证书时，使用 **“MSSQLSERVER 的协议属性”** 对话框中的 **“标志”** 选项卡可以查看或指定协议加密以及隐藏实例选项。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须重新启动才能启用或禁用**ForceEncryption**设置。  
+  当服务器上装有证书时，使用 **“MSSQLSERVER 的协议属性”** 对话框中的 **“标志”** 选项卡可以查看或指定协议加密以及隐藏实例选项。 若要启用或禁用 ForceEncryption[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置，必须重新启动  。  
   
  若要加密连接，应为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 提供一个证书。 如果未安装证书，则实例启动后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将生成一个自签名证书。 此自签名证书可代替可信证书颁发机构颁发的证书，但它不提供身份验证，也不具有不可否认性。  
   
@@ -29,10 +29,10 @@ ms.locfileid: "63459858"
   
  有关加密的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书中的“加密与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接”。  
   
- 登录过程始终是加密的。 如果将 **ForceEncryption** 设为 **“是”**，则将对所有客户端/服务器通信进行加密，并必须将连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的客户端配置为信任服务器证书的根颁发机构。 有关详细信息，请参阅 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 联机丛书中的“如何启用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密连接（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
+ 登录过程始终是加密的。 如果将 **ForceEncryption** 设为 **“是”** ，则将对所有客户端/服务器通信进行加密，并必须将连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的客户端配置为信任服务器证书的根颁发机构。 有关详细信息，请参阅 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 联机丛书中的“如何启用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密连接（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
   
 ## <a name="cluster-servers"></a>集群服务器  
- 若要在故障转移群集中使用加密，必须在故障转移群集中的所有节点上安装具有完全限定的虚拟服务器 DNS 名称的服务器证书。 例如，如果有一个双节点群集，其中节点名为 "test1"。公司>.com "和" test2 "。 * \< *你的公司>.com "和名为" virtsql "的虚拟服务器，你需要安装" virtsql "的证书。 * \< *你的公司在两个节点上都>.com "。 * \< * 然后，可以选中 **SQL Server 配置管理器** 中的 **ForceEncryption** 复选框以将故障转移群集配置为使用加密。  
+ 若要在故障转移群集中使用加密，必须在故障转移群集中的所有节点上安装具有完全限定的虚拟服务器 DNS 名称的服务器证书。 例如，如果有一个包含两个分别名为“test1.*your company>.com”和“test2.\<your company>.com”节点的群集，还有一个名为“virtsql”的虚拟服务器，则需要在这两个节点上安装“virtsql.* your company>.com”的证书 *\<* *\<* 。 然后，可以选中 **SQL Server 配置管理器** 中的 **ForceEncryption** 复选框以将故障转移群集配置为使用加密。  
   
 ## <a name="options"></a>选项  
  **ForceEncryption**  

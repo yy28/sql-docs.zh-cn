@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011653"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字符格式导入或导出数据 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66011653"
   
  下列命令行选项支持 Unicode 字符格式：  
   
-|Command|选项|说明|  
+|Command|选项|描述|  
 |-------------|------------|-----------------|  
 |**bcp**|**-w**|使用 Unicode 字符格式。|  
 |BULK INSERT|DATAFILETYPE **= '** widechar **'**|批量导入数据时使用 Unicode 字符格式。|  
@@ -84,7 +84,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |限定符|说明|  
 |----------------|-----------------|  
 |**-w**|指定 Unicode 字符格式。|  
-|**-t**`,`|将逗号 (`,`) 指定为字段终止符。<br /><br /> 注意：默认的字段终止符是制表符（\t）。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。|  
+|**-t** `,`|将逗号 (`,`) 指定为字段终止符。<br /><br /> 注意：默认的字段终止符是制表符（\t）。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则需要指定 **-U** 和 **-P** 才能成功登录。|  
   
  以下示例将 Unicode 字符格式的数据从 `myTestUniCharData` 表中大容量导出到名为 `myTestUniCharData-w.Dat` 的新数据文件，此数据文件使用逗号 (`,`) 作为字段终止符。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示符下输入：  
@@ -112,16 +112,16 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
- **使用数据格式进行批量导入或批量导出**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
+ **使用数据格式进行大容量导入或大容量导出**  
   
 -   [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [使用字符格式导入或导出数据 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用字符格式导入或导出数据 (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用本机格式导入或导出数据 &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   

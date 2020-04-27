@@ -11,19 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479444"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中不再支持的 Master Data Services 功能
   此主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中不再可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]停用的功能  
+## <a name="sssql14-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 废弃的功能  
  此版本中没有废弃的功能。  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]停用的功能  
+## <a name="sssql11-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 废弃的功能  
   
 ### <a name="security"></a>安全性  
  为了简化安全权限的分配，您不能再向派生层次结构、显式层次结构和属性组等对象分配模型对象权限。  
@@ -53,7 +53,7 @@ ms.locfileid: "65479444"
  此外，包只能部署到创建它们的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中。 这意味着在 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中创建的包不能部署到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]。 您必须将包部署到 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 环境中，然后将数据库升级到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]。  
   
 ### <a name="code-generation-business-rules"></a>代码生成业务规则  
- 自动生成 Code 属性值的业务规则现在以不同的方式进行管理。 以前，若要为 Code 属性生成值，请在 "**业务规则**" 下的 "**系统管理**" 功能区域中将 "**默认属性" 设置为 "生成的值**" 操作。 现在，在 "**系统管理**" 中，您必须编辑该实体以启用自动生成的代码值。 有关详细信息，请参阅[自动创建代码 (Master Data Services)](automatic-code-creation-master-data-services.md)。  
+ 自动生成 Code 属性值的业务规则现在以不同的方式进行管理。 以前，若要为 Code 属性生成值，请在 "**业务规则**" 下的 "**系统管理**" 功能区域中将 "**默认属性" 设置为 "生成的值**" 操作。 现在，在 "**系统管理**" 中，您必须编辑该实体以启用自动生成的代码值。 有关详细信息，请参阅[&#41;&#40;Master Data Services 自动创建代码](automatic-code-creation-master-data-services.md)。  
   
  如果具有包含此类规则的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 模型部署包，当您将数据库升级到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 时，将排除该业务规则。  
   
@@ -68,8 +68,7 @@ ms.locfileid: "65479444"
  批注现在是永久性的，且无法删除。 以前，批注被视为事务，可以通过还原事务来删除批注。  
   
 ### <a name="web-service"></a>Web 服务  
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务现在可应 Silverlight 的要求自动启用。 以前必须手动启用该 Web 服务。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务现在可应 Silverlight 的要求自动启用。 以前必须手动启用该 Web 服务。  
   
 ### <a name="powershell-cmdlets"></a>PowerShell Cmdlet  
  MDS 不再包括 PowerShell cmdlet。  

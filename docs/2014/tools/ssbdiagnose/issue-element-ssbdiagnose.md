@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63285770"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 元素 (ssbdiagnose)
@@ -42,7 +42,7 @@ ms.locfileid: "63285770"
   
 |Attribute|说明|  
 |---------------|-----------------|  
-|`type`|标识 Issue 元素报告的问题类别：<br /><br /> **"诊断"** 报告在分析[!INCLUDE[ssSB](../../includes/sssb-md.md)]配置时发现的配置问题。<br /><br /> **"问题"** 报告已阻止**ssbdiagnose**完成其分析的问题。 更正问题并重新运行 **ssbdiagnose**。<br /><br /> **"事件"** 报告运行[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **时**检查时发现的事件。 仅当指定了 **-SHOWEVENTS** 时才报告事件。|  
+|`type`|标识 Issue 元素报告的问题类别：<br /><br /> **“诊断”** 报告在分析 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 配置时发现的配置问题。<br /><br /> “问题”**** 报告阻止 **ssbdiagnose** 完成其分析的问题。 更正问题并重新运行 **ssbdiagnose**。<br /><br /> **“事件”** 报告在运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **检查时发现的** 事件。 仅当指定了 **-SHOWEVENTS** 时才报告事件。|  
 |`code`|标识消息的错误号。|  
 |`server`|标识在其中发现了问题的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例。 如果问题在默认实例中，则服务器属性只具有计算机名称。 如果问题在命名实例中，则服务器属性的格式为 ComputerName\InstanceName。|  
 |`database`|标识在其中发现了问题的数据库的名称。|  
@@ -50,11 +50,11 @@ ms.locfileid: "63285770"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|描述|  
 |--------------------|-----------------|  
-|**数据类型和长度**|`string`，长度不受限制。|  
+|**数据类型和长度**|，无限长。|  
 |**值**|返回错误消息的文本。|  
-|**出现次数**|每个报告错误一次。|  
+|**匹配项**|每个报告错误一次。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

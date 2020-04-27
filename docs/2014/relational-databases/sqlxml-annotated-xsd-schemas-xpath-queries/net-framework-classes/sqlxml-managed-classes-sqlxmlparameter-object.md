@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010762"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter 对象（SQLXML 托管类）
@@ -29,7 +29,7 @@ ms.locfileid: "66010762"
  名称  
  参数的名称。 命令可以是传递的参数。 调用 SqlXmlCommand 对象的 CreateParameter 方法会创建参数对象。  
   
- 值  
+ Value  
  参数值。 有关工作示例，请参阅[执行 SQL 查询 &#40;SQLXML 托管类&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。  
   
 ## <a name="see-also"></a>另请参阅  

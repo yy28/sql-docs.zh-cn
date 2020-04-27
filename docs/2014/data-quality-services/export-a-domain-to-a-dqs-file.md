@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5b12aa1456f7f4009f48a8c8609f296dfa4b27d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484345"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>将域导出到 .dqs 文件
@@ -26,17 +26,17 @@ ms.locfileid: "65484345"
   
  导出过程创建的 .dqs 数据文件已加密，所以无法查看内容。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  若要将域导出到 .dqs 数据文件，您必须已创建并选择了一个单一域或包含多个单一域的复合域。 您无需具有要导出到的 .dqs 文件，系统将为您创建一个。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能将域导出到 .dqs 数据文件。  
   
-##  <a name="Export"></a>将域导出到 dqs 文件  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>将域导出到 dqs 文件  
  您可以从任何域管理页进行导出。 导出命令可通过用户界面中的控件和域列表窗格的上下文菜单中的命令来使用。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
@@ -47,11 +47,11 @@ ms.locfileid: "65484345"
   
 4.  单击域列表上方的 **“导出知识库数据”** 图标，然后单击 **“导出域”**。 或者，还可以在 **“域”** 列表中右键单击域，指向 **“导出”**，然后单击 **“导出域”**。  
   
-5.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留默认名称，将“DQS 数据文件 (**.dqs)”保留为“另存为”类型，然后单击“保存”****\***********。  
+5.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留默认名称，将“DQS 数据文件 (\*.dqs)”保留为“另存为”类型，然后单击“保存”****************。  
   
-6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击“确定”。   
+6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击" **确定**"。  
   
-##  <a name="FollowUp"></a>跟进：在将域导出到 dqs 文件后  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>跟进：在将域导出到 dqs 文件后  
  将域导出到 .dqs 文件后，您可以将该域导入到另一个知识库。  
   
   

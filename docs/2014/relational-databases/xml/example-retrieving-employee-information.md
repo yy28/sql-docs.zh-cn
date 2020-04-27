@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287840"
 ---
 # <a name="example-retrieving-employee-information"></a>示例：检索雇员信息
@@ -123,9 +123,9 @@ FOR XML EXPLICIT;
   
  下面说明了如何处理通用表中的行以生成所得到的 XML 树：  
   
- 第一个行标识 `Tag` 值 `1`。 因此，标识了 `Tag` 值为 `1` 的列组 `Employee!1!EmpID`。 此列将 `Employee` 标识为元素名称。 然后，将创建一个带有 `Employee` 属性的 <`EmpID`> 元素。 将为这些属性分配相应的列值。  
+ 第一个行标识 `Tag` 值 `1`。 因此，标识了 `Tag` 值为 `1` 的列组 `Employee!1!EmpID`。 此列将 `Employee` 标识为元素名称。 然后，将创建一个带有 `EmpID` 属性的 <`Employee`> 元素。 将为这些属性分配相应的列值。  
   
- 第二个行具有 `Tag` 值 `2`。 因此，标识了列名（ `Tag` 和 `2` ）中具有 `Name!2!FName`值 `Name!2!LName`的列组。 这些列名将 `Name` 标识为元素名称。 将创建一个带有 `Name` 和 `FName` 属性的 <`LName`> 元素。 然后，将为这些属性分配相应的列值。 此行将 `1` 作为 `Parent`标识。 此子元素将添加到上一个 <`Employee`> 元素。  
+ 第二个行具有 `Tag` 值 `2`。 因此，标识了列名（ `Tag` 和 `2` ）中具有 `Name!2!FName`值 `Name!2!LName`的列组。 这些列名将 `Name` 标识为元素名称。 将创建一个带有 `FName` 和 `LName` 属性的 <`Name`> 元素。 然后，将为这些属性分配相应的列值。 此行将 `1` 作为 `Parent`标识。 此子元素将添加到上一个 <`Employee`> 元素。  
   
  对于行集中的其余行，重复此过程。 请注意，对通用表中的行进行排序很重要，因为这使得 FOR XML EXPLICIT 可以按顺序处理行集并生成所需的 XML。  
   

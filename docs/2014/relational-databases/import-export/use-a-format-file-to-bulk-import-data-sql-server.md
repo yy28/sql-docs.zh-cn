@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011771"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式化文件大容量导入数据 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66011771"
  有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   
 > [!NOTE]  
->  若要大容量导出或导入 SQLXML 数据，请在格式文件中使用下列数据类型之一：SQLCHAR 或 SQLVARYCHAR（数据以客户端代码页或排序规则隐含的代码页的形式发送）、SQLNCHAR 或 SQLNVARCHAR（数据以 Unicode 的形式发送）或者 SQLBINARY 或 SQLVARYBIN（数据不经任何转换直接发送）。  
+>  若要大容量导出或导入 SQLXML 数据，请在格式化文件中使用下列数据类型之一：SQLCHAR 或 SQLVARYCHAR（数据以客户端代码页或排序规则隐含的代码页的形式发送）、SQLNCHAR 或 SQLNVARCHAR（数据以 Unicode 的形式发送）或者 SQLBINARY 或 SQLVARYBIN（数据不经任何转换直接发送）。  
   
 ## <a name="examples"></a>示例  
  本节中的示例说明了如何使用格式化文件通过**bcp**命令和 BULK INSERT，并使用 INSERT .。。SELECT * FROM OPENROWSET （BULK ...）语句。 运行这些大容量导入示例之前，都必须先创建示例表、数据文件和格式化文件。  
@@ -75,8 +75,7 @@ GO
  本节中的一些示例使用的是 XML 格式化文件 `myTestFormatFiles-f-x-c.Xml`，而另一些示例使用的是非 XML 格式化文件。 这两种格式化文件都使用字符数据格式和非默认字段终止符 (,)。  
   
 #### <a name="the-sample-non-xml-format-file"></a>示例非 XML 格式化文件  
- 下面的示例使用 **bcp** 基于 `myTestFormatFiles` 表生成一个 XML 格式化文件。 
-  `myTestFormatFiles.Fmt` 文件包含以下信息：  
+ 下面的示例使用 **bcp** 基于 `myTestFormatFiles` 表生成一个 XML 格式化文件。 `myTestFormatFiles.Fmt` 文件包含以下信息：  
   
 ```  
 9.0  
@@ -97,8 +96,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
  有关创建格式化文件的详细信息，请参阅[创建格式化文件 (SQL Server)](create-a-format-file-sql-server.md)。  
   
 #### <a name="the-sample-xml-format-file"></a>示例 XML 格式化文件  
- 下面的示例使用 **bcp** 进行创建，以基于 `myTestFormatFiles` 表生成一个 XML 格式化文件。 
-  `myTestFormatFiles.Xml` 文件包含以下信息：  
+ 下面的示例使用 **bcp** 进行创建，以基于 `myTestFormatFiles` 表生成一个 XML 格式化文件。 `myTestFormatFiles.Xml` 文件包含以下信息：  
   
 ```  
 <?xml version="1.0"?>  
@@ -134,10 +132,10 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 ```  
   
 > [!NOTE]  
->  有关此命令的详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)。  
+>   有关此命令的详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
   
 ### <a name="using-bulk-insert"></a>使用 BULK INSERT  
- 下面的示例使用 BULK INSERT 将数据从 `myTestFormatFiles-c.Dat` 数据文件大容量导入到 `HumanResources.myTestFormatFiles` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表中。 此示例使用的是非 XML 格式化文件 `MyTestFormatFiles.Fmt`。 此示例在导入数据文件之前删除所有的现有表行。  
+ 下面的示例使用 BULK INSERT 将数据从 `myTestFormatFiles-c.Dat` 数据文件大容量导入到 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例数据库中的 `HumanResources.myTestFormatFiles` 表中。 此示例使用的是非 XML 格式化文件 `MyTestFormatFiles.Fmt`。 此示例在导入数据文件之前删除所有的现有表行。  
   
  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查询编辑器中，执行以下语句：  
   
@@ -198,7 +196,7 @@ DROP TABLE myTestFormatFiles
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [非 XML 格式化文件 &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [非 XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)   
  [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)  
   
   

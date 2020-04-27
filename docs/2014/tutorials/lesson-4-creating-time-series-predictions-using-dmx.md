@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312093"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>第 4 课：使用 DMX 创建时序预测
@@ -93,8 +93,7 @@ WHERE [<criteria>]
   
      第二行和第三行使用 `PredictTimeSeries` 函数。 每一行都预测一个不同的属性（`[Quantity]` 或 `[Amount]`）。 可预测属性名称后面的数字指定要预测的时间步长量。  
   
-     
-  `AS` 子句用于为每个预测函数返回的列提供名称。 如果您不提供别名，则默认情况下将返回这两列，标签为 `Expression`。  
+     `AS` 子句用于为每个预测函数返回的列提供名称。 如果您不提供别名，则默认情况下将返回这两列，标签为 `Expression`。  
   
 4.  将  
   

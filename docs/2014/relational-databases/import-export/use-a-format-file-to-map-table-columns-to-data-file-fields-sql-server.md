@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011744"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式化文件将表列映射到数据文件字段 (SQL Server)
@@ -96,8 +96,7 @@ GO
 ## <a name="using-an-xml-format-file"></a>使用 XML 格式化文件  
  下面的非 XML 格式化文件示例提供了一个格式化文件 `myTestOrder.xml`，它将 `myTestOrder-c.txt` 中的字段映射到 `myTestOrder` 表中的列。有关如何创建数据文件和表的信息，请参阅本主题前面的“示例表和数据文件”部分。  
   
- 
-  `myTestOrder.xml` 格式化文件包含以下信息：  
+ `myTestOrder.xml` 格式化文件包含以下信息：  
   
 ```  
 <?xml version="1.0"?>  
@@ -123,8 +122,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 >  有关 XML 架构语法和 XML 格式化文件的其他示例的信息，请参阅 [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
 ### <a name="example"></a>示例  
- 下面的示例使用 XML 格式化文件 `OPENROWSET` ，通过 `myTestOrder-c.txt` 大容量行集提供程序将数据文件 `myTestOrder` 中的数据导入示例表 `myTestOrder.xml` 中。 
-  `INSERT... SELECT` 语句指定选择列表中的列。  
+ 下面的示例使用 XML 格式化文件 `OPENROWSET` ，通过 `myTestOrder-c.txt` 大容量行集提供程序将数据文件 `myTestOrder` 中的数据导入示例表 `myTestOrder.xml` 中。 `INSERT... SELECT` 语句指定选择列表中的列。  
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中，执行下列代码：  
   
@@ -141,7 +139,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用格式化文件跳过表列 &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [使用格式化文件跳过数据字段 (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   

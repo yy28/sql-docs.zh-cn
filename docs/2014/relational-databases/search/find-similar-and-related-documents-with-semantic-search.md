@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011322"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>使用语义搜索来查找相似和相关文档
   说明在为统计语义索引配置的列上如何查找相似或相关的文档或文本值，以及如何查找其相似或相关程度的信息。  
   
-##  <a name="BasicsQuerySimilar"></a>查找相似或相关文档  
+##  <a name="finding-similar-or-related-documents"></a><a name="BasicsQuerySimilar"></a>查找相似或相关文档  
   
-###  <a name="HowToQuerySimilar"></a>如何：通过 SEMANTICSIMILARITYTABLE 查找相似或相关文档  
+###  <a name="how-to-find-similar-or-related-documents-with-semanticsimilaritytable"></a><a name="HowToQuerySimilar"></a>如何：通过 SEMANTICSIMILARITYTABLE 查找相似或相关文档  
  若要标识特定列中相似或相关文档，请查询函数 [semanticsimilaritytable (Transact-SQL)](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql)。  
   
  **SEMANTICSIMILARITYTABLE** 返回一个表，该表由指定列中其内容在语义上类似于指定文档的零个、一个或多个行构成。 可以在 SELECT 语句的 FROM 子句中像引用常规表名那样引用此行集函数。  
@@ -36,7 +36,7 @@ ms.locfileid: "66011322"
 > [!IMPORTANT]  
 >  针对的列必须启用了全文索引和语义索引。  
   
-###  <a name="HowToIdentifySimilar"></a>示例：查找与另一个文档类似的顶级文档  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>示例：查找与另一个文档类似的顶级文档  
  下面的示例*@CandidateID*从 AdventureWorks2012 示例数据库的 humanresources.jobcandidate 表中检索与指定的候选项类似的前10个候选项。  
   
 ```scr  
@@ -51,9 +51,9 @@ ORDER BY KEY_TBL.score DESC;
 GO  
 ```  
   
-##  <a name="BasicsQuerySimilarity"></a>查找有关文档相似或相关程度的信息  
+##  <a name="finding-information-about-how-documents-are-similar-or-related"></a><a name="BasicsQuerySimilarity"></a>查找有关文档相似或相关程度的信息  
   
-###  <a name="HowToQuerySimilarity"></a>如何：查找有关文档如何与 SEMANTICSIMILARITYDETAILSTABLE 相关的信息或与之相关的信息  
+###  <a name="how-to-find-information-about-how-documents-are-similar-or-related-with-semanticsimilaritydetailstable"></a><a name="HowToQuerySimilarity"></a>如何：查找有关文档如何与 SEMANTICSIMILARITYDETAILSTABLE 相关的信息或与之相关的信息  
  若要获取使文档相似或相关的关键短语的信息，可以查询函数 [semanticsimilaritydetailstable (Transact-SQL)](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql)。  
   
  **SEMANTICSIMILARITYDETAILSTABLE** 返回一个表，该表包含其内容在语义上相似的两个文档（源文档和匹配的文档）共有的关键短语的零个、一个或多个行。 可以在 SELECT 语句的 FROM 子句中像引用常规表名那样引用此行集函数。  
@@ -63,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  针对的列必须启用了全文索引和语义索引。  
   
-###  <a name="HowToSimilarPhrases"></a>示例：查找文档之间相似的主要短语  
+###  <a name="example-find-the-top-key-phrases-that-are-similar-between-documents"></a><a name="HowToSimilarPhrases"></a>示例：查找文档之间相似的主要短语  
  以下示例检索 5 个关键短语，它们在 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表中的两个指定候选人间具有最高的相似性得分。  
   
 ```sql  

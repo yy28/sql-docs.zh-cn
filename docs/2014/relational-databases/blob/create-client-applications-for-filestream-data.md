@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010175"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>为 FILESTREAM 数据创建客户端应用程序
@@ -31,33 +31,32 @@ ms.locfileid: "66010175"
 > [!NOTE]  
 >  本主题中的示例需要在 [创建启用 FILESTREAM 的数据库](create-a-filestream-enabled-database.md) 和 [创建表以存储 FILESTREAM 数据](create-a-table-for-storing-filestream-data.md)中创建的启用了 FILESTREAM 的数据库和表。  
   
-##  <a name="func"></a>用于处理 FILESTREAM 数据的函数  
+##  <a name="functions-for-working-with-filestream-data"></a><a name="func"></a> 用于使用 FILESTREAM 数据的函数  
  使用 FILESTREAM 来存储二进制大型对象 (BLOB) 数据时，可使用 Win32 API 来处理文件。 为了支持在 Win32 应用程序中处理 FILESTREAM BLOB 数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了以下函数和 API：  
   
--   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql)将路径作为标记返回给 BLOB。 应用程序可使用此标记来获取 Win32 句柄并对 BLOB 数据进行操作。  
+-   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) 可将路径作为标记返回给 BLOB。 应用程序可使用此标记来获取 Win32 句柄并对 BLOB 数据进行操作。  
   
      在包含 FILESTREAM 数据的数据库属于某一 AlwaysOn 可用性组时，PathName 函数返回虚拟网络名称 (VNN)，而非计算机名称。  
   
--   [GET_FILESTREAM_TRANSACTION_CONTEXT （）](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)返回表示会话当前事务的标记。 应用程序使用此标记可将 FILESTREAM 文件系统流式处理操作绑定到该事务。  
+-   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) 可返回表示会话当前事务的标记。 应用程序使用此标记可将 FILESTREAM 文件系统流式处理操作绑定到该事务。  
   
--   
-  [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 可获取 Win32 文件句柄。 应用程序使用此句柄可对 FILESTREAM 数据进行流式处理，然后可以将此句柄传递给以下 Win32 API： [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果应用程序使用此句柄来调用任何其他 API，则会返回 ERROR_ACCESS_DENIED 错误。 应用程序应使用 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)来关闭此句柄。  
+-   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 可获取 Win32 文件句柄。 应用程序使用此句柄可对 FILESTREAM 数据进行流式处理，然后可以将此句柄传递给以下 Win32 API： [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果应用程序使用此句柄来调用任何其他 API，则会返回 ERROR_ACCESS_DENIED 错误。 应用程序应使用 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)来关闭此句柄。  
   
- 所有 FILESTREAM 数据容器访问都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务中执行的。 [!INCLUDE[tsql](../../includes/tsql-md.md)]可以在同一事务中执行语句以保持 SQL 数据和 FILESTREAM 数据之间的一致性。  
+ 所有 FILESTREAM 数据容器访问都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务中执行的。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以保持 SQL 数据和 FILESTREAM 数据之间的一致性。  
   
-##  <a name="steps"></a>访问 FILESTREAM 数据的步骤  
+##  <a name="steps-for-accessing-filestream-data"></a><a name="steps"></a> 访问 FILESTREAM 数据的步骤  
   
-###  <a name="path"></a>读取 FILESTREAM 文件路径  
- FILESTREAM 表中的每个单元都具有关联的文件路径。 若要读取该路径，请在 `PathName` 语句中使用 `varbinary(max)` 列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 属性。 下面的示例说明了如何读取 `varbinary(max)` 列的文件路径。  
+###  <a name="reading-the-filestream-file-path"></a><a name="path"></a> 读取 FILESTREAM 文件路径  
+ FILESTREAM 表中的每个单元都具有关联的文件路径。 若要读取该路径，请在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用 `PathName` 列的 `varbinary(max)` 属性。 下面的示例说明了如何读取 `varbinary(max)` 列的文件路径。  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
-###  <a name="trx"></a>读取事务上下文  
- 若要获取当前事务上下文，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) 函数。 下面的示例说明了如何开始执行事务并读取当前事务上下文。  
+###  <a name="reading-the-transaction-context"></a><a name="trx"></a> 读取事务上下文  
+ 要获取当前事务上下文，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) 函数。 下面的示例说明了如何开始执行事务并读取当前事务上下文。  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
-###  <a name="handle"></a>获取 Win32 文件句柄  
+###  <a name="obtaining-a-win32-file-handle"></a><a name="handle"></a> 获取 Win32 文件句柄  
  若要获取 Win32 文件句柄，请调用 OpenSqlFilestream API。 此 API 是从 sqlncli.dll 文件中导出的。 可以将返回的句柄传递给以下任何 Win32 API： [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 下面的示例说明了如何获取 Win32 文件句柄并使用它在 FILESTREAM BLOB 中读取和写入数据。  
   
  [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
@@ -66,7 +65,7 @@ ms.locfileid: "66010175"
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
-##  <a name="best"></a>应用程序设计和实现的最佳实践  
+##  <a name="best-practices-for-application-design-and-implementation"></a><a name="best"></a> 应用程序设计和实现的最佳实践  
   
 -   设计和实现使用 FILESTREAM 的应用程序时，应考虑下列准则：  
   

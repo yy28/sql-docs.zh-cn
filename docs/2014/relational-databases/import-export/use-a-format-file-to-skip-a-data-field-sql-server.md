@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011716"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式化文件跳过数据字段 (SQL Server)
@@ -66,8 +66,7 @@ GO
 ## <a name="non-xml-format-file-for-more-data-fields"></a>针对较多数据字段的非 XML 格式化文件  
  以下格式化文件 `myTestSkipField.fmt` 将 `myTestSkipField-c.dat` 中的字段映射至 `myTestSkipField` 表的列。 该格式化文件使用字符数据格式。 跳过列映射需要将列顺序值更改为 0，如格式化文件中 `ExtraField` 列所示。  
   
- 
-  `myTestSkipField.fmt` 格式化文件包含以下信息：  
+ `myTestSkipField.fmt` 格式化文件包含以下信息：  
   
 ```  
 9.0  
@@ -103,8 +102,7 @@ GO
   
  以下格式化文件 `myTestSkipField.xml` 将 `myTestSkipField-c.dat` 中的字段映射至 `myTestSkipField` 表的列。 该格式化文件使用字符数据格式。  
   
- 
-  `myTestSkipField.xml` 格式化文件包含以下信息：  
+ `myTestSkipField.xml` 格式化文件包含以下信息：  
   
 ```  
 <?xml version="1.0"?>  
@@ -147,7 +145,7 @@ GO
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [使用格式化文件跳过表列 &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [使用格式化文件将表列映射到数据文件字段 (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

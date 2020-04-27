@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011845"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>准备大容量导入数据 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66011845"
 > [!NOTE]  
 >  不支持将数据大容量导入到远程表中。  
   
- 在将数据文件中的数据大容量导入到实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，请使用以下准则：  
+ 在将数据文件中的数据大容量导入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，请使用以下原则：  
   
 -   为用户帐户获取所需的权限。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011845"
   
 -   使用大容量日志恢复模式。  
   
-     此原则适用于使用完整恢复模式的数据库。 对无索引表（“堆”**）执行批量操作时，大容量日志恢复模式非常有用。 使用大容量日志恢复有助于防止事务日志出现空间不足的情况，因为大容量日志恢复不会插入日志行。 有关大容量日志恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)。  
+     此原则适用于使用完整恢复模式的数据库。 对无索引表（“堆”  ）执行批量操作时，大容量日志恢复模式非常有用。 使用大容量日志恢复有助于防止事务日志出现空间不足的情况，因为大容量日志恢复不会插入日志行。 有关大容量日志恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)。  
   
      建议您在执行大容量导入操作之前，先将数据库改为使用大容量日志恢复模式。 之后应立即将数据库重设为完整恢复模式。 有关详细信息，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "66011845"
      许多实用工具和文本编辑器都会显示隐藏字符，这些隐藏字符通常位于数据文件末尾。 在大容量导入操作期间，ASCII 数据文件中的隐藏字符会导致问题，这些问题会引发“发现意外空字符”错误。 查找并删除所有隐藏字符有助于避免此问题。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 bcp 实用工具 &#40;SQL Server 导入和导出大容量数据&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
+ [使用 bcp 实用工具导入和导出大容量数据 (SQL Server)](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [使用 BULK INSERT 或 OPENROWSET (BULK...) 导入批量数据 (SQL Server)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [用于大容量导入或大容量导出的数据格式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [用于批量导入或导出的数据格式 (SQL Server)](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)  
   
   

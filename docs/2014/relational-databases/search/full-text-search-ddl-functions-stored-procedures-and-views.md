@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011313"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>全文搜索 DDL、函数、存储过程和视图
@@ -24,7 +24,7 @@ ms.locfileid: "66011313"
   
  有关支持语义搜索的数据库对象的列表，请参阅 [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)。  
   
-##  <a name="ddl"></a> Transact-SQL 数据定义语言 (DDL) 语句  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL 数据定义语言 (DDL) 语句  
   
 -   [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66011313"
   
 -   [DROP SEARCH PROPERTY LIST (Transact-SQL)](/sql/t-sql/statements/drop-search-property-list-transact-sql)  
   
-##  <a name="func"></a> 系统谓词和功能  
+##  <a name="system-predicates-and-functions"></a><a name="func"></a> 系统谓词和功能  
   
 -   [CONTAINS (Transact-SQL)](/sql/t-sql/queries/contains-transact-sql)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66011313"
   
 -   [FREETEXTTABLE (Transact-SQL)](/sql/relational-databases/system-functions/freetexttable-transact-sql)  
   
-##  <a name="meta"></a> 系统元数据函数  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> 系统元数据函数  
   
 -   [COLUMNPROPERTY (Transact-SQL)](/sql/t-sql/functions/columnproperty-transact-sql)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66011313"
   
 -   [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql)  
   
-##  <a name="proc"></a> 系统存储过程  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> 系统存储过程  
   
 -   [sp_fulltext_keymappings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66011313"
   
 -   [sp_help_fulltext_system_components (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="cat"></a> 系统视图 - 目录视图  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> 系统视图 - 目录视图  
   
 -   [sys.fulltext_catalogs (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66011313"
   
 -   [sys.registered_search_property_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
-##  <a name="dmv"></a> 系统视图 - 动态管理视图  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> 系统视图 - 动态管理视图  
   
 -   [sys.dm_fts_active_catalogs (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   

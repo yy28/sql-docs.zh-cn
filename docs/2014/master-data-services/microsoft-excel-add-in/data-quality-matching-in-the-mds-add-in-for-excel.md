@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478906"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>用于 Excel 的 MDS 外接程序中的数据质量匹配
@@ -25,9 +25,9 @@ ms.locfileid: "65478906"
 ## <a name="workflow-for-data-quality-matching"></a>用于数据质量匹配的工作流  
  在将 DQS 用于 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]时，使用以下工作流：  
   
-1.  检索 MDS 管理的数据的列表并将其与未在 MDS 中管理的列表合并。 有关详细信息，请参阅[合并数据（用于 Excel 的 MDS 外接程序）](combine-data-mds-add-in-for-excel.md)。  
+1.  检索 MDS 管理的数据的列表并将其与未在 MDS 中管理的列表合并。 有关详细信息，请参阅 [合并数据（用于 Excel 的 MDS 外接程序）](combine-data-mds-add-in-for-excel.md)。  
   
-2.  使用 DQS 知识可以比较合并的列表中的数据。 有关详细信息，请参阅[匹配相似数据（用于 Excel 的 MDS 外接程序）](match-similar-data-mds-add-in-for-excel.md)。  
+2.  使用 DQS 知识可以比较合并的列表中的数据。 有关详细信息，请参阅 [匹配相似数据（用于 Excel 的 MDS 外接程序）](match-similar-data-mds-add-in-for-excel.md)。  
   
 3.  若要查看与 DQS 发现的相似性有关的详细信息，请显示详细信息列。  
   
@@ -48,8 +48,8 @@ ms.locfileid: "65478906"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|将外部数据与 MDS 管理的数据进行合并以便准备进行比较。|[合并数据 &#40;MDS Add-in for Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
-|使用 DQS 知识来查找您的数据中的相似之处。|[匹配相似的数据 &#40;MDS Add-in for Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|将外部数据与 MDS 管理的数据进行合并以便准备进行比较。|[合并数据（用于 Excel 的 MDS 外接程序）](combine-data-mds-add-in-for-excel.md)|  
+|使用 DQS 知识来查找您的数据中的相似之处。|[匹配相似数据（用于 Excel 的 MDS 外接程序）](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相关内容  
   

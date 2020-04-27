@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72d0d319c8ac512be55ef93a9d0e55802da2de22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478516"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>测试用户权限 (Master Data Services)
@@ -31,6 +31,6 @@ ms.locfileid: "65478516"
 4.  下次您打开浏览器窗口时，将提示您输入用户名和密码。  
   
 ## <a name="see-also"></a>另请参阅  
- [安全 &#40;Master Data Services&#41;](security-master-data-services.md)  
+ [安全性 (Master Data Services)](security-master-data-services.md)  
   
   

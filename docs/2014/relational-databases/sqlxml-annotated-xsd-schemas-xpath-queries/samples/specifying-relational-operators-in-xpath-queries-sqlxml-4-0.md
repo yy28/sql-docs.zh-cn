@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012442"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定关系运算符 (SQLXML 4.0)
@@ -36,8 +36,7 @@ ms.locfileid: "66012442"
   
  方括号中指定的谓词用于筛选** \<Customer>** 元素。 仅返回** \<客户>** 元素，这些元素至少具有一个** \<OrderDetail**为 OrderQty 特性值大于3的>孙。  
   
- 
-  `child` 轴为默认轴。 因此，可以将该查询指定为：  
+ `child` 轴为默认轴。 因此，可以将该查询指定为：  
   
 ```  
 /Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  

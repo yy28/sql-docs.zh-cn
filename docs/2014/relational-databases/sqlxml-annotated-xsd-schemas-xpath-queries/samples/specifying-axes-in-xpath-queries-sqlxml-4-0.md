@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010719"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定轴 (SQLXML 4.0)
@@ -41,8 +41,7 @@ ms.locfileid: "66010719"
   
  在查询中， `child`是`Contact`轴，是节点测试（如果`Contact`是** \<元素>** 节点，则为 TRUE，因为\<元素> 是与`child`轴关联的主节点类型）。  
   
- 
-  `child` 轴为默认轴。 因此，可以将该查询编写为：  
+ `child` 轴为默认轴。 因此，可以将该查询编写为：  
   
 ```  
 /Contact  
@@ -93,8 +92,7 @@ ms.locfileid: "66010719"
   
  在查询中， `child` `Customer`是轴，并且`Order`是节点测试（如果 Customer 和 Order 是** \<元素>** 节点，则这些节点测试为 TRUE，因为>节点的** \<元素**是`child`轴的主节点）。 对于与** \<客户>** 匹配的每个节点，会将与** \<订单>** 匹配的节点添加到结果中。 仅在结果集中返回** \<订单>** 。  
   
- 
-  `child` 轴为默认轴。 因此，可以将该查询指定为：  
+ `child` 轴为默认轴。 因此，可以将该查询指定为：  
   
 ```  
 /Customer/Order  

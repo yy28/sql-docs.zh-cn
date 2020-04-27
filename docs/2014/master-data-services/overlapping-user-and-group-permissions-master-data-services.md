@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478888"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重叠的用户和组权限（主数据服务）
@@ -30,11 +30,11 @@ ms.locfileid: "65478888"
   
  如果用户是多个组的成员，并且这些组有权访问主数据管理器，则适用以下规则：  
   
--   **Deny**替代所有其他权限。  
+-   **“拒绝”** 覆盖所有其他权限。  
   
 -   **更新**替代**为只读**。  
   
- 这些规则应用到 **“模型”** 和 **“层次结构成员”** 选项卡。 先为每个选项卡确定权限，再将权限进行组合。 有关详细信息，请参阅[如何确定权限 (Master Data Services)](how-permissions-are-determined-master-data-services.md)  
+ 这些规则应用到 **“模型”** 和 **“层次结构成员”** 选项卡。 先为每个选项卡确定权限，再将权限进行组合。 有关详细信息，请参阅 [如何确定权限 (Master Data Services)](how-permissions-are-determined-master-data-services.md)。  
   
 > [!NOTE]  
 >  可以在用户界面中查看用户和组的重叠权限的解决方法。 “模型”**** 和“层次结构成员”**** 选项卡都具有下拉列表，可以从中选择“有效”****，查看有效权限。  

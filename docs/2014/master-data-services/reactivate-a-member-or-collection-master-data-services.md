@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e78e31157f62346baf12d58c146ed99aab205408
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482651"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新激活成员或集合 (Master Data Services)
@@ -39,24 +39,22 @@ ms.locfileid: "65482651"
   
  重新激活集合或成员时，将还原以前的所有事务。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，您必须具有对 **“版本管理”** 功能区域的权限。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>重新激活成员或集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击“版本管理” ****。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击 **“版本管理”**。  
   
 2.  在菜单栏上，单击 **“事务”**。  
   
 3.  在 **“事务”** 页上，从 **“模型”** 列表中选择某个模型。  
   
-4.  
-  **
-  ** 从“版本”列表中，选择某一版本。  
+4.  **** 从“版本”列表中，选择某一版本。  
   
 5.  在 **“事务”** 窗格中，单击要重新激活的成员或集合所对应的行。 此行应在“旧值”**** 列中显示“活动”**** 并在“新值”**** 列中显示“已停用”****。  
   
@@ -68,6 +66,6 @@ ms.locfileid: "65482651"
  [使用 &#40;Master Data Services 的临时过程来停用或删除成员&#41;](add-update-and-delete-data-master-data-services.md)   
  [&#40;Master Data Services 中删除成员或集合&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

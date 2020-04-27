@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011473"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
   全文目录是虚拟对象，并不属于任何文件组；它是表示一组全文索引的逻辑概念。  
   
-##  <a name="creating"></a>创建全文目录  
+##  <a name="creating-a-full-text-catalog"></a><a name="creating"></a>创建全文目录  
   
 #### <a name="to-create-a-full-text-catalog"></a>创建全文目录  
   
@@ -42,13 +42,12 @@ ms.locfileid: "66011473"
   
   
   
-##  <a name="props"></a>查看全文目录的属性  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数（例如 FULLTEXTCATALOGPROPERTY）可用来获取与全文索引相关的各种属性的值。 此信息可用于全文搜索的管理和故障排除。  
+##  <a name="viewing-the-properties-of-a-full-text-catalog"></a><a name="props"></a>查看全文目录的属性  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数（例如 FULLTEXTCATALOGPROPERTY）可用来获取与全文索引相关的各种属性的值。 此信息可用于全文搜索的管理和故障排除。  
   
  下表列出了与全文目录相关的属性。  
   
-|properties|说明|函数|  
+|属性|说明|函数|  
 |--------------|-----------------|--------------|  
 |`AccentSensitivity`|区分重音设置。|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|是否将导入全文目录。|FULLTEXTCATALOGPROPERTY|  
@@ -61,7 +60,7 @@ ms.locfileid: "66011473"
   
   
   
-##  <a name="rebuildone"></a>重新生成全文目录  
+##  <a name="rebuilding-a-full-text-catalog"></a><a name="rebuildone"></a>重新生成全文目录  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>重新生成全文目录  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66011473"
   
   
   
-##  <a name="rebuildall"></a>为数据库重新生成所有全文目录  
+##  <a name="rebuilding-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a>为数据库重新生成所有全文目录  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>为数据库重新生成全文目录  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66011473"
   
   
   
-##  <a name="removing"></a>从数据库中删除全文目录  
+##  <a name="removing-a-full-text-catalog-from-a-database"></a><a name="removing"></a>从数据库中删除全文目录  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>从数据库中删除全文目录  
   

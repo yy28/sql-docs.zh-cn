@@ -15,17 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010143"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   借助 FILESTREAM，基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序可以将非结构化的数据（如文档和图像）存储在文件系统中。 应用程序在利用丰富的流式 API 和文件系统的性能的同时，还可保持非结构化数据和对应的结构化数据之间的事务一致性。  
   
- FILESTREAM 通过将[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]二进制大型对象（BLOB）数据`varbinary(max)`作为文件存储在文件系统中，将二进制大型对象（BLOB）数据与 NTFS 文件系统集成。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 Win32 文件系统接口提供对数据的流式访问。  
+ FILESTREAM 通过将[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]二进制大型对象（BLOB）数据`varbinary(max)`作为文件存储在文件系统中，将二进制大型对象（BLOB）数据与 NTFS 文件系统集成。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 Win32 文件系统接口提供对数据的流访问权限。  
   
  FILESTREAM 使用 NT 系统缓存来缓存文件数据。 这有助于减少 FILESTREAM 数据可能对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生的任何影响。 由于没有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池，因此该内存可用于查询处理。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66010143"
   
  有关安装和使用 FILESTREAM 的详细信息，请参阅 [相关任务](#reltasks)的列表。  
   
-##  <a name="whentouse"></a>何时使用 FILESTREAM  
+##  <a name="when-to-use-filestream"></a><a name="whentouse"></a>何时使用 FILESTREAM  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，BLOB 可以是将数据存储在表中的标准 `varbinary(max)` 数据，也可以是将数据存储在文件系统中的 FILESTREAM `varbinary(max)` 对象。 数据的大小和应用情况决定您应该使用数据库存储还是文件系统存储。 如果满足以下条件，则应考虑使用 FILESTREAM：  
   
 -   所存储的对象平均大于 1 MB。  
@@ -45,7 +44,7 @@ ms.locfileid: "66010143"
  对于较小的对象，将 `varbinary(max)` BLOB 存储在数据库中通常会提供更为优异的流性能。  
   
   
-##  <a name="storage"></a>FILESTREAM 存储  
+##  <a name="filestream-storage"></a><a name="storage"></a>FILESTREAM 存储  
  FILESTREAM 存储以 `varbinary(max)` 列的形式实现，在该列中数据以 BLOB 的形式存储在文件系统中。 BLOB 的大小仅受文件系统容量大小的限制。 文件大小为 2 GB 的 `varbinary(max)` 标准限制不适用于存储在文件系统中的 BLOB。  
   
  若要指定列应将数据存储在文件系统中，请对 `varbinary(max)` 列指定 FILESTREAM 属性。 这样 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会将该列的所有数据存储在文件系统，而不是数据库文件中。  
@@ -79,7 +78,7 @@ ms.locfileid: "66010143"
 > [!NOTE]  
 >  SQL 登录名不能与 FILESTREAM 容器配合工作。 只有 NTFS 身份验证可与 FILESTREAM 容器配合工作。  
   
-##  <a name="dual"></a>使用 Transact-sql 和文件系统流访问来访问 BLOB 数据  
+##  <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> 使用 Transact-SQL 和文件系统流访问来访问 BLOB 数据  
  在将数据存储在 FILESTREAM 列中之后，即可通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 事务或 Win32 API 访问文件。  
   
 ### <a name="transact-sql-access"></a>Transact-SQL 访问  
@@ -102,13 +101,11 @@ ms.locfileid: "66010143"
   
  **存储命名空间**  
   
- 在 FILESTREAM 中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 控制 BLOB 物理文件系统的命名空间。 
-  [PathName](/sql/relational-databases/system-functions/pathname-transact-sql)是一个新增的内部函数，它提供对应于表中每个 FILESTREAM 单元的 BLOB 的逻辑 UNC 路径。 应用程序使用此逻辑路径来获取 Win32 句柄并通过使用常见的 Win32 文件系统接口对 BLOB 数据进行操作。 如果 FILESTREAM 列的值为 NULL，则此函数将返回 NULL。  
+ 在 FILESTREAM 中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 控制 BLOB 物理文件系统的命名空间。 [PathName](/sql/relational-databases/system-functions/pathname-transact-sql)是一个新增的内部函数，它提供对应于表中每个 FILESTREAM 单元的 BLOB 的逻辑 UNC 路径。 应用程序使用此逻辑路径来获取 Win32 句柄并通过使用常见的 Win32 文件系统接口对 BLOB 数据进行操作。 如果 FILESTREAM 列的值为 NULL，则此函数将返回 NULL。  
   
  **事务文件系统访问**  
   
- 
-  [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)是一个新增的内部函数，它提供表示与会话相关联的当前事务的标记。 事务必须已启动，且仍未被中止或提交。 通过获取标记，应用程序将 FILESTREAM 文件系统流操作与已启动的事务绑定在一起。 在没有显式启动的事务的情况下，此函数将返回 NULL。  
+ [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)是一个新增的内部函数，它提供表示与会话相关联的当前事务的标记。 事务必须已启动，且仍未被中止或提交。 通过获取标记，应用程序将 FILESTREAM 文件系统流操作与已启动的事务绑定在一起。 在没有显式启动的事务的情况下，此函数将返回 NULL。  
   
  在提交或中止事务之前必须关闭所有文件句柄。 如果在事务范围之外仍有句柄处于打开状态，则对句柄执行的其他读取将失败，对句柄执行的其他写入将成功，但实际数据不会写入磁盘中。 与此类似，如果数据库或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例关闭，则所有处于打开状态的句柄均无效。  
   
@@ -118,8 +115,7 @@ ms.locfileid: "66010143"
   
  **隔离语义**  
   
- 隔离语义由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事务隔离级别决定。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件系统访问支持已提交读隔离级别。 支持重复的读取操作以及可序列化隔离和快照隔离。 不支持脏读。  
+ 隔离语义由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事务隔离级别决定。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件系统访问支持已提交读隔离级别。 支持重复的读取操作以及可序列化隔离和快照隔离。 不支持脏读。  
   
  文件系统访问的打开操作不等待任何锁。 与此相反，如果打开操作因为事务隔离而无法访问数据，则打开操作将立即失败。 如果由于隔离冲突而无法继续执行打开操作，则流 API 调用将失败并返回 ERROR_SHARING_VIOLATION 错误。  
   
@@ -127,7 +123,7 @@ ms.locfileid: "66010143"
   
  如果在写入句柄之后发出 FSCTL，则将保持最后一个写入操作并丢失之前对句柄执行的写入操作。  
   
- **文件系统 Api 和支持的隔离级别**  
+ **文件系统 API 和支持的隔离级别**  
   
  当文件系统 API 由于隔离冲突而无法打开文件时，将返回 ERROR_SHARING_VIOLATION 异常。 两个事务尝试访问同一文件时，将发生此隔离冲突。 访问操作的结果取决于打开该文件的模式和运行事务的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 下表概括了访问同一文件的两个事务的可能结果。  
   
@@ -148,13 +144,13 @@ ms.locfileid: "66010143"
 |打开以进行可重复读取的 SELECT。|打开以进行读取。|都成功。|都成功。|  
 |打开以进行可重复读取的 SELECT。|打开以进行写入。|事务 2 下的打开操作失败，并发生 ERROR_SHARING_VIOLATION 异常。|事务 2 下的打开操作失败，并发生 ERROR_SHARING_VIOLATION 异常。|  
   
- **从远程客户端写入**  
+ **从远程客户端写透**  
   
  对 FILESTREAM 数据的远程文件系统访问是通过 Server Message Block (SMB) 协议启用的。 如果客户端为远程客户端，则客户端不对任何写入操作进行缓存。 写入操作将始终发送到服务器。 服务器端可对数据进行缓存。 建议运行在远程客户端上的应用程序合并小型写入操作，以减小使用较大数据大小的写入操作数量。  
   
  不支持通过使用 FILESTREAM 句柄创建内存映射视图（内存映射 I/O）。 如果内存映射用于 FILESTREAM 数据，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将无法保证数据的一致性和持久性或数据库的完整性。  
   
-##  <a name="reltasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相关任务  
  [启用和配置 FILESTREAM](enable-and-configure-filestream.md)  
   [创建启用了 FILESTREAM 的数据库](create-a-filestream-enabled-database.md)  
   [创建表以存储 FILESTREAM 数据](create-a-table-for-storing-filestream-data.md)  
@@ -167,6 +163,6 @@ ms.locfileid: "66010143"
   [在故障转移群集中设置 FILESTREAM](set-up-filestream-on-a-failover-cluster.md)  
   [将防火墙配置为进行 FILESTREAM 访问](configure-a-firewall-for-filestream-access.md)  
   
-##  <a name="relcontent"></a> 相关内容  
+##  <a name="related-content"></a><a name="relcontent"></a> 相关内容  
  [FILESTREAM 与其他 SQL Server 功能的兼容性](filestream-compatibility-with-other-sql-server-features.md)  
   
