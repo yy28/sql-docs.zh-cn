@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183002"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server Transactions 对象
@@ -41,9 +41,9 @@ ms.locfileid: "63183002"
 |**Version Cleanup rate (KB/s)**|行版本从 **tempdb**中的快照隔离版本存储区中删除的速率（KB/秒）。|  
 |**Version Generation rate (KB/s)**|向 **tempdb**中的快照隔离版本存储区中添加新行版本的速率（KB/秒）。|  
 |**Version Store Size (KB)**|**tempdb** 中用来存储快照隔离级别行版本的空间量 (KB)。|  
-|**Version Store unit count**|**tempdb**中的快照隔离版本存储区中的活动分配单元的数目。|  
-|**Version Store unit creation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例启动后，在快照隔离存储区中创建的分配单元的数目。|  
-|**Version Store unit truncation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例启动后，从快照隔离存储区中删除的分配单元的数目。|  
+|**版本存储单元计数**|**tempdb**中的快照隔离版本存储区中的活动分配单元的数目。|  
+|**创建版本存储区单元**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例启动后，在快照隔离存储区中创建的分配单元的数目。|  
+|**版本存储单元截断**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例启动后，从快照隔离存储区中删除的分配单元的数目。|  
   
 ## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  

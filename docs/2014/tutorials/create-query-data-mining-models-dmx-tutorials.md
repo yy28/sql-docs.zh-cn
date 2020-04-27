@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63180558"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>使用 DMX 创建和查询数据挖掘模型：教程（Analysis Services - 数据挖掘）
@@ -39,9 +39,9 @@ ms.locfileid: "63180558"
      本教程创建一个预测模型以演示 CREATE MODEL (DMX) 语句的用法。 然后，添加相关的模型，并通过更改 Microsoft 时序算法的参数来自定义每个模型的行为。 最后，创建预测并使用新数据更新预测。 在创建预测时更新时序是在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中增加的功能。  
   
 ## <a name="reference"></a>参考  
- [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [&#40;DMX&#41; 的数据挖掘扩展插件](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>相关章节  
   

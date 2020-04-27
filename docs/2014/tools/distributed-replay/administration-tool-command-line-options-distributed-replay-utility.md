@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151583"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令行选项（分布式重播实用工具）
   Distributed Replay 管理工具`DReplay.exe`是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可使用此管理工具在控制器上启动、监视和取消操作。  
   
- ![主题链接图标](../../database-engine/media/topic-link.gif "“主题链接”图标")有关与管理工具语法结合使用的语法约定的详细信息，请参阅[Transact-sql 语法约定 &#40;transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
+ ![主题链接图标](../../database-engine/media/topic-link.gif "“主题链接”图标") 有关与此管理工具语法结合使用的语法约定的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,27 +45,27 @@ Usage:
 ## <a name="remarks"></a>备注  
  您可以使用 `DReplay.exe` 发出以下命令行选项：  
   
- **预处理**  
+ **preprocess**  
  启动预处理阶段。 控制器准备您从生产环境中捕获的输入跟踪数据，以便对目标服务器进行重播。  
   
- **重播**  
+ **replay**  
  启动事件重播阶段。 控制器将重播数据调度到指定客户端，启动分布式重播并同步客户端。 每个选定的客户端可以选择记录重播活动并在本地保存结果跟踪文件。  
   
- **状态值**  
+ **status**  
  查询控制器并显示当前状态。  
   
- **取消**  
+ **cancel**  
  取消正在控制器上运行的当前操作。  
   
  对于包含命令参数和示例的详细语法信息，请参阅下列主题：  
   
--   [Distributed Replay 管理工具 &#40;预处理选项&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [预处理选项（分布式重播管理工具）](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Distributed Replay 管理工具 &#40;重播选项&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [重播选项（分布式重播管理工具）](replay-option-distributed-replay-administration-tool.md)  
   
--   [状态选项 &#40;Distributed Replay 管理工具&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [状态选项（分布式重播管理工具）](status-option-distributed-replay-administration-tool.md)  
   
--   [Distributed Replay 管理工具 &#40;取消选项&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [取消选项（分布式重播管理工具）](cancel-option-distributed-replay-administration-tool.md)  
   
  RPC 将作为 RPC 而非语言事件进行重播。  
   

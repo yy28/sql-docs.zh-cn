@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164412"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署传递扩展插件
@@ -26,7 +26,7 @@ ms.locfileid: "63164412"
   
  如果替换或升级某一传递扩展插件，则引用该传递扩展插件的所有订阅仍保持有效。  
   
- 在将[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]传递扩展插件写入和编译到[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]库中后，必须将该扩展插件复制到相应的目录，并向相应[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的配置文件添加一个条目，以便 Report Server 可以找到它。  
+ 在将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件写入和编译到某一 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库中后，必须将该扩展插件复制到相应的目录中，并且向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加一个条目，以便报表服务器可以定位它。  
   
 ## <a name="configuration-file-extension-element"></a>配置文件扩展插件元素  
  您部署到报表服务器的传递扩展插件需要作为配置文件中的 `Extension` 元素输入。 用于报表服务器的配置文件是 RSReportServer.config。  
@@ -35,8 +35,7 @@ ms.locfileid: "63164412"
   
 |Attribute|说明|  
 |---------------|-----------------|  
-|`Name`|扩展插件的唯一名称（例如，“Report Server E-Mail”用于电子邮件传递扩展插件，“Report Server FileShare”用于文件共享传递扩展插件）。 
-  `Name` 属性的最大长度是 255 个字符。 该名称在配置文件的 `Extension` 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
+|`Name`|扩展插件的唯一名称（例如，“Report Server E-Mail”用于电子邮件传递扩展插件，“Report Server FileShare”用于文件共享传递扩展插件）。 `Name` 属性的最大长度是 255 个字符。 该名称在配置文件的 `Extension` 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
 |`Type`|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  
 |`Visible`|值为 `false` 指示在用户界面中将不显示传递扩展插件。 如果未包含此属性，则默认值为 `true`。|  
   
@@ -70,9 +69,7 @@ ms.locfileid: "63164412"
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryExtensionClass, AssemblyName" />  
     ```  
   
-     
-  `Name` 的值是传递扩展插件的唯一名称。 
-  `Type` 的值是逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 接口的类的完全限定命名空间的条目，后随程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，传递扩展插件是可见的。 若要在用户界面（如报表管理器）中隐藏扩展插件，请将 `Visible` 属性添加到 `Extension` 元素，并将其设置为 `false`。  
+     `Name` 的值是传递扩展插件的唯一名称。 `Type` 的值是逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 接口的类的完全限定命名空间的条目，后随程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，传递扩展插件是可见的。 若要在用户界面（如报表管理器）中隐藏扩展插件，请将 `Visible` 属性添加到 `Extension` 元素，并将其设置为 `false`。  
   
 5.  最后，为您的自定义程序集添加一个代码组，以便为您的传递扩展插件授予 `FullTrust` 权限。 为此，需要将代码组添加到默认位于%ProgramFiles%\Microsoft SQL Server \ MSRS10_50 中的 rssrvpolicy.config 文件。\<InstanceName> \reporting services\reportserver。 代码组可能如下所示：  
   
@@ -116,9 +113,7 @@ ms.locfileid: "63164412"
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryUIExtensionClass, AssemblyName" />  
     ```  
   
-     
-  `Name` 的值是传递扩展插件的唯一名称。 
-  `Type` 的值是逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 接口的类的完全限定命名空间的条目，后随程序集的名称（不包括 .dll 文件扩展名）。  
+     `Name` 的值是传递扩展插件的唯一名称。 `Type` 的值是逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 接口的类的完全限定命名空间的条目，后随程序集的名称（不包括 .dll 文件扩展名）。  
   
     > [!IMPORTANT]  
     >  对于报表服务器和报表管理器配置文件条目，`Name` 属性的值必须相同。 如果它们不同，则您的服务器配置将无效。  
@@ -138,7 +133,7 @@ ms.locfileid: "63164412"
     </CodeGroup>  
     ```  
   
-     URL 成员身份仅是您可能为传递扩展插件选择的多个成员身份条件之一。 有关 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 中的代码访问安全性的详细信息，请参阅[安全开发 (Reporting Services)](../secure-development/secure-development-reporting-services.md)  
+     URL 成员身份仅是您可能为传递扩展插件选择的多个成员身份条件之一。 有关中[!INCLUDE[ssRS](../../../includes/ssrs.md)]的代码访问安全性的详细信息，请参阅[安全开发 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="verifying-the-deployment"></a>验证部署  
  您可以使用 Web 服务 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 方法，验证是否已向报表服务器成功地部署了传递扩展插件。 还可以打开报表管理器，并验证您的扩展插件是否包括在用于订阅的可用传递扩展插件列表中。 有关报表管理器和订阅的详细信息，请参阅[订阅和传递 &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)。  

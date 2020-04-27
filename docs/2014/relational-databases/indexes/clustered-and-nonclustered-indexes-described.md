@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 525dd41faa2c1f9d150ba7bd02442b125975c395
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156376"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>描述的聚集索引和非聚集索引
@@ -55,7 +55,7 @@ ms.locfileid: "63156376"
   
  查询优化器使用索引时，搜索索引键列，查找到查询所需行的存储位置，然后从该位置提取匹配行。 通常，搜索索引比搜索表要快很多，因为索引与表不同，一般每行包含的列非常少，且行遵循排序顺序。  
   
- 查询优化器在执行查询时通常会选择最有效的方法。 但如果没有索引，则查询优化器必须扫描表。 您的任务是设计并创建最适合您的环境的索引，以便查询优化器可以从多个有效的索引中选择。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [数据库引擎优化顾问](../performance/database-engine-tuning-advisor.md) 以帮助分析数据库环境并选择适当的索引。  
+ 查询优化器在执行查询时通常会选择最有效的方法。 但如果没有索引，则查询优化器必须扫描表。 您的任务是设计并创建最适合您的环境的索引，以便查询优化器可以从多个有效的索引中选择。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供[数据库引擎优化顾问](../performance/database-engine-tuning-advisor.md)来帮助分析数据库环境以及选择适当的索引。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [创建聚集索引](create-clustered-indexes.md)  

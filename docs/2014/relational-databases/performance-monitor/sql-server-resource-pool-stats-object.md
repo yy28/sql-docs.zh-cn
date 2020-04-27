@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183022"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server，Resource Pool Stats 对象
@@ -51,8 +51,8 @@ ms.locfileid: "63183022"
 |Avg Disk Write IO (ms)|对磁盘进行写入操作的平均时间（毫秒）。|  
   
 ## <a name="see-also"></a>另请参阅  
- [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)   
- [SQLServer，Workload Group Stats 对象](sql-server-workload-group-stats-object.md)   
+ [监视资源使用情况 &#40;系统监视器&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server，工作负荷组统计信息对象](sql-server-workload-group-stats-object.md)   
  [资源调控器](../resource-governor/resource-governor.md)  
   
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161952"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
@@ -23,8 +23,7 @@ ms.locfileid: "63161952"
 ## <a name="using-extended-events"></a>使用扩展事件  
  使用 `sp_statement_completed` 扩展事件可以跟踪查询的执行情况。 使用此事件或者可以选择使用针对某一特定本机编译的存储过程的 object_id 的筛选器创建一个扩展事件会话。在执行各查询后引发该扩展事件。 该扩展事件报告的 CPU 时间和持续时间指示该查询占用了多少 CPU 以及执行时间。 占用大量 CPU 时间的本机编译的存储过程可能具有性能问题。  
   
- 
-  `line_number` 连同扩展事件中的 `object_id` 可用于调查该查询。 可以使用以下查询检索过程定义。 可以使用行号标识该定义内的查询：  
+ `line_number` 连同扩展事件中的 `object_id` 可用于调查该查询。 可以使用以下查询检索过程定义。 可以使用行号标识该定义内的查询：  
   
 ```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
@@ -33,7 +32,7 @@ select [definition] from sys.sql_modules where object_id=object_id
  有关`sp_statement_completed`扩展事件的详细信息，请参阅[如何检索导致了事件的语句](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
   
 ## <a name="using-data-management-views"></a>使用数据管理视图  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持在过程级别和查询级别收集本机编译的存储过程的执行统计信息。 由于对性能的影响，默认不启用收集执行统计信息。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在过程级别和查询级别收集本机编译的存储过程的执行统计信息。 由于对性能的影响，默认不启用收集执行统计信息。  
   
  可使用 [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql) 对本机编译的存储过程启用和禁用统计信息收集。  
   
@@ -110,7 +109,7 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- 或者，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，选择过程名称并且单击 **“显示估计的执行计划”** 。  
+ 或者，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，选择过程名称并且单击 **“显示估计的执行计划”**。  
   
  本机编译的存储过程的估计的执行计划显示过程中查询的查询运算符和表达式。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 对于本机编译的存储过程，并不支持所有 SHOWPLAN_XML 属性。 例如，与查询优化器开销相关的属性不是针对过程的 SHOWPLAN_XML 的一部分。  
   

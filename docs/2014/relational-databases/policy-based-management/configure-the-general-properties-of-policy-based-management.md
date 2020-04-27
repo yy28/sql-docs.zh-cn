@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162392"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>配置基于策略的管理的常规属性
@@ -36,26 +36,26 @@ ms.locfileid: "63162392"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-policy-based-management"></a>配置基于策略的管理  
   
-1.  在“对象资源管理器”  中，单击加号以展开你要在其中配置基于策略的管理属性的服务器。  
+1.  在“对象资源管理器”**** 中，单击加号以展开你要在其中配置基于策略的管理属性的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“策略管理”  ，然后选择“属性”  。  
+3.  右键单击“策略管理”****，然后选择“属性”****。  
   
      在 **“策略管理属性”** 对话框中提供以下选项。  
   
-     **已启用**  
+     **Enabled**  
      指定是否启用基于策略的管理。  
   
      **HistoryRetentionInDays**  
@@ -68,9 +68,9 @@ ms.locfileid: "63162392"
   
     -   如果该值为 true，则成功和失败的策略评估都会记录。  
   
-4.  完成后，单击 **“确定”** 。  
+4.  完成后，单击“确定”****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-policy-based-management"></a>配置基于策略的管理  
   

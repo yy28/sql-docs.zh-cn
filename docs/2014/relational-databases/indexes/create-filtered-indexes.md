@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155385"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
@@ -56,15 +56,15 @@ ms.locfileid: "63155385"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Design"></a> 设计注意事项  
+###  <a name="design-considerations"></a><a name="Design"></a> 设计注意事项  
   
 -   在列中只有少量相关值需要查询时，可以针对值的子集创建筛选索引。 例如，当列中的值大部分为 NULL 并且查询只从非 NULL 值中进行选择时，可以为非 NULL 数据行创建筛选索引。 由此得到的索引与对相同键列定义的全表非聚集索引相比，前者更小且维护开销更低。  
   
 -   表中含有异类数据行时，可以为一种或多种类别的数据创建筛选索引。 通过将查询范围缩小为表的特定区域，这可以提高针对这些数据行的查询性能。 此外，由此得到的索引与全表非聚集索引相比，前者更小且维护开销更低。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   不能对视图创建筛选索引。 但是，查询优化器可以从对视图中引用的表定义的筛选索引中获益。 对于从视图中选择数据的查询，如果查询结果正确，查询优化器会考虑对此查询使用筛选索引。  
   
@@ -90,12 +90,12 @@ ms.locfileid: "63155385"
   
 -   如果筛选索引结果的筛选索引表达式中指定的比较运算符会导致隐式或显式数据转换，则转换发生在比较运算符的左边时，会出现错误。 解决方法是在比较运算符的右边编写包含数据转换运算符（CAST 或 CONVERT）的筛选索引表达式。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。 若要修改筛选索引表达式，请使用 CREATE INDEX WITH DROP_EXISTING。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>创建筛选索引  
   
@@ -105,21 +105,21 @@ ms.locfileid: "63155385"
   
 3.  单击加号以便展开您要创建筛选索引的表。  
   
-4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”    。  
+4.  右键单击 "**索引**" 文件夹，指向 "**新建索引**"，然后选择 "**非聚集索引 ...**"。  
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在“索引键列”下，单击“添加…”   。  
+6.  在“索引键列”下，单击“添加…”********。  
   
-7.  在 "**从**_Table_name_中选择列" 对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+7.  在“从 table_name__ 选择列”**** 对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-8.  单击“确定”。   
+8.  单击" **确定**"。  
   
 9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式********。  
   
 10. 单击“确定”。   
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>创建筛选索引  
   

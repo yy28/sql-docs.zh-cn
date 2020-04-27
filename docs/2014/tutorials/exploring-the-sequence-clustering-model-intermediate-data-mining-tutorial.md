@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164054"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>浏览顺序分析和聚类分析模型（数据挖掘中级教程）
@@ -32,7 +32,7 @@ ms.locfileid: "63164054"
   
 -   [“一般内容”视图](#bkmk_Generic)  
   
-##  <a name="bkmk_CDiagram"></a>分类关系图选项卡  
+##  <a name="cluster-diagram-tab"></a><a name="bkmk_CDiagram"></a>分类关系图选项卡  
  "**分类关系图**" 选项卡以图形方式显示算法在数据库中发现的分类。 关系图中的布局表示分类之间的关系，其中相似的分类分组在一起。 默认情况下，每个节点的明暗度表示分类中所有事例的密度，即节点越暗，它所包含的事例越多。 可以更改节点明暗度代表的含义，使其表示对每个分类内的属性或状态的支持。  
   
  也可以重命名分类，使其更加易于识别并与目标分类结合使用。 在本教程中，您将重命名太平洋地区客户百分比最高的分类，以及事例总数量最多的分类。  
@@ -87,7 +87,7 @@ ms.locfileid: "63164054"
   
  [返回页首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CProfiles"></a>群集配置文件选项卡  
+##  <a name="cluster-profiles-tab"></a><a name="bkmk_CProfiles"></a>群集配置文件选项卡  
  "**分类配置文件**" 选项卡显示每个群集中的序列。 群集列在 "**状态**" 列右侧的各个列中。  
   
  在查看器中，"**模型**" 行描述了群集中各项的总体分布，而 "**模型**" 行包含各项的序列。 模型每个单元格中的颜色序列的每一行 **。 samples**行表示群集中随机选择的用户的行为。  
@@ -132,7 +132,7 @@ ms.locfileid: "63164054"
   
  [返回页首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CChars"></a>分类特征选项卡  
+##  <a name="cluster-characteristics-tab"></a><a name="bkmk_CChars"></a>分类特征选项卡  
  "**分类特征**" 选项卡通过显示直观地表示所选分类的属性值重要性的栏来汇总群集中各状态之间的转换。 "**变量**" 列告诉您哪个模型对于所选的分类或总体非常重要：特定值或值之间的关系（称为*转换*）。 "**值**" 列提供关于值或转换的更多详细信息，"**概率**" 列直观地表示此属性或转换的权重。  
   
 #### <a name="to-view-the-important-attributes-for-a-cluster"></a>查看分类的重要属性  
@@ -169,7 +169,7 @@ ms.locfileid: "63164054"
   
  [返回页首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CDiscrim2"></a>分类对比选项卡  
+##  <a name="cluster-discrimination-tab"></a><a name="bkmk_CDiscrim2"></a>分类对比选项卡  
  "**分类对比**" 选项卡可帮助你比较两个分类，以确定哪些属性区分不同的群集。 该选项卡包含四列：**变量**、**值**、**群集 1**和**分类 2**。  你可以选择要用作**群集 1**和**分类 2**的任何群集。  
   
  "**变量**" 列告诉您属性的名称，该名称可以是列名，也可以是列名称和 word**转换**的组合。 "**值**" 列显示属性或转换的确切值。 "**分类 1** " 和 "**分类 2** " 列中的阴影条指示要比较的分类中的属性的强度。 阴影条越长，分类包括具有该属性的事例的可能性越大。  
@@ -188,7 +188,7 @@ ms.locfileid: "63164054"
   
  [返回页首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_StateTran"></a>"状态转换" 选项卡  
+##  <a name="state-transitions-tab"></a><a name="bkmk_StateTran"></a>"状态转换" 选项卡  
  在 "**状态转换**" 选项卡上，可以选择一个群集并浏览其状态转换。 如果从 "分类" 下拉列表中选择 "**总体（全部）** "，则关系图将显示整个挖掘模型的状态分布。  
   
  图中的每个节点都表示一个状态，或您试图分析的序列的可能值。 节点的背景色表示该状态的频率。 一些状态之间用线条连接，指示这些状态之间的转换。 可以上下移动滑块，以更改转换的概率阈值。 数字与某些节点相关联，指示该状态的概率。  
@@ -227,7 +227,7 @@ ms.locfileid: "63164054"
   
  [返回页首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_Generic"></a>一般内容树查看器  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_Generic"></a>一般内容树查看器  
  此查看器可用于所有模型，无论算法和模型类型为何均为如此。 "**查看器**" 下拉列表中提供了**MicrosoftGeneric 内容树查看器**。  
   
  内容树是任何挖掘模型的表示形式，由一系列节点组成，其中每个节点都表示关于定型数据的已了解的知识。 节点可以包含一种模式、一组规则、一个分类或共享某些属性的日期范围的定义。 根据算法和可预测属性的不同，节点的具体内容会有所不同，但内容的通用表示形式是相同的。  

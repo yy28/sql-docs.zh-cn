@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59c179c81c1b6b60787603f5953b85e583668c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161722"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>静止复制拓扑（复制 Transact-SQL 编程）
-   为了“停止”系统，需要停止所有节点上已发布表的操作，并确保每个节点都已收到来自所有其他节点的所有更改。 本主题说明了如何停止复制拓扑（这是许多管理任务所必需的操作），以及如何确保节点收到来自其他节点的全部更改。  
+  “停止”系统，需要停止所有节点上已发布表的操作，并确保每个节点都已收到来自所有其他节点的所有更改**。 本主题说明了如何停止复制拓扑（这是许多管理任务所必需的操作），以及如何确保节点收到来自其他节点的全部更改。  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>停止包含只读订阅的事务复制拓扑  
   
@@ -80,7 +80,7 @@ ms.locfileid: "63161722"
     >  如果同步过程中出现冲突，则运行合并代理两次之后冲突解决所需的更改可能不会传播到所有节点。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理对等拓扑（复制 Transact-SQL 编程）](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [&#40;复制 Transact-sql 编程来管理对等拓扑&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [为事务复制测量滞后时间和验证连接](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

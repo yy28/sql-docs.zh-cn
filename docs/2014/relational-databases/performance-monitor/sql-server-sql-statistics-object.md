@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183082"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server:SQL Statistics 对象
-  中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLServer： SQL Statistics**对象提供计数器来监视编译和发送到实例的请求类型。 通过监视查询编译和重新编译的次数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例收到的批数，可了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理用户查询的速度，以及查询优化器处理查询的效率。  
+  **中的** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供计数器来监视编译和发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的请求类型。 通过监视查询编译和重新编译的次数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例收到的批数，可了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理用户查询的速度，以及查询优化器处理查询的效率。  
   
  编译时间在查询总时间中占到很大一部分。 为节省编译开销， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将编译过的查询计划保存在一个查询缓存中。 缓存的目标是通过存储编译过的查询以便再次使用来减少编译，从而在将来执行查询时，不需重新编译它。 但是，每个唯一的查询至少需要编译一次。 以下因素可造成重新编译查询：  
   
@@ -31,7 +31,7 @@ ms.locfileid: "63183082"
   
  有关简单参数化和强制参数化的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  
   
- 下面列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** 计数器。  
+ 下面列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Statistics 计数器  。  
   
 |SQL Server SQL Statistics 计数器|说明|  
 |----------------------------------------|-----------------|  
@@ -41,14 +41,14 @@ ms.locfileid: "63183082"
 |**Forced Parameterizations/sec**|每秒成功执行的强制参数化次数。|  
 |**Guided Plan Executions/sec**|每秒执行的计划数，其中的查询计划是通过使用计划指南生成的。|  
 |**Misguided Plan Executions/sec**|每秒执行的计划数，其中的查询计划无法使用计划指南生成。 系统将忽略计划指南并使用正常的编译过程生成执行计划。|  
-|**Safe Auto-Params/sec**|每秒安全自动参数化尝试次数。 安全指确定保存在缓存中的执行计划可以在不同的相似 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句之间共享。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进行多次自动参数化尝试，其中某些转换是安全的，其他则失败。 请注意，在更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，自动参数化也称为简单参数化。 它不包括强制参数化。|  
+|**Safe Auto-Params/sec**|每秒安全自动参数化尝试次数。 安全指确定保存在缓存中的执行计划可以在不同的相似 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句之间共享。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行多次自动参数化尝试，某些成为安全的，某些就失败了。 请注意，在更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，自动参数化也称为简单参数化。 它不包括强制参数化。|  
 |**SQL Attention rate**|每秒发出关注信号的数目。 发出一次关注信号就是终止当前运行请求的一次客户端请求。|  
 |**SQL Compilations/sec**|每秒的 SQL 编译数。 表示编译代码路径被进入的次数。 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中语句级重新编译导致的编译。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户活动稳定后，该值将达到稳定状态。|  
 |**SQL Re-Compilations/sec**|每秒语句重新编译的次数。 计算触发语句重新编译的次数。 一般来说，这个数值最好较小。|  
 |**Unsafe Auto-Params/sec**|每秒不安全的自动参数化尝试次数。 例如，查询有某些特性会防止保存在缓存中的计划被共享。 它们将被指定为不安全的。 此计数器不计算强制参数化次数。|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server，计划缓存对象](sql-server-plan-cache-object.md)   
+ [SQL Server Plan Cache 对象](sql-server-plan-cache-object.md)   
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   
   

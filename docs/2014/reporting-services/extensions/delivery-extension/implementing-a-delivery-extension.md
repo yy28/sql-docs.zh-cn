@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cae33496e4dddcaf2d14ba2d87f0d4013795e58f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165131"
 ---
 # <a name="implementing-a-delivery-extension"></a>实现传递扩展插件
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用户能够创建和发布报表，一旦创建和发布，就可以将其传递到各种位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使得用户能够创建和发布报表，一旦创建和发布，就可以将报表传递到不同位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
   
  有关传递扩展插件的示例实现，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
@@ -41,10 +41,10 @@ ms.locfileid: "63165131"
  介绍传递扩展插件的属性以及如何实现您自己的传递扩展插件类。  
   
  [将通知类用于传递扩展插件](using-a-notification-class-for-a-delivery-extension.md)  
- 介绍 Notification 类的属性以及如何在传递扩展插件实现中使用该类****。  
+ 介绍 Notification 类的属性以及如何在传递扩展插件实现中使用该类  。  
   
  [将 Setting 类用于传递扩展插件](using-the-setting-class-for-a-delivery-extension.md)  
- 介绍 Setting 类的属性以及如何在传递扩展插件实现中使用该类****。  
+ 介绍 Setting 类的属性以及如何在传递扩展插件实现中使用该类  。  
   
  [将 IDeliveryReportServerInformation 接口用于传递扩展插件](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
  介绍 IDeliveryReportServerInformation 接口的属性以及如何在传递扩展插件实现中使用该接口****。  
@@ -68,7 +68,7 @@ ms.locfileid: "63165131"
  说明如何从报表服务器上删除传递扩展插件。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 扩展插件](../reporting-services-extensions.md)   
+ [Reporting Services 扩展](../reporting-services-extensions.md)   
  [Reporting Services 扩展插件库](../reporting-services-extension-library.md)  
   
   

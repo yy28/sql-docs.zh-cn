@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162389"
 ---
 # <a name="enable-indexes-and-constraints"></a>启用索引和约束
@@ -41,9 +41,9 @@ ms.locfileid: "63162389"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   在索引重新生成之后，任何因禁用索引而被禁用的约束必须手动将其启用。 PRIMARY KEY 和 UNIQUE 约束可通过重新生成相关联的索引来启用。 您必须重新生成（启用）索引才能启用引用 PRIMARY KEY 或 UNIQUE 约束的 FOREIGN KEY 约束。 FOREIGN KEY 约束可使用 ALTER TABLE CHECK CONSTRAINT 语句来启用。  
   
@@ -68,12 +68,12 @@ ms.locfileid: "63162389"
     |DROP INDEX。|操作成功。|操作成功。|  
     |CREATE INDEX WITH DROP_EXISTING。|操作失败。|操作成功。|  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 如果使用 DBCC DBREINDEX，用户必须拥有该表，或者是 **sysadmin** 固定服务器角色或者 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>启用禁用的索引  
   
@@ -85,9 +85,9 @@ ms.locfileid: "63162389"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要启用的索引，然后选择  “重新生成”。  
+5.  右键单击要启用的索引，然后选择****“重新生成”。  
   
-6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。  
+6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
   
 #### <a name="to-enable-all-indexes-on-a-table"></a>为表启用所有索引  
   
@@ -97,13 +97,13 @@ ms.locfileid: "63162389"
   
 3.  单击加号以便展开您要启用索引的表。  
   
-4.  右键单击  “索引”文件夹，然后选择  “全部重新生成”。  
+4.  右键单击****“索引”文件夹，然后选择****“全部重新生成”。  
   
-5.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。 若要从 **“要重新生成的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
+5.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。 若要从 **“要重新生成的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   
  在 **“重新生成索引”** 对话框中将提供以下信息：  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>使用 ALTER INDEX 启用已禁用的索引  
   

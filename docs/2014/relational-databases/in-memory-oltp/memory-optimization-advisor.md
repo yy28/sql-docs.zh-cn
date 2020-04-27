@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158002"
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
@@ -25,14 +25,13 @@ ms.locfileid: "63158002"
   
  开始时，连接至包含基于磁盘的数据库表的实例。 你可以连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 但是，如果您想要使用该顾问执行迁移操作，则必须连接到启用了内存中 OLTP 功能的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 有关内存中 OLTP 要求的详细信息，请参阅 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)。  
   
- 有关迁移方法的信息，请参阅[内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用内存优化顾问进行演练  
  在 **对象资源管理器**中，右键单击要转换的表，然后选择 **“内存优化顾问”**。 这将显示 **“表内存优化顾问”** 的欢迎使用页。  
   
 ### <a name="memory-optimization-checklist"></a>内存优化核对清单  
- 当您在 **“表内存优化顾问”** 的欢迎使用页中单击 **“下一步”** 时，将会看到内存优化核对清单。 内存优化表并不支持基于磁盘的表中的所有功能。 内存优化核对清单将报告基于磁盘的表是否使用了与内存优化表不兼容的任何功能。 
-  **“表内存优化顾问”** 不会修改基于磁盘的表，以便它可以迁移到使用内存中 OLTP。 您必须首先进行这些更改，然后才能继续迁移。 对于找到的每个不兼容之处， **“表内存优化顾问”** 都会显示一个链接，指向可帮助您修改基于磁盘的表的信息。  
+ 当您在 **“表内存优化顾问”** 的欢迎使用页中单击 **“下一步”** 时，将会看到内存优化核对清单。 内存优化表并不支持基于磁盘的表中的所有功能。 内存优化核对清单将报告基于磁盘的表是否使用了与内存优化表不兼容的任何功能。 **“表内存优化顾问”** 不会修改基于磁盘的表，以便它可以迁移到使用内存中 OLTP。 您必须首先进行这些更改，然后才能继续迁移。 对于找到的每个不兼容之处， **“表内存优化顾问”** 都会显示一个链接，指向可帮助您修改基于磁盘的表的信息。  
   
  如果您想要保留这些不兼容之处的列表以便计划您的迁移，则单击 **“生成报表”** 以便生成一个 HTML 列表。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "63158002"
   
  可操作警告将在左侧列中具有一个黄色的三角形。 如果存在可操作警告，您应该退出迁移，解决警告问题，然后重新开始迁移过程。 如果您没有解决警告问题，则迁移的表可能会导致失败。  
   
- 单击 **“生成报表”** 可生成包含这些警告的 HTML 报表。 单击“下一步”继续。   
+ 单击 **“生成报表”** 可生成包含这些警告的 HTML 报表。 单击 **“下一步”** 继续。  
   
 ### <a name="review-optimization-options"></a>检查优化选项  
  下一个屏幕可用于修改用于迁移到内存中 OLTP 的选项：  
@@ -70,8 +69,7 @@ ms.locfileid: "63158002"
  在迁移过程结束时，将用该表的当前名称创建一个新的内存优化表。 为避免名称冲突，必须重命名当前表。 您可以在此字段中更改该名称。  
   
  估计的当前内存开销 (MB)  
- 内存优化顾问将会根据基于磁盘的表的元数据，估计新的内存优化表将使用的内存量。 
-  [内存优化表中的表和行大小](table-and-row-size-in-memory-optimized-tables.md)中说明了表大小的计算。  
+ 内存优化顾问将会根据基于磁盘的表的元数据，估计新的内存优化表将使用的内存量。 [内存优化表中的表和行大小](table-and-row-size-in-memory-optimized-tables.md)中说明了表大小的计算。  
   
  如果没有分配足够的内存，迁移过程将失败。  
   

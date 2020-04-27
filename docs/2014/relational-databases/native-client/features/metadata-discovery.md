@@ -1,5 +1,5 @@
 ---
-title: 元数据发现 |Microsoft Docs
+title: 元数据发现 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162019"
 ---
 # <a name="metadata-discovery"></a>元数据发现
@@ -25,8 +25,7 @@ ms.locfileid: "63162019"
  如果使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的 Native Client 开发应用程序，但连接到早于[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的服务器版本，则元数据发现功能将与服务器版本相对应。  
   
 ## <a name="remarks"></a>备注  
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 bcp 函数，以提供改进的元数据发现：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 bcp 函数，以提供改进的元数据发现：  
   
 -   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
   
@@ -42,8 +41,7 @@ ms.locfileid: "63162019"
   
  [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)提供了一个新的*eOption*来控制 bcp_readfmt 的行为`BCPDELAYREADFMT`：。  
   
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 ODBC 函数，以提供改进的元数据发现：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 ODBC 函数，以提供改进的元数据发现：  
   
 -   [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md)  
   
@@ -53,14 +51,13 @@ ms.locfileid: "63162019"
   
 -   [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)  
   
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 OLE DB 成员函数，以提供改进的元数据发现：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 OLE DB 成员函数，以提供改进的元数据发现：  
   
 -   IColumnsInfo::GetColumnInfo  
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters：： GetParameterInfo （有关详细信息，请参阅[ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) ）  
+-   ICommandWithParameters::GetParameterInfo（有关详细信息，请参阅 [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md)）  
   
  使用 IBCPSession::BCPSetBulkMode 指定元数据格式时，也会看到性能改进  
   

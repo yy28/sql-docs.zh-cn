@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156811"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
@@ -55,15 +55,15 @@ ms.locfileid: "63156811"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="DesignRecs"></a> 设计建议  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a> 设计建议  
   
 -   重新设计索引键大小较大的非聚集索引，以便只有用于搜索和查找的列为键列。 使覆盖查询的所有其他列成为非键列。 这样，将具有覆盖查询所需的所有列，但索引键本身较小，而且效率高。  
   
 -   将非键列包含在非聚集索引中，以避免超过当前索引大小的限制（最大键列数为 16，最大索引键大小为 900 字节）。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算索引键列数或索引键大小时，不考虑非键列。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   只能对非聚集索引定义非键列。  
   
@@ -81,12 +81,12 @@ ms.locfileid: "63156811"
   
     -   增加 `varchar`、`nvarchar` 或 `varbinary` 列的长度。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>创建带有非键列的索引  
   
@@ -96,25 +96,25 @@ ms.locfileid: "63156811"
   
 3.  单击加号以便展开您要创建带有非键列的索引的表。  
   
-4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”    。  
+4.  右键单击 "**索引**" 文件夹，指向 "**新建索引**"，然后选择 "**非聚集索引 ...**"。  
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在“索引键列”选项卡下，单击“添加…”   。  
+6.  在“索引键列”选项卡下，单击“添加…”********。  
   
-7.  在 "**从**_Table_name_中选择列" 对话框中，选中要添加到索引的一个或多个表列的复选框。  
+7.  在“从 _table_name_ 中选择列”**** 对话框中，选中要添加到索引的一个或多个表列的复选框。  
   
-8.  单击“确定”。   
+8.  单击" **确定**"。  
   
-9. 在“包含性列”选项卡下，单击“添加…”   。  
+9. 在“包含性列”选项卡下，单击“添加…”********。  
   
-10. 在 "**从**_Table_name_中选择列" 对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
+10. 在“从 _table_name_ 中选择列”**** 对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
   
-11. 单击“确定”。   
+11. 单击" **确定**"。  
   
-12. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
+12. 在 **“新建索引”** 对话框中，单击 **“确定”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>创建带有非键列的索引  
   

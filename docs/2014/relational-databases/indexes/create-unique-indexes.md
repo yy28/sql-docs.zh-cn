@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162350"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
@@ -50,9 +50,9 @@ ms.locfileid: "63162350"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Benefits"></a> 唯一索引的优点  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> 唯一索引的优点  
   
 -   多列唯一索引能够保证索引键中值的每个组合都是唯一的。 例如，如果为 **LastName**、 **FirstName**和 **MiddleName** 列的组合创建了唯一索引，则表中的任意两行都不会有这些列值的相同组合。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63162350"
   
 -   唯一索引提供帮助查询优化器生成更高效的执行计划的其他信息。  
   
-###  <a name="Implementations"></a> 典型实现  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 典型实现  
  唯一索引可通过以下方式实现：  
   
 -   **PRIMARY KEY 或 UNIQUE 约束**  
@@ -83,18 +83,18 @@ ms.locfileid: "63162350"
   
      若要创建索引视图，请对一个或多个视图列定义唯一聚集索引。 视图将执行，并且结果集存储在该索引的页级别中，其存储方式与表数据存储在聚集索引中的方式相同。 有关详细信息，请参阅 [创建索引视图](../views/views.md)。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果数据中存在重复的键值，则不能创建唯一索引、UNIQUE 约束或 PRIMARY KEY 约束。  
   
 -   唯一非聚集索引可以包括包含性非键列。 有关详细信息，请参阅 [Create Indexes with Included Columns](create-indexes-with-included-columns.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>使用表设计器创建唯一索引  
   
@@ -124,7 +124,7 @@ ms.locfileid: "63162350"
   
 13. 单击“关闭”  。  
   
-14. 在 "**文件**" 菜单上，单击 "**保存**_table_name_。  
+14. 在“文件”**** 菜单上，单击“保存”**** 以保存 _table_name_。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用对象资源管理器创建唯一索引  
   
@@ -142,13 +142,13 @@ ms.locfileid: "63162350"
   
 7.  在“索引键列”下，单击“添加…”   。  
   
-8.  在 "**从**_Table_name_中选择列" 对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+8.  在“从 table_name__ 选择列”**** 对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
 9. 单击“确定”。   
   
 10. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>创建表的唯一索引  
   

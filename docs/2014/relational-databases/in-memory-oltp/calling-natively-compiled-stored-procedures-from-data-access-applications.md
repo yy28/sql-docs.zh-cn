@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156830"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>从数据访问应用程序调用本机编译的存储过程
@@ -31,9 +31,8 @@ ms.locfileid: "63156830"
   
  SqlClient 不支持检索有关本机编译存储过程返回的结果集的纯架构信息（元数据发现）(CommandType.SchemaOnly)。 请改为使用 [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client{2}  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 版本不支持检索有关本机编译存储过程返回的结果集的纯架构信息（元数据发现）。 请改为使用 [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
+  Native Client  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 版本不支持检索有关本机编译存储过程返回的结果集的纯架构信息（元数据发现）。 请改为使用 [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
   
  以下建议适用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中使用 ODBC 驱动程序调用本机编译的存储过程。  
   
@@ -49,8 +48,7 @@ ms.locfileid: "63156830"
   
 -   使用 `SQLExecute` 多次执行存储过程。  
   
- 下面的代码片段演示了某个向订单添加行项目的存储过程的准备好的执行。 
-  `SQLPrepare` 只调用了一次，而 `SQLExecute` 调用了多次（每次过程执行调用一次）。  
+ 下面的代码片段演示了某个向订单添加行项目的存储过程的准备好的执行。 `SQLPrepare` 只调用了一次，而 `SQLExecute` 调用了多次（每次过程执行调用一次）。  
   
 ```  
 // Bind parameters  

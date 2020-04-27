@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157110"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用基于策略的管理来管理服务器
@@ -35,8 +35,7 @@ ms.locfileid: "63157110"
   
 -   公司策略禁止启用数据库邮件或 SQL Mail。 创建了一个策略以检查这两个功能的服务器状态。 管理员将服务器状态与策略进行比较。 如果服务器状态不符合策略，管理员将选择“配置”模式，并且使服务器状态符合策略。  
   
--   
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的命名约定要求所有存储过程以字母 AW_ 开头。 创建了一个策略以强制实施此策略。 管理员对此策略进行测试，并找到一组不符合策略的存储过程。 如果将来的存储过程不符合此命名约定，这些存储过程的创建语句将会失败。  
+-   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的命名约定要求所有存储过程以字母 AW_ 开头。 创建了一个策略以强制实施此策略。 管理员对此策略进行测试，并找到一组不符合策略的存储过程。 如果将来的存储过程不符合此命名约定，这些存储过程的创建语句将会失败。  
   
 > [!NOTE]  
 >  注意策略会影响某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的工作方式。 例如，变更数据捕捉和事务复制都使用没有索引的 systranschemas 表。 如果启用所有表都必须有索引的策略，则强制策略的兼容会导致这些功能都失效。  
@@ -54,7 +53,7 @@ ms.locfileid: "63157110"
  对于失败的策略，对象资源管理器以红色图标的形式指示严重运行状态警告，此图标位于该目标以及对象资源管理器树中此目标上面的节点旁边。  
   
 > [!NOTE]  
->  在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅 [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>基于策略的管理概念  
  基于策略的管理包含以下三个组件：  
@@ -92,8 +91,7 @@ ms.locfileid: "63157110"
  一组逻辑属性，用于模拟某些类型的管理目标的行为或特征。 这些属性的数量和特征内置在方面中，只能由方面创建者添加或删除这些内容。 一种目标类型可以实现一个或多个管理方面，而一个管理方面可以由一种或多种目标类型进行实现。 方面的某些属性仅适用于特定版本。  
   
  基于策略的管理条件  
- 一个布尔表达式，用于针对管理方面指定基于策略的管理托管目标的一组允许状态。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在评估条件时尝试遵守排序规则。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则与 Windows 排序规则不完全匹配时，请测试您的条件，以确定该算法如何解决冲突。  
+ 一个布尔表达式，用于针对管理方面指定基于策略的管理托管目标的一组允许状态。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在评估条件时尝试遵守排序规则。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则与 Windows 排序规则不完全匹配时，请测试您的条件，以确定该算法如何解决冲突。  
   
  基于策略的管理策略  
  基于策略的管理条件和预期行为，例如，评估模式、目标筛选器以及计划。 每个策略只能包含一个条件。 您可以启用或禁用策略。 策略存储在 msdb 数据库中。  
@@ -119,7 +117,7 @@ ms.locfileid: "63157110"
 -   目标或目标祖先之一订阅了包含此策略的策略组。  
   
 ## <a name="policy-based-management-tasks"></a>基于策略的管理任务  
- 基于策略的管理是一个基于策略的系统，用于管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 可以使用基于策略的管理来创建包含条件表达式的条件。 然后创建一些策略，将这些条件应用于数据库目标对象。  
+ 基于策略的管理是一个基于策略的系统，用于管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 可以使用基于策略的管理来创建包含条件表达式的条件。 然后创建一些策略，将这些条件应用于数据库目标对象。  
   
 |任务说明|主题|  
 |----------------------|-----------|  
@@ -128,12 +126,12 @@ ms.locfileid: "63157110"
 |介绍如何创建、查看、修改和删除基于策略的管理条件。|[创建新的基于策略的管理条件](create-a-new-policy-based-management-condition.md)<br /><br /> [删除基于策略的管理条件](delete-a-policy-based-management-condition.md)<br /><br /> [查看或修改基于策略的管理条件的属性](view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
 |介绍如何创建、查看、修改和删除基于策略的管理策略。|[创建基于策略的管理策略](create-a-policy-based-management-policy.md)<br /><br /> [删除基于策略的管理策略](delete-a-policy-based-management-policy.md)<br /><br /> [查看或修改基于策略的管理策略的属性](view-or-modify-the-properties-of-a-policy-based-management-policy.md)|  
 |介绍如何导出和导入基于策略的管理策略。|[导出基于策略的管理策略](export-a-policy-based-management-policy.md)<br /><br /> [导入基于策略的管理策略](import-a-policy-based-management-policy.md)|  
-|介绍如何验证服务器实例、数据库、服务器对象或数据库对象符合策略。|[评估来自对象的基于策略的管理策略](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [从基于策略的管理策略评估该策略](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [定期评估基于策略的管理策略](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
+|介绍如何验证服务器实例、数据库、服务器对象或数据库对象符合策略。|[评估来自对象的基于策略的管理策略](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [评估策略中基于策略的管理策略](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [定期评估基于策略的管理策略](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |介绍如何查看基于策略的管理方面状态并将其复制到文件中。|[使用基于策略的管理方面](working-with-policy-based-management-facets.md)|  
 |提供一组可以作为最佳实践策略导入的策略文件，然后介绍如何针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。|[使用基于策略的管理来监视和强制执行最佳做法](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|提供 ** 中对象资源管理器的“策略管理”**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]节点的 F1 帮助主题。|[策略管理节点（对象资源管理器）](../../ssms/object/object-explorer.md)|  
+|提供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”**** 节点的 F1 帮助主题。|[策略管理节点（对象资源管理器）](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [基于策略的管理视图 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
+ [基于策略的管理视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

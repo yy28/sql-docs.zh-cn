@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157123"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
@@ -63,9 +63,9 @@ ms.locfileid: "63157123"
   
 -   **跟进：** [在更改代理参数后](#FollowUp)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-###  <a name="Access_SSMS"></a> 从 SQL Server Management Studio 访问“代理配置文件”对话框  
+###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> 从 SQL Server Management Studio 访问“代理配置文件”对话框  
   
 1.  在“分发服务器属性 - \<分发服务器>”对话框的“常规”页上，单击“配置文件默认值”    。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63157123"
   
     2.  对于分发代理配置文件和合并代理配置文件，请右键单击 **“所有订阅”** 选项卡上的订阅，再单击 **“代理配置文件”** 。 对于其他代理，右键单击 **“代理”** 选项卡上的代理，然后单击 **“代理配置文件”** 。  
   
-###  <a name="Specify_SSMS"></a> 指定代理的配置文件  
+###  <a name="to-specify-a-profile-for-an-agent"></a><a name="Specify_SSMS"></a> 指定代理的配置文件  
   
 1.  如果 **“代理配置文件”** 对话框中显示了多个代理的配置文件，请选择一个代理。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63157123"
   
 3.  若要指定用于现有发布或订阅且属于选定类型的所有代理都使用该配置文件，请单击 **“更改现有代理”** 。  
   
-###  <a name="Modify_SSMS"></a> 查看和编辑与配置文件关联的参数  
+###  <a name="to-view-and-edit-the-parameters-associated-with-a-profile"></a><a name="Modify_SSMS"></a> 查看和编辑与配置文件关联的参数  
   
 1.  如果 **“代理配置文件”** 对话框中显示了多个代理的配置文件，请选择一个代理。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "63157123"
   
 4.  单击“关闭”  。  
   
-###  <a name="Create_SSMS"></a> 创建用户定义的配置文件  
+###  <a name="to-create-a-user-defined-profile"></a><a name="Create_SSMS"></a> 创建用户定义的配置文件  
   
 1.  如果 **“代理配置文件”** 对话框中显示了多个代理的配置文件，请选择一个代理。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "63157123"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-###  <a name="Delete_SSMS"></a> 删除用户定义的配置文件  
+###  <a name="to-delete-a-user-defined-profile"></a><a name="Delete_SSMS"></a> 删除用户定义的配置文件  
   
 1.  如果 **“代理配置文件”** 对话框中显示了多个代理的配置文件，请选择一个代理。  
   
@@ -132,9 +132,9 @@ ms.locfileid: "63157123"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-###  <a name="Create_tsql"></a> 创建一个新的代理配置文件  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_tsql"></a> 创建一个新的代理配置文件  
   
 1.  在分发服务器上，执行 [sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql)。 为**@name**指定，值为**1** **@profile_type**，为指定以下值之一**@agent_type**：  
   
@@ -152,7 +152,7 @@ ms.locfileid: "63157123"
   
 2.  在已创建新配置文件后，可添加、删除或修改默认参数以自定义该配置文件。  
   
-###  <a name="Modify_tsql"></a> 修改现有代理配置文件  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_tsql"></a> 修改现有代理配置文件  
   
 1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为**@agent_type**指定下列值之一：  
   
@@ -183,7 +183,7 @@ ms.locfileid: "63157123"
   
     -   在分发服务器上，执行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql)。 为**@profile_id**指定步骤1中的配置文件标识符，为指定要添加的**@parameter_name**有效参数的名称，并为指定参数的值**@parameter_value**。  
   
-###  <a name="Delete_tsql"></a> 删除代理配置文件  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_tsql"></a> 删除代理配置文件  
   
 1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为**@agent_type**指定下列值之一：  
   
@@ -201,7 +201,7 @@ ms.locfileid: "63157123"
   
 2.  在分发服务器上，执行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql)。 为**@profile_id**指定步骤1中的配置文件标识符。  
   
-###  <a name="Synch_tsql"></a> 在同步期间使用代理配置文件  
+###  <a name="to-use-agent-profiles-during-synchronization"></a><a name="Synch_tsql"></a> 在同步期间使用代理配置文件  
   
 1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为**@agent_type**指定下列值之一：  
   
@@ -221,14 +221,14 @@ ms.locfileid: "63157123"
   
 3.  从命令提示符处启动代理时，请在 **-ProfileName**命令`profile_name`行参数后指定在步骤1中获得的值。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例将为名为 **custom_merge**的合并代理创建自定义配置文件，更改 **-UploadReadChangesPerBatch** 参数的值，添加新的 **-ExchangeType** 参数，并返回有关创建的配置文件的信息。  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../snippets/tsql/SQL15/replication/howto/tsql/createperfparammerge.sql#sp_addagentprofileparam)]  
   
-##  <a name="RMOProcedure"></a> 使用 RMO  
+##  <a name="using-rmo"></a><a name="RMOProcedure"></a> 使用 RMO  
   
-###  <a name="Create_RMO"></a> 创建一个新的代理配置文件  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_RMO"></a> 创建一个新的代理配置文件  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
@@ -244,7 +244,7 @@ ms.locfileid: "63157123"
   
     -   （可选） <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 配置文件的说明。  
   
-    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果默认情况下此 `true` 的所有新代理作业都将使用此配置文件，则将此属性设置为 <xref:Microsoft.SqlServer.Replication.AgentType>。  
+    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果默认情况下此 <xref:Microsoft.SqlServer.Replication.AgentType> 的所有新代理作业都将使用此配置文件，则将此属性设置为 `true`。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法以在服务器上创建配置文件。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "63157123"
   
 6.  若要将此配置文件分配给现有的复制代理作业，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 为 *distributionDBName* 传递分发数据库的名称并为 *agentID*传递作业 ID。  
   
-###  <a name="Modify_RMO"></a> 修改现有代理配置文件  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_RMO"></a> 修改现有代理配置文件  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "63157123"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 更改配置文件中现有参数的设置，其中 *name* 为代理参数的名称， *newValue* 为更改参数时的目标值。 若要枚举为配置文件定义的所有当前代理参数，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 此方法返回一个 <xref:System.Collections.ArrayList> 对象的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> ，表示此配置文件的现有参数。 若要枚举所有支持的代理参数设置，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 此方法返回 <xref:System.Collections.ArrayList> 对象的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> ，表示所有参数的支持值。  
   
-###  <a name="Delete_RMO"></a> 删除代理配置文件  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_RMO"></a> 删除代理配置文件  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
@@ -284,7 +284,7 @@ ms.locfileid: "63157123"
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 方法从服务器中删除此对象表示的用户定义的配置文件。  
   
-##  <a name="FollowUp"></a> 跟进：在更改代理参数后  
+##  <a name="follow-up-after-changing-agent-parameters"></a><a name="FollowUp"></a> 跟进：在更改代理参数后  
  对代理参数所做的更改在下次启动代理时生效。 如果代理连续运行，则必须停止该代理，然后重新启动。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162177"
 ---
 # <a name="how-online-index-operations-work"></a>联机索引操作的工作方式
@@ -36,7 +36,7 @@ ms.locfileid: "63162177"
   
      多个用户可以同时对预先存在的索引执行选择、插入、更新和删除操作。 这包括通过触发器和引用完整性约束执行的大容量插入（支持但不建议执行）和隐式更新。 所有预先存在的索引都可进行查询和搜索。 这意味着查询优化器可以选择预先存在的索引，如有必要，还可以在索引提示中指定预先存在的索引。  
   
--   **靶**  
+-   **Target**  
   
      目标是指正在创建或重新生成的新索引（或堆）或一组新索引。 在索引操作期间，用户对源的插入、更新和删除操作是由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 应用到目标的。 例如，如果联机索引操作正在重新生成一个聚集索引，则目标就是重新生成的聚集索引， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在聚集索引重新生成后不会重新生成非聚集索引。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63162177"
 |构建<br /><br /> 主要阶段|在大容量加载操作中对数据进行扫描、排序、合并并将数据插入到目标中。<br /><br /> 并发的用户选择、插入、更新和删除操作将被同时应用到预先存在的索引和所有正在生成的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |最后<br /><br /> 很短的阶段|必须完成所有未提交的更新事务，这一阶段才能开始。 根据获取的锁，所有新的用户读/写事务将被阻塞一段很短的时间，直到此阶段完成为止。<br /><br /> 系统元数据将被更新以便用目标替换源。<br /><br /> 如有必要，源将被删除。 例如，在重新生成或删除聚集索引之后。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 如果创建的是非聚集索引，则为对表的 S。\*<br /><br /> 如果删除了任何源结构（索引或表），则为 SCH-M（架构修改）。\*|  
   
- \*索引操作将等待任何未提交的更新事务完成，然后获取表的 S 锁或 SCH-M 锁。  
+ \* 索引操作将等待任何未提交的更新事务完成后，才会获取对表的 S 锁或 SCH-M 锁。  
   
  ** 在索引操作执行过程中，资源锁 INDEX_BUILD_INTERNAL_RESOURCE 将阻止对源和预先存在的结构执行并发数据定义语言 (DDL) 操作。 例如，此锁将会阻止为同一表同时重新生成两个索引。 虽然此资源锁与 Sch-M 锁相关联，但它不会阻止数据操作语句。  
   
