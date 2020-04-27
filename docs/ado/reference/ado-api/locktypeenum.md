@@ -16,16 +16,16 @@ ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918248"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 指定在编辑过程中放置在记录上的锁的类型。  
   
-|一直|值|说明|  
+|Constant|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|指示开放式批处理更新。 对于批处理更新模式是必需的。|  
 |**adLockOptimistic**|3|指示开放式锁定，按记录记录。 提供程序使用开放式锁定，仅在调用[Update](../../../ado/reference/ado-api/update-method.md)方法时锁定记录。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67918248"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums. LockType. BATCHOPTIMISTIC|  
 |AdoEnums. LockType|  

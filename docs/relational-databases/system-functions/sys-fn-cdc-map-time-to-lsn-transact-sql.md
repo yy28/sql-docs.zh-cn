@@ -21,10 +21,10 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046328"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
@@ -58,7 +58,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  要进行匹配的日期时间值。 *tracking_time*为**日期时间**。  
   
 ## <a name="return-type"></a>返回类型  
- **binary （10）**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>备注  
  若要了解如何使用**sys. fn_cdc_map_time_lsn**将 datetime 范围映射到 lsn 范围，请考虑以下方案。 假定使用者希望每日提取更改数据。 也就是说，使用者只需要给定日午夜之前（包括午夜）的更改。 此时间范围的下限应为无限接近前一天午夜的时间点（但不包括前一天午夜）。 上限应为给定日的午夜（包括午夜）。 下面的示例演示如何使用函数**fn_cdc_map_time_to_lsn sys.databases**将此基于时间的范围系统地映射到变更数据捕获枚举函数所需的基于 lsn 的范围，以返回该范围内的所有更改。  
@@ -97,6 +97,6 @@ END
  [lsn_time_mapping &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [sys. fn_cdc_map_lsn_to_time &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
  [fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

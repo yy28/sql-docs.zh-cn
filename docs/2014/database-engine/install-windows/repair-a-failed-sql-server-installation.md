@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046666"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>删除 SQL Server 2014 安装
@@ -46,7 +46,7 @@ ms.locfileid: "67046666"
   
 -   若要在“准备”操作失败之后修复故障转移群集节点，请使用 **“删除节点”** ，然后再次执行“准备”步骤。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>从安装中心修复失败的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>从安装中心修复失败的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
   
 1.  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质中启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序 (setup.exe)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67046666"
   
 8.  “修复进度”页显示修复操作的状态。 “完成”页指示修复操作已完成。  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>使用命令提示符修复失败的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>使用命令提示符修复失败的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
   
 1.  在命令提示符下运行以下命令：  
   

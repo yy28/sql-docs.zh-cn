@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67285039"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）
@@ -51,16 +51,16 @@ ms.locfileid: "67285039"
   
  端口冲突的一个迹象是看到以下错误消息：“System.IO.FileLoadException: 进程无法访问该文件，因为它正在被其他进程使用。 (HRESULT 异常: 0x80070020)”。  
   
-## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>用于带 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 的 IIS 6.0、7.0、8.0、8.5 的 URL 预留  
+## <a name="url-reservations-for-iis-60-70-80-85-with-sssql14-reporting-services"></a>用于带 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 的 IIS 6.0、7.0、8.0、8.5 的 URL 预留  
  使用上一节中概述的优先规则，即可以开始了解为 Reporting Services 和 IIS 定义的 URL 预留是如何提高互操作性的。 Reporting Services 接收为其应用程序明确指定了虚拟目录名的请求；IIS 接收所有的剩余请求，这些请求随后可定向到运行于 IIS 进程模型中的应用程序。  
   
-|Application|URL 预留|说明|请求接收情况|  
+|应用程序|URL 预留|说明|请求接收情况|  
 |-----------------|---------------------|-----------------|---------------------|  
 |报表服务器|http://+:80/ReportServer|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收针对 http://\<computername>/reportserver 的所有请求。|  
 |报表管理器|http://+:80/Reports|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 报表管理器接收到 http://\<computername>/reports。的所有请求|  
 |IIS|http://*:80/|针对端口 80 使用弱通配符。|接收端口 80 上尚未由其他应用程序接收的所有剩余请求。|  
   
-## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>在 IIS 6.0、7.0、8.0、8.5 上并行部署 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SQL Server 2005 Reporting Services  
+## <a name="side-by-side-deployments-of-sscurrent-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>在 IIS 6.0、7.0、8.0、8.5 上并行部署 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SQL Server 2005 Reporting Services  
  当 IIS 网站的虚拟目录名与 Reporting Services 所使用的虚拟目录名相同时，IIS 和 Reporting Services 之间会出现互操作性问题。 例如，假设您具有以下配置：  
   
 -   IIS 中一个分配到端口 80 的网站，以及名为“Reports”的虚拟目录。  
@@ -79,7 +79,7 @@ ms.locfileid: "67285039"
   
 ## <a name="see-also"></a>另请参阅  
  [配置报表服务器 URL（SSRS 配置管理器）](configure-report-server-urls-ssrs-configuration-manager.md)   
- [配置 URL（SSRS 配置管理器）](configure-a-url-ssrs-configuration-manager.md)   
+ [&#40;SSRS Configuration Manager 配置 URL&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [安装 Reporting Services 本机模式报表服务器](install-reporting-services-native-mode-report-server.md)  
   
   

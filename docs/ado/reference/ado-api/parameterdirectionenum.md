@@ -16,18 +16,18 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917743"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定[参数](../../../ado/reference/ado-api/parameter-object.md)是否表示输入参数、输出参数、输入参数和输出参数，或存储过程的返回值。  
   
-|一直|值|说明|  
+|Constant|Value|说明|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|默认值。 指示参数表示输入参数。|  
+|**adParamInput**|1|默认。 指示参数表示输入参数。|  
 |**adParamInputOutput**|3|指示参数表示输入参数和输出参数。|  
 |**adParamOutput**|2|指示参数表示输出参数。|  
 |**adParamReturnValue**|4|指示参数表示返回值。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67917743"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums.ParameterDirection.INPUT|  
 |AdoEnums.ParameterDirection.INPUTOUTPUT|  

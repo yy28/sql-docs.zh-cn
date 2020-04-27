@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189330"
 ---
 # <a name="edit-an-operator"></a>编辑运算符
@@ -33,29 +33,28 @@ ms.locfileid: "68189330"
   
      [安全性](#Security)  
   
--   **若要编辑操作员，请使用：**  
+-   **若要编辑操作员，可使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   在未来版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将从代理中删除寻呼程序和**net send**选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
 -   请注意，若要向操作员发送电子邮件和寻呼通知，必须将 SQL Server 代理配置为使用数据库邮件。 有关详细信息，请参阅 [向操作员分配警报](assign-alerts-to-an-operator.md)。  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  只有 **sysadmin** 固定服务器角色的成员才能编辑操作员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-edit-an-operator"></a>编辑操作员  
   
@@ -67,17 +66,17 @@ ms.locfileid: "68189330"
   
 4.  右键单击要编辑的操作员，然后选择“属性”****。  
   
-     有关 " _operator_name_**属性**" 对话框中包含的可用选项的详细信息，请参阅：  
+     有关“operator_name 属性”__**** 对话框包含的可用选项的详细信息，请参阅：  
   
     -   [操作员属性和新操作员 &#40;常规 "页面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
     -   [操作员属性：新建操作员 &#40;通知页面&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   ["操作员属性" &#40;"历史记录" 页&#41;](operator-properties-history-page.md)  
+    -   [操作员属性（“历史记录”页）](operator-properties-history-page.md)  
   
-5.  完成后，单击 **“确定”** 。  
+5.  完成后，单击“确定”****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-edit-an-operator"></a>编辑操作员  
   

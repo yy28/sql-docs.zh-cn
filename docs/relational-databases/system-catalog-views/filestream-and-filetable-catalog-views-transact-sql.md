@@ -15,10 +15,10 @@ ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 04fc26296d7c499982c75296089decfb57bd9ab4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016605"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream 和 FileTable 目录视图 (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68016605"
  为每个 FileTable 返回一行。 继承自**sys.databases**。  
 
 ## <a name="see-also"></a>另请参阅
-[文件流](../../relational-databases/blob/filestream-sql-server.md)
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 和 FileTable 动态管理视图 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
-<br>[Filestream 和 FileTable 系统存储过程（Transact-sql）](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
+<br>[Filestream 和 FileTable 系统存储过程 (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
   
   

@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900876"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
@@ -34,19 +34,19 @@ ms.locfileid: "67900876"
     
 ||||  
 |-|-|-|  
-|**列名**|类型 |**说明**|  
-|database_id |**int**|包含正在填充的全文索引的数据库 ID。|  
+|**列名**|**类型**|**说明**|  
+|**database_id**|**int**|包含正在填充的全文索引的数据库 ID。|  
 |**catalog_id**|**int**|包含此全文索引的全文目录的 ID。|  
-|table_id |**int**|其全文索引正在被填充的表的 ID。|  
+|table_id****|**int**|其全文索引正在被填充的表的 ID。|  
 |**document_count**|**int**|填充中的文档总数|  
 |**document_processed_count**|**int**|自此填充周期开始以来处理的文档数|  
 |**completion_type**|**int**|有关填充完成的状态。|  
-|**completion_type_description**|**nvarchar （120）**|完成类型的说明。|  
+|**completion_type_description**|**nvarchar(120)**|完成类型的说明。|  
 |**worker_count**|**int**|与相似性提取关联的工作线程数|  
-|**状态值**|**int**|此填充的状态。 说明：某些状态是暂时的。 下列类型作之一：<br /><br /> 3 = 正在启动<br /><br /> 5 = 正常处理<br /><br /> 7 = 已停止处理<br /><br /> 11 = 已中止填充|  
-|**status_description**|**nvarchar （120）**|对填充状态的说明。|  
+|**status**|**int**|此填充的状态。 说明：某些状态是暂时的。 下列类型作之一：<br /><br /> 3 = 正在启动<br /><br /> 5 = 正常处理<br /><br /> 7 = 已停止处理<br /><br /> 11 = 已中止填充|  
+|**status_description**|**nvarchar(120)**|对填充状态的说明。|  
 |**start_time**|**datetime**|填充开始的时间。|  
-|**incremental_timestamp**|**标志**|表示完全填充的开始时间戳。 对于所有其他填充类型，该值是表示填充进度的上次提交的检查点。|  
+|**incremental_timestamp**|**timestamp**|表示完全填充的开始时间戳。 对于所有其他填充类型，该值是表示填充进度的上次提交的检查点。|  
   
 ## <a name="general-remarks"></a>一般备注  
  有关详细信息，请参阅[管理和监视语义搜索](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  

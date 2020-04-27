@@ -10,10 +10,10 @@ ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908803"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>菜单命令和其他快捷键 (MySQLToSQL)
@@ -87,7 +87,7 @@ ms.locfileid: "67908803"
 |显示 "项目设置" 对话框。|ALT + T + P|  
 |显示 "默认项目设置" 对话框。|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>"帮助" 菜单命令  
+## <a name="help-menu-commands"></a>“帮助”菜单命令  
 若要访问 "帮助" 菜单，使用的键盘快捷方式是 ALT + H。下表描述了用于访问 "帮助" 菜单中的菜单项的键盘快捷方式。  
   
 |要执行此操作|长|  

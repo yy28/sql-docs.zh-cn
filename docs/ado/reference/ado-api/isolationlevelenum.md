@@ -16,16 +16,16 @@ ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918374"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的事务隔离级别。  
   
-|一直|值|说明|  
+|Constant|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|指示提供程序使用的隔离级别与指定的隔离级别不同，但是无法确定该级别。|  
 |**adXactChaos**|16|指示无法覆盖来自更高隔离事务的挂起的更改。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67918374"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums. IsolationLevel。未指定|  
 |AdoEnums. IsolationLevel|  

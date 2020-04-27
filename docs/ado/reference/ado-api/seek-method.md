@@ -17,10 +17,10 @@ ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e2ee81ac2ede53eb4fdbcfe8d3b5987db96f1ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917017"
 ---
 # <a name="seek-method"></a>Seek 方法
@@ -33,7 +33,7 @@ ms.locfileid: "67917017"
 recordset.Seek KeyValues, SeekOption  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *架构*  
  **变量**值的数组。 索引由一个或多个列组成，数组包含一个要与每个对应列进行比较的值。  
   

@@ -21,10 +21,10 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 59a58348f5428f568f40d28b4e83bc6bc040647c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900236"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67900236"
 
   为从父服务器实例创建的每个用户实例返回一行。  
   
-> **无关紧要!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> **重要说明！** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  从**dm_os_child_instances sys.databases**返回的信息可用于确定每个用户实例的状态（heart_beat），并获取可以用来创建与使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQLCmd 的用户实例的连接的管道名称（instance_pipe_name）。 只有在外部进程（例如客户端应用程序）启动了用户实例之后，您才能连接到该用户实例。 SQL 管理工具无法启动用户实例。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "67900236"
 |owning_principal_sid_binary|varbinary(85)|拥有用户实例的用户的二进制版 SID。|  
 |**instance_name**|**nvarchar(128)**|该用户实例的名称。|  
 |**instance_pipe_name**|**nvarchar(260)**|创建用户实例时，便会创建与应用程序连接的命名管道。 可以在连接字符串中使用该名称以连接到该用户实例。|  
-|**os_process_id**|**整形**|该用户实例的 Windows 进程的进程号。|  
+|**os_process_id**|**Int**|该用户实例的 Windows 进程的进程号。|  
 |**os_process_creation_date**|**型**|上次启动该用户实例进程的日期和时间。|  
 |**heart_beat**|**nvarchar （5）**|该用户实例的当前状态，可以是 ALIVE 或 DEAD。|  
-|pdw_node_id |**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  

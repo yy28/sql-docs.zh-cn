@@ -18,10 +18,10 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67898410"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
@@ -59,9 +59,8 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**帐户名**|**sysname**|完全限定的 Windows 帐户名。|  
-|type |**char （8）**|Windows 帐户类型。 有效值为 "**用户**" 或 "**组**"。|  
-|**特权**|**char （9）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问特权。 有效值为**admin**、 **user**或**null**。|  
+|**type**|**char （8）**|Windows 帐户类型。 有效值为 "**用户**" 或 "**组**"。|  
+|**特权**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问特权。 有效值为**admin**、 **user**或**null**。|  
 |**mapped login name**|**sysname**|对于具有用户权限的用户帐户，**映射的登录名**会显示映射的登录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名，该名称在使用此帐户登录时，将使用之前添加了域名的映射规则来尝试使用。|  
 |**permission path**|**sysname**|使帐户得到访问权限的组成员身份。|  
   
@@ -72,8 +71,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  如果指定*account_name*和**all** ，则返回 Windows 用户或组的所有权限路径。 如果*account_name*是多个组的成员，而这些组已被授予对的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]访问权限，则将返回多个行。 在**用户**特权行之前、在权限级别行内按照创建相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名的顺序返回了 "**管理**特权" 行。  
   
- 如果指定*account_name*和**成员**，则返回组中下一级成员的列表。 如果*account_name*是本地组，则该列表可以包含本地用户、域用户和组。 如果*account_name*是域帐户，则该列表由域用户组成。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须连接到域控制器，才能检索组成员身份信息。 如果该服务器无法联系域控制器，则不返回任何信息。  
+ 如果指定*account_name*和**成员**，则返回组中下一级成员的列表。 如果*account_name*是本地组，则该列表可以包含本地用户、域用户和组。 如果*account_name*是域帐户，则该列表由域用户组成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须连接到域控制器，才能检索组成员身份信息。 如果该服务器无法联系域控制器，则不返回任何信息。  
   
  **xp_logininfo**仅返回 Active Directory 全局组而不是通用组的信息。  
   
@@ -91,7 +89,7 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [sp_denylogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的常规扩展存储过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: a4b9028d30db3c36157ef3db628dcb7c1cbeda00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899230"
 ---
 # <a name="sysdm_pdw_os_threads-transact-sql"></a>sys. dm_pdw_os_threads （Transact-sql）
@@ -32,8 +32,8 @@ ms.locfileid: "67899230"
 |name|**nvarchar(255)**|||  
 |priority|**int**|||  
 |start_time|**datetime**|||  
-|state|**nvarchar （32）**|||  
-|wait_reason|**nvarchar （32）**|||  
+|state|**nvarchar(32)**|||  
+|wait_reason|**nvarchar(32)**|||  
 |total_processor_elapsed_time|**bigint**|线程使用的内核时间总量。||  
 |total_user_elapsed_time|**bigint**|线程使用的总用户时间||  
   

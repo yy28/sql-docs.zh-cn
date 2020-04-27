@@ -19,10 +19,10 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899721"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
@@ -38,11 +38,11 @@ ms.locfileid: "67899721"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a> 参数  
- database_id   
- 数据库 ID。 *database_id*为**int**，没有默认值。 不能为 NULL。  
+##  <a name="arguments"></a><a name="Arguments"></a>形参  
+ *database_id*  
+ 数据库 ID。 database_id 的数据类型为 int，无默认值******。 不能为 NULL。  
   
- file_id   
+ *file_id*  
  文件的 ID。 *file_id*为**int**，没有默认值。 不能为 NULL。  
   
 ## <a name="table-returned"></a>返回的表  
@@ -50,8 +50,8 @@ sys.dm_os_volume_stats (database_id, file_id)
 ||||  
 |-|-|-|  
 |**列**|**数据类型**|**说明**|  
-|database_id |**int**|数据库 ID。 不可为 null。|  
-|file_id |**int**|文件的 ID。 不可为 null。|  
+|**database_id**|**int**|数据库 ID。 不可为 null。|  
+|**file_id**|**int**|文件的 ID。 不可为 null。|  
 |**volume_mount_point**|**nvarchar(512)**|根卷上的装入点。 可返回空字符串。|  
 |**volume_id**|**nvarchar(512)**|操作系统卷 ID。 可以返回空字符串|  
 |**logical_volume_name**|**nvarchar(512)**|逻辑卷名称。 可以返回空字符串|  

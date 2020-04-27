@@ -10,10 +10,10 @@ ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909022"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>映射 MySQL 和 SQL Server 字符集 (MySQLToSQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67909022"
 > [!NOTE]  
 > 选择用于编辑字符集映射的选项卡包含三个按钮，而不考虑不同节点级别上的映射。  
 >   
-> 它们是：  
+> 它们分别是：  
 >   
 > 1.  **应用：** 应用用户所做的更改，仅在编辑字符集映射后启用。  
 > 2.  **取消：** 取消用户所做的更改。 编辑了字符集映射但未保存时，会启用该按钮。  

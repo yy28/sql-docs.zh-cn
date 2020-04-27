@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 14a5a6e38d4c9fcf306436374d80dd1c1c08b27e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413045"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中停止使用的功能
@@ -29,19 +29,17 @@ ms.locfileid: "67413045"
   
 - [SQL Server 2008 R2 Reporting Services 中停止使用的功能](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 中止的功能
+##  <a name="sssql14-reporting-services-discontinued-functionality"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 中止的功能
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中没有已停止使用的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]功能。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中没有已停止使用的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]功能。  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 中止的功能
+##  <a name="sssql11-reporting-services-discontinued-functionality"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 中止的功能
 
  本节介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中停止使用的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]功能。  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中没有已停止使用的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]功能。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中没有已停止使用的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]功能。  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 废止功能
+##  <a name="sql-server-2008-r2-reporting-services-discontinued-functionality"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 废止功能
 
  本部分介绍中的[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]停止使用。  
   

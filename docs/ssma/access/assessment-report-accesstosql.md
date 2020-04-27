@@ -13,10 +13,10 @@ ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910684"
 ---
 # <a name="assessment-report-accesstosql"></a>评估报表（AccessToSQL）
@@ -28,7 +28,7 @@ ms.locfileid: "67910684"
 **“资源管理器”窗格**  
 包含评估报表中对象的层次结构。 展开文件夹以查看各个对象和子组件。 单击类别或对象时，该类别或对象的转换统计信息将显示在 "详细信息" 窗格中。  
   
-**详细信息窗格**  
+**细节窗格**  
 显示所选对象的转换统计信息或错误和警告消息。 例如，如果选择了 "表" 文件夹，则详细信息窗格将显示已转换的外键、索引、主键和表的数目。  
   
 **消息窗格 (Messages pane)**  

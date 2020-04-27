@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48282f08df588f54b6f03a0b99c58a2f0cf039ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793527"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher-replication-transact-sql-programming"></a>为 Oracle 发布服务器配置事务集作业（复制 Transact-SQL 编程）
@@ -37,15 +37,15 @@ ms.locfileid: "67793527"
   
 ### <a name="to-configure-the-transaction-set-job"></a>配置事务集作业  
   
-1.  （可选）在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql)。 为 **publisher 指定 Oracle 发布服务器的名称\@** 。 这将返回发布服务器上的 **Xactset** 作业的属性。  
+1.  （可选）在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql)。 指定** \@发布服务器**的 Oracle 发布服务器的名称。 这将返回发布服务器上的 **Xactset** 作业的属性。  
   
-2.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql)。 为 **publisher 指定 Oracle 发布服务器的名称，为 \@propertyname 指定要设置的 Xactset 作业属性的名称，并为** propertyvalue 指定新设置 **\@** **\@** 。  
+2.  在分发服务器上，执行 [sp_publisherproperty (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql)。 为** \@发布服务器**指定 Oracle 发布服务器的名称，为** \@propertyname**设置的 Xactset 作业属性的名称，并为** \@propertyvalue**指定新设置。  
   
 3.  （可选）对于每个要设置的 Xactset 作业属性重复步骤 2。 更改`xactsetjobinterval`属性时，必须在 Oracle 发布服务器上重新启动作业，以使新的时间间隔生效。  
   
 ### <a name="to-view-properties-of-the-transaction-set-job"></a>查看事务集作业的属性  
   
-1.  在分发服务器上，执行 [sp_helpxactsetjob](/sql/relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql)。 为 **publisher 指定 Oracle 发布服务器的名称\@** 。  
+1.  在分发服务器上，执行 [sp_helpxactsetjob](/sql/relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql)。 指定** \@发布服务器**的 Oracle 发布服务器的名称。  
   
 ### <a name="to-disable-the-transaction-set-job"></a>禁用事务集作业  
   

@@ -16,16 +16,16 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918705"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定[Field](../../../ado/reference/ado-api/field-object.md)对象的一个或多个属性。  
   
-|一直|值|说明|  
+|Constant|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|指示提供程序缓存字段值，并且后续读取是从缓存中完成的。|  
 |**adFldFixed**|0x10|指示字段包含固定长度数据。|  
@@ -48,7 +48,7 @@ ms.locfileid: "67918705"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums.FieldAttribute.CACHEDEFERRED|  
 |AdoEnums. FieldAttribute|  

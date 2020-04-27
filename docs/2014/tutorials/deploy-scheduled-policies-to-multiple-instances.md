@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185797"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>将计划的策略部署到多个实例
@@ -28,14 +28,14 @@ ms.locfileid: "68185797"
   
  您将在完成本课程先前任务的计算机上执行这些任务。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  此任务具有以下必备条件：  
   
 -   您必须完成了本课程中的先前任务。  
   
 -   您要在其中部署计划策略的实例必须运行于 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 或更高版本上。 自动过程要求在本地存储策略，但早于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 版本不支持此功能。  
   
--   要在其中部署计划策略的服务器必须在 "**本地服务器组**" 或 "**中央管理服务器**" 节点的已注册服务器中注册。 有关详情，请参阅以下主题：  
+-   要在其中部署计划策略的服务器必须在 "**本地服务器组**" 或 "**中央管理服务器**" 节点的已注册服务器中注册。 有关详细信息，请参阅下列主题：  
   
     -   [创建或编辑服务器组 (SQL Server Management Studio)](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -89,10 +89,10 @@ ms.locfileid: "68185797"
     > [!NOTE]  
     >  若要在运行计划的策略之后查看评估结果，请打开目标实例上的“策略历史记录”日志。 若要打开日志，请右键单击 "**策略管理**"，然后单击 "**查看历史记录**"。  
   
-## <a name="summary"></a>总结  
+## <a name="summary"></a>摘要  
  本教程介绍了如何针对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例执行最佳实践策略的按需和计划评估。  
   
-## <a name="next"></a>下一步  
+## <a name="next"></a>Next  
  现已学完了本教程。 若要返回到开始，请参阅[教程：使用基于策略的管理来评估最佳实践](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)。  
   
  若要查看教程的[!INCLUDE[ssDE](../includes/ssde-md.md)]列表，请单击[数据库引擎教程](../relational-databases/database-engine-tutorials.md)。  

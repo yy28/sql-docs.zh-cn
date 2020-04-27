@@ -11,45 +11,45 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: be36e61a44a416283e77638f01005f1b3e16883b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413056"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的报表数据
 
   报表数据可以来自您的组织中的多种数据源。 设计报表的第一步是创建表示基础报表数据的数据源和数据集。 每个数据源都包含数据连接信息。 每个数据集都包含一个查询命令，该命令定义要用作来自数据源的数据的字段集。 若要展现来自各数据集的数据，请添加表、矩阵、图表或地图之类的数据区域。 处理报表时，将对数据源运行查询，并且每个数据区域都可以根据需要进行扩展，以便显示数据集的查询结果。  
   
-##  <a name="BkMk_ReportDataTerms"></a>规定
+##  <a name="terms"></a><a name="BkMk_ReportDataTerms"></a>规定
 
  如果你[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]不熟悉概念，请在 Reporting Services 概念中查看以下术语[&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)：*数据连接*、*嵌入数据源*、*共享数据源*、*嵌入数据集*、*共享*数据集、*数据集查询*、*报表部件*和*数据警报*。  
   
-##  <a name="BkMk_ReportDataTips"></a>指定报表数据的提示
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> 用于指定报表数据的提示
 
  使用以下信息可以设计您的报表数据策略。  
   
-- **数据源**可以与 Report Server 或 SharePoint 站点上的报表单独发布和管理数据源。 对于每个数据源，您或数据库所有者可以在一个位置中管理连接信息。 数据源凭据安全地存储在报表服务器上；请不要在连接字符串中包括密码。 您可以将来自测试服务器的数据源重定向到生产服务器。 您可以禁用某一数据源，以便挂起使用它的所有报表。 有关支持的数据源的列表，请参阅[Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
+- **数据源** 可以独立于报表服务器或 SharePoint 站点上的报表单独发布和管理数据源。 对于每个数据源，您或数据库所有者可以在一个位置中管理连接信息。 数据源凭据安全地存储在报表服务器上；请不要在连接字符串中包括密码。 您可以将来自测试服务器的数据源重定向到生产服务器。 您可以禁用某一数据源，以便挂起使用它的所有报表。 有关支持的数据源的列表，请参阅[Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
-- **数据集**可以独立于报表或它们所依赖的共享数据源来发布和管理数据集。 您或数据库所有者可以提供优化的查询以便报表作者使用。 当您更改查询时，使用共享数据集的所有报表都将使用更新的查询。 您可以启用数据集缓存来提高性能。 您可以安排在特定时间进行查询缓存，或使用共享的计划。  
+- **数据集** 可以独立于数据集所依赖的报表或共享数据源来单独发布和管理数据集。 您或数据库所有者可以提供优化的查询以便报表作者使用。 当您更改查询时，使用共享数据集的所有报表都将使用更新的查询。 您可以启用数据集缓存来提高性能。 您可以安排在特定时间进行查询缓存，或使用共享的计划。  
   
-- **报表部件使用的数据**报表部件可以包含它们所依赖的数据。 有关报表部件的详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../report-design/report-parts-in-report-designer-ssrs.md)。  
+- **报表部件使用的数据** 报表部件可以包含它们所依赖的数据。 有关报表部件的详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../report-design/report-parts-in-report-designer-ssrs.md)。  
   
-- **筛选数据**可以在查询或报表中筛选报表数据。 您可以使用数据集和查询变量来创建级联参数，并且使用户能够将成千上万种选择缩减为更为可控的数目。 您可以基于参数值或者您指定的其他值来筛选表或图表中的数据。  
+- **筛选数据** 可以在查询中或报表中筛选报表数据。 您可以使用数据集和查询变量来创建级联参数，并且使用户能够将成千上万种选择缩减为更为可控的数目。 您可以基于参数值或者您指定的其他值来筛选表或图表中的数据。  
   
-- **参数**包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要为特定用户自定义报表数据，您可以创建具有链接到相同报表定义的不同默认值的报表参数集，或者使用内置的 `UserID` 字段。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)和[表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)。  
+- **参数** 包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要为特定用户自定义报表数据，您可以创建具有链接到相同报表定义的不同默认值的报表参数集，或者使用内置的 `UserID` 字段。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)和[表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   
-- **数据警报**在发布报表后，您可以基于报表数据创建警报，并且在它满足您指定的规则时接收电子邮件。  
+- **数据警报** 在发布报表后，您可以基于报表数据创建警报，并且在警报满足您指定的规则时接收电子邮件。  
   
-- **分组和聚合数据**可以在查询或报表中对报表数据进行分组和聚合。 如果您聚合查询中的值，则可以继续在有意义的约束内合并报表中的值。  有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)和[聚合函数（报表生成器和 SSRS）](../report-design/report-builder-functions-aggregate-function.md)。  
+- **对数据进行分组和聚合** 可在查询或报表中对报表数据进行分组和聚合。 如果您聚合查询中的值，则可以继续在有意义的约束内合并报表中的值。  有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)和[聚合函数（报表生成器和 SSRS）](../report-design/report-builder-functions-aggregate-function.md)。  
   
-- **对数据排序**可以在查询或报表中对报表数据进行排序。 在表中，您还可以添加交互排序按钮，以便让用户控制排序顺序。  
+- **对数据排序** 可以在查询中或报表中对报表数据排序。 在表中，您还可以添加交互排序按钮，以便让用户控制排序顺序。  
   
-- **基于表达式的数据**因为大多数报表属性可以是基于表达式的，并且表达式可以包含对数据集字段和报表参数的引用，所以，您可以编写功能强大的表达式来控制报表数据和外观。 您可以通过定义参数，使用户能够控制其所看到的数据。  
+- **基于表达式的数据** 因为大多数报表属性可以是基于表达式的，并且表达式可以包含对数据集字段和报表参数的引用，所以，可以编写功能强大的表达式来控制报表数据和外观。 您可以通过定义参数，使用户能够控制其所看到的数据。  
   
-- **显示数据集中的数据**数据集的数据通常显示在一个或多个数据区域中，例如表和图表。  
+- **显示来自一个数据集的数据** 来自一个数据集的数据通常显示在一个或多个数据区域中，例如表和图表。  
   
-- **显示来自多个数据集的数据** 您可以基于一个数据集编写表达式，该数据集可查找其他数据集中的值或聚合。 您可以基于一个数据集在表中包含子报表，以便显示来自其他数据源的数据。  
+- **显示来自多个数据集的数据**  可以在数据区域中基于一个数据集编写表达式，用于查找其他数据集中的值或聚合。 您可以基于一个数据集在表中包含子报表，以便显示来自其他数据源的数据。  
   
 ## <a name="data-connections-data-sources-and-datasets"></a>数据连接、数据源和数据集
 

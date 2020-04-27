@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059194"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
@@ -44,7 +44,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>参数  
  *database_id* |无效  
- 数据库的 ID。 *database_id*为**int**，没有默认值。 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。  
+ 数据库的 ID。 database_id 的数据类型为 int，无默认值******。 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。  
   
  *file_id* |无效  
  文件的 ID。 *file_id*为**int**，没有默认值。 指定 NULL 可为数据库中的所有文件返回信息。  
@@ -55,7 +55,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|数据库 ID。|  
 |**FileId**|**smallint**|文件 ID。|  
-|**标志**|**bigint**|提取数据时的数据库时间戳。 **** 在之前[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的版本中为 int。 |  
+|**标志**|**bigint**|提取数据时的数据库时间戳。 **int**在之前[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的版本中为 int。 |  
 |**NumberReads**|**bigint**|对文件发出的读取次数。|  
 |**BytesRead**|**bigint**|对文件发出的读取字节数。|  
 |**IoStallReadMS**|**bigint**|用户等待文件的读取 I/O 完成所费的总时间（以毫秒为单位）。|  
@@ -103,8 +103,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [DB_ID &#40;Transact-sql&#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX (Transact-SQL)](../../t-sql/functions/file-idex-transact-sql.md)   
- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [FILE_IDEX &#40;Transact-sql&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [sys. database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

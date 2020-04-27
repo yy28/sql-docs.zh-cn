@@ -21,10 +21,10 @@ ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910247"
 ---
 # <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup fn_get_current_xevent_settings （Transact-sql）
@@ -42,7 +42,7 @@ ms.locfileid: "67910247"
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   
-##  <a name="Arguments"></a> 参数  
+##  <a name="arguments"></a><a name="Arguments"></a>形参  
  此函数没有任何参数。  
   
 ## <a name="table-returned"></a>返回的表  

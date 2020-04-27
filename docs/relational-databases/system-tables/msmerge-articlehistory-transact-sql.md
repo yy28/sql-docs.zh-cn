@@ -18,10 +18,10 @@ ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96b6c2599920c8d251b6d421cc18dc43c82fe521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907255"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
@@ -35,16 +35,16 @@ ms.locfileid: "67907255"
 |**phase_id**|**int**|同步会话的阶段，可以是下列的一个值：<br /><br /> **1** = 上传。<br /><br /> **2** = 下载。<br /><br /> **4** = 清理。<br /><br /> **5** = 关闭。<br /><br /> **6** = 架构更改。<br /><br /> **7** = BCP。|  
 |**article_name**|**sysname**|对其进行更改的项目的名称。|  
 |**start_time**|**datetime**|代理开始处理项目的时间。|  
-|**持续时间**|**int**|代理处理项目所用的时间（秒）。|  
+|**duration**|**int**|代理处理项目所用的时间（秒）。|  
 |**插入**|**int**|在同步期间应用到特定项目的插入的数目。 在同步过程中此值将增大，结束值代表总数。|  
-|**程序**|**int**|在同步期间应用到特定项目的更新的数目。 在同步过程中此值将增大，结束值代表总数。|  
+|**更新**|**int**|在同步期间应用到特定项目的更新的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**清除**|**int**|在同步期间应用到特定项目的删除的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**存在**|**int**|同步期间发生的冲突的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**conflicts_resolved**|**int**|同步期间发生并已经解决的冲突的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**rows_retried**|**int**|在同步期间重试的错误行的数目。  在同步过程中此值将增大，结束值代表总数。|  
-|**percent_complete**|**Decimal**|在会话期间合并代理对项目进行同步所花费的时间占总同步时间的百分比。 在会话结束前，该值为 NULL。|  
+|**percent_complete**|**decimal**|在会话期间合并代理对项目进行同步所花费的时间占总同步时间的百分比。 在会话结束前，该值为 NULL。|  
 |**estimated_changes**|**int**|必须应用到项目的一个估计的行更改数。|  
-|**relative_cost**|**Decimal**|将更改应用到项目所用的时间与整个会话的总时间的比值。|  
+|**relative_cost**|**decimal**|将更改应用到项目所用的时间与整个会话的总时间的比值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [复制表 (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

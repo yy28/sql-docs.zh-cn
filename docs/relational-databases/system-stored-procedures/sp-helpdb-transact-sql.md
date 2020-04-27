@@ -18,10 +18,10 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67903021"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
@@ -48,23 +48,23 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|数据库名称。|  
+|name |**sysname**|数据库名称。|  
 |**db_size**|**nvarchar （13）**|数据库总计大小。|  
 |**owner**|**sysname**|数据库所有者，如**sa**。|  
 |**dbid**|**smallint**|数据库 ID。|  
-|**建立**|**nvarchar(11)**|数据库创建的日期。|  
-|**状态值**|**nvarchar （600）**|以逗号分隔的值列表，这些值是当前在数据库上设置的数据库选项的值。<br /><br /> 只有启用布尔值选项时，才将这些选项列出。 非布尔选项以*option_name*=*值*的形式列出了其相应的值。<br /><br /> 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。|  
+|**created**|**nvarchar(11)**|数据库创建的日期。|  
+|**status**|**nvarchar （600）**|以逗号分隔的值列表，这些值是当前在数据库上设置的数据库选项的值。<br /><br /> 只有启用布尔值选项时，才将这些选项列出。 非布尔选项以*option_name*=*值*的形式列出了其相应的值。<br /><br /> 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |**compatibility_level**|**tinyint**|数据库兼容级别：60、65、70、80 或 90。|  
   
  如果指定*name* ，则会出现一个额外的结果集，其中显示指定数据库的文件分配。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**nchar （128）**|逻辑文件名。|  
+|name |**nchar(128)**|逻辑文件名。|  
 |**fileid**|**smallint**|文件 ID。|  
 |**名字**|**nchar （260）**|操作系统文件名（物理文件名称）。|  
 |**文件**|**nvarchar(128)**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
-|**规格**|**nvarchar （18）**|文件大小 (MB)。|  
+|size |**nvarchar （18）**|文件大小 (MB)。|  
 |**maxsize**|**nvarchar （18）**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**growth**|**nvarchar （18）**|文件的增量。 此值指示每次需要新空间时添加到文件中的空间量。|  
 |**使用情况**|**varchar （9）**|文件用法。 对于数据文件，该值为 **"仅数据"** ; 对于日志文件，该值为 **"仅记录"**。|  
@@ -96,10 +96,10 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys. database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

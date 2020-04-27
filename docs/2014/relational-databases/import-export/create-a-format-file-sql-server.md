@@ -13,28 +13,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66265149"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
   当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种类型的格式化文件：非 XML 格式和 XML 格式。 非 XML 格式是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本支持的原始格式。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种类型的格式化文件：非 XML 格式和 XML 格式。 非 XML 格式是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本支持的原始格式。  
   
  通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。  
   
 > [!NOTE]  
->  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bcp 可以读取由 ** bcp 生成的 10.0 版格式化文件，但 ** bcp 无法读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bcp 生成的 11.0 版格式化文件****[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]****[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]****。  
+>  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**可以读取由[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**生成的版本10.0 格式文件，但[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**无法读取[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**生成的版本11.0 格式文件。  
   
- 本主题说明了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 为特定表创建格式化文件。 格式化文件基于指定的数据类型选项（**-n**、 **-c**、 **-w**或 **-N**）以及表或视图分隔符。  
+ 本主题说明了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 为特定表创建格式化文件。 格式化文件基于指定的数据类型选项（ **-n**、 **-c**、 **-w**或 **-N**）以及表或视图分隔符。  
   
 ## <a name="creating-a-non-xml-format-file"></a>创建非 XML 格式化文件  
- 若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 
-  **format** 选项还需要 **-f** 选项，例如：  
+ 若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 **format** 选项还需要 **-f** 选项，例如：  
   
  **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
@@ -54,14 +52,12 @@ ms.locfileid: "66265149"
   
 -   D. 为 Unicode 字符数据创建非 XML 格式化文件  
   
- 本示例使用 `HumanResources.Department` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 
-  `HumanResources.Department` 表包含四列： `DepartmentID`、 `Name`、 `GroupName`和 `ModifiedDate`。  
+ 本示例使用 `HumanResources.Department` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 `HumanResources.Department` 表包含四列： `DepartmentID`、 `Name`、 `GroupName`和 `ModifiedDate`。  
   
 #### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>A. 为本机数据创建非 XML 格式化文件  
  以下示例将为 `Department-n.xml`表创建 XML 格式化文件 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` 。 格式化文件使用本机数据类型。 在命令之后显示生成的格式化文件的内容。  
   
- 
-  **bcp** 命令包含以下限定符。  
+ **bcp** 命令包含以下限定符。  
   
 |限定符|说明|  
 |----------------|-----------------|  
@@ -91,8 +87,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
 #### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>B. 为字符数据创建非 XML 格式化文件  
  以下示例将为 `Department.fmt`表创建 XML 格式化文件 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` 。 格式化文件使用字符数据格式和非默认字段终止符 (`,`)。 在命令之后显示生成的格式化文件的内容。  
   
- 
-  **bcp** 命令包含以下限定符。  
+ **bcp** 命令包含以下限定符。  
   
 |限定符|说明|  
 |----------------|-----------------|  
@@ -138,8 +133,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  有关如何使用 Unicode 字符数据的详细信息，请参阅[使用 Unicode 字符格式导入或导出数据 (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
 ## <a name="creating-an-xml-format-file"></a>创建 XML 格式化文件  
- 若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 
-  **format** 选项始终要求 **-f** 选项，若要创建 XML 格式化文件，还必须指定 **-x** 选项，例如：  
+ 若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 **format** 选项始终要求 **-f** 选项，若要创建 XML 格式化文件，还必须指定 **-x** 选项，例如：  
   
  **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
@@ -155,8 +149,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 -   B. 为本机数据创建 XML 格式化文件  
   
- 本示例使用 `HumanResources.Department` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 
-  `HumanResources.Department` 表包含四列： `DepartmentID`、 `Name`、 `GroupName`和 `ModifiedDate`。  
+ 本示例使用 `HumanResources.Department` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 `HumanResources.Department` 表包含四列： `DepartmentID`、 `Name`、 `GroupName`和 `ModifiedDate`。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBdesc](../../includes/sssampledbdesc-md.md)]  
@@ -164,14 +157,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 #### <a name="a-creating-an-xml-format-file-for-character-data"></a>A. 为字符数据创建 XML 格式化文件  
  以下示例将为 `Department.xml`表创建 XML 格式化文件 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` 。 格式化文件使用字符数据格式和非默认字段终止符 (`,`)。 在命令之后显示生成的格式化文件的内容。  
   
- 
-  **bcp** 命令包含以下限定符。  
+ **bcp** 命令包含以下限定符。  
   
 |限定符|说明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
-|**-t**`,`|指定逗号（**，**）作为字段终止符。<br /><br /> 请注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 **-t** 开关。|  
+|**-t** `,`|将逗号 ( **,** ) 指定为字段终止符。<br /><br /> 注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 -t 开关  。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
  在 Windows 命令提示符下，输入以下 `bcp` 命令：  
@@ -205,8 +197,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
 #### <a name="b-creating-an-xml-format-file-for-native-data"></a>B. 为本机数据创建 XML 格式化文件  
  以下示例将为 `Department-n.xml`表创建 XML 格式化文件 `HumanResources.Department` 。 格式化文件使用本机数据类型。 在命令之后显示生成的格式化文件的内容。  
   
- 
-  **bcp** 命令包含以下限定符。  
+ **bcp** 命令包含以下限定符。  
   
 |限定符|说明|  
 |----------------|-----------------|  
@@ -254,9 +245,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 ## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [使用格式化文件将表列映射到数据文件字段 (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
- [使用格式化文件跳过表列 &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [使用格式化文件跳过数据字段 (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)   
- [非 XML 格式化文件 &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [非 XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)   
  [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)  
   
   

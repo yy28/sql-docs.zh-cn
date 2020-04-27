@@ -13,10 +13,10 @@ ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d32d79b0a0481d2ade05a78c80d72587817a04b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918574"
 ---
 # <a name="get_oledbcommand-method"></a>get_OLEDBCommand 方法
@@ -31,7 +31,7 @@ HRESULT get_OLEDBCommand(
 );  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ppOLEDBCommand*  
  弄一个指针，指向将写入基础 OLE DB 命令的 IUnknown 指针的指针位置。  
   

@@ -17,10 +17,10 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918077"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
@@ -33,8 +33,8 @@ ms.locfileid: "67918077"
 Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *数据源*  
+#### <a name="parameters"></a>参数  
+ *源*  
  可选。 一个**字符串**值，该值包含用于标识要移动的**记录**的 URL。 如果省略了*Source*或指定了空字符串，则移动此**记录**表示的对象。 例如，如果**记录**表示文件，则该文件的内容将移动到*Destination*指定的位置。  
   
  *目标*  
@@ -43,7 +43,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *用户名*  
  可选。 一个**字符串**值，该值包含用户 ID，该 ID 在需要时授予访问*目标*的权限。  
   
- *权限*  
+ *密码*  
  可选。 一个包含密码的**字符串**，如有必要，将验证*用户名*。  
   
  *选项*  
@@ -53,7 +53,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  可选。 一个**布尔**值，如果**为 True，则**将此操作指定为异步。  
   
 ## <a name="return-value"></a>返回值  
- 一个字符串值  。 通常，返回*目标*的值。 但是，返回的确切值与提供程序相关。  
+ 一个字符串值****。 通常，返回*目标*的值。 但是，返回的确切值与提供程序相关。  
   
 ## <a name="remarks"></a>备注  
  *源*和*目标*的值不得完全相同;否则，会发生运行时错误。 至少服务器、路径和资源名称必须不同。  

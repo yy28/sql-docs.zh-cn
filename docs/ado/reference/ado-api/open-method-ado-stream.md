@@ -17,10 +17,10 @@ ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917828"
 ---
 # <a name="open-method-ado-stream"></a>Open 方法（ADO 流）
@@ -33,8 +33,8 @@ ms.locfileid: "67917828"
 Stream.Open Source, Mode , OpenOptions, UserName, Password  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *数据源*  
+#### <a name="parameters"></a>参数  
+ *源*  
  可选。 一个**变量**值，指定**流**的数据源。 *源*可以包含指向已知树结构（如电子邮件或文件系统）中的现有节点的绝对 URL 字符串。 Url 应使用 url 关键字（"url =*方案*：//*服务器*/*文件夹*"）来指定。 另外， *Source*可能包含对已打开的[record](../../../ado/reference/ado-api/record-object-ado.md)对象的引用，该对象将打开与该**记录**关联的默认流。 如果未指定*源*，则默认情况下，将实例化并打开一个**流**，而不会关联到任何基础源。 有关 URL 方案及其关联的提供程序的详细信息，请参阅[绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
  *模式*  
@@ -46,7 +46,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *用户名*  
  可选。 一个**字符串**值，该值包含用户标识，如有必要，它将访问**流**对象。  
   
- *权限*  
+ *密码*  
  可选。 一个**字符串**值，该值包含在需要时访问**流**对象的密码。  
   
 ## <a name="remarks"></a>备注  

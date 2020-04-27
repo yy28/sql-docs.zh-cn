@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67826338"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 身份验证和授权
@@ -24,7 +24,7 @@ ms.locfileid: "67826338"
   
  单击下面的链接可阅读本主题中的特定部分：  
   
- [使用经典模式登录要求的 Windows 身份验证](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [Windows 身份验证（使用经典模式登录）要求](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [要求用户授权的 PowerPivot 操作](#UserConnections)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67826338"
   
  [PowerPivot 工作簿的 Excel Services 安全注意事项](#excel)  
   
-##  <a name="bkmk_auth"></a>使用经典模式登录要求的 Windows 身份验证  
+##  <a name="windows-authentication-using-classic-mode-sign-in-requirement"></a><a name="bkmk_auth"></a>使用经典模式登录要求的 Windows 身份验证  
  PowerPivot for SharePoint 支持 SharePoint 中可用的一组简化的身份验证选项。 在这些可用的身份验证选项中，PowerPivot for SharePoint 部署只支持 Windows 身份验证。 此外，通过登录访问的 Web 应用程序必须配置为经典模式。  
   
  Windows 身份验证是必需的，因为 PowerPivot for SharePoint 部署中的 Analysis Services 数据引擎只支持 Windows 身份验证。 Excel Services 使用 Windows 用户标识通过 MSOLAP OLE DB 访问接口建立到 Analysis Services 的连接，该标识已通过 NTLM 或 Kerberos 协议进行了身份验证。  
@@ -52,15 +52,15 @@ ms.locfileid: "67826338"
   
  对于现有的 Web 应用程序，使用以下说明来验证 Web 应用程序配置为使用 Windows 身份验证。  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理 Web 应用程序”**。  
+1.  在管理中心的 "应用程序管理" 中，单击 "**管理 web 应用程序**"。  
   
-2.  选择此 web 应用程序。  
+2.  选择 Web 应用程序。  
   
 3.  单击 **“身份验证访问接口”**。  
   
 4.  验证您对于每个区域具有一个访问接口，默认区域设置为 Windows。  
   
-##  <a name="UserConnections"></a>需要用户授权的 PowerPivot 操作  
+##  <a name="powerpivot-operations-requiring-user-authorization"></a><a name="UserConnections"></a>需要用户授权的 PowerPivot 操作  
  对 PowerPivot 查询和数据处理的所有级别的访问都仅使用 SharePoint 授权。  
   
  不支持基于 Analysis Services 角色的授权模型。 在单元、行或表级别对于 PowerPivot 数据没有基于角色的授权。 您不能保护工作簿的不同部分，以授予或拒绝特定用户对其中敏感数据的访问权限。 嵌入的 PowerPivot 数据全部可供对 SharePoint 库中的 Excel 工作簿具有查看权限的用户使用。  
@@ -73,7 +73,7 @@ ms.locfileid: "67826338"
   
 -   数据刷新操作，用于将数据源的已更新副本保存到内容库中的工作簿。 在此情况下，将使用从安全存储区服务中的目标应用程序检索的用户名和密码执行实际登录操作。 凭据可以是 PowerPivot 无人参与的数据刷新帐户，也可以是在创建数据刷新计划时随其存储的凭据。 有关详细信息，请参阅为[Powerpivot 数据刷新配置存储的凭据 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)并[配置 Powerpivot 无人参与的数据刷新帐户 &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
   
-##  <a name="Permissions"></a>用于 PowerPivot 数据访问的 SharePoint 权限  
+##  <a name="sharepoint-permissions-for-powerpivot-data-access"></a><a name="Permissions"></a>用于 PowerPivot 数据访问的 SharePoint 权限  
  只有通过 SharePoint 集成，才能支持发布、管理和保护 PowerPivot 工作簿。 SharePoint 服务器提供身份验证和授权子系统，以确保合法访问数据。 没有支持的方案可用于安全地在 SharePoint 场之外部署 PowerPivot 工作簿。  
   
  用户通过“查看”权限或更高权限对 PowerPivot 数据的访问在服务器上是只读的。 “参与讨论”权限允许添加和编辑文件。 更改 PowerPivot 数据要求您将工作簿下载到安装了 PowerPivot for Excel 的 Excel 桌面应用程序。 对文件的“参与讨论”权限将确定用户是否可在本地下载文件然后将更改保存回 SharePoint。  
@@ -90,7 +90,7 @@ ms.locfileid: "67826338"
 |读取|将 PowerPivot 工作簿作为外部数据源访问，其中，工作簿 URL 在连接对话框中显式输入（例如，在 Excel 的数据连接向导中）。|  
 |仅查看|查看 PowerPivot 工作簿。<br /><br /> 查看数据刷新历史记录。<br /><br /> 将本地工作簿连接到 SharePoint 站点上的 PowerPivot 工作簿，以其他方法重新设定其数据的作用。<br /><br /> 下载该工作簿的一个快照。 该快照是数据的静态副本，没有切片器、筛选器、公式或数据连接。 该快照的内容类似于从浏览器窗口复制单元值。|  
   
-##  <a name="excel"></a>PowerPivot 工作簿的 Excel Services 安全注意事项  
+##  <a name="excel-services-security-considerations-for-powerpivot-workbooks"></a><a name="excel"></a>PowerPivot 工作簿的 Excel Services 安全注意事项  
  PowerPivot 服务器端查询处理与 Excel Services 紧密耦合。 在文档级别开始产品集成，因为 PowerPivot 工作簿是包含或引用 PowerPivot 数据的 Excel 工作簿 (.xlsx) 文件。 PowerPivot 工作簿没有单独的文件扩展名。  
   
  当在 SharePoint 站点中打开 PowerPivot 工作簿时，Excel Services 读取嵌入的 PowerPivot 数据连接字符串，并将请求转发到本地 SQL Server Analysis Services OLE DB 访问接口。 然后，此访问接口将连接信息传递给场中的 PowerPivot 服务器。 为了使请求在两个服务器之间无缝传递，必须将 Excel Services 配置为使用 PowerPivot for SharePoint 要求的设置。  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8b880820ac633402d1d3cdd679b16a54d1be358e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899542"
 ---
 # <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys. dm_pdw_diag_processing_stats （Transact-sql）
@@ -26,7 +26,7 @@ ms.locfileid: "67899542"
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|pdw_node_id |**int**|此日志来自的设备节点。|  
+|**pdw_node_id**|**int**|此日志来自的设备节点。|  
 |**process_id**|**int**|正在提交此统计信息的进程的标识符。|  
 |**target_name**|**nvarchar(255)**|队列的名称。|  
 |**queue_size**|**int**|进程队列中的项数。 队列大小通常为0。 正数指示系统正在压力上并且正在生成事件积压工作（backlog）。 其他列中的正计数表示该特定队列的系统已损坏，以及任何相关的 Dmv。|  

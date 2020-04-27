@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189283"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>作业属性：新建作业（“警报”页）
@@ -36,7 +36,7 @@ ms.locfileid: "68189283"
  从作业中移除并删除所选警报。  
   
 ## <a name="see-also"></a>另请参阅  
- [Alerts](alerts.md)   
+ [提醒](alerts.md)   
  [执行作业](implement-jobs.md)  
   
   

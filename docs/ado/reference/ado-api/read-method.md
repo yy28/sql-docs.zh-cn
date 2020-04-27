@@ -17,10 +17,10 @@ ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917409"
 ---
 # <a name="read-method"></a>Read 方法
@@ -33,7 +33,7 @@ ms.locfileid: "67917409"
 Variant = Stream.Read ( NumBytes)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *NumBytes*  
  可选。 一个**长整型**值，指定要从文件中读取的字节数，或[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)值**adReadAll**（这是默认值）。  
   

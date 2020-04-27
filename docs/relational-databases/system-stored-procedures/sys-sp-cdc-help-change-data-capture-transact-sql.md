@@ -22,16 +22,16 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905177"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回当前数据库中为变更数据捕获启用的每个表的变更数据捕获配置。 最多可为每个源表返回两行，为每个捕获实例返回一行。 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+  返回当前数据库中为变更数据捕获启用的每个表的变更数据捕获配置。 最多可为每个源表返回两行，为每个捕获实例返回一行。 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2016 的各个[版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,11 +71,10 @@ sys.sp_cdc_help_change_data_capture
 |capture_instance|**sysname**|捕获实例的名称。|  
 |object_id|**int**|与源表关联的更改表的 ID。|  
 |source_object_id|**int**|源表的 ID。|  
-|start_lsn|**binary （10）**|日志序列号 (LSN)，表示用于查询更改表的低端点。<br /><br /> NULL = 尚未建立低端点。|  
-|end_lsn|**binary （10）**|LSN，表示用于查询更改表的高端点。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此列始终为 NULL。|  
+|start_lsn|**binary(10)**|日志序列号 (LSN)，表示用于查询更改表的低端点。<br /><br /> NULL = 尚未建立低端点。|  
+|end_lsn|**binary(10)**|LSN，表示用于查询更改表的高端点。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此列始终为 NULL。|  
 |supports_net_changes|**bit**|已启用净更改支持。|  
-|has_drop_pending|**bit**|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中不使用。|  
+|has_drop_pending|**bit**|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中不使用。|  
 |role_name|**sysname**|用于控制对更改数据的访问的数据库角色的名称。<br /><br /> NULL = 未使用角色。|  
 |index_name|**sysname**|用于唯一标识源表中的行的索引名称。|  
 |filegroup_name|**sysname**|更改表所驻留的文件组的名称。<br /><br /> NULL = 更改表在数据库的默认文件组中。|  

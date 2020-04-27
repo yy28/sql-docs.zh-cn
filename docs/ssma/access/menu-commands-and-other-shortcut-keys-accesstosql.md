@@ -10,10 +10,10 @@ ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907131"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>菜单命令和其他快捷键（AccessToSQL）
@@ -57,7 +57,7 @@ ms.locfileid: "67907131"
 |查找上一个。|ALT + E + F + P 或 CTRL + SHIFT + F3|  
 |查找下一个|ALT + E + F + N 或 CTRL + F3|  
   
-## <a name="view-menu-commands"></a>"查看" 菜单命令  
+## <a name="view-menu-commands"></a>“视图”菜单命令  
 若要访问 "查看" 菜单，使用的键盘快捷方式是 ALT + V。下表描述了用于访问 "查看" 菜单中的菜单项的键盘快捷方式。  
   
 |要执行此操作|长|  
@@ -96,7 +96,7 @@ ms.locfileid: "67907131"
 |导出架构。|ALT + T + E|  
 |在本地删除。|ALT + T + D|  
   
-## <a name="help-menu-commands"></a>"帮助" 菜单命令  
+## <a name="help-menu-commands"></a>“帮助”菜单命令  
 若要访问 "帮助" 菜单，使用的键盘快捷方式是 ALT + H。下表描述了用于访问 "帮助" 菜单中的菜单项的键盘快捷方式。  
   
 |要执行此操作|长|  

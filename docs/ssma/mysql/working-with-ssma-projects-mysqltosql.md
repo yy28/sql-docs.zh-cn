@@ -15,10 +15,10 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904905"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>处理 SSMA 项目 (MySQLToSQL)
@@ -67,7 +67,7 @@ SSMA 包含一些设置，用于转换和加载数据库、迁移数据以及将
   
 ##### <a name="to-create-a-new-project"></a>创建新项目的步骤  
   
-1.  从 "**文件**" 菜单中选择 "**新建项目**"。 将显示“新建项目”对话框  。 在“文件”菜单中，选择“新建项目”。   将显示“新建项目”对话框  。  
+1.  从 "**文件**" 菜单中选择 "**新建项目**"。 此时将出现“新建项目”  对话框。 在“文件”菜单中，选择“新建项目”。******** 此时将出现“新建项目”  对话框。  
   
 2.  在 "**名称**" 框中，输入项目的名称。  
   
@@ -75,11 +75,11 @@ SSMA 包含一些设置，用于转换和加载数据库、迁移数据以及将
   
 4.  在 "**迁移到**" 下拉菜单中，选择用于迁移的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标版本。 可用选项包括：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   

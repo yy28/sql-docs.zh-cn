@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624410"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
@@ -41,7 +41,7 @@ ms.locfileid: "67624410"
   
     > [!IMPORTANT]  
     >  如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 设置为与 MAX_MEMORY_PERCENT 相同的值。   
-    > 有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
+    > 有关详细信息，请参阅主题[最佳做法：在虚拟机环境中使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
   
     ```sql  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67624410"
   
 > [!IMPORTANT]  
 >  如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 设置为相同值。   
-> 有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
+> 有关详细信息，请参阅主题[最佳做法：在虚拟机环境中使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
   
 ```sql  
   
@@ -125,14 +125,14 @@ GO
   
 ```  
   
- 有关 MAX_MEMORY_PERCENT 最大值的信息，请参阅主题部分[可用于内存优化表和索引的内存百分比](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)。  
+ 有关 MAX_MEMORY_PERCENT 最大值的信息，请参阅主题部分 [可用于内存优化表和索引的内存百分比](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)。  
   
 ##### <a name="install-additional-memory"></a>安装更多内存  
  如果可能，最终的最佳解决方案是安装更多物理内存。 这时，请注意，还是可以增加 MAX_MEMORY_PERCENT 的值（请参阅子主题[更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)），因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能不需要更多内存，当新安装的内存不能都用于此资源池时，这可以得到最好的效果。  
   
 > [!IMPORTANT]  
 >  如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 设置为相同值。   
-> 有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
+> 有关详细信息，请参阅主题[最佳做法：在虚拟机环境中使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>在提供足够内存时，解决由于内存不足导致的页分配失败问题  
  如果收到错误消息 "由于资源池 '*\<resourcepoolname>>*' 中的内存不足，不允许数据库 '*\<databaseName>* 的页分配。 有关详细<https://go.microsoft.com/fwlink/?LinkId=330673>信息，请参阅 ""。 ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
@@ -144,7 +144,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [管理内存中 OLTP 的内存](../../database-engine/managing-memory-for-in-memory-oltp.md)   
  [内存使用情况的监视和故障排除](monitor-and-troubleshoot-memory-usage.md)   
- [数据库与资源池绑定的指南，请参阅主题](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [将具有内存优化表的数据库绑定到资源池](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [最佳做法：在虚拟机环境中使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68188746"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
@@ -33,18 +33,18 @@ ms.locfileid: "68188746"
   
      [安全性](#Security)  
   
--   **若要查看有关操作员的信息，请使用：**  
+-   **若要查看有关操作员的信息，可使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68188746"
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](sql-server-agent-fixed-database-roles.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-operator"></a>查看有关操作员的信息  
   
@@ -66,17 +66,17 @@ ms.locfileid: "68188746"
   
 4.  右键单击要查看的操作员，然后选择“属性”****。  
   
-     有关 " _operator_name_**属性**" 对话框中包含的可用选项的详细信息，请参阅：  
+     有关“operator_name 属性”__**** 对话框包含的可用选项的详细信息，请参阅：  
   
     -   [操作员属性和新操作员 &#40;常规 "页面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
     -   [操作员属性：新建操作员 &#40;通知页面&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   ["操作员属性" &#40;"历史记录" 页&#41;](operator-properties-history-page.md)  
+    -   [操作员属性（“历史记录”页）](operator-properties-history-page.md)  
   
-5.  完成后，单击 **“确定”** 。  
+5.  完成后，单击“确定”****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-information-about-an-operator"></a>查看有关操作员的信息  
   

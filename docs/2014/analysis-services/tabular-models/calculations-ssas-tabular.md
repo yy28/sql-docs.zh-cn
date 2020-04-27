@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9412d01809402dfa23c116c93c80e0ab32bee747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284909"
 ---
 # <a name="calculations-ssas-tabular"></a>计算（SSAS 表格）
@@ -24,7 +24,7 @@ ms.locfileid: "67284909"
   
 |主题|说明|  
 |-----------|-----------------|  
-|[了解 &#40;SSAS 表格格式的表格模型中的 DAX&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|说明为表格模型中的计算列、度量值和行筛选器创建计算所用的数据分析表达式 (DAX) 公式语言。|  
+|[了解表格模型中的 DAX（SSAS 表格）](understanding-dax-in-tabular-models-ssas-tabular.md)|说明为表格模型中的计算列、度量值和行筛选器创建计算所用的数据分析表达式 (DAX) 公式语言。|  
 |[DirectQuery 模式下的公式兼容性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|说明差异，列出在 DirectQuery 模式下不支持的函数，并列出受支持但可能返回不同结果的函数。|  
 |[&#40;DAX&#41; 参考的数据分析表达式](/dax/data-analysis-expressions-dax-reference)|本节提供了 DAX 语法、运算符和函数的详细说明。|  
   

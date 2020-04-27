@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6633988bf660de8225b201266a4f2ef7ebea55e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900388"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "67900388"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**DriveName**|**nchar （2）**|驱动器的名称（驱动器号），表示共享群集磁盘阵列中的单个磁盘。 此列不可为空值。|  
-|pdw_node_id |**int**|**适用**于： ssPDW<br /><br /> 此分发所在的节点的标识符。|  
+|**DriveName**|**nchar(2)**|驱动器的名称（驱动器号），表示共享群集磁盘阵列中的单个磁盘。 此列不可为空值。|  
+|**pdw_node_id**|**int**|**适用**于： ssPDW<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="remarks"></a>备注  
  如果已启用群集，则故障转移群集实例要求数据和日志文件位于共享磁盘上，以便在实例故障转移到另一节点后，可以访问这些数据和日志文件。 该视图中的每一行代表一个由此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集实例使用的共享磁盘。 只有该视图中所列磁盘可以用于存储该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据或日志文件。 该视图中所列磁盘属于与实例关联的群集资源组。  

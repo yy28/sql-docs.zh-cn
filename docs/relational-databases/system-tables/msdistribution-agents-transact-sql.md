@@ -18,10 +18,10 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907415"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "67907415"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|分发代理的 ID。|  
-|**路径名**|**nvarchar （100）**|分发代理的名称。|  
+|**id**|**int**|分发代理的 ID。|  
+|**name**|**nvarchar （100）**|分发代理的名称。|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
@@ -41,8 +41,8 @@ ms.locfileid: "67907415"
 |**subscriber_db**|**sysname**|订阅数据库的名称。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送。<br /><br /> **1** = 请求。<br /><br /> **2** = 匿名。|  
 |**local_job**|**bit**|指示在本地分发服务器上是否有 SQL Server 代理作业。|  
-|**job_id**|**binary （16）**|作业标识号。|  
-|**subscription_guid**|**binary （16）**|此代理的订阅 ID。|  
+|**job_id**|**binary(16)**|作业标识号。|  
+|**subscription_guid**|**binary(16)**|此代理的订阅 ID。|  
 |**profile_id**|**int**|来自[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)表的配置 ID。|  
 |**anonymous_subid**|**uniqueidentifier**|匿名代理的 ID。|  
 |**subscriber_name**|**sysname**|订阅服务器名称，仅供匿名代理使用。|  
@@ -58,7 +58,7 @@ ms.locfileid: "67907415"
 |**dts_package_location**|**int**|包位置。 包的位置可以是**分发服务器**或**订阅服务器**。|  
 |**sid**|**varbinary （85）**|分发代理或合并代理第一次执行时的安全标识号 (SID)。|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|代理在连接订阅服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 身份验证<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)]个 Windows 身份验证。|  
+|**subscriber_security_mode**|**smallint**|代理在连接订阅服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 身份验证<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)]个 Windows 身份验证。|  
 |**subscriber_login**|**sysname**|连接订阅服务器时所使用的登录名。|  
 |**subscriber_password**|**nvarchar （524）**|当连接到订阅服务器时使用的密码的加密值。|  
 |**reset_partial_snapshot_progress**|**bit**|表示是否将放弃部分已下载的快照，以便可以再次启动整个快照进程。|  

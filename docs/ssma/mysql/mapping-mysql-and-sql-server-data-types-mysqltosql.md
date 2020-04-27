@@ -13,10 +13,10 @@ ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908992"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>映射 MySQL 和 SQL Server 数据类型 (MySQLToSQL)
@@ -76,7 +76,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     1.  在 "类型映射" 窗格中，选择 "类型映射" 列表中包含要删除的数据类型映射的行。  
   
-    2.  单击 **“删除”** 。  
+    2.  单击 **“删除”**。  
   
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是[创建一个评估报表](assessing-mysql-databases-for-conversion-mysqltosql.md)，或[将 MySQL 数据库对象转换为 SQL Server 或 SQL Azure 语法](converting-mysql-databases-mysqltosql.md)。 如果创建报表，则在评估期间会自动转换 MySQL 对象。  

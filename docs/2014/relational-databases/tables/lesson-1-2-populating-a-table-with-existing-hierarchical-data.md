@@ -13,17 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110169"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>使用现有层次结构数据填充表
-  此任务创建一个新表，并使用**EmployeeDemo**表中的数据填充该表。 此任务包含以下步骤：  
+  此任务将创建新表，然后使用 EmployeeDemo**** 表中的数据填充该表。 此任务包含以下步骤：  
   
--   创建一个包含 `hierarchyid` 列的新表。 此列可替换现有的 **EmployeeID** 和 **ManagerID** 列。 但是，您将保留这些列。 这是因为现有应用程序可能会引用这些列，而且它们还有助于您了解传输后的数据。 表定义将 **OrgNode** 指定为主键，这就要求该列包含唯一值。 
-  **OrgNode** 列的聚集索引将使用 **OrgNode** 序列存储日期。  
+-   创建一个包含 `hierarchyid` 列的新表。 此列可替换现有的 **EmployeeID** 和 **ManagerID** 列。 但是，您将保留这些列。 这是因为现有应用程序可能会引用这些列，而且它们还有助于您了解传输后的数据。 表定义将 **OrgNode** 指定为主键，这就要求该列包含唯一值。 **OrgNode** 列的聚集索引将使用 **OrgNode** 序列存储日期。  
   
 -   创建一个用于跟踪直接向每个经理报告的雇员人数的临时表。  
   

@@ -16,10 +16,10 @@ ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916872"
 ---
 # <a name="stat-method"></a>Stat 方法
@@ -35,14 +35,14 @@ Long stream.Stat(StatStg, StatFlag)
 ## <a name="return-value"></a>返回值  
  一个**长整型**值，指示操作的状态。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *StatStg*  
  将使用流的相关信息填充 STATSTG 结构。 ADO 流对象使用的**Stat**方法的实现并不填充结构的所有字段。  
   
  *StatFlag*  
  指定此方法不返回 STATSTG 结构中的某些成员，从而保存内存分配操作。 值取自 STATFLAG 枚举。 STATFLAG 枚举有两个值  
   
-|一直|值|  
+|Constant|Value|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  

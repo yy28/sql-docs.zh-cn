@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284903"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>创建和管理角色（SSAS 表格）
@@ -28,7 +28,7 @@ ms.locfileid: "67284903"
 ## <a name="tasks"></a>任务  
  若要创建、编辑、复制和删除角色，可使用 **“角色管理器”** 对话框。 若要查看 **“角色管理器”** 对话框，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“角色管理器”**。  
   
-###  <a name="bkmk_new_role"></a>创建新角色  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a>创建新角色  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“角色管理器”**。  
   
@@ -47,8 +47,8 @@ ms.locfileid: "67284903"
     |**无**|成员无法对模型架构进行任何修改，也无法查询数据。|  
     |**读取**|允许成员查询数据（基于行筛选器），但不能对模型架构进行任何更改。|  
     |**读取和处理**|允许成员查询数据（基于行级别筛选器）并运行“处理”和“全部处理”操作，但无法对模型架构进行任何更改。|  
-    |**进程**|成员可以运行“处理”和“全部处理”操作。 无法修改模型架构，也无法查询数据。|  
-    |**管理**|成员可以对模型架构进行修改并可以查询所有数据。|  
+    |**进程**|成员可以运行“处理”和“全部处理”操作。 不能修改模型架构且不能查询数据。|  
+    |**Administrator**|成员可以对模型架构进行修改并可以查询所有数据。|  
   
 5.  若要输入角色的说明，请单击 **“说明”** 字段，然后键入说明。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67284903"
   
 8.  在 **“选择用户或组”** 对话框中，将 Windows 用户或 Windows 组对象作为成员输入。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的角色](roles-ssas-tabular.md)   

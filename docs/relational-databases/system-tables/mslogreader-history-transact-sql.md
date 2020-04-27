@@ -18,10 +18,10 @@ ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907297"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "67907297"
 |**runstatus**|**int**|运行状态：<br /><br /> 1 = 开始。<br /><br /> 2 = 成功。<br /><br /> 3 = 正在进行。<br /><br /> 4 = 空闲。<br /><br /> 5 = 重试。<br /><br /> 6 = 失败。|  
 |**start_time**|**datetime**|开始执行作业的时间。|  
 |**time**|**datetime**|记录消息的时间。|  
-|**持续时间**|**int**|消息会话的持续时间（秒）。|  
+|**duration**|**int**|消息会话的持续时间（秒）。|  
 |**提出**|**nvarchar(255)**|消息文本。|  
-|**xact_seqno**|**varbinary （16）**|上次处理的事务序列号。|  
+|**xact_seqno**|**varbinary(16)**|上次处理的事务序列号。|  
 |**delivery_time**|**int**|传递第一个事务的时间。|  
 |**delivered_transactions**|**int**|会话中传递的事务总数。|  
 |**delivered_commands**|**int**|会话中传递的命令总数。|  
@@ -45,7 +45,7 @@ ms.locfileid: "67907297"
 |**delivery_rate**|**float**|平均每秒传递的命令数。|  
 |**delivery_latency**|**int**|命令从进入发布数据库到进入分发数据库之间的滞后时间。 以毫秒为单位。|  
 |**error_id**|**int**|**MSrepl_error**系统表中的错误的 ID。|  
-|**标志**|**标志**|该表的时间戳列。|  
+|**timestamp**|**timestamp**|该表的时间戳列。|  
 |**updateable_row**|**bit**|如果可以覆盖历史记录行，则设置为**1** 。|  
   
 ## <a name="see-also"></a>另请参阅  

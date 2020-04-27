@@ -16,10 +16,10 @@ ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918270"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
@@ -32,8 +32,8 @@ ms.locfileid: "67918270"
 Stream.LoadFromFileFileName  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *名字*  
+#### <a name="parameters"></a>参数  
+ *FileName*  
  一个**字符串**值，该值包含要加载到**流**中的文件的名称。 *文件名*可以包含 UNC 格式的任何有效路径和名称。 如果指定的文件不存在，则会发生运行时错误。  
   
 ## <a name="remarks"></a>备注  

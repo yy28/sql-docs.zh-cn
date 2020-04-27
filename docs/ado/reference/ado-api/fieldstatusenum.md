@@ -16,10 +16,10 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918659"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
@@ -27,7 +27,7 @@ ms.locfileid: "67918659"
   
  **AdFieldPending\* **值指示导致状态设置的操作，并且可以与其他状态值组合。  
   
-|一直|值|说明|  
+|Constant|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|指示指定字段已存在。|  
 |**adFieldBadStatus**|12|指示从 ADO 发送到 OLE DB 提供程序的状态值无效。 可能的原因包括 OLE DB 1.0 或1.1 提供程序，或者[值](../../../ado/reference/ado-api/value-property-ado.md)和[状态](../../../ado/reference/ado-api/status-property-ado-field.md)的组合不正确。|  
@@ -42,7 +42,7 @@ ms.locfileid: "67918659"
 |**adFieldIntegrityViolation**|10|指示无法修改字段，因为它是计算实体或派生实体。|  
 |**adFieldInvalidURL**|17|指示数据源 URL 包含无效字符。|  
 |**adFieldIsNull**|3|指示提供程序返回 VT_NULL 类型的变量值，并且该字段不为空。|  
-|**adFieldOK**|0|默认值。 指示已成功添加或删除字段。|  
+|**adFieldOK**|0|默认。 指示已成功添加或删除字段。|  
 |**adFieldOutOfSpace**|22|指示提供程序无法获得足够的存储空间来完成移动或复制操作。|  
 |**adFieldPendingChange**|0x40000|指示字段已被删除，然后重新添加，可能是使用不同的数据类型，或者之前状态为**adFieldOK**的字段的值已更改。 在调用[Update](../../../ado/reference/ado-api/update-method.md)方法之后，字段的最终形式将修改[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合。|  
 |**adFieldPendingDelete**|0x20000|指示**删除**操作导致设置状态。 在调用**Update**方法之后，字段已标记为要从**字段**集合中删除。|  

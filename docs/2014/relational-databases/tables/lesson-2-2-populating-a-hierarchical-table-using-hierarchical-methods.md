@@ -15,30 +15,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110062"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>使用分层方法填充层次结构表
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]有8名在市场营销部门工作的员工。 雇员的层次结构如下所示：  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 有 8 名在市场营销部门工作的雇员。 雇员的层次结构如下所示：  
   
- ******员工 Id** 6 是市场营销经理。 
-  **David**下辖三名市场营销专员，他们分别是：  
+ **David**（ **EmployeeID** 为 6）是市场营销经理。 **David**下辖三名市场营销专员，他们分别是：  
   
--   **Sariya**，**雇员 id** 46  
+-   **Sariya**， **EmployeeID** 46  
   
--   **John**，**雇员 id** 271  
+-   **John**， **EmployeeID** 271  
   
--   **Jill**，**雇员 id** 119  
+-   **Jill**， **EmployeeID** 119  
   
  销售助理 **Wanida** (**EmployeeID** 269)，是 **Sariya**的下属；销售助理 **Mary** (**EmployeeID** 272)，是 **John**的下属。  
   
 ### <a name="to-insert-the-root-of-the-hierarchy-tree"></a>插入层次结构树的根  
   
-1.  下例将市场营销经理 **David** 插入层次结构的根处的表中。 
-  **OrdLevel** 列是一个计算列。 因此，它不是 INSERT 语句的一部分。 第一条记录使用 [GetRoot()](/sql/t-sql/data-types/getroot-database-engine) 方法将其自身填充为层次结构的根。  
+1.  下例将市场营销经理 **David** 插入层次结构的根处的表中。 **OrdLevel** 列是一个计算列。 因此，它不是 INSERT 语句的一部分。 第一条记录使用 [GetRoot()](/sql/t-sql/data-types/getroot-database-engine) 方法将其自身填充为层次结构的根。  
   
     ```  
     INSERT HumanResources.EmployeeOrg (OrgNode, EmployeeID, EmpName, Title)  
@@ -66,7 +64,7 @@ ms.locfileid: "66110062"
   
 ### <a name="to-insert-a-subordinate-employee"></a>插入下属雇员  
   
-1.  将报表**Sariya**到**David**。 若要插入**Sariya 的**节点，必须创建相应的**** 数据类型`hierarchyid`的 OrgNode 值。 下面的代码创建一个数据类型为 `hierarchyid` 的变量，并用表的根 OrgNode 值填充此变量。 然后使用该变量和 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法插入从属节点行。 `GetDescendant`采用两个参数。 检查以下选项的参数值：  
+1.  **Sariya** 是 **David**的下属。 若要插入**Sariya 的**节点，必须创建相应的**OrgNode**数据类型`hierarchyid`的 OrgNode 值。 下面的代码创建一个数据类型为 `hierarchyid` 的变量，并用表的根 OrgNode 值填充此变量。 然后使用该变量和 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法插入从属节点行。 `GetDescendant` 采用两个参数。 检查以下选项的参数值：  
   
     -   如果父级为 NULL， `GetDescendant` 返回 NULL。  
   

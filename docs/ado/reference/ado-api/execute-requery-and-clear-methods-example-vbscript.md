@@ -17,16 +17,16 @@ ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918813"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>执行、再次查询和清除方法示例（VBScript）
 此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法检索[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用[clear](../../../ado/reference/ado-api/clear-method-ado.md)方法清除[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合的内容。 要运行此过程，需要 ExecuteCommand 和 PrintOutput 过程。  
   
- 在 Active Server Page （ASP）中使用以下示例。 若要查看此完全功能的示例，您必须具有位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的数据源 Advworks-srv01 （随 SDK 示例一起安装），或者编辑示例代码中的路径以反映此文件的实际位置。 这是一个 Microsoft Access 数据库文件。  
+ 在 Active Server Page （ASP）中使用以下示例。 若要查看此完全正常运行的示例，您必须具有位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的数据源 Advworks-srv01 （随 SDK 示例一起安装），或者编辑示例代码中的路径以反映此文件的实际位置。 这是一个 Microsoft Access 数据库文件。  
   
  使用 "**查找**" 找到文件 Adovbs，并将其放入计划使用的目录中。 将以下代码剪切并粘贴到记事本或其他文本编辑器中，并将其保存为**ExecuteVBS**。 您可以在任何客户端浏览器中查看结果。  
   

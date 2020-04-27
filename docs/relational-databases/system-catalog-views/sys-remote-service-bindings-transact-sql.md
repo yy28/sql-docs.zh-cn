@@ -20,10 +20,10 @@ ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c326a5dd3a964209af0cc4834b91bca9071da9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904585"
 ---
 # <a name="sysremote_service_bindings-transact-sql"></a>sys.remote_service_bindings (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67904585"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|该远程服务绑定的名称。 不可为 NULL。|  
+|name |**sysname**|该远程服务绑定的名称。 不可为 NULL。|  
 |**remote_service_binding_id**|**int**|该远程服务绑定的 ID。 不可为 NULL。|  
 |**principal_id**|**int**|拥有该远程服务绑定的数据库主体的 ID。 可以为 null.|  
 |**remote_service_name**|**nvarchar(256)**|应用该绑定的远程服务的名称。 可以为 null.|  

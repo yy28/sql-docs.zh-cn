@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 76a154639a71b22bfe3f119233f3abbcd329f7c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899529"
 ---
 # <a name="sysdm_pdw_dms_cores-transact-sql"></a>sys. dm_pdw_dms_cores （Transact-sql）
@@ -28,7 +28,7 @@ ms.locfileid: "67899529"
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|**int**|与此 DMS 核心关联的唯一数字 id。<br /><br /> 此视图的键。|设置为运行此 DMS core 的节点的 pdw_node_id。|  
 |pdw_node_id|**int**|此 DMS 服务正在其上运行的节点的 ID。|请参阅 dm_pdw_nodes sys.databases 中的 node_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
-|status|**nvarchar （32）**|DMS 服务的当前状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|status|**nvarchar(32)**|DMS 服务的当前状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
  有关此视图保留的最大行的信息，请参阅[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题中的元数据部分。  
   

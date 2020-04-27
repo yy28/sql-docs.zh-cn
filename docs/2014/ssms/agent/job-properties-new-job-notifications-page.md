@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10cee6f0d5bf62178c71d25b8eb5682c22bbbe3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189244"
 ---
 # <a name="job-properties-new-job-notifications-page"></a>作业属性：新建作业（“通知”页）
@@ -26,7 +26,7 @@ ms.locfileid: "68189244"
  **电子邮件**  
  选择此选项将在作业完成时发送电子邮件。 选择此选项后，选择要通知的操作员以及触发该通知的条件：“当作业成功时”****；“当作业失败时”****；或“当作业完成时”****。  
   
- **第**  
+ **分页**  
  选择此选项将在作业完成时将电子邮件发送到操作员的寻呼程序。 选择此选项后，指定要通知的操作员以及触发该通知的条件：“当作业成功时”****；“当作业失败时”****；或“当作业完成时”****。  
   
  **Net send**  
@@ -39,7 +39,7 @@ ms.locfileid: "68189244"
  选择此选项将在作业完成时删除该作业。 选择此选项后，指定触发删除作业的条件：“当作业成功时”****；“当作业失败时”****；或“当作业完成时”****。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行作业](implement-jobs.md)   
+ [实现作业](implement-jobs.md)   
  [配置 SQL Server 代理邮件以使用数据库邮件](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
   

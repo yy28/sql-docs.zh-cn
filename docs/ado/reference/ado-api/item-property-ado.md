@@ -46,10 +46,10 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918365"
 ---
 # <a name="item-property-ado"></a>Item 属性 (ADO)
@@ -64,8 +64,8 @@ Set object = collection.Item ( Index )
 ## <a name="return-value"></a>返回值  
  返回对象引用。  
   
-## <a name="parameters"></a>parameters  
- *编入*  
+## <a name="parameters"></a>参数  
+ *索引*  
  **变量**表达式，计算结果为集合中对象的名称或序号。  
   
 ## <a name="remarks"></a>备注  

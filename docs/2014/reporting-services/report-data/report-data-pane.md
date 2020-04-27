@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: fc09c100cc8391bb1fd025b4bb5ac5f3b5e4379a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413136"
 ---
 # <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的报表数据窗格
@@ -27,9 +27,9 @@ ms.locfileid: "67413136"
  表示 Reporting Services 提供的在报表中常用的字段，例如报表名称或页码。 有关详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   
  **参数**  
- 表示报表参数的集合，每个参数都可为单值或多值参数。 有关详细信息，请参阅[报表参数 &#40;报表生成器和报表设计器&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 表示报表参数的集合，每个参数都可为单值或多值参数。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
- **幅**  
+ **映像**  
  表示报表中使用的图像集。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](../report-design/images-report-builder-and-ssrs.md)。  
   
  **数据源**  

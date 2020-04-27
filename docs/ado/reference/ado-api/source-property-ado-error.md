@@ -18,10 +18,10 @@ ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b55ebbe5a167b7d70cf606fc4e37e7ede36b486
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916906"
 ---
 # <a name="source-property-ado-error"></a>Source 属性（ADO 错误）
@@ -38,7 +38,7 @@ ms.locfileid: "67916906"
  对于**Error**对象， **Source**属性是只读的。  
   
 ## <a name="applies-to"></a>应用于  
- [错误对象](../../../ado/reference/ado-api/error-object.md)  
+ [Error 对象](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VB）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

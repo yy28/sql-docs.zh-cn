@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b75eb53da9961025e3310f27e4a12608dd4fda78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899360"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys. dm_pdw_network_credentials （Transact-sql）
@@ -27,8 +27,8 @@ ms.locfileid: "67899360"
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|与节点关联的唯一数字 id。|  
-|target_server_name|**nvarchar （32）**|[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]将使用用户名和密码凭据访问的目标服务器的 IP 地址。|  
-|username|**nvarchar （32）**|为其存储密码的用户名。|  
+|target_server_name|**nvarchar(32)**|[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]将使用用户名和密码凭据访问的目标服务器的 IP 地址。|  
+|username|**nvarchar(32)**|为其存储密码的用户名。|  
 |last_modified|**datetime**|修改凭据的上一个操作的日期时间。|  
   
 ## <a name="permissions"></a>权限  

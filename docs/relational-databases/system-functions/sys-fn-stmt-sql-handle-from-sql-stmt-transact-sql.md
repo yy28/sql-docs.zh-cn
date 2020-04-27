@@ -14,16 +14,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059272"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  获取给定**** 参数化类型[!INCLUDE[tsql](../../includes/tsql-md.md)] （simple 或强制）下的语句的 stmt_sql_handle。 这使你可以通过在知道查询存储的文本时使用其**stmt_sql_handle**来引用其中存储的查询。  
+  获取给定**stmt_sql_handle**参数化类型[!INCLUDE[tsql](../../includes/tsql-md.md)] （simple 或强制）下的语句的 stmt_sql_handle。 这使你可以通过在知道查询存储的文本时使用其**stmt_sql_handle**来引用其中存储的查询。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 -   NULL-默认值为0  
   
--   0 - None  
+-   0 - 无  
   
 -   1-用户  
   
@@ -59,7 +59,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  
-|**statement_sql_handle**|**varbinary （64）**|SQL 句柄。|  
+|**statement_sql_handle**|**varbinary(64)**|SQL 句柄。|  
 |**query_sql_text**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]语句的文本。|  
 |**query_parameterization_type**|**tinyint**|查询参数化类型。|  
   
@@ -79,7 +79,7 @@ SELECT * FROM sys.databases;
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- 使用函数可以将查询存储数据与其他动态管理视图关联。 以下示例：  
+ 使用函数可以将查询存储数据与其他动态管理视图关联。 如下示例中：  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
@@ -99,7 +99,7 @@ JOIN sys.dm_exec_query_stats AS qs
  [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [sp_query_store_remove_query &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [查询存储目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046523"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
@@ -67,19 +67,19 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  等效于 DEFAULT。  
   
- **"**<securable_class>**"**  
- 当使用一个安全对象类的名称调用时，fn_builtin_permissions sys.databases 会返回应用于该类的所有权限。 <securable_class> 是需要用引号引起来的字符串文字。 **nvarchar （60）**  
+ **'**<securable_class>**'**  
+ 当使用一个安全对象类的名称调用时，fn_builtin_permissions sys.databases 会返回应用于该类的所有权限。 <securable_class> 是需要用引号引起来的字符串文字。 **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>返回的表  
   
 |列名称|数据类型|排序规则|说明|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar （60）**|服务器的排序规则|安全对象类的说明。|  
-|permission_name|**nvarchar （60）**|服务器的排序规则|权限名称。|  
-|type|**varchar （4）**|服务器的排序规则|压缩权限类型代码。 请参阅后面的表。|  
-|covering_permission_name|**nvarchar （60）**|服务器的排序规则|如果不为 NULL，则为该类的权限名称（隐含该类的其他权限）。|  
-|parent_class_desc|**nvarchar （60）**|服务器的排序规则|如果不为 NULL，则为包含当前类的父类的名称。|  
-|parent_covering_permission_name|**nvarchar （60）**|服务器的排序规则|如果不为 NULL，则为父类的权限名称（隐含该类的所有其他权限）。|  
+|class_desc|**nvarchar(60)**|服务器的排序规则|安全对象类的说明。|  
+|permission_name|**nvarchar(60)**|服务器的排序规则|权限名称。|  
+|类型|**varchar(4)**|服务器的排序规则|压缩权限类型代码。 请参阅后面的表。|  
+|covering_permission_name|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为该类的权限名称（隐含该类的其他权限）。|  
+|parent_class_desc|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为包含当前类的父类的名称。|  
+|parent_covering_permission_name|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为父类的权限名称（隐含该类的所有其他权限）。|  
   
 ### <a name="permission-types"></a>权限类型  
   
@@ -163,7 +163,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|CERTIFICATE|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
-|CL|CONTROL<br /> **适用**于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /> 适用范围：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  。 |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|ENDPOINT|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
@@ -179,7 +179,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
-|CL|CONTROL|类型|  
+|CL|CONTROL|TYPE|  
 |CL|CONTROL|USER|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
 |CO|CONNECT|DATABASE|  
@@ -219,30 +219,30 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRTY|CREATE TYPE|DATABASE|  
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
-|DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **适用**于： [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|DATABASE|  
+|DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **适用于**： [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|DATABASE|  
 |DL|DELETE|DATABASE|  
 |DL|DELETE|OBJECT|  
 |DL|DELETE|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
-|EX|在运行 CREATE 语句前执行|DATABASE|  
-|EX|在运行 CREATE 语句前执行|OBJECT|  
-|EX|在运行 CREATE 语句前执行|SCHEMA|  
-|EX|在运行 CREATE 语句前执行|类型|  
-|EX|在运行 CREATE 语句前执行|XML SCHEMA COLLECTION|  
+|EX|EXECUTE|DATABASE|  
+|EX|EXECUTE|OBJECT|  
+|EX|EXECUTE|SCHEMA|  
+|EX|EXECUTE|TYPE|  
+|EX|EXECUTE|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |IM|IMPERSONATE|LOGIN|  
 |IM|IMPERSONATE|USER|  
 |IN|INSERT|DATABASE|  
 |IN|INSERT|OBJECT|  
 |IN|INSERT|SCHEMA|  
-|KIDC|KILL DATABASE CONNECTION<br />**适用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|DATABASE|  
+|KIDC|KILL DATABASE CONNECTION<br />**适用于**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|DATABASE|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY|  
 |RF|REFERENCES|ASYMMETRIC KEY|  
 |RF|REFERENCES|CERTIFICATE|  
 |RF|REFERENCES|CONTRACT|  
 |RF|REFERENCES|DATABASE|  
-|RF|REFERENCES<br /> **适用**于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|RF|REFERENCES<br /> 适用范围：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  。 |DATABASE SCOPED CREDENTIAL|
 |RF|REFERENCES|FULLTEXT CATALOG|  
 |RF|REFERENCES|FULLTEXT STOPLIST|  
 |RF|REFERENCES|SEARCH PROPERTY LIST|  
@@ -250,9 +250,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |RF|REFERENCES|OBJECT|  
 |RF|REFERENCES|SCHEMA|  
 |RF|REFERENCES|SYMMETRIC KEY|  
-|RF|REFERENCES|类型|  
+|RF|REFERENCES|TYPE|  
 |RF|REFERENCES|XML SCHEMA COLLECTION|  
-|SHDN|关机|SERVER|  
+|SHDN|SHUTDOWN|SERVER|  
 |SL|SELECT|DATABASE|  
 |SL|SELECT|OBJECT|  
 |SL|SELECT|SCHEMA|  
@@ -266,7 +266,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|CERTIFICATE|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
-|TO|TAKE OWNERSHIP<br /> **适用**于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|TO|TAKE OWNERSHIP<br /> 适用范围：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  。 |DATABASE SCOPED CREDENTIAL|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
 |TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
 |TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
@@ -280,7 +280,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
 |TO|TAKE OWNERSHIP|SERVICE|  
 |TO|TAKE OWNERSHIP|SYMMETRIC KEY|  
-|TO|TAKE OWNERSHIP|类型|  
+|TO|TAKE OWNERSHIP|TYPE|  
 |TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
 |UMSK|UNMASK<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |UP|UPDATE|DATABASE|  
@@ -293,7 +293,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|CERTIFICATE|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
-|VW|VIEW DEFINITION<br /> **适用**于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /> 适用范围：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  。 |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|ENDPOINT|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
@@ -308,7 +308,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
-|VW|VIEW DEFINITION|类型|  
+|VW|VIEW DEFINITION|TYPE|  
 |VW|VIEW DEFINITION|USER|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
@@ -323,11 +323,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
 ## <a name="remarks"></a>备注  
- 
-  `sys.fn_builtin_permissions` 是一个表值函数，它可以产生预定义权限层次结构的副本。 此层次结构包含涵盖权限。 `DEFAULT`结果集描述了权限层次结构的有向非循环图形，其根为（CLASS = SERVER，权限 = CONTROL SERVER）。  
+ `sys.fn_builtin_permissions` 是一个表值函数，它可以产生预定义权限层次结构的副本。 此层次结构包含涵盖权限。 `DEFAULT`结果集描述了权限层次结构的有向非循环图形，其根为（CLASS = SERVER，权限 = CONTROL SERVER）。  
   
- 
-  `sys.fn_builtin_permissions` 不接受相关参数。  
+ `sys.fn_builtin_permissions` 不接受相关参数。  
   
  使用无效类名调用 `sys.fn_builtin_permissions` 时，它返回一个空集。  
  
@@ -359,10 +357,10 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [权限层次结构 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [GRANT &#40;Transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-sql&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-sql&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [权限 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [sys. fn_my_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  

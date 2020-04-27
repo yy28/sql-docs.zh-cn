@@ -22,10 +22,10 @@ ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918468"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile 属性
@@ -41,7 +41,7 @@ ms.locfileid: "67918468"
  如果**在 "帮助文件" 属性**中指定了帮助文件，则将使用**HelpContext**属性来自动显示它所标识的帮助主题。 如果没有可用的相关帮助主题，则**HelpContext**属性返回零，而 "**帮助**值" 属性返回一个零长度字符串（""）。  
   
 ## <a name="applies-to"></a>应用于  
- [错误对象](../../../ado/reference/ado-api/error-object.md)  
+ [Error 对象](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VB）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

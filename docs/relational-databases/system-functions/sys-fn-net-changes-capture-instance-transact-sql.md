@@ -21,10 +21,10 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122572"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_&lt;capture_instance&gt; （transact-sql）
@@ -61,12 +61,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  此参数可以采用两种含义之一，具体取决于在调用 sp_cdc_generate_wrapper_function @closed_high_end_point时选择的值，以生成用于创建包装函数的脚本：  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      结果集中仅包含 cdc. <capture_instance>_CT 更改表中值为\_ \_ **$start _lsn 的**值更改表中的行。  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      在结果集中只包含 cdc. <capture_instance>_CT 更改表中值的值\_ \_**为 $start** _lsn 的更改表中的值。  
   
@@ -75,7 +74,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  *<row_filter_option>* ：： = {all | all with mask | all with merge}  
  控制元数据列的内容和结果集中所返回的行的选项。 可以是下列选项之一：  
   
- 本应返回的所有记录的总数，  
+ all  
  返回更改了内容列的某一行的最终内容，以及在元数据列 __CDC_OPERATION 中应用该行所需的操作。  
   
  all with mask  
@@ -97,7 +96,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |列名称|列类型|说明|  
 |-----------------|-----------------|-----------------|  
 |\<> 的@column_list列|**随着**|在调用以生成用于创建包装的脚本时，将在 sp_cdc_generate_wrapper_function 的**column_list**参数中标识的列。 如果*column_list*为空，则所有跟踪的源列将出现在结果集中。|  
-|__CDC_OPERATION|**nvarchar （2）**|一个操作代码，它指示将行应用于目标环境所需的操作。 操作将因以下调用中提供的参数*row_filter_option*的值而异：<br /><br /> *row_filter_option* = "all"、"all with mask"<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作<br /><br /> *row_filter_option* = "all with merge"<br /><br /> 'D' - 删除操作<br /><br /> 'M' - 插入操作或更新操作|  
+|__CDC_OPERATION|**nvarchar(2)**|一个操作代码，它指示将行应用于目标环境所需的操作。 操作将因以下调用中提供的参数*row_filter_option*的值而异：<br /><br /> *row_filter_option* = "all"、"all with mask"<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作<br /><br /> *row_filter_option* = "all with merge"<br /><br /> 'D' - 删除操作<br /><br /> 'M' - 插入操作或更新操作|  
 |\<> 的@update_flag_list列|**bit**|通过将 _uflag 追加到列名称末尾所命名的位标记。 仅当*row_filter_option* **= "all with mask"** 且\__CDC_OPERATION **= ' UN '** 时，此标志才采用非 null 值。 如果在查询窗口中修改相应的列，则会将其设置为 1； 否则为 0。|  
   
 ## <a name="remarks"></a>备注  
@@ -121,6 +120,6 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>另请参阅  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

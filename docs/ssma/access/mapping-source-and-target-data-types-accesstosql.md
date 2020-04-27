@@ -16,10 +16,10 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907162"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>映射源和目标数据类型（AccessToSQL）
@@ -85,7 +85,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     1.  在 "类型映射" 窗格中，选择 "类型映射" 列表中包含要删除的数据类型映射的行。  
   
-    2.  单击 **“删除”** 。  
+    2.  单击 **“删除”**。  
   
 ## <a name="next-steps"></a>后续步骤  
 迁移过程的下一步是[将 access 数据库对象转换为 SQL Server 对象](converting-access-database-objects-accesstosql.md)  

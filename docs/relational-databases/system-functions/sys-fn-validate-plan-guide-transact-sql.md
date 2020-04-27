@@ -21,10 +21,10 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059199"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
@@ -53,7 +53,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |msgnum|**int**|错误消息的 ID。|  
 |severity|**tinyint**|消息的严重级别，在 1 到 25 之间。|  
 |state|**smallint**|错误的状态号，用于指示发生错误的代码位置。|  
-|message|**nvarchar （2048）**|错误的消息正文。|  
+|消息|**nvarchar(2048)**|错误的消息正文。|  
   
 ## <a name="permissions"></a>权限  
  OBJECT 作用域的计划指南要求对被引用的对象具有 VIEW DEFINITION 或 ALTER 权限，并要求具有编译计划指南中提供的查询或批处理的权限。 例如，如果批处理包含 SELECT 语句，则需要具有对被引用对象的 SELECT 权限。  

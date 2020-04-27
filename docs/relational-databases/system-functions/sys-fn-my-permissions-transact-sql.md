@@ -21,10 +21,10 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122625"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
@@ -43,7 +43,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
 ## <a name="arguments"></a>参数  
  *安全*  
- 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 *安全*对象是**sysname**类型的标量表达式。 *安全*对象的名称可以是多部分名称。  
+ 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 securable 是 sysname 类型的标量表达式******。 *安全*对象的名称可以是多部分名称。  
   
  "*securable_class*"  
  为其列出权限的安全对象的类的名称。 *securable_class*是**sysname**。 *securable_class*必须是下列其中一项：应用程序角色、程序集、非对称密钥、证书、协定、数据库、终结点、全文目录、登录名、消息类型、对象、远程服务绑定、角色、路由、架构、服务器、服务、对称密钥、类型、用户和 XML 架构集合。  
@@ -102,7 +102,7 @@ GO
 ```  
   
 ### <a name="c-listing-effective-permissions-on-a-view"></a>C. 列出对视图的有效权限  
- 以下示例返回调用方对 `vIndividualCustomer` 数据库内 `Sales` 架构中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 视图的有效权限的列表。  
+ 以下示例返回调用方对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库内 `vIndividualCustomer` 架构中 `Sales` 视图的有效权限的列表。  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="d-listing-effective-permissions-of-another-user"></a>D. 列出另一个用户的有效权限  
- 以下示例返回数据库用户 `Wanida` 对 `Employee` 数据库内 `HumanResources` 架构中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的有效权限的列表。 调用方需要对用户 `Wanida` 具有 IMPERSONATE 权限。  
+ 以下示例返回数据库用户 `Wanida` 对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库内 `Employee` 架构中 `HumanResources` 表的有效权限的列表。 调用方需要对用户 `Wanida` 具有 IMPERSONATE 权限。  
   
 ```  
 EXECUTE AS USER = 'Wanida';  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>H. 列出另一个登录名的有效权限  
- 以下示例返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `WanidaBenshoof` 对 `Employee` 数据库内 `HumanResources` 架构中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的有效权限的列表。 调用方需要对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `WanidaBenshoof` 具有 IMPERSONATE 权限。  
+ 以下示例返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `WanidaBenshoof` 对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库内 `Employee` 架构中 `HumanResources` 表的有效权限的列表。 调用方需要对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `WanidaBenshoof` 具有 IMPERSONATE 权限。  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
@@ -160,11 +160,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
+ [安全功能 &#40;Transact-sql&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [权限 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [安全对象](../../relational-databases/security/securables.md)   
- [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [权限层次结构 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [sys. fn_builtin_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)  
   

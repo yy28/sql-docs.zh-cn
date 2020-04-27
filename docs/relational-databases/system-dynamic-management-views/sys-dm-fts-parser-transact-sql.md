@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900911"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
@@ -55,7 +55,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  控制全文搜索是否区分音调符号的布尔值。 *accent_sensitivity*是**bit**，具有以下值之一：  
   
-|值|区分重音为 .。。|  
+|Value|区分重音为 .。。|  
 |-----------|----------------------------|  
 |0|不区分<br /><br /> "咖啡馆" 和 "咖啡馆" 等词视为相同。|  
 |1|敏感<br /><br /> "咖啡馆" 和 "咖啡馆" 等词的处理方式不同。|  
@@ -71,14 +71,9 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1：服务器<br />2：数据库<br />3：数据库|  
 |phrase_id|**int**|包含一个整数值，用于区别断字符给出复合词（如 full-text）替代形式的情况。 有时，如果存在复合词（“multi-millon”），断字符将给出替代形式。 这些替代形式（短语）有时需要加以区别。<br /><br /> 例如，'`multi-million`' 生成以下英语 phrase_id 值：<br /><br /> 1对于`multi`<br />1对于`million`<br />2对于`multimillion`|  
 |occurrence|**int**|指示分析结果中每个字词的顺序。 例如，对于短语“`SQL Server query processor`”，occurrence 会包含该英语短语中字词的以下 occurrence 值：<br /><br /> 1对于`SQL`<br />2对于`Server`<br />3对于`query`<br />4对于`processor`|  
-|special_term|**nvarchar(4000)**|包含有关断字符给出的字词特征的信息，可以是以下值之一：<br /><br /> Exact match<br /><br /> Noise word<br /><br /> End of Sentence<br /><br /> End of paragraph<br /><br /> End of Chapter|  
+|special_term|**nvarchar(4000)**|包含有关断字符给出的字词特征的信息，可以是以下值之一：<br /><br /> 完全匹配<br /><br /> Noise word<br /><br /> End of Sentence<br /><br /> End of paragraph<br /><br /> End of Chapter|  
 |display_term|**nvarchar(4000)**|包含关键字的可读形式。 与旨在访问全文索引内容的函数一样，由于非规范化限制，此显示字词可能与原始字词并不完全相同。 不过，该字词应该具有足够高的准确性，可帮助您从原始输入中识别它。|  
-|expansion_type|**int**|包含有关给定字词的扩展特性的信息，可以是以下值之一：<br /><br /> 0 = 单个词的情况<br /><br /> 2 = 变形扩展<br /><br /> 4 = 同义词库扩展/替换<br /><br /> 例如，请考虑同义词库将 run 定义为 `jog` 扩展的情况：<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> 字词 `FORMSOF (FREETEXT, run)` 生成以下输出：<br /><br /> 
-  `run`，其中 expansion_type=0<br /><br /> 
-  `runs`，其中 expansion_type=2<br /><br /> 
-  `running`，其中 expansion_type=2<br /><br /> 
-  `ran`，其中 expansion_type=2<br /><br /> 
-  `jog`，其中 expansion_type=4|  
+|expansion_type|**int**|包含有关给定字词的扩展特性的信息，可以是以下值之一：<br /><br /> 0 = 单个词的情况<br /><br /> 2 = 变形扩展<br /><br /> 4 = 同义词库扩展/替换<br /><br /> 例如，请考虑同义词库将 run 定义为 `jog` 扩展的情况：<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> 字词 `FORMSOF (FREETEXT, run)` 生成以下输出：<br /><br /> `run`，其中 expansion_type=0<br /><br /> `runs`，其中 expansion_type=2<br /><br /> `running`，其中 expansion_type=2<br /><br /> `ran`，其中 expansion_type=2<br /><br /> `jog`，其中 expansion_type=4|  
 |source_term|**nvarchar(4000)**|从中生成或分析给定字词的字词或短语。 例如，对 '"`word breakers" AND stemmers'` 的查询生成以下英语 source_term 值：<br /><br /> `word breakers`对于 display_term`word`<br />`word breakers`对于 display_term`breakers`<br />`stemmers`对于 display_term`stemmers`|  
   
 ## <a name="remarks"></a>备注  
@@ -171,9 +166,9 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
  [全文搜索](../../relational-databases/search/full-text-search.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [查询与全文搜索](../../relational-databases/search/query-with-full-text-search.md)   
- [查询与全文搜索](../../relational-databases/search/query-with-full-text-search.md)   
+ [为全文搜索配置和管理非索引字和非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
+ [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
  [安全对象](../../relational-databases/security/securables.md)  
   
   

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906125"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
@@ -48,10 +48,9 @@ fn_helpcollations ()
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |名称|**sysname**|标准排序规则名称|  
-|说明|**nvarchar （1000）**|排序规则说明|  
+|说明|**nvarchar(1000)**|排序规则说明|  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]还支持在支持 Windows 排序规则之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发的一种称为排序规则的有限编号（<80）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则仍支持向后兼容，但不能用于新的开发工作。 有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。 有关排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]还支持在支持 Windows 排序规则之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发的一种称为排序规则的有限编号（<80）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则仍支持向后兼容，但不能用于新的开发工作。 有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。 有关排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例
 
@@ -85,4 +84,4 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 
 [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
-[对 Azure SQL 数据仓库的数据库排序规则支持](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+[Azure SQL 数据仓库的数据库排序规则支持。](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

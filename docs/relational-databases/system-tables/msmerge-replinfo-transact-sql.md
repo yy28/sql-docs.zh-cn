@@ -18,10 +18,10 @@ ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909062"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
@@ -36,8 +36,8 @@ ms.locfileid: "67909062"
 |**validation_level**|**int**|对订阅执行的验证类型。 指定的验证级别可以是以下值之一：<br /><br /> **0** = 无验证。<br /><br /> **1** = 仅限行计数验证。<br /><br /> **2** = 行计数和校验和验证。<br /><br /> **3** = 行计数和二进制校验和验证。|  
 |**resync_gen**|**bigint**|用于重新同步订阅的生成数。 如果值为 **-1** ，则表示订阅未标记为重新同步。|  
 |**login_name**|**sysname**|创建订阅的用户名。|  
-|**段**|**sysname**|为订阅生成分区时由参数化行筛选器使用的值。|  
-|**merge_jobid**|**binary （16）**|此订阅的合并作业 ID。|  
+|**hostname**|**sysname**|为订阅生成分区时由参数化行筛选器使用的值。|  
+|**merge_jobid**|**binary(16)**|此订阅的合并作业 ID。|  
 |**sync_info**|**int**|仅供内部使用。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -17,10 +17,10 @@ ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918037"
 ---
 # <a name="name-property-ado"></a>Name 属性 (ADO)
@@ -45,7 +45,7 @@ ms.locfileid: "67918037"
 |||  
 |-|-|  
 |[命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[字段对象](../../../ado/reference/ado-api/field-object.md)|  
-|[Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [特性和名称属性示例（VB）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   

@@ -18,10 +18,10 @@ ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917561"
 ---
 # <a name="properties-collection-ado"></a>属性集合 (ADO)
@@ -35,7 +35,7 @@ ms.locfileid: "67917561"
   
  记录**集**关闭时， **Recordset**对象的**动态属性**超出范围（变为不可用）。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [属性集合属性、方法和事件](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822370"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>通过使用已注册的服务器执行按需评估
@@ -24,8 +24,8 @@ ms.locfileid: "66822370"
 > [!NOTE]  
 >  您可以对运行 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或者 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的更高版本的服务器组成员执行最佳实践策略的按需评估。 但是，如果存在引用在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] 中不支持的策略的一些属性，则您可能会接收异常错误。  
   
-## <a name="prerequisites"></a>必备条件  
- 要执行此任务，您必须在已注册的服务器中已配置一个或多个服务器注册。 有关详情，请参阅以下主题：  
+## <a name="prerequisites"></a>先决条件  
+ 要执行此任务，您必须在已注册的服务器中已配置一个或多个服务器注册。 有关详细信息，请参阅下列主题：  
   
 -   [创建或编辑服务器组 (SQL Server Management Studio)](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66822370"
   
 ### <a name="to-evaluate-best-practices-policies-against-a-server-group"></a>对于服务器组执行最佳实践策略  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”**。  
   
 2.  展开 "**数据库引擎**"，然后展开 "**本地服务器组**" 或 "**中央管理服务器**"，具体取决于你的配置。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66822370"
   
 4.  在 "**评估策略**" 对话框中的 "**源**" 框旁，单击省略号（**...**）按钮。  
   
-5.  在 "**选择源**" 对话框中，可以选择 "**文件**" 或 "**服务器**" 作为要评估的策略文件的源。 如果单击 "**服务器**"，则可以对以前导入到本地或远程服务器上基于策略的管理的任何最佳实践策略执行按需评估。 在本教程中，您将单击 "**文件**"，然后选择您要评估的各个策略文件。 为此，请按照下列步骤进行操作：  
+5.  在 "**选择源**" 对话框中，可以选择 "**文件**" 或 "**服务器**" 作为要评估的策略文件的源。 如果单击 "**服务器**"，则可以对以前导入到本地或远程服务器上基于策略的管理的任何最佳实践策略执行按需评估。 在本教程中，您将单击 "**文件**"，然后选择您要评估的各个策略文件。 要实现这一点，请执行下列操作：  
   
     1.  单击 "**文件**"。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66822370"
 8.  若要查看某个策略的详细结果，请在 "**结果**" 表中单击该策略。 "**目标详细信息**" 表显示每个实例的详细信息。  
   
 ## <a name="next-lesson"></a>下一课  
- [课程 2：定期评估最佳实践策略](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [第 2 课：定期评估最佳做法策略](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来监视和强制实施最佳实践](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

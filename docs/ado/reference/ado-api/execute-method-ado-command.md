@@ -17,10 +17,10 @@ ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918851"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法（ADO 命令）
@@ -36,11 +36,11 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="return-value"></a>返回值  
  返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象引用、流或不返回**任何内容**。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *RecordsAffected*  
  可选。 一个**长整型**变量，提供程序返回操作影响的记录数。 *RecordsAffected*参数仅适用于操作查询或存储过程。 *RecordsAffected*不返回结果返回的查询或存储过程返回的记录数。 若要获取此信息，请使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性。 在与**adAsyncExecute**一起使用时， **Execute**方法不会返回正确的信息，只是因为异步执行命令时，在该方法返回时，受影响的记录数可能尚未已知。  
   
- *参数*  
+ *Parameters*  
  可选。 与在**CommandText**或**CommandStream**中指定的输入字符串或流结合**使用的参数值数组。** （当传入此参数时，输出参数不会返回正确的值。）  
   
  *选项*  

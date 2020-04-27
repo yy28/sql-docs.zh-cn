@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904424"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
@@ -46,9 +46,9 @@ ms.locfileid: "67904424"
 |-------------|---------------|-----------------|  
 |time|**datetime**|时间 (UTC)（以小时增量表示）。|  
 |database_name|**nvarchar**|用户数据库的名称。|  
-|sku|**nvarchar**|SKU 的名称。 下面是可能的值：<br /><br /> Web<br /><br /> 业务电话<br /><br /> 基本<br /><br /> Standard<br /><br /> 高级|  
+|sku|**nvarchar**|SKU 的名称。 下面是可能的值：<br /><br /> Web<br /><br /> Microsoft Store<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium|  
 |usage_in_seconds|**int**|该小时内使用的 CPU 时间之和。<br /><br /> 注意：此列不推荐用于 V11，不适用于 V12。 **值始终设置为0。**|  
-|storage_in_megabytes|**Decimal**|该小时的最大存储大小，包括数据库数据、索引、存储过程和元数据。|  
+|storage_in_megabytes|**decimal**|该小时的最大存储大小，包括数据库数据、索引、存储过程和元数据。|  
   
 ## <a name="permissions"></a>权限  
  此视图可用于具有连接到虚拟**master**数据库的权限的所有用户角色。  

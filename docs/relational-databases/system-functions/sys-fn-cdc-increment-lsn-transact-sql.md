@@ -21,10 +21,10 @@ ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046372"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
@@ -46,7 +46,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
  LSN 值。 *lsn_value*为**binary （10）**。  
   
 ## <a name="return-type"></a>返回类型  
- **binary （10）**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>备注  
  此函数返回的 LSN 值始终大于指定的值，并且不存在介于这两个值之间的 LSN 值。  

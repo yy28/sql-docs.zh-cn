@@ -17,10 +17,10 @@ ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6c174d2e6a659a3b9da8f89816b5bdf90342416
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917375"
 ---
 # <a name="readtext-method"></a>ReadText 方法
@@ -33,7 +33,7 @@ ms.locfileid: "67917375"
 String = Stream.ReadText ( NumChars)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *NumChars*  
  可选。 一个**长整型**值，指定要从文件中读取的字符数或[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)值。 默认值为**adReadAll**。  
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900161"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info （Transact-sql）
@@ -35,8 +35,7 @@ ms.locfileid: "67900161"
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |操作系统的类型： Windows 或 Linux |
 |**host_distribution** |**nvarchar(256)** |操作系统的说明。 |
-|**host_release**|**nvarchar(256)**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统版本（版本号） 有关值和说明的列表，请参阅[操作系统版本（Windows）](/windows/desktop/SysInfo/operating-system-version)。 <br> 对于 Linux，返回一个空字符串。 |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统版本（版本号） 有关值和说明的列表，请参阅[操作系统版本（Windows）](/windows/desktop/SysInfo/operating-system-version)。 <br> 对于 Linux，返回一个空字符串。 |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 操作系统的 Service Pack 级别。 <br> 对于 Linux，返回一个空字符串。 |  
 |**host_sku**|**int**|Windows 单品 (SKU) ID。 有关 SKU Id 和说明的列表，请参阅[GetProductInfo 函数](https://msdn.microsoft.com/library/ms724358.aspx)。 可以为 Null。 <br> 对于 Linux，返回 NULL。 |  
 |**os_language_version**|**int**|操作系统的 Windows 区域设置标识符 (LCID)。 有关 LCID 值和说明的列表，请参阅[Microsoft 分配的区域设置 id](https://go.microsoft.com/fwlink/?LinkId=208080)。 不可为 null。|  
@@ -66,13 +65,13 @@ FROM sys.dm_os_host_info;
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |2052 |  
 
 下面是 Linux 上的示例结果集：
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Linux |Ubuntu |16.04  |   |Null   |1033 |  
+ |Linux |Ubuntu |16.04  |   |Null   |2052 |  
 
   
 ## <a name="see-also"></a>另请参阅  

@@ -15,16 +15,16 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918165"
 ---
 # <a name="move-method-example-vbscript"></a>Move 方法示例 (VBScript)
 此示例使用[Move](../../../ado/reference/ado-api/move-method-ado.md)方法根据用户输入来定位记录指针。  
   
- 在 Active Server Page （ASP）中使用以下示例。 若要查看此完全功能的示例，必须将数据源 Advworks-srv01 （随 SDK 一起安装）置于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb，或编辑示例代码中的路径以反映此文件的实际位置。 这是一个 Microsoft Access 数据库文件。  
+ 在 Active Server Page （ASP）中使用以下示例。 若要查看此完全功能的示例，您必须具有位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的数据源 Advworks-srv01 （与 SDK 一起安装），或编辑代码示例中的路径以反映此文件的实际位置。 这是一个 Microsoft Access 数据库文件。  
   
  使用 "**查找**" 找到文件 Adovbs，并将其放入计划使用的目录中。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**MoveVBS**。 您可以在任何浏览器中查看结果。  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905645"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
@@ -52,7 +52,7 @@ Hierarchy_Expression.Levels( Level_Name )
 ## <a name="examples"></a>示例  
  下面的示例演示了每个**级别**函数语法。  
   
-### <a name="numeric"></a>Numeric  
+### <a name="numeric"></a>数字  
  以下示例返回国家（地区）级别：  
   
 ```  
@@ -60,7 +60,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>字符串  
  以下示例返回国家（地区）级别：  
   
 ```  
@@ -69,6 +69,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

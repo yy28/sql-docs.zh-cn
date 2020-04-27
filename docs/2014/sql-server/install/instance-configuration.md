@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68190973"
 ---
 # <a name="instance-configuration"></a>Instance Configuration
@@ -32,8 +32,7 @@ ms.locfileid: "68190973"
  **发出!** 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep，您可以在 **“实例配置”** 页上完成已准备实例时指定实例名称。 如果在计算机上没有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的现有默认实例，您可以选择将正在完成的已准备实例配置为默认实例。  
   
 ## <a name="multiple-instances"></a>多个实例  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在单个服务器或处理器上存在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，但只能有一个实例为默认实例。 所有其他实例必须为命名实例。 一台计算机可同时运行多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，每个实例独立于其他实例运行。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在单个服务器或处理器上存在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，但只能有一个实例为默认实例。 所有其他实例必须为命名实例。 一台计算机可同时运行多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，每个实例独立于其他实例运行。  
   
  有关详细信息，请参阅[SQL Server 的最大容量规范](../maximum-capacity-specifications-for-sql-server.md)。  
   
@@ -62,8 +61,7 @@ ms.locfileid: "68190973"
   
 -   如果为实例名称指定 MSSQLServer，将创建默认实例。  
   
--   
-  [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 安装始终安装为命名实例“PowerPivot”。 不能为此功能角色指定不同的实例名称。  
+-   [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 安装始终安装为命名实例“PowerPivot”。 不能为此功能角色指定不同的实例名称。  
   
 -   实例名限制为 16 个字符。  
   
@@ -88,23 +86,21 @@ ms.locfileid: "68190973"
   
  有关目录、文件位置和实例 ID 命名的详细信息，请参阅[SQL Server 的默认实例和命名实例的文件位置](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的给定实例的所有组件作为一个单元进行管理。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的每个组件。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的给定实例的所有组件作为一个单元进行管理。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的每个组件。  
   
  共用同一实例名称的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件都必须满足以下条件：  
   
--   **同一版本**  
+-   版本相同****  
   
--   **同一版本**  
+-   版本类别相同****  
   
--   **语言设置相同**  
+-   语言设置相同****  
   
--   **相同群集状态**  
+-   聚集状态相同****  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不能识别群集。  
+    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不能识别群集。  
   
--   **相同操作系统**  
+-   操作系统相同****  
   
   

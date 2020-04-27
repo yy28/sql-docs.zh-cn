@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68103286"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
@@ -44,18 +44,18 @@ ms.locfileid: "68103286"
 |**AS_LOCATOR**|**nvarchar （** 10 **）**|如果声明为定位器，则返回 YES。 否则，返回 NO。|  
 |**PARAMETER_NAME**|**nvarchar （** 128 **）**|参数的名称。 如果该名称对应于函数的返回值，则为 NULL。|  
 |**DATA_TYPE**|**nvarchar （** 128 **）**|系统提供的数据类型。|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制或字符数据类型的最大长度（字符）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，将返回 NULL。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|二进制或字符数据类型的最大长度（字节）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，将返回 NULL。|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制或字符数据类型的最大长度（字符）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，返回 NULL。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|二进制或字符数据类型的最大长度（字节）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，返回 NULL。|  
 |**COLLATION_CATALOG**|**nvarchar （** 128 **）**|始终返回 NULL。|  
 |**COLLATION_SCHEMA**|**nvarchar （** 128 **）**|始终返回 NULL。|  
 |**COLLATION_NAME**|**nvarchar （** 128 **）**|参数排序规则的名称。 如果不是一种字符类型，则返回 NULL。|  
-|**CHARACTER_SET_CATALOG**|**nvarchar （** 128 **）**|参数字符集的目录名称。 如果不是一种字符类型，则返回 NULL。|  
+|**CHARACTER_SET_CATALOG**|**nvarchar （** 128 **）**|参数字符集的编录名称。 如果不是一种字符类型，则返回 NULL。|  
 |**CHARACTER_SET_SCHEMA**|**nvarchar （** 128 **）**|始终返回 NULL。|  
 |**CHARACTER_SET_NAME**|**nvarchar （** 128 **）**|参数字符集的名称。 如果不是一种字符类型，则返回 NULL。|  
-|**NUMERIC_PRECISION**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的精度。 否则，将返回 NULL。|  
-|**NUMERIC_PRECISION_RADIX**|**smallint**|近似数字数据、精确数字数据、整数数据或货币数据的精度基数。 否则，将返回 NULL。|  
-|**NUMERIC_SCALE**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，将返回 NULL。|  
-|**DATETIME_PRECISION**|**smallint**|如果参数类型为**datetime**或**smalldatetime**，则精度（以秒为单位）。 否则，将返回 NULL。|  
+|**NUMERIC_PRECISION**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的精度。 否则，返回 NULL。|  
+|**NUMERIC_PRECISION_RADIX**|**smallint**|近似数字数据、精确数字数据、整数数据或货币数据的精度基数。 否则，返回 NULL。|  
+|**NUMERIC_SCALE**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，返回 NULL。|  
+|**DATETIME_PRECISION**|**smallint**|如果参数类型为**datetime**或**smalldatetime**，则精度（以秒为单位）。 否则，返回 NULL。|  
 |**INTERVAL_TYPE**|**nvarchar （** 30 **）**|NULL。 保留供将来使用。|  
 |**INTERVAL_PRECISION**|**smallint**|NULL。 保留供将来使用。|  
 |**USER_DEFINED_TYPE_CATALOG**|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
@@ -70,6 +70,6 @@ ms.locfileid: "68103286"
  [&#40;Transact-sql&#41;的信息架构视图](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. parameters &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

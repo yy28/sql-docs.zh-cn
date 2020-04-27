@@ -14,25 +14,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 903afa9ef25afcba7818862bc73dc33bf677b47a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67140821"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>互操作性和共存 (Integration Services)
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 可与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services 并存。  
   
 ## <a name="features-and-differences"></a>功能和区别  
  下表列出了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]当前版本与早期版本之间的一些区别。  
   
-|Feature|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
+|功能|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|开发环境|[以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[用于 Visual Studio 2010 的 SQL Server Data Tools](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio （[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]）|  
+|开发环境|[以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[用于 Visual Studio 2010 的 SQL Server Data Tools](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-适用于 Visual Studio 2012 的商业智能](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio （[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]）|  
 |管理环境|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |msdb 中用于存储包的主系统表|sysssispackages|sysssispackages|sysssispackages|  
-|用于运行包的主命令提示实用工具|**dtexec** （ngen.exe），2014版本|**dtexec** （ngen.exe），2012版本|**dtexec** （ngen.exe），2008版本|  
+|用于运行包的主命令提示实用工具|**dtexec** (dtexec.exe)，2014 版|**dtexec** (dtexec.exe), 2012 版|**dtexec** (dtexec.exe), 2008 版|  
 |默认根文件系统文件夹|C:\Program Files\Microsoft SQL Server\120\DTS|C:\Program Files\Microsoft SQL Server\110\DTS|C:\Program Files\Microsoft SQL Server\100\DTS|  
 |默认根注册表项|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS|  
   
@@ -49,9 +48,9 @@ ms.locfileid: "67140821"
   
 -   **加载和运行包**。 可以在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中加载和运行在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中开发的包。 将包添加到一个现有项目时，该包将永久升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 使用的格式。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开包文件时，该包将暂时升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 使用的格式。 如果您保存对该包的更改，该包将永久升级。 一旦保存为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 使用的格式，包将再也无法在相应 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的 Business Intelligence Development Studio 中打开，也无法通过相应的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services 工具运行。  
   
--   **在 SQL Server Management Studio 中管理包**。 您无法通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]服务。 您无法通过 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]服务。 您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 管理在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的实例中存储的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]包。 您需要修改服务配置文件，以便将 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 实例添加到由服务管理的位置列表中。 有关详细信息，请参阅[配置 Integration Services 服务（SSIS 服务）](../service/integration-services-service-ssis-service.md)。  
+-   **在 SQL Server Management Studio 中管理包**。 您无法通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]服务。 您无法通过 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]服务。 您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 管理在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的实例中存储的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]包。 您需要修改服务配置文件，以便将 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 实例添加到由服务管理的位置列表中。 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](../service/integration-services-service-ssis-service.md)的早期版本向后兼容。  
   
--   **将包存储在 SQL Server 中**。 您可以在以下数据库中存储包。  
+-   **在 SQL Server 中存储包**。 您可以在以下数据库中存储包。  
   
     |包格式|数据库|  
     |--------------------|--------------|  

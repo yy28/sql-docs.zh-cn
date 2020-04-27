@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67597534"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>创建预测（数据挖掘基础教程）
@@ -57,7 +57,7 @@ ms.locfileid: "67597534"
   
      这样便将可预测列 [Bike Buyer] 映射到一个输入表列。  
   
-3.  单击“确定”。   
+3.  单击" **确定**"。  
   
 4.  在**解决方案资源管理器**中，右键单击**目标邮件**数据源视图，然后选择 "**视图设计器**"。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "67597534"
     > [!WARNING]  
     >  如果看不到列表中的列，则可能必须刷新设计器中加载的数据源视图的定义。 为此，请在 "**文件**" 菜单中选择 "**全部保存**"，然后关闭并重新打开设计器中的项目。  
   
-11. 单击“确定”。   
+11. 单击" **确定**"。  
   
 ## <a name="designing-the-prediction-query"></a>设计预测查询  
   

@@ -17,10 +17,10 @@ ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917036"
 ---
 # <a name="savetofile-method"></a>SaveToFile 方法
@@ -33,8 +33,8 @@ ms.locfileid: "67917036"
 Stream.SaveToFile FileName, SaveOptions  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *名字*  
+#### <a name="parameters"></a>参数  
+ *FileName*  
  一个**字符串**值，该值包含**流**的内容将保存到的文件的完全限定名称。 可以保存到任何有效的本地位置，也可以通过 UNC 值进行访问。  
   
  *System.xml.linq.saveoptions>*  

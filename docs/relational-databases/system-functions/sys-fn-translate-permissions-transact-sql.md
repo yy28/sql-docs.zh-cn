@@ -22,10 +22,10 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68055371"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
@@ -50,7 +50,7 @@ sys.fn_translate_permissions ( level , perms )
  权限列中返回的位掩码。 *perms*为**varbinary （16）**。  
   
 ## <a name="returns"></a>返回  
- **数据表**  
+ **table**  
   
 ## <a name="remarks"></a>备注  
  SQL 跟踪的**权限**列中返回的值是用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来计算有效权限的位掩码的整数表示形式。 25 种安全对象中的每一种都有它自己的权限集，并且这些权限具有相应的数字值。 **sys. fn_translate_permissions**将此位掩码转换为权限名称表。  

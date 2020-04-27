@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110146"
 ---
 # <a name="viewing-tuning-reports"></a>查看优化报表
   在本课程的上一个练习中，您已经查看了在数据库引擎优化顾问建议中创建或删除数据库对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，这些建议是 MySession 优化会话生成的结果。 MySession 优化会话是在 [优化工作负荷](lesson-1-1-tuning-a-workload.md)中创建的。  
   
- 尽管查看可用于实现优化结果的脚本时非常有效，但数据库引擎优化顾问仍提供了许多可供查看的有用报告。 这些报告提供了有关正在优化的数据库中现有物理设计结构的信息，以及有关建议的结构的信息。 通过单击“报告”**** 选项卡可以查看优化报告，如以下练习中所述。 本练习将使用你在[优化工作负荷](lesson-1-1-tuning-a-workload.md)和[查看优化建议](lesson-1-2-viewing-tuning-recommendations.md)中创建的 MySession 和 EvaluateMySession 优化会话。  
+ 尽管查看可用于实现优化结果的脚本时非常有效，但数据库引擎优化顾问仍提供了许多可供查看的有用报告。 这些报告提供了有关正在优化的数据库中现有物理设计结构的信息，以及有关建议的结构的信息。 通过单击“报告”**** 选项卡可以查看优化报告，如以下练习中所述。 本练习将使用你在 [优化工作负荷](lesson-1-1-tuning-a-workload.md) 和 [查看优化建议](lesson-1-2-viewing-tuning-recommendations.md)中创建的 MySession 和 EvaluateMySession 优化会话。  
   
 ### <a name="view-tuning-reports"></a>查看优化报告  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66110146"
   
 7.  单击“选择报告”**** 列表中的其他报告，了解相关内容。  
   
-## <a name="summary"></a>总结  
+## <a name="summary"></a>摘要  
  现在，你已经浏览了 MySession 优化会话的数据库引擎优化顾问 GUI 的“报告”**** 选项卡。 可以执行相同的步骤来浏览为 EvaluateMySession 优化会话生成的报告。 双击“会话监视器”**** 窗格中的 **EvaluateMySession** 开始该会话。  
   
 ## <a name="next-lesson"></a>下一课  

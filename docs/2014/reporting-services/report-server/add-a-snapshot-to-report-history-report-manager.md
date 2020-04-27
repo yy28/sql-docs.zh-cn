@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413117"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>向报表历史记录添加快照（报表管理器）
@@ -30,9 +30,9 @@ ms.locfileid: "67413117"
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>向报表历史记录中手动添加快照
 
-1. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头****。
+1. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头  。
   
-2. 在下拉菜单中，单击 **“查看报表历史记录”**。  
+2. 在下拉菜单中，单击 **“查看报表历史记录”** 。  
   
 3. 单击 **“新建快照”** 。 将在 **“运行时间”** 列中创建一个新快照。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "67413117"
   
 1. 对于已配置为作为报表执行快照运行的报表，可以设置其他属性以在每次刷新该快照时将该快照的副本保存到报表历史记录。  
   
-2. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头****。  
+2. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头  。  
   
 3. 在下拉菜单中，单击 **“管理”** 。  
   
-4. 单击 **“快照选项”**。  
+4. 单击 **“快照选项”** 。  
   
 5. 选中 **“在历史记录中存储所有报表执行快照”** 复选框。  
   
@@ -57,24 +57,24 @@ ms.locfileid: "67413117"
   
 ### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>基于计划自动向报表历史记录中添加快照  
   
-1. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头****。  
+1. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头  。  
   
 2. 在下拉菜单中，单击 **“管理”** 。  
   
-3. 单击 **“快照选项”**。  
+3. 单击 **“快照选项”** 。  
   
 4. 选中 **“使用以下计划将快照添加到报表历史记录中”** 复选框。 执行以下某种方案：  
   
-    - 选择“报表特定计划”****。 填入计划详细信息，选择计划的开始日期和结束日期，再单击 **“确定”**。  
+    - 选择“报表特定计划”  。 填入计划详细信息，选择计划的开始日期和结束日期，再单击 **“确定”** 。  
   
-    - 选择 **“共享计划”**。 从列表中选择首选计划。  
+    - 选择 **“共享计划”** 。 从列表中选择首选计划。  
   
 5. 单击“应用”  。  
   
 ## <a name="see-also"></a>另请参阅
 
-- [配置报表 &#40;的执行属性报表管理器&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
-- [打开并关闭报表 &#40;报表管理器&#41;](../reports/open-and-close-a-report-report-manager.md)
+- [配置报表的执行属性（报表管理器）](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [打开和关闭报表（报表管理器）](../reports/open-and-close-a-report-report-manager.md)
 - [限制报表历史记录（报表管理器）](../reports/limit-report-history-report-manager.md)
 - [计划](../subscriptions/schedules.md)   
 - [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)

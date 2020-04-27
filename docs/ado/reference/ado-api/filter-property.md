@@ -16,10 +16,10 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918629"
 ---
 # <a name="filter-property"></a>Filter 属性
@@ -56,7 +56,7 @@ ms.locfileid: "67918629"
 -   而是将此筛选器构造为  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在**LIKE**子句中，可以在模式的开头和结尾使用通配符。 例如，你可以使用`LastName Like '*mit*'`。 或者使用**LIKE** ，只能在模式的末尾使用通配符。 例如，`LastName Like 'Smit*'` 。  
+-   在**LIKE**子句中，可以在模式的开头和结尾使用通配符。 例如，你可以使用 `LastName Like '*mit*'`。 或者使用**LIKE** ，只能在模式的末尾使用通配符。 例如，`LastName Like 'Smit*'` 。  
   
  例如，使用筛选器常量可以在批处理更新模式下更轻松地解决单个记录冲突，只允许查看在上一次[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)方法调用期间受影响的记录。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "67918629"
 ||非键|单个键|多个键|
 |-|--------------|----------------|-------------------|
 |**非键**|+|+|+|
-|**单个键**|+|-|空值|
-|**多个键**|+|空值|+|
+|**单个键**|+|-|不适用|
+|**多个键**|+|不适用|+|
 |||||
   
 ## <a name="applies-to"></a>应用于

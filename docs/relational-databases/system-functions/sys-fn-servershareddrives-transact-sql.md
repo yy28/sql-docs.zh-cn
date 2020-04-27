@@ -21,10 +21,10 @@ ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 71858ee3c57af8d94bdf4ef4addad720655942f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122552"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
@@ -50,8 +50,7 @@ fn_servershareddrives()
  如果当前服务器实例不是群集服务器， **fn_servershareddrives**将返回空的行集。  
   
 ## <a name="remarks"></a>备注  
- 
-  `fn_servershareddrives` 返回此群集服务器使用的共享驱动器的列表。 这些共享驱动器属于与[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]资源相同的群集组。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源与这些驱动器相关。  
+ `fn_servershareddrives` 返回此群集服务器使用的共享驱动器的列表。 这些共享驱动器属于与[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]资源相同的群集组。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源与这些驱动器相关。  
   
  此函数在标识用户可用的驱动器时十分有用。  
   

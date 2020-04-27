@@ -18,10 +18,10 @@ ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910152"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "67910152"
 |**user_name**|**nvarchar(128)**|执行还原操作的用户的名称。 可以为 NULL。|  
 |**backup_set_id**|**int**|标识被还原的备份集的唯一标识号。 引用**backupset （backup_set_id）**。|  
 |**restore_type**|**char （1）**|还原操作的类型：<br /><br /> D = 数据库<br /><br /> F = 文件<br /><br /> G = 文件组<br /><br /> I = 差异<br /><br /> L = 日志<br /><br /> V = 仅验证<br /><br /> 可以为 NULL。|  
-|**全部**|**bit**|指示还原操作是否指定了 REPLACE 选项：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，0 是唯一的选项。|  
-|**修复**|**bit**|指示还原操作指定的是 RECOVERY 选项还是 NORECOVERY 选项：<br /><br /> 1 = RECOVERY<br /><br /> 可以为 NULL。<br /><br /> 数据库恢复到数据库快照时，只有1个选项。<br /><br /> 0 = NORECOVERY|  
-|**重新启动**|**bit**|指示还原操作是否指定了 RESTART 选项：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，0 是唯一的选项。|  
+|**replace**|**bit**|指示还原操作是否指定了 REPLACE 选项：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，0 是唯一的选项。|  
+|**recovery**|**bit**|指示还原操作指定的是 RECOVERY 选项还是 NORECOVERY 选项：<br /><br /> 1 = RECOVERY<br /><br /> 可以为 NULL。<br /><br /> 数据库恢复到数据库快照时，只有1个选项。<br /><br /> 0 = NORECOVERY|  
+|**restart**|**bit**|指示还原操作是否指定了 RESTART 选项：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，0 是唯一的选项。|  
 |**stop_at**|**datetime**|数据库要恢复到的时间点。 可以为 NULL。|  
 |**device_count**|**tinyint**|还原操作涉及的设备数。 此数目可以小于备份使用的介质簇数。 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，此数目将始终为 1。|  
 |**stop_at_mark_name**|**nvarchar(128)**|指示恢复到包含命名标记的事务。 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，此值为 NULL。|  

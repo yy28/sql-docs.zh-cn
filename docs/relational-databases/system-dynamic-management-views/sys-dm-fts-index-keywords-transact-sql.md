@@ -21,10 +21,10 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900947"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
@@ -57,7 +57,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 |-----------------|---------------|-----------------|  
 |**关键字**|**nvarchar(4000)**|全文索引中存储的关键字的十六进制表示形式。<br /><br /> 注意： OxFF 表示特殊字符，该字符指示文件或数据集的结尾。|  
 |**display_term**|**nvarchar(4000)**|关键字的可读格式。 这种格式是从十六进制格式派生的。<br /><br /> 注意： OxFF 的**display_term**值为 "文件结尾"。|  
-|column_id |**int**|从中对当前关键字进行全文索引的列的 ID。|  
+|**column_id**|**int**|从中对当前关键字进行全文索引的列的 ID。|  
 |**document_count**|**int**|包含当前字词的文档或行的数目。|  
   
 ## <a name="remarks"></a>备注  
@@ -74,7 +74,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
     -   通常，最常见的关键字可能适于声明为非索引字。  
   
 > [!NOTE]  
->  对于特定的文档， **dm_fts_index_keywords**返回的**document_count**可能不太准确，因为**dm_fts_index_keywords_by_document**或**CONTAINS**查询返回的计数。 这一可能的不精确估计小于 1%。 出现这种导致的原因是，如果 document_id 在索引片段中的多行间连续发生两次，或在同一行中多次出现，则可能会对该**** 计数两次。 若要为特定文档获取更准确的计数，请使用**sys. dm_fts_index_keywords_by_document**或**CONTAINS**查询。  
+>  对于特定的文档， **dm_fts_index_keywords**返回的**document_count**可能不太准确，因为**dm_fts_index_keywords_by_document**或**CONTAINS**查询返回的计数。 这一可能的不精确估计小于 1%。 出现这种导致的原因是，如果 document_id 在索引片段中的多行间连续发生两次，或在同一行中多次出现，则可能会对该**document_id**计数两次。 若要为特定文档获取更准确的计数，请使用**sys. dm_fts_index_keywords_by_document**或**CONTAINS**查询。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

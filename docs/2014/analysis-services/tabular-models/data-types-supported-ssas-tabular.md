@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284930"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>支持的数据类型（SSAS 表格）
   本文说明可在表格模型中使用的数据类型，并且论述在数据分析表达式 (DAX) 公式中计算或使用数据时数据类型的隐式转换。  
   
- 本文包含以下部分：  
+ 本文包含以下各节：  
   
 -   [在表格模型中使用的数据类型](#bkmk_data_types)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "67284930"
   
 -   [空白、空字符串和零值的处理](#bkmk_hand_blanks)  
   
-##  <a name="bkmk_data_types"></a>表格模型中使用的数据类型  
+##  <a name="data-types-used-in-tabular-models"></a><a name="bkmk_data_types"></a>表格模型中使用的数据类型  
  支持以下数据类型。 当您在公式中导入数据或者使用某一值时，即使原始数据源包含不同的数据类型，该数据也转换为以下数据类型之一。 从公式得出的值也使用这些数据类型。  
   
  通常，实施这些数据类型以便在计算列中实现精确的计算，并且相同的限制将应用于模型中的其余数据以便保持一致性。  
@@ -38,13 +38,13 @@ ms.locfileid: "67284930"
 ||||  
 |-|-|-|  
 |模型中的数据类型|DAX 中的数据类型|说明|  
-|整数|64位（八字节）整数值<sup>1，2</sup>|没有小数位的数字。 整数可以是正数或负数，但必须是介于 -9,223,372,036,854,775,808 (-2^63) 和 9,223,372,036,854,775,807 (2^63-1) 之间的整数。|  
-|十进制数|64位（八字节）实数<sup>1、2</sup>|实数是可具有小数位的数字。 实数涵盖很广范围的值：<br /><br /> 从 -1.79E +308 到 -2.23E -308 的负值<br /><br /> 零<br /><br /> 从 2.23E -308 到 1.79E + 308 的正值<br /><br /> 但是，有效位数限制为 17 个小数位。|  
-|Boolean|Boolean|True 或 False 值。|  
-|文本|String|一个 Unicode 字符数据字符串。 可以是字符串，或以文本格式表示的数字或日期。|  
-|Date|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
+|整数|一个 64 位（八字节）整数值 <sup>1、2</sup>|没有小数位的数字。 整数可以是正数或负数，但必须是介于 -9,223,372,036,854,775,808 (-2^63) 和 9,223,372,036,854,775,807 (2^63-1) 之间的整数。|  
+|小数|一个 64 位（八字节）实数 <sup>1、2</sup>|实数是可具有小数位的数字。 实数涵盖很广范围的值：<br /><br /> 从 -1.79E +308 到 -2.23E -308 的负值<br /><br /> 零<br /><br /> 从 2.23E -308 到 1.79E + 308 的正值<br /><br /> 但是，有效位数限制为 17 个小数位。|  
+|布尔|布尔|True 或 False 值。|  
+|Text|字符串|一个 Unicode 字符数据字符串。 可以是字符串，或以文本格式表示的数字或日期。|  
+|日期|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
 |货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
-|空值|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
+|不适用|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
  <sup>1</sup> DAX 公式不支持小于表中列出的数据类型。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67284930"
   
 ||  
 |-|  
-|值|  
+|Value|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -70,7 +70,7 @@ ms.locfileid: "67284930"
 ### <a name="table-data-type"></a>表数据类型  
  此外，DAX 使用“表” ** 数据类型。 DAX 在许多函数中都使用此数据类型，如在聚合和时间智能计算中。 某些函数要求对表的引用；其他函数返回可用作对其他函数的输入的表。 在要求表作为输入的某些函数中，您可以指定计算结果为表的表达式；对于某些函数，要求对基表的引用。 有关特定函数的要求的信息，请参阅 [DAX 函数引用](/dax/dax-function-reference)。  
   
-##  <a name="bkmk_implicit"></a>DAX 公式中的隐式和显式数据类型转换  
+##  <a name="implicit-and-explicit-data-type-conversion-in-dax-formulas"></a><a name="bkmk_implicit"></a>DAX 公式中的隐式和显式数据类型转换  
  每个 DAX 函数都对用作输入和输出的数据类型具有特定的要求。 例如，某些函数要求将整数用于某些参数，将日期用于其他参数；其他一些函数则要求文本或表。  
   
  如果列中您指定为参数的数据与函数所要求的数据类型不兼容，则在许多情况下 DAX 都会返回错误。 但是，只要可能，DAX 都会尝试隐式将数据转换为所需的数据类型。 例如：  
@@ -148,14 +148,11 @@ ms.locfileid: "67284930"
   
  下面的 DAX 表达式说明此行为：  
   
- 
-  `=IF(FALSE()>"true","Expression is true", "Expression is false")`，返回 `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")`，返回 `"Expression is true"`  
   
- 
-  `=IF("12">12,"Expression is true", "Expression is false")`，返回 `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")`，返回 `"Expression is true"`  
   
- 
-  `=IF("12"=12,"Expression is true", "Expression is false")`，返回 `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")`，返回 `"Expression is false"`  
   
  如下表所述，为数字或日期/时间类型执行隐式转换：  
   
@@ -167,7 +164,7 @@ ms.locfileid: "67284930"
 |real|real|real|real|real|  
 |日期/时间|real|real|real|日期/时间|  
   
-##  <a name="bkmk_hand_blanks"></a>空格、空字符串和零值的处理  
+##  <a name="handling-of-blanks-empty-strings-and-zero-values"></a><a name="bkmk_hand_blanks"></a>空格、空字符串和零值的处理  
  DAX 处理零值、Null 和空字符串的方式不同于 Microsoft Excel 和 SQL Server。 本节描述这些差异，并描述如何处理这些数据类型。  
   
  务必要记住的是，空白值、空单元或缺失值全都由同一新的值类型表示，即 BLANK。 在运算（例如加法或串联）中处理空白的方式取决于各个函数。 您也可以通过使用 BLANK 函数生成空白，或者通过使用 ISBLANK 函数测试是否有空白。 在语义模型内并不支持数据库 Null，并且在 DAX 公式中引用包含 Null 值的列时，Null 将隐式转换为空白。  
@@ -195,6 +192,6 @@ ms.locfileid: "67284930"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;的数据源](../data-sources-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;导入数据](../import-data-ssas-tabular.md)  
+ [导入数据（SSAS 表格）](../import-data-ssas-tabular.md)  
   
   

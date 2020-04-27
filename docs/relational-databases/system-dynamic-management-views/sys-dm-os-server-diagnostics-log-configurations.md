@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a26ba08f6ddd7767dbd56371857c4d382b5ec15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899773"
 ---
 # <a name="sysdm_os_server_diagnostics_log_configurations"></a>sys.dm_os_server_diagnostics_log_configurations
@@ -38,7 +38,7 @@ ms.locfileid: "67899773"
 |is_enabled|**bit**|指示应启用还是禁用日志记录。<br /><br /> 1 - 启用诊断日志记录<br /><br /> 0 - 禁用诊断日志记录|  
 |max_size|**int**|每个诊断日志可以增长到的最大大小（mb）。 默认值为 100 MB。|  
 |max_files|**int**|可以存储在计算机上的诊断日志文件的最大数量，超过该数量后这些文件将被新的诊断日志所取代。|  
-|路径|**nvarchar(260)**|指示诊断日志位置的路径。 默认位置是 \< 故障转移群集实例的安装文件夹中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\Log>。|  
+|path|**nvarchar(260)**|指示诊断日志位置的路径。 默认位置是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的安装文件夹中的 \<\MSSQL\Log>。|  
   
 ## <a name="permissions"></a>权限  
  需要对 SQL Server 故障转移群集实例具有 VIEW SERVER STATE 权限。  

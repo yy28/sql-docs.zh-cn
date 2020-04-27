@@ -18,10 +18,10 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67902993"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
@@ -54,9 +54,9 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**device_name**|**sysname**|逻辑设备名。|  
 |**physical_name**|**nvarchar(260)**|物理文件名。|  
 |**2008**|**nvarchar(255)**|设备的说明。|  
-|**状态值**|**int**|与 "**说明**" 列中的状态说明相对应的数字。|  
+|**status**|**int**|与 "**说明**" 列中的状态说明相对应的数字。|  
 |**cntrltype**|**smallint**|设备的控制器类型：<br /><br /> 2 = 磁盘设备<br /><br /> 5 = 磁带设备|  
-|**规格**|**int**|设备大小（以 2 KB 页为单位）。|  
+|size |**int**|设备大小（以 2 KB 页为单位）。|  
   
 ## <a name="remarks"></a>备注  
  如果指定*name* ， **sp_helpdevice**将显示有关指定转储设备的信息。 如果未指定*name* ， **sp_helpdevice**将显示有关**sys.databases backup_devices**目录视图中的所有转储设备的信息。  
@@ -74,8 +74,8 @@ EXEC sp_helpdevice;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [sp_dropdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

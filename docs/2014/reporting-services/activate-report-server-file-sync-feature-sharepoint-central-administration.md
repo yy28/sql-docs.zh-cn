@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 762cf7e67a9983c345b58d2afd1c47da93306bd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413147"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-central-administration"></a>在 SharePoint 管理中心中激活报表服务器文件同步功能
@@ -24,7 +24,7 @@ ms.locfileid: "67413147"
   
 可对于每个站点（但不在网站集级别）手动激活和停用此功能。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  必须安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序。 如果未安装外接程序，则文件同步功能在站点功能列表中不可见。  
   
  若要验证是否已安装，请在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows **“控制面板”** 中查看已安装应用程序的列表。 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序已安装，请按照本主题中的说明激活报表服务器文件同步功能。  
@@ -40,7 +40,7 @@ ms.locfileid: "67413147"
 4.  单击“激活”  。  
   
 > [!NOTE]  
->  若要停用报表服务器文件同步功能，可以使用相同的过程，但单击“停用”  。  
+>   若要停用报表服务器文件同步功能，您可以使用相同的过程，但单击 **“停用”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;报表生成器和 SSRS 的报表部件疑难解答&#41;](report-parts-report-builder-and-ssrs.md)   

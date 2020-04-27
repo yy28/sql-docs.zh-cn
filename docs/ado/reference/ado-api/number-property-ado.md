@@ -18,10 +18,10 @@ ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce027747c843e02998f4845db7075e70cf8733b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917989"
 ---
 # <a name="number-property-ado"></a>Number 属性 (ADO)
@@ -36,7 +36,7 @@ ms.locfileid: "67917989"
  [Errors](../../../ado/reference/ado-api/errors-collection-ado.md)集合以十六进制格式（例如，0x80004005）或 long 值返回 HRESULT （例如，2147467259）。 这些 Hresult 可以由基础组件（例如 OLE DB 甚至 OLE 本身）引发。 有关这些数字的详细信息，请参阅[OLE DB 程序员参考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)中的[错误（OLE DB）](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) *。*  
   
 ## <a name="applies-to"></a>应用于  
- [错误对象](../../../ado/reference/ado-api/error-object.md)  
+ [Error 对象](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VB）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

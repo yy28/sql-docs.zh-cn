@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072687"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
@@ -57,8 +57,7 @@ sp_addextendedproperty
  要添加的属性的名称。 *property_name*为**sysname** ，且不能为 NULL。 名称还可以包括空格或非字母数字字符串以及二进制值。  
   
  [ @value= ]{"*value*"}  
- 要与属性关联的值。 *值* **sql_variant**，默认值为 NULL。 
-  *value* 的大小不能超过 7,500 个字节。  
+ 要与属性关联的值。 *值* **sql_variant**，默认值为 NULL。 *value* 的大小不能超过 7,500 个字节。  
   
  [ @level0type= ]{'*level0_object_type*'}  
  级别 0 对象的类型。 *level0_object_type*的值为**varchar （128）**，默认值为 NULL。  
@@ -66,8 +65,7 @@ sp_addextendedproperty
  有效输入包括：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE 和 NULL。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来的  版本中将删除在级别 1 类型对象的扩展属性中指定 USER 作为级别 0 类型的功能。 改用 SCHEMA 作为级别 0 类型。 例如，在定义表的扩展属性时，指定表的架构而不是用户名。 将来的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中将删除指定 TYPE 作为级别 0 类型的功能。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来的  版本中将删除在级别 1 类型对象的扩展属性中指定 USER 作为级别 0 类型的功能。 改用 SCHEMA 作为级别 0 类型。 例如，在定义表的扩展属性时，指定表的架构而不是用户名。 将来的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中将删除指定 TYPE 作为级别 0 类型的功能。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
   
  [ @level0name= ]{'*level0_object_name*'}  
  所指定的级别 0 对象类型的名称。 *level0_object_name*的值为**sysname** ，默认值为 NULL。  
@@ -111,8 +109,7 @@ sp_addextendedproperty
 ## <a name="examples"></a>示例  
   
 ### <a name="a-adding-an-extended-property-to-a-database"></a>A. 将扩展属性添加到数据库中  
- 
-  `'Caption'` 以下示例将值为 `'AdventureWorks2012 Sample OLTP Database'` 的属性名称 `AdventureWorks2012` 添加到  示例数据库中。  
+ `'Caption'` 以下示例将值为 `'AdventureWorks2012 Sample OLTP Database'` 的属性名称 `AdventureWorks2012` 添加到  示例数据库中。  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,8 +121,7 @@ EXEC sp_addextendedproperty
 ```  
   
 ### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>B. 将扩展属性添加到表中的列  
- 
-  `PostalCode` 以下示例将 caption 属性添加到 `Address`表中的  列。  
+ `PostalCode` 以下示例将 caption 属性添加到 `Address`表中的  列。  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,8 +136,7 @@ GO
 ```  
   
 ### <a name="c-adding-an-input-mask-property-to-a-column"></a>C. 将输入 input mask 添加到列中  
- 
-  `99999 or 99999-9999 or #### ###`以下示例将输入 input mask 属性“ `PostalCode` ”添加到 `Address`表中的  列。  
+ `99999 or 99999-9999 or #### ###`以下示例将输入 input mask 属性“ `PostalCode` ”添加到 `Address`表中的  列。  
   
 ```  
 USE AdventureWorks2012;  
@@ -155,8 +150,7 @@ GO
 ```  
   
 ### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D. 将扩展属性添加到文件组中  
- 
-  `PRIMARY` 下面的示例向  文件组添加了一个扩展属性。  
+ `PRIMARY` 下面的示例向  文件组添加了一个扩展属性。  
   
 ```  
 USE AdventureWorks2012;  
@@ -182,8 +176,7 @@ EXECUTE sys.sp_addextendedproperty
 ```  
   
 ### <a name="f-adding-an-extended-property-to-a-table"></a>F. 将扩展属性添加到表中  
- 
-  `Address` 下面的示例将扩展属性添加到 `Person` 架构中的  表。  
+ `Address` 下面的示例将扩展属性添加到 `Person` 架构中的  表。  
   
 ```  
 USE AdventureWorks2012;  

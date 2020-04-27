@@ -17,10 +17,10 @@ ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918451"
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
@@ -36,14 +36,14 @@ array = recordset.GetRows(Rows, Start, Fields )
 ## <a name="return-value"></a>返回值  
  返回一个**变量**，其值为二维数组。  
   
-#### <a name="parameters"></a>parameters  
- *各*  
+#### <a name="parameters"></a>参数  
+ *行*  
  可选。 一个[GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)值，指示要检索的记录数。 默认值为**adGetRowsRest**。  
   
- *开始*  
+ *Start*  
  可选。 一个**字符串**值或**变量**，其计算结果为应从中开始**GetRows**操作的记录的书签。 还可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
- *Fields*  
+ *字段*  
  可选。 一个表示单个字段名称或序号位置的**变量**，或是一个字段名称或序号位置编号的数组。 ADO 仅返回这些字段中的数据。  
   
 ## <a name="remarks"></a>备注  

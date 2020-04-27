@@ -19,10 +19,10 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899181"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
@@ -84,7 +84,7 @@ sp_dbmmonitorresults database_name
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|镜像数据库的名称。|  
-|**职位**|**int**|服务器实例的当前镜像角色：<br /><br /> 1 = 主体<br /><br /> 2 = 镜像|  
+|**role**|**int**|服务器实例的当前镜像角色：<br /><br /> 1 = 主体<br /><br /> 2 = 镜像|  
 |**mirroring_state**|**int**|数据库的状态：<br /><br /> 0 = 已挂起<br /><br /> 1 = 已断开连接<br /><br /> 2 = 正在同步<br /><br /> 3 = 挂起故障转移<br /><br /> 4 = 已同步|  
 |**witness_status**|**int**|在数据库的数据库镜像会话中见证服务器的连接状态，可以是：<br /><br /> 0 = 未知<br /><br /> 1 = 已连接<br /><br /> 2 = 已断开|  
 |**log_generation_rate**|**int**|自上次更新此数据库的镜像状态以来生成的日志量（KB/秒）。|  

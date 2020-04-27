@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68187820"
 ---
 # <a name="connecting-with-query-editor"></a>连接查询编辑器
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]允许在与服务器断开连接时编写或编辑代码。 当服务器不可用或要节省短缺的服务器或网络资源时，这一点很有用。 您也可以更改查询编辑器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的连接，而无需打开新的查询编辑器窗口或重新键入代码。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 允许在与服务器断开连接时编写或编辑代码。 当服务器不可用或要节省短缺的服务器或网络资源时，这一点很有用。 您也可以更改查询编辑器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的连接，而无需打开新的查询编辑器窗口或重新键入代码。  
   
 ## <a name="coding-offline"></a>脱机编码  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68187820"
     GO  
     ```  
   
-     此时，可以通过依次单击“连接”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**、“执行”****、“分析”****或“显示估计的执行计划”****连接到 ** 实例，“查询”**** 菜单、“查询编辑器”工具栏或在“查询编辑器”窗口中右键单击时显示的快捷菜单中均提供了这些选项。 对于本练习，我们将使用工具栏。  
+     此时，可以通过依次单击“连接”****、“执行”****、“分析”**** 或“显示估计的执行计划”**** 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，“查询”**** 菜单、“查询编辑器”工具栏或在“查询编辑器”窗口中右键单击时显示的快捷菜单中均提供了这些选项。 对于本练习，我们将使用工具栏。  
   
 4.  在工具栏上，单击“执行”**** 按钮，打开“连接到数据库引擎”**** 对话框。  
   

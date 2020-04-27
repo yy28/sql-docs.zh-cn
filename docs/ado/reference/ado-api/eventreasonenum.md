@@ -16,16 +16,16 @@ ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918875"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 指定导致事件发生的原因。  
   
-|一直|值|说明|  
+|Constant|Value|说明|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|操作已添加一条新记录。|  
 |**adRsnClose**|9|操作关闭了**记录集**。|  
@@ -46,7 +46,7 @@ ms.locfileid: "67918875"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums. EventReason|  
 |AdoEnums. EventReason. 关闭|  

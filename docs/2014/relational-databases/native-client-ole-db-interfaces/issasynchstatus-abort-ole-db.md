@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus：： Abort （OLE DB） |Microsoft Docs
+title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638719"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -36,10 +36,10 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>参数  
- *hChapter*[in]  
+ hChapter[in]**  
  要中止其操作的章节的句柄。 如果被调用的对象不是行集对象或操作不适用于某一章节，则调用方必须将*hChapter*设置为 DB_NULL_HCHAPTER。  
   
- *eOperation*[in]  
+ eOperation[in]**  
  要中止的操作。 其值应为：  
   
  DBASYNCHOP_OPEN - 要取消的请求应用于行集的异步打开或填充，或应用于数据源对象的异步初始化。  
@@ -67,7 +67,7 @@ HRESULT Abort(
   
  在之前调用了**ITransaction：： Commit**或**ITransaction：： abort**的行集上调用了**ISSAsynchStatus：： abort** ，并且行集未保留在提交或中止后并且处于僵停状态。  
   
- 对在其初始化阶段异步取消的行集调用了**ISSAsynchStatus：： Abort** 。 该行集处于僵停状态。  
+ 已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort****。 该行集处于僵停状态。  
   
 ## <a name="remarks"></a>备注  
  中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED****。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  

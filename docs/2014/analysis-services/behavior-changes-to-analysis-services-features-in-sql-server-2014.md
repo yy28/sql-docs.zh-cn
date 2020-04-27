@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284811"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行为更改
@@ -31,18 +31,18 @@ ms.locfileid: "67284811"
   
 -   [SQL Server 2012 中的行为更改](#bkmk_sql2012)  
   
-##  <a name="bkmk_sql2014"></a>中的行为更改[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="behavior-changes-in-sssql14"></a><a name="bkmk_sql2014"></a>中的行为更改[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  此版本中，没有针对表格、多维、数据挖掘或 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 功能的新的行为更改。  但是，由于  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 非常类似于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 版本，因而如果要从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]进行升级，为方便起见，此处提供了这两个以前版本的行为更改。  
   
-##  <a name="bkmk_sql2012sp1"></a>中的行为更改[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
+##  <a name="behavior-changes-in-sssql11sp1"></a><a name="bkmk_sql2012sp1"></a>中的行为更改[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
  本节介绍针对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]功能报告的行为更改。 这些更改也适用于 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
   
 |问题|说明|  
 |-----------|-----------------|  
-|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用时，SQL Server 2008 R2 PowerPivot 工作簿将不会在不进行提示的情况下升级和刷新模型。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 PowerPivot 工作簿。|2008 R2 工作簿将在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中打开，但计划的刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：<br /> "该工作簿包含不支持的 PowerPivot 模型。 该工作簿中的 PowerPivot 模型采用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支持的 PowerPivot 模型如下： <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013 "<br /><br /> **如何升级工作簿：** 在将工作簿升级到2012工作簿之前，计划的刷新将不起作用。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：<br /><br /> 下载工作簿并在安装有 SQL Server 2012 PowerPivot for Excel 外接程序的 Microsoft Excel 2010 中打开该工作簿。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> 下载该工作簿并在 Microsoft Excel 2013 中打开它。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> <br /><br /> 有关工作簿升级的详细信息，请参阅[升级工作簿和计划的数据刷新 &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。|  
+|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用时，SQL Server 2008 R2 PowerPivot 工作簿将不会在不进行提示的情况下升级和刷新模型。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 PowerPivot 工作簿。|2008 R2 工作簿将在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中打开，但计划的刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：<br /> "该工作簿包含不支持的 PowerPivot 模型。 该工作簿中的 PowerPivot 模型采用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支持的 PowerPivot 模型如下： <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013 "<br /><br /> **如何升级工作簿：** 在将工作簿升级到 2012 工作簿之前，计划的刷新将不起作用。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：<br /><br /> 下载工作簿并在安装有 SQL Server 2012 PowerPivot for Excel 外接程序的 Microsoft Excel 2010 中打开该工作簿。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> 下载该工作簿并在 Microsoft Excel 2013 中打开它。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> <br /><br /> 有关工作簿升级的详细信息，请参阅[升级工作簿和计划的数据刷新 &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。|  
 |DAX [ALL Function](/dax/all-function-dax)中的行为更改。|在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]之前，如果您在“标记为日期表”中指定 [Date] 列以在时间智能中使用，且将 [Date] 列作为参数传递到 ALL 函数或作为筛选器传递给 CALCULATE 函数，则无论日期列中的切片器如何，都忽略表中所有列的所有筛选器。<br /><br /> 例如，<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前，对于 DateTable 的所有列忽略所有筛选器，无论作为参数传递给 ALL 的 [Date] 列是什么。<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 和 Excel 2013 的 PowerPivot 中，此行为将仅对作为参数传递给 ALL 的指定列忽略筛选器。<br /><br /> 要解决新行为问题，忽略作为整个表的筛选器的所有列，您可以从参数中排除 [Date] 列，例如：<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 这将产生与 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前的行为相同的结果。|  
   
-##  <a name="bkmk_sql2012"></a>中的行为更改[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="behavior-changes-in-sssql11"></a><a name="bkmk_sql2012"></a>中的行为更改[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  本节介绍针对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]功能报告的行为更改。 这些更改也适用于 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services，多维模式  

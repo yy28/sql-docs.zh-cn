@@ -18,17 +18,17 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907148"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>映射源和目标数据库（AccessToSQL）
 当连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 时，需要为迁移指定目标数据库。 如果有多个访问数据库，则可以将它们映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到多个数据库（或架构），或映射到连接 SQL Azure 数据库下的多个架构。  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server 或 SQL Azure 数据库架构  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库使用架构的概念将数据库中的对象分为多个逻辑组。 例如，库数据库可以使用三个名为**书籍**、**音频**和**视频**的架构来分隔书籍、音频和视频对象。 默认情况下，access 数据库将映射到**master**数据库， **** 将中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 dbo 架构映射到 SQL Azure 中的连接数据库和**dbo**架构。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库使用架构的概念将数据库中的对象分为多个逻辑组。 例如，库数据库可以使用三个名为**书籍**、**音频**和**视频**的架构来分隔书籍、音频和视频对象。 默认情况下，access 数据库将映射到**master**数据库， **dbo**将中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 dbo 架构映射到 SQL Azure 中的连接数据库和**dbo**架构。  
   
 除非自定义每个 Access 数据库和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库和架构之间的映射，否则，SSMA 会将与 Access 数据库相关联的所有架构和数据迁移到映射的默认数据库。  
   

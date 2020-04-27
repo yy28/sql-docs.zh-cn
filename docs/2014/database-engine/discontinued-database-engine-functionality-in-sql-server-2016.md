@@ -34,23 +34,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67463467"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中废止的数据库引擎功能
   本主题介绍 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-## <a name="SQL14"></a>中废止的功能[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a><a name="SQL14"></a>中废止的功能[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  下表列出了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中移除的功能。  
   
 |类别|已不再使用的功能|替代功能|  
 |--------------|--------------------------|-----------------|  
 |兼容级别|90 兼容性级别|必须将数据库的兼容性级别至少设置为 100。 当兼容性级别低于 100 的数据库升级到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]时，在升级操作过程中数据库的兼容性级别将设置为 100。|  
   
-## <a name="Denali"></a>中废止的功能[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-sssql11"></a><a name="Denali"></a>中废止的功能[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  下表列出了 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中移除的功能。  
   
 |类别|已不再使用的功能|替代功能|  
@@ -66,12 +66,11 @@ ms.locfileid: "67463467"
 |内存管理|32 位地址窗口化扩展插件 (AWE) 和 32 位热添加内存支持。|使用 64 位操作系统。|  
 |元数据|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |可编程性|SQL Server 分布式管理对象 (SQL-DMO)|SQL Server 管理对象 (SMO)|  
-|查询提示|`FASTFIRSTROW`提示|`OPTION (FAST`*n* `)`。|  
+|查询提示|`FASTFIRSTROW` 提示|`OPTION (FAST`*n* `)`。|  
 |远程服务器|用户通过 `sp_addserver` 创建新的远程服务器的功能已停止使用。 带有“local”选项的 `sp_addserver` 保持可用。 可以使用在升级过程中保留或由复制创建的远程服务器。|用链接服务器替代远程服务器。|  
 |安全性|`sp_dropalias`|请将别名替换为用户帐户和数据库角色的组合。 请使用 `sp_dropalias` 删除已升级数据库中的别名。|  
 |安全性|表示来自早于 **2000 的登录值的** PWDCOMPARE [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本参数不再使用。|无|  
-|SMO 中的 Service Broker 可编程性|
-  **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** 类不再实现 **Microsoft.SqlServer.Management.Smo.IObjectPermission** 接口。||  
+|SMO 中的 Service Broker 可编程性|**Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** 类不再实现 **Microsoft.SqlServer.Management.Smo.IObjectPermission** 接口。||  
 |SET 选项|`SET DISABLE_DEF_CNST_CHK`|无。|  
 |系统表|sys.database_principal_aliases|请使用角色而不是别名。|  
 |Transact-SQL|格式为 `RAISERROR` 的 `RAISERROR integer 'string'` 不再使用。|使用当前的**RAISERROR （...）** 语法重写语句。|  

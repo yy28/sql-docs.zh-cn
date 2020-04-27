@@ -17,10 +17,10 @@ ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917925"
 ---
 # <a name="open-method-ado-record"></a>Open 方法（ADO 记录）
@@ -33,8 +33,8 @@ ms.locfileid: "67917925"
 Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *数据源*  
+#### <a name="parameters"></a>参数  
+ *源*  
  可选。 一种**变量**，该变量可以表示此**记录**对象所表示的实体的 URL、**命令**、打开的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或其他**记录**对象、包含 SQL SELECT 语句或表名称的字符串。  
   
  *ActiveConnection*  
@@ -52,7 +52,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *用户名*  
  可选。 一个**字符串**值，该值包含用户 ID，该 ID 在需要时授予对*源*的访问权限。  
   
- *权限*  
+ *密码*  
  可选。 一个包含密码的**字符串**值（如果需要）将验证*用户名*。  
   
 ## <a name="remarks"></a>备注  

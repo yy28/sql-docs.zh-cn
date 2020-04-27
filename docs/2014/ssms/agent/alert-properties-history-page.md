@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189832"
 ---
 # <a name="alert-properties-history-page"></a>警报属性（“历史记录”页）
@@ -29,7 +29,7 @@ ms.locfileid: "68189832"
  **上次响应的日期**  
  显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”****。  
   
- **发生次数**  
+ **出现次数**  
  自从创建警报后或从上次重置计数后，该事件发生的总次数。  
   
  **重置计数**  

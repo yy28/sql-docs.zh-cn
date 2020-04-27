@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793918"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
-  对等复制通过在多个服务器实例（又称为“节点” **）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
+  对等复制通过在多个服务器实例（又称为“节点”  ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
   
  请考虑 Web 应用程序的情况。 它可以通过以下方式从对等复制中获益：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67793918"
   
 -   在左图中，在两台服务器间对更新进行了分区。 例如，如果数据库包含产品目录，则可以令自定义应用程序把对名称以 A-M 开头的产品进行的更新定向到节点 **A** ，把对名称以 N-Z 开头的产品进行的更新定向到节点 **B** 。然后将更新复制到另一个节点。  
   
--   在右侧，所有更新都将定向到节点**B**。然后，更新将复制到节点**A**。如果**B**脱机（例如，进行维护），则应用程序服务器**可以将所有**活动定向到。当**B**恢复联机状态时，更新可以流向它，并且应用程序服务器可以将所有更新移动回**B** ，或将其引导**到。**  
+-   在右侧，所有更新都定向到节点 **B**。从那里，更新被复制到节点 **A**。如果节点 **B** 脱机（例如，进行维护），则应用程序服务器可以将所有活动定向到节点 **A**。当节点 **B** 恢复联机状态后，更新便可流向 B，并且应用程序服务器可以将所有更新移动回节点 **B**，也可以继续将更新定向到节点 **A**。  
   
  对等复制对这两种方法均支持，但右图中的中心更新示例也经常同标准事务复制一起使用。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67793918"
   
  每个地点都有一台数据库服务器和一台应用程序服务器，供支持工程师在输入和更新客户电话的相关信息时使用。 拓扑按时间进行分区。 因此更新只发生在正在办公的节点，然后更新会流动到其他参与数据库。 此拓扑具有下列优点：  
   
--   独立但不孤立：每个办事处都可以独立插入、更新或删除数据，但还可以共享数据，因为数据会复制到其他所有的参与数据库。  
+-   独立但不孤立：每个办事处都可以独立插入、更新或删除数据，但还可以共享数据，因为数据会复制到其他所有参与数据库。  
   
 -   在出现故障或需要维护一个或多个参与数据库时可提供更高的可用性。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793918"
   
     -   对象名称、对象架构和发布名称都应相同。  
   
-    -   发布必须允许复制架构更改。 （这是**replicate_ddl**的发布**属性的设置**，这是默认设置。）有关详细信息，请参阅对[发布数据库进行架构更改](../publish/make-schema-changes-on-publication-databases.md)。  
+    -   发布必须允许复制架构更改。 （这相当于发布属性**replicate_ddl** 设置为 **1**，这是默认设置）。有关详细信息，请参阅[对发布数据库进行架构更改](../publish/make-schema-changes-on-publication-databases.md)。  
   
     -   不支持行筛选和列筛选。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "67793918"
 -   无法重新初始化对等拓扑中的订阅。 如果需要确保节点有新的数据副本，请在该节点上还原备份。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理对等拓扑（复制 Transact-SQL 编程）](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [&#40;复制 Transact-sql 编程来管理对等拓扑&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [快照和事务复制的备份和还原策略](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [事务复制的发布类型](transactional-replication.md)  
   
