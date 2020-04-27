@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f41b6138093b5ecbd6793a5c5210a9e8c6c412b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069654"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>选择事例级别列（数据挖掘向导）
   可以使用 **“选择事例级别列”** 页，从基础源多维数据集维度中选择要作为挖掘结构的事例级别列的属性和度量值。  
   
 > [!NOTE]  
->  只有在向导的“选择定义方法”**** 页上选择了“从现有多维数据集”**** 之后，才会显示此页。  
+>   只有在向导的 **“选择定义方法”** 页上选择了 **“从现有多维数据集”** 之后，才会显示此页。  
   
- **有关详细信息：** [数据挖掘向导 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息，请参阅** [数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **相关属性和度量值**  
