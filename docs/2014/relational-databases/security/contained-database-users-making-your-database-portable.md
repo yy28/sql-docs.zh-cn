@@ -14,18 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655451"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使数据库可移植
   使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 连接进行身份验证。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 本主题介绍与传统的登录名/用户模型和 Windows 或服务器级别防火墙规则相比，使用包含的数据库模型的差异和好处。 在特定情况下，可管理性或应用程序业务逻辑可能仍然需要使用传统登录名/用户模型和服务器级别防火墙规则。  
   
 > [!NOTE]  
->  随着 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 发展 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务并转向更有保证的 SLA，你可能需要切换到包含的数据库用户模型和数据库范围防火墙规则，以针对给定数据库获得更高可用性的 SLA 和更高的最大登录率。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议立即考虑进行这类更改。  
+>  随着 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 发展 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务并转向更有保证的 SLA，你可能需要切换到包含的数据库用户模型和数据库范围防火墙规则，以针对给定数据库获得更高可用性的 SLA 和更高的最大登录率。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议立即考虑进行这类更改。  
   
 ## <a name="traditional-login-and-user-model"></a>传统的登录名和用户模型  
  在传统的连接模型中，通过提供由 Windows 进行身份验证的用户或组凭据，Windows 用户或 Windows 组成员可连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 或者该连接会提供名称和密码并且使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接（这在连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时是唯一选项）。 在这两种情况下，master 数据库必须拥有匹配连接凭据的登录名。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认了 Windows 身份验证凭据或验证了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证凭据之后，该连接通常会尝试连接到用户数据库。 若要连接到某个用户数据库，登录名必须能够映射到（即关联）用户数据库中的某个数据库用户。 连接字符串还可以指定连接到特定数据库，该数据库在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为可选但在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中为必需。  
@@ -45,19 +44,18 @@ ms.locfileid: "62655451"
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Windows 防火墙规则适用于所有连接，并且对登录名（传统模型连接）和包含的数据库用户具有相同影响。 有关 Windows 防火墙的详细信息，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)]道  
- 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 允许适用于服务器级别连接（登录名）和适用于数据库级别连接（包含的数据库用户）的单独防火墙规则。 连接到用户数据库时，会首先检查数据库防火墙规则。 如果没有允许访问数据库的规则，则检查服务器级别防火墙规则，这将需要对逻辑服务器 master 数据库的访问权限。 与包含的数据库用户相结合的数据库级别防火墙规则可以无需在连接过程中访问服务器的 master 数据库，从而提供改进的连接可伸缩性。  
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火墙  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 允许适用于服务器级别连接（登录名）和适用于数据库级别连接（包含的数据库用户）的单独防火墙规则。 连接到用户数据库时，会首先检查数据库防火墙规则。 如果没有允许访问数据库的规则，则检查服务器级别防火墙规则，这将需要对逻辑服务器 master 数据库的访问权限。 与包含的数据库用户相结合的数据库级别防火墙规则可以无需在连接过程中访问服务器的 master 数据库，从而提供改进的连接可伸缩性。  
   
  有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火墙规则的详细信息，请参阅以下主题：  
   
 -   [Azure SQL Database 防火墙](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [如何：配置防火墙设置（Azure SQL Database）](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [如何：配置防火墙设置（Azure SQL 数据库）](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
--   [Azure SQL Database &#40;sp_set_firewall_rule&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
+-   [sp_set_firewall_rule（Azure SQL 数据库）](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   
--   [Azure SQL Database &#40;sp_set_database_firewall_rule&#41;](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
+-   [sp_set_database_firewall_rule（Azure SQL 数据库）](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
 ## <a name="syntax-differences"></a>语法差异  
   
@@ -79,8 +77,7 @@ ms.locfileid: "62655451"
   
 -   在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，包含的数据库用户的名称不能与服务器管理员帐户的名称相同。  
   
--   
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器管理员帐户绝不能是包含的数据库用户。 服务器管理员具有足够的权限来创建和管理包含的数据库用户。 服务器管理员可以向包含的数据库用户授予针对用户数据库的权限。  
+-   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器管理员帐户绝不能是包含的数据库用户。 服务器管理员具有足够的权限来创建和管理包含的数据库用户。 服务器管理员可以向包含的数据库用户授予针对用户数据库的权限。  
   
 -   由于包含的数据库用户是数据库级别主体，因此需要在会使用它们的每个数据库中创建包含的数据库用户。 标识仅限于数据库，在所有方面都独立于同一台服务器上其他数据库中具有相同名称和相同密码的用户。  
   

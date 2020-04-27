@@ -14,14 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637990"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>创建 XML 数据类型的变量和列
-  
   `xml` 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，并有些类似于其他内置类型（如 `int` 和 `varchar`）。 与其他内置类型一样，在创建表作为变量类型`xml` 、参数类型、函数返回类型或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)中时，可以使用数据类型作为列类型。  
   
 ## <a name="creating-columns-and-variables"></a>创建列和变量  
@@ -67,8 +66,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还支持对 `xml` 类型列的 NULL 和 NOT NULL 约束。 例如：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还支持对 `xml` 类型列的 NULL 和 NOT NULL 约束。 例如：  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -89,8 +87,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   COLLATE  
   
-     XML 提供了它自己的编码。 排序规则只适用于字符串类型。 
-  `xml` 数据类型不是字符串类型。 但是，它有字符串表示形式并允许与字符串数据类型之间的相互转换。  
+     XML 提供了它自己的编码。 排序规则只适用于字符串类型。 `xml` 数据类型不是字符串类型。 但是，它有字符串表示形式并允许与字符串数据类型之间的相互转换。  
   
 -   RULE  
   

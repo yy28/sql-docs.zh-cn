@@ -11,16 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467277"
 ---
 # <a name="atomic-blocks"></a>ATOMIC 块
-  
-  `BEGIN ATOMIC` 属于 ANSI SQL 标准。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在本机编译存储过程的顶级支持原子块。  
+  `BEGIN ATOMIC` 属于 ANSI SQL 标准。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在本机编译存储过程的顶级支持原子块。  
   
 -   每个本机编译的存储过程都恰好包含一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句块。 这个语句块是原子块。  
   
@@ -33,7 +31,7 @@ ms.locfileid: "62467277"
   
  如果在会话上没有处于活动状态的事务，则 `BEGIN ATOMIC` 将开始一个新事务。 如果在该块的作用域外未引发异常，则在该块的末尾将提交该事务。 如果该块引发异常（也就是说，未在该块内捕获和处理异常），则该事务将被回滚。 对于跨单个原子块的事务（单个本机编译的存储过程），您无需编写显式的 `BEGIN TRANSACTION` 和 `COMMIT` 或 `ROLLBACK` 语句。  
   
- 本机编译的存储过程支持使用 `TRY`、`CATCH` 和 `THROW` 构造进行错误处理。 `RAISERROR`不受支持。  
+ 本机编译的存储过程支持使用 `TRY`、`CATCH` 和 `THROW` 构造进行错误处理。 不支持 `RAISERROR`。  
   
  下面的示例说明针对原子块和本机编译存储过程的错误处理行为：  
   
@@ -143,7 +141,7 @@ GO
 |----------------------|-----------------|  
 |`DATEFORMAT`|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定后，`DATEFORMAT` 将取代与 `LANGUAGE` 相关联的默认日期格式。|  
 |`DATEFIRST`|指定后，`DATEFIRST` 将取代与 `LANGUAGE` 相关联的默认设置。|  
-|`DELAYED_DURABILITY`|支持的值为 `OFF` 和 `ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事务提交可以是完全持久、默认或延迟的持久。有关详细信息，请参阅[控制事务持续](../logs/control-transaction-durability.md)性。|  
+|`DELAYED_DURABILITY`|支持的值为 `OFF` 和 `ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、默认或延迟的持久。有关详细信息，请参阅[控制事务持久性](../logs/control-transaction-durability.md)。|  
   
  下面的 SET 选项对于所有本机编译存储过程中的所有原子块具有相同的系统默认值：  
   

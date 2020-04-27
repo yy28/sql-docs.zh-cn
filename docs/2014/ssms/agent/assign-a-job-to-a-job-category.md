@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473198"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>将作业分配到作业类别
@@ -30,14 +30,14 @@ ms.locfileid: "62473198"
  作业类别有助于您组织作业，从而更容易筛选和分组。 例如，可以将所有数据库备份作业组织到“数据库维护”类别中。 可以将作业分配到内置作业类别，也可以创建用户定义的作业类别，然后将作业分配至其中。  
   
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
   
   
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>将作业分配到作业类别  
   
@@ -47,14 +47,14 @@ ms.locfileid: "62473198"
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要编辑的作业，然后选择 **“属性”**。  
+4.  右键单击要编辑的作业，然后选择“属性”****。  
   
-5.  在 "**作业属性-**_job_name_ " 对话框的 "**类别**" 列表中，选择要分配给作业的作业类别。  
+5.  在“作业属性 - job_name”****__ 对话框的“类别”**** 列表中，选择要分配给作业的作业类别。  
   
-6.  单击“确定”。   
+6.  单击" **确定**"。  
   
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>将作业分配到作业类别  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62473198"
   
   
   
-##  <a name="SMO"></a>使用 SQL Server 管理对象  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理对象  
  **将作业分配到作业类别**  
   
  通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `JobCategory` 类。  

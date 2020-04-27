@@ -1,5 +1,5 @@
 ---
-title: 参数和行集元数据 |Microsoft Docs
+title: 参数和行集元数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655623"
 ---
 # <a name="parameter-and-rowset-metadata"></a>参数和行集元数据
@@ -35,12 +35,12 @@ ms.locfileid: "62655623"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  通过 prgParamInfo 在 DBPARAMINFO 结构中返回以下信息**：  
   
-|参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|dwFlags**<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|清除|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|日期/时间|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19，21. 27|0..7|设置|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26，28. 34|0..7|设置|  
   
@@ -51,24 +51,24 @@ ms.locfileid: "62655623"
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>ICommandWithParameters::SetParameterInfo 和隐含的参数类型  
  在 DBPARAMBINDINFO 结构中提供的信息必须符合以下规定：  
   
-|*pwszDataSourceType*<br /><br /> （特定于访问接口）|*pwszDataSourceType*<br /><br /> （一般 OLE DB）|*ulParamSize*|*bScale*|  
+|pwszDataSourceType**<br /><br /> （特定于访问接口）|pwszDataSourceType**<br /><br /> （一般 OLE DB）|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|忽略|  
 |date|DBTYPE_DBDATE|6|忽略|  
 ||DBTYPE_DBTIME|10|忽略|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|忽略|  
-|datetime||16|忽略|  
+|日期/时间||16|忽略|  
 |datetime2 或 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- 忽略*bPrecision*参数。  
+ bPrecision** 参数将被忽略。  
   
- 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于访问接口的类型名称 "`datetime`”和“`smalldatetime`”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型。 当连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器`datetime2`时，将使用 "" 格式，并在必要时在类型名称为 "`datetime2`" 或 "DBTYPE_DBTIMESTAMP" 时进行隐式服务器转换。 ** 如果使用提供程序特定的类型名称 "`datetime`" 或 "`smalldatetime`"，则将忽略 bScale。 否则，appications 必须确保正确设置*bScale* 。 从 MDAC 升级[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的应用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序和使用 "DBTYPE_DBTIMESTAMP" 的 Native Client 的应用程序如果未正确设置*bScale* ，则会失败。 当连接到早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL**。  
+ 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于访问接口的类型名称 "`datetime`”和“`smalldatetime`”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型。 当连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器`datetime2`时，将使用 "" 格式，并在必要时在类型名称为 "`datetime2`" 或 "DBTYPE_DBTIMESTAMP" 时进行隐式服务器转换。 *bScale*如果使用提供程序特定的类型名称 "`datetime`" 或 "`smalldatetime`"，则将忽略 bScale。 否则，appications 必须确保正确设置*bScale* 。 从 MDAC 升级[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的应用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序和使用 "DBTYPE_DBTIMESTAMP" 的 Native Client 的应用程序如果未正确设置*bScale* ，则会失败。 当连接到早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL**。  
   
  如果未调用 ICommandWithParameters：： SetParameterInfo，则提供程序将在 IAccessor：： CreateAccessor 中指定的绑定类型中表示服务器类型，如下所示：  
   
-|绑定类型|*pwszDataSourceType*<br /><br /> （特定于访问接口）|  
+|绑定类型|pwszDataSourceType**<br /><br /> （特定于访问接口）|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
 |DBTYPE_DBDATE|date|  
@@ -78,15 +78,14 @@ ms.locfileid: "62655623"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- 
-  `IColumnsRowset::GetColumnsRowset` 返回以下各列：  
+ `IColumnsRowset::GetColumnsRowset` 返回以下各列：  
   
 |列类型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|清除|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|日期/时间|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|设置|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|设置|  
   
@@ -115,12 +114,12 @@ ms.locfileid: "62655623"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 结构返回以下信息：  
   
-|参数类型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|参数类型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|dwFlags**<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|清除|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|日期/时间|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|设置|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|设置|  
   
@@ -140,9 +139,9 @@ ms.locfileid: "62655623"
   
  可以设置其余标志（DBCOLUMNFLAGS_ISNULLABLE、DBCOLUMNFLAGS_MAYBENULL、DBCOLUMNFLAGS_WRITE 和 DBCOLUMNFLAGS_WRITEUNKNOWN）。  
   
- dwFlags 中提供了新的 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 标志，以使应用程序可以确定列的服务器类型，其中 wType 为 DBTYPE_DBTIMESTAMP****。 *bScale*还必须用于标识服务器类型。  
+ dwFlags 中提供了新的 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 标志，以使应用程序可以确定列的服务器类型，其中 wType 为 DBTYPE_DBTIMESTAMP****。 还必须使用 bScale 来标识服务器类型**。  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE DB 的元数据 &#40;&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [元数据 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

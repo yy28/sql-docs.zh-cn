@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659571"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
@@ -36,17 +36,17 @@ ms.locfileid: "62659571"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**出现次数**|可选。 对于每个 `TuningOptions` 元素只能使用一次。 如果在 `TuningOptions` 元素中指定了下列元素，则不能使用此元素：<br /><br /> [&#40;DTA&#41;的 FeatureSet 元素](featureset-element-dta.md)<br /><br /> [&#40;DTA&#41;分区元素](partitioning-element-dta.md)<br /><br /> [KeepExisting 元素 &#40;DTA&#41;](keepexisting-element-dta.md)设置为**ALL**|  
+|**匹配项**|可选。 对于每个 `TuningOptions` 元素只能使用一次。 如果在 `TuningOptions` 元素中指定了下列元素，则不能使用此元素：<br /><br /> [FeatureSet 元素 (DTA)](featureset-element-dta.md)<br /><br /> [分区元素 (DTA)](partitioning-element-dta.md)<br /><br /> 将 [KeepExisting 元素 (DTA)](keepexisting-element-dta.md) 设置为 **ALL**|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[&#40;DTA&#41;的 TuningOptions 元素](tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 (DTA)](tuningoptions-element-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

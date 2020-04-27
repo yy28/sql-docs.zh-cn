@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62631360"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
@@ -53,8 +53,7 @@ ms.locfileid: "62631360"
   
 -   辅助 XML 索引  
   
- 
-  `xml` 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引时，支持下列类型的辅助索引：PATH、VALUE 和 PROPERTY。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
+ `xml` 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引时，支持下列类型的辅助索引：PATH、VALUE 和 PROPERTY。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
   
 > [!NOTE]  
 >  除非为使用 `xml` 数据类型正确设置了数据库选项，否则无法创建或修改 XML 索引。 有关详细信息，请参阅 [结合使用具有全文搜索和 XML 列](use-full-text-search-with-xml-columns.md)。  

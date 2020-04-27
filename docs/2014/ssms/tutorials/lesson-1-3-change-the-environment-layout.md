@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62634265"
 ---
 # <a name="change-the-environment-layout"></a>更改环境布局
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的组件会争夺屏幕空间。 为了腾出更多空间，可以关闭、隐藏或移动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 组件。 本页的做法是将组件移动到不同的位置。  
   
 ## <a name="closing-and-hiding-components"></a>关闭和隐藏组件  

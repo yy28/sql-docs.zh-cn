@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643453"
 ---
 # <a name="granting-access-to-a-database-object"></a>授予访问数据库对象的权限
-  作为管理员，你可以执行 "从**Products** " 表和 " **vw_Names** " 视图中选择，并执行**pr_Names**过程;但是，Mary 不能。 若要授予 Mary 必要的权限，请使用 GRANT 语句。  
+  作为管理员，可以从 **Products** 表和 **vw_Names** 视图执行 Select，以及执行 **pr_Names** 过程；但是 Mary 不能。 若要授予 Mary 必要的权限，请使用 GRANT 语句。  
   
 ### <a name="procedure-title"></a>过程标题  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62643453"
  [摘要：配置数据库对象的权限](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)   
- [REVOKE &#40;Transact-sql&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [GRANT &#40;Transact-sql&#41;](/sql/t-sql/statements/grant-transact-sql)   
+ [REVOKE (Transact-SQL)](/sql/t-sql/statements/revoke-transact-sql)  
   
   

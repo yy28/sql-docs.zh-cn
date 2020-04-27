@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659575"
 ---
 # <a name="recommendation-element-dta"></a>建议元素 (DTA)
@@ -50,7 +50,7 @@ ms.locfileid: "62659575"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[架构的表元素 (DTA)](table-element-for-schema-dta.md)|  
-|**子元素**|[创建元素 (DTA)](create-element-dta.md)<br /><br /> `Drop`element. 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。|  
+|**子元素**|[创建元素 (DTA)](create-element-dta.md)<br /><br /> `Drop` 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。|  
   
 ## <a name="remarks"></a>备注  
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **RecommendationTypecomplexType** 。 该元素用于指定假设配置的索引。 请不要将此 `Recommendation` 元素与可用于指定分区 (`RecommendationPType`) 或视图 (`RecommendationViewType`) 的其他类型混淆。 有关这些其他`Recommendation`元素类型的信息，请参阅[数据库引擎优化顾问 XML 架构](https://go.microsoft.com/fwlink/?linkid=43100)。  

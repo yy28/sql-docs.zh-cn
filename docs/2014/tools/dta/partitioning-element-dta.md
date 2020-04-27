@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657232"
 ---
 # <a name="partitioning-element-dta"></a>分区元素 (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62657232"
   
 |特征|说明|  
 |--------------------|-----------------|  
-|**数据类型和长度**|
-  `string`，无最大长度。|  
+|**数据类型和长度**|`string`，无最大长度。|  
 |**允许的值**|**NONE**<br /> 无分区。<br /><br /> **FULL**<br /> 完全分区。 （提高性能。）<br /><br /> **ALIGNED**<br /> 仅对齐分区。 （提高可管理性。）<br /><br /> 只能将这些值中的一个用于此元素。<br /><br /> **ALIGNED** 的意思是，在数据库引擎优化顾问生成的建议中，每个建议的索引的分区方式，与定义了索引的基础表的分区方式完全相同。 索引视图中的非聚集索引与索引视图对齐。|  
 |**默认值**|**NONE**|  
 |**出现次数**|除非使用了 `TuningOptions` 元素，否则对 `DropOnlyMode` 元素只需使用一次。 如果使用 `DropOnlyMode`，则无法使用 `Partitioning`。 这两种元素是互相排斥的。|  

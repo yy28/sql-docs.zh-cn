@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473218"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>修改或重命名 DML 触发器
@@ -40,13 +40,13 @@ ms.locfileid: "62473218"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   重命名触发器时，该触发器必须位于当前数据库中，并且新名称必须遵守 [标识符](../databases/database-identifiers.md)规则。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   我们建议你不要使用 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 存储过程重命名触发器。 更改对象名的任一部分都可能破坏脚本和存储过程。 重命名触发器将不会更改 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 目录视图的定义列中相应对象名的名称。 我们建议删除并重新创建触发器。  
   
@@ -62,12 +62,12 @@ ms.locfileid: "62473218"
   
     -   [sys.dm_sql_referencing_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  若要更改 DML 触发器，需要对于定义该触发器所在的表或视图拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-dml-trigger"></a>修改 DML 触发器  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62473218"
   
 2.  [重新创建触发器](../triggers/create-dml-triggers.md)，指定新名称。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>使用 ALTER TRIGGER 修改触发器  
   

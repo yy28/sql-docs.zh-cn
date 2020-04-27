@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653843"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>第 3 课：处理市场篮挖掘结构
@@ -128,8 +128,7 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     在语句中，`Products` 指代 SHAPE 语句定义的 Products 表。 
-  `SKIP` 用于忽略 Model 列，该列在源数据中作为键存在，但是挖掘结构未使用它。  
+     在语句中，`Products` 指代 SHAPE 语句定义的 Products 表。 `SKIP` 用于忽略 Model 列，该列在源数据中作为键存在，但是挖掘结构未使用它。  
   
 5.  将  
   

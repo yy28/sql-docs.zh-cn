@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637923"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>示例：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果
   下面的查询返回描述文档结构的 XML-DATA 架构。  
   
 ## <a name="example"></a>示例  

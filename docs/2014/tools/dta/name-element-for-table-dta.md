@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657242"
 ---
 # <a name="name-element-for-table-dta"></a>表的名称元素 (DTA)
@@ -37,8 +37,7 @@ ms.locfileid: "62657242"
   
 |特征|说明|  
 |--------------------|-----------------|  
-|**数据类型和长度**|
-  `string`，介于 1 到 255 个字符之间。|  
+|**数据类型和长度**|`string`，介于 1 到 255 个字符之间。|  
 |**默认值**|无。|  
 |**出现次数**|必需。 每个 `Table` 元素一次。|  
   

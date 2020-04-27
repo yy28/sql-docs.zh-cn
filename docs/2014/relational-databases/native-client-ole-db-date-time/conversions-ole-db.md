@@ -1,5 +1,5 @@
 ---
-title: 绑定和转换（OLE DB） |Microsoft Docs
+title: 绑定和转换 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638204"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>绑定和转换 (OLE DB)
@@ -26,24 +26,20 @@ ms.locfileid: "62638204"
   
  OLE DB 中时间和日期的文字和字符串的格式通常遵循 ISO，并且不依赖于客户端区域性。 但 DBTYPE_DATE 是个例外，它遵循的标准是 OLE 自动化。 但是，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 只在数据从客户端传输或传输到客户端时在两个类型之间转换，所以，应用程序无法强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 在 DBTYPE_DATE 和字符串格式之间转换。 否则，字符串使用以下格式（括号中的文本指示某一可选元素）：  
   
--   
-  `datetime` 和 `datetimeoffset` 字符串的格式是：  
+-   `datetime` 和 `datetimeoffset` 字符串的格式是：  
   
-     *yyyy*-** mm-*dd*[ *hh*：*mm*：*ss*[。*9999999*] [？？ *hh*：*mm*]]  
+     *yyyy*-*mm*mm-*dd*[ *hh*：*mm*：*ss*[。*9999999*] [？？ *hh*：*mm*]]  
   
--   
-  `time` 字符串的格式是：  
+-   `time` 字符串的格式是：  
   
-     *hh*：*mm*：*ss*[。*9999999*]  
+     hh:mm:ss[.9999999]      
   
--   
-  `date` 字符串的格式是：  
+-   `date` 字符串的格式是：  
   
-     *yyyy*-** mm-*dd*  
+     yyyy-mm-dd     
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更高版本执行的某些转换不同于 OLE DB 规范。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更高版本执行的某些转换不同于 OLE DB 规范。  
   
  从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅[数据类型支持 OLE DB 日期和时间改进](data-type-support-for-ole-db-date-and-time-improvements.md)中的 "数据格式：字符串和文字" 部分。  
   
@@ -73,6 +69,6 @@ ms.locfileid: "62638204"
  说明在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）与使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序之间执行的日期/时间转换。  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE DB &#40;的日期和时间改进&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和时间改进 (OLE DB)](date-and-time-improvements-ole-db.md)  
   
   

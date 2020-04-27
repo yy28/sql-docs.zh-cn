@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524057"
 ---
 # <a name="create-clr-functions"></a>创建 CLR 函数
-  您可以在实例中创建一个在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时（CLR）中创建的程序集中进行编程的数据库对象。 可以充分利用公共语言运行时所提供的丰富的编程模式的数据库对象包括聚合函数、函数、存储过程、触发器以及类型。  
+  可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建可在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建的程序集中进行编程的数据库对象。 可以充分利用公共语言运行时所提供的丰富的编程模式的数据库对象包括聚合函数、函数、存储过程、触发器以及类型。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建 CLR 函数分为下列几个步骤：  
   
@@ -40,11 +40,11 @@ ms.locfileid: "62524057"
 ## <a name="accessing-external-resources"></a>访问外部资源  
  可以使用 CLR 函数访问外部资源，例如文件、网络资源、Web 服务及其他数据库（包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]远程实例）。 这可以通过使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中的各种类（例如 `System.IO`、 `System.WebServices`及 `System.Sql`等）来实现。 至少应将包含此类函数的程序集配置为设置了 EXTERNAL_ACCESS 权限，才能实现此目的。 有关详细信息，请参阅 [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql)支持的语言将函数定义为类的静态方法。 可以使用 SQL 客户端托管访问接口访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]远程实例。 但在 CLR 函数中不支持与发起服务器的环回连接。  
   
- **在 SQL Server 中创建、修改或删除程序集**  
+ **创建、修改或删除 SQL Server 中的程序集**  
   
 -   [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql)  
   
--   [ALTER ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
 -   [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
@@ -56,10 +56,10 @@ ms.locfileid: "62524057"
  通过使用托管代码中的 PInvoke，可以使用 CLR 函数来访问本机（非托管）代码，如用 C 或 C++ 编写的代码（有关详细信息，请参阅 [从托管代码调用本机函数](https://go.microsoft.com/fwlink/?LinkID=181929) ）。 这样，您就可以重新将旧代码用作 CLR UDF，或在本机代码中使用性能关键的 UDF。 这要求使用 UNSAFE（非安全）程序集。 有关使用 UNSAFE 程序集的注意事项，请参阅 [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;数据库引擎创建用户定义的函数&#41;](create-user-defined-functions-database-engine.md)   
+ [创建用户定义函数（数据库引擎）](create-user-defined-functions-database-engine.md)   
  [创建用户定义聚合](create-user-defined-aggregates.md)   
  [执行用户定义函数](execute-user-defined-functions.md)   
  [查看用户定义函数](view-user-defined-functions.md)   
- [公共语言运行时 &#40;CLR&#41; 集成编程概念](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ [公共语言运行时 (CLR) 集成编程概念](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

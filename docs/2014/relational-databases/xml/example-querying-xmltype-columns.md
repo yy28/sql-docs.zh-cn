@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637727"
 ---
 # <a name="example-querying-xmltype-columns"></a>示例：查询 XML 类型的列
-  下面的查询包括 `xml` 类型的列。 该查询从 `Instructions` 类型的 `xml` 列的第一个位置检索产品型号 ID、名称和生产步骤。  
+  下面的查询包括 `xml` 类型的列。 该查询从 `xml` 类型的 `Instructions` 列的第一个位置检索产品型号 ID、名称和生产步骤。  
   
 ## <a name="example"></a>示例  
   

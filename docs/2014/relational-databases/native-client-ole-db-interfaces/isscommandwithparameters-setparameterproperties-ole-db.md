@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters：： SetParameterProperties （OLE DB） |Microsoft Docs
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638772"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -36,10 +36,10 @@ SSPARAMPROPS rgParamProperties[]);
 ```  
   
 ## <a name="arguments"></a>参数  
- *cParams*[in]  
+ cParams[in]**  
  rgParamProperties 数组中 SSPARAMPROPS 结构的数量**。 如果此数为零， `ISSCommandWithParameters::SetParameterProperties`则将删除可能已为命令中的任何参数指定的所有属性。  
   
- *rgParamProperties*[in]  
+ rgParamProperties[in]**  
  要设置的 SSPARAMPROPS 结构数组。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -48,7 +48,7 @@ SSPARAMPROPS rgParamProperties[]);
 ## <a name="remarks"></a>备注  
  使用此方法设置参数属性的方法是按顺序在每个参数基础上使用，也`ISSCommandWithParameters::SetParameterProperties`可以在从属性数组生成 SSPARAMPROPS 后使用单个调用。  
   
- 在**** 调用`ISSCommandWithParameters::SetParameterProperties`方法之前，必须调用 SetParameterInfo 方法。 调用 `SetParameterProperties(0, NULL)` 可清除所有指定的参数属性，而调用 `SetParameterInfo(0,NULL,NULL)` 则会清除所有参数信息（包括可能与某个参数相关的任何属性）。  
+ 在**SetParameterInfo**调用`ISSCommandWithParameters::SetParameterProperties`方法之前，必须调用 SetParameterInfo 方法。 调用 `SetParameterProperties(0, NULL)` 可清除所有指定的参数属性，而调用 `SetParameterInfo(0,NULL,NULL)` 则会清除所有参数信息（包括可能与某个参数相关的任何属性）。  
   
  调用`ISSCommandWithParameters::SetParameterProperties`以指定参数的属性，该参数的类型不是 DBTYPE_XML 或 DBTYPE_UDT 返回 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED，并使用 DBPROPSTATUS_NOTSET 标记该参数包含在 SSPARAMPROPS 中的所有 Dbprop 的*dwStatus*字段。 应当遍历 SSPARAMPROPS 中包含的每个 DBPROPSET 的 DBPROP 数组，以检测 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED 引用了哪些参数。  
   
@@ -70,13 +70,13 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- 数据库引擎中的改进，从[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允许 ISSCommandWithParameters：： SetParameterProperties 获取有关预期结果的更准确说明。 这些更准确的结果可能与以前版本中的 ISSCommandWithParameters：： SetParameterProperties 返回的值不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
+ 自 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起，借助数据库引擎中的改进，ISSCommandWithParameters::SetParameterProperties 可以获取预期结果的更准确描述。 这些更准确的结果可能与旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 ISSCommandWithParameters::SetParameterProperties 返回的值有所不同。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
   
 |成员|说明|  
 |------------|-----------------|  
-|*iOrdinal*|所传递参数的序号。|  
-|*cPropertySets*|rgPropertySets 中 DBPROPSET 结构的数量**。|  
-|*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
+|iOrdinal**|所传递参数的序号。|  
+|cPropertySets**|rgPropertySets 中 DBPROPSET 结构的数量**。|  
+|rgPropertySets**|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  

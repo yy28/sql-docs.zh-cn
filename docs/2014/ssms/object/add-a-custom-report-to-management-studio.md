@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510379"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>向 Management Studio 添加自定义报表
@@ -49,9 +49,9 @@ ms.locfileid: "62510379"
   
      `SELECT session_id, net_transport FROM sys.dm_exec_connections;`  
   
-12. 在“选择报表类型”  页上，选择“表格”  ，再单击“完成”  。  
+12. 在“选择报表类型”**** 页上，选择“表格”****，再单击“完成”****。  
   
-13. 在“完成向导”  页上的“报表名称”  框中，键入 **ConnectionsReport**，再单击“完成”  以创建并保存报表。  
+13. 在“完成向导”**** 页上的“报表名称”**** 框中，键入 **ConnectionsReport**，再单击“完成”**** 以创建并保存报表。  
   
 14. 关闭 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "62510379"
   
 ### <a name="to-add-a-report-to-management-studio"></a>向 Management Studio 添加报表  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击对象资源管理器中的节点，指向“报表”  ，再单击“自定义报表”  。 在“打开文件”  对话框中，找到自定义报表文件夹并选择 **ConnectionsReport.rdl** 文件，再单击“打开”  。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击对象资源管理器中的节点，指向“报表”****，再单击“自定义报表”****。 在“打开文件”**** 对话框中，找到自定义报表文件夹并选择 **ConnectionsReport.rdl** 文件，再单击“打开”****。  
   
-     第一次从对象资源管理器节点打开新的自定义报表时，该报表将添加到该节点的快捷菜单上“自定义报表”  下最近使用的文件列表中。 第一次打开标准报表时，该报表也将出现在“自定义报表”  下最近使用的文件列表中。 如果某个自定义报表文件已删除，则下一次选择该项时，系统将提示您从最近使用的文件列表中删除该项。  
+     第一次从对象资源管理器节点打开新的自定义报表时，该报表将添加到该节点的快捷菜单上“自定义报表”**** 下最近使用的文件列表中。 第一次打开标准报表时，该报表也将出现在“自定义报表”**** 下最近使用的文件列表中。 如果某个自定义报表文件已删除，则下一次选择该项时，系统将提示您从最近使用的文件列表中删除该项。  
   
-    1.  若要更改最近使用的文件列表中所显示的文件个数，请在“工具”  菜单上单击“选项”  ，展开“环境”  文件夹，再单击“常规”  。  
+    1.  若要更改最近使用的文件列表中所显示的文件个数，请在“工具”**** 菜单上单击“选项”****，展开“环境”**** 文件夹，再单击“常规”****。  
   
-    2.  调整“显示最近使用列表中的文件”  的数量。  
+    2.  调整“显示最近使用列表中的文件”**** 的数量。  
   
 ## <a name="see-also"></a>另请参阅  
  [Management Studio 中的自定义报表](custom-reports-in-management-studio.md)   

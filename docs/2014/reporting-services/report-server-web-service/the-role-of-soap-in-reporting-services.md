@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519194"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
@@ -29,8 +29,7 @@ ms.locfileid: "62519194"
   
  报表服务器充当 SOAP 服务器，它是一项识别 SOAP 的服务，可以从 SOAP 客户端接受请求并创建适当的响应。 此服务器处理请求并将经过编码的响应发回到客户端。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 SOAP 消息采取许多不同的形式，具体取决于客户端发出的请求类型。 以下示例表示一个简单 SOAP 客户端请求，它请求从报表服务器数据库中删除某个项。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 SOAP 消息采取许多不同的形式，具体取决于客户端发出的请求类型。 以下示例表示一个简单 SOAP 客户端请求，它请求从报表服务器数据库中删除某个项。  
   
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -58,8 +57,7 @@ public void DeleteItem(string item);
 </soap:Envelope>  
 ```  
   
- 
-  <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法不具备返回值，因此返回空响应。  
+ <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法不具备返回值，因此返回空响应。  
   
 ## <a name="see-also"></a>另请参阅  
  [访问 SOAP API](accessing-the-soap-api.md)   

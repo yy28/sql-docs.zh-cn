@@ -11,21 +11,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638851"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>&#39;中的新增功能 SQL Server Native Client
-  
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 会安装 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client。 没有 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client。  
   
- 未来 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 驱动程序将不会再更新。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中 ODBC 驱动程序的后继版本（在 Windows 上称为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）将随 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 一同安装。 有关 Windows 上的[!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的详细信息，请参阅[Microsoft odbc driver 11 for SQL Server](https://www.microsoft.com/download/details.aspx?id=36434)。  
+ 未来 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 驱动程序将不会再更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中 ODBC 驱动程序的后继版本（在 Windows 上称为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）将随 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 一同安装。 有关 Windows 上的[!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的详细信息，请参阅[Microsoft odbc driver 11 for SQL Server](https://www.microsoft.com/download/details.aspx?id=36434)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 最近更新了 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 中的 OLE DB Provider。 想要使用 OLE DB 访问接口连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最新版本的开发人员必须使用在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 中随附的 OLE DB 访问接口。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 最近更新了 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 中的 OLE DB Provider。 想要使用 OLE DB 访问接口连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最新版本的开发人员必须使用在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 中随附的 OLE DB 访问接口。  
   
  下列主题说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中新增的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 重要功能。  
   
@@ -53,8 +50,7 @@ ms.locfileid: "62638851"
   
 -   调用`ICommandWithParameters::SetParameterInfo`时，传递给*pwszName*参数的值必须是有效的标识符。 有关详细信息，请参阅[ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md)。  
   
--   
-  `SQLDescribeParam` 现在将一致地返回符合 ODBC 规范的值。 有关详细信息，请参阅[SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md)。  
+-   `SQLDescribeParam` 现在将一致地返回符合 ODBC 规范的值。 有关详细信息，请参阅[SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md)。  
   
 -   [处理字符转换时 ODBC 驱动程序行为的变化](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   

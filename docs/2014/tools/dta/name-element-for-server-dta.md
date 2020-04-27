@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657261"
 ---
 # <a name="name-element-for-server-dta"></a>服务器的名称元素 (DTA)
@@ -37,8 +37,7 @@ ms.locfileid: "62657261"
   
 |特征|说明|  
 |--------------------|-----------------|  
-|**数据类型和长度**|
-  `string`，介于 1 到 255 个字符之间。|  
+|**数据类型和长度**|`string`，介于 1 到 255 个字符之间。|  
 |**默认值**|无。|  
 |**出现次数**|每个 **服务器** 元素必须出现一次。|  
   

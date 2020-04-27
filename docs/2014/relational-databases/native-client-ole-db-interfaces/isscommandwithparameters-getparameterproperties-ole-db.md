@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters：： GetParameterProperties （OLE DB） |Microsoft Docs
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638079"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -36,10 +36,10 @@ SSPARAMPROPS **prgParamProperties);
 ```  
   
 ## <a name="arguments"></a>参数  
- *pcParams*[out] [in]  
+ pcParams[out][in]**  
  一个指向内存的指针，该内存包含 prgParamProperties 中返回的 SSPARAMPROPS 结构数量**。  
   
- *prgParamProperties*[out]  
+ prgParamProperties[out]**  
  指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存并返回此内存的地址;当使用者不再需要结构时，将使用**IMalloc：： Free**释放此内存。 在调用**IMalloc：： Free** for *prgParamProperties*之前，使用者还必须为每个 DBPROP 结构的*vValue*属性调用**VariantClear** ，以便在变体包含引用类型（如 BSTR）的情况下防止内存泄漏。如果*pcParams*在输出时为零，或发生除 DB_E_ERRORSOCCURRED 以外的错误，则提供程序不会分配任何内存，并确保*prgParamProperties*在输出时为空指针。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -62,9 +62,9 @@ SSPARAMPROPS **prgParamProperties);
   
 |成员|说明|  
 |------------|-----------------|  
-|*iOrdinal*|所传递参数的序号。|  
-|*cPropertySets*|rgPropertySets 中 DBPROPSET 结构的数量**。|  
-|*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
+|iOrdinal**|所传递参数的序号。|  
+|cPropertySets**|rgPropertySets 中 DBPROPSET 结构的数量**。|  
+|rgPropertySets**|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  

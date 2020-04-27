@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e0520c28d78b8036072b70de2d8f83a1a8c72da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62628772"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>订阅，分发服务器到订阅服务器的历史记录（快照订阅）
@@ -25,10 +25,10 @@ ms.locfileid: "62628772"
 ## <a name="options"></a>选项  
  从 **“视图”** 菜单中选择要查看哪些分发代理会话，然后在标记为 **“分发代理的会话”** 的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”** 的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
- **视图**  
+ **查看**  
  选择要查看哪些分发代理会话。  
   
- **Status**  
+ **状态**  
  分发代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -45,7 +45,7 @@ ms.locfileid: "62628772"
  **结束时间**  
  会话的结束时间。 如果代理尚未停止，此字段为空。  
   
- **Duration**  
+ **持续时间**  
  分发代理已在此会话中运行的时间。 如果代理当前正在运行，该时间表示已用时间；如果代理会话已经结束，则该时间表示会话的总时间。  
   
  **错误消息**  

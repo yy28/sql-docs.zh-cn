@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655479"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655479"
  **切换更新模式**  
   
  若要切换更新模式，必须为这两种更新模式都启用发布和订阅，然后再根据需要进行切换。 有关详细信息，请参阅  
-[在可更新事务订阅的更新模式之间切换](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。  
+[切换可更新事务订阅的更新模式](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>使用可更新订阅的注意事项  
   

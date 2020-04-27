@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518647"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>将设备信息设置传递给呈现扩展插件
@@ -54,8 +54,8 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
  有关详细信息，请参阅[在 URL 中指定设备信息设置](../../specify-device-information-settings-in-a-url.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [呈现扩展插件的设备信息设置 (Reporting Services)](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
- [在 RSReportServer.Config 中自定义呈现扩展插件参数](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [使用 Web 服务和.NET Framework 构建应用程序](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [呈现扩展插件的设备信息设置 &#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
+ [在 Rsreportserver.config 中自定义呈现扩展插件参数](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [使用 Web 服务和 .NET Framework 生成应用程序](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

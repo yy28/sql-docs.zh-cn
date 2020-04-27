@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastLoad：： InsertRow （OLE DB） |Microsoft Docs
+title: IRowsetFastLoad::InsertRow (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c4cd4aff0a8868b8870374fcffb8c7b7169fe2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511626"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
-  将行添加到大容量复制行集中。 有关示例，请参阅[使用 IRowsetFastLoad &#40;批量复制数据 OLE DB&#41;](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)并[使用 IRowsetFastLoad 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER ](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)&#40;OLE DB&#41;。  
+  将行添加到大容量复制行集中。 有关示例，请参阅[使用 IRowsetFastLoad 大容量复制数据 (OLE DB)](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 和[使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL Server (OLE DB)](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,10 +41,10 @@ pData
 ```  
   
 ## <a name="arguments"></a>参数  
- *hAccessor*[in]  
+ ** hAccessor[in]  
  定义大容量复制的行数据的取值函数句柄。 引用的取值函数为行取值函数，将绑定包含数据值的使用者拥有的内存。  
   
- *pData*[in]  
+ ** pData[in]  
  指向包含数据值的使用者所拥有内存的指针。 有关详细信息，请参阅 [DBBINDING 结构](https://go.microsoft.com/fwlink/?LinkId=65955)。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -52,7 +52,7 @@ pData
  方法成功。 所有列的任何绑定状态值都具有值 DBSTATUS_S_OK 或 DBSTATUS_S_NULL。  
   
  E_FAIL  
- 发生错误。 从行集的错误接口中发出错误信息。  
+ 出现了错误。 从行集的错误接口中发出错误信息。  
   
  E_INVALIDARG  
  pData 参数设置为 NULL 指针**。  
@@ -61,9 +61,7 @@ pData
  SQLNCLI11 无法分配足够的内存来完成请求。  
   
  E_UNEXPECTED  
- 
-  [
-  ](irowsetfastload-commit-ole-db.md)对以前被 IRowsetFastLoad::Commit 方法作废的大容量复制行集调用了该方法。  
+ 对以前被 [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) 方法作废的大容量复制行集调用了该方法。  
   
  DB_E_BADACCESSORHANDLE  
  使用者提供的 hAccessor 参数无效**。  

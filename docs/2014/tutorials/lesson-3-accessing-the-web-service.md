@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653780"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>第 3 课：访问 Web 服务
@@ -29,7 +29,7 @@ ms.locfileid: "62653780"
   
 ### <a name="to-access-the-web-service"></a>访问 Web 服务  
   
-1.  首先，您必须将命名空间添加到 Program.cs 文件（在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中为 Module1.vb），采用的方法是向代码文件中添加 `using`（在 `Imports` 中为 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]）指令。 如果您使用该指令，则不必完全限定命名空间中的类型。  
+1.  首先，您必须将命名空间添加到 Program.cs 文件（在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中为 Module1.vb），采用的方法是向代码文件中添加 `using`（在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中为 `Imports`）指令。 如果您使用该指令，则不必完全限定命名空间中的类型。  
   
 2.  为此，请在代码文件的开头添加以下代码：  
   

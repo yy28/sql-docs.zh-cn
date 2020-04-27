@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472842"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>预测关联（数据挖掘中级教程）
@@ -39,7 +39,7 @@ ms.locfileid: "62472842"
   
 2.  在 "**挖掘模型**" 窗格中单击 "**选择模型**"。 （如果已选择正确的模型，则可跳过此步骤和下一步骤。）  
   
-3.  在 "**选择挖掘模型**" 对话框中，展开表示挖掘结构**关联**的节点，然后选择模型**关联**。 单击“确定”。   
+3.  在 "**选择挖掘模型**" 对话框中，展开表示挖掘结构**关联**的节点，然后选择模型**关联**。 单击" **确定**"。  
   
      现在，可以忽略“输入”窗格。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62472842"
   
  预期结果包含带有标题**表达式**的单个列。 **Expression**列包含一个嵌套表，其中包含一个列和下面三行。 由于未指定输入值，因此这些预测表示整个模型最可能的产品关联。  
   
-|模型|  
+|型号|  
 |-----------|  
 |Women's Mountain Shorts|  
 |Water Bottle|  
@@ -89,7 +89,7 @@ ms.locfileid: "62472842"
   
  现在结果显示最可能与 Touring Tire 关联的产品的预测。  
   
-|模型|  
+|型号|  
 |-----------|  
 |Touring Tire Tube|  
 |Sport-100|  
@@ -121,7 +121,7 @@ ms.locfileid: "62472842"
   
  嵌套表中的结果现在更改为同时显示支持率和概率的预测。 有关如何解释这些值的详细信息，请参阅[&#40;Analysis Services 数据挖掘&#41;的关联模型的挖掘模型内容](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)。  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|型号|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291 .。。|0.252 .。。|  
 |Water Bottle|2866|0.192 .。。|0.175 .。。|  

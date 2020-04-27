@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655387"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>教程：在连续连接的服务器之间复制数据
@@ -36,29 +36,29 @@ ms.locfileid: "62655387"
   
     -   任意版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) 或 [!INCLUDE[ssEW](../../includes/ssew-md.md)]除外。 这些版本不能充当复制发布服务器。  
   
-    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]示例数据库。 为了增强安全性，默认情况下不会安装示例数据库。  
+    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 示例数据库。 为了增强安全性，默认情况下不会安装示例数据库。  
   
 -   订阅服务器（目标）：  
   
-    -   任意版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssEW](../../includes/ssew-md.md)]除外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)]不能是事务复制中的订阅服务器。  
+    -   任意版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssEW](../../includes/ssew-md.md)]除外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 不能充当事务复制中的订阅服务器。  
   
     > [!NOTE]  
     >  默认情况下，不在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上安装复制。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，必须使用属于 **sysadmin** 固定服务器角色成员的登录名连接到发布服务器和订阅服务器。  
+>  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，你必须使用作为**sysadmin**固定服务器角色成员的登录名连接到发布服务器和订阅服务器。  
   
  **本教程的估计完成时间：30分钟。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程  
   
--   [第1课：使用事务复制发布数据](lesson-1-publishing-data-using-transactional-replication.md)  
+-   [第 1 课：使用事务复制发布数据](lesson-1-publishing-data-using-transactional-replication.md)  
   
--   [第2课：创建事务发布的订阅](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
+-   [第 2 课：创建事务发布的订阅](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
 -   [第 3 课：验证订阅和测量滞后时间](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   
- [启动教程](transactional/transactional-replication.md)  
+ [开始教程](transactional/transactional-replication.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [复制编程概念](concepts/replication-programming-concepts.md)  

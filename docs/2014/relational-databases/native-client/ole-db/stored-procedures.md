@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638319"
 ---
 # <a name="stored-procedures"></a>存储过程
-  存储过程（[&#40;数据库引擎&#41;的存储过程](../../stored-procedures/stored-procedures-database-engine.md)）是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支持  
+  存储过程[存储过程（数据库引擎）](../../stored-procedures/stored-procedures-database-engine.md)是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持：  
   
 -   存储过程  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62638319"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [&#40;OLE DB 运行存储过程&#41;](stored-procedures-running.md)  
+-   [运行存储过程 &#40;OLE DB&#41;](stored-procedures-running.md)  
   
 -   [调用存储过程 &#40;OLE DB&#41;](stored-procedures-calling.md)  
   

@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524373"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
@@ -49,8 +49,7 @@ ms.locfileid: "62524373"
 > [!NOTE]  
 >  如果触发器操作取决于数据修改所影响的行数，则应对多行数据修改（基于 SELECT 语句的 INSERT、DELETE 或 UPDATE）使用测试（例如检查 @@ROWCOUNT），然后采取相应的措施。  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入的和删除的表中引用 `text`、`ntext` 或 `image` 列。 但会包括这些数据类型，这只是为了向后兼容。 存储大型数据的首选方法是使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入的和删除的表中的 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入的和删除的表中引用 `text`、`ntext` 或 `image` 列。 但会包括这些数据类型，这只是为了向后兼容。 存储大型数据的首选方法是使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入的和删除的表中的 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)。  
   
  **在触发器中使用插入的表以强制实施业务规则的示例**  
   
@@ -88,7 +87,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- 此视图的结果集有三列：一个 `int` 列和两个 `nvarchar` 列。 传递给为视图定义的 INSTEAD OF 触发器的插入的和删除的表也有一个名为 `int` 的 `BusinessEntityID` 列、一个名为 `nvarchar` 的 `LName` 列和一个名为 `nvarchar` 的 `FName` 列。  
+ 此视图的结果集有三列：一个 `int` 列和两个 `nvarchar` 列。 传递给为视图定义的 INSTEAD OF 触发器的插入的和删除的表也有一个名为 `BusinessEntityID` 的 `int` 列、一个名为 `LName` 的 `nvarchar` 列和一个名为 `FName` 的 `nvarchar` 列。  
   
  视图的选择列表还可以包含不直接映射到单个基表列的表达式。 一些视图表达式（例如常量调用或函数调用）可能不引用任何列，并且这些表达式会被忽略。 复杂的表达式会引用多个列，但在插入的和删除的表中，每个插入的行仅有一个相应的值。 如果视图中的简单表达式引用包含复杂表达式的计算列，则这些简单表达式也有同样的问题。 视图上的 INSTEAD OF 触发器必须处理这些类型的表达式。  
   

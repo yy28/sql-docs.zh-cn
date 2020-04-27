@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657480"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
@@ -23,25 +23,25 @@ ms.locfileid: "62657480"
  如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集的第一个节点上进行安装时安装了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具，它们将自动添加到稍后可能使用“添加节点”功能添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的任何节点。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]联机丛书不会自动添加到使用 "添加节点" 添加[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到群集中的其他节点。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以在想要具有联机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]丛书的本地副本的节点上手动安装联机丛书。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书不会自动添加到使用“添加节点”功能添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集的其他节点。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书手动安装到您希望具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书的本地副本的节点上。  
   
  如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集的初始安装过程中没有安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具，稍后可按下面的过程中所述进行安装。  
   
 ## <a name="installation-procedures"></a>安装过程  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-using-the-setup-user-interface"></a>使用安装程序用户界面安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
+#### <a name="installing-ssnoversion-client-tools-using-the-setup-user-interface"></a>使用安装程序用户界面安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质， 然后双击根安装文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  在“安装”**** 页上，单击“全新”**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立安装或向现有安装添加功能**。 请勿单击“新建”**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集安装**。  
+2.  在“安装”  页上，单击“全新” **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立安装或向现有安装添加功能**。 请勿单击“新建” **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集安装**。  
   
 3.  系统配置检查器将验证计算机的系统状态，然后安装程序继续运行。  
   
-4.  在“安装类型”**** 页上，单击“执行全新安装”**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**。  
+4.  在“安装类型”  页上，单击“执行全新安装” **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** 。  
   
 5.  在 **“功能选择”** 页上，选择需要安装的工具，然后按照安装过程的剩余步骤操作。  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>在命令提示符处安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
+#### <a name="installing-ssnoversion-client-tools-at-the-command-prompt"></a>在命令提示符处安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
   
 1.  若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书，请运行以下命令：Setup.exe/q/Action=Install /Features=Tools  
   
@@ -49,8 +49,8 @@ ms.locfileid: "62657480"
   
 3.  若要安装完整的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，请运行以下命令：Setup.exe/q/Action=Install /Features=ADV_SSMS。 有关功能的参数值的详细信息，请参阅[从命令提示符安装 SQL Server 2014](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
-### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
- 它们显示在 "控制面板" 的 "添加或删除** [!INCLUDE[msCoName](../../../includes/msconame-md.md)]** 程序" 中，并可从该窗格中删除。 当使用“删除节点”从故障转移群集中卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，并不同时卸载这些客户端组件。  
+### <a name="uninstalling-ssnoversion-client-tools"></a>卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
+ 它们在“控制面板”的“添加或删除程序”中显示为 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** ，可从此处将其删除。 当使用“删除节点”从故障转移群集中卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，并不同时卸载这些客户端组件。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468604"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解释型 Transact-SQL 访问内存优化表
@@ -39,10 +39,10 @@ ms.locfileid: "62468604"
 |区域|不支持|  
 |----------|-----------------|  
 |访问表|TRUNCATE TABLE<br /><br /> MERGE（使用内存优化的表作为目标）<br /><br /> 动态和键集游标（这些会自动降级为静态）。<br /><br /> 使用上下文连接从 CLR 模块访问。<br /><br /> 从索引视图引用内存优化表。|  
-|跨数据库|跨数据库查询<br /><br /> 跨数据库事务<br /><br /> 链接服务器|  
+|跨数据库|跨数据库查询<br /><br /> 跨数据库事务<br /><br /> 链接的服务器|  
   
 ## <a name="table-hints"></a>表提示  
- 有关表提示的详细信息，请参阅。 [表提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)。 添加了 SNAPSHOT 隔离来支持 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]。  
+ 有关表提示的详细信息，请参阅。 [表提示 &#40;transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-table)。 添加了 SNAPSHOT 隔离来支持 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]。  
   
  使用解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)]访问内存优化表时，不支持以下表提示。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62468604"
 >  由在自动提交模式下运行的查询访问的内存优化表不需要隔离级别表提示。  
   
 ## <a name="see-also"></a>另请参阅  
- [对内存中 OLTP 的 Transact-SQL 支持](transact-sql-support-for-in-memory-oltp.md)   
+ [对内存中 OLTP 的 transact-sql 支持](transact-sql-support-for-in-memory-oltp.md)   
  [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md)  
   
   

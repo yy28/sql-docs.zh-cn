@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 715cdc343e3a73781c06977fdb3d3d829d6bf533
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511638"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>数据类型（扩展存储过程 API）
@@ -29,43 +29,34 @@ ms.locfileid: "62511638"
   
 |数据类型|SQL Server 数据类型|说明|  
 |---------------|--------------------------|-----------------|  
-|SRVBIGBINARY|`binary`|
-  `binary` 数据类型，长度为 0 至 8000 个字节。|  
-|SRVBIGCHAR|`char`|
-  `character` 数据类型，长度为 0 至 8000 个字节。|  
+|SRVBIGBINARY|`binary`|`binary` 数据类型，长度为 0 至 8000 个字节。|  
+|SRVBIGCHAR|`char`|`character` 数据类型，长度为 0 至 8000 个字节。|  
 |SRVBIGVARBINARY|`varbinary`|长度可变的 `binary` 数据类型，长度为 0 至 8000 个字节。|  
 |SRVBIGVARCHAR|`varchar`|长度可变的 `character` 数据类型，长度为 0 至 8000 个字节。|  
 |SRVBINARY|`binary`|`binary`数据类型。|  
 |SRVBIT|`Bit`|`bit`数据类型。|  
-|SRVBITN|`bit null`|
-  `bit` 数据类型，允许为 Null 值。|  
+|SRVBITN|`bit null`|`bit` 数据类型，允许为 Null 值。|  
 |SRVCHAR|`char`|`character`数据类型。|  
 |SRVDATETIME|`datetime`|8 个字节的 `datetime` 数据类型。|  
 |SRVDATETIM4|`smalldatetime`|4个字节`smalldatetime`的数据类型。|  
-|SRVDATETIMN|**datetime null**|
-  `smalldatetime` 或 `datetime` 数据类型，允许为 Null 值。|  
+|SRVDATETIMN|**datetime null**|`smalldatetime` 或 `datetime` 数据类型，允许为 Null 值。|  
 |SRVDECIMAL|`decimal`|`decimal`数据类型。|  
-|SRVDECIMALN|`decimal null`|
-  `decimal` 数据类型，允许为 Null 值。|  
+|SRVDECIMALN|`decimal null`|`decimal` 数据类型，允许为 Null 值。|  
 |SRVFLT4|`real`|4个字节`real`的数据类型。|  
 |SRVFLT8|`float`|8 个字节的 `float` 数据类型。|  
-|SRVFLTN|`real`&#124;`float null`|
-  `real` 或 `float` 数据类型，允许为 Null 值。|  
+|SRVFLTN|`real` &#124; `float null`|`real` 或 `float` 数据类型，允许为 Null 值。|  
 |SRVIMAGE|`image`|`image`数据类型。|  
 |SRVINT1|`tinyint`|1个字节`tinyint`的数据类型。|  
 |SRVINT2|`smallint`|两个字节的 `smallint` 数据类型。|  
 |SRVINT4|`int`|4个字节`int`的数据类型。|  
-|SRVINTN|`tinyint`&#124; `smallint` &#124;`int null`|
-  `tinyint`、`smallint` 或 `int` 数据类型，允许为 Null 值。|  
+|SRVINTN|`tinyint` &#124; `smallint` &#124; `int null`|`tinyint`、`smallint` 或 `int` 数据类型，允许为 Null 值。|  
 |SRVMONEY4|`smallmoney`|4个字节`smallmoney`的数据类型。|  
 |SRVMONEY|`money`|8 个字节的 `money` 数据类型。|  
-|SRVMONEYN|`money`&#124;`smallmoney null`|
-  `smallmoney` 或 `money` 数据类型，允许为 Null 值。|  
+|SRVMONEYN|`money` &#124; `smallmoney null`|`smallmoney` 或 `money` 数据类型，允许为 Null 值。|  
 |SRVNCHAR|**nchar**|Unicode `character` 数据类型。|  
 |SRVNTEXT|`ntext`|Unicode `text` 数据类型。|  
 |SRVNUMERIC|`numeric`|`numeric`数据类型。|  
-|SRVNUMERICN|`numeric null`|
-  `numeric` 数据类型，允许为 Null 值。|  
+|SRVNUMERICN|`numeric null`|`numeric` 数据类型，允许为 Null 值。|  
 |SRVNVARCHAR|**nvarchar**|长度可变的 Unicode `character` 数据类型。|  
 |SRVTEXT|`text`|`text`数据类型。|  
 |SRVVARBINARY|`varbinary`|长度可变的 `binary` 数据类型。|  

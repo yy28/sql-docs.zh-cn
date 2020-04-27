@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473140"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>企业范围的自动化管理
-  跨多个实例的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]自动化管理称为 "*多服务器管理*"。 使用多服务器管理可以执行下列操作：  
+  跨多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的自动化管理称为“多服务器管理”**。 使用多服务器管理可以执行下列操作：  
   
 -   管理两台或多台服务器。  
   
@@ -79,10 +79,10 @@ ms.locfileid: "62473140"
  包含有关将事件从目标服务器转发到主服务器的信息。  
   
  [在企业中优化自动化管理](tune-automated-administration-across-an-enterprise.md)  
- 包含有关多服务器环境中的自动化管理如何利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 自我优化功能的信息。  
+ 包含有关多服务器环境中的自动化管理如何利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]自我优化功能的信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 数据库引擎向后兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server 数据库引擎的向后兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [注册服务器](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
  [sp_delete_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
