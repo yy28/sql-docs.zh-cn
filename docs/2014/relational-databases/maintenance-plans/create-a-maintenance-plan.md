@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206040"
 ---
 # <a name="create-a-maintenance-plan"></a>创建维护计划
@@ -36,17 +36,17 @@ ms.locfileid: "68206040"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  若要创建多服务器维护计划，必须配置包含一个主服务器和一个（或多个）目标服务器的多服务器环境。 必须在主服务器上创建和维护多服务器维护计划。 在目标服务器上可以查看这些计划，但不能进行维护。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  若要创建或管理维护计划，您必须是 **sysadmin** 固定服务器角色的成员。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>使用维护计划向导创建维护计划  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68206040"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“维护计划”  文件夹，然后选择“维护计划向导”  。  
+3.  右键单击“维护计划”**** 文件夹，然后选择“维护计划向导”****。  
   
 4.  按照向导中显示的步骤创建维护计划。 有关详细信息，请参阅 [Use the Maintenance Plan Wizard](use-the-maintenance-plan-wizard.md)。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "68206040"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“维护计划”  文件夹，然后选择“新建维护计划”  。  
+3.  右键单击“维护计划” **** 文件夹，然后选择“新建维护计划” ****。  
   
 4.  按照[创建维护计划（维护计划设计图面）](create-a-maintenance-plan-maintenance-plan-design-surface.md)中的步骤创建维护计划。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-maintenance-plan"></a>创建维护计划  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68206040"
   
     ```  
   
- 有关详细信息，请参阅：  
+ 有关详细信息，请参见:  
   
 -   [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

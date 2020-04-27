@@ -13,10 +13,10 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729272"
 ---
 # <a name="entity-dependencies-explorer"></a>实体依赖关系资源管理器
@@ -24,7 +24,7 @@ ms.locfileid: "73729272"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   
-[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]2016添加了一个新的资源管理器页，即 "实体依赖关系"，它提供了另一种方式来可视化模型内实体成员之间的关系（由其基于域的属性（DBA）值指定），但不必首先定义派生层次结构。   
+[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 将添加一个新的资源管理器页，即“实体依赖关系”，它提供了另一种方法，可在模型中按其基于域的属性 (DBA) 值将实体成员的关系可视化，而不必首先定义一个派生层次结构。   
   
 它有助于回答以下问题：“谁在使用我的实体，如何使用？”。 此视图类似于派生层次结构资源管理器页面，但它包含的内容更多。 它显示了所有 DBA 关系，而不仅仅是那些定义为某个特定层次结构的一部分的关系。 由于显示的层次结构只是从现有的 DBA 推断，因此层次结构定义不是必需的。  
   

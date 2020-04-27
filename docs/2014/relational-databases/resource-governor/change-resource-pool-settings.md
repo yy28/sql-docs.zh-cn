@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6392c8211e073183b68d2d04e9c949317d6a33a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198940"
 ---
 # <a name="change-resource-pool-settings"></a>更改资源池设置
@@ -27,17 +27,17 @@ ms.locfileid: "68198940"
   
 -   若要更改资源池的设置，请使用：  [SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  最大 CPU 百分比必须大于或等于最小 CPU 百分比。 最大内存百分比必须大于或等于最小内存百分比。  
   
  所有资源池的最小 CPU 百分比和最小内存百分比的总和不得超过 100。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  更改资源池设置需要 CONTROL SERVER 权限。  
   
-##  <a name="ChgRPProp"></a> 使用 SQL Server Management Studio 更改资源池设置  
+##  <a name="change-resource-pool-settings-using-sql-server-management-studio"></a><a name="ChgRPProp"></a> 使用 SQL Server Management Studio 更改资源池设置  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，然后依次逐步展开“管理”  节点直至其中包含“资源池”  。  
@@ -50,7 +50,7 @@ ms.locfileid: "68198940"
   
 5.  若要保存更改，请单击 **“确定”** 。  
   
-##  <a name="ChgRPTSQL"></a> 使用 Transact-SQL 更改资源池设置  
+##  <a name="change-resource-pool-settings-using-transact-sql"></a><a name="ChgRPTSQL"></a> 使用 Transact-SQL 更改资源池设置  
  **使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  运行指定要更改的属性值的 `ALTER RESOURCE POOL` 语句。  

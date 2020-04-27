@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211370"
 ---
 # <a name="job-activity-monitor"></a>作业活动监视器
@@ -27,7 +27,7 @@ ms.locfileid: "68211370"
  **名称**  
  作业的名称。  
   
- **已启用**  
+ **Enabled**  
  说明作业是已启用（“是”****）还是未启用（“否”****）。  
   
  **状态** <sup>1</sup>  
@@ -45,11 +45,11 @@ ms.locfileid: "68211370"
  **类别**  
  分配给作业的作业类别。  
   
- **运行**  
- 如果作业可以运行，则为 **"是"** ;如果作业无法运行，则为 "**否**"。 如果作业没有步骤或没有目标服务器，则无法运行该作业。  
+ **可运行**  
+ 在作业可以运行时为“是”****；在作业无法运行时为“否”****。 如果作业没有步骤或没有目标服务器，则无法运行该作业。  
   
- **好**  
- 如果作业已分配给作业计划，则为 **"是"** ;如果作业没有计划，则为 "**否**"。  
+ **计划**  
+ 在作业已分配给作业计划时为“是”****；在作业没有计划时为“否”****。  
   
  <sup>1</sup>只有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 固定服务器角色和服务器管理员组的成员才能看到此列中的值。 SQLAgentOperatorRole 角色的成员不能看到此列中的值。  
   

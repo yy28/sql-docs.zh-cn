@@ -17,27 +17,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174196"
 ---
 # <a name="browsing-a-neural-network-model"></a>浏览神经网络模型
   使用“浏览”**** 打开神经网络或逻辑回归模型时，该模型显示在交互式查看器（类似于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的神经网络模型查看器）中。 该查看器有助于您探索相关性并获取有关该模型和基础数据中各种模式的信息。
 
-##  <a name="BKMK_Tabs"></a>浏览模型
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>浏览模型
  基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络或逻辑回归算法的模型是类似的，它们都是将数据作为已知输入和输出中的一组连接进行分析。 “浏览”**** 查看器可帮助你使用以下控件浏览这些连接：
 
 -   [变量](#BKMK_Variables)
 
 -   [输入](#BKMK_Inputs)
 
--   [输出](#BKMK_Outputs)
+-   [Outputs](#BKMK_Outputs)
 
  如果要使用此查看器，可以使用[分类向导（Excel 数据挖掘外接程序）](classify-wizard-data-mining-add-ins-for-excel.md)向导创建一个模型，并使用“算法参数”**** 对话框中的“高级”**** 选项将算法更改为 Microsoft 逻辑回归。
 
-###  <a name="BKMK_Variables"></a>变化
+###  <a name="variables"></a><a name="BKMK_Variables"></a>变化
  “变量”**** 窗格按输入变量对模型影响大小的顺序显示输入变量的列表。 可以使用“输入”**** 和“输出”**** 控件来筛选模型，从而控制显示的变量及其顺序。
 
  使用此查看器，您可以探索在确定客户是更有可能属于自行车购买者类别还是更有可能属于非购买者类别时最为重要的因素。
@@ -72,17 +72,17 @@ ms.locfileid: "78174196"
 
      出现一个工具提示，其中包含一个“重要性”** 分数、一对“概率”** 分数和一对“提升”** 值。
 
-    -   **重要性**是跨整个数据集计算的，它标识给定所有输入的属性，与目标结果最相关。 查看器按重要性分数对图表中的值进行排序。
+    -   “重要性”**** 是针对整个数据集计算的，用于标识所有输入中与目标结果最相关的属性。 查看器按重要性分数对图表中的值进行排序。
 
-    -   对于整个数据集的目标结果，计算每组属性值对的**概率**。
+    -   “概率”**** 是面向整个数据集的目标结果，针对每个属性/值对计算的。
 
-    -   "**提升**" 会告诉您此特定属性-值对升级一个结果的方式。
+    -   “提升”**** 可显示此特定属性/值对对于提升某个结果的贡献度。
 
      注意：无论将鼠标指针悬停在哪一列上，工具提示都包含相同的信息。
 
  [返回页首](#BKMK_Tabs)
 
-###  <a name="BKMK_Inputs"></a>输入
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>输入
  通过“输入”**** 窗格，可以选择一组输入作为筛选器应用于模型，这样可以看到这些选项基于定型数据对结果产生的影响
 
 ##### <a name="explore-inputs"></a>浏览输入
@@ -113,7 +113,7 @@ ms.locfileid: "78174196"
 
  [返回页首](#BKMK_Tabs)
 
-###  <a name="BKMK_Outputs"></a>输出
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>输出
  在“输出”**** 窗格中，可以选择感兴趣的结果。 通过神经网络，可以指定所需数目的结果列，不过，添加更多输出会增加模型的复杂性，可能需要更长的处理时间。
 
  若要比较两个输出，这两个输出必须已指定为“预测”**** 或“仅预测”**** 列。

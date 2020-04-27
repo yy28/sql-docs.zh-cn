@@ -11,10 +11,10 @@ ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728222"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>编辑和删除索引 (Master Data Services)
@@ -23,12 +23,12 @@ ms.locfileid: "73728222"
 
   可以编辑和删除自己创建的有关属性的索引。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  **编辑索引**  
   
@@ -64,6 +64,6 @@ ms.locfileid: "73728222"
   
 ## <a name="see-also"></a>另请参阅  
  [创建索引 &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
- [自定义索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
+ [自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   
   

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198977"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>查看和修改请求订阅属性
@@ -38,7 +38,7 @@ ms.locfileid: "68198977"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在“订阅属性 - **发布服务器>：\<PublicationDatabase>”对话框（可从 \< 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>从 Management Studio 中的发布服务器查看请求订阅属性  
@@ -71,7 +71,7 @@ ms.locfileid: "68198977"
   
 4.  查看属性，然后单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式修改请求订阅以及访问其属性。 所用的存储过程取决于订阅所属的发布的类型。  
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>查看对快照发布或事务发布的请求订阅的属性  
@@ -86,7 +86,7 @@ ms.locfileid: "68198977"
   
 3.  在发布服务器上，执行 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 指定**@publication**和**@subscriber**。  
   
-4.  在发布服务器上，执行[sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)， **@subscriber**并指定。 此操作将显示关于订阅服务器的信息。  
+4.  在发布服务器上，执行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，同时指定 **@subscriber**访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。 此操作将显示关于订阅服务器的信息。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>更改对快照发布或事务发布的请求订阅的属性  
   
@@ -113,13 +113,13 @@ ms.locfileid: "68198977"
   
 3.  在发布服务器上，执行 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) 以显示订阅信息。 若要返回有关特定订阅的信息，您必须**@publication**为**@subscriber** **@subscription_type** **、和的值**指定。  
   
-4.  在发布服务器上，执行[sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)， **@subscriber**并指定。 此操作将显示关于订阅服务器的信息。  
+4.  在发布服务器上，执行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，同时指定 **@subscriber**访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。 此操作将显示关于订阅服务器的信息。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>更改对合并发布的请求订阅的属性  
   
 1.  在订阅服务器上，执行 [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)。 指定**@publication**、 **@publisher**、 **@publisher_db**、要更改为**@property**的订阅属性，并将新值指定**@value**为。  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  用于查看或修改请求订阅属性的 RMO 类取决于订阅请求订阅的发布类型。  
   
 #### <a name="to-view-or-modify-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>查看或修改对快照发布或事务发布的请求订阅的属性  

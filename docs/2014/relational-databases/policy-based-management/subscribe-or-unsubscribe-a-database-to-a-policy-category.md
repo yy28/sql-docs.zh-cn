@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212130"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅
@@ -34,14 +34,14 @@ ms.locfileid: "68212130"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68212130"
   
 2.  单击加号以展开 **“数据库”** 文件夹。  
   
-3.  右键单击要管理类别订阅的数据库，指向“策略”  ，然后选择“类别”   
+3.  右键单击要管理类别订阅的数据库，指向“策略”****，然后选择“类别”****  
   
      在 **“类别”** 对话框中提供了以下选项：  
   
@@ -59,13 +59,13 @@ ms.locfileid: "68212130"
      **名称**  
      策略类别的名称。  
   
-     **已订阅**  
+     **订购**  
      指示目标是否已订阅此策略类别。 如果禁用此复选框，则为 **“托管数据库订阅”** 设置此策略类别。 这意味着该策略类别应用于服务器上的所有数据库。  
   
      **策略**  
      展开策略组将显示策略类别中包括的策略。  
   
-     **已启用**  
+     **Enabled**  
      指示是启用还是禁用了策略。  
   
      **执行模式**  
@@ -74,11 +74,11 @@ ms.locfileid: "68212130"
      **History**  
      单击“查看历史记录”超链接可打开日志文件查看器，从而可以查看策略历史记录。  
   
-4.  若要订阅某个基于策略的管理类别，请选中“已订阅”  列下该类别的复选框。 若要从类别中取消订阅，请清除该复选框。  
+4.  若要订阅某个基于策略的管理类别，请选中“已订阅”**** 列下该类别的复选框。 若要从类别中取消订阅，请清除该复选框。  
   
-5.  完成后，单击 **“确定”** 。  
+5.  完成后，单击“确定”****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>建立数据库对某个策略类别的订阅  
   

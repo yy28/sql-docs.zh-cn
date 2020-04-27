@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211865"
 ---
 # <a name="modify-statistics"></a>修改统计信息
@@ -35,18 +35,18 @@ ms.locfileid: "68211865"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求：  
   
 -   用户对表或视图具有 ALTER 权限。  
   
 -   用户是表或索引视图所有者，或者是以下角色之一的成员： **sysadmin** 固定服务器角色、 **db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-statistics"></a>修改统计信息  
   
@@ -58,13 +58,13 @@ ms.locfileid: "68211865"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  右键单击要修改的统计信息对象，然后选择****“属性”。  
+5.  右键单击要修改的统计信息对象，然后选择  “属性”。  
   
-6.  在 **“统计信息属性 -”** *statistics_name* 对话框中的****“常规页”上，单击****“添加”****“删除”****“上移”****“下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性****。  
+6.  在“统计信息属性 - statistics_name”对话框中的“常规”页面上，单击“添加”、“删除”、“上移”、“下移”或上述任何组合，以更改统计信息的属性        。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性  。  
   
 7.  单击“确定”。   
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改统计信息**  
   
  无法使用 Transact-SQL 语句执行此任务。 若要使用 Transact-SQL 修改统计信息，必须首先删除现有的统计信息，然后使用新属性重新创建统计信息。  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196404"
 ---
 # <a name="delete-views"></a>删除视图
@@ -27,33 +27,33 @@ ms.locfileid: "68196404"
   
 
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   删除视图时，将从系统目录中删除视图的定义和有关视图的其他信息。 还将删除视图的所有权限。  
   
 -   使用 `DROP TABLE` 删除的表上的任何视图都必须使用 `DROP VIEW`显式删除。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对 SCHEMA 的 ALTER 权限或对 OBJECT 的 CONTROL 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-a-view-from-a-database"></a>从数据库中删除视图  
   
 1.  在 **“对象资源管理器”** 中，展开包含要删除的视图的数据库，然后展开 **“视图”** 文件夹。  
   
-2.  右键单击要删除的视图，然后单击“删除”  。  
+2.  右键单击要删除的视图，然后单击“删除”****。  
   
-3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
+3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
     > [!IMPORTANT]  
-    >  单击 "**删除对象**" 对话框中的 "**显示依赖关系**"，打开 " _view_name_**依赖**关系" 对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
+    >  单击“删除对象”**** 对话框中的“显示依赖关系”****，打开__“view_name 依赖关系”**** 对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-view-from-a-database"></a>从数据库中删除视图  
   

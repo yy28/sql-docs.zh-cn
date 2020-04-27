@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174466"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）
-  要配置或修复 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安装，请使用 PowerPivot 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。 本主题介绍用于 SharePoint 2010 的 PowerPivot 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[PowerPivot for SharePoint 2013 &#40;PowerPivot 配置工具&#41;中配置或修复](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。
+  要配置或修复 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安装，请使用 PowerPivot 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。 本主题介绍用于 SharePoint 2010 的 PowerPivot 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[PowerPivot for SharePoint 2013 &#40;PowerPivot 配置工具&#41;中配置或修复](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。
 
  **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010
 
  
 
-##  <a name="bkmk_before"></a>开始之前
+##  <a name="before-you-start"></a><a name="bkmk_before"></a>开始之前
  PowerPivot for SharePoint 2010 配置工具扫描程序文件、注册表设置和可用端口。 若要充分利用该工具，请先查看以下内容。
 
 -   运行 [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md)的一般要求。
@@ -34,7 +33,7 @@ ms.locfileid: "78174466"
 
 -   端口 80 必须可用于所选任务之一，它要求配置工具创建并配置 Web 应用程序。
 
-##  <a name="bkmk_using"></a>使用 PowerPivot 配置工具
+##  <a name="using-the-powerpivot-configuration-tool"></a><a name="bkmk_using"></a>使用 PowerPivot 配置工具
  该工具的第一页提供了用于配置 SharePoint 场的输入值汇总。 除了您提供的输入值之外，将使用默认值来配置系统。 默认名称用于服务应用程序、服务应用程序数据库和服务应用程序属性。
 
 > [!TIP]
@@ -50,7 +49,7 @@ ms.locfileid: "78174466"
 
  ![“配置工具”用户界面](media/ssas-pctui.gif "“配置工具”用户界面")
 
-##  <a name="bkmk_steps"></a>配置步骤
+##  <a name="configuration-steps"></a><a name="bkmk_steps"></a>配置步骤
  只有在本地服务器上安装了 PowerPivot for SharePoint 2010 后，才会显示指向该配置工具的链接。
 
 1.  在 **“开始”** 菜单中，指向 **“所有程序”**，依次单击 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、 **“配置工具”** 和 **“PowerPivot 配置工具”**。
@@ -59,11 +58,11 @@ ms.locfileid: "78174466"
 
 3.  将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。
 
-4.  **默认帐户：** 在 "参数" 选项卡上，键入 "**默认帐户用户名**" 的域用户帐户。 此帐户用于设置重要服务，包括 PowerPivot 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。
+4.  **默认帐户：** 在“参数”选项卡上，键入 **“默认帐户用户名”** 的域用户帐户。 此帐户用于设置重要服务，包括 PowerPivot 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。
 
      **通行短语：** 键入通行短语。 对于新的 SharePoint 场，在向该 SharePoint 场中添加新的服务器或应用程序时，需要使用该通行短语。 对于已存在的场，输入允许您向该场添加服务器应用程序的通行短语。
 
-5.  **端口：**（可选）键入用于连接到管理中心 web 应用程序的端口号，或使用提供的随机生成的编号。 该配置工具将首先检查该端口号是否可用，然后将其作为选项提供。
+5.  **端口：** 可以选择键入用于连接到管理中心 Web 应用程序的端口号，也可以使用提供的随机生成的端口号。 该配置工具将首先检查该端口号是否可用，然后将其作为选项提供。
 
 6.  单击 **“在本地服务器上注册 SQL Server Analysis Services (PowerPivot)”**。
 
@@ -78,12 +77,11 @@ ms.locfileid: "78174466"
     > [!NOTE]
     >  如果您收到了场配置错误，则原因可能是未安装 SharePoint 2010 Server SP1。
 
-10. 单击 **“运行”** 来处理该任务列表中的所有操作。 
-  **“运行”** 按钮将在您验证操作之后启用。 如果 **“运行”** 未启用，请首先单击 **“验证”** 。
+10. 单击 **“运行”** 来处理该任务列表中的所有操作。 **“运行”** 按钮将在您验证操作之后启用。 如果 **“运行”** 未启用，请首先单击 **“验证”** 。
 
 11. [验证 PowerPivot for SharePoint 安装](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)。
 
-##  <a name="bkmk_input"></a>用于配置服务器的输入值
+##  <a name="input-values-used-to-configure-the-server"></a><a name="bkmk_input"></a>用于配置服务器的输入值
  PowerPivot 配置工具组合使用您键入的输入值以及它检测到或自动使用的默认值。
 
  配置工具中列出的操作列表取决于 SharePoint 场的当前配置。 例如，如果已配置 SharePoint 场，则工具中将不会列出任何操作。 您可以随时运行工具以便配置、修复或检测到配置错误。 如果所需服务（例如 Excel Services 或 Secure Store Service）未在场中运行，则该工具将检测到缺失的服务并且提供用于启用这些服务的选项。 如果无需执行任何操作，则任务列表将是空的。
@@ -101,8 +99,7 @@ ms.locfileid: "78174466"
 |**创建 PowerPivot 服务应用程序**|PowerPivot 服务应用程序名称|默认|默认名称为默认的 PowerPivot 服务应用程序。 您可以在该工具中替换为不同的值。|
 ||PowerPivot 服务应用程序数据库服务器|默认|承载 PowerPivot 服务应用程序数据库的数据库服务器。 默认服务器名称与用于该场的数据库服务器相同。 您可以在该工具中替换为不同的值。|
 ||PowerPivot 服务应用程序数据库名称|默认|默认数据库名称基于服务应用程序名称，后跟 GUID 以便确保名称唯一。 您可以在该工具中替换为不同的值。|
-||升级工作簿以启用数据刷新|用户输入|数据刷新失败，并且 SQL Server 2008 R2 PowerPivot 工作簿不支持此功能。 
-  **“升级工作簿以启用数据刷新”** 选项将工作簿升级到 SQL Server 2012 PowerPivot 版本。|
+||升级工作簿以启用数据刷新|用户输入|数据刷新失败，并且 SQL Server 2008 R2 PowerPivot 工作簿不支持此功能。 **“升级工作簿以启用数据刷新”** 选项将工作簿升级到 SQL Server 2012 PowerPivot 版本。|
 |**创建默认的 Web 应用程序**|Web 应用程序名称|默认值（如果需要）|如果不存在任何 Web 应用程序，该工具将创建一个。 Web 应用程序配置为使用经典模式身份验证，并侦听 **端口 80**。 最大文件上载大小设为 2047 MB，这是 SharePoint 所允许的最大值。 较大的文件上载大小用于容纳大型 PowerPivot 文件。|
 ||代码|默认值（如果需要）|该工具将基于服务器名称创建一个 URL，并且使用与 SharePoint 相同的文件命名约定。|
 ||Web 应用程序池|默认值（如果需要）|该工具在 IIS 中创建默认应用程序池。|
@@ -123,7 +120,7 @@ ms.locfileid: "78174466"
 ||服务应用程序代理||键入 Secure Store Service 应用程序代理的名称。  该名称将出现在默认连接组中，该连接组将应用程序与 SharePoint 内容 Web 应用程序相关联。|
 |**更新 Secure Store Service 主密钥**|服务应用程序代理||键入 Secure Store Service 应用程序代理的名称|
 ||通行短语||主密钥用于数据加密。 默认情况下，用于生成密钥的通行短语是用来在场中设置新服务的相同通行短语。 您可以将默认通行短语替换为唯一通行短语。|
-|**为 Datarefresh 创建无人参与帐户**|目标应用程序 ID||应用程序 ID 可以为说明文本。|
+|**创建无人参与的帐户以进行数据刷新**|目标应用程序 ID||应用程序 ID 可以为说明文本。|
 ||目标应用程序的友好名称|||
 ||无人参与的帐户用户名和密码||键入由目标应用程序用来运行无人参与的数据刷新操作的 Windows 用户帐户的凭据。|
 ||站点 URL||键入与目标应用程序关联的网站集的网站 URL。 若要与其他网站集关联，请使用 SharePoint 管理中心。|
@@ -136,7 +133,7 @@ ms.locfileid: "78174466"
 
  如果该工具创建网站集，它将在数据库服务器上创建内容数据库，并且使用与 SharePoint 相同的文件命名约定。 不能更改内容数据库名称。
 
-##  <a name="bkmk_nextsteps"></a>后续步骤
+##  <a name="next-steps"></a><a name="bkmk_nextsteps"></a> 后续步骤
  完成服务器安装后，您应该执行若干安装后任务：
 
 -   将 SharePoint 权限授予各个用户和组。 此任务是启用对站点和内容的访问所必需的。

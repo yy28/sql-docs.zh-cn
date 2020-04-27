@@ -16,10 +16,10 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771344"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
@@ -75,13 +75,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`用于计划筛选的数据快照作业的频率。 *frequency_type*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4** （默认值）|每天一次|  
+|**4** （默认值）|每日|  
 |**8**|每周|  
-|**16**|每月|  
+|**超过**|每月一次|  
 |**32**|与“每月”选项相关|  
 |**64**|自动启动|  
 |**128**|重复执行|  
@@ -93,31 +93,31 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|*frequency_interval*未使用。|  
 |**4** （默认值）|每*frequency_interval*天，默认为每天。|  
 |**8**|*frequency_interval*是以下一个或多个（与[&#124; &#40;位或&#41; &#40;transact-sql&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)逻辑运算符组合）：<br /><br /> **1** = 星期日 &#124; **2** = 星期一 &#124; **4** = 星期二 &#124; **8** = 星期三 &#124; **16** = 星期四 &#124; **32** = 星期五 &#124; **64** = 星期六|  
-|**16**|*Frequency_interval*月中的第几天。|  
+|**超过**|*Frequency_interval*月中的第几天。|  
 |**32**|*frequency_interval*是以下项之一：<br /><br /> **1** = 星期日 &#124; **2** = 星期一 &#124; **3** = 星期二 &#124; **4** = 星期三 &#124; **5** = 星期四 &#124; **6** = 星期五 &#124; **7** = 星期六 &#124; **8** = 日 &#124; **9** = 工作日 &#124; **10** = 周末|  
 |**64**|*frequency_interval*未使用。|  
 |**128**|*frequency_interval*未使用。|  
   
 `[ @frequency_subday = ] frequency_subday`指定*frequency_subday_interval*的单位。 *frequency_subday*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
-|**4** （默认值）|分钟|  
+|**4** （默认值）|Minute|  
 |**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`作业的每次执行之间出现的*frequency_subday*周期数。 *frequency_subday_interval*的值为**int**，默认值为5。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`每月筛选的数据快照作业的发生次数。 如果*frequency_type*设置为**32** （每月相对），则使用此参数。 *frequency_relative_interval*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**1** （默认值）|第一个|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**超过**|最后一个|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为0。  
   
@@ -133,7 +133,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|标识[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系统表中的筛选数据快照作业。|  
+|**id**|**int**|标识[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系统表中的筛选数据快照作业。|  
 |**dynamic_snapshot_jobname**|**sysname**|已筛选数据快照作业的名称。|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|唯一标识分发[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器上的代理作业。|  
   
@@ -151,7 +151,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另请参阅  
  [为包含参数化筛选器的合并发布创建快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [sp_dropdynamicsnapshot_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
  [sp_helpdynamicsnapshot_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   

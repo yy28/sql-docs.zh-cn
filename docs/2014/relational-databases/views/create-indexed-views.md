@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196436"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
@@ -29,7 +29,7 @@ ms.locfileid: "68196436"
   
   
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  创建索引视图需要执行下列步骤并且这些步骤对于成功实现索引视图而言非常重要：  
   
 1.  验证是否视图中将引用的所有现有表的 SET 选项都正确。  
@@ -42,7 +42,7 @@ ms.locfileid: "68196436"
   
 5.  为视图创建唯一的聚集索引。  
   
-###  <a name="Restrictions"></a>索引视图所需的 SET 选项  
+###  <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a>索引视图所需的 SET 选项  
  如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 CONCAT_NULL_YIELDS_NULL 设置为 ON 后，表达式 **'** abc **'** + NULL 会返回值 NULL。 但将 CONCAT_NULL_YIEDS_NULL 设置为 OFF 后，同一表达式会生成 **'** abc **'**。  
   
  为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 如果出现下列情况，则必须将下表中的 SET 选项设置为**RequiredValue**列中显示的值：  
@@ -86,7 +86,7 @@ ms.locfileid: "68196436"
   
 -   创建索引时，IGNORE_DUP_KEY 选项必须设置为 OFF（默认设置）。  
   
--   必须由两部分组成的名称（_架构_）引用表 **。** 视图定义中的_tablename_ 。  
+-   在视图定义中，必须使用两部分名称（即 _schema_**.**_tablename_ ）来引用表。  
   
 -   必须已使用 WITH SCHEMABINDING 选项创建了在视图中引用的用户定义函数。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68196436"
   
 -   在视图定义中使用的 CLR 函数和 CLR 用户定义类型方法必须具有下表所示的属性设置。  
   
-    |properties|注意|  
+    |属性|注意|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|必须显式声明为 Microsoft .NET Framework 方法的属性。|  
     |PRECISE = TRUE|必须显式声明为 .NET Framework 方法的属性。|  
@@ -118,7 +118,7 @@ ms.locfileid: "68196436"
     |DISTINCT|STDEV、STDEVP、VAR、VARP 或 AVG|公用表表达式 (CTE)|  
     |`float`\*、 `text`、 `ntext`、 `image` `XML`、或`filestream`列|子查询|包括排名或聚合开窗函数的 OVER 子句|  
     |全文谓词（CONTAIN、FREETEXT）|引用可为 Null 的表达式的 SUM 函数|ORDER BY|  
-    |CLR 用户定义聚合函数|返回页首|CUBE、ROLLUP 或 GROUPING SETS 运算符|  
+    |CLR 用户定义聚合函数|TOP|CUBE、ROLLUP 或 GROUPING SETS 运算符|  
     |MIN、MAX|UNION、EXCEPT 或 INTERSECT 运算符|TABLESAMPLE|  
     |表变量|OUTER APPLY 或 CROSS APPLY|PIVOT、UNPIVOT|  
     |稀疏列集|内联或多语句表值函数|OFFSET|  
@@ -130,12 +130,12 @@ ms.locfileid: "68196436"
   
 -   如果视图定义包含 GROUP BY 子句，则唯一聚集索引的键只能引用 GROUP BY 子句中指定的列。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
  引用索引视图中的 `datetime` 和 `smalldatetime` 字符串文字时，建议使用确定性日期格式样式将文字显式转换为所需日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST 与 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。 将字符串隐式转换为 `datetime` 或 `smalldatetime` 所涉及的表达式被视为具有不确定性。 这是因为结果取决于服务器会话的 LANGUAGE 和 DATEFORMAT 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`listopad`在不同语言中表示不同的月份。 同样，在 `DATEADD(mm,3,'2000-12-01')`表达式中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于 DATEFORMAT 设置解释 `'2000-12-01'` 字符串。  
   
  非 Unicode 字符数据在排序规则间的隐式转换也被视为具有不确定性。  
   
-###  <a name="Considerations"></a>放  
+###  <a name="considerations"></a><a name="Considerations"></a>放  
  索引视图中列的 **large_value_types_out_of_row** 选项的设置继承的是基表中相应列的设置。 此值是使用 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)设置的。 从表达式组成的列的默认设置为 0。 这意味着大值类型存储在行内。  
   
  可以对已分区表创建索引视图，并可以由其自行分区。  
@@ -146,12 +146,12 @@ ms.locfileid: "68196436"
   
  可以禁用表和视图的索引。 禁用表的聚集索引时，与该表关联的视图的索引也将被禁用。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>创建索引视图  
   
@@ -212,9 +212,9 @@ ms.locfileid: "68196436"
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
- [SET ANSI_NULLS (Transact-SQL)](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING (Transact-SQL)](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS (Transact-SQL)](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [将 ANSI_NULLS 设置 &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [将 ANSI_PADDING 设置 &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [将 ANSI_WARNINGS 设置 &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [&#40;Transact-sql&#41;设置 ARITHABORT](/sql/t-sql/statements/set-arithabort-transact-sql)   
  [将 CONCAT_NULL_YIELDS_NULL 设置 &#40;Transact-sql&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [将 NUMERIC_ROUNDABORT 设置 &#40;Transact-sql&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   

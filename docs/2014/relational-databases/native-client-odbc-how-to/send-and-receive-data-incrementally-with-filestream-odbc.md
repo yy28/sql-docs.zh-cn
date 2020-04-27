@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205525"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>通过 FILESTREAM 以增量方式发送和接收数据 (ODBC)
@@ -23,7 +23,7 @@ ms.locfileid: "68205525"
  有关 FILESTREAM 功能的详细信息，请参阅[Filestream 支持 &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)。  
   
 ## <a name="example"></a>示例  
- 在编译并运行此示例之前，启用 FILESTREAM 支持（[启用和配置 filestream](../blob/enable-and-configure-filestream.md)）。  
+ 编译和运行此示例前，先启用 FILESTREAM 支持（[启用和配置 FILESTREAM](../blob/enable-and-configure-filestream.md)）。  
   
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的数据库。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须具有写访问权限才能运行此脚本（例如，采用本地系统帐户登录）。  
   

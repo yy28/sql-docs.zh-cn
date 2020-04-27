@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198416"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
@@ -32,12 +32,9 @@ ms.locfileid: "68198416"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的所有版本均支持服务器级审核。 数据库级审核限制为 Enterprise、Developer 和 Evaluation 版本。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="sql-server-audit-components"></a>SQL Server 审核组件  
- 
-  *
-  * “审核”是将若干元素组合到一个包中，用于执行一组特定服务器操作或数据库操作。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的组件组合生成的输出就称为审核，就如同报表定义与图形和数据元素组合生成报表一样。  
+ ** “审核”是将若干元素组合到一个包中，用于执行一组特定服务器操作或数据库操作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的组件组合生成的输出就称为审核，就如同报表定义与图形和数据元素组合生成报表一样。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]audit 使用*扩展事件*来帮助创建审核。 有关扩展事件的详细信息，请参阅[扩展事件](../../extended-events/extended-events.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核使用“扩展事件” ** 以帮助创建审核。 有关扩展事件的详细信息，请参阅[扩展事件](../../extended-events/extended-events.md)。  
   
 ### <a name="sql-server-audit"></a>SQL Server 审核  
  *SQL Server 审核*对象将收集单个服务器实例或数据库级操作和要监视的操作组。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。  
@@ -49,16 +46,14 @@ ms.locfileid: "68198416"
   
  服务器审核规范可收集许多由扩展事件功能引发的服务器级操作组。 您可以在服务器审核规范中包括“审核操作组” ** 。 审核操作组是预定义的操作组，它们是 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]中发生的原子事件。 这些操作将发送到审核，审核将它们记录到目标中。  
   
- 
-  [SQL Server 审核操作组和操作](sql-server-audit-action-groups-and-actions.md)主题介绍了服务器级别审核操作组。  
+ [SQL Server 审核操作组和操作](sql-server-audit-action-groups-and-actions.md)主题介绍了服务器级别审核操作组。  
   
 ### <a name="database-audit-specification"></a>数据库审核规范  
  “数据库审核规范” ** 对象也属于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核。 针对每个审核，您可以为每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库创建一个数据库审核规范。  
   
- 数据库审核规范可收集由扩展事件功能引发的数据库级审核操作。 你可以向数据库审核规范添加审核操作组或审核事件。 *审核事件*是可以由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]引擎审核的原子操作。 *审核操作组*是预定义的操作组。 它们都位于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库作用域。 这些操作将发送到审核，审核将它们记录到目标中。 在用户数据库审核规范中不要包括服务器范围的对象，例如系统视图。  
+ 数据库审核规范可收集由扩展事件功能引发的数据库级审核操作。 你可以向数据库审核规范添加审核操作组或审核事件。 *审核事件* 是可以由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎审核的原子操作。 ** “审核操作组”是预定义的操作组。 它们都位于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库作用域。 这些操作将发送到审核，审核将它们记录到目标中。 在用户数据库审核规范中不要包括服务器范围的对象，例如系统视图。  
   
- 
-  [SQL Server 审核操作组和操作](sql-server-audit-action-groups-and-actions.md)主题介绍了数据库级别的审核操作组和审核操作。  
+ [SQL Server 审核操作组和操作](sql-server-audit-action-groups-and-actions.md)主题介绍了数据库级别的审核操作组和审核操作。  
   
 ### <a name="target"></a>目标  
  审核结果将发送到目标，目标可以是文件、Windows 安全事件日志或 Windows 应用程序事件日志。 必须定期查看和归档这些日志，以确保目标具有足够的空间来写入更多记录。  
@@ -70,15 +65,13 @@ ms.locfileid: "68198416"
   
  在您将审核信息保存到某一文件时，为了帮助避免被篡改，可以通过以下方式限制对文件位置的访问：  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户必须同时具有读取和写入权限。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户必须同时具有读取和写入权限。  
   
 -   审核管理员通常需要读取和写入权限。 这就假设审核管理员是 Windows 帐户，可以管理审核文件（例如，将审核文件复制到其他共享、备份这些文件等等）。  
   
 -   获得授权可读取审核文件的审核读取者必须具有读取权限。  
   
- 甚至当 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 正在写入某个文件时，其他 Windows 用户如果具有权限，也可以读取该审核文件。 
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 并未采用排他锁来防止读取操作。  
+ 甚至当 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 正在写入某个文件时，其他 Windows 用户如果具有权限，也可以读取该审核文件。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 并未采用排他锁来防止读取操作。  
   
  因为 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 可以访问文件，所以，具有 CONTROL SERVER 权限的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名可以使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 来访问审核文件。 若要记录任何正在读取审核文件的用户，请在 master.sys.fn_get_audit_file 中定义审核。 这将记录具有 CONTROL SERVER 权限且已通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]访问审核文件的登录名。  
   
@@ -143,11 +136,11 @@ ms.locfileid: "68198416"
   
 |||  
 |-|-|  
-|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[创建服务器审核](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[ALTER DATABASE 审核规范](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[创建服务器审核规范](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
-|[更改服务器审核](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[删除数据库审核规范](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
-|[更改服务器审核规范](/sql/t-sql/statements/alter-server-audit-transact-sql)|[删除服务器审核](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[创建数据库审核规范](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER 审核规范](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
+|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[创建服务器审核规范](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
+|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
+|[创建数据库审核规范](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>动态视图和函数  
  下表列出了可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的动态视图和函数。  
@@ -164,16 +157,15 @@ ms.locfileid: "68198416"
   
 |目录视图|说明|  
 |-------------------|-----------------|  
-|[sys. database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
+|[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|包含所有数据库的服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
 |[sys.server_audits](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)|服务器实例中每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核都各占一行。|  
 |[sys.server_audit_specifications](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)|包含有关服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的服务器审核规范的信息。|  
-|[sys. server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的服务器审核规范详细信息（操作）的相关信息。|  
+|[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的服务器审核规范详细信息（操作）的相关信息。|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|包含有关服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的文件审核类型的存储扩展信息。|  
   
 ## <a name="permissions"></a>权限  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的每一个功能和命令都有其独特的权限需求。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的每一个功能和命令都有其独特的权限需求。  
   
  若要创建、更改或删除服务器审核或服务器审核规范，服务器主体要求具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。 若要创建、更改或删除数据库审核规范，数据库主体必须具有 ALTER ANY DATABASE AUDIT 权限或针对该数据库的 ALTER 或 CONTROL 权限。 此外，主题还必须具有连接到数据库的权限或者具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
   
@@ -194,8 +186,7 @@ ms.locfileid: "68198416"
  有关如何授予权限的详细信息，请参阅[GRANT(Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)。  
   
 > [!CAUTION]  
->  具有 sysadmin 角色的主体可以篡改任意审核组件；具有 db_owner 角色的主体可以篡改数据库中的审核规范。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 将验证将创建或更改审核规范的登录帐户是否至少具有 ALTER ANY DATABASE AUDIT 权限。 但是，它不会在您附加数据库时进行验证。 您应假定所有的数据库审核规范的可信度只是相当于具有 sysadmin 或 db_owner 角色的主体。  
+>  具有 sysadmin 角色的主体可以篡改任意审核组件；具有 db_owner 角色的主体可以篡改数据库中的审核规范。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 将验证将创建或更改审核规范的登录帐户是否至少具有 ALTER ANY DATABASE AUDIT 权限。 但是，它不会在您附加数据库时进行验证。 您应假定所有的数据库审核规范的可信度只是相当于具有 sysadmin 或 db_owner 角色的主体。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [创建服务器审核和服务器审核规范](create-a-server-audit-and-server-audit-specification.md)  
@@ -207,13 +198,13 @@ ms.locfileid: "68198416"
  [将 SQL Server 审核事件写入安全日志](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>与审核密切相关的主题  
- [&#40;安全页的服务器属性&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
- 介绍如何为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用登录审核。 审核记录存储在 Windows 应用程序日志中。  
+ [服务器属性（“安全性”页）](../../../database-engine/configure-windows/server-properties-security-page.md)  
+ 介绍如何为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用登录审核。 审核记录存储在 Windows 应用程序日志中。  
   
  [c2 审核模式服务器配置选项](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  介绍 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 C2 符合安全标准审核模式。  
   
- [安全审核事件类别 &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
+ [安全审核事件类别 (SQL Server Profiler)](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  介绍您可以在 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]中使用的审核事件。 有关详细信息，请参阅 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)。  
   
  [SQL 跟踪](../../sql-trace/sql-trace.md)  
@@ -222,11 +213,11 @@ ms.locfileid: "68198416"
  [DDL 触发器](../../triggers/ddl-triggers.md)  
  介绍如何使用数据定义语言 (DDL) 触发器来跟踪对数据库的更改。  
   
- [Microsoft TechNet： SQL Server 技术中心： SQL Server 2005 安全和保护](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 – 安全和保护](https://go.microsoft.com/fwlink/?LinkId=101152)  
  提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 审核操作组和操作](sql-server-audit-action-groups-and-actions.md)   
- [SQL Server 审核记录](sql-server-audit-records.md)  
+ [SQL Server Audit Records](sql-server-audit-records.md)  
   
   

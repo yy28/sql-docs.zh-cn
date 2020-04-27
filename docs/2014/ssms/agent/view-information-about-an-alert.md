@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211293"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
@@ -32,20 +32,20 @@ ms.locfileid: "68211293"
   
      [安全性](#Security)  
   
--   **若要查看有关警报的信息，请使用：**  
+-   **若要查看有关警报的信息，可使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才能查看有关警报的信息。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>查看有关警报的信息  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68211293"
   
 4.  右键单击包含要查看的信息的警报，然后选择“属性”****。  
   
-     有关 " _alert_name_**警报属性**" 对话框中包含的可用选项的详细信息，请参阅：  
+     有关 alert_name__“警报属性”**** 对话框中包含的可用选项的详细信息，请参阅：  
   
     -   [警报属性-新建警报 &#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -65,11 +65,11 @@ ms.locfileid: "68211293"
   
     -   [警报属性： "新建警报 &#40;选项" 页面&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [警报属性 &#40;历史记录 "页&#41;](alert-properties-history-page.md)  
+    -   [警报属性（“历史记录”页）](alert-properties-history-page.md)  
   
-5.  完成后，单击 **“确定”** 。  
+5.  完成后，单击“确定”****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>查看有关警报的信息  
   

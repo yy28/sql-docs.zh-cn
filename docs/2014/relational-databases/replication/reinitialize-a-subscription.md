@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199221"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化订阅
@@ -26,18 +26,18 @@ ms.locfileid: "68199221"
   
  **本主题内容**  
   
--   **若要重新初始化订阅，请使用：**  
+-   **重新初始化订阅，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [复制管理对象 (RMO)](#RMOProcedure)  
+     [复制管理对象（RMO）](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  重新初始化订阅的过程由两个部分组成：  
   
-1.  将对发布的单个或所有订阅“标记” ** 为重新初始化。 在 **“重新初始化订阅”** 对话框中将订阅标记为要重新初始化，该对话框可以在 **** 的 **“本地发布”** 文件夹和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 也可以从 **“所有订阅”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](monitor/start-the-replication-monitor.md)。 将订阅标记为要重新初始化时，可以选择下列选项之一：  
+1.  将对发布的单个或所有订阅“标记” ** 为重新初始化。 在“重新初始化订阅”对话框中将订阅标记为重新初始化，该对话框可从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“本地发布”文件夹和“本地订阅”文件夹中获取************。 也可以从 **“所有订阅”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](monitor/start-the-replication-monitor.md)。 将订阅标记为要重新初始化时，可以选择下列选项之一：  
   
      **使用当前快照**  
      选择此项可以在分发代理或合并代理下一次运行时将当前快照应用于订阅服务器。 如果无法获得有效快照，将无法选定此选项。  
@@ -60,7 +60,7 @@ ms.locfileid: "68199221"
   
 3.  展开包含要重新初始化的订阅的发布。  
   
-4.  右键单击订阅，再单击 **“重新初始化”**。  
+4.  右键单击订阅，再单击 **“重新初始化”** 。  
   
 5.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”**。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68199221"
   
 3.  右键单击具有要重新初始化的订阅的发布，再单击 **“重新初始化所有订阅”**。  
   
-4.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”**。  
+4.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”** 。  
   
 #### <a name="to-mark-a-single-push-or-pull-subscription-for-reinitialization-in-replication-monitor"></a>在复制监视器中将单个推送订阅或单个请求订阅标记为要重新初始化  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68199221"
   
 3.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式重新初始化订阅。 使用的存储过程取决于订阅的类型（推送或请求）以及订阅所属的发布的类型。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>重新初始化对事务发布的请求订阅  
@@ -139,9 +139,9 @@ ms.locfileid: "68199221"
   
 1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)，同时为 **@automatic_reinitialization_policy**指定下列值之一：  
   
-    -   **1** -从订阅服务器上载更改，然后根据发布更改的要求自动重新初始化订阅。  
+    -   **1** - 在对订阅执行更改所要求的自动重新初始化操作之前，从订阅服务器上载更改。  
   
-    -   **0** -如果订阅按发布的更改要求自动重新初始化，订阅服务器上的更改将被丢弃。  
+    -   **0** - 在对订阅执行发布更改所要求的自动重新初始化操作时，放弃订阅服务器上的更改。  
   
     > [!IMPORTANT]  
     >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
@@ -152,16 +152,16 @@ ms.locfileid: "68199221"
   
 1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，同时将 **@property** @upload_first **@property** 并为 **@value**指定下列值之一：  
   
-    -   **1** -从订阅服务器上载更改，然后根据发布更改的要求自动重新初始化订阅。  
+    -   **1** - 在对订阅执行更改所要求的自动重新初始化操作之前，从订阅服务器上载更改。  
   
-    -   **0** -如果订阅按发布的更改要求自动重新初始化，订阅服务器上的更改将被丢弃。  
+    -   **0** - 在对订阅执行发布更改所要求的自动重新初始化操作时，放弃订阅服务器上的更改。  
   
     > [!IMPORTANT]  
     >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
   
      有关详细信息，请参阅 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)。  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  可以将各个订阅标记为重新初始化，以便在下次同步期间应用新的快照。 可以使用复制管理对象 (RMO) 以编程的方式重新初始化订阅。 所用的类取决于订阅所属的发布类型以及订阅类型（即推送订阅或请求订阅）。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>重新初始化对事务发布的请求订阅  
@@ -230,7 +230,7 @@ ms.locfileid: "68199221"
   
 5.  同步推送订阅。 有关详细信息，请参阅 [同步推送订阅](synchronize-a-push-subscription.md)。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  此示例将重新初始化事务发布的请求订阅。  
   
  [!code-csharp[HowTo#rmo_ReinitTranPullSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_reinittranpullsub)]  
@@ -245,7 +245,7 @@ ms.locfileid: "68199221"
   
 ## <a name="see-also"></a>另请参阅  
  [重新初始化订阅](reinitialize-subscriptions.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [复制安全最佳做法](security/replication-security-best-practices.md)  
+ [复制管理对象概念](concepts/replication-management-objects-concepts.md)   
+ [复制安全最佳实践](security/replication-security-best-practices.md)  
   
   

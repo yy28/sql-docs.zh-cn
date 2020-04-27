@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68197107"
 ---
 # <a name="stored-procedures-database-engine"></a>存储过程（数据库引擎）
-  中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的存储过程是由一个或多个[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或对[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共运行时语言（CLR）方法的引用组成的一组。 过程与其他编程语言中的构造相似，这是因为它们都可以：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的存储过程是由一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 方法的引用所构成的一个组。 过程与其他编程语言中的构造相似，这是因为它们都可以：  
   
 -   接受输入参数并以输出参数的格式向调用程序返回多个值。  
   
@@ -59,22 +59,21 @@ ms.locfileid: "68197107"
   
 ## <a name="types-of-stored-procedures"></a>存储过程的类型  
  用户定义  
- 用户定义的过程可在用户定义的数据库中创建，或者在除了 **Resource** 数据库之外的所有系统数据库中创建。 此过程可在中开发， [!INCLUDE[tsql](../../includes/tsql-md.md)]或者作为对[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时（CLR）方法的引用。  
+ 用户定义的过程可在用户定义的数据库中创建，或者在除了 **Resource** 数据库之外的所有系统数据库中创建。 该过程可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中开发，或者作为对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 方法的引用开发。  
   
  临时  
  临时过程是用户定义过程的一种形式。 临时过程与永久过程相似，只是临时过程存储于 **tempdb**中。 临时过程有两种类型：本地过程和全局过程。 它们在名称、可见性以及可用性上有区别。 本地临时过程的名称以单个数字符号 (#) 开头；它们仅对当前的用户连接是可见的；当用户关闭连接时被删除。 全局临时过程的名称以两个数字符号 (##) 开头，创建后对任何用户都是可见的，并且在使用该过程的最后一个会话结束时被删除。  
   
- 系统  
+ System  
  系统过程是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]随附的。 它们物理上存储在内部隐藏的 **Resource** 数据库中，但逻辑上出现在每个系统定义数据库和用户定义数据库的 **sys** 架构中。 此外， **msdb** 数据库还在 **dbo** 架构中包含用于计划警报和作业的系统存储过程。 因为系统过程以前缀 **sp_** 开头，所以，我们建议你在命名用户定义过程时不要使用此前缀。 有关系统过程的完整列表，请参阅[系统存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持向外部程序提供接口[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以实现各种维护活动的系统过程。 这些扩展过程使用 xp_ 前缀。 有关扩展过程的完整列表，请参阅[常规扩展存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和外部程序之间提供一个接口以实现各种维护活动的系统过程。 这些扩展过程使用 xp_ 前缀。 有关扩展过程的完整列表，请参阅[常规扩展存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql)。  
   
  扩展的用户定义过程  
  扩展过程允许你使用编程语言（例如 C）创建外部例程。这些过程是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例可以动态加载和运行的 DLL。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除扩展存储过程。 请不要在新的开发工作中使用该功能，并尽快修改当前还在使用该功能的应用程序。 请改为创建 CLR 过程。 此方法提供了更为可靠和安全的替代方法来编写扩展过程。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除扩展存储过程。 请不要在新的开发工作中使用该功能，并尽快修改当前还在使用该功能的应用程序。 请改为创建 CLR 过程。 此方法提供了更为可靠和安全的替代方法来编写扩展过程。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

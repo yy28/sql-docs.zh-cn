@@ -15,19 +15,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205962"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>“通知操作员”任务（维护计划）
-  使用 "**通知操作员" 任务**对话框将自动通知添加到此维护计划。 若要使用此任务，您必须已启用数据库邮件并正确地配置了 MSDB 作为邮件主机数据库，并且[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有具有有效电子邮件地址的代理操作员。  
+  使用 **“‘通知操作员’任务”** 对话框可以向此维护计划中添加自动通知。 要使用此任务，必须启用数据库邮件并将 MSDB 正确配置为邮件主机数据库，并且 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员具有有效的电子邮件地址。  
   
  此任务使用 sp_notify_operator 存储过程。  
   
 ## <a name="options"></a>选项  
- **连接**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -42,7 +42,7 @@ ms.locfileid: "68205962"
  **通知消息正文**  
  指定要在通知消息正文中包括的文本。  
   
- **查看 T-sql**  
+ **查看 T-SQL**  
  根据所选选项，查看针对此任务的服务器执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 > [!NOTE]  
@@ -58,23 +58,23 @@ ms.locfileid: "68205962"
  **“刷新”**  
  刷新可用服务器的列表。  
   
- **输入用于登录到服务器的信息**  
+ **输入登录服务器所需的信息**  
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 身份验证连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 实例。  
   
- **使用特定的用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
+ **使用特定用户名和密码**  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
- **权限**  
+ **密码**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库邮件](../database-mail/database-mail.md)   
- [sp_notify_operator &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
+ [sp_notify_operator (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
   
   

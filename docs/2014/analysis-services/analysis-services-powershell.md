@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782644"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
-  
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 包括 Analysis Services PowerShell (SQLAS) 提供程序和 cmdlet，以便您可以使用 Windows PowerShell 导航、管理和查询 Analysis Services 对象。  
   
  Analysis Services PowerShell 由以下组件构成：  
@@ -40,7 +39,7 @@ ms.locfileid: "72782644"
 
 有关语法和示例的详细信息，请参阅[Analysis Services PowerShell 参考](/sql/analysis-services/powershell/analysis-services-powershell-reference)。
 
-##  <a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
  必须安装有 Windows PowerShell 2.0。 该软件默认安装在 Windows 操作系统的较新版本上。 有关详细信息，请参阅[安装 Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
@@ -51,7 +50,7 @@ ms.locfileid: "72782644"
   
  远程访问 Analysis Services 实例要求您启用远程管理和文件共享。 有关详细信息，请参阅本主题中的[启用远程管理](#bkmk_remote)。  
   
-##  <a name="bkmk_vers"></a>Analysis Services 支持的版本和模式  
+##  <a name="supported-versions-and-modes-of-analysis-services"></a><a name="bkmk_vers"></a> Analysis Services 的支持的版本和模式  
  目前，在 Windows Server 2008 R2、Windows Server 2008 SP1 或 Windows 7 上运行的任何版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services 均支持 Analysis Services PowerShell。  
   
  下表显示 Analysis Services PowerShell 在不同环境下的可用性。  
@@ -66,7 +65,7 @@ ms.locfileid: "72782644"
 |与 PowerPivot 数据库的嵌入式连接<br /><br /> "Data Source = $Embedded $"|不支持。|  
 |Analysis Services 存储过程中的本地服务器环境<br /><br /> "Data Source = *"|不支持。|  
   
-##  <a name="bkmk_auth"></a>身份验证要求和安全注意事项  
+##  <a name="authentication-requirements-and-security-considerations"></a><a name="bkmk_auth"></a>身份验证要求和安全注意事项  
  在连接到 Analysis Services 时，您必须使用 Windows 用户标识建立连接。 多数情况下都使用 Windows 集成安全性建立连接，由当前用户的标识设置执行服务器操作的安全上下文。 但是，在配置对 Analysis Services 的 HTTP 访问时，还可以使用其他身份验证方法。 本节介绍连接类型如何确定您可以使用的身份验证选项。  
   
  Analysis Services 连接可分为本机连接或 HTTP 连接。 本机连接是从客户端应用程序直接连接服务器。 在 PowerShell 会话中，PowerShell 客户端使用 OLE DB Provider for Analysis Services 直接连接 Analysis Services 实例。 始终使用 Windows 集成安全性建立本机连接，在此连接中 Analysis Services PowerShell 以当前用户身份执行操作。 Analysis Services 不支持模拟。 如果要以特定用户身份执行某一操作，您必须以该用户的身份启动 PowerShell 会话。  
@@ -77,7 +76,7 @@ ms.locfileid: "72782644"
   
  -Credential 参数使用指定用户名和密码的 PSCredential 对象。 在 Analysis Services PowerShell 中，-Credential 参数适用于发出连接 Analysis Services 请求的 cmdlet，而不是在现有连接的上下文中运行的 cmdlet。 发出连接请求的 cmdlet 包括 Invoke-ASCmd、Backup-ASDatabase 和 Restore-ASDatabase。 对于这些 cmdlet，可以使用-Credential 参数，假定满足以下条件：  
   
-1.  已配置服务器用于 HTTP 访问，这表示 IIS 在连接 Analysis Services 时会处理该连接、读取用户名和密码，并模拟用户身份。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+1.  已配置服务器用于 HTTP 访问，这表示 IIS 在连接 Analysis Services 时会处理该连接、读取用户名和密码，并模拟用户身份。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
 2.  为 Analysis Services HTTP 访问创建的 IIS 虚拟目录配置用于“基本身份验证”。  
   
@@ -112,7 +111,7 @@ $pwd.Dispose()
 Remove-Variable -Name pwd  
 ```  
   
-##  <a name="bkmk_tasks"></a>Analysis Services PowerShell 任务  
+##  <a name="analysis-services-powershell-tasks"></a><a name="bkmk_tasks"></a>Analysis Services PowerShell 任务  
  您可以从 Windows PowerShell Management Shell 或 Windows 命令提示符运行 Analysis Services PowerShell。 不支持从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 运行 Analysis Services PowerShell。  
   
  本节介绍使用 Analysis Services PowerShell 的常见任务。  
@@ -127,7 +126,7 @@ Remove-Variable -Name pwd
   
 -   [获取有关 Analysis Services PowerShell 的帮助](#bkmk_help)  
   
-###  <a name="bkmk_load"></a>加载 Analysis Services 提供程序和 Cmdlet  
+###  <a name="load-the-analysis-services-provider-and-cmdlets"></a><a name="bkmk_load"></a>加载 Analysis Services 提供程序和 Cmdlet  
  Analysis Services 提供程序是 SQL Server 根提供程序的扩展插件，将在您导入 SQLPS 模块时提供。 Analysis Services cmdlet 同时加载；如果您想要使用这些 cmdlet，但不需要该提供程序，也可以单独加载它们。  
   
 -   运行 Import-module cmdlet 可以加载包括所有 Analysis Services PowerShell 功能的 SQLPS。 如果您无法导入该模块，则可以出于加载该模块的目的，暂时将执行策略更改为不受限制。 有关详细信息，请参阅 [导入 SQLPS 模块](../../2014/database-engine/import-the-sqlps-module.md)。  
@@ -144,7 +143,7 @@ Remove-Variable -Name pwd
     Import-Module "sqlascmdlets"  
     ```  
   
-###  <a name="bkmk_remote"></a>启用远程管理  
+###  <a name="enable-remote-administration"></a><a name="bkmk_remote"></a>启用远程管理  
  您必须首先启用远程管理和文件共享，然后才能将 Analysis Services PowerShell 用于远程 Analysis Services 实例。 以下错误表明发生了防火墙配置问题： "RPC 服务器不可用。 (HRESULT 异常: 0x800706BA)”。  
   
 1.  确认本地计算机和远程计算机都具有客户端和服务器工具的 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 版本。  
@@ -176,7 +175,7 @@ Enable-PSRemoting
 ```  
   
   
-###  <a name="bkmk_connect"></a>连接到 Analysis Services 对象  
+###  <a name="connect-to-an-analysis-services-object"></a><a name="bkmk_connect"></a>连接到 Analysis Services 对象  
  Analysis Services PowerShell 提供程序支持在 Analysis Services 对象层次结构中导航和为正在运行的命令设置上下文。 该提供程序是可通过 SQLPS 模块获得的 SQLSERVER 根提供程序的扩展插件。 在您加载 SQLPS 模块后，可以导航该路径。  
   
  您可以连接到本地或远程实例，但某些 cmdlet 仅在本地实例上运行（即 merge-partition）。 您可以将本机连接或 HTTP 连接用于为 HTTP 访问配置的 Analysis Services 服务器。 下图说明用于本机和 HTTP 连接的导航路径。 下图说明用于本机和 HTTP 连接的导航路径。  
@@ -213,7 +212,7 @@ PS SQLSERVER\sqlas\http_ds\http%3A%2F%2Flocalhost%2olap%2msmdpump%2Edll:> dir
   
  您应该看到以下连接：程序集、数据库、角色和跟踪。 如果您无法看到这些连接的内容，则检查 OLAP 虚拟目录上的身份验证设置。 请确保禁用了匿名访问。 如果您在使用 Windows 身份验证，则应确保您的 Windows 用户帐户对该 Analysis Services 实例具有管理权限。  
   
-###  <a name="bkmk_admin"></a>管理服务  
+###  <a name="administer-the-service"></a><a name="bkmk_admin"></a>管理服务  
  验证服务正在运行。 返回 SQL Server 服务的状态、名称和显示名称，包括 Analysis Services (MSSQLServerOLAPService) 和数据库引擎。  
   
 ```powershell
@@ -232,25 +231,22 @@ Get-Process msmdsrv
 Restart-Service mssqlserverolapservice  
 ```  
   
-###  <a name="bkmk_help"></a>获取 Analysis Services PowerShell 的帮助  
+###  <a name="get-help-for-analysis-services-powershell"></a><a name="bkmk_help"></a>获取 Analysis Services PowerShell 的帮助  
  使用以下任何 cmdlet 可以验证 cmdlet 可用性并且获取有关服务、进程和对象的详细信息。  
   
-1.  
-  `Get-Help` 返回针对 Analysis Services cmdlet 的内置帮助，包括示例：  
+1.  `Get-Help` 返回针对 Analysis Services cmdlet 的内置帮助，包括示例：  
   
     ```powershell
     Get-Help invoke-ascmd -Examples  
     ```  
   
-2.  
-  `Get-Command` 返回由 11 个 Analysis Services PowerShell cmdlet 组成的列表：  
+2.  `Get-Command` 返回由 11 个 Analysis Services PowerShell cmdlet 组成的列表：  
   
     ```powershell
     Get-Command -module SQLASCmdlets  
     ```  
   
-3.  
-  `Get-Member` 返回服务或进程的属性或方法。  
+3.  `Get-Member` 返回服务或进程的属性或方法。  
   
     ```powershell
     Get-Service mssqlserverolapservice | Get-Member -Type Property  
@@ -264,16 +260,14 @@ Restart-Service mssqlserverolapservice
     Get-Process msmdsrv | Get-Member -Type Property  
     ```  
   
-4.  
-  `Get-Member` 也可用于返回对象的属性或方法（例如，针对服务器对象的 AMO 方法），使用 SQLAS 提供程序可以指定服务器实例。  
+4.  `Get-Member` 也可用于返回对象的属性或方法（例如，针对服务器对象的 AMO 方法），使用 SQLAS 提供程序可以指定服务器实例。  
   
     ```
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = | Get-Member -Type Method  
     ```  
   
-5.  
-  `Get-PSdrive` 返回当前安装的提供程序的列表。 如果您导入了 SQLPS 模块，将会在该列表中看到 `SQLServer` 提供程序（SQLAS 是 SQLServer 提供程序的一部分并且永远不会单独出现在该列表中）：  
+5.  `Get-PSdrive` 返回当前安装的提供程序的列表。 如果您导入了 SQLPS 模块，将会在该列表中看到 `SQLServer` 提供程序（SQLAS 是 SQLServer 提供程序的一部分并且永远不会单独出现在该列表中）：  
   
     ```powershell
     Get-PSDrive  
@@ -282,6 +276,6 @@ Restart-Service mssqlserverolapservice
 ## <a name="see-also"></a>另请参阅  
  [安装 SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
  [使用 PowerShell 管理表格模型（博客）](https://go.microsoft.com/fwlink/?linkID=227685)   
- [配置 HTTP 访问 Internet Information Services &#40;IIS 上的 Analysis Services&#41; 8。0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

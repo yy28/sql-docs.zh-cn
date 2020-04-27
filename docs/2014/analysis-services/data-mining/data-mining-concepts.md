@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a054e59a830895d43d861e6d6533ad5bb876c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174511"
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
@@ -38,13 +38,13 @@ ms.locfileid: "78174511"
 
 -   **预测**：估计销售量、预测服务器负载或服务器停机时间
 
--   **风险和概率**：选择目标邮件的最佳客户、确定风险方案的可能突破点、将概率分配给诊断或其他结果
+-   **风险和概率**：选择目标邮递的最佳客户、确定风险方案的可能保本点、将概率分配给诊断或其他结果
 
--   **建议**：确定哪些产品有可能一起销售，并生成建议
+-   **建议**：确定哪些产品有可能一起销售并生成建议
 
--   **查找序列**：分析购物车中的客户选择，并预测下一个可能的事件
+-   **查找序列**：分析购物车中的客户选择，并预测接下来可能发生的事件
 
--   **分组**：将客户或事件划分到相关项目的群集中，分析和预测相关性
+-   **分组**：将客户或事件划分到相关的项目分类，分析和预测相关性
 
  生成挖掘模型是大型过程的一部分，此过程包括从提出相关数据问题并创建模型以解答这些问题到将模型部署到工作环境的所有事情。 此过程可以使用下列六个基本步骤进行定义：
 
@@ -54,7 +54,7 @@ ms.locfileid: "78174511"
 
 3.  [浏览数据](#ExploringData)
 
-4.  [构建模型](#BuildingModels)
+4.  [生成模型](#BuildingModels)
 
 5.  [浏览和验证模型](#ValidatingModels)
 
@@ -70,7 +70,7 @@ ms.locfileid: "78174511"
 
  有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具应用于业务方案的示例，请参阅 [数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)。
 
-##  <a name="DefiningTheProblem"></a>定义问题
+##  <a name="defining-the-problem"></a><a name="DefiningTheProblem"></a> 定义问题
  与以下关系图的突出显示相同，数据挖掘过程的第一步就是明确定义问题，并考虑可以何种方式利用数据来解答该问题。
 
  ![数据挖掘的第一个步骤：定义问题](../media/dmprocess-defining.gif "数据挖掘的第一个步骤：定义问题")
@@ -93,7 +93,7 @@ ms.locfileid: "78174511"
 
  此外，还需要考虑如何将模型结果纳入用于度量业务进度的关键绩效指标 (KPI)。
 
-##  <a name="PreparingData"></a> 准备数据
+##  <a name="preparing-data"></a><a name="PreparingData"></a> 准备数据
  如以下关系图中突出显示的那样，数据挖掘过程的第二步就是合并和清除 [定义问题](#DefiningTheProblem) 步骤中标识的数据。
 
  ![数据挖掘的第二个步骤：准备数据](../media/dmprocess-preparing.gif "数据挖掘的第二个步骤：准备数据")
@@ -106,11 +106,11 @@ ms.locfileid: "78174511"
 
 -   [Master Data Services 概述](../../master-data-services/master-data-services-overview-mds.md)
 
--   [“数据库引擎服务”](../../data-quality-services/data-quality-services.md)
+-   [数据库引擎服务](../../data-quality-services/data-quality-services.md)
 
  需要特别注意的是用于数据挖掘的数据不必存储在联机分析处理 (OLAP) 多维数据集中，或者甚至不必存储在关系数据库中，但是您可以将它们作为数据源使用。 您可以使用已被定义为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源的任何数据源执行数据挖掘。 这些数据源可以包括文本文件、Excel 工作簿或来自其他外部提供程序的数据。 有关详细信息，请参阅[&#40;SSAS 多维&#41;支持的数据源](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。
 
-##  <a name="ExploringData"></a>浏览数据
+##  <a name="exploring-data"></a><a name="ExploringData"></a>浏览数据
  如以下关系图中突出显示的那样，数据挖掘过程的第三步就是浏览已准备的数据。
 
  ![数据挖掘的第三个步骤：浏览数据](../media/dmprocess-exploring.gif "数据挖掘的第三个步骤：浏览数据")
@@ -125,15 +125,14 @@ ms.locfileid: "78174511"
 
  请注意，在创建模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还会针对该模型中包含的数据自动创建统计摘要，您可以进行查询以便用于报告或进一步分析。 有关详细信息，请参阅 [数据挖掘查询](data-mining-queries.md)。
 
-##  <a name="BuildingModels"></a>生成模型
+##  <a name="building-models"></a><a name="BuildingModels"></a> 生成模型
  如以下关系图中突出显示的那样，数据挖掘过程的第四步就是生成一个或多个挖掘模型。 您将使用从 [浏览数据](#ExploringData) 步骤中获得的知识来帮助定义和创建模型。
 
  ![数据挖掘的第四个步骤：生成挖掘模型](../media/dmprocess-building.gif "数据挖掘的第四个步骤：生成挖掘模型")
 
  通过创建挖掘结构定义要使用的数据列。 将挖掘结构链接到数据源，但只有对挖掘结构进行处理后，该结构才会实际包含数据。 处理挖掘结构时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 生成可用于分析的聚合信息以及其他统计信息。 基于该结构的所有挖掘模型均可使用该信息。 有关挖掘结构如何与挖掘模型关联的详细信息，请参阅[逻辑体系结构（Analysis Services - 数据挖掘）](logical-architecture-analysis-services-data-mining.md)。
 
- 在处理结构和模型之前，数据挖掘模型也只是一个容器，它指定用于输入的列、要预测的属性以及指示算法如何处理数据的参数。 处理模型通常称为“定型 **”。 定型表示向结构中的数据应用特定数学算法以便提取模式的过程。 在定型过程中找到的模式取决于选择的定型数据、所选算法以及如何配置该算法。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含多种不同算法，每种算法适合不同的任务类型，并且每种算法创建不同的模型类型。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的算法列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)。
+ 在处理结构和模型之前，数据挖掘模型也只是一个容器，它指定用于输入的列、要预测的属性以及指示算法如何处理数据的参数。 处理模型通常称为“定型 **”。 定型表示向结构中的数据应用特定数学算法以便提取模式的过程。 在定型过程中找到的模式取决于选择的定型数据、所选算法以及如何配置该算法。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含多种不同算法，每种算法适合不同的任务类型，并且每种算法创建不同的模型类型。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的算法列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)。
 
  此外，还可以使用参数调整每种算法，并向定型数据应用筛选器，以便仅使用数据子集，进而创建不同结果。 在通过模型传递数据之后，即可查询挖掘模型对象包含的摘要和模式，并将其用于预测。
 
@@ -141,29 +140,27 @@ ms.locfileid: "78174511"
 
  务必记住，只要数据发生更改，必须更新数据挖掘结构和挖掘模型。 重新处理挖掘结构以进行更新时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 检索源中的数据，包括任何新数据（如果动态更新源），并重新填充挖掘结构。 如果您具有基于结构的模型，则可以选择更新基于该结构的模型，这表示可以根据新数据保留模型，或者也可以使模型保持原样。 有关详细信息，请参阅[处理要求和注意事项（数据挖掘）](processing-requirements-and-considerations-data-mining.md)。
 
-##  <a name="ValidatingModels"></a>浏览和验证模型
+##  <a name="exploring-and-validating-models"></a><a name="ValidatingModels"></a> 浏览和验证模型
  如以下关系图中突出显示的那样，数据挖掘过程的第五步就是浏览您已经生成的挖掘模型并测试其有效性。
 
  ![数据挖掘的第五个步骤：验证挖掘模型](../media/dmprocess-validating.gif "数据挖掘的第五个步骤：验证挖掘模型")
 
  在将模型部署到生产环境之前，您需要测试模型的性能。 此外，在生成模型时，您通常需要使用不同配置创建多个模型，并对所有这些模型进行测试，以便查看哪个模型为您的问题和数据生成最佳结果。
 
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可帮助您将数据分成定型数据集和测试数据集，使您可以更准确地评估基于相同数据的所有模型的性能。 您使用定型数据集生成模型，并通过创建预测查询来使用测试数据集测试模型的准确性。 在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中，生成挖掘模型时可自动执行该分区操作。 有关详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)生成数据挖掘项目。
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可帮助您将数据分成定型数据集和测试数据集，使您可以更准确地评估基于相同数据的所有模型的性能。 您使用定型数据集生成模型，并通过创建预测查询来使用测试数据集测试模型的准确性。 在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中，生成挖掘模型时可自动执行该分区操作。 有关详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)生成数据挖掘项目。
 
- 可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中数据挖掘设计器内的查看器来浏览算法发现的趋势和模式。 有关详细信息，请参阅 [数据挖掘模型查看器](data-mining-model-viewers.md)。 还可以使用该设计器中的工具（如，提升图和分类矩阵）来测试模型创建预测的性能。 若要验证模型是否特定于您的数据，或者是否可用于推断总体，您可以使用称为“交叉验证 ** ”的统计方法来自动创建数据子集，并参照每个子集测试模型。 有关详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)生成数据挖掘项目。
+ 可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中数据挖掘设计器内的查看器来浏览算法发现的趋势和模式。 有关详细信息，请参阅 [数据挖掘模型查看器](data-mining-model-viewers.md)。 还可以使用该设计器中的工具（如，提升图和分类矩阵）来测试模型创建预测的性能。 若要验证模型是否特定于你的数据，或者是否可用于推断总体，可以使用称为交叉验证** 的统计方法来自动创建数据子集，并参照每个子集测试模型。 有关详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)生成数据挖掘项目。
 
  如果您在 [生成模型](#BuildingModels) 步骤中创建的所有模型都无法正常工作，则必须返回到此过程的上一个步骤，并重新定义问题或重新调查原始数据集中的数据。
 
-##  <a name="DeployingandUpdatingModels"></a>部署和更新模型
+##  <a name="deploying-and-updating-models"></a><a name="DeployingandUpdatingModels"></a>部署和更新模型
  如下面的关系图中突出显示的那样，数据挖掘过程的最后一步是将性能最佳的模型部署到生产环境。
 
  ![数据挖掘的第六个步骤：部署挖掘模型](../media/dmprocess-deploying.gif "数据挖掘的第六个步骤：部署挖掘模型")
 
  当生产环境中部署了挖掘模型之后，便可根据您的需求执行许多任务。 下面是一些可以执行的任务：
 
--   使用这些模型创建预测，您以后可以使用这些预测进行业务决策。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供可用于创建预测查询的 DMX 语言以及帮助生成查询的预测查询生成器。 有关详细信息，请参阅[数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)。
+-   使用这些模型创建预测，您以后可以使用这些预测进行业务决策。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供可用于创建预测查询的 DMX 语言以及帮助生成查询的预测查询生成器。 有关详细信息，请参阅[数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)。
 
 -   创建内容查询以检索模型中的统计信息、规则或公式。 有关详细信息，请参阅 [数据挖掘查询](data-mining-queries.md)。
 

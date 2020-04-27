@@ -15,19 +15,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206026"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>“执行 SQL Server 代理作业”任务（维护计划）
-  使用 "**执行 SQL Server 代理作业任务**" 对话框可以执行维护计划中的 Microsoft SQL Server 代理作业。 如果所选连接上没有 SQL Server 代理作业，此选项将不可用。  
+  使用 **“‘执行 SQL Server 代理作业’任务”** 对话框可以执行维护计划中的 Microsoft SQL Server 代理作业。 如果所选连接上没有 SQL Server 代理作业，此选项将不可用。  
   
  此任务将使用 **.sp_start_job** 语句。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **连接**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -36,7 +36,7 @@ ms.locfileid: "68206026"
  **可用的 SQL 代理作业**  
  选择要执行的作业。 该网格提供用于标识作业的 **“作业名称”** 和 **“说明”** 。  
   
- **查看 T-sql**  
+ **查看 T-SQL**  
  根据所选选项，查看针对此任务的服务器执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 > [!NOTE]  
@@ -52,24 +52,24 @@ ms.locfileid: "68206026"
  **“刷新”**  
  刷新可用服务器的列表。  
   
- **输入用于登录到服务器的信息**  
+ **输入登录服务器所需的信息**  
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 Microsoft Windows 身份验证连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]到的实例。  
+ 使用 Microsoft Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
- **使用特定的用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
+ **使用特定用户名和密码**  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
- **权限**  
+ **密码**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
+ [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
  [创建作业](../../ssms/agent/create-a-job.md)   
- [sp_start_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
+ [sp_start_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
   
   

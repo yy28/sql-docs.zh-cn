@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206986"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
@@ -37,9 +37,9 @@ ms.locfileid: "68206986"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   ALTER PARTITION FUNCTION 只能用于将一个分区拆分为两个，或将两个分区合并为一个。 若要更改表或索引的分区方式（例如，从 10 个分区变为 5 个分区），可以使用下列选项之一：  
   
@@ -58,9 +58,9 @@ ms.locfileid: "68206986"
   
 -   ALTER PARTITION FUNCTION 所影响的全部文件组都必须处于联机状态。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  可以使用以下任意权限执行 ALTER PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -69,7 +69,7 @@ ms.locfileid: "68206986"
   
 -   对包含创建分区函数所在的数据库的服务器具有 CONTROL SERVER 或 ALTER ANY DATABASE 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **修改分区函数：**  
   
  无法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]执行此特定操作。 若要修改某个分区函数，您必须先删除该函数，然后通过创建分区向导使用所需属性创建一个新函数。 有关详细信息，请参阅  
@@ -84,7 +84,7 @@ ms.locfileid: "68206986"
   
 4.  在 **“删除对象”** 对话框中，确保已选择正确的分区函数，然后单击 **“确定”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>将一个分区拆分为两个分区  
   

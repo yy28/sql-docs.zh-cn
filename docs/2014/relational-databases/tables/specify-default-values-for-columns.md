@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196717"
 ---
 # <a name="specify-default-values-for-columns"></a>指定列的默认值
@@ -41,9 +41,9 @@ ms.locfileid: "68196717"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果“默认值”**** 字段中的项替换绑定的默认值（以不带圆括号的形式显示），则将提示你解除对默认值的绑定，并将其替换为新的默认值。  
   
@@ -53,16 +53,16 @@ ms.locfileid: "68196717"
   
 -   若要输入对象/函数，请输入对象/函数的名称并且不要用引号将名称括起来。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>指定列的默认值  
   
-1.  在“对象资源管理器”  中，右键单击要更改其小数位数的列所在的表，再单击“设计”  。  
+1.  在“对象资源管理器”**** 中，右键单击要更改其小数位数的列所在的表，再单击“设计”****。  
   
 2.  选择要为其指定默认值的列。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "68196717"
     > [!NOTE]  
     >  若要输入数值默认值，请输入该数字。 对于对象或函数，请输入其名称。 对于字母数字默认值，请输入该值，两边用单引号引起来。  
   
-4.  在“文件”  菜单上，单击“保存”  以保存表名  。  
+4.  在“文件”菜单上，单击“保存表名称”********__。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>指定列的默认值  
   
@@ -95,6 +95,6 @@ ms.locfileid: "68196717"
   
     ```  
   
- 有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+ 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
   
 ###  <a name="TsqlExample"></a>  

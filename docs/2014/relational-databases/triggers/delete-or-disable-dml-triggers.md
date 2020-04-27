@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196532"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>删除或禁用 DML 触发器
@@ -41,9 +41,9 @@ ms.locfileid: "68196532"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   删除了触发器后，它就从当前数据库中删除了。 它所基于的表和数据不会受到影响。 删除表将自动删除其上的所有触发器。  
   
@@ -51,14 +51,14 @@ ms.locfileid: "68196532"
   
 -   禁用触发器不会删除该触发器。 该触发器仍然作为对象存在于当前数据库中。 但是，当执行任意 INSERT、UPDATE 或 DELETE 语句（在其上对触发器进行了编程）时，触发器将不会激发。 已禁用的触发器可以被重新启用。 启用触发器并不是要重新创建它。 触发器将以最初创建它时的方式激发。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  若要删除 DML 触发器，要求对要定义触发器的表或视图具有 ALTER 权限。  
   
  若要禁用或启用 DML 触发器，用户必须至少对为其创建触发器的表或视图具有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-a-dml-trigger"></a>删除 DML 触发器  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68196532"
   
 4.  若要启用触发器，请单击 **“启用”** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-dml-trigger"></a>删除 DML 触发器  
   

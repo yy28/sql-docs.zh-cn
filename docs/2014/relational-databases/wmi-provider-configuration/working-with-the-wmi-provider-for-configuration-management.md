@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195774"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>使用 WMI 提供程序进行配置管理
@@ -41,7 +41,7 @@ ms.locfileid: "68195774"
 \\.\root\Microsoft\SqlServer\ComputerManagement12\instance_name  
 ```  
   
- 其中 `instance_name` 默认为 `MSSQLSERVER` 默认安装中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 其中 `instance_name` 默认为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认安装中的 `MSSQLSERVER`。  
   
  **注意：** 如果要通过 Windows 防火墙进行连接，则需要确保计算机配置正确。 请[参阅 MSDN 网站](https://go.microsoft.com/fwlink/?linkid=15426)上[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Management Instrumentation 文档中的 "通过 Windows 防火墙连接" 一文。  
   

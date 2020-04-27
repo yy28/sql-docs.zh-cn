@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211688"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
@@ -43,14 +43,14 @@ ms.locfileid: "68211688"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  使用 **sys.sql_expression_dependencies** 查找函数的依赖关系要求对该数据库具有 VIEW DEFINITION 权限，以及对数据库具有 **sys.sql_expression_dependencies** 的 SELECT 权限。 系统对象定义（如 OBJECT_DEFINITION 中返回的对象定义）是公开可见的。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>显示用户定义函数的属性  
   
@@ -66,9 +66,9 @@ ms.locfileid: "68211688"
   
     -   Aggregate 函数  
   
-4.  右键单击要查看其属性的函数，然后选择“属性”****。  
+4.  右键单击要查看其属性的函数，然后选择“属性”  。  
   
-     以下属性将显示在“函数属性 - function_name”对话框**** __。  
+     “函数属性 - function_name”对话框中将显示以下属性   。  
   
      **Database**  
      包含此函数的数据库的名称。  
@@ -82,19 +82,19 @@ ms.locfileid: "68211688"
      **创建日期**  
      显示函数的创建日期。  
   
-     **Execute As**  
+     **执行身份**  
      执行该函数的上下文。  
   
      **名称**  
      当前函数的名称。  
   
-     **模式**  
+     **架构**  
      显示函数所属的架构。  
   
      **系统对象**  
      指示该函数是否为系统对象。 值为 True 和 False。  
   
-     **ANSI Null**  
+     **ANSI NULLs**  
      指示创建对象时是否选择了 ANSI NULLs 选项。  
   
      **已加密**  
@@ -109,7 +109,7 @@ ms.locfileid: "68211688"
      **架构已绑定**  
      指示该函数是否已绑定到架构。 值为 True 和 False。 有关绑定到架构的函数的信息，请参阅 [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql) 的 SCHEMABINDING 部分。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>获取函数的定义和属性  
   

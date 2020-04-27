@@ -21,10 +21,10 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6b9b6e62d0f69c5182ad69e21cb46800d4ddcc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72909401"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_&lt;capture_instance&gt; （transact-sql）
@@ -60,12 +60,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  此参数可以采用两种可能的含义之一，具体取决于在调用@closed_high_end_point sp_cdc_generate_wrapper_function 时为生成包装函数的 create script 而选择的值：  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      结果集中仅包含 cdc. <capture_instance>_CT 更改表中的关联提交时间小于或等于 end_time 的行。  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      结果集中仅包含 cdc. capture_instance_CT 更改表中具有严格小于 end_time 的关联提交时间的行。  
   
@@ -76,7 +75,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  可以是下列选项之一：  
   
- 本应返回的所有记录的总数，  
+ all  
  返回指定 LSN 范围内的所有更改。 对于由于更新操作而导致的更改，此选项仅返回在应用更新后包含新值的行。  
   
  all update old  
@@ -86,10 +85,10 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 |列名称|列类型|说明|  
 |-----------------|-----------------|-----------------|  
-|__CDC_STARTLSN|**binary （10）**|与更改关联的事务的提交 LSN。 在同一事务中提交的所有更改将共享同一个提交 LSN。|  
-|__CDC_SEQVAL|**binary （10）**|用于对事务中的行更改进行排序的序列值。|  
+|__CDC_STARTLSN|**binary(10)**|与更改关联的事务的提交 LSN。 在同一事务中提交的所有更改将共享同一个提交 LSN。|  
+|__CDC_SEQVAL|**binary(10)**|用于对事务中的行更改进行排序的序列值。|  
 |\<> 的@column_list列|**随着**|在调用以生成用于创建包装函数的脚本时 sp_cdc_generate_wrapper_function 在*column_list*参数中标识的列。|  
-|__CDC_OPERATION|**nvarchar （2）**|操作代码，用于指示将行应用到目标环境时所必需的操作。 它将根据调用中提供的参数*row_filter_option*值而有所不同：<br /><br /> *row_filter_option* = "all"<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> *row_filter_option* = "all update old"<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> 'UO' - 更新操作的旧值|  
+|__CDC_OPERATION|**nvarchar(2)**|操作代码，用于指示将行应用到目标环境时所必需的操作。 它将根据调用中提供的参数*row_filter_option*值而有所不同：<br /><br /> *row_filter_option* = "all"<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> *row_filter_option* = "all update old"<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> 'UO' - 更新操作的旧值|  
 |\<> 的@update_flag_list列|**bit**|通过将 _uflag 追加到列名称的末尾所命名的位标记。 当 "UO" 的值为 " \_" _CDC_OPERATION 时，标记始终设置为 NULL。 当\__CDC_OPERATION 为 "UN" 时，如果更新生成对相应列的更改，则将其设置为1。 否则为 0。|  
   
 ## <a name="remarks"></a>备注  
@@ -113,6 +112,6 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>另请参阅  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

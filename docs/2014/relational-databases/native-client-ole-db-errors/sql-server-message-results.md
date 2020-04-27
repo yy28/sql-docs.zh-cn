@@ -1,5 +1,5 @@
 ---
-title: SQL Server 消息结果 |Microsoft Docs
+title: SQL Server 消息结果 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff604f4c5d66a5742868e25ba05ca6b4528ddb1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206708"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 消息结果
@@ -38,7 +38,7 @@ ms.locfileid: "68206708"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供程序返回 S_OK 并在执行多[!INCLUDE[tsql](../../includes/tsql-md.md)]个语句或使用者执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序成员函数时提供一条或多条信息性消息。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每次执行成员函数后，无论返回代码的值、是否存在返回的 IRowset 或 IMultipleResults 接口引用，或者是否缺少返回的**** 或**** 接口引用或受影响的行的计数，Native Client OLE DB 提供程序使用者允许动态指定查询文本。  
+ 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每次执行成员函数后，无论返回代码的值、是否存在返回的 IRowset 或 IMultipleResults 接口引用，或者是否缺少返回的**IRowset**或**IMultipleResults**接口引用或受影响的行的计数，Native Client OLE DB 提供程序使用者允许动态指定查询文本。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误](errors.md)  

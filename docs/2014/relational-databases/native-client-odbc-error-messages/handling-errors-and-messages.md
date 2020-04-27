@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207096"
 ---
 # <a name="handling-errors-and-messages"></a>处理错误和消息
@@ -39,7 +39,7 @@ ms.locfileid: "68207096"
   
  用于 C [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的原始本机 API db-library 允许应用程序安装回调错误处理和消息处理函数，这些函数将返回错误或消息。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（如 PRINT、RAISERROR、DBCC 和 SET）将其结果返回到 DB-Library 消息处理程序函数，而不是结果集。 但是，ODBC API 不具备这种回调功能。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序检测到返回的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息时，它会将 ODBC 返回代码设置为 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 并将消息作为一个或多个诊断记录返回。 因此，ODBC 应用程序必须仔细测试这些返回代码，并调用**SQLGetDiagRec**来检索消息数据。  
   
- 有关跟踪错误的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 有关中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]添加的错误跟踪的增强功能的信息，请参阅[访问扩展事件日志中的诊断信息](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
+ 有关跟踪错误的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中添加的错误跟踪的增强功能的信息，请参阅[访问扩展事件日志中的诊断信息](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -54,6 +54,6 @@ ms.locfileid: "68207096"
 -   [错误消息](error-messages.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

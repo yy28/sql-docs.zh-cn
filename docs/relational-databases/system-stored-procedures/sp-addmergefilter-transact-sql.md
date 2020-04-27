@@ -16,10 +16,10 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769181"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
@@ -74,7 +74,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`指定要添加的筛选器的类型。 *filter_type*为**tinyint**，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**1**|仅为联接筛选器。 需要它来支持 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器。|  
 |**2**|仅为逻辑记录关系。|  
@@ -107,9 +107,9 @@ sp_addmergefilter [ @publication = ] 'publication'
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_addmergefilter**。  
   
 ## <a name="see-also"></a>另请参阅  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [定义和修改合并项目间的联接筛选器](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
+ [定义项目](../../relational-databases/replication/publish/define-an-article.md)   
+ [定义和修改合并项目之间的联接筛选器](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [联接筛选器](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

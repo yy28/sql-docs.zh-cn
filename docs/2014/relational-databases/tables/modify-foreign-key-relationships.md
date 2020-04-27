@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196842"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
@@ -40,25 +40,23 @@ ms.locfileid: "68196842"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  新的外键列必须与和其相关的主键列的数据类型和大小相匹配，但以下情况例外：  
   
--   
-  `char` 列或 `sysname` 列可以与 `varchar` 列相关。  
+-   `char` 列或 `sysname` 列可以与 `varchar` 列相关。  
   
--   
-  `binary` 列可以与 `varbinary` 列相关。  
+-   `binary` 列可以与 `varbinary` 列相关。  
   
 -   别名数据类型可以与其基类型相关。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>修改外键  
   
@@ -143,7 +141,7 @@ ms.locfileid: "68196842"
   
 4.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改外键**  
   
  若要使用 Transact-SQL 修改 FOREIGN KEY 约束，必须先删除现有的 FOREIGN KEY 约束，然后再用新定义重新创建该约束。 有关详细信息，请参阅 [Delete Foreign Key Relationships](delete-foreign-key-relationships.md) 和 [Create Foreign Key Relationships](create-foreign-key-relationships.md)。  

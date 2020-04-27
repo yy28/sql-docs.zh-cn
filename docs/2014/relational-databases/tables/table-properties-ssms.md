@@ -17,13 +17,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196710"
 ---
-# <a name="table-properties"></a>表的属性
+# <a name="table-properties"></a>表属性
   本主题介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“表属性”对话框中显示的表属性。 有关如何显示这些属性的详细信息，请参阅 [查看表定义](view-the-table-definition.md)。  
   
  **本主题内容**  
@@ -36,7 +36,7 @@ ms.locfileid: "68196710"
   
 4.  [“存储”页](#Storage)  
   
-##  <a name="GeneralPage"></a> “常规”页  
+##  <a name="general-page"></a><a name="GeneralPage"></a> “常规”页  
  **Database**  
  包含此表的数据库的名称。  
   
@@ -80,12 +80,12 @@ ms.locfileid: "68196710"
  DISABLE  
  在大多数情况下禁止锁升级。 表级别的锁未完全禁止。 例如，当扫描在可序列化隔离级别下没有聚集索引的表时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须使用表锁来保证数据的完整性。  
   
- **表已复制**  
+ **对表进行复制**  
  指示是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制将表复制到其他数据库。 可能的值为 `True` 或 `False`。  
   
-##  <a name="ChangeTracking"></a>更改跟踪页面  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a>更改跟踪页面  
  **更改跟踪**  
- 指示是否对相应的表启用了更改跟踪。 默认值是 `False`。  
+ 指示是否对相应的表启用了更改跟踪。 默认值为 `False`。  
   
  只有对数据库启用了更改跟踪，此选项才可用。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68196710"
   
  有关更改跟踪的详细信息，请参阅[关于更改跟踪 (SQL Server)](../track-changes/about-change-tracking-sql-server.md)。  
   
-##  <a name="FileTable"></a>FileTable 页  
+##  <a name="filetable-page"></a><a name="FileTable"></a>FileTable 页  
  显示与 FileTable 相关的表的属性。 有关详细信息，请参阅 [FileTables (SQL Server)](../blob/filetables-sql-server.md)。  
   
  **FileTable 名称列排序规则**  
@@ -105,10 +105,10 @@ ms.locfileid: "68196710"
  **FileTable 目录名称**  
  FileTable 的根文件夹。  
   
- **已启用 FileTable 命名空间**  
+ **启用 FileTable 命名空间**  
  在为 `True` 时，该值指示该表为 FileTable。 如果您将该值更改为 `False`，则是在将 FileTable 更改为普通用户表。 如果您以后想要将该表更改回 FileTable，则该表将必须首先通过 FileTable 一致性检查，之后转换才会成功。  
   
-##  <a name="Storage"></a>存储页  
+##  <a name="storage-page"></a><a name="Storage"></a>存储页  
  显示所选表中与存储相关的属性。  
   
 ### <a name="compression"></a>压缩  
@@ -131,8 +131,8 @@ ms.locfileid: "68196710"
  **文件**  
  包含该表的文件组的名称。  
   
- **表已分区**  
- 可能的值为 `True` 和 `False`。  
+ **已对表进行分区**  
+ 可能值为 `True` 和 `False`。  
   
  **Filestream 文件组**  
  如果该表包含具有 FILESTREAM 属性的 `varbinary(max)` 列，则指定 FILESTREAM 数据文件组的名称。 默认值为默认的 FILESTREAM 数据文件组。  
@@ -171,6 +171,6 @@ ms.locfileid: "68196710"
   
 ## <a name="see-also"></a>另请参阅  
  [查看表定义](view-the-table-definition.md)   
- [数据库引擎&#41;修改列 &#40;](../tables/modify-columns-database-engine.md)  
+ [修改列（数据库引擎）](../tables/modify-columns-database-engine.md)  
   
   

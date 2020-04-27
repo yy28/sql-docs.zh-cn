@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198927"
 ---
 # <a name="create-a-workload-group"></a>创建工作负荷组
@@ -27,19 +27,19 @@ ms.locfileid: "68198927"
   
 -   若要创建工作负荷组，请使用：  [SQL Server Management Studio](#CreWGProp)、[Transact-SQL](#CreWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
  对非对齐的分区表创建索引所占用的内存与涉及的分区数成正比。 如果所需的内存总量超过工作负荷组设置为每个查询设定的限制 (REQUEST_MAX_MEMORY_GRANT_PERCENT)，则这种索引创建可能会失败。 由于默认工作负荷组允许查询超过每个查询的限制，并在开始时使用所需的最低内存以便与 SQL Server 2005 保持兼容，因此，如果默认资源池配置了足够多的内存总量以运行此类查询，则用户或许能够在默认工作负荷组中运行相同的索引创建。  
   
  允许索引创建操作使用比最初授予的工作区内存多的工作区内存，以便提高性能。 这个特别处理由资源调控器支持，然而，最初授予及任何其他内存授予都受工作负荷组和资源池设置的限制。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  创建工作负荷组需要 CONTROL SERVER 权限。  
   
-##  <a name="CreWGProp"></a> 使用 SQL Server Management Studio 创建工作负荷组  
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreWGProp"></a> 使用 SQL Server Management Studio 创建工作负荷组  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至其中包含要修改的工作负荷组的资源池。  
@@ -56,7 +56,7 @@ ms.locfileid: "68198927"
   
 7.  若要保存更改，请单击 **“确定”** 。  
   
-##  <a name="CreWGTSQL"></a> 使用 Transact-SQL 创建工作负荷组  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreWGTSQL"></a> 使用 Transact-SQL 创建工作负荷组  
  **使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  运行 CREATE WORKLOAD GROUP 语句，指定要设置的属性值。  

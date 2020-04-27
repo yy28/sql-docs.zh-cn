@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68197768"
 ---
 # <a name="event-notifications"></a>事件通知
@@ -51,7 +51,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>事件通知概念  
  创建事件通知时，将会在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例和指定的目标服务之间打开一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话。 通常会话保持为打开状态，只要事件通知作为一个对象存在于服务器实例中。 在某些出错情况下，会话可以在删除事件通知之前关闭。 这些会话从不在事件通知之间共享。 每个事件通知都有自己的排他会话。 显式结束会话将阻止目标服务接收更多消息，下一次事件通知激发时，会话将不会重新打开。  
   
- 事件信息作为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 类型的变量传递给 `xml` 服务，它提供了有关事件的发生时间、受影响的数据库对象、涉及的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理语句的信息以及其他信息。 有关事件通知生成的 XML 架构的详细信息，请参阅 [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)。  
+ 事件信息作为 `xml` 类型的变量传递给 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务，它提供了有关事件的发生时间、受影响的数据库对象、涉及的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理语句的信息以及其他信息。 有关事件通知生成的 XML 架构的详细信息，请参阅 [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)。  
   
 ### <a name="event-notifications-vs-triggers"></a>事件通知与触发器  
  下表对触发器和事件通知进行了比较。  

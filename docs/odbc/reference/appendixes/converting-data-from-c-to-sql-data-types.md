@@ -1,5 +1,5 @@
 ---
-title: 将数据从 C 转换为 SQL 数据类型 |微软文档
+title: 将数据从 C 转换为 SQL 数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,39 +21,39 @@ ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8fb707e77df7d793277d4a23146adc980eede6fd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304656"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>将数据从 C 转换为 SQL 数据类型
-当应用程序调用**SQLExecute**或**SQLExecDirect**时，驱动程序从应用程序中的存储位置检索与**SQLBind参数**绑定的任何参数的数据。 当应用程序调用**SQLSetPos**时，驱动程序检索更新的数据，或从绑定**到 SQLBindCol**的列中添加操作。 对于执行时的数据参数，应用程序使用**SQLPutData**发送参数数据。 如有必要，驱动程序将数据从**SQLBind 参数**中*ValueType*参数指定的数据类型转换为**SQLBind 参数**中的*参数类型*参数指定的数据类型，然后将数据发送到数据源。  
+当应用程序调用**SQLExecute**或**SQLExecDirect**时，驱动程序将从应用程序中的存储位置检索与**SQLBindParameter**绑定的任何参数的数据。 当应用程序调用**SQLSetPos**时，驱动程序将从与**SQLBindCol**绑定的列中检索更新或添加操作的数据。 对于执行时数据参数，应用程序将参数数据与**SQLPutData**一起发送。 必要时，驱动程序将数据从**SQLBindParameter**中的*ValueType*参数指定的数据类型转换为**SQLBindParameter**中*ParameterType*参数指定的数据类型，然后将数据发送到数据源。  
   
- 下表显示了支持的从 ODBC C 数据类型到 ODBC SQL 数据类型的转换。 填充圆指示 SQL 数据类型的默认转换（当*ValueType*的值或SQL_DESC_CONCISE_TYPE描述符字段SQL_C_DEFAULT时，将转换数据的 C 数据类型）。 空心圆表示支持的转换。  
+ 下表显示了从 ODBC C 数据类型到 ODBC SQL 数据类型的支持转换。 实心圆圈表示 SQL 数据类型的默认转换（在 SQL_C_DEFAULT *ValueType*值或 SQL_DESC_CONCISE_TYPE 描述符字段时，数据将转换为 C 数据类型）。 空心圆表示支持的转换。  
   
- 转换数据的格式不受 Windows ® 国家/地区设置的影响。  
+ 转换后的数据的格式不受 Windows®的 "国家/地区" 设置的影响。  
   
  ![支持的转换：从 ODBC C 到 SQL 数据类型](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
   
- 以下各节中的表描述了驱动程序或数据源如何转换发送到数据源的数据;需要驱动程序来支持从所有 ODBC C 数据类型转换为他们支持的 ODBC SQL 数据类型。 对于给定的 ODBC C 数据类型，表的第一列在**SQLBind参数**中列出了*参数类型*参数的合法输入值。 第二列列出了驱动程序执行以确定是否可以转换数据的测试的结果。 第三列列出了 SQLExecDirect、SQLExecute、SQLBulk**操作****、SQLSetPos**或**SQLPutData**为每个结果返回的 SQLSTATE。 **SQLExecDirect** **SQLExecute** 仅当返回SQL_SUCCESS时，才会将数据发送到数据源。  
+ 以下各节中的表描述了驱动程序或数据源如何转换发送到数据源的数据;驱动程序需要支持从所有 ODBC C 数据类型到它们支持的 ODBC SQL 数据类型的转换。 对于给定的 ODBC C 数据类型，表的第一列列出了**SQLBindParameter**中*ParameterType*参数的合法输入值。 第二列列出驱动程序执行的测试结果，以确定是否可以转换数据。 第三列列出了**SQLExecDirect**、 **SQLExecute**、 **SQLBulkOperations**、 **SQLSetPos**或**SQLPutData**为每个结果返回的 SQLSTATE。 仅当返回 SQL_SUCCESS 时才将数据发送到数据源。  
   
- 如果**SQLBind 参数**中的*参数类型*参数包含未在给定 C 数据类型的表中显示的 ODBC SQL 数据类型的标识符，则**SQLBind参数**将返回 SQLSTATE 07006（受限数据类型属性冲突）。 如果*参数类型*参数包含特定于驱动程序的标识符，并且驱动程序不支持从特定的 ODBC C 数据类型转换为该驱动程序特定的 SQL 数据类型，**则 SQLBind参数**将返回 SQLSTATE HYC00（未实现可选功能）。  
+ 如果**SQLBindParameter**中的*ParameterType*参数包含的 ODBC SQL 数据类型的标识符不显示在给定 C 数据类型的表中，则**SQLBindParameter**将返回 SQLSTATE 07006 （受限制的数据类型属性冲突）。 如果*ParameterType*参数包含特定于驱动程序的标识符，并且该驱动程序不支持从特定 ODBC C 数据类型到该驱动程序特定的 SQL 数据类型的转换，则**SQLBINDPARAMETER**将返回 SQLSTATE HYC00 （未实现可选功能）。  
   
- 如果**SQLBind参数**中指定的*参数ValuePtr*和*StrLen_or_IndPtr*参数都是空指针，则该函数将返回 SQLSTATE HY009（无效使用空指针）。 尽管表中未显示，但应用程序会设置**SQLBind参数***StrLen_or_IndPtr*参数指向的长度/指示器缓冲区的值，或者**SQLPutData** *StrLen_or_IndPtr*参数的值SQL_NULL_DATA以指定 NULL SQL 数据值。 （StrLen_or_IndPtr*StrLen_or_IndPtr*参数对应于 APD 的SQL_DESC_OCTET_LENGTH_PTR字段。应用程序将这些值设置为SQL_NTS，以指定**SQLBind参数**或\* **SQLPutData**中的*DataPtr*中的\**参数ValuePtr*中的值（由 APD 的SQL_DESC_DATA_PTR字段指向）是一个空端字符串。  
+ 如果在**SQLBindParameter**中指定的*ParameterValuePtr*和*StrLen_or_IndPtr*参数均为 null 指针，则该函数将返回 SQLSTATE HY009 （null 指针的使用无效）。 尽管表中没有显示，但应用程序会将**SQLBindParameter**参数*StrLen_or_IndPtr*的长度/指示器*StrLen_or_IndPtr*缓冲区的值或**SQLPutData**的参数值设置为 SQL_NULL_DATA，以指定 NULL SQL 数据值。 （ *StrLen_or_IndPtr*参数对应于 APD 的 SQL_DESC_OCTET_LENGTH_PTR 字段。）应用程序将\*这些值设置为 SQL_NTS 以指定**SQLPutData**中**SQLBindParameter**或\* *DataPtr*的*ParameterValuePtr*中的值（由 APD 的 SQL_DESC_DATA_PTR 字段指向）为以 null 值结束的字符串。  
   
- 下表中使用了以下术语：  
+ 表中使用了以下术语：  
   
--   **数据字节长度**- 可用于发送到数据源的 SQL 数据字节数，无论数据在发送到数据源之前是否会被截断。 对于字符串数据，这不包括 null 终止字符的空间。  
+-   **数据的字节长度**-可发送到数据源的 SQL 数据的字节数，数据在发送到数据源之前是否会被截断。 对于字符串数据，这不包括 null 终止字符的空间。  
   
--   **列字节长度**- 将数据存储在数据源中所需的字节数。  
+-   **列字节长度**-在数据源中存储数据所需的字节数。  
   
--   **字符字节长度**- 以字符形式显示数据所需的最大字节数。 这是为[显示大小](../../../odbc/reference/appendixes/display-size.md)中的每个 SQL 数据类型定义的，但字符字节长度以字节为单位，而显示大小以字符为单位。  
+-   **字符字节长度**-以字符形式显示数据所需的最大字节数。 这是针对[显示大小](../../../odbc/reference/appendixes/display-size.md)中的每个 SQL 数据类型定义的，但字符字节长度不以字节为单位，而显示大小为字符。  
   
--   **数字数**- 用于表示数字的字符数，包括减号、小数点和指数（如果需要）。  
+-   **位数**-用于表示数字的字符数，包括减号、小数点和指数（如果需要）。  
   
--   **单词在**   
-     ***斜体***- SQL 语法的元素。 有关语法元素的语法，请参阅[附录 C：SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  
+-   **字词**   
+     ***斜体***-SQL 语法的元素。 有关语法元素的语法，请参阅 "[附录 C： SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)"。  
   
  本部分包含以下主题。  
   

@@ -11,15 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211151"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server 浏览器属性（“服务”选项卡）
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以服务的形式在服务器上运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器侦听对[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]资源的传入请求，并提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有关在计算机上安装的实例的信息。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以服务的形式在服务器上运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。  
   
  使用 **“SQL Server 浏览器属性”** 对话框中的 **“服务”** 选项卡可以查看下列选项。 除了 **“启动模式”** 以外，其他所有属性都是只读的。  
   
@@ -28,12 +27,12 @@ ms.locfileid: "68211151"
  显示此服务所使用的程序文件的位置。  
   
  **错误控制**  
- 1 指示 `SERVICE_ERROR_NORMAL`。 如果在计算机启动过程中无法启动该服务，则启动程序会记录该错误并显示一个弹出消息框，但仍会继续执行启动操作。 不能更改此值。  
+ 1 指示 `SERVICE_ERROR_NORMAL`。 如果在计算机启动过程中无法启动该服务，则启动程序会记录该错误并显示一个弹出消息框，但仍会继续执行启动操作。 此值不能更改。  
   
  **退出代码**  
  当发生错误时，错误号显示在此信息框中。 您可以通过在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库中搜索该号码获取相关信息来排除故障，或将该错误号提供给技术支持人员以获得帮助。  
   
- **主机名**  
+ **Host Name**  
  显示运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务的计算机或群集的名称。  
   
  **名称**  
@@ -43,8 +42,7 @@ ms.locfileid: "68211151"
  显示 Windows 进程 ID。  
   
  **服务类型**  
- 显示用于调用进程的服务的类型。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
+ 显示用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
   
  **启动模式**  
  对此服务设置以下选项：  
@@ -55,8 +53,8 @@ ms.locfileid: "68211151"
   
 -   已禁用：此服务无法启动。  
   
- **状态**  
- 指示此服务是正在运行、已停止还是已禁用。 “...****”指明状态更改是挂起的。  
+ **State**  
+ 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Browser 服务](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  

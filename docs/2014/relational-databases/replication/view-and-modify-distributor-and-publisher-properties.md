@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212020"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
@@ -39,28 +39,28 @@ ms.locfileid: "68212020"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [复制管理对象 (RMO)](#RMOProcedure)  
+     [复制管理对象（RMO）](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
--   对于运行低于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本的发布服务器，sysadmin  固定服务器角色中的用户可以在“订阅服务器”  页上注册订阅服务器。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开始，不再需要为复制显式注册订阅服务器。  
+-   对于运行低于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本的发布服务器，sysadmin**** 固定服务器角色中的用户可以在“订阅服务器”**** 页上注册订阅服务器。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开始，不再需要为复制显式注册订阅服务器。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  如果可能，请在运行时提示用户输入安全凭据。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>查看和修改分发服务器属性  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到分发服务器，然后展开服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”** 。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”**。  
   
-3.  在“分发服务器属性 - **分发服务器>”对话框中查看和修改属性。\<**  
+3.  在“分发服务器属性 - \<分发服务器>”对话框中查看和修改属性。****  
   
-    -   若要查看和修改分发数据库的属性，请在该对话框的“常规”页上单击该数据库的属性按钮 ( **...** )。   
+    -   若要查看和修改分发数据库的属性，请在该对话框的“常规”页上单击该数据库的属性按钮 (**...**)。****  
   
     -   若要查看和修改与分发服务器关联的发布服务器属性，请在该对话框的 **“发布服务器”** 页面上单击发布服务器的属性按钮 ( **...** )。  
   
@@ -68,21 +68,21 @@ ms.locfileid: "68212020"
   
     -   若要更改管理存储过程在发布服务器上执行以及在分发服务器上更新信息时所用帐户的密码，请在该对话框的 **“发布服务器”** 页面上的 **“密码”** 和 **“确认密码”** 框中输入新密码。 有关详细信息，请参阅[保护分发服务器的安全](security/secure-the-distributor.md)。  
   
-4.  根据需要修改属性，然后单击 **“确定”** 。  
+4.  根据需要修改属性，然后单击 **“确定”**。  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>查看和修改发布服务器属性  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，然后单击 **“发布服务器属性”** 。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“发布服务器属性”**。  
   
 3.  查看和修改 "**发布服务器属性- \<发布服务器 >** " 对话框中的属性。  
   
     -   **sysadmin** 固定服务器角色中的用户可以在 **“发布数据库”** 页上为复制启用数据库。 启用数据库并不会发布该数据库，而是允许该数据库的 **db_owner** 固定数据库角色中的任何用户在该数据库中创建一个或多个发布。  
   
-4.  根据需要修改属性，然后单击 **“确定”** 。  
+4.  根据需要修改属性，然后单击 **“确定”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式查看发布服务器和分发服务器属性。  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>查看分发服务器和分发数据库属性  
@@ -104,7 +104,7 @@ ms.locfileid: "68212020"
   
 4.  在分发服务器上，执行 [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) ，以便使用分发服务器更改发布服务器的属性。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本返回有关分发服务器和分发数据库的信息。  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
@@ -122,7 +122,7 @@ ms.locfileid: "68212020"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_password)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>查看和修改分发服务器属性  
   
@@ -173,7 +173,7 @@ ms.locfileid: "68212020"
 5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 方法。 为 *password* 参数传递新的密码值。  
   
     > [!IMPORTANT]  
-    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
+    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework 提供的[加密服务](https://go.microsoft.com/fwlink/?LinkId=34733)。  
   
 6.  （可选）执行下列步骤以更改每个使用该分发服务器的远程发布服务器上的密码：  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68212020"
   
     5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 方法。 为 *password* 参数传递步骤 5 中的新密码值。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>示例（RMO）  
  此示例显示如何更改分发和分发数据库属性。  
   
 > [!IMPORTANT]  
@@ -198,12 +198,12 @@ ms.locfileid: "68212020"
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
 ## <a name="see-also"></a>另请参阅  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [复制管理对象概念](concepts/replication-management-objects-concepts.md)   
  [禁用发布和分发](disable-publishing-and-distribution.md)   
- [“配置分发”](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [配置分发](configure-distribution.md)   
+ [复制管理对象概念](concepts/replication-management-objects-concepts.md)   
  [分发服务器和发布服务器信息脚本](administration/distributor-and-publisher-information-script.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [复制系统存储过程概念](concepts/replication-system-stored-procedures-concepts.md)   
  [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

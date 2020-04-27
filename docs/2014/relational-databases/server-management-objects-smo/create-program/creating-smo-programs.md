@@ -17,14 +17,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccf26cf30c53e3a336e842cbbffc1ff517075fef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198002"
 ---
 # <a name="creating-smo-programs"></a>创建 SMO 程序
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 对象的常规编程包括了所有对象共享的共有领域，例如运行方法、设置属性和操作集合。  
   
 |主题|说明|  

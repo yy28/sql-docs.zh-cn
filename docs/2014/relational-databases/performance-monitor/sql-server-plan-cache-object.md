@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210814"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server Plan Cache 对象
@@ -28,7 +28,7 @@ ms.locfileid: "68210814"
 |SQL Server Plan Cache 计数器|说明|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|高速缓存命中次数和查找次数的比率。|  
-|**Cache Object Counts**|高速缓存中高速缓存的对象数。|  
+|**缓存对象计数**|高速缓存中高速缓存的对象数。|  
 |**Cache Pages**|高速缓存对象所使用的 8 (KB) 页的数目。|  
 |**Cache Objects in use**|正在使用的缓存对象数。|  
   
@@ -44,8 +44,8 @@ ms.locfileid: "68210814"
 |**临时表和表变量**|与临时表和表变量相关的缓存信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [SQL Server Buffer Manager 对象](sql-server-buffer-manager-object.md)   
+ [服务器内存服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ [SQL Server，缓冲区管理器对象](sql-server-buffer-manager-object.md)   
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   
   
