@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f2e12e536cfaf91bab25e958ba279b072b39259
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071475"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>删除 PowerPivot 数据馈送库
@@ -24,9 +24,9 @@ ms.locfileid: "66071475"
   
 ### <a name="delete-a-data-feed-library"></a>删除数据馈送库  
   
-1.  单击 **“网站操作”**。  
+1.  单击 **“网站操作”** 。  
   
-2.  单击 **“网站设置”**。  
+2.  单击 **“网站设置”** 。  
   
 3.  在“网站管理”下单击 **“网站库和列表”**。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081562"
 ---
 # <a name="dmx-templates"></a>DMX 模板
@@ -98,7 +98,7 @@ ms.locfileid: "66081562"
   
 -   离散列值  
   
- **管理**  
+ **Management**  
   
  使用这些模板可执行 DMX 支持的任何管理任务，包括导入和导出模型、删除模型以及清除模型或数据结构。  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069328"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>选择要修改的分区（基于使用情况的优化向导）
@@ -31,7 +31,7 @@ ms.locfileid: "66069328"
  **分区名称**  
  显示分区的名称。  
   
- **数据源**  
+ **源**  
  显示用于为分区提供源数据的表或查询。  
   
  **聚合设计**  

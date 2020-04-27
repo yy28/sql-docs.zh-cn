@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070347"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>“关系对象”对话框（Analysis Services - 多维数据）
-  可以使用 **中的** “关系对象” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，从数据源中选择要设置主动缓存的表、视图或其他对象。 通过单击“存储选项”[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]**对话框的“通知”****选项卡上任意一个“指定跟踪表”****选项的省略号按钮 (**...**)，可以在 ** 中显示此对话框。  
+  可以使用 **中的** “关系对象” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，从数据源中选择要设置主动缓存的表、视图或其他对象。 通过单击“存储选项”**** 对话框的“通知”**** 选项卡上任意一个“指定跟踪表”**** 选项的省略号按钮 (**...**)，可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示此对话框。  
   
 ## <a name="options"></a>选项  
  **选择要为其设置主动缓存的关系对象**  

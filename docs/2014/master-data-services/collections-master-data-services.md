@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483547"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
@@ -36,9 +36,7 @@ ms.locfileid: "65483547"
 >  在创建集合前，必须为显式层次结构启用了实体。 有关详细信息，请参阅为[显式层次结构和集合启用实体 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。  
   
 ## <a name="subscription-views-for-collections"></a>集合的订阅视图  
- 显示集合的订阅视图有两种。 
-  **集合属性** 格式显示集合列表以及与集合相关的任何属性（如说明或所有者）。 
-  **“集合”** 格式显示所有集合中的所有成员以及每个成员权重和排序顺序。 有关详细信息，请参阅将[数据导出 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)。  
+ 显示集合的订阅视图有两种。 **集合属性** 格式显示集合列表以及与集合相关的任何属性（如说明或所有者）。 **“集合”** 格式显示所有集合中的所有成员以及每个成员权重和排序顺序。 有关详细信息，请参阅将[数据导出 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)。  
   
  如果为集合中的特定成员设置了权重值，则这些值在相关订阅视图中可用。  
   
@@ -47,12 +45,12 @@ ms.locfileid: "65483547"
 |任务说明|主题|  
 |----------------------|-----------|  
 |为显式层次结构和集合启用实体。|[为显式层次结构和集合启用实体 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|创建新集合。|[创建 &#40;Master Data Services 的集合&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|向现有集合添加成员。|[将成员添加到集合 &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|创建新集合。|[创建集合 (Master Data Services)](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|向现有集合添加成员。|[将成员添加到集合 (Master Data Services)](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
 -   [将数据导出 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   

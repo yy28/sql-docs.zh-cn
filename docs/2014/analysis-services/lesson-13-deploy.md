@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079142"
 ---
 # <a name="lesson-14-deploy"></a>第 14 课：部署
   在本课中，您将配置部署属性；同时指定在表格模式下运行的 Analysis Services 的部署服务器实例以及为您要部署的模型指定名称。 然后，将模型部署到该实例。 部署此模型之后，用户可以使用报表客户端应用程序连接到该模型。 若要了解详细信息，请参阅[表格模型解决方案部署（SSAS 表格）](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
   
- 本课预计完成时间：**5 分钟**  
+ 学完本课的估计时间： **5 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
- 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，应该已完成上一课：[第 13 课：在 Excel 中分析](lesson-12-analyze-in-excel.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，应该已完成上一课： [第 13 课：在 Excel 中分析](lesson-12-analyze-in-excel.md)。  
   
 ## <a name="deploy-the-model"></a>部署模型  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66079142"
   
 5.  在 "**多维数据集**名称" `Adventure Works Internet Sales Model`属性中，键入。  
   
-6.  验证选择，然后单击“确定”。****  
+6.  验证你的选择，并单击“确定”。****  
   
 #### <a name="to-deploy-the-adventure-works-internet-sales-tabular-model"></a>部署 Adventure Works Internet Sales 表格模型  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66079142"
      “部署”对话框将出现，并且显示模型中包括的元数据和每个表的部署状态。  
   
 ## <a name="conclusion"></a>结束语  
- 祝贺你！ 您已完成了创作和部署第一个 Analysis Services 表格模型的过程。 本教程已指导完成了创建表格模型时的最常见任务。 既然已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 来管理此模型、创建进程脚本和备份计划。 用户可以使用报表客户端应用程序（如 Microsoft Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]）连接到此模型。  
+ 祝贺你！ 您已完成了创作和部署第一个 Analysis Services 表格模型的过程。 本教程已帮助指导您完成了创建表格模型的最常见任务。 既然已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 来管理此模型、创建进程脚本和备份计划。 用户可以使用报表客户端应用程序（如 Microsoft Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]）连接到此模型。  
   
 ## <a name="additional-resources"></a>其他资源  
  若要了解有关支持 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 报表的表格模型属性的详细信息，请参阅 [Power View 报表属性（SSAS 表格）](tabular-models/properties-ssas-tabular.md)。  
@@ -62,6 +62,6 @@ ms.locfileid: "66079142"
 ## <a name="see-also"></a>另请参阅  
  [DirectQuery 模式 &#40;SSAS 表格&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
  [&#40;SSAS 表格&#41;配置默认数据建模和部署属性](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;的表格模型数据库](tabular-models/tabular-model-databases-ssas-tabular.md)  
+ [表格模型数据库（SSAS 表格）](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074044"
 ---
 # <a name="handle-multiple-job-steps"></a>处理多个作业步骤
   如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 这称为*流控制 * *。* 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
   
- ![SQL Server 代理作业步骤控制流](../../database-engine/media/dbflow01.gif "SQL Server 代理作业步骤控制流")  
+ ![SQL Server 代理作业步骤的流控制](../../database-engine/media/dbflow01.gif "SQL Server 代理作业步骤的流控制")  
   
  第一步是备份数据库。 如果这一步失败， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将把失败报告给定义为接收通知的操作员。 如果备份数据库步骤成功，则作业将继续进行下一步，即“清理”客户端数据。 如果这一步失败， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理将向前跳至还原数据库。 如果“清理”客户端数据成功，则作业将继续进行下一步，即更新统计信息，如此继续，直至最后报告成功或报告失败。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "63074044"
 > [!NOTE]  
 >  如果创建循环作业步骤（作业步骤 1 后面跟着作业步骤 2，然后作业步骤 2 又返回到作业步骤 1），则在使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建作业时会出现警告消息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理在作业历史记录中记录作业和作业步骤信息。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在作业历史记录中记录作业和作业步骤信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
  [sysjobhistory &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
  [sysjobs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
  [sysjobsteps &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
- [执行作业](implement-jobs.md)   
+ [实现作业](implement-jobs.md)   
  [管理作业步骤](manage-job-steps.md)  
   
   

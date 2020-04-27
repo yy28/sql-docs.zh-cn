@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63135248"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 函数
@@ -38,11 +38,11 @@ HRESULT LocalDBStopInstance(
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *pInstanceName*  
  [输入] 要停止的 LocalDB 实例的名称。  
   
- *dwFlags*  
+ dwFlags**  
  [输入] 指定要停止该实例的方法的一个标志或标志组合。  
   
  可用标志：  

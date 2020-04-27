@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073130"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>在数据源视图中替换表或命名查询 (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66073130"
 > [!IMPORTANT]  
 >  如果要重命名数据源中的表，请按以下步骤替换表，并在刷新 DSV 之前，指定重命名后的表作为 DSV 中对应的表的源。 完成替换和重命名处理后，将在 DSV 中保存表、表的引用和表的关系。 否则，在刷新 DSV 时，数据源中重命名后的表将被解释为已删除。 有关详细信息，请参阅[刷新数据源视图中的架构 (Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)。  
   
-##  <a name="bkmk_nq"></a>使用命名查询替换表  
+##  <a name="replace-a-table-with-a-named-query"></a><a name="bkmk_nq"></a> 使用命名查询替换表  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中替换表或命名查询的数据源视图。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66073130"
   
     2.  选择要用以替换表或命名查询的表  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
 6.  保存已修改的数据源视图。  
   

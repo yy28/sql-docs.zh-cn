@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076692"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>设置多维数据库的兼容级别 (Analysis Services)
@@ -39,7 +39,7 @@ ms.locfileid: "66076692"
 > [!WARNING]  
 >  将数据库兼容级别设置为更高级别是不可逆的。 将兼容级别提高到`1100`后，必须继续在更高版本的服务器上运行数据库。 不能回滚到`1050`。 不能在早于`1100` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的服务器版本上附加或还原数据库。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入数据库兼容级别。 你必须具有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或更高版本才能查看或设置数据库兼容级别。  
   
  数据库不能为本地多维数据集。 本地多维数据集不支持 `CompatibilityLevel` 属性。  
@@ -75,7 +75,7 @@ ms.locfileid: "66076692"
     <Language>1033</Language>  
     ```  
   
-6.  保存文件。  
+6.  保存该文件。  
   
 7.  若要运行脚本，请在“查询”菜单上单击 **“执行”** ，或按 F5。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "66076692"
 3.  仅对于共享相同版本和数据库兼容级别的服务器，才支持同步服务器。  
   
 ## <a name="next-steps"></a>后续步骤  
- 在增加了数据库兼容级别之后，可以在 `StringStoresCompatibilityLevel` 中设置 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 属性。 这样将增大度量值和维度的字符串存储空间。 有关此功能的详细信息，请参阅 [配置维度和分区的字符串存储](configure-string-storage-for-dimensions-and-partitions.md)。  
+ 在增加了数据库兼容级别之后，可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中设置 `StringStoresCompatibilityLevel` 属性。 这样将增大度量值和维度的字符串存储空间。 有关此功能的详细信息，请参阅 [配置维度和分区的字符串存储](configure-string-storage-for-dimensions-and-partitions.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;XMLA&#41;备份、还原和同步数据库](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [备份、还原和同步数据库 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 XML 数据类型 |Microsoft Docs
+title: 使用 XML 数据类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -31,14 +31,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136666"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 数据类型
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引入了**xml**数据类型，使你能够将 xml 文档和片段存储在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库中。 xml 数据类型是 ** 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]********。 与使用其他内置类型一样，可以在创建表时将 xml 数据类型用作列类型，也可以将其用作变量类型、参数类型或函数返回类型，还可以将其用在 CAST 和 CONVERT 函数中****。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了 xml 数据类型，它可用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储 XML 文档和片段****。 xml 数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）************。 与使用其他内置类型一样，可以在创建表时将 xml 数据类型用作列类型，也可以将其用作变量类型、参数类型或函数返回类型，还可以将其用在 CAST 和 CONVERT 函数中****。  
   
 ## <a name="programming-considerations"></a>编程时的注意事项  
  XML 可以是自描述的，即可以根据需要包含一个 XML 标头来指定文档的编码，例如：  
@@ -58,13 +58,12 @@ ms.locfileid: "63136666"
   
 -   文本字符串  
   
--   
-  **ISequentialStream**  
+-   **ISequentialStream**  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不包括 SAX 读取器，但可以轻松地将**ISEQUENTIALSTREAM**传递给 MSXML 中的 sax 和 DOM 对象。  
   
- **ISequentialStream**应用于检索大型 XML 文档。 用于其他大值类型的相同技术也适用于 XML。 有关详细信息，请参阅[使用大值类型](using-large-value-types.md)。  
+ **ISequentialStream**应用于检索大型 XML 文档。 用于其他大值类型的相同技术也适用于 XML。 有关详细信息，请参阅[使用大型数据类型](using-large-value-types.md)。  
   
  还可以通过常见接口（如 IRow::GetColumns、IRowChange::SetColumns 和 ICommand::Execute）检索、插入或更新行集中类型为 XML 的列中存储的数据************。 与检索案例类似，应用程序可以将文本字符串或**ISequentialStream**传递给[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序。  
   
@@ -78,40 +77,40 @@ ms.locfileid: "63136666"
  如果将输入 XML 绑定为 DBTYPE_WSTR，则应用程序必须确保已对其进行 Unicode 编码，以避免由于不必要的数据转换而可能导致损坏。  
   
 ### <a name="data-bindings-and-coercions"></a>数据绑定和强制  
- 下表描述将所列数据类型与  xml 数据类型一同使用时出现的绑定和强制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ****。  
+ 下表描述将所列数据类型与  xml[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **** 数据类型一同使用时出现的绑定和强制转换。  
   
-|数据类型|到服务器<br /><br /> **XML**|到服务器<br /><br /> **非 XML**|从服务器<br /><br /> **XML**|从服务器<br /><br /> **非 XML**|  
+|数据类型|到服务器<br /><br /> **XML**|到服务器<br /><br /> **Non-XML**|从服务器<br /><br /> **XML**|从服务器<br /><br /> **Non-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|传递<sup>6，7</sup>|错误<sup>1</sup>|正常<sup>11、6</sup>|错误<sup>8</sup>|  
+|DBTYPE_XML|传递<sup>6，7</sup>|错误<sup>1</sup>|确定<sup>11, 6</sup>|错误<sup>8</sup>|  
 |DBTYPE_BYTES|传递<sup>6，7</sup>|N/A<sup>2</sup>|成功 <sup>11，6</sup>|N/A <sup>2</sup>|  
 |DBTYPE_WSTR|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功<sup>4，6，12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_BSTR|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功 <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|成功<sup>6，9，10</sup>|N/A <sup>2</sup>|成功<sup>5，6，12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|通过 ISequentialStream 的字节流**7**<sup></sup>|N/A <sup>2</sup>|通过 ISequentialStream 的字节流**11**<sup></sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|传递<sup>6，7</sup>|N/A <sup>2</sup>|空值|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|通过 ISequentialStream 的字节流<sup>7</sup>****|N/A <sup>2</sup>|通过 ISequentialStream 的字节流<sup>11</sup>****|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|传递<sup>6，7</sup>|N/A <sup>2</sup>|不适用|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>如果使用**ICommandWithParameters：： SetParameterInfo**指定了除 DBTYPE_XML 之外的服务器类型，且访问器类型为 DBTYPE_XML，则在执行该语句时将出错（DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）;否则，会将数据发送到服务器，但服务器将返回一个错误，指示不存在从 XML 到参数的数据类型的隐式转换。  
   
  <sup>2</sup>超出了本主题的范围。  
   
- <sup>3</sup>格式为 UTF-16，无字节顺序标记（BOM），无编码规范，无空终止。  
+ <sup>3</sup>格式为 UTF-16、无字节顺序标记 (BOM)、无编码规格，且无空终止。  
   
- <sup>4</sup>格式为 UTF-16，无 BOM，无编码规范，null 终止。  
+ <sup>4</sup>格式为 UTF-16、无 BOM、无编码规格，且空终止。  
   
- <sup>5</sup>格式是在具有 null 终止符的客户端代码页中编码的多字节字符。 从服务器提供的 Unicode 进行转换可能导致数据损坏，因此，强烈建议不要使用此绑定。  
+ <sup>5</sup>格式为在客户端代码页中编码的带有空终止符的多字节字符。 从服务器提供的 Unicode 进行转换可能导致数据损坏，因此，强烈建议不要使用此绑定。  
   
  <sup>6</sup>可使用 BY_REF。  
   
- <sup>7</sup>UTF-16 数据必须以 BOM 开头。 否则，服务器可能无法正确地识别编码。  
+ <sup>7</sup>UTF-16 必须以 BOM 开头。 否则，服务器可能无法正确地识别编码。  
   
- <sup>8</sup>验证在创建访问器时或在提取时可能发生。 此错误为 DB_E_ERRORSOCCURRED，绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
+ <sup>8</sup>在创建取值函数时或在提取时，可能进行验证。 此错误为 DB_E_ERRORSOCCURRED，绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
   
- <sup>9</sup>数据在发送到服务器之前，使用客户端代码页转换为 Unicode。 如果文档编码与客户端代码页不匹配，则这可能导致数据损坏，因此强烈建议不要使用此绑定。  
+ <sup>9</sup>使用客户端代码页将数据转换为 Unicode，然后发送到服务器。 如果文档编码与客户端代码页不匹配，则这可能导致数据损坏，因此强烈建议不要使用此绑定。  
   
- <sup>10</sup>BOM 始终添加到发送到服务器的数据。 如果数据已经以一个 BOM 开始，则这可能导致在缓冲区的开头具有两个 BOM。 服务器使用第一个 BOM 将编码识别为 UTF-16，然后放弃它。 第二个 BOM 将被解释为零宽度不间断空格字符。  
+ <sup>10</sup>始终向发送到服务器的数据添加一个 BOM。 如果数据已经以一个 BOM 开始，则这可能导致在缓冲区的开头具有两个 BOM。 服务器使用第一个 BOM 将编码识别为 UTF-16，然后放弃它。 第二个 BOM 将被解释为零宽度不间断空格字符。  
   
- <sup>11</sup>格式为 UTF-16，无编码规范，将 BOM 添加到从服务器接收的数据。 如果服务器返回了空字符串，则仍将 BOM 返回给应用程序。 如果缓冲区长度的字节数为奇数，则正确截断数据。 如果分块区返回了整个值，则可将其进行连接，重新构建正确的值。  
+ <sup>11</sup>格式为 UTF-16、无编码规格，且向从服务器收到的数据添加一个 BOM。 如果服务器返回了空字符串，则仍将 BOM 返回给应用程序。 如果缓冲区长度的字节数为奇数，则正确截断数据。 如果分块区返回了整个值，则可将其进行连接，重新构建正确的值。  
   
  <sup>12</sup>如果缓冲区长度小于两个字符（即，空值没有足够的空间），则会报告溢出错误。  
   
@@ -206,7 +205,7 @@ ms.locfileid: "63136666"
 #### <a name="the-irowset-interface"></a>IRowset 接口  
  通过 IRowset::GetData 方法检索 XML 列中的 XML 实例****。 根据由客户端指定的绑定，可以将 XML 实例作为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、DBTYPE_STR、DBTYPE_BYTES 进行检索，或者通过 DBTYPE_IUNKNOWN 将其作为接口检索。 如果使用者指定 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，则访问接口将 XML 实例转换为用户请求的类型，并将其放入在相应绑定中指定的位置。  
   
- 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 参数设置为 NULL，或将 pObject 参数设置为 IID_ISequentialStream，则提供程序将 ISequentialStream 接口返回到使用者，让其可流式处理该列之外的 XML 数据********。 然后， **ISequentialStream**将 XML 数据作为 Unicode 字符流返回。  
+ 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 参数设置为 NULL，或将 pObject 参数设置为 IID_ISequentialStream，则提供程序将 ISequentialStream 接口返回到使用者，让其可流式处理该列之外的 XML 数据********。 然后，ISequentialStream 将 XML 数据作为 Unicode 字符流返回****。  
   
  当返回与 DBTYPE_IUNKNOWN 绑定的 XML 值时，访问接口将报告 `sizeof (IUnknown *)` 的大小值。 请注意，这与在将某列绑定为 DBTYPE_IUnknown 或 DBTYPE_IDISPATCH 时所采取的方法相一致；当无法确定实际列大小时，将返回 DBTYPE_IUNKNOWN/ISequentialStream。  
   
@@ -220,7 +219,7 @@ ms.locfileid: "63136666"
  在 DBTYPE_IUNKNOWN/ISequentialStream 的情况下，如果使用者未指定任何存储对象，则使用者必须事先创建**ISequentialStream**对象，将 XML 文档与对象绑定，然后通过**IRowsetChange：： SetData**方法将该对象传递给提供程序。 使用者还可以创建存储对象，将 pObject 参数设置为 IID_ISequentialStream，创建 ISequentialStream 对象，然后将 ISequentialStream 对象传递给 IRowsetChange::SetData 方法************。 在这两种情况下，提供程序都可以通过 ISequentialStream 对象检索 XML 对象，然后将其插入适当的列中****。  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 接口  
- **IRowsetUpdate**接口提供延迟更新功能。 在使用者调用**IRowsetUpdate： Update**方法之前，对行集可用的数据不会提供给其他事务。  
+ IRowsetUpdate 接口提供了用于延迟更新的功能****。 在使用者调用**IRowsetUpdate： Update**方法之前，对行集可用的数据不会提供给其他事务。  
   
 #### <a name="the-irowsetfind-interface"></a>IRowsetFind 接口  
  IRowsetFind::FindNextRow 方法不使用 xml 数据类型********。 调用 IRowsetFind::FindNextRow 且 hAccessor 参数指定 DBTYPE_XML 列时，返回 DB_E_BADBINDINFO******。 此时不考虑正在搜索的列的类型。 对于任何其他绑定类型，如果要搜索的列属于 xml 数据类型，则 FindNextRow 将失败并返回 DB_E_BADCOMPAREOP********。  
@@ -242,7 +241,7 @@ ms.locfileid: "63136666"
  当[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]无法在[SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md)函数中确定列大小时，Native Client ODBC 驱动程序将报告 SQL_SS_LENGTH_UNLIMITED。  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
- Native Client ODBC 驱动程序报告 SQL_SS_LENGTH_UNLIMITED 作为[SQLGetTypeInfo](../../native-client-odbc-api/sqlgettypeinfo.md)函数中 xml 数据类型的最大 COLUMN_SIZE。 **** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ Native Client ODBC 驱动程序报告 SQL_SS_LENGTH_UNLIMITED 作为[SQLGetTypeInfo](../../native-client-odbc-api/sqlgettypeinfo.md)函数中 xml 数据类型的最大 COLUMN_SIZE。 **xml** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ### <a name="sqlprocedurecolumns"></a>SQLProcedureColumns  
  [SQLProcedureColumns](../../native-client-odbc-api/sqlprocedurecolumns.md)函数具有与**SQLColumns**函数相同的列添加。  

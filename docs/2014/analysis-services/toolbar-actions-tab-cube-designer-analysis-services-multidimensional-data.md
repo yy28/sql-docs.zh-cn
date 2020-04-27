@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e65fce75803445e233ee40890cdefefe8cdd96d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066210"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -26,7 +26,7 @@ ms.locfileid: "66066210"
 |------------|-----------------|  
 |**添加商业智能**|单击此项可显示 **“商业智能向导”** ，并向多维数据集添加商业智能功能。|  
 |**进程**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。|  
-|**重新连接**|如果“操作”选项卡的会话由于连接丢失或超时而断开连接，则单击此项以将“操作”选项卡重新连接到包含多维数据集的 **** 实例和数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]****。|  
+|**重新连接**|如果“操作”选项卡的会话由于连接丢失或超时而断开连接，则单击此项以将“操作”选项卡重新连接到包含多维数据集的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例和数据库********。|  
 |**新建操作**|单击此项可显示 **“操作窗体编辑器”** 窗格并创建新操作。|  
 |**新建钻取操作**|单击此项可显示 **钻取操作窗体编辑器** 并创建新的钻取操作。|  
 |**新建报表操作**|单击此项可显示 **报表操作窗体编辑器** 并创建新的报表操作。|  

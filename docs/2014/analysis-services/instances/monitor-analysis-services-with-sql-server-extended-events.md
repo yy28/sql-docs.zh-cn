@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079736"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>使用 SQL Server 扩展事件 (XEvents) 监视 Analysis Services
@@ -62,7 +62,7 @@ ms.locfileid: "66079736"
  *trace_id*  
  定义用于此跟踪的唯一标识符。  
   
- *trace_name*  
+ *跟踪名称*  
  提供给此跟踪的名称；通常是此跟踪的用户可读定义。 通常使用 trace_id** 值作为该名称。  
   
  *AS_event*  

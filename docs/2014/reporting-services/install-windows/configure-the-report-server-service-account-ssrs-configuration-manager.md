@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261073"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
 
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是作为单个服务实现的，其中包含报表服务器 Web 服务、报表管理器以及用于计划的报告处理和订阅传递的后台处理应用程序。 本主题说明最初如何配置服务帐户以及如何使用 Reporting Services 配置工具修改帐户或密码。  
   
 ## <a name="initial-configuration"></a>初始配置
@@ -30,12 +29,11 @@ ms.locfileid: "63261073"
   
 ## <a name="changing-the-service-account"></a>更改服务帐户
 
- 若要查看和重新配置服务帐户信息，请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。 服务标识信息在内部存储在多个位置上。 使用该工具可确保在更改帐户或密码的同时相应地更新所有引用。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将执行以下附加步骤以确保报表服务器仍然可用：  
+ 若要查看和重新配置服务帐户信息，请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。 服务标识信息在内部存储在多个位置上。 使用该工具可确保在更改帐户或密码的同时相应地更新所有引用。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将执行以下附加步骤以确保报表服务器仍然可用：  
   
 - 自动将新帐户添加到本地计算机上创建的报表服务器组中。 此组是在用于保护 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的访问控制列表 (ACL) 中指定的。  
   
-- 自动更新用于承载 Report Server 数据库的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的登录权限。 新帐户将添加到 **RSExecRole**。  
+- 自动更新用于托管报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的登录权限。 新帐户将添加到 **RSExecRole**。  
   
      旧帐户的数据库登录名不会被自动删除。 请务必删除不再使用的帐户。 有关详细信息，请参阅 SQL Server 联机丛书中的[管理报表服务器数据库（SSRS 本机模式）](../report-server/report-server-database-ssrs-native-mode.md)。  
   
@@ -66,9 +64,9 @@ ms.locfileid: "63261073"
   
 - [服务帐户 &#40;SSRS 本机模式&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)。  
   
-- 在 SQL Server 联机丛书中[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+- SQL Server 联机丛书中的[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
   
-- [服务和服务帐户安全规划指南](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
+- [服务和服务帐户安全计划指南](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
   
 ## <a name="updating-an-expired-password"></a>更新过期密码
 
@@ -102,7 +100,7 @@ ms.locfileid: "63261073"
   
 3. 在 Reporting Services 部分中，单击 "**授予数据库访问权限**"。  
   
-4. 单击“确定”。  将出现“输入凭据”对话框。  
+4. 单击" **确定**"。 将出现“输入凭据”对话框。  
   
 5. 输入用户凭据，该用户必须是报表服务器所在的计算机上本地管理员组的成员。 这些凭据将用于一次性连接到报表服务器计算机以便检索服务帐户信息。 在 SharePoint 数据库中将对为每个服务帐户创建的数据库登录名进行更新。  
   
@@ -114,7 +112,7 @@ ms.locfileid: "63261073"
   
 9. 等待服务停止。  
   
-10. 单击“开始”****。  
+10. 单击“启动”  。  
   
 > [!NOTE]  
 > SharePoint 产品和技术需要域帐户来完成服务配置，如报表服务 SharePoint 模式。  

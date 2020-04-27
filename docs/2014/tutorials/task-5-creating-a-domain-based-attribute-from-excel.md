@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489109"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>任务 5：从 Excel 中创建基于域的属性
@@ -41,6 +41,6 @@ ms.locfileid: "65489109"
      ![Excel - 带州/省的下拉列表](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - 带州/省的下拉列表")  
   
 ## <a name="next-step"></a>下一步  
- [任务 6：验证通过使用主数据管理器创建了基于域的属性](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [任务 6：验证基于域的属性是否使用主数据管理器进行创建](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

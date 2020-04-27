@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066522"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>创建计算列（SSAS 表格）
@@ -26,7 +26,7 @@ ms.locfileid: "66066522"
   
 1.  在模型设计器的“数据视图”中，选择要添加计算列的表，单击 **“列”** 菜单，然后单击 **“添加列”**。  
   
-     在最右边的列上突出显示 "**添加列**"，并将光标移动到公式栏。  
+     **“添加列”** 将在最右侧的空列之上突出显示，并且光标将移到公式栏。  
   
      若要在两个现有列之间创建新列，请右键单击某个现有列，然后单击****“插入列”。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "66066522"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;计算列](ssas-calculated-columns.md)   
- [&#40;SSAS 表格&#41;度量值](measures-ssas-tabular.md)  
+ [度量值（SSAS 表格）](measures-ssas-tabular.md)  
   
   

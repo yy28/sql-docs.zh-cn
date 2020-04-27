@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071576"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>在管理中心中创建和配置 PowerPivot 服务应用程序
@@ -32,7 +32,7 @@ ms.locfileid: "66071576"
   
  [编辑服务应用程序属性](#EditGSA)  
   
-##  <a name="determine"></a>确定是否创建新的 PowerPivot 服务应用程序  
+##  <a name="determine-whether-to-create-a-new-powerpivot-service-application"></a><a name="determine"></a>确定是否创建新的 PowerPivot 服务应用程序  
  PowerPivot for SharePoint 安装必须在场中具有至少一个 PowerPivot 服务应用程序。 如果您使用了 PowerPivot 配置工具来配置服务器，则会自动创建服务应用程序。 否则，您必须在管理中心手动创建 PowerPivot 服务应用程序。  
   
  创建服务应用程序将使该服务可用并生成服务应用程序数据库。 根据您在创建服务应用程序时选择的选项，PowerPivot 服务连接将添加到默认的服务连接组中。 订阅默认服务连接组的所有 SharePoint Web 应用程序都将自动获得对 PowerPivot 服务应用程序的直接访问权限。  
@@ -49,7 +49,7 @@ ms.locfileid: "66071576"
   
  如果您没有明确的理由需要创建附加的 PowerPivot 服务应用程序，则应使用单个服务应用程序来用于场中的所有 Web 应用程序。  
   
-##  <a name="CreateApp"></a>创建 PowerPivot 服务应用程序  
+##  <a name="create-a-powerpivot-service-application"></a><a name="CreateApp"></a>创建 PowerPivot 服务应用程序  
   
 1.  在管理中心的 "应用程序管理" 中，单击 "**管理服务应用程序**"。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66071576"
   
 10. 单击“确定”****。 。该服务将在场的服务应用程序列表中与其他托管服务显示在一起。  
   
-##  <a name="ConfigApp"></a>配置 PowerPivot 服务应用程序  
+##  <a name="configure-powerpivot-service-application"></a><a name="ConfigApp"></a>配置 PowerPivot 服务应用程序  
  PowerPivot 服务应用程序使用默认配置创建。 对于大多数情况，建议您采用这些默认设置。 仅在您遇到响应时间较长或删除的连接时，或者您在为特定的 SharePoint Web 应用程序改变 PowerPivot 服务配置时，才更改这些默认设置。  
   
 1.  在管理中心的 "应用程序管理" 中，单击 "**管理服务应用程序**"。  
@@ -122,8 +122,8 @@ ms.locfileid: "66071576"
   
      对加载超时或分配方法的更改只应用于新的传入请求。 已在进行中的请求将受到接收请求时有效的值的影响。  
   
-##  <a name="AssignGSA"></a>将 PowerPivot 服务应用程序分配给 Web 应用程序  
- 在您配置 PowerPivot 服务应用程序后，可以通过将其添加到 Web 应用程序的服务应用程序连接列表，将其分配给该 Web 应用程序。 可通过两种方式实现此目的：  
+##  <a name="assign-a-powerpivot-service-application-to-a-web-application"></a><a name="AssignGSA"></a>将 PowerPivot 服务应用程序分配给 Web 应用程序  
+ 在您配置 PowerPivot 服务应用程序后，可以通过将其添加到 Web 应用程序的服务应用程序连接列表，将其分配给该 Web 应用程序。 有两种方法可以实现此目的：  
   
 -   将它添加到“默认” **** 连接组。 “默认连接组” ** 是可用于引用它的任何 Web 应用程序的服务应用程序连接的集合。 您必须将 PowerPivot 服务应用程序添加到此列表。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "66071576"
   
  默认的连接组将接受相同类型的多个服务应用程序。 但应注意，向此列表添加多个 PowerPivot 服务应用程序不是支持的配置。  
   
-1.  在管理中心的 "**应用程序管理**" 中，单击 "**管理 web 应用程序**"。  
+1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“管理 Web 应用程序”**。  
   
 2.  选择要为其分配连接的应用程序（例如 SharePoint -80）。  
   
@@ -141,9 +141,9 @@ ms.locfileid: "66071576"
   
 5.  对于“[自定义]”****，选中要使用的每个服务应用程序连接旁边的复选框。 如果有多个 PowerPivot 服务应用程序（由设置为`PowerPivot Service Application Proxy`的类型指示），请确保仅选择一个。  
   
-6.  单击“确定”。   
+6.  单击" **确定**"。  
   
-##  <a name="EditGSA"></a>编辑服务应用程序属性  
+##  <a name="edit-service-application-properties"></a><a name="EditGSA"></a>编辑服务应用程序属性  
  使用下面的说明可重新打开指定服务应用程序名称、应用程序池、数据库设置和服务关联的属性页。  
   
 1.  在管理中心的 "应用程序管理" 中，单击 "**管理服务应用程序**"。  

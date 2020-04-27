@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076853"
 ---
 # <a name="enable-dimension-writeback"></a>“启用维度写回”
@@ -53,6 +53,6 @@ ms.locfileid: "66076853"
 >  有关详细信息，请参阅[使用多个活动结果集 &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [启用写功能的维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
+ [启用写操作的维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

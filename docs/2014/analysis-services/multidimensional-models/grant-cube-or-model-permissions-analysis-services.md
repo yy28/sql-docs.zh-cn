@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075024"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授予多维数据集或模型权限 (Analysis Services)
@@ -54,13 +54,13 @@ ms.locfileid: "66075024"
   
 2.  继续下一个步骤“设置多维数据集权限”。  
   
-     请注意，我们将跳过“数据源”窗格。 Analysis Services 数据的多数常规使用者无需具备对数据源对象的权限。 有关这些权限级别的详细信息，请参阅 [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) 。  
+     请注意，我们将跳过“数据源”窗格。 Analysis Services 数据的多数常规使用者无需具备对数据源对象的权限。 有关这些权限级别的详细信息，请参阅 [授予数据源对象的权限 (Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md) 。  
   
 #### <a name="step-3-set-cube-permissions"></a>步骤 3：设置多维数据集权限  
   
 1.  在 "**多维数据集**" 窗格中，选择一个多维`Read`数据集，然后单击或**读/写**访问权限。  
   
-     `Read`访问足以满足大多数操作。 **读/写**仅用于写回，不处理。 有关此功能的详细信息，请参阅 [Set Partition Writeback](set-partition-writeback.md) 。  
+     `Read`访问足以满足大多数操作。 “读/写”**** 仅用于回写，而非处理。 有关此功能的详细信息，请参阅 [Set Partition Writeback](set-partition-writeback.md) 。  
   
      请注意，你可以选择多个多维数据集以及“创建角色”对话框中的其他可选对象。 授予对多维数据集的权限也就授予了对与此多维数据集关联的维度和透视的权限。 无需手动添加此多维数据集中已存在的对象。  
   
@@ -97,12 +97,12 @@ ms.locfileid: "66075024"
   
 4.  以 .xmla 文件扩展名保存文件。 要测试脚本，删除当前角色，在 SSMS 中打开文件，按 F5 执行该脚本。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
  你可以优化多维数据集权限来限制对单元或纬度数据的访问。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 和[授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [授予对数据挖掘结构和模型的权限 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予对数据源对象的权限 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授予数据源对象的权限 (Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

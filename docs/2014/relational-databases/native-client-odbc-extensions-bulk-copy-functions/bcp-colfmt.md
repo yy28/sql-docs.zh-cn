@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63065455"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
@@ -82,7 +82,7 @@ idxServerCol
   
 -   如果源列为**decimal**或**numeric**，则使用源列的精度和小数位数。  
   
- *cbIndicator*  
+ cbIndicator**  
  列数据中的长度/Null 指示器的长度（字节）。 有效指示器长度值是 0（不使用任何指示器时）、1、2、4 或 8。  
   
  若要指定默认的大容量复制指示器用法，请将此参数设置为 SQL_VARLEN_DATA。  

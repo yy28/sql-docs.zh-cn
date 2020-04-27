@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483906"
 ---
 # <a name="entities-master-data-services"></a>实体 (Master Data Services)
@@ -35,12 +35,12 @@ ms.locfileid: "65483906"
   
  使用要管理的主数据的列表填充该实体。  
   
- 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅[派生层次结构 (Master Data Services)](derived-hierarchies-master-data-services.md)。  
+ 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅 [派生层次结构 (Master Data Services)](derived-hierarchies-master-data-services.md)。  
   
  还允许实体包含显示层次结构（基于单个实体的不规则结构）和集合（成员子集的一次性组合）。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) 和[集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)。  
   
 ## <a name="using-entities-as-constrained-lists"></a>将实体用作受限制列表  
- 用户将属性分配给实体中的成员时，可以从值的受限制列表中选择它们。 为此，您使用一个实体来填充该属性的值列表。 这称为基于域的属性。 有关详细信息，请参阅[基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)。  
+ 用户将属性分配给实体中的成员时，可以从值的受限制列表中选择它们。 为此，您使用一个实体来填充该属性的值列表。 这称为基于域的属性。 有关详细信息，请参阅 [基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)。  
   
 ## <a name="base-entities"></a>基实体  
  在模型中浏览对象时，基实体是用户的起始点。 基实体确定当用户打开 **“资源管理器”** 功能区域并单击菜单栏上的 **“资源管理器”** 时屏幕的布局。 要将实体指定为基实体，请导航到 **“系统管理”** 功能区域。 在 **“模型视图”** 页中，将实体从右侧的树控件拖到左侧树控件中的模型名称。  
@@ -64,18 +64,18 @@ ms.locfileid: "65483906"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新实体。|[创建实体 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|创建新实体。|[创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |指定一个实体可以包含显式层次结构和集合。|[为显式层次结构和集合启用实体 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |更改现有实体的名称。|[更改实体名称 &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
-|删除现有实体。|[删除实体 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|将权限分配给实体。|[&#40;Master Data Services 分配模型对象权限&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|删除现有实体。|[删除实体 (Master Data Services)](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
+|将权限分配给实体。|[分配模型对象权限 (Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [Master Data Services &#40;模型&#41;](../../2014/master-data-services/models-master-data-services.md)  
+-   [模型 (Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
   
 -   [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [属性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

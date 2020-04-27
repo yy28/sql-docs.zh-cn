@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071891"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>配置设置参考 (PowerPivot for SharePoint)
@@ -30,7 +30,7 @@ ms.locfileid: "66071891"
   
  [连接池](#ConnectionPool)  
   
- [负载均衡](#AllocationScheme)  
+ [负载平衡](#AllocationScheme)  
   
  [数据刷新](#DataRefresh)  
   
@@ -38,14 +38,14 @@ ms.locfileid: "66071891"
   
  有关如何创建 PowerPivot 服务应用程序的说明，请参阅[在管理中心中创建和配置 PowerPivot 服务应用程序](create-and-configure-power-pivot-service-application-in-ca.md)。  
   
-##  <a name="LoadingData"></a>数据加载超时  
+##  <a name="data-load-timeout"></a><a name="LoadingData"></a> 数据加载超时  
  PowerPivot 数据由场中的 Analysis Services 服务器实例检索并加载。 可以从内容库或从本地文件缓存加载数据，具体取决于上次访问数据的方式和时间。 只要收到查询或处理请求，就会将数据加载到内存中。 若要最大限度地提高服务器的总体可用性，您可以设置一个超时值以指示服务器在分配的时间内无法完成加载时停止数据加载请求。  
   
 |名称|默认|有效值|说明|  
 |----------|-------------|------------------|-----------------|  
 |数据加载超时|1800（以秒为单位）|1 到 3600|指定 PowerPivot 服务应用程序等待来自特定 Analysis Services 服务器实例的响应的时间量。<br /><br /> 默认情况下，当服务应用程序向引擎服务实例转发特定请求后，它将等待 30 分钟以便从该实例获得数据负载。<br /><br /> 如果在此时段内无法加载 PowerPivot 数据源，线程将停止，并将启动一个新进程。|  
   
-##  <a name="ConnectionPool"></a>连接池  
+##  <a name="connection-pools"></a><a name="ConnectionPool"></a>连接池  
  PowerPivot 服务应用程序创建并管理连接池，以便重复使用连接。 连接池有两种类型：一种用于与只读数据建立数据连接；另一种用于建立服务器连接。  
   
  数据连接池包含 PowerPivot 数据源的缓存连接。 每个连接池都基于在加载数据库时设置的上下文。 此上下文包括物理服务实例的标识、数据库 ID 和请求数据的 SharePoint 用户的标识。 将为每个组合创建一个单独的连接池。 例如，来自在同一个服务器上运行的同一数据库的不同用户的请求将使用不同池中的连接。  
@@ -62,15 +62,14 @@ ms.locfileid: "66071891"
 |最大用户连接池大小|1000|-1、0 或 1 到 10000。<br /><br /> -1 指定空闲连接数量不受限制。<br /><br /> 0 表示不保持空闲连接。 每次必须创建到 PowerPivot 数据源的新连接。|此设置适用于为特定 PowerPivot 服务应用程序实例创建的所有数据连接池中的空闲连接数。<br /><br /> 将为 SharePoint 用户、PowerPivot 数据和服务实例的唯一组合创建单个连接池。 如果您有许多用户访问各种 PowerPivot 数据源，服务器性能可能会因连接池大小的增加而受益。<br /><br /> 如果与 PowerPivot 服务实例的空闲连接数目超过 100 个，将断开最新的空闲连接，而不是将其返回到池中。|  
 |最大管理连接池大小|200|-1、0 或 1 到 10000。<br /><br /> -1 指定空闲连接数量不受限制。|为 PowerPivot 服务应用程序与 Analysis Services 服务器实例之间的连接创建的所有管理连接池中的最大空闲服务器连接数目。 服务器连接用于请求加载数据库以及将更改保存回 SharePoint 数据库。|  
   
-##  <a name="AllocationScheme"></a>负载均衡  
- PowerPivot 服务执行的功能之一是确定在可用的 PowerPivot 服务实例之间加载 Analysis Services 数据的位置。 
-  `AllocationMethod` 设置指定选择服务实例时所依据的条件。  
+##  <a name="load-balancing"></a><a name="AllocationScheme"></a>负载均衡  
+ PowerPivot 服务执行的功能之一是确定在可用的 PowerPivot 服务实例之间加载 Analysis Services 数据的位置。 `AllocationMethod` 设置指定选择服务实例时所依据的条件。  
   
 |名称|默认|有效值|说明|  
 |----------|-------------|------------------|-----------------|  
-|分配方法|循环|轮循机制<br /><br /> 基于运行状况|用于在两个或更多 Analysis Services 服务器实例之间分配负载请求的方案。<br /><br /> 默认情况下，PowerPivot 服务将基于服务器运行状况平均分配请求。 “基于运行状况”选项基于可用内存和 CPU 利用率，将请求分配到具有最多可用系统资源的服务器。<br /><br /> 循环将按先后顺序在可用的服务器之间循环分配请求，而不考虑当前负载或服务器运行状况。|  
+|分配方法|循环|循环<br /><br /> 基于运行状况|用于在两个或更多 Analysis Services 服务器实例之间分配负载请求的方案。<br /><br /> 默认情况下，PowerPivot 服务将基于服务器运行状况平均分配请求。 “基于运行状况”选项基于可用内存和 CPU 利用率，将请求分配到具有最多可用系统资源的服务器。<br /><br /> 循环将按先后顺序在可用的服务器之间循环分配请求，而不考虑当前负载或服务器运行状况。|  
   
-##  <a name="DataRefresh"></a>数据刷新  
+##  <a name="data-refresh"></a><a name="DataRefresh"></a>数据刷新  
  指定为组织定义正常或典型工作日的小时数范围。 这些配置设置确定在工作时间后何时进行数据处理以便执行数据刷新操作。 工作时间后处理可在工作日结束时开始。 对于希望使用在正常工作时间内生成的事务数据来刷新 PowerPivot 数据源的文档所有者而言，工作时间后处理是一个计划选项。  
   
 |名称|默认|有效值|说明|  
@@ -78,10 +77,10 @@ ms.locfileid: "66071891"
 |开始时间|上午 04:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的下限。|  
 |结束时间|晚上 08:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的上限。|  
 |PowerPivot 无人参与的数据刷新帐户|无|目标应用程序 ID|此帐户用于代表计划所有者运行数据刷新作业。<br /><br /> 无人参与的数据刷新帐户必须事先定义，然后才能在服务应用程序配置页中引用。 有关详细信息，请参阅[配置 PowerPivot 无人参与的数据刷新帐户 &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。|  
-|允许用户输入自定义 Windows 凭据|已启用|Boolean|确定计划的数据刷新配置页是否显示一个选项，让计划所有者能够指定用于运行数据刷新作业的 Windows 用户帐户和密码。<br /><br /> 必须启用安全存储区服务才能使用此选项。 有关详细信息，请参阅为[PowerPivot 数据刷新配置存储的凭据 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
+|允许用户输入自定义 Windows 凭据|启用|布尔|确定计划的数据刷新配置页是否显示一个选项，让计划所有者能够指定用于运行数据刷新作业的 Windows 用户帐户和密码。<br /><br /> 必须启用安全存储区服务才能使用此选项。 有关详细信息，请参阅为[PowerPivot 数据刷新配置存储的凭据 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
 |最大处理历史记录长度|365|1 到 5000 天|确定数据刷新历史记录在 PowerPivot 服务应用程序数据库中保留多长的时间。 有关详细信息，请参阅 [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md)。|  
   
-##  <a name="UsageData"></a>使用情况数据收集  
+##  <a name="usage-data-collection"></a><a name="UsageData"></a>使用情况数据收集  
  PowerPivot 管理面板中显示的使用情况报表可以提供有关启用 PowerPivot 的工作簿使用情况的重要信息。 针对以后在使用状况或活动报表中使用的 PowerPivot 服务器事件，以下配置设置控制使用情况数据收集的各个方面。  
   
 |名称|默认|有效值|说明|  

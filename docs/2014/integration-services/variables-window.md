@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877872"
 ---
 # <a name="variables-window"></a>“变量”窗口
@@ -29,8 +29,7 @@ ms.locfileid: "62877872"
  您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
 > [!NOTE]
->  
-  `Name` 和 `Namespace` 属性的值必须以 Unicode 标准 2.0 定义的字母字符或下划线 (_) 开头。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
+>  `Name` 和 `Namespace` 属性的值必须以 Unicode 标准 2.0 定义的字母字符或下划线 (_) 开头。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
   
 ## <a name="options"></a>选项  
  **添加变量**  
@@ -50,7 +49,7 @@ ms.locfileid: "62877872"
  `Name`  
  查看变量名称。 您可以更新用户定义变量的名称。  
   
- **范围**  
+ **Scope**  
  查看变量的作用域。 变量的作用域可以是整个程序包，也可以是容器或任务。 变量的作用域必须足够大，以便变量对任何需要读取或设置其值的其他任务或组件都是可见的。  
   
  您可以更改作用域，方法是单击该变量，然后单击 **“变量”** 窗口中的 **“移动变量”** 。  
@@ -79,9 +78,9 @@ ms.locfileid: "62877872"
  如果为变量指定了表达式，该变量旁边将显示特殊的图标标记。 这个特殊的图标标记还显示在设置有表达式的连接管理器和任务旁边。  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)   
  [使用包中的变量](../../2014/integration-services/use-variables-in-packages.md)   
- [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)   
+ [Integration Services &#40;SSIS&#41; 表达式](expressions/integration-services-ssis-expressions.md)   
  [生成包执行的转储文件](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

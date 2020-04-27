@@ -20,14 +20,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874532"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 中的 SQL Server 数据类型
-  
   `SqlTypes` 库是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 的基类库的一部分。 它设计为向数据类型提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中相同的语义和精度。 本主题描述针对 .NET Framework 程序员的新语义，并且介绍在 `System.Data.SqlTypes` 库中包括的 `System.Data` 命名空间中实现的类型。  
   
  下表列出了本节的主题。  

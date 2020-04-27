@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021698"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>发布信息，跟踪令牌（事务发布，SQL Server 2005 和更高版本）
-  可以使用 **“跟踪令牌”** 选项卡验证连接，以及测量使用事务复制的系统的滞后时间。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
+  可以使用“跟踪令牌”**** 选项卡验证连接，以及测量使用事务复制的系统的滞后时间。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
   
 -   计算在发布服务器上提交事务和在分发服务器上将相应命令插入分发数据库之间所间隔的时间。  
   
@@ -67,10 +67,10 @@ ms.locfileid: "63021698"
  在发布服务器上提交事务和在订阅服务器上提交相应事务之间所间隔的时间。 该值表示对于此订阅服务器，此时复制系统的端对端滞后时间。 值为 **“挂起”** 指示令牌尚未到达订阅服务器。  
   
 ## <a name="see-also"></a>另请参阅  
- [启动和停止复制代理 (SQL Server Management Studio)](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [启动和停止复制代理 &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [为事务复制测量滞后时间和验证连接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)   
+ [为事务复制测量滞后时间并验证连接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   
  [复制代理概述](agents/replication-agents-overview.md)  
   

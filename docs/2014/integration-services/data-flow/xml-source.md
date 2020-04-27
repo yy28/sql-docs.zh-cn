@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899940"
 ---
 # <a name="xml-source"></a>XML 源
@@ -39,9 +39,8 @@ ms.locfileid: "62899940"
 > [!NOTE]  
 >  XML 源并不根据 XSD 来验证 XML 文件中的数据。  
   
-## <a name="xml-source-editor"></a>“XML 源编辑器”  
- XML 文件中的数据常常包含层次结构关系。 
-  **“XML 源编辑器”** 对话框使用指定的架构生成 XML 源输出。 您可以指定 XSD 文件，使用内联架构或根据指定的 XML 数据文件生成 XSD。 该架构必须在设计时可用。  
+## <a name="xml-source-editor"></a>XML 源编辑器  
+ XML 文件中的数据常常包含层次结构关系。 **“XML 源编辑器”** 对话框使用指定的架构生成 XML 源输出。 您可以指定 XSD 文件，使用内联架构或根据指定的 XML 数据文件生成 XSD。 该架构必须在设计时可用。  
   
  XML 源通过为 XML 文件中每个包含其他元素的元素创建一个输出，以便根据 XML 数据生成表格结构。 例如，如果 XML 数据表示目录和目录中的项，则 XML 源将为目录创建一个输出，而且为目录包含的每种类型的项都创建一个输出。 每项的输出将包含该项的属性的输出列。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62899940"
   
  从 XML 数据文件提取数据后，数据将转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 不过，XML 源不能将 XML 数据转换为 DT_TIME2 或 DT_DBTIMESTAMP2 数据类型，这是因为源不支持这些数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](integration-services-data-types.md)。  
   
- XSD 或内联架构可能为元素指定了数据类型，但如果未指定，则“XML 源编辑器”**** 对话框将为输出中包含该元素的列指定 Unicode 字符串数据类型 (DT_WSTR)，并将列长度设置为 255 个字符。  
+ XSD 或内联架构可能为元素指定了数据类型，但如果未指定，则“XML 源编辑器”  对话框将为输出中包含该元素的列指定 Unicode 字符串数据类型 (DT_WSTR)，并将列长度设置为 255 个字符。  
   
  如果该架构指定了元素的最大长度，则输出列的长度将设置为此值。 如果最大长度大于将元素转换为的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型所支持的长度，则数据将被截断为该数据类型的最大长度。 例如，如果一个字符串的长度为 5000，则该字符串将因为 DT_WSTR 数据类型的最大长度而截断为 4000 字符；类似地，字节数据将截断为 DT_BYTES 数据类型的最大长度 8000 字符。 如果架构未指定最大长度，则具有任何一种数据类型的列的默认长度都设置为 255。 对 XML 源中的数据截断的处理方式与其他数据流组件中截断的处理方式相同。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。  
   
@@ -70,21 +69,21 @@ ms.locfileid: "62899940"
   
  XML 源支持多个常规输出和多个错误输出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包含用于配置 xml 源的 " **xml 源编辑器**" 对话框。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含用于配置 XML 源的“XML 源编辑器”对话框  。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“XML 源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [XML 源编辑器 &#40;连接管理器页&#41;](../xml-source-editor-connection-manager-page.md)  
+-   [XML 源编辑器（“连接管理器”页）](../xml-source-editor-connection-manager-page.md)  
   
--   [XML 源编辑器 &#40;列 "页&#41;](../xml-source-editor-columns-page.md)  
+-   [XML 源编辑器（“列”页）](../xml-source-editor-columns-page.md)  
   
--   [XML 源编辑器 &#40;错误输出页&#41;](../xml-source-editor-error-output-page.md)  
+-   [XML 源编辑器（“错误输出”页）](../xml-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../common-properties.md)  
+-   [通用属性](../common-properties.md)  
   
 -   [XML 源自定义属性](xml-source-custom-properties.md)  
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 188f47efe73edde0ed2e534bd19787c8546e7c18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990377"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>通过本机编译的存储过程创建和访问 TempDB 中的表
@@ -43,7 +43,7 @@ AS BEGIN ATOMIC WITH
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [本机编译的存储过程的迁移问题](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [本机编译存储过程的迁移问题](migration-issues-for-natively-compiled-stored-procedures.md)   
  [内存中 OLTP 不支持的 Transact-SQL 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

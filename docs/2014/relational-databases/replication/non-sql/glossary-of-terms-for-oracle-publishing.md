@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022395"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 发布的术语词汇表
   在配置和管理 Oracle 发布时，应熟悉下列 Oracle 术语。 有关 Oracle 术语的完整列表，请参阅 Oracle 联机文档。  
   
  索引组织表 (IOT)  
- 其数据在磁盘上按索引顺序进行物理排序的表;它类似于具有聚集[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]索引的表。 将 IOT 作为带有聚集索引的表复制到订阅服务器。  
+ 即数据在磁盘上按索引顺序进行物理排序的表。它类似于带有聚集索引的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 将 IOT 作为带有聚集索引的表复制到订阅服务器。  
   
  实例  
  Oracle 数据库是与实例相关联的。 实例由为数据库提供支持的内存和后台进程组成。 Oracle 实例总是映射到单个数据库，而一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例则可包含多个数据库。 有些情况下，Oracle 数据库可以具有多个实例。  
@@ -38,7 +38,7 @@ ms.locfileid: "63022395"
  用于生成唯一编号的数据库对象。 复制使用序列来为已发布表的更改排序。  
   
  SQL\*Plus  
- 用于访问和查询 Oracle 数据库的应用程序。 它类似于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**。  
+ 用于访问和查询 Oracle 数据库的应用程序。 它类似于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sqlcmd  。  
   
  同义词  
  对象的别名。 配置 Oracle 发布服务器时自动创建特殊公共同义词 **MSSQLSERVERDISTRIBUTOR** 。 该同义词引用 **HREPL_Distributor** 表，并提供一个逻辑指针指向为发布服务器服务的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器。  

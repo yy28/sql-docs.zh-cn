@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079467"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>“键列”对话框（Analysis Services - 多维数据）
@@ -55,10 +55,10 @@ ms.locfileid: "66079467"
 >  仅当列表中包含一个以上列并且选定某列时，才启用此选项。  
   
  **>**  
- 单击此项可将新列添加到“键列”**** 中列出的列的末尾。  
+  单击此项可将新列添加到 **“键列”** 中列出的列的末尾。  
   
  **<**  
- 单击此项可将所选列从****“键列”中列出的列中删除。  
+  单击此项可将所选列从 **“键列”** 中列出的列中删除。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

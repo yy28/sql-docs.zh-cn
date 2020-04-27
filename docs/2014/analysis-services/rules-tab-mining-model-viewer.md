@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070101"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>“规则”选项卡（挖掘模型查看器）
@@ -27,7 +27,7 @@ ms.locfileid: "66070101"
 > [!WARNING]  
 >  默认情况下，查看器中仅显示大于 **“最小概率”** 中定义的概率阈值的规则。 无法使用查看器减小该值，因为规则输出的概率阈值是在创建模型时确定的。 有关详细信息，请参阅 [Microsoft 关联算法技术参考](data-mining/microsoft-association-algorithm-technical-reference.md)。  
   
- **有关详细信息：** [microsoft 关联算法](data-mining/microsoft-association-algorithm.md)、[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **有关详细信息：** [Microsoft 关联算法](data-mining/microsoft-association-algorithm.md)、[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -71,17 +71,17 @@ ms.locfileid: "66070101"
  **最大行数**  
  限制查看器中显示的规则数。  
   
- **发生**  
+ **概率**  
  此列将在图表中显示每个规则的概率。  
   
  可以单击列标题来按概率进行排序。  
   
- **重要性**  
+ **仅次于**  
  此列将在图表中显示每个规则的重要性。  
   
  可以单击列标题来按重要性进行排序。  
   
- **线**  
+ **规则**  
  此列将在图表中显示每个规则的文本说明，具体取决于使用选项“显示”和“显示长名称”指定的格式********。  
   
  可以单击列标题来按规则的文本进行排序。  

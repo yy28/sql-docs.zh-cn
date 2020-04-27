@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081853"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>“设计”窗格（“挖掘模型预测”视图）
-  
   **“设计”** 窗格包含可用于生成数据挖掘预测的预测查询生成器。 您可以设计使用数据源视图中的输入数据表的预测查询来生成大量预测，也可以创建允许您提供各个值的单独预测查询。  
   
  若要运行查询并查看结果，请切换到查询结果视图。  
@@ -30,7 +29,7 @@ ms.locfileid: "66081853"
 > [!NOTE]  
 >  如果对查询进行任何手动更改，则当您切换回“设计”视图时会丢失您所做的更改。 如果要保存 DMX 查询，则可以将该查询复制到 Windows 剪贴板，然后将其粘贴到文本文件。  
   
- **有关详细信息：** [数据挖掘查询](data-mining/data-mining-queries.md)  
+ **有关详细信息，请参阅** [数据挖掘查询](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>选项  
  **切换到查询结果视图**  
@@ -69,12 +68,12 @@ ms.locfileid: "66081853"
  **单独查询输入**  
  选择“单独查询”**** 按钮时，会启用此选项。 包含以下列：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**挖掘模型列**|列出在 **“挖掘模型”** 表中选择的挖掘模型中包含的挖掘模型列。|  
 |**值**|从包含所选挖掘模型列的各个可能状态的列表中选择一个值。<br /><br /> 如果该列为嵌套表列，单击值单元可以打开 **“嵌套表输入”** 对话框。|  
   
- **数据源**  
+ **源**  
  选择包含要为该列使用的字段的源。 你可以使用在“挖掘模型”**** 表中选择的挖掘模型、在“选择输入表”**** 表中选择的输入表、预测函数或自定义表达式。  
   
  可以将列从包含挖掘模型的表和输入表中拖动到单元。  
@@ -94,6 +93,6 @@ ms.locfileid: "66081853"
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](/sql/dmx/data-mining-extensions-dmx-statements)   
  [数据挖掘查询接口](data-mining/data-mining-query-tools.md)   
- [&#40;数据挖掘的预测查询生成器&#41;](prediction-query-builder-data-mining.md)  
+ [预测查询生成器（数据挖掘）](prediction-query-builder-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079502"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 浏览器（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -35,12 +35,12 @@ ms.locfileid: "66079502"
  **层次结构**  
  选择应用此筛选器的层次结构。  
   
- **“运算符”**  
+ **操作员**  
  选择运算符，以定义“筛选表达式”**** 中的表达式如何应用于所选层次结构。 下表对可用的运算符进行了说明：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
-|**=**|结果限制为在 **“筛选表达式”** 中定义的集合。|  
+|**等于**|结果限制为在 **“筛选表达式”** 中定义的集合。|  
 |**不等于**|结果限制为排除在 **“筛选表达式”** 中所定义集合之外的成员。|  
 |**中**|结果限制为在 **“筛选表达式”** 中选择的命名集。|  
 |**不位于**|结果限制为排除在 **“筛选表达式”** 中所选命名集之外的成员。|  
@@ -50,7 +50,7 @@ ms.locfileid: "66079502"
 |**范围(不包括)**|结果限制为排除在 **“筛选表达式”** 中所选范围之外的成员。|  
 |**MDX**|结果限制为在“筛选表达式”**** 中设置的多维表达式 (MDX) 表达式。|  
   
- **筛选器表达式**  
+ **筛选表达式**  
  键入通过“运算符”**** 计算的表达式，该表达式可限制要浏览的 KPI 结果。  
   
 > [!NOTE]  
@@ -65,16 +65,16 @@ ms.locfileid: "66079502"
  **值**  
  显示 KPI 的值。  
   
- **努力**  
+ **目标**  
  显示 KPI 的目标值。  
   
- **Status**  
+ **状态**  
  显示 KPI 的状态图形。  
   
- **趋势**  
+ **预测**  
  显示 KPI 的走向图形。  
   
- **重现**  
+ **重量**  
  显示 KPI 的加权系数。  
   
  **2008**  

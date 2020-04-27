@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067061"
 ---
 # <a name="impersonation-ssas-tabular"></a>模拟（SSAS 表格）
   本主题帮助表格模型作者了解在连接到数据源以便导入和处理（刷新）数据时 Analysis Services 如何使用登录凭据。  
   
- 本文包含以下部分：  
+ 本文包含以下各节：  
   
--   [便利](#bkmk_how_imper)  
+-   [优点](#bkmk_how_imper)  
   
 -   [选项](#bkmk_imp_info_options)  
   
@@ -32,8 +32,8 @@ ms.locfileid: "66067061"
   
 -   [配置模拟](#bkmk_conf_imp_info)  
   
-##  <a name="bkmk_how_imper"></a> 优势  
- *模拟*是服务器应用程序（如 Analysis Services）使用客户端应用程序的标识的能力。 但在服务器建立与数据源的连接时，Analysis Services 使用服务帐户运行，它使用模拟以便可以执行针对数据导入和处理的访问检查。  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a>便利  
+ ** “模拟”是服务器应用程序（例如 Analysis Services）模拟某一客户端应用程序的身份的能力。 但在服务器建立与数据源的连接时，Analysis Services 使用服务帐户运行，它使用模拟以便可以执行针对数据导入和处理的访问检查。  
   
  用于模拟的凭据不同于当前登录的用户所采用的凭据。 在创作模型时，将登录的用户凭据用于特定的客户端操作。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067061"
 > [!IMPORTANT]  
 >  在创作模型时，请确保当前登录的用户所用的凭据和为模拟指定的凭据具有足够的权限来从数据源提取数据。  
   
-##  <a name="bkmk_imp_info_options"></a>选项  
+##  <a name="options"></a><a name="bkmk_imp_info_options"></a>选项  
  配置模拟时，或者在 Analysis Services 中为现有数据源连接编辑属性时，您可以指定以下选项之一：  
   
 |选项|ImpersonationMode<sup>1</sup>|说明|  
@@ -74,20 +74,20 @@ ms.locfileid: "66067061"
   
  <sup>2</sup>使用此选项时，如果从内存中删除工作区数据库，原因可能是重新启动，或者**工作区保留**属性设置为 "**从内存卸载**" 或 "**从工作区中删除**"，并且模型项目已关闭，则在后续会话中，如果您尝试处理表数据，系统将提示您输入每个数据源的凭据。 同样，如果从内存中删除某个已部署的模型数据库，则系统将会提示您输入为每个数据源输入凭据。  
   
-##  <a name="bkmk_impers_sec"></a> Security  
+##  <a name="security"></a><a name="bkmk_impers_sec"></a> Security  
  用于模拟的凭据由与 Analysis Services 服务器相关联的 xVelocity 内存中分析引擎 (VertiPaq)™ 保持在内存中（该服务器管理工作区数据库或已部署的模型）。  任何时候都不要将凭据写入磁盘中。 如果在部署模型时工作区数据库不在内存中，则系统将提示用户输入用于连接到数据源和提取数据的凭据。  
   
 > [!NOTE]  
 >  建议您为模拟凭据指定 Windows 用户帐户和密码。 可以将 Windows 用户帐户配置为连接到数据源和从数据源读取数据所需的最低权限。  
   
-##  <a name="bkmk_imp_newmodel"></a>导入模型时的模拟  
+##  <a name="impersonation-when-importing-a-model"></a><a name="bkmk_imp_newmodel"></a>导入模型时的模拟  
  与可以使用若干不同的模拟模式支持进程外数据收集的表格模型不同，PowerPivot 仅使用一个模式，即 ImpersonateCurrentUser。 因为 PowerPivot 始终在进程中运行，所以，它使用当前登录的用户的凭据连接到数据源。 对于表格模型，当前登录的用户的凭据仅用于“表导入向导”中的 **“预览并筛选”** 功能以及在查看 **“表属性”** 时。 在将数据导入或处理到工作区数据库中或者在将数据导入或处理到已部署的模型中时，使用模拟凭据。  
   
  在通过导入现有 PowerPivot 工作簿来创建新模型时，默认情况下，模型设计器将对模拟进行配置以便使用服务帐户 (ImpersonateServiceAccount)。 建议您将从 PowerPivot 导入的模型上的模拟凭据更改为 Windows 用户帐户。 导入 PowerPivot 工作簿并在模型设计器中创建新模型后，您可以使用 "**现有连接**" 对话框更改凭据。  
   
  在通过从 Analysis Services 服务器上的现有模型导入来创建新模型时，模拟凭据将从现有模型数据库传递到新的模型工作区数据库。 如有必要，您可以使用 **“现有连接”** 对话框更改新模型上的凭据。  
   
-##  <a name="bkmk_conf_imp_info"></a>配置模拟  
+##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a>配置模拟  
  模型所处的环境将确定配置模拟信息的方式。 对于在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创作的模型，您可以在“表导入向导”的 **“模拟信息”** 页中配置模拟信息，也可以通过在 **“现有连接”** 对话框上编辑数据源连接来配置模拟信息。 若要查看现有连接，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **“模型”** 菜单中单击 **“现有连接”**。  
   
  对于部署到 Analysis Services 服务器的模型，可以通过单击的 "**数据库属性**" 对话框中 " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**数据源模拟信息**" 属性的省略号（...）来配置模拟信息。  
@@ -95,6 +95,6 @@ ms.locfileid: "66067061"
 ## <a name="see-also"></a>另请参阅  
  [DirectQuery 模式 &#40;SSAS 表格&#41;](directquery-mode-ssas-tabular.md)   
  [&#40;SSAS 表格&#41;的数据源](../data-sources-ssas-tabular.md)   
- [&#40;SSAS 表格部署的表格模型解决方案部署&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [表格模型解决方案部署（SSAS 表格）](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

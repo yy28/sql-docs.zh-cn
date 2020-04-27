@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900556"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
@@ -83,17 +83,17 @@ ms.locfileid: "62900556"
   
  有关可以在 **“模糊分组转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [模糊分组转换编辑器 &#40;连接管理器选项卡&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [模糊分组转换编辑器（“连接管理器”选项卡）](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [模糊分组转换编辑器 &#40;列 "选项卡&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [模糊分组转换编辑器（“列”选项卡）](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [&#40;高级 "选项卡的" 模糊分组转换编辑器 "&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [模糊分组转换编辑器（“高级”选项卡）](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../../common-properties.md)  
+-   [通用属性](../../common-properties.md)  
   
--   [转换自定义属性](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  有关如何设置此任务的属性的详细信息，请单击下列主题之一：  

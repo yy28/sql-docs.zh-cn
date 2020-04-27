@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081321"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>从示例填充（Excel 表分析工具）
@@ -41,9 +41,9 @@ ms.locfileid: "66081321"
   
      例如，如果根据经验，您知道一列和包含缺失值的列之间存在因果关系，您可以取消选择其他列，以获得更佳结果。  
   
-     单击“确定”。   
+     单击" **确定**"。  
   
-5.  单击 **“运行”** 。  
+5.  单击“运行”****。  
   
      分析完成后，该工具会创建一个包含分析结果的新**模式**工作表。 报表列出找到的规则或关键影响因素，并显示每个规则的概率。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66081321"
   
  例如，如果您尝试填写一张显示订单发货距离的工作表，您可能会很自然地想到目的地对发货距离有重要影响。 在这种情况下，报表可能包含以下行：  
   
-|列|值|倾向于|相对影响|  
+|列|Value|倾向于|相对影响|  
 |------------|-----------|------------|---------------------|  
 |StateProvinceCode|AB|>500 千米|80%|  
   

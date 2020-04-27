@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081487"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>“钻取”对话框（挖掘模型查看器）
@@ -34,14 +34,14 @@ ms.locfileid: "66081487"
  **列列表**  
  显示模型中的列，后面跟随结构列。  
   
- **注意**仅当对挖掘结构启用了钻取功能并且选择了选项 "**模型和结构列**" 时才会显示结构列。 此外，您还必须具有对要查看列的挖掘模型和挖掘结构的钻取权限。  
+ **注意** 仅当对挖掘结构启用了钻取功能并且选中选项 **“模型和结构列”** 时才会显示结构列。 此外，您还必须具有对要查看列的挖掘模型和挖掘结构的钻取权限。  
   
  未包含在模型中的结构列显示为 "**结构"\< 。列名称>**。  
   
 > [!NOTE]  
 >  可在列网格中右键单击任意位置，并选择“全部复制”****，以将钻取数据以制表符分隔的格式复制到剪贴板。 复制的数据只包含事例数据，而不包含节点定义。  
   
- **Play**  
+ **显示**  
  单击绿色箭头按钮刷新数据。  
   
 ## <a name="see-also"></a>另请参阅  

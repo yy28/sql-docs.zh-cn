@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079212"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 课：在 Analysis Services 项目中定义数据源视图
-  若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中设计商业智能应用程序，请先在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中创建一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目。 在此项目中，您将从数据源视图开始定义解决方案的所有元素。  
+  若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中设计商业智能应用程序，请先在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中创建一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目。 在此项目中，您将从数据源视图开始定义解决方案的所有元素。  
   
  本课程包含以下任务：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66079212"
  [修改默认表名](lesson-1-4-modifying-default-table-names.md)  
  在本任务中，将修改数据源视图中的表名，以使您将要定义的后续 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象名更加用户友好。  
   
- 将您的结果与为本课程生成的示例项目文件进行比较。 有关下载本教程附随的示例项目的详细信息，请参阅 codeplex 上产品示例页上的 [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866)（用于 SQL Server 2012 的 SSAS 多维模型项目）。  
+ 将您的结果与为本课程生成的示例项目文件进行比较。 有关下载本教程附随的示例项目的详细信息，请参阅 codeplex 上产品示例页上的 [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) （用于 SQL Server 2012 的 SSAS 多维模型项目）。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 2 课：定义和部署多维数据集](lesson-2-defining-and-deploying-a-cube.md)  
@@ -44,6 +44,6 @@ ms.locfileid: "66079212"
  [支持 &#40;SSAS 多维&#41;的数据源](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
- [&#40;艾德作品的多维建模教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多维建模（Adventure Works 教程）](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

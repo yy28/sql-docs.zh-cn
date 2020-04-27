@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062155"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>警报属性-新建警报（"响应" 页）
@@ -41,7 +41,7 @@ ms.locfileid: "63062155"
  **电子邮件**  
  使用电子邮件通知操作员。  
   
- **接收**  
+ **寻呼程序**  
  使用寻呼电子邮件地址通知操作员。  
   
  **Net send**  
@@ -54,9 +54,9 @@ ms.locfileid: "63062155"
  显示当前所选操作员的“属性”**** 对话框。 可以在“操作员属性”对话框上查看和修改操作员属性****。  
   
 ## <a name="see-also"></a>另请参阅  
- [Alerts](alerts.md)   
+ [提醒](alerts.md)   
  [使用严重级别创建警报](create-an-alert-using-severity-level.md)   
- [Alerts](alerts.md)   
+ [提醒](alerts.md)   
  [编辑警报](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  
   

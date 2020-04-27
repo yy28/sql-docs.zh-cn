@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075403"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定义数据源视图 (Analysis Services)
@@ -45,7 +45,7 @@ ms.locfileid: "66075403"
   
  [添加辅助数据源](#bkmk_secondaryDS)  
   
-##  <a name="bkmk_dsvdef"></a>数据源视图组合  
+##  <a name="data-source-view-composition"></a><a name="bkmk_dsvdef"></a> 数据源视图构成  
  数据源视图包含以下几项：  
   
 -   名称和说明。  
@@ -78,7 +78,7 @@ ms.locfileid: "66075403"
   
     -   表、视图和命名查询之间的逻辑主键-外键关系。  
   
-##  <a name="bkmk_startWiz"></a>使用数据源视图向导创建 DSV  
+##  <a name="create-a-dsv-using-the-data-source-view-wizard"></a><a name="bkmk_startWiz"></a>使用数据源视图向导创建 DSV  
  若要创建 DSV，请从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的解决方案资源管理器运行数据源视图向导。  
   
 > [!NOTE]  
@@ -104,16 +104,15 @@ ms.locfileid: "66075403"
   
 5.  对于未定义表关系的关系数据源，将显示 **“名称匹配”** 页，以便您可以选择相应的名称匹配方法。 有关详细信息，参阅本主题中的 [指定关系的名称匹配条件](#bkmk_NameMatch) 部分。  
   
-##  <a name="bkmk_secondaryDS"></a>添加辅助数据源  
+##  <a name="add-a-secondary-data-source"></a><a name="bkmk_secondaryDS"></a>添加辅助数据源  
  定义包含来自多个数据源的表、视图或列的数据源视图时，会将从中将对象添加到数据源视图的第一个数据源指定为主数据源（主数据源在定义之后便不能更改）。 根据来自单个数据源的对象定义数据源视图之后，便可添加来自其他数据源的对象。  
   
  如果 OLAP 处理或数据挖掘查询需要在单个查询中使用来自多个数据源的数据，则主数据源必须支持使用 `OpenRowset` 的远程查询。 通常，此数据源将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源。 例如，如果设计包含绑定到多个数据源列的属性的 OLAP 维度，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将构造 `OpenRowset` 查询以在处理过程中填充此维度。 但是，如果通过单个数据源便可填充 OLAP 对象或解析数据挖掘查询，则不会构造 `OpenRowset` 查询。 在某些情况下，可以定义属性之间的属性关系，从而不再需要 `OpenRowset` 查询。 有关属性关系的详细信息，请参阅 [属性关系](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、 [在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) 和 [定义属性关系](attribute-relationships-define.md)中的解决方案资源管理器运行数据源视图向导。  
   
- 若要从第二个数据源添加表和列，请在解决方案资源管理器中双击 DSV，在数据源视图设计器中打开它，然后使用“添加/删除表”对话框以包含来自在项目中定义的其他数据源中的对象。 有关详细信息，请参阅[在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)。  
+ 若要从第二个数据源添加表和列，请在解决方案资源管理器中双击 DSV，在数据源视图设计器中打开它，然后使用“添加/删除表”对话框以包含来自在项目中定义的其他数据源中的对象。 有关详细信息，请参阅 [在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)中的解决方案资源管理器运行数据源视图向导。  
   
-##  <a name="bkmk_NameMatch"></a>指定关系的名称匹配条件  
- 创建 DSV 时，将根据数据源中的外键约束创建表之间的关系。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎需要使用这些关系来构造相应的 OLAP 处理查询和数据挖掘查询。 但是，包含多个表的数据源有时并没有外键约束。 如果数据源没有外键约束，则数据源视图向导会提示您定义希望向导如何尝试匹配不同表中的列名。  
+##  <a name="specify-name-matching-criteria-for-relationships"></a><a name="bkmk_NameMatch"></a>指定关系的名称匹配条件  
+ 创建 DSV 时，将根据数据源中的外键约束创建表之间的关系。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎需要使用这些关系来构造相应的 OLAP 处理查询和数据挖掘查询。 但是，包含多个表的数据源有时并没有外键约束。 如果数据源没有外键约束，则数据源视图向导会提示您定义希望向导如何尝试匹配不同表中的列名。  
   
 > [!NOTE]  
 >  向导会提示您只有在基础数据源中检测不到外键关系时，才提供名称匹配条件。 如果检测到了外键关系，则使用检测到的关系，您必须手动定义要包括在 DSV 中的任何其他关系（包括逻辑主键）。 有关详细信息，请参阅[在数据源视图中定义逻辑关系 (Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md) 和[在数据源视图中定义逻辑主键 (Analysis Services)](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)。  
@@ -140,6 +139,6 @@ ms.locfileid: "66075403"
  [使用数据源视图设计器中的关系图 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [浏览数据源视图中的数据 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
  [&#40;Analysis Services 中删除数据源视图&#41;](delete-a-data-source-view-analysis-services.md)   
- [刷新数据源视图中的架构 &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [刷新数据源视图中的架构 (Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

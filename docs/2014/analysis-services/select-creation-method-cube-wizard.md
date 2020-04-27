@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069630"
 ---
 # <a name="select-creation-method-cube-wizard"></a>选择创建方法（多维数据集向导）
@@ -40,7 +40,7 @@ ms.locfileid: "66069630"
   
  选择此选项后， **“模板”** 选项将可用。  
   
- **模版**  
+ **模板**  
  选择要用于创建多维数据集的模板。 模板可以提供一组面向特定业务用途的定义。  
   
 > [!NOTE]  

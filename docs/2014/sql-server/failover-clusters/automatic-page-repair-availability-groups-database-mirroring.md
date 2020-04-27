@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137517"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>自动页修复 （针对可用性组和数据库镜像）
@@ -32,7 +32,7 @@ ms.locfileid: "63137517"
   
   
   
-##  <a name="ErrorTypes"></a>导致自动页修复尝试的错误类型  
+##  <a name="error-types-that-cause-an-automatic-page-repair-attempt"></a><a name="ErrorTypes"></a>导致自动页修复尝试的错误类型  
  数据库镜像自动页修复只尝试修复特定数据文件中的页，此数据文件是指对其执行的操作由于下表中列出的某一错误而失败的数据文件。  
   
 |错误号|说明|导致自动页修复尝试的实例|  
@@ -45,7 +45,7 @@ ms.locfileid: "63137517"
   
   
   
-##  <a name="UnrepairablePageTypes"></a>无法自动修复的页类型  
+##  <a name="page-types-that-cannot-be-automatically-repaired"></a><a name="UnrepairablePageTypes"></a>无法自动修复的页类型  
  页自动修复不能修复以下控制页类型：  
   
 -   文件头页（页 ID 0）。  
@@ -56,7 +56,7 @@ ms.locfileid: "63137517"
   
 
   
-##  <a name="PrimaryIOErrors"></a>处理主体/主数据库上的 i/o 错误  
+##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a>处理主体/主数据库上的 i/o 错误  
  在主体/主数据库中，仅当数据库处于 SYNCHRONIZED 状态且主体/主数据库仍向镜像/辅助数据库发送数据库日志记录时，才会尝试自动页修复。 自动页修复尝试中操作的基本顺序如下：  
   
 1.  当主体/主数据库中的数据页上发生读取错误时，主体/主数据库将使用相应的错误状态在 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 表中插入一行。 对于数据库镜像，主体服务器将从镜像服务器请求该页的副本。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主体数据库将向所有辅助数据库广播请求，并且从第一个响应中获取该页。 此请求指定当前在刷新日志末尾的页 ID 和 LSN。 此页将标记为“还原已挂起” **。 这将使它在自动页修复尝试期间不可访问。 修复尝试期间对此页的访问尝试将失败，并显示错误 829（还原已挂起）。  
@@ -67,11 +67,11 @@ ms.locfileid: "63137517"
   
 4.  自动页修复尝试修复可疑页后，此页将在 **suspect_pages** 表中标记为已还原 (**event_type** = 5)。  
   
-5.  如果此页 I/O 错误导致出现任何[延迟的事务](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)，则修复此页后，主体/主数据库将尝试解决这些事务。  
+5.  如果此页 I/O 错误导致出现任何 [延迟的事务](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)，则修复此页后，主体/主数据库将尝试解决这些事务。  
   
 
   
-##  <a name="SecondaryIOErrors"></a>处理镜像/辅助数据库上的 i/o 错误  
+##  <a name="handling-io-errors-on-the-mirrorsecondary-database"></a><a name="SecondaryIOErrors"></a>处理镜像/辅助数据库上的 i/o 错误  
  处理在镜像/辅助数据库中发生的数据页 I/O 错误通常采用与数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]相同的方式。  
   
 1.  对于数据库镜像，如果镜像服务器在其重做日志记录时遇到一个或多个页 I/O 错误，则镜像会话将进入 SUSPENDED 状态。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，如果辅助副本在其重做日志记录时遇到一个或多个页 I/O 错误，则辅助数据库将进入 SUSPENDED 状态。 此时，镜像/辅助数据库使用相应的错误状态在 **suspect_pages** 表中插入一行。 然后，镜像/辅助数据库从主体/主数据库请求此页的副本。  
@@ -83,23 +83,23 @@ ms.locfileid: "63137517"
      如果镜像/辅助数据库未从主体/主数据库收到它请求的页，则自动页修复尝试将失败。 对于数据库镜像，镜像会话将保持挂起。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，辅助数据库将保持挂起。 如果手动恢复镜像会话或辅助数据库，则损坏的页将在同步阶段再次导致错误。  
 
   
-##  <a name="DevBP"></a>开发人员最佳做法  
+##  <a name="developer-best-practice"></a><a name="DevBP"></a>开发人员最佳做法  
  自动页修复是一个运行在后台的异步进程。 因此，请求不可读的页的数据库操作将失败，并且不管导致失败的条件是什么均返回错误代码。 当开发用于镜像数据库或可用性数据库的应用程序时，应截获失败操作的异常。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误代码为 823、824 或 829，则应稍后重试操作。  
   
 
   
-##  <a name="ViewAPRattempts"></a>如何查看自动页修复尝试  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a>如何查看自动页修复尝试  
  下面的动态管理视图返回对应于给定可用性数据库或镜像数据库上最新自动页修复尝试的行，每个数据库最多可对应 100 行。  
   
 -   **AlwaysOn 可用性组：**  
   
-     [sys. dm_hadr_auto_page_repair &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
+     [sys.dm_hadr_auto_page_repair (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
   
      为针对任何可用性数据库（位于服务器实例为任何可用性组承载的可用性副本上）的每一个自动页修复尝试都返回一行。  
   
 -   **数据库镜像：**  
   
-     [sys. dm_db_mirroring_auto_page_repair &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair)  
+     [sys.dm_db_mirroring_auto_page_repair (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair)  
   
      对服务器实例上所有镜像数据库的每个自动页修复尝试返回一行。  
   

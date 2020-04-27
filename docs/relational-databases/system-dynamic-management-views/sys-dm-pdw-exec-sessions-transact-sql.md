@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899411"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions （Transact-sql）
@@ -26,9 +26,9 @@ ms.locfileid: "67899411"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar （32）**|当前查询或上次查询运行的 id （如果会话已终止，查询在终止时执行）。 此视图的键。|在系统中的所有会话中是唯一的。|  
+|session_id|**nvarchar(32)**|当前查询或上次查询运行的 id （如果会话已终止，查询在终止时执行）。 此视图的键。|在系统中的所有会话中是唯一的。|  
 |status|**nvarchar （10）**|对于当前会话，确定会话当前处于活动状态还是处于空闲状态。 对于过去的会话，会话状态可能显示为 "已关闭" 或 "已终止" （如果已强行关闭该会话）。|"活动"、"已关闭"、"空闲"、"已终止"|  
-|request_id|**nvarchar （32）**|当前查询或上次查询运行的 id。|系统中所有请求都是唯一的。 如果未运行任何，则为 Null。|  
+|request_id|**nvarchar(32)**|当前查询或上次查询运行的 id。|系统中所有请求都是唯一的。 如果未运行任何，则为 Null。|  
 |security_id|**varbinary （85）**|运行会话的主体的安全 ID。||  
 |login_name|**nvarchar(128)**|运行会话的主体的登录名。|符合用户命名约定的任何字符串。|  
 |login_time|**datetime**|用户登录的日期和时间，创建此会话的日期和时间。|当前时间之前有效的**日期**时间。|  

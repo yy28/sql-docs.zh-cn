@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074634"
 ---
 # <a name="managing-scope-and-context-mdx"></a>管理作用域和上下文 (MDX)
@@ -41,14 +41,13 @@ ms.locfileid: "66074634"
 >  如果脚本包含含有 CALCULATE 语句的 SCOPE 语句，MDX 将在由 SCOPE 语句定义的子多维数据集的上下文内计算 CALCULATE 语句，而不是针对整个多维数据集进行计算。  
   
 ## <a name="using-the-this-function"></a>使用 This 函数  
- 
-  `This` 函数使您可以在 MDX 脚本内检索当前的子多维数据集。 您可以使用 `This` 函数快速将当前子多维数据集内的单元的值设置为 MDX 表达式。 在特定计算传递过程中，通常将 `This` 函数和 SCOPE 语句一起使用，以更改特定子多维数据集的内容。  
+ `This` 函数使您可以在 MDX 脚本内检索当前的子多维数据集。 您可以使用 `This` 函数快速将当前子多维数据集内的单元的值设置为 MDX 表达式。 在特定计算传递过程中，通常将 `This` 函数和 SCOPE 语句一起使用，以更改特定子多维数据集的内容。  
   
 > [!NOTE]  
 >  如果脚本包含含有 `This` 函数的 SCOPE 语句，MDX 将在由 SCOPE 语句定义的子多维数据集的上下文内计算 `This` 函数，而不是针对整个多维数据集进行计算。  
   
 ### <a name="this-function-example"></a>This 函数的示例  
- 在 `This` 示例多维数据集的 Finance 度量值组中，以下 MDX 脚本命令示例使用 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 函数将 Customer 维度中 Redmond 成员的子级的 Amount 度量值增加 10%：  
+ 在 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 示例多维数据集的 Finance 度量值组中，以下 MDX 脚本命令示例使用 `This` 函数将 Customer 维度中 Redmond 成员的子级的 Amount 度量值增加 10%：  
   
 ```  
 /* This SCOPE statement defines the current subcube */  
@@ -117,6 +116,6 @@ END SCOPE;
 ## <a name="see-also"></a>另请参阅  
  [Mdx 语言参考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [基本 MDX 脚本 &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
- [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

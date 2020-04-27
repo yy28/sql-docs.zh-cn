@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074899"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授予对象元数据的读取定义权限 (Analysis Services)
@@ -60,6 +60,6 @@ ms.locfileid: "66074899"
   
 ## <a name="see-also"></a>另请参阅  
  [授予数据库权限 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [&#40;Analysis Services 授予进程权限&#41;](grant-process-permissions-analysis-services.md)  
+ [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)  
   
   

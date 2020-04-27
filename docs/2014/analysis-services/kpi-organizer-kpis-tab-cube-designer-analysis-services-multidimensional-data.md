@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079396"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 组织程序（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -26,7 +26,7 @@ ms.locfileid: "66079396"
 >  在窗体视图中不显示此窗格。  
   
 ## <a name="options"></a>选项  
- **列出**  
+ **成员列表**  
  显示 KPI 的名称。  
   
  选择一个 KPI 可以在窗体视图中显示 **KPI 窗体编辑器** 。  
@@ -37,8 +37,8 @@ ms.locfileid: "66079396"
 |选项|定义|  
 |------------|----------------|  
 |**新建 KPI**|选择此选项可显示 **KPI 窗体编辑器** 并创建新的 KPI。 有关**Kpi 窗体编辑器**的详细信息，请参阅[Kpi 窗体编辑器 &#40;kpi 选项卡，多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
-|**上移**|选择此选项可在 **KPI 组织程序** 中将所选 KPI 向上移动一个位置，并确定 KPI 在 **KPI 浏览器**中的显示顺序。<br /><br /> 注意：如果无法进一步移动所选 KPI，将禁用此选项。|  
-|**向下移动**|选择此选项可在 **KPI 组织程序** 中将所选 KPI 向下移动一个位置，并确定 KPI 在 **KPI 浏览器**中的显示顺序。<br /><br /> 注意：如果无法进一步移动所选 KPI，将禁用此选项。|  
+|**“上移”**|选择此选项可在 **KPI 组织程序** 中将所选 KPI 向上移动一个位置，并确定 KPI 在 **KPI 浏览器**中的显示顺序。<br /><br /> 注意：如果无法进一步移动所选 KPI，将禁用此选项。|  
+|**“下移”**|选择此选项可在 **KPI 组织程序** 中将所选 KPI 向下移动一个位置，并确定 KPI 在 **KPI 浏览器**中的显示顺序。<br /><br /> 注意：如果无法进一步移动所选 KPI，将禁用此选项。|  
 |**删除**|选择此选项可删除所选 KPI。|  
   
 ## <a name="see-also"></a>另请参阅  

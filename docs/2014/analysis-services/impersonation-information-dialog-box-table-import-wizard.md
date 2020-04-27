@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6592d81e91e0582c79bc1a8bb1264b6ab9a7b733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080699"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>“模拟信息”对话框（表导入向导）
@@ -33,7 +33,7 @@ ms.locfileid: "66080699"
   
  只有选定了 **“使用特定名称和密码”** ，才启用此选项。  
   
- **权限**  
+ **密码**  
  键入表格模型将使用的用户帐户的密码。  
   
  只有选定了 **“使用特定名称和密码”** ，才启用此选项。  
@@ -42,6 +42,6 @@ ms.locfileid: "66080699"
  选择此选项将使用与管理该模型的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务相关联的安全凭据。  
   
 ## <a name="see-also"></a>另请参阅  
- [模拟 &#40;SSAS 表格&#41;](tabular-models/impersonation-ssas-tabular.md)  
+ [模拟（SSAS 表格）](tabular-models/impersonation-ssas-tabular.md)  
   
   

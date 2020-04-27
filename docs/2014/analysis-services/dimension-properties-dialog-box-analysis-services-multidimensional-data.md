@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49513fd41e3167adcc9d39a8e680dd25bccb24a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081839"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>“维度属性”对话框（Analysis Services - 多维数据）
@@ -29,7 +29,7 @@ ms.locfileid: "66081839"
 |术语|定义|  
 |----------|----------------|  
 |**名称**|显示维度的名称。|  
-|**识别**|显示维度的标识符。|  
+|**ID**|显示维度的标识符。|  
 |**说明**|显示维度的说明。|  
 |**创建时间戳**|显示维度的创建日期和时间。|  
 |**上次架构更新时间**|显示上次更新维度元数据的日期和时间。|  
@@ -40,6 +40,6 @@ ms.locfileid: "66081839"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Analysis Services 多维数据 &#40;维度&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [维度（Analysis Services - 多维数据）](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 26dd8add089f27c3ea9db22204548196bc887faf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127137"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput（扩展存储过程 API）
@@ -58,20 +58,20 @@ fNull
 ```  
   
 ## <a name="arguments"></a>参数  
- *srvproc*  
+ srvproc**  
  客户端连接的句柄。  
   
  *n*  
  要设置的参数的序号。 第一个参数是 1。  
   
- *pbData*  
+ pbData**  
  指向要作为存储返回参数发送回客户端的数据值的指针。  
   
- *cbLen*  
+ cbLen**  
  要返回的数据的实际长度。 如果参数的数据类型指定了常量长度值且不允许 Null 值（例如 srvbit 或 srvint1），则将会忽略 cbLen******。 如果 fNull 为 FALSE，值为 0 则表示长度为零的数据**。  
   
- *fNull*  
- 指示返回参数的值是否为 NULL 的标志。 如果应将该参数设置为 NULL，请将此标志设置为 TRUE。 默认值为 FALSE。 如果 fNull 设置为 TRUE，cbLen 应设置为 0，否则该函数将失败****。  
+ fNull**  
+ 指示返回参数的值是否为 NULL 的标志。 如果应将该参数设置为 NULL，请将此标志设置为 TRUE。 默认值是 FALSE。 如果 fNull 设置为 TRUE，cbLen 应设置为 0，否则该函数将失败****。  
   
 ## <a name="returns"></a>返回  
  如果成功设置了参数信息，则返回 SUCCEED，否则返回 FAIL。 以下情况下返回 FAIL：  
@@ -81,6 +81,6 @@ fNull
 -   cbLen 参数无效**。  
   
 ## <a name="remarks"></a>备注  
- **安全说明**应全面检查扩展存储过程的源代码，并在生产服务器上安装编译的 Dll 之前对其进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+ **安全说明** 应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，应对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

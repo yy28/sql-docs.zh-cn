@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875083"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
@@ -42,13 +42,13 @@ ms.locfileid: "62875083"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进建议：** 在[更改恢复模式之后](#FollowUp)    
+-   **后续操作建议：**  [在更改恢复模式之后](#FollowUp)  
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   在从完整恢复模式或大容量日志恢复模式切换前，请备份事务日志。  
   
@@ -63,18 +63,18 @@ ms.locfileid: "62875083"
 > [!NOTE]  
 >  如果在大容量操作过程中切换到完整恢复模式，则大容量操作的日志记录将从最小日志记录更改为最大日志记录，反之亦然。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>查看或更改恢复模式  
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 "**数据库**"，根据数据库的不同，选择用户数据库，或展开 "**系统**数据库" 并选择一个系统数据库。  
+2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
 3.  右键单击该数据库，再单击“属性”****，这将打开“数据库属性”**** 对话框。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62875083"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>查看恢复模式  
   
@@ -117,7 +117,7 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a>跟进建议：在更改恢复模式之后  
+##  <a name="follow-up-recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a>跟进建议：在更改恢复模式之后  
   
 -   **在完整恢复模式和大容量日志恢复模式之间切换后**  
   
@@ -146,7 +146,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
     -   确保定期执行数据库备份。 备份数据库对于保护数据和截断事务日志的不活动部分是基本操作。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)  
   
@@ -154,17 +154,17 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [创建作业](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [禁用或启用作业](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   [数据库维护计划](../maintenance-plans/maintenance-plans.md)（联机[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]丛书中）  
+-   [数据库维护计划](../maintenance-plans/maintenance-plans.md) （ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 联机丛书中）  
   
 ## <a name="see-also"></a>另请参阅  
- [恢复模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [恢复模式 (SQL Server)](recovery-models-sql-server.md)   
  [事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+ [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [恢复模式 (SQL Server)](recovery-models-sql-server.md)  
   
   

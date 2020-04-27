@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd38e382cc0b34de0498dd5ed9ce0237a5a1e07f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046129"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 异常处理的最佳实践
@@ -34,10 +34,10 @@ ms.locfileid: "63046129"
   
 |主题|说明|  
 |-----------|-----------------|  
-|[阻止无效请求](preventing-invalid-requests.md)|介绍防止将无效请求发送到报表服务器的方法。|  
+|[防止无效请求](preventing-invalid-requests.md)|介绍防止将无效请求发送到报表服务器的方法。|  
 |[使用 Try 和 Catch 块](using-try-and-catch-blocks.md)|介绍如何通过 try/catch 块进一步增强应用程序的可靠性。|  
 |[处理不导致异常的警告和事例](handling-warnings-and-cases-that-do-not-cause-exceptions.md)|说明如何处理不会导致由 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 引发的异常的错误。|  
-|[使用 Detail 属性处理特定错误](using-the-detail-property-to-handle-specific-errors.md)|说明如何通过使用 SoapException 对象的 Detail 属性以编程方式处理特定的错误   。|  
+|[使用 Detail 属性处理特定错误](using-the-detail-property-to-handle-specific-errors.md)|说明如何通过使用 SoapException 对象的 Detail 属性以编程方式处理特定的错误********。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Detail 属性](../soapexception-class/detail-property.md)   

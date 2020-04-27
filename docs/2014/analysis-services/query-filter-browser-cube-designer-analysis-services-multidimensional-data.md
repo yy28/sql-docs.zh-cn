@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070537"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>查询和筛选（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -34,12 +34,12 @@ ms.locfileid: "66070537"
  **层次结构**  
  选择对子多维数据集进行切片时所在的层次结构。  
   
- **“运算符”**  
+ **操作员**  
  选择运算符，以定义“筛选表达式”**** 中的表达式如何应用于所选层次结构。 下表对可用的运算符进行了说明：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
-|**=**|结果限制为在 **“筛选表达式”** 中定义的集合。|  
+|**等于**|结果限制为在 **“筛选表达式”** 中定义的集合。|  
 |**不等于**|结果限制为排除在 **“筛选表达式”** 中所定义集合之外的成员。|  
 |**中**|结果限制为在 **“筛选表达式”** 中选择的命名集。|  
 |**不位于**|结果限制为排除在 **“筛选表达式”** 中所选命名集之外的成员。|  
@@ -49,7 +49,7 @@ ms.locfileid: "66070537"
 |**范围(不包括)**|结果限制为排除在 **“筛选表达式”** 中所选范围之外的成员。|  
 |**MDX**|结果限制为在“筛选表达式”**** 中设置的多维表达式 (MDX) 表达式。|  
   
- **筛选器表达式**  
+ **筛选表达式**  
  键入通过“运算符”**** 计算的表达式，该表达式可限制要浏览的结果。  
   
 > [!NOTE]  

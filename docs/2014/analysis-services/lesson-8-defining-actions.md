@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078231"
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 课：定义操作
   在本课中，将了解如何在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中定义操作。 操作只是存储在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中并且可以合并到客户端应用程序中并被用户启动的多维表达式 (MDX) 语句。  
   
 > [!NOTE]  
->  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866)下载本教程中的示例项目。  
+>  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持下表中描述的操作类型。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持下表描述的操作类型。  
   
 |||  
 |-|-|  
@@ -37,7 +37,7 @@ ms.locfileid: "66078231"
 |语句|运行 OLE DB 命令。|  
 |代码|在 Internet 浏览器中显示动态网页。|  
   
- 操作让用户能够在所选项的上下文中启动应用程序或执行其他步骤。 有关详细信息，请参阅[操作（Analysis Services — 多维数据）](multidimensional-models/actions-analysis-services-multidimensional-data.md)和[多维模型中的操作](multidimensional-models/actions-in-multidimensional-models.md)  
+ 操作让用户能够在所选项的上下文中启动应用程序或执行其他步骤。 有关详细信息，请参阅 [操作（Analysis Services - 多维数据）](multidimensional-models/actions-analysis-services-multidimensional-data.md)和 [多维模型中的操作](multidimensional-models/actions-in-multidimensional-models.md)  
   
 > [!NOTE]  
 >  有关操作的示例，请参阅“计算工具”窗格中的“模板”选项卡上的操作示例或 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 示例数据仓库中的示例。 有关如何安装此数据库的详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)。  

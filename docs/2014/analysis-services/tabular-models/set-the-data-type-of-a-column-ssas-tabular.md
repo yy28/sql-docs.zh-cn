@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066613"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>设置列的数据类型（SSAS 表格）
@@ -50,7 +50,7 @@ ms.locfileid: "66066613"
   
 |模型数据类型|  
 |----------------------|  
-|文本<br /><br /> 十进制数<br /><br /> 整数<br /><br /> 货币<br /><br /> TRUE/FALSE<br /><br /> Date|  
+|Text<br /><br /> 小数<br /><br /> 整数<br /><br /> 货币<br /><br /> TRUE/FALSE<br /><br /> 日期|  
   
  如果发现数据的数据类型错误或至少与期望的数据类型不同，可以选择以下处理方法：  
   
@@ -68,6 +68,6 @@ ms.locfileid: "66066613"
  有关商业智能语义模型中使用的数据类型、如何隐式转换这些数据类型以及如何在公式中使用不同数据类型的详细信息，请参阅 [支持的数据类型（SSAS 表格）](data-types-supported-ssas-tabular.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSAS 表格&#41;支持的数据类型](data-types-supported-ssas-tabular.md)  
+ [支持的数据类型（SSAS 表格）](data-types-supported-ssas-tabular.md)  
   
   

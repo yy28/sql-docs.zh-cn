@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075554"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名查询 (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66075554"
   
  SQL 查询中引用的表和列不应被限定或只应由表名限定。 例如，在引用某个表中的 SaleAmount 列时， `SaleAmount` 或 `Sales.SaleAmount` 是有效的，而 `dbo.Sales.SaleAmount` 则会生成错误。  
   
- **注意**定义查询[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 数据源的命名查询时，包含相关子查询和 GROUP by 子句的命名查询将失败。 有关详细信息，请参阅 [知识库中的](https://support.microsoft.com/kb/274729) Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY [!INCLUDE[msCoName](../../includes/msconame-md.md)] （有关包含相关子查询和 GROUP BY 的 SELECT 语句的内部错误）。  
+ **请注意** 定义查询 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 数据源的命名查询时，包含相关子查询和 GROUP BY 子句的命名查询将失败。 有关详细信息，请参阅 [知识库中的](https://support.microsoft.com/kb/274729) Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY [!INCLUDE[msCoName](../../includes/msconame-md.md)] （有关包含相关子查询和 GROUP BY 的 SELECT 语句的内部错误）。  
   
 ## <a name="add-or-edit-a-named-query"></a>添加或编辑命名查询  
   
@@ -58,10 +58,10 @@ ms.locfileid: "66075554"
     > [!NOTE]  
     >  查询生成用户界面 (UI) 取决于数据源。 您所得到的不是图形 UI，而是基于文本的一般 UI。 您可以使用这些不同的 UI 来实现同样的功能，但必须以不同的方式来操作。 有关详细信息，请参阅[“创建或编辑命名查询”对话框（Analysis Services - 多维数据）](../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)。  
   
-5.  单击“确定”。  一个显示两个重叠表的图标出现在表格表头上，指示此表已被一个命名查询替代。  
+5.  单击" **确定**"。 一个显示两个重叠表的图标出现在表格表头上，指示此表已被一个命名查询替代。  
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
- [在数据源视图中定义命名计算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义命名计算 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

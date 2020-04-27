@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891322"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>第 4 课：添加错误流重定向
@@ -34,7 +34,7 @@ ms.locfileid: "62891322"
 ## <a name="tasks-in-lesson"></a>课程中的任务  
  本课程包含以下任务：  
   
--   [步骤 1：复制 Lesson 3 包](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [步骤 1：复制第 3 课包](lesson-4-1-copying-the-lesson-3-package.md)  
   
 -   [步骤 2：创建损坏的文件](lesson-4-2-creating-a-corrupted-file.md)  
   
@@ -45,6 +45,6 @@ ms.locfileid: "62891322"
 -   [步骤 5：测试第 4 课教程包](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
- [步骤 1：复制 Lesson 3 包](lesson-4-1-copying-the-lesson-3-package.md)  
+ [步骤 1：复制第 3 课包](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

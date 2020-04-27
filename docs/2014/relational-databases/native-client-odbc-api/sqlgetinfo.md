@@ -15,17 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128655"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   该表显示**SQLGetInfo**返回的值。 这些值可能根据连接服务器的版本号而有所不同。  
   
- **** Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLGetInfo 与 ODBC 驱动程序中的**SQLGetInfo**不同（sqlsrv32.dll。DLL）的**SQLGetInfo**调用时，将使用 SQL_KEYWORDS 和0缓冲区长度。  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序返回 SQL_SUCCESS，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序返回 SQL_SUCCESS_WITH_INFO。  但是，当使用小于 output 关键字字符串的非零缓冲区长度调用时，Native Client **** 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 SQLGetInfo 将返回 SQL_SUCCESS_WITH_INFO，SQLState 为01004。  
+ **SQLGetInfo** Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLGetInfo 与 ODBC 驱动程序中的**SQLGetInfo**不同（sqlsrv32.dll。DLL）的**SQLGetInfo**调用时，将使用 SQL_KEYWORDS 和0缓冲区长度。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序返回 SQL_SUCCESS，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序返回 SQL_SUCCESS_WITH_INFO。  但是，当使用小于 output 关键字字符串的非零缓冲区长度调用时，Native Client **SQLGetInfo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 SQLGetInfo 将返回 SQL_SUCCESS_WITH_INFO，SQLState 为01004。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -118,8 +117,7 @@ ms.locfileid: "63128655"
 |SQL_IDENTIFIER_QUOTE_CHAR|"（双引号）|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|驱动程序不支持请求。|  
-|SQL_INFO_SS_NETLIB_NAME|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的属性。 连接使用的网络库的名称。<br /><br /> 默认情况下，将返回 DBNETLIB。  在这种情况下，DBNETLIB 引用网络库，与 DBNETLIB 无关。|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的属性。 连接使用的网络库的名称。<br /><br /> 默认情况下，将返回 DBNETLIB。  在这种情况下，DBNETLIB 引用网络库，与 DBNETLIB 无关。|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  

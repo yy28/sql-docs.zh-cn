@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078016"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX 生成器（Analysis Services -多维数据）
-  可以使用 ** 或 ** 中的“MDX 生成器”[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框生成多维表达式 (MDX) 表达式。 通过单击 "**允许读取多维数据集内容**" 选项的 "**编辑 mdx**省略号" 按钮（**...**），可以显示 " **Mdx 生成器**" 对话框，在**角色设计器**的 "**单元数据**" 页上，单击 "**允许读取**单元格内容的显示内容" 选项或 "**允许读取和写入多维数据集内容**" 选项。  
+  可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“MDX 生成器”**** 对话框生成多维表达式 (MDX) 表达式。 通过单击 "**允许读取多维数据集内容**" 选项的 "**编辑 mdx**省略号" 按钮（**...**），可以显示 " **Mdx 生成器**" 对话框，在**角色设计器**的 "**单元数据**" 页上，单击 "**允许读取**单元格内容的显示内容" 选项或 "**允许读取和写入多维数据集内容**" 选项。  
   
 ## <a name="options"></a>选项  
   

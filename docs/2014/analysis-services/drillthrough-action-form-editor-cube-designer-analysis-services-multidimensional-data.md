@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081459"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>钻取操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -26,7 +26,7 @@ ms.locfileid: "66081459"
 >  钻取操作不再深化到基础数据存储区。 必须使用维度或层次结构成员在多维数据集中对钻取操作访问的信息进行建模。  
   
 ## <a name="options"></a>选项  
- **路径名**  
+ **name**  
  键入操作的名称。  
   
  **操作目标**  
@@ -50,10 +50,10 @@ ms.locfileid: "66081459"
   
 |列|说明|  
 |------------|-----------------|  
-|**维度**|选择派生所返回属性的维度。 选择 MEASURES 可以钻取度量值。|  
+|**Dimensions**|选择派生所返回属性的维度。 选择 MEASURES 可以钻取度量值。|  
 |**返回列**|从所选维度中选择将在操作运行时返回的属性或度量值。|  
   
- **其他属性**  
+ **附加属性**  
  展开可查看“默认值”、“最大行数”、“调用”、“应用程序”、“说明”、“标题”和“标题是 MDX”选项。****************************  
   
  **缺省值**  
@@ -75,13 +75,13 @@ ms.locfileid: "66081459"
   
  下表对可用的设置进行了说明：  
   
-|值|说明|  
+|Value|描述|  
 |-----------|-----------------|  
 |Batch|该操作将作为批处理操作或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 任务的一部分运行。|  
-|交互|在用户调用该操作时运行。|  
+|Interactive (交互)|在用户调用该操作时运行。|  
 |处于打开状态|第一次打开多维数据集时运行该操作。|  
   
- **Application**  
+ **应用程序**  
  键入可执行钻取操作的应用程序的名称。  
   
  还可以使用此选项来标识最常使用此操作的客户端应用程序，并在弹出菜单中该操作的旁边显示相应的图标。  

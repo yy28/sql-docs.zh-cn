@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078563"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 课：创建计算列
   在本课中，将通过添加计算列在模型中创建新数据。 计算列基于模型中的现有数据。 了解详细信息，请参阅[计算列（SSAS 表格）](tabular-models/ssas-calculated-columns.md)。  
   
- 将在三个不同的表中创建五个计算列。 对于每个任务，步骤略有不同。 这是为了说明有多种方法可用来创建新列、对其进行重命名，以及将其放置在表中的各种位置。  
+ 将在三个不同的表中创建五个计算列。 步骤对于每个任务略有不同。 这是为了说明有多种方法可用来创建新列、对其进行重命名，以及将其放置在表中的各种位置。  
   
- 本课预计完成时间：**15 分钟**  
+ 学完本课的估计时间： **15 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
- 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，须已完成上一课：[第 5 课：创建关系](lesson-4-create-relationships.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，须已完成上一课： [第 5 课：创建关系](lesson-4-create-relationships.md)。  
   
 ## <a name="create-calculated-columns"></a>创建计算列  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66078563"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”**** 菜单，然后指向“模型视图”****，再单击“数据视图”****。  
   
-     只能使用模型设计器在“数据视图”中创建计算列。  
+     只能在数据视图中使用模型设计器创建计算列。  
   
 2.  在模型设计器中，单击“Date”**** 表（选项卡）。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66078563"
      然后，会在计算列中为所有行填充值。 如果在表中向下滚动，会看到，根据每行中的数据，各行中的此列可能具有不同的值。  
   
     > [!NOTE]  
-    >  如果收到错误提示，请验证确保公式中的列名与在[第 3 课：重命名列](rename-columns.md)中更改的列名是否匹配。  
+    >  如果收到错误提示，请验证确保公式中的列名与在 [第 3 课：重命名列](rename-columns.md)中更改的列名是否匹配。  
   
 5.  将此列重`Month Calendar`命名为。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66078563"
 4.  单击列标题，然后将此列拖到“Day Name”**** 列与“Day of Month”**** 列之间。  
   
     > [!TIP]  
-    >  移动表中的列可使其更容易导航。  
+    >  移动表中的列可使表变得更易于浏览。  
   
  Day of Week 计算列为周内的日期提供可排序的名称。  
   
@@ -126,6 +126,6 @@ ms.locfileid: "66078563"
  Margin 计算列用来分析每个（产品）行的毛利润率。  
   
 ## <a name="next-step"></a>下一步  
- 若要继续学习本课程，请转到下一课：[第 7 课：创建度量值](lesson-6-create-measures.md)。  
+ 若要继续学习本课程，请转到下一课： [第 7 课：创建度量值](lesson-6-create-measures.md)。  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61f7e509b715b1156b06362f8e9bcd4a634de0c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020869"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>从 Oracle 数据库创建发布
@@ -35,16 +35,16 @@ ms.locfileid: "63020869"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
--   创建发布之前，必须在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分发服务器上安装 oracle 软件，并配置 oracle 数据库。 有关详细信息，请参阅[配置 Oracle 发布服务器](../non-sql/configure-an-oracle-publisher.md)。  
+-   在创建发布之前，必须在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装 Oracle 软件，并配置 Oracle 数据库。 有关详细信息，请参阅[配置 Oracle 发布服务器](../non-sql/configure-an-oracle-publisher.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以使用新建发布向导，从 Oracle 数据库创建快照发布或事务发布。  
   
- 首次从 Oracle 数据库创建发布时，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上标识 Oracle 发布服务器（对于来自同一数据库的后续发布，不需要执行此操作）。 标识 Oracle 发布服务器的操作可以从新建发布向导或“分发服务器属性 - **分发服务器>”对话框中完成；本主题介绍了“分发服务器属性 - \<分发服务器>”对话框。****\<**  
+ 首次从 Oracle 数据库创建发布时，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上标识 Oracle 发布服务器（对于来自同一数据库的后续发布，不需要执行此操作）。 标识 Oracle 发布服务器的操作可以从新建发布向导或“分发服务器属性 - **分发服务器>”对话框中完成；本主题介绍了“分发服务器属性 - \<分发服务器>”对话框。** **\<**  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>在 SQL Server 分发服务器上标识 Oracle 发布服务器  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63020869"
   
 2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”** 。  
   
-3.  在“分发服务器属性 - **分发服务器>”对话框的“发布服务器”页上，依次单击“添加”和“添加 Oracle 发布服务器”。****\<**********  
+3.  在“分发服务器属性 - **分发服务器>”对话框的“发布服务器”页上，依次单击“添加”和“添加 Oracle 发布服务器”。** **\<**    
   
 4.  在 **“连接到服务器”** 对话框中，单击 **“选项”** 按钮。  
   
@@ -60,18 +60,17 @@ ms.locfileid: "63020869"
   
     1.  输入 Oracle 数据库实例名称，或者选择 **“服务器实例”** 组合框中的 **“浏览更多”** 。  
   
-    2.  选择 **“Oracle 标准身份验证”** （建议）或 **“Windows 身份验证”**。  
+    2.  选择 **“Oracle 标准身份验证”** （建议）或 **“Windows 身份验证”** 。  
   
-         如果选择了 **“Windows 身份验证”**，则必须将 Oracle 服务器配置为允许使用 Windows 凭据进行连接（有关详细信息，请参阅 Oracle 文档），并且当前必须使用为复制管理用户架构指定的同一 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 帐户进行登录。  
+         如果选择了 **“Windows 身份验证”** ，则必须将 Oracle 服务器配置为允许使用 Windows 凭据进行连接（有关详细信息，请参阅 Oracle 文档），并且当前必须使用为复制管理用户架构指定的同一 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 帐户进行登录。  
   
-    3.  如果选择 **“Oracle 标准身份验证”**，则在配置过程中，请输入在 Oracle 发布服务器上创建的复制管理用户架构的登录名和密码。  
+    3.  如果选择 **“Oracle 标准身份验证”** ，则在配置过程中，请输入在 Oracle 发布服务器上创建的复制管理用户架构的登录名和密码。  
   
 6.  在 **“连接属性”** 选项卡上，选择 **“网关”** 或 **“完整”** 发布服务器类型。  
   
-     "**完整**" 选项用于为快照和事务发布提供一套完整的 Oracle 发布支持功能。 
-  **“网关”** 选项提供特定的设计优化，以提高复制作为系统间的网关时的性能。 如果计划在多个事务发布中发布同一个表，则无法使用 **“网关”** 选项。 如果选择 **“网关”**，则一个表可以最多出现在一个事务发布中或出现在任意数量的快照发布中。  
+     **“完整”** 选项用于为快照和事务发布提供所支持的完整的 Oracle 发布功能集。 **“网关”** 选项提供特定的设计优化，以提高复制作为系统间的网关时的性能。 如果计划在多个事务发布中发布同一个表，则无法使用 **“网关”** 选项。 如果选择 **“网关”** ，则一个表可以最多出现在一个事务发布中或出现在任意数量的快照发布中。  
   
-7.  单击 **“连接”**，创建到 Oracle 发布服务器的连接，并配置该连接以进行复制。 “连接至服务器”对话框将关闭，你将返回到“分发服务器属性 - **分发服务器>”对话框。****\<**  
+7.  单击 **“连接”** ，创建到 Oracle 发布服务器的连接，并配置该连接以进行复制。 “连接至服务器”对话框将关闭，你将返回到“分发服务器属性 - **分发服务器>”对话框。** **\<**  
   
     > [!NOTE]  
     >  如果网络配置出现问题，则在此将收到一条错误。 如果连接 Oracle 数据库时遇到问题，请参阅 [Troubleshooting Oracle Publishers](../non-sql/troubleshooting-oracle-publishers.md)中的“SQL Server 分发服务器无法连接到 Oracle 数据库实例”部分。  
@@ -84,11 +83,11 @@ ms.locfileid: "63020869"
   
 2.  展开 **“复制”** 文件夹。  
   
-3.  右键单击 **“本地发布”** 文件夹，然后单击 **“新建 Oracle 发布”**。  
+3.  右键单击 **“本地发布”** 文件夹，然后单击 **“新建 Oracle 发布”** 。  
   
-4.  在新建发布向导的 **“Oracle 发布服务器”** 页上，选择 Oracle 发布服务器。 如果未显示 Oracle 发布服务器，请单击 **“添加 Oracle 发布服务器”**，逐步执行上一过程中的步骤。  
+4.  在新建发布向导的 **“Oracle 发布服务器”** 页上，选择 Oracle 发布服务器。 如果未显示 Oracle 发布服务器，请单击 **“添加 Oracle 发布服务器”** ，逐步执行上一过程中的步骤。  
   
-5.  在 **“发布类型”** 页上，选择 **“快照发布”** 或 **“事务发布”**。  
+5.  在 **“发布类型”** 页上，选择 **“快照发布”** 或 **“事务发布”** 。  
   
 6.  在 **“项目”** 页上，选择要发布的数据库对象。  
   
@@ -106,8 +105,8 @@ ms.locfileid: "63020869"
   
 11. 在 **“完成该向导”** 页上，指定发布的名称。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 将 Oracle 数据库配置为发布服务器后，可以使用系统存储过程，以与[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]发布服务器相同的方式创建事务发布或快照发布。  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
+ 在将 Oracle 数据库配置为发布服务器后，可以使用系统存储过程创建事务发布或快照发布，方法与从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器创建发布相同。  
   
 #### <a name="to-create-an-oracle-publication"></a>创建 Oracle 发布  
   
@@ -115,7 +114,7 @@ ms.locfileid: "63020869"
   
 2.  如果不存在远程分发服务器，请配置远程分发服务器。 有关详细信息，请参阅 [Configure Publishing and Distribution](../configure-publishing-and-distribution.md)。  
   
-3.  在 Oracle 发布服务器将使用的远程分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)。 指定 Oracle **@publisher**数据库实例的透明网络基底（TNS）名称，并将的值指定`ORACLE`为`ORACLE GATEWAY` **@publisher_type**或。 `Specify`从 Oracle 发布服务器连接到远程[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分发服务器时使用的安全模式，如下所示：  
+3.  在 Oracle 发布服务器将使用的远程分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)。 指定 Oracle **@publisher**数据库实例的透明网络基底（TNS）名称，并将的值指定`ORACLE`为`ORACLE GATEWAY` **@publisher_type**或。 `Specify` 从 Oracle 发布服务器连接到远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器时使用的以下安全模式之一：  
   
     -   若要使用 Oracle 标准身份验证（默认值），请将 **@security_mode** 指定值 **@security_mode**，并将 **@login**和 **@password**中从 Oracle 数据库创建发布。  
   
@@ -138,15 +137,15 @@ ms.locfileid: "63020869"
         > [!NOTE]  
         >  **@job_login**参数必须与步骤3中提供的登录名匹配。 不要提供发布服务器安全信息。 日志读取器代理使用步骤 3 中提供的安全信息连接到发布服务器。  
   
-5.  在分发服务器上的分发数据库中，执行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 以创建发布。 有关详细信息，请参阅[创建发布](create-a-publication.md)。  
+5.  在分发服务器上的分发数据库中，执行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 以创建发布。 有关详细信息，请参阅 [Create a Publication](create-a-publication.md)。  
   
 6.  在分发服务器上的分发数据库中，执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 为**@publication**指定在步骤4中使用的发布名称，并为**@job_name**和**@password**运行快照代理所用的 Windows 凭据。 若要在连接到发布服务器时使用 Oracle 标准身份验证，还必须将 **@security_mode** 指定值 **@publisher_security_mode** 值，并为 **@publisher_login** 和 **@publisher_password**中从 Oracle 数据库创建发布。 此操作将为发布创建一个快照代理作业。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../non-sql/configure-an-oracle-publisher.md)   
  [发布数据和数据库对象](publish-data-and-database-objects.md)   
- [为 Oracle 发布服务器配置事务集作业 &#40;复制 Transact-sql 编程&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [为 Oracle 发布服务器配置事务集作业（复制 Transact-SQL 编程）](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Oracle 发布概述](../non-sql/oracle-publishing-overview.md)   
- [用于授予 Oracle 权限的脚本](../non-sql/script-to-grant-oracle-permissions.md)  
+ [授予 Oracle 权限的脚本](../non-sql/script-to-grant-oracle-permissions.md)  
   
   

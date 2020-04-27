@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067312"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>分区和 DirectQuery 模式（SSAS 表格）
-  本节介绍了如何在 DirectQuery 模型中使用分区。 有关表格模型中分区的更多常规信息，请参阅[分区（SSAS 表格）](partitions-ssas-tabular.md)。  
+  本节介绍了如何在 DirectQuery 模型中使用分区。 有关表格模型中分区的更多常规信息，请参阅 [分区（SSAS 表格）](partitions-ssas-tabular.md)。  
   
  有关如何更改所使用的分区的说明或查看有关分区的信息，请参阅[将 DirectQuery 分区更改 &#40;SSAS 表格&#41;](../change-the-directquery-partition-ssas-tabular.md)。  
   
@@ -42,12 +42,12 @@ ms.locfileid: "66067312"
   
  DirectQuery 分区有两个处理选项。 若要设置此属性，请使用 **中的** “分区管理器” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然后选择 **“处理选项”** 属性。 下表列出此属性的值，并说明在与连接字符串中的 DirectQueryUsage 属性结合使用时每个值的用途。  
   
-|**DirectQueryUsage**属性|**处理选项**属性|说明|  
+|**DirectQueryUsage**属性|**“处理选项”** 属性|说明|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|绝不要处理此分区|模型使用仅限 DirectQuery 时，没必要进行处理。<br /><br /> 在混合模型中，您可以将 DirectQuery 分区配置为永远不会被处理。 例如，如果您正在对一个非常大的数据集进行操作，并且不想将完整结果添加到缓存中，则可以指定 DirectQuery 分区包含表中所有其他分区结果的并集，然后永远不处理该并集。 转到关系数据源的查询将不会受到影响，并且对缓存数据进行的查询将合并来自其他分区的数据|  
 |带有 DirectQuery 的 InMemory|允许处理分区|如果模型使用混合模式，则您应将相同的分区用于针对内存中的查询和针对 DirectQuery 数据源的查询。|  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSAS 表格&#41;分区](partitions-ssas-tabular.md)  
+ [分区（SSAS 表格）](partitions-ssas-tabular.md)  
   
   

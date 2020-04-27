@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069302"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>选择要修改的分区（聚合设计向导）
@@ -31,10 +31,10 @@ ms.locfileid: "66069302"
  **分区名称**  
  显示分区的名称。  
   
- **数据源**  
+ **源**  
  显示用于为分区提供源数据的表或查询。  
   
- **Aggregations**  
+ **聚合**  
  显示用于描述分区所使用的聚合设计的字符串。  
   
 ## <a name="see-also"></a>另请参阅  

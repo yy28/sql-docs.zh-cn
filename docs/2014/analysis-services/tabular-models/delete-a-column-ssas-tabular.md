@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067264"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>删除列（SSAS 表格）
@@ -23,7 +23,7 @@ ms.locfileid: "66067264"
 ## <a name="delete-a-model-table-column"></a>删除模型表列  
   
 > [!NOTE]  
->  从模型表中删除列不会删除分区查询定义中的列。 如果要删除的列是分区的一部分，则您必须手动从分区查询定义中删除该列。 从分区查询定义中删除该列失败将导致查询该列并返回数据，但在处理操作期间，不会将这些数据填入模型表。 有关详细信息，请参阅[分区（SSAS 表格）](partitions-ssas-tabular.md)。  
+>  从模型表中删除列不会删除分区查询定义中的列。 如果要删除的列是分区的一部分，则您必须手动从分区查询定义中删除该列。 从分区查询定义中删除该列失败将导致查询该列并返回数据，但在处理操作期间，不会将这些数据填入模型表。 有关详细信息，请参阅 [分区（SSAS 表格）](partitions-ssas-tabular.md)。  
   
 #### <a name="to-delete-a-model-table-column"></a>删除模型表列  
   
@@ -39,6 +39,6 @@ ms.locfileid: "66067264"
   
 ## <a name="see-also"></a>另请参阅  
  [将列添加到 &#40;SSAS 表格&#41;的表](add-columns-to-a-table-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;分区](partitions-ssas-tabular.md)  
+ [分区（SSAS 表格）](partitions-ssas-tabular.md)  
   
   

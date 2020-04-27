@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070263"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>“还原数据库”对话框（Analysis Services - 多维数据）
-  可使用 ** 中的“还原数据库”**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框，以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 备份文件 (.abf) 格式从备份文件中还原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。  
+  可使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“还原数据库”**** 对话框，以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 备份文件 (.abf) 格式从备份文件中还原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。  
   
 > [!IMPORTANT]  
 >  对于每个备份文件，运行还原命令的用户必须对每个文件的指定备份位置具有读取权限。 若要还原未在服务器上安装的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，用户还必须是此 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的服务器角色成员。 若要覆盖 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，用户必须具有以下角色之一： [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的服务器角色成员，或对要还原的数据库拥有完全控制（管理员）权限的数据库角色成员。  
@@ -30,16 +30,15 @@ ms.locfileid: "66070263"
   
  **显示“还原数据库”对话框**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 ** 实例的“数据库”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]文件夹或“对象资源管理器”**** 中的数据库，然后单击“还原”****。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”**** 文件夹或“对象资源管理器”**** 中的数据库，然后单击“还原”****。  
   
- 
-  **“还原数据库”** 对话框包含以下页。  
+ **“还原数据库”** 对话框包含以下页。  
   
 ## <a name="pages"></a>页  
  **常规**  
  使用此页可以选择要还原的数据库、从中还原数据库的备份文件以及还原数据库时使用的常规选项和密码。 有关该页的详细信息，请参阅[常规（“还原数据库”对话框）（Analysis Services - 多维数据）](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)。  
   
- **“度量值组”**  
+ **分区**  
  使用此页可以将本地分区还原到指定的位置，以及从远程备份文件还原远程分区。 有关该页的详细信息，请参阅[分区（“还原数据库”对话框）（Analysis Services - 多维数据）](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)。  
   
 ## <a name="see-also"></a>另请参阅  

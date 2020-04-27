@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079713"
 ---
 # <a name="performance-counters-ssas"></a>性能计数器 (SSAS)
@@ -32,7 +32,7 @@ ms.locfileid: "66079713"
   
 |组|说明|  
 |-----------|-----------------|  
-|[区](#bkmk_Cache)|与 Analysis Services 聚合缓存相关的统计信息。|  
+|[缓存](#bkmk_Cache)|与 Analysis Services 聚合缓存相关的统计信息。|  
 |[连接](#bkmk_Connection)|与 Microsoft Analysis Services 连接相关的统计信息。|  
 |[数据挖掘预测](#bkmk_DataMiningPrediction)|与处理数据挖掘模型相关的统计信息。|  
 |[数据挖掘模型处理](#bkmk_DataMiningModelProcessing)|与根据数据挖掘模型创建预测相关的统计信息。|  
@@ -42,11 +42,11 @@ ms.locfileid: "66079713"
 |[主动缓存](#bkmk_ProactiveCaching)|与 Microsoft Analysis Services 主动缓存相关的统计信息。|  
 |[处理聚合](#bkmk_ProcAggregations)|与处理 MOLAP 数据文件中的聚合相关的统计信息。|  
 |[处理索引](#bkmk_ProcIndexes)|与处理 MOLAP 数据文件的索引相关的统计信息。|  
-|[字处理](#bkmk_Processing)|与数据处理相关的统计信息。|  
+|[Processing](#bkmk_Processing)|与数据处理相关的统计信息。|  
 |[存储引擎查询](#bkmk_StorageEngineQuery)|与 Microsoft Analysis Services 存储引擎查询相关的统计信息。|  
 |[线程](#bkmk_Threads)|与 Microsoft Analysis Services 线程相关的统计信息。|  
   
-###  <a name="bkmk_Cache"></a>区  
+###  <a name="cache"></a><a name="bkmk_Cache"></a>区  
  与 Microsoft Analysis Services 聚合缓存相关的统计信息。  
   
 |计数器|说明|  
@@ -68,21 +68,21 @@ ms.locfileid: "66079713"
 |Total filtered iterator cache hits|在筛选结果的基础上返回一个索引迭代器的缓存命中总次数。|  
 |Total filtered iterator cache misses|因无法在筛选结果的基础上生成索引迭代器而不得不使用筛选结果生成新缓存的缓存命中总次数。|  
   
-###  <a name="bkmk_Connection"></a>连接  
+###  <a name="connection"></a><a name="bkmk_Connection"></a>连接  
  与 Microsoft Analysis Services 连接相关的统计信息。  
   
 |计数器|说明|  
 |-------------|-----------------|  
 |当前连接数|当前已建立的客户端连接的数量。|  
 |请求数/秒|连接请求的速率。  这些请求是到达的请求。|  
-|Total requests|连接请求总数。  这些请求是到达的请求。|  
+|请求总数|连接请求总数。  这些请求是到达的请求。|  
 |Successes/sec|连接成功完成速率。|  
 |Total successes|成功连接总数。|  
 |Failures/sec|连接失败速率。|  
 |Total failures|失败的连接尝试总数。|  
 |Current user sessions|当前已建立的用户会话数。|  
   
-###  <a name="bkmk_DataMiningModelProcessing"></a>数据挖掘模型处理  
+###  <a name="data-mining-model-processing"></a><a name="bkmk_DataMiningModelProcessing"></a>数据挖掘模型处理  
  与 Microsoft Analysis Services 数据挖掘模型处理相关的统计信息。  
   
 |计数器|说明|  
@@ -90,7 +90,7 @@ ms.locfileid: "66079713"
 |Cases/sec|处理事例的速率。|  
 |Current models processing|当前正在处理的模型数。|  
   
-###  <a name="bkmk_DataMiningPrediction"></a>数据挖掘预测  
+###  <a name="data-mining-prediction"></a><a name="bkmk_DataMiningPrediction"></a> 数据挖掘预测  
  与 Microsoft Analysis Services 数据挖掘预测相关的统计信息。  
   
 |计数器|说明|  
@@ -103,7 +103,7 @@ ms.locfileid: "66079713"
 |总计行|数据挖掘查询返回的行总数。|  
 |Total Predictions|服务器收到的数据挖掘预测查询总数。|  
   
-###  <a name="bkmk_Locks"></a>住  
+###  <a name="locks"></a><a name="bkmk_Locks"></a>住  
  与 Microsoft Analysis Services 内部服务器锁相关的统计信息。  
   
 |计数器|说明|  
@@ -119,7 +119,7 @@ ms.locfileid: "66079713"
 |Unlock requests/sec|每秒的解锁请求数。|  
 |Total deadlocks detected|检测到的死锁总数。|  
   
-###  <a name="bkmk_MDX"></a>并用  
+###  <a name="mdx"></a><a name="bkmk_MDX"></a>并用  
  与 Microsoft Analysis Services MDX 计算相关的统计信息。  
   
 |计数器|说明|  
@@ -152,7 +152,7 @@ ms.locfileid: "66079713"
 |Total Autoexist|执行 autoexist 的总次数。|  
 |Total EXISTING|执行 EXISTING 集操作的总次数。|  
   
-###  <a name="bkmk_Memory"></a>记忆  
+###  <a name="memory"></a><a name="bkmk_Memory"></a>记忆  
  与 Microsoft Analysis Services 内部服务器内存相关的统计信息。  
   
 |计数器|说明|  
@@ -229,7 +229,7 @@ ms.locfileid: "66079713"
 |Memory Limit Hard KB|内存硬性限制，来自配置文件。|  
 |Memory Limit VertiPaq KB|内存中限制，来自配置文件。|  
   
-###  <a name="bkmk_ProactiveCaching"></a>主动缓存  
+###  <a name="proactive-caching"></a><a name="bkmk_ProactiveCaching"></a>主动缓存  
  与 Microsoft Analysis Services 主动缓存相关的统计信息。  
   
 |计数器|说明|  
@@ -239,7 +239,7 @@ ms.locfileid: "66079713"
 |Proactive Caching Begin/sec|主动缓存的开始速率。|  
 |Proactive Caching Completion/sec|主动缓存的完成速率。|  
   
-###  <a name="bkmk_ProcAggregations"></a>处理聚合  
+###  <a name="processing-aggregations"></a><a name="bkmk_ProcAggregations"></a> 处理聚合  
  与 Microsoft Analysis Services 处理 MOLAP 数据文件中的聚合相关的统计信息。  
   
 |计数器|说明|  
@@ -253,7 +253,7 @@ ms.locfileid: "66079713"
 |Temp file rows written/sec|将行写入临时文件的速率。  聚合超过内存限制时会写入临时文件。|  
 |Temp file bytes written/sec|将字节写入临时文件的速率。  聚合超过内存限制时会写入临时文件。|  
   
-###  <a name="bkmk_ProcIndexes"></a>处理索引  
+###  <a name="processing-indexes"></a><a name="bkmk_ProcIndexes"></a> 处理索引  
  与 Microsoft Analysis Services 处理 MOLAP 数据文件的索引相关的统计信息。  
   
 |计数器|说明|  
@@ -263,7 +263,7 @@ ms.locfileid: "66079713"
 |Rows/sec|使用 MOLAP 文件中的行创建索引的速率。|  
 |总计行|使用 MOLAP 文件中的行创建索引的总行数。|  
   
-###  <a name="bkmk_Processing"></a>字处理  
+###  <a name="processing"></a><a name="bkmk_Processing"></a>字处理  
  与 Microsoft Analysis Services 数据处理相关的统计信息。  
   
 |计数器|说明|  
@@ -275,7 +275,7 @@ ms.locfileid: "66079713"
 |Rows written/sec|在处理过程中写入行的速率。|  
 |Total rows written|处理过程中写入的行数。|  
   
-###  <a name="bkmk_StorageEngineQuery"></a>存储引擎查询  
+###  <a name="storage-engine-query"></a><a name="bkmk_StorageEngineQuery"></a>存储引擎查询  
  与 Microsoft Analysis Services 存储引擎查询相关的统计信息。  
   
 |计数器|说明|  
@@ -318,7 +318,7 @@ ms.locfileid: "66079713"
 |Aggregation lookups/sec|聚合查找速率。|  
 |Aggregation hits/sec|聚合命中率。|  
   
-###  <a name="bkmk_Threads"></a>线程  
+###  <a name="threads"></a><a name="bkmk_Threads"></a>线程  
  与 Microsoft Analysis Services 线程相关的统计信息。  
   
 |计数器|说明|  

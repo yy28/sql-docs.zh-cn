@@ -23,28 +23,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046278"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 头文件和库文件
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的详细信息，请参阅[安装 SQL Server Native Client](installing-sql-server-native-client.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件安装在以下位置：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件安装在以下位置：  
   
  *% PROGRAM FILES%* \Microsoft SQL Server\110\SDK  
   
- 可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件 (sqlncli.h) 向自定义应用程序添加 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 数据访问功能。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件包含利用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的新功能所需的所有定义、特性、属性和接口。  
+ 可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件 (sqlncli.h) 向自定义应用程序添加 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 数据访问功能。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件包含利用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的新功能所需的所有定义、特性、属性和接口。  
   
  除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件之外，还存在一个 sqlncli11.lib 库文件，该文件是 ODBC 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制程序 (BCP) 功能的导出库。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件与用于 Microsoft 数据访问组件 (MDAC) 的 sqloledb.h 和 odbcss.h 头文件向后兼容，但不包含 SQLOLEDB 的 CLSID（MDAC 附带的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 访问接口）或 XML 功能的符号（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不支持这些符号）。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件与用于 Microsoft 数据访问组件 (MDAC) 的 sqloledb.h 和 odbcss.h 头文件向后兼容，但不包含 SQLOLEDB 的 CLSID（MDAC 附带的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 访问接口）或 XML 功能的符号（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不支持这些符号）。  
   
  ODBC 应用程序不能在同一程序中引用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件 (sqlncli.h) 和 odbcss.h。 即使您不使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的任何功能，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件仍将替换旧的 odbcss.h 运行。  
   
@@ -54,8 +50,7 @@ ms.locfileid: "63046278"
  若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件，必须在 C/C++ 编程代码中使用 `include` 语句。 以下部分说明如何在 OLE DB 和 ODBC 应用程序中使用该头文件。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件只能使用 Visual Studio C++ 2002 或更高版本编译。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件只能使用 Visual Studio C++ 2002 或更高版本编译。  
   
 ### <a name="ole-db"></a>OLE DB  
  若要在 OLE DB 应用程序中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件，请使用以下编程代码行：  
@@ -85,7 +80,7 @@ include "sqlncli.h";
   
 ## <a name="component-names-and-properties-by-version"></a>基于版本的组件名称和属性  
   
-|properties|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|属性|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
 |ODBC 驱动程序名称|SQL Native Client|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
 |ODBC 头文件名|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  
@@ -103,7 +98,7 @@ include "sqlncli.h";
   
  例如，如果您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 编译某一应用程序，并且关联的库文件 (sqlncli11.lib) 和头文件 (sqlncli.h) 来自 \Program Files\Microsoft SQL Server\110\SDK，则应确保在连接字符串中指定（以 ODBC 为例）“DRIVER={SQL Server Native Client 11.0}”。  
   
- 有关详细信息，请参阅执行[大容量复制操作](../features/performing-bulk-copy-operations.md)。  
+ 有关详细信息，请参阅[执行大容量复制操作](../features/performing-bulk-copy-operations.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Native Client 生成应用程序](building-applications-with-sql-server-native-client.md)  

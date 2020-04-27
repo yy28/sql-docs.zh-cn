@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074401"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>基于 LANGUAGE 和 FORMAT_STRING 的 FORMATED_VALUE
@@ -145,6 +145,6 @@ ms.locfileid: "66074401"
  [FORMAT_STRING 内容 &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
  [使用单元属性 &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
  [&#40;MDX&#41;创建和使用属性值](../../creating-and-using-property-values-mdx.md)   
- [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891716"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>步骤 3：添加并配置 OLE DB 连接管理器
@@ -30,7 +30,7 @@ ms.locfileid: "62891716"
   
 3.  在“服务器名称”**** 中，输入 **localhost**。  
   
-     将 localhost 指定为服务器名称时，连接管理器将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的远程实例，请将 localhost 替换为要连接到的服务器的名称。  
+     将 localhost 指定为服务器名称时，连接管理器将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的远程实例，请将 localhost 替换为要连接到的服务器的名称。  
   
 4.  在“登录到服务器”**** 组中，确认选择了“使用 Windows 身份验证”****。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "62891716"
   
 6.  单击“测试连接”****，验证指定的连接设置是否有效。  
   
-7.  单击“确定”。   
+7.  单击" **确定**"。  
   
-8.  单击“确定”。   
+8.  单击" **确定**"。  
   
 9. 在“配置 OLE DB 连接管理器”**** 对话框的“数据连接”**** 窗格中，确认选择了“localhost.AdventureWorksDW2012”****。  
   
-10. 单击“确定”。   
+10. 单击" **确定**"。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 4：将数据流任务添加到包](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  

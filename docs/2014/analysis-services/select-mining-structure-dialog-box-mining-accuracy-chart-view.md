@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069492"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>“选择挖掘结构”对话框（“挖掘准确性图表”视图）
@@ -32,6 +32,6 @@ ms.locfileid: "66069492"
 ## <a name="see-also"></a>另请参阅  
  [挖掘准确性图表设计器 &#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [测试和验证任务以及操作方法 &#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [测试和验证 &#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
   

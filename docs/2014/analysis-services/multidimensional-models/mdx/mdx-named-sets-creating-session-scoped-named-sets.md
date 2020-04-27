@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074049"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>创建会话作用域的命名集 (MDX)
@@ -38,8 +38,7 @@ CREATE SESSION SET [CURRENTCUBE. | <cube name>.]<Set Identifier> AS <Set Express
  在 CREATE SET 语法中， `cube name` 参数包含多维数据集的名称，该多维数据集包含命名集的成员。 如果未指定 `cube name` 参数，则当前的多维数据集将用作包含命名集的成员的多维数据集。 另外， `Set_Identifier` 参数包含命名集的别名， `Set_Expression` 参数包含命名集别名引用的集表达式。  
   
 ## <a name="create-set-example"></a>CREATE SET 示例  
- 下面的示例使用 CREATE SET 语句创建基于 Store 多维数据集的 `SetCities_2_3` 命名集。 
-  `SetCities_2_3` 命名集的成员是位于 City 2 和 City 3 的商店。  
+ 下面的示例使用 CREATE SET 语句创建基于 Store 多维数据集的 `SetCities_2_3` 命名集。 `SetCities_2_3` 命名集的成员是位于 City 2 和 City 3 的商店。  
   
 ```  
 create Session set [Store].[SetCities_2_3] as  
@@ -54,6 +53,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;MDX 创建查询作用域的命名集&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [创建查询作用域的命名集 (MDX)](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

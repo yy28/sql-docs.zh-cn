@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081972"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>依赖关系网络关系图演练（数据挖掘外接程序）
@@ -45,7 +45,7 @@ ms.locfileid: "66081972"
   
      \<驱动器>： \Program files （x85） \Microsoft SQL Server 2012 DM 外接程序  
   
-2.  将 "**依赖关系网络**" 形状拖到页面上以启动向导。 单击“下一步”。   
+2.  将 "**依赖关系网络**" 形状拖到页面上以启动向导。 单击“下一步”  。  
   
 3.  在 "**依赖关系网络 Visio 形状向导**" 的 "欢迎" 页上，单击 "**下一步**"。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66081972"
      **边缘强度**  
      切换整个图形的边缘强度的显示。 边缘是节点间的连接。 您可以使用滑块控件筛选掉弱连接。  
   
-     **滑块**  
+     **Slider**  
      **滑块**可帮助控制依赖关系网络关系图中显示的关系的强度。  
   
      该图形中的每个节点都代表一个状态。 箭头代表两个状态之间的转换以及与该转换相关联的概率。 若要减少该图形中的节点数量，可向上移动滑动条。  

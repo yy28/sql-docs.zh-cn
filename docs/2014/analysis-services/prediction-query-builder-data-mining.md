@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070774"
 ---
 # <a name="prediction-query-builder-data-mining"></a>预测查询生成器（数据挖掘）
@@ -24,14 +24,13 @@ ms.locfileid: "66070774"
   
 -   [数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [利用 DMX 创建和查询数据挖掘模型：教程 &#40;Analysis Services 数据挖掘&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [使用 DMX 创建和查询数据挖掘模型：教程（Analysis Services - 数据挖掘）](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [数据挖掘查询](data-mining/data-mining-queries.md)  
   
 -   [数据挖掘查询任务和操作指南](data-mining/data-mining-query-tasks-and-how-tos.md)  
   
- 
-  **“挖掘模型预测”** 视图具有以下工具和对话框：  
+ **“挖掘模型预测”** 视图具有以下工具和对话框：  
   
 -   [&#40;挖掘模型预测视图的设计窗格&#41;](design-pane-mining-model-prediction-view.md)  
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073878"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>基本 MDX 查询 (MDX)
@@ -110,6 +110,6 @@ WHERE ( [Sales Territory].[Southwest] )
   
 ## <a name="see-also"></a>另请参阅  
  [MDX &#40;Analysis Services 中的关键概念&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [SELECT 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [SELECT 语句 (MDX)](/sql/mdx/mdx-data-manipulation-select)  
   
   

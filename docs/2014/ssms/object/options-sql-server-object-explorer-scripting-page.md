@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63031931"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>选项（SQL Server 对象资源管理器脚本页）
@@ -39,7 +39,7 @@ ms.locfileid: "63031931"
   
 ### <a name="general-scripting-options"></a>常规脚本选项  
  **分隔各条语句**  
- 使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改**查询编辑器**，选择“工具”  /“选项”  /“查询执行”  /“SQL Server”  /“常规”  /“批处理分隔符”  。 默认值为 False。 有关详细信息，请参阅[中转 &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
+ 使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改**查询编辑器**，选择“工具”****/“选项”****/“查询执行”****/“SQL Server”****/“常规”****/“批处理分隔符”****。 默认值为 False。 有关详细信息，请参阅[中转 &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
   
  **包含说明性标头**  
  通过将每个对象的脚本分隔为多个部分以向脚本添加说明性注释。 默认值为 True。 有关详细信息，请参阅[Comment &#40;transact-sql&#41;](/sql/t-sql/language-elements/comment-transact-sql)。  
@@ -51,7 +51,7 @@ ms.locfileid: "63031931"
  将更改跟踪信息包含到脚本中。  
   
  **为服务器版本编写脚本**  
- 创建可在选定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本上运行的脚本。 无法为早期版本编写 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 新增功能的脚本。 某些为 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 创建的脚本无法在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]早期版本的服务器或具有早期 [数据库兼容级别设置](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)的数据库中运行。  
+ 创建可在选定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本上运行的脚本。 无法为早期版本编写 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 新增功能的脚本。 某些为 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 创建的脚本无法在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]早期版本的服务器或具有早期 [数据库兼容级别设置](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)的数据库中运行。  
   
  **编写全文目录脚本**  
  包含用于全文目录的脚本。 默认值为 False。 有关详细信息，请参阅[创建全文目录 &#40;transact-sql&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)。  

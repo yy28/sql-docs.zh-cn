@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050946"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted 事件类
@@ -28,7 +28,7 @@ ms.locfileid: "63050946"
   
 |数据列名称|`Data type`|说明|列 ID|可筛选|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|`nvarchar`|创建与实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的连接的客户端应用程序的名称。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |CPU|`int`|事件所用的 CPU 时间（毫秒）。|18|是|  
 |DatabaseID|`int`|正在运行存储过程的数据库的 ID。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
@@ -51,7 +51,7 @@ ms.locfileid: "63050946"
 |ObjectID|`int`|系统分配的对象 ID。|22|是|  
 |ObjectName|`nvarchar`|引用的对象名。|34|是|  
 |ObjectType|`int`|表示事件中涉及的对象类型的值。 此值对应于 sys.objects 目录视图中的类型列。 有关值的信息，请参阅 [ObjectType 跟踪事件列](objecttype-trace-event-column.md)。|28|是|  
-|Offset|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
+|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |读取|`bigint`|服务器代表事件所执行的逻辑磁盘读取次数。|16|是|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|是|  
 |RowCounts|`bigint`|受事件影响的行数。|48|是|  

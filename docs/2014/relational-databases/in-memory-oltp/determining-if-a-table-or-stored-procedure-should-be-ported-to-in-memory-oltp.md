@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072362"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
@@ -31,7 +31,7 @@ ms.locfileid: "63072362"
   
 -   生成事务性能分析报告以便标识性能至关重要的表和存储过程。  
   
- 有关迁移方法的信息，请参阅[内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
  事务性能收集器和事务性能分析报告可帮助您完成下列任务：  
   
@@ -46,18 +46,18 @@ ms.locfileid: "63072362"
   
  当你在安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]时选择 "**管理工具-基本**" 或 "**管理工具-高级**" 时，会安装事务性能收集器和生成事务性能分析报告的功能。  
   
-## <a name="best-practices"></a>最佳实践  
+## <a name="best-practices"></a>最佳方案  
  下面的流程图给出了建议的工作流程。 黄色节点表示可选过程：  
   
  ![AMR 工作流](../../database-engine/media/amr-1.gif "AMR 工作流")  
   
  可使用任意方法设立性能基准，包括但不限于使用性能计数器日志或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 活动监视器。 可在性能基准和比较中使用的信息包括：  
   
--   的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CPU 消耗。  
+-    的 CPU 占用率。  
   
--   的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]内存占用。  
+-    的内存占用率。  
   
--   的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]i/o 活动。  
+-    的 I/O 活动。  
   
 -   处理事务时，实例的事务吞吐量。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63072362"
   
  将对其收集数据的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（探查对象）的版本应与配置管理数据仓库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本相同，或低于后者。  
   
-1.  在对象资源管理器中，展开 **“管理”** 。  
+1.  在对象资源管理器中，展开 **“管理”**。  
   
 2.  右键单击 "**数据收集**" 并选择 "**任务**"，然后**配置 "管理数据仓库**"。 "**配置管理数据仓库向导**" 随即开始。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63072362"
   
 7.  在下一个屏幕上，单击 "**完成**" 退出向导。  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>在本地 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上配置数据收集  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>在本地 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上配置数据收集  
  数据收集需要启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理。 在一个服务器上，您仅需配置一个数据收集器。  
   
  可以在 SQL Server 2012 或更高版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上配置数据收集器。  
@@ -118,7 +118,7 @@ ms.locfileid: "63072362"
   
 6.  验证所做的选择。 单击 "**上一步**" 以修改设置。 完成操作后，请单击 **“完成”** 。  
   
-###  <a name="xxx"></a>在远程[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上配置数据收集  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>在远程[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上配置数据收集  
  数据收集要求在收集该数据的实例上启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理。  
   
  可以在 SQL Server 2012 或更高版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上配置数据收集器。  

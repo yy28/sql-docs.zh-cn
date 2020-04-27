@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080573"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>从数据馈送导入（SSAS 表格）
@@ -32,7 +32,7 @@ ms.locfileid: "66080573"
   
 -   [从 Reporting Services 报表导入数据馈送](#importreport)  
   
-##  <a name="prereq"></a>了解从数据馈送导入  
+##  <a name="understanding-import-from-a-data-feed"></a><a name="prereq"></a>了解从数据馈送导入  
  可以从以下数据馈送类型中将数据导入“表格模型”：  
   
  **Reporting Services 报表**  
@@ -46,7 +46,7 @@ ms.locfileid: "66080573"
   
  在导入过程中只可一次将数据馈送中的数据添加到模型中。 若要从馈送获取更新的数据，您可以从模型设计器刷新数据，或在将数据部署到 Analysis Services 生产实例后为模型配置数据刷新计划。 有关详细信息，请参阅 [处理数据（SSAS 表格）](process-data-ssas-tabular.md)。  
   
-##  <a name="azure"></a>从 Azure DataMarket 数据集导入数据  
+##  <a name="import-data-from-an-azure-datamarket-dataset"></a><a name="azure"></a>从 Azure DataMarket 数据集导入数据  
  在模型中，可以将 Azure DataMarket 中的数据以表的形式导入。  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>从 Azure DataMarket 数据集中导入数据  
@@ -69,11 +69,11 @@ ms.locfileid: "66080573"
   
 9. 在向导的 **“选择表和视图”** 页的 **“友好名称”** 字段中，键入标识在导入数据后将包含这些数据的表的描述性名称。  
   
-10. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”。   
+10. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击" **确定**"。  
   
 11. 在 **“选择表和视图”** 页上，单击 **“完成”**。  
   
-##  <a name="importdata"></a>从公共数据源或公司数据源导入数据馈送  
+##  <a name="import-data-feeds-from-public-or-corporate-data-sources"></a><a name="importdata"></a>从公共数据源或公司数据源导入数据馈送  
  您可以访问公共馈送，也可以生成自定义数据服务，这些服务从专有或早期数据库系统生成 Atom 馈送。  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>从公共数据馈送或公司数据馈送导入数据  
@@ -107,11 +107,11 @@ ms.locfileid: "66080573"
   
 8.  在向导的 **“选择表和视图”** 页的 **“友好名称”** 字段中，使用标识在导入数据后将包含这些数据的表的描述性名称替换“数据馈送内容”。  
   
-9. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”。   
+9. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击" **确定**"。  
   
 10. 在 **“选择表和视图”** 页上，单击 **“完成”**。  
   
-##  <a name="importlist"></a>从 SharePoint 列表导入数据馈送  
+##  <a name="import-data-feeds-from-sharepoint-lists"></a><a name="importlist"></a>从 SharePoint 列表导入数据馈送  
  可以导入在 (SharePoint) 功能区上具有“作为数据馈送导出”**** 按钮的任何 SharePoint 列表。 可以单击此按钮将列表作为馈送导出。  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>从 SharePoint 列表导入数据馈送  
@@ -139,11 +139,11 @@ ms.locfileid: "66080573"
     > [!NOTE]  
     >  只能导入包含列的列表。  
   
-9. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”。   
+9. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击" **确定**"。  
   
 10. 在 **“选择表和视图”** 页上，单击 **“完成”**。  
   
-##  <a name="importreport"></a>从 Reporting Services 报表导入数据馈送  
+##  <a name="import-data-feeds-from-reporting-services-reports"></a><a name="importreport"></a>从 Reporting Services 报表导入数据馈送  
  如果已部署 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services，则可以使用 Atom 呈现扩展插件从现有报表生成数据馈送。  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>从已发布的 Reporting Services 报表导入报表数据  
@@ -185,7 +185,7 @@ ms.locfileid: "66080573"
   
      如果未指定名称，默认情况下，将使用 Reporting Services 控件的名称：例如，Tablix1、Tablix2。 建议您在导入过程中更改此名称，以便可以更容易地识别导入数据馈送的源。  
   
-11. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击“确定”。   
+11. 单击 **“预览并筛选”** 检查数据并更改列选择。 您不能限制在报表数据馈送中导入的行，但可以通过清除相应的复选框来删除列。 单击" **确定**"。  
   
 12. 在 **“选择表和视图”** 页上，单击 **“完成”**。  
   
@@ -194,6 +194,6 @@ ms.locfileid: "66080573"
  [&#40;SSAS 表格&#41;支持的数据类型](tabular-models/data-types-supported-ssas-tabular.md)   
  [模拟 &#40;SSAS 表格&#41;](tabular-models/impersonation-ssas-tabular.md)   
  [&#40;SSAS 表格&#41;处理数据](process-data-ssas-tabular.md)   
- [&#40;SSAS 表格&#41;导入数据](import-data-ssas-tabular.md)  
+ [导入数据（SSAS 表格）](import-data-ssas-tabular.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075180"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多维模型中的维度
@@ -27,7 +27,7 @@ ms.locfileid: "66075180"
  多维数据集包含用户分析事实数据所基于的所有维度。 多维数据集中的数据库维度实例称为多维数据集维度，它与多维数据集中的一个或多个度量值组有关。 数据库维度可以在多维数据集中多次使用。 例如，事实数据表可以具有多个与时间相关的事实数据，并且可以定义单独的多维数据集维度以帮助分析每个与时间相关的事实数据。 但是，只需存在一个与时间相关的数据库维度，这也意味着只需存在一个与时间相关的关系数据库表便可支持多个基于时间的多维数据集维度。  
   
 > [!NOTE]  
->  有关与维度设计相关的性能问题，请参阅 [SQL Server 2008 R2 Analysis Services 性能指南](https://go.microsoft.com/fwlink/?LinkId=306717)。  
+>   有关与维度设计相关的性能问题，请参阅 [SQL Server 2008 R2 Analysis Services 性能指南](https://go.microsoft.com/fwlink/?LinkId=306717)。  
   
 ## <a name="defining-dimensions-attributes-and-hierarchies"></a>定义维度、属性和层次结构  
  定义数据库和多维数据集的维度、属性和层次结构的最简单方法是使用多维数据集向导在定义多维数据集的同时创建维度。 多维数据集向导将根据向导在数据源视图中找到的维度表，或您在数据源视图中指定用于多维数据集的维度表来创建维度。 这样，该向导创建数据库维度并将其添加到新的多维数据集中，从而创建多维数据集维度。  
@@ -49,7 +49,7 @@ ms.locfileid: "66075180"
  [定义属性关系](attribute-relationships-define.md)  
  说明如何使用维度设计器定义、修改和配置属性关系。  
   
- [创建用户定义的层次结构](user-defined-hierarchies-create.md)  
+ [创建用户定义层次结构](user-defined-hierarchies-create.md)  
  说明如何使用“维度设计器”定义、修改和配置维度属性的用户定义层次结构。  
   
  [使用商业智能向导增强维度](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  

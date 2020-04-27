@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079271"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 课：创建角色
-  在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色都定义有单一权限：无、读取、读取和处理、处理，或管理员。 通过使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的“角色管理器”对话框，可在模型创作期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 管理角色。 若要了解详细信息，请参阅[角色（SSAS 表格）](tabular-models/roles-ssas-tabular.md)。  
+  在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色都定义有单一权限：无、读取、读取和处理、处理，或管理员。 通过使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的“角色管理器”对话框，可在模型创作期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]管理角色。 若要了解详细信息，请参阅[角色（SSAS 表格）](tabular-models/roles-ssas-tabular.md)。  
   
 > [!NOTE]  
->  创建角色不是完成本教程所必需的。 默认情况下，当前用来登录的帐户将具有对模型的管理员权限。 但是，为了让贵组织中的其他用户能够通过报表客户端应用程序浏览模型，您必须至少创建一个具有“读取”权限的角色，并将这些用户添加为成员。  
+>  创建角色对于完成本教程不是必需的。 默认情况下，当前用来登录的帐户将具有对模型的管理员权限。 但是，为了让贵组织中的其他用户能够通过报表客户端应用程序浏览模型，您必须至少创建一个具有“读取”权限的角色，并将这些用户添加为成员。  
   
  将创建三个角色：  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66079271"
   
  因为组织中的 Windows 用户和组帐户具有唯一性，所以可以将特定组织中的帐户添加为成员。 不过，对于本教程，也可以将成员保留为空。 在稍后的第 12 课“在 Excel 中分析”中，您将仍可以测试每个角色的影响。  
   
- 本课预计完成时间：**15 分钟**  
+ 学完本课的估计时间： **15 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，须已完成上一课： [第 11 课：创建分区](lesson-10-create-partitions.md)。  
   
 ## <a name="create-roles"></a>创建角色  

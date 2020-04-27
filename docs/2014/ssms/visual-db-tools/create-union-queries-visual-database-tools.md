@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270593"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>创建 UNION 查询 (Visual Database Tools)
@@ -45,7 +45,7 @@ ms.locfileid: "63270593"
     FROM dbo.Gloves;  
     ```  
   
-3.  在“查询设计器”**** 菜单中，单击“执行 SQL”**** 以运行该查询。  
+3.  在“查询设计器”  菜单中，单击“执行 SQL”  以运行该查询。  
   
      UNION 查询现在由查询设计器进行格式设置。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "63270593"
  [Visual Database Tools &#40;支持的查询类型&#41;](visual-database-tools.md)   
  [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [在 Visual Database Tools &#40;执行基本的查询操作&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
- [联合 &#40;Transact-sql&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
+ [UNION (Transact-SQL)](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
   
   

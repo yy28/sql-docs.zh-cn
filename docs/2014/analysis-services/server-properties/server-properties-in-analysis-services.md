@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068903"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中配置服务器属性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的默认服务器配置属性。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
   
  若要设置服务器属性，请使用 SQL Server Management Studio 或编辑特定实例的 msmdsrv.ini 文件。  
@@ -37,7 +36,7 @@ ms.locfileid: "66068903"
   
  [服务器属性参考](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a>配置服务器（实例）属性  
+##  <a name="configure-server-instance-properties"></a><a name="bkmk_config"></a>配置服务器（实例）属性  
  SQL Server Management Studio 中的属性页包含一部分可用的属性，仅显示可能要修改的那些属性。 msmdsrv.ini 文件中提供了一组完整的属性。  
   
 > [!NOTE]  
@@ -73,9 +72,8 @@ ms.locfileid: "66068903"
   
 4.  在保存该文件后，您必须重新启动该服务。  
   
-##  <a name="bkmk_ref"></a>服务器属性参考  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性对于微调系统非常重要。 例如，为了使查询日志行为与您的要求相一致，您可以设置相关的属性。  
+##  <a name="server-property-reference"></a><a name="bkmk_ref"></a>服务器属性参考  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性对于微调系统非常重要。 例如，为了使查询日志行为与您的要求相一致，您可以设置相关的属性。  
   
  以下主题介绍了各种 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性：  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071051"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>启动或停止 PowerPivot for SharePoint 服务器
@@ -28,12 +28,12 @@ ms.locfileid: "66071051"
   
  [停止 PowerPivot 服务器的影响](#effects)  
   
-##  <a name="dependencies"></a>服务依赖关系  
+##  <a name="service-dependencies"></a><a name="dependencies"></a>服务依赖关系  
  PowerPivot 系统服务依赖本地 Analysis Services 服务器实例，它们一起安装在同一物理服务器上。 如果停止 PowerPivot 系统服务，也必须手动停止本地 Analysis Services 服务器实例。 如果一个服务正在运行而其他服务器实例未运行，则您将遇到针对 PowerPivot 数据处理的请求分配错误。  
   
  只有在您诊断或解决问题时，Analysis Services 服务器才应单独运行。 在所有其他情况下，该服务器都需要在同一服务器上本地运行的 PowerPivot 系统服务。  
   
-##  <a name="startstop"></a>启动或停止服务  
+##  <a name="start-or-stop-the-services"></a><a name="startstop"></a>启动或停止服务  
  始终使用管理中心来启动或停止 PowerPivot 系统服务或 Analysis Services 服务器实例。 通过管理中心，您可以从同一页一起启动或停止服务。 此外，管理中心使用称作 **“一个或多个服务已启动或停止”** 的计时器作业来重新启动它认为应运行的服务。 如果您使用非 SharePoint 工具停止 PowerPivot 系统服务或 Analysis Services，则在该计时器作业运行时这些服务将重新启动。  
   
  启动和停止服务是一种应用于物理服务实例的操作。 如果场中还有其他 PowerPivot for SharePoint 服务器，场中的其他服务器将继续接受对 PowerPivot 数据的请求。  
@@ -50,7 +50,7 @@ ms.locfileid: "66071051"
   
 4.  选择服务，然后单击该操作。 记住要成对启动或停止服务。 如果您启动或停止 PowerPivot 系统服务，请务必还要启动或停止在同一台计算机上运行的 Analysis Services 服务器实例。  
   
-##  <a name="effects"></a>停止 PowerPivot 服务器的影响  
+##  <a name="effects-of-stopping-a-powerpivot-server"></a><a name="effects"></a>停止 PowerPivot 服务器的影响  
  下表介绍了在 SharePoint 服务器上停止 PowerPivot 系统服务和 Analysis Services 服务的影响。  
   
 |影响的对象|说明|  

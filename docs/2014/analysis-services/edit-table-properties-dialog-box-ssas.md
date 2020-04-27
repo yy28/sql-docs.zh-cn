@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081437"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>“编辑表属性”对话框 (SSAS)
-  
   **“编辑表属性”** 对话框可用于查看和修改通过使用“表导入向导”导入到模型设计器中的表的属性。 若要访问此对话框，请在模型设计器中选择表，然后在 **“表”** 菜单中单击 **“表属性”**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -47,8 +46,8 @@ ms.locfileid: "66081437"
  **列名来自**  
  |||  
 |-|-|  
-|**数据源**|选择此选项可用来自所选源表的列名替换当前列名。|  
-|**模式**|选择此选项可使用当前列名，因为它们在模型中存在。|  
+|**源**|选择此选项可用来自所选源表的列名替换当前列名。|  
+|**型号**|选择此选项可使用当前列名，因为它们在模型中存在。|  
   
  **刷新预览**  
  单击以查看当前所选源表中的数据列。  
@@ -100,6 +99,6 @@ ms.locfileid: "66081437"
  单击以应用您所做的所有更改，包括替换列。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSAS 表格&#41;的表和列](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [表和列（SSAS 表格）](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

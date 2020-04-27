@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068215"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>指定查询条件（基于使用情况的优化向导）
@@ -40,15 +40,15 @@ ms.locfileid: "66068215"
  基于开始日期和时间对查询日志中的查询进行筛选。 在下拉列表中选择或键入日期。  
   
 > [!NOTE]  
->  如果未选择“结束日期”****，则将对查询日志中此选项指定日期和时间之后（包括该日期）的所有查询进行筛选。  
+>   如果未选择 **“结束日期”** ，则将对查询日志中此选项指定日期和时间之后（包括该日期）的所有查询进行筛选。  
   
  **结束日期**  
  基于结束日期和时间对查询日志中的查询进行筛选。 在下拉列表中选择或键入日期。  
   
 > [!NOTE]  
->  如果未选择“开始日期”****，则将对查询日志中此选项指定日期和时间之前（包括该日期）的所有查询进行筛选。  
+>   如果未选择 **“开始日期”** ，则将对查询日志中此选项指定日期和时间之前（包括该日期）的所有查询进行筛选。  
   
- **那些**  
+ **用户**  
  基于指定的用户集对查询日志中的查询进行筛选。 单击省略号按钮 (**...**) 可以显示“用户选择”**** 对话框，并选择要对其筛选查询的用户。 有关“用户选择”**** 对话框的详细信息，请参阅[“用户选择”对话框（Analysis Services - 多维数据）](user-selection-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **最常见的查询**  

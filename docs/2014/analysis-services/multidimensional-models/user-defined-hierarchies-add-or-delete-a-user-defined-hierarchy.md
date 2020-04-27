@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072590"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>添加或删除用户定义层次结构
-  在 ** 中，可以从维度设计器中的“维度结构”**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡上的维度中添加或删除用户定义的层次结构。  
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，可以从维度设计器中的“维度结构”**** 选项卡上的维度中添加或删除用户定义的层次结构。  
   
  在添加用户定义的层次结构后，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中实例化此层次结构并且处理维度之前，用户无法使用此层次结构。 有关详细信息，请参阅[多维模型数据库 &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)和[多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "66072590"
   
 ## <a name="see-also"></a>另请参阅  
  [用户层次结构](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [创建用户定义的层次结构](user-defined-hierarchies-create.md)  
+ [创建用户定义层次结构](user-defined-hierarchies-create.md)  
   
   

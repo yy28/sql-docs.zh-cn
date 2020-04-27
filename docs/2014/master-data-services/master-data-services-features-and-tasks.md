@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482894"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能和任务
@@ -22,41 +22,41 @@ ms.locfileid: "65482894"
   
 ## <a name="create-structures-to-contain-data"></a>创建要包含数据的结构  
   
--   [Master Data Services &#40;模型&#41;](models-master-data-services.md)  
+-   [模型 (Master Data Services)](models-master-data-services.md)  
   
--   [实体 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
+-   [实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [属性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [属性组 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)  
+-   [属性组 (Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)  
   
 ## <a name="maintain-master-data"></a>维护主数据  
   
--   [Master Data Services Add-in for Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [用于 Microsoft Excel 的 Master Data Services 外接程序](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [Master Data Services 的事务 &#40;&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
+-   [事务 (Master Data Services)](../../2014/master-data-services/transactions-master-data-services.md)  
   
--   [批注 &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [批注 (Master Data Services)](../../2014/master-data-services/annotations-master-data-services.md)  
   
--   [层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
+-   [层次结构 (Master Data Services)](../../2014/master-data-services/hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
 ## <a name="improve-data-quality"></a>提高数据质量  
   
--   [业务规则 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [验证 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [验证 (Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [版本 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+-   [版本 (Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
   
--   [通知 &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [通知 (Master Data Services)](../../2014/master-data-services/notifications-master-data-services.md)  
   
--   [安全 &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+-   [安全性 (Master Data Services)](../../2014/master-data-services/security-master-data-services.md)  
   
 ## <a name="move-data"></a>移动数据  
   
@@ -64,7 +64,7 @@ ms.locfileid: "65482894"
   
 -   [将数据导出 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
--   [&#40;Master Data Services 部署模型&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+-   [部署模型 (Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
 ## <a name="develop-a-custom-application"></a>开发自定义应用程序  
   

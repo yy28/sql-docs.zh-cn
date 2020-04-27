@@ -22,14 +22,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900258"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 转换
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]转换是包的数据流中的组件，用于聚合、合并、分发和修改数据。 转换还可以执行查找操作并生成样本数据集。 本节介绍 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包括的转换并说明它们是如何工作的。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 转换是包的数据流中对数据进行聚合、合并、分发和修改的组件。 转换还可以执行查找操作并生成样本数据集。 本节介绍 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包括的转换并说明它们是如何工作的。  
   
 ## <a name="business-intelligence-transformations"></a>商业智能转换  
  下列转换执行商业智能操作，例如清除数据、挖掘文本以及运行数据挖掘预测查询。  
@@ -42,14 +42,14 @@ ms.locfileid: "62900258"
 |[字词提取转换](term-extraction-transformation.md)|从文本中提取字词的转换。|  
 |[字词查找转换](term-lookup-transformation.md)|在引用表中查找字词并对从文本中提取的字词进行计数的转换。|  
 |[数据挖掘查询转换](data-mining-query-transformation.md)|运行数据挖掘预测查询的转换。|  
-|[DQS 清除转换](dqs-cleansing-transformation.md)|通过应用为数据源创建的规则更正来自连接的数据源的数据的转换。|  
+|[DQS 清理转换](dqs-cleansing-transformation.md)|通过应用为数据源创建的规则更正来自连接的数据源的数据的转换。|  
   
 ## <a name="row-transformations"></a>行转换  
  下列转换更新列值并创建新列。 转换应用于转换输入中的每个行。  
   
 |转换|说明|  
 |--------------------|-----------------|  
-|[字符映射表转换](character-map-transformation.md)|将字符串函数应用于字符数据的转换。|  
+|[字符映射转换](character-map-transformation.md)|将字符串函数应用于字符数据的转换。|  
 |[复制列转换](copy-column-transformation.md)|将输入列的副本添加到转换输出的转换。|  
 |[数据转换](data-conversion-transformation.md)|将列的数据类型转换为另一种数据类型的转换。|  
 |[派生列转换](derived-column-transformation.md)|用表达式的结果填充列的转换。|  
@@ -79,13 +79,13 @@ ms.locfileid: "62900258"
 |[多播转换](multicast-transformation.md)|将数据集分发到多个输出的转换。|  
 |[Union All 转换](union-all-transformation.md)|合并多个数据集的转换。|  
 |[合并转换](merge-transformation.md)|合并两个已排序数据集的转换。|  
-|[Merge Join Transformation](merge-join-transformation.md)|使用 FULL、LEFT 或 INNER 联接将两个数据集联接起来的转换。|  
+|[合并联接转换](merge-join-transformation.md)|使用 FULL、LEFT 或 INNER 联接将两个数据集联接起来的转换。|  
 |[查找转换](lookup-transformation.md)|使用完全匹配查找引用表中的值的转换。|  
 |[缓存转换](cache-transform.md)|将数据流中已连接数据源的数据写入到缓存连接管理器（将数据保存到缓存文件中）的转换。 查找转换会对缓存文件中的数据执行查找。|  
-|[平衡的数据分发服务器转换](balanced-data-distributor-transformation.md)|转换将传入行的缓冲区均匀分布到各个独立线程的输出上，以提升运行在多核和多处理器服务器上的 SSIS 包的性能。|  
+|[平衡数据分发器转换](balanced-data-distributor-transformation.md)|转换将传入行的缓冲区均匀分布到各个独立线程的输出上，以提升运行在多核和多处理器服务器上的 SSIS 包的性能。|  
   
 ## <a name="auditing-transformations"></a>审核转换  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包括以下转换，用于添加审核信息和对行进行计数。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括以下转换，用于添加审核信息和对行进行计数。  
   
 |转换|说明|  
 |--------------------|-----------------|  

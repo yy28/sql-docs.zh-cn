@@ -11,21 +11,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478909"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>创建实体（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员可以创建新的实体来存储数据。 当您创建实体时，应加载要存储的数据的至少一个抽样。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../administrators-master-data-services.md)。  
   
 -   您必须具有要在其中创建实体的现有模型。 有关详细信息，请参阅[创建模型 (Master Data Services)](../create-a-model-master-data-services.md)。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "65478909"
   
     -   数据应具有标题行。  
   
-    -   具有 **“名称”** 和 **“代码”** 列是有帮助的。 "**代码**" 是每行的唯一标识符。  
+    -   具有 **“名称”** 和 **“代码”** 列是有帮助的。 **“代码”** 是每行的唯一标识符。  
   
     -   您应该除了标题行之外还具有至少一行数据。 不是所有列都需要值，但数据应该代表将位于实体中的数据。  
   
@@ -59,9 +59,7 @@ ms.locfileid: "65478909"
   
 7.  从 **“模型”** 列表中，选择某一模型。  
   
-8.  
-  **
-  ** 从“版本”列表中，选择某一版本。  
+8.  **** 从“版本”列表中，选择某一版本。  
   
 9. 在 **“新的实体名称”** 框中，键入实体的名称。  
   
@@ -69,7 +67,7 @@ ms.locfileid: "65478909"
   
 11. 可选。 从 **“名称”** 列表中，选择包含每个成员的名称的列。  
   
-12. 单击“确定”。  在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
+12. 单击" **确定**"。 在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
   
 ## <a name="next-steps"></a>后续步骤  
   
@@ -78,6 +76,6 @@ ms.locfileid: "65478909"
 -   确认属性以您期望的数据类型创建。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建基于域的属性 &#40;MDS Add-in for Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
+ [创建基于域的属性（用于 Excel 的 MDS 外接程序）](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

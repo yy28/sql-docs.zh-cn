@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067049"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>从 Analysis Services 导入（SSAS 表格）
@@ -29,13 +29,13 @@ ms.locfileid: "66067049"
   
 2.  在 **“新建项目”** 对话框中，在 **“已安装的模板”** 下，单击 **“商业智能”**，然后单击 **“从服务器导入”**。  
   
-3.  在 "**名称**" 中，键入项目的名称，然后指定位置和解决方案名称，然后单击 **"确定"**。  
+3.  在 **“名称”** 中，键入项目的名称，然后指定位置和解决方案名称，再单击 **“确定”**。  
   
 4.  在 **“从 Analysis Services 导入”** 对话框的 **“服务器名称”** 中，指定包含您要导入的模型元数据的 Analysis Services 服务器的名称。  
   
 5.  在 **“数据库名称”** 中，选择包含您要导入的模型元数据的表格模型数据库，然后单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSAS 表格&#41;的项目属性](properties-ssas-tabular.md)  
+ [项目属性（SSAS 表格）](properties-ssas-tabular.md)  
   
   

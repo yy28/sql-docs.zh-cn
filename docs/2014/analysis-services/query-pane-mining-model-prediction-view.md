@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070519"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>“查询”窗格（“挖掘模型预测”视图）
   “查询”**** 窗格显示预测查询生成器创建的数据挖掘表达式 (DMX) 语句。 您可以修改这些语句，再单击 **“切换到查询结果视图”** 按钮以返回结果。 如果切换回 **“设计”** 视图，则对语句所做的所有更改都将丢失。  
   
- **有关详细信息：** [数据挖掘扩展插件 &#40;Dmx&#41; 数据操作语句](/sql/dmx/dmx-statements-data-manipulation)，[在 SQL Server Management Studio 中创建 dmx 查询](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **有关详细信息，请参阅** [数据挖掘扩展插件（数据操作语句）](/sql/dmx/dmx-statements-data-manipulation)、[在 SQL Server Management Studio 中创建一个 DMX 查询](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>选项  
  **切换到查询结果视图**  
@@ -40,6 +40,6 @@ ms.locfileid: "66070519"
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘查询接口](data-mining/data-mining-query-tools.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](/sql/dmx/data-mining-extensions-dmx-statements)   
- [&#40;数据挖掘的预测查询生成器&#41;](prediction-query-builder-data-mining.md)  
+ [预测查询生成器（数据挖掘）](prediction-query-builder-data-mining.md)  
   
   

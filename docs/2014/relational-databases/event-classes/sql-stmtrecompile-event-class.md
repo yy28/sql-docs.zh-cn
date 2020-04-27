@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061232"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件类
@@ -28,7 +28,7 @@ ms.locfileid: "63061232"
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|`nvarchar`|创建与实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的连接的客户端应用程序的名称。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了进程 ID，则填充此数据列。|9|是|  
 |DatabaseID|`int`|正在运行存储过程的数据库的 ID。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|`nvarchar`|正在运行存储过程的数据库的名称。|35|是|  
@@ -47,7 +47,7 @@ ms.locfileid: "63061232"
 |ObjectID|`int`|系统分配的对象标识符，包含引起重新编译的语句。 此对象可以是存储过程、触发器或用户定义函数。 对于即席批查询或已准备好的 SQL，ObjectID 和 ObjectName 将返回一个 NULL 值。|22|是|  
 |ObjectName|`nvarchar`|ObjectID 标识的对象的名称。|34|是|  
 |ObjectType|`int`|表示事件中涉及的对象类型的值。 有关详细信息，请参阅 [ObjectType Trace Event Column](objecttype-trace-event-column.md)。|28|是|  
-|Offset|`int`|在存储过程或批处理中导致重新编译的语句的起始偏移量。|61|是|  
+|偏移量|`int`|在存储过程或批处理中导致重新编译的语句的起始偏移量。|61|是|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|是|  
 |ServerName|`nvarchar`|正在跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的名称。|26|否|  
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  

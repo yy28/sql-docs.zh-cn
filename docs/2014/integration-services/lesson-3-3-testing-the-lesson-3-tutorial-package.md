@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891585"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>步骤 3：测试第 3 课教程包
@@ -35,9 +35,9 @@ ms.locfileid: "62891585"
   
 1.  在 SSIS 菜单中，单击“日志事件”。  
   
-2.  在 **“调试”** 菜单中，单击 **“启动调试”** 。  
+2.  在 **“调试”** 菜单中，单击 **“启动调试”**。  
   
-3.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”** 。  
+3.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”**。  
   
 ### <a name="to-examine-the-generated-log-file"></a>检查生成的日志文件  
   

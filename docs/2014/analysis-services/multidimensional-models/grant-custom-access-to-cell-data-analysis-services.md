@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074983"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授予单元数据的自定义访问权限 (Analysis Services)
@@ -39,14 +39,14 @@ ms.locfileid: "66074983"
   
 -   单元级安全性无法扩展已限制在较高级别的权限。 示例：如果一个角色拒绝访问维度数据，则单元级安全性无法重写拒绝集。 另一个示例：考虑具有对`Read`多维数据集具有权限的角色和对单元格的**读/写**权限。单元数据权限将不是**读/写**的;它将是`Read`。  
   
--   通常需要在同一角色的维度成员和单元之间协调自定义权限。 例如，假如想拒绝访问不同分销商组合的多个与折扣相关的度量值。 已知 **分销商** 为维度数据， **折扣额** 为度量值，你将需要在同一角色内对两个度量值（使用本主题中的说明）的权限，以及对维度成员的权限进行结合。 有关设置维度权限的详细信息，请参阅 [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) 。  
+-   通常需要在同一角色的维度成员和单元之间协调自定义权限。 例如，假如想拒绝访问不同分销商组合的多个与折扣相关的度量值。 已知 **分销商** 为维度数据， **折扣额** 为度量值，你将需要在同一角色内对两个度量值（使用本主题中的说明）的权限，以及对维度成员的权限进行结合。 有关设置维度权限的详细信息，请参阅 [授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 。  
   
  单元级安全性通过 MDX 表达式指定。 由于一个单元就是一个元组（即跨潜在的多个维度和度量值的交点），因此有必要使用 MDX 来标识特定单元。  
   
 ## <a name="allow-access-to-specific-measures"></a>允许对特定度量值的访问  
  你可以使用单元安全性显式地选择哪些度量值可访问。 一旦专门标识了允许访问哪些成员，则所有其他度量值均变为不可访问。 这可能是通过 MDX 脚本实施的最简单的方案，如以下步骤所示。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，选择一个数据库，打开“角色”**** 文件夹，然后单击一个数据库角色（或创建一个新数据库角色）。 应该已指定成员身份，且该角色应具有对多维数据集的`Read`权限。 有关详细信息，请参阅 [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，选择一个数据库，打开“角色”**** 文件夹，然后单击一个数据库角色（或创建一个新数据库角色）。 应该已指定成员身份，且该角色应具有对多维数据集的`Read`权限。 有关详细信息，请参阅 [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md) 。  
   
 2.  在“单元数据” **** 中，检查多维数据集选择，确保选择正确，然后选择“启用读取权限” ****。  
   
@@ -58,8 +58,7 @@ ms.locfileid: "66074983"
     (Measures.CurrentMember IS [Measures].[Reseller Sales Amount]) OR (Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])  
     ```  
   
-     此表达式显式地标识了哪些度量值对用户可见。 通过此角色连接的用户将无法访问其他度量值。 请注意，[CurrentMember (MDX)](/sql/mdx/current-mdx) 设置上下文，随后为允许的度量值。 该表达式的效果是，如果当前成员包括 **分销商销售额** 或 **分销商总产品成本**，则显示值。 否则，拒绝访问。 该表达式含有多个部分，每个部分由圆括号括起来。 
-  `OR` 运算符用于指定多个度量值。  
+     此表达式显式地标识了哪些度量值对用户可见。 通过此角色连接的用户将无法访问其他度量值。 请注意，[CurrentMember (MDX)](/sql/mdx/current-mdx) 设置上下文，随后为允许的度量值。 该表达式的效果是，如果当前成员包括 **分销商销售额** 或 **分销商总产品成本**，则显示值。 否则，拒绝访问。 该表达式含有多个部分，每个部分由圆括号括起来。 `OR` 运算符用于指定多个度量值。  
   
 ## <a name="deny-access-to-specific-measures"></a>拒绝对特定度量值的访问  
  以下 MDX 表达式（也在**Create Role** | **Cell Data** | **允许读取多维数据集内容**）中，具有相反的效果，从而使某些度量值不可用。 在此示例中， `NOT`使用和`AND`运算符使**折扣金额**和**折扣百分比**不可用。 所有其他度量值将对通过此角色连接的用户可见。  
@@ -103,6 +102,6 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  [&#40;Analysis Services 授予进程权限&#41;](grant-process-permissions-analysis-services.md)   
  [授予对维度 &#40;Analysis Services 的权限&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
  [授予对维度数据的自定义访问 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [&#40;Analysis Services 授予多维数据集或模型权限&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)  
   
   

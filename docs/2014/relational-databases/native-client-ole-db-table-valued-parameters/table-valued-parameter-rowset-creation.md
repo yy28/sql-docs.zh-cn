@@ -1,5 +1,5 @@
 ---
-title: 表值参数行集创建 |Microsoft Docs
+title: 创建表值参数行集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046497"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>创建表值参数行集
@@ -25,11 +25,11 @@ ms.locfileid: "63046497"
  表值参数行集对象由使用者通过多个会话级接口为输入参数显式创建。 每个表值参数对应一个表值参数行集对象实例。 使用者可以通过以下两种方法之一创建表值参数行集对象：提供已知的元数据信息（静态方案）；或者通过访问接口发现元数据信息（动态方案）。 以下各节介绍这两种方案。  
   
 ## <a name="static-scenario"></a>静态方案  
- 已知类型信息时，使用者使用 ITableDefinitionWithConstraints：： CreateTableWithConstraints 来实例化对应于表值参数的表值参数行集对象。  
+ 如果类型信息已知，使用者使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 对与表值参数对应的表值参数行集对象进行实例化。  
   
- *Guid*字段（*pTableID*参数）包含特殊 guid （CLSID_ROWSET_TVP）。 pwszName 成员包含使用者要实例化的表值参数类型的名称**。 eKind 字段将设置为 DBKIND_GUID_NAME**。 此名称在使用特殊 SQL 语句时是必需的，在使用过程调用时是可选的。  
+ guid** 字段（pTableID** 参数）包含特殊 GUID (CLSID_ROWSET_TVP)。 pwszName 成员包含使用者要实例化的表值参数类型的名称**。 eKind 字段将设置为 DBKIND_GUID_NAME**。 此名称在使用特殊 SQL 语句时是必需的，在使用过程调用时是可选的。  
   
- 对于聚合，使用者将*pUnkOuter*参数传递给控制 IUnknown。  
+ 对于聚合，使用者传递 pUnkOuter** 参数（带有控制的 IUnknown）。  
   
  表值参数行集对象属性是只读的，因此，使用者不应在*rgPropertySets*中设置任何属性。  
   
@@ -46,10 +46,10 @@ ms.locfileid: "63046497"
   
  在此方案中，访问接口代表使用者从服务器获取有关表值参数行集对象的类型信息。  
   
- *PTableID*和*pUnkOuter*参数应在静态方案中设置为。 然后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供程序从服务器获取类型信息（列信息和约束），并通过*ppRowset*参数返回表值参数行集对象。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
+ 应按照静态方案的设置对 pTableID** 和 pUnkOuter** 参数进行设置。 然后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供程序从服务器获取类型信息（列信息和约束），并通过*ppRowset*参数返回表值参数行集对象。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数 (OLE DB)](table-valued-parameters-ole-db.md)   
+ [表值参数 &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [使用表值参数 (OLE DB)](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

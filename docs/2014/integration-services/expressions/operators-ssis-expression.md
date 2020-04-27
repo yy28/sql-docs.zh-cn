@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62897356"
 ---
 # <a name="operators-ssis-expression"></a>运算符（SSIS 表达式）
@@ -36,8 +36,8 @@ ms.locfileid: "62897356"
 |[-（相减）（SSIS 表达式）](subtract-ssis-expression.md)|从第一个数值表达式的值中减去第二个数值表达式的值。|  
 |[-（求反）（SSIS 表达式）](negate-ssis-expression.md)|对一个数值表达式求反。|  
 |[*（相乘）（SSIS 表达式）](multiply-ssis-expression.md)|将两个数值表达式相乘。|  
-|[将 &#40;SSIS 表达式相除&#41;](divide-ssis-expression.md)|用第一个数值表达式除以第二个数值表达式。|  
-|[SSIS 表达式&#41; &#40;&#40;模&#41;](modulo-ssis-expression.md)|将第一个数据表达式的值除以第二个数据表达式的值后，提供整数余数。|  
+|[除（SSIS 表达式）](divide-ssis-expression.md)|用第一个数值表达式除以第二个数值表达式。|  
+|[（取模）（SSIS 表达式）](modulo-ssis-expression.md)|将第一个数据表达式的值除以第二个数据表达式的值后，提供整数余数。|  
 |[&#124;&#124; &#40;逻辑或&#41; &#40;SSIS 表达式&#41;](logical-or-ssis-expression.md)|执行“逻辑或”运算。|  
 |[&&（逻辑 AND）（SSIS 表达式）](logical-and-ssis-expression.md)|执行“逻辑与”运算。|  
 |[\!（逻辑非）（SSIS 表达式）](logical-not-ssis-expression.md)|对布尔操作数求反。|  

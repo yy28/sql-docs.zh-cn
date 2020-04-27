@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077965"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>手动处理数据（SSAS 表格）
@@ -30,7 +30,7 @@ ms.locfileid: "66077965"
   
 -   [数据处理进度](#bkmk_data_process_progress)  
   
-##  <a name="bkmk_mahually_process"></a>手动处理数据  
+##  <a name="manually-process-data"></a><a name="bkmk_mahually_process"></a>手动处理数据  
   
 #### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>处理模型中单个表或者所有表的数据  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66077965"
   
 2.  在 **“处理分区”** 对话框的 **“模式”** 中，选择下列处理模式之一：  
   
-    |模式|说明|  
+    |“模式”|说明|  
     |----------|-----------------|  
     |**处理默认值**|检测分区对象的处理状态，执行必要的处理，将未处理的分区对象或部分处理的分区对象交付为已完全处理的分区对象。 为空表和分区加载数据；生成或重新生成层次结构、计算列和关系。|  
     |**处理全部**|处理分区对象及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。|  
@@ -60,11 +60,10 @@ ms.locfileid: "66077965"
   
 3.  在分区列表中，选择要处理的分区，然后单击 **“确定”**。  
   
-##  <a name="bkmk_data_process_progress"></a>数据处理进度  
- 
-  **“数据处理进度”** 对话框可用于监视从外部数据源导入到模型中的数据的处理。 若要访问此对话框，请依次单击 **“模型”** 菜单、 **“处理分区”**、 **“处理表”** 或 **“全部处理”**。  
+##  <a name="data-process-progress"></a><a name="bkmk_data_process_progress"></a>数据处理进度  
+ **“数据处理进度”** 对话框可用于监视从外部数据源导入到模型中的数据的处理。 若要访问此对话框，请依次单击 **“模型”** 菜单、 **“处理分区”**、 **“处理表”** 或 **“全部处理”**。  
   
- **Status**  
+ **状态**  
  指示处理操作是否成功。  
   
  **详细信息**  
@@ -75,6 +74,6 @@ ms.locfileid: "66077965"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;处理数据](process-data-ssas-tabular.md)   
- [诊断 &#40;SSAS 表格&#41;的处理数据](troubleshoot-process-data-ssas-tabular.md)  
+ [数据处理故障排除（SSAS 表格）](troubleshoot-process-data-ssas-tabular.md)  
   
   

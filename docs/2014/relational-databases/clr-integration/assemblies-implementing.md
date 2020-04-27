@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874472"
 ---
 # <a name="implementing-assemblies"></a>实现程序集
@@ -54,7 +54,7 @@ ms.locfileid: "62874472"
   
  **使用 Transact-SQL 修改程序集**  
   
--   [ALTER ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
  **使用 SQL Server Management Studio 修改程序集**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62874472"
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
-##  <a name="_managing"></a>管理程序集版本  
+##  <a name="managing-assembly-versions"></a><a name="_managing"></a>管理程序集版本  
  将程序集上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后，将在数据库系统目录中存储并管理该程序集。 对中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的程序集定义所做的任何更改都应传播到数据库目录中存储的程序集。  
   
  当必须修改程序集时，您必须发出 ALTER ASSEMBLY 语句以更新数据库中的程序集。 这将使该程序集更新为控制其实现的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本。  
@@ -93,8 +93,7 @@ ms.locfileid: "62874472"
   
  只有**db_owner**和**db_ddlowner**固定数据库角色的成员才能通过使用 WITH UNCHECKED DATA 子句来执行运行 ALTER ASSEMBLY。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将消息（程序集对表中的未检查数据已修改）投递给 Windows 应用程序事件日志。 然后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将任何包含依赖于程序集的数据的表标记为带有未检查数据的表。 对于包含未检查数据的表， **sys.databases**目录视图的 " **has_unchecked_assembly_data** " 列包含值 1; 对于不包含未检查数据的表，则包含0。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将消息（程序集对表中的未检查数据已修改）投递给 Windows 应用程序事件日志。 然后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将任何包含依赖于程序集的数据的表标记为带有未检查数据的表。 对于包含未检查数据的表， **sys.databases**目录视图的 " **has_unchecked_assembly_data** " 列包含值 1; 对于不包含未检查数据的表，则包含0。  
   
  若要解析未检查数据的完整性，请对带有未检查数据的每个表运行 DBCC CHECKTABLE。 如果 DBCC CHECKTABLE 失败，则您必须删除无效的表行或修改程序集代码以处理问题，然后发出其他 ALTER ASSEMBLY 语句。  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62874472"
   
  **更新程序集的版本**  
   
--   [ALTER ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
 ## <a name="see-also"></a>另请参阅  
  [程序集 &#40;数据库引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de1b056942673d358cec4768c6854a6966d139e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068366"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>指定维度类型（维度向导）
@@ -29,23 +29,23 @@ ms.locfileid: "66068366"
  **维度类型**  
  选择维度的维度类型。 下表列出了可用的维度类型：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**帐户**|帐户维度包含了表示帐户列表的数据和元数据。<br /><br /> 有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。|  
 |**BillOfMaterials**|物料清单（或 BOM）维度为常规维度，其中的数据和元数据表示库存信息或生产信息，例如产品的零件列表。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**通道**|渠道维度为常规维度，其中的数据和元数据表示渠道信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**货币**|货币维度包含表示货币信息的数据和元数据。<br /><br /> 有关货币维度的详细信息，请参阅 [创建货币类型维度](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。|  
 |**客户**|客户维度为常规维度，其中的数据和元数据表示客户信息或联系信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
-|**Geography**|地域维度为常规维度，其中的数据和元数据表示地域信息，例如城市或邮政编码。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
-|**内部**|单位维度为常规维度，其中的数据和元数据表示单位信息，例如雇员或分公司。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
+|**地域**|地域维度为常规维度，其中的数据和元数据表示地域信息，例如城市或邮政编码。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
+|**组织**|单位维度为常规维度，其中的数据和元数据表示单位信息，例如雇员或分公司。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**产品**|产品维度为常规维度，其中的数据和元数据表示产品信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**Promotion**|促销维度为常规维度，其中的数据和元数据表示市场营销的促销信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
-|**定性**|定量维度为常规维度，其中的数据和元数据表示定量信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
+|**Quantitative**|定量维度为常规维度，其中的数据和元数据表示定量信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**Rates**|比率维度包含表示汇率信息和货币换算信息的数据和元数据。|  
 |**正则**|常规维度是中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]最常用的维度类型。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
-|**场景**|应用场景维度为常规维度，其中的数据和元数据表示计划信息或策略分析信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
-|**时间**|时间维度包含面向时间的数据和元数据。<br /><br /> 有关时间维度的详细信息，请参阅 [创建日期类型维度](multidimensional-models/database-dimensions-create-a-date-type-dimension.md)。|  
-|**实用工具**|效用维度为常规维度，其中的数据和元数据表示不易于与其他维度类型匹配的信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
+|**方案**|应用场景维度为常规维度，其中的数据和元数据表示计划信息或策略分析信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
+|**阶段**|时间维度包含面向时间的数据和元数据。<br /><br /> 有关时间维度的详细信息，请参阅 [创建日期类型维度](multidimensional-models/database-dimensions-create-a-date-type-dimension.md)。|  
+|**实用程序**|效用维度为常规维度，其中的数据和元数据表示不易于与其他维度类型匹配的信息。<br /><br /> 有关常规维度的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
   
 ## <a name="dimension-attributes-options"></a>维度属性选项  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66068366"
  **包括**  
  选中此选项将包括维度中的属性类型。  
   
- **属性类型**  
+ **特性类型**  
  显示与“维度类型”**** 中所选维度类型相关联的属性类型。 有关属性类型的详细信息，请参阅[类型元素（维度属性）(ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl)。  
   
  **维度属性**  

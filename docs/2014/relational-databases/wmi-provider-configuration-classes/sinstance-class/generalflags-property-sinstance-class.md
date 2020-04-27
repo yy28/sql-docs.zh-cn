@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b5d59bf8398d43304f4888f3a3ad3a93b98b70ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137265"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags 属性（SInstance 类）
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务器实例的[SInstance 类](sinstance-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

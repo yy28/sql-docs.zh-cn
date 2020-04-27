@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078931"
 ---
 # <a name="modifying-the-customer-dimension"></a>修改“客户”维度
@@ -25,7 +25,7 @@ ms.locfileid: "66078931"
   
 #### <a name="to-rename-an-attribute"></a>重命名属性  
   
-1.  在 ** 中，切换到“客户”维度的“维度设计器”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 为此，请在解决方案资源管理器的“维度”**** 节点中双击“客户”**** 维度。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，切换到“客户”维度的“维度设计器”****。 为此，请在解决方案资源管理器的“维度”**** 节点中双击“客户”**** 维度。  
   
 2.  在“属性”**** 窗格中，右键单击“英语国家/地区区域名”****，然后单击“重命名”****。 将属性的名称更改为`Country-Region`。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66078931"
   
     -   **省自治区名称**属性-更改为`State-Province`  
   
-4.  在“文件”  菜单上，单击“全部保存”  。  
+4.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="creating-a-hierarchy"></a>创建层次结构  
  通过将属性从“属性”**** 窗格拖至“层次结构”**** 窗格可以创建新的层次结构。  
@@ -54,10 +54,10 @@ ms.locfileid: "66078931"
   
      层次结构的名称现在`Customer Geography`为。  
   
-5.  在“文件”  菜单上，单击“全部保存”  。  
+5.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="adding-a-named-calculation"></a>添加命名计算  
- 可以向数据源视图的表中添加命名计算，命名计算是一个表示为计算列的 SQL 表达式。 该表达式的显示形式和工作方式类似于表中的列。 通过命名计算，不必修改基础数据源中的表即可扩展数据源视图中现有表的关系架构。 有关详细信息，请参阅[在数据源视图中定义命名计算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ 可以向数据源视图的表中添加命名计算，命名计算是一个表示为计算列的 SQL 表达式。 该表达式的显示形式和工作方式类似于表中的列。 通过命名计算，不必修改基础数据源中的表即可扩展数据源视图中现有表的关系架构。 有关详细信息，请参阅 [在数据源视图中定义命名计算 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>添加命名计算  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66078931"
   
      `FullName`命名计算显示在 Customer 表中的列列表中，并带有一个图标指示它是命名计算。  
   
-5.  在“文件”  菜单上，单击“全部保存”  。  
+5.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 6.  在“表”**** 窗格中，右键单击 **Customer**，然后单击“浏览数据”****。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66078931"
   
 7.  在 "维度结构" 选项卡中`Full Name` ，将属性从 "**属性**" 窗格拖至 "**层次**结构" 窗格中 "**城市**" 级别下的 " ** \<新级别">** 单元。  
   
-8.  在“文件”  菜单上，单击“全部保存”  。  
+8.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="defining-display-folders"></a>定义显示文件夹  
  可以使用显示文件夹将用户和属性层次结构分组为文件夹结构，以提高可用性。  
@@ -126,7 +126,7 @@ ms.locfileid: "66078931"
   
     -   `Country-Region`  
   
-    -   **邮政编码**  
+    -   **Postal Code**  
   
     -   `State-Province`  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66078931"
   
     -   **Number Cars Owned**  
   
-    -   **Number Children At Home**  
+    -   **在家子女数**  
   
     -   `Occupation`  
   
@@ -166,11 +166,10 @@ ms.locfileid: "66078931"
   
 8.  在属性窗口中，单击 " **AttributeHierarchyDisplayFolder** " 属性字段， `Contacts`然后键入。  
   
-9. 在“文件”  菜单上，单击“全部保存”  。  
+9. 在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="defining-composite-keycolumns"></a>定义组合的 KeyColumns  
- 
-  **KeyColumns** 属性中包含表示特性键的一个或多个列。 在本课中，您将创建**城市**和`State-Province`属性的组合键。 需要唯一标识属性时，组合键可能会有帮助。 例如，在本教程的后面部分定义属性关系时， **City**属性必须唯一标识`State-Province`属性。 但是，在不同的省/自治区可能有些城市会重名。 为此，将创建由“市县”**** 属性的 **StateProvinceName** 和 **City**列组成的组合键。 有关详细信息，请参阅 [修改特性的 KeyColumn 属性](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
+ **KeyColumns** 属性中包含表示特性键的一个或多个列。 在本课中，您将创建**城市**和`State-Province`属性的组合键。 需要唯一标识属性时，组合键可能会有帮助。 例如，在本教程的后面部分定义属性关系时， **City**属性必须唯一标识`State-Province`属性。 但是，在不同的省/自治区可能有些城市会重名。 为此，将创建由“市县”**** 属性的 **StateProvinceName** 和 **City**列组成的组合键。 有关详细信息，请参阅 [修改特性的 KeyColumn 属性](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>若要为“市县”属性定义组合的 KeyColumns  
   
@@ -184,13 +183,13 @@ ms.locfileid: "66078931"
   
      现在，**City** 和 **StateProvinceName** 列会显示在“键列”**** 列表中。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
 6.  若要设置“市县”**** 特性的 **NameColumn** 属性，请在“属性”窗口的 **NameColumn** 字段中单击，然后单击浏览 (**...**) 按钮。  
   
 7.  在“名称列” **** 对话框的“源列”**** 列表中，选择 **City**，然后单击“确定”****。  
   
-8.  在“文件”  菜单上，单击“全部保存”  。  
+8.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 #### <a name="to-define-composite-keycolumns-for-the-state-province-attribute"></a>为“省/市/自治区”属性定义组合的 KeyColumns  
   
@@ -204,16 +203,16 @@ ms.locfileid: "66078931"
   
      现在，**EnglishCountryRegionName** 和 **StateProvinceName** 列会显示在“键列”**** 列表中。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
-6.  若要设置**** `State-Province`属性的 namecolumn 属性，请单击 "属性窗口中的**namecolumn**字段，然后单击浏览（**...**）按钮。  
+6.  若要设置**NameColumn** `State-Province`属性的 namecolumn 属性，请单击 "属性窗口中的**namecolumn**字段，然后单击浏览（**...**）按钮。  
   
 7.  在“名称列”**** 对话框的“源列”**** 列表中，选择 **StateProvinceName**，然后单击“确定”****。  
   
-8.  在“文件”  菜单上，单击“全部保存”  。  
+8.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="defining-attribute-relationships"></a>定义属性关系  
- 如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可加快维度、分区和查询处理的速度。 有关详细信息，请参阅[定义属性关系](multidimensional-models/attribute-relationships-define.md)和[属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+ 如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可加快维度、分区和查询处理的速度。 有关详细信息，请参阅 [定义属性关系](multidimensional-models/attribute-relationships-define.md) 和 [属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 #### <a name="to-define-attribute-relationships"></a>定义属性关系  
   
@@ -235,16 +234,16 @@ ms.locfileid: "66078931"
   
 8.  在“关系类型”列表中，将关系类型设置为“刚性”********。  
   
-9. 单击“确定”。   
+9. 单击" **确定**"。  
   
-10. 在“文件”  菜单上，单击“全部保存”  。  
+10. 在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="deploying-changes-processing-the-objects-and-viewing-the-changes"></a>部署更改、处理对象以及查看更改  
  更改属性和层次结构后，必须部署更改并重新处理相关对象，然后才能查看这些更改。  
   
 #### <a name="to-deploy-the-changes-process-the-objects-and-view-the-changes"></a>部署更改、处理对象以及查看更改  
   
-1.  在 ** 的“生成”菜单上，单击“部署 Analysis Services 教程”**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]****。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。  
   
 2.  在收到“部署成功完成”**** 消息后，单击“客户”维度的维度设计器的“浏览器”**** 选项卡，然后单击设计器工具栏左侧的“重新连接”按钮。  
   
@@ -252,7 +251,7 @@ ms.locfileid: "66078931"
   
      浏览器会将客户显示在市县中。  
   
-4.  切换到 ** 教程多维数据集的“多维数据集设计器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 为此，请双击**解决方案资源管理器**的 "**多维数据集**" 节点中的**Analysis Services 教程**多维数据集。  
+4.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的“多维数据集设计器”****。 为此，请在“解决方案资源管理器”**** 的“多维数据集”**** 节点中，双击“Analysis Services 教程”**** 多维数据集。  
   
 5.  单击“浏览器”**** 选项卡，然后在设计器的工具栏上单击“重新连接”按钮。  
   
@@ -260,7 +259,7 @@ ms.locfileid: "66078931"
   
      注意，“客户”下只出现没有显示文件夹值的显示文件夹和属性，而不显示属性的较长列表。  
   
-7.  在“文件”  菜单上，单击“全部保存”  。  
+7.  在“文件” **** 菜单上，单击“全部保存” ****。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [修改“产品”维度](lesson-3-3-modifying-the-product-dimension.md)  
@@ -269,6 +268,6 @@ ms.locfileid: "66078931"
  [维度特性属性参考](multidimensional-models/dimension-attribute-properties-reference.md)   
  [从维度中删除属性](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [重命名属性](multidimensional-models/attribute-properties-rename-an-attribute.md)   
- [在数据源视图中定义命名计算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义命名计算 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

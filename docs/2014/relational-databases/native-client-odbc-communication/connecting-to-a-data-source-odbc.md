@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63075177"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>连接数据源 (ODBC)
@@ -78,7 +78,7 @@ ms.locfileid: "63075177"
   
  当**SQLBrowseConnect**完成成功连接时，它将返回一个连接字符串，该字符串可用于对**SQLDriverConnect**的后续调用。  
   
- Native Client ODBC 驱动程序始终在成功的**SQLConnect**、 **SQLDriverConnect**或 SQLBrowseConnect 上返回 SQL_SUCCESS_WITH_INFO。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 ODBC 应用程序在获取 SQL_SUCCESS_WITH_INFO 后调用**SQLGetDiagRec** ，则它可能会收到以下消息：  
+ Native Client ODBC 驱动程序始终在成功的**SQLConnect**、 **SQLDriverConnect**或 SQLBrowseConnect 上返回 SQL_SUCCESS_WITH_INFO。 **SQLBrowseConnect** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 ODBC 应用程序在获取 SQL_SUCCESS_WITH_INFO 后调用**SQLGetDiagRec** ，则它可能会收到以下消息：  
   
  5701  
  指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将用户的上下文置于在数据源中定义的默认数据库中，或者置于为在连接中使用的登录 ID 定义的默认数据库中（如果数据源没有默认数据库）。  
