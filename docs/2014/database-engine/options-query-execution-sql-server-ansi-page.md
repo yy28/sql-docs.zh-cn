@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089381"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>选项（查询执行-SQL Server-ANSI 页）
   这些 ANSI (ISO) 标准 SET 选项共同定义了用户查询、运行触发器或存储过程执行期间的查询处理环境。 不过，这些 SET 选项并未包括遵守 ISO 标准所需的所有选项。 使用此页可以指定[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]将使用 ISO 标准中指定的全部或部分设置运行查询。 对这些选项所做的更改只应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在 "**查询**" 菜单上单击 "**查询选项**"，或在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查询窗口中右键单击并选择 "**查询选项**"。 在 **“查询选项”** 对话框中的 **“执行”** 下，单击 **ANSI**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **设置 ANSI_DEFAULTS**  
+ **SET ANSI_DEFAULTS**  
  选中此复选框可以选择所有默认的 ISO 设置。 默认情况下，不会选择所有 ISO 选项。  
   
  **SET QUOTED_IDENTIFIER**  
@@ -33,10 +33,10 @@ ms.locfileid: "66089381"
  当设置了此值时，在 CREATE TABLE 或 ALTER TABLE 语句执行过程中，没有显式定义为 NOT NULL 的所有用户定义的数据类型或列都将默认为允许空值。 默认情况下，此复选框为选中状态。  
   
  **SET IMPLICIT_TRANSACTIONS**  
- 如果选中此复选框，则 SET IMPLICIT_TRANSACTIONS 将连接设置为隐式事务模式。 如果清除此复选框，则会将连接返回到自动提交事务模式。 若要查看在选中此复选框时可启动隐式事务的语句，请参阅 [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](/sql/t-sql/statements/set-implicit-transactions-transact-sql)。 默认情况下，此复选框处于未选中状态。  
+ 如果选中此复选框，则 SET IMPLICIT_TRANSACTIONS 将连接设置为隐式事务模式。 如果清除此复选框，则会将连接返回到自动提交事务模式。 若要查看在选中此复选框时可启动隐式事务的语句，请参阅 [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](/sql/t-sql/statements/set-implicit-transactions-transact-sql)。 默认情况下清除此复选框。  
   
  **SET CURSOR_CLOSE_ON_COMMIT**  
- 如果选中此复选框，则在提交事务时，所有打开的游标都将自动关闭（符合 ISO 标准）。 当此值设置为 OFF 时，游标仍然在各事务边界间保持打开状态，并且仅当连接关闭或被显式关闭时，才会关闭游标。 默认情况下，此复选框处于未选中状态。  
+ 如果选中此复选框，则在提交事务时，所有打开的游标都将自动关闭（符合 ISO 标准）。 当此值设置为 OFF 时，游标仍然在各事务边界间保持打开状态，并且仅当连接关闭或被显式关闭时，才会关闭游标。 默认情况下清除此复选框。  
   
  **SET ANSI_PADDING**  
  对于长度小于列定义大小的值名称，以及在 **char**、 **varchar**、 **binary**和 **varbinary** 数据中含有尾随空格的值，对列存储这些值名称和值的方式进行控制。 此设置只影响新列的定义。 创建列后， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会基于创建列时的设置存储这些值。 以后对此设置的更改不会影响现有的列。 默认情况下，此复选框为选中状态。  

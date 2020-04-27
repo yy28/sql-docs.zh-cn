@@ -13,18 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081943"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>“依赖关系网络”选项卡（挖掘模型查看器）
-  
   **“依赖关系网络”** 选项卡提供挖掘模型所包含的所有属性的图形视图，并显示这些属性之间的关系。  
   
- 
-  **“依赖关系网络”**  选项卡用于多种类型的挖掘模型，包括 Naïve Bayes 模型、决策树模型和关联模型。 有关如何在这些模型的上下文中解释 **“依赖关系网络”**  选项卡的内容的详细信息，请参阅以下链接：  
+ **“依赖关系网络”**  选项卡用于多种类型的挖掘模型，包括 Naïve Bayes 模型、决策树模型和关联模型。 有关如何在这些模型的上下文中解释 **“依赖关系网络”**  选项卡的内容的详细信息，请参阅以下链接：  
   
  [使用 Microsoft 树查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082012"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>定义时间段（数据源）（维度向导）
@@ -30,8 +30,7 @@ ms.locfileid: "66082012"
  显示用于在时间维度中指示时间段的属性类型。 有关属性类型的详细信息，请参阅[类型元素（维度属性）(ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl)。  
   
 > [!NOTE]  
->  
-  `Date` 属性类型只能用于具有 DateTime 数据类型的列。  
+>  `Date` 属性类型只能用于具有 DateTime 数据类型的列。  
   
  **时间表列**  
  列出相应的属性类型将基于的列。  

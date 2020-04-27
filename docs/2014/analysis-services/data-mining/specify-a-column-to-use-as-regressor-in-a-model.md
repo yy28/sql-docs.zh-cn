@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082913"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定用作回归量的列
@@ -63,6 +63,6 @@ ms.locfileid: "66082913"
  [Microsoft 线性回归算法](microsoft-linear-regression-algorithm.md)   
  [数据挖掘查询](data-mining-queries.md)   
  [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)   
- [线性回归模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

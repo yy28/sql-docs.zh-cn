@@ -13,20 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087343"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>连接到数据源 (SSAS)
-  
   **“表导入向导”** 的这一页可用于创建与各种数据源（例如关系数据库、数据馈送和文件）的新数据源连接。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
  若要连接到数据源，必须在计算机上安装适当的访问接口。 您还必须在工作区数据库服务器上安装有适当的访问接口。 对于 32 位 (x86) 服务器，必须安装 32 位访问接口。 对于 64 位 (x64) 服务器，必须安装 64 位访问接口。  
   
- 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 始终在 32 位进程中运行，而与体系结构无关。 在 64 位计算机上运行 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 时，如果安装数据访问接口，您应该知道以下事项：  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 始终在 32 位进程中运行，而与体系结构无关。 在 64 位计算机上运行 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 时，如果安装数据访问接口，您应该知道以下事项：  
   
 -   对于支持 32 位和 64 位访问接口的并行安装的访问接口，您应该安装这两个访问接口。  
   

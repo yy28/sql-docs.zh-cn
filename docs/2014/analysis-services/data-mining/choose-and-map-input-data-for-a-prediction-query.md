@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085847"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>为预测查询选择和映射输入数据
@@ -28,7 +28,7 @@ ms.locfileid: "66085847"
 > [!WARNING]  
 >  不能添加位于其他数据源视图中的新列或映射列。 选择的数据源视图必须包含预测查询所需的所有列。  
   
- 在您确定了包含将用于预测的数据的表后，必须将外部数据中的列映射到挖掘模型中的列。 例如，如果您的模型基于人口统计信息和调查响应预测客户购买行为，则您的输入数据应包含与模型中的数据通常对应的信息。 您无需对每个单列都具有匹配的数据，但可以匹配的列越多，预测效果就越好。 如果您尝试映射具有不同数据类型的列，则系统可能会显示错误消息。 在此情况下，您可以在数据源视图中定义命名计算，以便将新的列数据强制转换或转换为模型所需的数据类型。 有关详细信息，请参阅[在数据源视图中定义命名计算 (Analysis Services)](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)。  
+ 在您确定了包含将用于预测的数据的表后，必须将外部数据中的列映射到挖掘模型中的列。 例如，如果您的模型基于人口统计信息和调查响应预测客户购买行为，则您的输入数据应包含与模型中的数据通常对应的信息。 您无需对每个单列都具有匹配的数据，但可以匹配的列越多，预测效果就越好。 如果您尝试映射具有不同数据类型的列，则系统可能会显示错误消息。 在此情况下，您可以在数据源视图中定义命名计算，以便将新的列数据强制转换或转换为模型所需的数据类型。 有关详细信息，请参阅[在数据源视图中定义命名计算 &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)。  
   
  在您选择要用于预测的数据时，所选数据源中的某些列可能会基于名称相似性和匹配的数据类型，自动映射到挖掘模型列。 可以使用 **“挖掘模型预测”** 中的 **“修改映射”** 对话框更改映射的列、删除不合适的映射或为现有列创建新映射。 “挖掘模型预测”**** 设计图面还支持连接的拖放编辑。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66085847"
   
 ### <a name="select-an-input-table"></a>选择输入表  
   
-1.  在 ** 的数据挖掘设计器中，单击“挖掘准确性图表”****选项卡的“选择输入表”**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]表上的“选择事例表”****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的数据挖掘设计器中，单击“挖掘准确性图表”**** 选项卡的“选择输入表”**** 表上的“选择事例表”****。  
   
      此时将打开 **“选择表”** 对话框，在该对话框中，您可以选择包含查询所基于的数据的表。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66085847"
   
 3.  在“表/视图名称”**** 下，选择包含希望用于测试模型的数据的表。  
   
-4.  单击“确定”。   
+4.  单击" **确定**"。  
   
      挖掘结构中的列将自动映射到输入表中相同名称的列。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "66085847"
   
 4.  从外部数据源可用列的列表中选择一个新列。 选择列表中的空白项以删除列映射。  
   
-5.  单击“确定”。   
+5.  单击" **确定**"。  
   
      设计器中将显示新的列映射。  
   
 ### <a name="remove-a-relationship-between-input-tables"></a>删除各输入表之间的关系  
   
-1.  在 ** 的数据挖掘设计器中“挖掘模型预测”****选项卡的“选择输入表”**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]表上，单击“修改联接”****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的数据挖掘设计器中“挖掘模型预测”**** 选项卡的“选择输入表”**** 表上，单击“修改联接”****。  
   
      此时，将打开 **“指定嵌套联接”** 对话框。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66085847"
   
 3.  单击 **“删除关系”**。  
   
-4.  单击“确定”。   
+4.  单击" **确定**"。  
   
      这样便可删除事例表和嵌套表之间的关系。  
   
@@ -118,6 +118,6 @@ ms.locfileid: "66085847"
      如果已经存在关系，则挖掘模型中的列将自动映射到输入表中具有相同名称的列。 通过单击 **“修改联接”** 以打开 **“创建关系”** 对话框，可以修改嵌套表与事例表之间的关系。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘 &#40;预测查询&#41;](prediction-queries-data-mining.md)  
+ [预测查询（数据挖掘）](prediction-queries-data-mining.md)  
   
   

@@ -13,15 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 952a47eaa2028819908ef7e93326c31a289a0cc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093974"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>日志传送在升级后将无法运行
-  升级顾问已检测您正在使用日志传送。 
-  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的日志传送与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的日志传送不兼容，因此不能直接升级。 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或存储过程重新配置日志传送。  
+  升级顾问已检测您正在使用日志传送。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的日志传送与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的日志传送不兼容，因此不能直接升级。 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或存储过程重新配置日志传送。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 代理日志传送作业类别导致升级失败](../../../2014/sql-server/install/sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md)   

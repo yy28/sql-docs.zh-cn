@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084409"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>筛选关联规则模型中的规则
@@ -37,8 +37,7 @@ ms.locfileid: "66084409"
   
 3.  在 **“筛选规则”** 框中键入规则条件。 例如，规则条件可以为“Bike Stand”，该条件还可以返回“Bike Stands”。  
   
-     
-  **“筛选规则”** 文本框支持用 .NET 语言定义的正则表达式。 因此，可使用如下所示的表达式： `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`。 此表达式将返回特定项集，其中包括的属性具有以各种顺序显示的词语“Helmets”和“Fenders”。  
+     **“筛选规则”** 文本框支持用 .NET 语言定义的正则表达式。 因此，可使用如下所示的表达式： `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`。 此表达式将返回特定项集，其中包括的属性具有以各种顺序显示的词语“Helmets”和“Fenders”。  
   
 4.  对于 **“最小概率”**，增大概率值以查看较少的规则，减小概率值以查看较多的规则。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "66084409"
 ## <a name="see-also"></a>另请参阅  
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)   
  [使用 Microsoft 关联规则查看器浏览模型](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [第3课：生成市场篮方案 &#40;中级数据挖掘教程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 课：生成市场篮方案（数据挖掘中级教程）](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

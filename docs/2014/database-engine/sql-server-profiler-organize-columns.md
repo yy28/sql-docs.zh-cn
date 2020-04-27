@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089758"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - 组织列
@@ -28,7 +28,7 @@ ms.locfileid: "66089758"
   
  在跟踪显示窗口中对事件进行分组或聚合时，所选择的用于分组或聚合的列会在显示窗口中保持固定，但是您可以左右滚动，以便查看所有其他的数据列。  
   
- 若要访问此对话框，请打开现有的跟踪文件或跟踪表，再单击 **“文件”菜单上的“属性”**[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ****。 在 **“跟踪属性”** 对话框中，单击 **“事件选择”** 选项卡，再单击 **“组织列”**。 您也可以在创建新的跟踪时单击 **“事件选择”** 选项卡上的 **“组织列”** 。  
+ 若要访问此对话框，请打开现有的跟踪文件或跟踪表，再单击“文件”[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **** 菜单上的“属性”****。 在 **“跟踪属性”** 对话框中，单击 **“事件选择”** 选项卡，再单击 **“组织列”**。 您也可以在创建新的跟踪时单击 **“事件选择”** 选项卡上的 **“组织列”** 。  
   
 ## <a name="options"></a>选项  
  **组**  
@@ -39,7 +39,7 @@ ms.locfileid: "66089758"
  若要对事件进行分组，请将多个数据列移动到 **“组”** 中。 这会将跟踪显示窗口中所有特定类型的事件分到一组中，但是不会在各事件类类型名称下折叠事件。 您可以通过单击“视图”菜单上的 **“分组视图”** 在分组视图和未分组视图之间来回切换。 当多个数据列移动到 **“组”** 中时，将无法切换到 **“聚合视图”** 。  
   
  **“列”**  
- 列出可移动到“组”**** 中的数据列。 单击 "列" 左侧**+** 的加号（）展开**** 列表。  
+ 列出可移动到“组”**** 中的数据列。 单击 "列" 左侧**+** 的加号（）展开**Columns**列表。  
   
  **Up**  
  选择数据列之后，单击“向上”**** 可将数据列移动到“组”**** 中。 您也可以单击 **“向上”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
@@ -49,9 +49,9 @@ ms.locfileid: "66089758"
   
 ## <a name="see-also"></a>另请参阅  
  [组织跟踪中显示的列 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [创建跟踪 (SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [创建跟踪模板 (SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [打开跟踪文件 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [创建跟踪 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [SQL Server Profiler 创建跟踪模板 &#40;&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [打开跟踪文件 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [打开跟踪表 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   

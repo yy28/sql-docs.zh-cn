@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083360"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Missing 值（Analysis Services - 数据挖掘）
@@ -48,7 +48,7 @@ ms.locfileid: "66083360"
   
  例如，下表显示了为自行车购买者教程创建的决策树模型中的（所有）节点的值的分布。 在示例方案中，[Bike Buyer] 列为可预测属性，其中，1 表示“是”，0 表示“否”。  
   
-|值|案例|  
+|Value|案例|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -64,7 +64,7 @@ ms.locfileid: "66083360"
 ## <a name="adjusting-probability-for-missing-states"></a>调整 Missing 状态的概率  
  除了对值进行计数外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还计算整个数据集中的任何值的概率。 这对于 `Missing` 值同样适用。 例如，下表显示了前面示例中事例的概率：  
   
-|值|案例|概率|  
+|Value|案例|概率|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -108,13 +108,13 @@ ms.locfileid: "66083360"
   
 |任务|链接|  
 |-----------|-----------|  
-|将标志添加到各个模型列来控制对 Missing 值的处理|[查看或更改数据挖掘 &#40;建模标志&#41;](modeling-flags-data-mining.md)|  
+|将标志添加到各个模型列来控制对 Missing 值的处理|[查看或更改建模标志（数据挖掘）](modeling-flags-data-mining.md)|  
 |设置挖掘模型的属性来控制对 Missing 值的处理|[更改挖掘模型的属性](change-the-properties-of-a-mining-model.md)|  
-|了解如何在 DMX 中指定建模标志|[&#40;DMX&#41;建模标志](/sql/dmx/modeling-flags-dmx)|  
+|了解如何在 DMX 中指定建模标志|[建模标志 (DMX)](/sql/dmx/modeling-flags-dmx)|  
 |更改挖掘结构处理 Missing 值的方式|[更改挖掘结构的属性](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   
- [建模标志 &#40;数据挖掘&#41;](modeling-flags-data-mining.md)  
+ [建模标志（数据挖掘）](modeling-flags-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082181"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定义本地货币引用（商业智能向导）
@@ -35,18 +35,18 @@ ms.locfileid: "66082181"
  在成员表示本地货币的货币标识符的货币维度中选择货币属性。 （货币属性是其`Type`属性设置为 "*货币*" 的属性。）  
   
 > [!NOTE]  
->  如果未选择“事实数据表中的标识符”**** 选项，则此选项不可用。  
+>   如果未选择 **“事实数据表中的标识符”** 选项，则此选项不可用。  
   
  **维度表中的属性**  
  选择此选项可从与包含本地货币货币标识符的度量值组相关的维度中指定属性。  
   
- 在由事务和另一个业务实体（如位置）之间的关系确定该事务的本地货币时使用此选项。 例如，在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]示例数据库-[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]中，"财务报表" 度量值组与 "货币" 维度之间通过 "单位" 维度的引用维度关系。 也就是说，“财务报表”度量值组的事实数据表包含一个外键列，该外键列引用了“单位”维度的维度表中的成员。 反过来，Organization 维度的维度表也包含一个外键列，该外键列引用 Currency 维度的维度表中的货币标识符。  
+ 在由事务和另一个业务实体（如位置）之间的关系确定该事务的本地货币时使用此选项。 例如，在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]示例数据库-[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]中，"财务报表" 度量值组与 "货币" 维度之间通过 "单位" 维度的引用维度关系。 也就是说，“财务报表”度量值组的事实数据表包含一个外键列，该外键列引用了“单位”维度的维度表中的成员。 反过来，“单位”维度的维度表也包含一个外键列，该外键列引用“货币”维度的维度表中的货币标识符。  
   
  **引用货币的维度属性**  
  在成员引用本地货币的货币标识符的维度中选择属性。  
   
 > [!NOTE]  
->  如果未选择“维度表中的属性”**** 选项，则此选项不可用。  
+>   如果未选择 **“维度表中的属性”** 选项，则此选项不可用。  
   
 ## <a name="see-also"></a>另请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   

@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083869"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
@@ -36,8 +36,7 @@ ms.locfileid: "66083869"
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经元网络算法构造的挖掘模型可以包含多个网络，这取决于用于输入和预测的列的数量，或者取决于仅用于预测的列的数量。 一个挖掘模型包含的网络数取决于挖掘模型使用的输入列和预测列包含的状态数。  
   
 ## <a name="example"></a>示例  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法对分析复杂输入数据（如来自制造或商业流程的数据）很有用；对于那些提供了大量定型数据，但使用其他算法很难为其派生规则的业务问题，这种算法也很有用。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法对分析复杂输入数据（如来自制造或商业流程的数据）很有用；对于那些提供了大量定型数据，但使用其他算法很难为其派生规则的业务问题，这种算法也很有用。  
   
  在以下情况下，建议使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法：  
   
@@ -52,8 +51,7 @@ ms.locfileid: "66083869"
 -   分析多个输入和相对较少的输出之间的复杂关系的任何预测模型。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建由多至三层神经元组成的网络。 这些层分别是输入层、可选隐藏层和输出层。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建由多至三层神经元组成的网络。 这些层分别是输入层、可选隐藏层和输出层。  
   
  **输入层：** 输入神经元定义了数据挖掘模型的所有输入属性值及其概率。  
   

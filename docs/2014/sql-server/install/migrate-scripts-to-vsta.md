@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093988"
 ---
 # <a name="migrate-scripts-to-vsta"></a>将脚本迁移到 VSTA
@@ -34,8 +34,7 @@ ms.locfileid: "66093988"
   
 -   VSA 脚本的入口点已重命名。  
   
-     入口点在 VSTA 项目中的 `ScriptMain` 类中指定一种方法，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时会将该方法作为脚本任务代码的入口点来调用。 
-  `ScriptMain` 类是由脚本模板生成的默认类。  
+     入口点在 VSTA 项目中的 `ScriptMain` 类中指定一种方法，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时会将该方法作为脚本任务代码的入口点来调用。 `ScriptMain` 类是由脚本模板生成的默认类。  
   
 -   在 VSA 脚本中，没有入口点或者有多个入口点。  
   

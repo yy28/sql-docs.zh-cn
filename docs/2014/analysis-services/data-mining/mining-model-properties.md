@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083505"
 ---
 # <a name="mining-model-properties"></a>挖掘模型属性
@@ -39,7 +39,7 @@ ms.locfileid: "66083505"
 ## <a name="properties-of-models"></a>模型的属性  
  下表介绍特定于挖掘模型的属性。 此外，您还可以对挖掘模型中的各个列设置属性  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |**算法**|设置挖掘模型的算法类型。|  
 |**AlgorithmParameters**|设置各个算法类型可用的算法参数的值。|  
@@ -50,7 +50,7 @@ ms.locfileid: "66083505"
 ## <a name="properties-of-model-columns"></a>模型列的属性  
  可以为挖掘模型中的各个列设置以下特定于数据挖掘的属性。 针对挖掘模型中的各个列，可以将这些属性设置为不同的值。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |**说明**|说明挖掘列的目的。|  
 |**名称**|设置挖掘模型列的名称。 可以键入一个新名称，以便为挖掘模型列提供一个别名。|  

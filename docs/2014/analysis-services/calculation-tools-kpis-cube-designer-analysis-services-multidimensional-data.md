@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088273"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>计算工具（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -47,29 +47,29 @@ ms.locfileid: "66088273"
 ## <a name="context-menu"></a>上下文菜单  
  右键单击“计算工具”**** 窗格中的元素后，可以从所显示的上下文菜单中访问以下选项：  
   
- **Copy**  
+ **复制**  
  选择此选项可将在 **“元数据”** 或 **“函数”** 中选择的元素复制到剪贴板。  
   
 > [!NOTE]  
->  如果选择 **“模板”** ，则不会显示此选项。  
+>   如果选择 **“模板”** ，则不会显示此选项。  
   
 > [!NOTE]  
->  如果无法复制所选成员（如 **“元数据”** 中所显示维度的 **“集”** 文件夹，或 **“函数”** 中所显示函数的函数组文件夹），则将禁用此选项。  
+>   如果无法复制所选成员（如 **“元数据”** 中所显示维度的 **“集”** 文件夹，或 **“函数”** 中所显示函数的函数组文件夹），则将禁用此选项。  
   
  **筛选成员**  
  选择此选项可显示 **“筛选成员”** 对话框，并筛选为 **“元数据”** 中所选元素显示的成员。 有关“筛选成员”**** 对话框的详细信息，请参阅[“筛选成员”对话框（Analysis Services - 多维数据）](filter-members-dialog-box-analysis-services-multidimensional-data.md)。  
   
 > [!NOTE]  
->  只有在选择了 **“元数据”** 时，才会显示此选项。  
+>   只有在选择了 **“元数据”** 时，才会显示此选项。  
   
 > [!NOTE]  
->  只有在 **“元数据”** 中选择了属性的级别时，才会启用此选项。  
+>   只有在 **“元数据”** 中选择了属性的级别时，才会启用此选项。  
   
  **添加模板**  
  选择此选项可以基于所选模板向多维数据集脚本中添加新的计算成员、命名集或者脚本命令，并以窗体视图显示“KPI 窗体编辑器”****。  
   
 > [!NOTE]  
->  只有在选择了 **“元数据”** 时，才会显示此选项。  
+>   只有在选择了 **“元数据”** 时，才会显示此选项。  
   
 ## <a name="see-also"></a>另请参阅  
  [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   

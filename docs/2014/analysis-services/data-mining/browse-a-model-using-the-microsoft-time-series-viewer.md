@@ -19,15 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085982"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>使用 Microsoft 时序查看器浏览模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的时序查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法生成的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法是一种回归算法，用于在预测方案中创建数据挖掘模型以预测连续列（如产品销量）。 这些时序模型可以包含基于不同算法的信息：  
+  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的时序查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法生成的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法是一种回归算法，用于在预测方案中创建数据挖掘模型以预测连续列（如产品销量）。 这些时序模型可以包含基于不同算法的信息：  
   
 -   ARTxp 算法，针对短期预测进行了优化。  
   
@@ -40,18 +39,17 @@ ms.locfileid: "66085982"
 > [!NOTE]  
 >  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)。  
   
-##  <a name="BKMK_ViewerTabs"></a>查看器选项卡  
- 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序查看器包含下列选项卡：  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>查看器选项卡  
+ 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序查看器包含下列选项卡：  
   
--   [模式](#BKMK_Tree)  
+-   [型号](#BKMK_Tree)  
   
 -   [图表](#BKMK_Charts)  
   
- **注意**为模型内容和在 "挖掘图例" 中显示的信息取决于模型使用的算法。 不过，无论算法组合如何， **“模型”** 和 **“图表”** 选项卡都是相同的。  
+ **注意** 所显示的有关模型内容的信息以及挖掘图例中的信息取决于模型使用的算法。 不过，无论算法组合如何， **“模型”** 和 **“图表”** 选项卡都是相同的。  
   
-###  <a name="BKMK_Tree"></a>模式  
- 创建时序模型时, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将已完成的模型显示为树。 如果数据包含多个事例序列， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为每个序列生成单独的树。 例如，您要预测太平洋、北美和欧洲地区的销售。 对每个地区的预测都是事例序列。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]为每个序列生成单独的树。 若要查看某一特定序列，可从 **“树”** 列表中选择该数据序列。  
+###  <a name="model"></a><a name="BKMK_Tree"></a>模式  
+ 创建时序模型时, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将已完成的模型显示为树。 如果数据包含多个事例序列， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为每个序列生成单独的树。 例如，您要预测太平洋、北美和欧洲地区的销售。 对每个地区的预测都是事例序列。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为其中的每个序列生成单独的树。 若要查看某一特定序列，可从 **“树”** 列表中选择该数据序列。  
   
  对于每个树，时序模型都包含一个 **“全部”** 节点，然后分出一系列的节点，这些节点代表算法发现的周期性结构。 单击各个节点可以显示事例数之类的统计信息和公式。  
   
@@ -61,8 +59,7 @@ ms.locfileid: "66085982"
   
  如果创建的是混合模型，则根节点只包含事例数和 ARIMA 公式。 在根节点之后，树拆分为对应于各个周期性结构的单独节点。 对于每个非根节点，挖掘图例同时包含 ARTxp 和 ARIMA 算法、节点的公式和节点中的事例数。 首先列出的是 ARTxp 公式，并标记为树节点公式。 接着是 ARIMA 公式。 有关如何解释此信息的详细信息，请参阅 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)。  
   
- 通常，决策树图在查看器左侧显示最重要的树杈，即 **“全部”** 节点。 在决策树中， **“全部”** 节点之后的树杈最为重要，因为它包含对定型数据中的事例进行最为严格的区分的条件。 在时序模型中，主分支指示最有可能的季节性周期。 
-  **“全部”** 节点之后的树杈显示在分支的右侧。  
+ 通常，决策树图在查看器左侧显示最重要的树杈，即 **“全部”** 节点。 在决策树中， **“全部”** 节点之后的树杈最为重要，因为它包含对定型数据中的事例进行最为严格的区分的条件。 在时序模型中，主分支指示最有可能的季节性周期。 **“全部”** 节点之后的树杈显示在分支的右侧。  
   
  您可以展开或折叠决策树中的各个节点，以显示或隐藏各节点后出现的拆分。 您还可以使用 **“决策树”** 选项卡上的选项来设置树的显示方式。 使用 **“显示级别”** 滑块，可以调整树中显示的级别数。 使用 **“默认扩展”** 可以设置模型中所有树的默认显示级别数。  
   
@@ -70,9 +67,8 @@ ms.locfileid: "66085982"
   
  [返回页首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Charts"></a>时间表  
- 
-  **“图表”** 选项卡显示一个图形，该图形显示预测属性在一段时间内的行为，还显示五个未来预测值。 图表的垂直轴表示序列的值；水平轴表示时间。  
+###  <a name="charts"></a><a name="BKMK_Charts"></a>时间表  
+ **“图表”** 选项卡显示一个图形，该图形显示预测属性在一段时间内的行为，还显示五个未来预测值。 图表的垂直轴表示序列的值；水平轴表示时间。  
   
 > [!NOTE]  
 >  时间轴上使用的时间段取决于数据中使用的单位：它们可表示天、月或甚至秒。  

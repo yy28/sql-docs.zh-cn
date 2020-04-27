@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094922"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>如何安装升级顾问
@@ -46,7 +46,7 @@ ms.locfileid: "66094922"
   
 4.  在 "**注册信息**" 页上，输入您的姓名和公司。  
   
-5.  在 "**功能选择**" 页上，查看 "**安装路径**" 值。 如有必要，请使用 "**浏览**" 按钮更改位置。 单击“下一步”。   
+5.  在 "**功能选择**" 页上，查看 "**安装路径**" 值。 如有必要，请使用 "**浏览**" 按钮更改位置。 单击“下一步”  。  
   
 6.  在 "**准备安装程序"** 页上，单击 "**安装**" 以安装升级顾问。  
   

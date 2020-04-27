@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083112"
 ---
 # <a name="process-a-mining-structure"></a>处理挖掘结构
@@ -40,8 +40,7 @@ ms.locfileid: "66083112"
   
 2.  在 "**处理挖掘结构- \<结构>** " 对话框中，单击 "**运行**"。  
   
-     
-  **“处理进度”** 对话框将打开以显示有关模型处理的详细信息。  
+     **“处理进度”** 对话框将打开以显示有关模型处理的详细信息。  
   
 3.  模型处理完成后，在 **“处理进度”** 对话框中单击 **“关闭”** 。  
   

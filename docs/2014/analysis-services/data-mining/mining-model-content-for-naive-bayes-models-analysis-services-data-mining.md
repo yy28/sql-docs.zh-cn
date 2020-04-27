@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083651"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）
@@ -49,15 +49,15 @@ ms.locfileid: "66083651"
  ATTRIBUTE_NAME  
  与此节点对应的属性的名称。  
   
- **模型根**可预测属性的名称。  
+ **模型根** 可预测属性的名称。  
   
- **边际统计信息**不适用  
+ **边际统计信息** 不适用  
   
- **可预测属性**可预测属性的名称。  
+ **可预测属性** 可预测属性的名称。  
   
- **输入属性**输入属性的名称。  
+ **输入属性** 输入属性的名称。  
   
- **输入属性状态**仅限输入属性的名称。 若要获取状态，请使用 MSOLAP_NODE_SHORT_CAPTION。  
+ **输入属性状态** 仅限输入属性的名称。 若要获取状态，请使用 MSOLAP_NODE_SHORT_CAPTION。  
   
  NODE_NAME  
  节点的名称。  
@@ -82,32 +82,32 @@ ms.locfileid: "66083651"
  NODE_CAPTION  
  与节点关联的标签或标题。 此属性主要用于显示目的。  
   
- **模型根**空白  
+ **模型根** 空白  
   
  **边际统计信息**空白  
   
- **可预测属性**可预测属性的名称。  
+ **可预测属性** 可预测属性的名称。  
   
- **输入属性**可预测属性和当前输入属性的名称。 例如：  
+ **输入属性** 可预测属性和当前输入属性的名称。 例如：  
   
  Bike Buyer -> Age  
   
- **输入属性状态**可预测属性和当前输入属性的名称，加上输入值。 例如：  
+ **输入属性状态** 可预测属性和当前输入属性的名称，以及输入的值。 例如：  
   
  Bike Buyer -> Age = Missing  
   
  CHILDREN_CARDINALITY  
  节点所具有的子节点的数目。  
   
- **模型根**模型中可预测属性的计数加1（表示边际统计信息节点）。  
+ **模型根** 模型中可预测属性的计数加 1（表示边际统计信息节点）。  
   
- **边际统计信息**按定义没有子级。  
+ **边际统计信息** 根据定义，没有任何子级。  
   
- **可预测属性** 与当前可预测属性相关的输入属性的计数。  
+ **可预测属性**  与当前可预测属性相关的输入属性的计数。  
   
- **输入属性**当前输入属性的离散或离散化值的计数。  
+ **输入属性** 当前输入属性的离散或离散化值的计数。  
   
- **输入属性状态**始终为0。  
+ **输入属性状态** 始终为 0。  
   
  PARENT_UNIQUE_NAME  
  父节点的唯一名称。 有关关联父节点和子节点的详细信息，请参阅 [使用节点名称和 ID](#bkmk_nodenames)。  
@@ -124,15 +124,15 @@ ms.locfileid: "66083651"
  NODE_PROBABILITY  
  与此节点相关联的概率。  
   
- **模型根**始终为0。  
+ **模型根** 始终为 0。  
   
- **边际统计信息**始终为0。  
+ **边际统计信息** 始终为 0。  
   
- **可预测属性** 始终为1。  
+ **可预测属性**  始终为 1。  
   
- **输入属性**始终为1。  
+ **输入属性** 始终为 1。  
   
- **输入属性状态**表示当前值的概率的小数。 输入属性父节点下所有输入属性状态的值的总和为 1。  
+ **输入属性状态** 表示当前值的概率的小数。 输入属性父节点下所有输入属性状态的值的总和为 1。  
   
  MARGINAL_PROBABILITY  
  与节点概率相同。  
@@ -143,15 +143,15 @@ ms.locfileid: "66083651"
  NODE_SUPPORT  
  支持此节点的事例的数目。  
   
- **模型根**定型数据中所有事例的计数。  
+ **模型根** 定型数据中所有事例的计数。  
   
- **边际统计信息**始终为0。  
+ **边际统计信息** 始终为 0。  
   
- **可预测属性**定型数据中所有事例的计数。  
+ **可预测属性** 定型数据中所有事例的计数。  
   
- **输入属性**定型数据中所有事例的计数。  
+ **输入属性** 定型数据中所有事例的计数。  
   
- **输入属性状态**定型数据中仅包含此特定值的事例的计数。  
+ **输入属性状态** 定型数据中仅包含此特定值的事例的计数。  
   
  MSOLAP_MODEL_COLUMN  
  用于显示的标签。 通常与 ATTRIBUTE_NAME 相同。  
@@ -159,30 +159,30 @@ ms.locfileid: "66083651"
  MSOLAP_NODE_SCORE  
  表示属性或值在模型中的重要性。  
   
- **模型根**始终为0。  
+ **模型根** 始终为 0。  
   
- **边际统计信息**始终为0。  
+ **边际统计信息** 始终为 0。  
   
- **可预测属性** 始终为0。  
+ **可预测属性**  始终为 0。  
   
- **输入属性**与当前可预测属性相关的当前输入属性的兴趣性分数。  
+ **输入属性** 与当前可预测属性相关的当前输入属性的兴趣性分数。  
   
- **输入属性状态**始终为0。  
+ **输入属性状态** 始终为 0。  
   
  MSOLAP_NODE_SHORT_CAPTION  
  表示列的名称或值的文本字符串。  
   
  **模型根**空字符  
   
- **边际统计信息**空字符  
+ **边际统计信息** 空白  
   
  **可预测属性** 可预测属性的名称。  
   
- **输入属性**输入属性的名称。  
+ **输入属性** 输入属性的名称。  
   
- **输入属性状态**输入属性的值或离散化值。  
+ **输入属性状态** 输入属性的值或离散化值。  
   
-##  <a name="bkmk_nodenames"></a>使用节点名称和 Id  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a>使用节点名称和 Id  
  Naive Bayes 模型中各节点的命名方式提供有关节点的类型的其他信息，以便于了解该模型中信息之间的关系。 下表给出了为不同节点类型分配 ID 的约定。  
   
 |节点类型|节点 ID 约定|  
@@ -233,7 +233,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a>NODE_DISTRIBUTION 表  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a> NODE_DISTRIBUTION 表  
  嵌套表的 NODE_DISTRIBUTION 列通常包含有关节点中的值的分布统计信息。 在 Naive Bayes 模型中，将仅针对下列节点填充此表：  
   
 |节点类型|嵌套表内容|  
@@ -257,7 +257,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  预期的结果：  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
@@ -265,10 +265,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  在这些结果中，SUPPORT 列的值显示已购买自行车且具有指定婚姻状况的客户的计数。 PROBABILITY 列包含每个属性值的概率（仅针对该节点计算）。 有关 NODE_DISTRIBUTION 表中所使用术语的常规定义，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_margstats"></a>边际统计信息节点中的信息  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a> 边际统计信息节点中的信息  
  在 Naive Bayes 模型中，边际统计节点的嵌套表包含整个定型数据集中的值的分布。 例如，下表包含 `TM_NaiveBayes`模型的 NODE_DISTRIBUTION 嵌套表的部分统计信息列表：  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|支持|PROBABILITY|方差|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|方差|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26fa80cc770d4bee9163ec18c21b35bd8c807bde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086985"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>“连接属性”对话框（SSAS - 表格）
@@ -29,7 +29,7 @@ ms.locfileid: "66086985"
 |术语|定义|  
 |----------|----------------|  
 |**名称**|指定数据源的名称。|  
-|**识别**|显示数据源对象的标识符。|  
+|**ID**|显示数据源对象的标识符。|  
 |**说明**|显示数据源对象的说明。|  
 |**创建时间戳**|显示数据库的创建日期和时间。|  
 |**上次架构更新时间**|显示上次更新数据库元数据的日期和时间。|  

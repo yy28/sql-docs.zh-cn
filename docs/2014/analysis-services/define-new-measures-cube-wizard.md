@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082112"
 ---
 # <a name="define-new-measures-cube-wizard"></a>定义新度量值（多维数据集向导）
@@ -40,7 +40,7 @@ ms.locfileid: "66082112"
   
  若要将模板中的所有度量值都包含在多维数据集中，请选中标头内的复选框。  
   
- **度量值名称**  
+ **“度量值名称”**  
  列出模板中可用的度量值。  
   
  若要重命名度量值，请单击该度量值并键入新名称。  
@@ -68,7 +68,7 @@ ms.locfileid: "66082112"
  **添加新度量值**  
  显示并允许定义要包含在多维数据集中的其他度量值。  
   
- **度量值名称**  
+ **“度量值名称”**  
  列出要包含在多维数据集中的新度量值。  
   
  若要添加新度量值，请单击 **“添加新度量值”**，然后键入新度量值的名称。  

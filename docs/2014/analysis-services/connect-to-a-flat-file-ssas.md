@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087359"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>连接到平面文件 (SSAS)
@@ -28,19 +28,19 @@ ms.locfileid: "66087359"
 >  在此页中选择文件时，将使用当前用户的凭据。 但是，如果在“模拟信息”页中指定的用户没有足够的权限从所选文件中读取，则导入将不会成功。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **友好连接名称**  
+ **友好的连接名称**  
  键入此数据源连接的唯一名称。 这是必填字段。  
   
  **文件路径**  
  指定文件的完整路径。  
   
- **“浏览”**  
+ **浏览**  
  导航至文件可用的位置。  
   
  **列分隔符**  
  从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。  
   
-|值|说明|  
+|Value|描述|  
 |-----------|-----------------|  
 |制表符 (t)|列由制表符 (t) 分隔。|  
 |逗号 (,)|列由逗号 (,) 分隔。|  

@@ -14,17 +14,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e16882247a123b32ba07fbbae0d1f3573fd2d678
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092070"
 ---
 # <a name="sql-server-agent-service-cannot-use-sql-server-authentication"></a>SQL Server Agent 服务不能使用 SQL Server 身份验证
   当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理仅支持 Windows 身份验证。  
   
 ## <a name="component"></a>组件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理商  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理  
   
 ## <a name="description"></a>说明  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务只能通过使用 Windows 身份验证登录到数据库。 也就是说，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。  

@@ -11,17 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092052"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 升级顾问
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问可对已安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的配置进行分析，然后生成一个报表，其中指出要使升级成功必须解决的问题。  
   
- 在安装媒体的 redist 文件夹中，或作为 [SQL 2014 功能包下载](https://www.microsoft.com/download/details.aspx?id=42295)的一部分，获取升级顾问安装文件 (sqlua.msi)。  
+ 在安装媒体的 redist 文件夹中，或作为 [SQL 2014 功能包下载](https://www.microsoft.com/download/details.aspx?id=42295)的一部分来获取升级顾问安装文件 (sqlua.msi)。  
   
 |主题|说明|  
 |-----------|-----------------|  

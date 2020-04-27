@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094576"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>使用配置文件安装 Distributed Replay
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供基于用户输入和系统默认值生成配置文件的功能。 如果您指定要安装管理工具，则可以使用配置文件来部署三个 Distributed Replay 组件（管理工具、Distributed Replay 控制器和 Distributed Replay 客户端）。 它支持安装、修复和卸载 Distributed Replay 组件。  
   
  安装程序仅支持通过命令行使用配置文件。 下面列出了在使用配置文件时参数的处理顺序：  

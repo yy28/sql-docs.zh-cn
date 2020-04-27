@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087028"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>连接到 Microsoft SQL Server Analysis Services (SSAS)
@@ -28,7 +28,7 @@ ms.locfileid: "66087028"
 >  在此页中选择数据库时，将使用当前用户的凭据。 但是，如果在“模拟信息”页中指定的用户没有足够的权限从所选数据库中读取，则导入将不会成功。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **友好连接名称**  
+ **友好的连接名称**  
  键入此数据源连接的唯一名称。 这是必填字段。  
   
  **服务器名或文件名**  
@@ -47,7 +47,7 @@ ms.locfileid: "66087028"
   
  在使用 Windows 身份验证时，在“表格属性”窗口和“导入向导”中预览和筛选数据时，也使用当前用户的凭据。 这些凭据不用于导入或刷新数据；而是使用在“模拟信息”页中指定的 Windows 凭据。  
   
- **Use SQL Server Authentication**  
+ **使用 SQL Server 身份验证**  
  指定是否使用 SQL Server 身份验证来连接到 SQL Server Analysis Services server。  
   
  若使用 SQL Server 身份验证，SQL Server 将通过检查是否已设置 SQL Server 登录帐户以及指定的密码是否与以前记录的密码匹配，自行进行身份验证。  
@@ -57,7 +57,7 @@ ms.locfileid: "66087028"
  **用户名**  
  为数据库连接指定用户名。 只有在已选择使用 Windows 身份验证进行连接的情况下，此选项才可用。  
   
- **权限**  
+ **密码**  
  为数据库连接指定密码。 只有在已选择使用 SQL Server 身份验证进行连接的情况下，此选项才是可编辑的。  
   
  **保存我的密码**  
@@ -67,7 +67,7 @@ ms.locfileid: "66087028"
  从数据库列表中选择数据库。  
   
  **高级**  
- 通过使用“设置高级属性”**** 对话框设置附加的连接属性。 有关详细信息，请参阅[设置高级属性 (SSAS)](set-advanced-properties-ssas.md)。  
+ 使用 "**设置高级属性**" 对话框设置附加的连接属性。 有关详细信息，请参阅[设置高级属性 (SSAS)](set-advanced-properties-ssas.md)。  
   
  **测试连接**  
  使用当前设置尝试建立与数据源的连接。 将显示一个消息，指示连接是否成功。  

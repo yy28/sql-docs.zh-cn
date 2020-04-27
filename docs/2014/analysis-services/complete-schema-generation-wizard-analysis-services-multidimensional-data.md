@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6491d0a73aa28d8dd396bf1befa321ed6f1cb9b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087741"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>完成向导（架构生成向导）（Analysis Services - 多维数据）
   可以使用 **“完成向导”** 页确认选择的内容以及创建新项目和数据源视图。  
   
 ## <a name="options"></a>选项  
- **总结**  
+ **摘要**  
  显示您设置的选项。  
   
 ## <a name="see-also"></a>另请参阅  

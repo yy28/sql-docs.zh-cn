@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090687"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>订阅和检查 Finance Name 策略
@@ -24,7 +24,7 @@ ms.locfileid: "66090687"
   
 1.  在对象资源管理器中，展开 "**数据库**"， `Finance`右键单击，指向 "**策略**"，然后单击 "**类别**"。  
   
-2.  选择该**** `Finance`类别的 "已订阅" 复选框。  
+2.  选择该**Subscribed** `Finance`类别的 "已订阅" 复选框。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -62,12 +62,12 @@ ms.locfileid: "66090687"
   
 2.  在“管理策略类别”**** 对话框中，找到 Finance 类别，然后选中 Finance 类别的“托管数据库订阅”**** 复选框。  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]现在，"财务" 类别适用于所有数据库，但创建的条件会将财务名称策略限制为 "财务" 数据库。 这说明了如何使用复杂的条件组合限定策略目标，以便按适当的方式在多个服务器上正确应用策略。  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 现在，Finance 类别会应用于所有数据库，但创建的条件会将 Finance Name 策略限定为 Finance 数据库。 这说明了如何使用复杂的条件组合限定策略目标，以便按适当的方式在多个服务器上正确应用策略。  
   
-## <a name="summary"></a>总结  
+## <a name="summary"></a>摘要  
  本教程说明了如何创建基于策略的管理条件、策略和策略组，以及如何应用筛选器并检查基于策略的管理目标是否符合策略。  
   
-## <a name="next"></a>下一步  
+## <a name="next"></a>Next  
  现已学完了本教程。 若要返回到开始位置，请单击 [教程：使用基于策略的管理来管理服务器](tutorial-administering-servers-by-using-policy-based-management.md)。  
   
  有关教程的列表，请参阅[SQL Server 2014 的教程](../../tutorials/tutorials-for-sql-server-2014.md)。  

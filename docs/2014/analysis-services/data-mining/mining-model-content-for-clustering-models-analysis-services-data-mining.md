@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083681"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>聚类分析模型的挖掘模型内容（Analysis Services – 数据挖掘）
@@ -37,10 +37,10 @@ ms.locfileid: "66083681"
   
  父节点包含有用的统计信息，用于描述所有定型事例的实际分布。 可在嵌套表列 NODE_DISTRIBUTION 中找到这些统计信息。 例如，下表显示了 NODE_DISTRIBUTION 表中的若干行，这些行描述了你在 `TM_Clustering`数据挖掘基础教程 [中创建的聚类分析模型](../../tutorials/basic-data-mining-tutorial.md)的客户人口统计信息的分布：  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|支持|PROBABILITY|方差|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|方差|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
-|Age|Missing|0|0|0|1（缺失）|  
-|Age|44.9016152716593|12939|1|125.663453102554|3（连续）|  
+|年龄|Missing|0|0|0|1（缺失）|  
+|年龄|44.9016152716593|12939|1|125.663453102554|3（连续）|  
 |性别|Missing|0|0|0|1（缺失）|  
 |性别|F|6350|0.490764355823479|0|4（离散）|  
 |性别|M|6589|0.509235644176521|0|4（离散）|  
@@ -70,7 +70,7 @@ ms.locfileid: "66083681"
  始终与 NODE_UNIQUE_NAME 相同。  
   
  NODE_UNIQUE_NAME  
- 此模型中节点的唯一标识符。 不能更改此值。  
+ 此模型中节点的唯一标识符。 此值不能更改。  
   
  NODE_TYPE  
  聚类分析模型输出以下节点类型：  
@@ -89,23 +89,23 @@ ms.locfileid: "66083681"
  CHILDREN_CARDINALITY  
  对节点所具有的子节点数的估计。  
   
- **父节点**指示模型中分类的数目。  
+ **父节点** 指示模型中分类的数目。  
   
- **群集节点**始终为0。  
+ **群集节点** 始终为 0。  
   
  PARENT_UNIQUE_NAME  
  节点的父节点的唯一名称。  
   
- **父节点**始终为 NULL  
+ **父节点** 始终为 NULL  
   
- **群集节点**通常为000。  
+ **群集节点** 通常为 000。  
   
  NODE_DESCRIPTION  
  节点的说明。  
   
- **父节点**始终为 **（全部）**。  
+ **父节点**：始终为“(全部)”****。  
   
- **群集节点**用逗号分隔的列表，其中列出了将群集与其他分类区分开来的主要属性。  
+ **群集节点** ：一个以逗号分隔的列表，包含用于将该分类与其他分类区分开来的主要属性。  
   
  NODE_RULE  
  不用于聚类分析模型。  
@@ -114,9 +114,9 @@ ms.locfileid: "66083681"
  不用于聚类分析模型。  
   
  NODE_PROBABILITY  
- 与此节点相关联的概率。 **父节点**始终为1。  
+ 与此节点相关联的概率。 **父节点** 始终为 1。  
   
- **群集节点**该概率表示属性的组合概率，并根据用于创建聚类分析模型的算法进行一些调整。  
+ **群集节点** 该概率表示属性的组合概率，其中根据用于创建聚类分析模型的算法，会有某些调整。  
   
  MARGINAL_PROBABILITY  
  从父节点到达该节点的概率。 在聚类分析模型中，边缘概率始终与此节点概率相同。  
@@ -124,16 +124,16 @@ ms.locfileid: "66083681"
  NODE_DISTRIBUTION  
  包含节点的概率直方图的表。  
   
- **父节点**请参阅本主题的简介。  
+ **父节点** 请参阅对本主题的介绍。  
   
- **群集节点**表示包含在此分类中的事例的属性和值的分布。  
+ **群集节点** 表示包含在此分类中的事例的属性和值的分布。  
   
  NODE_SUPPORT  
- 支持此节点的事例的数目。 **父节点**指示整个模型的定型事例数。  
+ 支持此节点的事例的数目。 **父节点** 指示整个模型的定型事例数。  
   
- **群集节点**将分类的大小指示为若干事例。  
+ **群集节点** 指示将分类的大小作为事例数。  
   
- **注意**如果模型使用 K 平均值聚类分析，则每个事例只能属于一个分类。 但是，如果模型使用 EM 聚类分析，则每个事例可以属于不同的分类，而且对于事例所属的每个分类，该事例都将分配有一个加权距离。 因此，对于 EM 模型来说，对单个分类支持的和将大于对整个模型的支持。  
+ **注意** ：如果模型使用 K-Means 聚类分析，则每个事例只能属于一个群集。 但是，如果模型使用 EM 聚类分析，则每个事例可以属于不同的分类，而且对于事例所属的每个分类，该事例都将分配有一个加权距离。 因此，对于 EM 模型来说，对单个分类支持的和将大于对整个模型的支持。  
   
  MSOLAP_MODEL_COLUMN  
  不用于聚类分析模型。  
@@ -141,20 +141,19 @@ ms.locfileid: "66083681"
  MSOLAP_NODE_SCORE  
  显示与此节点关联的分数。  
   
- **父节点**聚类分析模型的 Bayesian 信息标准（BIC）分数。  
+ **父节点** ：聚类分析模型的 Bayesian 信息标准 ( BIC) 分数。  
   
- **群集节点**始终为0。  
+ **群集节点** 始终为 0。  
   
  MSOLAP_NODE_SHORT_CAPTION  
  用于显示的标签。 此标题无法更改。  
   
- **父节点**模型类型：群集模型  
+ **父节点** 模型的类型：聚类分析模型  
   
- **群集节点**群集的名称。 示例：分类 1。  
+ **群集节点** 分类的名称。 示例：分类 1。  
   
 ## <a name="remarks"></a>备注  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了用于创建聚类分析模型的多种方法。 如果不了解所使用的模型是使用哪种方法创建的，可以使用 ADOMD 客户端或 AMO，也可以通过查询该数据挖掘架构行集，以编程方式检索该模型的元数据。 有关详细信息，请参阅 [查询用于创建挖掘模型的参数](query-the-parameters-used-to-create-a-mining-model.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了用于创建聚类分析模型的多种方法。 如果不了解所使用的模型是使用哪种方法创建的，可以使用 ADOMD 客户端或 AMO，也可以通过查询该数据挖掘架构行集，以编程方式检索该模型的元数据。 有关详细信息，请参阅 [查询用于创建挖掘模型的参数](query-the-parameters-used-to-create-a-mining-model.md)。  
   
 > [!NOTE]  
 >  无论使用哪一个聚类分析方法或参数，模型的结构和内容都保持不变。  

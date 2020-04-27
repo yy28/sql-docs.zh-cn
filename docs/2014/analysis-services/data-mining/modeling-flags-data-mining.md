@@ -23,14 +23,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083312"
 ---
 # <a name="modeling-flags-data-mining"></a>建模标志（数据挖掘）
-  可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用建模标志，为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
+  您可以使用中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建模标志为数据挖掘算法提供有关事例表中定义的数据的其他信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
   
  某些建模标志是在挖掘结构级别定义的，而其他标志则是在挖掘模型列级别定义的。 例如，可以将 `NOT NULL` 建模标志与挖掘结构列一起使用。 您可以根据用于创建模型的算法，在挖掘模型列上定义其他建模标志。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66083312"
 >  Missing 是算法所使用的一种特殊状态，不同于列中文本值 “Missing”。 有关详细信息，请参阅 [缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)预定义的这些标志以外，第三方插件还可能具有其他建模标志。  
   
  `REGRESSOR`  
- 指示该列在处理期间适合用作回归量。 该标志是在挖掘模型列中定义的，只能将其应用于具有连续数值数据类型的列。 有关使用此标志的详细信息，请参阅本主题中的 [使用 REGRESSOR 建模标志](#bkmk_UseRegressors)这一部分。  
+ 指示该列在处理期间适合用作回归量。 该标志是在挖掘模型列中定义的，只能将其应用于具有连续数值数据类型的列。 有关使用此标志的详细信息，请参阅本主题中的[回归量建模标志的使用](#bkmk_UseRegressors)部分。  
   
 ## <a name="viewing-and-changing-modeling-flags"></a>查看和更改建模标志  
  通过查看结构或模型的属性，可以在数据挖掘设计器中查看与挖掘结构列或模型列关联的建模标志。  
@@ -71,7 +71,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  可使用 DMX 或使用 AMO 或 XMLA 脚本来指定新挖掘结构或挖掘模型中的建模标志。 但是，不能使用 DMX 更改现有挖掘模型和结构中使用的建模标志。 您必须使用语法 `ALTER MINING STRUCTURE....ADD MINING MODEL`创建新的挖掘模型。  
   
-##  <a name="bkmk_UseRegressors"></a>使用回归量建模标志  
+##  <a name="uses-of-the-regressor-modeling-flag"></a><a name="bkmk_UseRegressors"></a> 使用 REGRESSOR 建模标志  
  当对某个列设置 REGRESSOR 建模标志时，指示的是列包含潜在回归量的算法。 模型中使用的实际回归量是由算法确定的。 如果潜在回归量不对可预测属性建模，则可以忽略该潜在回归量。  
   
  使用数据挖掘向导构建模型时，会将所有的连续输入列都标记为潜在回归量。 因此，即使没有为某个列显式设置 REGRESSOR 标记，该列也可能会在模型中用作回归量。  
@@ -84,7 +84,7 @@ FROM $system.DMSCHEMA_MINING_COLUMNS
 WHERE MODEL_NAME = '<model name>'  
 ```  
   
- **注意**如果修改某个挖掘模型并将某列的内容类型从连续更改为离散，则必须手动更改该挖掘列上的标志，然后重新处理该模型。  
+ **注意** 如果修改某个挖掘模型并将某列的内容类型从连续更改为离散，则必须手动更改该挖掘列上的标志，然后重新处理该模型。  
   
 ### <a name="regressors-in-linear-regression-models"></a>线性回归模型中的回归量  
  线性回归模型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法。 即使不使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法，任何决策树模型也都可以包含表示连续属性的回归的树或节点。  
@@ -104,13 +104,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |任务|主题|  
 |----------|-----------|  
-|使用数据挖掘设计器编辑建模标志|[查看或更改数据挖掘 &#40;建模标志&#41;](modeling-flags-data-mining.md)|  
+|使用数据挖掘设计器编辑建模标志|[查看或更改建模标志（数据挖掘）](modeling-flags-data-mining.md)|  
 |指定算法的提示以建议可能的回归量|[在模型中指定用作回归量的列](specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|请参阅特定算法支持的建模标志（在每个算法参考主题的“建模标志”部分中）|[数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|请参阅特定算法支持的建模标志（在每个算法参考主题的“建模标志”部分中）|[数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)|  
 |了解有关挖掘结构列以及可对其设置的属性的更多信息|[挖掘结构列](mining-structure-columns.md)|  
 |了解可在模型级别应用的挖掘模型列和建模标志|[挖掘模型列](mining-model-columns.md)|  
-|请参阅用于在 DMX 语句中使用建模标志的语法|[&#40;DMX&#41;建模标志](/sql/dmx/modeling-flags-dmx)|  
-|了解缺失值以及如何处理它们|[缺少 Analysis Services 数据挖掘&#41;&#40;值](missing-values-analysis-services-data-mining.md)|  
+|请参阅用于在 DMX 语句中使用建模标志的语法|[建模标志 (DMX)](/sql/dmx/modeling-flags-dmx)|  
+|了解缺失值以及如何处理它们|[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)|  
 |了解如何管理模型和结构以及设置用法属性|[移动数据挖掘对象](moving-data-mining-objects.md)|  
   
   

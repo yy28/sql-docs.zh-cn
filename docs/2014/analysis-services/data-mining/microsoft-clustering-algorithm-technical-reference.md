@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084024"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 聚类分析算法技术参考
@@ -35,13 +35,12 @@ ms.locfileid: "66084024"
   
  有关如何使用聚类分析模型的其他信息，请参阅下列主题：  
   
--   [&#40;Analysis Services 数据挖掘的聚类分析模型的挖掘模型内容&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [聚类分析模型查询示例](clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft 聚类分析算法的实现  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法提供两种创建分类并为分类分配数据点的方法。 第一种方法是 *K-means* 算法，这是一种较难的聚类分析方法。 这意味着一个数据点只能属于一个分类，并会为该分类中的每个数据点的成员身份计算一个概率。 第二种方法是期望值最大化 (EM) 方法，这是软聚类分析方法。**** 这意味着一个数据点总是属于多个分类，并会为每个数据点和分类的组合计算一个概率。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法提供两种创建分类并为分类分配数据点的方法。 第一种方法是 *K-means* 算法，这是一种较难的聚类分析方法。 这意味着一个数据点只能属于一个分类，并会为该分类中的每个数据点的成员身份计算一个概率。 第二种方法是期望值最大化 (EM) 方法，这是软聚类分析方法。**** 这意味着一个数据点总是属于多个分类，并会为每个数据点和分类的组合计算一个概率。  
   
  可以通过设置 *CLUSTERING_METHOD* 参数来选择要使用的算法。 聚类分析的默认方法是可缩放的 EM。  
   
@@ -76,8 +75,7 @@ ms.locfileid: "66084024"
  1 - P(数据点, 分类)  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法不公开用于计算 k-means 的距离函数，并且在完成的模型中不能测量距离。 但是，可以使用预测函数返回与距离对应的值，在这种情况下，距离计算为某个数据点属于此分类的概率。 有关详细信息，请参阅 [ClusterProbability (DMX)](/sql/dmx/clusterprobability-dmx)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法不公开用于计算 k-means 的距离函数，并且在完成的模型中不能测量距离。 但是，可以使用预测函数返回与距离对应的值，在这种情况下，距离计算为某个数据点属于此分类的概率。 有关详细信息，请参阅 [ClusterProbability (DMX)](/sql/dmx/clusterprobability-dmx)。  
   
  k-means 算法提供两种对数据集进行抽样的方法：不可缩放的 K-means 和可缩放的 k-means，前者加载整个数据集并创建一个聚类分析阶段，后者使用前 50,000 个事例，并仅仅在需要更多数据才能使模型很好地适合数据时读取更多事例。  
   
@@ -88,8 +86,7 @@ ms.locfileid: "66084024"
 >  NORMALIZATION 参数是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的内部属性并且不受支持。 通常，建议在聚类分析模型中使用规范化以便改进模型结果。  
   
 ## <a name="customizing-the-microsoft-clustering-algorithm"></a>自定义 Microsoft 聚类分析算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法支持几个参数，这些参数会影响所生成的挖掘模型的行为、性能和准确性。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法支持几个参数，这些参数会影响所生成的挖掘模型的行为、性能和准确性。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍可与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法一起使用的参数。 这些参数影响生成的挖掘模型的性能和准确性。  
@@ -171,8 +168,7 @@ ms.locfileid: "66084024"
  聚类分析模型必须包含一个键列和若干输入列。 还可以将输入列定义为可预测列。 设置为 `Predict Only` 的列不用来生成分类。 在生成分类后，将计算这些值在分类中的分布。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
   
 |列|内容类型|  
 |------------|-------------------|  
@@ -185,6 +181,6 @@ ms.locfileid: "66084024"
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 聚类分析算法](microsoft-clustering-algorithm.md)   
  [聚类分析模型查询示例](clustering-model-query-examples.md)   
- [&#40;Analysis Services 数据挖掘的聚类分析模型的挖掘模型内容&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

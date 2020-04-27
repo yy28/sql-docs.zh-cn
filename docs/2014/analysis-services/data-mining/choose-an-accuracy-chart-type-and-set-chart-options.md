@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085814"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>选择准确性图表类型和设置图表选项
@@ -33,7 +33,7 @@ ms.locfileid: "66085814"
   
  本主题概述了不同的准确性图表。  
   
- **注意**图表及其定义不会保存。 如果您关闭包含图表的窗口，则必须重新创建该图表。  
+ **注意** 图表及其定义都不会保存。 如果您关闭包含图表的窗口，则必须重新创建该图表。  
   
 ## <a name="accuracy-chart-types"></a>准确性图表类型  
  根据选择的图表类型，您可以进一步配置选项、浏览图表，或者将图表复制到剪贴板，以及在 Excel 中处理数据。  

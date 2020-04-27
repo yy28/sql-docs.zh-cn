@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 087f5f5e3383fd66244541fea35160946936bc1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088334"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>计算工具（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -46,7 +46,7 @@ ms.locfileid: "66088334"
   
 |选项|定义|  
 |------------|----------------|  
-|**Copy**|选择此选项可将在 **“元数据”** 或 **“函数”** 中选择的元素复制到剪贴板。<br /><br /> 请注意，如果选择 "**模板**"，则不会显示此选项。 另请注意，如果无法复制所选成员（例如，在**元数据**中显示维度的 "**集**" 文件夹，或**函数中显示**函数的函数组文件夹），则将禁用此选项。|  
+|**复制**|选择此选项可将在 **“元数据”** 或 **“函数”** 中选择的元素复制到剪贴板。<br /><br /> 请注意，如果选择 "**模板**"，则不会显示此选项。 另请注意，如果无法复制所选成员（例如，在**元数据**中显示维度的 "**集**" 文件夹，或**函数中显示**函数的函数组文件夹），则将禁用此选项。|  
 |**筛选成员**|选择此选项可显示 **“筛选成员”** 对话框，并筛选为 **“元数据”** 中所选元素显示的成员。 有关“筛选成员”**** 对话框的详细信息，请参阅[“筛选成员”对话框（Analysis Services - 多维数据）](filter-members-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 请注意，只有在选择了 "**元数据**" 时，才会显示此选项。 另请注意，只有在 "**元数据**" 中选择了属性的级别时，才会启用此选项。|  
 |**添加模板**|选择此选项可以基于所选模板，将新的操作、钻取操作或报表操作添加到多维数据集，并分别显示 **操作窗体编辑器**、 **钻取操作窗体编辑器**或 **报表操作窗体编辑器**。<br /><br /> 注意：只有在选择了 "**元数据**" 时，才会显示此选项。|  
   

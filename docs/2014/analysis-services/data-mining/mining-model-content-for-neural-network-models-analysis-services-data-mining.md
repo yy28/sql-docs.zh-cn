@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083587"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）
@@ -191,7 +191,7 @@ ms.locfileid: "66083587"
 ## <a name="remarks"></a>备注  
  定型神经网络模型的目的是确定与从输入到中点、再从中点到终结点的每个转换关联的权重。 因此，该模型的输入层的主要存在目的是存储用于生成该模型的实际值。 隐藏层存储计算的权重，并提供回指到输入属性的指针。 输出层存储可预测值，并提供回指到隐藏层的中点的指针。  
   
-##  <a name="bkmk_NodeIDs"></a>使用节点名称和 Id  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>使用节点名称和 Id  
  神经网络模型中各节点的命名方式提供有关节点的类型的其他信息，以便于将隐藏层与输入层相关联，并将输出层与隐藏层相关联。 下表给出了为每层中的节点分配 ID 的约定。  
   
 |节点类型|节点 ID 约定|  
@@ -210,13 +210,13 @@ ms.locfileid: "66083587"
   
  类似地，通过查看输出节点 (NODE_TYPE = 23) 中的 NODE_DISTRIBUTION 表，您可以确定哪些隐藏层与输出属性关联。 NODE_DISTRIBUTION 表的每个行包含隐藏层节点的 ID 和相关系数。  
   
-##  <a name="bkmk_NodeDistTable"></a>解释 NODE_DISTRIBUTION 表中的信息  
+##  <a name="interpreting-the-information-in-the-node_distribution-table"></a><a name="bkmk_NodeDistTable"></a> 解释 NODE_DISTRIBUTION 表中的信息  
  NODE_DISTRIBUTION 表在某些节点中可以为空。 但是，对于输入节点、隐藏层节点和输出节点，NODE_DISTRIBUTION 表存储模型的重要相关信息。 为帮助您解释该信息，NODE_DISTRIBUTION 表为每个行包含一个 VALUETYPE 列，指示 ATTRIBUTE_VALUE 列中的值是离散 (4)、离散化 (5) 还是连续 (3) 值。  
   
 ### <a name="input-nodes"></a>输入节点  
  输入层为模型中使用的属性的每个值各包含一个节点。  
   
- **离散属性：** 输入节点仅在 "ATTRIBUTE_NAME" 和 "ATTRIBUTE_VALUE" 列中存储属性的名称及其值。 例如，如果列为 [Work Shift]，则为模型中使用的该列的每个值（例如 AM 和 PM）创建一个单独的节点。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
+ **离散属性：** 输入节点仅在 ATTRIBUTE_NAME 和 ATTRIBUTE_VALUE 列中存储属性的名称和值。 例如，如果列为 [Work Shift]，则为模型中使用的该列的每个值（例如 AM 和 PM）创建一个单独的节点。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
   
  **离散化数值属性：** 输入节点存储属性的名称和值，该值可以是一个范围或一个特定值。 所有值均通过表达式表示，例如将 [Time Per Issue] 的值表示为“77.4 - 87.4”或“< 64.0”。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "66083587"
   
  **离散属性：** NODE_DISTRIBUTION 表的最后两行包含整个节点的系数和属性的当前值。  
   
- **离散化数值属性：** 与离散特性相同，不同之处在于特性的值是一系列值。  
+ **离散化数值属性：** 除非该属性的值是一个值范围，否则该属性与离散属性相同。  
   
  **连续属性：** NODE_DISTRIBUTION 表的最后两行包含该属性的平均值、整个节点的系数和系数的方差。  
   

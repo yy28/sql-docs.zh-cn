@@ -14,10 +14,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088624"
 ---
 # <a name="about-the-sql-server-license-terms"></a>关于 SQL Server 许可条款
@@ -49,13 +49,13 @@ ms.locfileid: "66088624"
   
  LCID 是一个数字，其指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 语言区域设置 ID。  以下文件名段用于标识对应的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 语言：  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]语言|语言的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]缩写|LCID|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]语言| 语言的缩写|LCID|  
 |----------------------------------------|---------------------------------------------------------|----------|  
-|英语|ENU|1033|  
+|英语|ENU|2052|  
 |日语|JPN|1041|  
 |法语|FRA|1036|  
 |意大利语|ITA|1040|  
-|韩语|KOR|1042|  
+|朝鲜语|KOR|1042|  
 |德语|DEU|1031|  
 |西班牙语|ESN|3082|  
 |简体中文|CHS|2052|  
@@ -63,7 +63,7 @@ ms.locfileid: "66088624"
 |葡萄牙语（巴西）|PTB|1046|  
 |俄语|RUS|1049|  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]授权选项  
+## <a name="ssnoversion-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 许可选项  
  有关[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]定价和许可选项的详细信息，请参阅[Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) （https://www.microsoft.com/sqlserver/sql-server-2014.aspx)网站）。  
   
 ## <a name="see-also"></a>另请参阅  

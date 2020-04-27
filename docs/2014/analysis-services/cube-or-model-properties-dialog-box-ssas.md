@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086602"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>“多维数据集或模型属性”对话框 (SSAS)
@@ -35,7 +35,7 @@ ms.locfileid: "66086602"
 |术语|定义|  
 |----------|----------------|  
 |**名称**|显示多维数据集或模型的名称。|  
-|**识别**|显示多维数据集或模型的标识符。|  
+|**ID**|显示多维数据集或模型的标识符。|  
 |**说明**|显示多维数据集或模型的说明。|  
 |**创建时间戳**|显示多维数据集或模型的创建日期和时间。|  
 |**上次架构更新时间**|显示上次更新多维数据集或模型的元数据的日期和时间。|  

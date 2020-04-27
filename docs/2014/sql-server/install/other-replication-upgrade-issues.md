@@ -18,18 +18,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093636"
 ---
 # <a name="other-replication-upgrade-issues"></a>其他复制升级问题
   本主题涵盖了许多未由升级顾问报告的升级问题。  
   
 ## <a name="versions-supported"></a>支持的版本  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级复制的数据库。 在升级某个节点时，不必停止其他节点的活动。 请务必遵守有关拓扑中支持哪些版本的规则。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级复制的数据库。 在升级某个节点时，不必停止其他节点的活动。 请务必遵守有关拓扑中支持哪些版本的规则。  
   
  当在不同版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之间进行复制时，通常仅限于所使用的最早版本的功能。  
   

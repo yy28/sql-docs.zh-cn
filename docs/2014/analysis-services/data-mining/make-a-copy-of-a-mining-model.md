@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084221"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>生成挖掘模型的副本
@@ -37,7 +37,7 @@ ms.locfileid: "66084221"
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     -或-  
+     \- 或 -  
   
      选择该模型。 在 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”**。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66084221"
   
 3.  更改筛选条件。  
   
-     有关如何使用筛选器编辑器对话框的详细信息，请参阅[对挖掘模型应用筛选器](apply-a-filter-to-a-mining-model.md)。  
+     有关如何使用筛选器编辑器对话框的详细信息，请参阅 [对挖掘模型应用筛选器](apply-a-filter-to-a-mining-model.md)。  
   
 4.  在 "**属性**" 窗口的`AlgorithmParameters`文本框中，单击 "**需要参数**"，然后根据需要更改算法参数。  
   

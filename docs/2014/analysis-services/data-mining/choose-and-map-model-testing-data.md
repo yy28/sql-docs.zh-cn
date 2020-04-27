@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085763"
 ---
 # <a name="choose-and-map-model-testing-data"></a>选择和映射模型测试数据
@@ -49,7 +49,7 @@ ms.locfileid: "66085763"
   
  [更改测试数据中的列映射到模型的方式](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a>选择输入表以测试挖掘模型的准确性  
+##  <a name="to-select-input-tables-to-test-the-accuracy-of-a-mining-model"></a><a name="bkmk_SelectInputs"></a> 选择输入表以测试挖掘模型的准确性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器中，双击包含要制作图表的模型的挖掘结构。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66085763"
   
 5.  单击 **“提升图”** 选项卡或 **“分类矩阵”** 选项卡，使用指定的测试数据自动生成该图表。  
   
-##  <a name="bkmk_MapColumns"></a>将模型列映射到测试数据中的列  
+##  <a name="to-map-model-columns-to-the-columns-in-the-testing-data"></a><a name="bkmk_MapColumns"></a> 将模型列映射到测试数据中的列  
   
 1.  双击包含要建立图表的模型的挖掘结构，以在数据挖掘设计器中打开结构和模型。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66085763"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a>修改输入数据映射到模型的方式  
+##  <a name="to-modify-the-way-input-data-is-mapped-to-the-model"></a><a name="bkmk_ChangeMappings"></a> 修改输入数据映射到模型的方式  
   
 1.  在数据挖掘设计器中，双击包含要制作图表的模型的结构。  
   
@@ -117,10 +117,9 @@ ms.locfileid: "66085763"
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     
-  **“指定列映射”** 对话框中将显示新的列映射。 通过选择列之间的连线，然后按 Delete 键，可以删除映射。 通过在“挖掘结构”表中选择列，然后将其拖到“选择输入表”表中的对应列，可以创建一个新连接********。  
+     **“指定列映射”** 对话框中将显示新的列映射。 通过选择列之间的连线，然后按 Delete 键，可以删除映射。 通过在“挖掘结构”表中选择列，然后将其拖到“选择输入表”表中的对应列，可以创建一个新连接********。  
   
 ## <a name="see-also"></a>另请参阅  
- [测试和验证任务以及操作方法 &#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [测试和验证任务和操作指南（数据挖掘）](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

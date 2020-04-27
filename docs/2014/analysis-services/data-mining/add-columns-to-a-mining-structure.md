@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086229"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>向挖掘结构中添加列
@@ -33,8 +33,7 @@ ms.locfileid: "66086229"
   
 2.  右键单击挖掘结构并选择“添加列”****。  
   
-     
-  **“选择列”** 对话框将打开。  
+     **“选择列”** 对话框将打开。  
   
 3.  在 **“源表”** 下，从数据源视图中选择列所在的表。  
   

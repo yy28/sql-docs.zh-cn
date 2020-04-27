@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082201"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>定义帐户智能（商业智能向导）
@@ -34,13 +34,13 @@ ms.locfileid: "66082201"
   
  下表列出了在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中定义的帐户类型：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**资产**|在特定时间拥有的物品的价值。|  
-|**Balance**|在特定时间某物的计数。|  
+|**平衡表**|在特定时间某物的计数。|  
 |**费用**|所花费的价值。|  
-|**流**|事物的增量计数。|  
-|**帐**|收到的价值。|  
+|**流向**|事物的增量计数。|  
+|**收入**|收到的价值。|  
 |**负债**|在特定时间所拖欠的价值。|  
 |**统计**|某事物的计算比率，或者未聚合的某事物的计数。|  
   

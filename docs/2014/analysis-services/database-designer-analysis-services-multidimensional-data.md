@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082413"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>数据库设计器（Analysis Services - 多维数据）
@@ -31,6 +31,6 @@ ms.locfileid: "66082413"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [多维模型数据库 &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多维模型数据库 (SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

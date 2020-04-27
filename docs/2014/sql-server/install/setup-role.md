@@ -11,17 +11,16 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092225"
 ---
 # <a name="setup-role"></a>安装角色
   使用此页可以指定是使用“功能选择”页来分别选择各项功能，还是使用安装角色来进行安装。  
   
- 
-  `setup role`是实现预定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置所需全部功能和共享组件的固定选择集。  
+ `setup role`是实现预定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置所需全部功能和共享组件的固定选择集。  
   
 ## <a name="options"></a>选项  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能安装**  
@@ -39,8 +38,7 @@ ms.locfileid: "66092225"
  **所有功能以及默认值**  
  选择此安装角色将安装此版本提供的所有功能。 请注意，从该角色中排除 PowerPivot for SharePoint。 您必须使用 PowerPivot for SharePoint 安装角色来安装该功能。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置为使用 **NT AUTHORITY\NETWORK SERVICE** 帐户开始。 将当前用户设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**sysadmin** 角色的成员。 此选项设置的值可以通过指定其他命令行参数来覆盖。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置为使用 **NT AUTHORITY\NETWORK SERVICE** 帐户开始。 将当前用户设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**sysadmin** 角色的成员。 此选项设置的值可以通过指定其他命令行参数来覆盖。  
   
  当操作系统不是域控制器时，默认情况下，数据库引擎和 Reporting Services 将使用 NTAUTHORITY\NETWORK SERVICE 帐户，Integration Services 将使用 NTAUTHORITY\NETWORK SERVICE 帐户，而 SQL 全文筛选器后台程序启动器将使用 NTAUTHORITY\LOCAL SERVICE 帐户。  
   

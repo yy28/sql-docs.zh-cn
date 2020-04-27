@@ -29,14 +29,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083863"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 神经网络算法技术参考
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络使用由最多三层神经元（即感知器**）组成的“多层感知器”** 网络（也称为“反向传播 Delta 法则”网络**）。 这些层分别是输入层、可选隐藏层和输出层。  
   
  有关多层感知器神经网络的详细探讨不属于本文档的讨论范围。 本主题介绍该算法的基本实现，包括用于规范化输入值与输出值的方法以及用于缩减属性基数的功能选择方法。 本主题介绍可用于自定义该算法行为的参数和其他设置，并提供与查询该模型有关的其他信息的链接。  
@@ -87,15 +86,15 @@ ms.locfileid: "66083863"
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果以及减轻处理工作量。 神经网络模型中用于功能选择的方法取决于属性的数据类型。 下表列出了用于神经网络模型的功能选择方法，以及用于逻辑回归算法（基于神经网络算法）的功能选择方法，以供参考。  
   
-|算法|分析方法|注释|  
+|算法|分析方法|说明|  
 |---------------|------------------------|--------------|  
-|神经网络|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|只要数据包含连续列，神经网络算法就可同时使用基于平均信息量的方法和 Bayesian 计分方法。<br /><br /> 默认值。|  
+|神经网络|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|只要数据包含连续列，神经网络算法就可同时使用基于平均信息量的方法和 Bayesian 计分方法。<br /><br /> 默认。|  
 |逻辑回归|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|因为无法将参数传递给此算法来控制功能选择行为，所以将使用默认值。 因此，如果所有属性均为离散或离散化属性，则默认值为 BDEU。|  
   
  控制神经网络模型的功能选择的算法参数为 MAXIMUM_INPUT_ATTRIBUTES、MAXIMUM_OUTPUT_ATTRIBUTES 和 MAXIMUM_STATES。 您也可以通过设置 HIDDEN_NODE_RATIO 参数来控制隐藏层的数目。  
   
 ### <a name="scoring-methods"></a>计分方法  
- *评分*是一种规范化，在定型神经网络模型的上下文中，这意味着将值（如离散文本标签）转换为可与网络中其他类型的输入和加权进行比较的值。 例如，如果一个输入属性为 Gender，其可能的值为 Male 和 Female，另一个输入属性为 Income，其值范围可变，这两个属性的值不可直接比较，因此，必须编码到共同的范围，才能计算权重。 计分就是将这类输入规范化为数字值的过程：尤其是规范化为概率范围。 用于规范化的函数还有助于使输入值在统一尺度分布得更加均匀，从而避免极值扭曲分析结果。  
+ “计分”** 是规范化的一种，在为神经网络模型定型的上下文中，计分表示将值（如离散文本标签）转换为可与其他输入类型进行比较且可在网络中计算权重的值。 例如，如果一个输入属性为 Gender，其可能的值为 Male 和 Female，另一个输入属性为 Income，其值范围可变，这两个属性的值不可直接比较，因此，必须编码到共同的范围，才能计算权重。 计分就是将这类输入规范化为数字值的过程：尤其是规范化为概率范围。 用于规范化的函数还有助于使输入值在统一尺度分布得更加均匀，从而避免极值扭曲分析结果。  
   
  神经网络的输出也会进行编码。 如果输出是单一目标（即预测），或者是仅用于预测而不用于输入的多个目标，模型将创建单一网络，似乎没有必要规范化输出值。 但是，如果有多个属性用于输入和预测，则模型必须创建多个网络；因此，所有值都必须规范化，输出也必须在退出网络时进行编码。  
   
@@ -118,8 +117,7 @@ ms.locfileid: "66083863"
  对输出的编码使用 Sigmoid 函数，其所具有的特性使其对预测非常有益。 其中一个特性是，无论原始值如何计量，也无论值为正为负，此函数的输出始终在 0 和 1 之间，正好适合于计算概率。 另一个非常有用的特性是，Sigmoid 函数有平滑的效果，值离转折点越远，值的概率会越趋近 0 或 1，但缓慢得多。  
   
 ## <a name="customizing-the-neural-network-algorithm"></a>自定义神经网络算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持多个参数，这些参数可以影响生成的挖掘模型的行为、性能和准确性。 您还可以通过对列设置建模标志来修改模型处理数据的方式，或者通过设置分布标志来指定列中值的处理方式。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持多个参数，这些参数可以影响生成的挖掘模型的行为、性能和准确性。 您还可以通过对列设置建模标志来修改模型处理数据的方式，或者通过设置分布标志来指定列中值的处理方式。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍可用于 Microsoft 神经网络算法的参数。  
@@ -192,8 +190,7 @@ ms.locfileid: "66083863"
  神经网络模型必须包含至少一个输入列和一个输出列。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持下表中列出的特定输入列和可预测列。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持下表中列出的特定输入列和可预测列。  
   
 |列|内容类型|  
 |------------|-------------------|  

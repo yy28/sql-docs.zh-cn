@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081979"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>定义时间段（维度向导）
   可以使用 **“定义时间段”** 页，定义要包含在时间维度或服务器时间维度中的日历年信息和时间频率。  
   
 > [!NOTE]  
->  只有在“选择维度类型”**** 页上选择“服务器时间维度”****，或者在“选择生成方法”**** 页上选择“不使用数据源生成维度”**** 并在“选择维度类型”**** 页上选择“时间维度”**** 时，才会显示此页。  
+>   只有在 **“选择维度类型”** 页上选择 **“服务器时间维度”** ，或者在 **“选择生成方法”** 页上选择 **“不使用数据源生成维度”** 并在 **“选择维度类型”** 页上选择 **“时间维度”** 时，才会显示此页。  
   
 > [!IMPORTANT]  
 >  此页用于定义时间维度的日历年。 若要定义时间维度的会计年度、生产年度、报表年度或国际标准化组织 (ISO) 8601 年，请使用“选择日历”**** 页。  
@@ -42,8 +42,7 @@ ms.locfileid: "66081979"
  为时间维度的日历年选择时间段。  
   
 > [!NOTE]  
->  
-  `Date` 时间段是必需的。  
+>  `Date` 时间段是必需的。  
   
  **时间成员名称所用的语言**  
  选择时间维度中的成员所用的语言。  

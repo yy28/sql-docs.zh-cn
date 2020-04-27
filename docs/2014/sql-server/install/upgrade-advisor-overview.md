@@ -21,10 +21,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091599"
 ---
 # <a name="upgrade-advisor-overview"></a>升级顾问概述
@@ -73,8 +73,7 @@ ms.locfileid: "66091599"
 ## <a name="upgrade-advisor-report-viewer"></a>升级顾问报表查看器  
  若要查看升级顾问报表，请单击升级顾问起始页上的 "**启动升级顾问报表查看器**"。 升级顾问报表查看器启动时，将加载默认目录中的报表。 如果升级顾问报表查看器在默认目录中未找到任何报表，则不会显示报表。 如果默认目录中没有报表，可以运行升级顾问分析向导来创建报表或从其他服务器或子目录中加载现有报表。  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问不会覆盖现有报表。 但是，报表查看器只显示最近的五个报表。 若要查看以前的报表，请从 "**报表**" 下拉列表框中选择该报表。 时间戳指示生成报表的日期和时间。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问不会覆盖现有报表。 但是，报表查看器只显示最近的五个报表。 若要查看以前的报表，请从 "**报表**" 下拉列表框中选择该报表。 时间戳指示生成报表的日期和时间。  
   
  将升级顾问分析向导生成的 XML 文件加载到升级顾问报表查看器中后，将为每个组件显示一个报告。 该报表包含需要解决的所有已知问题（包括可检测到的问题和无法检测到的问题）。 每个问题都有指示重要性的图标、通知何时必须解决此问题的标签和一个简要说明。 展开问题时，您将看到更详细的说明、问题详细信息链接和帮助文件链接。 每个问题的信息都旨在为您提供充足的信息以便解决此问题。  
   

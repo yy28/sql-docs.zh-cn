@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 333a812963bf58ada0450243d3fced6891f08915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086554"
 ---
 # <a name="cube-wizard-f1-help"></a>多维数据集向导的 F1 帮助
@@ -24,7 +24,7 @@ ms.locfileid: "66086554"
   
  **打开多维数据集向导**  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“解决方案资源管理器”**** 中，右键单击 ** 项目的“多维数据集”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]文件夹，然后单击“新建多维数据集”****。 在使用多维数据集向导创建多维数据集之后，可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的多维数据集设计器来修改其属性。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“解决方案资源管理器”**** 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目的“多维数据集”**** 文件夹，然后单击“新建多维数据集”****。 在使用多维数据集向导创建多维数据集之后，可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的多维数据集设计器来修改其属性。  
   
 ## <a name="in-this-section"></a>本节内容  
   

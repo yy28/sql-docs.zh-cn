@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089794"
 ---
 # <a name="select-template-name"></a>选择模板名称
-  使用 **“选择模板名称”** 对话框，可以选择现有的 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 跟踪模板以导出到操作系统的文件中。 当编辑现有的跟踪模板时，还可以使用此对话框选择或输入不同的名称来另存跟踪模板。 要在导出模板时访问此对话框，请在 “文件”菜单上，指向“模板”，再单击“导出模板”[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ************。 若要在更改模板名称时访问此对话框，请在 **“文件”** 菜单上，依次指向 **“模板”** 和 **“编辑模板”**，再单击 **“另存为”**。  
+  使用 **“选择模板名称”** 对话框，可以选择现有的 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 跟踪模板以导出到操作系统的文件中。 当编辑现有的跟踪模板时，还可以使用此对话框选择或输入不同的名称来另存跟踪模板。 要在导出模板时访问此对话框，请在 “文件”[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **** 菜单上，指向“模板”****，再单击“导出模板”****。 若要在更改模板名称时访问此对话框，请在 **“文件”** 菜单上，依次指向 **“模板”** 和 **“编辑模板”**，再单击 **“另存为”**。  
   
 ## <a name="options"></a>选项  
  **服务器类型**  
@@ -32,7 +32,7 @@ ms.locfileid: "66089794"
  键入新的模板名称，或者从列表中选择一个模板名称。 如果要导出模板，则只能从列表中选择一个模板名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [修改跟踪模板 (SQL Server Profiler)](modify-a-trace-template-sql-server-profiler.md)   
+ [SQL Server Profiler&#41;修改跟踪模板 &#40;](modify-a-trace-template-sql-server-profiler.md)   
  [导出跟踪模板 (SQL Server Profiler)](../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   
   

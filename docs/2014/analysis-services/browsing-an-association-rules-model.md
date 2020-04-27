@@ -16,21 +16,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088471"
 ---
 # <a name="browsing-an-association-rules-model"></a>浏览关联规则模型
   使用 "**浏览**" 打开关联模型时，该模型将显示在交互式查看器中，类似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的关联规则查看器。  此查看器让您能对彼此关联的项一目了然，并显示可用于预测或提出建议的规则。  
   
-##  <a name="BKMK_ViewerTabs"></a>浏览模型  
+##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>浏览模型  
  当您打开使用[!INCLUDE[msCoName](../includes/msconame-md.md)]关联规则算法创建的挖掘模型时，"**浏览**" 窗口包括以下视图，每个视图都允许您浏览模型的不同方面：  
   
 -   [项集](#BKMK_Itemsets)  
   
--   [原则](#BKMK_Rules)  
+-   [规则](#BKMK_Rules)  
   
 -   [依赖关系网络](#BKMK_Dependency)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66088471"
   
  若要试验关联模型，可使用示例数据工作簿的“关联”选项卡上的示例数据，然后使用所有默认值建立关联模型。 你还可以使用 "**浏览**" 来构建购物篮分析模型并打开它。  
   
-###  <a name="BKMK_Itemsets"></a>项集  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>项集  
  "**项集**" 选项卡是开始浏览关联模型的好地方。 此选项卡列出模型经常发现一起出现的项。  
   
  ![关联模型中项的列表](media/dm13-association-itemsets.gif "关联模型中项的列表")  
@@ -63,8 +63,7 @@ ms.locfileid: "66088471"
   
      这里，我们`Gloves`键入了。 应用此筛选器时，列表将会刷新，仅显示包含手套的项集。 这样一来，您可以重点关注顾客购买手套及其他一些商品的交易。  
   
-     
-  **“筛选项集”** 选项还会显示您以前使用过的筛选器列表。  
+     **“筛选项集”** 选项还会显示您以前使用过的筛选器列表。  
   
 3.  更改 "**最小**项集大小" 的值，以筛选出仅购买了手套而不是其他商品的客户。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66088471"
   
  [返回页首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>原则  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>原则  
  "**规则**" 选项卡将有关项集及其相对值的信息合并在一起。  
   
  ![关联模型创建的规则列表](media/dm13-association-rules.gif "关联模型创建的规则列表")  
@@ -103,8 +102,7 @@ ms.locfileid: "66088471"
   
      例如，如果想要查看预测哪些客户可能与手套一起购买的所有规则，请在文本框中键入 "手套" 并刷新窗格。  
   
-     
-  **“筛选项集”** 选项还会显示您以前使用过的筛选器列表。  
+     **“筛选项集”** 选项还会显示您以前使用过的筛选器列表。  
   
 3.  若要强制使用筛选条件重新显示规则列表，可以选中或清除 "**显示长名称**" 复选框。  
   
@@ -116,7 +114,7 @@ ms.locfileid: "66088471"
   
  [返回页首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>依赖关系网络  
+###  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>依赖关系网络  
  "**依赖关系网络**" 选项卡是项之间的关联的可视化地图。 图形中的每个椭圆（称为*节点*）表示一个属性-值对，如 "背心 = 现有" 或 "Age = 1-30"。  连接椭圆（称为*边缘*）的每行表示一种相关性。  
   
  ![关联模型的依赖关系网络图形](media/dm13-association-dependencynetwork.gif "关联模型的依赖关系网络图形")  

@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088009"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>“分类关系图”选项卡（挖掘模型查看器）
-  
   **“分类关系图”** 选项卡提供聚类分析模型中包含的所有分类的图形视图。  
   
- **有关详细信息：** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)、[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **有关详细信息，请参阅 ** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)和[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -56,7 +55,7 @@ ms.locfileid: "66088009"
  **改善布局**  
  对关系图中的分类进行重新排序以改善布局。  
   
- **密度**  
+ **Density**  
  使用此选项可更改分类关系图中显示的属性-值对。 使用 **“明暗度变量”** 选项选择一个属性，并使用 **“状态”** 选择一个值。 图形中的明暗度指示该属性-值对在分类中的密度。  
   
  如果选择 **“总体”** ，则关系图将显示每个分类的支持量，表示事例数目（自未选择属性开始）。  

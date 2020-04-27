@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085898"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>更改挖掘模型中列的离散化
@@ -31,20 +31,17 @@ ms.locfileid: "66085898"
   
 1.  在数据挖掘设计器的“挖掘模型”选项卡中，右键单击包含挖掘模型名称的列标题，或者网格中包含挖掘算法名称的行，然后选择“属性”。********  
   
-     
-  **“属性”** 窗口将显示与挖掘模型相关联的所有属性。  
+     **“属性”** 窗口将显示与挖掘模型相关联的所有属性。  
   
 2.  在靠近屏幕左侧的 **“结构”** 列中，单击包含要离散化的连续数值数据的列。  
   
-     
-  **“属性”** 窗口更改为只显示与该列相关联的属性。  
+     **“属性”** 窗口更改为只显示与该列相关联的属性。  
   
 ### <a name="to-change-the-discretization-method"></a>更改离散化方法  
   
 1.  在 "**挖掘属性**" 窗口中，单击 "**内容**" 旁的文本框， `Discretized`然后从下拉列表中选择。  
   
-     
-  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 属性均处于启用状态。  
+     <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 属性均处于启用状态。  
   
 2.  在 "**属性**" 窗口中，单击旁边的文本框<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> ，然后选择下列值之一： `Automatic`、 `EqualAreas`或。 `Cluster`  
   

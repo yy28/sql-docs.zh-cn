@@ -14,14 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084194"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用于管理现有挖掘结构和挖掘模型的客户端工具。 本节介绍使用每种环境可以执行的管理操作。  
   
  除了这些工具之外，还可以使用 AMO 以编程方式管理数据挖掘对象，或使用连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的其他客户端，如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 的数据挖掘外接程序。  
@@ -29,9 +28,9 @@ ms.locfileid: "66084194"
 ## <a name="in-this-section"></a>本节内容  
  [移动数据挖掘对象](moving-data-mining-objects.md)  
   
- [数据挖掘 &#40;处理要求和注意事项&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](processing-requirements-and-considerations-data-mining.md)  
   
- [使用 SQL Server Profiler 来监视数据挖掘 &#40;Analysis Services 数据挖掘&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [使用 SQL Server 事件探查器监视数据挖掘（Analysis Services - 数据挖掘）](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>数据挖掘对象的位置  
  已处理的挖掘结构和挖掘模型通常存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例中。  
@@ -42,8 +41,7 @@ ms.locfileid: "66084194"
 >  诸如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 数据挖掘外接程序之类的客户端还可用于创建会话挖掘模型和挖掘结构，它们使用到实例的连接，但只在会话期间在服务器中存储挖掘结构和挖掘模型。 您仍然可以通过客户端管理这些模型，就如同管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中存储的结构和模型一样，但断开与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的连接后，不会持久化这些对象。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中管理数据挖掘对象  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供便于创建、浏览和编辑数据挖掘对象的功能。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供便于创建、浏览和编辑数据挖掘对象的功能。  
   
  以下链接提供有关如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]修改数据挖掘对象的信息：  
   
@@ -53,7 +51,7 @@ ms.locfileid: "66084194"
   
 -   [更改挖掘模型的属性](change-the-properties-of-a-mining-model.md)  
   
--   [查看或更改数据挖掘 &#40;建模标志&#41;](modeling-flags-data-mining.md)  
+-   [查看或更改建模标志（数据挖掘）](modeling-flags-data-mining.md)  
   
 -   [查看或更改算法参数](view-or-change-algorithm-parameters.md)  
   
@@ -81,19 +79,19 @@ ms.locfileid: "66084194"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **限制：** 内容.  
+ **限制：** 无。  
   
 ### <a name="data-mining-extensions-dmx"></a>数据挖掘扩展插件 (DMX)  
  数据挖掘扩展插件 (DMX) 可以与其他命令接口（如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADOMD.Net）配合使用来创建、删除和查询挖掘结构和挖掘模型。  
   
--   [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](/sql/dmx/dmx-statements-data-definition)  
+-   [数据挖掘扩展插件 (DMX) 数据定义语句](/sql/dmx/dmx-statements-data-definition)  
   
- **限制：** 无法使用 DMX 更改某些属性。  
+ **限制：** 使用 DMX 无法更改某些属性。  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) 是用于所有 Analysis Services 的数据定义语言。 XMLA 使您可以控制大多数数据挖掘对象和服务器操作。 客户端和服务器之间的所有管理操作都可通过使用 XMLA 来执行。 为了方便，可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 对 XML 进行换行。  
   
- **限制：** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成一些 XMLA 语句，这些语句仅支持内部使用，不能在 XML DDL 脚本中使用。  
+ **限制：** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成的某些 XMLA 语句仅支持在内部使用，而不能在 XML DDL 脚本中使用。  
   
 ## <a name="see-also"></a>另请参阅  
  [开发人员指南 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  

@@ -17,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089329"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>选项（查询结果-SQL Server-"常规" 页）
-  使用此页可确定查询结果窗格的默认行为。 若要显示这些设置，请在“工具”**** 菜单上，单击“选项”****，展开“查询结果”**** 文件夹，选择 “SQL Server”****，然后单击“常规”****。 对这些选项所做的更改只应用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]于新的查询。 若要更改当前查询的选项，请单击“查询”**** 菜单上的“查询选项”****，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中右键单击并选择“查询选项”****。  
+  使用此页可确定查询结果窗格的默认行为。 若要显示这些设置，请在“工具”**** 菜单上，单击“选项”****，展开“查询结果”**** 文件夹，选择 “SQL Server”****，然后单击“常规”****。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请单击“查询”**** 菜单上的“查询选项”****，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中右键单击并选择“查询选项”****。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **显示结果的默认方式**  

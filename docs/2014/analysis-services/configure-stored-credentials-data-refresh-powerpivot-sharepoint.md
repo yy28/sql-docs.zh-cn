@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087461"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)
@@ -36,7 +36,7 @@ ms.locfileid: "66087461"
   
  如果在配置或使用数据刷新时遇到问题，请参考 TechNet wiki 上的[PowerPivot 数据刷新故障排除](https://go.microsoft.com/fwlink/?LinkID=223279)页，了解可能的解决方法。  
   
-##  <a name="configAny"></a>配置用于数据刷新的任何 Windows 帐户  
+##  <a name="configure-any-windows-account-for-data-refresh"></a><a name="configAny"></a>配置用于数据刷新的任何 Windows 帐户  
  在某一 SharePoint 用户定义数据刷新计划时，该用户必须指定执行数据刷新所基于的用户标识。 有关的选项包括选择 PowerPivot 无人参与的数据刷新帐户，输入其 Windows 域用户帐户，以及输入对数据刷新目的有效的某个其他 Windows 用户帐户。 本节中的步骤针对最后一个选项：指定某个其他 Windows 帐户。  
   
  如果您想要采用其他方法，来代替使用 PowerPivot 无人参与的数据刷新帐户（可用于 SharePoint 上的所有 PowerPivot 用户）或者工作簿所有者的凭据，则可以选择此方法。 例如，您可能要建立可用于不同工作组的一系列数据刷新帐户，以便帮助您在组织级别跟踪和管理数据刷新活动。  
@@ -75,7 +75,7 @@ ms.locfileid: "66087461"
   
 8.  跳过“目标应用程序页 URL”。 PowerPivot 数据刷新不会使用它。  
   
-9. 单击“下一步”。   
+9. 单击“下一步”  。  
   
 10. 在 "**为安全存储目标应用程序指定凭据字段**" 页上，接受默认值。 字段名称和类型应该是 Windows 用户名和 Windows 密码。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66087461"
   
     3.  在数据刷新计划中添加将输入此目标应用程序的 Windows 用户和组帐户。  
   
-14. 单击“确定”。   
+14. 单击" **确定**"。  
   
 15. 选择刚创建的目标应用程序，单击向下箭头并选择 "**设置凭据"。**  
   
@@ -99,9 +99,9 @@ ms.locfileid: "66087461"
   
      在“Windows 用户名”和“Windows 密码”中，键入将用于运行数据刷新的 Windows 用户帐户的凭据。  
   
-17. 单击“确定”。   
+17. 单击" **确定**"。  
   
-###  <a name="bkmk_grant"></a>步骤2：向帐户授予 "参与讨论" 权限  
+###  <a name="step-2-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>步骤2：向帐户授予 "参与讨论" 权限  
  在您可以使用存储的凭据之前，对于使用该帐户的任何 PowerPivot 工作簿，必须授予“参与讨论”权限。 此权限级别是从库中打开工作簿、然后在刷新数据后将其保存回库中所必需的。  
   
  分配权限这个步骤将由网站集管理员来执行。 SharePoint 权限可以在根网站集或其下的任何级别分配，包括单独的文档和项。 设置权限的方式将因您所需的粒度而异。 下面的步骤说明可用于授予权限的一个方法。  
@@ -116,7 +116,7 @@ ms.locfileid: "66087461"
   
 5.  选择 "**参与**"，然后单击 **"确定"**。  
   
-###  <a name="bkmk_dbread"></a>步骤3：授予读取权限以便访问在数据刷新中使用的外部数据源  
+###  <a name="step-3-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>步骤3：授予读取权限以便访问在数据刷新中使用的外部数据源  
  在将数据导入到某一 PowerPivot 工作簿时，与外部数据的连接常常基于可信连接或者使用当前用户标识来连接到数据源的模拟连接。 只有在当前用户有权读取其导入的数据时，这些连接类型才有效。  
   
  在数据刷新方案中，现在将重复使用过去用于导入数据的相同连接字符串来刷新数据。 如果该连接字符串假定当前用户（例如，包含 Integrated_Security=SSPI 的字符串），则 PowerPivot 系统服务会将在目标应用程序中指定的用户标识作为当前用户传递。 只有在帐户对外部数据源具有读取权限时，此连接才会成功。  
@@ -125,7 +125,7 @@ ms.locfileid: "66087461"
   
  如果您是组织中使用的数据源的管理员，则可以创建一个登录名，然后分配必需的权限。 否则，您必须与数据所有者联系并且提供帐户信息。 请确保指定映射到目标应用程序的 Windows 域用户帐户。 这是你在本主题的 "步骤1：创建目标应用程序" 中指定的帐户。  
   
-###  <a name="bkmk_verify"></a>步骤4：在数据刷新配置页中验证帐户可用性  
+###  <a name="step-4-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>步骤4：在数据刷新配置页中验证帐户可用性  
   
 1.  打开包含 PowerPivot 数据的已发布工作簿的数据刷新配置页。 有关如何打开该页的说明，请参阅[计划数据刷新 &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "66087461"
   
  有关故障排除的详细信息，请参阅 TechNet Wiki 上的[PowerPivot 数据刷新故障排除](https://go.microsoft.com/fwlink/p/?LinkID=223279)。  
   
-##  <a name="config3rd"></a>配置用于访问外部或第三方数据源的预定义帐户  
+##  <a name="configure-a-predefined-account-for-accessing-external-or-third-party-data-sources"></a><a name="config3rd"></a>配置用于访问外部或第三方数据源的预定义帐户  
  数据库服务器通常附带有自己的身份验证方法。 如果 PowerPivot 工作簿要求提供数据库凭据以便在数据刷新期间访问外部数据源，则可以为这些凭据创建一个目标应用程序 ID，然后在“计划数据刷新”页的“数据源”部分指定该目标应用程序。  
   
  仅当您希望为用户提供选项，允许其覆盖 PowerPivot 工作簿中已嵌入的数据库凭据时，才需要此步骤。  
@@ -162,7 +162,7 @@ ms.locfileid: "66087461"
   
 8.  跳过“目标应用程序页 URL”。 PowerPivot 数据刷新不会使用它。  
   
-9. 单击“下一步”。   
+9. 单击“下一步”  。  
   
 10. 在 "**为安全存储目标应用程序指定凭据字段**" 页中，仅在数据源使用 Windows 身份验证时才接受默认值。 否则，选择对您的数据源有效的字段类型，然后编辑字段名称以便匹配您选择的类型。  
   
@@ -180,13 +180,13 @@ ms.locfileid: "66087461"
   
     3.  在数据刷新计划页的数据源部分中添加将输入此目标应用程序的 Windows 用户和组帐户。  
   
-14. 单击“确定”。   
+14. 单击" **确定**"。  
   
 15. 选择刚创建的目标应用程序，单击向下箭头并选择 "**设置凭据"。**  
   
 16. 输入将用于连接到数据源的凭据（例如，SQL Server 登录名的用户名和密码）。  
   
-17. 单击“确定”。   
+17. 单击" **确定**"。  
   
 ## <a name="see-also"></a>另请参阅  
  [计划数据刷新 &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   

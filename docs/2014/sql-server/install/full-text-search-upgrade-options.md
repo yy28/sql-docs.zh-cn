@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095088"
 ---
 # <a name="full-text-search-upgrade-options"></a>全文搜索升级选项
@@ -28,7 +28,7 @@ ms.locfileid: "66095088"
 ## <a name="options"></a>选项  
  升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，请选择下列全文升级选项之一。  
   
- **Import**  
+ **导入**  
  导入全文目录。 一般情况下，导入速度比重新生成速度要快很多。 例如，当仅使用一个 CPU 时，导入的运行速度比重新生成要快 10 倍左右。 不过，从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入的全文目录不能使用新的和增强的断字符，因此最终可能还是要重新生成全文目录。  
   
 > [!NOTE]  
@@ -51,8 +51,7 @@ ms.locfileid: "66095088"
   
 -   如何使用断字符？  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的全文搜索服务包括断字符和词干分析器。 这可能更改 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中特定文本模式或方案的全文查询结果。 因此，在选择适当的升级选项时，如何使用断字符非常重要：  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的全文搜索服务包括断字符和词干分析器。 这可能更改 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中特定文本模式或方案的全文查询结果。 因此，在选择适当的升级选项时，如何使用断字符非常重要：  
   
     -   如果使用的全文语言的断字符未发生更改，或者撤回准确性对您来说并不重要，则适合导入。 随后，如果遇到任何撤回问题，您只需通过重新生成全文目录即可升级到新的断字符。  
   

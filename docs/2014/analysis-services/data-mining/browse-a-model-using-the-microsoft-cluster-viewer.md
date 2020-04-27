@@ -23,22 +23,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e13882cf6186632b893b18369aef263e6cdd6445
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086053"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>使用 Microsoft 分类查看器浏览模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的分类查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]聚类分析算法生成的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法是一种分段算法，用于浏览数据以标识数据中的变体并创建预测。 有关此算法的详细信息，请参阅 [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)。  
+  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的分类查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]聚类分析算法生成的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法是一种分段算法，用于浏览数据以标识数据中的变体并创建预测。 有关此算法的详细信息，请参阅 [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)。  
   
 > [!NOTE]  
 >  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)。  
   
-##  <a name="BKMK_ViewerTabs"></a>查看器选项卡  
- 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分类查看器提供了以下选项卡，用于浏览聚类分析挖掘模型：  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>查看器选项卡  
+ 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分类查看器提供了以下选项卡，用于浏览聚类分析挖掘模型：  
   
 -   [分类关系图](#BKMK_Diagram)  
   
@@ -48,9 +46,8 @@ ms.locfileid: "66086053"
   
 -   [分类对比](#BKMK_Discrimination)  
   
-###  <a name="BKMK_Diagram"></a>分类关系图  
- 
-  **分类查看器的** “分类关系图” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 选项卡可以显示挖掘模型中的所有分类。 两个分类之间连线的明暗度表示分类的相似程度。 如果明暗度较浅或无明暗度，则表示分类的相似程度较低。 连线的颜色越深，链接的相似性越强。 通过调整分类右侧的滑块，可以调整查看器显示的连线数。 降低滑块将只显示最强链接。  
+###  <a name="cluster-diagram"></a><a name="BKMK_Diagram"></a>分类关系图  
+ **分类查看器的** “分类关系图” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 选项卡可以显示挖掘模型中的所有分类。 两个分类之间连线的明暗度表示分类的相似程度。 如果明暗度较浅或无明暗度，则表示分类的相似程度较低。 连线的颜色越深，链接的相似性越强。 通过调整分类右侧的滑块，可以调整查看器显示的连线数。 降低滑块将只显示最强链接。  
   
  默认情况下，明暗度代表分类的总体。 通过使用**ShadingVariable**和**state**选项，可以选择明暗度代表的属性和状态对。 明暗度越深，特定状态所对应的属性分布范围就越大。 明暗度越浅，分布范围就越小。  
   
@@ -60,9 +57,8 @@ ms.locfileid: "66086053"
   
  [返回页首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Profile"></a>群集配置文件  
- 
-  **“分类剖面图”** 选项卡可以提供模型中的算法创建的分类的总体视图。 此视图显示了每个分类中的属性以及属性的分布情况。 每个单元的 InfoTip 显示分布统计信息，每个列标题的 InfoTip 显示分类的总体。 离散属性显示为彩条，连续属性显示为菱形图，表示每个分类中的平均偏差和标准偏差。 通过“直方图条” **** 选项，可以控制直方图中可见的条数。 如果存在的图条数多于您选择显示的图条数，则会保留重要性最高的那些图条，其余图条则组合到一个灰色的存储桶内。  
+###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>群集配置文件  
+ **“分类剖面图”** 选项卡可以提供模型中的算法创建的分类的总体视图。 此视图显示了每个分类中的属性以及属性的分布情况。 每个单元的 InfoTip 显示分布统计信息，每个列标题的 InfoTip 显示分类的总体。 离散属性显示为彩条，连续属性显示为菱形图，表示每个分类中的平均偏差和标准偏差。 通过“直方图条” **** 选项，可以控制直方图中可见的条数。 如果存在的图条数多于您选择显示的图条数，则会保留重要性最高的那些图条，其余图条则组合到一个灰色的存储桶内。  
   
  您可以更改分类的默认名称，使名称更具描述性。 右键单击群集的列标题，再选择****“重命名群集”，即可重命名群集。 也可以通过选择 **“隐藏列”** 来隐藏分类。  
   
@@ -72,12 +68,12 @@ ms.locfileid: "66086053"
   
  [返回页首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a>分类特征  
+###  <a name="cluster-characteristics"></a><a name="BKMK_Characteristics"></a> 分类特征  
  若要使用“分类特征” **** 选项卡，请从“分类” **** 列表中选择一个分类。 选择分类后，可以检查特定分类的组成特征。 分类包含的属性列在 **“变量”** 列中，所列属性的状态列在 **“值”** 列中。 属性状态将按重要性顺序列出，重要性由这些状态会出现在分类中的概率表示。 概率显示在 **“概率”** 列中。  
   
  [返回页首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Discrimination"></a>分类对比  
+###  <a name="cluster-discrimination"></a><a name="BKMK_Discrimination"></a>分类对比  
  可以使用 **“分类对比”** 选项卡来比较两个分类的属性。 使用 **“分类 1”** 和 **“分类 2”** 列表选择要比较的分类。 查看器将确定分类之间最为重要的一些差异，并按重要性顺序显示与这些差异关联的属性状态。 属性右侧的条表示属性状态所倾向的分类，条的大小则表示属性状态倾向于相应分类的程度。  
   
  [返回页首](#BKMK_ViewerTabs)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086142"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>将预测函数应用于模型
@@ -68,7 +68,7 @@ ms.locfileid: "66086142"
     |||  
     |-|-|  
     |**\<模型名称>**|选择此选项将在输出中包含挖掘模型的值。 只能添加可预测的列。<br /><br /> 从模型添加列时，返回的结果是该列中值的重复列表。<br /><br /> 使用此选项添加的列将包含在生成的 DMX 语句的 SELECT 部分。|  
-    |**预测函数**|选择此选项将浏览预测函数的列表。<br /><br /> 您选择的值或函数将添加到生成的 DMX 语句的 SELECT 部分。<br /><br /> 已选择的模型的类型不会筛选或约束预测函数的列表。 因此，如果对当前模型类型是否支持该函数有任何疑问，则可以只将函数添加到列表并查看是否出错。<br /><br /> 前置有 $ 的列表项（如 $AdjustedProbability）表示您使用函数 `PredictHistogram` 时输出的嵌套表中的列。 这些是可用于返回单个列而不返回嵌套表的快捷方式。|  
+    |**Prediction Function**|选择此选项将浏览预测函数的列表。<br /><br /> 您选择的值或函数将添加到生成的 DMX 语句的 SELECT 部分。<br /><br /> 已选择的模型的类型不会筛选或约束预测函数的列表。 因此，如果对当前模型类型是否支持该函数有任何疑问，则可以只将函数添加到列表并查看是否出错。<br /><br /> 前置有 $ 的列表项（如 $AdjustedProbability）表示您使用函数 `PredictHistogram` 时输出的嵌套表中的列。 这些是可用于返回单个列而不返回嵌套表的快捷方式。|  
     |**自定义表达式**|选择此选项将键入自定义表达式然后向输出分配别名。<br /><br /> 自定义表达式将添加到生成的 DMX 预测查询的 SELECT 部分。<br /><br /> 如果要为每行的输出添加文本、调用 VB 函数或调用自定义存储过程，则此选项会很有用。<br /><br /> 有关使用 DMX 中的 VBA 和 Excel 函数的信息，请参阅 [MDX 和 DAX 中的 VBA 函数](/sql/mdx/vba-functions-in-mdx-and-dax)。|  
   
 3.  在添加每个函数或表达式后，切换到 DMX 视图可查看该函数在 DMX 语句中的添加方式。  
@@ -78,7 +78,7 @@ ms.locfileid: "66086142"
   
 ### <a name="example-create-a-query-on-a-clustering-model"></a>示例：创建对聚类分析模型的查询  
   
-1.  如果没有可用于生成此示例查询的聚类分析模型，请使用[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)创建 [TM_Clustering] 模型。  
+1.  如果没有可用于生成此示例查询的聚类分析模型，请使用 [数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)创建 [TM_Clustering] 模型。  
   
 2.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击模型 [TM_Clustering]，然后选择“生成预测查询”****。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "66086142"
   
      下表显示了预期的结果：  
   
-    |Bike Buyer|$Cluster|支持|CEILING|  
+    |Bike Buyer|$Cluster|Support|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|群集 8|954|953.948638926372|  
   

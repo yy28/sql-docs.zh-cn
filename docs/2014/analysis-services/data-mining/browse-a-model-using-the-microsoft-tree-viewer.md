@@ -24,23 +24,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085941"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>使用 Microsoft 树查看器浏览模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的树查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法生成的决策[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]树。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)。  
+  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的树查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法生成的决策[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]树。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)。  
   
 > [!NOTE]  
 >  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)。  
   
-##  <a name="BKMK_TabsPanes"></a>查看器选项卡  
- 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 树查看器包括以下选项卡和窗格：  
+##  <a name="viewer-tabs"></a><a name="BKMK_TabsPanes"></a>查看器选项卡  
+ 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 树查看器包括以下选项卡和窗格：  
   
 -   [决策树](#BKMK_DecisionTree)  
   
@@ -48,7 +45,7 @@ ms.locfileid: "66085941"
   
 -   [挖掘图例](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a>决策树  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>决策树  
  生成决策树模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将为每个可预测属性生成一个单独的树。 从查看器的 **“决策树”** 选项卡上的 **“树”** 列表中选择单个树，可查看该树。  
   
  决策树由一系列拆分组成，最重要的拆分由算法确定，该拆分位于 **“全部”** 节点中查看器的左侧。 其他拆分出现在右侧。 “全部”**** 节点中的拆分最为重要，由于该节点包含了数据集内引起拆分的最充分的条件，因而产生了第一个拆分。  
@@ -78,9 +75,8 @@ ms.locfileid: "66085941"
   
  [返回页首](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a>依赖关系网络  
- 
-  **“依赖关系网络”** 显示了模型中的输入属性和可预测属性之间的依赖关系。 查看器左侧的滑块可起到与依赖关系强度相联系的筛选器的作用。 如果向下拉动滑块，则查看器中只会显示最强链接。  
+###  <a name="dependency-network"></a><a name="BKMK_DependencyNetwork"></a>依赖关系网络  
+ **“依赖关系网络”** 显示了模型中的输入属性和可预测属性之间的依赖关系。 查看器左侧的滑块可起到与依赖关系强度相联系的筛选器的作用。 如果向下拉动滑块，则查看器中只会显示最强链接。  
   
  选择一个节点后，查看器将突出显示该节点特定的依赖项。 例如，如果选择一个可预测节点，查看器也将突出显示有助于预测该可预测节点的各个节点。  
   
@@ -90,7 +86,7 @@ ms.locfileid: "66085941"
   
  [返回页首](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a>挖掘图例  
+###  <a name="mining-legend"></a><a name="BKMK_MiningLegend"></a>挖掘图例  
  在选中决策树模型中的某个节点时， **“挖掘图例”** 显示下列信息：  
   
 -   节点中按可预测属性的状态划分的事例的数目。  

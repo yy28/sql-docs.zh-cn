@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088024"
 ---
 # <a name="choosing-data-for-data-mining"></a>为数据挖掘选择数据
@@ -38,7 +38,7 @@ ms.locfileid: "66088024"
   
  [其他数据要求](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a>选择数据  
+##  <a name="choosing-data"></a><a name="bkmk_ChoosingData"></a>选择数据  
  选择分析数据可能是数据挖掘过程中最重要的部分，甚至比算法选择更重要。 原因在于，数据挖掘通常不是由假设驱动，而是由数据驱动。 数据挖掘可以接收数据并发现新关联（否则完全无法发现任何模式），而不是提前选择和测试变量（传统统计建模可能会这样做）。 数据的质量和数量可能会显著影响结果。  
   
  一般而言，请遵守以下规则：  
@@ -109,7 +109,7 @@ ms.locfileid: "66088024"
   
 -   将值逼近中心平均值或代表值。  
   
-##  <a name="bkmk_CommonDataProblems"></a>常见数据问题  
+##  <a name="common-data-problems"></a><a name="bkmk_CommonDataProblems"></a>常见数据问题  
   
 ### <a name="excel-number-formats"></a>Excel 数字格式  
  Excel 是一种易于使用的工具，因为它是包容性的，可以在任何位置放置几乎任何类型的数据！ 但是，在您开始查找模式和对相关性进行分析之前，需要对您的数据强制某种结构或某些约束。  
@@ -145,15 +145,14 @@ ms.locfileid: "66088024"
   
  如果您在使用日期时遇到困难，希望使用如月或天这样的常规分组方式来分析日期，则可使用 Excel 中的 DATE 函数，将年、月或日提取到单独一列中，然后使用该列进行分类。  
   
-##  <a name="bkmk_OtherRequirements"></a>其他数据要求  
+##  <a name="other-data-requirements"></a><a name="bkmk_OtherRequirements"></a>其他数据要求  
   
 ### <a name="requirements-by-algorithm-type"></a>算法类型要求  
  某些在外接程序中使用的算法需要特定的数据类型或内容类型才能创建模型。  
   
  **Naïve Bayes 模型**  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 算法不能使用连续列作为输入。 这意味着，您必须对数字装箱，或者如果值足够少，可以按离散值处理。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 算法不能使用连续列作为输入。 这意味着，您必须对数字装箱，或者如果值足够少，可以按离散值处理。  
   
 -   此类模型也不能预测连续值。 因此，如果要预测连续数字（如收入），应先将值装箱到有意义的范围中。 如果不确定合适的范围，可以使用聚类分析算法确定数据中的数字聚类。  
   
@@ -189,20 +188,19 @@ ms.locfileid: "66088024"
  `Discrete`  
  该列包含各值之间没有连续体的有限数量的值。 例如，性别列是一个典型的离散属性列，这是因为该数据表示特定数量的类别。  
   
- `Discrete`内容类型可用于所有数据类型。  
+  内容类型可用于所有数据类型。  
   
  `Continuous`  
  此列包含的值表示某一允许中间值的范围中的数值数据。 连续列表示可缩放度量，且数据可能包含无限数目的小数值。 温度列即为连续属性列的示例。  
   
- 
-  `Continuous` 内容类型可用于以下数据类型：`Date`、`Double` 和 `Long`。  
+ `Continuous` 内容类型可用于以下数据类型：`Date`、`Double` 和 `Long`。  
   
  `Discretized`  
  该列包含表示值组的值，这些值是从连续列派生的值。 Bucket 被视为**有序**的离散值。  
   
- `Discretized`内容类型可用于以下数据类型： `Date`、 `Double`、 `Long`。  
+  内容类型可用于以下数据类型：、、。  
   
- **Key**  
+ **密钥**  
  该列唯一标识某一行。  
   
  通常，键列是数值或文本标识符，不应该用于分析，只应用于跟踪记录。 时序键和序列键是例外。  

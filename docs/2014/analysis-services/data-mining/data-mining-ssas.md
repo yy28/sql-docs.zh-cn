@@ -13,21 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084814"
 ---
 # <a name="data-mining-ssas"></a>数据挖掘 (SSAS)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为合并数据挖掘的解决方案提供一个集成的平台。 您可以使用关系数据或多维数据集数据创建具有预测分析功能的商业智能解决方案。  
   
 ## <a name="benefits-of-data-mining"></a>数据挖掘的优点  
  数据挖掘使用精心研究的统计原则来发现您的数据中的模式，帮助您针对复杂问题作出明智的决策。 通过将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘算法应用于您的数据，您可以预测趋势、标识模式、创建规则和建议、分析复杂数据集中的事件顺序以及洞察新情况。  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的数据挖掘不仅功能强大和易于访问，并且与许多人在进行分析和报告工作时喜欢使用的工具集成在一起。 通过查看本节中提供的链接，您可以获取在开始学习数据挖掘时需要掌握的丰富背景信息。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的数据挖掘不仅功能强大和易于访问，并且与许多人在进行分析和报告工作时喜欢使用的工具集成在一起。 通过查看本节中提供的链接，您可以获取在开始学习数据挖掘时需要掌握的丰富背景信息。  
   
 ## <a name="key-data-mining-features"></a>关键数据挖掘功能  
  SQL Server 提供了以下功能来支持集成的数据挖掘解决方案：  
@@ -53,13 +51,13 @@ ms.locfileid: "66084814"
   
 -   [数据挖掘概念](data-mining-concepts.md)  
   
--   [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)  
   
--   [挖掘模型 &#40;Analysis Services 数据挖掘&#41;](mining-models-analysis-services-data-mining.md)  
+-   [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)  
   
--   [测试和验证 &#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
+-   [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
   
 -   [数据挖掘查询](data-mining-queries.md)  
   
@@ -69,6 +67,6 @@ ms.locfileid: "66084814"
   
 -   [数据挖掘体系结构](data-mining-architecture.md)  
   
--   [安全概述 &#40;数据挖掘&#41;](security-overview-data-mining.md)  
+-   [安全性概述（数据挖掘）](security-overview-data-mining.md)  
   
   

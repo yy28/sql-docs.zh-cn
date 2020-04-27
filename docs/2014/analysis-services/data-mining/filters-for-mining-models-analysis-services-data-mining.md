@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084431"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>挖掘模型的筛选器（Analysis Services - 数据挖掘）
@@ -62,7 +62,7 @@ ms.locfileid: "66084431"
   
  例如，如果您的事例表与客户相关，而且嵌套表中显示客户已经购买的产品，则可以通过在嵌套表的筛选器中使用下面的语法来为已经购买了特定商品的客户创建一个筛选器： `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`。  
   
- 还可以使用 `EXISTS` 或 `NOT EXISTS` 关键字和子查询在嵌套表中筛选特定值，以查看其是否存在。 这允许您创建诸如 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`之类的条件。 如果嵌套表中至少有一行包括 `EXISTS SELECT(<subquery>)` 值，则 `true` 将返回 `Water Bottle`。  
+ 还可以使用 `EXISTS` 或 `NOT EXISTS` 关键字和子查询在嵌套表中筛选特定值，以查看其是否存在。 这允许您创建诸如 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`之类的条件。 如果嵌套表中至少有一行包括 `EXISTS SELECT(<subquery>)` 值，则 `Water Bottle` 将返回 `true`。  
   
  可以将事例表中的条件与嵌套表中的条件组合起来。 例如，下面的语法包括事例表中的一个条件 (`Age > 30` )、嵌套表中的一个子查询 (`EXISTS (SELECT * FROM Products)`) 以及嵌套表中的多个条件 (`WHERE ProductName='Milk'  AND Quantity>2`)。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "66084431"
   
 ## <a name="see-also"></a>另请参阅  
  [模型筛选器语法和示例 &#40;Analysis Services 数据挖掘&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [测试和验证 &#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
+ [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
   
   

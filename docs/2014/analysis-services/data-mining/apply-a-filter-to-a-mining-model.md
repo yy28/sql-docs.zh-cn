@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086221"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>对挖掘模型应用筛选器
@@ -46,7 +46,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     -或-  
+     \- 或 -  
   
      选择该模型。 然后，在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
   
@@ -70,9 +70,9 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. 单击网格中的下一行。  
   
-     您所创建的筛选条件自动添加到“表达式”文本框中。 例如： `[Income] > '30000'`  
+     您所创建的筛选条件自动添加到“表达式”文本框中。 例如 `[Income] > '30000'`  
   
-10. 单击网格下一行中的“AND/OR”**** 文本框，以添加条件。  
+10. 单击网格下一行中的**和/或**文本框，以添加条件。  
   
      例如，若要创建 BETWEEN 条件，请从`AND`逻辑操作数下拉列表中选择。  
   
@@ -115,7 +115,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  由于嵌套表数属性的数量不受限制，因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不提供可供选择的可能值的列表。 必须键入一个确切的值。 此外，不能在嵌套表中使用 LIKE 运算符。  
   
-1.  根据需要添加更多条件，并通过在 " `AND`条件`OR` " 网格左侧的 "**和/或**" 框中选择**** 或来组合条件。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  根据需要添加更多条件，并通过在 " `AND`条件`OR` " 网格左侧的 "**和/或**" 框中选择**Conditions**或来组合条件。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  在 **“模型筛选器”** 对话框中，使用 **“筛选器”** 对话框检查创建的条件。 嵌套表的条件表将附加到事例表条件中，并在 **“表达式”** 文本框中显示一组完整的筛选条件。  
   

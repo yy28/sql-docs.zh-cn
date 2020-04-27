@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085549"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 创建数据挖掘查询
@@ -42,8 +42,7 @@ ms.locfileid: "66085549"
   
 1.  打开 **“发现架构行集”** 模板后，单击 **“执行”**。  
   
-     
-  **“结果”** 窗格中将显示返回的架构行集列表，该列表中包含当前实例中可用的所有行集的名称和行集列。  
+     **“结果”** 窗格中将显示返回的架构行集列表，该列表中包含当前实例中可用的所有行集的名称和行集列。  
   
 2.  在 "**查询**" 窗格中，将光标放在** \<限制列表之后>** 然后按 enter 添加新行。  
   
@@ -61,10 +60,9 @@ ms.locfileid: "66085549"
   
      `</Restrictions>`  
   
-4.  单击“执行”  。  
+4.  单击“执行” ****。  
   
-     
-  **“结果”** 窗格将显示指定架构行集的列名列表。  
+     **“结果”** 窗格将显示指定架构行集的列名列表。  
   
 #### <a name="to-create-a-content-query-using-the-mining-model-content-schema-rowset"></a>使用 MINING MODEL CONTENT 架构行集创建内容查询  
   
@@ -96,7 +94,7 @@ ms.locfileid: "66085549"
   
      `</Restrictions>`  
   
-5.  单击“执行”  。  
+5.  单击“执行” ****。  
   
      “结果”窗格将显示架构定义以及指定模型的值。  
   

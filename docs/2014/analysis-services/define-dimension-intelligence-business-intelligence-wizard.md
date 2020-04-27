@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a66a940e916cc05bb3fe502cb6f4d10a9c2fae6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082134"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>定义维度智能（商业智能向导）
@@ -26,13 +26,13 @@ ms.locfileid: "66082134"
  **维度类型**  
  选择与所选维度相关联的维度类型。 对此选项的选择将影响 **“维度属性”** 网格中可用的属性类型。  
   
- **维度属性**  
+ **“维度属性”**  
  显示指定维度类型的可用属性类型，并允许指定要对其应用属性类型的维度属性。  
   
  **包括**  
  选中此选项将包括维度中的相应属性类型。  
   
- **属性类型**  
+ **特性类型**  
  显示可以映射到维度所包含维度属性的属性类型。  
   
  **维度属性**  

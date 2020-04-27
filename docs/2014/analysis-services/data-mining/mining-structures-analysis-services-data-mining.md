@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083380"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>挖掘结构（Analysis Services – 数据挖掘）
@@ -35,11 +35,11 @@ ms.locfileid: "66083380"
   
  关系图中的挖掘结构基于包含多个表或视图的数据源，它们按 CustomerID 字段进行联接。 一个表包含有关客户的信息，例如地理区域、年龄、收入和性别，而相关嵌套表包含每个客户的多行其他相关信息，例如客户已购买的产品。 此关系图显示根据一个挖掘结构可以生成多个模型，并且这些模型可以使用该结构中的不同列。  
   
- **模型 1**使用 CustomerID、收入、年龄和区域，并筛选区域中的数据。  
+ **模型 1** 使用 CustomerID、收入、年龄和区域，并根据区域筛选数据。  
   
- **模型 2**使用 CustomerID、收入、年龄和区域，并根据年龄筛选数据。  
+ **模型 2** 使用 CustomerID、收入、年龄和区域，并根据年龄筛选数据。  
   
- **模型 3**使用 CustomerID、年龄、性别和嵌套表，无筛选器。  
+ **模型 3** 使用 CustomerID、年龄、性别和嵌套表，不使用筛选器。  
   
  由于以上模型使用不同的输入列，并且其中两个模型还通过应用筛选器来限制在模型中使用的数据，因此即使这些模型基于相同数据，其结果也将大不相同。 请注意，CustomerID 列在所有模型中都是必需的，因为它是可作为事例键使用的唯一可用列。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66083380"
   
 -   处理结构。  
   
- 以下部分会更详细地介绍这些步骤。  
+ 这些步骤将在以下各节中进行详细说明。  
   
 ### <a name="data-sources-for-mining-structures"></a>挖掘结构的数据源  
  在定义挖掘结构时，可以使用现有数据源视图中的列。 数据源视图是一个共享对象，允许您合并多个数据源并将它们作为单个源使用。 原始数据源对客户端应用程序不可见，您可以使用数据源视图的属性修改数据类型、创建聚合或别名列。  
@@ -102,8 +102,7 @@ ms.locfileid: "66083380"
   
  如果您希望查看挖掘结构中的数据，则可以使用数据挖掘扩展插件 (DMX) 来创建查询。 例如， `SELECT * FROM <structure>.CASES` 语句返回挖掘结构中的所有数据。 若要检索此信息，必须处理挖掘结构，并且必须缓存处理结果。  
   
- 
-  `SELECT * FROM <model>.CASES` 语句返回相同的列，但是仅针对该特定模型中的事例返回。 有关详细信息，请参阅 [SELECT FROM <结构>.CASES](/sql/dmx/select-from-structure-cases) 和 [SELECT FROM <模型>.CASES (DMX)](/sql/dmx/select-from-model-content-dmx)。  
+ `SELECT * FROM <model>.CASES` 语句返回相同的列，但是仅针对该特定模型中的事例返回。 有关详细信息，请参阅 [SELECT FROM <结构>.CASES](/sql/dmx/select-from-structure-cases) 和 [SELECT FROM <模型>.CASES (DMX)](/sql/dmx/select-from-model-content-dmx)。  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>在挖掘结构中使用数据挖掘模型  
  数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 挖掘模型是属于特定挖掘结构的对象，并且模型继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。 可以向挖掘结构中添加某个结构列的多个副本。 还可以向挖掘模型中添加某个结构列的多个副本，然后向该模型中的每个结构列赋予不同的名称或别名 **。 有关为结构列创建别名的详细信息，请参阅 [为模型列创建别名](create-an-alias-for-a-model-column.md) 和 [挖掘模型属性](mining-model-properties.md)。  
@@ -123,6 +122,6 @@ ms.locfileid: "66083380"
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 多维数据 &#40;的数据库对象&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [挖掘模型 &#40;Analysis Services 数据挖掘&#41;](mining-models-analysis-services-data-mining.md)  
+ [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)  
   
   

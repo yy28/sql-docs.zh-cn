@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4df53093cf7d7dff00a8a5e16fb4bef58442213
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092393"
 ---
 # <a name="select-a-prepared-instance"></a>选择已准备实例
@@ -27,7 +27,7 @@ ms.locfileid: "66092393"
  **选择实例 ID**  
  该列表包括在正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机上您可以完成的所有已准备实例。 选择要完成的已准备实例。  
   
- **已安装实例**  
+ **已安装的实例**  
  这包括已安装、已准备和已完成实例。  
   
   

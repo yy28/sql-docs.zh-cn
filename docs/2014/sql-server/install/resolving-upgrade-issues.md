@@ -31,10 +31,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092503"
 ---
 # <a name="resolving-upgrade-issues"></a>解决升级问题
@@ -55,8 +55,7 @@ ms.locfileid: "66092503"
 -   [SQL Server 代理升级问题](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
 ## <a name="issues-that-prevent-upgrading"></a>阻止升级的问题  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的之前版本中的一些配置或设置可阻止您升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 如果在您安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时安装程序检测到这些问题，则安装程序停止升级过程，并请求您运行升级顾问和修复阻碍升级的所有问题。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的之前版本中的一些配置或设置可阻止您升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 如果在您安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时安装程序检测到这些问题，则安装程序停止升级过程，并请求您运行升级顾问和修复阻碍升级的所有问题。  
   
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 升级报表中列出了以下任务，则在升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前必须执行相应的所需操作：  
@@ -65,7 +64,7 @@ ms.locfileid: "66092503"
   
 -   [重命名与固定服务器角色名称匹配的登录名](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
   
--   [重命名 sys 用户](../../../2014/sql-server/install/rename-user-sys.md)  
+-   [重命名用户 sys](../../../2014/sql-server/install/rename-user-sys.md)  
   
 -   [使用 sp_rename 重命名重复的索引名称](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   

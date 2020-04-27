@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085112"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
@@ -39,7 +39,7 @@ ms.locfileid: "66085112"
 ## <a name="mining-structure-tab"></a>“挖掘结构”选项卡  
  使用 **“挖掘结构”** 选项卡添加列和修改现有挖掘结构的属性。 下列任务和主题提供有关使用挖掘结构的详细信息：  
   
- [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)  
+ [挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)  
   
  [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66085112"
   
  有关使用挖掘模型的详细信息，请参阅下列主题：  
   
- [挖掘模型 &#40;Analysis Services 数据挖掘&#41;](mining-models-analysis-services-data-mining.md)  
+ [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)  
   
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66085112"
   
  有关测试和验证挖掘模型的详细信息，请参阅下列主题：  
   
- [测试和验证 &#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
+ [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
   
- [测试和验证任务以及操作方法 &#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [测试和验证任务和操作指南（数据挖掘）](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>“挖掘模型预测”选项卡  
  “挖掘模型预测”**** 选项卡包含预测查询生成器，可以使用此生成器创建数据挖掘扩展插件 (DMX) 预测查询。 该选项卡包含用于指定挖掘模型和输入表、将挖掘模型中的列映射到输入表中的列、向查询中添加函数以及为各个列指定条件的工具。  

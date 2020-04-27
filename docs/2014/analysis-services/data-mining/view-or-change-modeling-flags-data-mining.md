@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082682"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>查看或更改建模标志（数据挖掘）
@@ -52,6 +52,6 @@ ms.locfileid: "66082682"
   
 ## <a name="see-also"></a>另请参阅  
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
- [建模标志 &#40;数据挖掘&#41;](modeling-flags-data-mining.md)  
+ [建模标志（数据挖掘）](modeling-flags-data-mining.md)  
   
   

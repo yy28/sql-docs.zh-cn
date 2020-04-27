@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094629"
 ---
 # <a name="install-distributed-replay-setup"></a>安装 Distributed Replay（安装程序）
@@ -52,26 +52,23 @@ ms.locfileid: "66094629"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]工具  
   
-     \-或  
+     \- 或 -  
   
-     
-  \<Share Feature Directory>\Tools\\（用户提供的替代共享功能目录）  
+     \<Share Feature Directory>\Tools\\（用户提供的替代共享功能目录）  
   
 -   在 64 位系统上：  
   
      C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （x86） \120\Tools  
   
-     \-或  
+     \- 或 -  
   
-     
-  \<Share Feature Directory (x86)>\Tools\\（用户提供的替代共享功能 (x86) 目录）  
+     \<Share Feature Directory (x86)>\Tools\\（用户提供的替代共享功能 (x86) 目录）  
   
 ### <a name="to-install-distributed-replay-features"></a>安装 Distributed Replay 功能  
   
 1.  若要开始安装任何 Distributed Replay 功能，请启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
   
-2.  
-  **“安装程序支持规则”** 页将标识在安装 SQL Server 安装程序支持文件时可能发生的问题。 在继续安装之前，您必须纠正任何安装程序支持问题。  
+2.  **“安装程序支持规则”** 页将标识在安装 SQL Server 安装程序支持文件时可能发生的问题。 在继续安装之前，您必须纠正任何安装程序支持问题。  
   
 3.  在 **“产品密钥”** 页上，选择某一选项按钮，该按钮指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是安装具有 PID 密钥的产品的生产版本。 有关详细信息，请参阅[SQL Server 2014 的版本和组件](../editions-and-components-of-sql-server-2016.md)。  
   
@@ -95,7 +92,7 @@ ms.locfileid: "66094629"
   
     -   用户创建的本地用户帐户  
   
-    -   管理员  
+    -   Administrator  
   
     -   虚拟帐户和 MSA（托管服务帐户）  
   
@@ -109,7 +106,7 @@ ms.locfileid: "66094629"
   
     2.  在64位计算机上，默认安装路径为**C:\Program Files （\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] x86）**  
   
-9. 完成后，单击 **“下一步”**。  
+9. 完成后，单击“下一步”****。  
   
 10. 在 **“安装规则”** 页上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将验证您的计算机配置。 在验证过程完成后，单击 **“下一步”**。  
   
@@ -138,6 +135,6 @@ ms.locfileid: "66094629"
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay 要求](../../tools/sql-server-profiler/replay-requirements.md)   
  [管理工具命令行选项 &#40;Distributed Replay 实用工具&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

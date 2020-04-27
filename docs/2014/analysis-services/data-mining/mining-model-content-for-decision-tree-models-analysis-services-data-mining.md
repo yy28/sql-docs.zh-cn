@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083664"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
   
-##  <a name="bkmk_Top"></a>了解决策树模型的结构  
+##  <a name="understanding-the-structure-of-a-decision-trees-model"></a><a name="bkmk_Top"></a>了解决策树模型的结构  
  决策树模型具有表示该模型及其元数据的单一父节点。 父节点下是表示选择的可预测属性的独立树。 例如，如果设置决策树模型以预测客户是否将购买产品，并为性别和收入提供输入，该模型将为购买属性创建一个树，该树具有大量根据性别和收入相关条件进行划分的分支。  
   
  但是，如果随后添加一个单独的可预测属性以参与客户回报计划，该算法将在父节点下创建两个单独的树。 其中一个树包含购买情况分析，而另一个树包含客户回报计划的分析。  如果使用决策树算法创建关联模型，该算法将为要预测的每个产品创建一个单独的树，而树则包含构成目标属性选择的所有其他产品组合。  
@@ -45,10 +45,9 @@ ms.locfileid: "66083664"
  Microsoft 决策树算法不允许使用连续数据类型作为输入；因此，如果任何列具有连续数值数据类型，将对该值进行离散化处理。 该算法在拆分点针对所有连续属性执行其自己的离散化处理。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择对连续属性进行装桶的方法；但是，通过将挖掘结构列的内容类型设置为 `Discretized`，并设置 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 或 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 属性，您可以控制如何离散化输入中的连续值。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择对连续属性进行装桶的方法；但是，通过将挖掘结构列的内容类型设置为 `Discretized`，并设置 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 或 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 属性，您可以控制如何离散化输入中的连续值。  
   
-##  <a name="bkmk_ModelContent"></a>决策树模型的模型内容  
+##  <a name="model-content-for-a-decision-trees-model"></a><a name="bkmk_ModelContent"></a> 决策树模型的模型内容  
  本部分提供的详细信息和示例仅针对挖掘模型内容中与决策树模型有特殊关系的列。 有关架构行集中的通用列的信息以及挖掘模型术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
@@ -64,7 +63,7 @@ ms.locfileid: "66083664"
  始终与 NODE_UNIQUE_NAME 相同。  
   
  NODE_UNIQUE_NAME  
- 此模型中节点的唯一标识符。 不能更改此值。  
+ 此模型中节点的唯一标识符。 此值不能更改。  
   
  对于决策树模型，唯一名称遵循以下约定，该约定并不适用于所有算法：  
   
@@ -91,15 +90,15 @@ ms.locfileid: "66083664"
  CHILDREN_CARDINALITY  
  对节点所具有的子节点数的估计。  
   
- **父节点**指示已建模的可预测属性的数目。 为每个可预测属性创建一个树。  
+ **父节点** 指示已建模的可预测属性的数目。 为每个可预测属性创建一个树。  
   
- **树节点**每个树的 "**全部**" 节点会告诉您用于目标属性的值的数目。  
+ **树节点** 每个树的 **“全部”** 节点指示用于目标属性的值的数目。  
   
 -   如果目标属性是离散属性，则该值等于非重复值的数目加 1（表示 `Missing` 状态）。  
   
 -   如果可预测属性是连续的，该值表示对连续属性建模所使用的存储桶数目。  
   
- **叶节点**始终为0。  
+ **叶节点** 始终为 0。  
   
  PARENT_UNIQUE_NAME  
  节点的父节点的唯一名称。 根级别上的任何节点均返回 NULL。  
@@ -134,15 +133,15 @@ ms.locfileid: "66083664"
  NODE_DISTRIBUTION  
  包含节点的概率直方图的表。 根据可预测属性是连续变量还是离散变量，该表中的信息也将有所不同。  
   
- **模型根节点**此表为空。  
+ **模型根节点** 此表为空。  
   
- **（全部）节点**包含整个模型的摘要。  
+ **全部）节点** 包含整个模型的摘要。  
   
- **内部节点**包含其叶节点的聚合统计信息。  
+ **内部节点** 包含其叶节点的聚合统计信息。  
   
- **叶节点**包含针对当前叶节点的路径中的所有条件的预测结果的支持和概率。  
+ **叶节点** 如果在指向当前叶节点的路径中给定了所有条件，包含预测结果的支持和概率。  
   
- **回归节点**包含表示输入和可预测属性之间的关系的回归公式。  
+ **回归节点** 包含表示输入和可预测属性之间的关系的回归公式。  
   
  有关详细信息，请参阅 [离散属性的节点分布](#bkmk_NodeDist_Discrete) 和 [连续属性的节点分布](#bkmk_RegressionNodes)。  
   
@@ -185,7 +184,7 @@ ms.locfileid: "66083664"
   
  如果可预测属性是连续数字，该算法则尝试创建对可预测属性和输入之间的关系进行建模的回归公式。  
   
-###  <a name="NodeCaption"></a>节点标题和节点说明  
+###  <a name="node-caption-and-node-description"></a><a name="NodeCaption"></a>节点标题和节点说明  
  在决策树模型中，节点标题和节点说明包含类似信息。 但是，越接近叶节点，节点说明越完整，并且包含的信息越多。 节点标题和节点说明是已本地化的字符串。  
   
 |||  
@@ -193,7 +192,7 @@ ms.locfileid: "66083664"
 |**NODE_CAPTION**|显示区分相对于父节点的特定节点的属性。 节点标题基于拆分条件定义总体的子段。 例如，如果 split 处于开启 [Age] 且是三向拆分，则三个子节点的节点标题可能为 "[Age] < 40"、"40 <= [Age] \< 50"、"[age] >= 50"。|  
 |**NODE_DESCRIPTION**|包含将该节点与其他节点（从模型父节点开始）区分开来的属性的完整列表。 例如，Product name = Apple 且 Color = Red。|  
   
-###  <a name="NodeRule"></a>节点规则和边际规则  
+###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> 节点规则和边际规则  
  NODE_RULE 和 MARGINAL_RULE 列包含的信息与 NODE_CAPTION 和 NODE_DESCRIPTION 列相同，但将这些信息表示为 XML 片段。 节点规则是 XML 版本的完整路径，而边际规则指示最新拆分。  
   
  XML 片段可以表示简单或复杂的属性。 简单属性包含模型列的名称以及属性的值。 如果模型列包含嵌套表，嵌套表属性则表示为串联在一起的表名称、键值和属性。  
@@ -201,7 +200,7 @@ ms.locfileid: "66083664"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持版本2.0 的 PMML 标准，并带有支持嵌套表使用的扩展。 如果数据包含嵌套表，并且生成 PMML 版本的模型，则模型中包括谓词的所有元素均被标记为扩展。  
   
-###  <a name="bkmk_NodeDist_Discrete"></a>离散属性的节点分布  
+###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>离散属性的节点分布  
  在决策树模型中，NODE_DISTRIBUTION 表包含有用的统计信息。 但是，统计信息的类型取决于树是预测离散属性还是预测连续属性。 此部分说明离散属性的节点分布统计信息的含义。  
   
 #### <a name="attribute-name-and-attribute-value"></a>属性名称和属性值  
@@ -232,7 +231,7 @@ ms.locfileid: "66083664"
   
  概率 =（对状态的支持 + 对先前状态的支持）/（节点支持加上对先前节点的支持）  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用每个节点的概率来比较存储概率和以前的概率，以确定从父节点到子节点的路径是否指示强推理。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用每个节点的概率比较存储概率和以前的概率，以便确定从父节点到子节点的路径是否指示较强的推断。  
   
  作出预测时，必须使用节点的概率平衡分布的概率，从而使概率平滑。 例如，如果树中的拆分按 9000/1000 的比率分隔事例，则该树很不平衡。 这会导致来自较小分支的预测和来自含有多个事例的分支的预测具有不同的权重。  
   
@@ -253,7 +252,7 @@ ms.locfileid: "66083664"
   
  如果该模型包含连续可预测属性，树还可以包含回归公式独有的值类型。 有关在回归树中使用的值类型的列表，请参阅[线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
-###  <a name="NodeScore"></a>节点分数  
+###  <a name="node-score"></a><a name="NodeScore"></a> 节点分数  
  节点分数表示树的每个级别的稍有不同的信息。 通常，分数是指示基于条件进行拆分的拆分性能的数值。 该值表示为一个双精度值，值越大，性能越好。  
   
  根据定义，模型节点和所有叶节点的节点分数为 0。  
@@ -267,7 +266,7 @@ ms.locfileid: "66083664"
 > [!NOTE]  
 >  如果创建的决策树模型同时具有连续可预测属性和离散可预测属性，表示每个树类型的“(全部)”节点中将显示完全不同的分数。 应单独考虑每个模型，并且对回归评分所使用的方法完全不同于对分类评分所使用的方法。 无法比较节点分数值。  
   
-##  <a name="bkmk_RegressionNodes"></a>决策树模型中的回归节点  
+##  <a name="regression-nodes-within-a-decision-tree-model"></a><a name="bkmk_RegressionNodes"></a>决策树模型中的回归节点  
  如果决策树模型包含带有连续数值数据的可预测属性，则 Microsoft 决策树算法查找被预测状态和输入变量之间存在线性关系的区域。 如果算法成功找到线性关系，则将创建表示线性回归的特殊树 (NODE_TYPE = 25)。 这些回归树节点比表示离散值的节点更复杂。  
   
  通常，回归映射连续依赖项（可预测变量）中的更改作为输入中的更改函数。 如果依赖变量具有任何连续输入，并且输入和预测值之间的关系非常稳定，足以将其作为线形图计算，那么，回归节点则包含一个公式。  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087972"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>分类矩阵（SQL Server 数据挖掘外接程序）
@@ -36,10 +36,10 @@ ms.locfileid: "66087972"
   
 ||铜卡（实际数）|金卡（实际数）|银卡（实际数）|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronze|**94.45%**|15.18%|1.70%|  
-|Gold|2.72%|**84.82%**|0.00%|  
-|Silver|1.84%|0.00%|**93.80%**|  
-|*正确*|*95.45%*|*84.82%*|*98.30%*|  
+|铜卡|**94.45%**|15.18%|1.70%|  
+|金卡|2.72%|**84.82%**|0.00%|  
+|银卡|1.84%|0.00%|**93.80%**|  
+|*恰当*|*95.45%*|*84.82%*|*98.30%*|  
 |*分类错误*|*4.55%*|*15.18%*|*1.70%*|  
   
 -   每列显示测试数据集中的实际值。  

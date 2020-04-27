@@ -13,35 +13,34 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 83c0d1ad4d63d361754c5e2183081c30c7c51f2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089985"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>选项（"查询执行-SQL Server-常规" 页）
   使用此页可指定用于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询的选项。 对这些选项所做的更改仅应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在“查询”**** 菜单上单击“查询选项”****，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中单击右键，再选择“查询选项”****。  
   
 ## <a name="options"></a>选项  
- **设置行计数**  
+ **SET ROWCOUNT**  
  默认值为 0，指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在收到所有结果之前将一直等待结果。 如果希望 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在获取指定数目的行后暂停查询，请提供一个大于 0 的值。 若要关闭此选项（以便返回所有的行），请将 SET ROWCOUNT 指定为 0。  
   
- **设置 TEXTSIZE**  
+ **SET TEXTSIZE**  
  默认值为 2,147,483,647 字节，表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将提供长达 `text` 和 `ntext` 数据字段上限的完整数据字段。 提供较小的数值，可以在存在大量值时限制结果数量。 超出指定数量的列将被截断。  
   
- **执行超时**  
+ **执行超时值**  
  在 **“新建连接”** 对话框中设置默认值。 使用此数字调整框可以设置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在取消查询之前等待的时间（秒）。 值0表示无限期等待或无超时。对于新安装，此值为0。  
   
  **批分隔符**  
  键入用来将 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句分隔为批的词。 默认值为 GO。  
   
  **默认情况下，在 SQLCMD 模式下打开新查询**  
- 选中此复选框可在 SQLCMD 模式下打开新查询。 有关 SQLCMD 模式的详细信息，请参阅[在查询编辑器中编辑 SQLCMD 脚本](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  
+ 选中此复选框可在 SQLCMD 模式下打开新查询。 有关 SQLCMD 模式的详细信息，请参阅[使用查询编辑器编辑 SQLCMD 脚本](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  
   
  选择此选项时，请记住下列限制：  
   
--   
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 处于关闭状态。  
+-   [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 处于关闭状态。  
   
 -   由于查询编辑器不能从命令行运行，因此您不能传入命令行参数（如变量）。  
   

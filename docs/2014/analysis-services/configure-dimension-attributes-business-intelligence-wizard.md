@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087449"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>配置维度属性（商业智能向导）
@@ -29,13 +29,13 @@ ms.locfileid: "66087449"
 > [!NOTE]  
 >  此选项不可用，因为维度`Type`的属性不能更改为帐户维度的*帐户*之外的值。  
   
- **维度属性**  
+ **“维度属性”**  
  显示可以映射到维度中现有维度属性的有效属性类型。  
   
  **包括**  
  选中复选框，将维度中相应的属性类型包括在内。  
   
- **属性类型**  
+ **特性类型**  
  列出可以映射到维度中现有维度属性的属性类型。  
   
  **维度属性**  

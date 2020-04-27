@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082531"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>数据源视图（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -82,11 +82,11 @@ ms.locfileid: "66082531"
  **关系图复制源**  
  选择与多维数据集关联的数据源视图所包含的一个关系图，可以在“数据源视图”**** 窗格中显示该关系图。  
   
- **Zoom**  
+ **缩放**  
  选择可用的缩放选项。  
   
  **属性**  
- 在 ** 中，显示与多维数据集关联的数据源视图的“属性”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，显示与多维数据集关联的数据源视图的“属性”**** 窗口。  
   
 ## <a name="table-context-menu"></a>表上下文菜单  
  右键单击“数据源视图”**** 窗格中表或视图的名称后显示的上下文菜单中包含下列选项：  
@@ -110,7 +110,7 @@ ms.locfileid: "66082531"
 >  只有当“度量值”**** 窗格中的度量值组尚未引用该表时，才会启用此选项。  
   
  **属性**  
- 在 ** 中显示所选表的“属性”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示所选表的“属性”**** 窗口。  
   
 ## <a name="column-context-menu"></a>列上下文菜单  
  右键单击“数据源视图”**** 窗格内表或视图中的列名称后显示的上下文菜单中包含下列选项：  
@@ -125,7 +125,7 @@ ms.locfileid: "66082531"
  显示包含所选列的数据源视图的数据源视图设计器。 有关数据源视图设计器的详细信息，请参阅[数据源视图设计器（Analysis Services - 多维数据）](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
  **属性**  
- 在 ** 中显示所选列的“属性”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示所选列的“属性”**** 窗口。  
   
 ## <a name="relationship-context-menu"></a>关系上下文菜单  
  右键单击“数据源视图”**** 窗格中的关系后显示的上下文菜单中包含下列选项：  
@@ -134,7 +134,7 @@ ms.locfileid: "66082531"
  显示包含所选关系的数据源视图的数据源视图设计器。 有关数据源视图设计器的详细信息，请参阅[数据源视图设计器（Analysis Services - 多维数据）](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
  **属性**  
- 在 ** 中显示所选关系的“属性”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示所选关系的“属性”**** 窗口。  
   
 ## <a name="see-also"></a>另请参阅  
  ["多维数据集结构" 选项卡、多维数据集设计器&#41; &#40;的工具栏 &#40;Analysis Services 多维数据&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

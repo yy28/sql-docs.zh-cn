@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4aec5e6edbde3bea04ed798f9376645cca59e67b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091935"
 ---
 # <a name="sql-server-failover-cluster-wizard---prepare"></a>SQL Server 故障转移群集向导 – 准备
@@ -24,7 +24,7 @@ ms.locfileid: "66091935"
   
  在执行安装操作之前，请查看以下主题：  
   
-1.  [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+1.  [安装 SQL Server 2014 的硬件和软件要求](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 2.  [SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66091935"
   
  其他参考：  
   
-1.  [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
+1.  [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
   
 2.  [安装故障转移群集前的准备工作](../failover-clusters/install/before-installing-failover-clustering.md)  
   

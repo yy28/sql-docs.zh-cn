@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089848"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>选项（“文本编辑器”-“XML”-“格式”页）
@@ -24,9 +24,9 @@ ms.locfileid: "66089848"
 > [!NOTE]  
 > 从“选项”**** 对话框依次选择“文本编辑器”**** 文件夹、“XML”**** 文件夹和“格式”**** 选项后，这些设置将可用。  
   
-## <a name="attributes"></a>属性  
+## <a name="attributes"></a>特性  
  **保留手动属性格式化**  
- 请不要重新设置属性的格式。 这是默认值。  
+ 请不要重新设置属性的格式。 这是默认设置。  
   
 > [!NOTE]  
 >  如果这些属性位于多行上，则编辑器会缩进属性的每一行，以与父元素的缩进大小相匹配。  
@@ -50,7 +50,7 @@ ms.locfileid: "66089848"
   
 ## <a name="mixed-content"></a>混合内容  
  **默认情况下设置混合内容的格式。**  
- 尝试重新设置混合内容的格式，在 `xml:space="preserve"` 作用域中找到该内容时除外。 这是默认值。  
+ 尝试重新设置混合内容的格式，在 `xml:space="preserve"` 作用域中找到该内容时除外。 这是默认设置。  
   
  如果某个元素同时包含文本和标记，则这些内容会被视为混合内容。 下面是包含混合内容的元素的示例：  
   
@@ -63,4 +63,4 @@ ms.locfileid: "66089848"
  \</dir>  
   
 ## <a name="see-also"></a>另请参阅  
- [XML 编辑器 &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+ [XML 编辑器 (SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)  

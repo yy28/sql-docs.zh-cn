@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084803"
 ---
 # <a name="data-types-data-mining"></a>数据类型（数据挖掘）
@@ -26,9 +26,9 @@ ms.locfileid: "66084803"
   
  每种数据类型支持一种或多种内容类型。 通过设置内容类型，您可以自定义在挖掘模型中如何处理或计算列中的数据。  
   
- 例如，如果列中有数值数据，您可以选择将其作为数值数据类型或文本数据类型来处理。 如果选择数值数据类型，则可以设置几种不同的内容类型：可以使数字离散化或者将数字作为连续值处理。 有关所有内容类型列表的信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
+ 例如，如果列中有数值数据，您可以选择将其作为数值数据类型或文本数据类型来处理。 如果选择数值数据类型，则可以设置几种不同的内容类型：可以使数字离散化或者将数字作为连续值处理。 有关所有内容类型列表的信息，请参阅 [内容类型（数据挖掘）](content-types-data-mining.md)。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持挖掘结构列的以下数据类型：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持挖掘结构列的以下数据类型：  
   
 |数据类型|支持的内容类型|  
 |---------------|-----------------------------|  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086383"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>在现有挖掘结构中添加挖掘模型
@@ -34,7 +34,7 @@ ms.locfileid: "66086383"
   
 3.  在 **“算法名称”** 下面，选择将用来生成挖掘模型的算法。  
   
-4.  单击“确定”。   
+4.  单击" **确定**"。  
   
  新的挖掘模型将显示在 "**挖掘模型**" 选项卡中。模型使用结构中存在的默认列。 有关如何修改列的信息，请参阅 [更改挖掘模型的属性](change-the-properties-of-a-mining-model.md)。  
   

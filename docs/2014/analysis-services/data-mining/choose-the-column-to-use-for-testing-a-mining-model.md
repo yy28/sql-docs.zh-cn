@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 719e4dc2e934ac430ab4910612265d4b3532ed14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085725"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>选择用于测试挖掘模型的列
@@ -50,8 +50,7 @@ ms.locfileid: "66085725"
   
 4.  在 **“输入选择”** 选项卡的 **“可预测列名称”** 下，为要包含在图表中的每个模型选择一个可预测列。  
   
-     
-  **“可预测列名称”** 框中提供的挖掘模型列只有使用类型设置为 **“预测”** 或 **“仅预测”** 的列。  
+     **“可预测列名称”** 框中提供的挖掘模型列只有使用类型设置为 **“预测”** 或 **“仅预测”** 的列。  
   
 5.  如果希望确定模型的提升情况，则必须从 **“预测值”** 列表为该模型选择要度量的特定结果值。  
   

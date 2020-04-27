@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083247"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>嵌套表（Analysis Services – 数据挖掘）
@@ -36,8 +36,7 @@ ms.locfileid: "66083247"
  要创建嵌套表，两个源表必须包含已定义的关系，以便一个表中的项可与另一个表关联。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，可以在数据源视图中定义此关系。  
   
 > [!NOTE]  
->  
-  **CustomerKey** 字段为关系键，用于链接数据源视图定义中的事例表和嵌套表，以及建立挖掘结构中的列之间的关系。 但通常不应在根据此结构建立的挖掘模型中使用该关系键。 一般情况下，如果关系键仅用于联接表而不提供对分析有用的信息，则最好省略挖掘模型的关系键列。  
+>  **CustomerKey** 字段为关系键，用于链接数据源视图定义中的事例表和嵌套表，以及建立挖掘结构中的列之间的关系。 但通常不应在根据此结构建立的挖掘模型中使用该关系键。 一般情况下，如果关系键仅用于联接表而不提供对分析有用的信息，则最好省略挖掘模型的关系键列。  
   
  您可以通过使用数据挖掘扩展插件 (DMX) 或分析管理对象 (AMO) 以编程方式创建嵌套表，也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘向导或数据挖掘设计器创建嵌套表。  
   
@@ -50,9 +49,7 @@ ms.locfileid: "66083247"
   
  确定处理嵌套表中的重复值的方式取决于要创建的挖掘模型和要解决的业务问题。 在某些情况下，您可能不关心客户购买某个特定产品的次数，而只想检查是否至少购买一次。 在其他情况下，购买的数量和顺序可能非常重要。  
   
- 如果项目顺序很重要，可能还需要一列来表示顺序。 
-  *
-  * 使用顺序分析和聚类分析算法来创建模型时，必须另外选择“Key Sequence”列来表示项目顺序。 Key Sequence 列是一种仅在顺序分析和聚类分析模型中使用的特殊嵌套键，它需要唯一数字数据类型。 例如，整数和日期均可用作 Key Sequence 列，但所有序列值必须是唯一的。 除 Key Sequence 列以外，顺序分析和聚类分析模型还具有表示要建模的属性的嵌套表键，例如已购买的产品。  
+ 如果项目顺序很重要，可能还需要一列来表示顺序。 ** 使用顺序分析和聚类分析算法来创建模型时，必须另外选择“Key Sequence”列来表示项目顺序。 Key Sequence 列是一种仅在顺序分析和聚类分析模型中使用的特殊嵌套键，它需要唯一数字数据类型。 例如，整数和日期均可用作 Key Sequence 列，但所有序列值必须是唯一的。 除 Key Sequence 列以外，顺序分析和聚类分析模型还具有表示要建模的属性的嵌套表键，例如已购买的产品。  
   
 ### <a name="using-non-key-nested-columns-from-a-nested-table"></a>使用嵌套表中的非键嵌套列  
  定义了事例表和嵌套表之间的联接且选择了用作嵌套表键的列（包含有用的唯一属性）之后，可以将嵌套表的其他列用作模型的输入内容。 嵌套表中的所有列均可用于输入、预测兼输入或仅用于预测。  
@@ -70,6 +67,6 @@ ms.locfileid: "66083247"
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)  
+ [挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093584"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 服务安装概述
@@ -26,14 +26,11 @@ ms.locfileid: "66093584"
   
 -   默认情况下[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，更新日志文件将保存到% Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\Bootstrap\LOG。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序现在可以将更新与原始介质集成，以便同时运行原始介质和更新。 有关详细信息，请参阅[SQL Server 安装中的新增功能](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序现在可以将更新与原始介质集成，以便同时运行原始介质和更新。 有关详细信息，请参阅[SQL Server 安装中的新增功能](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)。  
   
 -   建议您先备份您的数据，然后再应用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务更新。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 获得。 我们建议您定期扫描更新，以便将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例保持为最新并确保其安全。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 将作为完整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装提供。 对于此版本，没有在标准修补程序可执行文件包中提供 Service Pack 以应用到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] RTM 实例，而是提供安装包（包含 2 个文件）。 执行时，将安装预安装 SP1 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 获得。 我们建议您定期扫描更新，以便将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例保持为最新并确保其安全。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 将作为完整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装提供。 对于此版本，没有在标准修补程序可执行文件包中提供 Service Pack 以应用到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] RTM 实例，而是提供安装包（包含 2 个文件）。 执行时，将安装预安装 SP1 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例。  
   
 ## <a name="requirements-and-known-issues"></a>要求和已知问题  
  推荐的磁盘空间要求约为软件包的 2.5 倍，以便安装、下载和解压缩该软件包。 安装完 Service Pack 后，可以删除下载的软件包。 所有临时文件将会自动删除。  
@@ -49,10 +46,10 @@ ms.locfileid: "66093584"
   
 -   重新启动服务和应用程序  
   
-### <a name="prepare-for-a-includesscurrentincludessscurrent-mdmd-update-installation"></a>准备安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
+### <a name="prepare-for-a-sscurrent-update-installation"></a>准备安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
  强烈建议在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新之前执行以下操作：  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份系统数据库**-在安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新之前，请备份`master`、 `msdb`和`model`数据库。 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新会更改这些数据库，使它们与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的早期版本不兼容。 如果决定重新安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] （不包含这些更新），则需要使用这些数据库的备份。  
+-   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份系统数据库**-在安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新之前，请备份`master`、 `msdb`和`model`数据库。 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新会更改这些数据库，使它们与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的早期版本不兼容。 如果决定重新安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] （不包含这些更新），则需要使用这些数据库的备份。  
   
      出于谨慎起见，还应备份用户数据库。  
   
@@ -61,7 +58,7 @@ ms.locfileid: "66093584"
   
 -   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]备份数据库、配置文件和存储库**-更新实例之前[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，应备份以下内容：  
   
-    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库. 默认情况下，这些文件安装在 C:\Program\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Files \MSAS12. 中。\<InstanceID> \olap\data\\。 对于 WOW 安装，默认路径为 C:\ProgramFiles （x86） \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<InstanceID> \olap\data\\。  
+    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 默认情况下，这些文件安装在 C:\Program\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Files \MSAS12. 中。\<InstanceID> \olap\data\\。 对于 WOW 安装，默认路径为 C:\ProgramFiles （x86） \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<InstanceID> \olap\data\\。  
   
     -   msmdsrv.ini 配置文件中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置设置。 默认情况下，该文件位于 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12. 中。\<InstanceID> \olap\config\ 目录。  
   
@@ -72,7 +69,7 @@ ms.locfileid: "66093584"
   
 -   **验证系统数据库是否有足够的可用空间**-如果没有为`master`和`msdb`系统数据库选择自动增长选项，则每个数据库的可用空间必须至少为 500 KB。 若要验证数据库是否有足够的空间，请对 `sp_spaceused` 和 `master` 数据库运行 `msdb` 系统存储过程。 如果其中任一数据库的未分配空间少于 500 KB，则应增加该数据库的大小。  
   
--   **停止服务和应用程序**-若要避免系统重启，请在安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新前，停止与正在升级的实例连接的所有应用程序和服务。 其中包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+-   **停止服务和应用程序**-若要避免系统重启，请在安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新前，停止与正在升级的实例连接的所有应用程序和服务。 其中包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
     > [!NOTE]  
     >  不能停止故障转移群集环境中的服务。 有关详细信息，请参阅本主题后面的故障转移群集安装一节。  
@@ -81,13 +78,13 @@ ms.locfileid: "66093584"
   
 -   如果安装程序确定在安装过程中文件已被锁定，则在安装完成后可能需要重新启动计算机。 如有必要，安装程序将提示您重新启动计算机。  
   
-### <a name="install-includesscurrentincludessscurrent-mdmd-updates"></a>安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
+### <a name="install-sscurrent-updates"></a>安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
  本节介绍安装过程。  
   
 > [!IMPORTANT]  
 >  安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新的帐户必须对要安装这些更新的计算机拥有管理权限。 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
   
-#### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
+#### <a name="starting-a-sscurrent-update"></a>启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
  若要安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新，请运行自解压缩包文件。  
   
  累积更新包（CU）： \<2014 *>-KBxxxxxx-cluster.exe*  
@@ -102,10 +99,10 @@ ms.locfileid: "66093584"
   
  若要将更新应用于故障转移群集中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件，请参阅故障转移群集安装的相关章节。 有关如何在无人参与模式下运行更新安装的详细信息，请参阅[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
-####  <a name="Slipstream"></a>安装中的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]产品更新  
+####  <a name="product-updates-in-sscurrent-installation"></a><a name="Slipstream"></a>安装中的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]产品更新  
  产品更新是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序中的一项功能。 该安装程序可以将最新的产品更新与主产品安装相集成，以便可以同时安装主产品及其适用的更新。 产品更新可以搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update、Windows Server Update Services (WSUS)、本地文件夹或网络共享以获取适用的更新。  在找到最新版本的适用更新后，安装程序将下载这些更新并将其与当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程集成在一起。 产品更新可请求累积更新、Service Pack 或者 Service Pack 连同累积更新。 产品更新功能是已在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1 中提供的 Slipstream 功能的扩展。  
   
-## <a name="updating-a-prepared-image-of-includessnoversionincludesssnoversion-mdmd"></a>更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备映像  
+## <a name="updating-a-prepared-image-of-ssnoversion"></a>更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备映像  
  可以在未完成已准备实例配置的情况下，将更新应用到未配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例。 下面介绍将更新应用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例的不同方法：  
   
 -   更新前面所准备的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例  
@@ -118,10 +115,10 @@ ms.locfileid: "66093584"
   
  如果要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备映像，则需要指定 InstanceID 参数。 有关详细信息和语法示例，请参阅 [Installing Updates from the Command Prompt](../../database-engine/install-windows/installing-updates-from-the-command-prompt.md)。  
   
-## <a name="updating-a-completed-image-of-includessnoversionincludesssnoversion-mdmd"></a>更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成映像  
+## <a name="updating-a-completed-image-of-ssnoversion"></a>更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成映像  
  更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成和已配置实例的过程与更新任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安装实例的过程相同。  
   
-## <a name="rebuilding-a-includesscurrentincludessscurrent-mdmd-failover-cluster-node"></a>重新生成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 故障转移群集节点  
+## <a name="rebuilding-a-sscurrent-failover-cluster-node"></a>重新生成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 故障转移群集节点  
  应用更新之后，如果必须重新生成故障转移群集中的某个节点，请执行以下步骤：  
   
 1.  在故障转移群集中重新生成该节点。 有关重新生成节点的详细信息，请参阅 [Recover from Failover Cluster Instance Failure](../failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)。  
@@ -135,7 +132,7 @@ ms.locfileid: "66093584"
   
  重新启动在运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新安装程序之前关闭的应用程序。 成功安装后，可能还需要立即对升级后的 `master`、`msdb` 和 `model` 数据库再进行一次备份。  
   
-## <a name="uninstalling-updates-from-includesscurrentincludessscurrent-mdmd"></a>从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 卸载更新  
+## <a name="uninstalling-updates-from-sscurrent"></a>从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 卸载更新  
  可以使用“控制面板”中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] “程序和功能” **卸载** 累积更新或 Service Pack。 要查看已安装的更新列表，请通过依次单击 **“开始”** 按钮、 **“控制面板”**、 **“程序”**，然后在 **“程序和功能”** 下单击 **“查看已安装的更新”**，打开“已安装的更新”。 每个累积更新是分别列出的。 但是，如果安装的 Service Pack 版本高于累积更新，累积更新条目将会隐藏起来，并且仅在卸载了 Service Pack 后才会显示出来。  
   
  若要卸载任何 Service Pack 和更新，必须按先新后旧顺序，先卸载应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最新更新或 Service Pack。 在下面的每个示例中，卸载完其他 Service Pack 或更新之后，最后剩下的都是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 累积更新 1：  

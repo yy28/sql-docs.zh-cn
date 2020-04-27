@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087904"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>分类关系图演练（数据挖掘外接程序）
@@ -76,7 +76,7 @@ ms.locfileid: "66087904"
   
      但是，此选项将作为图表数据的筛选器，因此不能再增加项的数量。  
   
-8.  单击“高级”。   
+8.  单击“高级”****。  
   
      在 "**群集选项**" 对话框中，您可以自定义在关系图中使用的形状的可视外观。 您可以更改图形中使用的颜色和用于分类的形状。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66087904"
   
      但是，如果您使用任意特殊格式而不是向导默认生成的格式，包括一些背景，这些数字可能不会显示。  
   
-     **滑块**  
+     **Slider**  
      筛选分类之间的线条。 向上移动滑块会删除最重要关联外的所有关联。  
   
      **明暗度**  

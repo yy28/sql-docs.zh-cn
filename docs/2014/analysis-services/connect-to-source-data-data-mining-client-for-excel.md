@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087103"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>连接到源数据（Excel 数据挖掘客户端）
@@ -28,12 +28,12 @@ ms.locfileid: "66087103"
   
  **与外部数据源的连接。** 生成模型或保存结果时还可以创建与外部数据的连接。 例如，您可以在一个服务器上创建数据挖掘模型，然后使用存储在另一个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例、Excel 数据表或者外部数据源（如 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access）中的数据对该数据挖掘模型执行预测查询。 每次访问新的数据源时，系统都通过一个对话框提示您创建连接。  
   
-##  <a name="bkmk_prereq2"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a>先决条件  
  此版本的外接程序要求您的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例为 SQL Server 2012。 若要连接到早期版本的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，则可使用外接程序的一个单独版本。 有很多外接程序版本支持 SQL Server 2005、SQL Server 2008 和 SQL Server 2008 R2。  
   
  要连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，您必须具有访问数据库服务器的权限。 而且，还必须启用数据挖掘会话，您还必须具有服务器上存储的数据库对象的读或读/写权限。  
   
-##  <a name="bkmk_connect"></a>创建数据挖掘服务器连接  
+##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>创建数据挖掘服务器连接  
  Excel 数据挖掘客户端和 Excel 表分析工具中的 "**连接**" 组提供了用于管理与实例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]连接的工具。  
   
 -   您可以在安装外接程序时创建连接，也可以在以后添加连接。  
@@ -66,7 +66,7 @@ ms.locfileid: "66087103"
   
 7.  单击 "**测试连接**" 以验证服务器和数据库是否可用。  
   
-8.  单击 **"确定"**，然后单击 "**关闭**"。  
+8.  单击“确定”****，然后单击“关闭”****。  
   
 ### <a name="connections-using-a-web-service"></a>使用 Web 服务连接  
  如果您使用瘦客户端体系结构支持浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集和数据，则还可以通过 Web 服务配置到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器的连接。 有关如何定义基于 Web 的客户端的信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书。  
@@ -96,7 +96,7 @@ ms.locfileid: "66087103"
   
 4.  如果选择 "**新建**"，请按照前面所述的过程指定服务器和目录名称，或通过 Web 服务进行连接。  
   
-##  <a name="bkmk_change"></a>更改连接  
+##  <a name="changing-connections"></a><a name="bkmk_change"></a>更改连接  
  可以在同一个工作表中创建多个连接，但一次只能有一个连接处于活动状态。 当前连接的名称显示在**连接**按钮中。  
   
  在 Excel 数据挖掘客户端中，您还可以通过单击 "**跟踪**"，然后单击 "**当前连接**" 来验证当前连接的连接字符串和状态。  
@@ -119,7 +119,7 @@ ms.locfileid: "66087103"
   
      \<驱动器： > \Users\\<Myusername\>\AppData\Local\Microsoft\Data 挖掘外接程序  
   
-##  <a name="bkmk_extconnections"></a>连接到外部数据源  
+##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>连接到外部数据源  
  虽然 "**分析**" 功能区中的工具仅适用于 Excel 中的数据，但使用 "**数据挖掘**" 功能区中的工具可以直接连接到外部数据源，以用作模型的输入或进行采样。  
   
  这些外接程序中的以下工具支持使用外部数据进行数据挖掘：  

@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092762"
 ---
 # <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>用新存储过程代替使用的 xp_sqlagent_proxy_account 扩展存储过程
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理支持多个代理帐户。 您可使用一组新的存储过程来定义这些代理帐户。 有关新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理存储过程的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的以下主题：  
   
 -   "sp_add_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])"  
@@ -49,7 +48,7 @@ ms.locfileid: "66092762"
 >  升级到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之后，使用**xp_sqlagent_proxy_account**扩展存储过程的任何语句都将不起作用。 使用**sp_xp_cmdshell_proxy_account**而不是**xp_sqlagent_proxy_account**来设置**xp_cmdshell**的代理。  
   
 ## <a name="component"></a>组件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理商  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 代理升级问题](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  

@@ -14,22 +14,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c81892d6b83cef87a27a836d9691779a841104a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095060"
 ---
 # <a name="upgrading-will-cause-full-text-search-to-use-instance-level-not-global-word-breakers-and-filters-by-default"></a>升级将导致全文搜索在默认情况下使用实例级(而非全局)的断字符和筛选器
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种方法，允许在实例级别注册新的断字符和筛选器。  
   
 ## <a name="component"></a>组件  
  全文搜索  
   
 ## <a name="description"></a>说明  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许注册实例级的新的断字符和筛选器。 这种实例级注册提供了实例间的功能隔离和安全隔离。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许注册实例级的新的断字符和筛选器。 这种实例级注册提供了实例间的功能隔离和安全隔离。  
   
 ## <a name="corrective-action"></a>纠正措施  
  升级后，使用 `sp_fulltext_service` 设置服务属性和 `load_os_resources`，以便允许加载组件。 必须运行以下命令：  

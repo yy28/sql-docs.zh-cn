@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0bf91032c1514037c754fd489ac266cf68063fa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089724"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server Profiler - 重播配置（高级重播选项）
   在 **“重播配置”** 对话框中，使用 **“高级重播选项”** 选项卡可以指定如何重播跟踪文件。  
   
- 若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”**，连接到要重播跟踪的 SQL Server 实例，再单击 **“高级重播选项”** 选项卡。  
+ 若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”**，连接到要重播跟踪的 SQL Server 实例，再单击 **“高级重播选项”** 选项卡。  
   
 ## <a name="options"></a>选项  
  **重播系统 SPID**  
@@ -45,16 +45,16 @@ ms.locfileid: "66089724"
  **结束时间**  
  源跟踪文件中重播结束的日期和时间。  
   
- **Health monitor 等待间隔（秒）**  
+ **Health Monitor 等待间隔(秒)**  
  指定重播的等待间隔（秒）。 默认值为 3600 秒（1 小时）。 此设置影响进程在被 health monitor 终止前所允许运行的时间。  
   
- **Health monitor 轮询间隔（秒）**  
+ **Health Monitor 轮询间隔(秒)**  
  指定重播过程中的 Health Monitor 轮询间隔（秒）。 默认值为 60 秒。 使用此值，用户可以配置 Health Monitor 对终止候选项的轮询频率。  
   
  **启用 SQL Server 阻塞的进程监视器**  
  启用一个进程，搜索已阻塞或正在阻塞的进程。  
   
- **阻塞的进程监视器等待间隔（秒）**  
+ **阻塞的进程监视器等待间隔(秒)**  
  配置阻塞的进程监视器搜索已阻塞的或正在阻塞的进程的频率。  
   
 ## <a name="see-also"></a>另请参阅  

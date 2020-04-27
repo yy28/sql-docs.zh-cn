@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086729"
 ---
 # <a name="creating-a-data-mining-model"></a>创建数据挖掘模型
@@ -64,7 +64,7 @@ ms.locfileid: "66086729"
  [用于 Excel 的数据挖掘外接程序 &#40;分类向导&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
   
 ## <a name="cluster-data-mining"></a>聚类分析（数据挖掘）  
- **聚**类分析向导生成一个聚类分析模型，用于检测具有相似特征的行组。 "聚类分析**" 是一种无人监督学习技术，在尝试理解新数据中的模式和分组时非常有用。  
+ **聚**类分析向导生成一个聚类分析模型，用于检测具有相似特征的行组。 "聚类分析*segmentation*" 是一种无人监督学习技术，在尝试理解新数据中的模式和分组时非常有用。  
   
  Microsoft 聚类分析算法支持 K-means 聚类分析和期望最大化 (EM) 聚类分析的若干变化形式。  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083828"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法
@@ -39,9 +39,7 @@ ms.locfileid: "66083828"
  网站[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]将收集有关站点用户所访问的页面以及页面访问顺序的信息。 因为该公司提供在线订购，所以用户必须登录到此站点。 这可以为该公司的各个客户配置文件提供点击信息。 通过对此数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法，该公司可以查找具有相同的点击模式或点击顺序的客户组或分类。 然后，该公司可以使用这些分类来分析用户如何在网站中移动，来识别哪些页面与特定商品的销售关系最密切及预测接下来哪些页面最有可能被访问。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是一种混合算法，它综合了聚类分析方法和 Markov 链分析，以识别分类及其顺序。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法的特点之一是使用顺序数据。 此数据通常表示数据集中状态之间的一系列事件或转换，例如，特定用户的一系列产品购买或 Web 点击操作。 该算法会检查所有转换概率，并测量数据集中所有可能顺序之间的差异或距离，以确定最好使用哪些顺序作为聚类分析的输入。 在创建候选顺序列表后，该算法将该顺序信息用作聚类分析的 EM 方法的输入。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是一种混合算法，它综合了聚类分析方法和 Markov 链分析，以识别分类及其顺序。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法的特点之一是使用顺序数据。 此数据通常表示数据集中状态之间的一系列事件或转换，例如，特定用户的一系列产品购买或 Web 点击操作。 该算法会检查所有转换概率，并测量数据集中所有可能顺序之间的差异或距离，以确定最好使用哪些顺序作为聚类分析的输入。 在创建候选顺序列表后，该算法将该顺序信息用作聚类分析的 EM 方法的输入。  
   
  有关实现的详细说明，请参阅 [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)。  
   
@@ -50,11 +48,11 @@ ms.locfileid: "66083828"
   
  顺序分析和聚类分析模型的要求如下：  
   
--   **单个键列**顺序分析和聚类分析模型需要一个用于标识记录的键。  
+-   **单个键列** 顺序分析和聚类分析模型需要一个用于标识记录的键。  
   
--   **序列列**对于顺序数据，模型必须具有包含序列 ID 列的嵌套表。 顺序 ID 可以为任何可排序的数据类型。 例如，可以使用数据类型为网页标识符、整数或文本字符串的列，只要该列可以标识顺序中的事件。 每个顺序只允许有一个顺序标识符，且每个模型中只允许有一种类型的顺序。  
+-   **顺序列** 对于顺序数据，模型必须具有包含顺序 ID 列的嵌套表。 顺序 ID 可以为任何可排序的数据类型。 例如，可以使用数据类型为网页标识符、整数或文本字符串的列，只要该列可以标识顺序中的事件。 每个顺序只允许有一个顺序标识符，且每个模型中只允许有一种类型的顺序。  
   
--   **可选的非序列属性**该算法支持添加与顺序无关的其他属性。 这些属性可以包含嵌套列。  
+-   **可选的非顺序属性** 该算法支持添加与顺序无关的其他属性。 这些属性可以包含嵌套列。  
   
  例如，在前面引用的 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 网站的示例中，顺序分析和聚类分析模型可以包含订单信息（作为事例表）、每个订单的具体客户的人口统计数据（作为非顺序属性）以及包含客户浏览网站和将商品放入购物车的顺序的嵌套表（作为顺序信息）。  
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089133"
 ---
 # <a name="options-text-editorxmltabs-page"></a>选项（“文本编辑器”:“XML”:“选项卡”页）
@@ -43,7 +43,7 @@ ms.locfileid: "66089133"
  设置自动缩进的大小（以空格为单位）。 默认为四个空格。 可能会插入制表符、空格字符，或同时插入这二者，以填充为指定大小。  
   
  **插入空格**  
- 选择此选项后，缩进操作仅插入空格字符，而不会插入制表符。 例如，如果 **“缩进大小”** 设置为 5，则每次按 Tab 键或单击 **主窗口工具栏上的** “增加缩进” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 按钮时会插入五个空格。  
+ 选择此选项后，缩进操作仅插入空格字符，而不会插入制表符。 例如，如果 "**缩进大小**" 设置为5，则每次按 tab 键或单击主[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]窗口工具栏上的 "**增加缩进**" 按钮时，都会插入五个空格字符。  
   
  **保留制表符**  
  选择此选项后，缩进操作会插入尽可能多的制表符。 每个制表符都会填充 **“制表符大小”** 中指定的空格数。 如果 **“缩进大小”** 不是 **“制表符大小”** 的偶数倍，则会添加空格字符补齐。  

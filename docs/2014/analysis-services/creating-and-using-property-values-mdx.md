@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086692"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>创建和使用属性值 (MDX)
@@ -38,6 +38,6 @@ ms.locfileid: "66086692"
  有关单元属性及其用法的详细信息，请参阅[使用单元属性 (MDX)](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 查询基础知识 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 (Analysis Services)](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

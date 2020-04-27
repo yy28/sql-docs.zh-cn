@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086433"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Excel 数据挖掘客户端（SQL Server 数据挖掘外接程序）
@@ -48,7 +48,7 @@ ms.locfileid: "66086433"
   
      Excel 数据挖掘客户端与服务器之间保持一个活动连接，这样，您可以将数据挖掘模型保存到服务器以便用于进一步的测试，或者部署到生产服务器以便获得更高的可伸缩性。  
   
-##  <a name="bkmk_Data"></a>处理数据  
+##  <a name="work-with-data"></a><a name="bkmk_Data"></a>处理数据  
  "**数据准备**" 组包含以下向导，可帮助您查看和清理数据，以便为数据挖掘任务做好准备。 大多数向导还允许您将数据划分为定型集和测试集。  
   
  [浏览数据挖掘外接 &#40;SQL Server 数据&#41;](explore-data-sql-server-data-mining-add-ins.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "66086433"
  [用于 Excel&#41;的预测计算器 &#40;表分析工具](prediction-calculator-table-analysis-tools-for-excel.md)  
  重新**标记**向导帮助您为数据创建新标签，以使其更易于理解分析结果。 例如，您可以使用更具说明性的名称或从列表中选择代表值，来重新命名数据区域。  
   
-##  <a name="bkmk_Model"></a>生成模型并进行分析  
+##  <a name="build-models-and-analyze"></a><a name="bkmk_Model"></a>生成模型并进行分析  
  通过工具栏的 "**数据建模**" 部分的选项，您可以从数据中派生模式;根据属性对数据行进行分组，或浏览关联。 此工具功能区中的向导基于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中强大的数据挖掘算法。 与 Excel 表分析工具中的类似工具不同，使用这些向导可以自定义算法的行为并使用多种数据源。  
   
  [用于 Excel 的数据挖掘外接程序 &#40;分类向导&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
@@ -101,7 +101,7 @@ ms.locfileid: "66086433"
  [&#40;Excel 数据挖掘外接程序的高级建模&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
  是否已熟悉数据挖掘？ 您可以使用**高级**数据建模选项来创建自定义数据结构，并使用其他工具和向导中未包含的自定义项来生成模型。  
   
-##  <a name="bkmk_Validate"></a>测试、查询和验证模型  
+##  <a name="test-query-and-validate-models"></a><a name="bkmk_Validate"></a>测试、查询和验证模型  
  使用 "**准确性和验证**" 工具栏上的向导可以使用行业标准测试来验证模型的准确性，并评估用于创建模型的数据集的可用性。  
   
  [分析&#41;Excel &#40;表分析工具的关键影响因素](analyze-key-influencers-table-analysis-tools-for-excel.md)  
@@ -124,7 +124,7 @@ ms.locfileid: "66086433"
  [高级数据挖掘查询编辑器](advanced-data-mining-query-editor.md)  
  对于高级用户，此工具提供针对 DMX 的拖放界面。 您可以轻松地创建预测查询或新模型，而不必担心语法。  
   
-##  <a name="bkmk_ViewModels"></a>查看模型  
+##  <a name="view-models"></a><a name="bkmk_ViewModels"></a>查看模型  
  所创建的模型将自动打开以供浏览。 但是，也可在服务器上浏览模型并生成新的可视化效果。 使用[Visio 形状](viewing-data-mining-models-in-visio-data-mining-add-ins.md)将模型图导出到可自定义的画布。  
   
  [在 Excel 中浏览模型 &#40;SQL Server 数据挖掘外接程序&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
@@ -133,7 +133,7 @@ ms.locfileid: "66086433"
  [记录挖掘模型 &#40;Excel 数据挖掘外接程序&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
  此向导将创建提供有关模型的数据集和元数据的统计摘要的报表，以便帮助进行调查和解释。  
   
-##  <a name="bkmk_UsageMgmt"></a>管理、记录和部署  
+##  <a name="manage-document-and-deploy"></a><a name="bkmk_UsageMgmt"></a>管理、记录和部署  
  这些工具帮助您连接到某一数据挖掘服务器，管理和导出模型，以及监视数据挖掘活动。  
   
  [管理 &#40;SQL Server 数据挖掘外接程序的模型&#41;](manage-models-sql-server-data-mining-add-ins.md)  

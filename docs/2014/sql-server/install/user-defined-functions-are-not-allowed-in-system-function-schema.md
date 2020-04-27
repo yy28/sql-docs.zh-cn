@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091324"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>system_function_schema 中不允许使用用户定义函数
@@ -68,6 +68,6 @@ ms.locfileid: "66091324"
  [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)   
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [删除修改系统对象的语句](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
- [删除用于去除系统对象的语句](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  
+ [删除用于删除系统对象的语句](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  
   
   

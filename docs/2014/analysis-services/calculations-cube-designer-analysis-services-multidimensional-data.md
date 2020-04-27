@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088292"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>计算（多维数据集设计器）（Analysis Services - 多维数据）
@@ -34,7 +34,7 @@ ms.locfileid: "66088292"
      对于高级用户，此视图显示与多维数据集关联的整个 MDX 脚本，以及显示可用于多维数据集的元数据、函数和工具。  
   
 ## <a name="panes"></a>窗格  
- **工具栏**  
+ **Toolbar**  
  使用窗体视图和脚本视图中的工具栏可以执行此选项卡上的常规操作。有关此窗格的详细信息，请参阅[Toolbar &#40;计算 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **脚本组织程序**  

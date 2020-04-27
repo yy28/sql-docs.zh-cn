@@ -13,32 +13,32 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089310"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>选项（查询结果-SQL Server-到网格页）
-  使用此页可以指定以网格格式显示查询结果集的选项。 对这些选项所做的更改只应用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]于新的查询。 若要更改当前查询的选项，请在 "**查询**" 菜单上单击 "**查询选项**"，或在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查询窗口中右键单击并选择 "**查询选项**"。 在 **“查询选项”** 对话框的左窗格中，在 **“结果”** 下，单击 **“网格”**。  
+  使用此页可以指定以网格格式显示查询结果集的选项。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在 "**查询**" 菜单上单击 "**查询选项**"，或在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查询窗口中右键单击并选择 "**查询选项**"。 在 **“查询选项”** 对话框的左窗格中，在 **“结果”** 下，单击 **“网格”**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **在结果集中包括查询**  
  作为查询输出的一部分返回查询文本。  
   
- **在复制或保存结果时包括列标题**  
+ **复制或保存结果时包括列标题**  
  在将结果复制到剪贴板或保存到文件时若要包括列标题，请选中此复选框。 如果希望保存或复制的结果数据只有数据而没有列标题，请清除此复选框。  
   
  **执行后放弃结果**  
  禁止在查看窗格中显示查询结果。 结果将在执行查询之后立即放弃。 指定此选项可帮助节省内存。  
   
- **在单独的选项卡中显示结果**  
+ **在单独选项卡中显示结果**  
  选中此复选框可在新选项卡中显示结果集，而不是在查询文档窗口的底部显示。  
   
- **执行查询后切换到 "结果" 选项卡**  
+ **执行查询后切换到“结果”选项卡**  
  单击此项可在执行查询时，将屏幕焦点自动设置到结果窗格。  
   
- **检索的最大字符数**  
+ **检索的最多字符数**  
  **非 XML 数据**：  
   
  输入一个介于 1 到 65535 之间的数字以指定每个单元中显示的最大字符数。  
@@ -48,7 +48,7 @@ ms.locfileid: "66089310"
   
  **XML 数据**：  
   
- 选择 **1 MB**、 **2 MB**或 **5 MB**。 选择 **“无限制”** 将检索所有字符。  
+ 选择**1 MB**、 **2 MB**或**5 mb**。 选择 "**无限制**" 将检索所有字符。  
   
  **重置为默认值**  
  将此页上的所有值重置为原始默认值。  

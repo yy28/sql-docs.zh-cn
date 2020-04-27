@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094366"
 ---
 # <a name="installation-how-to-topics"></a>安装操作指南主题
@@ -31,7 +31,7 @@ ms.locfileid: "66094366"
 |[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|提供运行无人参与安装的示例语法和安装参数的过程主题。|  
 |[使用配置文件安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)|提供通过配置文件运行安装程序的示例语法和安装参数的过程主题。|  
 |[安装 PowerPivot for SharePoint](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)|提供指向用于在不同 SharePoint 服务器配置中安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的其他过程的链接的过程主题。|  
-|[将功能添加到 SQL Server 2014 &#40;安装程序的实例&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|介绍如何更新现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例的组件的过程主题。|  
+|[将功能添加到 SQL Server 2014 &#40;安装程序的实例&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|介绍如何更新现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的组件的过程主题。|  
 |[删除 SQL Server 2014 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|介绍如何修复损坏的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装的过程主题。|  
 |[重命名承载 SQL Server 独立实例的计算机](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|介绍如何更新存储在 sys.servers 中的系统元数据的过程主题。|  
 |[查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|介绍如何在安装日志文件中检查错误的过程主题。|  
@@ -39,7 +39,7 @@ ms.locfileid: "66094366"
 |[升级操作指南主题](../../../2014/sql-server/install/upgrade-how-to-topics.md)|介绍如何升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立实例或群集实例的过程主题。|  
   
 ## <a name="see-also"></a>另请参阅  
- [计划 SQL Server 安装](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
+ [规划 SQL Server 安装](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [升级到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
  [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   

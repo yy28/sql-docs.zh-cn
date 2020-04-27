@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d41763582632a92b3a38bdbd67ee55b65f95b6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095761"
 ---
 # <a name="database-maintenance-plans-superseded"></a>数据库维护计划被取代
@@ -36,7 +36,6 @@ ms.locfileid: "66095761"
 -   "**数据库完整性检查**" 任务的 "**尝试修复任何次要问题**" 选项  
   
 ## <a name="corrective-action"></a>纠正措施  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 阻止日志传送包括在数据库维护计划中。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“日志传送”。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 阻止日志传送包括在数据库维护计划中。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“日志传送”。  
   
   

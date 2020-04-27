@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083153"
 ---
 # <a name="processing-data-mining-objects"></a>处理数据挖掘对象
-  数据挖掘对象在处理之前只是一个空容器。 *处理*数据挖掘模型也称为 "*定型*"。  
+  数据挖掘对象在处理之前只是一个空容器。 “处理** ”数据挖掘模型也称为“定型 **”。  
   
- **处理挖掘结构：** 挖掘结构从外部数据源获取数据（由列绑定和使用情况元数据定义），并读取数据。 挖掘结构将完全读取此数据，然后对这些数据进行分析以提取各种统计信息。 Analysis Services 在本地缓存中存储数据的简洁表示形式，此形式适合于由数据挖掘算法进行分析。 处理模型之后，您可以保留或删除此缓存。 默认情况下，将存储此缓存。 有关详细信息，请参阅 [Process a Mining Structure](process-a-mining-structure.md)。  
+ **处理挖掘结构：** 挖掘结构从列绑定和使用情况元数据定义的外部数据源获取数据，并读取此数据。 挖掘结构将完全读取此数据，然后对这些数据进行分析以提取各种统计信息。 Analysis Services 在本地缓存中存储数据的简洁表示形式，此形式适合于由数据挖掘算法进行分析。 处理模型之后，您可以保留或删除此缓存。 默认情况下，将存储此缓存。 有关详细信息，请参阅 [Process a Mining Structure](process-a-mining-structure.md)。  
   
- **处理挖掘模型：** 挖掘模型为空，只包含定义，直到处理。 若要处理挖掘模型，必须已经处理了该模型所基于的挖掘结构。 挖掘模型从挖掘结构缓存获取数据，应用该模型上已创建的任何筛选器，然后传递通过算法设置的数据以检测模式。 处理模型之后，该模型仅存储处理的结果，而不会存储数据自身。 有关详细信息，请参阅 [处理挖掘模型](process-a-mining-model.md)。  
+ **处理挖掘模型：** 挖掘模型在处理之前为空，仅包含定义。 若要处理挖掘模型，必须已经处理了该模型所基于的挖掘结构。 挖掘模型从挖掘结构缓存获取数据，应用该模型上已创建的任何筛选器，然后传递通过算法设置的数据以检测模式。 处理模型之后，该模型仅存储处理的结果，而不会存储数据自身。 有关详细信息，请参阅 [处理挖掘模型](process-a-mining-model.md)。  
   
  下图说明了处理挖掘结构和挖掘模型时的数据流。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "66083153"
  [数据挖掘 &#40;钻取查询&#41;](drillthrough-queries-data-mining.md)   
  [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
  [挖掘模型 &#40;Analysis Services 数据挖掘&#41;](mining-models-analysis-services-data-mining.md)   
- [逻辑体系结构 &#40;Analysis Services 数据挖掘&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [逻辑体系结构（Analysis Services - 数据挖掘）](logical-architecture-analysis-services-data-mining.md)  
   
   

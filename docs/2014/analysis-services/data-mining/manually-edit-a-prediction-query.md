@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084212"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手动编辑预测查询
@@ -45,6 +45,6 @@ ms.locfileid: "66084212"
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘查询](data-mining-queries.md)   
  [&#40;数据挖掘的预测查询生成器&#41;](../prediction-query-builder-data-mining.md)   
- [第6课：创建和使用预测 &#40;基本数据挖掘教程&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [第 6 课：创建和使用预测（数据挖掘基础教程）](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

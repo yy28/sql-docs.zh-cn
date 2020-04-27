@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083530"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
@@ -101,11 +101,11 @@ ms.locfileid: "66083530"
  NODE_UNIQUE_NAME  
  节点的唯一名称。 模型父节点的名称始终都是 **TS**。  
   
- **ARTXP：** 每个节点由 TS 表示，后跟一个十六进制数值。 节点的顺序无关紧要。  
+ **ARTXP：** 每个节点的表示方法均为 TS 后面加一个十六进制数值。 节点的顺序无关紧要。  
   
  例如，直接位于 TS 树下面的 ARTXP 节点的编号可能为 TS00000001-TS0000000b。  
   
- **ARIMA：** ARIMA 树中的每个节点都由 TA 后跟一个十六进制数值。 子节点包含父节点的唯一名称，该名称后跟一个指示该节点中序列的另一个十六进制数字。  
+ **ARIMA：** ARIMA 树中的每个节点的表示方法均为 TA 后面加一个十六进制数值。 子节点包含父节点的唯一名称，该名称后跟一个指示该节点中序列的另一个十六进制数字。  
   
  所有 ARIMA 树的结构均完全相同。 每个根均包含节点和命名约定，下表中将举例说明这一情况：  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66083530"
  NODE_TYPE  
  时序模型可输出以下节点类型，具体情况取决于使用的算法。  
   
- **ARTXP**  
+ **ARTXP：**  
   
 |节点类型 ID|说明|  
 |------------------|-----------------|  
@@ -128,7 +128,7 @@ ms.locfileid: "66083530"
 |16（时序树）|对应于可预测属性和序列的 ARTXP 树的根。|  
 |15（时序）|ARTXP 树中的叶节点。|  
   
- **ARIMA**  
+ **ARIMA：**  
   
 |节点类型 ID|说明|  
 |------------------|-----------------|  
@@ -142,7 +142,7 @@ ms.locfileid: "66083530"
   
  此属性主要用于显示目的。  
   
- **ARTXP：** 包含节点的拆分条件，显示为属性与值范围的组合。  
+ **ARTXP：** 包含适用于节点的拆分条件，显示为属性与值范围的组合。  
   
  **ARIMA：** 包含 ARIMA 公式的缩写形式。  
   
@@ -157,33 +157,33 @@ ms.locfileid: "66083530"
  NODE_DESCRIPTION  
  当前节点中规则、拆分或公式的文本形式的说明。  
   
- **ARTXP：** 有关详细信息，请参阅[了解 ARTXP 树](#bkmk_ARTXP_1)。  
+ **ARTXP：** 有关详细信息，请参阅 [了解 ARTXP 树](#bkmk_ARTXP_1)。  
   
- **ARIMA：** 有关详细信息，请参阅[了解 ARIMA 树](#bkmk_ARIMA_1)。  
+ **ARIMA：** 有关详细信息，请参阅 [了解 ARIMA 树](#bkmk_ARIMA_1)。  
   
  NODE_RULE  
  当前节点中规则、拆分或公式的 XML 说明。  
   
  **ARTXP：** NODE_RULE 通常对应于 NODE_CAPTION。  
   
- **ARIMA：** 有关详细信息，请参阅[了解 ARIMA 树](#bkmk_ARIMA_1)。  
+ **ARIMA：** 有关详细信息，请参阅 [了解 ARIMA 树](#bkmk_ARIMA_1)。  
   
  MARGINAL_RULE  
  该节点特定的拆分或内容的 XML 说明。  
   
  **ARTXP：** MARGINAL_RULE 通常对应于 NODE_DESCRIPTION。  
   
- **ARIMA：** 始终为空白;改用 NODE_RULE。  
+ **ARIMA：** 始终为空，改用 NODE_RULE。  
   
  NODE_PROBABILITY  
- **ARTXP：** 对于树节点，始终为1。 对于叶节点，表示从模型根节点到达该节点的概率。  
+ **ARTXP：** 对于树节点，始终为 1。 对于叶节点，表示从模型根节点到达该节点的概率。  
   
- **ARIMA：** 始终为0。  
+ **ARIMA：** 始终为 0。  
   
  MARGINAL_PROBABILITY  
- **ARTXP：** 对于树节点，始终为1。 对于叶节点，表示从其直接父节点到达该节点的概率。  
+ **ARTXP：** 对于树节点，始终为 1。 对于叶节点，表示从其直接父节点到达该节点的概率。  
   
- **ARIMA：** 始终为0。  
+ **ARIMA：** 始终为 0。  
   
  NODE_DISTRIBUTION  
  包含节点的概率直方图的表。 在时序模型中，该嵌套表包含组成实际回归公式所需的全部组件。  
@@ -197,7 +197,7 @@ ms.locfileid: "66083530"
  NODE_SUPPORT  
  支持此节点的事例的数目。  
   
- **ARTXP：** 对于 " **（全部）** " 节点，指示分支中包括的时间段的总数。  
+ **ARTXP：** 对于“(全部)”**** 节点，指示分支中包括的时间段的总数。  
   
  对于终端节点，指示 NODE_CAPTION 所描述的范围内包括的时间段的数目。 终端节点中时间段的数目始终等于分支“(全部)”**** 节点的 NODE_SUPPORT 值。  
   
@@ -209,18 +209,18 @@ ms.locfileid: "66083530"
  MSOLAP_NODE_SCORE  
  描述树或拆分的信息值的特性的数值。  
   
- **ARTXP：** 对于没有拆分的节点，值始终为0.0。 对于包含拆分的节点，值表示该拆分的受关注度分数。  
+ **ARTXP：** 对于没有拆分的节点，值始终为 0.0。 对于包含拆分的节点，值表示该拆分的受关注度分数。  
   
  有关计分方法的详细信息，请参阅[功能选择（数据挖掘）](feature-selection-data-mining.md)。  
   
- **ARIMA：** ARIMA 模型的 Bayesian 信息标准（BIC）分数。 对与该公式相关的所有 ARIMA 节点设置相同的分数。  
+ **ARIMA：**  ARIMA 模型的 Bayesian 信息标准 (BIC) 分数。 对与该公式相关的所有 ARIMA 节点设置相同的分数。  
   
  MSOLAP_NODE_SHORT_CAPTION  
- **ARTXP：** 与 NODE_DESCRIPTION 相同的信息。  
+ **ARTXP：**  与 NODE_DESCRIPTION 相同的信息。  
   
- **ARIMA：** 与 NODE_CAPTION 相同的信息：也就是说，ARIMA 公式的缩写形式。  
+ **ARIMA：** 与 NODE_CAPTION 相同的信息，即 ARIMA 公式的缩写。  
   
-##  <a name="bkmk_ARTXP_1"></a>了解 ARTXP 树  
+##  <a name="understanding-the-artxp-tree"></a><a name="bkmk_ARTXP_1"></a>了解 ARTXP 树  
  ARTXP 模型将线性数据区与根据某些其他因素进行拆分的数据区明确分隔开。 只要能够直接以独立变量的函数表示可预测属性的变化，就可以通过计算回归公式来表示该关系。  
   
  例如，如果大多数数据序列的时间和销售额直接相关，则每个序列将包含在一个时序树 (NODE_TYPE =16) 中，该树没有对应于每个数据序列的子节点，而只有对应于回归公式的子节点。 但是，如果为非线性关系，则 ARTXP 时序树可以根据条件拆分为子节点，正如决策树模型一样。 使用 **Microsoft 一般内容树查看器** 查看模型内容，可以看到发生拆分的位置以及拆分影响趋势线的方式。  
@@ -246,7 +246,7 @@ ms.locfileid: "66083530"
 ### <a name="elements-of-the-artxp-time-series-formula"></a>ARTXP 时序公式的元素  
  若要查看 ARTXP 树或分支的完整公式，建议使用 **Microsoft 时序查看器** 的 [“挖掘图例”](browse-a-model-using-the-microsoft-time-series-viewer.md)，其将以可读格式显示所有常量。  
   
--   [查看时序模型的公式 &#40;数据挖掘&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [查看时序模型的公式（数据挖掘）](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  下一节将给出示例公式并解释基本术语。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "66083530"
 #### <a name="model-content-for-an-artxp-formula"></a>ARTXP 公式的模型内容  
  下表使用 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)中所示的相关节点的内容，显示该公式的相同信息。  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|支持|PROBABILITY|方差|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|方差|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Quantity(R250 Europe,y-intercept)|21.3223433563772|11|0|1.65508795539661|11（截距）|  
 |Quantity(R250 Europe,-1)|0.0691694140876526|0|0|0|7（系数）|  
@@ -308,7 +308,7 @@ FROM Forecasting.CONTENT
 WHERE NODE_TYPE = 15  
 ```  
   
-##  <a name="bkmk_ARIMA_1"></a>了解 ARIMA 树  
+##  <a name="understanding-the-arima-tree"></a><a name="bkmk_ARIMA_1"></a> 了解 ARIMA 树  
  ARIMA 模型中的每个结构都对应一个“ ** 周期”或“ ** 周期性结构”。 周期性结构指数据在整个数据序列中重复的模式。 该模式在统计限度内允许发生微小变动。 周期根据定型数据中使用的默认时间单位进行测量。 例如，如果定型数据提供日销售数据，则默认时间单位为一天，且所有周期性结构均定义为指定的天数。  
   
  该算法检测到的每个周期均获取其各自的结构节点。 例如，如果正在分析日销售数据，则模型可能会检测到表示周的周期性结构。 在这种情况下，该算法将在完成的模型中创建两个周期性结构：一个用于默认的日{1}周期，表示为，另一个用于{7}表示的周。  
@@ -375,11 +375,11 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>ARIMA 的时序公式  
  若要查看各个 ARIMA 节点的完整公式，建议使用 **Microsoft 时序查看器** 的 [“挖掘图例”](browse-a-model-using-the-microsoft-time-series-viewer.md)，由此可以查看已采用一致格式构成的公式的自动回归阶数、移动平均值和其他元素。  
   
--   [查看时序模型的公式 &#40;数据挖掘&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [查看时序模型的公式（数据挖掘）](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  本节将给出示例公式并解释基本术语。  
   
-####  <a name="bkmk_ARIMA_2"></a>ARIMA 公式的挖掘图例  
+####  <a name="mining-legend-for-arima-formula"></a><a name="bkmk_ARIMA_2"></a>ARIMA 公式的挖掘图例  
  以下示例将给出模型的某一组成部分的 ARIMA 公式，如挖掘图例中所示。 若要查看该公式，请使用“Microsoft 时序查看器”**** 打开 **Forecasting** 模型，单击“模型”**** 选项卡，选择对应于 **R250: Europe** 数据序列的树，然后单击表示在 2003/7/5 或其后日期的日期序列的节点。 挖掘图例以可读格式构造所有常量，如以下示例所示：  
   
  ARIMA 公式：  
@@ -396,9 +396,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  数据序列的 ARIMA 模型包含四种不同格式的基本周期性公式，可根据不同的应用选用不同的公式。  
   
- **NODE_CAPTION：** 显示公式的缩写形式。 缩写指出表示的周期性结构的数目以及这些结构有多少系数。 例如，如果公式缩写为 {4,0,6}，则节点表示一个带有 6 个系数的周期性结构。 如果短格式类似于{2,0,8} x {1,0,0}（4），则节点包含两个周期性结构。  
+ **NODE_CAPTION：** 显示公式的缩写。 缩写指出表示的周期性结构的数目以及这些结构有多少系数。 例如，如果公式缩写为 {4,0,6}，则节点表示一个带有 6 个系数的周期性结构。 如果短格式类似于{2,0,8} x {1,0,0}（4），则节点包含两个周期性结构。  
   
- **节点说明：** 显示公式的长格式，这也是 "**挖掘图例**" 中显示的公式的格式。 公式的长格式类似于公式的缩写，不同之处在于前者显示系数的实际值，而后者是进行计数。  
+ **NODE DESCRIPTION：** 显示公式的长格式，这也是 **“挖掘图例”** 中显示的公式的格式。 公式的长格式类似于公式的缩写，不同之处在于前者显示系数的实际值，而后者是进行计数。  
   
  **NODE_RULE：** 显示公式的 XML 表示形式。 根据节点类型的不同，XML 表示形式可以包括单个或多个周期性结构。 下表中说明如何将 XML 节点上滚到 ARIMA 模型的较高级别。  
   
@@ -409,9 +409,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29（ARIMA 自动回归）|列出单个周期性结构的期限。|  
 |30（ARIMA 移动平均值）|列出单个周期性结构的系数。|  
   
- **NODE_DISTRIBUTION：** 在嵌套表中显示公式的条款，您可以查询该公式以获得特定的词。 节点分布表遵从与 XML 规则相同的层次结构。 亦即 ARIMA 序列的根节点 (NODE_TYPE = 27) 包含整个公式的截距值和周期，公式中可能包含多个周期，而该序列的子节点仅包含某个周期性结构或该周期性结构的子节点特有的信息。  
+ **NODE_DISTRIBUTION：** 在嵌套表中显示公式中的各项，可查询该表获取特定的项。 节点分布表遵从与 XML 规则相同的层次结构。 亦即 ARIMA 序列的根节点 (NODE_TYPE = 27) 包含整个公式的截距值和周期，公式中可能包含多个周期，而该序列的子节点仅包含某个周期性结构或该周期性结构的子节点特有的信息。  
   
-|节点类型|Attribute|值类型|  
+|节点类型|属性|值类型|  
 |---------------|---------------|----------------|  
 |27（ARIMA 根）|截距<br /><br /> 周期|11|  
 |28（ARIMA 周期性结构）|周期<br /><br /> 自动回归阶数<br /><br /> 差分阶数<br /><br /> 移动平均值阶数|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  

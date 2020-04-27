@@ -13,25 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086581"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>多维数据集结构（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **中的** 多维数据集设计器 **的** “多维数据集结构” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 选项卡，创建和修改度量值组和度量值，添加多维数据集维度，以及通过关联数据源视图显示多维数据集中包含的对象。  
   
- 
-  **“多维数据集结构”** 选项卡包含以下窗格：  
+ **“多维数据集结构”** 选项卡包含以下窗格：  
   
 ## <a name="panes"></a>窗格  
   
 |窗格|定义|  
 |----------|----------------|  
-|**工具栏**|使用工具栏可以执行此选项卡中的常见操作。有关此窗格的详细信息，请参阅[Toolbar &#40;多维数据集结构 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)。|  
+|**Toolbar**|使用工具栏可以执行此选项卡中的常见操作。有关此窗格的详细信息，请参阅[Toolbar &#40;多维数据集结构 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**度量值组**|使用 **“度量值”** 窗格，可以创建和修改所选多维数据集的度量值和度量值组。 有关此窗格的详细信息，请参阅[度量值（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)。|  
-|**维度**|使用 **“维度”** 窗格，可以包括和修改所选多维数据集的多维数据集维度。 有关此窗格的详细信息，请参阅[维度（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)。|  
+|**Dimensions**|使用 **“维度”** 窗格，可以包括和修改所选多维数据集的多维数据集维度。 有关此窗格的详细信息，请参阅[维度（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**“数据源视图”**|使用 **“数据源视图”** 窗格，可以查看和编辑与所选多维数据集相关联的数据源视图。 有关此窗格的详细信息，请参阅[数据源视图（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](data-source-view-cube-designer-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="see-also"></a>另请参阅  

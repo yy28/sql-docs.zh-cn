@@ -19,18 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085473"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中创建一个 DMX 查询
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一组功能，可帮助您创建针对挖掘模型和挖掘结构的预测查询、内容查询和数据定义查询。  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都提供了图形预测查询生成器，旨在简化编写预测查询并将数据集映射到模型的过程。  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都提供了图形预测查询生成器，旨在简化编写预测查询并将数据集映射到模型的过程。  
   
 -   模板资源管理器中提供的查询模板可快速创建多种类型的 DMX 查询（包括许多类型的预测查询）。 提供了针对内容查询、使用嵌套数据集的查询、从挖掘结构返回事例的查询以及数据定义查询的模板。  
   
@@ -38,9 +36,8 @@ ms.locfileid: "66085473"
   
  本主题介绍如何通过使用元数据资源管理器和 DMX 查询编辑器来生成 DMX 查询。  
   
-##  <a name="BKMK_Templates"></a>DMX 查询模板  
- 模板资源管理器中有创建 DMX 基本查询的模板。 
-  **DMX** 文件夹包含数据挖掘模板，这些模板划分为以下类别：  
+##  <a name="dmx-query-templates"></a><a name="BKMK_Templates"></a> DMX 查询模板  
+ 模板资源管理器中有创建 DMX 基本查询的模板。 **DMX** 文件夹包含数据挖掘模板，这些模板划分为以下类别：  
   
 -   **模型内容**  
   
@@ -53,13 +50,13 @@ ms.locfileid: "66085473"
  还可以为经常运行的查询或命令创建自定义模板。  
   
 ## <a name="xmla-query-templates"></a>XMLA 查询模板  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还提供了 XMLA 查询模板。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还提供了 XMLA 查询模板。  
   
  可使用 XMLA 和 DMX 执行的查询类型之间存在某种重叠。 例如，可通过使用 DMX 或数据挖掘架构行集创建一些模型内容查询，但是架构行集有时包含不在 DMX 内容查询显示的信息。  
   
  DMX 和 XMLA 中处理操作的方式之间也存在一些关键差异。 例如，可使用 XMLA 执行管理操作（例如，备份整个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库），但如果需要备份单个挖掘模型，则 DMX 会提供一个简单命令 [EXPORT (DMX)](/sql/dmx/export-dmx)，使用该命令执行此操作更佳。  
   
-##  <a name="BKMK_Building_Queries"></a>生成和运行 DMX 查询  
+##  <a name="build-and-run-a-dmx-query"></a><a name="BKMK_Building_Queries"></a> 生成和运行 DMX 查询  
   
 #### <a name="open-a-new-dmx-query-window"></a>打开新的 DMX 查询窗口  
   
@@ -89,6 +86,6 @@ ms.locfileid: "66085473"
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘查询接口](data-mining-query-tools.md)   
- [&#40;DMX&#41; 的数据挖掘扩展插件](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

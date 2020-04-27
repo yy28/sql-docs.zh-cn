@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083902"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes 算法技术参考
@@ -36,10 +36,9 @@ ms.locfileid: "66083902"
  有关如何调整所有模型中的概率以解释可能的缺失值的说明，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
   
 ### <a name="feature-selection"></a>功能选择  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法会自动执行功能选择，以限制生成模型时要考虑的值的数量。 有关详细信息，请参阅[功能选择（数据挖掘）](feature-selection-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法会自动执行功能选择，以限制生成模型时要考虑的值的数量。 有关详细信息，请参阅[功能选择（数据挖掘）](feature-selection-data-mining.md)。  
   
-|算法|分析方法|注释|  
+|算法|分析方法|说明|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|Naive Bayes 仅接受离散或离散化的属性，因此它不能使用兴趣性分数。|  
   
@@ -52,12 +51,10 @@ ms.locfileid: "66083902"
 -   若要限制要为属性考虑的值的数量，请降低 MINIMUM_STATES 的值。  
   
 ## <a name="customizing-the-naive-bayes-algorithm"></a>自定义 Naive Bayes 算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法支持多个参数，这些参数可影响所生成的挖掘模型的行为、性能以及准确性。 您还可以对模型列设置建模标志来控制数据的处理方式，或者对挖掘结构设置标志来指定如何处理缺失值或 Null 值。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法支持多个参数，这些参数可影响所生成的挖掘模型的行为、性能以及准确性。 您还可以对模型列设置建模标志来控制数据的处理方式，或者对挖掘结构设置标志来指定如何处理缺失值或 Null 值。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法支持多个参数，这些参数可影响所生成的挖掘模型的性能和准确性。 下表对各参数进行了说明：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法支持多个参数，这些参数可影响所生成的挖掘模型的性能和准确性。 下表对各参数进行了说明：  
   
  *MAXIMUM_INPUT_ATTRIBUTES*  
  指定算法在调用功能选择之前可以处理的最大输入属性数。 如果将此值设置为 0，则为输入属性禁用功能选择。  
@@ -80,8 +77,7 @@ ms.locfileid: "66083902"
  默认值为 100。  
   
 ### <a name="modeling-flags"></a>建模标志  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  
   
 |建模标志|说明|  
 |-------------------|-----------------|  
@@ -92,8 +88,7 @@ ms.locfileid: "66083902"
  一个 Naive Bayes 树模型必须包含一个键列、至少一个可预测列和至少一个输入列。 所有属性均不能为连续属性；如果数据包含连续数值数据，则将会被忽略或离散化。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
   
 |列|内容类型|  
 |------------|-------------------|  
@@ -106,6 +101,6 @@ ms.locfileid: "66083902"
 ## <a name="see-also"></a>另请参阅  
  [Microsoft Naive Bayes 算法](microsoft-naive-bayes-algorithm.md)   
  [Naive Bayes 模型查询示例](naive-bayes-model-query-examples.md)   
- [Naive Bayes 模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

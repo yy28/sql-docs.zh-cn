@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084742"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
@@ -40,7 +40,7 @@ ms.locfileid: "66084742"
   
 -   您是否需要能针对统一数据集来测试模型？ 如果需要，请考虑使用为测试保留一些数据的选项。 您可以选择一个百分比，并根据需要用指定行数设置其上限。  
   
-##  <a name="BKMK_Using_DM_Wizard"></a>启动数据挖掘向导  
+##  <a name="starting-the-data-mining-wizard"></a><a name="BKMK_Using_DM_Wizard"></a> 启动数据挖掘向导  
  若要使用数据挖掘向导，则必须已在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中打开至少包含一个数据挖掘或 OLAP 项目的解决方案。  
   
 -   如果你的解决方案已做好数据挖掘准备，则只需在解决方案资源管理器中右键单击“挖掘结构”**** 节点并选择“新建挖掘结构”**** 即可启动该向导。  
@@ -51,7 +51,7 @@ ms.locfileid: "66084742"
   
  接下来，您将创建挖掘结构和一个关联的数据挖掘模型。 您也可以只创建挖掘结构并在稍后添加模型，但先创建测试模型通常最为轻松。  
   
-###  <a name="BKMK_Relational"></a>关系与 OLAP 挖掘模型  
+###  <a name="relational-vs-olap-mining-models"></a><a name="BKMK_Relational"></a> 关系与OLAP 挖掘模型  
  为您提供的下一个重要选项可让您确定是使用关系数据源还是使模型基于多维 (OLAP) 数据。  
   
  此时，数据挖掘向导分为两个路径，具体取决于您的数据源是关系数据源还是位于多维数据集中。 除数据选择进程之外的其他所有内容都是相同的算法选择、添加维持数据集的能力等，但选择多维数据集数据比使用关系数据稍微复杂一些。 （如果您基于多维数据集创建模型，则在最后还会获得一些其他选项。）  
@@ -68,10 +68,9 @@ ms.locfileid: "66084742"
 >  无需拥有多维数据集或 OLAP 数据库即可进行数据挖掘。 除非数据已存储在多维数据集中，或者要挖掘 OLAP 维度或 OLAP 聚合或计算的结果，否则，我们建议您将关系表或数据源用于数据挖掘。  
   
 ### <a name="choosing-an-algorithm"></a>选择算法  
- 接下来，您必须决定处理数据时要使用的算法。 此决定可能很难做出。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的每种算法都有不同的功能并会产生不同的结果，因此，在确定最适合您的数据和业务问题的模型之前，您可以试用多种不同的模型。 请参阅以下主题以查看每种算法最适合的任务的说明：  
+ 接下来，您必须决定处理数据时要使用的算法。 此决定可能很难做出。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的每种算法都有不同的功能并会产生不同的结果，因此，在确定最适合您的数据和业务问题的模型之前，您可以试用多种不同的模型。 请参阅以下主题以查看每种算法最适合的任务的说明：  
   
- [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)  
   
  同样，可以使用不同的算法创建多个模型，也可以更改算法的参数来创建不同的模型。 您不应局限于所选的算法，最好的方法是对同一数据创建几个不同的模型。  
   
@@ -83,11 +82,11 @@ ms.locfileid: "66084742"
 ### <a name="additional-features"></a>其他功能  
  为了帮助您选择正确的数据和正确配置数据源，数据挖掘向导还提供了以下功能：  
   
--   **自动检测数据类型**：该向导将检查列值的唯一性和分布情况，然后建议使用最佳数据类型，并为数据建议使用类型。 您可以从列表中选择值来覆盖这些建议。  
+-   **自动检测数据类型**：该向导将检查列值的唯一性和分布情况，然后提供建议的最佳数据类型和数据使用类型。 您可以从列表中选择值来覆盖这些建议。  
   
--   **变量建议**：您可以单击对话框并启动一个分析器，该分析器计算模型中包含的各列之间的相关性，并确定是否有任何列可能预测值结果属性，因为到目前为止模型的配置。 您可以通过键入其他值来覆盖这些建议。  
+-   **变量建议**：您可以单击对话框并启动用于计算模型中包含的各个列之间的关联的分析器，并确定在当前给定模型配置的情况下，是否有任何列可能成为结果属性的预测器。 您可以通过键入其他值来覆盖这些建议。  
   
--   **功能选择**：大多数算法都将自动检测到良好的预测值的列并优先使用这些列。 在包含的值过多的列中，将应用 *功能选择* 来减少数据的基数并增大找到有用模式的机会。 您可以使用模型参数来影响功能选择行为。  
+-   **功能选择**：大多数算法都将自动检测作为良好的预测器的列并优先使用这些列。 在包含的值过多的列中，将应用 *功能选择* 来减少数据的基数并增大找到有用模式的机会。 您可以使用模型参数来影响功能选择行为。  
   
 -   **自动多维数据集切片**：如果挖掘模型基于 OLAP 数据源，则会自动提供使用多维数据集属性对模型进行切片的功能。 这对于创建基于多维数据集数据子集的模型很适用。  
   
@@ -105,15 +104,15 @@ ms.locfileid: "66084742"
 ## <a name="related-content"></a>相关内容  
  若要了解有关在创建数据挖掘模型时需做出的决策的详细信息，请参阅以下链接：  
   
- [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)  
   
- [内容类型 &#40;数据挖掘&#41;](content-types-data-mining.md)  
+ [内容类型（数据挖掘）](content-types-data-mining.md)  
   
- [数据挖掘 &#40;的数据类型&#41;](data-types-data-mining.md)  
+ [数据类型（数据挖掘）](data-types-data-mining.md)  
   
- [功能选择 &#40;数据挖掘&#41;](feature-selection-data-mining.md)  
+ [功能选择（数据挖掘）](feature-selection-data-mining.md)  
   
- [缺少 Analysis Services 数据挖掘&#41;&#40;值](missing-values-analysis-services-data-mining.md)  
+ [缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)  
   
  [对挖掘模型的钻取功能](drillthrough-on-mining-models.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb0b6349eac28bbd2abc22b9483ef74edf1bf33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088184"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>更改 DirectQuery 分区（SSAS 表格）
@@ -45,6 +45,6 @@ ms.locfileid: "66088184"
 4.  从 **“分区名称”** 下拉列表中选择一个不同的分区，然后根据需要更改该分区上的处理选项。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSAS 表格&#41;分区](tabular-models/partitions-ssas-tabular.md)  
+ [分区（SSAS 表格）](tabular-models/partitions-ssas-tabular.md)  
   
   

@@ -13,15 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086619"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>“交叉验证”选项卡（“挖掘准确性图表”视图）
-  通过使用交叉验证，可以将挖掘结构分区为交叉部分，并针对每个交叉部分循环定型和测试模型。 您可以指定要将数据划分成多少个折叠，每个折叠反过来会用作测试数据，而其余的数据用于为新模型定型。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 然后为每个模型生成一组标准准确性指标。 通过比较为每个交叉部分生成的模型的指标，可以清楚地了解挖掘模型对于整个数据集的可靠程度。  
+  通过使用交叉验证，可以将挖掘结构分区为交叉部分，并针对每个交叉部分循环定型和测试模型。 您可以指定要将数据划分成多少个折叠，每个折叠反过来会用作测试数据，而其余的数据用于为新模型定型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 然后为每个模型生成一组标准准确性指标。 通过比较为每个交叉部分生成的模型的指标，可以清楚地了解挖掘模型对于整个数据集的可靠程度。  
   
  有关详细信息，请参阅[交叉验证（Analysis Services - 数据挖掘）](data-mining/cross-validation-analysis-services-data-mining.md)。  
   
@@ -103,6 +102,6 @@ ms.locfileid: "66086619"
  [测试和验证 &#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)   
  [交叉验证 &#40;Analysis Services 数据挖掘&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [交叉验证报表中的度量值](data-mining/measures-in-the-cross-validation-report.md)   
- [数据挖掘存储过程 &#40;Analysis Services 数据挖掘&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [数据挖掘存储过程（Analysis Services - 数据挖掘）](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

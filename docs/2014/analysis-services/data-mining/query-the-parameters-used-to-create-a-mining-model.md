@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083038"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查询用于创建挖掘模型的参数
@@ -31,7 +31,7 @@ ms.locfileid: "66083038"
 2.  右键单击实例名称，选择“新建查询”****，然后选择“DMX”****。  
   
     > [!NOTE]  
-    >  还可以通过使用 **MDX** 模板来针对数据挖掘模型创建查询。  
+    >   还可以通过使用 **MDX** 模板来针对数据挖掘模型创建查询。  
   
 3.  如果实例包含多个数据库，应从工具栏中的 **“可用数据库”** 列表中选择包含要查询的模型的数据库。  
   

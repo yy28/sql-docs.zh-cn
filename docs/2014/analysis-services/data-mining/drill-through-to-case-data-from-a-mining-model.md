@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084611"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>从挖掘模型钻取到事例数据
@@ -35,12 +35,12 @@ ms.locfileid: "66084611"
 |**Microsoft 分类查看器**|**分类关系图**|单击群集节点。|  
 |**Microsoft 分类查看器**|**分类剖面图**|单击分类列中的任意位置。|  
 |**Microsoft 关联查看器**|**规则**选项卡|单击包含一组规则的行。|  
-|**Microsoft 关联查看器**|**项集**选项卡|单击包含项集的行。|  
+|**Microsoft 关联查看器**|**“项集”** 选项卡|单击包含项集的行。|  
 |**Microsoft 顺序分析和聚类分析查看器**|**规则**选项卡|单击包含一组规则的行。|  
-|**Microsoft 顺序分析和聚类分析查看器**|**项集**选项卡|单击包含项集的行。|  
+|**Microsoft 顺序分析和聚类分析查看器**|**“项集”** 选项卡|单击包含项集的行。|  
   
 > [!NOTE]  
->  某些模型不能使用钻取。 能否使用钻取取决于创建模型所用的算法。 有关支持钻取功能的挖掘模型类型的列表，请参阅[钻取查询（数据挖掘）](drillthrough-queries-data-mining.md)。  
+>  某些模型不能使用钻取。 能否使用钻取取决于创建模型所用的算法。 有关支持钻取功能的挖掘模型类型的列表，请参阅 [钻取查询（数据挖掘）](drillthrough-queries-data-mining.md)，向现有的挖掘模型添加钻取功能。  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>查看挖掘模型的钻取数据  
   
@@ -57,6 +57,6 @@ ms.locfileid: "66084611"
 6.  若要将数据复制到剪贴板，请右键单击表中的任何行，并选择“全部复制”****。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘 &#40;钻取查询&#41;](drillthrough-queries-data-mining.md)  
+ [钻取查询（数据挖掘）](drillthrough-queries-data-mining.md)  
   
   

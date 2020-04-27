@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088483"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>浏览 Naive Bayes 模型
@@ -28,14 +28,14 @@ ms.locfileid: "66088483"
   
 -   [属性对比](#bkmk_AttDisc)  
   
-##  <a name="BKMK_Tabs"></a>浏览模型  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>浏览模型  
  该查看器可以帮助您探索由 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 模型发现的输入与输出属性（输入和依赖变量）之间的交互。  
   
  如果想要试验 Bayes 查看器，请使用 "[分类向导" &#40;&#41;Excel 数据挖掘外接程序](classify-wizard-data-mining-add-ins-for-excel.md)"向导中的" 数据挖掘 "功能区中，单击"**高级**"选项，然后将算法更改为使用" Bayes "算法  
   
  在这些示例中，我们使用了示例工作簿中的源数据，并按从**极低**到**非常高**的顺序将列、**年收入**分组到五个收入组。 然后 Naïve Bayes 模型分析与每个收入类别相关的因素。  
   
-###  <a name="bkmk_DepNet"></a>依赖关系网络  
+###  <a name="dependency-network"></a><a name="bkmk_DepNet"></a>依赖关系网络  
  您将使用的第一个窗口是**依赖关系网络**。 它一目了然地显示哪些输入与选定结果紧密相关。  
   
  ![Naive Bayes 查看器中的依赖关系网络](media/dm13-nb.gif "Naive Bayes 查看器中的依赖关系网络")  
@@ -56,7 +56,7 @@ ms.locfileid: "66088483"
   
  [返回页首](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a>属性配置文件  
+###  <a name="attribute-profiles"></a><a name="bkmk_AttProf"></a>属性配置文件  
  "**属性配置文件**" 窗口可让你直观地指示所有其他变量与各个结果之间的关系。  
   
 ##### <a name="explore-the-profiles"></a>探索剖面图  
@@ -73,7 +73,7 @@ ms.locfileid: "66088483"
   
  [返回页首](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a>属性特征  
+###  <a name="attribute-characteristics"></a><a name="bkmk_AttChar"></a>属性特征  
  "**属性特征**" 视图可用于对特定结果变量的深度检查和相关因素。  
   
  ![Naive Bayes 查看器中的属性特征](media/dm13-nb-viewer.gif "Naive Bayes 查看器中的属性特征")  
@@ -90,7 +90,7 @@ ms.locfileid: "66088483"
   
  [返回页首](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a>属性对比  
+###  <a name="attribute-discrimination"></a><a name="bkmk_AttDisc"></a>属性对比  
  "**属性对比**" 视图有助于比较两个结果或一个结果与所有其他结果。  
   
  ![Naive Bayes 查看器中的属性对比](media/dm13-nb-attdisc.gif "Naive Bayes 查看器中的属性对比")  

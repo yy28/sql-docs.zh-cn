@@ -21,18 +21,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084132"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 关联算法技术参考
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法是熟知的 Apriori 算法的简单实现。  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法均可用于分析关联，但每种算法找到的规则可能不同。 在决策树模型中，导致特定规则的拆分基于信息获取，而在关联模型中，规则完全基于置信度。 因此，在关联模型中，强规则或具有高置信度的规则由于不提供新信息，可能不一定会受到关注。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法均可用于分析关联，但每种算法找到的规则可能不同。 在决策树模型中，导致特定规则的拆分基于信息获取，而在关联模型中，规则完全基于置信度。 因此，在关联模型中，强规则或具有高置信度的规则由于不提供新信息，可能不一定会受到关注。  
   
 ## <a name="implementation-of-the-microsoft-association-algorithm"></a>Microsoft 关联算法的实现  
  Apriori 算法不分析模式，而是生成“候选项集 **”，然后计算该项集的数目。 根据要分析的数据类型，项目可表示事件、产品或属性值。  
@@ -44,11 +42,11 @@ ms.locfileid: "66084132"
  也可以为数值属性创建关联模型。 如果属性是连续的，则可以将数值“ ** 离散化”或使用存储桶对其进行分组。 然后，即可将离散化值作为布尔值或属性值对来处理。  
   
 ### <a name="support-probability-and-importance"></a>支持、概率和重要性  
- *支持*（有时候称为*frequency*）表示包含目标项目或项目组合的事例数。 只有至少具有指定支持量的项目才可包含在模型中。  
+ “支持”（有时候将其称为“频率”）表示包含目标项目或项目组合的事例的数目****。 只有至少具有指定支持量的项目才可包含在模型中。  
   
  “常用项集”** 指满足以下条件的项目集合：该项目集合所具有的支持超过由 MINIMUM_SUPPORT 参数定义的阈值。 例如，如果项集为 {A,B,C} 且 MINIMUM_SUPPORT 值为 10，则每个单个项目 A、B 和 C 必须均可在要包括在模型中的至少 10 个事例中找到，而且项目 {A,B,C} 的组合也必须可在至少 10 个事例中找到。  
   
- **注意**您还可以通过指定项集的最大长度来控制挖掘模型中项集的数目，其中长度表示项数。  
+ **注意** 通过指定项集的最大长度（这里长度指项目数目），还可控制挖掘模型中项集的数目。  
   
  默认情况下，对任何特定项目或项集的支持均表示包含该项目或项集的事例的计数。 不过，还可以将 MINIMUM_SUPPORT 表示为占数据集的总事例的百分比，方法是键入数字作为小于 1 的小数值。 例如，如果指定 MINIMUM_SUPPORT 值为 0.03，就意味着至少有 3% 的数据集总事例必须包含该项目或项集以包含在模型中。 应当试用模型，以确定是使用计数还是百分比更有意义。  
   
@@ -56,16 +54,14 @@ ms.locfileid: "66084132"
   
  可以通过设置 MINIMUM_PROBABILITY 的值来限制模型生成的规则的数目。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为创建的每个规则输出一个指示其“重要性”（也称为“提升”）的分数****。 项集和规则的提升重要性的计算方法不同。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为创建的每个规则输出一个指示其“重要性”（也称为“提升”）的分数****。 项集和规则的提升重要性的计算方法不同。  
   
  项集重要性的计算方法为项集概率除以项集中各个项的合成概率。 例如，如果项集包含 {A,B}， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 首先计算包含此 A 和 B 组合的所有事例的数目，并用此事例数除以事例总数，然后将得到的概率规范化。  
   
  规则重要性的计算方法为：在已知规则左侧的情况下，求规则右侧的对数可能性值。 例如，如果规则为 `If {A} Then {B}`，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算具有 A 和 B 的事例与具有 B 但不具有 A 的事例之比，然后使用对数刻度将该比率规范化。  
   
 ### <a name="feature-selection"></a>功能选择  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法不执行任何一种自动功能选择， 而是提供参数来控制其自身使用的数据。 上述情况可能包括对每个项集大小的限制，或对将项集添加到模型中所需的最大和最小支持的设置。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法不执行任何一种自动功能选择， 而是提供参数来控制其自身使用的数据。 上述情况可能包括对每个项集大小的限制，或对将项集添加到模型中所需的最大和最小支持的设置。  
   
 -   若要筛选出太常见因而不受关注的项目和事件，请减小 MAXIMUM_SUPPORT 的值以将常见项集从模型中删除。  
   
@@ -74,8 +70,7 @@ ms.locfileid: "66084132"
 -   若要筛选出规则，请增大 MINIMUM_PROBABILITY 的值。  
   
 ## <a name="customizing-the-microsoft-association-rules-algorithm"></a>自定义 Microsoft 关联规则算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法支持多个参数，这些参数可以影响生成的挖掘模型的行为、性能和准确性。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法支持多个参数，这些参数可以影响生成的挖掘模型的行为、性能和准确性。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 还可以通过使用 AMO 中的<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合或使用 XMLA 中的[MININGMODELS 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl)以编程方式更改参数。 下表对各参数进行了说明：  
@@ -156,8 +151,7 @@ ms.locfileid: "66084132"
  关联模型必须包含一个键列、多个输入列和单个可预测列。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法支持特定的输入列和可预测列，如下表所示。 有关挖掘模型中内容类型含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法支持特定的输入列和可预测列，如下表所示。 有关挖掘模型中内容类型含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
   
 |列|内容类型|  
 |------------|-------------------|  
@@ -170,6 +164,6 @@ ms.locfileid: "66084132"
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 关联算法](microsoft-association-algorithm.md)   
  [关联模型查询示例](association-model-query-examples.md)   
- [关联模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

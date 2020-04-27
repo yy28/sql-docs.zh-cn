@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084063"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 线性回归算法技术参考
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 Microsoft 决策树算法的特殊版本，该线性回归算法针对连续属性的建模对进行了优化。 本主题说明该算法的实现，介绍如何自定义该算法的行为，并提供指向有关模型查询的其他信息的链接。  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>线性回归算法的实现  
@@ -35,16 +34,15 @@ ms.locfileid: "66084063"
 ### <a name="scoring-methods-and-feature-selection"></a>计分方法和功能选择  
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果和减轻处理工作量。 线形回归中所用的功能选择方法为兴趣性分数，原因是该模型仅支持连续列。 下表列出了线性回归算法和决策树算法中功能选择上的差异，以供参考。  
   
-|算法|分析方法|注释|  
+|算法|分析方法|说明|  
 |---------------|------------------------|--------------|  
-|线性回归|兴趣性分数|默认值。<br /><br /> 决策树算法中可用的其他功能选择方法仅适用于离散变量，因此不适用于线性回归模型。|  
+|线性回归|兴趣性分数|默认。<br /><br /> 决策树算法中可用的其他功能选择方法仅适用于离散变量，因此不适用于线性回归模型。|  
 |决策树|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|如果任何列包含非二进制连续值，则兴趣性分数将用于所有列，以确保一致性。 否则，将使用默认方法或指定的方法。|  
   
  控制决策树模型的功能选择的算法参数为 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   
 ## <a name="customizing-the-linear-regression-algorithm"></a>自定义线性回归算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法支持多个参数，这些参数会影响所生成的挖掘模型的行为、性能和准确性。 您还可以对挖掘模型列或挖掘结构列设置建模标志来控制数据的处理方式。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法支持多个参数，这些参数会影响所生成的挖掘模型的行为、性能和准确性。 您还可以对挖掘模型列或挖掘结构列设置建模标志来控制数据的处理方式。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表列出了为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法提供的参数。  
@@ -56,8 +54,7 @@ ms.locfileid: "66084063"
 |*FORCE_REGRESSOR*|强制算法将指示的列用作回归量，而不考虑算法为这些列计算出的重要性。|  
   
 ### <a name="modeling-flags"></a>建模标志  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  
   
 |建模标志|说明|  
 |-------------------|-----------------|  
@@ -77,8 +74,7 @@ ms.locfileid: "66084063"
  线性回归模型必须包含一个键列、若干输入列和至少一个可预测列。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
   
 |列|内容类型|  
 |------------|-------------------|  
@@ -91,6 +87,6 @@ ms.locfileid: "66084063"
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 线性回归算法](microsoft-linear-regression-algorithm.md)   
  [线性回归模型查询示例](linear-regression-model-query-examples.md)   
- [线性回归模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082693"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>查看或更改算法参数
@@ -39,16 +39,15 @@ ms.locfileid: "66082693"
   
 ### <a name="change-an-algorithm-parameter"></a>更改算法参数  
   
-1.  在 ** 中的数据挖掘设计器的“挖掘模型”**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡中，右键单击要为其优化算法的挖掘模型的算法类型，选择“设置算法参数”****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘模型”**** 选项卡中，右键单击要为其优化算法的挖掘模型的算法类型，选择“设置算法参数”****。  
   
      此时将打开 **“算法参数”** 对话框。  
   
 2.  在 **“值”** 列中，为要更改的算法设置新值。  
   
-     如果未在 **“值”** 列中输入值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用默认参数值。 
-  **“范围”** 列说明了您可以输入的可能值。  
+     如果未在 **“值”** 列中输入值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用默认参数值。 **“范围”** 列说明了您可以输入的可能值。  
   
-3.  单击“确定”。   
+3.  单击" **确定**"。  
   
      此时，算法参数被设置为新值。 重新处理挖掘模型后，参数更改才反映在该模型中。  
   

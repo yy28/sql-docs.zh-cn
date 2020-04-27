@@ -29,10 +29,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082803"
 ---
 # <a name="testing-and-validation-data-mining"></a>测试和验证（数据挖掘）
@@ -54,15 +54,14 @@ ms.locfileid: "66082803"
 ## <a name="definition-of-criteria-for-validating-data-mining-models"></a>验证数据挖掘模型的条件的定义  
  数据挖掘的度量通常分为以下三类：准确性、可靠性和有用性。  
   
- *准确性*是指模型将结果与所提供数据中的属性相关联的程度的度量。 准确性有各种度量值，但准确性的所有度量值都依赖于所使用的数据。 事实上，值可能缺少或近似，数据可能已被多个进程更改。 特别是在探索和开发阶段，您可能决定允许数据中存在一定数量的错误，尤其是在数据的特征非常统一时。 例如，基于过去的销售额来预测特定商店的销售额的模型可能非常相关，并且非常准确，即使该商店一直使用错误的会计方法。 所以，准确性的度量值必须通过评估可靠性来平衡。  
+ ** “准确性”是模型与所提供数据中的属性的结果相关联程度的度量值。 准确性有各种度量值，但准确性的所有度量值都依赖于所使用的数据。 事实上，值可能缺少或近似，数据可能已被多个进程更改。 特别是在探索和开发阶段，您可能决定允许数据中存在一定数量的错误，尤其是在数据的特征非常统一时。 例如，基于过去的销售额来预测特定商店的销售额的模型可能非常相关，并且非常准确，即使该商店一直使用错误的会计方法。 所以，准确性的度量值必须通过评估可靠性来平衡。  
   
- *可靠性*用于评估数据挖掘模型对不同数据集的执行方式。 如果无论提供哪些测试数据，数据挖掘模型都生成相同类型的预测，或者发现相同常规类型的模式，则该数据挖掘模型是可靠的。 例如，为使用错误会计方法的商店生成预测的模型将不适用于其他商店，因此该模型是不可靠的。  
+ ** “可靠性”评估数据挖掘模型处理不同数据集的方法。 如果无论提供哪些测试数据，数据挖掘模型都生成相同类型的预测，或者发现相同常规类型的模式，则该数据挖掘模型是可靠的。 例如，为使用错误会计方法的商店生成预测的模型将不适用于其他商店，因此该模型是不可靠的。  
   
- *有用性*包括各种指标，告诉您模型是否提供有用的信息。 例如，将商店位置与销售额相关联的数据挖掘模型可能既是准确的，也是可靠的，但可能是无用的，因为不能通过在同一位置增加更多商店来推广该结果。 而且，它没有回答为什么某些位置销售额较高这一基本商业问题。 您可能还会发现，如果模型基于数据中的交叉关联，它看起来是成功，但实际上没有意义。  
+ ** “有用性”包括说明模型是否提供了有用信息的各种指标。 例如，将商店位置与销售额相关联的数据挖掘模型可能既是准确的，也是可靠的，但可能是无用的，因为不能通过在同一位置增加更多商店来推广该结果。 而且，它没有回答为什么某些位置销售额较高这一基本商业问题。 您可能还会发现，如果模型基于数据中的交叉关联，它看起来是成功，但实际上没有意义。  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>用于测试和验证挖掘模型的的工具  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持多种验证方法。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持多种验证方法。  
   
 -   将数据分区为测试集和定型集  
   
@@ -82,18 +81,18 @@ ms.locfileid: "66082803"
   
  本节中的主题提供了每个方法的概述，并引导您使用 SQL Server 数据挖掘完成度量您生成的模型准确性的过程。  
   
-### <a name="related-topics"></a>相关主题  
+### <a name="related-topics"></a>“相关主题”  
   
 |主题|链接|  
 |------------|-----------|  
 |了解如何使用向导或 DMX 命令设置测试数据集|[定型数据集和测试数据集](training-and-testing-data-sets.md)|  
-|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证 &#40;Analysis Services 数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)|  
-|了解有关 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中提供的图标类型的准确性。|[Analysis Services &#40;提升图表&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图 &#40;Analysis Services 数据挖掘&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图 &#40;Analysis Services 数据挖掘&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵 &#40;Analysis Services 数据挖掘&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)|  
+|了解有关 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中提供的图标类型的准确性。|[提升图（Analysis Services - 数据挖掘）](lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图（Analysis Services - 数据挖掘）](profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图（Analysis Services - 数据挖掘）](scatter-plot-analysis-services-data-mining.md)|  
+|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵（Analysis Services - 数据挖掘）](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘工具](data-mining-tools.md)   
  [数据挖掘解决方案](data-mining-solutions.md)   
- [测试和验证任务以及操作方法 &#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [测试和验证任务和操作指南（数据挖掘）](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

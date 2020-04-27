@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086356"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>向挖掘结构中添加嵌套表
@@ -39,7 +39,7 @@ ms.locfileid: "66086356"
   
 5.  在 **“源列”** 下，为嵌套表选择键列。  
   
-6.  单击“确定”。   
+6.  单击" **确定**"。  
   
      这样便可将一个包含键列的新表列添加到挖掘结构中。 有关如何添加更多列的信息，请参阅 [向挖掘结构中添加列](add-columns-to-a-mining-structure.md)。  
   

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083775"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
@@ -40,20 +40,20 @@ ms.locfileid: "66083775"
   
  [模型内容中的节点](#bkmk_Nodes)  
   
- [按算法类型的挖掘模型内容](#bkmk_AlgoType)  
+ [按算法类型列出挖掘模型内容](#bkmk_AlgoType)  
   
  [查看挖掘模型内容的工具](#bkmk_Viewing)  
   
  [查询挖掘模型内容的工具](#bkmk_Querying)  
   
-##  <a name="bkmk_Structure"></a>挖掘模型内容的结构  
+##  <a name="structure-of-mining-model-content"></a><a name="bkmk_Structure"></a>挖掘模型内容的结构  
  每个模型的内容均显示为一系列“节点 **”。 节点是挖掘模型内的对象，包含该模型某一部分的元数据或信息。 节点按层次结构排列。 层次结构中节点的准确排列以及层次结构的含义取决于您使用的算法。 例如，如果您创建一个决策树模型，该模型可以包含多个树，并且所有树均连接到模型根；如果您创建一个神经网络模型，则该模型可能包含一个或多个网络，外加一个统计信息节点。  
   
  每个模型中的第一个节点都称为“ ** 根节点”或“模型父节点 ** ”。 每个模型都有一个根节点 (NODE_TYPE = 1)。 根节点通常包含关于模型的某些元数据以及子节点的数目，但是几乎没有关于该模型发现的模式的其他信息。  
   
  根据您用来创建模型的算法，根节点的子节点的数量会有所不同。 子节点具有不同的含义，包含不同的内容，具体取决于算法以及数据的深度和复杂性。  
   
-##  <a name="bkmk_Nodes"></a>挖掘模型内容中的节点  
+##  <a name="nodes-in-mining-model-content"></a><a name="bkmk_Nodes"></a>挖掘模型内容中的节点  
  在挖掘模型中，每个节点都是一个常规用途的容器，用于存储关于整个模型或它的一部分的一段信息。 每个节点的结构始终是相同的，并包含数据挖掘架构行集定义的列。 有关详细信息，请参阅 [DMSCHEMA_MINING_MODEL_CONTENT 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
  每个节点都包含关于该节点的元数据，包括在每个模型中唯一的标识符、父节点的 ID 以及该节点具有的子节点数量。 元数据标识节点属于哪个模型以及存储该特定模型的数据库目录。 节点中提供的其他内容根据您用来创建模型的算法类型的不同而不同，可能包含：  
@@ -76,19 +76,19 @@ ms.locfileid: "66083775"
   
 |NODE_TYPE ID|节点标签|节点内容|  
 |-------------------|----------------|-------------------|  
-|1|模型|元数据和根内容节点。 适用于所有模型类型。|  
+|1|型号|元数据和根内容节点。 适用于所有模型类型。|  
 |2|树|分类树的根节点。 适用于决策树模型。|  
 |3|Interior|树中的内部拆分节点。 适用于决策树模型。|  
 |4|分发|树的终端节点。 适用于决策树模型。|  
 |5|群集|算法检测到的分类。 适用于聚类分析模型以及顺序分析和聚类分析模型。|  
-|6|未知|未知节点类型。|  
+|6|Unknown|未知节点类型。|  
 |7|ItemSet|算法检测到的项集。 适用于关联模型或顺序分析和聚类分析模型。|  
 |8|AssociationRule|算法检测到的关联规则。 适用于关联模型或顺序分析和聚类分析模型。|  
 |9|PredictableAttribute|可预测属性。 适用于所有模型类型。|  
 |10|InputAttribute|输入属性。 适用于决策树和 Naïve Bayes 模型。|  
 |11|InputAttributeState|有关输入属性状态的统计信息。 适用于决策树和 Naïve Bayes 模型。|  
 |13|序列|序列分类的 Markov 模型组件的顶端节点。 适用于顺序分析和聚类分析模型。|  
-|14|Transition|Markov 转换矩阵。 适用于顺序分析和聚类分析模型。|  
+|14|过渡|Markov 转换矩阵。 适用于顺序分析和聚类分析模型。|  
 |15|TimeSeries|时序树的非根节点。 仅适用于时序模型。|  
 |16|TsTree|对应于可预测时序的时序树的根节点。 适用于时序模型，并仅限于使用 MIXED 参数创建的模型。|  
 |17|NNetSubnetwork|一个子网络。 适用于神经网络模型。|  
@@ -112,7 +112,7 @@ ms.locfileid: "66083775"
   
  每个模型的根节点还包含有关模型的一些基本的元数据。 这些元数据包括存储模型的 Analysis Services 数据库 (**MODEL_CATALOG**)、架构 (**MODEL_SCHEMA)** 和模型的名称 (**MODEL_NAME)**。 不过，这些信息在模型的所有节点中都是重复的，因此您无需查询根节点来获取这些元数据。  
   
- 除了用作唯一标识符的名称，每个节点还具有一个名称(*NODE_NAME*)****。 此名称是算法自动创建的，用于显示目的，不能进行编辑。  
+ 除了用作唯一标识符的名称，每个节点还具有一个名称(**NODE_NAME**)**。 此名称是算法自动创建的，用于显示目的，不能进行编辑。  
   
 > [!NOTE]  
 >  Microsoft 聚类分析算法允许用户为每个分类指定友好名称。 不过，这些友好名称在服务器上不是持久性的，如果您重新处理模型，算法将重新生成新的分类名称。  
@@ -131,7 +131,7 @@ ms.locfileid: "66083775"
   
 -   您可以在数据挖掘扩展插件 (DMX) 查询内使用函数来查找特定节点的后代或父级。 有关在查询中使用函数的详细信息，请参阅 [数据挖掘查询](data-mining-queries.md)。  
   
- *基数*是指集中的项数。 在处理的挖掘模型的上下文中，基数会指示特定节点中子级的数量。 例如，如果某个决策树模型有一个 [Yearly Income] 节点，并且该节点有两个子节点，一个针对条件 [Yearly Income] = High，一个针对条件 [Yearly Income] = Low，则 [Yearly Income] 节点的 CHILDREN_CARDINALITY 值将为 2。  
+ “** 基数”是指集中的项数。 在处理的挖掘模型的上下文中，基数会指示特定节点中子级的数量。 例如，如果某个决策树模型有一个 [Yearly Income] 节点，并且该节点有两个子节点，一个针对条件 [Yearly Income] = High，一个针对条件 [Yearly Income] = Low，则 [Yearly Income] 节点的 CHILDREN_CARDINALITY 值将为 2。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，当计算节点的基数时，仅统计直接的子节点。 不过，如果您创建了一个自定义插件算法，则可以重载 CHILDREN_CARDINALITY，从而按不同的方式统计基数。 这种做法可能会很有用，例如，如果您希望统计后代的总数，而不仅仅是直接子级的数量。  
@@ -163,7 +163,7 @@ ms.locfileid: "66083775"
   
  例如，如果将模型设置为查找至少购买过一次某个特定商品的客户，ATTRIBUTE_NAME 列可能包含属性/值对，用于定义所关注的商品（如 `Model = 'Water bottle'`），并且 ATTRIBUTE_VALUE 列将仅仅包含关键字 `Existing` 或 `Missing`。  
   
- 支持  
+ Support  
  具有此属性/值对或包含此项集或规则的事例的计数。  
   
  通常，每个节点的支持值会指示定型集中有多少事例包含在当前节点中。 在大多数模型类型中，支持代表的是事例的准确计数。 支持值很有用，这是因为它使得您无需查询定型数据，就可以查看定型事例内的数据分布。 Analysis Services 服务器还使用这些存储值来计算存储概率与以前的概率之比，以确定推导是强还是弱。  
@@ -213,11 +213,10 @@ ms.locfileid: "66083775"
   
 |VALUE_TYPE ID|值标签|值类型名称|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|指示事例数据不包含此属性的值。 
-  `Missing` 状态与具有值的属性是分开计算的。|  
+|1|Missing|指示事例数据不包含此属性的值。 `Missing` 状态与具有值的属性是分开计算的。|  
 |2|Existing|指示事例数据包含此属性的值。|  
 |3|连续|指示此属性的值是一个连续数值，因此可以由平均值以及偏差和标准偏差表示。|  
-|4|离散|指示值（数字或文本）被视为离散值。<br /><br /> **注意**还可能缺少离散值;但是，在进行计算时，它们的处理方式不同。 有关信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。|  
+|4|离散|指示值（数字或文本）被视为离散值。<br /><br /> **注意** 离散值也可能处于缺失状态；不过，在进行计算时，它们的处理方式不同。 有关信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。|  
 |5|离散化|指示该属性包含已离散化的数值。 该值将是一个带格式的字符串，描述离散化存储桶。|  
 |6|Existing|指示属性具有连续数值，并且这些值已经在数据中提供（与缺失或推导的值不同）。|  
 |7|系数|指示一个表示系数的数值。<br /><br /> 系数是一个在计算依赖变量的值时要应用的值。 例如，如果您的模型创建了一个基于年龄预测收入的回归公式，则在将年龄与收入相关联的公式中将使用系数。|  
@@ -229,7 +228,7 @@ ms.locfileid: "66083775"
 |13|自动回归阶数|指示一个值，该值表示自动回归序列的数目。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
 |14|移动平均值阶数|表示一个值，该值表示一个序列中的移动平均值数。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
 |15|差分阶数|指示一个值，用于表示差分时序的次数。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
-|16|Boolean|表示布尔型。|  
+|16|布尔|表示布尔型。|  
 |17|其他|表示一个由该算法定义的自定义值。|  
 |18|预呈现的字符串|表示一个由算法作为字符串呈现的自定义值。 对象模型不应用格式。|  
   
@@ -243,18 +242,18 @@ ms.locfileid: "66083775"
   
  在那些提供概率分数的节点中，节点概率和边际概率表示不同的计算。  
   
--   **边际概率**是指从其父节点到达该节点的概率。  
+-   **边际概率** 是指从其父节点到达该节点的概率。  
   
--   **节点概率**是指从根节点到达该节点的概率。  
+-   **节点概率** 是指从根节点到达该节点的概率。  
   
--   **节点概率**始终小于或等于**边际概率**。  
+-   **节点概率** 始终小于或等于 **边际概率**。  
   
  例如，如果决策树中所有客户的总人数按性别平分（并且没有值缺失），则子节点的概率应为 .5。 但是，假设每个性别节点平均除以收入级别-高、中和低。 这种情况下，每个子节点的 MARGINAL_PROBABILITY 分数应始终为 .33，而 NODE_PROBABILTY 值将是指向该节点的所有概率的乘积，因此始终小于 MARGINAL_PROBABILITY 值。  
   
 |节点/属性和值的级别|边际概率|节点概率|  
 |----------------------------------------|--------------------------|----------------------|  
 |模型根<br /><br /> 所有目标客户|1|1|  
-|按性别平分目标客户|0.5|0.5|  
+|按性别平分目标客户|.5|.5|  
 |按性别平分目标客户，然后按三种收入级别平分|.33|.5 * .33 = .165|  
   
 ### <a name="node-rule-and-marginal-rule"></a>节点规则和边际规则  
@@ -262,35 +261,33 @@ ms.locfileid: "66083775"
   
  提供两种类型的 XML 规则，与两种类型的概率值相似。 MARGINAL_RULE 中的 XML 片段用于定义当前节点的属性和值，而 NODE_RULE 中的 XML 片段用于描述从模型根至当前节点的路径。  
   
-##  <a name="bkmk_AlgoType"></a>按算法类型的挖掘模型内容  
+##  <a name="mining-model-content-by-algorithm-type"></a><a name="bkmk_AlgoType"></a>按算法类型的挖掘模型内容  
  每个算法将不同类型的信息作为其内容架构的一部分存储。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法会生成许多子节点，每个节点代表一个可能的分类。 每个群集节点都包含一些规则，这些规则描述该分类中各个项所共有的特征。 相反， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法不包含任何子节点；而模型的父节点包含的公式用于说明分析所发现的线性关系。  
   
  下表提供了指向每种算法的主题的链接：  
   
--   **模型内容主题：** 说明每种算法类型的每个节点类型的含义，并提供有关特定模型类型中最感兴趣的节点的指导。  
+-   **模型内容主题** ：说明每个算法类型的每个节点类型的含义，并提供有关特定模型类型中最受关注的节点的指南。  
   
--   **查询主题：** 提供针对特定模型类型的查询的示例，以及有关如何解释结果的指导。  
+-   **查询主题** ：提供针对特定模型类型的查询的示例，以及关于如何解释这些结果的指南。  
   
 |算法或模型类型|模型内容|查询挖掘模型|  
 |-----------------------------|-------------------|----------------------------|  
-|关联规则模型|[关联模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[关联模型查询示例](association-model-query-examples.md)|  
-|聚类分析模型|[&#40;Analysis Services 数据挖掘的决策树模型的挖掘模型内容&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[聚类分析模型查询示例](clustering-model-query-examples.md)|  
-|决策树模型|[&#40;Analysis Services 数据挖掘的决策树模型的挖掘模型内容&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[决策树模型查询示例](decision-trees-model-query-examples.md)|  
-|线性回归模型|[线性回归模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[线性回归模型查询示例](linear-regression-model-query-examples.md)|  
-|逻辑回归模型|[&#40;Analysis Services 数据挖掘的逻辑回归模型的挖掘模型内容&#41;](mining-model-content-for-logistic-regression-models.md)|[线性回归模型查询示例](linear-regression-model-query-examples.md)|  
-|Naïve Bayes 模型|[Naive Bayes 模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 模型查询示例](naive-bayes-model-query-examples.md)|  
-|神经网络模型|[&#40;Analysis Services 数据挖掘的神经网络模型的挖掘模型内容&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[神经网络模型查询示例](neural-network-model-query-examples.md)|  
-|顺序分析和聚类分析|[&#40;Analysis Services 的顺序分析和聚类分析模型的挖掘模型内容&#41;](mining-model-content-for-sequence-clustering-models.md)|[顺序分析和聚类分析模型查询示例](sequence-clustering-model-query-examples.md)|  
-|时序模型|[时序模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[时序模型查询示例](time-series-model-query-examples.md)|  
+|关联规则模型|[关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-association-models-analysis-services-data-mining.md)|[关联模型查询示例](association-model-query-examples.md)|  
+|聚类分析模型|[决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[聚类分析模型查询示例](clustering-model-query-examples.md)|  
+|决策树模型|[决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[决策树模型查询示例](decision-trees-model-query-examples.md)|  
+|线性回归模型|[线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[线性回归模型查询示例](linear-regression-model-query-examples.md)|  
+|逻辑回归模型|[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)|[线性回归模型查询示例](linear-regression-model-query-examples.md)|  
+|Naïve Bayes 模型|[Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 模型查询示例](naive-bayes-model-query-examples.md)|  
+|神经网络模型|[神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[神经网络模型查询示例](neural-network-model-query-examples.md)|  
+|顺序分析和聚类分析|[顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-sequence-clustering-models.md)|[顺序分析和聚类分析模型查询示例](sequence-clustering-model-query-examples.md)|  
+|时序模型|[时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[时序模型查询示例](time-series-model-query-examples.md)|  
   
-##  <a name="bkmk_Viewing"></a>查看挖掘模型内容的工具  
+##  <a name="tools-for-viewing-mining-model-content"></a><a name="bkmk_Viewing"></a>查看挖掘模型内容的工具  
  当在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览模型时，可以使用 **Microsoft 一般内容树查看器**查看信息， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中均提供了此查看器。  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容查看器通过使用挖掘模型内容架构行集中可用的同一信息，来显示模型中的列、规则、属性 (property)、属性 (attribute)、节点以及其他内容。 内容架构行集是用于呈现数据挖掘模型内容详细信息的通用框架。 您可以在任何支持分层行集的客户端中查看模型内容。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的此查看器在 HTML 表查看器中呈现这些信息，这些信息将以一致的格式表示所有模型，使得您所创建模型的结构更易于理解。 有关详细信息，请参阅 [使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容查看器通过使用挖掘模型内容架构行集中可用的同一信息，来显示模型中的列、规则、属性 (property)、属性 (attribute)、节点以及其他内容。 内容架构行集是用于呈现数据挖掘模型内容详细信息的通用框架。 您可以在任何支持分层行集的客户端中查看模型内容。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的此查看器在 HTML 表查看器中呈现这些信息，这些信息将以一致的格式表示所有模型，使得您所创建模型的结构更易于理解。 有关详细信息，请参阅 [使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)。  
   
-##  <a name="bkmk_Querying"></a>查询挖掘模型内容的工具  
+##  <a name="tools-for-querying-mining-model-content"></a><a name="bkmk_Querying"></a>查询挖掘模型内容的工具  
  若要检索挖掘模型内容，您必须针对数据挖掘模型创建一个查询。  
   
  创建内容查询的最简便方法就是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中执行以下 DMX 语句：  
@@ -307,6 +304,6 @@ SELECT * FROM [<mining model name>].CONTENT
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 一般内容树查看器 &#40;数据挖掘&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

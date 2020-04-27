@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084728"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>从挖掘模型中删除筛选器
@@ -32,13 +32,13 @@ ms.locfileid: "66084728"
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     -或-  
+     \- 或 -  
   
      选择该模型。 在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
   
 4.  在“模型筛选器”**** 对话框中，右键单击网格中包含要删除的条件的行。  
   
-5.  选择 "**删除**"。  
+5.  选择“删除”  。  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>在“筛选器编辑器”对话框中清除挖掘模型筛选器  
   
@@ -61,6 +61,6 @@ ms.locfileid: "66084728"
 ## <a name="see-also"></a>另请参阅  
  [从挖掘模型钻取到事例数据](drill-through-to-case-data-from-a-mining-model.md)   
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
- [挖掘模型的筛选器 &#40;Analysis Services 数据挖掘&#41;](mining-models-analysis-services-data-mining.md)  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)  
   
   

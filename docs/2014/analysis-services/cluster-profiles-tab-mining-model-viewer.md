@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087873"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>“分类剖面图”选项卡（挖掘模型查看器）
   可以使用 **“分类剖面图”** 选项卡，提供算法在分类模型中发现的分类的总体视图。 该选项卡可显示每个属性及其在每个分类中的分布情况。  
   
- **有关详细信息：** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)、[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **有关详细信息，请参阅 ** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)和[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -37,13 +37,13 @@ ms.locfileid: "66087873"
  **显示图例**  
  选择此选项可显示一个键，该键将显示查看器中的颜色与“状态”**** 列中的值之间的映射。  
   
- **直方图图条**  
+ **直方图条**  
  更改此值可控制每个直方图中包含的状态的数目。 如果存在的状态数多于您选择显示的状态数，则直方图中将显示概率最高的状态，其余状态则组合到 **“其他”** 中。  
   
- **属性**  
+ **特性**  
  列出分类模型中包含的列。 每个属性的直方图均演示该属性在算法所标识的分类中的分布方式。  
   
- **States**  
+ **状态**  
  提供一个键，用于指示代表分类的对应行中的每个状态的颜色，或提供一个菱形滑块，用于指示连续数值的分布。 可以使用 **“显示图例”** 复选框来显示或隐藏此列。  
   
  **分类剖面图**  

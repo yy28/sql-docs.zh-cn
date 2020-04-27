@@ -13,38 +13,38 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082897"
 ---
 # <a name="security-overview-data-mining"></a>安全性概述（数据挖掘）
   在多个级别[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上进行保护的过程。 您必须保护每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其数据源，以确保只有经过授权的用户具有所选维度、挖掘模型以及数据源的读或读/写权限。 您还必须保护基础数据源以防止未经授权的用户恶意破坏敏感商业信息。 以下主题说明了保护 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的过程。  
   
-##  <a name="bkmk_Architecture"></a>安全体系结构  
+##  <a name="security-architecture"></a><a name="bkmk_Architecture"></a>安全体系结构  
  查看以下资源以了解 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的基本安全体系结构，包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证来对用户访问进行身份验证的。  
   
--   [Analysis Services 多维数据 &#40;安全角色&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [安全角色（Analysis Services - 多维数据）](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [安全属性](../server-properties/security-properties.md)  
   
--   [&#40;Analysis Services 配置服务帐户&#41;](../instances/configure-service-accounts-analysis-services.md)  
+-   [配置服务帐户 (Analysis Services)](../instances/configure-service-accounts-analysis-services.md)  
   
--   [授权对对象和操作的访问 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授予对对象和操作的访问权限 (Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
-##  <a name="bkmk_Logon"></a>为 Analysis Services 配置登录帐户  
+##  <a name="configuring-the-logon-account-for-analysis-services"></a><a name="bkmk_Logon"></a> 为 Analysis Services 配置登录帐户  
  您必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 选择相应的登录帐户，并为该帐户指定权限。 同时，还必须确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登录帐户只拥有执行必要任务所需的必要权限，其中包括基础数据源的相应权限。  
   
  对于数据挖掘，与查看或查询模型相比，您需要一组不同的权限来生成和处理模型。 针对模型进行预测是一种查询，不需要管理权限。  
   
-##  <a name="bkmk_Instance"></a>保护 Analysis Services 实例  
+##  <a name="securing-an-analysis-services-instance"></a><a name="bkmk_Instance"></a> 保护 Analysis Services 实例  
  其次，您必须保护 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算机、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算机上的 Windows 操作系统、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 本身以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用的数据源。  
   
-##  <a name="bkmk_Access"></a>配置对 Analysis Services 的访问权限  
+##  <a name="configuring-access-to-analysis-services"></a><a name="bkmk_Access"></a> 配置对 Analysis Services 的访问权限  
  设置和定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的授权用户时，您需要决定哪些用户还应具有管理特定数据库对象的权限，哪些用户能够查看对象的定义或浏览模型，以及哪些用户能够直接访问数据源。  
   
-##  <a name="bkmk_DMspecial"></a>数据挖掘的特殊注意事项  
+##  <a name="special-considerations-for-data-mining"></a><a name="bkmk_DMspecial"></a> 数据挖掘的特殊注意事项  
  若要使分析人员或开发人员能够创建和测试数据挖掘模型，必须向分析人员或开发人员授予对存储挖掘模型的数据库的管理权限。 这样，数据挖掘分析人员或开发人员就可以创建或删除与数据挖掘无关的其他对象，包括由其他分析人员或开发人员创建并要使用的数据挖掘对象或数据挖掘解决方案中不包含的 OLAP 对象。  
   
  相应地，在创建数据挖掘解决方案时，您必须平衡好分析人员或开发人员开发、测试和优化模型的需要与其他用户的需要，并采取措施对现有数据库对象进行保护。 一种可能的方法是创建独立的数据挖掘专用数据库或为每位分析人员创建单独的数据库。  
@@ -56,6 +56,6 @@ ms.locfileid: "66082897"
  如果使用 Integration Services 包清理数据、更新挖掘模型或进行预测，则必须确保 Integration Services 服务拥有存储有模型的数据库的相应权限，以及源数据的相应权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [角色和权限 &#40;Analysis Services&#41;](../multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [角色和权限 (Analysis Services)](../multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084580"
 ---
 # <a name="drillthrough-on-mining-structures"></a>对挖掘结构的钻取功能
-  "*钻取*" 意味着能够查询挖掘模型或挖掘结构，并获取未在模型中公开的详细数据。  
+  “钻取”** 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供了两个不同的选项来钻取到事例数据。 您可以钻取到用来挖掘模型的数据，也可以钻取到挖掘结构中的源数据。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了两种不同的选项来钻取到事例数据中。 您可以钻取到用来挖掘模型的数据，也可以钻取到挖掘结构中的源数据。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>钻取到模型事例与钻取到结构  
  钻取到“模型事例” **** 用于查找与模型中的规则、模式或群集有关的其他详细信息。  
@@ -55,7 +55,7 @@ ms.locfileid: "66084580"
 |-|-|  
 |从挖掘模型查看器对结构使用钻取|[从模型查看器使用钻取](use-drillthrough-from-the-model-viewers.md)|  
 |有关特定的模型类型，请参阅钻取查询的示例。|[数据挖掘查询](data-mining-queries.md)|  
-|获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予对数据挖掘结构和模型的权限 &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予数据挖掘结构和模型的权限 (Analysis Services)](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [对挖掘模型的钻取功能](drillthrough-on-mining-models.md)  

@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088493"
 ---
 # <a name="browsing-a-forecasting-model"></a>浏览预测模型
   使用 "**浏览**" 打开预测模型时，该模型将显示在交互式查看器中，类似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的时序模型查看器。 查看器有助于您探索趋势、比较序列、创建预测以及获取有关模型和基础数据的信息。  
   
-##  <a name="bkmk_Top"></a>浏览模型  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>浏览模型  
  用于预测模型的**浏览**查看器提供了一个图表视图，其中显示了一段时间内的趋势，并使您可以创建预测和模型视图，它将时间序列表示为决策树或回归树。  
   
 -   [图表视图](#bkmk_charts)  
@@ -35,7 +35,7 @@ ms.locfileid: "66088493"
   
  若要试验预测模型，可以使用示例数据工作簿的 "预测" 选项卡上的示例数据，并使用 &#40;"**数据挖掘**" 功能区中的 "[用于 Excel 的数据挖掘外接程序"&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) &#40;或 "**分析**" 功能区中的 "excel 的数据挖掘外接程序" [&#41;](forecast-table-analysis-tools-for-excel.md)生成时序模型。  
   
-###  <a name="bkmk_charts"></a>流程图  
+###  <a name="chart"></a><a name="bkmk_charts"></a>流程图  
  "**图表**" 选项卡显示一段时间内数据系列的趋势以及预测值。 图表的垂直轴表示序列的值，水平轴表示时间。  
   
 ##### <a name="explore-the-forecasting-chart"></a>探索预测图  
@@ -66,7 +66,7 @@ ms.locfileid: "66088493"
   
      通过误差线，您可以直观地了解预测信息的变化范围。 预测信息的可靠性因源数据而异，不过，在您增加预测步骤数时，将会看到偏差稳定增长。  
   
- **技巧**  
+ **提示**  
   
 -   若要切换 "**挖掘图例**" 的显示，请右键单击图表中的任意点。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66088493"
   
  [浏览模型](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a>模式  
+###  <a name="model"></a><a name="bkmk_Model"></a>模式  
  还可以将预测模型表示为决策树，或者，在序列基本呈线性时表示为回归模型。  
   
  例如，在此模型中，基于某一特定条件的回归公式中存在差异，因此树拆分为两个分支，每个分支有一个不同的回归公式。  

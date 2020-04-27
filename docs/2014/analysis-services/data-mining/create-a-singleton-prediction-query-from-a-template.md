@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085493"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>通过模板创建单独预测查询
@@ -90,9 +90,9 @@ AS [t]
   
      对于本主题开头部分显示的示例代码，其他查询条件设置为 `'45' as [Age]`。  
   
-11. 单击“执行”  。  
+11. 单击“执行” ****。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;数据挖掘基础教程创建预测&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [创建预测（数据挖掘基础教程）](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

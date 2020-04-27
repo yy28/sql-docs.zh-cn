@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092438"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>运行升级顾问（命令提示符）
@@ -54,16 +54,13 @@ where <server_info> is any combination of the following:
  指定要分析的计算机的名称。 这可以是本地计算机（默认值）或远程计算机。  
   
  **-Instance** _instance_name_  
- 指定要分析的实例的名称。 没有默认值。 如果未指定此参数， [!INCLUDE[ssDE](../../includes/ssde-md.md)]则不会扫描。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例的值是 MSSQLSERVER。 对于命名实例，使用实例名称。  
+ 指定要分析的实例的名称。 没有默认值。 如果未指定此参数， [!INCLUDE[ssDE](../../includes/ssde-md.md)]则不会扫描。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例的值是 MSSQLSERVER。 对于命名实例，使用实例名称。  
   
  **-ASInstance**  _AS_instance_name_  
- 指定要分析的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。 没有默认值。 如果不指定此值，则不会扫描 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 默认实例的值是 MSSQLServerOLAPService。 对于命名实例，使用实例名称。  
+ 指定要分析的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。 没有默认值。 如果不指定此值，则不会扫描 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 默认实例的值是 MSSQLServerOLAPService。 对于命名实例，使用实例名称。  
   
  **-RSInstance**  _RS_instance_name_  
- 指定要分析的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例的名称。 没有默认值。 如果不指定此值，则不会扫描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认实例的值是 ReportServer。 对于命名实例，使用实例名称。  
+ 指定要分析的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例的名称。 没有默认值。 如果不指定此值，则不会扫描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认实例的值是 ReportServer。 对于命名实例，使用实例名称。  
   
  **-SqlUser** _login_id_  
  如果使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则此值是升级顾问将用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果不指定登录名，则使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -77,7 +74,7 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>返回值  
  下表显示**UpgradeAdvisorWizardCmd**返回的值。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |0|成功完成分析，找不到任何升级问题。|  
 |正整数|成功完成分析，找到升级问题。|  
@@ -131,10 +128,8 @@ where <server_info> is any combination of the following:
 |`Instance`|要分析的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的名称。|每个配置文件可以出现一次。 默认值为默认实例。<br /><br /> 如果服务器上存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元素或 `IntegrationServices` 元素，则每个配置文件必须出现一次。|  
 |`Components`|包含指定要分析的组件的元素。|每个配置文件必须出现一次。|  
 |`SQLServer`|包含[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的分析设置。|每个配置文件可以出现一次。 如果未指定，则不会分析 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据库。|  
-|
-  `Databases` 元素的 `SQLServer`|包含要分析的数据库的列表。|对于每个`SQLServer`元素是可选的。 如果此元素不存在，则分析实例中的所有数据库。|  
-|
-  `Database` 元素的 `SQLServer`|指定要分析的数据库的名称。|如果 `Databases` 元素存在，则必须出现一次或多次。 如果 `Database` 元素包含值“*”，则分析实例中的所有数据库。 没有默认值。|  
+|`Databases` 元素的 `SQLServer`|包含要分析的数据库的列表。|对于每个`SQLServer`元素是可选的。 如果此元素不存在，则分析实例中的所有数据库。|  
+|`Database` 元素的 `SQLServer`|指定要分析的数据库的名称。|如果 `Databases` 元素存在，则必须出现一次或多次。 如果 `Database` 元素包含值“*”，则分析实例中的所有数据库。 没有默认值。|  
 |`TraceFiles`|包含要分析的跟踪文件的列表。|对于每个`SQLServer`元素是可选的。|  
 |`TraceFile`|指定要分析的跟踪文件的路径和名称。|如果 `TraceFiles` 元素存在，则必须出现一次或多次。 没有默认值。|  
 |`BatchFiles`|包含要分析的批处理文件的列表。|对于每个`SQLServer`元素是可选的。|  
@@ -142,10 +137,8 @@ where <server_info> is any combination of the following:
 |`BatchSeparator`|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批处理文件中使用的批处理分隔符。|对于每个`SQLServer`元素是可选的。 默认值为 GO。|  
 |`AnalysisServices`|包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的分析设置。|每个配置文件可以出现一次。 如果未指定，则不会分析 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
 |`ASInstance`|指定实例的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]名称。|每个 `AnalysisServices` 元素必须出现一次。 没有默认值。|  
-|
-  `Databases` 元素的 `Analysis Services`|包含要分析的数据库的列表。|对于每个`AnalysisServices`元素是可选的。 如果此元素不存在，则分析实例中的所有数据库。|  
-|
-  `Database` 元素的 `AnalysisServices`|指定要分析的数据库的名称。|如果 `Databases` 元素存在，则必须出现一次或多次。 如果 `Database` 元素包含值“*”，则分析实例中的所有数据库。 没有默认值。|  
+|`Databases` 元素的 `Analysis Services`|包含要分析的数据库的列表。|对于每个`AnalysisServices`元素是可选的。 如果此元素不存在，则分析实例中的所有数据库。|  
+|`Database` 元素的 `AnalysisServices`|指定要分析的数据库的名称。|如果 `Databases` 元素存在，则必须出现一次或多次。 如果 `Database` 元素包含值“*”，则分析实例中的所有数据库。 没有默认值。|  
 |`ReportingServices`|指定对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 运行分析。|每个配置文件可以出现一次。 如果未指定，则不会分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。|  
 |`RSInstance`|指定实例的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]名称。|每个 `ReportingServices` 元素必须出现一次。 没有默认值。|  
 |`IntegrationServices`|包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的分析设置。|每个配置文件可以出现一次。 如果未指定，则不会分析 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。|  
@@ -167,7 +160,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
 UpgradeAdvisorWizardCmd -Server MyServer -Instance MyInst   
 ```  
   
-### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>C. 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证运行升级顾问  
+### <a name="c-run-upgrade-advisor-using-ssnoversion-authentication"></a>C. 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证运行升级顾问  
  下面的示例演示如何通过使用配置文件从命令提示符运行升级顾问。 本例指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名和密码以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
 ```  

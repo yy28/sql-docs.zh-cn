@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085574"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
@@ -46,11 +46,11 @@ ms.locfileid: "66085574"
   
 6.  在行中， `SELECT` * \<选择 "列表，expr 列表\*" *，键入挖掘模型内容架构行集中的列的名称。  
   
-     若要查看可在挖掘模型内容查询中返回的列的列表，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
+     若要查看可在挖掘模型内容查询中返回的列的列表，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
   
 7.  或者，您也可以在模板的 WHERE 子句中键入条件，以将返回的行限制为特定的节点或值。  
   
-8.  单击“执行”  。  
+8.  单击“执行” ****。  
   
 ## <a name="querying-the-data-mining-schema-rowsets"></a>查询数据挖掘架构行集  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66085574"
   
      `WHERE MODEL_NAME = '<model name>'`  
   
-4.  单击“执行”  。  
+4.  单击“执行” ****。  
   
      “结果”窗格将显示模型的内容。  
   

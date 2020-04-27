@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e560ec0fd617d4da46235803da8cbd69ef4f80d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091290"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>使用完整路径注册扩展存储过程 DLL 名称
@@ -29,8 +29,7 @@ ms.locfileid: "66091290"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>说明  
- 升级后，先前未用 DLL 名称的完整路径注册的扩展存储过程可能无法运行。 这是因为在升级过程中未将旧的 BINN 目录添加到新路径中。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能无法找到这些扩展存储过程。  
+ 升级后，先前未用 DLL 名称的完整路径注册的扩展存储过程可能无法运行。 这是因为在升级过程中未将旧的 BINN 目录添加到新路径中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能无法找到这些扩展存储过程。  
   
 ## <a name="corrective-action"></a>纠正措施  
  升级之前，请对每个未使用完整路径名注册的扩展存储过程执行以下步骤：  

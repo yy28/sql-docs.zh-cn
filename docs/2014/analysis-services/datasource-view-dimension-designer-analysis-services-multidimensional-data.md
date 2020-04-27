@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082349"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>数据源视图（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -82,7 +82,7 @@ ms.locfileid: "66082349"
  **关系图复制源**  
  选择与维度关联的数据源视图中包含的一个关系图，以在“数据源视图”窗格中显示该关系图。****  
   
- **Zoom**  
+ **缩放**  
  选择可用的缩放选项。  
   
  **属性**  
@@ -128,7 +128,7 @@ ms.locfileid: "66082349"
  显示包含所选关系的数据源视图的**数据源视图设计器**。 有关**数据源视图设计器**的详细信息，请参阅[数据源视图设计器（Analysis Services - 多维数据）](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
  **属性**  
- 在 ** 中显示所选关系的“属性”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示所选关系的“属性”**** 窗口。  
   
 ## <a name="see-also"></a>另请参阅  
  [维度设计器&#41; &#40;Analysis Services 多维数据的维度结构 &#40;&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   

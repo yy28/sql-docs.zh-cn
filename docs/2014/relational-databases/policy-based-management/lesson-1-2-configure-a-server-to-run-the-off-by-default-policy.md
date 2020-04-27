@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090643"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>将服务器配置为运行 Off By Default 策略
@@ -30,7 +30,7 @@ ms.locfileid: "66090643"
   
 4.  要查看服务器是否符合该策略，请单击“评估”****。  
   
-5.  如果 ** 符合该策略，则会在“结果”**[!INCLUDE[ssDE](../../includes/ssde-md.md)]区域中显示带复选标记的绿色圆圈。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不符合该策略，则会显示带 X 的红色圆圈。  
+5.  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 符合该策略，则会在“结果”**** 区域中显示带复选标记的绿色圆圈。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不符合该策略，则会显示带 X 的红色圆圈。  
   
 6.  在“目标详细信息”**** 区域中，如果发生了错误，你会在“消息”**** 列中看到其他信息。 在“消息”**** 列中，单击“查看”**** 以查看报表，其中包含所检查的每个方面属性的检查结果。  
   

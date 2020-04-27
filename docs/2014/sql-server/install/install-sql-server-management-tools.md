@@ -13,21 +13,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094429"
 ---
 # <a name="install-sql-server-management-tools"></a>安装 SQL Server 管理工具
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具包括以下组件：  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库优化顾问  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库优化顾问  
   
 -   命令提示符工具，如 sqlcmd.exe 和 osql.exe。  
   

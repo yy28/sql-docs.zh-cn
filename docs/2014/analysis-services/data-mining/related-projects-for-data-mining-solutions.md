@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082991"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>数据挖掘解决方案的相关项目
@@ -34,15 +34,14 @@ ms.locfileid: "66082991"
   
  [Reporting Services](#bkmk_SSRS)  
   
- [数据质量服务](#bkmk_DQSetc)  
+ [Data Quality Service](#bkmk_DQSetc)  
   
  [全文搜索](#bkmk_FTSetc)  
   
  [语义索引](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a>SQL Server Integration Services  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供数据挖掘项目的数据准备和定型阶段所需的组件和功能。 虽然您可使用其他工具（如脚本）执行很多数据清除或准备任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在数据挖掘方面具有众多优势：  
+##  <a name="sql-server-integration-services"></a><a name="bkmk_SSIS"></a>SQL Server Integration Services  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供数据挖掘项目的数据准备和定型阶段所需的组件和功能。 虽然您可使用其他工具（如脚本）执行很多数据清除或准备任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在数据挖掘方面具有众多优势：  
   
 -   将任务表示为工作流的一部分，可对其进行重复、自动化、分支或扩展。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66082991"
   
 -   [CDC 控制任务](../../integration-services/control-flow/cdc-control-task.md)  
   
--   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
+-   [数据清理](../../data-quality-services/data-cleansing.md)  
   
 -   [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md)  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66082991"
   
 -   [字词查找转换](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a>SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  虽然 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通常不会被视为数据挖掘解决方案的重要组件，但它提供的以下功能对演示数据挖掘解决方案很有用。  
   
 -   在复杂报表中集成来自多个源的数据。 为分析人员创建对模型内容的查询，并创建为最终用户显示预测和趋势的报表。  
@@ -99,27 +98,26 @@ ms.locfileid: "66082991"
   
 -   与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]集成，以支持对从 OLAP 模型创建的数据挖掘维度和数据挖掘多维数据集的钻取和浏览。  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中可用的参数化和格式化功能。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中可用的参数化和格式化功能。  
   
  有关如何将 Reporting Services 作为数据源与 DMX 查询一起使用的详细信息，请参阅以下链接：  
   
- [从数据挖掘模型检索数据 &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [从数据挖掘模型检索数据 (DMX) (SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [DMX &#40;SSRS 的 Analysis Services 连接类型&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  但是，不需要将 DMX 用作数据源。 用于数据挖掘的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件还支持将预测查询的结果保存到关系数据库中。 如果已建立用于使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]更新模型的工作流，则将预测和其他数据挖掘查询结果保存到 SQL Server 可使您能够使用 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 进行报告，并能使用其他不与 DMX 建立接口连接的工具。  
   
  有关将 Reporting Services 用作数据源的表示层的详细信息，请参阅 [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)。  
   
-##  <a name="bkmk_DQSetc"></a>Data Quality Services  
+##  <a name="data-quality-services"></a><a name="bkmk_DQSetc"></a>Data Quality Services  
  Data Quality Services (DQS) 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的新增功能。 由于数据问题会导致无法进行数据挖掘，因此执行重复分析或在具有复杂数据源的大型组织中工作的数据挖掘人员应会发现，使用 DQS 的规划良好的数据项目是一种支持数据挖掘的解决方案，它比使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他脚本的即席数据清除更为可靠。  
   
  应考虑将以下 DQS 功能用于数据挖掘解决方案中的数据准备和数据集成。  
   
- **计算机辅助的数据清理过程，用于分析源数据并提出更改。**  
+ **计算机辅助的数据清除过程，该过程可分析源数据并提出更改建议。**  
  DQS 会将源数据与数据质量提供程序维护和保护的基于云的引用数据进行比较。  
   
  DQS 还会分析原始源数据并从用户数据中创建知识库。 将对处理后的数据进行分类，然后向用户显示以供进一步处理。 清除过程是交互式的，意味着数据专员可批准、拒绝或修改计算机辅助的数据清除过程建议的数据。  
@@ -128,7 +126,7 @@ ms.locfileid: "66082991"
   
  有关详细信息，请参阅 [Data Cleansing](../../data-quality-services/data-cleansing.md)。  
   
- **计算机辅助的匹配过程，用于分析源数据并建议更改。**  
+ **计算机辅助的匹配过程，该过程可分析源数据并提出更改建议。**  
  若要防止数据重复，您可对数据源执行额外清除，以标识精确匹配项和近似匹配项。 利用这些组件，您可指定匹配规则和应用规则的阈值。  
   
  通过查找数据匹配项，您可删除重复项，从而解决这一数据挖掘问题。 消除数据重复不会自动进行；数据专员和 IT 专业人员必须对知识库中的知识和要对数据进行的更改进行验证。  
@@ -139,7 +137,7 @@ ms.locfileid: "66082991"
   
  在数据质量项目中执行清除和匹配活动时，可获得与 DQS 处理的数据有关的实时统计信息和其他信息。 数据事件探查可帮助您评估数据清除或数据匹配在多大程度上帮助提高数据质量，并理解已做的更改。 有关数据事件探查和通知的信息，请参阅 [Data Profiling and Notifications in DQS](../../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
- **表示三种类型的知识的知识库：现成的知识、DQS 服务器生成的知识和用户生成的知识。**  
+ **一个表示以下三种类型的知识的知识库：现有知识、DQS 服务器生成的知识和用户生成的知识。**  
  创建知识库之后，您可使用它反复清除和验证其他数据。  
   
  您可将来自多个源的新数据导入知识库中，这些数据是来自引用提供程序的已知干净数据，或与知识库中现有数据匹配的原始数据。  
@@ -150,7 +148,7 @@ ms.locfileid: "66082991"
   
  有关详细信息，请参阅 [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
-##  <a name="bkmk_FTSetc"></a>全文搜索  
+##  <a name="full-text-search"></a><a name="bkmk_FTSetc"></a>全文搜索  
  SQL Server 中的全文搜索为应用程序和用户提供了对 SQL Server 表中基于字符的数据运行全文查询的功能。 启用全文搜索后，可对由有关多种形式的词或短语的语言特定的规则增强的文本数据执行搜索。 还可配置搜索条件（如多个字词之间的距离），使用函数约束按可能性顺序返回的结果。  
   
  由于全文查询是 SQL Server 引擎所提供的一项功能，因此，您可对文本数据源使用全文搜索来创建参数化查询、生成自定义数据集或字词向量，并在数据挖掘中使用这些源。  
@@ -177,7 +175,7 @@ ms.locfileid: "66082991"
   
 -   仅包含以下数据类型的列支持全文检索：char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 和 varbinary(max)。 如果列为 varbinary、varbinary(max)、image 或 xml，则您必须在单独的类型列中指定可编制索引的文档的文件扩展名（.doc、.pdf、.xls 等）。  
   
-##  <a name="bkmk_SemSearch"></a>语义索引  
+##  <a name="semantic-indexing"></a><a name="bkmk_SemSearch"></a>语义索引  
  语义搜索以 SQL Server 中现有的全文搜索功能为基础，但使用其他功能和统计信息来启用方案（如相关文档的自动关键字提取和发现）。 例如，您可以使用语义搜索来建立一个组织的基本分类，或对文档集进行分类。 您也可在聚类分析或决策树模型中将提取的字词和文档相似性得分组合使用。  
   
  在成功启用语义搜索并为数据列编制索引后，您可将本机提供的函数与语义索引一起使用来执行以下操作：  
@@ -204,6 +202,6 @@ ms.locfileid: "66082991"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS&#41;的多维模型解决方案](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [&#40;SSAS 表格&#41;的表格模型解决方案](../tabular-model-solutions-ssas-tabular.md)  
+ [表格模型解决方案（SSAS 表格）](../tabular-model-solutions-ssas-tabular.md)  
   
   

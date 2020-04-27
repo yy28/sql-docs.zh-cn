@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084371"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 导入向导导入数据挖掘项目
-  本主题介绍如何通过使用 ** 中的模板“从服务器导入（多维和数据挖掘）项目”**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]从另一台服务器上的现有数据挖掘项目导入元数据，来创建新的数据挖掘项目。  
+  本主题介绍如何通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的模板“从服务器导入（多维和数据挖掘）项目”**** 从另一台服务器上的现有数据挖掘项目导入元数据，来创建新的数据挖掘项目。  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>从现有数据挖掘项目导入数据源、挖掘结构和挖掘模型  
  使用模板 "**从服务器导入（多维和数据挖掘）项目**" 时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]将创建一个新的数据挖掘项目，然后从指定的数据挖掘项目复制元数据。 该新项目包含与从中进行导入的 ssASnoversion 数据库相同的数据源、数据源视图、挖掘结构和挖掘模型。 但是，在您更新特定属性并处理对象之前将无法使用该项目，如下所述：  
@@ -31,8 +31,7 @@ ms.locfileid: "66084371"
   
 -   默认情况下，在导入项目时，工作区数据库会设置为本地主机，或者任意默认实例会在 **中配置为** “默认目标服务器” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 若要设置此属性，请从 **“选项”** 菜单中依次选择 **“商业智能设计器”**、 **“Analysis Services”** 和 **“常规”**。  
   
-     请注意， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中还包含一个单独选项，可设置此选项以便为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目配置默认部署服务器。 
-  **“默认部署服务器”** 设置可确定表格模型项目的默认工作区数据库。 不能对数据挖掘项目使用支持表格模型的实例  
+     请注意， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中还包含一个单独选项，可设置此选项以便为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目配置默认部署服务器。 **“默认部署服务器”** 设置可确定表格模型项目的默认工作区数据库。 不能对数据挖掘项目使用支持表格模型的实例  
   
      如果无法更改默认部署数据库以使用在多维或数据挖掘模式下运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，则可始终通过使用 **“项目属性”** 对话框来指定部署数据库。  
   
@@ -53,14 +52,13 @@ ms.locfileid: "66084371"
     > [!WARNING]  
     >  无法指定要导入的对象；在选择现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库时，会导入所有多维和数据挖掘对象。  
   
-     单击“下一步”。   
+     单击“下一步”  。  
   
-5.  
-  **“完成向导”** 页将显示导入操作的进度。 无法取消该操作或更改正在导入的对象。 完成操作后，请单击 **“完成”** 。  
+5.  **“完成向导”** 页将显示导入操作的进度。 无法取消该操作或更改正在导入的对象。 完成操作后，请单击 **“完成”** 。  
   
      这将自动使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]打开新对象。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSAS 表格&#41;的项目属性](../tabular-models/properties-ssas-tabular.md)  
+ [项目属性（SSAS 表格）](../tabular-models/properties-ssas-tabular.md)  
   
   

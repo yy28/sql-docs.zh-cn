@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7ab4ad7a819c18056ab5901f95caf1b74b23a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087528"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>完成向导（分区向导）
@@ -38,9 +38,9 @@ ms.locfileid: "66087528"
 |**从现有分区复制聚合设计**|将聚合设计从度量值组中的现有分区复制到新分区。 单击此项后， **“复制来源”** 选项即会可用。 使用 **“复制来源”** 选项可以选择要从中复制聚合设计的分区。<br /><br /> 请注意，将来可以合并的分区必须具有相同的表结构和聚合设计。 若要将新分区与度量值组中的现有分区合并，则应将现有分区的聚合设计复制到新分区中。|  
   
  **立即部署并处理**  
- 向“处理位置和存储位置”页上指定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**** 实例部署分区并对分区进行处理。 在此页上单击 **“完成”** 之后，向导将部署并处理分区。  
+ 向“处理位置和存储位置”**** 页上指定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例部署分区并对分区进行处理。 在此页上单击 **“完成”** 之后，向导将部署并处理分区。  
   
 ## <a name="see-also"></a>另请参阅  
- [Analysis Services 多维数据 &#40;分区&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分区（Analysis Services - 多维数据）](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

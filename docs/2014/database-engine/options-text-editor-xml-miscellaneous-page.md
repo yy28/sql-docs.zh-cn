@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089211"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>选项（“文本编辑器”-“XML”-“杂项”页）
@@ -42,6 +42,6 @@ ms.locfileid: "66089211"
  **打开文件时进入大纲模式**  
  打开文件时，将启用大纲显示功能。 默认情况下，此复选框为选中状态。  
   
-## <a name="caching"></a>缓存  
+## <a name="caching"></a>Caching  
  **架构**  
  指定架构缓存的位置。 单击“浏览(...)”按钮在新窗口中打开当前的架构缓存。 默认位置为* \<Management Studio install directory>* \xml\schemas。  

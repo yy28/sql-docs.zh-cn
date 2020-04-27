@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086846"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>"创建-编辑命名计算" 对话框（Analysis Services）
-  可以使用中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的 "**创建/编辑命名计算**" 对话框，为数据源视图中的表定义或修改命名计算。 通过执行以下操作之一，可以显示“创建/编辑命名计算”**** 对话框：  
+  可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“创建/编辑命名计算”**** 对话框，为数据源视图中的表定义或修改命名计算。 通过执行以下操作之一，可以显示“创建/编辑命名计算”**** 对话框：  
   
 -   在“数据源视图设计器”**** 的“工具栏”**** 窗格中，单击“新建命名计算”****。  
   
@@ -48,6 +48,6 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [数据源视图设计器 &#40;Analysis Services 多维数据&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [数据源视图设计器（Analysis Services - 多维数据）](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

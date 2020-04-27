@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083771"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
@@ -39,12 +39,10 @@ ms.locfileid: "66083771"
   
  ![时序示例](../media/time-series.gif "时序示例")  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的一个重要功能就是可以执行交叉预测。 如果用两个单独但相关的序列为该算法定型，则可以使用生成的模型来根据一个序列的行为预测另一个序列的结果。 例如，一个产品的实际销售额可能会影响另一个产品的预测销售额。 在创建可应用于多个序列的通用模型时，交叉预测也很有用。 例如，由于序列缺少高质量的数据，造成对某一特定区域的预测不稳定。 您可以根据所有四个区域的平均情况来为通用模型定型，然后将该模型应用到各个序列，以便为每个区域产生更稳定的预测。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的一个重要功能就是可以执行交叉预测。 如果用两个单独但相关的序列为该算法定型，则可以使用生成的模型来根据一个序列的行为预测另一个序列的结果。 例如，一个产品的实际销售额可能会影响另一个产品的预测销售额。 在创建可应用于多个序列的通用模型时，交叉预测也很有用。 例如，由于序列缺少高质量的数据，造成对某一特定区域的预测不稳定。 您可以根据所有四个区域的平均情况来为通用模型定型，然后将该模型应用到各个序列，以便为每个区域产生更稳定的预测。  
   
 ## <a name="example"></a>示例  
- 
-  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的管理团队要预测来年的自行车月销售额。 该公司尤为关注一种自行车型号的销售额是否可用于预测另一种型号的销售额。 通过对过去三年的历史数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法，该公司可以建立一个数据挖掘模型，用于预测未来的自行车销售情况。 此外，该公司还可以进行交叉预测，以了解各个自行车型号的销售趋势是否相关。  
+ [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的管理团队要预测来年的自行车月销售额。 该公司尤为关注一种自行车型号的销售额是否可用于预测另一种型号的销售额。 通过对过去三年的历史数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法，该公司可以建立一个数据挖掘模型，用于预测未来的自行车销售情况。 此外，该公司还可以进行交叉预测，以了解各个自行车型号的销售趋势是否相关。  
   
  每个季度，该公司都会计划用最近的销售数据来更新模型，并更新其预测以描绘出最近的趋势。 有些商店不能准确地或始终如一地更新销售数据，为了弥补这一点造成的误差，他们将创建一个通用预测模型，并用该模型对所有区域进行预测。  
   
@@ -82,11 +80,11 @@ ms.locfileid: "66083771"
   
  时序模型的要求如下：  
   
--   **单个键时间列**每个模型必须包含一个用作事例序列的数值或日期列，这将定义模型将使用的时间段。 key time 列的数据类型可以是 datetime 数据类型或 numeric 数据类型。 但是，该列必须包含连续值，并且这些值对各个序列而言必须是唯一的。 时序模型的事例序列不能存储在两列中，例如不能存储在一个 Year 列和一个 Month 列中。  
+-   **单个键时间列** 每个模型都必须包含一个用作事例序列的数值或日期列，该列定义了该模型将使用的时间段。 key time 列的数据类型可以是 datetime 数据类型或 numeric 数据类型。 但是，该列必须包含连续值，并且这些值对各个序列而言必须是唯一的。 时序模型的事例序列不能存储在两列中，例如不能存储在一个 Year 列和一个 Month 列中。  
   
--   **可预测列**每个模型必须至少包含一个可预测列，算法将在此列中生成时序模型。 可预测列的数据类型必须具有连续值。 例如，您可以预测在一段时间内数值属性（例如收入、销售额或温度）将如何变化。 但是，您不能使用包含离散值（例如采购状态或教育水平）的列作为可预测列。  
+-   **可预测列** 每个模型都必须至少包含一个可预测列，算法将根据这个可预测列生成时序模型。 可预测列的数据类型必须具有连续值。 例如，您可以预测在一段时间内数值属性（例如收入、销售额或温度）将如何变化。 但是，您不能使用包含离散值（例如采购状态或教育水平）的列作为可预测列。  
   
--   **可选序列键列**每个模型可包含一个附加的键列，该列包含标识序列的唯一值。 可选序列键列必须包含唯一值。 例如，只要在每个时间段内每个产品名称都只有一条记录，单个模型就可以包含多个产品型号的销售额。  
+-   **可选序列键列** 每个模型可包含一个附加的键列，该列包含标识序列的唯一值。 可选序列键列必须包含唯一值。 例如，只要在每个时间段内每个产品名称都只有一条记录，单个模型就可以包含多个产品型号的销售额。  
   
  您可以用若干种不同的方式定义 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序模型的输入数据。 但是，由于输入事例的格式会影响挖掘模型的定义，因此您必须考虑自己的业务需求并相应地准备数据。 下面两个示例说明了输入数据是如何影响模型的。 在这两个示例中，已完成的挖掘模型包含四个不同序列的模式：  
   
@@ -159,6 +157,6 @@ ms.locfileid: "66083771"
  [使用 Microsoft 时序查看器浏览模型](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)   
  [时序模型查询示例](time-series-model-query-examples.md)   
- [时序模型的挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

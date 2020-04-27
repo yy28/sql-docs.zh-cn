@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088085"
 ---
 # <a name="choosing-a-model"></a>选择模型
@@ -104,7 +104,7 @@ ms.locfileid: "66088085"
 ## <a name="list-of-supported-algorithms"></a>支持的算法列表  
  默认情况下提供以下算法：  
   
-|算法名称|说明|使用位置|  
+|算法名称|说明|适用范围|  
 |--------------------|-----------------|-------------|  
 |Microsoft 关联规则|生成一些规则，说明哪些项有可能同时出现在一个交易中。|[用于 Excel 的数据挖掘客户端的关联向导 &#40;&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [用于 Excel&#41;&#40;表 AnalysisTools 的购物篮分析](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft 聚类分析|标识数据集中可能无法通过随意观察在逻辑上得出的关系。 该算法使用迭代技术将记录分组为包含类似特征的分类。|[检测类别 &#40;Excel&#41;的表分析工具](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [群集向导 &#40;Excel 数据挖掘外接程序&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

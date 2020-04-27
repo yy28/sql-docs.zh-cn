@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085406"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>创建提升图、利润图或分类矩阵
@@ -88,7 +88,7 @@ ms.locfileid: "66085406"
   
      在 **“利润图设置”** 对话框中输入以下设置。  
   
-     **人口数**  
+     **总数**  
      创建提升图时要使用的数据集中的事例数。  
   
      该模型总是按概率降低的顺序选择事例，也就是说，如果正在评估潜在客户并且选择的数字仅表示客户数据库中记录数的一半，则该模型将在最适合于您的模型的事例子集上度量准确性。  
@@ -112,6 +112,6 @@ ms.locfileid: "66085406"
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services &#40;提升图表&#41;](lift-chart-analysis-services-data-mining.md)   
- [分类矩阵 &#40;Analysis Services 数据挖掘&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [分类矩阵（Analysis Services - 数据挖掘）](classification-matrix-analysis-services-data-mining.md)  
   
   

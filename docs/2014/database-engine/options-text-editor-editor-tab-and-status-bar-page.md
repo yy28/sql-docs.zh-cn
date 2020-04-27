@@ -14,13 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089234"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>选项（“文本编辑器: 编辑器选项卡和状态栏”页）
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>选项（“文本编辑器”:“编辑器”选项卡和“状态栏”页）
   在 **“编辑器选项卡和状态栏”** 页上，您可以自定义 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查询编辑器显示的信息。 您可以指定在“查询编辑器”窗口的选项卡和状态栏中显示的信息级别，以及状态栏是显示在编辑器窗口的顶部还是底部。  
   
 ## <a name="option-settings-by-editor"></a>通过编辑器进行的选项设置  

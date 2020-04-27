@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086399"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio 数据挖掘形状
@@ -44,7 +44,7 @@ ms.locfileid: "66086399"
   
 -   **Microsoft 数据挖掘形状 Studio .vss**此模具文件包含与模板关联的形状。  
   
-## <a name="how-to-use-the-templates"></a>如何使用模型模板  
+## <a name="how-to-use-the-templates"></a>如何使用模板  
  若要打开模板，可双击形状文件，也可打开 Visio，然后打开形状模板。  
   
 1.  将一个 Visio 数据挖掘形状从模具放到新页上。  

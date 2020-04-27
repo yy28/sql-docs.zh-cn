@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c9ca227753b8ebbd80d4de0c672fc8cab5c1b56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085855"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>更改挖掘结构的属性
@@ -26,7 +26,7 @@ ms.locfileid: "66085855"
   
 -   针对结构中的单个列的属性  
   
- 请注意，有些属性依赖于其他属性设置。 例如，在您将列的数据类型设置为 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 之前，不能设置控制绑定行为的属性（例如 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 或 `Discretized`）。  
+ 请注意，有些属性依赖于其他属性设置。 例如，在您将列的数据类型设置为 `Discretized` 之前，不能设置控制绑定行为的属性（例如 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 或 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>）。  
   
  有关挖掘结构属性的详细信息，请参阅 [挖掘结构列](mining-structure-columns.md)。  
   

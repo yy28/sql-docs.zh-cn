@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082303"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>“决策树”选项卡（挖掘模型查看器）
@@ -52,7 +52,7 @@ ms.locfileid: "66082303"
  **直方图**  
  选择可在每个节点的直方图中显示的状态数。 如果模型中的状态数小于所选的值，则将不显示附加条形。  
   
- **树**  
+ **视图**  
  选择要在查看器中显示的树。 如果创建一个包含多个可预测属性的模型，则算法将为每个可预测属性创建一个单独的树。  
   
  **背景**  

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092356"
 ---
 # <a name="select-features-upgrade"></a>选择功能（升级）
@@ -25,7 +25,7 @@ ms.locfileid: "66092356"
  在此版本中无法对要升级的功能进行更改。 若要将功能添加到此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，请完成升级过程，重新启动安装程序，然后在安装中心上单击 **“全新安装或向现有安装添加功能”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [使用升级顾问来准备升级](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
  [使用 SQL Server 的多个版本和实例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   

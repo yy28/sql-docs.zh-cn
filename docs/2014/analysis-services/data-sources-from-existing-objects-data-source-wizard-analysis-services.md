@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082380"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>来自现有对象的数据源（数据源向导）(Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66082380"
  **基于 Analysis Services 项目创建数据源**  
  选择此项可创建引用当前解决方案中另[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]一个项目的新数据源。 新数据源将从所选项目的 `TargetServer` 和 `TargetDatabase` 属性获取设置。 在生成、刷新或部署使用新数据源的项目时，新数据源将从您在选择此选项时指定的数据源获取设置。  
   
- **投影**  
+ **Project**  
  选择希望在新数据源中引用的项目。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081995"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>定义半累加行为（商业智能向导）
@@ -43,7 +43,7 @@ ms.locfileid: "66081995"
  **半累加性函数**  
  为所选度量值选择聚合函数。 下表列出了可用的聚合函数：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**AverageOfChildren**|通过返回度量值子成员的平均值进行聚合。|  
 |`ByAccount`|通过与帐户维度中属性的指定帐户类型关联的聚合函数进行聚合。|  

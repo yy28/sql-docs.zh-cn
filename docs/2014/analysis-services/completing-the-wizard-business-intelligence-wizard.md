@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbfbcdae5d16ac631dddda9aa79c85a359afefb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087749"
 ---
 # <a name="completing-the-wizard-business-intelligence-wizard"></a>完成向导（商业智能向导）
   可以使用 **“完成向导”** 页查看在完成商业智能向导后将进行的更改。  
   
 ## <a name="options"></a>选项  
- **变化**  
+ **更改**  
  显示已对[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中的对象所做的更改。  
   
 ## <a name="see-also"></a>另请参阅  

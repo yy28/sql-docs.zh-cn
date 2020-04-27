@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088370"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>计算成员窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“计算”** 选项卡上的 **“计算成员窗体编辑器”** 窗格创建或修改计算成员。  
   
- **注意**此窗格仅显示在窗体视图中。  
+ **注意** 此窗格仅显示在窗体视图中。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -37,9 +37,9 @@ ms.locfileid: "66088370"
  **父成员**  
  选择在其下面将显示计算成员的成员。  
   
- **注意**如果**父层次结构**指定了除度量值之外的层次结构，则此选项可用。  
+ **注意** 只有在 **“父层次结构”** 指定了 MEASURES 以外的层次结构时，此选项才可用。  
   
- **转**  
+ **更改**  
  选择此项可以显示“选择父成员”对话框并为“父成员”选择成员********。 有关****“选择父成员”对话框的详细信息，请参阅[“选择父成员”对话框（Analysis Services - 多维数据）](select-parent-member-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **表达式**  
@@ -50,7 +50,7 @@ ms.locfileid: "66088370"
 > [!NOTE]  
 >  建议此表达式的计算结果为字符串或数值。  
   
- **其他属性**  
+ **附加属性**  
  展开此项可以查看“格式字符串”、“可见”、“非空行为”、“颜色表达式”和“字体表达式”选项********************。  
   
  **格式字符串**  
@@ -58,7 +58,7 @@ ms.locfileid: "66088370"
   
  有关 MDX 格式字符串的详细信息，请参阅 [FORMAT_STRING 内容 (MDX)](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)。  
   
- **Visible**  
+ **亮起**  
  选择 **True** 将允许计算成员对客户端应用程序可见。  
   
  **非空行为**  

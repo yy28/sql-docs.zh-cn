@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082163"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>定义帐户智能（维度向导）
   可以使用 **“定义帐户智能”** 页，将 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中定义的帐户类型映射到与维度中的 **“帐户类型”** 属性类型关联的维度属性中定义的帐户类型。  
   
 > [!NOTE]  
->  仅当你在“选择维度类型”**** 页中选择“标准维度”**** 以及在“指定维度类型”**** 页上将维度属性映射到“帐户类型”**** 属性类型时，才会显示此页。  
+>   仅当您在 **“选择维度类型”** 页中选择 **“标准维度”** 以及在 **“指定维度类型”** 页上将维度属性映射到 **“帐户类型”** 属性类型时，才会显示此页。  
   
 ## <a name="options"></a>选项  
  **源表帐户类型**  
@@ -34,13 +34,13 @@ ms.locfileid: "66082163"
   
  下表列出了在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中定义的帐户类型：  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**资产**|在特定时间拥有的物品的价值。|  
-|**Balance**|在特定时间某物的计数。|  
+|**平衡表**|在特定时间某物的计数。|  
 |**费用**|所花费的价值。|  
-|**流**|事物的增量计数。|  
-|**帐**|收到的价值。|  
+|**流向**|事物的增量计数。|  
+|**收入**|收到的价值。|  
 |**负债**|在特定时间所拖欠的价值。|  
 |**统计**|某事物的计算比率，或者未聚合的某事物的计数。|  
   

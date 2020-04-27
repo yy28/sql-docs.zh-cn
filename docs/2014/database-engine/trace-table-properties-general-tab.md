@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088743"
 ---
 # <a name="trace-table-properties-general-tab"></a>跟踪表属性（“常规”选项卡）
@@ -36,18 +36,18 @@ ms.locfileid: "66088743"
  **跟踪提供程序类型**  
  显示提供跟踪的服务器类型。  
   
- **版本**  
+ **version**  
  显示提供跟踪的服务器的版本。  
   
- **各**  
+ **行**  
  显示跟踪表中的行数。  
   
  **数据大小(页数)**  
  显示跟踪表中数据页的数量。  
   
 ## <a name="see-also"></a>另请参阅  
- [打开跟踪表 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [SQL Server 事件探查器](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [打开跟踪表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

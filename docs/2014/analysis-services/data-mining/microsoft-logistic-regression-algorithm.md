@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083959"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法
@@ -46,11 +46,11 @@ ms.locfileid: "66083959"
   
  逻辑回归模型的要求如下：  
   
- **单个键列**每个模型必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。  
+ **单键列** 每个模型都必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。  
   
- **输入列**每个模型必须至少包含一个输入列，该输入列包含用作分析因素的值。 可以根据需要拥有任意多的输入列，但是具体取决于每个列中值的数量，添加额外列会增加定型模型所需的时间。  
+ **输入列** 每个模型都必须至少包含一个输入列，该输入列包含用作分析因素的值。 可以根据需要拥有任意多的输入列，但是具体取决于每个列中值的数量，添加额外列会增加定型模型所需的时间。  
   
- **至少一个可预测列**模型必须包含任何数据类型的至少一个可预测列，包括连续数值数据。 还可以将可预测列的值视为模型的输入，或者将其指定为仅用于预测。 嵌套表不允许用于可预测列，但是可作为输入使用。  
+ **至少有一个可预测列** 模型必须至少包含一个可预测列，该预测列可以为任意数据类型，包括连续数值数据。 还可以将可预测列的值视为模型的输入，或者将其指定为仅用于预测。 嵌套表不允许用于可预测列，但是可作为输入使用。  
   
  有关逻辑回归模型支持的内容类型和数据类型的详细信息，请参阅 [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)的“要求”部分。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66083959"
   
  使用 Microsoft 神经网络查看器查看模型时，Analysis Services 显示影响特定结果的因素，这些因素按重要性进行排序。 您可以选择一个属性以及要比较的值。 有关详细信息，请参阅 [使用 Microsoft 神经网络查看器浏览模型](browse-a-model-using-the-microsoft-neural-network-viewer.md)。  
   
- 如果希望了解更多信息，您可以使用 Microsoft 一般内容树查看器浏览模型的详细信息。 逻辑回归模型的模型内容包含的边际节点显示该模型的所有输入以及可预测属性的子网。 有关详细信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)。  
+ 如果希望了解更多信息，您可以使用 Microsoft 一般内容树查看器浏览模型的详细信息。 逻辑回归模型的模型内容包含的边际节点显示该模型的所有输入以及可预测属性的子网。 有关详细信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)。  
   
 ## <a name="creating-predictions"></a>创建预测  
  定型模型之后，您可以针对模型内容创建查询以获取回归系数和其他详细信息，还可以使用模型进行预测。  
