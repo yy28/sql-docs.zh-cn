@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e3717bb9af98c9f3231115a7bad4cc8639998d1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177097"
 ---
 # <a name="create-the-rsexecrole"></a>创建 RSExecRole
-  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用称为 `RSExecRole` 的预定义数据库角色向报表服务器数据库授予报表服务器权限。 将`RSExecRole`自动创建具有 Report Server 数据库的角色。 通常，始终不应修改该角色或将其他用户分配给该角色。 但是，将 Report Server 数据库移到新的或不同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的数据库时，必须在 Master 和 MSDB 系统数据库中重新创建该角色。
 
  使用以下说明，您将执行下列步骤：
@@ -36,7 +35,7 @@ ms.locfileid: "78177097"
 
 -   备份加密密钥，以便可以在数据库移动之后对其进行还原。 这是不会直接影响您创建和设置 `RSExecRole` 的能力的步骤，不过您必须有密钥备份才能验证您的工作。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。
 
--   验证您是以具有 `sysadmin` 实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 权限的用户帐户身份登录的。
+-   验证您是以具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的 `sysadmin` 权限的用户帐户身份登录的。
 
 -   验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务已安装在计划使用的 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 实例上并且正在运行。
 
@@ -118,8 +117,7 @@ ms.locfileid: "78177097"
 
 8.  单击 **“安全对象”**。
 
-9. 单击“添加”  。 此时，将显示 **“添加对象”** 对话框。 
-  **“指定对象”** 选项默认情况下处于选中状态。
+9. 单击 **“添加”** 。 此时，将显示 **“添加对象”** 对话框。 **“指定对象”** 选项默认情况下处于选中状态。
 
 10. 单击“确定”。 
 
@@ -129,7 +127,7 @@ ms.locfileid: "78177097"
 
 13. 单击“确定”。 
 
-14. 单击“浏览”  。
+14. 单击“浏览”****。
 
 15. 向下滚动项目列表，然后选择下列各项：
 
@@ -161,8 +159,7 @@ ms.locfileid: "78177097"
 
 19. 对于其余的每个存储过程，重复此操作。 必须向 RSExecRole 授予全部十个存储过程的执行权限。
 
-20. 在“安全对象”选项卡上，再次单击 **“添加”** 。 此时，将显示 **“添加对象”** 对话框。 
-  **“指定对象”** 选项默认情况下处于选中状态。
+20. 在“安全对象”选项卡上，再次单击 **“添加”** 。 此时，将显示 **“添加对象”** 对话框。 **“指定对象”** 选项默认情况下处于选中状态。
 
 21. 单击“确定”。 
 
@@ -172,7 +169,7 @@ ms.locfileid: "78177097"
 
 24. 单击“确定”。 
 
-25. 单击“浏览”  。
+25. 单击“浏览”****。
 
 26. 向下滚动项目列表，然后选择下列各项：
 
@@ -210,17 +207,17 @@ ms.locfileid: "78177097"
 
 5.  输入数据库引擎的服务器名称。 如果将报表服务器数据库附加到命名实例，则必须按以下格式键入实例名称：\<servername>\\<instancename\>。
 
-6.  单击 **“测试连接”** 。
+6.  单击 **“测试连接”**。
 
 7.  单击“下一步”。 
 
 8.  在“数据库”上，选择报表服务器数据库。
 
-9. 单击 **“下一步”** 并完成向导。
+9. 单击“下一步”  并完成向导。
 
 10. 单击 **“加密密钥”**。
 
-11. 请单击“还原”。****
+11. 单击 "**还原**"。
 
 12. 选择强文件 (.snk)，该文件拥有用来对报表服务器数据库中存储的凭据和连接信息进行解密的对称密钥的备份副本。
 

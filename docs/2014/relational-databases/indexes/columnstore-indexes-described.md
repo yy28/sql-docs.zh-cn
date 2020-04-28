@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6220d6650d2be81cad3f38862ba74213219a28a0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175915"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -39,11 +39,10 @@ ms.locfileid: "78175915"
 
 -   [相关任务和主题](#related)
 
-##  <a name="basics"></a> 基础知识
- *列存储索引*是使用列式数据格式（称为列存储）存储、检索和管理数据的一种技术。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。
+##  <a name="basics"></a><a name="basics"></a>传授
+ *列存储索引*是使用列式数据格式（称为列存储）存储、检索和管理数据的一种技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。
 
-###  <a name="benefits"></a> 优势
+###  <a name="benefits"></a><a name="benefits"></a>便利
  列存储索引适合于对大型数据集执行分析的大多数只读查询。 通常，列存储索引是针对数据仓库工作负荷的查询。 列存储索引为使用全表扫描的查询带来很大的性能好处，但不适合于查找数据并且搜索特定值的查询。
 
  列存储索引的优点：
@@ -63,7 +62,7 @@ ms.locfileid: "78175915"
 
 ||
 |-|
-|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|
+|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|
 
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，聚集列存储索引：
 
@@ -83,7 +82,7 @@ ms.locfileid: "78175915"
 
 ||
 |-|
-|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|
+|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|
 
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，非聚集列存储索引：
 
@@ -99,11 +98,10 @@ ms.locfileid: "78175915"
 
 -   不以排序方式物理存储列。 相反，它存储数据以改进压缩和性能。 在创建列存储索引之前对数据预先进行排序不是必需的，但这样做可以改进列存储压缩。
 
-###  <a name="Concepts"></a>关键概念和术语
+###  <a name="key-concepts-and-terms"></a><a name="Concepts"></a>关键概念和术语
  以下关键概念和术语与列存储索引相关联。
 
- 列存储索引*列存储索引*是一种使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。
+ 列存储索引*列存储索引*是一种使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。
 
  列存储：*列*存储是以逻辑方式组织为包含行和列的表，并以列数据格式物理存储的数据。
 
@@ -141,9 +139,9 @@ ms.locfileid: "78175915"
 
  在增量存储达到最大行数后，它会关闭。 元组-移动过程检查已关闭的行组。 在它找到已关闭行组后，会对其进行压缩并且将其存储到列存储中。
 
-##  <a name="dataload"></a>正在加载数据
+##  <a name="loading-data"></a><a name="dataload"></a>正在加载数据
 
-###  <a name="dataload_nci"></a>将数据加载到非聚集列存储索引
+###  <a name="loading-data-into-a-nonclustered-columnstore-index"></a><a name="dataload_nci"></a>将数据加载到非聚集列存储索引
  若要将数据加载到非聚集列存储索引中，请首先将数据加载到作为堆或聚集索引存储的传统行存储表中，然后使用[CREATE 列存储索引 &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)创建非聚集列存储索引。
 
  ![将数据加载到列存储索引中](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "将数据加载到列存储索引中")
@@ -152,7 +150,7 @@ ms.locfileid: "78175915"
 
  有关详细信息，请参阅 [Using Nonclustered Columnstore Indexes](indexes.md)。
 
-###  <a name="dataload_cci"></a>将数据加载到聚集列存储索引
+###  <a name="loading-data-into-a-clustered-columnstore-index"></a><a name="dataload_cci"></a>将数据加载到聚集列存储索引
  ![加载到聚集列存储索引中](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "加载到聚集列存储索引中")
 
  按图中所建议的那样，为了将数据加载到聚集列存储索引， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：
@@ -177,7 +175,7 @@ ms.locfileid: "78175915"
 
  有关增量存储任务和进程的详细信息，请参阅 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)。
 
-##  <a name="performance"></a>性能提示
+##  <a name="performance-tips"></a><a name="performance"></a>性能提示
 
 ### <a name="plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>计划足够的内存以便并行创建列存储索引
  创建列存储索引默认情况下是一种并行操作，除非内存受到约束。 并行创建索引要求比按顺序创建索引更多的内存。 在内存充足的情况下，创建列存储索引相当于在同一列上生成 B 树所用时间的 1.5 倍。
@@ -186,12 +184,12 @@ ms.locfileid: "78175915"
 
  如果您的表具有超过 10 亿行，但 SQL Server 无法获得足够大的内存授予来使用 MAXDOP 创建索引，SQL Server 将根据需要自动减少 MAXDOP，以便适合可用内存授予。  在某些情况下，DOP 必须减小到一个以便在受到约束的内存下生成索引。
 
-##  <a name="related"></a>相关任务和主题
+##  <a name="related-tasks-and-topics"></a><a name="related"></a>相关任务和主题
 
 ### <a name="nonclustered-columnstore-indexes"></a>非聚集列存储索引
  对于常见任务，请参阅 [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md)。
 
--   [&#40;Transact-sql&#41;创建列存储索引](/sql/t-sql/statements/create-columnstore-index-transact-sql)
+-   [CREATE COLUMNSTORE INDEX (Transact-SQL)](/sql/t-sql/statements/create-columnstore-index-transact-sql)
 
 -   [ALTER INDEX &#40;](/sql/t-sql/statements/alter-index-transact-sql)具有 REBUILD 的 transact-sql&#41;。
 
@@ -219,12 +217,12 @@ ms.locfileid: "78175915"
 
 -   [sys.index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)
 
--   [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)
+-   [sys.partitions (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)
 
--   [sys. column_store_segments &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)
+-   [sys.column_store_segments (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)
 
--   [sys. column_store_dictionaries &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)
+-   [sys.column_store_dictionaries (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)
 
--   [sys. column_store_row_groups &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)
+-   [sys.column_store_row_groups (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)
 
 

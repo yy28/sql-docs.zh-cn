@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f56a7fc3d4d5d24143d2c83709e9674e1b2fd43d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176827"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指示器（报表生成器和 SSRS）
@@ -41,10 +41,9 @@ ms.locfileid: "78176827"
 
  ![rs_IndicatorTableTrafficLight](../media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")
 
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供可按原样使用的内置指示器集和指示器图标，但您也可以自定义单独的指示器图标和指示器集以满足您的需要。
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供可按原样使用的内置指示器集和指示器图标，但您也可以自定义单独的指示器图标和指示器集以满足您的需要。
 
- 若要详细了解如何将指示器用作 KPI，请参阅[教程：向报表添加 KPI（报表生成器）](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。
+ 有关将指示器用作 KPI 的详细信息，请参阅[教程：向报表添加 KPI（报表生成器）](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。
 
 > [!NOTE]
 >  您可以将指示器作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "78176827"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="ComparingIndicatorsToGauges"></a> 将指示器与仪表进行比较
+##  <a name="comparing-indicators-to-gauges"></a><a name="ComparingIndicatorsToGauges"></a>将指示器与仪表进行比较
  尽管在外观上差别很大，但指示器就是简单的仪表。 指示器和仪表都显示单个数据值。 主要差别就是仪表具有元素（如框架和指针）。 指示器只具有状态、图标和（可选）标签。 指示器状态类似于仪表范围。
 
  与仪表一样，指示器位于仪表面板内。 在您想要通过使用 **“指示器属性”** 对话框或“属性”窗格配置某一指示器时，需要选择指示器，而非面板。 否则，可用选项将应用于仪表面板选项，并且您不能配置指示器。 下图显示了指示器仪表面板中的一个选定指示器。
@@ -62,7 +61,7 @@ ms.locfileid: "78176827"
  仪表可能比指示器的显示效果更好，具体取决于您描绘数据值的方式。 有关详细信息，请参阅 [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)。
 
 
-##  <a name="ChoosingIndicatorTypes"></a> 选择要使用的指示器类型
+##  <a name="choosing-the-indicator-type-to-use"></a><a name="ChoosingIndicatorTypes"></a>选择要使用的指示器类型
  使用正确的指示器集是立即传达数据含义的关键，无论数据是处于详细信息行中、表或矩阵的行或列组中，还是单独位于表体或面板中。 内置指示器集具有三个或者更多的图标。 这些图标在形状和/或颜色上各不相同。 每个图标都传达一种不同的数据状态。
 
  下表列出了内置的指示器集，并描述它们的一些常见用途。
@@ -77,7 +76,7 @@ ms.locfileid: "78176827"
  您选择某一指示器集后，可通过在针对指示器的对话框中或“属性”窗格中设置其属性，自定义该集中每个指示器图标的外观。 可以使用内置的颜色、图标和大小来配置指示器，也可以使用表达式来配置指示器。
 
 
-##  <a name="CustomizingIndicators"></a> 自定义指示器
+##  <a name="customizing-indicators"></a><a name="CustomizingIndicators"></a>自定义指示器
  可以对指示器进行自定义，以便满足您的需要。 您可以按以下方式修改指示器集以及某一集内的单独指示器图标：
 
 -   更改指示器图标的颜色。 例如，您可能希望将某一指示器集的配色方案设置为单色，或者使用并非默认颜色的其他颜色。
@@ -93,10 +92,10 @@ ms.locfileid: "78176827"
  有关详细信息，请参阅 [更改指示器图标和指示器集（报表生成器和 SSRS）](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。
 
 
-##  <a name="UsingIndicatorsInTablesMatrices"></a> 在表和矩阵中使用指示器
+##  <a name="using-indicators-in-tables-and-matrices"></a><a name="UsingIndicatorsInTablesMatrices"></a>在表和矩阵中使用指示器
  指示器的简单形状使其很适合在表和矩阵中使用。 指示器甚至在小尺寸下效果也很好。 这使它们可用于报表的详细信息行或组行中。
 
- 下图显示具有一个表的报表，该表使用方向指示器集“四个箭头(彩色)”  来指示销售额。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。
+ 下图显示具有一个表的报表，该表使用方向指示器集“四个箭头(彩色)”**** 来指示销售额。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。
 
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")
 
@@ -113,7 +112,7 @@ ms.locfileid: "78176827"
  指示器仅使用单个值。 如果您需要显示多个数据值，则应使用迷你图或数据条来代替指示器。 它们可以表示多个数据值，即使在小尺寸下也简单、易于理解，并且适合在表和矩阵中使用。 有关详细信息，请参阅 [迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)。
 
 
-##  <a name="SizingIndicatators"></a> 调整指示器的大小以便提供最佳的视觉效果
+##  <a name="sizing-indicators-to-maximize-visual-impact"></a><a name="SizingIndicatators"></a>调整指示器大小以最大程度地提高视觉效果
  除了颜色、方向和形状外，您还可以使用大小来提供最佳的指示器视觉效果。 假定某一报表使用指示器来显示客户对不同类型自行车的满意度。 指示器使用的图标可以根据客户满意度配置为不同的大小。 满意度越高，在报表中出现的图标就越大。 下图显示了自行车的销售报表以及反映销售额的图标大小。
 
  您可以使用表达式基于指示器使用的字段值动态设置星形的大小。 有关详细信息，请参阅 [使用表达式指定指示器的大小（报表生成器和 SSRS）](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。
@@ -121,7 +120,7 @@ ms.locfileid: "78176827"
  若要了解有关编写和使用表达式的详细信息，请参阅[表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。
 
 
-##  <a name="IncludingIndicatorsInGauges"></a> 在仪表面板中包括指示器和仪表
+##  <a name="including-indicators-and-gauges-in-gauge-panels"></a><a name="IncludingIndicatorsInGauges"></a>在仪表面板中包括指示器和仪表
  指示器始终位于仪表面板内。 仪表面板是可以包括一个或多个仪表和状态指示器的顶级容器。 仪表面板可以包含子仪表或指示器，也可以包含相邻仪表或指示器。 如果您使用指示器作为仪表的子级，则可以通过显示在仪表中显示的数据值的状态，进一步地展现数据。 例如，仪表内的指示器可以显示一个绿色圆圈，向您指示仪表指向的值处于值范围的上 33% 中。 如果并排使用仪表和指示器，您可以通过不同的方式表示数据。 在任何一种情况下，指示器和仪表都可以使用相同或不同的数据字段。
 
  下图显示一个与仪表并排且处于仪表内的指示器。
@@ -133,12 +132,12 @@ ms.locfileid: "78176827"
  有关使用仪表的详细信息，请参阅 [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)。
 
 
-##  <a name="SequenceIndicatorStates"></a> 指示器状态的序列
+##  <a name="sequence-of-indicator-states"></a><a name="SequenceIndicatorStates"></a>指示器状态的序列
  **“指示器属性”** 对话框的 **“值和状态”** 选项卡中指示器状态的序列影响在指示器状态的起始值和结束值重叠时将为数据值显示的指示器图标。
 
  无论您是使用百分比还是数字状态度量单位，都可能会发生此情况。 在您使用数字度量单位时更有可能发生此情况，因为您为此度量值提供特定值。 在您对报表数据值进行四舍五入时也更有可能发生此情况，因为这往往会使数据更离散。
 
- 下面的方案描述当在“3 个箭头(彩色)”  方向指示器中更改由三个状态构成的序列时，将会如何影响数据的可视化。 默认情况下，该序列为：
+ 下面的方案描述当在“3 个箭头(彩色)”**** 方向指示器中更改由三个状态构成的序列时，将会如何影响数据的可视化。 默认情况下，该序列为：
 
 1.  红色向下箭头
 
@@ -148,7 +147,7 @@ ms.locfileid: "78176827"
 
  下面的方案显示对于四个不同的状态序列及其值范围，这些序列是如何影响数据可视化的。
 
- 在这些方案中，“3 个箭头(彩色)”  指示器使用数字状态度量。
+ 在这些方案中，“3 个箭头(彩色)”**** 指示器使用数字状态度量。
 
 |状态序列|起始值|结束值|
 |--------------------|-----------------|---------------|
@@ -185,7 +184,7 @@ ms.locfileid: "78176827"
  总之，计算将开始，并且在指示器状态列表和报表的顶部将显示与具有数据适合的值范围的第一个指示器状态相关联的指示器图标。 通过更改指示器状态的序列，您可以影响数据值的可视化。
 
 
-##  <a name="HowTo"></a> 操作指南主题
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作指南主题
  本节列出的过程说明如何添加、更改和删除指示器，如何配置和自定义指示器，以及如何在仪表中使用指示器。
 
 -   [添加或删除指示器（报表生成器和 SSRS）](add-or-delete-an-indicator-report-builder-and-ssrs.md)

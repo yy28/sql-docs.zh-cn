@@ -19,10 +19,10 @@ ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6ed3a127d2527b35c301ab7f3d05305c4f8d2ced
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322119"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "75322119"
 |peer_db_version|**sysname**|指定对等数据库的版本号。|  
 |is_peer|**bit**|指示节点是否为只读订阅服务器。 值**0**表示只读订阅服务器。|  
 |conflict_detection_enabled|**bit**|指示是否为拓扑启用了冲突检测。|  
-|originator_id|**varbinary （16）**|标识拓扑中的每个节点以进行冲突检测。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
+|originator_id|**varbinary(16)**|标识拓扑中的每个节点以进行冲突检测。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |peer_conflict_retention|**int**|在冲突表中存储元数据的时间段（以天为单位）。|  
 |peer_subscriptions|**XML**|有关响应请求的节点的信息。|  
-|progress_phase|**nvarchar （32）**|使用下列值之一标识当前处理阶段：<br /><br /> 已启动<br /><br /> 已收集对等方版本<br /><br /> 已收集状态|  
+|progress_phase|**nvarchar(32)**|使用下列值之一标识当前处理阶段：<br /><br /> Started<br /><br /> 已收集对等方版本<br /><br /> 已收集状态|  
 |modified_date|**datetime**|阶段的完成日期和时间。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dba2c6637c9a637e60583b926b9e80671c043be
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173516"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>向场中添加另一个 Reporting Services Web 前端
@@ -53,7 +53,7 @@ ms.locfileid: "78173516"
 
 |步骤|说明和链接|
 |----------|--------------------------|
-|运行 SharePoint 2010 产品准备工具|您必须拥有 SharePoint 2010 安装介质。 准备工具是安装介质上的**prerequisiteinstaller.exe** 。|
+|运行 SharePoint 2010 产品准备工具|您必须拥有 SharePoint 2010 安装介质。 准备工具是安装介质中的 **PrerequisiteInstaller.exe** 。|
 |安装 SharePoint 2010 产品。|1）选择 "**服务器场**" 安装类型。<br /><br /> 2）为服务器类型选择 "**完成**"。<br /><br /> 3) 安装完成后，如果你的现有 SharePoint 场已安装 SharePoint 2010 SP1，则不要运行 SharePoint 产品配置向导。 您应该在运行 SharePoint 产品配置向导之前安装 SharePoint SP1。|
 |安装 SharePoint Server 2010 SP1。|如果现有 SharePoint 场安装了 SharePoint 2010 SP1，请从中下载并安装 SharePoint 2010[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)sp1：。<br /><br /> 有关 SharePoint 2010 SP1 的详细信息，请参阅 [安装 Office 2010 SP1 和 SharePoint 2010 SP1 时的已知问题](https://support.microsoft.com/kb/2532126)：|
 |运行 SharePoint 产品配置向导以便向场中添加服务器。|1）在 " **Microsoft sharepoint 2010 products** " 程序组中，单击 " **Microsoft Sharepoint 2010 产品配置向导**"。<br /><br /> 2）在 "**连接到服务器场**" 页上，选择 "**连接到现有场**" 并单击 "**下一步**"。<br /><br /> 3）在 "**指定配置数据库设置**" 页上，键入用于现有场的数据库服务器的名称以及配置数据库的名称。 单击“下一步”。 <br />**&#42;&#42; 重要 &#42;&#42;** 如果你看到类似于以下内容的错误消息，并且已验证你具有权限，则在**SQL Server Configuration Manager**中验证为 SQL Server 网络配置启用了哪些协议。 "无法连接到数据库服务器。 请确保数据库存在，是 Sql Server，并且您具有访问服务器的相应权限。 "<br />**&#42;&#42; 重要 &#42;&#42;** 如果你看到 "**服务器场产品和修补程序状态**" 页，则需要查看该页上的信息，然后用所需文件更新服务器，然后才能继续将服务器加入到场。<br /><br /> 4）在 "**指定场安全设置**" 页上键入场密码，然后单击 "**下一步**"。 在确认页上单击 **“下一步”** 以便运行向导。<br /><br /> 5）单击 "**下一步**" 运行**场配置向导**。|

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172016"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重播选项（分布式重播管理工具）
@@ -38,8 +38,7 @@ ms.locfileid: "78172016"
 
  如果未指定 **-m** 参数，则使用本地计算机。
 
- **-d** *controller_working_dir*指定控制器上用于存储中间文件的目录。 
-  **-d** 参数是必需的。
+ **-d** *controller_working_dir*指定控制器上用于存储中间文件的目录。 **-d** 参数是必需的。
 
  需要满足以下要求：
 
@@ -79,20 +78,15 @@ ms.locfileid: "78172016"
 ## <a name="examples"></a>示例
  在本例中，分布式重播从修改的重播配置文件 `DReplay.exe.replay.config`派生其大部分行为。
 
--   
-  **-m** 参数指定名为 `controller1` 的计算机充当控制器。 当控制器服务在另一台计算机上运行时，必须指定计算机名称。
+-   **-m** 参数指定名为 `controller1` 的计算机充当控制器。 当控制器服务在另一台计算机上运行时，必须指定计算机名称。
 
--   
-  **-d** 参数指定中间文件在控制器上的位置 `c:\WorkingDir`。
+-   **-d** 参数指定中间文件在控制器上的位置 `c:\WorkingDir`。
 
--   
-  **-o** 参数指定每个指定的客户端捕获重播活动并将其保存到结果跟踪文件中。 注意：可使用配置文件中的 `<ResultTrace>` 元素指定是否记录行计数和结果集。
+-   **-o** 参数指定每个指定的客户端捕获重播活动并将其保存到结果跟踪文件中。 注意：可使用配置文件中的 `<ResultTrace>` 元素指定是否记录行计数和结果集。
 
--   
-  **-w** 参数指定计算机 `client1` 到 `client4` 作为客户端参与分布式重播。
+-   **-w** 参数指定计算机 `client1` 到 `client4` 作为客户端参与分布式重播。
 
--   
-  **-c** 参数用来指向修改过的配置文件 `DReplay.exe.replay.config`。
+-   **-c** 参数用来指向修改过的配置文件 `DReplay.exe.replay.config`。
 
 -   因为重播配置文件 **的** 元素中指定了 `<Server>` 元素，所以不需要 `<ReplayOptions>` -s `DReplay.exe.replay.config`参数。
 
@@ -125,8 +119,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>
 ```
 
- 若要指定压力顺序模式，应将 `<SequencingMode>` 文件的 `DReplay.exe.replay.config` 元素设置为与 `stress`值相等。 
-  `<ConnectTimeScale>` 和 `<ThinkTimeScale>` 元素设置为值 `50` （以指定 50%）。 有关连接时间和思考时间的详细信息，请参阅 [Configure Distributed Replay](configure-distributed-replay.md)。 以下 XML 示例显示了这些更改：
+ 若要指定压力顺序模式，应将 `<SequencingMode>` 文件的 `DReplay.exe.replay.config` 元素设置为与 `stress`值相等。 `<ConnectTimeScale>` 和 `<ThinkTimeScale>` 元素设置为值 `50` （以指定 50%）。 有关连接时间和思考时间的详细信息，请参阅 [Configure Distributed Replay](configure-distributed-replay.md)。 以下 XML 示例显示了这些更改：
 
 ```
 <?xml version='1.0'?>

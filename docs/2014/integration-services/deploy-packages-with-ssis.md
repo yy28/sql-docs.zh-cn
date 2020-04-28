@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176447"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 教程：部署包
@@ -66,13 +66,13 @@ ms.locfileid: "78176447"
 
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
--   必须具有在 AdventureWorks 中创建和删除表的权限以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中运行包的权限。
+-   必须具有在 AdventureWorks 中创建和删除表的权限以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中运行包的权限。
 
 -   您必须具有对 msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系统数据库中 sysssispackages 表的读取和写入权限。
 
  如果您计划将包部署到在其上创建部署捆绑的计算机，则该计算机必须同时满足源计算机和目标计算机的要求。
 
- **完成本教程的估计时间：** 2 小时
+ **学完本教程的估计时间：** 2 小时
 
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程
  [第1课：准备创建部署捆绑](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)在本课中，您将准备好部署 ETL 解决方案，方法是创建一个新[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]项目，然后将包和其他所需文件添加到该项目中。

@@ -14,14 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175636"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>创建或自定义数据馈送库 (PowerPivot for SharePoint)
-  
   *数据馈送库* 是一种特殊用途的 SharePoint 库，允许注册和共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：
 
 -   创建或编辑“数据服务文档” **，用于指定与特定馈送的 HTTP 连接。
@@ -40,12 +39,12 @@ ms.locfileid: "78175636"
 
  [向任何库添加数据馈送内容类型](#addtolib)
 
-##  <a name="prereq"></a>先决条件
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]必须为要为其创建数据馈送库的站点激活功能集成。 如果数据源库模板类型不可用，最可能的原因就是未满足此先决条件。 有关详细信息，请参阅[在管理中心为网站集激活 PowerPivot 功能集成](activate-power-pivot-integration-for-site-collections-in-ca.md)。
+##  <a name="prerequisites"></a><a name="prereq"></a>先决条件
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能集成。 如果数据源库模板类型不可用，最可能的原因就是未满足此先决条件。 有关详细信息，请参阅[在管理中心为网站集激活 PowerPivot 功能集成](activate-power-pivot-integration-for-site-collections-in-ca.md)。
 
  您必须是网站所有者才能创建该库。
 
-##  <a name="createlib"></a>创建新的数据馈送库
+##  <a name="create-a-new-data-feed-library"></a><a name="createlib"></a>创建新的数据馈送库
  创建数据馈送库是为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿实现数据馈送的第一步。 因为数据馈送库为数据服务文档提供应用程序和管理页，所以，您必须首先具有此库后，才能创建新文档。
 
  数据馈送库基于内置模板和预先配置的“数据服务文档内容类型”**，该类型定义数据服务文档的属性和行为。
@@ -58,13 +57,13 @@ ms.locfileid: "78175636"
 
 4.  键入名称、说明、启动和版本首选项。 包含说明性信息，以帮助用户将此库识别为用于数据服务文档的存储。
 
-5.  单击 **“创建”**。
+5.  单击“创建”。 
 
  当前网站的导航“快速启动”窗格中将显示指向数据馈送库的链接。
 
  创建库以后，可以使用它来创建数据服务文档。 有关详细信息，请参阅[使用数据馈送 &#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。
 
-##  <a name="addtolib"></a>向任何库添加数据馈送内容类型
+##  <a name="add-the-data-feed-content-type-to-any-library"></a><a name="addtolib"></a>向任何库添加数据馈送内容类型
  如果您不想创建专用的数据馈送库，但仍想要创建和管理 SharePoint 网站中的数据服务文档，则可为将用于共享数据服务文档 (.atomsvc) 文件的任何库手动添加和配置数据服务文档内容类型。
 
  您必须至少具有“管理列表”权限才能添加和配置内容类型。 此权限是“设计”权限级别和更高级别中所固有的。
@@ -77,7 +76,7 @@ ms.locfileid: "78175636"
 
 2.  在 SharePoint 功能区的“库工具”中，单击 **“库”**。
 
-3.  单击“设置”****。
+3.  单击“设置”  。
 
 4.  单击 **“库设置”**。
 

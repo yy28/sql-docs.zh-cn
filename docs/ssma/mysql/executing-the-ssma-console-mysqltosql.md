@@ -18,10 +18,10 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 239ba5021363be583572d5d24887233261e359cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909687"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>执行 SSMA 控制台 (MySQLToSQL)
@@ -30,7 +30,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 控制台应用程序使用本部分中所列举的某些标准脚本文件命令。  
   
 ## <a name="project--script-file-commands"></a>项目脚本文件命令  
-**Command**  
+**命令**  
   
 创建-新项目：   
                    创建新的 SSMA 项目。  
@@ -66,7 +66,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 默认情况下，属性 "项目类型" 为**sql-server-2008** 。  
   
-**Command**  
+**命令**  
   
 打开项目：   
                   打开现有的项目。  
@@ -91,7 +91,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 > [!IMPORTANT]  
 > SSMA For MySQL 控制台应用程序支持向后兼容性。 你将能够打开以前版本的 SSMA 创建的项目。  
   
-**Command**  
+**命令**  
   
 保存-项目：保存迁移项目。  
   
@@ -102,7 +102,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ```xml  
 <save-project/>  
 ```  
-**Command**  
+**命令**  
   
 关闭项目  
                   ：关闭迁移项目。  
@@ -114,7 +114,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ```xml  
 <save-project/>  
 ```  
-**Command**  
+**命令**  
   
 关闭项目  
                   ：关闭迁移项目。  
@@ -141,7 +141,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 3.  有关 "创建脚本文件" 的详细信息，请参阅[创建脚本文件 &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)。  
   
-**Command**  
+**命令**  
   
 连接-源-数据库  
   
@@ -158,7 +158,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ```xml  
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**命令**  
   
 强制加载-源/目标-数据库  
   
@@ -181,7 +181,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 </force-load>  
 ```  
-**Command**  
+**命令**  
   
 重新连接-源-数据库  
   
@@ -196,7 +196,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ```xml  
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**命令**  
   
 连接目标-数据库  
   
@@ -213,7 +213,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ```xml  
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**命令**  
   
 重新连接-目标-数据库  
   
@@ -232,7 +232,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ## <a name="report-script-file-commands"></a>报表脚本文件命令  
 报表命令生成各种 SSMA 控制台活动的性能报告。  
   
-**Command**  
+**命令**  
   
 生成-评估-报表  
   
@@ -308,7 +308,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 迁移命令的默认控制台输出设置为 "完全" 输出报告，没有详细的错误报告：仅限源对象树根节点上的 "摘要"。  
   
-**Command**  
+**命令**  
   
 转换-架构  
   
@@ -374,7 +374,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 </convert-schema>  
 ```  
-**Command**  
+**命令**  
   
 迁移-数据  
   
@@ -436,7 +436,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ## <a name="migration-preparation-script-file-command"></a>"迁移准备脚本文件" 命令  
 迁移准备命令启动源数据库和目标数据库之间的架构映射。  
   
-**Command**  
+**命令**  
   
 映射架构  
   
@@ -464,7 +464,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 > [!NOTE]  
 > 迁移命令的默认控制台输出设置为 "完全" 输出报告，没有详细的错误报告：仅限源对象树根节点上的 "摘要"。  
   
-**Command**  
+**命令**  
   
 同步-目标  
   
@@ -529,7 +529,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 </synchronize-target>  
 ```  
-**Command**  
+**命令**  
   
 从数据库刷新  
   
@@ -594,7 +594,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ## <a name="script-generation-script-file-commands"></a>脚本生成脚本文件命令  
 脚本生成命令执行双重任务：它们有助于将控制台输出保存到脚本文件中;并根据指定的参数将 T-sql 输出记录到控制台或文件中。  
   
-**Command**  
+**命令**  
   
 另存为脚本  
   
@@ -646,7 +646,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 </save-as-script>  
 ```  
-**Command**  
+**命令**  
   
 convert-sql 语句  
   

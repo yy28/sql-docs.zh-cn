@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2c3d3e75117996f088cff96b2b7a8d4cd504127
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176887"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 是基于云的、构建在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术之上的托管关系数据库。 若要在报表中包括来自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的数据，您必须有一个基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]并从中检索数据。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]是基于云的托管关系数据库，是基于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]技术构建的。 若要在报表中包括来自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的数据，您必须有一个基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]并从中检索数据。
 
  此数据扩展插件支持多值参数、服务器聚合以及与连接字符串分开管理的凭据。
 
@@ -31,7 +31,7 @@ ms.locfileid: "78176887"
 
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。
 
-##  <a name="Connection"></a> 连接字符串
+##  <a name="connection-string"></a><a name="Connection"></a>连接字符串
  连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，也会连接到云中的数据库对象。 正如现场数据库一样，托管数据库可能具有包含多个表、视图和存储过程的不同架构。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则将连接到管理员为您分配的默认数据库。
 
  请联系数据库管理员，获取连接信息以及用于连接到数据源的凭据。 下面的连接字符串示例指定一个名为 AdventureWorks 的托管示例数据库。
@@ -40,12 +40,11 @@ ms.locfileid: "78176887"
 Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 ```
 
- 此外，使用 **“数据源属性”** 对话框还可以提供凭据，如用户名和密码。 
-  `User Id` 和 `Password` 选项自动追加到连接字符串；您无需将它们作为连接字符串的一部分键入其中。
+ 此外，使用 **“数据源属性”** 对话框还可以提供凭据，如用户名和密码。 `User Id` 和 `Password` 选项自动追加到连接字符串；您无需将它们作为连接字符串的一部分键入其中。
 
  有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。
 
-##  <a name="Credentials"></a> 凭据
+##  <a name="credentials"></a><a name="Credentials"></a>凭据
  不支持 Windows 身份验证（集成安全性）。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则会发生错误。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 仅支持 SQL Server 身份验证（用户名和密码），并且在每次连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，用户都必须提供凭据（登录名和密码）。
 
  凭据必须具有足够的权限访问数据库。 根据要执行的查询，您可能需要具有其他权限，例如运行存储过程和访问表和视图的足够权限。 外部数据源的所有者必须配置相应的凭据，使这些凭据足以提供对所需数据库对象的只读访问。
@@ -54,13 +53,13 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
 -   使用存储的用户名和密码。 若要协商当包含报表数据的数据库与报表服务器不同时产生的双跃点，请选择使用凭据作为 Windows 凭据的选项。 也可以选择在连接到数据源后模拟经过身份验证的用户。
 
--   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中的[配置无人参与的执行帐户（SSRS 配置管理器）](https://go.microsoft.com/fwlink/?linkid=121312)。
+-   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。
 
  有关详细信息，请参阅[Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。
 
  
 
-##  <a name="Query"></a> 查询
+##  <a name="queries"></a><a name="Query"></a>请求
  查询指定了要为报表数据集检索哪些数据。 查询的结果集中的列填充数据集的字段集合。 如果查询返回多个结果集，则报表仅处理查询所检索的第一个结果集。 尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]之间存在一些差别（如所支持的数据库大小），但根据 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]编写查询类似于根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库编写查询。 有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（如 BACKUP）在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中不受支持，但在报表查询中是不会使用这些语句的。 有关详细信息，请参阅 [SQL Server 连接类型 (SSRS)](sql-server-connection-type-ssrs.md)。
 
  默认情况下，如果您创建一个新查询，或者打开一个可在图形查询设计器中显示的现有查询，则可以使用关系查询设计器。 可以通过下列方式指定查询：
@@ -79,9 +78,9 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
  有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](relational-query-designer-user-interface-report-builder.md)和[基于文本的查询设计器用户界面（报表生成器）](text-based-query-designer-user-interface-report-builder.md)。
 
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，可帮助你编写仅检索摘要数据的查询。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言功能包括：GROUP BY 子句、DISTINCT 关键字以及 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言的完全支持，包括分组和聚合。 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [](/sql/t-sql/language-reference)联机丛书中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Transact-SQL 引用（数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=141687)。
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，可帮助你编写仅检索摘要数据的查询。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言功能包括：GROUP BY 子句、DISTINCT 关键字以及 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言的完全支持，包括分组和聚合。 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)。
 
-###  <a name="QueryText"></a> 使用 Text 查询类型
+###  <a name="using-query-type-text"></a><a name="QueryText"></a>使用查询类型文本
  在基于文本的查询设计器中，可以键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令来定义数据集中的数据。 例如，下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询选择职位为销售助理的所有雇员的姓名：
 
 ```
@@ -97,7 +96,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant' 
 ```
 
- 单击工具栏上的 **“运行”** 按钮 ( **!** ) 可以运行查询并显示结果集。
+ 单击工具栏上的 **“运行”** 按钮 (**!**) 可以运行查询并显示结果集。
 
  若要参数化此查询，请添加一个查询参数。 例如，将 WHERE 子句更改为下面的内容：
 
@@ -109,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 
 
-###  <a name="QueryStoredProcedure"></a> 使用 StoredProcedure 查询类型
+###  <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a>使用查询类型 StoredProcedure
  您可以采用以下方式之一为数据集查询指定存储过程：
 
 -   在 **“数据集属性”** 对话框中，设置 **“存储过程”** 选项。 从存储过程和表值函数的下拉列表中进行选择。
@@ -128,7 +127,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 
 
-##  <a name="Parameters"></a> Parameters
+##  <a name="parameters"></a><a name="Parameters"></a>Parameters
  如果查询文本包含查询变量或具有输入参数的存储过程，则将自动生成数据集的对应查询参数和报表的报表参数。 查询文本不得包含针对每个查询变量的 DECLARE 语句。
 
  例如，下面的 SQL 查询将创建一个名为 `EmpID` 的报表参数：
@@ -143,7 +142,7 @@ WHERE EmployeeID = (@EmpID)
 
 
 
-##  <a name="Remarks"></a> 注释
+##  <a name="remarks"></a><a name="Remarks"></a> 备注
 
 ###### <a name="alternate-data-extensions"></a>备用数据扩展插件
  您还可以通过使用 ODBC 数据源类型从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中检索数据。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。
@@ -151,11 +150,11 @@ WHERE EmployeeID = (@EmpID)
  有关详细信息，请参阅 [ODBC 连接类型 (SSRS)](odbc-connection-type-ssrs.md)。
 
 ###### <a name="platform-and-version-information"></a>平台和版本信息
- 有关平台和版本支持的详细信息，请参阅 [](../create-deploy-and-manage-mobile-and-paginated-reports.md)联机丛书[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的  文档中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Reporting Services 支持的数据源 (SSRS)](https://go.microsoft.com/fwlink/?linkid=121312)。
+ 有关平台和版本支持的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。
 
 
 
-##  <a name="HowTo"></a> 操作指南主题
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作指南主题
  本节包含使用数据连接、数据源和数据集的分步说明。
 
  [添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)
@@ -166,7 +165,7 @@ WHERE EmployeeID = (@EmpID)
 
 
 
-##  <a name="Related"></a> 相关章节
+##  <a name="related-sections"></a><a name="Related"></a>相关部分
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。
 
  [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)提供访问报表数据的概述。
@@ -177,7 +176,7 @@ WHERE EmployeeID = (@EmpID)
 
  [数据集字段集合 &#40;报表生成器和 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)提供有关查询生成的数据集字段集合的信息。
 
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)的文档中， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [Reporting Services &#40;SSRS&#41;支持的数据源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。
 提供有关每个数据扩展插件的平台和版本支持的详细信息。
 
 

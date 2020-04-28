@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76921137"
 ---
 # <a name="server-configuration---service-accounts"></a>服务器配置 - 服务帐户
@@ -38,19 +38,15 @@ ms.locfileid: "76921137"
   
 |选择此服务|为其配置身份验证设置的主体|  
 |-------------------------|----------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理商|执行作业、监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并允许管理任务自动完成的服务。<br /><br /> 此服务没有默认登录帐户。<br /><br /> 默认的启动类型为“手动”。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|执行作业、监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并允许管理任务自动完成的服务。<br /><br /> 此服务没有默认登录帐户。<br /><br /> 默认的启动类型为“手动”。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|默认的启动类型为“自动”。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|默认的启动类型为“自动”。<br /><br /> 对于 SharePoint 集成模式，您必须指定一个 Windows 域用户帐户。 您指定的帐户用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务。 您为当前实例指定的帐户还必须用于您以后添加到同一场的任何附加 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|服务帐户用于配置报表服务器数据库连接。 如果要使用默认的身份验证设置，请选择内置的网络服务。 如果指定域用户帐户，并且要在报表服务器上使用 Windows 身份验证，请确保为该帐户注册一个服务主体名称 (SPN)。 有关详细信息，请参阅 [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)。<br /><br /> 默认的启动类型为“自动”。|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 是一组图形工具和可编程对象，用于移动、复制和转换数据。<br /><br /> 默认的启动类型为“自动”。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Distributed Replay 客户端|用于 Distributed Replay 客户端服务的服务帐户。<br /><br /> 提供运行 Distributed Replay 客户端服务的帐户。 此帐户应该不同于用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户。<br /><br /> 默认的启动类型为“手动”。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Distributed Replay 控制器|用于 Distributed Replay 控制器服务的服务帐户。<br /><br /> 提供运行 Distributed Replay 控制器服务的帐户。 此帐户应该不同于用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户。<br /><br /> 默认的启动类型为“手动”。|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文筛选器后台程序启动器|创建 fdhost.exe 进程的服务。 需要使用此服务来承载为全文检索处理文本数据的断字符和筛选器。<br /><br /> 如果提供运行 FDHOST 启动器服务的域帐户，我们强烈建议您使用低特权的帐户。 此帐户应该不同于用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 是向客户端计算机提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接信息的名称解析服务。 多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 实例共享此服务。 默认的登录帐户为 NT Authority\Local service 且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间无法更改。 可以在安装完成后更改该帐户。 如果未在安装期间指定启动类型，可以根据以下内容来确定：<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 设置为“自动”并在下面描述的安装方案中运行：<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例<br />-<br />                            启用了 TCP 或 NP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例<br />-<br />                            Analysis Server 的命名实例，未进行群集<br /><br /> 如果上述方案均不符合并且已经安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser，将保持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的当前状态。<br /><br /> 如果在安装前没有现有的早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的实例，则启动类型会设置为“已禁用”且被停止。|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 是一组图形工具和可编程对象，用于移动、复制和转换数据。<br /><br /> 默认的启动类型为“自动”。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端|用于 Distributed Replay 客户端服务的服务帐户。<br /><br /> 提供运行 Distributed Replay 客户端服务的帐户。 此帐户应该不同于用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户。<br /><br /> 默认的启动类型为“手动”。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器|用于 Distributed Replay 控制器服务的服务帐户。<br /><br /> 提供运行 Distributed Replay 控制器服务的帐户。 此帐户应该不同于用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户。<br /><br /> 默认的启动类型为“手动”。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文筛选器后台程序启动器|创建 fdhost.exe 进程的服务。 需要使用此服务来承载为全文检索处理文本数据的断字符和筛选器。<br /><br /> 如果提供运行 FDHOST 启动器服务的域帐户，我们强烈建议您使用低特权的帐户。 此帐户应该不同于用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 是向客户端计算机提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接信息的名称解析服务。 多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 实例共享此服务。 默认的登录帐户为 NT Authority\Local service 且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间无法更改。 可以在安装完成后更改该帐户。 如果未在安装期间指定启动类型，可以根据以下内容来确定：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 设置为“自动”并在下面描述的安装方案中运行：<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例<br />-<br />                            启用了 TCP 或 NP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例<br />-<br />                            Analysis Server 的命名实例，未进行群集<br /><br /> 如果上述方案均不符合并且已经安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser，将保持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的当前状态。<br /><br /> 如果在安装前没有现有的早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的实例，则启动类型会设置为“已禁用”且被停止。|  
   
 ## <a name="see-also"></a>另请参阅  
  [安装 SQL Server 的安全注意事项](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

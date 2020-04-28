@@ -1,5 +1,5 @@
 ---
-title: 定义大小属性示例 （VC#） |微软文档
+title: DefinedSize 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76939577"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 属性示例 (VC++)
-此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的["定义大小"](../../../ado/reference/adox-api/definedsize-property-adox.md)属性。 代码将重新定义*北风*数据库"**员工"** 表的"名字"列的大小。 然后，将显示基于 **"员工"** 表的记录[集](../../../ado/reference/ado-api/recordset-object-ado.md)"名字["字段](../../../ado/reference/ado-api/field-object.md)的值的更改。 请注意，默认情况下，在重新定义 **"定义大小"** 属性后，"NameName"字段会用空格填充。  
+此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性。 该代码将重新定义*Northwind*数据库的**Employees**表的 FirstName 列的大小。 然后，将显示基于 " **Employees** " 表的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的 "名字"[字段](../../../ado/reference/ado-api/field-object.md)值的更改。 请注意，在您重新定义**DefinedSize**属性后，默认情况下，FirstName 字段会用空格填充。  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -163,5 +163,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [列对象 （ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize 属性 (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

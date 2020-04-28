@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175716"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
@@ -43,8 +43,7 @@ ms.locfileid: "78175716"
  Cube 对象每个数据库对象都包含一个或多个多维数据集对象。 多维数据集通过其度量值和维度定义。 多维数据集中的度量值和维度派生自数据源视图中的表和视图，此数据源视图是多维数据集所基于的视图，或者是通过度量值定义和维度定义生成的视图。
 
 ## <a name="object-inheritance"></a>对象继承
- ASSL 对象模型包含有多个重复元素组。 例如，元素组 "`Dimensions`包含`Hierarchies`" 定义元素的维度层次结构。 
-  `Cubes` 和 `MeasureGroups` 都包含元素组“`Dimensions` contain `Hierarchies`”。
+ ASSL 对象模型包含有多个重复元素组。 例如，元素组 "`Dimensions`包含`Hierarchies`" 定义元素的维度层次结构。 `Cubes` 和 `MeasureGroups` 都包含元素组“`Dimensions` contain `Hierarchies`”。
 
  除非显式重写，否则元素将会从更高级别继承这些重复元素组的详细信息。 例如，`Translations` 的 `CubeDimension` 与其祖先元素 `Translations` 的 `Cube` 相同。
 
@@ -122,6 +121,6 @@ ms.locfileid: "78175716"
  此处显示的示例仅包含一个事实数据表。 如果多维数据集具有多个事实数据表，则会将每个事实数据表中的度量值组织到度量值组中，并且通过已定义的维度关系使每个度量值组都与一组特定的维度相关。 这些关系是通过指定数据源视图中的参与表以及关系的粒度来定义的。 **相关主题：**[维度关系](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。
 
 ## <a name="see-also"></a>另请参阅
- [多维模型数据库 &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)
+ [多维模型数据库 (SSAS)](../multidimensional-model-databases-ssas.md)
 
 

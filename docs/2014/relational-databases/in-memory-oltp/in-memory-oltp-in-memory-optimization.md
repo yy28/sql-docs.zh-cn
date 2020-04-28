@@ -14,29 +14,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175914"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
 
-  
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]中的新增功能 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 可大幅度提高 OLTP 数据库应用程序性能。 
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 是集成到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎中的内存优化的数据库引擎，针对 OLTP 进行了优化。
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]中的新增功能 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 可大幅度提高 OLTP 数据库应用程序性能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 是集成到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎中的内存优化的数据库引擎，针对 OLTP 进行了优化。
 
 |||
 |-|-|
-|![Azure 虚拟机](../../master-data-services/media/azure-virtual-machine.png "Azure 虚拟机")|是否想要试用 SQL Server 2016？ 注册 Microsoft Azure，然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 以加速已安装有 SQL Server 2016 的虚拟机。 完成后，可以删除虚拟机。|
+|![Azure 虚拟机](../../master-data-services/media/azure-virtual-machine.png "Azure 虚拟机")|是否想要试用 SQL Server 2016？ 注册 Microsoft Azure，然后转到**[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 以启动已安装 SQL Server 2016 的虚拟机。 完成后，可以删除虚拟机。|
 
- 若要使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]，请将经常访问的表定义为内存优化表。 内存优化表具有完全事务性和持久性，可通过与访问基于磁盘的表一样的方式使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 对其进行访问。 查询可引用内存优化表和基于磁盘的表。 事务可更新内存优化表和基于磁盘的表中的数据。 仅引用内存优化表的存储过程可本机编译为机器代码，以便进一步提高性能。 
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎专用于实现从高度扩展的中间层推动的 OLTP 类型的事务的超高会话并发。 为实现此目标，它使用无闩锁数据结构和多版本乐观并发控制。 结果是可预测的，通过数据库事务的线性扩展实现了亚毫秒级低延迟和高吞吐量。 实际的性能提升取决于许多因素，但通常可实现 5 到 20 倍的性能改进。
+ 若要使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]，请将经常访问的表定义为内存优化表。 内存优化表具有完全事务性和持久性，可通过与访问基于磁盘的表一样的方式使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 对其进行访问。 查询可引用内存优化表和基于磁盘的表。 事务可更新内存优化表和基于磁盘的表中的数据。 仅引用内存优化表的存储过程可本机编译为机器代码，以便进一步提高性能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎专用于实现从高度扩展的中间层推动的 OLTP 类型的事务的超高会话并发。 为实现此目标，它使用无闩锁数据结构和多版本乐观并发控制。 结果是可预测的，通过数据库事务的线性扩展实现了亚毫秒级低延迟和高吞吐量。 实际的性能提升取决于许多因素，但通常可实现 5 到 20 倍的性能改进。
 
  下表总结了可通过使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]获得最多好处的工作负载模式：
 
-|实现场景|实现场景|
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 的优势|
+|实现场景|实现场景|[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 的优势|
 |-----------------------------|-----------------------------|-------------------------------------|
 |来自多个并发连接的高数据插入率。|主要是仅限追加存储。<br /><br /> 无法与工作负荷保持同步。|消除争用。<br /><br /> 减少日志记录。|
 |读取性能并通过定期批量插入和更新进行扩展。|高性能读取操作，尤其是在每个服务器请求包含多个要执行的读取操作时。<br /><br /> 无法满足扩展要求。|在新数据到达时消除争用。<br /><br /> 延迟较低的数据检索。<br /><br /> 最大限度缩短代码执行时间。|
@@ -46,18 +42,15 @@ ms.locfileid: "78175914"
 
  有关[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]将导致最大性能提高的方案的详细信息，请参阅[内存中 OLTP-常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。
 
- 
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 将提高具有短时间运行的事务的 OLTP 中的性能。
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 将提高具有短时间运行的事务的 OLTP 中的性能。
 
- 
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 将改善的编程模式包括并发情景、点查找、存在许多插入和更新的工作负荷以及存储过程中的业务逻辑。
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 将改善的编程模式包括并发情景、点查找、存在许多插入和更新的工作负荷以及存储过程中的业务逻辑。
 
  与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 相集成意味着您可以在同一个数据库中具有内存优化表以及基于磁盘的表，并且可以跨这两种类型的表进行查询。
 
  在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中，对于 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 支持的 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]外围应用存在一些限制。
 
- 
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 可借助以下手段实现显著的性能和可伸缩性提升：
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 可借助以下手段实现显著的性能和可伸缩性提升：
 
 -   专为访问内存常驻数据而优化的算法。
 
@@ -78,9 +71,9 @@ ms.locfileid: "78175914"
 |[使用内存优化表的要求](memory-optimized-tables.md)|讨论使用内存优化的表的硬件和软件要求及指导原则。|
 |[在虚拟机环境下使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|讨论内容包括在虚拟化环境中使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 。|
 |[内存中 OLTP 代码示例](in-memory-oltp-code-samples.md)|包含说明如何创建和使用内存优化的表的代码示例。|
-|[Memory-Optimized Tables](memory-optimized-tables.md)|介绍内存优化的表。|
+|[内存优化表](memory-optimized-tables.md)|介绍内存优化的表。|
 |[内存优化表变量](../../database-engine/memory-optimized-table-variables.md)|一个代码示例，其中展示如何使用内存优化的表变量代替传统的表变量以减少 tempdb 的使用次数。|
-|[内存优化的表的索引](../../database-engine/indexes-on-memory-optimized-tables.md)|介绍内存优化索引。|
+|[内存优化表上的索引](../../database-engine/indexes-on-memory-optimized-tables.md)|介绍内存优化索引。|
 |[本机编译的存储过程](natively-compiled-stored-procedures.md)|介绍本机编译的存储过程。|
 |[管理内存中 OLTP 的内存](../../database-engine/managing-memory-for-in-memory-oltp.md)|了解和管理系统中的内存用量。|
 |[创建和管理用于内存优化对象的存储](creating-and-managing-storage-for-memory-optimized-objects.md)|论述数据和差异文件，其中存储有关内存优化的表中事务的信息。|

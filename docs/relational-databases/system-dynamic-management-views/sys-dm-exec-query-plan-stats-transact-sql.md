@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656989"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats （Transact-sql）
@@ -45,7 +45,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
   
 -   [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
 -   [sys. dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
@@ -75,13 +75,13 @@ Sys. dm_exec_query_plan_stats 的显示计划输出包含以下信息：
 在以下条件下，与**实际执行计划等效**的显示计划输出将在返回的表的**query_plan**列中返回**dm_exec_query_plan_stats**：  
 
 -   可在[sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)中找到该计划。     
-    **和**    
+    **AND**    
 -   正在执行的查询是复杂的或消耗资源的查询。
 
 在以下情况下，将在返回的表的**query_plan**列中返回**sys.databases 为 dm_exec_query_plan_stats**的**简化<sup>1</sup> **显示计划输出：  
 
 -   可在[sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)中找到该计划。     
-    **和**    
+    **AND**    
 -   查询非常简单，通常归类为 OLTP 工作负载的一部分。
 
 <sup>1</sup>从[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 开始，这是指仅包含根节点运算符（SELECT）的显示计划。 对于[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4，这是指通过`sys.dm_exec_cached_plans`获取的缓存计划。
@@ -148,6 +148,6 @@ GO
 
 ## <a name="see-also"></a>另请参阅
   [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

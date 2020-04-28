@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175220"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。
 
  本主题包括多维模型和表格模型的模板列表，并且提供如何通过使用元数据资源管理器和模板资源管理器生成 MDX 查询和 XMLA 语句的示例。
@@ -37,7 +36,7 @@ ms.locfileid: "78175220"
 
  本主题不涉及 DMX 模板。 有关如何使用模板创建数据挖掘查询的示例，请参阅 [在 SQL Server Management Studio 中创建一个 DMX 查询](../data-mining/create-a-dmx-query-in-sql-server-management-studio.md) 或 [通过模板创建单独预测查询](../data-mining/create-a-singleton-prediction-query-from-a-template.md)。
 
-##  <a name="bkmk_usingTE"></a>打开 Analysis Services 模板
+##  <a name="open-an-analysis-services-template"></a><a name="bkmk_usingTE"></a> 打开 Analysis Services 模板
  用于数据库引擎查询以及 Analysis Services 查询和命令的所有模板均在模板资源管理器中提供。
 
  若要打开 **“模板资源管理器”**，请从 **“视图”** 菜单中选择它。 接下来，单击多维数据集图标可以查看可用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的模板的列表。
@@ -56,7 +55,7 @@ ms.locfileid: "78175220"
 
      切换到 **“消息”** 选项卡可以查看返回的记录数以及与查询执行相关联的错误、查询语句和任何其他消息。 例如，如果您对在直接查询模式下运行的模型执行 DAX 语句，则可以看到由 xVelocity 内存中分析引擎 (VertiPaq) 生成的 Transact-SQL 语句。
 
-##  <a name="BKMK_Building_Queries"></a>使用模板为表格模型生成并运行 MDX 查询
+##  <a name="build-and-run-an-mdx-query-on-a-tabular-model-using-a-template"></a><a name="BKMK_Building_Queries"></a> 使用模板对表格模型生成并运行 MDX 查询
  此实例说明如何在 SQL Server Management Studio 中创建 MDX 查询，并且使用表格模型数据库作为数据源。 若要在您的计算机上重复此示例，您可以 [下载 Adventureworks 表格模型示例项目](https://go.microsoft.com/fwlink/?LinkId=231183)。
 
 > [!WARNING]
@@ -80,9 +79,8 @@ ms.locfileid: "78175220"
 
 4.  您可以按原样执行此查询，但您可能会想要进行某些更改，例如添加函数以便返回特定成员。 例如，键入`.members` **[Product Category]. [Product Category Name]**。 有关详细信息，请参阅 [Using Member Expressions](/sql/mdx/using-member-expressions)。
 
-##  <a name="bkmk_backup"></a>从模板创建 XMLA 脚本
- 在模板资源管理器中提供的 XMLA 命令模板可用于为监视和更新 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象创建脚本，而与实例是处于多维和数据挖掘模式下还是表格模式下无关。 
-  **XMLA** 模板包含针对下列类型的脚本的示例：
+##  <a name="create-xmla-script-from-a-template"></a><a name="bkmk_backup"></a> 从模板创建 XMLA 脚本
+ 在模板资源管理器中提供的 XMLA 命令模板可用于为监视和更新 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象创建脚本，而与实例是处于多维和数据挖掘模式下还是表格模式下无关。 **XMLA** 模板包含针对下列类型的脚本的示例：
 
 -   备份、还原和同步操作
 
@@ -109,9 +107,8 @@ ms.locfileid: "78175220"
 
 5.  双击\<文件> 元素中的文本。 键入备份文件的名称，包括 .abf 文件扩展名。 如果您不使用默认的备份位置，则指定完整的文件路径。 有关详细信息，请参阅[备份、还原和同步数据库 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。
 
-##  <a name="bkmk_schemarowset"></a>使用 XMLA 模板生成架构行集查询
- 
-  **“模板资源管理器”** 对于架构行集查询仅包含一个模板。 若要使用此模板，您必须熟悉要使用的单独架构行集的要求，并且包含所需所有元素以及可用作限制的列。 有关详细信息，请参阅 [Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。
+##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a> 使用 XMLA 模板生成架构行集查询
+ **“模板资源管理器”** 对于架构行集查询仅包含一个模板。 若要使用此模板，您必须熟悉要使用的单独架构行集的要求，并且包含所需所有元素以及可用作限制的列。 有关详细信息，请参阅 [Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。
 
  请注意，出于简便目的，许多架构行集也作为动态管理视图 (DMV) 公开。 通过使用相应的 DMV，您可以使用与 Transact-SQL 相似的语法来查询架构行集。 例如，下面的查询返回相同的结果，但一个查询以 XML 格式返回结果，而另一个查询以表格格式返回结果。 有关 DMV 的详细信息，请参阅[使用动态管理视图 (DMV) 监视 Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。
 
@@ -148,7 +145,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
 3.  在模板中，将[RequestType 元素替换 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)元素，其中包含以下文本：`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`
 
-4.  单击“执行”  。
+4.  单击“执行” ****。
 
      预期的结果：
 
@@ -165,7 +162,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
     ```
 
-##  <a name="bkmk_Ref"></a>Analysis Services 模板引用
+##  <a name="analysis-services-template-reference"></a><a name="bkmk_Ref"></a> Analysis Services 模板参考
  提供以下模板以便使用 Analysis Services 数据库以及数据库中的对象，包括挖掘结构和挖掘模型、多维数据集和表格模型：
 
 |类别|项模板|说明|
@@ -187,7 +184,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||删除结构|演示如何使用 DMX DROP MINING STRUCTURE 语句删除现有挖掘结构。|
 ||导出模型|演示如何使用带有 WITH DEPENDENCIES 子句和 PASSWORD 子句的 DMX EXPORT MINING MODEL 语句将挖掘模型（包括该挖掘模型所基于的数据源和数据源视图）导出到文件。|
 ||导出结构|演示如何使用带有 WITH DEPENDENCIES 子句的 DMX EXPORT MINING STRUCTURE 语句将挖掘结构（包括该挖掘结构所包含的所有挖掘模型与该挖掘结构所基于的数据源和数据源视图）导出到文件。|
-||Import|展示了如何结合使用 DMX IMPORT FROM 语句和 WITH PASSWORD 子句来执行导入。|
+||导入|展示了如何结合使用 DMX IMPORT FROM 语句和 WITH PASSWORD 子句来执行导入。|
 ||重命名模型|演示如何使用 DMX RENAME MINING MODEL 语句重命名现有挖掘模型。|
 ||重命名结构|演示如何使用 DMX RENAME MINING STRUCTRE 语句重命名现有挖掘结构。|
 ||训练模型|演示如何使用 DMX INSERT INTO MINING MODEL 语句在先前定型的结构内部定型挖掘模型。|

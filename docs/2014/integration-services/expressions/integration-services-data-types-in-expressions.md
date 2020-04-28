@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793d07bfd7500318a5fe822683e8353b07e541ba
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176425"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
@@ -47,16 +47,15 @@ ms.locfileid: "78176425"
 > [!NOTE]
 >  布尔值是逻辑值而非数字。 虽然布尔值在某些环境中可能显示为数字，但它们并非以数字形式存储，而且不同的编程语言以不同的数值表示布尔值，.NET Framework 方法也是如此。
 > 
->  例如，Visual Basic 中可用的转换函数将 `True` 转换为 -1；但是 .NET Framework 中的 `System.Convert.ToInt32` 方法将 `True` 转换为 +1。 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 表达式语言将 `True` 转换为 -1。
+>  例如，Visual Basic 中可用的转换函数将 `True` 转换为 -1；但是 .NET Framework 中的 `System.Convert.ToInt32` 方法将 `True` 转换为 +1。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 表达式语言将 `True` 转换为 -1。
 > 
 >  若要避免错误或意外结果，不应编写依赖 `True` 和 `False` 为特定数值的代码。 如果可能，应将布尔变量的使用限制为与其设计意图对应的逻辑值。
 
- 有关详情，请参阅以下主题：
+ 有关详细信息，请参阅下列主题：
 
 -   [==（等于）（SSIS 表达式）](equal-ssis-expression.md)
 
--   [\!=（不等于）（SSIS 表达式）](unequal-ssis-expression.md)
+-   [！ =&#41; &#40;SSIS 表达式 &#40;不相等&#41;](unequal-ssis-expression.md)
 
 -   [>（大于）（SSIS 表达式）](greater-than-ssis-expression.md)
 
@@ -79,11 +78,9 @@ ms.locfileid: "78176425"
 ## <a name="requirements-for-data-used-in-expressions"></a>表达式中的数据使用要求
  表达式计算器支持所有的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 但是，根据运算或函数的不同，操作数和参数需要特定的数据类型。 表达式计算器对表达式中使用的数据规定了下列数据类型要求：
 
--   
-  **“逻辑”** 运算中所用操作数的取值必须为布尔值。 例如，ColumnA > 1&&ColumnB < 2。
+-   **“逻辑”** 运算中所用操作数的取值必须为布尔值。 例如，ColumnA > 1&&ColumnB < 2。
 
--   
-  **“数学”** 运算中所用操作数的取值必须为数值。 例如，23.75 * 4。
+-   **“数学”** 运算中所用操作数的取值必须为数值。 例如，23.75 * 4。
 
 -   用在比较运算（如逻辑运算和相等运算）中的操作数的计算结果必须为兼容的数据类型。
 

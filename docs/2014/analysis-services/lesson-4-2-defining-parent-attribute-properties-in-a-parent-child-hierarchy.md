@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4e3e06280ad91c59984b91e7383213f73f95343
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175326"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>定义父子层次结构中的父特性属性
@@ -63,7 +63,7 @@ ms.locfileid: "78175326"
 
 ## <a name="modifying-parent-attribute-properties-in-the-employee-dimension"></a>修改“雇员”维度中的父特性属性
 
-1.  切换到 "**雇员**" 维度的维度设计器。
+1.  切换到“雇员”**** 维度的维度设计器。
 
 2.  单击“维度结构”**** 选项卡，再在“属性”**** 窗格中选择“雇员”**** 属性层次结构。
 
@@ -89,7 +89,7 @@ ms.locfileid: "78175326"
 
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>浏览修改属性后的“雇员”维度
 
-1.  在 ** 的“生成”菜单上，单击“部署 Analysis Services 教程”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]****。
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。
 
 2.  成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，再单击“浏览器”**** 选项卡的工具栏上的“重新连接”****。
 

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175316"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>隐藏和禁用属性层次结构
@@ -37,7 +37,7 @@ ms.locfileid: "78175316"
 
 -   **AttributeHierarchyOptimizedState**
 
-     默认情况下，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将在处理期间为每个已启用的属性层次结构创建索引，以提高查询性能。 如果不打算使用特性层次结构进行浏览，则可以通过将此属性的值设置为“NotOptimized”**** 来提高处理性能。 但是，如果使用隐藏的层次结构作为维度的键属性，则通过创建属性成员的索引仍然能提高性能。
+     默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将在处理期间为每个已启用的属性层次结构创建索引，以提高查询性能。 如果不打算使用特性层次结构进行浏览，则可以通过将此属性的值设置为“NotOptimized”**** 来提高处理性能。 但是，如果使用隐藏的层次结构作为维度的键属性，则通过创建属性成员的索引仍然能提高性能。
 
  如果禁用了属性层次结构，则不应用这些属性。
 
@@ -51,7 +51,7 @@ ms.locfileid: "78175316"
 
     -   **基本报酬**
 
-    -   **出生日期**
+    -   **Birth Date**
 
     -   **登录 ID**
 
@@ -63,7 +63,7 @@ ms.locfileid: "78175316"
 
     -   **基本报酬**
 
-    -   **出生日期**
+    -   **Birth Date**
 
     -   **登录 ID**
 
@@ -93,13 +93,13 @@ ms.locfileid: "78175316"
 
     -   **全名**
 
-    -   **邮政编码**
+    -   **Postal Code**
 
 3.  切换到“维度结构”**** 选项卡，然后通过使用 Ctrl 键同时选择多个属性，在“属性”**** 窗格中选择以下属性：
 
     -   **全名**
 
-    -   **邮政编码**
+    -   **Postal Code**
 
 4.  在“属性”窗口中，将所选特性的“AttributeHierarchyVisible”**** 属性的值设置为“False”****。
 

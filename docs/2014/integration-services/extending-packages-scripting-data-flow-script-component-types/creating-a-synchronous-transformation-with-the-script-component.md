@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2599fc6f5373b7bf048ab173bccd9c44be6ae58e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176257"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用脚本组件创建同步转换
@@ -71,7 +71,7 @@ ms.locfileid: "78176257"
 ### <a name="adding-variables"></a>添加变量
  如果要在脚本中使用现有变量，可以在 "**脚本转换编辑器**" 的`ReadOnlyVariables` " `ReadWriteVariables` **脚本**" 页上的和属性字段中添加这些变量。
 
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击**** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击 **...** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
 
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。
 
@@ -85,7 +85,7 @@ ms.locfileid: "78176257"
 ### <a name="understanding-the-auto-generated-code"></a>了解自动生成的代码
  创建并配置转换组件后打开 VSTA IDE 时，可编辑的 `ScriptMain` 类将显示在代码编辑器中，其中有 `ProcessInputRow` 方法的存根。 在 `ScriptMain` 类中可编写自定义代码，`ProcessInputRow` 是转换组件中最重要的方法。
 
- 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的`BufferWrapper`和`ComponentWrapper`项目项。 `ScriptMain`类从`ComponentWrapper`项目项中`UserComponent`的类继承。
+ 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的`BufferWrapper`和`ComponentWrapper`项目项。  类从  项目项中的  类继承。
 
  在运行时，数据流引擎调用 `ProcessInput` 类中的 `UserComponent` 方法，该方法重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 而 `ProcessInput` 方法遍历输入缓冲区中的所有行并为每一行调用一次 `ProcessInputRow` 方法。
 
@@ -207,7 +207,7 @@ public class ScriptMain:
 
 6.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本   。 然后关闭脚本开发环境和“脚本转换编辑器”  。
 
-7.  创建并配置两个目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标、平面文件目标或在[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，这两个目标组件需要 AddressID  和 City  列。 然后，将转换的每个输出连接到任一目标组件。 可通过在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行与下列命令（具有唯一表名）类似的 `AdventureWorks` 命令来创建目标表：
+7.  创建并配置两个目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标、平面文件目标或在[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，这两个目标组件需要 AddressID  和 City  列。 然后，将转换的每个输出连接到任一目标组件。 可通过在 `AdventureWorks` 数据库中运行与下列命令（具有唯一表名）类似的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令来创建目标表：
 
     ```
     CREATE TABLE [Person].[Address2](

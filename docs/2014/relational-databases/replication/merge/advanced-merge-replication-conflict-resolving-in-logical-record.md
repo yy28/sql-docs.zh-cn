@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175836"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detecting and Resolving Conflicts in Logical Records
@@ -105,6 +105,6 @@ ms.locfileid: "78175836"
  ![显示对相关行所做更改的一系列表](../media/logical-records-08.gif "显示对相关行所做更改的一系列表")
 
 ## <a name="see-also"></a>另请参阅
- [通过逻辑记录对相关行的更改进行分组](group-changes-to-related-rows-with-logical-records.md)
+ [按逻辑记录对相关行的更改进行分组](group-changes-to-related-rows-with-logical-records.md)
 
 

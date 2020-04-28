@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175979"
 ---
 # <a name="data-import-master-data-services"></a>数据导入 (Master Data Services)
@@ -67,14 +67,13 @@ ms.locfileid: "78175979"
 -   作为叶成员或合并成员的同级的合并成员。
 
 ## <a name="staging-tables-and-stored-procedures"></a>临时表和存储过程
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库包含以下类型的临时表，你可以使用你的数据填充它们。
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库包含以下类型的临时表，你可以使用你的数据填充它们。
 
--   [叶成员临时表 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
+-   [叶成员临时表 (Master Data Services)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
 
--   [合并成员临时表 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
+-   [合并成员临时表 (Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
 
--   [关系临时表 &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
+-   [关系临时表 (Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
 
  模型中的每个实体都有一个临时表。 表名称指示相应的实体以及实体类型，如叶成员。 下图显示货币、客户和产品实体的临时表。
 
@@ -82,8 +81,7 @@ ms.locfileid: "78175979"
 
  该表的名称在创建实体时指定，且不可更改。 如果临时表的名称包含 _1 或其他数字，则在创建实体时已存在带此名称的其他表。
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括以下类型的临时存储过程。
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括以下类型的临时存储过程。
 
 -   stg.udp_\<name>_Leaf
 
@@ -104,8 +102,8 @@ ms.locfileid: "78175979"
 
 ## <a name="related-content"></a>相关内容
 
--   [验证 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)
+-   [验证 (Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)
 
--   [业务规则 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
+-   [业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)
 
 

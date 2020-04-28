@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1dbe2fbd89042ceed1dbe17a2e5e68ce74bba72d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176947"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>用于 SSRS 服务应用程序的设置订阅和警报
@@ -59,7 +59,7 @@ ms.locfileid: "78176947"
 
 5.  单击 **“确定”** 按钮。
 
-##  <a name="bkmk_download"></a> 下载 Transact-SQL 脚本
+##  <a name="to-download-the-transact-sql-script"></a><a name="bkmk_download"></a> 下载 Transact-SQL 脚本
 
 1.  在 SharePoint 管理中心内，在 **“应用程序管理”** 组中单击 **“管理服务应用程序”**
 

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1236a9cdffc4dd06764da1f2988df80d568798c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175646"
 ---
 # <a name="delete-powerpivot-gallery"></a>删除 PowerPivot 库
@@ -29,7 +29,7 @@ ms.locfileid: "78175646"
 
 1.  单击 "设置" " ![SharePoint 设置](../media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")"，然后单击 "**站点设置**"。
 
-2.  单击 **“网站设置”**。
+2.  单击 **“网站设置”** 。
 
 3.  在“网站管理”下单击 **“网站库和列表”**。
 
@@ -39,9 +39,9 @@ ms.locfileid: "78175646"
 
 ### <a name="delete-powerpivot-gallery-sharepoint-2010"></a>删除 PowerPivot 库 SharePoint 2010
 
-1.  单击 **“网站操作”**。
+1.  单击 **“网站操作”** 。
 
-2.  单击 **“网站设置”**。
+2.  单击 **“网站设置”** 。
 
 3.  在“网站管理”下单击 **“网站库和列表”**。
 

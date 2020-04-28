@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a912bab0c43764c0c09844fd26ca66a708b3c495
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175666"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>创建和自定义 PowerPivot 库
   PowerPivot 库是一种特殊类型的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。
 
-##  <a name="bkmk_top"></a>本主题中的
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a>本主题中的
 
 -   [先决条件](#prereq)
 
@@ -32,9 +32,9 @@ ms.locfileid: "78175666"
 
 -   [禁用或隐藏“刷新”按钮](#bkmk_hide_refresh_button)
 
--   [切换到影院视图或库视图](#switch)
+-   [切换到影院视图或图库视图](#switch)
 
-##  <a name="prereq"></a>先决条件
+##  <a name="prerequisites"></a><a name="prereq"></a>先决条件
 
 -   您必须具有 Silverlight。 可以通过 Microsoft 更新来下载和安装 Silverlight。 如果使用不具备 Silverlight 的浏览器查看“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”库，则单击该页上的链接可以安装它。 安装后，必须关闭再重新打开浏览器。
 
@@ -47,26 +47,23 @@ ms.locfileid: "78175666"
 
 -   您必须拥有“参与讨论”权限或更高权限才能发布或上载文件。
 
--   
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库不能在受限站点中。 包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的父站点必须添加到可信站点或本地 Intranet 区域。
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库不能在受限站点中。 包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的父站点必须添加到可信站点或本地 Intranet 区域。
 
 -   必须已为应用程序部署了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 应用程序解决方案，并且必须已为网站集激活了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能。 有关详细信息，请参阅[将 Powerpivot 解决方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)和[在管理中心为网站集激活 powerpivot 功能集成](activate-power-pivot-integration-for-site-collections-in-ca.md)。
 
 -   若要查看或创建基于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 Reporting Services 报表，工作簿和报表都必须处于同一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中。 该报表必须使用包含嵌入数据的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，或者工作簿必须包含最多一个是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的外部数据源。
 
-##  <a name="overview"></a>叙述
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]库是您在 SharePoint 服务器上安装[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]时提供的库模板。 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库将文件内容的准确预览与关于文档来源的事实信息结合起来。 您可以立即看到文档的创建者和最近修改时间。 为了创建预览图像， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库使用可以读取包含 PowerPivot 数据的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 Reporting Services 报表的快照服务。 如果快照服务无法读取发布的文件，则该文件没有可用的预览图像。
+##  <a name="overview"></a><a name="overview"></a> 概述
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是您在 SharePoint 服务器上安装 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 时提供的库模板。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库将文件内容的准确预览与关于文档来源的事实信息结合起来。 您可以立即看到文档的创建者和最近修改时间。 为了创建预览图像， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库使用可以读取包含 PowerPivot 数据的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 Reporting Services 报表的快照服务。 如果快照服务无法读取发布的文件，则该文件没有可用的预览图像。
 
- 预览图像基于 Excel Services 呈现工作簿的方式。 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的表示形式应该与在浏览器中查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿时看到的内容完全一致。 然而，预览的图面区域有限， 所以可能要对工作簿或报表各部分进行剪裁以适应可用空间。 您可能需要打开工作簿或报表才能查看完整的文档。
+ 预览图像基于 Excel Services 呈现工作簿的方式。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的表示形式应该与在浏览器中查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿时看到的内容完全一致。 然而，预览的图面区域有限， 所以可能要对工作簿或报表各部分进行剪裁以适应可用空间。 您可能需要打开工作簿或报表才能查看完整的文档。
 
  在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中完全支持从外部数据源刷新 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿数据，但它要求其他配置。 场或服务管理员必须将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为一个 Excel Services 可信位置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。
 
-##  <a name="createlib"></a>创建 PowerPivot 库
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用 "新服务器" 安装选项进行[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]安装时，将为您创建库。 如果已将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 添加到现有场或者您还需要其他库，则可为应用程序或网站新建一个库。
+##  <a name="create-the-powerpivot-gallery"></a><a name="createlib"></a>创建 PowerPivot 库
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 时系统会为您创建 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 库。 如果已将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 添加到现有场或者您还需要其他库，则可为应用程序或网站新建一个库。
 
-1.  1.  **SharePoint 2010**：单击网站主页左上角的 "**网站操作**"。
+1.  1.  **SharePoint 2010**：单击位于网站主页左上角的 **“网站操作”** 。
 
     2.  单击 "**更多选项**"。
 
@@ -74,13 +71,13 @@ ms.locfileid: "78175666"
 
     1.  **Sharepoint 2013**：单击 "设置" 图标 " ![SharePoint 设置](../media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")"。 单击 **“网站内容”**。
 
-    2.  单击 "**添加应用**"。
+    2.  单击 **“添加应用程序”**。
 
     3.  单击 **“PowerPivot 库”**。
 
 2.  为库键入名称。 务必要包含描述性信息，以帮助用户将此库识别为 PowerPivot 工作簿和 Reporting Services 报表的丰富预览。
 
-3.  单击 **“创建”**。
+3.  单击“创建”。 
 
 4.  请场或服务管理员将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为 Excel Services 的可信位置。 如果用户为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新配置工作簿，则为了避免出现错误，必须执行此步骤。 有关此任务的详细信息，请参阅[在管理中心中为 PowerPivot 站点创建受信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。
 
@@ -88,9 +85,8 @@ ms.locfileid: "78175666"
 
  如果您要对不同网站集或各个网站强制使用不同权限，则可创建其他 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。
 
-##  <a name="customize"></a>自定义 PowerPivot 库
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一个 SharePoint 文档库。 因此，您可以使用 SharePoint 中的标准库工具更改库设置或处理库中的各个文档。 您创建的每个库都可以单独进行自定义，从而使用不同的视图或库设置。
+##  <a name="customize-a-powerpivot-gallery-library"></a><a name="customize"></a>自定义 PowerPivot 库
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一个 SharePoint 文档库。 因此，您可以使用 SharePoint 中的标准库工具更改库设置或处理库中的各个文档。 您创建的每个库都可以单独进行自定义，从而使用不同的视图或库设置。
 
  可以修改排序顺序和筛选器，以便更改工作簿在列表中的显示位置。 默认情况下，文档按添加的先后顺序列出，最后一个发布的文档将显示在列表底部。 文档发布后，它将保留它在列表中的位置。 更新并重新发布文档将更新该文档在列表中的位置。
 
@@ -101,16 +97,15 @@ ms.locfileid: "78175666"
  您不能更改控制文档来源信息的设置。 所显示的有关各个文档的事实（例如添加工作簿或上次修改工作簿的用户）由一组无法修改的固定列决定。
 
 #### <a name="change-sort-order-add-filters-or-limit-the-number-of-documents"></a>更改排序顺序、添加筛选器或限制文档数
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库始终显示“上次修改时间”和“创建者”的值。 您不能禁用这些列， 也不能为库启用其他列。请使用下面的说明来更改排序顺序、添加筛选器或限制可见的文档数。
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库始终显示“上次修改时间”和“创建者”的值。 您不能禁用这些列， 也不能为库启用其他列。请使用下面的说明来更改排序顺序、添加筛选器或限制可见的文档数。
 
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。
 
 2.  在功能区中，单击 **“库”**。
 
-3.  **SharePoint 2010：** 在 "自定义视图" 中，单击 "**修改此视图**"。
+3.  **SharePoint 2010：** 在“自定义视图”中，单击 **“修改此视图”**。
 
-     **SharePoint 2013：** 在 "**管理视图**" 中，单击 "**修改视图**"。
+     **SharePoint 2013：** 在 **“管理视图”** 中，单击 **“修改视图”**。
 
 4.  在“排序”中，指定将用来确定工作簿在列表中的显示方式的条件。 默认情况下，文档按添加的先后顺序列出。
 
@@ -120,7 +115,7 @@ ms.locfileid: "78175666"
 
 7.  单击 **“确定”** 以保存你的更改。
 
-####  <a name="bkmk_hide_refresh_button"></a>禁用或隐藏 "刷新" 按钮
+####  <a name="disable-or-hide-the-refresh-button"></a><a name="bkmk_hide_refresh_button"></a>禁用或隐藏 "刷新" 按钮
  您不能隐藏 **“管理数据刷新”** 按钮。 但是，如果用户没有足够权限，将禁用该按钮。
 
  ![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")
@@ -129,7 +124,7 @@ ms.locfileid: "78175666"
 
  因此，只具有 **“查看”** 或 **“读取”** 权限级别的用户将不能访问“刷新”按钮。 “刷新”按钮可见但被禁用。 有关详细信息，请参阅 [SharePoint 2013 中的用户权限和权限级别](https://technet.microsoft.com/library/cc721640.aspx)。
 
-##  <a name="switch"></a>切换到影院视图或库视图
+##  <a name="switch-to-theater-view-or-gallery-view"></a><a name="switch"></a>切换到影院视图或库视图
  预览因您配置图库视图的方式而异。 在图库视图中，您可以通过将鼠标指针悬停在工作簿中各工作表的上方，使相应工作表成为预览区域中的焦点。
 
  ![GMNI_ReportGallery](../media/gmni-reportgallery.gif "GMNI_ReportGallery")

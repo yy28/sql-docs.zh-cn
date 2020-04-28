@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7060990b409773abd4f574e46dd0671c71f1374f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176146"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在脚本任务编辑器中配置脚本任务
@@ -41,13 +41,12 @@ ms.locfileid: "78176146"
  若要设置脚本任务和脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“ScriptLanguage”属性    。 有关详细信息，请参阅 [General Page](../../general-page-of-integration-services-designers-options.md)。
 
 ### <a name="entrypoint-property"></a>EntryPoint 属性
- 
-  `EntryPoint` 属性对 VSTA 项目中的 `ScriptMain` 类指定一种方法，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时会将该方法作为脚本任务代码的入口点来调用。 `ScriptMain`类是脚本模板生成的默认类。
+ `EntryPoint` 属性对 VSTA 项目中的 `ScriptMain` 类指定一种方法，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时会将该方法作为脚本任务代码的入口点来调用。 `ScriptMain`类是脚本模板生成的默认类。
 
  若要更改 VSTA 项目中该方法的名称，必须更改 `EntryPoint` 属性的值。
 
 ### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 和 ReadWriteVariables 属性
- 可以输入以逗号分隔的现有变量列表作为这些属性的值，使这些变量在脚本任务代码中可用于只读或读/写访问。 这两种类型的变量都可以在代码中通过 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 对象的 `Dts` 属性来访问。 有关详细信息，请参阅 [Using Variables in the Script Task](../../extending-packages-scripting/task/using-variables-in-the-script-task.md)。
+ 可以输入以逗号分隔的现有变量列表作为这些属性的值，使这些变量在脚本任务代码中可用于只读或读/写访问。 这两种类型的变量都可以在代码中通过 `Dts` 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 属性来访问。 有关详细信息，请参阅 [Using Variables in the Script Task](../../extending-packages-scripting/task/using-variables-in-the-script-task.md)。
 
 > [!NOTE]
 >  变量名称区分大小写。

@@ -13,10 +13,10 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925602"
 ---
 # <a name="ado-glossary"></a>ADO 术语表
@@ -171,7 +171,7 @@ ms.locfileid: "76925602"
  事件处理程序是事件发生时执行的代码。 另请参阅事件。  
   
 ## <a name="h"></a>H  
- handler  
+ 处理程序 (handler)  
  一个例程，用于管理常见的、相对简单的条件或操作，例如错误恢复或数据管理。  
   
  分层记录集  
@@ -190,7 +190,7 @@ ms.locfileid: "76925602"
  表中唯一标识行的一列或多列;通常用于为表编制索引。  
   
 ## <a name="m"></a>M  
- 封送处理  
+ marshaling  
  跨线程或进程边界对接口方法参数进行打包、发送和 unpackaging 的过程。  
   
  中间层  

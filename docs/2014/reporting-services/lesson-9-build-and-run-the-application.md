@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b21ee398eade4878d4f2273f17314dd184af2310
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176863"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
@@ -30,13 +30,9 @@ ms.locfileid: "78176863"
 
 2.   将鼠标悬停在“名称”列下的任意行上方。 鼠标光标将显示一个手形符号。
 
-3.  
-  **
-  ** 单击“名称”列中的某个值。 随后将显示子报表以及经过筛选的相应数据。
+3.  **** 单击“名称”列中的某个值。 随后将显示子报表以及经过筛选的相应数据。
 
-4.  
-  **
-  **单击“返回父报表” **** 图标，在 **ReportViewer** 工具栏中导航回父报表。
+4.  **** 单击“返回父报表” **** 图标，在 **ReportViewer** 工具栏中导航回父报表。
 
      ![ssrs 使用 ReportViewer 钻取](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs 使用 ReportViewer 钻取")
 

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177337"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
@@ -37,16 +37,14 @@ ms.locfileid: "78177337"
 
  如果未指定 **-m** 参数，则使用本地计算机。
 
- **-i** *input_trace_file*指定控制器上输入跟踪文件的完整路径，例如`D:\Mytrace.trc`。 
-  **-i** 参数是必需的。
+ **-i** *input_trace_file*指定控制器上输入跟踪文件的完整路径，例如`D:\Mytrace.trc`。 **-i** 参数是必需的。
 
  如果同一目录中存在滚动更新文件，则会自动加载并使用这些文件。 文件必须遵循文件滚动更新命名约定，例如：`Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`…`Mytrace_n.trc`。
 
 > [!NOTE]
 >  如果要在控制器以外的其他计算机上使用管理工具，则需要将输入跟踪文件复制到控制器上，以便可以对此参数使用本地路径。
 
- **-d** *controller_working_dir*指定控制器上用于存储中间文件的目录。 
-  **-d** 参数是必需的。
+ **-d** *controller_working_dir*指定控制器上用于存储中间文件的目录。 **-d** 参数是必需的。
 
  需要满足以下要求：
 
@@ -69,8 +67,7 @@ ms.locfileid: "78177337"
  如果未指定 **-f** ，则默认间隔为 30 秒。
 
 ## <a name="examples"></a>示例
- 在本示例中，预处理阶段采用所有默认设置启动。 值 `localhost` 表示控制器服务与管理工具在同一计算机上运行。 
-  *Input_trace_file* 参数指定输入跟踪数据的位置 `c:\mytrace.trc`。 由于不涉及跟踪文件筛选，因此必须指定 **-c** 参数。
+ 在本示例中，预处理阶段采用所有默认设置启动。 值 `localhost` 表示控制器服务与管理工具在同一计算机上运行。 *Input_trace_file* 参数指定输入跟踪数据的位置 `c:\mytrace.trc`。 由于不涉及跟踪文件筛选，因此必须指定 **-c** 参数。
 
 ```
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir

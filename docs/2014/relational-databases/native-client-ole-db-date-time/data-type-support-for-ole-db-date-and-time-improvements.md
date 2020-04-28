@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82d8de1aa71507b8d1397befc287041def1ab839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929541"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>针对 OLE DB 日期和时间改进的数据类型支持
@@ -26,7 +26,7 @@ ms.locfileid: "76929541"
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射  
  OLE DB 提供两种新数据类型来支持新服务器类型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表显示全部服务器类型映射：  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|OLE DB 数据类型|值|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|OLE DB 数据类型|值|  
 |-----------------------------------------|----------------------|-----------|  
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -37,10 +37,9 @@ ms.locfileid: "76929541"
   
 ## <a name="data-formats-strings-and-literals"></a>数据格式：字符串和文字  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|OLE DB 数据类型|客户端转换的字符串格式|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|OLE DB 数据类型|客户端转换的字符串格式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
+|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 此数据类型精确到 1 分钟。 秒部分在输出中将为零，在输入中由服务器进行四舍五入。|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
@@ -72,7 +71,7 @@ ms.locfileid: "76929541"
   
  已对以下现有 OLE DB 结构的实现进行了修改，以支持新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型。 不过未更改定义。  
   
--   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 `double`。 整个部分是自1899年12月30日以来的天数，而小数部分是一天的小数部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
+-   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 `double`。 整数部分是自 1899 年 12 月 30 日以来的天数，小数部分是不足一天的部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
   
 -   DBTYPE_DBDATE  
   
@@ -157,7 +156,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 如果将基础架构更新为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而非 `sql_variant`，则使用 `datetime` 并依赖于 `datetime2` 的受限制精度的应用程序在迁移到 `datetime` Native Client 时，必须对它们进行更新。  
+ 如果将基础架构更新为使用 `sql_variant` 而非 `datetime`，则使用 `datetime2` 并依赖于 `datetime` 的受限制精度的应用程序在迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 时，必须对它们进行更新。  
   
  还通过添加以下内容，对 SSVARIANT 的访问宏进行了扩展：  
   
@@ -169,18 +168,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
- 以下类型映射与 ITableDefinition：： CreateTable 使用的 DBCOLUMNDESC 结构一起使用：  
+ 以下类型映射用于 ITableDefinition::CreateTable 所使用的 DBCOLUMNDESC 结构：  
   
-|OLE DB 数据类型（*wType*）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|说明|  
+|OLE DB 数据类型 (wType**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|说明|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`h-p|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
-|DBTYPE_DBTIME2|`time`h-p|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`h-p|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIME2|`time`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
   
  当应用程序在*wType*中指定 DBTYPE_DBTIMESTAMP 时，它可以通过在`datetime2` *pwszTypeName*中提供类型名称来替代到的映射。 如果`datetime`指定了，则*bScale*必须为3。 如果`smalldatetime`指定了，则*bScale*必须为0。 如果*bScale*与*wType*和*pwszTypeName*不一致，将返回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE DB &#40;的日期和时间改进&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和时间改进 (OLE DB)](date-and-time-improvements-ole-db.md)  
   
   

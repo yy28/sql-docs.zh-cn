@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bff8df8004c4553d5fa07ebb5ca46863a998bd85
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176547"
 ---
 # <a name="enabling-logging-programmatically"></a>以编程方式启用日志记录
@@ -39,8 +39,7 @@ ms.locfileid: "78176547"
  每个可执行日志记录的容器中的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 属性用于确定容器的事件信息是否记录到事件日志中。 此属性从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 结构赋值，并且默认情况下此属性从容器的父级继承。 如果容器是包，并因此没有父级，则该属性使用 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>，其默认值为 `Disabled`。
 
 ### <a name="selecting-a-log-provider"></a>选择日志提供程序
- 
-  <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 属性设置为 `Enabled` 后，日志提供程序将添加到容器的 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合以完成该处理。 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合可用于 <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> 对象，该集合包含为容器选择的日志提供程序。 调用 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> 方法可创建提供程序并将其添加到集合中。 然后该方法会返回添加到集合中的日志提供程序。 每个提供程序都有其特有的配置设置，这些属性是使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 属性设置的。
+ <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 属性设置为 `Enabled` 后，日志提供程序将添加到容器的 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合以完成该处理。 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合可用于 <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> 对象，该集合包含为容器选择的日志提供程序。 调用 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> 方法可创建提供程序并将其添加到集合中。 然后该方法会返回添加到集合中的日志提供程序。 每个提供程序都有其特有的配置设置，这些属性是使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 属性设置的。
 
  下表列出了可用的日志提供程序、其说明和 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 信息。
 
@@ -52,8 +51,7 @@ ms.locfileid: "78176547"
 |Windows 事件日志|记录到本地计算机的标准 Windows 事件日志的应用程序日志中。|不需要任何配置。|
 |XML 文件|将事件日志条目写入 XML 格式的文件中。 这种提供程序的默认文件扩展名是 .xml。|文件连接管理器的名称。|
 
- 通过设置容器的 `EventFilterKind` 和 `EventFilter` 属性可将事件包含或排除在事件日志中。 
-  `EventFilterKind` 结构包含两个值，`ExclusionFilter` 和 `InclusionFilter`，它们指示添加到 `EventFilter` 中的事件是否包含在事件日志中。 然后赋给 `EventFilter` 属性一个字符串数组，其中包含属于筛选主题的事件的名称。
+ 通过设置容器的 `EventFilterKind` 和 `EventFilter` 属性可将事件包含或排除在事件日志中。 `EventFilterKind` 结构包含两个值，`ExclusionFilter` 和 `InclusionFilter`，它们指示添加到 `EventFilter` 中的事件是否包含在事件日志中。 然后赋给 `EventFilter` 属性一个字符串数组，其中包含属于筛选主题的事件的名称。
 
  下面的代码对包启用日志记录，将文本文件的日志提供程序添加到 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合，并指定要包含在日志记录输出中的事件列表。
 

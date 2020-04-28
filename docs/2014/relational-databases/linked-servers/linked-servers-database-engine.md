@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e50cd7bc491109c1aa7a1941d04330141e907941
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175896"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
@@ -35,7 +35,7 @@ ms.locfileid: "78175896"
 
 -   能够以相似的方式确定不同的数据源。
 
- 你可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 语句配置链接服务器。 OLE DB 访问接口的类型和所需的参数的数量大不相同。 例如，一些访问接口要求你使用 [sp_addlinkedsrvlogin (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)之外对 OLE DB 数据源执行命令。 某些 OLE DB 访问接口允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 更新数据 OLE DB 源上的数据。 其他访问接口可能仅提供只读数据访问权限。 有关每个 OLE DB 访问接口的信息，请查看该 OLE DB 访问接口的文档。
+ 你可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 语句配置链接服务器。 OLE DB 访问接口的类型和所需的参数的数量大不相同。 例如，一些访问接口要求你使用 [sp_addlinkedsrvlogin (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)之外对 OLE DB 数据源执行命令。 某些 OLE DB 访问接口允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 更新数据 OLE DB 源上的数据。 其他访问接口可能仅提供只读数据访问权限。 有关每个 OLE DB 访问接口的信息，请查看该 OLE DB 访问接口的文档。
 
 ## <a name="linked-server-components"></a>链接服务器组件
  链接服务器定义指定了下列对象：
@@ -49,7 +49,7 @@ ms.locfileid: "78175896"
  Native Client OLE DB 提供程序（PROGID： SQLNCLI11）是的正式 OLE DB 提供程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询旨在与任何实现所需 OLE DB 接口的 OLE DB 提供程序一起使用。 但是， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和特定访问接口进行过测试。
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询旨在与任何实现所需 OLE DB 接口的 OLE DB 访问接口一起使用。 但是， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和特定访问接口进行过测试。
 
 ## <a name="linked-server-details"></a>链接服务器详细信息
  下图显示了链接服务器配置的基础。
@@ -84,17 +84,17 @@ ms.locfileid: "78175896"
 >  可以定义链接服务器指回（环回）到在其上定义它们的服务器。 当在单服务器网络中测试使用分布式查询的应用程序时，环回服务器是很有用的。 环回链接服务器专用于测试，许多操作（如分布式事务）不支持该服务器。
 
 ## <a name="related-tasks"></a>Related Tasks
- [创建链接服务器 &#40;SQL Server 数据库引擎&#41;](create-linked-servers-sql-server-database-engine.md)
+ [创建链接服务器（SQL Server 数据库引擎）](create-linked-servers-sql-server-database-engine.md)
 
  [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)
 
- [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)
+ [sp_addlinkedsrvlogin (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)
 
- [sp_dropserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)
+ [sp_dropserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)
 
 ## <a name="related-content"></a>相关内容
- [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)
+ [sys.servers (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)
 
- [sp_linkedservers &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)
+ [sp_linkedservers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)
 
 

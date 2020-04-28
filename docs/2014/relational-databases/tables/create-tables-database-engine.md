@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 261aab8b0e8a5d80aed143d6b29e952243742917
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176808"
 ---
 # <a name="create-tables-database-engine"></a>创建表（数据库引擎）
@@ -37,18 +37,18 @@ ms.locfileid: "78176808"
 
      [Transact-SQL](#TsqlProcedure)
 
-##  <a name="BeforeYouBegin"></a> 开始之前
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前
 
-###  <a name="Security"></a> Security
+###  <a name="security"></a><a name="Security"></a> Security
 
-####  <a name="Permissions"></a> 权限
+####  <a name="permissions"></a><a name="Permissions"></a> 权限
  需要在数据库中具有 CREATE TABLE 权限，对在其中创建表的架构具有 ALTER 权限。
 
  如果 CREATE TABLE 语句中的任何列被定义为 CLR 用户定义类型，则需要具有对此类型的所有权或 REFERENCES 权限。
 
  如果 CREATE TABLE 语句中的任何列具有与其关联的 XML 架构集合，则需要具有对 XML 架构集合的所有权或 REFERENCES 权限。
 
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
 #### <a name="to-create-a-table-with-table-designer"></a>使用表设计器创建表
 
@@ -78,13 +78,13 @@ ms.locfileid: "78176808"
 
      有关架构的详细信息，请参阅 [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)。
 
-9. 从 "**文件**" 菜单中，选择 "**保存***表名*"。
+9. 从“文件”菜单中，选择“保存”表名称******** **。
 
 10. 在 **“选择名称”** 对话框中，为该表键入一个名称，再单击 **“确定”**。
 
 11. 若要查看这个新表，请在 **“对象资源管理器”** 中展开 **“表”** 节点，然后按 **F5** 刷新对象列表。 该新表将显示在表列表中。
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 #### <a name="to-create-a-table-in-the-query-editor"></a>在查询编辑器中创建表
 

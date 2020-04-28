@@ -11,24 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 385fa6f6bd874734207c6fec10ddc687b951825a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929436"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>排除针对 Azure 的 SQL Server 托管备份的故障
   本主题说明可以用来对[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]操作期间可能发生的错误进行故障排除的任务和工具。  
   
 ## <a name="overview"></a>概述  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]已内置检查和故障排除，因此，在许多情况下，由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]进程本身处理内部错误。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]已内置检查和故障排除，因此，在许多情况下，由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]进程本身处理内部错误。  
   
  这种情况的一个示例是删除了备份文件，导致日志链中断，从而影响可恢复性- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]将确定日志链中的中断，并计划立即执行备份。 但是，我们仍建议您监视运行状态，并解决所有需要手动干预的错误。  
   
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用系统存储过程、系统视图和扩展事件来记录事件和错误。 系统视图和存储过程提供[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置信息、所安排备份的状态以及由扩展事件捕获的错误。 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用扩展事件捕获错误以用于故障排除。 除了记录事件外，SQL Server 智能管理策略还提供运行状态，电子邮件通知作业使用这种状态来提供错误和问题的通知。 有关详细信息，请参阅[监视 SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用系统存储过程、系统视图和扩展事件来记录事件和错误。 系统视图和存储过程提供[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置信息、所安排备份的状态以及由扩展事件捕获的错误。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用扩展事件捕获错误以用于故障排除。 除了记录事件外，SQL Server 智能管理策略还提供运行状态，电子邮件通知作业使用这种状态来提供错误和问题的通知。 有关详细信息，请参阅[监视 SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]还使用手动备份到 Azure 存储时使用的相同日志记录（SQL Server 备份到 URL）。 有关备份到 URL 相关问题的详细信息，请参阅[SQL Server 备份到 Url 最佳做法和故障排除](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)中的故障排除部分  
   
@@ -36,8 +33,7 @@ ms.locfileid: "76929436"
   
 1.  启用电子邮件通知，开始接收有关错误和警告的电子邮件。  
   
-     或者，也可定期运行 `smart_admin.fn_get_health_status` 以检查合计的错误和计数。 例如，`number_of_invalid_credential_errors` 是尝试备份但出现凭据无效错误的智能备份的次数。 
-  `Number_of_backup_loops` 和 `number_of_retention_loops` 不是错误；但是，它们指示备份线程和保持线程扫描数据库列表的次数。 通常情况下@begin_time ， @end_time如果未提供和，则该函数显示过去30分钟内的信息，然后，对于这两个列，通常应看到非零值。 如果为零，则表示系统过载，甚至系统未响应。 有关详细信息，请参阅本主题后面的 "**系统问题疑难解答**" 一节。  
+     或者，也可定期运行 `smart_admin.fn_get_health_status` 以检查合计的错误和计数。 例如，`number_of_invalid_credential_errors` 是尝试备份但出现凭据无效错误的智能备份的次数。 `Number_of_backup_loops` 和 `number_of_retention_loops` 不是错误；但是，它们指示备份线程和保持线程扫描数据库列表的次数。 通常情况下@begin_time ， @end_time如果未提供和，则该函数显示过去30分钟内的信息，然后，对于这两个列，通常应看到非零值。 如果为零，则表示系统过载，甚至系统未响应。 有关详细信息，请参阅本主题后面的 "**系统问题疑难解答**" 一节。  
   
 2.  检查扩展事件日志，了解错误详细信息和其他相关事件。  
   
@@ -62,8 +58,7 @@ ms.locfileid: "76929436"
   
      错误： "无法访问存储 URL ...。提供有效的 SQL 凭据 ... "：你可能会看到此错误和其他引用 SQL 凭据的类似错误。  在这种情况下，请检查提供的 SQL 凭据的名称，以及存储在 SQL 凭据中的信息-存储帐户名称和存储访问密钥，并确保它们是最新的并且有效。  
   
-     错误： ".。。无法配置数据库 ...。因为它是系统数据库 "：如果您尝试启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]系统数据库，则会看到此错误。  
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]不支持系统数据库备份。  要为系统数据库配置备份，请使用其他 SQL Server 备份计术，如维护计划。  
+     错误： ".。。无法配置数据库 ...。因为它是系统数据库 "：如果您尝试启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]系统数据库，则会看到此错误。  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]不支持系统数据库备份。  要为系统数据库配置备份，请使用其他 SQL Server 备份计术，如维护计划。  
   
      错误： ".。。提供 "保持期 ..."：如果你在首次配置这些值时未指定数据库或实例的保留期，则可能会看到有关保持期的错误。 如果您提供的不是 1 到 30 之间的值，可能也会看到错误。 允许对保持期使用的值为 1 到 30 之间的数字。  
   

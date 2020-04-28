@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0cc4026c8eae44ab8dacff62a72cfa66470c07fb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176277"
 ---
 # <a name="coding-a-custom-task"></a>编写自定义任务代码
@@ -36,9 +36,7 @@ ms.locfileid: "78176277"
  在自定义代码中使用 `Validate` 方法可实现验证。 运行时引擎通过对任务调用 `Validate` 方法来验证任务。 任务开发人员应负责定义任务验证成功或失败的标准并通知运行时引擎此评估的结果。
 
 #### <a name="task-abstract-base-class"></a>任务抽象基类
- 
-  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 抽象基类提供 `Validate` 方法，每个任务应重写该方法以定义其验证标准。 
-  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器将在包设计过程中多次自动调用 `Validate` 方法，并在警告或错误发生时向用户提供可视化提示，以帮助识别任务的配置问题。 任务返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 枚举的值并引发警告和错误事件，从而提供验证结果。 这些事件包含将在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中向用户显示的信息。
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task> 抽象基类提供 `Validate` 方法，每个任务应重写该方法以定义其验证标准。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器将在包设计过程中多次自动调用 `Validate` 方法，并在警告或错误发生时向用户提供可视化提示，以帮助识别任务的配置问题。 任务返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 枚举的值并引发警告和错误事件，从而提供验证结果。 这些事件包含将在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中向用户显示的信息。
 
  下面是一些验证示例：
 
@@ -54,17 +52,15 @@ ms.locfileid: "78176277"
 
  在确定验证对象时，有时需要考虑性能因素。 例如，任务的输入可能是一个低带宽或通信量过大的网络连接。 若要验证该资源是否可用，可能需要几秒钟的处理时间。 别的验证可能需要往返于需要量很大的服务器，低验证例程的速度可能就会降低。 虽然许多属性和设置都可以进行验证，但并不是所有属性和设置都应该进行验证。
 
--   在任务运行前，`Validate` 还会调用 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 方法中的代码；如果验证失败，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 将取消执行。
+-   在任务运行前，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还会调用 `Validate` 方法中的代码；如果验证失败，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 将取消执行。
 
 #### <a name="user-interface-considerations-during-validation"></a>验证过程中用户界面的注意事项
- 
-  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含一个用作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 方法参数的 `Validate` 接口。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口包含一些方法，任务可调用这些方法以向运行时引擎引发事件。 在验证期间出现警告或错误情况时会调用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 这两个警告方法需要相同的参数，包括错误代码、源组件、说明、帮助文件以及帮助上下文信息。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器使用这些信息在设计图面上显示可视化提示。 设计器提供的可视化提示包含感叹号图标，该图标显示在设计图面上的任务旁。 此可视化提示通知用户：任务需要其他配置才能继续执行。
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含一个用作 `Validate` 方法参数的 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口包含一些方法，任务可调用这些方法以向运行时引擎引发事件。 在验证期间出现警告或错误情况时会调用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 这两个警告方法需要相同的参数，包括错误代码、源组件、说明、帮助文件以及帮助上下文信息。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器使用这些信息在设计图面上显示可视化提示。 设计器提供的可视化提示包含感叹号图标，该图标显示在设计图面上的任务旁。 此可视化提示通知用户：任务需要其他配置才能继续执行。
 
  感叹号图标还显示一个包含错误消息的工具提示。 错误消息由任务在事件的说明参数中提供。 错误消息还显示在  **的“任务列表”窗格中，该窗格可供用户集中查看所有验证错误**[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。
 
 #### <a name="validation-example"></a>验证示例
- 下面的代码示例演示一个具有 `UserName` 属性的任务。 此属性已被指定为验证成功所必需的。 如果未设置此属性，任务将会发布错误，并从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 枚举返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>。 
-  `Validate` 方法包装在 try/catch 块中，如果出现异常，验证将失败。
+ 下面的代码示例演示一个具有 `UserName` 属性的任务。 此属性已被指定为验证成功所必需的。 如果未设置此属性，任务将会发布错误，并从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 枚举返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>。 `Validate` 方法包装在 try/catch 块中，如果出现异常，验证将失败。
 
 ```csharp
 using System;
@@ -183,7 +179,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 属性，该属性可用于提供有关执行结果的其他信息。 例如，如果任务要在其 `Execute` 方法中删除表中的行，则该任务可能会将所删除的行数作为 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 属性的值返回。 此外，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecValueVariable%2A> 属性。 此属性允许用户将从任务返回的 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 映射到任何任务可见的变量。 随后，指定的变量即可用于建立任务之间的优先约束。
 
 ### <a name="execution-example"></a>执行示例
- 下面的代码示例演示 `Execute` 方法的实现，并演示了一个重写的 `ExecutionValue` 属性。 该任务删除其 `fileName` 属性指定的文件。 如果该文件不存在或 `fileName` 属性为空字符串，任务将发布一条警告。 该任务在 `Boolean` 属性中返回一个 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 值，以指示该文件是否已删除。
+ 下面的代码示例演示 `Execute` 方法的实现，并演示了一个重写的 `ExecutionValue` 属性。 该任务删除其 `fileName` 属性指定的文件。 如果该文件不存在或 `fileName` 属性为空字符串，任务将发布一条警告。 该任务在 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 属性中返回一个 `Boolean` 值，以指示该文件是否已删除。
 
 ```csharp
 using System;

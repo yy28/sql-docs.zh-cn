@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175246"
 ---
 # <a name="defining-and-browsing-kpis"></a>定义和浏览 KPI
@@ -30,16 +30,16 @@ ms.locfileid: "78175246"
 
 -   状态表达式
 
-     状态表达式是 MDX 表达式，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用它来计算值表达式与目标表达式相比较的当前状态。 目标表达式的正常取值范围是 -1 到 +1。其中 -1 表示非常差，而 +1 表示非常好。 状态表达式会显示图形，以帮助您易于确定值表达式与目标表达式相比较的状态。
+     状态表达式是 MDX 表达式， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用它来计算值表达式与目标表达式相比较的当前状态。 目标表达式的正常取值范围是 -1 到 +1。其中 -1 表示非常差，而 +1 表示非常好。 状态表达式会显示图形，以帮助您易于确定值表达式与目标表达式相比较的状态。
 
 -   走向表达式
 
-     走向表达式是 MDX 表达式，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用它来计算与目标表达式相比，值表达式的当前走向。 走向表达式可帮助业务用户快速确定值表达式相对于目标表达式，是正在变得更好还是更差。 可以将几个图形中的某一个与走向表达式关联，以便帮助业务用户能够快速地了解走向。
+     走向表达式是 MDX 表达式， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用它来计算与目标表达式相比，值表达式的当前走向。 走向表达式可帮助业务用户快速确定值表达式相对于目标表达式，是正在变得更好还是更差。 可以将几个图形中的某一个与走向表达式关联，以便帮助业务用户能够快速地了解走向。
 
  除了为 KPI 定义的这些元素以外，还要为 KPI 定义几个属性。 这些属性包括显示文件夹、父 KPI（如果 KPI 是从其他 KPI 计算得到的）、当前时间成员（如果有）、KPI 的权重（如果有）和 KPI 的说明。
 
 > [!NOTE]
->  有关 KPI 的更多示例，请参阅“计算工具”窗格中“模板”选项卡上或 **Adventure Works DW 2012** 示例数据仓库示例中的 KPI 示例。 有关如何安装此数据库的详细信息，请参阅[安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)。
+>  有关 KPI 的更多示例，请参阅“计算工具”窗格中“模板”选项卡上或 **Adventure Works DW 2012** 示例数据仓库示例中的 KPI 示例。 有关如何安装此数据库的详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)。
 
  在本主题的任务中，您将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中定义 KPI，然后使用这些 KPI 来浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集。 将定义下列 KPI：
 
@@ -55,8 +55,7 @@ ms.locfileid: "78175246"
 
 1.  打开 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后单击“KPI”**** 选项卡。
 
-     
-  **KPI** 选项卡包括几个窗格。 在选项卡的左侧是“KPI 组织程序”**** 窗格和“计算工具”**** 窗格。 该选项卡中间的显示窗格包含了在“KPI 组织程序”**** 窗格中选择的 KPI 的详细信息。
+     **KPI** 选项卡包括几个窗格。 在选项卡的左侧是“KPI 组织程序”**** 窗格和“计算工具”**** 窗格。 该选项卡中间的显示窗格包含了在“KPI 组织程序”**** 窗格中选择的 KPI 的详细信息。
 
      下图显示了多维数据集设计器的“KPI”**** 选项卡。
 
@@ -135,7 +134,7 @@ ms.locfileid: "78175246"
 
 ## <a name="browsing-the-cube-by-using-the-reseller-revenue-kpi"></a>通过使用“分销商收入”KPI 浏览多维数据集
 
-1.  在 ** 的“生成”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]菜单上，单击“部署 Analysis Services 教程”****。
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”**** 菜单上，单击“部署 Analysis Services 教程”****。
 
 2.  成功完成部署后，请在“KPI”**** 选项卡的工具栏上单击“浏览器视图”**** 按钮，然后单击“重新连接”****。
 

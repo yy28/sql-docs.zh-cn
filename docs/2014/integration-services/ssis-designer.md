@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34079d17fd847b2a522b74f7ecdddcf3a0342b2c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176106"
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
@@ -87,17 +87,16 @@ ms.locfileid: "78176106"
 ### <a name="package-explorer-tab"></a>“包资源管理器”选项卡
  包可以很复杂，包括多项任务、连接管理器、变量和其他元素。 在包的资源管理器视图中，可以查看完整的包元素列表。
 
- 有关详细信息，请参阅[查看包对象](view-package-objects.md)。
+ 有关详细信息，请参阅 [查看包对象](view-package-objects.md)。
 
 #### <a name="progressexecution-result-tab"></a>“进度/执行结果”选项卡
  在包运行过程中， **“进度”** 选项卡显示包的执行进度。 在包运行完毕后， **“执行结果”** 选项卡上就一直显示执行结果。
 
 > [!NOTE]
->  若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。
+>   若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。
 
 ##### <a name="connection-managers-area"></a>连接管理器区域
- 
-  **“连接管理器”** 区域用于添加和修改包使用的连接管理器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包括连接到多种数据源（如文本文件、OLE DB 数据库和 .NET 提供程序）的连接管理器。
+ **“连接管理器”** 区域用于添加和修改包使用的连接管理器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括连接到多种数据源（如文本文件、OLE DB 数据库和 .Net 提供程序）的连接管理器。
 
  有关详细信息，请参阅 [Integration Services (SSIS) 连接](connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](../../2014/integration-services/create-connection-managers.md)。
 

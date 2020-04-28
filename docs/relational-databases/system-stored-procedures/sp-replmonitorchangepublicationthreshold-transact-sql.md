@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322222"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -63,14 +63,14 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @metric_id = ] metric_id`正在更改的发布阈值指标的 ID。 *metric_id*为**int**，默认值为 NULL，可以是下列值之一。  
   
-|值|指标名称|  
+|值|标准名称|  
 |-----------|-----------------|  
-|**1**|**过期**-监视对事务发布的订阅是否即将过期。|  
-|**2**|**延迟**-监视对事务发布的订阅的性能。|  
-|**4**|**mergeexpiration** -监视对合并发布的订阅是否即将过期。|  
+|**1**|**expiration** - 监视对事务发布的订阅是否即将过期。|  
+|**2**|**latency** - 监视对事务发布的订阅的性能。|  
+|**4**|**mergeexpiration** - 监视对合并发布的订阅是否即将过期。|  
 |**5**|**mergeslowrunduration** -监视通过低带宽（拨号）连接进行的合并同步的持续时间。|  
 |**6**|**mergefastrunduration** -监视通过高带宽局域网（LAN）连接进行的合并同步的持续时间。|  
-|**7**|**mergefastrunspeed** -监视通过高带宽（LAN）连接进行的合并同步的同步速率。|  
+|**7**|**mergefastrunspeed** - 监视通过高带宽 (LAN) 连接进行的合并同步的同步速率。|  
 |**8**|**mergeslowrunspeed** -监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
   
  必须指定*metric_id*或*thresholdmetricname*。 如果指定了*thresholdmetricname* ，则*METRIC_ID*应为 NULL。  

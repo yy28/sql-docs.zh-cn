@@ -18,14 +18,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3908c39fc6deba57bf8f0e277918e5b8167f4a77
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177182"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 日志文件和来源
-  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器和报表服务器环境使用各种日志目标来记录有关服务器操作和状态的信息。 有两个基本日志记录类别：执行日志记录和跟踪日志记录。 执行日志记录包含有关报表执行统计信息、审核、性能诊断和优化的信息。 跟踪日志记录是有关错误消息和一般诊断的信息。
 
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式 | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 本机模式
@@ -39,7 +38,7 @@ ms.locfileid: "78177182"
 |[报表服务器服务跟踪日志](report-server-service-trace-log.md)|服务跟踪日志包含的信息极为详细，这对于调试应用程序或者调查问题或事件很有帮助。<br /><br /> `C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles`|
 |[报表服务器 HTTP 日志](report-server-http-log.md)|HTTP 日志文件中包含有关由报表服务器 Web 服务和报表管理器处理的所有 HTTP 请求和响应的记录。|
 |[Windows 应用程序日志](windows-application-log.md)|Microsoft Windows 应用程序日志包含报表服务器事件的有关信息。|
-|Windows 性能日志|Windows 性能日志包含报表服务器的性能数据。 您可以创建性能日志，然后选择计数器来确定要收集的数据。 有关详细信息，请参阅 [Monitoring Report Server Performance](monitoring-report-server-performance.md)。|
+|Windows 性能日志|Windows 性能日志包含报表服务器的性能数据。 您可以创建性能日志，然后选择计数器来确定要收集的数据。 有关详细信息，请参阅 [监视报表服务器性能](monitoring-report-server-performance.md)。|
 |安装日志文件|在安装过程中还会创建日志文件。 如果安装失败，或虽然成功但显示警告消息或其他消息，您可以检查日志文件以排除问题。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。|
 |IIS 日志|由 Microsoft Internet Information Services (IIS) 创建的日志文件。 有关详细信息，请参阅 [如何启用登录 Internet 信息服务 (IIS)](https://support.microsoft.com/kb/313437)。|
 |视频|查看演示使用 Microsoft Power Query 查看 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 日志文件的简短视频。<br /><br /> ![查看有关 Power Query 和 SSRS 日志的视频](../media/generic-video-thumbnail.png "查看有关 Power Query 和 SSRS 日志的视频")|

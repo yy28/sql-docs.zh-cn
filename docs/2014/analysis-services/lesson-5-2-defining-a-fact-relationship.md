@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175276"
 ---
 # <a name="defining-a-fact-relationship"></a>定义事实关系
@@ -31,13 +31,13 @@ ms.locfileid: "78175276"
 > [!NOTE]
 >  在每次对事实关系所引用的度量值组进行更新后，事实维度必须进行增量更新。
 
- 有关详细信息，请参阅[维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定义事实关系和事实关系属性](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)。
+ 有关详细信息，请参阅 [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和 [定义事实关系和事实关系属性](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)。
 
  在本主题的各任务中，你将根据“CustomerPONumber”**** 列在“FactInternetSales”**** 事实数据表中添加新的多维数据集维度。 然后将此新增多维数据集维度和“Internet 销售”**** 度量值组之间的关系定义为事实关系。
 
 ## <a name="defining-the-internet-sales-orders-fact-dimension"></a>定义“Internet 销售订单”事实维度
 
-1.  在解决方案资源管理器中，右键单击 "**维度**"，然后单击 "**新建维度**"。
+1.  在“解决方案资源管理器”中，右键单击“维度”****，然后单击“新建维度”****。
 
 2.  在“欢迎使用维度向导”**** 页上，单击“下一步”****。
 
@@ -61,7 +61,7 @@ ms.locfileid: "78175276"
 
 12. 在“完成向导”**** 页上，将名称更改为“Internet 销售订单详细信息”****，然后单击“完成”**** 来完成向导。
 
-13. 在“文件”  菜单上，单击“全部保存”  。
+13. 在“文件” **** 菜单上，单击“全部保存” ****。
 
 14. 在 " **Internet 销售订单详细信息**" 维度的 "维度设计器" 的 "**属性**" 窗格中，选择 "**销售订单号**"，然后将 "属性窗口中的"**名称**"属性更改为`Item Description.`
 
@@ -95,13 +95,13 @@ ms.locfileid: "78175276"
 
      !["定义关系" 对话框](../../2014/tutorials/media/l5-factrelationship-2.gif "“定义关系”对话框")
 
-3.  单击 **“取消”**。
+3.  单击“取消”  。
 
 ## <a name="browsing-the-cube-by-using-the-fact-dimension"></a>使用事实维度浏览多维数据集
 
 1.  在“生成”**** 菜单上，单击“部署 Analysis Services 教程”****，以将更改部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的实例中，并处理数据库。
 
-2.  在部署成功完成时，在 ** 教程多维数据集的多维数据集设计器中单击“浏览器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，再单击“重新连接”**** 按钮。
+2.  在部署成功完成时，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中单击“浏览器”**** 选项卡，再单击“重新连接”**** 按钮。
 
 3.  清除“数据”窗格中的所有度量值和层次结构，然后将“Internet 销售-销售额”**** 度量值添加到“数据”窗格的数据区域。
 

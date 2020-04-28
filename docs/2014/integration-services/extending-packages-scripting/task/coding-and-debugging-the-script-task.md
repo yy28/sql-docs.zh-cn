@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176168"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
@@ -47,11 +47,9 @@ ms.locfileid: "78176168"
  创建或修改包含在脚本任务中的脚本时，VSTA 会打开一个空的新项目或重新打开现有项目。 创建此 VSTA 项目不会影响包的部署，因为项目保存在包文件内；脚本任务不会创建其他文件。
 
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>脚本任务项目中的项目项和类
- 默认情况下，显示在 VSTA 项目资源管理器窗口中的脚本任务项目包含单个项：`ScriptMain`。 
-  `ScriptMain` 项又包含单个类，名称也为 `ScriptMain`。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同：
+ 默认情况下，显示在 VSTA 项目资源管理器窗口中的脚本任务项目包含单个项：`ScriptMain`。 `ScriptMain` 项又包含单个类，名称也为 `ScriptMain`。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同：
 
--   如果脚本任务配置为[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]编程语言，则`ScriptMain`类有一个公共子例程。 `Main` 
-  `ScriptMain.Main` 子例程是运行脚本任务时运行库所调用的方法。
+-   如果脚本任务配置为[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]编程语言，则`ScriptMain`类有一个公共子例程。 `Main` `ScriptMain.Main` 子例程是运行脚本任务时运行库所调用的方法。
 
      默认情况下，新脚本的 `Main` 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 `Dts.TaskResult` [从脚本任务返回结果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)中对属性进行了讨论。
 
@@ -59,8 +57,7 @@ ms.locfileid: "78176168"
 
      默认情况下，`Main` 方法包含一行代码：`Dts.TaskResult = (int)ScriptResults.Success`。 此代码行通知运行库任务运行成功。
 
- 
-  `ScriptMain` 项可包含 `ScriptMain` 类之外的类。 这些类仅在它们所在的脚本任务中可用。
+ `ScriptMain` 项可包含 `ScriptMain` 类之外的类。 这些类仅在它们所在的脚本任务中可用。
 
  默认情况下，`ScriptMain` 项目项包含以下自动生成的代码。 该代码模板还提供脚本任务的概览以及有关如何检索和操作 SSIS 对象（如变量、事件和连接）的其他信息。
 

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176267"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>使用脚本组件创建源
@@ -71,7 +71,7 @@ ms.locfileid: "78176267"
 ### <a name="adding-variables"></a>添加变量
  如果要在脚本中使用任何现有变量的值，可以在 "**脚本转换编辑器**" 的 "**脚本**" `ReadWriteVariables`页上的`ReadOnlyVariables`和属性字段中添加这些变量。
 
- 在属性字段中输入多个变量时，请用逗号将变量名隔开。 您还可以输入多个变量，方法是单击**** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
+ 在属性字段中输入多个变量时，请用逗号将变量名隔开。 您还可以输入多个变量，方法是单击 **...** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
 
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。
 
@@ -85,19 +85,15 @@ ms.locfileid: "78176267"
 ### <a name="understanding-the-auto-generated-code"></a>了解自动生成的代码
  创建并配置源组件后打开 VSTA IDE 时，可编辑的 `ScriptMain` 类将显示在代码编辑器中。 您将在 `ScriptMain` 类中编写您的自定义代码。
 
- 
-  `ScriptMain` 类包含 `CreateNewOutputRows` 方法的存根。 `CreateNewOutputRows`是源组件中最重要的方法。
+ `ScriptMain` 类包含 `CreateNewOutputRows` 方法的存根。  是源组件中最重要的方法。
 
- 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的`BufferWrapper`和`ComponentWrapper`项目项。 
-  `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。
+ 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的`BufferWrapper`和`ComponentWrapper`项目项。 `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。
 
- 在运行时，数据流引擎调用 `PrimeOutput` 类中的 `UserComponent` 方法，该方法重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 
-  `PrimeOutput` 方法又调用下列方法：
+ 在运行时，数据流引擎调用 `PrimeOutput` 类中的 `UserComponent` 方法，该方法重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 `PrimeOutput` 方法又调用下列方法：
 
-1.  
-  `CreateNewOutputRows` 方法，在 `ScriptMain` 中要重写该方法，以将数据源中的行添加到最初为空的输出缓冲区中。
+1.  `CreateNewOutputRows` 方法，在 `ScriptMain` 中要重写该方法，以将数据源中的行添加到最初为空的输出缓冲区中。
 
-2.  `FinishOutputs`方法，默认情况下为空。 在 `ScriptMain` 中要重写此方法，以执行完成输出所需的任何处理。
+2.   方法，默认情况下，该方法为空。 在 `ScriptMain` 中要重写此方法，以执行完成输出所需的任何处理。
 
 3.  私有的 `MarkOutputsAsFinished` 方法，该方法调用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 方法来向数据流引擎指示输出已完成。 您无需在自己的代码中显式调用 `SetEndOfRowset`。
 
@@ -125,7 +121,7 @@ ms.locfileid: "78176267"
 
  如果要运行此示例代码，必须按照如下方式配置包和组件：
 
-1.  创建使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口连接 `SqlClient` 数据库的 `AdventureWorks` 连接管理器。
+1.  创建使用 `SqlClient` 访问接口连接 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据库的 `AdventureWorks` 连接管理器。
 
 2.  向数据流设计器图面添加新的脚本组件并将其配置为源。
 

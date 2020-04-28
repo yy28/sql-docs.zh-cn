@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77600127"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示符下运行数据库实验助手
@@ -78,9 +78,9 @@ ms.locfileid: "77600127"
 
     c.  若要设置每个跟踪文件的最大文件`Set @maxfilesize`大小，请运行。 建议的大小为200（以 MB 为单位）。
 
-    d.单击“下一步”。  编辑`@Tracefile`以为跟踪文件设置唯一名称。
+    d.  编辑`@Tracefile`以为跟踪文件设置唯一名称。
 
-    e.在“新建 MySQL 数据库”边栏选项卡中，接受法律条款，然后单击“确定”。  如果`@dbname`只能在特定数据库上捕获工作负荷，请编辑以指定数据库名称。 默认情况下，将捕获整个服务器上的工作负荷。
+    e.  如果`@dbname`只能在特定数据库上捕获工作负荷，请编辑以指定数据库名称。 默认情况下，将捕获整个服务器上的工作负荷。
 
 4. 若要针对目标 SQL Server 实例重播 IRF 文件，请在命令提示符下运行以下命令：
 

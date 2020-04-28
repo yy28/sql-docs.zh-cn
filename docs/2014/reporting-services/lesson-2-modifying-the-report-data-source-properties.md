@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41679439c7c687cc4574a56369c535f019c77e13
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176924"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 课：修改报表数据源属性
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   在本课中，您将使用报表管理器来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。 在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。
 
  您还将修改数据集和报表以便使用参数来筛选 `[Order]` 上的报表，这样，订阅可为特定的顺序和呈现格式输出不同的报表实例。
@@ -32,7 +32,7 @@ ms.locfileid: "78176924"
 
 -   [重新部署报表](#bkmk_redeploy)
 
-##  <a name="bkmk_modify_datasource"></a>修改数据源属性
+##  <a name="to-modify-the-data-source-properties"></a><a name="bkmk_modify_datasource"></a>修改数据源属性
 
 1.  启动[报表管理器 &#40;SSRS 本机模式下&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)具有管理员权限，例如，右键单击 Internet Explorer 图标，然后单击 "以**管理员身份运行**"。
 
@@ -42,7 +42,7 @@ ms.locfileid: "78176924"
 
 3.  单击 **“数据源”** 选项卡。
 
-4.  对于 "**连接类型**"，请选择**Microsoft SQL Server**。
+4.  对于 **“连接类型”**，请选择 **Microsoft SQL Server**。
 
 5.  自定义数据源连接字符串如下并且它假定示例数据库位于本地数据库服务器上：
 
@@ -62,7 +62,7 @@ ms.locfileid: "78176924"
 
 11. 查看报表以验证报表是否以指定的凭据运行。 若要查看报表，请单击 "**视图**" 选项卡。请注意，在报表打开后，您必须选择一个雇员姓名，然后单击 "**查看报告**" 按钮以查看报表。
 
-##  <a name="bkmk_modify_dataset"></a>修改 AdventureWorksDataset
+##  <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>修改 AdventureWorksDataset
 
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开 Sales Orders 报表。
 
@@ -89,7 +89,7 @@ ms.locfileid: "78176924"
 
 4.  单击 **“确定”**
 
-##  <a name="bkmk_add_reportparameter"></a>添加报表参数并重新发布报表
+##  <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>添加报表参数并重新发布报表
 
 1.  在 **“报表数据”** 窗格中，单击 **“新建”** ，然后单击 **“参数...”**。
 
@@ -113,11 +113,11 @@ ms.locfileid: "78176924"
 
          ![参数区可见的报表查看器](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "参数区可见的报表查看器")
 
-8.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 中的“将报表发布到报表服务器（可选）”部分。
+8.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第6课：添加分组和总计 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)中的 "将报表发布到报表服务器（可选）" 部分。
 
-##  <a name="bkmk_redeploy"></a>重新部署报表
+##  <a name="to-re-deploy-the-report"></a><a name="bkmk_redeploy"></a>重新部署报表
 
-1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 中的“将报表发布到报表服务器（可选）”部分。
+1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第6课：添加分组和总计 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)中的 "将报表发布到报表服务器（可选）" 部分。
 
 2.  在工具栏上，单击 **“生成”** ，然后单击 **“部署教程”**。
 

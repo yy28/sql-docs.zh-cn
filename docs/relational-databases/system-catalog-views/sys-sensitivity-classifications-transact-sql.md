@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77903895"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "77903895"
 
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|  
-|**班级**|**int**|标识存在分类的项的类。 始终具有值1（表示列）|  
+|**class**|**int**|标识存在分类的项的类。 始终具有值1（表示列）|  
 |**class_desc**|**varchar （16）**|存在分类的项的类的说明。 始终具有值*OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|表示包含已分类列的表的 ID，该 ID 与 all_objects 相对应。 object_id|  
 |**minor_id**|**int**|表示存在分类的列的 ID，与 sys. all_columns 相对应 column_id|   
-|label |**sysname**|为敏感度分类分配的标签（可读）|  
+|**label**|**sysname**|为敏感度分类分配的标签（可读）|  
 |**label_id**|**sysname**|与标签关联的 ID，可由信息保护系统（如 Azure 信息保护（AIP））使用|  
 |**information_type**|**sysname**|为敏感度分类分配的信息类型（可人工读取）|  
 |**information_type_id**|**sysname**|与信息保护系统（如 Azure 信息保护（AIP））关联的信息类型的 ID|  

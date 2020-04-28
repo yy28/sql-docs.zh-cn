@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 435ef9a3b64b6a2b39a898bb0db0afaa5c79f828
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175742"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名计算 (Analysis Services)
@@ -66,7 +66,7 @@ FROM
      ![“关系图”工作区的右键单击菜单的屏幕快照](../media/ssas-olapdsv-diagram.gif "“关系图”工作区的右键单击菜单的屏幕快照")
 
     > [!NOTE]
-    >  若要查找表或视图，可以通过单击 "**数据源视图**" 菜单或右键单击 "**表**" 或 "**关系图**" 窗格的打开区域，使用 "**查找表**" 选项。
+    >  若要查找表或视图，可以通过单击“数据源视图”菜单或者右键单击“表”或“关系图”窗格的空白区域以使用“查找表”选项****************。
 
 4.  在 **“创建命名计算”** 对话框中，执行下列操作：
 
@@ -84,6 +84,6 @@ FROM
  尝试删除命名计算时，系统将提示您删除会使在项目或数据库中定义的对象列表失效。 在删除计算之前仔细查看该列表。
 
 ## <a name="see-also"></a>另请参阅
- [在数据源视图中定义命名查询 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)
+ [在数据源视图中定义命名查询 (Analysis Services)](define-named-queries-in-a-data-source-view-analysis-services.md)
 
 

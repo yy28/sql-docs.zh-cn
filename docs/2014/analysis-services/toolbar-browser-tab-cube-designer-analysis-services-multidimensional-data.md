@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175576"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -22,19 +22,19 @@ ms.locfileid: "78175576"
 
  下表列出了 **“工具栏”** 按钮及其功能。
 
-|按钮|说明|
+|Button|说明|
 |------------|-----------------|
 |**编辑为文本**|不可用于此数据源类型。|
-|**Import**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|
+|**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|
 |![更改为 MDX 查询视图](media/rsqdicon-commandtypemdx.gif "更改为 MDX 查询视图")|切换到命令类型 MDX。|
 |![刷新结果数据](media/rsqdicon-refresh.gif "刷新结果数据")|刷新数据源的元数据。|
 |![添加计算成员](media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。|
-|![切换显示空单元](media/rsqdicon-showemptycells.gif "切换显示空单元")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|
+|![切换显示空单元](media/rsqdicon-showemptycells.gif "切换为显示空单元格")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|
 |![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|
-|![显示聚合按钮](media/rsqdicon-showaggregations.gif "显示聚合按钮")|在“数据”窗格中显示聚合。|
+|![“显示聚合”按钮](media/rsqdicon-showaggregations.gif "“显示聚合”按钮")|在“数据”窗格中显示聚合。|
 |![删除](media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|
 |![“查询参数”对话框图标](media/iconqueryparameter.gif "“查询参数”对话框图标")|显示 **“查询参数”** 对话框。 指定查询参数的值时，会自动创建一个同名参数。|
-|![准备查询按钮](media/rsqdicon-preparequery.gif "准备查询按钮")|准备查询。|
+|![“准备查询”按钮](media/rsqdicon-preparequery.gif "“准备查询”按钮")|准备查询。|
 |![运行查询](media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|
 |![取消查询](media/rsqdicon-cancel.gif "取消查询")|取消查询。|
 |![切换到设计模式](media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|
@@ -45,22 +45,22 @@ ms.locfileid: "78175576"
 
 -   **添加计算成员**（![添加计算成员](media/rsqdicon-addcalculatedmember.gif "添加计算成员")）
 
--   **显示空单元格**（![切换以显示空单元格](media/rsqdicon-showemptycells.gif "切换显示空单元")）
+-   **显示空单元格**（![切换为显示空单元格](media/rsqdicon-showemptycells.gif "切换为显示空单元格")）
 
 -   **自动执行**（![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")）
 
--   **显示聚合**（"![显示聚合" 按钮](media/rsqdicon-showaggregations.gif "显示聚合按钮")）
+-   **显示聚合**![“显示聚合”按钮](media/rsqdicon-showaggregations.gif "“显示聚合”按钮")
 
 ## <a name="options"></a>选项
 
 |选项|说明|
 |------------|-----------------|
-|**正在**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。 有关“处理”**** 对话框的详细信息，请参阅[处理对话框（Analysis Services - 多维数据）](process-dialog-box-analysis-services-multidimensional-data.md)。|
+|**进程**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。 有关“处理”**** 对话框的详细信息，请参阅[处理对话框（Analysis Services - 多维数据）](process-dialog-box-analysis-services-multidimensional-data.md)。|
 |**更改用户**|单击此选项可显示 "**安全上下文**" 对话框，并更改 "**浏览器**" 选项卡上使用的用户和角色。有关 "**安全上下文**" 对话框的详细信息，请参阅 "[安全上下文" 对话框 &#40;Analysis Services 多维数据&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md)。|
 |**重新连接**|如果 **“浏览器”** 选项卡会话由于连接丢失或超时而断开，单击此项可将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] “计算” **选项卡重新连接到包含多维数据集的** 实例和数据库。|
-|**“刷新”**|单击此项可以刷新 **“元数据”** 和 **“报表”** 窗格。|
+|**全部**|单击此项可以刷新 **“元数据”** 和 **“报表”** 窗格。|
 |**升序排序**|单击此项可以按 **“语言”** 中指定语言的升序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> **注意**仅当选择了 "**报表**" 窗格中的单元时，才会启用此选项。|
-|**降序排序**|单击此项可以按 **“语言”** 中指定语言的降序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> 注意：只有在 "**报表**" 窗格中选择了单元时，才会启用此选项。|
+|**降序排序**|单击此项可以按 **“语言”** 中指定语言的降序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> 注意：只有在“报表”窗格中选择了单元时，才会启用此选项。 ****|
 |**自动筛选**|单击此项可以自动筛选 **“结果”** 窗格中的结果。|
 |**仅显示顶部/底部**|选择一个值或百分比，基于所选度量值在 **“报表”** 窗格中只显示最前面或最后面指定数量或百分比的单元。<br /><br /> 有关此选项的详细信息，请参阅 [TopCount (MDX)](/sql/mdx/topcount-mdx)、[TopPercent (MDX)](/sql/mdx/toppercent-mdx)、[BottomCount (MDX)](/sql/mdx/bottomcount-mdx) 和 [BottomPercent (MDX)](/sql/mdx/bottompercent-mdx)。|
 |**进行**|单击此项可以显示小计。|

@@ -17,15 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e67d718c928785d85712eb5307130af22570c26
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173906"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供各种现成可用的工具和服务，帮助您创建、部署和管理组织的报表。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中包括了很多可用于扩展和自定义报告功能的编程特性。
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供各种现成可用的工具和服务，帮助您创建、部署和管理组织的报表。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中包括了很多可用于扩展和自定义报告功能的编程特性。
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]是一个基于服务器的报表平台，它为各种数据源提供综合性报表功能。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]包括一组完整的工具，可用于创建、管理和传递报表，以及允许开发人员在自定义应用程序中集成或扩展数据和报表处理的 Api。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]工具在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]环境中工作，并与[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]工具和组件完全集成。
 

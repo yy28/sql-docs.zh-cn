@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76516264"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
@@ -44,12 +44,12 @@ ms.locfileid: "76516264"
 |program_name|**nvarchar(128)**|启动会话的客户端程序的名称。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |host_process_id|**int**|启动会话的客户端程序的进程 ID。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |client_version|**int**|客户端连接到服务器所用接口的 TDS 协议版本。 对于内部会话，该值为 NULL。 可以为 Null。|  
-|client_interface_name|**nvarchar （32）**|客户端用于与服务器通信的库/驱动程序的名称。 对于内部会话，该值为 NULL。 可以为 Null。|  
+|client_interface_name|**nvarchar(32)**|客户端用于与服务器通信的库/驱动程序的名称。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |security_id|**varbinary （85）**|与登录名关联的 Microsoft Windows 安全 ID。 不可为 null。|  
 |login_name|**nvarchar(128)**|当前执行的会话所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 有关创建此会话的原始登录名，请参阅 original_login_name。 可以是经过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证的登录名或 Windows 身份验证的域用户名。 不可为 null。|  
 |nt_domain|**nvarchar(128)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 客户端的 Windows 域（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
 |nt_user_name|**nvarchar(128)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 客户端的 Windows 用户名（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
-|status|**nvarchar （30）**|会话的状态。 可能的值：<br /><br /> **正在运行**-当前正在运行一个或多个请求<br /><br /> 正在**睡眠**-当前没有运行任何请求<br /><br /> **休眠**-由于连接池而重置会话，并且该会话目前处于预登录状态。<br /><br /> **Preconnect**在 Resource Governor 分类器中。<br /><br /> 不可为 null。|  
+|status|**nvarchar(30)**|会话的状态。 可能的值：<br /><br /> **Running** - 当前正在运行一个或多个请求<br /><br /> **Sleeping** - 当前没有运行任何请求<br /><br /> **休眠**-由于连接池而重置会话，并且该会话目前处于预登录状态。<br /><br /> **Preconnect** - 会话在资源调控器分类器中。<br /><br /> 不可为 null。|  
 |context_info|**varbinary(128)**|会话的 CONTEXT_INFO 值。 上下文信息由用户通过使用[set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)语句设置。 可以为 Null。|  
 |cpu_time|**int**|该会话所占用的 CPU 时间（毫秒）。 不可为 null。|  
 |memory_usage|**int**|该会话所占用的 8 KB 内存页数。 不可为 null。|  
@@ -114,7 +114,7 @@ ms.locfileid: "76516264"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|目标|对于/应用|关系|  
+|From|到|对于/应用|关系|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|一对零或一对多|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|一对零或一对多|  
@@ -184,8 +184,8 @@ WHERE c.session_id = @@SPID;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 56418adbefec0dc996fd83ce70415e86ec9509a3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171657"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>任务 6：验证通过使用主数据管理器创建了基于域的属性
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>任务 6：验证基于域的属性是否使用主数据管理器进行创建
   在本任务中，将使用“主数据管理器”**** 验证在 **MDS** 中创建了 **State** 实体并且 **Supplier** 实体的 **State** 属性是依赖 **State** 实体的基于域的属性。
 
 1.  切换到“主数据管理器”**** Web 应用程序。
@@ -56,7 +56,7 @@ ms.locfileid: "78171657"
     |NY|纽约|
     |OH|Ohio|
     |OK|Oklahoma|
-    |或|Oregon|
+    |OR|Oregon|
     |PA|Pennsylvania|
     |SC|South Carolina|
     |KS|Kansas|
@@ -79,6 +79,6 @@ ms.locfileid: "78171657"
      ![包含更新的代码和名称的州/省属性](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "包含更新的代码和名称的州/省属性")
 
 ## <a name="next-step"></a>下一步
- [任务 7：在 Excel 中查看使用主数据管理器所做的更新](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)
+ [任务 7：在 Excel 中查看你使用“主数据管理器”所做的更新](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)
 
 

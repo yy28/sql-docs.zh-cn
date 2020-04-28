@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b39d062f5ccc44492d4c2c0f224d0fa2c6b0993
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175586"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>为 Power View 报表配置表行为属性（SSAS 表格）
   如果您将表格模型用作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的数据模型，则可以设置以更高粒度级别显示详细信息行的表行为属性。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。
 
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 不同于其他报表应用程序，因为它在报表设计期间自动对项进行分组，其方法是对照您所使用的显示格式计算您放入报表字段列表中的列。 在大多数情况下，默认分组会产生最佳结果。 但对于某些表（主要是包含详细数据的表），默认分组行为有时将对不应分组的行进行分组。 对于此类表，您可以设置用于更改对组进行计算的方式的属性。
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 不同于其他报表应用程序，因为它在报表设计期间自动对项进行分组，其方法是对照您所使用的显示格式计算您放入报表字段列表中的列。 在大多数情况下，默认分组会产生最佳结果。 但对于某些表（主要是包含详细数据的表），默认分组行为有时将对不应分组的行进行分组。 对于此类表，您可以设置用于更改对组进行计算的方式的属性。
 
  对于您主要关心其中各单独行的表（如员工记录或客户记录），建议设置表行为属性。 相比较而言，未从这些属性受益的表包括那些充当查找表的表（例如，日期表、产品目录表或部门表，其中，表由相对较少的行数和列数组成），或者摘要表（其中包含的行只在汇总时才有用，如按照性别、年龄或地理位置累计的人口普查数据）。 对于查找表和摘要表，默认的分组行为会产生最佳结果。
 
@@ -32,16 +31,16 @@ ms.locfileid: "78175586"
 
  表行为属性包括以下各项：
 
--   **行标识符**─指定只包含唯一值的列，允许将该列用作内部分组键。
+-   **行标识符** ─ 指定只包含唯一值的一列，同时允许将该列用作内部分组键。
 
--   "**保留唯一行**" ─指定哪些列提供应视为唯一的值，即使这些值是重复项（例如，雇员的名字和姓氏，对于两个或多个雇员共享同一名称的情况下）。
+-   **保留唯一行** - 指定哪些列提供应视为唯一的值，即使这些值重复也不例外（例如，员工的姓氏和名字，而两个或更多员工同名）。
 
--   **默认标签**─指定哪一列提供显示名称来表示行数据（例如，员工记录中的员工姓名）。
+-   **默认标签** - 指定哪一列提供显示名称来表示行数据（例如，员工记录中的员工姓名）。
 
--   **默认图像**─指定哪一列提供表示行数据的图像（例如，员工记录中的照片 ID）。
+-   **默认图像** - 指定哪一行提供用于表示行数据的图像（例如，员工记录中的照片 ID）。
 
 > [!NOTE]
->  请参阅下面的章节，了解如何从特定显示格式的角度进行布局优化：  [针对特定布局进行优化](#bkmk_optimizeforlayout)。
+>   请参阅下面的章节，了解如何从特定显示格式的角度进行布局优化：  [针对特定布局进行优化](#bkmk_optimizeforlayout)。
 
 ## <a name="opening-the-table-behavior-dialog-box"></a>打开“表行为”对话框
 
@@ -87,7 +86,7 @@ ms.locfileid: "78175586"
 > [!NOTE]
 >  图像来源可以是 URL 地址到 Web 服务器上的图像文件，或者作为工作簿中嵌入的二进制数据。 如果图像基于 URL，请确保将列设置为图像类型，以便 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 检索图像，而不是将 URL 显示为报表中的文本数据。
 
-##  <a name="bkmk_optimizeforlayout"></a>针对特定布局进行优化
+##  <a name="optimizing-for-specific-layouts"></a><a name="bkmk_optimizeforlayout"></a> 针对特定布局进行优化
  下面的章节介绍从特定显示格式的角度和数据特性设置表行为属性的影响。 举例而言，如果您尝试精细优化矩阵报表的布局，则可以使用此信息来理解如何通过在模型中使用表行为属性来改进矩阵显示。
 
 ### <a name="images-are-missing"></a>图像缺失
@@ -117,7 +116,7 @@ ms.locfileid: "78175586"
 
  ![按行标识符分组的矩阵布局](../media/ssas-rptprop-matrixrowid.gif "按行标识符分组的矩阵布局")
 
- **After：按行标识符分组**
+ **之后：基于行标识符进行分组**
 
  ![按行标识符分组的矩阵布局](../media/ssas-rptprop-matrixrowid.gif "按行标识符分组的矩阵布局")
 
@@ -130,7 +129,7 @@ ms.locfileid: "78175586"
 
  ![基于字段级别默认分组的图表](../media/ssas-rptprop-chartfieldgroup.gif "基于字段级别默认分组的图表")
 
- **After：按行标识符分组（行标识符变成轴）**
+ **之后：基于行标识符进行分组（行标识符变成轴）**
 
  ![基于行 ID 分组的图表](../media/ssas-rptprop-chartrowid.gif "基于行 ID 分组的图表")
 

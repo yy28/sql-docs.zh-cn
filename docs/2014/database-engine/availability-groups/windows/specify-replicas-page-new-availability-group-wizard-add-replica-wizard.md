@@ -15,23 +15,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76923043"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
-  本主题介绍 "**指定副本**" 页的选项。 本页适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  
+  本主题介绍“指定副本”**** 页的选项。 本页适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  
   
-|Tab|简要说明|  
+|选项卡|简要说明|  
 |---------|-----------------------|  
 |[副本](#ReplicasTab)|使用此选项卡可以指定将承载或当前承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 请注意，您当前连接的服务器实例必须承载主副本。<br /><br /> 提示：请首先在“副本”**** 选项卡上完成对所有副本的指定，再开始其他选项卡。|  
-|[端点](#EndpointsTab)|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。|  
+|[终结点](#EndpointsTab)|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。|  
 |[备份首选项](#BackupPreferencesTab)|使用此选项卡可以整体为可用性组指定您的备份首选项，并为各个可用性副本指定备份优先级。|  
-|[监听](#Listener)|使用此选项卡（如果可用）可以创建可用性组侦听器。 默认情况下不创建侦听器。<br /><br /> 注意：仅当正在运行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 时，此选项卡才可用。|  
+|[侦听器](#Listener)|使用此选项卡（如果可用）可以创建可用性组侦听器。 默认情况下不创建侦听器。<br /><br /> 注意：仅当正在运行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 时，此选项卡才可用。|  
   
-##  <a name="ReplicasTab"></a>副本选项卡  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> “副本”选项卡  
  **服务器实例**  
  显示将承载可用性副本的服务器实例的名称。  
   
@@ -45,15 +45,15 @@ ms.locfileid: "76923043"
   
  有关同步提交可用性模式的信息，请参阅[可用性模式（AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。 有关自动故障转移的信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](failover-and-failover-modes-always-on-availability-groups.md)。  
   
- **同步提交（最多3个）**  
+ **同步提交(最多 3 个)**  
  如果你为副本选择了“自动故障转移(最多 2 个)”****，则同时选择了“同步提交(最多 3 个)”****。 如果该复选框为空白，则仅当您希望该副本仅对计划的手动故障转移使用同步提交模式时，才选中此复选框。 只有三个副本才能使用同步提交模式。  
   
  如果您希望此副本使用异步提交可用性模式，则将此复选框保留为空。 此副本将仅支持强制手动故障转移（可能造成数据丢失）。 有关异步提交可用性模式的信息，请参阅[可用性模式（AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。 有关计划的手动故障转移和强制手动故障转移的信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](failover-and-failover-modes-always-on-availability-groups.md)。  
   
- **可读辅助角色**  
+ **可读取的辅助角色**  
  从“可读取辅助角色”**** 下拉列表中选择一个值，如下所示：  
   
- **是**  
+ **否**  
  不允许与此副本的辅助数据库的直接连接。 它们不可用于读访问。 这是默认设置。  
   
  **仅限读意向**  
@@ -62,22 +62,22 @@ ms.locfileid: "76923043"
  **是**  
  允许与此副本的辅助数据库的所有连接，但仅限读访问。 辅助数据库全都可用于读访问。  
   
- **添加副本**  
+ **“添加副本”**  
  单击此选项可将辅助副本添加到可用性组。  
   
  **添加 Azure 副本**  
- 单击此项以创建在可用性组中运行辅助副本的 Azure 虚拟机。 此选项仅适用于混合 IT 中含有本地副本的可用性组。 有关详细信息，请参阅[Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
+ 单击此项以创建在可用性组中运行辅助副本的 Azure 虚拟机。 此选项仅适用于混合 IT 中含有本地副本的可用性组。 有关详细信息，请参阅 [Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
   
  **删除副本**  
  单击可从可用性组中删除选择的辅助副本。  
   
-##  <a name="EndpointsTab"></a>终结点选项卡  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a>终结点选项卡  
  对于将承载可用性副本的每个服务器实例， **“端点”** 选项卡将显示现有数据库镜像端点的实际值（如果有）或者要使用 Windows 身份验证的潜在新端点的建议值。 对于现有端点和潜在端点，“端点”值网格将显示以下信息：  
   
  **服务器名称**  
  显示将承载可用性副本的服务器实例的名称。  
   
- **终结点 URL**  
+ **端点 URL**  
  显示数据库镜像端点的实际或建议的 URL。 对于建议的新端点，可以更改此值。 有关这些 URL 格式的信息，请参阅[在添加或修改可用性副本时指定终结点 URL (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
  **端口号**  
@@ -86,12 +86,11 @@ ms.locfileid: "76923043"
  **终结点名称**  
  显示此端点的实际或建议的名称。 对于建议的新端点，可以更改此值。  
   
- **加密数据**  
+ **对数据进行加密**  
  指示是否对通过此端点发送的数据进行加密。 对于建议的新端点，可以更改此设置。  
   
  **SQL Server 服务帐户**  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的用户名。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的用户名。  
   
  为使服务器实例可以使用采用 Windows 身份验证的端点，其 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户必须是域帐户。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "76923043"
   
      如果在配置端点时保持 **“指定可用性副本”** 页打开，则返回 **“端点”** 选项卡，然后单击 **“刷新”** 以更新 **“端点值”** 网格。  
   
-##  <a name="BackupPreferencesTab"></a>备份首选项选项卡  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> “备份首选项”选项卡  
  若要指定应发生备份的位置，请选择下列选项之一。  
   
  **优先辅助**  
@@ -116,7 +115,7 @@ ms.locfileid: "76923043"
  **仅辅助**  
  指定备份应该永远不会在主副本上执行。 如果主副本是唯一的联机副本，则备份应不会发生。  
   
- **主要节点**  
+ **基本**  
  指定备份应该始终在主副本上发生。 如果您需要在对辅助副本运行备份时不支持的备份功能，例如创建差异备份，此选项将很有用。  
   
  **任何副本**  
@@ -132,15 +131,15 @@ ms.locfileid: "76923043"
  显示承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
   
  **备份优先级(最低 = 1，最高 = 100)**  
- 分配对此副本执行备份的优先级（相对于同一可用性组中的其他副本）。 默认值为 50。 您可以选择 0..100 范围内的任何整数。 1 表示最低优先级，100 表示最高优先级。 如果将**备份优先级**设置为1，则仅当当前没有更高优先级的可用性副本可用时，才会选择要执行备份的可用性副本。  
+ 分配对此副本执行备份的优先级（相对于同一可用性组中的其他副本）。 默认值为 50。 您可以选择 0..100 范围内的任何整数。 1 表示最低优先级，100 表示最高优先级。 如果你将“备份优先级”设置为 1，则仅在当前没有具有更高优先级的可用性副本时，才选择对此可用性副本执行备份****。  
   
  **排除副本**  
  防止选择此可用性副本来执行备份。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  
   
-##  <a name="Listener"></a>侦听器选项卡  
+##  <a name="listener-tab"></a><a name="Listener"></a> “侦听器”选项卡  
  为将提供客户端连接点的[可用性组侦听器](../../listeners-client-connectivity-application-failover.md)指定你的首选项，其中包括：  
   
- **请勿立即创建可用性组侦听器。**  
+ **不立即创建可用性组侦听器。**  
  选择以跳过此步骤。 您可以稍后创建侦听器。 有关详细信息，请参阅 [创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)。  
   
  **创建可用性组侦听器。**  
@@ -166,10 +165,10 @@ ms.locfileid: "76923043"
   
  如果选择“静态 IP”**** 作为网络模式（这是默认选择），网格中将显示“子网”**** 和“IP 地址”**** 列，并显示关联的“添加”**** 按钮和“删除”**** 按钮。 请注意，在您添加第一个子网之前该网格为空。  
   
- **子网**列  
+ “子网”**** 列  
  显示您为针对该侦听器添加的每个子网选择的子网地址。  
   
- **IP 地址**列  
+ “IP 地址”**** 列  
  显示您为给定子网指定的 IPv4 或 IPv6 地址。  
   
  **添加**  
@@ -186,7 +185,7 @@ ms.locfileid: "76923043"
   
  选择 **DHCP** 后，将显示 **“子网”** 字段。  
   
- **个子**  
+ **子网**  
  如果你选择“DHCP”**** 作为网络模式，则使用“子网”**** 下拉列表为承载可用性组的可用性副本的子网选择地址。  
   
 > [!IMPORTANT]
@@ -195,7 +194,7 @@ ms.locfileid: "76923043"
 >  -   请求您的网络管理员将该侦听器的 IP 地址保留为专用。 将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
 > -   将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -211,7 +210,7 @@ ms.locfileid: "76923043"
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [CREATE AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/create-availability-group-transact-sql)   
+ [&#40;Transact-sql&#41;创建可用性组](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [AlwaysOn 可用性组 &#40;SQL Server 的先决条件、限制和建议&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

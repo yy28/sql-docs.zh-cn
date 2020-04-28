@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175906"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
@@ -23,7 +23,7 @@ ms.locfileid: "78175906"
  本主题介绍如何监视 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 内存使用量。
 
 
-##  <a name="bkmk_CreateDB"></a>使用内存优化表创建示例数据库
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a>使用内存优化表创建示例数据库
  如果您已具有含内存优化表的数据库，则可以跳过此部分。
 
  以下步骤将创建一个数据库，其中包含您可在本主题的其余部分中使用的三个内存优化表。 在该示例中，我们将该数据库映射到了一个资源池，以便我们可以控制内存优化表可使用的内存量。
@@ -113,7 +113,7 @@ ms.locfileid: "78175906"
 ##  <a name="monitoring-memory-usage"></a>监视内存使用量
 
 ###  <a name="using-ssmanstudiofull"></a>使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]附带内置的标准报表，用于监视内存中表使用的内存。 您可以使用 [此处](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述的对象资源管理器访问这些报表。 还可使用对象资源管理器监视单独的内存优化表占用的内存。
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 附随内置的标准报表，以便监视内存中表使用的内存。 您可以使用 [此处](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述的对象资源管理器访问这些报表。 还可使用对象资源管理器监视单独的内存优化表占用的内存。
 
 #### <a name="consumption-at-the-database-level"></a>数据库级别的内存使用情况
  您可以按如下所示在数据库级别监视内存使用情况。

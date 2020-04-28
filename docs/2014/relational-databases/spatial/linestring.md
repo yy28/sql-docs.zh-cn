@@ -13,14 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e1bdfd447fdf61123615dad329b297490172b191
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176667"
 ---
 # <a name="linestring"></a>LineString
-  
   `LineString` 是一个一维对象，表示一系列点和连接这些点的线段。
 
 ## <a name="linestring-instances"></a>LineString 实例
@@ -47,8 +46,7 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 ```
 
- 
-  `@g3` 显示 `LineString` 实例可被接受，但无效。
+ `@g3` 显示 `LineString` 实例可被接受，但无效。
 
  下面的 `LineString` 实例不可接受。 它将引发 `System.FormatException`。
 
@@ -59,8 +57,7 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ### <a name="valid-instances"></a>有效实例
  必须满足以下条件，`LineString` 实例才是有效的。
 
-1.  
-  `LineString` 实例必须是已接受的实例。
+1.  `LineString` 实例必须是已接受的实例。
 
 2.  如果 `LineString` 实例不为空，则它必须包含至少两个非重复点。
 
@@ -86,8 +83,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ```
 
 > [!WARNING]
->  
-  `LineString` 重叠的检测基于不精确的浮点计算。
+>  `LineString` 重叠的检测基于不精确的浮点计算。
 
 ## <a name="examples"></a>示例
  下面的示例说明如何创建一个包含三个点且 SRID 为 0 的 `geometry``LineString` 实例：

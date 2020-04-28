@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77429011"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
@@ -38,25 +38,25 @@ ms.locfileid: "77429011"
 |session_id|**smallint**|与此请求相关的会话的 ID。 不可为 null。|  
 |request_id|**int**|请求的 ID。 在会话的上下文中是唯一的。 不可为 null。|  
 |start_time|**datetime**|请求到达时的时间戳。 不可为 null。|  
-|status|**nvarchar （30）**|请求的状态。 可以是以下值之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />Suspended<br /><br /> 不可为 null。|  
-|command|**nvarchar （32）**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
-|sql_handle|**varbinary （64）**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 Null。| 
+|status|**nvarchar(30)**|请求的状态。 可以是下列选项之一：<br /><br /> 背景<br />运行<br />可运行<br />Sleeping<br />Suspended<br /><br /> 不可为 null。|  
+|command|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
+|sql_handle|**varbinary(64)**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 Null。| 
 |statement_start_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的开始位置（以字节为单位），从0开始。 可以与`sql_handle`、 `statement_end_offset`和`sys.dm_exec_sql_text`动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
 |statement_end_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的结束位置（以字节为单位，从0开始）。 可以与`sql_handle`、 `statement_start_offset`和`sys.dm_exec_sql_text`动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
-|plan_handle|**varbinary （64）**|是一个标记，用于为当前正在执行的批处理唯一标识查询执行计划。 可以为 Null。|  
+|plan_handle|**varbinary(64)**|是一个标记，用于为当前正在执行的批处理唯一标识查询执行计划。 可以为 Null。|  
 |database_id|**smallint**|对其执行请求的数据库的 ID。 不可为 null。|  
 |user_id|**int**|提交请求的用户的 ID。 不可为 null。|  
 |connection_id|**uniqueidentifier**|请求到达时所采用的连接的 ID。 可以为 Null。|  
 |blocking_session_id|**smallint**|正在阻塞请求的会话的 ID。 如果此列的值为 NULL 或等于0，则不会阻止该请求，或者阻塞会话的会话信息不可用（或无法识别）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而导致此时无法确定阻塞闩锁所有者的会话 ID。|  
-|wait_type|**nvarchar （60）**|如果请求当前被阻塞，则此列返回等待类型。 可以为 Null。<br /><br /> 有关等待类型的信息，请参阅[transact-sql&#41;&#40;dm_os_wait_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
+|wait_type|**nvarchar(60)**|如果请求当前被阻塞，则此列返回等待类型。 可以为 Null。<br /><br /> 有关等待类型的信息，请参阅[transact-sql&#41;&#40;dm_os_wait_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
 |wait_time|**int**|如果请求当前被阻塞，则此列返回当前等待的持续时间（以毫秒为单位）。 不可为 null。|  
-|last_wait_type|**nvarchar （60）**|如果此请求先前已经阻塞，则此列返回上次等待的类型。 不可为 null。|  
+|last_wait_type|**nvarchar(60)**|如果此请求先前已经阻塞，则此列返回上次等待的类型。 不可为 null。|  
 |wait_resource|**nvarchar(256)**|如果请求当前被阻塞，则此列返回请求当前等待的资源。 不可为 null。|  
 |open_transaction_count|**int**|为此请求打开的事务数。 不可为 null。|  
 |open_resultset_count|**int**|为此请求打开的结果集的个数。 不可为 null。|  
 |transaction_id|**bigint**|在其中执行此请求的事务的 ID。 不可为 null。|  
 |context_info|**varbinary(128)**|会话 CONTEXT_INFO 值。 可以为 Null。|  
-|percent_complete|**实际上**|为以下命令完成的工作的百分比：<br /><br /> ALTER INDEX REORGANIZE<br />AUTO_SHRINK 选项（带 ALTER DATABASE）<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> 不可为 null。|  
+|percent_complete|**real**|为以下命令完成的工作的百分比：<br /><br /> ALTER INDEX REORGANIZE<br />AUTO_SHRINK 选项（带 ALTER DATABASE）<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> 不可为 null。|  
 |estimated_completion_time|**bigint**|仅限内部使用。 不可为 null。|  
 |cpu_time|**int**|请求所使用的 CPU 时间（毫秒）。 不可为 null。|  
 |total_elapsed_time|**int**|请求到达后经过的总时间（毫秒）。 不可为 null。|  
@@ -88,13 +88,13 @@ ms.locfileid: "77429011"
 |group_id|**int**|此查询所属工作负荷组的 ID。 不可为 null。|  
 |query_hash|**binary （8）**|对查询计算的二进制哈希值，用于标识具有类似逻辑的查询。 可以使用查询哈希确定仅仅是文字值不同的查询的聚合资源使用情况。|  
 |query_plan_hash|**binary （8）**|对查询执行计划计算的二进制哈希值，用于标识类似的查询执行计划。 可以使用查询计划哈希查找具有类似执行计划的查询的累积成本。|  
-|statement_sql_handle|**varbinary （64）**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 单个查询的 SQL 句柄。<br /><br />如果没有为数据库启用查询存储，则此列为 NULL。 |  
+|statement_sql_handle|**varbinary(64)**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 单个查询的 SQL 句柄。<br /><br />如果没有为数据库启用查询存储，则此列为 NULL。 |  
 |statement_context_id|**bigint**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> Sys. query_context_settings 的可选外键。<br /><br />如果没有为数据库启用查询存储，则此列为 NULL。 |  
 |dop |**int** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 查询的并行度。 |  
 |parallel_worker_count |**int** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 如果这是并行查询，则为保留的并行工作线程数。  |  
 |external_script_request_id |**uniqueidentifier** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 与当前请求关联的外部脚本请求 ID。 |  
 |is_resumable |**bit** |**适用于**：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 及更高版本。<br /><br /> 指示请求是否为可恢复索引操作。 |  
-|page_resource |**binary （8）** |**适用**于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果`wait_resource`列包含页，则为页资源的8字节的十六进制表示形式。 有关详细信息，请参阅[sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
+|page_resource |**binary （8）** |适用于  ：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果`wait_resource`列包含页，则为页资源的8字节的十六进制表示形式。 有关详细信息，请参阅[sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
 |page_server_reads|**bigint**|**适用**于： Azure SQL 数据库超大规模<br /><br /> 此请求执行的页服务器读取次数。 不可为 null。|  
 | &nbsp; | &nbsp; | &nbsp; |
 

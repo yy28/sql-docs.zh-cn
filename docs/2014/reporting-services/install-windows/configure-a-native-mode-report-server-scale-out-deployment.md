@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9fea6ae71046de3cf1a6b4dc765b1a2a19e149
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173557"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>配置本机模式报表服务器扩展部署（SSRS 配置管理器）
@@ -59,8 +59,7 @@ ms.locfileid: "78173557"
 
 1.  在将承载报表服务器数据库的计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 至少需要安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
 
-2.  如有必要，请针对报表服务器启用远程连接。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某些版本在默认情况下不允许进行远程 TCP/IP 和 Named Pipes 连接。 若要确认是否允许进行远程连接，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，然后查看目标实例的网络配置设置。 如果远程实例还是一个命名实例，请验证目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务是否已启用且正在运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 提供用于连接到命名实例的端口号。
+2.  如有必要，请针对报表服务器启用远程连接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某些版本在默认情况下不允许进行远程 TCP/IP 和 Named Pipes 连接。 若要确认是否允许进行远程连接，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，然后查看目标实例的网络配置设置。 如果远程实例还是一个命名实例，请验证目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务是否已启用且正在运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 可提供用于连接到命名实例的端口号。
 
 ### <a name="to-install-the-first-report-server-instance"></a>安装第一个报表服务器实例
 
@@ -68,7 +67,7 @@ ms.locfileid: "78173557"
 
 2.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。
 
-3.  配置报表服务器 Web 服务 URL、报表管理器 URL 和报表服务器数据库。 有关详细信息，请参阅 [ 联机丛书中的](../report-server/configure-a-report-server-reporting-services-native-mode.md)配置报表服务器（Reporting Services 本机模式）[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+3.  配置报表服务器 Web 服务 URL、报表管理器 URL 和报表服务器数据库。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[配置报表服务器（Reporting Services 本机模式）](../report-server/configure-a-report-server-reporting-services-native-mode.md)。
 
 4.  验证报表服务器是否正常运行。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 验证 Reporting Services 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
 
@@ -106,20 +105,20 @@ ms.locfileid: "78173557"
 
 2.  单击“扩展部署”打开“扩展部署”页****。 您会看到两个条目，分别对应于连接到报表服务器数据库的两个报表服务器实例。 第一个报表服务器实例应已联接。 第二个报表服务器应在“等待联接”。 如果您在自己的部署中没有看到类似的条目，请确认您已连接到已配置和初始化为使用报表服务器数据库的第一个报表服务器。
 
-     !["扩展部署" 页的部分屏幕截图](../../../2014/sql-server/install/media/scaloutscreen.gif "“扩展部署”页的局部屏幕快照")
+     ![“扩展部署”页的局部屏幕快照](../../../2014/sql-server/install/media/scaloutscreen.gif "“扩展部署”页的局部屏幕快照")
 
 3.  在 "扩展部署" 页上，选择等待加入部署的 Report Server 实例，并单击 "**添加服务器**"。
 
     > [!NOTE]
     >  **问题：** 当你尝试将 Reporting Services Report Server 实例联接到扩展部署时，你可能会遇到类似 "拒绝访问" 的错误消息。
     > 
-    >  **解决方法：** 从第一个[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例备份加密密钥，并将该密钥还原到第二[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]个 Report Server。 然后将第二个服务器联接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署。
+    >  **解决方法：** 从第一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥并将该密钥还原到第二个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 然后将第二个服务器联接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署。
 
 4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器，然后单击“Web 服务 URL”或“报表管理器 URL”。
 
  如果计划在负载平衡服务器群集中运行报表服务器，则需要进行额外配置。 有关详细信息，请参阅 [在网络负载平衡群集上配置报表服务器](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。
 
 ## <a name="see-also"></a>另请参阅
- [&#40;ssrs Configuration Manager 配置服务帐户&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [配置 URL &#40;ssrs Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) Ssrs [&#40;创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)Configuration Manager Ssrs&#41;&#40;ssrs Configuration Manager[配置报表服务器 url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)&#41;Ssrs [&#40;Configuration Manager Ssrs](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)&#41;[添加和删除扩展部署的加密密钥 &#40;ssrs Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) [管理报表服务本机模式报表服务器](../report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [&#40;ssrs Configuration Manager 配置服务帐户&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [配置 URL &#40;SSRS Configuration Manager](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [&#41;Ssrs &#40;创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)Configuration Manager Ssrs&#41;&#40;配置[报表服务器](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) Configuration Manager Ssrs&#41;&#40;CONFIGURATION MANAGER[添加和删除扩展部署的加密密钥&#41;ssrs &#40;Configuration Manager](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) [管理&#41;的本机模式报表服务器](../report-server/manage-a-reporting-services-native-mode-report-server.md)
 
 

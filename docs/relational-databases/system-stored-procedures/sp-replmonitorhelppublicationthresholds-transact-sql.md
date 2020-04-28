@@ -17,10 +17,10 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320767"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
@@ -62,8 +62,8 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|复制性能度量指标的 ID，可为下列值之一。<br /><br /> **1expiration** -监视对事务发布的订阅是否即将过期。<br /><br /> **2latency** -监视对事务发布的订阅的性能。<br /><br /> **4mergeexpiration** -监视对合并发布的订阅是否即将过期。<br /><br /> **5mergeslowrunduration** -监视通过低带宽（拨号）连接进行的合并同步的持续时间。<br /><br /> **6mergefastrunduration** -监视通过高带宽（LAN）连接进行的合并同步的持续时间。<br /><br /> **7mergefastrunspeed** -监视通过高带宽（LAN）连接进行的合并同步的同步速率。<br /><br /> **8mergeslowrunspeed** -监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
-|**词首**|**sysname**|复制性能度量指标的名称。|  
-|**负值**|**int**|性能度量指标的阈值。|  
+|**title**|**sysname**|复制性能度量指标的名称。|  
+|**value**|**int**|性能度量指标的阈值。|  
 |**shouldalert**|**bit**|如果在指标超过此发布定义的阈值时是否应生成警报，则为;如果值为**1** ，则表示应引发警报。|  
 |**isenabled**|**bit**|如果为此发布的此复制性能指标启用了监视，则为;值为**1**表示启用监视。|  
   

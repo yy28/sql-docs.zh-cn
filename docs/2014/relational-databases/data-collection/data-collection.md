@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175967"
 ---
 # <a name="data-collection"></a>数据收集
@@ -36,7 +36,7 @@ ms.locfileid: "78175967"
 ## <a name="data-collector-concepts"></a>数据收集器概念
  数据收集器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]集成并可广泛使用这两者。 因此在使用数据收集器之前，应了解与这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件相关的某些概念。
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理用于计划和运行收集作业。 您应该了解以下概念：
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于计划和运行收集作业。 您应该了解以下概念：
 
 -   作业
 
@@ -50,11 +50,11 @@ ms.locfileid: "78175967"
 
  有关详细信息，请参阅 [自动执行管理任务（SQL Server 代理）](../../ssms/agent/sql-server-agent.md)。
 
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]（[!INCLUDE[ssIS](../../includes/ssis-md.md)]）用于执行从各个数据访问接口收集数据的包。 您应该熟悉以下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 用于执行从各个数据提供程序收集数据的包。 您应该熟悉以下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]软件包
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]包配置
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包配置
 
  有关详细信息，请参阅 [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)。
 

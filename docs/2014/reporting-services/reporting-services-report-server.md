@@ -25,17 +25,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffdf4c40ef0267a5377d2db50c40b58bafb7f6f6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177138"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
-  本主题概述[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]了 Report Server，即[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安装的中心组件。 报表服务器由一对处理引擎和一组具有特殊用途的扩展插件（用于处理身份验证、数据处理、呈现和传递操作）组成。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器在以下两种部署模式之一下运行：本机模式或 SharePoint 模式。 请参阅功能比较的 [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport) 部分。
+  本主题概述[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]了 Report Server，即[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安装的中心组件。 报表服务器由一对处理引擎和一组具有特殊用途的扩展插件（用于处理身份验证、数据处理、呈现和传递操作）组成。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器在以下两种部署模式之一下运行：本机模式或 SharePoint 模式。 请参阅功能比较的 [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport) 部分。
 
- **安装：** 有关[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安装的信息，请参阅以下内容：
+ **安装：** 有关 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装的信息，请参阅以下内容：
 
 -   [安装 Reporting Services 本机模式报表服务器](install-windows/install-reporting-services-native-mode-report-server.md)
 
@@ -45,9 +44,9 @@ ms.locfileid: "78177138"
 
 -   [SQL Server Azure 虚拟机中的商业智能](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx)。
 
--   [使用 PowerShell 创建具有本机模式报表服务器的 AZURE VM](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx)。
+-   [使用 PowerShell 来创建带有本机模式报表服务器的 Azure VM](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx)。
 
-##  <a name="bkmk_top"></a>本主题中的
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a>本主题中的
 
 -   [报表服务器模式概述](#bkmk_overview)
 
@@ -59,7 +58,7 @@ ms.locfileid: "78177138"
 
 -   [SharePoint 模式](#bkmk_sharepointmode)
 
--   [报表过程和计划和传递过程](#bkmk_reportprocessor)
+-   [报表处理以及计划和传递处理](#bkmk_reportprocessor)
 
 -   [报表服务器数据库](#bkmk_reportdatabase)
 
@@ -67,45 +66,42 @@ ms.locfileid: "78177138"
 
 -   [相关任务](#bkmk_relatedtasks)
 
-##  <a name="bkmk_overview"></a>报表服务器模式概述
- 处理引擎（处理器）是报表服务器的核心。 处理器确保报告系统的完整性，但无法修改或扩展。 扩展插件也是处理器，但执行的是非常具体的功能。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 对于支持的每种类型的扩展插件都包含一个或多个默认扩展插件。 您可以向报表服务器中添加自定义扩展插件。 这样做使您可以扩展报表服务器以支持当前不支持的功能；自定义功能的示例包括对单一登录技术的支持、默认呈现扩展插件不能处理的应用程序格式的报表输出，以及到打印机或应用程序的报表传递。
+##  <a name="overview-of-report-server-modes"></a><a name="bkmk_overview"></a>报表服务器模式概述
+ 处理引擎（处理器）是报表服务器的核心。 处理器确保报告系统的完整性，但无法修改或扩展。 扩展插件也是处理器，但执行的是非常具体的功能。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 对于支持的每种类型的扩展插件都包含一个或多个默认扩展插件。 您可以向报表服务器中添加自定义扩展插件。 这样做使您可以扩展报表服务器以支持当前不支持的功能；自定义功能的示例包括对单一登录技术的支持、默认呈现扩展插件不能处理的应用程序格式的报表输出，以及到打印机或应用程序的报表传递。
 
  单个报表服务器实例由完整的处理器和扩展插件集合定义，这些处理器和扩展插件提供从初始请求的处理到已完成报表的显示等端到端的处理。 报表服务器通过子组件来处理报表请求，并使报表可用于按需访问或计划分发。
 
  从功能上说，报表服务器为多种数据源以及可扩展身份验证和授权架构实现报表创作体验、报表呈现和报表传递体验。 此外，报表服务器还包含报表服务器数据库，用来存储已发布的报表、共享数据源、共享数据集、报表部件、共享计划和订阅、报表定义源文件、模型定义、已编译报表、快照、参数以及其他资源。 报表服务器还支持管理，以便配置报表服务器以处理报表请求，维护快照历史记录，并管理报表、数据源、数据集和订阅的权限。
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器支持两种报表服务器实例部署模式：
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器支持两种报表服务器实例部署模式：
 
--   **本机模式**：包括带有 SharePoint Web 部件的本机模式，其中 Report Server 作为应用程序服务器运行，该服务器通过[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]组件独占提供所有处理和管理功能。 您使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器和 SQL Server Management Studio 对本机模式报表服务器进行配置。
+-   **本机模式**：包括带有 SharePoint Web 部件的本机模式，其中报表服务器作为应用程序服务器运行，并完全通过 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 组件提供所有处理和管理功能。 您使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器和 SQL Server Management Studio 对本机模式报表服务器进行配置。
 
--   **Sharepoint 模式**： Report Server 作为 SharePoint 服务器场的一部分安装。  通过使用 PowerShell 命令或 SharePoint 内容管理页来部署和配置 SharePoint 模式。
+-   **SharePoint 模式**：在此情况下，报表服务器作为 SharePoint 服务器场的一部分安装。  通过使用 PowerShell 命令或 SharePoint 内容管理页来部署和配置 SharePoint 模式。
 
- 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，不能将报表服务器从一个模式切换到另一个模式。 如果要更改您的环境使用的报表服务器类型，则必须安装所需的报表服务器模式，然后将报表项或报表服务器数据库从旧版本的报表服务器复制或移到新的报表服务器。 此过程通常称为“迁移”。 迁移所需的步骤取决于您要迁移到的模式和迁移前所在的版本。 有关详细信息，请参阅[升级和迁移 Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md)
+ 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，不能将报表服务器从一个模式切换到另一个模式。 如果要更改您的环境使用的报表服务器类型，则必须安装所需的报表服务器模式，然后将报表项或报表服务器数据库从旧版本的报表服务器复制或移到新的报表服务器。 此过程通常称为“迁移”。 迁移所需的步骤取决于您要迁移到的模式和迁移前所在的版本。 有关详细信息，请参阅 [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md)
 
-##  <a name="bkmk_featuresupport"></a>SharePoint 模式和本机模式的功能比较
+##  <a name="feature-comparison-of-sharepoint-and-native-mode"></a><a name="bkmk_featuresupport"></a>SharePoint 模式和本机模式的功能比较
 
 |功能或组件|本机模式|SharePoint 模式|
 |--------------------------|-----------------|---------------------|
 |**URL 寻址**|是|在 SharePoint 集成模式下，URL 寻址方式有所不同。 使用 SharePoint URL 引用报表、报表模型、共享数据源和资源。 不使用报表服务器的文件夹层次结构。 如果您的自定义应用程序依赖于本机模式的报表服务器上支持的 URL 访问，则将报表服务器配置为 SharePoint 集成模式时，该功能将不再有效。<br /><br /> 有关 URL 访问的详细信息，请参阅 [URL 访问参数引用](url-access-parameter-reference.md)。|
-|**自定义安全扩展插件**|是|
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 自定义安全扩展插件。 报表服务器包括一个特殊用途的安全扩展插件，只要将报表服务器配置为以 SharePoint 集成模式运行，便会使用此插件。 该安全扩展插件是一个内部组件，并且是执行集成操作所必需的组件。|
-|**配置管理器**|是|** \* \*重要\*提示**Configuration Manager 不能用于管理 SharePoint 模式 Report Server。 而是使用 SharePoint 管理中心。|
+|**自定义安全扩展插件**|是|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 自定义安全扩展插件。 报表服务器包括一个特殊用途的安全扩展插件，只要将报表服务器配置为以 SharePoint 集成模式运行，便会使用此插件。 该安全扩展插件是一个内部组件，并且是执行集成操作所必需的组件。|
+|**Configuration Manager**|是|** \* \*重要\*提示**Configuration Manager 不能用于管理 SharePoint 模式 Report Server。 而是使用 SharePoint 管理中心。|
 |**报表管理器**|是|配置管理器不能用于管理 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)。|
-|**链接报表**|是|不是。|
+|**链接报表**|是|否。|
 |**我的报表**|是|否|
-|**我的订阅**和批处理方法。|是|否|
+|**我的订阅** 和批处理方法。|是|否|
 |**数据警报**|否|是|
 |**Power View**|否|是<br /><br /> 要求在客户端浏览器中具有 Silverlight。 有关浏览器要求的详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|
 |**.RDL 报表**|是|是<br /><br /> .RDL 报表可以在本机模式或 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行。|
 |**.RDLX 报表**|否|是<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行。|
-|**Sharepoint 列表扩展的 SharePoint 用户标记凭据**|否|是|
+|**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|否|是|
 |**用于面向 internet 的部署的 AAM 区域**|否|是|
 |**SharePoint 备份和恢复**|否|是|
-|**ULS 日志支持**|否|是|
+|**UL 日志支持**|否|是|
 
-##  <a name="bkmk_nativemode"></a>本机模式
+##  <a name="native-mode"></a><a name="bkmk_nativemode"></a>本机模式
  在本机模式中，报表服务器是独立的应用程序服务器，提供查看、管理、处理和传递报表及报表模型的所有功能。 这是报表服务器实例的默认模式。 可以安装在系统安装期间配置的本机模式的报表服务器，也可以在系统安装完成后配置报表服务器进行本机模式操作。
 
  下面的关系图显示了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式部署的三层体系结构。 它显示了数据层中的报表服务器数据库和数据源、中间层中的报表服务器组件，以及表示层中的客户端应用程序和内置或自定义工具。 还显示了服务器组件之间的请求流和数据流，以及哪些组件发送和检索数据存储区中的内容。
@@ -116,15 +112,15 @@ ms.locfileid: "78177138"
 
  第三方开发人员可以创建其他扩展插件，以替代或扩展报表服务器的处理能力。 若要了解有关应用程序开发人员可以使用的编程接口的详细信息，请参阅 [技术参考](../../2014/reporting-services/technical-reference-ssrs.md)。
 
-###  <a name="bkmk_nativewithwebparts"></a>带有 SharePoint Web 部件的本机模式
+###  <a name="native-mode-with-sharepoint-web-parts"></a><a name="bkmk_nativewithwebparts"></a>带有 SharePoint Web 部件的本机模式
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供两个 Web 部件，你可以在[!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 或更高版本的实例上安装和注册，也可以在 SharePoint Portal Server 2003 或更高版本上进行注册。 在 SharePoint 站点上，可以使用这些 Web 部件查找和查看在本机模式下运行的报表服务器上存储和处理的报表。 这些 Web 部件是在较早版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中引入的。
 
-##  <a name="bkmk_sharepointmode"></a>SharePoint 模式
+##  <a name="sharepoint-mode"></a><a name="bkmk_sharepointmode"></a>SharePoint 模式
  在 SharePoint 模式下，报表服务器必须在 SharePoint 服务器场中运行。 报表服务器处理、呈现和管理功能由正在运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务以及一个或多个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序的 SharePoint 应用程序服务器表示。 SharePoint 站点提供对报表服务器内容和操作的前端访问。
 
  SharePoint 模式需要：
 
--   [!INCLUDE[SPF2010](../includes/spf2010-md.md)]或[!INCLUDE[SPS2010](../includes/sps2010-md.md)]。
+-   [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../includes/sps2010-md.md)]。
 
 -   用于 SharePoint 2010 产品的适当版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序。
 
@@ -136,22 +132,20 @@ ms.locfileid: "78177138"
 
 ||说明|
 |-|-----------------|
-|**2**|Web 服务器或 Web 前端 (WFE)。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序必须安装在您要利用其 Web 应用程序功能（例如，为管理数据源或订阅之类的任务查看报表或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理页）的每个 Web 服务器上。|
+|**2**|Web 服务器或 Web 前端 (WFE)。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序必须安装在您要利用其 Web 应用程序功能（例如，为管理数据源或订阅之类的任务查看报表或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理页）的每个 Web 服务器上。|
 |**pps-2**|该外接程序将为客户端安装 URL 和 SOAP 端点，以便通过 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务代理与应用程序服务器通信。|
 |**三维空间**|正在运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务的应用程序服务器。 对报表处理的扩展作为 SharePoint 场的一部分来管理并且通过将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务添加到其他应用程序服务器来进行。|
 |**4**|你可以用不同的配置（包括权限、电子邮件、代理和订阅）创建多个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。|
 |**5**|报表、数据源和 SharePoint 内容数据库中存储的其他项。|
-|**共**|
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序为报表服务器、temp 和数据警报功能创建三个数据库。 应用于所有 SSRS 服务应用程序的配置设置存储于 **RSReportserver.config** 文件中。|
+|**共**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序为报表服务器、temp 和数据警报功能创建三个数据库。 应用于所有 SSRS 服务应用程序的配置设置存储于 **RSReportserver.config** 文件中。|
 
-##  <a name="bkmk_reportprocessor"></a>报表过程和计划和传递过程
+##  <a name="report-process-and-schedule-and-delivery-process"></a><a name="bkmk_reportprocessor"></a>报表过程和计划和传递过程
  报表服务器包括两个处理引擎，用于执行初级和中级的报表处理，以及计划的操作和传递操作。 报表处理器可以检索报表定义或模型，将布局信息与数据处理扩展插件的相应数据相结合，再按请求的格式呈现报表。 计划和传递处理可以处理按计划触发的报表，并将报表传递给目标。
 
-##  <a name="bkmk_reportdatabase"></a>报表服务器数据库
- 报表服务器是一种无状态服务器，它可将所有属性、对象和元数据都存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中。 存储的数据包括已发布报表、已编译报表、报表模型以及用于对报表服务器管理的所有项进行寻址的文件夹层次结构。 报表服务器数据库可以为单个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装或扩展部署所涵盖的多个报表服务器提供内部存储位置。 如果将报表服务器配置为在一个较大型的 SharePoint 产品或技术部署中运行，则该报表服务器除了使用报表服务器数据库之外，还将使用 SharePoint 数据库。 有关 Reporting Services 安装中使用的数据存储区的详细信息，请参阅[报表服务器数据库（SSRS 本机模式）](report-server/report-server-database-ssrs-native-mode.md)。
+##  <a name="report-server-database"></a><a name="bkmk_reportdatabase"></a>报表服务器数据库
+ 报表服务器是一种无状态服务器，它可将所有属性、对象和元数据都存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中。 存储的数据包括已发布报表、已编译报表、报表模型以及用于对报表服务器管理的所有项进行寻址的文件夹层次结构。 报表服务器数据库可以为单个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装或扩展部署所涵盖的多个报表服务器提供内部存储位置。 如果将报表服务器配置为在一个较大型的 SharePoint 产品或技术部署中运行，则该报表服务器除了使用报表服务器数据库之外，还将使用 SharePoint 数据库。 有关 Reporting Services 安装中使用的数据存储区的详细信息，请参阅 [报表服务器数据库（SSRS 本机模式）](report-server/report-server-database-ssrs-native-mode.md)。
 
-##  <a name="bkmk_authentication"></a>身份验证、呈现、数据和传递扩展插件
+##  <a name="authentication-rendering-data-and-delivery-extensions"></a><a name="bkmk_authentication"></a>身份验证、呈现、数据和传递扩展插件
  报表服务器支持以下类型的扩展插件：身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件。 报表服务器至少分别需要一个身份验证扩展插件、数据处理扩展插件和呈现扩展插件。 传递扩展插件和自定义报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。
 
  Reporting Services 提供了默认扩展插件，以便您无需开发自定义组件就可以使用所有服务器功能。 下表说明了有助于提供完整报表服务器实例的默认扩展插件，该实例将提供可供使用的功能：
@@ -166,7 +160,7 @@ ms.locfileid: "78177138"
 > [!NOTE]
 >  Reporting Services 包括一组完整的工具和应用程序，可以使用这些工具和应用程序来管理服务器，创建内容，以及使您单位中的用户可以获取这些内容。
 
-##  <a name="bkmk_relatedtasks"></a> 相关任务
+##  <a name="related-tasks"></a><a name="bkmk_relatedtasks"></a> 相关任务
  以下主题提供了有关安装、使用和维护报表服务器的其他信息：
 
 |任务|链接|

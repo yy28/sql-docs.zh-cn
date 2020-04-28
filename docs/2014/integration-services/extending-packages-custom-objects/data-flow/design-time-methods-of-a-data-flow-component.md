@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a2f9cf4d404f4ef577e446d0c4284ef7024742
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176389"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>数据流组件的设计时方法
@@ -64,10 +64,9 @@ End Sub
  在对 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 方法的调用中，组件开发人员应该向组件添加自定义属性 (<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>)。 自定义属性没有数据类型属性。 自定义属性的数据类型由值的数据类型设置，您已将该数据类型分配给其 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.Value%2A> 属性。 但是，在向自定义属性分配初始值后，不能分配具有其他数据类型的值。
 
 > [!NOTE]
->  
-  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 接口提供对 `Object` 类型的属性值的有限支持。 能够作为自定义属性值存储的唯一对象是简单类型数组，如字符串或整数。
+>  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 接口提供对 `Object` 类型的属性值的有限支持。 能够作为自定义属性值存储的唯一对象是简单类型数组，如字符串或整数。
 
- 可指示自定义属性支持属性表达式，方法是从 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 枚举将其 `CPET_NOTIFY` 属性的值设置为 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType>，如下列示例中所示。 不必添加用于处理或验证用户输入的属性表达式的任何代码。 可以设置属性的默认值、验证该值并正常读取和使用该值。
+ 可指示自定义属性支持属性表达式，方法是从 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 枚举将其 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> 属性的值设置为 `CPET_NOTIFY`，如下列示例中所示。 不必添加用于处理或验证用户输入的属性表达式的任何代码。 可以设置属性的默认值、验证该值并正常读取和使用该值。
 
 ```csharp
 IDTSCustomProperty100 myCustomProperty;

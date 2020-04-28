@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175764"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多维模型中创建度量值和度量值组
-  
-  *度量值* 是数字数据值的聚合，如求和、计数、最小值、最大值、平均值或你创建的自定义 MDX 表达式。 
-  *度量值组* 是一个或多个度量值的容器。 所有度量值存在于一个度量值组中，即使只有一个度量值。 一个多维数据集必须至少有一个度量值和度量值组。
+  *度量值* 是数字数据值的聚合，如求和、计数、最小值、最大值、平均值或你创建的自定义 MDX 表达式。 *度量值组* 是一个或多个度量值的容器。 所有度量值存在于一个度量值组中，即使只有一个度量值。 一个多维数据集必须至少有一个度量值和度量值组。
 
  本主题包含下列部分：
 
@@ -34,7 +32,7 @@ ms.locfileid: "78175764"
 
 -   [度量值组的粒度](#bkmk_grain)
 
-##  <a name="bkmk_create"></a>创建度量值的方法
+##  <a name="approaches-for-creating-measures"></a><a name="bkmk_create"></a>创建度量值的方法
  度量值可以是数据集中的静态元素，在设计时创建，当数据集被访问时始终存在。 还可以使用 MDX 将度量值定义为 *“计算成员”* ，从而为基于多维数据集中其他度量值的度量值提供计算值。 计算成员的范围可以为会话或用户。
 
  若要创建一个度量值或度量值组，请使用以下方法之一：
@@ -43,10 +41,10 @@ ms.locfileid: "78175764"
 |-|-|
 |多维数据集向导|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行多维数据集向导以创建多维数据集。<br /><br /> 在“解决方案资源管理器”中，右键单击“多维数据集”，然后选择“新建多维数据集”。******** 如果在执行这些步骤中需要帮助，请参阅[多维建模（Adventure Works 教程）](../multidimensional-modeling-adventure-works-tutorial.md)。<br /><br /> 创建基于来自现有数据仓库的表的多维数据集时，度量值和度量值组的定义具体化为多维数据集创建过程的一部分。 在向导中，你将选择要用作多维数据集中度量值和度量值组对象的基础的事实和事实数据表。|
 |新建度量值对话|假定 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中已存在该多维数据集，则双击“解决方案资源管理器”中的多维数据集名称，在“多维数据集设计器”中打开该多维数据集。 在“度量值”窗格中，通过指定源表、列和聚合类型，右键单击顶端节点以创建新度量值组或新度量值。 使用此方法需从预构建函数固定列表中选择聚合方法。 有关更常用的聚合的讨论，请参阅 [Use Aggregate Functions](use-aggregate-functions.md) 。|
-|计算成员|计算成员会增加 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中多维数据集的灵活性，并提高其分析能力，因为你可以控制创建它们的时间和方式。 有时你只是临时需要一个度量值，需要度量值的时间仅为用户会话持续时间，或需要位于 Management Studio 中作为调查的一部分的度量值。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开“计算”选项卡创建新计算成员。<br /><br /> 度量值基于 MDX 表达式时，请选择这种方法。 有关详细信息，请参阅这些主题：[在 MDX 中生成度量值](mdx/mdx-building-measures.md)、[计算](../multidimensional-models-olap-logical-cube-objects/calculations.md)、[多维模型中的计算](calculations-in-multidimensional-models.md)和 [MDX 脚本编写基础知识 (Analysis Services)](mdx/mdx-scripting-fundamentals-analysis-services.md)。|
+|“计算成员”|计算成员会增加 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中多维数据集的灵活性，并提高其分析能力，因为你可以控制创建它们的时间和方式。 有时你只是临时需要一个度量值，需要度量值的时间仅为用户会话持续时间，或需要位于 Management Studio 中作为调查的一部分的度量值。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开“计算”选项卡创建新计算成员。<br /><br /> 度量值基于 MDX 表达式时，请选择这种方法。 有关详细信息，请参阅这些主题：[在 MDX 中生成度量值](mdx/mdx-building-measures.md)、[计算](../multidimensional-models-olap-logical-cube-objects/calculations.md)、[多维模型中的计算](calculations-in-multidimensional-models.md)和 [MDX 脚本编写基础知识 (Analysis Services)](mdx/mdx-scripting-fundamentals-analysis-services.md)。|
 |MDX 或 XMLA|在 SQL Server Management Studio 中，你可以执行 MDX 或 XMLA 以更改数据库，从而以包含新的计算度量值。 在该解决方案已部署到服务器之后，这种方法对数据的临时测试有用。 请参阅 [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md)。|
 
-##  <a name="bkmk_comps"></a>度量值的组件
+##  <a name="components-of-a-measure"></a><a name="bkmk_comps"></a>度量值的组件
  度量值是具有属性的对象。 除了其名称外，度量值必须具有聚合类型和源列，或具有用于加载具有数据的度量值的表达式。 你可以通过设置度量值属性来修改度量值定义。
 
 |||
@@ -55,7 +53,7 @@ ms.locfileid: "78175764"
 |**聚合**|默认情况下，度量值按每个维度进行求和。 但是，通过 `AggregateFunction` 属性，您可以修改此行为。 有关列表，请参阅 [Use Aggregate Functions](use-aggregate-functions.md) 。|
 |**属性**|有关附加属性说明，请参阅 [Configure Measure Properties](configure-measure-properties.md) 。|
 
-##  <a name="bkmk_modeling"></a>对事实数据表和事实数据表上的度量值和度量值组建模
+##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>对事实数据表和事实数据表上的度量值和度量值组建模
  在运行向导前，它有助于理解度量值定义的建模原则。
 
  度量值和度量值组是表示外部数据仓库中的事实和事实数据表的多维对象。 在大多数情况下，度量值和度量值组都将基于数据源视图中的对象，而这些对象是从基础数据仓库创建的。
@@ -77,7 +75,7 @@ ms.locfileid: "78175764"
 > [!NOTE]
 >  不是所有的度量值都是直接从存储在事实数据表列中的值派生而来的。 例如，Adventure Works 示例多维数据集的 **“销售配额”** 度量值组中定义的 **“销售人员计数”** 度量值实际基于 **FactSalesQuota** 事实数据表的 **EmployeeKey** 列中的唯一值计数（或非重复计数）。
 
-##  <a name="bkmk_grain"></a>度量值组的粒度
+##  <a name="granularity-of-a-measure-group"></a><a name="bkmk_grain"></a>度量值组的粒度
  度量值组具有引用事实数据表支持的详细级别的关联粒度。 通过对维度的外键关系设置粒度。
 
  例如， **FactSalesQuota** 事实数据表与 **DimEmployee** 表具有外键关系， **FactSalesQuota** 表中的每项记录都与单个雇员相关；因此，从“雇员”维度来查看，该度量值组的粒度处于单个雇员级别。

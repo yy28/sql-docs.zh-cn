@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca5a4561c4b3f55044eb63068036105d878f150c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175065"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器
@@ -41,9 +41,8 @@ ms.locfileid: "78175065"
 
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式 |本机模式。
 
-##  <a name="bkmk_ReportServer"></a> ReportServer:Service 性能计数器（本机模式报表服务器）
- 
-  `ReportServer:Service` 性能对象包含一个计数器集合，用于跟踪报表服务器实例的与 HTTP 相关的事件以及与内存相关的事件。 此性能对象对计算机上的每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 实例显示一次，可以在每个实例的性能对象中添加或删除计数器。 默认实例的计数器以 `ReportServer:Service` 格式显示。 命名实例的计数器以`ReportServer$<` *instance_name*`>:Service`格式显示。
+##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> ReportServer:Service 性能计数器（本机模式报表服务器）
+ `ReportServer:Service` 性能对象包含一个计数器集合，用于跟踪报表服务器实例的与 HTTP 相关的事件以及与内存相关的事件。 此性能对象对计算机上的每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 实例显示一次，可以在每个实例的性能对象中添加或删除计数器。 默认实例的计数器以 `ReportServer:Service` 格式显示。 命名实例的计数器以`ReportServer$<` *instance_name*`>:Service`格式显示。
 
  性能`ReportServer:Service`对象是中[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的新对象，它提供了 Internet Information Services （IIS）和[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]以前版本中包含的计数器的子集。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 这些新计数器是特定于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，用于跟踪报表服务器中与 HTTP 相关的事件，例如请求、连接和登录尝试。 此外，此性能对象还包括用于跟踪内存管理事件的计数器。
 
@@ -79,10 +78,10 @@ ms.locfileid: "78175065"
 |`Requests/sec`|每秒处理的请求数。 该值表示应用程序的当前吞吐量。|
 |`Tasks Queued`|等待线程变为可供处理的任务数。 向报表服务器发出的每个请求都与一个或多个任务对应。 此计数器只表示可以处理的任务数量，不包括当前正在运行的任务数量。|
 
-##  <a name="bkmk_ReportServerSharePoint"></a>ReportServerSharePoint： Service （SharePoint 模式报表服务器）
+##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a>ReportServerSharePoint： Service （SharePoint 模式报表服务器）
  已`ReportServerSharePoint:Service`在中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]添加了性能对象。
 
- ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "PowerShell 相关内容")下面的 Windows PowerShell 脚本将返回 CounterSetName 的性能计数器列表
+ ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "PowerShell 相关内容") 下面的 Windows PowerShell 脚本将返回 CounterSetName 的性能计数器列表
 
 ```
 (get-counter -listset "ReportServerSharePoint:Service").paths
@@ -94,14 +93,14 @@ ms.locfileid: "78175065"
 |`Memory Shrink Amount`|
 |`Memory Shrink Notifications/Sec`|
 
-##  <a name="bkmk_powershell"></a>使用 PowerShell Cmdlet 返回列表
- ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "PowerShell 相关内容")下面的 Windows PowerShell 脚本将返回 CounterSetName "ReportServerSharePoint： Service" 的性能计数器列表：
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a>使用 PowerShell Cmdlet 返回列表
+ ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "PowerShell 相关内容") 下面的 Windows PowerShell 脚本将返回 CounterSetName“ReportServerSharePoint:Service”的性能计数器列表：
 
 ```
 (get-counter -listset "ReportServerSharePoint:Service").paths
 ```
 
 ## <a name="see-also"></a>另请参阅
- [](monitoring-report-server-performance.md) [为 MSRS 2014 WEB 服务和 MSRS 2014 Windows Service 性能对象监视报表服务器性能性能计数器 &#40;纯模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md) [MSRS 2014 Web SERVICE sharepoint 模式和 MSRS 2014 Windows service Sharepoint mode 性能 &#40;对象的性能计数器&#41;] .。。/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md）
+ [Monitoring Report Server Performance](monitoring-report-server-performance.md) [为 MSRS 2014 WEB 服务和 MSRS 2014 Windows Service 性能对象监视报表服务器性能性能计数器 &#40;纯模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md) [MSRS 2014 Web SERVICE sharepoint 模式和 MSRS 2014 Windows service Sharepoint mode 性能 &#40;对象的性能计数器&#41;] .。。/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md）
 
 

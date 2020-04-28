@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175296"
 ---
 # <a name="defining-a-referenced-relationship"></a>定义引用关系
-  在本教程中到目前为止，您定义的每个多维数据集维度都基于一个按主键到外键的关系直接链接到度量值组事实数据表的表。 在本主题的各任务中，你会将“地域”**** 维度通过一个称为“引用维度”**** 的“分销商”** 维度链接到分销商销售额的事实数据表。 这允许用户按地域定义经销商销售额的维度。 有关详细信息，请参阅 [定义引用的关系和引用的关系属性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。
+  在本教程中到目前为止，您定义的每个多维数据集维度都基于一个按主键到外键的关系直接链接到度量值组事实数据表的表。 在本主题的各任务中，你会将“地域”**** 维度通过一个称为“引用维度”** 的“分销商”**** 维度链接到分销商销售额的事实数据表。 这允许用户按地域定义经销商销售额的维度。 有关详细信息，请参阅 [定义引用的关系和引用的关系属性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。
 
 ## <a name="dimensioning-reseller-sales-by-geography"></a>按地域定义分销商销售维度
 
@@ -54,7 +54,7 @@ ms.locfileid: "78175296"
 
      !["定义关系" 对话框](../../2014/tutorials/media/l5-referencedrelationship-4.gif "“定义关系”对话框")
 
-9. 单击 **“取消”**。
+9. 单击“取消”  。
 
 10. 单击 "**地域**" 维度和 "**分销商销售**" 度量值组相交处的未命名单元中的省略号按钮（**...**）。
 
@@ -72,7 +72,7 @@ ms.locfileid: "78175296"
 
      注意，“地域关键字”**** 并未出现在“中间维度属性”**** 列表中。 这是因为 **GeographyKey** 列尚未定义为“分销商”**** 维度中的属性。
 
-14. 单击 **“取消”**。
+14. 单击“取消”  。
 
  在下一个任务中，您将通过定义基于“分销商”维度中 GeographyKey 列的属性来解决此问题。
 
@@ -112,7 +112,7 @@ ms.locfileid: "78175296"
 
 1.  在“生成”**** 菜单上，单击“部署 Analysis Services 教程”****。
 
-2.  在部署成功完成后，在 ** 教程多维数据集的多维数据集设计器中单击“浏览器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，再单击“重新连接”**** 按钮。
+2.  在部署成功完成后，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中单击“浏览器”**** 选项卡，再单击“重新连接”**** 按钮。
 
 3.  在 "元数据" 窗格`Reseller Geography`中，展开，右键单击 "**地域**"，然后单击 "**添加到行区域**"。
 

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 30f21dc69f4607f04a68fe0b099d1fd65dbdfc1f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172249"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>为报表服务器应用程序配置可用内存
@@ -54,11 +54,9 @@ ms.locfileid: "78172249"
 ## <a name="configuration-settings-for-memory-management"></a>内存管理的配置设置
  控制报表服务器的内存分配的配置设置包括 `WorkingSetMaximum`、`WorkingSetMinimum`、`MemorySafetyMargin` 和 `MemoryThreshold`。
 
--   
-  `WorkingSetMaximum` 和 `WorkingSetMinimum` 用于定义可用内存的范围。 您可以配置这些设置，以便为报表服务器应用程序设置可用内存范围。 如果要在同一台计算机上承载多个应用程序，并且确定报表服务器相对于同一台计算机上的其他应用程序消耗的系统资源过多，则此设置可能很有用。
+-   `WorkingSetMaximum` 和 `WorkingSetMinimum` 用于定义可用内存的范围。 您可以配置这些设置，以便为报表服务器应用程序设置可用内存范围。 如果要在同一台计算机上承载多个应用程序，并且确定报表服务器相对于同一台计算机上的其他应用程序消耗的系统资源过多，则此设置可能很有用。
 
--   
-  `MemorySafetyMargin` 和 `MemoryThreshold` 用于设置低、中和高级别的内存压力的边界。 对于每种状态， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 都会采取纠正操作，以确保相对于计算机上的可用内存量对报表处理和其他请求进行相应处理。 您可以指定配置设置以确定低、中和高压力级别之间的说明。
+-   `MemorySafetyMargin` 和 `MemoryThreshold` 用于设置低、中和高级别的内存压力的边界。 对于每种状态， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 都会采取纠正操作，以确保相对于计算机上的可用内存量对报表处理和其他请求进行相应处理。 您可以指定配置设置以确定低、中和高压力级别之间的说明。
 
      尽管您可以更改配置设置，但这样不会提高报表处理性能。 仅当请求在完成之前被删除时，更改配置设置才有用。 提高服务器性能的最佳方法是在专用计算机上部署报表服务器或单个报表服务器应用程序。
 
@@ -76,8 +74,7 @@ ms.locfileid: "78172249"
 |`MemorySafetyMargin`|指定 `WorkingSetMaximum` 的百分比，该百分比用于定义中压情况和低压情况之间的边界。 此值是为系统保留的可用内存百分比，无法用于报表服务器操作。 默认值为 80。|
 
 > [!NOTE]
->  
-  `MemoryLimit` 和 `MaximumMemoryLimit` 设置在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中已过时。 如果升级现有安装或使用包含这些设置的 RSReportServer.config 文件，报表服务器将不再读取这些值。
+>  `MemoryLimit` 和 `MaximumMemoryLimit` 设置在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中已过时。 如果升级现有安装或使用包含这些设置的 RSReportServer.config 文件，报表服务器将不再读取这些值。
 
 #### <a name="example-of-memory-configuration-settings"></a>内存配置设置示例
  下面的示例显示了使用自定义内存配置值的报表服务器计算机的配置设置。 如果要添加 `WorkingSetMaximum` 或 `WorkingSetMinimum`，必须在 RSReportServer.config 文件中键入这些元素和值。 两个值都是整数，表示要分配给服务器应用程序的 RAM（以 KB 为单位）。 下面的示例指定报表服务器应用程序的总内存分配不能超过 4 GB。 如果 `WorkingSetMinimum` 的默认值（`WorkingSetMaximum` 的 60%）是可以接受的，则可忽略该值并在 RSReportServer.config 文件中仅指定 `WorkingSetMaximum`。 此示例包括 `WorkingSetMinimum` 以说明在要添加该元素时的显示方式：
@@ -90,8 +87,7 @@ ms.locfileid: "78172249"
 ```
 
 #### <a name="about-aspnet-memory-configuration-settings"></a>关于 ASP.NET 内存配置设置
- 尽管报表服务器 Web 服务和报表管理器是 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序，但这两个应用程序都不会响应在 machine.config 的 `processModel` 部分中为在 IIS 5.0 兼容模式下运行的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序指定的内存配置设置。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 仅从 RSReportServer.config 文件中读取内存配置设置。
+ 尽管报表服务器 Web 服务和报表管理器是 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序，但这两个应用程序都不会响应在 machine.config 的 `processModel` 部分中为在 IIS 5.0 兼容模式下运行的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序指定的内存配置设置。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 仅从 RSReportServer.config 文件中读取内存配置设置。
 
 ## <a name="see-also"></a>另请参阅
  [Rsreportserver.config 配置](rsreportserver-config-configuration-file.md)文件[Rsreportserver.config 配置文件](rsreportserver-config-configuration-file.md)修改报表服务器应用程序的[Reporting Services 配置文件 &#40;rsreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) [应用程序域](application-domains-for-report-server-applications.md)

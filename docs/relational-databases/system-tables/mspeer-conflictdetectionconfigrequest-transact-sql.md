@@ -19,10 +19,10 @@ ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 090236bd5e0bd0429985ff9c54039a576950ec84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322090"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
@@ -32,12 +32,12 @@ ms.locfileid: "75322090"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|id|**int**|标识冲突配置请求。 [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md)中的 request_id 列使用此值。|  
+|ID|**int**|标识冲突配置请求。 [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md)中的 request_id 列使用此值。|  
 |publication|**sysname**|发起冲突配置请求的发布的名称。|  
 |sent_date|**datetime**|发起冲突配置请求的日期和时间。|  
 |timeout|**int**|过程应等待所有对等方返回冲突信息的时间。|  
 |modified_date|**datetime**|阶段的完成日期和时间。|  
-|progress_phase|**nvarchar （32）**|使用下列值之一标识当前处理阶段：<br /><br /> 已启动<br /><br /> 正在浏览拓扑<br /><br /> 正在收集状态<br /><br /> 已收集状态|  
+|progress_phase|**nvarchar(32)**|使用下列值之一标识当前处理阶段：<br /><br /> Started<br /><br /> 正在浏览拓扑<br /><br /> 正在收集状态<br /><br /> 已收集状态|  
 |phase_timed_out|**bit**|指示当前阶段是否已超时。|  
   
 ## <a name="see-also"></a>另请参阅  

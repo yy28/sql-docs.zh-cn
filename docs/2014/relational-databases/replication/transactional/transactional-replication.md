@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65f498318c29f6e3dc7189bd8f1c5d852cc1a2d0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176705"
 ---
 # <a name="transactional-replication"></a>事务复制
@@ -33,7 +33,7 @@ ms.locfileid: "78176705"
 
  默认情况下，事务发布的订阅服务器应视为只读，因为更改不会传播回发布服务器。 但是，事务复制确实提供了允许在订阅服务器上进行更新的选项。
 
-##  <a name="HowWorks"></a> 事务复制的工作机制
+##  <a name="how-transactional-replication-works"></a><a name="HowWorks"></a> 事务复制的工作机制
  事务复制是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照代理、日志读取器代理和分发代理实现的。 快照代理准备快照文件（其中包含了已发布表和数据库对象的架构和数据），然后将这些文件存储在快照文件夹中，并在分发服务器中的分发数据库中记录同步作业。
 
  日志读取器代理监视为事务复制配置的每个数据库的事务日志，并将标记为要复制的事务从事务日志复制到分发数据库中，分发数据库的作用相当于一个可靠的存储-转发队列。 分发代理将快照文件夹中的初始快照文件和分发数据库表中的事务复制到订阅服务器中。
@@ -44,7 +44,7 @@ ms.locfileid: "78176705"
 
  ![事务复制组件和数据流](../media/trnsact.gif "事务复制组件和数据流")
 
-##  <a name="Dataset"></a> 初始数据集
+##  <a name="initial-dataset"></a><a name="Dataset"></a> 初始数据集
  新的事务复制订阅服务器中必须包含一些表，这些表需要与发布服务器中的表具有相同的架构和数据，这样才能从发布服务器中接收增量更改。 初始数据集通常是由快照代理创建并由分发代理分发和应用的快照。 初始数据集还可以通过备份或其他方式提供，如使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services 提供。
 
  在向订阅服务器分发并应用快照时，只有那些等待初始快照的订阅服务器才会受到影响。 该发布的其他订阅服务器（已经初始化的订阅服务器）不会受到影响。
@@ -52,19 +52,19 @@ ms.locfileid: "78176705"
 ## <a name="concurrent-snapshot-processing"></a>并发快照处理
  在快照生成期间，快照复制会在作为复制的一部分发布的所有表上放置共享锁。 这样可以防止更新正在发布的表。 并发快照处理（事务复制的默认方式）在整个快照生成过程中并不保留共享锁，因而允许用户在复制创建初始快照文件时继续工作，而不会被打断。
 
-##  <a name="SnapshotAgent"></a> 快照代理
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> 快照代理
  快照代理在事务复制中实现初始快照所使用的过程与快照复制所使用的过程相同（上述有关并发快照处理的情况除外）。
 
  生成快照文件后，可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 资源管理器在快照文件夹中查看这些快照文件。
 
-##  <a name="LogReaderAgent"></a> 修改数据修改与日志读取器代理
+##  <a name="modifying-data-and-the-log-reader-agent"></a><a name="LogReaderAgent"></a> 修改数据修改与日志读取器代理
  日志读取器代理在分发服务器中运行；它通常连续运行，但也可以按照您制定的计划运行。 执行日志读取器代理时，它首先读取发布事务日志（该日志与执行一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库引擎操作期间用于事务跟踪和恢复的数据库日志相同），并标识任何 INSERT、UPDATE 以及 DELETE 语句，或者对已标记为要复制的事务进行的其他数据修改。 然后，该代理将这些事务批量复制到分发服务器中的分发数据库中。 日志读取器代理使用内部存储过程 **sp_replcmds** 从日志中获取标记为要复制的下一个命令集。 这样，分发数据库就成为一个存储-转发队列，从该队列中将更改发送到订阅服务器中。 只有已提交的事务才能发送到分发数据库中。
 
  当整批事务都成功写入分发数据库之后，将提交这批事务。 在每一批命令都提交到分发服务器后，日志读取器代理将调用 **sp_repldone** 以标记最终完成复制的位置。 最后，代理在事务日志中标记可以清除的行。 仍在等待复制的行不会被清除。
 
  事务命令在传播到所有订阅服务器或达到最大分发保持期之前，一直存储在分发数据库中。 订阅服务器按事务在发布服务器中应用的相同顺序接收事务。
 
-##  <a name="DistributionAgent"></a> 分发代理
+##  <a name="distribution-agent"></a><a name="DistributionAgent"></a> 分发代理
  对于推送订阅，分发代理在分发服务器上运行；对于请求订阅，分发代理在订阅服务器上运行。 该代理将事务从分发数据库移动到订阅服务器中。 如果订阅被标记为需要验证，则分发代理还要检查发布服务器和订阅服务器中的数据是否匹配。
 
 ## <a name="publication-types"></a>发布类型

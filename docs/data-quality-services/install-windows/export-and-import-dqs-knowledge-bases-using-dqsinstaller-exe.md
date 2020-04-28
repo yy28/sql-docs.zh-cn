@@ -12,10 +12,10 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: ae87b9daebdef6b81c4d96abc253820cf7cb8228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75558138"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
@@ -26,7 +26,7 @@ ms.locfileid: "75558138"
   
  利用此功能，您可以一次性对 *中的* 所有 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 知识库进行备份，而不必使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]单独将每个知识库导出到 .dqs 文件。 同样，您可以一次性将 *所有* 知识库从备份文件导入其他 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，而不必使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]从 .dqs 文件单独导入每个知识库。 当在计算机上卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然后将其重新安装到其他计算机上时，此功能对于备份和还原知识库特别有用。 您可以轻松地将现有 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装中的所有知识库导出到 DQS 备份文件 (.dqsb)，然后再在其他计算机上安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 之后从该备份文件导入所有知识库。  
   
-##  <a name="export"></a>将知识库导出到 dqsbackup.dqsb 文件  
+##  <a name="exporting-knowledge-bases-to-dqsb-file"></a><a name="export"></a> 将知识库导出到 .dqsb 文件  
  您可以随时导出或在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 时导出现有 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]中的所有知识库。  
   
 -   若要将 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中的所有知识库导出到 DQS 备份文件 (.dqsb)，请通过命令提示符使用 `exportkbs` 参数并使用要将知识库导出到的位置的完整路径和文件名来运行 DQSInstaller.exe。 例如，将所有知识库导出到 C: 驱动器中的 DQSBackup.dqsb 文件：  
@@ -47,7 +47,7 @@ ms.locfileid: "75558138"
     > [!NOTE]  
     >  如果在使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 参数从命令提示符卸载 `uninstall` 时未指定 DQS 备份文件的完整路径和文件名，则会显示一条声明将删除所有知识库的消息，并允许您选择是否继续执行卸载过程。  
   
-##  <a name="import"></a>从 dqsbackup.dqsb 文件导入知识库  
+##  <a name="importing-knowledge-bases-from-dqsb-file"></a><a name="import"></a> 从 .dqsb 文件导入知识库  
  完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装后，您可以从 DQS 备份文件 (.dqsb) 导入所有知识库。 若要导入知识库，您必须具有有效的 DQS 备份文件 (.dqsb)。  
   
  通过命令提示符使用 `importkbs` 参数并使用要从中导入知识库的位置的完整路径和文件名来运行 DQSInstaller.exe 文件。 例如，从 C: 驱动器中的 DQSBackup.dqsb 文件导入所有知识库：  

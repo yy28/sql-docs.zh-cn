@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175389"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>内存优化表中的事务
@@ -50,8 +50,7 @@ ms.locfileid: "78175389"
  此外，如果某一事务 (TxA) 读取处于提交过程中的其他事务 (TxB) 已插入或修改的行，则该事务会乐观地假设其他事务将提交而不等待提交发生。 在此情况下，事务 TxA 将对事务 TxB 具有提交依赖关系。
 
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>冲突检测、验证和提交依赖关系检查
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检测并发事务之间的冲突以及隔离级别冲突，并终止冲突事务中的一个事务。 此事务将需要重试。 （有关详细信息，请参阅[内存优化表上的事务重试逻辑准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。）
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检测并发事务之间的冲突以及隔离级别冲突，并终止冲突事务中的一个事务。 此事务将需要重试。 （有关详细信息，请参阅[内存优化表上的事务重试逻辑准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。）
 
  系统乐观地假定不存在冲突并且未违反事务隔离。 如果发生可能在数据库中导致不一致或可能违反事务隔离的任何冲突，则会检测到这些冲突，并且事务终止。
 
@@ -61,7 +60,7 @@ ms.locfileid: "78175389"
 
 ### <a name="error-conditions-for-transactions-accessing-memory-optimized-tables"></a>访问内存优化表的事务的错误情况。
 
-|错误|场景|
+|错误|方案|
 |-----------|--------------|
 |写冲突。 尝试更新自该事务启动以来已更新的记录。|对由并发事务更新或删除的行执行 UPDATE 或 DELETE 操作。|
 |可重复读验证失败。|由事务读取的行自该事务启动以来已更改（更新或删除）。 可重复读验证通常在使用 REPEATABLE READ 和 SERIALIZABLE 事务隔离级别时进行。|
@@ -83,7 +82,7 @@ ms.locfileid: "78175389"
 
  此错误会终止事务（即使 XACT_ABORT 为 OFF 也是如此），这意味着事务将在用户会话结束时回滚。 失败的事务无法提交，仅支持不写入日志和不访问内存优化表的读取操作。
 
-#####  <a name="cd"></a>提交依赖关系
+#####  <a name="commit-dependencies"></a><a name="cd"></a>提交依赖关系
  在常规处理过程中，事务可以读取由其他事务写入并处于验证或提交阶段、但尚未提交的行。 这些行是可见的，因为在验证阶段开始时已分配事务的逻辑结束时间。
 
  如果事务读取这类未提交的行，则会对该事务形成提交依赖关系。 这具有两种主要含义：

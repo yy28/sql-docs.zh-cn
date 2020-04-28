@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c28242daebfdaf01a457432027e68be59ae26f29
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175952"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>递归层次结构 (Master Data Services)
@@ -54,14 +54,14 @@ ms.locfileid: "78175952"
 
 |任务说明|主题|
 |----------------------|-----------|
-|创建派生层次结构。|[创建派生层次结构 &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|
-|更改现有派生层次结构的名称。|[更改派生层次结构名称 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|
-|删除现有派生层次结构。|[删除派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
+|创建派生层次结构。|[创建派生层次结构 (Master Data Services)](create-a-derived-hierarchy-master-data-services.md)|
+|更改现有派生层次结构的名称。|[更改派生层次结构名称 (Master Data Services)](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|
+|删除现有派生层次结构。|[删除派生层次结构 (Master Data Services)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
 
 ## <a name="related-content"></a>相关内容
 
--   [基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)
+-   [基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)
 
--   [派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
+-   [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
 
 

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175941"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
@@ -79,13 +79,12 @@ ms.locfileid: "78175941"
 
  在下面的示例中，内存优化表文件组在时间戳 500 处具有四个数据和差异文件对，并且包含来自之前事务的数据。 例如，第一个数据文件中的行对应于时间戳大于 100 且小于等于 200 的事务，或者表示为 (100，200]。 考虑到标为已删除的行后，将第二个和第三个数据文件显示为完整程度小于 50%。 合并操作合并这两个 CFP 并且创建一个新 CFP，它包含时间戳大于 200 且小于等于 400 的事务，这是这两个 CFP 的合并后的范围。 您将看到另一个具有范围 (500, 600] 的 CFP，并且用于事务范围 (200, 400] 的非空差异文件显示，可与事务性活动（包括从源 CFP 删除更多行）同时完成合并操作。
 
- ![关系图显示了内存优化表文件组](../../database-engine/media/storagediagram-hekaton.png "关系图显示了内存优化表文件组")
+ ![图中显示了内存优化表文件组](../../database-engine/media/storagediagram-hekaton.png "图中显示了内存优化表文件组")
 
  后台线程使用合并策略计算所有关闭的 CFP，然后启动一个或多个合并请求以便验证 CFP 的资格。 这些合并请求由脱机检查点线程处理。 将定期进行对合并策略的评估，并且在关闭检查点时也会进行评估。
 
-### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]合并策略
- 
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 实现以下合并策略：
+### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 合并策略
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 实现以下合并策略：
 
 -   在考虑已删除的行后，如果可以合并 2 个或更多的连续 CFP，则计划进行合并，这样，最后生成的行可以适合于 1 个 CFP 的理想大小。 CFP 的理想大小按如下方式确定：
 

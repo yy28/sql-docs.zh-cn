@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175426"
 ---
 # <a name="buffer-pool-extension"></a>缓冲池扩展
@@ -25,7 +25,7 @@ ms.locfileid: "78175426"
 
  数据和索引页从磁盘读入缓冲池，修改后的页（也称为脏页）写回磁盘。 服务器和数据库检查点上的内存压力会造成缓冲区缓存中的热（活动）脏页被逐出缓存并写入机械磁盘，然后又读回到缓存中。 这些 I/O 操作通常是 4 到 16 KB 数据的小型随机读和写操作。 小型随机 I/O 模式会导致频繁搜索、机械磁盘臂争用、I/O 滞后时间延长以及系统的总 I/O 吞吐量减少。
 
- 解决这些 I/O 瓶颈的典型方法是添加更多 DRAM，或者添加高性能 SAS 主轴。 虽然这些方法很有用，但它们具有明显缺点：DRAM 比数据存储驱动器成本更高，增加主轴数会增加硬件购置的资本支出，并且功耗和部件故障概率都会提高，从而增加运行成本。
+ 解决这些 I/O 瓶颈的典型方法是添加更多 DRAM，或者添加高性能 SAS 主轴。 虽然这些方法很有用，但它们有重大缺点：DRAM 比数据存储驱动器更昂贵，增加主轴数会增加硬件购置的资本支出，并且功耗和部件故障概率都会提高，从而增加运行成本。
 
  缓冲池扩展功能通过非易失性存储器（通常为 SSD）来扩展缓冲池缓存。 由于这种扩展，缓冲池可以容纳更大的数据库工作集，可强制在 RAM 和 SSD 之间对 I/O 分页。 这会有效地将小型随机 I/O 从机械磁盘卸载到固态硬盘。 由于固态硬盘滞后时间短且具有更佳随机 I/O 性能，缓冲池扩展可显著提高 I/O 吞吐量。
 
@@ -61,7 +61,7 @@ ms.locfileid: "78175426"
 
  启用缓冲池扩展后，该功能会指定固态硬盘上缓冲池缓存文件的大小和文件路径。 此文件是固态硬盘上的一个连续存储范围，是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例启动期间静态配置的。 只有在禁用了缓冲池扩展功能的情况下，才能修改此文件的配置参数。 禁用缓冲池扩展后，将从注册表中删除所有相关的配置设置。 SQL Server 实例关闭时，将会删除缓冲池扩展文件。
 
-## <a name="best-practices"></a>最佳实践
+## <a name="best-practices"></a>最佳方案
  我们建议您遵循以下最佳做法。
 
 -   首次启用缓冲池扩展后，建议重新启动 SQL Server 实例，以获得最大的性能优势。
@@ -73,15 +73,15 @@ ms.locfileid: "78175426"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>返回有关缓冲池扩展的信息
  您可以使用以下动态管理视图来显示缓冲池扩展的配置并返回有关扩展中的数据页的信息。
 
--   [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [sys. dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  SQL Server 缓冲区管理器对象中提供了用于跟踪缓冲池扩展文件中的数据页的性能计数器。 有关详细信息，请参阅 [缓冲池扩展性能计数器](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)。
 
  提供了以下 Xevent：
 
-|XEvent|说明|parameters|
+|XEvent|说明|参数|
 |------------|-----------------|----------------|
 |sqlserver.buffer_pool_extension_pages_written|在将页或页组从缓冲池逐出并写入缓冲池扩展文件时激发。|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
 |sqlserver.buffer_pool_extension_pages_read|在将页从缓冲池扩展文件读取到缓冲池时激发。|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
@@ -93,9 +93,9 @@ ms.locfileid: "78175426"
 |||
 |-|-|
 |**任务说明**|**主题**|
-|启用和配置缓冲池扩展。|[ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|修改缓冲池扩展配置|[ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|查看缓冲池扩展配置|[sys. dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|监视缓冲池扩展|[sys. dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [性能计数器](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|启用和配置缓冲池扩展。|[ALTER SERVER CONFIGURATION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
+|修改缓冲池扩展配置|[ALTER SERVER CONFIGURATION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
+|查看缓冲池扩展配置|[sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|监视缓冲池扩展|[sys.dm_os_buffer_descriptors (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [性能计数器](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

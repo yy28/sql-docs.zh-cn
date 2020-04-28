@@ -14,10 +14,10 @@ ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ce0f10316be9aa9f9b2b23a24642d8cd7d0eda1b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175139"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>创建文件属性 (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "78175139"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建文件属性以便使用文件填充属性值。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
  若要执行此过程：
 
 -   您必须有权访问 **“系统管理”** 功能区域。
 
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。
 
 -   要为其创建属性的实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。
 
@@ -50,13 +50,13 @@ ms.locfileid: "78175139"
 
  单击属性后可看到以下信息。
 
--   **创建者**：创建属性的用户的名称。
+-   **创建者**：创建属性的用户的用户名。
 
--   **日期：创建**属性的日期和时间。
+-   **创建时间**：创建属性的日期和时间。
 
--   **更新者**：上次更新属性的用户的名称。
+-   **更新者**：上次更新属性的用户的用户名。
 
--   **日期：上次**更新属性的日期和时间。
+-   **创建时间**：上次更新属性的日期和时间。
 
 ### <a name="to-create-a-file-attribute"></a>创建文件属性
 
@@ -74,7 +74,7 @@ ms.locfileid: "78175139"
 
     -   如果属性是针对合并成员，则从“成员类型” **** 列表框中选择“合并” **** 。
 
-    -   如果是集合的属性，请从“成员类型” **** 列表框中选择“集合” **** 。
+    -   如果属性是针对集合，则从“成员类型” **** 列表框中选择“集合” **** 。
 
 6.  在 **“名称”** 框中，键入属性的名称。 有关不可用作属性名称的单词列表，请参阅[保留字 (Master Data Services)](../master-data-services/reserved-words-master-data-services.md)。
 
@@ -88,7 +88,7 @@ ms.locfileid: "78175139"
 
 11. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。
 
-12. 单击“保存”  。
+12. 单击“ **保存**”。
 
 ## <a name="see-also"></a>另请参阅
  [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [更改属性名称和数据类型 &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[创建基于域的属性 &#40;](../master-data-services/create-a-domain-based-attribute-master-data-services.md) Master Data Services&#41;&#40;[创建文本属性](../master-data-services/create-a-text-attribute-master-data-services.md)Master Data Services

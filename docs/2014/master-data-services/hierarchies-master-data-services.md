@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e2b606fae657fdc7d5652e4f33c6d14ccff690c9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176010"
 ---
 # <a name="hierarchies-master-data-services"></a>层次结构 (Master Data Services)
@@ -30,14 +30,14 @@ ms.locfileid: "78176010"
 ## <a name="what-hierarchies-contain"></a>层次结构包含的内容
  每个层次结构包含一个或多个实体的成员。 添加、更改或删除成员时，将更新所有层次结构。 这可确保数据在所有层次结构中是准确的。 层次结构还有助于确保每个成员计入一次且只计入一次。
 
- 若要创建成员子集的分组，请考虑使用集合。 有关详细信息，请参阅[集合 (Master Data Services)](collections-master-data-services.md)。
+ 若要创建成员子集的分组，请考虑使用集合。 有关详细信息，请参阅 [集合 (Master Data Services)](collections-master-data-services.md)。
 
 ## <a name="kinds-of-hierarchies"></a>层次结构类型
  可以创建多个层次结构，以不同的方式查看和组织您的成员。 您可以：
 
--   从单个实体创建不规则层次结构（称为显式层次结构）。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)。
+-   从单个实体创建不规则层次结构（称为显式层次结构）。 有关详细信息，请参阅 [显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)。
 
--   从多个实体创建基于级别的层次结构，该层次结构基于实体和其属性之间的现有关系（称为派生层次结构）。 有关详细信息，请参阅[派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)。
+-   从多个实体创建基于级别的层次结构，该层次结构基于实体和其属性之间的现有关系（称为派生层次结构）。 有关详细信息，请参阅 [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)。
 
 > [!NOTE]
 >  层次结构中的所有成员都必须在同一模型中。
@@ -57,20 +57,20 @@ ms.locfileid: "78176010"
 |任务说明|主题|
 |----------------------|-----------|
 |为显式层次结构和集合启用实体。|[为显式层次结构和集合启用实体 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|
-|创建显式层次结构。|[创建显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
-|创建派生层次结构。|[创建派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|
-|隐藏或删除现有派生层次结构中的级别。|[隐藏或删除派生层次结构中的级别 &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|
+|创建显式层次结构。|[创建显式层次结构 (Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
+|创建派生层次结构。|[创建派生层次结构 (Master Data Services)](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|
+|隐藏或删除现有派生层次结构中的级别。|[隐藏或删除派生层次结构中的级别 (Master Data Services)](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|
 
 ## <a name="related-content"></a>相关内容
 
--   [显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)
+-   [显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)
 
--   [派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
+-   [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
 
--   [递归层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)
+-   [递归层次结构 (Master Data Services)](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)
 
--   [具有显式大写字母 &#40;Master Data Services 的派生层次结构&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)
+-   [具有显式顶端的派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)
 
--   [集合 &#40;Master Data Services&#41;](collections-master-data-services.md)
+-   [集合 (Master Data Services)](collections-master-data-services.md)
 
 

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a77024e62402cea0a37b945e0539274fee9a3c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173266"
 ---
 # <a name="report-data-pane-report-builder"></a>“报表数据”窗格（报表生成器）
@@ -29,7 +29,7 @@ ms.locfileid: "78173266"
 
  **参数**表示报表参数的集合，每个参数都可为单值或多值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。
 
- **映像**表示报表中使用的图像集。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)。
+ **映像** 表示报表中使用的图像集。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)。
 
  **数据源**表示嵌入的数据源或对共享数据源的引用。 数据源表示报表的数据源。 数据源是使用该数据源的数据集集合的父节点。 有关详细信息，请参阅[将数据添加到报表中 &#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)和[报表生成器中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)。
 

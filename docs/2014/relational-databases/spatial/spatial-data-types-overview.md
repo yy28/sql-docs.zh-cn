@@ -15,24 +15,22 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176647"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
-  有两种类型的空间数据。 `geometry`数据类型支持平面或欧氏（平面地球）数据。 
-  `geometry` 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。
+  有两种类型的空间数据。  数据类型支持平面或欧几里得（平面球）数据。 `geometry` 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。
 
  另外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持 `geography` 数据类型，该数据类型可存储诸如 GPS 纬度和经度坐标之类的椭圆体（圆球）数据。
 
 > [!IMPORTANT]
 >  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括对空间数据类型的改进），请下载白皮书 [SQL Server Code-Named "Denali" 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。
 
-##  <a name="objects"></a>空间数据对象
- 
-  `geometry` 和 `geography` 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种**“可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例从其父数据类型派生某些属性，这些属性将`Points` `geography` `GeometryCollection`它们作为、 **linestring、circularstring**、 `CompoundCurves`、 `Polygons` `CurvePolygons`或作为`geometry`中的多个或实例加以区分。 `Geography`类型具有附加实例类型`FullGlobe`。
+##  <a name="spatial-data-objects"></a><a name="objects"></a> 空间数据对象
+ `geometry` 和 `geography` 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种**“可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例从其父数据类型派生某些属性，这些属性将`Points` `geography` `GeometryCollection`它们作为、 **linestring、circularstring**、 `CompoundCurves`、 `Polygons` `CurvePolygons`或作为`geometry`中的多个或实例加以区分。  类型具有附加实例类型 。
 
  下图描述了 `geometry` 和 `geometry` 数据类型所基于的 `geography` 层次结构。 `geometry`和`geography`的可实例化类型以蓝色表示。
 
@@ -44,7 +42,7 @@ ms.locfileid: "78176647"
 
  简单类型包括：
 
--   [Point](../spatial/point.md)
+-   [点](../spatial/point.md)
 
 -   [LineString](../spatial/linestring.md)
 
@@ -67,7 +65,7 @@ ms.locfileid: "78176647"
 -   [GeometryCollection](../spatial/geometrycollection.md)
 
 
-##  <a name="differences"></a>Geometry 和 geography 数据类型之间的差异
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> GEOMETRY 和 GEOGRAPHY 数据类型之间的差异
  两种空间数据类型的行为经常非常相似，但在数据存储方式和操作方式上存在某些重要的差别。
 
 ### <a name="how-connecting-edges-are-defined"></a>如何定义连接边
@@ -79,7 +77,7 @@ ms.locfileid: "78176647"
 ### <a name="measurements-in-spatial-data-types"></a>空间数据类型中的度量
  在平面（或平面球）系统中，均以相同的度量单位为坐标测量距离和面积。 如果使用 `geometry` 数据类型，(2, 2) 和 (5, 6) 之间的距离为 5 个单位，与所用的单位无关。
 
- 在椭圆体（或圆球）系统中，坐标以经度和纬度的度数给定。 但是，即使测量可能依据的是 `geography` 实例的空间引用标识符 (SRID)，长度和面积的测量单位也通常为米或平方米。 `geography`数据类型最常见的度量单位为米。
+ 在椭圆体（或圆球）系统中，坐标以经度和纬度的度数给定。 但是，即使测量可能依据的是 `geography` 实例的空间引用标识符 (SRID)，长度和面积的测量单位也通常为米或平方米。  数据类型最常见的度量单位为米。
 
 ### <a name="orientation-of-spatial-data"></a>空间数据的方向
  在平面系统中，多边形的环方向并非重要因素。 例如，((0, 0), (10, 0), (0, 20), (0, 0)) 描述的多边形与 ((0, 0), (0, 20), (10, 0), (0, 0)) 描述的多边形相同。 SQL 规范的 OGC 简单特征未规定环顺序，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会强制环的顺序。
@@ -94,20 +92,19 @@ ms.locfileid: "78176647"
 
 -   如果`geography`方法的结果不能容纳于单个半球`geography`内部，则需要输入两个实例的数据类型方法（如 STIntersection （）、STUnion （）、STDifference （）和 STSymDifference （））将返回 null。 如果输出超过单个半球，STBuffer() 也将返回 Null。
 
- 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，`FullGlobe` 是一种特殊类型的多边形，涵盖了整个球体。 
-  `FullGlobe` 有面积，但是没有边框或顶点。
+ 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，`FullGlobe` 是一种特殊类型的多边形，涵盖了整个球体。 `FullGlobe` 有面积，但是没有边框或顶点。
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>在 geography 数据类型中外环和内环并不重要
  SQL 规范的 OGC 简单功能讨论了外环和内环，但此差别对[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography`数据类型来说几乎毫无意义;多边形的任何环都可以作为外环。
 
  有关 OGC 规范的详细信息，请参阅以下内容：
 
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](https://go.microsoft.com/fwlink/?LinkId=93627)
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）
 
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](https://go.microsoft.com/fwlink/?LinkId=93628)
 
 
-##  <a name="circular"></a>圆弧线段
+##  <a name="circular-arc-segments"></a><a name="circular"></a> 圆弧线段
  三种可实例化类型可以采用圆弧线段：`CircularString`、`CompoundCurve` 和 `CurvePolygon`。  圆弧线段在二维平面中由三个点定义；第三个点不能与第一个点相同。
 
  图 A 和 B 显示典型的圆弧线段。 请注意这三个点如何落在圆周上。
@@ -159,9 +156,7 @@ LS LengthCS Length
 
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")
 
- 如上图所示，`CircularString` 实例与 `LineString` 实例相比，使用更少的点来存储曲线边界，而且更精确。 
-  `CircularString` 实例对于存储圆边界（如针对特定点的二十英里搜索半径）很有用。 
-  `LineString` 实例则适合存储线性边界（如方形城市街区）。
+ 如上图所示，`CircularString` 实例与 `LineString` 实例相比，使用更少的点来存储曲线边界，而且更精确。 `CircularString` 实例对于存储圆边界（如针对特定点的二十英里搜索半径）很有用。 `LineString` 实例则适合存储线性边界（如方形城市街区）。
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比较
  以下代码示例显示如何使用 `LineString` 和 `CompoundCurve` 实例存储相同的图形：
@@ -180,7 +175,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');
 ```
 
- `CompoundCurve`实例可以直接存储圆弧线段（2 2，1 3，0 2），而`LineString`实例则必须将曲线转换为几个更小的直线段。
+  实例可以直接存储圆弧线段 (2 2, 1 3, 0 2)，而  实例则必须将曲线转换为几个更小的直线线段。
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString 和 CompoundCurve 的比较
  以下代码示例显示如何将饼图切片存储在 `CircularString` 实例中：
@@ -197,8 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
- 
-  `CompoundCurve` 实例允许 `LineString` 和  `CircularString` 组件，因此只需要知道饼图切片的直线线段的两个点。  此代码示例显示如何使用 `CompoundCurve` 存储相同的图形：
+ `CompoundCurve` 实例允许 `LineString` 和  `CircularString` 组件，因此只需要知道饼图切片的直线线段的两个点。  此代码示例显示如何使用 `CompoundCurve` 存储相同的图形：
 
 ```sql
 DECLARE @g geometry;
@@ -207,8 +201,7 @@ SELECT @g.ToString(), @g.STLength();
 ```
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Polygon 和 CurvePolygon 的比较
- 在定义外部环和内部环时，`CurvePolygon` 实例可以使用 `CircularString` 和 `CompoundCurve` 实例。  
-  `Polygon` 实例不能使用圆弧线段类型：`CircularString` 和 `CompoundCurve`。
+ 在定义外部环和内部环时，`CurvePolygon` 实例可以使用 `CircularString` 和 `CompoundCurve` 实例。  `Polygon` 实例不能使用圆弧线段类型：`CircularString` 和 `CompoundCurve`。
 
 
 ## <a name="see-also"></a>另请参阅

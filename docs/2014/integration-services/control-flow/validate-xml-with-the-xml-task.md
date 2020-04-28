@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176489"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -116,7 +116,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
 
  下面是上述文本中第二个示例查询在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的结果。
 
- ![用于在 Management Studio 中将 XML 错误分组的查询](../media/queryforxmlerrors.jpg "用于将 XML 错误分组到 Management Studio 中的查询")
+ ![用于在 Management Studio 中将 XML 错误分组的查询](../media/queryforxmlerrors.jpg "用于在 Management Studio 中将 XML 错误分组的查询")
 
 ## <a name="see-also"></a>另请参阅
  [Xml 任务](xml-task.md) [xml 任务编辑器 &#40;常规页&#41;](../xml-task-editor-general-page.md)

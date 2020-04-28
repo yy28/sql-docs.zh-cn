@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ca879d51f947ec078b3c1b7e14842ea926f0240
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174846"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>在 Microsoft Surface 设备和 Apple iOS 设备上查看 Reporting Services 报表
@@ -47,16 +47,16 @@ ms.locfileid: "78174846"
 
 2.  通过执行下列操作之一，打开报表。
 
-    -   **从电子邮件启动：** 从[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]订阅创建的电子邮件中，点击报表的 URL。 该报表将在浏览器中打开。
+    -   **从电子邮件启动：** 从 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅所创建的电子邮件中，轻按报表的 URL。 该报表将在浏览器中打开。
 
-    -   **从报表服务器启动：** 浏览[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Server 上的目录，然后点击报表名称以打开报表。
+    -   **从报表服务器启动：** 浏览 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上的目录，然后点击报表名称以打开报表。
 
-    -   **从 SharePoint 文档库开始：** 浏览到包含[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表的 SharePoint 文档库，然后点击报表名称。 您可以查看报表和与报表交互。
+    -   **从 SharePoint 文档库启动：** 浏览到包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表的 SharePoint 文档库，然后点击报表名称。 您可以查看报表和与报表交互。
 
         > [!IMPORTANT]
-        >  对于 iPad，请确保针对 Safari 的 **“专用浏览”** 属性已禁用。
+        >   对于 iPad，请确保针对 Safari 的 **“专用浏览”** 属性已禁用。
 
-    -   **SharePoint web 部件：** 如果 web 部件已添加到 SharePoint 页，则可以查看[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表。
+    -   **SharePoint Web 部件：** 如果 Web 部件已添加到 SharePoint 页面，你可以查看 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表。
 
 3.  在 Microsoft Surface 设备上，还可以使用报表管理器打开报表。 浏览 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器中的目录，然后轻按报表名称以打开该报表。
 

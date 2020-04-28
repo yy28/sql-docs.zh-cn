@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 40f354f190093c0c689e708301bed9fcba8c87c3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176206"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在脚本组件编辑器中配置脚本组件
@@ -77,11 +77,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >  虽然您无法在脚本组件中直接将输出配置为错误输出以便自动处理错误行，但必要时可通过创建附加输出并使用脚本将行定向到此输出来再现错误输出的功能。 有关详细信息，请参阅[模拟脚本组件的错误输出](../../data-flow/transformations/script-component.md)。
 
 #### <a name="exclusiongroup-and-synchronousinputid-properties-of-outputs"></a>输出的 ExclusionGroup 和 SynchronousInputID 属性
- 
-  `ExclusionGroup` 属性仅在具有同步输出的转换中具有非零值，其中您的代码要执行筛选或分支跳转，并将每一行定向到共享同一非零 `ExclusionGroup` 值的输出之一。 例如，转换可将行定向到默认输出或错误输出。 在此方案中，如果您创建附加输出，请确保将 `SynchronousInputID` 属性的值设置为与组件的输入 `ID` 相匹配的整数。
+ `ExclusionGroup` 属性仅在具有同步输出的转换中具有非零值，其中您的代码要执行筛选或分支跳转，并将每一行定向到共享同一非零 `ExclusionGroup` 值的输出之一。 例如，转换可将行定向到默认输出或错误输出。 在此方案中，如果您创建附加输出，请确保将 `SynchronousInputID` 属性的值设置为与组件的输入 `ID` 相匹配的整数。
 
- 
-  `SynchronousInputID` 属性仅在具有同步输出的转换中具有非零值。 如果此属性的值为零，则意味着输出是异步的。 对于同步输出，行将传递给所选一个或多个输出而不添加任何新行，此属性应包含组件的输入 `ID`。
+ `SynchronousInputID` 属性仅在具有同步输出的转换中具有非零值。 如果此属性的值为零，则意味着输出是异步的。 对于同步输出，行将传递给所选一个或多个输出而不添加任何新行，此属性应包含组件的输入 `ID`。
 
 > [!NOTE]
 >  当 "**脚本转换编辑器**" 创建第一个输出时，该编辑器`SynchronousInputID`会将输出的属性设置`ID`为组件的输入的。 但是，当编辑器创建后续输出时，它会将那些输出的 `SynchronousInputID` 属性设置为零。
@@ -102,8 +100,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >  在 [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] 和更高版本中，所有脚本都将预编译。 在早期版本中，通过设置任务的 `Precompile` 属性来指定是否对脚本进行预编译。
 
 #### <a name="validateexternalmetadata-property"></a>ValidateExternalMetadata 属性
- 
-  `ValidateExternalMetadata` 属性的布尔值指定组件是应在设计时针对外部数据源执行验证，还是应推迟到运行时才验证。 默认情况下，此属性的值为 `True`；也就是说，在设计时和运行时都对外部元数据进行验证。 如果外部数据源在设计时不可用，可以将此属性的值设置为 `False`；例如，当包仅在运行时下载源或创建目标时。
+ `ValidateExternalMetadata` 属性的布尔值指定组件是应在设计时针对外部数据源执行验证，还是应推迟到运行时才验证。 默认情况下，此属性的值为 `True`；也就是说，在设计时和运行时都对外部元数据进行验证。 如果外部数据源在设计时不可用，可以将此属性的值设置为 `False`；例如，当包仅在运行时下载源或创建目标时。
 
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 和 ReadWriteVariables 属性
  可以输入以逗号分隔的现有变量列表作为这些属性的值，使这些变量在脚本组件代码中可用于只读或读/写访问。 这些变量可在代码中通过自动生成的基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 属性来访问。 有关详细信息，请参阅[在脚本组件中使用变量](using-variables-in-the-script-component.md)。
@@ -115,7 +112,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  您可以选择 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 作为脚本组件的编程语言。
 
 #### <a name="edit-script-button"></a>“编辑脚本”按钮
- 使用“编辑脚本”按钮可打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，你可以在其中编写自定义脚本  。 有关详细信息，请参阅[脚本组件的编码和调试](coding-and-debugging-the-script-component.md)。
+ 使用“编辑脚本”按钮可打开   Tools for Applications (VSTA) IDE，你可以在其中编写自定义脚本[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 有关详细信息，请参阅[脚本组件的编码和调试](coding-and-debugging-the-script-component.md)。
 
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>脚本转换编辑器的“连接管理器”页
  在“脚本转换编辑器”的“连接管理器”页中，可以添加和删除要在自定义脚本中使用的连接管理器   。 通常，创建源或目标组件时需要引用连接管理器。

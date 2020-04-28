@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 31a24acb49abf4965e18443ef4c46ffd9a16f15c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176514"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 订阅连接管理器
@@ -27,15 +27,15 @@ ms.locfileid: "78176514"
 
      ![SSIS-AzureSubscriptionManager](../media/ssis-azuresubscriptionmanager.png "SSIS-AzureSubscriptionManager")
 
-2.  为“Azure 订阅 ID” **** 输入你的 Azure 订阅 ID，它可以唯一标识 Azure 订阅。  可以在“设置” [](https://manage.windowsazure.com) 页下的 **Azure 管理门户** 上找到这些值：
+2.  为“Azure 订阅 ID” **** 输入你的 Azure 订阅 ID，它可以唯一标识 Azure 订阅。  可以在“设置” **** 页下的 [Azure 管理门户](https://manage.windowsazure.com) 上找到这些值：
 
-     ![SSIS-Ssis-azuresettings-managementcertificate-SubscriptionID](../media/ssis-azuresettings-subscriptionid.png "SSIS-AzureSettings-SubscriptionID")
+     ![SSIS-AzureSettings-SubscriptionID](../media/ssis-azuresettings-subscriptionid.png "SSIS-AzureSettings-SubscriptionID")
 
 3.  从下拉列表中选择“管理证书存储位置”**** 和“管理证书存储名称”****。
 
 4.  输入“管理证书指纹”或单击“浏览…”，从所选存储中选择一个证书********。 必须将证书作为订阅的管理证书上载。 为此，请在以下 Azure 门户页上单击“上传”****（请参阅这篇 [MSDN 帖子](https://msdn.microsoft.com/library/azure/gg551722.aspx)以了解详细信息）。
 
-     ![SSIS-Ssis-azuresettings-managementcertificate-ManagementCertificate](../media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")
+     ![SSIS-AzureSettings-ManagementCertificate](../media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")
 
 5.  单击 "**测试连接**" 以测试连接。
 

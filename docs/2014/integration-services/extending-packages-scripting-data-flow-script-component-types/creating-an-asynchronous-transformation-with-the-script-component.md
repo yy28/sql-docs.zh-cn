@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec30df18fd50118d8698490f24f6ee65621d3b12
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176247"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用脚本组件创建异步转换
@@ -70,7 +70,7 @@ ms.locfileid: "78176247"
 ### <a name="adding-variables"></a>添加变量
  如果要在脚本中使用任何现有变量的值，可以在“脚本转换编辑器”  的“脚本”  页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量。
 
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击**** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击 **...** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
 
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。
 
@@ -82,7 +82,7 @@ ms.locfileid: "78176247"
  有关适用于使用脚本组件创建的所有组件类型的重要信息，请参阅[脚本组件的编码和调试](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。
 
 ### <a name="understanding-the-auto-generated-code"></a>了解自动生成的代码
- 创建并配置转换组件后打开 VSTA IDE 时，可编辑`ScriptMain`的类将显示在代码编辑器中，其中包含 ProcessInputRow 和 CreateNewOutputRows 方法的存根。 在 ScriptMain 类中可编写自定义代码，ProcessInputRow 是转换组件中最重要的方法。 `CreateNewOutputRows`方法更常用于源组件，该组件与异步转换相似，因为这两个组件都必须创建自己的输出行。
+ 创建并配置转换组件后打开 VSTA IDE 时，可编辑`ScriptMain`的类将显示在代码编辑器中，其中包含 ProcessInputRow 和 CreateNewOutputRows 方法的存根。 在 ScriptMain 类中可编写自定义代码，ProcessInputRow 是转换组件中最重要的方法。  方法通常在源组件中使用，该组件与异步转换相似，因为这两个组件都必须创建自己的输出行。
 
  如果打开 VSTA 的 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读`BufferWrapper`和`ComponentWrapper`项目项。 ScriptMain 类从`ComponentWrapper`项目项中的 UserComponent 类继承。
 
@@ -114,7 +114,7 @@ ms.locfileid: "78176247"
 
 1.  向数据流设计器图面添加新的脚本组件并将其配置为转换。
 
-2.  在设计器中将源或另一转换的输出连接到新转换组件。 此输出应提供 **AdventureWorks** 示例数据库的 **Person.Address** 表中的数据，其中至少包含 **AddressID** 和 **City** 列。
+2.  在设计器中将源或另一转换的输出连接到新转换组件。 此输出应提供 AdventureWorks**** 示例数据库的 Person.Address**** 表中的数据，其中至少包含 AddressID**** 和 City**** 列。
 
 3.  打开“脚本转换编辑器”****。 在“输入列”**** 页中，选择 AddressID**** 和 City**** 列。
 
@@ -122,9 +122,9 @@ ms.locfileid: "78176247"
 
 5.  重命名输入、输出和新输出列，使其名称更具说明性。 该示例使用 **MyAddressInput** 作为输入的名称，**MyAddressOutput** 和 **MySummaryOutput** 作为输出的名称，**MyRedmondCount** 作为第二个输出中的输出列的名称。
 
-6.  在“脚本”**** 页中，单击“编辑脚本”**** 并输入下面的脚本。 然后关闭脚本开发环境和“脚本转换编辑器”****。
+6.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本********。 然后关闭脚本开发环境和“脚本转换编辑器”****。
 
-7.  为需要 **AddressID** 和 **City** 列的第一个输出创建和配置一个目标组件，例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标或[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将该转换的第一个输出，即 **MyAddressOutput**，连接到目标组件。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks** 数据库中运行以下 ** 命令，以创建目标表：
+7.  为需要 **AddressID** 和 **City** 列的第一个输出创建和配置一个目标组件，例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标或[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将该转换的第一个输出，即 **MyAddressOutput**，连接到目标组件。 在 AdventureWorks**** 数据库中运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以创建目标表：
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -133,7 +133,7 @@ ms.locfileid: "78176247"
 
 8.  为第二个输出创建和配置另一个目标组件。 然后将该转换的第二个输出，即 **MySummaryOutput**，连接到该目标组件。 由于第二个输出写入只带有一个值的一行，因此可以轻松对目标配置一个连接到只含一列的新文件的平面文件连接管理器。 在该示例中，此目标列名为 **MyRedmondCount**。
 
-9. 运行示例。
+9. 运行该示例。
 
 ```vb
 Public Class ScriptMain

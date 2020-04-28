@@ -10,10 +10,10 @@ ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e68a58135e28989c2661ee531e2b4bf3c86a0104
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76910220"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SSMA 中的新 GUI 功能，用于访问 SQL

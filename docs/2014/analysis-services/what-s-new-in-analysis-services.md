@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1458dcf473ffbf7fc9bab13c2c688a4e01954c56
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175536"
 ---
 # <a name="what39s-new-in-sql-server-2014-analysis-services"></a>SQL Server 2014 中的新增功能&#39;Analysis Services
@@ -23,8 +23,7 @@ ms.locfileid: "78175536"
  有关此版本中[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]其他产品和技术的详细信息，请参阅[SQL Server 2014 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)。
 
 ## <a name="updates-to-design-tool-installation"></a>设计工具安装更新
- 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI)（以前称为 Business Intelligence Development Studio (BIDS)）用于创建 Analysis Services 模型、Reporting Services 报表和 Integration Services 包。 您可以从以下位置下载 SSDT-BI：
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI)（以前称为 Business Intelligence Development Studio (BIDS)）用于创建 Analysis Services 模型、Reporting Services 报表和 Integration Services 包。 您可以从以下位置下载 SSDT-BI：
 
 -   [下载 SSDT-BI for Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)
 
@@ -35,7 +34,7 @@ ms.locfileid: "78175536"
 > [!NOTE]
 >  有多个下载站点可下载 SSDT 的 Visual Studio 2012 和 Visual Studio 2013 版本。 大多不含 BI 项目模板。 使用上面的链接可获得正确的版本。 如果你看到 "商业智能项目模板" 文件夹，你将知道 SSDT-BI 的版本是否正确。 此文件夹包含 Analysis Services、Reporting Services 和 Integration Services 的项目模板。 根据安装 SSDT-BI 的方式，可能还会看到一个 SQL Server 数据库项目模板。
 
- ![SSDT 中新的项目模板](media/ssdt-biprojects.png "SSDT 中新的项目模板")
+ ![SSDT 中的“新建项目模板”](media/ssdt-biprojects.png "SSDT 中的“新建项目模板”")
 
 ## <a name="features-recently-added-power-view-for-multidimensional-models"></a>最近添加的功能：用于多维模型的 Power View
  针对多维模型创建 Power View 报表的功能最先是在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 累积更新 4 中引入的。 用于多维模型的 Power View 现在包含在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中。

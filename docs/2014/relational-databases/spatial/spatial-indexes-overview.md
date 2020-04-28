@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176657"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
@@ -24,9 +24,9 @@ ms.locfileid: "78176657"
 > [!IMPORTANT]
 >  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括影响空间索引的功能），请下载白皮书 [SQL Server 2012 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。
 
-##  <a name="about"></a> 关于空间索引
+##  <a name="about-spatial-indexes"></a><a name="about"></a> 关于空间索引
 
-###  <a name="decompose"></a> 将索引空间分解成网格层次结构
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> 将索引空间分解成网格层次结构
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空间索引使用 B 树构建而成，也就是说，这些索引必须按 B 树的线性顺序表示二维空间数据。 因此，将数据读入空间索引之前， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 先实现对空间的分层均匀分解。 索引创建过程会将空间  分解成一个四级  网格层次结构。 这些级别指的是  第 1 级（顶级）、  第 2 级、  第 3 级和  第 4 级。
 
  每个后续级别都会进一步分解其上一级，因此上一级别的每个单元都包含下一级别的整个网格。 在给定级别上，所有网格沿两个轴都有相同数目的单元（例如 4x4 或 8x8），并且单元的大小都相同。
@@ -60,7 +60,7 @@ ms.locfileid: "78176657"
 > [!NOTE]
 >  当数据库兼容级别设置为 100 或更低时，空间索引的网格密度显示在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目录视图的 level_1_grid、level_2_grid、level_3_grid 和 level_4_grid 列中。 `GEOMETRY_AUTO_GRID`选项不填充这些/ `GEOGRAPHY_AUTO_GRID`列。 当使用自动网格选项时`NULL` ，spatial_index_tessellations 目录视图具有这些列的值。
 
-###  <a name="tessellation"></a>镶嵌
+###  <a name="tessellation"></a><a name="tessellation"></a>镶嵌
  将索引空间分解成网格层次结构后，空间索引将逐行读取空间列中的数据。 读取空间对象（或实例）的数据后，空间索引将为该对象执行 ** 分割过程。 分割过程通过将对象与其接触的网格单元集（** 接触单元）相关联使该对象适合网格层次结构。 从网格层次结构的第 1 级开始，分割过程以“广度优先” ** 方式对整个级别进行处理。 在可能的情况下，此过程可以连续处理所有四个级别，一次处理一个级别。
 
  分割过程的输出为对象的空间索引中所记录的接触单元集。 通过引用这些已记录单元，空间索引可以确定该对象在空间中相对于空间列中也存储在索引中的其他对象的位置。
@@ -110,7 +110,7 @@ ms.locfileid: "78176657"
 
  ![最深单元优化](../../database-engine/media/spndx-opt-deepest-cell.gif "最深单元优化")
 
-###  <a name="schemes"></a>分割方案
+###  <a name="tessellation-schemes"></a><a name="schemes"></a>分割方案
  空间索引的行为部分取决于“分割方案” **。 分割方案特定于数据类型。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空间索引支持两种分割方案：
 
 -   *几何网格分割*，它是`geometry`数据类型的方案。
@@ -129,22 +129,22 @@ ms.locfileid: "78176657"
 ##### <a name="the-bounding-box"></a>边界框
  几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” **。 边界框由四`(`个坐标定义： _x 最小值_**、** 最_小值_`)`和`(`_最大值_**（**_y-最大_`)`值），它们存储为空间索引的属性。 这些坐标所表示的意义如下：
 
--   *x 最小*值是边界框左下角的 x 坐标。
+-   ** x-min 是边界框左下角的 x 坐标。
 
--   *最小值*为左下角的 y 坐标。
+-   ** y-min 是左下角的 y 坐标。
 
--   *x-最大*值是右上角的 x 坐标。
+-   ** x-max 是右上角的 x 坐标。
 
--   *y-最大*值是右上角的 y 坐标。
+-   ** y-max 是右上角的 y 坐标。
 
 > [!NOTE]
 >  这些坐标由[CREATE 空间索引](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句的 BOUNDING_BOX 子句指定。
 
- `(` _X 最小值_**、** 最_小值_`)`和`(`_最大_****_y_ `)`坐标确定边界框的位置和尺寸。 边界框的外部空间视作一个编号为 0 的单元。
+ `(` _X 最小值_**、** 最_小值_`)`和`(`_最大_**,**_y_ `)`坐标确定边界框的位置和尺寸。 边界框的外部空间视作一个编号为 0 的单元。
 
  空间索引将分解边界框的内部空间。 网格层次结构的第 1 级网格将填充边界框。 若要在网格层次结构中放置几何对象，空间索引会将该对象的坐标与边界框的坐标进行比较。
 
- 下`(`图显示了由边界框的 x 最_小_值 **、** 最_小_`)` `(`_值和最大_****_y_ `)`坐标定义的点。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。
+ 下`(`图显示了由边界框的 x 最_小_值 **、** 最_小_`)` `(`_值和最大_**,**_y_ `)`坐标定义的点。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。
 
  ![显示坐标和单元 0 的边界框。](../../database-engine/media/spndx-bb-4x4-objects.gif "显示坐标和单元 0 的边界框。")
 
@@ -176,9 +176,9 @@ ms.locfileid: "78176657"
 
  ![第 1 级地理网格](../../database-engine/media/spndx-geodetic-level1grid.gif "第 1 级地理网格")
 
-##  <a name="methods"></a>空间索引支持的方法
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a> 空间索引支持的方法
 
-###  <a name="geometry"></a>空间索引支持的几何图形方法
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a>空间索引支持的几何图形方法
  空间索引在某些情况下支持以下面向集合的 geometry 方法：STContains()、STDistance()、STEquals()、STIntersects()、STOverlaps()、STTouches() 和 STWithin()。 若要使空间索引支持这些方法，必须在查询的 WHERE 或 JOIN ON 子句中使用这些方法，并且必须在采用如下常规形式的谓词中执行这些方法：
 
  *geometry1*。*method_name*（*geometry2*）*comparison_operator * * valid_number*
@@ -187,38 +187,38 @@ ms.locfileid: "78176657"
 
  空间索引支持以下谓词形式：
 
--   *geometry1*。[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
 
 -   *geometry1*。[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)（*geometry2*） <*号*
 
--   *geometry1*。[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)（*geometry2*） <= *number*
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *number*
 
--   *geometry1*。[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1
 
--   *geometry1*。[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*）的数据的表列。[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1
 
--   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *（geometry2） = 1*
+-   *geometry1.* [STOverlaps (geometry2) = 1](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) **
 
--   *geometry1*。[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
 
--   *geometry1*。[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*) = 1
 
-###  <a name="geography"></a>空间索引支持的地域方法
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a>空间索引支持的地域方法
  在某些条件下，空间索引支持以下面向集合的地理方法：STIntersects()、STEquals() 和 STDistance()。 若要使空间索引支持这些方法，必须在查询的 WHERE 子句中使用这些方法，并且必须在采用如下常规形式的谓词中执行这些方法。
 
- *geography1*。*method_name*（*geography2*）*comparison_operator * * valid_number*
+ *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*
 
  若要返回非 NULL 结果， *geography1* 和 *geography2* 必须具有相同的 [空间引用标识符 (SRID)](../spatial/spatial-reference-identifiers-srids.md)。 否则，该方法将返回 NULL。
 
  空间索引支持以下谓词形式：
 
--   *geography1*。[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)（*geography2*） = 1
+-   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*) = 1
 
--   *geography1*。[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)（*geography2*） = 1
+-   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*) = 1
 
 -   *geography1*。[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)（*geography2*） <*号*
 
--   *geography1*。[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)（*geography2*） <= *number*
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*
 
 ### <a name="queries-that-use-spatial-indexes"></a>使用空间索引的查询
  仅 `WHERE` 子句中包含索引空间运算符的查询支持空间索引。 示例语法如下：

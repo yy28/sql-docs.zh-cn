@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175306"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>定义未知成员和 Null 处理属性
@@ -37,7 +37,7 @@ ms.locfileid: "78175306"
 
 2.  在“属性”窗口中，查看 **UnknownMember** 和 **UnknownMemberName** 属性。
 
-     注意，**UnknownMember**属性未被启用，因为该属性的值设置为 **None** 而不是 **Visible** 或 **Hidden**，并且没有为 **UnknownMemberName** 属性指定名称。
+     注意， **UnknownMember** 属性未被启用，因为该属性的值设置为 **None** 而不是 **Visible** 或 **Hidden**，并且没有为 **UnknownMemberName** 属性指定名称。
 
 3.  在“属性”窗口的 **ErrorConfiguration** 属性单元中，选择“(自定义)”****，再展开 **ErrorConfiguration** 属性集合。
 
@@ -63,25 +63,23 @@ ms.locfileid: "78175306"
 
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>从雪花状表和“产品类别”用户定义层次结构定义属性
 
-1.  打开 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 数据源视图的数据源视图设计器，在“关系图组织程序”**** 窗格中选择“分销商销售”****，再在 ** 的“数据源视图”****菜单上单击“添加/删除对象”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。
+1.  打开 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 数据源视图的数据源视图设计器，在“关系图组织程序”**** 窗格中选择“分销商销售”****，再在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“数据源视图”**** 菜单上单击“添加/删除对象”****。
 
      此时将打开“添加/删除表”**** 对话框。
 
 2.  在“包含的对象”**** 列表中，选择 **DimProduct (dbo)**，再单击“添加相关表”****。
 
-     
-  **DimProductSubcategory (dbo)** 和 **FactProductInventory (dbo)** 都将被添加。 删除 **FactProductInventory (dbo)**，这样，只有 **DimProductSubcategory (dbo)** 表将添加到“包含的对象”**** 列表中。
+     **DimProductSubcategory (dbo)** 和 **FactProductInventory (dbo)** 都将被添加。 删除 **FactProductInventory (dbo)**，这样，只有 **DimProductSubcategory (dbo)** 表将添加到“包含的对象”**** 列表中。
 
 3.  在 **DimProductSubcategory (dbo)** 表被默认选定为最新添加的表的情况下，再次单击“添加相关表”****。
 
-     
-  **DimProductCategory (dbo)** 表即被添加到“包含的对象”**** 列表中。
+     **DimProductCategory (dbo)** 表即被添加到“包含的对象”**** 列表中。
 
 4.  单击“确定”。 
 
-5.  在 ** 的“格式”**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]菜单上，指向“自动布局”****，再单击“关系图”****。
+5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“格式”**** 菜单上，指向“自动布局”****，再单击“关系图”****。
 
-     请注意，**DimProductSubcategory (dbo)** 表和 **DimProductCategory (dbo)** 表互相链接，并且还通过 **Product** 表链接到 **ResellerSales** 表。
+     请注意， **DimProductSubcategory (dbo)** 表和 **DimProductCategory (dbo)** 表互相链接，并且还通过 **Product** 表链接到 **ResellerSales** 表。
 
 6.  切换到“产品”**** 维度的维度设计器，再单击“维度结构”**** 选项卡。
 

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176291"
 ---
 # <a name="developing-a-custom-log-provider"></a>开发自定义日志提供程序
@@ -38,7 +38,7 @@ ms.locfileid: "78176291"
 
  [为自定义日志提供程序开发用户界面](developing-a-user-interface-for-a-custom-log-provider.md)中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]不支持自定义日志提供程序的自定义用户界面。
 
-## <a name="related-topics"></a>相关主题
+## <a name="related-topics"></a>“相关主题”
 
 ### <a name="information-common-to-all-custom-objects"></a>所有自定义对象的通用信息
  有关可以在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中创建的所有类型自定义对象的通用信息，请参阅以下主题：

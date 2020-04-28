@@ -15,21 +15,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5cd666ec589737d83717e9b435a260bd2a0d0ef6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176890"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机生成快速图表报表（报表生成器）
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机创建快速图表报表（报表生成器）
   在本教程中，将使用向导创建饼图，然后将对其稍作修改以了解都能执行哪些操作。 您可以通过两种不同的方式学习本教程。 这两种方法具有相同的结果：如下图所示的饼图：
 
  ![“运行”视图中的“我的第一个饼图”](../media/rs-my1stpierunview.gif ""运行" 视图中的第一个饼图")
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
  无论您是使用 XML 数据还是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询，都需要有权访问 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 报表生成器。 可以运行独立版本，也可以运行 ClickOnce 版本（可从报表管理器或 SharePoint 站点获取）。 ClickOnce 版本只有第一步（如何打开报表生成器）不同。 有关详细信息，请参阅[安装、卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)。
 
-##  <a name="TwoWays"></a> 用于完成本教程的两种方法
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a>完成本教程的两种方法
 
 -   [使用 XML 数据创建饼图](#CreatePieChartXML)
 
@@ -54,7 +54,7 @@ ms.locfileid: "78176890"
 
  [后续操作](#WhatsNext)
 
-##  <a name="CreatePieChartXML"></a>用 XML 数据创建饼图
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a>用 XML 数据创建饼图
 
 #### <a name="to-create-the-pie-chart-with-xml-data"></a>用 XML 数据创建饼图
 
@@ -67,11 +67,11 @@ ms.locfileid: "78176890"
 
 2.  在左窗格中，验证是否选择了 "**报表**"。
 
-3.  在右窗格中，单击 **“图表向导”**，然后单击 **“创建”**。
+3.  在右窗格中，单击 **“图表向导”** ，然后单击 **“创建”** 。
 
-4.  在 **“选择数据集”** 页中，单击 **“创建数据集”**，然后单击 **“下一步”**。
+4.  在 **“选择数据集”** 页中，单击 **“创建数据集”** ，然后单击 **“下一步”** 。
 
-5.  在 **“选择数据源的连接”** 页中，单击 **“新建”**。
+5.  在 **“选择数据源的连接”** 页中，单击 **“新建”** 。
 
      此时将打开 **“数据源属性”** 对话框。
 
@@ -81,7 +81,7 @@ ms.locfileid: "78176890"
 
 8.  单击 "**凭据**" 选项卡，选择 "**使用当前 Windows 用户"。可能需要 Kerberos 委托**，然后单击 **"确定"**。
 
-9. 在 **“选择数据源的连接”** 页中，单击 **MyPieChart**，然后单击 **“下一步”**。
+9. 在 **“选择数据源的连接”** 页中，单击 **MyPieChart**，然后单击 **“下一步”** 。
 
 10. 复制以下文本，并将其粘贴到 "**设计查询**" 页中心的大框中。
 
@@ -110,7 +110,7 @@ ms.locfileid: "78176890"
     </Query>
     ```
 
-11. （可选）单击“运行”按钮 ( **!** )，查看要用于图表的数据。
+11. （可选）单击“运行”按钮 (!)，查看要用于图表的数据****。
 
 12. 单击“下一步”。 
 
@@ -120,19 +120,19 @@ ms.locfileid: "78176890"
 
      注意，它将自动移动到 **“值”** 框，因为它是数字值。
 
-15. 将“FullName”字段从“可用字段”框拖到“类别”框（或双击它，它将转到“类别”框），然后单击“下一步”。
+15. 将“FullName”字段从“可用字段”框拖到“类别”框（或双击它，它将转到“类别”框），然后单击“下一步”********************。
 
 16. 默认情况下，在 "**选择样式**" 页中选择 "**海运**"。 单击其他样式查看其外观。
 
-17. 单击“完成”  。
+17. 单击 **“完成”** 。
 
      现在，将在设计图面上看到新饼图报表。 看到的内容很有代表性。 图例读取 Full Name 1、Full Name 2 等，而不是销售人员的名字，并且饼图切片的大小不准确。 这只用于展示报表的外观。
 
 18. 若要看见实际的饼图，请在功能区的 **“主文件夹”** 选项卡上单击 **“运行”** 。
 
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#TwoWays)
+ ![用于 "返回页首" 链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于返回页首链接的箭头图标")[返回页首](#TwoWays)
 
-##  <a name="CreatePieQueryData"></a>使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询创建饼图
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> 使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询创建饼图
 
 #### <a name="to-create-the-pie-chart-with-a-tsql-query-that-contains-data"></a>使用包含数据的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询创建饼图
 
@@ -149,7 +149,7 @@ ms.locfileid: "78176890"
     > [!NOTE]
     >  只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[教程先决条件&#40;报表生成器&#41;](../report-builder-tutorials.md)。
 
-6.  在 **“设计查询”** 页中，单击 **“编辑为文本”** 。
+6.  在 "**设计查询**" 页上，单击 "**编辑为文本**"。
 
 7.  将以下查询粘贴到查询窗格中：
 
@@ -161,7 +161,7 @@ ms.locfileid: "78176890"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName 
     ```
 
-8.  （可选）单击“运行”按钮 ( **!** )，查看要用于图表的数据。
+8.  （可选）单击“运行”按钮 (!)，查看要用于图表的数据****。
 
 9. 单击“下一步”。 
 
@@ -175,15 +175,15 @@ ms.locfileid: "78176890"
 
 13. 在 **“选择样式”** 页中，默认情况下“海洋”为选中状态。 单击其他样式查看其外观。
 
-14. 单击“完成”  。
+14. 单击 **“完成”** 。
 
      现在，将在设计图面上看到新饼图报表。 看到的内容很有代表性。 图例读取 Full Name 1、Full Name 2 等，而不是销售人员的名字，并且饼图切片的大小不准确。 这只用于展示报表的外观。
 
 15. 若要看见实际的饼图，请在功能区的 **“主文件夹”** 选项卡上单击 **“运行”** 。
 
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#TwoWays)
+ ![用于 "返回页首" 链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于返回页首链接的箭头图标")[返回页首](#TwoWays)
 
-##  <a name="AfterWizard"></a> 运行向导之后
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> 运行向导之后
  现在您便拥有了饼图报表，从而可以对其进行操作。 在功能区的 **“运行”** 选项卡上，单击 **“设计”**，这样可以继续修改它。
 
 ### <a name="make-the-chart-bigger"></a>放大图表
@@ -202,15 +202,13 @@ ms.locfileid: "78176890"
 
 3.  " `#PERCENT{P0}` **标签数据**" 选项的类型。
 
-     
-  `{P0}` 提供没有小数位的百分比。 如果只是键入 `#PERCENT`，则数字将有两位小数。 
-  `#PERCENT` 是执行计算或函数的关键字，还有很多这样的关键字。
+     `{P0}` 提供没有小数位的百分比。 如果只是键入 `#PERCENT`，则数字将有两位小数。 `#PERCENT` 是执行计算或函数的关键字，还有很多这样的关键字。
 
  有关自定义饼图标签和图例的详细信息，请参阅[在饼图上显示百分比值&#40;报表生成器和 SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和 [更改图例项文本&#40;报表生成器和 SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md)。
 
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#TwoWays)
+ ![用于 "返回页首" 链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于返回页首链接的箭头图标")[返回页首](#TwoWays)
 
-##  <a name="WhatsNext"></a>下一步是什么？
+##  <a name="whats-next"></a><a name="WhatsNext"></a>下一步是什么？
  现在，你已在报表生成器中创建了第一个报表，接下来可以尝试其他教程并开始从你自己的数据创建报表。 若要运行报表生成器，你需要有权使用*连接字符串*访问数据源（如数据库），这会将你实际连接到数据源。 系统管理员拥有此信息，并且可以为您设置相应的权限。
 
  若要完成其他教程，需要 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例的名称以及足以对任何数据库进行只读访问的凭据。 系统管理员也可以为您设置该权限。
@@ -219,7 +217,7 @@ ms.locfileid: "78176890"
 
  在入门之前，可能有必要了解一些概念和术语。 有关详细信息，请参阅[报表创作概念 &#40;报表生成器和 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)。 而且，在创建第一个报表之前，应当花一些时间进行规划。 这将需要较长时间。 有关详细信息，请参阅[规划报表 &#40;报表生成器&#41;](../report-design/planning-a-report-report-builder.md)。
 
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#TwoWays)
+ ![用于 "返回页首" 链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于返回页首链接的箭头图标")[返回页首](#TwoWays)
 
 ## <a name="see-also"></a>另请参阅
  [SQL Server 2014 中](report-builder-in-sql-server-2016.md)[报表生成器&#41;报表生成器教程 &#40;](../report-builder-tutorials.md)

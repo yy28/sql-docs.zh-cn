@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aaa5729c47c66e40b62cddc6bfcef1ba2ec84bdf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175016"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
@@ -22,7 +22,7 @@ ms.locfileid: "78175016"
 
  你在本教程中创建的报表是基于教程中包括的示例销售数据创建的。 该报表按地区对信息进行分组，并且显示该地区的销售经理的姓名以及详细和汇总销售信息。 您将使用列表数据区域作为自由格式的报表的基础，然后添加具有图像的装饰性面板、插入了数据的静态文本、用于显示详细信息的表以及可选的用于显示汇总信息的饼图和柱形图。
 
-##  <a name="BackToTop"></a>你将学习的内容
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>你将学习的内容
  在本教程中，您将了解如何执行下列操作：
 
 -   [创建空白报表、数据源和数据集](#BlankReport)
@@ -50,7 +50,7 @@ ms.locfileid: "78175016"
 ## <a name="requirements"></a>要求
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。
 
-##  <a name="BlankReport"></a>1. 创建空白报表、数据源和数据集
+##  <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1. 创建空白报表、数据源和数据集
 
 > [!NOTE]
 >  在本教程中，查询包含了数据值，这样报表则不需要外部数据源。 使用此内部数据类型对达成学习目标非常有益，但是该方法会使查询变得很长。 .
@@ -74,7 +74,7 @@ ms.locfileid: "78175016"
 
 3.  单击 **“使用我的报表中嵌入的连接”**。
 
-4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = **servername>****\<**
+4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = \<servername>********
 
      \<servername> （例如 Report001)）指定安装了 SQL Server 数据库引擎实例的计算机。 因为报表数据不是从 SQL Server 数据库提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库用于对查询进行分析。
 
@@ -137,9 +137,8 @@ ms.locfileid: "78175016"
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
-##  <a name="List"></a>2. 添加并配置列表
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供三个数据区域模板：表、矩阵和列表。 这些模板全都基于 Tablix 数据区域。
+##  <a name="2-add-and-configure-a-list"></a><a name="List"></a>2. 添加并配置列表
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供三个数据区域模板：表、矩阵和列表。 这些模板全都基于 Tablix 数据区域。
 
  在本教程中，你将使用一个列表来显示一个类似新闻稿的报表中各销售区域的销售信息。 这些信息按地区分组。 您将添加一个按地区对数据进行分组的新行组，然后删除内置的“详细信息”行组。 该列表模板是创建自由格式报表的理想工具。 有关详细信息，请参阅[列出 &#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。
 
@@ -190,11 +189,11 @@ ms.locfileid: "78175016"
 
      ![删除详细信息组](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "删除详细信息组")
 
-7.  单击 "**仅删除组**"。
+7.  单击 **“仅删除组”**。
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
-##  <a name="Graphics"></a>3. 添加图形
+##  <a name="3-add-graphics"></a><a name="Graphics"></a>3. 添加图形
  使用列表数据区域的好处之一是，您可以将矩形和文本框之类的报表项添加到任何地方，而不会被限制为表格布局。 您将通过添加图形（用颜色填充的矩形）增强报表的外观。
 
 #### <a name="to-add-graphic-elements-to-the-report"></a>向报表添加图形元素
@@ -215,7 +214,7 @@ ms.locfileid: "78175016"
 
  该报表的左侧现在具有一个垂直图形，该图形由一个深灰色的矩形构成。
 
-##  <a name="Text"></a>4. 添加自由格式的文本
+##  <a name="4-add-free-form-text"></a><a name="Text"></a>4. 添加自由格式的文本
  文本框包含在每个报表页上都重复的静态文本以及多个数据字段。
 
 #### <a name="to-add-text-to-the-report"></a>向报表添加文本
@@ -241,7 +240,7 @@ ms.locfileid: "78175016"
 
 7.  在 **“字体”** 列表中，选择 **“Times New Roman”**；在 **“字号”** 中，选择 **“20 pt”**；在 **“颜色”** 中，选择 **“红色”**。
 
-     ![“文本属性”](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "“文本属性”")
+     ![文本属性](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "“文本属性”")
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
@@ -320,7 +319,7 @@ ms.locfileid: "78175016"
 
  ![新闻稿预览](../../2014/tutorials/media/tutorial-newsletters.png "新闻稿预览")
 
-##  <a name="Table"></a>5. 添加一个表以显示销售详细信息
+##  <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5. 添加一个表以显示销售详细信息
  使用新建表和矩阵向导可以将表添加到自由格式的报表。 完成向导后，您将手动添加一个合计行。
 
 #### <a name="to-add-a-table"></a>添加表
@@ -345,7 +344,7 @@ ms.locfileid: "78175016"
 
 9. 在 **“选择样式”** 页的 **“样式”** 窗格中，选择 **“石板”**。
 
-10. 单击“完成”  。
+10. 单击 **“完成”** 。
 
 11. 将该表拖到您在第 4 课中添加的文本框之下。
 
@@ -362,7 +361,7 @@ ms.locfileid: "78175016"
 
  ![报表中的总销售额](../../2014/tutorials/media/tutorial-reportsalestotals.png "报表中的总销售额")
 
-##  <a name="Format"></a>6. 设置数据格式
+##  <a name="6-format-data"></a><a name="Format"></a>6. 设置数据格式
  将数字数据的格式设为货币，将日期格式设为仅限天和时间。
 
 #### <a name="to-format-fields-table"></a>设置字段表的格式
@@ -381,14 +380,14 @@ ms.locfileid: "78175016"
 
  ![报表中的格式化总销售额](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "报表中的格式化总销售额")
 
-##  <a name="Save"></a>7. 保存报表
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. 保存报表
  您可以将报表保存到报表服务器、SharePoint 库或本地计算机。 你还可以运行报表并从 **** “导出”菜单选择格式，将报表以各种格式导出（如 Word 和 PDF）。
 
  在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。
 
 #### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器
 
-1.  在**报表生成器**"按钮中，单击"**另存为**"。
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。
 
 2.  单击 **“最近使用的站点和服务器”**。
 
@@ -398,21 +397,21 @@ ms.locfileid: "78175016"
 
 4.  在`Name`中，用**SalesInformationByTerritory**替换默认名称。
 
-5.  单击“保存”  。
+5.  单击“ **保存**”。
 
  报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。
 
 #### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上
 
-1.  在**报表生成器**"按钮中，单击"**另存为**"。
+1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。
 
 2.  单击 **“桌面”**、 **“我的文档”** 或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。
 
 3.  在`Name`中，用**SalesInformationByTerritory**替换默认名称。
 
-4.  单击“保存”  。
+4.  单击“ **保存**”。
 
-##  <a name="Line"></a>8. （可选）添加线条以便分隔报表区域
+##  <a name="8-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>8. （可选）添加线条以便分隔报表区域
  添加线条可以分隔报表的可编辑区域和详细信息区域。
 
 #### <a name="to-add-a-line"></a>添加线条
@@ -431,7 +430,7 @@ ms.locfileid: "78175016"
 
      ![向报表添加线条](../../2014/tutorials/media/tutorial-reportwithline.png "向报表添加线条")
 
-##  <a name="Visualization"></a>9. （可选）添加汇总数据可视化
+##  <a name="9-optional-add-summary-data-visualization"></a><a name="Visualization"></a>9. （可选）添加汇总数据可视化
  矩形有助于控制报表的呈现方式。 将饼图和柱形图放置于矩形内，可以确保报表以您所需的方式呈现。
 
 #### <a name="to-add-a-rectangle"></a>添加矩形
@@ -446,7 +445,7 @@ ms.locfileid: "78175016"
 
 1.  在功能区 **“插入”** 选项卡上的 **“数据可视化”** 区域中，单击 **“图表”** ，然后单击 **“图表向导”**。
 
-2.  在“选择数据集”页中，单击 **ListDataset**，然后单击 **“下一步”**。
+2.  在 “选择数据集” 页上，单击 **ListDataset**，然后单击 **“下一步”**。
 
 3.  单击 **“饼图”**，然后单击 **“下一步”**。
 
@@ -456,7 +455,7 @@ ms.locfileid: "78175016"
 
 6.  在 **“选择样式”** 页的 **“样式”** 窗格中，选择 **“石板”**。
 
-7.  单击“完成”  。
+7.  单击 **“完成”** 。
 
 8.  调整在报表的左上角中出现的图表大小，使其为 1 1/2 英寸高，2 英寸宽。
 
@@ -476,7 +475,7 @@ ms.locfileid: "78175016"
 
 1.  在功能区 **“插入”** 选项卡上的 **“数据可视化”** 区域中，单击 **“图表”** ，然后单击 **“图表向导”**。
 
-2.  在 "**选择数据集**" 页上，单击 " **ListDataset**"，然后单击 "**下一步**"。
+2.  在 **“选择数据集”** 页上，单击 **ListDataset**，然后单击 **“下一步”**。
 
 3.  单击 **“柱形”**，然后单击 **“下一步”**。
 
@@ -488,7 +487,7 @@ ms.locfileid: "78175016"
 
 6.  在 **“选择样式”** 页的 **“样式”** 窗格中，选择 **“石板”**。
 
-7.  单击“完成”  。
+7.  单击 **“完成”** 。
 
      一个柱形图将添加到报表的左上角。
 

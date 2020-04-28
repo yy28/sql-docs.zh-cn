@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9697d5a53b2aac0d951445206adc4c4f30e5385
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177069"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
@@ -47,23 +47,23 @@ ms.locfileid: "78177069"
 
  ![rs_GettingStartedReport](../media/rs-gettingstartedreport.gif "rs_GettingStartedReport")
 
-##  <a name="bkmk_StagesSummary"></a>报表处理的阶段
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> 报表处理的阶段
  在您创建报表时，以 XML 格式定义一个报表定义文件 (.rdl)。 该文件包含报表处理器合并报表数据和报表布局所需的所有信息。 当您查看报表时，报表将经历以下阶段：
 
--   **编译。** 对报表定义中的表达式进行计算，将编译后的中间格式内部存储于报表服务器上。
+-   **编译.** 对报表定义中的表达式进行计算，将编译后的中间格式内部存储于报表服务器上。
 
--   **处理。** 运行数据集查询，并且将中间格式与数据和布局合并在一起。
+-   **正在.** 运行数据集查询，并且将中间格式与数据和布局合并在一起。
 
--   **呈现。** 将处理后的报表发送到呈现扩展插件，以便确定每页上适合多少信息并创建分页的报表。
+-   **呈现.** 将处理后的报表发送到呈现扩展插件，以便确定每页上适合多少信息并创建分页的报表。
 
 -   **导出（可选）。** 将报表导出为不同的文件格式。
 
- 有关详细信息，请参阅 [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md#bkmk_StagesofReports) 中的[报表开发阶段](../reporting-services-concepts-ssrs.md)。
+ 有关详细信息，请参阅 [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md) 中的[报表开发阶段](../reporting-services-concepts-ssrs.md#bkmk_StagesofReports)。
 
 ## <a name="create-reports"></a>创建报表
  创建报表：
 
--   **确定报表的用途。** 为使用报表的用户标识报表的用途。 设计精良的报表提供的信息可为报表读者指引深层次情况和行动的方向。 在此阶段中所做的设计决策将影响您对报表参数、报表布局设计和报表查看体验的选择。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](../report-design/planning-a-report-report-builder.md)中的[规划报表（报表生成器）](../report-design/report-design-tips-report-builder-and-ssrs.md)和[报表设计提示（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=154494)。
+-   **确定报表的用途。** 为使用报表的用户标识报表的用途。 设计精良的报表提供的信息可为报表读者指引深层次情况和行动的方向。 在此阶段中所做的设计决策将影响您对报表参数、报表布局设计和报表查看体验的选择。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[规划报表（报表生成器）](../report-design/planning-a-report-report-builder.md)和[报表设计提示（报表生成器和 SSRS）](../report-design/report-design-tips-report-builder-and-ssrs.md)。
 
 -   **选择查询的类型。** 确定是使用一般形式的共享数据集查询，还是使用特定于你的一组报表的数据集查询。 具有一般形式的查询的共享数据集易于维护以便多个报表使用，但每个报表设计者必须根据需要为其特定的报表组筛选数据。 有关详细信息，请参阅[报表数据 (SSRS)](../report-data/report-data-ssrs.md)。
 
@@ -79,7 +79,7 @@ ms.locfileid: "78177069"
 
     -   **从每个数据源选择要使用的数据。** 对于每个数据源，定义报表数据集。 每个数据集都包含指定要使用的数据的查询。 如果您具有报表参数，则定义数据集以便为每个参数填充可用值列表。 有关详细信息，请参阅[向报表添加数据（报表生成器和 SSRS）](../report-data/report-datasets-ssrs.md)和[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)。
 
-    -   **选择数据可视化。** 对于每个数据集，选择要用于显示数据的数据区域。 从表、图表、仪表和地图的列表中进行选择。 有关详情，请参阅以下主题：
+    -   **选择数据可视化。** 对于每个数据集，选择要用于显示数据的数据区域。 从表、图表、仪表和地图的列表中进行选择。 有关详细信息，请参阅下列主题：
 
         -   [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 
@@ -93,7 +93,7 @@ ms.locfileid: "78177069"
 
         -   [仪表（报表生成器和 SSRS）](../report-design/gauges-report-builder-and-ssrs.md)
 
-    -   **自定义数据和布局。** 设计报表布局。 报表定义具有表体、数据源、数据集、数据区域、文本框、线条和图像。 矩形用作布局以及可视元素的容器。 通过撰写表达式以便控制对数据的筛选、分组、排序、格式设置和显示，对每个数据区域进行自定义。 添加报表名称、位置以及可帮助管理几十或数百个报表的其他标识信息。 添加可视元素和容器以便组织页面上的布局元素。 有关详情，请参阅以下主题：
+    -   **自定义数据和布局。** 设计报表布局。 报表定义具有表体、数据源、数据集、数据区域、文本框、线条和图像。 矩形用作布局以及可视元素的容器。 通过撰写表达式以便控制对数据的筛选、分组、排序、格式设置和显示，对每个数据区域进行自定义。 添加报表名称、位置以及可帮助管理几十或数百个报表的其他标识信息。 添加可视元素和容器以便组织页面上的布局元素。 有关详细信息，请参阅下列主题：
 
         -   [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
 
@@ -111,26 +111,26 @@ ms.locfileid: "78177069"
 
     -   **查看和反复修改设计。** 预览报表。 发布一个初始版本，以便收集来自报表读者的反馈。 反复修改设计。
 
--   **查看报表解决方案。** 确认报表组正确交互。
+-   **查看报表解决方案。** 验证报表组是否正确交互。
 
 -   **考虑可重复使用的组件。**  确定是否可共享任何数据源或数据集查询以便重复使用。 如果可共享，则在报表服务器或 SharePoint 站点上，创建共享数据源和共享数据集。 确定数据区域是否适合于重复作为报表部件使用。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../report-design/report-parts-in-report-designer-ssrs.md)。
 
 ## <a name="preview-reports"></a>预览报表
- 每种报表创作工具都支持预览报表。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)中的[预览](../tools/report-builder-authoring-environment-ssrs.md)、[报表生成器 (SSRS)](../report-builder/previewing-reports-in-report-builder.md) 和[在报表生成器中预览报表](https://go.microsoft.com/fwlink/?LinkId=154494)。
+ 每种报表创作工具都支持预览报表。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[预览](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)、[报表生成器 (SSRS)](../tools/report-builder-authoring-environment-ssrs.md) 和[在报表生成器中预览报表](../report-builder/previewing-reports-in-report-builder.md)。
 
 ## <a name="save-or-publish-reports"></a>保存或发布报表
- 每种创作工具都支持在本地保存报表，或者支持将报表发布到报表服务器或 SharePoint 站点。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)中的[保存和部署](../tools/report-builder-authoring-environment-ssrs.md)、[报表生成器 (SSRS)](../report-builder/saving-reports-report-builder.md) 和[保存报表（报表生成器）](https://go.microsoft.com/fwlink/?LinkId=154494)。
+ 每种创作工具都支持在本地保存报表，或者支持将报表发布到报表服务器或 SharePoint 站点。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[保存和部署](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)、[报表生成器 (SSRS)](../tools/report-builder-authoring-environment-ssrs.md) 和[保存报表（报表生成器）](../report-builder/saving-reports-report-builder.md)。
 
 ## <a name="view-reports"></a>查看报表
  除了预览在本地保存的报表或发布到报表服务器的报表之外，您还可为报表读者提供多种查看体验。 查看报表：
 
 -   **浏览器。**  使用报表服务器 Web 服务或 SharePoint 站点查看已发布的报表。 在 SharePoint 站点上，您还可以配置 Web 部件以便查看已发布的报表。 有关详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持 (Reporting Services 2014)](../browser-support-for-reporting-services-and-power-view.md)、[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)和 [URL 访问 (SSRS)](../url-access-ssrs.md)。
 
--   **传递。**  配置订阅以便以电子邮件的形式将报表传递给报表读者，或者传递到共享文件夹。  有关详细信息，请参阅[订阅和传递 (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)。
+-   **传递.**  配置订阅以便以电子邮件的形式将报表传递给报表读者，或者传递到共享文件夹。  有关详细信息，请参阅[订阅和传递 (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)。
 
--   **导出。**  从报表查看器工具栏中，报表读者可以将报表导出为不同的文件格式。 导出文件格式可由报表服务器管理员配置。 有关详细信息，请参阅[导出报表（报表生成器和 SSRS）](../report-builder/export-reports-report-builder-and-ssrs.md)
+-   **先导.**  从报表查看器工具栏中，报表读者可以将报表导出为不同的文件格式。 导出文件格式可由报表服务器管理员配置。 有关详细信息，请参阅[导出报表（报表生成器和 SSRS）](../report-builder/export-reports-report-builder-and-ssrs.md)
 
--   **打印。**  报表读者可根据查看报表的方式，打印报表或报表页。 有关详细信息，请参阅[打印报表（报表生成器和 SSRS）](../report-builder/print-reports-report-builder-and-ssrs.md)。
+-   **出来.**  报表读者可根据查看报表的方式，打印报表或报表页。 有关详细信息，请参阅[打印报表（报表生成器和 SSRS）](../report-builder/print-reports-report-builder-and-ssrs.md)。
 
 -   **Web 或 Windows 窗体应用程序。**  使用 Visual Studio 可以开发承载报表查看器控件的 ASP.NET AJAX 应用程序或 Windows 窗体应用程序。 该控件可以指向报表服务器上已发布的报表。 有关详细信息，请参阅 [Microsoft 报表](https://go.microsoft.com/fwlink/?LinkID=205399)。
 
@@ -139,11 +139,11 @@ ms.locfileid: "78177069"
 
 -   **数据源。** 共享数据源和嵌入数据源都独立于报表定义进行管理。
 
--   **数据集。**  共享数据集独立于报表定义进行管理。
+-   **集.**  共享数据集独立于报表定义进行管理。
 
--   **参数。**  不通过报表定义单独管理参数。 在报表服务器上更改参数后，报表创作客户端将无法发布在服务器上进行的更改。
+-   **Parameters.**  不通过报表定义单独管理参数。 在报表服务器上更改参数后，报表创作客户端将无法发布在服务器上进行的更改。
 
--   **资源。**  ESRI 形状文件中的图像和空间数据是可以独立于报表定义而单独发布和管理的资源。
+-   **中心.**  ESRI 形状文件中的图像和空间数据是可以独立于报表定义而单独发布和管理的资源。
 
 -   **报表缓存。**  通过计划在非高峰期运行大型报表，可以降低业务峰值时段对报表服务器产生的处理影响。
 
@@ -153,7 +153,7 @@ ms.locfileid: "78177069"
 
  有关性能的详细信息，请参阅[性能、快照、缓存 (Reporting Services)](../report-server/performance-snapshots-caching-reporting-services.md)。
 
-##  <a name="bkmk_SecureReportsSummary"></a>安全报表
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> 保护报表
  保护报表：
 
 -   从报表服务器管理员，标识用于您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安装的授权和身份验证系统。 默认情况下， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用 Windows 身份验证、集成的安全性和角色分配来帮助控制对已发布报表的访问。 有关详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性和保护](../security/reporting-services-security-and-protection.md)。
@@ -164,7 +164,7 @@ ms.locfileid: "78177069"
 ## <a name="upgrade-reports"></a>Upgrade Reports
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 支持报表定义、报表服务器和 SharePoint 站点的多个版本。 升级报表：
 
--   升级报表服务器安装。 在首次使用时自动升级报表服务器上存储的已编译报表。 报表定义 (.rdl) 不更改。 有关详细信息，请参阅 [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md)。
+-   升级报表服务器安装。 在首次使用时自动升级报表服务器上存储的已编译报表。 报表定义 (.rdl) 不更改。 有关详细信息，请参阅[升级和迁移 Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md)。
 
 -   在报表创作环境中打开一个报表。 在大多数环境下将升级报表定义。 有关详细信息，请参阅[升级报表](../install-windows/upgrade-reports.md)和 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。
 

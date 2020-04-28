@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dff5f6464a14b520a35493b96b47b4a1c5a82481
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175506"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
-  本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的说明）的步骤相同，但本主题提供的信息特定于使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的引用数据服务清理数据。
+  本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]中的说明）的步骤相同，但本主题提供的信息特定于使用 ](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) (DQS) 中的引用数据服务清理数据。
 
  在您使用 DQS 中的引用数据服务功能清理数据时，该 DQS 清理过程将映射的域值以批处理请求的形式发送到引用数据服务提供程序中。 引用数据服务将会响应以下信息：
 
@@ -41,15 +41,15 @@ ms.locfileid: "78175506"
 
 ## <a name="before-you-begin"></a>开始之前
 
-###  <a name="Prerequisites"></a>先决条件
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件
  您必须将 DQS 知识库中的所需域映射到适当的引用数据服务。 此外，知识库必须包含有关您要清理的数据类型的知识。 例如，如果要清理包含美国地址的源数据，则必须将自己的域映射到为美国地址提供高质量数据的引用数据服务提供程序。 有关详细信息，请参阅[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。
 
-###  <a name="Security"></a> Security
+###  <a name="security"></a><a name="Security"></a> Security
 
-####  <a name="Permissions"></a> 权限
+####  <a name="permissions"></a><a name="Permissions"></a> 权限
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色，才能执行数据清理。
 
-##  <a name="Cleanse"></a>使用引用数据知识清理数据
+##  <a name="cleanse-your-data-using-reference-data-knowledge"></a><a name="Cleanse"></a> 使用引用数据知识清理您的数据
  接下来，我们将使用在上一主题中映射的域，[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)，并使用 Azure Marketplace 中的 Melissa 数据服务。 现在，我们将使用相同的域来清理一些示例美国地址。 清理数据的步骤与[使用 DQS（内部）知识清理数据](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中介绍的步骤相同。 但是，我们在该过程中将会在需要时提醒您注意。
 
 1.  创建一个数据质量项目，并且选择 **“清理”** 活动。 请参阅 [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)。

@@ -17,17 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176167"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services (SSIS) 项目
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 用于开发 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。
 
- 将[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]包部署到数据库或[!INCLUDE[ssIS](../includes/ssis-md.md)]包存储区时，可以使用[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务来管理包。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务只在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中可用。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)。 有关包部署的详细信息，请参阅[包部署 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。
+ 将[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]包部署到数据库或[!INCLUDE[ssIS](../includes/ssis-md.md)]包存储区时，可以使用[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务来管理包。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务只在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中可用。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)。 有关包部署的详细信息，请参阅[包部署 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。
 
  将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器时，您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用 Transact-SQL 视图和存储过程来管理项目。 有关项目部署的详细信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的详细信息，请参阅 [Integration Services (SSIS) 服务器](catalog/integration-services-ssis-server-and-catalog.md)。
 
@@ -49,8 +48,8 @@ ms.locfileid: "78176167"
 
 |Folder|说明|
 |------------|-----------------|
-|[!INCLUDE[ssIS](../includes/ssis-md.md)]包|包含包。 有关详细信息，请参阅 [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)。|
-|其他|包含除包文件以外的文件。|
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] 包|包含包。 有关详细信息，请参阅 [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)。|
+|杂项|包含除包文件以外的文件。|
 
 ### <a name="files-in-integration-services-projects"></a>Integration Services 项目中的文件
  向解决方案添加新的或现有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目时， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 创建具有扩展名 .dtproj 、.dtproj.user 和 .database 的项目文件。

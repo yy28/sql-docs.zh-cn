@@ -13,14 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176637"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-  
   `MultiPolygon` 实例是零个或更多个 `Polygon` 实例的集合。
 
 ## <a name="polygon-instances"></a>Polygon 实例
@@ -30,7 +29,7 @@ ms.locfileid: "78176637"
 
  如图中所示：
 
--   图 1 是一个包含两个 `MultiPolygon` 元素的 `Polygon` 实例。 边界由两个外环和三个内环界定。
+-   图 1 是一个包含两个 `Polygon` 元素的 `MultiPolygon` 实例。 边界由两个外环和三个内环界定。
 
 -   图 2 是一个包含两个 `MultiPolygon` 元素的 `Polygon` 实例。 边界由两个外环和三个内环界定。 这两个 `Polygon` 元素在切点处相交。
 
@@ -73,9 +72,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- 
-  `@g2` 之所以有效，原因在于两个 `Polygon` 实例仅在切点接触。 
-  `@g3` 之所以无效，原因在于这两个  `Polygon` 实例的内部相互重叠。
+ `@g2` 之所以有效，原因在于两个 `Polygon` 实例仅在切点接触。 `@g3` 之所以无效，原因在于这两个  `Polygon` 实例的内部相互重叠。
 
 ## <a name="examples"></a>示例
  下面的示例演示如何创建 `geometry``MultiPolygon` 实例，并返回第二个组件的熟知文本 (WKT)。

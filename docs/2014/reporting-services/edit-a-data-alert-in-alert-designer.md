@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0294f0ddea80ce956b5ddf6a6a97e0de62ecf2cd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173734"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>在警报设计器中编辑数据警报
@@ -42,7 +42,7 @@ ms.locfileid: "78173734"
     > [!NOTE]
     >  不能选择其他数据馈送。 若要使用不同的数据馈送，则必须创建一个新的数据警报定义。
 
-3.  单击“保存”  。
+3.  单击“ **保存**”。
 
     > [!NOTE]
     >  如果报表已更改并且从该报表生成的数据馈送已更改，则警报定义将不再有效。 在发生以下情况之一时警报定义将不再有效：警报定义在其规则中引用的列从报表中删除、或更改了数据类型、或删除或移动了报表。 您可以打开无效的警报定义，但在其根据报表数据馈送所基于的当前版本变为有效之前无法重新保存。 若要深入了解如何从报表中生成数据馈送，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。

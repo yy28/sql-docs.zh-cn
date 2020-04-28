@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175656"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   使用 PowerPivot 配置工具配置、修复或删除[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]
 
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及用于 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 本主题说明了两种工具的常规使用方法及它们之间的差异。
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及用于 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 本主题说明了两种工具的常规使用方法及它们之间的差异。
 
  **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 |SharePoint 2010
 
@@ -35,7 +34,7 @@ ms.locfileid: "78175656"
 
 -   [启动其中一个 PowerPivot 配置工具](#bmkm_start_tool)
 
-##  <a name="bkmk_requirements"></a>使用配置工具的要求
+##  <a name="requirements-for-using-the-configuration-tools"></a><a name="bkmk_requirements"></a>使用配置工具的要求
 
 -   您必须是场管理员。
 
@@ -45,9 +44,8 @@ ms.locfileid: "78175656"
 
 -   这些配置工具无 TCP/IP 端口要求，因此，无需配置防火墙以适应这些配置工具。 配置工具要求在 SharePoint 平台中提供 Web 应用程序和共享服务。 可能需要针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器配置防火墙。 有关详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。
 
-##  <a name="bkmk_twoversions"></a>配置工具的两个版本
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。
+##  <a name="two-versions-of-the-configuration-tool"></a><a name="bkmk_twoversions"></a>配置工具的两个版本
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。
 
  这两个工具仅可用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]实例。 不能使用它们安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。
 
@@ -56,7 +54,7 @@ ms.locfileid: "78175656"
 |PowerPivot for SharePoint 2013 配置|SharePoint 2013|[配置或修复 PowerPivot for SharePoint 2013 &#40;PowerPivot 配置工具&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|
 |PowerPivot 配置工具|SharePoint 2010 和 SharePoint 2010|[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|
 
-###  <a name="bkmk_sum_differences_betweentools"></a>这两个配置工具的不同之处
+###  <a name="how-the-two-configuration-tools-are-different"></a><a name="bkmk_sum_differences_betweentools"></a>这两个配置工具的不同之处
  这两个配置工具版本很相似，但运行这两种工具的配置步骤存在差异。 这些差异是由于 SharePoint 2010 与 SharePoint 2013 之间的变化，以及 PowerPivot for SharePoint 的 SQL Server 2012 SP1 版本与 PowerPivot for SharePoint 的早期版本之间的体系结构差异而导致的。
 
  下表描述 **“PowerPivot for SharePoint 2013 配置”** 工具中的新功能和更改的功能。 下表还描述不在 PowerPivot for SharePoint 2013 配置工具中的 **“PowerPivot 配置工具”** 中的功能。 该表中的行与配置工具中的选项卡的顺序相同。
@@ -65,13 +63,12 @@ ms.locfileid: "78175656"
 |--------------------------------------------------|-----------------------------------|
 |主页提供了用于 **PowerPivot Server for Excel Services**的新选项。 此选项对于在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持新的体系结构。 您可以将 Excel Services 配置为使用一个或多个在 SharePoint 模式下运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。<br /><br /> ![新配置工具中的 PowerPivot 服务器](../media/as-powerpivot-configtool-differences-new-mainpage.gif "新配置工具中的 PowerPivot 服务器")||
 ||2010工具包括**本地服务器上的 SQL Server Analysis Services （PowerPivot）** 页，以配置的本地实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 该页面不是 2013 工具的组成部分，因为没有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本地实例。<br /><br /> ![作为旧配置工具中的服务帐户](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "作为旧配置工具中的服务帐户")|
-||
-  **“创建 PowerPivot 服务应用程序”** 页具有一个额外选项，即 **“升级工作簿以启用数据刷新”**。 此选项在 2013 工具中不可用。<br /><br /> ![升级旧配置工具中的工作簿](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升级旧配置工具中的工作簿")|
+||**“创建 PowerPivot 服务应用程序”** 页具有一个额外选项，即 **“升级工作簿以启用数据刷新”**。 此选项在 2013 工具中不可用。<br /><br /> ![升级旧配置工具中的工作簿](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升级旧配置工具中的工作簿")|
 |2013 工具具有一个新页面 **“配置 PowerPivot 服务器”**。 此页支持在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新体系结构。 默认情况下，在主页的 **PowerPivot Server for Excel Services**文本框中键入的服务器名称也列在 **“配置 PowerPivot 服务器”** 上。<br /><br /> ![注册 PowerPivot 服务器新配置工具](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "注册 PowerPivot 服务器新配置工具")||
 |2013 工具具有一个新页，即 **“将 PowerPivot 外接程序注册为 Excel Services 用法跟踪程序”**。 SharePoint 2010 Excel Services 不跟踪 PowerPivot 的使用数据。||
 ||2010 工具包含 **“将 MSOLAP.5 作为受信任提供程序添加”** 页以注册 MSOLAP，以便 SharePoint 2010 中的 Excel Services 可以加载 PowerPivot 模型。 此页不是 2013 工具的组成部分。 SharePoint 2013 Excel Services 不使用 MSOLAP 访问接口来加载模型。|
 
-##  <a name="bkmk_overview"></a>使用 PowerPivot 配置工具的概述
+##  <a name="overview-of-using-a-powerpivot-configuration-tool"></a><a name="bkmk_overview"></a>使用 PowerPivot 配置工具的概述
  启动 PowerPivot 配置工具之一后，该工具会评估现有安装，以确定哪些操作适用。 对于全新安装，只有配置任务可用。 配置服务器之后，会出现删除任务。 如果您是使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 实例启动的，升级也会出现在可用任务列表中。
 
  如果您不熟悉管理中心或 Windows PowerShell，作为替代方式，您可以运行配置工具以完成 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装。
@@ -90,7 +87,7 @@ ms.locfileid: "78175656"
 >  -   [安装 sharepoint 2013 Reporting Services Sharepoint 模式](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。
 > -   [安装 sharepoint 2010 Reporting Services Sharepoint 模式](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。
 
-##  <a name="bmkm_start_tool"></a>启动 PowerPivot 配置工具之一
+##  <a name="start-one-of-the-powerpivot-configuration-tools"></a><a name="bmkm_start_tool"></a>启动 PowerPivot 配置工具之一
 
 1.  在 "**开始**" 屏幕上，键入`powerpivot`
 
@@ -102,9 +99,9 @@ ms.locfileid: "78175656"
 
     -   **PowerPivot for SharePoint 2013 配置**。
 
-     ![两个 powerpivot 配置工具](../media/as-powerpivot-configtools-bothicons.gif "两个 powerpivot 配置工具")
+     ![两个 PowerPivot 配置工具](../media/as-powerpivot-configtools-bothicons.gif "两个 PowerPivot 配置工具")
 
-     **注意：** 只有在本地服务器上安装[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]了后，这些工具才可用。
+     **注意：** 只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，这些工具才可用。
 
 2.  启动时，配置工具会检查您安装的状态，并提供适用于您的安装的任务。
 
@@ -125,9 +122,9 @@ ms.locfileid: "78175656"
  当您单击“运行”时，该工具以批处理模式处理所有操作。 尽管每个操作都显示为任务列表中的一个单独项，但任务中包括的所有操作将一起处理。 只处理通过验证检查的操作。 您可能需要添加或更改某些输入值以通过验证检查。
 
 ## <a name="related-content"></a>相关内容
- [升级 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)描述升级场中现有安装的工作流。
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) 描述升级场中现有安装的工作流。
 
- [卸载 PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)描述从场中删除 PowerPivot for SharePoint 服务、解决方案和应用程序页的工作流。
+ [Uninstall PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) 描述从场中删除 PowerPivot for SharePoint 服务、解决方案和应用程序页的工作流。
 
  [使用 Windows PowerShell 配置 PowerPivot](power-pivot-configuration-using-windows-powershell.md)
 

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175346"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>使用非聚集列存储索引
@@ -30,12 +30,12 @@ ms.locfileid: "78175346"
 
 -   [更改非聚集列存储索引中的数据](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
 
-##  <a name="load"></a>创建非聚集列存储索引
+##  <a name="create-a-nonclustered-columnstore-index"></a><a name="load"></a>创建非聚集列存储索引
  若要将数据加载到非聚集列存储索引中，请首先将数据加载到作为堆或聚集索引存储的传统行存储表中，然后使用[CREATE 列存储索引 &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)创建列存储索引。
 
  ![将数据加载到列存储索引中](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "将数据加载到列存储索引中")
 
-##  <a name="change"></a>更改非聚集列存储索引中的数据
+##  <a name="change-the-data-in-a-nonclustered-columnstore-index"></a><a name="change"></a>更改非聚集列存储索引中的数据
  在您在表上创建非聚集列存储索引后，不能直接在该表中修改数据。 具有 INSERT、UPDATE、DELETE 或 MERGE 的查询将失败并且返回错误消息。 若要添加或修改表中的数据，可以执行以下操作之一：
 
 -   禁用列存储索引。 然后可以更新表中的数据。 如果禁用列存储索引，则可以在完成数据更新后重新生成列存储索引。 例如：

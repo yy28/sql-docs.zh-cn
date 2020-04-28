@@ -18,17 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d2d2e9caae1a9837b91679033be1eafc763f266
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175606"
 ---
 # <a name="thread-pool-properties"></a>线程池属性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多线程处理许多操作，通过并行运行多个作业提高总体服务器性能。 为了更高效地管理线程， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用线程池预分配线程并提高下一作业的线程可用性。
 
- 每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例都维持有自己的一组线程池。 表格实例和多维实例在使用线程池的方式上有着重大区别。 最重要的区别在于，只有多维解决方案才能使用`IOProcess`线程池。 因此，本主题中描述的 `PerNumaNode` 属性对表格实例没有意义。
+ 每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例都维护自己的一组线程池。 表格实例和多维实例在使用线程池的方式上有着重大区别。 最重要的区别在于，只有多维解决方案才能使用`IOProcess`线程池。 因此，本主题中描述的 `PerNumaNode` 属性对表格实例没有意义。
 
  本主题包含以下各节：
 
@@ -38,20 +37,19 @@ ms.locfileid: "78175606"
 
 -   [将 GroupAffinity 设置为关联线程到处理器组中的处理器](#bkmk_groupaffinity)
 
--   [设置 PerNumaNode 以关联 IO 线程与 NUMA 节点中的处理器](#bkmk_pernumanode)
+-   [设置 PerNumaNode 以使 IO 线程与 NUMA 节点中的处理器关联](#bkmk_pernumanode)
 
 -   [确定当前线程池设置](#bkmk_currentsettings)
 
 -   [依赖或相关属性](#bkmk_related)
 
--   [关于 MSMDSRV.INI。.INI](#bkmk_msmdrsrvini)
+-   [关于 MSMDSRV.INI](#bkmk_msmdrsrvini)
 
 > [!NOTE]
 >  NUMA 系统上的表格部署不在本主题讨论范围内。 虽然表格解决方案可以成功部署在 NUMA 系统上，但在高度纵向扩展的体系结构中，表格模型使用的内存中数据库技术的性能特性所展现出的优点可能有限。 有关详细信息，请参阅 [Analysis Services 案例研究：在大型商业解决方案中使用表格模型](https://msdn.microsoft.com/library/dn751533.aspx) 和 [调整表格解决方案大小的硬件](https://go.microsoft.com/fwlink/?LinkId=330359)。
 
-##  <a name="bkmk_threadarch"></a>Analysis Services 中的线程管理
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多线程通过增加并行执行的任务数来充分利用可用的 CPU 资源。 存储引擎是多线程的。 例如，在存储引擎内执行的多线程作业包括并行处理对象或处理已推送到存储引擎的离散查询，或返回查询所请求的数据值。 由于公式引擎计算的串行特性，它将进行单线程处理。 每个查询主要在单线程中执行，发出请求后往往需要等待存储引擎返回数据。 查询线程的执行时间较长，仅当整个查询完成后才会将其释放。
+##  <a name="thread-management-in-analysis-services"></a><a name="bkmk_threadarch"></a>Analysis Services 中的线程管理
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多线程通过增加并行执行的任务数来充分利用可用的 CPU 资源。 存储引擎是多线程的。 例如，在存储引擎内执行的多线程作业包括并行处理对象或处理已推送到存储引擎的离散查询，或返回查询所请求的数据值。 由于公式引擎计算的串行特性，它将进行单线程处理。 每个查询主要在单线程中执行，发出请求后往往需要等待存储引擎返回数据。 查询线程的执行时间较长，仅当整个查询完成后才会将其释放。
 
  默认情况下，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本上， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用所有可用的逻辑处理器，在运行较高版本的 Windows 和 SQL Server 的系统上最多使用 640 个。 启动时，msmdsrv.exe 进程将分配给特定处理器组，但随着时间的推移，可在任何处理器组的任意逻辑处理器上对线程进行计划。
 
@@ -61,30 +59,30 @@ ms.locfileid: "78175606"
 
  对于用于各种 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工作负载的五个线程池，都可以设置自定义关联：
 
--   **分析 \ short**是用于简短请求的分析池。 可纳入单一网络消息中的请求视为短请求。
+-   **解析\短**  是用于短请求的解析池。 可容纳在单个网络消息内的请求被视为简短请求。
 
--   **分析 \ Long**是适用于单个网络消息内的所有其他请求的分析池。
+-   **解析\长**  是用于不可纳入单一网络消息中的所有其他请求的解析池。
 
     > [!NOTE]
-    >  来自两种解析池的线程都可以用来执行查询。 快速执行的查询（如快速发现或取消请求）有时会立即执行，而不是排队进入查询线程池。
+    >  来自两种解析池的线程都可以用来执行查询。 诸如快速发现或取消请求等快速执行的查询有时会立即执行，而不是排队进入查询线程池。
 
--   `Query`是执行所有不由分析线程池处理的请求的线程池。 此线程池中的线程将执行所有类型的操作，例如发现、MDX、DMX、DAX 和 DDL 命令。
+-   `Query`是执行所有不由分析线程池处理的请求的线程池。 此线程池中的线程将执行所有类型的操作，如发现、MDX、DAX、DMX 和 DDL 命令。
 
--   `IOProcess`用于与多维引擎中的存储引擎查询关联的 IO 作业。 这些线程所完成的工作应该不依赖于其他线程。 这些线程通常将扫描单个分区段，并对段数据执行筛选和聚合操作。 `IOProcess`线程对 NUMA 硬件配置特别敏感。 因此，此线程池具有可用于`PerNumaNode`根据需要优化性能的配置属性。
+-   `IOProcess`用于与多维引擎中的存储引擎查询关联的 IO 作业。 这些线程所做的工作应该不依赖于其他线程。 这些线程通常将扫描单个分区段，并对段数据执行筛选和聚合操作。 `IOProcess`线程对 NUMA 硬件配置特别敏感。 因此，此线程池具有可用于`PerNumaNode`根据需要优化性能的配置属性。
 
 -   `Process`适用于持续时间较长的存储引擎作业，包括聚合、索引和提交操作。 ROLAP 存储模式还使用“处理”线程池中的线程。
 
 > [!NOTE]
 >  尽管 msmdsrv.ini 在`VertiPaq`部分中具有线程池设置`VertiPaq` \\ `ThreadPool` \\ `GroupAffinity` `ThreadPool` \\ `CPUs` ，但却特意未记录这些设置。 这些属性当前不起作用，保留供日后使用。
 
- 对于服务请求， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可能会超过最大线程池限制，必要时会请求额外线程来执行工作。 但是，当某一线程执行完自己的任务后，如果当前线程数超过最大限制，则该线程即会终止，而不是返回线程池。
+ 为了向请求提供服务， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可能会超出最大线程池限制，并请求执行工作所必需的其他线程。 但是，当某一线程执行完自己的任务后，如果当前线程数超过最大限制，则该线程即会终止，而不是返回线程池。
 
 > [!NOTE]
 >  超出最大线程池计数是只有在出现某些死锁情况时才调用的保护。 为了避免超出该最大值的失控线程创建，应在达到了该最大限值后逐步创建线程（在短暂延迟后）。 超出该最大线程池计数可能会导致任务执行速度减慢。 如果性能计数器显示线程计数定期超出该线程池最大大小，则您可以考虑将其作为指示器，指示线程池大小对于要从系统请求的并发度而言太小。
 
  默认情况下，线程池大小由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]确定并且基于内核数。 服务器启动后，您可以通过检查 msmdsrv.log 文件来观察选定的默认值。 作为一项性能调节练习，您可以选择增加线程池的大小以及其他属性，以此来提高查询或处理性能。
 
-##  <a name="bkmk_propref"></a>线程池属性参考
+##  <a name="thread-pool-property-reference"></a><a name="bkmk_propref"></a>线程池属性参考
  本节介绍在每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的 msmdsrv.ini 文件中找到的线程池属性。 这些属性中的一部分也出现在 SQL Server Management Studio 中。
 
  按字母顺序列出属性。
@@ -121,7 +119,7 @@ ms.locfileid: "78175606"
 |`Query` \ `PriorityRatio`|int|有符号 32 位整数，可用于确保即使高优先级队列不为空，有时也能执行低优先级线程。|2|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|
 |`Query`  \ `StackSizeKB`|int|一种 32 位有符号整数，可用于调整线程执行期间的内存分配。|0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|
 
-##  <a name="bkmk_groupaffinity"></a>将 GroupAffinity 设置为关联线程到处理器组中的处理器
+##  <a name="set-groupaffinity-to-affinitize-threads-to-processors-in-a-processor-group"></a><a name="bkmk_groupaffinity"></a> 设置 GroupAffinity 以便将线程关联到处理器组中的处理器
  提供 `GroupAffinity` 仅用于高级优化用途。 可以使用 `GroupAffinity` 属性在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 线程池和特定处理器之间设置关联；但是，对于大多数安装，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在它可以使用所有可用逻辑处理器时的性能最佳。 相应地，默认情况下不指定组关联。
 
  如果性能测试表明需要进行 CPU 优化，则可以考虑高级方法，例如，使用 Windows Server Resource Manager 在逻辑处理器和服务器进程之间设置关联。 与定义个别线程池的自定义关联相比，这种方法可以简化实施和管理。
@@ -129,8 +127,7 @@ ms.locfileid: "78175606"
  如果该方法还不够，则可以通过定义线程池的自定义关联来实现更高的精度。 自定义关联设置比较可能建议在大型多核系统（NUMA 或非 NUMA）上使用，由于线程池分布于范围过宽的一系列处理器上，可能导致这些系统出现性能下降。 虽然可以在少于 64 个逻辑处理器的系统上设置 `GroupAffinity`，但所带来的益处几乎可以忽略不计，甚至可能会导致性能下降。
 
 > [!NOTE]
->  
-  `GroupAffinity` 受版本的约束，版本将会限制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用的内核数。 在启动时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用版本信息和 `GroupAffinity` 属性为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理的 5 个线程池中的每个线程池计算关联掩码。 Standard 版本可使用最多 16 个内核。 如果在内核数超过 16 的大型多核系统上安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 标准版本， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将仅使用其中 16 个内核。 如果您升级之前版本的 Enterprise 实例，则最多可以使用 20 个内核。 有关版本和许可的详细信息，请参阅 [SQL Server 2012 许可概述](https://go.microsoft.com/fwlink/?LinkId=246061)。
+>  `GroupAffinity` 受版本的约束，版本将会限制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用的内核数。 在启动时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用版本信息和 `GroupAffinity` 属性为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理的 5 个线程池中的每个线程池计算关联掩码。 Standard 版本可使用最多 16 个内核。 如果在内核数超过 16 的大型多核系统上安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 标准版本， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将仅使用其中 16 个内核。 如果您升级之前版本的 Enterprise 实例，则最多可以使用 20 个内核。 有关版本和许可的详细信息，请参阅 [SQL Server 2012 许可概述](https://go.microsoft.com/fwlink/?LinkId=246061)。
 
 ### <a name="syntax"></a>语法
  该值是每个处理器组对应的十六进制值，其中十六进制表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在为给定线程池分配线程时首先尝试使用的逻辑处理器。
@@ -148,7 +145,7 @@ ms.locfileid: "78175606"
 ### <a name="steps-for-computing-the-processor-affinity-mask"></a>计算处理器关联掩码的步骤
  可以在 " `GroupAffinity` msmdsrv.ini" 或 SQL Server Management Studio 中的 "服务器属性" 页中设置。
 
-1.  **确定处理器和处理器组的数量**
+1.  **确定处理器和处理器组的数目**
 
      可以 [从 winsysinternals 下载 Coreinfo 实用工具](https://technet.microsoft.com/sysinternals/cc835722.aspx)。
 
@@ -158,7 +155,7 @@ ms.locfileid: "78175606"
 
      本例仅显示 8 个处理器（0 到 7），但一个处理器组最多可有 64 个逻辑处理器，而企业级 Windows 服务器中最多可有 10 个处理器组。
 
-3.  **计算要使用的处理器组的位掩码**
+3.  **计算想要使用的处理器组的位掩码**
 
      `7654 3210`
 
@@ -170,14 +167,14 @@ ms.locfileid: "78175606"
 
      使用计算器或转换工具，将二进制数转换为其对应的十六进制数。 在我们的示例中， `1111 0010` 转换为 `0xF2`。
 
-5.  **在 GroupAffinity 属性中输入十六进制值**
+5.  **在 GroupAffinity 属性中输入该十六进制值**
 
      在 msmdsrv.ini 或 Management Studio 的服务器属性页中，将设置`GroupAffinity`为在步骤4中计算的值。
 
 > [!IMPORTANT]
 >  设置`GroupAffinity`是包含多个步骤的手动任务。 计算`GroupAffinity`时，请仔细检查你的计算。 尽管 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会在整个掩码无效时返回错误，但有效和无效设置的组合会使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 忽略该属性。 例如，如果位掩码包含额外值，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 忽略该设置，并使用系统上的所有处理器。 进行此操作时没有错误或警告可提醒您，但您可检查 msmdsrv.log 文件以了解实际如何设置这些关联。
 
-##  <a name="bkmk_pernumanode"></a>设置 PerNumaNode 以关联 IO 线程与 NUMA 节点中的处理器
+##  <a name="set-pernumanode-to-affinitize-io-threads-to-processors-in-a-numa-node"></a><a name="bkmk_pernumanode"></a>设置 PerNumaNode 以关联 IO 线程与 NUMA 节点中的处理器
  对于多维 Analysis Services 实例，您可以对`PerNumaNode` `IOProcess`线程池设置，以便进一步优化线程计划和执行。 标识`GroupAffinity`要对给定线程池使用哪组逻辑处理器， `PerNumaNode`而是指定是否创建多个线程池，进一步关联允许的逻辑处理器的某个子集。
 
 > [!NOTE]
@@ -191,19 +188,19 @@ ms.locfileid: "78175606"
 ### <a name="choosing-a-value"></a>选择值
  还可以覆盖默认值以使用其他有效值。
 
- **设置 PerNumaNode = 0**
+ **设置 PerNumaNode=0**
 
  忽略 NUMA 节点。 将只有一个 IOProcess 线程池，并将使该线程池中的所有线程与所有逻辑处理器关联。 默认情况下（其中 PerNumaNode=-1），如果计算机具有的 NUMA 节点少于 4 个，则这是合适的设置。
 
  ![Numa、处理器和线程池的通信](../media/ssas-threadpool-numaex0.PNG "Numa、处理器和线程池的通信")
 
- **设置 PerNumaNode = 1**
+ **设置 PerNumaNode=1**
 
  为每个 NUMA 节点创建 IOProcess 线程池。 具有不同的线程池可改进对本地资源（如 NUMA 节点上的本地缓存）的协调访问。
 
  ![Numa、处理器和线程池的通信](../media/ssas-threadpool-numaex1.PNG "Numa、处理器和线程池的通信")
 
- **设置 PerNumaNode = 2**
+ **设置 PerNumaNode=2**
 
  此设置适用于运行高强度 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工作负荷的非常高端的系统。 此属性会在其最高粒度级别上设置 IOProcess 线程池关联，在逻辑处理器层面创建和关联单独的线程池。
 
@@ -213,7 +210,7 @@ ms.locfileid: "78175606"
 
  在此关联水平上，计划程序始终会尝试先使用首选 NUMA 节点内的理想逻辑处理器。 如果逻辑处理器不可用，计划程序将选择同一节点内的另一个处理器，或在其他线程不可用时选择同一处理器组中的处理器。 有关详细信息和示例，请参阅 [Analysis Services 2012 配置设置（Wordpress 博客）](https://go.microsoft.com/fwlink/?LinkId=330387)。
 
-###  <a name="bkmk_workdistrib"></a>IOProcess 线程间的工作分配
+###  <a name="work-distribution-among-ioprocess-threads"></a><a name="bkmk_workdistrib"></a> IOProcess 线程间的工作分配
  当您考虑是否设置`PerNumaNode`属性时，知道线程的`IOProcess`使用方式可帮助您做出更明智的决策。
 
  请记住`IOProcess` ，用于与多维引擎中的存储引擎查询关联的 IO 作业。
@@ -233,22 +230,20 @@ ms.locfileid: "78175606"
  尽管分区和维度扫描都使用`IOProcess`线程池，但维度扫描仅使用线程池0。 这样可导致该线程池上的负载略有不均，但这种不平衡只是暂时性的，因为维度扫描往往速度很快且不常见。
 
 > [!NOTE]
->  在更改服务器属性时，请记住，配置选项适用于在当前实例上运行的所有数据库。 选择可使最重要数据库或最大数量的数据库受益的设置。 您不能在数据库级别设置处理器关联，也不能在单个分区与特定处理器之间设置关联。
+>  在更改服务器属性时，请记住，配置选项适用于在当前实例上运行的所有数据库。 选择可使最重要数据库或最大数量的数据库受益的设置。 无法在数据库级别设置处理器关联，也无法在个别分区与特定处理器之间设置关联。
 
  有关作业体系结构的详细信息，请参阅 [SQL Server 2008 Analysis Services 性能指南](https://www.microsoft.com/download/details.aspx?id=17303)中的 2.2 节。
 
-##  <a name="bkmk_related"></a>依赖或相关属性
+##  <a name="dependent-or-related-properties"></a><a name="bkmk_related"></a>依赖或相关属性
  如[Analysis Services 操作指南](https://msdn.microsoft.com/library/hh226085.aspx)第2.4 节中所述，如果增加处理线程池，则应确保`CoordinatorExecutionMode`设置以及`CoordinatorQueryMaxThreads`设置的值使您能够充分利用增加的线程池大小。
 
  Analysis Services 使用一种协调器线程来收集必要的数据，以便完成处理或查询请求。 对于必须触及的每个分区，协调器首先将一个作业加入队列。 随后，每个作业继续将更多作业加入队列，具体取决于分区中必须扫描的段数。
 
- 
-  `CoordinatorExecutionMode` 的默认值为 -4，表示每个内核并行执行的作业限制为 4 个，这限制了存储引擎中的子多维数据集请求可并行执行的协调器作业总数。
+ `CoordinatorExecutionMode` 的默认值为 -4，表示每个内核并行执行的作业限制为 4 个，这限制了存储引擎中的子多维数据集请求可并行执行的协调器作业总数。
 
- 
-  `CoordinatorQueryMaxThreads` 的默认值为 16，限制可为每个分区并行执行的段作业数。
+ `CoordinatorQueryMaxThreads` 的默认值为 16，限制可为每个分区并行执行的段作业数。
 
-##  <a name="bkmk_currentsettings"></a>确定当前线程池设置
+##  <a name="determine-current-thread-pool-settings"></a><a name="bkmk_currentsettings"></a>确定当前线程池设置
  服务每次启动时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都会将当前线程池设置输出到 msmdsrv.log 文件中，包括最小和最大线程数、处理器关联掩码和并发度。
 
  以下示例摘自该日志文件，显示启用超线程的 4 核系统上的查询线程池默认设置（MinThread=0、MaxThread=0、Concurrency=2）。 关联掩码为 0xFF，表示有 8 个逻辑处理器。 请注意，掩码以前导零为前缀。 可以忽略前导零。
@@ -269,7 +264,7 @@ ms.locfileid: "78175606"
 
  回想一下，在具有多个处理器组的系统上，系统会以逗号分隔列表的形式为每个组生成单独的关联掩码。
 
-##  <a name="bkmk_msmdrsrvini"></a>关于 MSMDSRV.INI。.INI
+##  <a name="about-msmdsrvini"></a><a name="bkmk_msmdrsrvini"></a>关于 MSMDSRV.INI。.INI
  msmdsrv.ini 文件包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的配置设置，会影响运行在该实例上的所有数据库。 您不能使用服务器配置属性仅优化一个数据库的性能，而将所有其他数据库排除在外。 但是，您可以安装多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例并将每个实例配置为使用将使具有类似特征或工作负荷的数据库受益的属性。
 
  所有服务器配置属性都包括在 msmdsrv.ini 文件中。 很可能要修改的部分属性还出现诸如 SSMS 的管理工具中。

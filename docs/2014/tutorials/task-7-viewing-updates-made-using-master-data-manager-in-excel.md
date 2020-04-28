@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d705a02df8e133b5deb8242b1120a6ddd9f9cac9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177215"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>任务 7：在 Excel 中查看使用主数据管理器所做的更新
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>任务 7：在 Excel 中查看你使用“主数据管理器”所做的更新
   在该任务中，您将验证您在 Excel 中看到了 MDS 中的更新数据。
 
 1.  现在，切换到已打开**清理和匹配的供应商**电子表格的 excel 窗口。

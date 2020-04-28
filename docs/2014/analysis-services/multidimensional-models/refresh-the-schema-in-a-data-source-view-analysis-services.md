@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d11ac65a565df23332f24eef8a3e4ddb4e476a5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175704"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>刷新数据源视图中的架构 (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "78175704"
 
  [在 SQL Server Data Tools 中刷新 DSV](#bkmk_DSVrefresh)
 
-##  <a name="bkmk_changlist"></a>刷新中支持的更改
+##  <a name="changes-supported-in-refresh"></a><a name="bkmk_changlist"></a>刷新中支持的更改
  “DSV 刷新”可以包含以下任意操作：
 
 -   删除表、列和关系
@@ -41,12 +41,12 @@ ms.locfileid: "78175704"
 
 -   添加新的唯一约束。 如果 DSV 中的表存在逻辑主键，那么，在数据源的表中添加物理键时，逻辑键将被删除并由物理键替换。
 
- 刷新永远不会将新表添加到 DSV 中。 如果要添加新表，必须手动添加。 有关详细信息，请参阅[在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)。
+ 刷新永远不会将新表添加到 DSV 中。 如果要添加新表，必须手动添加。 有关详细信息，请参阅 [在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)中的解决方案资源管理器运行数据源视图向导。
 
-##  <a name="bkmk_DSVrefresh"></a>刷新 SQL Server Data Tools 中的 DSV
+##  <a name="refresh-a-dsv-in-sql-server-data-tools"></a><a name="bkmk_DSVrefresh"></a>刷新 SQL Server Data Tools 中的 DSV
  若要刷新 DSV，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中双击该 DSV，然后单击“刷新数据源视图”按钮或从“数据源视图”菜单选择“刷新”****。
 
- 在刷新过程中，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将查询所有基础关系数据源以确定 DSV 中包含的表/视图是否发生了更改。 如果建立了到所有基础数据源的连接，并且发生了更改，则您会在 **“刷新数据源视图”** 对话框中看到这些更改。
+ 在刷新过程中， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将查询所有基础关系数据源以确定 DSV 中包含的表/视图是否发生了更改。 如果建立了到所有基础数据源的连接，并且发生了更改，则您会在 **“刷新数据源视图”** 对话框中看到这些更改。
 
  !["刷新数据源视图" 对话框](../media/ssas-olapdsv-refresh.gif "“刷新数据源视图”对话框")
 

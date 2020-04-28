@@ -15,19 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
-ms.sourcegitcommit: 0381fd3b76933db7bb1c1ee6a3b29de1f08c7ce4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77646326"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的行为更改
   本主题介绍[!INCLUDE[ssDE](../includes/ssde-md.md)]中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
   
-## <a name="SQL14"></a>中的行为更改[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-sssql14"></a><a name="SQL14"></a>中的行为更改[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，如果对其运行查询的 XML 文档包含超过某一特定长度（超过 4020 个字符）的字符串，则查询可能会返回不正确的结果。 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中，此类查询将返回正确的结果。  
   
-## <a name="Denali"></a>中的行为更改[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-sssql11"></a><a name="Denali"></a>中的行为更改[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>元数据发现  
  从 " [!INCLUDE[ssDE](../includes/ssde-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]允许 SQLDescribeCol" 开始获得的改进，可获得比早期版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SQLDescribeCol 返回的预期结果更准确的说明。 有关详细信息，请参阅[元数据发现](../relational-databases/native-client/features/metadata-discovery.md)。  
@@ -79,14 +79,14 @@ SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，当创建或重新生成已分区索引时，并非通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 在升级具有已分区索引的数据库后，您可以在直方图数据中注意到针对这些索引的差异。 此行为更改可能不会影响查询性能。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS` 以及 `FULLSCAN` 子句。  
   
 ### <a name="data-type-conversion-by-the-xml-value-method-has-changed"></a>通过 XML value 方法进行的数据类型转换已更改  
-`xml`数据类型的`value`方法的内部行为已更改。 此方法对 XML 执行 XQuery，并返回指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型的标量值。 xs 类型必须转换为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型。 以前，`value` 方法在内部将源值转换为 xs:string，然后将 xs:string 转换为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，以下情况下将跳过到 xs:string 的转换：  
+ 数据类型的  方法的内部行为已更改。 此方法对 XML 执行 XQuery，并返回指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型的标量值。 xs 类型必须转换为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型。 以前，`value` 方法在内部将源值转换为 xs:string，然后将 xs:string 转换为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，以下情况下将跳过到 xs:string 的转换：  
   
 |源 XS 数据类型|目标 SQL Server 数据类型|  
 |-------------------------|--------------------------------------|  
-|字节<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> int<br /><br /> bigint<br /><br /> Decimal<br /><br /> numeric|  
+|字节<br /><br /> short<br /><br /> int<br /><br /> 整数<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> int<br /><br /> bigint<br /><br /> Decimal<br /><br /> numeric|  
 |Decimal|Decimal<br /><br /> numeric|  
 |FLOAT|real|  
-|double|FLOAT|  
+|Double|float|  
   
  新行为改进了可跳过中间转换时的性能。 但是，当数据类型转换失败时，您看到的错误消息将有别于从中间 xs:string 值进行转换时引发的错误消息。 例如，如果 value 方法未能将 `int` 值 100000 转换为 `smallint`，则之前的错误消息为：  
   
@@ -105,7 +105,7 @@ SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  在早期版本中，消息为 *"正在检查标识信息：当前标识值\<' 当前标识值> '，当前列值 '\<当前列值>"。DBCC 执行完毕。如果 DBCC 打印了错误消息，请与系统管理员联系。 "* 当使用`NORESEED`、而不`DBCC CHECKIDENT`是第二个参数，或者没有种子设定值时，消息将保持不变。 有关详细信息，请参阅 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>XML 数据类型的 exist() 函数的行为已更改  
- 将 XML 数据类型`exist()`与 null 值进行比较时，函数的行为已更改为0（零）。 请考虑以下示例：  
+ 将 XML 数据类型`exist()`与 null 值进行比较时，函数的行为已更改为0（零）。 请看下面的示例：  
   
 ```sql  
 DECLARE @test XML;  

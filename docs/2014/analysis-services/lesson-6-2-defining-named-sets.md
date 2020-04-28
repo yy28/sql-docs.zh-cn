@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175263"
 ---
 # <a name="defining-named-sets"></a>定义命名集
@@ -26,7 +26,7 @@ ms.locfileid: "78175263"
 
 ## <a name="defining-a-core-products-named-set"></a>定义“核心产品”命名集
 
-1.  切换到 ** 教程多维数据集的多维数据集设计器的“计算”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，再单击工具栏上的“窗体视图”****。
+1.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器的“计算”**** 选项卡，再单击工具栏上的“窗体视图”****。
 
 2.  单击“脚本组织程序”**** 窗格中的“[所有产品的总销售额比率]”****，然后在“计算”**** 选项卡的工具栏上单击“新建命名集”****。
 
@@ -39,7 +39,7 @@ ms.locfileid: "78175263"
 4.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，依次展开`Members`"**产品**"、"**类别**" 和 "**所有产品**"。
 
     > [!NOTE]
-    >  如果无法在“计算工具”**** 窗格中查看任何元数据，请在工具栏上单击“重新连接”****。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。
+    >  如果无法在“计算工具”**** 窗格中查看任何元数据，请在工具栏上单击“重新连接”****。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。
 
 5.  将“自行车”**** 拖到“表达式”**** 框中。
 
@@ -77,7 +77,7 @@ ms.locfileid: "78175263"
 
 9. 在属性窗口中， `DiscretizationMethod`将属性更改为 "**自动**"，然后将`DiscretizationBucketCount`属性更改`5`为。 有关详细信息，请参阅[对属性成员分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)。
 
-10. 在 ** 的“生成”菜单上，单击“部署 Analysis Services 教程”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]****。
+10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。
 
 11. 成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后在“计算”**** 选项卡的工具栏上单击“重新连接”****。
 
@@ -107,7 +107,7 @@ ms.locfileid: "78175263"
 
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>使用新的命名集浏览多维数据集
 
-1.  在 ** 的“生成”菜单上，单击“部署 Analysis Services 教程”**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]****。
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。
 
 2.  已成功完成部署后，单击“浏览器”**** 选项卡，再单击“重新连接”****。
 
@@ -132,7 +132,7 @@ ms.locfileid: "78175263"
      ![包含两个命名集的筛选器窗格](../../2014/tutorials/media/l6-named-set-05.gif "包含两个命名集的筛选器窗格")
 
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务
- [第7课：定义关键绩效指标 &#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
+ [第 7 课：定义关键绩效指标 (KPI)](lesson-7-defining-key-performance-indicators-kpis.md)
 
 ## <a name="see-also"></a>另请参阅
  [计算](multidimensional-models-olap-logical-cube-objects/calculations.md)[创建命名集](multidimensional-models/create-named-sets.md)

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77429008"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
@@ -39,11 +39,11 @@ ms.locfileid: "77429008"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary （64）**  |是唯一标识查询所属的批处理或存储过程的标记。<br /><br /> **sql_handle**与**statement_start_offset**和**statement_end_offset**一起使用，可以通过调用**sys. dm_exec_sql_text**动态管理函数来检索查询的 sql 文本。|  
+|**sql_handle**|**varbinary(64)**  |是唯一标识查询所属的批处理或存储过程的标记。<br /><br /> 通过调用 **sys.dm_exec_sql_text** 动态管理函数，**sql_handle** 可以和 **statement_start_offset** 及 **statement_end_offset** 一起用于检索查询的 SQL 文本。|  
 |**statement_start_offset**|**int**|指示行所说明的查询在其批查询或持久化对象文本中的开始位置（以字节为单位，从 0 开始）。|  
 |**statement_end_offset**|**int**|指示行所说明的查询在其批查询或持久化对象文本中的结束位置（以字节为单位，从 0 开始）。 对于之前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的版本，值-1 指示批处理的结束。 不再包含尾随的注释。|  
 |**plan_generation_num**|**bigint**|可用于在重新编译后区分不同计划实例的序列号。|  
-|**plan_handle**|**varbinary （64）**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 可以将此值传递给 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 动态管理函数来获取查询计划。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
+|**plan_handle**|**varbinary(64)**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 可以将此值传递给 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 动态管理函数来获取查询计划。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
 |**creation_time**|**datetime**|编译计划的时间。|  
 |**last_execution_time**|**datetime**|上次开始执行计划的时间。|  
 |**execution_count**|**bigint**|计划自上次编译以来所执行的次数。|  
@@ -77,7 +77,7 @@ ms.locfileid: "77429008"
 |**last_rows**|**bigint**|上一次执行查询返回的行数。 不可为 null。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0。|  
 |**min_rows**|**bigint**|查询在一次执行过程中所返回的最小行数。 不可为 null。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0。|  
 |**max_rows**|**bigint**|一次执行期间查询返回的最大行数。 不可为 null。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0。|  
-|**statement_sql_handle**|**varbinary （64）**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 仅当打开查询存储并为该特定查询收集统计信息时，才填充非 NULL 值。|  
+|**statement_sql_handle**|**varbinary(64)**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 仅当打开查询存储并为该特定查询收集统计信息时，才填充非 NULL 值。|  
 |**statement_context_id**|**bigint**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 仅当打开查询存储并为该特定查询收集统计信息时，才填充非 NULL 值。|  
 |**total_dop**|**bigint**|此计划自编译后使用的并行度的总和。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
 |**last_dop**|**bigint**|上一次执行此计划时的并行度。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
@@ -115,7 +115,7 @@ ms.locfileid: "77429008"
 |**last_spills**|**bigint**|上次执行查询时溢出的页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**min_spills**|**bigint**|此查询在一次执行期间溢出的最小页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**max_spills**|**bigint**|此查询在一次执行期间溢出的最大页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|pdw_node_id |**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|此计划自编译以来执行的远程页面服务器读取的总次数。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  
 |**last_page_server_reads**|**bigint**|上次执行计划时所执行的远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  
 |**min_page_server_reads**|**bigint**|此计划在单次执行期间所执行的最少远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  

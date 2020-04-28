@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6582712e6597c4371beebcdf258145f1fdfb3053
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177007"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 用户的数据警报管理器
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]为 SharePoint 信息工作者提供了数据警报管理器以便管理数据警报。 他们可以查看他们所创建的警报的有关信息、删除警报以及打开警报定义以便编辑，并按需运行警报。 他们可以选择是仅查看单个报表的警报，还是所有报表的警告。 下图显示数据警报管理器中可用于信息工作者的功能。
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 为 SharePoint 信息工作者提供了数据警报管理器以便管理数据警报。 他们可以查看他们所创建的警报的有关信息、删除警报以及打开警报定义以便编辑，并按需运行警报。 他们可以选择是仅查看单个报表的警报，还是所有报表的警告。 下图显示数据警报管理器中可用于信息工作者的功能。
 
- ![SharePoint 用户的警报管理器功能](media/rs-alertmanageriw.gif "SharePoint 用户的警报管理器功能")
+ ![面向 SharePoint 用户的警报管理器功能](media/rs-alertmanageriw.gif "面向 SharePoint 用户的警报管理器功能")
 
  在为数据警报启用某一 SharePoint 站点时，将创建两个 SharePoint 页（MyDataAlerts.aspx 和 SiteDataAlerts.aspx）并且将这两个 SharePoint 页将添加到该 SharePoint 站点中。 MyDataAlerts.aspx 是针对 SharePoint 信息工作者的数据警报管理器。 信息工作者通过对其创建警报的报表的右键单击菜单，打开数据警报管理器。
 
@@ -34,7 +34,7 @@ ms.locfileid: "78177007"
 > [!NOTE]
 >  在您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 警报功能之前，管理员必须向您授予权限。 有关所需权限的信息，请参阅 [Reporting Services 数据警报](../ssms/agent/alerts.md)。
 
-##  <a name="ViewingAlerts"></a>查看数据警报信息
+##  <a name="view-data-alert-information"></a><a name="ViewingAlerts"></a> 查看数据警报信息
  您可以查看在数据警报设计器中创建的数据警报列表。 若要打开数据警报管理器，请右键单击发布到 SharePoint 库的报表。 下图显示了报表右键单击菜单中的“管理数据警报”选项。****
 
  ![从报表上下文菜单打开警报管理器](media/rs-openalertmanager.gif "从报表上下文菜单打开警报管理器")
@@ -43,26 +43,26 @@ ms.locfileid: "78177007"
 
  下表在数据警报管理器中显示某个表中的示例数据。 发生错误时，错误消息和日志中条目的标识符 (GUID) 包含在表的“状态”字段中****。
 
-|警报名称|报告名称|创建者|发送的警报数|上次运行时间|上次修改时间|状态|
+|警报名称|报表名称|创建者|发送的警报数|上次运行时间|上次修改时间|状态|
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|最后一个警报已成功运行且已发送。|
 |UnitsSold|ProductsSalesByQTR|Lauren Johnson|2|7/1/2011|6/28/2011|已成功运行最后一个警报，但由于数据未发生更改，因此未发送任何警报。|
 |TopPromotion|PromotionTracking|Lauren Johnson|0||5/23/2011|创建了警报。|
 
 
-##  <a name="DeleteAlerts"></a>删除数据警报
+##  <a name="delete-data-alerts"></a><a name="DeleteAlerts"></a>删除数据警报
  您从数据警报管理器中删除警报定义。 作为信息工作者，您可以删除您创建的警报定义。 您无法删除其他人创建的警报定义。 有关详细信息，请参阅 [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。
 
  当您删除警报定义时，将永久删除该警报定义。 如果您仅希望暂停警报消息，应更改重复执行模式或更改警报定义的开始或停止日期。 有关详细信息，请参阅 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md)。
 
 
 
-##  <a name="EditAlerts"></a>编辑数据警报
- 作为信息工作者，从数据警报管理器中打开您的警报定义以便编辑。 您可以编辑您创建的警报定义，但无法编辑其他人创建的警报定义。 右键单击警报定义并单击“编辑”时，“数据警报设计器”随即打开，其中将显示警报定义****。 有关详细信息，请参阅[数据警报设计器](../../2014/reporting-services/data-alert-designer.md)和[在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md)。
+##  <a name="edit-data-alerts"></a><a name="EditAlerts"></a>编辑数据警报
+ 作为信息工作者，从数据警报管理器中打开您的警报定义以便编辑。 您可以编辑您创建的警报定义，但无法编辑其他人创建的警报定义。 右键单击警报定义并单击“编辑”时，“数据警报设计器”随即打开，其中将显示警报定义****。 有关详细信息，请参阅 [数据警报设计器](../../2014/reporting-services/data-alert-designer.md) 和 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md)。
 
 
 
-##  <a name="RunAlerts"></a>运行数据警报
+##  <a name="run-data-alerts"></a><a name="RunAlerts"></a>运行数据警报
  数据警报管理器包括有关上次警报服务处理数据警报定义的时间和已发送数据警报消息的次数的信息。 您可能要立即运行并发送警报消息，而非等待计划指定的时间。 当您从数据警报管理器运行警报时，会覆盖警报计划，并根据运行报表所需的时间和您选择运行警报的报表服务器的繁忙程度，在一至五分钟之内启动对警报定义的处理。 但是，如果您指定仅当结果更改时才发送消息，则结果没有更改时，将不创建或发送消息。 有关详细信息，请参阅 [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。
 
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "78177007"
 
 
 
-##  <a name="HowTo"></a> 相关任务
+##  <a name="related-tasks"></a><a name="HowTo"></a> 相关任务
  本节列出了向您展示如何管理警报和编辑警报定义的过程。
 
 -   [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)

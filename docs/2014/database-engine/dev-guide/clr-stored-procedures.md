@@ -21,10 +21,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77213963"
 ---
 # <a name="clr-stored-procedures"></a>CLR 存储过程
@@ -48,8 +48,7 @@ ms.locfileid: "77213963"
  信息可通过若干方式从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 存储过程返回。 这包括输出参数、表格结果和消息。  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT 参数和 CLR 存储过程  
- 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程一样，信息可通过使用 OUTPUT 参数从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 存储过程返回。 用于创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 语法与用于创建使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 撰写的存储过程相同。 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类中实现代码的相应参数应将传址调用参数用作参数。 请注意，Visual Basic 不支持采用与 c # 相同的方式来输出参数。 必须按引用指定参数，并应用\<Out （） > 特性来表示 OUTPUT 参数，如下所示：  
+ 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程一样，信息可通过使用 OUTPUT 参数从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 存储过程返回。 用于创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 语法与用于创建使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 撰写的存储过程相同。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类中实现代码的相应参数应将传址调用参数用作参数。 请注意，Visual Basic 不支持采用与 c # 相同的方式来输出参数。 必须按引用指定参数，并应用\<Out （） > 特性来表示 OUTPUT 参数，如下所示：  
   
 ```vb
 Imports System.Runtime.InteropServices  
@@ -136,8 +135,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  请注意， *sum*声明为`int` SQL Server 数据类型，并且 clr 存储过程中定义的*值*参数指定为`SqlInt32` clr 数据类型。 当调用程序执行 clr 存储[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]过程时，会自动将`SqlInt32` clr 数据类型转换为`int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  有关可以转换和不能转换哪些 CLR 数据类型的详细信息，请参阅[映射 Clr 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
 ### <a name="returning-tabular-results-and-messages"></a>返回表格结果和消息  
- 将表格结果和消息返回到客户端通过 `SqlPipe` 对象执行，该对象通过使用 `Pipe` 类的 `SqlContext` 属性获取。 
-  `SqlPipe` 对象具有 `Send` 方法。 通过调用 `Send` 方法，您可以通过管道将数据传输到调用应用程序。  
+ 将表格结果和消息返回到客户端通过 `SqlPipe` 对象执行，该对象通过使用 `Pipe` 类的 `SqlContext` 属性获取。 `SqlPipe` 对象具有 `Send` 方法。 通过调用 `Send` 方法，您可以通过管道将数据传输到调用应用程序。  
   
  下面是 `SqlPipe.Send` 方法的若干重载，包括发送 `SqlDataReader` 的一个方法以及只发送文本字符串的另一个方法。  
   

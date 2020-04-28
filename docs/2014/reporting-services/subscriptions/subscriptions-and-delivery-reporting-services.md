@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bce1d4935caaa718b2d7366f3c7d7c092e1cf235
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177068"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>订阅和传递 (Reporting Services)
@@ -33,7 +33,7 @@ ms.locfileid: "78177068"
 
  你可以为单个报表创建多个订阅，以便使用不同的订阅选项；例如，可以指定不同的参数值来生成三个报表版本，如西部地区销售报表、东部地区销售和全部销售。
 
- ![示例 SSRS 订阅流](../media/ssrs-subscription-example-flow.png "ssrs 订阅流示例")
+ ![示例 SSRS 订阅流](../media/ssrs-subscription-example-flow.png "示例 SSRS 订阅流")
 
  并非在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本中均提供订阅。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
 
@@ -56,11 +56,11 @@ ms.locfileid: "78177068"
 
 -   [如何处理订阅](#bkmk_subscription_processing)
 
- **本节中的主题：**
+ **本节主题：**
 
--   [Reporting Services 中的电子邮件传递](e-mail-delivery-in-reporting-services.md)介绍 Report Server 电子邮件传递操作和配置。
+-   [Reporting Services 中的电子邮件传递](e-mail-delivery-in-reporting-services.md) 介绍报表服务器的电子邮件传递操作和配置。
 
--   [Reporting Services 中的文件共享传递](file-share-delivery-in-reporting-services.md)介绍 Report Server 文件共享传递操作和配置。
+-   [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) 介绍报表服务器的文件共享传递操作和配置。
 
 -   [SharePoint Library Delivery in Reporting Services](sharepoint-library-delivery-in-reporting-services.md) 介绍到 SharePoint 库的订阅传递。
 
@@ -74,9 +74,8 @@ ms.locfileid: "78177068"
 
 -   [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](manage-subscription-owners-and-run-subscription-powershell.md)
 
-##  <a name="bkmk_subscription_scenarios"></a>订阅和传递方案
- 针对每个订阅，可以配置传递选项且可用选项由所选择的传递扩展插件决定。 传递扩展插件是支持某种分发方式的模块。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件，传递扩展插件可以由第三方供应商提供。
+##  <a name="subscription-and-delivery-scenarios"></a><a name="bkmk_subscription_scenarios"></a>订阅和传递方案
+ 针对每个订阅，可以配置传递选项且可用选项由所选择的传递扩展插件决定。 传递扩展插件是支持某种分发方式的模块。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件，传递扩展插件可以由第三方供应商提供。
 
  如果您是开发人员，则可以创建自定义传递扩展插件，以便支持更多应用场景。 有关详细信息，请参阅 [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md)。
 
@@ -89,31 +88,30 @@ ms.locfileid: "78177068"
 |预加载缓存|如果你具有参数化报表的多个实例或大量查看报表的用户，则可以在缓存中预先加载报表以便缩短需用于显示报表的处理时间。|
 |数据驱动的报表|使用数据驱动的订阅可以在运行时自定义报表输出、传递选项和报表参数设置。 订阅使用查询在运行时从数据源获取输入值。 您可以使用数据驱动订阅执行邮件合并操作，将报表发送到在处理订阅时确定的一组订户。|
 
-##  <a name="bkmk_standard_and_datadriven"></a>标准订阅和数据驱动订阅
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]支持两种类型的订阅：**标准**订阅和**数据驱动**订阅。 标准订阅由各个用户创建和管理。 标准订阅由静态值组成，这些值在订阅处理期间不能改变。 每个标准订阅都有一组报表显示选项、传递选项和报表参数。
+##  <a name="standard-and-data-driven-subscriptions"></a><a name="bkmk_standard_and_datadriven"></a>标准订阅和数据驱动订阅
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 支持两种类型的订阅： **标准订阅** 和 **数据驱动订阅**。 标准订阅由各个用户创建和管理。 标准订阅由静态值组成，这些值在订阅处理期间不能改变。 每个标准订阅都有一组报表显示选项、传递选项和报表参数。
 
  数据驱动订阅通过查询外部数据源（提供用于指定收件人、报表参数或应用程序格式的值）来获取运行时订阅信息。 如果收件人列表非常大，或希望每位收件人的报表输出都不相同，则可以使用数据驱动订阅。 若要使用数据驱动订阅，必须具备生成查询的专业知识并了解如何使用参数。 通常，由报表服务器管理员创建和管理这些订阅。 有关详细信息，请参阅以下主题：
 
 -   [数据驱动订阅](data-driven-subscriptions.md)
 
--   [创建数据驱动订阅 &#40;SSRS 教程&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)
+-   [创建数据驱动订阅（SSRS 教程）](../create-a-data-driven-subscription-ssrs-tutorial.md)
 
-##  <a name="bkmk_subscription_requirements"></a>订阅要求
+##  <a name="subscription-requirements"></a><a name="bkmk_subscription_requirements"></a>订阅要求
  在对报表创建订阅之前，必须满足以下前提条件：
 
 |要求|说明|
 |-----------------|-----------------|
 |权限|您必须对报表具有访问权限。 在订阅报表之前，您必须具有查看该报表的权限。<br /><br /> 您的角色分配必须包括“管理各个订阅”任务。|
-|已存储凭据|若要创建订阅，报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅配置为使用当前用户的模拟凭据或委托凭据连接到外部数据源的报表。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅为[报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必须拥有查看报表和创建单个订阅的权限。 必须在 Report Server 上启用**Scheduled Events 和报表传递**。 有关详细信息，请参阅 [创建和管理本机模式报表服务器的订阅](../create-manage-subscriptions-native-mode-report-servers.md)。|
+|已存储凭据|若要创建订阅，报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅配置为使用当前用户的模拟凭据或委托凭据连接到外部数据源的报表。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅 [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必须拥有查看报表和创建单个订阅的权限。 必须对报表服务器启用 **“预定的事件和报表传递”** 。 有关详细信息，请参阅 [创建和管理本机模式报表服务器的订阅](../create-manage-subscriptions-native-mode-report-servers.md)。|
 |报表中的用户依赖值|仅在标准订阅情况下，如果报表在筛选器中使用用户帐户信息或将此信息以文本形式显示在报表上，则可以对这些报表创建订阅。 在报表中，通过解析为当前用户的 `User!UserID` 表达式指定用户帐户名。 创建订阅时，将把创建订阅的用户视为当前用户。|
 |无模型项安全性|不能订阅将包含模型项安全设置的模型用作数据源的报表生成器报表。 此限制仅适用于使用模型项安全性的报表。|
 |参数值|如果报表使用参数，则必须由报表自己或在所定义的订阅中指定参数值。 如果报表中已定义了默认值，则可以将参数值设置为使用默认值。|
 
-##  <a name="bkmk_delivery_extensions"></a>传递扩展插件
+##  <a name="delivery-extensions"></a><a name="bkmk_delivery_extensions"></a>传递扩展插件
  订阅将在报表服务器上进行处理，并且通过该服务器上部署的传递扩展插件分发。 默认情况下，可以创建将报表发送到共享文件夹或电子邮件地址的订阅。 如果将报表服务器配置为 SharePoint 集成模式，则还可以将报表发送到 SharePoint 库。
 
- 用户创建订阅后，就可以选择可用的传递扩展插件之一来确定传递报表的方式。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括以下传递扩展插件。
+ 用户创建订阅后，就可以选择可用的传递扩展插件之一来确定传递报表的方式。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括以下传递扩展插件。
 
 |传递扩展插件|说明|
 |------------------------|-----------------|
@@ -125,7 +123,7 @@ ms.locfileid: "78177068"
 > [!NOTE]
 >  报表传递是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 体系结构的可扩展部分。 第三方供应商可以创建自定义的传递扩展插件，将报表传送到不同的位置或设备。 有关自定义传递扩展插件的详细信息，请参阅 [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md)。
 
-##  <a name="bkmk_parts_of_subscription"></a>订阅的各部分
+##  <a name="parts-of-a-subscription"></a><a name="bkmk_parts_of_subscription"></a>订阅的各部分
  订阅定义由以下几部分组成：
 
 -   指向可在无人参与模式下运行的报表（即，使用存储凭据或不使用任何凭据的报表）的指针。
@@ -136,7 +134,7 @@ ms.locfileid: "78177068"
 
 -   处理订阅的条件，表现形式为事件。
 
-     通常，运行报表的条件是基于时间的。 例如，您可能想要在 UTC 时间每周二下午 3 点运行 UTC。 但是，如果该报表作为快照运行，则您可以指定订阅在快照刷新时运行。
+     通常，运行报表的条件是基于时间的。 例如，您可能想要在 UTC 时间每周二下午 3 点运行 特定的报表。 但是，如果该报表作为快照运行，则您可以指定订阅在快照刷新时运行。
 
 -   运行报表时使用的参数。
 
@@ -144,9 +142,8 @@ ms.locfileid: "78177068"
 
  订阅信息与各个报表一起存储在报表服务器数据库中。 您不能将订阅和与其相关的报表分开管理。 请注意，不能扩展订阅来使其包含说明、其他自定义文本或其他元素。 订阅只能包含上面列出的各项。
 
-##  <a name="bkmk_subscription_processing"></a>如何处理订阅
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中包含计划和传递处理器，该处理器提供计划报表和向用户传递报表的功能。 报表服务器持续对它所监视的事件作出响应。 当发生与为某个订阅定义的条件相符的事件后，报表服务器将读取该订阅，以确定如何处理和传递报表。 报表服务器还将请求在订阅中指定的传递扩展插件。 在运行该传递扩展插件后，报表服务器将从订阅提取传递信息，再将这些信息传递给该传递扩展插件进行处理。
+##  <a name="how-subscriptions-are-processed"></a><a name="bkmk_subscription_processing"></a> 如何处理订阅
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中包含计划和传递处理器，该处理器提供计划报表和向用户传递报表的功能。 报表服务器持续对它所监视的事件作出响应。 当发生与为某个订阅定义的条件相符的事件后，报表服务器将读取该订阅，以确定如何处理和传递报表。 报表服务器还将请求在订阅中指定的传递扩展插件。 在运行该传递扩展插件后，报表服务器将从订阅提取传递信息，再将这些信息传递给该传递扩展插件进行处理。
 
  该传递扩展插件将以在该订阅中定义的格式呈现报表，再将报表或通知传递到指定的目标。 如果不能传递报表，则将在报表服务器日志文件中记录一个条目。 如果您希望支持重试操作，则可以对报表服务器进行配置，使其在第一次传递尝试失败后重新尝试。
 

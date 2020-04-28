@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca2cd956850de245f507e8cf24b93e87404429b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174259"
 ---
 # <a name="granting-process-database-permissions"></a>授予处理数据库权限
@@ -56,6 +56,6 @@ ms.locfileid: "78174259"
 >  通过下载和安装示例，可以获得第 10 课中使用的完整项目。 有关详细信息，请参阅[安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)。
 
 ## <a name="see-also"></a>另请参阅
- [角色和权限 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)
+ [角色和权限 (Analysis Services)](multidimensional-models/roles-and-permissions-analysis-services.md)
 
 

@@ -23,19 +23,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76971394"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>授予对本机模式报表服务器的权限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的授权和身份验证子系统来确定哪些用户可以在报表服务器上执行操作和访问项。 基于角色的授权将角色分为用户或组可以执行的操作组。 身份验证基于内置的 Windows 身份验证或您提供的自定义身份验证模块。 您对这两种身份验证类型都可以使用预定义或自定义角色。  
   
 ## <a name="using-roles-to-grant-report-server-access"></a>使用角色授予报表服务器访问权限  
- 所有用户都在定义特定访问级别的角色上下文中与报表服务器进行交互。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了预定义的角色，您可以为用户和组分配这些角色，从而让其可以立即访问报表服务器。 预定义角色例如有“内容管理员”  、“发布者”  和“浏览者”  。 每个角色定义一个相关任务的集合。 例如，“发布者”  具有添加报表和创建用于存储这些报表的文件夹的权限。  
+ 所有用户都在定义特定访问级别的角色上下文中与报表服务器进行交互。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了预定义的角色，您可以为用户和组分配这些角色，从而让其可以立即访问报表服务器。 预定义角色例如有“内容管理员”****、“发布者”**** 和“浏览者”****。 每个角色定义一个相关任务的集合。 例如，“发布者”  具有添加报表和创建用于存储这些报表的文件夹的权限。  
   
- 角色分配通常从父节点继承，但是您可以通过为特定项创建新的角色分配来打破权限继承。 某个用户作为一个报表的“内容管理员”  角色成员的同时也可以是另一个报表的“浏览者”  角色的成员。  
+ 角色分配通常从父节点继承，但是您可以通过为特定项创建新的角色分配来打破权限继承。 某个用户作为一个报表的“内容管理员” **** 角色成员的同时也可以是另一个报表的“浏览者” **** 角色的成员。  
   
  若要授予对报表服务器项和操作的访问权限，请遵循下列原则：  
   
@@ -70,10 +70,10 @@ ms.locfileid: "76971394"
   
 ## <a name="see-also"></a>另请参阅  
  [预定义角色](role-definitions-predefined-roles.md)   
- [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [授予对 SharePoint 站点上的报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [针对报表服务器的身份验证](authentication-with-the-report-server.md)   
  （create-and-manage-role-assignments.md）   
- [Reporting Services 安全性和保护](reporting-services-security-and-protection.md)   
+ [Reporting Services 安全和保护](reporting-services-security-and-protection.md)   
  [报表服务器内容管理（SSRS 本机模式）](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

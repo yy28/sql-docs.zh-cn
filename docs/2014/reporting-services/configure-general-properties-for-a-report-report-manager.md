@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23184e77efbe41eae3d4de434a30ff8f3a4847ff
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177027"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>配置报表的常规属性（报表管理器）
@@ -26,9 +26,9 @@ ms.locfileid: "78177027"
 
 1.  启动 [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。
 
-2.  在报表管理器中，导航到 **“内容”** 页。 导航到要配置常规属性的报表，并打开该报表。
+2.  在报表管理器中，导航到 "**内容**" 页。 导航到要配置常规属性的报表，并打开该报表。
 
-3.  单击“属性”  选项卡。
+3.  单击“属性”**** 选项卡。
 
      或者，如果 "**内容**" 页在详细信息视图中，请单击属性页图标：
 

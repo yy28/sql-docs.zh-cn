@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176287"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
@@ -68,7 +68,7 @@ ms.locfileid: "78176287"
 ### <a name="adding-variables"></a>添加变量
  如果要在脚本中使用现有变量，可以在 "**脚本转换编辑器**" 的`ReadOnlyVariables` " `ReadWriteVariables` **脚本**" 页上的和属性字段中添加这些变量。
 
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击**** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击 **...** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
 
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。
 
@@ -82,8 +82,7 @@ ms.locfileid: "78176287"
 ### <a name="understanding-the-auto-generated-code"></a>了解自动生成的代码
  创建并配置目标组件后打开 VSTA IDE 时，可编辑的 `ScriptMain` 类将显示在代码编辑器中，其中有 `ProcessInputRow` 方法的存根。 在 `ScriptMain` 类中可编写自定义代码，`ProcessInputRow` 是目标组件中最重要的方法。
 
- 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的`BufferWrapper`和`ComponentWrapper`项目项。 
-  `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。
+ 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的`BufferWrapper`和`ComponentWrapper`项目项。 `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。
 
  在运行时，数据流引擎调用 `ProcessInput` 类中的 `UserComponent` 方法，该方法重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 而 `ProcessInput` 方法遍历输入缓冲区中的所有行并为每一行调用一次 `ProcessInputRow` 方法。
 
@@ -109,9 +108,9 @@ ms.locfileid: "78176287"
 
  如果要运行此示例代码，必须按照如下方式配置包和组件：
 
-1.  创建使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口连接 `SqlClient` 数据库的 `AdventureWorks` 连接管理器。
+1.  创建使用 `SqlClient` 访问接口连接 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据库的 `AdventureWorks` 连接管理器。
 
-2.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，创建一个目标表：
+2.  在 `AdventureWorks` 数据库中运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，创建一个目标表：
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

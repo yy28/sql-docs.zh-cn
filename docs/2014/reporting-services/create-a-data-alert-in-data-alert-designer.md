@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a8cd7ddaac1138599701e4ccfe14c3cb0b84656
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173943"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
@@ -48,7 +48,7 @@ ms.locfileid: "78173943"
 
 4.  还可以在“报表数据名称”下拉列表中选择其他数据馈送****。
 
-     如果没有从报表生成任何数据馈送，您无法为报表创建警报定义。 报表的布局确定每个数据馈送的内容。 有关详细信息，请参阅[从报表生成数据馈送 &#40;报表生成器和 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。
+     如果没有从报表生成任何数据馈送，您无法为报表创建警报定义。 报表的布局确定每个数据馈送的内容。 有关详细信息，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。
 
 5.  或者在 **“警报名称”** 文本框中，将默认名称更新为更有意义的名称。
 
@@ -109,11 +109,11 @@ ms.locfileid: "78173943"
 
 20. 或者，在 **“主题”** 文本框中，更新警报消息的“主题”行。
 
-     默认“主题”为“**数据警报名称> 的数据警报”\<**。
+     默认“主题”为“\<数据警报名称> 的数据警报”****。
 
 21. 还可以在 **“说明”** 文本框中键入对警报消息的说明。
 
-22. 单击“保存”  。
+22. 单击“ **保存**”。
 
 ## <a name="see-also"></a>另请参阅
  [用于警报管理员的](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)[数据警报设计器](../../2014/reporting-services/data-alert-designer.md)数据警报管理器[Reporting Services 数据警报](../ssms/agent/alerts.md)

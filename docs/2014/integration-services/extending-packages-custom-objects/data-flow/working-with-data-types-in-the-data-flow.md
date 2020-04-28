@@ -15,18 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fe4f8527bf23ac1af36b6661f2d8f98350a96e7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176357"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>在数据流中使用数据类型
   在 Integration Services 中开发自定义数据流组件时，将数据复制到数据流缓冲区和从数据流缓冲区复制数据以及转换值的过程中，需要经常使用数据类型。 本主题中的信息有助于您选择正确的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型，以及在使用这些数据类型时选择正确的方法。
 
 ## <a name="inserting-data-into-the-data-flow"></a>将数据插入数据流
- 
-  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 类提供一系列将数据复制到缓冲区列的 `Set` 方法，以及对应的一系列从缓冲区列检索数据的 `Get` 方法。 下表显示了与每种 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型相对应的方法。
+ <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 类提供一系列将数据复制到缓冲区列的 `Set` 方法，以及对应的一系列从缓冲区列检索数据的 `Get` 方法。 下表显示了与每种 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型相对应的方法。
 
 ### <a name="set-methods-to-use-with-data-types"></a>用于各数据类型的 Set 方法
  下表在第一列中列出数据类型，然后列出对应的 `Set` 和 `Get` 方法。
@@ -91,7 +90,7 @@ ms.locfileid: "78176357"
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt64%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|
 
 ## <a name="mapping-data-types-in-the-data-flow"></a>在数据流中映射数据类型
- 将数据从源经过转换移动到目标时，数据流组件有时必须在 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 枚举中定义的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 类型和在 System 命名空间中定义的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 托管数据类型之间转换数据类型  。 此外，组件有时必须先将一种 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型转换为另一种数据类型，然后才能将该类型转换为托管类型。
+ 将数据从源经过转换移动到目标时，数据流组件有时必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 枚举中定义的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 类型和在 System 命名空间中定义的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 托管数据类型之间转换数据类型  。 此外，组件有时必须先将一种 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型转换为另一种数据类型，然后才能将该类型转换为托管类型。
 
 > [!NOTE]
 >  默认情况下安装在 C:\Program Files\Microsoft SQL Server\120\DTS\MappingFiles 中的 XML 格式的映射文件与本主题中讨论的数据类型映射无关。 这些文件将数据类型从一个数据库版本或系统映射到另一个数据库版本或系统（例如，从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 映射到 Oracle），并且只由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 导入和导出向导使用。 有关这些映射文件的详细信息，请参阅 [SQL Server 导入和导出向导](../../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。

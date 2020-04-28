@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175336"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自动将属性成员分组
   在浏览多维数据集时，通常根据一个属性层次结构的成员来确定另一个属性层次结构的成员的维度。 例如，可以按城市、购买的产品或性别将客户销售分组。 但是，对于某些类型的属性，根据属性层次结构中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的成员分布自动创建属性成员的分组非常有用。 例如，可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建客户的年收入值组。 进行此操作时，浏览属性层次结构的用户将看到组的名称和值，而不是成员本身。 这就限制了向用户显示的级别的数量，从而更有助于进行分析。
 
- 
-  **DiscretizationMethod** 属性可以确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是否创建分组，并可确定要执行的分组类型。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不执行任何分组。 如果启用了自动分组，则可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性的结构自动确定最佳分组方法，也可以选择下面列表中的一个分组算法来指定分组方法：
+ **DiscretizationMethod** 属性可以确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是否创建分组，并可确定要执行的分组类型。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不执行任何分组。 如果启用了自动分组，则可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性的结构自动确定最佳分组方法，也可以选择下面列表中的一个分组算法来指定分组方法：
 
  **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]创建组范围，以便在各个组之间平均分配维度成员的总体人口数。
 
@@ -37,7 +36,7 @@ ms.locfileid: "78175336"
 
 2.  在“数据源视图”窗格中，右键单击 Customer 表，再单击“浏览数据”。************
 
-     注意，**YearlyIncome** 列的值的范围。 如果未启用成员分组，这些值将成为**年收入**属性层次结构的成员。
+     注意， **YearlyIncome** 列的值的范围。 如果未启用成员分组，这些值将成为 **年收入** 属性层次结构的成员。
 
 3.  关闭“浏览 Customer 表”**** 选项卡。
 
@@ -69,7 +68,7 @@ ms.locfileid: "78175336"
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>浏览已修改的属性层次结构
 
-1.  在 ** 的“生成”菜单上，单击“部署 Analysis Services 教程”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]****。
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。
 
 2.  成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后单击“浏览”**** 选项卡上的“重新连接”****。
 
@@ -107,7 +106,7 @@ ms.locfileid: "78175336"
 
 2.  在“属性”窗口中，将 **DiscretizationBucketCount** 属性值更改为 **10**。
 
-3.  在 ** 的“生成”菜单上，单击“部署 Analysis Services 教程”**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]****。
+3.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。
 
 4.  成功完成部署后，切换回 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集的多维数据集设计器。
 
@@ -125,6 +124,6 @@ ms.locfileid: "78175336"
  [隐藏和禁用属性层次结构](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)
 
 ## <a name="see-also"></a>另请参阅
- [&#40;离散化&#41;组属性成员](multidimensional-models/attribute-properties-group-attribute-members.md)
+ [对属性成员进行分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)
 
 

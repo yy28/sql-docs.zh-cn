@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 77d613e89d78b64147c9e93d2338bd11debb90d3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176076"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>具有显式顶端的派生层次结构 (Master Data Services)
@@ -49,15 +49,15 @@ ms.locfileid: "78176076"
 
 |任务说明|主题|
 |----------------------|-----------|
-|创建派生层次结构。|[创建派生层次结构 &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|
-|创建显式层次结构。|[创建显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
-|删除现有派生层次结构。|[删除派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
+|创建派生层次结构。|[创建派生层次结构 (Master Data Services)](create-a-derived-hierarchy-master-data-services.md)|
+|创建显式层次结构。|[创建显式层次结构 (Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
+|删除现有派生层次结构。|[删除派生层次结构 (Master Data Services)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
 |||
 
 ## <a name="related-content"></a>相关内容
 
--   [派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
+-   [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
 
--   [显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)
+-   [显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)
 
 

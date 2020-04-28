@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74346c2563366300058c1a33bd625162aec7121e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172596"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>表（报表生成器和 SSRS）
@@ -25,13 +25,12 @@ ms.locfileid: "78172596"
 
  若要快速学会使用表，请参阅[教程：创建基本表报表（报表生成器）](../tutorial-creating-a-basic-table-report-report-builder.md)或[创建基本表报表（SSRS 教程）](../create-a-basic-table-report-ssrs-tutorial.md)。
 
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括若干使用表的报表。 您可以通过以下方式了解有关表的信息：通过在报表生成器或报表设计器中浏览示例报表的报表定义，或通过在报表生成器或报表设计器中预览所呈现的报表。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](https://go.microsoft.com/fwlink/?LinkID=198283)。
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括若干使用表的报表。 您可以通过以下方式了解有关表的信息：通过在报表生成器或报表设计器中浏览示例报表的报表定义，或通过在报表生成器或报表设计器中预览所呈现的报表。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](https://go.microsoft.com/fwlink/?LinkID=198283)。
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="AddingTable"></a>添加表以显示详细信息数据
+##  <a name="adding-a-table-to-display-detail-data"></a><a name="AddingTable"></a> 添加表以显示详细信息数据
  从功能区上的“插入”选项卡向设计图面添加一个表。 您可以通过使用表或矩阵向导添加表（包括创建数据源连接和数据集以及配置表），或者基于您手动配置的表模板添加表。
 
 > [!NOTE]
@@ -47,9 +46,9 @@ ms.locfileid: "78172596"
 
  ![设计图面上的表模板，选中](../media/rs-tabletemplatenewselected.gif "设计图面上的表模板，选中")
 
- 数据行的行控点显示详细信息符号（![包含3个平行线的行控点，详细信息行](../media/rs-icontablix-detailsrow.gif "详细信息行的 3 条平行线的行控点")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下面的关系图显示了具有以下字段的表数据区域：Date、Order、Product、Qty 和 Line Total。
+ 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行控点](../media/rs-icontablix-detailsrow.gif "详细信息行的 3 条平行线的行控点")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下面的关系图显示了具有以下字段的表数据区域：Date、Order、Product、Qty 和 Line Total。
 
- ![带有粗体显示的列标题的表的设计](../media/rs-basictabledetailsformatteddesign.gif "带有粗体显示的列标题的表的设计")
+ ![带有以粗体显示的列标题的表的设计](../media/rs-basictabledetailsformatteddesign.gif "带有以粗体显示的列标题的表的设计")
 
  通过在预览中查看报表来检查您的设计。 根据需要，表可在页面内向下扩展。 针对数据集查询结果集中的每一行，每个标签行和详细信息行都显示一次。 订单上售出的每个产品都会在单独一行中列出，后跟项的数量和行总计，如下图所示：
 
@@ -68,7 +67,7 @@ ms.locfileid: "78172596"
 
  有关详细信息，请参阅[向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。
 
-##  <a name="AddingRowGroups"></a>向表中添加行组
+##  <a name="adding-row-groups-to-a-table"></a><a name="AddingRowGroups"></a> 将行组添加到表
  正如可以将字段从“报表数据”窗格拖到单元格以显示详细信息数据一样，可以将字段拖到“分组”窗格以添加组。 对于表，可将字段拖到“行组”窗格。 在添加组后，表会自动将单元格添加到其中要显示组值的行组区域的新列中。 有关区域的详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](tablix-data-region-areas-report-builder-and-ssrs.md)。
 
  下图显示了“设计”视图中具有两个嵌套行组的表。 这两个行组是通过以下方法创建的：依次将 Order 字段和 Date 字段拖到“行组”窗格并将每个组作为现有组的父组插入。 该图显示了基于日期的父组和基于订单号的子组，以及默认情况下定义的详细信息组。
@@ -92,7 +91,7 @@ ms.locfileid: "78172596"
 
  有关详细信息，请参阅[向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。
 
-##  <a name="RemovingHidingRows"></a>删除或隐藏详细信息行
+##  <a name="removing-or-hiding-detail-rows"></a><a name="RemovingHidingRows"></a> 删除或隐藏详细信息行
  在预览了报表中的表后，您可能会决定删除现有详细信息行。 或者可能决定按默认情况隐藏详细信息行，并允许用户在查看更多或更少详细信息之间切换，就像在明细报表中一样。
 
  若要从表中删除详细信息行，请使用“分组”窗格。 选择详细信息组，并使用快捷菜单删除显示详细信息数据的组和行。 下图显示了按日期和订单号分组的表的设计视图，但没有详细信息行。 没有向该表添加任何总计行。
@@ -106,17 +105,17 @@ ms.locfileid: "78172596"
 
  下图在预览中显示此报表。
 
- ![预览，带有组而无详细信息行的表](../media/rs-basictablegroupsnodetailspreview.gif "预览，带有组而无详细信息行的表")
+ ![带有组而无详细信息行的表预览](../media/rs-basictablegroupsnodetailspreview.gif "带有组而无详细信息行的表预览")
 
  若要在表中添加或删除行，请参阅[插入或删除行（报表生成器和 SSRS）](insert-or-delete-a-row-report-builder-and-ssrs.md)。
 
  最初查看报表时，还可以隐藏详细信息行。 为此，可以创建明细报表，其中将仅显示父组数据。 对于每个内部组（包括详细信息组），可为包含组的分组单元格添加可见性切换功能。 例如，对于详细信息组，可为显示订单号组值的文本框添加切换功能。 对于订单号组，可为显示日期组值的文本框添加切换功能。 下图显示了 2001 年 9 月 1 日的行，在展开状态下显示了前几个订单。
 
- ![预览，带有展开的明细节点的表](../media/rs-basictablegroupsdrilldownpreview.gif "预览，带有展开的明细节点的表")
+ ![带有展开的明细节点的表预览](../media/rs-basictablegroupsdrilldownpreview.gif "带有展开的明细节点的表预览")
 
  有关详细信息，请参阅 [为项添加展开或折叠操作（报表生成器和 SSRS）](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。
 
 ## <a name="see-also"></a>另请参阅
- [&#40;报表生成器和 ssrs&#41;表达式对数据进行筛选、分组和排序](filter-group-and-sort-data-report-builder-and-ssrs.md) [&#40;报表生成器](expressions-report-builder-and-ssrs.md)&#41;[和 ssrs &#40;](expression-examples-report-builder-and-ssrs.md)报表生成器&#41;&#40;报表生成器&#41;[](tables-matrices-and-lists-report-builder-and-ssrs.md)
+ [&#40;报表生成器和 ssrs&#41;表达式对数据进行筛选、分组和排序](filter-group-and-sort-data-report-builder-and-ssrs.md) [&#40;报表生成器](expressions-report-builder-and-ssrs.md)&#41;[和 ssrs &#40;](expression-examples-report-builder-and-ssrs.md)报表生成器&#41;&#40;报表生成器&#41;[Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)
 
 

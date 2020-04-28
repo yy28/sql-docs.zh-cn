@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 5cefc88469ac3c98f3bb944c0e490f1ce7e88472
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172361"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>报表管理器（SSRS 本机模式）
@@ -25,7 +25,7 @@ ms.locfileid: "78172361"
 
 -   [图标说明](#bkmk_icon_descriptions)
 
-##  <a name="bkmk_whatis_report_manager"></a>什么是报表管理器？
+##  <a name="what-is-report-manager"></a><a name="bkmk_whatis_report_manager"></a>什么是报表管理器？
  可以使用报表管理器执行以下任务：
 
 -   查看、搜索、打印和订阅报表。
@@ -57,11 +57,11 @@ ms.locfileid: "78172361"
 
  仅在特定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中才提供某些报表管理器功能。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
 
- 如果是全新安装，则只有本地管理员有足够的权限来处理内容和设置。 若要对其他用户授予权限，本地管理员必须创建角色分配，以便提供对报表服务器的访问权限。 用户随后可以访问的应用程序页和任务将取决于该用户的角色分配。 有关详细信息，请参阅[授予用户对报表服务器的访问权限 &#40;报表管理器&#41;](security/grant-user-access-to-a-report-server.md)。
+ 如果是全新安装，则只有本地管理员有足够的权限来处理内容和设置。 若要对其他用户授予权限，本地管理员必须创建角色分配，以便提供对报表服务器的访问权限。 用户随后可以访问的应用程序页和任务将取决于该用户的角色分配。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](security/grant-user-access-to-a-report-server.md)。
 
  如果您在使用 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] 或 Windows Server 2008，则必须配置报表管理器以便进行本地管理。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
 
-##  <a name="bkmk_start_report_manager"></a>启动并使用报表管理器
+##  <a name="start-and-use-report-manager"></a><a name="bkmk_start_report_manager"></a>启动并使用报表管理器
  报表管理器是一种 Web 应用程序，您可通过在浏览器窗口的地址栏中键入报表管理器 URL 的方式来将其打开。 启动报表管理器时，基于您在报表服务器中拥有的权限，所看到的页面、链接和选项会有所不同。 若要执行某项任务，必须为自己分配包括该任务的角色。 如果为某用户分配了具有完整权限的角色，则该用户可以访问用来管理报表服务器的所有应用程序菜单和页。 如果为某用户分配的角色具有查看和运行报表的权限，则该用户只能看到支持这些活动的菜单和页。 对于不同的报表服务器，甚至对于存储在单个报表服务器上的不同报表和文件夹，每个用户可以具有不同的角色分配。
 
  有关角色的详细信息，请参阅 [授予对本机模式报表服务器的权限](security/granting-permissions-on-a-native-mode-report-server.md)。
@@ -79,14 +79,14 @@ ms.locfileid: "78172361"
 
     -   默认情况下，该 URL 为 `http://[ComputerName]/reports`的技能。
 
-    -   报表服务器可能已配置为使用特定的端口。 例如 `http:// [ComputerName]:80/reports` 或 `http:// [ComputerName]:8080/reports`。
+    -   报表服务器可能已配置为使用特定的端口。 例如，`http:// [ComputerName]:80/reports` 或 `http:// [ComputerName]:8080/reports`。
 
 ## <a name="configuring-report-manager"></a>配置报表管理器
  报表管理器配置包含为应用程序定义 URL 的过程。 如果部署包括在单独的计算机上运行报表管理器，则还需要进行其他配置。
 
  可以自定义报表管理器，但可自定义的方式非常有限。 例如，您可以在“站点设置”页上修改应用程序标题。 如果您是 Web 开发人员，则可以修改包含报表管理器所用样式信息的样式表。 由于没有专门对报表管理器进行设计以支持自定义，因此，必须对所做的任何修改进行全面测试。 如果发现报表管理器不能满足您的需要，则可以开发自定义报表查看器，或者配置 SharePoint Web 部件以便在 SharePoint 站点中找到和查看报表。 有关详细信息，请参阅[配置报表管理器（本机模式）](report-server/configure-web-portal.md)。
 
-##  <a name="bkmk_icon_descriptions"></a>图标说明
+##  <a name="icon-descriptions"></a><a name="bkmk_icon_descriptions"></a>图标说明
  下表对报表管理器中使用的图标进行了说明。 有关显示在报表工具栏中的图标的详细信息，请参阅[HTML 查看器和报表工具栏](html-viewer-and-the-report-toolbar.md)。
 
 |图标|说明|操作|
@@ -98,7 +98,7 @@ ms.locfileid: "78172361"
 |![订阅图标](media/hlp-16subscription.gif "订阅图标")|订阅|单击订阅图标或说明可编辑相应的订阅。|
 |![数据驱动订阅图标](media/hlp-16subscriptiondd.gif "数据驱动订阅图标")|数据驱动订阅|单击数据驱动订阅图标或说明可编辑相应的订阅。|
 |![通用资源图标](media/hlp-16file.gif "通用资源图标")|资源|单击资源图标或名称可打开该资源。 该资源将在单独的窗口中打开。|
-|![共享数据源图标](media/hlp-16datasource.png "Shared data source icon")|共享数据源项|单击共享数据源图标可打开数据源的属性页、报表列表和订阅列表。|
+|![共享数据源图标](media/hlp-16datasource.png "共享数据源图标")|共享数据源项|单击共享数据源图标可打开数据源的属性页、报表列表和订阅列表。|
 |!["属性页" 图标](media/hlp-16prop.gif "属性页图标")|属性页|单击属性图标可访问其他页面来设置属性和安全性。|
 
 ## <a name="see-also"></a>另请参阅

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c7b827440609bc2de5b75fbeedbf441fa2a9d63
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176787"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>设置文本和占位符的格式（报表生成器和 SSRS）
@@ -33,7 +33,7 @@ ms.locfileid: "78176787"
 
  在此图中，文本框本身带有边框，而且所有文本均位于同一文本框内，但文本具有各种不同的格式。
 
- 若要快速开始，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。
+ 若要快速开始使用，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -71,6 +71,6 @@ ms.locfileid: "78176787"
  在 **“文本框属性”** 对话框的 **“对齐”** 中，可以指定文本的水平对齐方式。 如果未为对齐指定值，则使用对齐的默认值 **“默认”** 。 这表示将根据占位符值的字段类型对齐文本。 如果指定的表达式的计算结果为非字符串值（即，非数字），则文本为右对齐。 如果表达式的计算结果为字符串值（如数字），则文本为左对齐。
 
 ## <a name="see-also"></a>另请参阅
- [表达式 &#40;报表生成器和 ssrs&#41;](expressions-report-builder-and-ssrs.md) [设置图表上轴标签的格式 &#40;报表生成器和 ssrs&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md) [仪表 &#40;上的格式刻度报表生成器和 ssrs&#41;&#40;和 ssrs 报表生成器](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)[列出&#41;&#40;](tables-matrices-and-lists-report-builder-and-ssrs.md)和 ssrs[报表生成器&#41;&#40;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)和 ssrs 报表生成器&#41;&#40;和[ssrs 报表生成器&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) [](text-boxes-report-builder-and-ssrs.md)
+ [表达式 &#40;报表生成器和 ssrs&#41;](expressions-report-builder-and-ssrs.md) [设置图表上轴标签的格式 &#40;报表生成器和 ssrs&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md) [仪表 &#40;上的格式刻度报表生成器和 ssrs&#41;&#40;和 ssrs 报表生成器](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)[列出&#41;&#40;](tables-matrices-and-lists-report-builder-and-ssrs.md)和 ssrs[报表生成器&#41;&#40;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)和 ssrs 报表生成器&#41;&#40;和[ssrs 报表生成器&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) [Text Boxes &#40;Report Builder and SSRS&#41;](text-boxes-report-builder-and-ssrs.md)
 
 

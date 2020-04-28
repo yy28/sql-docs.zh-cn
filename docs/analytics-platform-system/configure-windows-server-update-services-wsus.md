@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761901"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在分析平台系统中配置 Windows Server Update Services （WSUS）
@@ -35,7 +35,7 @@ ms.locfileid: "76761901"
   
 -   如果设备将使用代理服务器访问上游服务器或 Microsoft 更新，则知道代理服务器的 IP 地址。  
   
--   在大多数情况下，WSUS 需要访问设备之外的服务器。 若要支持此使用方案，可将分析平台系统 DNS 配置为支持外部名称转发器，这将允许分析平台系统主机和虚拟机（Vm）使用外部 DNS 服务器来解析本. 有关详细信息，请参阅[使用 DNS 转发器解析非设备 DNS 名称 &#40;分析平台系统&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
+-   在大多数情况下，WSUS 需要访问设备之外的服务器。 若要支持此使用方案，可将分析平台系统 DNS 配置为支持外部名称转发器，使分析平台系统主机和虚拟机（Vm）可以使用外部 DNS 服务器来解析设备之外的名称。 有关详细信息，请参阅[使用 DNS 转发器解析非设备 DNS 名称 &#40;分析平台系统&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>配置 Windows Server Update Services （WSUS）  
   
@@ -168,11 +168,11 @@ ms.locfileid: "76761901"
   
     选择 "**开始初始同步**"，然后单击 "**下一步**"。  
   
-12. 完毕.  
+12. 完成。  
   
-    单击“完成”  。  
+    单击 **“完成”** 。  
   
-## <a name="bkmk_WSUSGroup"></a>在 WSUS 中将设备服务器分组  
+## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>在 WSUS 中将设备服务器分组  
 配置 WSUS for Analytics 平台系统后，下一步是对设备服务器进行分组。 通过将所有设备服务器添加到组中，WSUS 将能够将软件更新应用于设备中的所有服务器。  
   
 > [!NOTE]  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7ad456034902c2d3793100e93e370453348a1451
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176527"
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
@@ -40,11 +40,11 @@ ms.locfileid: "78176527"
 
  如上面的关系图所示，创建执行变更数据的增量加载的包涉及下列步骤：
 
- **步骤1：设计控制流**在包的控制流中，需要定义下列任务：
+ **步骤 1：设计控制流** 在包的控制流中，需要定义下列任务：
 
 -   计算要检索的源数据更改间隔的起始和结束 `datetime` 值。
 
-     若要计算这些值，请使用执行 SQL 任务或包含 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 函数的 `datetime` 表达式。 然后将这些端点存储在包变量中以供以后在包中使用。
+     若要计算这些值，请使用执行 SQL 任务或包含 `datetime` 函数的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 表达式。 然后将这些端点存储在包变量中以供以后在包中使用。
 
      **有关详细信息：**  [指定变更数据的间隔](specify-an-interval-of-change-data.md)
 
@@ -66,7 +66,7 @@ ms.locfileid: "78176527"
 
  **有关详细信息：**  [检索和了解变更数据](retrieve-and-understand-the-change-data.md)
 
- **步骤3：设计**数据流在包的数据流中，需要定义下列任务：
+ **步骤 3：设计数据流** 在包的数据流中，需要定义下列任务：
 
 -   从变更表中检索变更数据。
 
@@ -78,19 +78,19 @@ ms.locfileid: "78176527"
 
      若要拆分更改，可使用有条件拆分转换将插入、更新和删除定向到不同的输出，以便于进行适当的处理。
 
-     **有关详细信息，请执行以下操作：**[处理插入、更新和删除](process-inserts-updates-and-deletes.md)操作  
+     **有关详细信息：**  [处理插入、更新和删除](process-inserts-updates-and-deletes.md)
 
 -   将插入、删除和更新应用到目标。
 
      若要将更改应用到目标，可使用目标组件将插入应用到目标。 还可通过参数化的 UPDATE 和 DELETE 语句使用 OLE DB 命令转换，以将更新和删除应用到目标。 也可使用目标组件应用更新和删除，以便将行保存到临时表中。 然后，使用执行 SQL 任务对临时表中的目标执行大容量更新和大容量删除操作。
 
-     **有关详细信息，请执行以下操作：**  [将更改应用到目标](apply-the-changes-to-the-destination.md)
+     **有关详细信息：**  [将变更应用到目标](apply-the-changes-to-the-destination.md)
 
 ### <a name="change-data-from-multiple-tables"></a>来自多个表的变更数据
  前面的关系图和步骤中介绍的过程涉及从单表进行增量加载。 当必须从多表执行增量加载时，整个过程是相同的。 但是，包的设计需要更改为满足多表处理。 有关如何创建从多个表执行增量加载的包的详细信息，请参阅 [执行多个表的增量加载](perform-an-incremental-load-of-multiple-tables.md)。
 
 ## <a name="samples-of-change-data-capture-packages"></a>变更数据捕获包的示例
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]提供了两个示例，演示如何在包中使用变更数据捕获。 有关详情，请参阅以下主题：
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了两个示例来演示如何使用包中的变更数据捕获。 有关详细信息，请参阅下列主题：
 
 -   [Readme_Change Data Capture for Specified Interval Package Sample（关于指定间隔的变更数据捕获包示例的自述文件）](https://go.microsoft.com/fwlink/?LinkId=133507)
 

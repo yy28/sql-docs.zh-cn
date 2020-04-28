@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176222"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
@@ -34,7 +34,7 @@ ms.locfileid: "78176222"
 ## <a name="writing-the-script-in-code-design-mode"></a>在代码设计模式下编写脚本
 
 ### <a name="script-component-development-environment"></a>脚本组件开发环境
- 要编写脚本，请在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE    。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和对象浏览器。
+ 要编写脚本，请在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开  Tools for Applications (VSTA) IDE   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和对象浏览器。
 
  脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本转换编辑器”中设置 ScriptLanguage 属性可指定脚本语言   。 如果您倾向于使用其他编程语言，则可以用您选择的语言开发自定义程序集，然后通过脚本组件中的代码调用其功能。
 
@@ -49,20 +49,15 @@ ms.locfileid: "78176222"
  脚本组件的功能在于它可生成基础结构代码，从而减少您必须编写的代码的数量。 此功能依赖于这样一个事实：输入和输出及其列和属性都是事先固定且已知的。 因此，您对组件的元数据所做的任何后续更改都可能会使已编写的代码无效。 这将在包的执行过程中导致编译错误。
 
 #### <a name="project-items-and-classes-in-the-script-component-project"></a>脚本组件项目中的项目项和类
- 切换到代码设计模式后，VSTA IDE 将打开并显示 `ScriptMain` 项目项。 
-  `ScriptMain` 项目项包含可编辑的 `ScriptMain` 类，该类用作脚本的入口点，您可在其中编写代码。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同。
+ 切换到代码设计模式后，VSTA IDE 将打开并显示 `ScriptMain` 项目项。 `ScriptMain` 项目项包含可编辑的 `ScriptMain` 类，该类用作脚本的入口点，您可在其中编写代码。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同。
 
  脚本项目包含两个自动生成的附加只读项目项：
 
--   
-  `ComponentWrapper` 项目项包含三个类：
+-   `ComponentWrapper` 项目项包含三个类：
 
-    -   
-  `UserComponent` 类，继承自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>，包含您将用于处理数据和与包进行交互的方法和属性。 
-  `ScriptMain` 类从 `UserComponent` 类继承。
+    -   `UserComponent` 类，继承自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>，包含您将用于处理数据和与包进行交互的方法和属性。 `ScriptMain` 类从 `UserComponent` 类继承。
 
-    -   
-  `Connections` 集合类，包含对在“脚本转换编辑器”的“连接管理器”页上选择的连接的引用。
+    -   `Connections` 集合类，包含对在“脚本转换编辑器”的“连接管理器”页上选择的连接的引用。
 
     -   一个`Variables`集合类，包含对在 "**脚本转换编辑器**" `ReadOnlyVariable`的`ReadWriteVariables` "**脚本**" 页上的和属性中输入的变量的引用。
 
@@ -173,12 +168,10 @@ public class ScriptMain : UserComponent
 
 |包的功能|访问方法|
 |---------------------|-------------------|
-|变量|使用 `Variables` 项目项的 `ComponentWrapper` 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 `Variables` 类的 `ScriptMain` 属性公开。<br /><br /> 
-  `PreExecute` 方法仅可访问只读变量。 
-  `PostExecute` 方法既可以访问只读变量，又可以访问读/写变量。|
+|变量|使用 `Variables` 项目项的 `ComponentWrapper` 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 `Variables` 类的 `ScriptMain` 属性公开。<br /><br /> `PreExecute` 方法仅可访问只读变量。 `PostExecute` 方法既可以访问只读变量，又可以访问读/写变量。|
 |连接|使用 `Connections` 项目项的 `ComponentWrapper` 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 `Connections` 类的 `ScriptMain` 属性公开。|
 |事件|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>通过使用`ScriptMain`类的属性和<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>接口的**\<灭火器 X>** 方法来引发事件。|
-|日志记录|使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 类的 `ScriptMain` 方法执行日志记录。|
+|日志记录|使用 `ScriptMain` 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法执行日志记录。|
 
 ## <a name="debugging-the-script-component"></a>调试脚本组件
  若要调试脚本组件中的代码，请在代码中设置至少一个断点，然后关闭 VSTA IDE 以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中运行包。 当包执行进入脚本组件时，VSTA IDE 会在只读模式下重新打开并显示您的代码。 包执行到达您的断点后，您可以检查变量值，并单步执行剩余代码。
@@ -193,7 +186,7 @@ public class ScriptMain : UserComponent
 
 -   中断执行，并使用**system.web**命名空间中的`MessageBox.Show`方法显示模式消息。 （调试过程结束后，请删除此代码。）
 
--   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明  。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息  。 FireProgress 事件的消息显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“进度”选项卡中  。 有关详细信息，请参阅[在脚本组件中引发事件](../../data-flow/transformations/script-component.md)。
+-   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明  。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息  。 FireProgress 事件的消息显示在  **设计器的“进度”选项卡中**[!INCLUDE[ssIS](../../../includes/ssis-md.md)]。 有关详细信息，请参阅[在脚本组件中引发事件](../../data-flow/transformations/script-component.md)。
 
 -   将事件或用户定义的消息记录到已启用的日志记录提供程序中。 有关详细信息，请参阅[脚本组件中的日志记录](logging-in-the-script-component.md)。
 

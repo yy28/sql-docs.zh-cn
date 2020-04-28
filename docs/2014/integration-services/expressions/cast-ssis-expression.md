@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176437"
 ---
 # <a name="cast-ssis-expression"></a>Cast（SSIS 表达式）
@@ -40,8 +40,7 @@ ms.locfileid: "78176437"
  *表达式*是有效的表达式。
 
 ## <a name="result-types"></a>结果类型
- 
-  *type_spec*数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。
+ *type_spec*数据类型。 有关详细信息，请参阅[Integration Services 数据类型](../data-flow/integration-services-data-types.md)。
 
 ## <a name="remarks"></a>备注
  以下关系图显示了合法的转换运算。
@@ -53,10 +52,10 @@ ms.locfileid: "78176437"
 |数据类型|参数|示例|
 |---------------|---------------|-------------|
 |DT_STR|*charcount*<br /><br /> *ansi*|(DT_STR,30,1252) 将 30 个字节（即 30 个单字符）转换为使用 1252 代码页的 DT_STR 数据类型。|
-|DT_WSTR|*charcount*|(DT_WSTR,20) 将 20 个字节对（即 20 个 Unicode 字符）转换为 DT_WSTR 数据类型。|
+|DT_WSTR|*Charcount*|(DT_WSTR,20) 将 20 个字节对（即 20 个 Unicode 字符）转换为 DT_WSTR 数据类型。|
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) 将 50 个字节的数据转换为 DT_BYTES 数据类型。|
 |DT_DECIMAL|*缩放*|(DT_DECIMAL,2) 将数值转换为带 2 位小数的 DT_DECIMAL 数据类型。|
-|DT_NUMERIC|*Precision*<br /><br /> *缩放*|(DT_NUMERIC,10,3) 将数值转换为带 3 位小数且精度为 10 的 DT_NUMERIC 数据类型。|
+|DT_NUMERIC|*精度*<br /><br /> *缩放*|(DT_NUMERIC,10,3) 将数值转换为带 3 位小数且精度为 10 的 DT_NUMERIC 数据类型。|
 |DT_TEXT|*Ansi*|(DT_TEXT,1252) 将值转换为使用 1252 代码页的 DT_TEXT 数据类型。|
 
  字符串和 DT_DATE 间相互转换时，将使用转换的区域设置。 但是，无论区域设置首选项是否使用 YYYY-MM-DD 这一 ISO 格式，日期均采用该 ISO 格式。

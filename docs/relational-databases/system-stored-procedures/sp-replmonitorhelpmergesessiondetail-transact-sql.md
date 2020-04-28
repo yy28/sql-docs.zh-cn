@@ -17,10 +17,10 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321614"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
@@ -46,8 +46,8 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|同步会话的阶段，可以是下列值之一：<br /><br /> **0** = 初始化或汇总行<br /><br /> **1** = 上载<br /><br /> **2** = 下载|  
 |**ArticleName**|**sysname**|被同步的项目的名称。 **ArticleName**还包含结果集中不表示项目详细信息的行的汇总信息。|  
-|**完成**|**Decimal**|指示当前正在运行或已失败的会话中，给定的项目详细信息行中应用的全部更改的百分比。|  
-|**RelativeCost**|**Decimal**|指示同步项目所花时间占会话的同步总时间的百分比。|  
+|**完成**|**decimal**|指示当前正在运行或已失败的会话中，给定的项目详细信息行中应用的全部更改的百分比。|  
+|**RelativeCost**|**decimal**|指示同步项目所花时间占会话的同步总时间的百分比。|  
 |**Duration**|**int**|代理会话的长度。|  
 |**Inserts**|**int**|会话中的插入数。|  
 |**更新**|**int**|会话中的更新数。|  

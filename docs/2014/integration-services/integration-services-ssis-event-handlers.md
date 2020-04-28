@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176128"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件处理程序
@@ -73,7 +73,7 @@ ms.locfileid: "78176128"
 
 |事件处理程序|事件|
 |-------------------|-----------|
-|`OnError`|`OnError`事件的事件处理程序。 此事件在发生错误时由可执行文件引发。|
+|`OnError`|`OnError` 事件的事件处理程序。 此事件在发生错误时由可执行文件引发。|
 |**OnExecStatusChanged**|**OnExecStatusChanged** 事件的事件处理程序。 此事件在其执行状态更改时由可执行文件引发。|
 |**OnInformation**|**OnInformation** 事件的事件处理程序。 此事件在可执行文件的验证和执行期间引发以报告信息。 此事件仅传递信息，不传递错误或警告。|
 |**OnPostExecute**|**OnPostExecute** 事件的事件处理程序。 此事件由可执行文件在其运行完成后立即引发。|

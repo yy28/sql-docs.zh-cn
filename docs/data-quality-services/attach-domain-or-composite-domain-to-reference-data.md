@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557912"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>将域或复合域附加到引用数据-Data Quality Services （DQS）
@@ -39,15 +39,15 @@ ms.locfileid: "75557912"
   
 ## <a name="before-you-begin"></a>开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  您必须配置了 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 后才能使用引用数据服务。 请参阅[将 DQS 配置为使用引用数据](../data-quality-services/configure-dqs-to-use-reference-data.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
 #### <a name="permissions"></a>权限  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 角色才能将域映射到引用数据。  
   
-##  <a name="Map"></a>将域映射到 Melissa 数据中的引用数据  
+##  <a name="map-domains-to-reference-data-from-melissa-data"></a><a name="Map"></a>将域映射到 Melissa 数据中的引用数据  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -78,21 +78,21 @@ ms.locfileid: "75557912"
   
 9. 您将返回到 "**引用数据**" 选项卡。如果需要，请在 "**提供程序设置**" 区域中更改以下框中的值：  
   
-    -   **自动更正阈值**：从具有置信度高于此阈值的引用数据服务进行的更正将自动完成。 以相应百分比值的小数表示形式输入一个值。 例如，对于 90% 输入 0.9。  
+    -   **自动更正阈值**：将自动完成从其置信度高于此域值的引用数据服务进行的更正。 以相应百分比值的小数表示形式输入一个值。 例如，对于 90% 输入 0.9。  
   
-    -   **建议的候选**项：要从引用数据服务显示的建议候选项的数目。  
+    -   **建议的候选项**：要从引用数据服务显示的建议候选项的数目。  
   
-    -   **最小置信度**：将忽略具有置信度低于该值的引用数据服务的建议。 以相应百分比值的小数表示形式输入一个值。 例如，对于 60% 输入 0.6。  
+    -   **最低置信度**：将忽略来自其置信度低于该值的引用数据服务的建议。 以相应百分比值的小数表示形式输入一个值。 例如，对于 60% 输入 0.6。  
   
 10. 单击 **“完成”** 将发布知识库。 在知识库成功发布后，将会出现一条确认消息。  
   
  现在可以将此知识库用于数据质量项目中的清理活动，以便基于 Melissa Data 通过 Azure Marketplace 提供的知识标准化和清理源数据中的美国地址。  
   
-##  <a name="FollowUp"></a>跟进：在将域映射到引用数据后  
+##  <a name="follow-up-after-mapping-a-domain-to-reference-data"></a><a name="FollowUp"></a>跟进：在将域映射到引用数据后  
  创建一个数据质量项目，然后通过将其与本主题中创建的知识库进行比较，对包含美国地址的源数据运行清理活动。 请参阅[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [DQS 中的引用数据服务](../data-quality-services/reference-data-services-in-dqs.md)   
- [Data Cleansing](../data-quality-services/data-cleansing.md)  
+ [数据清理](../data-quality-services/data-cleansing.md)  
   
   

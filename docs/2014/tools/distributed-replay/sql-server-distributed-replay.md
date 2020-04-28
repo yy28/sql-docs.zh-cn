@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 583af6e77d699c88e7712ac03053467138bd5a5f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177347"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
@@ -49,11 +49,11 @@ ms.locfileid: "78177347"
 
 -   **Distributed Replay 管理工具**：一个控制台应用程序`DReplay.exe`，用于与 Distributed Replay 控制器进行通信。 使用管理工具可控制分布式的重播。
 
--   **Distributed Replay 控制器**：运行名为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Distributed Replay 控制器的 Windows 服务的一台计算机。 Distributed Replay 控制器协调分布式的重播客户端的操作。 在每个 Distributed Replay 环境中只能有一个控制器实例。
+-   **分布式重播控制器**：运行名为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播控制器的 Windows 服务的一台计算机。 Distributed Replay 控制器协调分布式的重播客户端的操作。 在每个 Distributed Replay 环境中只能有一个控制器实例。
 
--   **Distributed Replay 客户端**：运行名为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 客户端的 Windows 服务的一台或多台计算机（物理或虚拟）。 多个 Distributed Replay 客户端一起来模拟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的工作负荷。 在每个 Distributed Replay 环境中可以有一个或多个客户端。
+-   **分布式重播客户端**：运行名为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播客户端的 Windows 服务的一台或多台计算机（物理或虚拟）。 多个 Distributed Replay 客户端一起来模拟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的工作负荷。 在每个 Distributed Replay 环境中可以有一个或多个客户端。
 
--   **目标服务器**：Distributed Replay 客户端可用于重播跟踪数据的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 建议将目标服务器置于测试环境中。
+-   **目标服务器**：分布式重播客户端可用于重播跟踪数据的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 建议将目标服务器置于测试环境中。
 
  分布式重播管理工具、控制器和客户端可安装在不同计算机或同一计算机上。 一台计算机上只能运行分布式重播控制器或客户端服务的一个实例。
 

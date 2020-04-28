@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175286"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>定义多对多关系
@@ -27,7 +27,7 @@ ms.locfileid: "78175286"
 > [!NOTE]
 >  为了支持多对多维度关系，必须在所涉及的所有表之间的数据源视图中定义主键-外键关系。 否则，在“多维数据集设计器”的“维度用法”**** 选项卡中建立关系时，无法选择正确的中间度量值组。
 
- 有关详细信息，请参阅[维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定义多对多关系和多对多关系属性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。
+ 有关详细信息，请参阅 [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和 [定义多对多关系和多对多关系属性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。
 
  在本主题的任务中，将定义“销售原因”维度和“销售原因”度量值组，并通过“销售原因”度量值组定义“销售原因”维度与“Internet 销售”度量值组之间的多对多关系。
 
@@ -47,7 +47,7 @@ ms.locfileid: "78175286"
 
 6.  在“格式”**** 菜单上，指向“自动布局”****，再单击“关系图”****。
 
-7.  在属性窗口中，将**DimSalesReason**表的`SalesReason` **friendlyname**属性更改为，然后将 FactInternetSalesReason 表的**friendlyname**属性更改为**** `InternetSalesReason`。
+7.  在属性窗口中，将**DimSalesReason**表的`SalesReason` **friendlyname**属性更改为，然后将 FactInternetSalesReason 表的**friendlyname**属性更改为**FactInternetSalesReason** `InternetSalesReason`。
 
 8.  在“表”**** 窗格中，展开“InternetSalesReason (dbo.FactInternetSalesReason)”****，单击“SalesOrderNumber”****，然后在“属性”窗口中查看此数据列的“DataType”**** 属性。
 
@@ -67,7 +67,7 @@ ms.locfileid: "78175286"
 
 1.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的“多维数据集设计器”，再单击“多维数据集结构”**** 选项卡。
 
-2.  右键单击“度量值”**** 窗格中的任意位置，然后单击“新建度量值组”****。 有关详细信息。请参阅[在多维模型中创建度量值和度量值组](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。
+2.  右键单击“度量值”**** 窗格中的任意位置，然后单击“新建度量值组”****。 有关详细信息。请参阅 [在多维模型中创建度量值和度量值组](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。
 
 3.  在 "**新建度量值组**" 对话框中`InternetSalesReason` ，在 "**从数据源视图中选择一个表**" 列表中选择，然后单击 **"确定"**。
 
@@ -79,7 +79,7 @@ ms.locfileid: "78175286"
 
 5.  选择“Internet 销售原因记数”****，然后在“属性”窗口中查看此度量值的属性。
 
-     请注意，此度量值的“AggregateFunction”**** 属性定义为“Count”****，而不是“Sum”****。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]由于基础数据类型是字符串数据类型，因此选择 "**计数**"。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅[定义半累加行为](multidimensional-models/define-semiadditive-behavior.md)。
+     请注意，此度量值的“AggregateFunction”**** 属性定义为“Count”****，而不是“Sum”****。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]由于基础数据类型是字符串数据类型，因此选择 "**计数**"。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅 [定义半累加行为](multidimensional-models/define-semiadditive-behavior.md)。
 
 6.  在“属性”窗口中，将“Internet Sales Reason Count”**** 度量值的“Visible”**** 属性更改为“False”****。
 
@@ -91,7 +91,7 @@ ms.locfileid: "78175286"
 
 ## <a name="defining-the-many-to-many-dimension"></a>定义多对多维度
 
-1.  在解决方案资源管理器中，右键单击 "**维度**"，然后单击 "**新建维度**"。
+1.  在“解决方案资源管理器”中，右键单击“维度”****，然后单击“新建维度”****。
 
 2.  在“欢迎使用维度向导”**** 页上，单击“下一步”****。
 
@@ -111,7 +111,7 @@ ms.locfileid: "78175286"
 
 10. 在“完成向导”**** 页上，单击“完成”**** 创建“销售原因”维度。
 
-11. 在“文件”  菜单上，单击“全部保存”  。
+11. 在“文件” **** 菜单上，单击“全部保存” ****。
 
 12. 在 "**销售原因**" 维度的 "维度设计器" 的 "**属性**" 窗格中，选择 "**销售原因键**"，然后将属性窗口中的 "**名称**" 属性更改为。`Sales Reason.`
 
@@ -125,7 +125,7 @@ ms.locfileid: "78175286"
 
 17. 在“添加多维数据集维度”**** 对话框中，选择“销售原因”****，然后单击“确定”****。
 
-18. 在“文件”  菜单上，单击“全部保存”  。
+18. 在“文件” **** 菜单上，单击“全部保存” ****。
 
 ## <a name="defining-the-many-to-many-relationship"></a>定义多对多关系
 
@@ -153,7 +153,7 @@ ms.locfileid: "78175286"
 
 1.  在“生成”**** 菜单上，单击“部署 Analysis Services 教程”****。
 
-2.  成功完成部署后，切换到 ** 教程多维数据集的“多维数据集设计器”中的“浏览器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，然后单击“重新连接”****。
+2.  成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的“多维数据集设计器”中的“浏览器”**** 选项卡，然后单击“重新连接”****。
 
 3.  将“Internet 销售-销售额”**** 度量值添加到数据窗格的数据区域。
 

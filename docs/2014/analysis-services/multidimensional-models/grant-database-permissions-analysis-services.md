@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175728"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授予数据库权限 (Analysis Services)
@@ -33,12 +33,12 @@ ms.locfileid: "78175728"
 
  在数据库级别可指定三种类型的权限。
 
- **完全控制（管理员）** ─完全控制是一种全面的权限，可通过 Analysis Services 数据库传达广泛的功能，如查询或处理数据库中的任何对象，以及管理角色安全性。 完全控制与数据库管理员状态同义。 当选择 `Full Control` 时，`Process Database` 和 `Read Definition` 权限也被选择，并且不能被移除。
+ “完全控制（管理员）”- 完全控制是一种包罗万象的权限，它通过 Analysis Services 数据库传达了广泛的功能，比如：在数据库内查询或处理任何对象的功能以及管理角色安全的功能。**** 完全控制与数据库管理员状态同义。 当选择 `Full Control` 时，`Process Database` 和 `Read Definition` 权限也被选择，并且不能被移除。
 
 > [!NOTE]
 >  服务器管理员（服务器管理员角色成员）对服务器上的每个数据库也具有隐式完全控制。
 
- `Process Database`─该权限用于在数据库级别委派处理。 作为管理员，你可通过创建一个角色来卸载此任务，该角色允许其他人员或服务对数据库中的任何对象调用处理操作。 或者，你也可以创建在特定对象上启用处理的角色。 有关详细信息，请参阅 [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) 。
+ `Process Database`─该权限用于在数据库级别委派处理。 作为管理员，你可通过创建一个角色来卸载此任务，该角色允许其他人员或服务对数据库中的任何对象调用处理操作。 或者，你也可以创建在特定对象上启用处理的角色。 有关详细信息，请参阅 [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md) 。
 
  `Read Definition`─该权限授予读取对象元数据的功能，但不能查看关联的数据。 一般地，该权限被用于为专用处理而创建的角色中，添加使用工具（例如： [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ）的功能来交互地处理数据库。 如果没有 `Read Definition`，则 `Process Database` 权限就仅在编写了脚本的方案中有效。 如果你计划或许通过 SSIS 或其他计划程序使处理自动化，你可能想在没有 `Process Database` 的情况下，创建带有 `Read Definition` 的角色。 否则，请考虑将这两个属性组合在同一角色中，以通过在用户界面中能形象化数据模型的 SQL Server 工具支持无人参与的以及交互式的处理。
 
@@ -71,8 +71,8 @@ ms.locfileid: "78175728"
 
 5.  单击“确定” **** ，完成角色创建。
 
-## <a name="process-database"></a>处理数据库
- 定义授予数据库权限的角色时，可以跳过`Full Control`并选择 "只`Process Database`是"。 在数据库级别设置的该权限允许对数据库内的所有对象进行处理。 有关详细信息，请参阅 [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
+## <a name="process-database"></a>Process Database
+ 定义授予数据库权限的角色时，可以跳过`Full Control`并选择 "只`Process Database`是"。 在数据库级别设置的该权限允许对数据库内的所有对象进行处理。 有关详细信息，请参阅 [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)
 
 ## <a name="read-definition"></a>Read Definition
  与`Process Database`一样， `Read Definition`在数据库级别设置权限会对数据库中的其他对象产生级联影响。 如果想在更为精细的级别上设置“读取定义”权限，则必须清除“常规”窗格中作为数据库属性的“读取定义”。 有关详细信息，请参阅[授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)。

@@ -11,14 +11,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176717"
 ---
 # <a name="circularstring"></a>CircularString
-  
   `CircularString` 是零个或多个连续圆弧线段的集合。 圆弧线段是二维平面中由三个点定义的曲线段；第一个点不能与第三个点相同。 如果圆弧线段的所有三个点共线，则将该圆弧线段视为一条直线段。
 
 > [!IMPORTANT]
@@ -38,8 +37,7 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
 ```
 
- 
-  `@g3` 显示 `CircularString` 实例可能被接受，但无效。 下面的 CircularString 实例声明未被接受。 此声明引发 `System.FormatException`。
+ `@g3` 显示 `CircularString` 实例可能被接受，但无效。 下面的 CircularString 实例声明未被接受。 此声明引发 `System.FormatException`。
 
 ```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
@@ -68,9 +66,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();
 ```
 
- 
-  `CircularString` 实例必须至少包含两条圆弧线段以定义完整的圆。 
-  `CircularString` 实例不能使用一条圆弧线段（例如（1 1、3 1、1 1））定义一个完整的圆。 使用（1 1、2 2、3 1、2 0、1 1）定义圆。
+ `CircularString` 实例必须至少包含两条圆弧线段以定义完整的圆。 `CircularString` 实例不能使用一条圆弧线段（例如（1 1、3 1、1 1））定义一个完整的圆。 使用（1 1、2 2、3 1、2 0、1 1）定义圆。
 
  下面的示例显示无效的 CircularString 实例。
 
@@ -162,6 +158,6 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
 ```
 
 ## <a name="see-also"></a>另请参阅
- [空间数据类型概述](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [MakeValid &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;Geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [STIsValid &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) [STIsValid &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) [STLength &#40;Geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry 数据类型](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)&#41;STEndpoint [&#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) STPointN [&#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) [STNumPoints &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) [STIsRing &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [STIsClosed &#40;Geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) [STPointOnSurface &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [LineString](linestring.md)
+ [空间数据类型概述](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [MakeValid &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;Geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [STIsValid &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) [STIsValid &#40;geography 数据类型&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) [STLength &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)数据类型&#41;STEndpoint &#40;geometry 数据[类型&#41;STPointN](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [&#40;geometry 数据](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)[类型&#41;STNumPoints](linestring.md) &#40;geometry[数据](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)[类型&#41;STIsRing](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) &#40;geometry[数据类型&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [STIsClosed &#40;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)
 
 
