@@ -14,10 +14,10 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728478"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>创建订阅视图以导出数据 (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728478"
 
   创建订阅视图，以便将 Master Data Services 数据导出到订阅系统。 你打算在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中创建数据的视图。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须有权访问 **“集成管理”** 功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   您必须有权访问 **“集成管理”** 功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>创建和编辑订阅视图  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73728478"
 |------------|-----------------|  
 |状态|视图状态。<br /><br /> 单击 "**保存**" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")图像的图标，指示该视图正在更新。<br /><br /> 如果在创建或编辑视图时出现错误，则显示 "![错误状态](../master-data-services/media/mds-statusicon-error.png "错误状态图标")" 图像图标。<br /><br /> 否则，状态为 "正常"，将显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")" 图像的图标。|  
 |名称|订阅视图名称。|  
-|模型|模型名称。|  
+|型号|模型名称。|  
 |版本|版本名称。|  
 |版本标志|版本标志名称。|  
 |派生层次结构|派生层次结构名称。|  
@@ -80,17 +80,17 @@ ms.locfileid: "73728478"
   
  单击视图后可看到以下信息：  
   
--   **创建者**：创建视图的用户的名称。  
+-   “创建者”****：创建视图的用户的用户名。  
   
--   **日期：创建**视图的日期和时间。  
+-   “创建时间”****：获取创建视图的日期和时间。  
   
--   **更新者**：上次更新视图的用户的名称。  
+-   “更新者”****：上次更新索引的用户的用户名。  
   
--   **日期：上次**更新视图的日期和时间。  
+-   “更新时间”****：上次更新索引的日期和时间。  
   
 ## <a name="see-also"></a>另请参阅  
  [概述：将数据导出 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [&#40;Master Data Services 中删除订阅视图&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [&#40;Master Data Services 创建版本标志&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [创建版本标志 (Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

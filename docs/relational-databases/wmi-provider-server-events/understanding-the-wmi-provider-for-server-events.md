@@ -15,10 +15,10 @@ ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 63cc23d19a6eeb5f3a44cd0bbf62d9bcd87ace0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660518"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>了解 WMI Provider for Server Events
@@ -27,7 +27,7 @@ ms.locfileid: "73660518"
   
  通过发出 WMI 查询语言 (WQL) 语句，诸如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理这样的管理应用程序可以使用 WMI Provider for Server Events 来访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是结构化查询语言 (SQL) 的简化子集，它还包含一些特定于 WMI 的扩展。 在使用 WQL 时，应用程序将针对特定数据库或数据库对象来检索事件类型。 WMI Provider for Server Events 会将查询转换成事件通知，实际上就是在目标数据库中创建事件通知。 有关事件通知在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的工作方式的详细信息，请参阅[WMI Provider for Server Events 的概念](https://technet.microsoft.com/library/ms180560.aspx)。 [WMI Provider For Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中列出了可以查询的事件。  
   
- 当发生触发事件通知的事件以发送消息时，该消息将发送到**msdb**中名为**SQL/notification/ProcessWMIEventProviderNotification/** v1.0 的预定义目标服务。 服务将事件放入**msdb**中名为**WMIEventProviderNotificationQueue**的预定义队列。 （当访问接口第一次连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，该服务和队列都是动态创建的。）然后，提供程序从该队列中读取事件数据，并在将其返回到应用程序之前将其转换为托管对象格式（MOF）。 下图显示了这一过程。  
+ 当发生触发事件通知的事件以发送消息时，该消息将发送到**msdb**中名为**SQL/notification/ProcessWMIEventProviderNotification/** v1.0 的预定义目标服务。 服务将事件放入**msdb**中名为**WMIEventProviderNotificationQueue**的预定义队列。 （当访问接口第一次连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，该服务和队列都是动态创建的。）然后，提供程序从该队列中读取事件数据，并在将其返回到应用程序之前将其转换为托管对象格式（MOF）。 下图显示了此过程。  
   
  ![WMI Provider for Server Events 的流程图](../../relational-databases/wmi-provider-server-events/media/wmi-provider-functional-spec.gif "WMI Provider for Server Events 的流程图")  
   
@@ -53,8 +53,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- 在该示例中，`SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` 是由前缀 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 GUID 组成的 `SQLWEP_` 标识符。 
-  `SQLWEP` 为每个标识符创建一个新的 GUID。 子句中`A7E5521A-1CA6-4741-865D-826F804E5135`的值是用于标识 msdb 数据库中 broker 实例的 GUID。 **** `TO SERVICE`  
+ 在该示例中，`SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` 是由前缀 `SQLWEP_` 和 GUID 组成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符。 `SQLWEP` 为每个标识符创建一个新的 GUID。 子句中`A7E5521A-1CA6-4741-865D-826F804E5135`的值是用于标识 msdb 数据库中 broker 实例的 GUID。 **msdb** `TO SERVICE`  
   
  有关如何使用 WQL 的详细信息，请参阅[将 WQL 与 WMI Provider For Server Events 结合使用](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)。  
   

@@ -11,30 +11,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4106de497a43404cb44606259d53beb1ed8f5a58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797449"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
   HealthCheckTimeout 设置用于指定在将 AlwaysOn 故障转移群集实例（FCI）报告为无响应之前，SQL Server 资源 DLL 应等待[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)存储过程返回的信息的时间长度（以毫秒为单位）。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
   
--   **开始之前：**  [限制和限制](#Limits)、[安全性](#Security)  
+-   **准备工作：**  [限制和局限](#Limits)、[安全性](#Security)  
   
--   **若要配置 HeathCheckTimeout 设置，请使用：**  [PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、 [transact-sql](#TsqlProcedure)  
+-   **要配置 HeathCheckTimeout 设置，请使用：**  [PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Limits"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Limits"></a> 限制和局限  
  此属性的默认值为 60,000 毫秒（60 秒）。 最小值为 15,000 毫秒（15 秒）。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限。  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 ### <a name="to-configure-healthchecktimeout-settings"></a>配置 HealthCheckTimeout 设置  
   
@@ -58,13 +58,13 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>相关内容 (PowerShell)  
   
--   [群集和高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx)（故障转移群集和网络负载平衡团队博客）  
+-   [群集和高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
   
--   [在故障转移群集上使用 Windows PowerShell 入门](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [故障转移群集上的 Windows PowerShell 入门](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
 -   [群集资源命令和等效的 Windows PowerShell cmdlet](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a>使用故障转移群集管理器管理单元  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WSFC"></a> 使用故障转移群集管理器管理单元  
  **配置 HealthCheckTimeout 设置**  
   
 1.  打开故障转移群集管理器管理单元。  
@@ -75,10 +75,10 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 4.  选择 **“属性”** 选项卡，为 **HealthCheckTimeout** 属性输入所需的值，然后单击 **“确定”** 以应用更改。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  使用[ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句，你可以指定 HealthCheckTimeOut 属性值。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例将 HealthCheckTimeout 选项设置为 15,000 毫秒（15 秒）。  
   
 ```sql

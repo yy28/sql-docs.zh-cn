@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e759e521d62def1f253ab5ef6423c29fb7fa2b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797786"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>管理 Tab 填写功能 (SQL Server PowerShell)
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元引入了三个变量（`$SqlServerMaximumTabCompletion`、`$SqlServerMaximumChildItems` 和 `$SqlServerIncludeSystemObjects`）来控制 Windows PowerShell 的 Tab 填写功能。 Tab 填写功能通过返回名称以您正在键入的字符串开头的项目的表，而减少了必须键入的内容量。  
   
 ## <a name="before-you-begin"></a>开始之前  
@@ -26,14 +25,13 @@ ms.locfileid: "72797786"
   
  如果正在处理的数据库中包含大量对象，则 Tab 填写列表可能会变得非常大。 某些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象类型（如视图）也具有大量系统对象。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理单元引入了三个可用来控制由 Tab 补全和 **Get-ChildItem**所提供的信息量的系统变量。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理单元引入了三个可用来控制由 Tab 补全和 **Get-ChildItem**所提供的信息量的系统变量。  
   
  **$SqlServerMaximumTabCompletion =** *n*  
- 指定要包括在 Tab 填写列表中的对象的最大数量。 如果你在具有多于 *n* 个对象的路径节点处选择 Tab，则 Tab 补全列表会在 *n*处被截断。 *n*为整数。 默认设置为 0，表示对所列出对象的数量没有限制。  
+ 指定要包括在 Tab 填写列表中的对象的最大数量。 如果你在具有多于 *n* 个对象的路径节点处选择 Tab，则 Tab 补全列表会在 *n*处被截断。 *n* 为整数。 默认设置为 0，表示对所列出对象的数量没有限制。  
   
  **$SqlServerMaximumChildItems =** *n*  
- 指定由 **Get-ChildItem**显示的对象的最大数量。 如果在具有多于 **n** 个对象的路径节点处运行 *Get-ChildItem* ，则该列表会在 *n*处被截断。 *n*为整数。 默认设置为 0，表示对所列出对象的数量没有限制。  
+ 指定由 **Get-ChildItem**显示的对象的最大数量。 如果在具有多于 **n** 个对象的路径节点处运行 *Get-ChildItem* ，则该列表会在 *n*处被截断。 *n* 为整数。 默认设置为 0，表示对所列出对象的数量没有限制。  
   
  **$SqlServerIncludeSystemObjects =** { **$True** | **$False** }  
  如果为 **$True**，则 Tab 补全和 **Get-ChildItem**将显示系统对象。 如果为 **$False**，则将不显示系统对象。 默认设置为 **$False**。  

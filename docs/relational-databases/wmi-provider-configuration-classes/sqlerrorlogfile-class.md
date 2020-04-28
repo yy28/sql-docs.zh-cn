@@ -11,10 +11,10 @@ ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0dd923f17fe0267edf40d07da982d0856ec4ba06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659056"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 类
@@ -75,7 +75,7 @@ WScript.Echo "Instance Name:  " & logFile.InstanceName & vbNewLine _
 Next   
 ```  
   
-## <a name="comments"></a>注释  
+## <a name="comments"></a>说明  
  如果 WQL 语句中未提供*InstanceName* ，则查询将返回默认实例的信息。 例如，以下 WQL 语句将返回与来自默认实例 (MSSQLSERVER) 的所有日志文件有关的信息。  
   
 ```  

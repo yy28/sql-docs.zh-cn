@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 260b822d111f94fc567704cd908cb5632e3bdcaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73240772"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps （Transact-sql）
@@ -26,12 +26,12 @@ ms.locfileid: "73240772"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar （32）**|request_id 和 step_index 构成此视图的键。<br /><br /> 与请求关联的唯一数字 id。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
+|request_id|**nvarchar(32)**|request_id 和 step_index 构成此视图的键。<br /><br /> 与请求关联的唯一数字 id。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |step_index|**int**|request_id 和 step_index 构成此视图的键。<br /><br /> 此步骤在组成请求的步骤序列中的位置。|对于包含 n 个步骤的请求，为0到（n-1）。|  
-|operation_type|**nvarchar （35）**|此步骤表示的操作类型。|**DMS 查询计划操作：**"ReturnOperation"、"PartitionMoveOperation"、"MoveOperation"、"BroadcastMoveOperation"、"ShuffleMoveOperation"、"TrimMoveOperation"、"CopyOperation"、"DistributeReplicatedTableMoveOperation"<br /><br /> **SQL 查询计划操作：**"OnOperation"、"RemoteOperation"<br /><br /> **其他查询计划操作：**'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **读取的外部操作：**'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce 的外部操作：**'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **写入的外部操作：**'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 有关详细信息，请参阅中的[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]"了解查询计划"。 <br /><br />  查询计划还可能会受数据库设置的影响。  有关详细信息，请参阅[ALTER DATABASE SET 选项](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-set-options?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest)。|  
-|distribution_type|**nvarchar （32）**|此步骤将经历的分发类型。|"AllNodes"、"AllDistributions"、"AllComputeNodes"、"ComputeNode"、"分发"、"SubsetNodes"、"SubsetDistributions"、"未指定"|  
-|location_type|**nvarchar （32）**|步骤的运行位置。|"Compute"、"Control"、"DMS"|  
-|status|**nvarchar （32）**|此步骤的状态。|挂起、正在运行、已完成、失败、UndoFailed、PendingCancel、已取消、已中止|  
+|operation_type|**nvarchar(35)**|此步骤表示的操作类型。|**DMS 查询计划操作：**"ReturnOperation"、"PartitionMoveOperation"、"MoveOperation"、"BroadcastMoveOperation"、"ShuffleMoveOperation"、"TrimMoveOperation"、"CopyOperation"、"DistributeReplicatedTableMoveOperation"<br /><br /> **SQL 查询计划操作：**"OnOperation"、"RemoteOperation"<br /><br /> **其他查询计划操作：**'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **读取的外部操作：**'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce 的外部操作：**'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **写入的外部操作：**'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 有关详细信息，请参阅中的[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]"了解查询计划"。 <br /><br />  查询计划还可能会受数据库设置的影响。  有关详细信息，请参阅[ALTER DATABASE SET 选项](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-set-options?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest)。|  
+|distribution_type|**nvarchar(32)**|此步骤将经历的分发类型。|"AllNodes"、"AllDistributions"、"AllComputeNodes"、"ComputeNode"、"分发"、"SubsetNodes"、"SubsetDistributions"、"未指定"|  
+|location_type|**nvarchar(32)**|步骤的运行位置。|"Compute"、"Control"、"DMS"|  
+|status|**nvarchar(32)**|此步骤的状态。|挂起、正在运行、已完成、失败、UndoFailed、PendingCancel、已取消、已中止|  
 |error_id|**nvarchar （36）**|与此步骤关联的错误的唯一 id （如果有）。|请参阅 error_id [dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)。 如果未发生错误，则为 NULL。|  
 |start_time|**datetime**|步骤开始执行的时间。|小于或等于当前时间，大于或等于此步骤所属的查询 end_compile_time。 有关查询的详细信息，请参阅[&#40;transact-sql&#41;dm_pdw_exec_requests ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |end_time|**datetime**|此步骤完成执行、已取消或失败的时间。|小于或等于当前时间，大于或等于 start_time。 对于当前正在执行或已排队的步骤，将设置为 NULL。|  

@@ -11,10 +11,10 @@ ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728421"
 ---
 # <a name="create-an-index-master-data-services"></a>创建索引 (Master Data Services)
@@ -23,12 +23,12 @@ ms.locfileid: "73728421"
 
   为经常查询的属性列表创建自定义索引，以提高查询性能。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  **创建索引**  
   
@@ -42,11 +42,11 @@ ms.locfileid: "73728421"
   
 5.  在“名称” **** 框中，键入索引的名称。  
   
-6.  如果你想创建唯一索引，请选择“是唯一的” **** 。 有关索引类型的详细信息，请参阅[自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)。  
+6.  如果你想创建唯一索引，请选择“是唯一的” **** 。 有关索引类型的详细信息，请参阅 [自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)。  
   
 7.  依次单击“可用属性” **** 框中的属性和“添加” **** 箭头。 若要添加全部属性，请单击“全部添加” **** 箭头。  
   
-8.  单击“保存”  。  
+8.  单击“ **保存**”。  
   
  对于你创建的每个索引，系统都会在网格中添加一行（其中包含四列）。 下表对这些列进行了说明。  
   
@@ -59,18 +59,18 @@ ms.locfileid: "73728421"
   
  单击索引后可看到以下信息：  
   
--   **创建者**：创建索引的用户的名称。  
+-   创建者****：创建索引的用户的用户名。  
   
--   **日期：创建**索引的日期和时间。  
+-   创建时间****：创建索引的日期和时间。  
   
--   **更新者**：上次更新索引的用户的名称。  
+-   更新者****：上次更新索引的用户的用户名。  
   
--   **日期：上次**更新索引的日期和时间。  
+-   更新时间****：上次更新索引的日期和时间。  
   
 ## <a name="next-steps"></a>后续步骤  
- [编辑和删除索引 &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
+ [编辑和删除索引 (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [自定义索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
+ [自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   
   

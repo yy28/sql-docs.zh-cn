@@ -11,10 +11,10 @@ ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728035"
 ---
 # <a name="manage-changesets-master-data-services"></a>管理变更集 (Master Data Services)
@@ -23,9 +23,9 @@ ms.locfileid: "73728035"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，你可以按模型和版本管理所有更改。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
--   您必须有权访问 "**资源管理器**" 功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   **** 您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 -   你必须至少拥有实体或其属性之一的读取访问权限。  
   

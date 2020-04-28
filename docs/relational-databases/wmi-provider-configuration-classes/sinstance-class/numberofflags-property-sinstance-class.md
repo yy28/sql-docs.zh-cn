@@ -18,10 +18,10 @@ ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 053a53cff621cedc29e8583ebca354c9c067774a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659076"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 属性（SInstance 类）
@@ -36,7 +36,7 @@ object.NumberOfFlags [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务器实例的[SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

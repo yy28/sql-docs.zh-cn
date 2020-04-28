@@ -18,10 +18,10 @@ ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f3f92e3b417b3f669cc621e2d29c8ece24183af4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660117"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable 方法（ClientNetworkProtocol 类）
@@ -36,7 +36,7 @@ object.SetEnableMethod()
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议的[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

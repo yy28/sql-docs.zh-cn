@@ -18,10 +18,10 @@ ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bf88421f5f7d54beab0dcc69ac37858817d43bd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659626"
 ---
 # <a name="cinstance-class---instancename-property"></a>CInstance 类 - InstanceName 属性
@@ -36,7 +36,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示 [客户端实例的](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) CInstance 类 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

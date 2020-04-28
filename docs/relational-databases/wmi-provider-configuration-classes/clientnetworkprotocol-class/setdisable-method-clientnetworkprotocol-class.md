@@ -18,10 +18,10 @@ ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f2e47e881236819de972d427f902fa5854f0b8b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660223"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 方法（ClientNetworkProtocol 类）
@@ -36,7 +36,7 @@ object.SetDisable()
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议的[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

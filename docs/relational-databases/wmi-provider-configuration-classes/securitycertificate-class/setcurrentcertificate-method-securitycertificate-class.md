@@ -18,10 +18,10 @@ ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 17d637c2b5b4a8f65a2d2e843cdf439d856fdd3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659405"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 方法（SecurityCertificate 类）
@@ -36,10 +36,10 @@ object.SetCurrentCertificate(SHA , SQLInstance)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
   
 |参数|说明|  
 |---------------|-----------------|  

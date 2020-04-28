@@ -11,10 +11,10 @@ ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728117"
 ---
 # <a name="create-a-master-data-services-database"></a>创建 Master Data Services 数据库
@@ -23,7 +23,7 @@ ms.locfileid: "73728117"
 
   在需要新数据库来支持 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序和 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务时，创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   有关承载该数据库的计算机的要求信息，请参阅[数据库要求 (Master Data Services)](../../master-data-services/install-windows/database-requirements-master-data-services.md)。  
   

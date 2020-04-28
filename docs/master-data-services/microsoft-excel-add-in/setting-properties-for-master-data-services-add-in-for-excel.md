@@ -11,10 +11,10 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6f3c303697ec3233935ec5c7743dcce0f18bfa01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727983"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>设置用于 Excel 的 Master Data Services 外接程序的属性
@@ -31,7 +31,7 @@ ms.locfileid: "73727983"
 |-|-|-|  
 |选项卡和部分|设置|说明|  
 |设置：发布|发布时显示 **“发布并添加批注”** 对话框|如果在单击 **“发布”** 之后选择显示 **“发布并添加批注”** 对话框，您便可以为所有更改输入单个批注或为每个更改输入一个批注。<br /><br /> 取消选择可指定启动发布过程时不显示 **“发布并添加批注”** 对话框。 您将没有机会输入批注。|  
-|设置：版本|版本选择|选择将加载到 Excel 外接程序中的主数据的版本。 可以是：<br /><br /> **无**，使版本不默认为任何版本<br /><br /> 最**早**为默认为最新**版本，** 默认为最新版本。|  
+|设置：版本|版本选择|选择将加载到 Excel 外接程序中的主数据的版本。 可以是：<br /><br /> **“无”** 以便不将任何版本设置为默认版本；<br /><br /> **“最早”** 以将默认版本设置为最早版本； **“最新”** 以将默认版本设置为最新版本。|  
 |设置：日志记录|打开详细日志记录|对将 MDS 中的主数据加载到 Excel 外接程序的过程启用日志记录，以便记录服务中的每条命令的结果。|  
 |设置：遥测|启用遥测数据收集|启用遥测有助于提升 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Excel 外接程序的质量、可靠性和性能。|  
 |设置：批大小|要加载的单元格数|选择一个数目，指示从 MDS 服务器加载到 Excel 的一个批次中将加载几千个单元格。 默认值为 50,000 个单元格。|  

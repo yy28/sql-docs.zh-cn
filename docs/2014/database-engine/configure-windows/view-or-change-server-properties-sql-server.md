@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783128"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>查看或更改服务器属性 (SQL Server)
@@ -43,9 +43,9 @@ ms.locfileid: "72783128"
   
 -   **跟进：** [更改服务器属性之后](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   使用 sp_configure 时，必须在设置配置选项之后运行 RECONFIGURE 或 RECONFIGURE WITH OVERRIDE。 RECONFIGURE WITH OVERRIDE 语句通常专门用来设置那些使用起来应当十分小心的配置选项。 但是，RECONFIGURE WITH OVERRIDE 可用于所有的配置选项，并且可以用它代替 RECONFIGURE。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "72783128"
   
 -   有些属性页会显示通过 Windows Management Instrumentation (WMI) 获得的信息。 若要显示这些页，WMI 必须安装在运行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的计算机上。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  有关详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。  
   
  默认情况下`sp_configure` ，不带参数的执行权限或仅将第一个参数授予所有用户。 若要`sp_configure`使用这两个参数来更改配置选项或运行重新配置语句，必须向用户授予 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>查看或更改服务器属性  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72783128"
   
 2.  在 **“服务器属性”** 对话框中，单击某页以查看或更改有关该页的服务器信息。 某些属性是只读属性。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>通过使用 SERVERPROPERTY 内置函数查看服务器属性  
   
@@ -139,7 +139,7 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="PowerShellProcedure"></a> 使用 SQL Server 配置管理器  
+##  <a name="using-sql-server-configuration-manager"></a><a name="PowerShellProcedure"></a> 使用 SQL Server 配置管理器  
  可以通过使用 SQL Server 配置管理器查看或更改某些服务器属性。 例如，您可以查看 SQL Server 实例的版本，或更改存储错误日志文件的位置。 也可以通过查询 [服务器相关的动态管理视图和函数](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)来查看这些属性。  
   
 #### <a name="to-view-or-change-server-properties"></a>查看或更改服务器属性  
@@ -150,9 +150,9 @@ GO
   
 3.  在详细信息窗格中，右键单击**SQL Server （\<***instancename***>）**，然后单击 "**属性**"。  
   
-4.  在“SQL Server (**instancename>) 属性”\<******** 对话框中，更改“服务”**** 选项卡或“高级”**** 选项卡上的服务器属性，然后单击“确定”****。  
+4.  在 " **SQL Server （\<***instancename***>）属性**" 对话框中，更改 "**服务**" 选项卡或 "**高级**" 选项卡上的服务器属性，然后单击 **"确定"**。  
   
-##  <a name="FollowUp"></a> 跟进：更改服务器属性之后  
+##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> 跟进：更改服务器属性之后  
  对于某些属性，可能必须重新启动服务器，才能使更改生效。  
   
 ## <a name="see-also"></a>另请参阅  

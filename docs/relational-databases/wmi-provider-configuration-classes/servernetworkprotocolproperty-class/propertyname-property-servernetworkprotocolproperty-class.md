@@ -18,10 +18,10 @@ ms.assetid: 0175ce3c-e07e-4710-a2f9-a26dface6eb3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 254509e6d5bb40c65009ca40bd7a6bd1b0525077
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660538"
 ---
 # <a name="propertyname-property-servernetworkprotocolproperty-class"></a>PropertyName 属性（ServerNetworkProtocolProperty 类）
@@ -36,7 +36,7 @@ object.PropertyName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的网络协议属性的[ServerNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

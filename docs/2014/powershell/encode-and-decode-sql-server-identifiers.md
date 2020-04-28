@@ -11,36 +11,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797772"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>对 SQL Server 标识符进行编码和解码
   SQL Server 分隔标识符有时候包含 Windows PowerShell 路径名称中不支持的字符。 可以通过对其十六进制值进行编码来指定这些字符。  
   
-1.  **开始之前：**  [限制和限制](#LimitationsRestrictions)  
+1.  **开始之前：**  [限制和局限](#LimitationsRestrictions)  
   
-2.  **处理特殊字符：对**  [标识符进行编码](#EncodeIdent)、对[标识符进行解码](#DecodeIdent)  
+2.  **处理特殊字符：**  [对标识符进行编码](#EncodeIdent)、 [对标识符进行解码](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>开始之前  
  对于 Windows PowerShell 路径名称中不支持的字符，可以表示或编码为 "%" 字符，后跟代表该字符的位模式的十六进制值，如 "**%** xx" 中所示。 对于 Windows PowerShell 路径中不支持的字符，始终可以使用编码来处理字符。  
   
- 
-  **Encode-SqlName** cmdlet 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符作为输入。 它输出一个字符串，其中包含所有不受 Windows PowerShell 语言支持且已经用“%xx”编码的字符。 
-  **Decode-SqlName** cmdlet 将经过编码的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符作为输入并返回初始标识符。  
+ **Encode-SqlName** cmdlet 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符作为输入。 它输出一个字符串，其中包含所有不受 Windows PowerShell 语言支持且已经用“%xx”编码的字符。 **Decode-SqlName** cmdlet 将经过编码的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符作为输入并返回初始标识符。  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
- 
-  `Encode-Sqlname` 和 `Decode-Sqlname` cmdlet 仅对 SQL Server 分隔标识符中允许、但在 PowerShell 路径中不支持的字符进行编码和解码。 下面是可通过 **Encode-SqlName** 编码并可通过 **Decode-SqlName**解码的字符：  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
+ `Encode-Sqlname` 和 `Decode-Sqlname` cmdlet 仅对 SQL Server 分隔标识符中允许、但在 PowerShell 路径中不支持的字符进行编码和解码。 下面是可通过 **Encode-SqlName** 编码并可通过 **Decode-SqlName**解码的字符：  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
 |**字符**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**十六进制编码**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
-##  <a name="EncodeIdent"></a>编码标识符  
+##  <a name="encoding-an-identifier"></a><a name="EncodeIdent"></a> 对标识符进行编码  
  **对 PowerShell 路径中的 SQL Server 标识符进行编码**  
   
 -   使用以下两种方法之一对 SQL Server 标识符进行编码：  
@@ -62,8 +59,8 @@ Set-Location Table%3ATest
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
-##  <a name="DecodeIdent"></a>对标识符进行解码  
- **从 PowerShell 路径解码 SQL Server 标识符**  
+##  <a name="decoding-an-identifier"></a><a name="DecodeIdent"></a>对标识符进行解码  
+ **对 PowerShell 路径中的 SQL Server 标识符进行解码**  
   
  使用 `Decode-Sqlname` cmdlet 可用编码表示的字符替代十六进制编码。  
   

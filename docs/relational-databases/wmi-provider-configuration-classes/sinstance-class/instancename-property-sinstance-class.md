@@ -18,10 +18,10 @@ ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c80c41a6ef0a9bd9b057effc0cae950584a3dfd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659144"
 ---
 # <a name="instancename-property-sinstance-class"></a>InstanceName 属性（SInstance 类）
@@ -36,7 +36,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务器实例的[SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797776"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server 实用工具故障排除
@@ -44,8 +44,7 @@ ms.locfileid: "72797776"
 ## <a name="failed-wmi-validation"></a>失败的 WMI 验证  
  如果在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例上未正确配置 WMI，则“创建 UCP”和“注册托管实例”操作将显示一个警告，但不阻塞该操作。 此外，如果您更改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理帐户配置，以便 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理对于必需的 WMI 类没有权限，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的受影响的托管实例上的数据收集将无法上载到 UCP。 这将导致 UCP 中的灰色图标。  
   
- 失败的数据收集将导致 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的受影响托管实例的 UCP 列表视图中的灰色状态图标。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的托管实例上的作业历史记录显示 sysutility_mi_collect_and_upload 在步骤 2（暂存从 PowerShell 脚本收集的数据）上失败。  
+ 失败的数据收集将导致 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的受影响托管实例的 UCP 列表视图中的灰色状态图标。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的托管实例上的作业历史记录显示 sysutility_mi_collect_and_upload 在步骤 2（暂存从 PowerShell 脚本收集的数据）上失败。  
   
  简化的错误消息如下：  
   
@@ -159,12 +158,12 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  右键单击 **“性能监视器用户”** ，然后选择 **“添加到组”**。  
   
-    3.  单击“添加”  。  
+    3.  单击 **“添加”** 。  
   
     4.  输入 SQL Server 代理服务正基于其运行的帐户，然后单击 **“确定”**。  
   
     5.  如果在将用户添加到该组之前，该 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例已向 UCP 注册，则重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 实用工具的功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server 资源运行状况故障排除（SQL Server 实用工具）](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

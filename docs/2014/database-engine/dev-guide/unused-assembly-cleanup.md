@@ -11,24 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c7966d9d4a517902cf857856fd9bdeac7684de2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637699"
 ---
 # <a name="unused-assembly-cleanup"></a>清除未使用的程序集
-  
   `AssemblyCleanup` 示例包含一个 .NET 存储过程，该存储过程通过查询元数据目录来清除当前数据库中未使用的程序集。 其唯一的参数 `visible_assemblies` 用于指定是否应删除未使用的可见程序集。 值为“false”时表示默认情况下将只删除未使用的不可见程序集，否则，将删除所有未使用的程序集。 未使用的程序集的集合所包含的程序集未定义任何入口点（例程/类型和聚合），并且没有已使用的程序集直接或间接地引用它们。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -653,6 +650,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: fd886217b2fb2caf0fe3f32e88b7bf0215ece1a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145672"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys. pdw_nodes_dm_exec_sql_text （Transact-sql）
@@ -28,7 +28,7 @@ ms.locfileid: "73145672"
 ## <a name="table-returned"></a>返回的表  
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|pdw_node_id |**int**|与节点关联的唯一数字 ID。|
+|**pdw_node_id**|**int**|与节点关联的唯一数字 ID。|
 |**dbid**|**smallint**|数据库的 ID。<br /><br /> 对于计划外和预定义 SQL 语句，是编译语句的数据库的 ID。|  
 |**objectid**|**int**|对象的 ID。<br /><br /> 对于临时和预定义 SQL 语句为 NULL。|  
 |**数字**|**smallint**|对于带编号的存储过程，此列返回存储过程的编号。 有关详细信息，请参阅[sys.databases&#41;numbered_procedures &#40;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)。<br /><br /> 对于临时和预定义 SQL 语句为 NULL。|  
@@ -39,7 +39,7 @@ ms.locfileid: "73145672"
 [Dm_exec_sql_text](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql?view=sql-server-ver15)应用相同的备注。  
   
 ## <a name="permissions"></a>权限  
- 要求**** 对服务器具有 sysadmin `VIEW SERVER STATE`服务器角色或权限。  
+ 要求**sysadmin**对服务器具有 sysadmin `VIEW SERVER STATE`服务器角色或权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

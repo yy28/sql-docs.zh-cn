@@ -11,23 +11,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798328"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>从命令提示符安装 PowerPivot
   您可以从命令行运行安装程序以便安装 SQL Server PowerPivot for SharePoint。 您必须在命令中包含 `/ROLE` 参数并排除 `/FEATURES` 参数。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  必须安装 SharePoint Server 2010 Enterprise Edition Service Pack 1 (SP1)。  
   
  您必须使用域帐户来设置 Analysis Services。  
   
  必须将计算机加入到 SharePoint 场所在的域中。  
   
-##  <a name="Commands"></a>基于/ROLE 的安装选项  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>基于/ROLE 的安装选项  
  对于 PowerPivot for SharePoint 部署，用 `/ROLE` 参数代替 `/FEATURES` 参数。 有效值包括：  
   
 -   `SPI_AS_ExistingFarm`  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>修改命令语法  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>修改命令语法  
  使用以下步骤可以修改示例命令语法。  
   
 1.  将以下命令复制到记事本中：  
@@ -62,25 +62,19 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
-     
-  `/q` 参数以不显示用户界面的静默模式运行安装程序。  
+     `/q` 参数以不显示用户界面的静默模式运行安装程序。  
   
      如果为无人参与的安装指定了 `/IAcceptSQLServerLicenseTerms` 或 `/q` 参数，则 `/qs` 是必需的。  
   
-     
-  `/action` 参数指示安装程序执行安装。  
+     `/action` 参数指示安装程序执行安装。  
   
-     
-  `/role` 参数指示安装程序安装 PowerPivot for SharePoint 所需的 Analysis Services 程序和配置文件。 此角色还检测并使用现有场连接信息来访问 SharePoint 配置数据库。 此参数是必需的。 使用该参数（而非 `/features` 参数）指定要安装的组件。  
+     `/role` 参数指示安装程序安装 PowerPivot for SharePoint 所需的 Analysis Services 程序和配置文件。 此角色还检测并使用现有场连接信息来访问 SharePoint 配置数据库。 此参数是必需的。 使用该参数（而非 `/features` 参数）指定要安装的组件。  
   
-     
-  `/instancename` 参数将“PowerPivot”指定为命名实例。 此值是硬编码的，因此不能更改。 出于教育目的在命令中指定该值，以便您知道该服务是如何安装的。  
+     `/instancename` 参数将“PowerPivot”指定为命名实例。 此值是硬编码的，因此不能更改。 出于教育目的在命令中指定该值，以便您知道该服务是如何安装的。  
   
-     
-  `/indicateprogress` 参数允许您在命令提示符窗口中监视进度。  
+     `/indicateprogress` 参数允许您在命令提示符窗口中监视进度。  
   
-2.  
-  `PID` 参数从命令中省略，该参数将导致安装 Evaluation 版本。 如果您想要安装 Enterprise 版本，则将 PID 添加到您的安装程序命令中并且提供有效的产品密钥。  
+2.  `PID` 参数从命令中省略，该参数将导致安装 Evaluation 版本。 如果您想要安装 Enterprise 版本，则将 PID 添加到您的安装程序命令中并且提供有效的产品密钥。  
   
     ```  
     /PID=<product key for an Enterprise installation>  
@@ -96,7 +90,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 5.  选择整个命令，然后在 "编辑" 菜单中单击 "**复制**"。  
   
-6.  打开一个管理员命令提示符。 为此，请单击 "**开始**"，右键单击命令提示符，然后选择 "以**管理员身份运行**"。  
+6.  打开管理员命令提示符。 为此，请单击 "**开始**"，右键单击命令提示符，然后选择 "以**管理员身份运行**"。  
   
 7.  导航到包含 SQL Server 安装介质的驱动器或共享文件夹。  
   

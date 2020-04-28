@@ -18,10 +18,10 @@ ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0438ea784bc8d1521455e0d5e7b9970dafe02fd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660091"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 方法（ClientNetworkProtocol 类）
@@ -36,10 +36,10 @@ object.SetOrderValue(OrderValue)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示 [客户端使用的网络协议的](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) ClientNetworkProtocol 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
   
 |参数|说明|  
 |---------------|-----------------|  

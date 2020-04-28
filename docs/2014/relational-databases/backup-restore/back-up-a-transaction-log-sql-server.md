@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783120"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>备份事务日志 (SQL Server)
@@ -43,36 +43,36 @@ ms.locfileid: "72783120"
      [PowerShell](#PowerShellProcedure)  
   
     > [!NOTE]  
-    >  此外，还可以使用[维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md)来创建备份。  
+    >   此外，还可以使用[维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md)来创建备份。  
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   不允许在显式或隐式事务中使用 BACKUP 语句。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   如果数据库使用完整恢复模式或大容量日志恢复模式，则必须足够频繁地备份事务日志，以保护数据和避免事务日志变满。 这将截断日志，并且支持将数据库还原到特定时间点。  
   
 -   默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地备份日志，这些成功消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
- 备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
+ 备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)不 检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-back-up-a-transaction-log"></a>备份事务日志  
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 "**数据库**"，根据数据库的不同，选择用户数据库，或展开 "**系统**数据库" 并选择一个系统数据库。  
+2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
 3.  右键单击该数据库，指向 **“任务”**，然后单击 **“备份”**。 此时将出现 **“备份数据库”** 对话框。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72783120"
   
 6.  在 **“备份类型”** 列表框中，选择 **“事务日志”**。  
   
-7.  还可以根据需要选择 **“仅复制备份”** 创建仅复制备份。 *仅复制备份*是独立于常规[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份序列的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](copy-only-backups-sql-server.md)。  
+7.  还可以根据需要选择 **“仅复制备份”** 创建仅复制备份。  仅复制备份** 是独立于常规 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份序列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](copy-only-backups-sql-server.md)。  
   
     > [!NOTE]  
     >  选择“差异”**** 选项时，无法创建仅复制备份。  
@@ -93,7 +93,7 @@ ms.locfileid: "72783120"
   
 10. 指定备份集的过期时间：  
   
-    -   若要使备份集在特定天数后过期，请单击 "**之后**" （默认选项），并输入设置创建后将到期的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
+    -   若要使备份集在特定天数后过期，请单击 **“之后”**（默认选项），并输入备份集从创建到过期所需的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
   
          默认值在 **“服务器属性”** 对话框（位于 **“数据库设置”** 页上）的 **“默认备份媒体保持期(天)”** 选项中设置。 若要访问此对话框，请在对象资源管理器中右键单击服务器名称，选择“属性”，再选择 **“数据库设置”** 页。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "72783120"
   
          如果将介质名称保留空白，并选中该框以便与介质进行核对，则只有当介质上的介质名称也是空白时才能成功。  
   
-    -   **备份到新介质集，并清除所有现有备份集**  
+    -   **备份到新介质集并清除所有现有备份集**  
   
          对于该选项，请在 **“新建介质集名称”** 文本框中输入名称，并在 **“新建介质集说明”** 文本框中描述介质集（可选）。 有关详细信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72783120"
   
     -   **完成后验证备份**。  
   
-    -   **在写入媒体之前，请执行校验**和，还可以选择**在出现校验和错误时继续**。 有关校验和的信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)。  
+    -   **“写入介质前检查校验和”** 和 **“出现校验和错误时继续”**（可选）。 有关校验和的信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
 15. 在 **“事务日志”** 区域中：  
   
@@ -137,7 +137,7 @@ ms.locfileid: "72783120"
   
 16. 如果备份到磁带驱动器（如同 **“常规”** 页的 **“目标”** 部分指定的一样），则 **“备份后卸载磁带”** 选项处于活动状态。 单击此选项可以激活 **“卸载前倒带”** 选项。  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]和更高版本支持[备份压缩](backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中 **“压缩备份”** 来压缩备份，并且可以通过选中 **“不压缩备份”** 来防止压缩备份。  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中 **“压缩备份”** 来压缩备份，并且可以通过选中 **“不压缩备份”** 来防止压缩备份。  
   
      **查看当前备份压缩默认值**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "72783120"
   
 -   三重 DES  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-back-up-a-transaction-log"></a>备份事务日志  
   
@@ -165,12 +165,12 @@ ms.locfileid: "72783120"
   
     -   写入事务日志备份的备份设备。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
   
 > [!IMPORTANT]  
 >  此示例使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 数据库，该数据库使用简单恢复模式。 若要允许日志备份，请在完整备份数据库之前，将数据库设置为使用完整恢复模式。 有关详细信息，请参阅[查看或更改数据库的恢复模式 (SQL Server)](view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
- 以下示例将在以前创建的已命名备份设备 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 上创建 `MyAdvWorks_FullRM_log1` 数据库的事务日志备份。  
+ 以下示例将在以前创建的已命名备份设备 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 上创建 `MyAdvWorks_FullRM_log1`数据库的事务日志备份。  
   
 ```sql  
 BACKUP LOG AdventureWorks2012  
@@ -178,7 +178,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 使用 `Backup-SqlDatabase` cmdlet 并且为 `Log` 参数的值指定 `-BackupAction`。  
   
@@ -190,7 +190,7 @@ GO
   
 若要设置并使用 SQL Server PowerShell 提供程序，请参阅[SQL Server PowerShell 提供程序](../../powershell/sql-server-powershell-provider.md)。
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [还原事务日志备份 (SQL Server)](restore-a-transaction-log-backup-sql-server.md)  
   
@@ -200,6 +200,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
+ [&#40;SQL Server 应用事务日志备份&#41;](transaction-log-backups-sql-server.md)   
  [维护计划](../maintenance-plans/maintenance-plans.md)   
  [完整文件备份 (SQL Server)](full-file-backups-sql-server.md)  

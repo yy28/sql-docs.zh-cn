@@ -11,23 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 364d155ce61dd452e63112b6182b6ff9653ef261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637685"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>使用 CLR 和 XML 创建联系信息
   SQL Server 的联系人示例提供了一些有用的实用工具，这些实用工具在基本的 AdventureWorks2012 示例数据库之上形成了一层额外的功能。 第一个实用工具为 AdventureWorks2012 数据库中所涉及的各种类型的人创建联系记录。 联系信息通过使用 XML 来指定，并传递到基于 C# 的存储过程或 VB 存储过程，以创建 XML 并将其放入该数据库中的正确表。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -1555,6 +1553,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

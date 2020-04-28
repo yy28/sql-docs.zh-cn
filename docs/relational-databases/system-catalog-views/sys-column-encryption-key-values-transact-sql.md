@@ -21,10 +21,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c5dc4f2dc42452560162d214844e2264cd0e5e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593808"
 ---
 # <a name="syscolumn_encryption_key_values-transact-sql"></a>sys. column_encryption_key_values （Transact-sql）
@@ -36,7 +36,7 @@ ms.locfileid: "73593808"
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_id**|**int**|数据库中 CEK 的 ID。|  
 |**column_master_key_id**|**int**|用于对 CEK 值进行加密的列主密钥的 ID。|  
-|**encrypted_value**|**varbinary （8000）**|CEK 值用 column_master_key_id 中指定的 CMK 进行了加密。|  
+|**encrypted_value**|varbinary(8000)****|CEK 值用 column_master_key_id 中指定的 CMK 进行了加密。|  
 |**encryption_algorithm_name**|**sysname**|用于对 CEK 值进行加密的算法的名称。<br /><br /> 用于对值进行加密的加密算法的名称。 系统提供程序的算法必须**RSA_OAEP**。|  
   
 ## <a name="permissions"></a>权限  

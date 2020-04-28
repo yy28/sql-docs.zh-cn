@@ -11,15 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798016"
 ---
 # <a name="create-the-ssis-catalog"></a>创建 SSIS 目录
-  当您在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中设计和测试包后，可将包含包的项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 在您可以将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器之前，该服务器必须包含 `SSISDB` 目录。 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安装程序并不会自动创建目录；您需要使用以下说明手动创建目录。  
+  当您在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中设计和测试包后，可将包含包的项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 在您可以将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器之前，该服务器必须包含 `SSISDB` 目录。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安装程序并不会自动创建目录；您需要使用以下说明手动创建目录。  
   
  您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中创建 SSISDB 目录。 还可以使用 Windows PowerShell 以编程方式创建目录。  
   
@@ -29,7 +28,7 @@ ms.locfileid: "72798016"
   
 2.  连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎。  
   
-3.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录”**** 节点，然后单击“创建目录”****。  
+3.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录” **** 节点，然后单击“创建目录” ****。  
   
 4.  单击 **“启用 CLR 集成”**。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "72798016"
   
      该存储过程对 SSISDB 目录的操作状态进行维护。 它可以纠正当 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器实例出现故障时正在运行的任何包的状态。  
   
-6.  输入密码，然后单击 **"确定"**。  
+6.  输入密码，然后单击 **“确定”**。  
   
      该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   

@@ -14,10 +14,10 @@ ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727876"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 示例：模型部署包 (MDS)
@@ -26,7 +26,7 @@ ms.locfileid: "73727876"
 
   安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，包含使用数据的示例模型包。 包文件的默认位置为 \<驱动器>\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages。  
   
- 有关如何部署示例模型包的说明，请参阅[部署示例模型和数据](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。 可以使用 [MDSModelDeploy 工具](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)部署示例模型包。  
+ 有关如何部署示例模型包的说明，请参阅 [部署示例模型和数据](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。 可以使用 [MDSModelDeploy 工具](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)部署示例模型包。  
   
 > [!IMPORTANT]
 >  **中的示例更新[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  

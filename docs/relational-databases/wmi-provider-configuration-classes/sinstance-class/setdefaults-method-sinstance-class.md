@@ -18,10 +18,10 @@ ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3edec1ccd74e59a8bb79353e02939030bf43ce8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659087"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 方法（SInstance 类）
@@ -36,10 +36,10 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务器实例的[SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)对象。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
   
 |参数|说明|  
 |---------------|-----------------|  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637910"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
@@ -25,7 +25,7 @@ ms.locfileid: "73637910"
   
 ## <a name="installing-semantic-search"></a>安装语义搜索  
   
-###  <a name="HowToCheckInstalled"></a>如何：检查是否安装了语义搜索  
+###  <a name="how-to-check-whether-semantic-search-is-installed"></a><a name="HowToCheckInstalled"></a>如何：检查是否安装了语义搜索  
  查询 [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql) 元数据函数的 **IsFullTextInstalled** 属性。  
   
  返回值 1 表示安装了全文搜索和语义搜索；返回值 0 表示未安装它们。  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a>如何：安装语义搜索  
+###  <a name="how-to-install-semantic-search"></a><a name="BasicsSemanticSearch"></a>如何：安装语义搜索  
  若要安装语义搜索，在安装过程中，请在“要安装的功能”**** 页上选择“全文和语义提取搜索”****。  
   
  统计语义搜索依赖于全文搜索。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的这两个可选功能是一起安装的。  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>安装或删除语义语言统计数据库  
  语义搜索具有一个称为语义语言统计数据库的附加外部依赖项。 此数据库包含语义搜索所需的统计语言模型。 单个语义语言统计数据库包含语义索引支持的所有语言的语言模型。  
   
-###  <a name="HowToCheckDatabase"></a>如何：检查是否安装了语义语言统计信息数据库  
+###  <a name="how-to-check-whether-the-semantic-language-statistics-database-is-installed"></a><a name="HowToCheckDatabase"></a>如何：检查是否安装了语义语言统计信息数据库  
  查询目录视图 [sys.fulltext_semantic_language_statistics_database (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)。  
   
  如果为该实例安装并注册了语义语言统计数据库，则查询结果将包含有关该数据库的单行信息。  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a>如何：安装、附加和注册语义语言统计信息数据库  
+###  <a name="how-to-install-attach-and-register-the-semantic-language-statistics-database"></a><a name="HowToInstallModel"></a>如何：安装、附加和注册语义语言统计信息数据库  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不安装语义语言统计数据库。 若要将语义语言统计数据库设置为语义索引的必备组件，请执行以下操作：  
   
  **1.安装语义语言统计数据库。**  
@@ -63,7 +63,7 @@ GO
   
     -   从[Microsoft？？下载安装程序包SQL Server？？2014语义语言统计信息](https://go.microsoft.com/fwlink/?LinkID=296743)页面[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
-2.  运行**Semanticlanguagedatabase.msi** Windows 安装程序包，以提取数据库和日志文件。  
+2.  运行 **SemanticLanguageDatabase.msi** Windows 安装程序包，以提取数据库和日志文件。  
   
      也可以选择更改目标目录。 默认情况下，安装程序将文件提取到32位或 64-位 Program Files 文件夹中名为**Microsoft 语义语言数据库**的文件夹中。 MSI 文件包含压缩的数据库文件和日志文件。  
   
@@ -75,7 +75,7 @@ GO
 >  提取语义语言统计数据库时，向文件系统默认位置中的数据库文件和日志文件分配受限权限。 因此，如果将文件放入默认位置，您可能没有附加该数据库的权限。 如果在尝试附加数据库时引发了错误，请删除这些文件，或检查并根据需要修复文件系统权限。  
   
  **2.附加语义语言统计数据库。**  
- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]FOR ATTACH[ 语法调用 ](/sql/t-sql/statements/create-database-sql-server-transact-sql)CREATE DATABASE (SQL Server Transact-SQL)** 将数据库附加到 ** 实例。 有关详细信息，请参阅[数据库分离和附加 (SQL Server)](../databases/database-detach-and-attach-sql-server.md)。  
+ 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或通过 **FOR ATTACH** 语法调用 [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql) 将数据库附加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[数据库分离和附加 (SQL Server)](../databases/database-detach-and-attach-sql-server.md)。  
   
  默认情况下，该数据库的名称为**semanticsdb**。 也可以选择在附加数据库时为数据库提供其他名称。 当使用后续步骤注册数据库时，必须提供此名称。  
   
@@ -97,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a>如何取消注册、分离和删除语义语言统计信息数据库  
+###  <a name="how-to-unregister-detach-and-remove-the-semantic-language-statistics-database"></a><a name="HowToUnregister"></a>如何取消注册、分离和删除语义语言统计信息数据库  
  **取消注册语义语言统计数据库。**  
  调用 [sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) 存储过程。 由于一个实例仅有一个语义语言统计数据库，因此您不必提供该数据库的名称。  
   
@@ -120,7 +120,7 @@ GO
  **删除语义语言统计数据库。**  
  撤消注册并分离该数据库后，您可以删除数据库文件。 不提供卸载程序，在“控制面板”的 **“程序和功能”** 中没有相应条目。  
   
-###  <a name="reqinstall"></a>安装和删除语义语言统计信息数据库的要求和限制  
+###  <a name="requirements-and-restrictions-for-installing-and-removing-the-semantic-language-statistics-database"></a><a name="reqinstall"></a>安装和删除语义语言统计信息数据库的要求和限制  
   
 -   在一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上只能附加和注册一个语义语言统计数据库。  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>为较新文档类型安装可选支持  
   
-###  <a name="office"></a>如何：为 Microsoft Office 和其他 Microsoft 文档类型安装最新筛选器  
+###  <a name="how-to-install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a>如何：为 Microsoft Office 和其他 Microsoft 文档类型安装最新筛选器  
  此版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装最新的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 断字符和词干分析器，但是不为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 文档和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 文档类型安装最新的筛选器。 要为使用最新版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 应用程序创建的文档编制索引，必须安装这些筛选器。 若要下载最新的筛选器，请参阅 [Microsoft Office 2010 Filter Packs](https://www.microsoft.com/download/details.aspx?id=17062)。  
   
   

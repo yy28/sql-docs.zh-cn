@@ -18,10 +18,10 @@ ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8dec4a22423c7e2d6fa2026d8a0939f484f85be4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659769"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>InstanceName 属性（ServerSettingsGeneralFlag 类）
@@ -36,7 +36,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务器设置的常规标志的 [ServerSettingsGeneralFlag 类](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

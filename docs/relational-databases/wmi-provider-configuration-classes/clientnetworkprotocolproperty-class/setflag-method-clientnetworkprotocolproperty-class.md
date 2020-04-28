@@ -18,10 +18,10 @@ ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0f5c4e9c6e153a548b00e4c273936eea018b316b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660717"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>SetFlag 方法（ClientNetworkProtocolProperty 类）
@@ -36,10 +36,10 @@ object.SetFlag(BoolValue) [=]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议属性的[ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)对象。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
   
 |参数|说明|  
 |---------------|-----------------|  

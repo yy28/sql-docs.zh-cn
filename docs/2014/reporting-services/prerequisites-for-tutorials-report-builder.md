@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17c8b67d29cb82956a37bc3f83867161486a4f9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637868"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教程先决条件（报表生成器）
-  “报表生成器”教程是希望您能够在报表服务器上或与报表服务器集成的 SharePoint 站点上查看和保存报表。 对于数据，所有教程都使用必须由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例处理的文字查询。  
+  “报表生成器”教程是希望您能够在报表服务器上或与报表服务器集成的 SharePoint 站点上查看和保存报表。 对于数据，所有教程都使用必须由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]实例处理的文字查询。  
   
  如果您无权访问报表服务器或站点或数据源，则可以通过生成脱机报表来了解报表生成器。 请参阅[教程：脱机创建快速图表报表（报表生成器）](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
@@ -33,8 +33,7 @@ ms.locfileid: "73637868"
   
 -   指向 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 报表服务器或与 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 报表服务器集成的 SharePoint 站点的 URL。 您必须拥有保存和查看报表、共享数据源、共享数据集、报表部件和模型的权限。 默认情况下，Report Server 的 URL 为 http://\<servername>/reportserver。 默认情况下，SharePoint 站点的 URL 是 http://\<sitename> 或 http://\<server>/site。  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例的名称和足以对任何数据库进行只读访问的凭据。 各教程中的数据集查询使用文字数据，但必须由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例处理每个查询以返回报表数据集所必需的元数据。 例如，以下连接字符串仅指定一个服务器： `data source=<servername>`。 您必须对默认数据库具有读取权限，该权限是由授予您对服务器的访问权限的系统管理员分配给您的。 您还可以指定数据库，如以下连接字符串中所示： `data source=<servername>;initial catalog=<database>`。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例的名称和足以对任何数据库进行只读访问的凭据。 各教程中的数据集查询使用文字数据，但必须由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例处理每个查询以返回报表数据集所必需的元数据。 例如，以下连接字符串仅指定一个服务器： `data source=<servername>`。 您必须对默认数据库具有读取权限，该权限是由授予您对服务器的访问权限的系统管理员分配给您的。 您还可以指定数据库，如以下连接字符串中所示： `data source=<servername>;initial catalog=<database>`。  
   
 -   对于包括地图的教程，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅 msdn.microsoft.com 上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)的[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]文档中[的规划地图报表支持](plan-for-map-report-support.md)。  
   

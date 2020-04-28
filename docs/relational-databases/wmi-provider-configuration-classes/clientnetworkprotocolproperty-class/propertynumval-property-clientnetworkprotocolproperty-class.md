@@ -18,10 +18,10 @@ ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7eb04378883ca9aa973b1dfcd89083087566a413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658886"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>PropertyNumVal 属性（ClientNetworkProtocolProperty 类）
@@ -36,7 +36,7 @@ object.PropertyNumVal [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议属性的[ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

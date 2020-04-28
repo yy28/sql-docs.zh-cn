@@ -18,10 +18,10 @@ ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 60812a9ad06729c6a7c1f4d71be72d5caa4ebede
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660631"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex 属性（ClientSettingsGeneralFlag 类）
@@ -36,7 +36,7 @@ object.FlagIndex [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务器设置的常规标志的 [ClientSettingsGeneralFlag 类](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

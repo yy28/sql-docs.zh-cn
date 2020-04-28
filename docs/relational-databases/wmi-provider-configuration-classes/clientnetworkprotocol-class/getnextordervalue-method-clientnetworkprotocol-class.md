@@ -18,10 +18,10 @@ ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1f9b9a8d69dad76d2ec1d6e38f7151238d0e91c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660750"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>GetNextOrderValue 方法（ClientNetworkProtocol 类）
@@ -36,7 +36,7 @@ object.GetNextOrderValue()
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议的[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

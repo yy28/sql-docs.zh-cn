@@ -17,10 +17,10 @@ ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 435bb6ab0585b7f453fe035fa99be913dffbf769
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659003"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString 属性（SqlServerAlias 类）
@@ -35,7 +35,7 @@ object.ConnectionString [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]别名的[SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

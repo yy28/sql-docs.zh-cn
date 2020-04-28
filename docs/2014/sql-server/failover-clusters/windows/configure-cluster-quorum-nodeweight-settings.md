@@ -14,38 +14,38 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfc31fa968952db56a64f93b180c2b88ec685725
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797606"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>配置群集仲裁 NodeWeight 设置
   本主题说明如何配置 Windows Server 故障转移群集 (WSFC) 群集中成员节点的 NodeWeight 设置。 在仲裁投票期间，使用 NodeWeight 设置来支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的灾难恢复和多子网方案。  
   
--   **开始之前：**  [先决条件](#Prerequisites)、[安全性](#Security)  
+-   **开始之前：** [先决条件](#Prerequisites)、[安全性](#Security)  
   
--   **若要查看仲裁 NodeWeight 设置**，请使用：使用[Powershell](#PowerShellProcedure)，[使用 cluster.exe](#CommandPromptProcedure)  
+-   **若要查看仲裁 NodeWeight 设置，请使用：** [使用 PowerShell](#PowerShellProcedure)、[使用 Cluster.exe](#CommandPromptProcedure)  
   
 -   [相关内容](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  仅在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 或更高版本中支持此功能。  
   
 > [!IMPORTANT]  
 >  为了使用 NodeWeight 设置，必须将以下修补程序应用到 WSFC 群集中的所有服务器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036)：提供了一个修补程序，可让你配置在[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]和中没有仲裁投票的群集节点[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中没有仲裁投票的群集节点  
   
 > [!TIP]  
 >  如果未安装此修补程序，本主题中的示例将为 NodeWeight 返回空或 NULL 值。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
-##  <a name="PowerShellProcedure"></a>使用 Powershell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 ### <a name="to-configure-nodeweight-settings"></a>配置 NodeWeight 设置
   
@@ -71,7 +71,7 @@ $nodes = Get-ClusterNode -Cluster $cluster
 $nodes | Format-Table -property NodeName, State, NodeWeight  
 ```  
   
-##  <a name="CommandPromptProcedure"></a>使用 cluster.exe  
+##  <a name="using-clusterexe"></a><a name="CommandPromptProcedure"></a>使用 cluster.exe  
   
 > [!NOTE]  
 >  在 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 版本中不推荐使用 cluster.exe 实用工具。  在将来的开发工作中，请将 PowerShell 与故障转移群集结合使用。  在 Windows Server 的下一版本中，将删除 cluster.exe 实用工具。 有关详细信息，请参阅 [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx)（为故障转移群集将 cluster.exe 命令映射到 Windows PowerShell Cmdlet）。  
@@ -88,11 +88,11 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
 ```  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [查看故障转移群集的事件和日志](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-clusterlog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [WSFC 仲裁模式和投票配置 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   

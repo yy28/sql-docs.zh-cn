@@ -14,10 +14,10 @@ ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 534e8bed6596c9b15e05ec179ece3d37a64b15ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728440"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>创建属性组 (Master Data Services)
@@ -26,14 +26,14 @@ ms.locfileid: "73728440"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要在 **“资源管理器”** 网格中的单独选项卡上显示属性时，创建属性组。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
--   必须至少存在一个属性。 有关详细信息，请参阅[创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)。  
+-   必须至少存在一个属性。 有关详细信息，请参阅 [创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)。  
   
 ### <a name="to-create-an-attribute-group"></a>创建属性组  
   
@@ -69,14 +69,14 @@ ms.locfileid: "73728440"
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [使属性组对用户可见 &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [使属性组对用户可见 (Master Data Services)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [属性组 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [更改属性组名称 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [删除 &#40;Master Data Services 的属性组&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
- [叶权限 &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   
+ [叶权限 (Master Data Services)](../master-data-services/leaf-permissions-master-data-services.md)   
    
   
   

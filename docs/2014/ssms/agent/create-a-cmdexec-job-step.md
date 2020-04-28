@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798158"
 ---
 # <a name="create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤
@@ -36,21 +36,21 @@ ms.locfileid: "72798158"
   
      [SQL Server 管理对象](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员可以创建 CmdExec 作业步骤。 除非 **sysadmin** 用户创建一个代理帐户，否则这些作业步骤将在 SQL Server 代理服务帐户的上下文中运行。 如果不属于 **sysadmin** 角色成员的用户具有访问 CmdExec 代理帐户的权限，则也可以创建 CmdExec 作业步骤。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤  
   
-1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
+1.  在“对象资源管理器”**** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开此实例。  
   
-2.  展开 **“SQL Server 代理”**，创建一个新作业或右键单击一个现有作业，再单击 **“属性”**。  
+2.  展开“SQL Server 代理”****，创建一个新作业或右键单击一个现有作业，再单击“属性”****。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72798158"
   
 9. 单击 **“高级”** 页设置以下作业步骤选项，例如：当该作业步骤成功或失败时将执行的操作、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理应该尝试执行该作业步骤的次数，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将作业步骤输出写入哪个文件。 只有 **sysadmin** 固定服务器角色的成员才可以将作业步骤输出写入到操作系统文件中。  
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 ### <a name="to-create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72798158"
   
  有关详细信息，请参阅[sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
-##  <a name="SMO"></a>使用 SQL Server 管理对象  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理对象  
 
 ### <a name="to-create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤
   

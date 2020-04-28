@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796401"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>备份和还原 Reporting Services 加密密钥
   报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  在发生以下任何事件时，必须还原加密密钥的备份副本：  
   
@@ -46,14 +46,14 @@ ms.locfileid: "72796401"
 ## <a name="backing-up-the-encryption-keys"></a>备份加密密钥  
  备份对称密钥是将密钥写入所指定的文件，然后使用所提供的密码对密钥进行加密的过程。 对称密钥绝对不能在未加密状态下存储，所以在将它保存到磁盘时，必须提供密码对密钥进行加密。 创建文件后，必须将其存储在安全的位置， **并记住文件的解锁密码** 。 若要备份对称密钥，可以使用以下工具：  
   
- **本机模式：** Reporting Services 配置管理器或**rskeymgmt**实用工具。  
+ **本机模式：** Reporting Services 配置管理器或 **rskeymgmt** 实用工具。  
   
  **SharePoint 模式：** SharePoint 管理中心页或 PowerShell。  
   
-####  <a name="bkmk_backup_sharepoint"></a>备份 SharePoint 模式报表服务器  
+####  <a name="backup-sharepoint-mode-report-servers"></a><a name="bkmk_backup_sharepoint"></a> 备份 SharePoint 模式报表服务器  
  对于 SharePoint 模式报表服务器，您可以使用 PowerShell 命令或使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的管理页。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../manage-a-reporting-services-sharepoint-service-application.md)的“密钥管理”部分  
   
-####  <a name="bkmk_backup_configuration_manager"></a>备份加密密钥-Reporting Services 配置管理器（本机模式）  
+####  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 备份加密密钥 - Reporting Services 配置管理器（本机模式）  
   
 1.  启动 Reporting Services 配置管理器，然后连接到要配置的报表服务器实例。  
   
@@ -61,11 +61,11 @@ ms.locfileid: "72796401"
   
 3.  键入强密码。  
   
-4.  指定用来包含所存储密钥的文件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]向文件追加 .snk 文件扩展名。 请考虑将文件存储在独立于报表服务器的磁盘上。  
+4.  指定用来包含所存储密钥的文件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将向该文件追加 .snk 文件扩展名。 请考虑将文件存储在独立于报表服务器的磁盘上。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a>备份加密密钥-rskeymgmt （纯模式）  
+####  <a name="back-up-encryption-keys--rskeymgmt-native-mode"></a><a name="bkmk_backup_rskeymgmt"></a>备份加密密钥-rskeymgmt （纯模式）  
   
 1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 必须使用 `-e` 提取参数复制密钥，提供文件名并指定密码。 下面的示例演示必须指定的参数：  
   
@@ -86,11 +86,11 @@ ms.locfileid: "72796401"
   
  若要还原加密密钥，必须具有保存在文件中的加密密钥副本。 还必须知道用来对存储的副本进行解锁的密码。 如果您具有密钥和密码，则可以运行 Reporting Services 配置工具或 **rskeymgmt** 实用工具来还原密钥。 该对称密钥必须与用来对报表服务器数据库中当前存储的加密数据进行锁定和解锁的密钥相同。 如果还原的副本无效，则报表服务器将无法访问报表服务器数据库中当前存储的加密数据。 在这种情况下，如果无法恢复有效的密钥，则最好删除所有加密值。 如果由于某些原因（例如，如果没有备份副本）而无法还原加密密钥，则必须删除现有密钥和加密内容。 有关详细信息，请参阅[删除和重新创建加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)。 有关如何创建对称密钥的详细信息，请参阅[初始化报表服务器（SSRS 配置管理器）](ssrs-encryption-keys-initialize-a-report-server.md)。  
   
-####  <a name="bkmk_restore_configuration_manager"></a>还原加密密钥-Reporting Services 配置管理器（本机模式）  
+####  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 还原加密密钥 - Reporting Services 配置管理器（本机模式）  
   
 1.  启动 Reporting Services 配置管理器，然后连接到要配置的报表服务器实例。  
   
-2.  在“加密密钥”页上，单击 **“还原”**。  
+2.  在 "加密密钥" 页上，单击 "**还原**"。  
   
 3.  选择包含备份副本的 .snk 文件。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72796401"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a>还原加密密钥-rskeymgmt （纯模式）  
+####  <a name="restore-encryption-keys---rskeymgmt-native-mode"></a><a name="bkmk_restore_rskeymgmt"></a> 还原加密密钥 - rskeymgmt（本机模式）  
   
 1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 使用 `-a` 参数还原密钥。 必须提供完全限定的文件名，并指定密码。 下面的示例演示必须指定的参数：  
   

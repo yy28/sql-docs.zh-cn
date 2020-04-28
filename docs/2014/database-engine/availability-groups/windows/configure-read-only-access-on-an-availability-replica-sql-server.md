@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d93f78c157d5551e805437f156b8972ca8616c2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797736"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>配置对可用性副本的只读访问 (SQL Server)
@@ -30,15 +30,15 @@ ms.locfileid: "72797736"
   
   
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件和限制  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 先决条件和限制  
   
 -   若要配置不同的连接访问，您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
   
 |任务|权限|  
 |----------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "72797736"
 |修改可用性副本|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
   
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **配置对可用性副本的访问**  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
@@ -61,7 +61,7 @@ ms.locfileid: "72797736"
   
     -   对于辅助角色，从 **“可读取辅助角色”** 下拉列表中选择一个新值，如下所示：  
   
-         **是**  
+         **否**  
          不允许与此副本的辅助数据库的用户连接。 它们不可用于读访问。 这是默认设置。  
   
          **仅限读意向**  
@@ -79,11 +79,11 @@ ms.locfileid: "72797736"
          当应用程序意向属性设置为**ReadWrite**或未设置 application 意向连接属性时，将允许连接。 不允许 Application Intent 连接属性设置为 **ReadOnly** 的连接。 这可帮助阻止客户错误地将读意向工作负荷连接到主副本。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **配置对可用性副本的访问**  
   
 > [!NOTE]  
->  有关此过程的示例，请参阅本节后面的[示例 (Transact-SQL)](#TsqlExample)。  
+>  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
   
 1.  连接到承载主副本的服务器实例。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797736"
   
          其中：  
   
-         否  
+         是  
          不允许与此副本的辅助数据库的直接连接。 它们不可用于读访问。 这是默认设置。  
   
          READ_ONLY  
@@ -116,7 +116,7 @@ ms.locfileid: "72797736"
      ALL  
      主副本中的数据库允许所有连接。 这是默认设置。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例将辅助副本添加到名为 *AG2*的可用性组。 一个独立服务器实例 *COMPUTER03\HADR_INSTANCE*被指定为承载新的可用性副本。 将此副本配置为对主角色允许读写连接，对辅助角色仅允许读意向连接。  
   
 ```sql
@@ -132,7 +132,7 @@ GO
 ```  
   
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
 
 ### <a name="to-configure-access-on-an-availability-replica"></a>配置对可用性副本的访问
   
@@ -179,8 +179,8 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 -InputObject $primaryReplica
 ```  
 
-##  <a name="FollowUp"></a>跟进：为可用性副本配置只读访问后  
- **对可读辅助副本的只读访问**  
+##  <a name="follow-up-after-configuring-read-only-access-for-an-availability-replica"></a><a name="FollowUp"></a>跟进：为可用性副本配置只读访问后  
+ **对可读取辅助副本的只读访问**  
   
 -   使用[Bcp 实用工具](../../../tools/bcp-utility.md)或[sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)时，可以通过指定`-K ReadOnly`开关来指定对启用了只读访问权限的任何辅助副本的只读访问。  
   
@@ -188,10 +188,10 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
     ||先决条件|链接|  
     |-|------------------|----------|  
-    |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保可用性组具有侦听器。|[创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为可用性组配置只读路由。|[为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保可用性组具有侦听器。|[创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为可用性组配置只读路由。|[为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
- **故障转移后可能会影响触发器和作业的因素**  
+ **在故障转移后可能会影响触发器和作业的因素**  
   
  如果您在非可读取辅助数据库或可读取辅助数据库上正运行时具有将失败的触发器和作业，则需要编写针对这些触发器和作业的脚本，以便对给定副本进行检查以确定该数据库是主数据库还是可读取辅助数据库。 若要获取该信息，请使用 [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) 函数以返回数据库的 **Updatability** 属性。 若要标识只读数据库，请按如下所示将 READ_ONLY 指定为值：  
   
@@ -202,14 +202,14 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
  若要标识读写数据库，请将 READ_WRITE 指定为值：  
   
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 -   [创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   [AlwaysOn：可读辅助副本的价值主张](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
@@ -235,4 +235,4 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [活动辅助副本：可读辅助副本 &#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
- [关于对可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [关于对可用性副本的客户端连接访问 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  

@@ -18,10 +18,10 @@ ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5c3c329474b27507b3e2a3bf0796c66025391ffa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660292"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>FlagValue 属性（ServerSettingsGeneralFlag 类）
@@ -36,7 +36,7 @@ object.FlagValue [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务器设置的常规标志的 [ServerSettingsGeneralFlag 类](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

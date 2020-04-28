@@ -18,10 +18,10 @@ ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660869"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 属性（SqlService 类）
@@ -36,7 +36,7 @@ object.StartMode [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -53,10 +53,10 @@ object.StartMode [= value]
  自动  
  值 = 2。 服务将在系统启动期间由服务控制管理器自动启动。  
   
- 手动  
+ Manual  
  值 = 3。 要在进程调用**StartService**方法时由计算机管理器启动的服务。  
   
- 已禁用  
+ 禁用  
  值 = 4。 无法启动服务。  
   
 ## <a name="remarks"></a>备注  

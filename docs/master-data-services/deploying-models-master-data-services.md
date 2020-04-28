@@ -14,10 +14,10 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728287"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
@@ -32,11 +32,11 @@ ms.locfileid: "73728287"
 ## <a name="tools-for-deploying-models"></a>用于部署模型的工具  
  若要使用模型包，您可以根据需要使用以下三个工具之一。  
   
--   **MDSModelDeploy 工具**：若要创建和部署模型对象和数据，请使用 MDSModelDeploy 工具。 如果你在安装 MDS 时选择了默认路径，则此工具将位于 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
+-   **MDSModelDeploy 工具**：若要创建和部署模型对象和数据，请使用 MDSModelDeploy.exe 工具。 如果你在安装 MDS 时选择了默认路径，则此工具将位于 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
   
--   **模型部署向导**：若要创建和部署模型结构的包，请使用[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web 应用程序中的向导。 您不能使用此向导来部署数据。  
+-   **模型部署向导**：若要创建和部署仅包含模型结构的包，请使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中的向导。 您不能使用此向导来部署数据。  
   
--   **模型包编辑器**：若要编辑模型包，请使用启动模型包编辑器向导的 modelpackageeditor.exe。 您可以使用此向导来编辑由 MDSModelDeploy 工具或模型部署向导创建的包。 如果你在安装 MDS 时选择了默认路径，则此工具将位于 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
+-   **模型包编辑器**：若要编辑模型包，请使用启动模型包编辑器向导的 ModelPackageEditor.exe。 您可以使用此向导来编辑由 MDSModelDeploy 工具或模型部署向导创建的包。 如果你在安装 MDS 时选择了默认路径，则此工具将位于 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
   
 > [!IMPORTANT]  
 >  可以使用 MDSModelDeploy 工具创建新模型、创建模型的克隆或更新现有模型及其数据。 如果使用 MDSModelDeploy 工具更新现有模型及其数据，并且该包不包含目标模型中存在的实体、属性或成员，则 MDSModelDeploy 不会从模型中删除此实体、属性或成员。  
@@ -79,6 +79,6 @@ ms.locfileid: "73728287"
   
 ## <a name="related-content"></a>相关内容  
   
--   [模型部署选项 &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [模型部署选项 (Master Data Services)](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

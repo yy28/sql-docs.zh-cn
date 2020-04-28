@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632850"
 ---
 # <a name="overview-of-data-migration-assistant"></a>数据迁移助手概述
@@ -42,8 +42,8 @@ ms.locfileid: "73632850"
 
 - 发现可能会影响升级到本地 SQL Server 的问题。它们被描述为兼容性问题，并按以下类别进行组织：
 
-  - 重大更改
-  - 行为更改
+  - 中断性变更
+  - 行为变更
   - 已弃用的功能
 
 - 发现目标 SQL Server 平台中的新功能，在升级后数据库可从中受益。 它们被描述为功能建议，并按下列类别进行组织：
@@ -67,15 +67,15 @@ ms.locfileid: "73632850"
 
   - 信息问题：检测在源包中使用的部分支持或弃用的功能。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要运行评估，你必须是 SQL Server **sysadmin**角色的成员。
 
-## <a name="supported-source-and-target-versions"></a>支持的源版本和目标版本
+## <a name="supported-source-and-target-versions"></a>支持的源和目标版本
 
 DMA 替换 SQL Server 升级顾问的所有早期版本，应将其用于升级大多数 SQL Server 版本。 支持的源版本和目标版本为：
 
-**源**
+**来源**
 
 - SQL Server 2005
 - SQL Server 2008
@@ -83,7 +83,7 @@ DMA 替换 SQL Server 升级顾问的所有早期版本，应将其用于升级�
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
--  在 Windows 上部署 SQL Server 2017
+-  Windows 上的 SQL Server 2017
 
 **目标**
 

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00cf7a7fab52640cc3fc19a3d9da051d281be7c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783004"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>将辅助副本添加到可用性组 (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "72783004"
   
      [安全性](#Security)  
   
--   **若要添加副本，请使用：**  
+-   **要添加副本，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -37,23 +37,23 @@ ms.locfileid: "72783004"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：**  [在添加辅助副本之后](#FollowUp)  
+-   **跟进：**  [在添加次要副本之后](#FollowUp)  
   
 ## <a name="before-you-begin"></a>开始之前  
  我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  
   
-##  <a name="PrerequisitesRestrictions"></a>先决条件和限制  
+##  <a name="prerequisites-and-restrictions"></a><a name="PrerequisitesRestrictions"></a>先决条件和限制  
   
 -   您必须连接到承载主副本的服务器实例。  
   
- 有关详细信息，请参阅[AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 有关详细信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **添加副本**  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
@@ -72,7 +72,7 @@ ms.locfileid: "72783004"
   
          若要添加其他副本，请重复前面的步骤。 当您指定完副本后，单击 **“确定”** 以完成此操作。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **添加副本**  
   
 1.  连接到承载主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
@@ -90,7 +90,7 @@ ms.locfileid: "72783004"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **添加副本**  
   
 1.  将目录 (`cd`) 更改为承载主副本的服务器实例。  
@@ -117,22 +117,22 @@ ms.locfileid: "72783004"
     > [!NOTE]  
     >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **设置并使用 SQL Server PowerShell 提供程序**  
+ **设置和使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>跟进：在添加辅助副本之后  
+##  <a name="follow-up-after-adding-a-secondary-replica"></a><a name="FollowUp"></a> 跟进：在添加辅助副本之后  
  若要为现有可用性组添加副本，您必须执行以下步骤：  
   
 1.  连接到将要承载新辅助副本的服务器实例。  
   
-2.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+2.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
-3.  对于可用性组中的每个数据库，在承载辅助副本的服务器实例上创建辅助数据库。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+3.  对于可用性组中的每个数据库，在承载辅助副本的服务器实例上创建辅助数据库。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
 4.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **管理可用性副本**  
   
 -   [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  

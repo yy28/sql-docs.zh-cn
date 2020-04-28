@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12d68b8494fee4400c0a8e9ec043f0972ba2de5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783354"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>查看群集仲裁 NodeWeight 设置
@@ -27,9 +27,9 @@ ms.locfileid: "72783354"
   
 -   **若要查看仲裁 NodeWeight 设置，请使用：** [使用 Transact-SQL](#TsqlProcedure)、[使用 Powershell](#PowerShellProcedure)、[使用 Cluster.exe](#CommandPromptProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  仅在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 或更高版本中支持此功能。  
   
 > [!IMPORTANT]  
@@ -40,10 +40,10 @@ ms.locfileid: "72783354"
 > [!TIP]  
 >  如果未安装此修补程序，本主题中的示例将为 NodeWeight 返回空或 NULL 值。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ##### <a name="to-view-nodeweight-settings"></a>查看 NodeWeight 设置  
   
@@ -59,7 +59,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
  FROM   sys.dm_hadr_cluster_members;  
 ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 ### <a name="to-view-nodeweight-settings"></a>查看 NodeWeight 设置
   
@@ -83,7 +83,7 @@ $nodes = Get-ClusterNode -Cluster $cluster
 $nodes | Format-Table -Property NodeName, State, NodeWeight  
 ```  
   
-##  <a name="CommandPromptProcedure"></a> 使用 cluster.exe  
+##  <a name="using-clusterexe"></a><a name="CommandPromptProcedure"></a> 使用 cluster.exe  
   
 > [!NOTE]  
 >  在 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 版本中不推荐使用 cluster.exe 实用工具。  在将来的开发工作中，请将 PowerShell 与故障转移群集结合使用。  在 Windows Server 的下一版本中，将删除 cluster.exe 实用工具。 有关详细信息，请参阅 [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx)（为故障转移群集将 cluster.exe 命令映射到 Windows PowerShell Cmdlet）。  

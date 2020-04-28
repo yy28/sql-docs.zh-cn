@@ -17,22 +17,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797846"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation cmdlet
-  **Invoke-policyevaluation**是一个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet，它报告 SQL Server 对象的目标集是否符合一个或多个基于策略的管理策略中指定的条件。  
+  **Invoke-PolicyEvaluation** 是一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet，它用于报告 SQL Server 对象的目标集是否符合一个或多个基于策略的管理策略中指定的条件。  
   
 ## <a name="using-invoke-policyevaluation"></a>使用 Invoke-PolicyEvaluation  
- **Invoke-policyevaluation**根据一组称为 "目标集" 的 SQL Server 对象计算一个或多个策略。 该组目标对象来自目标服务器。 每个策略都定义一些条件，这些条件是目标对象的允许状态。 例如， **Trustworthy Database** 策略规定 TRUSTWORTHY 数据库属性必须设置为 OFF。  
+ **Invoke-PolicyEvaluation** 针对一组 SQL Server 对象（称为目标集）评估一个或多个策略。 该组目标对象来自目标服务器。 每个策略都定义一些条件，这些条件是目标对象的允许状态。 例如， **Trustworthy Database** 策略规定 TRUSTWORTHY 数据库属性必须设置为 OFF。  
   
- 
-  **-AdHocPolicyEvaluationMode** 参数指定所采取的操作：  
+ **-AdHocPolicyEvaluationMode** 参数指定所采取的操作：  
   
- 勾选标记  
+ 检查  
  使用当前登录名的凭据报告目标对象的策略符合情况。 不重新配置任何对象。 这是默认设置。  
   
  CheckSqlScriptAsProxy  
@@ -55,8 +54,7 @@ sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"
 Get-Item "Database Status" | Invoke-PolicyEvaluation -TargetServerName "MYCOMPUTER"  
 ```  
   
- 此示例显示如何使用 Where-Object 根据策略的 **PolicyCategory** 属性筛选策略存储区中的多个策略。 
-  **Where-Object** 的管道输出中的对象由 **Invoke-PolicyEvaluation**使用。  
+ 此示例显示如何使用 Where-Object 根据策略的 **PolicyCategory** 属性筛选策略存储区中的多个策略。 **Where-Object** 的管道输出中的对象由 **Invoke-PolicyEvaluation**使用。  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
@@ -86,11 +84,11 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>指定目标集  
  使用三个参数指定目标对象集：  
   
--   **-TargetServerName**指定包含目标对象 SQL Server 的实例。 可在一个字符串中指定这些信息，该字符串应使用为 <xref:System.Data.SqlClient.SqlConnection> 类的 ConnectionString 属性定义的格式。 可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 类来生成格式正确的连接字符串。 还可以创建 <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> 对象并将其传递到 **-TargetServer**使用。 如果提供只有服务器名称的字符串， **Invoke-PolicyEvaluation** 会使用 Windows 身份验证来连接服务器。  
+-   **-TargetServerName** 指定包含目标对象的 SQL Server 实例。 可在一个字符串中指定这些信息，该字符串应使用为 <xref:System.Data.SqlClient.SqlConnection> 类的 ConnectionString 属性定义的格式。 可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 类来生成格式正确的连接字符串。 还可以创建 <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> 对象并将其传递到 **-TargetServer**使用。 如果提供只有服务器名称的字符串， **Invoke-PolicyEvaluation** 会使用 Windows 身份验证来连接服务器。  
   
--   **-TargetObjects**使用对象或对象数组，这些对象表示目标集中的 SQL Server 对象。 例如，你可以创建 <xref:Microsoft.SqlServer.Management.Smo.Database> 类对象数组，并将其传递到 **-TargetObjects**使用。  
+-   **-TargetObjects** 的取值为一个对象或对象数组，它们表示目标集中的 SQL Server 对象。 例如，你可以创建 <xref:Microsoft.SqlServer.Management.Smo.Database> 类对象数组，并将其传递到 **-TargetObjects**使用。  
   
--   **-TargetExpressions**采用包含指定目标集中对象的查询表达式的字符串。 查询表达式的格式是以“/”字符隔开的节点。 每个节点的格式为 ObjectType[Filter]。 对象类型是 SQL Server 管理对象（SMO）对象层次结构中的对象之一。 Filter 是一个用于筛选该节点的对象的表达式。 有关详细信息，请参阅 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
+-   **-TargetExpressions** 的取值为一个字符串，其中包含一个指定目标集中对象的查询表达式。 查询表达式的格式是以“/”字符隔开的节点。 每个节点的格式为 ObjectType[Filter]。 对象类型是 SQL Server 管理对象（SMO）对象层次结构中的对象之一。 Filter 是一个用于筛选该节点的对象的表达式。 有关详细信息，请参阅 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
   
  指定 **-TargetObjects** 或 **-TargetExpression**，而不是两者。  
   
@@ -131,7 +129,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ```  
   
 ## <a name="formatting-output"></a>设置输出的格式  
- 默认情况下， **Invoke-PolicyEvaluation** 的输出通过简明报告形式，以可读格式显示在命令提示符窗口中。 可以使用 **-OutputXML** 参数来指定 cmdlet，而不是以 XML 文件形式生成详细报告。 **Invoke-policyevaluation**使用系统建模语言交换格式（SML）架构，以使该文件可由 SML 读取器读取。  
+ 默认情况下， **Invoke-PolicyEvaluation** 的输出通过简明报告形式，以可读格式显示在命令提示符窗口中。 可以使用 **-OutputXML** 参数来指定 cmdlet，而不是以 XML 文件形式生成详细报告。 **Invoke-PolicyEvaluation** 使用系统建模语言交换格式 (SML-IF) 架构，因此 SML-IF 读取器可以读取该文件。  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  

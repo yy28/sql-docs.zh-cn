@@ -13,23 +13,21 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 851452cd5170abb6328210ecb35bd95b2bb951a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728086"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]是由 Internet Information Services （IIS）托管的 web 应用程序。 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 仅适用于 Internet Explorer (IE) 9 或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是 Internet Information Services (IIS) 托管的 Web 应用程序。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 仅适用于 Internet Explorer (IE) 9 或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
 
-**有关如何安装和配置 iis 的说明**，请参阅[安装和配置 iis](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)。
+有关如何安装和配置 IIS 的说明****，请参阅[安装和配置 IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)。
   
- 使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可以创建和配置 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序。 
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上配置 IIS，因此适用于初始 Web 配置任务。 例如，配置具有单个 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 环境，或在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的扩展部署中配置第一个 Web 应用程序。 使用 IIS 工具来执行一些更复杂的任务，如在扩展部署中配置多个 Web 服务器。  
+ 使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可以创建和配置 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上配置 IIS，因此适用于初始 Web 配置任务。 例如，配置具有单个 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 环境，或在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的扩展部署中配置第一个 Web 应用程序。 使用 IIS 工具来执行一些更复杂的任务，如在扩展部署中配置多个 Web 服务器。  
   
 > [!NOTE]  
 >  您安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 组件的任何计算机必须具有许可证。 有关详细信息，请参阅“最终用户许可协议 (EULA)”。  
@@ -42,14 +40,14 @@ ms.locfileid: "73728086"
 -   [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
- 在使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从此处[安装 Silverlight 5](https://go.microsoft.com/fwlink/?LinkId=243096)。  
+ 在使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从[此处安装 Silverlight 5](https://go.microsoft.com/fwlink/?LinkId=243096)。  
   
 ### <a name="role-and-role-services"></a>角色和角色服务  
  在 Windows Server 2012 或 Windows Server 2012 R2 中，可以使用“服务器管理器”****（在 Microsoft 管理控制台 (MMC) 中提供）来安装“Web 服务器 (IIS)”**** 角色和必需的角色服务。  
  
  
 > [!IMPORTANT]  
->默认情况下启用**动态内容压缩**。 这极大地减少了 xml 响应的大小，并可节省网络 I/O，不过会增加 CPU 使用率。  有关详细信息，请参阅 **Master Data Services (MDS) 中的新增功能**中的 [[CTP 2.0] 改进的功能](../../master-data-services/what-s-new-in-master-data-services-mds.md)。  
+>默认情况下，已启用“动态内容压缩”**** 。 这极大地减少了 xml 响应的大小，并可节省网络 I/O，不过会增加 CPU 使用率。  有关详细信息，请参阅 [Master Data Services (MDS) 中的新增功能](../../master-data-services/what-s-new-in-master-data-services-mds.md)中的 **[CTP 2.0] 改进的功能**。  
   
 ||  
 |-|  
@@ -60,7 +58,7 @@ ms.locfileid: "73728086"
   
 ||  
 |-|  
-|.NET Framework 3.5（包括 .NET 2.0 和 3.0）<br /><br /> .NET Framework 4.5 高级服务<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 激活 [注意：这是必需的。]<br /><br /> TCP 端口共享<br /><br /> Windows 进程激活服务<br /><br /> 进程模型<br /><br /> .NET 环境<br /><br /> 配置 API<br/><br/>动态内容压缩|  
+|.NET Framework 3.5（包括 .NET 2.0 和 3.0）<br /><br /> .NET Framework 4.5 高级服务<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 激活 [注意：这是必需的。]<br /><br /> TCP 端口共享<br /><br /> Windows Process Activation Service<br /><br /> 进程模型<br /><br /> .NET 环境<br /><br /> 配置 API<br/><br/>动态内容压缩|  
   
  下面是一个示例性的 PowerShell 脚本，用于添加必备的服务器角色和功能。 因环境而异的必备服务器角色和功能。  
   
@@ -83,6 +81,6 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [&#40;Master Data Services 创建主数据管理器 Web 应用程序&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [Web 配置页 &#40;Master Data Services 配置管理器&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [“Web 配置”页（Master Data Services 配置管理器）](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

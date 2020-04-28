@@ -18,10 +18,10 @@ ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ac698d7fa655e47459b9de3af0f5896e038c0c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73657629"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings 类 - SetDefaults 方法
@@ -36,10 +36,10 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
- 一个**** 表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端实例的 ClientSettings 对象。  
+ *object*  
+ 一个**ClientSettings**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端实例的 ClientSettings 对象。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
   
 |参数|说明|  
 |---------------|-----------------|  

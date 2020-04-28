@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 45f26c9569950c2450318abf546a838632e06f20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145662"
 ---
 # <a name="sysdm_pdw_nodes_exec_text_query_plan--transact-sql"></a>sys. dm_pdw_nodes_exec_text_query_plan （Transact-sql）
@@ -40,7 +40,7 @@ ms.locfileid: "73145662"
 [Dm_exec_text_query_plan](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql?view=sql-server-ver15)应用相同的备注。  
 
 ## <a name="permissions"></a>权限  
- 要求**** 对服务器具有 sysadmin `VIEW SERVER STATE`服务器角色或权限。  
+ 要求**sysadmin**对服务器具有 sysadmin `VIEW SERVER STATE`服务器角色或权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

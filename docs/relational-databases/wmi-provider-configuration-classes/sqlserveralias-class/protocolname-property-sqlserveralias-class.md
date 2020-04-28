@@ -18,10 +18,10 @@ ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 957faa6c58c9149ec703fe9fa269e379d4e5b6f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660423"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName 属性（SqlServerAlias 类）
@@ -36,7 +36,7 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]别名的[SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

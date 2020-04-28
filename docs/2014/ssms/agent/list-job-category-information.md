@@ -11,21 +11,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798206"
 ---
 # <a name="list-job-category-information"></a>列出作业类别信息
   如何使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象列出中的作业类别信息。  
 
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
 
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 #### <a name="to-list-job-category-information"></a>列出作业类别信息  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72798206"
  有关详细信息，请参阅[&#40;transact-sql&#41;sp_help_category ](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)。  
   
   
-##  <a name="SMO"></a>使用 SQL Server 管理对象  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理对象  
  **列出作业类别信息**  
   
  通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `JobCategory` 类。 有关详细信息，请参阅[SQL Server 管理对象 &#40;SMO&#41; 编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  

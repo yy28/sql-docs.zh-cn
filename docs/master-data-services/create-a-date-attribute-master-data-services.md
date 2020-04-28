@@ -14,10 +14,10 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 8ffc7c1e901e3c93701c4e94ed62b8e70dbb7c0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728513"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>创建日期属性 (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73728513"
 > [!NOTE]  
 >  该属性称为 DateTime，但不支持时间值。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   您必须具有要为其创建属性的实体。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73728513"
   
     -   如果属性是针对合并成员，则从“成员类型” **** 列表框中选择“合并” **** 。  
   
-    -   如果是集合的属性，请从“成员类型” **** 列表框中选择“集合” **** 。  
+    -   如果属性是针对集合，则从“成员类型” **** 列表框中选择“集合” **** 。  
   
 6.  在 **“名称”** 框中，键入属性的名称。 有关不可用作属性名称的单词列表，请参阅[保留字 (Master Data Services)](../master-data-services/reserved-words-master-data-services.md)。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73728513"
   
 12. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 单击“保存”  。  
+13. 单击“ **保存**”。  
   
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>显示日期时间值的时间部分  
  若要使用户界面显示日期时间值的时间部分，您必须为该属性选择一个适当的输入掩码。 对于日期时间属性没有内置的此类掩码，但您可以添加一个新掩码以便显示时间。 为此，在存储内置掩码的 MDS 数据库的 mdm.tblList 表中添加一行。 此行应具有以下各值：  
@@ -93,6 +93,6 @@ ms.locfileid: "73728513"
  [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [更改属性名称和数据类型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [创建基于域的属性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [创建文件属性 &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+ [创建文件属性 (Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

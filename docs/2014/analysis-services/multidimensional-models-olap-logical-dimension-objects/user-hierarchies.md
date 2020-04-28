@@ -26,28 +26,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72811598"
 ---
 # <a name="user-hierarchies"></a>用户层次结构
   用户定义的层次结构是用户定义的属性层次结构，用于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将维度的成员组织到层次结构中，并提供多维数据集中的导航路径。 例如，下表定义了时间维度的维度表。 维度表支持三个属性，即年份、季度和月份。  
   
-|年龄|季度|月份|  
+|年|季度|月份|  
 |----------|-------------|-----------|  
-|1999|第1季度|1 月|  
-|1999|第1季度|Feb|  
-|1999|第1季度|3 月|  
-|1999|第2季度|4 月|  
-|1999|第2季度|May|  
-|1999|第2季度|Jun|  
-|1999|第3季度|Jul|  
-|1999|第3季度|Aug|  
+|1999|第1季度|一月|  
+|1999|第1季度|二月|  
+|1999|第1季度|三月|  
+|1999|第2季度|四月|  
+|1999|第2季度|五月|  
+|1999|第2季度|六月|  
+|1999|第3季度|七月|  
+|1999|第3季度|八月|  
 |1999|第3季度|九月|  
-|1999|第四季度|10 月|  
-|1999|第四季度|11 月|  
+|1999|第四季度|Oct|  
+|1999|第四季度|十一月|  
 |1999|第四季度|Dec|  
   
  用年份、季度和月份属性来构造时间维度中由用户定义的层次结构（即日历）。 “日历”维度（常规维度）的级别和成员之间的关系如下面的关系图所示：  
@@ -80,7 +80,7 @@ ms.locfileid: "72811598"
  将与国家（地区）级别中的其他成员关联的成员填入省市自治区级别中，将市县级别中的成员与省市自治区级别中相应的成员建立关联。 但是，由于国家（地区）级别的 Vatican City 成员在省市自治区级别中没有相关联的成员，所以必须将市县级别的成员直接关联到国家（地区）级别的 Vatican City 成员。 因为这些更改，该维度的层次结构现在成为不规则层次结构。 城市 Vatican City 的父级是国家/地区 Vatican City，而它并不直接位于市县级别的 Vatican City 成员的上一级。 有关详细信息，请参阅 [不规则层次结构](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)。  
   
 ### <a name="parent-child-hierarchies"></a>父子层次结构  
- 维度的父子层次结构是通过使用特殊属性（称为父属性）来定义的，目的是为了确定成员之间的相互关系。 父属性用于说明维度主表内部的自引用关系或自联接****。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构的维度架构依赖于维度主表中提供的自引用关系。 例如，下面的关系图说明了**** [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]示例数据库中的 DimOrganization 维度主表。  
+ 维度的父子层次结构是通过使用特殊属性（称为父属性）来定义的，目的是为了确定成员之间的相互关系。 父属性用于说明维度主表内部的自引用关系或自联接****。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构的维度架构依赖于维度主表中提供的自引用关系。 例如，下面的关系图说明了**DimOrganization** [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]示例数据库中的 DimOrganization 维度主表。  
   
  ![DimOrganization 表中的自引用联接](../dev-guide/media/dimorganization.gif "DimOrganization 表中的自引用联接")  
   

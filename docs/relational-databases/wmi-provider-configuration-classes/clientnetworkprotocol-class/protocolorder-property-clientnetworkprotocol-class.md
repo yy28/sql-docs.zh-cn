@@ -18,10 +18,10 @@ ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 030e35fca5fc6a2dbc31a16fc1bc1cb0e5c9fea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660211"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder 属性（ClientNetworkProtocol 类）
@@ -36,7 +36,7 @@ object.ProtocolOrder [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议的[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

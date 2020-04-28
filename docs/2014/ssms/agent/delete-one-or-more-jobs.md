@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783257"
 ---
 # <a name="delete-one-or-more-jobs"></a>删除一个或多个作业
@@ -28,18 +28,18 @@ ms.locfileid: "72783257"
   
  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  除非你是 **sysadmin** 固定服务器角色的成员，否则只能删除自己拥有的作业。  
   
  
   
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-a-job"></a>删除作业  
   
-1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
+1.  在“对象资源管理器”**** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开此实例。  
   
 2.  依次展开“SQL Server 代理”**** 和“作业”****，右键单击要删除的作业，再单击“删除”****。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72783257"
   
 #### <a name="to-delete-multiple-jobs"></a>删除多个作业  
   
-1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
+1.  在“对象资源管理器”**** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开此实例。  
   
 2.  展开 **“SQL Server 代理”**。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72783257"
   
 
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-job"></a>删除作业  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72783257"
   
  有关详细信息，请参阅[&#40;transact-sql&#41;sp_delete_job ](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql)。  
 
-##  <a name="SMO"></a>使用 SQL Server 管理对象  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理对象  
 
 ### <a name="to-delete-multiple-jobs"></a>删除多个作业
   

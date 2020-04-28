@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637786"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>内存优化表中的事务隔离级别
@@ -35,8 +35,7 @@ ms.locfileid: "73637786"
   
  自动提交事务对于内存优化表支持隔离级别 READ COMMITTED。 READ COMMITTED 在用户事务或原子块中无效。 显式或隐式用户事务不支持 READ COMMITTED。 具有自动提交事务的内存优化表支持隔离级别 READ_COMMITTED_SNAPSHOT，并且仅在查询未访问任何基于磁盘的表时才支持。 此外，在 SNAPSHOT 隔离级别下通过解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 启动的事务不能访问内存优化表。 在 REPEATABLE READ 或 SERIALIZABLE 隔离级别下使用解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 的事务必须使用 SNAPSHOT 隔离级别访问内存优化表。 有关此方案的详细信息，请参阅[跨容器事务](cross-container-transactions.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的默认隔离级别为 READ COMMITTED。 在会话的隔离级别为 READ COMMITED（或更低级别）时，可以执行以下操作之一：  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的默认隔离级别为 READ COMMITTED。 在会话的隔离级别为 READ COMMITED（或更低级别）时，可以执行以下操作之一：  
   
 -   显式使用更高的隔离级别来访问内存优化表（例如，WITH (SNAPSHOT)）。  
   

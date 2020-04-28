@@ -18,10 +18,10 @@ ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1324d352ca113a441dc388a235d44b5274e441be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658984"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly 属性（SqlServiceAdvancedProperty 类）
@@ -36,7 +36,7 @@ object.IsReadOnly [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

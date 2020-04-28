@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909086"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
@@ -63,12 +63,11 @@ sp_help [ [ @objname = ] 'name' ]
     |列名称|数据类型|说明|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar （** 128 **）**|数据类型名称。|  
-    |**Storage_type**|**nvarchar （** 128 **）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型名称。|  
+    |**Storage_type**|**nvarchar （** 128 **）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型名称。|  
     |**长度**|**smallint**|数据类型的物理长度（以字节为单位）。|  
     |**Prec**|**int**|精度（数字总位数）。|  
     |**缩放**|**int**|小数点右边的位数。|  
-    |**Nullable**|**varchar （** 35 **）**|指示是否允许 NULL 值：“是”或“否”。|  
+    |**可以为 Null**|**varchar （** 35 **）**|指示是否允许 NULL 值：“是”或“否”。|  
     |**Default_name**|**nvarchar （** 128 **）**|绑定到此类型的默认值的名称。<br /><br /> NULL = 未绑定默认值。|  
     |**Rule_name**|**nvarchar （** 128 **）**|绑定到此类型的规则的名称。<br /><br /> NULL = 未绑定默认值。|  
     |**排序规则**|**sysname**|数据类型的排序规则。 如果是非字符数据类型，则为 NULL。|  
@@ -79,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**名称**|**nvarchar （** 128 **）**|表名称|  
     |**所有者**|**nvarchar （** 128 **）**|表所有者|  
-    |类型 |**nvarchar （** 31 **）**|表类型|  
+    |**类型**|**nvarchar （** 31 **）**|表类型|  
     |**Created_datetime**|**datetime**|表的创建日期|  
   
      **Sp_help**返回其他结果集，具体取决于指定的数据库对象。  
@@ -91,12 +90,12 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar （** 128 **）**|列名称。|  
-        |类型 |**nvarchar （** 128 **）**|列数据类型。|  
+        |**类型**|**nvarchar （** 128 **）**|列数据类型。|  
         |**得出**|**varchar （** 35 **）**|指示是否计算列中的值：“是”或“否”。|  
         |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意：如果列数据类型是大值类型（**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 或**xml**），该值将显示为-1。|  
         |**Prec**|**char （** 5 **）**|列精度。|  
         |**缩放**|**char （** 5 **）**|列小数位数。|  
-        |**Nullable**|**varchar （** 35 **）**|指示是否允许列中包含 NULL 值：“是”或“否”。|  
+        |**可以为 Null**|**varchar （** 35 **）**|指示是否允许列中包含 NULL 值：“是”或“否”。|  
         |**TrimTrailingBlanks**|**varchar （** 35 **）**|剪裁尾随空格。 返回 Yes 或 No。|  
         |**FixedLenNullInSource**|**varchar （** 35 **）**|仅为保持向后兼容。|  
         |**排序规则**|**sysname**|列的排序规则。 对于非字符数据类性为 NULL。|  
@@ -106,8 +105,8 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**标识**|**nvarchar （** 128 **）**|其数据类型被声明为标识的列名。|  
-        |**种子**|**加法**|标识列的起始值。|  
-        |**版本号**|**加法**|用于此列中的值的增量。|  
+        |**种子**|**numeric**|标识列的起始值。|  
+        |**版本号**|**numeric**|用于此列中的值的增量。|  
         |**不用于复制**|**int**|当复制登录名（如**sqlrepl**）将数据插入到表中时，不会强制使用 IDENTITY 属性：<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   针对各列返回的其他结果集：  
@@ -126,7 +125,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
-        |index_name |**sysname**|索引名称。|  
+        |index_name |**sysname**|索引名。|  
         |**Index_description**|**varchar （** 210 **）**|索引的说明。|  
         |**index_keys**|**nvarchar （** 2078 **）**|要生成索引的列的列名。 对于 xVelocity 内存优化的列存储索引返回 NULL。|  
   
@@ -153,7 +152,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar （** 128 **）**|存储过程参数名。|  
-        |类型 |**nvarchar （** 128 **）**|存储过程参数的数据类型。|  
+        |**类型**|**nvarchar （** 128 **）**|存储过程参数的数据类型。|  
         |**长度**|**smallint**|最大物理存储长度（以字节为单位）。|  
         |**Prec**|**int**|精度，即数字总位数。|  
         |**缩放**|**int**|小数点右边的数字位数。|  
@@ -196,9 +195,9 @@ GO
  [sp_helpindex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helptrigger &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sysobjects &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

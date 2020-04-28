@@ -18,10 +18,10 @@ ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1de02f0042dce3b22a3da721d1ea9f31afb0620a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659455"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore 属性（SecurityCertificate 类）
@@ -36,7 +36,7 @@ object.SystemStore [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

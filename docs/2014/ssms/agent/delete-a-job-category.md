@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783201"
 ---
 # <a name="delete-a-job-category"></a>删除作业类别
@@ -28,15 +28,15 @@ ms.locfileid: "72783201"
   
  作业类别有助于您组织作业，从而更容易筛选和分组。 例如，可以将所有数据库备份作业组织到“数据库维护”类别中。  
 
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  在删除用户定义的作业类别时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将提示您，将分配给它的作业重新分配给其他作业类别。 仅可以删除用户定义的作业类别。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
 
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 ### <a name="to-delete-a-job-category"></a>删除作业类别  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72783201"
   
 3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在 "**管理作业类别**_server_name_ " 对话框中，选择要删除的作业类别。  
+4.  在“管理作业类别” ****_server_name_ 对话框中，选择要删除的作业类别。  
   
 5.  单击 **“删除”** 。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "72783201"
   
 7.  关闭 "**管理作业类别**_server_name_ " 对话框。  
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 ### <a name="to-delete-a-job-category"></a>删除作业类别  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72783201"
  有关详细信息，请参阅[&#40;transact-sql&#41;sp_delete_category ](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql)。  
 
   
-##  <a name="SMO"></a>使用 SQL Server 管理对象  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理对象  
 
 ### <a name="to-delete-a-job-category"></a>删除作业类别
   

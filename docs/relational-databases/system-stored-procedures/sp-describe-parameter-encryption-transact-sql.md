@@ -19,10 +19,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593705"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption （Transact-sql）
@@ -63,11 +63,11 @@ sp_describe_parameter_encryption
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|结果集中的行的 Id。|  
-|database_id |**int**|数据库 id。|  
+|**database_id**|**int**|数据库 id。|  
 |**column_encryption_key_id**|**int**|列加密密钥 id。注意：此 id 在[sys. column_encryption_keys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)目录视图中表示一行。|  
 |**column_encryption_key_version**|**int**|保留供将来使用。 当前，始终包含1。|  
 |**column_encryption_key_metadata_version**|**binary （8）**|表示列加密密钥的创建时间的时间戳。|  
-|**column_encryption_key_encrypted_value**|**varbinary （4000）**|列加密密钥的加密值。|  
+|**column_encryption_key_encrypted_value**|**varbinary(4000)**|列加密密钥的加密值。|  
 |**column_master_key_store_provider_name**|**sysname**|包含列主密钥的密钥存储的提供程序的名称，该列用于生成列加密密钥的加密值。|  
 |**column_master_key_path**|**nvarchar(4000)**|列主密钥的密钥路径，该密钥用于生成列加密密钥的加密值。|  
 |**column_encryption_key_encryption_algorithm_name**|**sysname**|用于生成列加密密钥的加密值的加密算法的名称。|  
@@ -84,7 +84,7 @@ sp_describe_parameter_encryption
 |**column_encryption_normalization_rule_version**|**tinyint**|类型规范化算法的版本号。|  
   
 ## <a name="remarks"></a>备注  
- 支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always Encrypted 的客户端驱动程序将自动调用**sp_describe_parameter_encryption**来检索由应用程序发出的参数化查询的加密元数据。 随后，驱动程序使用加密元数据对与 Always Encrypted 保护的数据库列对应的参数值进行加密，并使用加密的参数值，然后将查询发送到数据库引擎。  
+ 支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always Encrypted 的客户端驱动程序将自动调用**sp_describe_parameter_encryption**来检索由应用程序发出的参数化查询的加密元数据。 随后，驱动程序将使用加密元数据对与 Always Encrypted 保护的数据库列对应的参数值进行加密，并在将查询发送到数据库引擎之前，用加密参数值替换应用程序提交的纯文本参数值。  
   
 ## <a name="permissions"></a>权限  
  需要**查看任意列加密密钥定义**，并查看数据库中的**任何列主密钥定义**权限。  

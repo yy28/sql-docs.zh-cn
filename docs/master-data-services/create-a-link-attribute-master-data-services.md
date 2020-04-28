@@ -14,10 +14,10 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 929e363228b30889e163519786d802dd4caee049
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728497"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>创建链接属性 (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73728497"
 > [!NOTE]  
 >  当用户输入链接属性的值时，该字符串必须以 https:// 开头，否则将显示错误****。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   要为其创建属性的实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "73728497"
   
  单击属性后可看到以下信息。  
   
--   **创建者**：创建属性的用户的名称。  
+-   **创建者**：创建属性的用户的用户名。  
   
--   **日期：创建**属性的日期和时间。  
+-   **创建时间**：创建属性的日期和时间。  
   
--   **更新者**：上次更新属性的用户的名称。  
+-   **更新者**：上次更新属性的用户的用户名。  
   
--   **日期：上次**更新属性的日期和时间。  
+-   **创建时间**：上次更新属性的日期和时间。  
   
 ### <a name="to-create-a-link-attribute"></a>创建链接属性  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73728497"
   
     -   如果属性是针对合并成员，则从“成员类型” **** 列表框中选择“合并” **** 。  
   
-    -   如果是集合的属性，请从“成员类型” **** 列表框中选择“集合” **** 。  
+    -   如果属性是针对集合，则从“成员类型” **** 列表框中选择“集合” **** 。  
   
 6.  在 **“名称”** 框中，键入属性的名称。 有关不可用作属性名称的单词列表，请参阅[保留字 (Master Data Services)](../master-data-services/reserved-words-master-data-services.md)。  
   
@@ -99,6 +99,6 @@ ms.locfileid: "73728497"
  [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [更改属性名称和数据类型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [创建基于域的属性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [创建文件属性 &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+ [创建文件属性 (Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

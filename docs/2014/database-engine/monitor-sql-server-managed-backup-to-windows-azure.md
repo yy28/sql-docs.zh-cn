@@ -11,24 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798035"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>监视针对 Azure 的 SQL Server 托管备份
-  
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]内置多种措施，可在备份过程中找出问题和错误，如有可能，再通过纠正措施纠正这些问题。  但是，有一些需要用户干预的情况。 本主题介绍可用于确定备份的整体运行状况和标识需解决的任何错误的工具。  
   
-## <a name="overview-of-includess_smartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的内置调试概述  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]定期检查计划的备份并尝试重新安排任何失败的备份。 它定期轮询存储帐户以找出日志链中影响数据库可恢复性的中断情况，并且相应地安排新备份。 它还将考虑 Azure 限制策略，并提供管理多个数据库备份的机制。 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用扩展事件跟踪所有活动。 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理使用的扩展事件通道包括管理、操作、分析和调试。 属于管理类别的事件通常与错误相关且要求用户干预，并且默认情况下是启用的。 分析事件默认情况下也启用，但通常与要求用户干预的错误无关。 操作事件通常是信息性的。 例如，操作事件包括计划备份、成功完成备份等。调试是最详细的，在内部使用，用于[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]确定问题并在需要时对其进行更正。  
+## <a name="overview-of-ss_smartbackup-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的内置调试概述  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]定期检查计划的备份并尝试重新安排任何失败的备份。 它定期轮询存储帐户以找出日志链中影响数据库可恢复性的中断情况，并且相应地安排新备份。 它还将考虑 Azure 限制策略，并提供管理多个数据库备份的机制。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用扩展事件跟踪所有活动。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理使用的扩展事件通道包括管理、操作、分析和调试。 属于管理类别的事件通常与错误相关且要求用户干预，并且默认情况下是启用的。 分析事件默认情况下也启用，但通常与要求用户干预的错误无关。 操作事件通常是信息性的。 例如，操作事件包括计划备份、成功完成备份等。调试是最详细的，在内部使用，用于[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]确定问题并在需要时对其进行更正。  
   
-### <a name="configure-monitoring-parameters-for-includess_smartbackupincludesss-smartbackup-mdmd"></a>为[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置监视参数  
+### <a name="configure-monitoring-parameters-for-ss_smartbackup"></a>为[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置监视参数  
  **Smart_admin sp_set_parameter**系统存储过程允许您指定监视设置。 以下部分演练启用扩展事件以及针对错误和警告启用电子邮件通知的过程。  
   
  **Smart_admin fn_get_parameter**函数可用于获取特定参数或所有已配置参数的当前设置。 如果从未配置参数，则此函数不返回任何值。  
@@ -117,8 +112,7 @@ GO
 这些聚合的计数可用于监视系统运行状况。 例如，如果 number_ of_retention_loops 列在 30 分钟内为 0，则可能保持管理占用较长时间，或者甚至未正确工作。 非零错误列可能指示问题，并且应查看扩展事件日志以便发现问题。 或者，调用**smart_admin sp_get_backup_diagnostics**存储过程以查找错误的详细信息。  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>使用代理通知以便评估备份状态和运行状况  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]包括一个通知机制，后者基于 SQL Server 基于策略的管理策略。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]包括一个通知机制，后者基于 SQL Server 基于策略的管理策略。  
   
  **先决条件**  
   
@@ -254,8 +248,7 @@ smart_backup_files;
   
 -   **复制失败-F：** 类似于正在进行复制，这是特定的 t 可用性组数据库。 如果复制过程失败，则将状态标为 F。  
   
--   **损坏-C：** 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]在多次尝试后仍无法通过执行还原 HEADER_ONLY 命令来验证存储中的备份文件，则会将此文件标记为已损坏。 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份以确保损坏的文件不会导致备份链中断。  
+-   **损坏-C：** 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]在多次尝试后仍无法通过执行还原 HEADER_ONLY 命令来验证存储中的备份文件，则会将此文件标记为已损坏。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份以确保损坏的文件不会导致备份链中断。  
   
 -   **已删除-D：** 在 Azure 存储中找不到相应的文件。 如果删除的文件导致备份链中断，则 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份。  
   

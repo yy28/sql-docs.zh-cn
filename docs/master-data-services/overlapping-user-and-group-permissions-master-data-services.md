@@ -15,10 +15,10 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727933"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重叠的用户和组权限（主数据服务）
@@ -33,11 +33,11 @@ ms.locfileid: "73727933"
   
  如果用户是多个组的成员，并且这些组有权访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，则适用以下规则：  
   
--   **Deny**替代所有其他权限。 如果对象权限在一个组中是“拒绝” **** ，则有效权限是拒绝。  
+-   **“拒绝”** 覆盖所有其他权限。 如果对象权限在一个组中是“拒绝” **** ，则有效权限是拒绝。  
   
 -   访问权限是一个组中所有有效权限的联合。 如果对象权限在一个组中是“创建” **** ，在其他组中是“更新” **** ，则有效权限是“创建” **** 和“更新” ****。  
   
- 这些规则应用到 **“模型”** 和 **“层次结构成员”** 选项卡。 先为每个选项卡确定权限，再将权限进行组合。 有关详细信息，请参阅[如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ 这些规则应用到 **“模型”** 和 **“层次结构成员”** 选项卡。 先为每个选项卡确定权限，再将权限进行组合。 有关详细信息，请参阅 [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)。  
   
 > [!NOTE]  
 >  可以在用户界面中查看用户和组的重叠权限的解决方法。 “模型”**** 和“层次结构成员”**** 选项卡都具有下拉列表，可以从中选择“有效”****，查看有效权限。  

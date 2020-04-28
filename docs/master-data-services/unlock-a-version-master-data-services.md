@@ -14,10 +14,10 @@ ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cc3b79de19795ec13fd8720b68c827d9b964084e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727836"
 ---
 # <a name="unlock-a-version-master-data-services"></a>取消锁定版本 (Master Data Services)
@@ -26,16 +26,16 @@ ms.locfileid: "73727836"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，取消锁定某一模型的版本以便实现对该模型的成员及其属性的更改。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
--   版本的状态必须是 **“已锁定”**。 有关详细信息，请参阅[锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)。  
+-   版本的状态必须是 **“已锁定”**。 有关详细信息，请参阅 [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)。  
   
--   你必须有权访问“版本管理”功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   你必须有权访问“版本管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 ### <a name="to-unlock-a-version"></a>取消锁定版本  
   
@@ -49,9 +49,9 @@ ms.locfileid: "73727836"
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [锁定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
+-   [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
+ [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   

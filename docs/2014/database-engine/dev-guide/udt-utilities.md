@@ -11,20 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637721"
 ---
 # <a name="udt-utilities"></a>UDT 实用工具
   UDT 实用工具示例包括很多实用工具函数。 其中包括向 Transact-SQL 公开程序集元数据的函数、以表的形式返回程序集中的类型的示例流式表值函数，以及返回用户定义数据类型的字段、方法和属性的函数。 演示的技术包括流式表值函数、.NET Framework 反射 API 以及从 Transact-SQL 中调用表值函数。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
 -   在[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [Codeplex 网站](https://go.microsoft.com/fwlink/?linkid=62796)上提供的数据库  
   
@@ -1598,6 +1597,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 59c42bdb98d5ed19ea2d415a85e9d2ccb4aeb8b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658960"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>SqlServiceType 方法（SqlServiceAdvancedProperty 类）
@@ -36,7 +36,7 @@ object.SetBoolValue(NumValue)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -56,7 +56,7 @@ object.SetBoolValue(NumValue)
 |*7*|SQLBrowser 为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser 服务。|  
 |*8*|Nsservice.exe 是[!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)]通知服务。|  
 |*900*|MSSQLFDLauncher 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]全文筛选器后台程序启动器服务。|  
-|*万*|SQLPBENGINE 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 引擎服务。|  
+|*10*|SQLPBENGINE 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 引擎服务。|  
 |*11*|SQLPBDMS 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 数据移动服务。|  
 |*12*|MSSQLLaunchpad 是启动[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]板服务。|  
   

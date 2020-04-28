@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798217"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
@@ -36,30 +36,30 @@ ms.locfileid: "72798217"
   
 -   可执行程序和操作系统命令。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]语句，包括存储过程和扩展存储过程。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，包括存储过程和扩展存储过程。  
   
 -   PowerShell 脚本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX 脚本。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 脚本。  
   
 -   复制任务。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]操作.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 任务。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
  每个作业步骤都在特定的安全上下文中运行。 如果作业步骤指定一个代理，该作业步骤将在该代理凭据的安全上下文中运行。 如果作业步骤没有指定代理，该作业步骤将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户的上下文中运行。 只有 sysadmin 固定服务器角色成员可以创建没有显式指定代理的作业。  
   
  由于作业步骤在特定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户的上下文中运行，所以该用户必须具有执行作业步骤所需的权限和配置。 例如，如果您创建一个需要驱动器号或通用命名约定 (UNC) 路径的作业，则在测试任务时，可使用您的 Windows 用户帐户来运行作业步骤。 但是，运行作业步骤的 Windows 用户还必须具有所需的权限、驱动器号配置权限或对所需驱动器的访问权限。 否则，作业步骤会失败。 为了防止出现这种问题，请确保每个作业步骤的代理都具有该作业步骤所执行任务的必要权限。 有关详细信息，请参阅[SQL Server 数据库引擎和 AZURE SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。  
   
 ## <a name="job-step-logs"></a>作业步骤日志  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可以将某些作业步骤的输出写入操作系统文件，也可以将其写入 msdb 数据库中的 sysjobstepslogs 表。 下列类型的作业步骤的输出可以写入以上两个目标位置：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以将某些作业步骤的输出写入操作系统文件，也可以将其写入 msdb 数据库中的 sysjobstepslogs 表。 下列类型的作业步骤的输出可以写入以上两个目标位置：  
   
 -   可执行程序和操作系统命令。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]前瞻性.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]操作.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 任务。  
   
  只有作为 sysadmin 固定服务器角色成员的用户执行的作业步骤的输出可以写入操作系统文件。 如果作业步骤由作为 msdb 数据库中 SQLAgentUserRole、SQLAgentReaderRole 或 SQLAgentOperatorRole 等固定数据库角色成员的用户执行，则只能将这些作业步骤的输出写入 sysjobstepslogs 表。  
   
@@ -89,10 +89,10 @@ ms.locfileid: "72798217"
   
  还可以选择将现有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文件作为作业步骤的命令打开。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]作业步骤不使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的代理。 而是由作业步骤的所有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户（如果作业步骤的所有者是 sysadmin 固定服务器角色的成员）运行作业步骤。 Sysadmin 固定服务器角色的成员还可以使用 sp_add_jobstep 存储过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *参数来指定* 作业步骤在其他用户的上下文中运行。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_jobstep ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 而是由作业步骤的所有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户（如果作业步骤的所有者是 sysadmin 固定服务器角色的成员）运行作业步骤。 Sysadmin 固定服务器角色的成员还可以使用 sp_add_jobstep 存储过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *参数来指定* 作业步骤在其他用户的上下文中运行。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_jobstep ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 > [!NOTE]  
->  一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤可以包含多个批处理。 [!INCLUDE[tsql](../../includes/tsql-md.md)]作业步骤可以包含嵌入的执行命令。  
+>  一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤可以包含多个批处理。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤可以包含嵌入的 GO 命令。  
   
 ## <a name="powershell-scripting-job-steps"></a>PowerShell 脚本作业步骤  
  当创建 PowerShell 脚本作业步骤时，必须指定以下两项之一作为步骤的命令：  
@@ -149,14 +149,14 @@ Set oServer = nothing
  设置复制后，您可以指定以下列三种方式之一运行复制代理：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动后连续运行、按需运行或按计划运行。 有关复制代理的详细信息，请参阅 [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)。  
   
 ## <a name="analysis-services-job-steps"></a>Analysis Services 作业步骤  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理支持两种不同类型的 Analysis Services 作业步骤、命令作业步骤和查询作业步骤。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理支持两种不同类型的 Analysis Services 作业步骤：命令作业步骤和查询作业步骤。  
   
 ### <a name="analysis-services-command-job-steps"></a>Analysis Services 命令作业步骤  
  创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 命令作业步骤时，必须：  
   
 -   标识要运行作业步骤的数据库 OLAP 服务器。  
   
--   键入要执行的语句。 对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** 方法，该语句必须为 XML。 而对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** 方法，该语句可以不包含完整的 SOAP 信封或 XML。 注意：虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤却不支持。  
+-   键入要执行的语句。 对于  Execute[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **** 方法，此语句必须为 XML。 对于  Discover[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **** 方法，此语句可能不包含完整的 SOAP 信封或 XML。 注意：虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤却不支持。  
   
 ### <a name="analysis-services-query-job-steps"></a>Analysis Services 查询作业步骤  
  创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 查询作业步骤时，必须：  
@@ -205,7 +205,7 @@ Set oServer = nothing
 |说明如何定义 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 Transact-SQL 作业步骤的选项。|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |介绍如何创建 ActiveX 脚本作业步骤。|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
 |介绍如何创建和定义用于执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 命令和查询的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤。|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
-|介绍在作业执行期间失败时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应执行什么操作。|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
+|介绍在作业执行期间失败时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应执行什么操作。|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |说明如何在“作业步骤属性”对话框中查看作业步骤的详细信息。|[View Job Step Information](view-job-step-information.md)|  
 |说明如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤日志。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   

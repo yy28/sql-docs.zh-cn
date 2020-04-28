@@ -16,10 +16,10 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633018"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
@@ -47,9 +47,9 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 |值|说明|  
 |-----------|-----------------|  
-|**把**|将指定架构添加到不适合发布的架构列表中。|  
+|**add**|将指定架构添加到不适合发布的架构列表中。|  
 |**击落**|从不适合发布的架构列表中删除指定架构。|  
-|**帮助**|返回不适合发布的架构列表。|  
+|**help**|返回不适合发布的架构列表。|  
   
 ## <a name="result-sets"></a>结果集  
   

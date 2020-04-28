@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6750456d708d68e57aadd4b1139f6e108a93b9ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783021"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>更改可用性副本的故障转移模式 (SQL Server)
@@ -27,20 +27,20 @@ ms.locfileid: "72783021"
   
 
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件和限制  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 先决条件和限制  
   
 -   只有主副本支持该任务。 您必须连接到承载主副本的服务器实例。  
   
 -   SQL Server 故障转移群集实例 (FCI) 不支持通过可用性组来自动进行故障转移，因此，只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **更改可用性副本的故障转移模式**  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
@@ -53,7 +53,7 @@ ms.locfileid: "72783021"
   
 5.  在 **“可用性副本属性”** 对话框中，使用 **“故障转移模式”** 下拉列表更改此副本的故障转移模式。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **更改可用性副本的故障转移模式**  
   
 1.  连接到承载主副本的服务器实例。  
@@ -70,9 +70,9 @@ ms.locfileid: "72783021"
   
      }  )  
   
-     其中  
+     where  
   
-    -   *group_name*是可用性组的名称。  
+    -   其中，*group_name* 是可用性组的名称。  
   
     -   {'*system_name*[\\*instance_name*] "|"*FCI_network_name*[\\*instance_name*]"}  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72783021"
          为用于访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的网络名称，在此群集中目标服务器实例为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴 (FCI)。  
   
          *instance_name*  
-         为承载目标可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 对于默认服务器实例，*instance_name* 是可选的。  
+         为承载目标可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 对于默认服务器实例， *instance_name* 是可选的。  
   
      有关这些参数的详细信息，请参阅 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "72783021"
        (FAILOVER_MODE = AUTOMATIC);  
     ```  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
 
 ### <a name="to-change-the-failover-mode-of-an-availability-replica"></a>更改可用性副本的故障转移模式
   

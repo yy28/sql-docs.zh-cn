@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b70684a74677437d0491e1fc724c832bb7e0a67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797700"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>为 AlwaysOn 可用性组配置复制 (SQL Server)
   配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制和 AlwaysOn 可用性组涉及七个步骤。 在下面的各节中将详细说明每个步骤。  
 
-##  <a name="step1"></a>1. 配置数据库发布和订阅  
+##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a>1. 配置数据库发布和订阅  
 
 ### <a name="configure-the-distributor"></a>配置分发服务器
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797700"
   
 3.  创建复制发布、文章和订阅。 有关如何配置复制的详细信息，请参阅“发布数据和数据库对象”。  
   
-##  <a name="step2"></a>2. 配置 AlwaysOn 可用性组  
+##  <a name="2-configure-the-alwayson-availability-group"></a><a name="step2"></a>2. 配置 AlwaysOn 可用性组  
  在目标主副本上，创建包含已发布的（或即将要发布的）数据库作为成员数据库的可用性组。 如果使用可用性组向导，则您可允许该向导最初同步辅助副本数据库，或者您可以使用备份和还原手动执行初始化。  
   
  为可用性组创建一个 DNS 侦听器，复制代理将使用它连接到当前主副本。 指定的侦听器名称将用作原始发布服务器/已发布数据库对的重定向的目标。 例如，如果您使用 DDL 来配置可用性组，则可使用以下代码示例为名为 `MyAG` 的现有可用性组指定可用性组侦听器：  
@@ -107,7 +107,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
   
  有关详细信息，请参阅[创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)。  
   
-##  <a name="step3"></a>3. 确保所有辅助副本主机均已配置为进行复制  
+##  <a name="3-insure-that-all-of-the-secondary-replica-hosts-are-configured-for-replication"></a><a name="step3"></a>3. 确保所有辅助副本主机均已配置为进行复制  
  在每个辅助副本主机上，确保已将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置为支持复制。 可在每个辅助副本主机上运行以下查询来确定是否安装了复制功能：  
   
 ```sql
@@ -120,7 +120,7 @@ SELECT @installed;
   
  如果*@installed*为0，则必须将复制添加到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装中。  
   
-##  <a name="step4"></a>4. 将辅助副本主机配置为复制发布服务器  
+##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a>4. 将辅助副本主机配置为复制发布服务器  
  辅助副本不能充当复制发布服务器或重新发布服务器，但必须配置复制以便在故障转移之后辅助副本可以接管。 在分发服务器上，为每个辅助副本主机配置分发。 指定在向分发服务器添加原始发布服务器时所指定的相同的分发数据库和工作目录。 如果您使用存储过程来配置分发，则使用 `sp_adddistpublisher` 以将远程发布服务器与分发服务器相关联。 如果*@login*对*@password*原始发布服务器使用了和，则在将辅助副本主机作为发布服务器添加时，为每个指定相同的值。  
   
 ```sql
@@ -147,7 +147,7 @@ EXEC sys.sp_addlinkedserver
     @server = 'MySubscriber';  
 ```  
   
-##  <a name="step5"></a>5. 将原始发布服务器重定向到 AG 侦听器名称  
+##  <a name="5-redirect-the-original-publisher-to-the-ag-listener-name"></a><a name="step5"></a>5. 将原始发布服务器重定向到 AG 侦听器名称  
  在分发服务器上的分发数据库中，运行存储过程 `sp_redirect_publisher` 以将原始发布服务器和已发布的数据库与可用性组的可用性组侦听器名称相关联。  
   
 ```sql
@@ -159,7 +159,7 @@ EXEC sys.sp_redirect_publisher
     @redirected_publisher = 'MyAGListenerName';  
 ```  
   
-##  <a name="step6"></a>6. 运行复制验证存储过程以验证配置  
+##  <a name="6-run-the-replication-validation-stored-procedure-to-verify-the-configuration"></a><a name="step6"></a>6. 运行复制验证存储过程以验证配置  
  在分发服务器上的分发数据库中，运行存储过程 `sp_validate_replica_hosts_as_publishers` 以确认现在已将所有副本主机配置为充当已发布的数据库的发布服务器。  
   
 ```sql
@@ -179,23 +179,23 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  消息 21899，级别 11，状态 1，过程 `sp_hadr_verify_subscribers_at_publisher`，第 109 行  
 >   
->  重定向的发布服务器“MyReplicaHostName”处的查询失败，该查询用于确定是否有原始发布服务器“MyOriginalPublisher”的订阅服务器的 sysserver 条目，出现错误“976”，错误消息“错误 976，级别 14，状态 1，消息：目标数据库‘MyPublishedDB’正参与某个可用性组，查询当前无法访问该数据库。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅 `ALTER AVAILABILITY GROUP` 联机丛书中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语句。”。  
+>  重定向的发布服务器“MyReplicaHostName”处的查询失败，该查询用于确定是否有原始发布服务器“MyOriginalPublisher”的订阅服务器的 sysserver 条目，出现错误“976”，错误消息“错误 976，级别 14，状态 1，消息：目标数据库‘MyPublishedDB’正参与某个可用性组，查询当前无法访问该数据库。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的 `ALTER AVAILABILITY GROUP` 语句。”。  
 >   
 >  副本主机“MyReplicaHostName”遇到了一个或多个发布服务器验证错误。  
   
  这是预期的行为。 必须通过在主机上直接查询 sysserver 条目来验证这些次要副本主机上是否存在订阅服务器条目。  
   
-##  <a name="step7"></a>7. 将原始发布服务器添加到复制监视器  
+##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a>7. 将原始发布服务器添加到复制监视器  
  在每个可用性组副本上，向复制监视器添加原始发布服务器。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **复制**  
   
 -   [维护 AlwaysOn 发布数据库 &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
 -   [复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [复制管理 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **创建和配置可用性组**  
   
@@ -203,11 +203,11 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [&#40;Transact-sql 创建可用性组&#41;](create-an-availability-group-transact-sql.md)  
+-   [创建可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md)  
   
--   [创建可用性组 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [创建可用性组 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)  
   
--   [在添加或修改可用性副本时指定终结点 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在添加或修改可用性副本时指定终结点 URL (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [为 AlwaysOn 可用性组 &#40;SQL Server PowerShell 创建数据库镜像端点&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   

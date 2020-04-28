@@ -18,10 +18,10 @@ ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b500ca0f879430f0e5655348bdeebda0e0921292
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660900"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 方法（SqlService 类）
@@ -36,10 +36,10 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ServiceStartName*  
  一个指定运行服务所用帐户名的字符串值。 根据不同的服务类型，帐户名可能的格式为“域名\用户名”。 服务进程运行时，将使用以下两种格式之一登录：  
   

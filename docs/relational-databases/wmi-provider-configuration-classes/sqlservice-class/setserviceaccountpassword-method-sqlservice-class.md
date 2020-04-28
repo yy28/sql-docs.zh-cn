@@ -18,10 +18,10 @@ ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: eb6a3649268455864148730ac4d4640a7dccc87f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660917"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>SetServiceAccountPassword 方法（SqlService 类）
@@ -36,10 +36,10 @@ object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *AccountOldPassword*  
  一个指定帐户的现有密码的字符串值。  
   

@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 2b12e1a1400ec2d9d4bb85466671cda446511f24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145642"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml （Transact-sql）
@@ -32,8 +32,8 @@ ms.locfileid: "73145642"
 |node_id|**int**|与节点关联的唯一数字 ID。|
 |session_id|**smallint**|会话的 ID。 不可为 Null。|
 |request_id|**int**|请求的 ID。 不可为 Null。|
-|sql_handle|**varbinary （64）**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 NULL。|
-|plan_handle|**varbinary （64）**|是一个标记，用于为当前正在执行的批处理唯一标识查询执行计划。 可以为 NULL。|
+|sql_handle|**varbinary(64)**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 NULL。|
+|plan_handle|**varbinary(64)**|是一个标记，用于为当前正在执行的批处理唯一标识查询执行计划。 可以为 NULL。|
 |query_plan|**xml**|包含与*plan_handle*包含部分统计信息的查询执行计划的运行时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。 可以为 NULL。|
 
 ## <a name="remarks"></a>备注

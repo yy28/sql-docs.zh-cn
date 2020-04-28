@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797634"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 运行状况规则 - 配置
@@ -28,7 +28,7 @@ ms.locfileid: "72797634"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **注意：** 为 SQL Server Analysis Services 实例和 PowerPivot 服务应用程序单独配置运行状况规则设置。 请按照本主题中的说明配置每个服务的运行状况规则。 对于 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 仅使用服务应用程序。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 对不同版本的 SharePoint 安装不同的运行状况规则集。 请参阅主题[运行状况规则参考](health-rules-reference-power-pivot-for-sharepoint.md)中的 "版本" 列 &#40;PowerPivot for SharePoint&#41;，也可以运行以下 Windows PowerShell 命令来查看已安装的规则。  
+ **注意：** 将为 SQL Server Analysis Services 实例和 PowerPivot 服务应用程序单独配置运行状况规则设置。 请按照本主题中的说明配置每个服务的运行状况规则。 对于 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 仅使用服务应用程序。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 对不同版本的 SharePoint 安装不同的运行状况规则集。 请参阅主题[运行状况规则参考](health-rules-reference-power-pivot-for-sharepoint.md)中的 "版本" 列 &#40;PowerPivot for SharePoint&#41;，也可以运行以下 Windows PowerShell 命令来查看已安装的规则。  
   
 ```powershell
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
@@ -42,10 +42,10 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [配置用于评估应用程序稳定性的运行状况规则（PowerPivot 服务应用程序）](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  您必须是服务应用程序管理员才能更改 Analysis Services 实例和 PowerPivot 服务应用程序的配置属性。  
   
-##  <a name="bkmk_view"></a>查看 PowerPivot 运行状况规则  
+##  <a name="view-powerpivot-health-rules"></a><a name="bkmk_view"></a>查看 PowerPivot 运行状况规则  
   
 1.  在 SharePoint 管理中心中，单击 **“监视”**，然后在 **“运行状况分析器”** 部分中，单击 **“审核规则定义”**。  
   
@@ -57,12 +57,12 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  为此，请单击规则以打开其规则定义，然后在功能区中单击 **“立即运行”** 。 单击 **“关闭”** 可返回到 **“查看问题和解决方法”** 页以查看报告。 如果规则检测到问题，则该页上将报告警告或错误。 在某些情况下，错误或警告可能会在几分钟后出现。  
   
-##  <a name="bkmk_HR_SSAS"></a>配置用于评估服务器稳定性的运行状况规则（SQL Server Analysis Services）  
+##  <a name="configure-health-rules-used-to-evaluate-server-stability-sql-server-analysis-services"></a><a name="bkmk_HR_SSAS"></a>配置用于评估服务器稳定性的运行状况规则（SQL Server Analysis Services）  
  Analysis Services 实例包括在系统级别上检测问题的运行状况规则（用于缓存的 CPU、内存和磁盘空间）。 使用以下说明可以修改触发特定运行状况规则的阈值。  
   
 1.  在 SharePoint 管理中心的 **“系统设置”** 部分中，单击 **“管理服务器上的服务”**。  
   
-2.  在页面的顶部，选择 SharePoint 场中包含 Analysis Services 实例的服务器（在下图中，该服务器的名称为 AW-SRV033）。 **SQL Server Analysis Services**将显示在服务列表中。  
+2.  在页面的顶部，选择 SharePoint 场中包含 Analysis Services 实例的服务器（在下图中，该服务器的名称为 AW-SRV033）。 **“SQL Server Analysis Services”** 将出现在服务列表中。  
   
      ![“管理服务器上的服务”页的屏幕快照](../media/ssas-centraladmin-servicesonserver.gif "“管理服务器上的服务”页的屏幕快照")  
   
@@ -98,7 +98,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      数据收集间隔（小时）  
      可指定用于计算触发运行状况规则所使用的数字的数据收集期间。 虽然会对系统进行持续监视，但会使用在预定义间隔内生成的数据来计算用于触发运行状况规则警告的阈值。 默认间隔为 4 小时。 服务器将检索在前 4 个小时内收集到的系统和使用率数据，以计算用户连接数、磁盘空间使用率以及 CPU 与内存使用率。  
   
-##  <a name="bkmk_evaluate_application_stability"></a>配置用于评估应用程序稳定性的运行状况规则（PowerPivot 服务应用程序）  
+##  <a name="configure-health-rules-used-to-evaluate-application-stability-powerpivot-service-application"></a><a name="bkmk_evaluate_application_stability"></a>配置用于评估应用程序稳定性的运行状况规则（PowerPivot 服务应用程序）  
   
 1.  在管理中心的 "应用程序管理" 中，单击 "**管理服务应用程序**"。  
   

@@ -18,10 +18,10 @@ ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7485a5603386b6eb0c3cf70964f8a0d4378eef8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660687"
 ---
 # <a name="clientsettings-class---instancename-property"></a>ClientSettings 类 - InstanceName 属性
@@ -36,8 +36,8 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
- 一个**** 表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端实例上的设置的 ClientSettings 对象。  
+ *object*  
+ 一个**ClientSettings**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端实例上的设置的 ClientSettings 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端实例的名称的字符串值。  

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637658"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 示例
@@ -28,19 +28,16 @@ ms.locfileid: "73637658"
   
 4.  在 SQL Server 中删除和添加该程序集  
   
- CLR 存储过程本身的源代码和程序集并不更改。 提供了 `build.cmd` 脚本，用来说明如何编译和链接资源程序集。尽管应用程序的源代码基于当前执行的程序集创建了资源管理器，但是您不必在包含存储过程的 DLL 中嵌入独立于区域性的资源。 
-  `System.Resources.NeutralResourcesLanguage attribute` 允许附属 DLL 中存在独立于区域性的资源。 因此，最好使用单独的 DLL，以便在需要添加或更改本地化文本时，不必更改包含 CLR 存储过程的主 DLL。 这对于可能含有列和其他相关性，造成类型难以删除和重新添加的 CLR 用户定义类型而言，尤为有用。通常，附属 DLL 版本必须与主程序集版本相同。 但是，使用 `SatelliteContractVersion` 属性可以允许仅更新主程序集，而不更新附属程序集。 有关详细信息，请参阅 Microsoft .NET 文档中的 `ResourceManager` 类。  
+ CLR 存储过程本身的源代码和程序集并不更改。 提供了 `build.cmd` 脚本，用来说明如何编译和链接资源程序集。尽管应用程序的源代码基于当前执行的程序集创建了资源管理器，但是您不必在包含存储过程的 DLL 中嵌入独立于区域性的资源。 `System.Resources.NeutralResourcesLanguage attribute` 允许附属 DLL 中存在独立于区域性的资源。 因此，最好使用单独的 DLL，以便在需要添加或更改本地化文本时，不必更改包含 CLR 存储过程的主 DLL。 这对于可能含有列和其他相关性，造成类型难以删除和重新添加的 CLR 用户定义类型而言，尤为有用。通常，附属 DLL 版本必须与主程序集版本相同。 但是，使用 `SatelliteContractVersion` 属性可以允许仅更新主程序集，而不更新附属程序集。 有关详细信息，请参阅 Microsoft .NET 文档中的 `ResourceManager` 类。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  此示例仅适用于 SQL Server 2005 和更高版本。  
   
  若要创建和运行此项目，必须安装下列软件：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -454,6 +451,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

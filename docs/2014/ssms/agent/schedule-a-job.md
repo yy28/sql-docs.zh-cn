@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5037448a3ec3cb3590e6fd649d83878bb573f48c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783181"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   本主题介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。  
   
--   **开始之前：** ，  
+-   **开始之前：**  
   
      [安全性](#Security)  
   
@@ -36,16 +36,16 @@ ms.locfileid: "72783181"
   
      [SQL Server 管理对象](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-and-attach-a-schedule-to-a-job"></a>创建计划并将其附加到作业中  
   
-1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
+1.  在“对象资源管理器”**** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开此实例。  
   
 2.  展开“SQL Server 代理”****，展开“作业”****，右键单击要计划的作业，并单击“属性”****。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72783181"
   
 #### <a name="to-attach-a-schedule-to-a-job"></a>将计划附加到作业中  
   
-1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
+1.  在“对象资源管理器”**** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开此实例。  
   
 2.  展开“SQL Server 代理”****，展开“作业”****，右键单击要计划的作业，然后单击“属性”****。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72783181"
   
 7.  在 **“作业属性”** 对话框中，单击 **“确定”**。  
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 #### <a name="to-schedule-a-job"></a>安排作业计划  
   
@@ -111,5 +111,5 @@ ms.locfileid: "72783181"
   
  有关详细信息，请参阅[sp_add_schedule &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)和[sp_attach_schedule &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)。  
   
-##  <a name="SMO"></a>使用 SQL Server 管理对象  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理对象  
  通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `JobSchedule` 类。 有关详细信息，请参阅[SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  

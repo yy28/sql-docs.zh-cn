@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796419"
 ---
 # <a name="create-a-stored-procedure"></a>创建存储过程
@@ -29,17 +29,17 @@ ms.locfileid: "72796419"
   
 -   **要创建该过程，请使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要在数据库中有 CREATE PROCEDURE 权限，对在其中创建过程的架构有 ALTER 权限。  
   
-##  <a name="Procedures"></a> 如何创建存储过程  
+##  <a name="how-to-create-a-stored-procedure"></a><a name="Procedures"></a> 如何创建存储过程  
  您可以使用以下项之一：  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **在对象资源管理器中创建过程**  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
@@ -59,10 +59,10 @@ ms.locfileid: "72796419"
     |说明|返回雇员数据。|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|`nvarchar`（50）|  
+    |@Datatype_For_Param1|`nvarchar`(50)|  
     |Default_Value_For_Param1|Null|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|`nvarchar`（50）|  
+    |@Datatype_For_Param2|`nvarchar`(50)|  
     |Default_Value_For_Param2|Null|  
   
 6.  单击“确定”。   
@@ -89,7 +89,7 @@ ms.locfileid: "72796419"
 > [!WARNING]  
 >  验证所有用户的输入。 验证前请勿连接用户输入。 绝对不要执行根据尚未验证的用户输入构造的命令。  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中创建过程**  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  

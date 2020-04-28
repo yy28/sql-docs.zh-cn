@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783058"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>删除具有活动租约的备份 Blob 文件
@@ -29,16 +29,16 @@ ms.locfileid: "72783058"
 ## <a name="managing-orphaned-blobs"></a>管理孤立的 Blob  
  以下步骤说明在备份或还原活动失败后如何进行清除。 可以使用 PowerShell 脚本来执行所有这些步骤。 在接下来的章节中提供了代码示例：  
   
-1.  **标识具有租约的 blob：** 如果你有运行备份过程的脚本或进程，则可以捕获脚本或进程内的失败并使用它来清理 blob。   您还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦您标识了 blob，我们建议您查看列表，在删除 blob 前验证备份文件的有效性。  
+1.  **标识具有租约的 blob：** 如果您有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。   您还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦您标识了 blob，我们建议您查看列表，在删除 blob 前验证备份文件的有效性。  
   
-2.  **打破租约：** 授权的请求可以中断租约而不提供租约 ID。 有关详细信息，请参阅 [此处](https://go.microsoft.com/fwlink/?LinkID=275664) 。  
+2.  **中断租约：** 获得授权的请求可以中断租约而不提供租约 ID。 有关详细信息，请参阅[此处](https://go.microsoft.com/fwlink/?LinkID=275664)。  
   
     > [!TIP]  
     >  SQL Server 发出租约 ID 以在还原操作期间建立独占访问。 还原租约 ID 是 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2。  
   
-3.  **正在删除 Blob：** 若要删除具有活动租约的 blob，必须先中断租约。  
+3.  **删除 Blob：** 要删除具有活动租约的 blob，必须首先中断租约。  
   
-###  <a name="Code_Example"></a>PowerShell 脚本示例  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a>PowerShell 脚本示例  
  ** \* \*重要\*提示**如果运行的是 PowerShell 2.0，则加载 Microsoft Windowsazure.storage 程序集时可能会遇到问题。 我们建议您升级到 Powershell 3.0 以解决该问题。 您也可以为 PowerShell 2.0 使用以下解决方法：  
   
 -   使用以下语句创建或修改 powershell.exe.config 文件以在运行时加载 .NET 2.0 和 .NET 4.0 程序集：  
@@ -77,11 +77,11 @@ ms.locfileid: "72783058"
   
      如果有具有已锁定租约的 blob，您应该看到以下消息：  
   
-     **中断租约**  
+     **正在中断租约**  
   
-     **Blob 的 URL \<上的租约> 是还原租约：仅当具有的 blob 具有仍处于活动状态的还原租约时，才能看到此消息。**  
+     **\<Blob 的 URL> 上的租约是还原租约：仅当某个 blob 具有仍处于活动状态的还原租约时，才会看到此消息。**  
   
-     **Blob> 的\<url 上的租约不是 Bob> 的\<Url 的还原租约中断租约。**  
+     **\<Blob 的 URL> 上的租约不是还原租约，正在中断 \<Blob 的 URL> 上的租约。**  
   
 ```powershell
 param(  
@@ -150,4 +150,4 @@ if($lockedBlobs.Count -gt 0)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [从 SQL Server 备份到 URL 的最佳做法和故障排除](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [SQL Server 备份到 URL 最佳实践和故障排除](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

@@ -11,10 +11,10 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728308"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
@@ -32,16 +32,16 @@ ms.locfileid: "73728308"
 > [!IMPORTANT]  
 >  包只能部署到创建它们的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中。 这意味着在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中创建的包不能部署到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问目标 **环境中的** “系统管理” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能区域。  
   
 -   模型部署包必须存在。 有关详细信息，请参阅[使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
--   您必须是部署模型的环境中的管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是部署模型的环境中的管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
--   如果正在更新包含数据的模型，则不能“锁定”或“提交”正在部署到的版本********。  
+-   如果要使用数据更新模型，则不能**锁定**或**提交**正在部署到的版本。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>部署模型部署包  
   
@@ -94,7 +94,7 @@ ms.locfileid: "73728308"
   
 6.  成功部署包后，将显示一条消息“MDSModelDeploy 操作已成功完成”。  
   
- **本票**  
+ **注意：**  
   
 -   如果包中的订阅视图与现有模型中的订阅视图同名，则显示此警告： **Deployer 订阅视图已重命名** ，且视图创建为 *modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
   
@@ -113,11 +113,11 @@ ms.locfileid: "73728308"
      在更新某一模型时，如果该过程在前三个步骤中失败，则该过程将不会继续；但是，已进行的更改将不会回滚。 如果该过程在步骤 4 中失败，则会更新可更新的成员。  
   
 ## <a name="next-steps"></a>后续步骤  
- 模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参阅：  
+ 模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参见:  
   
--   [&#40;Master Data Services 分配模型对象权限&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Master Data Services 部署模型&#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6fc49b96bbf9b1388c162b87c76ba31b1696991a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728185"
 ---
 # <a name="import-statuses-master-data-services"></a>导入状态 (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728185"
 |状态|说明|Status_ID|  
 |------------|-----------------|----------------|  
 |排队待运行|批处理尚未开始处理。|1|  
-|正在运行|批处理正在处理。|2|  
+|运行|批处理正在处理。|2|  
 |已完成|批处理已完成处理。|3|  
 |排队待清除|批处理已处理完毕，将被清除。|4|  
 |已清除|批处理已清除。|5|  
   
 ## <a name="see-also"></a>另请参阅  
- [概述：从表中导入数据 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ [概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637825"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
@@ -75,15 +75,12 @@ ms.locfileid: "73637825"
  并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 为了支持在包中并行执行不同的任务，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用两个属性：`MaxConcurrentExecutables` 和 `EngineThreads`。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 属性  
- 
-  `MaxConcurrentExecutables` 属性是包本身的一个属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  
+ `MaxConcurrentExecutables` 属性是包本身的一个属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  
   
  若要了解此属性的工作原理，可参考一个包含三个数据流任务的示例包。 如果将 `MaxConcurrentExecutables` 设置为 3，则可以同时运行所有三个数据流任务。 但是，假定每个数据流任务都具有 10 个源到目标执行树。 将 `MaxConcurrentExecutables` 设置为 3 不能确保每个数据流任务内的执行树都能并行运行。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 属性  
- 
-  `EngineThreads` 属性是每个数据流任务的属性。 此属性定义数据流引擎可以创建和并行运行的线程数。 
-  `EngineThreads` 属性同样适用于数据流引擎为源创建的源线程和该引擎为转换和目标创建的工作线程。 因此，将 `EngineThreads` 设置为 10 表示该引擎可以创建多达 10 个源线程和多达 10 个工作线程。  
+ `EngineThreads` 属性是每个数据流任务的属性。 此属性定义数据流引擎可以创建和并行运行的线程数。 `EngineThreads` 属性同样适用于数据流引擎为源创建的源线程和该引擎为转换和目标创建的工作线程。 因此，将 `EngineThreads` 设置为 10 表示该引擎可以创建多达 10 个源线程和多达 10 个工作线程。  
   
  若要理解此属性的工作原理，可参考包含三个数据流任务的示例包。 每个数据流任务都包含 10 个源到目标执行树。 如果将每个数据流任务的 EngineThreads 设置为 10，则可以同时运行所有 30 个执行树。  
   
@@ -93,7 +90,7 @@ ms.locfileid: "73637825"
 ## <a name="configuring-individual-data-flow-components"></a>配置单个数据流组件  
  若要配置单个数据流组件以优化性能，可以按照某些通用指导原则进行操作。 同时还存在针对各种类型的数据流组件的特定指导原则：源数据流组件、转换数据流组件和目标数据流组件等。  
   
-### <a name="general-guidelines"></a>一般性指导  
+### <a name="general-guidelines"></a>通用准则  
  无论采用何种数据流组件，为了改善性能您应该遵循下面两个通用指导原则：优化查询和避免不必要的字符串。  
   
 #### <a name="optimize-queries"></a>优化查询  
@@ -160,7 +157,7 @@ ms.locfileid: "73637825"
 ### <a name="review-the-information-on-the-progress-tab"></a>查看“进度”选项卡上的信息  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时控制流和数据流的信息。 **“进度”** 选项卡按执行顺序列出任务和容器，而且还包括每个任务和容器及包自身的开始时间和结束时间、警告以及错误消息。 它还按执行顺序列出数据流组件并包括进度信息（显示为完成百分比）和处理的行数。  
   
- 若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。 禁用进度报告有助于在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行复杂包时改进性能。  
+  若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。 禁用进度报告有助于在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行复杂包时改进性能。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -181,7 +178,7 @@ ms.locfileid: "73637825"
   
 -   sqlcat.com 上的技术文章 [前 10 个 SQL Server Integration Services 最佳实践](https://go.microsoft.com/fwlink/?LinkId=220818)。  
   
--   sqlcat.com 上的技术文章和示例 [针对 SSIS 的“平衡的数据分发服务器”](https://go.microsoft.com/fwlink/?LinkId=220822)。  
+-   Sqlcat.com 上的技术文章和示例（ [SSIS 的 "平衡数据分发器"](https://go.microsoft.com/fwlink/?LinkId=220822)）。  
   
 -   blogs.msdn.com 上的博客文章 [解决 SSIS 包性能问题](https://go.microsoft.com/fwlink/?LinkId=238156)。  
   
@@ -201,6 +198,6 @@ ms.locfileid: "73637825"
   
 ## <a name="see-also"></a>另请参阅  
  [包开发的故障排除工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [对包执行进行故障排除的工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

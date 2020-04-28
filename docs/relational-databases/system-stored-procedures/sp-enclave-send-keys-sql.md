@@ -20,10 +20,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593752"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
@@ -72,6 +72,6 @@ EXEC sp_enclave_send_keys;
 ## <a name="see-also"></a>另请参阅
 - [具有安全 Enclave 的 Always Encrypted](../security/encryption/always-encrypted-enclaves.md) 
  
-- [使用带有 secure enclaves 的 Always Encrypted 在列上创建和使用索引](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
+- [对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
 - [教程：使用随机加密在启用了 enclave 的列上创建和使用索引](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73536222"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
@@ -60,12 +60,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @configname = ] 'option_name'`配置选项的名称。 *option_name*的值为**varchar （35）**，默认值为 NULL。 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
+`[ @configname = ] 'option_name'`配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
   
  有关可用配置选项及其设置的信息，请参阅[服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
-`[ @configvalue = ] 'value'`新的配置设置。 *值*为**int**，默认值为 NULL。 最大值取决于各个选项。  
+`[ @configvalue = ] 'value'`新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
   
  若要查看每个选项的最大值，请参阅**sys.databases**目录视图的**最大**值列。  
   
@@ -79,9 +78,9 @@ RECONFIGURE
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**nvarchar （35）**|配置选项的名称。|  
+|name |**nvarchar(35)**|配置选项的名称。|  
 |**短**|**int**|配置选项的最小值。|  
-|**最佳**|**int**|配置选项的最大值。|  
+|**maximum**|**int**|配置选项的最大值。|  
 |**config_value**|**int**|配置选项使用**sp_configure**设置的值（值在**sys.databases**中）。 有关这些选项的详细信息，请参阅[服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
 |**run_value**|**int**|配置选项的当前运行值（ **value_in_use**中的值）。<br /><br /> 有关详细信息，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
@@ -149,7 +148,7 @@ EXEC sp_configure 'recovery interval', '3';
 RECONFIGURE WITH OVERRIDE;  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-list-all-available-configuration-settings"></a>C. 列出所有可用的配置设置  
  以下示例显示如何列出所有的配置选项。  
@@ -158,9 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 结果返回选项名称，后跟该选项的最小值和最大值。 **Config_value**是重新配置完成时[!INCLUDE[ssDW](../../includes/ssdw-md.md)]将使用的值。 
-  **run_value** 是当前正在使用的值。 
-  **config_value** 和 **run_value** 通常是相同的，除非该值正在进行更改。  
+ 结果返回选项名称，后跟该选项的最小值和最大值。 **Config_value**是重新配置完成时[!INCLUDE[ssDW](../../includes/ssdw-md.md)]将使用的值。 **run_value** 是当前正在使用的值。 **config_value** 和 **run_value** 通常是相同的，除非该值正在进行更改。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 列出一个配置名称的配置设置  
   
@@ -175,10 +172,10 @@ EXEC sp_configure @configname='hadoop connectivity';
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [更改数据库作用域配置 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
- [软件 NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  
+ [Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
   

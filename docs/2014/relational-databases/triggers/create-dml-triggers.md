@@ -20,31 +20,31 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796386"
 ---
 # <a name="create-dml-triggers"></a>创建 DML 触发器
   本主题介绍了如何通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE TRIGGER 语句来创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器。  
   
-##  <a name="Top"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="Top"></a> 开始之前  
   
 ### <a name="limitations-and-restrictions"></a>限制和局限  
  有关与创建 DML 触发器相关的限制和局限的列表，请参阅 [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对要创建触发器的表或视图具有 ALTER 权限。  
   
-##  <a name="Procedures"></a> 如何创建 DML 触发器  
+##  <a name="how-to-create-a-dml-trigger"></a><a name="Procedures"></a> 如何创建 DML 触发器  
  您可以使用以下项之一：  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72796386"
   
  [开始之前](#Top)  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   

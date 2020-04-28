@@ -18,10 +18,10 @@ ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 94f03fc874a9032177ec12b9dd4b86c40792656f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659436"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>SetStringValue 方法（ServerNetworkProtocolProperty 类）
@@ -36,10 +36,10 @@ object.SetStringValue(StrValue)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的网络协议属性的[ServerNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)对象。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
   
 |参数|说明|  
 |---------------|-----------------|  

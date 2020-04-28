@@ -15,10 +15,10 @@ ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728198"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>文件夹和文件权限 (Master Data Services)
@@ -28,8 +28,7 @@ ms.locfileid: "73728198"
   在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果你使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能的默认安装路径，则 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的安装路径为驱动器**:\Program Files\Microsoft SQL Server\130\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
   
 ## <a name="inherited-permissions"></a>继承的权限  
- 
-  **Microsoft SQL Server** 文件夹、 **Master Data Services** 文件夹以及大多数子文件夹和文件从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序中指定的父文件夹继承权限。 如果选择默认安装位置，则继承其权限的父文件夹是驱动器**:\Program Files。 下表描述针对 **“程序文件”** 的默认权限。  
+ **Microsoft SQL Server** 文件夹、 **Master Data Services** 文件夹以及大多数子文件夹和文件从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序中指定的父文件夹继承权限。 如果选择默认安装位置，则继承其权限的父文件夹是驱动器**:\Program Files。 下表描述针对 **“程序文件”** 的默认权限。  
   
 > [!NOTE]  
 >  如果修改针对“程序文件”**** 的默认权限，或者选择不同的安装位置，则 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 文件夹和文件将相应继承其父文件夹的权限，并且这些权限可能不同于在下表中描述的权限。  
@@ -45,8 +44,7 @@ ms.locfileid: "73728198"
 |TrustedInstaller|列出文件夹内容、特殊权限|  
   
 ## <a name="explicit-permissions"></a>显式权限  
- 
-  **MDSTempDir** 文件夹和 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 文件（位于 **WebApplication** 文件夹中）不继承权限。 它们具有在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时显式设置的权限，而与您选择的安装路径无关。 不要修改这些权限。  
+ **MDSTempDir** 文件夹和 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 文件（位于 **WebApplication** 文件夹中）不继承权限。 它们具有在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时显式设置的权限，而与您选择的安装路径无关。 不要修改这些权限。  
   
 ###### <a name="mdstempdir-permissions"></a>MDSTempDir 权限  
   

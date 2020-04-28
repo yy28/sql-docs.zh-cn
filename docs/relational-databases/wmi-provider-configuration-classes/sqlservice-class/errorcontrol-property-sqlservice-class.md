@@ -18,10 +18,10 @@ ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659662"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 属性（SqlService 类）
@@ -36,7 +36,7 @@ object.ErrorControl [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -54,7 +54,7 @@ object.ErrorControl [= value]
  严重  
  系统将尝试使用正确的配置重新启动。  
   
- 未知  
+ Unknown  
  严重性未知。  
   
 ## <a name="remarks"></a>备注  

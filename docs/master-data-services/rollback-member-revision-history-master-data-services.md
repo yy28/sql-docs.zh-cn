@@ -11,10 +11,10 @@ ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 51465b3f3ae7193d925d30203c5a831a03b8d51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727925"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>回退成员修订历史记录 (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73727925"
 
   每当成员发生变化时，系统都会记录成员修订历史记录。 你可以将成员修订历史记录回退到旧版记录。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   你必须有权更新选定成员的至少一个属性。 当你回退修订历史记录时，可以更新的所有属性值都会回退到旧版值。  
   

@@ -21,10 +21,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4cd6b4a4cb8eeed0dd0a2a78adc2d39c6a2e895d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593721"
 ---
 # <a name="syscolumn_encryption_keys--transact-sql"></a>sys. column_encryption_keys （Transact-sql）
@@ -34,7 +34,7 @@ ms.locfileid: "73593721"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|CMK 的名称。|  
+|name |**sysname**|CMK 的名称。|  
 |**column_encryption_key_id**|**int**|CEK 的 ID。|  
 |**create_date**|**datetime**|CEK 的创建日期。|  
 |**modify_date**|**datetime**|上次修改 CEK 的日期。|  

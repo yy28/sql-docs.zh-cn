@@ -17,10 +17,10 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57f7e07de49b2591e9ab0ef74603d674543282e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660492"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>将 WQL 与 WMI Provider for Server Events 结合使用
@@ -49,8 +49,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- WQL 查询 (`FROM`) 的 `DDL_DATABASE_LEVEL_EVENTS` 子句中的参数可以为可对其创建事件通知的任何有效事件。 
-  `SELECT` 和 `WHERE` 子句中的参数可以指定与某一事件或其父事件关联的任何事件属性。 有关有效事件和事件属性的列表，请参阅[事件通知（数据库引擎）](https://technet.microsoft.com/library/ms182602.aspx)。  
+ WQL 查询 (`FROM`) 的 `DDL_DATABASE_LEVEL_EVENTS` 子句中的参数可以为可对其创建事件通知的任何有效事件。 `SELECT` 和 `WHERE` 子句中的参数可以指定与某一事件或其父事件关联的任何事件属性。 有关有效事件和事件属性的列表，请参阅[事件通知（数据库引擎）](https://technet.microsoft.com/library/ms182602.aspx)。  
   
  WMI Provider for Server Events 显式支持以下 WQL 语法。 也可以指定附加 WQL 语法，但该语法并非特定于此提供程序，并且由 WMI 主机服务进行分析。 有关 WMI 查询语言的详细信息，请参阅 Microsoft Developer Network (MSDN) 上的 WQL 文档。  
   
@@ -73,7 +72,7 @@ WHERE where_condition
  \*  
  指定对与事件关联的所有属性进行查询。  
   
- *event_type*  
+ event_type   
  可针对其创建事件通知的任何事件。 有关可用事件的列表，请参阅[WMI Provider For Server Events 类和属性](https://technet.microsoft.com/library/ms186449.aspx)。 请注意，*事件类型*名称对应于通过使用 create event notification 手动创建事件通知时可以指定的相同*event_type* | *event_group* 。 *事件类型*的示例包括 CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS 和 TRC_DATABASE。  
   
 > [!NOTE]  

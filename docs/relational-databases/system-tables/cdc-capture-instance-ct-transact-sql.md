@@ -18,10 +18,10 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72908397"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT （transact-sql）
@@ -35,10 +35,10 @@ ms.locfileid: "72908397"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**__ $ start_lsn**|**binary （10）**|与相应更改的提交事务关联的日志序列号 (LSN)。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果对源表的 delete 操作删除两行，则更改表将包含两行，每行都具有相同的 **__ $ start_lsn**值。|  
-|**__ $ end_lsn**|**binary （10）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此列始终为 NULL。|  
-|**__ $ seqval**|**binary （10）**|用于对事务内的行更改进行排序的序列值。|  
-|**__ $ 操作**|**int**|标识与相应更改关联的数据操作语言 (DML) 操作。 可以是以下值之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（旧值）<br /><br /> 列数据中具有执行更新语句之前的行值。<br /><br /> 4 = 更新（新值）<br /><br /> 列数据中具有执行更新语句之后的行值。|  
+|**__$start_lsn**|**binary(10)**|与相应更改的提交事务关联的日志序列号 (LSN)。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果对源表的 delete 操作删除两行，则更改表将包含两行，每行都具有相同的 **__ $ start_lsn**值。|  
+|**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此列始终为 NULL。|  
+|**__$seqval**|**binary(10)**|用于对事务内的行更改进行排序的序列值。|  
+|**__ $ 操作**|**int**|标识与相应更改关联的数据操作语言 (DML) 操作。 可以是以下其中一个值：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（旧值）<br /><br /> 列数据中具有执行更新语句之前的行值。<br /><br /> 4 = 更新（新值）<br /><br /> 列数据中具有执行更新语句之后的行值。|  
 |**__ $ update_mask**|**varbinary(128)**|基于更改表的列序号的位掩码，用于标识那些发生更改的列。|  
 |*\<捕获的源表列>*|多种多样|更改表中的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中未指定任何列，则源表中的所有列将包括在此表中。|  
 |**__ $ command_id** |**int** |跟踪事务中的操作顺序。 |  
@@ -83,6 +83,6 @@ ms.locfileid: "72908397"
   
 ## <a name="see-also"></a>另请参阅  
  [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

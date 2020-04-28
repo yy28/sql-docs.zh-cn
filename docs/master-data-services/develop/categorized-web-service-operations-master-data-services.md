@@ -11,17 +11,17 @@ ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728300"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分类的 Web 服务操作 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务包含一组完整的操作，可让你编写代码来控制通过其用户界面[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]执行的所有功能。 Web 服务操作由 <xref:Microsoft.MasterDataServices.IService> 接口定义，并在 <xref:Microsoft.MasterDataServices.ServiceClient> 类中作为方法实现。 本主题将 Web 服务操作分组为概念性类别，以帮助您了解如何使用 Web 服务 API。  
+   Web 服务包含一组完整的操作，可让您通过编写代码以控制  通过其用户界面所执行的所有功能。 Web 服务操作由 <xref:Microsoft.MasterDataServices.IService> 接口定义，并在 <xref:Microsoft.MasterDataServices.ServiceClient> 类中作为方法实现。 本主题将 Web 服务操作分组为概念性类别，以帮助您了解如何使用 Web 服务 API。  
   
 ## <a name="model-operations"></a>模型操作  
  这些操作用于创建、更新和删除模型，以及对所有模型内容（如实体、层次结构和版本）执行操作。 有关详细信息，请参阅[模型 (Master Data Services)](../../master-data-services/models-master-data-services.md)。  
@@ -140,7 +140,7 @@ ms.locfileid: "73728300"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>数据导出操作  
- 这些操作可用于通过使用订阅视图导出数据。 有关详细信息，请参阅[概述：导出数据 (Master Data Services)](../../master-data-services/overview-exporting-data-master-data-services.md)。  
+ 这些操作可用于通过使用订阅视图导出数据。 有关详细信息，请参阅 [概述：导出数据 (Master Data Services)](../../master-data-services/overview-exporting-data-master-data-services.md)。  
   
 ||  
 |-|  

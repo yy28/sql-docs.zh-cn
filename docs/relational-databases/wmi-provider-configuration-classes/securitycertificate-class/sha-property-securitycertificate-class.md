@@ -18,10 +18,10 @@ ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bf2057156191cb45b3528e691d78630bb3aedf4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658784"
 ---
 # <a name="sha-property-securitycertificate-class"></a>SHA 属性（SecurityCertificate 类）
@@ -36,7 +36,7 @@ object.SHA [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39ee8bfc079445e177aa9b175019ae385b9f9f36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797656"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>将辅助副本联接到可用性组 (SQL Server)
@@ -42,9 +42,9 @@ ms.locfileid: "72797656"
   
 -   **跟进：** [配置辅助数据库](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   该可用性组的主副本当前必须处于联机状态。  
   
@@ -55,12 +55,12 @@ ms.locfileid: "72797656"
 > [!IMPORTANT]  
 >  如果不满足任何先决条件，联接操作将会失败。 在联接尝试失败之后，您可能需要连接到承载主副本的服务器实例以删除并重新添加辅助副本，然后您才可以将其联接到可用性组。 有关详细信息，请参阅[将辅助副本从可用性组删除 (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md) 和[将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **将可用性副本联接到可用性组**  
   
 1.  在对象资源管理器中，连接到承载辅助副本的服务器实例，然后单击服务器名称以便展开服务器树。  
@@ -75,7 +75,7 @@ ms.locfileid: "72797656"
   
 6.  若要将辅助副本联接到可用性组，请单击 **“确定”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **将可用性副本联接到可用性组**  
   
 1.  连接到承载辅助副本的服务器实例。  
@@ -95,7 +95,7 @@ ms.locfileid: "72797656"
     > [!NOTE]  
     >  若要查看此用于上下文的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，请参阅[创建可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md)。  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **将可用性副本联接到可用性组**  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 提供程序中：  
@@ -113,14 +113,14 @@ ms.locfileid: "72797656"
     > [!NOTE]  
     >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **设置并使用 SQL Server PowerShell 提供程序**  
+ **设置和使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>跟进：配置辅助数据库  
+##  <a name="follow-up-configure-secondary-databases"></a><a name="FollowUp"></a>跟进：配置辅助数据库  
  对于该可用性组中的每个数据库，您在承载辅助副本的服务器实例上需要辅助数据库。 您可以在将辅助副本联接到可用性组之前或之后，按如下所述配置辅助数据库：  
   
-1.  通过将 RESTORE WITH NORECOVERY 用于每个还原操作，将各个主数据库的最近数据库和日志备份还原到承载辅助副本的服务器实例。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+1.  通过将 RESTORE WITH NORECOVERY 用于每个还原操作，将各个主数据库的最近数据库和日志备份还原到承载辅助副本的服务器实例。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
 2.  将每个辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   

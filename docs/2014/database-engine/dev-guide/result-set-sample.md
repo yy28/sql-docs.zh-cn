@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637630"
 ---
 # <a name="result-set-sample"></a>结果集示例
@@ -25,14 +25,12 @@ ms.locfileid: "73637630"
   
  除了可以在结果集中前后移动以外，此类的 API 与数据读取器相似；并且即使结果集处于打开状态，也可以在连接时发出其他命令。此实现过程经过较大程度的简化，可令该示例易于理解。 更有效的实现将提取多行来避免提取的每行的数据库周转。 与用查询的所有结果填充数据集比较，使用此类可以大大减少内存需求量，这对于服务器端编程是非常重要的。 此示例还说明如何使用“允许部分受信任的调用方”属性来指示结果集程序集是可以安全地从其他程序集进行调用的库。 与使用不安全的权限注册调用程序集相比，此方法稍微复杂一些，但要安全许多。 该方法更安全的原因是：它将调用程序集注册为安全的程序集，调用程序集将限制相关资源脱离服务器并防止对服务器的完整性造成损害。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -1414,6 +1412,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

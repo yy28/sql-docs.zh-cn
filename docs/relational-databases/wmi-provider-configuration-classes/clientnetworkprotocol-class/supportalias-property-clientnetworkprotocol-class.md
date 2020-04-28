@@ -18,10 +18,10 @@ ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7cb18806ed4f83f34a6436c79c5a89acf68db294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660235"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 属性（ClientNetworkProtocol Class）
@@ -36,7 +36,7 @@ object.SupportAlias [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示 [客户端使用的网络协议的](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) ClientNetworkProtocol 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

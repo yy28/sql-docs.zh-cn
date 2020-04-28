@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797926"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)
@@ -33,21 +33,20 @@ ms.locfileid: "72797926"
   
 -   **开始之前：**  [安全性](#Security)  
   
--   **若要创建数据库镜像端点，请使用：**  [transact-sql](#TsqlProcedure)  
+-   **若要创建数据库镜像端点，请使用：**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  服务器实例的身份验证和加密方法由系统管理员建立。  
   
 > [!IMPORTANT]  
->  不推荐使用 RC4 算法。 
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
+>  不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有 CREATE ENDPOINT 权限，或者具有 sysadmin 固定服务器角色的成员身份。 有关详细信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-database-mirroring-endpoint-that-uses-windows-authentication"></a>创建使用 Windows 身份验证的数据库镜像端点  
   
@@ -86,11 +85,11 @@ ms.locfileid: "72797926"
   
      ]  
   
-     [,****] ROLE = *role>\<*  
+     [,****] ROLE = \<role>**  
   
      )  
   
-     其中  
+     where  
   
     -   终结点>是服务器实例的数据库镜像端点的唯一名称。 * \<*  
   
@@ -124,8 +123,7 @@ ms.locfileid: "72797926"
          AES RC4 指定此端点协商加密算法，但优先使用 AES 算法。 RC4 AES 指定此端点协商加密算法，但优先使用 RC4 算法。 如果两个端点都指定了这两种算法，但顺序不同，则接受连接的端点入选。  
   
         > [!NOTE]  
-        >  不推荐使用 RC4 算法。 
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
+        >  不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
   
     -   角色>定义服务器可以执行的角色。 * \<* 必须指定 ROLE。 不过，该端点的角色仅针对数据库镜像。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，该端点的角色将被忽略。  
   
@@ -139,14 +137,14 @@ ms.locfileid: "72797926"
     > [!NOTE]  
     >  若要更改现有的端点，请使用 [ALTER ENDPOINT (Transact-SQL)](/sql/t-sql/statements/alter-endpoint-transact-sql)中使用 Windows 身份验证。  
   
-###  <a name="TsqlExample"></a>示例：创建终结点以支持数据库镜像（Transact-sql）  
+###  <a name="example-creating-endpoints-to-support-for-database-mirroring-transact-sql"></a><a name="TsqlExample"></a> 示例：创建端点以便支持数据库镜像 (Transact-SQL)  
  下面的示例为三个不同的计算机系统上的默认服务器实例创建数据库镜像端点：  
   
 |服务器实例的角色|主机的名称|  
 |-----------------------------|---------------------------|  
 |伙伴（最初在主体角色中）|`SQLHOST01\.`|  
 |伙伴（最初在镜像角色中）|`SQLHOST02\.`|  
-|Witness|`SQLHOST03\.`|  
+|见证|`SQLHOST03\.`|  
   
  在本示例中，尽管任何可用的端口号都可以，但所有三个端点都使用端口号 7022。 AUTHENTICATION 选项是不必要的，因为端点使用默认类型，即 Windows 身份验证。 ENCRYPTION 选项也是不必要的，因为端点都打算通过协商来决定连接的身份验证方法，这是 Windows 身份验证的默认行为。 而且，所有端点都需要加密，这是默认行为。  
   
@@ -179,7 +177,7 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>配置数据库镜像端点
   
@@ -193,7 +191,7 @@ GO
   
 -   [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)  
   
--   [在添加或修改可用性副本时指定终结点 URL &#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **查看有关数据库镜像端点的信息**  
   

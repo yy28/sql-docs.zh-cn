@@ -15,17 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796835"
 ---
 # <a name="implementing-endpoints"></a>实现端点
   端点是一种可以本机方式侦听请求的服务。 SMO 通过使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象支持各种类型的端点。 您可以创建用于处理特定类型负载且使用特定协议的端点服务，方法是创建一个 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象的实例并设置其属性。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 属性可用于指定下列负载类型之一：  
+ <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 属性可用于指定下列负载类型之一：  
   
 -   数据库镜像  
   
@@ -35,23 +34,17 @@ ms.locfileid: "72796835"
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> 属性还可用于指定以下两种支持的协议：  
+ <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> 属性还可用于指定以下两种支持的协议：  
   
 -   HTTP 协议  
   
 -   TCP 协议  
   
- 如果指定了负载的类型，则可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> 对象属性设置实际负载。 
-  <xref:Microsoft.SqlServer.Management.Smo.Payload> 对象属性提供了对指定类型的负载对象的引用，可以修改该负载对象的属性。  
+ 如果指定了负载的类型，则可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> 对象属性设置实际负载。 <xref:Microsoft.SqlServer.Management.Smo.Payload> 对象属性提供了对指定类型的负载对象的引用，可以修改该负载对象的属性。  
   
- 对于 <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> 对象，必须指定镜像角色和是否启用加密。 
-  <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> 对象要求提供与消息转发、允许的最大连接数和身份验证模式有关的信息。 
-  <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> 对象需要设置各种属性，包括用来指定可用于客户端（存储过程和用户定义函数）的 SOAP 负载方法的 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> 对象属性。  
+ 对于 <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> 对象，必须指定镜像角色和是否启用加密。 <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> 对象要求提供与消息转发、允许的最大连接数和身份验证模式有关的信息。 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> 对象需要设置各种属性，包括用来指定可用于客户端（存储过程和用户定义函数）的 SOAP 负载方法的 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> 对象属性。  
   
- 与此类似，通过使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> 对象属性可以设置实际协议，该对象属性引用由 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> 属性所指定类型的协议对象。 
-  <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> 对象要求提供受限 IP 地址、端口、网站和身份验证信息的列表。 
-  <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> 对象也需要受限 IP 地址和端口信息的列表。  
+ 与此类似，通过使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> 对象属性可以设置实际协议，该对象属性引用由 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> 属性所指定类型的协议对象。 <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> 对象要求提供受限 IP 地址、端口、网站和身份验证信息的列表。 <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> 对象也需要受限 IP 地址和端口信息的列表。  
   
  创建端点并完全定义之后，便可授予、撤消及拒绝数据库用户、组、角色和登录名的访问权限。  
   

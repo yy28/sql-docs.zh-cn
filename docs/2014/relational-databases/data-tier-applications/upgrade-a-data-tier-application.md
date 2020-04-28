@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 44c4bb7c01f18db6062ad1982fcf5a5f80e4d6b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797978"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
@@ -38,24 +38,24 @@ ms.locfileid: "72797978"
   
 -   若要升级 DAC，请使用：  [升级数据层应用程序向导](#UsingDACUpgradeWizard)、[PowerShell](#UpgradeDACPowerShell)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  DAC 升级是一个就地过程，此过程更改现有数据库的架构以匹配在新版本的 DAC 中定义的架构。 这一新版本的 DAC 在 DAC 包文件中提供。 有关创建 DAC 包的详细信息，请参阅 [数据层应用程序](data-tier-applications.md)。  
   
-###  <a name="ChoseDACUpgOptions"></a> 选择 DAC 升级选项  
+###  <a name="choosing-dac-upgrade-options"></a><a name="ChoseDACUpgOptions"></a> 选择 DAC 升级选项  
  就地升级有四种升级选项：  
   
--   **忽略数据丢失**-如果`True`为，则即使某些操作导致数据丢失，升级也将继续。 如果为 `False`，则上述操作将终止升级。 例如，如果当前数据库中的表在新的 DAC 的架构中不存在，则在指定 `True` 时该表将被删除。 默认设置是 `True`。  
+-   **忽略数据丢失**-如果`True`为，则即使某些操作导致数据丢失，升级也将继续。 如果为 `False`，则上述操作将终止升级。 例如，如果当前数据库中的表在新的 DAC 的架构中不存在，则在指定 `True` 时该表将被删除。 默认设置为 `True`。  
   
--   **更改时阻止**-如果`True`为，则在数据库架构不同于在之前的 DAC 中定义的架构时，升级将终止。 如果为 `False`，则即使检测到更改，升级也将继续。 默认设置是 `False`。  
+-   **更改时阻止**-如果`True`为，则在数据库架构不同于在之前的 DAC 中定义的架构时，升级将终止。 如果为 `False`，则即使检测到更改，升级也将继续。 默认设置为 `False`。  
   
--   **失败时回滚**-如果`True`为，则在事务中包含升级，如果遇到错误，则将尝试回滚。 如果为 `False`，则在进行更改时所有更改都将提交，并且在出错时，您可能要还原数据库的以前的备份。 默认设置是 `False`。  
+-   **失败时回滚**-如果`True`为，则在事务中包含升级，如果遇到错误，则将尝试回滚。 如果为 `False`，则在进行更改时所有更改都将提交，并且在出错时，您可能要还原数据库的以前的备份。 默认设置为 `False`。  
   
--   **跳过策略验证**- `True`如果为，则不评估 DAC 服务器选择策略。 如果为 `False`，将评估策略，并且在存在验证错误时升级将终止。 默认设置是 `False`。  
+-   **跳过策略验证**- `True`如果为，则不评估 DAC 服务器选择策略。 如果为 `False`，将评估策略，并且在存在验证错误时升级将终止。 默认设置为 `False`。  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  DAC 升级只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本中执行。  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  出于谨慎起见，在开始升级前应生成完整数据库备份。 如果升级遇到了错误并且无法回滚其所有更改，可能需要还原该备份。  
   
  在开始升级前，您应该采取若干操作以便验证 DAC 包和升级操作。 有关如何执行这些检查的详细信息，请参阅 [Validate a DAC Package](validate-a-dac-package.md)。  
@@ -70,13 +70,13 @@ ms.locfileid: "72797978"
   
  请确保有足够事务日志空间可用于记录所有修改。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC 包中且没有密码。 在部署或升级该包时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  DAC 只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员升级，或者由 **dbcreator** 固定服务器角色中具有 ALTER ANY LOGIN 权限的登录名升级。 该登录名必须是现有数据库的所有者。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以升级 DAC。  
   
-##  <a name="UsingDACUpgradeWizard"></a> 使用“升级数据层应用程序向导”  
+##  <a name="using-the-upgrade-data-tier-application-wizard"></a><a name="UsingDACUpgradeWizard"></a> 使用“升级数据层应用程序向导”  
  **使用向导升级 DAC**  
   
 1.  在 **“对象资源管理器”** 中，展开包含要升级的 DAC 的实例的节点。  
@@ -101,7 +101,7 @@ ms.locfileid: "72797978"
   
     7.  [“升级 DAC”页](#Upgrade)  
   
-##  <a name="Introduction"></a> “简介”页  
+##  <a name="introduction-page"></a><a name="Introduction"></a> “简介”页  
  此页描述数据层应用程序的升级步骤。  
   
  **不再显示此页。** - 选中该复选框可以停止在将来显示此页。  
@@ -110,7 +110,7 @@ ms.locfileid: "72797978"
   
  **取消** - 终止向导且不升级 DAC。  
   
-##  <a name="Select_dac_package"></a> “选择包”页  
+##  <a name="select-package-page"></a><a name="Select_dac_package"></a> “选择包”页  
  使用此页可以指定包含数据层应用程序的新版本的 DAC 包。 该页可为两种状态。  
   
 ### <a name="select-the-dac-package"></a>选择 DAC 包  
@@ -124,7 +124,7 @@ ms.locfileid: "72797978"
   
  “说明”  - 一个只读框，它显示创作 DAC 或者从某一数据库中提取 DAC 时编写的版本。  
   
- "上**** **一步"-返回到 "简介" \< **页。  
+ "上**Introduction** **一步"-返回到 "简介" \< **页。  
   
  “下一步 >”  - 显示进度栏，因为向导已确认所选文件为有效的 DAC 包。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "72797978"
   
  “取消”  - 终止向导且不部署 DAC。  
   
-##  <a name="Review_policy"></a> “查看策略”页  
+##  <a name="review-policy-page"></a><a name="Review_policy"></a> “查看策略”页  
  使用此页可查看评估 DAC 服务器选择策略的结果（如果该 DAC 具有策略）。 该 DAC 服务器选择策略是可选的，并分配给在 Microsoft Visual Studio 中创作的 DAC。 该策略使用该服务器选择策略方面指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例为承载该 DAC 而必须满足的条件。  
   
  **策略条件的评估结果** - 一个只读报告，显示 DAC 服务器选择策略中的条件评估是否成功。 将在单独的行上报告对每个条件进行评估的结果。  
@@ -154,7 +154,7 @@ ms.locfileid: "72797978"
   
  **取消** - 终止向导且不升级 DAC。  
   
-##  <a name="Detect_change"></a> “检测更改”页  
+##  <a name="detect-change-page"></a><a name="Detect_change"></a> “检测更改”页  
  使用此页可以报告向导对所发生的数据库更改的检测结果，这些更改应该是使数据库架构不同于在 **msdb**的 DAC 元数据中存储的架构定义的更改。 例如，如果 CREATE、ALTER 或 DROP 语句已用于在最初部署 DAC 后从数据库中添加、更改或删除对象。 则该页将首先显示一个进度栏，然后报告分析的结果。  
   
  **正在检测更改，这可能需要几分钟的时间** - 在向导检查数据库的当前架构和 DAC 定义中的对象之间的差异时显示一个进度栏。  
@@ -188,7 +188,7 @@ ms.locfileid: "72797978"
   
  “取消”  - 终止向导且不部署 DAC。  
   
-##  <a name="ReviewUpgPlan"></a> “查看升级计划”页  
+##  <a name="review-the-upgrade-plan-page"></a><a name="ReviewUpgPlan"></a> “查看升级计划”页  
  使用此页可以查看升级过程将执行的操作。 仅当确信升级不会导致问题时才继续。  
   
  **将使用以下操作升级 DAC。** - 查看显示的信息以便确保将执行的操作正确。 “操作”  列显示要用于执行升级的操作（如 Transact-SQL 语句）。 **“数据丢失”** 列将包含在相关操作删除数据时给出的警告。  
@@ -209,7 +209,7 @@ ms.locfileid: "72797978"
   
  “取消”  - 终止向导且不部署 DAC。  
   
-##  <a name="Summary"></a> 摘要页  
+##  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用此页可以最后查看在升级 DAC 时向导将执行的操作。  
   
  **将使用以下设置升级 DAC。** - 查看显示的信息以便确保将执行的操作正确。 该窗口将显示您选择要升级的 DAC 以及包含该 DAC 的新版本的 DAC 包。 该窗口还显示数据库的当前版本是否与当前的 DAC 定义相同，或者显示数据库是否已更改。  
@@ -220,7 +220,7 @@ ms.locfileid: "72797978"
   
  “取消”  - 终止向导且不部署 DAC。  
   
-##  <a name="Upgrade"></a> “升级 DAC”页  
+##  <a name="upgrade-dac-page"></a><a name="Upgrade"></a> “升级 DAC”页  
  此页报告升级操作是成功还是失败。  
   
  **升级 DAC** - 报告为升级 DAC 而执行的每个操作是成功还是失败。 查看信息以便确定每个操作是成功还是失败。 遇到了错误的任何操作都将在 **“结果”** 列中具有一个链接。 选择该链接可以查看针对该操作的错误报告。  
@@ -229,7 +229,7 @@ ms.locfileid: "72797978"
   
  “完成”  - 终止向导。  
   
-##  <a name="UpgradeDACPowerShell"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="UpgradeDACPowerShell"></a> 使用 PowerShell  
  **使用 PowerShell 脚本中的 IncrementalUpgrade() 方法升级 DAC**  
   
 1.  创建一个 SMO Server 对象，并且将该对象设置为包含要升级的 DAC 的实例。  

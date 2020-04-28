@@ -13,15 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d3f7e5829c19b79ca19783d36885f6bfd3761f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637889"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>安装、卸载和报表生成器支持
-  报表生成器是一种可用于创建、更新和共享报表、报表部件和共享数据集的报表创作工具。 报表生成器有两个版本：独立版本和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]版本。 独立版本由您或管理员安装到您的计算机上。 
-  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本随 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 自动安装，是从报表管理器或与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点下载到您的计算机中的。  
+  报表生成器是一种可用于创建、更新和共享报表、报表部件和共享数据集的报表创作工具。 报表生成器有两个版本：独立版本和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]版本。 独立版本由您或管理员安装到您的计算机上。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本随 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 自动安装，是从报表管理器或与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点下载到您的计算机中的。  
   
  报表生成器的独立版本不随 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]一起安装。 您必须从 [Microsoft® SQL Server® 2012 报表生成器](https://go.microsoft.com/fwlink/?LinkId=401502)进行单独下载并安装。  
   
@@ -30,7 +29,7 @@ ms.locfileid: "73637889"
   
  通常，由管理员安装和配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、授予使用报表生成器的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本的权限，以及管理文件夹与对报表、报表部件和保存到报表服务器的共享数据集的权限。 有关[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]管理的详细信息，请参阅 msdn.microsoft.com 上的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)中的[Reporting Services Report Server &#40;纯模式&#41;](report-server/reporting-services-report-server-native-mode.md) 。  
   
-##  <a name="Installing"></a>安装报表生成器  
+##  <a name="installing-report-builder"></a><a name="Installing"></a>安装报表生成器  
  报表生成器有独立版本和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本。 您或管理员将独立版本下载并安装到您的计算机上，而 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本则随 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]一起安装。 可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=53613)下载报表生成器。  
   
 > [!NOTE]  
@@ -59,9 +58,7 @@ ms.locfileid: "73637889"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>在计算机上安装报表生成器 ClickOnce 版本  
  报表生成器的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本随 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]一起安装。 它通过 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的本机安装和 SharePoint 集成安装进行安装。  
   
- 
-  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 是 Microsoft 用于部署 Windows 应用程序的一种技术。 
-  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 使得用户可以通过在网页上单击链接来安装和运行 Windows 应用程序（例如报表生成器）。 若要详细了解如何[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]部署应用程序[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 、应用应用程序安全[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]或在 Internet 区域中运行应用程序，请参阅中的 "Windows 窗体应用程序的 ClickOnce 部署"、"Windows 窗体概述中的安全" 或 "开发人员[!INCLUDE[msCoName](../includes/msconame-md.md)]网络" 网站上的[https://developer.microsoft.com/](https://developer.microsoft.com/)"受信任的应用程序部署概述" 文章。  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 是 Microsoft 用于部署 Windows 应用程序的一种技术。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 使得用户可以通过在网页上单击链接来安装和运行 Windows 应用程序（例如报表生成器）。 若要详细了解如何[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]部署应用程序[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 、应用应用程序安全[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]或在 Internet 区域中运行应用程序，请参阅中的 "Windows 窗体应用程序的 ClickOnce 部署"、"Windows 窗体概述中的安全" 或 "开发人员[!INCLUDE[msCoName](../includes/msconame-md.md)]网络" 网站上的[https://developer.microsoft.com/](https://developer.microsoft.com/)"受信任的应用程序部署概述" 文章。  
   
  报表生成器的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本位于报表服务器上，并且在您单击报表管理器中的 **“报表生成器”** 按钮或单击 SharePoint 库中的 **“新建文档”** 菜单中的 **“报表生成器报表”** 选项时，将会安装在您的计算机上。  
   
@@ -77,14 +74,14 @@ ms.locfileid: "73637889"
   
  下表是有关可用语言版本的信息。  
   
-|LCID|语言|环境|  
+|LCID|语言|culture|  
 |----------|--------------|-------------|  
 |1028|中文(繁体)|zh-TW|  
 |1029|捷克语|cs-CZ|  
 |1030|丹麦语|da-DK|  
 |1031|德语|de-DE|  
 |1032|希腊语|el-GR|  
-|1033|英语|en-US|  
+|2052|英语|zh-CN|  
 |1035|芬兰语|fi-FI|  
 |1036|法语|fr-FR|  
 |1038|匈牙利语|hu-HU|  
@@ -103,13 +100,13 @@ ms.locfileid: "73637889"
 |3082|西班牙语(西班牙)|es-ES|  
   
   
-##  <a name="Uninstalling"></a>正在卸载报表生成器  
+##  <a name="uninstalling-report-builder"></a><a name="Uninstalling"></a>正在卸载报表生成器  
  可以从控制面板或命令行卸载报表生成器的独立版本。 这仅适用于报表生成器的独立版本。 无法单独卸载报表生成器的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本。 它总是与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]一起安装和卸载。  
   
  有关详细信息，请参阅[报表生成器&#41;卸载报表生成器 &#40;的独立版本](install-windows/uninstall-report-builder.md)。  
   
   
-##  <a name="Supporting"></a>支持报表生成器  
+##  <a name="supporting-report-builder"></a><a name="Supporting"></a>支持报表生成器  
  为了支持报表作者，管理员负责管理报表服务器上的文件夹、报表及报表相关的项，授予对报表服务器上资源的权限，以及配置要访问的报表服务器。  
   
 ### <a name="folders-reports-and-report-related-items"></a>文件夹、报表和报表相关的项  
@@ -158,25 +155,23 @@ ms.locfileid: "73637889"
  有关配置[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的详细信息，请参阅 msdn.microsoft.com 上的[Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中[&#40;del&#41;Reporting Services 配置管理器](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)。  
   
   
-##  <a name="SampleDatabases"></a>SQL Server 示例数据库  
+##  <a name="sql-server-sample-databases"></a><a name="SampleDatabases"></a>SQL Server 示例数据库  
  Adventure Works 系列示例数据库提供您可以用来了解报表创作和编写示例报表的数据。  
   
  这些数据库采用以下版本：  
   
 -   Adventure Works OLTP 数据库支持虚构自行车制造商 (Adventure Works Cycles) 的标准联机事务处理应用场景。 应用场景包括制造、销售、采购、产品管理、联系人管理和人力资源。  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库演示如何生成数据仓库。  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库演示如何生成数据仓库。  
   
--   
-  [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 项目可用于为商业智能应用场景生成 AS 数据库。  
+-   [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 项目可用于为商业智能应用场景生成 AS 数据库。  
   
  该示例数据库未包含在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，且在安装报表生成器的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 版本或独立版本时，也不会随之安装。 您而是应该从 [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843)下载示例数据库。 示例数据库的所有版本将会一起下载。 您也可以下载随 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]一起发布的早期数据库版本。  
   
  有关下载和安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 示例数据库的必备组件和说明，请参阅 CodePlex 上的 [SQL Server 2008 示例数据库的安装必备组件](https://go.microsoft.com/fwlink/?LinkId=166648) 和 [安装示例数据库](https://go.microsoft.com/fwlink/?LinkId=166649) 。  
   
   
-##  <a name="HowTo"></a>操作指南主题  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作指南主题  
  本节列出的过程介绍如何安装和卸载报表生成器。  
   
  [安装报表生成器 &#40;报表生成器的独立版本&#41;](install-windows/install-report-builder.md)  

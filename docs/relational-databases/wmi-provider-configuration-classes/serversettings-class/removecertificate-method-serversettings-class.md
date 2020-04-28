@@ -18,10 +18,10 @@ ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e60de9d569a9a471941e1b798b7147e968ede479
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73657397"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>RemoveCertificate 方法（ServerSettings 类）
@@ -36,7 +36,7 @@ object.RemoveCertificate()
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示 [实例上的服务器设置的](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

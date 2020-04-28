@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145652"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles （Transact-sql）
@@ -33,8 +33,8 @@ ms.locfileid: "73145652"
 |pdw_node_id|**int**|与节点关联的唯一数字 ID。|
 |session_id|**smallint**|标识运行此查询的会话。 引用 dm_exec_sessions.session_id。|  
 |request_id|**int**|确定目标请求。 引用 dm_exec_sessions.request_id。|  
-|sql_handle|**varbinary （64）**|是唯一标识查询所属的批处理或存储过程的标记。 引用 dm_exec_query_stats.sql_handle。|  
-|plan_handle|**varbinary （64）**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 引用 dm_exec_query_stats plan_handle。|  
+|sql_handle|**varbinary(64)**|是唯一标识查询所属的批处理或存储过程的标记。 引用 dm_exec_query_stats.sql_handle。|  
+|plan_handle|**varbinary(64)**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 引用 dm_exec_query_stats plan_handle。|  
 |physical_operator_name|**nvarchar(256)**|物理运算符名称。|  
 |node_id|**int**|标识查询树中的运算符节点。|  
 |thread_id|**int**|区分属于同一个查询运算符节点的线程（针对并行查询）。|  

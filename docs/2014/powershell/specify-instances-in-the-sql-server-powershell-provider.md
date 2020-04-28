@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797762"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>在 SQL Server PowerShell 提供程序中指定实例
   为 SQL Server PowerShell 提供程序指定的路径必须标识它运行时所在的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例和计算机。 用于指定计算机和实例的语法必须同时符合 SQL Server 标识符和 Windows PowerShell 路径的规则。  
   
-1.  **开始之前：**  [限制和限制](#LimitationsRestrictions)  
+1.  **开始之前：**  [限制和局限](#LimitationsRestrictions)  
   
 2.  **指定实例：**  [示例](#Examples)  
   
@@ -41,15 +41,14 @@ SQLSERVER:\SQL\MyComputer\MyInstance
   
  每台计算机都有一个默认的 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例。 在安装默认实例时，无需为它指定名称。 如果在连接字符串中仅指定了计算机名称，则会连接到该计算机上的默认实例。 该计算机上的所有其他实例都必须是命名实例。 如果在安装过程中指定了实例名称，则必须在连接字符串中同时指定计算机名称和实例名称。  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  您不能使用句点 (.) 在 PowerShell 脚本中指定本地计算机。 由于 PowerShell 会将句点解释为一个命令，因此不支持句点。  
   
  Windows PowerShell 通常会将 (local) 中的括号字符作为命令处理。 您必须对这些字符进行编码或转义才能在路径中使用它们，或用双引号将路径引起来。 有关详细信息，请参阅“SQL Server 标识符的编码和解码”。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序要求您始终指定实例名称。 对于默认实例，必须将实例名称指定为 DEFAULT。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序要求您始终指定实例名称。 对于默认实例，必须将实例名称指定为 DEFAULT。  
   
-##  <a name="Examples"></a>示例计算机和实例名称  
+##  <a name="examples-computer-and-instance-names"></a><a name="Examples"></a> 示例：计算机名称和实例名称  
  此示例使用 localhost 和 DEFAULT 来指定本地计算机上的默认实例：  
   
 ```powershell

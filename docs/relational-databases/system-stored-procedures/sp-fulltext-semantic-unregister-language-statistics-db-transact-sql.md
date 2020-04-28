@@ -18,10 +18,10 @@ ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909140"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
@@ -40,7 +40,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-##  <a name="Arguments"></a> 参数  
+##  <a name="arguments"></a><a name="Arguments"></a>形参  
  此过程不需要任何参数。 由于一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例仅有一个语义语言统计数据库，所以不必标识该数据库。  
   
 ## <a name="return-code-value"></a>返回代码值  

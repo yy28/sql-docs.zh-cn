@@ -18,10 +18,10 @@ ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ed53a60bd0ef285468d71c4018ba7a4ed9cd8c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660382"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 属性（ServerNetworkProtocol 类）
@@ -36,7 +36,7 @@ object.MultiIpConfigurationSupport [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  表示实例使用的网络协议的[ProtocolName 属性（ServerNetworkProtocol 类）](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

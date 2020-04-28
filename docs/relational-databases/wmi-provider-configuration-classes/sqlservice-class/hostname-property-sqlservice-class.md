@@ -18,10 +18,10 @@ ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d7237e84953ce8af4cd0b34e1e4dc219f772ef42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659287"
 ---
 # <a name="hostname-property-sqlservice-class"></a>HostName 属性（SqlService 类）
@@ -36,7 +36,7 @@ object.HostName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

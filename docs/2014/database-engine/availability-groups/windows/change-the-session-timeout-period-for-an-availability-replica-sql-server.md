@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1408d970093fde0e2efea9662b56b9f099d6b0b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783031"
 ---
 # <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>更改可用性副本的会话超时期限 (SQL Server)
@@ -40,21 +40,21 @@ ms.locfileid: "72783031"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
  我们建议您将超时期限保持为 10 秒或更长。 如果将值设置为低于 10 秒，则可能使高负荷系统丢失 PING 并声明错误故障。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **更改可用性副本的会话超时期限**  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
@@ -67,7 +67,7 @@ ms.locfileid: "72783031"
   
 5.  在 **“可用性副本属性”** 对话框中，使用 **“会话超时（秒）”** 字段更改此副本的会话超时期限的秒数。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **更改可用性副本的会话超时期限**  
   
 1.  连接到承载主副本的服务器实例。  
@@ -87,7 +87,7 @@ ms.locfileid: "72783031"
        MODIFY REPLICA ON 'INSTANCE09' WITH (SESSION_TIMEOUT = 15);  
     ```  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
 
 ### <a name="to-change-the-session-timeout-period-for-an-availability-replica"></a>更改可用性副本的会话超时期限
   

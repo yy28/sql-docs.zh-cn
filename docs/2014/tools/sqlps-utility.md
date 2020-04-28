@@ -14,19 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798143"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
-  
   `sqlps` 实用工具会启动一个 Windows PowerShell 2.0 会话，并加载和注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]请改用 `sqlps` PowerShell 模块。 有关`sqlps`模块的详细信息，请参阅[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]请改用 `sqlps` PowerShell 模块。 有关`sqlps`模块的详细信息，请参阅[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -99,7 +97,7 @@ ms.locfileid: "72798143"
   
  默认情况下， `sqlps`实用工具运行时将脚本执行策略设置为 "**受限**"。 这样可以防止运行任何 PowerShell 脚本。 可以使用 **Set-ExecutionPolicy** cmdlet 来启用运行签名的脚本或任意脚本。 请仅运行来自受信任源的脚本，并通过使用适当的 NTFS 权限来保证所有输入和输出文件的安全。 有关启用 PowerShell 脚本的详细信息，请参阅 [Running Windows PowerShell Scripts](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/)（运行 Windows PowerShell 脚本）。  
   
- 在 `sqlps` 和 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中，此 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 实用工具版本已作为 Windows PowerShell 1.0 微型 shell 实现。 微型外壳程序具有某些限制，例如不允许用户加载不是由微型外壳程序所加载的管理单元。 这些限制并不适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本及更高的版本的实用工具，这些版本已更改为使用 `sqlps` 模块。  
+ 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中，此 `sqlps` 实用工具版本已作为 Windows PowerShell 1.0 微型 shell 实现。 微型外壳程序具有某些限制，例如不允许用户加载不是由微型外壳程序所加载的管理单元。 这些限制并不适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本及更高的版本的实用工具，这些版本已更改为使用 `sqlps` 模块。  
   
 ## <a name="examples"></a>示例  
 
